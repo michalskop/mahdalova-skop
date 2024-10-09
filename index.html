@@ -143,7 +143,34 @@
             transform: scale(1.05); /* Slight enlargement on hover for better interactivity */
         }
 
+        .contact a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #ff6347;
+        }
+
+        .newsletter-section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .newsletter-section h3 {
+            margin-bottom: 15px;
+        }
+
     </style>
+    <script>
+        (function (w,d,s,o,f,js,fjs) {
+            w['ecm-widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = '1-43c2cd496486bcc27217c3e790fb4088'; js.dataset.a = 'mahdalovaskop'; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'ecmwidget', 'https://d70shl7vidtft.cloudfront.net/widget.js'));
+    </script>
 </head>
 <body>
     <div class="container">
@@ -168,7 +195,11 @@
         </section>
 
         <section class="cta">
-            <a href="https://herohero.co/mahdalovaskop" class="cta-button">Navštivte nás na HeroHero</a>
+            <a href="https://herohero.co/mahdalovaskop" class="cta-button" target="_blank">Navštivte nás na HeroHero</a>
+        </section>
+
+        <section class="newsletter-section">
+            <div id="f-1-43c2cd496486bcc27217c3e790fb4088"></div>
         </section>
 
         <section id="story" class="story">
@@ -179,14 +210,17 @@
         </section>
 
         <section class="cta">
-            <a href="https://herohero.co/mahdalovaskop" class="cta-button">Připojte se k nám na HeroHero</a>
+            <a href="https://herohero.co/mahdalovaskop" class="cta-button" target="_blank">Připojte se k nám na HeroHero</a>
         </section>
 
         <section id="contact" class="contact">
             <h2>Kontakt</h2>
-            <p>Email: info@mahdalovaskop.cz</p>
+            <p>Email: katerina@mahdalova-skop.cz</p>
             <p>Telefon: +420 123 456 789</p>
-            <p>Adresa: Vaše ulice 123, 123 45 Vaše město</p>
+            <p>X: 
+                <a href="https://twitter.com/data_zurnalist" target="_blank">@data_zurnalist</a>, 
+                <a href="https://twitter.com/skopmichal" target="_blank">@skopmichal</a>
+            </p>
         </section>
     </div>
 </body>
