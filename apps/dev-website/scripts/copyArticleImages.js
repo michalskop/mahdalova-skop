@@ -2,96 +2,51 @@ const fs = require('fs-extra');
 const path = require('path');
 const glob = require('glob');
 
-async function createRequiredDirectories(websitePath) {
-  const directories = [
-    'public',
-    'public/clanek',
-    'public/clanek/_articles'
-  ];
-
-  for (const dir of directories) {
-    const fullPath = path.join(websitePath, dir);
-    console.log(`Ensuring directory exists: ${fullPath}`);
-    await fs.ensureDir(fullPath);
-  }
-}
-
-async function copyArticleImages() {
-  // Define paths for monorepo structure
-  const websitePath = path.join(process.cwd(), 'apps/dev-website');
-  const articlesPath = path.join(websitePath, 'app/clanek/_articles');
-  const publicPath = path.join(websitePath, 'public/clanek/_articles');
+async function verifyAndCreateDirectories() {
+  const baseDir = process.cwd();
+  console.log('Current working directory:', baseDir);
   
-  try {
-    console.log('Starting image copy process...');
-    console.log('Website path:', websitePath);
-    console.log('Articles path:', articlesPath);
-    console.log('Public path:', publicPath);
+  const requiredPaths = {
+    public: path.join(baseDir, 'public'),
+    clanek: path.join(baseDir, 'public', 'clanek'),
+    articles: path.join(baseDir, 'public', 'clanek', '_articles')
+  };
 
-    // First ensure all required directories exist
-    await createRequiredDirectories(websitePath);
-    
-    // Check if articles directory exists
-    if (!await fs.pathExists(articlesPath)) {
-      console.log('No articles directory found at:', articlesPath);
-      console.log('Creating empty articles directory structure...');
-      await fs.ensureDir(articlesPath);
-      return;
-    }
-    
-    // Find all article directories
-    const articleDirs = glob.sync('*/', { cwd: articlesPath });
-    
-    console.log('Found article directories:', articleDirs);
-    
-    if (articleDirs.length === 0) {
-      console.log('No article directories found. Creating basic structure...');
-      await fs.ensureDir(publicPath);
-      return;
-    }
-    
-    for (const articleDir of articleDirs) {
-      const sourceImagesPath = path.join(articlesPath, articleDir, 'images');
-      const targetImagesPath = path.join(publicPath, articleDir, 'images');
-      
-      // Ensure the article directory exists in public
-      await fs.ensureDir(path.join(publicPath, articleDir));
-      
-      // Check if the source images directory exists
-      if (await fs.pathExists(sourceImagesPath)) {
-        console.log(`Copying images from ${sourceImagesPath} to ${targetImagesPath}`);
-        
-        // Ensure the target directory exists
-        await fs.ensureDir(targetImagesPath);
-        
-        // Copy all files from images directory
-        await fs.copy(sourceImagesPath, targetImagesPath);
-        
-        console.log(`Successfully copied images for ${articleDir}`);
-      } else {
-        console.log(`No images directory found for ${articleDir}, creating empty directory`);
-        await fs.ensureDir(targetImagesPath);
-      }
-    }
-    
-    console.log('Image copying complete!');
-    
-    // Double check that the public directory exists after all operations
-    await fs.ensureDir(publicPath);
-  } catch (error) {
-    console.error('Error during image copy process:', error);
-    // Create the minimum required structure even if there's an error
+  // Create directories synchronously to ensure order
+  for (const [name, dirPath] of Object.entries(requiredPaths)) {
     try {
-      await createRequiredDirectories(websitePath);
-    } catch (dirError) {
-      console.error('Failed to create required directories:', dirError);
+      console.log(`Creating directory: ${dirPath}`);
+      fs.mkdirSync(dirPath, { recursive: true });
+      
+      // Verify directory was created
+      const stats = fs.statSync(dirPath);
+      console.log(`Successfully created ${name} directory:`, {
+        path: dirPath,
+        isDirectory: stats.isDirectory(),
+        permissions: stats.mode.toString(8)
+      });
+    } catch (error) {
+      console.error(`Error creating ${name} directory:`, error);
+      throw error;
     }
-    process.exit(1);
+  }
+  
+  // List contents of public directory to verify
+  console.log('\nContents of public directory:');
+  try {
+    const publicContents = fs.readdirSync(requiredPaths.public);
+    console.log(publicContents);
+  } catch (error) {
+    console.error('Error listing public directory:', error);
   }
 }
 
-// Execute with error handling
-copyArticleImages().catch(error => {
-  console.error('Fatal error:', error);
+// Run everything synchronously to maintain order
+try {
+  console.log('Starting directory creation process...');
+  verifyAndCreateDirectories();
+  console.log('Directory creation complete!');
+} catch (error) {
+  console.error('Fatal error during directory creation:', error);
   process.exit(1);
-});
+}
