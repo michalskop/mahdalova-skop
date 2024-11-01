@@ -2,6 +2,7 @@
 'use client';
 
 import { Paper, Title, Text, Container, Stack, useMantineTheme, useMantineColorScheme } from '@mantine/core';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { MDXComponents } from 'mdx/types';
@@ -18,6 +19,16 @@ interface ArticleProps {
 export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
+  const [mounted, setMounted] = useState(false);
+
+    // Ensure no hydration mismatch
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+  
+    if (!mounted) {
+      return null;
+    }
 
   const components: MDXComponents = {
     MediaBox, // Register MediaBox directly, allowing remarkBoxPlugin to handle box syntax
@@ -116,30 +127,37 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
 
   return (
     <Container size="md" py="xl">
-      <Paper shadow="xs" p="md" withBorder styles={(theme) => ({
-        root: {
-          backgroundColor: colorScheme === 'dark'
-            ? theme.colors.gray[7] 
-            : theme.colors.background[6],
-        }
-      })}>
+      <Paper
+        shadow="xs"
+        p="md"
+        withBorder
+        styles={{
+          root: {
+            backgroundColor: colorScheme === 'dark'
+              ? theme.colors.gray[7]
+              : theme.colors.background[6],
+          }
+        }}
+      >
         <Stack gap="md">
           {title && (
-            <Title order={1} size="h1" 
-              styles={(theme) => ({
+            <Title
+              order={1}
+              size="h1"
+              styles={{
                 root: {
                   color: colorScheme === 'dark'
                     ? theme.colors.brand[7]
                     : theme.colors.brand[6],
                 }
-              })}
+              }}
             >
               {title}
             </Title>
           )}
           
           {date && (
-            <Text size="sm" color="dimmed">
+            <Text size="sm" c="dimmed">
               {new Date(date).toLocaleDateString('cs-CZ')}
             </Text>
           )}
