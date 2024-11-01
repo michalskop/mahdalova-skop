@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/copyArticleImages.js && next dev",
+    "dev": "node scripts/copyImagesDev.js && next dev",
     "prebuild": "node scripts/copyArticleImages.js",
     "build": "npm run prebuild && next build",
     "start": "next start",

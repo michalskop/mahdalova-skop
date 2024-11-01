@@ -14,8 +14,9 @@
     "dev-site": "turbo run dev --filter=dev-site"
   },
   "devDependencies": {
-    "turbo": "^1.11.0",
-    "prettier": "^3.0.0"
+    "chokidar": "^4.0.1",
+    "prettier": "^3.0.0",
+    "turbo": "^1.11.0"
   },
   "engines": {
     "node": ">=14.0.0"
