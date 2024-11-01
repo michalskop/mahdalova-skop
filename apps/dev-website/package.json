@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/copyArticleImages.js && next dev",
     "prebuild": "node scripts/copyArticleImages.js",
-    "build": "next build",
+    "build": "npm run prebuild && next build",
     "start": "next start",
     "lint": "next lint"
   },
