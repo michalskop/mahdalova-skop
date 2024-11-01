@@ -1,0 +1,3 @@
+packages:
+  - "apps/*"    # Include the apps folder in the workspace
+  - "packages/*" # Include any shared packages, if you have any

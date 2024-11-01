@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    // Add these two lines:
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      // You can add more custom aliases here, for example:
+      "@components/*": ["./components/*"],
+      "@styles/*": ["./styles/*"],
+      "@utils/*": ["./utils/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/common/LogoWithText.jsx"],
+  "exclude": ["node_modules"]
+}

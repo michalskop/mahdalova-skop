@@ -1,0 +1,26 @@
+/* FooterCentered.module.css */
+.footer {
+  margin-top: rem(120px);
+  border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--mantine-spacing-md);
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    flex-direction: column;
+    gap: var(--mantine-spacing-lg);
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.links {
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    flex-direction: column;
+    gap: var(--mantine-spacing-md);
+  }
+}
