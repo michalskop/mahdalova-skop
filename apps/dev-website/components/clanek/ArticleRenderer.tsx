@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
-import { MediaBox } from './MediaBox'; // Import the MediaBox component
+import { CodeBlock, MediaBox} from './MediaBox'; // Import the MediaBox component
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -32,6 +32,7 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
 
   const components: MDXComponents = {
     MediaBox, // Register MediaBox directly, allowing remarkBoxPlugin to handle box syntax
+    code: CodeBlock,  // This handles the ```box syntax
 
     h1: ({ children }) => (
       <Title order={1} mt="xl" mb="md" 

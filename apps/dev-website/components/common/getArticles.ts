@@ -13,7 +13,7 @@ export interface Article {
   tags: string[];
 }
 
-export async function getArticles(): Promise<Article[]> {
+export async function getArticles(limit: number = 9): Promise<Article[]> {
   const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
   const articleFolders = fs.readdirSync(articlesDirectory);
 
@@ -41,5 +41,5 @@ export async function getArticles(): Promise<Article[]> {
     .sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     })
-    .slice(0, 10);
+    .slice(0, limit);
 }

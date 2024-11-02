@@ -12,6 +12,7 @@ import {
   Center,
   Avatar,
   useMantineTheme,
+  useMantineColorScheme,
   rem,
 } from '@mantine/core';
 import classes from './ArticleCard.module.css';
@@ -36,6 +37,7 @@ export function ArticleCard({
   tags 
 }: ArticleCardProps) {
   const theme = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
   const linkProps = { href: `/clanek/${slug}` };
 
   return (
@@ -50,16 +52,16 @@ export function ArticleCard({
         </a>
       </Card.Section>
 
-      {tags.map((tag) => (
+      {tags.length > 0 && (
         <Badge 
-          key={tag}
+          key={tags[0]}
           className={classes.rating} 
           variant="gradient" 
-          gradient={{ from: 'yellow', to: 'red' }}
+          gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[8] }}
         >
-          {tag}
+          {tags[0]}
         </Badge>
-      ))}
+      )}
 
       <Text className={classes.title} fw={500} component="a" {...linkProps}>
         {title}
@@ -83,7 +85,7 @@ export function ArticleCard({
         </Center>
 
         <Group gap={8} mr={0}>
-          <ActionIcon className={classes.action}>
+          {/* <ActionIcon className={classes.action}>
             <IconHeart 
               style={{ width: rem(16), height: rem(16) }} 
               color={theme.colors.red[6]} 
@@ -94,7 +96,7 @@ export function ArticleCard({
               style={{ width: rem(16), height: rem(16) }}
               color={theme.colors.yellow[7]}
             />
-          </ActionIcon>
+          </ActionIcon> */}
           <ActionIcon className={classes.action}>
             <IconShare 
               style={{ width: rem(16), height: rem(16) }} 

@@ -1,9 +1,13 @@
 // app/page.tsx
-'use client';
+// 'use client';
 
 import { Container, Title, Text } from '@mantine/core';
+import { getArticles } from '@/components/common/getArticles';
+import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const articles = await getArticles(3);
+
   return (
     <Container 
       size="lg" 
@@ -24,6 +28,7 @@ export default function HomePage() {
         ultricies aliquam nec nec nunc. Nullam nec purus ac libero ultricies 
         aliquam nec nec nunc.
       </Text>
+      <ArticlesGrid articles={articles} />
     </Container>
   );
 }

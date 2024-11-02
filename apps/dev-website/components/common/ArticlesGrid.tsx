@@ -12,8 +12,8 @@ interface ArticlesGridProps {
 export function ArticlesGrid({ articles }: ArticlesGridProps) {
   return (
     <Container size="lg" py="xl">
-      <Title order={1} mb="xl" ta="center">
-        Latest Articles
+      <Title order={2} mb="xl" ta="center">
+        Poslední články
       </Title>
       <Space h="md" />
       <Grid gutter="xl">

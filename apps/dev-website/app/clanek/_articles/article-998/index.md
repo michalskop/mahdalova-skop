@@ -1,6 +1,6 @@
 ---
 title: "Another Text"
-date: "2024-10-31"
+date: "2024-09-31"
 author: "Jane Developer"
 excerpt: "A comprehensive guide to modern web development practices, tools, and frameworks"
 coverImage: "images/hero.jpg"
