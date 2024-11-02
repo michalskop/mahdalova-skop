@@ -1,5 +1,7 @@
 // components/TagList.tsx
-import { Badge, Group, useMantineTheme } from '@mantine/core';
+'use client';
+
+import { Badge, Group, MantineTheme, useMantineTheme, Container } from '@mantine/core';
 
 interface TagListProps {
   tags: string[];
@@ -7,7 +9,7 @@ interface TagListProps {
   spacing?: number;
 }
 
-export function TagList({ tags, size = 'sm', spacing = 2 }: TagListProps) {
+export function TagList({ tags, size = 'sm', spacing = 8 }: TagListProps) {
   const theme = useMantineTheme();
 
   if (!tags || tags.length === 0) {
@@ -15,17 +17,20 @@ export function TagList({ tags, size = 'sm', spacing = 2 }: TagListProps) {
   }
 
   return (
-    <Group gap={spacing} mt="md">
-      {tags.map((tag) => (
-        <Badge
-          key={tag}
-          variant="gradient"
-          gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[8] }}
-          size={size}
-        >
-          {tag}
-        </Badge>
-      ))}
-    </Group>
+    <Container>
+      <Group gap={spacing} mt="xs">
+        {tags.map((tag) => (
+          <Badge
+            key={tag}
+            variant="gradient"
+            gradient={{ from: theme.colors.brand[6], to: theme.colors.brand[6] }}
+            size={size}
+            autoContrast
+          >
+            {tag}
+          </Badge>
+        ))}
+      </Group>
+    </Container>
   );
 }

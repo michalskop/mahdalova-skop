@@ -26,6 +26,7 @@ export async function getArticleBySlug(slug: string) {
   return {
     slug,
     mdxSource, // This should be MDXRemoteSerializeResult
+    tags: data.tags || [],
     ...data,
   };
 }

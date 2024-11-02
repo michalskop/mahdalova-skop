@@ -75,13 +75,18 @@ export function ArticleCard({
         <Center>
           <Avatar
             src={`https://ui-avatars.com/api/?name=${encodeURIComponent(author)}`}
-            size={24}
+            size={36}
             radius="xl"
             mr="xs"
           />
-          <Text fz="sm" inline>
-            {author}
-          </Text>
+          <div>
+            <Text fz="sm" inline>
+              {author}
+            </Text>
+            <Text fz="sm" inline style={{ color: "gray", marginTop: '4px' }}>
+              {new Date(date).toLocaleDateString('cs-CZ')}
+            </Text>
+          </div>
         </Center>
 
         <Group gap={8} mr={0}>
