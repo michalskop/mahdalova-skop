@@ -1,94 +1,143 @@
-// components/Testimonials.tsx
+// components/common/Testimonials.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Paper, Text, Title, Container, Box } from '@mantine/core';
-import { keyframes } from '@emotion/react';
+import '@mantine/carousel/styles.css';
+import { useRef, useEffect } from 'react';
+import { Carousel, type Embla } from '@mantine/carousel';
+import { Paper, Text, Title, Container, rem } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import Autoplay from 'embla-carousel-autoplay';
 import { testimonials } from '@/data/testimonials';
+import type { TestimonialData } from '@/data/testimonials';
 
-const slideUpIn = keyframes`
-  from { transform: translateY(20%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-`;
+function Testimonials() {
+  const autoplay = useRef(
+    Autoplay({
+      delay: 8000,
+      stopOnInteraction: true,
+      stopOnMouseEnter: true,
+    })
+  );
+  const embla = useRef<Embla | null>(null);
+  const isMobile = useMediaQuery('(max-width: 48em)');
 
-const slideUpOut = keyframes`
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-20%); opacity: 0; }
-`;
+  // Common control styles based on device type
+  const controlStyles = {
+    width: isMobile ? '40px' : '30px',
+    height: isMobile ? '40px' : '30px',
+    minWidth: 'auto',
+    border: '1px solid var(--mantine-color-brand-6)',
+    backgroundColor: 'var(--mantine-color-body)',
+  };
 
-export function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
+  // Reset autoplay when component mounts
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIsTransitioning(true);  // Start transition
-      
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => 
-          prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-        );
-        setIsTransitioning(false);  // End transition
-      }, 1000);  // This should be half of your animation duration
-      
-    }, 8000);
-  
-    return () => clearInterval(timer);
+    if (embla.current) {
+      autoplay.current.reset();
+    }
   }, []);
-  
-
-  const current = testimonials[currentIndex];
 
   return (
-    <Container size="md" my="xl">
-      <Paper
-        shadow="sm"
-        p="xl"
-        radius="md"
-        style={{
-          height: "300px",
-          overflow: 'hidden',
-          position: 'relative',
-          background: 'linear-gradient(45deg, var(--mantine-color-yellow-6) 0%, var(--mantine-color-orange-6) 100%)',
+    <Container size="md" p={isMobile ? 'xs' : 'md'}>
+      <Title order={2} style={{ textAlign: 'center', marginBottom: isMobile ? '0.5rem' : '1rem' }}>
+        Co o nás píší jiní
+      </Title>
+      <Carousel
+        loop
+        getEmblaApi={setEmbla => {
+          embla.current = setEmbla;
+          // Start autoplay when carousel is initialized
+          if (setEmbla) {
+            autoplay.current.reset();
+          }
+        }}
+        withIndicators
+        withControls
+        height={250}
+        slideGap="md"
+        nextControlProps={{
+          style: { 
+            ...controlStyles,
+            right: isMobile ? -20 : -40 
+          }
+        }}
+        previousControlProps={{
+          style: { 
+            ...controlStyles,
+            left: isMobile ? -20 : -40 
+          }
+        }}
+        plugins={[autoplay.current]}
+        styles={{
+          viewport: {
+            padding: isMobile ? '0 20px' : '0 40px',
+          },
+          control: {
+            '&[data-inactive]': {
+              opacity: 0,
+              cursor: 'default',
+            },
+          },
+          indicator: {
+            width: 8,
+            height: 8,
+            backgroundColor: 'var(--mantine-color-gray-4)'
+          }
         }}
       >
-        <Box
-          key={current.id}
-          style={{
-            animation: `${isTransitioning ? slideUpOut : slideUpIn} 1.2s ease-in-out`,
-            color: 'gray-1',
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            opacity: isTransitioning ? 0 : 1,
-            transition: 'opacity 1.2s ease-in-out',
-          }}
-        >
-          <Text
-            size="xl"
-            style={{
-              fontStyle: 'italic',
-              lineHeight: 1.6,
-              marginBottom: '2rem',
-            }}
-          >
-            &ldquo;{current.text}&rdquo;
-          </Text>
-          
-          <Box>
-            <Title order={4} mb={5}>
-              {current.author}
-            </Title>
-            <Text size="sm" opacity={0.9}>
-              {current.position}
-            </Text>
-            <Text size="sm" opacity={0.8} mt={5}>
-              {current.date}
-            </Text>
-          </Box>
-        </Box>
-      </Paper>
+        {testimonials.map((item: TestimonialData) => (
+          <Carousel.Slide key={item.id}>
+            <Paper
+              shadow="sm"
+              p={isMobile ? 'sm' : 'xl'}
+              radius="md"
+              style={{
+                backgroundColor: 'var(--mantine-color-background-2)',
+                border: '1px solid var(--mantine-color-brand-6)',
+                height: '100%',
+              }}
+            >
+              <div className="flex flex-col justify-between h-full">
+                <Text 
+                  size={isMobile ? 'md' : 'xl'} 
+                  className="italic"
+                  style={{ 
+                    lineHeight: isMobile ? '1.3' : '1.5',
+                    fontSize: isMobile ? rem(18) : rem(20)
+                  }}
+                >
+                  &ldquo;{item.text}&rdquo;
+                </Text>
+                
+                <div className="mt-4">
+                  <Title 
+                    order={4} 
+                    className="mb-1"
+                    size={isMobile ? 'h5' : 'h4'}
+                  >
+                    {item.author}
+                  </Title>
+                  <Text 
+                    size={isMobile ? 'xs' : 'sm'} 
+                    c="dimmed"
+                  >
+                    {item.position}
+                  </Text>
+                  <Text 
+                    size={isMobile ? 'xs' : 'sm'} 
+                    c="dimmed" 
+                    mt={2}
+                  >
+                    {item.date}
+                  </Text>
+                </div>
+              </div>
+            </Paper>
+          </Carousel.Slide>
+        ))}
+      </Carousel>
     </Container>
   );
 }
+
+export default Testimonials;

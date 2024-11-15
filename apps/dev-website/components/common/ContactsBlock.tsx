@@ -1,4 +1,4 @@
-// components/ContactsBlock.tsx
+// components/common/ContactsBlock.tsx
 'use client';
 
 import { Container, Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem } from '@mantine/core';

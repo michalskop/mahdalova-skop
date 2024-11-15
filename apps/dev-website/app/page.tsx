@@ -4,7 +4,7 @@
 import { Container, Title, Text } from '@mantine/core';
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesGrid } from '@/components/common/ArticlesGrid';
-import { Testimonials } from '@/components/common/Testimonials';
+import Testimonials from '@/components/common/Testimonials';
 import { ContactsBlock } from '@/components/common/ContactsBlock';
 
 export default async function HomePage() {
