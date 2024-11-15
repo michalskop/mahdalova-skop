@@ -4,6 +4,7 @@
 import { Container, Title, Text } from '@mantine/core';
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesGrid } from '@/components/common/ArticlesGrid';
+import { Testimonials } from '@/components/common/Testimonials';
 
 export default async function HomePage() {
   const articles = await getArticles(3);
@@ -29,6 +30,8 @@ export default async function HomePage() {
         aliquam nec nec nunc.
       </Text>
       <ArticlesGrid articles={articles} />
+
+      <Testimonials />
     </Container>
   );
 }
