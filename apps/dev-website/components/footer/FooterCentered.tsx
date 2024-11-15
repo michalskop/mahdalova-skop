@@ -6,7 +6,7 @@ import classes from './FooterCentered.module.css';
 
 const links = [
   { link: '#', label: 'Newsletter'},
-  { link: '/', label: 'Kontakt' },
+  { link: '/kdo-jsme#kontakty', label: 'Kontakt' },
   { link: 'https://datajournalism.studio/', label: 'Data Journalism Studio'},
 ];
 

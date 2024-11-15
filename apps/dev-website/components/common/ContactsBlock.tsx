@@ -96,7 +96,8 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
 
 export function ContactsBlock() {
   return (
-    <Container size="md" my="xl" id="contacts">
+    <Box id="kontakty" style={{ scrollMarginTop: '100px' }}>
+    <Container size="md" my="xl">
       <Title 
         order={2}
         mb="xs"  // margin bottom
@@ -206,5 +207,6 @@ export function ContactsBlock() {
         ))}
       </Grid>
     </Container>
+    </Box>
   );
 }
