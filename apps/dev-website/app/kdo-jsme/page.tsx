@@ -1,6 +1,7 @@
 // app/about/page.tsx
 import { Container, Title, Text } from '@mantine/core';
 import { Testimonials } from '@/components/common/Testimonials';
+import { ContactsBlock } from '@/components/common/ContactsBlock';
 
 export default function AboutPage() {
   return (
@@ -9,6 +10,8 @@ export default function AboutPage() {
       <Text>Information about us will be displayed here.</Text>
 
       <Testimonials />
+
+      <ContactsBlock />
 
     </Container>
   );
