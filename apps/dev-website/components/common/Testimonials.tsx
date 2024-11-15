@@ -74,6 +74,7 @@ export function Testimonials() {
             }}
           >
             "{current.text}"
+            {/* these are typographic quotes, not normal ones */}
           </Text>
           
           <Box>
