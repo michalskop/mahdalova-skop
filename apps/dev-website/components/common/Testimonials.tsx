@@ -73,8 +73,7 @@ export function Testimonials() {
               marginBottom: '2rem',
             }}
           >
-            "{current.text}"
-            {/* these are typographic quotes, not normal ones */}
+            &ldquo;{current.text}&rdquo;
           </Text>
           
           <Box>

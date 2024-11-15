@@ -34,7 +34,7 @@ export default async function HomePage() {
 
       <Testimonials />
 
-      <ContactsBlock />
+      {/* <ContactsBlock /> */}
     </Container>
   );
 }
