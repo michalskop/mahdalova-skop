@@ -50,9 +50,13 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
           onSubmit={handleSubmit}
         >
           <Stack>
-            <Text>
+            <Text size="lg">
               Odběr newsletteru
+              <Text size="sm" c="gray">
+                To hlavní z našich článků <strong>zdarma</strong> přímo do vašeho emailu.
+              </Text>
             </Text>
+            
             <TextInput
               required
               label="Email"

@@ -1,4 +1,4 @@
-// app/clanek/ArticlesGrid.tsx
+// app/common/ArticlesGrid.tsx
 'use client';
 
 import { Container, Title, Space, Grid } from '@mantine/core';
