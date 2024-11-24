@@ -40,7 +40,7 @@ function Testimonials() {
   return (
     <Container size="md" p={isMobile ? 'xs' : 'md'}>
       <Title order={2} style={{ textAlign: 'center', marginBottom: isMobile ? '0.5rem' : '1rem' }}>
-        Co o nás píší jiní
+        Co o nás napsali jiní
       </Title>
       <Carousel
         loop
@@ -93,7 +93,7 @@ function Testimonials() {
               radius="md"
               style={{
                 backgroundColor: 'var(--mantine-color-background-2)',
-                border: '1px solid var(--mantine-color-brand-6)',
+                // border: '1px solid var(--mantine-color-brand-6)',
                 height: '100%',
               }}
             >

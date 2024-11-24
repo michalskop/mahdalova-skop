@@ -49,7 +49,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#c8c8bc',
             '#bcbcb0'
           ],
-          yellow: [
+          brandYellow: [
             '#fffdf0',
             '#fff7d9',
             '#fff0b3',
@@ -60,7 +60,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#d6a404',
             '#bd9103',
             '#a47d03'],
-          orange: [
+          brandOrange: [
             '#fff4eb',
             '#ffe4cc',
             '#ffd4b3',
@@ -70,7 +70,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#f76800', // Main orange at index 6
             '#c55300',
             '#ac4800',
-            '#933e00'],
+            '#933e00'], 
         },
       }}
     >
