@@ -67,24 +67,12 @@ export function HeaderSimple() {
   return (
     <>
       <header className={classes.header}>
-        <Container size="md" className={classes.inner}>
+        <Container size="md" className={classes.inner} flex="flex" style={{ justifyContent: 'space-between', alignItems: 'center'}} >
           <LogoWithText />
-          <Group gap={5} visibleFrom="xs">
+          <Group gap={10} visibleFrom="xs" ml="auto">
             {items}
           </Group>
           <Group>
-            <ActionIcon
-              variant="default"
-              onClick={() => toggleColorScheme()}
-              size="lg"
-              radius="xl"
-            >
-              {colorScheme === 'dark' ? (
-                <IconSun style={{ width: 20, height: 20 }} stroke={1.5} />
-              ) : (
-                <IconMoon style={{ width: 20, height: 20 }} stroke={1.5} />
-              )}
-            </ActionIcon>
             <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
           </Group>
         </Container>
@@ -101,20 +89,6 @@ export function HeaderSimple() {
       >
         <Stack>
           {mobileItems}
-          <Group justify="center">
-            <ActionIcon
-              variant="default"
-              onClick={() => toggleColorScheme()}
-              size="lg"
-              radius="xl"
-            >
-              {colorScheme === 'dark' ? (
-                <IconSun style={{ width: 20, height: 20 }} stroke={1.5} />
-              ) : (
-                <IconMoon style={{ width: 20, height: 20 }} stroke={1.5} />
-              )}
-            </ActionIcon>
-          </Group>
         </Stack>
       </Drawer>
     </>
