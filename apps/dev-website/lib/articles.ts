@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkGfm from 'remark-gfm';
 import { remarkBoxPlugin } from './remark-box-plugin'; // Your custom plugin
+// import { Article, ArticleMetadata } from '@/types/article'; // Import the Article type
 
 export async function getArticleBySlug(slug: string) {
   const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
@@ -27,6 +28,11 @@ export async function getArticleBySlug(slug: string) {
     slug,
     mdxSource, // This should be MDXRemoteSerializeResult
     tags: data.tags || [],
-    ...data,
+    content,
+    title: data.title || 'Untitled',
+    date: data.date || '',
+    author: data.author || 'Anonymous',
+    excerpt: data.excerpt || '',
+    coverImage: data.coverImage || null,
   };
 }

@@ -1,4 +1,4 @@
-// src/types/gray-matter.d.ts
+// types/gray-matter.d.ts
 declare module 'gray-matter' {
   interface GrayMatterFile<I extends string | Buffer> {
     data: { [key: string]: any };
