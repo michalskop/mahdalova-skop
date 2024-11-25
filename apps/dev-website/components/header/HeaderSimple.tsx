@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme } from '@mantine/core';  // Add useMantineColorScheme
 import { useDisclosure } from '@mantine/hooks';
-import { IconSun, IconMoon } from '@tabler/icons-react';  // Add icons
+// import { IconSun, IconMoon } from '@tabler/icons-react';  // Add icons
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LogoWithText from '../common/LogoWithText';
@@ -11,7 +11,7 @@ import classes from './HeaderSimple.module.css';
 
 const links = [
   { link: '/clanek', label: 'Články' },
-  { link: '/special', label: 'Speciály' },
+  // { link: '/special', label: 'Speciály' },
   { link: '/kdo-jsme', label: 'Kdo jsme' },
 ];
 
