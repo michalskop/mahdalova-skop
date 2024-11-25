@@ -3,9 +3,13 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Inter } from 'next/font/google';
+import { Work_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-work-sans',
+});
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
@@ -23,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="auto"
       theme={{
-        fontFamily: inter.style.fontFamily,
+        fontFamily: workSans.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
