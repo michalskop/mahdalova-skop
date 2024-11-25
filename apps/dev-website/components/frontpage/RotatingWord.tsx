@@ -3,7 +3,7 @@
 import { Title, Text, Box } from '@mantine/core';
 import { useState, useEffect } from 'react';
 
-const words = ['Nezávislá', 'Unikátní', 'Odvážná', 'Inovativní', 'In-depth', 'Oceňovaná', 'Poctivá'];
+const words = ['Unikátní', 'Nezávislá', 'Odvážná', 'Inovativní', 'In-depth', 'Oceňovaná', 'Poctivá'];
 
 function RotatingWord() {
   const [index, setIndex] = useState(0);
@@ -34,7 +34,7 @@ function RotatingWord() {
         display="inline-block" 
         ta="right" 
         style={{ 
-          width: 'clamp(100px, 30vw, 200px)',  // Responsive width
+          width: 'clamp(100px, 30vw, 220px)',  // Responsive width
           overflow: 'hidden',
           verticalAlign: 'bottom'
         }}
