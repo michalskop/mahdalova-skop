@@ -10,8 +10,10 @@ import LogoWithText from '../common/LogoWithText';
 import classes from './HeaderSimple.module.css';
 
 const links = [
-  { link: '/clanek', label: 'Články' },
+  // { link: '/clanek', label: 'Články' },
   // { link: '/special', label: 'Speciály' },
+  { link: '/analyza', label: 'Analýzy' },
+  { link: '/kontext', label: 'Kontext' },
   { link: '/kdo-jsme', label: 'Kdo jsme' },
 ];
 
