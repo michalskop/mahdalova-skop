@@ -21,7 +21,7 @@ export default async function HomePage() {
       bg="background.2"
       maw="1200px"
       w="100%"
-      p="xl md"
+      p={0}
       m="0 auto"
     >
       <HeroTitle />

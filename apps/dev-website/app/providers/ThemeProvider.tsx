@@ -74,7 +74,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#f76800', // Main orange at index 6
             '#c55300',
             '#ac4800',
-            '#933e00'], 
+            '#933e00'],
+            brandRoyalBlue: [
+              "#e9ebfa", "#c9d0f5", "#a9b5f0", "#899aeb", "#697fe6", "#5e66d5", "#4a51ab", "#383d82", "#272a59", "#161730"
+            ]
         },
       }}
     >

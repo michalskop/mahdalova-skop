@@ -27,7 +27,7 @@ function RotatingWord() {
       ta="right"
       size="xl"
       c="dimmed"
-      style={{ fontSize: 'clamp(1.25rem, 4vw, 2.5rem)' }}
+      style={{ fontSize: 'clamp(0.6rem, 2.5vw, 1.35rem)' }}
       mt="md"
     >
       <Box 
@@ -41,7 +41,7 @@ function RotatingWord() {
       >
         <Text
           component="span"
-          c="teal"
+          c="brandYellow.6"
           inherit
           style={{
             display: 'inline-block',
