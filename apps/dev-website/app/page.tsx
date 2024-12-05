@@ -1,18 +1,21 @@
 // app/page.tsx
 // 'use client';
 
-import { Container, Title, Text } from '@mantine/core';
+import { Container } from '@mantine/core';
 import { getArticles } from '@/components/common/getArticles';
-import { ArticlesGrid } from '@/components/common/ArticlesGrid';
+// import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import Testimonials from '@/components/common/Testimonials';
 import HeroTitle from '@/components/frontpage/HeroTitle';
-import Citation from '@/components/frontpage/Citation';
-import SubscribeHH from '@/components/frontpage/SubscribeHH';
+// import Citation from '@/components/frontpage/Citation';
+// import SubscribeHH from '@/components/frontpage/SubscribeHH';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import { FeaturedArticlesSection } from '@/components/frontpage/FeaturedArticlesSection';
 // import { ContactsBlock } from '@/components/common/ContactsBlock';
 
 export default async function HomePage() {
   const articles = await getArticles(3);
+  const articles_analyses = await getArticles(3, "analýza");
+  const articles_contexts = await getArticles(3, "kontext");
 
   return (
     <Container 
@@ -26,13 +29,26 @@ export default async function HomePage() {
     >
       <HeroTitle />
 
-      <Citation />
+      {/* <Citation /> */}
 
-      <SubscribeHH />
+      {/* <SubscribeHH /> */}
 
-      <ArticlesGrid articles={articles} />
+      <FeaturedArticlesSection 
+        sectionTitle="Nejnovější"
+        articles={articles_analyses}
+        themeColor="brandRoyalBlue.3" />
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+
+      <FeaturedArticlesSection 
+        sectionTitle="Analýzy"
+        articles={articles_analyses}
+        themeColor="brand" />
+
+      <FeaturedArticlesSection 
+        sectionTitle="Kontext"
+        articles={articles_contexts}
+        themeColor="brandOrange.4" />
 
       <Testimonials />
 

@@ -10,10 +10,16 @@
   pointer-events: none;
 }
 
+.cardContainer {
+  container-type: inline-size;
+}
+
 .title {
   display: block;
   margin-top: var(--mantine-spacing-md);
   margin-bottom: rem(5px);
+  font-size: var(--mantine-font-size-md);
+  line-height: 1.5;
 }
 
 .action {
@@ -26,4 +32,16 @@
 
 .footer {
   margin-top: var(--mantine-spacing-md);
+}
+
+@container (min-width: 380px) {
+  .title {
+    font-size: var(--mantine-font-size-lg);
+  }
+}
+
+@container (min-width: 600px) {
+  .title {
+    font-size: var(--mantine-font-size-xl);
+  }
 }

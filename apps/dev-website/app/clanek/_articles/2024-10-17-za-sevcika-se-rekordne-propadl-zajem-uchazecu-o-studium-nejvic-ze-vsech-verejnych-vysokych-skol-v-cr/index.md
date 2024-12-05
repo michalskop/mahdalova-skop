@@ -1,5 +1,5 @@
 ---
-title: "Za Ševčíka se rekordně propadl zájem uchazečů o studium. Nejvíc ze všech veřejných vysokých škol v ČR"
+title: "Za Ševčíka se rekordně propadl zájem uchazečů o studium. Nejvíc ze všech veřejných VŠ v ČR"
 date: "2024-10-17"
 author: "Mahdalová & Škop"
 excerpt: "Škodí odvolaný děkan (nyní opět proděkan) Miroslav Ševčík národohospodářské fakultě?"

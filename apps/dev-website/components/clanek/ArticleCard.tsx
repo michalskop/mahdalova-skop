@@ -44,7 +44,7 @@ export function ArticleCard({
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
         <a {...linkProps}>
-          <Image 
+          <Image
             src={coverImage || '/placeholder-image.jpg'} 
             height={180} 
             alt={title}
@@ -63,7 +63,13 @@ export function ArticleCard({
         </Badge>
       )}
 
-      <Text className={classes.title} fw={500} component="a" {...linkProps}>
+      <Text 
+        className={classes.title}
+        fw={500} 
+        component="a"
+        {...linkProps}
+        size='lg'
+      >
         {title}
       </Text>
 

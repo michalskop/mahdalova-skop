@@ -1,4 +1,4 @@
-import { Title, Container, Paper, Text } from '@mantine/core';
+import { Title, Container, Paper } from '@mantine/core';
 import RotatingWord from '@/components/frontpage/RotatingWord';
 
 const HeroTitle = () => {
