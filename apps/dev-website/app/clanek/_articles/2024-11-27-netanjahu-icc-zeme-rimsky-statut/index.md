@@ -4,7 +4,7 @@ date: "2024-11-27"
 author: "Mahdalová & Škop"
 excerpt: "Politici jsou oficiálně obviněni z válečných zločinů a zločinů proti lidskosti."
 coverImage: "images/rimsky-statut-zeme.png"
-tags: ["Izrael", "Netanjahu", "zatykač", "ICC"]
+tags: ["zahraničí", "Izrael", "Netanjahu", "zatykač", "ICC"]
 ---
 Zatykač na Benjamina Netanjahua a Yoava Gallanta (ministra obrany) vydaný Mezinárodním trestním soudem (ICC) - odkaz na tiskovou zprávu je zde: [icc-cpi.int/…/situation-state…](https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-state-israels-challenges)
 
@@ -16,3 +16,4 @@ Symbolicky to znamená, že ICC považuje jejich činy za dostatečně závažn�
 
 Izrael, stejně jako USA haagský tribunál neuznávají a nespolupracují s ním. Navzdory tomu má tento krok potenciál zvýšit tlak na mezinárodní úrovni ohledně odpovědnosti za činy spáchané během konfliktu mezi Izraelem a Palestinou.
 
+![Signatáři tzv. Římskýho statutu - země, které by politiky měly vydat na základě zatykače Mezinárodního trestního soudu](images/rimsky-statut-zeme.png)
