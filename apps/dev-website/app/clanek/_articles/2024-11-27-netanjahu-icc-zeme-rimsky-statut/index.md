@@ -3,7 +3,7 @@ title: "Mezinárodní trestní soud vydal zatykač na Netanjahua a Gallanta"
 date: "2024-11-27"
 author: "Mahdalová & Škop"
 excerpt: "Politici jsou oficiálně obviněni z válečných zločinů a zločinů proti lidskosti."
-coverImage: "images/main.png"
+coverImage: "images/Římský statut - země světa - new 1.png"
 tags: ["Izrael", "Netanjahu", "zatykač", "ICC"]
 ---
 Zatykač na Benjamina Netanjahua a Yoava Gallanta (ministra obrany) vydaný Mezinárodním trestním soudem (ICC) - odkaz na tiskovou zprávu je zde: [icc-cpi.int/…/situation-state…](https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-state-israels-challenges)
