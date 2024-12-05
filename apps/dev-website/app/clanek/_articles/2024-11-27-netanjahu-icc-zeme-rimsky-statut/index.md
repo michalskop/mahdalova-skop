@@ -16,4 +16,4 @@ Symbolicky to znamená, že ICC považuje jejich činy za dostatečně závažn�
 
 Izrael, stejně jako USA haagský tribunál neuznávají a nespolupracují s ním. Navzdory tomu má tento krok potenciál zvýšit tlak na mezinárodní úrovni ohledně odpovědnosti za činy spáchané během konfliktu mezi Izraelem a Palestinou.
 
-![Signatáři tzv. Římskýho statutu - země, které by politiky měly vydat na základě zatykače Mezinárodního trestního soudu](images/rimsky-statut-zeme.png)
+![Signatáři tzv. Římskýho statutu - země, které by politiky měly vydat na základě zatykače Mezinárodního trestního soudu](images/Rimsky-statut-zeme.png)
