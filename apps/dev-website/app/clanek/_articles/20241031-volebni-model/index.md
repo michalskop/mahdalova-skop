@@ -7,7 +7,7 @@ coverImage: "images/poll_tracker.png"
 tags: ["průzkumy"]
 ---
 
-_Kdyby se dnes konaly volby, čtyřčlenná koalice bez Pirátů (ODS, TOP 09, KDU-ČSL a STAN) by se nad vodou držela jen stěží. A dlužno dodat, že i silnější varianta s Piráty by nyní měla dost malé šance. Naděje na získání většiny 101 mandátů jsou nyní pro tyto strany mizivé a případné spojení KSČM a SOCDEM jim může pořádně zavařit. Podobně jako Přísaha v tandemu s Motoristy, kteří by se nyní dostali do Sněmovny naprosto bez potíží._
+Kdyby se dnes konaly volby, čtyřčlenná koalice bez Pirátů (ODS, TOP 09, KDU-ČSL a STAN) by se nad vodou držela jen stěží. A dlužno dodat, že i silnější varianta s Piráty by nyní měla dost malé šance. Naděje na získání většiny 101 mandátů jsou nyní pro tyto strany mizivé a případné spojení KSČM a SOCDEM jim může pořádně zavařit. Podobně jako Přísaha v tandemu s Motoristy, kteří by se nyní dostali do Sněmovny naprosto bez potíží.
 
 Stejně jako v předchozím volebním období, i nyní od posledních sněmovních voleb zpracováváme všechny relevantní průzkumy a zaznamenáváme vývoj šancí jednotlivých politických stran. Data pravidelně aktualizujeme s každým novým průzkumem.
 
