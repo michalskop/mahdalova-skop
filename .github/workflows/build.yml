@@ -23,7 +23,7 @@ jobs:
       - name: Fix Image paths
         run: |
           cd apps/dev-website
-          node scripts/copy-images.js
+          node scripts/copyImages.js
           
       - name: Build
         run: npx turbo build
