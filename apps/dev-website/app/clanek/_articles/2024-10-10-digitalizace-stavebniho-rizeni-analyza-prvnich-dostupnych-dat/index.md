@@ -4,6 +4,7 @@ date: "2024-10-10"
 author: "Mahdalová & Škop"
 excerpt: "První data z digitalizovaného systému stavebních řízení (DSŘ): systém zvládá rostoucí objem žádostí bez zjevných známek přetížení."
 coverImage: "images/main.png"
+filter: ["analýza", "kontext"]
 tags: ["DSŘ", "Piráti", "stavební řízení", "digitalizace"]
 ---
 První dostupná data z digitalizovaného systému stavebních řízení (DSŘ) naznačují, že

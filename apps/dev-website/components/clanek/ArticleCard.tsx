@@ -1,19 +1,19 @@
 // components/clanek/ArticleCard.tsx
 'use client';
 
-import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
+// import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
 import {
   Card,
   Image,
   Text,
-  ActionIcon,
+  // ActionIcon,
   Badge,
   Group,
   Center,
-  Avatar,
+  // Avatar,
   useMantineTheme,
   useMantineColorScheme,
-  rem,
+  // rem,
 } from '@mantine/core';
 import classes from './ArticleCard.module.css';
 
@@ -73,17 +73,22 @@ export function ArticleCard({
 
       <Group justify="space-between" className={classes.footer}>
         <Center>
-          <Avatar
+          {/* <Avatar
             src={`https://ui-avatars.com/api/?name=${encodeURIComponent(author)}`}
             size={36}
             radius="xl"
             mr="xs"
-          />
+          /> */}
           <div>
-            <Text fz="sm" inline>
+            {/* <Text fz="sm" inline>
               {author}
-            </Text>
-            <Text fz="sm" inline style={{ color: "gray", marginTop: '4px' }}>
+            </Text> */}
+            <Text 
+              fz="sm"
+              inline
+              c="dimmed"
+              // style={{ marginTop: '4px' }}
+            >
               {new Date(date).toLocaleDateString('cs-CZ')}
             </Text>
           </div>
@@ -102,12 +107,12 @@ export function ArticleCard({
               color={theme.colors.yellow[7]}
             />
           </ActionIcon> */}
-          <ActionIcon className={classes.action}>
+          {/* <ActionIcon className={classes.action}>
             <IconShare 
               style={{ width: rem(16), height: rem(16) }} 
               color={theme.colors.blue[6]} 
             />
-          </ActionIcon>
+          </ActionIcon> */}
         </Group>
       </Group>
     </Card>

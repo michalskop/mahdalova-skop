@@ -1,4 +1,4 @@
-// app/clanek/getArticles.ts
+// app/common/getArticles.ts
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -10,10 +10,11 @@ export interface Article {
   author: string;
   slug: string;
   coverImage: string | null;
+  filter?: string | string[];
   tags: string[];
 }
 
-export async function getArticles(limit: number = 9): Promise<Article[]> {
+export async function getArticles(limit: number = 9, filter?: string | string[]): Promise<Article[]> {
   const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
   const articleFolders = fs.readdirSync(articlesDirectory);
 
@@ -33,11 +34,20 @@ export async function getArticles(limit: number = 9): Promise<Article[]> {
       author: data.author || 'Anonymous',
       slug: folder,
       coverImage,
+      filter: data.filter || [],
       tags: data.tags || []
     } as Article;
   });
 
-  return articles
+  const filteredArticles = filter 
+    ? articles.filter(article => {
+        const articleFilter = Array.isArray(article.filter) ? article.filter : [article.filter];
+        const searchFilter = Array.isArray(filter) ? filter : [filter];
+        return searchFilter.some(f => articleFilter.includes(f));
+      })
+    : articles;
+
+  return filteredArticles
     .sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     })

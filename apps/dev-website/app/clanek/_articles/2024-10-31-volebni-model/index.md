@@ -4,6 +4,7 @@ date: "2024-10-31"
 author: "Mahdalová & Škop"
 excerpt: "Kdyby se dnes konaly volby, čtyřkoalice by se nad vodou držela jen stěží."
 coverImage: "images/poll_tracker.png"
+filter: ["analýza"]
 tags: ["průzkumy"]
 ---
 
