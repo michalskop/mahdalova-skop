@@ -26,4 +26,4 @@ jobs:
           node scripts/copyImages.js
           
       - name: Build
-        run: npx turbo build
+        run: npx turbo build --filter=dev-website
