@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme } from '@mantine/core';  // Add useMantineColorScheme
+import { Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core';  // Add useMantineColorScheme
 import { useDisclosure } from '@mantine/hooks';
 // import { IconSun, IconMoon } from '@tabler/icons-react';  // Add icons
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import LogoWithText from '../common/LogoWithText';
+import LogoWithText from '@/components/common/LogoWithText';
 import classes from './HeaderSimple.module.css';
 
 const links = [
@@ -22,6 +22,9 @@ export function HeaderSimple() {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();  // Add this
+  const theme = useMantineTheme();
+  const [scrolled, setScrolled] = useState(false);
+
 
   useEffect(() => {
     setMounted(true);
@@ -30,6 +33,20 @@ export function HeaderSimple() {
   useEffect(() => {
     close();
   }, [pathname, close]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const logoColor = scrolled ? theme.colors.brand[6] : theme.colors.background[9];
+
 
   const items = links.map((link) => (
     <Link 
@@ -57,7 +74,7 @@ export function HeaderSimple() {
     return (
       <header className={classes.header}>
         <Container size="md" className={classes.inner}>
-          <LogoWithText />
+          <LogoWithText color={logoColor} size="md" />
           <Group gap={5} visibleFrom="xs">
             {items}
           </Group>
@@ -68,9 +85,9 @@ export function HeaderSimple() {
 
   return (
     <>
-      <header className={classes.header}>
+      <header className={classes.header} style={{background: theme.colors.brandRoyalBlue[9] }}>
         <Container size="md" className={classes.inner} flex="flex" style={{ justifyContent: 'space-between', alignItems: 'center'}} >
-          <LogoWithText />
+          <LogoWithText  color={logoColor}/>
           <Group gap={10} visibleFrom="xs" ml="auto">
             {items}
           </Group>

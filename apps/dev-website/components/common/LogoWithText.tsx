@@ -1,4 +1,6 @@
-import { Group, Text } from '@mantine/core';
+// app/components/common/LogoWithText.tsx
+
+import { Group, Text, useMantineTheme } from '@mantine/core';
 import Link from 'next/link';
 
 const Logo = () => (
@@ -15,16 +17,21 @@ const Logo = () => (
 interface LogoWithTextProps {
   href?: string;
   size?: 'sm' | 'md' | 'lg';
-  inverted?: boolean;
+  // inverted?: boolean;
+  color?: string;
   onClick?: () => void; // Make onClick optional
 }
 
 const LogoWithText: React.FC<LogoWithTextProps> = ({ 
   href = "/",
   size = "md",
-  inverted = false,
+  // inverted = false,
+  color,
   onClick
 }) => {
+  const theme = useMantineTheme();
+  const textColor = color || theme.colors.brand[6];
+
   const textSize = {
     sm: 'lg',
     md: 'xl',
@@ -45,7 +52,7 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
       <Text 
         fw={700}
         size={textSize}
-        c={inverted ? 'white' : 'dark.3'}
+        c={textColor}
       >
         Mahdalová & Škop
       </Text>

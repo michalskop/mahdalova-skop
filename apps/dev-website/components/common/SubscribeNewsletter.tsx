@@ -73,8 +73,8 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                   </Text>
               
                   <TextInput
-                    required
-                    label="Email:"
+                    // required
+                    label="&nbsp;"
                     placeholder="vas.email@example.com"
                     name="email"
                     type="email"
