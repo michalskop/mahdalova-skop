@@ -59,7 +59,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
         bd="2px dashed background"
         pos="relative"
         radius="md"
-        c="background"
+        c="background.0"
         bg="brandDeepRed.9"
         >
           <Box 
@@ -89,7 +89,10 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
               <Grid>
                 <Grid.Col span={8}>
                   <Text size="sm">
-                    To hlavní z našich článků přímo do vašeho emailu.
+                    To hlavní z našich článků
+                  </Text>
+                  <Text size="sm">
+                    přímo do vašeho emailu.
                   </Text>
               
                   <TextInput
@@ -100,7 +103,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                     type="email"
                     styles={(theme) => ({
                       input: {
-                        backgroundColor: theme.colors.brandDeepRed[8], // Set your desired background color here
+                        backgroundColor: theme.colors.brandDeepRed[7], // Set your desired background color here
                       },
                     })}
                   />
@@ -114,15 +117,11 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                 <Grid.Col span={4}
                    style={{
                     display: 'flex', 
-                    flexDirection: 'column', 
-                    alignItems: 'center',
-                    justifyContent: 'flex-end',
-                    height: '100%',
-                    // paddingBottom: '1rem'
+                    alignItems: 'flex-end',
                   }}>
 
                   {/* 65 is a quick fix, this part is not properly pushed down */}
-                  <Flower size={65} color="background" strokeWidth={2} />
+                  {/* <Flower size={65} color="background" strokeWidth={2} /> */}
 
                   <Button
                     type="submit"
@@ -134,7 +133,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                     radius="xl"
                     variant="outline"
                     style={{ border: '1px solid' }}
-                    color="background.6"
+                    color="background.0"
                   >
                     {isSubmitting ? 'Posílám...' : 'Odeslat'}
                   </Button>
