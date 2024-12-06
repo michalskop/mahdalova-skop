@@ -27,7 +27,7 @@ export const testimonials: TestimonialData[] = [
     id: '3',
     text: 'Děláš to [Kateřino] dobře, vychytáváš zajímavý pohledy. Myslím, že si to přesně sedne.',
     author: 'Jaroslav Kábele',
-    position: 'ředitel pro strategii ČTK (dnes generální ředitel ČTK)',
+    position: 'generální ředitel ČTK',
     date: '8. 4. 2021'
   },
     {
@@ -55,68 +55,75 @@ export const testimonials: TestimonialData[] = [
     id: '7',
     text: '[...] systematická práce Katky Mahdalové a Michala Škopa na poslanecké docházce a prezidentských šancích.',
     author: 'Martin Jašminský',
-    position: 'šéfredaktor byznysové rubriky SZ',
+    position: 'šéfredaktor SZ byznys',
     date: '19. 12. 2022'
   },
     {
     id: '8',
+    text: 'Gratulace Kateřině a Michalovi 👍👏👏👏 Jejich predikce byla naprosto přesná. Díky nim dokázaly Seznam Zprávy o hodinu dříve, než to ukázaly výsledky ČSÚ, uvést, že Petr Pavel předstihne Andreje Babiše.',
+    author: 'Jiří Kubík',
+    position: 'šéfredaktor SZ',
+    date: '14. 1. 2023'
+  },
+      {
+    id: '9',
     text: 'Klobouk dolů! Jste dobří🙂',
     author: 'Václav Štětka',
-    position: 'sociolog médií na univerzitě v Loughborough',
+    position: 'Univerzita v Loughborough',
     date: '28. 1. 2023'
   },
     {
-    id: '9',
+    id: '10',
     text: 'Čtení vašich článků jsem si vždy užíval, byla to vždycky dobrá práce.',
     author: 'Dušan Janovský',
     position: 'konzultant vyhledávání Seznam.cz',
     date: '11. 4. 2023'
   },
    {
-    id: '10',
+    id: '11',
     text: 'Obrovský kus práce je vidět za mapou kvality života v jednotlivých obcích (tentokrát s výrazným označením prostřednictvím počtu "hvězdiček"), kterou připravila Kateřina Mahdalová a Michal Škop.',
     author: 'Jiří Kubík',
     position: 'šéfredaktor SZ',
     date: '11. 4. 2023'
   },
   {
-    id: '11',
+    id: '12',
     text: 'Rád bych vyzdvihl práci naší Kateřiny Mahdalové a Michala Škopa - jejich model opět již hodinu a půl po uzavření volebních místností ukázal výsledky velmi přesně (slovenské volby 2023)',
     author: 'Tomáš Kapler',
     position: 'AI a online business konzultant',
     date: '1. 10. 2023'
   },
     {
-    id: '12',
+    id: '13',
     text: '[...] odměnu získává dvojice Kateřina Mahdalová a Michal Škop, a to za důkladnou přípravu volební kalkulačky, minulý týden našeho nejvýraznějšího předvolebního příspěvku před evropskými volbami',
     author: 'Jiří Kubík',
     position: 'šéfredaktor SZ',
     date: '3. 6. 2024'
   },
   {
-    id: '13',
-    text: 'Díky za vaši skvělou práci, stojím při vás a nejsem sama.',
-    author: 'Lucie Fremrová',
-    position: 'University of Brighton',
-    date: '6. 11. 2024'
+    id: '14',
+    text: 'Mahdalová a Škop jsou zřejmě nejlepší datoví novináři tady.',
+    author: 'Michal Illich',
+    position: 'podnikatel, investor',
+    date: '3. 10. 2024'
   },
  {
-    id: '14',
+    id: '15',
     text: 'Kateřina Mahdalová před rokem demaskovala zmanipulovaný průzkum Pražské hospodářské komory o zklidnění dopravy v centru. Zatímco ostatní média jim to jen tupě bez ověření přejala. Respekt za to!',
     author: 'Města pro lidi',
     position: 'organizace',
     date: '6. 10. 2024'
   },
 {
-    id: '15',
+    id: '16',
     text: 'Díky za vaši skvělou práci, stojím při vás a nejsem sama.',
     author: 'Lucie Fremrová',
     position: 'University of Brighton',
     date: '6. 11. 2024'
   },  
   {
-    id: '16',
-    text: 'Díky Katerina Mahdalova za skvělé vizualizace (doporučuji ke sledování), i proto jsem před časem psal, že tím svým nečekaným tahem Seznam Zprávy přišly o jedny z nejlepších českých datových žurnalistů.',
+    id: '17',
+    text: 'Díky Kateřině Mahdalové za skvělé vizualizace (doporučuji ke sledování), i proto jsem před časem psal, že tím svým nečekaným tahem Seznam Zprávy přišly o jedny z nejlepších českých datových žurnalistů.',
     author: 'Tomáš Protivínský',
     position: 'IDEA CERGE-EI',
     date: '6. 11. 2024'
