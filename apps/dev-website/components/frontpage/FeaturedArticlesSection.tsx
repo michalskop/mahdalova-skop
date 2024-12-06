@@ -1,6 +1,7 @@
 // app/components/frontpage/FeaturedArticlesSection.tsx
+'use client';
 
-import { Box, Group, Title, Stack, Paper } from '@mantine/core';
+import { Box, Group, Title, Stack, Paper, useMantineTheme } from '@mantine/core';
 import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import { Article } from '@/components/common/getArticles';
 import { Arrow } from '@/components/common/Arrow';
@@ -16,6 +17,7 @@ export function FeaturedArticlesSection({
   articles,
   themeColor = 'red'
 }: FeaturedArticlesSectionProps) {
+  const theme = useMantineTheme();
   return (
     <Paper py={20} bg={themeColor} radius={0}>
       <Group 
@@ -33,9 +35,10 @@ export function FeaturedArticlesSection({
             order={2} 
             ta={{ base: 'left', sm: 'right' }}
             style={{ display: 'flex', alignItems: 'right', justifyContent: 'flex-start', gap: '5px' }}
+            c={theme.colors.background[0]}
           >
             {sectionTitle}
-            <Arrow size={80} color="black" />
+            <Arrow size={80} color={ theme.colors.background[0] } />
           </Title>
         </Stack>
         <Box flex={1}>

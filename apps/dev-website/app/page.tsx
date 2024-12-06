@@ -34,7 +34,7 @@ export default async function HomePage() {
       {/* <SubscribeHH /> */}
 
       <FeaturedArticlesSection 
-        sectionTitle="Nejnovější"
+        sectionTitle="Výběr"
         articles={articles}
         themeColor="brandRoyalBlue.3" />
 
