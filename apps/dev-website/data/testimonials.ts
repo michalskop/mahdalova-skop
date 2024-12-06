@@ -27,7 +27,7 @@ export const testimonials: TestimonialData[] = [
     id: '3',
     text: 'Děláš to [Kateřino] dobře, vychytáváš zajímavý pohledy. Myslím, že si to přesně sedne.',
     author: 'Jaroslav Kábele',
-    position: 'ředitel pro strategii ČTK (dnes generální ředitel ČTK)',
+    position: 'generální ředitel ČTK',
     date: '8. 4. 2021'
   },
     {
@@ -55,14 +55,21 @@ export const testimonials: TestimonialData[] = [
     id: '7',
     text: '[...] systematická práce Katky Mahdalové a Michala Škopa na poslanecké docházce a prezidentských šancích.',
     author: 'Martin Jašminský',
-    position: 'šéfredaktor byznysové rubriky SZ',
+    position: 'šéfredaktor SZ byznys',
     date: '19. 12. 2022'
   },
     {
     id: '8',
+    text: 'Gratulace Kateřině a Michalovi 👍👏👏👏 Jejich predikce byla naprosto přesná. Díky nim dokázaly Seznam Zprávy o hodinu dříve, než to ukázaly výsledky ČSÚ, uvést, že Petr Pavel předstihne Andreje Babiše.',
+    author: 'Jiří Kubík',
+    position: 'šéfredaktor SZ',
+    date: '14. 1. 2023'
+  },
+      {
+    id: '8',
     text: 'Klobouk dolů! Jste dobří🙂',
     author: 'Václav Štětka',
-    position: 'sociolog médií na univerzitě v Loughborough',
+    position: 'Univerzita v Loughborough',
     date: '28. 1. 2023'
   },
     {
@@ -95,10 +102,10 @@ export const testimonials: TestimonialData[] = [
   },
   {
     id: '13',
-    text: 'Díky za vaši skvělou práci, stojím při vás a nejsem sama.',
-    author: 'Lucie Fremrová',
-    position: 'University of Brighton',
-    date: '6. 11. 2024'
+    text: 'Mahdalová a Škop jsou zřejmě nejlepší datoví novináři tady.',
+    author: 'Michal Illich',
+    position: 'podnikatel, investor',
+    date: '3. 10. 2024'
   },
  {
     id: '14',
@@ -116,7 +123,7 @@ export const testimonials: TestimonialData[] = [
   },  
   {
     id: '16',
-    text: 'Díky Katerina Mahdalova za skvělé vizualizace (doporučuji ke sledování), i proto jsem před časem psal, že tím svým nečekaným tahem Seznam Zprávy přišly o jedny z nejlepších českých datových žurnalistů.',
+    text: 'Díky Kateřině Mahdalové za skvělé vizualizace (doporučuji ke sledování), i proto jsem před časem psal, že tím svým nečekaným tahem Seznam Zprávy přišly o jedny z nejlepších českých datových žurnalistů.',
     author: 'Tomáš Protivínský',
     position: 'IDEA CERGE-EI',
     date: '6. 11. 2024'
