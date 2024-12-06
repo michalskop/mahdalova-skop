@@ -35,7 +35,7 @@ export default async function HomePage() {
 
       <FeaturedArticlesSection 
         sectionTitle="Nejnovější"
-        articles={articles_analyses}
+        articles={articles}
         themeColor="brandRoyalBlue.3" />
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
