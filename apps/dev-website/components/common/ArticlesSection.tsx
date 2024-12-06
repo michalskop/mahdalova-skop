@@ -1,4 +1,4 @@
-// app/components/frontpage/FeaturedArticlesSection.tsx
+// app/components/frontpage/ArticlesSection.tsx
 'use client';
 
 import { Box, Group, Title, Stack, Paper, useMantineTheme } from '@mantine/core';
@@ -6,17 +6,17 @@ import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import { Article } from '@/components/common/getArticles';
 import { Arrow } from '@/components/common/Arrow';
 
-interface FeaturedArticlesSectionProps {
+interface ArticlesSectionProps {
   sectionTitle: string;
   articles: Article[];
   themeColor?: string;
 }
 
-export function FeaturedArticlesSection({
+export function ArticlesSection({
   sectionTitle,
   articles,
   themeColor = 'red'
-}: FeaturedArticlesSectionProps) {
+}: ArticlesSectionProps) {
   const theme = useMantineTheme();
   return (
     <Paper py={20} bg={themeColor} radius={0}>
