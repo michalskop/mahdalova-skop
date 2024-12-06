@@ -46,7 +46,7 @@ export const testimonials: TestimonialData[] = [
   },
   {
     id: '6',
-    text: 'K opravdu výjimečnému obsahu minulého týdne řadím i dvě navýsost "spotřebitelská témata" - speciální kalkulačky. Kateřina Mahdalová a Michal Škop představili skvělou volební kalkulačku zaměřenou na komunální volby, resp. volební programy ve velkých městech',
+    text: 'K opravdu výjimečnému obsahu minulého týdne řadím i dvě navýsost "spotřebitelská témata" - speciální kalkulačky. K. Mahdalová a M. Škop představili skvělou volební kalkulačku zaměřenou na komunální volby, resp. volební programy ve velkých městech',
     author: 'Jiří Kubík',
     position: 'šéfredaktor SZ',
     date: '19. 9. 2022'
