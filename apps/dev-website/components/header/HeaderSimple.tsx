@@ -46,6 +46,7 @@ export function HeaderSimple() {
   }, []);
 
   const logoColor = scrolled ? theme.colors.brand[6] : theme.colors.background[9];
+  const headerHeight = scrolled ? '60px' : '56px';
 
 
   const items = links.map((link) => (
@@ -72,7 +73,7 @@ export function HeaderSimple() {
 
   if (!mounted) {
     return (
-      <header className={classes.header}>
+      <header className={classes.header} style={{ height: headerHeight }}>
         <Container size="md" className={classes.inner}>
           <LogoWithText color={logoColor} size="md" />
           <Group gap={5} visibleFrom="xs">
@@ -91,6 +92,7 @@ export function HeaderSimple() {
           background: theme.colors.brandRoyalBlue[9],
           paddingBottom: '0',
           borderBottom: 'none',
+          height: headerHeight 
         }}
       >
         <Container 
