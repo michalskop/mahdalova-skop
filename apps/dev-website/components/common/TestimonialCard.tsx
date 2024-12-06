@@ -19,7 +19,7 @@ export function TestimonialCard({ author, text, position, date }: TestimonialCar
       bg="brandRoyalBlue.8"
       c="background.2"
       style={{
-        height: '60%',
+        height: '58%',
       }}
     >
       <div className="flex flex-col justify-between h-full">
@@ -36,12 +36,13 @@ export function TestimonialCard({ author, text, position, date }: TestimonialCar
       mt={10}
       pt={10}
       style={{
-        height: '25%',
+        height: '28%',
       }}
     >
       <div className="mt-4"  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Title order={4}>{author}</Title>
-        <Text size="sm" c="dimmed">{position} • {date}</Text>
+        <Text size="md">{author}</Text>
+        <Text size="sm" c="dimmed">{position}</Text>
+        <Text size="sm" c="dimmed">{date}</Text>
       </div>
       {/* </div> */}
     </Paper>
