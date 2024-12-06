@@ -83,7 +83,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                 order={2}
                 size="xl"
                 >
-                Newletter
+                Newsletter
               </Title>
               
               <Grid>
