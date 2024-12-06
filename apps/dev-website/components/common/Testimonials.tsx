@@ -21,8 +21,8 @@ function Testimonials() {
       bg="brandDeepRed.5"
       p={isMobile ? 'xs' : 'md'}
       >
-      <Title order={2} ta="center" mb={isMobile ? 'md' : 'xl'} c="background.0" style={{ textTransform: 'uppercase' }}>
-        Co o nás říkají <IconChevronRight size={20} /><IconChevronRight size={20} />
+      <Title order={2} ta="center" mb={isMobile ? 'md' : 'xl'} c="background.0">
+        Co o nás říkají
       </Title>
       <Carousel
         loop
