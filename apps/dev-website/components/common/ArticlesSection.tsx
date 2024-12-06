@@ -8,12 +8,14 @@ import { Arrow } from '@/components/common/Arrow';
 
 interface ArticlesSectionProps {
   sectionTitle: string;
+  sectionLink?: string;
   articles: Article[];
   themeColor?: string;
 }
 
 export function ArticlesSection({
   sectionTitle,
+  sectionLink = '#',
   articles,
   themeColor = 'red'
 }: ArticlesSectionProps) {
@@ -31,15 +33,23 @@ export function ArticlesSection({
           pt={15}
           pl={{ base: 'md', md: 'md' }}
         >
-          <Title 
-            order={2} 
-            ta={{ base: 'left', sm: 'right' }}
-            style={{ display: 'flex', alignItems: 'right', justifyContent: 'flex-start', gap: '5px' }}
-            c={theme.colors.background[0]}
+          <a 
+            href={sectionLink} // Set the link URL
+            rel="noopener noreferrer" // Security measure for external links
+            style={{ 
+              textDecoration: 'none'
+            }}
           >
-            {sectionTitle}
-            <Arrow size={80} color={ theme.colors.background[0] } />
-          </Title>
+            <Title 
+              order={2} 
+              ta={{ base: 'left', sm: 'right' }}
+              style={{ display: 'flex', alignItems: 'right', justifyContent: 'flex-start', gap: '5px' }}
+              c={theme.colors.background[0]}
+            >
+              {sectionTitle}
+              <Arrow size={80} color={ theme.colors.background[0] } />
+            </Title>
+          </a>
         </Stack>
         <Box flex={1}>
           <ArticlesGrid articles={articles} />
