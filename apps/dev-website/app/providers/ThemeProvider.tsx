@@ -77,7 +77,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#933e00'],
             brandRoyalBlue: [
               "#e9ebfa", "#c9d0f5", "#a9b5f0", "#899aeb", "#697fe6", "#5e66d5", "#4a51ab", "#383d82", "#272a59", "#161730"
-            ]
+            ],
+            brandTeal: ["#e5f9fc", "#b8eff6", "#8cdfef", "#5fcce6", "#33b9d9", "#1a9fbd", "#0f6c78", "#0b5964", "#084650", "#06333c"],
+            brandForestGreen: ["#eaf7d6", "#cbeab1", "#acde8b", "#8dd265", "#6ec53f", "#639e0a", "#507e08", "#3d5f06", "#2a3f04", "#172002"],
+            brandEmeraldMint: ["#e8f9f4", "#c2f0e4", "#9be8d4", "#75dfc4", "#4fd6b4", "#12b886", "#0e926a", "#0b6b4e", "#084533", "#042319"],
+            brandNavy: ["#e9ecf4", "#d2d8e9", "#bcc4df", "#a6b0d4", "#8f9dc9", "#7889be", "#6267a3", "#4c4f8e", "#2f325c", "#101432"],
+            brandDeepRed:["#fbe8eb", "#f5c4cd", "#efa0af", "#e87c91", "#d85a74", "#bb3a5d", "#a03250", "#812840", "#621d30", "#431320"]
         },
       }}
     >
