@@ -85,8 +85,20 @@ export function HeaderSimple() {
 
   return (
     <>
-      <header className={classes.header} style={{background: theme.colors.brandRoyalBlue[9] }}>
-        <Container size="md" className={classes.inner} flex="flex" style={{ justifyContent: 'space-between', alignItems: 'center'}} >
+      <header 
+        className={classes.header}
+        style={{
+          background: theme.colors.brandRoyalBlue[9],
+          paddingBottom: '0',
+          borderBottom: 'none',
+        }}
+      >
+        <Container 
+          size="md"
+          className={classes.inner}
+          flex="flex" 
+          style={{ justifyContent: 'space-between', alignItems: 'center', gap: '20px', paddingBottom: '0', borderBottom: 'none' }}
+        >
           <LogoWithText  color={logoColor}/>
           <Button
             component="a"
@@ -96,7 +108,7 @@ export function HeaderSimple() {
             target="_blank"
             radius="xl"
             style={{
-              marginLeft: '20px', // Add padding to the left
+              // marginLeft: '20px', // Add padding to the left
               '&:hover': {
                 bg: theme.colors.brand[7], // Change to your desired hover color
               },

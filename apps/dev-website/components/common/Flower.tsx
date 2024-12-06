@@ -1,11 +1,11 @@
 const AnimatedFlower = ({ size = 200, color = '#6666ff', strokeWidth = 2 }) => {
-  const petals = 5;
+  const petals = 9;
   const baseRadius = size * 0.35;
-  const centerRadius = size * 0.07; // Center circle size
+  const centerRadius = size * 0.09; // Center circle size
 
   const createPetal = (angle: number) => {
-    const randomLength = baseRadius * (0.7 + Math.random() * 0.6);
-    const randomWidth = (Math.random() * 0.4 + 0.2) * Math.PI;
+    const randomLength = baseRadius * (0.5 + Math.random() * 0.8);
+    const randomWidth = (Math.random() * 0.15 + 0.05) * Math.PI;
     
     // Start from edge of center circle
     const startX = Math.cos(angle) * centerRadius;

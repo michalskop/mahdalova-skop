@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, TextInput, Button, Paper, Stack, Text, Title, Grid } from '@mantine/core';
-import { IconMail } from '@tabler/icons-react';
+import { Box, TextInput, Button, Paper, Stack, Text, Title, Grid, Group } from '@mantine/core';
+// import { IconMail } from '@tabler/icons-react';
+import { BsFillPostageHeartFill } from "react-icons/bs";
 import Flower from '@/components/common/Flower';
 
 interface FormProps {
@@ -25,22 +26,41 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
 
   return (
     <Paper
-      bg="brandTeal.4"
+      bg="brandDeepRed.9"
       p="lg"
       radius={0}
     >
-      
+    <Group 
+        gap={0}
+        align="flex-start"
+        wrap="wrap"
+      >
+        <Stack 
+          w={{ base: '100%', md: 200 }}
+          mb={{ base: 'xs', md: 0 }}
+          pt={15}
+          pl={{ base: 'md', md: 'md' }}
+        >
+          <Title 
+            order={2} 
+            ta={{ base: 'left', sm: 'right' }}
+            style={{ display: 'flex', alignItems: 'right', justifyContent: 'flex-start', gap: '5px' }}
+          >
+            {/* {sectionTitle}
+            <Arrow size={80} color="black" /> */}
+          </Title>
+        </Stack>  
       <Paper 
         shadow="xs" 
         maw="400px" 
-        mx="auto" 
+        // mx="auto"
         withBorder 
         p="md" 
         bd="2px dashed background"
         pos="relative"
         radius="md"
         c="background"
-        bg="brandTeal.4"
+        bg="brandDeepRed.9"
         >
           <Box 
             pos="absolute" 
@@ -50,7 +70,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
             // c="background"
           >
 
-            <IconMail size={24} />
+            <BsFillPostageHeartFill size={36} />
           </Box>
           <form 
             method="post" 
@@ -69,7 +89,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
               <Grid>
                 <Grid.Col span={8}>
                   <Text size="sm">
-                    To hlavní z našich článků <strong>zdarma</strong> přímo do vašeho emailu.
+                    To hlavní z našich článků přímo do vašeho emailu.
                   </Text>
               
                   <TextInput
@@ -80,7 +100,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                     type="email"
                     styles={(theme) => ({
                       input: {
-                        backgroundColor: theme.colors.brandTeal[5], // Set your desired background color here
+                        backgroundColor: theme.colors.brandDeepRed[8], // Set your desired background color here
                       },
                     })}
                   />
@@ -112,8 +132,9 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                     disabled={isSubmitting}
                     fullWidth
                     radius="xl"
+                    variant="outline"
                     style={{ border: '1px solid' }}
-                    color="brandTeal.4"
+                    color="background.6"
                   >
                     {isSubmitting ? 'Posílám...' : 'Odeslat'}
                   </Button>
@@ -122,6 +143,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
             </Stack>
           </form>
       </Paper>
+      </Group>
     </Paper>
   );
 };
