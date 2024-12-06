@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Box, TextInput, Button, Paper, Stack, Text, Title, Grid } from '@mantine/core';
 import { IconMail } from '@tabler/icons-react';
+import Flower from '@/components/common/Flower';
 
 interface FormProps {
   actionUrl: string;
@@ -24,9 +25,11 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
 
   return (
     <Paper
-      bg="brandEmeraldMint.6"
+      bg="brandTeal.4"
       p="lg"
+      radius={0}
     >
+      
       <Paper 
         shadow="xs" 
         maw="400px" 
@@ -37,7 +40,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
         pos="relative"
         radius="md"
         c="background"
-        bg="brandEmeraldMint.6"
+        bg="brandTeal.4"
         >
           <Box 
             pos="absolute" 
@@ -77,7 +80,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                     type="email"
                     styles={(theme) => ({
                       input: {
-                        backgroundColor: theme.colors.brandEmeraldMint[7], // Set your desired background color here
+                        backgroundColor: theme.colors.brandTeal[5], // Set your desired background color here
                       },
                     })}
                   />
@@ -89,7 +92,17 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                   /> */}
                 </Grid.Col>
                 <Grid.Col span={4}
-                   style={{ display: 'flex', alignItems: 'flex-end' }}>
+                   style={{
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center',
+                    justifyContent: 'flex-end',
+                    height: '100%',
+                    // paddingBottom: '1rem'
+                  }}>
+
+                  {/* 65 is a quick fix, this part is not properly pushed down */}
+                  <Flower size={65} color="background" strokeWidth={2} />
 
                   <Button
                     type="submit"
@@ -100,7 +113,7 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
                     fullWidth
                     radius="xl"
                     style={{ border: '1px solid' }}
-                    color="brandEmeraldMint.6"
+                    color="brandTeal.4"
                   >
                     {isSubmitting ? 'Posílám...' : 'Odeslat'}
                   </Button>
