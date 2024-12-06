@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core';  // Add useMantineColorScheme
+import { Button, Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core';  // Add useMantineColorScheme
 import { useDisclosure } from '@mantine/hooks';
 // import { IconSun, IconMoon } from '@tabler/icons-react';  // Add icons
 import Link from 'next/link';
@@ -88,11 +88,25 @@ export function HeaderSimple() {
       <header className={classes.header} style={{background: theme.colors.brandRoyalBlue[9] }}>
         <Container size="md" className={classes.inner} flex="flex" style={{ justifyContent: 'space-between', alignItems: 'center'}} >
           <LogoWithText  color={logoColor}/>
-          <Group gap={10} visibleFrom="xs" ml="auto">
+          <Button
+            component="a"
+            href="https://herohero.co/mahdalovaskop/"
+            c={theme.colors.brandRoyalBlue[9]}
+            color={theme.colors.brandYellow[6]}
+            target="_blank"
+            radius="xl"
+            style={{
+              marginLeft: '20px', // Add padding to the left
+              '&:hover': {
+                bg: theme.colors.brand[7], // Change to your desired hover color
+              },
+            }}
+          >Podpořte nás</Button>
+          <Group gap={10} visibleFrom="sm" ml="auto">
             {items}
           </Group>
           <Group>
-            <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color={theme.colors.brand[5]} />
           </Group>
         </Container>
       </header>
