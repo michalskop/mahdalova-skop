@@ -1,16 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button, Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core';  // Add useMantineColorScheme
+import { Button, Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core'; 
 import { useDisclosure } from '@mantine/hooks';
-// import { IconSun, IconMoon } from '@tabler/icons-react';  // Add icons
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LogoWithText from '@/components/common/LogoWithText';
 import classes from './HeaderSimple.module.css';
 
 const links = [
-  // { link: '/clanek', label: 'Články' },
   // { link: '/special', label: 'Speciály' },
   { link: '/analyzy', label: 'Analýzy' },
   { link: '/kontext', label: 'Kontext' },
@@ -21,7 +19,7 @@ export function HeaderSimple() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();  // Add this
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
   const [scrolled, setScrolled] = useState(false);
 
