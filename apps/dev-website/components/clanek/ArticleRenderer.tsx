@@ -131,7 +131,7 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
     <Container size="md" pb="lg">
       <Global
         styles={{
-          a: {
+          '.markdown-content a': {
             color: theme.colors.brand[6],
             textDecoration: 'none',
             '&:hover': {
@@ -150,7 +150,8 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
         shadow="0"
         p="md"
         pt="xl"
-        withBorder
+        // withBorder
+        className='markdown-content'
         styles={{
           root: {
             backgroundColor: colorScheme === 'dark'
