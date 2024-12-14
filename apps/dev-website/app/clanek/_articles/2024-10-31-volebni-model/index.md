@@ -18,12 +18,14 @@ Od srpna 2024 sledujeme „závod“ nejen podle jednotlivých stran, ale také 
 
 <iframe src='https://flo.uri.sh/visualisation/20050986/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="600px" allowFullScreen></iframe>
 
+```box
 #### Jak ovládat graf a jak ho interpretovat
 - Klíčový graf výše zobrazuje vývoj volebních modelů podle všech agentur od voleb 2021. Kliknutím na stranu v legendě v interaktivní verzi zobrazíte její detaily, nebo si můžete vybrat pouze konkrétní agenturu.
 - Po najetí myší na bod v grafu se zobrazí podrobnosti konkrétního průzkumu (agentura, střední datum, kdy průzkum probíhal, a samozřejmě konkrétní naměřený výsledek vybrané strany).
 - Kliknutím na položky menu lze filtrovat agentury nebo jednotlivé strany.
 - Pro návrat k původnímu zobrazení klikněte znovu na legendu.
 - Linky znázorňují vážený průměr, jak se vyvíjí v čase.
+```
 
 S každým novým průzkumem přepočítáváme vážený průměr dle metodiky [Mandáty.cz](https://mandaty.cz), přičemž reflektujeme dobu sběru dat, nikoli jejich zveřejnění. Názory voličů se totiž mohou měnit – proto má průzkum provedený v srpnu menší váhu než aktuálnější data ze října. V grafu je tedy logicky zobrazený vážený průměr, v němž je jsou zohledněna časová období.
 
@@ -72,7 +74,7 @@ Samozřejmě největší šance na většinu má nesourodá koalice ANO, SOCDEM 
 _Pozn.: Jednotlivě strany koalice Spolu už v přehledu neuvádíme, protože tato trojice politických subjektů oznámila, že bude znovu kandidovat v tomto koaličním uskupení._
 
 ```box
-Klíčová otázka: proč se průzkumy liší?
+## Klíčová otázka: proč se průzkumy liší?
 
 Volební model odráží aktuální rozložení voličské přízně a zahrnuje odpovědi těch, kteří mají v plánu volit. Průzkumy se pak liší metodikou jednotlivých agentur – některé využívají osobní rozhovory, jiné telefonické nebo online dotazování.
 
