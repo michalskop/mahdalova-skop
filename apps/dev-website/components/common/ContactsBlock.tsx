@@ -1,11 +1,12 @@
 // components/common/ContactsBlock.tsx
 'use client';
 
-import { Container, Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem } from '@mantine/core';
+import { Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem,useMantineTheme }from '@mantine/core';
+import { Global } from '@mantine/styles';
 import { 
   IconMail, 
   IconPhone, 
-  IconBrandTwitter, 
+  IconBrandX, 
   IconBrandThreads,
   IconBrandBluesky 
 } from '@tabler/icons-react';
@@ -55,6 +56,7 @@ const contacts: ContactPerson[] = [
 function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDomain: string }) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const theme = useMantineTheme();
 
   const handleReveal = () => {
     setIsRevealed(true);
@@ -71,7 +73,7 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
     return (
       <Text 
         component="span" 
-        c="blue" 
+        c={theme.colors.brand[6]}
         style={{ cursor: 'pointer' }}
         onClick={handleReveal}
       >
@@ -81,12 +83,13 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
   }
 
   return (
-    <Group gap={8}>
+    <Group gap={8} c={theme.colors.brand[6]}>
       <Text>{emailUser}@{emailDomain}</Text>
       <Anchor 
         component="button"
         size="sm"
         onClick={handleCopy}
+        c={theme.colors.brandNavy[6]}
       >
         {isCopied ? 'Copied!' : 'Copy'}
       </Anchor>
@@ -95,118 +98,154 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
 }
 
 export function ContactsBlock() {
+  const theme = useMantineTheme();
+  
   return (
-    <Box id="kontakty" style={{ scrollMarginTop: '100px' }}>
-    <Container size="md" my="xl">
-      <Title 
-        order={2}
-        mb="xs"  // margin bottom
-        size="h2" // or specific size like "28px"
-      >
-        Kontakty
-      </Title>
-      <Grid gutter="md">
-        {contacts.map((person) => (
-          <Grid.Col key={person.name} span={{ base: 12, sm: 6 }}>
-            <Paper
-              shadow="sm"
-              p="md"
-              radius="md"
-              withBorder
-              style={{
-                height: '100%',
-              }}
-            >
-              <Stack gap="md">
-                <Text size="xl" fw={700}>
-                  {person.name}
-                </Text>
+    <>
+    <Global
+      styles={{
+        '#kontakty a': {
+          color: theme.colors.brand[6],
+          textDecoration: 'none',
+          '&:hover': {
+            textDecoration: 'underline',
+          },
+          '&:active': {
+            color: theme.colors.brand[6],
+          },
+          '&:visited': {
+            color: theme.colors.brand[6],
+          },
+        },
+      }}
+    />
+    <Paper
+      id="kontakty" 
+      style={{ scrollMarginTop: '100px' }}
+      p="lg"
+      bg="background.2"
+    >
+      {/* <Container size="md" my="xl"> */}
+        <Stack 
+            w={{ base: '100%', md: 200 }}
+            mb={{ base: 'xs', md: 0 }}
+            pt={15}
+            pl={{ base: 'md', md: 'md' }}
+          >
+          <Title 
+            order={2}
+            mb="xs"  // margin bottom
+            size="h2" // or specific size like "28px"
+            c={theme.colors.brandNavy[9]}
+          >
+            Kontakty
+          </Title>
+        </Stack>
+        <Grid gutter="md">
+          {contacts.map((person) => (
+            <Grid.Col key={person.name} span={{ base: 12, sm: 6 }}>
+              <Paper
+                // shadow="xs"
+                p="md"
+                radius="md"
+                // withBorder
+                style={{
+                  height: '100%',
+                }}
+              >
+                <Stack gap="md">
+                  <Text size="xl" fw={700}
+                    c={theme.colors.brand[6]}
+                  >
+                    {person.name}
+                  </Text>
 
-                {/* Email - Protected Version */}
-                <Group gap="xs">
-                  <IconMail 
-                    style={{ width: rem(20), height: rem(20) }}
-                    stroke={1.5}
-                  />
-                  <ProtectedEmail 
-                    emailUser={person.emailUser}
-                    emailDomain={person.emailDomain}
-                  />
-                </Group>
-
-                {/* Phone Numbers */}
-                <Box>
+                  {/* Email - Protected Version */}
                   <Group gap="xs">
-                    <IconPhone 
+                    <IconMail 
                       style={{ width: rem(20), height: rem(20) }}
                       stroke={1.5}
                     />
-                    {/* <Text>CZ:</Text> */}
-                    <Anchor href={`tel:${person.phoneCZ.replace(/\s/g, '')}`} underline="hover">
-                      {person.phoneCZ}
-                    </Anchor>
-                  </Group>
-                  {/* <Group gap="xs" ml={28} mt={5}>
-                    <Text>AT:</Text>
-                    <Anchor href={`tel:${person.phoneAT.replace(/\s/g, '')}`} underline="hover">
-                      {person.phoneAT}
-                    </Anchor>
-                  </Group> */}
-                </Box>
-
-                {/* Social Media */}
-                <Stack gap="xs">
-                  <Group gap="xs">
-                    <IconBrandBluesky 
-                      style={{ width: rem(20), height: rem(20) }}
-                      stroke={1.5}
+                    <ProtectedEmail 
+                      emailUser={person.emailUser}
+                      emailDomain={person.emailDomain}
                     />
-                    <Anchor 
-                      href={`https://${person.social.bluesky}`}
-                      underline="hover"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {person.social.bluesky}
-                    </Anchor>
                   </Group>
 
-                  <Group gap="xs">
-                    <IconBrandThreads 
-                      style={{ width: rem(20), height: rem(20) }}
-                      stroke={1.5}
-                    />
-                    <Anchor 
-                      href={`https://threads.net/${person.social.threads.replace('@', '')}`}
-                      underline="hover"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {person.social.threads}
-                    </Anchor>
-                  </Group>
+                  {/* Phone Numbers */}
+                  <Box>
+                    <Group gap="xs">
+                      <IconPhone 
+                        style={{ width: rem(20), height: rem(20) }}
+                        stroke={1.5}
+                      />
+                      {/* <Text>CZ:</Text> */}
+                      <Anchor href={`tel:${person.phoneCZ.replace(/\s/g, '')}`} underline="hover">
+                        {person.phoneCZ}
+                      </Anchor>
+                    </Group>
+                    {/* <Group gap="xs" ml={28} mt={5}>
+                      <Text>AT:</Text>
+                      <Anchor href={`tel:${person.phoneAT.replace(/\s/g, '')}`} underline="hover">
+                        {person.phoneAT}
+                      </Anchor>
+                    </Group> */}
+                  </Box>
 
-                  <Group gap="xs">
-                    <IconBrandTwitter 
-                      style={{ width: rem(20), height: rem(20) }}
-                      stroke={1.5}
-                    />
-                    <Anchor 
-                      href={`https://x.com/${person.social.twitter.replace('@', '')}`}
-                      underline="hover"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {person.social.twitter}
-                    </Anchor>
-                  </Group>
+                  {/* Social Media */}
+                  <Stack gap="xs">
+                    <Group gap="xs">
+                      <IconBrandBluesky 
+                        style={{ width: rem(20), height: rem(20) }}
+                        stroke={1.5}
+                      />
+                      <Anchor 
+                        href={`https://${person.social.bluesky}`}
+                        underline="hover"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {person.social.bluesky}
+                      </Anchor>
+                    </Group>
+
+                    <Group gap="xs">
+                      <IconBrandThreads 
+                        style={{ width: rem(20), height: rem(20) }}
+                        stroke={1.5}
+                      />
+                      <Anchor 
+                        href={`https://threads.net/${person.social.threads.replace('@', '')}`}
+                        underline="hover"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {person.social.threads}
+                      </Anchor>
+                    </Group>
+
+                    <Group gap="xs">
+                      <IconBrandX 
+                        style={{ width: rem(20), height: rem(20) }}
+                        stroke={1.5}
+                      />
+                      <Anchor 
+                        href={`https://x.com/${person.social.twitter.replace('@', '')}`}
+                        underline="hover"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {person.social.twitter}
+                      </Anchor>
+                    </Group>
+                  </Stack>
                 </Stack>
-              </Stack>
-            </Paper>
-          </Grid.Col>
-        ))}
-      </Grid>
-    </Container>
-    </Box>
+              </Paper>
+            </Grid.Col>
+          ))}
+        </Grid>
+      {/* </Container> */}
+    </Paper>
+    </>
   );
 }
