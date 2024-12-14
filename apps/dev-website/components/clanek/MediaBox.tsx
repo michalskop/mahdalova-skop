@@ -1,9 +1,9 @@
 // components/clanek/MediaBox.tsx
 import { Paper, useMantineTheme, useMantineColorScheme } from '@mantine/core';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 import React from 'react';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import rehypeRaw from 'rehype-raw';
+// import rehypeRaw from 'rehype-raw';
 
 interface MediaBoxProps {
   children: string;
@@ -22,23 +22,40 @@ export function MediaBox({ children }: MediaBoxProps) {
     );
   };
 
+  // Function to convert markdown headings to H3 tags
+  function convertMarkdownHeadersToH3(markdown: string): string {
+    // Remove <p> tags around headers and convert headers to <h3> tags
+    return markdown.replace(/<p>(#{1,6}\s+.*?)<\/p>/g, (match, p1) => {
+      return p1.replace(/^#{1,6}\s+(.*)$/gm, '<h3>$1</h3>');
+    });
+  }
+  
+
   // Process the content
-  const processedContent = convertMarkdownLinks(children);
+  const processedContent = convertMarkdownLinks(convertMarkdownHeadersToH3(children));
 
   return (
-    <Paper
-      shadow="xs"
-      p="md"
-      radius="md"
-      style={{
-        backgroundColor:
-          colorScheme === 'dark'
-            ? theme.colors.gray[8]
-            : theme.colors.background[7],
-      }}
-    >
-      <div dangerouslySetInnerHTML={{ __html: processedContent }} />
-    </Paper>
+    <>
+
+      <Paper
+        shadow="xs"
+        p="md"
+        radius="md"
+        my="lg"
+        style={{
+          backgroundColor:
+            colorScheme === 'dark'
+              ? theme.colors.gray[8]
+              : theme.colors.brandNavy[6],
+          color: theme.colors.background[1],
+          a: {
+            color: theme.colors.brand[6],
+          }
+        }}
+      >
+        <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+      </Paper>
+    </>
   );
 }
 

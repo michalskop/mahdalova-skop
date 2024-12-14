@@ -4,6 +4,7 @@ import { getArticleBySlug } from '@/lib/articles';
 import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
 import { TagList } from '@/components/common/TagList';
 import { notFound } from 'next/navigation';
+import { Box } from '@mantine/core';
 import fs from 'fs'
 import path from 'path'
 
@@ -83,7 +84,9 @@ export default async function ArticlePage({ params }: PageProps) {
     return (
       <div>
         <ArticleRenderer {...article} />
-        <TagList tags={article.tags} />
+        <Box my="lg">
+          <TagList tags={article.tags} />
+        </Box>
       </div>
     );
   } catch (error) {

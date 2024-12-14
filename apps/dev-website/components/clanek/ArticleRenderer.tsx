@@ -2,6 +2,7 @@
 'use client';
 
 import { Paper, Title, Text, Container, Stack, useMantineTheme, useMantineColorScheme } from '@mantine/core';
+import { Global } from '@mantine/styles';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
@@ -69,7 +70,7 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md">
+      <Text component="div" mb="md" size="lg">
         {children}
       </Text>
     ),
@@ -127,16 +128,34 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
   };
 
   return (
-    <Container size="md" py="xl">
+    <Container size="md" pb="lg">
+      <Global
+        styles={{
+          a: {
+            color: theme.colors.brand[6],
+            textDecoration: 'none',
+            '&:hover': {
+              color: theme.colors.brand[7],
+            },
+            '&:active': {
+              color: theme.colors.brand[8],
+            },
+            '&:visited': {
+              color: theme.colors.brand[5],
+            },
+          },
+        }}
+      />
       <Paper
-        shadow="xs"
+        shadow="0"
         p="md"
+        pt="xl"
         withBorder
         styles={{
           root: {
             backgroundColor: colorScheme === 'dark'
               ? theme.colors.gray[7]
-              : theme.colors.background[6],
+              : theme.colors.background[1],
           }
         }}
       >
@@ -145,11 +164,13 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
             <Title
               order={1}
               size="h1"
+              fw={500}
               styles={{
                 root: {
                   color: colorScheme === 'dark'
                     ? theme.colors.brand[7]
                     : theme.colors.brand[6],
+                  fontSize: '2.75rem',
                 }
               }}
             >
