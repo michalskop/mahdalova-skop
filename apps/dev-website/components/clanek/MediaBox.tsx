@@ -1,5 +1,6 @@
 // components/clanek/MediaBox.tsx
 import { Paper, useMantineTheme, useMantineColorScheme } from '@mantine/core';
+import { Global } from '@mantine/styles';
 // import ReactMarkdown from 'react-markdown';
 import React from 'react';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
@@ -18,7 +19,7 @@ export function MediaBox({ children }: MediaBoxProps) {
     // Convert markdown links [text](url) to HTML <a> tags
     return content.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+      '<a href="$2" target="_blank" rel="noopener noreferrer" class="box-content">$1</a>'
     );
   };
 
@@ -36,10 +37,27 @@ export function MediaBox({ children }: MediaBoxProps) {
 
   return (
     <>
-
+      <Global
+        styles={{
+          'a.box-content': {
+            color: theme.colors.brand[3],
+            textDecoration: 'none',
+            '&:hover': {
+              textDecoration: 'underline',
+            },
+            '&:active': {
+              color: theme.colors.brand[5],
+            },
+            '&:visited': {
+              color: theme.colors.brand[2],
+            },
+          },
+        }}
+      />
       <Paper
         shadow="xs"
-        p="md"
+        px="md"
+        py="xs"
         radius="md"
         my="lg"
         style={{
@@ -48,9 +66,6 @@ export function MediaBox({ children }: MediaBoxProps) {
               ? theme.colors.gray[8]
               : theme.colors.brandNavy[6],
           color: theme.colors.background[1],
-          a: {
-            color: theme.colors.brand[6],
-          }
         }}
       >
         <div dangerouslySetInnerHTML={{ __html: processedContent }} />
