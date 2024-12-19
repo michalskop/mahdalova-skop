@@ -76,7 +76,7 @@ export const testimonials: TestimonialData[] = [
     id: '9',
     text: 'Klobouk dolů! Jste dobří🙂',
     author: 'Václav Štětka',
-    position: 'Univerzita v Loughborough',
+    position: 'mediální expert, Univerzita v Loughborough',
     date: '28. 1. 2023'
   },
       {
