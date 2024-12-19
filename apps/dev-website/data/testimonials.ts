@@ -134,10 +134,5 @@ export const testimonials: TestimonialData[] = [
     author: 'Jiří Kubík',
     position: 'šéfredaktor SZ',
     date: '21. 3. 2021'
-  },
-
-
-
-
-
-
+  }
+]
