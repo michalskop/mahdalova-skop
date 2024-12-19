@@ -130,3 +130,11 @@ export const testimonials: TestimonialData[] = [
   }
 ];
 
+  {
+    id: '18',
+    text: 'Děkuju za práci, kterou děláte, fakt dobrý!',
+    author: 'Ivan Gabal',
+    position: 'sociolog, jeden ze zakladatelů Občanského fóra v roce 1989',
+    date: '19. 12. 2024'
+  }
+];
