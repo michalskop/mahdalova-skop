@@ -4,6 +4,7 @@ import { ColorSchemeScript } from '@mantine/core';
 import Layout from '@/components/Layout';
 import { ThemeProvider } from './providers/ThemeProvider';
 import type { Metadata } from 'next';
+import { MatomoAnalytics } from '@/components/common/MatomoAnalytics';
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://www.mahdalova-skop.cz/'),
   openGraph: {
-    title: 'Mahdalová & Śkop',
+    title: 'Mahdalová & Škop',
     description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
     url: 'https://www.mahdalova-skop.cz/',
     siteName: 'Mahdalová & Śkop',
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mahdalová & Śkop',
+    title: 'Mahdalová & Škop',
     description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
     images: ['/images/twitter-image.png'],
     creator: '@data_zurnalist',
@@ -56,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
+        <MatomoAnalytics />
         <ColorSchemeScript defaultColorScheme="auto" />
       </head>
       <body>
