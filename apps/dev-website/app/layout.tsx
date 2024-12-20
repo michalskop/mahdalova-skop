@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Mahdalová & Śkop',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Mahdalová & Śkop',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mahdalová & Śkop',
     description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
-    images: ['/images/twitter-image.jpg'],
+    images: ['/images/twitter-image.png'],
     creator: '@data_zurnalist',
   },
   robots: {

@@ -4,9 +4,11 @@ import { getArticleBySlug } from '@/lib/articles';
 import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
 import { TagList } from '@/components/common/TagList';
 import { notFound } from 'next/navigation';
-import { Box } from '@mantine/core';
+import { Box, Container } from '@mantine/core';
 import fs from 'fs'
 import path from 'path'
+import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+
 
 interface PageProps {
   params: {
@@ -87,6 +89,17 @@ export default async function ArticlePage({ params }: PageProps) {
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>
+        <Container 
+              size="md" 
+              // py="xl"
+              bg="background.2"
+              maw="928px"
+              w="100%"
+              p={0}
+              m="0 auto"
+            >
+          <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+        </Container>
       </div>
     );
   } catch (error) {

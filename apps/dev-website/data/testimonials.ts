@@ -13,7 +13,7 @@ export const testimonials: TestimonialData[] = [
     id: '18',
     text: 'Děkuju za práci, kterou děláte, fakt dobrý!',
     author: 'Ivan Gabal',
-    position: 'sociolog, jeden ze zakladatelů Občanského fóra v roce 1989',
+    position: 'sociolog, spoluzakladatel OF',
     date: '19. 12. 2024'
   },
     {
@@ -76,7 +76,7 @@ export const testimonials: TestimonialData[] = [
     id: '9',
     text: 'Klobouk dolů! Jste dobří🙂',
     author: 'Václav Štětka',
-    position: 'mediální expert, Univerzita v Loughborough',
+    position: 'mediální expert, Uni Loughborough',
     date: '28. 1. 2023'
   },
       {

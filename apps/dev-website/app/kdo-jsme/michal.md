@@ -1,0 +1,5 @@
+Statistik, demograf, softwarový developer a politolog s více než 15 letými zkušenostmi s přeměnou komplexních dat na užitečné poznatky a zapojením veřejných nástrojů. Data Freedom Fighter.
+
+Jako ředitel nevládní organizace [KohoVolit.eu](https://kohovolit.eu/) od roku 2009 stojí Michal v popředí vývoje inovativní [Volební kalkulačky](https://volebnikalkulacka.cz/) v Česku, [Volebné kalkulačky](https://volebnakalkulacka.sk/) na Slovensku, [Wahlrechner](https://wahlrechner.at/) v Rakousku a [Voksmonitor](https://voksmonitor.hu/) v Maďarsku, které pomohly milionům voličů k lepšímu rozhodování se ve volbách.
+
+Akademická kariéra zahrnuje pozice výzkumného pracovníka a lektora na Universidad de Salamanca's Instituto de Iberoamérica ve Španělsku, Univerzitě Palackého a Univerzitě Hradec Králové a pobyt v Max Planck Institute for Demography v Rostocku v Německu. Před tím pražský MatFyz a doktorát z demografie na Přírodovědecké fakultě UK.

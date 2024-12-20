@@ -1,7 +1,7 @@
 // components/clanek/ArticleRenderer.tsx
 'use client';
 
-import { Paper, Title, Text, Container, Stack, useMantineTheme, useMantineColorScheme } from '@mantine/core';
+import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme, useMantineColorScheme } from '@mantine/core';
 import { Global } from '@mantine/styles';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -15,9 +15,20 @@ interface ArticleProps {
   title?: string;
   date?: string;
   slug?: string;
+  backgroundColor?: string;  // Optional background color
+  textColor?: string;       // Optional text color
+  withContainer?: boolean;  // Optional flag to control Container wrapper
 }
 
-export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) {
+export function ArticleRenderer({ 
+  mdxSource,
+  title,
+  date,
+  slug,
+  backgroundColor,
+  textColor,
+  withContainer = true  // Default to true for backward compatibility
+}: ArticleProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   const [mounted, setMounted] = useState(false);
@@ -36,7 +47,11 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
     code: CodeBlock,  // This handles the ```box syntax
 
     h1: ({ children }) => (
-      <Title order={1} mt="xl" mb="md" 
+      <Title 
+        order={1}
+        mt="xs"
+        mb="md"
+        c={textColor} // Use provided text color
         styles={(theme) => ({
           root: {
             color: colorScheme === 'dark'
@@ -50,7 +65,8 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
     ),
     
     h2: ({ children }) => (
-      <Title order={2} mt="xl" mb="md" 
+      <Title order={2} mt="xl" mb="md"
+        c={textColor}
         styles={(theme) => ({
           root: {
             color: colorScheme === 'dark'
@@ -64,15 +80,28 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
     ),
     
     h3: ({ children }) => (
-      <Title order={3} mt="lg" mb="md">
+      <Title order={3} mt="lg" mb="md"
+        c={textColor}>
         {children}
       </Title>
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md" size="lg">
+      <Text component="div" mb="md" size="lg" c={textColor}>
         {children}
       </Text>
+    ),
+
+    a: ({ children, href }) => (
+      <Anchor
+        href={href}
+        underline='always'
+        target="_blank"
+        rel="noopener noreferrer"
+        c={textColor || theme.colors.brand[6]}
+      > 
+        {children}
+      </Anchor>
     ),
     
     img: (props) => {
@@ -127,12 +156,60 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
     ),
   };
 
-  return (
+  const content = (
+    <Paper
+      shadow="0"
+      p="md"
+      pt="xl"
+      className='markdown-content'
+      styles={{
+        root: {
+          backgroundColor: backgroundColor || (colorScheme === 'dark'
+            ? theme.colors.gray[7]
+            : theme.colors.background[1]),
+        }
+      }}
+    >
+      <Stack gap="md">
+        {title && (
+          <Title
+            order={1}
+            size="h1"
+            fw={500}
+            c={textColor}
+            styles={{
+              root: {
+                color: textColor || (colorScheme === 'dark'
+                  ? theme.colors.brand[7]
+                  : theme.colors.brand[6]),
+                fontSize: '2.75rem',
+              }
+            }}
+          >
+            {title}
+          </Title>
+        )}
+
+        {date && (
+          <Text size="sm" c={textColor || "dimmed"}>
+            {new Date(date).toLocaleDateString('cs-CZ')}
+          </Text>
+        )}
+
+        <div className="article-content">
+          <MDXRemote {...mdxSource} components={components} />
+        </div>
+      </Stack>
+    </Paper>
+  );
+
+  // Conditionally wrap with Container
+  return withContainer ? (
     <Container size="md" pb="lg">
       <Global
         styles={{
           '.markdown-content a': {
-            color: theme.colors.brand[6],
+            color: textColor || theme.colors.brand[6],
             textDecoration: 'none',
             '&:hover': {
               color: theme.colors.brand[7],
@@ -146,50 +223,7 @@ export function ArticleRenderer({ mdxSource, title, date, slug }: ArticleProps) 
           },
         }}
       />
-      <Paper
-        shadow="0"
-        p="md"
-        pt="xl"
-        // withBorder
-        className='markdown-content'
-        styles={{
-          root: {
-            backgroundColor: colorScheme === 'dark'
-              ? theme.colors.gray[7]
-              : theme.colors.background[1],
-          }
-        }}
-      >
-        <Stack gap="md">
-          {title && (
-            <Title
-              order={1}
-              size="h1"
-              fw={500}
-              styles={{
-                root: {
-                  color: colorScheme === 'dark'
-                    ? theme.colors.brand[7]
-                    : theme.colors.brand[6],
-                  fontSize: '2.75rem',
-                }
-              }}
-            >
-              {title}
-            </Title>
-          )}
-          
-          {date && (
-            <Text size="sm" c="dimmed">
-              {new Date(date).toLocaleDateString('cs-CZ')}
-            </Text>
-          )}
-          
-          <div className="article-content">
-            <MDXRemote {...mdxSource} components={components} />
-          </div>
-        </Stack>
-      </Paper>
+      {content}
     </Container>
-  );
+  ) : content;
 }

@@ -54,6 +54,7 @@ function RotatingWord() {
         </Text>
       </Box>
       {' '}datová a kontextová žurnalistika
+      <span style={{ color: 'var(--mantine-color-brandYellow-6)' }}>.</span>
     </Title>
   );
 }
