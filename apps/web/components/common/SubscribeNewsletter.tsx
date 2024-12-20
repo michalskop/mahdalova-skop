@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, TextInput, Button, Paper, Stack, Text, Title, Grid, Group } from '@mantine/core';
-// import { IconMail } from '@tabler/icons-react';
 import { BsFillPostageHeartFill } from "react-icons/bs";
 import Flower from '@/components/common/Flower';
 
@@ -9,8 +8,8 @@ interface FormProps {
   actionUrl: string;
 }
 
-const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const SubscribeNewsletter = React.forwardRef<HTMLDivElement, FormProps>(
+  function SubscribeNewsletter({ actionUrl }, ref) {  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true);
@@ -145,6 +144,6 @@ const EcomailForm: React.FC<FormProps> = ({ actionUrl }) => {
       </Group>
     </Paper>
   );
-};
+});
 
-export default EcomailForm;
+export default SubscribeNewsletter;

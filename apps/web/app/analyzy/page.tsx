@@ -1,4 +1,4 @@
-// app/clanek/page.tsx
+// app/analyzy/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
@@ -17,13 +17,15 @@ export default async function ArticlesPage() {
       p={0}
       m="0 auto"
     >
-      <ArticlesSection 
-        sectionTitle="Analýzy"
-        articles={articles}
-        themeColor="brand"
-      />
-      
-      <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+      <>
+        <ArticlesSection 
+          sectionTitle="Analýzy"
+          articles={articles}
+          themeColor="brand"
+        />
+        
+        <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+      </>
     </Container>
   );
 }
