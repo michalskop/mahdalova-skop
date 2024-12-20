@@ -1,46 +1,56 @@
 // components/MatomoAnalytics.tsx
 'use client';
-import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 
+// Add TypeScript declaration for window._paq
 declare global {
   interface Window {
-    _paq?: any[];
+    _paq: any[];
   }
 }
 
-export function MatomoAnalytics() {
+function MatomoTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Track page views on route changes
-    if (window._paq) {
-      window._paq.push(['setCustomUrl', pathname]);
-      window._paq.push(['trackPageView']);
+    // Initial tracking script setup
+    window._paq = window._paq || [];
+    window._paq.push(['enableLinkTracking']);
+    
+    const u = "//matomo.kohovolit.eu/";
+    window._paq.push(['setTrackerUrl', u + 'matomo.php']);
+    window._paq.push(['setSiteId', '4']);
+
+    // Load Matomo script only once
+    if (!document.getElementById('matomo-script')) {
+      const d = document;
+      const g = d.createElement('script');
+      g.id = 'matomo-script';
+      g.async = true;
+      g.src = u + 'matomo.js';
+      const s = d.getElementsByTagName('script')[0];
+      s.parentNode?.insertBefore(g, s);
     }
+  }, []);
+
+  // Track page views on route changes
+  useEffect(() => {
+    const fullPath = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
+    
+    window._paq.push(['setCustomUrl', fullPath]);
+    window._paq.push(['setDocumentTitle', document.title]);
+    window._paq.push(['trackPageView']);
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export function MatomoAnalytics() {
   return (
-    <>
-      <Script
-        id="matomo-analytics"
-        strategy="afterInteractive"
-      >
-        {`
-          var _paq = window._paq = window._paq || [];
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="//matomo.kohovolit.eu/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '4']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-          })();
-        `}
-      </Script>
-    </>
+    <Suspense fallback={null}>
+      <MatomoTracker />
+    </Suspense>
   );
 }

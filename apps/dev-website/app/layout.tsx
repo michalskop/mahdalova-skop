@@ -5,6 +5,7 @@ import Layout from '@/components/Layout';
 import { ThemeProvider } from './providers/ThemeProvider';
 import type { Metadata } from 'next';
 import { MatomoAnalytics } from '@/components/common/MatomoAnalytics';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: {
@@ -57,7 +58,9 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
-        <MatomoAnalytics />
+        <Suspense fallback={null}>
+          <MatomoAnalytics />
+        </Suspense>
         <ColorSchemeScript defaultColorScheme="auto" />
       </head>
       <body>

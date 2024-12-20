@@ -121,7 +121,10 @@ export function ArticleRenderer({
 
       return (
         <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
-          <Image {...imageProps} />
+          <Image 
+            {...imageProps} 
+            alt={props.alt || ''} 
+          />
         </div>
       );
     },
