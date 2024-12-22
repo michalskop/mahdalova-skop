@@ -14,4 +14,5 @@ Každý šestiúhelník zde představuje 10 tisíc obyvatel, přičemž mapa je 
 
 Stejným způsobem jsme vizualizovali výsledky voleb ve Spojených státech. Ano, to je ten pověstný AZ kvíz, jak někteří z vás zmiňovali 😄 Screenshot zachycuje obě mapy USA, klasickou podle geografické rozlohy a kartogram. Je na nich hodně vidět například to, kde se berou vysoké počty hlasů v lidnatých, ale méně rozlehlých oblastech, jako jsou západní a východní pobřeží.
 
+
 ![Klasická mapa primárně zobrazuje rozlogu jednotlivých států, zatímco kartogram zobrazuje - v tomto případě - počty voličů. Jak velký je to rozdíl, je vidět na těchto dvou mapách USA s výsledky prezidentských voleb.](images/Kartogram-USA-volby-2024.png)
