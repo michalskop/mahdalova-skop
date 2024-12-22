@@ -13,7 +13,7 @@ Jenže klíč je v interpretaci: pokud se totiž současné průzkumy odchylují
 
 Stačila by například 2 % pro Harris oproti středovému údaji z průzkumů, ve finále by získala 319 volitelů, tedy o 49 víc, než potřebuje pro vítězství. Stejně tak by to mohlo nastat i v případě Donalda Trumpa, který by v takovém případě získal dokonce 322 volitelů, tedy o 52 víc, než by potřeboval pro vítězství. 
 
-<iframe src='https://flo.uri.sh/visualisation/20150244/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+
 
 Aktuální rozložení sil podle jednotlivých států. Velikost států odráží počty tamních volitelů.
 
@@ -31,7 +31,7 @@ Kamalu Harris, sázkové kanceláře mírně věří ve vítězství Donalda Tru
 minulých voleb, kdy průzkumy, na něž kanceláře reagovaly, opakovaně podcenily zisky
 republikánského kandidáta? Na tuhle otázku nelze odpovědět a za chvíli se dozvíte proč.
 
-<iframe src='https://flo.uri.sh/visualisation/20084750/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+
 
 Prestižní The Economist predikuje 56% šanci na vítězství Kamaly Harris a velice mírně
 optimistický pro demokratickou kandidátku je i predikce analytické platformy 538 (součást
@@ -58,8 +58,7 @@ Většina amerických států volí tradičně republikánsky nebo demokraticky.
 Kalifornii téměř jistě vyhraje Harris, v Oklahomě nebo Tennessee zase zvítězí Trump. O
 výsledku celých voleb tak rozhodne pouze přibližně sedm států, kde se přízeň voličů přelévá:
 Arizona, Georgie, Michigan, Nevada, Pensylvánie, Severní Karolína a Wisconsin.
-<iframe src='https://flo.uri.sh/visualisation/20150244/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-<iframe src='https://flo.uri.sh/visualisation/20106800/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+
 
 ## Zapomenutí voliči z Portorika
 
@@ -76,7 +75,7 @@ mapě zachyceny podle jednotlivých států, ovšem zobrazujeme je s ohledem nik
 geografickou rozlohu, ale podle počtu volitelů. To je to podstatné, co rozhoduje, kdo bude příští
 hlava státu.
 
-<iframe src='https://flo.uri.sh/visualisation/20088292/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+
 
 Vizualizace pak jasně ukazují i geografické rozložení voličských preferencí. Pobřežní státy
 obvykle volí demokraty, středozápad a jih republikány.
