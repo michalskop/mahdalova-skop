@@ -1,6 +1,6 @@
 ---
 title: "Mezinárodní trestní soud vydal zatykač na Netanjahua a Gallanta"
-date: "2024-11-27"
+date: "2024-11-21"
 author: "Mahdalová & Škop"
 excerpt: "Politici jsou oficiálně obviněni z válečných zločinů a zločinů proti lidskosti."
 coverImage: "images/Rimsky-statut-zeme-s-pozadim.png"
