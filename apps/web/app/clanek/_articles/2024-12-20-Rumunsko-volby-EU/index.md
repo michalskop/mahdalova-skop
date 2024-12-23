@@ -6,8 +6,7 @@ author: "Mahdalová & Škop"
 excerpt: "Anulované volby v Rumunsku ukázaly slabiny v řízení rizik na platformách jako TikTok. Je problém systémový nebo jde o selhání jedné platformy?"  
 coverImage: "images/rumunske-volby-dsa.png"  
 filter: ["kontext"]  
-tags: ["Rumunsko", "TikTok", "volby", "dezinformace"]  
-
+tags: ["zahraničí", "Rumunsko", "TikTok", "volby", "dezinformace", "demokracie", "hybridní válka", "kybernetická bezpečnost"]
 ---
 Když se Călin Georgescu objevil na politické scéně Rumunska, málokdo tušil, kdo vlastně je. Bývalý diplomat a nacionalista, známý svými proruskými a antizápadními postoji, byl dlouho outsiderem. Jeho názory na odchod Rumunska z EU a NATO nebo glorifikace kontroverzních historických postav ho stavěly na okraj veřejného zájmu. Jenže pak přišla TikToková kampaň – a během několika týdnů se z neznámého kandidáta stal vítěz prvního kola prezidentských voleb.
 
