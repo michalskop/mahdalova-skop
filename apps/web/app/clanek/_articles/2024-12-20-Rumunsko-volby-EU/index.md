@@ -4,7 +4,7 @@ title: "Rumunsko se ocitlo v epicentru hybridní války"
 date: "2024-12-20"  
 author: "Mahdalová & Škop"  
 excerpt: "Hybridní kampaně, manipulace algoritmů a vlivové operace ukazují, jak snadno lze destabilizovat demokratické procesy."  
-coverImage: "images/Rumunsko-volby-2024.png"  
+coverImage: "images/Rumunsko-volby-2024.svg"  
 filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "TikTok", "volby", "dezinformace", "demokracie", "hybridní válka", "kybernetická bezpečnost"]
 ---
