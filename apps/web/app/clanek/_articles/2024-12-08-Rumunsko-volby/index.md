@@ -1,8 +1,8 @@
 ---
-title: "Rumunsku: Krize demokracie u prezidentských voleb"
+title: "Rumunsko: Krize demokracie u prezidentských voleb"
 date: "2024-12-08"  
 author: "Mahdalová & Škop"  
-excerpt: "Rumunsko čelí bezprecedentní situaci – anulace prezidentských voleb kvůli hybridnímu útoku odhaluje zranitelnost demokratických procesů."  
+excerpt: "Anulování prezidentských voleb kvůli hybridnímu útoku odhaluje zranitelnost demokratických procesů."  
 coverImage: "images/rumunsko-krize.png"
 filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "demokracie", "volby", "hybridní válka", "kybernetická bezpečnost"]  
