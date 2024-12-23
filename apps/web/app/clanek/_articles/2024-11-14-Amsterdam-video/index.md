@@ -10,98 +10,67 @@ tags: ["zahraničí", "Amsterdam", "Izrael", "fotbal", "násilí"]
 
 ### Co vidíte na obrázku z videa?  
 
-**Část antisemitského davu, který napadal izraelské fotbalové fanoušky?**
+Část antisemitského davu, který napadal izraelské fotbalové fanoušky?  
 
 ---
 
 ### Jak to začalo  
 
-Fotografka **Annet de Graaf** natočila o půlnoci ze čtvrtka na pátek (7.–8. 11. 2024) video.  
-Na něm je vidět:  
-
-- Skupina zhruba **50–100 fotbalových fanoušků** po zápase Evropské ligy.  
-- Pronásledují, bijí a kopou do několika jiných lidí.  
-
-Z pohledu práva by to byl případ pro policii, možná i UEFA. Ale nebyl.  
+Fotografka [Annet de Graaf](https://www.annetdegraaf.nl) natočila o půlnoci ze čtvrtka na pátek (7.–8. listopadu 2024) video. Na něm je vidět skupina zhruba 50–100 fotbalových fanoušků, kteří po zápase Evropské ligy pronásledují, bijí a kopou do několika jiných lidí. Případ pro policii nebo UEFA? Na první pohled ano, ale skutečnost byla složitější.  
 
 ---
 
 ### Pozadí  
 
-Jednalo se o zápas nizozemského **Ajaxu Amsterdam** proti izraelskému **Maccabi Tel Aviv**.  
-- Hrálo se ve čtvrtek 7. 11. 2024.  
-- Ajax vyhrál **5:0**.  
-
-Druhý den po zápase:  
-
-- Se začaly šířit zprávy o napadení izraelských fanoušků.  
-- Politici od nizozemského krále přes českého premiéra Fialu až po amerického prezidenta Bidena odsoudili antisemitismus.  
+Incident se odehrál po zápase nizozemského [Ajaxu Amsterdam](https://www.ajax.nl) proti izraelskému [Maccabi Tel Aviv](https://www.maccabi-tlv.co.il). Zápas proběhl 7. listopadu 2024 a Ajax vyhrál 5:0. Následující den se začaly šířit zprávy, že izraelské fanoušky napadaly skupiny útočníků. Odsouzení antisemitismu zaznělo od nizozemského krále, českého premiéra [Petra Fialy](https://www.vlada.cz/cz/clenove-vlady/premier), a dokonce i od amerického prezidenta [Joea Bidena](https://www.whitehouse.gov).  
 
 ---
 
 ### Fakta o videu  
 
-Toto konkrétní video bylo použito médii jako ukázka:  
-- **"Dav antisemitských muslimů napadá izraelské fanoušky."**  
+Toto konkrétní video bylo prezentováno médii jako důkaz antisemitských útoků muslimských nebo arabských skupin na izraelské fanoušky. Ve skutečnosti však video ukazuje opačný příběh – násilníky byli fanoušci izraelského klubu.  
 
-Ve skutečnosti:  
-- Fanoušci izraelského klubu **napadali ostatní lidi**.  
+Video původně zveřejnila autorka, ale brzy poté jej na X (dříve Twitter) sdílel anonymní účet [@sentdefender](https://twitter.com/sentdefender), který poskytl lživý popis:  
 
-**Kdo šířil dezinformace?**  
+> „Židovští fanoušci Maccabi Tel Aviv F.C. opouštěli fotbalový zápas dnes večer v Amsterdamu, když byli napadeni davy Arabů čekajícími venku stadionu.“  
 
-- Necelé 2 hodiny po zveřejnění videa autorkou jej na X (Twitteru) sdílel anonymní účet **@sentdefender**.  
-- Za účtem nejspíš stojí **Simon Anderson** z USA.  
-- Účet má **1,2 milionu followerů** a publikoval pro-trumpovské příspěvky či příspěvky z pohledu izraelské vlády.  
-
-Popis příspěvku na X:  
-
-> "Židovští fanoušci Maccabi Tel Aviv F.C. opouštěli zápas dnes večer v Amsterdamu, když byli napadeni davy Arabů čekajícími venku."  
-
-Skutečnost: **Izraelští fanoušci napadali ostatní.**
+Autorem účtu je podle výzkumu ukrajinské skupiny [Molfar](https://www.molfar.global) pravděpodobně Simon Anderson z USA. Účet, který má více než 1,2 milionu sledujících, často publikuje pro-trumpovské a pro-izraelské příspěvky.  
 
 ---
 
 ### Jak se to dostalo do médií v ČR?  
 
-**ČTK** vydala článek, který odkazoval na příspěvek z X:  
-- "Na videích na sociálních sítích jsou vidět skupiny mužů, kteří v ulicích Amsterdamu napadají fanoušky Maccabi."  
+ČTK vydala článek, který odkazoval na zmíněný příspěvek z X. Popis událostí byl převzat zcela nekriticky:  
 
-Další média převzala popis:  
-- **Česká televize**: "Útok na Izraelce v Amsterdamu."  
-- **Český rozhlas**: "Záběr z videa, kde útočníci pronásledují izraelské fanoušky."  
-- **iDnes**: "V Amsterdamu po zápase propukly násilnosti proti Izraelcům."  
-- **Seznam Zprávy**: "Záběry z útoků na izraelské fotbalové fanoušky."  
+> „Na videích na sociálních sítích jsou vidět skupiny mužů, kteří v ulicích Amsterdamu napadají fanoušky Maccabi.“  
+
+Podobné formulace se objevily i v dalších českých médiích:  
+
+- [Česká televize](https://www.ceskatelevize.cz): „Útok na Izraelce v Amsterdamu.“  
+- [Český rozhlas](https://www.rozhlas.cz): „Záběr z videa, kde útočníci pronásledují izraelské fanoušky.“  
+- [iDnes](https://www.idnes.cz): „V Amsterdamu po fotbalovém zápase propukly násilnosti proti Izraelcům.“  
+- [Seznam Zprávy](https://www.seznamzpravy.cz): „Záběry z útoků na izraelské fotbalové fanoušky v Nizozemsku.“  
 
 ---
 
-### Bylo to takhle jenom v ČR?  
+### Bylo to takhle jen v ČR?  
 
-Ne. Podobně na:  
-- **BBC Newsnight**: Upravené kontexty popisu.  
-- **Sky News**: Příspěvek měněn několikrát.  
+Ne. Podobné dezinformace šířily i zahraniční redakce, například [BBC Newsnight](https://www.bbc.co.uk/programmes/newsnight) nebo [Sky News](https://news.sky.com). Některé příspěvky byly následně upraveny nebo smazány.  
 
 ---
 
 ### Reflexe  
 
-V **německé ARD**:  
-- Autor se omluvil autorce videa.  
-- Video odvysílali znovu s přesným popisem.  
-
-**New York Times** popis upravil.  
-**Guardian** video odstranil.  
-
-V ČR se média omluvila minimálně.
+Pozitivní příklad ukázala německá veřejnoprávní stanice [ARD](https://www.ard.de), která se autorce videa omluvila a video odvysílala znovu s přesným popisem. Podobně reagoval [New York Times](https://www.nytimes.com), který popis upravil, a [Guardian](https://www.theguardian.com), jenž video odstranil.  
 
 ---
 
 ### Data pod čarou  
 
-- V Amsterdamu žije necelých **900 000 lidí**.  
-- Židů je zhruba **6 000–15 000**.  
-- Muslimů asi **105 000**, převážně s kořeny z Maroka a Turecka.  
+- V Amsterdamu žije necelých 900 000 obyvatel.  
+- Odhaduje se, že Židů je zde zhruba 6 000–15 000 a muslimů přibližně 105 000, zejména z Maroka a Turecka.  
 
----
 
-**autoři**: Kateřina Mahdalová & Michal Škop  
-**verze**: 1.0  
+
+
+
