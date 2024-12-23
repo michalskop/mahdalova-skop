@@ -2,22 +2,20 @@
 
 title: "TikTok a rumunské volby: zátěžový test pro DSA"  
 date: "2024-12-20"  
-author: "John Albert, DSA Observatory"  
+author: "Mahdalová & Škop"  
 excerpt: "Anulované volby v Rumunsku ukázaly slabiny v řízení rizik na platformách jako TikTok. Je problém systémový nebo jde o selhání jedné platformy?"  
 coverImage: "images/rumunske-volby-dsa.png"  
 filter: ["kontext"]  
 tags: ["Rumunsko", "TikTok", "volby", "dezinformace"]  
 
 ---
+Když se Călin Georgescu objevil na politické scéně Rumunska, málokdo tušil, kdo vlastně je. Bývalý diplomat a nacionalista, známý svými proruskými a antizápadními postoji, byl dlouho outsiderem. Jeho názory na odchod Rumunska z EU a NATO nebo glorifikace kontroverzních historických postav ho stavěly na okraj veřejného zájmu. Jenže pak přišla TikToková kampaň – a během několika týdnů se z neznámého kandidáta stal vítěz prvního kola prezidentských voleb.
 
 ## Vyšetřování TikToku  
 
-17. prosince zahájila Evropská komise formální řízení proti TikToku kvůli podezření, že platforma nezvládla řízení rizik spojených s manipulací během rumunských prezidentských voleb. Tento případ ukazuje na dvě rychlosti uplatňování nařízení DSA:  
-
-1. Pomalé a systematické stanovování standardů.  
-2. Rychlou a politicky motivovanou reakci na krize.  
-
----
+Minulý týden (17. prosince 2024) zahájila Evropská komise formální řízení proti TikToku, aby vyšetřila, zda platforma řádně zvládla rizika spojená s volbami v Rumunsku. Tento případ odhaluje dvě roviny regulace podle DSA: Pomalé a systematické stanovování standardů.
+Rychlou a politicky motivovanou reakci na krize
+pomalý, metodický proces analýzy systémových rizik a nastavení standardů versus rychlé a politicky citlivé reakce na mediálně známé krize.
 
 ## Přerušené volby  
 
