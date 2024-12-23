@@ -4,7 +4,7 @@ date: "2024-12-08"
 author: "Mahdalová & Škop"  
 excerpt: "Rumunsko čelí bezprecedentní situaci – anulace prezidentských voleb kvůli hybridnímu útoku odhaluje zranitelnost demokratických procesů."  
 coverImage: "images/rumunsko-krize.png"
-filter: ["volby", "politika"]  
+filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "demokracie", "volby", "hybridní válka", "kybernetická bezpečnost"]  
 ---
 
