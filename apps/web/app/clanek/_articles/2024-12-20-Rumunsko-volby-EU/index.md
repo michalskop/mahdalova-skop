@@ -4,125 +4,68 @@ title: "Rumunsko se ocitlo v epicentru hybridní války"
 date: "2024-12-20"  
 author: "Mahdalová & Škop"  
 excerpt: "Hybridní kampaně, manipulace algoritmů a vlivové operace ukazují, jak snadno lze destabilizovat demokratické procesy."  
-coverImage: "images/Rumunsko-volby-2024.svg"  
+coverImage: "images/Rumunsko-volby-zruseno-co-dal-2024.png"  
 filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "TikTok", "volby", "dezinformace", "demokracie", "hybridní válka", "kybernetická bezpečnost"]
 ---
 Když se Călin Georgescu objevil na politické scéně Rumunska, málokdo tušil, kdo vlastně je. Bývalý diplomat a nacionalista, známý svými proruskými a antizápadními postoji, byl dlouho outsiderem. Jeho názory na odchod Rumunska z EU a NATO nebo glorifikace kontroverzních historických postav ho stavěly na okraj veřejného zájmu. Jenže pak přišla TikToková kampaň – a během několika týdnů se z neznámého kandidáta stal vítěz prvního kola prezidentských voleb.
 
-## Vyšetřování TikToku  
+## Jak TikTok změnil pravidla hry v rumunských volbách  
 
-Minulý týden (17. prosince 2024) Šéfka Evropské komise Ursula von der Leyenová označila ochranu demokratických procesů za prioritu. Pokud se prokáže, že TikTok porušil pravidla nařízení o digitálních službách (DSA), může čelit pokutě až 6 % svého ročního obratu, nebo dokonce zákazu působení v EU.
+**Rumunsko se ocitlo v epicentru hybridní války.** Sociální sítě, které byly dosud symbolem zábavy a kreativity, se v případě prezidentských voleb roku 2024 staly nástrojem manipulace a vlivových operací. Kandidát, o kterém před pár měsíci nikdo neslyšel, se stal vítězem prvního kola díky promyšlené kampani na TikToku. Jak k tomu došlo?  
 
-## Přerušené volby  
+## Kdo je Călin Georgescu?  
 
-6. prosince rozhodl rumunský Ústavní soud o anulování prvního kola prezidentských voleb. Rozhodnutí vycházelo z odtajněných zpráv rumunských zpravodajských služeb, které odhalily, že ruské operace manipulovaly sociálními sítěmi ve prospěch kandidáta **Călina Georgesca**. Tyto praktiky byly v rozporu se zákony o volební integritě.  
+Călin Georgescu byl ještě před pár měsíci relativně neznámý politik. Vynikal krajně pravicovými názory, otevřenou kritikou EU a NATO a glorifikací postav spjatých s fašismem. Byl obdivovatelem Vladimira Putina a požadoval vystoupení Rumunska z mezinárodních organizací, které považoval za škodlivé.  
 
-## Hybridní vliv a ruská stopa
+Jeho názory dlouho rezonovaly pouze v okrajových komunitách – mezi ultranacionalisty, fundamentalistickými křesťany a proruskými aktivisty. Jenže pak přišla jeho TikToková kampaň, která z něj udělala virální fenomén.  
 
-Krátce po prvním kole voleb odhalily rumunské zpravodajské služby dokumenty, které naznačovaly rozsáhlou vlivovou operaci podporovanou Ruskem. Tyto operace zahrnovaly:
+## TikToková exploze  
 
-25 000 aktivovaných účtů na TikToku, které propagovaly Georgescovu kampaň.
-Hackování IT infrastruktury volební komise.
-Nezákonné financování kampaně prostřednictvím třetích stran.
-Přestože důkazy předložené zpravodajskými službami byly označeny za nedostatečné a jejich práce za neprofesionální, Ústavní soud na jejich základě 6. prosince anuloval výsledky prvního kola voleb. Tím se celý volební proces musel vrátit na začátek.
+TikTok hrál v Georgescově kampani klíčovou roli. Tisíce videí s jednoduchým poselstvím, emotivním vizuálem a kontroverzní rétorikou zaplavily platformu. Hashtagy jako **#MakeRomaniaGreatAgain** nebo **#GeorgescuForPresident** se staly virálními a oslovily masy lidí, kteří hledali alternativu k tradičním politickým stranám.  
 
-## Politický chaos
+Tato videa působila jako spontánní a autentická. Ve skutečnosti však šlo o pečlivě řízenou hybridní operaci. **25 000 falešných účtů** aktivovaných krátce před volbami šířilo Georgescova videa, komentovalo je a posilovalo jejich dosah.  
 
-Anulace voleb a následná nejistota vytvořily podhoubí pro politickou krizi. Tradiční strany, včetně Sociálně demokratické strany (PSD) a Národně liberální strany (PNL), se pokusily vytvořit "proevropskou koalici". Jejich snahy ale komplikují vnitřní neshody a rostoucí vliv krajní pravice, která nyní drží více než třetinu křesel v parlamentu.
 
-K situaci přispěl i nejasný postoj prezidenta Klausa Iohannise, který se během krize držel v ústraní. Jeho mlčení v době, kdy země čelí hybridní válce a rostoucí nedůvěře veřejnosti, bylo kritizováno napříč politickým spektrem.
----
+## Hybridní válka a ruská stopa  
 
-## Časová osa vyšetřování  
+Podle rumunských zpravodajských služeb byla Georgescova kampaň podporována Ruskem. Tato podpora zahrnovala:  
+- **Manipulaci algoritmů TikToku**, aby zvýhodňovaly proruský obsah.  
+- **Hackování volební infrastruktury**, což zpochybnilo transparentnost hlasování.  
+- **Nezákonné financování kampaně** prostřednictvím třetích stran.  
 
-Události se odehrály v rychlém sledu:  
+Zatímco Georgescu tvrdil, že o podpoře Ruska nevěděl, zveřejněné dokumenty ukázaly pravý opak.  
 
-- **24. listopadu**: Proběhlo první kolo voleb.  
-- **29. listopadu**: Komise zaslala TikToku formální žádost o informace.  
-- **5. prosince**: Bylo vydáno opatření na uchování dat.  
-- **17. prosince**: Komise zahájila formální řízení podle DSA.  
+## Ústavní soud a anulace voleb  
 
-Komise zkoumá dva klíčové aspekty řízení rizik na TikToku:  
+6. prosince Ústavní soud anuloval výsledky prvního kola prezidentských voleb. Rozhodnutí vycházelo z odtajněných dokumentů, které ukazovaly na rozsáhlou manipulaci. Volby musely být restartovány od začátku, což v zemi vyvolalo politický chaos.  
 
-1. **Doporučovací algoritmy** – byly využity pro koordinovanou manipulaci?  
-2. **Politická reklama** – jak dokázali influenceři obejít zákaz politické reklamy na TikToku?  
+Prezidentské volby však nebyly jediným problémem. Ve stejném období proběhly i parlamentní volby, kde krajní pravice získala přes třetinu křesel. To ještě více polarizovalo rumunskou společnost.  
 
-Komise se zaměřuje i na regionální a jazykové aspekty spojené s volbami v Rumunsku.  
+## Evropa reaguje  
 
----
+Evropská komise okamžitě zahájila vyšetřování TikToku. Zajímá se především o:  
+1. **Doporučovací algoritmy** – jak mohly být zmanipulovány?  
+2. **Politickou reklamu** – proč nebyla označena a jak se jí podařilo obejít pravidla platformy?  
 
-## Důkazy proti TikToku  
+Podle nařízení o digitálních službách (DSA) hrozí TikToku pokuta až **6 % ročního obratu**, nebo dokonce zákaz působení v EU. Ursula von der Leyenová zdůraznila, že ochrana demokratických procesů musí být prioritou všech platforem.  
 
-Nezávislé analýzy již ukázaly na slabiny v řízení rizik:  
+## Selhaly instituce, nebo systém?  
 
-- **Global Witness**: Objevili, že algoritmus TikToku preferoval Georgesca před jeho soupeřkou Elenou Lasconi.  
-- **EDMO (Evropská observatoř digitálních médií)**: Identifikovala mezery v opatřeních TikToku proti dezinformacím.  
+Rumunský případ ukázal, jak zranitelné mohou být demokratické procesy v digitálním věku. TikTok není jedinou platformou pod tlakem. Meta a Telegram byly rovněž obviněny z toho, že sloužily jako nástroje hybridní manipulace.  
 
-TikTok brání své kroky tvrzením, že rozbil několik sítí skryté manipulace a označil volební dezinformace za prioritu. Auditoři společnosti KPMG však uvedli, že nemají dostatek dat k posouzení účinnosti těchto opatření, a poukazují na probíhající řízení Komise.  
+Problém však sahá dál než jen k technologiím. Rumunské instituce selhaly ve své roli garantů transparentních voleb. Důvěra veřejnosti v politiku a soudnictví je na historickém minimu.  
 
----
+## Rakousko: Spoluviník krize?
 
-## Systémové selhání přesahující TikTok  
+Podle historika Olivera Jense Schmitta přispěla k úspěchu Georgesca i politika Rakouska. **„Blokace Rumunska v Schengenském prostoru Rakouskem vyvolala u mnoha Rumunů pocit ponížení,“** vysvětluje. Tento krok posílil anti-EU nálady a přispěl k úspěchu populistů.  
 
-TikTok není jedinou platformou pod palbou kritiky:  
-
-- **Meta**: Podobné kampaně porušily pravidla politické reklamy, a to včetně přeshraniční koordinace s Google Ads.  
-- **Telegram**: Sloužil jako koordinační centrum pro Georgescovu kampaň, kde dobrovolníci dostávali obsah i pokyny, jak ho upravit a obejít filtry algoritmů.  
-
-Problémem je, že Telegram nepodléhá stejným pravidlům jako platformy označené jako „velmi velké online platformy“ (VLOPs), například TikTok či Facebook.  
-
----
-
-## Selhal DSA?  
-
-Rumunské nevládní organizace obvinily TikTok i národní a evropské orgány z nedostatečné aktivity. Otevřený dopis podepsaný 21 organizacemi kritizoval Evropskou komisi i rumunského koordinátora digitálních služeb (ANCOM) za nedostatek proaktivního přístupu během krize.  
-
-DSA je stále v rané fázi implementace. Rumunské volby však ukazují napětí mezi:  
-
-1. Pomalým nastavováním standardů řízení rizik.  
-2. Rychlou reakcí na politicky citlivé situace.  
-
----
-
-## Poučení pro rok 2025  
-
-Rumunské volby přinesly klíčová varování:  
-
-- Placená reklama přes influencery stále uniká regulacím.  
-- Koordinované kampaně manipulují algoritmy a unikají detekci.  
-- Instituce a platformy musí zrychlit své reakce, aby efektivně chránily demokratické procesy.  
-
-Platformy si nyní nemohou dovolit pasivitu, ale stejný tlak se nyní přenáší na regulační orgány.  
+Rakouské firmy, zejména v lesnickém průmyslu, byly navíc spojovány s nelegální těžbou dřeva, což dále podkopalo důvěru Rumunů v západní instituce. **„Slogan ‚Rakušané nám kradou lesy‘ se stal symbolem nedůvěry vůči EU,“** dodává Schmitt.  
 
 ```box
-### Nečekaný vzestup outsidera
+### Evropská zodpovědnost
 
-Georgescu nebyl favorit. Ve většině průzkumů měl před volbami jen minimální podporu. Jenže krátce před prvním kolem voleb jeho videa zaplavila TikTok. Videa s jednoduchým poselstvím, silnou rétorikou a vizuálním stylem se šířila rychlostí blesku. Hashtagy jako #MakeRomaniaGreatAgain nebo #GeorgescuForPresident se staly virálními, oslovovaly masy a vytvářely iluzi, že Georgescu má za sebou mohutnou podporu.
+Rumunské volby ukázaly, jak snadno lze destabilizovat demokratické procesy nejen v jedné zemi, ale napříč celou EU. Pokud se Evropa nepoučí, může být hybridní válka vedená prostřednictvím sociálních sítí brzy problémem i v dalších členských státech.
 
-Videa nebyla jen politická. Byla zábavná, emotivní a vypadala, jako by přicházela od obyčejných lidí. To byl klíčový trik – kampaně vypadaly autenticky, což na TikToku znamená vše. Jenže tato autenticita byla ve skutečnosti pečlivě řízená.
-
-### Kdo stál za kampaní?
-
-Podle rumunských zpravodajských služeb byla Georgescova náhlá popularita výsledkem promyšlené hybridní operace. Do hry vstoupilo více než 25 000 falešných účtů na TikToku, které se aktivovaly těsně před volbami. Tyto účty sdílely videa, komentovaly je a šířily je mezi skutečné uživatele, čímž vytvořily zdání masivní podpory.
-
-Za tímto úspěchem však nestála jen strategie sociálních sítí. Zpravodajské služby odhalily, že klíčovou roli sehrál rumunský IT specialista, který zajišťoval technické zázemí kampaně a financoval placenou propagaci. Financování však podle všeho nesměřovalo jen z Rumunska – zprávy naznačují podporu ze strany Ruska, které mělo zájem na tom, aby se proruský kandidát dostal do popředí.
-
-### Role Ruska a digitální manipulace
-
-Podle odtajněných dokumentů ruské vlivové operace zahrnovaly nejen koordinaci na TikToku, ale také hackování volební infrastruktury. Ruská strana údajně zajistila, aby se Georgescu stal více viditelným nejen na sociálních sítích, ale i v mediálním prostoru. Tím se mu podařilo oslovit frustrovanou část voličů, kteří hledali alternativu k tradičním stranám.
-
-Kampaň využila moderní metody hybridní války – manipulace algoritmů, placených influencerů a anonymních darů na financování propagace. Georgescu sice tvrdil, že o žádné podpoře nevěděl, ale zveřejněné dokumenty ukázaly opak.
-
-### TikTok: Zábava nebo nástroj hybridní války?
-
-Georgescova kampaň se stala příkladem, jak snadno mohou být sociální sítě zneužity k manipulaci veřejného mínění. TikTok, platforma známá svou schopností rychle šířit obsah, se stal hlavním bojištěm. Algoritmy, které doporučují videa na základě zájmu uživatele, byly „hacknuty“ tak, aby zvýhodňovaly proruský obsah.
-
-Tato taktika byla natolik úspěšná, že přivedla kandidáta, který byl ještě před pár měsíci na okraji zájmu, až k vítězství v prvním kole voleb. A i když výsledky byly nakonec anulovány, Georgescův příběh ukázal, jak zranitelné jsou moderní demokratické procesy v digitální éře.
-
-### Co to znamená pro budoucnost?
-
-Vzestup Călina Georgesca na TikToku je varováním, že sociální sítě mohou být snadno využity jako nástroje hybridní války. Zatímco dříve byla politika o veřejných projevech a debatách, dnes se bojuje na platformách, kde rozhoduje algoritmus a virálnost. Jak ukázal případ Rumunska, stačí jen několik týdnů, aby byl ovlivněn nejen veřejný diskurz, ale i samotný výsledek voleb.
-
-Příběh Georgescovy kampaně je nejen fascinující, ale i děsivý pohled na budoucnost politického marketingu. Kdo bude další „TikTokový kandidát“? A co to znamená pro demokracii? To zůstává otázkou, na kterou zatím nemáme odpověď.
+Příběh Georgescovy kampaně nabízí komplexní pohled na budoucnost politického marketingu. Kdo bude další „tiktokový kandidát či kandidátka“? A co to znamená pro demokracii?
 ```
