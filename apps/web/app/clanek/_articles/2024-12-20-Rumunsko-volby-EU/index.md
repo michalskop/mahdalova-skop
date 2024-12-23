@@ -1,6 +1,6 @@
 ---
 
-title: "Rumunsko se ocitlo v epicentru hybridní války"  
+title: "Rumunsko v epicentru hybridní války. Stejně jako my"  
 date: "2024-12-20"  
 author: "Mahdalová & Škop"  
 excerpt: "Hybridní kampaně, manipulace algoritmů a vlivové operace ukazují, jak snadno lze destabilizovat demokratické procesy."  
@@ -25,7 +25,6 @@ Jeho názory dlouho rezonovaly pouze v okrajových komunitách – mezi ultranac
 TikTok hrál v Georgescově kampani klíčovou roli. Tisíce videí s jednoduchým poselstvím, emotivním vizuálem a kontroverzní rétorikou zaplavily platformu. Hashtagy jako **#MakeRomaniaGreatAgain** nebo **#GeorgescuForPresident** se staly virálními a oslovily masy lidí, kteří hledali alternativu k tradičním politickým stranám.  
 
 Tato videa působila jako spontánní a autentická. Ve skutečnosti však šlo o pečlivě řízenou hybridní operaci. **25 000 falešných účtů** aktivovaných krátce před volbami šířilo Georgescova videa, komentovalo je a posilovalo jejich dosah.  
-
 
 ## Hybridní válka a ruská stopa  
 
@@ -67,5 +66,5 @@ Rakouské firmy, zejména v lesnickém průmyslu, byly navíc spojovány s neleg
 
 Rumunské volby ukázaly, jak snadno lze destabilizovat demokratické procesy nejen v jedné zemi, ale napříč celou EU. Pokud se Evropa nepoučí, může být hybridní válka vedená prostřednictvím sociálních sítí brzy problémem i v dalších členských státech.
 
-Příběh Georgescovy kampaně nabízí komplexní pohled na budoucnost politického marketingu. Kdo bude další „tiktokový kandidát či kandidátka“? A co to znamená pro demokracii?
+Příběh Georgescovy kampaně nabízí komplexní pohled na budoucnost politického marketingu. Kdo bude další „tiktokový kandidát či kandidátka“? A co to znamená pro demokracii? Pojďte s námi hledat odpovědi.
 ```
