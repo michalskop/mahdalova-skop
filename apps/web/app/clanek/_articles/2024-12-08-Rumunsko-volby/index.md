@@ -3,7 +3,8 @@ title: "Rumunsko: Krize demokracie u prezidentských voleb"
 date: "2024-12-08"  
 author: "Mahdalová & Škop"  
 excerpt: "Anulování prezidentských voleb kvůli hybridnímu útoku odhaluje zranitelnost demokratických procesů."  
-coverImage: "images/Rumunsko-volby-2024.svg"
+coverImage: "images/Rumunsko-volby-zruseno-2024.png
+"
 filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "demokracie", "volby", "hybridní válka", "kybernetická bezpečnost"]  
 ---
