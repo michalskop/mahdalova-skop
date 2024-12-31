@@ -1,14 +1,14 @@
 // components/clanek/ArticleRenderer.tsx
 'use client';
 
-import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme, useMantineColorScheme } from '@mantine/core';
+import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
 import { Global } from '@mantine/styles';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
-import { CodeBlock, MediaBox} from './MediaBox'; // Import the MediaBox component
+import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -31,18 +31,15 @@ export function ArticleRenderer({
 }: ArticleProps) {
   const [mounted, setMounted] = useState(false);
   const theme = useMantineTheme();
-  // switch off the dark mode temporarily
-  // const { colorScheme } = useMantineColorScheme();
-  let colorScheme = 'light'; // Force light
 
-    // Ensure no hydration mismatch
-    useEffect(() => {
-      setMounted(true);
-    }, []);
+  // Ensure no hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
-    if (!mounted) {
-      return null;
-    }
+  if (!mounted) {
+    return null;
+  }
 
   const components: MDXComponents = {
     MediaBox, // Register MediaBox directly, allowing remarkBoxPlugin to handle box syntax
@@ -56,9 +53,7 @@ export function ArticleRenderer({
         c={textColor} // Use provided text color
         styles={(theme) => ({
           root: {
-            color: colorScheme === 'dark'
-              ? theme.colors.brand[7]  // darker shade for dark mode
-              : theme.colors.brand[6],  // normal shade for light mode
+            color: theme.colors.brand[6],  // normal shade for light mode
           }
         })}
       >
@@ -71,9 +66,7 @@ export function ArticleRenderer({
         c={textColor}
         styles={(theme) => ({
           root: {
-            color: colorScheme === 'dark'
-              ? theme.colors.brand[7]
-              : theme.colors.brand[6],
+            color: theme.colors.brand[6],
           },
         })}
       >
@@ -169,9 +162,7 @@ export function ArticleRenderer({
       className='markdown-content'
       styles={{
         root: {
-          backgroundColor: backgroundColor || (colorScheme === 'dark'
-            ? theme.colors.gray[7]
-            : theme.colors.background[1]),
+          backgroundColor: backgroundColor || theme.colors.background[1],
         }
       }}
     >
@@ -184,9 +175,7 @@ export function ArticleRenderer({
             c={textColor}
             styles={{
               root: {
-                color: textColor || (colorScheme === 'dark'
-                  ? theme.colors.brand[7]
-                  : theme.colors.brand[6]),
+                color: textColor || theme.colors.brand[6],
                 fontSize: '2.75rem',
               }
             }}
