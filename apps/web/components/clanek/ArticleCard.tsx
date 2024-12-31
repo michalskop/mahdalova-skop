@@ -37,7 +37,9 @@ export function ArticleCard({
   tags 
 }: ArticleCardProps) {
   const theme = useMantineTheme();
-  const { colorScheme } = useMantineColorScheme();
+  // switch off the dark mode temporarily
+  // const { colorScheme } = useMantineColorScheme();
+  let colorScheme = 'light'; // Force light
   const linkProps = { href: `/clanek/${slug}` };
 
   return (

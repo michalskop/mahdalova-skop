@@ -29,9 +29,11 @@ export function ArticleRenderer({
   textColor,
   withContainer = true  // Default to true for backward compatibility
 }: ArticleProps) {
-  const theme = useMantineTheme();
-  const { colorScheme } = useMantineColorScheme();
   const [mounted, setMounted] = useState(false);
+  const theme = useMantineTheme();
+  // switch off the dark mode temporarily
+  // const { colorScheme } = useMantineColorScheme();
+  let colorScheme = 'light'; // Force light
 
     // Ensure no hydration mismatch
     useEffect(() => {
