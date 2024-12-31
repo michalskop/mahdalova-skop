@@ -133,7 +133,7 @@ export function ArticleRenderer({
       </div>
     ),
     thead: ({ children }) => (
-      <thead style={{ backgroundColor: '#f9f9f9' }}>
+      <thead style={{ backgroundColor: theme.colors.background[2] }}>
         {children}
       </thead>
     ),

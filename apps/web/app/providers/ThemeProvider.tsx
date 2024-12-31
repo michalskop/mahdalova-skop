@@ -25,7 +25,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <MantineProvider
-      defaultColorScheme="auto"
+      defaultColorScheme="light"
       theme={{
         fontFamily: workSans.style.fontFamily,
         colors: {
@@ -84,6 +84,21 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             brandNavy: ["#e9ecf4", "#d2d8e9", "#bcc4df", "#a6b0d4", "#8f9dc9", "#7889be", "#6267a3", "#4c4f8e", "#2f325c", "#101432"],
             brandDeepRed:["#fbe8eb", "#f5c4cd", "#efa0af", "#e87c91", "#d85a74", "#bb3a5d", "#a03250", "#812840", "#621d30", "#431320"]
         },
+        // Force light mode colors
+        white: '#ffffff',
+        black: '#000000',
+        // Explicitly set dark mode components to use light mode colors
+        components: {
+          Paper: {
+            styles: {
+              root: {
+                '&[data-mantine-color-scheme="dark"]': {
+                  backgroundColor: '#ffffff'
+                }
+              }
+            }
+          },  // /Paper
+        }
       }}
     >
       {children}

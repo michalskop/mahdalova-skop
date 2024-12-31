@@ -61,7 +61,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <MatomoAnalytics />
         </Suspense>
-        <ColorSchemeScript defaultColorScheme="auto" />
+        <ColorSchemeScript defaultColorScheme="light" />
       </head>
       <body>
         <ThemeProvider>
