@@ -13,7 +13,7 @@ import { ArticlesSection } from '@/components/common/ArticlesSection';
 // import { ContactsBlock } from '@/components/common/ContactsBlock';
 
 export default async function HomePage() {
-  const articles = await getArticles(3);
+  const articles = await getArticles(3, undefined, true);
   const articles_analyses = await getArticles(3, "analýza");
   const articles_contexts = await getArticles(3, "kontext");
 

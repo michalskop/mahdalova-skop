@@ -19,7 +19,11 @@ interface ArticleWithScore extends Article {
   promotedScore: number;
 }
 
-export async function getArticles(limit: number = 9, filter?: string | string[]): Promise<Article[]> {
+export async function getArticles(
+  limit: number = 9,
+  filter?: string | string[],
+  useExplicitPromotion: boolean = false
+): Promise<Article[]> {
   const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
   const articleFolders = fs.readdirSync(articlesDirectory);
   const currentDate = new Date();
@@ -61,10 +65,11 @@ export async function getArticles(limit: number = 9, filter?: string | string[])
     const ageInDays = Math.floor((currentDate.getTime() - articleDate.getTime()) / (1000 * 60 * 60 * 24));
     const monthsOld = ageInDays / 30;
     const timeScore = 50 * Math.pow(0.5, monthsOld);
+    const explicitPromotionScore = useExplicitPromotion ? (article.promoted || 0) : 0;
     
     return {
       ...article,
-      promotedScore: (article.promoted || 0) + timeScore
+      promotedScore: explicitPromotionScore + timeScore
     } as ArticleWithScore;
   });
 
