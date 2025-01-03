@@ -12,17 +12,22 @@ export interface Article {
   coverImage: string | null;
   filter?: string | string[];
   tags: string[];
+  promoted?: number;
+}
+
+interface ArticleWithScore extends Article {
+  promotedScore: number;
 }
 
 export async function getArticles(limit: number = 9, filter?: string | string[]): Promise<Article[]> {
   const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
   const articleFolders = fs.readdirSync(articlesDirectory);
+  const currentDate = new Date();
 
   const articles = articleFolders.map((folder) => {
     const fullPath = path.join(articlesDirectory, folder, 'index.md');
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
-    
     const coverImage = data.coverImage
       ? `/clanek/_articles/${folder}/${data.coverImage}`
       : null;
@@ -35,21 +40,37 @@ export async function getArticles(limit: number = 9, filter?: string | string[])
       slug: folder,
       coverImage,
       filter: data.filter || [],
-      tags: data.tags || []
+      tags: data.tags || [],
+      promoted: data.promoted || 0
     } as Article;
   });
 
-  const filteredArticles = filter 
-    ? articles.filter(article => {
-        const articleFilter = Array.isArray(article.filter) ? article.filter : [article.filter];
-        const searchFilter = Array.isArray(filter) ? filter : [filter];
-        return searchFilter.some(f => articleFilter.includes(f));
-      })
-    : articles;
+  // Filter out future articles and apply content filters
+  const filteredArticles = articles
+    .filter(article => new Date(article.date) <= currentDate)
+    .filter(article => {
+      if (!filter) return true;
+      const articleFilter = Array.isArray(article.filter) ? article.filter : [article.filter];
+      const searchFilter = Array.isArray(filter) ? filter : [filter];
+      return searchFilter.some(f => articleFilter.includes(f));
+    });
 
-  return filteredArticles
-    .sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    })
-    .slice(0, limit);
+  // Calculate promotion score for each article
+  const articlesWithScore = filteredArticles.map(article => {
+    const articleDate = new Date(article.date);
+    const ageInDays = Math.floor((currentDate.getTime() - articleDate.getTime()) / (1000 * 60 * 60 * 24));
+    const monthsOld = ageInDays / 30;
+    const timeScore = 50 * Math.pow(0.5, monthsOld);
+    
+    return {
+      ...article,
+      promotedScore: (article.promoted || 0) + timeScore
+    } as ArticleWithScore;
+  });
+
+  // Sort by promotion score and return limited results
+  return articlesWithScore
+    .sort((a, b) => b.promotedScore - a.promotedScore)
+    .slice(0, limit)
+    .map(({ promotedScore, ...article }) => article); // Remove the score before returning
 }

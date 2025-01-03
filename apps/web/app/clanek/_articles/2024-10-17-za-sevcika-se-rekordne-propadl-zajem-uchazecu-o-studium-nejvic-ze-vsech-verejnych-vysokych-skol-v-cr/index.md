@@ -6,6 +6,7 @@ excerpt: "Škodí odvolaný děkan (nyní opět proděkan) Miroslav Ševčík n�
 coverImage: "images/overview.png"
 filter: "analýza"
 tags: ["Vysoké školy", "VŠE", "Ševčík", "národohospodářská fakulta"]
+promoted: 100
 ---
 
 Škodí odvolaný děkan (nyní opět proděkan) Miroslav Ševčík národohospodářské fakultě?
