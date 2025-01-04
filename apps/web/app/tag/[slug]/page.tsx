@@ -50,9 +50,9 @@ export default async function Page({ params }: PageProps) {
     >
       <>
         <ArticlesSection
-          sectionTitle={`Články s tagem "${originalTag}"`}
+          sectionTitle={`${originalTag}`}
           articles={articles}
-          themeColor="brand"
+          themeColor="brandRoyalBlue.3"
         />
         <SubscribeNewsletter 
           actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'

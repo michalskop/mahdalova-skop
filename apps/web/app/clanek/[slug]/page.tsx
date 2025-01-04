@@ -1,137 +1,109 @@
-// app/tag/[slug]/page.tsx
+// app/clanek/[slug]/page.tsx
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { getArticles, Article } from '@/components/common/getArticles'
-import { Box, Container } from '@mantine/core'
-import { TagList } from '@/components/common/TagList'
-import SubscribeNewsletter from '@/components/common/SubscribeNewsletter'
+import { getArticleBySlug } from '@/lib/articles';
+import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
+import { TagList } from '@/components/common/TagList';
+import { notFound } from 'next/navigation';
+import { Box, Container } from '@mantine/core';
+import fs from 'fs'
+import path from 'path'
+import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 
-interface TagPageProps {
+
+interface PageProps {
   params: {
-    slug: string
-  }
+    slug: string;
+  };
 }
 
-export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   try {
-    const articles = await getArticles(undefined, undefined, false, params.slug)
+    const article = await getArticleBySlug(params.slug)
     
-    if (articles.length === 0) {
-      notFound()
-    }
-
-    // Get the most recent article for the image
-    const mostRecentArticle = articles.sort((a, b) => 
-      new Date(b.date).getTime() - new Date(a.date).getTime()
-    )[0]
-
-    // Construct the base URL
+    // Construct the full URL for the article (replace with your actual domain)
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz'
+    const articleUrl = `${baseUrl}/clanek/${params.slug}`
     
-    // Use the full coverImage path that's already properly formatted by getArticles
-    const imageUrl = mostRecentArticle.coverImage
-      ? `${baseUrl}${mostRecentArticle.coverImage}`
-      : `${baseUrl}/default-og-image.jpg`
-
-    const title = `Články označené tagem "${params.slug}"`
-    const description = `Přečtěte si všechny články označené tagem "${params.slug}". Analytické výstupy a komentáře k tématu ${params.slug}.`
+    // Construct the full image URL
+    const imageUrl = article.coverImage 
+      ? `${baseUrl}/clanek/_articles/${params.slug}/${article.coverImage}`
+      : `${baseUrl}/default-og-image.jpg` // Fallback image
 
     return {
-      title,
-      description,
-      authors: [{ name: 'Mahdalová & Škop' }],
+      title: article.title,
+      description: article.excerpt,
+      authors: [{ name: article.author }],
       openGraph: {
-        title,
-        description,
-        type: 'website',
-        url: `${baseUrl}/tag/${params.slug}`,
+        title: article.title,
+        description: article.excerpt,
+        type: 'article',
+        url: articleUrl,
+        publishedTime: new Date(article.date).toISOString(),
+        authors: [article.author],
         images: [
           {
             url: imageUrl,
             width: 1200,
             height: 630,
-            alt: title,
+            alt: article.title,
           },
         ],
+        tags: article.tags,
       },
       twitter: {
         card: 'summary_large_image',
-        title,
-        description,
+        title: article.title,
+        description: article.excerpt,
         images: [imageUrl],
       },
-      alternates: {
-        canonical: `${baseUrl}/tag/${params.slug}`,
-      }
     }
   } catch (error) {
-    console.error('Error generating tag metadata:', error)
+    console.error('Error generating metadata:', error)
     return {
-      title: 'Stránka nenalezena',
-      description: 'Požadovaná stránka tagu nebyla nalezena.',
+      title: 'Article Not Found',
+      description: 'The requested article could not be found.',
     }
   }
 }
 
 export async function generateStaticParams() {
-  // Get all articles to extract unique tags
-  const allArticles = await getArticles()
-  const allTags = new Set<string>()
-  
-  allArticles.forEach(article => {
-    article.tags?.forEach(tag => allTags.add(tag))
-  })
-
-  return Array.from(allTags).map(tag => ({
-    slug: tag
-  }))
+  // Get the absolute path to the articles directory
+  const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles')
+  // Read the directory
+  const articles = fs.readdirSync(articlesDirectory, { withFileTypes: true })
+  // Filter for directories only and map to slug format
+  const slugs = articles
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => ({
+      slug: dirent.name,
+    }))
+  return slugs
 }
 
-export default async function TagPage({ params }: TagPageProps) {
+export default async function ArticlePage({ params }: PageProps) {
   try {
-    // Pass undefined as limit to get all articles with the tag
-    const articles = await getArticles(undefined, undefined, false, params.slug)
-
-    if (articles.length === 0) {
-      notFound()
-    }
-
+    const article = await getArticleBySlug(params.slug);
     return (
       <div>
-        <h1>Články označené tagem "{params.slug}"</h1>
-        <div>
-          {articles.map((article) => (
-            <Box key={article.slug} mb="xl">
-              <h2>{article.title}</h2>
-              <div>
-                <time>{article.date}</time>
-                <span> • </span>
-                <span>{article.author}</span>
-              </div>
-              {article.coverImage && (
-                <img src={article.coverImage} alt={article.title} />
-              )}
-              <p>{article.excerpt}</p>
-              <Box my="lg">
-                <TagList tags={article.tags} />
-              </Box>
-            </Box>
-          ))}
-        </div>
-        <Container
-          size="md"
-          bg="background.2"
-          maw="928px"
-          w="100%"
-          p={0}
-          m="0 auto"
-        >
+        <ArticleRenderer {...article} />
+        <Box my="lg">
+          <TagList tags={article.tags} />
+        </Box>
+        <Container 
+              size="md" 
+              // py="xl"
+              bg="background.2"
+              maw="928px"
+              w="100%"
+              p={0}
+              m="0 auto"
+            >
           <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
         </Container>
       </div>
-    )
+    );
   } catch (error) {
-    console.error('Error in TagPage:', error)
-    notFound()
+    console.error('Error in ArticlePage:', error);
+    notFound();
   }
 }

@@ -1,7 +1,7 @@
-// components/TagList.tsx
 'use client';
-
-import { Badge, Group, MantineTheme, useMantineTheme, Container } from '@mantine/core';
+import { Badge, Group, useMantineTheme, Container } from '@mantine/core';
+import Link from 'next/link';
+import { normalizeTag } from '@/utils/tagNormalizer';
 
 interface TagListProps {
   tags: string[];
@@ -20,15 +20,25 @@ export function TagList({ tags, size = 'sm', spacing = 8 }: TagListProps) {
     <Container>
       <Group gap={spacing} mt="xs">
         {tags.map((tag) => (
-          <Badge
+          <Link
             key={tag}
-            variant="gradient"
-            gradient={{ from: theme.colors.brand[6], to: theme.colors.brand[6] }}
-            size={size}
-            autoContrast
+            href={`/tag/${normalizeTag(tag)}`}
+            style={{
+              textDecoration: 'none',
+            }}
           >
-            {tag}
-          </Badge>
+            <Badge
+              variant="gradient"
+              gradient={{ from: theme.colors.brand[6], to: theme.colors.brand[6] }}
+              size={size}
+              autoContrast
+              style={{
+                cursor: 'pointer',
+              }}
+            >
+              {tag}
+            </Badge>
+          </Link>
         ))}
       </Group>
     </Container>
