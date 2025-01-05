@@ -1,0 +1,52 @@
+{
+  "name": "datajournalism.studio",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/copyImages.js && next dev",
+    "prebuild": "node scripts/copyImages.js",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/server": "^11.x.x",
+    "@mantine/core": "^7.13.4",
+    "@mantine/hooks": "^7.13.4",
+    "@mantinex/mantine-logo": "^1.0.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@tabler/icons-react": "^3.21.0",
+    "gray-matter": "^4.0.3",
+    "next": "^14.2.22",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-image-size": "^1.0.0",
+    "rehype-img-size": "^1.0.1",
+    "rehype-raw": "^7.0.0",
+    "rehype-react": "^8.0.0",
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.1",
+    "sass": "^1.80.5"
+  },
+  "devDependencies": {
+    "@types/mdx": "^2.0.13",
+    "@types/node": "20.14.8",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "18.2.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "5.5.2"
+  }
+}
