@@ -106,9 +106,7 @@ Tato situace přetrvává dodnes. V roce 2004 harvardská profesorka Samantha Po
 
 > Fašismus – na rozdíl od komunismu, socialismu či konzervatismu – se stal spíše urážkou sloužící k očernění oponentů než popisným termínem.
 
-Následky tohoto vývoje vidíme všude kolem nás. Když se podíváme na současné konflikty, ať už jde o rusko-ukrajinskou válku nebo izraelsko-palestinský konflikt, obě strany pravidelně označují své protivníky za fašisty. V americké politice se tato nálepka používá proti prezidentům napříč politickým spektrem. V zemích bývalého východního bloku sloužilo označení "fašista" k umlčení jakéhokoli odporu proti režimu.
-Nejnebezpečnější na tomto trendu je, že ztrácíme schopnost rozpoznat skutečné fašistické tendence. Když se vážné varování změní v běžnou nadávku, přestáváme být citliví na skutečné náznaky autoritářství. Zároveň tím znevažujeme historické tragédie a znemožňujeme věcnou politickou debatu.
-Existuje ale řešení. Můžeme začít používat tento termín zodpovědně - vycházet z přesných definic, jako je například čtrnáct bodů Umberta Eca, podkládat svá tvrzení konkrétními fakty a vyvarovat se emotivního zneužívání. Jen tak můžeme vrátit slovu "fašismus" jeho varovnou funkci a skutečně se poučit z historie.Version 3 of 4
+Následky tohoto vývoje vidíme všude kolem nás. Když se podíváme na současné konflikty, zastánci různých stran pravidelně označují své protivníky za fašisty. A například v zemích bývalého východního bloku sloužilo označení "fašista" k umlčení jakéhokoli odporu proti režimu. Nejnebezpečnější na tomto trendu je, že se pozvolna ztrácí schopnost rozpoznat skutečné fašistické tendence. Když se vážné varování změní v běžnou nadávku, přestáváme být citliví na skutečné náznaky autoritářství. Zároveň tím znevažujeme historické tragédie a znemožňujeme věcnou politickou debatu. Existuje ale řešení. Můžeme začít používat tento termín zodpovědně - vycházet z přesných definic, uvedené body Umberta Eca, podkládat svá tvrzení konkrétními fakty a vyvarovat se emotivního zneužívání. Pak můžeme vrátit slovu "fašismus" jeho varovnou funkci a skutečně se poučit z historie.
 ```
 
 
