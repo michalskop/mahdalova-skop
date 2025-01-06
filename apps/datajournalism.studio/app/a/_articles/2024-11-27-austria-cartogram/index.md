@@ -14,7 +14,7 @@ Our cartograms have been selected as exemplary by the top statisticians in Austr
 
 In this particular cartogram, the results of the Austrian autumn elections are visualized, and the map is now featured in Austria's national catalog: [data.gv.at](https://www.data.gv.at/katalog/application/6897edfa-2c70-4d7f-9d5a-b7f61b7e87f1#views).
 
----
+<iframe src='https://flo.uri.sh/visualisation/20136747/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='400px' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 
 ## What is a Cartogram?
 
