@@ -91,8 +91,7 @@ Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmo
 
 Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu.
 
-```box
-#### Namísto vážného varování prázdná nadávka
+## Namísto vážného varování prázdná nadávka
 
 Už téměř 80 let nás přední myslitelé varují před nebezpečím, které přináší nadužívání slova "fašismus". Tento příběh začal už v roce 1944, kdy spisovatel George Orwell, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
 
@@ -107,7 +106,7 @@ Tato situace přetrvává dodnes. V roce 2004 harvardská profesorka Samantha Po
 > Fašismus – na rozdíl od komunismu, socialismu či konzervatismu – se stal spíše urážkou sloužící k očernění oponentů než popisným termínem.
 
 Následky tohoto vývoje vidíme všude kolem nás. Když se podíváme na současné konflikty, zastánci různých stran pravidelně označují své protivníky za fašisty. A například v zemích bývalého východního bloku sloužilo označení "fašista" k umlčení jakéhokoli odporu proti režimu. Nejnebezpečnější na tomto trendu je, že se pozvolna ztrácí schopnost rozpoznat skutečné fašistické tendence. Když se vážné varování změní v běžnou nadávku, přestáváme být citliví na skutečné náznaky autoritářství. Zároveň tím znevažujeme historické tragédie a znemožňujeme věcnou politickou debatu. Existuje ale řešení. Můžeme začít používat tento termín zodpovědně - vycházet z přesných definic, uvedené body Umberta Eca, podkládat svá tvrzení konkrétními fakty a vyvarovat se emotivního zneužívání. Pak můžeme vrátit slovu "fašismus" jeho varovnou funkci a skutečně se poučit z historie.
-```
+
 
 
 
