@@ -92,29 +92,31 @@ Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmo
 Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu.
 
 ```box
-#### Klíčové osobnosti varující před zneužíváním pojmu:
+#### Klíčové osobnosti varující před zneužíváním pojmu fašismus:
 
 • George Orwell: "Slovo 'fašismus' se stalo téměř bezvýznamným. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího i astrologii." - [z eseje "What is Fascism?" publikované v Tribune (1944)](https://bookhaven.stanford.edu/2017/02/orwell-watch-27-what-is-fascism/)
 
 • Samantha Power (2004), harvardská profesorka: "Fašismus se na rozdíl od komunismu, socialismu či konzervatismu stal spíše urážkou sloužící k očernění oponentů než popisným termínem." - z její přednášky na Kennedy School of Government v roce 2004 
 
-• Stanley G. Payne, přední historik fašismu: "Po druhé světové válce se fašismus stal symbolem absolutního zla, což dává jeho použití jako urážce mimořádnou sílu."
+• Stanley G. Payne, přední historik: "Po druhé světové válce se fašismus stal symbolem absolutního zla, což dává jeho použití jako urážce mimořádnou sílu." - z článku [Antifascism Without Fascism](https://www.firstthings.com/web-exclusives/2021/01/antifascism-without-fascism)
+```
 
-• Omer Bartov, izraelský historik (2023): Varuje před srovnáváním současných konfliktů s nacismem, které vede k trivializaci holokaustu.
-
+```box
 #### Důsledky nadužívání:
 
-Ztráta schopnosti rozpoznat skutečné fašistické tendence
+• Ztráta schopnosti rozpoznat skutečné fašistické tendence
 
-Trivializace historických tragédií
+• Trivializace historických tragédií
 
-Polarizace společnosti
+• Polarizace společnosti
 
-Znemožnění věcné politické debaty
+• Znemožnění věcné debaty
+```
 
+```box
 #### Jak termín používat zodpovědně:
 
-Vycházet z přesných definic (např. Eco)
+Vycházet z přesných definic
 
 Podložit obvinění konkrétními fakty
 
