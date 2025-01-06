@@ -92,37 +92,23 @@ Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmo
 Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu.
 
 ```box
-#### Klíčové osobnosti varující před zneužíváním pojmu fašismus:
+#### Když se z vážného varování stává prázdná nadávka
 
-• George Orwell: "Slovo 'fašismus' se stalo téměř bezvýznamným. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího i astrologii." - [z eseje "What is Fascism?" publikované v Tribune (1944)](https://bookhaven.stanford.edu/2017/02/orwell-watch-27-what-is-fascism/)
+Už téměř 80 let nás přední myslitelé varují před nebezpečím, které přináší nadužívání slova "fašismus". Tento příběh začal už v roce 1944, kdy spisovatel George Orwell, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
 
-• Samantha Power (2004), harvardská profesorka: "Fašismus se na rozdíl od komunismu, socialismu či konzervatismu stal spíše urážkou sloužící k očernění oponentů než popisným termínem." - z její přednášky na Kennedy School of Government v roce 2004 
+> "Slovo 'fašismus' se stalo prakticky bezvýznamným. V běžné konverzaci se používá ještě divočeji než v tisku. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího, dokonce i pro mládežnické ubytovny a astrologii."
 
-• Stanley G. Payne, přední historik: "Po druhé světové válce se fašismus stal symbolem absolutního zla, což dává jeho použití jako urážce mimořádnou sílu." - z článku [Antifascism Without Fascism](https://www.firstthings.com/web-exclusives/2021/01/antifascism-without-fascism)
-```
+Orwellovo varování bohužel zůstalo nevyslyšeno. Po druhé světové válce se situace ještě zhoršila. Jak vysvětluje přední historik Stanley G. Payne:
 
-```box
-#### Důsledky nadužívání:
+> "Fašismus získal v západní kultuře pozici téměř náboženského symbolu absolutního zla. To dává jeho použití jako urážce mimořádnou sílu, jakou žádné jiné označení nemá."
 
-• Ztráta schopnosti rozpoznat skutečné fašistické tendence
+Tato situace přetrvává dodnes. V roce 2004 harvardská profesorka Samantha Power upozornila na to, že:
 
-• Trivializace historických tragédií
+> "Fašismus – na rozdíl od komunismu, socialismu či konzervatismu – se stal spíše urážkou sloužící k očernění oponentů než popisným termínem."
 
-• Polarizace společnosti
-
-• Znemožnění věcné debaty
-```
-
-```box
-#### Jak termín používat zodpovědně:
-
-Vycházet z přesných definic
-
-Podložit obvinění konkrétními fakty
-
-Vyvarovat se emotivního zneužívání
-
-Respektovat historický kontext
+Následky tohoto vývoje vidíme všude kolem nás. Když se podíváme na současné konflikty, ať už jde o rusko-ukrajinskou válku nebo izraelsko-palestinský konflikt, obě strany pravidelně označují své protivníky za fašisty. V americké politice se tato nálepka používá proti prezidentům napříč politickým spektrem. V zemích bývalého východního bloku sloužilo označení "fašista" k umlčení jakéhokoli odporu proti režimu.
+Nejnebezpečnější na tomto trendu je, že ztrácíme schopnost rozpoznat skutečné fašistické tendence. Když se vážné varování změní v běžnou nadávku, přestáváme být citliví na skutečné náznaky autoritářství. Zároveň tím znevažujeme historické tragédie a znemožňujeme věcnou politickou debatu.
+Existuje ale řešení. Můžeme začít používat tento termín zodpovědně - vycházet z přesných definic, jako je například čtrnáct bodů Umberta Eca, podkládat svá tvrzení konkrétními fakty a vyvarovat se emotivního zneužívání. Jen tak můžeme vrátit slovu "fašismus" jeho varovnou funkci a skutečně se poučit z historie.Version 3 of 4
 ```
 
 
