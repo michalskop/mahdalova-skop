@@ -31,7 +31,7 @@ Demokracie není samozřejmost - je to systém, který vyžaduje aktivní účas
 
 ![obrázek](images/Indikatory_fasismu_podle_Eca.png)
 
-## Dvanáct signálů fašismu podle Umberta Eca
+## Signály fašismu podle Umberta Eca
 
 ⚙️ 1. Kult tradice: Když se minulost stává zbraní
 V Rusku se setkáváme s neustálým odkazováním na "slavnou minulost" a "tradiční hodnoty". Tyto odkazy nejsou nevinné - slouží k ospravedlnění současné politiky a potlačování změn. Ukrajina naopak svou identitu staví na směřování k budoucnosti a modernizaci.
