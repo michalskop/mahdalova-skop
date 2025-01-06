@@ -64,6 +64,8 @@ Yet the potential benefits are immense. Predictions remove the uncertainty of wa
 
 Real-time election result predictions are not just a technological achievement; they represent a paradigm shift in how elections are reported. By providing accurate and timely forecasts, we can replace speculation with data-driven insights, making election night a more transparent and engaging experience for audiences worldwide.
 
+For more information or to collaborate on real-time election predictions, feel free to reach out.
+
 ---
 
 *Authored by Katerina Mahdalova, Michal Skop*
