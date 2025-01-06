@@ -4,7 +4,7 @@ date: "2024-10-17"
 author: "Mahdalová & Škop"
 excerpt: "Škodí odvolaný děkan (nyní opět proděkan) Miroslav Ševčík národohospodářské fakultě?"
 coverImage: "images/overview.png"
-filter: "work"
+filter: ""
 tags: ["Vysoké školy", "VŠE", "Ševčík", "národohospodářská fakulta"]
 promoted: 100
 ---
