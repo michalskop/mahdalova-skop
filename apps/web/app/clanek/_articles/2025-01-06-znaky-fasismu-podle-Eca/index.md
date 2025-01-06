@@ -8,7 +8,8 @@ filter: ["kontext"]
 tags: ["zahraničí", "Rusko", "Ukrajina", "politika", "Umberto Eco", "fašismus", "demokracie"]
 ---
 
-Slovo "fašismus" slýcháme v médiích čím dál častěji. Ale co vlastně znamená, když někdo označí stát nebo režim za fašistický? Není to jen prázdná nálepka, kterou používáme pro režimy, které se nám nelíbí?
+Slovo "fašismus" slýcháme ve veřejném prostoru čím dál častěji. Ale co vlastně znamená, když někdo označí stát nebo režim za fašistický? Není to jen prázdná nálepka, kterou používáme pro režimy či země, které se nám z nějakého důvodu nelíbí?
+
 Světoznámý spisovatel a filozof Umberto Eco, který vyrůstal v Mussoliniho Itálii, nám zanechal cenný nástroj. Definoval dvanáct charakteristických znaků fašismu, které nám mohou pomoci rozpoznat nebezpečné tendence dřív, než bude pozdě. Jeho seznam je dnes aktuálnější než kdy jindy.
 
 V době, kdy se mezinárodní vztahy dramaticky mění a geopolitické napětí roste, je důležitější než kdy dříve umět rozpoznat varovné signály. Na příkladu současného konfliktu mezi Ruskem a Ukrajinou si ukážeme, jak Ecovy indikátory fungují v praxi a proč by nás měly zajímat.
