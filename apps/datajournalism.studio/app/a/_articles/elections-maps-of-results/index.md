@@ -55,6 +55,8 @@ As with our real-time predictions, election maps have been used effectively acro
 
 Each map is tailored to the available data and the unique characteristics of the election, ensuring accuracy and relevance.
 
+For more information or to collaborate on maps of elections results, feel free to reach out.
+
 ---
 
 *Authored by Katerina Mahdalova, Michal Skop*
