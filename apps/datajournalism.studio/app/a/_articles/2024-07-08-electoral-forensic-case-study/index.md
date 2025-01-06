@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "We identified errors in counting electoral votes in several polling stations."  
 coverImage: "images/main.png"  
 filter: ["blog"]  
-tags: ["Elections", "Czechia", "Data Analysis", "Electoral Forensic"]
+tags: ["Elections", "Czechia", "Data Analysis", "Election Forensic"]
 promoted: 10
 ---
 
