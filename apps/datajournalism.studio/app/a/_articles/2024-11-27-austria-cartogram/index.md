@@ -1,6 +1,6 @@
 ---
 title: "Austrian Cartogram Recognized as an Example of Good Practice."  
-date: "2024-12-19"  
+date: "2024-11-27"  
 author: "Mahdalová & Škop"  
 excerpt: "Our cartograms have been selected as exemplary by the official Statistik Austria."  
 coverImage: "images/main.png"  
