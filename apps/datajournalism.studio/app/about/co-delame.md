@@ -1,31 +1,23 @@
-## Proč to děláme
+## Why We Do It
 
-České mediální prostředí se potýká s nedostatkem hluboké a kontextuální práce s daty. Mnohé kauzy a problémy jsou
-prezentovány povrchně, bez dostatečného propojení s fakty nebo mezinárodními souvislostmi. Chceme tento stav
-změnit. Naším cílem je podpořit společenskou debatu prostřednictvím kvalitních datových výstupů, které mají potenciál
-ovlivnit rozhodování na všech úrovních.
+The media landscape in the Czech Republic faces challenges with a lack of in-depth and contextual data analysis. Many issues are presented superficially, without strong connections to facts or global context. We strive to change this. Our mission is to enrich public debate with high-quality data-driven insights that can inform decision-making at every level of society.
 
-## Jak to děláme
+## How We Do It
 
-Pracujeme s nejnovějšími technologiemi a metodami datové analýzy. Spojujeme tradiční novinářskou práci s inovativními
-přístupy, které zahrnují strojové učení, geoprostorovou analýzu a tvorbu interaktivních aplikací. Data získáváme nejen z
-veřejných databází, ale i ze spolupráce s odborníky, akademiky a komunitami.
+We leverage cutting-edge technologies and data analysis techniques. By blending traditional journalism with innovative approaches such as machine learning, geospatial analysis, and interactive applications, we bring fresh perspectives to complex issues. Our data comes from public databases as well as collaborations with experts, academics, and local communities.
 
-Jsme tým s mezinárodním přesahem a spolupracujeme s partnery z různých koutů světa, abychom přinášeli kvalitní a
-dobře ověřené informace.
+As an internationally connected team, we partner with organizations and individuals worldwide to deliver well-researched and reliable information.
 
-## Principy a hodnoty, kterými se řídíme
+## Our Principles and Values
 
-• Odbornost a transparentnost: Každý náš výstup je podložen fakty a vždy jasně uvádíme zdroje.
+• **Expertise and Transparency**: Every piece of work is grounded in verified facts, with clear and accessible sourcing.  
 
-• Nezávislost: Nepodléháme vlivům politických ani komerčních zájmů. Naše práce je financována z nezávislých zdrojů a crowdfundingu.
+• **Independence**: We operate free from political or commercial influence. Our funding comes from independent sources and crowdfunding.  
 
-• Inovace: Neustále hledáme nové způsoby, jak prezentovat data a příběhy, aby byly pro naše publikum co
-nejpřínosnější a nejpoutavější.
+• **Innovation**: We continuously explore new ways to present data and stories, ensuring they are engaging and meaningful for diverse audiences.  
 
-• Spolupráce: Věříme v propojení odborníků, novinářů a veřejnosti, protože společně dokážeme odhalit mnohem více.
+• **Collaboration**: We believe in the power of teamwork, connecting experts, journalists, and the public to uncover deeper insights together.
 
-## Co nabízíme
+## What We Offer
 
-Naše analýzy a vizualizace jsou určeny široké veřejnosti, akademickým institucím, neziskovým organizacím i médiím. Naše
-práce ukazuje, že data nemusí být jen čísla, ale také klíč k pochopení světa kolem nás.
+Our analyses and visualizations are designed for a wide range of audiences, including the general public, academic institutions, non-profits, and media organizations. We demonstrate that data is more than just numbers—it is a vital tool for understanding the world around us and driving meaningful change.

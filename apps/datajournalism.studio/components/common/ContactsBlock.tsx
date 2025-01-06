@@ -77,7 +77,7 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
         style={{ cursor: 'pointer' }}
         onClick={handleReveal}
       >
-        email@... Klikněte pro zobrazení
+        email@... Click to display
       </Text>
     );
   }
@@ -104,7 +104,7 @@ export function ContactsBlock() {
     <>
     <Global
       styles={{
-        '#kontakty a': {
+        '#contacts a': {
           color: theme.colors.brand[6],
           textDecoration: 'none',
           '&:hover': {
@@ -120,7 +120,7 @@ export function ContactsBlock() {
       }}
     />
     <Paper
-      id="kontakty" 
+      id="contacts" 
       style={{ scrollMarginTop: '100px' }}
       p="lg"
       bg="background.2"
@@ -138,7 +138,7 @@ export function ContactsBlock() {
             size="h2" // or specific size like "28px"
             c={theme.colors.brandNavy[9]}
           >
-            Kontakty
+            Contacts
           </Title>
         </Stack>
         <Grid gutter="md">
@@ -179,17 +179,17 @@ export function ContactsBlock() {
                         style={{ width: rem(20), height: rem(20) }}
                         stroke={1.5}
                       />
-                      {/* <Text>CZ:</Text> */}
-                      <Anchor href={`tel:${person.phoneCZ.replace(/\s/g, '')}`} underline="hover">
-                        {person.phoneCZ}
-                      </Anchor>
-                    </Group>
-                    {/* <Group gap="xs" ml={28} mt={5}>
                       <Text>AT:</Text>
                       <Anchor href={`tel:${person.phoneAT.replace(/\s/g, '')}`} underline="hover">
                         {person.phoneAT}
                       </Anchor>
-                    </Group> */}
+                    </Group>
+                    <Group gap="xs" ml={28} mt={5}>
+                      <Text>CZ:</Text>
+                      <Anchor href={`tel:${person.phoneCZ.replace(/\s/g, '')}`} underline="hover">
+                        {person.phoneCZ}
+                      </Anchor>
+                    </Group>
                   </Box>
 
                   {/* Social Media */}

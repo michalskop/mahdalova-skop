@@ -97,7 +97,12 @@ export function ArticleCard({
               c="dimmed"
               // style={{ marginTop: '4px' }}
             >
-              {new Date(date).toLocaleDateString('cs-CZ')}
+              {new Date(date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              }
+              )}
             </Text>
           </div>
         </Center>

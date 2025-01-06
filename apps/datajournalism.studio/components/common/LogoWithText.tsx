@@ -54,7 +54,7 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
         size={textSize}
         c={textColor}
       >
-        Data Journalism Studio
+        Data&nbsp;Journalism Studio
       </Text>
     </Group>
   );

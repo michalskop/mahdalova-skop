@@ -9,35 +9,35 @@ import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Mahdalová & Śkop',
-    template: '%s | Mahdalová & Śkop',
+    default: 'Data Journalism Studio',
+    template: '%s | Data Journalism Studio',
   },
-  description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
+  description: 'We make data talk. Stories hidden in data - unique data and context journalism.',
   icons: {
     icon: [{ url: '/favicon.svg' }],
     apple: [{ url: '/favicon.svg' }],
   },
-  metadataBase: new URL('https://www.mahdalova-skop.cz/'),
+  metadataBase: new URL('https://www.datajournalism.studio/'),
   openGraph: {
-    title: 'Mahdalová & Škop',
-    description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
-    url: 'https://www.mahdalova-skop.cz/',
-    siteName: 'Mahdalová & Śkop',
+    title: 'Data Journalism Studio',
+    description: 'We make data talk. Stories hidden in data - unique data and context journalism.',
+    url: 'https://www.datajournalism.studio/',
+    siteName: 'Data Journalism Studio',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Mahdalová & Śkop',
+        alt: 'Data Journalism Studio',
       }
     ],
-    locale: 'cs_CZ',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mahdalová & Škop',
-    description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
+    title: 'Data Journalism Studio',
+    description: 'We make data talk. Stories hidden in data - unique data and context journalism.',
     images: ['/images/twitter-image.png'],
     creator: '@data_zurnalist',
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     follow: true
   },
   alternates: {
-    canonical: 'https://www.mahdalova-skop.cz/',
+    canonical: 'https://www.datajournalism.studio/',
   }
 };
 
@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="cs">
+    <html lang="en">
       <head>
         <Suspense fallback={null}>
           <MatomoAnalytics />

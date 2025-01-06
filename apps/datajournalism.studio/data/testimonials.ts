@@ -11,128 +11,128 @@ export interface TestimonialData {
 export const testimonials: TestimonialData[] = [
    {
     id: '18',
-    text: 'Děkuju za práci, kterou děláte, fakt dobrý!',
+    text: 'Thank you for the work you do, really good!',
     author: 'Ivan Gabal',
-    position: 'sociolog, spoluzakladatel OF',
-    date: '19. 12. 2024'
+    position: 'sociologist, co-founder of OF',
+    date: '12/19/2024'
   },
     {
     id: '17',
-    text: 'Díky Kateřině Mahdalové za skvělé vizualizace (doporučuji ke sledování), i proto jsem před časem psal, že tím svým nečekaným tahem Seznam Zprávy přišly o jedny z nejlepších českých datových žurnalistů.',
+    text: 'Thanks to Kateřina Mahdalová for great visualizations (I recommend following her), that’s why I wrote some time ago that with this unexpected move, Seznam Zprávy lost one of the best Czech data journalists.',
     author: 'Tomáš Protivínský',
     position: 'IDEA CERGE-EI',
-    date: '6. 11. 2024'
+    date: '11/6/2024'
   },
   {
     id: '16',
-    text: 'Díky za vaši skvělou práci, stojím při vás a nejsem sama.',
+    text: 'Thank you for your great work, I stand by you and I am not alone.',
     author: 'Lucie Fremrová',
     position: 'University of Brighton',
-    date: '6. 11. 2024'
+    date: '11/6/2024'
   }, 
    {
     id: '15',
-    text: 'Kateřina Mahdalová před rokem demaskovala zmanipulovaný průzkum Pražské hospodářské komory o zklidnění dopravy v centru. Zatímco ostatní média jim to jen tupě bez ověření přejala. Respekt za to!',
-    author: 'Města pro lidi',
-    position: 'organizace',
-    date: '6. 10. 2024'
+    text: 'A year ago, Kateřina Mahdalová exposed the manipulated survey by the Prague Chamber of Commerce on traffic calming in the center. While other media just blindly repeated it without verification. Respect for that!',
+    author: 'Cities for People',
+    position: 'organization',
+    date: '10/6/2024'
   },
     {
     id: '14',
-    text: 'Mahdalová a Škop jsou podle mě nejlepší datoví novináři tady.',
+    text: 'In my opinion, Mahdalová and Škop are the best data journalists here.',
     author: 'Michal Illich',
-    position: 'podnikatel, investor',
-    date: '3. 10. 2024'
+    position: 'entrepreneur, investor',
+    date: '10/3/2024'
   },
       {
     id: '13',
-    text: '[...] odměnu získává dvojice Kateřina Mahdalová a Michal Škop, a to za důkladnou přípravu volební kalkulačky, minulý týden našeho nejvýraznějšího předvolebního příspěvku před evropskými volbami',
+    text: '[...] the award goes to the duo Kateřina Mahdalová and Michal Škop for their thorough preparation of the election calculator, our most prominent pre-election contribution last week before the European elections.',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '3. 6. 2024'
+    position: 'editor-in-chief SZ',
+    date: '6/3/2024'
   },
     {
     id: '12',
-    text: 'Rád bych vyzdvihl práci naší Kateřiny Mahdalové a Michala Škopa - jejich model opět již hodinu a půl po uzavření volebních místností ukázal výsledky velmi přesně (slovenské volby 2023)',
+    text: 'I would like to highlight the work of our Kateřina Mahdalová and Michal Škop - their model again showed results very accurately just an hour and a half after the polls closed (Slovak elections 2023).',
     author: 'Tomáš Kapler',
-    position: 'AI a online business konzultant',
-    date: '1. 10. 2023'
+    position: 'AI and online business consultant',
+    date: '10/1/2023'
   },
      {
     id: '11',
-    text: 'Obrovský kus práce je vidět za mapou kvality života v jednotlivých obcích (tentokrát s výrazným označením prostřednictvím počtu "hvězdiček"), kterou připravila Kateřina Mahdalová a Michal Škop.',
+    text: 'A huge amount of work is visible behind the quality of life map for individual municipalities (this time with a clear rating using the number of "stars") prepared by Kateřina Mahdalová and Michal Škop.',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '11. 4. 2023'
+    position: 'editor-in-chief SZ',
+    date: '4/11/2023'
   },
       {
     id: '10',
-    text: 'Čtení vašich článků jsem si vždy užíval, byla to vždycky dobrá práce.',
+    text: 'I have always enjoyed reading your articles; it has always been good work.',
     author: 'Dušan Janovský',
-    position: 'konzultant vyhledávání Seznam.cz',
-    date: '11. 4. 2023'
+    position: 'Seznam.cz search consultant',
+    date: '4/11/2023'
   },
         {
     id: '9',
-    text: 'Klobouk dolů! Jste dobří🙂',
+    text: 'Hats off! You are good 🙂',
     author: 'Václav Štětka',
-    position: 'mediální expert, Uni Loughborough',
-    date: '28. 1. 2023'
+    position: 'media expert, Uni Loughborough',
+    date: '1/28/2023'
   },
       {
     id: '8',
-    text: 'Gratulace Kateřině a Michalovi 👍👏👏👏 Jejich predikce byla naprosto přesná. Díky nim dokázaly Seznam Zprávy o hodinu dříve, než to ukázaly výsledky ČSÚ, uvést, že Petr Pavel předstihne Andreje Babiše.',
+    text: 'Congratulations to Kateřina and Michal 👍👏👏👏 Their prediction was absolutely accurate. Thanks to them, Seznam Zprávy could report an hour earlier than the results from ČSÚ that Petr Pavel would surpass Andrej Babiš.',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '14. 1. 2023'
+    position: 'editor-in-chief SZ',
+    date: '1/14/2023'
   },
       {
     id: '7',
-    text: '[...] systematická práce Katky Mahdalové a Michala Škopa na poslanecké docházce a prezidentských šancích.',
+    text: '[...] systematic work by Katka Mahdalová and Michal Škop on parliamentary attendance and presidential chances.',
     author: 'Martin Jašminský',
-    position: 'šéfredaktor SZ byznys',
-    date: '19. 12. 2022'
+    position: 'editor-in-chief SZ business',
+    date: '12/19/2022'
   },
       {
     id: '6',
-    text: '[...] věci vybočovaly minulý týden jednoznačně ze šedivého číselného průměru: Prezidentský kompas Kateřiny Mahdalové a Michala Škopa, tedy náš nový nástroj na prezidentské preference',
+    text: '[...] things stood out last week unequivocally from the gray numerical average: the Presidential Compass by Kateřina Mahdalová and Michal Škop, our new tool for presidential preferences.',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '21. 11. 2022'
+    position: 'editor-in-chief SZ',
+    date: '11/21/2022'
   },
       {
     id: '5',
-    text: 'K opravdu výjimečnému obsahu řadím i speciální kalkulačku. K. Mahdalová a M. Škop představili skvělou volební kalkulačku zaměřenou na komunální volby, resp. volební programy ve velkých městech.',
+    text: 'I also consider the special calculator to be truly exceptional content. K. Mahdalová and M. Škop presented a great election calculator focused on municipal elections, specifically election programs in big cities.',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '19. 9. 2022'
+    position: 'editor-in-chief SZ',
+    date: '9/19/2022'
   },
       {
     id: '4',
-    text: 'Kateřina Mahdalová excelentně zpracovala sérii o stavu očkování v Česku.',
+    text: 'Kateřina Mahdalová excellently processed a series on the state of vaccination in the Czech Republic.',
     author: 'Jakub Unger',
-    position: 'ředitel redakce SZ',
-    date: '24. 5. 2021'
+    position: 'editorial director SZ',
+    date: '5/24/2021'
   },
     {
     id: '3',
-    text: 'Děláš to [Kateřino] dobře, vychytáváš zajímavý pohledy. Myslím, že si to přesně sedne.',
+    text: 'You’re doing it [Kateřina] well, catching interesting perspectives. I think it fits perfectly.',
     author: 'Jaroslav Kábele',
-    position: 'generální ředitel ČTK',
-    date: '8. 4. 2021'
+    position: 'general director ČTK',
+    date: '4/8/2021'
   },
     {
     id: '2',
-    text: 'Výborná analýza Kateřiny Mahdalové vycházející z dat z ministerstva zdravotnictví o tom, jak jednotlivá opatření omezují šíření nákazy (uzavřené okresy, kvůli nimž se prodlužoval nouzový stav, to nejsou).',
+    text: 'An excellent analysis by Kateřina Mahdalová based on data from the Ministry of Health about how individual measures limit the spread of the infection (closed districts, which prolonged the state of emergency, are not among them).',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '29. 3. 2021'
+    position: 'editor-in-chief SZ',
+    date: '3/29/2021'
   },
   {
     id: '1',
-    text: 'Mimořádně povedené věci, které si určitě zaslouží pochvalu: Unikátní volební model, permanentně aktualizovaný o nové průzkumy preferencí, který sestavuje Kateřina Mahdalová.',
+    text: 'Exceptionally well-done things that definitely deserve praise: A unique election model, constantly updated with new preference surveys, created by Kateřina Mahdalová.',
     author: 'Jiří Kubík',
-    position: 'šéfredaktor SZ',
-    date: '21. 3. 2021'
+    position: 'editor-in-chief SZ',
+    date: '3/21/2021'
   }
 ]

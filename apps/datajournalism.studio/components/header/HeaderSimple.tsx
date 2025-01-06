@@ -112,7 +112,8 @@ export function HeaderSimple() {
                 bg: theme.colors.brand[7], // Change to your desired hover color
               },
             }}
-          >Contact</Button>
+          >Contact
+          </Button>
           <Group gap={10} visibleFrom="sm" ml="auto">
             {items}
           </Group>

@@ -41,7 +41,7 @@ function Testimonials() {
             c={theme.colors.background[0]}
             pb="lg"
           >
-            Co o nás říkají
+            Testimonials
             {/* <Arrow size={80} color={ theme.colors.background[0] } /> */}
           </Title>
         </Stack>

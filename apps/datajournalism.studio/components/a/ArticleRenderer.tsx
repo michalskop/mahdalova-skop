@@ -186,7 +186,11 @@ export function ArticleRenderer({
 
         {date && (
           <Text size="sm" c={textColor || "dimmed"}>
-            {new Date(date).toLocaleDateString('cs-CZ')}
+            {new Date(date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
           </Text>
         )}
 
