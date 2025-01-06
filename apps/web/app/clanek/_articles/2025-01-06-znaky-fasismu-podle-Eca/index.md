@@ -83,7 +83,7 @@ Složité problémy nemají jednoduchá řešení. Když režim komunikuje pouze
 
 Pro úplnost doplňujeme i zbylé dva znaky z celkových čtrnácti, jak je Umberto Eco formuloval.
 
-⚙️ 13. Trvalá sociální frustrace: Společnost ztratí naději
+⚙️ 13. Trvalá sociální frustrace: Společnost ztrácí naději
 
 Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmosféry permanentní nespokojenosti a frustrace ve společnosti. Režim záměrně podporuje pocit ekonomické nebo sociální krize, který pak využívá k ospravedlnění svých činů a k mobilizaci mas proti údajným viníkům. V Rusku vidíme tento prvek v neustálém zdůrazňování "ponížení" po rozpadu SSSR a obviňování Západu z ekonomických problémů.
 
@@ -92,19 +92,19 @@ Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmo
 Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu.
 
 ```box
-#### Když se z vážného varování stává prázdná nadávka
+#### Namísto vážného varování prázdná nadávka
 
 Už téměř 80 let nás přední myslitelé varují před nebezpečím, které přináší nadužívání slova "fašismus". Tento příběh začal už v roce 1944, kdy spisovatel George Orwell, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
 
-> "Slovo 'fašismus' se stalo prakticky bezvýznamným. V běžné konverzaci se používá ještě divočeji než v tisku. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího, dokonce i pro mládežnické ubytovny a astrologii."
+> Slovo 'fašismus' se stalo prakticky bezvýznamným. V běžné konverzaci se používá ještě divočeji než v tisku. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího, dokonce i pro mládežnické ubytovny a astrologii.
 
 Orwellovo varování bohužel zůstalo nevyslyšeno. Po druhé světové válce se situace ještě zhoršila. Jak vysvětluje přední historik Stanley G. Payne:
 
-> "Fašismus získal v západní kultuře pozici téměř náboženského symbolu absolutního zla. To dává jeho použití jako urážce mimořádnou sílu, jakou žádné jiné označení nemá."
+> Fašismus získal v západní kultuře pozici téměř náboženského symbolu absolutního zla. To dává jeho použití jako urážce mimořádnou sílu, jakou žádné jiné označení nemá.
 
 Tato situace přetrvává dodnes. V roce 2004 harvardská profesorka Samantha Power upozornila na to, že:
 
-> "Fašismus – na rozdíl od komunismu, socialismu či konzervatismu – se stal spíše urážkou sloužící k očernění oponentů než popisným termínem."
+> Fašismus – na rozdíl od komunismu, socialismu či konzervatismu – se stal spíše urážkou sloužící k očernění oponentů než popisným termínem.
 
 Následky tohoto vývoje vidíme všude kolem nás. Když se podíváme na současné konflikty, ať už jde o rusko-ukrajinskou válku nebo izraelsko-palestinský konflikt, obě strany pravidelně označují své protivníky za fašisty. V americké politice se tato nálepka používá proti prezidentům napříč politickým spektrem. V zemích bývalého východního bloku sloužilo označení "fašista" k umlčení jakéhokoli odporu proti režimu.
 Nejnebezpečnější na tomto trendu je, že ztrácíme schopnost rozpoznat skutečné fašistické tendence. Když se vážné varování změní v běžnou nadávku, přestáváme být citliví na skutečné náznaky autoritářství. Zároveň tím znevažujeme historické tragédie a znemožňujeme věcnou politickou debatu.
