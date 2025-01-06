@@ -3,7 +3,7 @@ title: "Rusko a Ukrajina: dvanáct znaků fašismu"
 date: "2025-01-06"
 author: "Mahdalová & Škop"
 excerpt: "Proč by nás mělo zajímat, když někdo označí stát za fašistický? Podívejte se na 12 varovných signálů"
-coverImage: "images/main.png"
+coverImage: "images/Indikatory_fasismu_podle_Eca.png"
 filter: ["kontext"]
 tags: ["zahraničí", "Rusko", "Ukrajina", "politika", "Umberto Eco", "fašismus", "demokracie"]
 ---
