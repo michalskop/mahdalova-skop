@@ -1,5 +1,7 @@
-Statistik, demograf, softwarový developer a politolog s více než 15 letými zkušenostmi s přeměnou komplexních dat na užitečné poznatky a zapojením veřejných nástrojů. Data Freedom Fighter.
+## The Data Magician
 
-Jako ředitel nevládní organizace [KohoVolit.eu](https://kohovolit.eu/) od roku 2009 stojí Michal v popředí vývoje inovativní [Volební kalkulačky](https://volebnikalkulacka.cz/) v Česku, [Volebné kalkulačky](https://volebnakalkulacka.sk/) na Slovensku, [Wahlrechner](https://wahlrechner.at/) v Rakousku a [Voksmonitor](https://voksmonitor.hu/) v Maďarsku, které pomohly milionům voličů k lepšímu rozhodování se ve volbách.
+Dr. Michal Škop is a multifaceted data scientist, demographer, and political analyst with over 15 years of experience in transforming complex data into actionable insights and engaging public tools.
 
-Akademická kariéra zahrnuje pozice výzkumného pracovníka a lektora na Universidad de Salamanca's Instituto de Iberoamérica ve Španělsku, Univerzitě Palackého a Univerzitě Hradec Králové a pobyt v Max Planck Institute for Demography v Rostocku v Německu. Před tím pražský MatFyz a doktorát z demografie na Přírodovědecké fakultě UK.
+As the Director of NGO [KohoVolit.eu](https://kohovolit.eu) since 2009, Michal has been at the forefront of developing innovative [Volební kalkulačka](https://volebnikalkulacka.cz) in Czechia, [Volebná kalkulačka](https://volebnakalkulacka.sk) in Slovakia, [Wahlrechner](https://wahlrechner.at) in Austria, and [Voksmonitor](https://voksmonitor.hu) in Hungary, which have empowered voters across Central Europe to make informed decisions.
+
+His academic career includes positions as a Researcher or Lecturer at the Universidad de Salamanca's Instituto de Iberoamérica in Spain, Palacky University and University of Hradec Králové in Czechia, stay at Max Planck Institute for Demography in Rostock, Germany.

@@ -1,6 +1,5 @@
-Jsme datoví novináři a analytici. Tvoříme poctivé analýzy na široké spektrum témat, která mají dopad na společnost, politiku i ekonomiku. Naší specializací je zpracování dat, jejich vizualizace a vytváření map, grafů a interaktivních nástrojů, které pomáhají lépe pochopit složité problémy. Zaměřujeme se na zodpovědnou práci se širším kontextem a přinášíme
-jasné a srozumitelné výstupy, které mohou sloužit jako základ pro kvalifikovaná rozhodnutí.
+We are data journalists and analysts. We create thorough analyses on a wide range of topics that impact society, politics, and the economy. Our expertise lies in data processing, visualization, and the creation of maps, charts, and interactive tools that help clarify complex issues. We focus on responsible work within a broader context, delivering clear and understandable outputs that can serve as a foundation for informed decision-making.
 
-Naše projekty často spojují detailní datovou analýzu s příběhy, které ukazují konkrétní dopady na lidi, krajinu a celou společnost. Umíme objevovat nečekané souvislosti, ať už jde o politická rozhodnutí, lokální problémy nebo globální trendy.
+Our projects often combine detailed data analysis with storytelling, illustrating concrete impacts on individuals, the environment, and society as a whole. We excel at uncovering unexpected connections, whether related to political decisions, local issues, or global trends.
 
-Věříme, že kvalitní novinářská práce musí stát na přesných datech a jejich transparentní interpretaci. Naší snahou je přinášet hodnotné a užitečné informace pro veřejnost i odborníky.
+We believe that quality journalism must be rooted in accurate data and its transparent interpretation. Our goal is to provide valuable and practical information for both the general public and professionals.

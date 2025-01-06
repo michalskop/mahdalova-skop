@@ -43,13 +43,12 @@ export default async function AboutPage() {
             style={{ fontSize: 'clamp(2rem, 6vw, 4rem)' }}
             c="brand"
             fw="bold"
-          >
-            Mahdalová & Škop
+          > Data Journalism Studio
           </Title>
           <Title ta="right" size="h1" c="background.1">
-              Necháváme&nbsp;
+              We make data&nbsp;
               <span style={{ color: 'var(--mantine-color-brandYellow-6)' }}>
-                mluvit data
+                talk
               </span>
               .
           </Title>
@@ -84,7 +83,7 @@ export default async function AboutPage() {
         textColor="background.1"
       />
       
-      <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+      {/* <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/> */}
 
       <Testimonials />
         
