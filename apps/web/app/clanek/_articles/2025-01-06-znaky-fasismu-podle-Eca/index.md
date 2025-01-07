@@ -88,20 +88,20 @@ Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmo
 
 Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu.
 
-> ## Namísto vážného varování prázdná nadávka
->
-> Už téměř 80 let nás nejen historici a historičky, ale i další osobnosti varují před nebezpečím, které přináší nadužívání slova _fašismus_. Už v roce 1944 spisovatel **George Orwell**, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
->
->> Slovo _fašismus_ se stalo prakticky bezvýznamným. V běžné konverzaci se používá ještě divočeji než v tisku. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího, dokonce i pro mládežnické ubytovny a astrologii.
->
->Na Orwellovo varování navazovali mnozí další, třeba přední historik **Stanley G. Payne**:
->
->> _Fašismus_ získal v západní kultuře pozici téměř náboženského symbolu absolutního zla. To dává jeho použití jako urážce mimořádnou sílu, jakou žádné jiné označení nemá.
->
->Ještě v roce 2004 harvardská profesorka **Samantha Power** upozornila na to, že:
->
->> _Fašismus_ se – na rozdíl od komunismu, socialismu či konzervatismu – stal spíše urážkou sloužící k očernění oponentů než popisným termínem.
->
+## Namísto vážného varování prázdná nadávka
+
+Už téměř 80 let nás nejen historici a historičky, ale i další osobnosti varují před nebezpečím, které přináší nadužívání slova _fašismus_. Už v roce 1944 spisovatel **George Orwell**, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
+
+> Slovo _fašismus_ se stalo prakticky bezvýznamným. V běžné konverzaci se používá ještě divočeji než v tisku. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího, dokonce i pro mládežnické ubytovny a astrologii.
+
+Na Orwellovo varování navazovali mnozí další, třeba přední historik **Stanley G. Payne**:
+
+> _Fašismus_ získal v západní kultuře pozici téměř náboženského symbolu absolutního zla. To dává jeho použití jako urážce mimořádnou sílu, jakou žádné jiné označení nemá.
+
+Ještě v roce 2004 harvardská profesorka **Samantha Power** upozornila na to, že:
+
+> _Fašismus_ se – na rozdíl od komunismu, socialismu či konzervatismu – stal spíše urážkou sloužící k očernění oponentů než popisným termínem.
+
 Co vidíme dnes? Vytrácí se schopnost rozpoznat skutečné fašistické tendence. Když se vážné varování změní v běžnou nadávku, postupně vymizí citlivost a schopnost vnímat skutečné náznaky nebo rovnou projevy autoritářství. Zároveň se tím znevažují historické tragédie a znemožňuje se věcná politická debata. Existuje ale řešení. Dá se začít používat tento termín zodpovědně – vycházet z přesných definic, podkládat svá tvrzení konkrétními fakty a nedopouštět se emotivního zneužívání. Ve veřejném prostoru k tomu samozřejmě bude docházet i nadále, je ale dobré o tom vědět, případně upozorňovat autory emotivních výkřiků. Když si to nevezmou k srdci oni sami, přečte si to tzv. mlčící většina (lidé, kteří se ve veřejném prostoru pohybují, čtou příspěvky, ale sami nediskutují).
 
 
