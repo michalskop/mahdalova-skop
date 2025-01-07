@@ -6,6 +6,7 @@
     "dev": "node scripts/copyImages.js && next dev",
     "prebuild": "node scripts/copyImages.js",
     "build": "next build",
+    "deploy": "next-on-pages",
     "start": "next start",
     "lint": "next lint"
   },

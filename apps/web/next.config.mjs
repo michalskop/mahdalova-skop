@@ -5,6 +5,7 @@ const nextConfig = {
   swcMinify: true,
   // output: 'export',
   experimental: {
+    runtime: 'nodejs',
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     mdxRs: true,
   },
