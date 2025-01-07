@@ -8,14 +8,13 @@ filter: ["kontext"]
 tags: ["zahraničí", "Rusko", "Ukrajina", "politika", "Umberto Eco", "fašismus", "demokracie"]
 ---
 
-Pojem _fašismus_ slýcháme ve veřejném prostoru běžně. Ale co vlastně znamená, když někdo označí stát nebo režim za fašistický? Není to jen prázdná nálepka, která se používá ve vyhrocených debatách pro země, proti kterým chtějí někteří lidé z nějakého důvodu otočit ?
+Pojem _fašismus_ slýcháme ve veřejném prostoru běžně. Ale co vlastně znamená, když někdo v současné době označí stát nebo režim za fašistický? Není to jen prázdná nálepka, která se používá ve vyhrocených debatách a která jen vytěsňuje věcnou kritiku?
 
 Světoznámý spisovatel a filosof Umberto Eco (1932-2016), který jako chlapec vyrůstal v Mussoliniho Itálii, nám zanechal cenný nástroj: definoval charakteristické znaky fašismu a jeho seznam je dnes aktuálnější než kdy jindy. Na příkladu současného konfliktu mezi Ruskem a Ukrajinou si ukážeme, jak Ecovy indikátory fungují v praxi a proč by nás měly zajímat.
 
 ## Proč byste měli zbystřit
-Ecův seznam není jen teoretický nástroj - je to praktický průvodce pro občany demokratických společností. Ukazuje nám, jak se autoritářské režimy postupně formují a jak můžeme rozpoznat nebezpečné tendence v jakékoli společnosti, včetně té naší.
 
-Současná situace v Rusku není jen vzdáleným problémem - je varováním pro celý svět. Když pochopíme, jak fašismus funguje a jak se projevuje, můžeme lépe chránit demokratické hodnoty ve vlastní zemi.
+Ecův seznam není jen teoretický nástroj - je to praktický průvodce pro občany demokratických společností a ukazuje nám, jak se autoritářské režimy postupně formují a jak můžeme rozpoznat nebezpečné tendence v jakékoli společnosti, včetně té naší. Současná situace v Rusku není jen vzdálený problém, týká se nás také. Když pochopíme, jak fašismus funguje a jak se projevuje, můžeme lépe chránit demokratické hodnoty ve vlastní zemi. Demokracie není samozřejmost - je to systém, který vyžaduje aktivní účast každého z nás. Fašismus nezačíná tanky v ulicích, ale drobnými, postupnými změnami ve společnosti.
 
 ## Co s tím můžeme dělat?
 
@@ -26,8 +25,6 @@ Současná situace v Rusku není jen vzdáleným problémem - je varováním pro
 • Kriticky myslet a ověřovat informace
 
 • Postavit se proti netoleranci v každodenním životě
-
-Demokracie není samozřejmost - je to systém, který vyžaduje aktivní účast každého z nás. Ecovy body nám připomínají, že fašismus nezačíná tanky v ulicích, ale drobnými, postupnými změnami ve společnosti, kterým musíme umět čelit.
 
 ![obrázek](images/Indikatory_fasismu_podle_Eca.png)
 
@@ -93,15 +90,15 @@ Posledním, ale neméně důležitým znakem je vytváření atmosféry neustál
 
 ## Namísto vážného varování prázdná nadávka
 
-Už téměř 80 let nás přední myslitelé varují před nebezpečím, které přináší nadužívání slova "fašismus". Tento příběh začal už v roce 1944, kdy spisovatel George Orwell, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
+Už téměř 80 let nás nejen historici a historičky, ale i další osobnosti varují před nebezpečím, které přináší nadužívání slova "fašismus". Už v roce 1944 spisovatel George Orwell, známý svým bojem proti totalitě, pozoroval znepokojivý trend. V době, kdy Evropa ještě bojovala s skutečným fašismem, napsal:
 
 > Slovo 'fašismus' se stalo prakticky bezvýznamným. V běžné konverzaci se používá ještě divočeji než v tisku. Slyšel jsem ho používat pro farmáře, obchodníky, tělesné tresty, lov lišek, býčí zápasy, Gándhího, dokonce i pro mládežnické ubytovny a astrologii.
 
-Orwellovo varování bohužel zůstalo nevyslyšeno. Po druhé světové válce se situace ještě zhoršila. Jak vysvětluje přední historik Stanley G. Payne:
+Na Orwellovo varování navazovali mnozí další, třeba přední historik Stanley G. Payne:
 
 > Fašismus získal v západní kultuře pozici téměř náboženského symbolu absolutního zla. To dává jeho použití jako urážce mimořádnou sílu, jakou žádné jiné označení nemá.
 
-Tato situace přetrvává dodnes. V roce 2004 harvardská profesorka Samantha Power upozornila na to, že:
+Ještě v roce 2004 harvardská profesorka Samantha Power upozornila na to, že:
 
 > Fašismus – na rozdíl od komunismu, socialismu či konzervatismu – se stal spíše urážkou sloužící k očernění oponentů než popisným termínem.
 
