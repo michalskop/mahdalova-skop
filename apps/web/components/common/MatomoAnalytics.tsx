@@ -37,7 +37,7 @@ function MatomoTracker() {
 
   // Track page views on route changes
   useEffect(() => {
-    const fullPath = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
+    const fullPath = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
     
     window._paq.push(['setCustomUrl', fullPath]);
     window._paq.push(['setDocumentTitle', document.title]);
