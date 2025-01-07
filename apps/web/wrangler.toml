@@ -1,0 +1,10 @@
+name = "mahdalova-skop.cz"
+account_id = "yd08b6ad2c29f16aee68ac54b659e6156"
+compatibility_date = "2025-01-01"
+
+# Routes for production and preview environments
+[env.production]
+route = "https://www.mahdalova-skop.cz/*"
+
+[env.preview]
+route = "https://mahdalova-skop.pages.dev/*"
