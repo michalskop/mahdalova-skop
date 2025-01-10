@@ -3,7 +3,7 @@ title: "Hilter nebyl komunista"
 date: "2025-01-09"
 author: "Mahdalová & Škop"
 excerpt: "Glosa: Jak se nakládá s ideologickými nálepkami"
-coverImage: "images/Indikatory_fasismu_podle_Eca.png"
+coverImage: "images/Weidel_and_Musk.png"
 filter: ["kontext"]
 tags: ["zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
 ---
@@ -14,4 +14,4 @@ Podobná tvrzení, která zkreslují historická fakta, jsou dost typická pro m
 
 No a to samé dělá Musk, když se tu publika ptá, jestli by "Amerika měla osvobodit britský lid od tyranské vlády". Počkejte si, jestli udělá podobnou anketu o osvobození obyvatel Ruska a Číny.
 
-"Proč by nás mělo zajímat, když někdo označí stát za fašistický? Podívejte se na varovné signály"
+Psali jsme: [Znaky fašismu podle Umberta Eca](https://www.mahdalova-skop.cz/clanek/2025-01-06-znaky-fasismu-podle-Eca)
