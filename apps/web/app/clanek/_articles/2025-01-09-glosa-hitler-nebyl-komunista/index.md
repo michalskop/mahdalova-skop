@@ -3,7 +3,7 @@ title: "Glosa: Hilter nebyl komunista"
 date: "2025-01-09"
 author: "Mahdalová & Škop"
 excerpt: "Jak se nakládá s ideologickými nálepkami"
-coverImage: "images/Weidel_and_Musk.png"
+coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]
 tags: ["zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
 ---
