@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Jak se nakládá s ideologickými nálepkami"
 coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]
-tags: ["zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
+tags: ["glosa", "zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
 ---
 
 Alice Weidel z německé krajně pravicové (až extremistické) strany AfD právě v rozhovoru s Elonem Muskem tvrdila, že Adolf Hitler byl komunista. Je to historicky i fakticky absolutní nesmysl.
