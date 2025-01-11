@@ -1,5 +1,5 @@
 ---
-title: "Rusko a Ukrajina: dvanáct znaků fašismu"
+title: "Rusko a Ukrajina: čtrnáct znaků fašismu"
 date: "2025-01-06"
 author: "Mahdalová & Škop"
 excerpt: "Proč by nás mělo zajímat, když někdo označí stát za fašistický? Podívejte se na varovné signály"
@@ -82,11 +82,11 @@ Pro úplnost doplňujeme i zbylé dva znaky z celkových čtrnácti, jak je Umbe
 
 ⚙️ 13. Trvalá sociální frustrace: Společnost ztrácí naději
 
-Tento důležitý znak, který Eco také popsal, se projevuje vytvářením atmosféry permanentní nespokojenosti a frustrace ve společnosti. Režim záměrně podporuje pocit ekonomické nebo sociální krize, který pak využívá k ospravedlnění svých činů a k mobilizaci mas proti údajným viníkům. V Rusku vidíme tento prvek v neustálém zdůrazňování "ponížení" po rozpadu SSSR a obviňování Západu z ekonomických problémů.
+Tento důležitý znak se projevuje vytvářením atmosféry permanentní nespokojenosti a frustrace ve společnosti. Režim záměrně podporuje pocit ekonomické nebo sociální krize, který pak využívá k ospravedlnění svých činů a k mobilizaci mas proti údajným viníkům. V Rusku vidíme tento prvek v neustálém zdůrazňování "ponížení" po rozpadu SSSR a obviňování Západu z ekonomických problémů.
 
 ⚙️ 14. Permanentní válečný stav: Když mír (údajně) není možný
 
-Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu.
+Posledním, ale neméně důležitým znakem je vytváření atmosféry neustálého ohrožení a válečného stavu. Nejde jen o skutečné vojenské konflikty, ale především o mentální nastavení společnosti, která je udržována v přesvědčení, že je neustále v ohrožení a musí být připravena k boji. Tento stav ospravedlňuje omezování občanských svobod a posilování moci státu. Vidíme ho i v tom, jak Rusko svým občanům vysvětluje, že napadlo Ukrajinu. Jedním z argumentů je, že "hrozilo", že Ukrajina vstoupí do NATO, ačkoli nic takového nebylo na pořadu dne.
 
 ## Namísto vážného varování prázdná nadávka
 
