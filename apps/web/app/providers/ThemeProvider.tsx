@@ -3,12 +3,12 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Inter } from 'next/font/google';
+import { Faculty Glyphic } from 'next/font/google';
 
-const inter = Inter({
+const faculty glyphic = Faculty Glyphic({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-inter',
+  variable: '--font-faculty glyphic',
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: inter.style.fontFamily,
+        fontFamily: faculty glyphic.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
