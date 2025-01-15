@@ -20,6 +20,7 @@
   margin-bottom: rem(5px);
   font-size: var(--mantine-font-size-md);
   line-height: 1.5;
+  color: var(--mantine-color-gray-8);
 }
 
 .action {
