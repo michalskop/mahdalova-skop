@@ -3,12 +3,12 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Work_Sans } from 'next/font/google';
+import { Lora } from 'next/font/google';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-work-sans',
+  variable: '--font-lora',
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: workSans.style.fontFamily,
+        fontFamily: lora.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
