@@ -3,7 +3,7 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Faculty Glyphic } from 'next/font/google';
+import { Faculty_Glyphic } from 'next/font/google';
 
 const facultyGlyphic = Faculty_Glyphic({
   subsets: ['latin'],
