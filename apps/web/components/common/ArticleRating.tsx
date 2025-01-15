@@ -4,6 +4,25 @@ import React, { useEffect } from 'react';
 import { Container, Title, Stack, Paper, useMantineTheme, SimpleGrid } from '@mantine/core';
 import FreeArticleButton from './FreeArticleButton';
 
+interface StripeBuyButton extends HTMLElement {
+  'buy-button-id': string;
+  'publishable-key': string;
+}
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'stripe-buy-button': React.DetailedHTMLProps<
+        React.HTMLAttributes<StripeBuyButton> & {
+          'buy-button-id': string;
+          'publishable-key': string;
+        },
+        StripeBuyButton
+      >;
+    }
+  }
+}
+
 const ArticleRating = () => {
   useEffect(() => {
     if (!document.querySelector('script[src="https://js.stripe.com/v3/buy-button.js"]')) {
