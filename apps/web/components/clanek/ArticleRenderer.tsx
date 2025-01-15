@@ -160,6 +160,7 @@ export function ArticleRenderer({
       p="md"
       pt="xl"
       className='markdown-content'
+      c="gray.8"
       styles={{
         root: {
           backgroundColor: backgroundColor || theme.colors.background[1],
