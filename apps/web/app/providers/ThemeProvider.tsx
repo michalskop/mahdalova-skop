@@ -5,10 +5,10 @@ import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { Faculty Glyphic } from 'next/font/google';
 
-const faculty glyphic = Faculty Glyphic({
+const facultyGlyphic = Faculty_Glyphic({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-faculty glyphic',
+  variable: '--font-faculty-glyphic',
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: faculty glyphic.style.fontFamily,
+        fontFamily: facultyGlyphic.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
