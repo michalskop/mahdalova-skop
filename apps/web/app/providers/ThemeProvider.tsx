@@ -5,10 +5,10 @@ import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { Inter } from 'next/font/google';
 
-const Inter = Inter({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-Inter',
+  variable: '--font-inter',
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: Inter.style.fontFamily,
+        fontFamily: inter.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
