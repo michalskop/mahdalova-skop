@@ -3,12 +3,12 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Faculty_Glyphic } from 'next/font/google';
+import { Roboto_Slab } from 'next/font/google';
 
-const facultyGlyphic = Faculty_Glyphic({
+const robotoSlab = Roboto_Slab({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-faculty-glyphic',
+  variable: '--font-roboto-slab',
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: facultyGlyphic.style.fontFamily,
+        fontFamily: robotoSlab.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
