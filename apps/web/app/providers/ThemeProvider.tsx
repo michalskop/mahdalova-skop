@@ -3,12 +3,12 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Lora } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const lora = Lora({
+const Inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-lora',
+  variable: '--font-Inter',
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: lora.style.fontFamily,
+        fontFamily: Inter.style.fontFamily,
         colors: {
           brand: [
             '#fff4f6',
