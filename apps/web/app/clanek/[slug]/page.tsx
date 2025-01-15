@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: PageProps) {
               p={0}
               m="0 auto"
             >
-          <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+          <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088' position='center' />
         </Container>
       </div>
     );
