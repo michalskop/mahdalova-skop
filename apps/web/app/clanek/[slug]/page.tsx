@@ -8,6 +8,7 @@ import { Box, Container } from '@mantine/core';
 import fs from 'fs'
 import path from 'path'
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import ArticleRating from '@/components/common/ArticleRating';
 
 
 interface PageProps {
@@ -89,6 +90,17 @@ export default async function ArticlePage({ params }: PageProps) {
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>
+        <Container 
+              size="md" 
+              // py="xl"
+              bg="background.2"
+              maw="928px"
+              w="100%"
+              p={0}
+              m="0 auto"
+            >
+          <ArticleRating />
+        </Container>
         <Container 
               size="md" 
               // py="xl"
