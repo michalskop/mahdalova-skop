@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Většina silně pro-rusky hlasujících europoslanců je jen ze 3 zemí: Německa, Slovenska a Česka."
 coverImage: "images/main.webp"
 filter: ["analýza"]
-tags: ["Europarlament", "Česko", "Slovensko", "zahraničí", "hlasování", "europoslanci", "Rusko", "Ukrajina"]
+tags: ["Europarlament", "Česko", "Slovensko", "Německo", "zahraničí", "hlasování", "europoslanci", "Rusko", "Ukrajina"]
 promoted: 20
 ---
 _Většina silně pro-rusky hlasujících europoslanců je jen ze 3 zemí: **Německa, Slovenska a Česka**._
