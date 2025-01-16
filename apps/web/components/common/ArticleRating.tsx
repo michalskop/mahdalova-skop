@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Container, Title, Stack, Paper, useMantineTheme, SimpleGrid } from '@mantine/core';
-import FreeArticleButton from './FreeArticleButton';
+// import FreeArticleButton from './FreeArticleButton';
 
 interface StripeBuyButton extends HTMLElement {
   'buy-button-id': string;
@@ -40,7 +40,8 @@ const ArticleRating = () => {
       <Container size="xl">
         <Stack align="center" gap="lg">
           <Title order={2} ta="center" c="gray.2">
-            Oceňte kvalitu a přínos článku částkou:
+            {/* Oceňte kvalitu a přínos článku částkou: */}
+            Bylo to pro vás přínosné?
           </Title>
           
           <SimpleGrid 
@@ -57,28 +58,34 @@ const ArticleRating = () => {
           >
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <stripe-buy-button
-                buy-button-id="buy_btn_1Qhe15KmkuqgWTg6tAwZvJzp"
+                // buy-button-id="buy_btn_1Qhe15KmkuqgWTg6tAwZvJzp"
+                // publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
+                buy-button-id="buy_btn_1Qhi8bKmkuqgWTg6sJNDt81Q"
                 publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
               />
             </div>
             
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <stripe-buy-button
-                buy-button-id="buy_btn_1Qhe4FKmkuqgWTg60Z5l4Fpt"
+                // buy-button-id="buy_btn_1Qhe4FKmkuqgWTg60Z5l4Fpt"
+                // publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
+                buy-button-id="buy_btn_1QhiDeKmkuqgWTg6EgDj3AjM"
                 publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
               />
             </div>
             
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <stripe-buy-button
-                buy-button-id="buy_btn_1Qhe8OKmkuqgWTg6jovwx3Oo"
+                // buy-button-id="buy_btn_1Qhe8OKmkuqgWTg6jovwx3Oo"
+                // publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
+                buy-button-id="buy_btn_1QhiH0KmkuqgWTg6KRdJL3cj"
                 publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
               />
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
               <FreeArticleButton />
-            </div>
+            </div> */}
           </SimpleGrid>
         </Stack>
       </Container>
