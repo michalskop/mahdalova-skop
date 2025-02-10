@@ -3,7 +3,7 @@ title: "Timothy Snyder: Samozřejmě, že je to puč"
 date: "2025-02-05"
 author: "Mahdalová & Škop"
 excerpt: "Když přehlédnete zjevné, ztratíte stát."
-coverImage: "images/main.png"
+coverImage: "images/snyder.png"
 filter: ["kontext"]
 tags: ["zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
 ---
@@ -13,7 +13,9 @@ Takhle probíhaly v dějinách puče. Mocenské centrum existovalo jako fyzické
 
 A takový puč by také selhal.
 
-## Teď si ale představte, že by to probíhalo jinak
+## Digitální zbraně
+
+Teď si ale představte, že by to probíhalo jinak
 
 Namísto ozbrojeného komanda přichází do vládních budov několik desítek mladých mužů v civilu, vyzbrojených pouze flash disky. Vyastačí si s technologickým žargonem a mlhavými odkazy na rozkazy „shora“ a získávají přístup k základním IT systémům federální vlády. Poté dají svému Nejvyššímu vůdci přístup k vládním databázím a pravomoc zastavit či spustit jakékoli státní platby.
 
