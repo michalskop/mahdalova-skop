@@ -27,13 +27,12 @@ To, co Musk a jeho tým provádějí, je puč, protože moc přebírají lidé, 
 
 Když Musk získává data o nás všech, šlape po právu na soukromí a důstojnost. Zároveň porušuje výslovné i implicitní dohody, které máme se státem, například když platíme daně nebo splácíme studentské půjčky. Vlastnictví těchto dat mu dává nástroje k vydírání a k páchání dalších zločinů.
 
+Pokud Musk získá schopnost zastavit platby ministerstva financí, demokracie ztratí smysl. Volíme si zástupce do Kongresu, kteří schvalují zákony určující, jak se utratí naše daně. Pokud ale Musk může tento proces zablokovat na úrovni samotných plateb, pak zákony přestanou mít smysl. A pokud zákony nemají smysl, pak nemá smysl ani Kongres, naše hlasy, stejně jako naše občanství.
 
+## Jde o boj demokracie proti oligarchii 🔥 
 
+Odpor proti tomuto puči je obranou člověka před digitální mocí a demokracie před oligarchií. Pokud Musk ovládne tyto digitální systémy, republikánští politici budou stejně bezmocní jako demokraté. Instituce, které sami pomáhali vytvořit, mohou být jednoduše „vymazány“, jak Musk sám říká.
 
-Kdyby Musk získal schopnost zastavit platby ministerstva financí, demokracie by přestala dávat smysl. Volíme si do Kongresu své zástupce, kteří schvalují zákony určující, jak se budou utrácet peníze daňových poplatníků. Pokud je Musk s to zastavit tento proces na úrovni platby, zákony kvůli němu přestanou dávat smysl. Tím pádem přestává dávat smysl i Kongres a naše hlasy nemají smysl, stejně jako občanství.
+A prezident Trump bude hrát podle Muskových pravidel. Bez přístupu k počítačovým systémům federální vlády totiž nemůže dělat skoro nic. Tohle mu ale nikdo neřekne – ani jemu, ani jeho příznivcům.
 
-Odpor proti puči je obrana člověka proti digitálnu a demokratických hodnot proti oligarchickým. Pokud má Musk pod palcem tyto digitální systémy, zvolení republikánští činitelé budou stejně bezmocní jako ti demokratičtí. Instituce, pro jejichž existenci hlasovali, mohou být rovněž „vymazané“, jak to Musk formuloval.
-
-Když už jsme u toho, prezident Trump bude rovněž skákat, jak bude Musk pískat. Bez počítačů federální vlády toho moc nenadělá. Tohle Trumpovi ani jeho přívržencům pochopitelně nikdo nevysvětlí.
-
-Probíhá tu puč proti Američanům coby nositelům lidských práv a důstojnosti a proti Američanům coby občanům demokratického státu. Každá hodina, kdy toto zůstane nepovšimnuto, zvyšuje pravděpodobnost úspěchu tohoto převratu.
+Probíhá puč – proti Američanům jakožto lidem s právy a důstojností i jako občanům demokratického státu. S každou další hodinou, kdy si to neuvědomíme, se zvyšuje pravděpodobnost, že převrat bude dokonán.
