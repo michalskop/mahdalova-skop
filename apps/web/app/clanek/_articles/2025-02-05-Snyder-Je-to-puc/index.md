@@ -39,3 +39,10 @@ Odpor proti tomuto puči je obranou člověka před digitální mocí a demokrac
 A prezident Trump bude hrát podle Muskových pravidel. Bez přístupu k počítačovým systémům federální vlády totiž nemůže dělat skoro nic. Tohle mu ale nikdo neřekne – ani jemu, ani jeho příznivcům.
 
 Probíhá puč – proti Američanům jakožto lidem s právy a důstojností i jako občanům demokratického státu. S každou další hodinou, kdy si to neuvědomíme, se zvyšuje pravděpodobnost, že převrat bude dokonán.
+
+```box
+Timothy David Snyder (*1969) je americký historik a profesor na Yaleově univerzitě. Je také stálým pracovník Institutu společenskovědních oborů ve Vídni. Specializuje se na dějiny střední a východní Evropy, zejména na holokaust a totalitní režimy.
+
+Mezi jeho nejvýznamnější knihy patří Krvavé země (Bloodlands), kde analyzuje masové vraždy spáchané nacisty a sověty ve východní Evropě, a Černé země (Black Earth), která se zabývá kořeny holokaustu. Ve své knize Cesty k nesvobodě (The Road to Unfreedom) rozebírá vzestup autoritářství v současném světě a v publikaci Tyranie: 20 lekcí z 20. století (On Tyranny) nabízí historické paralely a rady, jak mu čelit.
+
+Po roce 2010 se začal více věnovat aktuální politice, otázkám zdraví, školství```
