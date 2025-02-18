@@ -10,7 +10,7 @@ import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
 import ScrollyTelling from '@/components/common/ScrollyTelling';
-import yaml from 'js-yaml';
+// import yaml from 'js-yaml';
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;

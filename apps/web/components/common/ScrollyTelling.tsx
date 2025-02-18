@@ -9,7 +9,7 @@ interface ScrollyTellingProps {
   defaultContent?: ScrollyContent['defaultContent'];
   className?: string;
   textAlignment?: 'left' | 'right';
-  slug: string;
+  slug?: string;
 }
 
 const ScrollyTelling: React.FC<ScrollyTellingProps> = ({ 
@@ -46,7 +46,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     if (src.startsWith('http')) {
       return src;
     }
-    return `/clanek/_articles/${slug}/${src}`;
+    return slug ? `/clanek/_articles/${slug}/${src}` : src;
   };
 
   const getCurrentContent = () => {
