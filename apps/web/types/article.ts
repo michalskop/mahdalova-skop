@@ -4,8 +4,8 @@ import type { ScrollyContent } from './scrolly';
 
 export interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
-  slug: string;
-  scrollyContent: ScrollyContent | null;
+  slug?: string;
+  scrollyContent?: ScrollyContent | null;
   title?: string;
   date?: string;
   tags?: string[];
