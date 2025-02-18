@@ -1,0 +1,56 @@
+# Configuration for the scrollytelling section
+textAlignment: right
+
+# Content shown before scrolling starts
+defaultContent:
+  type: image
+  src: images/0.png
+  bgColor: '#e2e2ff'
+
+# Steps in the scrollytelling narrative
+steps:
+  - text: >-
+      1: To have clear beginning of the scrollytelling narrative, 
+      use the same image for default content and the first step.<br/>
+    content:
+      type: image
+      src: images/1.png
+    bgColor: '#ffe7eb'
+
+  - text: |
+      2: Here's how you can add <span style="background-color: #ffeb3b; padding: 0 4px;">highlighted text</span> 
+      to emphasize important points in your narrative. Just use HTML tags in the text.<br/>
+    content:
+      type: image
+      src: images/2.png
+    bgColor: '#e2ffe2'
+
+  - text: |
+      3: This demonstrates embedding interactive content.
+      In this case, we're using a Flourish visualization.
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/20114452/embed
+      width: 100%
+      height: 200px
+      allowFullScreen: true
+    bgColor: '#e2e2ff'
+
+  - text: |
+      4: Notice how smoothly we transition
+      back to a static image from the interactive content.<br/>
+      <p>Remember, you can use any HTML tags
+      in the text. 
+      We used &lt;p&gt; &lt;strong&gt; <strong>to make paragraphs and bold text</strong> &lt;/strong&gt; &lt;/p&gt; in this case.</p>
+    content:
+      type: image
+      src: images/4.png
+    bgColor: '#abffab'
+
+  - text: |
+      5: We're using the same image as the previous step
+      to provide a clean, stable ending to our scrollytelling narrative.
+    content:
+      type: image
+      src: images/4.png
+    

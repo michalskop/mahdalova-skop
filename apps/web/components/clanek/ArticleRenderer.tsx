@@ -9,12 +9,15 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
+import ScrollyTelling from '@/components/common/ScrollyTelling';
+// import yaml from 'js-yaml';
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
   title?: string;
   date?: string;
-  slug?: string;
+  slug: string;
+  scrollyContent?: any;     // Add scrollyContent to the ArticleProps
   backgroundColor?: string;  // Optional background color
   textColor?: string;       // Optional text color
   withContainer?: boolean;  // Optional flag to control Container wrapper
@@ -24,11 +27,13 @@ export function ArticleRenderer({
   mdxSource,
   title,
   date,
-  slug,
+  slug = '',
+  scrollyContent,
   backgroundColor,
   textColor,
   withContainer = true  // Default to true for backward compatibility
 }: ArticleProps) {
+
   const [mounted, setMounted] = useState(false);
   const theme = useMantineTheme();
 
@@ -152,6 +157,24 @@ export function ArticleRenderer({
         {children}
       </td>
     ),
+
+    ScrollyTelling: ({ yamlFile }) => {
+      // Now we can use the pre-loaded content directly
+      if (!scrollyContent) {
+        return <div className="text-red-500">Scrollytelling content not found</div>;
+      }
+
+      return (
+        <ScrollyTelling
+          steps={scrollyContent.steps}
+          defaultContent={scrollyContent.defaultContent}
+          textAlignment={scrollyContent.textAlignment}
+          className="my-8"
+          slug={slug}
+        />
+      );
+    },
+
   };
 
   const content = (
