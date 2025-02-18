@@ -3,7 +3,8 @@ import { Box, Group, Title, Stack, Paper, useMantineTheme } from '@mantine/core'
 import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
 import { Arrow } from '@/components/common/Arrow';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { text } from 'stream/consumers';
+import type { ArticleProps } from '@/types/article';
+// import { text } from 'stream/consumers';
 
 interface ContentSectionProps {
   sectionTitle: string;
@@ -69,7 +70,8 @@ export function ContentSection({
             mdxSource={content}
             withContainer={false}
             backgroundColor={backgroundColor}
-            textColor={resolvedTextColor}
+            textColor={resolvedTextColor} 
+            slug={''}          
           />
         </Box>
       </Group>
