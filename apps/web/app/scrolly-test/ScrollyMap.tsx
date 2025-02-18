@@ -109,7 +109,7 @@ const ScrollyMapDemo = () => {
       </div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
-        <Scrollama offset={0.5} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
+        <Scrollama offset={0.1} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
           {steps.map((step, idx) => (
             <Step data={idx} key={idx}>
               <div style={{

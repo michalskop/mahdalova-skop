@@ -86,7 +86,7 @@ export default async function ArticlePage({ params }: PageProps) {
     const article = await getArticleBySlug(params.slug);
     return (
       <div>
-        <ArticleRenderer {...article} />
+        <ArticleRenderer {...article} slug={params.slug} />
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>
