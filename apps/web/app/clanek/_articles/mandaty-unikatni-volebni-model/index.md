@@ -3,7 +3,7 @@ title: "Unikátní volební model: Kdo má šanci na křesla ve Sněmovně a kdo
 date: "2025-02-18"
 author: "Mahdalová & Škop"
 excerpt: "Stejně jako v předchozím volebním období, i nyní od posledních sněmovních voleb zpracováváme všechny relevantní průzkumy a zaznamenáváme vývoj šancí jednotlivých politických stran. Data pravidelně aktualizujeme s každým novým průzkumem."
-coverImage: "cz-mandaty-poll-of-polls.png"
+coverImage: "images/cz-mandaty-unikatni-model.svg"
 filter: ["analýza"]
 tags: ["mandáty", "průzkumy", "volby", "poll of polls", "volební model", "Sněmovna", "Parlament", "Česko"]
 promoted: 20
