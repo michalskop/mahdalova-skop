@@ -22,7 +22,7 @@ Teď si ale představte, že by to probíhalo jinak
 
 Namísto ozbrojeného komanda přichází do vládních budov několik desítek mladých mužů v civilu, vyzbrojených pouze flash disky. Vyastačí si s technologickým žargonem a mlhavými odkazy na rozkazy „shora“ a získávají přístup k základním IT systémům federální vlády. Poté dají svému Nejvyššímu vůdci přístup k vládním databázím a pravomoc zastavit či spustit jakékoli státní platby.
 
-Tento převrat právě probíhá. A pokud jej nepoznáme a nepojmenujeme, mohl by být úspěšný.
+Tento převrat právě probíhá. A pokud jej nerozpoznáme a nepojmenujeme, mohl by být úspěšný.
 
 ## Moc ve 21. století není fyzická, ale digitální
 
