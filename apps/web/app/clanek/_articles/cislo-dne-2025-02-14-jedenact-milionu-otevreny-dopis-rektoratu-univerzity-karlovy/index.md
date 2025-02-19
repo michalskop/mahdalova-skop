@@ -3,7 +3,7 @@ title: "Otevřený dopis vedení Univerzity Karlovy: vysvětlete, jak jste si ro
 date: "2025-02-14"
 author: "Mahdalová & Škop"
 excerpt: "Akademická obec se ohrazuje proti vysokým odměnám pro vedení univerzity a proti uvedeným důvodům."
-coverImage: "images/poll_tracker.png"
+coverImage: "images/cislo-dne-otevreny-dopis-rektoratu-uk.jpg"
 filter: ["kontext"]
 tags: ["číslo dne", "Univerzita Karlova", "morálka", "finance", "vzdělávání", "výzkum", "Česko"]
 promoted: 10
