@@ -1,5 +1,5 @@
 ---
-title: "Otevřený dopis vedení Univerzity Karlovy: vysvětlete, jak jste si rozdělili 11,5 milionu"
+title: "Otevřený dopis pro vedení Univerzity Karlovy: vysvětlete, jak jste si rozdělili 11,5 milionu"
 date: "2025-02-14"
 author: "Mahdalová & Škop"
 excerpt: "Akademická obec se ohrazuje proti vysokým odměnám pro vedení univerzity a proti uvedeným důvodům."
