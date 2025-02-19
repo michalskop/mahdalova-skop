@@ -3,9 +3,9 @@ title: "Timothy Snyder: Samozřejmě, že je to puč"
 date: "2025-02-05"
 author: "Mahdalová & Škop"
 excerpt: "Když přehlédnete zjevné, ztratíte stát."
-coverImage: "images/snyder.png"
+coverImage: "images/timothy-snyder-quote.svg"
 filter: ["kontext"]
-tags: ["zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
+tags: ["komentář", "zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
 promoted: 50
 ---
 ## Když přehlédnete zjevné, ztratíte stát.
