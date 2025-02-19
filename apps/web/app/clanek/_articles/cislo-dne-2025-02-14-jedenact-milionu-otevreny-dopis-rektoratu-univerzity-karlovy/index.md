@@ -13,6 +13,8 @@ Akademická obec, vyučující i studenti, se ohrazují proti vysokým vyplacen�
 
 ## Otevřený dopis
 
+[(formulář, kde je možné dopis podepsat)](https://docs.google.com/forms/d/e/1FAIpQLSe50cRcpcevSBQz4TjdrE5jTZl1xdUj7nkR1P5gWxYv-PZVJQ/viewform) 
+
 Vážená paní rektorko, vážené vedení Univerzity Karlovy, 
 
 obracíme se na Vás, abychom vyjádřili rozhořčení a hluboké zklamání nad Vaším vyjádřením ohledně výše Vašich odměn, které jsme si dnes ráno (14. 2. 2025) přečetli na iDnesu. Rozhodli jsme se tímto listem apelovat na Vaši odpovědnost a poskytnout Vám reakci akademické obce, jejíž součástí jste a chcete být.
