@@ -12,7 +12,7 @@ Stejně jako v předchozím volebním období, i nyní od posledních sněmovní
 
 Na úvod důležité upozornění: Průzkumy zachycují nálady veřejnosti v době, kdy byla data sbírána, nikoli v okamžiku zveřejnění ⇒ poslední samostatně publikovaný průzkum tedy nemusí odrážet nejnovější postoje voličů. To je důvod, proč se soustředíme na celkové trendy a dlouhodobé sledování, namísto jednorázových výkřiků, které navíc mnohdy bývají staršího data a nijak neodrážejí současnou realitu.
 
-Od srpna 2024 sledujeme „závod“ nejen podle jednotlivých stran, ale také podle koalic, které se očekávají ve volbách do Sněmovny v roce 2025. Tento pohled lépe odráží aktuální politickou situaci – například koalice Spolu (ODS, TOP 09 a KDU-ČSL) a nové spojenectví hnutí Přísaha a Motoristů.
+Od srpna 2024 sledujeme „závod“ nejen podle jednotlivých stran, ale také podle koalic, které se očekávají ve volbách do Sněmovny v roce 2025. Tento pohled lépe odráží aktuální politickou situaci – například koalice Spolu (ODS, TOP 09 a KDU-ČSL) či nové - a už zase zaniklé - spojenectví hnutí Přísaha a Motoristů.
 
 <iframe src='https://flo.uri.sh/story/2689197/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="600px" allowFullScreen></iframe>
 
