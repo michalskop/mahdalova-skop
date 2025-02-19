@@ -8,7 +8,7 @@ filter: ["kontext"]
 tags: ["komentář", "zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
 promoted: 50
 ---
-## Když přehlédnete zjevné, ztratíte stát.
+## Když přehlédnete zjevné, ztratíte stát
 
 Představte si, že by to probíhalo takhle: Deset Tesla cybertrucků, natřených maskovacími barvami s obrovským znakem X na střeše, jak hlučně projíždějí Washingtonem, pneumatiky skřípou. Vyskakuje z nich několik desítek mladíků v červenočerném „brnění“ Devil’s Champion. Zahajlují, popadnou zbraně a nabíhají do budov ministerstev za pokřiku hesel jako „veškerou moc nejvyššímu vůdci Skibidi Hitlerovi“.
 
