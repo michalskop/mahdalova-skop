@@ -2,7 +2,7 @@
 title: "Timothy Snyder: Samozřejmě, že je to puč"
 date: "2025-02-05"
 author: "Mahdalová & Škop"
-excerpt: "Když přehlédnete zjevné, ztratíte stát."
+excerpt: "Namísto ozbrojeného komanda přichází do vládních budov několik desítek mladých mužů v civilu, vyzbrojených pouze flash disky."
 coverImage: "images/timothy-snyder-quote.svg"
 filter: ["kontext"]
 tags: ["komentář", "zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
