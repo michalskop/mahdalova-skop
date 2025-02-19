@@ -45,6 +45,6 @@ Probíhá puč – proti Američanům jakožto lidem s právy a důstojností i 
 ```box
 Timothy Snyder (*1969) je americký historik a profesor na Yaleově univerzitě a stálý pracovník Institutu společenskovědních oborů ve Vídni. Specializuje se na dějiny střední a východní Evropy, zejména na holokaust a totalitní režimy. V posledních dvou dekádách se věnuje aktuální politice, otázkám zdraví, školství.
 
-Mezi jeho nejvýznamnější knihy patří Krvavé země (Bloodlands), kde analyzuje masové vraždy spáchané nacisty a sověty ve východní Evropě, a Černé země (Black Earth), která se zabývá kořeny holokaustu. Ve své knize Cesty k nesvobodě (The Road to Unfreedom) rozebírá vzestup autoritářství v současném světě a v publikaci Tyranie: 20 lekcí z 20. století (On Tyranny) nabízí historické paralely a rady, jak mu čelit.
+Mezi jeho nejvýznamnější knihy patří Krvavé země (Bloodlands), kde analyzuje masové vraždy spáchané nacisty a sovětským stalinským režimem, a Černá zem (Black Earth), v níž interpretuje nejhrůznější událost 20. století – holokaust. Ve své knize Cesta k nesvobodě (The Road to Unfreedom), kde zaměřuje na vývoj v Rusku v letech 2010-16 a hledá odpověď na otázky, proč se Rusko odklonilo od komunikace se Západem, jaká je podle jeho vlády úloha Ruska v dějinách nebo jak souvisí ovlivňování amerických voleb a Donald Trump s Putinovým plánem na oslabení Evropy.
 
 ```
