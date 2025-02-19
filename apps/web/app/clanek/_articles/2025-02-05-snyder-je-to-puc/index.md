@@ -8,6 +8,8 @@ filter: ["kontext"]
 tags: ["zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
 promoted: 50
 ---
+## Když přehlédnete zjevné, ztratíte stát.
+
 Představte si, že by to probíhalo takhle: Deset Tesla cybertrucků, natřených maskovacími barvami s obrovským znakem X na střeše, jak hlučně projíždějí Washingtonem, pneumatiky skřípou. Vyskakuje z nich několik desítek mladíků v červenočerném „brnění“ Devil’s Champion. Zahajlují, popadnou zbraně a nabíhají do budov ministerstev za pokřiku hesel jako „veškerou moc nejvyššímu vůdci Skibidi Hitlerovi“.
 
 Takhle probíhaly v dějinách puče. Mocenské centrum existovalo jako fyzické místo. Když jste ho obsadili a vyhnali úřadující činitele, fakticky jste se tím zmocnili vlády. Kdyby tedy ozbrojený dav s podivnými symboly vtrhl do vládních budov, Američané by to okamžitě vyhodnotili jako pokus o puč.
