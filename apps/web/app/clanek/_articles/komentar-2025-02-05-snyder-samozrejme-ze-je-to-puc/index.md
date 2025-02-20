@@ -3,7 +3,7 @@ title: "Timothy Snyder: Samozřejmě, že je to puč"
 date: "2025-02-05"
 author: "Mahdalová & Škop"
 excerpt: "Namísto ozbrojeného komanda přichází do vládních budov několik desítek mladých mužů v civilu, vyzbrojených pouze flash disky."
-coverImage: "images/timothy-snyder-quote.svg"
+coverImage: "images/komentar-timothy-snyder-usa-je-to-puc-2025.jpg"
 filter: ["kontext"]
 tags: ["komentář", "zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
 promoted: 10
