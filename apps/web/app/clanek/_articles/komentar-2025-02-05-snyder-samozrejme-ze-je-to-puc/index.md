@@ -6,7 +6,7 @@ excerpt: "Namísto ozbrojeného komanda přichází do vládních budov několik
 coverImage: "images/timothy-snyder-quote.svg"
 filter: ["kontext"]
 tags: ["komentář", "zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
-promoted: 50
+promoted: 10
 ---
 ## Když přehlédnete zjevné, ztratíte stát
 
