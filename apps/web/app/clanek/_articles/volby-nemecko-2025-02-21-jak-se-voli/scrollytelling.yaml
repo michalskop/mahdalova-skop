@@ -4,7 +4,7 @@ textAlignment: right
 # Content shown before scrolling starts
 defaultContent:
   type: image
-  src: images/step_1.svg
+  src: images/step_1.png
 
 # Steps in the scrollytelling narrative
 steps:
