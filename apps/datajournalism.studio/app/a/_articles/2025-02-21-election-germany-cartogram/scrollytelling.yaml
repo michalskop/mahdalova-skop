@@ -1,0 +1,91 @@
+# Configuration for the scrollytelling section
+textAlignment: right
+
+# Content shown before scrolling starts
+defaultContent:
+  type: image
+  src: images/step_1.png
+
+# Steps in the scrollytelling narrative
+steps:
+  - text: |
+      The German parliamentary elections will take place on Sunday. At first glance, the German electoral system seems complicated. Let's take a closer look.
+    content:
+      type: image
+      src: images/step_1.png
+  - text: |
+      <p>Germany has a bicameral parliament. The lower house is called the Bundestag, and the upper house is the Bundesrat.</p>
+      <p><strong>The Bundestag</strong> will be directly elected by citizens this Sunday, while the Bundesrat consists of representatives from individual federal states.</p>
+
+      <p>Each voter has <strong>two votes</strong>: the first vote is for a direct candidate in their electoral district. There are 299 districts, each covering about ¼ million voters.</p>
+      <p>The second vote is for a party and determines how many seats each party will have. A total of 630 seats are up for election.</p>
+      <p>Parties that receive <strong>more than 5% of the vote</strong> or <strong>win at least three districts directly</strong> gain representation in the Bundestag.</p>
+    content:
+      type: image
+      src: images/step_1.png
+  - text: |
+      <p>But let's look at the map.</p>
+      <p>The first vote means that 299 MPs are elected directly in single-member districts. Each district appears differently sized on the map, but they all have <strong>roughly the same number of voters</strong>.</p>
+    content:
+      type: image
+      src: images/step_1.png
+  - text: |
+      <p>And here's the main problem with this map: The size of a district on the map does not reflect the number of voters living there. Take a look at the Baltic federal state <span style="background-color:#de1743; color:#ffffff;">Mecklenburg-Vorpommern</span> and <span style="background-color:#0e926a; color:#ffffff;">Berlin</span>.</p>
+      <p><span style="background-color:#0e926a; color:#ffffff;">Berlin</span> appears significantly smaller on the map, but it has <strong>twice as many districts and roughly twice as many voters</strong>.</p>
+    content:
+      type: image
+      src: images/step_4.png
+  - text: |
+      <p>This becomes even more apparent when we compare two selected districts from these regions.</p>
+      <p>The district of <span style="background-color:#de1743; color:#ffffff;">Mecklenburgische Seenplatte II</span> elects one MP, just like the almost invisible <span style="background-color:#0e926a; color:#ffffff;">Berlin-Mitte</span> on the map!</p>
+    content:
+      type: image
+      src: images/step_6.png
+  - text: |
+      <p>Fair representation for electoral districts!</p>
+      <p>To solve this issue, we transform the map into a <i>cartogram</i>. Each electoral district, whether it is the vast <span style="background-color:#de1743; color:#ffffff;">Mecklenburgische Seenplatte II</span> or the city-center district of <span style="background-color:#0e926a; color:#ffffff;">Berlin-Mitte</span>, is given the same size and shape as a hexagon.</p>
+      <p>This is the ultimate fair representation!</p>
+    content:
+      type: image
+      src: images/step_7.png
+  - text: |
+      <p>But let's go back to the traditional map.</p>
+      <p>The polling agency YouGov has published predictions based on its surveys about who has the highest chance of winning in each district.</p>
+      <p>The standard map mostly shows <span style="background-color:#151518; color:#ffffff;">black CDU/CSU</span> and a large patch of <span style="background-color:#00A2DE; color:#ffffff;">light blue AfD</span> in eastern Germany.</p>
+    content:
+      type: image
+      src: images/step_8.png
+  - text: |
+      <p>The entire former East Germany, except for Berlin, is a stronghold of <span style="background-color:#00A2DE; color:#ffffff;">AfD</span>, has <strong>48 districts</strong>.</p>
+      <p>Meanwhile, the largest federal state in the west, North Rhine-Westphalia, has <strong>64 districts</strong>.</p>
+    content:
+      type: image
+      src: images/step_11.png
+  - text: |
+      <p>The <i>cartogram</i> reveals the true strength of votes in both regions.</p>
+    content:
+      type: image
+      src: images/step_12.png
+  - text: |
+      <p>The cartogram provides a clearer picture of the actual impact of votes.</p>
+      <p>As the saying goes, <i>"land does not vote, people do.”</i> The physical size of an area does not matter; voters decide.</p>
+      <p>According to polls, the Christian Democratic <span style="background-color:#151518; color:#ffffff;">CDU/CSU</span> is expected to receive the most votes, with <span style="background-color:#00A2DE; color:#ffffff;">AfD</span> in second place, the Social Democratic <span style="background-color:#E3000F; color:#ffffff;">SPD</span> third, and the <span style="background-color:#409A3C; color:#ffffff;">Greens</span> fourth.</p>
+      <p>The left-wing <span style="background-color:#BE3075; color:#ffffff;">Die Linke</span> also has a fair chance. The Sahra Wagenknecht Alliance and FDP are hovering around 5%.</p>
+    content:
+      type: image
+      src: images/step_13.png
+  - text: |
+      <p>This is the final electoral model for individual districts, according to YouGov, before the elections.</p>
+    content:
+      type: image
+      src: images/step_13.png
+  - text: |
+      Of course, the final decision lies with the voters. By Sunday morning, the outcome is still open.
+    content:
+      type: image
+      src: images/step_14.png
+  - text: |
+      🇩🇪 🇪🇺 The results of the German elections will impact all of Europe. We will be monitoring and analyzing them.
+    content:
+      type: image
+      src: images/step_14.png
