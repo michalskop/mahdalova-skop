@@ -85,7 +85,7 @@ steps:
       type: image
       src: images/step_14.png
   - text: |
-      🇩🇪🇪🇺 Výsledky německých voleb ovlivní celou Evropu. Budeme je sledovat a analyzovat.
+      🇩🇪 🇪🇺 Výsledky německých voleb ovlivní celou Evropu. Budeme je sledovat a analyzovat.
     content:
       type: image
       src: images/step_14.png
