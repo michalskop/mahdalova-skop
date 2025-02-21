@@ -1,8 +1,8 @@
 ---
 title: "Německé volby: Jak se volí a jak správně číst výsledky"
-date: "2025-02-"
+date: "2025-02-21"
 author: "Mahdalová & Škop"
-excerpt: "Pochval a uznání není nikdy dost 😊⁣ Naše kartogramy si jako ukázkové vybrali nejvyšší statistici Rakouska."
+excerpt: "V neděli proběhnou německé parlamentní volby. Proč klasické volební mapy nejsou vždy nejlepší volbou a jak správně číst výsledky."
 coverImage: "images/step_13.svg"
 filter: ["analýza"]
 tags: ["zahraničí", "Německo", "mapy", "kartogramy", "realita", "volby"]
