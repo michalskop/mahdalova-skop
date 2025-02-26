@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "V neděli proběhnou německé parlamentní volby. Proč klasické volební mapy nejsou vždy nejlepší volbou a jak správně číst výsledky."
 coverImage: "images/step_13.svg"
 filter: ["analýza"]
-tags: ["zahraničí", "Německo", "mapy", "kartogramy", "realita", "volby"]
+tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
 ---
 
 <ScrollyTelling yamlFile="scrollytelling.yaml" />
