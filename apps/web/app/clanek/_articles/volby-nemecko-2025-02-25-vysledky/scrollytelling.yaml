@@ -4,25 +4,20 @@ textAlignment: right
 # Content shown before scrolling starts
 defaultContent:
   type: image
-  src: images/step_1.png
-
+  src: images/map_germany_winner.png
+  
 # Steps in the scrollytelling narrative
 steps:
   - text: |
-      V neděli se v Německu konaly parlamentní volby. Mapy s výsledky na první pohled naznačují, že v bývalém Východním Německu zvítězila krajně pravicová Alternativa pro Německo (AfD). Jenže při pohledu na mapy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.
+      V neděli se v Německu konaly parlamentní volby. Mapy s výsledky na první pohled naznačují, že v bývalém Východním Německu zvítězila krajně pravicová Alternativa pro Německo (AfD). 
     content:
       type: image
       src: images/map_germany_winner.png
   - text: |
-      <p>Německo má dvoukomorový parlament. Dolní komora se jmenuje Bundestag a horní Bundesrat.<p>
-      <p><strong>Bundestag</strong> bude teď v nedělí volen přímo občany, Bundesrat je složen z představitelů jednotlivých spolkových zemí.</p>
-
-      <p>Každý volič má <strong>dva hlasy</strong>: první hlas volí přímo kandidáta ve svém volebním obvodu, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů.</p>
-      <p>Druhý hlas je pro stranu a určuje kolik poslanců bude která strana mít. Celkem se volí 630 poslanců.</p>
-      <p>Strany, které získají <strong>více než 5 % hlasů</strong> nebo <strong>vyhrají přímo alespoň ve třech obvodech</strong>, se dostanou do Bundestagu.</p>
+      <p>Jenže při pohledu na mapy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.
     content:
       type: image
-      src: images/step_1.png
+      src: images/cartogram_germany_winner.png
   - text: |
       <p>Ale pojďme k mapě.</p>
       <p>První hlas znamená, že 299 poslanců je zvolených přímo v jednomandátových obvodech. Každý obvod vypadá na mapě jinak velký, ale je v něm <strong>zhruba stejně voličů</strong>.</p>
