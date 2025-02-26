@@ -1,8 +1,8 @@
 ---
-title: "Německé volby: Jak se volí a jak správně číst výsledky"
-date: "2025-02-21"
+title: "Německé volby: Ostblok volil radikálně? Ne tak docela"
+date: "2025-02-27"
 author: "Mahdalová & Škop"
-excerpt: "V neděli proběhnou německé parlamentní volby. Proč klasické volební mapy nejsou vždy nejlepší volbou a jak správně číst výsledky."
+excerpt: "V neděli se konaly německé parlamentní volby. Na prvné pohled se může zdát, že někdejší Východní Německo zradikalizovalo, jenže to je dost zkreslený pohled."
 coverImage: "images/step_13.svg"
 filter: ["analýza"]
 tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
