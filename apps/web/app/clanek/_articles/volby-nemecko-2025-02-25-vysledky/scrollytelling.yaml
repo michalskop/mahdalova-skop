@@ -9,10 +9,10 @@ defaultContent:
 # Steps in the scrollytelling narrative
 steps:
   - text: |
-      V neděli proběhnou německé parlamentní volby. Německý volební systém je na první pohled komplikovaný. Pojďme se na něj podívat.
+      V neděli se v Německu konaly parlamentní volby. Mapy s výsledky na první pohled naznačují, že v bývalém Východním Německu zvítězila krajně pravicová Alternativa pro Německo (AfD). Jenže při pohledu na mapy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.
     content:
       type: image
-      src: images/step_1.png
+      src: images/map_germany_winner.png
   - text: |
       <p>Německo má dvoukomorový parlament. Dolní komora se jmenuje Bundestag a horní Bundesrat.<p>
       <p><strong>Bundestag</strong> bude teď v nedělí volen přímo občany, Bundesrat je složen z představitelů jednotlivých spolkových zemí.</p>
