@@ -7,31 +7,19 @@ defaultContent:
 
 steps:
   - text: |
-      Mapy s výsledky na první pohled naznačují, že v bývalém Východním Německu zvítězila krajně pravicová Alternativa pro Německo (AfD).
-    content:
-      type: image
-      src: images/map_germany_winner.png
-  
-  - text: |
-      <p>Jenže při pohledu na kartogramy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.</p>
-    content:
-      type: image
-      src: images/cartogram_germany_winner.png
-  
-  - text: |
-      <p>Samozřejmě, podle očekávání se výsledky voleb viditelně liší přesně podél někdejší železné opony.</p>
+      <p>Samozřejmě, podle očekávání se výsledky voleb viditelně liší přesně podél někdejší železné opony. Ve východní části Německa na první pohled zvítězila krajně pravicová Alternativa pro Německo (AfD). Jenže jak si ukážeme níže, je to trochu iluze.</p>
       
       <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická rozloha sídel – velká města samozřejmě takovou plochu nemají a síla jejich voličů zde na obrázku zaniká.</p>
       
-      <p>Proto se opět přepneme do kartogramu, který je sestaven podle počtu volících osob.</p>
     content:
       type: image
       src: images/cartogram_germany_winner.png
   
   - text: |
+      <p>Při pohledu na kartogramy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.</p>
       <p>Jak je vidět, neplatí, že by ta část Německa, která prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</p>
       
-      <p>Velká sídla – <strong>Berlín, Lipsko nebo Erfurt</strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. Zvláště dobře je to vidět na mapě, která zachycuje tzv. první hlasy. Tedy ty, které voliči dávají konkrétním lidem.</p>
+      <p>Velká sídla – <strong>Berlín, Lipsko nebo Erfurt</strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. </p>
       
       <p>Připomeňme si, že každý volič má dva hlasy: <strong>první hlas volí přímo kandidáta ve svém volebním obvodu</strong>, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů. <strong>Druhý hlas</strong> je pro stranu a určuje, kolik poslanců bude která strana mít. Celkem se volí 630 poslanců. Strany, které získají více než 5 % hlasů nebo vyhrají přímo alespoň ve třech obvodech, se dostanou do Bundestagu.</p>
       
