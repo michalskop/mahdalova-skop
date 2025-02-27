@@ -26,15 +26,14 @@ steps:
       src: images/map_germany_winner.png
       
       <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická rozloha sídel - velká města samozřejmě takovou plaochu nemají a síla jejich voličů zde na obrázku zaniká. Proto se opět přepneme do kartogramu,  který je sestaven podle počtu volících osob.</p>
-     content:
+    content:
       type: image
       src: images/cartogram_germany_winner.png
-      
+   - text: |   
       <p>Jak je vidět, neplatí, že by ta část Německa, kteá prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</strong>.</p>
-  - text: |
-      <p>Velká sídla, Berlín, Lipsko nebo Erfurt ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. Zvláště dobře je to vidět na mapě, která zachycuje tzv. první hlasy. Tedy ty, které voliči dávají konkrétním lidem.
-
-Připomeňme si, že každý volič má dva hlasy: první hlas volí přímo kandidáta ve svém volebním obvodu, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů. Druhý hlas je pro stranu a určuje kolik poslanců bude která strana mít. Celkem se volí 630 poslanců. Strany, které získají více než 5 % hlasů nebo vyhrají přímo alespoň ve třech obvodech, se dostanou do Bundestagu.
+  
+      <p>Velká sídla, Berlín, Lipsko nebo Erfurt ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. Zvláště dobře je to vidět na mapě, která zachycuje tzv. první hlasy. Tedy ty, které voliči dávají konkrétním lidem. 
+      Připomeňme si, že každý volič má dva hlasy první hlas volí přímo kandidáta ve svém volebním obvodu, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů. Druhý hlas je pro stranu a určuje kolik poslanců bude která strana mít. Celkem se volí 630 poslanců. Strany, které získají více než 5 % hlasů nebo vyhrají přímo alespoň ve třech obvodech, se dostanou do Bundestagu.
       
       Podívejte se třeba na pobaltskou spolkovou zemi <span style="background-color:#de1743; color:#ffffff;">Mecklenburg-Vorpommern</span> (Meklenbursko-Přední Pomořansko) a na <span style="background-color:#0e926a; color:#ffffff;">Berlin</span>. </p>
       <p><span style="background-color:#0e926a; color:#ffffff;">Berlin</span> je na mapě výrazně menší, ale má <strong>dvakrát více obvodů, zhruba dvakrát více voličů</strong>.</p>
@@ -44,56 +43,5 @@ Připomeňme si, že každý volič má dva hlasy: první hlas volí přímo kan
   - text: |
       <p>Ještě výrazněji to vidíme, pokud porovnáme dva vybrané obvody z těchto zemí.</p>
       <p>Obvod <span style="background-color:#de1743; color:#ffffff;">Mecklenburgische Seenplatte II</span> volí jednoho poslance, ale stejně tak na mapě skoro neviditelný <span style="background-color:#0e926a; color:#ffffff;">Berlin-Mitte</span>!</p>
-    content:
-      type: image
-      src: images/step_6.png
-  - text: |
-      <p>Spravedlnost pro volební obvody!</p>
-      <p>Abychom tento problém vyřešili, převádíme mapu do <i>kartogramu</i>. Každý volební obvod, rozlehlý <span style="background-color:#de1743; color:#ffffff;">Mecklenburgische Seenplatte II</span> i centrum hlavního města <span style="background-color:#0e926a; color:#ffffff;">Berlin-Mitte</span>, dostane stejnou velikost a podobu hexagonu.</p>
-      <p>To je konečné férové zobrazení!</p>
-    content:
-      type: image
-      src: images/step_7.png
-  - text: |
-      <p>Ale zpátky na klasickou mapu.</p>
-      <p>Agentura YouGov zveřejnila odhady na základě svých průzkumů, kdo má největší šanci vyhrát v jednotlivých obvodech.</p>
-      <p>Běžná mapa ukazuje v podstatě jenom <span style="background-color:#151518; color:#ffffff;">černou CDU/CSU</span> a velký kus <span style="background-color:#00A2DE; color:#ffffff;">světlé modré AfD</span> na východě Německa.</p>
-    content:
-      type: image
-      src: images/step_8.png
-  - text: |
-      <p>Celé bývalé Východní Německo bez Berlina, což je bašta <span style="background-color:#00A2DE; color:#ffffff;">AfD</span>, má <strong>48 obvodů</strong>.</p>
-      <p>Největší spolková země západní Severní Porýní-Vestfálsko ale má <strong>obvodů 64</strong>.</p>
-    content:
-      type: image
-      src: images/step_11.png
-  - text: |
-      <p><i>Kartogram</i> ukazuje reálnou sílu hlasů v obou oblastech.</p>
-    content:
-      type: image
-      src: images/step_12.png
-  - text: |
-      <p>Kartogram dává lepší představu o skutečném významu hlasů.</p>
-      <p>Jak se říká, <i>"land does not vote, people do”</i>. Fyzická velikost oblasti nehraje roli, rozhodují voliči.
-      <p>Podle průzkumů nejvíce hlasů získá křesťansko-demokratická <span style="background-color:#151518; color:#ffffff;">CDU/CSU</span>, <span style="background-color:#00A2DE; color:#ffffff;">AfD</span> bude druhá, sociální demokracie <span style="background-color:#E3000F; color:#ffffff;">SPD</span> třetí a <span style="background-color:#409A3C; color:#ffffff;">Zelení</span> čtvrtí.</p>
-      <p>Slušnou šanci má i levicová <span style="background-color:#BE3075; color:#ffffff;">Die Linke</span>. Kolem 5 % jsou ještě Aliance Sahry Wagenknecht a FDP.</p>
-    content:
-      type: image
-      src: images/step_13.png
-  - text: |
-      <p>Tohle je tedy poslední volební model pro jednotlivé obvody podle agentury YouGov před volbami.</p>
-    content:
-      type: image
-      src: images/step_13.png
-  - text: |
-      Samozřejmě ve volbách rozhodnou voliči, v neděli ráno jsou výsledky otevřené.
-    content:
-      type: image
-      src: images/step_14.png
-  - text: |
-      🇩🇪 🇪🇺 Výsledky německých voleb ovlivní celou Evropu. Budeme je sledovat a analyzovat.
-    content:
-      type: image
-      src: images/step_14.png
-
+   
     
