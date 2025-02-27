@@ -26,6 +26,8 @@ Dnes se očekává, že vládu sestaví tradiční strany  CDU/CSU  a  SPD.
 <iframe src='https://flo.uri.sh/visualisation/21811823/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="700px" allowFullScreen></iframe>
 
 ```box
+Německé volby: [Radikální a rozdělená tiktoková generace](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2025-02-28-tiktokova-generace)
+
 Dále jsme psali o rozhovoru Elona Maska se šéfkou krajně pravicové strany AfD:
 [Glosa: Hilter nebyl komunista](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-09-hitler-nebyl-komunista)
 
