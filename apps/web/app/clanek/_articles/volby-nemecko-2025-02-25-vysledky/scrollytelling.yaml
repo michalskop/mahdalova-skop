@@ -7,74 +7,96 @@ defaultContent:
 
 steps:
   - text: |
-      <p>Na první pohled se výsledky voleb viditelně liší přesně podél někdejší železné opony a vidíme, že ve východní části Německa zvítězila krajně pravicová Alternativa pro Německo (AfD). Jenže jak si ukážeme níže, je to trochu iluze.</p>
-      
-      <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická rozloha sídel – velká města samozřejmě takovou plochu nemají a síla jejich voličů zde na obrázku zaniká.</p>
+      <p>Na první pohled se výsledky voleb viditelně liší přesně podél někdejší železné opony. 
+      V bývalém Západním Německu dominovala CDU/CSU, zatímco ve východní části země 
+      měla nejsilnější podporu krajně pravicová AfD. Ale je to trochu iluze.</p>
     content:
       type: image
       src: images/map_germany_winner.png
-  
-  - text: |
-      <p>V tomto kartogramu se naopak zobrazuje skutečná síla hlasů, nikoli geografická plocha. A výsledky voleb nyní vypadají o dost jinak.</p>
-      <p>Jeden hexagon ⬡ představuje jeden volební obvod. Každý tento obvod je zhruba stejně velký a volí v něm zhruba stejný počet voličů (cca 200 tisíc).</p>
 
+  - text: |
+      <p>Tradiční volební mapa ukazuje geografickou rozlohu sídel, což zvýrazňuje venkovské oblasti. 
+      Velká města, kde žije více voličů, zde vizuálně zanikají.</p>
+    content:
+      type: image
+      src: images/map_cartogram_germany_winner.png
+
+  - text: |
+      <p>V kartogramu se naopak zobrazují skutečné výsledky podle síly hlasů, nikoli podle plochy. 
+      Najednou vidíme odlišný obraz německých voleb.</p>
     content:
       type: image
       src: images/cartogram_germany_winner.png
-  
+
   - text: |
-      <p>Jak je vidět, neplatí, že by ta část Německa, která prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</p>
-      <p>Velká sídla – <strong><span style="background-color:#BE3075; color:#ffffff;">Berlín</span></strong> nebo <strong><span style="background-color:#BE3075; color:#ffffff;">Lipsko</span></strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. </p>
+      <p>Neplatí, že celé bývalé Východní Německo volilo extrémní pravici. 
+      Ve velkých městech, jako jsou Berlín a Lipsko, zvítězila Die Linke.</p>
     content:
       type: image
-      src: images/cartogram_germany_winner.png
-  
+      src: images/cartogram_germany_winner_1.png
+
   - text: |
-      <p>Celkové výsledky voleb</p>
-      <p>V nedělních volbách získala konzervativní unie CDU/CSU vedená Friedrichem Merzem 28,5 % hlasů, čímž se stala nejsilnější stranou. Na druhém místě se umístila krajně pravicová Alternativa pro Německo (AfD) s 20,5 % hlasů, což je její historicky nejlepší výsledek. Sociálně demokratická strana Německa (SPD) dosáhla pouze 16,5 %, což představuje její nejhorší výsledek od druhé světové války. Zelení obdrželi 12 % hlasů, zatímco Levice (Die Linke) posílila na 8,7 %. Liberální FDP a nově vzniklá Aliance Sahry Wagenknecht (BSW) se pohybují kolem 5% hranice nutné pro vstup do Bundestagu.</p>
+      <p>Podívejme se na celkové výsledky voleb.</p>
     content:
       type: image
       src: images/nemecko_volby_vysledky_celkem_graf.png
-  
+
   - text: |
-      <p>CDU/CSU získala nejvíce hlasů, ale její dominance už není tak silná jako v minulosti.</p>
+      <p>CDU/CSU tradičně dominovala v Bavorsku, kde v několika obvodech získala přes 40 % hlasů.</p>
     content:
       type: image
       src: images/cartogram_germany_cdu_csu.png
-  
+
   - text: |
-      <p>AfD dosáhla historicky nejlepšího výsledku, zejména ve východním Německu.</p>
+      <p>AfD byla nejsilnější na východě mimo velká města. Nejvyšší zisky měla v Sasku a na hranici s Českem.</p>
     content:
       type: image
       src: images/cartogram_germany_afd.png
-  
+
   - text: |
-      <p>SPD zaznamenala historický propad, což vedlo k vnitrostranickým otřesům.</p>
+      <p>SPD se držela v západních průmyslových oblastech, ale její celkové výsledky byly slabé.</p>
     content:
       type: image
       src: images/cartogram_germany_spd.png
-  
+
   - text: |
-      <p>Zelení si udrželi stabilní podporu ve velkých městech, ale celkově oslabili.</p>
+      <p>Zelení měli nejsilnější podporu v Hamburku, Porúří a velkých městech západu.</p>
     content:
       type: image
       src: images/cartogram_germany_greens.png
-  
+
   - text: |
-      <p>Levice (Die Linke) překvapivě posílila díky zaměření na sociální témata.</p>
+      <p>Die Linke posílila v Berlíně a v některých východních regionech.</p>
     content:
       type: image
       src: images/cartogram_germany_linke.png
-  
+
   - text: |
-      <p>Aliance Sahry Wagenknecht (BSW) se těsně nedostala do parlamentu, což vyvolalo debaty o změně volebního systému.</p>
+      <p>Aliance Sahry Wagenknecht (BSW) se pohybovala těsně pod hranicí vstupu do parlamentu.</p>
     content:
       type: image
       src: images/cartogram_germany_bsw.png
-  
+
   - text: |
-      <p>Volební účast byla rekordně vysoká, což ukazuje silnou angažovanost voličů.</p>
+      <p>Podívejme se na změny oproti minulým volbám. AfD získala voliče téměř ve všech obvodech.</p>
     content:
       type: image
       src: images/cartogram_germany_turnout.png
 
+  - text: |
+      <p>Výsledky CDU/CSU nejsou tak jednoznačné, v některých obvodech na východě dokonce ztratila.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_cdu_csu.png
+
+  - text: |
+      <p>Projděte si konkrétní obvody a jednotlivé strany v interaktivních kartogramech níže.</p>
+    content:
+      type: iframe
+      src: https://app.flourish.studio/visualisation/21777958/edit
+
+  - text: |
+      <p>Zde vidíte změny oproti volbám 2021.</p>
+    content:
+      type: iframe
+      src: https://app.flourish.studio/visualisation/21826097/edit
