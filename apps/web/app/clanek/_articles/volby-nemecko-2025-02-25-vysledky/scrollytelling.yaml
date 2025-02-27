@@ -13,7 +13,7 @@ steps:
       
     content:
       type: image
-      src: images/cartogram_germany_winner.png
+      src: images/map_germany_winner.png
   
   - text: |
       <p>Při pohledu na kartogramy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.</p>
@@ -28,7 +28,7 @@ steps:
       <p><span style="background-color:#0e926a; color:#ffffff;">Berlín</span> je na mapě výrazně menší, ale má <strong>dvakrát více obvodů, zhruba dvakrát více voličů</strong>.</p>
     content:
       type: image
-      src: images/step_4.png
+      src: images/cartogram_germany_winner.png
   
   - text: |
       <p>Ještě výrazněji to vidíme, pokud porovnáme dva vybrané obvody z těchto zemí.</p>
