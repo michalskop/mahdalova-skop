@@ -19,13 +19,24 @@ steps:
       type: image
       src: images/cartogram_germany_winner.png
   - text: |
-      <p>Ale pojďme k mapě.</p>
-      <p>První hlas znamená, že 299 poslanců je zvolených přímo v jednomandátových obvodech. Každý obvod vypadá na mapě jinak velký, ale je v něm <strong>zhruba stejně voličů</strong>.</p>
+      <p>Samozřejhmě, podle očekávání se výsledky voleb viditelně liší přesně podél někdejší železné opony.</p>
+      
     content:
       type: image
-      src: images/step_1.png
+      src: images/map_germany_winner.png
+      
+      <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická rozloha sídel - velká města samozřejmě takovou plaochu nemají a síla jejich voličů zde na obrázku zaniká. Proto se opět přepneme do kartogramu,  který je sestaven podle počtu volících osob.</p>
+     content:
+      type: image
+      src: images/cartogram_germany_winner.png
+      
+      <p>Jak je vidět, neplatí, že by ta část Německa, kteá prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</strong>.</p>
   - text: |
-      <p>A tady je hlavní problém s touto mapou: Velikost obvodu na mapě neodráží počet voličů, kteří v něm žijí. Podívejte se třeba na pobaltskou spolkovou zemi <span style="background-color:#de1743; color:#ffffff;">Mecklenburg-Vorpommern</span> (Meklenbursko-Přední Pomořansko) a na <span style="background-color:#0e926a; color:#ffffff;">Berlin</span>. </p>
+      <p>Velká sídla, Berlín, Lipsko nebo Erfurt ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. Zvláště dobře je to vidět na mapě, která zachycuje tzv. první hlasy. Tedy ty, které voliči dávají konkrétním lidem.
+
+Připomeňme si, že každý volič má dva hlasy: první hlas volí přímo kandidáta ve svém volebním obvodu, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů. Druhý hlas je pro stranu a určuje kolik poslanců bude která strana mít. Celkem se volí 630 poslanců. Strany, které získají více než 5 % hlasů nebo vyhrají přímo alespoň ve třech obvodech, se dostanou do Bundestagu.
+      
+      Podívejte se třeba na pobaltskou spolkovou zemi <span style="background-color:#de1743; color:#ffffff;">Mecklenburg-Vorpommern</span> (Meklenbursko-Přední Pomořansko) a na <span style="background-color:#0e926a; color:#ffffff;">Berlin</span>. </p>
       <p><span style="background-color:#0e926a; color:#ffffff;">Berlin</span> je na mapě výrazně menší, ale má <strong>dvakrát více obvodů, zhruba dvakrát více voličů</strong>.</p>
     content:
       type: image
