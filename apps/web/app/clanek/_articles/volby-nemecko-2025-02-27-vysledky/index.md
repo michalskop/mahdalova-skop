@@ -3,7 +3,7 @@ title: "Německé volby: Ostblok volil radikálně? Ne tak docela"
 date: "2025-02-27"
 author: "Mahdalová & Škop"
 excerpt: "V neděli se konaly německé parlamentní volby. Na první pohled se může zdát, že se někdejší Východní Německo zradikalizovalo, jenže to je dost zkreslený pohled."
-coverImage: "images/map_cartogram_germany_winner.png"
+coverImage: "images/map_germany_winner.png"
 filter: ["analýza"]
 tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
 promoted: 80
