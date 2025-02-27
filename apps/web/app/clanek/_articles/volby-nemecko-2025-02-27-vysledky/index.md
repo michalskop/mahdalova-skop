@@ -25,3 +25,11 @@ Celkově ve volbách zvítězila křesťansko demokratická CDU/CSU< Druhá skon
 Dnes se očekává, že vládu sestaví tradiční strany  CDU/CSU  a  SPD.
 <iframe src='https://flo.uri.sh/visualisation/21811823/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="700px" allowFullScreen></iframe>
 
+```box
+Dále jsme psali o rozhovoru Elona Maska se šéfkou krajně pravicové strany AfD:
+[Glosa: Hilter nebyl komunista](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-09-hitler-nebyl-komunista)
+
+Světoznámý spisovatel a filosof Umberto Eco (1932-2016), který jako chlapec vyrůstal v Mussoliniho Itálii, nám zanechal cenný nástroj - definoval charakteristické znaky fašismu:
+[Znaky fašismu podle Umberta Eca](https://www.mahdalova-skop.cz/clanek/explainer-2025-01-06-znaky-fasismu-podle-eca)
+
+```
