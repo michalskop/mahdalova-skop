@@ -7,9 +7,15 @@ defaultContent:
 
 steps:
   - text: |
-      <p>Samozřejmě, podle očekávání se výsledky voleb viditelně liší přesně podél někdejší železné opony. Ve východní části Německa na první pohled zvítězila krajně pravicová Alternativa pro Německo (AfD). Jenže jak si ukážeme níže, je to trochu iluze.</p>
+      <p>Na první pohled se výsledky voleb viditelně liší přesně podél někdejší železné opony a vidíme, že ve východní části Německa zvítězila krajně pravicová Alternativa pro Německo (AfD). Jenže jak si ukážeme níže, je to trochu iluze.</p>
       
       <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická rozloha sídel – velká města samozřejmě takovou plochu nemají a síla jejich voličů zde na obrázku zaniká.</p>
+    
+    content:
+      type: image
+      src: images/map_germany_winner.png
+      
+      <p>Jinými slovy: Běžné mapy volebních výsledků na první pohled ukazují, že v bývalém Východním Německu zvítězila krajní pravice. Alternativa pro Německo (AfD) v řadě oblastí skutečně dominovala, což vypadá vizuálně nápadně. Jenže běžné mapy mohou být zavádějící, protože fyzická velikost oblasti neodráží skutečnou sílu voličů.</p>
       
     content:
       type: image
@@ -17,11 +23,26 @@ steps:
   
   - text: |
       <p>Při pohledu na kartogramy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.</p>
-      <p>Jak je vidět, neplatí, že by ta část Německa, která prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</p>
+
+    content:
+      type: image
+      src: images/cartogram_germany_winner.png
       
-      <p>Velká sídla – <strong>Berlín, Lipsko nebo Erfurt</strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. </p>
+      <p>Jak je vidět, neplatí, že by ta část Německa, která prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</p>
+    
+    content:
+      type: image
+      src: images/cartogram_germany_winner.png
+      
+      <p>Velká sídla – <strong><span style="background-color:#BE3075; color:#ffffff;">Berlín</span></strong> nebo <strong><span style="background-color:#BE3075; color:#ffffff;">Lipsko</span></strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. </p>
+    
+    content:
+      type: image
+      src: images/cartogram_germany_winner.png
       
       <p>Připomeňme si, že každý volič má dva hlasy: <strong>první hlas volí přímo kandidáta ve svém volebním obvodu</strong>, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů. <strong>Druhý hlas</strong> je pro stranu a určuje, kolik poslanců bude která strana mít. Celkem se volí 630 poslanců. Strany, které získají více než 5 % hlasů nebo vyhrají přímo alespoň ve třech obvodech, se dostanou do Bundestagu.</p>
+
+      
       
       <p>Podívejte se třeba na pobaltskou spolkovou zemi <span style="background-color:#de1743; color:#ffffff;">Mecklenburg-Vorpommern</span> (Meklenbursko-Přední Pomořansko) a na <span style="background-color:#0e926a; color:#ffffff;">Berlín</span>.</p>
       
