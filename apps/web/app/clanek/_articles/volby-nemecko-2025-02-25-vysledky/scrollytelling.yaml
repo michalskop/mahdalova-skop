@@ -12,91 +12,73 @@ steps:
       <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická rozloha sídel – velká města samozřejmě takovou plochu nemají a síla jejich voličů zde na obrázku zaniká.</p>
     content:
       type: image
-      src: images/mapa_viteznych_stran.png
+      src: images/map_germany_winner.png
   
   - text: |
       <p>Běžné mapy volebních výsledků na první pohled ukazují, že v bývalém Východním Německu zvítězila krajní pravice. Alternativa pro Německo (AfD) v řadě oblastí skutečně dominovala, což vypadá vizuálně nápadně. Jenže běžné mapy mohou být zavádějící, protože fyzická velikost oblasti neodráží skutečnou sílu voličů.</p>
     content:
       type: image
-      src: images/mapa_kartogram_viteznych_stran.png
+      src: images/map_cartogram_germany_winner.png
 
   - text: |
       <p>Při pohledu na kartogramy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.</p>
     content:
       type: image
-      src: images/vitez_kartogram.png
+      src: images/cartogram_germany_winner.png
   
   - text: |
       <p>Jak je vidět, neplatí, že by ta část Německa, která prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</p>
       <p>Velká sídla – <strong><span style="background-color:#BE3075; color:#ffffff;">Berlín</span></strong> nebo <strong><span style="background-color:#BE3075; color:#ffffff;">Lipsko</span></strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. </p>
     content:
       type: image
-      src: images/vitez_prvni_hlas_kartogram.png
+      src: images/cartogram_germany_winner_1.png
   
   - text: |
       <p>Celkové výsledky voleb</p>
       <p>V nedělních volbách získala konzervativní unie CDU/CSU vedená Friedrichem Merzem 28,5 % hlasů, čímž se stala nejsilnější stranou. Na druhém místě se umístila krajně pravicová Alternativa pro Německo (AfD) s 20,5 % hlasů, což je její historicky nejlepší výsledek. Sociálně demokratická strana Německa (SPD) dosáhla pouze 16,5 %, což představuje její nejhorší výsledek od druhé světové války. Zelení obdrželi 12 % hlasů, zatímco Levice (Die Linke) posílila na 8,7 %. Liberální FDP a nově vzniklá Aliance Sahry Wagenknecht (BSW) se pohybují kolem 5% hranice nutné pro vstup do Bundestagu.</p>
     content:
       type: image
-      src: images/vysledky_celkem_graf.png
+      src: images/nemecko_volby_vysledky_celkem_graf.png
   
   - text: |
       <p>CDU/CSU získala nejvíce hlasů, ale její dominance už není tak silná jako v minulosti.</p>
     content:
       type: image
-      src: images/cdu_csu_kartogram.png
+      src: images/cartogram_germany_cdu_csu.png
   
   - text: |
       <p>AfD dosáhla historicky nejlepšího výsledku, zejména ve východním Německu.</p>
     content:
       type: image
-      src: images/afd_kartogram.png
+      src: images/cartogram_germany_afd.png
   
   - text: |
       <p>SPD zaznamenala historický propad, což vedlo k vnitrostranickým otřesům.</p>
     content:
       type: image
-      src: images/spd_kartogram.png
+      src: images/cartogram_germany_spd.png
   
   - text: |
       <p>Zelení si udrželi stabilní podporu ve velkých městech, ale celkově oslabili.</p>
     content:
       type: image
-      src: images/zelene_kartogram.png
+      src: images/cartogram_germany_greens.png
   
   - text: |
       <p>Levice (Die Linke) překvapivě posílila díky zaměření na sociální témata.</p>
     content:
       type: image
-      src: images/levice_kartogram.png
-  
-  - text: |
-      <p>FDP nepřekročila hranici 5 % a vypadla z parlamentu.</p>
-    content:
-      type: image
-      src: images/fdp_kartogram.png
+      src: images/cartogram_germany_linke.png
   
   - text: |
       <p>Aliance Sahry Wagenknecht (BSW) se těsně nedostala do parlamentu, což vyvolalo debaty o změně volebního systému.</p>
     content:
       type: image
-      src: images/bsw_kartogram.png
+      src: images/cartogram_germany_bsw.png
   
   - text: |
       <p>Volební účast byla rekordně vysoká, což ukazuje silnou angažovanost voličů.</p>
     content:
       type: image
-      src: images/volebnni_ucast_kartogram.png
-   
-  - text: |
-      <p>Další protesty ukázaly sílící odpor části společnosti vůči krajně pravicové politice.</p>
-    content:
-      type: image
-      src: images/demonstrace_proti_afd_2.png
-  
-  - text: |
-      <p>Koláž zachycující demonstrace po celém Německu.</p>
-    content:
-      type: image
-      src: images/demonstrace_proti_afd_kolaz.png
+      src: images/cartogram_germany_turnout.png
 
