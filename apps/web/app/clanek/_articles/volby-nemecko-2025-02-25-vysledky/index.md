@@ -8,4 +8,6 @@ filter: ["analýza"]
 tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
 ---
 
+V neděli 23. února 2025 se v Německu konaly parlamentní volby. Pokud po rozpadu koalice sociálních demokratů, Zelených a liberálů, k němuž došlo loni v listopadu, měly nynější předčasné volby nepříjemnou situaci plnou hádek vyřešit, bez velkých ústupků všech aktérů se tak nestane.
+
 <ScrollyTelling yamlFile="scrollytelling.yaml" />
