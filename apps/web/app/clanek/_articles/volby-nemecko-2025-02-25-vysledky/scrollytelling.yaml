@@ -27,7 +27,7 @@ steps:
       <p>Velká sídla – <strong><span style="background-color:#BE3075; color:#ffffff;">Berlín</span></strong> nebo <strong><span style="background-color:#BE3075; color:#ffffff;">Lipsko</span></strong> – ukazují, že AfD zde není zase tak silná jako ve zbytku východní části Německa. </p>
     content:
       type: image
-      src: images/cartogram_germany_winner_1.png
+      src: images/cartogram_germany_winner.png
   
   - text: |
       <p>Celkové výsledky voleb</p>
