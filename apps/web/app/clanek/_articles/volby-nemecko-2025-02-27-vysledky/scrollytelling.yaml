@@ -1,0 +1,109 @@
+# Configuration for the scrollytelling section
+textAlignment: right
+
+defaultContent:
+  type: image
+  src: images/map_germany_winner.png
+
+steps:
+  - text: |
+      V “klasické” volební mapě se výsledky voleb viditelně liší přesně podél někdejší železné opony. V bývalém Západním Německu drtivě vítězí křesťansko-demokratická <span style="background-color:#151518; color:white">CDU/CSU</span> a ve východní části Německa je to krajně pravicová <span style="background-color:#00A2DE; color:white">Alternativa pro Německo</span> (AfD).
+    content:
+      type: image
+      src: images/map_germany_winner.png
+  
+  - text: |
+      Ale je to trochu iluze.
+    content:
+      type: image
+      src: images/map_germany_winner.png
+
+  - text: |
+      <p>Takto vypadá klasické zobrazení na mapě, kde se odráží geografická <strong>rozloha regionů</strong> - jenže velká města s velkým počtem obyvatel samozřejmě takovou plochu nemají a síla jejich voličů zde na obrázku zaniká. </p>
+      <p>Tato mapa tedy logicky ukazuje hlavně voliče <strong>v menších městech a na venkově</strong>.</p>
+      <p>Vidíte pětimilionový Berlín?</p>
+    content:
+      type: image
+      src: images/map_germany_winner.png
+
+  - text: |
+      <p>V tomto <i>kartogramu</i> se naopak zobrazuje skutečná síla hlasů, nikoli geografická plocha. A výsledky voleb v něm vypadají o dost jinak.</p>
+      <p>Jeden hexagon <strong>⬡</strong> představuje jeden volební obvod. Každý tento obvod je zhruba stejně velký a volí v něm <strong>přibližně stejný počet voličů</strong> (cca 200 tisíc).</p>
+    content:
+      type: image
+      src: images/cartogram_germany_winner.png
+
+  - text: |
+      <p>Jak je vidět, neplatí, že by ta část Německa, která prožila čtyřicet let v komunistické totalitě, nyní volila plošně extrémní pravici.</p>
+      <p>V největších městech – (východním) <span style="background-color:#BE3075; color:white">Berlíně</span> nebo <span style="background-color:#BE3075; color:white">Lipsku</span> – naopak zvítězila levicová <span style="background-color:#BE3075; color:white">Die Linke</span>.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_winner.png
+
+  - text: |
+      <p>Na západě zase v mnoha velkých městech vítězili také <span style="background-color:#E3000F; color:white">SPD</span> a <span style="background-color:#409A3C; color:white">Zelení</span>:<br/> např. <span style="background-color:#E3000F; color:white">Hamb</span><span style="background-color:#409A3C; color:white">urg</span>, hustě obydlená oblast <span style="background-color:#E3000F; color:white">Porúří</span>, <span style="background-color:#409A3C; color:white">Kolín (Köln)</span> nebo <span style="background-color:#E3000F; color:white">Hannover</span>.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_winner.png
+
+  - text: |
+      Pokud se podíváme na podporu pro jednotlivé strany, tak vítěz voleb <span style="background-color:#151518; color:white">CDU/CSU</span> byl tradičně nejsilnější <strong>v sousedním Bavorsku</strong>, kde v 11 obvodech získali přes 40 % hlasů.</p>
+
+      <p><strong>Tmavší barva</strong> znamená vyšší podporu strany.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_cdu_csu.png
+
+  - text: |
+      <p>Zajímavostí je, že <span style="background-color:#151518; color:white">CDU/CSU</span> jsou dvě strany. V celém Německu působí <span style="background-color:#151518; color:white">CDU</span> (Křesťansko-demokratická unie), kromě Bavorska, kde je samostatná <span style="background-color:#151518; color:white">CSU</span> (Křesťansko-sociální unie).</p>
+      
+      <p>V Česku známe něco obdobného - celostátní český STAN a jeho liberecká "část" SLK.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_cdu_csu.png
+
+  - text: |
+      <p><span style="background-color:#00A2DE; color:white">AfD</span> byla nejsilnější na východě mimo největší města.</p>
+      <p>Úplně nejvyšší zisky (přes 45 %) získalo v saských obvodech na hranici s Českem: Görlitz (Zhořelec), Bautzen (Budyšín), v oblasti Saského Švýcarska nebo v Krušných Horách.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_afd.png
+
+  - text: |
+      <p>Co tedy ten “<i>radikální Ostblock</i>”?</p>
+      <p>Už vidíme, že u <span style="background-color:#00A2DE; color:white">AfD</span> nejde o celé bývalé Východní Německo, jak zkresleně zobrazují “klasické” volební mapy, ale jen o jeho část.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_afd.png
+
+  - text: |
+      <p>Podívejme se ale ještě na zisky oproti minulým volbám 2021. To <span style="background-color:#00A2DE; color:white">AfD</span> získala 10,3 % hlasů, letos to bylo 20,8 %.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_afd.png
+
+  - text: |
+      <p>Vyznačíme obvody, kde <span style="background-color:#00A2DE; color:white">AfD</span> <span style="background-color:#EFB704;">získalo voliče oproti minulých volbám</span>.<p>
+      <p><strong>Což jsou všechny</strong>.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_afd_changes.webp
+
+  - text: |
+      <p><span style="background-color:#00A2DE; color:white">AfD</span> získala nové voliče vcelku rovnoměrně v celém Německu.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_afd_changes.webp
+
+  - text: |
+      <p>Stejná mapa pro vítěze voleb <span style="background-color:#151518; color:white">CDU/CSU</span>  už není tak jednoznačná. Vedle <span style="background-color:#EFB704;">zisků</span> ve většině Německa také v některých východních obvodech <span style="background-color:#4C4F8E;color:white;">ztratila</span>.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_cducsu_changes.webp
+
+  - text: |
+      <p>Projděte si konkrétní obvody a jednotlivé strany v interaktivních kartogramech níže.</p>
+    content:
+      type: image
+      src: iimages/cartogram_germany_2025_cducsu_changes.webp
+
