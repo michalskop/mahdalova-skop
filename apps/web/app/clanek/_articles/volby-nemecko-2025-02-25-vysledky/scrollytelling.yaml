@@ -16,12 +16,8 @@ steps:
   
   - text: |
       <p>Běžné mapy volebních výsledků na první pohled ukazují, že v bývalém Východním Německu zvítězila krajní pravice. Alternativa pro Německo (AfD) v řadě oblastí skutečně dominovala, což vypadá vizuálně nápadně. Jenže běžné mapy mohou být zavádějící, protože fyzická velikost oblasti neodráží skutečnou sílu voličů.</p>
-    content:
-      type: image
-      src: images/map_cartogram_germany_winner.png
-
-  - text: |
       <p>Při pohledu na kartogramy, které reflektují skutečnou sílu hlasů, nikoli geografické plochy, vypadají výsledky o dost jinak.</p>
+
     content:
       type: image
       src: images/cartogram_germany_winner.png
