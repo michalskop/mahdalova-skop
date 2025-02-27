@@ -9,7 +9,7 @@ defaultContent:
 # Steps in the scrollytelling narrative
 steps:
   - text: |
-      V neděli se v Německu konaly parlamentní volby. Mapy s výsledky na první pohled naznačují, že v bývalém Východním Německu zvítězila krajně pravicová Alternativa pro Německo (AfD). 
+      Mapy s výsledky na první pohled naznačují, že v bývalém Východním Německu zvítězila krajně pravicová Alternativa pro Německo (AfD). 
     content:
       type: image
       src: images/map_germany_winner.png
