@@ -26,7 +26,7 @@ Dnes se očekává, že vládu sestaví tradiční strany  CDU/CSU  a  SPD.
 <iframe src='https://flo.uri.sh/visualisation/21811823/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="700px" allowFullScreen></iframe>
 
 ```box
-Německé volby: [Radikální a rozdělená tiktoková generace](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2025-02-28-tiktokova-generace)
+<strong>Německé volby</strong>: [Radikální a rozdělená tiktoková generace](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2025-02-28-tiktokova-generace)
 
 Dále jsme psali o rozhovoru Elona Maska se šéfkou krajně pravicové strany AfD:
 [Glosa: Hilter nebyl komunista](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-09-hitler-nebyl-komunista)
@@ -34,4 +34,24 @@ Dále jsme psali o rozhovoru Elona Maska se šéfkou krajně pravicové strany A
 Světoznámý spisovatel a filosof Umberto Eco (1932-2016), který jako chlapec vyrůstal v Mussoliniho Itálii, nám zanechal cenný nástroj - definoval charakteristické znaky fašismu:
 [Znaky fašismu podle Umberta Eca](https://www.mahdalova-skop.cz/clanek/explainer-2025-01-06-znaky-fasismu-podle-eca)
 
+```
+
+```box
+### 🇩🇪 Německé strany
+
+<span style="background-color: #151518; color: white;">CDU/CSU</span> - konzervativní blok křesťanských demokratů, tradičně hlavní síla německé pravice
+
+<span style="background-color: #00a2de; color: white;">AfD</span> – protestní pravicově populistická strana, pro-putinovská, ostře kritická k migraci a EU
+
+<span style="background-color: #e3000f; color: white;">SPD</span>  – sociální demokraté, historicky silná levice, dnes spíše umírněné středolevé uskupení
+
+<span style="background-color: #409a3c; color: white;"> Zelení </span>  – ekologické hnutí, v počátcích protestní uskupení, dnes etablovaná středolevá strana
+
+ <span style="background-color: #be3075; color: white;">Die Linke</span>  – demokratická levice, částečný nástupce východoněmecké PDS, dnes prosazuje sociální spravedlnost
+
+Mimo parlament:
+
+<span style="background-color: #792351; color: white;">Aliance Sahry Wagenknecht (BSW)</span>  – nová levicově populistická strana, vymezuje se proti EU,  globalizaci, migraci a neoliberální ekonomice či politice Zelených
+
+<span style="background-color: #eedc00; color: black;">FDP</span>  – liberálové, prosazují volný trh, slabší stát a digitální modernizaci
 ```
