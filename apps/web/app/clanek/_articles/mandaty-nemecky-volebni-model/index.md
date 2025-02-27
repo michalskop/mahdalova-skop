@@ -6,7 +6,7 @@ excerpt: "Od posledních všeobecných voleb zpracováváme všechny relevantní
 coverImage: "images/mandaty-nemecko-poll-of-polls-pruzkumy-2025.jpg"
 filter: ["analýza"]
 tags: ["mandáty", "průzkumy", "volby", "poll of polls", "volební model", "Spolkový sněm", "Parlament", "Německo"]
-promoted: 50
+promoted: 0
 ---
 Od posledních všeobecných voleb zpracováváme všechny relevantní průzkumy a zaznamenáváme vývoj šancí jednotlivých politických stran. Data pravidelně aktualizujeme s každým novým průzkumem.
 
