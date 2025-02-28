@@ -54,4 +54,5 @@ Mimo parlament:
 <span style="background-color: #792351; color: white;">Aliance Sahry Wagenknecht (BSW)</span>  – nová levicově populistická strana, vymezuje se proti EU,  globalizaci, migraci a neoliberální ekonomice či politice Zelených
 
 <span style="background-color: #eedc00; color: black;">FDP</span>  – liberálové, prosazují volný trh, slabší stát a digitální modernizaci
+
 ```
