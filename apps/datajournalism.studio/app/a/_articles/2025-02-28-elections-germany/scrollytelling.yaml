@@ -1,0 +1,106 @@
+# Configuration for the scrollytelling section
+textAlignment: right
+
+defaultContent:
+  type: image
+  src: images/map_germany_winner.webp
+
+steps:
+  - text: |
+      In the "classic" electoral map, the election results visibly differ exactly along the former Iron Curtain. In former West Germany, the Christian Democratic <span style="background-color:#151518; color:white">CDU/CSU</span> overwhelmingly wins, and in the eastern part of Germany, it's the far-right <span style="background-color:#00A2DE; color:white">Alternative for Germany</span> (AfD).
+    content:
+      type: image
+      src: images/map_germany_winner.webp
+  
+  - text: |
+      But this is somewhat of an illusion.
+    content:
+      type: image
+      src: images/map_germany_winner.webp
+
+  - text: |
+      <p>This is how the classic map display looks, reflecting the geographical <strong>area of regions</strong> - but large cities with large populations obviously don't have such an area, and the strength of their voters disappears in this image.</p>
+      <p>This map therefore logically shows mainly voters <strong>in smaller towns and rural areas</strong>.</p>
+      <p>Can you see the five-million-strong Berlin?</p>
+    content:
+      type: image
+      src: images/map_germany_winner.webp
+
+  - text: |
+      <p>In this <i>cartogram</i>, the actual voting strength is displayed, not the geographical area. And the election results look quite different in it.</p>
+      <p>One hexagon <strong>⬡</strong> represents one electoral district. Each of these districts is roughly the same size and has <strong>approximately the same number of voters</strong> (about 200,000).</p>
+    content:
+      type: image
+      src: images/cartogram_germany_winner.webp
+
+  - text: |
+      <p>As you can see, it's not true that the part of Germany that experienced forty years of communist totalitarianism is now voting for the extreme right across the board.</p>
+      <p>In the largest cities – (eastern) <span style="background-color:#BE3075; color:white">Berlin</span> or <span style="background-color:#BE3075; color:white">Leipzig</span> – the left-wing <span style="background-color:#BE3075; color:white">Die Linke</span> won instead.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_winner.webp
+
+  - text: |
+      <p>In the west, many large cities also saw victories for <span style="background-color:#E3000F; color:white">SPD</span> and the <span style="background-color:#409A3C; color:white">Greens</span>:<br/> e.g., <span style="background-color:#E3000F; color:white">Hamb</span><span style="background-color:#409A3C; color:white">urg</span>, the densely populated <span style="background-color:#E3000F; color:white">Ruhr</span> area, <span style="background-color:#409A3C; color:white">Cologne (Köln)</span> or <span style="background-color:#E3000F; color:white">Hannover</span>.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_winner.webp
+
+  - text: |
+      Looking at the support for individual parties, the election winner <span style="background-color:#151518; color:white">CDU/CSU</span> was traditionally strongest <strong>in neighboring Bavaria</strong>, where they received over 40% of the votes in 11 districts.</p>
+
+      <p><strong>Darker color</strong> means higher party support.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_cdu_csu.png
+
+  - text: |
+      <p>An interesting fact is that <span style="background-color:#151518; color:white">CDU/CSU</span> are two parties. <span style="background-color:#151518; color:white">CDU</span> (Christian Democratic Union) operates throughout Germany, except in Bavaria, where there is the independent <span style="background-color:#151518; color:white">CSU</span> (Christian Social Union).</p>
+    content:
+      type: image
+      src: images/cartogram_germany_cdu_csu.png
+
+  - text: |
+      <p><span style="background-color:#00A2DE; color:white">AfD</span> was strongest in the east outside the largest cities.</p>
+      <p>The highest gains (over 45%) were in Saxon districts on the border with Czechia: Görlitz, Bautzen, in the area of Saxon Switzerland or in the Ore Mountains.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_afd.png
+
+  - text: |
+      <p>So what about that "<i>radical Eastern Bloc</i>"?</p>
+      <p>We can now see that with <span style="background-color:#00A2DE; color:white">AfD</span>, it's not about the entire former East Germany, as the "classic" electoral maps distortedly show, but only about a part of it.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_afd.png
+
+  - text: |
+      <p>But let's also look at the gains compared to the previous 2021 elections. Back then, <span style="background-color:#00A2DE; color:white">AfD</span> received 10.3% of the votes, this year it was 20.8%.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_afd.png
+
+  - text: |
+      <p>We'll highlight districts where <span style="background-color:#00A2DE; color:white">AfD</span> <span style="background-color:#EFB704;">gained voters compared to the previous elections</span>.<p>
+      <p><strong>Which is all of them</strong>.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_afd_changes.png
+
+  - text: |
+      <p><span style="background-color:#00A2DE; color:white">AfD</span> gained new voters quite evenly across all of Germany.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_afd_changes.png
+
+  - text: |
+      <p>The same map for the election winner <span style="background-color:#151518; color:white">CDU/CSU</span> is not as clear-cut. Along with <span style="background-color:#EFB704;">gains</span> in most of Germany, they also <span style="background-color:#4C4F8E;color:white;">lost</span> in some eastern districts.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_cducsu_changes.png
+
+  - text: |
+      <p>Explore specific districts and individual parties in the interactive cartograms below.</p>
+    content:
+      type: image
+      src: images/cartogram_germany_2025_cducsu_changes.png
