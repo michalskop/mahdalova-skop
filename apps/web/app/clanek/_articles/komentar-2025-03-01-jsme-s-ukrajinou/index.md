@@ -14,7 +14,7 @@ Donald Trump tvrdí, že není ani proruský, ani proukrajinský. Zamlčuje ale 
 
 Setkání v Oválné pracovně nebylo o hledání řešení, ale o ponižování napadeného státu. Trump a jeho viceprezident JD Vance přinutili Zelenského k obhajobě sebe sama, jako by Ukrajina byla v této válce viníkem. Šlo o demonstraci moci, nikoli o diplomatické vyjednávání. Trumpovi nejde o obranu Ukrajiny ani o její budoucnost, ve skutečnosti se distancuje i od morální odpovědnosti a zkouší pro sebe z války udělat obchodní příležitost.
 
-Trumpova rétorika obviňování oběti má jasné důsledky. Ukrajina musí dokazovat svou „vděčnost“, zatímco Rusko dostává signál, že se vyplatí vést válku, dokud se Západ neunaví. Americká diplomacie, kdysi založená na principech mezinárodního práva a solidarity mezi spojenci, se mění v transakční vztah, kde hodnota partnerství závisí na okamžitém zisku.
+Taková rétorika obviňování oběti má jasné důsledky. Ukrajina by podle Trumpa měla dokazovat svou „vděčnost“, zatímco Rusko dostává signál, že se vyplatí vést válku, dokud se Západ neunaví. Americká diplomacie, kdysi založená na principech mezinárodního práva a solidarity mezi spojenci, se mění v transakční vztah, kde hodnota partnerství závisí na okamžitém zisku.
 
 Tento přístup nejen oslabuje důvěru evropských spojenců v USA, ale také posiluje putinovské Rusko. Ukazuje mu, že Západ je rozdělený a že stačí vyčkávat. A co je nejhorší, vytváří nebezpečný precedent: pokud se Amerika takto chová k napadené zemi dnes, jaké záruky bezpečnosti mohou očekávat její další spojenci zítra?
 
