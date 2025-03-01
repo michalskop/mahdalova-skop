@@ -25,3 +25,5 @@ Ukrajina nepotřebuje ponižování a nátlak, ale férové podmínky a bezpečn
 My jsme s Ukrajinou.
 
 Kateřina Mahdalová & Michal Škop
+
+![obrázek](images/ukrajina-zelensky.jpg)
