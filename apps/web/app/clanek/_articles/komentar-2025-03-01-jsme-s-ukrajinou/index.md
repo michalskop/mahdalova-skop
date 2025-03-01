@@ -12,7 +12,7 @@ Role Spojených států coby garanta stability se změnila. Trumpova diplomacie 
 
 Donald Trump tvrdí, že není ani proruský, ani proukrajinský. Zamlčuje ale základní fakt: Ukrajina je napadená země a Rusko je agresor. Když vůdce svobodného světa odmítá rozlišovat mezi útočníkem a obětí, přestává být garantem stability, a stává se naopak destabilizujícím faktorem.
 
-Setkání v Oválné pracovně nebylo o hledání řešení, ale o ponižování napadeného státu. Trump a jeho viceprezident JD Vance přinutili Zelenského k obhajobě sebe sama, jako by Ukrajina byla v této válce viníkem. Šlo o demonstraci moci, nikoli o diplomatické vyjednávání. Trumpovi nejde o obranu Ukrajiny ani o její budoucnost, ve skutečnosti se distancuje i od morální odpovědnosti a zkouší pro sebe z války udělat obchodní příležitost.
+Setkání v Oválné pracovně nebylo o hledání řešení, ale o ponižování napadeného státu. Trump a jeho viceprezident JD Vance nevybíravě nutili Zelenského k obhajobě sebe sama, jako by Ukrajina byla v této válce viníkem. Šlo o demonstraci moci, nikoli o diplomatické vyjednávání. Trumpovi nejde o obranu Ukrajiny ani o její budoucnost, ve skutečnosti se distancuje i od morální odpovědnosti a zkouší pro sebe z války udělat obchodní příležitost.
 
 Taková rétorika obviňování oběti má jasné důsledky. Ukrajina by podle Trumpa měla dokazovat svou „vděčnost“, zatímco Rusko dostává signál, že se vyplatí vést válku, dokud se Západ neunaví. Americká diplomacie, kdysi založená na principech mezinárodního práva a solidarity mezi spojenci, se mění v transakční vztah, kde hodnota partnerství závisí na okamžitém zisku.
 
