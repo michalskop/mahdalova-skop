@@ -20,7 +20,7 @@ Tento přístup nejen oslabuje důvěru evropských spojenců v USA, ale také p
 
 Putin toho už hodně ztratil a snaží se svůj status poraženého změnit na uznávaného partnera. Trump mu pomáhá, ať už vědomě nebo ze sebestřednosti. Pokud Spojené státy ustoupí, nejen že zradí svůj historický závazek chránit svobodu a demokracii, ale také ohrozí samotný světový řád, který po desetiletí pomáhaly budovat.
 
-Ukrajina nepotřebuje ponižování a nátlak, ale férové podmínky a bezpečnostní záruky. Spojené státy stále mohou hrát klíčovou roli – ale pouze pokud pochopí, že skutečná síla nespočívá v obchodování s osudy národů, nýbrž v obraně hodnot, na nichž stojí svobodný svět.
+Ukrajina nepotřebuje ponižování a nátlak, ale férové podmínky a bezpečnostní záruky. Spojené státy nyní nechápou, že skutečná síla nespočívá v obchodování s osudy národů, nýbrž v obraně hodnot, na nichž stojí svobodný svět.
 
 My jsme s Ukrajinou.
 
