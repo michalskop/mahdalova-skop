@@ -3,7 +3,7 @@ title: "V Kanadě se vzedmula liberální vlna"
 date: "2025-03-03"
 author: "Mahdalová & Škop"
 excerpt: "Hned na začátku volebního roku došlo v Kanadě k velice rychlému zvratu ve voličských náladách."
-coverImage: "images/kanada-volebni-model-brezen-2025.png"
+coverImage: "images/kanada-volebni-model-brezen-2025.jpg"
 filter: ["kontext"]
 tags: ["číslo dne", "mandáty", "průzkumy", "volby", "poll of polls", "volební model", "Parlament", "Kanada", "liberálové", "politika"]
 promoted: 10
