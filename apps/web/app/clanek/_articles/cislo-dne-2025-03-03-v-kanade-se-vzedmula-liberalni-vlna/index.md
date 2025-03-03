@@ -16,3 +16,5 @@ Ještě před několika týdny se zdálo, že Liberální strana Kanady (LPC) sm
 Události posledního měsíce však tento vývoj zásadně narušily. Donald Trump, který v lednu znovu převzal úřad amerického prezidenta, učinil několik kontroverzních prohlášení namířených proti Kanadě. Hrozby 25% cel na kanadské zboží, obvinění Kanady z pašování fentanylu a nelegálních migrantů a spekulace o možném připojení Kanady jako 51. státu USA vyvolaly silnou reakci mezi voliči.
 
 Trumpovy výroky zásadně změnily vnímání politické scény. Poilievre, který dříve těžil ze spřízněnosti s Trumpem a měl podporu osobností jako Elon Musk nebo Joe Rogan, se svou kampaní založené na hesle „Kanada je rozbitá“, ztrácí svá hlavní témata založená ekonomice. Místo nich nastupují kanadská suverenita a vztahy s USA. Předvolební dynamiku Kanady nyní dramaticky ovlivňuje zahraniční politika.
+
+![Kanada - volební model](images/kanada-volebni-model-brezen-2025.png)
