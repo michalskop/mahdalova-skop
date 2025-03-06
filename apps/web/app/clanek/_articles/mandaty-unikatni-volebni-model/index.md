@@ -35,5 +35,5 @@ Volební model odráží aktuální rozložení voličské přízně a zahrnuje 
 Důležitou roli hrají voliči, kteří ještě nejsou rozhodnuti nebo váhají mezi stranami. Jejich rozhodnutí má zásadní vliv na přesnost průzkumů – strany, které dokážou aktivizovat tyto nerozhodnuté voliče či nevoliče, mohou nakonec dosáhnout lepšího volebního výsledku.
 ```
 
-<iframe src='[https://flo.uri.sh/story/2689197/embed](https://flo.uri.sh/visualisation/20760946/)' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="900px" allowFullScreen></iframe>
+<iframe src='https://flo.uri.sh/visualisation/20760946/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="900px" allowFullScreen></iframe>
 
