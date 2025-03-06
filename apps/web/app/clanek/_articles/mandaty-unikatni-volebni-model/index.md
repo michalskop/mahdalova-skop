@@ -14,7 +14,7 @@ Na úvod důležité upozornění: Průzkumy zachycují nálady veřejnosti v do
 
 Od srpna 2024 sledujeme „závod“ nejen podle jednotlivých stran, ale také podle koalic, které se očekávají ve volbách do Sněmovny v roce 2025. Tento pohled lépe odráží aktuální politickou situaci – například koalice Spolu (ODS, TOP 09 a KDU-ČSL) či nové - a už zase zaniklé - spojenectví hnutí Přísaha a Motoristů.
 
-<iframe src='https://flo.uri.sh/story/2689197/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="600px" allowFullScreen></iframe>
+<iframe src='https://flo.uri.sh/story/2689197/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="900px" allowFullScreen></iframe>
 
 ```box
 #### Jak ovládat graf a jak ho interpretovat
@@ -34,3 +34,6 @@ Volební model odráží aktuální rozložení voličské přízně a zahrnuje 
 
 Důležitou roli hrají voliči, kteří ještě nejsou rozhodnuti nebo váhají mezi stranami. Jejich rozhodnutí má zásadní vliv na přesnost průzkumů – strany, které dokážou aktivizovat tyto nerozhodnuté voliče či nevoliče, mohou nakonec dosáhnout lepšího volebního výsledku.
 ```
+
+<iframe src='[https://flo.uri.sh/story/2689197/embed](https://flo.uri.sh/visualisation/20760946/)' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="900px" allowFullScreen></iframe>
+
