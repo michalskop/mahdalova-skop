@@ -6,7 +6,7 @@ excerpt: "V neděli se konaly německé parlamentní volby. Na první pohled se 
 coverImage: "images/cartogram_germany_winner.png"
 filter: ["analýza"]
 tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
-promoted: 80
+promoted: 60
 ---
 
 V neděli 23. února 2025 se v Německu konaly předčasné parlamentní volby. Na první pohled se může zdát, že se někdejší Východní Německo zradikalizovalo, jenže to je dost zkreslený pohled.
