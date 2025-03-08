@@ -1,0 +1,143 @@
+textAlignment: right
+
+defaultContent:
+  type: iframe
+  src: https://flo.uri.sh/visualisation/21996948/embed
+  width: 100%
+  height: 600px
+  allowFullScreen: true
+
+steps:
+  - text: |
+      <p>Volilo se ve 13 krajích – Praha má vlastní termín.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996948/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Jak to v krajích funguje?</p>
+      <p><strong>Hejtmani a hejtmanky</strong> – šéfují kraji <br/>(„krajský premiér“)</p>
+      <p><strong>Krajská rada</strong> – řídí běžný provoz <br/>(„krajská vláda“)</p>
+      <p><strong>Zastupitelstvo</strong> – rozhoduje o klíčových věcech <br/>(„krajský parlament“)</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996948/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p><strong>Hejtmanky</strong>? Pouze 2 z 14, tedy <strong>14 %</strong>.</p>
+      <p>V krajských <strong>radách</strong> je žen <strong>20 %</strong>.</p>
+      <p>Mezi <strong>zastupiteli</strong> tvoří ženy <strong>22 %</strong>.</p>
+      <p>Na <strong>kandidátkách</strong> jich bylo už <strong>29 %</strong>.</p>
+      <p>Celkem je žen v populaci lehce <strong>přes 50 %</strong>. Mezi <strong>voliči</strong> je to stejné.</p>
+      
+      
+      
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996948/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Nejsou ale všechny kraje stejné.</p>
+      <p>V některých krajích je žen ve vedení víc, jinde žádné.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996941/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Extrémy? Oba na západě Čech.</p>
+      <p><strong>Karlovarský kraj</strong> má v radě většinu žen.</p>
+      <p><strong>Plzeňský kraj</strong> nemá v radě žádnou ženu a v zastupitelstvu jen 11 %.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996941/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>A v Plzni nejsou sami.</p>
+      <p>V <strong>Jihomoravském kraji</strong> a na <strong>Vysočině</strong> je v radě také <strong>přesně 0 žen</strong>.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996941/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>„Prostě to tak vyšlo“?</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996941/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Často slýcháme, že „ženy do politiky nechtějí“.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996941/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Nebo že „u nás je to prostě jinak“.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21996941/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Podívejme se k sousedům.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21993414/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>🇦🇹 Rakousko a 🇨🇿 Česko mají podobnou historii i kulturu.</p>
+      <p>Přesto je v Rakousku v regionální politice <strong>mnohem více žen</strong>.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21993414/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>A 🇩🇪 Německo?</p>
+      <p>Tam už je běžné, že v zemských vládách je <strong>mužů a žen přibližně stejně</strong>.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21993414/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
+
+  - text: |
+      <p>Takže „prostě to tak vyšlo“?</p>
+      <p>Spíš je to o tom, jaká pravidla a podmínky nastavíme.</p>
+    content:
+      type: iframe
+      src: https://flo.uri.sh/visualisation/21993414/embed
+      width: 100%
+      height: 600px
+      allowFullScreen: true
