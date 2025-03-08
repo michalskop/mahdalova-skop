@@ -50,18 +50,18 @@ steps:
       <p>V některých krajích je žen ve vedení víc, jinde žádné.</p>
     content:
       type: iframe
-      src: https://flo.uri.sh/visualisation/21996941/embed
+      src: https://flo.uri.sh/visualisation/21998222/embed
       width: 100%
       height: 600px
       allowFullScreen: true
 
   - text: |
       <p>Extrémy? Oba na západě Čech.</p>
-      <p><strong>Karlovarský kraj</strong> má v radě většinu žen.</p>
+      <p><strong>Karlovarský kraj</strong> má jediný v radě většinu žen.</p>
       <p><strong>Plzeňský kraj</strong> nemá v radě žádnou ženu a v zastupitelstvu jen 11 %.</p>
     content:
       type: iframe
-      src: https://flo.uri.sh/visualisation/21996941/embed
+      src: https://flo.uri.sh/visualisation/21998222/embed
       width: 100%
       height: 600px
       allowFullScreen: true
@@ -71,7 +71,7 @@ steps:
       <p>V <strong>Jihomoravském kraji</strong> a na <strong>Vysočině</strong> je v radě také <strong>přesně 0 žen</strong>.</p>
     content:
       type: iframe
-      src: https://flo.uri.sh/visualisation/21996941/embed
+      src: https://flo.uri.sh/visualisation/21998222/embed
       width: 100%
       height: 600px
       allowFullScreen: true
@@ -80,7 +80,7 @@ steps:
       <p>„Prostě to tak vyšlo“?</p>
     content:
       type: iframe
-      src: https://flo.uri.sh/visualisation/21996941/embed
+      src: https://flo.uri.sh/visualisation/21998222/embed
       width: 100%
       height: 600px
       allowFullScreen: true
@@ -89,7 +89,7 @@ steps:
       <p>Často slýcháme, že „ženy do politiky nechtějí“.</p>
     content:
       type: iframe
-      src: https://flo.uri.sh/visualisation/21996941/embed
+      src: https://flo.uri.sh/visualisation/21998222/embed
       width: 100%
       height: 600px
       allowFullScreen: true
@@ -98,7 +98,7 @@ steps:
       <p>Nebo že „u nás je to prostě jinak“.</p>
     content:
       type: iframe
-      src: https://flo.uri.sh/visualisation/21996941/embed
+      src: https://flo.uri.sh/visualisation/21998222/embed
       width: 100%
       height: 600px
       allowFullScreen: true
