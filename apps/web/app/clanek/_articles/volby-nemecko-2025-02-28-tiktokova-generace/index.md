@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Nejmladší “tiktoková” generace v německých volbách volila - shodně s Tiktokem."
 coverImage: "images/main.webp"
 filter: ["analýza"]
-tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita", "tiktok"]
+tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita", "tiktok", 'ženy', 'muži', 'politika']
 promoted: 70
 ---
 
