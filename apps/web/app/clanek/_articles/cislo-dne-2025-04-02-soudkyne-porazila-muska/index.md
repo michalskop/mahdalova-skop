@@ -22,3 +22,5 @@ Její vítězství mění poměr sil ve Wisconsinském nejvyšším soudu, kde s
 Kampaň, kterou demokraté přejmenovali na „Lid vs. Musk“, ukázala, že přímý střet mezi technologickým magnátem a liberální kandidátkou dokáže výrazně mobilizovat voliče. A výsledky naznačují, že ne vždy platí, že vítězí ten, kdo má víc peněz.
 
 Výhra Susan Crawford zároveň upevňuje převahu liberálně smýšlejících soudců u Wisconsinského nejvyššího soudu, kde nyní drží většinu čtyři ku třem. Přestože se jedná o oficiálně nestranický orgán, ideologické rozdělení mezi soudci je patrné – jednotliví kandidáti bývají vnímáni skrze své postoje k zásadním společenským otázkám. Kandidovala s podporou Demokratické strany, která dlouhodobě stojí za liberálními uchazeči o soudní funkce.
+
+![Číslo dne: Soudkyně porazila Muska](images/cislo-dne-soudkyne-porazila-muska.jpg)
