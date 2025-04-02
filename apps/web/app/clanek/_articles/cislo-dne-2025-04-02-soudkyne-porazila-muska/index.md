@@ -19,4 +19,4 @@ Susan Crawford v kampani nazvala svého oponenta „Elon Schimel“ a přetavila
 
 Vítězství Crawford mění poměr sil ve Wisconsinském nejvyšším soudu, kde se nyní očekává rozhodování o klíčových tématech jako potratová legislativa či práva odborů. Crawford je známá svou kritikou zrušení rozsudku Roe v. Wade a v minulosti zastupovala Planned Parenthood i učitelské odbory v řízení proti tzv. zákonu Act 10, který omezil kolektivní vyjednávání.
 
-Kampaň, kterou Demokraté přejmenovali na „Lid vs. Musk“, ukázala, že přímý střet mezi technologickým magnátem a liberální kandidátkou dokáže výrazně mobilizovat voliče. A výsledky naznačují, že ne vždy platí, že vítězí ten, kdo má víc peněz.
+Kampaň, kterou demokraté přejmenovali na „Lid vs. Musk“, ukázala, že přímý střet mezi technologickým magnátem a liberální kandidátkou dokáže výrazně mobilizovat voliče. A výsledky naznačují, že ne vždy platí, že vítězí ten, kdo má víc peněz.
