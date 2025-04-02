@@ -3,7 +3,7 @@ title: "Číslo dne: 20 milionů dolarů (nestačilo)"
 date: "2025-04-02"
 author: "Mahdalová & Škop"
 excerpt: "Aneb Soudkyně Susan Crawford porazila Muska. Šedesátiletá soudkyně z Madisonu Susan Crawford zvítězila v nejdražší soudní volbě v historii USA."
-coverImage: "images/kanada-volebni-model-brezen-2025.jpg"
+coverImage: "images/cislo-dne-soudkyne-porazila-muska.jpg"
 filter: ["kontext"]
 tags: ["číslo dne", "USA", "volby", "Nejvyšší soud Wisconsin", "Elon Musk", "Susan Crawford", "liberálové", "politika"]
 promoted: 10
