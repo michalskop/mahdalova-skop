@@ -9,7 +9,7 @@ tags: ["číslo dne", "USA", "volby", "Nejvyšší soud Wisconsin", "Elon Musk",
 promoted: 10
 ---
 
-Aneb Soudkyně Susan Crawford porazila Muska. Šedesátiletá soudkyně z Madisonu Susan Crawford zvítězila v nejdražší soudní volbě v historii USA.
+Aneb soudkyně Susan Crawford porazila Muska. Šedesátiletá soudkyně z Madisonu Susan Crawford zvítězila v nejdražší soudní volbě v historii USA.
 
 Do otevřeného křesla ve wisconsinském nejvyšším soudu usedne liberální právnička s dlouholetou kariérou ve státní správě i ve službách odborů a organizací hájících právo na potrat. Porazila kandidáta republikánů Brada Schimela – a s ním i jeho hlavního patrona, nejbohatšího muže planety Elona Muska.
 
