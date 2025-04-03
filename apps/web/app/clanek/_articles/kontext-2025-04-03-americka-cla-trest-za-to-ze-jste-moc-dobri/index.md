@@ -9,7 +9,7 @@ tags: ["USA", "Trump", "EU", "cla"]
 promoted: 80
 ---
 
-Prezident Trump představil nová cla na dovoz do USA — třeba 20 % na zboží z EU. Říká jim **„reciproční“**, ale ve skutečnosti to nejsou žádná reciproční cla. Jsou to **„50% cla z obchodního schodku“**, vypočtená jednoduše:
+Prezident Trump představil [nová cla na dovoz do USA](https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/) — třeba 20 % na zboží z EU. Říká jim **„reciproční“**, ale ve skutečnosti to nejsou žádná reciproční cla. Jsou to **„50% cla z obchodního schodku“**, vypočtená jednoduše:
 
 **Trumpovo clo = (obchodní deficit USA s danou zemí ÷ dovoz z té země) ÷ 2**
 
