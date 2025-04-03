@@ -9,6 +9,7 @@ tags: ["USA", "cla", "Trump", "mezinárodní obchod", "EU", "recesní riziko"]
 promoted: 80
 ---
 
+![Trumpova obchodní válka](images/trumpova-obchodni-valka-clo-world.jpg) 
 Spojené státy zavádějí **nejtvrdší obchodní opatření za desítky let**. Prezident Donald Trump oznámil 10% clo na veškerý dovoz do země a k tomu **sadu dodatečných cel na konkrétní státy** – včetně klíčových spojenců, jako jsou země EU, Japonsko, Jižní Korea nebo Kanada.
 
 Prezident tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti ale jde **ostrý příklon k jednostrannému protekcionismu** a naopak o odklon od desetiletí budované obchodní diplomacie, kterou Spojené státy samy pomáhaly formovat. Složitá síť vyjednávání, výjimek a pravidel je nahrazena jednoduchým vzorcem – a tvrdým vzkazem spojencům: přátelství nechrání před clem, rozhoduje obchodní bilance.
@@ -85,4 +86,5 @@ Podobně jako **Smoot-Hawley Act z roku 1930**, mohou i jeho cla **spustit vlnu 
 Trumpova „reciproční cla“ ve skutečnosti **trestají spojence a narušují globální stabilitu**. Nejde o spravedlivější světový obchod, ale o **vnitropolitický kalkul**, který může mít globální následky.
 
 Pro Evropu je to varování: **Spojené státy zůstávají silou, ale nikoliv předvídatelnou.** A v tomto „obráceném světě“, jak jej popsala šéfka ECB Christine Lagardeová, **se Evropa bude muset o to víc spolehnout sama na sebe.**
+
 
