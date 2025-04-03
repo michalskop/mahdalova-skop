@@ -1,8 +1,8 @@
 ---
-title: "Americká cla: Trest za to, že jste moc dobří"
+title: "Trumpova obchodní válka"
 date: "2025-04-03"
 author: "Mahdalová & Škop"
-excerpt: "Trump zavádí cla proti spojencům — podle vzorce, který trestá země s obchodním schodkem vůči USA. Svět reaguje znepokojením, Evropa s obavami a ekonomové s varováním před recesí."
+excerpt: "Trump zavádí cla proti spojencům — trestá země s obchodním schodkem vůči USA. Svět reaguje znepokojením, Evropa s obavami a ekonomové s varováním před recesí."
 coverImage: "images/trump-tariffs.png"
 filter: ["analýza"]
 tags: ["USA", "cla", "Trump", "mezinárodní obchod", "EU", "recesní riziko"]
