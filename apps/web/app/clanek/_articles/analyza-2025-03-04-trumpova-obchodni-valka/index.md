@@ -11,7 +11,7 @@ promoted: 80
 
 Spojené státy zavádějí **nejtvrdší obchodní opatření za desítky let**. Prezident Donald Trump oznámil 10% clo na veškerý dovoz do země a k tomu **sadu dodatečných cel na konkrétní státy** – včetně klíčových spojenců, jako jsou země EU, Japonsko, Jižní Korea nebo Kanada.
 
-Prezident tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti jde ale o **ostrý příklon k jednostrannému protekcionismu**, který může zásadně narušit globální obchodní řád. A pro spojence USA je to jasný signál: **žádná výjimka, žádná loajalita, jen čísla**.
+Prezident tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti ale jde **ostrý příklon k jednostrannému protekcionismu** a naopak o odklon od desetiletí budované obchodní diplomacie, kterou Spojené státy samy pomáhaly formovat. Složitá síť vyjednávání, výjimek a pravidel je nahrazena jednoduchým vzorcem – a tvrdým vzkazem spojencům: přátelství nechrání před clem, rozhoduje obchodní bilance.
 
 ## Co Trump udělal – a proč
 
