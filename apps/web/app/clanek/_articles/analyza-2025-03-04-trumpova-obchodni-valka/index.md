@@ -116,3 +116,13 @@ Pro Evropu je to varování: **Spojené státy zůstávají silou, ale nikoliv p
 Šéfka Evropské centrálmní banky Christine Lagarde mluví o „obráceném světě“, ve kterém se rozpadá dosavadní struktura – kde USA byly pilířem multilateralismu, Evropa se mohla spolehnout na pravidla, a globální obchod přispíval ke stabilitě. Nové kroky Trumpovy administrativy ohrožují tuto architekturu – a nutí Evropu budovat vlastní soběstačnost, například v oblasti energetiky, obrany i strategických technologií.
 
 
+```box
+
+## Dále k tématu:
+
+- [Číslo dne: 20 milionů dolarů (nestačilo)](https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-04-02-soudkyne-porazila-muska)  
+- [V Kanadě se vzedmula liberální vlna](https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-03-03-v-kanade-se-vzedmula-liberalni-vlna)  
+- [Timothy Snyder: Samozřejmě, že je to puč](https://www.mahdalova-skop.cz/clanek/komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc)
+- [Americká cla: Trest za to, že jste moc dobří](https://www.mahdalova-skop.cz/clanek/kontext-2025-04-03-americka-cla-trest-za-to-ze-jste-moc-dobri)
+
+```
