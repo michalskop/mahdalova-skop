@@ -15,7 +15,7 @@ Spojené státy zavádějí **nejtvrdší obchodní opatření za desítky let**
 Donald Trump tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti ale jde **ostrý příklon k jednostrannému protekcionismu** a naopak o odklon od desetiletí budované obchodní diplomacie, kterou Spojené státy samy pomáhaly formovat. Složitá síť vyjednávání, výjimek a pravidel je nahrazena jednoduchým vzorcem – a tvrdým vzkazem spojencům: přátelství nechrání před clem, rozhoduje obchodní bilance.
 
 ```box
-**Kontext:**
+####Kontext:**
 
 Trump rád používá výrazné pojmenování událostí, které mají silný emocionální náboj. Označení „Liberation Day“ má evokovat historické osvobození – přitom jde o technicko-ekonomický krok s velmi reálnými následky. Z hlediska mezinárodního práva i tradice je odstraňování tarifních bariér výsledkem složité diplomacie – multilaterální vyjednávání, kompromisy, pravidla WTO. Trump tento přístup nahrazuje vlastními vzorci a mocenským diktátem.
 ```
@@ -35,7 +35,7 @@ Oficiálně tím chce:
 Ve svém projevu mluvil o „zlatém věku americké výroby“ a obvinil i tradiční spojence, že jsou „horší než nepřátelé“. 
 
 ```box
-###Kontext:
+####Kontext:
 
 Po desetiletí byly USA jedním z hlavních zastánců volného obchodu a zakladatelským pilířem institucí jako GATT nebo Světová obchodní organizace (WTO). Nové tarify znamenají dramatický zlom v této tradici. Zvlášť překvapující je zaměření na spojence – obvykle právě oni bývají chráněni před podobnými opatřeními kvůli společné bezpečnostní a hospodářské agendě (např. NATO, G7, bilaterální smlouvy).
 ```
