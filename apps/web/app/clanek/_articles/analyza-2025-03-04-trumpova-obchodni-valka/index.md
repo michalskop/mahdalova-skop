@@ -12,7 +12,7 @@ promoted: 80
 ![Trumpova obchodní válka](images/trumpova-obchodni-valka-clo-world.jpg) 
 Spojené státy zavádějí **nejtvrdší obchodní opatření za desítky let**. Prezident Donald Trump oznámil 10% clo na veškerý dovoz do země a k tomu **sadu dodatečných cel na konkrétní státy** – včetně klíčových spojenců, jako jsou země EU, Japonsko, Jižní Korea nebo Kanada.
 
-Prezident tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti ale jde **ostrý příklon k jednostrannému protekcionismu** a naopak o odklon od desetiletí budované obchodní diplomacie, kterou Spojené státy samy pomáhaly formovat. Složitá síť vyjednávání, výjimek a pravidel je nahrazena jednoduchým vzorcem – a tvrdým vzkazem spojencům: přátelství nechrání před clem, rozhoduje obchodní bilance.
+Donald Trump tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti ale jde **ostrý příklon k jednostrannému protekcionismu** a naopak o odklon od desetiletí budované obchodní diplomacie, kterou Spojené státy samy pomáhaly formovat. Složitá síť vyjednávání, výjimek a pravidel je nahrazena jednoduchým vzorcem – a tvrdým vzkazem spojencům: přátelství nechrání před clem, rozhoduje obchodní bilance.
 
 ## Co Trump udělal – a proč
 
@@ -26,7 +26,14 @@ Oficiálně tím chce:
 - **obnovit domácí výrobu**
 - **zvýšit bezpečnost**, aby nebyly závislé na dovozu klíčových surovin a produktů
 
-Ve svém projevu mluvil o „zlatém věku americké výroby“ a obvinil i tradiční spojence, že jsou „horší než nepřátelé“.
+Ve svém projevu mluvil o „zlatém věku americké výroby“ a obvinil i tradiční spojence, že jsou „horší než nepřátelé“. 
+
+```box
+**Kontext:**
+
+Po desetiletí byly USA jedním z hlavních zastánců volného obchodu a zakladatelským pilířem institucí jako GATT nebo Světová obchodní organizace (WTO). Nové tarify znamenají dramatický zlom v této tradici. Zvlášť překvapující je zaměření na spojence – obvykle právě oni bývají chráněni před podobnými opatřeními kvůli společné bezpečnostní a hospodářské agendě (např. NATO, G7, bilaterální smlouvy).
+```
+
 
 ## Jak cla skutečně vznikají: Trumpův vzorec
 
