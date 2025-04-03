@@ -9,9 +9,9 @@ tags: ["USA", "cla", "Trump", "mezinárodní obchod", "EU", "recesní riziko"]
 promoted: 80
 ---
 
-<iframe src='https://flo.uri.sh/story/3018316/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="900px" allowFullScreen></iframe>
-
 Spojené státy zavádějí **nejtvrdší obchodní opatření za poslední desítky let**. Prezident Donald Trump oznámil 10% clo na veškerý dovoz do země a k tomu **sadu dodatečných cel na konkrétní státy** – včetně klíčových spojenců, jako jsou země EU, Japonsko, Jižní Korea nebo Kanada.
+
+<iframe src='https://flo.uri.sh/story/3018316/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="900px" allowFullScreen></iframe>
 
 Donald Trump tento den označil za „**Liberation Day**“ – den, kdy se Amerika „osvobozuje od neférových obchodních praktik světa“. Ve skutečnosti ale jde **ostrý příklon k jednostrannému protekcionismu** a naopak o odklon od desetiletí budované obchodní diplomacie, kterou Spojené státy samy pomáhaly formovat. Složitá síť vyjednávání, výjimek a pravidel je nahrazena jednoduchým vzorcem – a tvrdým vzkazem spojencům: přátelství nechrání před clem, rozhoduje obchodní bilance.
 
