@@ -21,7 +21,7 @@ Donald Trump tento den označil za „**Liberation Day**“ – den, kdy se Amer
 Trump rád používá výrazné pojmenování událostí, které mají silný emocionální náboj. Označení „Liberation Day“ má evokovat historické osvobození – přitom jde o technicko-ekonomický krok s velmi reálnými následky. Z hlediska mezinárodního práva i tradice je odstraňování tarifních bariér výsledkem složité diplomacie – multilaterální vyjednávání, kompromisy, pravidla WTO. Trump tento přístup nahrazuje vlastními vzorci a mocenským diktátem.
 ```
 
-## Co Trump udělal – a proč
+## Co to vlastně Trump udělal
 
 Trump zavedl dvě klíčová opatření:
 
@@ -36,14 +36,14 @@ Oficiálně tím chce:
 Ve svém projevu mluvil o „zlatém věku americké výroby“ a obvinil i tradiční spojence, že jsou „horší než nepřátelé“. 
 
 ```box
-#### 
+ 
 Po desetiletí byly USA jedním z hlavních zastánců volného obchodu a zakladatelským pilířem institucí jako GATT nebo Světová obchodní organizace (WTO). Nové tarify znamenají dramatický zlom v této tradici. Zvlášť překvapující je zaměření na spojence – obvykle právě oni bývají chráněni před podobnými opatřeními kvůli společné bezpečnostní a hospodářské agendě (např. NATO, G7, bilaterální smlouvy).
 
 Trump dlouhodobě tvrdí, že obchodní deficit (tedy že USA více dovážejí než vyvážejí) je důkazem, že „někdo Ameriku podvádí“. Ve skutečnosti je deficit běžnou součástí ekonomiky silného spotřebitelského trhu a odráží např. sílu dolaru nebo fakt, že americké firmy často investují v zahraničí místo exportu. Argument o národní bezpečnosti se opírá o zákon z 50. let, který ale nebyl navržen pro plošná cla vůči spojencům.
 ```
 
 
-## Jak cla skutečně vznikají: Trumpův vzorec
+## Jak cla se ve skutečnosti počítají aneb Trumpův vzorec
 
 Za všemi novými tarify nestojí analýza reálných celních bariér, ale jednoduchý výpočet:
 
@@ -64,7 +64,7 @@ Clo tak **netrestá obchodní praktiky, ale samotnou existenci obchodního vztah
 
 Tento vzorec se poprvé objevil v Trumpově kampani jako „tarifní aritmetika“. Nezohledňuje ale reálné překážky (např. netarifní bariéry, technické normy, kvóty), historický vývoj vztahů ani sektorové rozdíly. Např. Evropa dováží z USA hodně letecké techniky, ale USA z Evropy spotřební zboží – tedy různé typy produktů, různé marže. Tento výpočet to ignoruje.
 
-## Dopady: Spojenec = cíl
+## Dopady
 
 Podle odhadů agentury Fitch se průměrná americká celní sazba **vyšplhá z 2,5 % na 22 %** – hodnotu naposledy dosaženou kolem roku 1910.
 
@@ -78,7 +78,7 @@ Podle odhadů agentury Fitch se průměrná americká celní sazba **vyšplhá z
 - **Japonsko a Jižní Korea** připravují krizové balíčky pro vývozce
 - **Zpochybnění USA jako stabilního partnera**
 
-Kristalina Georgieva (MMF) očekává **snížení globálního růstu**. Ekonomové jako Antonio Fatas varují, že svět směřuje k „globální recesi“.
+[Kristalina Georgieva (MFF)](https://www.reuters.com/world/reuters-live-interview-with-imf-kristalina-georgieva-2025-03-31/) očekává **snížení globálního růstu**. „Vidím to jako směřování americké a globální ekonomiky k horší výkonnosti, větší nejistotě a možná i k něčemu, co bychom mohli nazvat globální recesí,“ říká [Antonio Fatas](https://www.reuters.com/markets/trump-tariffs-pile-stress-ailing-world-economy-2025-04-02/), makroekonom z obchodní školy INSEAD ve Francii.
 
 Clo tak netrestá obchodní praktiky, ale samotnou existenci obchodního vztahu, pokud není vyrovnaný.
 
@@ -86,18 +86,13 @@ V mezinárodním obchodu je běžné, že bilance není symetrická – např. m
 
 Vysoká cla znamenají vyšší ceny nejen pro americké spotřebitele, ale i pro firmy, které dovážejí komponenty. Americká ekonomika je dnes silně integrovaná do globálních dodavatelských řetězců. Zvýšení cel zvyšuje náklady, snižuje investice, zpomaluje ekonomiku. Pokud navíc cla povedou k odvetě (což EU a Japonsko zvažují), může vzniknout celní spirála, jako v roce 1930.
 
-## Reakce v USA: ne všichni republikáni tleskají
+## Ne všichni republikáni tleskají
 
-Čtyři republikánští senátoři (McConnell, Paul) a senátorky (Collins, Murkowski) podpořili návrh na **zrušení cel na Kanadu** – zemi, která je Trumpem obviňována z dovozu fentanylu.
-
-> „Tyto tarify zraňují ty, kdo si to mohou dovolit nejméně,“  
-> řekla Collinsová s odkazem na ceny pohonných hmot a potravin.
-
-Trump na síti Truth Social reagoval výpady proti „slabochům“ ve vlastní straně. 
+Čtyři republikánští senátoři (McConnell, Paul) a senátorky (Collins, Murkowski) podpořili návrh na **zrušení cel na Kanadu** – zemi, která je Trumpem obviňována z dovozu fentanylu. „Tyto tarify zraňují ty, kdo si to mohou dovolit nejméně,“ říká senátorka [Susan Collins](https://www.theguardian.com/us-news/2025/apr/02/republicans-democrats-canada-tariffs) s odkazem na ceny pohonných hmot a potravin. Trump na síti Truth Social reagoval výpady proti „slabochům“ ve vlastní straně. 
 
 I zde je důležitý kontext: Republikánská strana byla tradičně pro volný obchod – ještě za Reagana, Bushe nebo McCaina. Trump tento postoj obrátil naruby. Vystoupení čtyř senátorů ukazuje, že i v GOP existuje obava z dopadů na domácnosti, podnikatele i rozpočty jednotlivých států. Ale většina zůstává loajální kvůli politickému tlaku nebo obavě z primárek.
 
-## Trump a ekonomika: strategie nebo chaos?
+## Trump a ekonomika
 
 Trump se stylizuje do role ochránce průmyslu. Ale jeho hospodářská politika:
 - **postrádá konzistenci**
@@ -108,7 +103,7 @@ Podobně jako **Smoot-Hawley Act z roku 1930**, mohou i jeho cla **spustit vlnu 
 
 Trump často střídá strategie bez předchozí analýzy, přeskakuje mezi sliby o výrobě, daních, clech a měnové politice. Jeho opatření mají často symbolickou hodnotu, ale reálné škody – například cla v roce 2018–2019 podle nezávislých studií vedla k poklesu pracovních míst v exportním sektoru. Navíc podkopávají důvěru spojenců i investorů.
 
-## Závěr: Jednoduchý vzorec, globální následky
+## Závěr: Primitivní vzorec, globální následky
 
 Trumpova „reciproční cla“ ve skutečnosti **trestají spojence a narušují globální stabilitu**. Nejde o spravedlivější světový obchod, ale o **vnitropolitický kalkul**, který může mít globální následky.
 
@@ -119,7 +114,7 @@ Pro Evropu je to varování: **Spojené státy zůstávají silou, ale nikoliv p
 
 ```box
 
-## Dále k tématu:
+## Více k tématu:
 
 - [Číslo dne: 20 milionů dolarů (nestačilo)](https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-04-02-soudkyne-porazila-muska)  
 - [V Kanadě se vzedmula liberální vlna](https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-03-03-v-kanade-se-vzedmula-liberalni-vlna)  
