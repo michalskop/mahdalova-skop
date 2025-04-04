@@ -18,3 +18,4 @@ Události posledního měsíce však tento vývoj zásadně narušily. Donald Tr
 Trumpovy výroky zásadně změnily vnímání politické scény. Poilievre, který dříve těžil ze spřízněnosti s Trumpem a měl podporu osobností jako Elon Musk nebo Joe Rogan, se svou kampaní pod heslem „Kanada je rozbitá“, ztrácí svá hlavní témata založená ekonomice. Místo nich nastupují kanadská suverenita a vztahy s USA. Předvolební dynamiku Kanady nyní dramaticky ovlivňuje zahraniční politika.
 
 ![Kanada - volební model](images/kanada-volebni-model-brezen-2025.png)
+[zdroj dat: celostátní průzkumy veřejného mínění provedené od kanadských federálních voleb v roce 2021 do voleb 2025](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2025_Canadian_federal_election)
