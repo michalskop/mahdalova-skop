@@ -13,6 +13,8 @@ aneb Soudkyně Susan Crawford porazila Muska
 
 Šedesátiletá soudkyně z Madisonu Susan Crawford zvítězila v nejdražší soudní volbě v historii USA. Do otevřeného křesla ve wisconsinském nejvyšším soudu usedne liberální právnička s dlouholetou kariérou ve státní správě. Porazila kandidáta republikánů Brada Schimela – a s ním i jeho hlavního patrona, nejbohatšího muže planety Elona Muska.
 
+<iframe src='https://flo.uri.sh/story/3016280/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="600px" allowFullScreen></iframe>
+
 Musk do kampaně za Schimela nepřímo nasměroval přes 20 milionů dolarů, přičemž jen organizace Building America’s Future utratila na podporu republikánského kandidáta 6,5 milionu dolarů. Do předvolebního boje vstoupil i osobně, když krátce před volbou uspořádal v Green Bay okázalý mítink, na němž rozdával šeky na milion dolarů. Kritici označili jeho akci za pokus ovlivnit voliče hrubou silou peněz – snahu o soudní zákaz rozdávání výherních šeků ale nakonec Nejvyšší soud státu Wisconsin zamítl. Musk rovněž požadoval, aby členové soudu, kteří podpořili Crawford, byli vyloučeni.
 
 Susan Crawford v kampani nazvala svého oponenta „Elon Schimel“ a přetavila Muskovo masivní angažmá ve svou výhodu: představila se jako obránkyně nezávislé justice proti miliardářskému vlivu. „Nikdy jsem si nemyslela, že povedu boj o spravedlnost proti nejbohatšímu muži na světě. A vyhráli jsme,“ prohlásila v noci na středu při svém vítězném projevu.
