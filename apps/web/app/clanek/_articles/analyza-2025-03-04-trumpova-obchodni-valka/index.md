@@ -3,7 +3,7 @@ title: "Trumpova obchodní válka"
 date: "2025-04-03"
 author: "Mahdalová & Škop"
 excerpt: "Trump zavádí nejtvrdší obchodní opatření za poslední desítky let. Oznámil 10% clo na veškerý dovoz do země a k tomu sadu dodatečných cel na konkrétní státy – včetně klíčových spojenců, jako jsou země EU, Japonsko, Jižní Korea či Austrálie."
-coverImage: "images/trumpova-obchodni-valka-clo-world1.jpg"
+coverImage: "images/trump-obchodni-valka-clo-world.jpg"
 filter: ["analýza"]
 tags: ["USA", "cla", "Trump", "mezinárodní obchod", "EU", "recesní riziko"]
 promoted: 80
