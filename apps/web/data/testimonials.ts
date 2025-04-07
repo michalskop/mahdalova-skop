@@ -9,6 +9,13 @@ export interface TestimonialData {
 }
 
 export const testimonials: TestimonialData[] = [
+    {
+      id: '19',
+      text: 'Vaše analýzy jsou fakt supr. Používám to i při výuce👍',
+      author: 'Hana Gruntová Kolingerová',
+      position: 'Institut evaluací a sociálních analýz',
+      date: '7. 4. 2025'
+    },
    {
     id: '18',
     text: 'Děkuju za práci, kterou děláte, fakt dobrý!',
