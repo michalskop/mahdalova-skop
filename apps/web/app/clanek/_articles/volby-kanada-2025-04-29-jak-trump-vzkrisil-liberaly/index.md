@@ -2,7 +2,7 @@
 title: "Jak Trump vzkřísil kanadské liberály"
 date: "2025-04-29"
 author: "Mahdalová & Škop"
-excerpt: "Ještě na začátku roku 2025 to vypadalo jasně. Justin Trudeau byl na odpis, Liberální strana ztrácela v průzkumech přes 20 bodů a konzervativci mířili k pohodlnému vítězství. A pak přišel Trump."
+excerpt: "Ještě na začátku roku 2025 to vypadalo jasně. Justin Trudeau byl na odpis, liberální strana ztrácela v průzkumech přes 20 bodů a konzervativci mířili k pohodlnému vítězství. A pak přišel Trump."
 coverImage: "images/kanada-volebni-model-brezen-2025.jpg"
 filter: ["kontext"]
 tags: ["volby", "číslo dne", "mandáty", "průzkumy", "poll of polls", "volební model", "Parlament", "Kanada", "liberálové", "politika"]
@@ -81,6 +81,15 @@ Ve svém vítězném projevu řekl:
 
 ---
 
+```box
+<strong>Jak volilo Německo? [Německé volby: Ostblok volil radikálně? Ne tak docela](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2025-02-27-vysledky)</strong>
 
+Dále jsme psali o rozhovoru Elona Maska se šéfkou krajně pravicové strany AfD: [Glosa: Hilter nebyl komunista](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-09-hitler-nebyl-komunista)
+
+Světoznámý spisovatel a filosof Umberto Eco (1932-2016), který jako chlapec vyrůstal v Mussoliniho Itálii, nám zanechal cenný nástroj - definoval charakteristické znaky fašismu: [Znaky fašismu podle Umberta Eca](https://www.mahdalova-skop.cz/clanek/explainer-2025-01-06-znaky-fasismu-podle-eca)
+
+```
+
+```box
 ![Kanada - volební model](images/kanada-volebni-model-brezen-2025.png)
 [zdroj dat: celostátní průzkumy veřejného mínění provedené od kanadských federálních voleb v roce 2021 do voleb 2025](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2025_Canadian_federal_election)
