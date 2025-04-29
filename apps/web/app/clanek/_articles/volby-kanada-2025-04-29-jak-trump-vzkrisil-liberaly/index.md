@@ -3,7 +3,7 @@ title: "Jak Trump vzkřísil kanadské liberály"
 date: "2025-04-29"
 author: "Mahdalová & Škop"
 excerpt: "Ještě na začátku roku 2025 to vypadalo jasně. Justin Trudeau byl na odpis, liberální strana ztrácela v průzkumech přes 20 bodů a konzervativci mířili k pohodlnému vítězství. A pak přišel Trump."
-coverImage: "images/kanada-volebni-model-brezen-2025.jpg"
+coverImage: "images/kanada-volby-2025.jpg"
 filter: ["kontext"]
 tags: ["volby", "číslo dne", "mandáty", "průzkumy", "poll of polls", "volební model", "Parlament", "Kanada", "liberálové", "politika"]
 promoted: 10
@@ -91,5 +91,5 @@ Světoznámý spisovatel a filosof Umberto Eco (1932-2016), který jako chlapec 
 ```
 
 ```box
-![Kanada - volební model](images/kanada-volebni-model-brezen-2025.png)
+![Kanada - volební model](images/kanada-volby-2025.jpg)
 [zdroj dat: celostátní průzkumy veřejného mínění provedené od kanadských federálních voleb v roce 2021 do voleb 2025](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2025_Canadian_federal_election)
