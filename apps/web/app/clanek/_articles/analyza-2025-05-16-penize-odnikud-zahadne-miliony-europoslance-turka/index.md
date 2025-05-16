@@ -8,7 +8,7 @@ filter: ["analýza"]
 tags: ["Europarlament", "Turek", "Firmy", "Motoristé sobě", "Přísaha", "Patrioti"]
 promoted: 60
 ---
-V naší sérii o europoslanci Filipu Turkovi (Motoristé/Patrioti) jsme již odhalili jeho [“legendární“ závodní kariéru](/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli), i jeho [“prezidentování“ ve spolcích s pouhými třemi členy](/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku). Nyní přinášíme podrobnou analýzu jeho finančních záležitostí v oblasti podnikání.
+V naší sérii o europoslanci Filipu Turkovi (Motoristé/Patrioti) jsme již odhalili jeho [“legendární“ závodní kariéru](/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli) i jeho [“prezidentování“ ve spolcích s pouhými třemi členy](/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku). Nyní přinášíme podrobnou analýzu jeho finančních záležitostí v oblasti podnikání.
 
 | Příjmy F. Turka z vlastních firem (ročně)- rozdíly v dokumentech                            | 2024             | 2022–2023       |
 |----------------------------------|------------------|-----------------|
