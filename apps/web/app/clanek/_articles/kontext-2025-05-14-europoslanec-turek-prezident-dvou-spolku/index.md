@@ -6,7 +6,7 @@ excerpt: "Pokračujeme v odhalování skutečného příběhu europoslance Filip
 coverImage: "images/main.webp"
 filter: ["kontext"]
 tags: ["Europarlament", "Turek", "Prezident", "spolky", "Motoristé sobě", "Přísaha"]
-promoted: 80
+promoted: 60
 ---
 Pokračujeme v odhalování skutečného příběhu europoslance Filipa Turka (Motoristé/Patrioti). Po [prozkoumání jeho závodní kariéry](/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli) se nyní zaměřujeme na další oblast jeho veřejné prezentace.
 
