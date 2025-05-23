@@ -24,7 +24,7 @@ Slovenský premiér Fico (SMER) o víkendu navštívil Moskvu a teprve jako tře
 
 "Jeho" evropští poslanci a poslankyně ze strany SMER také soustavně hlasují "proti" v hlasováních kritických vůči Rusku. Spolu s nimi hlasují "proti" i poslanci zvolení za Republiku a často i poslanec Ondruš za stranu HLAS slovenského prezidenta Pellegriniho.
 
-<iframe src='https://flo.uri.sh/visualisation/20895324/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
+<iframe src='https://flo.uri.sh/visualisation/20895616/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 
 ## Celý Europarlament 🇪🇺
 
