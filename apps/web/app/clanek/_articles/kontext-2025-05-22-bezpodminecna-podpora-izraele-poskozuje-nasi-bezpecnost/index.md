@@ -23,7 +23,11 @@ Podle [OSN a WHO](https://www.who.int/news/item/12-05-2025-people-in-gaza-starvi
 
 ## 🕊️ Poměr civilních obětí
 
-Podle [analýzy OHCHR](https://www.reuters.com/world/middle-east/nearly-70-gaza-war-dead-women-children-un-rights-office-says-2024-11-08/) tvoří přibližně 70 % obětí v Gaze civilisté. Z 8 119 ověřených úmrtí bylo 44 % dětí a 26 % žen. Další detaily uvádí [BBC News](https://www.bbc.com/news/articles/cn5wel11pgdo).
+Podle [analýzy Úřadu vysokého komisaře OSN pro lidská práva (OHCHR)](https://www.reuters.com/world/middle-east/nearly-70-gaza-war-dead-women-children-un-rights-office-says-2024-11-08/) tvoří ženy a děti téměř 70 % z 8 119 obětí konfliktu v Gaze, jejichž úmrtí bylo ověřeno na základě tří nezávislých zdrojů. Z toho děti do 18 let představují 44 % zabitých – největší skupinu tvoří děti ve věku 5–9 let, následované dětmi ve věku 10–14 let. Nejmladší potvrzenou obětí byl novorozenec starý jeden den, nejstarší pak žena ve věku 97 let. 
+
+Zpráva OHCHR konstatuje, že takto vysoký podíl civilních obětí „naznačuje systematické porušování základních principů mezinárodního humanitárního práva, včetně zásad rozlišování a přiměřenosti“. V 88 % případů bylo při jednom útoku zabito pět a více osob, což svědčí o použití zbraní s rozsáhlým účinkem v hustě obydlených oblastech. Ačkoliv Izrael tvrdí, že činí „veškeré úsilí“ k omezení civilních ztrát a že útočí v souladu s právem ozbrojeného konfliktu, data OSN tuto praxi zpochybňují. OHCHR vyzývá k nezávislému soudnímu přezkoumání a archivaci důkazů pro případné vyšetřování válečných zločinů.
+
+Palestinské zdravotnické úřady udávají celkový počet obětí přesahující 43 000, což zahrnuje i případy, které OSN dosud nemohla ověřit. Podle [Human Rights Watch](https://www.hrw.org/news/2024/12/18/israelgaza-indiscriminate-attacks-harmed-civilians) i [Amnesty International](https://www.amnesty.org/en/latest/news/2024/12/israel-opt-relentless-israeli-attacks-devastate-civilians-in-gaza/) existují důkazy, že Izrael v některých případech nerespektoval zákaz nerozlišujících útoků a selhal v povinnosti chránit civilní obyvatelstvo.
 
 ## 🗨️ Zavádějící argumentace
 
