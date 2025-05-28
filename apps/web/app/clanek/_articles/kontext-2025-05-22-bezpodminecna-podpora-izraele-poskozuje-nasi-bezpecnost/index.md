@@ -8,6 +8,7 @@ filter: ["kontext"]
 tags: ["Izrael", "Gaza", "Česká politika", "Humanitární právo", "Mezinárodní vztahy"]
 promoted: 50
 ---
+V době, kdy spojenci Česka vyzývají k zastavení humanitární katastrofy v Gaze, česká vláda zůstává loajální izraelské politice – i za cenu mezinárodní izolace. Podporuje tím nejen okupaci, ale i oslabení právního řádu, na kterém sama staví svoji obranu proti ruské agresi.
 
 Zatímco ministři zahraničí většiny států EU, Velké Británie, Kanady, Japonska a Austrálie vyzývají izraelskou vládu k okamžitému obnovení humanitární pomoci do Gazy, podpis českého ministra Jana Lipavského [chybí](https://www.eeas.europa.eu/eeas/joint-donor-statement-humanitarian-aid-gaza%C2%A0_en). Tento postoj není jen morálním selháním, ale strategickou chybou s vážnými důsledky pro českou bezpečnost a mezinárodní pozici.
 
