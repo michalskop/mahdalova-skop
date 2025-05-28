@@ -1,5 +1,5 @@
 ---
-title: "Nebezpečná izolace: Proč česká bezpodmínečná podpora Izraele poškozuje naši bezpečnost"
+title: "🛑 Nebezpečná izolace: Proč česká bezpodmínečná podpora Izraele poškozuje naši bezpečnost"
 date: "2025-05-28"
 author: "Mahdalová & Škop"
 excerpt: "V době, kdy spojenci Česka vyzývají k zastavení humanitární katastrofy v Gaze, česká vláda zůstává loajální izraelské politice – i za cenu mezinárodní izolace. Podporuje tím nejen okupaci, ale i oslabení právního řádu, na kterém sama staví svoji obranu proti ruské agresi."
@@ -9,9 +9,7 @@ tags: ["Izrael", "Gaza", "Česká politika", "Humanitární právo", "Mezinárod
 promoted: 60
 ---
 
-# 🛑 Nebezpečná izolace: Proč česká bezpodmínečná podpora Izraele poškozuje naši bezpečnost
-
-Zatímco ministři zahraničí většiny států EU, Velké Británie, Kanady, Japonska a Austrálie [vyzývají izraelskou vládu](https://www.reuters.com/world/germany-france-britain-call-israel-allow-aid-into-gaza-2025-04-23/) k okamžitému obnovení humanitární pomoci do Gazy, podpis českého ministra Jana Lipavského chybí. Tento postoj není jen morálním selháním, ale strategickou chybou s vážnými důsledky pro českou bezpečnost a mezinárodní pozici.
+Zatímco ministři zahraničí většiny států EU, Velké Británie, Kanady, Japonska a Austrálie k okamžitému obnovení humanitární pomoci do Gazy, podpis českého ministra Jana Lipavského [chybí](https://www.eeas.europa.eu/eeas/joint-donor-statement-humanitarian-aid-gaza%C2%A0_en). Tento postoj není jen morálním selháním, ale strategickou chybou s vážnými důsledky pro českou bezpečnost a mezinárodní pozici.
 
 V době, kdy i tradiční spojenci Izraele, jako [Německo a Francie](https://www.reuters.com/world/germany-france-britain-call-israel-allow-aid-into-gaza-2025-04-23/), požadují dodržování mezinárodního práva, se Česká republika dostává do nebezpečné izolace. Naše neochota připojit se k mezinárodnímu tlaku na izraelskou vládu ohledně humanitární krize v Gaze nás odděluje od klíčových spojenců právě v době, kdy potřebujeme jejich solidaritu proti ruské agresi. Tento postoj je o to paradoxnější, že Česko současně požaduje od mezinárodního společenství maximální tlak na Rusko za porušování mezinárodního práva na Ukrajině.
 
