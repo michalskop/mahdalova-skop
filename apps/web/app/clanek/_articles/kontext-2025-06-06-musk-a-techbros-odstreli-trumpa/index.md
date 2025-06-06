@@ -65,3 +65,4 @@ JD Vance (senátor z Ohia, bývalý venture kapitalista, spojenec Petera Thiela)
 - **Fatální přešlap technobros** – např. bezpečnostní průšvih, AI katastrofa nebo skandál s daty
 
 ---
+Kateřina Mahdalová
