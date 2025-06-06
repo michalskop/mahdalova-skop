@@ -55,3 +55,5 @@ Izraelští představitelé už se mezitím netají svými skutečnými záměry
 Bezpodmínečná podpora Izraele oslabuje mezinárodní postavení České republiky. Nejenže nás vzdaluje od většiny spojenců v EU a NATO, ale zároveň podrývá naši argumentaci vůči ruské agresi. Zatímco od Moskvy požadujeme respektování mezinárodního práva, v případě Izraele jsme ochotni nad jeho porušováním přivírat oči. Tento dvojí metr je snadno zneužitelný nejen propagandou Kremlu, ale i jinými aktéry, kteří zpochybňují univerzálnost mezinárodních norem.
 
 Jak varuje [sociolog Daniel Prokop](https://www.seznamzpravy.cz/clanek/komentare-komentar-evropa-dnes-prohrava-hned-dve-bitvy-245595), opouštění principů mezinárodního práva a šíření relativizujících výroků oslabuje naši schopnost obhajovat univerzální hodnoty. Takové jednání podrývá důvěru veřejnosti v instituce, zvyšuje prostor pro dezinformace a přispívá k radikalizaci společnosti. A co hůř — dává munici autoritářům, kteří český selektivní přístup používají jako argument pro vlastní porušování pravidel.
+
+Kateřina Mahdalová
