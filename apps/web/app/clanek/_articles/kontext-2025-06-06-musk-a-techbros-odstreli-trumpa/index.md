@@ -3,12 +3,13 @@ title: "🤖 Možnost: Musk a techbros odstřelí Trumpa a nastoupí Vance"
 date: "2025-06-06"
 author: "Mahdalová & Škop"
 excerpt: "Trump padá, ale místo demokracie přichází něco ještě děsivějšího. Technokrati v čele s Elonem Muskem už nechtějí být v pozadí. Hledají figurku – a JD Vance může být jejich nový CEO Ameriky."
-coverImage: "images/musk-trump-vance.jpg"
-filter: ["analýza"]
+coverImage: "images/trump_vs_musk.jpg"
+filter: ["kontext"]
 tags: ["USA", "Trump", "Elon Musk", "Techbros", "JD Vance", "Autoritářství", "Demokracie"]
 promoted: 80
 ---
 
+Trump padá, ale místo demokracie přichází něco ještě děsivějšího. Technokrati v čele s Elonem Muskem už nechtějí být v pozadí. Hledají figurku – a JD Vance může být jejich nový CEO Ameriky.
 
 Mezi Donaldem Trumpem a Elonem Muskem viditelně došlo k zásadnímu rozkolu. Donedávna spojenci, které spojovala cynická hra na svobodu, se po dnešní noci ocitají na opačných stranách barikády. Trump má exekutivní moc, Musk a jeho "tech bros" mají peníze, data a vlivné platformy. Na povrchu se to tváří jako osobní konflikt eg, ale ve skutečnosti jde o něco mnohem většího: o bitvu dvou různých vizí autoritářské moci.
 
