@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Mezi Donaldem Trumpem a Elonem Muskem viditelně došlo k zásadnímu rozkolu. Donedávna spojenci, které spojovala cynická hra na svobodu, se po dnešní noci ocitají na opačných stranách barikády."
 coverImage: "images/trump_vs_musk.jpg"
 filter: ["kontext"]
-tags: ["USA", "Trump", "Elon Musk", "Techbros", "JD Vance", "Autoritářství", "Demokracie"]
+tags: ["USA", "Trump", "Elon Musk", "Techbros", "JD Vance", "Autoritářství", "Demokracie", "Autokracie", "Fašismus"]
 promoted: 80
 ---
 
