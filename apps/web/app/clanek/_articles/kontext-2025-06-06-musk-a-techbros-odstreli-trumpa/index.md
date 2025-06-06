@@ -2,7 +2,7 @@
 title: "🤖 Možnost: Musk a techbros odstřelí Trumpa a nastoupí Vance"
 date: "2025-06-06"
 author: "Mahdalová & Škop"
-excerpt: "Mezi Donaldem Trumpem a Elonem Muskem viditelně došlo k zásadnímu rozkolu. Donedávna spojenci, které spojovala cynická hra na svobodu, se po dnešní noci ocitají na opačných stranách barikády. Trump má exekutivní moc, Musk a jeho "tech bros" mají peníze, data a vlivné platformy. Na povrchu se to tváří jako osobní konflikt eg, ale ve skutečnosti jde o něco mnohem většího: o bitvu dvou různých vizí autoritářské moci."
+excerpt: "Mezi Donaldem Trumpem a Elonem Muskem viditelně došlo k zásadnímu rozkolu. Donedávna spojenci, které spojovala cynická hra na svobodu, se po dnešní noci ocitají na opačných stranách barikády."
 coverImage: "images/trump_vs_musk.jpg"
 filter: ["kontext"]
 tags: ["USA", "Trump", "Elon Musk", "Techbros", "JD Vance", "Autoritářství", "Demokracie"]
