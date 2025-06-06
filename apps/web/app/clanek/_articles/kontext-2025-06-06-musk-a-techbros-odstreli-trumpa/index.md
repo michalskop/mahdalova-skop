@@ -48,7 +48,7 @@ JD Vance (senátor z Ohia, bývalý venture kapitalista, spojenec Petera Thiela)
 
 ---
 
-### ⚙️ Co by technofašistický režim mohl znamenat?
+### ⚙️ Co by technofašistický režim mohl znamenat
 
 - **Decentralizace odpovědnosti** – stát jako firma: outsourcing na AI, smart kontrakty, platformy místo úřadů.  
 - **Masivní dohled** – ve jménu efektivity a bezpečnosti. Všechno měřitelné, všechno sledovatelné.  
@@ -57,7 +57,7 @@ JD Vance (senátor z Ohia, bývalý venture kapitalista, spojenec Petera Thiela)
 
 ---
 
-### 🤖 Co z toho může zvrátit vývoj?
+### 🤖 Co může tento zvrátit vývoj
 
 - **Silný demokratický kandidát** – zatím nikde  
 - **Odpor uvnitř republikánské strany** – nepravděpodobný, ale není vyloučen  
