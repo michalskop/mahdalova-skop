@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Babiš má nyní 95% šanci, že bude sestavovat vládu. Ale s kým? Poslechněte si náš podcast."
 coverImage: "images/volby_2025-snemovna-skryte-koalice-podcast-mahdalova-skop1a.jpg"
 filter: ["kontext"]
-tags: ["volby", "Babiš", "Sněmovna", "vláda", "volby 2025", "parlament", "koalice", "Spolu", "Stačilo", "Piráti", "Zelení", "SPD", Motoristé"]
+tags: ["podcast","stručně & jasně","volby", "Babiš", "Sněmovna", "vláda", "volby 2025", "parlament", "koalice", "Spolu", "Stačilo", "Piráti", "Zelení", "SPD", Motoristé"]
 promoted: 70
 ---
 Naše poslední [analýza ze 25. srpna](https://www.mahdalova-skop.cz/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem) ukázala, že Andrej Babiš má **95% šanci stát se premiérem**.  
