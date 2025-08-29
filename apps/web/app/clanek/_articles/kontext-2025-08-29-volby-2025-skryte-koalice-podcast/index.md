@@ -3,7 +3,7 @@ title: "Volby 2025: Skryté koalice - podcast"
 date: "2025-08-29"
 author: "Mahdalová & Škop"
 excerpt: "Babiš má nyní 95% šanci, že bude sestavovat vládu. Ale s kým? Poslechněte si náš podcast."
-coverImage: "images/volby_2025-snemovna-skryte-koalice-podcast-mahdalova-skop01.jpg"
+coverImage: "images/volby_2025-snemovna-skryte-koalice-podcast-mahdalova-skop1a.jpg"
 filter: ["kontext"]
 tags: ["volby", "Babiš", "Sněmovna", "vláda", "volby 2025", "parlament", "koalice", "Spolu", "Stačilo", "Piráti", "Zelení", "SPD", Motoristé"]
 promoted: 70
