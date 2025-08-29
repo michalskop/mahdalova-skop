@@ -20,4 +20,3 @@ Zatímco podle současného modelu [Mandáty.cz](https://www.mandaty.cz) by opoz
 - a co by znamenalo, kdyby soudy uznaly [skryté koalice](https://www.mahdalova-skop.cz/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem) jako skutečné koalice.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ia_LECQmW0c?si=Ru-5vuIeiYnt8VN0" title="Skryté koalice – podcast Mahdalová & Škop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-🔗 Do textu jsem vložil více odkazů na tvoji analýzu (na začátku, u Mandátů.cz i u skrytých koalic).
