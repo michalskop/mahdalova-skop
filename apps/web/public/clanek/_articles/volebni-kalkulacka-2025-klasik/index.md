@@ -2,8 +2,10 @@
 title: "Volební kalkulačka: nástroj, který skutečně rozhoduje"
 author: "KohoVolit.eu"
 date: "2025-10-01"
+coverImage: "images/volebni-kalkulacka-klasik-2025a.png"
 tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna"]
 description: "Proč Volební kalkulačka není hračka, ale analytický nástroj, který může rozhodnout i o mandátech ve Sněmovně."
+
 ---
 
 # Volební kalkulačka: nástroj, který skutečně rozhoduje
