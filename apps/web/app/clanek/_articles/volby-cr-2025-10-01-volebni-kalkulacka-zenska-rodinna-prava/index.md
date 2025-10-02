@@ -3,14 +3,14 @@ title: "Volební kalkulačka: nástroj, který skutečně rozhoduje"
 date: "2025-10-01"
 author: "Kateřina Mahdalová"
 excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, který může rozhodnout i o mandátech ve Sněmovně."
-coverImage: "images/volebni_kalkulacka-2025-zeny-rodiny1.jpg"
+coverImage: "images/volebni_kalkulacka-2025-zeny-rodiny2.jpg"
 filter: ["kontext"]
-tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna"]
+tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna", "ženská práva", "rodina"]
 promoted: 40
 ---
 # Volební kalkulačka: nástroj, který skutečně rozhoduje
 
-Zbývají dva dny do voleb a třetina voličů stále váhá. Ne proto, že by o politiku nestáli – zkrátka se rozhodují mezi dvěma či třemi stranami, které jim dávají smysl. Právě pro ně je Volební kalkulačka nejužitečnějších pět minut před volbami. Dejte o ní vědět všem, kterým záleží na tom, aby jejich hlas skutečně odpovídal tomu, v co věří.
+Zatímco se v politice často debatuje o geopolitickém směřování země či o svobodě a totalitě, na reprodukční spravedlnost často vůbec nedojde. Přitom témata interrupcí, péče o děti či podpory bydlení jsou pro mnoho lidí zásadní. Proto se rozhodla koalice devíti organizací vytvořit transparentní přehled názorů a postojů konkrétních kandidujících. A Mahdalová & Škop jsou u toho.
 
 Volební kalkulačka není hračka. Je to analytický nástroj, který už více než dvě dekády patří k demokratické infrastruktuře v mnoha evropských zemích. Neříká lidem, koho mají volit – umožňuje jim porovnat vlastní postoje s postoji stran na konkrétních otázkách. A to je něco, co billboardy, slogany ani emotivní kampaně nikdy nenahradí.
 
