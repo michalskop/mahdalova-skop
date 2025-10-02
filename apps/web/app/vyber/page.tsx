@@ -1,4 +1,4 @@
-// app/clanek/page.tsx
+// app/vyber/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
@@ -6,22 +6,23 @@ import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kontext',
-  description: 'Kontext k aktuálním událostem – vysvětlení a souvislosti od Mahdalová & Śkop.',
+  title: 'Výběr',
+  description: 'Výběr článků Mahdalová & Śkop – všechno, co by vám nemělo uniknout.',
   alternates: {
-    canonical: '/kontext',
+    canonical: '/vyber',
   },
   openGraph: {
-    title: 'Kontext',
-    description: 'Kontext k aktuálním událostem – vysvětlení a souvislosti od Mahdalová & Śkop.',
-    url: '/kontext',
+    title: 'Výběr',
+    description: 'Výběr článků Mahdalová & Śkop – všechno, co by vám nemělo uniknout.',
+    url: '/vyber',
     type: 'website',
   },
 };
 
-export default async function ArticlesPage() {
-  const articles = await getArticles(100, "kontext");
-  
+export default async function VyberPage() {
+  // Fetch a large number to effectively show all published articles
+  const articles = await getArticles(1000);
+
   return (
     <Container 
       size="lg" 
@@ -33,11 +34,11 @@ export default async function ArticlesPage() {
       m="0 auto"
     >
       <ArticlesSection 
-        sectionTitle="Kontext"
+        sectionTitle="Výběr"
         articles={articles}
-        themeColor="brandOrange.4"
+        themeColor="brandRoyalBlue.3"
       />
-      
+
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
     </Container>
   );
