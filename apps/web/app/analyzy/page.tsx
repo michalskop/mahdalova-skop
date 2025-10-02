@@ -3,6 +3,21 @@ import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Analýzy',
+  description: 'Analytické články Mahdalová & Śkop – hlubší pohled do dat a souvislostí.',
+  alternates: {
+    canonical: '/analyzy',
+  },
+  openGraph: {
+    title: 'Analýzy',
+    description: 'Analytické články Mahdalová & Śkop – hlubší pohled do dat a souvislostí.',
+    url: '/analyzy',
+    type: 'website',
+  },
+};
 
 export default async function ArticlesPage() {
   const articles = await getArticles(100, "analýza");

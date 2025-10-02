@@ -35,6 +35,7 @@ export default async function HomePage() {
 
       <ArticlesSection 
         sectionTitle="Výběr"
+        sectionLink="/vyber"
         articles={articles}
         themeColor="brandRoyalBlue.3" />
 
