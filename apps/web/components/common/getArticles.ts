@@ -29,26 +29,36 @@ export async function getArticles(
   const articleFolders = fs.readdirSync(articlesDirectory);
   const currentDate = new Date();
 
-  const articles = articleFolders.map((folder) => {
-    const fullPath = path.join(articlesDirectory, folder, 'index.md');
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data } = matter(fileContents);
-    const coverImage = data.coverImage
-      ? `/clanek/_articles/${folder}/${data.coverImage}`
-      : null;
+  const articles = articleFolders
+    .map((folder) => {
+      const fullPath = path.join(articlesDirectory, folder, 'index.md');
+      // Skip folders that don't have an index.md to avoid ENOENT
+      if (!fs.existsSync(fullPath)) return null;
 
-    return {
-      title: data.title || 'Untitled',
-      excerpt: data.excerpt || '',
-      date: data.date || '',
-      author: data.author || 'Anonymous',
-      slug: folder,
-      coverImage,
-      filter: data.filter || [],
-      tags: data.tags || [],
-      promoted: data.promoted || 0
-    } as Article;
-  });
+      try {
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const { data } = matter(fileContents);
+        const coverImage = data.coverImage
+          ? `/clanek/_articles/${folder}/${data.coverImage}`
+          : null;
+
+        return {
+          title: data.title || 'Untitled',
+          excerpt: data.excerpt || '',
+          date: data.date || '',
+          author: data.author || 'Anonymous',
+          slug: folder,
+          coverImage,
+          filter: data.filter || [],
+          tags: data.tags || [],
+          promoted: data.promoted || 0,
+        } as Article;
+      } catch {
+        // If any single article fails to parse, skip it gracefully
+        return null;
+      }
+    })
+    .filter((a): a is Article => a !== null);
 
   // Filter out future articles
   let filteredArticles = articles.filter(article => new Date(article.date) <= currentDate);
