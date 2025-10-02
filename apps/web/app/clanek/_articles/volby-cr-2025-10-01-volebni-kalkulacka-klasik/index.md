@@ -16,7 +16,7 @@ Volební kalkulačka není hračka. Je to analytický nástroj, který už více
 
 Originální česká Volební kalkulačka patří mezi nejpropracovanější v Evropě. Připravujeme ji stále dokola už od roku 2006 - samozřejmě nejen my dva coby analytici (Kateřina Mahdalová a Michal Škop), ale ve spolupráci s experty a expertkami z oblastí politologie, sociologie, práva a mnoha dalších oborů. Na její přípravě se podílejí průzkumné agentury, řada nevládních či profesních organizací. Ty přinášejí klíčová témata - nikoli ta, která se snaží nastolovat samotné kandidující subjekty (lithium, migrace či další témata, mnohdy jen účelově akcentovaná).
 
-<iframe src="https://flo.uri.sh/visualisation/25424919/embed"?slide=2' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='1200px'></iframe>
+<iframe src='https://flo.uri.sh/visualisation/25424919/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='1200px'></iframe>
 
 Klíčovou předností tradiční Volební kalkulačky je i shrnutí skutečných hlasování poslanců ve Sněmovně s pozicemi stran (znáte pod názvem **Inventura hlasování**) – voliči a voličky tak vidí, jak poslanci a poslankyně opravdu hlasovali. Je to důležité, neboť řada z nich usiluje o znovuzvolení.
 
