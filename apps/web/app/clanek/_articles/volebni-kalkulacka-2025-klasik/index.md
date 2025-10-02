@@ -6,9 +6,7 @@ excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, kt
 coverImage: "images/volebni-kalkulacka-klasik-2025a.png"
 filter: ["kontext"]
 tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna"]
-
 ---
-
 # Volební kalkulačka: nástroj, který skutečně rozhoduje
 
 Zbývají dva dny do voleb a třetina voličů stále váhá. Ne proto, že by o politiku nestáli – zkrátka se rozhodují mezi dvěma či třemi stranami, které jim dávají smysl. Právě pro ně je Volební kalkulačka nejužitečnějších pět minut před volbami. Dejte o ní vědět všem, kterým záleží na tom, aby jejich hlas skutečně odpovídal tomu, v co věří.
