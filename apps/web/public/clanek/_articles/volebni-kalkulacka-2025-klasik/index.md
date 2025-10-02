@@ -24,9 +24,9 @@ A vliv kvalitně vytvořené kalkulačky? Ten je měřitelný. Volby se v Česku
 
 ## Co tedy víme:
 
-- ✅ Při stovkách tisíc uživatelů a prokázaném vlivu na volební chování může mít kalkulačka měřitelný dopad na výsledek voleb.  
-- ✅ V těsných volbách, kde se mandáty lámou na tisících hlasů, může být tento efekt rozhodující.  
-- ✅ Teoretické modelování ukazuje, že při vysokém počtu uživatelů a těsných výsledcích by kalkulačka mohla ovlivnit rozdělení mandátů.  
+ ✅ Při stovkách tisíc uživatelů a prokázaném vlivu na volební chování může mít kalkulačka měřitelný dopad na výsledek voleb.  
+ ✅ V těsných volbách, kde se mandáty lámou na tisících hlasů, může být tento efekt rozhodující.  
+ ✅ Teoretické modelování ukazuje, že při vysokém počtu uživatelů a těsných výsledcích by kalkulačka mohla ovlivnit rozdělení mandátů.  
 
 Vliv na volební účast potvrzují data z různých zemí: v Německu 8 % uživatelů uvedlo, že je kalkulačka motivovala jít volit, v Nizozemsku 12 %, ve Finsku dokonce 22 %. Co se týče změny volby, průzkumy zaznamenaly 3–10 % voličů, kteří kvůli kalkulačce změnili preferenci. V českém kontextu, kde se rozhoduje o 200 mandátech a kde těsné výsledky jsou běžné, může být tento efekt klíčový. V české prostředí to znamená, že při těsných výsledcích může kalkulačka reálně ovlivnit rozložení hlasů tak, že rozhodne o obsazení jednoho až dvou mandátů. To není spekulace – je to měřitelný efekt nástroje, který ročně použijí stovky tisíc voličů v okamžiku, kdy se finálně rozhodují.
 
