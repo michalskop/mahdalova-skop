@@ -6,6 +6,7 @@ excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, kt
 coverImage: "images/volebni-kalkulacka-klasik-2025a.png"
 filter: ["kontext"]
 tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna"]
+promoted: 60
 ---
 # Volební kalkulačka: nástroj, který skutečně rozhoduje
 
