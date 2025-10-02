@@ -1,6 +1,6 @@
 ---
 title: "Volební kalkulačka: nástroj, který skutečně rozhoduje"
-author: "KohoVolit.eu"
+author: "Kateřina Mahdalová"
 date: "2025-10-01"
 coverImage: "images/volebni-kalkulacka-klasik-2025a.png"
 tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna"]
@@ -14,7 +14,7 @@ Zbývají dva dny do voleb a třetina voličů stále váhá. Ne proto, že by o
 
 Volební kalkulačka není hračka. Je to analytický nástroj, který už více než dvě dekády patří k demokratické infrastruktuře v mnoha evropských zemích. Neříká lidem, koho mají volit – umožňuje jim porovnat vlastní postoje s postoji stran na konkrétních otázkách. A to je něco, co billboardy, slogany ani emotivní kampaně nikdy nenahradí.
 
-Originální česká Volební kalkulačka patří mezi nejpropracovanější v Evropě. Od roku 2006 ji vyvíjí spolek **KohoVolit.eu** ve spolupráci s politology, sociology a datovými analytiky. Na její přípravě se podílejí průzkumné agentury, řada nevládních či profesních organizací. Ty přinášejí klíčová témata – nikoli ta, která vytvářejí samotné kandidující subjekty (lithium, migrace či jiná témata, která ve skutečnosti nejsou tak podstatná pro životy voličů a voliček, nebo jsou rovnou uměle vytvořená, aby odvedla pozornost jinými směry).
+Originální česká Volební kalkulačka patří mezi nejpropracovanější v Evropě. Připravujeme ji stále dokola už od roku 2006 - samozřejmě nejen my dva coby analytici (Kateřina Mahdalová a Michal Škop), ale ve spolupráci s experty a expertkami z oblastí politologie, sociologie, práva a mnoha dalších oborů. Na její přípravě se podílejí průzkumné agentury, řada nevládních či profesních organizací. Ty přinášejí klíčová témata - nikoli ta, která se snaží nastolovat samotné kandidující subjekty (lithium, migrace či další témata, mnohdy jen účelově akcentovaná).
 
 Klíčovou předností tradiční Volební kalkulačky je i shrnutí skutečných hlasování poslanců ve Sněmovně s pozicemi stran (znáte pod názvem **Inventura hlasování**) – voliči a voličky tak vidí, jak poslanci a poslankyně opravdu hlasovali. Je to důležité, neboť řada z nich usiluje o znovuzvolení.
 
