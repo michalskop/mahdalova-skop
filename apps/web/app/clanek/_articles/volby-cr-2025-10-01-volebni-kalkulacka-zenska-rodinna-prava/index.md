@@ -8,32 +8,56 @@ filter: ["kontext"]
 tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna", "ženská práva", "rodina"]
 promoted: 40
 ---
-# Volební kalkulačka: nástroj, který skutečně rozhoduje
+Legislativa týkající se reprodukčních práv zásadně ovlivňuje každodenní život. Aby měl člověk možnost plánovat rodinu, potřebuje nejen bezpečné zázemí, ale i jistotu, že v případě komplikací bude k dispozici potřebná zdravotní péče. Tyto základní jistoty jsou dnes v mnoha zemích oslabovány pod tlakem konzervativních politik.
 
-Zatímco se v politice často debatuje o geopolitickém směřování země či o svobodě a totalitě, na reprodukční spravedlnost často vůbec nedojde. Přitom témata interrupcí, péče o děti či podpory bydlení jsou pro mnoho lidí zásadní. Proto se rozhodla koalice devíti organizací vytvořit transparentní přehled názorů a postojů konkrétních kandidujících. A Mahdalová & Škop jsou u toho.
+Ve Spojených státech padla po rozhodnutí Nejvyššího soudu v roce 2022 (*Dobbs v. Jackson Women’s Health Organization*) federální ochrana práva na interrupci. Více než desítka států následně zavedla úplné zákazy nebo drastická omezení, která znamenají, že miliony žen a dívek zůstaly bez dostupné péče i v případech znásilnění či ohrožení zdraví.
 
-Volební kalkulačka není hračka. Je to analytický nástroj, který už více než dvě dekády patří k demokratické infrastruktuře v mnoha evropských zemích. Neříká lidem, koho mají volit – umožňuje jim porovnat vlastní postoje s postoji stran na konkrétních otázkách. A to je něco, co billboardy, slogany ani emotivní kampaně nikdy nenahradí.
+Naopak ve Francii parlament v roce 2024 rozhodl o zakotvení práva na interrupci přímo do ústavy. Tím chce předejít tomu, aby bylo toto právo v budoucnu ohroženo. Podobné střety sledujeme i jinde: v Polsku je přístup k interrupcím omezen na minimum, zatímco ve Španělsku byly v posledních letech schváleny reformy posilující práva žen. Česká republika nyní stojí před rozhodnutím, zda posílí ochranu žen a queer lidí, nebo se vydá cestou restrikcí.
 
-Originální česká Volební kalkulačka patří mezi nejpropracovanější v Evropě. Připravujeme ji stále dokola už od roku 2006 - samozřejmě nejen my dva coby analytici (Kateřina Mahdalová a Michal Škop), ale ve spolupráci s experty a expertkami z oblastí politologie, sociologie, práva a mnoha dalších oborů. Na její přípravě se podílejí průzkumné agentury, řada nevládních či profesních organizací. Ty přinášejí klíčová témata - nikoli ta, která se snaží nastolovat samotné kandidující subjekty (lithium, migrace či další témata, mnohdy jen účelově akcentovaná).
+## Kdo stojí za kalkulačkou a mapou
 
-<iframe src='https://flo.uri.sh/visualisation/25424919/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='1400px'></iframe>
+Za volební kalkulačkou a interaktivní mapou stojí osm organizací: **A.S.A.P., Amnesty International, Česká ženská lobby, Konsent, Sola pomáhá, Trans*parent a Unie porodních asistentek**. Společně jsme připravili dotazník, který odráží aktuální společenskou debatu i legislativní trendy v Evropě a ve světě.  
 
-Klíčovou předností tradiční Volební kalkulačky je i shrnutí skutečných hlasování poslanců ve Sněmovně s pozicemi stran (znáte pod názvem **Inventura hlasování**) – voliči a voličky tak vidí, jak poslanci a poslankyně opravdu hlasovali. Je to důležité, neboť řada z nich usiluje o znovuzvolení.
+Z 721 oslovených kandidujících jsme získali více než 270 odpovědí. Samotnou kalkulačku a mapu pro nás zpracovala datová novinářka **Kateřina Mahdalová**.
 
-Samozřejmě že i letos se objevilo několik pokusů o volební kalkulačky, které se snaží těžit z dobré pověsti originálu. A i letos vidíme, že špatně postavená kalkulačka může voliče spíš zmást než pomoci. Proto je důležité rozlišovat mezi nástroji, které mají ověřenou metodiku a nezávislost, a těmi, které leckdy vznikly narychlo, mnohdy bez odborného zázemí. Metodika spojuje osvědčené mezinárodní přístupy s originálním zpracováním přizpůsobeným specifikům české politické scény. Za dvě dekády vzniklo přes **150 verzí kalkulaček** pro všechny typy voleb a využily je miliony voličů – například v prezidentských volbách 2023 více než **2,5 milionu lidí**.
+## Interaktivní obsah
 
-A vliv kvalitně vytvořené kalkulačky? Ten je měřitelný. Volby se v Česku často lámou na jednotkách tisíc hlasů. Mezinárodní výzkumy ukazují, že volební kalkulačky mají reálný dopad na volební chování. V Nizozemsku panelové studie dokázaly, že doporučení kalkulačky [**StemWijzer**](https://en.wikipedia.org/wiki/StemWijzer) může změnit volbu nerozhodnutého voliče. V Německu průzkumy potvrzují, že [**Wahl-O-Mat**](https://en.wikipedia.org/wiki/Wahl-O-Mat) – který využívá až polovina mladých voličů – nejen pomáhá při výběru strany, ale také zvyšuje pravděpodobnost, že člověk vůbec půjde volit. Švédské studie ukázaly, že kalkulačky vedou lidi k tomu, aby si více četli programy stran a diskutovali o konkrétních tématech místo opakování prázdných sloganů.
+<iframe src='https://flo.uri.sh/story/3311794/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
 
-## Co tedy víme:
+<iframe src='https://flo.uri.sh/visualisation/25019110/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='850px'></iframe>
 
- ✅ Při stovkách tisíc uživatelů a prokázaném vlivu na volební chování může mít kalkulačka měřitelný dopad na výsledek voleb.  
- ✅ V těsných volbách, kde se mandáty lámou na tisících hlasů, může být tento efekt rozhodující.  
- ✅ Teoretické modelování ukazuje, že při vysokém počtu uživatelů a těsných výsledcích by kalkulačka mohla ovlivnit rozdělení mandátů.  
+## Co mapa ukazuje
 
-Vliv na volební účast potvrzují data z různých zemí: v Německu 8 % uživatelů uvedlo, že je kalkulačka motivovala jít volit, v Nizozemsku 12 %, ve Finsku dokonce 22 %. Co se týče změny volby, průzkumy zaznamenaly 3–10 % voličů, kteří kvůli kalkulačce změnili preferenci. V českém kontextu, kde se rozhoduje o 200 mandátech a kde těsné výsledky jsou běžné, může být tento efekt klíčový. V české prostředí to znamená, že při těsných výsledcích může kalkulačka reálně ovlivnit rozložení hlasů tak, že rozhodne o obsazení jednoho až dvou mandátů. To není spekulace – je to měřitelný efekt nástroje, který ročně použijí stovky tisíc voličů v okamžiku, kdy se finálně rozhodují.
+Kandidátky do Poslanecké sněmovny se v Česku sestavují po jednotlivých krajích. Pro větší přehlednost je však mapa členěná detailněji – podle **obcí s rozšířenou působností**. Díky tomu je možné vyhledat i konkrétní obec.
 
-Jedna věc se opakuje napříč zeměmi: **Volební kalkulačka snižuje informační bariéru.** V prostředí, kde existuje mnoho stran a složité koaliční kombinace, pomáhají voličům rychle a férově zjistit, kdo je jim nejbližší. A nemají vliv jen na voliče. V Německu nebo Nizozemsku se politické strany pečlivě rozhodují, jak na otázky odpovědět, protože vědí, že jejich postoje uvidí miliony lidí. Kalkulačka tak odhaluje vágnost, mlžení i vyhýbání se odpovědím – a tím vrací do politiky věcnost a konkrétnost.
+Každá mapa představuje **jednu otázku**. V titulku je její zkrácená verze, po kliknutí se zobrazí celé znění i rozpad odpovědí. Barevná škála ukazuje, zda se odpovědi přiklánějí spíše k „proti“ (červená), nebo k „pro“ (modrá).
 
-Právě proto je ale důležité, aby byla dobře udělaná. Záleží na výběru otázek, které musí reflektovat témata důležitá pro veřejnost, nikoli jen pro samotné strany. Záleží na transparentní metodice a na vysvětlení, jak se pozice stran počítají. A v neposlední řadě na dostatečné šíři a nezávislosti autorů a autorek, kteří nesmějí podléhat politickému tlaku. Tyto standardy originální Volební kalkulačka dlouhodobě dodržuje – a právě proto ji voliči znají a důvěřují jí.
+Pod mapou se zobrazuje vodorovný pruh pro každou stranu:
 
-Pokud vám tedy někdo tvrdí, že Volební kalkulačka je k ničemu, můžete mu říct, že se mýlí. Mezinárodní výzkumy dokládají, že tento nástroj motivuje lidi jít volit, zvyšuje informovanost, nutí strany mluvit jasně a při těsných výsledcích může rozhodnout o konkrétních mandátech. V zemi, kde třetina lidí do poslední chvíle váhá, je to víc než jen hračka. Je to součást demokratické výbavy – a originální česká Volební kalkulačka od **KohoVolit.eu** patří mezi ty nejlepší v Evropě.
+🔴 proti  
+⚪ nevím  
+🔵 pro  
+⬜◼ neodpověděli  
+
+Pruhy se dopočítávají do 100 %, po najetí na vybraný segment/pruh je vidět i absolutní počet kandidátů a kandidátek.
+
+## Jak jsme postupovali
+
+Oslovili jsme kandidáty a kandidátky napříč stranami ve všech krajích. Počet oslovených odpovídal reálné šanci dané strany na počet mandátů v regionu.  
+
+Odpovědi jsme sjednotili do jednoho formátu a data vyčistili, aby byla férově porovnatelná. Výsledky v mapách se zobrazují přímo z těchto zpracovaných dat a průběžně se **automaticky aktualizují**.
+
+## Jak interpretovat výsledky
+
+- **Porovnávat lze v rámci jedné strany i mezi regiony.**  
+- Mapa ukazuje, že uvnitř stran existuje pestrost názorů.  
+- Někdy jsou rozdíly překvapivé – např. u otázky snížené sazby DPH na menstruační potřeby se část kandidátů koalice Spolu vyslovila pro zlevnění, zejména ve Zlínském a Ústeckém kraji.  
+
+```box
+Důležité: Neodpověď ≠ nesouhlas. Opravdu to není totéž. Šachovnicový pruh znamená, že kandidát/ka neodpověděl/a. To vypovídá o transparentnosti, ale nikoli o postoji k otázce.
+
+## Limity a férovost
+V některých regionech je méně odpovědí – výsledky proto čteme opatrně.
+Absence odpovědi je také signál: každý subjekt s šancí na vstup do sněmovny byl osloven.
+Otázky jsme formulovali tak, aby byly jednoznačné, férové a srovnatelné.
+Testovali jsme také přístupnost – na mobilu je zobrazení zjednodušené a čitelné.
