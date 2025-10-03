@@ -20,9 +20,9 @@ Za volební kalkulačkou a interaktivní mapou stojí osm organizací: **A.S.A.P
 
 Z 721 oslovených kandidujících jsme získali více než 270 odpovědí. Samotnou kalkulačku a mapu pro nás zpracovala datová novinářka **Kateřina Mahdalová**.
 
-## Interaktivní obsah
+## Interaktivní mapa
 
-<iframe src='https://flo.uri.sh/story/3311794/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
+<iframe src='https://flo.uri.sh/story/3360352/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
 
 <iframe src='https://flo.uri.sh/visualisation/25019110/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='850px'></iframe>
 
