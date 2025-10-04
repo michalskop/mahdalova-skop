@@ -1,5 +1,5 @@
 ---
-title: "Revoluce ve volbách: Rafička ukáže výsledek sněmovních voleb už při prvních sečtených hlasech"
+title: "Revoluce ve volbách: Výsledek sněmovních voleb ukuzujeme už při prvních sečtených hlasech"
 date: "2025-10-04"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Výsledky voleb budou známé pár desítek minut po uzavření volebních místností. Predikční modely umožní přesné odhady už při zhruba 1,5 % sečtených hlasů."
