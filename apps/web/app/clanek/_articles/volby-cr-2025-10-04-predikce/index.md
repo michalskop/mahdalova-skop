@@ -23,10 +23,6 @@ To, co ještě před několika lety působilo jako technologické sci-fi, je dne
 
 <iframe src='https://flo.uri.sh/visualisation/25466915/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 
-## Od komunálních po sněmovní volby: vývoj české predikce
-
-Tým **Kateřiny Mahdalové a Michala Škopa** používá tyto modely už několik let. Poprvé je nasadil při **komunálních volbách 2022** ve **15 největších městech**, poté při **prezidentských volbách 2023**, kdy bylo možné výsledek **určit už při 0,6 % sečtených hlasů**. Predikce se tehdy shodovala s konečným výsledkem **na desetiny procenta**. Od té doby model prošel dalším vývojem: byl úspěšně nasazen při **eurovolbách 2024**, **krajských volbách 2024** – a nyní přichází jeho možná zatím největší zkouška: **sněmovní volby 2025.**
-
 ## Co ukáže predikce
 
 Aby bylo jasné, jak si jednotlivé strany vedou, využívají se pro vizualizaci přehledné grafy, u prezidentských voleb pak tzv. rafička. Pro mladší generaci už prakticky neznámý pojem *rafička* se v češtině díky tomu opětovně vžil jako překlad anglického *needle* – termínu, který používají média jako **The New York Times** nebo **BBC** při svých volebních projekcích.
