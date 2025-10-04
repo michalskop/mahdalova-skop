@@ -1,5 +1,5 @@
 ---
-title: "Volební kalkulačka: nástroj, který skutečně rozhoduje"
+title: "Volební průvodce: kdo rozhoduje o tvém těle"
 date: "2025-10-01"
 author: "Kateřina Mahdalová"
 excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, který může rozhodnout i o mandátech ve Sněmovně."
@@ -61,76 +61,95 @@ V některých regionech je méně odpovědí – výsledky proto čteme opatrně
 Absence odpovědi je také signál: každý subjekt s šancí na vstup do sněmovny byl osloven.
 Otázky jsme formulovali tak, aby byly jednoznačné, férové a srovnatelné.
 Testovali jsme také přístupnost – na mobilu je zobrazení zjednodušené a čitelné.
+```
 
 <html>
 <head>
   <title>České regiony - Volební kalkulačka</title>
+  <!-- Pomůže rychlejšímu navázání spojení -->
+  <link rel="preconnect" href="https://www.volebnikalkulacka.cz" crossorigin>
+  <link rel="dns-prefetch" href="//www.volebnikalkulacka.cz">
   <style>
+    /* ====== Paleta (DataTimes / Mahdalová & Škop) ====== */
     :root{
-      /* Neutral */
-      --neutral-0:#f8f8f0;   /* pozadí */
-      --neutral-1:#bcbcb0;   /* jemné rámečky */
+      --neutral-0:#f8f8f0;
+      --neutral-100:#eeeae2;
+      --neutral-200:#e8e8dc;
+      --neutral-400:#bcbcb0;
 
-      /* Primary (indigo/navy řada) */
-      --primary:#4c4f8e;     /* hlavní tlačítka */
-      --primary-600:#2f325c; /* aktivní/hover */
-      --primary-300:#7889be; /* jemné stavy/outline */
+      --indigo-300:#7889be;
+      --indigo-400:#6267a3;
+      --indigo-600:#4c4f8e;
+      --indigo-800:#2f325c;
 
-      /* Accent (teal) */
-      --accent:#12b886;      /* pozitivní/akce */
-      --accent-700:#0e926a;
+      --teal-500:#12b886;
+      --teal-700:#0e926a;
 
-      /* Support (orange/yellow) */
-      --support:#ff934d;     /* upozornění/hover sekundární */
-      --support-700:#f76800;
-      --warning:#ffcF02;     /* zvýraznění/info */
-      --warning-700:#efb704;
+      --yellow-500:#ffcf02;
+      --yellow-700:#efb704;
 
-      /* Danger (pink/red) */
-      --danger:#de1743;
-      --danger-700:#8b0e2b;
+      --danger-500:#de1743;
 
-      /* Blues (doplněk např. focus kroužek) */
-      --focus:#6976fe;
-
-      /* Teal dark for iframe border on focus */
-      --teal-dark:#06333c;
+      --focus:#1a9fbd;     /* prstenec focusu */
     }
 
-    .czech-regions-container {
-      max-width: 36rem;
+    .czech-regions-container{
+      max-width: 64rem; /* širší, aby se tlačítka skládala do řádků */
       margin: 0 auto;
-      padding: 0;
       font-family: FKGroteskAlarm, Helvetica, Arial, sans-serif;
-      color:#2f325c;
+      color: var(--indigo-800);
     }
 
-    .regions-buttons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-bottom: 20px;
+    .header-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      margin: 0 0 0.75rem 0;
     }
 
-    .region-btn {
-      padding: 12px 16px;
-      background-color: var(--neutral-0);
-      border: 2px solid var(--primary-300);
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform .15s ease, background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+    .header-row h2{
+      margin:0;
+      font-size:1.6rem;
+      font-weight:800;
+      letter-spacing:.2px;
+      color: var(--indigo-800);
+    }
+
+    /* ====== Tlačítka krajů ====== */
+    .regions-buttons{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .region-btn{
+      appearance:none;
+      -webkit-appearance:none;
+      border:1.5px solid var(--neutral-200);
+      background: #fff;
+      color: var(--indigo-800);
+      padding: 10px 14px;
+      border-radius: 12px;           /* PILLS */
+      font-weight: 700;
       font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      color: var(--primary-600);
+      line-height:1.1;
+      cursor:pointer;
+      text-align:center;
+      transition: background-color .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease, transform .05s ease;
       box-shadow: 0 1px 0 rgba(0,0,0,.03);
+      white-space: nowrap;
     }
 
-    .region-btn:hover {
-      background-color: #eef0f7;
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-1px);
+    .region-btn:hover{
+      background: var(--neutral-0);
+      border-color: var(--indigo-300);
+      color: var(--indigo-600);
+    }
+
+    .region-btn:active{
+      transform: translateY(1px);
     }
 
     .region-btn:focus-visible{
@@ -138,218 +157,180 @@ Testovali jsme také přístupnost – na mobilu je zobrazení zjednodušené a 
       outline-offset: 2px;
     }
 
-    .region-btn.active {
-      background-color: var(--primary);
+    .region-btn.active{
+      background: var(--indigo-600);
       color: #fff;
-      border-color: var(--primary-600);
-      box-shadow: 0 2px 0 rgba(0,0,0,.08), inset 0 -2px 0 rgba(0,0,0,.12);
+      border-color: var(--indigo-800);
+      box-shadow: inset 0 -2px 0 rgba(0,0,0,.12), 0 1px 0 rgba(0,0,0,.04);
     }
 
-    .iframe-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-      overflow: hidden;
-    }
-
-    .embed-iframe {
-      width: 100%;
-      height: 80vh;
-      max-height: 800px;
-      border: 2px solid var(--neutral-1);
+    /* ====== Karta s kalkulačkou ====== */
+    .calc-card{
+      display:none; /* skryto do prvního kliknutí */
+      background:#fff;
+      border:1px solid var(--neutral-200);
       border-radius: 12px;
-      max-width: 100%;
-      transform-origin: top left;
-      transition: transform .3s ease, width .3s ease, height .3s ease, border-color .2s ease, box-shadow .2s ease;
-      background: #fff;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
     }
 
-    .embed-iframe:focus-visible{
-      border-color: var(--teal-dark);
-      box-shadow: 0 0 0 4px rgba(18,184,134,.15);
-      outline: none;
+    .calc-card.show{
+      display:block;
+      animation:fadeIn .18s ease-out;
     }
 
-    .loading-message {
-      display: none;
-      padding: 16px 20px;
-      background-color: #f4fff9;           /* světlý nádech do zelené */
-      border: 1px solid var(--accent);
+    @keyframes fadeIn{
+      from{opacity:0; transform: translateY(4px)}
+      to{opacity:1; transform: translateY(0)}
+    }
+
+    .calc-header{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      margin:0 0 .5rem 0;
+      color:var(--indigo-800);
+      font-weight:800;
+    }
+
+    .calc-header .badge{
+      display:inline-block;
+      font-size:.8rem;
+      font-weight:800;
+      color:#fff;
+      background: var(--indigo-600);
+      padding: 4px 8px;
+      border-radius: 999px;
+      letter-spacing:.2px;
+    }
+
+    /* Iframe – bez škálování, responsive výška */
+    .embed-iframe{
+      width:100%;
+      height: clamp(560px, 70vh, 820px);
+      border: 1px solid var(--neutral-200);
       border-radius: 10px;
-      color: var(--accent-700);
-      font-style: normal;
-      font-weight: 600;
-      width: 100%;
-      text-align: center;
+      background:#fff;
     }
 
-    .no-selection {
-      padding: 24px 28px;
-      background-color: #fff8e1;           /* jemná žlutá plocha */
-      border: 1px dashed var(--warning-700);
-      border-radius: 10px;
-      color: #5a4a00;
-      text-align: center;
-      width: 100%;
+    .status{
+      display:none;
+      margin: 8px 0 0 0;
+      font-size:.95rem;
+      color: var(--teal-700);
+      font-weight:700;
     }
+    .status.show{ display:block; }
 
-    /* Mobile scaling - 70% scale for screens ≤650px */
-    @media (max-width: 650px) {
-      .embed-iframe {
-        width: 142.86%;
-        height: calc(80vh / 0.7);
-        max-height: calc(800px / 0.7);
-        transform: scale(0.7);
-      }
-
-      .regions-buttons {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      }
-
-      .region-btn {
-        font-size: 12px;
-        padding: 10px 12px;
-      }
-    }
-
-    /* Very small screens - 60% scale for screens ≤480px */
-    @media (max-width: 480px) {
-      .embed-iframe {
-        width: 166.67%;
-        height: calc(80vh / 0.6);
-        max-height: calc(800px / 0.6);
-        transform: scale(0.6);
-      }
-
-      .regions-buttons {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      }
-
-      .region-btn {
-        font-size: 11px;
-        padding: 8px 10px;
-      }
-    }
-
-    /* Extra small screens - 50% scale for screens ≤320px */
-    @media (max-width: 320px) {
-      .embed-iframe {
-        width: 200%;
-        height: calc(80vh / 0.5);
-        max-height: calc(800px / 0.5);
-        transform: scale(0.5);
-      }
+    /* Malé obrazovky */
+    @media (max-width: 520px){
+      .regions-buttons{ grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
-  <div class="czech-regions-container">
-    <h2>Vyberte kraj České republiky</h2>
-
-    <div class="regions-buttons">
-      <button class="region-btn" data-region="praha">Praha</button>
-      <button class="region-btn" data-region="jihocesky">Jihočeský</button>
-      <button class="region-btn" data-region="stredocesky">Středočeský</button>
-      <button class="region-btn" data-region="plzensky">Plzeňský</button>
-      <button class="region-btn" data-region="karlovarsky">Karlovarský</button>
-      <button class="region-btn" data-region="ustecky">Ústecký</button>
-      <button class="region-btn" data-region="liberecky">Liberecký</button>
-      <button class="region-btn" data-region="kralovehradecky">Královéhradecký</button>
-      <button class="region-btn" data-region="pardubicky">Pardubický</button>
-      <button class="region-btn" data-region="vysocina">Vysočina</button>
-      <button class="region-btn" data-region="jihomoravsky">Jihomoravský</button>
-      <button class="region-btn" data-region="olomoucky">Olomoucký</button>
-      <button class="region-btn" data-region="moravskoslezsky">Moravskoslezský</button>
-      <button class="region-btn" data-region="zlinsky">Zlínský</button>
+  <div class="czech-regions-container" id="vk-app">
+    <div class="header-row">
+      <h2>Volební kalkulačka</h2>
     </div>
 
-    <div class="iframe-container">
-      <div class="loading-message" id="loadingMessage">Načítání…</div>
+    <p style="margin:.25rem 0 1rem 0; color:#5a5f83;">Vyberte kraj České republiky</p>
 
-      <div class="no-selection" id="noSelection">
-        Vyberte kraj pro zobrazení volební kalkulačky
+    <div class="regions-buttons" role="tablist" aria-label="Výběr kraje">
+      <button class="region-btn" role="tab" aria-selected="false" data-region="praha">Praha</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="jihocesky">Jihočeský</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="stredocesky">Středočeský</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="plzensky">Plzeňský</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="karlovarsky">Karlovarský</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="ustecky">Ústecký</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="liberecky">Liberecký</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="kralovehradecky">Královéhradecký</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="pardubicky">Pardubický</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="vysocina">Vysočina</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="jihomoravsky">Jihomoravský</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="olomoucky">Olomoucký</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="moravskoslezsky">Moravskoslezský</button>
+      <button class="region-btn" role="tab" aria-selected="false" data-region="zlinsky">Zlínský</button>
+    </div>
+
+    <div class="calc-card" id="calcCard" aria-live="polite">
+      <div class="calc-header">
+        <span class="badge" id="regionBadge">Kraj</span>
+        <span id="calcTitle">ASAP25 – sněmovní 2025</span>
       </div>
 
       <iframe
         id="regionIframe"
         class="embed-iframe"
-        style="display: none;"
+        title="Volební kalkulačka – regionální embed"
         frameborder="0"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
         referrerpolicy="no-referrer"
-        allowfullscreen>
+        sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
       </iframe>
+
+      <div id="status" class="status">Načítám kalkulačku…</div>
     </div>
   </div>
 
   <script>
-    (function() {
+    (function(){
       const BASE_URL = 'https://www.volebnikalkulacka.cz/embed/alarm/volby/snemovni-2025-asap/';
-
-      const buttons = document.querySelectorAll('.region-btn');
+      const btns = Array.from(document.querySelectorAll('.region-btn'));
       const iframe = document.getElementById('regionIframe');
-      const loadingMessage = document.getElementById('loadingMessage');
-      const noSelection = document.getElementById('noSelection');
+      const card = document.getElementById('calcCard');
+      const badge = document.getElementById('regionBadge');
+      const status = document.getElementById('status');
 
-      let currentActiveButton = null;
+      const regionLabel = {
+        praha:'Praha', jihocesky:'Jihočeský', stredocesky:'Středočeský',
+        plzensky:'Plzeňský', karlovarsky:'Karlovarský', ustecky:'Ústecký',
+        liberecky:'Liberecký', kralovehradecky:'Královéhradecký',
+        pardubicky:'Pardubický', vysocina:'Vysočina', jihomoravsky:'Jihomoravský',
+        olomoucky:'Olomoucký', moravskoslezsky:'Moravskoslezský', zlinsky:'Zlínský'
+      };
 
-      function showLoading() {
-        iframe.style.display = 'none';
-        noSelection.style.display = 'none';
-        loadingMessage.style.display = 'block';
+      function setActive(button){
+        btns.forEach(b=>{
+          b.classList.toggle('active', b===button);
+          b.setAttribute('aria-selected', b===button ? 'true' : 'false');
+        });
       }
 
-      function showIframe() {
-        loadingMessage.style.display = 'none';
-        noSelection.style.display = 'none';
-        iframe.style.display = 'block';
+      function loadRegion(code){
+        // UI stav
+        card.classList.add('show');
+        status.classList.add('show');
+        status.textContent = 'Načítám kalkulačku…';
+        badge.textContent = regionLabel[code] || 'Kraj';
+
+        // Rychlé načtení – bez umělého zdržení
+        const url = BASE_URL + code;
+        if(iframe.src !== url){
+          iframe.src = url;
+        }
       }
 
-      function showNoSelection() {
-        iframe.style.display = 'none';
-        loadingMessage.style.display = 'none';
-        noSelection.style.display = 'block';
-      }
-
-      function loadRegion(regionCode) {
-        showLoading();
-        iframe.src = BASE_URL + regionCode;
-        setTimeout(() => showIframe(), 800);
-      }
-
-      buttons.forEach(button => {
-        button.addEventListener('click', function() {
-          const regionCode = this.getAttribute('data-region');
-
-          if (currentActiveButton === this) {
-            this.classList.remove('active');
-            currentActiveButton = null;
-            showNoSelection();
-            return;
-          }
-
-          buttons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-          currentActiveButton = this;
-
-          loadRegion(regionCode);
+      btns.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const code = btn.getAttribute('data-region');
+          setActive(btn);
+          loadRegion(code);
         });
       });
 
-      iframe.addEventListener('load', function() {
-        if (this.src) showIframe();
+      iframe.addEventListener('load', ()=>{
+        status.textContent = 'Hotovo';
+        setTimeout(()=>status.classList.remove('show'), 400);
       });
 
-      iframe.addEventListener('error', function() {
-        console.error('Failed to load iframe content');
-        showNoSelection();
-        if (currentActiveButton) {
-          currentActiveButton.classList.remove('active');
-          currentActiveButton = null;
-        }
+      iframe.addEventListener('error', ()=>{
+        status.textContent = 'Nepodařilo se načíst obsah. Zkuste to znovu.';
+        status.classList.add('show');
       });
 
+      // Volitelně: předvolit Prahu (zruš, pokud nechceš automaticky nic načítat)
+      // const defaultBtn = btns.find(b=>b.dataset.region==='praha');
+      // if(defaultBtn){ defaultBtn.click(); }
     })();
   </script>
 </body>
