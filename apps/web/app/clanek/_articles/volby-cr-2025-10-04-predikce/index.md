@@ -21,7 +21,7 @@ Je to výzva pro dramaturgy tradičních volebních studií. Hodiny strávené s
 
 To, co ještě před několika lety působilo jako technologické sci-fi, je dnes realitou. Predikční modely kombinující **otevřená data ČSÚ**, **matematickou analýzu** a **znalost regionálních vzorců** dokáží s mimořádnou přesností spočítat, **kdo vyhraje volby – dřív, než se většina okrsků vůbec dopočítá.**
 
-<iframe src='https://flo.uri.sh/visualisation/25466915/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
+<iframe src='https://flo.uri.sh/visualisation/25466915/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='650px'></iframe>
 
 ## Co ukáže predikce
 
