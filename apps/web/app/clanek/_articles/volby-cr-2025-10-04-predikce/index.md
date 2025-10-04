@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Výsledky voleb budou známé pár desítek minut po uzavření volebních místností. Predikční modely umožní přesné odhady už při zhruba 1,5 % sečtených hlasů."
 coverImage: "images/raficka-snemovni-2025.jpg"
 filter: ["kontext"]
-tags: ["predikce", "volby2025", "sněmovna", "rafička", "ČSÚ", "data"]
+tags: ["predikce", "volby2025", "sněmovna", "mandáty", "ČSÚ", "data"]
 promoted: 90
 ---
 
@@ -18,37 +18,23 @@ promoted: 90
 <iframe src='https://flo.uri.sh/visualisation/25461556/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
 
 
-Je to výzva pro dramaturgy tradičních volebních studií – i pro politiky, kteří ještě ani nestihnou otevřít šampaňské.
+Je to výzva pro dramaturgy tradičních volebních studií. Hodiny strávené sledováním pomalu naskakujících procent na stránkách **Českého statistického úřadu** jsou minulostí. Nastupuje éra **přesných volebních predikcí**, které dokážou určit výsledek už při **zhruba 1,5 % sečtených hlasů** – tedy asi **půl hodiny po uzavření volebních místností**. Takto rychle to jde například u druhého kola prezidentské volby, kde jsou pouze dva kandidáti a celá Česká republika je jeden volební obvod. Sčítání voličských hlasů je v tomto případě nejsnazší ze všech voleb, které se v ČR konají. U sněmovních voleb je 14 volebních obvodů podle 14 krajů a například leto kandidovalo 26 politikách subjektů. To je důvod, proč sčítání hlasů trvá déle a výsledky pak jsou známé 
 
-Hodiny strávené sledováním pomalu naskakujících procent na stránkách **Českého statistického úřadu** jsou minulostí.  
-Nastupuje éra **přesných volebních predikcí**, které dokážou určit výsledek už při **zhruba 1,5 % sečtených hlasů** – tedy asi **půl hodiny po uzavření volebních místností**.
+To, co ještě před několika lety působilo jako technologické sci-fi, je dnes realitou. Predikční modely kombinující **otevřená data ČSÚ**, **matematickou analýzu** a **znalost regionálních vzorců** dokáží s mimořádnou přesností spočítat, **kdo vyhraje volby – dřív, než se většina okrsků vůbec dopočítá.**
 
-To, co ještě před několika lety působilo jako technologické sci-fi, je dnes realitou.  
-Predikční modely kombinující **otevřená data ČSÚ**, **matematickou analýzu** a **znalost regionálních vzorců** dokážou s mimořádnou přesností spočítat, **kdo vyhraje volby – dřív, než se většina okrsků vůbec dopočítá.**
-
-<iframe src='https://flo.uri.sh/story/2044904/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
+<iframe src='https://flo.uri.sh/story/3361923/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
 
 ---
 
 ## Od komunálních po sněmovní: vývoj české predikce
 
-Tým **Kateřiny Mahdalové a Michala Škopa** používá tyto modely už několik let.  
-Poprvé je nasadil při **komunálních volbách 2022** ve **15 největších městech**, poté při **prezidentských volbách 2023**, kdy bylo možné výsledek **určit už při 0,6 % sečtených hlasů**.  
-Predikce se tehdy shodovala s konečným výsledkem **na desetiny procenta**.
-
-Od té doby model prošel dalším vývojem: byl úspěšně nasazen při **eurovolbách 2024**, **krajských volbách 2024** – a nyní přichází jeho největší zkouška: **sněmovní volby 2025.**
+Tým **Kateřiny Mahdalové a Michala Škopa** používá tyto modely už několik let. Poprvé je nasadil při **komunálních volbách 2022** ve **15 největších městech**, poté při **prezidentských volbách 2023**, kdy bylo možné výsledek **určit už při 0,6 % sečtených hlasů**. Predikce se tehdy shodovala s konečným výsledkem **na desetiny procenta**. Od té doby model prošel dalším vývojem: byl úspěšně nasazen při **eurovolbách 2024**, **krajských volbách 2024** – a nyní přichází jeho možná zatím největší zkouška: **sněmovní volby 2025.**
 
 ---
 
-## Co ukáže rafička
+## Co ukáže predikce
 
-Aby bylo jasné, jak si jednotlivé strany vedou, používá se i letos tzv. **rafička** – vizuální nástroj, který veřejnost zná třeba z tachometrů.  
-Čím víc se rafička vychýlí na jednu nebo druhou stranu, tím vyšší je **pravděpodobnost**, že daná **strana či koalice** volby vyhraje.
-
-> „Rafička je vizuálně srozumitelná i pro lidi, kteří nechtějí číst tabulky a grafy.  
-> Stačí se podívat – a víš, jak se volby vyvíjejí,“ říká **Kateřina Mahdalová**.
-
-Pojem *rafička* se v češtině vžil jako překlad anglického *needle* – termínu, který používají média jako **The New York Times** nebo **BBC** při svých volebních projekcích.
+Aby bylo jasné, jak si jednotlivé strany vedou, využívají se pro vizualizaci přehledné grafy, u prezidentských voleb pak tzv. rafička. Pro mladší generaci už prakticky neznámý pojem *rafička* se v češtině díky tomu opětovně vžil jako překlad anglického *needle* – termínu, který používají média jako **The New York Times** nebo **BBC** při svých volebních projekcích.
 
 ---
 
