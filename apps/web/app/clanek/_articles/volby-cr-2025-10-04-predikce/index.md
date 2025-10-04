@@ -55,6 +55,6 @@ Stojí za projekty jako [**Volební kalkulačka**](https://www.volebnikalkulacka
 
 Predikce sněmovních voleb 2025 tak nejsou jen „technologickou hračkou“ – ale součástí širší snahy **zpřístupnit volby veřejnosti** a zvýšit porozumění tomu, **jak se výsledky tvoří**.
 
-<div align="center">┃┃┃</div>
+<div align="center">┃┃┃
 
-**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**
+**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**</div>
