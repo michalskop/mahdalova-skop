@@ -46,28 +46,21 @@ Model zohledňuje **geografii**, **velikost obcí**, **volební historii** i **r
 Každých několik minut se pak výsledek **zpřesňuje** – od první predikce až po konečné dopočítání.  
 Na rozdíl od pouhých odhadů či „komentářů“ z volebních studií má tento model **matematický základ** a **jasně kvantifikovanou nejistotu**.
 
-> „Každý okrsek má svou datovou stopu. Víme, jak volil dřív a jak se obvykle vyvíjejí trendy mezi městy a venkovem.  
-> Díky tomu dokážeme velmi přesně odhadnout, jak dopadne celé Česko, i když máme zatím jen malý zlomek dat,“ doplňuje **Michal Škop**.
+> „Každý okrsek má svou datovou stopu. Víme, jak volil dřív a jak se obvykle vyvíjejí trendy mezi městy a venkovem. Díky tomu dokážeme velmi přesně odhadnout, jak dopadne celé Česko, i když máme zatím jen malý zlomek dat,“ doplňuje **Michal Škop**.
 
 ---
 
 ## Česká predikce mezi světovou elitou
 
 Predikce tohoto typu se běžně používají v **USA** nebo ve **Velké Británii**, kde média často oznámí **vítěze voleb** dřív než volební komise.  
-V Česku se systém **otevřených dat ČSÚ** stal jedním z klíčových předpokladů, aby bylo možné podobné predikce dělat i zde.
-
-První testy ukázaly, že český model se přesností **vyrovná zahraničním projekcím** – přičemž je plně **transparentní** a **metodologicky popsaný**.  
-Výsledky nejsou černou skříňkou, ale **otevřeným algoritmem**, který lze zpětně analyzovat.
+V Česku je klíčová spolupráce s Českým statistickým úřadem a jejich **otevřeným datům**, která poskytuje během průběžného sčítání hlasů. Právě díky tomu se takto kvalitní predikce vůbec dají provádět. Výsledky nejsou žádná „křišťálová koule“, ale **otevřený algoritmus**, který lze zpětně analyzovat.
 
 ---
 
 ## Nejde o soutěž, ale o informaci
 
-Cílem predikce **není závodit** s ostatními redakcemi, ale **informovat veřejnost poctivě a srozumitelně**.  
-Zatímco hosté televizních studií obvykle varují, že „velká města mohou všechno změnit“, predikce tyto rozdíly **už v sobě zahrnuje**.
-
-> „Chceme, aby lidé dostali co nejpřesnější informaci co nejdřív – a aby rozuměli tomu, jak k ní docházíme,“ říká **Mahdalová**.  
-> „Vysvětlujeme, že nejde o věštění, ale o důslednou práci s daty.“
+Primárním cílem predikce **není závodit** s ostatními redakcemi, ale **informovat veřejnost poctivě a srozumitelně**. Zatímco hosté televizních studií obvykle varují, že „velká města mohou všechno změnit“, predikce tyto rozdíly **už v sobě zahrnuje**. 
+> „Chceme, aby lidé dostali co nejpřesnější informaci co nejdřív – a aby rozuměli tomu, jak k ní docházíme,“ říká **Mahdalová**. „Vysvětlujeme, že nejde o věštění, ale o důslednou práci s daty. A ještě jedna podstatná věc: volební studia ve všech médiích, zvláště pak ve veřejnoprosávní televizi, mají vysokou sledovanost. Díky predikcím by pak hosté a hostky ve studiích mohli mluvit výrazně věcněji a méně spekulovat. Stejně tak novináři a novinářky, které jsou tzv. v terénu ve volebních štábech politických stran - ti by se pak mohli ptát mnohem konkrétněji.“
 
 ---
 
