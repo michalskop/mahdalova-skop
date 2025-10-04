@@ -12,11 +12,11 @@ promoted: 90
 ## Výsledky voleb budou známé pár desítek minut po uzavření volebních místností
 
 <iframe src='https://flo.uri.sh/visualisation/25460734/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='350px'></iframe>
-<div align="center">┃┃┃</div>
+<div style={{ textAlign: 'center' }}>┃┃┃</div>
 <iframe src='https://flo.uri.sh/visualisation/25461150/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
-<div align="center">┃┃┃</div>
+<div style={{ textAlign: 'center' }}>┃┃┃</div>
 <iframe src='https://flo.uri.sh/visualisation/25461556/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
-<div align="center">┃┃┃</div>
+<div style={{ textAlign: 'center' }}>┃┃┃</div>
 
 Je to výzva pro dramaturgy tradičních volebních studií. Hodiny strávené sledováním pomalu naskakujících procent na stránkách **Českého statistického úřadu** jsou minulostí. Nastupuje éra **přesných volebních predikcí**, které dokážou určit výsledek už při **zhruba 1,5 % sečtených hlasů** – tedy asi **půl hodiny po uzavření volebních místností**. Takto rychle to jde například u druhého kola prezidentské volby, kde jsou pouze dva kandidáti a celá Česká republika je jeden volební obvod. Sčítání voličských hlasů je v tomto případě nejsnazší ze všech voleb, které se v ČR konají. U sněmovních voleb je 14 volebních obvodů podle 14 krajů a například leto kandidovalo 26 politikách subjektů. To je důvod, proč sčítání hlasů trvá déle a výsledky pak jsou známé 
 
@@ -55,6 +55,6 @@ Stojí za projekty jako [**Volební kalkulačka**](https://www.volebnikalkulacka
 
 Predikce sněmovních voleb 2025 tak nejsou jen „technologickou hračkou“ – ale součástí širší snahy **zpřístupnit volby veřejnosti** a zvýšit porozumění tomu, **jak se výsledky tvoří**.
 
-<div align="center">┃┃┃
+<div style={{ textAlign: 'center' }}>┃┃┃</div>
 
-**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**</div>
+**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**
