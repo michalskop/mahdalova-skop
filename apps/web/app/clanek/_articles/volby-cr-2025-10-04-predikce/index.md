@@ -57,4 +57,4 @@ Predikce sněmovních voleb 2025 tak nejsou jen „technologickou hračkou“ �
 
 <div style={{ textAlign: 'center' }}>┃┃┃</div>
 
-**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**
+<div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**</div>
