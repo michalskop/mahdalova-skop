@@ -3,7 +3,7 @@ title: "Revoluce ve volbách: Výsledek sněmovních voleb ukazujeme už při pr
 date: "2025-10-04"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Výsledky voleb budou známé pár desítek minut po uzavření volebních místností. Predikční modely umožní přesné odhady už při zhruba 1,5 % sečtených hlasů."
-coverImage: "images/raficka-snemovni-2025.jpg"
+coverImage: "images/snemovni-volby-2025-predikce-mahdalova-skop.png"
 filter: ["kontext"]
 tags: ["predikce", "volby2025", "sněmovna", "mandáty", "ČSÚ", "data"]
 promoted: 90
