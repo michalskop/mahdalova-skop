@@ -15,6 +15,8 @@ promoted: 90
 
 <iframe src='https://flo.uri.sh/visualisation/25461150/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 
+<iframe src='https://flo.uri.sh/visualisation/25461556/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='900px'></iframe>
+
 
 Je to výzva pro dramaturgy tradičních volebních studií – i pro politiky, kteří ještě ani nestihnou otevřít šampaňské.
 
