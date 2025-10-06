@@ -109,7 +109,7 @@ export function HeaderSimple() {
             target="_blank"
             radius="xl"
             style={{
-              fontSize: isMobile ? '0.8rem' : 'inherit',
+              fontSize: isMobile ? '0.7rem' : 'inherit',
               // marginLeft: '20px', // Add padding to the left
               '&:hover': {
                 bg: theme.colors.brand[7], // Change to your desired hover color
