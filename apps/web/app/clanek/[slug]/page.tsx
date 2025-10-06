@@ -1,12 +1,12 @@
 // app/clanek/[slug]/page.tsx
 import { Metadata } from 'next'
 import { getArticleBySlug } from '@/lib/articles';
+import fs from 'fs';
+import path from 'path';
 import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
 import { TagList } from '@/components/common/TagList';
 import { notFound } from 'next/navigation';
 import { Box, Container } from '@mantine/core';
-import fs from 'fs'
-import path from 'path'
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import ArticleRating from '@/components/common/ArticleRating';
 
@@ -67,18 +67,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
+
+
 export async function generateStaticParams() {
-  // Get the absolute path to the articles directory
-  const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles')
-  // Read the directory
-  const articles = fs.readdirSync(articlesDirectory, { withFileTypes: true })
-  // Filter for directories only and map to slug format
-  const slugs = articles
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => ({
-      slug: dirent.name,
-    }))
-  return slugs
+  const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
+  try {
+    const articles = fs.readdirSync(articlesDirectory, { withFileTypes: true });
+    const slugs = articles
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => ({ slug: dirent.name }));
+    return slugs;
+  } catch (error) {
+    console.error(`Failed to generate static params from ${articlesDirectory}:`, error);
+    return [];
+  }
 }
 
 export default async function ArticlePage({ params }: PageProps) {
