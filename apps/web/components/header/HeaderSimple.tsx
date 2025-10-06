@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button, Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core'; 
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LogoWithText from '@/components/common/LogoWithText';
@@ -22,6 +22,7 @@ export function HeaderSimple() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
   const [scrolled, setScrolled] = useState(false);
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.xs})`);
 
 
   useEffect(() => {
@@ -108,12 +109,13 @@ export function HeaderSimple() {
             target="_blank"
             radius="xl"
             style={{
+              fontSize: isMobile ? '0.8rem' : 'inherit',
               // marginLeft: '20px', // Add padding to the left
               '&:hover': {
                 bg: theme.colors.brand[7], // Change to your desired hover color
               },
             }}
-          >Podpořte nás</Button>
+          >{isMobile ? 'Podpořit' : 'Podpořte nás'}</Button>
           <Group gap={10} visibleFrom="sm" ml="auto">
             {items}
           </Group>
