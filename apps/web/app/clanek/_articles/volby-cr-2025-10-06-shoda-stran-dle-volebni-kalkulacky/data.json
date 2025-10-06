@@ -1,6 +1,7 @@
 [
   {
     "motion": "Stát má motivovat obce, aby v územních plánech povolily vyšší hustotu zástavby.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 200,
       "parties": [
@@ -23,6 +24,7 @@
   },
   {
     "motion": "Územní plány mají být méně striktní a umožňovat více bytové výstavby.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 200,
       "parties": [
@@ -45,6 +47,7 @@
   },
   {
     "motion": "Stát má poskytovat základní příjem všem mladým lidem bez ohledu na jejich situaci.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 0,
       "parties": []
@@ -67,6 +70,7 @@
   },
   {
     "motion": "Odborníci na úřadech mají mít podobné platy jako ve firmách.",
+    "tag": "Práce a mzdy",
     "yes": {
       "seats": 200,
       "parties": [
@@ -89,6 +93,7 @@
   },
   {
     "motion": "Stát má více digitalizovat a zjednodušovat své úřední procesy.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 200,
       "parties": [
@@ -111,6 +116,7 @@
   },
   {
     "motion": "Soudy mají zkracovat lhůty na vyřízení sporů a trestních věcí.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 200,
       "parties": [
@@ -133,6 +139,7 @@
   },
   {
     "motion": "Stát má významně rozšířit kapacitu mateřských škol.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 200,
       "parties": [
@@ -155,6 +162,7 @@
   },
   {
     "motion": "Stát má snižovat rozdíly v kvalitě škol.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 200,
       "parties": [
@@ -177,6 +185,7 @@
   },
   {
     "motion": "Zdravotní pojišťovny mají více investovat do prevence.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 200,
       "parties": [
@@ -199,6 +208,7 @@
   },
   {
     "motion": "Česko má zavést jednotnou jízdenku na vlaky, autobusy a MHD.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 200,
       "parties": [
@@ -221,6 +231,7 @@
   },
   {
     "motion": "Po roce 2035 se mají nadále prodávat bez omezování i nová auta se spalovacími motory.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 200,
       "parties": [
@@ -243,6 +254,7 @@
   },
   {
     "motion": "Česko má stavět více přehrad.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 200,
       "parties": [
@@ -265,6 +277,7 @@
   },
   {
     "motion": "Česko má stavět nové jaderné bloky.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 200,
       "parties": [
@@ -287,6 +300,7 @@
   },
   {
     "motion": "Stát má více finančně podporovat mladé lidi při zajištění jejich prvního vlastního bydlení.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 187,
       "parties": [
@@ -310,6 +324,7 @@
   },
   {
     "motion": "Provoz sociálních sítí se má přísněji regulovat pro děti a dospívající.",
+    "tag": "Média a technologie",
     "yes": {
       "seats": 187,
       "parties": [
@@ -333,6 +348,7 @@
   },
   {
     "motion": "Veřejné vysoké školy se mají zpoplatnit.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 13,
       "parties": [
@@ -356,6 +372,7 @@
   },
   {
     "motion": "Česká republika má vystoupit ze Severoatlantické aliance (NATO).",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 0,
       "parties": []
@@ -379,6 +396,7 @@
   },
   {
     "motion": "V Česku má být zaveden pravidelný 13. důchod pro všechny starobní důchodce.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 0,
       "parties": []
@@ -402,6 +420,7 @@
   },
   {
     "motion": "U veřejných zakázek má nadále rozhodovat hlavně nejnižší cena.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 15,
       "parties": [
@@ -425,6 +444,7 @@
   },
   {
     "motion": "Počet školních psychologů se má výrazně zvýšit.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 185,
       "parties": [
@@ -448,6 +468,7 @@
   },
   {
     "motion": "Česko má zaujmout neutrální postoj k válce na Ukrajině.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 15,
       "parties": [
@@ -471,6 +492,7 @@
   },
   {
     "motion": "Česko má vystoupit z EU.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 15,
       "parties": [
@@ -494,6 +516,7 @@
   },
   {
     "motion": "Souhlasím, že by právo na interrupci mělo být zakotveno v ústavě.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 18,
       "parties": [
@@ -517,6 +540,7 @@
   },
   {
     "motion": "Školy si mají zachovat autonomii při určování svých kapacit bez ohledu na potřeby trhu práce.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 18,
       "parties": [
@@ -540,6 +564,7 @@
   },
   {
     "motion": "Antikoncepce (např. pilulky, tělíska, kondomy) má být alespoň zčásti hrazena z veřejných prostředků.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 18,
       "parties": [
@@ -563,6 +588,7 @@
   },
   {
     "motion": "Spoluúčast pacientů na zdravotní péči má být zvýšena.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 0,
       "parties": []
@@ -586,6 +612,7 @@
   },
   {
     "motion": "Školní jídelny a menzy mají i nadále nabízet hlavně jídla s masem.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 178,
       "parties": [
@@ -609,6 +636,7 @@
   },
   {
     "motion": "Česko má více otevírat trh práce pro zahraniční pracovníky.",
+    "tag": "Práce a mzdy",
     "yes": {
       "seats": 172,
       "parties": [
@@ -632,6 +660,7 @@
   },
   {
     "motion": "Korespondenční volba má být zrušena.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 28,
       "parties": [
@@ -655,6 +684,7 @@
   },
   {
     "motion": "Kapacita gymnázií má být rozšířena.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 172,
       "parties": [
@@ -678,6 +708,7 @@
   },
   {
     "motion": "Specializovaná lékařská péče má být více soustředěna do větších nemocnic v krajských městech.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 172,
       "parties": [
@@ -701,6 +732,7 @@
   },
   {
     "motion": "Česko má podporovat rozvoj obnovitelných zdrojů energie.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 172,
       "parties": [
@@ -724,6 +756,7 @@
   },
   {
     "motion": "Stát má aktivně podporovat výrobu elektromobilů.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 172,
       "parties": [
@@ -747,6 +780,7 @@
   },
   {
     "motion": "Stát má více investovat do snižování energetické náročnosti budov, například formou dotací, půjček a informačních kampaní.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 172,
       "parties": [
@@ -770,6 +804,7 @@
   },
   {
     "motion": "Policie má odhalovat auta s nefunkčními filtry pomocí měřičů emisí.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 172,
       "parties": [
@@ -793,6 +828,7 @@
   },
   {
     "motion": "Česko má zvýšit výstavbu větrných elektráren.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 172,
       "parties": [
@@ -816,6 +852,7 @@
   },
   {
     "motion": "Mají se zavést poplatky za emise oxidu uhličitého (CO₂) z paliv pro vytápění.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 22,
       "parties": [
@@ -840,6 +877,7 @@
   },
   {
     "motion": "Používání fosilních paliv v dopravě (benzín, nafta) má zůstat bez poplatků za emise CO₂.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 160,
       "parties": [
@@ -864,6 +902,7 @@
   },
   {
     "motion": "Dlouhodobě prázdné byty mají být zdaněny.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 40,
       "parties": [
@@ -887,6 +926,7 @@
   },
   {
     "motion": "Spotřební daň na pivo se má zvýšit.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 40,
       "parties": [
@@ -910,6 +950,7 @@
   },
   {
     "motion": "Sociální sítě mají nést odpovědnost za zveřejněný obsah.",
+    "tag": "Média a technologie",
     "yes": {
       "seats": 40,
       "parties": [
@@ -933,6 +974,7 @@
   },
   {
     "motion": "Podíl zdanění by se měl více přesunout z práce na majetek.",
+    "tag": "Práce a mzdy",
     "yes": {
       "seats": 40,
       "parties": [
@@ -956,6 +998,7 @@
   },
   {
     "motion": "Prodej nezdravých potravin má zůstat i nadále bez speciální spotřební daně.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 160,
       "parties": [
@@ -979,6 +1022,7 @@
   },
   {
     "motion": "Vláda má podpořit cíl EU snížit do roku 2040 emise o 90 % oproti roku 1990.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 40,
       "parties": [
@@ -1002,6 +1046,7 @@
   },
   {
     "motion": "Pravomoci památkářů a orgánů ochrany přírody ve stavebním řízení mají být omezeny.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 148,
       "parties": [
@@ -1025,6 +1070,7 @@
   },
   {
     "motion": "Souhlasím se zařazením menstruačních potřeb do snížené sazby DPH.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 148,
       "parties": [
@@ -1048,6 +1094,7 @@
   },
   {
     "motion": "Krátkodobé pronájmy bytů (např. přes Airbnb) mají zůstat bez zvláštní regulace.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 13,
       "parties": [
@@ -1072,6 +1119,7 @@
   },
   {
     "motion": "Všichni zaměstnanci mají odvádět stejný podíl na daních a odvodech bez ohledu na výši příjmu.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 132,
       "parties": [
@@ -1095,6 +1143,7 @@
   },
   {
     "motion": "Stát má co nejdříve zavést zálohový systém na PET lahve a plechovky.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 52,
       "parties": [
@@ -1119,6 +1168,7 @@
   },
   {
     "motion": "Menší obce se mají slučovat do větších celků.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 70,
       "parties": [
@@ -1142,6 +1192,7 @@
   },
   {
     "motion": "Technické střední školy mají být finančně zvýhodněné oproti jiným typům vzdělání.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 130,
       "parties": [
@@ -1165,6 +1216,7 @@
   },
   {
     "motion": "Věk odchodu do důchodu má dále růst podle demografického vývoje.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 74,
       "parties": [
@@ -1188,6 +1240,7 @@
   },
   {
     "motion": "Ministři mají po nástupu do funkce zveřejnit několik konkrétních a měřitelných cílů pro celé volební období.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 120,
       "parties": [
@@ -1211,6 +1264,7 @@
   },
   {
     "motion": "Umělé oplodnění má být dostupné i ženám bez partnera.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 120,
       "parties": [
@@ -1235,6 +1289,7 @@
   },
   {
     "motion": "Má se znovu zavést elektronická evidence tržeb (EET).",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 80,
       "parties": [
@@ -1258,6 +1313,7 @@
   },
   {
     "motion": "Eutanazie má být v Česku legální.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 120,
       "parties": [
@@ -1281,6 +1337,7 @@
   },
   {
     "motion": "Pěstovat konopí pro vlastní potřebu má být legální.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 120,
       "parties": [
@@ -1304,6 +1361,7 @@
   },
   {
     "motion": "Minimální mzda má v Česku dosáhnout alespoň 50 % průměrné mzdy.",
+    "tag": "Práce a mzdy",
     "yes": {
       "seats": 113,
       "parties": [
@@ -1328,6 +1386,7 @@
   },
   {
     "motion": "Občané mají mít právo iniciovat celostátní referendum.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 113,
       "parties": [
@@ -1351,6 +1410,7 @@
   },
   {
     "motion": "Stejnopohlavní páry mají mít možnost vstupovat do manželství za stejných podmínek jako jiné páry.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 40,
       "parties": [
@@ -1375,6 +1435,7 @@
   },
   {
     "motion": "Možnost připomínek ke stavebním projektům má být omezena jen na sousedy.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1399,6 +1460,7 @@
   },
   {
     "motion": "Používání smartphonů má být plošně zakázáno na všech základních školách.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1423,6 +1485,7 @@
   },
   {
     "motion": "Energetická společnost ČEZ má být zcela zestátněna.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1446,6 +1509,7 @@
   },
   {
     "motion": "Česko má v dohledné době přijmout euro.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1469,6 +1533,7 @@
   },
   {
     "motion": "Propagace nejen nacismu, ale i komunismu má být trestný čin.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1492,6 +1557,7 @@
   },
   {
     "motion": "Jednací řád Poslanecké sněmovny má omezit maximální délku poslaneckých projevů.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1515,6 +1581,7 @@
   },
   {
     "motion": "Za rodinu lze považovat jen svazek muže, ženy a jejich dětí.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1538,6 +1605,7 @@
   },
   {
     "motion": "Děti s různými potřebami se mají vzdělávat spíše ve specializovaných školách než v běžných třídách.",
+    "tag": "Vzdělávání a mládež",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1561,6 +1629,7 @@
   },
   {
     "motion": "Česko má dávat podstatně více peněz na armádu.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1584,6 +1653,7 @@
   },
   {
     "motion": "Česko má nadále využívat fosilní paliva (uhlí, plyn) jako hlavní zdroj energie.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1607,6 +1677,7 @@
   },
   {
     "motion": "Imigrace do Česka je spíše zátěží než přínosem.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1630,6 +1701,7 @@
   },
   {
     "motion": "Česko má odstoupit od migračního paktu EU.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1653,6 +1725,7 @@
   },
   {
     "motion": "Stát má více podporovat ekologické zemědělství oproti konvenčnímu.",
+    "tag": "Zemědělství a venkov",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1676,6 +1749,7 @@
   },
   {
     "motion": "Zemědělské dotace mají být hlavně pro malé farmy.",
+    "tag": "Zemědělství a venkov",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1699,6 +1773,7 @@
   },
   {
     "motion": "Uhelné elektrárny mají skončit dříve než v roce 2038.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 92,
       "parties": [
@@ -1722,6 +1797,7 @@
   },
   {
     "motion": "Česko má odstoupit od Zelené dohody (Green Deal) pro Evropu.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 108,
       "parties": [
@@ -1745,6 +1821,7 @@
   },
   {
     "motion": "Budoucí lékaři si mají volit obory sami, bez zásahů státu.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 105,
       "parties": [
@@ -1769,6 +1846,7 @@
   },
   {
     "motion": "Veřejnoprávní média mají být financována nadále převážně přímo z koncesionářských poplatků.",
+    "tag": "Média a technologie",
     "yes": {
       "seats": 105,
       "parties": [
@@ -1792,6 +1870,7 @@
   },
   {
     "motion": "Česká televize a Český rozhlas mají být sloučeny do jedné instituce.",
+    "tag": "Média a technologie",
     "yes": {
       "seats": 95,
       "parties": [
@@ -1815,6 +1894,7 @@
   },
   {
     "motion": "Stát má povinnými praxemi motivovat lékaře/ky, aby působili i v regionech, kde je jich nedostatek.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 95,
       "parties": [
@@ -1838,6 +1918,7 @@
   },
   {
     "motion": "Česko má umožnit využívání občanských shromáždění při tvorbě zákonů a zásadních rozhodnutích.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 18,
       "parties": [
@@ -1862,6 +1943,7 @@
   },
   {
     "motion": "U léků na předpis se má zcela zrušit DPH.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 46,
       "parties": [
@@ -1886,6 +1968,7 @@
   },
   {
     "motion": "Stát má podporovat flexibilitu práce mimo klasické zaměstnání jako používají platformy typu Rohlík, Uber či Wolt.",
+    "tag": "Práce a mzdy",
     "yes": {
       "seats": 98,
       "parties": [
@@ -1910,6 +1993,7 @@
   },
   {
     "motion": "Občané mají mít možnost volit ve volbách online.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 98,
       "parties": [
@@ -1934,6 +2018,7 @@
   },
   {
     "motion": "V trestním právu má být důležitější potrestání pachatele než jeho náprava.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 95,
       "parties": [
@@ -1958,6 +2043,7 @@
   },
   {
     "motion": "Tiché víno má zůstat bez spotřební daně.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 93,
       "parties": [
@@ -1982,6 +2068,7 @@
   },
   {
     "motion": "Česko má oficiálně podporovat nezávislost Tibetu.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 70,
       "parties": [
@@ -2006,6 +2093,7 @@
   },
   {
     "motion": "Podpora organizace Člověk v tísni z veřejných zdrojů má skončit.",
+    "tag": "Rodina a společnost",
     "yes": {
       "seats": 28,
       "parties": [
@@ -2030,6 +2118,7 @@
   },
   {
     "motion": "Česko se má zasazovat o zrušení zvýšených cel EU na čínské elektromobily.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 28,
       "parties": [
@@ -2054,6 +2143,7 @@
   },
   {
     "motion": "Dobrovolnická činnost má být započítávána do doby pojištění pro důchod.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 40,
       "parties": [
@@ -2078,6 +2168,7 @@
   },
   {
     "motion": "Součástí preventivních prohlídek má být i základní vyšetření duševního zdraví.",
+    "tag": "Zdravot. a soc. systém",
     "yes": {
       "seats": 40,
       "parties": [
@@ -2102,6 +2193,7 @@
   },
   {
     "motion": "Bydlení má být výsledkem osobní odpovědnosti.",
+    "tag": "Bydlení a urbanismus",
     "yes": {
       "seats": 68,
       "parties": [
@@ -2126,6 +2218,7 @@
   },
   {
     "motion": "Souhlasím, že Afrika je kontinent budoucnosti.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 74,
       "parties": [
@@ -2150,6 +2243,7 @@
   },
   {
     "motion": "Část výnosů z emisních povolenek má být vyplácena přímo občanům.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 70,
       "parties": [
@@ -2174,6 +2268,7 @@
   },
   {
     "motion": "Čím je svobodnější trh, tím jsou svobodnější lidé.",
+    "tag": "Ekonomika a daně",
     "yes": {
       "seats": 68,
       "parties": [
@@ -2197,6 +2292,7 @@
   },
   {
     "motion": "Česko má oficiálně odsoudit izraelské útoky, které vedou k vysokým civilním obětem v Gaze.",
+    "tag": "Zahr. politika a obrana",
     "yes": {
       "seats": 53,
       "parties": [
@@ -2221,6 +2317,7 @@
   },
   {
     "motion": "Sociální sítě mají povinně zveřejňovat, jak jejich algoritmy vybírají obsah pro uživatele.",
+    "tag": "Média a technologie",
     "yes": {
       "seats": 55,
       "parties": [
@@ -2245,6 +2342,7 @@
   },
   {
     "motion": "Souhlasím, že bez náboženství společnost ztratí morálku.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 15,
       "parties": [
@@ -2269,6 +2367,7 @@
   },
   {
     "motion": "Věková hranice pro kandidaturu do Poslanecké sněmovny má být snížena z 21 na 18 let.",
+    "tag": "Právo, sprav. a stát",
     "yes": {
       "seats": 22,
       "parties": [
@@ -2293,6 +2392,7 @@
   },
   {
     "motion": "Stát má podpořit vznik celostátní sítě nábytkových bank a center opětovného využití.",
+    "tag": "Živ. prostředí a energie",
     "yes": {
       "seats": 40,
       "parties": [

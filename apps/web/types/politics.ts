@@ -5,6 +5,7 @@ export interface Stance {
 
 export interface QuestionData {
   motion: string;
+  tag?: string;
   yes: Stance;
   no: Stance;
   neutral: Stance;

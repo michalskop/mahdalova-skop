@@ -15,7 +15,7 @@ Oslovili jsme všechny strany a 5 ze 6 stran, které se dostaly do Sněmovny, na
 
 ## Shoda stran dle Volební kalkulačky
 
-<MotionsStancesTable dataFile="data.json" />
+<MotionsStancesTable dataFile="data.json" showTags />
 
 
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Button, Group, useMantineTheme } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { PartyFace } from './PartyFace';
 import type { QuestionData, Stance } from '@/types/politics';
-
-
 
 const StanceCell: React.FC<{ stance: Stance; withBorder?: boolean }> = ({ stance, withBorder }) => {
   const cellStyle: React.CSSProperties = {
@@ -31,9 +31,10 @@ interface MotionsStancesTableProps {
   data?: string; // Inline data as a JSON string
   fileData?: QuestionData[]; // Data from file via scope
   maxHeight?: string;
+  showTags?: boolean;
 }
 
-export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: inlineData, fileData = [], maxHeight: initialMaxHeight }) => {
+export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: inlineData, fileData = [], maxHeight: initialMaxHeight, showTags = false }) => {
   let data: QuestionData[] = fileData;
   if (inlineData) {
     try {
@@ -44,8 +45,17 @@ export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: 
     }
   }
   const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+  const allTags = Array.from(new Set(data.map(item => item.tag).filter((tag): tag is string => !!tag))).sort();
+
+  const filteredData = selectedTag
+    ? data.filter(row => row.tag === selectedTag)
+    : data;
   const containerRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState(initialMaxHeight);
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   const handleScroll = () => {
     if (containerRef.current) {
@@ -88,10 +98,35 @@ export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: 
     zIndex: 1,
   };
   return (
-    <div style={containerStyle} ref={containerRef} onScroll={handleScroll}>
+    <div>
+      {showTags && (
+        <Group mb="md">
+        <Button
+          color="brandTeal"
+          variant={selectedTag === null ? 'filled' : 'light'}
+          onClick={() => setSelectedTag(null)}
+          size="xs"
+        >
+          Všechna témata
+        </Button>
+        {allTags.map(tag => (
+          <Button
+            key={tag}
+            color="brandTeal"
+            variant={selectedTag === tag ? 'filled' : 'light'}
+            onClick={() => setSelectedTag(tag)}
+            size="xs"
+          >
+            {tag}
+          </Button>
+        ))}
+        </Group>
+      )}
+      <div style={containerStyle} ref={containerRef} onScroll={handleScroll}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
         <thead>
           <tr>
+            {showTags && <th style={{ ...thStyle, minWidth: isMobile ? 'auto' : '150px' }}>Téma</th>}
             <th style={thStyle}>Většina</th>
             <th style={thStyle}>Otázka</th>
             <th style={{ ...thStyle, borderLeft: '1px dashed #e0e0e0' }}>Pro</th>
@@ -100,7 +135,7 @@ export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: 
           </tr>
         </thead>
         <tbody>
-          {(data || []).map((row, index) => {
+          {(filteredData || []).map((row, index) => {
             let majorityText: string;
             let majorityColor: string;
 
@@ -117,6 +152,28 @@ export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: 
 
             return (
               <tr key={index} style={{ borderBottom: '1px solid #e0e0e0' }}>
+                {showTags && (
+                  <td style={{ padding: '8px', verticalAlign: 'top', textAlign: isMobile ? 'center' : 'left' }}>
+                    {row.tag && (
+                      <span style={{
+                        border: '1px solid var(--mantine-color-brandTeal-5)',
+                        color: 'var(--mantine-color-brandTeal-7)',
+                        fontSize: '0.65rem',
+                        fontWeight: 500,
+                        padding: '0.05rem 0.5rem',
+                        borderRadius: '9999px',
+                        whiteSpace: 'nowrap',
+                        ...(isMobile && {
+                          writingMode: 'vertical-lr',
+                          transform: 'rotate(180deg)',
+                          margin: '0 auto',
+                        }),
+                      }}>
+                        {row.tag}
+                      </span>
+                    )}
+                  </td>
+                )}
                 <td style={{ padding: '8px', fontWeight: 'bold', color: majorityColor, verticalAlign: 'top' }}>
                   {majorityText}
                 </td>
@@ -129,6 +186,7 @@ export const MotionsStancesTable: React.FC<MotionsStancesTableProps> = ({ data: 
           })}
                 </tbody>
       </table>
-          </div>
+      </div>
+    </div>
   );
 };
