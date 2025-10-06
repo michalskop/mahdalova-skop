@@ -1,0 +1,2318 @@
+[
+  {
+    "motion": "Stát má motivovat obce, aby v územních plánech povolily vyšší hustotu zástavby.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Územní plány mají být méně striktní a umožňovat více bytové výstavby.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má poskytovat základní příjem všem mladým lidem bez ohledu na jejich situaci.",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Odborníci na úřadech mají mít podobné platy jako ve firmách.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má více digitalizovat a zjednodušovat své úřední procesy.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Soudy mají zkracovat lhůty na vyřízení sporů a trestních věcí.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má významně rozšířit kapacitu mateřských škol.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má snižovat rozdíly v kvalitě škol.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Zdravotní pojišťovny mají více investovat do prevence.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má zavést jednotnou jízdenku na vlaky, autobusy a MHD.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Po roce 2035 se mají nadále prodávat bez omezování i nová auta se spalovacími motory.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má stavět více přehrad.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má stavět nové jaderné bloky.",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má více finančně podporovat mladé lidi při zajištění jejich prvního vlastního bydlení.",
+    "yes": {
+      "seats": 187,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Provoz sociálních sítí se má přísněji regulovat pro děti a dospívající.",
+    "yes": {
+      "seats": 187,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Veřejné vysoké školy se mají zpoplatnit.",
+    "yes": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 187,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česká republika má vystoupit ze Severoatlantické aliance (NATO).",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "V Česku má být zaveden pravidelný 13. důchod pro všechny starobní důchodce.",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "U veřejných zakázek má nadále rozhodovat hlavně nejnižší cena.",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Počet školních psychologů se má výrazně zvýšit.",
+    "yes": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má zaujmout neutrální postoj k válce na Ukrajině.",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má vystoupit z EU.",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Souhlasím, že by právo na interrupci mělo být zakotveno v ústavě.",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 182,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Školy si mají zachovat autonomii při určování svých kapacit bez ohledu na potřeby trhu práce.",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 182,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Antikoncepce (např. pilulky, tělíska, kondomy) má být alespoň zčásti hrazena z veřejných prostředků.",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 182,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Spoluúčast pacientů na zdravotní péči má být zvýšena.",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 178,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "Školní jídelny a menzy mají i nadále nabízet hlavně jídla s masem.",
+    "yes": {
+      "seats": 178,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má více otevírat trh práce pro zahraniční pracovníky.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Korespondenční volba má být zrušena.",
+    "yes": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Kapacita gymnázií má být rozšířena.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Specializovaná lékařská péče má být více soustředěna do větších nemocnic v krajských městech.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má podporovat rozvoj obnovitelných zdrojů energie.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má aktivně podporovat výrobu elektromobilů.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má více investovat do snižování energetické náročnosti budov, například formou dotací, půjček a informačních kampaní.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Policie má odhalovat auta s nefunkčními filtry pomocí měřičů emisí.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má zvýšit výstavbu větrných elektráren.",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Mají se zavést poplatky za emise oxidu uhličitého (CO₂) z paliv pro vytápění.",
+    "yes": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Používání fosilních paliv v dopravě (benzín, nafta) má zůstat bez poplatků za emise CO₂.",
+    "yes": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Dlouhodobě prázdné byty mají být zdaněny.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Spotřební daň na pivo se má zvýšit.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Sociální sítě mají nést odpovědnost za zveřejněný obsah.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Podíl zdanění by se měl více přesunout z práce na majetek.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Prodej nezdravých potravin má zůstat i nadále bez speciální spotřební daně.",
+    "yes": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Vláda má podpořit cíl EU snížit do roku 2040 emise o 90 % oproti roku 1990.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Pravomoci památkářů a orgánů ochrany přírody ve stavebním řízení mají být omezeny.",
+    "yes": {
+      "seats": 148,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Souhlasím se zařazením menstruačních potřeb do snížené sazby DPH.",
+    "yes": {
+      "seats": 148,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Krátkodobé pronájmy bytů (např. přes Airbnb) mají zůstat bez zvláštní regulace.",
+    "yes": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 135,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Všichni zaměstnanci mají odvádět stejný podíl na daních a odvodech bez ohledu na výši příjmu.",
+    "yes": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    },
+    "no": {
+      "seats": 68,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má co nejdříve zavést zálohový systém na PET lahve a plechovky.",
+    "yes": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    },
+    "no": {
+      "seats": 130,
+      "parties": [
+        "ANO",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Menší obce se mají slučovat do větších celků.",
+    "yes": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 130,
+      "parties": [
+        "ANO",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Technické střední školy mají být finančně zvýhodněné oproti jiným typům vzdělání.",
+    "yes": {
+      "seats": 130,
+      "parties": [
+        "ANO",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Věk odchodu do důchodu má dále růst podle demografického vývoje.",
+    "yes": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 126,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Ministři mají po nástupu do funkce zveřejnit několik konkrétních a měřitelných cílů pro celé volební období.",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Umělé oplodnění má být dostupné i ženám bez partnera.",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 67,
+      "parties": [
+        "SPOLU",
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "Má se znovu zavést elektronická evidence tržeb (EET).",
+    "yes": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    },
+    "no": {
+      "seats": 120,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Eutanazie má být v Česku legální.",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Pěstovat konopí pro vlastní potřebu má být legální.",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Minimální mzda má v Česku dosáhnout alespoň 50 % průměrné mzdy.",
+    "yes": {
+      "seats": 113,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 65,
+      "parties": [
+        "SPOLU",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "Občané mají mít právo iniciovat celostátní referendum.",
+    "yes": {
+      "seats": 113,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 87,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stejnopohlavní páry mají mít možnost vstupovat do manželství za stejných podmínek jako jiné páry.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Možnost připomínek ke stavebním projektům má být omezena jen na sousedy.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "Používání smartphonů má být plošně zakázáno na všech základních školách.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Energetická společnost ČEZ má být zcela zestátněna.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má v dohledné době přijmout euro.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Propagace nejen nacismu, ale i komunismu má být trestný čin.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Jednací řád Poslanecké sněmovny má omezit maximální délku poslaneckých projevů.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Za rodinu lze považovat jen svazek muže, ženy a jejich dětí.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Děti s různými potřebami se mají vzdělávat spíše ve specializovaných školách než v běžných třídách.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má dávat podstatně více peněz na armádu.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má nadále využívat fosilní paliva (uhlí, plyn) jako hlavní zdroj energie.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Imigrace do Česka je spíše zátěží než přínosem.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má odstoupit od migračního paktu EU.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má více podporovat ekologické zemědělství oproti konvenčnímu.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Zemědělské dotace mají být hlavně pro malé farmy.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Uhelné elektrárny mají skončit dříve než v roce 2038.",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má odstoupit od Zelené dohody (Green Deal) pro Evropu.",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Budoucí lékaři si mají volit obory sami, bez zásahů státu.",
+    "yes": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Veřejnoprávní média mají být financována nadále převážně přímo z koncesionářských poplatků.",
+    "yes": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česká televize a Český rozhlas mají být sloučeny do jedné instituce.",
+    "yes": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Stát má povinnými praxemi motivovat lékaře/ky, aby působili i v regionech, kde je jich nedostatek.",
+    "yes": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Česko má umožnit využívání občanských shromáždění při tvorbě zákonů a zásadních rozhodnutích.",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 102,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "U léků na předpis se má zcela zrušit DPH.",
+    "yes": {
+      "seats": 46,
+      "parties": [
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 102,
+      "parties": [
+        "ANO",
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Stát má podporovat flexibilitu práce mimo klasické zaměstnání jako používají platformy typu Rohlík, Uber či Wolt.",
+    "yes": {
+      "seats": 98,
+      "parties": [
+        "SPOLU",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Občané mají mít možnost volit ve volbách online.",
+    "yes": {
+      "seats": 98,
+      "parties": [
+        "ANO",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "V trestním právu má být důležitější potrestání pachatele než jeho náprava.",
+    "yes": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 87,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Tiché víno má zůstat bez spotřební daně.",
+    "yes": {
+      "seats": 93,
+      "parties": [
+        "ANO",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 55,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Česko má oficiálně podporovat nezávislost Tibetu.",
+    "yes": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 93,
+      "parties": [
+        "ANO",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 37,
+      "parties": [
+        "STAN",
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "Podpora organizace Člověk v tísni z veřejných zdrojů má skončit.",
+    "yes": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Česko se má zasazovat o zrušení zvýšených cel EU na čínské elektromobily.",
+    "yes": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Dobrovolnická činnost má být započítávána do doby pojištění pro důchod.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Součástí preventivních prohlídek má být i základní vyšetření duševního zdraví.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Bydlení má být výsledkem osobní odpovědnosti.",
+    "yes": {
+      "seats": 68,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Souhlasím, že Afrika je kontinent budoucnosti.",
+    "yes": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 113,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "Část výnosů z emisních povolenek má být vyplácena přímo občanům.",
+    "yes": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 50,
+      "parties": [
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Čím je svobodnější trh, tím jsou svobodnější lidé.",
+    "yes": {
+      "seats": 68,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Česko má oficiálně odsoudit izraelské útoky, které vedou k vysokým civilním obětem v Gaze.",
+    "yes": {
+      "seats": 53,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 67,
+      "parties": [
+        "SPOLU",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Sociální sítě mají povinně zveřejňovat, jak jejich algoritmy vybírají obsah pro uživatele.",
+    "yes": {
+      "seats": 55,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Souhlasím, že bez náboženství společnost ztratí morálku.",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 53,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Věková hranice pro kandidaturu do Poslanecké sněmovny má být snížena z 21 na 18 let.",
+    "yes": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 46,
+      "parties": [
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Stát má podpořit vznik celostátní sítě nábytkových bank a center opětovného využití.",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 147,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD"
+      ]
+    }
+  }
+]

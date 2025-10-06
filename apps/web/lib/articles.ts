@@ -8,8 +8,10 @@ import remarkGfm from 'remark-gfm';
 import { remarkBoxPlugin } from './remark-box-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
 
+
+const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
+
 export async function getArticleBySlug(directorySlug: string) {
-  const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
   const articleDir = path.join(articlesDirectory, directorySlug);
   const fullPath = path.join(articleDir, 'index.md');
   
@@ -29,7 +31,27 @@ export async function getArticleBySlug(directorySlug: string) {
     scrollyContent = yaml.load(scrollyFile) as ScrollyContent;
   }
 
+    // Find and load data for KalkulackaTable
+  let tableData: any[] = [];
+  const tableRegex = /<MotionsStancesTable[^>]*dataFile="([^"]+)"/;
+  const match = content.match(tableRegex);
+
+  if (match && match[1]) {
+    const dataFilePath = path.join(articleDir, match[1]);
+    if (fs.existsSync(dataFilePath)) {
+      try {
+        const dataFileContent = fs.readFileSync(dataFilePath, 'utf8');
+        tableData = JSON.parse(dataFileContent);
+      } catch (e) {
+        console.error(`Failed to parse JSON from ${dataFilePath}`, e);
+      }
+    }
+  }
+
   const mdxSource = await serialize(content, {
+    scope: {
+      tableData: tableData,
+    },
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkBoxPlugin],
     },
