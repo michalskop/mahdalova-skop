@@ -27,21 +27,7 @@ Geografické srovnání ukazuje rozsah této změny: oblasti, kde dříve domino
 
 ## Jak mapu používat
 
-Pomocí zoomování pole lze snadno najít **konkrétní obec**. Po kliknutí na vybraný okrsek se zobrazí kompletní výsledky: **procenta všech stran i volební účast**.
-
-V barevné legendě lze navíc **kliknutím na konkrétní stranu** zvýraznit všechna místa, kde dané politické uskupení zvítězilo.  
-Volbou **„All"** se zobrazí celková mapa za celou republiku.
-
-<iframe src='https://flo.uri.sh/visualisation/25467301/embed' title='Mapa vítězů podle okrsků – volby 2025' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
-
-Můžete také **psát název přímo do vyhledávání** – stačí začít psát jméno obce, okresu či kraje a mapa se automaticky přizpůsobí. Díky tomu snadno zjistíte, jak volili ve vašem okolí nebo v oblastech, které vás zajímají.
-
-## Kompletní volební data na dosah ruky
-
-Mapa nabízí přístup ke **kompletním datům ze všech volebních okrsků** – nejen vítěze, ale i detailní rozložení hlasů pro všechny kandidující strany.  
-Volební účast je u každého okrsku uvedena samostatně, takže můžete porovnávat aktivitu voličů v různých částech země.
-
-Data pocházejí přímo z **otevřených zdrojů Českého statistického úřadu** a aktualizují se průběžně během sčítání.
+Pomocí zoomování pole lze snadno najít **konkrétní obec**. Po kliknutí na vybraný okrsek se zobrazí kompletní výsledky: **procenta všech stran i volební účast**. Zobrazí se tedy nejen vítěz, ale i detailní rozložení hlasů pro všechny kandidující strany.  Volební účast je u každého okrsku uvedena samostatně, takže lze porovnávat aktivitu voličů v různých částech země. Data pocházejí přímo z **otevřených zdrojů Českého statistického úřadu**.
 
 ---
 
