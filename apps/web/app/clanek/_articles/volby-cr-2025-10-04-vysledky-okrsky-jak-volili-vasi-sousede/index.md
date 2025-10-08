@@ -11,7 +11,7 @@ promoted: 80
 
 ## Výsledky hlasování v každém volebním okrsku
 
-Interaktivní mapa ukazuje výsledky hlasování **v každém volebním okrsku v Česku** – od velkých měst až po nejmenší obce. **Aktualizováno: 5. 10. 2025 v 15 hodin.**
+Interaktivní mapa ukazuje výsledky hlasování **v každém volebním okrsku v Česku** – od velkých měst až po nejmenší obce. Aktualizováno: 5. 10. 2025 v 15 hodin.
 
 <iframe src='https://flo.uri.sh/visualisation/25493706/embed' title='Mapa výsledků voleb 2025 – okrsky' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
 
