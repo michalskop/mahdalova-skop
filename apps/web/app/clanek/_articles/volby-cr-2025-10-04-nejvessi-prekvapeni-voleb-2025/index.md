@@ -35,7 +35,7 @@ Lokální efekt osobnosti starosty tak vysvětluje zdánlivý posun – ve skute
 
 ## Praha: vítězství s menší podporou než před čtyřmi lety
 
-Současná vláda sice v Praze zvítězila, ale její náskok se dramaticky **ztenčil o necelých 2 500 hlasů** oproti roku 2021.
+Současná vláda sice v Praze zvítězila, ale její náskok se **ztenčil o necelých 2 500 hlasů** oproti roku 2021.
 
 Zajímavější je však srovnání s jinými městy: vláda ztratila například v **téměř sedmkrát menší Plzni více hlasů (4 074)**, kde už letos ani nezvítězila. Podobně v **Karviné** byl rozdíl oproti minulým volbám ještě výraznější – **ztráta 2 524 hlasů**.
 
