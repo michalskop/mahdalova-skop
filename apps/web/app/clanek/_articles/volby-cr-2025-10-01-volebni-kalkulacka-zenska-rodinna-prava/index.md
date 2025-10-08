@@ -3,7 +3,7 @@ title: "Volební průvodce: kdo rozhoduje o tvém těle"
 date: "2025-10-01"
 author: "Kateřina Mahdalová"
 excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, který může rozhodnout i o mandátech ve Sněmovně."
-coverImage: "images/volebni_kalkulacka-2025-zeny-rodiny2.jpg"
+coverImage: "images/volby-2025-mapa-kalkulacka-mahdalova-skop_kdo-rozhoduje-o-tvem-tele.svg"
 filter: ["kontext"]
 tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna", "ženská práva", "rodina"]
 promoted: 40
