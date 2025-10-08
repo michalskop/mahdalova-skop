@@ -32,7 +32,6 @@ Pomocí zoomování lze snadno najít **konkrétní obec**. Po kliknutí na vybr
 
 Volební účast je u každého okrsku uvedena samostatně, takže lze porovnávat aktivitu voličů v různých částech země. Data pocházejí přímo z **otevřených zdrojů Českého statistického úřadu**.
 
----
-
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
+
 <div style={{ textAlign: 'center' }}>**Data, která ukazují, jak volí celé Česko.**</div>
