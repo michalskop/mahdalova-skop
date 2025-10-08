@@ -9,15 +9,21 @@ tags: ["volby 2025", "sněmovna", "mandáty", "volební kalkulačka", "data"]
 promoted: 90
 ---
 
-Text....
+Na základě 100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) nabízíme unikátní přehled v čem se vlastně shodnou a kde budou muset dělat kompromisy nebo naopak hledat širší podporu ve Sněmovně.
 
-Oslovili jsme všechny strany a 5 ze 6 stran, které se dostaly do Sněmovny, na zaslané otázky odpovědělo. Pouze postoje strany ANO vycházejí z jejich programu, z hlasování ve Sněmovně a z veřejných vyjádření jejich čelných představilů.
+
+
+Všechny strany ve Sněmovně se shodnou na podpoře výstavby bydlení. 
+
+Česko miluje jádernou energetiku, takže také 100% shoda, stejně jako u staveb dalších přehrad.
 
 ## Shoda stran dle Volební kalkulačky
 
 <MotionsStancesTable dataFile="data.json" showTags />
 
+Jak jsme data do Volební kalkulačky získali?
 
+Před volbami jsme oslovili jsme všechny kandidující strany. 5 ze 6 stran, které se nakonec dostaly do Sněmovny, na zaslané otázky odpovědělo a tak jsou zde přímo jejich odpovědi. Pouze ANO odmítlo odpovědět na zaslané otázky a tak jsme dohledali odpovědi podle jejich předvolebního programu, z hlasování ve Sněmovně a z veřejných vyjádření jejich čelných představilů.
 
 
 
