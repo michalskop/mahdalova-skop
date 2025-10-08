@@ -26,5 +26,4 @@ Volební účast je u každého okrsku uvedena samostatně, takže lze porovnáv
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 
-
 <div style={{ textAlign: 'center' }}>**Data, která ukazují, jak volí celé Česko.**</div>
