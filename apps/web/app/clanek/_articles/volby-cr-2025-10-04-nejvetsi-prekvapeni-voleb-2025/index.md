@@ -41,7 +41,7 @@ Zajímavější je však srovnání s jinými městy: vláda ztratila napříkla
 
 To znamená, že **posun v Karviné měl na celkové výsledky větší dopad než změna v celé Praze**. Hlavní město tak není tím rozhodujícím faktorem, za který se často pokládá – změny v menších městech a na venkově měly mnohem větší vliv na konečný výsledek voleb.
 
-```box
+
 ## Spolu ztratilo téměř všechna velká města – kromě Fialovy bašty
 
 Koalice Spolu ztratila ve volbách 2025 naprostou většinu velkých měst po celé republice. Z krajských měst si udržela pouze **Prahu a Brno**, přičemž i v hlavním městě její náskok klesl o téměř 2 500 hlasů oproti volbám 2021. Mezi ztraceným patří **Plzeň** (ztráta 4 074 hlasů), **Hradec Králové** (ztráta 2 113 hlasů), **Pardubice** (ztráta 2 748 hlasů) či **České Budějovice** (ztráta 3 947 hlasů) – právě město, kde má domov jihočeský hejtman **Martin Kuba**, dlouhodobý kritik premiéra Petra Fialy.
@@ -54,7 +54,7 @@ Kuba opakovaně varoval, že Fiala je „obklopen lidmi, kteří mu lakují real
 
 Z celkových 206 obcí s rozšířenou působností (ORP) vláda zvítězila pouze v **šestnácti** – převážně v Praze, Brně a jejich bohatých satelitech. **Opozice ovládla 190 ORP**, což představuje téměř totální geografickou izolaci vládní koalice. Největší poklesy vlády přišly ve větších průmyslových městech: **Ostrava** (-6 247 hlasů), **Kolín** (-5 802), **Česká Lípa** (-4 680), **Liberec** (-4 514) nebo **Teplice** (-4 404).
 
-```
+
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují, jak volí celé Česko.**</div>
