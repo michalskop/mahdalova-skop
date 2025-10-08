@@ -6,7 +6,7 @@ excerpt: "Interaktivní mapa ukazuje výsledky hlasování v každém volebním 
 coverImage: "images/volby-2025-mapa-vysledky-okrsky-mahdalova-skop-lupa.svg"
 filter: ["Analýzy"]
 tags: ["volby2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "okrsky"]
-promoted: 80
+promoted: 95
 ---
 
 ## Výsledky hlasování v každém volebním okrsku
@@ -27,3 +27,7 @@ Volební účast je u každého okrsku uvedena samostatně, takže lze porovnáv
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 
 <div style={{ textAlign: 'center' }}>**Data, která ukazují, jak volí celé Česko.**</div>
+
+## Jak mapu používat
+
+Petr 
