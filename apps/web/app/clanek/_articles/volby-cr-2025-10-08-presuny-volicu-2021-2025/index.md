@@ -1,6 +1,6 @@
 ---
 title: "Kam zmizeli voliči: Anatomie volebního zemětřesení"
-date: "2025-10-11"
+date: "2025-10-09"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "2,3 milionu nevoličů se rozhodlo jít k urnám – a většina z nich volila ANO. Ekologická inference odhaluje fascinující příběh o tom, odkud se vzali ti, kdo rozhodli volby."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
@@ -15,7 +15,7 @@ promoted: 95
 
 Ekologická inference – matematická metoda umožňující odhalit přesuny voličů mezi volbami – odhaluje fascinující příběh voleb 2025. Nejde jen o to, kdo vyhrál. Jde o to, **odkud se vzali ti, kdo rozhodli**.
 
-<iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Mapa posunů ve volebních výsledcích 2025' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
+<iframe src='https://flo.uri.sh/visualisation/25498888/embed' title='Mapa posunů ve volebních výsledcích 2025' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
 
 ### Hlavní síla: Probuzení nevoličů
 
@@ -23,9 +23,7 @@ Volební průzkumy už před volbami zaznamenaly "silnou mobilizaci bývalých n
 
 A kam šly? Především k **Andreji Babišovi** (přibližně **350 tisíc** nově mobilizovaných), ale překvapivě i k **Motoristům** (asi **80 tisíc**), **SPD** (kolem **65 tisíc**), **Pirátům** (zhruba **250 tisíc**) a dalším. ANO však z této mobilizace profitovalo nejmasivněji – získalo nejvíc hlasů od těch, kdo před čtyřmi lety zůstali doma.
 
-<iframe src='https://flo.uri.sh/visualisation/25493706/embed' title='Přesuny voličů 2021-2025 - od nevoličů' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
-
-### Kolaps SPD: obětováno na oltáři ANO
+### SPD se opět nechala vyluxovat ANO
 
 Předvolební modely varovaly, že "ANO graduje kampaň a jeho voličské jádro posiluje, což má za následek mírný pokles potenciálu u SPD".  Realita byla ještě drásavější.
 
@@ -37,7 +35,7 @@ Menší část voličů SPD navíc odešla k Motoristům, kteří nabídli podob
 
 ### Stačilo!: komunisté bez sociálních demokratů
 
-Analýza Kantaru před volbami odhalila, že "pouze malá část voličů SOCDEM podpoří uskupení Stačilo!, výrazně více si vybralo hnutí ANO a podstatná část z nich k volbám nepřijde". 
+Analýza Kantaru před volbami ukázala, že uskupení Stačilo! pl8novala podpo5it pouze malá část voličů SOCDEM; výrazně více si vybralo hnutí ANO a podstatná část z nich k volbám nepřijde". 
 
 Data to brutálně potvrzují: Voliči bývalé KSČM z roku 2021 (tehdy koalice SOCDEM-KSČM) se většinově přesunuli k **ANO** (asi **90 tisíc**), zatímco Stačilo! získalo jen zlomek (přibližně **20 tisíc**). Ještě horší je příběh sociálních demokratů – ti spojení s komunisty ve Stačilo! **nepodpořili** a většinově rovněž hlasovali pro ANO.
 
