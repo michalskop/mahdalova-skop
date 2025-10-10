@@ -29,31 +29,21 @@ Menší část voličů SPD pak odešla k Motoristům, kteří nabízeli podobn�
 
 ### Stačilo!: komunisté bez sociálních demokratů
 
-Analýza Kantaru před volbami ukázala, že uskupení Stačilo! pl8novala podpo5it pouze malá část voličů SOCDEM; výrazně více si vybralo hnutí ANO a podstatná část z nich k volbám nepřijde". 
+Analýza Kantaru před volbami ukázala, že uskupení Stačilo! plánovala podpořit pouze malá část voličů SOCDEM; výrazně více si vybralo hnutí ANO a podstatná část z nich k volbám přijít nehodlala". 
 
-Data to brutálně potvrzují: Voliči bývalé KSČM z roku 2021 (tehdy koalice SOCDEM-KSČM) se většinově přesunuli k **ANO** (asi **90 tisíc**), zatímco Stačilo! získalo jen zlomek (přibližně **20 tisíc**). Ještě horší je příběh sociálních demokratů – ti spojení s komunisty ve Stačilo! **nepodpořili** a většinově rovněž hlasovali pro ANO.
-
-<iframe src='https://flo.uri.sh/visualisation/25467301/embed' title='Přesuny voličů 2021-2025 - Stačilo!' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
-
-Výsledek? Stačilo! skončilo těsně pod 5 % a zůstalo před branami Sněmovny. Levice bez sociální demokracie prostě nemá v Česku dostatečnou voličskou základnu.
+Data to potvrzují: Voliči KSČM z roku 2021 se rozštěpili: větši polovina se přesunula k **ANO** a pro Stačilo! se rozhodla jen menšina. Ještě větší ztráty jsou u voličů sociálních demokratů – ti totiž spojení SOCDEM se Stačilo! **nepodpořili** a většinově rovněž hlasovali pro ANO. Výsledek? Stačilo! skončilo těsně pod 5 % a zůstalo před branami Sněmovny. Levice bez sociální demokracie prostě nemá v Česku dostatečnou voličskou základnu.
 
 ### Piráti: vzkříšení díky mladým nevoličům
 
-Piráti byli po odchodu z vlády odepisováni. Volební průzkumy je v poslední době viděly "jen mírně nad hranicí vstupu do Sněmovny".  Přesto získali téměř 9 % hlasů – jak je to možné?
+Pirátům dlouhodbě pomáhá image strany, která nemá potíže s korupčními a jinými skandály. Nyní zabrala i jejich povedená předvolební kampaň, na řadu voličů zapůsobila i "zelená vlna" díky zařazení na kandidátky i představitele Strany Zelených.
 
-**Tajemství jejich úspěchu? Masivní mobilizace nevoličů.** Zatímco Piráti ztratili významnou část voličů z bývalé koalice PirSTAN (cca **100 tisíc** ke STANu), dokázali mobilizovat zhruba **250 tisíc nových voličů**, kteří v minulých volbách nehlasovali.
-
-<iframe src='https://flo.uri.sh/visualisation/25467289/embed' title='Přesuny voličů 2021-2025 - k Pirátům' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
-
-Tato strategie "zelené vlny" – oslovení mladých lidí, aktivistů a těch, kdo předtím k volbám nechodili – zachránila Pirátům parlamentní existenci. Spojení se Stranou zelených tento obraz ještě posílilo.
-
-### STAN: tichý vítěz redistribuce
+## STAN: tichý vítěz redistribuce
 
 Starostové těžili z rozpadu bývalé koalice PirSTAN nejvíc. **Přibližně 100 tisíc voličů** Pirátů z roku 2021 tentokrát kroužkovali STAN – což je paradoxní odplata za to, co se stalo v roce 2021, kdy naopak voliči STANu vykroužkovali Piráty a téměř je vymazali ze Sněmovny.
 
 Další zisky přišly i ze Spolu – zejména od **TOP 09 a KDU-ČSL** (dohromady cca **25 tisíc**), jejichž voliči hledali středovou alternativu s menším ideologickým zabarvením a větší orientací na lokální politiku.
 
-### Spolu: ztráty, ale ne kolaps – redistribuce v demokratickém bloku
+## Spolu: ztráty, ale ne kolaps – redistribuce v demokratickém bloku
 
 Koalice Spolu ztratila voliče na všech frontách – **STANu, Pirátům**, ale i zpět k **nevoličům** (přibližně **70 tisíc** zklamaných voličů se rozhodlo tentokrát nevolit nikoho). Menší, ale symbolická ztráta: asi **50 tisíc voličů Spolu** z roku 2021 tentokrát volilo ANO.
 
