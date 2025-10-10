@@ -21,11 +21,7 @@ Volební průzkumy už před volbami v podstatě po celé čtyři roky funkční
 
 ### SPD se opět nechala vyluxovat ANO
 
-Že SPD ztráci volební potenciál, se ukazovalo až na poslední chvíli, pár dní před volabmi to volební průzkumy zachytily, ovšem jen slabě. Realita byla ještě dramatičtější, nicméně kvůli moratoriu, které ze zákona zakazuje tři dny před volbami zveřejňovat průzkumy, se to do veřejných průzkumů nestihlo propsat. Děje se to často: dynamika před volbami bývá vysoká, a průzkumy mají šanci zachytit i to, že se do posledních okamžitků rozhodují voliči - v tomto případě - mezi ANO a SPD. Čím víc se blížil termín voleb, tím více voliřů se přiklánělo k tomu, že svůj hlas dají hnutí ANO.
-
-<iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Přesuny voličů 2021-2025 - od SPD' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
-
-Menší část voličů SPD pak odešla k Motoristům, kteří nabízeli podobně protestní rétoriku.
+Že SPD ztráci volební potenciál, se ukazovalo až na poslední chvíli, pár dní před volabmi to volební průzkumy zachytily, ovšem jen slabě. Realita byla ještě dramatičtější, nicméně kvůli moratoriu, které ze zákona zakazuje tři dny před volbami zveřejňovat průzkumy, se to do veřejných průzkumů nestihlo propsat. Děje se to často: dynamika před volbami bývá vysoká, a průzkumy mají šanci zachytit i to, že se do posledních okamžitků rozhodují voliči - v tomto případě - mezi ANO a SPD. Čím víc se blížil termín voleb, tím více voliřů se přiklánělo k tomu, že svůj hlas dají hnutí ANO. Menší část voličů SPD pak odešla k Motoristům, kteří nabízeli podobně protestní rétoriku.
 
 ### Stačilo!: komunisté bez sociálních demokratů
 
@@ -110,7 +106,6 @@ V roce 2021 představoval milion voličů bez zastoupení značné riziko pro st
 - 2021: **1 069 tisíc** (rekord)
 - 2025: cca 300-350 tisíc
 
-na závěr věnuj pozornost srozumitelnosti dat zachycených v Sanky diagramech i metodě ekologická inference : 
 
 Jak číst grafy s přesuny voličů
 🔶 První náhled vždy zobrazuje, kam se přesunuli voliči ze sněmovních voleb 2017.
@@ -123,3 +118,5 @@ Metoda, podle níž se odhalují struktury voličských přesunů, se nazývá e
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují pohyby voličů.**</div>
+
+<iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Přesuny voličů 2021-2025 - od SPD' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
