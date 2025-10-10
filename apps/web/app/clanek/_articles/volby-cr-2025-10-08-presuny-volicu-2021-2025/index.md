@@ -25,7 +25,7 @@ Volební průzkumy už před volbami v podstatě po celé čtyři roky funkční
 
 <iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Přesuny voličů 2021-2025 - od SPD' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
 
-Menší část voličů SPD navíc odešla k Motoristům, kteří nabídli podobně protestní, ale méně radikální rétoriku.
+Menší část voličů SPD pak odešla k Motoristům, kteří nabízeli podobně protestní rétoriku.
 
 ### Stačilo!: komunisté bez sociálních demokratů
 
