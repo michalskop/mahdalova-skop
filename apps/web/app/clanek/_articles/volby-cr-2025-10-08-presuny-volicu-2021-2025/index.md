@@ -37,9 +37,9 @@ Pirátům dlouhodbě pomáhá image strany, která nemá potíže s korupčními
 
 Starostové si udrželi voliče z minulých voleb a další zisky přišly ze Spolu – zejména od **TOP 09 a KDU-ČSL** , jejichž voliči hledali středovou alternativu s menším ideologickým zabarvením a větší orientací na lokální politiku.
 
-## Spolu: ztráty, ale ne kolaps – redistribuce v demokratickém bloku
+## Spolu: ztráty, redistribuce v demokratickém bloku
 
-Koalice Spolu ztratila voliče na všech frontách – odešli ke **STANu, Pirátům** a také k Motoristů. Jen zanedbatelná část z nich odpadla zcela a nešla volit a zhruba **50 tisíc voličů Spolu** z roku 2021 tentokrát volilo ANO.
+Koalice Spolu ztratila voliče na všech frontách – odešli ke **STANu, Pirátům** a také k Motoristům. Jen zanedbatelná část z nich odpadla zcela a nešla volit a zhruba **50 tisíc voličů Spolu** z roku 2021 tentokrát volilo ANO.
 
 **Zásadní je však kontext:** Většina voličů Spolu zůstala v "demokratickém bloku". Přešli ke STANu nebo Pirátům, ale neodešli k ANO ani k protestním stranám. 
 
