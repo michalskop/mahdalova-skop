@@ -2,7 +2,7 @@
 title: "Kam zmizeli voliči: Anatomie volebního zemětřesení"
 date: "2025-10-09"
 author: "Kateřina Mahdalová, Michal Škop"
-excerpt: "2,3 milionu nevoličů se rozhodlo jít k urnám – a většina z nich volila ANO. Ekologická inference odhaluje fascinující příběh o tom, odkud se vzali ti, kdo rozhodli volby."
+excerpt: "Podrobná analýza přesunů voličů. Ekologická inference odhaluje fascinující příběh o tom, odkud se vzali ti, kdo rozhodli volby."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
 filter: ["Analýzy"]
 tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference"]
@@ -11,7 +11,7 @@ promoted: 95
 
 ## Kam zmizeli voliči: Anatomie volebního zemětřesení
 
-**2,3 milionu nevoličů se rozhodlo jít k urnám. A většina z nich volila ANO.**
+**Mnoho nevoličů se rozhodlo jít k urnám. A většina z nich volila ANO.**
 
 Ekologická inference – matematická metoda umožňující odhalit přesuny voličů mezi volbami – odhaluje fascinující příběh voleb 2025. Nejde jen o to, kdo vyhrál. Jde o to, **odkud se vzali ti, kdo rozhodli**.
 
