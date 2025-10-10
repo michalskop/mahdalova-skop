@@ -39,7 +39,7 @@ Starostové si udrželi voliče z minulých voleb a další zisky přišly ze Sp
 
 ## Spolu: ztráty, ale ne kolaps – redistribuce v demokratickém bloku
 
-Koalice Spolu ztratila voliče na všech frontách – **STANu, Pirátům** a část z nich odpadla zcela a nešla volit (přibližně **70 tisíc** zklamaných voličů se tentokrát rozhodlo zůstat doma) a zhruba **50 tisíc voličů Spolu** z roku 2021 tentokrát volilo ANO.
+Koalice Spolu ztratila voliče na všech frontách – odešli ke **STANu, Pirátům** a také k Motoristů. Jen zanedbatelná část z nich odpadla zcela a nešla volit a zhruba **50 tisíc voličů Spolu** z roku 2021 tentokrát volilo ANO.
 
 **Zásadní je však kontext:** Většina voličů Spolu zůstala v "demokratickém bloku". Přešli ke STANu nebo Pirátům, ale neodešli k ANO ani k protestním stranám. 
 
