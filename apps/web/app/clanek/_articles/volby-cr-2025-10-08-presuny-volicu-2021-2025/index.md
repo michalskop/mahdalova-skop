@@ -13,7 +13,7 @@ promoted: 95
 
 Nyní můžete detailně prozkoumat, **odkud se vzali ti, kdo rozhodli**.
 
-<iframe src='https://flo.uri.sh/visualisation/25498888/embed' title='Mapa posunů ve volebních výsledcích 2025' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
+<iframe src='https://flo.uri.sh/strory/3372511/embed' title='Mapa posunů ve volebních výsledcích 2025' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
 
 ### Hlavní síla: Probuzení nevoličů
 
