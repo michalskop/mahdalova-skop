@@ -1,33 +1,27 @@
 ---
-title: "Kam zmizeli voliči: Anatomie volebního zemětřesení"
+title: "Jak se přesouvali voliči mezi sněmovními volbami 2021 a 2025"
 date: "2025-10-09"
 author: "Kateřina Mahdalová, Michal Škop"
-excerpt: "Podrobná analýza přesunů voličů. Ekologická inference odhaluje fascinující příběh o tom, odkud se vzali ti, kdo rozhodli volby."
+excerpt: "Podrobná analýza přesunů voličů."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
 filter: ["Analýzy"]
 tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference"]
 promoted: 95
 ---
 
-## Kam zmizeli voliči: Anatomie volebního zemětřesení
+## Mnoho nevoličů se rozhodlo jít k urnám – a většina z nich volila ANO
 
-**Mnoho nevoličů se rozhodlo jít k urnám. A většina z nich volila ANO.**
-
-Ekologická inference – matematická metoda umožňující odhalit přesuny voličů mezi volbami – odhaluje fascinující příběh voleb 2025. Nejde jen o to, kdo vyhrál. Jde o to, **odkud se vzali ti, kdo rozhodli**.
+Nyní můžete detailně prozkoumat, **odkud se vzali ti, kdo rozhodli**.
 
 <iframe src='https://flo.uri.sh/visualisation/25498888/embed' title='Mapa posunů ve volebních výsledcích 2025' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
 
 ### Hlavní síla: Probuzení nevoličů
 
-Volební průzkumy už před volbami zaznamenaly "silnou mobilizaci bývalých nevoličů směrem k ANO".  Sankey diagramy tuto predikci potvrzují v plné síle: **zhruba 2,3 milionu lidí**, kteří v roce 2021 k volbám nepřišli, tentokrát své hlasy odevzdali.
-
-A kam šly? Především k **Andreji Babišovi** (přibližně **350 tisíc** nově mobilizovaných), ale překvapivě i k **Motoristům** (asi **80 tisíc**), **SPD** (kolem **65 tisíc**), **Pirátům** (zhruba **250 tisíc**) a dalším. ANO však z této mobilizace profitovalo nejmasivněji – získalo nejvíc hlasů od těch, kdo před čtyřmi lety zůstali doma.
+Volební průzkumy už před volbami v podstatě po celé čtyři roky funkčního období Sněmovna zaznamenaly "silnou mobilizaci bývalých voličů stran, které minule neuspěly, směrem k ANO". Detailní analýza provedená metodou ekologické inference tyto skutečnosti nyní potvrzuje v plné síle: **milion hlasů, které minule propadly, se letos proměnily v 700 tisíc hlasů pro Andreje Babiše**.
 
 ### SPD se opět nechala vyluxovat ANO
 
-Předvolební modely varovaly, že "ANO graduje kampaň a jeho voličské jádro posiluje, což má za následek mírný pokles potenciálu u SPD".  Realita byla ještě drásavější.
-
-SPD ztratila dramatických **350 tisíc voličů** – a naprostá většina odešla k ANO. Tomio Okamura se stal obětí vlastního úspěchu: vybudoval protestní elektorát, který však Andrej Babiš dokázal lépe oslovit se slibem skutečné změny. Voliči SPD hledali revoluci, ale nakonec dali přednost subjektu s reálnou šancí vládnout.
+Že SPD ztráci volební potenciál, se ukazovalo až na poslední chvíli, pár dní před volabmi to volební průzkumy zachytily, ovšem jen slabě. Realita byla ještě dramatičtější, nicméně kvůli moratoriu, které ze zákona zakazuje tři dny před volbami zveřejňovat průzkumy, se to do veřejných průzkumů nestihlo propsat. Děje se to často: dynamika před volbami bývá vysoká, a průzkumy mají šanci zachytit i to, že se do posledních okamžitků rozhodují voliči - v tomto případě - mezi ANO a SPD. Čím víc se blížil termín voleb, tím více voliřů se přiklánělo k tomu, že svůj hlas dají hnutí ANO.
 
 <iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Přesuny voličů 2021-2025 - od SPD' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
 
