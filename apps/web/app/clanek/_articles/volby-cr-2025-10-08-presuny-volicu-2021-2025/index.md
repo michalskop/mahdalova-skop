@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "2,3 milionu nevoličů se rozhodlo jít k urnám – a většina z nich volila ANO. Ekologická inference odhaluje fascinující příběh o tom, odkud se vzali ti, kdo rozhodli volby."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
 filter: ["Analýzy"]
-tags: ["volby2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference"]
+tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference"]
 promoted: 95
 ---
 
