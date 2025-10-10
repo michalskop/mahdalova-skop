@@ -110,5 +110,16 @@ V roce 2021 představoval milion voličů bez zastoupení značné riziko pro st
 - 2021: **1 069 tisíc** (rekord)
 - 2025: cca 300-350 tisíc
 
+na závěr věnuj pozornost srozumitelnosti dat zachycených v Sanky diagramech i metodě ekologická inference : 
+
+Jak číst grafy s přesuny voličů
+🔶 První náhled vždy zobrazuje, kam se přesunuli voliči ze sněmovních voleb 2017.
+🔶 Druhý pak ukazuje, odkud sbíraly voliče strany ve volbách letošních.
+🔶 Kliknutím na barevný obdélník po stranách grafu se zobrazí vybraná strana nebo koalice.
+
+**Jak se přesuny voličů počítají**
+
+Metoda, podle níž se odhalují struktury voličských přesunů, se nazývá ekologická inference. Jde o poměrně složitou statistickou metodou založenou na tzv. bayesovském počtu a pomocé které se podle rozptylu počtu hlasů pro jednotlivé strany určuje nejpravděpodobnější strukturu voličských přesunů. To se děje ve velkém množství geografických jednotek, např. v obcích nebo volebních okrscích.
+
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují pohyby voličů.**</div>
