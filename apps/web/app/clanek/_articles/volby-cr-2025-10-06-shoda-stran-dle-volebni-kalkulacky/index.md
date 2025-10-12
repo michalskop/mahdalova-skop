@@ -1,6 +1,6 @@
 ---
 title: Shoda stran dle Volební kalkulačky
-date: "2025-10-12"
+date: "2025-12-12"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Deklarovaná většina ve Sněmovně na 100 otázek Volební kalkulačky."
 coverImage: "images/two-questions.webp"
