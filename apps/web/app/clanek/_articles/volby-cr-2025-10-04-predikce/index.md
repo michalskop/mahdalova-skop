@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Výsledky voleb budou známé pár desítek minut po uzavření volebních místností. Predikční modely umožní přesné odhady už při zhruba 1,5 % sečtených hlasů."
 coverImage: "images/snemovni-volby-2025-predikce-mahdalova-skop.svg"
 filter: ["kontext"]
-tags: ["predikce", "volby2025", "sněmovna", "mandáty", "ČSÚ", "data"]
+tags: ["predikce", "volby 2025", "sněmovna", "mandáty", "ČSÚ", "data"]
 promoted: 75
 ---
 

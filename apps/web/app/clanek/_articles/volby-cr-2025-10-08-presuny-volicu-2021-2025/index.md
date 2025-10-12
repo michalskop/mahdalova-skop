@@ -4,7 +4,7 @@ date: "2025-10-09"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Podrobná analýza přesunů voličů."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
-filter: ["Analýzy"]
+filter: ["analýza"]
 tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference"]
 promoted: 95
 ---

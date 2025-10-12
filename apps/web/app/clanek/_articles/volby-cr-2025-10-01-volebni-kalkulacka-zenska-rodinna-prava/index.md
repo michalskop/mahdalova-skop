@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, který může rozhodnout i o mandátech ve Sněmovně."
 coverImage: "images/volby-2025-mapa-kalkulacka-mahdalova-skop_kdo-rozhoduje-o-tvem-tele.svg"
 filter: ["kontext"]
-tags: ["volební kalkulačka", "VAA", "volby2025", "demokracie", "volby", "sněmovna", "ženská práva", "rodina"]
+tags: ["volební kalkulačka", "VAA", "volby 2025", "demokracie", "volby", "sněmovna", "ženská práva", "rodina"]
 promoted: 40
 ---
 Legislativa týkající se reprodukčních práv zásadně ovlivňuje každodenní život. Aby měl člověk možnost plánovat rodinu, potřebuje nejen bezpečné zázemí, ale i jistotu, že v případě komplikací bude k dispozici potřebná zdravotní péče. Tyto základní jistoty jsou dnes v mnoha zemích oslabovány pod tlakem konzervativních politik.
