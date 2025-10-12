@@ -1,6 +1,6 @@
 ---
 title: Shoda stran dle Volební kalkulačky
-date: "2025-12-12"
+date: "2025-10-12"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Deklarovaná většina ve Sněmovně na 100 otázek Volební kalkulačky."
 coverImage: "images/two-questions.webp"
@@ -9,7 +9,7 @@ tags: ["volby 2025", "sněmovna", "mandáty", "volební kalkulačka", "data", "v
 promoted: 90
 ---
 
-Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se vlastně shodnou a kde budou muset dělat kompromisy nebo naopak hledat širší podporu ve Sněmovně.
+Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se vlastně strany vznikající koalice shodnou a kde budou muset dělat kompromisy nebo naopak hledat širší podporu ve Sněmovně.
 
 Některé otázky jsou jednoduché - např. všechny strany ve Sněmovně se shodnou na podpoře výstavby bydlení. 
 
@@ -21,7 +21,7 @@ Některé otázky jsou jednoduché - např. všechny strany ve Sněmovně se sho
 ### Sami proti všem
 <PartyFace party="ANO" size={15} text="" /> ANO je např. jediná strana ve Sněmovně, která chce obnovit EET.
 
-<PartyFace party="SPD" size={15} text="" /> SPD jsou zase osamocení v tom, že chtějí zachovávat neutralitu ve vztahu k válce na Ukrajině. A chtějí vystoupit z EU.
+<PartyFace party="SPD" size={15} text="" /> SPD jsou zase osamocení v tom, že chtějí přejít k neutralitě ve vztahu k válce na Ukrajině. A chtějí vystoupit z EU.
 
 <PartyFace party="Motoristé" size={15} text="" /> Motoristé jako jediní chtějí, aby se alespoň na některých veřejných vysokých školách platilo školné. ANO ani SPD školné nechtějí a v tomto se s nimi shoduje celá opozice.
 
