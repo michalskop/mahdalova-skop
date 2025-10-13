@@ -1,9 +1,9 @@
 ---
 title: Kam kráčíš, Česko?
-date: "2025-10-12"
+date: "2025-10-13"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude Česká republika ubírat."
-coverImage: "images/two-questions.webp"
+coverImage: "images/kam-kracis-cesko.webp"
 filter: ["analýza"]
 tags: ["volby 2025", "sněmovna", "mandáty", "volební kalkulačka", "data", "vláda"]
 promoted: 90
