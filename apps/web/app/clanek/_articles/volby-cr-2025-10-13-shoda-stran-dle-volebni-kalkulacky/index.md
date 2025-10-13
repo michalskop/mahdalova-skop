@@ -9,13 +9,11 @@ tags: ["volby 2025", "sněmovna", "mandáty", "volební kalkulačka", "data", "v
 promoted: 90
 ---
 
-Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude Česká republika ubírat. Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se vlastně strany vznikající koalice shodnou a kde budou muset dělat kompromisy nebo naopak hledat širší podporu ve Sněmovně.
+Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude Česká republika ubírat. Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se strany plánované koalice shodují, kde se rozcházejí a na jakých tématech budou muset hledat kompromisy či podporu napříč Sněmovnou.
 
-Některé otázky jsou jednoduché - např. všechny strany ve Sněmovně se shodnou na podpoře výstavby bydlení. 
+Některé postoje spojují všechny. Například podpora výstavby bydlení jde napříč politickým spektrem. Podobně i jaderná energetika má v Česku mimořádně silnou podporu – a v této otázce panuje u sněmovních stran stoprocentní shoda, stejně jako u výstavby dalších přehrad. A konečně i v případě jaderné energetiky platí 100% shoda, že ji Čeští zákonodárci budou nadále podporovat.
 
-Česko miluje jádernou energetiku, takže v té je také 100% shoda, stejně jako u staveb dalších přehrad.
-
-## V čem se neshodne plánovaná vláda?
+## V čem se plánovaná vláda neshodne
 <PartyFace party="ANO" size={15} text="" />  <PartyFace party="SPD" size={15} text="" /> <PartyFace party="Motoristé" size={15} text="" /> Zatím stále platí, že ANO plánuje vládu spolu s SPD a Motoristy. V čem se tyto strany neshodnou? Projděme si alespoň několik otázek.
 
 ### Sami proti všem
