@@ -14,10 +14,10 @@ Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude �
 Některé postoje spojují všechny. Například podpora výstavby bydlení jde napříč politickým spektrem. Podobně i jaderná energetika má v Česku mimořádně silnou podporu – a v této otázce panuje u sněmovních stran stoprocentní shoda, stejně jako u výstavby dalších přehrad. A konečně i v případě jaderné energetiky platí 100% shoda, že ji Čeští zákonodárci budou nadále podporovat.
 
 ## V čem se plánovaná vláda neshodne
-<PartyFace party="ANO" size={15} text="" />  <PartyFace party="SPD" size={15} text="" /> <PartyFace party="Motoristé" size={15} text="" /> Zatím stále platí, že ANO plánuje vládu spolu s SPD a Motoristy. V čem se tyto strany neshodnou? Projděme si alespoň několik otázek.
+<PartyFace party="ANO" size={15} text="" />  <PartyFace party="SPD" size={15} text="" /> <PartyFace party="Motoristé" size={15} text="" /> Zatím stále platí, že ANO plánuje vládu spolu s SPD a Motoristy. Projděme si postupně otázky, V čem se tyto strany neshodnou. Mezi sebou, ale leckdy ani s nikým dalším.
 
 ### Sami proti všem
-<PartyFace party="ANO" size={15} text="" /> ANO je např. jediná strana ve Sněmovně, která chce obnovit EET.
+<PartyFace party="ANO" size={15} text="" /> Ukázkový je třeba příklad, kdy ANO je jediná strana v celé Sněmovně, která chce obnovit EET.
 
 <PartyFace party="SPD" size={15} text="" /> SPD jsou zase osamocení v tom, že chtějí přejít k neutralitě ve vztahu k válce na Ukrajině. A chtějí vystoupit z EU.
 
