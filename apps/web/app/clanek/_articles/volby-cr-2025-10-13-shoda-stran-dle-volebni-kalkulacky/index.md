@@ -26,7 +26,7 @@ Některé postoje spojují všechny. Například podpora výstavby bydlení jde 
 ### SPD a Motoristé proti ostatním
 <PartyFace party="SPD" size={15} text="" /> <PartyFace party="Motoristé" size={15} text="" /> SPD a Motoristé by zrušili právě zavedenou korespondenční volbu. V energetice by nechtěli podporovat obnovitelné zdroje a nechtějí podporu snížování energetické náročnosti budov.
 
-Stejně tam nechtějí, aby policie důrazněji zasahovala proti znečišťujícím autům s nefunkčními filtry.
+Stejně tak nechtějí, aby policie důrazněji zasahovala proti znečišťujícím autům s nefunkčními filtry.
 
 ## Vláda vs. opozice
 <PartyFace party="ANO" size={15} text="" />  <PartyFace party="SPD" size={15} text="" /> <PartyFace party="Motoristé" size={15} text="" /> Pokud opravdu vznikne vláda ANO, SPD a Motoristé, pak by vládní strany měly oproti opozici většinu např. v otázkách:
@@ -44,7 +44,7 @@ Na mnoho otázek není shoda mezi stranami formované vlády, ale ani mezi stran
 
 ## Shoda stran dle Volební kalkulačky
 
-Všech 100 otázek z [Volební kalkulačky](https://www.volebnikalkulacka.cz/) v následující tabulce:
+Všech 100 otázek z [Volební kalkulačky](https://www.volebnikalkulacka.cz/) v následujícím přehledu - kliknutím na vybrané téma se okruh otázek zúží. Vyberte si, co vás zajímá, ať už je to bydlení a urbanismus, vzdělávání a mládež nebo energetika či zahraniční politika.
 
 <MotionsStancesTable dataFile="data.json" showTags />
 
