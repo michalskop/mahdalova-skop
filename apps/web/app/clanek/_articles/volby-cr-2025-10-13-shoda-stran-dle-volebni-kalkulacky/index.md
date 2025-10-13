@@ -1,15 +1,15 @@
 ---
-title: Shoda stran dle Volební kalkulačky
+title: Kam kráčíš, Česko?
 date: "2025-10-12"
 author: "Kateřina Mahdalová, Michal Škop"
-excerpt: "Deklarovaná většina ve Sněmovně na 100 otázek Volební kalkulačky."
+excerpt: "Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude Česká republika ubírat."
 coverImage: "images/two-questions.webp"
 filter: ["analýza"]
 tags: ["volby 2025", "sněmovna", "mandáty", "volební kalkulačka", "data", "vláda"]
 promoted: 90
 ---
 
-Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se vlastně strany vznikající koalice shodnou a kde budou muset dělat kompromisy nebo naopak hledat širší podporu ve Sněmovně.
+Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude Česká republika ubírat. Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se vlastně strany vznikající koalice shodnou a kde budou muset dělat kompromisy nebo naopak hledat širší podporu ve Sněmovně.
 
 Některé otázky jsou jednoduché - např. všechny strany ve Sněmovně se shodnou na podpoře výstavby bydlení. 
 
