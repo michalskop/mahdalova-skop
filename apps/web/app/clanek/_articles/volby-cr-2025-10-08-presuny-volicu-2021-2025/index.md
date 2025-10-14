@@ -124,7 +124,7 @@ Výsledek není stoprocentní jistota, ale odhad založený na pravděpodobnosti
 
 Každopádně jde o nejpoužívanější odborný způsob, jak odhadovat voličské přesuny bez dotazování lidí přímo, a proto ji využívají například politologové, novináři nebo volební analytici po celém světě.
 
+<iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Přesuny voličů 2021-2025 - od SPD' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
+
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují pohyby voličů.**</div>
-
-<iframe src='https://flo.uri.sh/visualisation/25520707/embed' title='Přesuny voličů 2021-2025 - od SPD' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='680px'></iframe>
