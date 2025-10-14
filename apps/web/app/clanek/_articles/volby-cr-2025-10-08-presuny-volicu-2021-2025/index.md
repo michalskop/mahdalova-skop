@@ -9,8 +9,6 @@ tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "eko
 promoted: 95
 ---
 
-## Mnoho nevoličů se rozhodlo jít k urnám – a většina z nich volila ANO
-
 Nyní můžete detailně prozkoumat, **odkud se vzali ti, kdo rozhodli**.
 
 <iframe src='https://flo.uri.sh/story/3372511/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="700px" allowFullScreen></iframe>
