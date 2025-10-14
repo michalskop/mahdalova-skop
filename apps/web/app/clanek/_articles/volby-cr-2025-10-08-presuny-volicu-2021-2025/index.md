@@ -114,7 +114,17 @@ Jak číst grafy s přesuny voličů
 
 **Jak se přesuny voličů počítají**
 
-Metoda, podle níž se odhalují struktury voličských přesunů, se nazývá ekologická inference. Jde o poměrně složitou statistickou metodou založenou na tzv. bayesovském počtu a pomocé které se podle rozptylu počtu hlasů pro jednotlivé strany určuje nejpravděpodobnější strukturu voličských přesunů. To se děje ve velkém množství geografických jednotek, např. v obcích nebo volebních okrscích.
+Metoda, podle níž se odhalují struktury voličských přesunů, se nazývá ekologická inference. Jde o poměrně složitou statistickou metodou založenou na tzv. bayesovském počtu, pomocí které se podle rozptylu počtu hlasů pro jednotlivé strany určuje nejpravděpodobnější struktura voličských přesunů. To se děje ve velkém množství geografických jednotek, např. v obcích nebo volebních okrscích.
+
+Jinými slovy: **Ekologická inference** je statistická metoda, která pomáhá zjistit, jak se mezi volbami přesouvali voliči mezi jednotlivými stranami – i když nemáme k dispozici data o konkrétních lidech (volby jsou samozřejmě tajné).
+
+Vychází z toho, že známe volební výsledky za menší územní celky, třeba za obce nebo volební okrsky. Když tyto výsledky porovnáme mezi posledními volbami (v našem případě 2021 a 2025), můžeme pomocí matematického modelu odhadnout, jaké přesuny voličů jsou nejpravděpodobnější. Například že v obcích, kde měla dříve silnou podporu ODS a nově uspělo ANO, část voličů ODS mohla přejít - logicky - právě k ANO.
+
+Model se opírá o tzv. bayesovský výpočet, který hledá **nejpravděpodobnější vysvětlení** pozorovaných výsledků. V praxi se počítají různé možné kombinace přesunů a určuje se, která z nich nejlépe odpovídá reálným datům z mnoha obcí.
+
+Výsledek není stoprocentní jistota, ale odhad založený na pravděpodobnosti. Metoda je spolehlivá hlavně tehdy, když máme velké množství různorodých dat – tedy když se výsledky mezi obcemi hodně liší. Pokud jsou naopak všechny obce podobné nebo chybí dost informací, může být výsledek méně přesný.
+
+Každopádně jde o nejpoužívanější odborný způsob, jak odhadovat voličské přesuny bez dotazování lidí přímo, a proto ji využívají například politologové, novináři nebo volební analytici po celém světě.
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují pohyby voličů.**</div>
