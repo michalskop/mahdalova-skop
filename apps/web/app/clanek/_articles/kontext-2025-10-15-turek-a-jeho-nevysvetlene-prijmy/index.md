@@ -38,8 +38,8 @@ Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském par
 
 ## Firmy s nejasnými příjmy
 
-Podle účetních dokumentů utržila firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala ztrátu přes 1 milion Kč.  
-Druhá firma, **Transgas s.r.o.**, měla obrat kolem 1,2 milionu, ale rovněž skončila ve ztrátě.  
+Podle účetních dokumentů utržila firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala provozní ztrátu přes 1 milion Kč.  
+Jeho druhá firma, **Transgas s.r.o.** (pozor, nejde o Transgas a. s.), měla obrat kolem 1,2 milionu, ale rovněž skončila v provozní ztrátě.  
 V obou případech chybí jakékoli výplaty majiteli i záznamy o odměnách.  
 
 Zajímavým detailem jsou položky označené jako **„ostatní finanční výnosy“**, které firmám dorovnaly hospodaření.  
