@@ -30,9 +30,9 @@ Když média upozornila, že tyto firmy takové peníze **nevydělávají** a **
 
 Na papíře tedy zůstal několikamilionový roční příjem, jen se přesunul z firemní kolonky do „freelancingu“. 
 
-_K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živonostenský list pozastavil. Po dvanácti letech, v srpnu 2024 se Turkovo působení rozšířilo o volné živonosti._
+_K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živnostenský list pozastavil. Po dvanácti letech, v srpnu 2024, se Turkovo působení rozšířilo o volné živnosti._
 
-Pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli, nulové smlouvy a ztrátové hospodaření.**  
+Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli, nulové smlouvy a ztrátové hospodaření.**  
 Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
 
 ---
