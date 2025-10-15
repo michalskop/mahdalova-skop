@@ -39,9 +39,10 @@ Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském par
 
 Podle účetních dokumentů utržila firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala provozní ztrátu přes 1 milion Kč.  
 Jeho druhá firma, **Transgas s.r.o.** (pozor, nejde o Transgas a. s.), měla obrat kolem 1,2 milionu, ale rovněž skončila v provozní ztrátě.  
-V obou případech chybí jakékoli výplaty majiteli i záznamy o odměnách.  
+V obou případech je v dokumentech výslovně uvedeno, že jejich majitel (Filip Turek) žádné příjmy z tohoto podnikání nemá: „V roce 2024 nebyly mezi společníkem a společností uzavřeny žádné
+pracovněprávní, obchodní ani občanské smlouvy.“ A pozor, Turek uvádí nulu i u jiného převodu zisku z firem. Tedy oficiálně dle dokumentů mu jeho firmy žádným způsobem nevyplácely zisk, tedy ho jaksi nemohly živit.
 
-Zajímavým detailem jsou položky označené jako **„ostatní finanční výnosy“**, které firmám dorovnaly hospodaření.  
+Zajímavý detail jsou položky označené jako **„ostatní finanční výnosy“**, které firmám dorovnaly hospodaření.  
 Nejde o kurzové zisky ani o bankovní půjčky – ty by se v účetnictví projevily jinak.  
 Ve výsledku to znamená jediné: obě firmy **musely dostat peníze z neznámého zdroje.**
 
