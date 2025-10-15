@@ -24,11 +24,14 @@ Všechna dílčí zjištění se dnes setkávají v jedné, stále nezodpovězen
 
 ## Dva příběhy: jeden pro Brusel, druhý pro Prahu
 
-V **prvním prohlášení pro Evropský parlament (18. 7. 2024)** uváděl Turek, že pobírá 10 000 € měsíčně z firem *Art of Performance* a *Transgas*.  
+V **prvním prohlášení pro Evropský parlament (18. 7. 2024)** Turek uváděl, že pobírá 10 000 € měsíčně ze svých firem *Art of Performance* a *Transgas*.  
 Když média upozornila, že tyto firmy takové peníze **nevydělávají** a **nevyplácejí**, přepsal **druhé prohlášení (24. 9. 2024)**: částka zůstala, změnil se jen zdroj –  
 > *“Consultancy in the field of the automotive industry – Freelancer, €10 000 estimated monthly amount.”*
 
-Na papíře tedy zůstal milionový roční příjem, jen se přesunul z firemní kolonky do „freelancingu“.  
+Na papíře tedy zůstal několikamilionový roční příjem, jen se přesunul z firemní kolonky do „freelancingu“. 
+
+_K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živonostenský list pozastavil. Po dvanácti letech, v srpnu 2024 se Turkovo působení rozšířilo o volné živonosti._
+
 Pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli, nulové smlouvy a ztrátové hospodaření.**  
 Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
 
