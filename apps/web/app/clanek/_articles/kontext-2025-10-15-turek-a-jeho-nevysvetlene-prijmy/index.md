@@ -34,7 +34,7 @@ _K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnost
 Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli a přímo s Turkem ani žádné smlouvy.** Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
 
 ---
-podrobnou analýzu jeho finančních záležitostí v oblasti podnikání.
+Takto vypadá podrobná analýza Turkových finančních záležitostí v oblasti podnikání.
 
 | Příjmy F. Turka z vlastních firem (ročně)- rozdíly v dokumentech                            | 2024             | 2022–2023       |
 |----------------------------------|------------------|-----------------|
