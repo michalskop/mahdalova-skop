@@ -13,12 +13,11 @@ Přinášíme dlouhodobě opomíjenou část příběhu poslance Filipa Turka: *
 V oficiálních prohlášeních o svých příjmech pro Evropský parlament Filip Turek uváděl **10 000 € měsíčně** – nejprve jako výplaty ze svých firem, později jako „freelancerské konzultace v automobilovém průmyslu“. Jenže **české účetní výkazy jeho firem žádné odměny majiteli neobsahují, ba dokonce přímo zmiňují, že Turek coby majitel žádné příjmy z těchto firem neměl** a jejich hospodaření takové vysoké platby ani neumožňuje.
 
 Tento text navazuje na naše tři předchozí díly, v nichž jsme krok za krokem ověřovali Turkovy veřejné sebeprezentace:  
-- [*Jak europoslanec Turek doopravdy závodil ve formuli* (13. 5. 2025)](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)  
-- [*Europoslanec Turek: Prezident dvou spolků, jeden má 3 členy, druhý nefunguje* (14. 5. 2025)](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)  
-- [*Peníze odnikud: Záhadné miliony europoslance Turka* (16. 5. 2025)](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka)  
+- [*Jak europoslanec Turek doopravdy závodil ve formuli (13. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)  
+- [*Europoslanec Turek: Prezident dvou spolků, jeden má 3 členy, druhý nefunguje (14. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)  
+- [*Peníze odnikud: Záhadné miliony europoslance Turka (16. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka)  
 
 Všechna dílčí zjištění se dnes setkávají v jedné, stále nezodpovězené otázce: **Kdo Filipa Turka skutečně platí, resp. kdo ho před nástupem do Evropského parlamentu platil?** 
-
 
 ---
 
