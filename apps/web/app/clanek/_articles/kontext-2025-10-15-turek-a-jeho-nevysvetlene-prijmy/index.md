@@ -37,14 +37,12 @@ Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském par
 
 ## Firmy s nejasnými příjmy
 
-Podle účetních dokumentů utržila firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala provozní ztrátu přes 1 milion Kč.  
-Jeho druhá firma, **Transgas s.r.o.** (pozor, nejde o Transgas a. s.), měla obrat kolem 1,2 milionu, ale rovněž skončila v provozní ztrátě.  
+Podle účetních dokumentů utržila Turkova firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala provozní ztrátu přes 1 milion Kč.  
+Jeho druhá firma, **Transgas s.r.o.** (pozor, nejde o Transgas a. s.), měla tržby kolem 1,2 milionu, ale rovněž skončila v provozní ztrátě.  
 V obou případech je v dokumentech výslovně uvedeno, že jejich majitel (Filip Turek) žádné příjmy z tohoto podnikání nemá: „V roce 2024 nebyly mezi společníkem a společností uzavřeny žádné
-pracovněprávní, obchodní ani občanské smlouvy.“ A pozor, Turek uvádí nulu i u jiného převodu zisku z firem. Tedy oficiálně dle dokumentů mu jeho firmy žádným způsobem nevyplácely zisk, tedy ho jaksi nemohly živit.
+pracovněprávní, obchodní ani občanské smlouvy.“ A pozor, Turek uvádí nulu i u převodu zisku z firem sobě coby majiteli. Oficiálně dle dokumentů mu jeho firmy žádným způsobem nevyplácely odměny, tedy ho jaksi nemohly živit.
 
-Zajímavý detail jsou položky označené jako **„ostatní finanční výnosy“**, které firmám dorovnaly hospodaření.  
-Nejde o kurzové zisky ani o bankovní půjčky – ty by se v účetnictví projevily jinak.  
-Ve výsledku to znamená jediné: obě firmy **musely dostat peníze z neznámého zdroje.**
+Zajímavý detail jsou položky označené jako **„ostatní finanční výnosy“**. Co je zajímavé, tuto velkou ztrátu firma v účetnictví pokryla položkou nazvanou "ostatní finanční výnosy". Tato účetní položka běžně zahrnuje např. kurzové zisky firem - což se ale Turkovy malé firmy s největší pravděpodobností netýká vzhledem k tomu, že dlouhodobě nemá skoro žádný majetek ani pohledávky. Ve výsledku to znamená jediné: obě firmy **musely dostat peníze z neznámého zdroje.**
 
 ---
 
