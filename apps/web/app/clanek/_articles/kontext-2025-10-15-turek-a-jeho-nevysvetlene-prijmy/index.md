@@ -17,7 +17,7 @@ Tento text navazuje na naše tři předchozí díly, v nichž jsme krok za kroke
 - [*Europoslanec Turek: Prezident dvou spolků, jeden má 3 členy, druhý nefunguje* (14. 5. 2025)](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)  
 - [*Peníze odnikud: Záhadné miliony europoslance Turka* (16. 5. 2025)](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka)  
 
-Všechna dílčí zjištění se dnes setkávají v jedné, stále nezodpovězené otázce: **Kdo Filipa Turka skutečně platí, resp. před nástupem do Evropského parlamentu platil?** A možná znovu platit bude, protože mandát europoslance už mu zanikl a jeho příjmy v roli nově zvoleného poslance v české Sněmovně se významně propadají.
+Všechna dílčí zjištění se dnes setkávají v jedné, stále nezodpovězené otázce: **Kdo Filipa Turka skutečně platí, resp. kdo ho před nástupem do Evropského parlamentu platil?** 
 
 
 ---
