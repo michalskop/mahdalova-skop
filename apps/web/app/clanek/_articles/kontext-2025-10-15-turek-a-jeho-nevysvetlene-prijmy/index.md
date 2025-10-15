@@ -10,7 +10,7 @@ tags: ["Filip Turek", "finance", "Evropský parlament", "Sbírka listin", "stře
 
 Přinášíme dlouhodobě opomíjenou část příběhu poslance Filipa Turka: **původ a věrohodnost jeho peněz**.  
 
-V oficiálních prohlášeních o svých příjmech pro Evropský parlament Filip Turek uváděl **10 000 € měsíčně** – nejprve jako výplaty ze svých firem, později jako „freelancerské konzultace v automobilovém průmyslu“. Jenže **české účetní výkazy jeho firem žádné odměny majiteli neobsahují, ba dokonce přímo zmiňují, že Turek coby majitel žádné příjmy z těchto firem neměl** a jejich hospodaření takové vysoké platby ani neumožňuje.
+V oficiálních prohlášeních o svých příjmech pro Evropský parlament Filip Turek uváděl **10 000 € měsíčně** – nejprve jako výplaty ze svých dvou firem, později jako „freelancerské konzultace v automobilovém průmyslu“. Jenže **české účetní výkazy jeho firem žádné odměny majiteli neobsahují, ba dokonce přímo zmiňují, že Turek coby majitel žádné příjmy z těchto firem neměl**. A jejich hospodaření takové vysoké platby ani neumožňuje.
 
 Tento text navazuje na naše tři předchozí díly, v nichž jsme krok za krokem ověřovali Turkovy veřejné sebeprezentace:  
 - [*Jak europoslanec Turek doopravdy závodil ve formuli (13. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)  
@@ -23,40 +23,31 @@ Všechna dílčí zjištění se dnes setkávají v jedné, stále nezodpovězen
 
 ## Dva příběhy: jeden pro Brusel, druhý pro Prahu
 
-V **prvním prohlášení pro Evropský parlament (18. 7. 2024)** Turek uváděl, že pobírá 10 000 € měsíčně ze svých firem *Art of Performance* a *Transgas*.  
+V **prvním prohlášení pro Evropský parlament (18. 7. 2024)** Turek uváděl, že pobírá 10 000 € měsíčně ze svých firem *Art of Performance* a *Transgas*.
+
 Když média upozornila, že tyto firmy takové peníze **nevydělávají** a **nevyplácejí**, přepsal **druhé prohlášení (24. 9. 2024)**: částka zůstala, změnil se jen zdroj –  
 > *“Consultancy in the field of the automotive industry – Freelancer, €10 000 estimated monthly amount.”*
 
 Na papíře tedy zůstal několikamilionový roční příjem, jen se přesunul z firemní kolonky do „freelancingu“. 
 
-_K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živnostenský list pozastavil. Po dvanácti letech, v srpnu 2024, se Turkovo působení rozšířilo o volné živnosti._
+### Turkovi tři různé verze o freelancingu
 
-Na jaře dvě média upozornila na Turkův střet zájmů: ([DeSmog](https://www.desmog.com/2025/03/31/czech-mep-filip-turek-climate-role-cars-consultant/) a [Deník Referendum](https://denikreferendum.cz/clanek/237285-turek-)). Upozornila, že Turek je zpravodajem evropského výboru regulujícího automobilový průmysl, a zároveň nově v druhém prohlášení tvrdí, že dostává 250 000 Kč měsíčně za “konzultace v oblasti automobilového průmyslu“. 
+_Fakta k freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živnostenský list pozastavil. Po dvanácti letech, v srpnu 2024, se Turkovo působení rozšířilo o volné živnosti._
 
-A tato částka je klíčová i pro naši kapitolu Turkových příjmů.
+Na jaře dvě média ([DeSmog](https://www.desmog.com/2025/03/31/czech-mep-filip-turek-climate-role-cars-consultant/) a [Deník Referendum](https://denikreferendum.cz/clanek/237285-turek-)) upozornila na Turkův střet zájmů: Turek je zpravodajem evropského výboru regulujícího automobilový průmysl, a zároveň nově v druhém prohlášení tvrdí, že dostává oněch 250 000 Kč měsíčně za “konzultace v oblasti automobilového průmyslu“.
 
-V aktualizovaném prohlášení totiž Turek uvádí, že zmíněné konzultace vykonává jako živnostník (OSVČ). Zjistili jsme, že si skutečně v srpnu 2024 [založil živnost](https://www.rzp.cz/verejne-udaje/cs/udaje/vyber-subjektu;ico=87300036;roleSubjektu=P). Když byl ale v [televizní debatě](https://cnn.iprima.cz/hadka-o-zbrojeni-a-evropskou-federaci-kolegy-tlaci-neco-v-hlave-rypl-si-kolar-do-turka-470567) na Primě dotázán, od koho tyto peníze dostává, odpověděl, že je dostává "od mé vlastní firmy" - čímž popíral, že by měl čtvrt milionu měsíčně jakožto nezávislý konzultant v automobilovém průmyslu.
+V té stejné době ale byl ale v [televizní debatě](https://cnn.iprima.cz/hadka-o-zbrojeni-a-evropskou-federaci-kolegy-tlaci-neco-v-hlave-rypl-si-kolar-do-turka-470567) na Primě dotázán, od koho tyto peníze dostává. A odpověděl, že je dostává "od mé vlastní firmy" - čímž popíral, že by měl těch čtvrt milionu měsíčně jakožto nezávislý konzultant v automobilovém průmyslu.
 
-Jak jsme však prokázali, jeho firmy mu takové částky vyplácet nemohly, protože neměly dostatečný obrat ani zisk. Vzniká tak závažný rozpor: buď Turek nedostává peníze, které v prohlášení uvádí, nebo je dostává z jiného zdroje, než přiznává.
-
-
-## Turek na sebe vrší lži
-
-desmog - referendum
-prima
-
-V rozhovoru ze 13. října 2025 pro *Financial Times* Turek vysvětluje, že jeho poradenská činnost „*se zaměřuje výhradně na veterány a vozy investiční třídy*“ a že si „*pevně věří, že mezi jeho nezávislou prací a parlamentními povinnostmi není žádný střet zájmů*“.  
-Podle *FT* byl „*nezávislým automobilovým konzultantem s příjmem 126 000 eur ročně navíc k platu europoslance*“.  
-
-Pokud by to byla pravda, znamenalo by to, že za poradenství v úzkém segmentu veteránů a sběratelských aut pobírá **zhruba čtvrt milionu korun měsíčně**.
+V rozhovoru pro [Financial Times](https://www.ft.com/content/0466edf4-4fdd-4c9d-be75-eb3ef2f69e00) z tohoto týdne Turek říká, že jeho poradenská činnost „*se zaměřuje výhradně na veterány a vozy investiční třídy*“. Sice stále jde o oblast automobilů ale nikoliv o oblast *automobilového průmyslu*, jak napsal v onom druhém prohlášení pro Evropský parlament.
 
 ---
 ## Žádné smlouvy, nulové příjmy
 
-Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli a přímo s Turkem ani žádné smlouvy.** Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
+Nyní se ale vraťme k Turkovu firemnímu podnikání. 
 
----
-Takto vypadá podrobná analýza Turkových finančních záležitostí v oblasti podnikání.
+Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady za stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli a přímo s Turkem ani žádné smlouvy.** Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
+
+Takto vypadá podrobný přehled Turkových finančních záležitostí v oblasti podnikání, jak je napsal do přehledu pro Evropský parlament a jeho firmy poslaly do Sbírky listin.
 
 | Příjmy F. Turka z vlastních firem (ročně)- rozdíly v dokumentech                            | 2024             | 2022–2023       |
 |----------------------------------|------------------|-----------------|
@@ -123,7 +114,7 @@ Firma sama uvádí, že s ní Turek neměl v letech [2022](https://or.justice.cz
 
 **Tedy znovu: proč v přehledu pro Evropský parlament Filip Turek uvádí příjmy, které oficiálně mít nemohl?**
 
-Téma nyní v dubnu otevřel [Deník N](https://denikn.cz/1700411/z-ceho-si-turek-vyplacel-stovky-tisic-mesicne-europoslanec-nechce-vysvetlit-nejasnosti/?ref=tit), který se pozastavoval nad tím, z čeho si Turek vyplácel stovky tisíc měsíčně. Nyní zveřejnila své účetnictví i druhá Turkova firma a otázky ještě přibyly.
+Téma nyní v dubnu otevřel [Deník N](https://denikn.cz/1700411/z-ceho-si-turek-vyplacel-stovky-tisic-mesicne-europoslanec-nechce-vysvetlit-nejasnosti/?ref=tit), který se pozastavoval nad tím, z čeho si Turek vyplácel stovky tisíc měsíčně. Poté zveřejnila své účetnictví i druhá Turkova firma a otázky ještě přibyly.
 
 <iframe src='https://flo.uri.sh/visualisation/22796141/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 _Výsledky Turkovy firmy Art of Performance, která se zabývá automobilovými veterány. Údaje za rok 2019 firma do Sbírky listin nedodala._
@@ -143,22 +134,20 @@ Turkova firma Transgas s.r.o. není totožná se starší [akciovou společnost�
 Podtrženo sečteno, europoslanec Filip Turek:
 - Deklaruje v oficiálních dokumentech příjmy, které podle účetnictví jeho firem neexistují
 - Když je tato skutečnost zpochybněna, náhle změní zdroj svých příjmů, ale zachová téměř stejnou sumu
-- Tvrdí, že jeho aktuální měsíční příjmy pocházejí z konzultací v odvětví, které sám reguluje
+- O těchto posledních příjmech (vedle příjmu europoslance) říká 3 rozdílné verze:
+- V prohlášení pro Evropský parlament tvrdí, že jeho aktuální měsíční příjmy pocházejí z konzultací v odvětví, které sám reguluje
+- V televizní diskuzi ale říká, že jde o příjmy z jeho vlastních firem
+- V rozhovoru z minulého týdne se vrací k tomu, že jde o příjmy z konzultací, ale v oblasti autoveteránů a investičních vozů
 - Na přímé dotazy médií k původu svých peněz nereaguje
-
-Podobně jako v případě jeho "[závodní kariéry](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)" a "[prezidentství](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)" spolků o třech členech, také v případě financí Filip Turek vytváří příběh, který při bližším zkoumání neodpovídá realitě.
-
-_Nabízí se otázky: Kdo skutečně platí europoslanci Turkovi čtvrt milionu korun měsíčně, když to podle účetnictví nejsou jeho vlastní frmy? A proč europoslanec nechce prozradit skutečný zdroj svých příjmů?_
 
 ---
 
 ## Stále stejný vzorec
+Když jsme analyzovali i další Turkovy příběhy – třeba [údajný „bestseller“ Hranatá legenda](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli), [spolky s pár členy](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku) nebo [přehnané závodní úspěchy](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli) – vždy se ukázalo totéž: velká tvrzení, ale velmi přehnaná nebo neověřitelná.
 
-Když jsme analyzovali i další Turkovy příběhy – třeba údajný „bestseller“ Hranatá legenda, spolky s pár členy nebo přehnané závodní úspěchy – vždy se ukázalo totéž:
-velké tvrzení, malé nebo žádné důkazy. Všechno se tak vrací k jedné konstantě Turkovy prezentace: vytváří o sobě obraz mega-úspěšného chlapáka, ovšem bez reálných dat v pozadí, ať už jde o závodní úspěchy nebo jeho příjmy (o jejichž většinu nyní po zániku mandátu europoslance přichází).
+Finální závěr se proto od jara nemění: oficiální dokumenty se rozcházejí, účetnictví neprokazuje deklarované výplaty a veřejná tvrzení mají několik varint.
 
-Finální závěr se proto od jara nemění: oficiální dokumenty se rozcházejí, účetnictví neprokazuje deklarované výplaty a veřejná tvrzení nedávají ekonomický smysl.
-Turek se mezitím přesunul do Poslanecké sněmovny, ale to nic nemění na povinnosti vysvětlit, kdo mu platí jeho 10 000 € měsíčně.
+Filip Turek se mezitím přesunul do Poslanecké sněmovny, ale to nic nemění na otázce, kdo mu platí nebo do nedávna platit čtvrt milionu korun měsíčně. NEbo zda tyto peníze vůbec existovaly.
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují, odkud (ne)přicházejí Turkovy peníze.**</div>
