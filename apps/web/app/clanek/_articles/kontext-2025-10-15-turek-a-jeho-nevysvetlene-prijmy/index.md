@@ -32,12 +32,11 @@ Na papíře tedy zůstal několikamilionový roční příjem, jen se přesunul 
 
 _K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živnostenský list pozastavil. Po dvanácti letech, v srpnu 2024, se Turkovo působení rozšířilo o volné živnosti._
 
-Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli, nulové smlouvy a ztrátové hospodaření.**  
-Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
+Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli a přímo s Turkem ani žádné smlouvy.** Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
 
 ---
 
-## Ztrátové firmy s nejasnými příjmy
+## Firmy s nejasnými příjmy
 
 Podle účetních dokumentů utržila firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala ztrátu přes 1 milion Kč.  
 Druhá firma, **Transgas s.r.o.**, měla obrat kolem 1,2 milionu, ale rovněž skončila ve ztrátě.  
