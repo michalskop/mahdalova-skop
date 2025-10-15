@@ -34,28 +34,7 @@ _K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnost
 Nyní se ale vraťme k Turkovu firemnímu podnikání. Zatímco v Evropském parlamentu ještě v polovině roku 2024 uváděl, že má ze svých firem příjem čtvrt milionu korun měsíčně, pro české úřady ale ve stejnou dobu Turek hlásil něco úplně jiného: jeho firmy měly **nulové výplaty majiteli a přímo s Turkem ani žádné smlouvy.** Účetní výkazy uložené ve **Sbírce listin** dokládají, že Turek od svých firem v letech 2022–2024 **nedostal ani korunu.**
 
 ---
-
-## Firmy s nejasnými příjmy
-
-Podle účetních dokumentů utržila Turkova firma **Art of Performance** v roce 2024 přibližně 700 000 Kč, ale vykázala provozní ztrátu přes 1 milion Kč.  
-Jeho druhá firma, **Transgas s.r.o.** (pozor, nejde o Transgas a. s.), měla tržby kolem 1,2 milionu, ale rovněž skončila v provozní ztrátě.  
-V obou případech je v dokumentech výslovně uvedeno, že jejich majitel (Filip Turek) žádné příjmy z tohoto podnikání nemá: „V roce 2024 nebyly mezi společníkem a společností uzavřeny žádné
-pracovněprávní, obchodní ani občanské smlouvy.“ A pozor, Turek uvádí nulu i u převodu zisku z firem sobě coby majiteli. Oficiálně dle dokumentů mu jeho firmy žádným způsobem nevyplácely odměny, tedy ho jaksi nemohly živit.
-
-Zajímavý detail jsou položky označené jako **„ostatní finanční výnosy“**. Tuto ztrátu firma v účetnictví pokryla položkou nazvanou „ostatní finanční výnosy“. Tato účetní položka běžně zahrnuje např. kurzové zisky firem - což se ale Turkovy malé firmy s největší pravděpodobností netýká vzhledem k tomu, že dlouhodobě nemá skoro žádný majetek ani pohledávky. Z toho lze dovozovat, že obě firmy **mohly dostat peníze z neznámého zdroje.**
-
----
-
-## Freelance, který nevychází ani na papíře
-
-V rozhovoru pro *Financial Times* Turek vysvětluje, že jeho poradenská činnost „*focuses exclusively on vintage and investment-grade vehicles*“ a že si „*firmly believes there is no conflict of interest between his freelance work and parliamentary duties*“.  
-Podle *FT* byl „*freelance automotive consultant earning €126 000 per year in addition to his MEP salary*“.  
-
-Pokud by to byla pravda, znamenalo by to, že za poradenství v úzkém segmentu veteránů a sběratelských aut pobírá **zhruba čtvrt milionu korun měsíčně** – částku, která neodpovídá realitě trhu.  
-Buď tedy jeho „freelance“ nebyl omezen na veterány, nebo příjmy ve skutečnosti pocházely odjinud.
-
----
-
+podrobnou analýzu jeho finančních záležitostí v oblasti podnikání.
 
 | Příjmy F. Turka z vlastních firem (ročně)- rozdíly v dokumentech                            | 2024             | 2022–2023       |
 |----------------------------------|------------------|-----------------|
@@ -103,18 +82,77 @@ Turek v polovině roku 2024 v rozhovoru pro Hospodářské noviny tvrdil (viz bo
 
 Co je zajímavé, tuto velkou ztrátu firma v účetnictví pokryla položkou nazvanou "ostatní finanční výnosy". Tato účetní položka běžně zahrnuje např. kurzové zisky firem - což se ale Turkovy malé firmy s největší pravděpodobností netýká vzhledem k tomu, že dlouhodobě nemá skoro žádný majetek ani pohledávky.
 
----
+```box
+Hospodářské noviny (22. 7. 2024)
 
-## Střet zájmů, který Turek nepřipouští
+Turek o svých uvedených letošních příjmech říká, že jsou to zatím jen odhady. Obě firmy ale prý budou letos vydělávat podstatně více. „Transgas má letos posledních pět měsíců příjmy až 170 tisíc, protože fakturuje příjmy za prodej knihy Hranatá legenda o mně. Jen první týden se jí prodalo za 550 korun 3000 kusů, je to bestseller. A bude se zabývat i prodejem mého merche, například košilí s mým obličejem. Jak jsem teď známější, je o takové věci zájem,“ popsal.
 
-Problém je o to vážnější, že Turek byl v té době **zpravodajem výboru Evropského parlamentu pro automobilový průmysl**.  
-Podílel se na přípravě legislativy k elektromobilům a bateriím, zatímco sám uváděl, že dostává odměny za konzultace v automotive sektoru.  
-Na přímý dotaz v debatě odpověděl, že ho platí „**moje vlastní firmy**“ – tím si sám **odporuje**, protože jeho firmy žádné příjmy ani zisk neměly.
+Firma Art of Performance se zase podle Turka zabývá klasickými anglickými vozy a vlastní mnoho náhradních dílů pro sběratelská auta. „Náhradní díly se nyní budou prodávat, což zvýší její tržby. A v prosinci ještě prodala auto za 4,5 milionu, což ještě budu do přiznání doplňovat,“ dodal. Předseda strany Motoristé sobě Petr Macinka pak v reakci na uvedená čísla HN pouze sdělil, že o firmách a příjmech Turka nic neví. „Vůbec jsme se o tom nebavili a přiznám se, že mě to nezajímá, nemám k tomu co říct,“ uvedl.
+
+[celý článek zde](https://archiv.hn.cz/c7-67344090-1320cc-393457007bcff0e)
+
+```
+
+Vzhledem k dalším údajům v účetnictví se nabízí vysvětlení, že firma byla v roce 2024 finančně podpořena nějakou spřízněnou osobou nebo společností. Podobná situace nastala už v roce 2021, kdy Turkova firma měla výrazně vyšší výdaje na provoz (spotřeba materiálu, energie, služby), než kolik sama utržila. I tehdy se objevila finanční injekce, která tyto ztráty vyrovnala.
+
+V obou případech šlo o peníze, které by jinak firmu přivedly do vážné ztráty. Nemohlo jít o bankovní půjčku (ta by se v účetnictví projevila jinak) a jak jsme vysvětlili, pravděpodobně nešlo ani o kurzové rozdíly. Z veřejně dostupných údajů však nemůžeme s jistotou určit, odkud tyto peníze pocházely.
+
+Firma sama uvádí, že s ní Turek neměl v letech [2022](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76271448&subjektId=945437&spis=1042137), [2023](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=80924883&subjektId=945437&spis=1042137) ani [2024](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85570966&subjektId=945437&spis=1042137) uzavřeny žádné smlouvy - pracovněprávní, obchodní ani občanské. To odpovídá i účetním údajům, které jednoznačně uvádějí, že majiteli byla v letech 2022 až 2024 vyplacena přesně nula korun (viz Výkazy zisku a ztráty [2022](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76271446&subjektId=945437&spis=1042137)-[2024](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85570964&subjektId=945437&spis=1042137), řádek M).
+
+**Tedy znovu: proč v přehledu pro Evropský parlament Filip Turek uvádí příjmy, které oficiálně mít nemohl?**
+
+Téma nyní v dubnu otevřel [Deník N](https://denikn.cz/1700411/z-ceho-si-turek-vyplacel-stovky-tisic-mesicne-europoslanec-nechce-vysvetlit-nejasnosti/?ref=tit), který se pozastavoval nad tím, z čeho si Turek vyplácel stovky tisíc měsíčně. Nyní zveřejnila své účetnictví i druhá Turkova firma a otázky ještě přibyly.
+
+<iframe src='https://flo.uri.sh/visualisation/22796141/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
+_Výsledky Turkovy firmy Art of Performance, která se zabývá automobilovými veterány. Údaje za rok 2019 firma do Sbírky listin nedodala._
+
+## Transgas: druhá firma, stejná nula
+Druhou firmou, kterou Filip Turek vlastní, je Transgas s. r. o. Z té, podle prvního červencového přehledu v Evropském parlamentu, měl Turek v roce 2024 dostávat 5000 EUR (125 000 Kč) měsíčně; v aktualizovaném podání ze září už ale tento příjem neuvádí.
+
+[Oficiální účetní dokumenty](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85570966&subjektId=945437&spis=1042137) však ukazují, že ani tato firma Turkovi podle účetnictví nevyplatila ani korunu. Transgas do konce roku 2023 nevyvíjel prakticky žádnou činnost a [v roce 2024](https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86024524&subjektId=975612&spis=1079121) utržila jen 1,2 milionu korun, ale výdaje měla ještě vyšší, tedy ocitla se v mírné provozní ztrátě, kterou opět dorovnal blíže nespecifikovaný výnos (145 tisíc Kč). Za těchto okolností firma neměla ani kde vzít prostředky na vyplácení vysokých odměn, které Turek uvádí.
 
 ```box
-Klíčová fakta v jedné větě:  
-Turek měnil pouze „nálepky“ zdrojů příjmů (firmy → freelance), nikoliv částku; jeho firmy přitom nemají z čeho vyplácet a účetnictví žádné odměny majiteli neukazuje. Zůstává tedy otázka skutečného plátce.
+### Není Transgas jako Transgas
+
+Turkova firma Transgas s.r.o. není totožná se starší [akciovou společností Transgas](https://cs.wikipedia.org/wiki/RWE_Supply_%26_Trading_CZ), která zanikla, ani nejde o velkou kanadskou firmu [TransGas](https://en.wikipedia.org/wiki/TransGas). To jen Turek založil v roce 2017 společnost s ručením omezeným se stejným jménem. Tato Turkova firma provozuje od roku 2024 [eshop](https://www.hranatymerch.cz/obchodni-podminky/).
 ```
+
+## Nesrovnalosti v příběhu o “bestselleru“
+
+Turek v rozhovoru pro Hospodářské noviny tvrdil, že Transgas má příjmy díky prodeji jeho knihy Hranatá legenda: "Jen první týden se jí prodalo za 550 korun 3000 kusů, je to bestseller."
+
+Turek sám však uvedl, že náklad jeho knihy ("limitované edice") je [právě tři tisíce kusů](https://www.instagram.com/filipturekpresident/p/C5v6uuRM1eX/). Kniha je přitom stále běžně dostupná v knihkupectvích i na jeho vlastním webu. Prodeje tedy zdaleka nedosáhly tvrzeného úspěchu.
+
+## Střet zájmů v automobilovém průmyslu
+Na jaře přinesla média zprávu ([DeSmog](https://www.desmog.com/2025/03/31/czech-mep-filip-turek-climate-role-cars-consultant/) a [Deník Referendum](https://denikreferendum.cz/clanek/237285-turek-)), že Turek je zpravodajem evropského výboru regulujícího automobilový průmysl, a zároveň nově v druhém prohlášení tvrdí, že dostává 250 000 Kč měsíčně za “konzultace v oblasti automobilového průmyslu“.
+
+V aktualizovaném prohlášení Turek uvádí, že tyto konzultace vykonává jako živnostník (OSVČ). Zjistili jsme, že si skutečně v srpnu 2024 [založil živnost](https://www.rzp.cz/verejne-udaje/cs/udaje/vyber-subjektu;ico=87300036;roleSubjektu=P). Když byl ale v [televizní debatě](https://cnn.iprima.cz/hadka-o-zbrojeni-a-evropskou-federaci-kolegy-tlaci-neco-v-hlave-rypl-si-kolar-do-turka-470567) na Primě dotázán, od koho tyto peníze dostává, odpověděl, že je dostává "od mé vlastní firmy" - čímž popíral, že by měl čtvrt milionu měsíčně jakožto nezávislý konzultant v automobilovém průmyslu.
+
+Jak jsme však prokázali, jeho firmy mu takové částky vyplácet nemohly, protože neměly dostatečný obrat ani zisk. Vzniká tak závažný rozpor: buď Turek nedostává peníze, které v prohlášení uvádí, nebo je dostává z jiného zdroje, než přiznává.
+
+## Peníze odnikud
+Podtrženo sečteno, europoslanec Filip Turek:
+- Deklaruje v oficiálních dokumentech příjmy, které podle účetnictví jeho firem neexistují
+- Když je tato skutečnost zpochybněna, náhle změní zdroj svých příjmů, ale zachová téměř stejnou sumu
+- Tvrdí, že jeho aktuální měsíční příjmy pocházejí z konzultací v odvětví, které sám reguluje
+- Na přímé dotazy médií k původu svých peněz nereaguje
+
+Podobně jako v případě jeho "[závodní kariéry](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)" a "[prezidentství](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)" spolků o třech členech, také v případě financí Filip Turek vytváří příběh, který při bližším zkoumání neodpovídá realitě.
+
+_Nabízí se otázky: Kdo skutečně platí europoslanci Turkovi čtvrt milionu korun měsíčně, když to podle účetnictví nejsou jeho vlastní frmy? A proč europoslanec nechce prozradit skutečný zdroj svých příjmů?_
+
+---
+
+## Freelance, který nevychází ani na papíře
+
+V rozhovoru pro *Financial Times* Turek vysvětluje, že jeho poradenská činnost „*focuses exclusively on vintage and investment-grade vehicles*“ a že si „*firmly believes there is no conflict of interest between his freelance work and parliamentary duties*“.  
+Podle *FT* byl „*freelance automotive consultant earning €126 000 per year in addition to his MEP salary*“.  
+
+Pokud by to byla pravda, znamenalo by to, že za poradenství v úzkém segmentu veteránů a sběratelských aut pobírá **zhruba čtvrt milionu korun měsíčně** – částku, která neodpovídá realitě trhu.  
+Buď tedy jeho „freelance“ nebyl omezen na veterány, nebo příjmy ve skutečnosti pocházely odjinud.
+
+---
+
 
 ## Stejný vzorec všude
 
