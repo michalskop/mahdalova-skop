@@ -42,7 +42,7 @@ Jeho druhá firma, **Transgas s.r.o.** (pozor, nejde o Transgas a. s.), měla tr
 V obou případech je v dokumentech výslovně uvedeno, že jejich majitel (Filip Turek) žádné příjmy z tohoto podnikání nemá: „V roce 2024 nebyly mezi společníkem a společností uzavřeny žádné
 pracovněprávní, obchodní ani občanské smlouvy.“ A pozor, Turek uvádí nulu i u převodu zisku z firem sobě coby majiteli. Oficiálně dle dokumentů mu jeho firmy žádným způsobem nevyplácely odměny, tedy ho jaksi nemohly živit.
 
-Zajímavý detail jsou položky označené jako **„ostatní finanční výnosy“**. Co je zajímavé, tuto velkou ztrátu firma v účetnictví pokryla položkou nazvanou "ostatní finanční výnosy". Tato účetní položka běžně zahrnuje např. kurzové zisky firem - což se ale Turkovy malé firmy s největší pravděpodobností netýká vzhledem k tomu, že dlouhodobě nemá skoro žádný majetek ani pohledávky. Ve výsledku to znamená jediné: obě firmy **musely dostat peníze z neznámého zdroje.**
+Zajímavý detail jsou položky označené jako **„ostatní finanční výnosy“**. Tuto ztrátu firma v účetnictví pokryla položkou nazvanou „ostatní finanční výnosy“. Tato účetní položka běžně zahrnuje např. kurzové zisky firem - což se ale Turkovy malé firmy s největší pravděpodobností netýká vzhledem k tomu, že dlouhodobě nemá skoro žádný majetek ani pohledávky. Z toho lze dovozovat, že obě firmy **mohly dostat peníze z neznámého zdroje.**
 
 ---
 
