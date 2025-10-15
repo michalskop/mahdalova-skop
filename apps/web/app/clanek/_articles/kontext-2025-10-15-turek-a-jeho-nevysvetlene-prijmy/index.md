@@ -31,17 +31,24 @@ Na papíře tedy zůstal několikamilionový roční příjem, jen se přesunul 
 
 _K freelancingu: Turkovo tvrzení, že měl tyto příjmy v rámci své živnosti, nelze ověřit. V 2010 si Turek založil živnost na hostinskou činnost. Z podrobnějších údajů vyplývá, že v té době měl provozovnu v prostorách na pražském Jižním městě, ovšem toto provozování ukončil hned následující rok 2011. A od roku 2012 pak Turek svůj jediný živnostenský list pozastavil. Po dvanácti letech, v srpnu 2024, se Turkovo působení rozšířilo o volné živnosti._
 
+Na jaře dvě média upozornila na Turkův střet zájmů: ([DeSmog](https://www.desmog.com/2025/03/31/czech-mep-filip-turek-climate-role-cars-consultant/) a [Deník Referendum](https://denikreferendum.cz/clanek/237285-turek-)). Upozornila, že Turek je zpravodajem evropského výboru regulujícího automobilový průmysl, a zároveň nově v druhém prohlášení tvrdí, že dostává 250 000 Kč měsíčně za “konzultace v oblasti automobilového průmyslu“. 
+
+A tato částka je klíčová i pro naši kapitolu Turkových příjmů.
+
+V aktualizovaném prohlášení totiž Turek uvádí, že zmíněné konzultace vykonává jako živnostník (OSVČ). Zjistili jsme, že si skutečně v srpnu 2024 [založil živnost](https://www.rzp.cz/verejne-udaje/cs/udaje/vyber-subjektu;ico=87300036;roleSubjektu=P). Když byl ale v [televizní debatě](https://cnn.iprima.cz/hadka-o-zbrojeni-a-evropskou-federaci-kolegy-tlaci-neco-v-hlave-rypl-si-kolar-do-turka-470567) na Primě dotázán, od koho tyto peníze dostává, odpověděl, že je dostává "od mé vlastní firmy" - čímž popíral, že by měl čtvrt milionu měsíčně jakožto nezávislý konzultant v automobilovém průmyslu.
+
+Jak jsme však prokázali, jeho firmy mu takové částky vyplácet nemohly, protože neměly dostatečný obrat ani zisk. Vzniká tak závažný rozpor: buď Turek nedostává peníze, které v prohlášení uvádí, nebo je dostává z jiného zdroje, než přiznává.
+
 
 ## Turek na sebe vrší lži
 
 desmog - referendum
 prima
 
-V rozhovoru pro *Financial Times* Turek vysvětluje, že jeho poradenská činnost „*focuses exclusively on vintage and investment-grade vehicles*“ a že si „*firmly believes there is no conflict of interest between his freelance work and parliamentary duties*“.  
-Podle *FT* byl „*freelance automotive consultant earning €126 000 per year in addition to his MEP salary*“.  
+V rozhovoru ze 13. října 2025 pro *Financial Times* Turek vysvětluje, že jeho poradenská činnost „*se zaměřuje výhradně na veterány a vozy investiční třídy*“ a že si „*pevně věří, že mezi jeho nezávislou prací a parlamentními povinnostmi není žádný střet zájmů*“.  
+Podle *FT* byl „*nezávislým automobilovým konzultantem s příjmem 126 000 eur ročně navíc k platu europoslance*“.  
 
-Pokud by to byla pravda, znamenalo by to, že za poradenství v úzkém segmentu veteránů a sběratelských aut pobírá **zhruba čtvrt milionu korun měsíčně** – částku, která neodpovídá realitě trhu.  
-Buď tedy jeho „freelance“ nebyl omezen na veterány, nebo příjmy ve skutečnosti pocházely odjinud.
+Pokud by to byla pravda, znamenalo by to, že za poradenství v úzkém segmentu veteránů a sběratelských aut pobírá **zhruba čtvrt milionu korun měsíčně**.
 
 ---
 ## Žádné smlouvy, nulové příjmy
@@ -131,19 +138,6 @@ Druhou firmou, kterou Filip Turek vlastní, je Transgas s. r. o. Z té, podle pr
 
 Turkova firma Transgas s.r.o. není totožná se starší [akciovou společností Transgas](https://cs.wikipedia.org/wiki/RWE_Supply_%26_Trading_CZ), která zanikla, ani nejde o velkou kanadskou firmu [TransGas](https://en.wikipedia.org/wiki/TransGas). To jen Turek založil v roce 2017 společnost s ručením omezeným se stejným jménem. Tato Turkova firma provozuje od roku 2024 [eshop](https://www.hranatymerch.cz/obchodni-podminky/).
 ```
-
-## Nesrovnalosti v příběhu o “bestselleru“
-
-Turek v rozhovoru pro Hospodářské noviny tvrdil, že Transgas má příjmy díky prodeji jeho knihy Hranatá legenda: "Jen první týden se jí prodalo za 550 korun 3000 kusů, je to bestseller."
-
-Turek sám však uvedl, že náklad jeho knihy ("limitované edice") je [právě tři tisíce kusů](https://www.instagram.com/filipturekpresident/p/C5v6uuRM1eX/). Kniha je přitom stále běžně dostupná v knihkupectvích i na jeho vlastním webu. Prodeje tedy zdaleka nedosáhly tvrzeného úspěchu.
-
-## Střet zájmů v automobilovém průmyslu
-Na jaře přinesla média zprávu ([DeSmog](https://www.desmog.com/2025/03/31/czech-mep-filip-turek-climate-role-cars-consultant/) a [Deník Referendum](https://denikreferendum.cz/clanek/237285-turek-)), že Turek je zpravodajem evropského výboru regulujícího automobilový průmysl, a zároveň nově v druhém prohlášení tvrdí, že dostává 250 000 Kč měsíčně za “konzultace v oblasti automobilového průmyslu“.
-
-V aktualizovaném prohlášení Turek uvádí, že tyto konzultace vykonává jako živnostník (OSVČ). Zjistili jsme, že si skutečně v srpnu 2024 [založil živnost](https://www.rzp.cz/verejne-udaje/cs/udaje/vyber-subjektu;ico=87300036;roleSubjektu=P). Když byl ale v [televizní debatě](https://cnn.iprima.cz/hadka-o-zbrojeni-a-evropskou-federaci-kolegy-tlaci-neco-v-hlave-rypl-si-kolar-do-turka-470567) na Primě dotázán, od koho tyto peníze dostává, odpověděl, že je dostává "od mé vlastní firmy" - čímž popíral, že by měl čtvrt milionu měsíčně jakožto nezávislý konzultant v automobilovém průmyslu.
-
-Jak jsme však prokázali, jeho firmy mu takové částky vyplácet nemohly, protože neměly dostatečný obrat ani zisk. Vzniká tak závažný rozpor: buď Turek nedostává peníze, které v prohlášení uvádí, nebo je dostává z jiného zdroje, než přiznává.
 
 ## Peníze odnikud
 Podtrženo sečteno, europoslanec Filip Turek:
