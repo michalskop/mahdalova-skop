@@ -23,8 +23,8 @@ Všechna dosavadní zjištění se nyní sbíhají v jedinou, dosud nezodpověze
 
 V **prvním prohlášení pro Evropský parlament (18. 7. 2024)** Turek uváděl, že pobírá 10 000 € měsíčně ze svých firem *Art of Performance* a *Transgas (neplést s Transgas a. s.)*.
 
-Když média upozornila, že tyto firmy takové peníze **nevydělávají** a **nevyplácejí**, přepsal **druhé prohlášení (24. 9. 2024)**: částka zůstala, změnil se jen zdroj –  
-> *“Consultancy in the field of the automotive industry – Freelancer, €10 000 estimated monthly amount.”*
+Když organizace DeSmog (mezinárodní investigativní platforma zaměřená na odhalování dezinformací a lobbistických vlivů v oblasti klimatu, energetiky a veřejné politiky) upozornila, že tyto firmy takové peníze **nevydělávají** a **nevyplácejí**, Turek přepsal **druhé prohlášení (24. 9. 2024)**: částka zůstala, změnil se jen zdroj –  
+> *„Poradenství v oblasti automobilového průmyslu – osoba samostatně výdělečně činná, odhadovaná měsíční částka 10 000 eur.“/“Consultancy in the field of the automotive industry – Freelancer, €10 000 estimated monthly amount.”* 
 
 Na papíře tedy zůstal několikamilionový roční příjem, jen se přesunul z firemní kolonky do „freelancingu“. 
 
