@@ -3,7 +3,7 @@ title: "Peníze odnikud: Stále nevysvětlené příjmy Filipa Turka"
 date: "2025-10-17"
 author: "Mahdalová & Škop"
 excerpt: "Turek střídá verze o svých miliónových příjmech: jednou z firem, podruhé z 'freelancerských' konzultací. Účetnictví však vyplácení odměn majiteli neprokazuje a čísla nedávají ekonomický smysl."
-coverImage: "images/thumbnail.webp"
+coverImage: "images/filip-turek-prijmy-nejasne-prijmy-mahdalova-skop.webp"
 filter: ["analýza"]
 tags: ["Filip Turek", "finance", "Evropský parlament", "Sbírka listin", "střet zájmů"]
 ---
