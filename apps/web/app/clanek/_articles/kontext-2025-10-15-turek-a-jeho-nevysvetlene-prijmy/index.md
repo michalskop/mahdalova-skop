@@ -1,6 +1,6 @@
 ---
 title: "Peníze odnikud: Stále nevysvětlené příjmy Filipa Turka"
-date: "2025-10-17"
+date: "2025-10-15"
 author: "Mahdalová & Škop"
 excerpt: "Turek střídá verze o svých miliónových příjmech: jednou z firem, podruhé z 'freelancerských' konzultací. Účetnictví však vyplácení odměn majiteli neprokazuje a čísla nedávají ekonomický smysl."
 coverImage: "images/filip-turek-prijmy-nejasne-prijmy-mahdalova-skop.webp"
@@ -36,7 +36,7 @@ Na jaře dvě média ([DeSmog](https://www.desmog.com/2025/03/31/czech-mep-filip
 
 V té stejné době ale byl ale v [televizní debatě](https://cnn.iprima.cz/hadka-o-zbrojeni-a-evropskou-federaci-kolegy-tlaci-neco-v-hlave-rypl-si-kolar-do-turka-470567) na Primě dotázán, od koho tyto peníze dostává. A odpověděl, že je dostává "od mé vlastní firmy" - čímž popíral, že by měl těch čtvrt milionu měsíčně jakožto nezávislý konzultant v automobilovém průmyslu.
 
-V rozhovoru pro [Financial Times](https://www.ft.com/content/0466edf4-4fdd-4c9d-be75-eb3ef2f69e00) z tohoto týdne Turek říká, že jeho poradenská činnost „*se zaměřuje výhradně na veterány a vozy investiční třídy*“. Sice stále jde o oblast automobilů ale nikoliv o oblast *automobilového průmyslu*, jak napsal v onom druhém prohlášení pro Evropský parlament.
+V rozhovoru pro [Financial Times](https://www.ft.com/content/0466edf4-4fdd-4c9d-be75-eb3ef2f69e00) z tohoto týdne Turek říká, že jeho poradenská činnost „*se zaměřuje výhradně na veterány a vozy investiční třídy*“. Sice stále jde o oblast automobilů ale nikoliv o oblast *automobilového průmyslu*, jak napsal v onom druhém prohlášení pro Evropský parlament. Ve svém vyprávění pro Financial Times byl tedy Turek zároveň „nezávislým automobilovým konzultantem s příjmem 126 000 eur ročně navíc k platu europoslance“.
 
 ---
 ## Žádné smlouvy, nulové příjmy
@@ -145,7 +145,7 @@ Když jsme analyzovali i další Turkovy příběhy – třeba [údajný „best
 
 Finální závěr se proto od jara nemění: oficiální dokumenty se rozcházejí, účetnictví neprokazuje deklarované výplaty a veřejná tvrzení mají několik varint.
 
-Filip Turek se mezitím přesunul do Poslanecké sněmovny, ale to nic nemění na otázce, kdo mu platí nebo do nedávna platit čtvrt milionu korun měsíčně. NEbo zda tyto peníze vůbec existovaly.
+Filip Turek se mezitím přesunul do Poslanecké sněmovny, ale to nic nemění na otázce, kdo mu platí nebo do nedávna platit čtvrt milionu korun měsíčně. Nebo zda tyto peníze vůbec existovaly.
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují, odkud (ne)přicházejí Turkovy peníze.**</div>
