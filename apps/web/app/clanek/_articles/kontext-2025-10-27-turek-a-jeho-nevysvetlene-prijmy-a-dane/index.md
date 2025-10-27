@@ -87,6 +87,6 @@ Přesto v této době přijímal od klientů **milionové částky** a provádě
   frameBorder="0"
   scrolling="no"
   width="100%"
-  height="600px"
+  height="750px"
 ></iframe>
 
