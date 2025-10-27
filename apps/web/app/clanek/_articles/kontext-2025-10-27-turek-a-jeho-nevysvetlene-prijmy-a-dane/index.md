@@ -92,15 +92,15 @@ Filip Turek čelí podezření, že dlouhodobě podnikal bez příslušného opr
 Takové jednání není bagatelní – české zákony na něj pamatují jak v rovině **trestní**, tak **správní**.
 
 #### 🧾 Neoprávněné podnikání
-Podle § 251 trestního zákoníku (zákon č. 40/2009 Sb.) platí:  
+Podle [§ 251 trestního zákoníku](https://www.zakonyprolidi.cz/cs/2009-40/zneni-20251001#p251) (zákon č. 40/2009 Sb.) platí:  
 > „Kdo neoprávněně ve větším rozsahu poskytuje služby nebo provozuje výrobní, obchodní nebo jiné podnikání, bude potrestán odnětím svobody až na dva roky nebo zákazem činnosti.“
 
-Pokud pachatel získá **značný prospěch** nebo způsobí **značnou škodu**, může být potrestán až **pěti lety odnětí svobody**.
+Pokud pachatel získá **značný prospěch** (řádově miliony korun), může být potrestán až **pěti lety odnětí svobody**.
 
 #### 💰 Zkrácení nebo neodvedení daně
-Podle § 240 a § 241 trestního zákoníku hrozí postih za zkrácení nebo neodvedení daně, pojistného či jiných povinných plateb:  
+Podle [§ 240 a § 241 trestního zákoníku](https://www.zakonyprolidi.cz/cs/2009-40/zneni-20251001#f3920337) hrozí postih za zkrácení nebo neodvedení daně, pojistného či jiných povinných plateb:  
 - při menším rozsahu **6 měsíců až 3 roky vězení**,  
-- při větším rozsahu nebo úmyslném zkrácení daně až **2 až 8 let** odnětí svobody.
+- při značném rozsahu nebo úmyslném zkrácení daně až **2 až 8 let** odnětí svobody.
 
 Tyto tresty se vztahují na situace, kdy podnikatel neodvede daň z příjmu nebo se úmyslně vyhne registraci a platbě DPH, přestože překročil zákonný limit obratu.
 
@@ -112,7 +112,7 @@ Nepřihlášení k DPH může být kvalifikováno jako **porušení daňových p
 - nebo v závažnějších případech **pokutu až 500 000 Kč** (dle zákona č. 235/2004 Sb. o DPH).
 
 #### ⚠️ Správní delikt podle živnostenského zákona
-Za provozování živnosti bez oprávnění hrozí podnikateli ve správním řízení pokuta až **1 000 000 Kč** (zákon č. 455/1991 Sb., § 61).
+Za provozování živnosti bez oprávnění hrozí podnikateli ve správním řízení pokuta až **1 000 000 Kč** ([zákon č. 455/1991 Sb., § 61](https://www.zakonyprolidi.cz/cs/1991-455/zneni-20250701#p61)).
 
 ---
 

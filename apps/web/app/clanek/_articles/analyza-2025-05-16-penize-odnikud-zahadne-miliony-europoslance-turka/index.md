@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Ve finančních prohlášeních europoslance Turka jsme odhalili velké nesrovnalosti, které vyvolávají zásadní otázky: odkud skutečně plynou jeho deklarované příjmy a proč se jeho tvrzení a výkazy zcela rozcházejí?"
 coverImage: "images/main.webp"
 filter: ["analýza"]
-tags: ["Europarlament", "Turek", "Firmy", "Motoristé sobě", "Přísaha", "Patrioti"]
+tags: ["Europarlament", "Turek", "Firmy", "Motoristé sobě", "Přísaha", "Patrioti", "Filip Turek"]
 promoted: 60
 ---
 V naší sérii o europoslanci Filipu Turkovi (Motoristé/Patrioti) jsme již odhalili jeho [“legendární“ závodní kariéru](/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli) i jeho [“prezidentování“ ve spolcích s pouhými třemi členy](/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku). Nyní přinášíme podrobnou analýzu jeho finančních záležitostí v oblasti podnikání.
