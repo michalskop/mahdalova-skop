@@ -6,7 +6,7 @@ excerpt: "Turek střídá verze o svých miliónových příjmech: jednou z fire
 coverImage: "images/filip-turek-prijmy-nejasne-prijmy-mahdalova-skop.webp"
 filter: ["kontext"]
 tags: ["Filip Turek", "finance", "Evropský parlament", "Sbírka listin", "střet zájmů"]
-promoted: 80
+promoted: 85
 ---
 Přinášíme dlouhodobě opomíjenou část příběhu poslance Filipa Turka: **původ a věrohodnost jeho peněz**.  
 
