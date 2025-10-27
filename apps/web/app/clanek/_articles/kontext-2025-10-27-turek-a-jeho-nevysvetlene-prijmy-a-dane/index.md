@@ -1,18 +1,26 @@
 ---
 title: "Nejen příjmy, ale i nevysvětlené daně Filipa Turka"
-date: 2025-10-28
-author: Kateřina Mahdalová
-excerpt: "Z dokumentů a smluv vyplývá, že Filip Turek přijímal milionové částky na renovace vozidel v době, kdy neměl aktivní živnost a jeho společnosti ještě neexistovaly. Platby byly označeny jako „zápůjčky“, texty smluv však popisují zálohy na práce, termíny předání a vyúčtování oprav – tedy prvky běžné pro zakázkovou činnost."
-image: /img/turek-zapujcky.webp
-tags: [Filip Turek, podnikání, politika, vyšetřování]
+date: "2025-10-28"
+author: "Kateřina Mahdalová & Michal Škop"
+excerpt: "Neoprávněné podnikání, zkrácení nebo neodvedení daně či neregistrace k DPH, to jsou podezření, kterým nyní čelí poslanec Filip Turek. "
+image: "images/turek-zapujcky.webp"
+tags: ["Filip Turek", "podnikání", "politika", "daně"]
 promoted: 91
 ---
 
-## Turkovy nezdaněné konzultace
+## Turkovy (ne)přiznané konzultace
+
+Neoprávněné podnikání, zkrácení nebo neodvedení daně či neregistrace k DPH, to jsou podezření, kterým nyní čelí poslanec Filip Turek. Z jeho vlastních oficiálních prohlášení v Evropském parlamentu vyplývá, že má vysoké příjmy, ale zároveň se neregistroval k odvodu DPH, ačkoli by ze zákona měl tuto povinnost (pokud o svých příjmech muví pravdu v EP). Z dalších dokumentů a smluv navíc vyplývá, že Filip Turek přijímal milionové částky na renovace vozidel v době, kdy neměl aktivní živnost a jeho firmy ještě neexistovaly.
 
 Filip Turek si po svém zvolení europoslancem v červnu 2024 rozšířil živnostenské oprávnění — od **srpna 2024** má vedenou širší živnost, která zahrnuje i poradenské a obchodní činnosti. Ve svém posledním povinném písemném prohlášení pro Evropský parlament ze září 2024 deklaruje příjmy ve výši 10 000 eur měsíčně, tedy zhruba tři miliony korun ročně (jako freelancer, nikoli z firem). 
 
-Takový obrat mu podle českých zákonů zakládá povinnost registrace k DPH. V dostupných registrech však Filip Turek stále nefiguruje jako plátce DPH a neexistují žádné záznamy, že by tuto povinnost kdykoli v minulosti splnil. Ve svém původním prohlášení pro Evropský parlament z července 2024 uváděl, že má příjmy ze svých firem Art of Performance s.r.o. a Transgas s.r.o. 
+Takový obrat mu podle českých zákonů zakládá povinnost registrace k DPH. V dostupných registrech však Filip Turek stále nefiguruje jako plátce DPH a neexistují žádné záznamy, že by tuto povinnost kdykoli v minulosti splnil. Ve svém původním prohlášení pro Evropský parlament z července 2024 uváděl, že má příjmy ze svých firem Art of Performance s. r. o. a Transgas s. r. o. 
+
+Tento text navazuje na naše předchozí díly, v nichž jsme krok za krokem ověřovali Turkovy veřejné sebeprezentace:  
+- [*Jak europoslanec Turek doopravdy závodil ve formuli (13. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)  
+- [*Europoslanec Turek: Prezident dvou spolků, jeden má 3 členy, druhý nefunguje (14. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)  
+- [*Peníze odnikud: Záhadné miliony europoslance Turka (16. 5. 2025)*](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka)
+- [*Peníze odnikud: Stále nevysvětlené příjmy Filipa Turka (15. 10. 2025)*](https://www.mahdalova-skop.cz/clanek/kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy)
 
 ## „Zápůjčky“ a milionové zakázky bez firem a živnosti
 
@@ -30,11 +38,15 @@ Doby svého studia Filip Turek nikde výslovně neuvádí, ovšem lze ji z jeho 
 
 Pokud by Turek v popisovaném období skutečně realizoval větší množství zakázek a obchodů, mohl tak činit pouze jako fyzická osoba–podnikatel. Ani to však nesedí: podle živnostenského rejstříku byla jeho živnost v té době **pozastavená**. Měl ji vedenou pouze na **hostinskou činnost**, kterou provozoval v malém baru na pražském Chodově (8. 9. 2010 – 28. 2. 2011). Podnikání s prodejem či opravami aut tedy legálně rozhodně neprovozoval.
 
-> „Studoval jsem VŠAP (Vysoká škola aplikovaného práva), převažovala tam práva, ale míchalo se to s Jaguar Clubem, takže jsem třeba rok a půl dělal automechanika při studiu [...] a já už jsem tehdy [...] dávno vydělával. Chvíli jsem už i obchodoval na burze, dávno jsem dělal obchod a import náhradních dílů a vzácných aut do České republiky i jinam.“  
-> — *Filip Turek, Hranatá legenda*
+## Studoval, podnikal, vydělával - ale na koho?
 
-Nabízí se sice možnost, že mohl působit jako spolupracovník či zaměstnanec jiného podnikatele, avšak texty smluv, které Filip Turek uzavíral se svými klienty, to vylučují. V žádné z nich totiž Turek nevystupuje jako zástupce jiné osoby či společnosti – je přímo uveden jako smluvní strana.  
-Uzavírá smlouvy vlastním jménem a přijímá platby osobně, v hotovosti nebo na svůj účet. Kopiemi těchto smluv disponují redakce **Deníku N** a **Page Not Found**, které část dokumentů již zveřejnily; další podklady má naše redakce **mahdalova-skop.cz** k dispozici a jejich zveřejnění koordinuje s oběma redakcemi.
+Smlouvy jsou na samotného Turka, ale firmy ještě neměl a svou jedinou živnost pozastavenou.
+
+- „Studoval jsem VŠAP (Vysoká škola aplikovaného práva), převažovala tam práva, ale míchalo se to s Jaguar Clubem, takže jsem třeba rok a půl dělal automechanika při studiu [...] a já už jsem tehdy [...] dávno vydělával. Chvíli jsem už i obchodoval na burze, dávno jsem dělal obchod a import náhradních dílů a vzácných aut do České republiky i jinam.“ (*Filip Turek, Hranatá legenda*)
+
+Nabízí se sice možnost, že mohl působit jako spolupracovník či zaměstnanec jiného podnikatele, avšak texty smluv, které Filip Turek uzavíral se svými klienty, to vylučují. V žádné z nich totiž Turek nevystupuje jako zástupce jiné osoby či společnosti – je přímo uveden jako smluvní strana. Uzavírá smlouvy vlastním jménem a přijímá platby osobně, v hotovosti nebo na svůj účet. Kopiemi těchto smluv disponují redakce **Deníku N** a **Page Not Found**, které část dokumentů již zveřejnily; další podklady má naše redakce **mahdalova-skop.cz** k dispozici a jejich zveřejnění koordinuje s oběma redakcemi.
+
+## Za hranou zákona
 
 Obsah smluv i svědectví klientů jednoznačně naznačují, že Turek činnost vykonával samostatně a soustavně – tedy fakticky podnikal, aniž by k tomu měl příslušné oprávnění. Takové jednání přitom nelze považovat za bagatelní: podle § 251 trestního zákoníku může **neoprávněné podnikání** naplnit skutkovou podstatu trestného činu s trestem až **dva roky odnětí svobody**.  
 Nadále také není zřejmé, zda Turek své tehdejší příjmy – které podle dostupných smluv a svědectví dosahovaly milionových částek – vůbec zdanil. Na přímé otázky, zda tyto výdělky přiznal a jaké měl daňové povinnosti, dosud **odmítá odpovědět**.
@@ -55,14 +67,14 @@ To znamená, že skutečné podnikání, o kterém Turek píše, probíhalo mimo
 
 | Rok | Událost |
 |------|---------|
-| **cca 2008–2012** | Studium na Vysoké škole aplikovaného práva (VŠAP) – dle jeho výpovědi „v době, kdy se měnil občanský zákoník“. |
-| **2008–2010** | Podle jeho knihy začíná obchodovat s Jaguary, dělat automechanika a vydělávat na zakázkách. |
+| **cca 2008–12** | Studium na Vysoké škole aplikovaného práva (VŠAP) – dle jeho výpovědi „v době, kdy se měnil občanský zákoník“. |
+| **2008–10** | Podle jeho knihy začíná obchodovat s Jaguary, dělat automechanika a vydělávat na zakázkách. |
 | **2014** | V platnosti zákon stanovující hranici 1 000 000 Kč pro registraci k DPH. |
 | **2016** | Založení společností Art of Performance s.r.o. a Zapper-Club s.r.o. |
 | **2017** | Založení Transgas s.r.o. |
 | **2018** | Vyúčtování „zápůjčky“ ve výši 3 355 599 Kč za renovace vozidel. |
-| **2022–2024** | Turkovy firmy vykazují minimální příjmy, přesto z nich podle prvního prohlášení pro Evropský parlament čerpá vysoké měsíční odměny. |
-| **2024–2025** | Podle aktualizovaného prohlášení pro Evropský parlament Turek pobírá 250 tisíc měsíčně jako konzultant v oblasti automobilového průmyslu. |
+| **2022–24** | Turkovy firmy vykazují minimální příjmy, přesto z nich podle prvního prohlášení pro Evropský parlament čerpá vysoké měsíční odměny. |
+| **2024–25** | Podle aktualizovaného prohlášení pro Evropský parlament Turek pobírá 250 tisíc měsíčně jako konzultant v oblasti automobilového průmyslu. |
 | **2025** | Podle aktualizovaného prohlášení pro Evropský parlament Turek pobírá 250 tisíc měsíčně jako konzultant v oblasti automobilového průmyslu. |
 
 
@@ -71,7 +83,9 @@ To znamená, že skutečné podnikání, o kterém Turek píše, probíhalo mimo
 Z uvedené chronologie je patrné, že **časové linie Turkových výpovědí a úředních záznamů se zásadně rozcházejí**.  
 Podnikání, o kterém mluví, probíhalo v době, kdy k němu neměl ani legální rámec, ani firmy, ani registraci plátce DPH.  
 Přesto v této době přijímal od klientů **milionové částky** a prováděl práce, které by podle zákona **spadaly do režimu podnikání**.
+
 ---
+
 ### ⚖️ Právní rizika Filipa Turka
 
 Filip Turek čelí podezření, že dlouhodobě podnikal bez příslušného oprávnění a neodváděl daně z příjmů, které podle dostupných smluv a svědectví dosahovaly milionových částek.  
