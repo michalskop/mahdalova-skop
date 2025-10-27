@@ -1,6 +1,6 @@
 ---
 title: "Nejen příjmy, ale i nevysvětlené daně Filipa Turka"
-date: "2025-10-28"
+date: "2025-10-27"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Neoprávněné podnikání, zkrácení nebo neodvedení daně či neregistrace k DPH, to jsou podezření, kterým nyní čelí poslanec Filip Turek. "
 image: "images/turek-zapujcky.webp"
