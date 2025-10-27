@@ -4,6 +4,7 @@ date: "2025-10-27"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Neoprávněné podnikání, zkrácení nebo neodvedení daně či neregistrace k DPH, to jsou podezření, kterým nyní čelí poslanec Filip Turek. "
 coverImage: "images/turek-zapujcky.webp"
+filter: ["kontext"]
 tags: ["Filip Turek", "podnikání", "politika", "daně"]
 promoted: 91
 ---
