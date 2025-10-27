@@ -3,7 +3,7 @@ title: "Nejen příjmy, ale i nevysvětlené daně Filipa Turka"
 date: 2025-10-27
 author: Kateřina Mahdalová
 excerpt: "Z dokumentů a smluv vyplývá, že Filip Turek přijímal milionové částky na renovace vozidel v době, kdy neměl aktivní živnost a jeho společnosti ještě neexistovaly. Platby byly označeny jako „zápůjčky“, texty smluv však popisují zálohy na práce, termíny předání a vyúčtování oprav – tedy prvky běžné pro zakázkovou činnost."
-image: /img/turek-zapujcky.jpg
+image: /img/turek-zapujcky.webp
 tags: [Filip Turek, podnikání, politika, vyšetřování]
 promoted: 91
 ---
