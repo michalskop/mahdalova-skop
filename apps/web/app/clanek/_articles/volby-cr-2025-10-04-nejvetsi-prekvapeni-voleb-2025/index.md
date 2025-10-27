@@ -6,7 +6,7 @@ excerpt: "Mapa posunů mezi volbami ukazuje téměř plošný pohyb k opozici. V
 coverImage: "images/volby-2025-mapa-vysledky-orp-mahdalova-skop.svg"
 filter: ["analýza"]
 tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ORP", "Petr Fiala"]
-promoted: 95
+promoted: 50
 ---
 
 ## Plošný posun k opozici s minimem výjimek
