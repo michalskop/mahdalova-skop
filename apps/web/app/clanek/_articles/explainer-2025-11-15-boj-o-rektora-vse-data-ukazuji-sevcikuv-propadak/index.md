@@ -6,6 +6,7 @@ excerpt: "Akademický senát bude rozhodovat, jestli v čele VŠE zůstane ekono
 coverImage: "images/vse-rektor-2025-dvorak-sevcik.webp"
 filter: ["kontext"]
 tags: ["Česko", "VŠE", "Miroslav Ševčík", "Petr Dvořák", "vysoké školy", "data", "kontext"]
+promoted: 74
 ---
 
 Akademický senát bude rozhodovat, jestli v čele VŠE zůstane ekonom Petr Dvořák, nebo poslanec SPD Miroslav Ševčík – a jakou váhu dostanou data o rekordním propadu zájmu uchazečů na národohospodářské fakultě.
