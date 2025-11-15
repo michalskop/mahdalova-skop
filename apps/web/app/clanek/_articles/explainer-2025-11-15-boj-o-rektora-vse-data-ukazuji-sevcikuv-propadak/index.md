@@ -96,7 +96,7 @@ V těchto tvrdých číslech svítí u NF už několik let červená kontrolka. 
 
 ---
 
-**Jakou pověst má doc. Miroslav Ševčík mezi ekonomy?**
+**Jakou pověst má doc. Miroslav Ševčík mezi ekonomy**
 
 Mezi českými ekonomy má dnes Miroslav Ševčík pověst někoho, kdo je mediálně hlasitý, ale odborně slabý a pro svou instituci spíš zátěží než přínosem. Lidé, kteří se pohybují v seriózním výzkumu, ho popisují jako akademika s minimální vědeckou stopou: například Daniel Münich z CERGE-EI upozorňuje, že na poměry seniorního akademika má Ševčík mimořádně málo publikací a jako výzkumník v mezinárodním prostoru prakticky neexistuje.
 
