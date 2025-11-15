@@ -5,7 +5,7 @@ author: "Mahdalová & Škop"
 excerpt: "Akademický senát bude rozhodovat, jestli v čele VŠE zůstane ekonom Petr Dvořák, nebo poslanec SPD Miroslav Ševčík – a jakou váhu dostanou data o rekordním propadu zájmu uchazečů na národohospodářské fakultě."
 coverImage: "images/vse-rektor-2025-dvorak-sevcik.webp"
 filter: ["kontext"]
-tags: ["Česko", "VŠE", "Miroslav Ševčík", "Petr Dvořák", "vysoké školy", "data", "kontext"]
+tags: ["volba rektora VŠE". "Česko", "VŠE", "Miroslav Ševčík", "Petr Dvořák", "vysoké školy", "data", "kontext"]
 promoted: 74
 ---
 
@@ -23,13 +23,9 @@ Formálně jde o personální změnu na čtyřleté období. Ve skutečnosti ale
 
 ## Dva kandidáti: ekonom Dvořák a politik Ševčík
 
-**Petr Dvořák** je typický „vnitřní“ akademický lídr. Vystudoval VŠE, od poloviny 80. let na ní nepřetržitě působí – nejprve na katedře financí a úvěru, později jako vedoucí katedry, děkan Fakulty financí a účetnictví a prorektor pro studijní a pedagogickou činnost. V roce 2022 ho akademický senát zvolil rektorem.
+**Petr Dvořák** vystudoval VŠE, od poloviny 80. let na ní nepřetržitě působí – nejprve na katedře financí a úvěru, později jako vedoucí katedry, děkan Fakulty financí a účetnictví a prorektor pro studijní a pedagogickou činnost. V roce 2022 ho akademický senát zvolil rektorem. Dvořák se profiluje jako spíše umírněný správce kontinuity. Jako priority zdůrazňuje kvalitu výuky, mezinárodní spolupráci, udržení **institucionální akreditace** (to je širší „licence“, díky níž může univerzita samostatně otevírat a upravovat studijní programy v určitých oborech) a dobré jméno školy v zahraničí. V posledních letech mluví čím dál víc o hodnotách univerzity – o tom, že představitelé veřejné vysoké školy mají nést zodpovědnost za to, jak VŠE působí na studenty, zaměstnavatele i veřejnost.
 
-Dvořák se profiluje jako spíše umírněný správce kontinuity. Jako priority zdůrazňuje kvalitu výuky, mezinárodní spolupráci, udržení **institucionální akreditace** (to je širší „licence“, díky níž může univerzita samostatně otevírat a upravovat studijní programy v určitých oborech) a dobré jméno školy v zahraničí. V posledních letech mluví čím dál víc o hodnotách univerzity – o tom, že představitelé veřejné vysoké školy mají nést zodpovědnost za to, jak VŠE působí na studenty, zaměstnavatele i veřejnost.
-
-**Miroslav Ševčík** patří naopak k nejviditelnějším a nejkontroverznějším tvářím VŠE. Dlouhé roky stál v čele národohospodářské fakulty – děkanem byl v letech 2010–2018 a znovu 2022–2023, v mezidobí a poté působil jako proděkan. Od roku 2024 je poslancem za SPD. Z akademického prostředí se přesunul do politiky, ale svou fakultu nikdy úplně neopustil.
-
-Na rozdíl od Dvořáka se Ševčík profiluje hlavně politicky: ostře kritizuje Evropskou unii, Green Deal, grantové programy, které považuje za „ideologické“, i systém vědeckého publikování, o němž mluví jako o „citačních mafiích“. V kampani na rektora slibuje „boj proti byrokratizaci a centralizaci školy“ a menší tlak na publikace v odborných časopisech, zejména u školitelů doktorandů.
+**Miroslav Ševčík** patří k nejviditelnějším a také k nejkontroverznějším tvářím VŠE. Dlouhé roky stál v čele národohospodářské fakulty – děkanem byl v letech 2010–2018 a znovu 2022–2023, v mezidobí a poté působil jako proděkan. Od říjnových voleb 2025 je poslancem za SPD. Ševčík se profiluje hlavně politicky: ostře kritizuje Evropskou unii, Green Deal, grantové programy, které považuje za „ideologické“, i systém vědeckého publikování, o němž mluví jako o „citačních mafiích“. V kampani na rektora slibuje „boj proti byrokratizaci a centralizaci školy“ a menší tlak na publikace v odborných časopisech, zejména u školitelů doktorandů.
 
 ### Proč byl Ševčík odvolán
 
@@ -41,23 +37,15 @@ Dalším tématem byly údajné **dezinformace o covidu a válce na Ukrajině**,
 
 Vedení VŠE hodnotilo celkový obraz Ševčíkova chování jako neslučitelný s funkcí děkana. Ševčík rozhodnutí napadl žalobou, ale soud dal za pravdu rektorovi. Přesto na fakultě zůstal – a nyní usiluje o to stát se rektorem celé univerzity.
 
-## Debata v aule: prestiž se neměří poslanci
-
-Ve veřejném duelu v aule VŠE se kontrast obou kandidátů ukázal velmi zřetelně.
-
-Dvořák mluvil spatra, držel se u katedry a zdůrazňoval kontinuitu: kvalitu výuky, mezinárodní spolupráci, stabilitu akreditací a nutnost, aby VŠE byla považována za seriózního partnera jak v Česku, tak v zahraničí. U tématu udržitelnosti a klimatické politiky odmítl jednoduchá hesla typu „Stop Green Dealu“ a argumentoval technicky: univerzita podle něj musí reagovat na změnu pravidel ve světě ekonomiky a průmyslu, jinak ztratí kontakt s realitou.
-
-Ševčík naopak působil jako někdo, kdo se sám staví do role „bojovníka proti systému“. Při projevu chodil po aule, často listoval poznámkami a mluvil ostře. Kritizoval „byrokratizaci“ VŠE, „ideologii grantů“, „citační mafie“ a „politické objednávky“ z vlády i z Bruselu. Green Deal označil za „zkorumpovaný projekt, který vůbec neměl projít“.
-
-Nejvýmluvnější moment přišel ve chvíli, kdy padla otázka na **prestiž národohospodářské fakulty**. Tazatel upozornil, že řada lidí dnes spojuje VŠE především se Ševčíkovým jménem – a že to pověsti školy neprospívá. Zeptal se proto, zda by pro VŠE nebylo nejlepší, kdyby do vrcholné politiky nekandidoval.
-
-Ševčík odpověděl, že má „tisíce pozitivních ohlasů“, že hospodářská politika se bez politiky dělat nedá a že jeho názory se nemusejí líbit všem. Na dotaz ohledně „ztráty prestiže“ argumentoval počtem bývalých studentů NF ve sněmovně: „Máme sedm poslanců, kolik fakult to má?“ Podle něj prestiž kazí spíš novináři, kteří lžou.
-
-Dvořák na to suše poznamenal, že prestiž fakulty se **nedá měřit počtem poslanců**. Aula mu za to zatleskala. A tady se dostáváme k tomu, co říkají data.
-
 ## NF v číslech: rekordní propad zájmu uchazečů
 
-Spolu s kolegy jsme se podívali na data Ministerstva školství (MŠMT) o počtu uchazečů o studium na všech veřejných vysokých školách a jejich fakultách v letech 2010–2023. Celkem jde o více než **140 fakult**. Rok 2010 bereme jako výchozí bod – tedy 100 % – a sledujeme, na kolika procentech původního počtu uchazečů je každá fakulta v roce 2023.
+Loni, kdy se rozhořel spor mezi Miroslavem Ševčíkem a jeho profesním kolegou, ekonomem Pavlem Potužákem, jsme prozkoumali detailně tvrzení obou aktérů a analyzovali dostupná oficiální data z Ministerstva školství (MŠMT). Otázka zněla: Škodí odvolaný děkan Miroslav Ševčík národohospodářské fakultě? Ověřili jsme, kdo na Vysoké škole ekonomické (VŠE) manipuluje s daty a neříká úplnou pravdu.
+
+Ekonom Pavel Potužák z národohospodářské fakulty spočítal, že za Ševčíkova vedení fakulty došlo k výraznému poklesu počtu uchazečů o studium. Miroslav Ševčík tvrdí, že pokles přihlášek odpovídá demografickému vývoji v ČR a zdůrazňuje, že v letech 2022 a 2023, kdy se znovu stal děkanem, počet přihlášek opět vzrostl o více než 17 procent oproti předchozímu roku.
+
+Rok 2010, kdy Ševčík nastoupil do funkce děkana, chápeme v tomto porovnání jako referenční, k němuž se vztahují roky následující. **Data za více než 140 fakult všech veřejných vysokých škol**, pak ukazují, že **národohospodářská fakulta je na tom v poklesu zájmu uchazečů nejhůře ze všech**. Ostatní fakulty VŠE zaznamenaly ve stejném období pokles na úroveň mezi 50 a 75 % původního stavu.
+
+<iframe src='https://flo.uri.sh/story/2673123/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 
 Obraz je jasný:
 
@@ -85,22 +73,15 @@ Je důležité připomenout, že v období 2010–2023 byl **Miroslav Ševčík 
 
 ## Akreditace, NAÚ a odchod akademiků
 
-Propad zájmu uchazečů není jediným signálem, že se na národohospodářské fakultě něco dlouhodobě nedaří.
-
-NF:
-
-- přišla o **akreditaci k habilitačnímu řízení v oboru ekonomie** – nemůže tedy samostatně jmenovat nové docenty v oboru, který je pro ni klíčový,  
-- už dříve ztratila možnost **jmenovat profesory** v ekonomii.
-
-Habilitační řízení je proces, v němž univerzita posuzuje a jmenuje nové docenty; profesorské řízení pak vede ke jmenování profesorů. Pokud fakulta nemá vlastní akreditaci, musí se opírat o jinou instituci nebo jiný obor – což je nejen administrativní komplikace, ale především reputační problém.
+Propad zájmu uchazečů není jediný signál, že se na národohospodářské fakultě něco dlouhodobě nedaří. Národohospodářská fakulta přišla o **akreditaci k habilitačnímu řízení v oboru ekonomie** – nemůže tedy samostatně jmenovat nové docenty v oboru, který je pro ni klíčový a už dříve ztratila možnost **jmenovat profesory** v ekonomii. Habilitační řízení je proces, v němž univerzita posuzuje a jmenuje nové docenty; profesorské řízení pak vede ke jmenování profesorů. Pokud fakulta nemá vlastní akreditaci, musí se opírat o jinou instituci nebo jiný obor – což je nejen administrativní komplikace, ale především reputační problém.
 
 **Národní akreditační úřad pro vysoké školství (NAÚ)**, který v Česku dohlíží na kvalitu vysokých škol, jako důvod uvádí **slabou publikační činnost a nízké zapojení do výzkumu** na NF. Zároveň varuje, že pokud se situace nezlepší, může být ohrožena i **institucionální akreditace VŠE jako celku** – tedy něco, co by dopadlo na všechny fakulty, ne jen na národohospodářskou.
 
-Dalším varovným signálem je **odchod zkušených akademiků**. Z katedry ekonomie odešla v posledních letech řada lidí se silným výzkumným profilem a mezinárodním vzděláním. Sami popisují atmosféru na fakultě jako konfliktní, málo vstřícnou k mladším kolegům a nezaměřenou na skutečný rozvoj vědy.
+Dalším varovn signál je **odchod zkušených akademiků**. Z katedry ekonomie odešla v posledních letech řada lidí se silným výzkumným profilem a mezinárodním vzděláním. Sami popisují atmosféru na fakultě jako konfliktní, málo vstřícnou k mladším kolegům a nezaměřenou na skutečný rozvoj vědy.
 
 ## Co je v sázce pro celou VŠE
 
-Volba rektora VŠE tak není jen volbou stylu – klidného, spíše úřednicky působícího ekonoma Dvořáka versus expresivního politika Ševčíka. Jde o rozhodnutí, **jaký typ odpovědnosti bude vedení univerzity nést**.
+Volba rektora VŠE tak není jen volba stylu – klidného, spíše úřednicky působícího ekonoma Dvořáka versus expresivního politika Ševčíka. Jde o rozhodnutí, **jaký typ odpovědnosti bude vedení univerzity nést**.
 
 Na jedné straně stojí člověk, který se opírá o akademickou kariéru, publikační zázemí a snahu držet VŠE v hlavním proudu evropské ekonomické vědy. Na druhé straně stojí politik, který dlouhodobě zpochybňuje základní pilíře dnešní akademie – od bezpečnostních služeb přes evropskou politiku až po samotný systém vědeckého publikování – a jehož vlastní fakulta je zároveň v datech rekordním propadákem.
 
@@ -115,7 +96,6 @@ V těchto tvrdých číslech svítí u NF už několik let červená kontrolka. 
 
 ---
 
-```box
 **Jakou pověst má doc. Miroslav Ševčík mezi ekonomy?**
 
 Mezi českými ekonomy má dnes Miroslav Ševčík pověst někoho, kdo je mediálně hlasitý, ale odborně slabý a pro svou instituci spíš zátěží než přínosem. Lidé, kteří se pohybují v seriózním výzkumu, ho popisují jako akademika s minimální vědeckou stopou: například Daniel Münich z CERGE-EI upozorňuje, že na poměry seniorního akademika má Ševčík mimořádně málo publikací a jako výzkumník v mezinárodním prostoru prakticky neexistuje.
