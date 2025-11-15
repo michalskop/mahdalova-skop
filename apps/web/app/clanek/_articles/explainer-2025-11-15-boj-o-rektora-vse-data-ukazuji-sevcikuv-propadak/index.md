@@ -4,7 +4,7 @@ date: "2025-11-15"
 author: "Mahdalová & Škop"
 excerpt: "Akademický senát bude rozhodovat, jestli v čele VŠE zůstane ekonom Petr Dvořák, nebo poslanec SPD Miroslav Ševčík – a jakou váhu dostanou data o rekordním propadu zájmu uchazečů na národohospodářské fakultě."
 coverImage: "images/vse-rektor-2025-dvorak-sevcik.webp"
-filter: ["kontext"]
+filter: "kontext"
 tags: ["volba rektora VŠE". "Česko", "VŠE", "Miroslav Ševčík", "Petr Dvořák", "vysoké školy", "data", "kontext"]
 promoted: 74
 ---
