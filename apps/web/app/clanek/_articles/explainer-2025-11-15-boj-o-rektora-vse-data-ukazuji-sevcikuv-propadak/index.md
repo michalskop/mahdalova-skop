@@ -1,12 +1,12 @@
 ---
-title: "Za Ševčíka se rekordně propadl zájem uchazečů o studium. Nejvíc ze všech veřejných VŠ v ČR"
-date: "2026-10-17"
+title: "Volba rektora VŠE: co říkají data o Ševčíkově fakultě"
+date: "2025-11-15"
 author: "Mahdalová & Škop"
-excerpt: "Škodí odvolaný děkan (nyní opět proděkan) Miroslav Ševčík národohospodářské fakultě?"
-coverImage: "images/overview.png"
-filter: "analýza"
-tags: ["Vysoké školy", "VŠE", "Ševčík", "národohospodářská fakulta"]
-promoted: 50
+excerpt: "Akademický senát rozhodne, zda v čele VŠE zůstane ekonom Petr Dvořák, nebo poslanec SPD Miroslav Ševčík."
+coverImage: "images/vse-rektor-2025-dvorak-sevcik.webp"
+filter: "kontext"
+tags: ["volba rektora VŠE", "Česko", "VŠE", "Miroslav Ševčík", "Petr Dvořák", "vysoké školy", "data", "kontext"]
+promoted: 74
 ---
 
 Akademický senát bude rozhodovat, jestli v čele VŠE zůstane ekonom Petr Dvořák, nebo poslanec SPD Miroslav Ševčík – a jakou váhu dostanou data o rekordním propadu zájmu uchazečů na národohospodářské fakultě.
