@@ -9,11 +9,7 @@ tags: ["volba rektora VŠE", "explainer", "Česko", "VŠE", "Miroslav Ševčík"
 promoted: 74
 ---
 
-Akademický senát Vysoké školy ekonomické (VŠE) rozhodne 24. listopadu 2025, zda v jejím čele zůstane ekonom Petr Dvořák, nebo ji povede Miroslav Ševčík, dlouholetý děkan Národohospodářské fakulty VŠE a nově také poslanec za SPD.
-
-## O co jde při volbě rektora VŠE
-
-[Volba rektora proběhne 24. listopadu 2025](https://www.vse.cz/vse/o-vse/akademicky-senat-vse/volby/volba-rektora-2025/) a půjde v ní zejména o to, jakou pověst, směřování a vnitřní kulturu bude v příštích letech mít.
+Volba rektora [proběhne](https://www.vse.cz/vse/o-vse/akademicky-senat-vse/volby/volba-rektora-2025/) 24. listopadu 2025 a půjde v ní zejména o to, jakou pověst, směřování a vnitřní kulturu bude Vysoká škola ekonomická (VŠE) v příštích letech mít.
 
 Proti sobě stojí dva muži, kteří se velmi dobře znají a jejichž konflikt už několik let určuje atmosféru na škole. Na jedné straně současný rektor **Petr Dvořák**, ekonom s dlouhou akademickou kariérou na VŠE. Na straně druhé **Miroslav Ševčík**, dlouholetý děkan Národohospodářské fakulty (NF) a dnes poslanec za SPD, kterého právě Dvořák v prosinci 2023 [z čela fakulty odvolal](https://www.irozhlas.cz/zpravy-domov/dekan-vse-miroslav-sevcik-odvolani-z-funkce-rektor-petr-dvorak_2312131359_vtk).
 
