@@ -17,13 +17,13 @@ Formálně tedy jde o personální změnu na čtyřleté období. Ve skutečnost
 1. Jak vážně to VŠE myslí s kvalitou výuky a výzkumu, akreditacemi a reputací školy?  
 2. Jak moc je univerzita ochotná připustit, aby ji navenek zosobňoval politik s kontroverzní pověstí a dlouhodobě problematickými výsledky vlastní fakulty?
 
-Druhý z kandidátů, Miroslav Ševčík, totiž patří k nejviditelnějším a také k nejkontroverznějším tvářím VŠE, dlouhé roky stál v čele Národohospodářské fakulty – [děkanem byl v letech 2010–2018 a znovu 2022–2023](https://cs.wikipedia.org/wiki/Miroslav_Ševčík), v mezidobí a poté působil jako proděkan. Od říjnových voleb 2025 je [poslancem za SPD](https://www.irozhlas.cz/zpravy-domov/boj-o-vse-stavajiciho-rektora-dvoraka-chce-nahradit-jim-sesazeny-dekan-sevcik_2510311525_lar). Ševčík se [profiluje](https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-ostry-souboj-o-post-rektora-vse-sevcik-se-stretl-s-muzem-ktery-ho-vyhodil-291562) hlavně politicky: ostře kritizuje Evropskou unii, Green Deal, grantové programy, které považuje za „ideologické“, i systém vědeckého publikování, o němž mluví jako o „citačních mafiích“. V kampani na rektora slibuje „boj proti byrokratizaci a centralizaci školy“ a menší tlak na publikace v odborných časopisech, zejména u školitelů doktorandů.
+Druhý z kandidátů, Miroslav Ševčík, totiž patří k nejviditelnějším a také k nejkontroverznějším tvářím VŠE, dlouhé roky stál v čele Národohospodářské fakulty – [děkanem byl v letech 2010–2018 a znovu 2022–2023](https://cs.wikipedia.org/wiki/Miroslav_Ševčík), v mezidobí a poté působil jako proděkan. Od říjnových voleb 2025 je [poslancem za SPD](https://www.psp.cz/sqw/detail.sqw?id=6064). Ševčík se [profiluje](https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-ostry-souboj-o-post-rektora-vse-sevcik-se-stretl-s-muzem-ktery-ho-vyhodil-291562) hlavně politicky: ostře kritizuje Evropskou unii, Green Deal, grantové programy, které považuje za „ideologické“, i systém vědeckého publikování, o němž mluví jako o „citačních mafiích“. V kampani na rektora slibuje „boj proti byrokratizaci a centralizaci školy“ a menší tlak na publikace v odborných časopisech, zejména u školitelů doktorandů.
 
 ```box
 Psali jsme: [Za Ševčíka se rekordně propadl zájem uchazečů o studium. Nejvíc ze všech veřejných VŠ v ČR](https://www.mahdalova-skop.cz/clanek/analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium)
 ```
 
-### Proč byl Ševčík odvolán
+### Proč byl Ševčík odvolán z postu děkana
 
 Rektor Dvořák [odvolal](https://www.irozhlas.cz/zpravy-domov/dekan-vse-miroslav-sevcik-odvolani-z-funkce-rektor-petr-dvorak_2312131359_vtk) Ševčíka z funkce děkana v prosinci 2023. Nebylo to kvůli jediné epizodě, ale kvůli dlouhodobě kumulovaným problémům.
 
