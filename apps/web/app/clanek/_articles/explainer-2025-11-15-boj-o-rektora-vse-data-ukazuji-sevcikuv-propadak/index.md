@@ -19,6 +19,10 @@ Formálně tedy jde o personální změnu na čtyřleté období. Ve skutečnost
 
 Druhý z kandidátů, Miroslav Ševčík, totiž patří k nejviditelnějším a také k nejkontroverznějším tvářím VŠE, dlouhé roky stál v čele Národohospodářské fakulty – [děkanem byl v letech 2010–2018 a znovu 2022–2023](https://cs.wikipedia.org/wiki/Miroslav_Ševčík), v mezidobí a poté působil jako proděkan. Od říjnových voleb 2025 je [poslancem za SPD](https://www.irozhlas.cz/zpravy-domov/boj-o-vse-stavajiciho-rektora-dvoraka-chce-nahradit-jim-sesazeny-dekan-sevcik_2510311525_lar). Ševčík se [profiluje](https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-ostry-souboj-o-post-rektora-vse-sevcik-se-stretl-s-muzem-ktery-ho-vyhodil-291562) hlavně politicky: ostře kritizuje Evropskou unii, Green Deal, grantové programy, které považuje za „ideologické“, i systém vědeckého publikování, o němž mluví jako o „citačních mafiích“. V kampani na rektora slibuje „boj proti byrokratizaci a centralizaci školy“ a menší tlak na publikace v odborných časopisech, zejména u školitelů doktorandů.
 
+```box
+Psali jsme: [Za Ševčíka se rekordně propadl zájem uchazečů o studium. Nejvíc ze všech veřejných VŠ v ČR](https://www.mahdalova-skop.cz/clanek/analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium)
+```
+
 ### Proč byl Ševčík odvolán
 
 Rektor Dvořák [odvolal](https://www.irozhlas.cz/zpravy-domov/dekan-vse-miroslav-sevcik-odvolani-z-funkce-rektor-petr-dvorak_2312131359_vtk) Ševčíka z funkce děkana v prosinci 2023. Nebylo to kvůli jediné epizodě, ale kvůli dlouhodobě kumulovaným problémům.
@@ -51,7 +55,7 @@ V roce 2010 se na NF hlásilo asi **3100 uchazečů – českých občanů**. V 
 
 Na bodovém grafu všech fakult je NF osamělý bod hluboko dole – žádná jiná fakulta v Česku nezaznamenala tak hluboký a trvalý pokles zájmu uchazečů.
 
-## Demografie nestačí jako vysvětlení
+## Demografie jako vysvětlení nestačí
 
 Vedení NF a Miroslav Ševčík se brání tím, že za poklesem stojí **demografický vývoj**: méně devatenáctiletých v populaci znamená méně uchazečů, a tedy méně přihlášek. Proto jsme data o uchazečích doplnili o křivku počtu devatenáctiletých v populaci a o souhrnná čísla za celé vysoké školství a za celou VŠE.
 
