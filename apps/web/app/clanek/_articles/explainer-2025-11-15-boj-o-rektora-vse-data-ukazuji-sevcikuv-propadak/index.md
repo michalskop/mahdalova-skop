@@ -92,10 +92,10 @@ U těchto ukazatelů svítí u NF už několik let červená kontrolka. Akademic
 
 ---
 
-## Jakou pověst má doc. Miroslav Ševčík mezi ekonomy?
+## Jakou pověst má Miroslav Ševčík u ekonomů
 
 Mezi českými ekonomy má dnes Miroslav Ševčík pověst někoho, kdo je mediálně hlasitý, ale odborně slabý a pro svou instituci spíš zátěží než přínosem. Ekonom Daniel Münich z CERGE-EI upozorňuje, že na poměry seniorního akademika má Ševčík [mimořádně málo publikací](https://www.seznamzpravy.cz/clanek/domaci-politika-sevcika-vyhodli-ted-se-chce-pomstit-cele-vse-291518) a jako výzkumník v mezinárodním prostoru prakticky neexistuje. Odchod řady kvalitních akademiků, na který upozorňují ekonomové jako Mojmír Hampl či Libor Dušek, dokresluje obraz fakulty, která se pod Ševčíkovým vedením stala prostředím, z něhož odcházejí právě ti s ambicí dělat špičkovou ekonomii. Ševčíkovu pověst provázejí kauzy spojené s chováním, ať už jde o [vyloučení z Liberálního institutu](https://zpravy.aktualne.cz/domaci/liberalni-institut-vyloucil-sevcika-ten-to-odmita/r~179ea530fa7e11e5be7c0025900fea04/) v dubnu 2016 („Ševčík se navíc v posledních letech na činnosti Liberálního institutu nepodílel a naopak svým jednáním poškozoval jeho dobré jméno,“ uvedl institut.) nebo [jízdu s majáčkem v protisměru](https://zpravy.aktualne.cz/domaci/sevcik-odvolani-vse/r~a1deb072141711eebe29ac1f6b220ee8/). 
 
 V očích odborné veřejnosti se z Miroslava Ševčíka stal symbol radikalizovaného univerzitního funkcionáře, který svůj osobní mediální obraz staví nad pověst školy.
 
-Férové je dodat, že Ševčík má i své [zastánce](https://cs.wikipedia.org/wiki/Miroslav_%C5%A0ev%C4%8D%C3%ADk), zejména politické spojence v SPD. Ti ho vidí jako „nepohodlného“ člověka, který si dovolí říkat nepopulární názory.
+Férové je dodat, že Ševčík má i své [zastánce](https://cs.wikipedia.org/wiki/Miroslav_%C5%A0ev%C4%8D%C3%ADk), zejména politické spojence (nejen) v SPD. Ti ho vidí jako „nepohodlného“ člověka, který si dovolí říkat nepopulární názory.
