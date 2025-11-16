@@ -98,4 +98,4 @@ Mezi českými ekonomy má dnes Miroslav Ševčík pověst někoho, kdo je medi�
 
 V očích odborné veřejnosti se z Miroslava Ševčíka stal symbol radikalizovaného univerzitního funkcionáře, který svůj osobní mediální obraz staví nad pověst školy.
 
-Férové je dodat, že Ševčík má i své zastánce – část kolegů na Národohospodářské fakultě a politické spojence v SPD. Ti ho vidí jako „nepohodlného“ člověka, který si dovolí říkat nepopulární názory, a jeho konflikty s vedením školy vysvětlují spíš politikou než odbornými argumenty. Pro převažující část akademické ekonomie však platí, že z hlediska vědy, kvality řízení fakulty i veřejného vystupování je dnes Miroslav Ševčík vnímán spíš jako varovný příklad než jako respektovaný ekonom.
+Férové je dodat, že Ševčík má i své [zastánce](https://cs.wikipedia.org/wiki/Miroslav_%C5%A0ev%C4%8D%C3%ADk), zejména politické spojence v SPD. Ti ho vidí jako „nepohodlného“ člověka, který si dovolí říkat nepopulární názory.
