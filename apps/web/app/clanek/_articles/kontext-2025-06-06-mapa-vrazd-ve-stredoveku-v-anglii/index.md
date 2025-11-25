@@ -3,9 +3,9 @@ title: "Kde tekla krev ve středověkém městě: Mapa vražd z doby před sedmi
 date: "2025-11-25"
 author: "Kateřina Mahdalová"
 excerpt: "Kriminologové z Cambridge zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích."
-coverImage: "images/medieval-murder-map.webp"
+coverImage: "images/murder-of-cain.webp"
 filter: ["kontext"]
-tags: ["historie", "kriminalita", "středověk", "výzkum"]
+tags: ["historická data", "mapy","historie", "kriminalita", "středověk", "výzkum"]
 promoted: 50
 ---
 
