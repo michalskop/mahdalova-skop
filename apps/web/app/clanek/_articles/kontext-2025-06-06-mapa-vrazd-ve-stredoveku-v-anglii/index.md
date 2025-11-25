@@ -1,15 +1,16 @@
 ---
-title: "Kde tekla krev ve středověkém městě: Mapa vražd z doby před sedmi sty lety"
+title: "Kriminalita ve středověku: Mapa vražd z doby před sedmi sty lety"
 date: "2025-11-25"
 author: "Kateřina Mahdalová"
-excerpt: "Kriminologové z Cambridge zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích."
+excerpt: "Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda ukotvena v rytmu každodenního života. Zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích."
 coverImage: "images/murder-of-cain.webp"
 filter: ["kontext"]
 tags: ["historická data", "mapy","historie", "kriminalita", "středověk", "výzkum"]
 promoted: 50
 ---
+Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda ukotvena v rytmu každodenního života. Zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích.
 
-## Horká místa smrti před sedmi sty lety
+## Kde vás před sedmi sty lety nejspíš mohla potkat násilná smrt
 
 Představte si, že procházíte úzkými uličkami středověkého Londýna kolem roku 1320. Je neděle večer, blíží se zákaz vycházení, z hospod se line hluk a smích. Právě v tuto chvíli – a na tomto místě – bylo nejpravděpodobnější, že se stanete svědkem vraždy. Nebo její obětí.
 
