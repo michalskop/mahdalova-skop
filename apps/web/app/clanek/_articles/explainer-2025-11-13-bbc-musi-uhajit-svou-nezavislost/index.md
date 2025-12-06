@@ -8,8 +8,8 @@ filter: ["kontext"]
 tags: ["reputace BBC", "BBC", "veřejnoprávní média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií"]
 promoted: 60
 ---
-
 Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku.
+
 ---
 Bylo to jen dvanáct sekund videa. Dvanáct sekund, které stály práci nejvyššího vedení největšího veřejnoprávního vysílatele na světě. Dvanáct sekund, které odhalily, jak křehká je dnes pozice médií, která mají sloužit všem – a končí tím, že nikoho neuspokojí.
 
