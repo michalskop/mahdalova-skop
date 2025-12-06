@@ -2,13 +2,15 @@
 title: "Skandál v BBC: Politický boj zabíjí nejslavnější veřejnoprávní médium světa"
 date: "2025-12-06"
 author: "Kateřina Mahdalová"
-excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které mění pravidla hry pro všechna veřejnoprávní média – včetně těch českých."
+excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku."
 coverImage: "images/bbc-2025-explained.webp"
 filter: ["kontext", "média"]
 tags: ["BBC", "veřejnoprávní média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií"]
 promoted: 60
 ---
 
+Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku.
+---
 Bylo to jen dvanáct sekund videa. Dvanáct sekund, které stály práci nejvyššího vedení největšího veřejnoprávního vysílatele na světě. Dvanáct sekund, které odhalily, jak křehká je dnes pozice médií, která mají sloužit všem – a končí tím, že nikoho neuspokojí.
 
 Příběh začíná 6. ledna 2021, kdy Donald Trump pronesl před svými příznivci dlouhou řeč. V jedné části řekl: „Půjdeme dolů k Capitolu a budeme povzbuzovat naše statečné senátory a kongresmanky." O více než **padesát minut později** ve stejném projevu dodal: „A bojujeme. Bojujeme jako ďábel."
@@ -32,9 +34,7 @@ Rozjela se mašina. Pravicová britská média – The Telegraph, Daily Mail, Th
 Devátého listopadu 2025 rezignovali Tim Davie i šéfka zpravodajství Deborah Turness. [Davie uvedl](https://www.theguardian.com/media/2025/nov/09/tim-davie-bbc-resignation-statement-deborah-turness): „Celkově BBC funguje dobře, ale došlo k několika chybám a jako generální ředitel musím převzít konečnou odpovědnost."
 
 Málokdo čekal, že to skutečně povede k pádu nejvyššího vedení. „To je situace, která zřejmě nemá v novodobé historii BBC obdoby," [poznamenává Štětka](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel). „Nejspíš to znamená, že se ředitel Tim Davie rozhodl BBC ochránit. Anticipoval mediální bouři, která se rozpoutala, tak, že položil funkci na oltář, aby zdůraznil, že ho mrzí, jak moc to BBC zasáhlo."
-
 ---
-
 > ### KONTEXT: Proč by nás mělo zajímat, co se děje v BBC?
 >
 > Pro české čtenáře může být lákavé odbýt tuhle kauzu slovy „britské problémy". Ale BBC není jen další televizí.
@@ -44,9 +44,7 @@ Málokdo čekal, že to skutečně povede k pádu nejvyššího vedení. „To j
 > [Jak poznamenal už v roce 2020 komentátor INFO.CZ](https://www.info.cz/nazory/bbc-veli-novy-general-v-ceske-televizi-by-se-meli-pozorne-divat) Petr Holec: „Málokdo by měl misi Tima Davieho sledovat tak bedlivě jako šéf České televize. BBC je totiž v nápadně podobné situaci jako ČT: taky čelí obvinění z politické zaujatosti, je příliš drahá a mladé diváky jí stále více berou globální komerční platformy."
 >
 > Diskuse o zaujatosti BBC proto není lokální novinka – dotýká se důvěry v celý model veřejnoprávních médií. A argumenty, kterými britští politici útočí na BBC, jsou zarážejícím způsobem podobné těm, co slyšíme v Česku o České televizi.
-
 ---
-
 ## Paradox Gazy: Jak být obviněn ze všeho najednou
 
 Jeden z největších sporů, který Prescottova zpráva otevřela, se týká pokrytí války v Gaze. A tady situace hraničí s groteskou. BBC je obviňována současně z toho, že je pro Palestinu i proti ní. Není to přehánění – jsou to doslova dvě paralelní kampaně, které běží současně a každá má své důkazy.
@@ -62,9 +60,7 @@ Kauza, která to vše symbolizuje, se odvíjela už od února 2025. BBC odvysíl
 Ale pak přišel úplně opačný signál. Více než stovka současných zaměstnanců BBC a stovky dalších novinářů podepsali otevřený dopis, který obviňuje BBC z anti-palestinského rasismu a z toho, že dělá „PR pro Izrael". Signatáři kritizují, že BBC odmítla odvysílat jiný dokument z Gazy, že část zaměstnanců má pocit, že se nesmí být vůči Izraeli příliš kritický, a že BBC dává izraelským obětem desítky krát více prostoru než palestinským. Analýza organizace CfMM dospěla k závěru, že BBC je systematicky zaujatá proti Palestincům ve zpravodajství.
 
 Pro jedny je BBC nebezpečně pro-palestinská, pro druhé nebezpečně pro-izraelská. Realističtější obraz je pravděpodobně ten, že BBC je trhaná mezi několika silnými tlaky – včetně politicky obsazené Rady – a že její výstupy jsou často nekonzistentní: záleží na konkrétním týmu, editorovi a momentálním strachu z toho, kdo se ozve hlasitěji.
-
 ---
-
 > ### PŘÍBĚH: The Mash Report a „užitečný mýtus"
 >
 > Tohle všechno ale nezačalo v listopadu 2025. Tim Davie už od svého nástupu v roce 2020 představoval sám sebe jako člověka, který má „srovnat BBC" a odpovědět na kritiku, že je příliš „metropolitně liberální".
@@ -76,9 +72,7 @@ Pro jedny je BBC nebezpečně pro-palestinská, pro druhé nebezpečně pro-izra
 > Ale v britském bulváru se objevila verze, že šlo o osobní rozhodnutí Davieho jako součást „war on woke" – tiché čistky levicového humoru. [Komik Nish Kumar později v rozhovoru pro Guardian řekl](https://www.theguardian.com/media/2021/may/16/nish-kumar-bbc-must-be-clear-did-it-axe-the-mash-report-in-a-war-on-woke): „Je to pro něj užitečný mýtus, protože uklidňuje britskou pravici. Dává žralokům trošku krve."
 >
 > BBC Kumara interně ujistila, že žádná „politická čistka" se nekonala – ale veřejně do toho moc rýpat nechtěla. Tento typ dvojího jazyka – jinak dovnitř, jinak ven – krásně ilustruje „ticho", které obklopuje i současnou krizi.
-
 ---
-
 ## Muž z Downing Street v Radě BBC mění směřování nezávislého zpravodajství
 
 Aktuální kauza nejde pochopit bez pohledu na to, kdo BBC řídí zvenku. BBC má Radu (Board), která dohlíží na strategii a jmenuje nebo odvolává generálního ředitele. Pět členů této rady jmenuje přímo vláda, dalších pět nevýkonných členů volí sama Rada. To dává každé vládě výrazný vliv na směřování instituce.
@@ -106,9 +100,7 @@ Václav Štětka upozorňuje na klíčový aspekt celé kauzy: „Rychlost, inte
 BBC podle něj čelí podobným výtkám – že je příliš levicová, politicky zaujatá proti konzervativcům – velmi dlouho. „Kritika většinou vychází právě z politických pozic a stran, které sympatizují s britskými konzervativci, se stranou Reform UK. A hlavní roli v ní hrají především britské bulvární deníky, jako je Daily Mail, The Sun, Daily Express nebo konzervativní deník Daily Telegraph, který tuto kauzu rozpoutal."
 
 „BBC má tu 'smůlu', že je skutečně obrovskou organizací, je neustále na očích a každé její pochybení se stane terčem kritiky a veřejné debaty," [vysvětluje Štětka](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel). „Přitom se často zapomíná na to, že paralelně s těmito pochybeními BBC produkuje desítky tisíc hodin vysoce hodnotného veřejnoprávního obsahu."
-
 ---
-
 > ### KONTEXT: Není to jen chyba. Je to politický útok
 >
 > [Komentátor Ladislav Nagy pro INFO.CZ](https://www.info.cz/zpravodajstvi-a-komentare/bbc-manipulace-trump-verejnopravni-media) poznamenal: „Rezignace generálního ředitele Tima Davieho a šéfky zpravodajství Deborah Turnessové v listopadu 2025 po sérii skandálů a obvinění z předpojatosti otevřela debatu o budoucnosti objektivity médií v politicky vyhrocené době."
@@ -120,9 +112,7 @@ BBC podle něj čelí podobným výtkám – že je příliš levicová, politic
 > „Je to krize vytvořená politickými a obchodními protivníky veřejnoprávního vysílání a BBC," řekla Reuters ekonomka Diane Coyle, bývalá místopředsedkyně správního orgánu BBC.
 >
 > Insider z BBC pro Guardian popsal atmosféru stručně: „Působí to jako puč."
-
 ---
-
 ## Co to znamená pro Česko
 
 Veřejnoprávní média se stávají bojištěm kulturních a politických konfliktů. Už nejde o „jen" o kvalitu zpravodajství, ale o to, jestli se médium líbí zrovna vládě nebo opozici. „Objektivita" je zbraň – obě strany politického spektra obviňují BBC ze zaujatosti, přičemž každá má „důkazy" a „studie" na své straně.
@@ -150,5 +140,4 @@ BBC z této kauzy neodchází jako „lživý propagandistický moloch", jak tvr
 A tady se kruh uzavírá. Není to jen britský příběh. Je to příběh o budoucnosti všech veřejnoprávních médií v éře polarizace. O tom, co se stane, když se „nestrannost" stane politickou zbraní. O tom, jak těžké je sloužit všem ve společnosti, kde si nikdo nepřeje kompromis.
 
 Dvanáct sekund videa. Dvě rezignace. A otázka, na kterou zatím nikdo nezná odpověď: Může vůbec existovat médium, které je dostatečně nestranné pro všechny strany současného kulturního konfliktu? Nebo jsme svědky konce éry, kdy bylo možné věřit, že takové médium může existovat?
-
 ---
