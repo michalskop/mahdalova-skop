@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku."
 coverImage: "images/bbc-2025-explainer-mahdalova-skop.webp"
 filter: ["kontext"]
-tags: ["BBC", "veřejnoprávní média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií"]
+tags: ["reputace BBC", "BBC", "veřejnoprávní média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií"]
 promoted: 60
 ---
 
@@ -13,7 +13,7 @@ Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod
 ---
 Bylo to jen dvanáct sekund videa. Dvanáct sekund, které stály práci nejvyššího vedení největšího veřejnoprávního vysílatele na světě. Dvanáct sekund, které odhalily, jak křehká je dnes pozice médií, která mají sloužit všem – a končí tím, že nikoho neuspokojí.
 
-Příběh začíná 6. ledna 2021, kdy Donald Trump pronesl před svými příznivci dlouhou řeč. V jedné části řekl: „Půjdeme dolů k Capitolu a budeme povzbuzovat naše statečné senátory a kongresmanky." O více než **padesát minut později** ve stejném projevu dodal: „A bojujeme. Bojujeme jako ďábel."
+Příběh ovšem začíná mnohem dřív, přesně 6. ledna 2021, kdy Donald Trump pronesl před svými příznivci dlouhou řeč. V jedné části řekl: „Půjdeme dolů k Capitolu a budeme povzbuzovat naše statečné senátory a kongresmanky." O více než **padesát minut později** ve stejném projevu dodal: „A bojujeme. Bojujeme jako ďábel."
 
 V dokumentu BBC Panorama, který byl odvysílán týden před americkými prezidentskými volbami 2024, byly tyto dvě věty sestříhány za sebe do **dvanáctisekundového klipu**. Výsledek zněl: „Půjdeme dolů ke Kapitolu… a já tam budu s vámi. A bojujeme. Bojujeme jako ďábel."
 
