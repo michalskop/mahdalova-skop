@@ -1,5 +1,5 @@
 ---
-title: "Skandál, který rozbíjí BBC: Jak politický boj o nestrannost zabíjí nejslavnější veřejnoprávní médium světa"
+title: "Skandál v BBC: Politický boj zabíjí nejslavnější veřejnoprávní médium světa"
 date: "2025-12-06"
 author: "Kateřina Mahdalová"
 excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které mění pravidla hry pro všechna veřejnoprávní média – včetně těch českých."
