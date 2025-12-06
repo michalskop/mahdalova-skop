@@ -4,7 +4,7 @@ date: "2025-11-13"
 author: "Kateřina Mahdalová"
 excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace po mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku."
 coverImage: "images/bbc-2025-explainer-mahdalova-skop.webp"
-filter: ["kontext", "média"]
+filter: ["kontext"]
 tags: ["BBC", "veřejnoprávní média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií"]
 promoted: 60
 ---
