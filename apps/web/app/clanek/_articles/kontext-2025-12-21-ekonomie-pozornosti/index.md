@@ -1,6 +1,6 @@
 ---
 title: "Esej: Ekonomie pozornosti, dopaminové pasti a život s ADHD v digitální době"
-date: "2025-12-23"
+date: "2025-12-21"
 author: "Marie Anna Mahdalová"
 excerpt: "Internet jako prostředí, které pomocí behaviorálních principů cíleně formuje naše chování a závislost na neustálé stimulaci."
 coverImage: "images/pozornost-brain-rot.webp"
