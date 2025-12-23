@@ -54,19 +54,19 @@ Zásadní otázkou zůstává: Jak z toho ven? Digitální hygiena se ukazuje ja
 ---
 ## Seznam použité literatury
 
-Alter, A. (2017) *The rise of addictive technology and the business of keeping us hooked.* New York: Penguin Press. [Recenze](https://scholarlypublishingcollective.org/psup/information-policy/article/doi/10.5325/jinfopoli.8.2018.0314/314490/Irresistible-The-Rise-of-Addictive-Technology-and)
+Alter, A. (2017) [The rise of addictive technology and the business of keeping us hooked.](https://scholarlypublishingcollective.org/psup/information-policy/article/doi/10.5325/jinfopoli.8.2018.0314/314490/Irresistible-The-Rise-of-Addictive-Technology-and), *New York: Penguin Press*. 
 
-Campbell, D. (2025) '[Teenagers who report addictive use of screens at greater risk of suicidal behaviour, study shows](https://www.theguardian.com/society/2025/jun/18/teenagers-social-media-mobile-phones-video-games-mental-health)', *The Guardian*, 18 June.
+Campbell, D. (2025) '[Teenagers who report addictive use of screens at greater risk of suicidal behaviour, study shows.](https://www.theguardian.com/society/2025/jun/18/teenagers-social-media-mobile-phones-video-games-mental-health)', *The Guardian*.
 
 Gmeiner, B. (2025) '[Warum gibt es aktuell so viele ADHS-Diagnosen bei Erwachsenen?](https://www.derstandard.at/story/3000000300224/warum-gibt-es-aktuell-so-viele-adhs-diagnosen-bei-erwachsenen)', *Der Standard*.
 
 Simon, H.A. (1971) '[Designing organizations for an information-rich world](https://atelierdesfuturs.org/wp-content/uploads/2025/07/1971-simon.pdf)', in Greenberger, M. (ed.) *Computers, communications, and the public interest.* Baltimore: Johns Hopkins University Press, pp. 40–88.
 
-Lembke, A. (2021) *Dopamine Nation: Finding balance in the age of indulgence.* New York: Dutton. [Cambridge recenze](https://www.cambridge.org/core/journals/cambridge-quarterly-of-healthcare-ethics/article/dopamine-nation-finding-balance-in-the-age-of-indulgence-by-anna-lembke-new-york-dutton-2021/842AFC7D6FD2FA806FAE123C77B87B43)
+Lembke, A. (2021) [Dopamine Nation: Finding balance in the age of indulgence.](https://www.cambridge.org/core/journals/cambridge-quarterly-of-healthcare-ethics/article/dopamine-nation-finding-balance-in-the-age-of-indulgence-by-anna-lembke-new-york-dutton-2021/842AFC7D6FD2FA806FAE123C77B87B43) New York: Dutton. 
 
 Ra, C.K. et al. (2018) '[Association of digital media use with subsequent symptoms of attention-deficit/hyperactivity disorder among adolescents](https://pmc.ncbi.nlm.nih.gov/articles/PMC6553065/)', s. 255–263.
 
-McSpadden, K. (2015) '[You now have a shorter attention span than a goldfish](https://time.com/3858309/attention-spans-goldfish/)', *Time*, 14 May.
+McSpadden, K. (2015) '[You now have a shorter attention span than a goldfish](https://time.com/3858309/attention-spans-goldfish/)', *Time*.
 
 Deceptive Design (2025) [About us](https://www.deceptive.design/about-us). Deceptive.design.
 
