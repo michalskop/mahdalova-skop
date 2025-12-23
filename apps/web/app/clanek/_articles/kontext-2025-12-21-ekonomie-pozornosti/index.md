@@ -5,7 +5,7 @@ author: "Marie Anna Mahdalová"
 excerpt: "Internet jako prostředí, které pomocí behaviorálních principů cíleně formuje naše chování a závislost na neustálé stimulaci."
 coverImage: "images/pozornost-brain-rot.webp"
 filter: ["kontext"]
-tags: ["explainer", "ADHD", "pozornost", "sociální sítě", "TikTok", "dopamin", "dark patterns", "digitální závislost", "neurověda"]
+tags: ["digitální závislost", "ADHD", "pozornost", "sociální sítě", "TikTok", "dopamin", "dark patterns", "neurověda"]
 promoted: 70
 ---
 
