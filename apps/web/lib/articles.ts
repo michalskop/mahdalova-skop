@@ -6,6 +6,7 @@ import yaml from 'js-yaml';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkGfm from 'remark-gfm';
 import { remarkBoxPlugin } from './remark-box-plugin';
+import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
 
 
@@ -53,7 +54,7 @@ export async function getArticleBySlug(directorySlug: string) {
       tableData: tableData,
     },
     mdxOptions: {
-      remarkPlugins: [remarkGfm, remarkBoxPlugin],
+      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
     },
   });
 

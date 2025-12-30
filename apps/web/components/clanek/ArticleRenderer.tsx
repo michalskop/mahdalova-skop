@@ -10,6 +10,7 @@ import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
 import { TestComponent } from '@/components/mdx/TestComponent';
+import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
@@ -52,6 +53,7 @@ export function ArticleRenderer({
   const components: MDXComponents = {
     MediaBox, // Register MediaBox directly, allowing remarkBoxPlugin to handle box syntax
     TestComponent,
+    FlourishEmbed,
     PartyFace,
     MotionsStancesTable: (props) => <MotionsStancesTable {...props} fileData={mdxSource.scope.tableData as any} />,
     code: CodeBlock,  // This handles the ```box syntax
