@@ -16,13 +16,11 @@ Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod
 
 Zároveň je třeba dodat, že tento konkrétní sestřih nijak zásadně nezkreslil obraz Donalda Trumpa: Vazba mezi Trumpovým projevem a útokem na Kapitol je dobře zdokumentovaná. Trump své příznivce skutečně vyzýval k „boji", opakovaně používal bojovnou rétoriku a řekl jim, aby šli ke Kapitolu.
 
----
-
 Václav Štětka, profesor médií a politické komunikace z britské Loughborough University, v rozhovoru pro Český rozhlas [vysvětluje podstatu problému](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel): „Není pochyb, že šlo o porušení redakčních standardů a to nejenom těch, které vyznává BBC, ale jedná se o hrubé porušení novinářské etiky obecně. Šlo o manipulaci, o účelové pospojování kusů videa pro znásobení výsledného efektu."
 
 Současně však dodává důležitý kontext: „Interpretace celé kauzy, že BBC vyznění Trumpova projevu radikálně převrátila o 180 stupňů, to je trochu přehnané. Redaktoři vzali části projevu a spojili je tak, aby více vyznělo to, co většina veřejnosti i médií vnímá jako fakt – že existuje vazba mezi projevem Donalda Trumpa ze 6. ledna a následným útokem na Kapitol."
 
-## Když unikne memo
+## Zpráva určená k úniku
 
 Kdyby to skončilo u jedné chyby a jedné omluvy, svět by si toho možná ani moc nevšiml. Ale neskončilo.
 
@@ -38,17 +36,13 @@ Devátého listopadu 2025 rezignovali Tim Davie i šéfka zpravodajství Deborah
 
 „To je situace, která zřejmě nemá v novodobé historii BBC obdoby," [poznamenává Štětka](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel). „Nejspíš to znamená, že se ředitel Tim Davie rozhodl BBC ochránit. Anticipoval mediální bouři, která se rozpoutala, tak, že položil funkci na oltář."
 
----
+### KONTEXT: Proč by nás mělo zajímat, co se děje v BBC?
 
-> ### KONTEXT: Proč by nás mělo zajímat, co se děje v BBC?
->
-> Pro české čtenáře může být lákavé odbýt tuhle kauzu slovy „britské problémy". Ale BBC není jen další televizí.
->
-> BBC je největší veřejnoprávní broadcaster na světě – kombinace něčeho jako Česká televize, Český rozhlas a velká část zahraničního zpravodajství v jednom. Platí ji britské domácnosti televizním poplatkem, podobně jako v Česku. V mnoha zemích je stále první volbou pro zprávy o válkách, volbách nebo krizích.
->
-> Diskuse o zaujatosti BBC proto není lokální novinka – dotýká se důvěry v celý model veřejnoprávních médií. A argumenty, kterými britští politici útočí na BBC, jsou zarážejícím způsobem podobné těm, co slyšíme v Česku o České televizi.
+Pro české čtenáře může být lákavé odbýt tuhle kauzu slovy „britské problémy". Ale BBC není jen další televizí.
 
----
+BBC je největší veřejnoprávní broadcaster na světě – kombinace něčeho jako Česká televize, Český rozhlas a velká část zahraničního zpravodajství v jednom. Platí ji britské domácnosti televizním poplatkem, podobně jako v Česku. V mnoha zemích je stále první volbou pro zprávy o válkách, volbách nebo krizích.
+
+Diskuse o zaujatosti BBC proto není lokální novinka – dotýká se důvěry v celý model veřejnoprávních médií. A argumenty, kterými britští politici útočí na BBC, jsou zarážejícím způsobem podobné těm, co slyšíme v Česku o České televizi.
 
 ## Paradox Gazy: Jak být obviněn ze všeho najednou
 
