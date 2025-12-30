@@ -24,13 +24,23 @@ Současně však dodává důležitý kontext: „Interpretace celé kauzy, že 
 
 Kdyby to skončilo u jedné chyby a jedné omluvy, svět by si toho možná ani moc nevšiml. Ale neskončilo.
 
-Abychom pochopili, co následovalo, musíme se vrátit k tomu, kdo v BBC tahá za nitky. V Radě BBC sedí od roku 2021 Robbie Gibb – bývalý šéf komunikace konzervativní premiérky Theresy May, spoluzakladatel pravicové televize GB News a člověk, který o sobě veřejně říká, že je „thatcherovský konzervativec". Do Rady ho jmenovala vláda Borise Johnsona. A právě Gibb [podle zdrojů z Guardianu](https://www.theguardian.com/media/2025/nov/10/bbc-crisis-robbie-gibb-michael-prescott) prosadil, aby se externím poradcem pro redakční standardy stal jeho přítel Michael Prescott – bývalý politický editor Murdochových Sunday Times, dnes korporátní lobbista.
+Abychom pochopili, co následovalo, musíme se vrátit k tomu, kdo v BBC tahá za nitky. V Radě BBC sedí od roku 2021 Robbie Gibb – bývalý šéf komunikace konzervativní premiérky Theresy May, spoluzakladatel pravicové televize GB News a člověk, který o sobě veřejně říká, že je „thatcherovský konzervativec". Do Rady ho jmenovala vláda Borise Johnsona. 
+
+To není neobvyklé: pět z třinácti členů Rady BBC jmenuje přímo vláda. Problém je, kdo tam sedí. Gibb [podle zdrojů z Guardianu](https://www.theguardian.com/media/2025/nov/10/bbc-crisis-robbie-gibb-michael-prescott) prosadil, aby se externím poradcem pro redakční standardy stal jeho přítel Michael Prescott – bývalý politický editor Murdochových Sunday Times, dnes korporátní lobbista.
 
 Prescott v létě 2025 opustil svou poradní roli, ale předtím napsal devatenáctistránkovou zprávu pro Radu BBC. Když ji konzervativní Daily Telegraph začal zveřejňovat, ukázalo se, že jde o mnohem víc než o kritiku jednoho špatného střihu. Prescott obviňoval BBC z „vážné a systémové zaujatosti" – v případě Trumpa, ve zpravodajství o válce v Gaze i v otázkách transgender práv.
 
 Devatenáctistránkový dokument vyjmenovává celou řadu údajných pochybení – od redakčních přešlapů přes údajné zkreslování některých událostí až po celkovou „institucionální zaujatost" kultury BBC, kterou Prescott popisuje jako „příliš levicovou, liberální a v některých otázkách manipulativní".
 
+Alastair Campbell, bývalý tiskový mluvčí premiéra Blaira, si dokument přečetl a označil ho zkratkou MTBL – „memo to be leaked", tedy zpráva určená k úniku. [Alan Rusbridger](https://www.prospectmagazine.co.uk/ideas/media/bbc-news/71592/the-real-threat-to-bbc-impartiality), bývalý šéfredaktor Guardianu a dnes editor časopisu Prospect, Prescottovu zprávu popsal jako jednostrannou a „méně závažnou, než jak ji prezentoval Telegraph".
+
 Rozjela se mašina. Konzervativní britská média – The Telegraph, Daily Mail, The Times – začala psát o „woke" BBC, která manipuluje voliče. Trump pohrozil [miliardovou žalobou](https://www.washingtonpost.com/media/2025/11/10/trump-bbc-defamation-lawsuit-jan-6/) (později ji skutečně podal – na 10 miliard dolarů) a označil BBC za „100% fake news". Izraelští představitelé využili částí Prescottovy zprávy k tvrzení, že BBC má dlouhodobě protiizraelský sklon.
+
+Ne všechna britská média se ale přidala ke kritice. [Robert Shrimsley](https://x.com/robertshrimsley/status/1987870934305566763), politický komentátor Financial Times, napsal: „To, že BBC udělala vážné zaviněné chyby, nepopírá fakt, že existuje skutečná a koordinovaná pravicová mediální kampaň s cílem ji zničit. Obojí může být pravda zároveň – a kampaň by neskončila, ani kdyby chyby skončily." [John Simpson](https://edition.cnn.com/2025/11/10/media/bbc-trump-edit-lawsuit-turness-davie-media), legendární zahraniční zpravodaj BBC, byl ještě přímější: „BBC čelí koordinovanému, politicky motivovanému útoku."
+
+[Jane Martinson](https://www.npr.org/2025/11/14/nx-s1-5608004/bbc-apology-trump-speech) z Guardianu označila Trumpovu hrozbu žalobou za „ohromující" a upozornila, že Trump využívá existující nespokojenost k „rozsévání nesváru ohledně samotné podstaty přesnosti a nestrannosti".
+
+V českém prostředí by se takovému člověku jako Prescott říkalo možná „udavač". Představte si, jak by to rezonovalo, kdyby něco podobného uniklo a nehodilo se to konzervativcům – veřejný prostor by byl vytapetovaný nadávkami o udavačích a StB. Tady to funguje opačně: konzervativní establishment Prescottovu zprávu uvítal jako důkaz toho, co „vždycky věděl".
 
 Devátého listopadu 2025 rezignovali Tim Davie i šéfka zpravodajství Deborah Turness. [Davie uvedl](https://www.theguardian.com/media/2025/nov/09/tim-davie-bbc-resignation-statement-deborah-turness): „Celkově BBC funguje dobře, ale došlo k několika chybám a jako generální ředitel musím převzít konečnou odpovědnost."
 
@@ -38,11 +48,11 @@ Devátého listopadu 2025 rezignovali Tim Davie i šéfka zpravodajství Deborah
 
 ### KONTEXT: Proč by nás mělo zajímat, co se děje v BBC?
 
-Pro české čtenáře může být lákavé odbýt tuhle kauzu slovy „britské problémy". Ale BBC není jen další televizí.
+Pro české čtenáře může být lákavé odbýt tuhle kauzu slovy „britské problémy". Ale BBC není jen vzdálenou cizí televizí.
 
-BBC je největší veřejnoprávní broadcaster na světě – kombinace něčeho jako Česká televize, Český rozhlas a velká část zahraničního zpravodajství v jednom. Platí ji britské domácnosti televizním poplatkem, podobně jako v Česku. V mnoha zemích je stále první volbou pro zprávy o válkách, volbách nebo krizích.
+BBC je největší veřejnoprávní broadcaster na světě – kombinace něčeho jako Česká televize, Český rozhlas a velká část zahraničního zpravodajství v jednom. Platí ji britské domácnosti televizním poplatkem (od dubna 2025 je to 174,50 liber ročně, tedy asi 5 300 Kč – pro srovnání český koncesionářský poplatek je 135 Kč měsíčně, tedy 1 620 Kč ročně, zhruba třikrát méně). V mnoha zemích je stále první volbou pro zprávy o válkách, volbách nebo krizích.
 
-Diskuse o zaujatosti BBC proto není lokální novinka – dotýká se důvěry v celý model veřejnoprávních médií. A argumenty, kterými britští politici útočí na BBC, jsou zarážejícím způsobem podobné těm, co slyšíme v Česku o České televizi.
+Diskuse o zaujatosti BBC proto není lokální novinka – dotýká se důvěry v celý model veřejnoprávních médií. A argumenty, kterými britští politici útočí na BBC, jsou zarážejícím způsobem podobné těm, co slyšíme v Česku o České televizi: „příliš liberální", „woke agenda", „jednostranné zpravodajství", „manipulace voličů před volbami".
 
 ## Paradox Gazy: Jak být obviněn ze všeho najednou
 
@@ -60,17 +70,13 @@ Ale pak přišel úplně opačný signál. Více než stovka současných zaměs
 
 Pro jedny je BBC nebezpečně pro-palestinská, pro druhé nebezpečně pro-izraelská. Realističtější obraz je pravděpodobně ten, že BBC je trhaná mezi několika silnými tlaky – včetně politicky obsazené Rady – a že její výstupy jsou často nekonzistentní.
 
----
+### PŘÍBĚH: The Mash Report a „užitečný mýtus"
 
-> ### PŘÍBĚH: The Mash Report a „užitečný mýtus"
->
-> The Mash Report byl satirický pořad na BBC Two, který od roku 2017 ostře mířil na vládu a konzervativní politiky. Davie ho zrušil – oficiálně kvůli penězům a „prostoru pro nové formáty".
->
-> Ale v britském bulváru se objevila verze, že šlo o součást „war on woke" – tiché čistky levicového humoru. [Komik Nish Kumar později v rozhovoru pro Guardian řekl](https://www.theguardian.com/media/2021/may/16/nish-kumar-bbc-must-be-clear-did-it-axe-the-mash-report-in-a-war-on-woke): „Je to pro něj užitečný mýtus, protože uklidňuje britskou pravici. Dává žralokům trošku krve."
->
-> BBC Kumara interně ujistila, že žádná „politická čistka" se nekonala – ale veřejně do toho moc rýpat nechtěla. Tento typ dvojího jazyka krásně ilustruje „ticho", které obklopuje i současnou krizi.
+The Mash Report byl satirický pořad na BBC Two, který od roku 2017 ostře mířil na vládu a konzervativní politiky. Davie ho zrušil – oficiálně kvůli penězům a „prostoru pro nové formáty".
 
----
+Ale v britském bulváru se objevila verze, že šlo o součást „war on woke" – tiché čistky levicového humoru. [Komik Nish Kumar později v rozhovoru pro Guardian řekl](https://www.theguardian.com/media/2021/may/16/nish-kumar-bbc-must-be-clear-did-it-axe-the-mash-report-in-a-war-on-woke): „Je to pro něj užitečný mýtus, protože uklidňuje britskou pravici. Dává žralokům trošku krve."
+
+BBC Kumara interně ujistila, že žádná „politická čistka" se nekonala – ale veřejně do toho moc rýpat nechtěla. Tento typ dvojího jazyka krásně ilustruje „ticho", které obklopuje i současnou krizi.
 
 ## Muž z Downing Street v Radě BBC
 
@@ -102,25 +108,25 @@ BBC podle něj čelí podobným výtkám – že je příliš levicová, politic
 
 „BBC má tu ‚smůlu', že je skutečně obrovskou organizací, je neustále na očích a každé její pochybení se stane terčem kritiky," [vysvětluje Štětka](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel). „Přitom se často zapomíná na to, že paralelně s těmito pochybeními BBC produkuje desítky tisíc hodin vysoce hodnotného veřejnoprávního obsahu."
 
----
+### KONTEXT: Není to jen chyba. Je to politický útok
 
-> ### KONTEXT: Není to jen chyba. Je to politický útok
->
-> Standardní reakcí na chybu v sestřihu by byla omluva, revize procesů a posílení kontroly. To, že skončil generální ředitel i šéfka zpravodajství, vypovídá mnohem víc o politickém tlaku než o samotných chybách.
->
-> [Podle Reuters](https://www.ceskenoviny.cz/zpravy/reuters-krize-v-bbc-odhaluje-trhliny-v-renomovane-britske-instituci/2745828): „Příznivci BBC včetně novinářů z The Guardian, Financial Times a některých zaměstnanců BBC věří, že proběhla organizovaná pravicová kampaň s cílem tuto společnost poškodit."
->
-> „Je to krize vytvořená politickými a obchodními protivníky veřejnoprávního vysílání a BBC," řekla Reuters ekonomka Diane Coyle, bývalá místopředsedkyně správního orgánu BBC.
->
-> Insider z BBC pro Guardian popsal atmosféru stručně: „Působí to jako puč."
+Standardní reakcí na chybu v sestřihu by byla omluva, revize procesů a posílení kontroly. To, že skončil generální ředitel i šéfka zpravodajství, vypovídá mnohem víc o politickém tlaku než o samotných chybách.
 
----
+[Podle Reuters](https://www.ceskenoviny.cz/zpravy/reuters-krize-v-bbc-odhaluje-trhliny-v-renomovane-britske-instituci/2745828): „Příznivci BBC včetně novinářů z The Guardian, Financial Times a některých zaměstnanců BBC věří, že proběhla organizovaná pravicová kampaň s cílem tuto společnost poškodit."
+
+„Je to krize vytvořená politickými a obchodními protivníky veřejnoprávního vysílání a BBC," řekla Reuters ekonomka Diane Coyle, bývalá místopředsedkyně správního orgánu BBC.
+
+Insider z BBC pro Guardian popsal atmosféru stručně: „Působí to jako puč."
 
 ## Co to znamená pro Česko
 
 Veřejnoprávní média se stávají bojištěm kulturních a politických konfliktů. Už nejde „jen" o kvalitu zpravodajství, ale o to, jestli se médium líbí zrovna vládě nebo opozici. „Objektivita" je zbraň – obě strany politického spektra obviňují BBC ze zaujatosti, přičemž každá má „důkazy" a „studie" na své straně.
 
-Podobné tlaky vidíme i v České republice. Debaty o České televizi, obvinění z liberální nebo konzervativní zaujatosti, tlak na vedení, spory o financování – všechno to jsou nápadně podobné vzorce.
+Podobné tlaky vidíme i v České republice. Andrej Babiš dlouhodobě označuje Českou televizi za [„silně provládní"](https://www.denik.cz/z_domova/koncesionarske-poplatky-ceska-televize-kritika-andrej-babis.html) a mluví o ní jako o „ČPT" – České provládní televizi. V červenci 2024 v debatě Deníku prohlásil: „Pro mě je to čistá korupce." Hnutí ANO chce v případě vládní účasti přejít na financování ze státního rozpočtu místo koncesionářských poplatků.
+
+Tomio Okamura jde ještě dál. [SPD slibuje](https://hlidacipes.org/v-siku-proti-ceske-televizi-komunisti-okamura-zeman-i-novi-radni-bicem-jsou-neschvalene-zpravy/) úplné zrušení koncesionářských poplatků s odůvodněním, že ČT je „neobjektivní a nevyvážená". V únoru 2025 [Okamura tvrdil](https://www.parlamentnilisty.cz/politika/politici-volicum/Okamura-SPD-K-cemu-je-Ceska-televize-Ptam-se-za-lidi-kteri-ji-nesleduji-ale-maji-ji-platit-769234): „Koalice měla na ČT24 podíl vystoupení 72 procent, opozice 28 procent. Nemá cenu platit propagandu politických stran." Zároveň obvinil ČT z toho, že je „nástrojem vládní a bruselské propagandy".
+
+Argumenty jsou nápadně podobné těm britským: údajná liberální zaujatost, woke agenda, jednostranné zpravodajství o migraci a zahraničních konfliktech, manipulace voličů před volbami. A stejně jako v Británii se debata rychle přesouvá od konkrétních pochybení k systémovým otázkám financování a kontroly.
 
 „Opoziční strany – konzervativci, zejména strana Reform UK Nigela Farage – si nenechají ujít příležitost využít tuto kauzu k tomu, aby získaly argumenty pro změnu systému financování BBC," [upozorňuje Štětka](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel).
 
@@ -139,5 +145,3 @@ BBC z této kauzy neodchází jako „lživý propagandistický moloch", jak tvr
 A tady se kruh uzavírá. Není to jen britský příběh. Je to příběh o budoucnosti všech veřejnoprávních médií v éře polarizace. O tom, jak to vypadá, když se „nestrannost" stane politickou zbraní.
 
 Může vůbec existovat médium, které je dostatečně nestranné pro všechny strany současného kulturního konfliktu? Nebo jsme svědky konce éry, kdy bylo možné věřit, že takové médium může existovat?
-
----
