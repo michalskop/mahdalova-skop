@@ -8,11 +8,12 @@ filter: ["kontext"]
 tags: ["reputace BBC", "BBC", "veřejnoprávní média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií"]
 promoted: 91
 ---
+
 Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry – podobně jako vidíme v Česku v případě tuzemské veřejnoprávní televize.
 
 Řekněme si to na rovinu: BBC udělala chybu. Sestřih Trumpova projevu porušil základní novinářské standardy a redakce tohle rozhodně měla podchytit, než to šlo do vysílání. Taková pochybení podrývají důvěru ve veřejnoprávní média – a v době, kdy jsou pod neustálým tlakem, si je prostě nemohou dovolit.
 
-<iframe src='https://flo.uri.sh/visualisation/26674235/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:750px;'></iframe>
+<iframe src="https://flo.uri.sh/visualisation/26674235/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:750px;"></iframe>
 
 Zároveň je třeba dodat, že tento konkrétní sestřih nijak zásadně nezkreslil obraz Donalda Trumpa: Vazba mezi Trumpovým projevem a útokem na Kapitol je dobře zdokumentovaná. Trump své příznivce skutečně vyzýval k „boji", opakovaně používal bojovnou rétoriku a řekl jim, aby šli ke Kapitolu.
 
@@ -116,7 +117,7 @@ Standardní reakcí na chybu v sestřihu by byla omluva, revize procesů a posí
 
 „Je to krize vytvořená politickými a obchodními protivníky veřejnoprávního vysílání a BBC," řekla Reuters ekonomka Diane Coyle, bývalá místopředsedkyně správního orgánu BBC.
 
-Insider z BBC pro Guardian popsal atmosféru stručně: „Působí to jako puč."
+[Insider z BBC pro Guardian](https://www.theguardian.com/media/2025/nov/10/bbc-crisis-robbie-gibb-michael-prescott) popsal atmosféru stručně: „Působí to jako puč."
 
 ## Co to znamená pro Česko
 
