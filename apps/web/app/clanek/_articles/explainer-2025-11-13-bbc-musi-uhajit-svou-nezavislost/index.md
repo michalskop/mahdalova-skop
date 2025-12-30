@@ -13,8 +13,11 @@ Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod
 
 Řekněme si to na rovinu: BBC udělala chybu. Sestřih Trumpova projevu porušil základní novinářské standardy a redakce tohle rozhodně měla podchytit, než to šlo do vysílání. Taková pochybení podrývají důvěru ve veřejnoprávní média – a v době, kdy jsou pod neustálým tlakem, si je prostě nemohou dovolit.
 
+---
+
 ### Co přesně selhalo?
 <iframe src='https://flo.uri.sh/visualisation/26674235/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
+<iframe src='https://flo.uri.sh/visualisation/20864626/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 
 <div class="flourish-embed flourish-table" data-src="visualisation/26674235"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26674235/thumbnail" width="100%" alt="table visualization" /></noscript></div>
 Zároveň je třeba dodat, že tento konkrétní sestřih nijak zásadně nezkreslil obraz Donalda Trumpa: Vazba mezi Trumpovým projevem a útokem na Kapitol je dobře zdokumentovaná. Trump své příznivce skutečně vyzýval k „boji", opakovaně používal bojovnou rétoriku a řekl jim, aby šli ke Kapitolu.
