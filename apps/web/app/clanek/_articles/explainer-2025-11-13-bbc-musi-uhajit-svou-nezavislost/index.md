@@ -16,8 +16,7 @@ Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod
 ### Co přesně selhalo?
 <iframe src='https://flo.uri.sh/visualisation/26674235/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px'></iframe>
 
-<div class="flourish-embed flourish-table" data-src="visualisation/26674235"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-
+<div class="flourish-embed flourish-table" data-src="visualisation/26674235"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26674235/thumbnail" width="100%" alt="table visualization" /></noscript></div>
 Zároveň je třeba dodat, že tento konkrétní sestřih nijak zásadně nezkreslil obraz Donalda Trumpa: Vazba mezi Trumpovým projevem a útokem na Kapitol je dobře zdokumentovaná. Trump své příznivce skutečně vyzýval k „boji", opakovaně používal bojovnou rétoriku a řekl jim, aby šli ke Kapitolu.
 
 Václav Štětka, profesor médií a politické komunikace z britské Loughborough University, v rozhovoru pro Český rozhlas [vysvětluje podstatu problému](https://www.irozhlas.cz/zpravy-svet/bbc-ma-reputacni-skandal-ucelove-manipulovala-mira-kritiky-je-ale-neprimerena_2511140600_nel): „Není pochyb, že šlo o porušení redakčních standardů a to nejenom těch, které vyznává BBC, ale jedná se o hrubé porušení novinářské etiky obecně. Šlo o manipulaci, o účelové pospojování kusů videa pro znásobení výsledného efektu."
