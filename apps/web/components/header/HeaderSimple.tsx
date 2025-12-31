@@ -12,6 +12,7 @@ const links = [
   // { link: '/special', label: 'Speciály' },
   { link: '/analyzy', label: 'Analýzy' },
   { link: '/kontext', label: 'Kontext' },
+  { link: '/podcasty', label: 'Podcasty' },
   { link: '/kdo-jsme', label: 'Kdo jsme' },
 ];
 

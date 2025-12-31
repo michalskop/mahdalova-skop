@@ -16,6 +16,7 @@ export default async function HomePage() {
   const articles = await getArticles(3, undefined, true);
   const articles_analyses = await getArticles(3, "analýza");
   const articles_contexts = await getArticles(3, "kontext");
+  const articles_podcasts = await getArticles(3, "podcast");
 
   return (
     <Container 
@@ -52,6 +53,12 @@ export default async function HomePage() {
         sectionLink="/kontext"
         articles={articles_contexts}
         themeColor="brandOrange.4" />
+
+      <ArticlesSection 
+        sectionTitle="Podcasty"
+        sectionLink="/podcasty"
+        articles={articles_podcasts}
+        themeColor="brandRoyalBlue.9" />
 
       <Testimonials />
 
