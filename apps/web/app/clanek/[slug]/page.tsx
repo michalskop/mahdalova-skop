@@ -24,10 +24,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // Construct the full URL for the article (replace with your actual domain)
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz'
     const articleUrl = `${baseUrl}/clanek/${params.slug}`
+
+    const isAbsoluteUrl = (value: unknown): value is string => {
+      if (typeof value !== 'string') return false;
+      return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
+    };
     
     // Construct the full image URL
     const imageUrl = article.coverImage 
-      ? `${baseUrl}/clanek/_articles/${params.slug}/${article.coverImage}`
+      ? (isAbsoluteUrl(article.coverImage)
+          ? article.coverImage
+          : `${baseUrl}/clanek/_articles/${params.slug}/${article.coverImage}`)
       : `${baseUrl}/default-og-image.jpg` // Fallback image
 
     return {
