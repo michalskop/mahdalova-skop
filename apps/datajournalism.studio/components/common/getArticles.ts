@@ -29,12 +29,17 @@ export async function getArticles(
   const articleFolders = fs.readdirSync(articlesDirectory);
   const currentDate = new Date();
 
+  const isAbsoluteUrl = (value: unknown): value is string => {
+    if (typeof value !== 'string') return false;
+    return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
+  };
+
   const articles = articleFolders.map((folder) => {
     const fullPath = path.join(articlesDirectory, folder, 'index.md');
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
     const coverImage = data.coverImage
-      ? `/a/_articles/${folder}/${data.coverImage}`
+      ? (isAbsoluteUrl(data.coverImage) ? data.coverImage : `/a/_articles/${folder}/${data.coverImage}`)
       : null;
 
     return {
