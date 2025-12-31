@@ -20,6 +20,7 @@ interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
   title?: string;
   date?: string;
+  author?: string;
   slug: string;
   scrollyContent?: any;     // Add scrollyContent to the ArticleProps
   backgroundColor?: string;  // Optional background color
@@ -31,6 +32,7 @@ export function ArticleRenderer({
   mdxSource,
   title,
   date,
+  author,
   slug = '',
   scrollyContent,
   backgroundColor,
@@ -218,6 +220,7 @@ export function ArticleRenderer({
 
         {date && (
           <Text size="sm" c={textColor || "dimmed"}>
+            {author ? `${author.toUpperCase()} • ` : ''}
             {new Date(date).toLocaleDateString('cs-CZ')}
           </Text>
         )}
