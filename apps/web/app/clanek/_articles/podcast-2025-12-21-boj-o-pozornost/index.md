@@ -1,5 +1,5 @@
 ---
-title: "Boj o udržení pozornosti - 1. část
+title: "Boj o udržení pozornosti - 1. část"
 date: "2025-12-21"
 author: "Kateřina Mahdalová"
 excerpt: "Notifikace. Scrollování. Algoritmy. A my uprostřed toho všeho. Náš mozek není stavěný na svět, který mu každou vteřinu nabízí další dávku dopaminu. Sociální sítě, nekonečné feedy, promyšlené triky – všechno je navržené tak, abychom zůstali přilepení k obrazovce."
