@@ -3,7 +3,7 @@ title: "Boj o udržení pozornosti"
 date: "2025-12-21"
 author: "Kateřina Mahdalová"
 excerpt: "Notifikace. Scrollování. Algoritmy. A my uprostřed toho všeho. Náš mozek není stavěný na svět, který mu každou vteřinu nabízí další dávku dopaminu. Sociální sítě, nekonečné feedy, promyšlené triky – všechno je navržené tak, abychom zůstali přilepení k obrazovce."
-coverImage: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Exf421EcaaSR_Uj3PxNSVgHaFj%3Fpid%3DApi&f=1&ipt=c1ce00e74cde6f8f78677dfd896981c4f6cc35fdfcbb9674bc736868c4f568a9&ipo=images"
+coverImage: "https://www.datovazurnalistika.cz/wp-content/uploads/2025/12/mahdalky-pozornost.gif"
 filter: ["podcast"]
 tags: ["podcast", "Mahdalky", "pozornost", "scrollování", "algoritmy", "sociální sítě", "notifikace", "wellbeing", "psychické zdraví", "informace", "vzdělávání"]
 promoted: 71
