@@ -6,7 +6,7 @@ excerpt: "Notifikace. Scrollování. Algoritmy. A my uprostřed toho všeho. Ná
 coverImage: "https://www.datovazurnalistika.cz/wp-content/uploads/2025/12/mahdalky-pozornost.gif"
 filter: ["podcast"]
 tags: ["podcast", "Mahdalky", "pozornost", "scrollování", "algoritmy", "sociální sítě", "notifikace", "wellbeing", "psychické zdraví", "informace", "vzdělávání"]
-promoted: 91
+promoted: 71
 ---
 
 Náš mozek není stavěný na svět, který mu každou vteřinu nabízí další dávku dopaminu. Sociální sítě, nekonečné feedy, promyšlené triky – všechno je navržené tak, abychom zůstali přilepení k obrazovce. A my se tomu těžko bráníme. Pro lidi s ADHD je ten boj ještě těžší. Dvě generace, dva pohledy na stejný problém. Dvě generace, dva pohledy na stejný problém. Data, výzkumy i osobní zkušenosti s tím, jak si pozornost chránit – nebo ji ztrácet.
