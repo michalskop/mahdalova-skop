@@ -1,5 +1,5 @@
 ---
-title: "Skandál v BBC: Politický boj zabíjí nejslavnější veřejnoprávní médium světa"
+title: "Politický boj zabíjí nejslavnější veřejnoprávní médium světa. BBC musí uhájit svou nezávislost"
 date: "2025-11-13"
 author: "Kateřina Mahdalová"
 excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku."
@@ -9,7 +9,7 @@ tags: ["reputace BBC", "BBC", "veřejnoprávní", "média", "Tim Davie", "Trump"
 promoted: 91
 ---
 
-Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry – podobně jako vidíme v Česku v případě tuzemské veřejnoprávní televize.
+Když 9. listopadu 2025 generální ředitel BBC Tim Davie oznámil, že odchází z čela nejslavnějšího veřejnoprávního média světa, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry – podobně jako vidíme v Česku v případě tuzemské veřejnoprávní televize.
 
 Řekněme si to na rovinu: BBC udělala chybu. Sestřih Trumpova projevu porušil základní novinářské standardy a redakce tohle rozhodně měla podchytit, než to šlo do vysílání. Taková pochybení podrývají důvěru ve veřejnoprávní média – a v době, kdy jsou pod neustálým tlakem, si je prostě nemohou dovolit.
 
