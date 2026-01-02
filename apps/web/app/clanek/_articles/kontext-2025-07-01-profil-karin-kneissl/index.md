@@ -3,7 +3,7 @@ title: "Tanec s Putinem: jak si bývalá rakouská ministryně zahraničí našl
 date: "2025-07-01"
 author: "Amanda Coakley, překlad Mahdalová & Škop"
 excerpt: "Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou."
-coverImage: "images/kneisssl-putin-tanec-profil-datatimes-guardian.webp"
+coverImage: "images/kneissl-putin-tanec-profil-datatimes-guardian.webp"
 filter: ["kontext"]
 tags: ["Rakousko", "Rusko", "Karin Kneissl", "Vladimir Putin", "FPÖ", "Svobodná strana", "zahraniční politika", "ruský vliv", "Sebastian Kurz", "Ibiza-gate"]
 promoted: 75
