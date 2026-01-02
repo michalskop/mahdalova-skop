@@ -9,6 +9,8 @@ tags: ["historická data", "mapy", "historie", "kriminalita", "středověk", "v�
 promoted: 72
 ---
 
+![Mapa horkých míst středověké kriminality](images/hotspotmapthis-1445x900.jpg)
+
 Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda ukotvena v rytmu každodenního života. Zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích – a zároveň odhalují jeden zásadní rozdíl.
 
 ## Kde vás před sedmi sty lety nejspíš mohla potkat násilná smrt
@@ -27,6 +29,8 @@ Tým kriminologů z cambridgeské univerzity pod vedením [Manuela Eisnera](http
 
 Středověké vraždy se neděly náhodně rozptýlené po městě. Koncentrovaly se v několika konkrétních lokalitách – na trzích, hlavních třídách, u mostů a křižovatek. V Londýně, který měl tehdy 60–80 tisíc obyvatel a byl zdaleka největším anglickým městem, autoři identifikovali dva odlišné typy „horkých míst". Detaily jednotlivých případů si můžete prohlédnout na [interaktivní mapě Londýna](https://medievalmurdermap.co.uk/london/).
 
+![Interaktivní mapa vražd v Londýně](images/london-thumb-2.png)
+
 Oblast Westcheap byla srdcem obchodu a cechovního života, místem okázalých průvodů i veřejných trestů. Právě zde se odehrávaly konflikty mezi členy mocných cechů – zlatníky, sedláři, krejčími. V listopadu 1325 tu například došlo k plánované bitce mezi učni zlatníků a sedlářů přímo u Velkého kříže, nejvýznamnějšího monumentu v centru města. Volba místa nebyla náhodná – šlo o demonstraci síly na co nejviditelnějším místě.
 
 Zcela jiný charakter mělo násilí na Thames Street podél břehu Temže. Zde se střetávali námořníci, přístavní dělníci a cizí kupci. Pachatelé i oběti patřili k nižším vrstvám, zbraněmi byly často jednoduché užitkové nože. V jednom případě se dva vlámští námořníci u přístaviště s vlnou navzájem pobodali kvůli sporu, jehož podstatu záznam neuvádí.
@@ -34,6 +38,8 @@ Zcela jiný charakter mělo násilí na Thames Street podél břehu Temže. Zde 
 ## Oxfordská anomálie: Proč univerzitní město vedlo v počtu mrtvých
 
 Zatímco Londýn a York vykazovaly míru vražd zhruba 12–19 na 100 000 obyvatel, Oxford dosahoval 60–75 – čtyřikrát až pětkrát více. Pro srovnání: dnešní Anglie má míru kolem 1 na 100 000. [Mapa oxfordských vražd](https://medievalmurdermap.co.uk/oxford/) ukazuje, jak se násilí koncentrovalo kolem univerzitních kolejí a hlavní třídy.
+
+![Interaktivní mapa vražd v Oxfordu](images/oxford-thumb.png)
 
 Důvodem byla univerzita. Přesněji řečeno studenti – mladí muži ve věku 14–21 let, daleko od domova a rodinné kontroly, vyzbrojení noži a meči, sdružení do znepřátelených „národů". Seveřané (ze Skotska a severní Anglie) a Jižané (z jižní Anglie, Walesu a Irska) žili v kolejích, které přijímaly jen příslušníky jedné skupiny. K tomu přidejte chronický konflikt mezi městem a univerzitou, která požívala právních privilegií chránících její členy před světským soudem.
 
@@ -51,6 +57,8 @@ Více než 90 % obětí i pachatelů tvořili muži. Nejčastějšími zbraněmi
 
 Fascinující je případ kněze Johna Forda, zavražděného v roce 1337 na Westcheapu. Podle [nově objevených dokumentů](https://www.cam.ac.uk/stories/medieval-murder-maps-noblewoman-priest) šlo o pomstu naplánovanou šlechtičnou Elou Fitzpayne – a tento případ otevírá okno do světa, kde i ženy mohly být „expertkami na násilí".
 
+![Ela Fitzpayne](images/ela_top-1280x673.jpg)
+
 Ela Fitzpayne nebyla typická středověká dáma. V roce 1321 se spolu se svým manželem Robertem a knězem Johnem Fordem účastnila násilného přepadu benediktinského kláštera – vyrazili brány, poničili budovy a ukradli na 18 volů, 30 prasat a 200 ovcí. Ford byl zároveň jejím milencem a farářem ve vesnici na panství Fitzpaynů.
 
 V roce 1332 canterburský arcibiskup veřejně odsoudil Elu za cizoložství – a jediným jmenovaným milencem byl právě Ford. Zatímco on unikl trestu, Ela měla podstoupit ponižující veřejné pokání: sedm let chodit bosá po salisburské katedrále s čtyřliberní voskovou svící. Odmítla. Uprchla a byla exkomunikována.
@@ -66,6 +74,8 @@ Historička Hannah Skoda z Oxfordu dodává: „Tato vražda nám poskytuje důk
 Ela Fitzpayne nikdy nebyla souzena. Zůstala po boku manžela až do jeho smrti v roce 1354 a zdědila jeho pozemky. Eisner ji popisuje jako „mimořádnou postavu – ženu ze 14. století, která s divokou odhodlaností vzdorovala pravidlům své doby."
 
 Veřejná poprava Forda před zraky davů připomíná podle Eisnera „politické vraždy, jaké dnes vidíme v Rusku nebo Mexiku – jde o připomínku toho, kdo má moc."
+
+![Mapa vražd ve středověké Anglii](images/mapofmurderweb-1488x900.jpg)
 
 ## Co nás to učí o dnešku
 
