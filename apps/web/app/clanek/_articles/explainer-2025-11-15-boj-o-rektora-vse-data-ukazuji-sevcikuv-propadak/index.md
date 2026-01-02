@@ -6,7 +6,7 @@ excerpt: "Akademický senát rozhodne, zda v čele VŠE zůstane ekonom Petr Dvo
 coverImage: "images/vse-rektor-2025-dvorak-sevcik.webp"
 filter: "kontext"
 tags: ["volba rektora VŠE", "explainer", "Česko", "VŠE", "Miroslav Ševčík", "Petr Dvořák", "vysoké školy", "data", "kontext"]
-promoted: 59
+promoted: 51
 ---
 
 Volba rektora [proběhne](https://www.vse.cz/aktuality/vyhlaseni-voleb-na-rektora-vse/) 24. listopadu 2025 a půjde v ní zejména o to, jakou pověst, směřování a vnitřní kulturu bude Vysoká škola ekonomická (VŠE) v příštích letech mít.
