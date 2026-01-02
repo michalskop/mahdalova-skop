@@ -1,9 +1,9 @@
 ---
-title: "Když pohlaví rozhoduje víc než věk"
+title: "Přístup k duševnímu zdraví: pohlaví rozhoduje víc než věk"
 date: "2024-11-12"
 author: "Kateřina Mahdalová"
 excerpt: "Dvě generace, dva pohledy. A jedno překvapivé zjištění: v péči o duševní zdraví více záleží na tom, jestli jste muž nebo žena, než kdy jste se narodili."
-coverImage: "https://www.datovazurnalistika.cz/wp-content/uploads/2026/01/mahdalky-1-dusevni-zdravi-datatimes.gif"
+coverImage: "https://www.datovazurnalistika.cz/wp-content/uploads/2026/01/mahdalky-1-dusevni-zdravi-datatimes-podcast.gif"
 filter: ["podcast"]
 tags: ["podcast", "Mahdalky", "duševní", "zdraví", "psychoterapie", "psychické zdraví", "mental health", "gender", "muži", "ženy", "stigma", "generace", "terapie", "psychiatrie", "wellbeing"]
 promoted: 68
