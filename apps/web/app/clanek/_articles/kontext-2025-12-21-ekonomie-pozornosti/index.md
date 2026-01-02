@@ -6,7 +6,7 @@ excerpt: "Internet jako prostředí, které pomocí behaviorálních principů c
 coverImage: "images/pozornost-brain-rot.webp"
 filter: ["kontext"]
 tags: ["digitální závislost", "ADHD", "pozornost", "sociální sítě", "TikTok", "dopamin", "dark patterns", "neurověda"]
-promoted: 70
+promoted: 65
 ---
 
 Autorka: Marie Anna Mahdalová
