@@ -16,6 +16,8 @@ Představte si, že procházíte úzkými uličkami středověkého Londýna kol
 
 Tým kriminologů z cambridgeské univerzity pod vedením Manuela Eisnera zmapoval v rámci projektu [Medieval Murder Map](http://www.medievalmurdermap.co.uk) 355 případů zabití v Londýně, Yorku a Oxfordu 14. století. Jejich [studie publikovaná v časopise Criminal Law Forum](https://doi.org/10.1007/s10609-025-09512-7) ukazuje, že vzorce středověkého násilí překvapivě připomínají to, co víme o zločinu v dnešních městech. Zdrojem dat jsou koronerské záznamy – nejstarší dokumenty svého druhu na světě, které systematicky zaznamenávaly okolnosti násilných úmrtí včetně místa činu, zbraně, svědků i toho, zda byl pachatel dopaden.
 
+![Středověk – zločiny, vraždy, kriminalita – mapy](images/stredovek-zlociny-vrazdy-kriminalita-mapy.webp)
+
 ## Westcheap a Thames Street: Dva světy londýnského násilí
 
 Středověké vraždy se neděly náhodně rozptýlené po městě. Koncentrovaly se v několika konkrétních lokalitách – na trzích, hlavních třídách, u mostů a křižovatek. V Londýně, který měl tehdy 60–80 tisíc obyvatel a byl zdaleka největším anglickým městem, autoři identifikovali dva odlišné typy „horkých míst“.
