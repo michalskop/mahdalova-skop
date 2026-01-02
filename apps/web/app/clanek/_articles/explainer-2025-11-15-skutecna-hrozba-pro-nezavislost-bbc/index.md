@@ -5,7 +5,7 @@ author: "Alan Rusbridger"
 excerpt: "BBC zažila týden chyb, rezignací a hrozby žaloby za miliardu dolarů. Ale největší rizika zaujatosti jsou ve vedení, nikoliv v redakci."
 coverImage: "images/bbc-2025-explainer-mahdalova-skop-lide.webp"
 filter: ["kontext"]
-tags: ["nezávislist BBC", "BBC", "Robbie Gibb", "veřejnoprávní", "média", "nezávislost médií", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost"]
+tags: ["nezávislost BBC", "BBC", "Robbie Gibb", "veřejnoprávní", "média", "nezávislost médií", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost"]
 promoted: 69
 ---
 
