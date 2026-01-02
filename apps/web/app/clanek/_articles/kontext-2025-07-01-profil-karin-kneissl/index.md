@@ -1,7 +1,7 @@
 ---
 title: "Tanec s Putinem: jak si bývalá rakouská ministryně zahraničí našla nový domov v Rusku"
 date: "2025-07-01"
-author: "Amanda Coakley"
+author: "Amanda Coakley, překlad Mahdalová & Škop"
 excerpt: "Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou."
 coverImage: "images/kneisssl-putin-tanec-profil-datatimes-guardian.webp"
 filter: ["kontext"]
@@ -33,7 +33,7 @@ Kneissl není někdo, s kým by Püreschitz — nebo řada dalších ve městě 
 
 V polovině následujícího roku opustila úřad a krátce poté se přestěhovala do Francie, pak do Libanonu a nakonec se usadila v Rusku, kde dnes vede Geopolitické observatorium pro klíčové otázky Ruska (Gorki) na Petrohradské univerzitě. Pravidelně vystupuje v ruských státních médiích, kde prohlásila, že EU trpí „kolapsem jakéhokoli právního státu", a nedávno i to, že Rusko vyhrálo válku na Ukrajině. Putina obdivuje — v rozhovoru pro BBC v roce 2023 o něm řekla, že je „nejinteligentnější gentleman, a zdůrazňuji to slovo gentleman — a pár jsem jich potkala".
 
-*Rakouské městečko Seibersdorf, kde Kneissl žila více než dvě desetiletí. Foto: volkerpreusser/Alamy*
+---
 
 Jedním z důvodů, proč je příběh Kneisslové pro Rakousko tak trapný, je to, že upozorňuje na dlouhodobý a velmi výnosný vztah země s Ruskem — který i tři roky po plnohodnotné invazi na Ukrajinu zůstává bližší, než by mnozí zvenčí čekali. Alpská země s devíti miliony obyvatel, jejíž ústava ji zavazuje k neutralitě v mezinárodních záležitostech, se ráda vidí jako prostředník mezi Východem a Západem. Kritici to vnímají jako záminku pro prosazování vlastního ekonomického zájmu. „Nechápou, proč by měli cokoli měnit, protože jim to všechno dokonale funguje," řekl mi Anton Šechovcov, ředitel Centra pro demokratickou integritu v Rakousku, které sleduje vliv autoritářských zemí. „Čekají, až válka skončí, aby se mohli vrátit k běžnému obchodu s Rusy." Přestože Rakousko podpořilo sankce EU, Rusko podle dat z roku 2024 zůstává druhým největším zdrojem přímých zahraničních investic. Rakouské firmy, jako například Raiffeisen Bank International, teprve nedávno začaly omezovat své aktivity v Rusku a zaostávají za konkurenty typu britské HSBC nebo francouzské Société Générale, které z ruského trhu po invazi rychle odešly.
 
