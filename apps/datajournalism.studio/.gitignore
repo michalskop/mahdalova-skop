@@ -132,4 +132,4 @@ dist
 .DS_Store
 
 # generated/copied article assets (build output)
-public/clanek/_articles/
+public/a/_articles/
