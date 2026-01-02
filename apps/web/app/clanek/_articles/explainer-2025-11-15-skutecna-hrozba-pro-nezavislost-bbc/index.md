@@ -6,7 +6,7 @@ excerpt: "BBC zažila týden chyb, rezignací a hrozby žaloby za miliardu dolar
 coverImage: "images/bbc-2025-explainer-mahdalova-skop-lide.webp"
 filter: ["kontext"]
 tags: ["Reputace BBC", "BBC", "Robbie Gibb", "veřejnoprávní", "média", "nezávislost médií", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost"]
-promoted: 0
+promoted: 69
 ---
 
 Až jednou budou historici popisovat ságu o tom, jak padly dvě hlavy z nejvyššího vedení BBC, možná budou chtít vystopovat její počátky k Dougiemu Smithovi, stínovému zákulisnímu hráči, který byl kdysi označen za nejdůležitější politickou postavu, o které jste nikdy neslyšeli.
