@@ -1,12 +1,12 @@
 ---
 title: "Kriminalita ve středověku: Mapa vražd z doby před sedmi sty lety"
-date: "2025-06-06"
+date: "2025-12-23"
 author: "Kateřina Mahdalová"
 excerpt: "Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda ukotvena v rytmu každodenního života. Zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích – a zároveň odhalují jeden zásadní rozdíl."
 coverImage: "images/murder-of-cain.webp"
 filter: ["kontext"]
 tags: ["historická data", "mapy", "historie", "kriminalita", "středověk", "výzkum"]
-promoted: 92
+promoted: 72
 ---
 
 Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda ukotvena v rytmu každodenního života. Zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích – a zároveň odhalují jeden zásadní rozdíl.
@@ -15,13 +15,17 @@ Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda 
 
 Představte si, že procházíte úzkými uličkami středověkého Londýna kolem roku 1320. Je neděle večer, blíží se zákaz vycházení, z hospod se line hluk a smích. Právě v tuto chvíli – a na tomto místě – bylo nejpravděpodobnější, že se stanete svědkem vraždy. Nebo její obětí.
 
-Tým kriminologů z cambridgeské univerzity pod vedením Manuela Eisnera zmapoval v rámci projektu Medieval Murder Map 355 případů zabití v Londýně, Yorku a Oxfordu 14. století. Jejich studie publikovaná v časopise Criminal Law Forum ukazuje, že vzorce středověkého násilí překvapivě připomínají to, co víme o zločinu v dnešních městech – vraždy tehdy i dnes často začínají triviálními hádkami, obvykle se dějí ve dnech volna a většinou večer. Zdrojem dat jsou koronerské záznamy – nejstarší dokumenty svého druhu na světě, které systematicky zaznamenávaly okolnosti násilných úmrtí včetně místa činu, zbraně, svědků i toho, zda byl pachatel dopaden.
+Tým kriminologů z cambridgeské univerzity pod vedením [Manuela Eisnera](https://www.crim.cam.ac.uk/people/academic-research/manuel-eisner) zmapoval v rámci projektu [Medieval Murder Map](https://medievalmurdermap.co.uk/) 355 případů zabití v Londýně, Yorku a Oxfordu 14. století. Jejich [studie publikovaná v časopise Criminal Law Forum](https://link.springer.com/article/10.1007/s10609-025-09512-7) ukazuje, že vzorce středověkého násilí překvapivě připomínají to, co víme o zločinu v dnešních městech – vraždy tehdy i dnes často začínají triviálními hádkami, obvykle se dějí ve dnech volna a většinou večer. Zdrojem dat jsou koronerské záznamy – nejstarší dokumenty svého druhu na světě, které systematicky zaznamenávaly okolnosti násilných úmrtí včetně místa činu, zbraně, svědků i toho, zda byl pachatel dopaden.
 
 ![Středověk – zločiny, vraždy, kriminalita – mapy](images/stredovek-zlociny-vrazdy-kriminalita-mapy.webp)
+[Medieval Murder Maps](https://medievalmurdermap.co.uk/) – interaktivní mapy všech tří měst s detaily jednotlivých případů
+- [Mapa Londýna](https://medievalmurdermap.co.uk/london/) | [Mapa Oxfordu](https://medievalmurdermap.co.uk/oxford/) | [Mapa Yorku](https://medievalmurdermap.co.uk/york/)
+- [Původní studie v Criminal Law Forum](https://link.springer.com/article/10.1007/s10609-025-09512-7) (Eisner, Brown, Eisner & Eisner, 2025)
+- [Příběh Ely Fitzpayne](https://www.cam.ac.uk/stories/medieval-murder-maps-noblewoman-priest) – University of Cambridge
 
 ## Westcheap a Thames Street: Dva světy londýnského násilí
 
-Středověké vraždy se neděly náhodně rozptýlené po městě. Koncentrovaly se v několika konkrétních lokalitách – na trzích, hlavních třídách, u mostů a křižovatek. V Londýně, který měl tehdy 60–80 tisíc obyvatel a byl zdaleka největším anglickým městem, autoři identifikovali dva odlišné typy „horkých míst".
+Středověké vraždy se neděly náhodně rozptýlené po městě. Koncentrovaly se v několika konkrétních lokalitách – na trzích, hlavních třídách, u mostů a křižovatek. V Londýně, který měl tehdy 60–80 tisíc obyvatel a byl zdaleka největším anglickým městem, autoři identifikovali dva odlišné typy „horkých míst". Detaily jednotlivých případů si můžete prohlédnout na [interaktivní mapě Londýna](https://medievalmurdermap.co.uk/london/).
 
 Oblast Westcheap byla srdcem obchodu a cechovního života, místem okázalých průvodů i veřejných trestů. Právě zde se odehrávaly konflikty mezi členy mocných cechů – zlatníky, sedláři, krejčími. V listopadu 1325 tu například došlo k plánované bitce mezi učni zlatníků a sedlářů přímo u Velkého kříže, nejvýznamnějšího monumentu v centru města. Volba místa nebyla náhodná – šlo o demonstraci síly na co nejviditelnějším místě.
 
@@ -29,7 +33,7 @@ Zcela jiný charakter mělo násilí na Thames Street podél břehu Temže. Zde 
 
 ## Oxfordská anomálie: Proč univerzitní město vedlo v počtu mrtvých
 
-Zatímco Londýn a York vykazovaly míru vražd zhruba 12–19 na 100 000 obyvatel, Oxford dosahoval 60–75 – čtyřikrát až pětkrát více. Pro srovnání: dnešní Anglie má míru kolem 1 na 100 000.
+Zatímco Londýn a York vykazovaly míru vražd zhruba 12–19 na 100 000 obyvatel, Oxford dosahoval 60–75 – čtyřikrát až pětkrát více. Pro srovnání: dnešní Anglie má míru kolem 1 na 100 000. [Mapa oxfordských vražd](https://medievalmurdermap.co.uk/oxford/) ukazuje, jak se násilí koncentrovalo kolem univerzitních kolejí a hlavní třídy.
 
 Důvodem byla univerzita. Přesněji řečeno studenti – mladí muži ve věku 14–21 let, daleko od domova a rodinné kontroly, vyzbrojení noži a meči, sdružení do znepřátelených „národů". Seveřané (ze Skotska a severní Anglie) a Jižané (z jižní Anglie, Walesu a Irska) žili v kolejích, které přijímaly jen příslušníky jedné skupiny. K tomu přidejte chronický konflikt mezi městem a univerzitou, která požívala právních privilegií chránících její členy před světským soudem.
 
@@ -45,7 +49,7 @@ Více než 90 % obětí i pachatelů tvořili muži. Nejčastějšími zbraněmi
 
 ## Ela Fitzpayne: Žena, která si objednala vraždu kněze
 
-Fascinující je případ kněze Johna Forda, zavražděného v roce 1337 na Westcheapu. Podle nově objevených dokumentů šlo o pomstu naplánovanou šlechtičnou Elou Fitzpayne – a tento případ otevírá okno do světa, kde i ženy mohly být „expertkami na násilí".
+Fascinující je případ kněze Johna Forda, zavražděného v roce 1337 na Westcheapu. Podle [nově objevených dokumentů](https://www.cam.ac.uk/stories/medieval-murder-maps-noblewoman-priest) šlo o pomstu naplánovanou šlechtičnou Elou Fitzpayne – a tento případ otevírá okno do světa, kde i ženy mohly být „expertkami na násilí".
 
 Ela Fitzpayne nebyla typická středověká dáma. V roce 1321 se spolu se svým manželem Robertem a knězem Johnem Fordem účastnila násilného přepadu benediktinského kláštera – vyrazili brány, poničili budovy a ukradli na 18 volů, 30 prasat a 200 ovcí. Ford byl zároveň jejím milencem a farářem ve vesnici na panství Fitzpaynů.
 
@@ -57,7 +61,7 @@ Porota čítala 33 mužů – jedna z největších, jaké záznamy z té doby u
 
 „Ela nebyla jedinou ženou, která najímala muže, aby zabíjeli a pomáhali jí chránit její pověst," říká Eisner. „Vidíme násilný čin, který vychází ze světa, kde členové vyšších vrstev byli experty na násilí, ochotní a schopní zabíjet jako způsob udržení moci."
 
-Historička Hannah Skoda z Oxfordu dodává: „Tato vražda nám poskytuje důkaz o velmi aktivní roli žen při řízení svých záležitostí a vztahů." Na podcastu Medieval Murders poznamenala Eisnerova dcera Nora: „Nezdá se to úplně spravedlivé – měli ten poměr spolu, a ona byla ta, kdo byl potrestán, zatímco John pokračoval v běžném životě. Chápu, jak se cítila ponížená."
+Historička Hannah Skoda z Oxfordu dodává: „Tato vražda nám poskytuje důkaz o velmi aktivní roli žen při řízení svých záležitostí a vztahů." Na [podcastu Medieval Murders](https://medievalmurdermap.co.uk/podcasts/) poznamenala Eisnerova dcera Nora: „Nezdá se to úplně spravedlivé – měli ten poměr spolu, a ona byla ta, kdo byl potrestán, zatímco John pokračoval v běžném životě. Chápu, jak se cítila ponížená."
 
 Ela Fitzpayne nikdy nebyla souzena. Zůstala po boku manžela až do jeho smrti v roce 1354 a zdědila jeho pozemky. Eisner ji popisuje jako „mimořádnou postavu – ženu ze 14. století, která s divokou odhodlaností vzdorovala pravidlům své doby."
 
@@ -74,5 +78,3 @@ Projekt Medieval Murder Map není jen historickou kuriozitou. Eisner ho nazývá
 Středověký Londýn měl míru vražd zhruba 15–20× vyšší než moderní britské město podobné velikosti. Ale Eisner upozorňuje, že přímé srovnání je ošidné: „Máme střelné zbraně, ale máme i záchranku. Je snazší zabít, ale i zachránit život." Více než 18 % středověkých obětí přežilo alespoň týden po útoku – a zemřelo až na infekce nebo vykrvácení, protože neexistovala chirurgie ani antibiotika.
 
 Pokles vražd v moderní době tak nesouvisí jen s proměnou individuálního chování, jak naznačuje teorie civilizačního procesu sociologa Norberta Eliase. Svou roli sehrála i regulace veřejného prostoru – od licencování hospod přes zákazy nošení zbraní po vytvoření profesionální policie a záchranných služeb.
-
-Interaktivní mapy všech tří měst jsou dostupné na webu [medievalmurdermap.co.uk](https://medievalmurdermap.co.uk), kde si lze proklikat jednotlivé případy včetně dobových detailů o zbraních, obětech i pachatelích.
