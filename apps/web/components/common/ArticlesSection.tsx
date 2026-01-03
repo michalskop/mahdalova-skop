@@ -2,6 +2,7 @@
 'use client';
 
 import { Box, Group, Title, Stack, Paper, useMantineTheme } from '@mantine/core';
+import { useState } from 'react';
 import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import { Article } from '@/components/common/getArticles';
 import { Arrow } from '@/components/common/Arrow';
@@ -20,6 +21,9 @@ export function ArticlesSection({
   themeColor = 'red'
 }: ArticlesSectionProps) {
   const theme = useMantineTheme();
+  const [isTitleHovered, setIsTitleHovered] = useState(false);
+  const shouldShowArrow = sectionTitle.length <= 14;
+
   return (
     <Paper py={20} bg={themeColor} radius={0}>
       <Group 
@@ -36,18 +40,23 @@ export function ArticlesSection({
           <a 
             href={sectionLink} // Set the link URL
             rel="noopener noreferrer" // Security measure for external links
+            onMouseEnter={() => setIsTitleHovered(true)}
+            onMouseLeave={() => setIsTitleHovered(false)}
             style={{ 
-              textDecoration: 'none'
+              textDecoration: isTitleHovered ? 'underline' : 'none',
+              display: 'inline-flex',
+              maxWidth: '100%',
+              color: theme.colors.background[0]
             }}
           >
             <Title 
               order={2} 
-              ta={{ base: 'left', sm: 'right' }}
-              style={{ display: 'flex', alignItems: 'right', justifyContent: 'flex-start', gap: '5px' }}
+              ta="left"
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '5px', maxWidth: '100%' }}
               c={theme.colors.background[0]}
             >
               {sectionTitle}
-              <Arrow size={80} color={ theme.colors.background[0] } />
+              {shouldShowArrow ? <Arrow size={80} color={ theme.colors.background[0] } /> : null}
             </Title>
           </a>
         </Stack>
