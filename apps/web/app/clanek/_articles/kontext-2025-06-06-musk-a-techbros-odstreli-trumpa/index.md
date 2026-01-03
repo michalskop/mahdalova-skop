@@ -1,7 +1,7 @@
 ---
 title: "🤖 Možnost: Musk a techbros odstřelí Trumpa a nastoupí Vance"
 date: "2025-06-06"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Mezi Donaldem Trumpem a Elonem Muskem viditelně došlo k zásadnímu rozkolu. Donedávna spojenci, které spojovala cynická hra na svobodu, se po dnešní noci ocitají na opačných stranách barikády."
 coverImage: "images/trump_vs_musk.jpg"
 filter: ["kontext"]

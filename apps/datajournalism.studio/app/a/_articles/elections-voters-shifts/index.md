@@ -1,7 +1,7 @@
 ---
 title: "Voter Shifts Between Elections: Insights from Statistical Analysis"  
 date: "2024-06-30"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Detailed data analysis reveal hidden changes between elections."  
 coverImage: "images/main.png"  
 filter: ["work"]  

@@ -1,7 +1,7 @@
 ---
 title: "Německý volební model: Kdo má šanci usednout ve Spolkovém sněmu"
 date: "2025-01-19"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Od posledních všeobecných voleb zpracováváme všechny relevantní průzkumy a zaznamenáváme vývoj šancí jednotlivých politických stran."
 coverImage: "images/mandaty-nemecko-poll-of-polls-pruzkumy-2025.jpg"
 filter: ["analýza"]

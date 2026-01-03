@@ -1,7 +1,7 @@
 ---
 title: "Jak se živí nenávist: příběh jednoho videa"
 date: "2024-11-14"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Jedno video, špatný kontext a příběh, který ilustruje, jak snadno může dojít k manipulaci veřejného mínění."
 coverImage: "images/amsterdam-udalosti.png"
 filter: ["kontext"]

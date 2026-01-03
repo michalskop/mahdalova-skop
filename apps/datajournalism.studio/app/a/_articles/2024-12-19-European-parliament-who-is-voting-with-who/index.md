@@ -1,7 +1,7 @@
 ---
 title: "Members of the European Parliament: Who Votes with Whom, Who is Part of the European Mainstream, and Who is Not"  
 date: "2024-12-19"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "European Parliament 2024."  
 coverImage: "images/main.png"  
 filter: ["blog"] 

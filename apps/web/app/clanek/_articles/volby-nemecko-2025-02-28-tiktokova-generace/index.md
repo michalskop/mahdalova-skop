@@ -1,7 +1,7 @@
 ---
 title: "Německé volby: Radikální a rozdělená tiktoková generace"
 date: "2025-02-28"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Nejmladší “tiktoková” generace v německých volbách volila - shodně s Tiktokem."
 coverImage: "images/main.webp"
 filter: ["analýza"]

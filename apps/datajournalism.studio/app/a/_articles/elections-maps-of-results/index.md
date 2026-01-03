@@ -1,7 +1,7 @@
 ---
 title: "Maps of Election Results: Deeper Insights on First Sight"  
 date: "2024-11-10"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Telling the detailed story of the elections."  
 coverImage: "images/main.png"  
 filter: ["work"]  

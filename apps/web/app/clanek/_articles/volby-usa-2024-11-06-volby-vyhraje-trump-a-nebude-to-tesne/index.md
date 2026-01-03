@@ -1,7 +1,7 @@
 ---
 title: "Volby vyhraje Trump a nebude to těsně"
 date: "2024-11-06"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Naše predikce ukazuje s 80% jistotou, že příštím americkým prezidentem se stane Donald Trump."
 coverImage: "images/USA-volby-2024-predikce.png"
 filter: ["analýza"]

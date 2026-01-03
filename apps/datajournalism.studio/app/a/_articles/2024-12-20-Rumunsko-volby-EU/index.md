@@ -2,7 +2,7 @@
 
 title: "Rumunsko v epicentru hybridní války. Stejně jako my"  
 date: "2024-12-20"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Hybridní kampaně, manipulace algoritmů a vlivové operace ukazují, jak lze destabilizovat demokratické procesy."  
 coverImage: "images/main.webp"  
 filter: ["kontext"]  

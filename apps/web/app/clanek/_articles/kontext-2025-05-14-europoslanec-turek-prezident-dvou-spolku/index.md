@@ -1,7 +1,7 @@
 ---
 title: "Europoslanec Turek: Prezident dvou spolků, jeden má 3 členy, druhý nefunguje"
 date: "2025-05-14"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Pokračujeme v odhalování skutečného příběhu europoslance Filipa Turka (Motoristé/Patrioti). Po prozkoumání jeho závodní kariéry se nyní zaměřujeme na další oblast jeho veřejné prezentace."
 coverImage: "images/main.webp"
 filter: ["kontext"]

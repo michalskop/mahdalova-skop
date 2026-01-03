@@ -1,7 +1,7 @@
 ---
 title: "Unikátní volební model: Kdo má šanci na křesla ve Sněmovně a kdo bude vládnout"
 date: "2025-02-18"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Stejně jako v předchozím volebním období, i nyní od posledních sněmovních voleb zpracováváme všechny relevantní průzkumy..."
 coverImage: "images/mandaty-cesko-poll-of-polls-pruzkumy-2025.jpg"
 filter: ["analýza"]

@@ -1,7 +1,7 @@
 ---
 title: "Predikce, která se vám nebude líbit"
 date: "2024-11-05"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Čekáte těsné vítězství Trumpa či Harris? Vůbec to tak být nemusí. Ukážeme vám, že rozdíly mohou být mnohem větší a že to není chyba průzkumných agentur."
 coverImage: "images/USA_volby_predikce.png"
 filter: ["analýza"]

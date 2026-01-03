@@ -1,7 +1,7 @@
 ---
 title: "40 dní do voleb a Babiš na 95 % premiérem. Co by se ale stalo, kdyby soudy vyhověly žalobám na tzv. nepřiznané koalice?"
 date: "2025-08-24"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Zdá se být rozhodnuto. Soudní spory o 'skryté koalice' by ale mohly dramaticky změnit politickou mapu."
 coverImage: "images/main.webp"
 filter: ["analýza"]

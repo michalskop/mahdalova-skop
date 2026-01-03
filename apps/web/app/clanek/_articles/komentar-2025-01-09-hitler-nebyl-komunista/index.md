@@ -1,7 +1,7 @@
 ---
 title: "Glosa: Hilter nebyl komunista"
 date: "2025-01-09"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Jak se nakládá s ideologickými nálepkami"
 coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]

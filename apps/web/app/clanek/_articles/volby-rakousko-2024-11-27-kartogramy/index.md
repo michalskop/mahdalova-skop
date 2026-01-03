@@ -1,7 +1,7 @@
 ---
 title: "Naše kartogramy oceňují i v Rakousku"
 date: "2024-11-27"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Pochval a uznání není nikdy dost 😊⁣ Naše kartogramy si jako ukázkové vybrali nejvyšší statistici Rakouska."
 coverImage: "images/Rakousko-kartogramy.png"
 filter: ["kontext"]

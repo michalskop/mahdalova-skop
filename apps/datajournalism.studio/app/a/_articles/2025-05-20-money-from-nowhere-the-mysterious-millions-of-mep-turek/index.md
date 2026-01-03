@@ -1,7 +1,7 @@
 ---
 title: "Money from Nowhere: The Mysterious Millions of MEP Turek"
 date: "2025-05-20"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "In the financial declarations of Czech MEP Filip Turek, we have uncovered major discrepancies that raise fundamental questions: where do his declared incomes actually come from, and why do his claims and financial statements completely contradict each other?"
 coverImage: "images/main.webp"
 filter: ["blog"]

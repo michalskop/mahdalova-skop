@@ -1,7 +1,7 @@
 ---
 title: "Rusko a Ukrajina: čtrnáct znaků fašismu"
 date: "2025-01-06"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Proč by nás mělo zajímat, když někdo označí stát za fašistický? Podívejte se na varovné signály"
 coverImage: "images/Indikatory_fasismu_podle_Eca.png"
 filter: ["kontext"]
