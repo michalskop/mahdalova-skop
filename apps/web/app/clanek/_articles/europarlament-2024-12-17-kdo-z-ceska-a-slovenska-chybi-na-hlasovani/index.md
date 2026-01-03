@@ -1,7 +1,7 @@
 ---
 title: "Europoslanci: Kdo z Česka a Slovenska chybí na hlasování"
 date: "2024-12-17"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Tento týden probíhá ve Štrasburku 9. zasedání Evropského parlamentu v tomto volebním období."
 coverImage: "images/main.webp"
 filter: ["analýza"]

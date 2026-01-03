@@ -1,7 +1,7 @@
 ---
 title: "Kdyby se dnes konaly volby, čtyřkoalice by se nad vodou držela jen stěží"
 date: "2024-10-31"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Naděje na získání většiny 101 mandátů jsou nyní pro čtyřčlennou koalici bez Pirátů (ODS, TOP 09, KDU-ČSL a STAN) mizivé."
 coverImage: "images/poll_tracker.png"
 filter: ["analýza"]

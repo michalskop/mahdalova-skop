@@ -1,7 +1,7 @@
 ---
 title: "Jak Trump vzkřísil kanadské liberály"
 date: "2025-04-29"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Ještě na začátku roku 2025 to vypadalo jasně. Justin Trudeau byl na odpis, liberální strana ztrácela v průzkumech přes 20 bodů a konzervativci mířili k pohodlnému vítězství. A pak přišel Trump."
 coverImage: "images/kanada-volby-2025.jpg"
 filter: ["kontext"]

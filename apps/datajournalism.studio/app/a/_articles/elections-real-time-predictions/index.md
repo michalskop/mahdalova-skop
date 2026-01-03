@@ -1,7 +1,7 @@
 ---
 title: "Real-Time Predictions of Election Results: The New Normal"  
 date: "2024-09-20"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Real-time predictions are reshaping election nights."  
 coverImage: "images/main.png"  
 filter: ["work"]  

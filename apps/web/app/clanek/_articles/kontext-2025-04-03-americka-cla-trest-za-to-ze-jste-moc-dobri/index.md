@@ -1,7 +1,7 @@
 ---
 title: "Americká cla: Trest za to, že jste moc dobří"
 date: "2025-04-03"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Prezident Trump představil nová cla na dovoz do USA — třeba 20 % na zboží z EU. Říká jim „reciproční“, ale ve skutečnosti jsou to cla z obchodního schodku."
 coverImage: "images/trump_clown.webp"
 filter: ["kontext"]

@@ -1,7 +1,7 @@
 ---
 title: "Jak europoslanec Turek doopravdy závodil ve formuli"
 date: "2025-05-13"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Životní Turkův úspěch v závodech formulí byl závod v květnu 2017, kdy v nejslabší kategorii formulí porazil oba dva další jezdce: patnáctiletého juniora z Dominikánské republiky, který právě přesedlal z motokár, a obvodního lékaře z východního Německa. Více závodníků v jeho kategorii nejelo. Celkově v tomto závodě dojel čtvrtý od konce."
 coverImage: "images/helma.webp"
 filter: ["analýza"]

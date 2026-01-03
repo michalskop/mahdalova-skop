@@ -1,7 +1,7 @@
 ---
 title: "Obviňování oběti: Trumpova diplomacie v područí autoritářů"
 date: "2025-03-01"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Role Spojených států coby garanta stability se změnila. Trumpova diplomacie nyní obviňuje oběť, oslabuje spojence a posiluje agresora."
 coverImage: "images/ukrajina-zelensky.jpg"
 filter: ["kontext"]

@@ -1,7 +1,7 @@
 ---
 title: "Ženy v politice? Čím výše, tím méně žen."  
 date: "2025-03-08"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Čím výš v politice, tím méně žen. Jak si vedou české kraje a proč jinde mají žen ve vedení víc?"  
 coverImage: "images/main.png"  
 filter: ["analýza"]  

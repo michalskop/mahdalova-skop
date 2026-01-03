@@ -1,7 +1,7 @@
 ---
 title: "Case Study: Electoral Forensics in European Parliament Election"  
 date: "2024-07-08"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "We identified errors in counting electoral votes in several polling stations."  
 coverImage: "images/main.png"  
 filter: ["blog"]  

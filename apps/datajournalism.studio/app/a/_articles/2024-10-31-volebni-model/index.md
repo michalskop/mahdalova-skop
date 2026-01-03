@@ -1,7 +1,7 @@
 ---
 title: "Volební model: Kdo má šanci na křesla ve Sněmovně a kdo bude vládnout"
 date: "2024-10-31"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Kdyby se dnes konaly volby, čtyřkoalice by se nad vodou držela jen stěží."
 coverImage: "images/poll_tracker.png"
 filter: [""]

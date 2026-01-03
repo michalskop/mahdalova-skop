@@ -1,7 +1,7 @@
 ---
 title: "Voting Advice Applications - The Most Popular Pre-Election Apps"
 date: "2025-01-01"
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "How voting advice applications increase informed political participation."  
 coverImage: "images/main.png"  
 filter: ["work"]  

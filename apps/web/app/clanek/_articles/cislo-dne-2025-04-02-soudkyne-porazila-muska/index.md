@@ -1,7 +1,7 @@
 ---
 title: "Číslo dne: 20 milionů dolarů (nestačilo)"
 date: "2025-04-02"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "aneb Soudkyně Susan Crawford porazila Muska"
 coverImage: "images/cislo-dne-soudkyne-porazila-muska.jpg"
 filter: ["kontext"]

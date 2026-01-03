@@ -68,6 +68,7 @@ export async function getArticleBySlug(directorySlug: string) {
     title: data.title || 'Untitled',
     date: data.date || '',
     author: data.author || 'Anonymous',
+    translator: data.translator || '',
     excerpt: data.excerpt || '',
     coverImage: data.coverImage || null,
   };

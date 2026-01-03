@@ -1,7 +1,7 @@
 ---
 title: "Digitalizace stavebního řízení: Analýza prvních dostupných dat"
 date: "2024-10-10"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "První data z digitalizovaného systému stavebních řízení (DSŘ): systém zvládá rostoucí objem žádostí bez zjevných známek přetížení."
 coverImage: "images/main.png"
 filter: ["analýza"]

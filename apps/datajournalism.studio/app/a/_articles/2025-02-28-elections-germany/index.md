@@ -1,7 +1,7 @@
 ---
 title: "German Elections: Did the Eastern Bloc Vote Radically? Not Exactly"
 date: "2025-02-28"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "The German parliamentary elections were held on Sunday. At first glance, it may seem that former East Germany has become radicalized, but this is quite a distorted view."
 coverImage: "images/map_cartogram_germany_winner.webp"
 filter: ["blog"]

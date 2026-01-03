@@ -1,7 +1,7 @@
 ---
 title: "Německé volby: Ostblok volil radikálně? Ne tak docela"
 date: "2025-02-27"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "V neděli se konaly německé parlamentní volby. Na první pohled se může zdát, že se někdejší Východní Německo zradikalizovalo, jenže to je dost zkreslený pohled."
 coverImage: "images/cartogram_germany_winner.png"
 filter: ["analýza"]

@@ -2,7 +2,7 @@
 title: "Europoslanci: Kdo hlasuje s kým, kdo je součást evropského
 mainstreamu a kdo je mimo"
 date: "2024-12-19"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Unikátní analýza shody hlasování v Europarlamentu za rok 2024."
 coverImage: "images/main.webp"
 filter: ["analýza"]

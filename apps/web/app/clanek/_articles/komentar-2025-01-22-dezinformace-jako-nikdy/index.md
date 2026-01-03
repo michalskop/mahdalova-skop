@@ -1,7 +1,7 @@
 ---
 title: "Glosa: Dezinformace jako nikdy"
 date: "2026-01-31"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Musk: Dezinformace jako nikdy"
 coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]

@@ -1,7 +1,7 @@
 ---
 title: "Peníze odnikud: Záhadné miliony europoslance Turka"
 date: "2025-05-16"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Ve finančních prohlášeních europoslance Turka jsme odhalili velké nesrovnalosti, které vyvolávají zásadní otázky: odkud skutečně plynou jeho deklarované příjmy a proč se jeho tvrzení a výkazy zcela rozcházejí?"
 coverImage: "images/main.webp"
 filter: ["analýza"]

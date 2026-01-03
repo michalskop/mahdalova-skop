@@ -1,7 +1,7 @@
 ---
 title: "Byl Zelenskyj v obleku, nebo ne? Otázka za 3 miliardy!"
 date: "2025-07-07"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Na první pohled banální otázka: měl ukrajinský prezident Volodymyr Zelenskyj na summitu NATO ve dnech 24.–25. června 2025 na sobě oblek, nebo neměl? Ve skutečnosti se kolem této otázky roztočila sázková spirála, na jejímž konci leží v přepočtu více než tři miliardy korun.."
 coverImage: "images/main.webp"
 filter: ["kontext"]

@@ -1,7 +1,7 @@
 ---
 title: "Europoslanci: Kdo hlasuje pro-rusky a kdo k Rusku kriticky"
 date: "2024-12-23"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Většina silně pro-rusky hlasujících europoslanců je jen ze 3 zemí: Německa, Slovenska a Česka."
 coverImage: "images/main.webp"
 filter: ["analýza"]

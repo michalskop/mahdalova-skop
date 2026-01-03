@@ -1,10 +1,12 @@
 // components/clanek/ArticleRenderer.tsx
+
 'use client';
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
 import { Global } from '@mantine/styles';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
@@ -14,6 +16,7 @@ import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
+import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 // import yaml from 'js-yaml';
 
 interface ArticleProps {
@@ -21,6 +24,7 @@ interface ArticleProps {
   title?: string;
   date?: string;
   author?: string;
+  translator?: string;
   slug: string;
   scrollyContent?: any;     // Add scrollyContent to the ArticleProps
   backgroundColor?: string;  // Optional background color
@@ -33,6 +37,7 @@ export function ArticleRenderer({
   title,
   date,
   author,
+  translator,
   slug = '',
   scrollyContent,
   backgroundColor,
@@ -219,8 +224,47 @@ export function ArticleRenderer({
         )}
 
         {date && (
-          <Text size="sm" c={textColor || "dimmed"}>
-            {author ? `${author.toUpperCase()} • ` : ''}
+          <Text size="sm" c={textColor || 'dimmed'}>
+            {author ? (
+              <>
+                {splitAuthors(author).map((authorName, index, arr) => (
+                  <span key={`${authorName}-${index}`}>
+                    <Anchor
+                      component={Link}
+                      href={`/autor/${normalizeAuthor(authorName)}`}
+                      underline="hover"
+                      c={textColor || 'dimmed'}
+                    >
+                      {authorName.toUpperCase()}
+                    </Anchor>
+                    {index < arr.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+              </>
+            ) : null}
+
+            {(author || translator) ? ' • ' : ''}
+
+            {translator ? (
+              <>
+                {'PŘEKLAD: '}
+                {splitAuthors(translator).map((translatorName, index, arr) => (
+                  <span key={`${translatorName}-${index}`}>
+                    <Anchor
+                      component={Link}
+                      href={`/autor/${normalizeAuthor(translatorName)}`}
+                      underline="hover"
+                      c={textColor || 'dimmed'}
+                    >
+                      {translatorName.toUpperCase()}
+                    </Anchor>
+                    {index < arr.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+                {' • '}
+              </>
+            ) : null}
+
             {new Date(date).toLocaleDateString('cs-CZ')}
           </Text>
         )}

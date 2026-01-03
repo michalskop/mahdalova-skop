@@ -1,7 +1,7 @@
 ---
 title: "Data-driven Analytical Election Forensics"  
 date: "2024-07-08"  
-author: "Mahdalová & Škop"  
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Analytical methods to detect irregularities in election results."  
 coverImage: "images/main.png"  
 filter: ["work"]  

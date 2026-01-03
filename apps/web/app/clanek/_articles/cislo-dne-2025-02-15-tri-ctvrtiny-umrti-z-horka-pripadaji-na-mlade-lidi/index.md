@@ -1,7 +1,7 @@
 ---
 title: "Změny klimatu: 75 % úmrtí způsobených horkem v Mexiku připadá na lidi mladší 35 let"
 date: "2025-02-15"
-author: "Mahdalová & Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Zatímco dosavadní výzkumy varovaly před riziky pro seniory, aktuální data ukazují, že největší riziko představují vedra pro mladé lidi ve věku 18 až 35 let."
 coverImage: "images/image1.webp"
 filter: ["kontext"]
