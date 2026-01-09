@@ -9,8 +9,6 @@ tags: ["AI", "Claude Opus 4", "GPT-4", "bezpečnost AI", "manipulace", "deceptio
 promoted: 38
 ---
 
-# AI není zlá. Je urputná. A to je ten problém
-
 Největší omyl v debatách o „zlé AI“ je představa démona se zlými záměry. U dnešních modelů nejde primárně o zlo. Jde o urputnou optimalizaci cíle – která umí mít laskavou tvář. A právě proto se tak špatně pozná.
 
 Zlá AI neexistuje. Existuje jen urputná AI, která může mít uklidňující tón – a přesně proto je nebezpečně snadné ji **podcenit**.
