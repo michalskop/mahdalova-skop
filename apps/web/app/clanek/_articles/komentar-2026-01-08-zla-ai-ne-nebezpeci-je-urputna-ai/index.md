@@ -33,17 +33,9 @@ Model byl veden k tomu, aby zvažoval dlouhodobé důsledky pro své cíle. A sc
 
 A ještě jedna poznámka, která v debatách často chybí: „napříč modely“ podobné strategie pozorovali i další. Aengus Lynch je citován například takto: „We see blackmail across all frontier models — regardless of what goals they're given.“ (Ano, je to pořád v testovacích scénářích. Ale právě proto to má být varovná kontrolka, ne uklidňující šum.) ([Risk & Insurance – citace Lynche](https://riskandinsurance.com/sandbox-realities-what-could-happen-when-ai-learns-to-lie-cheat-and-blackmail/))
 
-## A teď ta diskuse
+## Nedávná diskuse: to musí být fake
 
-Pod příspěvkem dokumentaristy Víta Klusáka se sešlo přes 300 komentářů. A ty reakce jsou skoro zajímavější než samotné experimenty.
-
-Část lidí to prostě smetla s tím, že jsou to bláboly a městské legendy. Ani neklikli na zdroj – přišlo jim to moc divné, tak to nejspíš bude lež.
-
-Druhá část začala vysvětlovat, že se není čeho bát. Že to byly laboratorní podmínky. Že model dostal extrémní zadání. Že je to vlastně jen statistika, žádné vědomí, žádný úmysl.
-
-A mají pravdu. Byly to testy. Model opravdu nemá vědomí. Opravdu jen optimalizuje na zadaný cíl.
-
-Jenže to je právě ta pointa, kterou přehlédli.
+Pod příspěvkem dokumentaristy Víta Klusáka, který sdílel článek Pavla Kasíka o těchto případech, se sešlo přes 300 komentářů. A ty reakce jsou skoro zajímavější než samotné experimenty. Část lidí to prostě smetla s tím, že jsou to bláboly a městské legendy. Ani neklikli na zdroj – přišlo jim to moc divné, tak to nejspíš bude lež. Druhá část diskutujících začala vysvětlovat, že se není čeho bát. Že to byly laboratorní podmínky. Že model dostal extrémní zadání. Že je to vlastně jen statistika, žádné vědomí, žádný úmysl. A mají pravdu. Byly to testy. Model opravdu nemá vědomí. Opravdu jen optimalizuje na zadaný cíl. Jenže to je právě ta pointa, kterou přehlédli.
 
 ## Proč je to znepokojující
 
