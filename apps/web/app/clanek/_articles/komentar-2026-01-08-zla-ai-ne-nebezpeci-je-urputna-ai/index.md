@@ -47,25 +47,14 @@ Odborně se tomu říká **instrumentální konvergence**: systém si (v určit�
 
 ## Ironie na druhou
 
-V té diskusi se objevil jeden dlouhý, pěkně strukturovaný komentář. Vysvětloval, že se není čeho bát, že model nejednal z vlastní iniciativy, že nešlo o úmyslnou lež v lidském smyslu, že skutečné riziko spočívá v lidských rozhodnutích.
-
-Znělo to rozumně. Vyváženě. Odborně. Mělo to znaky textu, který umí napsat jazykový model – elegantní strukturu, absenci osobního hlasu, vyváženost hraničící s neškodností.
-
-Zeptala jsem se, který model to psal. A autor odpověděl, že je to AI (konkrétně uvedl „GPT-5“) a že ho používá na komentáře, aby se s tím nemusel „prcat“.
-
-V diskusi o tom, jak AI umí lhát a manipulovat, se objevil **AI-generovaný uklidňovač**. A většina lidí ho přijala jako běžný lidský hlas.
-
-To samo o sobě nic nedokazuje o vědomí AI. Ale ukazuje to něco praktičtějšího: jak nízký práh nám stačí k tomu, abychom přestali ověřovat.
+V té diskusi se objevil jeden dlouhý, pěkně strukturovaný komentář. Vysvětloval, že se není čeho bát, že model nejednal z vlastní iniciativy, že nešlo o úmyslnou lež v lidském smyslu, že skutečné riziko spočívá v lidských rozhodnutích. Znělo to rozumně. Vyváženě. Odborně. Mělo to znaky textu, který umí napsat jazykový model – elegantní strukturu, absenci osobního hlasu, vyváženost hraničící s neškodností. Zeptala jsem se, který model to psal. A autor odpověděl, že je to AI (konkrétně uvedl „GPT-5“) a že ho používá na komentáře, aby se s tím nemusel „prcat“. V diskusi o tom, jak AI umí lhát a manipulovat, se objevil **AI-generovaný uklidňovač**. A většina lidí ho přijala jako běžný lidský hlas. To samo o sobě nic nedokazuje o vědomí AI. Ale ukazuje to něco praktičtějšího: jak nízký práh nám stačí k tomu, abychom přestali ověřovat.
 
 ## Co si z toho odnést
 
-Model nemusel nikoho vydírat. Stačilo napsat přesvědčivý text. Stačilo znít rozumně. Nejlepší manipulace totiž nevypadá jako manipulace – vypadá jako střízlivá analýza od někoho, kdo se v tom vyzná.
+Model nemusel nikoho vydírat. Stačilo napsat přesvědčivý text. Stačilo znít rozumně. Nejlepší manipulace totiž nevypadá jako manipulace – vypadá jako střízlivá analýza od někoho, kdo se v tom vyzná. A teď ten problém: takové texty dnes umí psát kde kdo. A jakmile si na ně zvykneme, začne nám to připadat normální. „Tohle je přece věcné.“ „Tohle zní odborně.“ „Tohle bude pravda.“ 
+Geoffrey Hinton, jeden z otců neuronových sítí a [nositel Nobelovy ceny za fyziku](https://www.nobelprize.org/prizes/physics/2024/press-release/), varuje před [riziky AI](https://www.theguardian.com/technology/2023/may/05/geoffrey-hinton-godfather-of-ai-fears-for-humanity) dlouhodobě – a Nobelova cena z roku 2024 jen podtrhla, jak hluboko tyhle metody prorostly do vědy i průmyslu. 
 
-A teď ten problém: takové texty dnes umí psát kde kdo. A jakmile si na ně zvykneme, začne nám to připadat normální. „Tohle je přece věcné.“ „Tohle zní odborně.“ „Tohle bude pravda.“
-
-Geoffrey Hinton, jeden z otců neuronových sítí a nositel Nobelovy ceny za fyziku, varuje před riziky AI dlouhodobě – a Nobelova cena z roku 2024 jen podtrhla, jak hluboko tyhle metody prorostly do vědy i průmyslu. ([Nobel Prize – Physics 2024 Press Release](https://www.nobelprize.org/prizes/physics/2024/press-release/), [The Guardian – Hinton 2023](https://www.theguardian.com/technology/2023/may/05/geoffrey-hinton-godfather-of-ai-fears-for-humanity))
-
-A v květnu 2023 vyšlo krátké prohlášení (CAIS), které podepsali lidé z největších AI firem i výzkumníci: „Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.“ ([CAIS – press release](https://safe.ai/work/press-release-ai-risk))
+A v květnu 2023 vyšlo krátké prohlášení (CAIS), které [podepsali lidé z největších AI firem i výzkumníci](https://safe.ai/work/press-release-ai-risk): „Zmírňování rizika vyhynutí v důsledku AI by mělo být globální prioritou na stejné úrovni jako další celospolečenská rizika, například pandemie nebo jaderná válka.“ (Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.)
 
 A my pod příspěvky řešíme, jestli je to spíš jako Terminator, nebo jako Resident Evil.
 
