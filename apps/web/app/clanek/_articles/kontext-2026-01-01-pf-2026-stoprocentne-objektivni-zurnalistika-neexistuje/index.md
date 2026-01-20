@@ -16,4 +16,4 @@ O co se ale můžeme poctivě snažit, je být přesní, ověřovat, dávat pros
 
 *Kateřina & Michal*
 
-<iframe width="560%" height="315" src="https://www.youtube.com/embed/77kKwuCRlcI?si=B4xwQTtUbM3p036i" title="Stoprocentně objektivní žurnalistika neexistuje - glosa - Mahdalová & Škop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/ia_LECQmW0c?si=Ru-5vuIeiYnt8VN0" title="Stoprocentně objektivní žurnalistika neexistuje - glosa - Mahdalová & Škop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
