@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Je fér říct nahlas, z jakých pozic píšeme"
 coverImage: "images/pf-2026-datatimes.webp"
 filter: ["kontext"]
-tags: ["žurnalistika", "objektivita", "novináři", "demokracie"]
+tags: ["video", "žurnalistika", "objektivita", "novináři", "demokracie"]
 promoted: 60
 ---
 **Je fér říct nahlas, z jakých pozic píšeme**
@@ -16,3 +16,4 @@ O co se ale můžeme poctivě snažit, je být přesní, ověřovat, dávat pros
 
 *Kateřina & Michal*
 
+<iframe width="560%" height="315" src="https://www.youtube.com/embed/77kKwuCRlcI?si=B4xwQTtUbM3p036i" title="Stoprocentně objektivní žurnalistika neexistuje - glosa - Mahdalová & Škop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
