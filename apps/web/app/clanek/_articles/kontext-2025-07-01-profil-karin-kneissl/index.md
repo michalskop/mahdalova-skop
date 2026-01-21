@@ -2,6 +2,7 @@
 title: "Tanec s Putinem: jak si bývalá rakouská ministryně zahraničí našla nový domov v Rusku"
 date: "2025-07-01"
 author: "Amanda Coakley"
+ranslator: "Kateřina Mahdalová"
 excerpt: "Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou."
 coverImage: "images/kneissl-putin-tanec-profil-datatimes-guardian-rakousko-rusko.webp"
 filter: ["kontext"]
@@ -9,7 +10,7 @@ tags: ["profil", "Rakousko-Rusko", "Rakousko", "Rusko", "Karin Kneissl", "Vladim
 promoted: 49
 ---
 
-*| [z původního textu Amandy Coakley v deníku The Guardian](https://www.theguardian.com/world/2025/jul/01/vladimir-putin-foreign-minister-karin-kneissl-russian-president-st-petersburg-vienna-moscow) ze dne 1. 7. 2025 přeložila Kateřina Mahdalová*
+*| přeloženo z původního textu Amandy Coakley [v deníku The Guardian](https://www.theguardian.com/world/2025/jul/01/vladimir-putin-foreign-minister-karin-kneissl-russian-president-st-petersburg-vienna-moscow) ze dne 1. 7. 2025*
 
 ✤
 
