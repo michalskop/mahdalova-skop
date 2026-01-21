@@ -13,8 +13,6 @@ Peníze - nějak s nimi vyjít musíme. I když někdy to jde hodně ztuha. Ovš
 
 Chudoba není o tom, že si neumíte spočítat peníze. Je o tom, že vám vypadne příjem, onemocníte, odejde partner nebo se ocitnete v druhotné platební neschopnosti třeba proto, že vám zaměstnavatel nezaplatí včas (někdy dokonce vůbec) – a najednou obracíte každou korunu. Pro matky samoživitelky je hlídání cash flow každodenní realita. 
 
-✤
-
 Dvě generace, dva pohledy na stejný problém. Data, výzkumy i osobní zkušenosti s tím, jak chudoba zasahuje nejen nás, ale i naše děti.
 
 ✤
