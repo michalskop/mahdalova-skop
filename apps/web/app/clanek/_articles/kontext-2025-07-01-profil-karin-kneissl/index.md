@@ -6,8 +6,8 @@ translator: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou."
 coverImage: "images/kneissl-putin-tanec-profil-datatimes-guardian-rakousko-rusko.webp"
 filter: ["kontext"]
-tags: ["Rakousko-Rusko", "Rakousko", "Rusko", "Karin Kneissl", "Vladimir Putin", "FPÖ", "Svobodní", "zahraniční politika", "ruský vliv", "Sebastian Kurz", "Ibiza-gate", "aféra"]
-promoted: 75
+tags: ["profil", "Rakousko-Rusko", "Rakousko", "Rusko", "Karin Kneissl", "Vladimir Putin", "FPÖ", "Svobodní", "zahraniční politika", "ruský vliv", "Sebastian Kurz", "Ibiza-gate", "aféra"]
+promoted: 49
 ---
 
 *| [přeloženo z původního textu Amandy Coakley v deníku The Guardian](https://www.theguardian.com/world/2025/jul/01/vladimir-putin-foreign-minister-karin-kneissl-russian-president-st-petersburg-vienna-moscow) ze dne 1. 7. 2025*
@@ -18,11 +18,11 @@ Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 20
 
 ---
 
-Potíže začaly kvůli mrtvé kočce. Obyvatelé Seibersdorfu žili po léta vedle své nejslavnější sousedky víceméně v míru. Pravda, jednou si soused stěžoval na zápach od jejích koní. A ano, tu a tam se ozývaly narážky na její nedostatek „komunitního ducha": prý byla skvělá v rozdávání úkolů na sousedské akce, ale sama nikdy nepřiložila ruku k dílu — neosmažila řízek ani nepověsila girlandy. V zásadě ale vycházeli.
+Potíže začaly kvůli mrtvé kočce. Obyvatelé Seibersdorfu žili po léta vedle své nejslavnější sousedky víceméně v míru. Pravda, jednou si soused stěžoval na zápach od jejích koní. A ano, tu a tam se ozývaly narážky na její nedostatek „komunitního ducha" – prý byla skvělá v rozdávání úkolů na sousedské akce, ale sama nikdy nepřiložila ruku k dílu, nesmažila řízky ani nevěšela výzdobu. V zásadě ale vycházeli.
 
-Karin Kneissl byla „náplava" z Vídně, asi hodinu cesty na sever. V Seibersdorfu žila přes dvě desetiletí — nejprve v rozvrzaném starém bytě, pak si koupila dům poblíž hlavního náměstí. Přijela jako juniorní diplomatka, později se stala novinářkou na volné noze a následně začala přednášet mezinárodní vztahy na některých z nejprestižnějších rakouských institucí. Krátce také zasedala ve farní radě.
+Karin Kneissl byla „náplava" z Vídně, asi hodinu cesty na sever. V Seibersdorfu žila přes dvě desetiletí – nejprve v polorozpadlém starém bytě, pak si koupila dům poblíž hlavního náměstí. Přijela jako juniorní diplomatka, později se stala novinářkou na volné noze a následně začala přednášet mezinárodní vztahy na nejprestižnějších rakouských školách. Krátce také zasedala ve farní radě.
 
-*Karin Kneissl tančí s Vladimirem Putinem na svatební oslavě v Gamlitzu v Rakousku, 18. srpna 2018. Foto: Roland Schlager/AFP/Getty Images*
+✤
 
 V roce 2017 se Kneissl stala rakouskou ministryní zahraničí. Bylo to náhlé jmenování, které ve městě všechny překvapilo. Když se ale místní nad tím zamysleli, dávalo to jistý smysl. Kneissl byla opravdový originál, typ člověka, který vždycky dělal a říkal nečekané věci. Nikdy jste si nebyli jistí, kam zamíří dál — tak proč by to nemohlo být zrovna ministerstvo zahraničí?
 
