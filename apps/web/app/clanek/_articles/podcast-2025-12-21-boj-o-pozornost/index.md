@@ -13,7 +13,11 @@ Náš mozek není stavěný na svět, který mu každou vteřinu nabízí dalš�
 
 Zde si můžete přečíst zmiňovanou [esej Marie Anny Mahdalové](https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti), která téma ekonomie pozornosti rozebírá do hloubky.
 
+✤
+
 <div class="flourish-embed flourish-table" data-src="visualisation/27031161"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27031161/thumbnail" width="100%" alt="table visualization" /></noscript></div>
+
+✤
 
 **Z pozornosti se stala komodita.** Už v roce 1971 varoval Herbert Simon, že bohatství informací povede k chudobě pozornosti. Dnes o každou vteřinu našeho soustředění soupeří technologické firmy – a používají k tomu promyšlené zbraně. Infinite scroll, který zabraňuje přirozenému bodu zastavení. Dark patterns, které nás matou a manipulují. Algoritmy řízené umělou inteligencí, které se učí z naší historie, rychlosti čtení, dokonce i z mimovolních reakcí. Systém nás zná možná lépe, než my sami sebe.
 
