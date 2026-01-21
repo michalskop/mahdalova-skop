@@ -2,7 +2,6 @@
 title: "Tanec s Putinem: jak si bývalá rakouská ministryně zahraničí našla nový domov v Rusku"
 date: "2025-07-01"
 author: "Amanda Coakley"
-translator: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou."
 coverImage: "images/kneissl-putin-tanec-profil-datatimes-guardian-rakousko-rusko.webp"
 filter: ["kontext"]
@@ -10,33 +9,33 @@ tags: ["profil", "Rakousko-Rusko", "Rakousko", "Rusko", "Karin Kneissl", "Vladim
 promoted: 49
 ---
 
-*| [přeloženo z původního textu Amandy Coakley v deníku The Guardian](https://www.theguardian.com/world/2025/jul/01/vladimir-putin-foreign-minister-karin-kneissl-russian-president-st-petersburg-vienna-moscow) ze dne 1. 7. 2025*
-
----
-
-Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou.
-
----
-
-Potíže začaly kvůli mrtvé kočce. Obyvatelé Seibersdorfu žili po léta vedle své nejslavnější sousedky víceméně v míru. Pravda, jednou si soused stěžoval na zápach od jejích koní. A ano, tu a tam se ozývaly narážky na její nedostatek „komunitního ducha" – prý byla skvělá v rozdávání úkolů na sousedské akce, ale sama nikdy nepřiložila ruku k dílu, nesmažila řízky ani nevěšela výzdobu. V zásadě ale vycházeli.
-
-Karin Kneissl byla „náplava" z Vídně, asi hodinu cesty na sever. V Seibersdorfu žila přes dvě desetiletí – nejprve v polorozpadlém starém bytě, pak si koupila dům poblíž hlavního náměstí. Přijela jako juniorní diplomatka, později se stala novinářkou na volné noze a následně začala přednášet mezinárodní vztahy na nejprestižnějších rakouských školách. Krátce také zasedala ve farní radě.
+*| [z původního textu Amandy Coakley v deníku The Guardian](https://www.theguardian.com/world/2025/jul/01/vladimir-putin-foreign-minister-karin-kneissl-russian-president-st-petersburg-vienna-moscow) ze dne 1. 7. 2025 přeložila Kateřina Mahdalová*
 
 ✤
 
-V roce 2017 se Kneissl stala rakouskou ministryní zahraničí. Bylo to náhlé jmenování, které ve městě všechny překvapilo. Když se ale místní nad tím zamysleli, dávalo to jistý smysl. Kneissl byla opravdový originál, typ člověka, který vždycky dělal a říkal nečekané věci. Nikdy jste si nebyli jistí, kam zamíří dál — tak proč by to nemohlo být zrovna ministerstvo zahraničí?
+Karin Kneissl se dostala na titulní stránky po celém světě, když v roce 2018 pozvala ruského prezidenta na svou svatbu. O pět let později se přestěhovala do Petrohradu. Skandál odhalil temnou pravdu o vazbách mezi Vídní a Moskvou.
 
-Incident s kočkou se odehrál těsně předtím, než se ujala funkce — alespoň tak si to pamatuje Franz Püreschitz, místostarosta. Jednoho dne, zdánlivě zničehonic, Kneissl prohlásila, že někdo ve městě úmyslně zabil její milovanou kočku — a co hůř, že zbytky jejího těla nechal přímo před jejími dveřmi. Podle Kneisslové to byl důkaz, že se proti ní obrátili všichni obyvatelé. Každý přece věděl, jak moc miluje zvířata. Měla slepice, psy, kočky a malé stádo poníků. Nic ji prý nedělalo šťastnější než čas strávený s nimi. Teď se prý někdo zaměřil na jedno z nich.
+✤
 
-Kneissl nikdy otevřeně neřekla, z čeho podezřívá pachatele a jaký měl motiv. Püreschitz ale předpokládal, že si mohla myslet, že to souvisí s její čerstvě navázanou blízkostí ke krajně pravicové Svobodné straně (FPÖ). Pokud to tak bylo, moc to nedávalo smysl: v Seibersdorfu volí mnoho lidí konzervativní i krajně pravicové strany. Žádné spiknutí proti ní neexistovalo, říká Püreschitz. „Byla to jasná nehoda; my nejsme zabijáci koček," řekl mi loni, když jsme stáli před bývalým domem Kneisslové, a v jeho tváři bylo vidět nevěřícné pobavení.
+Potíže začaly kvůli mrtvé kočce. Obyvatelé Seibersdorfu žili po léta vedle své nejslavnější sousedky víceméně v míru. Pravda, jednou si soused stěžoval na zápach od jejích koní. A ano, tu a tam se ozývaly narážky na její nedostatek „komunitního ducha" – prý byla skvělá v rozdávání úkolů na sousedské akce, ale sama nikdy nepřiložila ruku k dílu, nesmažila řízky ani nevěšela výzdobu. V zásadě ale vycházeli.
+
+Karin Kneissl byla „náplava" z Vídně, asi hodinu cesty na sever. V Seibersdorfu žila přes dvě desetiletí – nejprve v polorozpadlém starém bytě, pak si koupila dům poblíž hlavního náměstí. Přijela jako juniorní diplomatka, později se stala novinářkou na volné noze a následně začala přednášet mezinárodní vztahy na nejprestižnějších rakouských školách. Krátce také zasedala v místním zastupitelstvu.
+
+✤
+
+V roce 2017 se Kneissl stala rakouskou ministryní zahraničí. Bylo to náhlé jmenování, které ve městě všechny překvapilo. Když se nad tím ale obyvatelé Seibersdorfu zamysleli, dávalo to jistý smysl. Karin Kneissl byla vždy vcelku výstřední; je to ten typ člověka, co dělá a říká věci, které nejde snadno předvídat. Nikdy jste neměli jistotu, kam zamíří příště — tak proč by to nemohlo být zrovna ministerstvo zahraničí?
+
+Incident s kočkou se odehrál těsně předtím, než se ujala ministerské funkce — alespoň tak si to pamatuje místostarosta Franz Püreschitz. Jednoho dne, zničehonic, Karin Kneissl začala rozhlašovat, že někdo ve městě úmyslně zabil její milovanou kočku – a co hůř, že mrtvé tělo nechal přímo před jejími dveřmi. Podle Kneissl to byl důkaz, že se všichni obyvatelé Seibersdorfu obrátili proti ní. Každý přece věděl, jak moc miluje zvířata. Měla slepice, psy, kočky a několik poníků. Nic jí prý nedělalo tolik šťastnou jako čas strávený se svými zvířaty. A teď na jedno z nich někdo cíleně zaútočil.
+
+Kneissl nikdy otevřeně neřekla, z čeho podezřívá pachatele a jaký měl mít motiv. Místostarosta Püreschitz ale předpokládal, že za tím Kneissl viděla své nedávné propojení s krajně pravicovou stranou Svobodných (FPÖ). Jenže pokud to tak bylo, moc to nedávalo smysl: v Seibersdorfu volí mnoho lidí konzervativní i krajně pravicové strany. Žádné spiknutí proti ní neexistovalo, říká Püreschitz. „Byla to jasná nehoda; my nejsme zabijáci koček," řekl mi loni, když jsme stáli před bývalým domem Karin Kneissl, a v jeho tváři bylo vidět nevěřícné pobavení.
 
 Kneissl není někdo, s kým by Püreschitz — nebo řada dalších ve městě — dnes chtěl být spojován. V těchto dnech je známá hlavně tím, že v roce 2018 pozvala Vladimira Putina na svou svatbu, kde s ním následně zatančila valčík. Do té doby byla během zhruba roku ve funkci ministryně zahraničí vnímána jako spíš okrajová figura, jíž kancléř přidělil jen málo pravomocí. Teď, když byla zachycena kamerami při tanci s autoritářským vůdcem, se stala mezinárodní ostudou.
 
 V polovině následujícího roku opustila úřad a krátce poté se přestěhovala do Francie, pak do Libanonu a nakonec se usadila v Rusku, kde dnes vede Geopolitické observatorium pro klíčové otázky Ruska (Gorki) na Petrohradské univerzitě. Pravidelně vystupuje v ruských státních médiích, kde prohlásila, že EU trpí „kolapsem jakéhokoli právního státu", a nedávno i to, že Rusko vyhrálo válku na Ukrajině. Putina obdivuje — v rozhovoru pro BBC v roce 2023 o něm řekla, že je „nejinteligentnější gentleman, a zdůrazňuji to slovo gentleman — a pár jsem jich potkala".
 
----
+✤
 
-Jedním z důvodů, proč je příběh Kneisslové pro Rakousko tak trapný, je to, že upozorňuje na dlouhodobý a velmi výnosný vztah země s Ruskem — který i tři roky po plnohodnotné invazi na Ukrajinu zůstává bližší, než by mnozí zvenčí čekali. Alpská země s devíti miliony obyvatel, jejíž ústava ji zavazuje k neutralitě v mezinárodních záležitostech, se ráda vidí jako prostředník mezi Východem a Západem. Kritici to vnímají jako záminku pro prosazování vlastního ekonomického zájmu. „Nechápou, proč by měli cokoli měnit, protože jim to všechno dokonale funguje," řekl mi Anton Šechovcov, ředitel Centra pro demokratickou integritu v Rakousku, které sleduje vliv autoritářských zemí. „Čekají, až válka skončí, aby se mohli vrátit k běžnému obchodu s Rusy." Přestože Rakousko podpořilo sankce EU, Rusko podle dat z roku 2024 zůstává druhým největším zdrojem přímých zahraničních investic. Rakouské firmy, jako například Raiffeisen Bank International, teprve nedávno začaly omezovat své aktivity v Rusku a zaostávají za konkurenty typu britské HSBC nebo francouzské Société Générale, které z ruského trhu po invazi rychle odešly.
+Jedním z důvodů, proč je příběh Karin Kneissl pro Rakousko tak trapný, je to, že upozorňuje na dlouhodobý a velmi výnosný vztah země s Ruskem — který i tři roky po plnohodnotné invazi na Ukrajinu zůstává bližší, než by mnozí zvenčí čekali. Alpská země s devíti miliony obyvatel, jejíž ústava ji zavazuje k neutralitě v mezinárodních záležitostech, se ráda vidí jako prostředník mezi Východem a Západem. Kritici to vnímají jako záminku pro prosazování vlastního ekonomického zájmu. „Nechápou, proč by měli cokoli měnit, protože jim to všechno dokonale funguje," řekl mi Anton Šechovcov, ředitel Centra pro demokratickou integritu v Rakousku, které sleduje vliv autoritářských zemí. „Čekají, až válka skončí, aby se mohli vrátit k běžnému obchodu s Rusy." Přestože Rakousko podpořilo sankce EU, Rusko podle dat z roku 2024 zůstává druhým největším zdrojem přímých zahraničních investic. Rakouské firmy, jako například Raiffeisen Bank International, teprve nedávno začaly omezovat své aktivity v Rusku a zaostávají za konkurenty typu britské HSBC nebo francouzské Société Générale, které z ruského trhu po invazi rychle odešly.
 
 Přesto stěhování Kneisslové do Ruska nebylo nevyhnutelné — a zdá se, že stejně jako s hlubokým ideologickým souzněním s Kremlem souvisí i se zvláštnostmi její povahy. V průběhu kariéry se Kneissl vnímala jako nepochopená, nedoceněná osobnost, pronásledovaná pro svou nezávislost. V Rusku našla respekt, o kterém dlouho cítila, že jí náleží.
 
@@ -44,7 +43,7 @@ Jedna bývalá přítelkyně mi řekla, že k ní dodnes cítí jistou míru sou
 
 Když jsem oslovila zdroje v Rakousku i jinde kvůli tomuto textu, většina odpovídala neochotně. „Dělá z nás terč posměchu," řekl mi jeden bývalý přítel a expert na zahraniční politiku. Jenže když se lidé rozpovídali, často je to strhlo. Extrémní sebedůvěra Kneisslové, neobyčejná víra ve vlastní schopnosti a její neschopnost cítit stud za své chování i po letech braly lidem dech. (Kneissl rozhovor pro tento článek odmítla.)
 
----
+✤
 
 Když v březnu 1990 poprvé vstoupila jako juniorní diplomatka na rakouské ministerstvo zahraničí, měla velké ambice. Jako dcera pilota strávila část raného dětství v Jordánsku, kde její otec létal pro krále Husajna. Po návratu do Rakouska toužila po budoucnosti, v níž bude dost stará, aby se do regionu mohla vrátit.
 
@@ -62,7 +61,7 @@ Zlom nastal v roce 2012, kdy vyšla její kniha *Testosteron dělá politiku*. T
 
 Její další kniha, memoáry z roku 2014, kritiky, kteří její pohled na Blízký východ považovali za reduktivní, neuklidnila. V knize jsou její komentáře místy zkratkovité a její postoj k lidem, které na cestách potkávala, občas připomíná spíš koloniálního dobrodruha než moderní badatelku. Jenže v roce 2015, kdy k evropským hranicím dorazily miliony lidí prchajících před válkou a perzekucí a migrace z Blízkého východu se stala žhavým tématem rakouské politiky, začala být Kneissl čím dál viditelnější. Pravidelně vystupovala na ORF, rakouském veřejnoprávním vysílání, a proslula kritikou rozhodnutí Angely Merkelové umožnit příchod více než milionu žadatelů o azyl do Německa. Pro televizní producenty, kteří měli povinnost „dát prostor oběma stranám", byla ideálním komentátorem. Georg Renner, bývalý reportér ve Vídni, který ji párkrát interviewoval, to popsal takhle: „Každý znal její ideologický bias, takže se s ní dalo docela dobře pracovat."
 
----
+✤
 
 Někdy kolem roku 2006 byla Kneissl seznámena s Heinzem-Christianem Strachem, lídrem krajně pravicové Svobodné strany, a to jedním ze svých bývalých studentů Johannem Gudenusem, který se později stal místopředsedou strany. Strache a Kneissl si rozuměli a Kneissl začala vystupovat na akcích po boku členů Svobodné strany, přičemž vždy zdůrazňovala, že je nezávislá analytička, a nikoli členka strany.
 
@@ -100,7 +99,7 @@ O necelý rok později byla Kneissl z úřadu pryč — kvůli dalšímu skandá
 
 Kauza byla pro Kurzovu vládu velkou ranou a Strache rychle rezignoval. Když Kurz odvolal ministra vnitra ze Svobodné strany, aby zajistil řádné vyšetření, rezignovali všichni ministři FPÖ. Kneissl — jmenovaná Svobodnou stranou — zopakovala, že je technicky „nezávislá". Chvíli se držela, ale o měsíc později vyslovila parlamentní většina Kurzově vládě nedůvěru a Kneissl byla bez práce.
 
----
+✤
 
 Po pádu vlády se Kneissl stáhla do sebe. „Stala se velmi izolovanou a čím dál smutnější," řekla mi Margarete Schornová, sousedka ze Seibersdorfu, která jí v té době občas nosila nákup. Peníze byly problém. Její spojení se Svobodnou stranou a s Putinem jí komplikovalo návrat do světa výuky a žurnalistiky. Krátká doba ve funkci jí navíc nezajistila nárok na ministerský důchod. Když přišel covid, tak tak se držela nad vodou. Požádala o rakouský covidový podpůrný fond, ale nedostala nic, protože její předchozí příjmy byly příliš vysoké.
 
@@ -116,7 +115,7 @@ Kneissl zdaleka není první rakouskou političkou, která si udržovala přáte
 
 Je snadné pochopit, proč Rusko Kneisslovou přitahuje: nabízí jí míru bezpečí a prestiže, kterou jinde nenašla. Těžší je pochopit, co z toho má Rusko. „Mnozí evropští politici, kteří se stanou součástí ruských struktur, si přinášejí síť kontaktů nebo vlivu, ale Kneissl byla v době odchodu z úřadu nikdo," řekl mi Šechovcov. „Moje hypotéza je, že tím, že ji Rusové podpořili, vyslali vzkaz jiným evropským úředníkům: i když doma nejste moc užiteční, tady by pro vás místo mohlo být."
 
-*Jednou z nových rolí Kneisslové je ambasadorka ochrany sibiřských tygrů. Foto: Vladimir Medvedev/WWF*
+✤
 
 V Rusku si Kneissl našla místo. V červnu 2024 řekla státní agentuře, že Západ má plány Rusko rozdělit „stejně jako byla rozdělena Federativní republika Jugoslávie". Zatímco v Evropě si toho sotva někdo všiml, v Rusku to bylo prezentováno jako vážné varování od skutečné politické insiderky. „Bývalá rakouská ministryně zahraničí Kneissl potvrzuje plány Západu na rozdělení Ruska," zněl titulek. Další nedávné titulky: „Putin měl v roce 2023 pravdu o ekonomice — ex-rakouská šéfka diplomacie" a z tohoto měsíce „Ex-rakouská ministryně radí Rusům, aby odložili romantické představy o západní Evropě". Minulé léto vystoupila před OSN s varováním před dodávkami zbraní Ukrajině.
 
@@ -124,6 +123,6 @@ Bývalí přátelé a kolegové dobře vědí, že vztahy s Kneisslovou bývají
 
 Ke konci loňského roku přijala svou nejnovější roli: stala se ambasadorkou ochrany sibiřských tygrů — věci, která je blízká Putinovu srdci, a také srdci Kneisslové. Státní média v prosinci informovala, že při nedávné návštěvě národního parku spatřila tygra. V krátkém rozhovoru využila příležitost k nepříznivému srovnání evropského a ruského přístupu k takovým predátorům. V Rusku se prý „medvědům, vlkům, tygrům neříká problémoví medvědi, problémoví vlci". „Jsou součástí života. Tomu říkám říkat ano životu v Rusku," prohlásila.
 
----
+✤
 
-*Překlad: redakčně upraveno | Originál: The Guardian, 1. července 2025*
+
