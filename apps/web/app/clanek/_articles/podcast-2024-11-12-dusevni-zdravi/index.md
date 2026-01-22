@@ -11,7 +11,11 @@ promoted: 68
 
 Dvě generace, dva pohledy. A jedno překvapivé zjištění: v péči o duševní zdraví více záleží na tom, jestli jste muž nebo žena, než kdy jste se narodili.
 
+✤ 
+
 <div class="flourish-embed flourish-table" data-src="visualisation/27038223"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27038223/thumbnail" width="100%" alt="table visualization" /></noscript></div>
+
+✤ 
 
 Když jsme se v podcastu bavily o generačních rozdílech v přístupu k duševnímu zdraví, čekaly jsme jasný příběh: mladí jsou otevřenější, starší mají předsudky. Jenže data ukazují něco jiného. **Rozdíly mezi pohlavími jsou mnohem výraznější než rozdíly mezi generacemi.**
 
