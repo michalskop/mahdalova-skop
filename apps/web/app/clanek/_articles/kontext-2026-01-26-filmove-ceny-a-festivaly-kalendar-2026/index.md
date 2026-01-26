@@ -11,6 +11,5 @@ promoted: 50
 
 Rok 2026 přináší bohatý program filmových událostí – od lednových Zlatých glóbů přes jarní oscarovou sezónu až po podzimní dokumentární festivaly.
 
-<iframe src="https://www.datovazurnalistika.cz/kalendar-pro-web/" width="100%" height="1200" frameborder="0" style="border-radius: 12px;"></iframe>
 
 Udělené ceny budeme v kalendáři průběžně aktualizovat.
