@@ -4,8 +4,8 @@ date: "2026-01-26"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Přehled nejdůležitějších filmových cen a festivalů roku 2026 – od Zlatých glóbů po Ji.hlavu"
 coverImage: "images/filmovy-kalendar-2026.webp"
-filter: ["kultura"]
-tags: ["film", "kultura", "kalendář", "festivaly", "ceny"]
+filter: ["kontext"]
+tags: ["filmový kalendář", "film", "kultura", "kalendář", "festivaly", "ceny"]
 promoted: 50
 ---
 Filmový kalendář 2026
