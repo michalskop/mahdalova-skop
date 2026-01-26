@@ -1,10 +1,18 @@
+---
 title: "Filmový kalendář 2026"
-description: "Přehled nejdůležitějších filmových cen a festivalů roku 2026 – od Zlatých glóbů po Ji.hlavu"
-date: 2026-01-26
-author: "Mahdalová & Škop"
-tags: ["film", "kultura", "kalendář", "2026"]
+date: "2026-01-26"
+author: "Kateřina Mahdalová & Michal Škop"
+excerpt: "Přehled nejdůležitějších filmových cen a festivalů roku 2026 – od Zlatých glóbů po Ji.hlavu"
+coverImage: "images/filmovy-kalendar-2026.webp"
+filter: ["kultura"]
+tags: ["film", "kultura", "kalendář", "festivaly", "ceny"]
+promoted: 50
+---
 Filmový kalendář 2026
+
 Rok 2026 přináší bohatý program filmových událostí – od lednových Zlatých glóbů přes jarní oscarovou sezónu až po podzimní dokumentární festivaly. V interaktivním kalendáři najdete všechny důležité termíny i základní informace o každé akci.
+
+
 <div id="film-calendar-app"></div>
 <style>
 #film-calendar-app {
