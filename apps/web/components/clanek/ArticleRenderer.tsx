@@ -17,6 +17,7 @@ import ScrollyTelling from '@/components/common/ScrollyTelling';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
+import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 // import yaml from 'js-yaml';
 
 interface ArticleProps {
@@ -27,6 +28,7 @@ interface ArticleProps {
   translator?: string;
   slug: string;
   scrollyContent?: any;     // Add scrollyContent to the ArticleProps
+  htmlContent?: string | null;
   backgroundColor?: string;  // Optional background color
   textColor?: string;       // Optional text color
   withContainer?: boolean;  // Optional flag to control Container wrapper
@@ -40,6 +42,7 @@ export function ArticleRenderer({
   translator,
   slug = '',
   scrollyContent,
+  htmlContent,
   backgroundColor,
   textColor,
   withContainer = true  // Default to true for backward compatibility
@@ -270,6 +273,7 @@ export function ArticleRenderer({
         )}
 
         <div className="article-content">
+          {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} /> : null}
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </Stack>

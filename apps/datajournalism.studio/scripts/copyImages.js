@@ -19,6 +19,18 @@ async function copyImages() {
         console.log(`Copying images from ${sourcePath} to ${targetPath}`);
         await fs.copy(sourcePath, targetPath);
       }
+
+      const articleSourceDir = path.join(sourceDir, articleDir);
+      const articleTargetDir = path.join(targetDir, articleDir);
+      const files = await fs.readdir(articleSourceDir);
+      for (const file of files) {
+        if (!file.toLowerCase().endsWith('.json')) continue;
+        const jsonSourcePath = path.join(articleSourceDir, file);
+        const jsonTargetPath = path.join(articleTargetDir, file);
+
+        console.log(`Copying JSON from ${jsonSourcePath} to ${jsonTargetPath}`);
+        await fs.copy(jsonSourcePath, jsonTargetPath);
+      }
     }
     console.log('Images copied successfully');
   } catch (error) {
