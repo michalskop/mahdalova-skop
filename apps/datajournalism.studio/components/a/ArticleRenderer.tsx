@@ -11,6 +11,7 @@ import type { ImageProps } from 'next/image';
 import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
+import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 // import yaml from 'js-yaml';
 
 interface ArticleProps {
@@ -20,6 +21,7 @@ interface ArticleProps {
   author?: string;
   slug: string;
   scrollyContent?: any; // Add scrollyContent to the ArticleProps
+  htmlContent?: string | null;
   backgroundColor?: string;  // Optional background color
   textColor?: string;       // Optional text color
   withContainer?: boolean;  // Optional flag to control Container wrapper
@@ -32,6 +34,7 @@ export function ArticleRenderer({
   author,
   slug = '',
   scrollyContent,
+  htmlContent,
   backgroundColor,
   textColor,
   withContainer = true  // Default to true for backward compatibility
@@ -220,6 +223,7 @@ export function ArticleRenderer({
         )}
 
         <div className="article-content">
+          {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/a/_articles/${slug}`} /> : null}
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </Stack>
