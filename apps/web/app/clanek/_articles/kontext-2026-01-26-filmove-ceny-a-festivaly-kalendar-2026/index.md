@@ -6,7 +6,7 @@ excerpt: "Přehled nejdůležitějších filmových cen a festivalů roku 2026"
 coverImage: "images/datatimes-kalendar-filmovych-udalosti-2026.webp"
 filter: ["kontext"]
 tags: ["filmový kalendář", "film", "kultura", "festivaly", "ceny"]
-promoted: 50
+promoted: 98
 ---
 
 Rok 2026 přináší bohatý program filmových událostí – od lednových Zlatých glóbů přes jarní oscarovou sezónu až po podzimní dokumentární festivaly.
