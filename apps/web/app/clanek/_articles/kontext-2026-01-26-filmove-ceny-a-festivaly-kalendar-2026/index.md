@@ -15,7 +15,7 @@ Udělené ceny budeme v kalendáři průběžně aktualizovat.
 <iframe 
   src="https://www.datovazurnalistika.cz/kalendar-pro-web/" 
   width="100%" 
-  height="600" 
+  height="700" 
   frameBorder="0" 
   loading="lazy"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
