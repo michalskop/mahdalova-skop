@@ -1,0 +1,988 @@
+<div id="film-calendar-app"></div>
+
+<style>
+#film-calendar-app {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: #fdfbf7;
+    color: #101432;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 0;
+    position: relative;
+    border: none;
+    box-shadow: none;
+}
+
+#film-calendar-app *,
+#film-calendar-app *::before,
+#film-calendar-app *::after {
+    box-sizing: border-box;
+}
+
+.cal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cal-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #101432;
+    margin: 0 0 0.5rem 0;
+}
+
+.cal-header p {
+    color: #812840;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.cal-current-date {
+    font-size: 0.85rem;
+    color: #697fe6;
+    margin-top: 0.5rem;
+}
+
+/* Legenda */
+.cal-legend-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+    background: rgba(16, 20, 50, 0.03);
+    border-radius: 8px;
+}
+
+.cal-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #101432;
+}
+
+.cal-legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.cal-legend-dot.award {
+    background: #ffe680;
+}
+
+.cal-legend-dot.festival {
+    background: #fbe8eb;
+    border: 1px solid #f5c4cd;
+}
+
+.cal-legend-dot.today {
+    background: transparent;
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+.cal-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.cal-filter-btn {
+    background: white;
+    border: 2px solid #efb704;
+    color: #101432;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.cal-filter-btn:hover {
+    background: #ffcf02;
+    border-color: #ffcf02;
+}
+
+.cal-filter-btn.active {
+    background: #efb704;
+    border-color: #efb704;
+    color: #101432;
+}
+
+/* ===== KALENDÁŘOVÁ MŘÍŽKA ===== */
+.cal-year-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 16px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.cal-month-column {
+    min-width: 0;
+}
+
+.cal-month-header {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #812840;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0;
+    margin-bottom: 4px;
+}
+
+.cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    margin-bottom: 2px;
+}
+
+.cal-weekday {
+    font-size: 0.5rem;
+    color: #697fe6;
+    text-align: center;
+    padding: 2px 0;
+    font-weight: 500;
+}
+
+.cal-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.cal-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    color: rgba(16, 20, 50, 0.35);
+    background: transparent;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+}
+
+.cal-day.empty {
+    visibility: hidden;
+}
+
+.cal-day.today {
+    color: #bd9103;
+    font-weight: 700;
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+.cal-day.has-event {
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.cal-day.has-event:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
+.cal-day.award-day {
+    background: #ffe680;
+    color: #6b5900;
+    font-weight: 600;
+}
+
+.cal-day.festival-day {
+    background: #fbe8eb;
+    color: #812840;
+    font-weight: 600;
+}
+
+.cal-day.today.award-day {
+    background: #ffe680;
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+.cal-day.today.festival-day {
+    background: #fbe8eb;
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+.cal-day.past-event {
+    opacity: 0.5;
+}
+
+.cal-day .cal-day-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #101432;
+    color: white;
+    padding: 0.5rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 100;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.cal-day .cal-day-tooltip small {
+    opacity: 0.75;
+    font-size: 0.6rem;
+    display: block;
+}
+
+.cal-day .cal-day-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: #101432;
+}
+
+.cal-day:hover .cal-day-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 700px) {
+    .cal-year-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cal-year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   FLOURISH-STYLE POPUP PANEL
+   ============================================ */
+.cal-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 20, 50, 0.4);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cal-panel-overlay.active {
+    display: flex;
+}
+
+.cal-panel {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(16, 20, 50, 0.3);
+    position: relative;
+    animation: panelSlideIn 0.3s ease;
+}
+
+@keyframes panelSlideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.cal-panel-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(16, 20, 50, 0.1);
+    position: relative;
+}
+
+.cal-panel-header.award {
+    background: linear-gradient(135deg, #efb704 0%, #bd9103 100%);
+    color: white;
+}
+
+.cal-panel-header.festival {
+    background: linear-gradient(135deg, #de1743 0%, #a81134 100%);
+    color: white;
+}
+
+.cal-panel-header.award .cal-panel-title,
+.cal-panel-header.award .cal-panel-subtitle,
+.cal-panel-header.festival .cal-panel-title,
+.cal-panel-header.festival .cal-panel-subtitle {
+    color: white;
+}
+
+.cal-panel-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 32px;
+    text-align: center;
+    color: white;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.cal-panel-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cal-panel-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.cal-panel-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #101432;
+    margin: 0 0 0.25rem 0;
+}
+
+.cal-panel-subtitle {
+    font-size: 0.9rem;
+    color: #697fe6;
+    font-style: italic;
+    margin: 0;
+}
+
+.cal-panel-date {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+}
+
+.cal-panel-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.cal-panel-status.past { background: #28a745; color: white; }
+.cal-panel-status.ongoing { background: #ff6b35; color: white; }
+.cal-panel-status.upcoming { background: rgba(255, 255, 255, 0.3); color: white; }
+
+.cal-panel-body { padding: 1.5rem; }
+
+.cal-panel-section { margin-bottom: 1.25rem; }
+.cal-panel-section:last-child { margin-bottom: 0; }
+
+.cal-panel-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #812840;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.cal-panel-value {
+    color: #101432;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cal-panel-value a { color: #697fe6; text-decoration: none; }
+.cal-panel-value a:hover { text-decoration: underline; }
+
+.cal-panel-winner {
+    background: linear-gradient(135deg, rgba(239, 183, 4, 0.2) 0%, rgba(239, 183, 4, 0.1) 100%);
+    border-left: 4px solid #efb704;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1rem;
+}
+
+.cal-panel-winner-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #812840;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cal-panel-winner-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #101432;
+}
+
+.cal-panel-trailer { margin-top: 1rem; }
+
+.cal-trailer-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cal-trailer-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+/* ============================================
+   SEKCE S KARTAMI
+   ============================================ */
+.cal-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.cal-section-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cal-section-header.awards h3 { color: #812840; }
+.cal-section-header.festivals h3 { color: #de1743; }
+
+.cal-section-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(16, 20, 50, 0.15), transparent);
+}
+
+.cal-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.cal-event-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.cal-event-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.cal-event-card.award::before { background: #efb704; }
+.cal-event-card.festival::before { background: #de1743; }
+
+.cal-event-card.past {
+    opacity: 0.85;
+    background: #F8F6F0;
+}
+
+.cal-event-card.past .cal-event-name::after {
+    content: " ✓";
+    color: #28a745;
+}
+
+.cal-event-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.cal-event-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.cal-event-content { flex: 1; }
+
+.cal-event-date {
+    font-size: 0.8rem;
+    color: #812840;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.cal-event-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+    color: #101432;
+}
+
+.cal-event-subtitle {
+    font-size: 0.8rem;
+    color: #697fe6;
+    font-style: italic;
+}
+
+.cal-event-details {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(16, 20, 50, 0.1);
+}
+
+.cal-detail-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cal-detail-label {
+    color: #812840;
+    min-width: 70px;
+    font-weight: 500;
+}
+
+.cal-detail-value { color: #101432; flex: 1; }
+.cal-detail-value a { color: #697fe6; text-decoration: none; }
+
+.cal-winner-tag {
+    display: inline-block;
+    background: rgba(239, 183, 4, 0.2);
+    color: #812840;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    #film-calendar-app { padding: 1rem; }
+    .cal-header h2 { font-size: 1.4rem; }
+    .cal-events-grid { grid-template-columns: 1fr; }
+    .cal-panel { max-height: 85vh; }
+}
+</style>
+
+<script>
+(function () {
+    var NOW = new Date();
+    var TODAY = new Date(NOW.getFullYear(), NOW.getMonth(), NOW.getDate());
+
+    var assetBasePath = (function () {
+        var appEl = document.getElementById('film-calendar-app');
+        if (!appEl) return '';
+        var host = appEl.closest('[data-asset-base]');
+        if (!host) return '';
+        return host.getAttribute('data-asset-base') || '';
+    })();
+
+    var events = [];
+
+    function dateOnly(d) {
+        return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    }
+
+    function parseIsoDate(iso) {
+        if (typeof iso !== 'string') return null;
+        var parts = iso.split('-');
+        if (parts.length !== 3) return null;
+        var y = Number(parts[0]);
+        var m = Number(parts[1]);
+        var day = Number(parts[2]);
+        if (!y || !m || !day) return null;
+        return new Date(y, m - 1, day);
+    }
+
+    async function loadEventsFromJson() {
+        if (!assetBasePath) return;
+
+        try {
+            var res = await fetch(assetBasePath + '/data.json', { cache: 'no-store' });
+            if (!res.ok) return;
+            var json = await res.json();
+            if (!Array.isArray(json)) return;
+
+            var loaded = [];
+            for (var i = 0; i < json.length; i++) {
+                var e = json[i];
+                if (!e) continue;
+
+                var start = parseIsoDate(e.startDate);
+                var end = parseIsoDate(e.endDate);
+
+                if (!start) continue;
+
+                loaded.push({
+                    id: e.id,
+                    type: e.type,
+                    name: e.name,
+                    nameEn: e.nameEn,
+                    date: e.date,
+                    dateObj: start,
+                    endDateObj: end || undefined,
+                    czech: !!e.czech,
+                    country: e.country,
+                    tradition: e.tradition,
+                    edition: e.edition,
+                    organizer: e.organizer,
+                    description: e.description,
+                    website: e.website,
+                    location: e.location,
+                    mainPrize: e.mainPrize,
+                    winner2026: e.winner2026,
+                    trailerYouTube: e.trailerYouTube,
+                    trailerYouTube2: e.trailerYouTube2,
+                    note: e.note
+                });
+            }
+
+            if (loaded.length > 0) {
+                events = loaded;
+            }
+        } catch (e) {
+            // ignore fetch/parse errors, fallback to inline data
+        }
+    }
+
+function isPast(ev) {
+    var endDate = ev.endDateObj ? dateOnly(ev.endDateObj) : dateOnly(ev.dateObj);
+    return endDate < TODAY;
+}
+
+function isOngoing(ev) {
+    if (!ev.endDateObj) return false;
+    var start = dateOnly(ev.dateObj);
+    var end = dateOnly(ev.endDateObj);
+    return (start <= TODAY) ? (TODAY <= end) : false;
+}
+
+function formatCurrentDate() {
+    var months = ["ledna", "února", "března", "dubna", "května", "června",
+        "července", "srpna", "září", "října", "listopadu", "prosince"];
+    return TODAY.getDate() + ". " + months[TODAY.getMonth()] + " " + TODAY.getFullYear();
+}
+    function closePanel() {
+        var overlay = document.getElementById("cal-panel-overlay");
+        if (!overlay) return;
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    function openPanel(ev) {
+        var overlay = document.getElementById("cal-panel-overlay");
+        var panel = document.getElementById("cal-panel-content");
+        if (!overlay || !panel) return;
+
+        var icon = (ev.type === "award") ? "🏆" : "🎬";
+        var past = isPast(ev);
+        var ongoing = isOngoing(ev);
+
+        var statusClass = "upcoming";
+        var statusText = "Nadcházející";
+        if (ongoing) { statusClass = "ongoing"; statusText = "Právě probíhá"; }
+        else if (past) { statusClass = "past"; statusText = "Proběhlo"; }
+
+        var bodyHTML = "";
+        bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Tradice</div><div class='cal-panel-value'>" + ev.tradition + "</div></div>";
+        bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Ročník</div><div class='cal-panel-value'>" + ev.edition + "</div></div>";
+
+        if (ev.organizer) {
+            bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Pořadatel</div><div class='cal-panel-value'>" + ev.organizer + "</div></div>";
+        }
+        if (ev.location) {
+            bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Místo</div><div class='cal-panel-value'>" + ev.location + "</div></div>";
+        }
+        if (ev.mainPrize) {
+            bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Hlavní cena</div><div class='cal-panel-value'>" + ev.mainPrize + "</div></div>";
+        }
+
+        bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>O události</div><div class='cal-panel-value'>" + ev.description + "</div></div>";
+        bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Web</div><div class='cal-panel-value'><a href='" + ev.website + "' target='_blank' rel='noopener'>" + ev.website.replace("https://", "").replace("www.", "") + "</a></div></div>";
+
+        if (ev.winner2026) {
+            bodyHTML += "<div class='cal-panel-winner'><div class='cal-panel-winner-title'>Vítěz 2026</div><div class='cal-panel-winner-name'>" + ev.winner2026 + "</div></div>";
+
+            if (ev.trailerYouTube) {
+                bodyHTML += "<div class='cal-panel-trailer'><div class='cal-panel-label' style='margin-bottom:0.5rem;'>Trailer</div><div class='cal-trailer-wrapper'><iframe src='https://www.youtube.com/embed/" + ev.trailerYouTube + "?si=embed' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe></div></div>";
+            }
+            if (ev.trailerYouTube2) {
+                bodyHTML += "<div class='cal-panel-trailer'><div class='cal-panel-label' style='margin-bottom:0.5rem;'>Trailer 2</div><div class='cal-trailer-wrapper'><iframe src='https://www.youtube.com/embed/" + ev.trailerYouTube2 + "?si=embed' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe></div></div>";
+            }
+        }
+        if (ev.note) {
+            bodyHTML += "<div class='cal-panel-section'><div class='cal-panel-label'>Poznámka</div><div class='cal-panel-value' style='font-style:italic;color:#812840;'>" + ev.note + "</div></div>";
+        }
+
+        panel.innerHTML =
+            "<div class='cal-panel-header " + ev.type + "'>" +
+            "<button class='cal-panel-close' type='button' aria-label='Zavřít'>&times;</button>" +
+            "<div class='cal-panel-icon'>" + icon + "</div>" +
+            "<h3 class='cal-panel-title'>" + ev.name + (ev.country ? " (" + ev.country + ")" : "") + "</h3>" +
+            "<p class='cal-panel-subtitle'>" + ev.nameEn + "</p>" +
+            "<span class='cal-panel-date'>" + ev.date + "</span>" +
+            "<span class='cal-panel-status " + statusClass + "'>" + statusText + "</span>" +
+            "</div>" +
+            "<div class='cal-panel-body'>" + bodyHTML + "</div>";
+
+        var closeBtn = panel.querySelector(".cal-panel-close");
+        if (closeBtn) closeBtn.addEventListener("click", closePanel);
+
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function openPanelById(eventId) {
+        var i;
+        for (i = 0; i < events.length; i++) {
+            if (events[i].id === eventId) {
+                openPanel(events[i]);
+                return;
+            }
+        }
+    }
+
+    function renderCalendar() {
+        var container = document.getElementById("film-calendar-app");
+        if (!container) return;
+
+        var monthShort = ["LED", "ÚNO", "BŘE", "DUB", "KVĚ", "ČVN", "ČVC", "SRP", "ZÁŘ", "ŘÍJ", "LIS", "PRO"];
+        var weekdayLabels = ["Po", "Út", "St", "Čt", "Pá", "So", "Ne"];
+
+        var eventMap = {};
+        var i, j;
+
+        for (i = 0; i < events.length; i++) {
+            var ev = events[i];
+            var startDate = new Date(ev.dateObj);
+            var endDate = ev.endDateObj ? new Date(ev.endDateObj) : new Date(ev.dateObj);
+            var current = new Date(startDate);
+
+            while (current <= endDate) {
+                var key = "2026-" + current.getMonth() + "-" + current.getDate();
+                if (!eventMap[key]) eventMap[key] = [];
+                eventMap[key].push(ev);
+                current.setDate(current.getDate() + 1);
+            }
+        }
+
+        var calendarHTML = "<div class='cal-year-grid'>";
+
+        for (var month = 0; month < 12; month++) {
+            var firstDay = new Date(2026, month, 1);
+            var lastDay = new Date(2026, month + 1, 0);
+            var daysInMonth = lastDay.getDate();
+
+            var startDayOfWeek = firstDay.getDay() - 1;
+            if (startDayOfWeek < 0) startDayOfWeek = 6;
+
+            calendarHTML += "<div class='cal-month-column'><div class='cal-month-header'>" + monthShort[month] + "</div><div class='cal-weekdays'>";
+            for (j = 0; j < 7; j++) {
+                calendarHTML += "<div class='cal-weekday'>" + weekdayLabels[j] + "</div>";
+            }
+            calendarHTML += "</div><div class='cal-days-grid'>";
+
+            for (i = 0; i < startDayOfWeek; i++) {
+                calendarHTML += "<div class='cal-day empty'></div>";
+            }
+
+            for (var day = 1; day <= daysInMonth; day++) {
+                var dateKey = "2026-" + month + "-" + day;
+                var isToday = (TODAY.getFullYear() === 2026) ? ((TODAY.getMonth() === month) ? (TODAY.getDate() === day) : false) : false;
+
+                var dayEvents = eventMap[dateKey] || [];
+                var hasEvent = (dayEvents.length > 0);
+
+                var classes = "cal-day";
+                var tooltip = "";
+                var dataAttr = "";
+
+                if (isToday) classes += " today";
+
+                if (hasEvent) {
+                    var evDay = dayEvents[0];
+                    classes += " has-event";
+                    classes += (evDay.type === "award") ? " award-day" : " festival-day";
+                    if (isPast(evDay)) classes += " past-event";
+
+                    dataAttr = " data-event-id='" + evDay.id + "'";
+
+                    var ico = (evDay.type === "award") ? "🏆" : "🎬";
+                    tooltip = "<div class='cal-day-tooltip'>" + ico + " " + evDay.name + "<small>" + evDay.date + "</small></div>";
+                }
+
+                calendarHTML += "<div class='" + classes + "'" + dataAttr + ">" + day + tooltip + "</div>";
+            }
+
+            calendarHTML += "</div></div>";
+        }
+
+        calendarHTML += "</div>";
+
+        container.innerHTML =
+            "<div class='cal-header'><h2>Filmový kalendář 2026</h2><p>Přehled filmových cen a festivalů</p><div class='cal-current-date'>Aktualizováno: " + formatCurrentDate() + "</div></div>" +
+            "<div class='cal-legend-bar'>" +
+            "<div class='cal-legend-item'><span class='cal-legend-dot award'></span><span>Filmové ceny</span></div>" +
+            "<div class='cal-legend-item'><span class='cal-legend-dot festival'></span><span>Filmové festivaly</span></div>" +
+            "<div class='cal-legend-item'><span class='cal-legend-dot today'></span><span>Dnes</span></div>" +
+            "</div>" +
+            "<div class='cal-filters'>" +
+            "<button class='cal-filter-btn active' data-filter='all' type='button'>Vše</button>" +
+            "<button class='cal-filter-btn' data-filter='award' type='button'>Pouze ceny</button>" +
+            "<button class='cal-filter-btn' data-filter='festival' type='button'>Pouze festivaly</button>" +
+            "<button class='cal-filter-btn' data-filter='czech' type='button'>České a slovenské</button>" +
+            "</div>" +
+            calendarHTML +
+            "<div class='cal-section-header awards'><h3>🏆 Filmové ceny</h3><div class='cal-section-line'></div></div><div class='cal-events-grid' id='cal-awards-grid'></div>" +
+            "<div class='cal-section-header festivals'><h3>🎬 Filmové festivaly</h3><div class='cal-section-line'></div></div><div class='cal-events-grid' id='cal-festivals-grid'></div>" +
+            "<div class='cal-panel-overlay' id='cal-panel-overlay'><div class='cal-panel' id='cal-panel-content'></div></div>";
+
+        var awardsGrid = document.getElementById("cal-awards-grid");
+        var festivalsGrid = document.getElementById("cal-festivals-grid");
+
+        for (i = 0; i < events.length; i++) {
+            var e = events[i];
+            var icon = (e.type === "award") ? "🏆" : "🎬";
+            var past = isPast(e);
+
+            var detailsHTML = "<div class='cal-detail-row'><span class='cal-detail-label'>Tradice:</span><span class='cal-detail-value'>" + e.tradition + "</span></div>";
+            detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>Ročník:</span><span class='cal-detail-value'>" + e.edition + "</span></div>";
+            if (e.organizer) detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>Pořadatel:</span><span class='cal-detail-value'>" + e.organizer + "</span></div>";
+            if (e.location) detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>Místo:</span><span class='cal-detail-value'>" + e.location + "</span></div>";
+            if (e.mainPrize) detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>Hlavní cena:</span><span class='cal-detail-value'>" + e.mainPrize + "</span></div>";
+            detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>O události:</span><span class='cal-detail-value'>" + e.description + "</span></div>";
+            detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>Web:</span><span class='cal-detail-value'><a href='" + e.website + "' target='_blank' rel='noopener'>" + e.website.replace("https://", "").replace("www.", "") + "</a></span></div>";
+            if (e.winner2026) detailsHTML += "<div class='cal-detail-row'><span class='cal-detail-label'>Vítěz 2026:</span><span class='cal-detail-value'><span class='cal-winner-tag'>🏆 " + e.winner2026 + "</span></span></div>";
+
+            var card = document.createElement("div");
+            card.className = "cal-event-card " + e.type + (past ? " past" : "");
+            card.setAttribute("data-id", e.id);
+            card.setAttribute("data-type", e.type);
+            card.setAttribute("data-czech", String(!!e.czech));
+
+            card.innerHTML =
+                "<div class='cal-event-header' data-event-id='" + e.id + "'>" +
+                "<span class='cal-event-icon'>" + icon + "</span>" +
+                "<div class='cal-event-content'>" +
+                "<div class='cal-event-date'>" + e.date + "</div>" +
+                "<div class='cal-event-name'>" + e.name + "</div>" +
+                "<div class='cal-event-subtitle'>" + e.nameEn + "</div>" +
+                "</div></div>" +
+                "<div class='cal-event-details'>" + detailsHTML + "</div>";
+
+            if (e.type === "award") awardsGrid.appendChild(card);
+            else festivalsGrid.appendChild(card);
+        }
+
+        // Klikání na dny a hlavičky karet (bez inline onclick)
+        var clickables = container.querySelectorAll(".cal-day[data-event-id], .cal-event-header[data-event-id]");
+        for (i = 0; i < clickables.length; i++) {
+            clickables[i].addEventListener("click", function () {
+                var id = this.getAttribute("data-event-id");
+                if (id) openPanelById(id);
+            });
+        }
+
+        // Overlay close (klik mimo panel)
+        var overlay = document.getElementById("cal-panel-overlay");
+        overlay.addEventListener("click", function (e2) {
+            if (e2.target === overlay) closePanel();
+        });
+
+        // Esc zavře panel
+        document.addEventListener("keydown", function (e3) {
+            if (e3.key === "Escape") closePanel();
+        });
+
+        // Filtry (tvoje původní logika)
+        var filterButtons = container.querySelectorAll(".cal-filter-btn");
+        for (i = 0; i < filterButtons.length; i++) {
+            filterButtons[i].addEventListener("click", function () {
+                var k;
+
+                for (k = 0; k < filterButtons.length; k++) filterButtons[k].classList.remove("active");
+                this.classList.add("active");
+
+                var filter = this.getAttribute("data-filter");
+
+                var cards = container.querySelectorAll(".cal-event-card");
+                for (k = 0; k < cards.length; k++) {
+                    var el = cards[k];
+                    if (filter === "all") {
+                        el.style.display = "";
+                    } else if (filter === "czech") {
+                        el.style.display = (el.getAttribute("data-czech") === "true") ? "" : "none";
+                    } else {
+                        el.style.display = (el.getAttribute("data-type") === filter) ? "" : "none";
+                    }
+                }
+
+                var awardsSection = container.querySelector(".cal-section-header.awards");
+                var festivalsSection = container.querySelector(".cal-section-header.festivals");
+
+                if (filter === "festival") {
+                    awardsSection.style.display = "none";
+                    festivalsSection.style.display = "";
+                } else if (filter === "award") {
+                    awardsSection.style.display = "";
+                    festivalsSection.style.display = "none";
+                } else {
+                    awardsSection.style.display = "";
+                    festivalsSection.style.display = "";
+                }
+            });
+        }
+    }
+
+    async function init() {
+        await loadEventsFromJson();
+        renderCalendar();
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", function () {
+            init();
+        });
+    } else {
+        init();
+    }
+})();
+</script>

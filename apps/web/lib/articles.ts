@@ -24,6 +24,16 @@ export async function getArticleBySlug(directorySlug: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
+  // Optional raw HTML include
+  let htmlContent: string | null = null;
+  if (typeof data.htmlInclude === 'string' && data.htmlInclude.trim().length > 0) {
+    const htmlPath = path.join(articleDir, data.htmlInclude);
+    if (!fs.existsSync(htmlPath)) {
+      throw new Error(`htmlInclude file not found: ${directorySlug}/${data.htmlInclude}`);
+    }
+    htmlContent = fs.readFileSync(htmlPath, 'utf8');
+  }
+
   // Check for and load scrollytelling.yaml if it exists
   let scrollyContent: ScrollyContent | null = null;
   const scrollyPath = path.join(articleDir, 'scrollytelling.yaml');
@@ -63,6 +73,7 @@ export async function getArticleBySlug(directorySlug: string) {
     slug: directorySlug,
     mdxSource,
     scrollyContent,
+    htmlContent,
     tags: data.tags || [],
     content,
     title: data.title || 'Untitled',
