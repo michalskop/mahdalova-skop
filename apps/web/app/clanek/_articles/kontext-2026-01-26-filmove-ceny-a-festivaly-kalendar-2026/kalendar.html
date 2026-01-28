@@ -1,1 +1,1787 @@
+<div id="film-calendar-app"></div>
 
+<style>
+#film-calendar-app {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #fdfbf7;
+    color: #101432;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 0;
+    position: relative;
+    border: none;
+    box-shadow: none;
+}
+
+#film-calendar-app *,
+#film-calendar-app *::before,
+#film-calendar-app *::after {
+    box-sizing: border-box;
+}
+
+.cal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cal-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #101432;
+    margin: 0 0 0.5rem 0;
+}
+
+.cal-header p {
+    color: #812840;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.cal-current-date {
+    font-size: 0.85rem;
+    color: #697fe6;
+    margin-top: 0.5rem;
+}
+
+/* ===== KLIKACÍ LEGENDA ===== */
+.cal-legend-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+    background: rgba(16, 20, 50, 0.03);
+    border-radius: 8px;
+}
+
+.cal-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #101432;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.cal-legend-item:hover {
+    background: rgba(16, 20, 50, 0.05);
+}
+
+.cal-legend-item.active {
+    background: rgba(16, 20, 50, 0.1);
+    font-weight: 600;
+}
+
+.cal-legend-item.today-indicator {
+    cursor: default;
+    pointer-events: none;
+}
+
+.cal-legend-item.today-indicator:hover {
+    background: transparent;
+}
+
+.cal-legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.cal-legend-dot.award {
+    background: #ffe680;
+    border: 1px solid #efb704;
+}
+
+.cal-legend-dot.festival {
+    background: #ffcba4;
+    border: 1px solid #e8412c;
+}
+
+.cal-legend-dot.czech {
+    background: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 3px;
+}
+
+.cal-flag {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.cal-flag-cz {
+    background: linear-gradient(to bottom, #fff 50%, #d7141a 50%);
+}
+
+.cal-flag-cz::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 7px;
+    border-color: transparent transparent transparent #11457e;
+}
+
+.cal-flag-sk {
+    background: linear-gradient(to bottom, #fff 33.3%, #0b4ea2 33.3%, #0b4ea2 66.6%, #ee1c25 66.6%);
+}
+
+.cal-legend-dot.today {
+    background: transparent;
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+/* ===== KALENDÁŘOVÁ MŘÍŽKA ===== */
+.cal-year-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+.cal-month-column {
+    min-width: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 1px 3px rgba(16, 20, 50, 0.08);
+}
+
+.cal-month-header {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #812840;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(16, 20, 50, 0.08);
+}
+
+.cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    margin-bottom: 2px;
+}
+
+.cal-weekday {
+    font-size: 0.45rem;
+    color: #697fe6;
+    text-align: center;
+    padding: 2px 0;
+    font-weight: 500;
+}
+
+.cal-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+.cal-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+    color: rgba(16, 20, 50, 0.35);
+    background: transparent;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+}
+
+.cal-day.empty {
+    visibility: hidden;
+}
+
+.cal-day.today {
+    color: #bd9103;
+    font-weight: 700;
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+.cal-day.has-event {
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.cal-day.has-event:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
+/* Zvýraznění celého festivalu při hoveru - jemný obrys bez zvětšení */
+.cal-day.festival-highlight {
+    box-shadow: 0 0 0 1px rgba(232, 65, 44, 0.5);
+}
+
+/* Ceny - zlatá (sytější) */
+.cal-day.award-day {
+    background: #ffe680;
+    color: #6b5900;
+    font-weight: 600;
+}
+
+.cal-day.award-day.past-event {
+    background: #fff7d9;
+    color: #a08060;
+}
+
+/* Festivaly - oranžovo-červená (sytější) */
+.cal-day.festival-day {
+    background: #ffcba4;
+    color: #7a3a00;
+    font-weight: 600;
+}
+
+.cal-day.festival-day.past-event {
+    background: #ffe4cc;
+    color: #a08060;
+}
+
+/* Více událostí na jeden den - jeden půlený kroužek */
+.cal-day.multi-day {
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cal-day.multi-day:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
+.cal-split-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cal-split-half {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.cal-split-half.top {
+    top: 0;
+    border-bottom: 1px solid rgba(100, 70, 30, 0.3);
+}
+
+.cal-split-half.bottom {
+    bottom: 0;
+}
+
+.cal-split-half.award {
+    background: #ffe680;
+}
+
+.cal-split-half.festival {
+    background: #ffcba4;
+}
+
+.cal-split-half.award.past {
+    background: #fff7d9;
+}
+
+.cal-split-half.festival.past {
+    background: #ffe4cc;
+}
+
+.cal-split-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #5a4a00;
+    z-index: 2;
+    text-shadow: 0 0 2px rgba(255,255,255,0.8);
+}
+
+.cal-day.today.award-day,
+.cal-day.today.festival-day {
+    box-shadow: 0 0 0 2px #bd9103;
+}
+
+/* Filtrované (skryté) dny */
+.cal-day.filtered-out {
+    background: transparent !important;
+    color: rgba(16, 20, 50, 0.2) !important;
+    font-weight: 400 !important;
+    cursor: default !important;
+    pointer-events: none;
+}
+
+.cal-day .cal-day-tooltip {
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #101432;
+    color: white;
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 200;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 1.3;
+}
+
+.cal-day .cal-day-tooltip small {
+    opacity: 0.75;
+    font-size: 0.5rem;
+    display: block;
+}
+
+.cal-day .cal-day-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: #101432;
+}
+
+.cal-day:hover .cal-day-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== RESPONZIVITA ===== */
+@media (max-width: 900px) {
+    .cal-year-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    #film-calendar-app {
+        padding: 1rem;
+    }
+    
+    .cal-year-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .cal-month-column {
+        padding: 0.4rem;
+    }
+    
+    .cal-day {
+        font-size: 0.45rem;
+    }
+    
+    .cal-weekday {
+        font-size: 0.4rem;
+    }
+    
+    .cal-legend-bar {
+        gap: 0.5rem;
+        padding: 0.6rem;
+    }
+    
+    .cal-legend-item {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.4rem;
+    }
+    
+    .cal-legend-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cal-year-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .cal-month-column {
+        padding: 0.3rem;
+    }
+    
+    .cal-month-header {
+        font-size: 0.65rem;
+        padding: 0.3rem 0;
+    }
+    
+    .cal-day {
+        font-size: 0.4rem;
+    }
+    
+    .cal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .cal-split-number {
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .cal-panel {
+        max-width: 95%;
+        margin: 1rem;
+        max-height: 85vh;
+    }
+    
+    .cal-panel-header {
+        padding: 1.2rem 1rem;
+    }
+    
+    .cal-panel-icon {
+        font-size: 2rem;
+    }
+    
+    .cal-panel-title {
+        font-size: 1.1rem;
+    }
+    
+    .cal-panel-body {
+        padding: 1rem;
+    }
+    
+    .cal-panel-section {
+        margin-bottom: 0.8rem;
+    }
+    
+    .cal-events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cal-event-card {
+        padding: 1rem;
+    }
+}
+
+/* ============================================
+   FLOURISH-STYLE POPUP PANEL
+   ============================================ */
+.cal-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 20, 50, 0.4);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cal-panel-overlay.active {
+    display: flex;
+}
+
+.cal-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(16, 20, 50, 0.3);
+    position: relative;
+    animation: panelSlideIn 0.3s ease;
+}
+
+@keyframes panelSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cal-panel-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(16, 20, 50, 0.1);
+    position: relative;
+}
+
+.cal-panel-header.award {
+    background: linear-gradient(135deg, #efb704 0%, #bd9103 100%);
+    color: white;
+}
+
+.cal-panel-header.festival {
+    background: linear-gradient(135deg, #e8412c 0%, #c5301f 100%);
+    color: white;
+}
+
+.cal-panel-header.award .cal-panel-title,
+.cal-panel-header.award .cal-panel-subtitle,
+.cal-panel-header.festival .cal-panel-title,
+.cal-panel-header.festival .cal-panel-subtitle {
+    color: white;
+}
+
+.cal-panel-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 32px;
+    text-align: center;
+    color: white;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.cal-panel-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cal-panel-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.cal-panel-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #101432;
+    margin: 0 0 0.25rem 0;
+}
+
+.cal-panel-subtitle {
+    font-size: 0.9rem;
+    color: #697fe6;
+    font-style: italic;
+    margin: 0;
+}
+
+.cal-panel-date {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+}
+
+.cal-panel-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.cal-panel-status.past {
+    background: #28a745;
+    color: white;
+}
+
+.cal-panel-status.ongoing {
+    background: #ff6b35;
+    color: white;
+}
+
+.cal-panel-status.upcoming {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.cal-panel-body {
+    padding: 1.5rem;
+}
+
+.cal-panel-section {
+    margin-bottom: 1.25rem;
+}
+
+.cal-panel-section:last-child {
+    margin-bottom: 0;
+}
+
+.cal-panel-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #812840;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.cal-panel-value {
+    color: #101432;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cal-panel-value a {
+    color: #697fe6;
+    text-decoration: none;
+}
+
+.cal-panel-value a:hover {
+    text-decoration: underline;
+}
+
+.cal-panel-winner {
+    background: linear-gradient(135deg, rgba(239, 183, 4, 0.2) 0%, rgba(239, 183, 4, 0.1) 100%);
+    border-left: 4px solid #efb704;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1rem;
+}
+
+.cal-panel-winner-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #812840;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cal-panel-winner-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #101432;
+}
+
+.cal-panel-trailer {
+    margin-top: 1rem;
+}
+
+.cal-trailer-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cal-trailer-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ============================================
+   CHRONOLOGICKÝ SEZNAM UDÁLOSTÍ
+   ============================================ */
+.cal-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.cal-section-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #812840;
+}
+
+.cal-section-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(16, 20, 50, 0.15), transparent);
+}
+
+.cal-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.cal-event-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.cal-event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.cal-event-card.award::before {
+    background: #efb704;
+}
+
+.cal-event-card.festival::before {
+    background: #e8412c;
+}
+
+.cal-event-card.past {
+    opacity: 0.85;
+    background: #f8f6f0;
+}
+
+.cal-event-card.past .cal-event-name::after {
+    content: ' ✓';
+    color: #28a745;
+}
+
+/* Filtrované karty */
+.cal-event-card.filtered-out {
+    display: none;
+}
+
+/* Celá karta je klikací */
+.cal-event-card {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cal-event-card:hover {
+    box-shadow: 0 4px 12px rgba(16, 20, 50, 0.12);
+    transform: translateY(-2px);
+}
+
+.cal-event-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.cal-event-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.cal-event-content {
+    flex: 1;
+}
+
+.cal-event-date {
+    font-size: 0.8rem;
+    color: #812840;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.cal-event-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+    color: #101432;
+}
+
+.cal-event-subtitle {
+    font-size: 0.8rem;
+    color: #697fe6;
+    font-style: italic;
+}
+
+.cal-event-details {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(16, 20, 50, 0.1);
+}
+
+.cal-detail-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cal-detail-label {
+    color: #812840;
+    min-width: 70px;
+    font-weight: 500;
+}
+
+.cal-detail-value {
+    color: #101432;
+    flex: 1;
+}
+
+.cal-detail-value a {
+    color: #697fe6;
+    text-decoration: none;
+}
+
+.cal-winner-tag {
+    display: inline-block;
+    background: rgba(239, 183, 4, 0.2);
+    color: #812840;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .cal-events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cal-panel {
+        max-height: 85vh;
+    }
+}
+</style>
+
+<script>
+(function() {
+    var TODAY = new Date();
+    var currentFilter = 'all';
+    
+    var events = [
+        {
+            id: 'critics-choice',
+            type: 'award',
+            name: 'Critics Choice Movie Awards',
+            nameEn: 'Critics Choice Awards',
+            date: '4. ledna 2026',
+            dateObj: new Date(2026, 0, 4),
+            czech: false,
+            country: 'USA',
+            tradition: 'Od roku 1996',
+            edition: '31. ročník',
+            organizer: 'Critics Choice Association',
+            description: 'Ceny udělované americkými filmovými a televizními kritiky sdruženými v Critics Choice Association (dříve BFCA). Považovány za jeden z nejspolehlivějších indikátorů budoucích oscarových vítězů.',
+            website: 'https://www.criticschoice.com',
+            winner2026: 'One Battle After Another (Paul Thomas Anderson)',
+            trailerYouTube: 'feOQFKv2Lw4'
+        },
+        {
+            id: 'golden-globes',
+            type: 'award',
+            name: 'Zlaté glóby',
+            nameEn: 'Golden Globe Awards',
+            date: '11. ledna 2026',
+            dateObj: new Date(2026, 0, 11),
+            czech: false,
+            country: 'USA',
+            tradition: 'Od roku 1944',
+            edition: '83. ročník',
+            organizer: 'Hollywood Foreign Press Association (HFPA)',
+            description: 'Ceny udělované Hollywoodskou asociací zahraničního tisku. Rozdělené na drama a komedie/muzikál, což dává šanci více filmům.',
+            website: 'https://goldenglobes.com',
+            winner2026: 'Hamnet (drama), One Battle After Another (komedie)',
+            trailerYouTube: 'xYcgQMxQwmk',
+            trailerYouTube2: 'feOQFKv2Lw4'
+        },
+        {
+            id: 'european-film-awards',
+            type: 'award',
+            name: 'Evropské filmové ceny',
+            nameEn: 'European Film Awards',
+            date: '17. ledna 2026',
+            dateObj: new Date(2026, 0, 17),
+            czech: false,
+            country: 'Německo',
+            tradition: 'Od roku 1988',
+            edition: '38. ročník',
+            organizer: 'Evropská filmová akademie (EFA)',
+            description: 'Nejvýznamnější ocenění evropské kinematografie, udělované Evropskou filmovou akademií se sídlem v Berlíně.',
+            website: 'https://www.europeanfilmawards.eu',
+            location: 'Berlín, Německo',
+            winner2026: 'Sentimental Value (Joachim Trier)',
+            trailerYouTube: 'lKbcKQN5Yrw'
+        },
+        {
+            id: 'sundance',
+            type: 'festival',
+            name: 'Sundance',
+            nameEn: 'Sundance Film Festival',
+            date: '22. ledna – 1. února 2026',
+            dateObj: new Date(2026, 0, 22),
+            endDateObj: new Date(2026, 1, 1),
+            czech: false,
+            country: 'USA',
+            tradition: 'Od roku 1978',
+            edition: '42. ročník',
+            organizer: 'Sundance Institute',
+            description: 'Největší festival nezávislého filmu na světě, založený Robertem Redfordem. Odskočil odtud např. Sex, lži a video, Pulp Fiction či Get Out.',
+            website: 'https://www.sundance.org',
+            location: 'Park City, Utah, USA'
+        },
+        {
+            id: 'hungarian-film-week',
+            type: 'festival',
+            name: 'Maďarský filmový týden',
+            nameEn: 'Hungarian Film Week',
+            date: '2. – 8. února 2026',
+            dateObj: new Date(2026, 1, 2),
+            endDateObj: new Date(2026, 1, 8),
+            czech: false,
+            country: 'Maďarsko',
+            tradition: 'Od roku 2014',
+            edition: '45. ročník',
+            organizer: 'Maďarská filmová akademie',
+            description: 'Týdenní přehlídka nejlepších maďarských filmů uplynulého roku.',
+            website: 'https://mfszemle.hu',
+            location: 'Budapešť, Maďarsko'
+        },
+        {
+            id: 'czech-critics',
+            type: 'award',
+            name: 'Ceny české filmové kritiky',
+            nameEn: 'Czech Film Critics Awards',
+            date: '7. února 2026',
+            dateObj: new Date(2026, 1, 7),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 2008',
+            edition: '19. ročník',
+            organizer: 'Asociace českých filmových kritiků (AČFK)',
+            description: 'Nezávislé ocenění udělované členy Asociace českých filmových kritiků.',
+            website: 'https://www.filmovakritika.cz'
+        },
+        {
+            id: 'berlinale',
+            type: 'festival',
+            name: 'Berlinale',
+            nameEn: 'Berlin International Film Festival',
+            date: '12. – 22. února 2026',
+            dateObj: new Date(2026, 1, 12),
+            endDateObj: new Date(2026, 1, 22),
+            czech: false,
+            country: 'Německo',
+            tradition: 'Od roku 1951',
+            edition: '76. ročník',
+            organizer: 'Kulturveranstaltungen des Bundes in Berlin GmbH',
+            description: 'Součást „velké trojky" světových festivalů (Cannes, Benátky, Berlín). Známý politicky angažovaným výběrem filmů a veřejnou přístupností – prodá přes 300 000 vstupenek.',
+            website: 'https://www.berlinale.de',
+            location: 'Berlín',
+            mainPrize: 'Zlatý medvěd'
+        },
+        {
+            id: 'spirit-awards',
+            type: 'award',
+            name: 'Ceny nezávislého filmu',
+            nameEn: 'Film Independent Spirit Awards',
+            date: '15. února 2026',
+            dateObj: new Date(2026, 1, 15),
+            czech: false,
+            country: 'USA',
+            tradition: 'Od roku 1984',
+            edition: '41. ročník',
+            organizer: 'Film Independent',
+            description: 'Prestižní ocenění pro nezávislé americké filmy.',
+            website: 'https://filmindependent.org/spirit-awards'
+        },
+        {
+            id: 'bafta',
+            type: 'award',
+            name: 'Britské filmové ceny BAFTA',
+            nameEn: 'BAFTA Film Awards',
+            date: '22. února 2026',
+            dateObj: new Date(2026, 1, 22),
+            czech: false,
+            country: 'Velká Británie',
+            tradition: 'Od roku 1949',
+            edition: '79. ročník',
+            organizer: 'British Academy of Film and Television Arts',
+            description: 'Ceny Britské akademie filmového a televizního umění. Druhé nejsledovanější filmové ocenění po Oscarech, často předpovídají jejich výsledky.',
+            website: 'https://www.bafta.org'
+        },
+        {
+            id: 'cesar',
+            type: 'award',
+            name: 'Francouzské filmové ceny César',
+            nameEn: 'César Awards',
+            date: '27. února 2026',
+            dateObj: new Date(2026, 1, 27),
+            czech: false,
+            country: 'Francie',
+            tradition: 'Od roku 1976',
+            edition: '51. ročník',
+            organizer: 'Académie des Arts et Techniques du Cinéma',
+            description: 'Nejvýznamnější francouzské filmové ocenění.',
+            website: 'https://www.academie-cinema.org'
+        },
+        {
+            id: 'goya',
+            type: 'award',
+            name: 'Španělské filmové ceny Goya',
+            nameEn: 'Goya Awards',
+            date: '28. února 2026',
+            dateObj: new Date(2026, 1, 28),
+            czech: false,
+            country: 'Španělsko',
+            tradition: 'Od roku 1987',
+            edition: '40. ročník',
+            organizer: 'Academia de las Artes y las Ciencias Cinematográficas',
+            description: 'Nejvýznamnější španělské filmové ocenění.',
+            website: 'https://www.premiosgoya.com'
+        },
+        {
+            id: 'polish-eagles',
+            type: 'award',
+            name: 'Polské filmové ceny Orły',
+            nameEn: 'Polish Film Awards',
+            date: 'začátek března 2026',
+            dateObj: new Date(2026, 2, 9),
+            czech: false,
+            country: 'Polsko',
+            tradition: 'Od roku 1999',
+            edition: '28. ročník',
+            organizer: 'Polská filmová akademie',
+            description: 'Nejvýznamnější polské filmové ocenění.',
+            website: 'https://pfrr.pl',
+            location: 'Varšava, Polsko'
+        },
+        {
+            id: 'jeden-svet',
+            type: 'festival',
+            name: 'Jeden svět',
+            nameEn: 'One World',
+            date: '11. – 24. března 2026',
+            dateObj: new Date(2026, 2, 11),
+            endDateObj: new Date(2026, 2, 24),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 1999',
+            edition: '28. ročník',
+            organizer: 'Společnost Člověk v tísni',
+            description: 'Největší festival dokumentárních filmů o lidských právech na světě. Promítá filmy z krizových oblastí a nabízí diskuze s tvůrci i aktivisty.',
+            website: 'https://www.jedensvet.cz',
+            location: 'Praha'
+        },
+        {
+            id: 'czech-lion',
+            type: 'award',
+            name: 'Český lev',
+            nameEn: 'Czech Lion Awards',
+            date: '14. března 2026',
+            dateObj: new Date(2026, 2, 14),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 1993',
+            edition: '33. ročník',
+            organizer: 'Česká filmová a televizní akademie (ČFTA)',
+            description: 'Hlavní české filmové ocenění udělované Českou filmovou a televizní akademií (ČFTA). Vychází z hlasování filmových profesionálů.',
+            website: 'https://www.ceskylev.cz'
+        },
+        {
+            id: 'oscars',
+            type: 'award',
+            name: 'Ceny Akademie (Oscary)',
+            nameEn: 'Academy Awards (Oscars)',
+            date: 'noc z 15. na 16. března 2026',
+            dateObj: new Date(2026, 2, 16),
+            czech: false,
+            country: 'USA',
+            tradition: 'Od roku 1929',
+            edition: '98. ročník',
+            organizer: 'Academy of Motion Picture Arts and Sciences',
+            description: 'Nejsledovanější filmové ocenění na světě. Vítězství může filmům přinést desítky milionů dolarů navíc a hercům otevřít dveře k novým rolím.',
+            website: 'https://www.oscars.org',
+            note: 'Nominace oznámeny 22. ledna 2026'
+        },
+        {
+            id: 'diagonale',
+            type: 'festival',
+            name: 'Diagonale',
+            nameEn: 'Festival of Austrian Film',
+            date: '18. – 23. března 2026',
+            dateObj: new Date(2026, 2, 18),
+            endDateObj: new Date(2026, 2, 23),
+            czech: false,
+            country: 'Rakousko',
+            tradition: 'Od roku 1998',
+            edition: '29. ročník',
+            organizer: 'Diagonale',
+            description: 'Nejvýznamnější festival rakouského filmu.',
+            website: 'https://www.diagonale.at',
+            location: 'Štýrský Hradec, Rakousko'
+        },
+        {
+            id: 'slovak-sun',
+            type: 'award',
+            name: 'Slnko v sieti',
+            nameEn: 'Sun in a Net Awards',
+            date: 'duben 2026',
+            dateObj: new Date(2026, 3, 15),
+            czech: true,
+            country: 'Slovensko',
+            tradition: 'Od roku 2004',
+            edition: '15. ročník',
+            organizer: 'Slovenská filmová a televízna akadémia',
+            description: 'Nejvýznamnější slovenské filmové ocenění.',
+            website: 'https://www.slnkovsieti.sk',
+            location: 'Bratislava, Slovensko'
+        },
+        {
+            id: 'german-film-award',
+            type: 'award',
+            name: 'Německá filmová cena (Lola)',
+            nameEn: 'Deutscher Filmpreis',
+            date: 'duben 2026',
+            dateObj: new Date(2026, 3, 24),
+            czech: false,
+            country: 'Německo',
+            tradition: 'Od roku 1951',
+            edition: '76. ročník',
+            organizer: 'Deutsche Filmakademie',
+            description: 'Nejvýznamnější německé filmové ocenění.',
+            website: 'https://www.deutscher-filmpreis.de',
+            location: 'Berlín, Německo'
+        },
+        {
+            id: 'anifilm',
+            type: 'festival',
+            name: 'Anifilm',
+            nameEn: 'International Animated Film Festival',
+            date: '5. – 10. května 2026',
+            dateObj: new Date(2026, 4, 5),
+            endDateObj: new Date(2026, 4, 10),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 2010',
+            edition: '17. ročník',
+            organizer: 'Anifilm, z.s.',
+            description: 'Mezinárodní festival animovaného filmu.',
+            website: 'https://www.anifilm.cz',
+            location: 'Liberec'
+        },
+        {
+            id: 'cannes',
+            type: 'festival',
+            name: 'Cannes',
+            nameEn: 'Festival de Cannes',
+            date: '12. – 23. května 2026',
+            dateObj: new Date(2026, 4, 12),
+            endDateObj: new Date(2026, 4, 23),
+            czech: false,
+            country: 'Francie',
+            tradition: 'Od roku 1946',
+            edition: '79. ročník',
+            organizer: 'Association Française du Festival International du Film',
+            description: 'Nejprestižnější filmový festival světa, odrazový můstek pro umělecky ambiciózní filmy. Výběr do hlavní soutěže je považován za nejvyšší možné uznání.',
+            website: 'https://www.festival-cannes.com',
+            location: 'Cannes, Francie',
+            mainPrize: 'Zlatá palma'
+        },
+        {
+            id: 'zlinfest',
+            type: 'festival',
+            name: 'Zlín Film Festival',
+            nameEn: 'International Festival for Children and Youth',
+            date: '28. května – 3. června 2026',
+            dateObj: new Date(2026, 4, 28),
+            endDateObj: new Date(2026, 5, 3),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 1961',
+            edition: '66. ročník',
+            organizer: 'Filmfest, s.r.o.',
+            description: 'Nejstarší festival filmů pro děti a mládež na světě.',
+            website: 'https://www.zlinfest.cz',
+            location: 'Zlín'
+        },
+        {
+            id: 'austrian-film-award',
+            type: 'award',
+            name: 'Rakouská filmová cena',
+            nameEn: 'Österreichischer Filmpreis',
+            date: '18. června 2026',
+            dateObj: new Date(2026, 5, 18),
+            czech: false,
+            country: 'Rakousko',
+            tradition: 'Od roku 2011',
+            edition: '16. ročník',
+            organizer: 'Akademie des Österreichischen Films',
+            description: 'Národní filmová cena Rakouska.',
+            website: 'https://www.oesterreichische-filmakademie.at',
+            location: 'Vídeň, Rakousko'
+        },
+        {
+            id: 'kviff',
+            type: 'festival',
+            name: 'Karlovy Vary',
+            nameEn: 'Karlovy Vary IFF',
+            date: '3. – 11. července 2026',
+            dateObj: new Date(2026, 6, 3),
+            endDateObj: new Date(2026, 6, 11),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 1946',
+            edition: '60. ročník',
+            organizer: 'Film Servis Festival Karlovy Vary',
+            description: 'Nejstarší a nejprestižnější filmový festival ve střední Evropě. Kategorie A (akreditace FIAPF). Známý neformální atmosférou a diváckou přístupností.',
+            website: 'https://www.kviff.com',
+            location: 'Karlovy Vary',
+            mainPrize: 'Křišťálový globus'
+        },
+        {
+            id: 'lfs',
+            type: 'festival',
+            name: 'Letní filmová škola',
+            nameEn: 'Summer Film School',
+            date: '24. – 30. července 2026',
+            dateObj: new Date(2026, 6, 24),
+            endDateObj: new Date(2026, 6, 30),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 1964',
+            edition: '52. ročník',
+            organizer: 'Asociace českých filmových klubů',
+            description: 'Nejstarší filmová přehlídka v České republice. Kombinuje projekce filmů s přednáškami, workshopy a debatami s filmovými tvůrci.',
+            website: 'https://www.lfs.cz',
+            location: 'Uherské Hradiště'
+        },
+        {
+            id: 'venice',
+            type: 'festival',
+            name: 'Benátky',
+            nameEn: 'Venice Film Festival',
+            date: '2. – 12. září 2026',
+            dateObj: new Date(2026, 8, 2),
+            endDateObj: new Date(2026, 8, 12),
+            czech: false,
+            country: 'Itálie',
+            tradition: 'Od roku 1932',
+            edition: '83. ročník',
+            organizer: 'La Biennale di Venezia',
+            description: 'Nejstarší filmový festival na světě. V posledních letech klíčová startovní rampa pro oscarové kandidáty – vítězové často uspějí i na Oscarech.',
+            website: 'https://www.labiennale.org/en/cinema',
+            location: 'Benátky, Itálie',
+            mainPrize: 'Zlatý lev'
+        },
+        {
+            id: 'tiff',
+            type: 'festival',
+            name: 'Toronto',
+            nameEn: 'Toronto International Film Festival',
+            date: '10. – 20. září 2026',
+            dateObj: new Date(2026, 8, 10),
+            endDateObj: new Date(2026, 8, 20),
+            czech: false,
+            country: 'Kanada',
+            tradition: 'Od roku 1976',
+            edition: '51. ročník',
+            organizer: 'Toronto International Film Festival Inc.',
+            description: 'Největší veřejně přístupný filmový festival v Severní Americe. Diváci zde mohou vidět filmy ještě před jejich širokým uvedením. People\'s Choice Award je spolehlivý předzvěstí oscarových nominací.',
+            website: 'https://www.tiff.net',
+            location: 'Toronto, Kanada',
+            mainPrize: 'People\'s Choice Award'
+        },
+        {
+            id: 'serial-killer',
+            type: 'festival',
+            name: 'Serial Killer',
+            nameEn: 'International TV Festival',
+            date: '23. – 28. září 2026',
+            dateObj: new Date(2026, 8, 23),
+            endDateObj: new Date(2026, 8, 28),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 2018',
+            edition: '9. ročník',
+            organizer: 'Serial Killer z.s.',
+            description: 'Festival zaměřený na televizní a webové seriály.',
+            website: 'https://serialkiller.tv',
+            location: 'Brno'
+        },
+        {
+            id: 'jihlava',
+            type: 'festival',
+            name: 'Ji.hlava IDFF',
+            nameEn: 'International Documentary Film Festival',
+            date: '23. října – 1. listopadu 2026',
+            dateObj: new Date(2026, 9, 23),
+            endDateObj: new Date(2026, 10, 1),
+            czech: true,
+            country: 'Česko',
+            tradition: 'Od roku 1997',
+            edition: '30. ročník',
+            organizer: 'Ji.hlava – Institut dokumentárního filmu',
+            description: 'Největší festival dokumentárních filmů ve střední Evropě. Zaměřuje se na tvůrčí a experimentální dokumenty. Součástí je i industry sekce.',
+            website: 'https://www.ji-hlava.cz',
+            location: 'Jihlava'
+        }
+    ];
+
+    // Seřazení podle data
+    events.sort(function(a, b) {
+        return a.dateObj - b.dateObj;
+    });
+
+    function isPast(event) {
+        var endDate = event.endDateObj || event.dateObj;
+        return endDate < TODAY;
+    }
+    
+    function isOngoing(event) {
+        if (!event.endDateObj) return false;
+        return event.dateObj <= TODAY && TODAY <= event.endDateObj;
+    }
+
+    function formatCurrentDate() {
+        var months = ['ledna', 'února', 'března', 'dubna', 'května', 'června', 
+                     'července', 'srpna', 'září', 'října', 'listopadu', 'prosince'];
+        return TODAY.getDate() + '. ' + months[TODAY.getMonth()] + ' ' + TODAY.getFullYear();
+    }
+    
+    var monthNames = ['ledna', 'února', 'března', 'dubna', 'května', 'června', 
+                      'července', 'srpna', 'září', 'října', 'listopadu', 'prosince'];
+
+    function matchesFilter(event, filter) {
+        if (filter === 'all') return true;
+        if (filter === 'award') return event.type === 'award';
+        if (filter === 'festival') return event.type === 'festival';
+        if (filter === 'czech') return event.czech === true;
+        return true;
+    }
+
+    function applyFilter(filter) {
+        currentFilter = filter;
+        
+        // Aktualizace legendy
+        document.querySelectorAll('.cal-legend-item[data-filter]').forEach(function(item) {
+            if (item.getAttribute('data-filter') === filter) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+        
+        // Filtrování dnů v kalendáři
+        document.querySelectorAll('.cal-day.has-event').forEach(function(day) {
+            var eventType = day.getAttribute('data-type') || '';
+            var eventCzech = day.getAttribute('data-czech') === 'true';
+            
+            var matches = false;
+            if (filter === 'all') {
+                matches = true;
+            } else if (filter === 'award') {
+                matches = eventType.indexOf('award') !== -1;
+            } else if (filter === 'festival') {
+                matches = eventType.indexOf('festival') !== -1;
+            } else if (filter === 'czech') {
+                matches = eventCzech;
+            }
+            
+            if (matches) {
+                day.classList.remove('filtered-out');
+            } else {
+                day.classList.add('filtered-out');
+            }
+        });
+        
+        // Filtrování karet
+        document.querySelectorAll('.cal-event-card').forEach(function(card) {
+            var eventType = card.getAttribute('data-type');
+            var eventCzech = card.getAttribute('data-czech') === 'true';
+            
+            var matches = false;
+            if (filter === 'all') matches = true;
+            else if (filter === 'award') matches = eventType === 'award';
+            else if (filter === 'festival') matches = eventType === 'festival';
+            else if (filter === 'czech') matches = eventCzech;
+            
+            if (matches) {
+                card.classList.remove('filtered-out');
+            } else {
+                card.classList.add('filtered-out');
+            }
+        });
+    }
+
+    function openPanel(event) {
+        var overlay = document.getElementById('cal-panel-overlay');
+        var panel = document.getElementById('cal-panel-content');
+        
+        var icon = event.type === 'award' ? '🏆' : '🎬';
+        var past = isPast(event);
+        var ongoing = isOngoing(event);
+        
+        var statusClass, statusText;
+        if (ongoing) {
+            statusClass = 'ongoing';
+            statusText = 'Právě probíhá';
+        } else if (past) {
+            statusClass = 'past';
+            statusText = 'Proběhlo';
+        } else {
+            statusClass = 'upcoming';
+            statusText = 'Nadcházející';
+        }
+        
+        // Zjistíme, jestli název už obsahuje zemi
+        var showCountryInTitle = event.country && 
+            event.name.toLowerCase().indexOf(event.country.toLowerCase()) === -1 &&
+            event.name.toLowerCase().indexOf('česk') === -1 &&
+            event.name.toLowerCase().indexOf('francous') === -1 &&
+            event.name.toLowerCase().indexOf('španěls') === -1 &&
+            event.name.toLowerCase().indexOf('polsk') === -1 &&
+            event.name.toLowerCase().indexOf('německ') === -1 &&
+            event.name.toLowerCase().indexOf('rakous') === -1 &&
+            event.name.toLowerCase().indexOf('britsk') === -1 &&
+            event.name.toLowerCase().indexOf('maďarsk') === -1 &&
+            event.name.toLowerCase().indexOf('evropsk') === -1;
+        
+        // Místo - pokud není, použijeme zemi
+        var locationText = event.location || event.country;
+        
+        // Tradice + ročník v jednom řádku
+        var bodyHTML = '<div class="cal-panel-section"><div class="cal-panel-label">Tradice</div><div class="cal-panel-value">' + event.tradition + ', ' + event.edition + '</div></div>';
+        
+        // Pořadatel + místo v jednom řádku
+        if (event.organizer || locationText) {
+            var orgLocParts = [];
+            if (event.organizer) orgLocParts.push(event.organizer);
+            if (locationText) orgLocParts.push(locationText);
+            bodyHTML += '<div class="cal-panel-section"><div class="cal-panel-label">Pořádá</div><div class="cal-panel-value">' + orgLocParts.join(' · ') + '</div></div>';
+        }
+        
+        if (event.mainPrize) {
+            bodyHTML += '<div class="cal-panel-section"><div class="cal-panel-label">Hlavní cena</div><div class="cal-panel-value">' + event.mainPrize + '</div></div>';
+        }
+        
+        bodyHTML += '<div class="cal-panel-section"><div class="cal-panel-label">O události</div><div class="cal-panel-value">' + event.description + '</div></div>';
+        bodyHTML += '<div class="cal-panel-section"><div class="cal-panel-label">Web</div><div class="cal-panel-value"><a href="' + event.website + '" target="_blank">' + event.website.replace('https://', '').replace('www.', '') + '</a></div></div>';
+        
+        if (event.winner2026) {
+            bodyHTML += '<div class="cal-panel-winner"><div class="cal-panel-winner-title">🏆 Vítěz 2026</div><div class="cal-panel-winner-name">' + event.winner2026 + '</div></div>';
+            if (event.trailerYouTube) {
+                bodyHTML += '<div class="cal-panel-trailer"><div class="cal-panel-label" style="margin-bottom: 0.5rem;">Trailer</div><div class="cal-trailer-wrapper"><iframe src="https://www.youtube.com/embed/' + event.trailerYouTube + '?si=embed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>';
+            }
+            if (event.trailerYouTube2) {
+                bodyHTML += '<div class="cal-panel-trailer"><div class="cal-panel-label" style="margin-bottom: 0.5rem;">Trailer 2</div><div class="cal-trailer-wrapper"><iframe src="https://www.youtube.com/embed/' + event.trailerYouTube2 + '?si=embed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>';
+            }
+        }
+        if (event.note) {
+            bodyHTML += '<div class="cal-panel-section"><div class="cal-panel-label">Poznámka</div><div class="cal-panel-value" style="font-style: italic; color: #812840;">' + event.note + '</div></div>';
+        }
+        
+        panel.innerHTML = '<div class="cal-panel-header ' + event.type + '"><button class="cal-panel-close" onclick="closePanel()">×</button><div class="cal-panel-icon">' + icon + '</div><h3 class="cal-panel-title">' + event.name + (showCountryInTitle ? ' (' + event.country + ')' : '') + '</h3><p class="cal-panel-subtitle">' + event.nameEn + '</p><span class="cal-panel-date">' + event.date + '</span><span class="cal-panel-status ' + statusClass + '">' + statusText + '</span></div><div class="cal-panel-body">' + bodyHTML + '</div>';
+        
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    window.closePanel = function() {
+        var overlay = document.getElementById('cal-panel-overlay');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+    
+    window.openPanelById = function(eventId) {
+        var event = events.find(function(e) { return e.id === eventId; });
+        if (event) openPanel(event);
+    };
+    
+    window.openMultiPanel = function(eventId1, eventId2) {
+        var event1 = events.find(function(e) { return e.id === eventId1; });
+        var event2 = events.find(function(e) { return e.id === eventId2; });
+        if (event1 && event2) openPanelMulti(event1, event2);
+    };
+    
+    function openPanelMulti(event1, event2) {
+        var overlay = document.getElementById('cal-panel-overlay');
+        var panel = document.getElementById('cal-panel-content');
+        
+        function buildEventSection(event) {
+            var icon = event.type === 'award' ? '🏆' : '🎬';
+            var past = isPast(event);
+            var ongoing = isOngoing(event);
+            
+            var statusClass, statusText;
+            if (ongoing) {
+                statusClass = 'ongoing';
+                statusText = 'Právě probíhá';
+            } else if (past) {
+                statusClass = 'past';
+                statusText = 'Proběhlo';
+            } else {
+                statusClass = 'upcoming';
+                statusText = 'Nadcházející';
+            }
+            
+            var showCountryInTitle = event.country && 
+                event.name.toLowerCase().indexOf(event.country.toLowerCase()) === -1 &&
+                event.name.toLowerCase().indexOf('česk') === -1 &&
+                event.name.toLowerCase().indexOf('francous') === -1 &&
+                event.name.toLowerCase().indexOf('španěls') === -1 &&
+                event.name.toLowerCase().indexOf('polsk') === -1 &&
+                event.name.toLowerCase().indexOf('německ') === -1 &&
+                event.name.toLowerCase().indexOf('rakous') === -1 &&
+                event.name.toLowerCase().indexOf('britsk') === -1 &&
+                event.name.toLowerCase().indexOf('maďarsk') === -1 &&
+                event.name.toLowerCase().indexOf('evropsk') === -1;
+            
+            var locationText = event.location || event.country;
+            
+            var html = '<div class="cal-panel-header ' + event.type + '" style="padding: 1rem 1.5rem;">' +
+                '<div class="cal-panel-icon" style="font-size: 1.5rem;">' + icon + '</div>' +
+                '<h3 class="cal-panel-title" style="font-size: 1.1rem;">' + event.name + (showCountryInTitle ? ' (' + event.country + ')' : '') + '</h3>' +
+                '<p class="cal-panel-subtitle">' + event.nameEn + '</p>' +
+                '<span class="cal-panel-date">' + event.date + '</span>' +
+                '<span class="cal-panel-status ' + statusClass + '">' + statusText + '</span>' +
+                '</div>';
+            
+            html += '<div class="cal-panel-body" style="padding: 1rem 1.5rem;">';
+            html += '<div class="cal-panel-section"><div class="cal-panel-label">Tradice</div><div class="cal-panel-value">' + event.tradition + ', ' + event.edition + '</div></div>';
+            
+            if (event.organizer || locationText) {
+                var orgLocParts = [];
+                if (event.organizer) orgLocParts.push(event.organizer);
+                if (locationText) orgLocParts.push(locationText);
+                html += '<div class="cal-panel-section"><div class="cal-panel-label">Pořádá</div><div class="cal-panel-value">' + orgLocParts.join(' · ') + '</div></div>';
+            }
+            
+            html += '<div class="cal-panel-section"><div class="cal-panel-label">Web</div><div class="cal-panel-value"><a href="' + event.website + '" target="_blank">' + event.website.replace('https://', '').replace('www.', '') + '</a></div></div>';
+            html += '</div>';
+            
+            return html;
+        }
+        
+        panel.innerHTML = '<button class="cal-panel-close" onclick="closePanel()" style="position: absolute; top: 1rem; right: 1rem; z-index: 10;">×</button>' +
+            buildEventSection(event1) +
+            '<div style="border-top: 1px solid rgba(16,20,50,0.1);"></div>' +
+            buildEventSection(event2);
+        
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    window.toggleFilter = function(filter) {
+        if (currentFilter === filter) {
+            applyFilter('all');
+        } else {
+            applyFilter(filter);
+        }
+    };
+
+    function renderCalendar() {
+        var container = document.getElementById('film-calendar-app');
+        if (!container) return;
+
+        var monthShort = ['LED', 'ÚNO', 'BŘE', 'DUB', 'KVĚ', 'ČVN', 'ČVC', 'SRP', 'ZÁŘ', 'ŘÍJ', 'LIS', 'PRO'];
+        var weekdayLabels = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne'];
+
+        // Mapa událostí podle dnů
+        var eventMap = {};
+        events.forEach(function(event) {
+            var startDate = new Date(event.dateObj);
+            var endDate = event.endDateObj ? new Date(event.endDateObj) : new Date(event.dateObj);
+            var current = new Date(startDate);
+            
+            while (current <= endDate) {
+                var key = '2026-' + current.getMonth() + '-' + current.getDate();
+                if (!eventMap[key]) eventMap[key] = [];
+                eventMap[key].push(event);
+                current.setDate(current.getDate() + 1);
+            }
+        });
+
+        // Kalendářová mřížka
+        var calendarHTML = '<div class="cal-year-grid">';
+        
+        for (var month = 0; month < 12; month++) {
+            var firstDay = new Date(2026, month, 1);
+            var lastDay = new Date(2026, month + 1, 0);
+            var daysInMonth = lastDay.getDate();
+            
+            var startDayOfWeek = firstDay.getDay() - 1;
+            if (startDayOfWeek < 0) startDayOfWeek = 6;
+            
+            calendarHTML += '<div class="cal-month-column"><div class="cal-month-header">' + monthShort[month] + '</div><div class="cal-weekdays">';
+            for (var w = 0; w < 7; w++) {
+                calendarHTML += '<div class="cal-weekday">' + weekdayLabels[w] + '</div>';
+            }
+            calendarHTML += '</div><div class="cal-days-grid">';
+            
+            for (var i = 0; i < startDayOfWeek; i++) {
+                calendarHTML += '<div class="cal-day empty"></div>';
+            }
+            
+            for (var day = 1; day <= daysInMonth; day++) {
+                var dateKey = '2026-' + month + '-' + day;
+                var isToday = TODAY.getFullYear() === 2026 && TODAY.getMonth() === month && TODAY.getDate() === day;
+                var dayEvents = eventMap[dateKey] || [];
+                var hasEvent = dayEvents.length > 0;
+                var hasMultipleEvents = dayEvents.length > 1;
+                
+                var classes = 'cal-day';
+                var content = '' + day;
+                var dataAttrs = '';
+                var clickHandler = '';
+                
+                if (isToday) classes += ' today';
+                
+                if (hasMultipleEvents) {
+                    // Dva nebo více událostí - jeden půlený kroužek
+                    // Seřadíme tak, aby ceny byly nahoře (žlutá), festivaly dole (oranžová)
+                    classes += ' has-event multi-day';
+                    var sortedEvents = dayEvents.slice().sort(function(a, b) {
+                        if (a.type === 'award' && b.type !== 'award') return -1;
+                        if (a.type !== 'award' && b.type === 'award') return 1;
+                        return 0;
+                    });
+                    var evTop = sortedEvents[0];
+                    var evBottom = sortedEvents[1];
+                    var pastTop = isPast(evTop) ? ' past' : '';
+                    var pastBottom = isPast(evBottom) ? ' past' : '';
+                    
+                    // Jeden půlený kroužek s číslem uprostřed
+                    content = '<div class="cal-split-circle">' +
+                        '<div class="cal-split-half top ' + evTop.type + pastTop + '"></div>' +
+                        '<div class="cal-split-half bottom ' + evBottom.type + pastBottom + '"></div>' +
+                        '</div>' +
+                        '<span class="cal-split-number">' + day + '</span>' +
+                        '<div class="cal-day-tooltip">🏆🎬 ' + evTop.name + ' + ' + evBottom.name + '<small>' + day + '. ' + monthNames[month] + '</small></div>';
+                    
+                    // Pro filtrování použijeme kombinaci obou typů
+                    dataAttrs = ' data-type="' + evTop.type + ',' + evBottom.type + '" data-czech="' + (evTop.czech || evBottom.czech) + '" data-event-ids="' + evTop.id + ',' + evBottom.id + '"';
+                    clickHandler = ' onclick="openMultiPanel(\'' + evTop.id + '\', \'' + evBottom.id + '\')"';
+                    
+                } else if (hasEvent) {
+                    // Jedna událost
+                    var eventData = dayEvents[0];
+                    classes += ' has-event';
+                    classes += eventData.type === 'award' ? ' award-day' : ' festival-day';
+                    if (isPast(eventData)) classes += ' past-event';
+                    
+                    dataAttrs = ' data-type="' + eventData.type + '" data-czech="' + eventData.czech + '" data-event-id="' + eventData.id + '"';
+                    
+                    var icon = eventData.type === 'award' ? '🏆' : '🎬';
+                    content = day + '<div class="cal-day-tooltip">' + icon + ' ' + eventData.name + '<small>' + eventData.date + '</small></div>';
+                    
+                    clickHandler = ' onclick="openPanelById(\'' + eventData.id + '\')"';
+                }
+                
+                calendarHTML += '<div class="' + classes + '"' + dataAttrs + clickHandler + '>' + content + '</div>';
+            }
+            
+            calendarHTML += '</div></div>';
+        }
+        calendarHTML += '</div>';
+
+        // Sestavení HTML
+        container.innerHTML = '<div class="cal-header"><h2>Filmový kalendář 2026</h2><p>Přehled filmových cen a festivalů</p><div class="cal-current-date">Aktualizováno: ' + formatCurrentDate() + '</div></div>' +
+            '<div class="cal-legend-bar">' +
+            '<div class="cal-legend-item" data-filter="award" onclick="toggleFilter(\'award\')"><span class="cal-legend-dot award"></span><span>Filmové ceny</span></div>' +
+            '<div class="cal-legend-item" data-filter="festival" onclick="toggleFilter(\'festival\')"><span class="cal-legend-dot festival"></span><span>Festivaly</span></div>' +
+            '<div class="cal-legend-item" data-filter="czech" onclick="toggleFilter(\'czech\')"><span class="cal-legend-dot czech"><span class="cal-flag cal-flag-cz"></span><span class="cal-flag cal-flag-sk"></span></span><span>České a slovenské</span></div>' +
+            '<div class="cal-legend-item today-indicator"><span class="cal-legend-dot today"></span><span>Dnes</span></div>' +
+            '</div>' +
+            calendarHTML +
+            '<div class="cal-section-header"><h3>📅 Přehled událostí</h3><div class="cal-section-line"></div></div><div class="cal-events-grid" id="cal-events-grid"></div>' +
+            '<div class="cal-panel-overlay" id="cal-panel-overlay" onclick="if(event.target === this) closePanel()"><div class="cal-panel" id="cal-panel-content"></div></div>';
+
+        // Karty - chronologicky
+        var eventsGrid = document.getElementById('cal-events-grid');
+
+        events.forEach(function(event) {
+            var icon = event.type === 'award' ? '🏆' : '🎬';
+            var past = isPast(event);
+            
+            var detailsHTML = '<div class="cal-detail-row"><span class="cal-detail-label">Tradice:</span><span class="cal-detail-value">' + event.tradition + '</span></div>';
+            detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">Ročník:</span><span class="cal-detail-value">' + event.edition + '</span></div>';
+            if (event.organizer) detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">Pořadatel:</span><span class="cal-detail-value">' + event.organizer + '</span></div>';
+            if (event.location) detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">Místo:</span><span class="cal-detail-value">' + event.location + '</span></div>';
+            if (event.mainPrize) detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">Hlavní cena:</span><span class="cal-detail-value">' + event.mainPrize + '</span></div>';
+            detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">O události:</span><span class="cal-detail-value">' + event.description + '</span></div>';
+            detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">Web:</span><span class="cal-detail-value"><a href="' + event.website + '" target="_blank" onclick="event.stopPropagation()">' + event.website.replace('https://', '').replace('www.', '') + '</a></span></div>';
+            if (event.winner2026) detailsHTML += '<div class="cal-detail-row"><span class="cal-detail-label">Vítěz 2026:</span><span class="cal-detail-value"><span class="cal-winner-tag">🏆 ' + event.winner2026 + '</span></span></div>';
+
+            var card = document.createElement('div');
+            card.className = 'cal-event-card ' + event.type + (past ? ' past' : '');
+            card.setAttribute('data-id', event.id);
+            card.setAttribute('data-type', event.type);
+            card.setAttribute('data-czech', event.czech);
+            card.setAttribute('onclick', 'openPanelById(\'' + event.id + '\')');
+            card.innerHTML = '<div class="cal-event-header"><span class="cal-event-icon">' + icon + '</span><div class="cal-event-content"><div class="cal-event-date">' + event.date + '</div><div class="cal-event-name">' + event.name + '</div><div class="cal-event-subtitle">' + event.nameEn + '</div></div></div><div class="cal-event-details">' + detailsHTML + '</div>';
+
+            eventsGrid.appendChild(card);
+        });
+        
+        // Přidání hover efektu pro zvýraznění celého festivalu
+        document.querySelectorAll('.cal-day.has-event').forEach(function(el) {
+            el.addEventListener('mouseenter', function() {
+                var eventId = this.getAttribute('data-event-id') || this.getAttribute('data-event-ids');
+                if (!eventId) return;
+                
+                // Může obsahovat více ID oddělených čárkou
+                var ids = eventId.split(',');
+                ids.forEach(function(id) {
+                    // Najdi všechny dny s touto událostí a zvýrazni je
+                    document.querySelectorAll('[data-event-id*="' + id + '"], [data-event-ids*="' + id + '"]').forEach(function(day) {
+                        if (day !== el) {
+                            day.classList.add('festival-highlight');
+                        }
+                    });
+                });
+            });
+            
+            el.addEventListener('mouseleave', function() {
+                // Odeber zvýraznění ze všech dnů
+                document.querySelectorAll('.festival-highlight').forEach(function(day) {
+                    day.classList.remove('festival-highlight');
+                });
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderCalendar);
+    } else {
+        renderCalendar();
+    }
+})();
+</script>
