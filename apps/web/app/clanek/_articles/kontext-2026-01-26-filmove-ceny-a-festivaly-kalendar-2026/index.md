@@ -1,7 +1,7 @@
 ---
 title: "Filmový kalendář 2026"
 date: "2026-01-26"
-author: "Kateřina Mahdalová & Michal Škop"
+author: "Kateřina Mahdalová"
 excerpt: "Přehled nejdůležitějších filmových cen a festivalů roku 2026"
 coverImage: "images/datatimes-kalendar-filmovych-udalosti-2026.webp"
 filter: ["kontext"]
