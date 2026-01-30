@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Každý den jich odešleme miliardy. Ale kde se emoji vlastně vzaly? Příběh začíná v roce 1982 emotikony :-) a pokračuje japonským designérem s mřížkou 12×12 pixelů."
 coverImage: "images/step_18_today.webp"
 filter: ["explainer"]
-tags: ["emoji", "historie", "technologie", "komunikace", "design", "Japonsko", "Unicode"]
+tags: ["explainer", "emoji", "historie", "technologie", "komunikace", "design", "Japonsko", "Unicode"]
 ---
 
 Každý den jich odešleme miliardy. Ale kde se emoji vlastně vzaly? Příběh začíná v roce 1982 emotikony :-) a pokračuje japonským designérem s mřížkou 12×12 pixelů.
