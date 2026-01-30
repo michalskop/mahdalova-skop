@@ -54,7 +54,7 @@ Označení „A-festival" uděluje Mezinárodní federace filmových producentů
 
 # Rychlý přehled
 
-## Kalendář filmových cen 2026
+## Filmové ceny 2026
 
 | Datum | Událost | Místo |
 |-------|---------|-------|
@@ -73,7 +73,7 @@ Označení „A-festival" uděluje Mezinárodní federace filmových producentů
 | duben | Německá Lola | Berlín |
 | 18. června | Rakouská filmová cena | Vídeň |
 
-## Kalendář filmových festivalů 2026
+## Filmové festivaly 2026
 
 | Datum | Festival | Místo | Hlavní cena |
 |-------|----------|-------|-------------|
