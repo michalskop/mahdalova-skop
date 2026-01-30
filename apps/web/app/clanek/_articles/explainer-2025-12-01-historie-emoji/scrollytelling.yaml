@@ -1,1 +1,169 @@
+# Configuration for the scrollytelling section
+textAlignment: left
 
+# Content shown before scrolling starts
+defaultContent:
+  type: image
+  src: images/step_01_intro.png
+
+# Steps in the scrollytelling narrative
+steps:
+  - text: |
+      <p>Každý den jich odešleme miliardy. Jsou v našich zprávách, e-mailech, na sociálních sítích. <strong>Emoji</strong> – malé obrázky, které změnily způsob, jakým komunikujeme.</p>
+      <p>Dnes jich existuje <strong>3 953</strong>. Ale kde se vlastně vzaly?</p>
+    content:
+      type: image
+      src: images/step_01_intro.png
+
+  - text: |
+      <p><strong>19. září 1982, 11:44</strong></p>
+      <p>Profesor Scott Fahlman na Carnegie Mellon University v Pittsburghu řeší problém: na univerzitní diskusní desce si lidé nerozumí. Vtipy jsou brány vážně, sarkasmus vyvolává hádky.</p>
+      <p>Jeho řešení? Tři znaky: <strong>:-)</strong></p>
+      <p><em>"Read it sideways,"</em> napsal. Čtěte to z boku.</p>
+    content:
+      type: image
+      src: images/step_02_fahlman.png
+
+  - text: |
+      <p>Fahlmanovy <strong>emotikony</strong> se rychle rozšířily po celém raném internetu. Dvojtečka, pomlčka, závorka – a najednou text dostal tvář.</p>
+      <p>Ale na druhé straně světa se mezitím dělo něco jiného.</p>
+    content:
+      type: image
+      src: images/step_03_emoticons.png
+
+  - text: |
+      <p><strong>Japonsko, 1986</strong></p>
+      <p>Zatímco Američané naklánějí hlavu doleva, Japonci čtou emotikony zpříma. Vznikají <strong>kaomoji</strong> (顔文字) – „znaky tváře".</p>
+      <p>Proč ten rozdíl? V japonské kultuře se emoce čtou z <strong>očí</strong>, ne z úst. Proto <strong>(^_^)</strong> místo <strong>:-)</strong></p>
+    content:
+      type: image
+      src: images/step_04_kaomoji.png
+
+  - text: |
+      <p><strong>1995: Jedno srdíčko, které změnilo všechno</strong></p>
+      <p>Japonský telekomunikační gigant NTT DoCoMo přidává na svůj pager pro teenagery jediný symbol: <span style="color:#e31b23;">❤️</span></p>
+      <p>Reakce? Šílenství. Mladí Japonci konečně mohou poslat něco víc než jen text.</p>
+      <p>Když DoCoMo vydal další pager <em>bez</em> srdíčka, prodeje se zhroutily.</p>
+    content:
+      type: image
+      src: images/step_05_heart_pager.png
+
+  - text: |
+      <p><strong>1. listopadu 1997</strong></p>
+      <p>Japonský operátor J-Phone (dnes SoftBank) vydává telefon <strong>SkyWalker DP-211SW</strong> s prvními skutečnými emoji na mobilním telefonu.</p>
+      <p><strong>90 obrázků</strong> včetně jednoho velmi speciálního: 💩</p>
+      <p>Ano, emoji hromádky existuje od úplného začátku.</p>
+    content:
+      type: image
+      src: images/step_06_softbank_1997.png
+
+  - text: |
+      <p><strong>1999: Muž, který „vynalezl" emoji</strong></p>
+      <p>Shigetaka Kurita, 25letý designér v NTT DoCoMo, dostává úkol: vytvořit sadu obrázků pro novou mobilní internetovou službu <strong>i-mode</strong>.</p>
+      <p>Má k dispozici mřížku <strong>12 × 12 pixelů</strong>. To je 144 teček na jeden obrázek.</p>
+    content:
+      type: image
+      src: images/step_07_kurita.png
+
+  - text: |
+      <p>Kurita vytváří <strong>176 emoji</strong>. Inspiruje se mangou, dopravními značkami, předpovědí počasí i symboly z Japonska – horkými prameny ♨️, květy sakury 🌸, Kabuki maskou 👺.</p>
+      <p>Tato sada je dnes ve sbírce <strong>Muzea moderního umění v New Yorku</strong>.</p>
+    content:
+      type: image
+      src: images/step_08_kurita_set.png
+
+  - text: |
+      <p><strong>Japonský boom – a chaos</strong></p>
+      <p>Emoji se v Japonsku stávají fenoménem. Ale je tu problém: každý operátor má vlastní sadu s vlastními kódy.</p>
+      <p>Pošlete kamarádovi srdíčko ❤️ – a jemu přijde delfín 🐬.</p>
+      <p>Nebo ještě hůř: prázdný čtvereček.</p>
+    content:
+      type: image
+      src: images/step_09_chaos.png
+
+  - text: |
+      <p><strong>2007: Google a Apple vstupují do hry</strong></p>
+      <p>Mark Davis z Googlu (spoluzakladatel Unicode Consortium) začíná lobbovat za mezinárodní standardizaci emoji.</p>
+      <p>Apple mezitím vstupuje na japonský trh s iPhonem – přes operátora SoftBank. A skrytě přidává emoji klávesnici.</p>
+    content:
+      type: image
+      src: images/step_10_google_apple.png
+
+  - text: |
+      <p><strong>Listopad 2008: Tajná klávesnice</strong></p>
+      <p>iPhone má emoji – ale oficiálně jen v Japonsku. Brzy ale uživatelé po celém světě zjišťují, že klávesnici lze „odemknout" pomocí aplikací třetích stran.</p>
+      <p>Emoji se šíří jako virus.</p>
+    content:
+      type: image
+      src: images/step_11_iphone_emoji.png
+
+  - text: |
+      <p><strong>Říjen 2010: Unicode 6.0 – Velký třesk</strong></p>
+      <p>Unicode Consortium, organizace zodpovědná za standardy textu, přidává do svého standardu téměř <strong>1 000 emoji</strong>.</p>
+      <p>Poprvé v historii: jednotný kód. Emoji z jednoho telefonu funguje na druhém.</p>
+    content:
+      type: image
+      src: images/step_12_unicode.png
+
+  - text: |
+      <p><strong>2011: Emoji jdou do světa</strong></p>
+      <p>Apple vydává iOS 5 s emoji klávesnicí dostupnou <strong>všem uživatelům po celém světě</strong>.</p>
+      <p>Není potřeba žádný hack. Stačí zapnout v nastavení.</p>
+      <p>Začíná globální emojiová exploze.</p>
+    content:
+      type: image
+      src: images/step_13_global.png
+
+  - text: |
+      <p><strong>2015: Diverzita</strong></p>
+      <p>Kritici poukazují na problém: emoji zobrazují pouze bílé tváře. Roxane Gay to nazývá <em>„nesnesitelnou bělostí emoji"</em>.</p>
+      <p>Unicode reaguje: přidává <strong>5 odstínů pleti</strong> podle Fitzpatrickovy dermatologické škály.</p>
+      <p>Přibývají i páry stejného pohlaví a různé typy rodin.</p>
+    content:
+      type: image
+      src: images/step_14_diversity.png
+
+  - text: |
+      <p><strong>Listopad 2015: Slovo roku</strong></p>
+      <p>Oxford Dictionary vybírá <strong>Slovo roku 2015</strong>.</p>
+      <p>Poprvé v historii to není slovo, ale piktogram: 😂</p>
+      <p><em>Face with Tears of Joy</em> – obličej se slzami radosti – tvoří 20 % všech použitých emoji.</p>
+    content:
+      type: image
+      src: images/step_15_word_of_year.png
+
+  - text: |
+      <p><strong>2016: Pistole, která se stala vodní</strong></p>
+      <p>Apple mění emoji revolveru 🔫 na zelenou vodní pistolku.</p>
+      <p>Důvod? Vlna střeleb v USA a tlak na omezení symbolů násilí.</p>
+      <p>Google, Samsung, Facebook a Twitter následují během dalších dvou let.</p>
+      <p><em>(V roce 2024 X/Twitter změnil pistoli zpět na zbraň.)</em></p>
+    content:
+      type: image
+      src: images/step_16_gun_emoji.png
+
+  - text: |
+      <p><strong>17. července: Světový den emoji</strong></p>
+      <p>Proč zrovna tento datum? Protože je to den zobrazený na emoji kalendáře 📅 v Apple zařízeních.</p>
+      <p>(Apple tento den v roce 2002 představil aplikaci iCal.)</p>
+      <p>Světový den emoji vyhlásil Jeremy Burge, zakladatel Emojipedia, v roce 2014.</p>
+    content:
+      type: image
+      src: images/step_17_world_emoji_day.png
+
+  - text: |
+      <p><strong>2025: 3 953 emoji</strong></p>
+      <p>Od 176 pixelových obrázků k univerzálnímu jazyku, kterému rozumí celý svět.</p>
+      <p>Emoji překračují jazykové bariéry. Vyjadřují to, co slova nedokážou.</p>
+      <p>A každý rok jich přibývá.</p>
+    content:
+      type: image
+      src: images/step_18_today.png
+
+  - text: |
+      <p>🎨📱💬🌍</p>
+      <p>Co začalo jako řešení technického problému v Japonsku, se stalo součástí lidské komunikace.</p>
+      <p>Emoji jsou důkazem, že i v digitálním věku potřebujeme vidět tváře – byť jen ty nakreslené.</p>
+    content:
+      type: image
+      src: images/step_19_finale.png
