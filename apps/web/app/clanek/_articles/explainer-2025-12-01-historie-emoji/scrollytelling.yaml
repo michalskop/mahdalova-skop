@@ -22,14 +22,14 @@ steps:
       <p><em>"Read it sideways,"</em> napsal. Čtěte to z boku.</p>
     content:
       type: image
-      src: images/step_02_fahlman.webp
+      src: images/fahlman-1982.webp
 
   - text: |
       <p>Fahlmanovy <strong>emotikony</strong> se rychle rozšířily po celém raném internetu. Dvojtečka, pomlčka, závorka – a najednou text dostal tvář.</p>
       <p>Ale na druhé straně světa se mezitím dělo něco jiného.</p>
     content:
       type: image
-      src: images/step_03_emoticons.webp
+      src: images/fahlman.jpg
 
   - text: |
       <p><strong>Japonsko, 1986</strong></p>
