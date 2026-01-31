@@ -158,7 +158,7 @@ steps:
       <p>A každý rok jich přibývá.</p>
     content:
       type: image
-      src: images/step_18_today.webp
+      src: https://www.datovazurnalistika.cz/wp-content/uploads/2026/01/Emoji-scrollytelling.gif
 
   - text: |
       <p>🎨📱💬🌍</p>
