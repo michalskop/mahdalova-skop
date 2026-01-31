@@ -3,7 +3,7 @@ title: "Jak vznikly emoji: Od tří znaků k univerzálnímu jazyku"
 date: "2025-12-01"
 author: "Kateřina Mahdalová"
 excerpt: "Každý den jich odešleme miliardy. Ale kde se emoji vlastně vzaly? Příběh začíná v roce 1982 emotikony :-) a pokračuje japonským designérem s mřížkou 12×12 pixelů."
-coverImage: "images/emoji-cover.webp"
+coverImage: "images/emoji-cover-1"
 filter: ["explainer"]
 tags: ["explainer", "emoji", "historie", "technologie", "komunikace", "design", "Japonsko", "Unicode"]
 ---
