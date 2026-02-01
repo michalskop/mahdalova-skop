@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Turek střídá verze o svých miliónových příjmech: jednou z firem, podruhé z 'freelancerských' konzultací. Účetnictví však vyplácení odměn majiteli neprokazuje a čísla nedávají ekonomický smysl."
 coverImage: "images/filip-turek-prijmy-nejasne-prijmy-mahdalova-skop.webp"
 filter: ["kontext"]
-tags: ["Filip Turek", "finance", "Evropský parlament", "Sbírka listin", "střet zájmů"]
+tags: ["Filip Turek", "finance", "Evropský parlament", "Sbírka listin", "střet zájmů", "Turek"]
 promoted: 66
 ---
 Přinášíme dlouhodobě opomíjenou část příběhu poslance Filipa Turka: **původ a věrohodnost jeho peněz**.  
