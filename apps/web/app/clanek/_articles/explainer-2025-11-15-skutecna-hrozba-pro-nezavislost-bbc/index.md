@@ -45,13 +45,13 @@ Příběh jsem ověřil. Byl zjevně pravdivý. Když jsem se obrátil na BBC, r
 
 Na začátku roku 2024 jsem publikoval výsledky svého vyšetřování toho, jak vláda fakticky ovládla BBC. Generální ředitel Tim Davie to prý odbyl smíchem. Brát Robbieho Gibba vážně? Ani ve snu. Dnes už se asi nesměje.
 
-V tom článku a v sérii dalších v Independentu a Prospectu jsem zkoumal další stránku Gibbova života od té doby, co odešel jako tiskový mluvčí Toryů a vydal se na dráhu korporátního PR. V roce 2020 měly nejstarší a nejvlivnější britské židovské noviny Jewish Chronicle finanční problémy. Zachránilo je konsorcium vedené… sirem Robbiem Gibbem!
+V tom článku a v sérii dalších v Independentu a Prospectu jsem zkoumal další stránku Gibbova života od té doby, co odešel jako tiskový mluvčí Toryů a vydal se na dráhu korporátního PR. V roce 2020 měly nejstarší a nejvlivnější britské židovské noviny Jewish Chronicle finanční problémy. Zachránilo je konsorcium vedené… Robbiem Gibbem!
 
-Byl tu jen jeden háček. Gibb byl v rejstříku společností zapsán jako jediný ředitel JC. Ale okamžitě bylo zřejmé – a nikdy nebylo popřeno – že on osobně nemá prostředky na jeho koupi ani na financování provozu. Byl nastrčenou figurou za neznámou osobu či osoby.
+Byl tu jen jeden háček. Gibb byl v rejstříku společností zapsán jako jediný ředitel Jewish Chronicle. Ale okamžitě bylo zřejmé – a nikdy nebylo popřeno – že on osobně nemá prostředky na jeho koupi ani na financování provozu. Byl nastrčenou figurou za neznámou osobu či osoby.
 
-Zastavme se a zamysleme se. Dnes je velké pozdvižení ohledně toho, komu by mělo být dovoleno vlastnit Daily Telegraph – list, který v posledních dnech vedl útok proti BBC. Šéfredaktor a zaměstnanci jsou v otevřené vzpouře proti myšlence, že by velký britský deník měl padnout do nesprávných rukou. Prý je to zrada základního principu demokracie.
+Zastavme se a zamysleme se. Dnes je velké pozdvižení ohledně toho, komu by mělo být dovoleno vlastnit Daily Telegraph – list, který v poslední době vedl útok proti BBC. Šéfredaktor a zaměstnanci jsou otevřeně proti myšlence, že by velký britský deník měl padnout do nesprávných rukou. To by prý byla zrada základního principu demokracie.
 
-Ale alespoň víme – víceméně – kdo jsou podporovatelé nabídky na Telegraph. U JC, který má obrovský vliv na židovské mínění o Izraeli, jsme drženi v nevědomosti.
+Ale alespoň víme, kdo jsou podporovatelé nabídky na Telegraph. U JC, který má obrovský vliv na židovské mínění o Izraeli, jsme drženi v nevědomosti.
 
 Zaměstnanec novin Lee Harpin vzpomínal, že Gibb se ve dnech tisku zastavil v redakci. Někdo týmu řekl, že noví majitelé – ať už to byl kdokoliv – chtějí více názorů „hodně napravo od strany Toryů".
 
