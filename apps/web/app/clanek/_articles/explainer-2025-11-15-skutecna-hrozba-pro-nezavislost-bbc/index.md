@@ -29,7 +29,7 @@ Smith a Gibb se znali od dob, kdy byli členy [Federace konzervativních student
 
 Od těch studentských dob uplynulo pětatřicet let a Smithův plán uspěl. Gibb byl jmenován nejen do vedení BBC, ale především do pětičlenného Výboru pro redakční standardy a pokyny (ESGC). Ten má dohlížet na záležitosti jako zaujatost a nestrannost – a nevyhnutelně se zabývá zpravodajstvím BBC o Blízkém východě a válce mezi Izraelem a Gazou.
 
-Gibb se hrdě označoval za „pořádného thatcherovského konzervativce". Jedno publikum ujišťoval, že „nejsem konzervativec typu apologetů Chrise Pattena" – což někteří mohou vnímat jako netaktní výpad proti předchozímu předsedovi BBC s mnohem významnější kariérou ve veřejném životě.
+Gibb se hrdě označoval za „skutečného thatcherovského konzervativce". Jedno publikum ujišťoval, že „nejsem konzervativec typu apologetů Chrise Pattena" – což někteří mohou vnímat jako netaktní výpad proti předchozímu předsedovi BBC s mnohem významnější kariérou ve veřejném životě.
 
 Gibb údajně popsal své poslání takto: „Reformovat BBC, nebo to místo vyhodit do povětří."
 
@@ -37,7 +37,7 @@ Pustil se do hledání spojenců. Redakčním poradcem vedení se stal starý p�
 
 Nyní skočíme na konec roku 2023. Bývalá ministryně kultury Nadine Dorries vydala knihu The Plot (Spiknutí), pikantní výpověď o údajné kabale, která měla svrhnout Borise Johnsona. V příběhu výrazně figuroval Dougie Smith.
 
-Jedna historka vyskočila ze stránky. Popis toho, jak se Gibb pokusil zasáhnout, aby dlouholetý funkcionář ze zákulisí Toryů získal místo šéfa Ofcomu, regulátora BBC. Regulovaná strana se snažila dosadit „správnou" osobu, která by na BBC dohlížela.
+Ale jedna pasáž stojí za zmínku. Popis toho, jak se Gibb pokusil zasáhnout, aby dlouholetý funkcionář ze zákulisí Toryů získal místo šéfa Ofcomu, regulátora BBC. Regulovaná strana se snažila dosadit „správnou" osobu, která by na BBC dohlížela.
 
 Nemusíte o tom dlouho přemýšlet. Je to – jaké použít nestranné slovo? – špatné.
 
