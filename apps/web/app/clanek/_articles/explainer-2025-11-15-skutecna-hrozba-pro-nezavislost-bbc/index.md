@@ -55,13 +55,13 @@ Ale alespoň víme, kdo jsou podporovatelé nabídky na Telegraph. U JC, který 
 
 Zaměstnanec novin Lee Harpin vzpomínal, že Gibb se ve dnech tisku zastavil v redakci. Někdo týmu řekl, že noví majitelé – ať už to byl kdokoliv – chtějí více názorů „hodně napravo od strany Toryů".
 
-Ale je to ještě horší. Gibbovo řízení novin bylo mimořádně kontroverzní. JC se zamotal do etických a redakčních selhání. Dvakrát musel tiskový regulátor IPSO zajistit dodatečné školení pro jeho zaměstnance po četných stížnostech – jako alternativu k plnohodnotnému vyšetřování standardů.
+Ale je to ještě horší. Gibbovo řízení novin bylo mimořádně kontroverzní. Jewish Chronicle se zamotal do etických a redakčních selhání. Dvakrát musel tiskový regulátor IPSO zajistit dodatečné školení pro jeho zaměstnance po četných stížnostech – jako alternativu k plnohodnotnému vyšetřování standardů.
 
-Šéfredaktor osobně vybraný Gibbem nakonec publikoval mystifikovaný článek. Ten vedl k vysoce sledovanému bezpečnostnímu vyšetřování v Izraeli. Ne méně než šest předních komentátorů odešlo a odsoudilo noviny jako partajní ideologický nástroj. Sám šéfredaktor krátce nato odešel. Přesto noviny odmítaly říct, kdo v konečném důsledku tahá za nitky.
+Šéfredaktor osobně vybraný Gibbem nakonec publikoval mystifikační článek. Ten vedl k vysoce sledovanému bezpečnostnímu vyšetřování v Izraeli. Ne méně než šest předních komentátorů odešlo a odsoudilo noviny jako partajní ideologický nástroj. Sám šéfredaktor krátce nato odešel. Přesto noviny odmítaly říct, kdo v konečném důsledku tahá za nitky.
 
-Můžete číst tento trapný příběh a souhlasit, že by bylo nepřijatelné, aby se Gibb podílel na jakýchkoliv přezkumech zpravodajství BBC o Izraeli a Gaze. Představte si, že byste byli Lyse Doucetová nebo Jeremy Bowen a věděli, že takto zjevně zaujatá postava posuzuje vaše zpravodajství.
+Můžete číst tento trapný příběh a souhlasit, že by bylo nepřijatelné, aby se Gibb podílel na jakýchkoliv přezkumech zpravodajství BBC o Izraeli a Gaze. Představte si, že byste byli Lyse Doucet nebo Jeremy Bowen a věděli, že takto zjevně zaujatá postava posuzuje vaše zpravodajství.
 
-Kontaktoval jsem BBC s dotazem, zda se Gibb skutečně z těchto záležitostí vyloučil. Krátká odpověď: ne.
+Kontaktoval jsem BBC s dotazem, zda se Gibb z těchto záležitostí vyloučil. Krátká odpověď: ne.
 
 Zdá se, že Gibb si nemyslí, že by se měl vyloučit. Možná – lze pouze spekulovat – se považuje za dokonalého arbitra zaujatosti, kdekoliv ji vidí, a nikdy by ho nenapadlo, že by on sám mohl být zaujatý.
 
