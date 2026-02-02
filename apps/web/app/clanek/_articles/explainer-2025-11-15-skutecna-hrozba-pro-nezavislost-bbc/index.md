@@ -27,31 +27,25 @@ Shipman cituje jeden ze svých zdrojů: „Neustále dával Robbieho jméno na s
 
 Smith a Gibb se znali od dob, kdy byli členy [Federace konzervativních studentů](https://en.wikipedia.org/wiki/Federation_of_Conservative_Students). Skupina libertariánských militantů. Jejich politika byla natolik extrémní, že ji předseda Toryů Norman Tebbit v roce 1986 zakázal.
 
-Pětatřicet let od těch studentských dob Smithův plán uspěl. Gibb byl jmenován nejen do vedení BBC, ale především do pětičlenného Výboru pro redakční standardy a pokyny (ESGC). Ten má dohlížet na záležitosti jako zaujatost a nestrannost – a nevyhnutelně se zabývá zpravodajstvím BBC o Blízkém východě a válce mezi Izraelem a Gazou.
+Od těch studentských dob uplynulo pětatřicet let a Smithův plán uspěl. Gibb byl jmenován nejen do vedení BBC, ale především do pětičlenného Výboru pro redakční standardy a pokyny (ESGC). Ten má dohlížet na záležitosti jako zaujatost a nestrannost – a nevyhnutelně se zabývá zpravodajstvím BBC o Blízkém východě a válce mezi Izraelem a Gazou.
 
 Gibb se hrdě označoval za „pořádného thatcherovského konzervativce". Jedno publikum ujišťoval, že „nejsem konzervativec typu apologetů Chrise Pattena" – což někteří mohou vnímat jako netaktní výpad proti předchozímu předsedovi BBC s mnohem významnější kariérou ve veřejném životě.
 
 Gibb údajně popsal své poslání takto: „Reformovat BBC, nebo to místo vyhodit do povětří."
 
-Pustil se do hledání spojenců. Starý přítel Michael Prescott, korporátní PR muž a bývalý novinář Sunday Times, se stal redakčním poradcem vedení. Další starý přítel David Grossman byl najat na terénní práci.
+Pustil se do hledání spojenců. Redakčním poradcem vedení se stal starý přítel Michael Prescott, korporátní PR muž a bývalý novinář Sunday Times. Další starý přítel - David Grossman - byl najat na terénní práci.
 
-Skok do konce roku 2023. Bývalá ministryně kultury Nadine Dorries vydala knihu The Plot (Spiknutí), pikantní výpověď o údajné kabale, která měla svrhnout Borise Johnsona. Dougie Smith v příběhu výrazně figuroval.
+Nyní skočíme na konec roku 2023. Bývalá ministryně kultury Nadine Dorries vydala knihu The Plot (Spiknutí), pikantní výpověď o údajné kabale, která měla svrhnout Borise Johnsona. V příběhu výrazně figuroval Dougie Smith.
 
 Jedna historka vyskočila ze stránky. Popis toho, jak se Gibb pokusil zasáhnout, aby dlouholetý funkcionář ze zákulisí Toryů získal místo šéfa Ofcomu, regulátora BBC. Regulovaná strana se snažila dosadit „správnou" osobu, která by na BBC dohlížela.
 
-Nemusíte o tom dlouho přemýšlet. Je to – jaké je nestranné slovo? – špatné.
+Nemusíte o tom dlouho přemýšlet. Je to – jaké použít nestranné slovo? – špatné.
 
-Příběh jsem ověřil. Byl zjevně pravdivý. Když jsem se obrátil na BBC, reakce byla blízká pokrčení rameny.
+Příběh jsem ověřil. Byl zjevně pravdivý. Když jsem se obrátil na BBC, reakce byla něco jako pokrčení rameny. BBC má podle mých zkušeností nevalné výsledky v obraně vlastních novinářů. Ale tohle bylo jiné, v případě Robbieho Gibba se BBC naopak semkla a chránila ho.
 
-BBC má podle mých zkušeností nevalné výsledky v obraně vlastních novinářů. Ale tohle bylo jiné. Šlo o uzavření řad kolem jednoho konkrétního člena vedení.
+Na začátku roku 2024 jsem publikoval výsledky svého vyšetřování toho, jak vláda fakticky ovládla BBC. Generální ředitel Tim Davie to prý odbyl smíchem. Brát Robbieho Gibba vážně? Ani ve snu. Dnes už se asi nesměje.
 
-Na začátku roku 2024 jsem publikoval výsledky svého vyšetřování toho, jak vláda fakticky ovládla BBC. Generální ředitel Tim Davie to prý odbyl smíchem. Brát Robbieho Gibba vážně? Ani ve snu.
-
-Dnes už se asi nesměje.
-
-V tom článku a v sérii dalších v Independentu a Prospectu jsem zkoumal další stránku Gibbova života od té doby, co odešel jako tiskový mluvčí Toryů a vydal se na dráhu korporátního PR.
-
-V roce 2020 měly nejstarší a nejvlivnější britské židovské noviny Jewish Chronicle finanční problémy. Zachránilo je konsorcium vedené… sirem Robbiem Gibbem!
+V tom článku a v sérii dalších v Independentu a Prospectu jsem zkoumal další stránku Gibbova života od té doby, co odešel jako tiskový mluvčí Toryů a vydal se na dráhu korporátního PR. V roce 2020 měly nejstarší a nejvlivnější britské židovské noviny Jewish Chronicle finanční problémy. Zachránilo je konsorcium vedené… sirem Robbiem Gibbem!
 
 Byl tu jen jeden háček. Gibb byl v rejstříku společností zapsán jako jediný ředitel JC. Ale okamžitě bylo zřejmé – a nikdy nebylo popřeno – že on osobně nemá prostředky na jeho koupi ani na financování provozu. Byl nastrčenou figurou za neznámou osobu či osoby.
 
