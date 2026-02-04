@@ -1,19 +1,15 @@
 ---
-title: "Politický boj zabíjí nejslavnější veřejnoprávní médium světa. BBC musí uhájit svou nezávislost"
-date: "2025-11-18"
+title: "🎯 Média 2025: Zpravodajství a veřejnoprávní média v ČR a SR"
+date: "2026-01-03"
 author: "Kateřina Mahdalová"
-excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku."
+excerpt: "Rok turbulencí, personálních zvratů a existenčních otázek pro online zpravodajství"
 coverImage: "images/cesko-slovensko-media.webp"
 filter: ["kontext"]
 tags: ["změny v médiích", "veřejnoprávní", "média", "nestrannost", "Česká televize", "nezávislost médií", nezávislá média"]
 promoted: 67
 ---
 
-# 🎯 Média 2025: Zpravodajství a veřejnoprávní média v ČR a SR
-
-> **Rok turbulencí, personálních zvratů a existenčních otázek pro online zpravodajství**
-
----
+# Rok turbulencí, personálních zvratů a existenčních otázek pro online zpravodajství
 
 ## 📺 Česká veřejnoprávní média
 
