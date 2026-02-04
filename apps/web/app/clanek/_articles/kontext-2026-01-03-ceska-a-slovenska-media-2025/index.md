@@ -274,4 +274,4 @@ Podle studie ResSolution Group (leden 2025) pokračuje od pandemie prudký pokle
 
 ---
 
-*Přehled zpracován na základě veřejně dostupných zdrojů: MediaGuru, Médiář, Lupa.cz, Deník N, SME.sk, iRozhlas, SPIR a další.*
+*Přehled zpracován na základě veřejně dostupných zdrojů: MediaGuru, Lupa.cz, Deník N, SME.sk, iRozhlas, SPIR a další.*
