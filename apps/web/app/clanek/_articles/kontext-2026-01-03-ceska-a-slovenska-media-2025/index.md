@@ -3,7 +3,7 @@ title: "🎯 Média 2025: Zpravodajství a veřejnoprávní média v ČR a SR"
 date: "2026-01-03"
 author: "Kateřina Mahdalová"
 excerpt: "Rok turbulencí, personálních zvratů a existenčních otázek pro online zpravodajství"
-coverImage: "images/cesko-slovensko-media.webp"
+coverImage: "images/cesko-slovensko-media-datatimes.webp"
 filter: ["kontext"]
 tags: ["změny v médiích", "veřejnoprávní", "média", "nestrannost", "Česká televize", "nezávislost médií", nezávislá média"]
 promoted: 67
