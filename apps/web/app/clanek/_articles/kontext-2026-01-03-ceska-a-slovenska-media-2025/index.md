@@ -34,7 +34,7 @@ V červnu byl po dramatické volbě zvolen novým generálním ředitelem **Hyne
 
 ### Kauza Václav Moravec
 
-V listopadu 2025 veřejně propukl konflikt mezi moderátorem *Otázek Václava Moravce* a vedením ČT. Moravec v [rozhovoru pro Deník N](https://denikn.cz/) kritizoval management za nedostatečnou podporu a zmínil existenci pěti posudků týkajících se jeho osoby. ČT popřela, že by posudky vznikaly „na Moravce" – podle televize se týkaly pouze výkladu Kodexu. Případ ilustruje napětí, které panuje kolem publicistických pořadů.
+V listopadu 2025 veřejně propukl konflikt mezi moderátorem *Otázek Václava Moravce* a vedením ČT. Moravec v [rozhovoru pro Deník N](https://denikn.cz/) kritizoval management za nedostatečnou podporu a zmínil existenci pěti posudků týkajících se jeho osoby. ČT popřela, že by posudky vznikaly „na Moravce" – podle televize se týkaly pouze výkladu Kodexu. Edit 1. 2. 2026: Z týmu pracujícího na pořadu České televize Otázky Václava Moravce (OVM) byla odvolána jeho dlouholetá hlavní dramaturgyně Hana Andělová. 
 
 ### Financování: Nejistá budoucnost
 
