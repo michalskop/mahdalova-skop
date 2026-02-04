@@ -77,15 +77,17 @@ Seznam.cz současně [vstoupil do Reportéru](https://www.mediaguru.cz/clanky/20
 
 Na začátku roku 2025 nastoupil do čela Aktuálně.cz **Matyáš Zrno** (46), dosud šéf zahraniční redakce CNN Prima News. Volba vzbudila pozornost – Zrno je dlouhodobě spojen s konzervativním prostředím.
 
-#### 🔍 Matyáš Zrno: Novinář s ideologickou stopou
+#### 🔍 Matyáš Zrno: Novinář - konzervativní ideolog
 
 **Profesní dráha:**
 - Zahraniční rubrika týdeníku Respekt
-- Zahraniční zpravodajství ČT
+- Provinční rekonstrukční tým (PRT) v Afghánistánu
+- Působil na na misterstevech práce a sociálních věcí a průmyslu a obchodu
 - Vedoucí zahraniční redakce CNN Prima News
 - Od 2025 šéfredaktor Aktuálně.cz
 
 **Konzervativní vazby:**
+- Někdejší poradce premiéra Nečase
 - Dlouholetý spolupracovník **Občanského institutu** (think-tank, ředitelem je Roman Joch)
 - Zakládající šéfredaktor **Konzervativních novin** (2019)
 - Přispěvatel do magazínů jako Pravý Břeh či EpochTimes
@@ -235,10 +237,10 @@ V zahraničí několik velkých vydavatelů uzavřelo smlouvy přímo s AI firma
 - **ČR:** Odvolání ředitele Součka, plány na zrušení poplatků po volbách, tlak na konkrétní moderátory
 - **SR:** Transformace RTVS → STVR pod kontrolou vlády, rušení kritických pořadů, porušování EMFA
 
-### 2️⃣ Generační obměna v redakcích
+### 2️⃣ Větší obměny v redakcích
 
 Zkušení novináři odcházejí z velkých redakcí a zakládají nezávislé projekty:
-- Robert Čásenský (Reportér → Seznam Zprávy + zachování vlastnictví Reportéru)
+- Kateřina Mahdalová & Michal Škop (Seznam Zprávy → DataTimes - odchod již na konci roku 2024)
 - Veselin Vačkov a Martin Hampejs (Lidové noviny → Publico)
 - Zuzana Černá a Václav Crhonek (ČT → PastVina)
 
