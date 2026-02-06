@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm';
 import { remarkBoxPlugin } from './remark-box-plugin'; // Your custom plugin
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
+import type { TimelineContent } from '@/types/timeline';
 
 
 export async function getArticleBySlug(directorySlug: string) {
@@ -41,7 +42,26 @@ export async function getArticleBySlug(directorySlug: string) {
     scrollyContent = yaml.load(scrollyFile) as ScrollyContent;
   }
 
+  // Find and load data for Timeline components (supports multiple instances)
+  const timelineData: Record<string, TimelineContent> = {};
+  const timelineRegex = /<Timeline[^>]*yamlFile="([^"]+)"[^>]*\/>/g;
+  let timelineMatch: RegExpExecArray | null;
+  while ((timelineMatch = timelineRegex.exec(content)) !== null) {
+    const yamlFile = timelineMatch[1];
+    if (!yamlFile) continue;
+    if (timelineData[yamlFile]) continue;
+    const timelinePath = path.join(articleDir, yamlFile);
+    if (!fs.existsSync(timelinePath)) {
+      throw new Error(`Timeline yaml file not found: ${directorySlug}/${yamlFile}`);
+    }
+    const timelineFile = fs.readFileSync(timelinePath, 'utf8');
+    timelineData[yamlFile] = yaml.load(timelineFile) as TimelineContent;
+  }
+
   const mdxSource = await serialize(content, {
+    scope: {
+      timelineData: timelineData,
+    },
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
     },

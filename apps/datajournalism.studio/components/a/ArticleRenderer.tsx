@@ -11,6 +11,7 @@ import type { ImageProps } from 'next/image';
 import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
+import Timeline from '@/components/common/Timeline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 // import yaml from 'js-yaml';
 
@@ -178,6 +179,17 @@ export function ArticleRenderer({
           slug={slug}
         />
       );
+    },
+
+    Timeline: ({ yamlFile }) => {
+      const timelineData = (mdxSource.scope as any)?.timelineData as Record<string, any> | undefined;
+      const content = yamlFile ? timelineData?.[yamlFile] : undefined;
+
+      if (!content) {
+        return <div className="text-red-500">Timeline content not found</div>;
+      }
+
+      return <Timeline content={content} slug={slug} className="my-8" />;
     },
   };
 

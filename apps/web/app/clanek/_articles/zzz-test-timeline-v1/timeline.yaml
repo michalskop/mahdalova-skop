@@ -1,0 +1,140 @@
+title: "Média 2024–2026"
+subtitle: "Časová osa českých a slovenských médií (test)"
+lastUpdated: "Aktualizováno: 6. února 2026"
+collapsedYears: [2024]
+
+facetGroups:
+  - key: topic
+    label: "Téma"
+    values:
+      - key: people
+        label: "Lidé"
+        color: "brandRoyalBlue.4"
+      - key: projects
+        label: "Projekty"
+        color: "brandTeal.3"
+      - key: ai
+        label: "AI"
+        color: "brandYellow.8"
+      - key: scandals
+        label: "Kauzy"
+        color: "brandDeepRed.4"
+      - key: milestones
+        label: "Milníky"
+        color: "brandOrange"
+  - key: geo
+    label: "Země"
+    values:
+      - key: cz
+        label: "Česko"
+        color: "#11457e"
+        flag: "cz"
+      - key: sk
+        label: "Slovensko"
+        color: "#0b4ea2"
+        flag: "sk"
+
+events:
+  - id: lukacovic-nakolejit
+    year: 2024
+    month: 5
+    facets:
+      topic: scandals
+      geo: cz
+    date: "Květen 2024"
+    title: "Lukačovič chce „nakolejit“ SZ"
+    emoji: "⚠️"
+    summary: "Majitel Seznamu veřejně deklaruje, že Seznam Zprávy „oddriftovaly“ z pravicového zaměření."
+    description: "Ivo Lukačovič na síti X píše, že Seznam Zprávy „oddriftovaly ze svého pravicového zaměření jinam“ a představenstvo se to bude snažit „nakolejit“."
+    persons:
+      - name: "Ivo Lukačovič"
+        bio: "Zakladatel a majoritní vlastník Seznam.cz"
+      - name: "Jakub Unger"
+        bio: "Šéfredaktor SZ (červen–říjen 2024)"
+
+  - id: stvr-vznik
+    year: 2024
+    month: 7
+    facets:
+      topic: milestones
+      geo: sk
+    date: "Červenec 2024"
+    title: "Vznik STVR"
+    emoji: "📺"
+    summary: "Slovenská televize a rozhlas nahrazuje RTVS."
+    description: "Od 1. července 2024 vzniká Slovenská televízia a rozhlas (STVR), která nahrazuje RTVS."
+
+  - id: datatimes
+    year: 2025
+    month: 1
+    facets:
+      topic: projects
+      geo: cz
+    date: "Leden 2025"
+    title: "Startuje DataTimes"
+    emoji: "📊"
+    summary: "Mahdalová a Škop spouští DataTimes.cz. Datová žurnalistika, fact-checking, vizualizace."
+    description: "Datoví novináři Kateřina Mahdalová a Michal Škop po odchodu ze Seznam Zpráv spouští DataTimes.cz."
+    persons:
+      - name: "Kateřina Mahdalová"
+        bio: "Datová novinářka a analytička"
+      - name: "Michal Škop"
+        bio: "Statistik a demograf"
+    link: "https://datatimes.cz"
+    linkText: "DataTimes.cz"
+
+  - id: zrno
+    year: 2025
+    month: 1
+    facets:
+      topic: people
+      geo: cz
+    date: "Leden 2025"
+    title: "Zrno do Aktuálně.cz"
+    emoji: "👤"
+    summary: "Kontroverzní volba – novinář spojený s konzervativní scénou."
+    description: "Matyáš Zrno se stává šéfredaktorem Aktuálně.cz."
+    persons:
+      - name: "Matyáš Zrno"
+        bio: "CNN Prima News, Občanský institut"
+
+  - id: nora
+    year: 2025
+    month: 3
+    facets:
+      topic: projects
+      geo: cz
+    date: "Březen 2025"
+    title: "Fridrichová spouští NORA"
+    emoji: "🎬"
+    summary: "Po 17 letech v ČT zakládá vlastní investigativní pořad."
+    description: "Po odchodu z České televize zakládá Nora Fridrichová pořad NORA na Herohero a YouTube."
+    persons:
+      - name: "Nora Fridrichová"
+        bio: "Investigativní reportérka"
+    link: "https://www.herohero.co/nora"
+    linkText: "Herohero"
+
+  - id: ai-overviews
+    year: 2025
+    month: 10
+    facets:
+      topic: ai
+      geo: cz
+    date: "Říjen 2025"
+    title: "Google AI Overviews v ČR"
+    emoji: "🤖"
+    summary: "AI shrnutí přímo ve vyhledávači. Magazíny hlásí propad návštěvnosti až -74 %."
+    description: "Google spouští v Česku AI Overviews – odpovědi generované umělou inteligencí přímo ve vyhledávači."
+
+  - id: joj
+    year: 2026
+    month: 1
+    facets:
+      topic: milestones
+      geo: sk
+    date: "Leden 2026"
+    title: "JOJ končí v pozemním vysílání"
+    emoji: "📡"
+    summary: "Na slovenském DVB-T zůstávají jen 4 kanály STVR a TV Lux."
+    description: "Skupina JOJ ukončila šíření v bezplatném pozemním digitálním vysílání (DVB-T)."

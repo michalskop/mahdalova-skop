@@ -1,0 +1,40 @@
+title: "🔮 Timeline – druhý blok"
+subtitle: "Minimal example with fewer categories"
+
+facetGroups:
+  - key: topic
+    label: "Téma"
+    values:
+      - key: projects
+        label: "Projekty"
+        color: "brandTeal"
+      - key: milestones
+        label: "Milníky"
+        color: "brandOrange"
+
+events:
+  - year: 2025
+    month: 4
+    facets:
+      topic: projects
+    date: "Duben 2025"
+    title: "Startuje Publico.cz"
+    emoji: "📱"
+    summary: "„Modulární zpravodajství“ od ex-šéfů Lidových novin."
+    description: "Stručné texty (~3 min.), newslettery, bez komentářů. Inspirace: Axios."
+    tags: ["🆕 Nový projekt"]
+    link: "https://publico.cz"
+    linkText: "Publico.cz"
+
+  - year: 2025
+    month: 12
+    facets:
+      topic: milestones
+    date: "Prosinec 2025"
+    title: "SLPV: první smlouva"
+    emoji: "✍️"
+    summary: "Dohoda s monitorovací firmou Toxin."
+    description: "První reálný příjem pro kolektivního správce. Jednání s platformami pokračují."
+    tags: ["💰 Smlouva", "SLPV"]
+    link: "https://www.mediaguru.cz/clanky/2025/12/vydavatelsky-spravce-slpv-uzavrel-s-toxinem-prvni-licencni-smlouvu"
+    linkText: "MediaGuru"

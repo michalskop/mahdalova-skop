@@ -14,6 +14,7 @@ import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox compone
 import { TestComponent } from '@/components/mdx/TestComponent';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
+import Timeline from '@/components/common/Timeline';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
@@ -191,6 +192,17 @@ export function ArticleRenderer({
           slug={slug}
         />
       );
+    },
+
+    Timeline: ({ yamlFile }) => {
+      const timelineData = (mdxSource.scope as any)?.timelineData as Record<string, any> | undefined;
+      const content = yamlFile ? timelineData?.[yamlFile] : undefined;
+
+      if (!content) {
+        return <div className="text-red-500">Timeline content not found</div>;
+      }
+
+      return <Timeline content={content} slug={slug} className="my-8" />;
     },
 
   };
