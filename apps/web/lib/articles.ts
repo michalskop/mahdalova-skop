@@ -84,7 +84,7 @@ export async function getArticleBySlug(directorySlug: string) {
     },
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
-      rehypePlugins: [rehypeRaw],
+      rehypePlugins: [[rehypeRaw, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement', 'mdxFlowExpression', 'mdxTextExpression', 'mdxjsEsm'] }]],
     },
   });
 
