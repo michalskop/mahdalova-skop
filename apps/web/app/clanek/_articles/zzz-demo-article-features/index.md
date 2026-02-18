@@ -345,6 +345,6 @@ The HTML file can include `<style>` and `<script>` tags. Asset paths (images, da
 | Raw iframe | `<iframe ...>` | No |
 | FlourishEmbed | `<FlourishEmbed dataSrc="..." />` | No |
 | PartyFace | `<PartyFace party="..." />` | No |
-| Timeline | `<Timeline yamlFile="..." />` | No |
-| ScrollyTelling | `<ScrollyTelling yamlFile="..." />` | No |
+| Timeline | `<Timeline yamlFile="timeline.yaml" />` | No |
+| ScrollyTelling | `<ScrollyTelling yamlFile="scrollytelling.yaml" />` | No |
 | Raw HTML | `htmlInclude:` in frontmatter | No |
