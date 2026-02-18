@@ -1,6 +1,7 @@
 // components/clanek/InfoBox.tsx
 import { Paper, useMantineTheme } from '@mantine/core';
 import React from 'react';
+import styles from './box.module.css';
 
 type InfoBoxType = 'info' | 'warning' | 'success' | 'error';
 
@@ -19,14 +20,12 @@ const typeStyles: Record<InfoBoxType, { borderColor: string; backgroundColor: st
 
 export function InfoBox({ children, float, type = 'info' }: InfoBoxProps) {
   const theme = useMantineTheme();
-  const styles = typeStyles[type];
+  const boxStyles = typeStyles[type];
 
-  const floatStyle: React.CSSProperties =
-    float === 'right'
-      ? { float: 'right', width: '45%', maxWidth: '400px', marginLeft: '1.5rem', marginBottom: '1rem' }
-      : float === 'left'
-      ? { float: 'left', width: '45%', maxWidth: '400px', marginRight: '1.5rem', marginBottom: '1rem' }
-      : {};
+  const floatClass =
+    float === 'right' ? styles.floatRight :
+    float === 'left'  ? styles.floatLeft  :
+    undefined;
 
   return (
     <Paper
@@ -35,11 +34,11 @@ export function InfoBox({ children, float, type = 'info' }: InfoBoxProps) {
       py="xs"
       radius="md"
       my="lg"
+      className={floatClass}
       style={{
-        backgroundColor: styles.backgroundColor,
-        borderLeft: `4px solid ${styles.borderColor}`,
+        backgroundColor: boxStyles.backgroundColor,
+        borderLeft: `4px solid ${boxStyles.borderColor}`,
         color: theme.colors.dark?.[7] ?? '#1a1a2e',
-        ...floatStyle,
       }}
     >
       {children}

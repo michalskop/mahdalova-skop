@@ -2,6 +2,7 @@
 import { Paper, useMantineTheme, useMantineColorScheme } from '@mantine/core';
 import React from 'react';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import styles from './box.module.css';
 
 interface MediaBoxProps {
   children: React.ReactNode;
@@ -12,12 +13,10 @@ export function MediaBox({ children, float }: MediaBoxProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
 
-  const floatStyle: React.CSSProperties =
-    float === 'right'
-      ? { float: 'right', width: '45%', maxWidth: '400px', marginLeft: '1.5rem', marginBottom: '1rem' }
-      : float === 'left'
-      ? { float: 'left', width: '45%', maxWidth: '400px', marginRight: '1.5rem', marginBottom: '1rem' }
-      : {};
+  const floatClass =
+    float === 'right' ? styles.floatRight :
+    float === 'left'  ? styles.floatLeft  :
+    undefined;
 
   return (
     <Paper
@@ -26,13 +25,13 @@ export function MediaBox({ children, float }: MediaBoxProps) {
       py="xs"
       radius="md"
       my="lg"
+      className={floatClass}
       style={{
         backgroundColor:
           colorScheme === 'dark'
             ? theme.colors.gray[8]
             : theme.colors.brandNavy[6],
         color: theme.colors.background[1],
-        ...floatStyle,
       }}
     >
       {children}
