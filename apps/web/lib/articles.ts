@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import yaml from 'js-yaml';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { remarkBoxPlugin } from './remark-box-plugin';
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
@@ -83,6 +84,7 @@ export async function getArticleBySlug(directorySlug: string) {
     },
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
+      rehypePlugins: [rehypeRaw],
     },
   });
 
