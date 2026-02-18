@@ -1,76 +1,89 @@
 // components/clanek/MediaBox.tsx
 import { Paper, useMantineTheme, useMantineColorScheme } from '@mantine/core';
-import { Global } from '@mantine/styles';
+// import { Global } from '@mantine/styles';
 // import ReactMarkdown from 'react-markdown';
 import React from 'react';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 // import rehypeRaw from 'rehype-raw';
 
 interface MediaBoxProps {
-  children: string;
+  children: React.ReactNode;
+  float?: 'right' | 'left' | 'none';
 }
 
-export function MediaBox({ children }: MediaBoxProps) {
+export function MediaBox({ children, float }: MediaBoxProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
 
-  // Function to convert markdown links in HTML content
+  const floatStyle: React.CSSProperties =
+    float === 'right'
+      ? { float: 'right', width: '45%', maxWidth: '400px', marginLeft: '1.5rem', marginBottom: '1rem' }
+      : float === 'left'
+      ? { float: 'left', width: '45%', maxWidth: '400px', marginRight: '1.5rem', marginBottom: '1rem' }
+      : {};
+
+  return (
+    <Paper
+      shadow="xs"
+      px="md"
+      py="xs"
+      radius="md"
+      my="lg"
+      style={{
+        backgroundColor:
+          colorScheme === 'dark'
+            ? theme.colors.gray[8]
+            : theme.colors.brandNavy[6],
+        color: theme.colors.background[1],
+        ...floatStyle,
+      }}
+    >
+      {children}
+    </Paper>
+  );
+}
+
+// Legacy string-based MediaBox used by CodeBlock (```box syntax)
+interface LegacyMediaBoxProps {
+  children: string;
+}
+
+function LegacyMediaBox({ children }: LegacyMediaBoxProps) {
+  const theme = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
+
   const convertMarkdownLinks = (content: string) => {
-    // Convert markdown links [text](url) to HTML <a> tags
     return content.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" target="_blank" rel="noopener noreferrer" class="box-content">$1</a>'
+      '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">$1</a>'
     );
   };
 
-  // Function to convert markdown headings to H3 tags
   function convertMarkdownHeadersToH3(markdown: string): string {
-    // Remove <p> tags around headers and convert headers to <h3> tags
     return markdown.replace(/<p>(#{1,6}\s+.*?)<\/p>/g, (match, p1) => {
       return p1.replace(/^#{1,6}\s+(.*)$/gm, '<h3>$1</h3>');
     });
   }
-  
 
-  // Process the content
   const processedContent = convertMarkdownLinks(convertMarkdownHeadersToH3(children));
 
   return (
-    <>
-      <Global
-        styles={{
-          'a.box-content': {
-            color: theme.colors.brand[3],
-            textDecoration: 'none',
-            '&:hover': {
-              textDecoration: 'underline',
-            },
-            '&:active': {
-              color: theme.colors.brand[5],
-            },
-            '&:visited': {
-              color: theme.colors.brand[2],
-            },
-          },
-        }}
-      />
-      <Paper
-        shadow="xs"
-        px="md"
-        py="xs"
-        radius="md"
-        my="lg"
-        style={{
-          backgroundColor:
-            colorScheme === 'dark'
-              ? theme.colors.gray[8]
-              : theme.colors.brandNavy[6],
-          color: theme.colors.background[1],
-        }}
-      >
-        <div dangerouslySetInnerHTML={{ __html: processedContent }} />
-      </Paper>
-    </>
+    <Paper
+      shadow="xs"
+      px="md"
+      py="xs"
+      radius="md"
+      my="lg"
+      style={{
+        backgroundColor:
+          colorScheme === 'dark'
+            ? theme.colors.gray[8]
+            : theme.colors.brandNavy[6],
+        color: theme.colors.background[1],
+      }}
+    >
+      <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+    </Paper>
   );
 }
 
@@ -80,7 +93,7 @@ export function CodeBlock(props: CodeBlockProps): JSX.Element {
   const { className, children } = props;
 
   if (className === 'language-box') {
-    return <MediaBox>{String(children)}</MediaBox>;
+    return <LegacyMediaBox>{String(children)}</LegacyMediaBox>;
   }
 
   return <code {...props} />;
