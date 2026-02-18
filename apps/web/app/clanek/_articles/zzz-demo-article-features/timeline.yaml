@@ -1,0 +1,79 @@
+title: "Article features history"
+subtitle: "When each feature was added"
+
+facetGroups:
+  - key: type
+    label: "Type"
+    values:
+      - key: component
+        label: "Component"
+        color: "brandRoyalBlue.4"
+      - key: layout
+        label: "Layout"
+        color: "brandTeal.3"
+      - key: embed
+        label: "Embed"
+        color: "brandOrange.6"
+
+events:
+  - year: 2024
+    month: 1
+    facets:
+      type: component
+    date: "Early 2024"
+    title: "MediaBox (```box)"
+    emoji: "📦"
+    summary: "Dark navy box for quoted text and source citations."
+    description: "The original box component. Use ```box fences in markdown — no import needed."
+
+  - year: 2024
+    month: 6
+    facets:
+      type: embed
+    date: "Mid 2024"
+    title: "FlourishEmbed"
+    emoji: "📊"
+    summary: "Flourish chart component via data-src attribute."
+    description: "Use <FlourishEmbed dataSrc=\"visualisation/XXXXX\" /> to embed Flourish charts without an iframe."
+
+  - year: 2024
+    month: 9
+    facets:
+      type: component
+    date: "Late 2024"
+    title: "ScrollyTelling"
+    emoji: "📜"
+    summary: "Scroll-driven storytelling with images and iframes."
+    description: "Requires scrollytelling.yaml in the article directory. See zzz-demo-scrollytelling-v1 for a full guide."
+    link: "/clanek/zzz-demo-scrollytelling-v1"
+    linkText: "ScrollyTelling demo"
+
+  - year: 2025
+    month: 1
+    facets:
+      type: component
+    date: "Early 2025"
+    title: "PartyFace"
+    emoji: "🏷️"
+    summary: "Inline party badge icons for Czech/European political parties."
+    description: "Use <PartyFace party=\"ANO\" /> inline in text. Supports ANO, SPD, Piráti, SPOLU, ODS, STAN, KDU, TOP09, Motoristé."
+
+  - year: 2025
+    month: 6
+    facets:
+      type: component
+    date: "Mid 2025"
+    title: "Timeline"
+    emoji: "🗂️"
+    summary: "Filterable vertical timeline driven by a YAML file."
+    description: "Requires a .yaml file in the article directory. Supports facet filters, flags, person bios, and links."
+
+  - year: 2026
+    month: 2
+    facets:
+      type: layout
+    date: "February 2026"
+    title: "InfoBox (```infobox)"
+    emoji: "ℹ️"
+    summary: "Light-background info box with type and float support."
+    description: "Use ```infobox, ```infobox warning, ```infobox right etc. Types: info, warning, success, error. No import needed."
