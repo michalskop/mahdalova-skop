@@ -1,26 +1,23 @@
 // lib/remark-box-plugin.js
 import { visit } from 'unist-util-visit';
+import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
+
+// A small parser to turn box content into a proper markdown AST
+const markdownParser = remark().use(remarkGfm);
 
 export function remarkBoxPlugin() {
   return (tree) => {
     visit(tree, 'code', (node, index, parent) => {
       if (node.lang === 'box') {
-        // Convert each non-empty line into a proper paragraph AST node
-        // so MDX renders them as React elements (not raw HTML strings)
-        const children = node.value
-          .split('\n')
-          .filter(line => line.trim())
-          .map(line => ({
-            type: 'paragraph',
-            children: [{ type: 'text', value: line.trim() }],
-          }));
+        // Parse the box content as full markdown so links, headings, etc. work
+        const parsed = markdownParser.parse(node.value);
 
-        // Replace the code node with an mdxJsxFlowElement for MediaBox
         parent.children[index] = {
           type: 'mdxJsxFlowElement',
           name: 'MediaBox',
           attributes: [],
-          children,
+          children: parsed.children,
         };
       }
     });
