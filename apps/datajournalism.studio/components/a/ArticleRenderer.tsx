@@ -9,6 +9,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock, MediaBox } from './MediaBox'; // Import the MediaBox component
+import { InfoBox } from './InfoBox'; // Import the InfoBox component
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
@@ -54,6 +55,7 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     MediaBox, // Register MediaBox directly, allowing remarkBoxPlugin to handle box syntax
+    InfoBox,  // Register InfoBox for info/data boxes
     FlourishEmbed,
     code: CodeBlock,  // This handles the ```box syntax
 
