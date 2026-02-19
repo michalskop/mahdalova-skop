@@ -1,28 +1,13 @@
-// app/common/ArticlesGrid.tsx
 'use client';
-import { Container, Title, Space, Grid } from '@mantine/core';
-import { ArticleCard } from '@/components/a/ArticleCard';
-import type { Article } from './getArticles';
+import { ArticlesGrid as _ArticlesGrid } from '@repo/ui/components/ArticlesGrid';
+import type { Article } from '@repo/ui/lib/getArticles';
+
+export type { Article } from '@repo/ui/lib/getArticles';
 
 interface ArticlesGridProps {
- articles: Article[]; 
+  articles: Article[];
 }
 
 export function ArticlesGrid({ articles }: ArticlesGridProps) {
- return (
-   <Container size="lg" py={0}>
-     <Space h="md" />
-     <Grid gutter="md">
-       {articles.map((article) => (
-         <Grid.Col
-           style={{ containerType: 'inline-size' }}
-           key={article.slug}
-           span={{ base: 12, sm: 6, md: 4 }}
-         >
-           <ArticleCard {...article} />
-         </Grid.Col>
-       ))}
-     </Grid>
-   </Container>
- );
+  return <_ArticlesGrid articles={articles} articleBasePath="/a" locale="en-US" />;
 }
