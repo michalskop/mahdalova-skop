@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "@repo/ui": "*",
     "@emotion/react": "^11.13.3",
     "@emotion/server": "^11.x.x",
     "@mantine/core": "^7.13.4",
