@@ -5,7 +5,27 @@
   "exports": {
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./code": "./src/code.tsx",
+    "./components/Arrow": "./src/components/Arrow.tsx",
+    "./components/TagList": "./src/components/TagList.tsx",
+    "./components/TestimonialCard": "./src/components/TestimonialCard.tsx",
+    "./components/ThemeSwitcher": "./src/components/ThemeSwitcher.tsx",
+    "./components/Citation": "./src/components/Citation.tsx",
+    "./components/SubscribeHH": "./src/components/SubscribeHH.tsx",
+    "./components/FlourishEmbed": "./src/components/FlourishEmbed.tsx",
+    "./components/RawHtmlEmbed": "./src/components/RawHtmlEmbed.tsx",
+    "./components/MatomoAnalytics": "./src/components/MatomoAnalytics.tsx",
+    "./components/ScrollyTelling": "./src/components/ScrollyTelling.tsx",
+    "./components/ArticleCard": "./src/components/ArticleCard.tsx",
+    "./components/ArticlesGrid": "./src/components/ArticlesGrid.tsx",
+    "./components/ArticlesSection": "./src/components/ArticlesSection.tsx",
+    "./components/MediaBox": "./src/components/MediaBox.tsx",
+    "./components/InfoBox": "./src/components/InfoBox.tsx",
+    "./lib/remark-box-plugin": "./src/lib/remark-box-plugin.js",
+    "./lib/remark-flourish-plugin": "./src/lib/remark-flourish-plugin.js",
+    "./lib/getArticles": "./src/lib/getArticles.ts",
+    "./lib/tagNormalizer": "./src/lib/tagNormalizer.ts",
+    "./types/scrolly": "./src/types/scrolly.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -25,5 +45,17 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "@mantine/core": ">=7.0.0",
+    "@mantine/hooks": ">=7.0.0",
+    "@tabler/icons-react": ">=3.0.0",
+    "next": ">=14.0.0",
+    "react": ">=18.0.0",
+    "react-scrollama": ">=2.0.0",
+    "gray-matter": ">=4.0.0",
+    "remark": ">=15.0.0",
+    "remark-gfm": ">=4.0.0",
+    "unist-util-visit": ">=5.0.0"
   }
 }

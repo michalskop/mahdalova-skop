@@ -1,0 +1,26 @@
+.floatRight {
+  float: right;
+  width: 45%;
+  max-width: 400px;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.floatLeft {
+  float: left;
+  width: 45%;
+  max-width: 400px;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .floatRight,
+  .floatLeft {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

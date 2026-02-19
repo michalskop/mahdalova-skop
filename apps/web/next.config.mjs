@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'export',
+  transpilePackages: ['@repo/ui'],
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     mdxRs: true,
