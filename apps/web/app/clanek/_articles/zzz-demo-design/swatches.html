@@ -1,0 +1,215 @@
+<style>
+.ds-palette { margin: 0 0 40px; }
+.ds-palette h3 {
+  font-size: 15px; font-weight: 700; margin: 32px 0 8px; color: #1a1a1a;
+  border-bottom: 2px solid #de1743; padding-bottom: 6px;
+}
+.ds-row { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
+.ds-swatch { text-align: center; }
+.ds-block {
+  width: 56px; height: 48px; border-radius: 4px;
+  border: 1px solid transparent;
+}
+.ds-block.light { border-color: #e0e0e0; }
+.ds-block.main { outline: 2px solid #222; outline-offset: 2px; }
+.ds-idx { font-size: 11px; margin-top: 4px; color: #555; }
+.ds-idx.bold { font-weight: 700; color: #111; }
+.ds-hex { font-size: 10px; color: #888; margin-top: 1px; font-family: monospace; }
+.ds-note { font-size: 12px; color: #555; background: #f8f6f0; padding: 6px 10px; border-radius: 4px; margin-bottom: 12px; }
+.ds-accent-row { display: flex; gap: 24px; flex-wrap: wrap; }
+.ds-accent { margin-bottom: 12px; }
+.ds-accent-name { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.ds-mini-row { display: flex; gap: 3px; }
+.ds-mini { width: 28px; height: 28px; border-radius: 3px; }
+.ds-mini.light { border: 1px solid #e0e0e0; }
+.ds-mini.main { outline: 2px solid #222; outline-offset: 1px; }
+</style>
+
+<p class="ds-note">★ marks the main shade <strong>[6]</strong> used in most components. Access via <code>theme.colors.name[index]</code> or Mantine's <code>c="name.6"</code> shorthand.</p>
+
+<div class="ds-palette">
+
+  <h3>brand — Primary crimson red</h3>
+  <div class="ds-row">
+    <div class="ds-swatch"><div class="ds-block light" style="background:#fff4f6"></div><div class="ds-idx">[0]</div><div class="ds-hex">#fff4f6</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ffb3c0"></div><div class="ds-idx">[1]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ff8099"></div><div class="ds-idx">[2]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ff4d70"></div><div class="ds-idx">[3]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ff1a4a"></div><div class="ds-idx">[4]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#f01745"></div><div class="ds-idx">[5]</div></div>
+    <div class="ds-swatch"><div class="ds-block main" style="background:#de1743"></div><div class="ds-idx bold">[6] ★</div><div class="ds-hex">#de1743</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#c5143c"></div><div class="ds-idx">[7]</div><div class="ds-hex">#c5143c</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#a81134"></div><div class="ds-idx">[8]</div><div class="ds-hex">#a81134</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#8b0e2b"></div><div class="ds-idx">[9]</div></div>
+  </div>
+  <table style="font-size:12px;border-collapse:collapse;margin-bottom:4px">
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[0] #fff4f6</td><td style="padding:2px 0;color:#333">InfoBox <code>error</code> background</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[6] #de1743</td><td style="padding:2px 0;color:#333"><strong>Main</strong> — links, headings, tag badges, Arrow, section titles, InfoBox <code>error</code> border</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[7] #c5143c</td><td style="padding:2px 0;color:#333">Hover state for brand links</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[8] #a81134</td><td style="padding:2px 0;color:#333">Active/visited state for brand links</td></tr>
+  </table>
+
+  <h3>background — Warm off-white page scale</h3>
+  <div class="ds-row">
+    <div class="ds-swatch"><div class="ds-block light" style="background:#ffffff"></div><div class="ds-idx">[0]</div><div class="ds-hex">#ffffff</div></div>
+    <div class="ds-swatch"><div class="ds-block light main" style="background:#fdfbf7"></div><div class="ds-idx bold">[1] ★</div><div class="ds-hex">#fdfbf7</div></div>
+    <div class="ds-swatch"><div class="ds-block light" style="background:#f8f6f0"></div><div class="ds-idx">[2]</div><div class="ds-hex">#f8f6f0</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#f3f1e9"></div><div class="ds-idx">[3]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#eeeae2"></div><div class="ds-idx">[4]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#e9e9dd"></div><div class="ds-idx">[5]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#e8e8dc"></div><div class="ds-idx">[6]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#d4d4c8"></div><div class="ds-idx">[7]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#c8c8bc"></div><div class="ds-idx">[8]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#bcbcb0"></div><div class="ds-idx">[9]</div></div>
+  </div>
+  <table style="font-size:12px;border-collapse:collapse;margin-bottom:4px">
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[0] #ffffff</td><td style="padding:2px 0;color:#333">Text on dark/coloured backgrounds — <code>c="background.0"</code></td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[1] #fdfbf7</td><td style="padding:2px 0;color:#333"><strong>Main</strong> — page background, Paper/card background</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[2] #f8f6f0</td><td style="padding:2px 0;color:#333">Table headers, blockquote (Citation) background</td></tr>
+  </table>
+
+  <h3>brandNavy — Navy purple</h3>
+  <div class="ds-row">
+    <div class="ds-swatch"><div class="ds-block light" style="background:#e9ecf4"></div><div class="ds-idx">[0]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#d2d8e9"></div><div class="ds-idx">[1]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#bcc4df"></div><div class="ds-idx">[2]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#a6b0d4"></div><div class="ds-idx">[3]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#8f9dc9"></div><div class="ds-idx">[4]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#7889be"></div><div class="ds-idx">[5]</div></div>
+    <div class="ds-swatch"><div class="ds-block main" style="background:#6267a3"></div><div class="ds-idx bold">[6] ★</div><div class="ds-hex">#6267a3</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#4c4f8e"></div><div class="ds-idx">[7]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#2f325c"></div><div class="ds-idx">[8]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#101432"></div><div class="ds-idx">[9]</div></div>
+  </div>
+  <table style="font-size:12px;border-collapse:collapse;margin-bottom:4px">
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[6] #6267a3</td><td style="padding:2px 0;color:#333">MediaBox background (light mode), InfoBox <code>info</code> border</td></tr>
+  </table>
+
+  <h3>brandTeal — Teal green</h3>
+  <div class="ds-row">
+    <div class="ds-swatch"><div class="ds-block light" style="background:#e5f9fc"></div><div class="ds-idx">[0]</div><div class="ds-hex">#e5f9fc</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#b8eff6"></div><div class="ds-idx">[1]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#8cdfef"></div><div class="ds-idx">[2]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#5fcce6"></div><div class="ds-idx">[3]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#33b9d9"></div><div class="ds-idx">[4]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#1a9fbd"></div><div class="ds-idx">[5]</div></div>
+    <div class="ds-swatch"><div class="ds-block main" style="background:#0f6c78"></div><div class="ds-idx bold">[6] ★</div><div class="ds-hex">#0f6c78</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#0b5964"></div><div class="ds-idx">[7]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#084650"></div><div class="ds-idx">[8]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#06333c"></div><div class="ds-idx">[9]</div></div>
+  </div>
+  <table style="font-size:12px;border-collapse:collapse;margin-bottom:4px">
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[0] #e5f9fc</td><td style="padding:2px 0;color:#333">InfoBox <code>success</code> background</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[6] #0f6c78</td><td style="padding:2px 0;color:#333">InfoBox <code>success</code> border, SubscribeHH button</td></tr>
+  </table>
+
+  <h3>brandOrange — Orange</h3>
+  <div class="ds-row">
+    <div class="ds-swatch"><div class="ds-block light" style="background:#fff4eb"></div><div class="ds-idx">[0]</div><div class="ds-hex">#fff4eb</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ffe4cc"></div><div class="ds-idx">[1]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ffd4b3"></div><div class="ds-idx">[2]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ffb380"></div><div class="ds-idx">[3]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ff934d"></div><div class="ds-idx">[4]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ff7519"></div><div class="ds-idx">[5]</div></div>
+    <div class="ds-swatch"><div class="ds-block main" style="background:#f76800"></div><div class="ds-idx bold">[6] ★</div><div class="ds-hex">#f76800</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#c55300"></div><div class="ds-idx">[7]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#ac4800"></div><div class="ds-idx">[8]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#933e00"></div><div class="ds-idx">[9]</div></div>
+  </div>
+  <table style="font-size:12px;border-collapse:collapse;margin-bottom:4px">
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[0] #fff4eb</td><td style="padding:2px 0;color:#333">InfoBox <code>warning</code> background</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[6] #f76800</td><td style="padding:2px 0;color:#333">InfoBox <code>warning</code> border</td></tr>
+  </table>
+
+  <h3>brandRoyalBlue — Deep blue</h3>
+  <div class="ds-row">
+    <div class="ds-swatch"><div class="ds-block light" style="background:#e9ebfa"></div><div class="ds-idx">[0]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#c9d0f5"></div><div class="ds-idx">[1]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#a9b5f0"></div><div class="ds-idx">[2]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#899aeb"></div><div class="ds-idx">[3]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#697fe6"></div><div class="ds-idx">[4]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#5e66d5"></div><div class="ds-idx">[5]</div></div>
+    <div class="ds-swatch"><div class="ds-block main" style="background:#4a51ab"></div><div class="ds-idx bold">[6] ★</div><div class="ds-hex">#4a51ab</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#383d82"></div><div class="ds-idx">[7]</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#272a59"></div><div class="ds-idx bold">[8]</div><div class="ds-hex">#272a59</div></div>
+    <div class="ds-swatch"><div class="ds-block" style="background:#161730"></div><div class="ds-idx">[9]</div></div>
+  </div>
+  <table style="font-size:12px;border-collapse:collapse;margin-bottom:4px">
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[6] #4a51ab</td><td style="padding:2px 0;color:#333">Main shade</td></tr>
+    <tr><td style="padding:2px 8px 2px 0;color:#555">[8] #272a59</td><td style="padding:2px 0;color:#333">TestimonialCard background</td></tr>
+  </table>
+
+  <h3>Accent colours — decorative, not yet used in components</h3>
+  <p style="font-size:12px;color:#888;margin-bottom:12px">Do not use in new components without design sign-off.</p>
+  <div class="ds-accent-row">
+
+    <div class="ds-accent">
+      <div class="ds-accent-name">brandYellow</div>
+      <div class="ds-mini-row">
+        <div class="ds-mini light" style="background:#fffdf0" title="[0]"></div>
+        <div class="ds-mini" style="background:#fff7d9" title="[1]"></div>
+        <div class="ds-mini" style="background:#fff0b3" title="[2]"></div>
+        <div class="ds-mini" style="background:#ffe680" title="[3]"></div>
+        <div class="ds-mini" style="background:#ffdc33" title="[4]"></div>
+        <div class="ds-mini" style="background:#ffd519" title="[5]"></div>
+        <div class="ds-mini main" style="background:#ffcf02" title="[6] #ffcf02"></div>
+        <div class="ds-mini" style="background:#d6a404" title="[7]"></div>
+        <div class="ds-mini" style="background:#bd9103" title="[8]"></div>
+        <div class="ds-mini" style="background:#a47d03" title="[9]"></div>
+      </div>
+      <div style="font-size:10px;color:#888;margin-top:3px">[6] #ffcf02</div>
+    </div>
+
+    <div class="ds-accent">
+      <div class="ds-accent-name">brandForestGreen</div>
+      <div class="ds-mini-row">
+        <div class="ds-mini light" style="background:#eaf7d6" title="[0]"></div>
+        <div class="ds-mini" style="background:#cbeab1" title="[1]"></div>
+        <div class="ds-mini" style="background:#acde8b" title="[2]"></div>
+        <div class="ds-mini" style="background:#8dd265" title="[3]"></div>
+        <div class="ds-mini" style="background:#6ec53f" title="[4]"></div>
+        <div class="ds-mini main" style="background:#639e0a" title="[6] #639e0a"></div>
+        <div class="ds-mini" style="background:#507e08" title="[7]"></div>
+        <div class="ds-mini" style="background:#3d5f06" title="[8]"></div>
+        <div class="ds-mini" style="background:#2a3f04" title="[9]"></div>
+        <div class="ds-mini" style="background:#172002" title="[10]"></div>
+      </div>
+      <div style="font-size:10px;color:#888;margin-top:3px">[6] #639e0a</div>
+    </div>
+
+    <div class="ds-accent">
+      <div class="ds-accent-name">brandEmeraldMint</div>
+      <div class="ds-mini-row">
+        <div class="ds-mini light" style="background:#e8f9f4" title="[0]"></div>
+        <div class="ds-mini" style="background:#c2f0e4" title="[1]"></div>
+        <div class="ds-mini" style="background:#9be8d4" title="[2]"></div>
+        <div class="ds-mini" style="background:#75dfc4" title="[3]"></div>
+        <div class="ds-mini" style="background:#4fd6b4" title="[4]"></div>
+        <div class="ds-mini main" style="background:#12b886" title="[6] #12b886"></div>
+        <div class="ds-mini" style="background:#0e926a" title="[7]"></div>
+        <div class="ds-mini" style="background:#0b6b4e" title="[8]"></div>
+        <div class="ds-mini" style="background:#084533" title="[9]"></div>
+        <div class="ds-mini" style="background:#042319" title="[10]"></div>
+      </div>
+      <div style="font-size:10px;color:#888;margin-top:3px">[6] #12b886</div>
+    </div>
+
+    <div class="ds-accent">
+      <div class="ds-accent-name">brandDeepRed</div>
+      <div class="ds-mini-row">
+        <div class="ds-mini light" style="background:#fbe8eb" title="[0]"></div>
+        <div class="ds-mini" style="background:#f5c4cd" title="[1]"></div>
+        <div class="ds-mini" style="background:#efa0af" title="[2]"></div>
+        <div class="ds-mini" style="background:#e87c91" title="[3]"></div>
+        <div class="ds-mini" style="background:#d85a74" title="[4]"></div>
+        <div class="ds-mini" style="background:#bb3a5d" title="[5]"></div>
+        <div class="ds-mini main" style="background:#a03250" title="[6] #a03250"></div>
+        <div class="ds-mini" style="background:#812840" title="[7]"></div>
+        <div class="ds-mini" style="background:#621d30" title="[8]"></div>
+        <div class="ds-mini" style="background:#431320" title="[9]"></div>
+      </div>
+      <div style="font-size:10px;color:#888;margin-top:3px">[6] #a03250</div>
+    </div>
+
+  </div>
+</div>
