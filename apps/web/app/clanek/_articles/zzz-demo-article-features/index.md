@@ -1,115 +1,166 @@
 ---
-title: "Article features: quick reference"
+title: "Article writing guide: all features"
 date: "9999-12-31"
-author: "Tech Team"
-excerpt: "Quick-reference guide for every feature available when writing articles: markdown, boxes, embeds, components, and more."
-tags: ["guide", "reference", "demo"]
+author: "Editorial Team"
+excerpt: "Everything you can use when writing an article: text formatting, boxes, charts, timelines, and more. Copy-paste syntax with live examples."
+tags: ["guide", "reference"]
 promoted: 0
 ---
 
-This article is a **living quick-reference** for writing articles. Every feature is shown with the exact syntax you need to copy-paste, followed by a live rendered example.
+> This article is hidden from listings (future date). It is a reference for article authors — you can link to it but it won't appear on the front page or in section lists.
 
-> **Note:** This article is dated far in the future (9999-12-31) so it never appears in article lists or on the front page. Linked from: [ScrollyTelling demo](/clanek/zzz-demo-scrollytelling-v1).
+This is your practical guide to every tool available when writing articles. Each section shows the exact text to copy, followed by a live example of what it looks like.
+
+**You don't need to know how to code.** Just copy the pattern you need, paste it into your article, and fill in your content.
 
 ---
 
-## 1. Basic markdown
+## Contents
 
-Standard GFM markdown works everywhere in articles.
+1. [Text formatting](#1-text-formatting)
+2. [Tables](#2-tables)
+3. [Images](#3-images)
+4. [Source box — dark](#4-source-box-dark)
+5. [Info box — light](#5-info-box-light)
+6. [Flourish charts](#6-flourish-charts)
+7. [Any embedded chart or map](#7-any-embedded-chart-or-map)
+8. [Party badges](#8-party-badges)
+9. [Timeline](#9-timeline)
+10. [Scroll-driven story](#10-scroll-driven-story)
+11. [Custom interactive piece](#11-custom-interactive-piece)
+12. [Quick reference](#12-quick-reference)
+
+---
+
+## 1. Text formatting
+
+### Bold, italic, strikethrough, links
 
 ```md
-**bold**, _italic_, ~~strikethrough~~
+**Important:** Voter turnout _increased_ significantly in 2025.
 
-[Link text](https://example.com)
+~~This claim was later corrected.~~
 
-- unordered list
-- second item
-  - nested item
-
-1. ordered list
-2. second item
-
-> Blockquote text
+[Full results on the Electoral Commission website](https://volby.cz)
 ```
 
-**bold**, _italic_, ~~strikethrough~~
+**Important:** Voter turnout _increased_ significantly in 2025.
 
-[Link text](https://www.mahdalova-skop.cz)
+~~This claim was later corrected.~~
 
-- unordered list
-- second item
-  - nested item
+[Full results on the Electoral Commission website](https://www.mahdalova-skop.cz)
 
-1. ordered list
-2. second item
+---
 
-> Blockquote text
+### Lists
+
+```md
+- First item
+- Second item
+  - Indented sub-item
+
+1. First step
+2. Second step
+```
+
+- First item
+- Second item
+  - Indented sub-item
+
+1. First step
+2. Second step
+
+---
+
+### Block quote
+
+Use `>` for quotes from speeches, documents, or statements:
+
+```md
+> "The data does not support the government's claim."
+> — Ministry of Finance report, March 2025
+```
+
+> "The data does not support the government's claim."
+> — Ministry of Finance report, March 2025
 
 ---
 
 ## 2. Tables
 
-Standard GFM pipe tables. Alignment via `:---`, `:---:`, `---:`.
+Separate columns with `|` and rows with a new line. The second row (dashes) is required.
 
 ```md
-| Strana  | Hlasy | Mandáty |
-|---------|------:|:-------:|
-| ANO     | 27 %  | 105     |
-| SPOLU   | 21 %  |  82     |
-| Piráti  |  8 %  |  22     |
+| Party  | Votes | Seats |
+|--------|------:|:-----:|
+| ANO    | 27 %  | 105   |
+| SPOLU  | 21 %  |  82   |
+| Piráti |  8 %  |  22   |
 ```
 
-| Strana  | Hlasy | Mandáty |
-|---------|------:|:-------:|
-| ANO     | 27 %  | 105     |
-| SPOLU   | 21 %  |  82     |
-| Piráti  |  8 %  |  22     |
+| Party  | Votes | Seats |
+|--------|------:|:-----:|
+| ANO    | 27 %  | 105   |
+| SPOLU  | 21 %  |  82   |
+| Piráti |  8 %  |  22   |
+
+**Column alignment** (in the dashes row):
+- `:---` — left-aligned (default, good for text)
+- `---:` — right-aligned (good for numbers)
+- `:---:` — centred
 
 ---
 
 ## 3. Images
 
-Images are served from the `images/` subfolder of the article directory. No full path needed.
+Place image files in the `images/` subfolder inside your article directory. Reference them by filename only — no full path needed.
 
 ```md
-![Alt text](images/my-image.webp)
+![Description of the image](images/chart.webp)
 ```
 
-For an image with a caption, follow it with an italic line:
+To add a caption, follow the image with an italic line:
 
 ```md
-![Chart showing results](images/chart.png)
-_Caption text goes here._
+![Voter turnout by region](images/map.webp)
+_Voter turnout by region. Source: Electoral Commission._
 ```
+
+**Tips:**
+- Use `.webp` format when possible (smaller files, faster loading)
+- Write a meaningful description in the `[brackets]` — it appears if the image fails to load and helps screen readers
+- Captions are optional but recommended for charts and maps
 
 ---
 
-## 4. MediaBox — dark quote/source box
+## 4. Source box — dark
 
-Use for **quoted text from external sources**, short context notes, or embeds. Maps to the dark navy box.
+The dark navy **source box** is used for:
+- Direct quotes from documents, official sources, or third parties
+- Short context notes you want to visually set apart from the main text
+- Source attribution with a link
 
-Three equivalent fence names — all produce the same result:
+Write ` ```box ` on its own line, your content, then ` ``` ` on its own line.
 
 ````md
 ```box
-Quoted text here. [Source link](https://example.com)
+Hospodářské noviny (22 July 2024)
+
+Turek says his income figures are still estimates.
+[Full article](https://archiv.hn.cz/...)
 ```
 ````
+
+To **float it to the right** (sits beside text on desktop, full-width on mobile), add `right` after `box`:
 
 ````md
-```mediabox
-Same as box. Supports **markdown**, links, and headings.
+```box right
+Short note that floats beside the main text.
+[Source link](https://example.com)
 ```
 ````
 
-With float:
-
-````md
-```mediabox right
-This box floats right on desktop,
-full width on mobile.
-```
-````
+You can also write `mediabox` instead of `box` — it works identically.
 
 **Live example:**
 
@@ -122,77 +173,95 @@ Turek o svých příjmech říká, že jsou to zatím jen odhady.
 
 ---
 
-## 5. InfoBox — light callout box
+## 5. Info box — light
 
-Use for **contextual data, tables, definitions, or callout notes**. Light background with a coloured left border.
+The light **info box** is used for contextual notes alongside the main article text. It has four types — choose the one that fits the tone:
+
+| Type | Use for |
+|------|---------|
+| `info` | Neutral context, methodology notes, definitions |
+| `warning` | Data caveats, limitations, things the reader should keep in mind |
+| `success` | Confirmed facts, verified findings, positive outcomes |
+| `error` | Corrections, debunked claims |
 
 ````md
 ```infobox
-Basic info box (type defaults to "info").
+Basic info box — type defaults to "info".
 ```
 ````
-
-**Types:** `info` (default), `warning`, `success`, `error`
-
-**Float:** add `right` or `left` after the type (or alone)
 
 ````md
 ```infobox warning
-⚠️ This will not work without the YAML file.
+⚠️ The data before 2018 is incomplete.
 ```
 ````
+
+Add `right` or `left` to float it beside the text:
 
 ````md
-```infobox right
-Floats right on desktop, full width on mobile.
-
-| Rok  | Účast |
-|------|-------|
-| 2021 | 65 %  |
-| 2025 | 72 %  |
+```infobox warning right
+This box will sit to the right of the surrounding text on desktop.
 ```
 ````
 
-**Live examples:**
+**Live examples — all four types:**
 
 ```infobox info
-**Info** — default type. Use for neutral context, methodology notes, or definitions.
+**Info** — use for neutral context, methodology, or definitions. The most common type.
 ```
 
 ```infobox warning
-**Warning** — use for caveats, data limitations, or important notes for the reader.
+**Warning** — use for caveats, data limitations, or important notes the reader should keep in mind.
 ```
 
 ```infobox success
-**Success** — use for confirmed facts, corrections, or positive outcomes.
+**Success** — use for confirmed facts, verified findings, or positive outcomes.
 ```
 
 ```infobox error
-**Error** — use for known issues or debunked claims.
+**Error** — use for corrections or claims that have been debunked.
 ```
+
+**Floated example — info box with a table:**
 
 ```infobox right
-### Floated infobox
+### Voter turnout
 
-| Rok  | Účast |
-|------|-------|
-| 2021 | 65 %  |
-| 2025 | 72 %  |
+| Year | Turnout |
+|------|---------|
+| 2021 | 65 %    |
+| 2025 | 72 %    |
 
-This box floats right on desktop. Content wraps around it.
+Floats right on desktop. The article text wraps around it. On mobile it becomes full-width automatically.
 ```
 
-On mobile all floated boxes collapse to full width automatically.
+**When to float:** only float boxes when there is enough surrounding text — at least 3–4 paragraphs. Floating a box next to a short paragraph looks awkward.
 
 ---
 
-## 6. Raw iframe embed
+## 6. Flourish charts
 
-Paste Flourish, Datawrapper, or any other embed code directly.
+For charts published on [Flourish](https://flourish.studio), copy the part of the chart URL after `flourish.studio/` and paste it as the `dataSrc` value:
+
+```md
+<FlourishEmbed dataSrc="visualisation/20114452" />
+```
+
+The chart URL looks like `https://public.flourish.studio/visualisation/20114452/` — you only need `visualisation/20114452`.
+
+**Live example:**
+
+<FlourishEmbed dataSrc="visualisation/20114452" />
+
+---
+
+## 7. Any embedded chart or map
+
+For Datawrapper, Tableau, Google Maps, or any other embeddable content, paste the `<iframe>` code directly into the article:
 
 ```md
 <iframe
-  src="https://flo.uri.sh/visualisation/20114452/embed"
+  src="https://datawrapper.dwcdn.net/XXXXX/1/"
   width="100%"
   height="400"
   frameBorder="0"
@@ -200,61 +269,46 @@ Paste Flourish, Datawrapper, or any other embed code directly.
 ></iframe>
 ```
 
-**Live example:**
+**Live example (Flourish via iframe):**
 
 <iframe src="https://flo.uri.sh/visualisation/20114452/embed" width="100%" height="400" frameBorder="0" scrolling="no"></iframe>
 
-Iframes also work **inside boxes**:
+You can also embed a chart **inside a source box** by nesting it:
 
 ````md
-```mediabox
-<iframe src="https://flo.uri.sh/visualisation/20114452/embed"
-  width="100%" height="300" frameBorder="0"></iframe>
+```box
+<iframe src="https://..." width="100%" height="300" frameBorder="0"></iframe>
+
+Source: Datawrapper / Electoral Commission
 ```
 ````
 
 ---
 
-## 7. FlourishEmbed component
+## 8. Party badges
 
-Alternative to raw iframes for Flourish. Loads the Flourish embed script automatically. Use `dataSrc` — the part after `flourish.studio/` in the chart URL.
-
-```md
-<FlourishEmbed dataSrc="visualisation/20114452" />
-```
-
-**Live example:**
-
-<FlourishEmbed dataSrc="visualisation/20114452" />
-
----
-
-## 8. PartyFace
-
-Inline coloured badge for Czech and European Parliament parties. Use directly in running text.
+Use `<PartyFace>` for inline coloured party name badges. They work in running text or standalone.
 
 ```md
-<PartyFace party="ANO" size={15} text="" /> ANO is the largest party.
+<PartyFace party="ANO" size={30} /> ANO gained the most seats.
 
-<PartyFace party="ANO" size={30} /> with default label
+<PartyFace party="ANO" size={15} text="" /> ANO supports the measure,
+while <PartyFace party="Piráti" size={15} text="" /> Piráti oppose it.
 ```
-
-**Available parties:** `ANO`, `SPD`, `Piráti`, `SPOLU`, `ODS`, `STAN`, `KDU`, `KSČM`, `TOP09`, `Motoristé`
-
-**Props:**
 
 | Prop | Default | Notes |
 |------|---------|-------|
-| `party` | — | preset name, sets colour + label |
-| `size` | `42` | px, controls badge size |
-| `text` | preset label | override display text; `""` for icon only |
-| `color` | — | custom hex, if no `party` preset |
+| `party` | — | Party name — sets colour and label automatically |
+| `size` | `42` | Size in pixels. Use `30` standalone, `15` inline in text |
+| `text` | party label | Override the label. Use `text=""` for icon-only |
 
-**Live examples:**
+**Available parties:**
 
 <PartyFace party="ANO" size={30} /> <PartyFace party="SPD" size={30} /> <PartyFace party="Piráti" size={30} /> <PartyFace party="SPOLU" size={30} /> <PartyFace party="ODS" size={30} /> <PartyFace party="STAN" size={30} /> <PartyFace party="KDU" size={30} /> <PartyFace party="KSČM" size={30} /> <PartyFace party="TOP09" size={30} /> <PartyFace party="Motoristé" size={30} />
 
-Using `text=""` gives icon-only badges for inline use:
+`ANO`, `SPD`, `Piráti`, `SPOLU`, `ODS`, `STAN`, `KDU`, `KSČM`, `TOP09`, `Motoristé`
+
+**Icon-only in running text:**
 
 <PartyFace party="ANO" size={15} text="" /> ANO supports the measure, while <PartyFace party="Piráti" size={15} text="" /> Piráti oppose it.
 
@@ -262,69 +316,71 @@ Using `text=""` gives icon-only badges for inline use:
 
 ## 9. Timeline
 
-Filterable vertical timeline driven by a YAML file in the article directory.
+A filterable vertical timeline driven by a data file (`timeline.yaml`) that lives in the article folder. Ask a developer to help set up the YAML file — once it exists, you embed it with one line:
 
 ```md
 <Timeline yamlFile="timeline.yaml" />
 ```
 
-**YAML structure:**
+**Live example** (this article's feature history):
+
+<Timeline yamlFile="timeline.yaml" />
+
+---
+
+### Timeline YAML format
+
+The YAML file controls everything: events, filter buttons, which years are collapsed by default. Here is the full format:
 
 ```yaml
 title: "Timeline title"
-subtitle: "Optional subtitle"
-collapsedYears: [2024]       # years collapsed by default
+subtitle: "Optional subtitle line below the title"
+collapsedYears: [2024]         # years shown collapsed by default
 
-facetGroups:                 # optional filter groups
+facetGroups:                   # optional — adds filter buttons above the timeline
   - key: topic
     label: "Topic"
     values:
-      - key: projects
-        label: "Projects"
-        color: "brandTeal.3"  # theme colour or hex
-        flag: "cz"            # optional: country flag code
+      - key: economy
+        label: "Economy"
+        color: "brandTeal.3"   # any theme colour (see design demo) or a hex value
+        flag: "cz"             # optional: shows a country flag (ISO 3166-1 alpha-2 code)
 
 events:
   - year: 2025
     month: 6
     facets:
-      topic: projects
-    date: "June 2025"        # display string
+      topic: economy           # must match a key defined in facetGroups above
+    date: "June 2025"          # displayed date string (free text)
     title: "Event title"
     emoji: "📊"
-    summary: "One-line summary shown in collapsed view."
-    description: "Full text shown on expand."
+    summary: "One-line summary shown in the collapsed view."
+    description: "Full text shown when the reader expands the event. Supports **markdown**."
     persons:
       - name: "Person Name"
-        bio: "Short bio"
+        bio: "Short biography or title"
     link: "https://example.com"
     linkText: "Link label"
-    tags: ["🆕 Tag"]
+    tags: ["🆕 New", "Important"]
 ```
-
-**Live example** (shows features added to this codebase):
-
-<Timeline yamlFile="timeline.yaml" />
 
 ---
 
-## 10. ScrollyTelling
+## 10. Scroll-driven story
 
-Scroll-driven narrative with images and iframes. Requires a separate `scrollytelling.yaml` file.
+ScrollyTelling displays a sticky image or chart on one side while the reader scrolls through text steps. It requires a `scrollytelling.yaml` file in the article folder — ask a developer to set it up.
 
 ```md
 <ScrollyTelling yamlFile="scrollytelling.yaml" />
 ```
 
-See the full guide with a live demo: [zzz-demo-scrollytelling-v1](/clanek/zzz-demo-scrollytelling-v1)
+Full guide with a live demo: [zzz-demo-scrollytelling-v1](/clanek/zzz-demo-scrollytelling-v1)
 
 ---
 
-## 11. Raw HTML file (htmlInclude)
+## 11. Custom interactive piece
 
-For complex interactive pieces (custom JS, CSS, D3, etc.) that cannot be expressed in MDX. The HTML file is loaded from the article directory and injected before the MDX content.
-
-Set in frontmatter:
+For fully custom interactive pieces — your own JavaScript, CSS, D3 charts — an HTML file can be injected before the article content. Set the filename in the article's frontmatter (the block at the very top of the file):
 
 ```yaml
 ---
@@ -332,19 +388,25 @@ htmlInclude: "my-interactive.html"
 ---
 ```
 
-The HTML file can include `<style>` and `<script>` tags. Asset paths (images, data files) in the HTML are automatically rewritten relative to the article directory.
+The HTML file can contain `<style>` and `<script>` blocks. Any paths to images or data files inside it are automatically rewritten relative to the article folder. Ask a developer if you need this.
 
 ---
 
-## Feature summary
+## 12. Quick reference
 
-| Feature | Syntax | Import needed? |
-|---------|--------|:---:|
-| MediaBox | ` ```box ` / ` ```mediabox ` | No |
-| InfoBox | ` ```infobox ` | No |
-| Raw iframe | `<iframe ...>` | No |
-| FlourishEmbed | `<FlourishEmbed dataSrc="..." />` | No |
-| PartyFace | `<PartyFace party="..." />` | No |
-| Timeline | `<Timeline yamlFile="timeline.yaml" />` | No |
-| ScrollyTelling | `<ScrollyTelling yamlFile="scrollytelling.yaml" />` | No |
-| Raw HTML | `htmlInclude:` in frontmatter | No |
+| Feature | Syntax | Notes |
+|---------|--------|-------|
+| Bold | `**text**` | — |
+| Italic | `_text_` | — |
+| Link | `[label](https://url)` | — |
+| Block quote | `> text` | — |
+| Table | `\| col \| col \|` | Second row = dashes |
+| Image | `![alt](images/file.webp)` | File goes in `images/` subfolder |
+| Source box (dark) | ` ```box ` | Add `right` to float |
+| Info box (light) | ` ```infobox warning ` | Types: `info` `warning` `success` `error` |
+| Flourish chart | `<FlourishEmbed dataSrc="visualisation/XXXXX" />` | — |
+| Any iframe embed | `<iframe src="..." />` | — |
+| Party badge | `<PartyFace party="ANO" size={30} />` | Parties: ANO SPD Piráti SPOLU ODS STAN KDU KSČM TOP09 Motoristé |
+| Timeline | `<Timeline yamlFile="timeline.yaml" />` | Developer creates YAML |
+| ScrollyTelling | `<ScrollyTelling yamlFile="scrollytelling.yaml" />` | Developer creates YAML |
+| Custom HTML | `htmlInclude: "file.html"` in frontmatter | Developer creates HTML |
