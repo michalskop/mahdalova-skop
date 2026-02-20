@@ -21,6 +21,7 @@
     "./components/ArticlesSection": "./src/components/ArticlesSection.tsx",
     "./components/MediaBox": "./src/components/MediaBox.tsx",
     "./components/InfoBox": "./src/components/InfoBox.tsx",
+    "./components/RelatedArticles": "./src/components/RelatedArticles.tsx",
     "./lib/remark-box-plugin": "./src/lib/remark-box-plugin.js",
     "./lib/remark-flourish-plugin": "./src/lib/remark-flourish-plugin.js",
     "./lib/getArticles": "./src/lib/getArticles.ts",

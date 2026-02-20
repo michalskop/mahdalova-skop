@@ -13,6 +13,9 @@ export interface Article {
   filter?: string | string[];
   tags: string[];
   promoted?: number;
+  topic?: string;
+  readingTime?: number;
+  embedHtml?: string;
 }
 
 interface ArticleWithScore extends Article {
@@ -66,6 +69,9 @@ export async function getArticles({
           filter: data.filter || [],
           tags: data.tags || [],
           promoted: data.promoted || 0,
+          topic: data.topic ?? undefined,
+          readingTime: data.readingTime ?? undefined,
+          embedHtml: data.embedHtml ?? undefined,
         } as Article;
       } catch {
         return null;

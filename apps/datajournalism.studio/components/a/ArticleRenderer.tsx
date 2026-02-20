@@ -14,6 +14,8 @@ import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
+import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
+import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
 interface ArticleProps {
@@ -192,6 +194,19 @@ export function ArticleRenderer({
       }
 
       return <Timeline content={content} slug={slug} className="my-8" />;
+    },
+
+    RelatedArticles: (props) => {
+      const pool = (mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined;
+      return (
+        <RelatedArticlesComponent
+          pool={pool ?? []}
+          articleBasePath="/a"
+          locale="en-US"
+          heading="Read more"
+          {...props}
+        />
+      );
     },
   };
 

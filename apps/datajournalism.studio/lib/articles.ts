@@ -10,6 +10,7 @@ import { remarkBoxPlugin } from './remark-box-plugin'; // Your custom plugin
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
 import type { TimelineContent } from '@/types/timeline';
+import { getArticles } from '@/components/common/getArticles';
 
 
 export async function getArticleBySlug(directorySlug: string) {
@@ -59,9 +60,14 @@ export async function getArticleBySlug(directorySlug: string) {
     timelineData[yamlFile] = yaml.load(timelineFile) as TimelineContent;
   }
 
+  // Pre-fetch article pool for RelatedArticles MDX component
+  const relatedArticlesPool = await getArticles(40, undefined, true);
+  const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
+
   const mdxSource = await serialize(content, {
     scope: {
       timelineData: timelineData,
+      relatedArticlesPool: filteredPool,
     },
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],

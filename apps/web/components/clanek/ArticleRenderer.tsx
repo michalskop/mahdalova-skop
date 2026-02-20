@@ -20,6 +20,8 @@ import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
+import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
+import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
 interface ArticleProps {
@@ -205,6 +207,18 @@ export function ArticleRenderer({
       }
 
       return <Timeline content={content} slug={slug} className="my-8" />;
+    },
+
+    RelatedArticles: (props) => {
+      const pool = (mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined;
+      return (
+        <RelatedArticlesComponent
+          pool={pool ?? []}
+          articleBasePath="/clanek"
+          locale="cs-CZ"
+          {...props}
+        />
+      );
     },
 
   };

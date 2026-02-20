@@ -28,7 +28,8 @@ This is your practical guide to every tool available when writing articles. Each
 9. [Timeline](#9-timeline)
 10. [Scroll-driven story](#10-scroll-driven-story)
 11. [Custom interactive piece](#11-custom-interactive-piece)
-12. [Quick reference](#12-quick-reference)
+12. [Related articles](#12-related-articles)
+13. [Quick reference](#13-quick-reference)
 
 ---
 
@@ -392,7 +393,31 @@ The HTML file can contain `<style>` and `<script>` blocks. Any paths to images o
 
 ---
 
-## 12. Quick reference
+## 12. Related articles
+
+Use `<RelatedArticles />` to embed a block of recommended articles anywhere in the text. Authors control placement, filtering, and layout entirely through props — no code required.
+
+```md
+<RelatedArticles filter="analýza" count={3} />
+```
+
+<RelatedArticles filter="analýza" count={3} />
+
+Three built-in presets cover the most common layouts:
+
+| Preset | Layout | Use for |
+|--------|--------|---------|
+| `cards` (default) | 3 columns, image top | end of article |
+| `sidebar` | 1 column, thumbnail left, compact | mid-article break |
+| `list` | 1 column, thumbnail left, full detail | podcast or long-form list |
+
+You can also pass `slugs={["slug-one", "slug-two"]}` to show a hand-picked list regardless of category or tag.
+
+Full reference with all options and live examples: [Demo: RelatedArticles — all options](/clanek/zzz-demo-related-articles)
+
+---
+
+## 13. Quick reference
 
 | Feature | Syntax | Notes |
 |---------|--------|-------|
@@ -410,3 +435,4 @@ The HTML file can contain `<style>` and `<script>` blocks. Any paths to images o
 | Timeline | `<Timeline yamlFile="timeline.yaml" />` | Developer creates YAML |
 | ScrollyTelling | `<ScrollyTelling yamlFile="scrollytelling.yaml" />` | Developer creates YAML |
 | Custom HTML | `htmlInclude: "file.html"` in frontmatter | Developer creates HTML |
+| Related articles | `<RelatedArticles filter="analýza" count={3} />` | See [full demo](/clanek/zzz-demo-related-articles) for all options |

@@ -10,6 +10,7 @@ import { remarkBoxPlugin } from './remark-box-plugin';
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
 import type { TimelineContent } from '@/types/timeline';
+import { getArticles } from '@/components/common/getArticles';
 
 
 const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
@@ -77,10 +78,15 @@ export async function getArticleBySlug(directorySlug: string) {
     }
   }
 
+  // Pre-fetch article pool for RelatedArticles MDX component
+  const relatedArticlesPool = await getArticles(40, undefined, true);
+  const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
+
   const mdxSource = await serialize(content, {
     scope: {
       tableData: tableData,
       timelineData: timelineData,
+      relatedArticlesPool: filteredPool,
     },
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
