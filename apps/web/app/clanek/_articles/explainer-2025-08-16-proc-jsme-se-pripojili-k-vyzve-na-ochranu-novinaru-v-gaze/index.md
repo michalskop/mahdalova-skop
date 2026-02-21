@@ -90,6 +90,16 @@ Hladomor v Gaze existoval. Data to dokládají. Slovo „propaganda" je zde zcel
     "kontext-2024-11-14-amsterdam-video",
   ]}
   heading="Psali jsme"
+/>
+
+
+<RelatedArticles
+  slugs={[
+    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
+    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
+    "kontext-2024-11-14-amsterdam-video",
+  ]}
+  heading="Psali jsme"
   preset="sidebar"
   showExcerpt={false}
   showAuthor={true}
