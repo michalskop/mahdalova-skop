@@ -20,6 +20,28 @@ A přece: přesně tato solidarita bývá zpochybňována. Slýcháme, že data 
 
 Pojďme si tato tvrzení projít jedno po druhém.
 
+```infobox warning right
+![Protest na podporu novinářů v Gaze](images/killing-journalist-gaza-2025.webp)
+*Mezinárodní výzvu podepsali mimo jiné:* 
+
+- Reportéři bez hranic (RSF)
+- Výbor na ochranu novinářů (CPJ)
+- Ženevské globální mediální centrum (GGMC)
+- Mezinárodní podpora médií (IMS)
+- Index proti cenzuře
+- Mezinárodní tiskový institut (IPI)
+- Centrum na obranu svobody novinářů (CDFJ)
+- Síť etické žurnalistiky
+- Federace afrických novinářů
+- Národní tiskový klub (NPC) a Centrum svobody médií při NPC
+- Mediální síť Al-Džazíra
+- Arabská organizace pro lidská práva ve Spojeném království
+- Euro-středomořský monitor lidských práv
+- Nadace Jamese Foleyho
+- Nadace Roryho Pecka
+- Národní svaz somálských novinářů (NUSOJ)
+```
+
 ---
 
 ## „Data o mrtvých jsou falšovaná. Hamas si čísla vymýšlí."
@@ -45,30 +67,6 @@ CPJ ve svém výzkumu z května 2023 — tedy ještě před říjnem 2023 — zd
 Konkrétní příklady: Ismail Al-Ghoul, novinář Al-Džazíry, byl zabit v červenci 2024. Jako „důkaz" jeho příslušnosti k Hamásu Izrael předložil dokumenty, podle nichž prý obdržel vojenskou hodnost — **v deseti letech**. Tento „důkaz" odborníci i Al-Džazíra odmítli. Hamza Dahdouh, kameraman a syn šéfa gazské kanceláře Al-Džazíry, byl zabit v lednu 2024. Anas Al-Šaríf byl zabit v srpnu 2025 spolu s dalšími čtyřmi kolegy — izraelská armáda útok potvrdila a označila ho za operativce Hamásu, opět bez věrohodných důkazů. Všechny renomované mezinárodní novinářské organizace toto obvinění odmítly.
 
 Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejsmrtelnější konflikt pro novináře, jaký tato organizace za více než 30 let existence dokumentuje. Podle Projektu Costs of War je to nejsmrtelnější konflikt pro média v celé zaznamenané historii válek — smrtelnější než druhá světová válka, Vietnam, Irák dohromady.
-
-
-```infobox warning right
-![Protest na podporu novinářů v Gaze](images/killing-journalist-gaza-2025.webp)
-*Mezinárodní výzvu podepsali mimo jiné:* 
-
-- Reportéři bez hranic (RSF)
-- Výbor na ochranu novinářů (CPJ)
-- Ženevské globální mediální centrum (GGMC)
-- Mezinárodní podpora médií (IMS)
-- Index proti cenzuře
-- Mezinárodní tiskový institut (IPI)
-- Centrum na obranu svobody novinářů (CDFJ)
-- Síť etické žurnalistiky
-- Federace afrických novinářů
-- Národní tiskový klub (NPC) a Centrum svobody médií při NPC
-- Mediální síť Al-Džazíra
-- Arabská organizace pro lidská práva ve Spojeném království
-- Euro-středomořský monitor lidských práv
-- Nadace Jamese Foleyho
-- Nadace Roryho Pecka
-- Národní svaz somálských novinářů (NUSOJ)
-```
-
 
 ---
 
