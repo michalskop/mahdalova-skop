@@ -21,7 +21,7 @@ A přece: přesně tato solidarita bývá zpochybňována. Slýcháme, že data 
 Pojďme si tato tvrzení projít jedno po druhém.
 
 ```infobox warning right
-![Protest na podporu novinářů v Gaze](images/killing-journalist-gaza-2025.webp)
+![Protest na podporu novinářů v Gaze](images/killing-journalists-gaza-2025.webp)
 *Mezinárodní výzvu podepsali mimo jiné:* 
 
 - Reportéři bez hranic (RSF)
