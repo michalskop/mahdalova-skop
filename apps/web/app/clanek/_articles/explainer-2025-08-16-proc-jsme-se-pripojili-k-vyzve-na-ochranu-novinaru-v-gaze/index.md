@@ -50,37 +50,22 @@ Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejs
 ```infobox warning right
 *Mezinárodní výzvu podepsali mimo jiné:* 
 
-Reportéři bez hranic (RSF)
-
-Výbor na ochranu novinářů (CPJ)
-
-Ženevské globální mediální centrum (GGMC)
-
-Mezinárodní podpora médií (IMS)
-
-Index proti cenzuře
-
-Mezinárodní tiskový institut (IPI)
-
-Centrum na obranu svobody novinářů (CDFJ)
-
-Síť etické žurnalistiky
-
-Federace afrických novinářů
-
-Národní tiskový klub (NPC) a Centrum svobody médií při NPC
-
-Mediální síť Al-Džazíra
-
-Arabská organizace pro lidská práva ve Spojeném království
-
-Euro-středomořský monitor lidských práv
-
-Nadace Jamese Foleyho
-
-Nadace Roryho Pecka
-
-Národní svaz somálských novinářů (NUSOJ)
+- Reportéři bez hranic (RSF)
+- Výbor na ochranu novinářů (CPJ)
+- Ženevské globální mediální centrum (GGMC)
+- Mezinárodní podpora médií (IMS)
+- Index proti cenzuře
+- Mezinárodní tiskový institut (IPI)
+- Centrum na obranu svobody novinářů (CDFJ)
+- Síť etické žurnalistiky
+- Federace afrických novinářů
+- Národní tiskový klub (NPC) a Centrum svobody médií při NPC
+- Mediální síť Al-Džazíra
+- Arabská organizace pro lidská práva ve Spojeném království
+- Euro-středomořský monitor lidských práv
+- Nadace Jamese Foleyho
+- Nadace Roryho Pecka
+- Národní svaz somálských novinářů (NUSOJ)
 ```
 
 
