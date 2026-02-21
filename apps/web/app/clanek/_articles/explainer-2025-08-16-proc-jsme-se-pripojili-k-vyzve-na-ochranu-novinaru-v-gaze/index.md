@@ -10,7 +10,7 @@ promoted: 85
 ---
 Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Solidarita s kolegy není propaganda — je to základní profesní reflex.
 
-## Proč podpisem, proč teď
+## Proč podpis a proč zrovna teď
 
 Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni — a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
 
@@ -198,268 +198,268 @@ Odmítáme mlčky přihlížet, když umírá pravda. Nemůžeme mlčky nechat s
 ---
 Abecední seznam signatářů/ek:
 
-Anna Absolonová, reportérka, Deník Referendum
-Sarah Abulkasim, redaktorka, Radio Wave, Český rozhlas
-Oliver Adámek, redaktor, Reflex
-Martin Bartkovský, šéfredaktor, Reflex
-Anežka Bartlová, šéfredaktorka, Artalk
-Michal Bartoš, kulturní publicista
-Linda Bartošová, novinářka, Podcast Sirény
-Petra Bartošová, editorka, Deník N
-Michal Bartůněk, editor, DVTV
-Barbora Báštěcká, redaktorka Svět neziskovek a na volné noze
-Jiří Bejček, editor, iSport
-Nikola Benčová, environmentalistka a novinářka
-Evelína Beníšková, redaktorka, CzechCrunch
-Tomáš Berný, webeditor, Radio Wave
-Jan Bělíček, šéfredaktor, Deník Alarm
-Stanislav Biler, novinář, Deník Alarm
-David Binar, novinář na volné noze
-David Bláha, redaktor, A2
-Karolína Blažková, novinářka, e15
-Ludmila Blažková, redaktorka, Deník N
-Jan Boček, datový novinář, Český rozhlas
-Vojtěch Boháč, šéfredaktor, Voxpot
-Kamila Boháčková, redaktorka, ČT Art
-Petr Bouška, redaktor, Radio Wave, Český rozhlas
-Otakar Bureš, editor, Deník Referendum
-Robert Candra, editor podcastů, Seznam Zprávy
-Jan Cibulka, novinář, Samizdat, Český rozhlas
-Alžběta Cibulková, redaktorka, Artalk
-Miloš Cihelka, editor deníku Blesk
-Barbora Cihelková, redaktorka, Právo
-Judita Císařová, moderátorka a redaktorka, ČRo Radio Wave
-Michal Čejka, redaktor, Česká televize
-Jan Černín, redaktor, Deník Referendum
-Jana Červenková, publicistka a spisovatelka
-Kateřina Čopjaková, kulturní novinářka
-Jan Čulík, šéfredaktor, Britské Listy
-Michael Daněk, šéfredaktor, Drbna.cz
-Petra Dvořáková, reportérka, Deník Referendum
-Anna Dohnalová, zahraniční reportérka, Seznam Zprávy
-Eliška Dokulilová, podcastová dramaturgyně
-Tereza Domínová, šéfredaktorka, dok.revue
-Tomáš Doruška, externí spolupracovník České televize
-Anna Dostálová, šéfredaktorka, Studentské listy
-Natálie Drtinová, kulturní publicistka
-Nataša Dudinská, novinářka a dokumentaristka
-Magdalena Dušková, redaktorka, Deník Alarm
-Matěj Dvořák, hudební redaktor, Radio Wave, Český rozhlas
-Jakub Radan Dvořák, Deník N
-Tereza Engelová, novinářka, HlídacíPes.org
-Jan Exner, šéfredaktor odborových periodik
-Magdaléna Fajtová, redaktorka, Respekt
-Simona Fendrychová, novinářka
-Jaroslav Fiala, novinář, spolupracovník Deníku N
-Klára Filipová, novinářka, Okraj.cz a Samizdat
-Michaela Fišerová, novinářka, Deník N
-Martina Foldynová, moderátorka a redaktorka, ČRo Radio Wave
-Nora Fridrichová, novinářka, podcast Nora, platforma HeroHero
-Anastasiia Furman, novinářka, spolupracovnice Deníku N
-Dominik Gajarský, člen redakce Artyčok.tv
-Petr Gojda, podcaster, Investigace.cz
-Hana Grohová, editorka sociálních sítí, novinářka a fotografka, Deník N
-Lukáš Grygar, editor, Voxpot
-Anita Haas Mejzrová, novinářka, Deník N
-Sofija Halilović, redaktorka a editorka, Studentské listy
-Patrick Hamouz, šéfredaktor, Jádu
-Anna-Marie Hanzlíková, redaktorka, Refresher
-Petr Haraším, komentátor, Britské listy
-Alena Harciníková, Český rozhlas Vltava
-Filip Harzer, reportér, Seznam Zprávy
-Jan Havlíček, redaktor, běžecký časopis B
-Tereza Havlínková, moderátorka a redaktorka, Radio Wave, Český rozhlas
-Aneta Havránková, redaktorka, Bold News
-Dorota Holubová, fotografka
-Šimon Holý, redaktor, Poprask (Reflex), Rant Prostoru (revue Prostor)
-Pavlína Horáková, redaktorka a moderátorka, Reflex
-Petr Horký, redaktor, Respekt
-Michal Hořejší, editor, Deník Referendum
-Lukáš Houdek, novinář, Heroine
-Kateřina Hrabánková, redaktorka, Česká televize
-Matouš Hrdina, editor, Seznam Zprávy
-Anna Hrdinová, redaktorka, Seznam Zprávy
-Tomáš Hrivňák, redaktor, Denník N
-Jaroslav Hroch, redaktor, Seznam Zprávy
-Miloš Hroch, kulturní novinář
-Vladimír Hulec, šéfredaktor revue Taneční zóna
-Jolana Humpálová, zástupkyně šéfredaktora, Voxpot
-Jiří Chábera, redaktor, Český rozhlas
-Ladislava Chateau, spisovatelka a novinářka
-Václav Jamek, spisovatel, pravidelný autor časopisu Listy
-Pavla Jazairiová, reportérka, spisovatelka
-Petr Jedlička, redaktor, Deník Referendum
-Magdalena Jehličková, editorka, Deník Referendum
-Kristýna Jelínková, novinářka
-Brit Jensen, audio dokumentaristka a novinářka
-Jakub Jetmar, publicista
-Aneta Jetmar Martínková, publicistka, Podcast Sirény
-Klára Ješinová, redaktorka, Česká televize
-Gabriela Jezberová, novinářka, Magazín Reportér
-Vojtěch Jírovec, redaktor, Česká televize
-Jitka Kačánová, šéfredaktorka, Mladý svět
-František Kalenda, publicista
-Renata Kalenská, redaktorka, Deník N
-Marta Kalousková, redaktorka, Česká televize
-Michal Kašpárek, datový tým Českého rozhlasu
-Kristýna Kašpárková, šéfredaktorka, Universitas.cz
-Jan Klamm, editor, A2
-Eva Klíčová, editorka, Deník Alarm
-Eliška Koldová, redaktorka, Druhá směna
-Jitka Komendová, editorka, Deník Referendum
-Lucie Komm Berg, redaktorka Revue Prostor
-Jiří Kordík, redaktor (zahraniční redakce), Český rozhlas
-Anna Košlerová, reportérka, Český rozhlas
-Daniel Kotecký, reportér, Deník Referendum
-Ondřej Kotek, redaktor, DVTV
-Jiří Koukal, redaktor, ČT art
-Kristýna Kousalíková, redaktorka, Sedmá generace
-Ivana Kozáková, redaktorka, Deník N
-Jakub Krahulec, externí spolupracovník Českého rozhlasu
-Lenka Králová, podcasterka, V Tranzu
-Milan Krám, regionální novinář, Regionální média — Mostecko
-Lucie Kyliánová, moderátorka, Zkratky života
-Aneta Lakomá, novinářka
-Timon Láska, kulturní novinář
-Tomáš Linhart, reportér, Deník N
-Barbora Linka, Radio Wave, Český rozhlas
-Ondřej Lipár, Managing Editor, Vogue CS
-Tereza Lišková, moderátorka, Český rozhlas Vltava
-Julie Lubojacká, redaktorka, Deník N
-Eliška Mádrová, novinářka, Český rozhlas
-Kateřina Mahdalová, datová novinářka, šéfredaktorka, DataTimes.cz
-Zuzana Machálková, novinářka, Respekt
-Adam Malý, redaktor, Regionální média — Mostecko
-Martin Marek, novinář, YouTube Věděli jste
-Marek Martinovský, redaktor, Česká televize
-Alžběta Medková, redaktorka, A2
-Jitka Menclová, redaktorka, Reflex
-Matěj Metelec, redaktor, A2
-Denisa Michalinová, kulturní publicistka
-Ivana Míšková, redaktorka zpravodajství, Deník Referendum
-Matěj Moravanský, klimatický redaktor, Deník Referendum
-Hana Němečková, podcastová producentka, Storylab Audio
-Michaela Nováčková, redaktorka, Aktuálně.cz
-Anna Novák, novinářka
-Ondřej Novák, šéfredaktor, Obnovitelně.cz
-Kristina Nováková, redaktorka, Česká televize
-Matěj Nytra, mezioborový publicista
-Daniel Ort, redaktor, Listy
-Tomáš Pacovský, redaktor publicistiky, Radio Wave
-Viktor Palák, kulturní novinář (Radio Wave, Full Moon, A2)
-Bohdana Paseka, šéfredaktorka, časopis Matka a dítě
-Jakub Patočka, šéfredaktor, Deník Referendum
-Jana Patočková, novinářka, Vogue CS
-Martin Pavlík, novinář, spolupracovník Voxpotu
-Ondřej Pavlík, filmový kritik
-Lucie Pávová, redaktorka, Český rozhlas
-Luděk Pech, pracovník Českého rozhlasu
-Dominika Perlínová, redaktorka, Respekt
-Michaela Peštová, hudební publicistka, Deník Alarm
-Vojtěch Petrů, novinář, Deník Referendum
-Alexandr Petrželka, bývalý redaktor, deník Právo
-Dominika Píhová, reportérka, Deník N
-Jana Plavec, fotografka
-Jakub Plíhal, fotoreportér, Deník N
-Markéta Plíhalová, redaktorka, Respekt
-Markéta Plšková, sportovní reportérka, MF DNES
-Tomáš Plocek, filmový publicista
-Zdislava Pokorná, redaktorka, Deník N
-Hana Polanská, taneční publicistka, Taneční Zóna, Opera plus, Taneční Aktuality
-Tobiáš Pospíchal, novinář, Deník N
-Martina Pouchlá, dramaturgyně a dokumentaristka
-Barbora Prchalová, reportérka, Reflex
-Karel Pučelík, publicista
-Noemi Pukrábková, redaktorka Art Antiques
-Fatima Rahimi, reportérka, Deník Referendum
-Veronika Rajmanová, novinářka
-Milan Rokos, reportér, Seznam Zprávy
-Michal Rusek, šéfredaktor, Časoděj revue
-Apolena Rychlíková, šéfredaktorka, Page Not Found
-Hana Řičicová, novinářka, Podcast Sirény
-Lukáš Rychetský, šéfredaktor, A2 kulturní čtrnáctideník
-Štěpán Sedláček, novinář, Respekt
-Tereza Semotamová, editorka, Jádu
-David Scharf, redaktor, Deník Alarm
-Matěj Schneider, novinář, Voxpot
-Radomír Silber, publicista
-Filip Singer, fotoreportér
-Prokop Singer, novinář, arabista
-Benjamin Slavík, publicista, teoretik
-Jiří Slavičínský, audio dokumentarista a podcaster
-Emma Smetana, moderátorka a novinářka na volné noze
-Jakub Straka, art director a fotograf, WIRED CZ&SK
-Marek Soška, environmentální publicista, Sedmá generace
-Barbora Součková, Radio Wave, Český rozhlas
-Eva Soukeníková, reportérka, Český rozhlas
-Eliška Soukupová, moderátorka a redaktorka, Radio Wave, Český rozhlas
-Veronika Soukupová, kulturní publicistka
-Alexandra Střelcová, kulturní publicistka
-Adéla Svadba, novinářka, Page Not Found
-Martin Svoboda, filmový publicista
-Vít Svoboda, redaktor, Deník N
-Eva Svobodová, editorka, Český rozhlas
-Marie Sýkorová, novinářka
-Julie Šafová, novinářka, Deník Referendum
-Štěpán Šanda, kulturní novinář, Full Moon
-Ondřej Šebestík, redaktor, Radio Wave
-Jaroslav Šindelář, editor, Český rozhlas
-Jan Šíma, kulturní publicista, Deník Alarm
-Anna Šípová, kulturní publicistka, Deník N
-Michal Škop, datový novinář, šéfredaktor, DataTimes.cz
-Zuzana Šotová, novinářka, investigace.cz
-Jiří Špičák, editor, e15
-Michal Špína, zástupce šéfredaktora, A2 kulturní čtrnáctideník
-Kateřina Špičáková, editorka, Vogue, CS
-Pavel Šplíchal, redaktor, Deník Alarm
-Martin Šrajer, filmový kritik
-Vít Štěpánek, redaktor, Media Network / EU Perspectives
-Klára Štingl, externí spolupracovnice Českého rozhlasu
-Michaela Švandová, novinářka, Druhá směna
-Adéla Šponerová, novinářka, Česká televize
-Dominik Tesár, redaktor, zahraniční redakce, Český rozhlas
-Marie Těthalová, šéfredaktorka časopisu Informatorium 3-8
-Tomáš Tichák, šéfredaktor, Listy
-Filip Titlbach, editor podcastů, Deník N
-Helena Todorová, redaktorka Artalk
-Věra Tůmová, novinářka
-Veronika Tupá, novinářka
-Pavel Turek, redaktor, Respekt
-Ondřej Trhoň, kulturní kritik
-Hana Trojánková, novinářka, Poprask (Reflex), Rant Prostoru (revue Prostor)
-Tomáš Trumpeš, regionální novinář, ohlasy.info
-Nora Třísková, kulturní publicistka
-Tomáš Trněný, novinář
-Saša Uhlová, reportérka, Deník Alarm
-Zdenka Ullmanová, novinářka
-Marie Valentová, editorka, Refresher
-Ana Vavanová, redaktorka, iRozhlas, ČRo
-Jaroslav Veis, novinář
-Kristina Vejnbender, novinářka, Investigace.cz
-Natálie Veselá, OnaDnes
-Daniel Veselý, novinář, Britské listy
-Karel Veselý, kulturní novinář, Deník Alarm
-Zuzana Vlasatá, reportérka, Deník Referendum
-Klára Vlasáková, spisovatelka a publicistka
-Miroslav Vlček, garant oboru žurnalistika, Ostravská univerzita
-Katarína Vlčková, novinářka, Heyfomo.cz
-Štěpán Vojtěch, editor, Deník N
-Filip Vokoun, novinář
-Barbora Voříšková, novinářka, kulturní publicistka a redaktorka Vogue CS
-Klára Votavová, novinářka
-Petr zewlakk Vrabec, fotograf, dokumentarista
-Maja Vusilović, novinářka, Druhá směna
-Petr Wagner, externí spolupracovník Českého rozhlasu
-Alena Wagnerová, reportérka a spisovatelka
-Táňa Zabloudilová, novinářka
-Tomáš Zahradníček, redaktor a historik
-Aneta Zachová, šéfredaktorka Euractiv.cz
-Lucie Zajda, novinářka a fotografka
-Filip Zajíček, editor, Deník N
-Clara Zanga, redaktorka, Respekt
-Tomáš Znamenáček, regionální novinář, ohlasy.info
-Jan Žabka, regionální novinář, Okraj.cz
-Zbyněk Žitný, editor Teletextu ČT
+- Anna Absolonová, reportérka, Deník Referendum
+- Sarah Abulkasim, redaktorka, Radio Wave, Český rozhlas
+- Oliver Adámek, redaktor, Reflex
+- Martin Bartkovský, šéfredaktor, Reflex
+- Anežka Bartlová, šéfredaktorka, Artalk
+- Michal Bartoš, kulturní publicista
+- Linda Bartošová, novinářka, Podcast Sirény
+- Petra Bartošová, editorka, Deník N
+- Michal Bartůněk, editor, DVTV
+- Barbora Báštěcká, redaktorka Svět neziskovek a na volné noze
+- Jiří Bejček, editor, iSport
+- Nikola Benčová, environmentalistka a novinářka
+- Evelína Beníšková, redaktorka, CzechCrunch
+- Tomáš Berný, webeditor, Radio Wave
+- Jan Bělíček, šéfredaktor, Deník Alarm
+- Stanislav Biler, novinář, Deník Alarm
+- David Binar, novinář na volné noze
+- David Bláha, redaktor, A2
+- Karolína Blažková, novinářka, e15
+- Ludmila Blažková, redaktorka, Deník N
+- Jan Boček, datový novinář, Český rozhlas
+- Vojtěch Boháč, šéfredaktor, Voxpot
+- Kamila Boháčková, redaktorka, ČT Art
+- Petr Bouška, redaktor, Radio Wave, Český rozhlas
+- Otakar Bureš, editor, Deník Referendum
+- Robert Candra, editor podcastů, Seznam Zprávy
+- Jan Cibulka, novinář, Samizdat, Český rozhlas
+- Alžběta Cibulková, redaktorka, Artalk
+- Miloš Cihelka, editor deníku Blesk
+- Barbora Cihelková, redaktorka, Právo
+- Judita Císařová, moderátorka a redaktorka, ČRo Radio Wave
+- Michal Čejka, redaktor, Česká televize
+- Jan Černín, redaktor, Deník Referendum
+- Jana Červenková, publicistka a spisovatelka
+- Kateřina Čopjaková, kulturní novinářka
+- Jan Čulík, šéfredaktor, Britské Listy
+- Michael Daněk, šéfredaktor, Drbna.cz
+- Petra Dvořáková, reportérka, Deník Referendum
+- Anna Dohnalová, zahraniční reportérka, Seznam Zprávy
+- Eliška Dokulilová, podcastová dramaturgyně
+- Tereza Domínová, šéfredaktorka, dok.revue
+- Tomáš Doruška, externí spolupracovník České televize
+- Anna Dostálová, šéfredaktorka, Studentské listy
+- Natálie Drtinová, kulturní publicistka
+- Nataša Dudinská, novinářka a dokumentaristka
+- Magdalena Dušková, redaktorka, Deník Alarm
+- Matěj Dvořák, hudební redaktor, Radio Wave, Český rozhlas
+- Jakub Radan Dvořák, Deník N
+- Tereza Engelová, novinářka, HlídacíPes.org
+- Jan Exner, šéfredaktor odborových periodik
+- Magdaléna Fajtová, redaktorka, Respekt
+- Simona Fendrychová, novinářka
+- Jaroslav Fiala, novinář, spolupracovník Deníku N
+- Klára Filipová, novinářka, Okraj.cz a Samizdat
+- Michaela Fišerová, novinářka, Deník N
+- Martina Foldynová, moderátorka a redaktorka, ČRo Radio Wave
+- Nora Fridrichová, novinářka, podcast Nora, platforma HeroHero
+- Anastasiia Furman, novinářka, spolupracovnice Deníku N
+- Dominik Gajarský, člen redakce Artyčok.tv
+- Petr Gojda, podcaster, Investigace.cz
+- Hana Grohová, editorka sociálních sítí, novinářka a fotografka, Deník N
+- Lukáš Grygar, editor, Voxpot
+- Anita Haas Mejzrová, novinářka, Deník N
+- Sofija Halilović, redaktorka a editorka, Studentské listy
+- Patrick Hamouz, šéfredaktor, Jádu
+- Anna-Marie Hanzlíková, redaktorka, Refresher
+- Petr Haraším, komentátor, Britské listy
+- Alena Harciníková, Český rozhlas Vltava
+- Filip Harzer, reportér, Seznam Zprávy
+- Jan Havlíček, redaktor, běžecký časopis B
+- Tereza Havlínková, moderátorka a redaktorka, Radio Wave, Český rozhlas
+- Aneta Havránková, redaktorka, Bold News
+- Dorota Holubová, fotografka
+- Šimon Holý, redaktor, Poprask (Reflex), Rant Prostoru (revue Prostor)
+- Pavlína Horáková, redaktorka a moderátorka, Reflex
+- Petr Horký, redaktor, Respekt
+- Michal Hořejší, editor, Deník Referendum
+- Lukáš Houdek, novinář, Heroine
+- Kateřina Hrabánková, redaktorka, Česká televize
+- Matouš Hrdina, editor, Seznam Zprávy
+- Anna Hrdinová, redaktorka, Seznam Zprávy
+- Tomáš Hrivňák, redaktor, Denník N
+- Jaroslav Hroch, redaktor, Seznam Zprávy
+- Miloš Hroch, kulturní novinář
+- Vladimír Hulec, šéfredaktor revue Taneční zóna
+- Jolana Humpálová, zástupkyně šéfredaktora, Voxpot
+- Jiří Chábera, redaktor, Český rozhlas
+- Ladislava Chateau, spisovatelka a novinářka
+- Václav Jamek, spisovatel, pravidelný autor časopisu Listy
+- Pavla Jazairiová, reportérka, spisovatelka
+- Petr Jedlička, redaktor, Deník Referendum
+- Magdalena Jehličková, editorka, Deník Referendum
+- Kristýna Jelínková, novinářka
+- Brit Jensen, audio dokumentaristka a novinářka
+- Jakub Jetmar, publicista
+- Aneta Jetmar Martínková, publicistka, Podcast Sirény
+- Klára Ješinová, redaktorka, Česká televize
+- Gabriela Jezberová, novinářka, Magazín Reportér
+- Vojtěch Jírovec, redaktor, Česká televize
+- Jitka Kačánová, šéfredaktorka, Mladý svět
+- František Kalenda, publicista
+- Renata Kalenská, redaktorka, Deník N
+- Marta Kalousková, redaktorka, Česká televize
+- Michal Kašpárek, datový tým Českého rozhlasu
+- Kristýna Kašpárková, šéfredaktorka, Universitas.cz
+- Jan Klamm, editor, A2
+- Eva Klíčová, editorka, Deník Alarm
+- Eliška Koldová, redaktorka, Druhá směna
+- Jitka Komendová, editorka, Deník Referendum
+- Lucie Komm Berg, redaktorka Revue Prostor
+- Jiří Kordík, redaktor (zahraniční redakce), Český rozhlas
+- Anna Košlerová, reportérka, Český rozhlas
+- Daniel Kotecký, reportér, Deník Referendum
+- Ondřej Kotek, redaktor, DVTV
+- Jiří Koukal, redaktor, ČT art
+- Kristýna Kousalíková, redaktorka, Sedmá generace
+- Ivana Kozáková, redaktorka, Deník N
+- Jakub Krahulec, externí spolupracovník Českého rozhlasu
+- Lenka Králová, podcasterka, V Tranzu
+- Milan Krám, regionální novinář, Regionální média — Mostecko
+- Lucie Kyliánová, moderátorka, Zkratky života
+- Aneta Lakomá, novinářka
+- Timon Láska, kulturní novinář
+- Tomáš Linhart, reportér, Deník N
+- Barbora Linka, Radio Wave, Český rozhlas
+- Ondřej Lipár, Managing Editor, Vogue CS
+- Tereza Lišková, moderátorka, Český rozhlas Vltava
+- Julie Lubojacká, redaktorka, Deník N
+- Eliška Mádrová, novinářka, Český rozhlas
+- Kateřina Mahdalová, datová novinářka, šéfredaktorka, DataTimes.cz
+- Zuzana Machálková, novinářka, Respekt
+- Adam Malý, redaktor, Regionální média — Mostecko
+- Martin Marek, novinář, YouTube Věděli jste
+- Marek Martinovský, redaktor, Česká televize
+- Alžběta Medková, redaktorka, A2
+- Jitka Menclová, redaktorka, Reflex
+- Matěj Metelec, redaktor, A2
+- Denisa Michalinová, kulturní publicistka
+- Ivana Míšková, redaktorka zpravodajství, Deník Referendum
+- Matěj Moravanský, klimatický redaktor, Deník Referendum
+- Hana Němečková, podcastová producentka, Storylab Audio
+- Michaela Nováčková, redaktorka, Aktuálně.cz
+- Anna Novák, novinářka
+- Ondřej Novák, šéfredaktor, Obnovitelně.cz
+- Kristina Nováková, redaktorka, Česká televize
+- Matěj Nytra, mezioborový publicista
+- Daniel Ort, redaktor, Listy
+- Tomáš Pacovský, redaktor publicistiky, Radio Wave
+- Viktor Palák, kulturní novinář (Radio Wave, Full Moon, A2)
+- Bohdana Paseka, šéfredaktorka, časopis Matka a dítě
+- Jakub Patočka, šéfredaktor, Deník Referendum
+- Jana Patočková, novinářka, Vogue CS
+- Martin Pavlík, novinář, spolupracovník Voxpotu
+- Ondřej Pavlík, filmový kritik
+- Lucie Pávová, redaktorka, Český rozhlas
+- Luděk Pech, pracovník Českého rozhlasu
+- Dominika Perlínová, redaktorka, Respekt
+- Michaela Peštová, hudební publicistka, Deník Alarm
+- Vojtěch Petrů, novinář, Deník Referendum
+- Alexandr Petrželka, bývalý redaktor, deník Právo
+- Dominika Píhová, reportérka, Deník N
+- Jana Plavec, fotografka
+- Jakub Plíhal, fotoreportér, Deník N
+- Markéta Plíhalová, redaktorka, Respekt
+- Markéta Plšková, sportovní reportérka, MF DNES
+- Tomáš Plocek, filmový publicista
+- Zdislava Pokorná, redaktorka, Deník N
+- Hana Polanská, taneční publicistka, Taneční Zóna, Opera plus, Taneční Aktuality
+- Tobiáš Pospíchal, novinář, Deník N
+- Martina Pouchlá, dramaturgyně a dokumentaristka
+- Barbora Prchalová, reportérka, Reflex
+- Karel Pučelík, publicista
+- Noemi Pukrábková, redaktorka Art Antiques
+- Fatima Rahimi, reportérka, Deník Referendum
+- Veronika Rajmanová, novinářka
+- Milan Rokos, reportér, Seznam Zprávy
+- Michal Rusek, šéfredaktor, Časoděj revue
+- Apolena Rychlíková, šéfredaktorka, Page Not Found
+- Hana Řičicová, novinářka, Podcast Sirény
+- Lukáš Rychetský, šéfredaktor, A2 kulturní čtrnáctideník
+- Štěpán Sedláček, novinář, Respekt
+- Tereza Semotamová, editorka, Jádu
+- David Scharf, redaktor, Deník Alarm
+- Matěj Schneider, novinář, Voxpot
+- Radomír Silber, publicista
+- Filip Singer, fotoreportér
+- Prokop Singer, novinář, arabista
+- Benjamin Slavík, publicista, teoretik
+- Jiří Slavičínský, audio dokumentarista a podcaster
+- Emma Smetana, moderátorka a novinářka na volné noze
+- Jakub Straka, art director a fotograf, WIRED CZ&SK
+- Marek Soška, environmentální publicista, Sedmá generace
+- Barbora Součková, Radio Wave, Český rozhlas
+- Eva Soukeníková, reportérka, Český rozhlas
+- Eliška Soukupová, moderátorka a redaktorka, Radio Wave, Český rozhlas
+- Veronika Soukupová, kulturní publicistka
+- Alexandra Střelcová, kulturní publicistka
+- Adéla Svadba, novinářka, Page Not Found
+- Martin Svoboda, filmový publicista
+- Vít Svoboda, redaktor, Deník N
+- Eva Svobodová, editorka, Český rozhlas
+- Marie Sýkorová, novinářka
+- Julie Šafová, novinářka, Deník Referendum
+- Štěpán Šanda, kulturní novinář, Full Moon
+- Ondřej Šebestík, redaktor, Radio Wave
+- Jaroslav Šindelář, editor, Český rozhlas
+- Jan Šíma, kulturní publicista, Deník Alarm
+- Anna Šípová, kulturní publicistka, Deník N
+- Michal Škop, datový novinář, šéfredaktor, DataTimes.cz
+- Zuzana Šotová, novinářka, investigace.cz
+- Jiří Špičák, editor, e15
+- Michal Špína, zástupce šéfredaktora, A2 kulturní čtrnáctideník
+- Kateřina Špičáková, editorka, Vogue, CS
+- Pavel Šplíchal, redaktor, Deník Alarm
+- Martin Šrajer, filmový kritik
+- Vít Štěpánek, redaktor, Media Network / EU Perspectives
+- Klára Štingl, externí spolupracovnice Českého rozhlasu
+- Michaela Švandová, novinářka, Druhá směna
+- Adéla Šponerová, novinářka, Česká televize
+- Dominik Tesár, redaktor, zahraniční redakce, Český rozhlas
+- Marie Těthalová, šéfredaktorka časopisu Informatorium 3-8
+- Tomáš Tichák, šéfredaktor, Listy
+- Filip Titlbach, editor podcastů, Deník N
+- Helena Todorová, redaktorka, Artalk
+- Věra Tůmová, novinářka
+- Veronika Tupá, novinářka
+- Pavel Turek, redaktor, Respekt
+- Ondřej Trhoň, kulturní kritik
+- Hana Trojánková, novinářka, Poprask (Reflex), Rant Prostoru (revue Prostor)
+- Tomáš Trumpeš, regionální novinář, ohlasy.info
+- Nora Třísková, kulturní publicistka
+- Tomáš Trněný, novinář
+- Saša Uhlová, reportérka, Deník Alarm
+- Zdenka Ullmanová, novinářka
+- Marie Valentová, editorka, Refresher
+- Ana Vavanová, redaktorka, iRozhlas, ČRo
+- Jaroslav Veis, novinář
+- Kristina Vejnbender, novinářka, Investigace.cz
+- Natálie Veselá, OnaDnes
+- Daniel Veselý, novinář, Britské listy
+- Karel Veselý, kulturní novinář, Deník Alarm
+- Zuzana Vlasatá, reportérka, Deník Referendum
+- Klára Vlasáková, spisovatelka a publicistka
+- Miroslav Vlček, garant oboru žurnalistika, Ostravská univerzita
+- Katarína Vlčková, novinářka, Heyfomo.cz
+- Štěpán Vojtěch, editor, Deník N
+- Filip Vokoun, novinář
+- Barbora Voříšková, novinářka, kulturní publicistka a redaktorka Vogue CS
+- Klára Votavová, novinářka
+- Petr zewlakk Vrabec, fotograf, dokumentarista
+- Maja Vusilović, novinářka, Druhá směna
+- Petr Wagner, externí spolupracovník Českého rozhlasu
+- Alena Wagnerová, reportérka a spisovatelka
+- Táňa Zabloudilová, novinářka
+- Tomáš Zahradníček, redaktor a historik
+- Aneta Zachová, šéfredaktorka, Euractiv.cz
+- Lucie Zajda, novinářka a fotografka
+- Filip Zajíček, editor, Deník N
+- Clara Zanga, redaktorka, Respekt
+- Tomáš Znamenáček, regionální novinář, ohlasy.info
+- Jan Žabka, regionální novinář, Okraj.cz
+- Zbyněk Žitný, editor Teletextu ČT
 
 ```
 
