@@ -164,7 +164,7 @@ Podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně 
 
 *262 novinářů a novinářek ze 66 redakcí včetně veřejnoprávních médií, Blesku, Reflexu, Respektu a Seznamu, mezi nimi 23 šéfredaktorů. Sběr podpisů byl uzavřen 18. srpna 2025 ve 12:00.*
 
-```infobox
+```infobox warning
 **Otevřený dopis českému prezidentovi, české vládě, české občanské společnosti a české novinářské obci**
 
 Vážený pane prezidente, vážené ministryně a ministři, vážené kolegyně a kolegové,
