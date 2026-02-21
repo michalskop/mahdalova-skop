@@ -2,25 +2,25 @@
 title: "Proč jsme se připojili k výzvě na ochranu novinářů v Gaze"
 date: "2025-08-16"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Solidarita s kolegy není propaganda — je to základní profesní reflex."
+excerpt: "Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex."
 coverImage: "images/killing-journalist-gaza-2025.webp"
 filter: ["kontext"]
 tags: ["novináři v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", ""]
-promoted: 85
+promoted: 74
 ---
-Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Solidarita s kolegy není propaganda — je to základní profesní reflex.
+Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
 
 ## Proč podpis a proč zrovna teď
 
 Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni — a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
 
-Solidarita s kolegy není propaganda. Je to základní profesní reflex. Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je — zradili bychom samotný smysl žurnalistiky.
+Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je — zradili bychom samotný smysl žurnalistiky.
 
-A přece: přesně tato solidarita bývá zpochybňována. Slýcháme, že data jsou zfalšovaná. Že ti mrtví vůbec nebyli novináři. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
+A přece je tato solidarita zpochybňována, dokonce i ze strany našich profesních kolegů a kolegyň. Slýcháme, že data jsou zfalšovaná. Že ti mrtví vůbec nebyli novináři a novinářky. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
 
 Pojďme si tato tvrzení projít jedno po druhém.
 
-```infobox warning right
+```infobox right
 ![Protest na podporu novinářů v Gaze](images/killing-journalists-gaza-2025.webp)
 *Mezinárodní výzvu podepsali mimo jiné:* 
 
@@ -94,8 +94,8 @@ Hladomor v Gaze existoval a data to dokládají. Označovat to za „propagandu"
 
 <RelatedArticles
   slugs={[
-    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
     "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
+    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
     "kontext-2024-11-14-amsterdam-video",
   ]}
   heading="Psali jsme"
@@ -115,7 +115,7 @@ Podívejme se na ty, kdo tato fakta dokumentují a zveřejňují.
 
 **Reportéři bez hranic (RSF)** jsou francouzská organizace, jeden z nejrespektovanějších globálních hlídacích psů svobody tisku. **Výbor na ochranu novinářů (CPJ)** je americká nezávislá organizace s třiceti lety databáze. **Mezinárodní tiskový institut (IPI)** je vídeňská organizace s členstvím z desítek zemí. **WHO, UNICEF, WFP a FAO** jsou agentury OSN, jejichž financování a mandát nezávisí na palestinském vedení. ***The Lancet*** je jeden z nejprestižnějších lékařských časopisů světa, recenzovaný odborníky. **AFP, Reuters a Associated Press** jsou světové tiskové agentury.
 
-A česky: výzvu podepsalo 262 novinářů ze 66 redakcí. Jsou mezi nimi Pavla Jazairiová, Jaroslav Veis, Alena Wagnerová a 23 šéfredaktorů. Tvrdit, že tito lidé „naskočili na propagandu Hamásu", je urážka jejich profesionálního úsudku a celoživotní práce.
+A česky: výzvu podepsalo 262 novinářů ze 66 redakcí (23 šéfredaktorů a šéfredaktorek). 
 
 ---
 
@@ -123,37 +123,33 @@ A česky: výzvu podepsalo 262 novinářů ze 66 redakcí. Jsou mezi nimi Pavla 
 
 ### „Zdrojem vašich informací je jen Hamas — zahraniční novináři se do Gazy dostat nemohou."
 
-Tato námitka v sobě kříží jednu věcnou otázku a jedno logické selhání.
-
 Ano, zahraniční novináři jsou z Gazy blokováni. To je přesně jeden ze čtyř bodů výzvy, kterou jsme podepsali — požadujeme, aby byl tento blok zrušen. Zdrojem problému je tedy to samé, co je předmětem naší výzvy.
 
-Blokáda přístupu ale neznamená, že neexistují žádné nezávislé informace. Existují palestinští novináři s mezinárodní akreditací, kteří pro AFP, Reuters, AP, BBC pracují roky a jejichž materiály jsou editovány zahraničními redakcemi s vysokými standardy. Existují satelitní snímky, data z nemocnic, záznamy OSN a humanitárních organizací. Existují nezávislé recenzované studie — jako šetření *The Lancet*, IPC, UNRWA — jejichž metodologie je veřejně dostupná a hodnocena odborníky bez vazby na žádnou válčící stranu.
+Blokáda přístupu zároveň neznamená, že neexistují žádné nezávislé informace. Existují palestinští novináři s mezinárodní akreditací, kteří pro AFP, Reuters, AP, BBC pracují roky a jejichž materiály jsou editovány zahraničními redakcemi s vysokými standardy. Existují satelitní snímky, data z nemocnic, záznamy OSN a humanitárních organizací. Existují nezávislé recenzované studie — jako šetření *The Lancet*, IPC, UNRWA — jejichž metodologie je veřejně dostupná a hodnocena odborníky bez vazby na žádnou válčící stranu.
 
-Izraelská armáda novinářům přístup nabízí — ale výhradně ve formě organizovaných press tours pod vlastním dozorem. Žádná seriózní novinářská organizace na světě nepovažuje přístup pod dohledem bojující strany za nezávislé zpravodajství. To platí stejně pro Izrael jako pro jakoukoli jinou armádu.
+Izraelská armáda novinářům přístup do míst konfliktu nabízí — ale výhradně ve formě organizovaných press tours pod vlastním dozorem. Žádná seriózní novinářská organizace na světě nepovažuje přístup pod dohledem bojující strany za nezávislé zpravodajství. To platí stejně pro Izrael jako pro jakoukoli jinou armádu.
 
 ### „Novináři nemají podepisovat politické výzvy. To je aktivismus."
 
-Novinářská nestrannost je skutečná hodnota. Novináři by se neměli stávat mluvčími žádné válčící strany.
+Novinářská nestrannost je skutečná hodnota a myslíme si, že by se novináři neměli stávat mluvčími žádné válčící strany.
 
-Výzva, kterou jsme podepsali, ale není politická výzva ve smyslu podpory té nebo oné strany konfliktu. Je to **profesní výzva**: chceme, aby naši kolegové měli přístup k jídlu, vodě a lékařské péči, a aby zahraniční novináři mohli do Gazy vstoupit. Tyto požadavky nejsou pro ani proti Izraeli nebo Hamásu — jsou pro základní podmínky výkonu novinářské práce.
+Výzva, kterou jsme podepsali, ale není politická výzva ve smyslu podpory té nebo oné strany konfliktu. Je to **profesní výzva**: chceme, aby naši kolegové měli přístup k jídlu, vodě a lékařské péči a aby zahraniční novináři mohli do Gazy vstoupit. Tyto požadavky nejsou ani pro, ani proti Izraeli nebo Hamásu — jsou pro základní podmínky výkonu novinářské práce.
 
-Nestrannost neznamená mlčení, když jsou kolegové zabíjeni. Znamená poctivost při hledání faktů — a ta nás k podpisu výzvy přivedla.
+Nestrannost přece neznamená mlčení, když jsou naši profesní kolegové a kolegyně zabíjeni. Pro nás nestrannost znamená poctivost při hledání faktů — a přesně tohle nás přivedlo k podpisu výzvy.
 
 ### „Ukrajinci také nepouštějí novináře volně na frontu."
 
 To je pravda. Zároveň to není argument pro to, aby bylo v Gaze vše v pořádku. Srovnání nestejných situací nepomáhá ani jedné z nich.
 
-Na Ukrajině zahraniční novináři pracují — s omezeními, s akreditacemi, s pravidly. Reportáže z obou stran fronty existují. Do Gazy zahraniční novináři vstoupit nemohou vůbec, s jedinou výjimkou organizovaných izraelských press tours. To je strukturálně jiná situace.
+Na Ukrajině zahraniční novináři pracují, byť s různými omezeními a nutnými akreditacemi. Zveřejňují se reportáže z obou stran fronty. Do Gazy zahraniční novináři vstoupit nemohou vůbec, s jedinou výjimkou organizovaných izraelských press tours.
 
-A co do počtu zabitých novinářů: v celém konfliktu na Ukrajině bylo od roku 2022 zabito v přímé spojitosti s válkou přibližně pět zahraničních novinářů. V Gaze jich bylo zabito přes 250 za 26 měsíců. Čísla nejsou srovnatelná.
+A co do počtu zabitých novinářů: v celém konfliktu na Ukrajině bylo od roku 2022 zabito v přímé spojitosti s válkou přibližně třicet zahraničních novinářů. V Gaze jich bylo zabito přes 250 za 26 měsíců. Čísla nejsou srovnatelná.
 
 ---
 
 ## O českém zpravodajství
 
-Musíme říct jednu nepříjemnou věc: česká mediální krajina v pokrytí Gazy a Izraele není vyvážená. Existuje systematické vychýlení ve prospěch izraelské perspektivy — v tom, koho citujeme, jak rámujeme události, co považujeme za „kontroverzní" a co za samozřejmé.
-
-To neznamená, že by česká média sympatizovala s Hamásem nebo zpochybňovala právo Izraele na sebeobranu. Znamená to, že strukturální asymetrie v přístupu ke zdrojům, v jazykové kompetenci, v historické paměti a v tlaku mediálního prostředí vedou k tomu, že některé příběhy — třeba zabití novinářů nebo rozsah hladomoru — dostávají méně prostoru, než by dostaly v jiném kontextu.
+Musíme říct jednu nepříjemnou věc: česká mediální krajina v pokrytí Gazy a Izraele není vyvážená. Existuje systematické vychýlení ve prospěch izraelské perspektivy — v tom, koho citujeme, jak rámujeme události, co považujeme za „kontroverzní" a co za samozřejmé. Takováto asymetrie pak vede k tomu, že některé příběhy — třeba zabití novinářů nebo rozsah hladomoru — dostávají méně prostoru, než by dostaly v jiném kontextu.
 
 Podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně přísně na obě strany.
 
@@ -161,9 +157,9 @@ Podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně 
 
 ## Text výzvy
 
-*262 novinářů a novinářek ze 66 redakcí včetně veřejnoprávních médií, Blesku, Reflexu, Respektu a Seznamu, mezi nimi 23 šéfredaktorů. Sběr podpisů byl uzavřen 18. srpna 2025 ve 12:00.*
+*262 novinářů a novinářek ze 66 redakcí včetně veřejnoprávních médií, Blesku, Reflexu, Respektu a Seznamu, mezi nimi 23 šéfredaktorů a šéfredaktorek. Sběr podpisů byl uzavřen 18. srpna 2025 ve 12:00.*
 
-```infobox warning
+```infobox 
 **Otevřený dopis českému prezidentovi, české vládě, české občanské společnosti a české novinářské obci**
 
 Vážený pane prezidente, vážené ministryně a ministři, vážené kolegyně a kolegové,
