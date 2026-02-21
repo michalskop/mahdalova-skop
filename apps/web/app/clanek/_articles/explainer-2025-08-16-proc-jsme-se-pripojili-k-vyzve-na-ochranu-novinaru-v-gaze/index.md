@@ -2,13 +2,13 @@
 title: "Proč jsme se připojili k výzvě na ochranu novinářů v Gaze"
 date: "2025-08-16"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex."
+excerpt: "Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex."
 coverImage: "images/killing-journalist-gaza-2025.webp"
 filter: ["kontext"]
 tags: ["novináři v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", ""]
 promoted: 74
 ---
-Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
+Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
 
 ## Proč podpis a proč zrovna teď
 
