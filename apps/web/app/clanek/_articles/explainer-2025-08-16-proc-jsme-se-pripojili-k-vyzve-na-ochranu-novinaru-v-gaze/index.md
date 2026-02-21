@@ -44,11 +44,11 @@ Pojďme si tato tvrzení projít jedno po druhém.
 
 ---
 
-## „Data o mrtvých jsou falšovaná. Hamas si čísla vymýšlí."
+## „Data o mrtvých jsou zfalšovaná Hamásem."
 
 Toto tvrzení je dnes — s ohledem na dostupné důkazy — neudržitelné.
 
-Gazské ministerstvo zdravotnictví historicky patří k nejspolehlivějším zdrojům válečné statistiky ve svém regionu. Odborná studie publikovaná v prestižním lékařském časopise *The Lancet* ukázala, že v předchozích konfliktech se jeho údaje lišily od nezávislých odhadů OSN jen o 1,5 až 3,8 procenta.
+Gazanské ministerstvo zdravotnictví historicky patří k nejspolehlivějším zdrojům válečné statistiky ve svém regionu. Odborná studie publikovaná v prestižním lékařském časopise *The Lancet* ukázala, že v předchozích konfliktech se jeho údaje lišily od nezávislých odhadů OSN jen o 1,5 až 3,8 procenta.
 
 V aktuálním konfliktu navíc přibyly zcela nezávislé ověřovací studie. Výzkumníci z Royal Holloway, University of London, provedli v prosinci 2024 a lednu 2025 terénní šetření ve 2 000 domácnostech napříč Gazou — bez jakékoli závislosti na administrativních záznamech ministerstva zdravotnictví. Výsledek, publikovaný v *The Lancet Global Health* v únoru 2026: pouze v prvních 15 měsících války bylo násilně zabito více než 75 200 lidí, přičemž oficiální ministerské číslo bylo v té době 49 090. Ministerstvo tedy nepřehánělo — naopak **podhodnocovalo, o přibližně třetinu**.
 
@@ -58,23 +58,23 @@ A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou 
 
 ---
 
-## „To nejsou novináři, to jsou agenti Hamásu."
+## „To nejsou žádní novináři, ale agenti Hamásu."
 
 Toto tvrzení má svou logiku: pokud lze kohokoli předem označit za teroristu, pak jeho smrt přestává být válečným zločinem. Je to pohodlné. A právě proto je nebezpečné.
 
 CPJ ve svém výzkumu z května 2023 — tedy ještě před říjnem 2023 — zdokumentoval u Izraele opakující se vzorec: vážné obvinění novináře z vazeb na teroristické organizace bez věrohodných důkazů, po němž zpravidla následuje jeho fyzická likvidace. Po říjnu 2023 se tento vzorec výrazně zintenzivnil.
 
-Konkrétní příklady: Ismail Al-Ghoul, novinář Al-Džazíry, byl zabit v červenci 2024. Jako „důkaz" jeho příslušnosti k Hamásu Izrael předložil dokumenty, podle nichž prý obdržel vojenskou hodnost — **v deseti letech**. Tento „důkaz" odborníci i Al-Džazíra odmítli. Hamza Dahdouh, kameraman a syn šéfa gazské kanceláře Al-Džazíry, byl zabit v lednu 2024. Anas Al-Šaríf byl zabit v srpnu 2025 spolu s dalšími čtyřmi kolegy — izraelská armáda útok potvrdila a označila ho za operativce Hamásu, opět bez věrohodných důkazů. Všechny renomované mezinárodní novinářské organizace toto obvinění odmítly.
+Konkrétní příklady: Ismail Al-Ghoul, novinář Al-Džazíry, byl zabit v červenci 2024. Jako „důkaz" jeho příslušnosti k Hamásu Izrael předložil dokumenty, podle nichž prý obdržel vojenskou hodnost — **v deseti letech**. Tento „důkaz" odborníci i Al-Džazíra odmítli. Hamza Dahdouh, kameraman a syn šéfa gazanské kanceláře Al-Džazíry, byl zabit v lednu 2024. Anas Al-Šaríf byl zabit v srpnu 2025 spolu s dalšími čtyřmi kolegy — izraelská armáda útok potvrdila a označila ho za operativce Hamásu, opět bez věrohodných důkazů. Všechny renomované mezinárodní novinářské organizace toto obvinění odmítly.
 
 Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejsmrtelnější konflikt pro novináře, jaký tato organizace za více než 30 let existence dokumentuje. Podle Projektu Costs of War je to nejsmrtelnější konflikt pro média v celé zaznamenané historii válek — smrtelnější než druhá světová válka, Vietnam, Irák dohromady.
 
 ---
 
-## „V Gaze není hladomor. To je propaganda Hamásu."
+## „V Gaze není hladomor, to je propaganda Hamásu."
 
 Klasifikaci hladomoru neprovádí Al-Džazíra ani palestinská ministerstva. Provádí ji IPC — Integrated Food Security Phase Classification, mezinárodní systém 21 partnerů včetně OSN, WHO, UNICEF, WFP a dalších. Jde o stejný nástroj, který se používá k hodnocení potravinových krizí v Etiopii, Jemenu nebo Súdánu.
 
-K 15. srpnu 2025 IPC formálně potvrdil hladomor (IPC fáze 5) v gazském governorátu. Podmínky pro tuto klasifikaci jsou přísné: musí být překročeny tři nezávislé prahové hodnoty zároveň — extrémní nedostatek potravin, akutní podvýživa a smrtnost způsobená hladověním. Všechny tři byly naplněny.
+K 15. srpnu 2025 IPC formálně potvrdil hladomor (IPC fáze 5) v gazanském governorátu. Podmínky pro tuto klasifikaci jsou přísné: musí být překročeny tři nezávislé prahové hodnoty zároveň — extrémní nedostatek potravin, akutní podvýživa a smrtnost způsobená hladověním. Všechny tři byly naplněny.
 
 UNRWA a její partneři publikovali v *The Lancet* studii sledující podvýživu u dětí do pěti let — téměř 220 000 dětí bylo screenováno za 20 měsíců. Výsledek je jednoznačný: podvýživa se přesně kopíruje s omezením přístupu humanitární pomoci. Když Izrael přísun povolil, čísla klesala. Když byl přísun blokován, čísla raketově rostla. V srpnu 2025 trpělo akutní podvýživou téměř 30 procent malých dětí v Gaze.
 
