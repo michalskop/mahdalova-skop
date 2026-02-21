@@ -51,20 +51,35 @@ Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejs
 *Mezinárodní výzvu podepsali mimo jiné:* 
 
 Reportéři bez hranic (RSF)
+
 Výbor na ochranu novinářů (CPJ)
+
 Ženevské globální mediální centrum (GGMC)
+
 Mezinárodní podpora médií (IMS)
+
 Index proti cenzuře
+
 Mezinárodní tiskový institut (IPI)
+
 Centrum na obranu svobody novinářů (CDFJ)
+
 Síť etické žurnalistiky
+
 Federace afrických novinářů
+
 Národní tiskový klub (NPC) a Centrum svobody médií při NPC
+
 Mediální síť Al-Džazíra
+
 Arabská organizace pro lidská práva ve Spojeném království
+
 Euro-středomořský monitor lidských práv
+
 Nadace Jamese Foleyho
+
 Nadace Roryho Pecka
+
 Národní svaz somálských novinářů (NUSOJ)
 ```
 
@@ -186,9 +201,7 @@ Odmítáme mlčky přihlížet, když umírá pravda. Nemůžeme mlčky nechat s
 **Žádáme o bezodkladnou akci. Teď.**
 
 ---
-
-
-<Accordion title="Ukázat signatáře/ky výzvy">
+Abecední seznam signatářů/ek:
 
 Anna Absolonová, reportérka, Deník Referendum
 Sarah Abulkasim, redaktorka, Radio Wave, Český rozhlas
@@ -453,7 +466,6 @@ Tomáš Znamenáček, regionální novinář, ohlasy.info
 Jan Žabka, regionální novinář, Okraj.cz
 Zbyněk Žitný, editor Teletextu ČT
 
-</Accordion>
 ```
 
 
