@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Solidarita s kolegy není propaganda — je to základní profesní reflex."
 coverImage: "images/killing-journalist-gaza-2025.webp"
 filter: ["kontext"]
-tags: ["Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace"]
+tags: ["novináři v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", ""]
 promoted: 85
 ---
 Novináři v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Solidarita s kolegy není propaganda — je to základní profesní reflex.
@@ -16,7 +16,7 @@ Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udě
 
 Solidarita s kolegy není propaganda. Je to základní profesní reflex. Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je — zradili bychom samotný smysl žurnalistiky.
 
-A přece: přesně tato solidarita bývá zpochybňována. Slýcháme, že data jsou falšovaná. Že ti mrtví vůbec novináři nebyli. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
+A přece: přesně tato solidarita bývá zpochybňována. Slýcháme, že data jsou zfalšovaná. Že ti mrtví vůbec nebyli novináři. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
 
 Pojďme si tato tvrzení projít jedno po druhém.
 
@@ -81,7 +81,7 @@ UNRWA a její partneři publikovali v *The Lancet* studii sledující podvýživ
 
 WHO v srpnu 2025 vydalo prohlášení o „člověkem způsobeném hladomoru", na který svět příliš dlouho čekal. Agentura AFP vydala v červenci 2025 vlastní prohlášení, že její novináři v Gaze jsou v bezprostředním nebezpečí, že zemřou hlady — jeden z nich byl již fyzicky neschopen pracovat.
 
-Hladomor v Gaze existoval. Data to dokládají. Slovo „propaganda" je zde zcela nepřiměřené.
+Hladomor v Gaze existoval a data to dokládají. Označovat to za „propagandu" vůbec není na místě.
 
 <RelatedArticles
   slugs={[
