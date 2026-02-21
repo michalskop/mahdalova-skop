@@ -48,6 +48,7 @@ Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejs
 
 
 ```infobox warning right
+![Protest na podporu novinářů v Gaze](images/killing-journalist-gaza-2025.webp)
 *Mezinárodní výzvu podepsali mimo jiné:* 
 
 - Reportéři bez hranic (RSF)
