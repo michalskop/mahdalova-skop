@@ -5,8 +5,8 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex."
 coverImage: "images/killing-journalist-gaza-2025.webp"
 filter: ["kontext"]
-tags: ["novináři v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", ""]
-promoted: 74
+tags: ["podpora novinářů v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", "podpora", "svoboda", "informace"]
+promoted: 64
 ---
 Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
 
@@ -117,8 +117,6 @@ Podívejme se na ty, kdo tato fakta dokumentují a zveřejňují.
 
 A česky: výzvu podepsalo 262 novinářů ze 66 redakcí (23 šéfredaktorů a šéfredaktorek). 
 
----
-
 ## Jak odpovědět na konkrétní námitky
 
 ### „Zdrojem vašich informací je jen Hamas — zahraniční novináři se do Gazy dostat nemohou."
@@ -143,17 +141,17 @@ To je pravda. Zároveň to není argument pro to, aby bylo v Gaze vše v pořád
 
 Na Ukrajině zahraniční novináři pracují, byť s různými omezeními a nutnými akreditacemi. Zveřejňují se reportáže z obou stran fronty. Do Gazy zahraniční novináři vstoupit nemohou vůbec, s jedinou výjimkou organizovaných izraelských press tours.
 
-A co do počtu zabitých novinářů: v celém konfliktu na Ukrajině bylo od roku 2022 zabito v přímé spojitosti s válkou přibližně třicet zahraničních novinářů. V Gaze jich bylo zabito přes 250 za 26 měsíců. Čísla nejsou srovnatelná.
+A co do počtu zabitých novinářů: v celém konfliktu na Ukrajině bylo od roku 2022 zabito v přímé spojitosti s válkou přibližně třicet zahraničních novinářů. V Gaze jich bylo zabito přes 250 za 26 měsíců. Tato srování pochopitelně neznamenají, že jedna smrt je více nebo méně než jiná zbytečná smrt.
 
 ---
 
 ## O českém zpravodajství
 
-Musíme říct jednu nepříjemnou věc: česká mediální krajina v pokrytí Gazy a Izraele není vyvážená. Existuje systematické vychýlení ve prospěch izraelské perspektivy — v tom, koho citujeme, jak rámujeme události, co považujeme za „kontroverzní" a co za samozřejmé. Takováto asymetrie pak vede k tomu, že některé příběhy — třeba zabití novinářů nebo rozsah hladomoru — dostávají méně prostoru, než by dostaly v jiném kontextu.
+Bohužel musíme říct jednu nepříjemnou věc: česká mediální krajina není v pokrytí Gazy a Izraele vyvážená. Existuje systematické vychýlení ve prospěch izraelské perspektivy — v tom, koho tuzemská média většinově citují, jak rámují události, co považují za „kontroverzní" a co za samozřejmé. Takováto asymetrie pak vede k tomu, že některé příběhy — třeba zabití novinářů nebo rozsah hladomoru — dostávají méně prostoru, než by dostaly v jiném kontextu.
 
-Podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně přísně na obě strany.
+Náš podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně přísně na obě strany.
 
-
+---
 
 ## Text výzvy
 
