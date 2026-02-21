@@ -83,7 +83,22 @@ WHO v srpnu 2025 vydalo prohlášení o „člověkem způsobeném hladomoru", n
 
 Hladomor v Gaze existoval. Data to dokládají. Slovo „propaganda" je zde zcela nepřiměřené.
 
----
+<RelatedArticles
+  slugs={[
+    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
+    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
+    "kontext-2024-11-14-amsterdam-video",
+  ]}
+  heading="Psali jsme"
+  preset="sidebar"
+  showExcerpt={false}
+  showAuthor={true}
+  showDate={true}
+  showReadingTime={false}
+  showFormatBadge={true}
+  imagePosition="left"
+  count={3}
+/>
 
 ## „Kdo to říká, naskočil na propagandu Hamásu."
 
@@ -133,26 +148,7 @@ To neznamená, že by česká média sympatizovala s Hamásem nebo zpochybňoval
 
 Podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně přísně na obě strany.
 
----
 
-<RelatedArticles
-  slugs={[
-    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
-    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
-    "kontext-2024-11-14-amsterdam-video",
-  ]}
-  heading="Psali jsme"
-  preset="sidebar"
-  showExcerpt={false}
-  showAuthor={true}
-  showDate={true}
-  showReadingTime={false}
-  showFormatBadge={true}
-  imagePosition="left"
-  count={3}
-/>
-
----
 
 ## Text výzvy
 
