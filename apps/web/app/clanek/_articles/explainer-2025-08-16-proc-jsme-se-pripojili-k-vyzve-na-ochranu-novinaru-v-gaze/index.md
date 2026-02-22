@@ -54,6 +54,33 @@ V aktuálním konfliktu navíc přibyly zcela nezávislé ověřovací studie. V
 
 Celkem 56,2 procenta násilných obětí tvoří ženy, děti a starší lidé. To jednoznačně zpochybňuje narativ, že izraelská armáda zasahuje převážně bojovníky.
 
+<RelatedArticles
+  slugs={[
+    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
+    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
+    "kontext-2024-11-14-amsterdam-video",
+  ]}
+  heading="Psali jsme"
+/>
+
+
+<RelatedArticles
+  slugs={[
+    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
+    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
+    "kontext-2024-11-14-amsterdam-video",
+  ]}
+  heading="Psali jsme"
+  preset="sidebar"
+  showExcerpt={false}
+  showAuthor={true}
+  showDate={true}
+  showReadingTime={false}
+  showFormatBadge={true}
+  imagePosition="left"
+  count={3}
+/>
+
 A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou databázi s jmény. K 6. lednu 2026 eviduje minimálně 252 zabitých novinářů a mediálních pracovníků od začátku války. Izraelské úřady opakovaně označovaly zabité novináře za teroristy — ale jak CPJ dokumentuje, v žádném z těchto případů nepředložily věrohodné důkazy. V srpnu 2025 deník *+972 Magazine* odhalil, že izraelská armáda vytvořila speciální jednotku nazvanou „Legitimization Cell", jejíž úkolem bylo propojovat palestinské novináře s Hamásem — právě proto, aby bylo jejich zabití ospravedlnitelné.
 
 ---
@@ -81,33 +108,6 @@ UNRWA a její partneři publikovali v *The Lancet* studii sledující podvýživ
 WHO v srpnu 2025 vydalo prohlášení o „člověkem způsobeném hladomoru", na který svět příliš dlouho čekal. Agentura AFP vydala v červenci 2025 vlastní prohlášení, že její novináři v Gaze jsou v bezprostředním nebezpečí, že zemřou hlady — jeden z nich byl již fyzicky neschopen pracovat.
 
 Hladomor v Gaze existoval a data to dokládají. Označovat to za „propagandu" vůbec není na místě.
-
-<RelatedArticles
-  slugs={[
-    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
-    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
-    "kontext-2024-11-14-amsterdam-video",
-  ]}
-  heading="Psali jsme"
-/>
-
-
-<RelatedArticles
-  slugs={[
-    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
-    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
-    "kontext-2024-11-14-amsterdam-video",
-  ]}
-  heading="Psali jsme"
-  preset="sidebar"
-  showExcerpt={false}
-  showAuthor={true}
-  showDate={true}
-  showReadingTime={false}
-  showFormatBadge={true}
-  imagePosition="left"
-  count={3}
-/>
 
 ## „Kdo to říká, naskočil na propagandu Hamásu."
 
