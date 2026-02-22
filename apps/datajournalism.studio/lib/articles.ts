@@ -61,7 +61,7 @@ export async function getArticleBySlug(directorySlug: string) {
   }
 
   // Pre-fetch article pool for RelatedArticles MDX component
-  const relatedArticlesPool = await getArticles(40, undefined, true);
+  const relatedArticlesPool = await getArticles(9999, undefined, true);
   const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
 
   const mdxSource = await serialize(content, {

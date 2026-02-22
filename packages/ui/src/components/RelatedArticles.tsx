@@ -147,7 +147,7 @@ function useFilterColor(filter: string | string[] | undefined): string {
 }
 
 function cardBgValue(bg: CardBg): string {
-  if (bg === 'white') return 'background.0';
+  if (bg === 'white') return 'background.2';
   if (bg === 'cream') return 'background.1';
   return 'transparent';
 }
@@ -215,7 +215,7 @@ function MiniCard({
   );
 
   const titleEl = (
-    <Anchor href={href} underline="hover" c="inherit">
+    <Anchor href={href} underline="hover" c="inherit" target="_blank" rel="noopener noreferrer">
       <Text fw={600} size={titleSize} lh={1.3}>
         {article.title}
       </Text>
@@ -262,7 +262,7 @@ function MiniCard({
   if (imagePosition === 'top') {
     return (
       <Box bg={bg} style={{ borderRadius: 6, overflow: 'hidden' }}>
-        <Anchor href={href} display="block">
+        <Anchor href={href} display="block" target="_blank" rel="noopener noreferrer">
           <Image
             src={article.coverImage!}
             alt={article.title}
@@ -281,6 +281,8 @@ function MiniCard({
   const imgEl = (
     <Anchor
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       style={{ flexShrink: 0, width: 120, height: 90, display: 'block', overflow: 'hidden', borderRadius: 4 }}
     >
       <Image
