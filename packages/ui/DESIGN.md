@@ -54,7 +54,7 @@ c="background.0"    // white text on coloured section header
 
 | Index | Hex | Use |
 |-------|-----|-----|
-| [6] | `#6267a3` | MediaBox background (light mode), InfoBox 'info' border |
+| [6] | `#6267a3` | InfoBox 'info' border |
 
 ### `brandTeal` — Teal green
 
@@ -178,51 +178,31 @@ Arrow appears automatically next to titles ≤ 14 chars.
 
 ---
 
-### `MediaBox`
-Dark navy highlighted box for callouts, key facts, supporting info. Renders full markdown (links, headings, lists).
-
-```tsx
-import { MediaBox } from '@repo/ui/components/MediaBox';
-
-<MediaBox float="right">  {/* float: 'right' | 'left' | 'none' | undefined */}
-  Markdown content here...
-</MediaBox>
-```
-
-**In markdown articles** — use code fences (no import needed):
-````md
-```box
-Key fact or callout text here.
-[Link text](https://example.com)
-```
-
-```mediabox right
-Floated right on desktop, full-width on mobile.
-```
-````
-
----
-
 ### `InfoBox`
-Light-background informational box with a left border accent. Four semantic types.
+Informational box with a left border accent and a light background. All fence names (`box`, `mediabox`, `infobox`) map to this component; `box` is a legacy alias.
 
 ```tsx
 import { InfoBox } from '@repo/ui/components/InfoBox';
 
-<InfoBox type="info" float="right">
+<InfoBox type="warning" float="right">
   Content here...
 </InfoBox>
 ```
 
 | `type` | Border | Background | Use for |
 |--------|--------|------------|---------|
-| `info` (default) | `brandNavy[6]` #6267a3 | #f0f1f8 | General notes, context |
+| `default` *(default)* | `background[6]` #e8e8dc | `background[2]` #f8f6f0 | General callouts, key facts |
+| `info` | `brandNavy[6]` #6267a3 | #f0f1f8 | Context, notes |
 | `warning` | `brandOrange[6]` #f76800 | #fff4eb | Caveats, limitations |
 | `success` | `brandTeal[6]` #0f6c78 | #e5f9fc | Positive findings |
 | `error` | `brand[6]` #de1743 | #fff4f6 | Corrections, important warnings |
 
 **In markdown articles** — use code fences:
 ````md
+```box
+Key fact using the default neutral style.
+```
+
 ```infobox warning right
 This is a floated warning box.
 ```
@@ -231,6 +211,19 @@ This is a floated warning box.
 This is a full-width success box.
 ```
 ````
+
+**"Read more" — fold content with `<!-- more -->`:**
+````md
+```infobox
+This paragraph is always visible.
+
+<!-- more -->
+
+This paragraph is hidden until the reader taps "Číst více".
+```
+````
+
+Props: `type`, `float`, `readMoreAt` (set by the remark plugin — do not set manually), `readMoreLabel`, `readLessLabel`.
 
 ---
 

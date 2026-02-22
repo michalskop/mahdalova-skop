@@ -164,6 +164,8 @@ Vážený pane prezidente, vážené ministryně a ministři, vážené kolegyn�
 
 jako čeští novináři a novinářky se na vás obracíme otevřeným dopisem, jehož obsah je prakticky doslovným překladem textu, který vládám, mezinárodním organizacím, mediálním institucím a občanské společnosti adresovala skupina renomovaných mezinárodních organizací, mimo jiné Výbor na obranu novinářů, Reportéři bez hranic či Mezinárodní tiskový institut. Dopis byl ve své anglické verzi publikován jen pár dní před posledním otřesným incidentem, při němž izraelská armáda záměrně zabila dalších šest novinářů televizní stanice Al-Džazíra.
 
+<!-- more -->
+
 My, níže podepsaní novináři, jako obhájci pravdy a transparentnosti požadujeme okamžitý konec záměrnému trýznění hladem a cílenému zabíjení novinářů v Gaze Izraelem.
 
 Novináři v Gaze jsou zabíjeni hladem. Nikoli metaforicky. A nijak pomalu. Nýbrž záměrně, právě nyní, za přihlížení celého světa. Třetina obyvatelstva Gazy neměla přístup k potravinám po několik dní. Mezi hladovějícími jsou novináři, poslední nezávislé hlasy, které přinášejí o dění v Gaze informace. Jsou to lidé, jejichž odvaha přináší světu fakta o zřejmých humanitárních dopadech izraelské války proti Gaze. Nyní jsou záměrně zabíjeni hladem.

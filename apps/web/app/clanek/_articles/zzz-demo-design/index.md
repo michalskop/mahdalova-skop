@@ -18,11 +18,16 @@ The color palette above is injected from `swatches.html` via `htmlInclude`.
 
 ## InfoBox variants
 
-All four semantic types rendered live. Use the `type` prop in JSX or the fence language in markdown articles.
+All five types rendered live. Use the `type` prop in JSX or the fence keyword in markdown articles. `box` and `mediabox` fence names are legacy aliases for the default type.
+
+```infobox
+**`default`** (default) — Neutral warm background. Used by ` ```box ` and ` ```infobox ` without a type keyword.
+Border: `background[6]` `#e8e8dc` · Background: `background[2]` `#f8f6f0`
+```
 
 ```infobox info
-**`info`** (default) — General notes, methodology, neutral context.
-Border: `brandNavy[6]` `#6267a3` · Background: computed from navy tint
+**`info`** — General notes, methodology, neutral context with a blue tint.
+Border: `brandNavy[6]` `#6267a3` · Background: `#f0f1f8`
 ```
 
 ```infobox warning
@@ -46,24 +51,14 @@ Border: `brand[6]` `#de1743` · Background: `brand[0]` `#fff4f6`
 This box floats right on desktop and collapses to full-width on mobile. Only float when surrounded by at least 3–4 paragraphs of text.
 ```
 
----
+**Read more (collapsible):**
 
-## MediaBox (dark source box)
+```infobox
+This paragraph is always visible.
 
-Used for quoted text, source attribution, short context notes. Background: `brandNavy[6]` `#6267a3`.
+<!-- more -->
 
-```box
-This is a dark source box. Use for quoted text, source attribution, or short contextual notes.
-
-Supports **markdown**, links, headings, and iframes.
-[Link text](https://example.com)
-```
-
-**Floated right:**
-
-```box right
-Short note that floats right on desktop. Full-width on mobile.
-[Source](https://example.com)
+This paragraph is hidden on load. Place `<!-- more -->` on its own line to fold everything below it behind a "Číst více" button. Works with any type and with floats.
 ```
 
 ---
@@ -117,7 +112,7 @@ Container sizes: `size="md"` for article content, `size="lg"` for article grids.
 - Don't hardcode hex colours in components — always use theme tokens
 - Don't use accent colours (`brandYellow`, `brandForestGreen`, `brandEmeraldMint`, `brandDeepRed`) without design sign-off
 - Don't set `fontFamily` manually on any component
-- Don't use `MediaBox` for semantic content (warnings, corrections) — use `InfoBox` instead
+- Don't use `type="info"` as a generic neutral box — use the default type (no `type` prop / plain ` ```box ` fence)
 - Don't use `getArticles` or filesystem logic in client components (`'use client'`)
 
 ---

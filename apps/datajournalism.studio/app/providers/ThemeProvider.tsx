@@ -112,11 +112,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#e8f9f4", "#c2f0e4", "#9be8d4", "#75dfc4", "#4fd6b4",
             "#12b886", // [6] main
             "#0e926a", "#0b6b4e", "#084533", "#042319"],
-          // NAVY/PURPLE — use for: MediaBox background (light mode), InfoBox 'info'
-          // border. Main shade: [6] = #6267a3. Light tint: [0] = #e9ecf4.
+          // NAVY/PURPLE — use for: InfoBox 'info' border.
+          // Main shade: [6] = #6267a3. Light tint: [0] = #e9ecf4.
           brandNavy: [
             "#e9ecf4", "#d2d8e9", "#bcc4df", "#a6b0d4", "#8f9dc9", "#7889be",
-            "#6267a3", // [6] MediaBox bg (light), InfoBox info border
+            "#6267a3", // [6] InfoBox info border
             "#4c4f8e", "#2f325c", "#101432"],
           // DEEP RED — darker crimson variant. Decorative, not used in current components.
           // Main shade: [6] = #a03250.

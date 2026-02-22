@@ -20,8 +20,8 @@ This is your practical guide to every tool available when writing articles. Each
 1. [Text formatting](#1-text-formatting)
 2. [Tables](#2-tables)
 3. [Images](#3-images)
-4. [Source box — dark](#4-source-box-dark)
-5. [Info box — light](#5-info-box-light)
+4. [Box — plain neutral style](#4-box--plain-neutral-style)
+5. [Info box — typed styles + read more](#5-info-box--typed-styles--read-more)
 6. [Flourish charts](#6-flourish-charts)
 7. [Any embedded chart or map](#7-any-embedded-chart-or-map)
 8. [Party badges](#8-party-badges)
@@ -134,12 +134,9 @@ _Voter turnout by region. Source: Electoral Commission._
 
 ---
 
-## 4. Source box — dark
+## 4. Box — plain neutral style
 
-The dark navy **source box** is used for:
-- Direct quotes from documents, official sources, or third parties
-- Short context notes you want to visually set apart from the main text
-- Source attribution with a link
+The plain **box** (` ```box `) is the simplest callout. It uses a neutral warm-toned background — good for source attribution, short context notes, or any content you want to visually set apart without a strong semantic colour.
 
 Write ` ```box ` on its own line, your content, then ` ``` ` on its own line.
 
@@ -161,7 +158,7 @@ Short note that floats beside the main text.
 ```
 ````
 
-You can also write `mediabox` instead of `box` — it works identically.
+You can also write `infobox` without a type — it is identical to `box`. (`mediabox` also still works as a legacy name.)
 
 **Live example:**
 
@@ -174,20 +171,21 @@ Turek o svých příjmech říká, že jsou to zatím jen odhady.
 
 ---
 
-## 5. Info box — light
+## 5. Info box — typed styles + read more
 
-The light **info box** is used for contextual notes alongside the main article text. It has four types — choose the one that fits the tone:
+The **info box** supports five types. The default (`infobox` without a type keyword) is the same neutral style as `box` from section 4. Add a keyword to get a semantic colour:
 
-| Type | Use for |
-|------|---------|
-| `info` | Neutral context, methodology notes, definitions |
-| `warning` | Data caveats, limitations, things the reader should keep in mind |
-| `success` | Confirmed facts, verified findings, positive outcomes |
-| `error` | Corrections, debunked claims |
+| Type | Keyword | Use for |
+|------|---------|---------|
+| *(default)* | *(none)* | Source notes, neutral callouts — same as `box` |
+| `info` | `info` | Methodology notes, definitions, neutral context with a blue tint |
+| `warning` | `warning` | Data caveats, limitations, things to keep in mind |
+| `success` | `success` | Confirmed facts, verified findings, positive outcomes |
+| `error` | `error` | Corrections, debunked claims |
 
 ````md
 ```infobox
-Basic info box — type defaults to "info".
+Box without a type — neutral warm background, same as ```box.
 ```
 ````
 
@@ -205,10 +203,14 @@ This box will sit to the right of the surrounding text on desktop.
 ```
 ````
 
-**Live examples — all four types:**
+**Live examples — all types:**
+
+```infobox
+**Default** — neutral warm background. Same as using ` ```box `.
+```
 
 ```infobox info
-**Info** — use for neutral context, methodology, or definitions. The most common type.
+**Info** — blue tint. Use for methodology, definitions, neutral context.
 ```
 
 ```infobox warning
@@ -237,6 +239,38 @@ Floats right on desktop. The article text wraps around it. On mobile it becomes 
 ```
 
 **When to float:** only float boxes when there is enough surrounding text — at least 3–4 paragraphs. Floating a box next to a short paragraph looks awkward.
+
+---
+
+### Read more (collapsible content)
+
+Add `<!-- more -->` inside a box to hide everything after that line behind a "Číst více" button. The reader taps to expand — useful for long methodological notes or background context that would interrupt reading flow.
+
+````md
+```infobox
+This paragraph is always visible to the reader.
+
+<!-- more -->
+
+This paragraph is hidden on load. It appears after tapping "Číst více".
+
+You can have as many paragraphs after the marker as you like.
+```
+````
+
+Works with any type and with floats. The marker must be on its own line.
+
+**Live example:**
+
+```infobox info
+Tato část je vždy viditelná. Box obsahuje delší metodologickou poznámku — čtenář ji může zobrazit kliknutím.
+
+<!-- more -->
+
+Tato část je skrytá při načtení stránky. Zobrazí se po kliknutí na tlačítko „Číst více".
+
+Lze přidat libovolný počet odstavců za značku. Funguje se všemi typy boxu i s plovoucím umístěním.
+```
 
 ---
 
@@ -427,8 +461,9 @@ Full reference with all options and live examples: [Demo: RelatedArticles — al
 | Block quote | `> text` | — |
 | Table | `\| col \| col \|` | Second row = dashes |
 | Image | `![alt](images/file.webp)` | File goes in `images/` subfolder |
-| Source box (dark) | ` ```box ` | Add `right` to float |
-| Info box (light) | ` ```infobox warning ` | Types: `info` `warning` `success` `error` |
+| Box (neutral) | ` ```box ` | Add `right` to float; ` ```infobox` is identical |
+| Info box (typed) | ` ```infobox warning ` | Types: *(default)* `info` `warning` `success` `error` |
+| Read more | `<!-- more -->` inside any box | Hides content below the marker behind a button |
 | Flourish chart | `<FlourishEmbed dataSrc="visualisation/XXXXX" />` | — |
 | Any iframe embed | `<iframe src="..." />` | — |
 | Party badge | `<PartyFace party="ANO" size={30} />` | Parties: ANO SPD Piráti SPOLU ODS STAN KDU KSČM TOP09 Motoristé |
