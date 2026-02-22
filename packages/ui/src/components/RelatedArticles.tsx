@@ -79,7 +79,7 @@ const PRESET_DEFAULTS: Record<Preset, PresetConfig> = {
   sidebar: {
     columns: 1,
     imagePosition: 'left',
-    cardBackground: 'transparent',
+    cardBackground: 'white',
     titleSize: 'sm',
     showAuthor: false,
     showExcerpt: false,
