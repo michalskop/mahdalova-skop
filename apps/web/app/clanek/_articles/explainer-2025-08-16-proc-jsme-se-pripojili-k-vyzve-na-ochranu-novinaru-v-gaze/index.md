@@ -10,7 +10,7 @@ promoted: 64
 ---
 Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
 
-## Proč podpis a proč zrovna teď
+**Proč podpis a proč zrovna teď**
 
 Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni — a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
 
@@ -42,18 +42,19 @@ Pojďme si tato tvrzení projít jedno po druhém.
 - Národní svaz somálských novinářů (NUSOJ)
 ```
 
----
-
-## „Data o mrtvých jsou zfalšovaná Hamásem."
+**„Data o mrtvých jsou zfalšovaná Hamásem."**
 
 Toto tvrzení je dnes — s ohledem na dostupné důkazy — neudržitelné.
 
 Gazanské ministerstvo zdravotnictví historicky patří k nejspolehlivějším zdrojům válečné statistiky ve svém regionu. Odborná studie publikovaná v prestižním lékařském časopise *The Lancet* ukázala, že v předchozích konfliktech se jeho údaje lišily od nezávislých odhadů OSN jen o 1,5 až 3,8 procenta.
 
-V aktuálním konfliktu navíc přibyly zcela nezávislé ověřovací studie. Výzkumníci z Royal Holloway, University of London, provedli v prosinci 2024 a lednu 2025 terénní šetření ve 2 000 domácnostech napříč Gazou — bez jakékoli závislosti na administrativních záznamech ministerstva zdravotnictví. Výsledek, publikovaný v *The Lancet Global Health* v únoru 2026: pouze v prvních 15 měsících války bylo násilně zabito více než 75 200 lidí, přičemž oficiální ministerské číslo bylo v té době 49 090. Ministerstvo tedy nepřehánělo — naopak **podhodnocovalo, o přibližně třetinu**.
+V aktuálním konfliktu navíc přibyly zcela nezávislé ověřovací studie. Výzkumníci z Royal Holloway, University of London, provedli v prosinci 2024 a lednu 2025 terénní šetření ve 2 000 domácnostech napříč Gazou — bez jakékoli závislosti na administrativních záznamech ministerstva zdravotnictví. 
+
+Výsledek publikoval *The Lancet Global Health* v únoru 2026: pouze v prvních 15 měsících války bylo násilně zabito více než 75 200 lidí, přičemž oficiální ministerské číslo bylo v té době 49 090. Ministerstvo tedy nepřehánělo — naopak **podhodnocovalo, o přibližně třetinu**.
 
 Celkem 56,2 procenta násilných obětí tvoří ženy, děti a starší lidé. To jednoznačně zpochybňuje narativ, že izraelská armáda zasahuje převážně bojovníky.
 
+
 <RelatedArticles
   slugs={[
     "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
@@ -61,31 +62,13 @@ Celkem 56,2 procenta násilných obětí tvoří ženy, děti a starší lidé. 
     "kontext-2024-11-14-amsterdam-video",
   ]}
   heading="Psali jsme"
-/>
-
-
-<RelatedArticles
-  slugs={[
-    "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
-    "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost",
-    "kontext-2024-11-14-amsterdam-video",
-  ]}
-  heading="Psali jsme"
-  preset="sidebar"
-  showExcerpt={false}
-  showAuthor={true}
-  showDate={true}
-  showReadingTime={false}
-  showFormatBadge={true}
-  imagePosition="left"
-  count={3}
 />
 
 A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou databázi s jmény. K 6. lednu 2026 eviduje minimálně 252 zabitých novinářů a mediálních pracovníků od začátku války. Izraelské úřady opakovaně označovaly zabité novináře za teroristy — ale jak CPJ dokumentuje, v žádném z těchto případů nepředložily věrohodné důkazy. V srpnu 2025 deník *+972 Magazine* odhalil, že izraelská armáda vytvořila speciální jednotku nazvanou „Legitimization Cell", jejíž úkolem bylo propojovat palestinské novináře s Hamásem — právě proto, aby bylo jejich zabití ospravedlnitelné.
 
 ---
 
-## „To nejsou žádní novináři, ale agenti Hamásu."
+**„To nejsou žádní novináři, ale agenti Hamásu."´**
 
 Toto tvrzení má svou logiku: pokud lze kohokoli předem označit za teroristu, pak jeho smrt přestává být válečným zločinem. Je to pohodlné. A právě proto je nebezpečné.
 
@@ -97,7 +80,7 @@ Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejs
 
 ---
 
-## „V Gaze není hladomor, to je propaganda Hamásu."
+**„V Gaze není hladomor, to je propaganda Hamásu."**
 
 Klasifikaci hladomoru neprovádí Al-Džazíra ani palestinská ministerstva. Provádí ji IPC — Integrated Food Security Phase Classification, mezinárodní systém 21 partnerů včetně OSN, WHO, UNICEF, WFP a dalších. Jde o stejný nástroj, který se používá k hodnocení potravinových krizí v Etiopii, Jemenu nebo Súdánu.
 
@@ -109,7 +92,7 @@ WHO v srpnu 2025 vydalo prohlášení o „člověkem způsobeném hladomoru", n
 
 Hladomor v Gaze existoval a data to dokládají. Označovat to za „propagandu" vůbec není na místě.
 
-## „Kdo to říká, naskočil na propagandu Hamásu."
+**„Kdo to říká, naskočil na propagandu Hamásu."**
 
 Podívejme se na ty, kdo tato fakta dokumentují a zveřejňují.
 
