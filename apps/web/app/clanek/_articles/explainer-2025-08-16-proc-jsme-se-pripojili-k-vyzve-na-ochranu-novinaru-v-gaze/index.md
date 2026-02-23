@@ -10,16 +10,6 @@ promoted: 64
 ---
 Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
 
-**Proč podpis a proč zrovna teď**
-
-Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni — a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
-
-Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je — zradili bychom samotný smysl žurnalistiky.
-
-A přece je tato solidarita zpochybňována, dokonce i ze strany našich profesních kolegů a kolegyň. Slýcháme, že data jsou zfalšovaná. Že ti mrtví vůbec nebyli novináři a novinářky. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
-
-Pojďme si tato tvrzení projít jedno po druhém.
-
 ```infobox right
 ![Protest na podporu novinářů v Gaze](images/killing-journalists-gaza-2025.webp)
 *Mezinárodní výzvu podepsali mimo jiné:* 
@@ -41,6 +31,16 @@ Pojďme si tato tvrzení projít jedno po druhém.
 - Nadace Roryho Pecka
 - Národní svaz somálských novinářů (NUSOJ)
 ```
+
+**Proč podpis a proč zrovna teď**
+
+Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni — a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
+
+Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je — zradili bychom samotný smysl žurnalistiky.
+
+A přece je tato solidarita zpochybňována, dokonce i ze strany našich profesních kolegů a kolegyň. Slýcháme, že data jsou zfalšovaná. Že ti mrtví vůbec nebyli novináři a novinářky. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
+
+Pojďme si tato tvrzení projít jedno po druhém.
 
 **„Data o mrtvých jsou zfalšovaná Hamásem."**
 
