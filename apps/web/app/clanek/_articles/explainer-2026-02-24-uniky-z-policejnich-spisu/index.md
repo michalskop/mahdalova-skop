@@ -2,7 +2,7 @@
 title: "Úniky z policejních spisů"
 date: "2026-02-24"
 author: "Kateřina Mahdalová"
-excerpt: "Jde jen o selektivní výsek reality a není jisté, kdo a proč ho „pustil ven". Proč je zveřejňování informací z neuzavřených trestních spisů jedním z nejnebezpečnějších nástrojů mediální manipulace."
+excerpt: "Jde jen o selektivní výsek reality a není jisté, kdo a proč ho pustil ven. Proč je zveřejňování informací z neuzavřených trestních spisů jedním z nejnebezpečnějších nástrojů mediální manipulace."
 coverImage: "images/investigace-leak.webp"
 filter: ["explainer"]
 tags: ["úniky z policejních spisů", "explainer", "investigace", "právo", "trestní řízení", "média", "novinářská etika", "policejní spisy", "únik informací"]
