@@ -125,6 +125,9 @@ export default async function ArticlePage({ params }: PageProps) {
     );
   } catch (error) {
     console.error('Error in ArticlePage:', error);
+    if (process.env.NODE_ENV === 'development') {
+      throw error;
+    }
     notFound();
   }
 }

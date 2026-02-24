@@ -63,7 +63,7 @@ events:
     title: "OKD: úniky jako koaliční zbraň"
     emoji: "⛏️"
     summary: "Babiš jako ministr financí válčil s premiérem Sobotkou. MfD zveřejnila úniky ze spisu OKD. Kauza skončila zproštěním všech obžalovaných."
-    description: "Ministr financí Babiš se střetával s premiérem Sobotkou, Mladá fronta DNES zveřejnila první úniky ze spisu kolem privatizace OKD v dubnu 2014. Sobotka Babiše obvinil, že využívá svá média ke zvyšování tlaku na koaličního partnera. Lidové noviny označily soud za „kauzu roku". Skončila zproštěním viny všech obžalovaných."
+    description: "Ministr financí Babiš se střetával s premiérem Sobotkou, Mladá fronta DNES zveřejnila první úniky ze spisu kolem privatizace OKD v dubnu 2014. Sobotka Babiše obvinil, že využívá svá média ke zvyšování tlaku na koaličního partnera. Lidové noviny označily soud za 'kauzu roku'. Skončila zproštěním viny všech obžalovaných."
 
   - id: parlamentni-komise-2016
     year: 2016
@@ -71,10 +71,10 @@ events:
     facets:
       topic: systemic
     date: "Září 2016"
-    title: "Parlamentní komise: úniky jsou „fatální ohrožení ústavnosti""
+    title: "Parlamentní komise: úniky jsou 'fatální ohrožení ústavnosti"
     emoji: "🏛️"
     summary: "Vyšetřovací komise Parlamentu ČR shrnula rozsah problému a pojmenovala ho jako systémové riziko pro demokratický stát."
-    description: "Parlamentní vyšetřovací komise k únikům z trestních spisů (kauzy Nagyová, Nečas, Bereta, VIDKUN, OKD) vydala závěrečnou zprávu. Citát ze závěrů: „Úniky informací z trestního řízení, jejich účelová interpretace a následná cílená tvorba veřejného mínění, jsou fatálním ohrožením ústavnosti." Přesto zákonné zakotvení povinné mlčenlivosti, které po komisi následovalo, nevedlo k žádnému trestnímu postihu. Nebyl znám žádný případ jeho reálného použití."
+    description: "Parlamentní vyšetřovací komise k únikům z trestních spisů (kauzy Nagyová, Nečas, Bereta, VIDKUN, OKD) vydala závěrečnou zprávu. Citát ze závěrů: 'Úniky informací z trestního řízení, jejich účelová interpretace a následná cílená tvorba veřejného mínění, jsou fatálním ohrožením ústavnosti.' Přesto zákonné zakotvení povinné mlčenlivosti, které po komisi následovalo, nevedlo k žádnému trestnímu postihu. Nebyl znám žádný případ jeho reálného použití."
 
   - id: vidkun-2017
     year: 2017
@@ -118,7 +118,7 @@ events:
     title: "Blažek a vynesený spis: únik, který zkomplikoval kauzu"
     emoji: "📁"
     summary: "Ministr spravedlnosti získal v roce 2019 část utajeného policejního spisu brněnské bytové kauzy. Žalobkyně potvrdila: únik zásadně zkomplikoval objasňování případu."
-    description: "Pavel Blažek (ODS) získal v roce 2019 část utajeného spisu brněnské bytové kauzy přes okruh advokátů a stranických vazeb – ještě před tím, než NCOZ zahájila aktivní prověřování. Dozorující žalobkyně Petra Lastovecká potvrdila, že „tento únik informací zásadním způsobem, společně s dalšími faktory, zkomplikoval objasňování a procesní vedení celé kauzy, neboť se neveřejné informace dostaly k osobám, kterých se týkaly." GIBS pachatele úniku bez Blažkovy spolupráce nezjistila. Blažek jako ministr spravedlnosti mezitím opakovaně obviňoval tytéž vyšetřovatele z vynášení."
+    description: "Pavel Blažek (ODS) získal v roce 2019 část utajeného spisu brněnské bytové kauzy přes okruh advokátů a stranických vazeb – ještě před tím, než NCOZ zahájila aktivní prověřování. Dozorující žalobkyně Petra Lastovecká potvrdila, že 'tento únik informací zásadním způsobem, společně s dalšími faktory, zkomplikoval objasňování a procesní vedení celé kauzy, neboť se neveřejné informace dostaly k osobám, kterých se týkaly.' GIBS pachatele úniku bez Blažkovy spolupráce nezjistila. Blažek jako ministr spravedlnosti mezitím opakovaně obviňoval tytéž vyšetřovatele z vynášení."
 
   - id: motol-2025
     year: 2025
@@ -129,4 +129,4 @@ events:
     title: "Motol: úniky hned druhý den po razii"
     emoji: "🏥"
     summary: "Den po razii NCOZ ve FN Motol se v médiích objevily detailní informace ze spisu. Ministr spravedlnosti Blažek novináře zkritizoval, NCOZ zahájila interní šetření."
-    description: "Národní centrála proti organizovanému zločinu zasáhla v pondělí ve Fakultní nemocnici Motol kvůli podezření z úplatkářství. Už v úterý se v médiích objevily detailní informace z policejních dokumentů. Ministr spravedlnosti Pavel Blažek (ODS) novináře veřejně zkritizoval: „Zveřejňování detailních informací z předsoudní fáze trestního řízení je nejen nezákonné, ale i škodlivé pro práva mnoha osob i samotné trestní řízení." NCOZ zahájila interní šetření, kdo úniky způsobil. Původce úniku nebyl zveřejněn."
+    description: "Národní centrála proti organizovanému zločinu zasáhla v pondělí ve Fakultní nemocnici Motol kvůli podezření z úplatkářství. Už v úterý se v médiích objevily detailní informace z policejních dokumentů. Ministr spravedlnosti Pavel Blažek (ODS) novináře veřejně zkritizoval: 'Zveřejňování detailních informací z předsoudní fáze trestního řízení je nejen nezákonné, ale i škodlivé pro práva mnoha osob i samotné trestní řízení.' NCOZ zahájila interní šetření, kdo úniky způsobil. Původce úniku nebyl zveřejněn."
