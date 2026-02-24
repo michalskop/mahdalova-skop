@@ -1,7 +1,7 @@
 ---
-title: "Čteme vám živé policejní spisy"
+title: "Úniky z policejních spisů"
 date: "2026-02-24"
-author: "Kateřina Mahdalová & Michal Škop"
+author: "Kateřina Mahdalová"
 excerpt: "Jde jen o selektivní výsek reality a není jisté, kdo a proč ho „pustil ven". Proč je zveřejňování informací z neuzavřených trestních spisů jedním z nejnebezpečnějších nástrojů mediální manipulace."
 coverImage: "images/investigace-leak.webp"
 filter: ["explainer"]
