@@ -39,10 +39,10 @@ Autorem účtu je podle výzkumu ukrajinské skupiny [Molfar](https://www.molfar
 
 Podobné formulace se objevily i v dalších českých médiích:  
 
-- [Česká televize](https://www.ceskatelevize.cz): „Útok na Izraelce v Amsterdamu.“  
-- [Český rozhlas](https://www.rozhlas.cz): „Záběr z videa, kde útočníci pronásledují izraelské fanoušky.“  
-- [iDnes](https://www.idnes.cz): „V Amsterdamu po fotbalovém zápase propukly násilnosti proti Izraelcům.“  
-- [Seznam Zprávy](https://www.seznamzpravy.cz): „Záběry z útoků na izraelské fotbalové fanoušky v Nizozemsku.“  
+- [Česká televize](https://ct24.ceskatelevize.cz/clanek/svet/pri-nasilnostech-v-amsterdamu-bylo-zraneno-deset-izraelcu-355140): „Útok na Izraelce v Amsterdamu.“ // „Při násilnostech v Amsterdamu bylo zraněno třicet Izraelců. Velvyslanec při OSN [mluví o pogromu](https://ct24.ceskatelevize.cz/clanek/svet/pri-nasilnostech-v-amsterdamu-bylo-zraneno-deset-izraelcu-355140)“
+- [Český rozhlas](https://radiozurnal.rozhlas.cz/odpoledni-publicistika-nova-duchodova-reforma-utok-na-izraelske-fotbalove-9349950?player=on): „Záběr z videa, kde útočníci pronásledují izraelské fanoušky.“ // Útok na izraelské fotbalové fanoušky“ // „Zraněných izraelských fanoušků v Amsterdamu je až 30. [Evropští lídři odsuzují antisemitismus](https://www.irozhlas.cz/zpravy-svet/antisemitske-utoky-me-zhrozily-reagoval-nizozemsky-premier-na-hon-na-izraelske_2411080837_vdv).“ Zpřesnění o tom, že vyšlo [v článku](https://www.irozhlas.cz/zpravy-svet/antisemitske-utoky-me-zhrozily-reagoval-nizozemsky-premier-na-hon-na-izraelske_2411080837_vdv) 
+- [iDnes](https://vice.idnes.cz/videoclanek.aspx?idvideo=V241108_083629_idnestv_anka): „V Amsterdamu po fotbalovém zápase propukly násilnosti proti Izraelcům.“ // [série](https://vice.idnes.cz/videoclanek.aspx?idvideo=V241108_083629_idnestv_anka) "V Amsterdamu po fotbalovém zápase propukly násilnosti proti Izraelcům"
+- [Seznam Zprávy](https://www.seznamzpravy.cz/clanek/zahranicni-nepokoje-v-amsterodamu-netanjahu-poslal-letadla-pro-izraelske-fotbalove-fanousky-264100): „Záběry z útoků na izraelské fotbalové fanoušky v Nizozemsku. // Video: „Výbuch násilí“ v Amsterodamu. Cílem byli izraelští fanoušci“
 
 ## Bylo to takhle jen v ČR?  
 
