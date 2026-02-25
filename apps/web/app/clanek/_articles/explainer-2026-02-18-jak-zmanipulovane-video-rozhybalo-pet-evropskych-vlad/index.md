@@ -18,6 +18,7 @@ Nyní se totéž odehrává ve větším měřítku – s vážnějšími důsle
 
 Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) včetně britského Computer Weekly, který případ podrobně zmapoval. A na konci řetězce stojí ministři zahraničí pěti evropských zemí, kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla.
 
+```infobox right
 **Co řekla Francesca Albanese**
 
 Dne 7. února 2026 promluvila Francesca Albanese na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. V přibližně čtyřminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze:
@@ -27,6 +28,7 @@ Dne 7. února 2026 promluvila Francesca Albanese na mediálním fóru Al-Džazí
 Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem" myslí Izrael, [upřesnila na sociálních sítích](https://x.com/FranceskAlbs): „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině, včetně finančního kapitálu, který ji financuje, algoritmů, které ji zakrývají, a zbraní, které ji umožňují."
 
 ![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
+```
 
 **Tvrzení českých médií vs. fakta**
 
@@ -54,18 +56,17 @@ Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or
 
 Totéž konstatoval [Úřad vysokého komisaře OSN pro lidská práva](https://www.middleeasteye.net/news/un-panel-european-calls-resignation-albanese-rooted-disinformation). [Reuters uvedl](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese), že „AI-manipulované video se ukázalo jako zdroj obvinění" a že „neexistuje precedent pro odvolání zvláštního zpravodaje v průběhu mandátu". Britský [Computer Weekly shrnul](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur): „Řada médií včetně Reuters a France24, stejně jako Úřad vysokého komisaře OSN pro lidská práva, potvrdily, že odkazované video je zmanipulované."
 
-**Barrot a dezinformace: ne poprvé**
-
-Jean-Noël Barrot, francouzský ministr zahraničí, má s dezinformacemi paradoxní vztah. V dubnu 2024, ještě jako ministr pro Evropu, [varoval v rozhovoru pro deník Ouest-France](https://www.theguardian.com/world/2024/apr/22/france-being-pounded-by-russian-disinformation-says-minister) před ruskou dezinformační kampaní cílící na Francii: „Nemine týden, kdy by Francie nebyla terčem koordinovaných a záměrných manévrů s cílem narušit veřejnou debatu," prohlásil tehdy – a citoval konkrétní příklady falešných webů ministerstev, které šířily nepravdivé zprávy. O necelé dva roky později se sám stal šiřitelem nepravdivé informace o představitelce OSN.
-
+```infobox right
 **Jak se video dostalo k ministrům**
+
+Jean-Noël Barrot, francouzský ministr zahraničí, v dubnu 2024, ještě jako ministr pro Evropu, [varoval v rozhovoru pro deník Ouest-France](https://www.theguardian.com/world/2024/apr/22/france-being-pounded-by-russian-disinformation-says-minister) před ruskou dezinformační kampaní cílící na Francii: „Nemine týden, kdy by Francie nebyla terčem koordinovaných a záměrných manévrů s cílem narušit veřejnou debatu," prohlásil tehdy – a citoval konkrétní příklady falešných webů ministerstev, které šířily nepravdivé zprávy. O necelé dva roky později se sám stal šiřitelem nepravdivé informace o představitelce OSN.
 
 Podle informací [rakouského blogu tkp.at](https://tkp.at/2026/02/15/aussenminister-von-5-eu-laendern-fordern-auf-basis-fake-ki-video-ruecktritt-von-uno-berichterstatterin-albanese/), které se opírají o veřejně dostupný řetězec sdílení, izraelská ambasáda v Paříži předala sestříhané video francouzskému ministerstvu zahraničí. Barrot ho [citoval před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/) a vyzval Albanese k rezignaci s tím, že Francie „bezvýhradně odsuzuje skandální a zavrženíhodné výroky".
 
 Během následujících dnů se přidali ministři dalších zemí: [německý Johann Wadephul](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) označil její setrvání ve funkci za „neudržitelné", [rakouská Beate Meinl-Reisinger](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) ji obvinila z nenávistného projevu, [italský Antonio Tajani](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) zpochybnil její nestrannost a [český Petr Macinka](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) (Motoristé sobě) citoval na X falešný výrok a vyzval k její rezignaci.
 
 ![Příspěvek českého ministra zahraničí Petra Macinky na X](images/francesca-albanese-twitter-dementi.webp)
-
+```
 ---
 
 ## Časová osa
