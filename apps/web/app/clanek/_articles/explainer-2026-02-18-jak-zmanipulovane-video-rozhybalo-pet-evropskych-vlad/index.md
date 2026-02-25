@@ -26,6 +26,7 @@ Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na mediální
 Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem" myslí Izrael, [upřesnila na sociálních sítích](https://x.com/FranceskAlbs/status/2020983308818186721): „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině, včetně finančního kapitálu, který ji financuje, algoritmů, které ji zakrývají, a zbraní, které ji umožňují."
 
 ![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
+![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž Francesca Albanese ze strany pěti vlád čelí](images/francesca-albanese-reuters.webp)
 ```
 
 **UN Watch a jeho aktivity**
@@ -36,9 +37,7 @@ V praxi se UN Watch dlouhodobě zaměřuje na kampaně proti kritikům Izraele v
 
 **Kdo potvrdil manipulaci videa**
 
-Fact-checkingová redakce [Euronews (The Cube)](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) provedla srovnání sestříhaného klipu s kompletním záznamem a konstatovala, že „video bylo zmanipulováno pomocí umělé inteligence" a že „upravené video, sdílené na YouTube kanálu UN Watch, zřejmě modifikuje Albaneseín hlas tak, aby naznačoval, že označila Izrael za ‚společného nepřítele' lidstva".
-
-![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž Francesca Albanese ze strany pěti vlád čelí](images/francesca-albanese-reuters.webp)
+Fact-checkingová redakce [Euronews (The Cube)](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) provedla srovnání sestříhaného klipu s kompletním záznamem a konstatovala, že „video bylo zmanipulováno pomocí umělé inteligence" a že „upravené video, sdílené na YouTube kanálu UN Watch, zřejmě modifikuje hlas Francescy Albanese tak, aby to vypadalo, že označila Izrael za ‚společného nepřítele' lidstva".
 
 Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) ve svém pětiminutovém příspěvku přesně rekonstruovala, jak k dezinformační kampani došlo, a potvrdila, že Albanese inkriminovaný výrok nepronesla.
 
@@ -47,6 +46,8 @@ Totéž konstatoval [Úřad vysokého komisaře OSN pro lidská práva](https://
 ```infobox left
 > „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
 ```
+
+Koordinační výbor OSN složený ze šesti nezávislých odborníků upozornil evropské ministry, že se opírají o „vymyšlená fakta“, [informuje agentura Reuters](https://www.reuters.com/world/middle-east/independent-un-body-condemns-vicious-attacks-un-expert-palestinian-rights-2026-02-17/). Výbor uvedl, že tlak vyvíjený na Albaneseovou je součástí rostoucího trendu politicky motivovaných a zlovolných útoků proti nezávislým odborníkům na lidská práva, úředníkům OSN a soudcům mezinárodních soudů.
 
 **Jak se video dostalo k ministrům**
 
