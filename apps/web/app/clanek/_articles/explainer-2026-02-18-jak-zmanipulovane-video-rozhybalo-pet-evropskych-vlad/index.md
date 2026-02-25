@@ -10,7 +10,7 @@ promoted: 45
 ---
 Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na jeho základě požadovalo rezignaci zpravodajky OSN Francesky Albanese. Když se ukázalo, že video je zmanipulované, žádná z vlád se neomluvila.
 
-<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video"]} slugs={["explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} position="right" heading="Napsali jsme" />
 
 Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), viz třeba britský Computer Weekly, který případ šíření dezinformace podrobně zmapoval. Organizace UN Watch zmíněné video z nedávné konference v katarském hlavním městě Dauhá sestříhala.
 
