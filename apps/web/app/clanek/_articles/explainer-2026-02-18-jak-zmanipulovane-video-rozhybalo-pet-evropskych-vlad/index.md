@@ -12,20 +12,26 @@ Lobbistická organizace UN Watch rozšířila sestříhané video z konference v
 
 <RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video"]} position="right" heading="Napsali jsme" />
 
-V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru.
+V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
 
-Nyní se totéž odehrává ve větším měřítku – s vážnějšími důsledky.
+Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) včetně britského Computer Weekly, který případ podrobně zmapoval.
 
-Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) včetně britského Computer Weekly, který případ podrobně zmapoval. A na konci řetězce stojí ministři zahraničí pěti evropských zemí, kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla.
+```infobox left
+„Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo.“
+[...]
+„Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
+```
+
+A na konci řetězce stojí ministři zahraničí pěti evropských zemí, kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
 
 ```infobox right
 **Co řekla Francesca Albanese**
 
-Dne 7. února 2026 promluvila Francesca Albanese na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. V přibližně čtyřminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze:
+Dne 7. února 2026 promluvila zpravodajky OSN na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Přibližně ve čtyřminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze:
 
-> „Skutečnost, že většina zemí světa Izrael nezastavila, ale naopak ho vyzbrojila, poskytla mu politické výmluvy, politickou ochranu a ekonomickou a finanční podporu – to je výzva. (...) My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně, nyní vidíme, že jako lidstvo máme společného nepřítele a že respektování základních svobod je poslední mírovou cestou, posledním mírovým nástrojem, který máme k znovuzískání naší svobody."
+*„Skutečnost, že většina zemí světa Izrael nezastavila, ale naopak ho vyzbrojila, poskytla mu politické výmluvy, politickou ochranu a ekonomickou a finanční podporu – to je výzva. (...) My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně, nyní vidíme, že jako lidstvo máme společného nepřítele a že respektování základních svobod je poslední mírovou cestou, posledním mírovým nástrojem, který máme k znovuzískání naší svobody."*
 
-Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem" myslí Izrael, [upřesnila na sociálních sítích](https://x.com/FranceskAlbs): „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině, včetně finančního kapitálu, který ji financuje, algoritmů, které ji zakrývají, a zbraní, které ji umožňují."
+Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem" myslí Izrael, [upřesnila na sociálních sítích](https://x.com/FranceskAlbs/status/2020983308818186721): „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině, včetně finančního kapitálu, který ji financuje, algoritmů, které ji zakrývají, a zbraní, které ji umožňují."
 
 ![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
 ```
