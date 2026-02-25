@@ -8,7 +8,7 @@ filter: ["explainer"]
 tags: ["dezinformace", "OSN", "Francesca Albanese", "Palestina", "Izrael", "AI", "fake video", "fact-check"]
 promoted: 45
 ---
-Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví Francesca Albanese, zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na základě tohoto deep fake videa požaduje její rezignaci. Když se ukázalo, že video je zmanipulované, žádná z vlád se neomluvila, jen Rakousko stáhlo svůj twitterový status.
+Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví Francesca Albanese, zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na základě tohoto videa požaduje její rezignaci. Když se ukázalo, že video je účelově sestříhané, žádná z vlád se neomluvila, jen Rakousko stáhlo svůj twitterový status.
 
 <RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} position="right" heading="Napsali jsme" />
 
