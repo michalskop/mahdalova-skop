@@ -4,7 +4,7 @@ date: "2024-11-14"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Jedno video, špatný kontext a příběh, který ilustruje, jak snadno může dojít k manipulaci veřejného mínění."
 coverImage: "images/amsterdam-udalosti.png"
-filter: ["kontext"]
+filter: ["explainer"]
 tags: ["zahraničí", "Amsterdam", "Izrael", "fotbal", "násilí"]
 promoted: 10
 ---
