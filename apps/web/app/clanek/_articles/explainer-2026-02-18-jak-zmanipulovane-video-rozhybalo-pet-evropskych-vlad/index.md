@@ -8,13 +8,11 @@ filter: ["explainer"]
 tags: ["dezinformace", "OSN", "Francesca Albanese", "Palestina", "Izrael", "AI", "fake video", "fact-check"]
 promoted: 45
 ---
-Lobbistická organizace UN Watch rozšířila sestříhané video z konference v Dauhá. Pět evropských ministrů zahraničí na jeho základě požadovalo rezignaci zpravodajky OSN Francesky Albanese. Když se ukázalo, že video je zmanipulované, žádná z vlád se neomluvila.
+Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na jeho základě požadovalo rezignaci zpravodajky OSN Francesky Albanese. Když se ukázalo, že video je zmanipulované, žádná z vlád se neomluvila.
 
 <RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video"]} position="right" heading="Napsali jsme" />
 
-V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
-
-Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), viz třeba britský Computer Weekly, který případ podrobně zmapoval. 
+Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), viz třeba britský Computer Weekly, který případ šíření dezinformace podrobně zmapoval. Organizace UN Watch zmíněné video z nedávné konference v katarském hlavním městě Dauhá sestříhala.
 
 Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (včetně ČR), kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
 
@@ -56,12 +54,14 @@ Jean-Noël Barrot, francouzský ministr zahraničí, v dubnu 2024, ještě jako 
 
 Podle informací [rakouského webu tkp.at](https://tkp.at/2026/02/15/aussenminister-von-5-eu-laendern-fordern-auf-basis-fake-ki-video-ruecktritt-von-uno-berichterstatterin-albanese/), které se opírají o veřejně dostupný řetězec sdílení, izraelská ambasáda v Paříži předala sestříhané video francouzskému ministerstvu zahraničí. Barrot ho [citoval před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/) a vyzval Albanese k rezignaci s tím, že Francie „bezvýhradně odsuzuje skandální a zavrženíhodné výroky".
 
-Během následujících dnů se přidali ministři dalších zemí: [německý Johann Wadephul](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) označil její setrvání ve funkci za „neudržitelné", [rakouská Beate Meinl-Reisinger](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) ji obvinila z nenávistného projevu, [italský Antonio Tajani](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) zpochybnil její nestrannost a [český Petr Macinka](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) (Motoristé sobě) citoval na X falešný výrok a vyzval k její rezignaci.
-
 ```infobox warning right
 ![Příspěvek českého ministra zahraničí Petra Macinky na X](images/francesca-albanese-twitter-dementi.webp)
 [Příspěvek](https://x.com/mzvcr/status/2022211836020654247) českého ministra zahraničí Petra Macinky
 ```
+
+Během následujících dnů se přidali ministři dalších zemí: [německý Johann Wadephul](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) označil její setrvání ve funkci za „neudržitelné", [rakouská Beate Meinl-Reisinger](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) ji obvinila z nenávistného projevu, [italský Antonio Tajani](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) zpochybnil její nestrannost a [český Petr Macinka](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) (Motoristé sobě) citoval na X falešný výrok a vyzval k její rezignaci.
+
+---
 
 ## Časová osa
 
@@ -103,7 +103,7 @@ Reportáž ČT z téhož dne zmínila „sestříhané video" jednou větou, ale
 
 **Vzorec, který se opakuje**
 
-V listopadu 2024 jsme popsali, [jakým jedno video z Amsterdamu prošlo řetězcem](/clanek/kontext-2024-11-14-amsterdam-video) sociální síť → anonymní účet → ČTK → česká média a cestou si změnilo význam.
+V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
 
 Případ Albanese ukazuje tentýž vzorec ve větším měřítku:
 
