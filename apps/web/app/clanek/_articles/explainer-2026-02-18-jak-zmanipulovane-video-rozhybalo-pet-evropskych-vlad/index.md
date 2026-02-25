@@ -14,12 +14,14 @@ Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve
 
 Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), viz třeba britský Computer Weekly, který případ šíření dezinformace podrobně zmapoval. Organizace UN Watch zmíněné video z nedávné konference v katarském hlavním městě Dauhá sestříhala.
 
-Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (včetně ČR), kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
+Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (včetně ČR), kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Přesněji, teď už jen čtyři ministři; rakouská ministryně zahraničí totiž svůj post stáhla. I však nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
 
 ```infobox warning right
-**Co doopravdy řekla Francesca Albanese**
+**Co doopravdy Francesca Albanese řekla**
 
 Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Zhruba [ve tříminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze](https://www.youtube.com/watch?v=wmJUNHECBGI):
+
+![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
 
 **„Skutečnost, že většina zemí světa Izrael nezastavila, ale naopak ho vyzbrojila, poskytla Izraeli politické výmluvy, politickou ochranu a ekonomickou a finanční podporu.** *To je výzva. Skutečnost, že většina médií v západním světě zesilovala proapartheidní a genocidní narativ, je výzva. A zároveň v tom spočívá příležitost. Protože pokud bylo mezinárodní právo bodnuté do srdce, je také pravda, že nikdy dříve si mezinárodní společenství neuvědomovalo výzvy, kterým všichni čelíme. My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně,* **nyní vidíme, že jako lidstvo máme společného nepřítele, a svobody – respektování základních svobod – jsou poslední mírovou cestou, posledním mírovým nástrojem, který máme k znovuzískání naší svobody."**
 
@@ -27,7 +29,6 @@ Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na mediální
 
 Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem" myslí Izrael, [upřesnila na sociálních sítích](https://x.com/FranceskAlbs/status/2020983308818186721): „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině, včetně finančního kapitálu, který ji financuje, algoritmů, které ji zakrývají, a zbraní, které ji umožňují."
 
-![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
 ![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž čelí Francesca Albanese ze strany pěti vlád](images/francesca-albanese-reuters.webp)
 ```
 
