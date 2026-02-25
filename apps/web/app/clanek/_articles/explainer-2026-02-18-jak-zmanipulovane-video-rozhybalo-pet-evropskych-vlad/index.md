@@ -16,7 +16,7 @@ Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch
 
 Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (včetně ČR), kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
 
-```infobox right
+```infobox warning right
 **Co doopravdy řekla Francesca Albanese**
 
 Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Zhruba [ve tříminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze](https://www.youtube.com/watch?v=wmJUNHECBGI):
@@ -47,7 +47,7 @@ Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or
 
 Totéž konstatoval [Úřad vysokého komisaře OSN pro lidská práva](https://www.middleeasteye.net/news/un-panel-european-calls-resignation-albanese-rooted-disinformation). [Reuters uvedl](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese), že „AI-manipulované video se ukázalo jako zdroj obvinění" a že „neexistuje precedent pro odvolání zvláštního zpravodaje v průběhu mandátu". Britský [Computer Weekly shrnul](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur): „Řada médií včetně Reuters a France24, stejně jako Úřad vysokého komisaře OSN pro lidská práva, potvrdily, že odkazované video je zmanipulované."
 
-```infobox left
+```infobox warning left
 > „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
 ```
 
