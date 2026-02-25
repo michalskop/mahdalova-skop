@@ -61,13 +61,11 @@ Během následujících dnů se přidali ministři dalších zemí: [německý J
 
 ![Příspěvek českého ministra zahraničí Petra Macinky na X](images/francesca-albanese-twitter-dementi.webp)
 ```
----
 
-```infobox left
 ## Časová osa
 
 <Timeline yamlFile="timeline.yaml" />
-```
+
 ---
 
 **Omluvy se nekonají**
@@ -82,7 +80,7 @@ Claudio Francavilla z Human Rights Watch to [shrnul pro EUobserver](https://euob
 
 „Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
 
-```infobox right
+```infobox
 **Kdo je Francesca Albanese**
 
 Italská právnička (nar. 1977), absolventka univerzity v Pise a londýnské SOAS. Od května 2022 zastává funkci zvláštní zpravodajky OSN pro lidská práva v palestinských územích okupovaných od roku 1967. V dubnu 2025 jí [Rada OSN pro lidská práva prodloužila mandát](https://www.trtworld.com/article/6e0b924d2b9d) o další tři roky (do roku 2028), a to navzdory kampani za její odvolání ze strany USA, Izraele a organizace UN Watch.
