@@ -62,6 +62,12 @@ Podle informací [rakouského webu tkp.at](https://tkp.at/2026/02/15/aussenminis
 
 Během následujících dnů se přidali ministři dalších zemí: [německý Johann Wadephul](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) označil její setrvání ve funkci za „neudržitelné", [rakouská Beate Meinl-Reisinger](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) ji obvinila z nenávistného projevu, [italský Antonio Tajani](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) zpochybnil její nestrannost a [český Petr Macinka](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) (Motoristé sobě) citoval na X falešný výrok a vyzval k její rezignaci.
 
+**Omluvy se nekonají**
+
+K 24. únoru 2026 žádná z pěti vlád veřejnou omluvu nevydala.
+
+Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako jediná z pětice alespoň částečně couvla, byť bez omluvy a opravy. Německý ministr Wadephul nepovažuje korekci za nutnou. Francouzský ministr Barrot tvrdí, že jeho výzva „neměla nic společného se sestříhaným videem", a přesunul argumentaci na starší výroky Albanese. České ministerstvo zahraničí pod vedením Petra Macinky se k manipulaci videa vůbec nevyjádřilo a své výroky nedementovalo ani neodstranilo.
+
 ---
 
 ## Časová osa
@@ -69,12 +75,6 @@ Během následujících dnů se přidali ministři dalších zemí: [německý J
 <Timeline yamlFile="timeline.yaml" />
 
 ---
-
-**Omluvy se nekonají**
-
-K 24. únoru 2026 žádná z pěti vlád veřejnou omluvu nevydala.
-
-Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako jediná z pětice alespoň částečně couvla, byť bez omluvy a opravy. Německý ministr Wadephul nepovažuje korekci za nutnou. Francouzský ministr Barrot tvrdí, že jeho výzva „neměla nic společného se sestříhaným videem", a přesunul argumentaci na starší výroky Albanese. České ministerstvo zahraničí pod vedením Petra Macinky se k manipulaci videa vůbec nevyjádřilo a své výroky nedementovalo ani neodstranilo.
 
 [Amnesty International požaduje](https://www.amnesty.org/en/latest/news/2026/02/european-states-must-retract-attacks-francesca-albanese/), aby ministři „šli za pouhé mazání příspěvků na sociálních sítích – jak to někteří učinili – a veřejně se omluvili a stáhli výzvy k rezignaci". 
 
