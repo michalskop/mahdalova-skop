@@ -4,7 +4,7 @@ date: "2025-08-16"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex."
 coverImage: "images/killing-journalist-gaza-2025.webp"
-filter: ["kontext"]
+filter: ["explainer"]
 tags: ["podpora novinářů v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", "podpora", "svoboda", "informace"]
 promoted: 64
 ---
