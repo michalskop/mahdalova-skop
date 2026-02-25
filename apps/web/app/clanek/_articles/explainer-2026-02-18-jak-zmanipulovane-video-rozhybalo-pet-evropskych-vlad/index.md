@@ -29,6 +29,14 @@ Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem"
 ![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž Francesca Albanese ze strany pěti vlád čelí](images/francesca-albanese-reuters.webp)
 ```
 
+V reakci na záměrně zkrácený klip kolující online, ve kterém zvláštní zpravodajka pro situaci v oblasti lidských práv v Palestině údajně označuje Izrael za „společného nepřítele lidstva“, přední politici a diplomatické osobnosti z Francie, Německa, Itálie a USA ostře odsoudili Albanese a mnozí vyzvali k její okamžité rezignaci.
+
+Patří mezi ně i německý ministr zahraničí Johann Wadephul, který označil její pozici za „neudržitelnou“; Francouzský ministr zahraničí Jean-Noel Barrot prohlásil, že Francie „bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky“ a vyzval ji k odstoupení; a italský ministr zahraničí Antonio Tajani, který prohlásil, že její „chování… není vhodné pro pozici, kterou zastává“.
+
+Mezi dalšími osobnostmi, které dezinformace zesílily ve veřejném prostoru, jsou také český ministr zahraničí Petr Macinka, který sdílí falešný citát Francescy Albanese na sociálních sítích a vyzývá ji k rezignaci; a americký velvyslanec Mike Waltz, který rovněž sdílí její falešný citát a zároveň ji obviňuje z antisemitismu.
+
+Rakouská ministryně zahraničí Beate Meinl-Reisinger šla ještě dál a obvinila Albanese z šíření nenávistných projevů a nedodržování standardů nestrannosti očekávaných od zástupců OSN.
+
 **UN Watch a jeho aktivity**
 
 Organizace [UN Watch](https://en.wikipedia.org/wiki/UN_Watch) byla založena v roce 1993 Morrisem B. Abramem, americkým právníkem a bývalým velvyslancem USA při OSN v Ženevě, za podpory Edgara Bronfmana, tehdejšího prezidenta Světového židovského kongresu. V roce 2001 se stala [plnou dceřinou organizací American Jewish Committee](https://en.wikipedia.org/wiki/UN_Watch). Prezentuje se jako hlídač OSN – její deklarovanou misí je „sledovat výkon OSN měřítkem jejího vlastního stanového dokumentu".
