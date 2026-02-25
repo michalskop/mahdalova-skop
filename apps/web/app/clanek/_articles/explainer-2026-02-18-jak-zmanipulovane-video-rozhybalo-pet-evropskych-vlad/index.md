@@ -17,9 +17,7 @@ V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním
 Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) včetně britského Computer Weekly, který případ podrobně zmapoval.
 
 ```infobox left
-„Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo.“
-[...]
-„Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
+„Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo.“ [...] „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
 ```
 
 A na konci řetězce stojí ministři zahraničí pěti evropských zemí, kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
@@ -46,7 +44,7 @@ Co Albanese skutečně řekla? Na [tiskové konferenci v Ženevě 15. září 20
 
 Tato nepřesnost je legitimním předmětem kritiky. Současně ale neplatí, že by Albanese neměla pro svou celkovou analýzu žádnou oporu. Mezinárodní soudní dvůr v Haagu v lednu 2024 nařídil Izraeli přijmout opatření k zabránění genocidě. Mezinárodní trestní soud vydal zatykače na izraelského premiéra a bývalého ministra obrany. Amnesty International v prosinci 2024 vydala rozsáhlou zprávu kvalifikující izraelské operace v Gaze jako genocidu. A 65 akademiků zabývajících se antisemitismem a holocaustem v prosinci 2022 prohlásilo, že „kampaň proti Albanese není o boji s antisemitismem, ale o snaze ji umlčet".
 
-Není to poprvé, kdy Albanese čelí ostrým sporům – a není to poprvé, kdy se za ni postavili diplomaté i vědci. Totéž se opakuje nyní, v únoru 2026, kvůli zmanipulovanému videu.
+Není to poprvé, kdy Albanese čelí ostré kritice – a není to poprvé, kdy se za ni postavili diplomaté i vědci. Totéž se opakuje nyní, v únoru 2026, kvůli zmanipulovanému videu.
 
 **Co je UN Watch**
 
@@ -57,6 +55,8 @@ V praxi se UN Watch dlouhodobě zaměřuje na kampaně proti kritikům Izraele v
 **Kdo potvrdil manipulaci videa**
 
 Fact-checková redakce [Euronews (The Cube)](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) provedla srovnání sestříhaného klipu s kompletním záznamem a konstatovala, že „video bylo zmanipulováno pomocí umělé inteligence" a že „upravené video, sdílené na YouTube kanálu UN Watch, zřejmě modifikuje Albaneseín hlas tak, aby naznačoval, že označila Izrael za ‚společného nepřítele' lidstva".
+
+![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž Francesca Albanese ze strany pěti vlád čelí](images/francesca-albanese-reuters.webp)
 
 Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) ve svém pětiminutovém příspěvku přesně rekonstruovala, jak ke kampani dezinformací došlo, a potvrdila, že Albanese inkriminovaný výrok nepronesla.
 
@@ -124,8 +124,8 @@ Případ Albanese ukazuje tentýž vzorec ve větším měřítku:
 
 4. **Důsledky.** Falešný popis se šíří rychle a hlasitě, naopak oprava přichází pozdě, tiše a obvykle dosáhne jen zlomku původního publika.
 
-Rozdíl je ve síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francescy Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
+Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francescy Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
 
 ---
 
-<RelatedArticles filter="explainer" count={6} sort="default" heading="Další články" />
+<RelatedArticles filter="explainer" count={9} showFormatBadge={false} sort="default" heading="Další články" />
