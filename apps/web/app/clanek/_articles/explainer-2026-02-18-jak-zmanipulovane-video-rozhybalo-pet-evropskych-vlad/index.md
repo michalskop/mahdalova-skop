@@ -12,6 +12,9 @@ Lobbistická organizace UN Watch rozšířila sestříhané video z konference v
 
 ## Jak jedno zmanipulované video rozhýbalo pět evropských vlád
 
+
+<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video"]} position="right" heading="Napsali jsme" />
+
 V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru.
 
 Nyní se totéž odehrává ve větším měřítku – s vážnějšími důsledky.

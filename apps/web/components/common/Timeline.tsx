@@ -97,15 +97,46 @@ function resolveCategoryColors(
   return fromThemeKey('brandNavy');
 }
 
+function facetValueToArray(value: string | string[] | undefined): string[] {
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'string' && value) return [value];
+  return [];
+}
+
+function parseDateInput(value: string): Date | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (m) {
+    const y = Number(m[1]);
+    const mo = Number(m[2]);
+    const d = Number(m[3]);
+    if (!Number.isFinite(y) || !Number.isFinite(mo) || !Number.isFinite(d)) return null;
+    return new Date(Date.UTC(y, mo - 1, d));
+  }
+
+  const dt = new Date(value);
+  if (Number.isNaN(dt.getTime())) return null;
+  return dt;
+}
+
+function formatEventDate(value: string, locale: string): string {
+  const dt = parseDateInput(value);
+  if (!dt) return value;
+  return dt.toLocaleDateString(locale);
+}
+
 function eventPrimaryCategory(event: TimelineEvent): string {
-  return event.facets?.topic || Object.values(event.facets || {})[0] || 'default';
+  const topic = facetValueToArray(event.facets?.topic)[0];
+  if (topic) return topic;
+  const first = Object.values(event.facets || {}).flatMap((v) => facetValueToArray(v))[0];
+  return first || 'default';
 }
 
 function eventMatchesFacets(event: TimelineEvent, activeFacets: Record<string, string | null>) {
   const facets = event.facets || {};
   for (const [facetKey, selected] of Object.entries(activeFacets)) {
     if (!selected) continue;
-    if (facets[facetKey] !== selected) return false;
+    const values = facetValueToArray(facets[facetKey]);
+    if (!values.includes(selected)) return false;
   }
   return true;
 }
@@ -277,7 +308,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
             const valuesInEvents = new Set<string>();
             events.forEach((e) => {
               const v = e.facets?.[group.key];
-              if (v) valuesInEvents.add(v);
+              facetValueToArray(v).forEach((vv) => valuesInEvents.add(vv));
             });
 
             const availableValues = group.values.filter((v) => valuesInEvents.has(v.key));
@@ -404,7 +435,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                       style={{ letterSpacing: '0.02em', color: theme.colors.gray[6] }}
                       mb={2}
                     >
-                      {e.date}
+                      {formatEventDate(e.date, 'cs-CZ')}
                     </Text>
                     <Text fw={600} style={{ fontSize: 15, lineHeight: 1.3 }}>
                       {e.title}
@@ -537,7 +568,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                               marginBottom: 2,
                             }}
                           >
-                            {e.date}
+                            {formatEventDate(e.date, 'cs-CZ')}
                           </Text>
                           <Text fw={600} style={{ fontSize: 15, lineHeight: 1.3 }}>
                             {e.title}
@@ -636,7 +667,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                       fontSize: 13,
                     }}
                   >
-                    {selected.date}
+                    {formatEventDate(selected.date, 'cs-CZ')}
                   </Text>
                 </Box>
               );

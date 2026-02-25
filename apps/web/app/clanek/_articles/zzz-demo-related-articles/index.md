@@ -231,6 +231,38 @@ _(Nothing above — correct behaviour.)_
 
 ---
 
+## 10. Floating position (`position` / `float`)
+
+By default, the component is inline (no floating). You can optionally float it left or right — same behaviour as `<InfoBox />`. On mobile it automatically stops floating and takes full width.
+
+### `position="right"`
+
+```mdx
+<RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: right" position="right" />
+```
+
+<RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: right" position="right" />
+
+---
+
+### `position="left"`
+
+```mdx
+<RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: left" position="left" />
+```
+
+<RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: left" position="left" />
+
+---
+
+### `position="none"` (or omit) — inline
+
+```mdx
+<RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: none (inline)" position="none" />
+```
+
+<RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: none (inline)" position="none" />
+
 ## All parameters
 
 | Parameter | Type | Default | Values | Description |
@@ -254,6 +286,8 @@ _(Nothing above — correct behaviour.)_
 | `showFormatBadge` | `boolean` | by preset | `true` `false` | Show category badge |
 | `showTopicBadge` | `boolean` | by preset | `true` `false` | Show topic/series badge |
 | `showEmbed` | `boolean` | by preset | `true` `false` | Show embedded player (podcasts) |
+| `position` | `"left" \| "right" \| "none"` | — | `"left"` `"right"` `"none"` | Float the block left/right (alias: `float`) |
+| `float` | `"left" \| "right" \| "none"` | — | `"left"` `"right"` `"none"` | Alias of `position` |
 
 ### Preset defaults
 

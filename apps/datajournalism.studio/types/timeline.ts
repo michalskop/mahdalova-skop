@@ -25,7 +25,7 @@ export interface TimelineEvent {
   id?: string;
   year?: number;
   month?: number;
-  facets?: Record<string, string>;
+  facets?: Record<string, string | string[]>;
   date: string;
   title: string;
   summary?: string;

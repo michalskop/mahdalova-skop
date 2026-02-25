@@ -14,15 +14,21 @@ import {
 } from '@mantine/core';
 import type { MantineSize } from '@mantine/core';
 import type { Article } from '../lib/getArticles';
+import styles from './box.module.css';
 
 type Preset = 'sidebar' | 'cards' | 'list';
 type ImagePos = 'top' | 'left' | 'right' | 'none';
 type CardBg = 'white' | 'cream' | 'transparent';
 type SortOrder = 'default' | 'newest';
+type FloatPos = 'right' | 'left' | 'none';
 
 interface RelatedArticlesProps {
   // Data (injected from scope by ArticleRenderer)
   pool?: Article[];
+
+  // Optional floating layout (similar to InfoBox)
+  float?: FloatPos;
+  position?: FloatPos;
 
   // Filtering (set by author in MDX)
   filter?: string | string[];
@@ -306,6 +312,8 @@ function MiniCard({
 
 export function RelatedArticles({
   pool = [],
+  float,
+  position,
   filter,
   tag,
   slugs,
@@ -330,6 +338,12 @@ export function RelatedArticles({
 }: RelatedArticlesProps) {
   const theme = useMantineTheme();
   const defaults = PRESET_DEFAULTS[preset];
+
+  const floatPos: FloatPos | undefined = float ?? position;
+  const floatClass =
+    floatPos === 'right' ? styles.floatRight :
+    floatPos === 'left' ? styles.floatLeft :
+    undefined;
 
   // Explicit props override preset defaults
   const effectiveColumns    = columns        ?? defaults.columns;
@@ -376,7 +390,7 @@ export function RelatedArticles({
   if (displayed.length === 0) return null;
 
   return (
-    <Box my="xl">
+    <Box my="xl" className={floatClass}>
       {effectiveHeading && (
         <Title
           order={3}

@@ -1,59 +1,120 @@
-- date: "2026-02-07"
-  title: "Albanese vystupuje v Dauhá"
-  description: "Francesca Albanese mluví na mediálním fóru Al-Džazíry přes videohovor. Kritizuje systém umožňující pokračování války v Gaze."
-  side: "left"
 
-- date: "2026-02-08"
-  title: "UN Watch šíří sestříhané video"
-  description: "Ženevská lobbistická organizace UN Watch zveřejňuje na YouTube sestříhanou verzi vystoupení Albanese. Video obsahuje stopy AI manipulace hlasu."
-  side: "right"
+title: "Časová osa"
 
-- date: "2026-02-09"
-  title: "Francouzští poslanci píšou Barrotovi"
-  description: "Skupina poslanců včetně Caroline Yadanové posílá ministru zahraničí Barrotovi dopis, v němž označuje Albaneseiny výroky za antisemitské. Citují přitom sestříhané video."
-  side: "left"
+facetGroups:
+  - key: geo
+    label: "Země"
+    values:
+      - key: "qa"
+        label: "Katar"
+        flag: "qa"
 
-- date: "2026-02-11"
-  title: "Barrot požaduje rezignaci"
-  description: "Francouzský ministr zahraničí Jean-Noël Barrot před Národním shromážděním vyzývá Albanese k rezignaci. Albanese zveřejňuje celou svou řeč a vysvětluje, co myslela 'společným nepřítelem'."
-  side: "right"
+      - key: "ch"
+        label: "Švýcarsko"
 
-- date: "2026-02-12"
-  title: "Přidávají se Německo a Česko"
-  description: "Německý ministr Wadephul označuje pozici Albanese za 'neudržitelnou'. Český ministr Macinka na X cituje falešný výrok a volá po rezignaci."
-  side: "left"
+        flag: "ch"
+      - key: "fr"
+        label: "Francie"
 
-- date: "2026-02-13"
-  title: "Rakousko a Itálie se přidávají"
-  description: "Rakouská ministryně Meinl-Reisinger obviňuje Albanese z nenávistného projevu. Italský ministr Tajani zpochybňuje její nestrannost. Na ČT Jakub Szántó označuje Albanese za 'antisemitskou aktivistku'."
-  side: "right"
+        flag: "fr"
+      - key: "de"
+        label: "Německo"
 
-- date: "2026-02-14"
-  title: "Fact-checky potvrzují manipulaci"
-  description: "Euronews (The Cube) a France24 (Truth or Fake) publikují analýzy potvrzující, že video bylo záměrně upraveno. Více než 100 umělců podepisuje dopis na podporu Albanese."
-  side: "left"
+        flag: "de"
+      - key: "cz"
+        label: "Česko"
 
-- date: "2026-02-15"
-  title: "Amnesty International požaduje omluvy"
-  description: "Generální tajemnice Amnesty International Agnès Callamardová požaduje veřejné omluvy a stažení výzev k rezignaci. Rakouská ministryně maže svůj příspěvek na X – bez omluvy."
-  side: "right"
+        flag: "cz"
+      - key: "at"
+        label: "Rakousko"
+        flag: "at"
+      - key: "it"
+        label: "Itálie"
+        flag: "it"
 
-- date: "2026-02-16"
-  title: "Zaměstnanci OSN se staví za Albanese"
-  description: "Skupina United Staff for Gaza odsuzuje útoky evropských ministrů. Šéf UNRWA Philippe Lazzarini označuje kampaň za pokus umlčet nezávislé lidskoprávní mechanismy."
-  side: "left"
 
-- date: "2026-02-18"
-  title: "151 diplomatů obviňuje Barrota z dezinformací"
-  description: "Koalice bývalých ministrů a diplomatů publikuje otevřený dopis. Panel šesti expertů OSN odsuzuje kampaň jako 'zakořeněnou v dezinformacích'. JURDI podává trestní oznámení na Barrota."
-  side: "right"
 
-- date: "2026-02-23"
-  title: "Zahájení zasedání Rady OSN pro lidská práva"
-  description: "Začíná 61. zasedání v Ženevě. Francie avizuje formální požadavek na odvolání Albanese. Jihoafrický ministr Lamola vyjadřuje znepokojení nad útoky na zpravodajku."
-  side: "left"
 
-- date: "2026-02-24"
-  title: "Žádná omluva"
-  description: "K tomuto datu žádná z pěti vlád nevydala veřejnou omluvu ani nestáhla výzvu k rezignaci, přestože manipulace videa je potvrzena Reuters, Euronews, France24 i panelem expertů OSN."
-  side: "right"
+events:
+  - date: "2026-02-07"
+    title: "Albanese vystupuje v Dauhá"
+    description: "Francesca Albanese mluví na mediálním fóru Al-Džazíry přes videohovor. Kritizuje systém umožňující pokračování války v Gaze."
+    side: "left"
+    facets:
+      geo: 
+        - qa
+
+  - date: "2026-02-08"
+    title: "UN Watch šíří sestříhané video"
+    description: "Ženevská lobbistická organizace UN Watch zveřejňuje na YouTube sestříhanou verzi vystoupení Albanese. Video obsahuje stopy AI manipulace hlasu."
+    side: "right"
+    facets:
+      geo: ch
+
+  - date: "2026-02-09"
+    title: "Francouzští poslanci píšou Barrotovi"
+    description: "Skupina poslanců včetně Caroline Yadanové posílá ministru zahraničí Barrotovi dopis, v němž označuje Albaneseiny výroky za antisemitské. Citují přitom sestříhané video."
+    side: "left"
+    facets:
+      geo: fr
+
+  - date: "2026-02-11"
+    title: "Barrot požaduje rezignaci"
+    description: "Francouzský ministr zahraničí Jean-Noël Barrot před Národním shromážděním vyzývá Albanese k rezignaci. Albanese zveřejňuje celou svou řeč a vysvětluje, co myslela 'společným nepřítelem'."
+    side: "right"
+    facets:
+      geo: fr
+
+  - date: "2026-02-12"
+    title: "Přidávají se Německo a Česko"
+    description: "Německý ministr Wadephul označuje pozici Albanese za 'neudržitelnou'. Český ministr Macinka na X cituje falešný výrok a volá po rezignaci."
+    side: "left"
+    facets:
+      geo: 
+        - cz
+        - de
+
+  - date: "2026-02-13"
+    title: "Rakousko a Itálie se přidávají"
+    description: "Rakouská ministryně Meinl-Reisinger obviňuje Albanese z nenávistného projevu. Italský ministr Tajani zpochybňuje její nestrannost. Na ČT Jakub Szántó označuje Albanese za 'antisemitskou aktivistku'."
+    side: "right"
+    facets:
+      geo: 
+        - at
+        - it
+
+  - date: "2026-02-14"
+    title: "Fact-checky potvrzují manipulaci"
+    description: "Euronews (The Cube) a France24 (Truth or Fake) publikují analýzy potvrzující, že video bylo záměrně upraveno. Více než 100 umělců podepisuje dopis na podporu Albanese."
+    side: "left"
+    facets:
+      geo: fr
+
+  - date: "2026-02-15"
+    title: "Amnesty International požaduje omluvy"
+    description: "Generální tajemnice Amnesty International Agnès Callamardová požaduje veřejné omluvy a stažení výzev k rezignaci. Rakouská ministryně maže svůj příspěvek na X – bez omluvy."
+    side: "right"
+    facets:
+      geo: "at"
+
+  - date: "2026-02-16"
+    title: "Zaměstnanci OSN se staví za Albanese"
+    description: "Skupina United Staff for Gaza odsuzuje útoky evropských ministrů. Šéf UNRWA Philippe Lazzarini označuje kampaň za pokus umlčet nezávislé lidskoprávní mechanismy."
+    side: "left"
+
+  - date: "2026-02-18"
+    title: "151 diplomatů obviňuje Barrota z dezinformací"
+    description: "Koalice bývalých ministrů a diplomatů publikuje otevřený dopis. Panel šesti expertů OSN odsuzuje kampaň jako 'zakořeněnou v dezinformacích'. JURDI podává trestní oznámení na Barrota."
+    side: "right"
+
+  - date: "2026-02-23"
+    title: "Zahájení zasedání Rady OSN pro lidská práva"
+    description: "Začíná 61. zasedání v Ženevě. Francie avizuje formální požadavek na odvolání Albanese. Jihoafrický ministr Lamola vyjadřuje znepokojení nad útoky na zpravodajku."
+    side: "left"
+    facets:
+      geo: ch
+
+  - date: "2026-02-24"
+    title: "Žádná omluva"
+    description: "K tomuto datu žádná z pěti vlád nevydala veřejnou omluvu ani nestáhla výzvu k rezignaci, přestože manipulace videa je potvrzena Reuters, Euronews, France24 i panelem expertů OSN."
+    side: "right"
