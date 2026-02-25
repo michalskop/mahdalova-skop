@@ -54,12 +54,13 @@ Totéž konstatoval [Úřad vysokého komisaře OSN pro lidská práva](https://
 
 Jean-Noël Barrot, francouzský ministr zahraničí, v dubnu 2024, ještě jako ministr pro Evropu, [varoval v rozhovoru pro deník Ouest-France](https://www.theguardian.com/world/2024/apr/22/france-being-pounded-by-russian-disinformation-says-minister) před ruskou dezinformační kampaní cílící na Francii: „Nemine týden, kdy by Francie nebyla terčem koordinovaných a záměrných manévrů s cílem narušit veřejnou debatu," prohlásil tehdy – a citoval konkrétní příklady falešných webů ministerstev, které šířily nepravdivé zprávy. O necelé dva roky později se sám stal šiřitelem nepravdivé informace o představitelce OSN.
 
-```infobox right
 Podle informací [rakouského webu tkp.at](https://tkp.at/2026/02/15/aussenminister-von-5-eu-laendern-fordern-auf-basis-fake-ki-video-ruecktritt-von-uno-berichterstatterin-albanese/), které se opírají o veřejně dostupný řetězec sdílení, izraelská ambasáda v Paříži předala sestříhané video francouzskému ministerstvu zahraničí. Barrot ho [citoval před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/) a vyzval Albanese k rezignaci s tím, že Francie „bezvýhradně odsuzuje skandální a zavrženíhodné výroky".
 
 Během následujících dnů se přidali ministři dalších zemí: [německý Johann Wadephul](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) označil její setrvání ve funkci za „neudržitelné", [rakouská Beate Meinl-Reisinger](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) ji obvinila z nenávistného projevu, [italský Antonio Tajani](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) zpochybnil její nestrannost a [český Petr Macinka](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) (Motoristé sobě) citoval na X falešný výrok a vyzval k její rezignaci.
 
+```infobox warning right
 ![Příspěvek českého ministra zahraničí Petra Macinky na X](images/francesca-albanese-twitter-dementi.webp)
+[Příspěvek](https://x.com/mzvcr/status/2022211836020654247) českého ministra zahraničí Petra Macinky
 ```
 
 ## Časová osa
