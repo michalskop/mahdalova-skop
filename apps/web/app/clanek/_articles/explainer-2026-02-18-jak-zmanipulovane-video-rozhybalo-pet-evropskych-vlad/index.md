@@ -19,7 +19,7 @@ Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (
 ```infobox right
 **Co doopravdy řekla Francesca Albanese**
 
-Dne 7. února 2026 promluvila zpravodajky OSN na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Přibližně ve čtyřminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze:
+Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Zhruba [ve tříminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze](https://www.youtube.com/watch?v=wmJUNHECBGI):
 
 *„Skutečnost, že většina zemí světa Izrael nezastavila, ale naopak ho vyzbrojila, poskytla mu politické výmluvy, politickou ochranu a ekonomickou a finanční podporu – to je výzva. (...) My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně, nyní vidíme, že jako lidstvo máme společného nepřítele a že respektování základních svobod je poslední mírovou cestou, posledním mírovým nástrojem, který máme k znovuzískání naší svobody."*
 
@@ -97,7 +97,7 @@ Italská právnička (nar. 1977), absolventka univerzity v Pise a londýnské SO
 
 Po prokázání manipulace videa se české ministerstvo zahraničí ke kauze již nevyjádřilo a své výroky nedementovalo ani neodstranilo.
 
-Reportér České televize Jakub Szántó případ 13. února komentoval na X slovy, že „Česko se připojilo k Francii" a požaduje „odstranění antisemitské aktivistky Francesky Albanese z oficiální funkce OSN". Když ho uživatelé upozornili, že Albanese inkriminovaný výrok nepronesla, Szántó se už k obsahu svého tvrzení nevyjádřil.
+Reportér České televize [Jakub Szántó případ 13. února komentoval](https://x.com/michaldvorak/status/2022291346967478393) na X slovy, že „Česko se připojilo k Francii" a požaduje „odstranění antisemitské aktivistky Francesky Albanese z oficiální funkce OSN". Když ho uživatelé upozornili, že Albanese inkriminovaný výrok nepronesla, Szántó se už k obsahu svého tvrzení nevyjádřil. 
 
 Reportáž ČT z téhož dne zmínila „sestříhané video" jednou větou, ale nevysvětlila, v čem manipulace spočívala, jak vznikla ani kdo za ní stojí. Český rozhlas postupoval obdobně.
 
