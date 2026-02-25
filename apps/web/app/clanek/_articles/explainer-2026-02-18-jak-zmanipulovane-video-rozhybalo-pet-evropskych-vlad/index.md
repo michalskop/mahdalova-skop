@@ -14,16 +14,12 @@ Lobbistická organizace UN Watch rozšířila sestříhané video z konference v
 
 V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
 
-Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) včetně britského Computer Weekly, který případ podrobně zmapoval.
+Tentokrát jde o úmyslně zmanipulované video, ve kterém mluví zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), viz třeba britský Computer Weekly, který případ podrobně zmapoval. 
 
-```infobox left
-„Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo.“ [...] „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
-```
-
-A na konci řetězce stojí ministři zahraničí pěti evropských zemí, kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
+Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (včetně ČR), kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Nyní už čtyři; rakouská ministryně zahraničí svůj post stáhla. I nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
 
 ```infobox right
-**Co řekla Francesca Albanese**
+**Co doopravdy řekla Francesca Albanese**
 
 Dne 7. února 2026 promluvila zpravodajky OSN na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Přibližně ve čtyřminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze:
 
@@ -34,19 +30,7 @@ Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem"
 ![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
 ```
 
-**Tvrzení českých médií vs. fakta**
-
-Česká média i český ministr zahraničí Albanese opakovaně charakterizovali jako osobu, která se „dopouští kontroverzních výroků na adresu Izraele a obecně Židů". Konkrétně jí bylo vyčítáno, že koncem září 2025 „přišla s nepodloženým tvrzením, že v důsledku války Izraele proti Hamásu zemřelo v Gaze 680 tisíc lidí, z toho 380 tisíc dětí mladších pěti let", s dovětkem, že „tolik jich tam přitom ani podle palestinských statistik nikdy nežilo".
-
-Co Albanese skutečně řekla? Na [tiskové konferenci v Ženevě 15. září 2025](https://www.un.org/unispal/document/press-briefing-francesca-albanese-16sep25/) uvedla: „65 000 je počet Palestinců s jistotou zabitých (...). Ve skutečnosti bychom měli začít uvažovat o čísle 680 000, protože to je číslo, které uvádějí někteří vědci jako skutečný počet obětí v Gaze." Odkázala přitom na akademickou studii australských badatelů publikovanou v časopise Arena. Dodala, že „bude těžké toto číslo prokázat nebo vyvrátit, zejména pokud vyšetřovatelům zůstane vstup do Gazy zakázán".
-
-Číslo 380 000 dětí pod pět let je skutečně problematické – podle Palestinského centrálního statistického úřadu žilo v Gaze před válkou přibližně 341 790 dětí v tomto věku, tedy méně, než Albanese uváděla jako mrtvé. Na tuto nesrovnalost upozornily jak [protiizraelské](https://www.meforum.org/mef-online/war-numbers-the-most-powerful-weapon-against-israel), tak [proizraelské zdroje](https://unwatch.org/francesca-albaneses-seven-most-shocking-statements-in-september-2025/). Albanese sama uvedla, že číslo použila „provokativně" a že se opírá o odhady vědců, nikoli o ověřená data.
-
-Tato nepřesnost je legitimním předmětem kritiky. Současně ale neplatí, že by Albanese neměla pro svou celkovou analýzu žádnou oporu. Mezinárodní soudní dvůr v Haagu v lednu 2024 nařídil Izraeli přijmout opatření k zabránění genocidě. Mezinárodní trestní soud vydal zatykače na izraelského premiéra a bývalého ministra obrany. Amnesty International v prosinci 2024 vydala rozsáhlou zprávu kvalifikující izraelské operace v Gaze jako genocidu. A 65 akademiků zabývajících se antisemitismem a holocaustem v prosinci 2022 prohlásilo, že „kampaň proti Albanese není o boji s antisemitismem, ale o snaze ji umlčet".
-
-Není to poprvé, kdy Albanese čelí ostré kritice – a není to poprvé, kdy se za ni postavili diplomaté i vědci. Totéž se opakuje nyní, v únoru 2026, kvůli zmanipulovanému videu.
-
-**Co je UN Watch**
+**UN Watch a jeho aktivity**
 
 Organizace [UN Watch](https://en.wikipedia.org/wiki/UN_Watch) byla založena v roce 1993 Morrisem B. Abramem, americkým právníkem a bývalým velvyslancem USA při OSN v Ženevě, za podpory Edgara Bronfmana, tehdejšího prezidenta Světového židovského kongresu. V roce 2001 se stala [plnou dceřinou organizací American Jewish Committee](https://en.wikipedia.org/wiki/UN_Watch). Prezentuje se jako hlídač OSN – její deklarovanou misí je „sledovat výkon OSN měřítkem jejího vlastního stanového dokumentu".
 
@@ -54,13 +38,17 @@ V praxi se UN Watch dlouhodobě zaměřuje na kampaně proti kritikům Izraele v
 
 **Kdo potvrdil manipulaci videa**
 
-Fact-checková redakce [Euronews (The Cube)](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) provedla srovnání sestříhaného klipu s kompletním záznamem a konstatovala, že „video bylo zmanipulováno pomocí umělé inteligence" a že „upravené video, sdílené na YouTube kanálu UN Watch, zřejmě modifikuje Albaneseín hlas tak, aby naznačoval, že označila Izrael za ‚společného nepřítele' lidstva".
+Fact-checkingová redakce [Euronews (The Cube)](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) provedla srovnání sestříhaného klipu s kompletním záznamem a konstatovala, že „video bylo zmanipulováno pomocí umělé inteligence" a že „upravené video, sdílené na YouTube kanálu UN Watch, zřejmě modifikuje Albaneseín hlas tak, aby naznačoval, že označila Izrael za ‚společného nepřítele' lidstva".
 
 ![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž Francesca Albanese ze strany pěti vlád čelí](images/francesca-albanese-reuters.webp)
 
-Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) ve svém pětiminutovém příspěvku přesně rekonstruovala, jak ke kampani dezinformací došlo, a potvrdila, že Albanese inkriminovaný výrok nepronesla.
+Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) ve svém pětiminutovém příspěvku přesně rekonstruovala, jak k dezinformační kampani došlo, a potvrdila, že Albanese inkriminovaný výrok nepronesla.
 
 Totéž konstatoval [Úřad vysokého komisaře OSN pro lidská práva](https://www.middleeasteye.net/news/un-panel-european-calls-resignation-albanese-rooted-disinformation). [Reuters uvedl](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese), že „AI-manipulované video se ukázalo jako zdroj obvinění" a že „neexistuje precedent pro odvolání zvláštního zpravodaje v průběhu mandátu". Britský [Computer Weekly shrnul](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur): „Řada médií včetně Reuters a France24, stejně jako Úřad vysokého komisaře OSN pro lidská práva, potvrdily, že odkazované video je zmanipulované."
+
+```infobox left
+> „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
+```
 
 **Jak se video dostalo k ministrům**
 
@@ -88,7 +76,11 @@ K 24. únoru 2026 žádná z pěti vlád veřejnou omluvu nevydala.
 
 Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako jediná z pětice alespoň částečně couvla, byť bez omluvy a opravy. Německý ministr Wadephul nepovažuje korekci za nutnou. Francouzský ministr Barrot tvrdí, že jeho výzva „neměla nic společného se sestříhaným videem", a přesunul argumentaci na starší výroky Albanese. České ministerstvo zahraničí pod vedením Petra Macinky se k manipulaci videa vůbec nevyjádřilo a své výroky nedementovalo ani neodstranilo.
 
-[Amnesty International požaduje](https://www.amnesty.org/en/latest/news/2026/02/european-states-must-retract-attacks-francesca-albanese/), aby ministři „šli za pouhé mazání příspěvků na sociálních sítích – jak to někteří učinili – a veřejně se omluvili a stáhli výzvy k rezignaci". Claudio Francavilla z Human Rights Watch to [shrnul pro EUobserver](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/): „Buď si nevšimli, že video bylo zmanipulované, nebo si toho všimli a přesto se rozhodli na jeho základě zaútočit. Nevím, která z variant svědčí o vyšší míře nekompetence."
+[Amnesty International požaduje](https://www.amnesty.org/en/latest/news/2026/02/european-states-must-retract-attacks-francesca-albanese/), aby ministři „šli za pouhé mazání příspěvků na sociálních sítích – jak to někteří učinili – a veřejně se omluvili a stáhli výzvy k rezignaci". 
+
+Claudio Francavilla z Human Rights Watch to [shrnul pro EUobserver](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/): „Buď si nevšimli, že video bylo zmanipulované, nebo si toho všimli a přesto se rozhodli na jeho základě zaútočit. Nevím, která z variant svědčí o vyšší míře nekompetence."
+
+„Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
 
 ```infobox right
 **Kdo je Francesca Albanese**
@@ -128,4 +120,17 @@ Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu 
 
 ---
 
-<RelatedArticles filter="explainer" count={9} showFormatBadge={false} sort="default" heading="Další články" />
+**Tvrzení českých médií vs. fakta**
+
+Česká média i český ministr zahraničí Albanese opakovaně charakterizovali jako osobu, která se „dopouští kontroverzních výroků na adresu Izraele a obecně Židů". Konkrétně jí bylo vyčítáno, že koncem září 2025 „přišla s nepodloženým tvrzením, že v důsledku války Izraele proti Hamásu zemřelo v Gaze 680 tisíc lidí, z toho 380 tisíc dětí mladších pěti let", s dovětkem, že „tolik jich tam přitom ani podle palestinských statistik nikdy nežilo".
+
+Co Albanese skutečně řekla? Na [tiskové konferenci v Ženevě 15. září 2025](https://www.un.org/unispal/document/press-briefing-francesca-albanese-16sep25/) uvedla: „65 000 je počet Palestinců s jistotou zabitých (...). Ve skutečnosti bychom měli začít uvažovat o čísle 680 000, protože to je číslo, které uvádějí někteří vědci jako skutečný počet obětí v Gaze." Odkázala přitom na akademickou studii australských badatelů publikovanou v časopise Arena. Dodala, že „bude těžké toto číslo prokázat nebo vyvrátit, zejména pokud vyšetřovatelům zůstane vstup do Gazy zakázán".
+
+Číslo 380 000 dětí pod pět let je skutečně problematické – podle Palestinského centrálního statistického úřadu žilo v Gaze před válkou přibližně 341 790 dětí v tomto věku, tedy méně, než Albanese uváděla jako mrtvé. Na tuto nesrovnalost upozornily jak [protiizraelské](https://www.meforum.org/mef-online/war-numbers-the-most-powerful-weapon-against-israel), tak [proizraelské zdroje](https://unwatch.org/francesca-albaneses-seven-most-shocking-statements-in-september-2025/). Albanese sama uvedla, že číslo použila „provokativně" a že se opírá o odhady vědců, nikoli o ověřená data.
+
+Tato nepřesnost je legitimním předmětem kritiky. Současně ale neplatí, že by Albanese neměla pro svou celkovou analýzu žádnou oporu. Mezinárodní soudní dvůr v Haagu v lednu 2024 nařídil Izraeli přijmout opatření k zabránění genocidě. Mezinárodní trestní soud vydal zatykače na izraelského premiéra a bývalého ministra obrany. Amnesty International v prosinci 2024 vydala rozsáhlou zprávu kvalifikující izraelské operace v Gaze jako genocidu. A 65 akademiků zabývajících se antisemitismem a holocaustem v prosinci 2022 prohlásilo, že „kampaň proti Albanese není o boji s antisemitismem, ale o snaze ji umlčet".
+
+Není to poprvé, kdy Albanese čelí ostré kritice – a není to poprvé, kdy se za ni postavili diplomaté i vědci. Totéž se opakuje nyní, v únoru 2026, kvůli zmanipulovanému videu.
+
+
+<RelatedArticles filter="explainer" count={9} showFormatBadge={false} showAuthor={false} sort="default" heading="Další články" />
