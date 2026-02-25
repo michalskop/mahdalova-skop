@@ -46,7 +46,7 @@ Není to poprvé, kdy Albanese čelí ostrým sporům – a není to poprvé, kd
 
 Organizace [UN Watch](https://en.wikipedia.org/wiki/UN_Watch) byla založena v roce 1993 Morrisem B. Abramem, americkým právníkem a bývalým velvyslancem USA při OSN v Ženevě, za podpory Edgara Bronfmana, tehdejšího prezidenta Světového židovského kongresu. V roce 2001 se stala [plnou dceřinou organizací American Jewish Committee](https://en.wikipedia.org/wiki/UN_Watch). Prezentuje se jako hlídač OSN – její deklarovanou misí je „sledovat výkon OSN měřítkem jejího vlastního stanového dokumentu".
 
-V praxi se UN Watch dlouhodobě zaměřuje na kampaně proti kritikům Izraele v systému OSN. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" označila [agentura AFP v roce 2009](https://en.wikipedia.org/wiki/UN_Watch). Americká novinářka a aktivistka Phyllis Bennisová ji nazvala „malou ženevskou pravicovou organizací", která je „posedlá snahou podkopávat a delegitimizovat" zvláštní zpravodaje kritické vůči Izraeli. V roce 2025 UN Watch [neúspěšně usilovala](https://www.trtworld.com/article/6e0b924d2b9d) o zabránění prodloužení mandátu Francesky Albanese. Poté, co tato cesta selhala, [rozšířila sestříhané video](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) z konference v Dauhá, které přisoudilo Albanese výrok, který nikdy nepronesla.
+V praxi se UN Watch dlouhodobě zaměřuje na kampaně proti kritikům Izraele v systému OSN. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" označila [agentura AFP v roce 2009](https://en.wikipedia.org/wiki/UN_Watch). Americká novinářka Phyllis Bennisová ji nazvala „malou ženevskou pravicovou organizací", která je „posedlá snahou podkopávat a delegitimizovat" zvláštní zpravodaje kritické vůči Izraeli. V roce 2025 UN Watch [neúspěšně usilovala](https://www.trtworld.com/article/6e0b924d2b9d) o zabránění prodloužení mandátu Francesky Albanese. Nyní [rozšířila sestříhané video](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) z konference v Dauhá, které přisoudilo Albanese výrok, který nikdy nepronesla.
 
 **Kdo potvrdil manipulaci videa**
 
@@ -69,10 +69,11 @@ Během následujících dnů se přidali ministři dalších zemí: [německý J
 ```
 ---
 
+```infobox left
 ## Časová osa
 
 <Timeline yamlFile="timeline.yaml" />
-
+```
 ---
 
 **Omluvy se nekonají**
@@ -103,7 +104,7 @@ Reportér České televize Jakub Szántó případ 13. února komentoval na X sl
 
 Reportáž ČT z téhož dne zmínila „sestříhané video" jednou větou, ale nevysvětlila, v čem manipulace spočívala, jak vznikla ani kdo za ní stojí. Český rozhlas postupoval obdobně.
 
-## Vzorec, který se opakuje
+**Vzorec, který se opakuje**
 
 V listopadu 2024 jsme popsali, [jakým jedno video z Amsterdamu prošlo řetězcem](/clanek/kontext-2024-11-14-amsterdam-video) sociální síť → anonymní účet → ČTK → česká média a cestou si změnilo význam.
 
@@ -121,4 +122,4 @@ Rozdíl je ve síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu
 
 ---
 
-<RelatedArticles filter="explainer" count={6} sort="default" heading="Sort: default (score)" />
+<RelatedArticles filter="explainer" count={6} sort="default" heading="Další články" />
