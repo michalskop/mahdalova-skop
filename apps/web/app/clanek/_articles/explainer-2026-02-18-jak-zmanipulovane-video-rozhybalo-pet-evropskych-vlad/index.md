@@ -111,7 +111,7 @@ Reportáž ČT z téhož dne zmínila „sestříhané video" jednou větou, ale
 
 V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
 
-Případ Albanese ukazuje tentýž vzorec:
+Případ Francescy Albanese je v podstatě tentýž model:
 
 1. **Manipulace u zdroje.** V Amsterdamu anonymní účet @sentdefender s milionem sledujících. V případě Albanese organizace UN Watch – pro-izraelská lobbistická skupina, jejíž ředitel Hillel Neuer zveřejnil zkrácený klip jako první dohledatelný zdroj online.
 
@@ -122,20 +122,6 @@ Případ Albanese ukazuje tentýž vzorec:
 4. **Důsledky.** Falešný popis se šíří rychle a hlasitě, naopak oprava přichází pozdě, tiše a obvykle dosáhne jen zlomku původního publika.
 
 Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francesky Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
-
----
-
-### Tvrzení českých médií vs. fakta
-
-Česká média i český ministr zahraničí Albanese opakovaně charakterizovali jako osobu, která se „dopouští kontroverzních výroků na adresu Izraele a obecně Židů". Konkrétně jí vyčítají, že koncem září 2025 „přišla s nepodloženým tvrzením, že v důsledku války Izraele proti Hamásu zemřelo v Gaze 680 tisíc lidí, z toho 380 tisíc dětí mladších pěti let", s dovětkem, že „tolik jich tam přitom ani podle palestinských statistik nikdy nežilo".
-
-Co Albanese skutečně řekla? Na [tiskové konferenci v Ženevě 15. září 2025](https://www.un.org/unispal/document/press-briefing-francesca-albanese-16sep25/) uvedla: „65 000 je počet Palestinců s jistotou zabitých (...). Ve skutečnosti bychom měli začít uvažovat o čísle 680 000, protože to je číslo, které uvádějí někteří vědci jako skutečný počet obětí v Gaze." Odkázala přitom na akademickou studii australských badatelů publikovanou v časopise Arena. Dodala, že „bude těžké toto číslo prokázat nebo vyvrátit, zejména pokud vyšetřovatelům zůstane vstup do Gazy zakázán".
-
-Číslo 380 000 dětí pod pět let je skutečně problematické – podle Palestinského centrálního statistického úřadu žilo v Gaze před válkou přibližně 341 790 dětí v tomto věku, tedy méně, než Albanese uváděla jako mrtvé. Na tuto nesrovnalost upozornily jak [protiizraelské](https://www.meforum.org/mef-online/war-numbers-the-most-powerful-weapon-against-israel), tak [proizraelské zdroje](https://unwatch.org/francesca-albaneses-seven-most-shocking-statements-in-september-2025/). Albanese sama uvedla, že číslo použila „provokativně" a že se opírá o odhady vědců, nikoli o ověřená data.
-
-Tato nepřesnost je legitimním předmětem kritiky. Současně ale neplatí, že by Albanese neměla pro svou celkovou analýzu žádnou oporu. Mezinárodní soudní dvůr v Haagu v lednu 2024 nařídil Izraeli přijmout opatření k zabránění genocidě. Mezinárodní trestní soud vydal zatykače na izraelského premiéra a bývalého ministra obrany. Amnesty International v prosinci 2024 vydala rozsáhlou zprávu kvalifikující izraelské operace v Gaze jako genocidu. A 65 akademiků zabývajících se antisemitismem a holocaustem v prosinci 2022 prohlásilo, že „kampaň proti Albanese není o boji s antisemitismem, ale o snaze ji umlčet".
-
-Není to poprvé, kdy Albanese čelí ostré kritice – a není to poprvé, kdy se za ni postavili diplomaté i vědci. Totéž se opakuje nyní, v únoru 2026, kvůli zmanipulovanému videu.
 
 
 <RelatedArticles filter="explainer" count={9} showFormatBadge={false} showAuthor={false} sort="default" heading="Další články" />
