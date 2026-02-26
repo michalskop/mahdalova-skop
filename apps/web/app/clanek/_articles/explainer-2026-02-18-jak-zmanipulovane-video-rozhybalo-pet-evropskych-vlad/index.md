@@ -12,9 +12,23 @@ Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve
 
 <RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} position="right" heading="Napsali jsme" />
 
-Na začátku dezinformačního řetězce stojí lobbistická organizace UN Watch s přímou vazbou na izraelskou diplomacii. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" [označila agentura AFP](https://en.wikipedia.org/wiki/UN_Watch) již v roce 2009; její provázanost s American Jewish Committee a zaměření na obranu izraelských zájmů v OSN [dokumentuje řada zdrojů](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), viz třeba britský Computer Weekly, který případ šíření dezinformace podrobně zmapoval. Organizace UN Watch zmíněné video z nedávné konference v katarském hlavním městě Dauhá sestříhala.
+### Odkud se video vzalo
 
-Na konci tohoto řetězce stojí ministři zahraničí pěti evropských zemí (včetně ČR), kteří požadují rezignaci představitelky OSN na základě výroku, který nikdy nepronesla. Přesněji, teď už jen čtyři ministři; rakouská ministryně zahraničí totiž svůj post stáhla. I však nadále [čelí kritice](https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/), že se na tomto sdílení dezinformací podílela.
+Dne 8. února 2026 – den po vystoupení Francesky Albanese na mediálním fóru Al-Džazíry v Dauhá – zveřejnil ředitel organizace UN Watch Hillel Neuer na síti X [zkrácený klip z jejího projevu](https://x.com/HillelNeuer/status/2020454512356376911) s komentářem, že Albanese „staví židovský stát do role ontologické síly korumpující samo lidstvo". Totéž video se objevilo na [YouTube kanálu UN Watch](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity).
+
+Sama Albanese na X upozornila, že [první výskyt zkráceného klipu online lze dohledat právě u Neuera](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur). Totéž nezávisle konstatoval [analytik Martin Konečný](https://x.com/MartinKonecny/status/2022664436272513375), z organizace European Middle East Project. A [v dalším postu upozornil](https://x.com/MartinKonecny/status/2024813747919806764/photo/1), že se v zrcadle na fotografii z videa objevuje logo UN Watch.
+
+Fact-checkingová redakce **Euronews (The Cube)** porovnala zkrácený klip s kompletním záznamem projevu a [konstatovala](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity), že „srovnání mezi sestříhaným klipem a úplným záznamem projevu Albanese naznačuje, že výňatek byl zmanipulován s využitím umělé inteligence" a že „upravené video sdílené na YouTube kanálu UN Watch zřejmě modifikuje hlas Francesky Albanese tak, aby to vypadalo, že označila Izrael za ‚společného nepřítele' lidstva". Euronews zdůraznil, že video obsahuje titulky s označením „UN Watch". **Euronews oslovil UN Watch s žádostí o vyjádření, organizace nereagovala.**
+
+Redakce **Computer Weekly** (britský oborový server pro IT profesionály) případ [podrobně zmapovala](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) a potvrdila, že řada médií včetně Reuters a France24, jakož i Úřad vysokého komisaře OSN pro lidská práva, potvrdily, že video je zmanipulované. **Computer Weekly kontaktoval UN Watch s dotazem na zdroj klipu a na to, zda si byl Neuer vědom, že video bylo upraveno. Organizace neodpověděla.** Computer Weekly rovněž oslovil kanceláře všech politiků, kteří dezinformaci ve veřejném prostoru zesílili; odpovědělo pouze německé spolkové ministerstvo zahraničí a své prohlášení nezmírnilo.
+
+Redakce **France24 (Truth or Fake)** ve svém [pětiminutovém fact-checkovém příspěvku](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) rekonstruovala, jak dezinformace vznikla, a potvrdila, že Albanese inkriminovaný výrok nepronesla. Albanese v tomto příspěvku přímo pro France24 označila zkrácení videa za „manipulaci".
+
+Mluvčí **Úřadu vysokého komisaře OSN pro lidská práva** Marta Hurtado na tiskové konferenci [potvrdila](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur), že Albanese „neoznačila žádný stát za nepřítele lidstva" a vyzvala „všechny, aby si její projev poslechli". Dodala, že Albanese hovořila o „širších systémových hrozbách" pro lidská práva.
+
+Agentura **Reuters** informovala, že AI-manipulované video se ukázalo jako zdroj obvinění, a [citovala panel šesti nezávislých expertů OSN](https://www.reuters.com/world/middle-east/independent-un-body-condemns-vicious-attacks-un-expert-palestinian-rights-2026-02-17/), kteří výzvy k rezignaci Albanese odsoudili jako „zakořeněné v dezinformaci" a „založené na vymyšlených faktech".
+
+Podle informací [rakouského serveru tkp.at](https://tkp.at/2026/02/15/aussenminister-von-5-eu-laendern-fordern-auf-basis-fake-ki-video-ruecktritt-von-uno-berichterstatterin-albanese/) izraelská ambasáda v Paříži předala sestříhané video francouzskému ministerstvu zahraničí. (Tuto informaci jsme nemohli nezávisle ověřit z dalšího zdroje.)
 
 ```infobox warning right
 **Co doopravdy Francesca Albanese řekla**
@@ -32,48 +46,40 @@ Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem"
 ![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž čelí Francesca Albanese ze strany pěti vlád](images/francesca-albanese-reuters.webp)
 ```
 
-Přední politici a diplomatické osobnosti z Francie, Německa, Itálie, Česka, Rakouska a USA Francescu Albanese ostře odsoudili a mnozí ji vyzvali k okamžité rezignaci. Patří mezi ně i německý ministr zahraničí Johann Wadephul, který označil její pozici za „neudržitelnou“; Francouzský ministr zahraničí Jean-Noel Barrot prohlásil, že Francie „bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky“ a vyzval ji k odstoupení; a italský ministr zahraničí Antonio Tajani, který prohlásil, že její „chování… není vhodné pro pozici, kterou zastává“. Mezi dalšími osobnostmi, které tyto dezinformace zesílily ve veřejném prostoru, jsou také český ministr zahraničí Petr Macinka, jenž sdílí falešný citát na sociálních sítích a vyzývá Francescu Albanese k rezignaci; a americký velvyslanec Mike Waltz, který rovněž sdílí její falešný citát a zároveň ji obviňuje z antisemitismu.
+### Kdo na video reagoval
 
-Rakouská ministryně zahraničí Beate Meinl-Reisinger šla ještě dál a obvinila Albanese z šíření nenávistných projevů a nedodržování standardů nestrannosti očekávaných od zástupců OSN.
+Přední politici a diplomatické osobnosti z Francie, Německa, Itálie, Česka, Rakouska a USA Francescu Albanese ostře odsoudili a mnozí ji vyzvali k okamžité rezignaci. Německý ministr zahraničí Johann Wadephul označil její pozici za „neudržitelnou". Francouzský ministr zahraničí Jean-Noël Barrot [prohlásil před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/), že Francie „bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky" – reagoval přitom na interpelaci poslankyně Caroline Yadan, která Albanese falešně obvinila z inkriminovaného výroku. Italský ministr zahraničí Antonio Tajani prohlásil, že její „chování… není vhodné pro pozici, kterou zastává".
 
-### UN Watch a jeho aktivity
-
-Organizace [UN Watch](https://en.wikipedia.org/wiki/UN_Watch) byla založena v roce 1993 Morrisem B. Abramem, americkým právníkem a bývalým velvyslancem USA při OSN v Ženevě, za podpory Edgara Bronfmana, tehdejšího prezidenta Světového židovského kongresu. V roce 2001 se stala [plnou dceřinou organizací American Jewish Committee](https://en.wikipedia.org/wiki/UN_Watch). Prezentuje se jako hlídač OSN – její deklarovanou misí je „sledovat výkon OSN měřítkem jejího vlastního stanového dokumentu".
-
-V praxi se UN Watch dlouhodobě zaměřuje na kampaně proti kritikům Izraele v systému OSN. Organizaci jako „lobbistickou skupinu se silnými vazbami na Izrael" označila [agentura AFP v roce 2009](https://en.wikipedia.org/wiki/UN_Watch). U kritiků má pověst malé ženevské pravicové organizace, která se snaží podkopávat a delegitimizovat zvláštní zpravodaje OSN kritické vůči Izraeli. V roce 2025 UN Watch [neúspěšně usilovala](https://www.trtworld.com/article/6e0b924d2b9d) o zabránění prodloužení mandátu Francesky Albanese. Nyní [rozšířila sestříhané video](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) z konference v Dauhá, které přisoudilo Albanese výrok, který nikdy nepronesla.
-
-### Kdo potvrdil manipulaci videa
-
-Fact-checkingová redakce [Euronews (The Cube)](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity) provedla srovnání sestříhaného klipu s kompletním záznamem a konstatovala, že „video bylo zmanipulováno pomocí umělé inteligence" a že „upravené video, sdílené na YouTube kanálu UN Watch, zřejmě modifikuje hlas Francescy Albanese tak, aby to vypadalo, že označila Izrael za ‚společného nepřítele' lidstva".
-
-Redakce [France24 (Truth or Fake)](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) ve svém pětiminutovém příspěvku přesně rekonstruovala, jak k dezinformační kampani došlo, a potvrdila, že Albanese inkriminovaný výrok nepronesla.
-
-Totéž konstatoval [Úřad vysokého komisaře OSN pro lidská práva](https://www.middleeasteye.net/news/un-panel-european-calls-resignation-albanese-rooted-disinformation). [Reuters uvedl](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese), že „AI-manipulované video se ukázalo jako zdroj obvinění" a že „neexistuje precedent pro odvolání zvláštního zpravodaje v průběhu mandátu". Britský [Computer Weekly shrnul](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur): „Řada médií včetně Reuters a France24, stejně jako Úřad vysokého komisaře OSN pro lidská práva, potvrdily, že odkazované video je zmanipulované."
-
-```infobox warning left
-> „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
-```
-
-Koordinační výbor OSN složený ze šesti nezávislých odborníků upozornil evropské ministry, že se opírají o „vymyšlená fakta“, [informuje agentura Reuters](https://www.reuters.com/world/middle-east/independent-un-body-condemns-vicious-attacks-un-expert-palestinian-rights-2026-02-17/). Výbor uvedl, že tlak vyvíjený na Albaneseovou je součástí rostoucího trendu politicky motivovaných a zlovolných útoků proti nezávislým odborníkům na lidská práva, úředníkům OSN a soudcům mezinárodních soudů.
-
-### Jak se video dostalo k ministrům
-
-Jean-Noël Barrot, francouzský ministr zahraničí, v dubnu 2024, ještě jako ministr pro Evropu, [varoval v rozhovoru pro deník Ouest-France](https://www.theguardian.com/world/2024/apr/22/france-being-pounded-by-russian-disinformation-says-minister) před ruskou dezinformační kampaní cílící na Francii: „Nemine týden, kdy by Francie nebyla terčem koordinovaných a záměrných manévrů s cílem narušit veřejnou debatu," prohlásil tehdy – a citoval konkrétní příklady falešných webů ministerstev, které šířily nepravdivé zprávy. O necelé dva roky později se sám stal šiřitelem nepravdivé informace o představitelce OSN.
-
-Podle informací [rakouského webu tkp.at](https://tkp.at/2026/02/15/aussenminister-von-5-eu-laendern-fordern-auf-basis-fake-ki-video-ruecktritt-von-uno-berichterstatterin-albanese/), které se opírají o veřejně dostupný řetězec sdílení, izraelská ambasáda v Paříži předala sestříhané video francouzskému ministerstvu zahraničí. Barrot ho [citoval před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/) a vyzval Albanese k rezignaci s tím, že Francie „bezvýhradně odsuzuje skandální a zavrženíhodné výroky".
+Český ministr zahraničí Petr Macinka (Motoristé sobě) na platformě X [citoval Albanese](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) jako autorku výroku o „společném nepříteli lidstva" a vyzval k její rezignaci. Americký velvyslanec Mike Waltz ji rovněž citoval a obvinil z antisemitismu. Rakouská ministryně zahraničí Beate Meinl-Reisinger šla ještě dál a obvinila Albanese z šíření nenávistných projevů.
 
 ```infobox warning right
 ![Příspěvek českého ministra zahraničí Petra Macinky na X](images/francesca-albanese-twitter-dementi.webp)
 [Příspěvek](https://x.com/mzvcr/status/2022211836020654247) českého ministra zahraničí Petra Macinky
 ```
 
-Během následujících dnů se přidali ministři dalších zemí: [německý Johann Wadephul](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) označil její setrvání ve funkci za „neudržitelné", [rakouská Beate Meinl-Reisinger](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) ji obvinila z nenávistného projevu, [italský Antonio Tajani](https://www.thenationalnews.com/news/us/2026/02/12/francesca-albanese-un-gaza-israel/) zpochybnil její nestrannost a [český Petr Macinka](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) (Motoristé sobě) citoval na X falešný výrok a vyzval k její rezignaci.
+### UN Watch a její dlouhodobé aktivity
+
+Organizace [UN Watch](https://en.wikipedia.org/wiki/UN_Watch) byla založena v roce 1993 Morrisem B. Abramem, americkým právníkem a bývalým velvyslancem USA při OSN v Ženevě, za podpory Edgara Bronfmana, tehdejšího prezidenta Světového židovského kongresu. V roce 2001 se stala [plnou součástí American Jewish Committee](https://en.wikipedia.org/wiki/UN_Watch) (AJC), jedné z nejvlivnějších pro-izraelských lobbistických organizací v USA. Od roku 2013 se prezentuje jako nezávislá, zůstává však financována ze stejného okruhu dárců. Svou oficiální misí nazývá „sledování výkonu OSN měřítkem jejího vlastního stanového dokumentu".
+
+Agenturu AFP v roce 2009 [charakterizovala UN Watch](https://en.wikipedia.org/wiki/UN_Watch) jako „lobbistickou skupinu se silnými vazbami na Izrael". Organizace odmítá zveřejnit seznam svých dárců – když ji o transparentnost požádala [nizozemská poslankyně Danielle Hirsch](https://en.wikipedia.org/wiki/UN_Watch), ředitel Neuer odmítl s tvrzením, že by zveřejnění dárce ohrozilo.
+
+V praxi se UN Watch dlouhodobě zaměřuje na kampaně za odvolání představitelů OSN kritických vůči Izraeli. V roce 2025 [neúspěšně usilovala](https://www.trtworld.com/article/6e0b924d2b9d) o zabránění prodloužení mandátu Francesky Albanese. Dříve vedla kampaně proti zvláštním zpravodajům Richardu Falkovi a Michaelu Lynkovi. Ředitel Neuer opakovaně svědčil před americkým Kongresem – mj. čtyřikrát proti agentuře UNRWA, než USA její financování zastavily.
 
 ### Omluvy se nekonají
 
 K 24. únoru 2026 žádná z pěti vlád veřejnou omluvu nevydala.
 
-Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako jediná z pětice alespoň částečně couvla, byť bez omluvy a opravy. Německý ministr Wadephul nepovažuje korekci za nutnou. Francouzský ministr Barrot tvrdí, že jeho výzva „neměla nic společného se sestříhaným videem", a přesunul argumentaci na starší výroky Albanese. České ministerstvo zahraničí pod vedením Petra Macinky se k manipulaci videa vůbec nevyjádřilo a své výroky nedementovalo ani neodstranilo.
+Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako jediná z pětice alespoň částečně couvla, byť bez omluvy a opravy. Německé ministerstvo zahraničí v reakci na dotaz Computer Weekly uvedlo, že Wadephul „se odkazoval na celý výrok, nikoli na manipulované video" a že „paní Albanese opakovaně pronášela výroky a šířila neudržitelné nepravdy v minulosti, včetně těch o Německu". Francouzský ministr Barrot tvrdí, že jeho výzva „neměla nic společného se sestříhaným videem", a přesunul argumentaci na starší výroky Albanese. České ministerstvo zahraničí pod vedením Petra Macinky se k manipulaci videa vůbec nevyjádřilo a své výroky nedementovalo ani neodstranilo.
+
+```infobox warning left
+> „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN," říká ředitelka rakouské Amnesty International Shoura Hashemi.
+```
+
+[Amnesty International požaduje](https://www.amnesty.org/en/latest/news/2026/02/european-states-must-retract-attacks-francesca-albanese/), aby ministři „šli za pouhé mazání příspěvků na sociálních sítích a veřejně se omluvili a stáhli výzvy k rezignaci". Více než 150 bývalých diplomatů a ministrů [podepsalo otevřený dopis](https://www.presstv.ir/Detail/2026/02/20/764412/Ex-officials-denounce-French-FM-spreading-disinformation-about-UN-Albanese) odsuzující Barrota za „šíření dezinformací". Více než 100 kulturních osobností včetně Marka Ruffala, Javiera Bardema a Annie Lennox [podpořilo Albanese](https://www.france24.com/en/live-news/20260214-top-entertainment-figures-back-under-fire-un-palestinians-expert) otevřeným dopisem.
+
+Claudio Francavilla z **Human Rights Watch** to [shrnul pro EUobserver](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/): „Buď si nevšimli, že video bylo zmanipulované, nebo si toho všimli a přesto se rozhodli na jeho základě zaútočit. Nevím, která z variant svědčí o vyšší míře nekompetence."
+
+Francouzská Asociace právníků za dodržování mezinárodního práva (**JURDI**) [podala trestní oznámení](https://www.middleeasteye.net/news/french-lawyers-seek-criminal-prosecution-foreign-minister-over-francesca-albanese-remarks) na ministra Barrota za „šíření nepravdivých informací" podle francouzského práva.
 
 ---
 
@@ -82,12 +88,6 @@ Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako j
 <Timeline yamlFile="timeline.yaml" />
 
 ---
-
-[Amnesty International požaduje](https://www.amnesty.org/en/latest/news/2026/02/european-states-must-retract-attacks-francesca-albanese/), aby ministři „šli za pouhé mazání příspěvků na sociálních sítích – jak to někteří učinili – a veřejně se omluvili a stáhli výzvy k rezignaci". 
-
-Claudio Francavilla z Human Rights Watch to [shrnul pro EUobserver](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/): „Buď si nevšimli, že video bylo zmanipulované, nebo si toho všimli a přesto se rozhodli na jeho základě zaútočit. Nevím, která z variant svědčí o vyšší míře nekompetence."
-
-„Je zavrženíhodné, že ministři v Rakousku, Česku, Francii, Německu a Itálii zaútočili na zvláštní zpravodajku OSN pro okupovaná palestinská území Francescu Albanese na základě záměrně zkráceného videa, aby zkreslili její výroky a vážně je špatně interpretovali – jak je zřejmé z posouzení jejího původního projevu v celém jeho rozsahu. Ministři, kteří šířili dezinformace, musí udělat víc, než jen smazat své komentáře na sociálních médiích. Musí se veřejně omluvit a stáhnout všechny požadavky na odstoupení Francescy Albanese. Jejich vlády musí také vyšetřit, jak k těmto dezinformacím došlo, aby se podobným situacím v budoucnu předešlo,“ říká ředitelka rakouské Amnesty International Shoura Hashemi.
 
 ```infobox
 **Kdo je Francesca Albanese**
@@ -99,31 +99,31 @@ Italská právnička (nar. 1977), absolventka univerzity v Pise a londýnské SO
 **Obhájci** – 65 akademiků zabývajících se antisemitismem a holocaustem v prosinci 2022 prohlásilo, že „kampaň proti ní není o boji s antisemitismem, ale o snaze ji umlčet". Její mandát podpořilo 116 lidskoprávních organizací. V červenci 2025 na ni Trumpova administrativa jako na první představitelku OSN v historii uvalila sankce. Ty ji podle jejích slov proměnily v „ne-osobu": nemůže používat kreditní karty, dostávat proplácení zdravotních výdajů od amerických pojišťoven ani si rezervovat hotely – jak [popsala pro Middle East Eye](https://www.middleeasteye.net/news/un-panel-european-calls-resignation-albanese-rooted-disinformation) a jak [zaznamenala agentura Reuters](https://www.reuters.com/world/middle-east/independent-un-body-condemns-vicious-attacks-un-expert-palestinian-rights-2026-02-17/).
 ```
 
-**Český kontext**
+### Český kontext
 
-Český ministr zahraničí Petr Macinka (Motoristé sobě) se k výzvám připojil 12. února. Na platformě X [citoval Albanese](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) jako autorku výroku o „společném nepříteli lidstva" a označil ji za osobu, která „šíří nenávist".
+Český ministr zahraničí Petr Macinka (Motoristé sobě) se k výzvám připojil 12. února. Na platformě X [citoval Albanese](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) jako autorku výroku o „společném nepříteli lidstva" a označil ji za osobu, která „šíří nenávist". Neexistují doklady o tom, že by si ministerstvo před zveřejněním příspěvku ověřilo celý projev Albanese.
 
 Po prokázání manipulace videa se české ministerstvo zahraničí ke kauze již nevyjádřilo a své výroky nedementovalo ani neodstranilo.
 
-Reportér České televize [Jakub Szántó případ 13. února komentoval](https://x.com/michaldvorak/status/2022291346967478393) na X slovy, že „Česko se připojilo k Francii" a požaduje „odstranění antisemitské aktivistky Francesky Albanese z oficiální funkce OSN". Když ho uživatelé upozornili, že Albanese inkriminovaný výrok nepronesla, Szántó se už k obsahu svého tvrzení nevyjádřil. 
+Reportér České televize [Jakub Szántó případ 13. února komentoval](https://x.com/michaldvorak/status/2022291346967478393) na X slovy, že „Česko se připojilo k Francii" a požaduje „odstranění antisemitské aktivistky Francesky Albanese z oficiální funkce OSN". Když ho uživatelé upozornili, že Albanese inkriminovaný výrok nepronesla, Szántó se už k obsahu svého tvrzení nevyjádřil.
 
 Reportáž ČT z téhož dne zmínila „sestříhané video" jednou větou, ale nevysvětlila, v čem manipulace spočívala, jak vznikla ani kdo za ní stojí. Český rozhlas postupoval obdobně.
 
 ### Opakující se vzorec
 
-V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. A zdaleka ne všechna později uvedla informace na pravou míru. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
+V listopadu 2024 jsme popsali, [jak jedno video z Amsterdamu prošlo mediálním řetězcem a změnilo si cestou význam](/clanek/kontext-2024-11-14-amsterdam-video). Anonymní účet na X překroutil, kdo na záběrech koho napadá, a česká i světová média zpočátku většinově tento popis převzala nekriticky. Nyní se totéž odehrává ve větším měřítku a s vážnějšími důsledky.
 
-Případ Albanese ukazuje tentýž vzorec ve větším měřítku:
+Případ Albanese ukazuje tentýž vzorec:
 
-1. **Manipulace u zdroje.** V Amsterdamu anonymní účet @sentdefender s milionem sledujících. V případě Albanese organizace UN Watch s vazbou na izraelskou diplomacii.
+1. **Manipulace u zdroje.** V Amsterdamu anonymní účet @sentdefender s milionem sledujících. V případě Albanese organizace UN Watch – pro-izraelská lobbistická skupina, jejíž ředitel Hillel Neuer zveřejnil zkrácený klip jako první dohledatelný zdroj online.
 
-2. **Nekritické převzetí.** V Amsterdamu ČTK převzala popis z X bez ověření. V případě Albanese pět evropských ministrů zahraničí citovalo sestříhané video, aniž si ověřili celý projev.
+2. **Nekritické převzetí.** V Amsterdamu ČTK převzala popis z X bez ověření. V případě Albanese pět evropských ministrů zahraničí citovalo obsah zmanipulovaného videa, aniž si ověřili celý projev.
 
-3. **Selhání opravného mechanismu.** V Amsterdamu se ARD a New York Times omluvily; česká média nikoli. V případě Albanese couvlo pouze Rakousko (částečně); ostatní čtyři vlády trvají na svém i poté, co Reuters, Euronews, France24 i panel expertů OSN potvrdili manipulaci.
+3. **Selhání opravného mechanismu.** V Amsterdamu se ARD a New York Times omluvily; česká média nikoli. V případě Albanese couvlo pouze Rakousko (smazáním příspěvku, nikoli omluvou); ostatní čtyři vlády trvají na svém i poté, co Euronews, France24, Reuters i panel expertů OSN potvrdili manipulaci.
 
 4. **Důsledky.** Falešný popis se šíří rychle a hlasitě, naopak oprava přichází pozdě, tiše a obvykle dosáhne jen zlomku původního publika.
 
-Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francescy Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
+Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francesky Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
 
 ---
 
