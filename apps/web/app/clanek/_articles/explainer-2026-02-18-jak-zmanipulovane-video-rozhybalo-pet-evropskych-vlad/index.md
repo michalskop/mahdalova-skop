@@ -18,6 +18,8 @@ Dne 8. února 2026 – den po vystoupení Francesky Albanese na mediálním fór
 
 První výskyt zkráceného klipu online lze dohledat právě [u Neuera](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur). Totéž nezávisle [konstatoval](https://x.com/MartinKonecny/status/2022664436272513375) analytik Martin Konečný z organizace European Middle East Project. A v dalším postu [upozornil](https://x.com/MartinKonecny/status/2024813747919806764/photo/1), že se v zrcadle na fotografii z videa objevuje logo UN Watch.
 
+Fact-checkingová redakce **Euronews (The Cube)** porovnala zkrácený klip s kompletním záznamem projevu a [konstatovala](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity), že „srovnání mezi sestříhaným klipem a úplným záznamem projevu Albanese naznačuje, že výňatek byl zmanipulován s využitím umělé inteligence" a že „upravené video sdílené na YouTube kanálu UN Watch zřejmě modifikuje hlas Francesky Albanese tak, aby to vypadalo, že označila Izrael za ‚společného nepřítele' lidstva". Euronews zdůraznil, že video obsahuje titulky s označením „UN Watch". **Euronews oslovil UN Watch s žádostí o vyjádření, organizace nereagovala.**
+
 ```infobox warning right
 **Co doopravdy Francesca Albanese řekla**
 
@@ -33,8 +35,6 @@ Když jí pak zmanipulované video přisoudilo, že „společným nepřítelem"
 
 ![Agentura Reuters informuje o zmanipulovaném videu a pomluvách, jimž čelí Francesca Albanese ze strany pěti vlád](images/francesca-albanese-reuters.webp)
 ```
-
-Fact-checkingová redakce **Euronews (The Cube)** porovnala zkrácený klip s kompletním záznamem projevu a [konstatovala](https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity), že „srovnání mezi sestříhaným klipem a úplným záznamem projevu Albanese naznačuje, že výňatek byl zmanipulován s využitím umělé inteligence" a že „upravené video sdílené na YouTube kanálu UN Watch zřejmě modifikuje hlas Francesky Albanese tak, aby to vypadalo, že označila Izrael za ‚společného nepřítele' lidstva". Euronews zdůraznil, že video obsahuje titulky s označením „UN Watch". **Euronews oslovil UN Watch s žádostí o vyjádření, organizace nereagovala.**
 
 Redakce **Computer Weekly** (britský oborový server pro IT profesionály) případ [podrobně zmapovala](https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur) a potvrdila, že řada médií včetně Reuters a France24, jakož i Úřad vysokého komisaře OSN pro lidská práva, potvrdily, že video je zmanipulované. **Computer Weekly kontaktoval UN Watch s dotazem na zdroj klipu a na to, zda si byl Neuer vědom, že video bylo upraveno. Organizace neodpověděla.** Computer Weekly rovněž oslovil kanceláře všech politiků, kteří dezinformaci ve veřejném prostoru zesílili; odpovědělo pouze německé spolkové ministerstvo zahraničí a své prohlášení nezmírnilo.
 
