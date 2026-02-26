@@ -23,13 +23,13 @@ Fact-checkingová redakce **Euronews (The Cube)** porovnala zkrácené video s k
 ```infobox warning right
 **Co doopravdy řekla Francesca Albanese**
 
-Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na mediálním fóru Al-Džazíry v Dauhá prostřednictvím videohovoru. Zhruba [ve tříminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze](https://www.youtube.com/watch?v=wmJUNHECBGI):
+Dne 7. února 2026 promluvila Franceska Albanese, zpravodajka OSN, na [mediálním fóru Al-Džazíry](https://www.youtube.com/watch?v=pev61KJGqfk) v Dauhá prostřednictvím videohovoru. Zhruba [ve tříminutovém vystoupení kritizovala mezinárodní reakci na situaci v Gaze](https://www.youtube.com/watch?v=wmJUNHECBGI):
 
 ![Vyjádření Francesky Albanese na sociálních sítích](images/francesca-albanese-twitter-dementi-video.webp)
 
 **„Skutečnost, že většina zemí světa Izrael nezastavila, ale naopak ho vyzbrojila, poskytla Izraeli politické výmluvy, politickou ochranu a ekonomickou a finanční podporu.** *To je výzva. Skutečnost, že většina médií v západním světě zesilovala proapartheidní a genocidní narativ, je výzva. A zároveň v tom spočívá příležitost. Protože pokud bylo mezinárodní právo bodnuté do srdce, je také pravda, že nikdy dříve si mezinárodní společenství neuvědomovalo výzvy, kterým všichni čelíme. My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně,* **nyní vidíme, že jako lidstvo máme společného nepřítele, a svobody – respektování základních svobod – jsou poslední mírovou cestou, posledním mírovým nástrojem, který máme k znovuzískání naší svobody."**
 
-*pasáž vyznačená kurzívou byla z falešného videa úmyslně vystřižena*, celý hodinový záznam konference je [dostupný zde](https://www.youtube.com/watch?v=pev61KJGqfk)
+*pasáž vyznačená kurzívou byla z falešného videa úmyslně vystřižena*
 ```
 
 Redakce France24 (Truth or Fake) ve svém [pětiminutovém fact-checkovém příspěvku](https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity) rekonstruovala, jak dezinformace vznikla, a potvrdila, že Albanese inkriminovaný výrok nepronesla. Albanese v tomto příspěvku přímo pro France24 označila zkrácení videa za „manipulaci". To uvádí i Úřad vysokého komisaře OSN pro lidská práva.
