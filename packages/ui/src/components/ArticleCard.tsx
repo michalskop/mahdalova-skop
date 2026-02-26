@@ -35,7 +35,14 @@ export function ArticleCard({
   locale = 'cs-CZ',
 }: ArticleCardProps) {
   const theme = useMantineTheme();
-  const linkProps = { href: `${articleBasePath}/${slug}` };
+  const normalizedBasePath = (() => {
+    const base = articleBasePath?.trim() || '';
+    if (!base) return '';
+    const withLeadingSlash = base.startsWith('/') ? base : `/${base}`;
+    return withLeadingSlash.endsWith('/') ? withLeadingSlash.slice(0, -1) : withLeadingSlash;
+  })();
+
+  const linkProps = { href: `${normalizedBasePath}/${slug}` };
 
   return (
     <Card withBorder radius="md" className={classes.card}>

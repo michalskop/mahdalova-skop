@@ -6,6 +6,7 @@ import { useEffect, Suspense } from 'react';
 declare global {
   interface Window {
     _paq: any[];
+    __matomoInitialized?: boolean;
   }
 }
 
@@ -19,20 +20,27 @@ function MatomoTracker({ siteId }: MatomoTrackerProps) {
 
   useEffect(() => {
     window._paq = window._paq || [];
-    window._paq.push(['enableLinkTracking']);
+    if (!window.__matomoInitialized) {
+      window.__matomoInitialized = true;
+      window._paq.push(['enableLinkTracking']);
 
-    const u = "//matomo.kohovolit.eu/";
-    window._paq.push(['setTrackerUrl', u + 'matomo.php']);
-    window._paq.push(['setSiteId', siteId]);
+      const u = "//matomo.kohovolit.eu/";
+      window._paq.push(['setTrackerUrl', u + 'matomo.php']);
+      window._paq.push(['setSiteId', siteId]);
 
-    if (!document.getElementById('matomo-script')) {
-      const d = document;
-      const g = d.createElement('script');
-      g.id = 'matomo-script';
-      g.async = true;
-      g.src = u + 'matomo.js';
-      const s = d.getElementsByTagName('script')[0];
-      s.parentNode?.insertBefore(g, s);
+      if (!document.getElementById('matomo-script')) {
+        const d = document;
+        const g = d.createElement('script');
+        g.id = 'matomo-script';
+        g.async = true;
+        g.src = u + 'matomo.js';
+        const s = d.getElementsByTagName('script')[0];
+        if (s?.parentNode) {
+          s.parentNode.insertBefore(g, s);
+        } else {
+          d.head?.appendChild(g);
+        }
+      }
     }
   }, [siteId]);
 
