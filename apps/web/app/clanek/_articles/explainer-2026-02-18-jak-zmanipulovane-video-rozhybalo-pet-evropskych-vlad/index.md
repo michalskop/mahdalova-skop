@@ -42,6 +42,8 @@ V tom se německá diplomacie shoduje s Úřadem vysokého komisaře OSN pro lid
 
 Agentura Reuters pak [cituje panel šesti nezávislých expertů OSN](https://www.reuters.com/world/middle-east/independent-un-body-condemns-vicious-attacks-un-expert-palestinian-rights-2026-02-17/), kteří výzvy k rezignaci Albanese odsoudili s tím, že je „založená na vymyšlených faktech" a vychází z dezinformace.
 
+A samotná Albanese ihned poté, co jí pak zmanipulované video přisoudilo, že „společným nepřítelem" myslí Izrael, ještě [upřesnila](https://x.com/FranceskAlbs/status/2020983308818186721) na sociálních sítích: „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině, včetně kapitálu, který ji financuje, algoritmů, které ji zakrývají, a zbraní, které ji umožňují."
+
 ### Kdo na video reagoval
 
 Přední politici a diplomatické osobnosti z Francie, Německa, Itálie, Česka, Rakouska a USA Francescu Albanese ostře odsoudili a mnozí ji vyzvali k okamžité rezignaci. Německý ministr zahraničí Johann Wadephul označil její pozici za „neudržitelnou". Francouzský ministr zahraničí Jean-Noël Barrot [prohlásil před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/), že Francie „bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky" – reagoval přitom na interpelaci poslankyně Caroline Yadan, která Albanese obvinila z inkriminovaného - falešného - výroku. Italský ministr zahraničí Antonio Tajani prohlásil, že její „chování… není vhodné pro pozici, kterou zastává".
