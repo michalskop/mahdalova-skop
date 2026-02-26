@@ -6,7 +6,7 @@ excerpt: "Přehled nejdůležitějších filmových cen a festivalů roku 2026"
 coverImage: "images/datatimes-kalendar-filmovych-udalosti-2026.webp"
 filter: ["kontext"]
 tags: ["filmový kalendář", "film", "kultura", "festivaly", "ceny"]
-promoted: 98
+promoted: 48
 htmlInclude: "kalendar.html"
 ---
 
