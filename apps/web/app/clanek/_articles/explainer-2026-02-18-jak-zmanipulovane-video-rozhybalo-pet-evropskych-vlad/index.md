@@ -48,12 +48,12 @@ A samotná Albanese ihned poté, co jí pak zmanipulované video přisoudilo, ž
 
 Přední politici a diplomatické osobnosti z Francie, Německa, Itálie, Česka, Rakouska a USA Francescu Albanese ostře odsoudili a mnozí ji vyzvali k okamžité rezignaci. Německý ministr zahraničí Johann Wadephul označil její pozici za „neudržitelnou". Francouzský ministr zahraničí Jean-Noël Barrot [prohlásil před Národním shromážděním 11. února](https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/), že Francie „bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky" – reagoval přitom na interpelaci poslankyně Caroline Yadan, která Albanese obvinila z inkriminovaného - falešného - výroku. Italský ministr zahraničí Antonio Tajani prohlásil, že její „chování… není vhodné pro pozici, kterou zastává".
 
-Český ministr zahraničí Petr Macinka (Motoristé sobě) [citoval Albanese](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) jako autorku výroku o „společném nepříteli lidstva" a vyzval k její rezignaci. Americký velvyslanec Mike Waltz rovněž [cituje zmanipulované video ](https://x.com/USAmbUN/status/2020613256566522095) a obvinil Albanese z antisemitismu. Rakouská ministryně zahraničí Beate Meinl-Reisinger ji obvinila ze šíření nenávistných projevů.
-
 ```infobox warning right
 ![Příspěvek českého ministra zahraničí Petra Macinky na X](images/francesca-albanese-twitter-dementi.webp)
 [Příspěvek](https://x.com/mzvcr/status/2022211836020654247) českého ministra zahraničí Petra Macinky
 ```
+
+Český ministr zahraničí Petr Macinka (Motoristé sobě) [citoval Albanese](https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese) jako autorku výroku o „společném nepříteli lidstva" a vyzval k její rezignaci. Americký velvyslanec Mike Waltz rovněž [cituje zmanipulované video ](https://x.com/USAmbUN/status/2020613256566522095) a obvinil Albanese z antisemitismu. Rakouská ministryně zahraničí Beate Meinl-Reisinger ji obvinila ze šíření nenávistných projevů.
 
 ### UN Watch a její aktivity
 
