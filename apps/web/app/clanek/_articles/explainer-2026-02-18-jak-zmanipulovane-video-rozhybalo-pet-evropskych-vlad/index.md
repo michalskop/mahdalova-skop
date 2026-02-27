@@ -1,5 +1,5 @@
 ---
-title: "Jak jedno zmanipulované video rozhýbalo pět evropských vlád"
+title: "Jak jedno zmanipulované video rozhýbalo pět evropských vlád (včetně české)"
 date: "2026-02-18"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví Francesca Albanese, zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na základě tohoto deep fake videa požaduje její rezignaci. Když se ukázalo, že video je zmanipulované, žádná z vlád se neomluvila, jen Rakousko stáhlo svůj twitterový status."
