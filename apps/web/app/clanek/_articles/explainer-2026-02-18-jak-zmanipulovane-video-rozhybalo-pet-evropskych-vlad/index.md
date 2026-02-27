@@ -61,9 +61,7 @@ Organizace [UN Watch](https://en.wikipedia.org/wiki/UN_Watch) byla založena v r
 
 Jako svou oficiální misi organizace [uvádí](https://unwatch.org/about-us/) „sledování výkonu OSN měřítkem jejího vlastního stanového dokumentu". Agentura AFP ji v roce 2009 [označila](https://web.archive.org/web/20111222162658/https://www.google.com/hostednews/afp/article/ALeqM5gEMY5NvupmG2iAyQwg6C6ehzeWzA) za „lobbistickou skupinu se silnými vazbami na Izrael"; agentura JTA ji popisuje jako [pro-izraelskou organizaci](https://en.wikipedia.org/wiki/UN_Watch). UN Watch se kromě izraelské agendy věnuje také kritice porušování lidských práv v zemích jako Čína, Kuba, Rusko či Venezuela, kde často využívá svůj přidělený čas v Radě pro lidská práva k tomu, aby dala prostor disidentům.
 
-```infobox warning left
 Hlavní pozornost kritiků však přitahuje systematický tlak na představitele OSN kritické vůči Izraeli. UN Watch dlouhodobě vedla kampaně za odvolání zvláštních zpravodajů pro palestinská území – [Richarda Falka](https://en.wikipedia.org/wiki/UN_Watch) i [Michaela Lynka](https://en.wikipedia.org/wiki/UN_Watch). V roce 2025 [neúspěšně usilovala](https://www.trtworld.com/article/6e0b924d2b9d) o zabránění prodloužení mandátu Francesky Albanese. Ředitel Neuer podle [vlastních slov svědčil před americkým Kongresem čtyřikrát](https://unwatch.org/hillel-neuer-calls-out-unrwas-obscene-shielding-of-the-hamas-murderers-in-their-midst-on-i24news/) proti agentuře UNRWA a vystupoval i před [Evropským parlamentem, nizozemským a švýcarským parlamentem a italským Senátem](https://unwatch.org/the-case-against-unrwa/). Když nizozemská poslankyně Danielle Hirschová [požádala organizaci o transparentnost ohledně financování](https://en.wikipedia.org/wiki/UN_Watch), ředitel Neuer odmítl s tvrzením, že by zveřejnění dárce ohrozilo.
-```
 
 ### Omluvy se nekonají
 
