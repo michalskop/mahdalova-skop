@@ -23,7 +23,7 @@ events:
     description: 'Francesca Albanese se přes videohovor účastní panelu o mezinárodním právu na mediálním fóru Al-Džazíry. Ve tříminutovém příspěvku kritizuje systém vyzbrojování Izraele a říká: „My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně, nyní vidíme, že jako lidstvo máme společného nepřítele." Mluví o systému, nikoli o státu. Na panelu s ní sedí mj. Fatou Bensoudová, bývalá prokurátorka ICC.'
     side: "left"
     facets:
-      actor: un
+      actor: "un"
     sources:
       - label: "Celý projev Albanese (video)"
         url: "https://www.youtube.com/watch?v=wmJUNHECBGI"
@@ -35,7 +35,7 @@ events:
     description: 'Ředitel lobbistické organizace UN Watch Hillel Neuer zveřejňuje na X zkrácený klip z projevu Albanese s komentářem, že „staví židovský stát do role ontologické síly korumpující samo lidstvo". Totéž video se objevuje na YouTube kanálu UN Watch – podle pozdější analýzy Euronews obsahuje stopy AI manipulace hlasu. Zkrácený klip vystřihuje pasáž, v níž Albanese mluví o finančním kapitálu, algoritmech a zbraních.'
     side: "right"
     facets:
-      actor: ngo
+      actor: "ngo"
     sources:
       - label: "Post Hillela Neuera na X"
         url: "https://x.com/HillelNeuer/status/2020454512356376911"
@@ -43,128 +43,170 @@ events:
         url: "https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity"
 
   - date: "2026-02-09"
-    title: "Albanese zveřejňuje celý projev; francouzští poslanci píšou Barrotovi"
-    description: 'Albanese na X zveřejňuje kompletní záznam svého projevu a upřesňuje: „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině." Téhož dne posílá skupina asi 50 poslanců strany Renaissance včetně Caroline Yadanové dopis ministru zahraničí Barrotovi. Označují v něm výroky Albanese za antisemitské a citují přitom zkrácené video. Podle France24 Observateurs tentýž den zveřejňuje zkrácený sestřih také izraelská ambasáda ve Francii.'
+    title: "Albanese zveřejňuje celý projev"
+    description: 'Albanese na X zveřejňuje kompletní záznam svého projevu a upřesňuje: „Společným nepřítelem lidstva je SYSTÉM, který umožnil genocidu v Palestině."'
     side: "left"
     facets:
-      actor:
-        - un
-        - gov
+      actor: "un"
     sources:
       - label: "Post Albanese na X s celým projevem"
         url: "https://x.com/FranceskAlbs/status/2020983308818186721"
+
+  - date: "2026-02-09"
+    title: "Francouzští poslanci píšou Barrotovi"
+    description: 'Skupina asi 50 poslanců strany Renaissance včetně Caroline Yadanové posílá dopis ministru zahraničí Barrotovi. Označují v něm výroky Albanese za antisemitské a citují přitom zkrácené video. Podle France24 Observateurs tentýž den zveřejňuje zkrácený sestřih také izraelská ambasáda ve Francii.'
+    side: "right"
+    facets:
+      actor: "gov"
+    sources:
       - label: "Agence Media Palestine – rekonstrukce řetězce"
         url: "https://agencemediapalestine.fr/blog/2026/02/13/entretien-avec-francesca-albanese-les-attaques-de-m-barrot-sont-injustifiables-et-deviennent-tres-personnelles/"
 
   - date: "2026-02-10"
     title: "Americký velvyslanec Waltz obviňuje Albanese"
     description: 'Americký velvyslanec při OSN Mike Waltz na X reaguje na klip a píše: „Společným nepřítelem lidstva jsou antisemité, kteří označují celý židovský národ za společného nepřítele lidstva." Combat Antisemitism Movement (CAM) posílá dopis předsedovi Rady OSN pro lidská práva s požadavkem na odvolání Albanese.'
-    side: "right"
+    side: "left"
     facets:
-      actor: gov
+      actor: "gov"
     sources:
       - label: "Post Mikea Waltze na X"
         url: "https://x.com/USAmbUN/status/2020613256566522095"
 
   - date: "2026-02-11"
-    title: "Barrot před Národním shromážděním požaduje rezignaci Albanese"
-    description: 'Francouzský ministr zahraničí Jean-Noël Barrot v reakci na interpelaci poslankyně Yadanové prohlašuje před Národním shromážděním: „Francie bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky, které necílí na izraelskou vládu, ale na Izrael jako národ." Oznamuje, že Francie bude na zasedání Rady OSN pro lidská práva 23. února požadovat odvolání Albanese. Albanese v rozhovoru pro France24 (natočeném před Barrotovým vystoupením) říká: „Nikdy, nikdy, nikdy jsem neřekla, že Izrael je společný nepřítel lidstva."'
-    side: "left"
+    title: "Barrot požaduje rezignaci Albanese"
+    description: 'Francouzský ministr zahraničí Jean-Noël Barrot v reakci na interpelaci poslankyně Yadanové prohlašuje před Národním shromážděním: „Francie bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky, které necílí na izraelskou vládu, ale na Izrael jako národ." Oznamuje, že Francie bude na zasedání Rady OSN pro lidská práva 23. února požadovat odvolání Albanese.'
+    side: "right"
     facets:
-      actor:
-        - gov
-        - un
+      actor: "gov"
     sources:
       - label: "EUobserver – rekonstrukce Barrotova vystoupení"
         url: "https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/"
+
+  - date: "2026-02-11"
+    title: "Albanese reaguje na France24"
+    description: 'Albanese v rozhovoru pro France24 (natočeném před Barrotovým vystoupením) říká: „Nikdy, nikdy, nikdy jsem neřekla, že Izrael je společný nepřítel lidstva."'
+    side: "left"
+    facets:
+      actor: "un"
+    sources:
       - label: "France24 – rozhovor s Albanese (video)"
         url: "https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260211-un-s-albanese-slams-shameful-and-defamatory-anti-semitism-accusations-against-her"
 
   - date: "2026-02-12"
-    title: "Německo, Česko a France24 fact-check"
-    description: 'Německý ministr zahraničí Wadephul na sociálních sítích: „Pozice Albanese je neudržitelná." Český ministr Macinka (Motoristé sobě) na X cituje Albanese jako autorku výroku o „společném nepříteli lidstva" a vyzývá k její rezignaci. Redakce France24 (Truth or Fake) zveřejňuje pětiminutový fact-check, ve kterém potvrzuje, že Albanese inkriminovaný výrok nepronesla. Mluvčí francouzského MZV na tiskové konferenci popírá, že by Barrot vycházel ze sestříhaného videa.'
+    title: "Německo a Česko se přidávají"
+    description: 'Německý ministr zahraničí Wadephul na sociálních sítích: „Pozice Albanese je neudržitelná." Český ministr Macinka (Motoristé sobě) na X cituje Albanese jako autorku výroku o „společném nepříteli lidstva" a vyzývá k její rezignaci.'
     side: "right"
     facets:
-      actor:
-        - gov
-        - media
+      actor: "gov"
     sources:
-      - label: "France24 – Truth or Fake (video fact-check)"
-        url: "https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity"
       - label: "Post českého MZV na X"
         url: "https://x.com/mzvcr/status/2022211836020654247"
       - label: "Dawn.com – panel OSN odsuzuje útoky"
         url: "https://www.dawn.com/news/1974051/un-body-condemns-attacks-on-albanese"
 
-  - date: "2026-02-13"
-    title: "Rakousko, Itálie a ČT se přidávají"
-    description: 'Rakouská ministryně Meinl-Reisinger na X obviňuje Albanese z nenávistného projevu. Italský ministr Tajani říká, že její chování „není vhodné pro pozici, kterou zastává". Na ČT Jakub Szántó na X označuje Albanese za „antisemitskou aktivistku" a píše, že „Česko se připojilo k Francii" – když ho uživatelé upozorní na neexistenci citátu, nevyjádří se. Reportáž ČT zmíní sestříhané video jednou větou bez vysvětlení. Mluvčí generálního tajemníka OSN Guterrese Stéphane Dujarric říká: „Nesouhlasíme s mnoha věcmi, které říká.'
+  - date: "2026-02-12"
+    title: "France24 fact-check: výrok nebyl pronesen"
+    description: 'Redakce France24 (Truth or Fake) zveřejňuje pětiminutový fact-check, ve kterém potvrzuje, že Albanese inkriminovaný výrok nepronesla. Mluvčí francouzského MZV na tiskové konferenci popírá, že by Barrot vycházel ze sestříhaného videa.'
     side: "left"
     facets:
-      actor:
-        - gov
-        - media
-        - un
+      actor: "media"
+    sources:
+      - label: "France24 – Truth or Fake (video fact-check)"
+        url: "https://www.france24.com/en/tv-shows/truth-or-fake/20260212-no-the-un-s-francesca-albanese-did-not-call-israel-the-common-enemy-of-humanity"
+
+  - date: "2026-02-13"
+    title: "Rakousko a Itálie se přidávají"
+    description: 'Rakouská ministryně Meinl-Reisinger na X obviňuje Albanese z nenávistného projevu. Italský ministr Tajani říká, že její chování „není vhodné pro pozici, kterou zastává".'
+    side: "right"
+    facets:
+      actor: "gov"
     sources:
       - label: "Computer Weekly – přehled reakcí"
         url: "https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur"
+
+  - date: "2026-02-13"
+    title: "ČT a Szántó bez korekce"
+    description: 'Na ČT Jakub Szántó na X označuje Albanese za „antisemitskou aktivistku" a píše, že „Česko se připojilo k Francii" – když ho uživatelé upozorní na neexistenci citátu, nevyjádří se. Reportáž ČT zmíní sestříhané video jednou větou bez vysvětlení.'
+    side: "left"
+    facets:
+      actor: "media"
+    sources:
       - label: "Komentář Jakuba Szántó na X (sdílení)"
         url: "https://x.com/michaldvorak/status/2022291346967478393"
 
-  - date: "2026-02-14"
-    title: "Více než 100 umělců podpořilo Albanese"
-    description: 'Otevřený dopis organizace Artists for Palestine podpořilo přes 100 kulturních osobností včetně Marka Ruffala, Javiera Bardema, Annie Lennox a nobelistky Annie Ernauxové. JURDI (Asociace právníků za dodržování mezinárodního práva) oznamuje podání trestního oznámení na Barrota za „šíření nepravdivých informací" podle francouzského práva.'
+  - date: "2026-02-13"
+    title: "Guterresův mluvčí reaguje"
+    description: 'Mluvčí generálního tajemníka OSN Guterrese Stéphane Dujarric říká: „Nesouhlasíme s mnoha věcmi, které říká."'
     side: "right"
     facets:
-      actor: ngo
+      actor: "un"
+
+  - date: "2026-02-14"
+    title: "Více než 100 umělců podpořilo Albanese"
+    description: 'Otevřený dopis organizace Artists for Palestine podpořilo přes 100 kulturních osobností včetně Marka Ruffala, Javiera Bardema, Annie Lennox a nobelistky Annie Ernauxové.'
+    side: "left"
+    facets:
+      actor: "ngo"
     sources:
       - label: "France24 – umělci na podporu Albanese"
         url: "https://www.france24.com/en/live-news/20260214-top-entertainment-figures-back-under-fire-un-palestinians-expert"
+
+  - date: "2026-02-14"
+    title: "Trestní oznámení JURDI na Barrota"
+    description: 'JURDI (Asociace právníků za dodržování mezinárodního práva) oznamuje podání trestního oznámení na Barrota za „šíření nepravdivých informací" podle francouzského práva.'
+    side: "right"
+    facets:
+      actor: "ngo"
+    sources:
       - label: "Middle East Eye – trestní oznámení JURDI"
         url: "https://www.middleeasteye.net/news/french-lawyers-seek-criminal-prosecution-foreign-minister-over-francesca-albanese-remarks"
 
   - date: "2026-02-15"
-    title: "Amnesty International požaduje omluvy; Rakousko maže post"
-    description: 'Generální tajemnice Amnesty International Agnès Callamardová vydává prohlášení: „Je zavrženíhodné, že ministři zaútočili na Albanese na základě záměrně zkráceného videa." Požaduje veřejné omluvy a stažení výzev k rezignaci. Rakouská ministryně Meinl-Reisinger maže svůj příspěvek na X – bez omluvy a opravy.'
+    title: "Amnesty International požaduje omluvy"
+    description: 'Generální tajemnice Amnesty International Agnès Callamardová vydává prohlášení: „Je zavrženíhodné, že ministři zaútočili na Albanese na základě záměrně zkráceného videa." Požaduje veřejné omluvy a stažení výzev k rezignaci.'
     side: "left"
     facets:
-      actor:
-        - ngo
-        - gov
+      actor: "ngo"
     sources:
       - label: "Amnesty International – prohlášení"
         url: "https://www.amnesty.org/en/latest/news/2026/02/european-states-must-retract-attacks-francesca-albanese/"
+
+  - date: "2026-02-15"
+    title: "Rakousko maže post bez omluvy"
+    description: 'Rakouská ministryně Meinl-Reisinger maže svůj příspěvek na X – bez omluvy a opravy.'
+    side: "right"
+    facets:
+      actor: "gov"
+    sources:
       - label: "Amnesty Rakousko – výzva k opravě"
         url: "https://www.amnesty.at/presse/ministerin-meinl-reisinger-verbreitet-desinformation-zu-un-sonderberichterstatterin-amnesty-international-fordert-richtigstellung/"
 
   - date: "2026-02-16"
     title: "Zaměstnanci OSN a UNRWA se staví za Albanese"
     description: 'Skupina United Staff for Gaza odsuzuje útoky evropských ministrů. UNRWA v prohlášení uvádí, že útoky „mají za cíl umlčet její hlas a podkopat nezávislé lidskoprávní mechanismy". Bývalý ředitel komunikace UNRWA Chris Gunness pro Al-Džazíru označuje kampaň za „průmyslovou výrobu falešných zpráv".'
-    side: "right"
+    side: "left"
     facets:
-      actor: un
+      actor: "un"
     sources:
       - label: "Al Jazeera – zaměstnanci OSN za Albanese"
         url: "https://www.aljazeera.com/news/2026/2/16/un-staffers-back-francesca-albanese-condemn-european-ministers-for-attacks"
 
   - date: "2026-02-17"
     title: "Euronews potvrzuje AI manipulaci videa"
-    description: "Fact-checkingová redakce Euronews (The Cube) publikuje detailní analýzu. Srovnává sestříhaný klip s úplným záznamem a konstatuje, že 'video bylo zmanipulováno s využitím umělé inteligence' a že 'upravené video sdílené na YouTube kanálu UN Watch zřejmě modifikuje hlas Albanese'. Video obsahuje titulky s logem UN Watch. Euronews oslovil UN Watch s žádostí o vyjádření – organizace nereagovala."
-    side: "left"
+    description: 'Fact-checkingová redakce Euronews (The Cube) publikuje detailní analýzu. Srovnává sestříhaný klip s úplným záznamem a konstatuje, že video bylo zmanipulováno s využitím umělé inteligence a že upravené video sdílené na YouTube kanálu UN Watch zřejmě modifikuje hlas Albanese. Video obsahuje titulky s logem UN Watch. Euronews oslovil UN Watch s žádostí o vyjádření – organizace nereagovala.'
+    side: "right"
     facets:
-      actor: media
+      actor: "media"
     sources:
       - label: "Euronews – The Cube: plná analýza"
         url: "https://www.euronews.com/my-europe/2026/02/17/did-the-uns-francesca-albanese-really-call-israel-the-enemy-of-humanity"
 
   - date: "2026-02-17"
-    title: "Panel expertů OSN odsuzuje „vymyšlená fakta"
-    description: "Koordinační výbor šesti nezávislých expertů OSN (Special Procedures) označuje tlak na Albanese za 'zakořeněný v dezinformacích' a „založený na vymyšlených faktech'. Reuters informuje, že 'AI-manipulované video se ukázalo jako zdroj obvinění' a že 'neexistuje precedent pro odvolání zvláštního zpravodaje v průběhu mandátu'."
-    side: "right"
+    title: 'Panel expertů OSN odsuzuje „vymyšlená fakta"'
+    description: 'Koordinační výbor šesti nezávislých expertů OSN (Special Procedures) označuje tlak na Albanese za „zakořeněný v dezinformacích" a „založený na vymyšlených faktech". Reuters informuje, že AI-manipulované video se ukázalo jako zdroj obvinění a že neexistuje precedent pro odvolání zvláštního zpravodaje v průběhu mandátu.'
+    side: "left"
     facets:
-      actor:
-        - un
-        - media
+      actor: "un"
     sources:
       - label: "Reuters – panel expertů odsuzuje útoky"
         url: "https://www.reuters.com/world/middle-east/independent-un-body-condemns-vicious-attacks-un-expert-palestinian-rights-2026-02-17/"
@@ -173,10 +215,10 @@ events:
 
   - date: "2026-02-18"
     title: "151 diplomatů obviňuje Barrota z dezinformací"
-    description: "Otevřený dopis 151 bývalých ministrů, velvyslanců a vysokých představitelů OSN kritizuje Barrota za to, že 'se opřel o manipulovaný obsah'. Mezi signatáři jsou mj. bývalí nizozemští ministři zahraničí Bernard Bot a Jozias van Aartsen, bývalý předseda Valného shromáždění OSN Mogens Lykketoft a Daniel Levy, bývalý izraelský vyjednavač."
-    side: "left"
+    description: 'Otevřený dopis 151 bývalých ministrů, velvyslanců a vysokých představitelů OSN kritizuje Barrota za to, že se opřel o manipulovaný obsah. Mezi signatáři jsou mj. bývalí nizozemští ministři zahraničí Bernard Bot a Jozias van Aartsen, bývalý předseda Valného shromáždění OSN Mogens Lykketoft a Daniel Levy, bývalý izraelský vyjednavač.'
+    side: "right"
     facets:
-      actor: ngo
+      actor: "ngo"
     sources:
       - label: "PressTV – otevřený dopis 151 diplomatů"
         url: "https://www.presstv.ir/Detail/2026/02/20/764412/Ex-officials-denounce-French-FM-spreading-disinformation-about-UN-Albanese"
@@ -184,27 +226,32 @@ events:
         url: "https://euobserver.com/203567/former-diplomats-accuse-french-foreign-minister-of-disinformation-over-un-envoy-albanese/"
 
   - date: "2026-02-19"
-    title: "Computer Weekly mapuje celý řetězec; Barrot trvá na svém"
-    description: "Britský Computer Weekly publikuje podrobnou analýzu celé dezinformační kauzy. Potvrzuje, že 'řada médií i Úřad vysokého komisaře OSN potvrdily, že video je zmanipulované'. Oslovil UN Watch s dotazem na zdroj klipu a na to, zda si byl Neuer vědom manipulace – organizace neodpověděla. Ze všech oslovených politických kanceláří reagovalo jen německé MZV. Barrot na X píše: „Nekrátil jsem ani nezkreslil výroky paní Albanese."
-    side: "right"
+    title: "Computer Weekly mapuje celý dezinformační řetězec"
+    description: 'Britský Computer Weekly publikuje podrobnou analýzu celé dezinformační kauzy. Oslovil UN Watch s dotazem na zdroj klipu a na to, zda si byl Neuer vědom manipulace – organizace neodpověděla. Ze všech oslovených politických kanceláří reagovalo jen německé MZV.'
+    side: "left"
     facets:
-      actor: media
+      actor: "media"
     sources:
       - label: "Computer Weekly – celá analýza"
         url: "https://www.computerweekly.com/news/366639200/European-politicians-amplify-disinformation-about-UN-rapporteur"
 
+  - date: "2026-02-19"
+    title: "Barrot trvá na svém"
+    description: 'Barrot na X píše: „Nekrátil jsem ani nezkreslil výroky paní Albanese."'
+    side: "right"
+    facets:
+      actor: "gov"
+
   - date: "2026-02-23"
     title: "Zahájení 61. zasedání Rady OSN pro lidská práva"
-    description: "V Ženevě začíná zasedání, na němž Francie avizovala formální požadavek na odvolání Albanese. Mluvčí Úřadu vysokého komisaře pro lidská práva Marta Hurtado na tiskové konferenci potvrzuje, že Albanese 'neoznačila žádný stát za nepřítele lidstva' a vyzývá 'všechny, aby si její projev poslechli'."
+    description: 'V Ženevě začíná zasedání, na němž Francie avizovala formální požadavek na odvolání Albanese. Mluvčí Úřadu vysokého komisaře pro lidská práva Marta Hurtado na tiskové konferenci potvrzuje, že Albanese neoznačila žádný stát za nepřítele lidstva a vyzývá všechny, aby si její projev poslechli.'
     side: "left"
     facets:
-      actor:
-        - un
-        - gov
+      actor: "un"
 
   - date: "2026-02-24"
     title: "Žádná z pěti vlád se neomluvila"
-    description: "K tomuto datu: Rakousko smazalo příspěvek na X (bez omluvy). Německo tvrdí, že Wadephul 'se odkazoval na celý výrok, nikoli na manipulované video'. Francie tvrdí, že Barrotova výzva 'neměla nic společného se sestříhaným videem'. České MZV se k manipulaci videa vůbec nevyjádřilo a příspěvek Macinky na X zůstává online. Itálie se nevyjádřila."
+    description: 'K tomuto datu: Rakousko smazalo příspěvek na X (bez omluvy). Německo tvrdí, že Wadephul se odkazoval na celý výrok, nikoli na manipulované video. Francie tvrdí, že Barrotova výzva neměla nic společného se sestříhaným videem. České MZV se k manipulaci videa vůbec nevyjádřilo a příspěvek Macinky na X zůstává online. Itálie se nevyjádřila.'
     side: "right"
     facets:
-      actor: gov
+      actor: "gov"
