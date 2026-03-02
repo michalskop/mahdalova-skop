@@ -69,22 +69,22 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#ffdc33',
             '#ffd519',
             '#ffcf02', // [6] main yellow
-            '#d6a404',
+            '#efb704',
             '#bd9103',
             '#a47d03'],
           // ACCENT ORANGE — use for: InfoBox 'warning' border/bg, warning states.
           // Main shade: [6] = #f76800. Light tint: [0] = #fff4eb.
           brandOrange: [
-            '#fff4eb',  // [0] InfoBox warning background
-            '#ffe4cc',
-            '#ffd4b3',
-            '#ffb380',
+            '#fff3e8',
+            '#ffe0c7',
+            '#ffc89f',
+            '#fda668',
             '#ff934d',
-            '#ff7519',
-            '#f76800', // [6] InfoBox warning border
-            '#c55300',
-            '#ac4800',
-            '#933e00'],
+            '#ff7f2a',
+            '#f76800',
+            '#cc5f00',
+            '#994800',
+            '#663200'],
           // ROYAL BLUE — use for: testimonial card backgrounds (dark [8]).
           // Main shade: [6] = #4a51ab. Dark shade: [8] = #272a59.
           brandRoyalBlue: [
@@ -96,10 +96,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
           // TEAL — use for: InfoBox 'success' border, subscribe button (color="teal"),
           // success states. Main shade: [6] = #0f6c78. Light tint: [0] = #e5f9fc.
           brandTeal: [
-            "#e5f9fc", // [0] InfoBox success background
-            "#b8eff6", "#8cdfef", "#5fcce6", "#33b9d9", "#1a9fbd",
-            "#0f6c78", // [6] InfoBox success border, subscribe button
-            "#0b5964", "#084650", "#06333c"],
+            "#e5fdfc",
+            "#b8eff6",
+            "#8cdfef",
+            "#5fcce6",
+            "#33b9d9",
+            "#1a9fbd",
+            "#0e839e",
+            "#06677d",
+            "#044d5e",
+            "#023440"],
           // FOREST GREEN — decorative accent. Not used in current components.
           // Main shade: [6] = #639e0a.
           brandForestGreen: [
@@ -121,9 +127,38 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
           // DEEP RED — darker crimson variant. Decorative, not used in current components.
           // Main shade: [6] = #a03250.
           brandDeepRed: [
-            "#fbe8eb", "#f5c4cd", "#efa0af", "#e87c91", "#d85a74", "#bb3a5d",
-            "#a03250", // [6] main
-            "#812840", "#621d30", "#431320"]
+            "#fbe8eb",
+            "#f5c4c9",
+            "#efa0af",
+            "#e87c91",
+            "#d85a74",
+            "#bb3a5d",
+            "#a03250",
+            "#812840",
+            "#621d30",
+            "#431320"],
+          brandCoralRed: [
+            "#fff0ed",
+            "#ffcec6",
+            "#ffa99c",
+            "#ff7e6e",
+            "#ff5c4a",
+            "#ff3f30",
+            "#e8412c",
+            "#c93020",
+            "#a32318",
+            "#7d1810"],
+          brandChocolate: [
+            "#f5f0eb",
+            "#e6d5c3",
+            "#d4b89e",
+            "#c19a78",
+            "#a87d58",
+            "#8b6240",
+            "#6e4a2c",
+            "#53361e",
+            "#3b2414",
+            "#24150b"]
         },
         // Force light mode colors
         white: '#ffffff',
