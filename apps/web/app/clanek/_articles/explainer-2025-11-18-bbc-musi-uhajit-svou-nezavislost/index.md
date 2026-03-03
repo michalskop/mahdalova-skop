@@ -6,7 +6,7 @@ excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie sv
 coverImage: "images/bbc-2025-explainer-mahdalova-skop-all.webp"
 filter: ["explainer"]
 tags: ["nezávislost BBC", "BBC", "veřejnoprávní", "média", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize", "nezávislost médií", nezávislá média"]
-promoted: 91
+promoted: 50
 ---
 
 Když 9. listopadu 2025 generální ředitel BBC Tim Davie oznámil, že odchází z čela nejslavnějšího veřejnoprávního média světa, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry – podobně jako vidíme v Česku v případě tuzemské veřejnoprávní televize.
