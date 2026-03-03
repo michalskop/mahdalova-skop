@@ -27,8 +27,8 @@ events:
     date: 'Červen 1980'
     title: 'CNN vznikla'
     emoji: '📺'
-    summary: 'Ted Turner spustil první televizi vysílající zprávy bez přestávky na světě.'
-    description: 'Ted Turner spustil první televizní stanici vysílající zprávy 24 hodin denně. Do té doby trvaly televizní zprávy 30 minut a pak přišel film. CNN toto pravidlo rozbila — zprávy se staly nepřetržitým proudem a formovaly to, jak celý svět vnímá realitu.'
+    summary: 'Ted Turner spustil první televizi na světě vysílající zprávy nepřetržitě.'
+    description: 'Ted Turner spustil první televizní stanici vysílající zprávy 24 hodin denně. Do té doby trvaly televizní zprávy 30 minut, pak následoval film. CNN toto pravidlo rozbila — zprávy se staly nepřetržitým proudem a formovaly to, jak celý svět vnímá realitu.'
     persons:
       - name: 'Ted Turner'
         bio: 'Americký mediální magnát, zakladatel CNN'
