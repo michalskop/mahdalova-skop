@@ -1,5 +1,5 @@
 ---
-title: "Kdo koupí CNN? Průvodce pro každého"
+title: "Kdo koupí CNN. Průvodce pro každého"
 date: "2026-03-03"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči v tomhle byznysu, co chtějí a proč na tom záleží i nám."
