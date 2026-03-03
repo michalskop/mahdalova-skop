@@ -8,16 +8,7 @@ filter: ["explainer"]
 tags: ["nezávislost CNN", "CNN", "Warner Bros.", "Paramount", "Trump", "média", "svoboda tisku", "USA", "svobodná média", "nezávislost médií"]
 promoted: 62
 ---
----
-title: "Kdo koupí CNN? Průvodce pro každého"
-date: "2026-03-03"
-author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Ve čtvrtek 26. února ráno se v redakci CNN rozezněly telefony. Netflix vzdal boj o Warner Bros. Discovery. A novináři pochopili, co to znamená: jejich televizí si teď bude říkat člověk, který je kamarád s Trumpem."
-coverImage: "images/main.png"
-filter: ["explainer"]
-tags: ["CNN", "Warner Bros.", "Paramount", "Trump", "média", "svoboda tisku", "USA"]
-promoted: 52
----
+Televize, která od roku 1980 vysílá zprávy bez přestávky, mění majitele. Vysvětlujeme, kdo jsou hráči, co chtějí a proč na tom záleží i nám.
 
 Ve čtvrtek 26. února ráno se v redakci CNN rozezněly telefony. Netflix vzdal boj o Warner Bros. Discovery — a tím i o CNN. „Jsme v háji," řekl jeden z novinářů listu *Status*. „Všichni jsou v šoku kvůli *těm věcem*," dodal jiný.
 
