@@ -1,0 +1,158 @@
+title: 'Kdo krouží kolem CNN'
+collapsedYears: []
+
+facetGroups:
+  - key: topic
+    label: 'Téma'
+    values:
+      - key: business
+        label: 'Byznys'
+        color: 'brandNavy.4'
+      - key: politics
+        label: 'Politika'
+        color: 'brandDeepRed.4'
+      - key: media
+        label: 'Média'
+        color: 'brandTeal.3'
+      - key: history
+        label: 'Historie'
+        color: 'brandYellow.7'
+
+events:
+  - id: cnn-vznik
+    year: 1980
+    month: 6
+    facets:
+      topic: history
+    date: 'Červen 1980'
+    title: 'CNN vznikla'
+    emoji: '📺'
+    summary: 'Ted Turner spustil první televizi vysílající zprávy bez přestávky na světě.'
+    description: 'Ted Turner spustil první televizní stanici vysílající zprávy 24 hodin denně. Do té doby trvaly televizní zprávy 30 minut a pak přišel film. CNN toto pravidlo rozbila — zprávy se staly nepřetržitým proudem a formovaly to, jak celý svět vnímá realitu.'
+    persons:
+      - name: 'Ted Turner'
+        bio: 'Americký mediální magnát, zakladatel CNN'
+
+  - id: turner-prodej
+    year: 1996
+    month: 10
+    facets:
+      topic: business
+    date: 'Říjen 1996'
+    title: 'Turner CNN prodal — poprvé'
+    emoji: '💼'
+    summary: 'Time Warner koupil Turner Broadcasting. CNN poprvé změnila majitele.'
+    description: 'Ted Turner prodal celou svou mediální skupinu firmě Time Warner za 7,5 miliardy dolarů. CNN od té doby prošla rukama několika velkých korporací — přes AOL Time Warner a AT&T až po Warner Bros. Discovery, kde je dodnes.'
+    persons:
+      - name: 'Ted Turner'
+        bio: 'Zakladatel CNN'
+
+  - id: warner-prodej-oznameni
+    year: 2025
+    month: 5
+    facets:
+      topic: business
+    date: 'Jaro 2025'
+    title: 'Warner oznamuje: prodáváme'
+    emoji: '📢'
+    summary: 'Příjmy z kabelové televize klesají, dluh přesahuje 29 miliard dolarů. Warner hledá cestu ven.'
+    description: 'Warner Bros. Discovery oznámil plán rozdělit firmu na dvě části nebo ji prodat. Příjmy z kabelové televizní sítě (kam patří CNN) klesly v roce 2025 o 12 % a firma nese dluh přes 29 miliard dolarů. Streamovací část (HBO Max) přitom roste — jenže nestačí kompenzovat úpadek kabelové televize.'
+    persons:
+      - name: 'David Zaslav'
+        bio: 'Generální ředitel Warner Bros. Discovery'
+
+  - id: paramount-cbs
+    year: 2025
+    month: 8
+    facets:
+      topic: media
+    date: 'Srpen 2025'
+    title: 'Ellison koupil Paramount a okamžitě změnil CBS News'
+    emoji: '🏢'
+    summary: 'Nový šéf CBS News: Bari Weiss, komentátorka bez zkušenosti s vedením televizní redakce.'
+    description: 'David Ellison dokončil koupi Paramountu — firmy s televizí CBS a filmovým studiem. Jako jeden z prvních kroků dosadil do čela CBS News Bari Weiss, konzervativní komentátorku bez zkušenosti s vedením televizní redakce. Weiss brzy stáhla připravený díl pořadu 60 Minutes tři hodiny před vysíláním. Bez veřejného vysvětlení.'
+    persons:
+      - name: 'David Ellison'
+        bio: 'Šéf Paramount Skydance, hollywoodský producent'
+      - name: 'Bari Weiss'
+        bio: 'Nová šéfredaktorka CBS News, zakladatelka webu The Free Press'
+
+  - id: warner-aukce
+    year: 2025
+    month: 10
+    facets:
+      topic: business
+    date: 'Říjen 2025'
+    title: 'Warner vypsán do aukce'
+    emoji: '🔔'
+    summary: 'Zaslav odmítl Ellisonovu první nabídku a vyhlásil otevřenou aukci. Přihlásili se tři zájemci.'
+    description: 'David Ellison nabídl koupi celého Warneru — i s CNN. Zaslav odmítl a spustil otevřenou aukci. Přihlásili se tři zájemci: Netflix, Paramount Skydance a Comcast. Zaměstnanci CNN začali v zákulisí sledovat situaci s rostoucí úzkostí.'
+
+  - id: netflix-vyhral
+    year: 2025
+    month: 12
+    facets:
+      topic: business
+    date: '5. prosince 2025'
+    title: 'Netflix vyhrál aukci — ale CNN nechce'
+    emoji: '✅'
+    summary: 'Netflix nabídl 83 miliard za HBO a filmy. CNN by se stala samostatnou firmou. V CNN si zpočátku oddychli.'
+    description: 'Netflix podal nabídku 83 miliard dolarů za filmy, HBO a streamovací část Warneru. CNN a kabelové kanály by se odštěpily do nové samostatné firmy. V CNN zpočátku zavládla úleva — samostatná CNN by si mohla řídit redakci bez zásahů velkého korporátního majitele. Jenže o tři dny později situaci rozmíchal Paramount.'
+    persons:
+      - name: 'Ted Sarandos'
+        bio: 'Spolugenerální ředitel Netflixu'
+
+  - id: paramount-hostiletakeover
+    year: 2025
+    month: 12
+    facets:
+      topic: business
+    date: '8. prosince 2025'
+    title: 'Paramount: nepřátelská nabídka za 108 miliard'
+    emoji: '⚔️'
+    summary: 'Ellison přeskočil vedení Warneru a nabídl přímo akcionářům 30 dolarů za akcii za celou firmu včetně CNN.'
+    description: 'Paramount Skydance přeskočil vedení Warneru a nabídl přímo akcionářům 30 dolarů za akcii — celkem asi 108 miliard dolarů za celý Warner včetně CNN. Akcionáři mají právo takovou nabídku přijmout i bez souhlasu vedení. Tomu se říká nepřátelské převzetí. Ellison zároveň v rozhovoru pro CNBC řekl, že CNN by sloučil s CBS News.'
+    persons:
+      - name: 'David Ellison'
+        bio: 'Šéf Paramount Skydance'
+      - name: 'Larry Ellison'
+        bio: 'Spoluzakladatel Oracle, otec Davida, hlavní finančník nabídky (45,7 mld. USD vlastního kapitálu)'
+
+  - id: trump-zasahuje
+    year: 2025
+    month: 12
+    facets:
+      topic: politics
+    date: '10. prosince 2025'
+    title: 'Trump: CNN musí být prodáno'
+    emoji: '⚠️'
+    summary: 'Prezident USA otevřeně zasáhl do komerčního obchodu a veřejně vyjádřil, co od výsledku čeká.'
+    description: 'Na setkání v Bílém domě Trump prohlásil, že CNN musí být prodáno a lidé, kteří ji vedou, jsou buď zkorumpovaní nebo nekompetentní. Dodal, že se do schvalování obchodu pravděpodobně osobně zapojí. Schvalování velkých fúzí normálně provádějí nezávislí regulátoři bez přímé účasti prezidenta. Analytici upozorňují, že podmínkou tiché politické podpory pro Ellisona může být příslib vstřícnějšího zpravodajství vůči Bílému domu.'
+    persons:
+      - name: 'Donald Trump'
+        bio: 'Prezident USA'
+
+  - id: netflix-odstoupil
+    year: 2026
+    month: 2
+    facets:
+      topic: business
+    date: '26. února 2026'
+    title: 'Netflix odstoupil. Paramount je favorit.'
+    emoji: '🏁'
+    summary: 'Warner označil nabídku Paramountu za výhodnější. Netflix vzdal boj do čtyř hodin.'
+    description: 'Správní rada Warneru označila nabídku Paramountu (111 miliard dolarů, 31 dolarů za akcii) za výhodnější a dala Netflixu čtyři dny na přebití. Netflix odpověděl do čtyř hodin: odstupujeme, obchod pro nás přestal být finančně zajímavý. David Ellison se stal jediným vážným uchazečem o celý Warner Bros. Discovery — včetně CNN. Paramount zaplatil Warneru odstupné 2,8 miliardy dolarů za zrušení smlouvy s Netflixem.'
+    persons:
+      - name: 'David Ellison'
+        bio: 'Šéf Paramount Skydance, nový favorit'
+
+  - id: soucasnost
+    year: 2026
+    month: 3
+    facets:
+      topic: media
+    date: 'Březen 2026'
+    title: 'CNN čeká. Výsledek není jistý.'
+    emoji: '⏳'
+    summary: 'Obchod ještě musí projít regulatorním schválením v USA i v Evropě. Uzavření: září–prosinec 2026.'
+    description: 'Novináři v CNN pracují v nejistotě. Obchod ještě není uzavřen — antimonopolní regulátoři v USA a Evropě ho musejí prošetřit a to může trvat měsíce. Pokud Ellison CNN koupí, bude jeden člověk vlastnit CNN i CBS News zároveň — dvě hlavní americké zpravodajské televize. Klíčovou otázkou zůstává, zda nový majitel zachová redakční nezávislost.'
