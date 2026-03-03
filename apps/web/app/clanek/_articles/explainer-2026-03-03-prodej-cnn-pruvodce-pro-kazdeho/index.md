@@ -12,7 +12,7 @@ Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění maj
 
 Ve čtvrtek 26. února ráno se v redakci CNN rozezněly telefony. Netflix vzdal boj o Warner Bros. Discovery — a tím i o CNN. „Jsme v háji," řekl jeden ze členů redakce [listu Status](https://www.status.news/p/scott-jennings-cnn-iran-tweet-claim). „Všichni jsou v šoku kvůli *těm věcem*," dodal jiný.
 
-<RelatedArticles preset="sidebar" filter={["explainer", "analýza", "kontext"]} tag="bbc" count={2} sort="newest" position="right" heading="Psali jsme" />
+<RelatedArticles preset="sidebar" filter={["explainer", "analýza", "kontext"]} tag="BBC" count={2} sort="newest" position="right" heading="Psali jsme" />
 
 *Ty věci* mají jméno: David Ellison. Čtyřiačtyřicetiletý hollywoodský producent, syn jednoho z nejbohatších lidí světa, přítel Donalda Trumpa. Člověk, který před pár měsíci koupil televizi CBS a dosadil do jejího čela novinářku bez jediné zkušenosti s vedením televizní redakce. A tenhle člověk chce nyní vstoupit do CNN.
 
