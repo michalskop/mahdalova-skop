@@ -2,15 +2,15 @@
 title: "Kdo koupí CNN? Průvodce pro každého"
 date: "2026-03-03"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Televize, která od roku 1980 vysílá zprávy bez přestávky, mění majitele. Vysvětlujeme, kdo jsou hráči, co chtějí a proč na tom záleží i nám."
+excerpt: "Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči, co chtějí a proč na tom záleží i nám."
 coverImage: "images/cnn-2026-explainer-mahdalova-skop-media.webp"
 filter: ["explainer"]
 tags: ["nezávislost CNN", "CNN", "Warner Bros.", "Paramount", "Trump", "média", "svoboda tisku", "USA", "svobodná média", "nezávislost médií"]
 promoted: 62
 ---
-Televize, která od roku 1980 vysílá zprávy bez přestávky, mění majitele. Vysvětlujeme, kdo jsou hráči, co chtějí a proč na tom záleží i nám.
+Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči, co chtějí a proč na tom záleží i nám.
 
-Ve čtvrtek 26. února ráno se v redakci CNN rozezněly telefony. Netflix vzdal boj o Warner Bros. Discovery — a tím i o CNN. „Jsme v háji," řekl jeden z novinářů listu *Status*. „Všichni jsou v šoku kvůli *těm věcem*," dodal jiný.
+Ve čtvrtek 26. února ráno se v redakci CNN rozezněly telefony. Netflix vzdal boj o Warner Bros. Discovery — a tím i o CNN. „Jsme v háji," řekl jeden ze členů redakce [listu Status](https://www.status.news/p/scott-jennings-cnn-iran-tweet-claim). „Všichni jsou v šoku kvůli *těm věcem*," dodal jiný.
 
 *Ty věci* mají jméno: David Ellison. Čtyřiačtyřicetiletý hollywoodský producent, syn jednoho z nejbohatších lidí světa, přítel Donalda Trumpa. Člověk, který před pár měsíci koupil televizi CBS a dosadil do jejího čela novinářku bez jediné zkušenosti s vedením televizní redakce. A tenhle člověk chce nyní vstoupit do CNN.
 
