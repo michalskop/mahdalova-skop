@@ -20,3 +20,5 @@ Zkrátka: dvě generace, dva pohledy. Data místo dojmů. A otázky, které si m
 <div class="flourish-embed flourish-table" data-src="visualisation/27020399"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27020399/thumbnail" width="100%" alt="table visualization" /></noscript></div>
 
 
+Upřímně, otevřeně a s nadhledem. Matka a dcera, dvě generace, jeden podcast. Každý týden vám přinášíme autentické rozhovory o tom, jak se starat o svou psychickou pohodu, jak zvládat životní výzvy nebo proč je normální nebýt vždycky v pohodě. Mluvíme o věcech bez příkras, sdílíme osobní zkušenosti s úzkostmi i radostmi, bouráme tabu.
+Mezigenerační dialog, někdy vážný, jindy vtipný, ale vždy autentický. Ať už sami hledáte cestu k lepšímu porozumění svým blízkým? Jste tu správně. Protože nejlepší terapie někdy začíná tím, že si o svých problémech prostě popovídáte. Třeba s mámou. Nebo s dcerou.
