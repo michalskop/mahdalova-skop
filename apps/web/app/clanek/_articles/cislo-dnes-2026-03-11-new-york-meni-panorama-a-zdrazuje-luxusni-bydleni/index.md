@@ -19,7 +19,7 @@ New York staví mrakodrapy za desítky milionů dolarů. A zároveň nedokáže 
 
 Od roku 2022 vzrostla průměrná cena luxusních nemovitostí — v luxusním segmentu, tedy u nemovitostí nad 4,5 milionu dolarů — téměř o třetinu, přesněji o 29 procent, zatímco zbytek trhu (po odečtení horní čtvrtiny), zdražil o devět procent. V roce 2024 dosáhla cena za čtvereční metr v luxusním segmentu desetiletého maxima.
 
-Manhattan v roce 2025 zaznamenal přes jedenáct miliard dolarů v luxusních transakcích, ve více než čtrnácti stech kontraktech. V ultra luxusním segmentu nad dvacet milionů dolarů se cena za čtvereční stopu vyšplhala v průměru na 7 185 dolarů. Pětipokojový penthouse v One High Line — té věži s geometrií jako z počítačové hry — stojí padesát milionů. Pronájem průměrného luxusního bytu s vrátným dosáhl v lednu 2026 rekordního mediánu 5 295 dolarů měsíčně.
+Manhattan v roce 2025 zaznamenal přes jedenáct miliard dolarů v luxusních transakcích, ve více než čtrnácti stech kontraktech. V ultra luxusním segmentu nad dvacet milionů dolarů se cena za čtvereční stopu vyšplhala v průměru na 7 185 dolarů. Při kurzu přibližně 23 Kč/USD to je zhruba 1,78 milionu Kč za metr čtvereční. Pro srovnání — v Praze se nejdražší novostavby pohybují kolem 200–250 tisíc Kč/m². Pětipokojový penthouse v One High Line — té věži s geometrií jako z počítačové hry — stojí padesát milionů. Pronájem průměrného luxusního bytu s vrátným dosáhl v lednu 2026 rekordního mediánu 5 295 dolarů měsíčně.
 
 Na druhé straně téhož města je jiná statistika. V únoru 2025 spalo v newyorských azylových domech 114 791 lidí. Tisíce dalších spaly na ulici. Přes 200 000 lidí přespávalo provizorně u příbuzných nebo přátel. Celkem se odhaduje, že bez vlastního domova bylo v New Yorku přes 350 000 lidí.
 
