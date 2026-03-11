@@ -14,7 +14,7 @@ steps:
       zrcadlí, je jiné město než to, po jehož chodníku právě kráčíte.</p>
     content:
       type: image
-      src: images/new-york-vystavba-0.jpg
+      src: images/new-york-vystavba-0.webp
     bgColor: '#101432'
 
   - text: >-
@@ -27,7 +27,7 @@ steps:
       v panoramatu.</p>
     content:
       type: image
-      src: images/new-york-vystavba-1.jpg
+      src: images/new-york-vystavba-1.webp
     bgColor: '#101432'
 
   - text: >-
@@ -42,7 +42,7 @@ steps:
       <strong>5 295 dolarů měsíčně</strong>.</p>
     content:
       type: image
-      src: images/new-york-vystavba-2.jpg
+      src: images/new-york-vystavba-2.webp
     bgColor: '#101432'
 
   - text: >-
@@ -55,7 +55,7 @@ steps:
       <p>To je víc než celá Praha.</p>
     content:
       type: image
-      src: images/new-york-vystavba-3.jpg
+      src: images/new-york-vystavba-3.webp
     bgColor: '#101432'
 
   - text: >-
@@ -68,7 +68,7 @@ steps:
       <p>Místo na trhu prakticky neexistuje.</p>
     content:
       type: image
-      src: images/new-york-vystavba-4.jpg
+      src: images/new-york-vystavba-4.webp
     bgColor: '#101432'
 
   - text: >-
@@ -82,7 +82,7 @@ steps:
       <strong>chronický nedostatek</strong>.</p>
     content:
       type: image
-      src: images/new-york-vystavba-5.jpg
+      src: images/new-york-vystavba-5.webp
     bgColor: '#101432'
 
   - text: >-
@@ -96,7 +96,7 @@ steps:
       <p>Stejné město. Různé planety.</p>
     content:
       type: image
-      src: images/new-york-vystavba-6.jpg
+      src: images/new-york-vystavba-6.webp
     bgColor: '#101432'
 
   - text: >-
@@ -117,7 +117,7 @@ steps:
       <p>Krása nových budov není iluzorní. Jsou skutečně krásné.</p>
       <p>Ale jsou krásné jako klenoty vystavené za sklem —
       přítomné a nepřístupné zároveň.</p>
-      <p>Na jedné straně věže, jejichž ceny rostou 29 procenty za tři roky.
+      <p>Na jedné straně mrakodrapy, jejichž ceny rostou 29 procenty za tři roky.
       Na druhé <strong>350 000 lidí bez domova</strong>
       a děti, jejichž počet v azylových domech se za dva roky
       více než zdvojnásobil.</p>
