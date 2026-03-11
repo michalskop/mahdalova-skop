@@ -1,0 +1,129 @@
+textAlignment: right
+
+defaultContent:
+  type: image
+  src: images/new-york-vystavba-0.jpg
+  bgColor: '#101432'
+
+steps:
+  - text: >-
+      <p>Stojíte na Broadway a díváte se vzhůru. Tam, kde se obzor láme v šedém
+      nebi, vyrůstají věže z perleťového porcelánu, ze skla a oceli — věže se zkroucenými
+      fasádami, gotickými oblouky, střešními bazény s výhledem na most.</p>
+      <p>Jsou krásné. Jsou neuvěřitelně drahé. A New York, který se v nich
+      zrcadlí, je jiné město než to, po jehož chodníku právě kráčíte.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-0.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Tenhle příběh začíná číslem.</p>
+      <p>Od roku 2022 vzrostla průměrná cena luxusních nemovitostí — tedy těch nad
+      <strong>4,5 milionu dolarů</strong> — o <strong>29 procent</strong>.</p>
+      <p>Zbytek trhu, po odečtení horní čtvrtiny, vzrostl za stejnou dobu
+      jen o <strong>devět procent</strong>.</p>
+      <p>Nůžky, o kterých ekonomové mluví v grafech, jsou tady fyzicky vidět
+      v panoramatu.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-1.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Manhattan v roce 2025 zaznamenal přes
+      <strong>11 miliard dolarů</strong> v luxusních transakcích,
+      ve více než 1 400 kontraktech.</p>
+      <p>V ultra-luxusním segmentu nad 20 milionů dolarů se cena za čtvereční
+      stopu vyšplhala v průměru na <strong>7 185 dolarů</strong>.</p>
+      <p>Pětipokojový penthouse v One High Line stojí
+      <strong>50 milionů dolarů</strong>. Pronájem průměrného luxusního bytu
+      s vrátným dosáhl v lednu 2026 rekordního mediánu
+      <strong>5 295 dolarů měsíčně</strong>.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-2.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Na druhé straně téhož města je jiná statistika.</p>
+      <p>V únoru 2025 spalo v newyorských azylových domech
+      <strong>114 791 lidí</strong>. Tisíce dalších spaly na ulici.
+      Přes 200 000 lidí přespávalo provizorně u příbuzných nebo přátel.</p>
+      <p>Celkem bylo bez vlastního domova v New Yorku
+      <strong>přes 350 000 lidí</strong>.</p>
+      <p>To je víc než celá Praha.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-3.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Průměrný nájem za jednopokojový byt na Manhattanu přesáhl
+      <strong>4 000 dolarů měsíčně</strong> — ročně tedy přes 48 000 dolarů.</p>
+      <p>Přitom střední příjem domácnosti v New Yorku je <strong>81 600 dolarů</strong>.</p>
+      <p>Každý třetí nájemník vydává na bydlení víc než polovinu svého příjmu.
+      Volné byty s nájmem pod 2 400 dolarů měsíčně?
+      <strong>Méně než jedno procento</strong>.</p>
+      <p>Místo na trhu prakticky neexistuje.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-4.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Počet bezdomoveckých dětí v New Yorku vzrostl ze dvaceti tisíc v roce 2022
+      na přes <strong>50 000 v roce 2024</strong>.</p>
+      <p>Téměř každé třetí dítě bez domova v celých Spojených státech
+      žije v New Yorku.</p>
+      <p>Nové věže přitom vznikají. Budují se a prodávají.
+      Téměř všechny nové developerské projekty jsou ale zaměřeny
+      na luxusní kupce — zatímco v dostupném segmentu přetrvává
+      <strong>chronický nedostatek</strong>.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-5.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Luxusní boom přestal být výhradně manhattanskou záležitostí.</p>
+      <p>V únoru 2026 se v Dumbu — průmyslové čtvrti Brooklynu —
+      uzavřel prodej penthousu za <strong>16,25 milionu dolarů</strong>,
+      s cenou <strong>3 297 dolarů za čtvereční stopu</strong>.
+      Historický rekord pro Brooklyn.</p>
+      <p>Ve stejném čase patřil Bronx, pár kilometrů severně,
+      k nejohroženějším čtvrtím v celém metropolitním regionu.</p>
+      <p>Stejné město. Různé planety.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-6.jpg
+    bgColor: '#101432'
+
+  - text: >-
+      <p>V roce 2025 bylo <strong>64 procent</strong> všech manhattanských
+      transakcí zaplaceno v hotovosti.</p>
+      <p>U obchodů nad tři miliony dolarů to bylo <strong>90 procent</strong>.</p>
+      <p>Hypotéky jsou luxus pro lidi, kteří si luxus nemohou dovolit —
+      ti, kdo luxus opravdu kupují, banky nepotřebují.</p>
+      <p>Přicházejí ze Středního východu, z Asie, z Evropy.
+      Pro zahraniční kupce je Manhattan stále
+      <strong>stabilním úložištěm hodnoty</strong>.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-7.webp
+    bgColor: '#101432'
+
+  - text: >-
+      <p>Krása nových budov není iluzorní. Jsou skutečně krásné.</p>
+      <p>Ale jsou krásné jako klenoty vystavené za sklem —
+      přítomné a nepřístupné zároveň.</p>
+      <p>Na jedné straně věže, jejichž ceny rostou 29 procenty za tři roky.
+      Na druhé <strong>350 000 lidí bez domova</strong>
+      a děti, jejichž počet v azylových domech se za dva roky
+      více než zdvojnásobil.</p>
+      <p>A město, které dokáže postavit takovou krásu a nedokáže přitom
+      ubytovat vlastní děti, o sobě leccos říká.</p>
+    content:
+      type: image
+      src: images/new-york-vystavba-6.webp
+    bgColor: '#101432'
