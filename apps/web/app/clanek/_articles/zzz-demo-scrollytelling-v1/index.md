@@ -25,6 +25,16 @@ To include a scrollytelling section in your article, add this line to your markd
 <ScrollyTelling yamlFile="scrollytelling.yaml" />
 ```
 
+Optional: you can control the desktop layout width of the sticky visualization column via the `width` prop:
+
+```
+<ScrollyTelling yamlFile="scrollytelling.yaml" width="50%" />
+```
+
+This `width` value is used for the visualization (sticky) column on desktop. The text column automatically uses the remaining space.
+
+Note: this is different from `content.width` inside the YAML file (per step), which controls the width of the embedded image/iframe within the visualization area.
+
 The scrollytelling section will appear exactly where you place this line. You can have normal text before and after it.
 
 ## The YAML Configuration

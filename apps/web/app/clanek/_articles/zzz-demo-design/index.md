@@ -32,12 +32,12 @@ Border: `brandNavy[6]` `#6267a3` · Background: `#f0f1f8`
 
 ```infobox warning
 **`warning`** — Caveats, data limitations, things to keep in mind.
-Border: `brandOrange[6]` `#f76800` · Background: `brandOrange[0]` `#fff4eb`
+Border: `brandOrange[6]` `#f76800` · Background: `brandOrange[0]` `#fff3e8`
 ```
 
 ```infobox success
 **`success`** — Confirmed facts, corrections, positive findings.
-Border: `brandTeal[6]` `#0f6c78` · Background: `brandTeal[0]` `#e5f9fc`
+Border: `brandTeal[6]` `#0e839e` · Background: `brandTeal[0]` `#e5fdfc`
 ```
 
 ```infobox error

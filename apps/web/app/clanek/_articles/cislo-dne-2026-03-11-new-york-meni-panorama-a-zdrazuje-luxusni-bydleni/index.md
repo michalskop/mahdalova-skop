@@ -13,7 +13,7 @@ New York staví mrakodrapy za desítky milionů dolarů. A zároveň nedokáže 
 
 *Nová čtvrť roste nad střechami. Pod ní lidé spí na ulici.*
 
-<ScrollyTelling yamlFile="scrollytelling.yaml" />
+<ScrollyTelling yamlFile="scrollytelling.yaml" width="50%" />
 
 ## Čísla, která se za mrakodrapy neschovají 
 

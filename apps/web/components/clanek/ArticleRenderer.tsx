@@ -180,7 +180,8 @@ export function ArticleRenderer({
       </td>
     ),
 
-    ScrollyTelling: ({ yamlFile }) => {
+    ScrollyTelling: (props) => {
+      const { yamlFile, ...rest } = props as any;
       // Now we can use the pre-loaded content directly
       if (!scrollyContent) {
         return <div className="text-red-500">Scrollytelling content not found</div>;
@@ -193,6 +194,7 @@ export function ArticleRenderer({
           textAlignment={scrollyContent.textAlignment}
           className="my-8"
           slug={slug}
+          {...rest}
         />
       );
     },

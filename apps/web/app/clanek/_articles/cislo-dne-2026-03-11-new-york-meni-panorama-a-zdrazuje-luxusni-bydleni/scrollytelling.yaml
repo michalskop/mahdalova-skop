@@ -183,3 +183,9 @@ steps:
       type: image
       src: images/new-york-vystavba-6.webp
     bgColor: '#fdfbf7'
+
+  - content:
+      type: image
+      src: images/new-york-vystavba-6.webp
+    bgColor: '#fdfbf7'
+    text: New York

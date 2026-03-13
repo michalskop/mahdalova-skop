@@ -8,6 +8,7 @@ interface ScrollyTellingProps {
   className?: string;
   textAlignment?: 'left' | 'right';
   slug?: string;
+  width?: string;
 }
 
 const ScrollyTelling = (props: ScrollyTellingProps) => (

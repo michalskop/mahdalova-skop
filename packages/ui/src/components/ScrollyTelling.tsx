@@ -10,6 +10,7 @@ interface ScrollyTellingProps {
   textAlignment?: 'left' | 'right';
   slug?: string;
   articleBasePath?: string;
+  width?: string;
 }
 
 const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
@@ -19,9 +20,14 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   textAlignment = 'left',
   slug,
   articleBasePath = '/clanek/_articles',
+  width,
 }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(-1);
   const [isMobile, setIsMobile] = useState(false);
+
+  const normalizedWidth = typeof width === 'string' ? width.replace(/\s+/g, '') : undefined;
+  const mediaColumnWidth = normalizedWidth || '65%';
+  const textColumnWidth = `calc(100% - ${mediaColumnWidth})`;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -51,20 +57,21 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   };
 
   const getCurrentContent = () => {
-    const content = currentStepIndex === -1
-      ? defaultContent
-      : steps[currentStepIndex].content;
+    const step = currentStepIndex >= 0 ? steps[currentStepIndex] : undefined;
+    const content = currentStepIndex === -1 ? defaultContent : step?.content;
 
     if (!content) return null;
 
+    const finalWidth = content.width || '100%';
+
     if (content.type === 'image') {
       return (
-        <div style={{ width: '100%', height: 'auto' }}>
+        <div style={{ width: finalWidth, height: 'auto' }}>
           <img
             src={getImagePath(content.src)}
             alt={`Visualization step ${currentStepIndex + 1}`}
             style={{
-              width: '100%',
+              width: finalWidth,
               height: 'auto',
               transition: 'opacity 0.3s ease-in-out'
             }}
@@ -74,7 +81,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     } else if (content.type === 'iframe') {
       return (
         <div style={{
-          width: '100%',
+          width: finalWidth,
           height: isMobile ? '80vh' : '100%',
           display: 'flex',
           alignItems: 'center',
@@ -82,11 +89,10 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
         }}>
           <iframe
             src={content.src}
-            width="100%"
             height="90%"
             style={{
               border: 'none',
-              width: '100%',
+              width: finalWidth,
               height: '90%'
             }}
             allowFullScreen={content.allowFullScreen}
@@ -102,7 +108,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     if (currentStepIndex === -1) {
       return defaultContent?.bgColor || 'transparent';
     }
-    return steps[currentStepIndex].bgColor || 'transparent';
+    return steps[currentStepIndex]?.bgColor || 'transparent';
   };
 
   if (isMobile) {
@@ -181,7 +187,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
         flexDirection: textAlignment === 'left' ? 'row' : 'row-reverse' as const,
       }}>
         <div style={{
-          width: '35%',
+          width: textColumnWidth,
           padding: '0 2rem',
         }}>
           <Scrollama offset={0.5} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
@@ -205,7 +211,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
         </div>
 
         <div style={{
-          width: '65%',
+          width: mediaColumnWidth,
           position: 'sticky',
           top: 0,
           height: '100vh',
