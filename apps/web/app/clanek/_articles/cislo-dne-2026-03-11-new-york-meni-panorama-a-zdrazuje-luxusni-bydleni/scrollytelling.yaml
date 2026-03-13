@@ -2,190 +2,198 @@ textAlignment: right
 
 defaultContent:
   type: image
-  src: images/new-york-vystavba-0.webp
+  src: images/new-york-vystavba-0.jpg
   bgColor: '#fdfbf7'
 
 steps:
   - text: >-
-      <p>New York je město, které se neustále předělává. Nové budovy přetvářejí
-      jeho siluetu každou dekádu znovu. Tentokrát ale data ukazují něco,
-      co pouhým okem v panoramatu nevidíte: <strong>trh se rozpadá na dva světy</strong>,
-      které rostou různou rychlostí a míří různými směry.</p>
-      <p>Od roku 2022 vzrostla průměrná cena v luxusním segmentu —
-      tedy u nemovitostí nad <strong>4,5 milionu dolarů</strong> —
-      o <strong>29 procent</strong>. Zbytek trhu, po odečtení horní čtvrtiny,
-      vzrostl za stejnou dobu jen o <strong>devět procent</strong>.
-      Průměrná cena za čtvereční stopu u luxusních kontraktů dosáhla
-      v roce 2024 <strong>desetiletého maxima</strong>.</p>
-      <p>Nůžky, o kterých ekonomové mluví v grafech, jsou tady fyzicky
-      vidět v panoramatu.</p>
+      <p>New York je město, které se neustále přetváří. Nové budovy překreslují
+      jeho siluetu zhruba každou dekádu. Poslední data ukazují něco,
+      co se pouhým okem na newyorské panorama nerozpozná: realitní trh je rozdělen
+      na dva světy, které rostou různou rychlostí a míří různými směry.</p>
+      <p>Od roku 2022 vzrostla průměrná cena v luxusním segmentu — u nemovitostí
+      nad <strong>4,5 milionu dolarů</strong> — o <strong>29 procent</strong>.
+      Zbytek trhu vzrostl za stejnou dobu o devět. Data pocházejí od realitní
+      společnosti Brown Harris Stevens Development Marketing. Průměrná cena
+      za čtvereční stopu u luxusních kontraktů dosáhla v roce 2024
+      desetiletého maxima.</p>
+      <p>Jinými slovy: čím dražší nemovitost, tím rychleji zdražuje.
+      A propast mezi oběma světy se každý rok zvětšuje.</p>
     content:
       type: image
       src: images/new-york-vystavba-0.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>V roce 2025 zaznamenal Manhattan přes <strong>11 miliard dolarů</strong>
-      v luxusních transakcích — ve více než <strong>1 400 kontraktech</strong>.
-      To jsou čísla, která trh sám o sobě definují: nejde o výkyv ani
-      o spekulativní bublinu, ale o strukturální posun.</p>
-      <p>V ultra-luxusním segmentu nad 20 milionů dolarů se cena za čtvereční
-      stopu vyšplhala v průměru na <strong>7 185 dolarů</strong> —
-      přepočteno na metry čtvereční je to přes <strong>77 000 dolarů za m²</strong>,
-      tedy zhruba <strong>1,78 milionu korun za jeden metr</strong>.</p>
-      <p>Pětipokojový penthouse v One High Line stojí <strong>50 milionů dolarů</strong>.
-      Průměrný pronájem luxusního bytu s vrátným dosáhl v lednu 2026 rekordního
-      mediánu <strong>5 295 dolarů měsíčně</strong> — historické maximum
-      pro tento segment.</p>
+      <p>V roce 2025 se na Manhattanu uzavřelo přes <strong>1 400 luxusních
+      kontraktů</strong> v celkové hodnotě přes <strong>11 miliard dolarů</strong>.
+      Průměrná cena jednoho kontraktu: 7,8 milionu dolarů.</p>
+      <p>V tom nejdražším segmentu — bytech nad 20 milionů — stál metr čtvereční
+      průměrně přes <strong>77 000 dolarů</strong>. To je zhruba
+      <strong>1,78 milionu korun za metr</strong>. Nejdražší pražské novostavby
+      se pohybují kolem 250 tisíc korun za metr. Manhattanský ultra-luxus
+      je sedmkrát dražší.</p>
+      <p>Pětipokojový penthouse v One High Line stojí 50 milionů dolarů.
+      Průměrný pronájem luxusního bytu s vrátným dosáhl v lednu 2026
+      rekordního mediánu <strong>5 295 dolarů měsíčně</strong>.</p>
     content:
       type: image
       src: images/new-york-vystavba-1.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Kdo tyto byty kupuje? Čím dál tím méně lidé závislí na hypotékách.
-      V roce 2025 bylo <strong>64 procent</strong> všech manhattanských
-      transakcí zaplaceno v hotovosti. U obchodů nad tři miliony dolarů
-      to bylo <strong>90 procent</strong>.</p>
-      <p>Tento „cash-first" model má přímý dopad na dynamiku trhu:
-      pohybuje se rychle, reaguje na burzovní výsledky a bonusy,
-      nikoli na výši úrokových sazeb. Wallstreetské bonusy vzrostly
-      v roce 2025 meziročně odhadem o <strong>35 procent</strong>
-      a fungovaly jako přímé čerpadlo do trhu s luxusními byty.</p>
-      <p>Přibývají také zahraniční kupci — ze Středního východu, Asie
-      a Evropy. Silný dolar jejich zájem příliš neochladil:
-      pro mezinárodní investory je Manhattan stále
-      <strong>stabilním úložištěm hodnoty</strong>, srovnatelným
-      se zlatem nebo státními dluhopisy.</p>
+      <p>V roce 2025 bylo <strong>64 procent</strong> všech manhattanských
+      transakcí zaplaceno bez hypotéky — rovnou z účtu. U obchodů nad tři
+      miliony dolarů to bylo <strong>90 procent</strong>.</p>
+      <p>Proč hotovost? Hypotéka znamená banku. Banka znamená prověrku příjmů
+      a původu peněz. Hotovostní kupec tyto prověrky obchází. Americká agentura
+      pro finanční kriminalitu FinCEN zjistila, že přes čtvrtinu hotovostních
+      nákupů luxusních manhattanských bytů vykazovalo znaky podezřelých
+      transakcí — peněz, jejichž původ nebylo možné ověřit.</p>
+      <p>Ekonom Gabriel Zucman, expert na skryté bohatství, se ptá otevřeně:
+      <em>„Proč dovolujeme, aby velká část Manhattanu patřila bezejmenným
+      schránkovým firmám, za nimiž se potenciálně skrývají zločinci
+      a osoby peroucí špinavé peníze?"</em></p>
     content:
       type: image
       src: images/new-york-vystavba-2.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Na druhé straně téhož města existuje zcela jiná statistika.
-      V únoru 2025 spalo v newyorských azylových domech
-      <strong>114 791 lidí</strong>. Tisíce dalších spaly na ulici.
-      Přes <strong>200 000 lidí</strong> přespávalo provizorně
-      u příbuzných nebo přátel — tzv. „doubled-up", kategorie,
-      která se v oficiálních přehledech bezdomovectví často nezapočítává.</p>
-      <p>Celkový odhad lidí bez vlastního stabilního bydlení
-      v New Yorku v únoru 2025 přesahuje <strong>350 000</strong> —
-      více než celá Praha.</p>
-      <p>Počet bezdomovců v New Yorku vzrostl mezi lety 2014 a 2024
-      o <strong>107 procent</strong>. Za stejnou dobu,
-      kdy luxusní trh zaznamenával rekord za rekordem.</p>
+      <p>Manhattanský byt funguje jako trezor. Bezpečné úložiště hodnoty,
+      které nezdaníte a které přečká politické otřesy kdekoliv na světě.
+      Jak píše Euronews, pro miliardáře po celém světě tyto jednotky
+      fungují méně jako domovy a více jako <em>„realitní sejfy"</em>.</p>
+      <p>Byt lze koupit přes anonymní LLC — schránkovou firmu —
+      takže v katastru figuruje název firmy, ne jméno majitele.
+      Výzkum Brookings Institution ukázal, že americká regulace
+      v této oblasti je tak slabá, že neodradila prakticky nikoho.
+      Wallstreetské bonusy vzrostly v roce 2025 odhadem
+      o <strong>35 procent</strong> a fungovaly jako přímé čerpadlo
+      do trhu s luxusními byty.</p>
+      <p>Část těchto bytů pak zůstává prázdná. Majitelé v nich nebydlí.
+      Pronajímat je nechtějí — nájemníci znamenají opotřebení aktiva.
+      Jde o kalkulaci, ne o domov.</p>
     content:
       type: image
       src: images/new-york-vystavba-3.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Mezi bezdomovectvím a výší nájemného existuje měřitelná závislost.
-      Data ukazují, že každé <strong>pětiprocetní zvýšení nájemného</strong>
-      v New Yorku vyžene z domovů přibližně <strong>3 000 dalších lidí</strong>.</p>
       <p>Průměrný nájem za jednopokojový byt na Manhattanu přesáhl
-      <strong>4 000 dolarů měsíčně</strong> — ročně tedy přes 48 000 dolarů.
-      Střední příjem domácnosti v New Yorku je přitom <strong>81 600 dolarů</strong>.
-      Aby domácnost vydávala na bydlení doporučených 30 procent příjmu,
-      musela by vydělávat přes <strong>160 000 dolarů ročně</strong>.</p>
-      <p>Každý třetí nájemník v New Yorku vydává na bydlení
-      <strong>více než polovinu svého příjmu</strong>.
-      Volné byty s nájmem pod 2 400 dolarů měsíčně tvoří
-      <strong>méně než jedno procento</strong> nabídky.</p>
+      <strong>4 000 dolarů měsíčně</strong>. Ročně přes 48 000 dolarů.
+      Střední příjem domácnosti v New Yorku je <strong>81 600 dolarů</strong>.</p>
+      <p>Aby domácnost vydávala na bydlení standardních 30 procent příjmu,
+      musela by vydělávat přes <strong>160 000 dolarů ročně</strong>.
+      Mediánová domácnost vydělává o polovinu méně.</p>
+      <p>Každý třetí nájemník vydává na bydlení více než polovinu příjmu.
+      Volné byty s nájmem pod 2 400 dolarů tvoří méně než jedno procento
+      celé nabídky. Volná míra na dostupném segmentu trhu je nejnižší
+      od roku 1968, upozorňuje zpráva náměstkyně primátora
+      Leily Bozorgové z února 2026.</p>
     content:
       type: image
       src: images/new-york-vystavba-4.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Krize má výrazný generační a rasový rozměr.
-      Počet bezdomoveckých dětí v New Yorku vzrostl
-      z <strong>20 299 v roce 2022</strong> na
-      <strong>50 773 v roce 2024</strong> — tedy za pouhé dva roky
-      na více než dvojnásobek.</p>
-      <p>Téměř každé třetí dítě bez domova v celých Spojených státech
-      žije v New Yorku — jeden z nejvyšších podílů v zemi.
-      Mezi domácnostmi v bytové nouzi tvoří
-      <strong>55 procent</strong> hispánské domácnosti
-      a <strong>50 procent</strong> domácnosti afroamerické,
-      oproti 31 procentům u domácností bělošských.</p>
-      <p>Nová výstavba dostupného bydlení se soustřeďuje neproporčně
-      do čtvrtí, které jsou již dnes převážně černošské a hispánské —
-      zejména do South Bronx a Central Brooklyn.
-      Bohatší a převážně bělošské čtvrti ve východním Queensu
-      a na Staten Islandu přidaly od roku 2022
-      jen jednotky nových dotovaných bytů.</p>
+      <p>V únoru 2025 spalo v newyorských azylových domech
+      <strong>114 791 lidí</strong>. Tisíce dalších spaly na ulici.
+      Přes 200 000 lidí přespávalo provizorně u příbuzných nebo přátel —
+      kategorie, která se v oficiálních přehledech bezdomovectví
+      nezapočítává.</p>
+      <p>Celkový odhad lidí bez vlastního bydlení v New Yorku
+      v únoru 2025: přes <strong>350 000</strong>. Více než celá Praha.
+      Počet bezdomovců vzrostl mezi lety 2014 a 2024
+      o <strong>107 procent</strong>, uvádí zpráva státního kontrolora.</p>
+      <p>Mezi nájemným a bezdomovectvím existuje přímá závislost.
+      Každé pětiprocetní zvýšení nájemného vyžene z domovů přibližně
+      <strong>3 000 dalších lidí</strong>, ukazuje výzkum
+      Center for New York City Affairs. Nájmy rostou každý rok.</p>
     content:
       type: image
       src: images/new-york-vystavba-5.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Luxusní boom přestal být výhradně manhattanskou záležitostí.
-      V únoru 2026 se v brooklynském Dumbu uzavřel prodej penthousu
-      v 33patrové věži Olympia za <strong>16,25 milionu dolarů</strong>
-      — s cenou <strong>3 297 dolarů za čtvereční stopu</strong>,
-      historický rekord pro sponzorský kondominium v Brooklynu.</p>
-      <p>One Domino Square ve Williamsburgu patřil v roce 2025
-      k nejprodávanějším rezidenčním projektům v celém New Yorku.
-      Jižní věž má 400 bytů, severní dalších 160 —
-      od studií po čtyřpokojové apartmány s dvoupodlažními penthousy.</p>
-      <p>Ve stejném čase zůstával Bronx, několik kilometrů severně,
-      <strong>epicentrem bytové krize</strong> v celém metropolitním regionu —
-      s nejvyšší mírou vyklízení nájemníků, přeplněnosti bytů
-      a závislosti na azylovém bydlení v celém New Yorku.</p>
+      <p>Krize má měřitelný rasový rozměr. Mezi domácnostmi v bytové nouzi
+      tvoří <strong>55 procent</strong> hispánské domácnosti
+      a <strong>50 procent</strong> domácnosti afroamerické.
+      U bělošských domácností je to 31 procent.
+      Data pocházejí ze zprávy newyorského Úřadu státního kontrolora.</p>
+      <p>Počet bezdomoveckých dětí vzrostl z <strong>20 299 v roce 2022</strong>
+      na <strong>50 773 v roce 2024</strong> — za dva roky na více než dvojnásobek,
+      uvádí státní kontrolor Thomas DiNapoli. Téměř každé třetí dítě
+      bez domova v celých Spojených státech žije v New Yorku.</p>
+      <p>Nová výstavba dostupného bydlení míří převážně do čtvrtí,
+      které jsou již dnes převážně černošské a hispánské — South Bronx,
+      Central Brooklyn. Bohatší čtvrti ve východním Queensu
+      a na Staten Islandu přidaly od roku 2022 jen jednotky
+      dotovaných bytů, ukázala analýza Gothamist.</p>
     content:
       type: image
       src: images/new-york-vystavba-6.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Na podzim 2025 vyhrál starostovské volby demokratický socialista
-      Zohran Mamdani s platformou zaměřenou na zmrazení nájmů
-      v regulovaných bytech a rozšíření dostupného bydlení.
-      Výsledek okamžitě spustil spekulace o dopadu na luxusní trh.</p>
-      <p>Data zatím mluví jinak: měsíc po jeho vítězství
-      manhattanský luxusní segment <strong>dál překonával rekordy</strong>.
-      Trh v tomto segmentu na politické signály příliš nereaguje —
-      je poháněn hotovostí, mezinárodním kapitálem a bonusy,
-      nikoli sazbami hypoték ani volební rétorikou.</p>
-      <p>Prosincová reforma zoningu „City of Yes for Housing Opportunity"
-      slibuje vznik přes <strong>82 000 nových bytů</strong>
-      uvolněním stavebních předpisů a přeměnou kancelářských prostor.
-      Kritici ale upozorňují, že program nezahrnuje požadavky
-      na hlubokou dostupnost — a pro lidi v azylových domech
-      nebude mít <strong>žádný měřitelný dopad</strong>.</p>
+      <p>Luxusní boom přestal být manhattanskou záležitostí.
+      V únoru 2026 se v brooklynském Dumbu uzavřel prodej penthousu
+      za <strong>16,25 milionu dolarů</strong> — s cenou
+      <strong>3 297 dolarů za čtvereční stopu</strong>.
+      Historický rekord pro Brooklyn.</p>
+      <p>One Domino Square ve Williamsburgu patřil v roce 2025
+      k nejprodávanějším rezidenčním projektům v celém New Yorku.
+      Ve stejném čase zůstával Bronx, několik kilometrů severně,
+      epicentrem bytové krize — s nejvyšší mírou vyklízení nájemníků
+      a přeplněnosti bytů v celém New Yorku, dokumentuje
+      každoroční zpráva organizace ANHD.</p>
+      <p>Analytik Marc Freud to shrnuje pro odborný list NYREJ:
+      <em>„New York není přesycen bydlením.
+      Je přesycen průměrným bydlením."</em></p>
     content:
       type: image
       src: images/new-york-vystavba-7.webp
     bgColor: '#fdfbf7'
 
   - text: >-
-      <p>Tato propast není newyorská anomálie —
-      je to logický výsledek trhu, kde nová výstavba
-      systematicky míří do horního segmentu,
-      protože tam jsou marže nejvyšší.
-      <strong>New York není přesycen bydlením.
-      Je přesycen průměrným bydlením</strong> —
-      a chronicky poddimenzován v tom dostupném.</p>
-      <p>Na jedné straně věže, jejichž ceny rostou
-      29 procenty za tři roky a jejichž kupci
-      nepotřebují banky. Na druhé
-      <strong>350 000 lidí bez domova</strong>,
-      počet bezdomoveckých dětí, který se za dva roky
-      více než zdvojnásobil, a nájemní trh,
-      kde volné dostupné byty prakticky neexistují.</p>
-      <p>Obě čísla jsou pravdivá. Obě popisují tentýž New York
-      v březnu 2026. A právě to je na nich
-      nejpodstatnější.</p>
+      <p>Na podzim 2025 vyhrál starostovské volby <strong>Zohran Mamdani</strong>,
+      demokratický socialista a člen státního zákonodárného sboru za Queens.
+      Vyhrál s nejvyšším počtem hlasů, jaký newyorský primátor získal
+      za posledních 60 let. Ústředním tématem jeho kampaně bylo bydlení.</p>
+      <p>Mamdani slíbil čtyřleté zmrazení nájmů pro regulované byty —
+      téměř milion bytů, přibližně polovina celého nájemního trhu.
+      Zároveň přislíbil výstavbu <strong>200 000 nových dostupných bytů
+      za deset let</strong>, odhadované náklady: 100 miliard dolarů.</p>
+      <p>Hned první den v úřadu, 1. ledna 2026, podepsal tři výkonné výnosy:
+      obnovil Úřad na ochranu nájemníků, zřídil pracovní skupinu LIFT
+      pro soupis městských pozemků vhodných k výstavbě a skupinu SPEED
+      pro odstraňování byrokratických překážek ve stavebním řízení.
+      <em>„Dnes, v den, kdy jsou splatné nájmy, nebudeme čekat,"</em>
+      řekl na tiskové konferenci v pronajatém domě v Brooklynu.</p>
     content:
       type: image
       src: images/new-york-vystavba-6.webp
     bgColor: '#fdfbf7'
 
-  - content:
+  - text: >-
+      <p>Co Mamdani reálně může změnit — a co ne?</p>
+      <p>Zmrazení nájmů ani velké bytové programy nemůže prosadit sám.
+      Vyžadují souhlas státního parlamentu v Albany. Realitní lobby
+      je tam mimořádně silná. Jeden z lídrů nájemního hnutí
+      Jaron Benjamin říká: <em>„Je to jako ropný průmysl v Texasu.
+      Mají tolik peněz a vlivu, že si zajišťují ty nejlepší lobbisty."</em></p>
+      <p>Mamdaniho plán počítá s cenou 500 000 dolarů za byt.
+      Realitní asociace REBNY odhaduje, že při odborové pracovní síle —
+      kterou Mamdani prosazuje — vyjde jeden byt na <strong>800 000 dolarů</strong>.
+      Federální vláda Donalda Trumpa zároveň škrtá dotace
+      na nájemní bydlení o 40 procent.</p>
+      <p>Trh samotný reaguje klidně. Měsíc po Mamdaniho zvolení
+      manhattanský luxusní trh dál překonával rekordy.
+      Je poháněn hotovostí a mezinárodním kapitálem —
+      ne sazbami hypoték ani volební rétorikou.
+      Obě čísla — rekordy nahoře a krize dole —
+      budou existovat vedle sebe dál.</p>
+    content:
       type: image
       src: images/new-york-vystavba-6.webp
     bgColor: '#fdfbf7'
-    text: New York
