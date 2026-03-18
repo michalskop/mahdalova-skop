@@ -13,6 +13,63 @@ import type { TimelineContent } from '@/types/timeline';
 import { getArticles } from '@/components/common/getArticles';
 
 
+function parseCsv(content: string) {
+  const text = content.replace(/^\uFEFF/, '');
+  const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
+  if (!lines.length) return { headers: [] as string[], rows: [] as Record<string, string>[] };
+
+  const detectDelimiter = (line: string) => {
+    const commas = (line.match(/,/g) || []).length;
+    const semis = (line.match(/;/g) || []).length;
+    return semis > commas ? ';' : ',';
+  };
+
+  const delimiter = detectDelimiter(lines[0]);
+
+  const parseLine = (line: string) => {
+    const out: string[] = [];
+    let cur = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') {
+        if (inQuotes && line[i + 1] === '"') {
+          cur += '"';
+          i++;
+          continue;
+        }
+        inQuotes = !inQuotes;
+        continue;
+      }
+
+      if (!inQuotes && ch === delimiter) {
+        out.push(cur.trim());
+        cur = '';
+        continue;
+      }
+
+      cur += ch;
+    }
+
+    out.push(cur.trim());
+    return out;
+  };
+
+  const headers = parseLine(lines[0]).map((h) => h.replace(/^"|"$/g, '').trim());
+  const rows = lines.slice(1).map((line) => {
+    const cells = parseLine(line).map((c) => c.replace(/^"|"$/g, ''));
+    const rec: Record<string, string> = {};
+    headers.forEach((h, idx) => {
+      rec[h] = cells[idx] ?? '';
+    });
+    return rec;
+  });
+
+  return { headers, rows };
+}
+
+
 export async function getArticleBySlug(directorySlug: string) {
   const articlesDirectory = path.join(process.cwd(), 'app/a/_articles');
   const articleDir = path.join(articlesDirectory, directorySlug);
@@ -60,6 +117,24 @@ export async function getArticleBySlug(directorySlug: string) {
     timelineData[yamlFile] = yaml.load(timelineFile) as TimelineContent;
   }
 
+  // Find and load data for StyledTable (CSV-backed tables; supports multiple instances)
+  const styledTableData: Record<string, { headers: string[]; rows: Record<string, string>[] }> = {};
+  const styledTableRegex = /<StyledTable[^>]*csvFile="([^"]+)"[^>]*\/?>/g;
+  let styledMatch: RegExpExecArray | null;
+  while ((styledMatch = styledTableRegex.exec(content)) !== null) {
+    const csvFile = styledMatch[1];
+    if (!csvFile) continue;
+    if (styledTableData[csvFile]) continue;
+
+    const csvPath = path.join(articleDir, csvFile);
+    if (!fs.existsSync(csvPath)) {
+      throw new Error(`StyledTable csvFile not found: ${directorySlug}/${csvFile}`);
+    }
+
+    const csvContent = fs.readFileSync(csvPath, 'utf8');
+    styledTableData[csvFile] = parseCsv(csvContent);
+  }
+
   // Pre-fetch article pool for RelatedArticles MDX component
   const relatedArticlesPool = await getArticles(9999, undefined, true);
   const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
@@ -67,6 +142,7 @@ export async function getArticleBySlug(directorySlug: string) {
   const mdxSource = await serialize(content, {
     scope: {
       timelineData: timelineData,
+      styledTableData: styledTableData,
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {

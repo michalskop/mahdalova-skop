@@ -110,6 +110,63 @@ Separate columns with `|` and rows with a new line. The second row (dashes) is r
 - `---:` — right-aligned (good for numbers)
 - `:---:` — centred
 
+### Theme-coloured table rows (JSX)
+
+If you need row backgrounds, use the JSX helpers `<Tr>`, `<Th>`, `<Td>`, and optional `<Swatch>`. They support theme colour tokens like `brand.6` or `background.2`.
+
+```md
+<table style={{ width: '100%', borderCollapse: 'collapse' }}>
+  <thead>
+    <Tr bg="background.2">
+      <Th>Example</Th>
+      <Th>Token</Th>
+      <Th>Note</Th>
+    </Tr>
+  </thead>
+  <tbody>
+    <Tr bg="brand.0">
+      <Td><Swatch color="brand.6" /></Td>
+      <Td><code>brand.6</code></Td>
+      <Td>Main brand colour</Td>
+    </Tr>
+  </tbody>
+</table>
+```
+
+### CSV-backed tables (`<StyledTable />`)
+
+If your table is long, keep it in a CSV file next to your article and render it with one line.
+
+1. Put a CSV file into your article folder, e.g. `all.csv`.
+2. Add a column for row background colours (default column name is `bg-color`). Use values like `brand.0`, `background.2`, or `#RRGGBB`.
+3. Embed it:
+
+```md
+<StyledTable csvFile="spd.csv" />
+```
+
+### Volební kalkulačka table (`<MotionsStancesTable />`)
+
+This is a special interactive table used for Volební kalkulačka-style question sets (shows majority + party positions).
+
+1. Put a JSON file into your article folder, e.g. `data.json`.
+2. Embed it:
+
+```md
+<MotionsStancesTable dataFile="data.json" />
+```
+
+Optional props:
+
+```md
+<MotionsStancesTable dataFile="data.json" showTags />
+```
+
+```md
+<MotionsStancesTable dataFile="data.json" maxHeight="600px" />
+```
+<MotionsStancesTable dataFile="data.json" showTags maxHeight="250px" />
+
 ---
 
 ## 3. Images

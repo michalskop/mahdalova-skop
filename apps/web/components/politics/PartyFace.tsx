@@ -65,8 +65,8 @@ export const PartyFace: React.FC<PartyFaceProps> = ({
   // Use logarithmic scaling to prevent text from getting too large
   const calculateFontSize = (iconSize: number) => {
     if (iconSize <= 42) {
-      // Linear scaling for small sizes
-      return (iconSize / 42) * 9;
+      const t = iconSize / 42;
+      return 9 * Math.pow(t, 0.25);
     } else {
       // Slower scaling for larger sizes
       // At 60px: ~10.5, at 80px: ~11.5
