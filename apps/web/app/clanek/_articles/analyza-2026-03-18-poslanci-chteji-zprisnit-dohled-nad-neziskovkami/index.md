@@ -1,6 +1,6 @@
 ---
 title: "Data: poslanci chtějí zpřísnit dohled nad neziskovkami, sami přitom nedodržují ani současné zákony"
-date: "2026-03-19"
+date: "2026-03-18"
 author: "Michal Škop, Kateřina Mahdalová"
 excerpt: "Více než třetina poslanců koalice vede některou z neziskových organizací. Většina těchto organizací ale nezveřejňuje ani nejzákladnější finanční údaje."
 coverImage: "images/datatimes-poslanci-neziskovky-2026.webp"
