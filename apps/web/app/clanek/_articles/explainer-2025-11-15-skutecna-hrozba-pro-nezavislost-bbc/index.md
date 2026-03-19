@@ -11,7 +11,7 @@ promoted: 49
 
 BBC zažila týden chyb, rezignace šéfů a hrozí jí žaloba za miliardu dolarů. Největší ohrožení nezávislosti je ve vedení, nikoli v samotné redakci.
 
-Až jednou historici budou popisovat ságu o pádu dvou šéfů BBC, možná začnou u Dougieho Smithe. Stínový zákulisní hráč, kdysi označovaný za nejdůležitější politickou postavu, o které jste nikdy neslyšeli.
+Až jednou budou historici popisovat ságu o pádu dvou šéfů BBC, možná začnou u Dougieho Smithe. Stínový zákulisní hráč, kdysi označovaný za nejdůležitější politickou postavu, o které jste nikdy neslyšeli.
 
 Zadejte jméno „Dougie Smith" do vyhledávače. Moc toho nenajdete – kromě toho, že spolupořádal Fever, firmu na sexuální párty s okázalými orgiemi v luxusních londýnských lokacích. Jeho hlavní práce ale byla jiná. Střídavě působil v ústředí Konzervativců a na Downing Street číslo 10. Dosazoval „správné" lidi na „správná" místa.
 
