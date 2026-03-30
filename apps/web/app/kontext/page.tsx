@@ -7,13 +7,13 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Kontext',
-  description: 'Kontext k aktuálním událostem – vysvětlení a souvislosti od Mahdalová & Śkop.',
+  description: 'Kontext k aktuálním událostem – vysvětlení a souvislosti od Mahdalová & Škop.',
   alternates: {
     canonical: '/kontext',
   },
   openGraph: {
     title: 'Kontext',
-    description: 'Kontext k aktuálním událostem – vysvětlení a souvislosti od Mahdalová & Śkop.',
+    description: 'Kontext k aktuálním událostem – vysvětlení a souvislosti od Mahdalová & Škop.',
     url: '/kontext',
     type: 'website',
   },

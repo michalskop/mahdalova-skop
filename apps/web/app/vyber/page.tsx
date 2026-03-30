@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Výběr',
-  description: 'Výběr článků Mahdalová & Śkop – všechno, co by vám nemělo uniknout.',
+  description: 'Výběr článků Mahdalová & Škop – všechno, co by vám nemělo uniknout.',
   icons: {
     icon: [{ url: '/favicon.svg' }],
     apple: [{ url: '/favicon.svg' }],
@@ -18,15 +18,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Výběr',
-    description: 'Výběr článků Mahdalová & Śkop – všechno, co by vám nemělo uniknout.',
+    description: 'Výběr článků Mahdalová & Škop – všechno, co by vám nemělo uniknout.',
     url: '/vyber',
-    siteName: 'Mahdalová & Śkop - výběr',
+    siteName: 'Mahdalová & Škop - výběr',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Mahdalová & Śkop',
+        alt: 'Mahdalová & Škop',
       }
     ],
     locale: 'cs_CZ',

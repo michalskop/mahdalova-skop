@@ -9,8 +9,8 @@ import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Mahdalová & Śkop',
-    template: '%s | Mahdalová & Śkop',
+    default: 'Mahdalová & Škop',
+    template: '%s | Mahdalová & Škop',
   },
   description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
   icons: {
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     title: 'Mahdalová & Škop',
     description: 'Příběhy ukryté v datech - unikátní datová a kontextová žurnalistika.',
     url: 'https://www.mahdalova-skop.cz/',
-    siteName: 'Mahdalová & Śkop',
+    siteName: 'Mahdalová & Škop',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Mahdalová & Śkop',
+        alt: 'Mahdalová & Škop',
       }
     ],
     locale: 'cs_CZ',
