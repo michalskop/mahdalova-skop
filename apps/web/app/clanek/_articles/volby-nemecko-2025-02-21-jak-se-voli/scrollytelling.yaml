@@ -14,7 +14,7 @@ steps:
       type: image
       src: images/step_1.png
   - text: |
-      <p>Německo má dvoukomorový parlament. Dolní komora se jmenuje Bundestag a horní Bundesrat.<p>
+      <p>Německo má dvoukomorový parlament. Dolní komora se jmenuje Bundestag (Spolkový sněm) a horní Bundesrat (Spolková rada).<p>
       <p><strong>Bundestag</strong> bude teď v nedělí volen přímo občany, Bundesrat je složen z představitelů jednotlivých spolkových zemí.</p>
 
       <p>Každý volič má <strong>dva hlasy</strong>: první hlas volí přímo kandidáta ve svém volebním obvodu, těchto obvodů je 299, každý zahrnuje zhruba ¼ milionu voličů.</p>
