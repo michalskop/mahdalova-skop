@@ -1,5 +1,5 @@
 ---
-title: "Data: Gustavo Petro, prezident Kolumbie - skutečný unikát v nutnosti se omlouvat"
+title: "Nekonečné omluvy prezidenta Kolumbie: Gustavo Petro je rekordman v soudně nařízených omluvách"
 date: "2026-04-01"
 author: "Michal Škop, Kateřina Mahdalová"
 excerpt: "Gustavo Petro, prezident a šéf vlády Kolumbie, se musel již 19× omlouvat z rozhodnutí soudu."
@@ -8,6 +8,7 @@ filter: ["kontext"]
 tags: ["politika", "soudy", "Kolumbie"]
 promoted: 33
 ---
+Gustavo Petro, prezident a šéf vlády Kolumbie, se musel již 19× (slovy devatenáctkrát) omluvit z rozhodnutí soudu. Za čtyři roky dostal 19 soudních příkazů k omluvě - víc než kterýkoli jiný demokraticky zvolený vůdce.
 
 Podnětem pro tento článek je případ současného české premiéra Andreje Babiše, který musel na základě soudního rozhodnutí čtyřikrát veřejně opravit nepravdivé výroky. Počet na poměry střední Evropy vysoký. Nicméně jestli existuje skutečný unikát v kategorii „demokraticky zvolený prezident/premiér a soudní příkazy k omluvě", pak je to Gustavo Petro, prezident a šéf vlády Kolumbie, člen někdejší guerilly M-19 a muž, který používá sociální síť Twitter spíš jako svůj bojový deník prokládaný bizarními nočními monology. 
 
