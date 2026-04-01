@@ -72,7 +72,7 @@ V roce 2022 nebyl dohledán žádný pravomocný soudní příkaz k omluvě.
 | # | Datum výroku → fallo | Komu se musel omluvit | Co Petro řekl / důvod | Soud | Splnění | Zdroj |
 |---|---|---|---|---|---|---|
 | 18 | 27. 3. 2026 | **Marta Lucía Ramírez** (exviceprezidentka — 3. příkaz v tomto případu) | Petrova „omluva" z 2/2026 označena za nedostatečnou — přidal nová obvinění z vyšetřování nesouvisející s původním případem. „Revictimizace" žalobkyně; soud dal 48h na novou retrakci | Juzgado 66 Administrativo, Bogotá — 3. příkaz | Čeká na splnění 🔴 | [Semana](https://www.semana.com/nacion/articulo/marta-lucia-ramirez-vuelve-a-derrotar-a-petro-en-los-tribunales-presidente-revictimiza-a-la-accionante-dice-el-fallo/202650/) |
-| 19 | Únor 2026 (pokuta) | **Mario Andrés Burgos** (státní zástupce — 3. příkaz + pokuta) | Petrova říjnová retrakce „inducuje" veřejnost k domněnce spojitosti s Pecci / narkotiky — soudkyně Jaimes uložila prezidentu osobní pokutu za opakované nesplnění | Juzgado 54 Administrativo (soudkyně Tatiana Jaimes) | Pokuta 🔴 / desacato 🔴 | [La FM](https://www.lafm.com.co/politica/gustavo-petro-mario-burgos-acusaciones-multa-desacato-391940) |
+| 19 | 27. 2. 2026 (pokuta) | **Mario Andrés Burgos** (státní zástupce — 3. příkaz + pokuta) | Petrova říjnová retrakce „inducuje" veřejnost k domněnce spojitosti s Pecci / narkotiky — soudkyně Jaimes uložila prezidentu osobní pokutu za opakované nesplnění | Juzgado 54 Administrativo (soudkyně Tatiana Jaimes) | Pokuta 🔴 / desacato 🔴 / odvolací soud zrušil | [La FM](https://www.lafm.com.co/politica/gustavo-petro-mario-burgos-acusaciones-multa-desacato-391940) |
 
 ---
 
