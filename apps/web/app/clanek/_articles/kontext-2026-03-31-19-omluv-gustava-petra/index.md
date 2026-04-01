@@ -11,9 +11,7 @@ promoted: 33
 
 Podnětem pro tento článek je případ současného české premiéra Andreje Babiše, který musel na základě soudního rozhodnutí čtyřikrát veřejně opravit nepravdivé výroky. Počet na poměry střední Evropy vysoký. Nicméně jestli existuje skutečný unikát v kategorii „demokraticky zvolený prezident/premiér a soudní příkazy k omluvě", pak je to Gustavo Petro, prezident a šéf vlády Kolumbie, člen někdejší guerilly M-19 a muž, který používá sociální síť Twitter spíš jako svůj bojový deník prokládaný bizarními nočními monology. 
 
-V únoru letošního roku mu soud uložil pokutu za to, že nevyhověl příkazu k omluvě. Pět minimálních mezd, nějakých 8 milionů pesos. Nakonec ale pokutu platit nemusel — odvolací soud rozhodnutí zrušil, protože uznal, že prezident se přece jen v říjnu omluvil, byť způsobem, který soud prvního stupně nepovažoval za dostatečný.
-
-Od nástupu do funkce v srpnu 2022 dostával Petro soudní příkazy k omluvě se stoupající frekvencí; v loňském roce jich přišlo třináct. Skupině novinářek říkal „loutky mafie", opoziční senátorce přisoudil spoluvinu na vraždě šesti tisíc mladých lidí, šéfa zdravotní pojišťovny označil za banditu, bývalou viceprezidentku spojil s pašeráky drog. A protože dokola vydává svá obvinění za prokázaná fakta, aniž by měl jediný důkaz, soudy mu nařizují pokuty a omluvy. A Petro se omlouvá -> pak začne znovu psát na Twitter -> přijde další soud kvůli pomlvuě -> a tak pořád dokola.
+Od nástupu do funkce v srpnu 2022 dostával Petro soudní příkazy k omluvě se stoupající frekvencí; v loňském roce jich přišlo třináct. Skupině novinářek říkal „loutky mafie", opoziční senátorce přisoudil spoluvinu na vraždě šesti tisíc mladých lidí, šéfa zdravotní pojišťovny označil za banditu, bývalou viceprezidentku spojil s pašeráky drog. A protože dokola vydává svá obvinění za prokázaná fakta, aniž by měl jediný důkaz, soudy mu nařizují pokuty a omluvy. A Petro se omlouvá -> pak začne znovu psát na Twitter -> přijde další soud kvůli pomluvě -> a tak pořád dokola.
 
 ## Gustavo Petro
 **Prezident Kolumbie** (a šéf vlády) od 7. 8. 2022  
