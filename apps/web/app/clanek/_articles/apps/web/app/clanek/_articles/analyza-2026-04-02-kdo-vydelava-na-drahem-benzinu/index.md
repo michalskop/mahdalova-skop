@@ -1,5 +1,5 @@
 ---
-title: "Data: Babiš a jeho zastropované marže benzínkám nemají na výslednou cenu pro lidi vliv"
+title: "Data: Kdo vydělává na drahém benzínu"
 date: "2026-04-02"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Andrej Babiš po mimořádném zasedání vlády 2. dubna 2026 představil balíček opatření ke snížení cen pohonných hmot. Jenže data vyprávějí jiný příběh, než jaký vyprávěl premiér na tiskové konferenci. Regulace marží benzínek jako taková neuleví skoro nikomu. Marže čerpacích stanic totiž klesaly ještě před touto regulací a skutečný problém leží jinde."
@@ -8,6 +8,8 @@ filter: ["analýza"]
 tags: ["vysoké ceny", "pohonné hmoty", "benzin", "nafta", "vláda", "Babiš", "ceny", "energie", "Schillerová"]
 promoted: 72
 ---
+
+## Babiš a jeho zastropované marže benzínkám nemají na výslednou cenu pro lidi vliv
 
 Andrej Babiš po mimořádném zasedání vlády 2. dubna 2026 představil balíček opatření ke snížení cen pohonných hmot. Jenže data vyprávějí jiný příběh, než jaký vyprávěl premiér na tiskové konferenci. Regulace marží benzínek jako taková neuleví skoro nikomu. Marže čerpacích stanic totiž klesaly ještě před touto regulací a skutečný problém leží jinde. 
 
