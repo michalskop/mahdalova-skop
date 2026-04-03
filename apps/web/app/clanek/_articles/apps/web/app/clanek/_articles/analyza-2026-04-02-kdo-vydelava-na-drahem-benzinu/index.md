@@ -2,16 +2,16 @@
 title: "Data: Babiš a jeho zastropované marže benzínkám nemají na výslednou cenu pro lidi vliv"
 date: "2026-04-02"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Vláda přijala mimořádná opatření ke snížení cen pohonných hmot. Data Ministerstva financí i nezávislé zdroje ale ukazují, že marže čerpacích stanic klesaly ještě před regulací — a skutečný problém leží tam, kam regulace nedosáhne."
+excerpt: "Andrej Babiš po mimořádném zasedání vlády 2. dubna 2026 představil balíček opatření ke snížení cen pohonných hmot. Jenže data vyprávějí jiný příběh, než jaký vyprávěl premiér na tiskové konferenci. Regulace marží benzínek jako taková neuleví skoro nikomu. Marže čerpacích stanic totiž klesaly ještě před touto regulací a skutečný problém leží jinde."
 coverImage: "images/cena-benzinu-regulace-2026.webp"
 filter: ["analýza"]
 tags: ["vysoké ceny", "pohonné hmoty", "benzin", "nafta", "vláda", "Babiš", "ceny", "energie", "Schillerová"]
 promoted: 72
 ---
 
-Ve čtvrtek 2. dubna 2026 se vláda Andreje Babiše sešla k mimořádnému zasedání a oznámila balíček opatření ke snížení cen pohonných hmot. Zastropování marží čerpacích stanic na 2,50 Kč za litr. Snížení spotřební daně na naftu o 1,939 Kč, tedy s DPH minus 2,35 Kč na litr. Sledovat situaci začalo ministerstvo financí pečlivě už od konce února, kdy vypukl ozbrojený konflikt na Blízkém východě.
+Andrej Babiš po mimořádném zasedání vlády 2. dubna 2026 představil balíček opatření ke snížení cen pohonných hmot. Jenže data vyprávějí jiný příběh, než jaký vyprávěl premiér na tiskové konferenci. Regulace marží benzínek jako taková neuleví skoro nikomu. Marže čerpacích stanic totiž klesaly ještě před touto regulací a skutečný problém leží jinde. 
 
-Jenže data, na nichž ministerstvo samo pracuje, vyprávějí jiný příběh, než jaký Babiš ve čtvrtek vyprávěl na tiskové konferenci. Regulace marží benzínek jako taková neuleví skoro nikomu — jedinou složkou, která ceny reálně sníží, je snížení spotřební daně na naftu.
+Co má nyní nastat: Zastropování marží čerpacích stanic na 2,50 Kč za litr. Snížení spotřební daně na naftu o 1,939 Kč, tedy s DPH minus 2,35 Kč na litr. Proč to lidé v peněženkách neucítí?
 
 <iframe
   src="https://www.datovazurnalistika.cz/cena-benzinu-babis-duben-2026/"
