@@ -15,13 +15,34 @@ Andrej Babiš po mimořádném zasedání vlády 2. dubna 2026 představil balí
 
 Co má nyní nastat: Zastropování marží čerpacích stanic na 2,50 Kč za litr. Snížení spotřební daně na naftu o 1,939 Kč, tedy s DPH minus 2,35 Kč na litr. Proč to lidé v peněženkách neucítí?
 
-<iframe
-  src="https://www.datovazurnalistika.cz/cena-benzinu-babis-duben-2026/"
-  width="100%"
-  height="700"
-  frameBorder="0"
-  scrolling="no"
-></iframe>
+<div class="dt-embed-wrap">
+  <iframe
+    src="https://www.datovazurnalistika.cz/cena-benzinu-babis-duben-2026/"
+    class="dt-embed-frame"
+    frameborder="0"
+    scrolling="no"
+    loading="lazy"
+  ></iframe>
+</div>
+
+<style>
+  .dt-embed-wrap {
+    width: 100%;
+  }
+
+  .dt-embed-frame {
+    display: block;
+    width: 100%;
+    height: 560px;
+    border: 0;
+  }
+
+  @media (max-width: 640px) {
+    .dt-embed-frame {
+      height: 760px;
+    }
+  }
+</style>
 
 ## Co se dělo od konce února
 
