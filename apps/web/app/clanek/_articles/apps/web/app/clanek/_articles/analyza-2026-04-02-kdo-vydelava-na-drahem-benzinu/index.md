@@ -1,5 +1,5 @@
 ---
-title: "Data: Babiš a jeho pokusy , ale neovlivnil skoro nic"
+title: "Data: Babiš a jeho zastropované marže benzínkám nemají na výslednou cenu pro lidi vliv"
 date: "2026-04-02"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vláda přijala mimořádná opatření ke snížení cen pohonných hmot. Data Ministerstva financí i nezávislé zdroje ale ukazují, že marže čerpacích stanic klesaly ještě před regulací — a skutečný problém leží tam, kam regulace nedosáhne."
