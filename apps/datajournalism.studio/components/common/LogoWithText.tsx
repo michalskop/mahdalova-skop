@@ -5,13 +5,20 @@ import Link from 'next/link';
 
 const Logo = () => (
   // center of the svg: 250, 250; last point is slightly adjust manually to make the circle looked closed even in small sizes
-  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 60 330 330">
-    <title>Logo</title>
-    <path fill="none" stroke="#ffdc33" strokeWidth="76" strokeLinecap="round" d="M 234.7876613810083 348.8361510467761 A 100 100 0 0 0 336.60254037844385 300"/>
-    <path fill="none" stroke="#f76800" strokeWidth="76" strokeLinecap="round" d="M 163.39745962155612 200.0 A 100 100 0 0 0 234.7876613810083 348.8361510467761"/>
-    <path fill="none" stroke="#de1743" strokeWidth="76" strokeLinecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 163.39745962155612 200"/>
-    <path fill="none" stroke="#ffdc33" strokeWidth="78" strokeLinecap="round" d="M 325.47 315.61 A 100 100 0 0 0 341 291"/>
-  </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 60 330 330" transform="rotate(345)">
+        <defs>
+          <linearGradient id="Gradient" x1="1" x2="0.25" y1="0.5" y2="1">
+            <stop offset="0%" stop-color="#ffdc33" stop-opacity="0"  />
+            <stop offset="50%" stop-color="#ffdc33" stop-opacity="0" />
+            <stop offset="50%" stop-color="#ffdc33" stop-opacity="1" />
+            <stop offset="100%" stop-color="#ffdc33" stop-opacity="1" />
+          </linearGradient>
+        </defs>
+        <path fill="none" stroke="#ffdc33" strokeWidth="76" strokeLinecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+        <path fill="none" stroke="#de1743" strokeWidth="76" strokeLinecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 163.39745962155612 200"/>
+        <path fill="none" stroke="#f76800" strokeWidth="76" strokeLinecap="round" d="M 163.39745962155612 200 A 100 100 0 0 0 250 350"/>
+        <path fill="none" stroke="url(#Gradient)" strokeWidth="76" strokeLinecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+      </svg>
 );
 
 interface LogoWithTextProps {
