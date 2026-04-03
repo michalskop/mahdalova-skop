@@ -1,0 +1,808 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Co tvoří cenu benzínu a nafty 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f8f6f0;
+  }
+
+  .dtp-chart-container,
+  .dtp-chart-container *,
+  .dtp-chart-container *::before,
+  .dtp-chart-container *::after {
+    box-sizing: border-box;
+  }
+
+  .dtp-chart-container {
+    --dtp-plot-h: 220px;
+    --dtp-y-axis-w: 34px;
+    width: 100%;
+    max-width: none;
+    padding: 20px 16px 16px;
+    background: #f8f6f0;
+    font-family: 'Roboto Slab', Georgia, serif;
+    color: #1a1a1a;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .dtp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .dtp-header-text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .dtp-title {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 4px 0;
+    color: #1a1a1a;
+  }
+
+  .dtp-subtitle {
+    font-size: 13px;
+    line-height: 1.3;
+    color: #666;
+    margin: 0;
+  }
+
+  .dtp-logo-link {
+    text-decoration: none;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    opacity: 1;
+    transition: opacity .15s;
+  }
+
+  .dtp-logo-link:hover {
+    opacity: .8;
+  }
+
+  .dtp-logo-name {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #1a1a1a;
+    text-align: center;
+  }
+
+  .dtp-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #444;
+  }
+
+  .dtp-leg {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+    transition: opacity .15s;
+  }
+
+  .dtp-leg:hover {
+    opacity: .75;
+  }
+
+  .dtp-leg.dtp-disabled {
+    opacity: .38;
+  }
+
+  .dtp-leg.dtp-disabled .dtp-swatch {
+    filter: grayscale(1);
+  }
+
+  .dtp-leg.dtp-disabled .dtp-leg-label {
+    text-decoration: line-through;
+  }
+
+  .dtp-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .dtp-charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .dtp-chart-section {
+    min-width: 0;
+  }
+
+  .dtp-chart-section-title {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+
+  .dtp-bars-wrap {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .dtp-y-axis {
+    flex: 0 0 var(--dtp-y-axis-w);
+    height: var(--dtp-plot-h);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #888;
+    line-height: 1;
+    padding-right: 4px;
+  }
+
+  .dtp-y-tick {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 1em;
+    white-space: nowrap;
+  }
+
+  .dtp-plot {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .dtp-gridlines {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18px;
+    height: var(--dtp-plot-h);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .dtp-gridline {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .dtp-bars-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    min-height: calc(18px + var(--dtp-plot-h) + 32px);
+  }
+
+  .dtp-bar-col {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dtp-bar-total {
+    min-height: 18px;
+    margin-bottom: 2px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    color: #1a1a1a;
+  }
+
+  .dtp-bar-stack {
+    width: 100%;
+    height: var(--dtp-plot-h);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .dtp-bar-col.active .dtp-bar-stack {
+    outline: 2px solid rgba(0,0,0,0.22);
+    outline-offset: 1px;
+    border-radius: 2px;
+  }
+
+  .dtp-bar-seg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.93);
+    transition: height .25s ease, opacity .2s;
+    font-family: 'Roboto Slab', Georgia, serif;
+  }
+
+  .dtp-seg-label {
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0,0,0,.32);
+    pointer-events: none;
+  }
+
+  .dtp-bar-label {
+    min-height: 28px;
+    margin-top: 6px;
+    font-size: 10px;
+    line-height: 1.15;
+    text-align: center;
+    color: #555;
+    width: 100%;
+  }
+
+  .dtp-bar-col.dtp-highlight .dtp-bar-label {
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .dtp-source {
+    margin-top: 14px;
+    font-size: 11px;
+    color: #999;
+  }
+
+  .dtp-tt {
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    padding: 11px 13px;
+    min-width: 210px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .12s;
+    font-family: 'Roboto Slab', Georgia, serif;
+  }
+
+  .dtp-tt.dtp-visible {
+    opacity: 1;
+  }
+
+  .dtp-tt-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .dtp-tt-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 2px 0;
+    font-size: 11px;
+    color: #333;
+  }
+
+  .dtp-tt-row.dtp-tt-off {
+    opacity: .35;
+    text-decoration: line-through;
+  }
+
+  .dtp-tt-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .dtp-tt-name {
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .dtp-tt-val {
+    font-weight: 700;
+    color: #1a1a1a;
+    white-space: nowrap;
+  }
+
+  .dtp-tt-pct {
+    font-size: 10px;
+    color: #999;
+    min-width: 34px;
+    text-align: right;
+  }
+
+  .dtp-tt-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(0,0,0,0.09);
+    font-size: 12px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  @media (max-width: 640px) {
+    .dtp-chart-container {
+      --dtp-plot-h: 170px;
+      --dtp-y-axis-w: 28px;
+      padding: 14px 10px 12px;
+    }
+
+    .dtp-title {
+      font-size: 17px;
+    }
+
+    .dtp-subtitle {
+      font-size: 12px;
+    }
+
+    .dtp-logo-link svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    .dtp-logo-name {
+      font-size: 9px;
+    }
+
+    .dtp-legend {
+      gap: 5px 10px;
+      font-size: 10px;
+    }
+
+    .dtp-charts-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .dtp-chart-section-title {
+      font-size: 13px;
+    }
+
+    .dtp-bars-row {
+      gap: 5px;
+      min-height: calc(16px + var(--dtp-plot-h) + 28px);
+    }
+
+    .dtp-y-axis {
+      font-size: 8px;
+    }
+
+    .dtp-bar-total {
+      font-size: 8px;
+      min-height: 16px;
+    }
+
+    .dtp-bar-seg {
+      font-size: 9px;
+    }
+
+    .dtp-bar-label {
+      font-size: 9px;
+      min-height: 24px;
+    }
+  }
+</style>
+
+<div class="dtp-chart-container">
+
+  <div class="dtp-header">
+    <div class="dtp-header-text">
+      <div class="dtp-title">Co tvoří cenu benzínu a nafty 2026</div>
+      <div class="dtp-subtitle">1. leden vs. 1. duben 2026</div>
+    </div>
+
+    <a href="https://datatimes.cz" target="_blank" rel="noopener" class="dtp-logo-link" title="DataTimes.cz — Mahdalová &amp; Škop">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375" width="48" height="48" aria-hidden="true" focusable="false">
+        <path stroke-linecap="round" transform="matrix(0, 1.324342, 1.324342, 0, -143.911071, -143.039873)" fill="none" stroke-linejoin="miter" d="M 234.787012 348.835412 C 237.258758 349.215908 239.742303 349.504966 242.234696 349.696689 C 244.730039 349.891361 247.225382 349.991647 249.726624 350.000495 C 252.227866 350.006394 254.726158 349.920857 257.221501 349.737983 C 259.713895 349.558059 262.200389 349.283748 264.672135 348.918 C 267.146831 348.549303 269.603829 348.092119 272.04313 347.540548 C 274.482431 346.988977 276.898135 346.345969 279.290243 345.614474 C 281.679401 344.882978 284.042013 344.060046 286.37218 343.151577 C 288.699397 342.243107 290.994168 341.24615 293.247646 340.163655 C 295.504073 339.084109 297.713307 337.919026 299.881246 336.671355 C 302.049186 335.423684 304.166983 334.096374 306.234637 332.689425 C 308.302291 331.282477 310.316853 329.801789 312.272423 328.244412 C 314.230943 326.687035 316.124572 325.058869 317.959209 323.356963 C 319.793847 321.658006 321.563593 319.891209 323.2655 318.059522 C 324.967406 316.227834 326.598523 314.334205 328.158849 312.378635 C 329.719176 310.426015 331.202814 308.414403 332.612712 306.34675 C 334.02261 304.282045 335.35287 302.167198 336.603491 299.999259" stroke="#ffdc33" stroke-width="76" stroke-miterlimit="4"/>
+        <path stroke-linecap="round" transform="matrix(0, 1.324342, 1.324342, 0, -143.911071, -143.039873)" fill="none" stroke-linejoin="miter" d="M 163.398378 199.999736 C 162.386673 201.751785 161.42806 203.53333 160.525489 205.344371 C 159.619969 207.152461 158.77344 208.990048 157.982953 210.851232 C 157.189517 212.712415 156.455072 214.597195 155.776669 216.502622 C 155.098266 218.410998 154.478855 220.334123 153.918435 222.277894 C 153.358015 224.221666 152.856587 226.183135 152.41415 228.156402 C 151.971714 230.129669 151.591218 232.117685 151.269714 234.114549 C 150.94821 236.111412 150.688647 238.117125 150.488076 240.131686 C 150.287505 242.143298 150.148874 244.160809 150.072185 246.184219 C 149.995496 248.20468 149.980748 250.22809 150.024992 252.24855 C 150.072185 254.271961 150.17837 256.292421 150.346496 258.306982 C 150.514622 260.324493 150.74174 262.333156 151.033748 264.335919 C 151.322806 266.338682 151.673806 268.329646 152.083797 270.311762 C 152.496738 272.290929 152.965721 274.258297 153.496645 276.210917 C 154.027569 278.163538 154.614535 280.09846 155.263442 282.015686 C 155.91235 283.932911 156.617299 285.82654 157.37829 287.699521 C 158.14223 289.575453 158.959264 291.424838 159.835288 293.247676 C 160.711313 295.073465 161.64043 296.866808 162.622639 298.636554 C 163.607798 300.403351 164.64605 302.140652 165.734444 303.845508 C 166.822838 305.550364 167.964325 307.219825 169.153005 308.85684 C 170.344634 310.490906 171.583457 312.089577 172.872422 313.649903 C 174.161388 315.21023 175.494597 316.729262 176.875 318.20995 C 178.255402 319.690638 179.677099 321.124132 181.145988 322.519283 C 182.611929 323.911483 184.119163 325.25944 185.667691 326.560204 C 187.219169 327.860967 188.806042 329.114538 190.43126 330.320915 C 192.056477 331.527292 193.71414 332.680577 195.410147 333.786668 C 197.106154 334.88981 198.831657 335.942809 200.592555 336.942716 C 202.350504 337.939673 204.137948 338.886488 205.954888 339.77726 C 207.771828 340.668032 209.612365 341.502763 211.479447 342.284401 C 213.34653 343.063089 215.23721 343.785736 217.145587 344.449391 C 219.056913 345.113045 220.985937 345.720658 222.935608 346.26633 C 224.882329 346.814952 226.843799 347.304582 228.822965 347.73227 C 230.799183 348.159959 232.787198 348.528656 234.787012 348.835412" stroke="#f76800" stroke-width="76" stroke-miterlimit="4"/>
+        <path stroke-linecap="round" transform="matrix(0, 1.324342, 1.324342, 0, -143.911071, -143.039873)" fill="none" stroke-linejoin="miter" d="M 336.603491 299.999259 C 337.420524 298.583462 338.202162 297.147018 338.948405 295.689926 C 339.697598 294.235785 340.408446 292.760996 341.0839 291.27146 C 341.756404 289.781923 342.396462 288.274689 342.995226 286.752707 C 343.59694 285.230725 344.16031 283.693995 344.685334 282.145467 C 345.210359 280.596939 345.69704 279.033663 346.148325 277.461538 C 346.596661 275.886464 347.006652 274.302541 347.378299 272.709769 C 347.746996 271.116997 348.080299 269.515377 348.372307 267.904907 C 348.664315 266.294438 348.917979 264.67807 349.130348 263.055802 C 349.342718 261.433534 349.516743 259.808317 349.649474 258.177201 C 349.782205 256.546085 349.876591 254.912019 349.929684 253.277953 C 349.982776 251.643887 349.997524 250.006872 349.968028 248.369856 C 349.941482 246.73579 349.873642 245.101724 349.767457 243.467658 C 349.661272 241.836542 349.513793 240.205426 349.32502 238.580209 C 349.139197 236.954992 348.91208 235.335674 348.643668 233.722255 C 348.378206 232.105886 348.07145 230.501316 347.726349 228.899696 C 347.378299 227.301025 346.994854 225.711202 346.570115 224.130229 C 346.148325 222.552205 345.685241 220.98303 345.183813 219.425653 C 344.682385 217.865327 344.145562 216.322698 343.567444 214.791867 C 342.992277 213.258087 342.378764 211.742004 341.726908 210.243619 C 341.075051 208.742284 340.387799 207.255697 339.665153 205.789757 C 338.939557 204.320867 338.181515 202.872625 337.385129 201.44208 C 336.591693 200.014484 335.762861 198.604586 334.898635 197.215335 C 334.034409 195.823135 333.134787 194.45748 332.202721 193.112473 C 331.273604 191.767466 330.309092 190.446055 329.312134 189.148241 C 328.315177 187.847477 327.288724 186.576209 326.229826 185.328538 C 325.170927 184.080867 324.082533 182.859742 322.964643 181.665163 C 321.846753 180.470584 320.699367 179.305501 319.522485 178.166964 C 318.348553 177.031377 317.145126 175.922336 315.915152 174.842791 C 314.685178 173.763245 313.428658 172.716145 312.145591 171.698541 C 310.865474 170.680937 309.558811 169.695778 308.228552 168.743064 C 306.898292 167.790351 305.547385 166.870083 304.169933 165.98521 C 302.795429 165.097387 301.400279 164.244959 299.981532 163.427926 C 298.565735 162.607943 297.12929 161.826305 295.675148 161.080062 C 294.218057 160.33087 292.746217 159.620022 291.256681 158.944568 C 289.764194 158.269115 288.259909 157.632006 286.737927 157.030293 C 285.215945 156.428579 283.679215 155.86521 282.130687 155.337235 C 280.582158 154.81221 279.018882 154.32553 277.446757 153.874245 C 275.874632 153.425909 274.290709 153.015918 272.697936 152.644271 C 271.102215 152.272624 269.500594 151.939322 267.893074 151.647314 C 266.282605 151.352356 264.666236 151.101642 263.043968 150.886323 C 261.4217 150.673953 259.796483 150.499928 258.165366 150.364248 C 256.53425 150.231517 254.900183 150.13713 253.266117 150.084038 C 251.629102 150.030945 249.995035 150.016198 248.35802 150.042744 C 246.721004 150.06929 245.086938 150.13713 243.455821 150.243315 C 241.821755 150.3495 240.193588 150.496979 238.568371 150.682802 C 236.943153 150.871575 235.323835 151.095743 233.707466 151.364154 C 232.094047 151.629616 230.486527 151.936372 228.887856 152.281473 C 227.289185 152.626574 225.699362 153.010019 224.118389 153.431808 C 222.537415 153.856547 220.968239 154.316681 219.410862 154.81811 C 217.853485 155.319538 216.307906 155.856361 214.777075 156.431528 C 213.243295 157.009646 211.727212 157.623158 210.225877 158.272065 C 208.724542 158.923921 207.240904 159.611173 205.772014 160.333819 C 204.306074 161.056466 202.857831 161.814507 201.427286 162.610893 C 199.996741 163.404329 198.586842 164.233161 197.197591 165.097387 C 195.805391 165.961613 194.439736 166.858285 193.091779 167.790351 C 191.746771 168.719468 190.42536 169.68398 189.127546 170.677987 C 187.829732 171.674944 186.555514 172.701397 185.307843 173.760296 C 184.060171 174.819194 182.839046 175.907588 181.644467 177.025478 C 180.449888 178.143368 179.281855 179.290753 178.146268 180.464685 C 177.007731 181.641566 175.898689 182.842044 174.819144 184.072018 C 173.739598 185.301992 172.692498 186.558512 171.674894 187.838629 C 170.657289 189.121695 169.669181 190.425408 168.716467 191.755667 C 167.763754 193.085927 166.843485 194.436833 165.955662 195.811336 C 165.067839 197.188789 164.215411 198.583939 163.398378 199.999736" stroke="#de1743" stroke-width="76" stroke-miterlimit="4"/>
+        <path stroke-linecap="round" transform="matrix(0, 1.324342, 1.324342, 0, -143.911071, -143.039873)" fill="none" stroke-linejoin="miter" d="M 335.715668 301.503544 C 336.016525 301.005065 336.311483 300.503637 336.603491 299.999259" stroke="#ffdc33" stroke-width="76" stroke-miterlimit="4"/>
+      </svg>
+      <span class="dtp-logo-name">Mahdalová &amp; Škop</span>
+    </a>
+  </div>
+
+  <div class="dtp-legend" id="dtp-legend"></div>
+
+  <div class="dtp-charts-grid">
+    <div class="dtp-chart-section">
+      <div class="dtp-chart-section-title">Benzin 95</div>
+      <div id="dtp-benzin-wrap" class="dtp-bars-wrap"></div>
+    </div>
+
+    <div class="dtp-chart-section">
+      <div class="dtp-chart-section-title">Nafta</div>
+      <div id="dtp-nafta-wrap" class="dtp-bars-wrap"></div>
+    </div>
+  </div>
+
+  <div class="dtp-source">Zdroj: CCS, Tank ONO · vlastní propočty</div>
+</div>
+
+<div class="dtp-tt" id="dtp-tt" role="tooltip" aria-live="polite"></div>
+
+<script>
+(function () {
+  const COLORS = ['#de1743','#ff1a4a','#6e4a2c','#4a51ab','#0e926a'];
+  const LABELS_FULL = [
+    'Spotřební daň',
+    'DPH 21 %',
+    'Ropa (přibl.)',
+    'Marže rafinérie + dist.',
+    'Marže čerpacích stanic'
+  ];
+
+  const catEnabled = COLORS.map(() => true);
+
+  const DATA = {
+    benzin: [
+      { label: 'Benzin 95 — 1. ledna 2026',   values: [12.84, 5.80,  7.87,  3.19, 3.71] },
+      { label: 'Benzin 95 — 1. dubna 2026',   values: [12.84, 7.22, 13.96,  5.08, 2.50] },
+      { label: 'Benzin 95 — vládní regulace', values: [12.84, 7.22, 13.96,  5.08, 2.30], highlight: true }
+    ],
+    nafta: [
+      { label: 'Nafta — 1. ledna 2026',       values: [ 9.95, 5.66,  7.87,  5.22, 3.93] },
+      { label: 'Nafta — 1. dubna 2026',       values: [ 9.95, 8.39, 13.96, 13.80, 2.23] },
+      { label: 'Nafta — vládní regulace',     values: [ 8.01, 7.98, 13.96, 13.80, 2.03], highlight: true }
+    ]
+  };
+
+  const MAX_VAL = 55;
+  const YTICKS = [0, 10, 20, 30, 40, 50];
+  const allCols = [];
+  const resizeObservers = [];
+
+  function fmt(n, dec = 2) {
+    return n.toFixed(dec).replace('.', ',');
+  }
+
+  function fmtRound(n) {
+    return String(Math.round(n));
+  }
+
+  function getChartH(wrap) {
+    const container = wrap.closest('.dtp-chart-container');
+    const styles = getComputedStyle(container);
+    return parseFloat(styles.getPropertyValue('--dtp-plot-h')) || 220;
+  }
+
+  function formatBarLabel(label) {
+    const raw = label.replace(/^.* — /, '');
+    const mobile = window.innerWidth <= 640;
+
+    if (mobile) {
+      return raw
+        .replace('1. ledna 2026', '1. ledna')
+        .replace('1. dubna 2026', '1. dubna')
+        .replace('vládní regulace', 'vládní<br>regulace');
+    }
+
+    return raw
+      .replace('1. ledna 2026', '1. ledna<br>2026')
+      .replace('1. dubna 2026', '1. dubna<br>2026')
+      .replace('vládní regulace', 'vládní<br>regulace');
+  }
+
+  function buildLegend() {
+    const container = document.getElementById('dtp-legend');
+    container.innerHTML = '';
+
+    COLORS.forEach((color, i) => {
+      const item = document.createElement('div');
+      item.className = 'dtp-leg' + (catEnabled[i] ? '' : ' dtp-disabled');
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('title', catEnabled[i] ? 'Skrýt: ' + LABELS_FULL[i] : 'Zobrazit: ' + LABELS_FULL[i]);
+      item.setAttribute('aria-pressed', catEnabled[i] ? 'true' : 'false');
+
+      const sw = document.createElement('span');
+      sw.className = 'dtp-swatch';
+      sw.style.background = color;
+
+      const lbl = document.createElement('span');
+      lbl.className = 'dtp-leg-label';
+      lbl.textContent = LABELS_FULL[i];
+
+      item.appendChild(sw);
+      item.appendChild(lbl);
+
+      function toggle() {
+        catEnabled[i] = !catEnabled[i];
+        buildLegend();
+        rebuildAllCols();
+        hideTooltip();
+      }
+
+      item.addEventListener('click', toggle);
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+
+      container.appendChild(item);
+    });
+  }
+
+  function rebuildAllCols() {
+    allCols.forEach(({ col, bar }) => updateCol(col, bar));
+    updateAllBarLabels();
+  }
+
+  function updateAllBarLabels() {
+    allCols.forEach(({ col, bar }) => {
+      const barLabel = col.querySelector('.dtp-bar-label');
+      if (barLabel) {
+        barLabel.innerHTML = formatBarLabel(bar.label);
+      }
+    });
+  }
+
+  function updateCol(col, bar, chartH) {
+    const wrap = col.closest('.dtp-bars-wrap');
+    const h = chartH !== undefined ? chartH : getChartH(wrap);
+    const enabledValues = bar.values.map((v, i) => catEnabled[i] ? v : 0);
+    const total = enabledValues.reduce((a, b) => a + b, 0);
+
+    const totalLbl = col.querySelector('.dtp-bar-total');
+    totalLbl.textContent = fmt(total) + ' Kč';
+
+    const segs = col.querySelectorAll('.dtp-bar-seg');
+    segs.forEach((seg, i) => {
+      const val = enabledValues[i];
+      const px = (val / MAX_VAL) * h;
+
+      seg.style.height = px + 'px';
+      seg.style.opacity = catEnabled[i] ? '1' : '0';
+
+      const lbl = seg.querySelector('.dtp-seg-label');
+      if (lbl) {
+        lbl.style.display = (px >= 18 && catEnabled[i]) ? '' : 'none';
+      }
+    });
+  }
+
+  const tt = document.getElementById('dtp-tt');
+  let activeCol = null;
+  const isMobile = () => window.matchMedia('(hover: none)').matches;
+
+  function buildTooltipHTML(bar) {
+    const enabledValues = bar.values.map((v, i) => catEnabled[i] ? v : 0);
+    const total = enabledValues.reduce((a, b) => a + b, 0);
+
+    const rows = [...bar.values].map((val, i) => {
+      const off = !catEnabled[i];
+      const pct = total > 0 && !off ? Math.round(val / total * 100) + ' %' : '—';
+
+      return `
+        <div class="dtp-tt-row${off ? ' dtp-tt-off' : ''}">
+          <span class="dtp-tt-dot" style="background:${COLORS[i]}"></span>
+          <span class="dtp-tt-name">${LABELS_FULL[i]}</span>
+          <span class="dtp-tt-val">${fmt(val)} Kč</span>
+          <span class="dtp-tt-pct">${pct}</span>
+        </div>
+      `;
+    }).reverse().join('');
+
+    return `
+      <div class="dtp-tt-title">${bar.label}</div>
+      ${rows}
+      <div class="dtp-tt-total"><span>Celkem</span><span>${fmt(total)} Kč</span></div>
+    `;
+  }
+
+  function positionTooltip(e, colEl) {
+    const margin = 10;
+    const ttW = tt.offsetWidth || 220;
+    const ttH = tt.offsetHeight || 200;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    let x, y;
+
+    if (isMobile()) {
+      const rect = colEl.getBoundingClientRect();
+      x = rect.left + rect.width / 2 - ttW / 2;
+      y = rect.top - ttH - 10;
+      if (y < margin) y = rect.bottom + 10;
+    } else {
+      x = e.clientX + 14;
+      y = e.clientY - ttH / 2;
+    }
+
+    x = Math.max(margin, Math.min(x, vw - ttW - margin));
+    y = Math.max(margin, Math.min(y, vh - ttH - margin));
+
+    tt.style.left = x + 'px';
+    tt.style.top = y + 'px';
+  }
+
+  function showTooltip(bar, e, colEl) {
+    tt.innerHTML = buildTooltipHTML(bar);
+    tt.classList.add('dtp-visible');
+    positionTooltip(e, colEl);
+  }
+
+  function hideTooltip() {
+    tt.classList.remove('dtp-visible');
+  }
+
+  function deactivateAll() {
+    document.querySelectorAll('.dtp-bar-col.active').forEach(c => c.classList.remove('active'));
+    activeCol = null;
+    hideTooltip();
+  }
+
+  function buildChart(wrapperId, bars) {
+    const wrap = document.getElementById(wrapperId);
+    wrap.innerHTML = '';
+
+    const yAxis = document.createElement('div');
+    yAxis.className = 'dtp-y-axis';
+
+    YTICKS.forEach(v => {
+      const t = document.createElement('div');
+      t.className = 'dtp-y-tick';
+      t.textContent = v + ' Kč';
+      yAxis.appendChild(t);
+    });
+
+    const plot = document.createElement('div');
+    plot.className = 'dtp-plot';
+
+    const grid = document.createElement('div');
+    grid.className = 'dtp-gridlines';
+
+    YTICKS.forEach(() => {
+      const g = document.createElement('div');
+      g.className = 'dtp-gridline';
+      grid.appendChild(g);
+    });
+
+    const barsRow = document.createElement('div');
+    barsRow.className = 'dtp-bars-row';
+
+    plot.appendChild(grid);
+    plot.appendChild(barsRow);
+
+    wrap.appendChild(yAxis);
+    wrap.appendChild(plot);
+
+    bars.forEach(bar => {
+      const col = document.createElement('div');
+      col.className = 'dtp-bar-col' + (bar.highlight ? ' dtp-highlight' : '');
+      col.setAttribute('tabindex', '0');
+      col.setAttribute('role', 'button');
+      col.setAttribute('aria-label', bar.label);
+
+      const totalLbl = document.createElement('div');
+      totalLbl.className = 'dtp-bar-total';
+      col.appendChild(totalLbl);
+
+      const stack = document.createElement('div');
+      stack.className = 'dtp-bar-stack';
+
+      bar.values.forEach((val, i) => {
+        const seg = document.createElement('div');
+        seg.className = 'dtp-bar-seg';
+        seg.style.height = '0px';
+        seg.style.background = COLORS[i];
+
+        const lbl = document.createElement('span');
+        lbl.className = 'dtp-seg-label';
+        lbl.textContent = fmtRound(val) + ' Kč';
+        lbl.style.display = 'none';
+        seg.appendChild(lbl);
+
+        stack.appendChild(seg);
+      });
+
+      col.appendChild(stack);
+
+      const barLabel = document.createElement('div');
+      barLabel.className = 'dtp-bar-label';
+      barLabel.innerHTML = formatBarLabel(bar.label);
+      col.appendChild(barLabel);
+
+      col.addEventListener('mouseenter', e => {
+        col.classList.add('active');
+        showTooltip(bar, e, col);
+      });
+
+      col.addEventListener('mousemove', e => positionTooltip(e, col));
+
+      col.addEventListener('mouseleave', () => {
+        col.classList.remove('active');
+        hideTooltip();
+      });
+
+      col.addEventListener('click', e => {
+        e.stopPropagation();
+
+        if (activeCol === col) {
+          deactivateAll();
+          return;
+        }
+
+        deactivateAll();
+        activeCol = col;
+        col.classList.add('active');
+        showTooltip(bar, e, col);
+        requestAnimationFrame(() => positionTooltip(e, col));
+      });
+
+      barsRow.appendChild(col);
+      allCols.push({ col, bar, wrapperId });
+    });
+
+    const ro = new ResizeObserver(() => {
+      const h = getChartH(wrap);
+      allCols
+        .filter(item => item.wrapperId === wrapperId)
+        .forEach(({ col, bar }) => updateCol(col, bar, h));
+    });
+
+    ro.observe(wrap);
+    resizeObservers.push(ro);
+
+    const h = getChartH(wrap);
+    allCols
+      .filter(item => item.wrapperId === wrapperId)
+      .forEach(({ col, bar }) => updateCol(col, bar, h));
+  }
+
+  let resizeRaf = null;
+  window.addEventListener('resize', () => {
+    if (resizeRaf) cancelAnimationFrame(resizeRaf);
+    resizeRaf = requestAnimationFrame(() => {
+      rebuildAllCols();
+    });
+  });
+
+  document.addEventListener('click', deactivateAll);
+
+  buildLegend();
+  buildChart('dtp-benzin-wrap', DATA.benzin);
+  buildChart('dtp-nafta-wrap', DATA.nafta);
+})();
+</script>

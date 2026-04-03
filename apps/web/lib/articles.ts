@@ -135,6 +135,28 @@ export async function getArticleBySlug(directorySlug: string) {
     styledTableData[csvFile] = parseCsv(csvContent);
   }
 
+  // Find and load HTML files for HtmlEmbed components (supports multiple instances)
+  const htmlEmbedData: Record<string, string> = {};
+  const htmlEmbedRegex = /<HtmlEmbed[^>]*file="([^"]+)"[^>]*\/?>/g;
+  let htmlMatch: RegExpExecArray | null;
+  while ((htmlMatch = htmlEmbedRegex.exec(content)) !== null) {
+    const htmlFile = htmlMatch[1];
+    if (!htmlFile) continue;
+    if (htmlEmbedData[htmlFile]) continue;
+
+    // Security: only allow .html files
+    if (!htmlFile.endsWith('.html')) {
+      throw new Error(`HtmlEmbed only supports .html files: ${directorySlug}/${htmlFile}`);
+    }
+
+    const htmlPath = path.join(articleDir, htmlFile);
+    if (!fs.existsSync(htmlPath)) {
+      throw new Error(`HtmlEmbed file not found: ${directorySlug}/${htmlFile}`);
+    }
+
+    htmlEmbedData[htmlFile] = fs.readFileSync(htmlPath, 'utf8');
+  }
+
     // Find and load data for KalkulackaTable
   let tableData: any[] = [];
   const tableRegex = /<MotionsStancesTable[^>]*dataFile="([^"]+)"/;
@@ -161,6 +183,7 @@ export async function getArticleBySlug(directorySlug: string) {
       tableData: tableData,
       timelineData: timelineData,
       styledTableData: styledTableData,
+      htmlEmbedData: htmlEmbedData,
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {

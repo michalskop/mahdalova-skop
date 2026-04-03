@@ -24,12 +24,13 @@ This is your practical guide to every tool available when writing articles. Each
 5. [Info box — typed styles + read more](#5-info-box--typed-styles--read-more)
 6. [Flourish charts](#6-flourish-charts)
 7. [Any embedded chart or map](#7-any-embedded-chart-or-map)
-8. [Party badges](#8-party-badges)
-9. [Timeline](#9-timeline)
-10. [Scroll-driven story](#10-scroll-driven-story)
-11. [Custom interactive piece](#11-custom-interactive-piece)
-12. [Related articles](#12-related-articles)
-13. [Quick reference](#13-quick-reference)
+8. [HTML embed — custom interactive charts](#8-html-embed--custom-interactive-charts)
+9. [Party badges](#9-party-badges)
+10. [Timeline](#10-timeline)
+11. [Scroll-driven story](#11-scroll-driven-story)
+12. [Custom interactive piece](#12-custom-interactive-piece)
+13. [Related articles](#13-related-articles)
+14. [Quick reference](#14-quick-reference)
 
 ---
 
@@ -406,7 +407,7 @@ while <PartyFace party="Piráti" size={15} text="" /> Piráti oppose it.
 
 ---
 
-## 9. Timeline
+## 10. Timeline
 
 A filterable vertical timeline driven by a data file (`timeline.yaml`) that lives in the article folder. Ask a developer to help set up the YAML file — once it exists, you embed it with one line:
 
@@ -458,7 +459,7 @@ events:
 
 ---
 
-## 10. Scroll-driven story
+## 11. Scroll-driven story
 
 ScrollyTelling displays a sticky image or chart on one side while the reader scrolls through text steps. It requires a `scrollytelling.yaml` file in the article folder — ask a developer to set it up.
 
@@ -470,7 +471,7 @@ Full guide with a live demo: [zzz-demo-scrollytelling-v1](/clanek/zzz-demo-scrol
 
 ---
 
-## 11. Custom interactive piece
+## 12. Custom interactive piece
 
 For fully custom interactive pieces — your own JavaScript, CSS, D3 charts — an HTML file can be injected before the article content. Set the filename in the article's frontmatter (the block at the very top of the file):
 
@@ -484,7 +485,7 @@ The HTML file can contain `<style>` and `<script>` blocks. Any paths to images o
 
 ---
 
-## 12. Related articles
+## 13. Related articles
 
 Use `<RelatedArticles />` to embed a block of recommended articles anywhere in the text. Authors control placement, filtering, and layout entirely through props — no code required.
 
@@ -508,7 +509,7 @@ Full reference with all options and live examples: [Demo: RelatedArticles — al
 
 ---
 
-## 13. Quick reference
+## 14. Quick reference
 
 | Feature | Syntax | Notes |
 |---------|--------|-------|

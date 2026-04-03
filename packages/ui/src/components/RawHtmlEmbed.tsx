@@ -22,12 +22,7 @@ export default function RawHtmlEmbed({ html, assetBasePath, className }: RawHtml
     }
 
     container.innerHTML = '';
-
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const bodyHtml = doc.body ? doc.body.innerHTML : html;
-
-    container.innerHTML = bodyHtml;
+    container.innerHTML = html;
 
     const scripts = Array.from(container.querySelectorAll('script'));
     for (const oldScript of scripts) {

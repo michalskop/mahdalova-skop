@@ -15,34 +15,7 @@ Andrej Babiš po mimořádném zasedání vlády 2. dubna 2026 představil balí
 
 Co má nyní nastat: Zastropování marží čerpacích stanic na 2,50 Kč za litr. Snížení spotřební daně na naftu o 1,939 Kč, tedy s DPH minus 2,35 Kč na litr. Proč to lidé v peněženkách neucítí?
 
-<div class="dt-embed-wrap">
-  <iframe
-    src="https://www.datovazurnalistika.cz/cena-benzinu-babis-duben-2026/"
-    class="dt-embed-frame"
-    frameborder="0"
-    scrolling="no"
-    loading="lazy"
-  ></iframe>
-</div>
-
-<style>
-  .dt-embed-wrap {
-    width: 100%;
-  }
-
-  .dt-embed-frame {
-    display: block;
-    width: 100%;
-    height: 560px;
-    border: 0;
-  }
-
-  @media (max-width: 640px) {
-    .dt-embed-frame {
-      height: 760px;
-    }
-  }
-</style>
+<HtmlEmbed file="chart.html" />
 
 ## Co se dělo od konce února
 
@@ -92,7 +65,7 @@ Zbytek trhu — diskontní řetězce jako Tank ONO, supermarketové pumpy, stand
 
 Snížení spotřební daně na naftu o 2,35 Kč je smysluplnější krok — ale platí jen pro naftu. Benzin se nemění. Spotřební daň 12,84 Kč na litr zůstává od roku 2010 nezměněna. Každý, kdo jezdí benzinem — a to je stále většina osobních aut — nedostane z balíčku nic.
 
-Ivan Bartoš, poslanec za Piráty, to [komentoval na Facebooku](DOPLNIT_ODKAZ): „Babiš klasicky zase jen něco dělá, aby něco dělal. Smysluplný krok, který by lidem skutečně pomohl, to ale fakt není. Zastropování marží reálně pomůže maximálně lidem, co musí tankovat na dálnici. Tam jsou marže nejvyšší. Jinde jsou pumpaři už teď pod limitem. A snížení spotřební daně na naftu se logicky nedotkne těch, co jezdí na benzín. Kdybyste lidem fakt chtěli pomoct, máme tady jeden takovej návrh — inspirujte se naším Manifestem energetické bezpečnosti. Vraťte peníze lidem do peněženky, ať si každý může zhodnotit, za co peníze dá. A snižte třeba DPH na základní potraviny. Zvýšení cen se netýká jen řidičů."
+Ivan Bartoš, poslanec za Piráty, to [komentoval na Facebooku](https://nic.cz): „Babiš klasicky zase jen něco dělá, aby něco dělal. Smysluplný krok, který by lidem skutečně pomohl, to ale fakt není. Zastropování marží reálně pomůže maximálně lidem, co musí tankovat na dálnici. Tam jsou marže nejvyšší. Jinde jsou pumpaři už teď pod limitem. A snížení spotřební daně na naftu se logicky nedotkne těch, co jezdí na benzín. Kdybyste lidem fakt chtěli pomoct, máme tady jeden takovej návrh — inspirujte se naším Manifestem energetické bezpečnosti. Vraťte peníze lidem do peněženky, ať si každý může zhodnotit, za co peníze dá. A snižte třeba DPH na základní potraviny. Zvýšení cen se netýká jen řidičů."
 
 ## Česko v evropském kontextu
 

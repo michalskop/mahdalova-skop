@@ -20,6 +20,7 @@ import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
+import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
@@ -346,6 +347,12 @@ export function ArticleRenderer({
           {...props}
         />
       );
+    },
+
+    HtmlEmbed: ({ file, ...rest }) => {
+      const htmlEmbedData = (mdxSource.scope as any)?.htmlEmbedData as Record<string, string> | undefined;
+      const htmlContent = file ? htmlEmbedData?.[file] : undefined;
+      return <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
     },
 
   };
