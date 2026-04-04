@@ -21,4 +21,6 @@ You can include the component multiple times in one article (each instance can p
 
 ## Test TEST TEEEESSSSTTT já, Kačenka I. ❤️
 
+toto je timeline k historii zavádění a rušení trestů smrti
+
 <Timeline yamlFile="timeline-tresty-smrti.yaml" /> 
