@@ -3,7 +3,7 @@ title: "Tankujete benzin? Vládní pomoc v peněžence skoro nepoznáte"
 date: "2026-04-03"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vláda slibuje levnější pohonné hmoty. Jenže pro většinu lidí, kteří tankují benzin na běžných pumpách, se nezmění skoro nic. Daň na benzin zůstává stejná a většina stanic už před regulací držela marže nízko. Výrazněji může zásah pomoct hlavně na drahých dálničních pumpách."
-coverImage: "images/babis-a-ceny-benzinu.webp"
+coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
 filter: ["analýza"]
 tags: ["vysoké ceny", "pohonné hmoty", "benzin", "nafta", "vláda", "Babiš", "ceny", "energie", "Schillerová"]
 promoted: 72
