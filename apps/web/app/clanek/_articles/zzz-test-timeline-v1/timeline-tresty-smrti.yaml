@@ -1,0 +1,353 @@
+title: "Trest smrti: 200 let rušení a návratů"
+subtitle: "Klíčové milníky ve světových dějinách trestu smrti od 19. století po rok 2026"
+lastUpdated: "Aktualizováno: 31. března 2026"
+collapsedYears: []
+
+facetGroups:
+  - key: topic
+    label: "Typ události"
+    values:
+      - key: abolition
+        label: "Zrušení"
+        color: "brandTeal.4"
+      - key: reinstatement
+        label: "Znovuzavedení"
+        color: "brandDeepRed.4"
+      - key: moratorium
+        label: "Moratorium / pozastavení"
+        color: "brandOrange.5"
+      - key: milestone
+        label: "Mezinárodní milník"
+        color: "brandRoyalBlue.4"
+      - key: surge
+        label: "Nárůst poprav"
+        color: "brandCoralRed.6"
+  - key: geo
+    label: "Region"
+    values:
+      - key: europe
+        label: "Evropa"
+        color: "#11457e"
+      - key: americas
+        label: "Amerika"
+        color: "#0b7a40"
+      - key: asia
+        label: "Asie a Pacifik"
+        color: "#c17f00"
+      - key: global
+        label: "Globální"
+        color: "#6a3d9a"
+      - key: mideast
+        label: "Blízký východ"
+        color: "#b22222"
+
+events:
+  - id: venezuela-1863
+    year: 1863
+    month: 4
+    facets:
+      topic: abolition
+      geo: americas
+    date: "1863"
+    title: "Venezuela — první stát světa bez trestu smrti"
+    emoji: "🕊️"
+    summary: "Venezuela jako vůbec první země na světě ústavně zrušila trest smrti pro všechny trestné činy."
+    description: "Venezuela v roce 1863 jako první stát světa úplně a ústavně zrušila trest smrti. Stala se vzorem pro pozdější abolicionistická hnutí, zejména v Latinské Americe."
+
+  - id: san-marino-1865
+    year: 1865
+    month: 1
+    facets:
+      topic: abolition
+      geo: europe
+    date: "1865"
+    title: "San Marino — první Evropa bez trestu smrti"
+    emoji: "🕊️"
+    summary: "San Marino se stalo prvním evropským státem, který zrušil trest smrti."
+    description: "San Marino zrušilo trest smrti v roce 1865 — jako první evropský stát. Druhá malá evropská republika Lichtenštejnsko ho zrušila v roce 1987."
+
+  - id: portugal-1867
+    year: 1867
+    month: 1
+    facets:
+      topic: abolition
+      geo: europe
+    date: "1867"
+    title: "Portugalsko — průkopník v západní Evropě"
+    emoji: "🕊️"
+    summary: "Portugalsko zrušilo trest smrti pro civilní trestné činy — jedno z prvních v západní Evropě."
+    description: "Portugalsko zrušilo trest smrti v roce 1867, pro vojenské trestné činy pak v roce 1976. Stalo se jedním z prvních velkých evropských zemí, které se trestu smrti vzdaly."
+
+  - id: michigan-1847
+    year: 1847
+    month: 3
+    facets:
+      topic: abolition
+      geo: americas
+    date: "1847"
+    title: "Michigan — první anglosaská abolice"
+    emoji: "🕊️"
+    summary: "Americký stát Michigan jako první v anglosaském světě zrušil trest smrti — s výjimkou velezrady."
+    description: "Michigan zrušil trest smrti jako první stát v anglosaském právním světě. Impulsem byl hrůzný omyl — chybná poprava nevinného člověka, která šokovala veřejnost. Wisconsin následoval v roce 1853."
+
+  - id: beccaria
+    year: 1764
+    month: 1
+    facets:
+      topic: milestone
+      geo: europe
+    date: "1764"
+    title: "Beccaria: O zločinech a trestech"
+    emoji: "📖"
+    summary: "Italský osvícenec Cesare Beccaria vydává esej zpochybňující morální oprávnění státu brát životy."
+    description: "Cesare Beccaria ve svém díle Dei delitti e delle pene (O zločinech a trestech) formuluje osvícenecký argument: trest musí být přiměřený, předvídatelný a odstrašující — ale smrt jako trest tyto podmínky nesplňuje. Text ovlivnil legislativu po celé Evropě i v zárodcích americké demokracie."
+    persons:
+      - name: "Cesare Beccaria"
+        bio: "Italský právní filosof a osvícenec (1738–1794)"
+
+  - id: usa-furman-1972
+    year: 1972
+    month: 6
+    facets:
+      topic: moratorium
+      geo: americas
+    date: "Červen 1972"
+    title: "USA: Furman v. Georgia — de facto moratorium"
+    emoji: "⚖️"
+    summary: "Nejvyšší soud USA rozhodl, že svévolné udělování trestu smrti porušuje ústavu. Popravy se na čtyři roky zastavily."
+    description: "Rozhodnutím Furman v. Georgia Nejvyšší soud USA pozastavil výkon trestu smrti pro jeho svévolnou a diskriminační aplikaci. Více než 600 odsouzených bylo z death row přesunuto. Šlo o de facto moratorium — ne o ústavní zákaz."
+
+  - id: usa-gregg-1976
+    year: 1976
+    month: 7
+    facets:
+      topic: reinstatement
+      geo: americas
+    date: "Červenec 1976"
+    title: "USA: Gregg v. Georgia — návrat poprav"
+    emoji: "⚠️"
+    summary: "Nejvyšší soud schvaluje nové zákony o trestu smrti jako ústavní. Popravy se obnovují."
+    description: "Ve věci Gregg v. Georgia Nejvyšší soud USA rozhodl, že reformované státní zákony o trestu smrti jsou ústavní. Trest smrti se vrátil a 37 států ho postupně znovu zavedlo. V roce 1977 proběhla první poprava po čtyřleté pauze."
+
+  - id: italy-1948
+    year: 1948
+    month: 1
+    facets:
+      topic: abolition
+      geo: europe
+    date: "1948"
+    title: "Itálie — zrušení v poválečné ústavě"
+    emoji: "🕊️"
+    summary: "Itálie zrušila trest smrti v nové demokratické ústavě po pádu fašismu."
+    description: "Italská republika po konci druhé světové války zakotvila zrušení trestu smrti přímo do ústavy z roku 1948 — jako přímou reakci na zkušenost s fašismem a jeho zvůlí."
+
+  - id: west-germany-1949
+    year: 1949
+    month: 5
+    facets:
+      topic: abolition
+      geo: europe
+    date: "1949"
+    title: "Západní Německo — zrušení po holocaustu"
+    emoji: "🕊️"
+    summary: "Zákon trestu smrti byl zrušen v Základním zákoně Spolkové republiky Německo jako přímá odpověď na nacistické zločiny."
+    description: "Spolková republika Německo zakotvila zákaz trestu smrti v článku 102 Základního zákona (Grundgesetz) z roku 1949. Šlo o vědomé odmítnutí kontinuity s nacistickým státem, který trest smrti používal hromadně."
+
+  - id: udhr-1948
+    year: 1948
+    month: 12
+    facets:
+      topic: milestone
+      geo: global
+    date: "Prosinec 1948"
+    title: "Všeobecná deklarace lidských práv"
+    emoji: "🌐"
+    summary: "OSN přijímá Všeobecnou deklaraci lidských práv — základ pro budoucí abolicionistické argumenty."
+    description: "OSN přijala 10. prosince 1948 Všeobecnou deklaraci lidských práv (UDHR). Článek 3 zaručuje právo na život. Deklarace sama trest smrti nezakazuje, ale stala se zárodkem mezinárodní debaty — a abolicionisté ji od té doby citují jako klíčový argument."
+
+  - id: britain-1969
+    year: 1969
+    month: 12
+    facets:
+      topic: abolition
+      geo: europe
+    date: "1969"
+    title: "Británie — zrušení po Abortion Act"
+    emoji: "🕊️"
+    summary: "Velká Británie definitivně zrušila trest smrti pro vraždu. Poslední poprava proběhla v roce 1964."
+    description: "Británie de facto přestala popravovat po roce 1964. V roce 1969 byl přijat zákon definitivně rušící trest smrti pro vraždu v Anglii, Walesu a Skotsku. Severní Irsko následovalo v roce 1973."
+
+  - id: france-1981
+    year: 1981
+    month: 9
+    facets:
+      topic: abolition
+      geo: europe
+    date: "Září 1981"
+    title: "Francie — gilotina jde do muzea"
+    emoji: "🕊️"
+    summary: "Francie zrušila trest smrti krátce po zvolení Francoise Mitterranda. Byl to jeden z jeho prvních symbolických aktů."
+    description: "Francie zrušila trest smrti 9. října 1981. Ministr spravedlnosti Robert Badinter pronesl ve sněmovně historický projev. Poslední popravený byl Hamida Djandoubi gilotinou v roce 1977 — šlo o poslední použití gilotiny v západní Evropě."
+    persons:
+      - name: "Robert Badinter"
+        bio: "Francouzský právník a ministr spravedlnosti, autor zákona o zrušení trestu smrti"
+      - name: "François Mitterrand"
+        bio: "Francouzský prezident (1981–1995), abolicionista"
+
+  - id: echr-protocol6-1983
+    year: 1983
+    month: 4
+    facets:
+      topic: milestone
+      geo: europe
+    date: "Duben 1983"
+    title: "Šestý protokol EÚLP — Evropa bez poprav"
+    emoji: "🌍"
+    summary: "Rada Evropy přijímá protokol zakazující trest smrti v době míru pro všechny členské státy."
+    description: "Šestý protokol k Evropské úmluvě o lidských právech zakázal trest smrti v době míru. Stalo se tak první regionálně závaznou normou tohoto druhu. Ratifikace je podmínkou členství v Radě Evropy — a tedy fakticky i v EU."
+
+  - id: philippines-abolish-1987
+    year: 1987
+    month: 1
+    facets:
+      topic: abolition
+      geo: asia
+    date: "1987"
+    title: "Filipíny — první asijský stát bez trestu smrti"
+    emoji: "🕊️"
+    summary: "Filipíny jako první asijský stát zrušily trest smrti v nové demokratické ústavě po pádu Marcosova režimu."
+    description: "Filipínská ústava z roku 1987 zakotvila zrušení trestu smrti jako odpověď na represe za Marcosovy diktatury. Šlo o historický krok — první asijský stát s ústavním zákazem."
+
+  - id: philippines-reinstate-1993
+    year: 1993
+    month: 12
+    facets:
+      topic: reinstatement
+      geo: asia
+    date: "1993"
+    title: "Filipíny — trest smrti zpět jako zákon"
+    emoji: "⚠️"
+    summary: "Prezident Ramos znovu zavedl trest smrti jako opatření proti rostoucí kriminalitě."
+    description: "Filipínský president Fidel Ramos podepsal zákon Republic Act 7659, který znovu zavedl trest smrti pro 13 kategorií trestných činů jako 'crime control measure'. Šlo o první případ v moderní historii, kdy demokratický stát zrušení trestu smrti otočil."
+    persons:
+      - name: "Fidel Ramos"
+        bio: "Filipínský prezident (1992–1998)"
+
+  - id: south-africa-1995
+    year: 1995
+    month: 6
+    facets:
+      topic: abolition
+      geo: global
+    date: "Červen 1995"
+    title: "Jihoafrická republika — postapartheidní zrušení"
+    emoji: "🕊️"
+    summary: "Jihoafrický ústavní soud prohlásil trest smrti za protiústavní — v zemi, která popravila tisíce lidí za apartheidu."
+    description: "Jihoafrický ústavní soud v rozsudku S v Makwanyane prohlásil trest smrti za protiústavní s ohledem na novou demokratickou ústavu. Šlo o jeden z nejcitovanějších abolicionistických rozsudků na světě."
+
+  - id: russia-moratorium-1996
+    year: 1996
+    month: 8
+    facets:
+      topic: moratorium
+      geo: europe
+    date: "Srpen 1996"
+    title: "Rusko — moratorium jako vstupenka do Rady Evropy"
+    emoji: "⏸️"
+    summary: "Rusko vyhlásilo moratorium na popravy jako podmínku přijetí do Rady Evropy."
+    description: "Rusko vyhlásilo moratorium na výkon trestu smrti v roce 1996 jako podmínku vstupu do Rady Evropy. Trest smrti zůstal v zákonech zachován, ale od té doby nebyla provedena žádná poprava. Poslední poprava na ruském území se odehrála v roce 1999 v Čečensku — v době, kdy tato oblast fakticky nebyla pod ruskou kontrolou."
+
+  - id: philippines-abolish-2006
+    year: 2006
+    month: 6
+    facets:
+      topic: abolition
+      geo: asia
+    date: "Červen 2006"
+    title: "Filipíny — znovu bez trestu smrti (a naposledy)"
+    emoji: "🕊️"
+    summary: "Prezidentka Arroyo podepsala zákon rušící trest smrti — největší hromadné zmírnění rozsudků v dějinách."
+    description: "Prezidentka Gloria Macapagal-Arroyo podepsala 24. června 2006 zákon Republic Act 9346, který znovu zrušil trest smrti. Přes 1 200 vězňů bylo naráz přesunuto z death row — největší hromadné zmírnění rozsudků v dějinách podle Amnesty International."
+    persons:
+      - name: "Gloria Macapagal-Arroyo"
+        bio: "Filipínská prezidentka (2001–2010)"
+
+  - id: un-resolution-2007
+    year: 2007
+    month: 12
+    facets:
+      topic: milestone
+      geo: global
+    date: "Prosinec 2007"
+    title: "OSN: první rezoluce o moratoru na popravy"
+    emoji: "🌐"
+    summary: "Valné shromáždění OSN poprvé přijímá nezávaznou rezoluci vyzývající ke globálnímu moratoru na popravy."
+    description: "Valné shromáždění OSN přijalo v prosinci 2007 první rezoluci vyzývající ke globálnímu moratoru na výkon trestu smrti. Šlo o nezávazný dokument, ale symbolicky silný signal. Rezoluce se od té doby obnovuje — v roce 2024 ji podpořily poprvé v historii dvě třetiny členských států OSN."
+
+  - id: iran-surge-2010s
+    year: 2015
+    month: 1
+    facets:
+      topic: surge
+      geo: mideast
+    date: "2015–2016"
+    title: "Írán, Saúdská Arábie: historické maximum poprav"
+    emoji: "📈"
+    summary: "V roce 2015 byly zaznamenány tisíce poprav — nejvíce od roku 1989. Írán a Saúdská Arábie dominují globálním statistikám."
+    description: "Rok 2015 zaznamenal globálně nejvyšší počet poprav od roku 1989 — přes 1 600 (bez Číny, která data tají). Írán popravil přes 1 000 lidí, Saúdská Arábie přes 150. Dominovaly drogové trestné činy. Amnesty International toto období označila za 'dramatický globální nárůst'."
+
+  - id: philippines-duterte-2017
+    year: 2017
+    month: 3
+    facets:
+      topic: reinstatement
+      geo: asia
+    date: "Březen 2017"
+    title: "Filipíny: sněmovna hlasuje pro návrat trestu smrti"
+    emoji: "⚠️"
+    summary: "Za Duterteho 'války s drogami' sněmovna schválila zákon obnovující trest smrti — Senát ho však zablokoval."
+    description: "Filipínská sněmovna hlasovala v březnu 2017 pro zákon obnovující trest smrti za drogové trestné činy, a to navzdory mezinárodněprávním závazkům země (Filipíny ratifikovaly druhý opční protokol ICCPR zakazující trest smrti). Senát zákon zablokoval. Pokusy o obnovení se opakovaly i v letech 2019 a 2021."
+    persons:
+      - name: "Rodrigo Duterte"
+        bio: "Filipínský prezident (2016–2022), prosazoval 'válku s drogami'"
+
+  - id: zimbabwe-2024
+    year: 2024
+    month: 12
+    facets:
+      topic: abolition
+      geo: global
+    date: "Prosinec 2024"
+    title: "Zimbabwe — nejmladší abolicionistická země"
+    emoji: "🕊️"
+    summary: "Zimbabwe podepsalo zákon rušící trest smrti pro běžné trestné činy — téměř 20 let po poslední popravě."
+    description: "Zimbabwe podepsalo 31. prosince 2024 zákon rušící trest smrti pro běžné trestné činy. Poslední poprava se v zemi odehrála přibližně před dvaceti lety. Jde o dosud nejnovější zemi, která přistoupila k abolici."
+
+  - id: global-executions-2024
+    year: 2024
+    month: 4
+    facets:
+      topic: surge
+      geo: global
+    date: "2024"
+    title: "1 518 poprav — nejvíce od roku 2015"
+    emoji: "📈"
+    summary: "Amnesty International zaznamenala v roce 2024 celosvětově 1 518 poprav v 15 zemích — nárůst o 32 % oproti roku 2023."
+    description: "Zpráva Amnesty International z dubna 2025 dokumentuje 1 518 zaznamenaných poprav v roce 2024 — nejvíce od roku 2015. Íán (972+), Saúdská Arábie (345+), Irák (63+), Jemen (38+) — tyto čtyři země jsou zodpovědné za 91 % poprav. Data nezahrnují Čínu, která informace o popravách tají jako státní tajemství."
+
+  - id: israel-2026
+    year: 2026
+    month: 3
+    facets:
+      topic: reinstatement
+      geo: mideast
+    date: "30. března 2026"
+    title: "Izrael: zákon o trestu oběšení pro Palestince"
+    emoji: "⚠️"
+    summary: "Kneset schválil zákon zavádějící trest oběšení jako výchozí trest pro Palestince ze Západního břehu odsouzené vojenskými soudy za teroristický útok s následkem smrti."
+    description: "Izraelský parlament hlasoval 30. března 2026 pro zákon (62:48), který zavádí trest oběšení jako výchozí trest pro Palestince ze Západního břehu odsouzené vojenskými soudy za teroristický útok s následkem smrti. Zákon se nevztahuje na izraelské Židy. Naposledy Izrael provedl popravu v roce 1962. Zákon okamžitě napadla u nejvyššího soudu Asociace pro občanská práva v Izraeli."
+    persons:
+      - name: "Itamar Ben-Gvir"
+        bio: "Ministr národní bezpečnosti Izraele, člen strany Otzma Jehudit"
+    link: "https://datatimes.cz"
+    linkText: "Náš článek o izraelském zákoně"
