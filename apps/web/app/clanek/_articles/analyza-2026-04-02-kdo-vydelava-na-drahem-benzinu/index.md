@@ -2,10 +2,10 @@
 title: "Data: Zastropování marží benzínek v peněžence moc nepoznáte"
 date: "2026-04-04"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Vláda slibuje levnější pohonné hmoty. Jenže pro většinu lidí, kteří tankují benzin na běžných pumpách, se nezmění skoro nic. Daň na benzin zůstává stejná a většina stanic už před regulací držela marže nízko. Výrazněji může zásah pomoct hlavně na drahých dálničních pumpách."
-coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
+excerpt: "Vláda slibuje levnější pohonné hmoty. Jenže pro většinu lidí, kteří tankují benzín na běžných pumpách, se nezmění skoro nic. Daň na benzín zůstává stejná a většina stanic už před regulací držela marže nízko. Výrazněji může zásah pomoct hlavně na drahých dálničních pumpách."
+coverImage: "images/babis-a-ceny-benzínu-datatimes.webp"
 filter: ["analýza"]
-tags: ["pohonné hmoty", "vysoké ceny", "benzin", "nafta", "vláda", "Babiš", "ceny", "Schillerová"]
+tags: ["pohonné hmoty", "vysoké ceny", "benzín", "nafta", "vláda", "Babiš", "ceny", "Schillerová"]
 promoted: 72
 ---
 
@@ -17,14 +17,16 @@ Balíček, který těsně před Velikonocemi představil premiér Andrej Babiš,
 
 ## Co pocítíte při tankování
 
-**Jezdíte na benzin a tankujete na běžné pumpě.** Většina osobních aut, která každý den vozí lidi do práce nebo děti do školy, jezdí na Natural 95 – v roce 2025 tvoří benzínová osobní auta přibližně dvě třetiny nových registrací, v celém parku pak většinu. Vládní zásah pro vás prakticky nic neznamená. Spotřební daň na benzin se nemění — zůstává na 12,84 Kč za litr, stejně jako v roce 2010. A marže vaší pumpy? Ta byla pod zastropovanou hranicí 2,50 Kč dávno před regulací.
+**Jezdíte na benzín a tankujete na běžné pumpě.** Většina osobních aut, která každý den vozí lidi do práce nebo děti do školy, jezdí na Natural 95 – v roce 2025 tvoří benzínová osobní auta přibližně dvě třetiny nových registrací, v celém parku pak většinu. Vládní zásah pro vás prakticky nic neznamená. Spotřební daň na benzín se nemění — zůstává na 12,84 Kč za litr, stejně jako v roce 2010. A marže vaší pumpy? Ta byla pod zastropovanou hranicí 2,50 Kč dávno před regulací.
 
 **Jezdíte na naftu a tankujete mimo dálnici.** Dieselová osobní auta tvoří v ČR asi čtvrtinu celého vozového parku. Na naftu ale jezdí téměř všechna nákladní vozidla, dodávky a autobusy – v Evropě je to přes 90 % dodávek a skoro 97 % kamionů. Nafta tedy tvoří 73 % veškeré spotřeby pohonných hmot v Česku, a právě proto se zdražení nafty dotýká ekonomiky jako celku. Vláda sice snížila spotřební daň o 2,35 Kč za litr včetně DPH, což je reálná úleva, jenže u mnoha běžných čerpacích stanic se marže nafty pohybovaly těsně u nuly nebo pod ní. Marže na hranici nuly jsou dlouhodobě neudržitelné, a zda se celé snížení daně promítne do nižší ceny na stojanu, záleží na konkrétní stanici.
 
 **Jezdíte na naftu na dálnici.** Tady Babišovo opatření funguje nejvíce. Zastropování marže vám může ušetřit klidně 5–10 Kč na litr, snížení daně přidá dalších 2,35 Kč. Jenže dálniční stanice jsou výjimkou, ne pravidlem – jejich marže byly vždy výrazně vyšší než ve městech, protože řidič na dálnici má omezené možnosti výběru. Regulace zde napravuje dlouhodobý extrém, ne průměr.
 
 ```infobox right
-Není to poprvé, co vláda řeší drahá paliva v rozporu s daty. Už Fialův kabinet v roce 2022 soustředil pozornost na marže čerpacích stanic a na dočasné snížení spotřební daně, přestože už tehdy bylo z dat patrné, že problém neleží hlavně u pumpařů. Naše starší analýza ukázala, že marže čerpacích stanic neklesaly až po zásahu státu, ale byly nízké už samy o sobě, zatímco mimořádně rostly především marže rafinerií a distribuce. Přesto stát znovu veřejnosti předváděl boj s benzinkami – tedy s nejviditelnějším, nikoli nejdůležitějším článkem řetězce. Babiš dnes opakuje stejný scénář: politicky srozumitelné gesto, které dobře vypadá na tiskové konferenci, ale míří vedle. Fiala tehdy i Babiš dnes tak v zásadě dělají totéž – tváří se, že vysoké ceny řeší rychlým zásahem, ačkoli data ukazují, že česká vláda na hlavní zdroj zdražení přímo nedosáhne.
+Není to poprvé, co vláda řeší drahá paliva v rozporu s daty. Už Fialův kabinet v roce 2022 soustředil pozornost na marže čerpacích stanic a na dočasné snížení spotřební daně, přestože už tehdy bylo z dat patrné, že problém neleží hlavně u pumpařů. Naše starší analýza ukázala, že marže čerpacích stanic neklesaly až po zásahu státu, ale byly nízké už samy o sobě, zatímco mimořádně rostly především marže rafinerií a distribuce.
+
+Přesto stát znovu veřejnosti předváděl boj s benzínkami – tedy s nejviditelnějším, nikoli nejdůležitějším článkem řetězce. Babiš dnes opakuje stejný scénář: politicky srozumitelné gesto, které dobře vypadá na tiskové konferenci, ale míří vedle. Fiala tehdy i Babiš dnes tak v zásadě dělají totéž – tváří se, že vysoké ceny řeší rychlým zásahem, ačkoli data ukazují, že česká vláda na hlavní zdroj zdražení přímo nedosáhne.
 ```
 
 Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si mohli dovolit tankovat na dálnici i za značně zvýšené ceny. Kdo šetří u diskontní pumpy nebo supermarketu – tedy typicky lidé, kteří ceny řeší nejvíc – neušetří skoro nic.
@@ -64,4 +66,4 @@ Regulace marží čerpacích stanic se jich jako rafinérií netýká. Jako prov
 
 ---
 
-*Jak jsme počítali: Spotřební daň vychází ze zákonných sazeb — 12,84 Kč/l u benzinu, 9,95 Kč/l u nafty, od 8. dubna 2026 snížená u nafty na 8,01 Kč/l. DPH počítáme standardně jako 21/121 z celkové ceny. Cenu ropy odvozujeme z ceny Brent v dolarech za barel, přepočtené kurzem ČNB a vydělené 159 litry. Marže čerpacích stanic vychází z marže Tank ONO, ke které přičítáme rozdíl mezi průměrnou cenou podle CCS a cenou Tank ONO. Indikativní hrubá marže podle metodiky Ministerstva financí = prodejní cena bez DPH − nákupní cena z burzy Rotterdam − spotřební daň. Všechny částky v textu uvádíme včetně DPH, pokud není výslovně uvedeno jinak. Zdroje: CCS, Tank ONO, Ministerstvo financí ČR, ČAPPO, SDA/ACEA, vláda ČR, vlastní propočty.*
+*Jak jsme počítali: Spotřební daň vychází ze zákonných sazeb — 12,84 Kč/l u benzínu, 9,95 Kč/l u nafty, od 8. dubna 2026 snížená u nafty na 8,01 Kč/l. DPH počítáme standardně jako 21/121 z celkové ceny. Cenu ropy odvozujeme z ceny Brent v dolarech za barel, přepočtené kurzem ČNB a vydělené 159 litry. Marže čerpacích stanic vychází z marže Tank ONO, ke které přičítáme rozdíl mezi průměrnou cenou podle CCS a cenou Tank ONO. Indikativní hrubá marže podle metodiky Ministerstva financí = prodejní cena bez DPH − nákupní cena z burzy Rotterdam − spotřební daň. Všechny částky v textu uvádíme včetně DPH, pokud není výslovně uvedeno jinak. Zdroje: CCS, Tank ONO, Ministerstvo financí ČR, ČAPPO, SDA/ACEA, vláda ČR, vlastní propočty.*
