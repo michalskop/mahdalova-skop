@@ -23,11 +23,12 @@ Balíček, který po mimořádném zasedání vlády 2. dubna 2026 představil p
 
 **Jezdíte na naftu na dálnici.** Tady Babišovo opatření funguje nejvíce. Zastropování marže vám může ušetřit klidně 5–10 Kč na litr, snížení daně přidá dalších 2,35 Kč. Jenže dálniční stanice jsou výjimkou, ne pravidlem — jejich marže byly vždy výrazně vyšší než ve městech, protože řidič na dálnici má omezené možnosti výběru. Regulace zde napravuje dlouhodobý extrém, ne průměr.
 
-Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si mohli dovolit tankovat na dálnici i za předražené ceny. Kdo šetří u diskontní pumpy nebo supermarketu — tedy typicky lidé, kteří ceny řeší nejvíc — neušetří skoro nic.
-
 ```infobox right
 Není to poprvé, co vláda řeší drahá paliva v rozporu s daty. Už Fialův kabinet v roce 2022 soustředil pozornost na marže čerpacích stanic a na dočasné snížení spotřební daně, přestože už tehdy bylo z dat patrné, že problém neleží hlavně u pumpařů. Naše starší analýza ukázala, že marže čerpacích stanic neklesaly až po zásahu státu, ale byly nízké už samy o sobě, zatímco mimořádně rostly především marže rafinerií a distribuce. Přesto stát znovu veřejnosti předváděl boj s benzinkami — tedy s nejviditelnějším, nikoli nejdůležitějším článkem řetězce. Babiš dnes opakuje stejný scénář: politicky srozumitelné gesto, které dobře vypadá na tiskové konferenci, ale míří vedle. Fiala tehdy i Babiš dnes tak v zásadě dělají totéž — tváří se, že vysoké ceny řeší rychlým zásahem, ačkoli data ukazují, že česká vláda na hlavní zdroj zdražení přímo nedosáhne.
 ```
+
+Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si mohli dovolit tankovat na dálnici i za předražené ceny. Kdo šetří u diskontní pumpy nebo supermarketu — tedy typicky lidé, kteří ceny řeší nejvíc — neušetří skoro nic.
+
 
 ## Trh to vyřešil sám, ještě před vládou
 
