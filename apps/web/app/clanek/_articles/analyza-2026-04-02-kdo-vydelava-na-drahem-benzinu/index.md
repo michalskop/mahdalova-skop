@@ -1,5 +1,5 @@
 ---
-title: "Data: Zastropování marží benzínek v peněžence nepoznáte"
+title: "Data: Zastropování marží benzínek v peněžence moc nepoznáte"
 date: "2026-04-04"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vláda slibuje levnější pohonné hmoty. Jenže pro většinu lidí, kteří tankují benzin na běžných pumpách, se nezmění skoro nic. Daň na benzin zůstává stejná a většina stanic už před regulací držela marže nízko. Výrazněji může zásah pomoct hlavně na drahých dálničních pumpách."
@@ -11,7 +11,7 @@ promoted: 72
 
 Přijedete na svou obvyklou pumpu natankovat Natural 95 a čekáte, že po vládním zásahu ušetříte? Ve většině případů skoro ne.
 
-Balíček, který po mimořádném zasedání vlády 2. dubna 2026 představil premiér Andrej Babiš, vypadá na první pohled razantně: zastropování marží čerpacích stanic na 2,50 koruny za litr a snížení spotřební daně na naftu o 2,35 koruny včetně DPH. Jenže kdo dostane co, záleží na jediné prosté věci — co tankujete a kde.
+Balíček, který těsně před Velikonocemi představil premiér Andrej Babiš, vypadá na první pohled razantně: zastropování marží čerpacích stanic na 2,50 koruny za litr a snížení spotřební daně na naftu o 2,35 koruny včetně DPH. Jenže tím naopak otevřel možnost benzínkám marži si zvýšit.
 
 <HtmlEmbed file="chart.html" />
 
