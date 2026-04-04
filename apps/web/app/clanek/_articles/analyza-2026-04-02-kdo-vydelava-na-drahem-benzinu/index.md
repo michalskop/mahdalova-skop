@@ -11,7 +11,7 @@ promoted: 72
 
 Přijedete na svou obvyklou pumpu natankovat Natural 95 a čekáte, že po vládním zásahu ušetříte? Ve většině případů skoro ne.
 
-Balíček, který těsně před Velikonocemi představil premiér Andrej Babiš, vypadá na první pohled razantně: zastropování marží čerpacích stanic na 2,50 koruny za litr a snížení spotřební daně na naftu o 2,35 koruny včetně DPH. Jenže tím naopak otevřel možnost benzínkám marži si zvýšit.
+Balíček, který těsně před Velikonocemi představil premiér Andrej Babiš, vypadá na první pohled razantně: zastropování marží čerpacích stanic na 2,50 koruny za litr a snížení spotřební daně na naftu o 2,35 koruny včetně DPH. Jenže tím naopak otevřel možnost benzínkám marži si zvýšit. Proč? Protože vláda sice má zpracovanou analýzu současné situace, ale buď s ní nepracuje, nebo ji neumí interpretovat a vyvozuje z ní špatné závěry. 
 
 <HtmlEmbed file="chart.html" />
 
