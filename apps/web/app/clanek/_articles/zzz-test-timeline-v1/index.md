@@ -18,3 +18,7 @@ This article is for testing the new `<Timeline />` MDX component.
 You can include the component multiple times in one article (each instance can point to a different YAML file).
 
 <Timeline yamlFile="timeline-2.yaml" />
+
+## Test TEST TEEEESSSSTTT já, Kačenka I. ❤️
+
+<Timeline yamlFile="timeline-tresty-smrti.yaml" /> 
