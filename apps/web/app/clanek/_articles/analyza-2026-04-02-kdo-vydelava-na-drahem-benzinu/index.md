@@ -35,7 +35,7 @@ Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si moh
 
 Útok Izraele a USA na Írán 28. února 2026 a hrozba uzavření Hormuzského průlivu okamžitě vyhnaly cenu ropy Brent nad 100 USD za barel, v průběhu března až k 112 USD. Průměrná cena nafty se za jediný týden před vládním zásahem zvedla o 4,75 Kč a od konce února o skoro 15 Kč.
 
-```infobox right
+```infobox left
 Kdo tedy skutečně vydělá
 
 Nafta - snížení daně: se promítne na celý řetězec od zpracování ropy po řidiče, ale kam dopadne? Nejspíš si kus vezmou benzinky, které na naftě nyní nic nevydělají
