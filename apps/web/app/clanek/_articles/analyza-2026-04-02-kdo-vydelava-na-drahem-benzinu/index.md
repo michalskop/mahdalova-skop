@@ -68,3 +68,5 @@ Andrej Babiš popisoval, jak vláda dvakrát jednala s „distributory" a ceny n
 Hlavními distributory pohonných hmot do Česka jsou polský PKN Orlen (rafinerie v Kralupech, Litvínově a Pardubicích) a maďarský MOL (rafinerie Slovnaft v Bratislavě). Obě firmy jsou zároveň provozovateli čerpacích stanic na D1 a dalších hlavních tazích. Babiš tedy jednal s rafinériemi – a právě ony jsou ta část řetězce, kde marže raketově rostou, ale kde česká vláda nemá přímé regulační nástroje. PKN Orlen je polská státní firma, MOL maďarský konglomerát.
 
 Regulace marží čerpacích stanic se jich jako rafinérií netýká. Jako provozovatelů pump na D1 možná o pár korun – ale to je vše.
+
+<HtmlEmbed file="support.html" />
