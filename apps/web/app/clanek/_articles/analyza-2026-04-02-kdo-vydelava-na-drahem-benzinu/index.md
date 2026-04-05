@@ -29,11 +29,11 @@ Není to poprvé, co vláda řeší drahá paliva v rozporu s daty. I třeba Fia
 Přesto stát veřejnosti předváděl boj s benzínkami – tedy s nejviditelnějším, nikoli nejdůležitějším článkem řetězce. Babiš dnes opakuje stejný scénář: politicky srozumitelné gesto, které dobře vypadá na tiskové konferenci, ale míří vedle. Fiala tehdy i Babiš dnes tak v zásadě dělají totéž – tváří se, že vysoké ceny řeší rychlým zásahem, ačkoli data ukazují, že česká vláda na hlavní zdroj zdražení přímo nedosáhne.
 ```
 
-Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si mohli dovolit tankovat na dálnici i za značně zvýšené ceny. Kdo pravidelně tankuje u diskontní pumpy nebo supermarketu – tedy typicky lidé, kteří ceny řeší nejvíc – neušetří skoro nic.
+Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří tankovali na dálnici i za značně zvýšené ceny. Kdo pravidelně tankuje u diskontní pumpy nebo supermarketu – tedy typicky lidé, kteří ceny řeší nejvíc – neušetří skoro nic.
 
 ### Trh to vyřešil sám, ještě před vládou
 
-Útok Izraele a USA na Írán 28. února 2026 a hrozba uzavření Hormuzského průlivu okamžitě vyhnaly cenu ropy Brent nad 100 USD za barel, v průběhu března až k 112 USD. Průměrná cena nafty se za jediný týden před vládním zásahem zvedla o 4,75 Kč a od konce února o skoro 15 Kč.
+Útok Izraele a USA na Írán 28. února 2026 a následné uzavření Hormuzského průlivu okamžitě vyhnaly cenu ropy Brent nad 100 USD za barel, v průběhu března až k 112 USD. Průměrná cena nafty se za jediný týden před vládním zásahem zvedla o 4,75 Kč a od konce února o skoro 15 Kč.
 
 ```infobox left
 Kdo tedy skutečně vydělá
