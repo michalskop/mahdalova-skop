@@ -8,6 +8,7 @@
     "./code": "./src/code.tsx",
     "./components/Arrow": "./src/components/Arrow.tsx",
     "./components/TagList": "./src/components/TagList.tsx",
+    "./components/FollowBar": "./src/components/FollowBar.tsx",
     "./components/TestimonialCard": "./src/components/TestimonialCard.tsx",
     "./components/ThemeSwitcher": "./src/components/ThemeSwitcher.tsx",
     "./components/Citation": "./src/components/Citation.tsx",

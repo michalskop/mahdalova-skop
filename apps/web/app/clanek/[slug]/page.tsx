@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
 import { TagList } from '@/components/common/TagList';
+import { FollowBar } from '@/components/common/FollowBar';
 import { notFound } from 'next/navigation';
 import { Box, Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
@@ -99,6 +100,15 @@ export default async function ArticlePage({ params }: PageProps) {
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>
+        <Container
+          size="md"
+          maw="928px"
+          w="100%"
+          px={0}
+          my="lg"
+        >
+          <FollowBar />
+        </Container>
         <Container 
               size="md" 
               // py="xl"
