@@ -1,10 +1,10 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Podpořte DataTimes</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
   body {
@@ -19,54 +19,73 @@
 
   .dt-wrap {
     width: 100%;
-    max-width: 720px;
+    font-family: 'Roboto', Arial, sans-serif;
   }
 
   .dt-link {
-    display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 12px;
+    background: #0d1438;
     text-decoration: none;
-    background: #101432;
-    color: inherit;
-    padding: 18px 20px;
-    border-radius: 18px 18px 0 0;
-    transition:
-      transform 0.18s ease,
-      box-shadow 0.18s ease,
-      background 0.18s ease;
+    overflow: hidden;
+    transition: filter .18s ease;
   }
 
   .dt-link:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 28px rgba(16, 20, 50, 0.18);
+    filter: brightness(1.05);
   }
 
   .dt-link:focus-visible {
-    outline: 3px solid rgba(255, 207, 2, 0.75);
-    outline-offset: 3px;
+    outline: 2px solid #ffcf02;
+    outline-offset: 2px;
   }
 
-  .dt-header {
+  .dt-link::before,
+  .dt-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+  }
+
+  .dt-link::before {
+    top: 0;
+    background: linear-gradient(to right, #de1743 0%, #f76800 52%, #ffcf02 100%);
+  }
+
+  .dt-link::after {
+    bottom: 0;
+    background: linear-gradient(to right, #ffcf02 0%, #f76800 48%, #de1743 100%);
+  }
+
+  .dt-brand {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 10px;
-    margin-bottom: 12px;
+    flex: 0 0 auto;
+    min-width: 175px;
   }
 
   .dt-logo svg {
     display: block;
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
   }
 
   .dt-name {
     margin: 0;
     font-family: 'Roboto Slab', serif;
-    font-size: clamp(22px, 3.2vw, 32px);
+    font-size: 22px;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.02em;
+    white-space: nowrap;
   }
 
   .dt-red {
@@ -77,93 +96,70 @@
     color: #ffcf02;
   }
 
-  .dt-body {
-    margin: 0 0 14px;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: clamp(14px, 1.7vw, 16px);
+  .dt-text {
+    flex: 1 1 auto;
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1.5;
-    color: #f5f3ef;
-    text-align: left;
-    max-width: 52ch;
+    line-height: 1.35;
   }
 
-  .dt-btn-wrap {
-    display: flex;
-    justify-content: center;
-  }
-
-  .dt-btn {
+  .dt-cta {
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 42px;
-    padding: 10px 24px;
-    border-radius: 999px;
-    background: #de1743;
+    min-width: 148px;
+    padding: 14px 26px;
+    background: #f01952;
     color: #ffffff;
     font-family: 'Roboto Slab', serif;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1;
-    letter-spacing: 0;
-    box-shadow: 0 4px 14px rgba(222, 23, 67, 0.28);
-    transition:
-      background 0.18s ease,
-      transform 0.18s ease,
-      box-shadow 0.18s ease;
+    white-space: nowrap;
+    border-radius: 999px;
+    transition: background .18s ease, transform .18s ease;
   }
 
-  .dt-link:hover .dt-btn,
-  .dt-link:focus-visible .dt-btn {
-    background: #c9143b;
+  .dt-link:hover .dt-cta {
+    background: #d91347;
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(222, 23, 67, 0.34);
   }
 
-  .dt-bar {
-    height: 4px;
-    border-radius: 0 0 14px 14px;
-    background: linear-gradient(to right, #de1743, #f76800, #ffcf02);
-  }
-
-  @media (max-width: 520px) {
+  @media (max-width: 760px) {
     .dt-link {
-      padding: 16px 14px;
-      border-radius: 16px 16px 0 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 14px 14px 16px;
     }
 
-    .dt-header {
-      margin-bottom: 10px;
-      gap: 8px;
+    .dt-brand {
+      min-width: 0;
     }
 
-    .dt-logo svg {
-      width: 30px;
-      height: 30px;
-    }
-
-    .dt-name {
-      font-size: 24px;
-    }
-
-    .dt-body {
+    .dt-text {
       font-size: 14px;
-      margin-bottom: 12px;
     }
 
-    .dt-btn {
+    .dt-cta {
       width: 100%;
-      max-width: 260px;
-      font-size: 15px;
-      padding: 11px 18px;
+      min-width: 0;
+      font-size: 17px;
     }
   }
 </style>
 
 <div class="dt-wrap">
-  <a href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" class="dt-link" aria-label="Podpořit DataTimes přes Stripe">
-    <div class="dt-header">
+  <a
+    class="dt-link"
+    href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Podpořit DataTimes přes Stripe"
+  >
+    <div class="dt-brand">
       <div class="dt-logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true">
           <defs>
@@ -182,21 +178,18 @@
           </g>
         </svg>
       </div>
+
       <p class="dt-name">
         <span class="dt-red">Data</span><span class="dt-yellow">Times</span>
       </p>
     </div>
 
-    <p class="dt-body">
-      Veřejný prostor i politiku zaplavují blbosti, fake news a propaganda.
-      Pomozte nám šířit ověřená fakta, data a analýzy.<br>
+    <p class="dt-text">
+      Veřejný prostor i&nbsp;politiku zaplavují blbosti, fake news a&nbsp;propaganda.
+      Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy.
       Za cenu jednoho oběda.
     </p>
 
-    <div class="dt-btn-wrap">
-      <span class="dt-btn">Jdu do toho</span>
-    </div>
+    <span class="dt-cta">Jdu do toho</span>
   </a>
-
-  <div class="dt-bar"></div>
 </div>
