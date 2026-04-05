@@ -43,7 +43,7 @@ Nafta - snížení daně: se promítne na celý řetězec od zpracování ropy p
 Strop (nafta + benzin): dopad jen na dražších benzinkách (dálnice), jinak se to prakticky neprojeví.
 ```
 
-Ministerstvo financí zahájilo 6. března monitoring marží u 2530 stanic od 558 provozovatelů. Výsledky ale nepotvrdily příběh o chamtivých pumpařích, který se obvykle v dobách rychlého zdražení pohonných hmot pravidelně objevuje. Neplatil ani v době ruského útoku na Ukrajinu, kdy rovněž ceny vylétly rychle nahoru.
+Ministerstvo financí zahájilo 6. března monitoring marží u 2530 stanic od 558 provozovatelů. Výsledky ale nepotvrdily příběh o chamtivých pumpařích, který se v dobách rychlého zdražení pohonných hmot pravidelně objevuje. Neplatil ani v době ruského útoku na Ukrajinu, kdy rovněž ceny vylétly rychle nahoru.
 
 Průměrné marže čerpacích stanic *klesaly* ještě dříve, než monitoring začal. Před krizí se pohybovaly mezi 2,70 a 3,20 Kč za litr. Po vypuknutí konfliktu klesly na 1,90–2,60 Kč. Po spuštění monitoringu sestoupily až ke koruně. K 15. březnu 2026 činila průměrná marže u nafty 0,84 Kč za litr.
 
