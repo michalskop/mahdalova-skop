@@ -1,98 +1,179 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Podpořte DataTimes</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&family=Roboto:wght@400&display=swap" rel="stylesheet">
-<style>
-  body { margin: 0; padding: 0; background: transparent; }
-  *, *::before, *::after { box-sizing: border-box; }
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  .dt-wrap { width: 100%; }
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  .dt-wrap {
+    width: 100%;
+    max-width: 720px;
+  }
 
   .dt-link {
     display: block;
     text-decoration: none;
     background: #101432;
-    padding: 22px 30px 26px;
-    transition: filter .18s;
+    color: inherit;
+    padding: 18px 20px;
+    border-radius: 18px 18px 0 0;
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      background 0.18s ease;
   }
-  .dt-link:hover { filter: brightness(1.12); }
 
-  /* Řádek 1: logo + DataTimes VPRAVO */
+  .dt-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(16, 20, 50, 0.18);
+  }
+
+  .dt-link:focus-visible {
+    outline: 3px solid rgba(255, 207, 2, 0.75);
+    outline-offset: 3px;
+  }
+
   .dt-header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
-  .dt-logo svg { display: block; width: clamp(34px,4.2vw,48px); height: clamp(34px,4.2vw,48px); flex-shrink:0; }
+
+  .dt-logo svg {
+    display: block;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
   .dt-name {
-    font-family: 'Roboto Slab', 'Arial Black', Impact, sans-serif;
-    font-size: clamp(20px, 4.8vw, 48px);
-    font-weight: 600;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(22px, 3.2vw, 32px);
+    font-weight: 700;
     line-height: 1;
     letter-spacing: -0.02em;
-    margin: 0;
   }
-  .dt-red    { color: #de1743; }
-  .dt-yellow { color: #ffcf02; }
 
-  /* Tělo VLEVO */
+  .dt-red {
+    color: #de1743;
+  }
+
+  .dt-yellow {
+    color: #ffcf02;
+  }
+
   .dt-body {
+    margin: 0 0 14px;
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: clamp(12px, 1.8vw, 16px);
-    color: #fdfbf7;
-    line-height: 1.55;
-    text-align: left;
-    margin: 0 0 18px;
-  }
-
-  /* Tlačítko UPROSTŘED — velké zaoblené pill */
-  .dt-btn-wrap { text-align: center; }
-  .dt-btn {
-    display: inline-block;
-    font-family: 'Roboto Slab', 'Arial Black', sans-serif;
-    font-size: clamp(13px, 2vw, 18px);
+    font-size: clamp(14px, 1.7vw, 16px);
     font-weight: 400;
-    color: #fff;
+    line-height: 1.5;
+    color: #f5f3ef;
+    text-align: left;
+    max-width: 52ch;
+  }
+
+  .dt-btn-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dt-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 24px;
+    border-radius: 999px;
     background: #de1743;
-    padding: 13px 52px;
-    border-radius: 50px;
-    letter-spacing: .01em;
-    box-shadow: 0 3px 18px rgba(222,23,67,.4);
-    transition: background .15s, box-shadow .15s, transform .12s;
+    color: #ffffff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+    box-shadow: 0 4px 14px rgba(222, 23, 67, 0.28);
+    transition:
+      background 0.18s ease,
+      transform 0.18s ease,
+      box-shadow 0.18s ease;
   }
-  .dt-link:hover .dt-btn {
-    background: #c01238;
-    box-shadow: 0 5px 24px rgba(222,23,67,.6);
+
+  .dt-link:hover .dt-btn,
+  .dt-link:focus-visible .dt-btn {
+    background: #c9143b;
     transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(222, 23, 67, 0.34);
   }
 
-  .dt-bar { height: 4px; background: linear-gradient(to right, #de1743, #f76800, #ffcf02); }
+  .dt-bar {
+    height: 4px;
+    border-radius: 0 0 14px 14px;
+    background: linear-gradient(to right, #de1743, #f76800, #ffcf02);
+  }
 
-  @media(max-width:520px){
-    .dt-link{padding:16px 16px 20px;}
-    .dt-name{font-size:22px;}
-    .dt-body{font-size:13px;}
-    .dt-btn{font-size:14px;padding:11px 32px;}
-    .dt-logo svg{width:30px;height:30px;}
+  @media (max-width: 520px) {
+    .dt-link {
+      padding: 16px 14px;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .dt-header {
+      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .dt-logo svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .dt-name {
+      font-size: 24px;
+    }
+
+    .dt-body {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .dt-btn {
+      width: 100%;
+      max-width: 260px;
+      font-size: 15px;
+      padding: 11px 18px;
+    }
   }
 </style>
-</head>
-<body>
+
 <div class="dt-wrap">
-  <a href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" class="dt-link">
+  <a href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" class="dt-link" aria-label="Podpořit DataTimes přes Stripe">
     <div class="dt-header">
       <div class="dt-logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true">
-          <defs><linearGradient id="dtG2" x1="1" x2=".25" y1=".5" y2="1">
-            <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
-            <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
-            <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
-            <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
-          </linearGradient></defs>
+          <defs>
+            <linearGradient id="dtG2" x1="1" x2=".25" y1=".5" y2="1">
+              <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
           <g transform="rotate(-30 250 250)">
             <path fill="none" stroke="#ffcf02" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
             <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M336.60254 300 A100 100 0 0 0 250 150"/>
@@ -105,13 +186,17 @@
         <span class="dt-red">Data</span><span class="dt-yellow">Times</span>
       </p>
     </div>
+
     <p class="dt-body">
-      Veřejný prostor i politiku zaplavují blbosti, fake news a propaganda. Pomáhejte s námi šířit ověřená fakta, data a analýzy.<br>
+      Veřejný prostor i politiku zaplavují blbosti, fake news a propaganda.
+      Pomozte nám šířit ověřená fakta, data a analýzy.<br>
       Za cenu jednoho oběda.
     </p>
+
     <div class="dt-btn-wrap">
-      <span class="dt-btn">Jdu do toho.</span>
+      <span class="dt-btn">Jdu do toho</span>
     </div>
   </a>
+
   <div class="dt-bar"></div>
 </div>
