@@ -167,7 +167,8 @@
     bgPost.setAttribute('y',      PAD_T);
     bgPost.setAttribute('width',  toX(N - 1) - toX(IDX_KONFLIKT));
     bgPost.setAttribute('height', plotH);
-    bgPost.setAttribute('fill',   '#fbe8eb');
+    bgPost.setAttribute('fill',   '#eeeae2');
+    bgPost.setAttribute('opacity', '0.7');
     svg.appendChild(bgPost);
 
     // ── Gridlines ─────────────────────────────────────────
@@ -191,7 +192,30 @@
       svg.appendChild(lbl);
     });
 
-    // ── Svislý marker: útok na Írán 28.2. (červeně) ───────
+    // ── Strop marže 2,50 Kč — výrazná referenční linie ────
+    {
+      const yCap = toY(2.50);
+
+      // Plná výrazná linie přes celou šířku grafu
+      const capLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      capLine.setAttribute('x1', PAD_L); capLine.setAttribute('x2', PAD_L + plotW);
+      capLine.setAttribute('y1', yCap);  capLine.setAttribute('y2', yCap);
+      capLine.setAttribute('stroke', '#e07b00');
+      capLine.setAttribute('stroke-width', '2');
+      svg.appendChild(capLine);
+
+      // Label zarovnaný vpravo — nad linií
+      const capLbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      capLbl.setAttribute('x', PAD_L + plotW - 4);
+      capLbl.setAttribute('y', yCap - 6);
+      capLbl.setAttribute('text-anchor', 'end');
+      capLbl.setAttribute('font-size', isMobile ? 9 : 11);
+      capLbl.setAttribute('fill', '#e07b00');
+      capLbl.setAttribute('font-family', 'Roboto Slab, serif');
+      capLbl.setAttribute('font-weight', '700');
+      capLbl.textContent = '2,50 Kč';
+      svg.appendChild(capLbl);
+    }
     {
       const x = toX(IDX_KONFLIKT);
       const vline = document.createElementNS('http://www.w3.org/2000/svg', 'line');
@@ -268,6 +292,44 @@
 
     drawSeries(D_NAFT, C_NAFT);
     drawSeries(D_N95,  C_N95);
+
+    // ── Hodnoty nad vybranými body ─────────────────────────
+    // 19.2.=4, 24.2.=9, 4.3.=18, 12.3.=26
+    const LABELED = [4, 9, 18, 26];
+    const fsLbl = isMobile ? 9 : 11;
+
+    LABELED.forEach(i => {
+      const cx = toX(i);
+      const yN95  = toY(D_N95[i]);
+      const yNaft = toY(D_NAFT[i]);
+
+      // Která linka je výše (nižší Y) — ta dostane větší odsazení nahoru
+      const n95Higher = yN95 < yNaft;
+
+      // Natural 95 — fialová
+      const lblN95 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lblN95.setAttribute('x', cx);
+      lblN95.setAttribute('y', yN95 - (n95Higher ? 18 : 10));
+      lblN95.setAttribute('text-anchor', 'middle');
+      lblN95.setAttribute('font-size', fsLbl);
+      lblN95.setAttribute('fill', C_N95);
+      lblN95.setAttribute('font-family', 'Roboto Slab, serif');
+      lblN95.setAttribute('font-weight', '700');
+      lblN95.textContent = D_N95[i].toFixed(2).replace('.', ',');
+      svg.appendChild(lblN95);
+
+      // Nafta — teal
+      const lblNaft = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lblNaft.setAttribute('x', cx);
+      lblNaft.setAttribute('y', yNaft - (!n95Higher ? 18 : 10));
+      lblNaft.setAttribute('text-anchor', 'middle');
+      lblNaft.setAttribute('font-size', fsLbl);
+      lblNaft.setAttribute('fill', C_NAFT);
+      lblNaft.setAttribute('font-family', 'Roboto Slab, serif');
+      lblNaft.setAttribute('font-weight', '700');
+      lblNaft.textContent = D_NAFT[i].toFixed(2).replace('.', ',');
+      svg.appendChild(lblNaft);
+    });
 
     // ── X-axis labely ──────────────────────────────────────
     const showEvery = isMobile ? 4 : 2;
