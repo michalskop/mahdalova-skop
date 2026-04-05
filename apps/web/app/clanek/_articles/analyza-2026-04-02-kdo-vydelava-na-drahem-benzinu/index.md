@@ -45,7 +45,7 @@ Průměrné marže čerpacích stanic *klesaly* ještě dříve, než monitoring
 <HtmlEmbed file="chart-mf.html" />
 
 
-Trh marže korigoval sám. Klíč je jednoduchý: český trh s pohonnými hmotami je vysoce konkurenční. Řidič, jehož oblíbená pumpa zdraží, přejede na druhou stranu ulice. Benzínka, která to zkusí, přijde o zákazníky ještě ten den. Přesto vláda 2. dubna zastropovala marže na 2,50 Kč — tedy na přibližně trojnásobku toho, kde průměrná marže nafty tehdy reálně byla.
+Trh marže korigoval sám. Klíč je jednoduchý: český trh s pohonnými hmotami je vysoce konkurenční. Řidič, jehož oblíbená pumpa zdraží, přejede na druhou stranu ulice. Benzínka, která to zkusí, přijde o zákazníky ještě ten den. Přesto vláda 2. dubna zastropovala marže na 2,50 Kč – tedy na přibližně trojnásobku toho, kde průměrná marže nafty tehdy reálně byla.
 
 Takže pokud jsou marže čerpacích stanic pod korunou, strop na 2,50 Kč spotřebitelům neuleví – spíš naopak dává pumpám prostor zdražit. A od dalšího zdražení je pak drží to samé, co fungovalo dosud: konkurence.
 
