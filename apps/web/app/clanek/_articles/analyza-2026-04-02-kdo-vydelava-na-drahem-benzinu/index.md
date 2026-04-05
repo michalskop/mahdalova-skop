@@ -33,8 +33,8 @@ Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si moh
 
 ```infobox right
 Kdo tedy skutečně vydělá
-**Nafta - snížení daně:** se promítne na celý řetězec od zpracování ropy po řidiče, ale kam dopadne? Nejspíš si kus vezmou benzinky, které na naftě nyní nic nevydělají
-**Strop (nafta + benzin):** dopad jen na dražších benzinkách (dálnice), jinak se to prakticky neprojeví.
+Nafta - snížení daně: se promítne na celý řetězec od zpracování ropy po řidiče, ale kam dopadne? Nejspíš si kus vezmou benzinky, které na naftě nyní nic nevydělají
+Strop (nafta + benzin): dopad jen na dražších benzinkách (dálnice), jinak se to prakticky neprojeví.
 ```
 
 ### Trh to vyřešil sám, ještě před vládou
