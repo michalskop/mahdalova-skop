@@ -37,21 +37,15 @@ Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří tankov
 
 Ministerstvo financí zahájilo 6. března monitoring marží u 2530 stanic od 558 provozovatelů. Výsledky ale nepotvrdily příběh o chamtivých pumpařích, který se v dobách rychlého zdražení pohonných hmot pravidelně objevuje. Neplatil ani v době ruského útoku na Ukrajinu, kdy rovněž ceny vylétly rychle nahoru.
 
+Průměrné marže čerpacích stanic *klesaly* ještě dříve, než monitoring začal. Před krizí se pohybovaly mezi 2,70 a 3,20 Kč za litr. Po vypuknutí konfliktu klesly na 1,90–2,60 Kč. Po spuštění monitoringu sestoupily až ke koruně. K 15. březnu 2026 činila průměrná marže u nafty 0,84 Kč za litr.
+
+
 <HtmlEmbed file="chart-mf.html" />
 
-Průměrné marže čerpacích stanic *klesaly* ještě dříve, než monitoring začal. Před krizí se pohybovaly mezi 2,70 a 3,20 Kč za litr. Po vypuknutí konfliktu klesly na 1,90–2,60 Kč. Po spuštění monitoringu sestoupily až ke koruně. K 15. březnu 2026 činila průměrná marže u nafty 0,84 Kč za litr.
 
 Trh marže korigoval sám. Klíč je jednoduchý: český trh s pohonnými hmotami je vysoce konkurenční. Řidič, jehož oblíbená pumpa zdraží, přejede na druhou stranu ulice. Benzínka, která to zkusí, přijde o zákazníky ještě ten den. Přesto vláda 2. dubna zastropovala marže na 2,50 Kč — tedy na přibližně trojnásobku toho, kde průměrná marže nafty tehdy reálně byla.
 
-Zákon ekonomiky říká, že pokud marže čerpacích stanic jsou pod korunou, strop na 2,50 Kč neuleví – spíš naopak dává pumpám prostor zdražit. Od dalšího zdražení je ale drží to samé, co fungovalo dosud: konkurence.
-
-```infobox left
-Kdo tedy skutečně vydělá
-
-Nafta - snížení daně: se promítne na celý řetězec od zpracování ropy po řidiče, ale kam dopadne? Nejspíš si kus vezmou benzinky, které na naftě nyní nic nevydělají
-
-Strop (nafta + benzin): dopad jen na dražších benzinkách (dálnice), jinak se to prakticky neprojeví.
-```
+Takže pokud jsou marže čerpacích stanic pod korunou, strop na 2,50 Kč spotřebitelům neuleví – spíš naopak dává pumpám prostor zdražit. Od dalšího zdražení je ale drží to samé, co fungovalo dosud: konkurence.
 
 ### Babišova čísla nesedí
 
@@ -63,7 +57,7 @@ Vysvětlení je prosté: údaj 40,70 Kč byl zastaralý. Platil zhruba v polovin
 
 Marže čerpacích stanic jsou speciálně pro naftu při aktuálních cenách blízko nule nebo záporné. Tak kdo na zdražení vydělává?
 
-Stejnou otázku jsme si kladli v červnu 2022, kdy jsme pro Seznam Zprávy analyzovali tehdejší krizi. Odpověď je tehdy i nyní stejná: rafinerie a distributoři. Složka, která se od ledna do dubna 2026 téměř ztrojnásobila, jsou marže rafinérie a distribuce – podle našich propočtů z dat CCS a Tank ONO přes 13 Kč na litr nafty k 1. dubna. Tahle část řetězce regulaci nepodléhá.
+Stejnou otázku jsme si kladli v červnu 2022, kdy [jsme analyzovali tehdejší krizi](https://www.seznamzpravy.cz/clanek/fakta-data-kdo-vydelava-na-drahem-benzinu-206242). Odpověď je tehdy i nyní stejná: rafinerie a distributoři. Složka, která se od ledna do dubna 2026 téměř ztrojnásobila, jsou marže rafinérie a distribuce – podle našich propočtů z dat CCS a Tank ONO přes 13 Kč na litr nafty k 1. dubna. Tahle část řetězce regulaci nepodléhá.
 
 ### Trochu zmatení na závěr
 
