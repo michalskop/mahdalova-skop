@@ -31,15 +31,16 @@ Přesto stát znovu veřejnosti předváděl boj s benzínkami – tedy s nejvid
 
 Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří si mohli dovolit tankovat na dálnici i za značně zvýšené ceny. Kdo šetří u diskontní pumpy nebo supermarketu – tedy typicky lidé, kteří ceny řeší nejvíc – neušetří skoro nic.
 
-```infobox right
-Kdo tedy skutečně vydělá
-Nafta - snížení daně: se promítne na celý řetězec od zpracování ropy po řidiče, ale kam dopadne? Nejspíš si kus vezmou benzinky, které na naftě nyní nic nevydělají
-Strop (nafta + benzin): dopad jen na dražších benzinkách (dálnice), jinak se to prakticky neprojeví.
-```
-
 ### Trh to vyřešil sám, ještě před vládou
 
 Útok Izraele a USA na Írán 28. února 2026 a hrozba uzavření Hormuzského průlivu okamžitě vyhnaly cenu ropy Brent nad 100 USD za barel, v průběhu března až k 112 USD. Průměrná cena nafty se za jediný týden před vládním zásahem zvedla o 4,75 Kč a od konce února o skoro 15 Kč.
+
+```infobox right
+Kdo tedy skutečně vydělá
+
+Nafta - snížení daně: se promítne na celý řetězec od zpracování ropy po řidiče, ale kam dopadne? Nejspíš si kus vezmou benzinky, které na naftě nyní nic nevydělají
+Strop (nafta + benzin): dopad jen na dražších benzinkách (dálnice), jinak se to prakticky neprojeví.
+```
 
 Ministerstvo financí zahájilo 6. března monitoring marží u 2530 stanic od 558 provozovatelů. Výsledky ale nepotvrdily příběh chamtivých pumpařů.
 
