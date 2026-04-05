@@ -490,6 +490,13 @@
     totalLbl.textContent = fmt(total) + ' Kč';
 
     const segs = col.querySelectorAll('.dtp-bar-seg');
+
+    // Odstraníme staré "plovoucí" labely nad sloupcem
+    col.querySelectorAll('.dtp-float-lbl').forEach(el => el.remove());
+
+    // Výška celého vykresleného sloupce (součet aktivních px)
+    const totalPx = (total / MAX_VAL) * h;
+
     segs.forEach((seg, i) => {
       const val = enabledValues[i];
       const px  = (val / MAX_VAL) * h;
@@ -497,7 +504,58 @@
       seg.style.opacity = catEnabled[i] ? '1' : '0';
 
       const lbl = seg.querySelector('.dtp-seg-label');
-      if (lbl) lbl.style.display = (px >= 18 && catEnabled[i]) ? '' : 'none';
+      if (!lbl) return;
+
+      if (!catEnabled[i]) {
+        lbl.style.display = 'none';
+        return;
+      }
+
+      const activeCount = catEnabled.filter(Boolean).length;
+
+      if (activeCount > 1 && px >= 18) {
+        // Více kategorií + dost místa → label uvnitř
+        lbl.style.display = '';
+      } else if (activeCount > 1 && px < 18) {
+        // Více kategorií + malý segment → skrýt (původní chování)
+        lbl.style.display = 'none';
+      } else {
+        // Právě jedna kategorie zapnutá → plovoucí label nad sloupcem
+        lbl.style.display = 'none';
+
+        // Najdeme barvu segmentu pro plovoucí label
+        const color = COLORS[i];
+
+        // Plovoucí label — pozicovaný nad vrcholem sloupce
+        // Pod stackem je ještě .dtp-bar-label (~36px) → přičteme offset
+        const BAR_LABEL_H = 38; // px výška bar-label pod stackem
+        const existingFloats = col.querySelectorAll('.dtp-float-lbl').length;
+        const floatOffset = existingFloats * 15;
+
+        const floatLbl = document.createElement('div');
+        floatLbl.className = 'dtp-float-lbl';
+        floatLbl.textContent = fmt(val) + ' Kč';
+        floatLbl.style.cssText = [
+          'position:absolute',
+          'left:50%',
+          'transform:translateX(-50%)',
+          `bottom:calc(${totalPx + BAR_LABEL_H + 6}px + ${floatOffset}px)`,
+          `color:${color}`,
+          'font-size:9px',
+          'font-weight:700',
+          'white-space:nowrap',
+          'pointer-events:none',
+          'font-family:inherit',
+          'line-height:1.2',
+          'text-align:center',
+          'z-index:10',
+        ].join(';');
+
+        // Přidáme do bar-col (který má position:relative přes .dtp-bar-stack)
+        // Potřebujeme position:relative na .dtp-bar-col
+        col.style.position = 'relative';
+        col.appendChild(floatLbl);
+      }
     });
   }
 
