@@ -64,9 +64,9 @@ Marže čerpacích stanic jsou speciálně pro naftu při aktuálních cenách b
 
 Stejnou otázku jsme si kladli v červnu 2022, kdy jsme pro Seznam Zprávy analyzovali tehdejší krizi. Odpověď je tehdy i nyní stejná: rafinerie a distributoři. Složka, která se od ledna do dubna 2026 téměř ztrojnásobila, jsou marže rafinérie a distribuce – podle našich propočtů z dat CCS a Tank ONO přes 13 Kč na litr nafty k 1. dubna. Tahle část řetězce regulaci nepodléhá.
 
-### Babiš jednal s rafinériemi, ne s benzínkami
+### Trochu zmatení na závěr
 
-Babiš popisoval, jak vláda dvakrát jednala s „distributory" a ceny nafty na D1 se snížily o přibližně dvě koruny. Jenže tady míchá dvě různé věci.
+Andrej Babiš popisoval, jak vláda dvakrát jednala s „distributory" a ceny nafty na D1 se snížily o přibližně dvě koruny. Jenže tady míchá dvě různé věci.
 
 Hlavními distributory pohonných hmot do Česka jsou polský PKN Orlen (rafinerie v Kralupech, Litvínově a Pardubicích) a maďarský MOL (rafinerie Slovnaft v Bratislavě). Obě firmy jsou zároveň provozovateli čerpacích stanic na D1 a dalších hlavních tazích. Babiš tedy jednal s rafinériemi – a právě ony jsou ta část řetězce, kde marže raketově rostou, ale kde česká vláda nemá přímé regulační nástroje. PKN Orlen je polská státní firma, MOL maďarský konglomerát.
 
