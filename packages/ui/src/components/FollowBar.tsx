@@ -17,21 +17,20 @@ import { Box, Button, Anchor, useMantineTheme } from '@mantine/core';
  */
 
 const CHANNELS = [
-  // TODO: Uncomment when Google News publication URL is configured
-  // {
-  //   label: "Google",
-  //   url: "https://news.google.com/publications/DOPLNTE-VAS-ID?hl=cs&gl=CZ&ceid=CZ:cs",
-  //   icon: (
-  //     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-  //       <rect width="24" height="24" rx="4" fill="white" />
-  //       <path d="M4 12C4 7.58 7.58 4 12 4v16C7.58 20 4 16.42 4 12z" fill="#34A853" />
-  //       <path d="M12 4C16.42 4 20 7.58 20 12H12V4z" fill="#EA4335" />
-  //       <path d="M20 12C20 16.42 16.42 20 12 20V12h8z" fill="#FBBC05" />
-  //       <path d="M4 12C4 7.58 7.58 4 12 4C7.58 4 4 7.58 4 12z" fill="#4285F4" />
-  //       <circle cx="12" cy="12" r="4" fill="white" />
-  //     </svg>
-  //   ),
-  // },
+  {
+    label: "Google",
+    url: "https://news.google.com/search?q=site%3Amahdalova-skop.cz&hl=cs&gl=CZ&ceid=CZ%3Acs",
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+        <rect width="24" height="24" rx="4" fill="white" />
+        <path d="M4 12C4 7.58 7.58 4 12 4v16C7.58 20 4 16.42 4 12z" fill="#34A853" />
+        <path d="M12 4C16.42 4 20 7.58 20 12H12V4z" fill="#EA4335" />
+        <path d="M20 12C20 16.42 16.42 20 12 20V12h8z" fill="#FBBC05" />
+        <path d="M4 12C4 7.58 7.58 4 12 4C7.58 4 4 7.58 4 12z" fill="#4285F4" />
+        <circle cx="12" cy="12" r="4" fill="white" />
+      </svg>
+    ),
+  },
   {
     label: "Discord",
     url: "https://discord.gg/9WEF8PCD3w",
