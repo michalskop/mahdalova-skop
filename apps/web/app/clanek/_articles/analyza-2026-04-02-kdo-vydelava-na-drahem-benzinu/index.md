@@ -15,7 +15,9 @@ Balíček, který těsně před Velikonocemi představil premiér Andrej Babiš,
 
 <HtmlEmbed file="chart.html" />
 
-### Co pocítíte při tankování
+<HtmlEmbed file="support.html" />
+
+### Jak se vás změny dotknou při tankování
 
 **Jezdíte na benzín a tankujete na běžné pumpě** – Většina osobních aut, která každý den vozí lidi do práce nebo děti do školy, jezdí na Natural 95 – v roce 2025 tvoří benzínová osobní auta přibližně dvě třetiny nových registrací, v celém parku pak většinu. Vládní zásah pro vás prakticky nic neznamená. Spotřební daň na benzín se nemění — zůstává na 12,84 Kč za litr, stejně jako v roce 2010. A marže vaší pumpy? Ta byla pod zastropovanou hranicí 2,50 Kč dávno před regulací.
 
@@ -29,7 +31,6 @@ Není to poprvé, co vláda řeší drahá paliva v rozporu s daty. I třeba Fia
 I současná vláda nabízí veřejnosti (úplně zbytečný) "boj s benzínkami" - tedy s nejviditelnějším, nikoli nejdůležitějším článkem řetězce. Je to politicky srozumitelné gesto, které dobře vypadá na tiskové konferenci, ale míří vedle. Fiala tehdy i Babiš dnes tak v zásadě dělají totéž – tváří se, že vysoké ceny řeší rychlým zásahem, ačkoli data ukazují, že česká vláda na hlavní zdroj zdražení přímo nedosáhne.
 ```
 
-<HtmlEmbed file="support.html" />
 
 Paradox celého opatření je v tom, že nejvíce pomůže lidem, kteří tankovali na dálnici i za značně zvýšené ceny. Kdo pravidelně tankuje u diskontní pumpy nebo supermarketu – tedy typicky lidé, kteří ceny řeší nejvíc – neušetří skoro nic.
 
