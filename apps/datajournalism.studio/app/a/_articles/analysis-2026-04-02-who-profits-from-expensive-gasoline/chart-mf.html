@@ -1,0 +1,410 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indikativní hrubá marže čerpacích stanic</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; padding: 0; background: #f8f6f0; }
+  .dtp-chart-container,
+  .dtp-chart-container *,
+  .dtp-chart-container *::before,
+  .dtp-chart-container *::after { box-sizing: border-box; }
+  .dtp-chart-container {
+    width: 100%; max-width: none;
+    padding: 20px 16px 16px;
+    background: #f8f6f0;
+    font-family: 'Roboto Slab', Georgia, serif;
+    color: #1a1a1a; overflow: hidden; margin: 0;
+  }
+  .dtp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .dtp-header-text { flex: 1 1 auto; min-width: 0; }
+  .dtp-chart-container .dtp-title { font-size: 21px; font-weight: 700; line-height: 1.2; margin: 0 0 3px 0; display: block !important; writing-mode: horizontal-tb !important; white-space: normal !important; }
+  .dtp-chart-container .dtp-subtitle { font-size: 13px; color: #666; margin: 0; display: block !important; writing-mode: horizontal-tb !important; }
+  .dtp-chart-container .dtp-logo-link { text-decoration: none; flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 3px; opacity: 1; transition: opacity .15s; }
+  .dtp-chart-container .dtp-logo-link:hover { opacity: .8; }
+  .dtp-chart-container .dtp-logo-name { font-size: 10px; font-weight: 700; color: #1a1a1a; text-align: center; white-space: nowrap !important; writing-mode: horizontal-tb !important; }
+  .dtp-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-bottom: 14px; font-size: 13px; color: #444; }
+  .dtp-leg { display: inline-flex; align-items: center; gap: 7px; }
+  .dtp-leg-line { width: 26px; height: 3px; border-radius: 2px; flex-shrink: 0; position: relative; }
+  .dtp-leg-line::after { content: ''; position: absolute; width: 8px; height: 8px; border-radius: 50%; background: inherit; top: -2.5px; left: 50%; transform: translateX(-50%); border: 1.5px solid #f8f6f0; }
+  .dtp-chart-wrap { position: relative; }
+  .dtp-svg-outer { width: 100%; overflow: visible; }
+  .dtp-chart-container .dtp-source { margin-top: 12px; font-size: 11px; color: #999; display: block !important; writing-mode: horizontal-tb !important; }
+  .dtp-chart-container .dtp-note { margin-top: 4px; font-size: 10px; color: #bbb; display: block !important; writing-mode: horizontal-tb !important; font-style: italic; }
+  .dtp-tt {
+    position: fixed; z-index: 9999;
+    background: #fff; border: 1px solid rgba(0,0,0,.10);
+    border-radius: 8px; box-shadow: 0 4px 18px rgba(0,0,0,.13);
+    padding: 11px 13px; min-width: 210px;
+    pointer-events: none; opacity: 0; transition: opacity .12s;
+    font-family: 'Roboto Slab', Georgia, serif;
+  }
+  .dtp-tt.vis { opacity: 1; }
+  .dtp-tt .tt-h { font-size: 12px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(0,0,0,.07); }
+  .dtp-tt .tt-row { display: flex; align-items: center; gap: 8px; padding: 2px 0; font-size: 11px; }
+  .dtp-tt .tt-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dtp-tt .tt-name { flex: 1; color: #555; }
+  .dtp-tt .tt-val { font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+  .dtp-tt .tt-phase { margin-top: 6px; padding-top: 5px; border-top: 1px solid rgba(0,0,0,.06); font-size: 10px; color: #999; font-style: italic; }
+  @media (max-width: 640px) {
+    .dtp-chart-container { padding: 14px 10px 12px; }
+    .dtp-chart-container .dtp-title { font-size: 17px; }
+    .dtp-legend { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+<div class="dtp-chart-container">
+  <div class="dtp-header">
+    <div class="dtp-header-text">
+      <div class="dtp-title">Indikativní hrubá marže čerpacích stanic</div>
+      <div class="dtp-subtitle">Klouzavý 14denní průměr v Kč/l · 15. 2. – 15. 3. 2026</div>
+    </div>
+    <a href="https://datatimes.cz" target="_blank" rel="noopener" class="dtp-logo-link" title="Mahdalová &amp; Škop">
+      <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="dtpGM" x1="1" x2="0.25" y1="0.5" y2="1">
+            <stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <g transform="rotate(-30 250 250)">
+          <path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+          <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
+          <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>
+          <path fill="none" stroke="url(#dtpGM)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+        </g>
+      </svg>
+      <span class="dtp-logo-name">Mahdalová &amp; Škop</span>
+    </a>
+  </div>
+
+  <div class="dtp-legend">
+    <span class="dtp-leg"><span class="dtp-leg-line" style="background:#b57ac8"></span>Natural 95</span>
+    <span class="dtp-leg"><span class="dtp-leg-line" style="background:#1a9fbd"></span>Nafta</span>
+  </div>
+
+  <div class="dtp-chart-wrap">
+    <svg class="dtp-svg-outer" id="dtp-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+
+  <div class="dtp-source">Zdroj: Ministerstvo financí ČR — výsledky monitoringu marží čerpacích stanic, 19. 3. 2026 · Mahdalová &amp; Škop, vlastní zpracování</div>
+  <div class="dtp-note">Indikativní hrubá marže = prodejní cena bez DPH − nákupní cena z burzy Rotterdam − spotřební daň</div>
+</div>
+<div class="dtp-tt" id="dtp-tt"></div>
+
+<script>
+(function () {
+  const C_N95  = '#b57ac8';  // fialová — Natural 95
+  const C_NAFT = '#1a9fbd';  // teal — Nafta
+  const BG     = '#f8f6f0';
+
+  const DATES = [
+    '15.2.','16.2.','17.2.','18.2.','19.2.','20.2.','21.2.','22.2.',
+    '23.2.','24.2.','25.2.','26.2.','27.2.','28.2.',
+    '1.3.','2.3.','3.3.','4.3.','5.3.','6.3.','7.3.','8.3.',
+    '9.3.','10.3.','11.3.','12.3.','13.3.','14.3.','15.3.'
+  ];
+
+  const D_N95  = [2.35,2.57,2.65,2.63,2.63,2.61,2.61,2.62,2.62,2.61,2.59,2.57,2.56,2.54,
+                  2.53,2.51,2.49,2.47,2.46,2.44,2.41,2.37,2.33,2.31,2.30,2.26,2.22,2.14,2.07];
+  const D_NAFT = [2.92,3.15,3.20,3.14,3.10,3.06,3.03,3.02,2.99,2.93,2.86,2.79,2.70,2.60,
+                  2.48,2.35,2.20,2.06,1.91,1.77,1.62,1.47,1.33,1.20,1.08,1.01,0.98,0.91,0.84];
+
+  const IDX_KONFLIKT   = 13;  // 28.2.
+  const IDX_MONITORING = 19;  // 6.3.
+
+  function phase(i) {
+    if (i < IDX_KONFLIKT)   return 'Před útokem na Írán';
+    if (i < IDX_MONITORING) return 'Po útoku — 28. 2. 2026';
+    return 'Po spuštění monitoringu — 6. 3. 2026';
+  }
+
+  const Y_MIN   = 0;
+  const Y_MAX   = 3.5;
+  const Y_TICKS = [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5];
+
+  const PAD_L = 38;
+  const PAD_R = 14;
+  const PAD_T = 10;
+  const PAD_B = 34;
+
+  function buildChart() {
+    const svg = document.getElementById('dtp-svg');
+    const totalW = svg.parentElement.offsetWidth || 640;
+    const plotW  = totalW - PAD_L - PAD_R;
+    const plotH  = Math.round(plotW * 0.48);
+    const totalH = plotH + PAD_T + PAD_B;
+    const isMobile = totalW < 480;
+    const fsSmall  = isMobile ? 9  : 11;
+    const fsMid    = isMobile ? 10 : 12;
+    const fsEvent  = isMobile ? 10 : 12;
+
+    svg.setAttribute('width',  totalW);
+    svg.setAttribute('height', totalH);
+    svg.setAttribute('viewBox', `0 0 ${totalW} ${totalH}`);
+    svg.innerHTML = '';
+
+    const N = DATES.length;
+    function toX(i) { return PAD_L + (i / (N - 1)) * plotW; }
+    function toY(v) { return PAD_T + plotH - ((v - Y_MIN) / (Y_MAX - Y_MIN)) * plotH; }
+    function fmtVal(v) { return v.toFixed(2).replace('.', ',') + ' Kč'; }
+
+    // ── Fázová pozadí ─────────────────────────────────────
+    // Klid před konfliktem
+    const bgPre = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    bgPre.setAttribute('x',      PAD_L);
+    bgPre.setAttribute('y',      PAD_T);
+    bgPre.setAttribute('width',  toX(IDX_KONFLIKT) - PAD_L);
+    bgPre.setAttribute('height', plotH);
+    bgPre.setAttribute('fill',   '#f3f1e9');
+    svg.appendChild(bgPre);
+
+    // Od konfliktu do konce
+    const bgPost = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    bgPost.setAttribute('x',      toX(IDX_KONFLIKT));
+    bgPost.setAttribute('y',      PAD_T);
+    bgPost.setAttribute('width',  toX(N - 1) - toX(IDX_KONFLIKT));
+    bgPost.setAttribute('height', plotH);
+    bgPost.setAttribute('fill',   '#eeeae2');
+    bgPost.setAttribute('opacity', '0.7');
+    svg.appendChild(bgPost);
+
+    // ── Gridlines ─────────────────────────────────────────
+    Y_TICKS.forEach(v => {
+      const y = toY(v);
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', PAD_L); line.setAttribute('x2', PAD_L + plotW);
+      line.setAttribute('y1', y);     line.setAttribute('y2', y);
+      line.setAttribute('stroke', v === 0 ? 'rgba(0,0,0,0.20)' : 'rgba(0,0,0,0.09)');
+      line.setAttribute('stroke-width', '1');
+      svg.appendChild(line);
+
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lbl.setAttribute('x', PAD_L - 5);
+      lbl.setAttribute('y', y + 4);
+      lbl.setAttribute('text-anchor', 'end');
+      lbl.setAttribute('font-size', fsSmall);
+      lbl.setAttribute('fill', '#aaa');
+      lbl.setAttribute('font-family', 'Roboto Slab, serif');
+      lbl.textContent = v.toFixed(1).replace('.', ',');
+      svg.appendChild(lbl);
+    });
+
+    // ── Strop marže 2,50 Kč — výrazná referenční linie ────
+    {
+      const yCap = toY(2.50);
+
+      // Plná výrazná linie přes celou šířku grafu
+      const capLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      capLine.setAttribute('x1', PAD_L); capLine.setAttribute('x2', PAD_L + plotW);
+      capLine.setAttribute('y1', yCap);  capLine.setAttribute('y2', yCap);
+      capLine.setAttribute('stroke', '#e07b00');
+      capLine.setAttribute('stroke-width', '2');
+      svg.appendChild(capLine);
+
+      // Label zarovnaný vpravo — nad linií
+      const capLbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      capLbl.setAttribute('x', PAD_L + plotW - 4);
+      capLbl.setAttribute('y', yCap - 6);
+      capLbl.setAttribute('text-anchor', 'end');
+      capLbl.setAttribute('font-size', isMobile ? 9 : 11);
+      capLbl.setAttribute('fill', '#e07b00');
+      capLbl.setAttribute('font-family', 'Roboto Slab, serif');
+      capLbl.setAttribute('font-weight', '700');
+      capLbl.textContent = '2,50 Kč';
+      svg.appendChild(capLbl);
+    }
+    {
+      const x = toX(IDX_KONFLIKT);
+      const vline = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      vline.setAttribute('x1', x); vline.setAttribute('x2', x);
+      vline.setAttribute('y1', PAD_T); vline.setAttribute('y2', PAD_T + plotH);
+      vline.setAttribute('stroke', '#c0392b');
+      vline.setAttribute('stroke-width', '1.5');
+      vline.setAttribute('stroke-dasharray', '6,4');
+      svg.appendChild(vline);
+
+      // Popisek — v ploše grafu, pod horním okrajem
+      // Odhadneme, kde jsou linky v místě x, a dáme text tam kde nepřekrývá
+      // V IDX_KONFLIKT: N95=2.54, NAFT=2.60 → toY(2.54)
+      const lineY = toY(2.54);
+      // Dáme text níže, kde je prostor (kolem y=0,5 Kč)
+      const lblY = toY(0.45);
+
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lbl.setAttribute('x', x + 6);
+      lbl.setAttribute('y', lblY);
+      lbl.setAttribute('font-size', fsEvent);
+      lbl.setAttribute('fill', '#c0392b');
+      lbl.setAttribute('font-family', 'Roboto Slab, serif');
+      lbl.setAttribute('font-weight', '700');
+      lbl.textContent = '28. 2. — útok na Írán';
+      svg.appendChild(lbl);
+    }
+
+    // ── Svislý marker: monitoring 6.3. (šedě) ─────────────
+    {
+      const x = toX(IDX_MONITORING);
+      const vline = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      vline.setAttribute('x1', x); vline.setAttribute('x2', x);
+      vline.setAttribute('y1', PAD_T); vline.setAttribute('y2', PAD_T + plotH);
+      vline.setAttribute('stroke', '#888');
+      vline.setAttribute('stroke-width', '1.5');
+      vline.setAttribute('stroke-dasharray', '6,4');
+      svg.appendChild(vline);
+
+      const lblY = toY(0.45);
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lbl.setAttribute('x', x + 6);
+      lbl.setAttribute('y', lblY);
+      lbl.setAttribute('font-size', fsEvent);
+      lbl.setAttribute('fill', '#666');
+      lbl.setAttribute('font-family', 'Roboto Slab, serif');
+      lbl.setAttribute('font-weight', '700');
+      lbl.textContent = '6. 3. — monitoring MF';
+      svg.appendChild(lbl);
+    }
+
+    // ── Linie a tečky ─────────────────────────────────────
+    function drawSeries(data, color) {
+      const pts = data.map((v, i) => `${toX(i)},${toY(v)}`).join(' ');
+      const poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+      poly.setAttribute('points', pts);
+      poly.setAttribute('fill', 'none');
+      poly.setAttribute('stroke', color);
+      poly.setAttribute('stroke-width', '2.5');
+      poly.setAttribute('stroke-linejoin', 'round');
+      poly.setAttribute('stroke-linecap', 'round');
+      svg.appendChild(poly);
+
+      data.forEach((v, i) => {
+        const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', toX(i)); c.setAttribute('cy', toY(v));
+        c.setAttribute('r', '3.5');
+        c.setAttribute('fill', color);
+        c.setAttribute('stroke', BG);
+        c.setAttribute('stroke-width', '2');
+        svg.appendChild(c);
+      });
+    }
+
+    drawSeries(D_NAFT, C_NAFT);
+    drawSeries(D_N95,  C_N95);
+
+    // ── Hodnoty nad vybranými body ─────────────────────────
+    // 19.2.=4, 24.2.=9, 4.3.=18, 12.3.=26
+    const LABELED = [4, 9, 18, 26];
+    const fsLbl = isMobile ? 9 : 11;
+
+    LABELED.forEach(i => {
+      const cx = toX(i);
+      const yN95  = toY(D_N95[i]);
+      const yNaft = toY(D_NAFT[i]);
+
+      // Která linka je výše (nižší Y) — ta dostane větší odsazení nahoru
+      const n95Higher = yN95 < yNaft;
+
+      // Natural 95 — fialová
+      const lblN95 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lblN95.setAttribute('x', cx);
+      lblN95.setAttribute('y', yN95 - (n95Higher ? 18 : 10));
+      lblN95.setAttribute('text-anchor', 'middle');
+      lblN95.setAttribute('font-size', fsLbl);
+      lblN95.setAttribute('fill', C_N95);
+      lblN95.setAttribute('font-family', 'Roboto Slab, serif');
+      lblN95.setAttribute('font-weight', '700');
+      lblN95.textContent = D_N95[i].toFixed(2).replace('.', ',');
+      svg.appendChild(lblN95);
+
+      // Nafta — teal
+      const lblNaft = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lblNaft.setAttribute('x', cx);
+      lblNaft.setAttribute('y', yNaft - (!n95Higher ? 18 : 10));
+      lblNaft.setAttribute('text-anchor', 'middle');
+      lblNaft.setAttribute('font-size', fsLbl);
+      lblNaft.setAttribute('fill', C_NAFT);
+      lblNaft.setAttribute('font-family', 'Roboto Slab, serif');
+      lblNaft.setAttribute('font-weight', '700');
+      lblNaft.textContent = D_NAFT[i].toFixed(2).replace('.', ',');
+      svg.appendChild(lblNaft);
+    });
+
+    // ── X-axis labely ──────────────────────────────────────
+    const showEvery = isMobile ? 4 : 2;
+    DATES.forEach((d, i) => {
+      if (i % showEvery !== 0 && i !== N - 1) return;
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lbl.setAttribute('x', toX(i));
+      lbl.setAttribute('y', PAD_T + plotH + 20);
+      lbl.setAttribute('text-anchor', 'middle');
+      lbl.setAttribute('font-size', fsSmall);
+      lbl.setAttribute('fill', '#999');
+      lbl.setAttribute('font-family', 'Roboto Slab, serif');
+      lbl.textContent = d;
+      svg.appendChild(lbl);
+    });
+
+    // ── Crosshair + hitareas ───────────────────────────────
+    const xhair = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    xhair.setAttribute('y1', PAD_T); xhair.setAttribute('y2', PAD_T + plotH);
+    xhair.setAttribute('stroke', 'rgba(0,0,0,0.18)');
+    xhair.setAttribute('stroke-width', '1');
+    xhair.setAttribute('opacity', '0');
+    svg.appendChild(xhair);
+
+    const hitW = plotW / (N - 1);
+    DATES.forEach((d, i) => {
+      const x = toX(i);
+      const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      rect.setAttribute('x', x - hitW / 2); rect.setAttribute('y', PAD_T);
+      rect.setAttribute('width', hitW);      rect.setAttribute('height', plotH);
+      rect.setAttribute('fill', 'transparent'); rect.setAttribute('cursor', 'crosshair');
+      svg.appendChild(rect);
+
+      function show(e) {
+        xhair.setAttribute('x1', x); xhair.setAttribute('x2', x);
+        xhair.setAttribute('opacity', '1');
+        const tt = document.getElementById('dtp-tt');
+        tt.innerHTML = `
+          <div class="tt-h">${d} 2026</div>
+          <div class="tt-row">
+            <span class="tt-dot" style="background:${C_N95}"></span>
+            <span class="tt-name">Natural 95</span>
+            <span class="tt-val">${fmtVal(D_N95[i])}</span>
+          </div>
+          <div class="tt-row">
+            <span class="tt-dot" style="background:${C_NAFT}"></span>
+            <span class="tt-name">Nafta</span>
+            <span class="tt-val">${fmtVal(D_NAFT[i])}</span>
+          </div>
+          <div class="tt-phase">${phase(i)}</div>`;
+        tt.classList.add('vis');
+        pos(e);
+      }
+      function hide() {
+        xhair.setAttribute('opacity', '0');
+        document.getElementById('dtp-tt').classList.remove('vis');
+      }
+      rect.addEventListener('mouseenter', show);
+      rect.addEventListener('mousemove', pos);
+      rect.addEventListener('mouseleave', hide);
+      rect.addEventListener('click', show);
+    });
+  }
+
+  function pos(e) {
+    const tt = document.getElementById('dtp-tt');
+    const m = 10, w = tt.offsetWidth || 220, h = tt.offsetHeight || 100;
+    let x = e.clientX + 14, y = e.clientY - h / 2;
+    x = Math.max(m, Math.min(x, window.innerWidth - w - m));
+    y = Math.max(m, Math.min(y, window.innerHeight - h - m));
+    tt.style.left = x + 'px'; tt.style.top = y + 'px';
+  }
+
+  buildChart();
+  let rt;
+  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(buildChart, 80); });
+})();
+</script>

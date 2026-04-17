@@ -1,0 +1,2418 @@
+[
+  {
+    "motion": "The state should motivate municipalities to allow higher building density in zoning plans.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Zoning plans should be less strict and allow more residential construction.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should provide basic income to all young people regardless of their situation.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Experts in public offices should have similar salaries as in private companies.",
+    "tag": "Work and wages",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should further digitalize and simplify its administrative processes.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Courts should shorten deadlines for resolving disputes and criminal cases.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should significantly expand kindergarten capacity.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should reduce differences in school quality.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Health insurance companies should invest more in prevention.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should introduce a unified ticket for trains, buses, and public transport.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "After 2035, new cars with combustion engines should continue to be sold without restrictions.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should build more dams.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should build new nuclear power blocks.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 200,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should provide more financial support to young people in securing their first home.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 187,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Social media operations should be more strictly regulated for children and adolescents.",
+    "tag": "Media and technology",
+    "yes": {
+      "seats": 187,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Public universities should charge tuition fees.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 187,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The Czech Republic should leave the North Atlantic Treaty Organization (NATO).",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "A regular 13th pension should be introduced in Czechia for all old-age pensioners.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "In public procurement, the lowest price should continue to be the main deciding factor.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The number of school psychologists should be significantly increased.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should take a neutral stance on the war in Ukraine.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should leave the EU.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 185,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "I agree that the right to abortion should be enshrined in the constitution.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 182,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Schools should maintain autonomy in determining their capacities regardless of labor market needs.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 182,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Contraception (e.g., pills, IUDs, condoms) should be at least partially funded from public resources.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 182,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Patient co-payments for healthcare should be increased.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 0,
+      "parties": []
+    },
+    "no": {
+      "seats": 178,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "School canteens and cafeterias should continue to offer mainly meat dishes.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 178,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should open the labor market more to foreign workers.",
+    "tag": "Work and wages",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Postal voting should be abolished.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Grammar school capacity should be expanded.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Specialized medical care should be more concentrated in larger hospitals in regional cities.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should support the development of renewable energy sources.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should actively support electric vehicle production.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should invest more in reducing building energy intensity, for example through subsidies, loans, and information campaigns.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Police should detect cars with non-functional filters using emission meters.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should increase wind turbine construction.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 172,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Fees should be introduced for carbon dioxide (CO₂) emissions from heating fuels.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "The use of fossil fuels in transport (gasoline, diesel) should remain without CO₂ emission fees.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Long-term vacant apartments should be taxed.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Excise tax on beer should be increased.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Social networks should be liable for published content.",
+    "tag": "Media and technology",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The share of taxation should shift more from labor to property.",
+    "tag": "Work and wages",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The sale of unhealthy foods should continue without special excise tax.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The government should support the EU goal to reduce emissions by 90% by 2040 compared to 1990.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 160,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The powers of heritage conservationists and nature protection authorities in building procedures should be limited.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 148,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "I agree with including menstrual products in the reduced VAT rate.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 148,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Short-term apartment rentals (e.g., via Airbnb) should remain without special regulation.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 135,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "All employees should pay the same share in taxes and contributions regardless of income level.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    },
+    "no": {
+      "seats": 68,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should introduce a deposit system for PET bottles and cans as soon as possible.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    },
+    "no": {
+      "seats": 130,
+      "parties": [
+        "ANO",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Smaller municipalities should merge into larger units.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 130,
+      "parties": [
+        "ANO",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Technical secondary schools should be financially favored over other types of education.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 130,
+      "parties": [
+        "ANO",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The retirement age should continue to increase according to demographic development.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 126,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Ministers should publish several specific and measurable goals for the entire electoral period upon taking office.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Artificial insemination should be available to women without a partner.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 67,
+      "parties": [
+        "SPOLU",
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "Electronic sales records (EET) should be reintroduced.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    },
+    "no": {
+      "seats": 120,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Euthanasia should be legal in Czechia.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "ANO",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Growing cannabis for personal use should be legal.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 120,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The minimum wage in Czechia should reach at least 50% of the average wage.",
+    "tag": "Work and wages",
+    "yes": {
+      "seats": 113,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 65,
+      "parties": [
+        "SPOLU",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "Citizens should have the right to initiate nationwide referendums.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 113,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 87,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Same-sex couples should have the option to enter marriage under the same conditions as other couples.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "The possibility of comments on construction projects should be limited to neighbors only.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "Smartphone use should be banned across all elementary schools.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "The energy company ČEZ should be fully nationalized.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should adopt the euro in the foreseeable future.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Propagation of not only Nazism but also communism should be a criminal offense.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The rules of procedure of the Chamber of Deputies should limit the maximum length of parliamentary speeches.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "A family can only be considered a union of a man, a woman, and their children.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Children with different needs should be educated in specialized schools rather than in regular classrooms.",
+    "tag": "Education and youth",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should allocate substantially more money to the military.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should continue to use fossil fuels (coal, gas) as the main source of energy.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Immigration to Czechia is more of a burden than a benefit.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should withdraw from the EU migration pact.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should provide more support to organic farming over conventional farming.",
+    "tag": "Agriculture and rural areas",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Agricultural subsidies should mainly go to small farms.",
+    "tag": "Agriculture and rural areas",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Coal power plants should end earlier than 2038.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should withdraw from the Green Deal for Europe.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 108,
+      "parties": [
+        "ANO",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Future doctors should choose their specialties themselves, without state intervention.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Public service media should continue to be financed mainly directly from license fees.",
+    "tag": "Media and technology",
+    "yes": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czech Television and Czech Radio should be merged into one institution.",
+    "tag": "Media and technology",
+    "yes": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "The state should motivate doctors through mandatory internships to work in regions where there is a shortage.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 105,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 0,
+      "parties": []
+    }
+  },
+  {
+    "motion": "Czechia should enable the use of citizens' assemblies in lawmaking and major decisions.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 102,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "VAT on prescription drugs should be completely abolished.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 46,
+      "parties": [
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 102,
+      "parties": [
+        "ANO",
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "The state should support work flexibility outside traditional employment as used by platforms like Rohlík, Uber, or Wolt.",
+    "tag": "Work and wages",
+    "yes": {
+      "seats": 98,
+      "parties": [
+        "SPOLU",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Citizens should have the option to vote online in elections.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 98,
+      "parties": [
+        "ANO",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    }
+  },
+  {
+    "motion": "In criminal law, punishing the perpetrator should be more important than their rehabilitation.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 95,
+      "parties": [
+        "ANO",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 87,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 18,
+      "parties": [
+        "Piráti"
+      ]
+    }
+  },
+  {
+    "motion": "Still wine should remain without excise tax.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 93,
+      "parties": [
+        "ANO",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 55,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Czechia should officially support Tibetan independence.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 93,
+      "parties": [
+        "ANO",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 37,
+      "parties": [
+        "STAN",
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "Public funding support for the organization People in Need should end.",
+    "tag": "Family and society",
+    "yes": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Czechia should advocate for the abolition of increased EU tariffs on Chinese electric vehicles.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 28,
+      "parties": [
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 92,
+      "parties": [
+        "SPOLU",
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Volunteer work should be counted toward insurance period for pension.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Basic mental health screening should be part of preventive check-ups.",
+    "tag": "Health and social system",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "SPOLU",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Housing should be the result of personal responsibility.",
+    "tag": "Housing and urbanism",
+    "yes": {
+      "seats": 68,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    },
+    "neutral": {
+      "seats": 52,
+      "parties": [
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "I agree that Africa is the continent of the future.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 74,
+      "parties": [
+        "SPOLU",
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 113,
+      "parties": [
+        "ANO",
+        "Piráti",
+        "SPD"
+      ]
+    }
+  },
+  {
+    "motion": "Part of the revenue from emission allowances should be paid directly to citizens.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 70,
+      "parties": [
+        "SPOLU",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 50,
+      "parties": [
+        "STAN",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "The freer the market, the freer the people.",
+    "tag": "Economy and taxes",
+    "yes": {
+      "seats": 68,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 0,
+      "parties": []
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "Czechia should officially condemn Israeli attacks that lead to high civilian casualties in Gaza.",
+    "tag": "Foreign policy and defense",
+    "yes": {
+      "seats": 53,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "no": {
+      "seats": 67,
+      "parties": [
+        "SPOLU",
+        "SPD"
+      ]
+    },
+    "neutral": {
+      "seats": 80,
+      "parties": [
+        "ANO"
+      ]
+    }
+  },
+  {
+    "motion": "Social networks must disclose how their algorithms select content for users.",
+    "tag": "Media and technology",
+    "yes": {
+      "seats": 55,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "I agree that without religion, society will lose morality.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 15,
+      "parties": [
+        "SPD"
+      ]
+    },
+    "no": {
+      "seats": 53,
+      "parties": [
+        "STAN",
+        "Piráti",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "The age limit for candidacy to the Chamber of Deputies should be lowered from 21 to 18 years.",
+    "tag": "Law, admin. and state",
+    "yes": {
+      "seats": 22,
+      "parties": [
+        "STAN"
+      ]
+    },
+    "no": {
+      "seats": 46,
+      "parties": [
+        "Piráti",
+        "SPD",
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 132,
+      "parties": [
+        "ANO",
+        "SPOLU"
+      ]
+    }
+  },
+  {
+    "motion": "The state should support the creation of a nationwide network of furniture banks and reuse centers.",
+    "tag": "Environment and energy",
+    "yes": {
+      "seats": 40,
+      "parties": [
+        "STAN",
+        "Piráti"
+      ]
+    },
+    "no": {
+      "seats": 13,
+      "parties": [
+        "Motoristé"
+      ]
+    },
+    "neutral": {
+      "seats": 147,
+      "parties": [
+        "ANO",
+        "SPOLU",
+        "SPD"
+      ]
+    }
+  }
+]

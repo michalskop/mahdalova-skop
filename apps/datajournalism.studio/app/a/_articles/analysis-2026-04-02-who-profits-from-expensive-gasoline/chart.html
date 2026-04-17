@@ -1,0 +1,732 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Co tvoří cenu benzínu a nafty 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; padding: 0; background: #f8f6f0; }
+
+  .dtp-chart-container,
+  .dtp-chart-container *,
+  .dtp-chart-container *::before,
+  .dtp-chart-container *::after { box-sizing: border-box; }
+
+  .dtp-chart-container {
+    --dtp-plot-h: 220px;
+    --dtp-y-axis-w: 34px;
+    width: 100%;
+    max-width: none;
+    padding: 20px 16px 16px;
+    background: #f8f6f0;
+    font-family: 'Roboto Slab', Georgia, serif;
+    color: #1a1a1a;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  /* ── Hlavička ── */
+  .dtp-chart-container .dtp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .dtp-chart-container .dtp-header-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  .dtp-chart-container .dtp-title {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 4px 0;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  .dtp-chart-container .dtp-subtitle {
+    font-size: 13px;
+    line-height: 1.3;
+    color: #666;
+    margin: 0;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+    white-space: normal !important;
+  }
+
+  /* ── Logo ── */
+  .dtp-chart-container .dtp-logo-link {
+    text-decoration: none;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    opacity: 1;
+    transition: opacity .15s;
+  }
+  .dtp-chart-container .dtp-logo-link:hover { opacity: .8; }
+
+  .dtp-chart-container .dtp-logo-name {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    color: #1a1a1a;
+    text-align: center;
+  }
+
+  /* ── Legenda ── */
+  .dtp-chart-container .dtp-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #444;
+  }
+
+  .dtp-chart-container .dtp-leg {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity .15s;
+  }
+  .dtp-chart-container .dtp-leg:hover { opacity: .75; }
+  .dtp-chart-container .dtp-leg.dtp-disabled { opacity: .38; }
+  .dtp-chart-container .dtp-leg.dtp-disabled .dtp-swatch { filter: grayscale(1); }
+  .dtp-chart-container .dtp-leg.dtp-disabled .dtp-leg-label { text-decoration: line-through; }
+
+  .dtp-chart-container .dtp-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    transition: filter .15s;
+  }
+
+  /* ── Grid: 2 grafy vedle sebe (desktop), pod sebou (mobil) ── */
+  .dtp-chart-container .dtp-charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .dtp-chart-container .dtp-chart-section { min-width: 0; }
+
+  .dtp-chart-container .dtp-chart-section-title {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+    white-space: normal !important;
+    color: #1a1a1a;
+  }
+
+  /* ── Bars wrap: y-axis + plot vedle sebe ── */
+  .dtp-chart-container .dtp-bars-wrap {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  /* ── Y-osa ── */
+  .dtp-chart-container .dtp-y-axis {
+    flex: 0 0 var(--dtp-y-axis-w);
+    height: var(--dtp-plot-h);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #888;
+    line-height: 1;
+    padding-right: 4px;
+    writing-mode: horizontal-tb !important;
+    /* Posun dolů o výšku total-labelu (~18px) */
+    margin-top: 20px;
+  }
+
+  /* ── Plot area ── */
+  .dtp-chart-container .dtp-plot {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  /* Gridlines přesně nad plot area (od top=20px total, do bottom=0) */
+  .dtp-chart-container .dtp-gridlines {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .dtp-chart-container .dtp-gridline {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* bars-row: total nahoře + stack + label dole */
+  .dtp-chart-container .dtp-bars-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .dtp-chart-container .dtp-bar-col {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dtp-chart-container .dtp-bar-col.active .dtp-bar-stack {
+    outline: 2px solid rgba(0,0,0,0.22);
+    outline-offset: 1px;
+    border-radius: 2px;
+  }
+
+  .dtp-chart-container .dtp-bar-total {
+    height: 20px;
+    margin-bottom: 0;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    writing-mode: horizontal-tb !important;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .dtp-chart-container .dtp-bar-stack {
+    width: 100%;
+    height: var(--dtp-plot-h);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .dtp-chart-container .dtp-bar-seg {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.93);
+    font-family: 'Roboto Slab', serif;
+    transition: height .25s ease, opacity .2s;
+    writing-mode: horizontal-tb !important;
+  }
+
+  .dtp-chart-container .dtp-seg-label {
+    white-space: nowrap;
+    pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,.32);
+  }
+
+  .dtp-chart-container .dtp-bar-label {
+    min-height: 30px;
+    margin-top: 6px;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+    color: #555;
+    writing-mode: horizontal-tb !important;
+    display: block !important;
+  }
+  .dtp-chart-container .dtp-bar-col.dtp-highlight .dtp-bar-label {
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .dtp-chart-container .dtp-source {
+    margin-top: 14px;
+    font-size: 11px;
+    color: #999;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+  }
+
+  /* ── Tooltip ── */
+  .dtp-tt {
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    padding: 11px 13px;
+    min-width: 210px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .12s;
+    font-family: 'Roboto Slab', Georgia, serif;
+  }
+  .dtp-tt.dtp-visible { opacity: 1; }
+  .dtp-tt .dtp-tt-title {
+    font-size: 11px; font-weight: 700; color: #1a1a1a;
+    margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+  .dtp-tt .dtp-tt-row {
+    display: flex; align-items: center; gap: 7px;
+    padding: 2px 0; font-size: 11px; color: #333;
+  }
+  .dtp-tt .dtp-tt-row.dtp-tt-off { opacity: .35; text-decoration: line-through; }
+  .dtp-tt .dtp-tt-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
+  .dtp-tt .dtp-tt-name { flex: 1; line-height: 1.3; }
+  .dtp-tt .dtp-tt-val  { font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+  .dtp-tt .dtp-tt-pct  { font-size: 10px; color: #999; min-width: 34px; text-align: right; }
+  .dtp-tt .dtp-tt-total {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 7px; padding-top: 6px;
+    border-top: 1px solid rgba(0,0,0,0.09);
+    font-size: 12px; font-weight: 700; color: #1a1a1a;
+  }
+
+  /* ── Mobil ── */
+  @media (max-width: 640px) {
+    .dtp-chart-container {
+      --dtp-plot-h: 170px;
+      --dtp-y-axis-w: 28px;
+      padding: 14px 10px 12px;
+    }
+    .dtp-chart-container .dtp-title { font-size: 17px; }
+    .dtp-chart-container .dtp-subtitle { font-size: 12px; }
+    .dtp-chart-container .dtp-logo-link svg { width: 42px; height: 42px; }
+    .dtp-chart-container .dtp-logo-name { font-size: 9px; }
+    .dtp-chart-container .dtp-legend { gap: 5px 10px; font-size: 10px; }
+    .dtp-chart-container .dtp-charts-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .dtp-chart-container .dtp-chart-section-title { font-size: 13px; }
+    .dtp-chart-container .dtp-y-axis { font-size: 8px; }
+    .dtp-chart-container .dtp-bars-row { gap: 5px; }
+    .dtp-chart-container .dtp-bar-total { font-size: 8px; }
+    .dtp-chart-container .dtp-bar-seg { font-size: 9px; }
+    .dtp-chart-container .dtp-bar-label { font-size: 9px; min-height: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="dtp-chart-container">
+
+  <div class="dtp-header">
+    <div class="dtp-header-text">
+      <div class="dtp-title">Co tvoří cenu benzínu a nafty 2026</div>
+      <div class="dtp-subtitle">1. leden vs. 1. duben 2026</div>
+    </div>
+    <a href="https://datatimes.cz" target="_blank" rel="noopener" class="dtp-logo-link" title="DataTimes.cz — Mahdalová &amp; Škop">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="dtpGF" x1="1" x2="0.25" y1="0.5" y2="1">
+            <stop offset="0%"   stop-color="#ffdc33" stop-opacity="0"/>
+            <stop offset="50%"  stop-color="#ffdc33" stop-opacity="0"/>
+            <stop offset="50%"  stop-color="#ffdc33" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <g transform="rotate(-30 250 250)">
+          <path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+          <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
+          <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>
+          <path fill="none" stroke="url(#dtpGF)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+        </g>
+      </svg>
+      <span class="dtp-logo-name">Mahdalová &amp; Škop</span>
+    </a>
+  </div>
+
+  <div class="dtp-legend" id="dtp-legend"></div>
+
+  <div class="dtp-charts-grid">
+    <div class="dtp-chart-section">
+      <div class="dtp-chart-section-title">Benzin 95</div>
+      <div id="dtp-benzin-wrap" class="dtp-bars-wrap"></div>
+    </div>
+    <div class="dtp-chart-section">
+      <div class="dtp-chart-section-title">Nafta</div>
+      <div id="dtp-nafta-wrap" class="dtp-bars-wrap"></div>
+    </div>
+  </div>
+
+  <div class="dtp-source">Zdroj: CCS, Tank ONO · vlastní propočty</div>
+</div>
+
+<div class="dtp-tt" id="dtp-tt" role="tooltip" aria-live="polite"></div>
+
+<script>
+(function () {
+  const COLORS      = ['#de1743','#ff1a4a','#6e4a2c','#4a51ab','#0e926a'];
+  const LABELS_FULL = ['Spotřební daň','DPH 21 %','Ropa (přibl.)','Marže rafinérie + dist.','Marže čerpacích stanic'];
+  const catEnabled  = COLORS.map(() => true);
+
+  const DATA = {
+    benzin: [
+      { label: 'Benzin 95 — 1. ledna 2026',   values: [12.84, 5.80,  7.87,  3.19, 3.71] },
+      { label: 'Benzin 95 — 1. dubna 2026',   values: [12.84, 7.22, 13.96,  5.08, 2.50] },
+      { label: 'Benzin 95 — vládní regulace', values: [12.84, 7.22, 13.96,  5.08, 2.30], highlight: true },
+    ],
+    nafta: [
+      { label: 'Nafta — 1. ledna 2026',        values: [ 9.95, 5.66,  7.87,  5.22, 3.93] },
+      { label: 'Nafta — 1. dubna 2026',        values: [ 9.95, 8.39, 13.96, 13.80, 2.23] },
+      { label: 'Nafta — vládní regulace',      values: [ 8.01, 7.98, 13.96, 13.80, 2.03], highlight: true },
+    ]
+  };
+
+  const MAX_VAL = 55;
+  const YTICKS  = [0, 10, 20, 30, 40, 50];
+  const allCols = [];
+
+  function fmt(n, dec = 2) { return n.toFixed(dec).replace('.', ','); }
+  function fmtRound(n)      { return String(Math.round(n)); }
+
+  // Výška plot area z CSS custom property — stabilní, nezávislá na DOM
+  function getChartH(wrap) {
+    const container = wrap.closest('.dtp-chart-container');
+    const h = parseFloat(getComputedStyle(container).getPropertyValue('--dtp-plot-h'));
+    return isNaN(h) ? 220 : h;
+  }
+
+  // Zkrácené labely pod sloupci
+  function formatBarLabel(label) {
+    const raw = label.replace(/^.* — /, '');
+    const mobile = window.innerWidth <= 640;
+    if (mobile) {
+      return raw
+        .replace('1. ledna 2026', '1. ledna')
+        .replace('1. dubna 2026', '1. dubna')
+        .replace('vládní regulace', 'vládní<br>regulace');
+    }
+    return raw
+      .replace('1. ledna 2026', '1. ledna<br>2026')
+      .replace('1. dubna 2026', '1. dubna<br>2026')
+      .replace('vládní regulace', 'vládní<br>regulace');
+  }
+
+  // ── Legenda ──────────────────────────────────────────
+  function buildLegend() {
+    const container = document.getElementById('dtp-legend');
+    container.innerHTML = '';
+    COLORS.forEach((color, i) => {
+      const item = document.createElement('div');
+      item.className = 'dtp-leg' + (catEnabled[i] ? '' : ' dtp-disabled');
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('aria-pressed', String(catEnabled[i]));
+
+      const sw = document.createElement('span');
+      sw.className = 'dtp-swatch';
+      sw.style.background = color;
+
+      const lbl = document.createElement('span');
+      lbl.className = 'dtp-leg-label';
+      lbl.textContent = LABELS_FULL[i];
+
+      item.appendChild(sw);
+      item.appendChild(lbl);
+
+      function toggle() {
+        catEnabled[i] = !catEnabled[i];
+        buildLegend();
+        rebuildAllCols();
+        hideTooltip();
+      }
+      item.addEventListener('click', toggle);
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+      container.appendChild(item);
+    });
+  }
+
+  // ── updateCol ─────────────────────────────────────────
+  function updateCol(col, bar, chartH) {
+    const h = chartH !== undefined ? chartH : getChartH(col.closest('.dtp-bars-wrap'));
+    const enabledValues = bar.values.map((v, i) => catEnabled[i] ? v : 0);
+    const total = enabledValues.reduce((a, b) => a + b, 0);
+
+    const totalLbl = col.querySelector('.dtp-bar-total');
+    totalLbl.textContent = fmt(total) + ' Kč';
+
+    const segs = col.querySelectorAll('.dtp-bar-seg');
+
+    // Odstraníme staré "plovoucí" labely nad sloupcem
+    col.querySelectorAll('.dtp-float-lbl').forEach(el => el.remove());
+
+    // Výška celého vykresleného sloupce (součet aktivních px)
+    const totalPx = (total / MAX_VAL) * h;
+
+    segs.forEach((seg, i) => {
+      const val = enabledValues[i];
+      const px  = (val / MAX_VAL) * h;
+      seg.style.height = px + 'px';
+      seg.style.opacity = catEnabled[i] ? '1' : '0';
+
+      const lbl = seg.querySelector('.dtp-seg-label');
+      if (!lbl) return;
+
+      if (!catEnabled[i]) {
+        lbl.style.display = 'none';
+        return;
+      }
+
+      const activeCount = catEnabled.filter(Boolean).length;
+
+      if (activeCount > 1 && px >= 18) {
+        // Více kategorií + dost místa → label uvnitř
+        lbl.style.display = '';
+      } else if (activeCount > 1 && px < 18) {
+        // Více kategorií + malý segment → skrýt (původní chování)
+        lbl.style.display = 'none';
+      } else {
+        // Právě jedna kategorie zapnutá → plovoucí label nad sloupcem
+        lbl.style.display = 'none';
+
+        // Najdeme barvu segmentu pro plovoucí label
+        const color = COLORS[i];
+
+        // Plovoucí label — pozicovaný nad vrcholem sloupce
+        // Pod stackem je ještě .dtp-bar-label (~36px) → přičteme offset
+        const BAR_LABEL_H = 38; // px výška bar-label pod stackem
+        const existingFloats = col.querySelectorAll('.dtp-float-lbl').length;
+        const floatOffset = existingFloats * 15;
+
+        const floatLbl = document.createElement('div');
+        floatLbl.className = 'dtp-float-lbl';
+        floatLbl.textContent = fmt(val) + ' Kč';
+        floatLbl.style.cssText = [
+          'position:absolute',
+          'left:50%',
+          'transform:translateX(-50%)',
+          `bottom:calc(${totalPx + BAR_LABEL_H + 6}px + ${floatOffset}px)`,
+          `color:${color}`,
+          'font-size:9px',
+          'font-weight:700',
+          'white-space:nowrap',
+          'pointer-events:none',
+          'font-family:inherit',
+          'line-height:1.2',
+          'text-align:center',
+          'z-index:10',
+        ].join(';');
+
+        // Přidáme do bar-col (který má position:relative přes .dtp-bar-stack)
+        // Potřebujeme position:relative na .dtp-bar-col
+        col.style.position = 'relative';
+        col.appendChild(floatLbl);
+      }
+    });
+  }
+
+  function rebuildAllCols() {
+    allCols.forEach(({ col, bar }) => updateCol(col, bar));
+  }
+
+  // ── Tooltip ───────────────────────────────────────────
+  const tt = document.getElementById('dtp-tt');
+  let activeCol = null;
+  const isMobile = () => window.matchMedia('(hover: none)').matches;
+
+  function buildTooltipHTML(bar) {
+    const enabledValues = bar.values.map((v, i) => catEnabled[i] ? v : 0);
+    const total = enabledValues.reduce((a, b) => a + b, 0);
+    const rows = [...bar.values].map((val, i) => {
+      const off = !catEnabled[i];
+      return `<div class="dtp-tt-row${off ? ' dtp-tt-off' : ''}">
+        <span class="dtp-tt-dot" style="background:${COLORS[i]}"></span>
+        <span class="dtp-tt-name">${LABELS_FULL[i]}</span>
+        <span class="dtp-tt-val">${fmt(val)} Kč</span>
+        <span class="dtp-tt-pct">${off ? '—' : Math.round(val / total * 100) + ' %'}</span>
+      </div>`;
+    }).reverse().join('');
+    return `<div class="dtp-tt-title">${bar.label}</div>${rows}
+      <div class="dtp-tt-total"><span>Celkem</span><span>${fmt(total)} Kč</span></div>`;
+  }
+
+  function positionTooltip(e, colEl) {
+    const margin = 10;
+    const ttW = tt.offsetWidth  || 220;
+    const ttH = tt.offsetHeight || 200;
+    const vw  = window.innerWidth;
+    const vh  = window.innerHeight;
+    let x, y;
+    if (isMobile()) {
+      const rect = colEl.getBoundingClientRect();
+      x = rect.left + rect.width / 2 - ttW / 2;
+      y = rect.top - ttH - 10;
+      if (y < margin) y = rect.bottom + 10;
+    } else {
+      x = e.clientX + 14;
+      y = e.clientY - ttH / 2;
+    }
+    x = Math.max(margin, Math.min(x, vw - ttW - margin));
+    y = Math.max(margin, Math.min(y, vh - ttH - margin));
+    tt.style.left = x + 'px';
+    tt.style.top  = y + 'px';
+  }
+
+  function showTooltip(bar, e, colEl) {
+    tt.innerHTML = buildTooltipHTML(bar);
+    tt.classList.add('dtp-visible');
+    positionTooltip(e, colEl);
+  }
+  function hideTooltip() { tt.classList.remove('dtp-visible'); }
+
+  function deactivateAll() {
+    document.querySelectorAll('.dtp-bar-col.active').forEach(c => c.classList.remove('active'));
+    activeCol = null;
+    hideTooltip();
+  }
+
+  // ── buildChart ────────────────────────────────────────
+  function buildChart(wrapperId, bars) {
+    const wrap = document.getElementById(wrapperId);
+    wrap.innerHTML = '';
+
+    // Y-osa
+    const yAxis = document.createElement('div');
+    yAxis.className = 'dtp-y-axis';
+    YTICKS.forEach(v => {
+      const t = document.createElement('div');
+      t.textContent = v + ' Kč';
+      yAxis.appendChild(t);
+    });
+
+    // Plot area
+    const plot = document.createElement('div');
+    plot.className = 'dtp-plot';
+
+    const grid = document.createElement('div');
+    grid.className = 'dtp-gridlines';
+    YTICKS.forEach(() => {
+      const g = document.createElement('div');
+      g.className = 'dtp-gridline';
+      grid.appendChild(g);
+    });
+
+    const barsRow = document.createElement('div');
+    barsRow.className = 'dtp-bars-row';
+
+    plot.appendChild(grid);
+    plot.appendChild(barsRow);
+    wrap.appendChild(yAxis);
+    wrap.appendChild(plot);
+
+    bars.forEach(bar => {
+      const col = document.createElement('div');
+      col.className = 'dtp-bar-col' + (bar.highlight ? ' dtp-highlight' : '');
+      col.setAttribute('tabindex', '0');
+      col.setAttribute('role', 'button');
+      col.setAttribute('aria-label', bar.label);
+
+      const totalLbl = document.createElement('div');
+      totalLbl.className = 'dtp-bar-total';
+      col.appendChild(totalLbl);
+
+      const stack = document.createElement('div');
+      stack.className = 'dtp-bar-stack';
+
+      bar.values.forEach((val, i) => {
+        const seg = document.createElement('div');
+        seg.className = 'dtp-bar-seg';
+        seg.style.height = '0px';
+        seg.style.background = COLORS[i];
+
+        const lbl = document.createElement('span');
+        lbl.className = 'dtp-seg-label';
+        lbl.textContent = fmtRound(val) + ' Kč';
+        lbl.style.display = 'none';
+        seg.appendChild(lbl);
+        stack.appendChild(seg);
+      });
+
+      col.appendChild(stack);
+
+      const barLabel = document.createElement('div');
+      barLabel.className = 'dtp-bar-label';
+      barLabel.innerHTML = formatBarLabel(bar.label);
+      col.appendChild(barLabel);
+
+      col.addEventListener('mouseenter', e => { col.classList.add('active'); showTooltip(bar, e, col); });
+      col.addEventListener('mousemove',  e => positionTooltip(e, col));
+      col.addEventListener('mouseleave', () => { col.classList.remove('active'); hideTooltip(); });
+      col.addEventListener('click', e => {
+        e.stopPropagation();
+        if (activeCol === col) { deactivateAll(); return; }
+        deactivateAll();
+        activeCol = col;
+        col.classList.add('active');
+        showTooltip(bar, e, col);
+        requestAnimationFrame(() => positionTooltip(e, col));
+      });
+
+      barsRow.appendChild(col);
+      allCols.push({ col, bar });
+    });
+
+    // ResizeObserver — přepočítá po změně velikosti
+    const ro = new ResizeObserver(() => {
+      const h = getChartH(wrap);
+      allCols
+        .filter(({ col }) => col.closest('#' + wrapperId))
+        .forEach(({ col, bar }) => updateCol(col, bar, h));
+      // Přepočítat labely pokud se přešlo přes breakpoint
+      allCols
+        .filter(({ col }) => col.closest('#' + wrapperId))
+        .forEach(({ col, bar }) => {
+          const lbl = col.querySelector('.dtp-bar-label');
+          if (lbl) lbl.innerHTML = formatBarLabel(bar.label);
+        });
+    });
+    ro.observe(wrap);
+  }
+
+  document.addEventListener('click', deactivateAll);
+
+  buildLegend();
+  buildChart('dtp-benzin-wrap', DATA.benzin);
+  buildChart('dtp-nafta-wrap',  DATA.nafta);
+
+})();
+</script>
