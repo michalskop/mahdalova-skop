@@ -1,0 +1,88 @@
+# DataJournalism.Studio
+
+> Data journalism tools, election analysis, and forensic studies. Specialized in electoral systems, real-time predictions, and data-driven political analysis.
+
+## About
+
+DataJournalism.Studio is a platform for data journalism focusing on electoral analysis, political forecasting, and data visualization. We develop innovative tools for understanding elections and political processes.
+
+- Website: https://www.datajournalism.studio
+- Authors: Kateřina Mahdalová, Michal Škop
+- Focus: electoral analysis, data journalism tools, political forecasting
+
+## Main Sections
+
+### Election Analysis
+https://www.datajournalism.studio/blog
+In-depth analysis of elections worldwide using data science and statistical methods.
+
+### Tools & Models
+https://www.datajournalism.studio/work
+Interactive tools for election predictions, forensic analysis, and data visualization.
+
+### About Us
+https://www.datajournalism.studio/about
+Information about our methodology, team, and approach to data journalism.
+
+## Featured Work
+
+### Election Models & Predictions
+- https://www.datajournalism.studio/a/unique-election-model
+  Unique methodology for election forecasting and real-time predictions
+- https://www.datajournalism.studio/a/elections-real-time-predictions
+  Real-time election prediction systems
+- https://www.datajournalism.studio/a/czech-elections-2025-10-04-predictions
+  Czech parliamentary elections 2025 predictions
+- https://www.datajournalism.studio/a/2024-10-31-volebni-model
+  Electoral model methodology (Czech)
+
+### Election Forensics
+- https://www.datajournalism.studio/a/elections-forensic-analysis
+  Statistical methods for detecting electoral irregularities
+- https://www.datajournalism.studio/a/2024-07-08-electoral-forensic-case-study
+  Case study in electoral forensic analysis
+
+### International Elections
+- https://www.datajournalism.studio/a/2024-11-06-USA-volby
+  US Presidential Elections 2024 analysis
+- https://www.datajournalism.studio/a/canada-elections-2025-04-29-how-trump-resurrected-liberals
+  Canadian elections 2025: How Trump resurrected the Liberals
+- https://www.datajournalism.studio/a/2024-12-20-Rumunsko-volby-EU
+  Romania elections and EU implications
+- https://www.datajournalism.studio/a/2024-11-27-austria-cartogram
+  Austria election results visualization
+
+### Data Visualization
+- https://www.datajournalism.studio/a/elections-maps-of-results
+  Interactive maps of election results
+
+### Investigative Analysis
+- https://www.datajournalism.studio/a/2025-05-20-money-from-nowhere-the-mysterious-millions-of-mep-turek
+  Investigation: The mysterious millions of MEP Turek
+- https://www.datajournalism.studio/a/analysis-2026-03-18-lawmakers-want-stricter-ngo-oversight
+  Analysis of NGO oversight legislation
+- https://www.datajournalism.studio/a/analysis-2026-04-02-who-profits-from-expensive-gasoline
+  Economic analysis: Who profits from expensive gasoline
+
+### Media & Disinformation
+- https://www.datajournalism.studio/a/2024-11-14-Amsterdam-video
+  Context analysis: Amsterdam video incident
+
+### Education & Research
+- https://www.datajournalism.studio/a/2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium-nejvic-ze-vsech-verejnych-vysokych-skol-v-cr
+  Analysis: Record drop in university applications
+
+## Methodology
+
+Our work combines:
+- Statistical modeling and machine learning
+- Real-time data processing
+- Electoral forensics
+- Data visualization
+- Fact-checking and verification
+
+## Contact
+
+- Email: info@datajournalism.studio
+- GitHub: https://github.com/michalskop
+- Support our work: https://www.datajournalism.studio/about

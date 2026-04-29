@@ -1,0 +1,68 @@
+# Mahdalová & Škop
+
+> Datová žurnalistika, analýzy a komentáře k politice, společnosti a ekonomice. Kateřina Mahdalová a Michal Škop přinášejí fact-checkované analýzy založené na datech.
+
+## O nás
+
+Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a společenské analýzy. Kombinujeme datovou vědu, statistiku a žurnalistiku pro hlubší pochopení aktuálních témat.
+
+- Web: https://www.mahdalova-skop.cz
+- Autoři: Kateřina Mahdalová, Michal Škop
+- Zaměření: datová žurnalistika, politické analýzy, fact-checking
+
+## Hlavní sekce
+
+### Analýzy
+https://www.mahdalova-skop.cz/analyzy
+Datově podložené rozbory politických, ekonomických a společenských témat.
+
+### Kontext
+https://www.mahdalova-skop.cz/kontext
+Kontextové články vysvětlující složitá témata a souvislosti.
+
+### Komentáře
+https://www.mahdalova-skop.cz/komentar
+Názorové komentáře k aktuálnímu dění.
+
+### Podcasty
+https://www.mahdalova-skop.cz/podcasty
+Audio rozhovory a diskuse k aktuálním tématům.
+
+### Volby
+https://www.mahdalova-skop.cz/volby
+Volební modely, kalkulačky a predikce výsledků voleb.
+
+## Vybrané články
+
+### Volební analýzy a modely
+- https://www.mahdalova-skop.cz/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem
+- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb
+- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-01-volebni-kalkulacka-klasik
+- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-01-volebni-kalkulacka-zenska-rodinna-prava
+
+### Ekonomické analýzy
+- https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu
+- https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-03-03-v-kanade-se-vzedmula-liberalni-vlna
+
+### Mezinárodní politika
+- https://www.mahdalova-skop.cz/clanek/explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut
+- https://www.mahdalova-skop.cz/clanek/kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost
+- https://www.mahdalova-skop.cz/clanek/kontext-2026-04-01-nekonecne-omluvy-prezidenta-kolumbie
+
+### Dezinformace a média
+- https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy
+- https://www.mahdalova-skop.cz/clanek/kontext-2024-11-14-amsterdam-video
+- https://www.mahdalova-skop.cz/clanek/kontext-2025-07-07-byl-zelenskyj-v-obleku-nebo-ne-otazka-za-3-miliardy
+
+### Vzdělávání a společnost
+- https://www.mahdalova-skop.cz/clanek/analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium
+- https://www.mahdalova-skop.cz/clanek/podcast-2024-11-12-dusevni-zdravi
+
+### Technologie a AI
+- https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost
+
+## Kontakt
+
+- Email: info@mahdalova-skop.cz
+- Twitter/X: @mahdalovaskop
+- Podpora: https://www.mahdalova-skop.cz/podporte-nas
