@@ -1,53 +1,45 @@
-// Cloudflare Pages Function for Markdown for Agents
-// Works on free plan (unlike built-in Markdown for Agents feature)
+// Cloudflare Worker for Markdown for Agents
+// Works with static exports (output: 'export')
 
-interface Env {
-  ASSETS: { fetch: typeof fetch };
-}
-
-export const onRequest: PagesFunction<Env> = async (context) => {
-  const { request, env, next } = context;
-  
-  // Check if request accepts markdown
-  const acceptHeader = request.headers.get('accept') || '';
-  const wantsMarkdown = acceptHeader.includes('text/markdown');
-  
-  if (!wantsMarkdown) {
-    // Normal request, pass through
-    return next();
-  }
-  
-  // Get the HTML response
-  const response = await next();
-  
-  // Only convert HTML responses
-  const contentType = response.headers.get('content-type') || '';
-  if (!contentType.includes('text/html')) {
-    return response;
-  }
-  
-  // Get HTML content
-  const html = await response.text();
-  
-  // Convert HTML to Markdown
-  const markdown = htmlToMarkdown(html);
-  
-  // Count tokens (rough estimate: ~4 chars per token)
-  const tokenCount = Math.ceil(markdown.length / 4);
-  
-  // Return markdown response
-  return new Response(markdown, {
-    status: response.status,
-    headers: {
-      'content-type': 'text/markdown; charset=utf-8',
-      'x-markdown-tokens': tokenCount.toString(),
-      'cache-control': response.headers.get('cache-control') || 'public, max-age=3600',
-    },
-  });
+export default {
+  async fetch(request, env) {
+    // Check if request accepts markdown
+    const acceptHeader = request.headers.get('accept') || '';
+    const wantsMarkdown = acceptHeader.includes('text/markdown');
+    
+    // Get the static asset
+    const response = await env.ASSETS.fetch(request);
+    
+    // If not requesting markdown or not HTML, return as-is
+    const contentType = response.headers.get('content-type') || '';
+    if (!wantsMarkdown || !contentType.includes('text/html')) {
+      return response;
+    }
+    
+    // Get HTML content
+    const html = await response.text();
+    
+    // Convert HTML to Markdown
+    const markdown = htmlToMarkdown(html);
+    
+    // Count tokens (rough estimate: ~4 chars per token)
+    const tokenCount = Math.ceil(markdown.length / 4);
+    
+    // Return markdown response
+    return new Response(markdown, {
+      status: response.status,
+      headers: {
+        'content-type': 'text/markdown; charset=utf-8',
+        'x-markdown-tokens': tokenCount.toString(),
+        'cache-control': response.headers.get('cache-control') || 'public, max-age=3600',
+        'access-control-allow-origin': '*',
+      },
+    });
+  },
 };
 
 // Simple HTML to Markdown converter
-function htmlToMarkdown(html: string): string {
+function htmlToMarkdown(html) {
   let text = html;
   
   // Extract main content (remove nav, footer, scripts, styles)
