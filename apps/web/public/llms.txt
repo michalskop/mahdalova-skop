@@ -35,34 +35,37 @@ Volební modely, kalkulačky a predikce výsledků voleb.
 ## Vybrané články
 
 ### Volební analýzy a modely
-- https://www.mahdalova-skop.cz/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem
 - https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb
-- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-01-volebni-kalkulacka-klasik
-- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-01-volebni-kalkulacka-zenska-rodinna-prava
+- https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy
+- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-13-kam-kracis-cesko
 
-### Ekonomické analýzy
+### Ekonomika a ceny
 - https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu
-- https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-03-03-v-kanade-se-vzedmula-liberalni-vlna
+- https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026
+- https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti
 
 ### Mezinárodní politika
-- https://www.mahdalova-skop.cz/clanek/explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut
-- https://www.mahdalova-skop.cz/clanek/kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost
-- https://www.mahdalova-skop.cz/clanek/kontext-2026-04-01-nekonecne-omluvy-prezidenta-kolumbie
+- https://www.mahdalova-skop.cz/clanek/cislo-dne-2026-03-11-new-york-meni-panorama-a-zdrazuje-luxusni-bydleni
+- https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho
+- https://www.mahdalova-skop.cz/clanek/explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad
 
 ### Dezinformace a média
 - https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy
-- https://www.mahdalova-skop.cz/clanek/kontext-2024-11-14-amsterdam-video
-- https://www.mahdalova-skop.cz/clanek/kontext-2025-07-07-byl-zelenskyj-v-obleku-nebo-ne-otazka-za-3-miliardy
+- https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho
+- https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu
 
 ### Vzdělávání a společnost
-- https://www.mahdalova-skop.cz/clanek/analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium
-- https://www.mahdalova-skop.cz/clanek/podcast-2024-11-12-dusevni-zdravi
+- https://www.mahdalova-skop.cz/clanek/podcast-2025-12-21-boj-o-pozornost
+- https://www.mahdalova-skop.cz/clanek/explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak
+- https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi
 
 ### Technologie a AI
 - https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost
+- https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho
+- https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu
 
 ## Kontakt
 
 - Email: info@mahdalova-skop.cz
-- Twitter/X: @mahdalovaskop
+- Twitter/X: @data_zurnalist
 - Podpora: https://www.mahdalova-skop.cz/podporte-nas
