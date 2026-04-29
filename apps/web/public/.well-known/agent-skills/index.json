@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "article-search",
+      "type": "skill-md",
+      "description": "Search and discover articles on political analysis, data journalism, and Czech politics.",
+      "url": "/.well-known/agent-skills/article-search/SKILL.md",
+      "digest": "sha256:placeholder"
+    },
+    {
+      "name": "election-analysis",
+      "type": "skill-md",
+      "description": "Access election predictions, models, and voting calculators for Czech elections.",
+      "url": "/.well-known/agent-skills/election-analysis/SKILL.md",
+      "digest": "sha256:placeholder"
+    },
+    {
+      "name": "fact-checking",
+      "type": "skill-md",
+      "description": "Find fact-checked analyses and data-driven investigations on current events.",
+      "url": "/.well-known/agent-skills/fact-checking/SKILL.md",
+      "digest": "sha256:placeholder"
+    }
+  ]
+}

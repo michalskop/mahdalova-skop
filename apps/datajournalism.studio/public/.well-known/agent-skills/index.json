@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "election-models",
+      "type": "skill-md",
+      "description": "Access unique election forecasting models and real-time predictions for elections worldwide.",
+      "url": "/.well-known/agent-skills/election-models/SKILL.md",
+      "digest": "sha256:placeholder"
+    },
+    {
+      "name": "electoral-forensics",
+      "type": "skill-md",
+      "description": "Statistical methods for detecting electoral irregularities and analyzing election integrity.",
+      "url": "/.well-known/agent-skills/electoral-forensics/SKILL.md",
+      "digest": "sha256:placeholder"
+    },
+    {
+      "name": "data-visualization",
+      "type": "skill-md",
+      "description": "Interactive maps, charts, and visualizations of election results and political data.",
+      "url": "/.well-known/agent-skills/data-visualization/SKILL.md",
+      "digest": "sha256:placeholder"
+    }
+  ]
+}
