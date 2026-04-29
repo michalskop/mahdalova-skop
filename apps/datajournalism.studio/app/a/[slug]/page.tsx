@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import { Box, Container } from '@mantine/core';
 import fs from 'fs'
 import path from 'path'
+import { ArticleJsonLd } from '@/components/seo/ArticleJsonLd';
 // import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 
 
@@ -91,8 +92,33 @@ export async function generateStaticParams() {
 export default async function ArticlePage({ params }: PageProps) {
   try {
     const article = await getArticleBySlug(params.slug);
+    
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.datajournalism.studio';
+    const articleUrl = `${baseUrl}/a/${params.slug}`;
+    
+    const isAbsoluteUrl = (value: unknown): value is string => {
+      if (typeof value !== 'string') return false;
+      return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
+    };
+    
+    const imageUrl = article.coverImage 
+      ? (isAbsoluteUrl(article.coverImage)
+          ? article.coverImage
+          : `${baseUrl}/a/_articles/${params.slug}/${article.coverImage}`)
+      : `${baseUrl}/default-og-image.jpg`;
+    
     return (
       <div>
+        <ArticleJsonLd
+          title={article.title}
+          description={article.excerpt}
+          author={article.author}
+          datePublished={article.date}
+          dateModified={article.date}
+          imageUrl={imageUrl}
+          articleUrl={articleUrl}
+          tags={article.tags}
+        />
         <ArticleRenderer {...article} slug={params.slug} />
         <Box my="lg">
           <TagList tags={article.tags} />

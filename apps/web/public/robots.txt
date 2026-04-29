@@ -1,0 +1,39 @@
+# robots.txt for mahdalova-skop.cz
+
+# Default rules for all bots
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Explicit opt-in for AI crawling and indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Block Common Crawl (used for training)
+User-agent: CCBot
+Disallow: /
+
+# Content Signals - preference for AI usage
+# search: allow traditional search indexing
+# ai-input: allow use as context for AI responses (RAG, citations)
+# ai-train: allow use for AI model training
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+# Sitemap
+Sitemap: https://www.mahdalova-skop.cz/sitemap.xml
