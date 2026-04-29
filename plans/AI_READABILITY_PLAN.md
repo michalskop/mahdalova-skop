@@ -384,6 +384,103 @@ If issues arise:
 - [RFC 8288 - Link Headers](https://www.rfc-editor.org/rfc/rfc8288)
 - [RFC 9727 - API Catalog](https://www.rfc-editor.org/rfc/rfc9727)
 
+### Phase 5: Agent-Ready Improvements (Based on isitagentready.com feedback)
+
+**Current Score: 33/100 (Level 2: Bot-Aware)**
+
+#### 5.1 Fix Link Headers (Priority: HIGH)
+- [ ] **Issue**: Link headers present but no agent-useful relation types found
+- [ ] **Current**: Only Next.js preload links for CSS
+- [ ] **Required**: Add agent-useful rel types
+- [ ] **Implementation**:
+  - Update middleware.ts to use proper rel types
+  - Consider: `rel="service-doc"` for documentation
+  - Consider: `rel="api-catalog"` if we add API catalog
+- [ ] **Files**: 
+  - `apps/web/middleware.ts`
+  - `apps/datajournalism.studio/middleware.ts`
+- [ ] **Time**: 15 minutes
+
+#### 5.2 Enable Markdown for Agents (Priority: MEDIUM)
+- [ ] **Issue**: Site does not support Markdown content negotiation
+- [ ] **Goal**: Return markdown when `Accept: text/markdown` header is present
+- [ ] **Implementation Options**:
+  - Option A: Cloudflare Workers/Pages middleware
+  - Option B: Next.js middleware to detect Accept header and return markdown
+  - Option C: Enable Cloudflare's "Markdown for Agents" feature (if available)
+- [ ] **Response headers needed**:
+  - `Content-Type: text/markdown`
+  - `x-markdown-tokens` (optional, for token count)
+- [ ] **Files**: Middleware or Cloudflare configuration
+- [ ] **Time**: 1-2 hours
+- [ ] **Resources**: [Cloudflare Docs](https://developers.cloudflare.com/workers/examples/markdown-for-agents/)
+
+#### 5.3 API Catalog (Priority: LOW - Optional)
+- [ ] **Issue**: API Catalog not found
+- [ ] **Goal**: Publish `/.well-known/api-catalog` (RFC 9727)
+- [ ] **Required if**: Site has APIs that agents should discover
+- [ ] **Decision**: Skip for now (content sites, no public APIs)
+- [ ] **Future consideration**: If we add data APIs or tools
+
+#### 5.4 MCP Server Card (Priority: LOW - Optional)
+- [ ] **Issue**: MCP Server Card not found
+- [ ] **Goal**: Publish `/.well-known/mcp/server-card.json`
+- [ ] **Required if**: Want to expose tools/capabilities to MCP-compatible agents
+- [ ] **Decision**: Consider for future enhancement
+- [ ] **Potential use cases**:
+  - Article search tool
+  - Election data query tool
+  - Fact-checking tool
+- [ ] **Time**: 2-4 hours (if implemented)
+
+#### 5.5 Agent Skills Index (Priority: LOW - Optional)
+- [ ] **Issue**: Agent Skills index not found
+- [ ] **Goal**: Publish `/.well-known/agent-skills/index.json`
+- [ ] **Decision**: Consider for future enhancement
+- [ ] **Resources**: [Agent Skills Discovery RFC](https://github.com/cloudflare/agent-skills-discovery-rfc)
+
+#### 5.6 OAuth/OIDC Discovery (Priority: N/A)
+- [ ] **Issue**: No OAuth/OIDC discovery metadata found
+- [ ] **Decision**: Not applicable (no protected APIs requiring authentication)
+- [ ] **Skip**: Content is public, no auth needed
+
+---
+
+## Phase 5 Priority Summary
+
+**Implement Now (High Priority)**:
+1. ✅ Fix Link headers with proper rel types (15 min)
+
+**Implement Soon (Medium Priority)**:
+2. ⚠️ Markdown for Agents content negotiation (1-2 hours)
+
+**Future Enhancements (Low Priority)**:
+3. 🔮 MCP Server Card (if we want agent tool integration)
+4. 🔮 Agent Skills Index (if we want skill-based discovery)
+5. 🔮 API Catalog (if we add public APIs)
+
+**Skip (Not Applicable)**:
+- OAuth/OIDC (no protected APIs)
+- Commerce protocols (not e-commerce sites)
+
+---
+
+## Expected Score Improvements
+
+**Current**: 33/100 (Level 2: Bot-Aware)
+
+**After Phase 5.1 (Link headers fix)**:
+- Discoverability: 3/3 (currently 2/3)
+- Estimated new score: ~40-45/100
+
+**After Phase 5.2 (Markdown for Agents)**:
+- Content: 1/1 (currently 0/1)
+- Estimated new score: ~55-60/100 (Level 3: Agent-Friendly)
+
+**After optional enhancements (5.3-5.5)**:
+- API, Auth, MCP & Skill Discovery: 1-3/6
+- Estimated new score: ~65-75/100 (Level 4: Agent-Ready)
+
 ---
 
 ## Timeline Estimate
