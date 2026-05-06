@@ -6,7 +6,7 @@ excerpt: "Zatímco dosavadní výzkumy varovaly před riziky pro seniory, aktuá
 coverImage: "images/image1.webp"
 filter: ["kontext"]
 tags: ["číslo dne", "zahraničí", "změny klimatu", "zdraví", "výzkum", "Kolumbijská univerzita", "Mexiko"]
-promoted: 10
+promoted: 2
 ---
 
 Změny klimatu se za posledních 150 let projevily ve výrazném globálním oteplování, které ovlivňuje životy miliard lidí. Nové studie přinášejí překvapivá zjištění o dopadu klimatických změn na lidské zdraví. Zatímco dosavadní výzkumy varovaly před riziky pro seniory, aktuální data ukazují, že největší riziko představují vedra pro mladé lidi ve věku 18 až 35 let.
