@@ -22,6 +22,7 @@ import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
+import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -186,6 +187,7 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
+    KeyNumbers,  // Register KeyNumbers component
     TestComponent,
     FlourishEmbed,
     PartyFace,
