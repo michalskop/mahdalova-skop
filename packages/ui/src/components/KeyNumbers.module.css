@@ -1,0 +1,55 @@
+.numbersSection {
+  padding: 56px 0 48px;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mantine-color-brand-6);
+  margin-bottom: 24px;
+}
+
+.numbersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .numbersGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.numCard {
+  background: white;
+  border-radius: 4px;
+  padding: 28px 24px 24px;
+  border-top: 4px solid var(--mantine-color-brand-6);
+  position: relative;
+}
+
+.numBig {
+  font-family: 'Roboto Slab', serif;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--mantine-color-brand-6);
+}
+
+.numLabel {
+  font-size: 13px;
+  color: var(--mantine-color-gray-6);
+  line-height: 1.5;
+}
+
+.numLabel strong {
+  display: block;
+  font-size: 15px;
+  color: var(--mantine-color-text);
+  margin-bottom: 3px;
+  font-weight: 600;
+}
