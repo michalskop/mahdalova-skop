@@ -6,7 +6,7 @@ excerpt: "Čím výš v politice, tím méně žen. Jak si vedou české kraje a
 coverImage: "images/main.png"  
 filter: ["analýza"]  
 tags: ["ženy", "muži","politika", "kraje", "volby","Česko", "Rakousko", "Německo"]  
-promoted: 1
+promoted: 2
 ---
 Nedávné podzimní volby rozhodly o složení krajských samospráv. Jak je to se ženami?
 
