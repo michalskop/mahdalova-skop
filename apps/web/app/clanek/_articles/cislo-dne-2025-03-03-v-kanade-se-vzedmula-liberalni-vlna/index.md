@@ -6,7 +6,7 @@ excerpt: "Hned na začátku volebního roku došlo v Kanadě k velice rychlému 
 coverImage: "images/kanada-volebni-model-brezen-2025.jpg"
 filter: ["kontext"]
 tags: ["průzkumy", "číslo dne", "mandáty", "volby", "poll of polls", "volební model", "Parlament", "Kanada", "liberálové", "politika"]
-promoted: 10
+promoted: 2
 ---
 
 Hned na začátku volebního roku došlo v Kanadě k velice rychlému zvratu ve voličských náladách. Výsledkem je nynější prudký nárůst podpory pro liberály. Podle průzkumu Ipsos zveřejněného 25. února se preference liberálů zvýšily o 10 procentních bodů na 38 %, zatímco konzervativci klesli na 36 %. Zhruba po dvou letech výrazné podpory konzervativcům se nyní v krátké době jedná se o druhý průzkum, který naměřil vedení liberálům.
