@@ -187,7 +187,22 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
-    KeyNumbers,  // Register KeyNumbers component
+    KeyNumbers: ({ jsonFile, ...props }) => {
+      // If jsonFile is provided, use pre-loaded data from server
+      if (jsonFile) {
+        const keyNumbersData = (mdxSource.scope as any)?.keyNumbersData as Record<string, any> | undefined;
+        const data = jsonFile ? keyNumbersData?.[jsonFile] : undefined;
+        
+        if (!data) {
+          return <div className="text-red-500">KeyNumbers data not found for {jsonFile}</div>;
+        }
+        
+        return <KeyNumbers label={data.label} numbers={data.numbers} {...props} />;
+      }
+      
+      // Otherwise use inline data or client-side fetch
+      return <KeyNumbers {...props} />;
+    },
     TestComponent,
     FlourishEmbed,
     PartyFace,

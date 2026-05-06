@@ -157,9 +157,9 @@ Demonstrating all available palette colors from the design system.
 
 ## Example 5: Loading from JSON File
 
-This example loads data from an external JSON file.
+This example loads data from an external JSON file (server-side).
 
-<KeyNumbers dataFile="/clanek/_articles/zzz-test/key-numbers-data.json" />
+<KeyNumbers jsonFile="key-numbers-data.json" />
 
 ---
 
