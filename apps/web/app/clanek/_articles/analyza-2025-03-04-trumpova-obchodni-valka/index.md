@@ -6,7 +6,7 @@ excerpt: "Trump zavádí nejtvrdší obchodní opatření za poslední desítky 
 coverImage: "images/trump-obchodni-valka-clo-world.jpg"
 filter: ["analýza"]
 tags: ["USA", "cla", "Trump", "mezinárodní obchod", "EU", "recesní riziko"]
-promoted: 1
+promoted: 2
 ---
 
 Spojené státy zavádějí **nejtvrdší obchodní opatření za poslední desítky let**. Prezident Donald Trump oznámil 10% clo na veškerý dovoz do země a k tomu **sadu dodatečných cel na konkrétní státy** – včetně klíčových spojenců, jako jsou země EU, Japonsko, Jižní Korea nebo Austrálie.
