@@ -179,12 +179,13 @@ Arrow appears automatically next to titles ≤ 14 chars.
 ---
 
 ### `KeyNumbers`
-Displays key statistics in a responsive grid with large numeric values and descriptions.
+Displays key statistics in a responsive grid with large numeric values and descriptions. Supports inline data or JSON file loading.
 
 ```tsx
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import type { KeyNumberItem } from '@repo/ui/components/KeyNumbers';
 
+// Inline data
 const stats: KeyNumberItem[] = [
   {
     value: '1,28',
@@ -195,21 +196,27 @@ const stats: KeyNumberItem[] = [
     value: '+0,8',
     title: 'Babišův cíl',
     description: 'Nárůst z 1,28 na 2,10 dítěte na ženu.',
+    color: '#f76800',  // Custom hex color
   },
   {
     value: '+0,47',
     title: 'Historický rekord',
     description: 'Největší nárůst zaznamenaný za 10 let.',
-    color: 'blue',  // 'red' (default) | 'blue' | 'green'
+    color: 'blue',  // Palette color
   },
 ];
 
 <KeyNumbers label="Klíčová čísla" numbers={stats} />
+
+// Or load from JSON
+<KeyNumbers dataFile="/data/stats.json" />
 ```
 
-Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`).
+Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `dataFile` (path to JSON file).
 
-Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` ('red' | 'blue' | 'green').
+Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba).
+
+**Colors:** Use palette names (`red`, `blue`, `green`, `teal`, `orange`, `navy`, `yellow`, `forestGreen`, `emeraldMint`, `deepRed`) or custom codes (`#ff6b35`, `rgba(26,111,168,0.8)`).
 
 Responsive: 3 columns on desktop, 1 column on mobile (≤768px).
 
