@@ -29,7 +29,7 @@ const keyStats: KeyNumberItem[] = [
     value: '+0,47',
     title: 'Historický rekord',
     description: 'Největší nárůst zaznamenaný kdekoli v bohatém světě za 10 let. Švédsko, po roce 2000 — a dočasně.',
-    color: 'blue',
+    color: 'brandTeal',
   },
 ];
 
@@ -71,6 +71,18 @@ JSON file format:
 ```tsx
 const customColorStats: KeyNumberItem[] = [
   {
+    value: '2nd',
+    title: 'Shade Notation',
+    description: 'Using brand[9] for darkest shade.',
+    color: 'brand[9]',
+  },
+  {
+    value: '3rd',
+    title: 'Palette Teal',
+    description: 'Back to palette color.',
+    color: 'brandTeal',
+  },
+  {
     value: '42%',
     title: 'Custom Hex Color',
     description: 'Using a custom hex color code.',
@@ -86,7 +98,13 @@ const customColorStats: KeyNumberItem[] = [
     value: '100',
     title: 'Palette Color',
     description: 'Using a color from the design system palette.',
-    color: 'teal',
+    color: 'brandTeal',
+  },
+  {
+    value: '999',
+    title: 'Shade Notation',
+    description: 'Using shade notation for darker brand color.',
+    color: 'brand[8]',
   },
 ];
 
@@ -123,20 +141,31 @@ const customColorStats: KeyNumberItem[] = [
 
 ## Color Options
 
-### Palette Colors
+### Palette Colors (Theme Names)
 
-Use predefined colors from the design system:
+Use predefined colors from the design system by their theme names:
 
-- **`red`** (default): `#de1743` (brand.6)
-- **`blue`**: `#1a6fa8`
-- **`green`**: `#2a8a50`
-- **`teal`**: `#0f6c78` (brandTeal.6)
-- **`orange`**: `#f76800` (brandOrange.6)
-- **`navy`**: `#6267a3` (brandNavy.6)
-- **`yellow`**: `#ffcf02` (brandYellow.6)
-- **`forestGreen`**: `#639e0a` (brandForestGreen.6)
-- **`emeraldMint`**: `#12b886` (brandEmeraldMint.6)
-- **`deepRed`**: `#a03250` (brandDeepRed.6)
+- **`brand`** (default): `#de1743` — Primary crimson red
+- **`brandTeal`**: `#0f6c78` — Teal green
+- **`brandOrange`**: `#f76800` — Orange
+- **`brandNavy`**: `#6267a3` — Navy purple
+- **`brandYellow`**: `#ffcf02` — Yellow highlights
+- **`brandForestGreen`**: `#639e0a` — Forest green
+- **`brandEmeraldMint`**: `#12b886` — Emerald mint
+- **`brandDeepRed`**: `#a03250` — Deep red
+- **`brandRoyalBlue`**: `#4a51ab` — Royal blue
+- **`background`**: `#e8e8dc` — Neutral background
+
+### Shade Notation
+
+Access any shade (0-9) from any color scale:
+
+- **`brand[9]`** — Darkest brand shade
+- **`brand[0]`** — Lightest brand shade
+- **`brandTeal[3]`** — Light teal shade
+- **`brandOrange[8]`** — Dark orange shade
+
+All theme colors support this notation.
 
 ### Custom Colors
 
@@ -181,13 +210,13 @@ const demographicsData: KeyNumberItem[] = [
     value: '1,28',
     title: 'Česká plodnost 2025',
     description: 'Odhad zazněl 27. 4. 2026 na kulatém stole v Poslanecké sněmovně.',
-    color: 'red',
+    color: 'brand',
   },
   {
     value: '+0,8',
     title: 'Babišův cíl',
     description: 'Nárůst z 1,28 na 2,10 dítěte na ženu.',
-    color: '#f76800',
+    color: 'brandOrange',
   },
   {
     value: '+0,47',

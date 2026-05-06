@@ -202,7 +202,7 @@ const stats: KeyNumberItem[] = [
     value: '+0,47',
     title: 'Historický rekord',
     description: 'Největší nárůst zaznamenaný za 10 let.',
-    color: 'blue',  // Palette color
+    color: 'brandTeal',  // Palette color
   },
 ];
 
@@ -216,7 +216,7 @@ Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array 
 
 Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba).
 
-**Colors:** Use palette names (`red`, `blue`, `green`, `teal`, `orange`, `navy`, `yellow`, `forestGreen`, `emeraldMint`, `deepRed`) or custom codes (`#ff6b35`, `rgba(26,111,168,0.8)`).
+**Colors:** Use theme names (`brand`, `brandTeal`, `brandOrange`, `brandNavy`, `brandYellow`, `brandForestGreen`, `brandEmeraldMint`, `brandDeepRed`, `brandRoyalBlue`, `background`), shade notation (`brand[9]`, `brandTeal[3]`), or custom codes (`#ff6b35`, `rgba(26,111,168,0.8)`).
 
 Responsive: 3 columns on desktop, 1 column on mobile (≤768px).
 

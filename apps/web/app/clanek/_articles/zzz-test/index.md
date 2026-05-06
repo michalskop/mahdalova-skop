@@ -24,19 +24,19 @@ Using inline data with predefined palette colors from the design system.
       value: "1,28",
       title: "Česká plodnost 2025",
       description: "Odhad zazněl 27. 4. 2026 na kulatém stole v Poslanecké sněmovně.",
-      color: "red"
+      color: "brand"
     },
     {
       value: "+0,8",
       title: "Babišův cíl",
       description: "Nárůst z 1,28 na 2,10 dítěte na ženu.",
-      color: "orange"
+      color: "brandOrange"
     },
     {
       value: "+0,47",
       title: "Historický rekord",
       description: "Největší nárůst zaznamenaný v bohatém světě za 10 let.",
-      color: "blue"
+      color: "brandTeal"
     }
   ]}
 />
@@ -81,40 +81,40 @@ Demonstrating all available palette colors from the design system.
   label="Paleta barev"
   numbers={[
     {
-      value: "RED",
+      value: "BRAND",
       title: "Brand Red",
-      description: "Default brand color (red).",
-      color: "red"
+      description: "Default brand color.",
+      color: "brand"
     },
     {
-      value: "BLUE",
-      title: "Blue",
-      description: "Blue accent color.",
-      color: "blue"
+      value: "ROYAL",
+      title: "Royal Blue",
+      description: "Royal blue color.",
+      color: "brandRoyalBlue"
     },
     {
-      value: "GREEN",
-      title: "Green",
-      description: "Green accent color.",
-      color: "green"
+      value: "EMERALD",
+      title: "Emerald Mint",
+      description: "Emerald mint color.",
+      color: "brandEmeraldMint"
     },
     {
       value: "TEAL",
       title: "Teal",
       description: "Teal brand color.",
-      color: "teal"
+      color: "brandTeal"
     },
     {
       value: "ORANGE",
       title: "Orange",
       description: "Orange brand color.",
-      color: "orange"
+      color: "brandOrange"
     },
     {
       value: "NAVY",
       title: "Navy",
       description: "Navy brand color.",
-      color: "navy"
+      color: "brandNavy"
     }
   ]}
 />
@@ -130,25 +130,25 @@ Demonstrating all available palette colors from the design system.
       value: "YELLOW",
       title: "Yellow",
       description: "Yellow brand color.",
-      color: "yellow"
+      color: "brandYellow"
     },
     {
       value: "FOREST",
       title: "Forest Green",
       description: "Forest green brand color.",
-      color: "forestGreen"
-    },
-    {
-      value: "EMERALD",
-      title: "Emerald Mint",
-      description: "Emerald mint brand color.",
-      color: "emeraldMint"
+      color: "brandForestGreen"
     },
     {
       value: "DEEP",
       title: "Deep Red",
       description: "Deep red brand color.",
-      color: "deepRed"
+      color: "brandDeepRed"
+    },
+    {
+      value: "BG",
+      title: "Background",
+      description: "Background neutral color.",
+      color: "background"
     }
   ]}
 />
@@ -172,21 +172,21 @@ Combining palette colors with custom hex/rgba codes in one component.
   numbers={[
     {
       value: "1st",
-      title: "Palette Red",
+      title: "Palette Brand",
       description: "Using palette color name.",
-      color: "red"
+      color: "brand"
     },
     {
       value: "2nd",
-      title: "Custom Hex",
-      description: "Using custom hex color.",
-      color: "#9b59b6"
+      title: "Shade Notation",
+      description: "Using brand[9] for darkest shade.",
+      color: "brand[9]"
     },
     {
       value: "3rd",
-      title: "Palette Teal",
-      description: "Back to palette color.",
-      color: "teal"
+      title: "Light Shade",
+      description: "Using brandTeal[2] for light shade.",
+      color: "brandTeal[2]"
     },
     {
       value: "4th",
