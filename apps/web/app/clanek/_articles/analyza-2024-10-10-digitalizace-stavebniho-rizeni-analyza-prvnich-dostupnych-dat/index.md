@@ -6,6 +6,7 @@ excerpt: "První data z digitalizovaného systému stavebních řízení (DSŘ):
 coverImage: "images/main.png"
 filter: ["analýza"]
 tags: ["DSŘ", "Piráti", "stavební řízení", "digitalizace"]
+promoted: 1
 ---
 První dostupná data z digitalizovaného systému stavebních řízení (DSŘ) naznačují, že
 navzdory intenzivní debatě o digitalizaci systém zvládá rostoucí objem žádostí bez zjevných známek přetížení. K 7. říjnu 2024 máme k dispozici již třetí sadu dat, kterou jsme analyzovali spolu s předchozími dvěma. Analýza nepracuje s anekdotickými zkušenostmi stavebníků a stavebních úřadů.
