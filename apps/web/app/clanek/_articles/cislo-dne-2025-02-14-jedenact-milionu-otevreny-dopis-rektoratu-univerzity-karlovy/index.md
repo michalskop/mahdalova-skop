@@ -6,7 +6,7 @@ excerpt: "Akademická obec se ohrazuje proti vysokým odměnám pro vedení univ
 coverImage: "images/uk-akademici-otevreny-dopis-proti-rektorce-a-vedeni.jpg"
 filter: ["kontext"]
 tags: ["číslo dne", "Univerzita Karlova", "morálka", "finance", "vzdělávání", "výzkum", "Česko"]
-promoted: 10
+promoted: 2
 ---
 
 Akademická obec, vyučující i studenti, se ohrazují proti vysokým vyplaceným odměnám, jež si nechala vyplatit část nejužšího vedení univerzity, a zejména proti tomu, že to vedení univerzity odůvodňuje tragickou střelbou na filozofické fakultě v prosinci 2023. To mnozí akademici a akademičky kritizují jako závažné morální selhání a cynický výsměch. Podle zjištění [iDnes](https://www.idnes.cz/zpravy/domaci/rektorka-milena-kralickova-univerzita-karlova-odmena-plat.A250213_182026_domaci_krd) dostala rektorka UK Milena Králíčková v květnu 2024 ke svému platu 175 tisíc korun bonus 400 tisíc korun, v listopadu brala odměnu 576 tisíc korun. Podobně vysoké částky dostali k platu kvestor univerzity Martin Maňásek nebo člen vedení, kterého UK nazývá krycím kódem E. S odměnami za další měsíce si tito tři akademici přišli za rok na několik milionů. Celkem si šestnáctičlenný poradní sbor s rektorkou na odměnách rozdělil 11,5 milionu korun.
