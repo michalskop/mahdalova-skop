@@ -6,7 +6,7 @@ excerpt: "aneb Soudkyně Susan Crawford porazila Muska"
 coverImage: "images/cislo-dne-soudkyne-porazila-muska.jpg"
 filter: ["kontext"]
 tags: ["číslo dne", "USA", "volby", "Nejvyšší soud Wisconsin", "Elon Musk", "Susan Crawford", "liberálové", "politika"]
-promoted: 10
+promoted: 2
 ---
 
 aneb Soudkyně Susan Crawford porazila Muska
