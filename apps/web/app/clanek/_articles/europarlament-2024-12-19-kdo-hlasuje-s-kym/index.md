@@ -7,7 +7,7 @@ excerpt: "Unikátní analýza shody hlasování v Europarlamentu za rok 2024."
 coverImage: "images/main.webp"
 filter: ["analýza"]
 tags: ["Europarlament", "Česko", "Slovensko", "zahraničí", "hlasování", "europoslanci"]
-promoted: 50
+promoted: 1
 ---
 _Unikátní analýza hlasování v Europarlamentu za rok 2024. Podívejte se s námi, kdo má ke komu blízko, kdo má skutečně šanci věci ovlivňovat a kdo žije v iluzi, že vzdoruje, přitom je zcela mimo. Ocitnout se v europarlamentu v izolaci znamená vzdát se rozhodování. Tak co, kdo vás nezradil?_
 
