@@ -117,6 +117,22 @@ export async function getArticleBySlug(directorySlug: string) {
     timelineData[yamlFile] = yaml.load(timelineFile) as TimelineContent;
   }
 
+  // Find and load data for KeyNumbers components (supports multiple instances)
+  const keyNumbersData: Record<string, any> = {};
+  const keyNumbersRegex = /<KeyNumbers[^>]*jsonFile="([^"]+)"[^>]*\/>/g;
+  let keyNumbersMatch: RegExpExecArray | null;
+  while ((keyNumbersMatch = keyNumbersRegex.exec(content)) !== null) {
+    const jsonFile = keyNumbersMatch[1];
+    if (!jsonFile) continue;
+    if (keyNumbersData[jsonFile]) continue;
+    const jsonPath = path.join(articleDir, jsonFile);
+    if (!fs.existsSync(jsonPath)) {
+      throw new Error(`KeyNumbers json file not found: ${directorySlug}/${jsonFile}`);
+    }
+    const jsonContent = fs.readFileSync(jsonPath, 'utf8');
+    keyNumbersData[jsonFile] = JSON.parse(jsonContent);
+  }
+
   // Find and load data for StyledTable (CSV-backed tables; supports multiple instances)
   const styledTableData: Record<string, { headers: string[]; rows: Record<string, string>[] }> = {};
   const styledTableRegex = /<StyledTable[^>]*csvFile="([^"]+)"[^>]*\/?>/g;

@@ -21,31 +21,10 @@ export interface KeyNumbersData {
 interface KeyNumbersProps {
   label?: string;
   numbers?: KeyNumberItem[];
-  dataFile?: string;
 }
 
-export function KeyNumbers({ label = 'Klíčová čísla', numbers, dataFile }: KeyNumbersProps) {
+export function KeyNumbers({ label = 'Klíčová čísla', numbers }: KeyNumbersProps) {
   const theme = useMantineTheme();
-  const [data, setData] = React.useState<KeyNumberItem[] | null>(numbers || null);
-  const [loading, setLoading] = React.useState(!!dataFile);
-
-  React.useEffect(() => {
-    if (dataFile) {
-      fetch(dataFile)
-        .then(res => res.json())
-        .then((jsonData: KeyNumbersData) => {
-          setData(jsonData.numbers);
-          if (jsonData.label && !label) {
-            label = jsonData.label;
-          }
-          setLoading(false);
-        })
-        .catch(err => {
-          console.error('Failed to load KeyNumbers data:', err);
-          setLoading(false);
-        });
-    }
-  }, [dataFile]);
 
   const getPaletteColor = (colorName: KeyNumberPaletteColor): string => {
     const paletteColors: Record<KeyNumberPaletteColor, string> = {
@@ -104,18 +83,7 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, dataFile }: 
     };
   };
 
-  if (loading) {
-    return (
-      <section className={classes.numbersSection}>
-        <Container size="md">
-          <div className={classes.sectionLabel}>{label}</div>
-          <div>Loading...</div>
-        </Container>
-      </section>
-    );
-  }
-
-  if (!data || data.length === 0) {
+  if (!numbers || numbers.length === 0) {
     return null;
   }
 
@@ -124,7 +92,7 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, dataFile }: 
       <Container size="md">
         <div className={classes.sectionLabel}>{label}</div>
         <div className={classes.numbersGrid}>
-          {data.map((item, index) => {
+          {numbers.map((item, index) => {
             const colorStyles = getColorStyles(item.color);
             return (
               <div

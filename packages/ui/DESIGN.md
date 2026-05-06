@@ -208,11 +208,11 @@ const stats: KeyNumberItem[] = [
 
 <KeyNumbers label="Klíčová čísla" numbers={stats} />
 
-// Or load from JSON
-<KeyNumbers dataFile="/data/stats.json" />
+// Or load from JSON file (server-side, relative to article directory)
+<KeyNumbers jsonFile="stats.json" />
 ```
 
-Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `dataFile` (path to JSON file).
+Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `jsonFile` (filename relative to article directory, loaded server-side like Timeline).
 
 Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba).
 

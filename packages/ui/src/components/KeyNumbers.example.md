@@ -45,11 +45,14 @@ const keyStats: KeyNumberItem[] = [
 />
 ```
 
-### Loading from JSON File
+### Loading from JSON File (Server-Side)
 
 ```tsx
-<KeyNumbers dataFile="/data/demographics-stats.json" />
+// In your article markdown:
+<KeyNumbers jsonFile="demographics-stats.json" />
 ```
+
+Place the JSON file in the same directory as your article's `index.md`. The file is loaded server-side during build (like Timeline YAML files).
 
 JSON file format:
 ```json
@@ -119,9 +122,9 @@ const customColorStats: KeyNumberItem[] = [
 |------|------|---------|-------------|
 | `label` | `string` | `'Klíčová čísla'` | Section label displayed above the grid |
 | `numbers` | `KeyNumberItem[]` | optional* | Array of key number items to display |
-| `dataFile` | `string` | optional* | Path to JSON file containing KeyNumbersData |
+| `jsonFile` | `string` | optional* | Filename (relative to article dir) for server-side loading |
 
-*Either `numbers` or `dataFile` must be provided.
+*Either `numbers` or `jsonFile` must be provided.
 
 ### `KeyNumberItem`
 
@@ -195,10 +198,10 @@ Based on the DataTimes design system with:
 
 ## Performance Notes
 
-- When using `dataFile`, the component shows a loading state while fetching
-- JSON data is fetched client-side using the Fetch API
-- Failed JSON loads are logged to console and component renders nothing
-- For static data, prefer inline `numbers` prop for better performance
+- When using `jsonFile`, data is loaded **server-side** during build (like Timeline)
+- No client-side fetch required - data is embedded in the page
+- For dynamic data that changes frequently, use inline `numbers` prop
+- Server-side loading is preferred for static article data
 
 ## Complete Examples
 
@@ -236,22 +239,15 @@ export default function DemographicsPage() {
 }
 ```
 
-### Example 2: Loading from JSON
+### Example 2: Loading from JSON (Server-Side)
 
-```tsx
-// In your page/component
-export default function ArticlePage() {
-  return (
-    <>
-      <KeyNumbers dataFile="/data/key-stats.json" />
-      {/* Rest of article content */}
-    </>
-  );
-}
+```md
+<!-- In your article's index.md -->
+<KeyNumbers jsonFile="key-stats.json" />
 ```
 
 ```json
-// public/data/key-stats.json
+// Place in same directory as index.md: key-stats.json
 {
   "label": "Klíčová čísla projektu",
   "numbers": [
