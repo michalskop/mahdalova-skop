@@ -178,6 +178,43 @@ Arrow appears automatically next to titles ≤ 14 chars.
 
 ---
 
+### `KeyNumbers`
+Displays key statistics in a responsive grid with large numeric values and descriptions.
+
+```tsx
+import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
+import type { KeyNumberItem } from '@repo/ui/components/KeyNumbers';
+
+const stats: KeyNumberItem[] = [
+  {
+    value: '1,28',
+    title: 'Česká plodnost 2025',
+    description: 'Odhad zazněl 27. 4. 2026 na kulatém stole.',
+  },
+  {
+    value: '+0,8',
+    title: 'Babišův cíl',
+    description: 'Nárůst z 1,28 na 2,10 dítěte na ženu.',
+  },
+  {
+    value: '+0,47',
+    title: 'Historický rekord',
+    description: 'Největší nárůst zaznamenaný za 10 let.',
+    color: 'blue',  // 'red' (default) | 'blue' | 'green'
+  },
+];
+
+<KeyNumbers label="Klíčová čísla" numbers={stats} />
+```
+
+Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`).
+
+Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` ('red' | 'blue' | 'green').
+
+Responsive: 3 columns on desktop, 1 column on mobile (≤768px).
+
+---
+
 ### `InfoBox`
 Informational box with a left border accent and a light background. All fence names (`box`, `mediabox`, `infobox`) map to this component; `box` is a legacy alias.
 
