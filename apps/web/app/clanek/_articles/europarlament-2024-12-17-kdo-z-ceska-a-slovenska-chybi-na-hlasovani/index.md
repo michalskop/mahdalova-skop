@@ -6,7 +6,7 @@ excerpt: "Tento týden probíhá ve Štrasburku 9. zasedání Evropského parlam
 coverImage: "images/main.webp"
 filter: ["analýza"]
 tags: ["Europarlament", "Česko", "Slovensko", "zahraničí", "hlasování","europoslanci"]
-promoted: 10
+promoted: 1
 ---
 *aneb "Kdo nehlasuje, nezastupuje svoje voliče."*
 
