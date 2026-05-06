@@ -6,7 +6,7 @@ excerpt: "New York staví mrakodrapy za desítky milionů dolarů. A zároveň n
 coverImage: "images/new-york-vystavba-home-datatimes-2026.webp"
 filter: ["číslo dne"]
 tags: ["číslo dne", "New York", "bydlení", "nerovnost", "reality", "data", "USA"]
-promoted: 3
+promoted: 58
 ---
 
 New York staví mrakodrapy za desítky milionů dolarů. A zároveň nedokáže dát domov více než 350 000 lidí, kteří nyní nemají střechu nad hlavou. Data o největší majetkové propasti v historii newyorského realitního trhu.
