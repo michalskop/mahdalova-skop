@@ -101,8 +101,9 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'lef
   return (
     <section className={classes.numbersSection}>
       <Container size="md">
-        <div className={classes.sectionLabel}>{label}</div>
-        <div className={gridClass}>
+        <div className={alignClass}>
+          <div className={classes.sectionLabel}>{label}</div>
+          <div className={classes.numbersGrid}>
           {numbers.map((item, index) => {
             const colorStyles = getColorStyles(item.color);
             return (
@@ -124,6 +125,7 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'lef
               </div>
             );
           })}
+        </div>
         </div>
       </Container>
     </section>
