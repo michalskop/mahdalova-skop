@@ -6,7 +6,7 @@ excerpt: "Namísto ozbrojeného komanda přichází do vládních budov několik
 coverImage: "images/komentar-timothy-snyder-usa-je-to-puc-2025.jpg"
 filter: ["kontext"]
 tags: ["komentář", "zahraničí", "USA", "volby", "vláda", "Trump", "Musk"]
-promoted: 10
+promoted: 2
 ---
 ## Když přehlédnete zjevné, ztratíte stát
 
