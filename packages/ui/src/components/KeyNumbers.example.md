@@ -50,6 +50,9 @@ const keyStats: KeyNumberItem[] = [
 ```tsx
 // In your article markdown:
 <KeyNumbers yamlFile="demographics-stats.yaml" />
+
+// With alignment (for single items)
+<KeyNumbers yamlFile="single-stat.yaml" align="center" />
 ```
 
 Place the YAML file in the same directory as your article's `index.md`. The file is loaded server-side during build (same pattern as Timeline).
@@ -138,6 +141,7 @@ numbers:
 | `label` | `string` | `'Klíčová čísla'` | Section label displayed above the grid |
 | `numbers` | `KeyNumberItem[]` | optional* | Array of key number items to display |
 | `yamlFile` | `string` | optional* | Filename (relative to article dir) for server-side loading |
+| `align` | `'left' \| 'center' \| 'right'` | `'left'` | Alignment for single items (desktop only) |
 
 *Either `numbers` or `yamlFile` must be provided.
 
@@ -200,6 +204,23 @@ The color affects both the top border and the numeric value color.
 - **Desktop**: 3-column grid
 - **Mobile** (≤768px): Single column layout
 
+## Alignment Feature
+
+When displaying a **single number**, you can control its horizontal position on desktop:
+
+```tsx
+// Left-aligned (default)
+<KeyNumbers numbers={[singleStat]} align="left" />
+
+// Center-aligned
+<KeyNumbers numbers={[singleStat]} align="center" />
+
+// Right-aligned
+<KeyNumbers numbers={[singleStat]} align="right" />
+```
+
+**Note:** Alignment only applies when `numbers.length === 1`. On mobile (≤768px), items always stretch to full width.
+
 ## Design Notes
 
 Based on the DataTimes design system with:
@@ -210,6 +231,7 @@ Based on the DataTimes design system with:
 - Responsive grid layout
 - Full palette support plus custom HTML/RGBA colors
 - YAML data loading for easier content management (consistent with Timeline)
+- Alignment control for single items (desktop only)
 
 ## Performance Notes
 
