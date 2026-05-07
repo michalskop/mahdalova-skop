@@ -45,28 +45,23 @@ const keyStats: KeyNumberItem[] = [
 />
 ```
 
-### Loading from JSON File (Server-Side)
+### Loading from YAML File (Server-Side)
 
 ```tsx
 // In your article markdown:
-<KeyNumbers jsonFile="demographics-stats.json" />
+<KeyNumbers yamlFile="demographics-stats.yaml" />
 ```
 
-Place the JSON file in the same directory as your article's `index.md`. The file is loaded server-side during build (like Timeline YAML files).
+Place the YAML file in the same directory as your article's `index.md`. The file is loaded server-side during build (same pattern as Timeline).
 
-JSON file format:
-```json
-{
-  "label": "Klíčová čísla",
-  "numbers": [
-    {
-      "value": "1,28",
-      "title": "Česká plodnost 2025",
-      "description": "Odhad zazněl 27. 4. 2026...",
-      "color": "blue"
-    }
-  ]
-}
+YAML file format:
+```yaml
+label: Klíčová čísla
+numbers:
+  - value: "1,28"
+    title: Česká plodnost 2025
+    description: Odhad zazněl 27. 4. 2026...
+    color: brand
 ```
 
 ### Custom Colors (HTML/RGBA)
@@ -114,6 +109,26 @@ const customColorStats: KeyNumberItem[] = [
 <KeyNumbers numbers={customColorStats} />
 ```
 
+### Loading from YAML File with Custom Colors
+
+```tsx
+<KeyNumbers yamlFile="key-stats.yaml" />
+```
+
+```yaml
+# Place in same directory as index.md: key-stats.yaml
+label: Klíčová čísla projektu
+numbers:
+  - value: "1,28"
+    title: Česká plodnost 2025
+    description: Odhad zazněl 27. 4. 2026.
+    color: brand
+  - value: "+0,8"
+    title: Babišův cíl
+    description: Nárůst z 1,28 na 2,10.
+    color: brandOrange
+```
+
 ## Props
 
 ### `KeyNumbers`
@@ -122,9 +137,9 @@ const customColorStats: KeyNumberItem[] = [
 |------|------|---------|-------------|
 | `label` | `string` | `'Klíčová čísla'` | Section label displayed above the grid |
 | `numbers` | `KeyNumberItem[]` | optional* | Array of key number items to display |
-| `jsonFile` | `string` | optional* | Filename (relative to article dir) for server-side loading |
+| `yamlFile` | `string` | optional* | Filename (relative to article dir) for server-side loading |
 
-*Either `numbers` or `jsonFile` must be provided.
+*Either `numbers` or `yamlFile` must be provided.
 
 ### `KeyNumberItem`
 
@@ -135,7 +150,7 @@ const customColorStats: KeyNumberItem[] = [
 | `description` | `string` | ✓ | Detailed description text |
 | `color` | `KeyNumberPaletteColor \| string` | ✗ | Color theme (palette name, hex, or rgba) |
 
-### `KeyNumbersData` (for JSON files)
+### `KeyNumbersData` (for YAML files)
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
@@ -194,14 +209,14 @@ Based on the DataTimes design system with:
 - Consistent spacing and typography hierarchy
 - Responsive grid layout
 - Full palette support plus custom HTML/RGBA colors
-- JSON data loading for easier content management
+- YAML data loading for easier content management (consistent with Timeline)
 
 ## Performance Notes
 
-- When using `jsonFile`, data is loaded **server-side** during build (like Timeline)
+- When using `yamlFile`, data is loaded **server-side** during build (same as Timeline)
 - No client-side fetch required - data is embedded in the page
 - For dynamic data that changes frequently, use inline `numbers` prop
-- Server-side loading is preferred for static article data
+- Server-side YAML loading is preferred for static article data
 
 ## Complete Examples
 
@@ -239,30 +254,23 @@ export default function DemographicsPage() {
 }
 ```
 
-### Example 2: Loading from JSON (Server-Side)
+### Example 2: Loading from YAML (Server-Side)
 
 ```md
 <!-- In your article's index.md -->
-<KeyNumbers jsonFile="key-stats.json" />
+<KeyNumbers yamlFile="key-stats.yaml" />
 ```
 
-```json
-// Place in same directory as index.md: key-stats.json
-{
-  "label": "Klíčová čísla projektu",
-  "numbers": [
-    {
-      "value": "1,28",
-      "title": "Česká plodnost 2025",
-      "description": "Odhad zazněl 27. 4. 2026.",
-      "color": "red"
-    },
-    {
-      "value": "+0,47",
-      "title": "Historický rekord",
-      "description": "Největší nárůst za 10 let.",
-      "color": "#1a6fa8"
-    }
-  ]
-}
+```yaml
+# Place in same directory as index.md: key-stats.yaml
+label: Klíčová čísla projektu
+numbers:
+  - value: "1,28"
+    title: Česká plodnost 2025
+    description: Odhad zazněl 27. 4. 2026.
+    color: red
+  - value: "+0,47"
+    title: Historický rekord
+    description: Největší nárůst za 10 let.
+    color: "#1a6fa8"
 ```
