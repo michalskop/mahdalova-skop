@@ -198,6 +198,7 @@ export async function getArticleBySlug(directorySlug: string) {
     scope: {
       tableData: tableData,
       timelineData: timelineData,
+      keyNumbersData: keyNumbersData,
       styledTableData: styledTableData,
       htmlEmbedData: htmlEmbedData,
       relatedArticlesPool: filteredPool,
