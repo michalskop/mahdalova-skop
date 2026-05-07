@@ -88,7 +88,15 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'lef
     return null;
   }
 
-  const gridClass = `${classes.numbersGrid} ${numbers.length === 1 ? classes[`align${align.charAt(0).toUpperCase() + align.slice(1)}`] : ''}`;
+  // Build alignment class name for single items
+  let alignClass = '';
+  if (numbers.length === 1) {
+    if (align === 'center') alignClass = classes.alignCenter;
+    else if (align === 'right') alignClass = classes.alignRight;
+    else if (align === 'left') alignClass = classes.alignLeft;
+  }
+  
+  const gridClass = `${classes.numbersGrid} ${alignClass}`.trim();
 
   return (
     <section className={classes.numbersSection}>
