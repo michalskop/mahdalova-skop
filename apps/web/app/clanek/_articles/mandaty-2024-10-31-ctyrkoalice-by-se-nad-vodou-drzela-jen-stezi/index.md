@@ -6,7 +6,7 @@ excerpt: "Naděje na získání většiny 101 mandátů jsou nyní pro čtyřčl
 coverImage: "images/poll_tracker.png"
 filter: ["analýza"]
 tags: ["mandáty", "průzkumy", "volby", "poll of polls", "volební model", "Sněmovna", "Parlament", "Česko"]
-promoted: 10
+promoted: 2
 ---
 
 Kdyby se dnes konaly volby, čtyřčlenná koalice bez Pirátů (ODS, TOP 09, KDU-ČSL a STAN) by se nad vodou držela jen stěží. A dlužno dodat, že i silnější varianta s Piráty by nyní měla dost malé šance. Naděje na získání většiny 101 mandátů jsou nyní pro tyto strany mizivé a případné spojení KSČM a SOCDEM jim může pořádně zavařit. Podobně jako Přísaha v tandemu s Motoristy, kteří by se nyní dostali do Sněmovny naprosto bez potíží.
