@@ -187,20 +187,20 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
-    KeyNumbers: ({ jsonFile, ...props }) => {
-      // If jsonFile is provided, use pre-loaded data from server
-      if (jsonFile) {
+    KeyNumbers: ({ yamlFile, ...props }) => {
+      // If yamlFile is provided, use pre-loaded data from server
+      if (yamlFile) {
         const keyNumbersData = (mdxSource.scope as any)?.keyNumbersData as Record<string, any> | undefined;
-        const data = jsonFile ? keyNumbersData?.[jsonFile] : undefined;
+        const data = yamlFile ? keyNumbersData?.[yamlFile] : undefined;
         
         if (!data) {
-          return <div className="text-red-500">KeyNumbers data not found for {jsonFile}</div>;
+          return <div className="text-red-500">KeyNumbers data not found for {yamlFile}</div>;
         }
         
         return <KeyNumbers label={data.label} numbers={data.numbers} {...props} />;
       }
       
-      // Otherwise use inline data or client-side fetch
+      // Otherwise use inline data
       return <KeyNumbers {...props} />;
     },
     TestComponent,

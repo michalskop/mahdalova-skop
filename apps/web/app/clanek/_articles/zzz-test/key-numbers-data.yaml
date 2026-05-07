@@ -1,0 +1,26 @@
+label: Klíčová čísla
+numbers:
+  - value: "1,28"
+    title: Česká plodnost 2025
+    description: Odhad zazněl 27. 4. 2026 na kulatém stole v Poslanecké sněmovně. Jedno z nejnižších čísel v historii.
+    color: brand
+  - value: "+0,8"
+    title: Babišův cíl
+    description: Nárůst z 1,28 na 2,10 dítěte na ženu. Vláda ho vyhlásila jako prioritu.
+    color: brandOrange
+  - value: "+0,47"
+    title: Historický rekord
+    description: Největší nárůst zaznamenaný kdekoli v bohatém světě za 10 let. Švédsko, po roce 2000.
+    color: brandTeal
+  - value: "2,1"
+    title: Náhradní plodnost
+    description: Úroveň potřebná pro stabilní populaci bez migrace.
+    color: brandForestGreen
+  - value: 50+
+    title: Analyzované země
+    description: Bohaté země s populací nad 1 milion obyvatel v našem datasetu.
+    color: brandTeal[3]
+  - value: 1980–2024
+    title: Sledované období
+    description: 44 let demografických dat z celého vyspělého světa.
+    color: brandNavy

@@ -119,18 +119,18 @@ export async function getArticleBySlug(directorySlug: string) {
 
   // Find and load data for KeyNumbers components (supports multiple instances)
   const keyNumbersData: Record<string, any> = {};
-  const keyNumbersRegex = /<KeyNumbers[^>]*jsonFile="([^"]+)"[^>]*\/>/g;
+  const keyNumbersRegex = /<KeyNumbers[^>]*yamlFile="([^"]+)"[^>]*\/?>/g;
   let keyNumbersMatch: RegExpExecArray | null;
   while ((keyNumbersMatch = keyNumbersRegex.exec(content)) !== null) {
-    const jsonFile = keyNumbersMatch[1];
-    if (!jsonFile) continue;
-    if (keyNumbersData[jsonFile]) continue;
-    const jsonPath = path.join(articleDir, jsonFile);
-    if (!fs.existsSync(jsonPath)) {
-      throw new Error(`KeyNumbers json file not found: ${directorySlug}/${jsonFile}`);
+    const yamlFile = keyNumbersMatch[1];
+    if (!yamlFile) continue;
+    if (keyNumbersData[yamlFile]) continue;
+    const yamlPath = path.join(articleDir, yamlFile);
+    if (!fs.existsSync(yamlPath)) {
+      throw new Error(`KeyNumbers yaml file not found: ${directorySlug}/${yamlFile}`);
     }
-    const jsonContent = fs.readFileSync(jsonPath, 'utf8');
-    keyNumbersData[jsonFile] = JSON.parse(jsonContent);
+    const yamlContent = fs.readFileSync(yamlPath, 'utf8');
+    keyNumbersData[yamlFile] = yaml.load(yamlContent);
   }
 
   // Find and load data for StyledTable (CSV-backed tables; supports multiple instances)

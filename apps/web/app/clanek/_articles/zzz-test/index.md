@@ -155,11 +155,11 @@ Demonstrating all available palette colors from the design system.
 
 ---
 
-## Example 5: Loading from JSON File
+## Example 5: Loading from YAML File
 
-This example loads data from an external JSON file (server-side).
+This example loads data from an external YAML file (server-side, like Timeline).
 
-<KeyNumbers jsonFile="key-numbers-data.json" />
+<KeyNumbers yamlFile="key-numbers-data.yaml" />
 
 ---
 
