@@ -223,6 +223,63 @@ Combining palette colors with custom hex/rgba codes in one component.
 
 ---
 
+## Example 7: Single Number - Left Aligned
+
+Default alignment for a single number.
+
+<KeyNumbers 
+  label="Single Stat - Left"
+  align="left"
+  numbers={[
+    {
+      value: "100%",
+      title: "Left Aligned",
+      description: "This single number is aligned to the left (default).",
+      color: "brandTeal"
+    }
+  ]}
+/>
+
+---
+
+## Example 8: Single Number - Center Aligned
+
+Center alignment for a single number (desktop only, full width on mobile).
+
+<KeyNumbers 
+  label="Single Stat - Center"
+  align="center"
+  numbers={[
+    {
+      value: "50%",
+      title: "Center Aligned",
+      description: "This single number is centered on desktop, full width on mobile.",
+      color: "brandOrange"
+    }
+  ]}
+/>
+
+---
+
+## Example 9: Single Number - Right Aligned
+
+Right alignment for a single number (desktop only).
+
+<KeyNumbers 
+  label="Single Stat - Right"
+  align="right"
+  numbers={[
+    {
+      value: "1st",
+      title: "Right Aligned",
+      description: "This single number is aligned to the right on desktop.",
+      color: "brandForestGreen"
+    }
+  ]}
+/>
+
+---
+
 ## End of Test Article
 
-This article demonstrates all features of the KeyNumbers component. Check the browser console for any errors when loading JSON data.
+This article demonstrates all features of the KeyNumbers component including alignment options for single items.
