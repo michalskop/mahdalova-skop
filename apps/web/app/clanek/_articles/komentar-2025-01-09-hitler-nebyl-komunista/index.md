@@ -1,11 +1,12 @@
 ---
 title: "Glosa: Hilter nebyl komunista"
 date: "2025-01-09"
-author: "Kateřina Mahdalová & Michal Škop"
+author: "Kateřina Mahdalová"
 excerpt: "Jak se nakládá s ideologickými nálepkami"
 coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]
 tags: ["glosa", "zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
+promoted: 2
 ---
 
 Alice Weidel z německé krajně pravicové (až extremistické) strany AfD právě v rozhovoru s Elonem Muskem tvrdila, že Adolf Hitler byl komunista. Je to historicky i fakticky absolutní nesmysl.
