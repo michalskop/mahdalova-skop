@@ -212,7 +212,7 @@ const stats: KeyNumberItem[] = [
 <KeyNumbers yamlFile="stats.yaml" />
 ```
 
-Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `yamlFile` (filename relative to article directory, loaded server-side like Timeline).
+Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `yamlFile` (filename relative to article directory, loaded server-side like Timeline), `align` (alignment for single items: 'left', 'center', 'right', default: 'left', desktop only).
 
 Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba).
 

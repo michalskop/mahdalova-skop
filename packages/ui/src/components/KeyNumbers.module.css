@@ -17,9 +17,29 @@
   gap: 16px;
 }
 
+/* Alignment for single items (desktop only) */
+.alignCenter {
+  justify-items: center;
+}
+
+.alignRight {
+  justify-items: end;
+}
+
+.alignLeft {
+  justify-items: start;
+}
+
 @media (max-width: 768px) {
   .numbersGrid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Reset alignment on mobile - always left */
+  .alignCenter,
+  .alignRight,
+  .alignLeft {
+    justify-items: stretch;
   }
 }
 

@@ -21,9 +21,10 @@ export interface KeyNumbersData {
 interface KeyNumbersProps {
   label?: string;
   numbers?: KeyNumberItem[];
+  align?: 'left' | 'center' | 'right';
 }
 
-export function KeyNumbers({ label = 'Klíčová čísla', numbers }: KeyNumbersProps) {
+export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'left' }: KeyNumbersProps) {
   const theme = useMantineTheme();
 
   const getPaletteColor = (colorName: KeyNumberPaletteColor): string => {
@@ -87,11 +88,13 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers }: KeyNumbers
     return null;
   }
 
+  const gridClass = `${classes.numbersGrid} ${numbers.length === 1 ? classes[`align${align.charAt(0).toUpperCase() + align.slice(1)}`] : ''}`;
+
   return (
     <section className={classes.numbersSection}>
       <Container size="md">
         <div className={classes.sectionLabel}>{label}</div>
-        <div className={classes.numbersGrid}>
+        <div className={gridClass}>
           {numbers.map((item, index) => {
             const colorStyles = getColorStyles(item.color);
             return (
