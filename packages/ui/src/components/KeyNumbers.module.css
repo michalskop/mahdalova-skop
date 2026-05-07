@@ -18,16 +18,17 @@
 }
 
 /* Alignment for single items (desktop only) */
-.alignCenter {
-  justify-items: center;
+/* When there's only one item, place it in the appropriate column */
+.alignCenter .numCard:only-child {
+  grid-column: 2 / 3;
 }
 
-.alignRight {
-  justify-items: end;
+.alignRight .numCard:only-child {
+  grid-column: 3 / 4;
 }
 
-.alignLeft {
-  justify-items: start;
+.alignLeft .numCard:only-child {
+  grid-column: 1 / 2;
 }
 
 @media (max-width: 768px) {
@@ -35,11 +36,11 @@
     grid-template-columns: 1fr;
   }
   
-  /* Reset alignment on mobile - always left */
-  .alignCenter,
-  .alignRight,
-  .alignLeft {
-    justify-items: stretch;
+  /* Reset alignment on mobile - always full width */
+  .alignCenter .numCard:only-child,
+  .alignRight .numCard:only-child,
+  .alignLeft .numCard:only-child {
+    grid-column: 1 / 2;
   }
 }
 
