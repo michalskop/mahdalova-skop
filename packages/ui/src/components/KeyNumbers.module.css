@@ -19,6 +19,18 @@
 
 /* Alignment for single items (desktop only) */
 /* When there's only one item, place it in the appropriate column */
+.alignCenter .sectionLabel {
+  text-align: center;
+}
+
+.alignRight .sectionLabel {
+  text-align: right;
+}
+
+.alignLeft .sectionLabel {
+  text-align: left;
+}
+
 .alignCenter .numCard:only-child {
   grid-column: 2 / 3;
 }
@@ -37,6 +49,12 @@
   }
   
   /* Reset alignment on mobile - always full width */
+  .alignCenter .sectionLabel,
+  .alignRight .sectionLabel,
+  .alignLeft .sectionLabel {
+    text-align: left;
+  }
+  
   .alignCenter .numCard:only-child,
   .alignRight .numCard:only-child,
   .alignLeft .numCard:only-child {
