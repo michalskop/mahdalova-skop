@@ -6,7 +6,7 @@ excerpt: "Největší omyl v debatách o „zlé AI“ je představa démona se 
 coverImage: "images/ai-rizika-ai-1.webp"
 filter: ["kontext"]
 tags: ["AI", "Claude Opus 4", "GPT-4", "bezpečnost AI", "manipulace", "deception", "alignment", "instrumentální konvergence", "kritické myšlení"]
-promoted: 38
+promoted: 3
 ---
 
 Největší omyl v debatách o „zlé AI“ je představa démona se zlými záměry. U dnešních modelů nejde primárně o zlo. Jde o urputnou optimalizaci cíle – která umí mít laskavou tvář. A právě proto se tak špatně pozná.
