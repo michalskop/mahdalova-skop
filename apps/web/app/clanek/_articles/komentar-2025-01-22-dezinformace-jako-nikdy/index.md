@@ -1,11 +1,12 @@
 ---
 title: "Glosa: Dezinformace jako nikdy"
-date: "2126-01-31"
+date: "2027-01-31"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Musk: Dezinformace jako nikdy"
 coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]
 tags: ["glosa", "zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
+promoted: 4
 ---
 
 Tady bude článek o Muskovi
