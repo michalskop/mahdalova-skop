@@ -1,3 +1,4 @@
+---
 title: "Data pro budoucí premiérku – demografie"
 date: "2026-05-18"
 author: "Kateřina Mahdalová & Michal Škop"
@@ -7,3 +8,4 @@ filter: ["data-pro-budouci-premierku", "demografie"]
 tags: ["demografie", "data-pro-budouci-premierku", "seriál", "plodnost", "stárnutí populace", "ČSÚ"]
 promoted: 1
 htmlInclude: "demografie-hub.html"
+---
