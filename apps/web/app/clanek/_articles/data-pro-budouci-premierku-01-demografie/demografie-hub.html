@@ -1,7 +1,11 @@
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&family=Roboto+Slab:wght@400;500;700;800&display=swap');
 .dt-hub {
   --dt-crimson: #de1743;
   --dt-amber: #b08000;
+  --dt-yellow: #ffcf02;
+  --dt-yellow-soft: #fffae0;
+  --dt-deep-red: #8b0e2b;
   --dt-ink: #101432;
   --dt-text: #1a1a1a;
   --dt-muted: #555;
@@ -21,7 +25,8 @@
 }
 
 .dt-lead {
-  font-size: 17px; line-height: 1.55; color: #2a2a2a;
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-size: 17px; line-height: 1.62; color: #2a2a2a;
   margin: 0 0 28px;
 }
 
@@ -36,8 +41,14 @@
 .dt-keystat-num {
   font-family: 'Roboto Slab', Georgia, serif;
   font-size: 44px; font-weight: 800; color: var(--dt-crimson); line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  font-synthesis: none;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
-.dt-keystat-text { font-size: 14px; color: #444; line-height: 1.5; }
+.dt-keystat-text { font-family: 'Roboto Slab', Georgia, serif; font-size: 14px; color: #444; line-height: 1.55; }
 .dt-keystat-text b { color: var(--dt-text); }
 .dt-keystat-source { color: #888; font-size: 12px; display: block; margin-top: 4px; }
 
@@ -91,9 +102,9 @@
 
 .dt-card-topic {
   font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 700; color: var(--dt-crimson); margin-bottom: 8px;
+  font-weight: 700; color: var(--dt-deep-red); margin-bottom: 8px;
 }
-.dt-card-topic--lead { color: var(--dt-text); }
+.dt-card-topic--lead { color: var(--dt-deep-red); }
 
 .dt-card-title {
   font-family: 'Roboto Slab', Georgia, serif;
@@ -103,7 +114,8 @@
 .dt-card-title--lead { font-size: 22px; line-height: 1.18; }
 
 .dt-card-desc {
-  font-size: 13.5px; color: var(--dt-muted); line-height: 1.5;
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-size: 13.5px; color: var(--dt-muted); line-height: 1.55;
   margin: 0 0 12px;
 }
 
@@ -123,22 +135,24 @@
 }
 
 .dt-data-grid {
+  font-family: 'Roboto', system-ui, sans-serif;
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 24px; font-size: 13px; color: #444;
   margin: 6px 0 28px;
 }
 .dt-data-h {
-  font-family: 'Roboto Slab', Georgia, serif;
+  font-family: 'Roboto', system-ui, sans-serif;
   font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
   font-weight: 700; color: var(--dt-text); margin: 0 0 8px;
 }
 .dt-data-list {
+  font-family: 'Roboto', system-ui, sans-serif;
   margin: 0; padding-left: 16px; line-height: 1.7;
 }
 
 .dt-infobox {
-  background: var(--dt-soft);
-  border-left: 4px solid var(--dt-crimson);
+  background: var(--dt-yellow-soft);
+  border-left: 4px solid var(--dt-yellow);
   border-radius: 6px;
   padding: 18px 22px;
   margin: 28px 0 8px;
@@ -167,7 +181,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--dt-crimson);
+  color: var(--dt-deep-red);
   margin: 0 0 8px;
 }
 .dt-visual-title {
@@ -178,9 +192,10 @@
   color: var(--dt-text);
 }
 .dt-visual-note {
+  font-family: 'Roboto Slab', Georgia, serif;
   font-size: 13px;
   color: var(--dt-muted);
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0 0 14px;
 }
 .dt-visual-svg {
@@ -189,6 +204,33 @@
   display: block;
   background: var(--dt-soft);
   border-radius: 4px;
+}
+.dt-visual-source {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: 11px;
+  color: #777;
+  line-height: 1.45;
+  margin: 8px 0 0;
+}
+.dt-visual-source a {
+  color: var(--dt-crimson);
+  text-decoration: underline;
+  text-decoration-color: rgba(222, 23, 67, 0.4);
+  text-underline-offset: 2px;
+}
+.dt-visual-source a:hover {
+  text-decoration-color: var(--dt-crimson);
+}
+.dt-visual-svg line,
+.dt-visual-svg path,
+.dt-visual-svg rect,
+.dt-visual-svg circle {
+  shape-rendering: geometricPrecision;
+  vector-effect: non-scaling-stroke;
+}
+.dt-visual-svg text {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
 }
 
 @media (max-width: 720px) {
@@ -247,22 +289,28 @@
 
 <div class="dt-hub">
 
-  <div class="dt-tag">Speciál · Data pro budoucí premiérku · Demografie</div>
+  <div class="dt-tag">Speciál • Data pro budoucí premiérku • Demografie</div>
 
   <h2 class="dt-section-h">Analýzy a kontext</h2>
 
   <div class="dt-keystat">
     <div class="dt-keystat-num">1,28</div>
     <div class="dt-keystat-text">
-      <b>dítěte na ženu</b> – odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod náhradní hodnotou 2,10, dokonce pod nejpesimističtějším scénářem ČSÚ. V roce 2024 se v Česku narodilo 84 311 dětí – <b>nejméně od roku 1785</b>.
-      <span class="dt-keystat-source">Zdroj: ČSÚ; odhad TFR 2025 z kulatého stolu PSP 27. 4. 2026.</span>
+      <b>dítěte na ženu</b> – odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod hodnotou 2,10, kterou chce Andrej Babiš a Alena Schillerová „zachránit“ Česko před vymíráním. Dokonce se aktuálně pohybujeme pod <a href="https://csu.gov.cz/docs/107508/de376ac6-82c8-1856-dc1f-ffecc8b88b34/13013923.pdf?version=1.0" target="_blank" rel="noopener">nejpesimističtějším scénářem ČSÚ</a>. 77,6 tisíce živě narozených v Česku v roce 2025 představuje vůbec <b>nejnižší hodnotu v historii statistického zjišťování od roku 1785</b>.
+      <span class="dt-keystat-source">Zdroj: ČSÚ; odhad TFR 2025 z kulatého stolu Poslanecké sněmovny 27. 4. 2026</span>
     </div>
   </div>
 
-  <p class="dt-lead">Co znamená, že se v Česku rodí 1,28 dítěte na ženu – a proč to nikdo neumí jednoduše zvrátit? Demografie není jen debata o tom, kolik se narodí dětí. Je to také příběh o vzdělání, bydlení, práci, zdraví, migraci, regionálních rozdílech a o tom, jak rychle stárne společnost. Přelidňuje se svět, nebo se jen výrazně mění jeho skladba? Co o sobě jako země neumíme spočítat a kde nám v datech zůstávají slepá místa? V demografickém bloku skládáme dohromady čísla, která bývají v politice často používána jako zkratka, ale bez kontextu spíš matou než vysvětlují.</p>
+  <p class="dt-lead">Co znamená, že se v Česku rodí jen 1,28 dítěte na ženu – a proč se takové číslo nedá jednoduše „opravit“ politickým slibem?
+
+Demografie pochopitelně začíná u toho, kolik se rodí dětí. Sama o sobě ale nestačí. Abychom rozuměli tomu, co se s českou společností děje, musíme vedle porodnosti či plodnosti sledovat také vzdělání, práci, bydlení, zdraví, migraci, regionální rozdíly i rychlé stárnutí populace.
+
+Stejně důležité je zasadit český vývoj do širšího obrazu. Přelidňuje se svět, nebo se především výrazně mění jeho skladba? Co o sobě jako země dokážeme přesně spočítat – a kde nám v datech zůstávají slepá místa?
+
+V demografickém bloku proto skládáme dohromady čísla, která se v politické debatě často používají jako zkratka. Bez kontextu ale spíš matou, než vysvětlují.</p>
 
   <div class="dt-visual">
-    <div class="dt-visual-kicker">Datový modul</div>
+    <div class="dt-visual-kicker">Vývoj plodnosti</div>
     <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
     <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
 
@@ -426,7 +474,7 @@
   </div>
 
   <HtmlEmbed file="support.html" />
-    
+
   <div class="dt-section-break">
     <h2 class="dt-section-h">Kdo bude rozhodovat</h2>
 
@@ -472,8 +520,9 @@
         <line x1="533" y1="38" x2="533" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
         <text x="539" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
 
-        <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ, Projekce obyvatelstva ČR 2023–2100 – Tab. 1 střední varianta (csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100); vlastní výpočet 50+ / 18+. Roky 1990–2020 zatím orientační, dopočet z Demografické příručky 2024 Tab. 1.10</text>
+        <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ; vlastní výpočet 50+ / 18+. Roky 1990–2020 zatím orientační, dopočet z Demografické příručky 2024 Tab. 1.10</text>
       </svg>
+      <p class="dt-visual-source">Zdroj: ČSÚ, <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a> – Tab. 1 střední varianta; vlastní výpočet 50+ / 18+. Roky 1990–2020 zatím orientační, dopočet z Demografické příručky 2024 Tab. 1.10</p>
     </div>
 
     <div class="dt-grid">
@@ -482,12 +531,12 @@
         <div class="dt-card-thumb">
           <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             <rect width="130" height="90" fill="#f8f6f0"/>
-            <rect x="10" y="60" width="14" height="20" fill="#de1743" opacity="0.3"/>
-            <rect x="28" y="48" width="14" height="32" fill="#de1743" opacity="0.45"/>
-            <rect x="46" y="32" width="14" height="48" fill="#de1743" opacity="0.65"/>
-            <rect x="64" y="20" width="14" height="60" fill="#de1743" opacity="0.85"/>
-            <rect x="82" y="14" width="14" height="66" fill="#de1743"/>
-            <rect x="100" y="22" width="14" height="58" fill="#8b0e2b"/>
+            <rect x="10" y="60" width="14" height="20" fill="#f76800" opacity="0.35"/>
+            <rect x="28" y="48" width="14" height="32" fill="#f76800" opacity="0.5"/>
+            <rect x="46" y="32" width="14" height="48" fill="#f76800" opacity="0.65"/>
+            <rect x="64" y="20" width="14" height="60" fill="#1a9fbd" opacity="0.75"/>
+            <rect x="82" y="14" width="14" height="66" fill="#1a9fbd"/>
+            <rect x="100" y="22" width="14" height="58" fill="#101432"/>
           </svg>
         </div>
         <div class="dt-card-body">
@@ -571,5 +620,3 @@
   <div class="dt-infobox">
     <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt dvojice datových novinářů a analytiků <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener">Mahdalová &amp; Škop</a>, který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat. Projekt vzniká s grantovou podporou <a href="https://www.nfnz.cz" target="_blank" rel="noopener">Nadačního fondu nezávislé žurnalistiky</a> a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
   </div>
-
-</div>
