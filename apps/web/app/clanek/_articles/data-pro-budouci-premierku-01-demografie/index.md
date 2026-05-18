@@ -55,7 +55,7 @@ Kdo bude vlastně rozhodovat o příští premiérce? Voličstvo v Česku stárn
     <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; color:#de1743; margin-bottom:8px;">Gender</div>
     <h3 style="font-family:'Roboto Slab',Georgia,serif; font-size:17px; font-weight:700; line-height:1.22; margin:0 0 8px; color:#1a1a1a;">Ženy v rozhodování: 1990–2026 v jednom grafu</h3>
     <p style="font-size:13.5px; color:#555; line-height:1.5; margin:0 0 12px;">Sněmovna, vláda, kraje, obce. Kde se zastoupení žen pohnulo, kde stojí.</p>
-    <div style="font-size:11px; color:#888; margin-top:auto; display:flex; gap:10px;"><span>📈 Graf</span><span style="color:#b08000; font-weight:500; text-transform:uppercase; letter-spacing:0.08em;">Připravujeme</span></div>
+    <div style="font-size:11px; color:#888; margin-top:auto; display:flex; gap:10px;"><span>📈 Grafická analýza</span><span style="color:#b08000; font-weight:500; text-transform:uppercase; letter-spacing:0.08em;">Připravujeme</span></div>
   </div>
 
   <!-- KARTA 4 -->
@@ -71,7 +71,7 @@ Kdo bude vlastně rozhodovat o příští premiérce? Voličstvo v Česku stárn
     <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; color:#de1743; margin-bottom:8px;">Rodina</div>
     <h3 style="font-family:'Roboto Slab',Georgia,serif; font-size:17px; font-weight:700; line-height:1.22; margin:0 0 8px; color:#1a1a1a;">Méně dětí, později. A co s tím?</h3>
     <p style="font-size:13.5px; color:#555; line-height:1.5; margin:0 0 12px;">Porodnost klesá pomalu, ale soustavně. Kdo dnes v Česku zakládá rodinu.</p>
-    <div style="font-size:11px; color:#888; margin-top:auto; display:flex; gap:10px;"><span>📊 Graf</span><span style="color:#b08000; font-weight:500; text-transform:uppercase; letter-spacing:0.08em;">Připravujeme</span></div>
+    <div style="font-size:11px; color:#888; margin-top:auto; display:flex; gap:10px;"><span>📊 Grafická analýza</span><span style="color:#b08000; font-weight:500; text-transform:uppercase; letter-spacing:0.08em;">Připravujeme</span></div>
   </div>
 
   <!-- KARTA 6 -->
