@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&family=Roboto+Slab:wght@400;500;700;800&display=swap');
 .dt-hub {
   --dt-crimson: #de1743;
-  --dt-amber: #b08000;
-  --dt-yellow: #ffcf02;
-  --dt-yellow-soft: #fffae0;
   --dt-deep-red: #8b0e2b;
   --dt-ink: #101432;
   --dt-text: #1a1a1a;
@@ -96,7 +93,9 @@
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.dt-card-thumb svg { display: block; width: 100%; height: 100%; }
+.dt-card-thumb svg,
+.dt-card-thumb img { display: block; width: 100%; height: 100%; }
+.dt-card-thumb img { object-fit: cover; }
 
 .dt-card-body { flex: 1; min-width: 0; }
 
@@ -127,7 +126,7 @@
 }
 .dt-card-meta-status { color: var(--dt-text); font-weight: 500; }
 .dt-card-meta-status--upcoming {
-  color: var(--dt-amber);
+  color: var(--dt-crimson);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -151,8 +150,8 @@
 }
 
 .dt-infobox {
-  background: var(--dt-yellow-soft);
-  border-left: 4px solid var(--dt-yellow);
+  background: var(--dt-soft);
+  border-left: 4px solid var(--dt-crimson);
   border-radius: 6px;
   padding: 18px 22px;
   margin: 28px 0 8px;
@@ -289,25 +288,19 @@
 
 <div class="dt-hub">
 
-  <div class="dt-tag">Speciál • Data pro budoucí premiérku • Demografie</div>
+  <div class="dt-tag">Speciál · Data pro budoucí premiérku · Demografie</div>
 
   <h2 class="dt-section-h">Analýzy a kontext</h2>
 
   <div class="dt-keystat">
     <div class="dt-keystat-num">1,28</div>
     <div class="dt-keystat-text">
-      <b>dítěte na ženu</b> – odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod hodnotou 2,10, kterou chce Andrej Babiš a Alena Schillerová „zachránit“ Česko před vymíráním. Dokonce se aktuálně pohybujeme pod <a href="https://csu.gov.cz/docs/107508/de376ac6-82c8-1856-dc1f-ffecc8b88b34/13013923.pdf?version=1.0" target="_blank" rel="noopener">nejpesimističtějším scénářem ČSÚ</a>. 77,6 tisíce živě narozených v Česku v roce 2025 představuje vůbec <b>nejnižší hodnotu v historii statistického zjišťování od roku 1785</b>.
-      <span class="dt-keystat-source">Zdroj: ČSÚ; odhad TFR 2025 z kulatého stolu Poslanecké sněmovny 27. 4. 2026</span>
+      <b>dítěte na ženu</b> – odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod hodnotou 2,10, kterou chce Andrej Babiš a Alena Schillerová „zachránit“ Česko před vymíráním. Dokonce se aktuálně pohybujeme pod <a href="https://csu.gov.cz/docs/107508/de376ac6-82c8-1856-dc1f-ffecc8b88b34/13013923.pdf?version=1.0" target="_blank" rel="noopener">nejpesimističtějším scénářem ČSÚ</a>. V roce 2024 se v Česku narodilo 84 311 dětí – <b>nejméně od roku 1785</b>.
+      <span class="dt-keystat-source">Zdroj: ČSÚ; odhad TFR (Total Fertility Rate, česky úhrnná plodnost) 2025 z kulatého stolu PSP 27. 4. 2026</span>
     </div>
   </div>
 
-  <p class="dt-lead">Co znamená, že se v Česku rodí jen 1,28 dítěte na ženu – a proč se takové číslo nedá jednoduše „opravit“ politickým slibem?
-
-Demografie pochopitelně začíná u toho, kolik se rodí dětí. To ale samo o sobě nestačí. Abychom rozuměli tomu, co se (zdaleka nejen) s českou společností děje, musíme vedle porodnosti či plodnosti sledovat také vzdělání, práci, bydlení, zdraví, migraci, regionální rozdíly i rychlé stárnutí populace.
-
-Stejně důležité je zasadit český vývoj do širšího obrazu. Přelidňuje se svět, nebo se především výrazně mění jeho skladba? Co o sobě jako země dokážeme přesně spočítat – a kde nám v datech zůstávají slepá místa?
-
-V demografickém bloku proto skládáme dohromady čísla, která se v politické debatě často používají jako zkratka. Bez kontextu ale spíš matou, než vysvětlují.</p>
+  <p class="dt-lead">Co znamená, že se v Česku rodí jen 1,28 dítěte na ženu – a proč se takové číslo nedá jednoduše „opravit“ politickým slibem? Demografie pochopitelně začíná u toho, kolik se rodí dětí. Sama o sobě ale nestačí. Abychom rozuměli tomu, co se s českou společností děje, musíme vedle porodnosti sledovat také vzdělání, práci, bydlení, zdraví, migraci, regionální rozdíly i rychlé stárnutí populace. Stejně důležité je zasadit český vývoj do širšího obrazu: přelidňuje se svět, nebo se především výrazně mění jeho skladba? Co o sobě jako země dokážeme přesně spočítat – a kde nám v datech zůstávají slepá místa? V demografickém bloku proto skládáme dohromady čísla, která se v politické debatě často používají jako zkratka. Bez kontextu ale spíš matou, než vysvětlují.</p>
 
   <div class="dt-visual">
     <div class="dt-visual-kicker">Vývoj plodnosti</div>
@@ -350,7 +343,7 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
       <!-- values above each data point -->
       <text x="72"  y="84"  font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,89</text>
       <text x="177" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
-      <text x="283" y="225" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,14</text>
+      <text x="283" y="197" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,14</text>
       <text x="388" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
       <text x="494" y="145" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,49</text>
       <text x="599" y="133" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,57</text>
@@ -367,8 +360,9 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
       <text x="705" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2020</text>
       <text x="810" y="254" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">2025</text>
 
-      <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ, časové řady úhrnné plodnosti (csu.gov.cz/produkty/oby_cr); rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</text>
+      <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</text>
     </svg>
+    <p class="dt-visual-source">Zdroj: ČSÚ, <a href="https://csu.gov.cz/produkty/oby_cr" target="_blank" rel="noopener">časové řady úhrnné plodnosti</a>; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
   </div>
 
   <div class="dt-grid">
@@ -386,8 +380,8 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
       </div>
       <div class="dt-card-body">
         <div class="dt-card-topic dt-card-topic--lead">Demografie – ČR</div>
-        <h3 class="dt-card-title dt-card-title--lead">Dvě děti na ženu. Babiš slibuje, co nikdo na světě nedokázal – a nedokáže to ani on.</h3>
-        <p class="dt-card-desc">Odhad plodnosti v Česku za rok 2025: 1,28 dítěte na ženu. Babišův cíl: 2,10. Žádná země na světě se k téhle hranici nikdy nevrátila. Velký rozbor s projekcí.</p>
+        <h3 class="dt-card-title dt-card-title--lead">Dvě děti na ženu. Babiš slibuje zázrak, který nikdo na světě nesvedl – a nedokáže to ani on</h3>
+        <p class="dt-card-desc">Odhad plodnosti v Česku za rok 2025: 1,28 dítěte na ženu (pro lepší představu 5 dětí na čtyři ženy). Babišův cíl: 2,10. Velký rozbor s projekcí.</p>
         <div class="dt-card-meta">
           <span>📊 Analýza</span>
         </div>
@@ -464,7 +458,7 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
     <div class="dt-card">
       <div class="dt-card-topic">Solution journalism</div>
       <h3 class="dt-card-title">Co nám pomůže? Jak to dělají jinde</h3>
-      <p class="dt-card-desc">Co je vlastně hlavní problém; je nutné ho pojmenovat. A podívat se, jak to dělají jinde.</p>
+      <p class="dt-card-desc">Co je vlastně hlavní problém; je nutné ho pojmenovat. A podívat se, jak ho řeší jinde.</p>
       <div class="dt-card-meta">
         <span>📈 Komparativní analýza</span>
         <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
@@ -491,9 +485,9 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
     <div class="dt-visual">
       <div class="dt-visual-kicker">Navržená vizualizace</div>
       <h3 class="dt-visual-title">Voličská populace stárne rychleji než politická debata</h3>
-      <p class="dt-visual-note">Sloupce ukazují modelovaný podíl lidí ve věku 50 a více let mezi pravděpodobnými voliči. Roky 2030, 2035 a 2040 jsou projekce založené na střední variantě projekce ČSÚ a stejném modelu věkové účasti.</p>
+      <p class="dt-visual-note">Sloupce ukazují podíl lidí ve věku 50 a více let mezi obyvateli ve věku 18 a více let. Roky 1990–2020 jsou dopočtené ze skutečné věkové skladby obyvatelstva podle jednotek věku; roky 2025, 2030, 2035 a 2040 vycházejí ze střední varianty projekce ČSÚ.</p>
 
-      <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modelovaný podíl voličů starších 50 let v letech 1990 až 2040">
+      <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Podíl obyvatel ve věku 50 a více let mezi obyvateli ve věku 18 a více let v letech 1990 až 2040">
         <line x1="72" y1="230" x2="810" y2="230" stroke="#101432" stroke-width="1"/>
         <line x1="72" y1="170" x2="810" y2="170" stroke="#d8d4c7" stroke-width="1"/>
         <line x1="72" y1="110" x2="810" y2="110" stroke="#d8d4c7" stroke-width="1"/>
@@ -504,44 +498,40 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
         <text x="64" y="114" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">40 %</text>
         <text x="64" y="54" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">60 %</text>
 
-        <!-- 8 bars distributed evenly across x=72..810 (width 60, slot 92.25) -->
         <g font-family="Roboto, system-ui, sans-serif">
-          <g><rect x="88"  y="116" width="60" height="114" fill="#101432"/><text x="118" y="106" font-size="13" fill="#101432" text-anchor="middle" font-weight="700">38 %</text><text x="118" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
-          <g><rect x="180" y="107" width="60" height="123" fill="#101432"/><text x="210" y="97"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">41 %</text><text x="210" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
-          <g><rect x="273" y="98"  width="60" height="132" fill="#101432"/><text x="303" y="88"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">44 %</text><text x="303" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
-          <g><rect x="365" y="86"  width="60" height="144" fill="#101432"/><text x="395" y="76"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">48 %</text><text x="395" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
-          <g><rect x="457" y="84"  width="60" height="150" fill="#101432"/><text x="487" y="74"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">50 %</text><text x="487" y="254" font-size="11" fill="#444" text-anchor="middle">2025</text></g>
-          <g><rect x="549" y="74"  width="60" height="160" fill="#101432"/><text x="579" y="64"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">53 %</text><text x="579" y="254" font-size="11" fill="#444" text-anchor="middle">2030</text></g>
-          <g><rect x="642" y="70"  width="60" height="164" fill="#101432"/><text x="672" y="60"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">55 %</text><text x="672" y="254" font-size="11" fill="#444" text-anchor="middle">2035</text></g>
-          <g><rect x="734" y="68"  width="60" height="166" fill="#101432"/><text x="764" y="58"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">55 %</text><text x="764" y="254" font-size="11" fill="#444" text-anchor="middle">2040</text></g>
+          <g data-year="1990" data-value="37.819"><rect x="77.0" y="116.5" width="42" height="113.5" fill="#101432"/><text x="98.0" y="108.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">37,8 %</text><text x="98.0" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
+          <g data-year="1995" data-value="38.058"><rect x="144.0" y="115.8" width="42" height="114.2" fill="#101432"/><text x="165.0" y="107.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">38,1 %</text><text x="165.0" y="254" font-size="11" fill="#444" text-anchor="middle">1995</text></g>
+          <g data-year="2000" data-value="40.789"><rect x="211.0" y="107.6" width="42" height="122.4" fill="#101432"/><text x="232.0" y="99.6" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">40,8 %</text><text x="232.0" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
+          <g data-year="2005" data-value="43.211"><rect x="278.0" y="100.4" width="42" height="129.6" fill="#101432"/><text x="299.0" y="92.4" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,2 %</text><text x="299.0" y="254" font-size="11" fill="#444" text-anchor="middle">2005</text></g>
+          <g data-year="2010" data-value="43.819"><rect x="345.0" y="98.5" width="42" height="131.5" fill="#101432"/><text x="366.0" y="90.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,8 %</text><text x="366.0" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
+          <g data-year="2015" data-value="46.111"><rect x="412.0" y="91.7" width="42" height="138.3" fill="#101432"/><text x="433.0" y="83.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">46,1 %</text><text x="433.0" y="254" font-size="11" fill="#444" text-anchor="middle">2015</text></g>
+          <g data-year="2020" data-value="47.731"><rect x="479.0" y="86.8" width="42" height="143.2" fill="#101432"/><text x="500.0" y="78.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">47,7 %</text><text x="500.0" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
+          <g data-year="2025" data-value="49.920"><rect x="546.0" y="80.2" width="42" height="149.8" fill="#101432"/><text x="567.0" y="72.2" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">49,9 %</text><text x="567.0" y="254" font-size="11" fill="#de1743" text-anchor="middle" font-weight="700">2025</text></g>
+          <g data-year="2030" data-value="53.442"><rect x="613.0" y="69.7" width="42" height="160.3" fill="#101432"/><text x="634.0" y="61.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">53,4 %</text><text x="634.0" y="254" font-size="11" fill="#de1743" text-anchor="middle" font-weight="700">2030</text></g>
+          <g data-year="2035" data-value="54.685"><rect x="680.0" y="65.9" width="42" height="164.1" fill="#101432"/><text x="701.0" y="57.9" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">54,7 %</text><text x="701.0" y="254" font-size="11" fill="#de1743" text-anchor="middle" font-weight="700">2035</text></g>
+          <g data-year="2040" data-value="55.449"><rect x="747.0" y="63.7" width="42" height="166.3" fill="#101432"/><text x="768.0" y="55.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">55,4 %</text><text x="768.0" y="254" font-size="11" fill="#de1743" text-anchor="middle" font-weight="700">2040</text></g>
         </g>
 
-        <!-- projection divider between 2025 (ends x=517) and 2030 (starts x=549): midpoint 533 -->
-        <line x1="533" y1="38" x2="533" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
-        <text x="539" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
+        <line x1="539" y1="38" x2="539" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="545" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
 
-        <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ; vlastní výpočet 50+ / 18+. Roky 1990–2020 zatím orientační, dopočet z Demografické příručky 2024 Tab. 1.10</text>
+        <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ; skutečné hodnoty 1990–2020 z věkové skladby obyvatelstva, 2025–2040 ze střední varianty projekce</text>
       </svg>
-      <p class="dt-visual-source">Zdroj: ČSÚ, <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a> – Tab. 1 střední varianta; vlastní výpočet 50+ / 18+. Roky 1990–2020 zatím orientační, dopočet z Demografické příručky 2024 Tab. 1.10</p>
+      <p class="dt-visual-source">Zdroj: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
     </div>
 
     <div class="dt-grid">
 
       <div class="dt-card dt-card--lead">
         <div class="dt-card-thumb">
-          <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <rect width="130" height="90" fill="#f8f6f0"/>
-            <rect x="10" y="60" width="14" height="20" fill="#f76800" opacity="0.35"/>
-            <rect x="28" y="48" width="14" height="32" fill="#f76800" opacity="0.5"/>
-            <rect x="46" y="32" width="14" height="48" fill="#f76800" opacity="0.65"/>
-            <rect x="64" y="20" width="14" height="60" fill="#1a9fbd" opacity="0.75"/>
-            <rect x="82" y="14" width="14" height="66" fill="#1a9fbd"/>
-            <rect x="100" y="22" width="14" height="58" fill="#101432"/>
+          <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Schéma Poslanecké sněmovny – amfiteátr s mandáty">
+            <rect width="140" height="90" fill="#f8f6f0"/>
+            <g><circle cx="8.9" cy="52.2" r="3.8" fill="#111111"/><circle cx="13.6" cy="44.0" r="3.8" fill="#111111"/><circle cx="19.5" cy="36.5" r="3.8" fill="#5b63d3"/><circle cx="26.3" cy="29.9" r="3.8" fill="#5b63d3"/><circle cx="34.0" cy="24.3" r="3.8" fill="#5b63d3"/><circle cx="42.3" cy="19.9" r="3.8" fill="#5b63d3"/><circle cx="51.3" cy="16.6" r="3.8" fill="#de1743"/><circle cx="60.5" cy="14.7" r="3.8" fill="#de1743"/><circle cx="70.0" cy="14.0" r="3.8" fill="#de1743"/><circle cx="79.5" cy="14.7" r="3.8" fill="#de1743"/><circle cx="88.7" cy="16.6" r="3.8" fill="#1a9fbd"/><circle cx="97.7" cy="19.9" r="3.8" fill="#1a9fbd"/><circle cx="106.0" cy="24.3" r="3.8" fill="#1a9fbd"/><circle cx="113.7" cy="29.9" r="3.8" fill="#252a5b"/><circle cx="120.5" cy="36.5" r="3.8" fill="#252a5b"/><circle cx="126.4" cy="44.0" r="3.8" fill="#252a5b"/><circle cx="131.1" cy="52.2" r="3.8" fill="#252a5b"/><circle cx="14.9" cy="72.3" r="3.8" fill="#111111"/><circle cx="17.0" cy="63.9" r="3.8" fill="#111111"/><circle cx="20.5" cy="55.9" r="3.8" fill="#111111"/><circle cx="25.1" cy="48.6" r="3.8" fill="#5b63d3"/><circle cx="30.8" cy="42.0" r="3.8" fill="#5b63d3"/><circle cx="37.4" cy="36.4" r="3.8" fill="#5b63d3"/><circle cx="44.9" cy="32.0" r="3.8" fill="#5b63d3"/><circle cx="52.9" cy="28.7" r="3.8" fill="#de1743"/><circle cx="61.3" cy="26.7" r="3.8" fill="#de1743"/><circle cx="70.0" cy="26.0" r="3.8" fill="#de1743"/><circle cx="78.7" cy="26.7" r="3.8" fill="#de1743"/><circle cx="87.1" cy="28.7" r="3.8" fill="#1a9fbd"/><circle cx="95.1" cy="32.0" r="3.8" fill="#1a9fbd"/><circle cx="102.6" cy="36.4" r="3.8" fill="#1a9fbd"/><circle cx="109.2" cy="42.0" r="3.8" fill="#252a5b"/><circle cx="114.9" cy="48.6" r="3.8" fill="#252a5b"/><circle cx="119.5" cy="55.9" r="3.8" fill="#252a5b"/><circle cx="123.0" cy="63.9" r="3.8" fill="#252a5b"/><circle cx="125.1" cy="72.3" r="3.8" fill="#252a5b"/><circle cx="26.7" cy="74.4" r="3.8" fill="#5b63d3"/><circle cx="28.7" cy="67.0" r="3.8" fill="#5b63d3"/><circle cx="31.9" cy="60.0" r="3.8" fill="#5b63d3"/><circle cx="36.3" cy="53.7" r="3.8" fill="#5b63d3"/><circle cx="41.7" cy="48.3" r="3.8" fill="#5b63d3"/><circle cx="48.0" cy="43.9" r="3.8" fill="#5b63d3"/><circle cx="55.0" cy="40.7" r="3.8" fill="#de1743"/><circle cx="62.4" cy="38.7" r="3.8" fill="#de1743"/><circle cx="70.0" cy="38.0" r="3.8" fill="#de1743"/><circle cx="77.6" cy="38.7" r="3.8" fill="#de1743"/><circle cx="85.0" cy="40.7" r="3.8" fill="#1a9fbd"/><circle cx="92.0" cy="43.9" r="3.8" fill="#1a9fbd"/><circle cx="98.3" cy="48.3" r="3.8" fill="#252a5b"/><circle cx="103.7" cy="53.7" r="3.8" fill="#252a5b"/><circle cx="108.1" cy="60.0" r="3.8" fill="#252a5b"/><circle cx="111.3" cy="67.0" r="3.8" fill="#252a5b"/><circle cx="113.3" cy="74.4" r="3.8" fill="#252a5b"/><circle cx="38.5" cy="76.4" r="3.8" fill="#5b63d3"/><circle cx="40.4" cy="69.9" r="3.8" fill="#5b63d3"/><circle cx="43.7" cy="63.8" r="3.8" fill="#5b63d3"/><circle cx="48.1" cy="58.6" r="3.8" fill="#5b63d3"/><circle cx="53.6" cy="54.5" r="3.8" fill="#5b63d3"/><circle cx="59.9" cy="51.6" r="3.8" fill="#de1743"/><circle cx="66.6" cy="50.2" r="3.8" fill="#de1743"/><circle cx="73.4" cy="50.2" r="3.8" fill="#de1743"/><circle cx="80.1" cy="51.6" r="3.8" fill="#1a9fbd"/><circle cx="86.4" cy="54.5" r="3.8" fill="#1a9fbd"/><circle cx="91.9" cy="58.6" r="3.8" fill="#252a5b"/><circle cx="96.3" cy="63.8" r="3.8" fill="#252a5b"/><circle cx="99.6" cy="69.9" r="3.8" fill="#252a5b"/><circle cx="101.5" cy="76.4" r="3.8" fill="#252a5b"/><circle cx="49.3" cy="78.4" r="3.8" fill="#5b63d3"/><circle cx="51.4" cy="72.2" r="3.8" fill="#5b63d3"/><circle cx="55.3" cy="67.0" r="3.8" fill="#5b63d3"/><circle cx="60.6" cy="63.2" r="3.8" fill="#5b63d3"/><circle cx="66.8" cy="61.3" r="3.8" fill="#de1743"/><circle cx="73.2" cy="61.3" r="3.8" fill="#de1743"/><circle cx="79.4" cy="63.2" r="3.8" fill="#1a9fbd"/><circle cx="84.7" cy="67.0" r="3.8" fill="#252a5b"/><circle cx="88.6" cy="72.2" r="3.8" fill="#252a5b"/><circle cx="90.7" cy="78.4" r="3.8" fill="#252a5b"/></g>
           </svg>
         </div>
         <div class="dt-card-body">
           <div class="dt-card-topic dt-card-topic--lead">Voličská základna – ČR</div>
-          <h3 class="dt-card-title dt-card-title--lead">Kdo bude volit příští sněmovnu</h3>
+          <h3 class="dt-card-title dt-card-title--lead">Kdo bude volit příští Sněmovnu</h3>
           <p class="dt-card-desc">Voličská populace se posouvá. Generace, která rozhodla volby 2025, bude za čtyři roky menšinou. Velký přehled: věk, vzdělání, region.</p>
           <div class="dt-card-meta">
             <span>📊 Datový explainer</span>
@@ -620,3 +610,6 @@ V demografickém bloku proto skládáme dohromady čísla, která se v politick�
   <div class="dt-infobox">
     <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt dvojice datových novinářů a analytiků <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener">Mahdalová &amp; Škop</a>, který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat. Projekt vzniká s grantovou podporou <a href="https://www.nfnz.cz" target="_blank" rel="noopener">Nadačního fondu nezávislé žurnalistiky</a> a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
   </div>
+
+</div>
+
