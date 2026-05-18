@@ -1,0 +1,195 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Podpořte DataTimes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  .dt-wrap {
+    width: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+
+  .dt-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 12px;
+    background: #0d1438;
+    text-decoration: none;
+    overflow: hidden;
+    transition: filter .18s ease;
+  }
+
+  .dt-link:hover {
+    filter: brightness(1.05);
+  }
+
+  .dt-link:focus-visible {
+    outline: 2px solid #ffcf02;
+    outline-offset: 2px;
+  }
+
+  .dt-link::before,
+  .dt-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+  }
+
+  .dt-link::before {
+    top: 0;
+    background: linear-gradient(to right, #de1743 0%, #f76800 52%, #ffcf02 100%);
+  }
+
+  .dt-link::after {
+    bottom: 0;
+    background: linear-gradient(to right, #ffcf02 0%, #f76800 48%, #de1743 100%);
+  }
+
+  .dt-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    min-width: 175px;
+  }
+
+  .dt-logo svg {
+    display: block;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .dt-name {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .dt-red {
+    color: #de1743;
+  }
+
+  .dt-yellow {
+    color: #ffcf02;
+  }
+
+  .dt-text {
+    flex: 1 1 auto;
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .dt-cta {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 148px;
+    padding: 14px 26px;
+    background: #f01952;
+    color: #ffffff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    border-radius: 999px;
+    transition: background .18s ease, transform .18s ease;
+  }
+
+  .dt-link:hover .dt-cta {
+    background: #d91347;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 760px) {
+    .dt-link {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 14px 14px 16px;
+    }
+
+    .dt-brand {
+      min-width: 0;
+    }
+
+    .dt-text {
+      font-size: 14px;
+    }
+
+    .dt-cta {
+      width: 100%;
+      min-width: 0;
+      font-size: 17px;
+    }
+  }
+</style>
+
+<div class="dt-wrap">
+  <a
+    class="dt-link"
+    href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Podpořit DataTimes přes Stripe"
+  >
+    <div class="dt-brand">
+      <div class="dt-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true">
+          <defs>
+            <linearGradient id="dtG2" x1="1" x2=".25" y1=".5" y2="1">
+              <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <g transform="rotate(-30 250 250)">
+            <path fill="none" stroke="#ffcf02" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+            <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M336.60254 300 A100 100 0 0 0 250 150"/>
+            <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M250 150 A100 100 0 0 0 250 350"/>
+            <path fill="none" stroke="url(#dtG2)" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+          </g>
+        </svg>
+      </div>
+
+      <p class="dt-name">
+        <span class="dt-red">Data</span><span class="dt-yellow">Times</span>
+      </p>
+    </div>
+
+    <p class="dt-text">
+      Veřejný prostor i&nbsp;politiku zaplavují blbosti, fake news a&nbsp;propaganda.
+      Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy.
+      Za cenu jednoho oběda.
+    </p>
+
+    <span class="dt-cta">Jdu do toho</span>
+  </a>
+</div>
