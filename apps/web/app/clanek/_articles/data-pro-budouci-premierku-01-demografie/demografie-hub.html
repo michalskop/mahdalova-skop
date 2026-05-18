@@ -1,10 +1,23 @@
 <style>
-.dt-hub { font-family: 'Roboto', system-ui, sans-serif; color: #1a1a1a; line-height: 1.55; }
+.dt-hub {
+  --dt-crimson: #de1743;
+  --dt-amber: #b08000;
+  --dt-ink: #101432;
+  --dt-text: #1a1a1a;
+  --dt-muted: #555;
+  --dt-soft: #f8f6f0;
+  --dt-line: #e8e3d2;
+  --dt-teal: #1a9fbd;
+
+  font-family: 'Roboto', system-ui, sans-serif;
+  color: var(--dt-text);
+  line-height: 1.55;
+}
 .dt-hub * { box-sizing: border-box; }
 
 .dt-tag {
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 700; color: #de1743; margin: 0 0 12px;
+  font-weight: 700; color: var(--dt-crimson); margin: 0 0 12px;
 }
 
 .dt-lead {
@@ -13,28 +26,30 @@
 }
 
 .dt-keystat {
-  background: #fff; border: 1px solid #e8e3d2; border-left: 4px solid #de1743;
+  background: #fff;
+  border: 1px solid var(--dt-line);
+  border-left: 4px solid var(--dt-crimson);
+  border-radius: 6px;
   padding: 18px 22px; margin: 0 0 36px;
   display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center;
 }
 .dt-keystat-num {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 44px; font-weight: 800; color: #de1743; line-height: 1;
+  font-size: 44px; font-weight: 800; color: var(--dt-crimson); line-height: 1;
 }
 .dt-keystat-text { font-size: 14px; color: #444; line-height: 1.5; }
-.dt-keystat-text b { color: #1a1a1a; }
+.dt-keystat-text b { color: var(--dt-text); }
 .dt-keystat-source { color: #888; font-size: 12px; display: block; margin-top: 4px; }
 
 .dt-section-h {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 22px; font-weight: 700; color: #1a1a1a;
+  font-size: 22px; font-weight: 700; color: var(--dt-text);
   margin: 32px 0 16px; line-height: 1.2;
 }
 
 .dt-section-break {
-  margin-top: 56px;
-  padding-top: 36px;
-  border-top: 1px solid #e8e3d2;
+  margin-top: 48px;
+  padding-top: 24px;
 }
 
 .dt-grid {
@@ -43,19 +58,21 @@
 }
 
 .dt-card {
-  background: #fff; border: 1px solid #e8e3d2;
+  background: #fff;
+  border: 1px solid var(--dt-line);
+  border-radius: 6px;
   padding: 16px 18px 18px;
   display: flex; flex-direction: column;
   min-height: 180px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .dt-card:hover {
-  border-color: #de1743;
-  box-shadow: 0 2px 10px rgba(222, 23, 67, 0.07);
+  border-color: var(--dt-crimson);
+  box-shadow: 0 2px 10px rgba(222, 23, 67, 0.08);
 }
 .dt-card--lead {
   grid-column: 1 / -1;
-  border-top: 4px solid #de1743;
+  border-top: 4px solid var(--dt-crimson);
   padding: 18px 20px 20px;
   flex-direction: row; align-items: flex-start;
   gap: 18px;
@@ -63,28 +80,30 @@
 
 .dt-card-thumb {
   width: 130px; height: 90px; flex-shrink: 0;
-  background: #fbe8eb;
+  background: var(--dt-soft);
+  border-radius: 4px;
+  overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
 .dt-card-thumb svg { display: block; width: 100%; height: 100%; }
 
-.dt-card-body { flex: 1; }
+.dt-card-body { flex: 1; min-width: 0; }
 
 .dt-card-topic {
   font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 700; color: #de1743; margin-bottom: 8px;
+  font-weight: 700; color: var(--dt-crimson); margin-bottom: 8px;
 }
-.dt-card-topic--lead { color: #1a1a1a; }
+.dt-card-topic--lead { color: var(--dt-text); }
 
 .dt-card-title {
   font-family: 'Roboto Slab', Georgia, serif;
   font-size: 17px; font-weight: 700; line-height: 1.22;
-  margin: 0 0 8px; color: #1a1a1a;
+  margin: 0 0 8px; color: var(--dt-text);
 }
 .dt-card-title--lead { font-size: 22px; line-height: 1.18; }
 
 .dt-card-desc {
-  font-size: 13.5px; color: #555; line-height: 1.5;
+  font-size: 13.5px; color: var(--dt-muted); line-height: 1.5;
   margin: 0 0 12px;
 }
 
@@ -92,11 +111,15 @@
   font-size: 11px; color: #888;
   margin-top: auto;
   display: flex; gap: 10px; align-items: center;
+  flex-wrap: wrap;
 }
-.dt-card-meta-status { color: #1a1a1a; font-weight: 500; }
+.dt-card-meta-status { color: var(--dt-text); font-weight: 500; }
 .dt-card-meta-status--upcoming {
-  color: #b08000; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--dt-amber);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
 }
 
 .dt-data-grid {
@@ -107,53 +130,210 @@
 .dt-data-h {
   font-family: 'Roboto Slab', Georgia, serif;
   font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-  font-weight: 700; color: #1a1a1a; margin: 0 0 8px;
+  font-weight: 700; color: var(--dt-text); margin: 0 0 8px;
 }
 .dt-data-list {
   margin: 0; padding-left: 16px; line-height: 1.7;
 }
 
 .dt-infobox {
-  background: #fffae0;
-  border-left: 4px solid #ffcf02;
+  background: var(--dt-soft);
+  border-left: 4px solid var(--dt-crimson);
+  border-radius: 6px;
   padding: 18px 22px;
   margin: 28px 0 8px;
   font-size: 14px; color: #2a2a2a; line-height: 1.6;
 }
-.dt-infobox strong { color: #1a1a1a; }
+.dt-infobox strong { color: var(--dt-text); }
+.dt-infobox a {
+  color: var(--dt-crimson);
+  text-decoration: underline;
+  text-decoration-color: rgba(222, 23, 67, 0.4);
+  text-underline-offset: 2px;
+}
+.dt-infobox a:hover {
+  text-decoration-color: var(--dt-crimson);
+}
+
+.dt-visual {
+  background: #fff;
+  border: 1px solid var(--dt-line);
+  border-radius: 6px;
+  padding: 18px 20px 16px;
+  margin: -10px 0 30px;
+}
+.dt-visual-kicker {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dt-crimson);
+  margin: 0 0 8px;
+}
+.dt-visual-title {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  color: var(--dt-text);
+}
+.dt-visual-note {
+  font-size: 13px;
+  color: var(--dt-muted);
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+.dt-visual-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--dt-soft);
+  border-radius: 4px;
+}
+
+@media (max-width: 720px) {
+  .dt-grid { grid-template-columns: 1fr; }
+  .dt-card--lead {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .dt-card-thumb {
+    width: 100%;
+    height: 160px;
+  }
+  .dt-data-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .dt-keystat {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px 18px;
+  }
+  .dt-keystat-num { font-size: 38px; }
+  .dt-card-title--lead { font-size: 19px; }
+  .dt-lead { font-size: 16px; }
+  .dt-section-h {
+    font-size: 20px;
+    margin: 24px 0 14px;
+  }
+  .dt-section-break {
+    margin-top: 36px;
+    padding-top: 18px;
+  }
+  .dt-card,
+  .dt-infobox {
+    padding: 16px 18px;
+  }
+  .dt-visual {
+    padding: 16px 18px;
+    margin: -4px 0 26px;
+  }
+  .dt-visual-title { font-size: 16px; }
+}
+
+@media (max-width: 420px) {
+  .dt-keystat-num { font-size: 32px; }
+  .dt-card-title { font-size: 16px; }
+  .dt-card-title--lead { font-size: 17px; }
+  .dt-card-thumb { height: 140px; }
+  .dt-tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+}
 </style>
 
 <div class="dt-hub">
 
-  <!-- ================================================== -->
-  <!-- CLUSTER 1: ANALÝZY A KONTEXT                       -->
-  <!-- ================================================== -->
-
   <div class="dt-tag">Speciál · Data pro budoucí premiérku · Demografie</div>
 
-  <p class="dt-lead">Co znamená, že se v Česku rodí 1,28 dítěte na ženu – a proč to nikdo neumí zvrátit? Přelidňuje se svět, nebo se jen výrazně mění jeho skladba? Co o sobě jako země neumíme spočítat? V demografickém bloku se ptáme, co vlastně víme o Česku a co různá měření a šetření skutečně říkají.</p>
+  <h2 class="dt-section-h">Analýzy a kontext</h2>
 
   <div class="dt-keystat">
     <div class="dt-keystat-num">1,28</div>
     <div class="dt-keystat-text">
-      <b>dítěte na ženu</b> — odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod náhradní hodnotou 2,10, dokonce pod nejpesimističtějším scénářem ČSÚ. V roce 2024 se v Česku narodilo 84 311 dětí — <b>nejméně od roku 1785</b>.
+      <b>dítěte na ženu</b> – odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod náhradní hodnotou 2,10, dokonce pod nejpesimističtějším scénářem ČSÚ. V roce 2024 se v Česku narodilo 84 311 dětí – <b>nejméně od roku 1785</b>.
       <span class="dt-keystat-source">Zdroj: ČSÚ; odhad TFR 2025 z kulatého stolu PSP 27. 4. 2026.</span>
     </div>
   </div>
 
-  <h2 class="dt-section-h">Analýzy a kontext</h2>
+  <p class="dt-lead">Co znamená, že se v Česku rodí 1,28 dítěte na ženu – a proč to nikdo neumí jednoduše zvrátit? Demografie není jen debata o tom, kolik se narodí dětí. Je to také příběh o vzdělání, bydlení, práci, zdraví, migraci, regionálních rozdílech a o tom, jak rychle stárne společnost. Přelidňuje se svět, nebo se jen výrazně mění jeho skladba? Co o sobě jako země neumíme spočítat a kde nám v datech zůstávají slepá místa? V demografickém bloku skládáme dohromady čísla, která bývají v politice často používána jako zkratka, ale bez kontextu spíš matou než vysvětlují.</p>
+
+  <div class="dt-visual">
+    <div class="dt-visual-kicker">Datový modul</div>
+    <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
+    <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
+
+    <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku od roku 1990 do roku 2025 v pětiletých intervalech, hranice prosté reprodukce 2,10 dítěte na ženu">
+      <!-- gridlines -->
+      <line x1="72" y1="230" x2="810" y2="230" stroke="#101432" stroke-width="1"/>
+      <line x1="72" y1="185" x2="810" y2="185" stroke="#d8d4c7" stroke-width="1"/>
+      <line x1="72" y1="140" x2="810" y2="140" stroke="#d8d4c7" stroke-width="1"/>
+      <line x1="72" y1="95" x2="810" y2="95" stroke="#d8d4c7" stroke-width="1"/>
+      <line x1="72" y1="50" x2="810" y2="50" stroke="#d8d4c7" stroke-width="1"/>
+
+      <!-- y-axis labels (muted) -->
+      <text x="64" y="234" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,0</text>
+      <text x="64" y="189" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,3</text>
+      <text x="64" y="144" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,6</text>
+      <text x="64" y="99" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,9</text>
+      <text x="64" y="54" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">2,2</text>
+
+      <!-- hranice 2,10 dashed line -->
+      <line x1="72" y1="65" x2="810" y2="65" stroke="#1a9fbd" stroke-width="2" stroke-dasharray="5,4"/>
+      <text x="804" y="57" font-size="12" fill="#1a9fbd" text-anchor="end" font-family="Roboto, system-ui, sans-serif" font-weight="700">hranice 2,10</text>
+
+      <!-- TFR polyline, 8 evenly-spaced 5-year intervals: 1990-2025 -->
+      <path d="M72,96.5 L177,188 L283,209 L388,188 L494,156.5 L599,144.5 L705,123.5 L810,188"
+        fill="none" stroke="#de1743" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- data points -->
+      <circle cx="72"  cy="96.5"  r="4" fill="#de1743"/>
+      <circle cx="177" cy="188"   r="4" fill="#de1743"/>
+      <circle cx="283" cy="209"   r="4" fill="#de1743"/>
+      <circle cx="388" cy="188"   r="4" fill="#de1743"/>
+      <circle cx="494" cy="156.5" r="4" fill="#de1743"/>
+      <circle cx="599" cy="144.5" r="4" fill="#de1743"/>
+      <circle cx="705" cy="123.5" r="4" fill="#de1743"/>
+      <circle cx="810" cy="188"   r="6" fill="#de1743"/>
+
+      <!-- values above each data point -->
+      <text x="72"  y="84"  font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,89</text>
+      <text x="177" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
+      <text x="283" y="225" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,14</text>
+      <text x="388" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
+      <text x="494" y="145" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,49</text>
+      <text x="599" y="133" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,57</text>
+      <text x="705" y="112" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,71</text>
+      <text x="810" y="176" font-size="13" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="800">1,28</text>
+
+      <!-- x-axis year labels, evenly spaced -->
+      <text x="72"  y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">1990</text>
+      <text x="177" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">1995</text>
+      <text x="283" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2000</text>
+      <text x="388" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2005</text>
+      <text x="494" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2010</text>
+      <text x="599" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2015</text>
+      <text x="705" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2020</text>
+      <text x="810" y="254" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">2025</text>
+
+      <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026.</text>
+    </svg>
+  </div>
 
   <div class="dt-grid">
 
-    <!-- KARTA: BABIŠ / 2,1 – hlavní článek (existuje) -->
     <div class="dt-card dt-card--lead">
       <div class="dt-card-thumb">
-        <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <rect width="140" height="90" fill="#f8f6f0"/>
           <line x1="10" y1="80" x2="120" y2="80" stroke="#1a1a1a" stroke-width="1"/>
-          <polyline points="10,40 30,38 50,42 70,46 90,58 110,72" stroke="#de1743" stroke-width="2.5" fill="none"/>
           <line x1="10" y1="25" x2="120" y2="25" stroke="#1a9fbd" stroke-width="1.5" stroke-dasharray="3,2"/>
-          <text x="115" y="22" font-size="8" fill="#1a9fbd" text-anchor="end" font-family="Georgia,serif">cíl 2,10</text>
-          <text x="115" y="70" font-size="8" fill="#de1743" text-anchor="end" font-family="Georgia,serif">1,28</text>
+          <polyline points="10,40 30,38 50,42 70,46 90,58 110,72" stroke="#de1743" stroke-width="2.5" fill="none"/>
+          <text x="138" y="20" font-size="9" fill="#1a9fbd" text-anchor="end" font-family="Georgia,serif" font-weight="bold">cíl 2,10</text>
+          <text x="138" y="76" font-size="10" fill="#de1743" text-anchor="end" font-family="Georgia,serif" font-weight="bold">1,28</text>
         </svg>
       </div>
       <div class="dt-card-body">
@@ -166,50 +346,43 @@
       </div>
     </div>
 
-    <!-- KARTA: Co znamená 1,28? – explainer (existuje) -->
     <div class="dt-card">
       <div class="dt-card-topic">Explainer · Plodnost</div>
       <h3 class="dt-card-title">Co znamená 1,28?</h3>
       <p class="dt-card-desc">Číslo, o kterém se mluví pořád, ale málokdo opravdu chápe, co znamená. Průvodce úhrnnou plodností pro každého.</p>
-      <div class="dt-card-meta">
-        <span>📐 Vizuální explainer</span>
-      </div>
+      <div class="dt-card-meta"><span>📐 Vizuální explainer</span></div>
     </div>
 
-    <!-- KARTA: Togo / globální rámec -->
     <div class="dt-card">
       <div class="dt-card-topic">Demografie – svět</div>
       <h3 class="dt-card-title">Svět se nepřelidňuje, zato se výrazně mění jeho skladba</h3>
-      <p class="dt-card-desc">V roce 1919 se mezi částí tuzemské elity zrodila myšlenka, že by Československo mělo vlastní africkou kolonii — Togo, které tehdy mělo méně než desetinu obyvatel mladé republiky (necelý milion). Za patnáct let bude mít Togo víc obyvatel než Česká republika. Globální demografický posun na jednom příběhu.</p>
+      <p class="dt-card-desc">V roce 1919 se mezi částí tuzemské elity zrodila myšlenka, že by Československo mělo vlastní africkou kolonii – Togo, které tehdy mělo méně než desetinu obyvatel mladé republiky. Za patnáct let bude mít Togo víc obyvatel než Česká republika.</p>
       <div class="dt-card-meta">
-        <span>🌍 Datový explainer</span>
+        <span>📐 Vizuální explainer</span>
         <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
       </div>
     </div>
 
-    <!-- KARTA: Skandinávská past -->
     <div class="dt-card">
       <div class="dt-card-topic">Demografie – Evropa</div>
       <h3 class="dt-card-title">Skandinávská past</h3>
-      <p class="dt-card-desc">Žádná vláda na světě nezvládla vrátit plodnost k původním hodnotám z dob, kdy se v důsledku nižšího vzdělání a horší zdravotní péče rodilo více dětí. Ze čtyřiadvaceti zemí OECD nevychází ani jedna, kde by se trend obrátil. Skandinávie zpomalila pád, ale nezastavila ho.</p>
+      <p class="dt-card-desc">Žádná vláda na světě nezvládla vrátit plodnost k původním hodnotám. Skandinávie zpomalila pád, ale nezastavila ho.</p>
       <div class="dt-card-meta">
         <span>📈 Komparativní analýza</span>
         <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
       </div>
     </div>
 
-    <!-- KARTA: Coupling collapse -->
     <div class="dt-card">
-      <div class="dt-card-topic">Demografie — Evropa</div>
-      <h3 class="dt-card-title">Proč mladí netvoří tak často páry — a co všechno se tím mění</h3>
-      <p class="dt-card-desc">Globální rozpad párování (coupling collapse) podle Alice Evans. Argumenty, který v české debatě mnohdy chybí, přitom vysvětlují pokles porodnosti lépe než kdejaký pronatalistický balíček.</p>
+      <div class="dt-card-topic">Demografie – Evropa</div>
+      <h3 class="dt-card-title">Proč mladí netvoří tak často páry – a co všechno se tím mění</h3>
+      <p class="dt-card-desc">Globální rozpad párování podle Alice Evans vysvětluje pokles porodnosti lépe než kdejaký pronatalistický balíček.</p>
       <div class="dt-card-meta">
         <span>📜 Scrollytelling</span>
         <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
       </div>
     </div>
 
-    <!-- KARTA: Slepá místa v datech -->
     <div class="dt-card">
       <div class="dt-card-topic">Slepá místa v datech</div>
       <h3 class="dt-card-title">Co o porodech v Česku nevíme</h3>
@@ -220,65 +393,93 @@
       </div>
     </div>
 
-    <!-- KARTA: Rodina -->
     <div class="dt-card">
       <div class="dt-card-topic">Rodina</div>
       <h3 class="dt-card-title">Méně dětí, později. A co s tím?</h3>
       <p class="dt-card-desc">Porodnost klesá relativně pomalu, ale soustavně. Měli bychom dobře znát, kdo vlastně dnes v Česku chce zakládat rodinu.</p>
       <div class="dt-card-meta">
-        <span>📊 Vizualizace a kontext</span>
+        <span>📊 Analýza</span>
         <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
       </div>
     </div>
-    
-     <!-- KARTA: Region -->
-      <div class="dt-card">
-        <div class="dt-card-topic">Region</div>
-        <h3 class="dt-card-title">Mapa vylidňování: kde lidé mizí a kde přibývají</h3>
-        <p class="dt-card-desc">Obec po obci – třicet let demografického pohybu v interaktivní mapě.</p>
-        <div class="dt-card-meta">
-          <span>🗺️ Mapy a kontext</span>
-          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-        </div>
-      </div>
 
-         <!-- KARTA: Solution -->
-      <div class="dt-card">
-        <div class="dt-card-topic">Solution journalism</div>
-        <h3 class="dt-card-title">Co nám pomůže? Jak to dělají jinde</h3>
-        <p class="dt-card-desc">Co je vlastně ten hlavní problém; je nutné ho pojmenovat. A podívat se, jak to dělají jinde. Pak je možné posunout se dál.</p>
-        <div class="dt-card-meta">
-          <span>📈 Komparativní analýza</span>
-          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-        </div>
+    <div class="dt-card">
+      <div class="dt-card-topic">Region</div>
+      <h3 class="dt-card-title">Mapa vylidňování: kde lidé mizí a kde přibývají</h3>
+      <p class="dt-card-desc">Obec po obci – třicet let demografického pohybu v interaktivní mapě.</p>
+      <div class="dt-card-meta">
+        <span>🗺️ Mapa</span>
+        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
       </div>
+    </div>
+
+    <div class="dt-card">
+      <div class="dt-card-topic">Solution journalism</div>
+      <h3 class="dt-card-title">Co nám pomůže? Jak to dělají jinde</h3>
+      <p class="dt-card-desc">Co je vlastně hlavní problém; je nutné ho pojmenovat. A podívat se, jak to dělají jinde.</p>
+      <div class="dt-card-meta">
+        <span>📈 Komparativní analýza</span>
+        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
+      </div>
+    </div>
+
   </div>
 
-  <!-- ================================================== -->
-  <!-- CLUSTER 2: KDO BUDE ROZHODOVAT                     -->
-  <!-- ================================================== -->
-
   <div class="dt-section-break">
-    <div class="dt-tag">Speciál · Data pro budoucí premiérku · demografie</div>
-
-    <p class="dt-lead">Kdo bude vlastně rozhodovat o příští premiérce? Voličstvo v Česku stárne. Vylidňuje se okraj země. Mění se rodina i vzdělání. V tomto bloku se díváme na lidi za čísly – kdo, kde, kolik. A co z toho plyne pro volby 2029.</p>
+    <h2 class="dt-section-h">Kdo bude rozhodovat</h2>
 
     <div class="dt-keystat">
       <div class="dt-keystat-num">58 %</div>
       <div class="dt-keystat-text">
         <b>českých voličů</b> bude v roce 2029 starších padesáti let. O devět procentních bodů víc než při volbách 2017.
-        <span class="dt-keystat-source">Zdroj: ČSÚ, projekce obyvatelstva 2024–2050</span>
+        <span class="dt-keystat-source">Zdroj: ČSÚ, projekce obyvatelstva 2024–2050; vlastní model věkové struktury pravděpodobných voličů.</span>
       </div>
     </div>
 
-    <h2 class="dt-section-h">Kdo bude rozhodovat</h2>
+    <p class="dt-lead">Kdo bude skutečně rozhodovat o příští sněmovně – a kdo se naopak z volebního rozhodování ztrácí? Česká volební mapa se nemění jen podle stranických preferencí. Mění se i podle toho, kdo stárne, kdo se stěhuje, kdo dokončuje školu, kdo zůstává v menších obcích a kdo k volbám vůbec nepřijde. Pokud bude v roce 2029 většina českých voličů starší padesáti let, nejde jen o statistickou zajímavost. Znamená to, že politické priority mladších ročníků mohou být ve volebním výsledku slyšet slaběji.</p>
+
+    <div class="dt-visual">
+      <div class="dt-visual-kicker">Navržená vizualizace</div>
+      <h3 class="dt-visual-title">Voličská populace stárne rychleji než politická debata</h3>
+      <p class="dt-visual-note">Sloupce ukazují modelovaný podíl lidí ve věku 50 a více let mezi pravděpodobnými voliči. Roky 2030, 2035 a 2040 jsou projekce založené na střední variantě projekce ČSÚ a stejném modelu věkové účasti.</p>
+
+      <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modelovaný podíl voličů starších 50 let v letech 1990 až 2040">
+        <line x1="72" y1="230" x2="810" y2="230" stroke="#101432" stroke-width="1"/>
+        <line x1="72" y1="170" x2="810" y2="170" stroke="#d8d4c7" stroke-width="1"/>
+        <line x1="72" y1="110" x2="810" y2="110" stroke="#d8d4c7" stroke-width="1"/>
+        <line x1="72" y1="50" x2="810" y2="50" stroke="#d8d4c7" stroke-width="1"/>
+
+        <text x="64" y="234" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">0</text>
+        <text x="64" y="174" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">20 %</text>
+        <text x="64" y="114" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">40 %</text>
+        <text x="64" y="54" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">60 %</text>
+
+        <!-- 8 bars distributed evenly across x=72..810 (width 60, slot 92.25) -->
+        <g font-family="Roboto, system-ui, sans-serif">
+          <g><rect x="88"  y="116" width="60" height="114" fill="#101432"/><text x="118" y="106" font-size="13" fill="#101432" text-anchor="middle" font-weight="700">38 %</text><text x="118" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
+          <g><rect x="180" y="107" width="60" height="123" fill="#101432"/><text x="210" y="97"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">41 %</text><text x="210" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
+          <g><rect x="273" y="98"  width="60" height="132" fill="#101432"/><text x="303" y="88"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">44 %</text><text x="303" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
+          <g><rect x="365" y="86"  width="60" height="144" fill="#101432"/><text x="395" y="76"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">48 %</text><text x="395" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
+          <g><rect x="457" y="80"  width="60" height="150" fill="#101432"/><text x="487" y="70"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">50 %</text><text x="487" y="254" font-size="11" fill="#444" text-anchor="middle">2025</text></g>
+          <g><rect x="549" y="74"  width="60" height="156" fill="#101432"/><text x="579" y="64"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">52 %</text><text x="579" y="254" font-size="11" fill="#444" text-anchor="middle">2030</text></g>
+          <g><rect x="642" y="65"  width="60" height="165" fill="#101432"/><text x="672" y="55"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">55 %</text><text x="672" y="254" font-size="11" fill="#444" text-anchor="middle">2035</text></g>
+          <g><rect x="734" y="59"  width="60" height="171" fill="#101432"/><text x="764" y="49"  font-size="13" fill="#101432" text-anchor="middle" font-weight="700">57 %</text><text x="764" y="254" font-size="11" fill="#444" text-anchor="middle">2040</text></g>
+        </g>
+
+        <!-- projection divider between 2025 (ends x=517) and 2030 (starts x=549): midpoint 533 -->
+        <line x1="533" y1="38" x2="533" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="539" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
+
+        <text x="72" y="282" font-size="11" fill="#777" font-family="Roboto, system-ui, sans-serif">Zdroj: ČSÚ, věková skladba obyvatelstva a projekce obyvatelstva ČR 2023–2100. Vlastní výpočet: 50+ / 18+; od roku 2030 střední varianta projekce.</text>
+      </svg>
+    </div>
 
     <div class="dt-grid">
 
-      <!-- KARTA: Voličská základna – ČR (lead) -->
       <div class="dt-card dt-card--lead">
         <div class="dt-card-thumb">
-          <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <rect width="130" height="90" fill="#f8f6f0"/>
             <rect x="10" y="60" width="14" height="20" fill="#de1743" opacity="0.3"/>
             <rect x="28" y="48" width="14" height="32" fill="#de1743" opacity="0.45"/>
             <rect x="46" y="32" width="14" height="48" fill="#de1743" opacity="0.65"/>
@@ -293,34 +494,31 @@
           <p class="dt-card-desc">Voličská populace se posouvá. Generace, která rozhodla volby 2025, bude za čtyři roky menšinou. Velký přehled: věk, vzdělání, region.</p>
           <div class="dt-card-meta">
             <span>📊 Datový explainer</span>
-            <span class="dt-card-meta-status">vyjde 12. června 2026</span>
+            <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
           </div>
         </div>
       </div>
 
-     <!-- KARTA: Nevoliči -->
-    <div class="dt-card">
-      <div class="dt-card-topic">Nevoliči</div>
-      <h3 class="dt-card-title">Kdo k urnám nedorazí – a proč na tom to záleží</h3>
-      <p class="dt-card-desc">Stovky tisíc lidí k volbám nechodí. Demografický profil těch, kteří se rozhodování vzdali — a co by se v politice změnilo, kdyby přišli.</p>
-      <div class="dt-card-meta">
-        <span>📊 Datová analýza</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
+      <div class="dt-card">
+        <div class="dt-card-topic">Nevoliči</div>
+        <h3 class="dt-card-title">Kdo k urnám nedorazí – a proč na tom to záleží</h3>
+        <p class="dt-card-desc">Stovky tisíc lidí k volbám nechodí. Demografický profil těch, kteří se rozhodování vzdali – a co by se v politice změnilo, kdyby přišli.</p>
+        <div class="dt-card-meta">
+          <span>📊 Analýza</span>
+          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
+        </div>
       </div>
-    </div>
 
-      <!-- KARTA: Gender -->
       <div class="dt-card">
         <div class="dt-card-topic">Gender</div>
         <h3 class="dt-card-title">Ženy v rozhodování: 1990–2026 v jednom grafu</h3>
         <p class="dt-card-desc">Sněmovna, vláda, kraje, obce. Kde se zastoupení žen pohnulo, kde stojí.</p>
         <div class="dt-card-meta">
-          <span>📈 Vizualizace a kontext</span>
+          <span>📈 Komparativní analýza</span>
           <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
         </div>
       </div>
 
-      <!-- KARTA: Generace -->
       <div class="dt-card">
         <div class="dt-card-topic">Generace</div>
         <h3 class="dt-card-title">Generace Z jde poprvé volit příští sněmovnu</h3>
@@ -331,13 +529,12 @@
         </div>
       </div>
 
-      <!-- KARTA: Vzdělání -->
       <div class="dt-card">
         <div class="dt-card-topic">Vzdělání</div>
         <h3 class="dt-card-title">Vzdělanostní propast a volební mapa</h3>
         <p class="dt-card-desc">Kde končí nejvíc lidí se základkou – a jak se to promítá do voleb.</p>
         <div class="dt-card-meta">
-          <span>🗺️ Mapa + tabulka</span>
+          <span>🗺️ Mapa</span>
           <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
         </div>
       </div>
@@ -345,37 +542,32 @@
     </div>
   </div>
 
-  <!-- ================================================== -->
-  <!-- DATA A METODIKA (sdílená pro oba clustery)         -->
-  <!-- ================================================== -->
-
   <h2 class="dt-section-h">Data a metodika</h2>
 
   <div class="dt-data-grid">
     <div>
       <h4 class="dt-data-h">Primární zdroje</h4>
       <ul class="dt-data-list">
-        <li>ČSÚ — Projekce obyvatelstva ČR 2023–2100</li>
-        <li>ČSÚ — Demografické ročenky, obyvatelstvo.cz (1971–dnes)</li>
+        <li>ČSÚ – Projekce obyvatelstva ČR 2023–2100</li>
+        <li>ČSÚ – Demografické ročenky, obyvatelstvo.cz (1971–dnes)</li>
         <li>UN World Population Prospects 2024</li>
-        <li>Eurostat — TFR, migrace, věková struktura EU</li>
+        <li>Eurostat – TFR, migrace, věková struktura EU</li>
         <li>Geruso &amp; Spears, Journal of Economic Perspectives, Winter 2026</li>
-        <li>GGD World / Alice Evans — globální coupling collapse</li>
+        <li>GGD World / Alice Evans – globální coupling collapse</li>
       </ul>
     </div>
     <div>
       <h4 class="dt-data-h">Pro naše podporovatele</h4>
       <ul class="dt-data-list">
-        <li>Datasety ke každému článku — CSV ke stažení</li>
+        <li>Datasety ke každému článku – CSV ke stažení</li>
         <li>Skripty pro reprodukci grafů (GitHub)</li>
-        <li>Doplňkové analýzy či podklady na vyžádání — k dispozici</li>
+        <li>Doplňkové analýzy či podklady na vyžádání – k dispozici</li>
       </ul>
     </div>
   </div>
 
-  <!-- INFOBOX (přesunut z mezi clustery na úplný konec) -->
   <div class="dt-infobox">
-    <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt Mahdalová &amp; Škop, který před volbami 2029 mapuje stav věcí v několika tematických blocích — demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat. Projekt vzniká s grantovou podporou Nadačního fondu nezávislé žurnalistiky a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
+    <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt dvojice datových novinářů a analytiků <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener">Mahdalová &amp; Škop</a>, který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat. Projekt vzniká s grantovou podporou <a href="https://www.nfnz.cz" target="_blank" rel="noopener">Nadačního fondu nezávislé žurnalistiky</a> a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
   </div>
 
 </div>
