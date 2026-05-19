@@ -291,6 +291,34 @@
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 }
+.dt-chart-point,
+.dt-chart-bar {
+  cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.16s ease, filter 0.16s ease, opacity 0.16s ease;
+}
+.dt-chart-point:hover,
+.dt-chart-point:focus,
+.dt-chart-point:active {
+  transform: scale(1.45);
+  filter: drop-shadow(0 2px 3px rgba(222, 23, 67, 0.28));
+  outline: none;
+}
+.dt-chart-bar:hover,
+.dt-chart-bar:focus,
+.dt-chart-bar:active {
+  transform: scale(1.035);
+  filter: drop-shadow(0 2px 4px rgba(16, 20, 50, 0.18));
+  opacity: 0.92;
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dt-chart-point,
+  .dt-chart-bar {
+    transition: none;
+  }
+}
 .dt-support {
   width: 100%;
   font-family: 'Roboto', Arial, sans-serif;
@@ -593,14 +621,14 @@
       <text x="620" y="42" font-size="11" fill="#0e8aab" text-anchor="end">hranice 2,10</text>
       <polyline points="60,89.4 140,206.34 220,233.17 300,206.34 380,166.18 460,150.85 540,123.97 620,206.34" fill="none" stroke="#de1743" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
       <g fill="#de1743">
-        <circle cx="60" cy="89.4" r="5"/>
-        <circle cx="140" cy="206.34" r="5"/>
-        <circle cx="220" cy="233.17" r="5"/>
-        <circle cx="300" cy="206.34" r="5"/>
-        <circle cx="380" cy="166.18" r="5"/>
-        <circle cx="460" cy="150.85" r="5"/>
-        <circle cx="540" cy="123.97" r="5"/>
-        <circle cx="620" cy="206.34" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="60" cy="89.4" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="140" cy="206.34" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="220" cy="233.17" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="300" cy="206.34" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="380" cy="166.18" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="460" cy="150.85" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="540" cy="123.97" r="5"/>
+        <circle class="dt-chart-point" tabindex="0" cx="620" cy="206.34" r="5"/>
       </g>
       <g font-size="12.5" font-weight="700" fill="#de1743" text-anchor="middle">
         <text x="60" y="67">1,89</text>
@@ -783,17 +811,17 @@
         <text x="64" y="54" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">60 %</text>
 
         <g font-family="Roboto, system-ui, sans-serif">
-          <g data-year="1990" data-value="37.819"><rect x="77" y="116.5" width="42" height="113.5" fill="#101432"/><text x="98" y="108.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">37,8 %</text><text x="98" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
-          <g data-year="1995" data-value="38.058"><rect x="144" y="115.8" width="42" height="114.2" fill="#101432"/><text x="165" y="107.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">38,1 %</text><text x="165" y="254" font-size="11" fill="#444" text-anchor="middle">1995</text></g>
-          <g data-year="2000" data-value="40.789"><rect x="211" y="107.6" width="42" height="122.4" fill="#101432"/><text x="232" y="99.6" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">40,8 %</text><text x="232" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
-          <g data-year="2005" data-value="43.211"><rect x="278" y="100.4" width="42" height="129.6" fill="#101432"/><text x="299" y="92.4" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,2 %</text><text x="299" y="254" font-size="11" fill="#444" text-anchor="middle">2005</text></g>
-          <g data-year="2010" data-value="43.819"><rect x="345" y="98.5" width="42" height="131.5" fill="#101432"/><text x="366" y="90.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,8 %</text><text x="366" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
-          <g data-year="2015" data-value="46.111"><rect x="412" y="91.7" width="42" height="138.3" fill="#101432"/><text x="433" y="83.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">46,1 %</text><text x="433" y="254" font-size="11" fill="#444" text-anchor="middle">2015</text></g>
-          <g data-year="2020" data-value="47.731"><rect x="479" y="86.8" width="42" height="143.2" fill="#101432"/><text x="500" y="78.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">47,7 %</text><text x="500" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
-          <g data-year="2025" data-value="49.920"><rect x="546" y="80.2" width="42" height="149.8" fill="#5b6480"/><text x="567" y="72.2" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">49,9 %</text><text x="567" y="254" font-size="11" fill="#444" text-anchor="middle">2025</text></g>
-          <g data-year="2030" data-value="53.442"><rect x="613" y="69.7" width="42" height="160.3" fill="#5b6480"/><text x="634" y="61.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">53,4 %</text><text x="634" y="254" font-size="11" fill="#444" text-anchor="middle">2030</text></g>
-          <g data-year="2035" data-value="54.685"><rect x="680" y="65.9" width="42" height="164.1" fill="#5b6480"/><text x="701" y="57.9" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">54,7 %</text><text x="701" y="254" font-size="11" fill="#444" text-anchor="middle">2035</text></g>
-          <g data-year="2040" data-value="55.449"><rect x="747" y="63.7" width="42" height="166.3" fill="#5b6480"/><text x="768" y="55.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">55,4 %</text><text x="768" y="254" font-size="11" fill="#444" text-anchor="middle">2040</text></g>
+          <g data-year="1990" data-value="37.819"><rect class="dt-chart-bar" tabindex="0" x="77" y="116.5" width="42" height="113.5" fill="#101432"/><text x="98" y="108.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">37,8 %</text><text x="98" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
+          <g data-year="1995" data-value="38.058"><rect class="dt-chart-bar" tabindex="0" x="144" y="115.8" width="42" height="114.2" fill="#101432"/><text x="165" y="107.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">38,1 %</text><text x="165" y="254" font-size="11" fill="#444" text-anchor="middle">1995</text></g>
+          <g data-year="2000" data-value="40.789"><rect class="dt-chart-bar" tabindex="0" x="211" y="107.6" width="42" height="122.4" fill="#101432"/><text x="232" y="99.6" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">40,8 %</text><text x="232" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
+          <g data-year="2005" data-value="43.211"><rect class="dt-chart-bar" tabindex="0" x="278" y="100.4" width="42" height="129.6" fill="#101432"/><text x="299" y="92.4" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,2 %</text><text x="299" y="254" font-size="11" fill="#444" text-anchor="middle">2005</text></g>
+          <g data-year="2010" data-value="43.819"><rect class="dt-chart-bar" tabindex="0" x="345" y="98.5" width="42" height="131.5" fill="#101432"/><text x="366" y="90.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,8 %</text><text x="366" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
+          <g data-year="2015" data-value="46.111"><rect class="dt-chart-bar" tabindex="0" x="412" y="91.7" width="42" height="138.3" fill="#101432"/><text x="433" y="83.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">46,1 %</text><text x="433" y="254" font-size="11" fill="#444" text-anchor="middle">2015</text></g>
+          <g data-year="2020" data-value="47.731"><rect class="dt-chart-bar" tabindex="0" x="479" y="86.8" width="42" height="143.2" fill="#101432"/><text x="500" y="78.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">47,7 %</text><text x="500" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
+          <g data-year="2025" data-value="49.920"><rect class="dt-chart-bar" tabindex="0" x="546" y="80.2" width="42" height="149.8" fill="#5b6480"/><text x="567" y="72.2" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">49,9 %</text><text x="567" y="254" font-size="11" fill="#444" text-anchor="middle">2025</text></g>
+          <g data-year="2030" data-value="53.442"><rect class="dt-chart-bar" tabindex="0" x="613" y="69.7" width="42" height="160.3" fill="#5b6480"/><text x="634" y="61.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">53,4 %</text><text x="634" y="254" font-size="11" fill="#444" text-anchor="middle">2030</text></g>
+          <g data-year="2035" data-value="54.685"><rect class="dt-chart-bar" tabindex="0" x="680" y="65.9" width="42" height="164.1" fill="#5b6480"/><text x="701" y="57.9" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">54,7 %</text><text x="701" y="254" font-size="11" fill="#444" text-anchor="middle">2035</text></g>
+          <g data-year="2040" data-value="55.449"><rect class="dt-chart-bar" tabindex="0" x="747" y="63.7" width="42" height="166.3" fill="#5b6480"/><text x="768" y="55.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">55,4 %</text><text x="768" y="254" font-size="11" fill="#444" text-anchor="middle">2040</text></g>
         </g>
         <defs>
           <path id="dt-projection-arc" d="M545 45 C590 22 735 22 790 45"/>
@@ -883,4 +911,5 @@
     </p>
   </div>
 </div>
+
 
