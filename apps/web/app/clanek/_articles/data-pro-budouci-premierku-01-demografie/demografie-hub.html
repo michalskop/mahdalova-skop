@@ -107,6 +107,10 @@
   border-color: var(--dt-crimson);
   box-shadow: 0 2px 10px rgba(222, 23, 67, 0.08);
 }
+.dt-card-link {
+  color: inherit;
+  text-decoration: none;
+}
 .dt-card--lead {
   grid-column: 1 / -1;
   border-top: 4px solid var(--dt-crimson);
@@ -133,6 +137,10 @@
   height: 100%;
 }
 .dt-card-thumb img { object-fit: cover; }
+.dt-card-thumb--contain img {
+  object-fit: contain;
+  background: var(--dt-soft);
+}
 .dt-card-body {
   flex: 1;
   min-width: 0;
@@ -186,6 +194,27 @@
   border-radius: 6px;
   padding: 18px 20px 16px;
   margin: -10px 0 30px;
+}
+.dt-visual-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: var(--dt-text);
+  text-decoration: none;
+}
+.dt-visual-brand svg {
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+}
+.dt-visual-brand span {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--dt-text);
 }
 .dt-visual-kicker {
   font-size: 10px;
@@ -443,6 +472,25 @@
   <p class="dt-lead">Zjišťujeme, co znamená, že se v Česku rodí jen 1,28 dítěte na ženu – a proč se takové číslo nedá jednoduše „opravit“ politickým slibem. Demografie pochopitelně začíná u toho, kolik se rodí dětí. To samo o sobě ale rozhodně nestačí. Abychom totiž rozuměli tomu, co se s českou společností děje, musíme vedle porodnosti sledovat také vzdělání, práci, bydlení, zdraví, migraci, regionální rozdíly i rychlé stárnutí populace. Stejně důležité je zasadit český vývoj do širšího obrazu: přelidňuje se svět, nebo se především výrazně mění jeho skladba? Co o sobě jako země dokážeme přesně spočítat – a kde nám v datech zůstávají slepá místa? V demografickém bloku proto skládáme dohromady čísla, která se v politické debatě často používají jako zkratka. Bez kontextu ale spíš matou, než vysvětlují.</p>
 
   <div class="dt-visual">
+    <a class="dt-visual-brand" href="https://datatimes.cz" target="_blank" rel="noopener" aria-label="DataTimes.cz">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="dtGraphLogo1" x1="1" x2=".25" y1=".5" y2="1">
+            <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <g transform="rotate(-30 250 250)">
+          <path fill="none" stroke="#ffcf02" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+          <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M336.60254 300 A100 100 0 0 0 250 150"/>
+          <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M250 150 A100 100 0 0 0 250 350"/>
+          <path fill="none" stroke="url(#dtGraphLogo1)" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+        </g>
+      </svg>
+      <span>Mahdalová &amp; Škop</span>
+    </a>
     <div class="dt-visual-kicker">Vývoj plodnosti</div>
     <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
     <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
@@ -504,12 +552,12 @@
       <div class="dt-card-thumb">
         <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Miniatura vývoje úhrnné plodnosti v Česku">
           <rect width="140" height="90" fill="#f8f6f0"/>
-          <line x1="10" y1="78" x2="124" y2="78" stroke="#1a1a1a" stroke-width="1"/>
+          <line x1="10" y1="86" x2="124" y2="86" stroke="#1a1a1a" stroke-width="1"/>
           <line x1="10" y1="24" x2="124" y2="24" stroke="#1a9fbd" stroke-width="1.5" stroke-dasharray="3,2"/>
           <polyline points="10,34 26,62 42,69 58,62 74,52 90,48 106,41 122,62" stroke="#de1743" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
           <circle cx="122" cy="62" r="3" fill="#de1743"/>
           <text x="136" y="20" font-size="9" fill="#1a9fbd" text-anchor="end" font-family="Georgia,serif" font-weight="bold">cíl 2,10</text>
-          <text x="136" y="78" font-size="10" fill="#de1743" text-anchor="end" font-family="Georgia,serif" font-weight="bold">1,28</text>
+          <text x="136" y="76" font-size="10" fill="#de1743" text-anchor="end" font-family="Georgia,serif" font-weight="bold">1,28</text>
         </svg>
       </div>
       <div class="dt-card-body">
@@ -619,6 +667,25 @@
     <p class="dt-lead">Kdo skutečně rozhoduje o složení Sněmovny – a kdo se naopak politického rozhodování vzdává. Česká volební mapa se mění podle vlastních stranických preferencí, ale také podle toho, jak voličská populace stárne, kdo se kam přistěhuje a odkud odstěhuje, kdo dokončí který stupeň školy, kdo zůstává v menších obcích a kdo k volbám vůbec nepřijde. Pokud bude v roce 2029 většina českých voličů starší padesáti let, znamená to, že politické priority mladších ročníků mohou být ve volebním výsledku zastoupené ještě méně než dosud.</p>
 
     <div class="dt-visual">
+      <a class="dt-visual-brand" href="https://datatimes.cz" target="_blank" rel="noopener" aria-label="DataTimes.cz">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="dtGraphLogo2" x1="1" x2=".25" y1=".5" y2="1">
+              <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <g transform="rotate(-30 250 250)">
+            <path fill="none" stroke="#ffcf02" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+            <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M336.60254 300 A100 100 0 0 0 250 150"/>
+            <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M250 150 A100 100 0 0 0 250 350"/>
+            <path fill="none" stroke="url(#dtGraphLogo2)" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+          </g>
+        </svg>
+        <span>Mahdalová &amp; Škop</span>
+      </a>
       <div class="dt-visual-kicker">Stárnoucí populace ovlivní volby</div>
       <h3 class="dt-visual-title">Voličská populace stárne rychleji než politická debata</h3>
       <p class="dt-visual-note">Sloupce ukazují podíl lidí ve věku 50 a více let mezi obyvateli ve věku 18 a více let. Roky 1990–2020 jsou dopočtené ze skutečné věkové skladby obyvatelstva podle věku; budoucí roky vycházejí ze střední varianty projekce ČSÚ.</p>
@@ -653,32 +720,17 @@
     </div>
 
     <div class="dt-grid">
-      <div class="dt-card dt-card--lead">
-        <div class="dt-card-thumb">
-          <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Miniatura stárnutí voličské populace">
-            <rect width="140" height="90" fill="#f8f6f0"/>
-            <line x1="12" y1="75" x2="128" y2="75" stroke="#101432" stroke-width="1"/>
-            <line x1="12" y1="42" x2="128" y2="42" stroke="#d8d4c7" stroke-width="1"/>
-            <rect x="16" y="42" width="8" height="33" fill="#101432"/>
-            <rect x="29" y="41" width="8" height="34" fill="#101432"/>
-            <rect x="42" y="36" width="8" height="39" fill="#101432"/>
-            <rect x="55" y="31" width="8" height="44" fill="#101432"/>
-            <rect x="68" y="29" width="8" height="46" fill="#101432"/>
-            <rect x="81" y="25" width="8" height="50" fill="#101432"/>
-            <rect x="94" y="21" width="8" height="54" fill="#5b6480"/>
-            <rect x="107" y="15" width="8" height="60" fill="#5b6480"/>
-            <rect x="120" y="12" width="8" height="63" fill="#5b6480"/>
-            <line x1="88" y1="13" x2="88" y2="75" stroke="#de1743" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="130" y="10" font-size="9" fill="#8b0e2b" text-anchor="end" font-family="Georgia,serif" font-weight="bold">50+ roste</text>
-          </svg>
+      <a class="dt-card dt-card--lead dt-card-link" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener">
+        <div class="dt-card-thumb dt-card-thumb--contain">
+          <img src="snemovna-amfiteatr.webp" alt="Model Poslanecké sněmovny jako amfiteátr s mandáty">
         </div>
         <div class="dt-card-body">
           <div class="dt-card-topic">Voličská základna • ČR</div>
           <h3 class="dt-card-title dt-card-title--lead">Kdo bude volit příští Sněmovnu</h3>
           <p class="dt-card-desc">Voličská populace se posouvá. Generace, která rozhodla volby 2025, bude za čtyři roky menšinou. Velký přehled: věk, vzdělání, regiony.</p>
-          <div class="dt-card-meta"><span>&#x1f4ca; Datový explainer</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
+          <div class="dt-card-meta"><span>&#x1f4ca; Datový explainer</span></div>
         </div>
-      </div>
+      </a>
 
       <div class="dt-card">
         <div class="dt-card-topic">Nevoliči</div>
