@@ -205,7 +205,7 @@
   align-items: center;
   justify-content: center;
   gap: 3px;
-  width: 70px;
+  width: 64px;
   margin: 0;
   color: var(--dt-text);
   text-decoration: none;
@@ -222,6 +222,7 @@
   font-weight: 700;
   line-height: 1.15;
   text-align: center;
+  width: 100%;
   color: var(--dt-text);
 }
 .dt-visual-kicker {
@@ -255,19 +256,28 @@
   background: var(--dt-soft);
   border-radius: 4px;
 }
-.dt-visual-source {
-  font-family: 'Roboto', system-ui, sans-serif;
-  font-size: 11px;
-  color: #777;
-  line-height: 1.45;
-  margin: 8px 0 0;
+.dt-visual-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 9px 0 0;
 }
+.dt-visual-source,
 .dt-visual-authors {
   font-family: 'Roboto', system-ui, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   color: #777;
-  line-height: 1.45;
-  margin: 4px 0 0;
+  line-height: 1.55;
+  margin: 0;
+}
+.dt-visual-source {
+  flex: 1 1 360px;
+}
+.dt-visual-authors {
+  flex: 0 0 auto;
+  margin-left: auto;
   text-align: right;
 }
 .dt-visual-svg line,
@@ -405,8 +415,26 @@
   font-size: 14px;
   color: #2a2a2a;
   line-height: 1.6;
+  display: block;
+  max-height: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: initial;
 }
 .dt-infobox strong { color: var(--dt-text); }
+.dt-infobox a { display: inline; }
+.dt-infobox p {
+  margin: 0;
+  display: block;
+  max-height: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: initial;
+}
 
 @media (max-width: 720px) {
   .dt-grid { grid-template-columns: 1fr; }
@@ -460,6 +488,8 @@
   .dt-visual-title { font-size: 16px; }
   .dt-visual-title,
   .dt-visual-note { padding-right: 76px; }
+  .dt-visual-source,
+  .dt-visual-authors { font-size: 13px; }
   .dt-support-link {
     flex-direction: column;
     align-items: flex-start;
@@ -484,6 +514,10 @@
     margin-left: auto;
     margin-bottom: 8px;
   }
+  .dt-visual-authors {
+    width: 100%;
+    text-align: left;
+  }
   .dt-visual-title,
   .dt-visual-note { padding-right: 0; }
   .dt-tag {
@@ -501,7 +535,7 @@
   <div class="dt-keystat">
     <div class="dt-keystat-num">1,28</div>
     <div class="dt-keystat-text">
-      <b>dítěte na ženu</b> (chcete-li pro lepší představu: pět dětí na čtyři ženy) – to je odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod hodnotou 2,10 – které chtěji Andrej Babiš a Alena Schillerová dosáhnout, aby „zachránili“ Česko před vymíráním. Aktuálně pohybujeme pod <a href="https://csu.gov.cz/docs/107508/de376ac6-82c8-1856-dc1f-ffecc8b88b34/13013923.pdf?version=1.0" target="_blank" rel="noopener">nejpesimističtějším scénářem ČSÚ</a>. V loňském roce se v Česku živě narodilo 77,6 tisíce dětí – <b>nejméně v historii celoplošného statistického zjišťování, které na našem území probíhá už od roku 1785</b>.
+      <b>dítěte na ženu</b> (chcete-li pro lepší představu: pět dětí na čtyři ženy) – to je odhadovaná úhrnná plodnost v Česku za rok 2025. Výrazně pod hodnotou 2,10, kterou chce Andrej Babiš a Alena Schillerová „zachránit“ Česko před vymíráním. Dokonce se aktuálně pohybujeme pod <a href="https://csu.gov.cz/docs/107508/de376ac6-82c8-1856-dc1f-ffecc8b88b34/13013923.pdf?version=1.0" target="_blank" rel="noopener">nejpesimističtějším scénářem ČSÚ</a>. V loňském roce se v Česku živě narodilo 77,6 tisíce dětí – <b>nejméně v historii celoplošného statistického zjišťování, které na našem území probíhá už od roku 1785</b>.
       <span class="dt-keystat-source">• Zdroj: ČSÚ; odhad TFR (Total Fertility Rate, česky úhrnná plodnost) 2025 z kulatého stolu Poslanecké sněmovny 27. 4. 2026</span>
     </div>
   </div>
@@ -581,8 +615,10 @@
         <text x="620" y="285">2025</text>
       </g>
     </svg>
-    <p class="dt-visual-source">• Zdroj: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
-    <p class="dt-visual-authors">• Autoři: Kateřina Mahdalová &amp; Michal Škop</p>
+    <div class="dt-visual-meta">
+      <p class="dt-visual-source">• Zdroj: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
+      <p class="dt-visual-authors">• Autoři: Kateřina Mahdalová &amp; Michal Škop</p>
+    </div>
   </div>
 
   <div class="dt-grid">
@@ -754,8 +790,10 @@
         <line x1="539" y1="38" x2="539" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
         <text x="545" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
       </svg>
-      <p class="dt-visual-source">• Zdroj: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
-      <p class="dt-visual-authors">• Autoři: Kateřina Mahdalová &amp; Michal Škop</p>
+      <div class="dt-visual-meta">
+        <p class="dt-visual-source">• Zdroj: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
+        <p class="dt-visual-authors">• Autoři: Kateřina Mahdalová &amp; Michal Škop</p>
+      </div>
     </div>
 
     <div class="dt-grid">
@@ -826,4 +864,9 @@
   </div>
 
   <div class="dt-infobox">
-    <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt dvojice datových novinářů a analytiků <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener">Mahdalová &amp; Škop</a>, který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcn
+    <p>
+      <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt dvojice datových novinářů a analytiků <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener">Mahdalová &amp; Škop</a>, který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat. Projekt vzniká s grantovou podporou <a href="https://www.nfnz.cz" target="_blank" rel="noopener">Nadačního fondu nezávislé žurnalistiky</a> a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
+    </p>
+  </div>
+</div>
+
