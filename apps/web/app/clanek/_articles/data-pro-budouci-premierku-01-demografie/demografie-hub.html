@@ -1,5 +1,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&family=Roboto+Slab:wght@400;500;700;800&display=swap');
+
 .dt-hub {
   --dt-crimson: #de1743;
   --dt-deep-red: #8b0e2b;
@@ -9,68 +10,96 @@
   --dt-soft: #f8f6f0;
   --dt-line: #e8e3d2;
   --dt-teal: #1a9fbd;
-
   font-family: 'Roboto', system-ui, sans-serif;
   color: var(--dt-text);
   line-height: 1.55;
 }
 .dt-hub * { box-sizing: border-box; }
-
 .dt-tag {
-  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 700; color: var(--dt-crimson); margin: 0 0 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dt-crimson);
+  margin: 0 0 12px;
 }
-
 .dt-lead {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 17px; line-height: 1.62; color: #2a2a2a;
+  font-size: 17px;
+  line-height: 1.62;
+  color: #2a2a2a;
   margin: 0 0 28px;
 }
-
 .dt-keystat {
   background: #fff;
   border: 1px solid var(--dt-line);
   border-left: 4px solid var(--dt-crimson);
   border-radius: 6px;
-  padding: 18px 22px; margin: 0 0 36px;
-  display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center;
+  padding: 18px 22px;
+  margin: 0 0 36px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: center;
 }
 .dt-keystat-num {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 44px; font-weight: 800; color: var(--dt-crimson); line-height: 1;
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--dt-crimson);
+  line-height: 1;
   font-variant-numeric: lining-nums tabular-nums;
   font-feature-settings: "lnum" 1, "tnum" 1;
-  font-synthesis: none;
-  letter-spacing: 0;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
 }
-.dt-keystat-text { font-family: 'Roboto Slab', Georgia, serif; font-size: 14px; color: #444; line-height: 1.55; }
+.dt-keystat-text {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.55;
+}
 .dt-keystat-text b { color: var(--dt-text); }
-.dt-keystat-source { color: #888; font-size: 12px; display: block; margin-top: 4px; }
-
+.dt-keystat-text a,
+.dt-infobox a,
+.dt-visual-source a {
+  color: var(--dt-crimson);
+  text-decoration: underline;
+  text-decoration-color: rgba(222, 23, 67, 0.4);
+  text-underline-offset: 2px;
+}
+.dt-keystat-text a:hover,
+.dt-infobox a:hover,
+.dt-visual-source a:hover { text-decoration-color: var(--dt-crimson); }
+.dt-keystat-source {
+  color: #888;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
 .dt-section-h {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 22px; font-weight: 700; color: var(--dt-text);
-  margin: 32px 0 16px; line-height: 1.2;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dt-text);
+  margin: 32px 0 16px;
+  line-height: 1.2;
 }
-
 .dt-section-break {
   margin-top: 48px;
   padding-top: 24px;
 }
-
 .dt-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 14px; margin: 18px 0 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 18px 0 28px;
 }
-
 .dt-card {
   background: #fff;
   border: 1px solid var(--dt-line);
   border-radius: 6px;
   padding: 16px 18px 18px;
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
   min-height: 180px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -82,46 +111,66 @@
   grid-column: 1 / -1;
   border-top: 4px solid var(--dt-crimson);
   padding: 18px 20px 20px;
-  flex-direction: row; align-items: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 18px;
 }
-
 .dt-card-thumb {
-  width: 130px; height: 90px; flex-shrink: 0;
+  width: 130px;
+  height: 90px;
+  flex-shrink: 0;
   background: var(--dt-soft);
   border-radius: 4px;
   overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dt-card-thumb svg,
-.dt-card-thumb img { display: block; width: 100%; height: 100%; }
-.dt-card-thumb img { object-fit: cover; }
-
-.dt-card-body { flex: 1; min-width: 0; }
-
-.dt-card-topic {
-  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 700; color: var(--dt-deep-red); margin-bottom: 8px;
+.dt-card-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.dt-card-topic--lead { color: var(--dt-deep-red); }
-
+.dt-card-thumb img { object-fit: cover; }
+.dt-card-body {
+  flex: 1;
+  min-width: 0;
+}
+.dt-card-topic {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dt-deep-red);
+  margin-bottom: 8px;
+}
 .dt-card-title {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 17px; font-weight: 700; line-height: 1.22;
-  margin: 0 0 8px; color: var(--dt-text);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.22;
+  margin: 0 0 8px;
+  color: var(--dt-text);
 }
-.dt-card-title--lead { font-size: 22px; line-height: 1.18; }
-
+.dt-card-title--lead {
+  font-size: 22px;
+  line-height: 1.18;
+}
 .dt-card-desc {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 13.5px; color: var(--dt-muted); line-height: 1.55;
+  font-size: 13.5px;
+  color: var(--dt-muted);
+  line-height: 1.55;
   margin: 0 0 12px;
 }
-
 .dt-card-meta {
-  font-size: 11px; color: #888;
+  font-size: 11px;
+  color: #888;
   margin-top: auto;
-  display: flex; gap: 10px; align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   flex-wrap: wrap;
 }
 .dt-card-meta-status--upcoming {
@@ -131,51 +180,8 @@
   letter-spacing: 0.08em;
   font-size: 11px;
 }
-
-.dt-data-grid {
-  font-family: 'Roboto', system-ui, sans-serif;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 24px; font-size: 13px; color: #444;
-  margin: 6px 0 28px;
-}
-.dt-data-h {
-  font-family: 'Roboto', system-ui, sans-serif;
-  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-  font-weight: 700; color: var(--dt-text); margin: 0 0 8px;
-}
-.dt-data-list {
-  font-family: 'Roboto', system-ui, sans-serif;
-  margin: 0; padding-left: 16px; line-height: 1.7;
-}
-
-.dt-infobox {
-  background: #fff3e8;
-  border-left: 4px solid #f76800;
-  border-radius: 6px;
-  padding: 18px 22px;
-  margin: 28px 0 8px;
-  font-size: 14px;
-  color: #2a2a2a;
-  line-height: 1.6;
-}
-
-.dt-infobox strong {
-  color: var(--dt-text);
-}
-
-.dt-infobox a {
-  color: var(--dt-crimson);
-  text-decoration: underline;
-  text-decoration-color: rgba(222, 23, 67, 0.4);
-  text-underline-offset: 2px;
-}
-
-.dt-infobox a:hover {
-  text-decoration-color: var(--dt-crimson);
-}
-
 .dt-visual {
-  background: #fff;
+  background: var(--dt-soft);
   border: 1px solid var(--dt-line);
   border-radius: 6px;
   padding: 18px 20px 16px;
@@ -217,15 +223,6 @@
   line-height: 1.45;
   margin: 8px 0 0;
 }
-.dt-visual-source a {
-  color: var(--dt-crimson);
-  text-decoration: underline;
-  text-decoration-color: rgba(222, 23, 67, 0.4);
-  text-underline-offset: 2px;
-}
-.dt-visual-source a:hover {
-  text-decoration-color: var(--dt-crimson);
-}
 .dt-visual-svg line,
 .dt-visual-svg path,
 .dt-visual-svg rect,
@@ -237,6 +234,132 @@
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 }
+.dt-support {
+  width: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 34px 0 0;
+}
+.dt-support-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 12px;
+  background: #0d1438;
+  text-decoration: none;
+  overflow: hidden;
+  transition: filter .18s ease;
+}
+.dt-support-link:hover { filter: brightness(1.05); }
+.dt-support-link:focus-visible {
+  outline: 2px solid #ffcf02;
+  outline-offset: 2px;
+}
+.dt-support-link::before,
+.dt-support-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+.dt-support-link::before {
+  top: 0;
+  background: linear-gradient(to right, #de1743 0%, #f76800 52%, #ffcf02 100%);
+}
+.dt-support-link::after {
+  bottom: 0;
+  background: linear-gradient(to right, #ffcf02 0%, #f76800 48%, #de1743 100%);
+}
+.dt-support-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  min-width: 175px;
+}
+.dt-support-logo svg {
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+.dt-support-name {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.dt-red { color: #de1743; }
+.dt-yellow { color: #ffcf02; }
+.dt-support-text {
+  flex: 1 1 auto;
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.dt-support-cta {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 148px;
+  padding: 14px 26px;
+  background: #f01952;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 999px;
+  transition: background .18s ease, transform .18s ease;
+}
+.dt-support-link:hover .dt-support-cta {
+  background: #d91347;
+  transform: translateY(-1px);
+}
+.dt-data-grid {
+  font-family: 'Roboto', system-ui, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  font-size: 13px;
+  color: #444;
+  margin: 6px 0 28px;
+}
+.dt-data-h {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dt-text);
+  margin: 0 0 8px;
+}
+.dt-data-list {
+  font-family: 'Roboto', system-ui, sans-serif;
+  margin: 0;
+  padding-left: 16px;
+  line-height: 1.7;
+}
+.dt-infobox {
+  background: #fff3e8;
+  border-left: 4px solid #f76800;
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin: 28px 0 8px;
+  font-size: 14px;
+  color: #2a2a2a;
+  line-height: 1.6;
+}
+.dt-infobox strong { color: var(--dt-text); }
 
 @media (max-width: 720px) {
   .dt-grid { grid-template-columns: 1fr; }
@@ -278,6 +401,18 @@
     margin: -4px 0 26px;
   }
   .dt-visual-title { font-size: 16px; }
+  .dt-support-link {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 14px 16px;
+  }
+  .dt-support-brand { min-width: 0; }
+  .dt-support-text { font-size: 14px; }
+  .dt-support-cta {
+    width: 100%;
+    min-width: 0;
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -293,7 +428,6 @@
 </style>
 
 <div class="dt-hub">
-
   <div class="dt-tag">Speciál • Data pro budoucí premiérku • Demografie</div>
 
   <h2 class="dt-section-h">Analýzy a kontext</h2>
@@ -313,82 +447,76 @@
     <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
     <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
 
-    <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku od roku 1990 do roku 2025 v pětiletých intervalech, hranice prosté reprodukce 2,10 dítěte na ženu">
-      <!-- gridlines -->
-      <line x1="72" y1="230" x2="810" y2="230" stroke="#101432" stroke-width="1"/>
-      <line x1="72" y1="185" x2="810" y2="185" stroke="#d8d4c7" stroke-width="1"/>
-      <line x1="72" y1="140" x2="810" y2="140" stroke="#d8d4c7" stroke-width="1"/>
-      <line x1="72" y1="95" x2="810" y2="95" stroke="#d8d4c7" stroke-width="1"/>
-      <line x1="72" y1="50" x2="810" y2="50" stroke="#d8d4c7" stroke-width="1"/>
-
-      <!-- y-axis labels (muted) -->
-      <text x="64" y="234" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,0</text>
-      <text x="64" y="189" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,3</text>
-      <text x="64" y="144" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,6</text>
-      <text x="64" y="99" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">1,9</text>
-      <text x="64" y="54" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">2,2</text>
-
-      <!-- hranice 2,10 dashed line -->
-      <line x1="72" y1="65" x2="810" y2="65" stroke="#1a9fbd" stroke-width="2" stroke-dasharray="5,4"/>
-      <text x="804" y="57" font-size="12" fill="#1a9fbd" text-anchor="end" font-family="Roboto, system-ui, sans-serif" font-weight="700">hranice 2,10</text>
-
-      <!-- TFR polyline, 8 evenly-spaced 5-year intervals: 1990-2025 -->
-      <path d="M72,96.5 L177,188 L283,209 L388,188 L494,156.5 L599,144.5 L705,123.5 L810,188"
-        fill="none" stroke="#de1743" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-
-      <!-- data points -->
-      <circle cx="72"  cy="96.5"  r="4" fill="#de1743"/>
-      <circle cx="177" cy="188"   r="4" fill="#de1743"/>
-      <circle cx="283" cy="209"   r="4" fill="#de1743"/>
-      <circle cx="388" cy="188"   r="4" fill="#de1743"/>
-      <circle cx="494" cy="156.5" r="4" fill="#de1743"/>
-      <circle cx="599" cy="144.5" r="4" fill="#de1743"/>
-      <circle cx="705" cy="123.5" r="4" fill="#de1743"/>
-      <circle cx="810" cy="188"   r="6" fill="#de1743"/>
-
-      <!-- values above each data point -->
-      <text x="72"  y="84"  font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,89</text>
-      <text x="177" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
-      <text x="283" y="197" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,14</text>
-      <text x="388" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
-      <text x="494" y="145" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,49</text>
-      <text x="599" y="133" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,57</text>
-      <text x="705" y="112" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,71</text>
-      <text x="810" y="176" font-size="13" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="800">1,28</text>
-
-      <!-- x-axis year labels, evenly spaced -->
-      <text x="72"  y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">1990</text>
-      <text x="177" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">1995</text>
-      <text x="283" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2000</text>
-      <text x="388" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2005</text>
-      <text x="494" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2010</text>
-      <text x="599" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2015</text>
-      <text x="705" y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">2020</text>
-      <text x="810" y="254" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">2025</text>
+    <svg class="dt-visual-svg" viewBox="0 0 660 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku v letech 1990 až 2025">
+      <g stroke="rgba(0,0,0,0.08)" stroke-width="1">
+        <line x1="60" y1="30" x2="620" y2="30"/>
+        <line x1="60" y1="87.5" x2="620" y2="87.5"/>
+        <line x1="60" y1="145" x2="620" y2="145"/>
+        <line x1="60" y1="202.5" x2="620" y2="202.5"/>
+        <line x1="60" y1="260" x2="620" y2="260"/>
+      </g>
+      <g font-size="10" fill="#888" text-anchor="end">
+        <text x="52" y="33">2,2</text>
+        <text x="52" y="90.5">1,9</text>
+        <text x="52" y="148">1,6</text>
+        <text x="52" y="205.5">1,3</text>
+        <text x="52" y="263">1,0</text>
+      </g>
+      <line x1="60" y1="49.16" x2="620" y2="49.16" stroke="#0e8aab" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="620" y="42" font-size="11" fill="#0e8aab" text-anchor="end">hranice 2,10</text>
+      <polyline points="60,89.4 140,206.34 220,233.17 300,206.34 380,166.18 460,150.85 540,123.97 620,206.34" fill="none" stroke="#de1743" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <g fill="#de1743">
+        <circle cx="60" cy="89.4" r="5"/>
+        <circle cx="140" cy="206.34" r="5"/>
+        <circle cx="220" cy="233.17" r="5"/>
+        <circle cx="300" cy="206.34" r="5"/>
+        <circle cx="380" cy="166.18" r="5"/>
+        <circle cx="460" cy="150.85" r="5"/>
+        <circle cx="540" cy="123.97" r="5"/>
+        <circle cx="620" cy="206.34" r="5"/>
+      </g>
+      <g font-size="12.5" font-weight="700" fill="#de1743" text-anchor="middle">
+        <text x="60" y="67">1,89</text>
+        <text x="140" y="184">1,28</text>
+        <text x="220" y="211">1,14</text>
+        <text x="300" y="184">1,28</text>
+        <text x="380" y="144">1,49</text>
+        <text x="460" y="129">1,57</text>
+        <text x="540" y="102">1,71</text>
+        <text x="620" y="184">1,28</text>
+      </g>
+      <g font-size="11" fill="#555" text-anchor="middle">
+        <text x="60" y="285">1990</text>
+        <text x="140" y="285">1995</text>
+        <text x="220" y="285">2000</text>
+        <text x="300" y="285">2005</text>
+        <text x="380" y="285">2010</text>
+        <text x="460" y="285">2015</text>
+        <text x="540" y="285">2020</text>
+        <text x="620" y="285">2025</text>
+      </g>
     </svg>
-    <p class="dt-visual-source">• Zdroj: ČSÚ, <a href="https://csu.gov.cz/produkty/oby_cr" target="_blank" rel="noopener">časové řady úhrnné plodnosti</a>; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
+    <p class="dt-visual-source">• Zdroj: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
   </div>
 
   <div class="dt-grid">
-
     <div class="dt-card dt-card--lead">
       <div class="dt-card-thumb">
-        <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Miniatura vývoje úhrnné plodnosti v Česku">
           <rect width="140" height="90" fill="#f8f6f0"/>
-          <line x1="10" y1="80" x2="120" y2="80" stroke="#1a1a1a" stroke-width="1"/>
-          <line x1="10" y1="25" x2="120" y2="25" stroke="#1a9fbd" stroke-width="1.5" stroke-dasharray="3,2"/>
-          <polyline points="10,40 30,38 50,42 70,46 90,58 110,72" stroke="#de1743" stroke-width="2.5" fill="none"/>
-          <text x="138" y="20" font-size="9" fill="#1a9fbd" text-anchor="end" font-family="Georgia,serif" font-weight="bold">cíl 2,10</text>
-          <text x="138" y="76" font-size="10" fill="#de1743" text-anchor="end" font-family="Georgia,serif" font-weight="bold">1,28</text>
+          <line x1="10" y1="78" x2="124" y2="78" stroke="#1a1a1a" stroke-width="1"/>
+          <line x1="10" y1="24" x2="124" y2="24" stroke="#1a9fbd" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <polyline points="10,34 26,62 42,69 58,62 74,52 90,48 106,41 122,62" stroke="#de1743" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="122" cy="62" r="3" fill="#de1743"/>
+          <text x="136" y="20" font-size="9" fill="#1a9fbd" text-anchor="end" font-family="Georgia,serif" font-weight="bold">cíl 2,10</text>
+          <text x="136" y="78" font-size="10" fill="#de1743" text-anchor="end" font-family="Georgia,serif" font-weight="bold">1,28</text>
         </svg>
       </div>
       <div class="dt-card-body">
-        <div class="dt-card-topic dt-card-topic--lead">Demografie • ČR</div>
+        <div class="dt-card-topic">Demografie • ČR</div>
         <h3 class="dt-card-title dt-card-title--lead">Dvě děti na ženu. Babiš slibuje zázrak, který nikdo na světě nesvedl – a nedokáže to ani on</h3>
         <p class="dt-card-desc">Odhad plodnosti v Česku za rok 2025: 1,28 dítěte na ženu (pro lepší představu 5 dětí na čtyři ženy). Babišův cíl: 2,10. Velký rozbor s projekcí.</p>
-        <div class="dt-card-meta">
-          <span>📊 Analýza</span>
-        </div>
+        <div class="dt-card-meta"><span>&#x1f4ca; Analýza</span></div>
       </div>
     </div>
 
@@ -396,276 +524,86 @@
       <div class="dt-card-topic">Explainer • Plodnost</div>
       <h3 class="dt-card-title">Co znamená 1,28?</h3>
       <p class="dt-card-desc">Číslo, o kterém se mluví pořád, ale málokdo opravdu chápe, co znamená. Průvodce úhrnnou plodností pro každého.</p>
-      <div class="dt-card-meta"><span>📐 Vizuální explainer</span></div>
+      <div class="dt-card-meta"><span>&#x1f4d0; Vizuální explainer</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Demografie • svět</div>
       <h3 class="dt-card-title">Svět se nepřelidňuje, zato se výrazně mění jeho skladba</h3>
       <p class="dt-card-desc">V roce 1919 se mezi částí tuzemské elity zrodila myšlenka, že by Československo mělo vlastní africkou kolonii – Togo, které tehdy mělo méně než desetinu obyvatel mladé republiky. Za patnáct let bude mít Togo víc obyvatel než Česká republika.</p>
-      <div class="dt-card-meta">
-        <span>📐 Vizuální explainer</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f4d0; Vizuální explainer</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Demografie • Evropa</div>
       <h3 class="dt-card-title">Skandinávská past</h3>
       <p class="dt-card-desc">Žádná vláda na světě nezvládla vrátit plodnost k původním hodnotám. Skandinávie zpomalila pád, ale nezastavila ho.</p>
-      <div class="dt-card-meta">
-        <span>📈 Komparativní analýza</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f4c8; Komparativní analýza</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Demografie • Evropa</div>
       <h3 class="dt-card-title">Proč mladí netvoří tak často páry – a co všechno se tím mění</h3>
       <p class="dt-card-desc">Globální rozpad párování podle Alice Evans vysvětluje pokles porodnosti lépe než kdejaký pronatalistický balíček.</p>
-      <div class="dt-card-meta">
-        <span>📜 Scrollytelling</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f4dc; Scrollytelling</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Slepá místa v datech</div>
       <h3 class="dt-card-title">Co o porodech v Česku nevíme</h3>
       <p class="dt-card-desc">ČSÚ ví, jak vzdělané jsou české matky a jak se rodí v každé z 6 258 obcí od roku 1971. A my to nyní víme také.</p>
-      <div class="dt-card-meta">
-        <span>🔍 Datová investigace</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f50d; Datová investigace</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Rodina</div>
       <h3 class="dt-card-title">Rodiny mají méně dětí, navíc v pozdějším věku. Co to znamená pro demografický vývoj?</h3>
       <p class="dt-card-desc">Kdo vlastně dnes v Česku chce zakládat rodinu a kdy? Podle čeho se nastávající rodiče rozhodují a co ovlivňuje, zda budou mít víc než jedno dítě?</p>
-      <div class="dt-card-meta">
-        <span>📊 Analýza</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f4ca; Analýza</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Regiony</div>
       <h3 class="dt-card-title">Mapa vylidňování: kde lidé mizí a kde přibývají</h3>
       <p class="dt-card-desc">Obec po obci – třicet let demografického pohybu v interaktivní mapě.</p>
-      <div class="dt-card-meta">
-        <span>🗺️ Mapa</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f5fa;&#xfe0f; Mapa</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
 
     <div class="dt-card">
       <div class="dt-card-topic">Solution journalism</div>
       <h3 class="dt-card-title">Co nám pomůže? Koukáme se, jak to dělají jinde</h3>
       <p class="dt-card-desc">Co je vlastně hlavní problém - je nutné ho pojmenovat. A podívat se, jak ho řeší jinde.</p>
-      <div class="dt-card-meta">
-        <span>📈 Komparativní analýza</span>
-        <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-      </div>
+      <div class="dt-card-meta"><span>&#x1f4c8; Komparativní analýza</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
     </div>
-
   </div>
 
-  <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Podpořte DataTimes</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-  }
-
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  .dt-wrap {
-    width: 100%;
-    font-family: 'Roboto', Arial, sans-serif;
-  }
-
-  .dt-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    padding: 14px 12px;
-    background: #0d1438;
-    text-decoration: none;
-    overflow: hidden;
-    transition: filter .18s ease;
-  }
-
-  .dt-link:hover {
-    filter: brightness(1.05);
-  }
-
-  .dt-link:focus-visible {
-    outline: 2px solid #ffcf02;
-    outline-offset: 2px;
-  }
-
-  .dt-link::before,
-  .dt-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 3px;
-  }
-
-  .dt-link::before {
-    top: 0;
-    background: linear-gradient(to right, #de1743 0%, #f76800 52%, #ffcf02 100%);
-  }
-
-  .dt-link::after {
-    bottom: 0;
-    background: linear-gradient(to right, #ffcf02 0%, #f76800 48%, #de1743 100%);
-  }
-
-  .dt-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 0 0 auto;
-    min-width: 175px;
-  }
-
-  .dt-logo svg {
-    display: block;
-    width: 38px;
-    height: 38px;
-    flex-shrink: 0;
-  }
-
-  .dt-name {
-    margin: 0;
-    font-family: 'Roboto Slab', serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-  }
-
-  .dt-red {
-    color: #de1743;
-  }
-
-  .dt-yellow {
-    color: #ffcf02;
-  }
-
-  .dt-text {
-    flex: 1 1 auto;
-    margin: 0;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.35;
-  }
-
-  .dt-cta {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 148px;
-    padding: 14px 26px;
-    background: #f01952;
-    color: #ffffff;
-    font-family: 'Roboto Slab', serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1;
-    white-space: nowrap;
-    border-radius: 999px;
-    transition: background .18s ease, transform .18s ease;
-  }
-
-  .dt-link:hover .dt-cta {
-    background: #d91347;
-    transform: translateY(-1px);
-  }
-
-  @media (max-width: 760px) {
-    .dt-link {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 14px 14px 16px;
-    }
-
-    .dt-brand {
-      min-width: 0;
-    }
-
-    .dt-text {
-      font-size: 14px;
-    }
-
-    .dt-cta {
-      width: 100%;
-      min-width: 0;
-      font-size: 17px;
-    }
-  }
-</style>
-
-<div class="dt-wrap">
-  <a
-    class="dt-link"
-    href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Podpořit DataTimes přes Stripe"
-  >
-    <div class="dt-brand">
-      <div class="dt-logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true">
-          <defs>
-            <linearGradient id="dtG2" x1="1" x2=".25" y1=".5" y2="1">
-              <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
-              <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
-            </linearGradient>
-          </defs>
-          <g transform="rotate(-30 250 250)">
-            <path fill="none" stroke="#ffcf02" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
-            <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M336.60254 300 A100 100 0 0 0 250 150"/>
-            <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M250 150 A100 100 0 0 0 250 350"/>
-            <path fill="none" stroke="url(#dtG2)" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
-          </g>
-        </svg>
+  <div class="dt-support">
+    <a class="dt-support-link" href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" aria-label="Podpořit DataTimes přes Stripe">
+      <div class="dt-support-brand">
+        <div class="dt-support-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true">
+            <defs>
+              <linearGradient id="dtG2Clean" x1="1" x2=".25" y1=".5" y2="1">
+                <stop offset="0%" stop-color="#ffcf02" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#ffcf02" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#ffcf02" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#ffcf02" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <g transform="rotate(-30 250 250)">
+              <path fill="none" stroke="#ffcf02" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+              <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M336.60254 300 A100 100 0 0 0 250 150"/>
+              <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M250 150 A100 100 0 0 0 250 350"/>
+              <path fill="none" stroke="url(#dtG2Clean)" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
+            </g>
+          </svg>
+        </div>
+        <p class="dt-support-name"><span class="dt-red">Data</span><span class="dt-yellow">Times</span></p>
       </div>
-
-      <p class="dt-name">
-        <span class="dt-red">Data</span><span class="dt-yellow">Times</span>
-      </p>
-    </div>
-
-    <p class="dt-text">
-      Veřejný prostor i&nbsp;politiku zaplavují blbosti, fake news a&nbsp;propaganda.
-      Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy.
-      Za cenu jednoho oběda.
-    </p>
-
-    <span class="dt-cta">Jdu do toho</span>
-  </a>
-</div>
+      <p class="dt-support-text">Veřejný prostor i&nbsp;politiku zaplavují blbosti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy. Za cenu jednoho oběda.</p>
+      <span class="dt-support-cta">Jdu do toho</span>
+    </a>
+  </div>
 
   <div class="dt-section-break">
     <h2 class="dt-section-h">Kdo bude rozhodovat</h2>
@@ -690,50 +628,55 @@
         <line x1="72" y1="170" x2="810" y2="170" stroke="#d8d4c7" stroke-width="1"/>
         <line x1="72" y1="110" x2="810" y2="110" stroke="#d8d4c7" stroke-width="1"/>
         <line x1="72" y1="50" x2="810" y2="50" stroke="#d8d4c7" stroke-width="1"/>
-
         <text x="64" y="234" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">0</text>
         <text x="64" y="174" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">20 %</text>
         <text x="64" y="114" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">40 %</text>
         <text x="64" y="54" font-size="11" fill="#9a958a" text-anchor="end" font-family="Roboto, system-ui, sans-serif">60 %</text>
 
         <g font-family="Roboto, system-ui, sans-serif">
-          <g data-year="1990" data-value="37.819"><rect x="77.0" y="116.5" width="42" height="113.5" fill="#101432"/><text x="98.0" y="108.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">37,8 %</text><text x="98.0" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
-          <g data-year="1995" data-value="38.058"><rect x="144.0" y="115.8" width="42" height="114.2" fill="#101432"/><text x="165.0" y="107.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">38,1 %</text><text x="165.0" y="254" font-size="11" fill="#444" text-anchor="middle">1995</text></g>
-          <g data-year="2000" data-value="40.789"><rect x="211.0" y="107.6" width="42" height="122.4" fill="#101432"/><text x="232.0" y="99.6" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">40,8 %</text><text x="232.0" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
-          <g data-year="2005" data-value="43.211"><rect x="278.0" y="100.4" width="42" height="129.6" fill="#101432"/><text x="299.0" y="92.4" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,2 %</text><text x="299.0" y="254" font-size="11" fill="#444" text-anchor="middle">2005</text></g>
-          <g data-year="2010" data-value="43.819"><rect x="345.0" y="98.5" width="42" height="131.5" fill="#101432"/><text x="366.0" y="90.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,8 %</text><text x="366.0" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
-          <g data-year="2015" data-value="46.111"><rect x="412.0" y="91.7" width="42" height="138.3" fill="#101432"/><text x="433.0" y="83.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">46,1 %</text><text x="433.0" y="254" font-size="11" fill="#444" text-anchor="middle">2015</text></g>
-          <g data-year="2020" data-value="47.731"><rect x="479.0" y="86.8" width="42" height="143.2" fill="#101432"/><text x="500.0" y="78.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">47,7 %</text><text x="500.0" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
-          <g data-year="2025" data-value="49.920"><rect x="546.0" y="80.2" width="42" height="149.8" fill="#101432"/><text x="567.0" y="72.2" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">49,9 %</text><text x="567.0" y="254" font-size="11" fill="#444" text-anchor="middle" >2025</text></g>
-          <g data-year="2030" data-value="53.442"><rect x="613.0" y="69.7" width="42" height="160.3" fill="#101432"/><text x="634.0" y="61.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">53,4 %</text><text x="634.0" y="254" font-size="11" fill="#444" text-anchor="middle" >2030</text></g>
-          <g data-year="2035" data-value="54.685"><rect x="680.0" y="65.9" width="42" height="164.1" fill="#101432"/><text x="701.0" y="57.9" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">54,7 %</text><text x="701.0" y="254" font-size="11" fill="#444" text-anchor="middle" >2035</text></g>
-          <g data-year="2040" data-value="55.449"><rect x="747.0" y="63.7" width="42" height="166.3" fill="#101432"/><text x="768.0" y="55.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">55,4 %</text><text x="768.0" y="254" font-size="11" fill="#444" text-anchor="middle" >2040</text></g>
+          <g data-year="1990" data-value="37.819"><rect x="77" y="116.5" width="42" height="113.5" fill="#101432"/><text x="98" y="108.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">37,8 %</text><text x="98" y="254" font-size="11" fill="#444" text-anchor="middle">1990</text></g>
+          <g data-year="1995" data-value="38.058"><rect x="144" y="115.8" width="42" height="114.2" fill="#101432"/><text x="165" y="107.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">38,1 %</text><text x="165" y="254" font-size="11" fill="#444" text-anchor="middle">1995</text></g>
+          <g data-year="2000" data-value="40.789"><rect x="211" y="107.6" width="42" height="122.4" fill="#101432"/><text x="232" y="99.6" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">40,8 %</text><text x="232" y="254" font-size="11" fill="#444" text-anchor="middle">2000</text></g>
+          <g data-year="2005" data-value="43.211"><rect x="278" y="100.4" width="42" height="129.6" fill="#101432"/><text x="299" y="92.4" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,2 %</text><text x="299" y="254" font-size="11" fill="#444" text-anchor="middle">2005</text></g>
+          <g data-year="2010" data-value="43.819"><rect x="345" y="98.5" width="42" height="131.5" fill="#101432"/><text x="366" y="90.5" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">43,8 %</text><text x="366" y="254" font-size="11" fill="#444" text-anchor="middle">2010</text></g>
+          <g data-year="2015" data-value="46.111"><rect x="412" y="91.7" width="42" height="138.3" fill="#101432"/><text x="433" y="83.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">46,1 %</text><text x="433" y="254" font-size="11" fill="#444" text-anchor="middle">2015</text></g>
+          <g data-year="2020" data-value="47.731"><rect x="479" y="86.8" width="42" height="143.2" fill="#101432"/><text x="500" y="78.8" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">47,7 %</text><text x="500" y="254" font-size="11" fill="#444" text-anchor="middle">2020</text></g>
+          <g data-year="2025" data-value="49.920"><rect x="546" y="80.2" width="42" height="149.8" fill="#5b6480"/><text x="567" y="72.2" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">49,9 %</text><text x="567" y="254" font-size="11" fill="#444" text-anchor="middle">2025</text></g>
+          <g data-year="2030" data-value="53.442"><rect x="613" y="69.7" width="42" height="160.3" fill="#5b6480"/><text x="634" y="61.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">53,4 %</text><text x="634" y="254" font-size="11" fill="#444" text-anchor="middle">2030</text></g>
+          <g data-year="2035" data-value="54.685"><rect x="680" y="65.9" width="42" height="164.1" fill="#5b6480"/><text x="701" y="57.9" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">54,7 %</text><text x="701" y="254" font-size="11" fill="#444" text-anchor="middle">2035</text></g>
+          <g data-year="2040" data-value="55.449"><rect x="747" y="63.7" width="42" height="166.3" fill="#5b6480"/><text x="768" y="55.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">55,4 %</text><text x="768" y="254" font-size="11" fill="#444" text-anchor="middle">2040</text></g>
         </g>
-
         <line x1="539" y1="38" x2="539" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
         <text x="545" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
-
-              </svg>
+      </svg>
       <p class="dt-visual-source">• Zdroj: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
     </div>
 
     <div class="dt-grid">
-
       <div class="dt-card dt-card--lead">
         <div class="dt-card-thumb">
-          <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Schéma Poslanecké sněmovny – amfiteátr s mandáty">
+          <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Miniatura stárnutí voličské populace">
             <rect width="140" height="90" fill="#f8f6f0"/>
-            <g><circle cx="8.9" cy="52.2" r="3.8" fill="#111111"/><circle cx="13.6" cy="44.0" r="3.8" fill="#111111"/><circle cx="19.5" cy="36.5" r="3.8" fill="#5b63d3"/><circle cx="26.3" cy="29.9" r="3.8" fill="#5b63d3"/><circle cx="34.0" cy="24.3" r="3.8" fill="#5b63d3"/><circle cx="42.3" cy="19.9" r="3.8" fill="#5b63d3"/><circle cx="51.3" cy="16.6" r="3.8" fill="#de1743"/><circle cx="60.5" cy="14.7" r="3.8" fill="#de1743"/><circle cx="70.0" cy="14.0" r="3.8" fill="#de1743"/><circle cx="79.5" cy="14.7" r="3.8" fill="#de1743"/><circle cx="88.7" cy="16.6" r="3.8" fill="#1a9fbd"/><circle cx="97.7" cy="19.9" r="3.8" fill="#1a9fbd"/><circle cx="106.0" cy="24.3" r="3.8" fill="#1a9fbd"/><circle cx="113.7" cy="29.9" r="3.8" fill="#252a5b"/><circle cx="120.5" cy="36.5" r="3.8" fill="#252a5b"/><circle cx="126.4" cy="44.0" r="3.8" fill="#252a5b"/><circle cx="131.1" cy="52.2" r="3.8" fill="#252a5b"/><circle cx="14.9" cy="72.3" r="3.8" fill="#111111"/><circle cx="17.0" cy="63.9" r="3.8" fill="#111111"/><circle cx="20.5" cy="55.9" r="3.8" fill="#111111"/><circle cx="25.1" cy="48.6" r="3.8" fill="#5b63d3"/><circle cx="30.8" cy="42.0" r="3.8" fill="#5b63d3"/><circle cx="37.4" cy="36.4" r="3.8" fill="#5b63d3"/><circle cx="44.9" cy="32.0" r="3.8" fill="#5b63d3"/><circle cx="52.9" cy="28.7" r="3.8" fill="#de1743"/><circle cx="61.3" cy="26.7" r="3.8" fill="#de1743"/><circle cx="70.0" cy="26.0" r="3.8" fill="#de1743"/><circle cx="78.7" cy="26.7" r="3.8" fill="#de1743"/><circle cx="87.1" cy="28.7" r="3.8" fill="#1a9fbd"/><circle cx="95.1" cy="32.0" r="3.8" fill="#1a9fbd"/><circle cx="102.6" cy="36.4" r="3.8" fill="#1a9fbd"/><circle cx="109.2" cy="42.0" r="3.8" fill="#252a5b"/><circle cx="114.9" cy="48.6" r="3.8" fill="#252a5b"/><circle cx="119.5" cy="55.9" r="3.8" fill="#252a5b"/><circle cx="123.0" cy="63.9" r="3.8" fill="#252a5b"/><circle cx="125.1" cy="72.3" r="3.8" fill="#252a5b"/><circle cx="26.7" cy="74.4" r="3.8" fill="#5b63d3"/><circle cx="28.7" cy="67.0" r="3.8" fill="#5b63d3"/><circle cx="31.9" cy="60.0" r="3.8" fill="#5b63d3"/><circle cx="36.3" cy="53.7" r="3.8" fill="#5b63d3"/><circle cx="41.7" cy="48.3" r="3.8" fill="#5b63d3"/><circle cx="48.0" cy="43.9" r="3.8" fill="#5b63d3"/><circle cx="55.0" cy="40.7" r="3.8" fill="#de1743"/><circle cx="62.4" cy="38.7" r="3.8" fill="#de1743"/><circle cx="70.0" cy="38.0" r="3.8" fill="#de1743"/><circle cx="77.6" cy="38.7" r="3.8" fill="#de1743"/><circle cx="85.0" cy="40.7" r="3.8" fill="#1a9fbd"/><circle cx="92.0" cy="43.9" r="3.8" fill="#1a9fbd"/><circle cx="98.3" cy="48.3" r="3.8" fill="#252a5b"/><circle cx="103.7" cy="53.7" r="3.8" fill="#252a5b"/><circle cx="108.1" cy="60.0" r="3.8" fill="#252a5b"/><circle cx="111.3" cy="67.0" r="3.8" fill="#252a5b"/><circle cx="113.3" cy="74.4" r="3.8" fill="#252a5b"/><circle cx="38.5" cy="76.4" r="3.8" fill="#5b63d3"/><circle cx="40.4" cy="69.9" r="3.8" fill="#5b63d3"/><circle cx="43.7" cy="63.8" r="3.8" fill="#5b63d3"/><circle cx="48.1" cy="58.6" r="3.8" fill="#5b63d3"/><circle cx="53.6" cy="54.5" r="3.8" fill="#5b63d3"/><circle cx="59.9" cy="51.6" r="3.8" fill="#de1743"/><circle cx="66.6" cy="50.2" r="3.8" fill="#de1743"/><circle cx="73.4" cy="50.2" r="3.8" fill="#de1743"/><circle cx="80.1" cy="51.6" r="3.8" fill="#1a9fbd"/><circle cx="86.4" cy="54.5" r="3.8" fill="#1a9fbd"/><circle cx="91.9" cy="58.6" r="3.8" fill="#252a5b"/><circle cx="96.3" cy="63.8" r="3.8" fill="#252a5b"/><circle cx="99.6" cy="69.9" r="3.8" fill="#252a5b"/><circle cx="101.5" cy="76.4" r="3.8" fill="#252a5b"/><circle cx="49.3" cy="78.4" r="3.8" fill="#5b63d3"/><circle cx="51.4" cy="72.2" r="3.8" fill="#5b63d3"/><circle cx="55.3" cy="67.0" r="3.8" fill="#5b63d3"/><circle cx="60.6" cy="63.2" r="3.8" fill="#5b63d3"/><circle cx="66.8" cy="61.3" r="3.8" fill="#de1743"/><circle cx="73.2" cy="61.3" r="3.8" fill="#de1743"/><circle cx="79.4" cy="63.2" r="3.8" fill="#1a9fbd"/><circle cx="84.7" cy="67.0" r="3.8" fill="#252a5b"/><circle cx="88.6" cy="72.2" r="3.8" fill="#252a5b"/><circle cx="90.7" cy="78.4" r="3.8" fill="#252a5b"/></g>
+            <line x1="12" y1="75" x2="128" y2="75" stroke="#101432" stroke-width="1"/>
+            <line x1="12" y1="42" x2="128" y2="42" stroke="#d8d4c7" stroke-width="1"/>
+            <rect x="16" y="42" width="8" height="33" fill="#101432"/>
+            <rect x="29" y="41" width="8" height="34" fill="#101432"/>
+            <rect x="42" y="36" width="8" height="39" fill="#101432"/>
+            <rect x="55" y="31" width="8" height="44" fill="#101432"/>
+            <rect x="68" y="29" width="8" height="46" fill="#101432"/>
+            <rect x="81" y="25" width="8" height="50" fill="#101432"/>
+            <rect x="94" y="21" width="8" height="54" fill="#5b6480"/>
+            <rect x="107" y="15" width="8" height="60" fill="#5b6480"/>
+            <rect x="120" y="12" width="8" height="63" fill="#5b6480"/>
+            <line x1="88" y1="13" x2="88" y2="75" stroke="#de1743" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="130" y="10" font-size="9" fill="#8b0e2b" text-anchor="end" font-family="Georgia,serif" font-weight="bold">50+ roste</text>
           </svg>
         </div>
         <div class="dt-card-body">
-          <div class="dt-card-topic dt-card-topic--lead">Voličská základna • ČR</div>
+          <div class="dt-card-topic">Voličská základna • ČR</div>
           <h3 class="dt-card-title dt-card-title--lead">Kdo bude volit příští Sněmovnu</h3>
           <p class="dt-card-desc">Voličská populace se posouvá. Generace, která rozhodla volby 2025, bude za čtyři roky menšinou. Velký přehled: věk, vzdělání, regiony.</p>
-          <div class="dt-card-meta">
-            <span>📊 Datový explainer</span>
-            <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-          </div>
+          <div class="dt-card-meta"><span>&#x1f4ca; Datový explainer</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
         </div>
       </div>
 
@@ -741,42 +684,29 @@
         <div class="dt-card-topic">Nevoliči</div>
         <h3 class="dt-card-title">Kdo k urnám nedorazí – a proč na tom to záleží</h3>
         <p class="dt-card-desc">Stovky tisíc lidí k volbám nechodí. Demografický profil těch, kteří se rozhodování vzdali – a co by se v politice změnilo, kdyby přišli.</p>
-        <div class="dt-card-meta">
-          <span>📊 Analýza</span>
-          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-        </div>
+        <div class="dt-card-meta"><span>&#x1f4ca; Analýza</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
       </div>
 
       <div class="dt-card">
         <div class="dt-card-topic">Gender</div>
         <h3 class="dt-card-title">Ženy v rozhodování: 1990–2026 v jednom grafu</h3>
         <p class="dt-card-desc">Sněmovna, vláda, kraje, obce. Kde se zastoupení žen pohnulo, kde stojí.</p>
-        <div class="dt-card-meta">
-          <span>📈 Komparativní analýza</span>
-          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-        </div>
+        <div class="dt-card-meta"><span>&#x1f4c8; Komparativní analýza</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
       </div>
 
       <div class="dt-card">
         <div class="dt-card-topic">Generace</div>
         <h3 class="dt-card-title">Generace Z a alfa začaly volit</h3>
         <p class="dt-card-desc">Co o nich víme z dat – a v čem se liší od mileniálů, generace X nebo boomerů.</p>
-        <div class="dt-card-meta">
-          <span>📜 Scrollytelling</span>
-          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-        </div>
+        <div class="dt-card-meta"><span>&#x1f4dc; Scrollytelling</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
       </div>
 
       <div class="dt-card">
         <div class="dt-card-topic">Vzdělání</div>
         <h3 class="dt-card-title">Vzdělanostní propast a volební mapa</h3>
         <p class="dt-card-desc">Kde končí nejvíc lidí se základkou – a jak se to promítá do voleb.</p>
-        <div class="dt-card-meta">
-          <span>🗺️ Mapa</span>
-          <span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span>
-        </div>
+        <div class="dt-card-meta"><span>&#x1f5fa;&#xfe0f; Mapa</span><span class="dt-card-meta-status dt-card-meta-status--upcoming">Připravujeme</span></div>
       </div>
-
     </div>
   </div>
 
@@ -807,5 +737,4 @@
   <div class="dt-infobox">
     <strong>O speciálu Data pro budoucí premiérku.</strong> Dlouhodobý projekt dvojice datových novinářů a analytiků <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener">Mahdalová &amp; Škop</a>, který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich. Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat. Projekt vzniká s grantovou podporou <a href="https://www.nfnz.cz" target="_blank" rel="noopener">Nadačního fondu nezávislé žurnalistiky</a> a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
   </div>
-
 </div>
