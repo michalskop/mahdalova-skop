@@ -296,6 +296,10 @@
   font-family: 'Roboto', Arial, sans-serif;
   margin: 34px 0 0;
 }
+.dt-support + .dt-section-break {
+  margin-top: 34px;
+  padding-top: 0;
+}
 .dt-support-link {
   position: relative;
   display: flex;
@@ -467,6 +471,10 @@
     margin-top: 36px;
     padding-top: 18px;
   }
+  .dt-support + .dt-section-break {
+    margin-top: 28px;
+    padding-top: 0;
+  }
   .dt-card,
   .dt-infobox {
     padding: 16px 18px;
@@ -530,7 +538,7 @@
 <div class="dt-hub">
   <div class="dt-tag">Speciál • Data pro budoucí premiérku • Demografie</div>
 
-  <h2 class="dt-section-h">Analýzy a kontext</h2>
+  <h2 class="dt-section-h">Bez kontextu to nejde</h2>
 
   <div class="dt-keystat">
     <div class="dt-keystat-num">1,28</div>
@@ -787,8 +795,14 @@
           <g data-year="2035" data-value="54.685"><rect x="680" y="65.9" width="42" height="164.1" fill="#5b6480"/><text x="701" y="57.9" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">54,7 %</text><text x="701" y="254" font-size="11" fill="#444" text-anchor="middle">2035</text></g>
           <g data-year="2040" data-value="55.449"><rect x="747" y="63.7" width="42" height="166.3" fill="#5b6480"/><text x="768" y="55.7" font-size="11" fill="#101432" text-anchor="middle" font-weight="700">55,4 %</text><text x="768" y="254" font-size="11" fill="#444" text-anchor="middle">2040</text></g>
         </g>
-        <line x1="539" y1="38" x2="539" y2="230" stroke="#de1743" stroke-width="1" stroke-dasharray="4,4"/>
-        <text x="545" y="34" font-size="11" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="700">projekce</text>
+        <defs>
+          <path id="dt-projection-arc" d="M545 45 C590 22 735 22 790 45"/>
+          <path id="dt-projection-label-arc" d="M552 31 C600 10 732 10 782 31"/>
+        </defs>
+        <use href="#dt-projection-arc" fill="none" stroke="#de1743" stroke-width="1.25" stroke-linecap="round"/>
+        <text font-size="12" fill="#de1743" font-family="Roboto, system-ui, sans-serif" font-weight="400">
+          <textPath href="#dt-projection-label-arc" startOffset="50%" text-anchor="middle">projekce</textPath>
+        </text>
       </svg>
       <div class="dt-visual-meta">
         <p class="dt-visual-source">• Zdroj: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
