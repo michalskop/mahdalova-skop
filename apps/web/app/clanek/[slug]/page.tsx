@@ -122,7 +122,9 @@ export default async function ArticlePage({ params }: PageProps) {
           articleUrl={articleUrl}
           tags={article.tags}
         />
-        <ArticleRenderer {...article} slug={params.slug} />
+        <div data-pagefind-body>
+          <ArticleRenderer {...article} slug={params.slug} />
+        </div>
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>

@@ -1,0 +1,17 @@
+.result {
+  text-decoration: none;
+  display: block;
+  transition: box-shadow 0.15s ease;
+}
+
+.result:hover {
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.excerpt mark {
+  background-color: #e5fdfc;
+  color: #06677d;
+  border-radius: 2px;
+  padding: 0 2px;
+  font-weight: 600;
+}

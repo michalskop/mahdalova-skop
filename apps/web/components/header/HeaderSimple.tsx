@@ -14,6 +14,7 @@ const links = [
   { link: '/kontext', label: 'Kontext' },
   { link: '/podcasty', label: 'Podcasty' },
   { link: '/kdo-jsme', label: 'Kdo jsme' },
+  { link: '/search', label: 'Hledat' },
 ];
 
 export function HeaderSimple() {
