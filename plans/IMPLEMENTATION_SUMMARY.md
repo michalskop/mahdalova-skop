@@ -289,9 +289,9 @@ See `plans/SEARCH_IMPLEMENTATION.md` for full details.
 - `apps/web/components/header/HeaderSimple.tsx` — "Hledat" added to nav
 - `apps/web/package.json` — build script extended: `"next build && node scripts/buildSearchIndex.js"`
 
-### apps/datajournalism.studio ⬜ TODO
+### apps/datajournalism.studio ✅ DONE
 
-Search not yet implemented. See `plans/SEARCH_IMPLEMENTATION.md` § datajournalism.studio for step-by-step plan.
+Same approach as datatimes.cz. Articles at `app/a/_articles/`, route `/a/[slug]`, English UI strings. 28 articles indexed at build time. See `plans/SEARCH_IMPLEMENTATION.md` for details.
 
 ---
 

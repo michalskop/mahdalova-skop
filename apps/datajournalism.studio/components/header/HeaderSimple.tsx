@@ -13,6 +13,7 @@ const links = [
   { link: '/work', label: 'Work' },
   { link: '/blog', label: 'Blog' },
   { link: '/about', label: 'About us' },
+  { link: '/search', label: 'Search' },
 ];
 
 export function HeaderSimple() {

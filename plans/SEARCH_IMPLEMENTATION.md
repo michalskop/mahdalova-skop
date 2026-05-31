@@ -52,30 +52,29 @@ Pagefind runs as part of the build; `out/pagefind/` is included in the static ou
 
 ---
 
-## datajournalism.studio (`apps/datajournalism.studio`) ⬜ TODO
+## datajournalism.studio (`apps/datajournalism.studio`) ✅ DONE
 
-### Plan
+Same approach as datatimes.cz. Articles are CSR-rendered via `MDXClientWrapper`, so custom indexer needed.
 
-Same approach as datatimes.cz — custom `buildSearchIndex.js` reading source MDX from `app/blog/` (or wherever articles live), generating temp HTML, running pagefind.
+### Key differences from datatimes.cz
 
-### Steps to implement
+- Article route: `/a/[slug]` (not `/clanek/[slug]`)
+- Article source: `app/a/_articles/[slug]/index.md`
+- Language: English (`lang="en"` in temp HTML)
+- `zzz-*` slugs skipped (demo articles)
+- No basePath — `toHref()` only strips `.html`
+- No `useMediaQuery` import in header (simpler)
 
-1. **Identify article source directory** — check `app/` structure for where MDX/MD files live
-2. **Copy `buildSearchIndex.js`** from `apps/web/scripts/` and adapt paths:
-   - Source dir: `app/[articles-dir]/`
-   - Temp output: `out/_search_temp/`
-   - Pagefind output: `out/pagefind/`
-3. **Update `package.json`** build script:
-   ```json
-   "build": "next build && node scripts/buildSearchIndex.js"
-   ```
-4. **Create `app/search/page.tsx`** — adapt from `apps/web/app/search/page.tsx` (check which UI library is used: Mantine, Tailwind, or plain CSS)
-5. **Add nav link** to the header component
-6. **Test locally:** `npm run build` then `npx serve out` and check `/search`
+### Files added/modified
 
-### Key differences from datatimes.cz to check
+| File | Purpose |
+|------|---------|
+| `apps/datajournalism.studio/scripts/buildSearchIndex.js` | Custom MDX-to-pagefind indexer (reads `app/a/_articles/`) |
+| `apps/datajournalism.studio/app/search/page.tsx` | Mantine search UI, English strings, countdown loading |
+| `apps/datajournalism.studio/app/search/search.module.css` | Result hover + `<mark>` highlight styles |
+| `apps/datajournalism.studio/components/header/HeaderSimple.tsx` | "Search" added to nav links |
+| `apps/datajournalism.studio/package.json` | `"build": "next build && node scripts/buildSearchIndex.js"` |
 
-- UI framework (Mantine vs Tailwind vs other)
-- Article directory structure and frontmatter fields (`title`, `excerpt`/`description`)
-- Whether basePath is set (check `next.config.*`)
-- ESLint config (which ts-ignore style to use)
+### Build result
+
+28 articles indexed, 4103 words, pagefind index at `out/pagefind/`.

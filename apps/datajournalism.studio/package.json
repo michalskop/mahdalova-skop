@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/copyImages.js && next dev -p 3002",
     "prebuild": "node scripts/copyImages.js && node scripts/generateSitemap.js && node scripts/generateLlmsTxt.js",
-    "build": "next build",
+    "build": "next build && node scripts/buildSearchIndex.js",
     "start": "next start",
     "lint": "next lint"
   },
