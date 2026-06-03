@@ -19,7 +19,7 @@ K tomu se přidává druhý důvod, který si zaslouží samostatnou pozornost: 
 
 Co to v praxi znamená? Demografové Michael Geruso a Dean Spears v analýze publikované v Journal of Economic Perspectives na začátku roku 2026 shrnují, že nízkoplodnostní společnosti čelí rostoucímu tlaku na financování důchodových systémů a zdravotní péče - méně pracujících musí zajišťovat stále početnější generaci důchodců. Bez strukturálních změn nebo masivní migrace není z této pasti matematického úniku.
 
-Andrej Babiš na to má odpověď. Ještě jako lídr opoziční ANO v předvolební kampani prohlásil, že prioritou má být porodnost 2,1 dítěte na ženu. [*ověřit přesný zdroj a datum výroku - doplní redakce*] Vláda ANO ve svém programovém prohlášení z 5. ledna 2026 uvádí, že chce, aby mladí lidé mohli „plánovat budoucnost, zakládat rodiny a mít dostupné bydlení". Konkrétní cíl 2,1 dítěte na ženu v dokumentu uveden není. [zdroj: vlada.gov.cz/cz/vlada/programove-prohlaseni/programove-prohlaseni-vlady-224629/]
+Andrej Babiš na to má odpověď. Ještě jako lídr opoziční ANO v předvolební kampani prohlásil, že prioritou má být porodnost 2,1 dítěte na ženu. Vláda ANO ve svém programovém prohlášení z 5. ledna 2026 uvádí, že chce, aby mladí lidé mohli „[plánovat budoucnost, zakládat rodiny a mít dostupné bydlení](https://vlada.gov.cz/cz/vlada/programove-prohlaseni/programove-prohlaseni-vlady-224629/)". Konkrétní cíl 2,1 dítěte na ženu v dokumentu uveden není.
 
 ---
 
@@ -33,9 +33,7 @@ Hledali jsme největší nárůst, jaký se kdy podařil.
 
 ## Rekord posledních třiceti let: Švédsko, konec devadesátých let až 2010
 
-Švédský případ si zaslouží pozornost - a nejen proto, že ho politici rádi zmiňují jako důkaz, že rodinná politika dokáže plodnost zvednout. Dokáže. Ale výsledky bývají skromnější a krátkodobější, než jak se v politické debatě obvykle říká.
-
-V posledních třiceti letech dosáhlo Švédsko nejvyšší plodnosti v roce 2010 - 1,97 dítěte na ženu. Šlo o nárůst zhruba o 0,47 dítěte oproti nejnižší hodnotě z přelomu tisíciletí. To je historický rekord bohatého světa za období posledních třiceti let.
+Švédský případ si zaslouží pozornost, protože ukazuje, že výsledky bývají skromnější a krátkodobější, než jak se v politické debatě obvykle říká. V roce 2010 dosáhlo Švédsko nejvyšší plodnosti za třicetiletou éru své moderní historie, konkrétně 1,97 dítěte na ženu. Oproti nejnižší hodnotě z přelomu tisíciletí šlo o nárůst zhruba o **0,47 dítěte**. To je historický rekord bohatého světa za období posledních třiceti let. (Připomeňme, že Andrej Babiš chce dvojnásobek, nárůst plodnosti o **0,82 dítěte**.)
 
 Co Švédsko udělalo? Zavedlo opatření, díky nimž se párům vyplatilo mít děti relativně rychle po sobě - konkrétně druhé dítě do dvou let po narození prvního. Rodiče, kteří tuto lhůtu splnili, si udrželi nárok na rodičovské dávky odvozené od předchozího příjmu. [*ověřit: prémiový interval - zdroj HFD nebo švédský SCB*] K tomu Švédsko vybudovalo síť dostupných veřejných jeslí a školek, zavedlo rodičovskou dovolenou vázanou na výdělek a postupně přidalo takzvané tatínkovské měsíce - část dovolené vyhrazenou výhradně otcům. [*zdroj: OECD Family Database, SCB*] Zda se rodiče rozhodli mít děti rychleji po sobě záměrně kvůli pobídce, nebo jen přizpůsobili načasování - to je téma, ke kterému se vracíme v samostatné analýze Skandinávská past.
 
