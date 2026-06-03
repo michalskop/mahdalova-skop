@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Česká plodnost je nyní druhá nejnižší v naší moderní historii. Premiér Babiš to chce zvrátit, ale nemá šanci. Tzv. vymírání je totiž nová normalita skoro všude."
 coverImage: "/images/data-pro-budouci-premierku-demografie-plodnost.webp"
 filter: ["data-pro-budouci-premierku", "demografie"]
-tags: ["speciál", "demografie", "data-pro-budouci-premierku", "seriál", "plodnost", "stárnutí populace", "ČSÚ"]
+tags: ["demografie", "speciál", "data-pro-budouci-premierku", "seriál", "plodnost", "stárnutí populace", "ČSÚ"]
 promoted: 33
 ---
 
