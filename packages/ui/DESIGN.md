@@ -446,6 +446,123 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 
 ---
 
+## Speciály — správa a rozšiřování
+
+Speciály jsou tematické projekty zobrazované na třech místech:
+
+| Místo | Soubor |
+|---|---|
+| Karusel na homepage | `apps/web/components/frontpage/SpecialsHero.tsx` |
+| Landing page `/special` | `apps/web/app/special/page.tsx` |
+| Vlastní landing page rubriky | `apps/web/app/special/[rubrika]/page.tsx` |
+
+---
+
+### Obrázky dlaždic
+
+Ukládají se do `apps/web/public/images/specials/`. Každý speciál má vlastní soubor:
+
+```
+apps/web/public/images/specials/
+  klima.svg
+  investigace.svg
+  svobodna-media.svg
+  snemovna.svg
+  mandaty.svg
+  data-pro-budouci-premierku.svg
+```
+
+**Pravidla:**
+- Formát SVG nebo JPG, ideálně čtvercový poměr 1:1
+- Název souboru musí odpovídat hodnotě `coverImage` v definici dlaždice v `SpecialsHero.tsx`
+- Soubory > 256 KB nelze vkládat inline — musí být v `public/` a referencovány přes `<img src>`
+- Obrázek se zobrazí jako full-bleed pozadí dlaždice, přes spodek jde tmavý gradient pro čitelnost titulku
+
+---
+
+### Přidat článek do speciálu (filtr)
+
+V hlavičce článku `app/clanek/_articles/[slug]/index.md` přidat hodnotu do pole `filter`:
+
+```yaml
+filter: ["kontext", "klima"]
+```
+
+`filter` je pole — článek může patřit do více rubrik zároveň.
+
+**Dostupné hodnoty filtru a jejich cíl:**
+
+| Hodnota filtru | Landing page |
+|---|---|
+| `"analýza"` | `/analyzy` |
+| `"kontext"` | `/kontext` |
+| `"explainer"` | — |
+| `"investigace"` | `/special/investigace` |
+| `"svobodná-média"` | `/special/svobodna-media` |
+| `"klima"` | `/special/klima` |
+
+Hodnota musí přesně odpovídat tomu, co stránka předává do `getArticles(100, 'klima')`.
+
+---
+
+### Přidat nový speciál — checklist
+
+**1.** Nakopírovat obrázek do `apps/web/public/images/specials/novy-special.svg`
+
+**2.** Přidat dlaždici do `SpecialsHero.tsx` (pole `TILES`):
+```ts
+{
+  href: '/special/novy-special',
+  title: 'Název speciálu',
+  bg: '#barva',
+  external: false,
+  logoType: 'klima',        // fallback ikona (pokud chybí coverImage)
+  coverImage: '/images/specials/novy-special.svg',
+},
+```
+
+**3.** Přidat stejnou dlaždici do `apps/web/app/special/page.tsx` (pole `TILES`)
+
+**4.** Vytvořit landing page zkopírováním `apps/web/app/special/klima/page.tsx`:
+- Změnit filter: `getArticles(100, 'novy-special')`
+- Upravit `themeColor`, metadata, canonical URL a OG image
+
+**5.** Tagovat články přidáním filtru do frontmatteru:
+```yaml
+filter: ["kontext", "novy-special"]
+```
+
+---
+
+### Přehled speciálů a technické parametry
+
+| Speciál | URL | Filter | Barva |
+|---|---|---|---|
+| Data pro budoucí premiérku | `/special/data-pro-budouci-premierku` | vlastní landing, bez filter | `#ff3f30` |
+| Svobodná média | `/special/svobodna-media` | `svobodná-média` | `#812840` |
+| M & Š investigace | `/special/investigace` | `investigace` | `#351040` |
+| Data o klimatu | `/special/klima` | `klima` | `linear-gradient(135deg, #2a3f04, #639e0a)` |
+| Sněmovna DataTimes | ext. odkaz | — | `#2f325c` |
+| Mandáty.cz | ext. odkaz | — | `linear-gradient(90deg, #f71b4b, #101432)` |
+
+---
+
+### Karusel — technické parametry
+
+Implementace v `SpecialsHero.tsx`, čistý CSS scroll-snap + vlastní RAF animace (žádná externí knihovna).
+
+| Konstanta | Hodnota | Popis |
+|---|---|---|
+| `VISIBLE` | `3` | Počet viditelných dlaždic |
+| `AUTOPLAY_MS` | `6000` | Interval přepínání (ms) |
+| `SCROLL_DURATION` | `700` | Délka animace přechodu (ms) |
+| `GAP` | `16` | Mezera mezi dlaždicemi (px) |
+| `POSITIONS` | `TILES.length - VISIBLE + 1` | Počet dot-indikátorů |
+
+Animace používá `easeInOut` přes `requestAnimationFrame` — scroll-snap se dočasně vypíná během animace, aby nepřerušoval přechod.
+
+---
+
 ## App-specific differences
 
 | | `apps/web` | `apps/datajournalism.studio` |

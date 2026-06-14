@@ -4,7 +4,7 @@ date: "2026-01-03"
 author: "Kateřina Mahdalová"
 excerpt: "Rok turbulencí, personálních zvratů a existenčních otázek pro online zpravodajství"
 coverImage: "images/cesko-slovensko-media-datatimes.webp"
-filter: ["kontext"]
+filter: ["kontext", "svobodná-média"]
 tags: ["změny v médiích", "veřejnoprávní", "média", "nestrannost", "Česká televize", "nezávislost médií", "svobodná média"]
 promoted: 67
 ---

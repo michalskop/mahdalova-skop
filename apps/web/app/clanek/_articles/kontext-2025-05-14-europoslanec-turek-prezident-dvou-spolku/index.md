@@ -4,7 +4,7 @@ date: "2025-05-14"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Pokračujeme v odhalování skutečného příběhu europoslance Filipa Turka (Motoristé/Patrioti). Po prozkoumání jeho závodní kariéry se nyní zaměřujeme na další oblast jeho veřejné prezentace."
 coverImage: "images/main.webp"
-filter: ["kontext"]
+filter: ["kontext", "investigace"]
 tags: ["Europarlament", "Turek", "Prezident", "spolky", "Motoristé sobě", "Přísaha", "Filip Turek"]
 promoted: 60
 ---

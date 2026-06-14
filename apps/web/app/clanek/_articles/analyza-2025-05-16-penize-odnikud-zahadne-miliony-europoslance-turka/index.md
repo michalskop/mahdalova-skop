@@ -4,7 +4,7 @@ date: "2025-05-16"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Ve finančních prohlášeních europoslance Turka jsme odhalili velké nesrovnalosti, které vyvolávají zásadní otázky: odkud skutečně plynou jeho deklarované příjmy a proč se jeho tvrzení a výkazy zcela rozcházejí?"
 coverImage: "images/main.webp"
-filter: ["analýza"]
+filter: ["analýza", "investigace"]
 tags: ["Europarlament", "Turek", "Firmy", "Motoristé sobě", "Přísaha", "Patrioti", "Filip Turek"]
 promoted: 2
 ---

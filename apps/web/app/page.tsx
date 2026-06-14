@@ -6,6 +6,7 @@ import { getArticles } from '@/components/common/getArticles';
 // import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import Testimonials from '@/components/common/Testimonials';
 import HeroTitle from '@/components/frontpage/HeroTitle';
+import SpecialsHero from '@/components/frontpage/SpecialsHero';
 // import Citation from '@/components/frontpage/Citation';
 // import SubscribeHH from '@/components/frontpage/SubscribeHH';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
@@ -34,21 +35,23 @@ export default async function HomePage() {
 
       {/* <SubscribeHH /> */}
 
-      <ArticlesSection 
+      <SpecialsHero />
+
+      <ArticlesSection
         sectionTitle="Výběr"
         sectionLink="/vyber"
         articles={articles}
-        themeColor="brandRoyalBlue.3" />
+        themeColor="#5e66d5" />
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
 
-      <ArticlesSection 
+      <ArticlesSection
         sectionTitle="Analýzy"
         sectionLink="/analyzy"
         articles={articles_analyses}
         themeColor="brand" />
 
-      <ArticlesSection 
+      <ArticlesSection
         sectionTitle="Kontext"
         sectionLink="/kontext"
         articles={articles_contexts}

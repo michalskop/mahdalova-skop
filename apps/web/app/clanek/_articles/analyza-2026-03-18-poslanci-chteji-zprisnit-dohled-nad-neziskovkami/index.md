@@ -4,7 +4,7 @@ date: "2026-03-18"
 author: "Michal Škop, Kateřina Mahdalová"
 excerpt: "Více než třetina poslanců koalice vede některou z neziskových organizací. Většina těchto organizací ale nezveřejňuje ani nejzákladnější finanční údaje."
 coverImage: "images/datatimes-poslanci-neziskovky-2026.webp"
-filter: ["analýza"]
+filter: ["analýza", "investigace"]
 tags: ["sněmovna", "vláda", "neziskovky"]
 promoted: 55
 ---

@@ -4,7 +4,7 @@ date: "2025-11-15"
 author: "Alan Rusbridger"
 excerpt: "BBC zažila týden chyb, rezignace šéfů a hrozí jí žaloba za miliardu dolarů. Největší ohrožení nezávislosti je ve vedení, nikoli v samotné redakci."
 coverImage: "images/bbc-2025-explainer-mahdalova-skop-lide.webp"
-filter: ["explainer"]
+filter: ["explainer", "svobodná-média"]
 tags: ["nezávislost BBC", "BBC", "Robbie Gibb", "veřejnoprávní", "média", "nezávislost médií", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost"]
 promoted: 49
 ---
