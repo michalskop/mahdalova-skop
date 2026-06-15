@@ -15,194 +15,517 @@ export const metadata: Metadata = {
   },
 };
 
+// Hero head silhouette
 const SIL_PATH = "M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z";
 const SIL_T = "translate(-117.098299,796.836783) scale(0.100000,-0.100000)";
-
-const DOTS: [number, number, number][] = [
-  [358.4, 156.6, 40.6], [412.8, 347.0, 35.3], [340.9, 512.7, 24.7], [280.6, 220.0, 24.7],
-  [379.8, 253.5, 21.2], [311.7, 364.6, 17.6], [537.3, 304.7, 17.6], [313.7, 292.3, 17.6],
-  [449.8, 213.0, 17.6], [358.4, 435.1, 15.9], [471.2, 424.6, 12.3], [525.6, 361.1, 12.3],
-  [469.2, 280.0, 12.3], [457.6, 138.9, 12.3], [412.8, 488.0,  8.8], [539.2, 234.1,  8.8],
+// Hero head: logo-dpbp(31) — silueta #101432, kroužky fialovo-karmínová paleta
+const HERO_DOTS: [number, number, number, string][] = [
+  [358.4,156.6,40.6,'#783e77'],[412.8,347.0,35.3,'#973268'],[340.9,512.7,24.7,'#6e427d'],
+  [280.6,220.0,24.7,'#4c4f8e'],[379.8,253.5,21.2,'#843a71'],[311.7,364.6,17.6,'#5e4885'],
+  [537.3,304.7,17.6,'#dd1744'],[313.7,292.3,17.6,'#5f4884'],[449.8,213.0,17.6,'#ac2a5d'],
+  [358.4,435.1,15.9,'#783e77'],[471.2,424.6,12.3,'#b82657'],[525.6,361.1,12.3,'#d61a47'],
+  [469.2,280.0,12.3,'#b62657'],[457.6,138.9,12.3,'#b0295b'],[412.8,488.0,8.8,'#973268'],
+  [539.2,234.1,8.8,'#de1743'],
 ];
 
-// Hero head: logo-dpbp(19).svg — crimson fill, very dark circles (red/maroon/near-black)
-const HERO_HEAD = {
-  fill: '#de1743',
-  dc: ['#401536','#78163b','#db1743','#7b163b','#5f1539','#a9163f','#341535','#8b163c','#321435','#b3163f','#80163b','#501537','#451536','#101432','#b3163f','#161432'],
-};
+// Abstract dot compositions per chapter
+// viewBox: 0 0 280 165 (legacy dots) nebo 0 0 200 200 (ISOTYPE customSvg)
+type Dot = { cx: number; cy: number; r: number; fill: string };
 
-// Card head colors — non-repeating in 4-col grid
-// 01 crimson  | 02 periwinkle | 03 teal      | 04 amber
-// 05 indigo   | 06 hot pink   | 07 burnt org | 08 forest
-// 09 cyan     | 10 sienna     | 11 yellow    | 12 dark purple
+// 01 Demografie — population pyramid (wider at base = more people)
+const D01: Dot[] = [
+  {cx:140,cy:22,r:9,fill:'#341535'},
+  {cx:118,cy:50,r:10,fill:'#551538'},{cx:162,cy:50,r:10,fill:'#451537'},
+  {cx:96,cy:80,r:11,fill:'#78163b'},{cx:140,cy:80,r:11,fill:'#8b163c'},{cx:184,cy:80,r:11,fill:'#80163b'},
+  {cx:74,cy:112,r:12,fill:'#a9163f'},{cx:114,cy:112,r:12,fill:'#b3163f'},{cx:154,cy:112,r:12,fill:'#aa163f'},{cx:194,cy:112,r:12,fill:'#b61640'},
+  {cx:52,cy:145,r:14,fill:'#de1743'},{cx:93,cy:145,r:14,fill:'#db1743'},{cx:134,cy:145,r:14,fill:'#de1743'},{cx:175,cy:145,r:14,fill:'#db1743'},{cx:216,cy:145,r:14,fill:'#de1743'},
+];
+
+// 02 Vzdělávání — ordered 4×3 grid (structured, systematic)
+const D02: Dot[] = [
+  {cx:52,cy:32,r:16,fill:'#1a2080'},{cx:108,cy:32,r:16,fill:'#2030a0'},{cx:172,cy:32,r:16,fill:'#4a51ab'},{cx:228,cy:32,r:16,fill:'#5e66d5'},
+  {cx:52,cy:82,r:16,fill:'#6870dc'},{cx:108,cy:82,r:16,fill:'#7c85e8'},{cx:172,cy:82,r:16,fill:'#2838b0'},{cx:228,cy:82,r:16,fill:'#8090f4'},
+  {cx:52,cy:132,r:16,fill:'#3048c0'},{cx:108,cy:132,r:16,fill:'#6880e8'},{cx:172,cy:132,r:16,fill:'#4060d0'},{cx:228,cy:132,r:16,fill:'#9098f0'},
+];
+
+// 03 Zdravotnictví — cross / plus pattern (medical)
+const D03: Dot[] = [
+  {cx:140,cy:18,r:14,fill:'#b262c0'},
+  {cx:140,cy:50,r:14,fill:'#9671b6'},
+  {cx:140,cy:82,r:17,fill:'#ae64be'},
+  {cx:140,cy:114,r:14,fill:'#8878b1'},
+  {cx:140,cy:146,r:14,fill:'#7d53b1'},
+  {cx:30,cy:82,r:14,fill:'#618ea3'},
+  {cx:74,cy:82,r:14,fill:'#5f8fa2'},
+  {cx:206,cy:82,r:14,fill:'#15b787'},
+  {cx:250,cy:82,r:14,fill:'#33a692'},
+];
+
+// 04 Trh práce — bar chart (4 bars of 3, 5, 4, 2)
+const D04: Dot[] = [
+  {cx:55,cy:148,r:13,fill:'#de1743'},{cx:55,cy:115,r:13,fill:'#da1947'},{cx:55,cy:82,r:13,fill:'#cd2257'},
+  {cx:105,cy:148,r:13,fill:'#b72f6f'},{cx:105,cy:115,r:13,fill:'#b53072'},{cx:105,cy:82,r:13,fill:'#a13d89'},{cx:105,cy:49,r:13,fill:'#8f489d'},{cx:105,cy:16,r:13,fill:'#8151ae'},
+  {cx:175,cy:148,r:13,fill:'#7d53b1'},{cx:175,cy:115,r:13,fill:'#705bc1'},{cx:175,cy:82,r:13,fill:'#6661cc'},{cx:175,cy:49,r:13,fill:'#5e66d5'},
+  {cx:225,cy:148,r:13,fill:'#994292'},{cx:225,cy:115,r:13,fill:'#cd2257'},
+];
+
+// 05 Bydlení — building windows (3×4 grid = apartment block)
+const D05: Dot[] = [
+  {cx:85,cy:28,r:14,fill:'#1a4060'},{cx:140,cy:28,r:14,fill:'#0d5a82'},{cx:195,cy:28,r:14,fill:'#1e6090'},
+  {cx:85,cy:66,r:14,fill:'#0a4a70'},{cx:140,cy:66,r:14,fill:'#157098'},{cx:195,cy:66,r:14,fill:'#0c5278'},
+  {cx:85,cy:104,r:14,fill:'#1878a8'},{cx:140,cy:104,r:14,fill:'#0e4868'},{cx:195,cy:104,r:14,fill:'#12609a'},
+  {cx:85,cy:142,r:14,fill:'#0b4f78'},{cx:140,cy:142,r:14,fill:'#1a68a0'},{cx:195,cy:142,r:14,fill:'#0d5080'},
+];
+
+// 06 Ekonomika — growth curve scatter (exponential)
+const D06: Dot[] = [
+  {cx:28,cy:148,r:9,fill:'#341535'},
+  {cx:58,cy:138,r:10,fill:'#5f1539'},
+  {cx:90,cy:124,r:11,fill:'#e43738'},
+  {cx:122,cy:108,r:12,fill:'#f2851c'},
+  {cx:157,cy:88,r:13,fill:'#ef7422'},
+  {cx:192,cy:62,r:14,fill:'#f7a013'},
+  {cx:226,cy:38,r:15,fill:'#fecc03'},
+  {cx:255,cy:16,r:16,fill:'#ffcf02'},
+];
+
+// 07 Životní prostředí — concentric rings (tree rings / ecology)
+// Center (140,84), inner R=44 (6 nodes), outer R=66 (9 nodes)
+const D07: Dot[] = [
+  {cx:140,cy:84,r:18,fill:'#1b5e20'},
+  {cx:184,cy:84,r:12,fill:'#2e7d32'},{cx:162,cy:122,r:12,fill:'#388e3c'},{cx:118,cy:122,r:12,fill:'#43a047'},
+  {cx:96,cy:84,r:12,fill:'#4caf50'},{cx:118,cy:46,r:12,fill:'#388e3c'},{cx:162,cy:46,r:12,fill:'#2e7d32'},
+  {cx:206,cy:84,r:9,fill:'#45b050'},{cx:184,cy:141,r:9,fill:'#3a9a42'},{cx:140,cy:150,r:9,fill:'#37903c'},
+  {cx:96,cy:141,r:9,fill:'#45b050'},{cx:74,cy:108,r:9,fill:'#3a9a42'},{cx:74,cy:60,r:9,fill:'#37903c'},
+  {cx:96,cy:27,r:9,fill:'#45b050'},{cx:140,cy:18,r:9,fill:'#3a9a42'},{cx:184,cy:27,r:9,fill:'#37903c'},
+];
+
+// 08 Bezpečnost — shield perimeter (concentric circles)
+// Center (140,82), inner R=38 (5 nodes), outer R=65 (8 nodes)
+const D08: Dot[] = [
+  {cx:140,cy:82,r:18,fill:'#0c447c'},
+  {cx:140,cy:120,r:12,fill:'#185fa5'},{cx:104,cy:94,r:12,fill:'#1a6090'},{cx:118,cy:51,r:12,fill:'#1878a8'},
+  {cx:162,cy:51,r:12,fill:'#1a6090'},{cx:176,cy:94,r:12,fill:'#185fa5'},
+  {cx:205,cy:82,r:9,fill:'#2048a8'},{cx:186,cy:128,r:9,fill:'#185898'},{cx:140,cy:147,r:9,fill:'#2048a8'},
+  {cx:94,cy:128,r:9,fill:'#185898'},{cx:75,cy:82,r:9,fill:'#2048a8'},{cx:94,cy:36,r:9,fill:'#185898'},
+  {cx:140,cy:17,r:9,fill:'#2048a8'},{cx:186,cy:36,r:9,fill:'#185898'},
+];
+
+// 09 Sociální systém — network hub + satellites
+// Hub (140,82), 5 satellites R=62, 5 secondary R=36
+const D09: Dot[] = [
+  {cx:140,cy:82,r:20,fill:'#006064'},
+  {cx:140,cy:144,r:14,fill:'#00838f'},{cx:81,cy:101,r:14,fill:'#0097a7'},
+  {cx:103,cy:32,r:14,fill:'#00acc1'},{cx:177,cy:32,r:14,fill:'#0097a7'},
+  {cx:199,cy:101,r:14,fill:'#00838f'},
+  {cx:169,cy:103,r:9,fill:'#3db3ae'},{cx:129,cy:116,r:9,fill:'#33a692'},
+  {cx:104,cy:82,r:9,fill:'#3db3ae'},{cx:129,cy:48,r:9,fill:'#33a692'},
+  {cx:169,cy:61,r:9,fill:'#3db3ae'},
+];
+
+// 10 Digitalizace — binary grid (large=1, small=0)
+const D10: Dot[] = [
+  {cx:30,cy:22,r:15,fill:'#58a43b'},{cx:87,cy:22,r:9,fill:'#4bac73'},{cx:140,cy:22,r:15,fill:'#34b9d6'},{cx:193,cy:22,r:9,fill:'#4aac75'},{cx:250,cy:22,r:15,fill:'#50a85a'},
+  {cx:30,cy:68,r:9,fill:'#3fb2a4'},{cx:87,cy:68,r:15,fill:'#5ba32e'},{cx:140,cy:68,r:15,fill:'#46ae85'},{cx:193,cy:68,r:15,fill:'#5ba22c'},{cx:250,cy:68,r:9,fill:'#3db3ae'},
+  {cx:30,cy:114,r:15,fill:'#49ad7b'},{cx:87,cy:114,r:15,fill:'#54a64a'},{cx:140,cy:114,r:9,fill:'#57a540'},{cx:193,cy:114,r:15,fill:'#639e0a'},{cx:250,cy:114,r:15,fill:'#3db3ad'},
+  {cx:30,cy:148,r:9,fill:'#629f10'},{cx:87,cy:148,r:15,fill:'#58a43b'},{cx:140,cy:148,r:15,fill:'#4bac73'},{cx:193,cy:148,r:15,fill:'#34b9d6'},{cx:250,cy:148,r:9,fill:'#4aac75'},
+];
+
+// 11 Doprava — winding route (S-curve path)
+const D11: Dot[] = [
+  {cx:25,cy:148,r:9,fill:'#e65100'},{cx:60,cy:130,r:10,fill:'#ef6c00'},
+  {cx:96,cy:108,r:11,fill:'#f57c00'},{cx:132,cy:96,r:12,fill:'#ff8f00'},
+  {cx:168,cy:104,r:12,fill:'#ffa000'},{cx:205,cy:84,r:13,fill:'#ffb300'},
+  {cx:238,cy:58,r:14,fill:'#ffc107'},{cx:256,cy:30,r:15,fill:'#ffd53d'},
+];
+
+// 12 Věda — atomic orbital (nucleus + 2 orbits)
+// Center (138,82), orbit1 R=65 (4 nodes), orbit2 R=75 (6 nodes)
+const D12: Dot[] = [
+  {cx:135,cy:82,r:14,fill:'#4a148c'},{cx:150,cy:76,r:10,fill:'#6a1b9a'},{cx:142,cy:96,r:8,fill:'#38006b'},
+  {cx:196,cy:115,r:11,fill:'#7b1fa2'},{cx:106,cy:138,r:11,fill:'#8e24aa'},
+  {cx:80,cy:49,r:11,fill:'#9c27b0'},{cx:170,cy:26,r:11,fill:'#7b1fa2'},
+  {cx:213,cy:82,r:9,fill:'#4a1080'},{cx:176,cy:147,r:9,fill:'#6a1890'},
+  {cx:100,cy:147,r:9,fill:'#501088'},{cx:63,cy:82,r:9,fill:'#7820a0'},
+  {cx:100,cy:17,r:9,fill:'#4a1080'},{cx:176,cy:17,r:9,fill:'#6a1890'},
+];
+
+// ── ISOTYPE piktogramy (viewBox 0 0 200 200, 15px grid, r=4.5) ───────────
+
+// 01 Energie a bezpečnost — blesk
+const G01 = <>
+  <g fill="#ffcf02">
+    <circle cx={115} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/>
+    <circle cx={100} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/>
+    <circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/>
+    <circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/>
+  </g>
+  <g fill="#f76800">
+    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/>
+    <circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/>
+    <circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/>
+    <circle cx={40} cy={160} r={4.5}/><circle cx={55} cy={160} r={4.5}/>
+  </g>
+</>;
+
+// 02 Demografie — populační pyramida
+const G_DEMO = <>
+  <g fill="#f76800">
+    <circle cx={92.5} cy={70} r={4.5}/>
+    <circle cx={92.5} cy={85} r={4.5}/><circle cx={77.5} cy={85} r={4.5}/>
+    <circle cx={92.5} cy={100} r={4.5}/><circle cx={77.5} cy={100} r={4.5}/><circle cx={62.5} cy={100} r={4.5}/>
+    <circle cx={92.5} cy={115} r={4.5}/><circle cx={77.5} cy={115} r={4.5}/><circle cx={62.5} cy={115} r={4.5}/><circle cx={47.5} cy={115} r={4.5}/>
+    <circle cx={92.5} cy={130} r={4.5}/><circle cx={77.5} cy={130} r={4.5}/><circle cx={62.5} cy={130} r={4.5}/><circle cx={47.5} cy={130} r={4.5}/><circle cx={32.5} cy={130} r={4.5}/>
+    <circle cx={92.5} cy={145} r={4.5}/><circle cx={77.5} cy={145} r={4.5}/><circle cx={62.5} cy={145} r={4.5}/><circle cx={47.5} cy={145} r={4.5}/><circle cx={32.5} cy={145} r={4.5}/><circle cx={17.5} cy={145} r={4.5}/>
+  </g>
+  <g fill="#de1743">
+    <circle cx={107.5} cy={70} r={4.5}/>
+    <circle cx={107.5} cy={85} r={4.5}/><circle cx={122.5} cy={85} r={4.5}/>
+    <circle cx={107.5} cy={100} r={4.5}/><circle cx={122.5} cy={100} r={4.5}/><circle cx={137.5} cy={100} r={4.5}/>
+    <circle cx={107.5} cy={115} r={4.5}/><circle cx={122.5} cy={115} r={4.5}/><circle cx={137.5} cy={115} r={4.5}/><circle cx={152.5} cy={115} r={4.5}/>
+    <circle cx={107.5} cy={130} r={4.5}/><circle cx={122.5} cy={130} r={4.5}/><circle cx={137.5} cy={130} r={4.5}/><circle cx={152.5} cy={130} r={4.5}/><circle cx={167.5} cy={130} r={4.5}/>
+    <circle cx={107.5} cy={145} r={4.5}/><circle cx={122.5} cy={145} r={4.5}/><circle cx={137.5} cy={145} r={4.5}/><circle cx={152.5} cy={145} r={4.5}/><circle cx={167.5} cy={145} r={4.5}/><circle cx={182.5} cy={145} r={4.5}/>
+  </g>
+  <g fill="rgba(255,255,255,0.1)">
+    <circle cx={92.5} cy={160} r={4.5}/><circle cx={77.5} cy={160} r={4.5}/><circle cx={62.5} cy={160} r={4.5}/><circle cx={47.5} cy={160} r={4.5}/><circle cx={32.5} cy={160} r={4.5}/><circle cx={17.5} cy={160} r={4.5}/>
+    <circle cx={107.5} cy={160} r={4.5}/><circle cx={122.5} cy={160} r={4.5}/><circle cx={137.5} cy={160} r={4.5}/><circle cx={152.5} cy={160} r={4.5}/><circle cx={167.5} cy={160} r={4.5}/><circle cx={182.5} cy={160} r={4.5}/>
+  </g>
+</>;
+
+// 03 Zdravotnictví a péče — zdvojené H
+const G03 = <>
+  <g fill="#48b8c4">
+    <circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/>
+    <circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/>
+    <circle cx={55} cy={70} r={4.5}/><circle cx={70} cy={70} r={4.5}/>
+    <circle cx={55} cy={85} r={4.5}/><circle cx={70} cy={85} r={4.5}/>
+    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/>
+    <circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/>
+    <circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/>
+    <circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/>
+    <circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/>
+    <circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
+    <circle cx={130} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/>
+    <circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
+    <circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+    <circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
+    <circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
+    <circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/>
+    <circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/>
+    <circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/>
+    <circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/>
+  </g>
+</>;
+
+// 04 Klimatická změna — koule r=78, střed (100,100), vzor 3-7-9-9-11-11-11-9-9-7-3
+const G04 = <>
+  <g fill="#1a9fbd">
+    <circle cx={85} cy={25} r={4.5}/><circle cx={100} cy={25} r={4.5}/><circle cx={115} cy={25} r={4.5}/>
+    <circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/><circle cx={85} cy={40} r={4.5}/><circle cx={100} cy={40} r={4.5}/><circle cx={115} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/>
+    <circle cx={40} cy={55} r={4.5}/><circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/><circle cx={85} cy={55} r={4.5}/><circle cx={100} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={55} r={4.5}/>
+  </g>
+  <g fill="#ffcf02">
+    <circle cx={40} cy={70} r={4.5}/><circle cx={55} cy={70} r={4.5}/><circle cx={70} cy={70} r={4.5}/><circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/><circle cx={130} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/><circle cx={160} cy={70} r={4.5}/>
+    <circle cx={25} cy={85} r={4.5}/><circle cx={40} cy={85} r={4.5}/><circle cx={55} cy={85} r={4.5}/><circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/><circle cx={160} cy={85} r={4.5}/><circle cx={175} cy={85} r={4.5}/>
+  </g>
+  <g fill="#f76800">
+    <circle cx={25} cy={100} r={4.5}/><circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/><circle cx={175} cy={100} r={4.5}/>
+    <circle cx={25} cy={115} r={4.5}/><circle cx={40} cy={115} r={4.5}/><circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/><circle cx={160} cy={115} r={4.5}/><circle cx={175} cy={115} r={4.5}/>
+  </g>
+  <g fill="#de1743">
+    <circle cx={40} cy={130} r={4.5}/><circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/><circle cx={160} cy={130} r={4.5}/>
+    <circle cx={40} cy={145} r={4.5}/><circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/><circle cx={160} cy={145} r={4.5}/>
+    <circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/>
+    <circle cx={85} cy={175} r={4.5}/><circle cx={100} cy={175} r={4.5}/><circle cx={115} cy={175} r={4.5}/>
+  </g>
+</>;
+
+// 05 Bezpečnost a konflikty — bytelný zámek
+const G08 = <>
+  <g fill="rgba(255,255,255,0.4)">
+    <circle cx={70} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
+    <circle cx={70} cy={70} r={4.5}/><circle cx={130} cy={70} r={4.5}/>
+    <circle cx={70} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/>
+    <circle cx={85} cy={40} r={4.5}/><circle cx={115} cy={40} r={4.5}/>
+    <circle cx={100} cy={40} r={4.5}/>
+  </g>
+  <g fill="#efb704">
+    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+    <circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
+    <circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
+  </g>
+  <circle cx={100} cy={115} r={4.5} fill="#101432"/>
+  <circle cx={100} cy={130} r={4.5} fill="#101432"/>
+</>;
+
+// 06 AI a trh práce — neuronový čip
+const G06 = <>
+  <g fill="rgba(255,255,255,0.2)">
+    <circle cx={85} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/>
+    <circle cx={85} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/>
+    <circle cx={100} cy={70} r={4.5}/><circle cx={100} cy={130} r={4.5}/>
+    <circle cx={70} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/>
+  </g>
+  <g fill="#9b59b6">
+    <circle cx={55} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
+  </g>
+  <g fill="#1a9fbd">
+    <circle cx={100} cy={40} r={4.5}/><circle cx={100} cy={160} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
+    <circle cx={70} cy={70} r={4.5}/><circle cx={130} cy={70} r={4.5}/>
+    <circle cx={70} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/>
+  </g>
+  <circle cx={100} cy={100} r={4.5} fill="#ffcf02"/>
+</>;
+
+// 07 Oligarchizace a korupce — odtržená elita
+const G07 = <>
+  <g fill="rgba(255,255,255,0.25)">
+    <circle cx={25} cy={160} r={4.5}/><circle cx={40} cy={160} r={4.5}/><circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/><circle cx={175} cy={160} r={4.5}/>
+    <circle cx={40} cy={145} r={4.5}/><circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/><circle cx={160} cy={145} r={4.5}/>
+    <circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/>
+  </g>
+  <g fill="#ffcf02">
+    <circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/>
+    <circle cx={100} cy={70} r={4.5}/>
+  </g>
+  <circle cx={100} cy={55} r={4.5} fill="#de1743"/>
+</>;
+
+// 08 Nedostupnost bydlení — dům s okny
+const G05 = <>
+  <g fill="#de1743">
+    <circle cx={100} cy={55} r={4.5}/>
+    <circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/>
+    <circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
+    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+  </g>
+  <g fill="rgba(255,255,255,0.3)">
+    <circle cx={55} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
+    <circle cx={55} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
+    <circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/>
+  </g>
+  <circle cx={85} cy={115} r={4.5} fill="#ffcf02"/><circle cx={115} cy={115} r={4.5} fill="#ffcf02"/>
+  <circle cx={85} cy={130} r={4.5} fill="#ffcf02"/><circle cx={115} cy={130} r={4.5} fill="#ffcf02"/>
+  <circle cx={100} cy={130} r={4.5} fill="#f76800"/>
+  <circle cx={100} cy={145} r={4.5} fill="#f76800"/>
+  <circle cx={100} cy={160} r={4.5} fill="#f76800"/>
+</>;
+
+// 09 Ekonomická nerovnost — váhy příjmů
+const G09 = <>
+  <g fill="rgba(255,255,255,0.15)">
+    <circle cx={25} cy={160} r={4.5}/><circle cx={40} cy={160} r={4.5}/><circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/><circle cx={175} cy={160} r={4.5}/>
+  </g>
+  <g fill="rgba(255,255,255,0.4)">
+    <circle cx={55} cy={145} r={4.5}/>
+    <circle cx={55} cy={130} r={4.5}/>
+    <circle cx={55} cy={115} r={4.5}/>
+    <circle cx={70} cy={145} r={4.5}/>
+    <circle cx={70} cy={130} r={4.5}/>
+    <circle cx={70} cy={115} r={4.5}/>
+  </g>
+  <g fill="#efb704">
+    <circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
+    <circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
+    <circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+    <circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
+    <circle cx={130} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/>
+    <circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
+  </g>
+  <circle cx={130} cy={40} r={4.5} fill="#f76800"/>
+  <circle cx={145} cy={40} r={4.5} fill="#de1743"/>
+</>;
+
+// 10 Digitalizace a inovace — notebook s daty
+const G10 = <>
+  <g fill="rgba(255,255,255,0.25)">
+    <circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/><circle cx={85} cy={55} r={4.5}/><circle cx={100} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
+    <circle cx={55} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/>
+    <circle cx={55} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
+    <circle cx={55} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+    <circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
+  </g>
+  <g fill="rgba(255,255,255,0.5)">
+    <circle cx={40} cy={130} r={4.5}/><circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/><circle cx={160} cy={130} r={4.5}/>
+  </g>
+  <circle cx={100} cy={70} r={4.5} fill="#de1743"/>
+  <circle cx={85} cy={85} r={4.5} fill="#1a9fbd"/>
+  <circle cx={100} cy={85} r={4.5} fill="#ffcf02"/>
+  <circle cx={115} cy={85} r={4.5} fill="#f76800"/>
+  <circle cx={100} cy={100} r={4.5} fill="#1a9fbd"/>
+</>;
+
+// 11 Vzdělávání — otevřená kniha
+const G02 = <>
+  <g fill="#1a9fbd">
+    <circle cx={25} cy={130} r={4.5}/><circle cx={40} cy={130} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/>
+    <circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
+    <circle cx={160} cy={130} r={4.5}/><circle cx={175} cy={130} r={4.5}/>
+  </g>
+  <g fill="rgba(255,255,255,0.25)">
+    <circle cx={40} cy={70} r={4.5}/><circle cx={40} cy={85} r={4.5}/><circle cx={40} cy={100} r={4.5}/><circle cx={40} cy={115} r={4.5}/>
+    <circle cx={55} cy={85} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={55} cy={115} r={4.5}/><circle cx={55} cy={130} r={4.5}/>
+    <circle cx={70} cy={100} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={70} cy={130} r={4.5}/>
+    <circle cx={85} cy={115} r={4.5}/><circle cx={85} cy={130} r={4.5}/>
+    <circle cx={115} cy={115} r={4.5}/><circle cx={115} cy={130} r={4.5}/>
+    <circle cx={130} cy={100} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={130} cy={130} r={4.5}/>
+    <circle cx={145} cy={85} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={145} cy={115} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={160} cy={70} r={4.5}/><circle cx={160} cy={85} r={4.5}/><circle cx={160} cy={100} r={4.5}/><circle cx={160} cy={115} r={4.5}/>
+  </g>
+  <circle cx={100} cy={115} r={4.5} fill="rgba(255,255,255,0.4)"/>
+  <circle cx={100} cy={130} r={4.5} fill="rgba(255,255,255,0.4)"/>
+  <g fill="#ffcf02">
+    <circle cx={100} cy={145} r={4.5}/>
+    <circle cx={100} cy={160} r={4.5}/>
+  </g>
+</>;
+
+// 12 Informační manipulace — digitální oko
+const G12 = <>
+  <circle cx={100} cy={100} r={4.5} fill="#de1743"/>
+  <g fill="#1a9fbd">
+    <circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/>
+    <circle cx={85} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/>
+    <circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/>
+  </g>
+  <g fill="rgba(255,255,255,0.3)">
+    <circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/>
+    <circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
+    <circle cx={70} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
+    <circle cx={70} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/>
+  </g>
+</>;
+
 const CHAPTERS = [
-  {
-    n: '01', title: 'Demografie',
-    subtitle: 'Opravdu vymíráme? Co se doopravdy děje s českou populací',
-    href: '/specialy/data-pro-budouci-premierku-01-demografie', available: true,
-    headColor: '#de1743',
-    dc: ['#e64234','#ef7422','#fecc03','#ef7621','#eb5e2a','#f7a013','#e43738','#f2851c','#e33538','#f8a90f','#f07b20','#e8502f','#e74732','#ffd53d','#f8a810','#df1c41'],
-  },
-  {
-    n: '02', title: 'Vzdělávání',
-    subtitle: 'Česká škola v datech: od předškolní výchovy po vysoké školy',
-    href: '#', available: false,
-    headColor: '#7c85e8',
-    dc: ['#c4c8f8','#4a51ab','#9ea8f0','#5e66d5','#a4aaf4','#6870dc','#b8bcfa','#3848b8','#8890ec','#6068d8','#ccd0fa','#8088e8','#9098f0','#5060d0','#d0d4fc','#4050c0'],
-  },
-  {
-    n: '03', title: 'Zdravotnictví',
-    subtitle: 'Jak si stojí česká zdravotní péče ve srovnání s Evropou',
-    href: '#', available: false,
-    headColor: '#12b886',
-    dc: ['#8c76b2','#618ea3','#15b787','#5f8fa2','#7483aa','#3ba295','#9671b6','#53959d','#9870b6','#33a692','#5b91a0','#817dae','#8878b1','#b262c0','#34a692','#ae64be'],
-  },
-  {
-    n: '04', title: 'Trh práce',
-    subtitle: 'Zaměstnanost, mzdy a budoucnost práce v Česku',
-    href: '#', available: false,
-    headColor: '#c4860a',
-    dc: ['#ffd53d','#f4a520','#ffe878','#e88c10','#f7c030','#fad060','#f0a010','#fce080','#e89820','#f8b840','#fac850','#eda818','#ffd060','#f2ac28','#fce468','#eaa012'],
-  },
-  {
-    n: '05', title: 'Bydlení',
-    subtitle: 'Bytová krize v číslech: dostupnost, ceny a výstavba',
-    href: '#', available: false,
-    headColor: '#4a51ab',
-    dc: ['#7c85e8','#9ea8f0','#5e66d5','#a4aaf4','#6870dc','#b8bcfa','#3848b8','#8890ec','#c4c8f8','#8088e8','#9098f0','#5060d0','#d0d4fc','#4050c0','#ccd0fa','#6878e0'],
-  },
-  {
-    n: '06', title: 'Ekonomika',
-    subtitle: 'HDP, příjmy domácností a nerovnosti v ekonomice',
-    href: '#', available: false,
-    headColor: '#e91e73',
-    dc: ['#f47ba8','#ff6090','#fca0c0','#e84878','#ff80a8','#f06090','#faaac4','#e050808','#fc90b8','#e86090','#f8a0c0','#e45878','#ff88b0','#ec6898','#fabcc8','#e04870'],
-  },
-  {
-    n: '07', title: 'Životní prostředí',
-    subtitle: 'Klima, emise a česká cesta k udržitelnosti',
-    href: '#', available: false,
-    headColor: '#d4860a',
-    dc: ['#f7a013','#ffd53d','#ef7422','#fecc03','#f8b030','#fce060','#f09010','#f7c040','#e88010','#fad050','#f4a820','#fce870','#eda010','#f8b840','#fcc050','#eea818'],
-  },
-  {
-    n: '08', title: 'Bezpečnost',
-    subtitle: 'Kriminalita, bezpečnostní hrozby a výdaje na obranu',
-    href: '#', available: false,
-    headColor: '#1a6e3c',
-    dc: ['#2e9b5a','#52b878','#1a7840','#3daa68','#28925a','#4ab070','#1e7e44','#46bc74','#32a862','#56b87c','#208048','#4ab472','#30a460','#54bc78','#228248','#48b070'],
-  },
-  {
-    n: '09', title: 'Sociální systém',
-    subtitle: 'Sociální dávky, chudoba a nerovnosti v Česku',
-    href: '#', available: false,
-    headColor: '#22b4c0',
-    dc: ['#33d4e0','#44c8d8','#1aa0b0','#28d8e4','#1aacc0','#3cd0dc','#28b8c8','#20c8d8','#18a8b8','#40d4e0','#30b8c8','#24ccd8','#1cb0c0','#38d0dc','#2cb4c4','#20a8b8'],
-  },
-  {
-    n: '10', title: 'Digitalizace',
-    subtitle: 'Stát v 21. století: e-government a digitální infrastruktura',
-    href: '#', available: false,
-    headColor: '#b05a28',
-    dc: ['#d4882a','#e8a040','#c07020','#dc9030','#f0b048','#c87828','#e09838','#be6818','#d88030','#f0a840','#cc7828','#e89830','#c06820','#d88830','#ec9838','#c07020'],
-  },
-  {
-    n: '11', title: 'Doprava a infrastruktura',
-    subtitle: 'Silnice, železnice a dostupnost v regionech',
-    href: '#', available: false,
-    headColor: '#d4b800',
-    dc: ['#ffd53d','#f4e060','#e8c800','#fce878','#f0d428','#fee880','#e8cc10','#fcf088','#f0e040','#fcea88','#ecd420','#fcf090','#f2e048','#fce880','#f0d830','#fee888'],
-  },
-  {
-    n: '12', title: 'Věda a inovace',
-    subtitle: 'Investice do výzkumu a česká inovační kapacita',
-    href: '#', available: false,
-    headColor: '#523361',
-    dc: ['#9b5ec4','#7340a8','#c080d8','#8c66b8','#a868cc','#7c4ab0','#c888e0','#9470be','#b070d0','#7848ac','#cc90e4','#9c78c0','#b878d8','#8058b4','#d098e8','#a880c8'],
-  },
+  {n:'01',title:'Energie a bezpečnost',href:'#',available:false,dots:D01,accent:'#ffcf02',customSvg:G01},
+  {n:'02',title:'Demografie',href:'/specialy/data-pro-budouci-premierku-01-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
+  {n:'03',title:'Zdravotnictví a péče',href:'#',available:false,dots:D03,accent:'#48b8c4',customSvg:G03},
+  {n:'04',title:'Klimatická změna',href:'#',available:false,dots:D04,accent:'#de1743',customSvg:G04},
+  {n:'05',title:'Bezpečnost a konflikty',href:'#',available:false,dots:D05,accent:'#efb704',customSvg:G08},
+  {n:'06',title:'AI a trh práce',href:'#',available:false,dots:D06,accent:'#ffcf02',customSvg:G06},
+  {n:'07',title:'Oligarchizace a korupce',href:'#',available:false,dots:D07,accent:'#ffcf02',customSvg:G07},
+  {n:'08',title:'Nedostupnost bydlení',href:'#',available:false,dots:D05,accent:'#de1743',customSvg:G05},
+  {n:'09',title:'Ekonomická nerovnost',href:'#',available:false,dots:D09,accent:'#efb704',customSvg:G09},
+  {n:'10',title:'Digitalizace a inovace',href:'#',available:false,dots:D10,accent:'#1a9fbd',customSvg:G10},
+  {n:'11',title:'Úroveň vzdělávání',href:'#',available:false,dots:D02,accent:'#1a9fbd',customSvg:G02},
+  {n:'12',title:'Informační manipulace',href:'#',available:false,dots:D12,accent:'#de1743',customSvg:G12},
 ];
 
-const BOT_BG = '#a03250';
-const BOT_TEXT = '#f8f6f0';
-const DARK_BG = '#101432';
-
-function HeadSvg({ fill, dc, clipId }: { fill: string; dc: string[]; clipId: string }) {
-  return (
-    <svg viewBox="-8 -8 716 716" xmlns="http://www.w3.org/2000/svg"
-      style={{ width: '100%', height: '100%', display: 'block' }} aria-hidden>
-      <defs>
-        <clipPath id={clipId} clipPathUnits="userSpaceOnUse">
-          <path transform={SIL_T} d={SIL_PATH} />
-        </clipPath>
-      </defs>
-      <g clipPath={`url(#${clipId})`}>
-        <rect x="0" y="0" width="700" height="700" fill={fill} />
-      </g>
-      {DOTS.map(([cx, cy, r], i) => (
-        <circle key={i} cx={cx} cy={cy} r={r} fill={dc[i] ?? dc[i % dc.length]} />
-      ))}
-    </svg>
-  );
-}
+const DARK = '#101432';
+const CRIMSON = '#de1743';
+const FONT = "'Roboto Slab', Georgia, serif";
+const TEXT = '#f8f6f0';
 
 function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
-  const clipId = `sil-${chapter.n}`;
   const inner = (
     <div
-      className={chapter.available ? 'ch-card ch-card--active' : 'ch-card'}
+      className="ch-card ch-active"
       style={{
+        ['--ch-accent' as string]: chapter.accent,
+        background: DARK,
         borderRadius: 14,
+        border: '1px solid rgba(255,255,255,0.10)',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        minHeight: 260,
-        boxShadow: '0 2px 16px rgba(0,0,0,0.35)',
-        cursor: chapter.available ? 'pointer' : 'default',
+        minHeight: 300,
+        cursor: 'pointer',
+        transition: 'border-color 0.22s ease, background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease',
       }}
     >
-      <div style={{ flex: '0 0 58%', position: 'relative', overflow: 'hidden' }}>
-        <HeadSvg fill={chapter.headColor} dc={chapter.dc} clipId={clipId} />
-        {!chapter.available && (
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.22)' }} />
+      {/* Abstract dot composition / ISOTYPE piktogram */}
+      <div style={{ flex: '1 1 0', padding: '8px 8px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {chapter.customSvg ? (
+          <svg viewBox="-10 -10 220 220" xmlns="http://www.w3.org/2000/svg"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            aria-hidden>
+            {chapter.customSvg}
+          </svg>
+        ) : (
+          <svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            aria-hidden>
+            {chapter.dots.map((d, i) => (
+              <circle key={i} cx={d.cx} cy={d.cy} r={d.r} fill={d.fill} />
+            ))}
+          </svg>
         )}
       </div>
-      <div style={{
-        flex: '0 0 42%',
-        background: BOT_BG,
-        padding: '10px 13px 14px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 3,
-      }}>
-        <div style={{
-          fontSize: 10, fontWeight: 700, letterSpacing: '0.1em',
-          color: BOT_TEXT, opacity: 0.55,
-          fontFamily: "'Roboto Slab', serif",
+
+      {/* Accent line — chapter color */}
+      <div style={{ height: 2, background: '#ff3f30', margin: '0 16px', opacity: 0.7 }} />
+
+      {/* Info area */}
+      <div style={{ padding: '10px 16px 18px', display: 'flex', flexDirection: 'column', gap: 2 }}>
+        {/* Large italic chapter number */}
+        <div className="ch-card-number" style={{
+          fontSize: 'clamp(38px, 3.5vw, 52px)',
+          fontWeight: 800,
+          fontStyle: 'italic',
+          fontFamily: FONT,
+          color: CRIMSON,
+          lineHeight: 1,
+          letterSpacing: '-0.03em',
+          marginBottom: 8,
         }}>
           {chapter.n}
         </div>
         <div style={{
-          fontSize: 14, fontWeight: 700, color: BOT_TEXT,
-          lineHeight: 1.22, flex: 1,
-          fontFamily: "'Roboto Slab', serif",
+          fontSize: 'clamp(14px, 1.2vw, 18px)',
+          fontWeight: 500,
+          fontFamily: FONT,
+          color: '#ffffff',
+          lineHeight: 1.35,
+          letterSpacing: '0.01em',
+          marginBottom: 12,
         }}>
           {chapter.title}
         </div>
-        {chapter.available ? (
-          <div style={{ fontSize: 11, fontWeight: 600, color: BOT_TEXT, marginTop: 4 }}>
-            Číst →
-          </div>
-        ) : (
-          <div style={{ fontSize: 10, color: BOT_TEXT, opacity: 0.4, marginTop: 4 }}>
-            Připravujeme
-          </div>
-        )}
+        <div>
+          {chapter.available ? (
+            <span style={{
+              fontSize: 10, fontWeight: 700,
+              fontFamily: "'Roboto', system-ui, sans-serif",
+              color: chapter.accent, letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+            }}>
+              Číst kapitolu →
+            </span>
+          ) : (
+            <span style={{
+              display: 'inline-block',
+              fontSize: 10, fontWeight: 700,
+              fontFamily: "'Roboto', system-ui, sans-serif",
+              letterSpacing: '0.12em', textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.4)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: 4,
+              padding: '4px 8px',
+            }}>
+              Připravujeme
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
 
-  if (!chapter.available) return <div style={{ height: '100%' }}>{inner}</div>;
+  if (!chapter.available) return (
+    <div style={{ height: '100%', display: 'block' }}>
+      {inner}
+    </div>
+  );
   return (
     <a href={chapter.href} style={{ textDecoration: 'none', height: '100%', display: 'block' }}>
       {inner}
@@ -214,54 +537,144 @@ export default function DpbpLandingPage() {
   return (
     <Container size="lg" maw="1200px" w="100%" p={0} m="0 auto">
       <style>{`
-        .ch-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
-        .ch-card--active:hover { transform: scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.45) !important; }
+        .ch-card {
+          box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+          will-change: transform, background-color, box-shadow;
+          transition: transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94),
+                      background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ch-active:hover {
+          transform: scale(1.025);
+          background: #171c42 !important;
+          border-color: #de1743 !important;
+          box-shadow:
+            inset 0 0 0 1px #de1743,
+            0 12px 30px rgba(0,0,0,0.4),
+            0 0 28px rgba(222,23,67,0.18) !important;
+        }
+        .ch-card-number {
+          margin-bottom: 10px;
+          opacity: 0.85;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .ch-active:hover .ch-card-number {
+          opacity: 1;
+          transform: translateX(3px);
+        }
+        .dt-hero {
+          background: linear-gradient(135deg, #101432 0%, #f71b4b 100%);
+          padding: 52px 40px 44px;
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 2rem;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
+          .dt-hero {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+        }
+        .dt-hero-content {
+          flex: 1;
+          max-width: 750px;
+        }
+        .dt-tag {
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: 0.04em;
+          color: rgba(255,255,255,0.45);
+          margin-bottom: 16px;
+          font-family: 'Roboto Slab', Georgia, serif;
+        }
+        .dt-hero-title {
+          font-family: 'Roboto Slab', Georgia, serif;
+          font-weight: 700;
+          font-size: clamp(1.4rem, 2.2vw, 2rem);
+          white-space: nowrap;
+          color: #ffffff;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
+          margin: 0 0 20px 0;
+        }
+        .dt-hero-lead {
+          font-size: clamp(15px, 1.5vw, 18px);
+          font-weight: 400;
+          color: rgba(255,255,255,0.7);
+          line-height: 1.75;
+          font-family: 'Roboto Slab', Georgia, serif;
+          margin: 0;
+        }
+        .dt-hero-visual {
+          flex: 0 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+        .dt-hero-profile svg,
+        .dt-hero-profile img {
+          width: clamp(140px, 16vw, 220px);
+          height: auto;
+          display: block;
+        }
+        .dt-infobox {
+          background: #8b0e2b;
+          border-radius: 8px;
+          padding: 20px 28px;
+          color: #ffffff;
+          font-size: 14px;
+          line-height: 1.65;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+          margin: 0 24px 32px;
+        }
+        .dt-infobox a {
+          color: #ffcf02;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(255,207,2,0.4);
+          transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        .dt-infobox a:hover { border-bottom-color: #ffffff; color: #ffffff; }
+        .dt-infobox strong {
+          color: #ffcf02;
+          font-family: 'Roboto Slab', serif;
+        }
       `}</style>
-      <Box style={{ background: DARK_BG, minHeight: '100vh' }}>
+      <Box style={{ background: DARK, minHeight: '100vh' }}>
 
-        {/* Hero — gradient + hlava vlevo */}
-        <Box style={{
-          background: 'linear-gradient(135deg, #f71b4b 0%, #8a0f38 45%, #101432 100%)',
-          padding: '48px 32px 40px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 32,
-          flexWrap: 'wrap',
-        }}>
-          {/* Hlava vlevo */}
-          <Box style={{ flexShrink: 0, width: 'clamp(160px, 22vw, 260px)', aspectRatio: '1 / 1' }}>
-            <HeadSvg fill={HERO_HEAD.fill} dc={HERO_HEAD.dc} clipId="sil-hero" />
-          </Box>
-
-          {/* Text vpravo */}
-          <Box style={{ flex: 1, minWidth: 240 }}>
-            <div style={{
-              fontSize: 11, fontWeight: 700, letterSpacing: '0.14em',
-              textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)',
-              marginBottom: 12, fontFamily: "'Roboto Slab', serif",
-            }}>
-              Speciál · DataTimes.cz
+        {/* Hero */}
+        <div className="dt-hero">
+          <div className="dt-hero-content">
+            <h1 className="dt-hero-title">Data pro budoucí premiérku</h1>
+            <p className="dt-hero-lead">
+              Dvanáct klíčových výzev pro nové vedení státu. Nechceme plané politické sliby,
+              chceme návrhy opřené o data a fakta. Jaká je skutečná kondice Česka –
+              a co s ní může politika reálně udělat?
+            </p>
+            <div className="dt-tag" style={{ marginTop: '2rem', marginBottom: 0 }}>Speciál · DataTimes.cz · Mahdalová &amp; Škop</div>
+          </div>
+          <div className="dt-hero-visual">
+            <div className="dt-hero-profile">
+              <svg viewBox="-8 -8 716 716" xmlns="http://www.w3.org/2000/svg" aria-hidden overflow="visible">
+                <defs>
+                  <clipPath id="sil-hero" clipPathUnits="userSpaceOnUse">
+                    <path transform={SIL_T} d={SIL_PATH} />
+                  </clipPath>
+                </defs>
+                <g clipPath="url(#sil-hero)">
+                  <rect x="0" y="0" width="700" height="700" fill="#101432" />
+                </g>
+                <path transform={SIL_T} d={SIL_PATH} fill="none" stroke="#101432" strokeWidth={80} />
+                {HERO_DOTS.map(([cx,cy,r,fill],i) => (
+                  <circle key={i} cx={cx} cy={cy} r={r} fill={fill} stroke={fill} strokeWidth={8} />
+                ))}
+              </svg>
             </div>
-            <Title order={1} style={{
-              fontFamily: "'Roboto Slab', serif", fontWeight: 700,
-              fontSize: 'clamp(26px, 4vw, 48px)', color: '#ffffff',
-              lineHeight: 1.15, marginBottom: 16,
-            }}>
-              Data pro budoucí premiérku
-            </Title>
-            <Text style={{
-              fontSize: 'clamp(14px, 1.8vw, 18px)',
-              color: 'rgba(255,255,255,0.82)',
-              maxWidth: 520, lineHeight: 1.6,
-            }}>
-              Dvanáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.
-              Co říkají čísla? A co s nimi může politika udělat?
-            </Text>
-          </Box>
-        </Box>
+          </div>
+        </div>
 
-        {/* Kapitoly grid */}
-        <Container size="lg" py={40} px="md">
+        {/* Kapitoly */}
+        <Container size="lg" py={44} px="md">
           <SimpleGrid cols={{ base: 2, xs: 3, sm: 4 }} spacing="md">
             {CHAPTERS.map(ch => (
               <ChapterTile key={ch.n} chapter={ch} />
@@ -269,25 +682,16 @@ export default function DpbpLandingPage() {
           </SimpleGrid>
         </Container>
 
-        {/* Infobox o projektu */}
-        <Box style={{
-          background: '#fff3e8',
-          borderLeft: '4px solid #f76800',
-          borderRadius: 6,
-          padding: '18px 22px',
-          margin: '0 24px 32px',
-          fontSize: 14,
-          color: '#2a2a2a',
-          lineHeight: 1.6,
-        }}>
-          <strong>O speciálu Data pro budoucí premiérku.</strong>{' '}
+        {/* Infobox */}
+        <div className="dt-infobox">
+          <strong>O speciálu Data pro budoucí premiérku:</strong>{' '}
           Dlouhodobý projekt dvojice datových novinářů a analytiků{' '}
-          <a href="https://www.mahdalova-skop.cz" style={{ color: '#f76800' }}>Mahdalová &amp; Škop</a>,
-          {' '}který před volbami 2029 mapuje stav věcí v několika tematických blocích.
+          <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a>,
+          {' '}který mapuje stav věcí v klíčových tematických blocích.
           Projekt vzniká s grantovou podporou{' '}
-          <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#f76800' }}>Nadačního fondu nezávislé žurnalistiky</a>
+          <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer">Nadačního fondu nezávislé žurnalistiky</a>
           {' '}a stojí na originálních datových analýzách a vlastním zpracování velkého množství zdrojů.
-        </Box>
+        </div>
 
         <SupportBanner />
       </Box>
