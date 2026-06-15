@@ -500,7 +500,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
           <span style={{
             fontSize: 13, fontWeight: 500,
             fontFamily: "'Roboto Slab', Georgia, serif",
-            color: chapter.available ? chapter.accent : 'rgba(255,255,255,0.4)',
+            color: chapter.available ? '#f76800' : 'rgba(247,104,0,0.45)',
           }}>
             Číst kapitolu →
           </span>
@@ -615,7 +615,7 @@ export default function DpbpLandingPage() {
           font-size: 14px;
           line-height: 1.65;
           box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-          margin: 0 24px 32px;
+          margin: 0 0 32px;
         }
         .dt-infobox a {
           color: #ffcf02;
@@ -668,17 +668,16 @@ export default function DpbpLandingPage() {
           </div>
         </div>
 
-        {/* Kapitoly */}
+        {/* Kapitoly + Infobox — stejný Container pro přesné zarovnání */}
         <Container size="lg" py={44} px="md">
           <SimpleGrid cols={{ base: 2, sm: 3 }} spacing="md">
             {CHAPTERS.map(ch => (
               <ChapterTile key={ch.n} chapter={ch} />
             ))}
           </SimpleGrid>
-        </Container>
 
-        {/* Infobox */}
-        <div className="dt-infobox">
+          {/* Infobox */}
+          <div className="dt-infobox" style={{ marginTop: 32 }}>
           <strong>O speciálu Data pro budoucí premiérku:</strong>{' '}
           Dlouhodobý projekt dvojice datových novinářů a analytiků{' '}
           <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a>,
@@ -686,7 +685,8 @@ export default function DpbpLandingPage() {
           Projekt vzniká s grantovou podporou{' '}
           <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer">Nadačního fondu nezávislé žurnalistiky</a>
           {' '}a stojí na originálních datových analýzách a vlastním zpracování velkého množství zdrojů.
-        </div>
+          </div>
+        </Container>
 
         <SupportBanner />
       </Box>
