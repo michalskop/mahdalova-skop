@@ -1,6 +1,7 @@
 // app/special/data-pro-budouci-premierku/page.tsx
 import { Container, Title, Text, Box, SimpleGrid, Paper } from '@mantine/core';
 import type { Metadata } from 'next';
+import SupportBanner from '@/components/common/SupportBanner';
 
 export const metadata: Metadata = {
   title: 'Data pro budoucí premiérku',
@@ -162,6 +163,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
 
 export default function DpbpLandingPage() {
   return (
+    <Container size="lg" maw="1200px" w="100%" p={0} m="0 auto">
     <Box style={{ background: '#044d5e', minHeight: '100vh' }}>
       {/* Hero */}
       <Box
@@ -233,6 +235,8 @@ export default function DpbpLandingPage() {
           ))}
         </SimpleGrid>
       </Container>
+      <SupportBanner />
     </Box>
+    </Container>
   );
 }

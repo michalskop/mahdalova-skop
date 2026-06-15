@@ -2,6 +2,7 @@
 import { Box, Group, Stack, Title, Paper, SimpleGrid, Container } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Arrow } from '@repo/ui/components/Arrow';
+import SupportBanner from '@/components/common/SupportBanner';
 
 export const metadata: Metadata = {
   title: 'Speciály',
@@ -120,7 +121,7 @@ function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES
 
 export default function SpecialsLandingPage() {
   return (
-    <>
+    <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
       <style>{`.specials-tile:hover { transform: scale(1.025); }`}</style>
       <Paper py={20} bg={BG} radius={0} style={{ minHeight: '60vh' }}>
         <Group gap={0} align="flex-start" wrap="wrap">
@@ -158,6 +159,7 @@ export default function SpecialsLandingPage() {
           </Box>
         </Group>
       </Paper>
-    </>
+      <SupportBanner />
+    </Container>
   );
 }

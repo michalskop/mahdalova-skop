@@ -63,7 +63,7 @@ export default async function VyberPage() {
       <ArticlesSection 
         sectionTitle="Výběr"
         articles={articles}
-        themeColor="brandRoyalBlue.3"
+        themeColor="#5e66d5"
       />
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>

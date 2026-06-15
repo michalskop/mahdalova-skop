@@ -89,12 +89,16 @@ const TILES = [
   { href: '/special/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
   { href: '/special/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
   { href: '/special/investigace', title: 'M & Š investigace', bg: '#351040', external: false, logoType: 'lupa', coverImage: '/images/specials/investigace.svg' },
-  { href: 'https://snemovna.datatimes.cz', title: 'Sněmovna DataTimes.cz', bg: '#2f325c', external: true, logoType: 'flag', coverImage: '/images/specials/snemovna.svg' },
+  { href: 'https://snemovna.datatimes.cz', title: 'Sněmovna.DataTimes.cz', bg: '#2f325c', external: true, logoType: 'flag', coverImage: '/images/specials/snemovna.svg' },
   { href: 'https://mandaty.cz', title: 'Mandáty.cz', bg: 'linear-gradient(90deg, #f71b4b, #101432)', external: true, logoType: 'mandaty', coverImage: '/images/specials/mandaty.svg' },
   { href: '/special/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
 ];
 
-const POSITIONS = TILES.length - VISIBLE + 1; // 4 pozice (0–3)
+// Nekonečná smyčka: klonujeme VISIBLE dlaždic na začátek a konec tracku.
+// posRef pracuje v "extended" prostoru; logicalPos (0..N-1) určuje aktivní tečku.
+const N = TILES.length;
+const EXT_TILES = [...TILES.slice(-VISIBLE), ...TILES, ...TILES.slice(0, VISIBLE)];
+const EXT_START = VISIBLE; // index první skutečné dlaždice v EXT_TILES
 
 function TileLogo({ type }: { type: string }) {
   if (type === 'dpbp') return <DpbpLogo />;
@@ -114,88 +118,50 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
   const hasCover = Boolean(coverImage);
   const isFullBleed = logoType === 'media' || hasCover;
 
+  // Stejný pattern jako ArticleCard: border + overflow + border-radius + scale jsou na jednom elementu.
+  // Background je přímo na <a> (barevné tile) nebo je image přímé dítě <a> (image tile).
+  const base: React.CSSProperties = {
+    textDecoration: 'none',
+    display: 'block',
+    flexShrink: 0,
+    borderRadius: 12,
+    overflow: 'hidden',
+    position: 'relative' as const,
+    cursor: 'pointer',
+    transition: 'transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+    aspectRatio: '1 / 1',
+  };
+
   if (hasCover) {
-    // Obrázková dlaždice — fotografický fill + tmavý gradient na titulku
     return (
       <a href={href} target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
-        className="special-tile"
-        style={{ textDecoration: 'none', display: 'block', flexShrink: 0 }}>
-        <Box className="specials-tile" style={{
-          borderRadius: 12, overflow: 'hidden', aspectRatio: '1 / 1',
-          position: 'relative', cursor: 'pointer',
-          transition: 'transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-        }}>
-          <img src={coverImage} alt={title}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-          <Box style={{
-            position: 'absolute', inset: 0,
-            background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)',
-          }} />
-          <Box style={{
-            position: 'absolute', bottom: 0, left: 0, right: 0,
-            padding: '12px 16px 16px',
-          }}>
-            <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
-              {title}
-            </Title>
-          </Box>
-        </Box>
+        className="specials-tile"
+        style={{ ...base, position: 'relative' }}>
+        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: `url(${coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px' }}>
+          <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
+            {title}
+          </Title>
+        </div>
       </a>
     );
   }
 
   return (
-    <a
-      href={href}
-      target={external ? '_blank' : undefined}
+    <a href={href} target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      className="special-tile"
-      style={{ textDecoration: 'none', display: 'block', flexShrink: 0 }}
-    >
-      <Box style={{
-        background: bg,
-        borderRadius: 12,
-        overflow: 'hidden',
-        aspectRatio: '1 / 1',
-        display: 'flex',
-        flexDirection: 'column',
-        cursor: 'pointer',
-        transition: 'transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-      }} className="specials-tile">
-        {/* Logo area */}
-        <Box style={{
-          flex: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-          padding: isFullBleed ? 0 : '16px 16px 0',
-          minHeight: 0,
-        }}>
-          <TileLogo type={logoType} />
-        </Box>
-        {/* Title bar */}
-        <Box style={{
-          width: '100%',
-          padding: '12px 16px 16px',
-          background: 'rgba(0,0,0,0.28)',
-          minHeight: 68,
-          display: 'flex',
-          alignItems: 'flex-start',
-          flexShrink: 0,
-        }}>
-          <Title order={3} style={{
-            color: WHITE,
-            fontFamily: "'Roboto Slab', Georgia, serif",
-            fontWeight: 500,
-            fontSize: 'var(--mantine-font-size-lg)',
-            lineHeight: 1.35,
-          }}>
-            {title}
-          </Title>
-        </Box>
-      </Box>
+      className="specials-tile"
+      style={{ ...base, background: bg, display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: isFullBleed ? 0 : '16px 16px 0', minHeight: 0 }}>
+        <TileLogo type={logoType} />
+      </div>
+      <div style={{ width: '100%', padding: '12px 16px 16px', background: 'rgba(0,0,0,0.28)', minHeight: 68, display: 'flex', alignItems: 'flex-start', flexShrink: 0 }}>
+        <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
+          {title}
+        </Title>
+      </div>
     </a>
   );
 }
@@ -207,17 +173,16 @@ function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 
-function animateScroll(el: HTMLElement, targetLeft: number) {
+function animateScroll(el: HTMLElement, targetLeft: number, duration = SCROLL_DURATION) {
   const startLeft = el.scrollLeft;
   const distance = targetLeft - startLeft;
   if (Math.abs(distance) < 1) return;
   const startTime = performance.now();
-  // dočasně vypneme snap, aby nepřerušoval animaci
   const prevSnap = el.style.scrollSnapType;
   el.style.scrollSnapType = 'none';
   function step(now: number) {
     const elapsed = now - startTime;
-    const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+    const progress = Math.min(elapsed / duration, 1);
     el.scrollLeft = startLeft + distance * easeInOut(progress);
     if (progress < 1) {
       requestAnimationFrame(step);
@@ -231,61 +196,221 @@ function animateScroll(el: HTMLElement, targetLeft: number) {
 /* ── SpecialsHero ─────────────────────────────────────────────────── */
 export default function SpecialsHero() {
   const [titleHovered, setTitleHovered] = useState(false);
-  const [pos, setPos] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const [logicalPos, setLogicalPos] = useState(0); // 0..N-1, pro tečky
+  const [dragging, setDragging] = useState(false);
+  const draggingRef = useRef(false);
+  const trackRef = useRef<HTMLDivElement>(null); // scroll container (carousel-outer)
+  const innerRef = useRef<HTMLDivElement>(null); // flex track (carousel-track)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const posRef = useRef(EXT_START); // aktuální pozice v EXT_TILES
+  const dragStartX = useRef(0);
+  const dragStartScroll = useRef(0);
+  const wrapping = useRef(false); // blokuje double-wrap
+  const dragOccurred = useRef(false); // rozlišuje drag od kliknutí
+  // Sledování rychlosti pohybu pro momentum swipe: [{x, t}, ...]
+  const velEvents = useRef<Array<{ x: number; t: number }>>([]);
 
-  // Posune karusel na pozici p (0 = dlaždice 0,1,2 vlevo)
-  const scrollToPos = useCallback((p: number) => {
+  const getTileW = () => {
+    const inner = innerRef.current;
+    if (!inner) return 0;
+    const tile = inner.firstElementChild as HTMLElement | null;
+    return tile ? tile.offsetWidth + GAP : 0;
+  };
+
+  // Okamžitý skok bez animace (při přechodu klon→skutečná dlaždice)
+  const jumpTo = useCallback((extPos: number) => {
     const track = trackRef.current;
-    if (!track) return;
-    const tile = track.firstElementChild as HTMLElement | null;
-    if (!tile) return;
-    const tileW = tile.offsetWidth + GAP;
-    animateScroll(track, p * tileW);
-    setPos(p);
+    const tileW = getTileW();
+    if (!track || !tileW) return;
+    track.style.scrollSnapType = 'none';
+    track.scrollLeft = extPos * tileW;
+    posRef.current = extPos;
+    setLogicalPos((extPos - EXT_START + N) % N);
+    requestAnimationFrame(() => {
+      if (trackRef.current) trackRef.current.style.scrollSnapType = '';
+    });
   }, []);
+
+  // Animovaný posun na extendovanou pozici + případný silent wrap po animaci
+  const goToExt = useCallback((extPos: number, duration = SCROLL_DURATION) => {
+    const track = trackRef.current;
+    const tileW = getTileW();
+    if (!track || !tileW) return;
+    animateScroll(track, extPos * tileW, duration);
+    posRef.current = extPos;
+    setLogicalPos((extPos - EXT_START + N) % N);
+
+    // Po animaci: pokud jsme v clone zóně, přeskočíme na skutečnou dlaždici
+    if (!wrapping.current) {
+      wrapping.current = true;
+      setTimeout(() => {
+        const ep = posRef.current;
+        if (ep >= N + EXT_START) jumpTo(ep - N);
+        else if (ep < EXT_START) jumpTo(ep + N);
+        wrapping.current = false;
+      }, duration + 80);
+    }
+  }, [jumpTo]);
 
   const resetTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
-      setPos(p => {
-        const next = (p + 1) % POSITIONS;
-        const track = trackRef.current;
-        if (track) {
-          const tile = track.firstElementChild as HTMLElement | null;
-          if (tile) animateScroll(track, next * (tile.offsetWidth + GAP));
-        }
-        return next;
-      });
+      goToExt(posRef.current + 1);
     }, AUTOPLAY_MS);
-  }, []);
+  }, [goToExt]);
 
+  // Inicializace: nastavíme scroll na EXT_START (první skutečná dlaždice)
   useEffect(() => {
+    const track = trackRef.current;
+    const tileW = getTileW();
+    if (track && tileW) {
+      track.style.scrollSnapType = 'none';
+      track.scrollLeft = EXT_START * tileW;
+    }
     resetTimer();
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [resetTimer]);
 
   function handleDot(i: number) {
-    scrollToPos(i);
+    goToExt(i + EXT_START);
     resetTimer();
+  }
+
+  // ── Sdílená rychlost a finish ────────────────────────────────────
+
+  function getVelocity(): number {
+    const ev = velEvents.current;
+    if (ev.length < 2) return 0;
+    const dt = ev[ev.length - 1].t - ev[0].t;
+    if (dt < 16) return 0;
+    return (ev[ev.length - 1].x - ev[0].x) / dt;
+  }
+
+  // Ukončení dragu: snapne na nejbližší dlaždici s momentem dle rychlosti.
+  // Sdílené pro myš i touch.
+  function finishDrag(endX: number) {
+    draggingRef.current = false;
+    setDragging(false);
+    const diff = endX - dragStartX.current; // >0 = prst šel doprava = posun zpět
+    const track = trackRef.current;
+    const tileW = getTileW();
+    if (!track || !tileW) { velEvents.current = []; resetTimer(); return; }
+
+    if (Math.abs(diff) > 12) {
+      // Cíl = aktuální pozice + setrvačnost (velocity × čas decelerace)
+      const velocity = getVelocity(); // px/ms, záporná = prst doleva = scroll doleva
+      const projected = track.scrollLeft + velocity * 320;
+      const targetPos = Math.round(projected / tileW);
+      const currentPos = Math.round(track.scrollLeft / tileW);
+      const steps = Math.abs(targetPos - currentPos);
+      const duration = Math.min(600, 200 + steps * 160);
+      goToExt(targetPos, duration);
+    } else {
+      dragOccurred.current = false; // byl to klik, ne drag
+      animateScroll(track, posRef.current * tileW, 260);
+    }
+    velEvents.current = [];
+    resetTimer();
+  }
+
+  // ── Touch ─────────────────────────────────────────────────────────
+  const touchStartX = useRef<number | null>(null);
+
+  function onTouchStart(e: React.TouchEvent) {
+    if (timerRef.current) clearInterval(timerRef.current); // pause autoplay
+    const x = e.touches[0].clientX;
+    touchStartX.current = x;
+    dragStartX.current = x;
+    dragStartScroll.current = trackRef.current?.scrollLeft ?? 0;
+    dragOccurred.current = false;
+    velEvents.current = [{ x, t: performance.now() }];
+  }
+  function onTouchMove(e: React.TouchEvent) {
+    if (touchStartX.current === null || !trackRef.current) return;
+    const x = e.touches[0].clientX;
+    const t = performance.now();
+    velEvents.current.push({ x, t });
+    if (velEvents.current.length > 6) velEvents.current.shift();
+    const dx = x - touchStartX.current;
+    if (Math.abs(dx) > 5) dragOccurred.current = true;
+    trackRef.current.scrollLeft = dragStartScroll.current - dx;
+  }
+  function onTouchEnd(e: React.TouchEvent) {
+    if (touchStartX.current === null) return;
+    if (dragOccurred.current) e.preventDefault(); // blokuje syntetický klik
+    finishDrag(e.changedTouches[0].clientX);
+    touchStartX.current = null;
+  }
+
+  // ── Mouse ─────────────────────────────────────────────────────────
+  function onMouseDown(e: React.MouseEvent) {
+    if (timerRef.current) clearInterval(timerRef.current); // pause autoplay
+    draggingRef.current = true;
+    setDragging(true);
+    dragOccurred.current = false;
+    dragStartX.current = e.clientX;
+    dragStartScroll.current = trackRef.current?.scrollLeft ?? 0;
+    velEvents.current = [{ x: e.clientX, t: performance.now() }];
+    e.preventDefault();
+  }
+  function onMouseMove(e: React.MouseEvent) {
+    if (!draggingRef.current || !trackRef.current) return;
+    const x = e.clientX;
+    const dx = x - dragStartX.current;
+    if (Math.abs(dx) > 5) dragOccurred.current = true;
+    trackRef.current.scrollLeft = dragStartScroll.current - dx;
+    velEvents.current.push({ x, t: performance.now() });
+    if (velEvents.current.length > 6) velEvents.current.shift();
+    e.preventDefault();
+  }
+  function onMouseUp(e: React.MouseEvent) {
+    if (!draggingRef.current) return;
+    finishDrag(e.clientX);
+  }
+  function onMouseLeave(e: React.MouseEvent) {
+    if (draggingRef.current) finishDrag(e.clientX);
+  }
+  function onDragStart(e: React.DragEvent) { e.preventDefault(); }
+
+  // Zachytí kliknutí na <a> dlaždic — pokud předcházel drag, klik zablokuje
+  function onClickCapture(e: React.MouseEvent) {
+    if (dragOccurred.current) {
+      e.preventDefault();
+      e.stopPropagation();
+      dragOccurred.current = false;
+    }
   }
 
   return (
     <>
       <style>{`
+        .specials-tile { -webkit-mask-image: -webkit-radial-gradient(white, black); }
         .specials-tile:hover { transform: scale(1.025); }
+        .specials-tile::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 1px solid var(--mantine-color-default-border);
+          border-radius: inherit;
+          pointer-events: none;
+          z-index: 10;
+        }
+        .carousel-outer {
+          overflow: hidden;
+          padding: 16px;
+          margin: -16px;
+          cursor: grab;
+        }
+        .carousel-outer.is-dragging { cursor: grabbing; }
         .carousel-track {
           display: flex;
           gap: ${GAP}px;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
+          overflow: visible;
           scrollbar-width: none;
         }
         .carousel-track::-webkit-scrollbar { display: none; }
         .carousel-tile {
           flex: 0 0 calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE});
-          scroll-snap-align: start;
         }
       `}</style>
 
@@ -308,29 +433,46 @@ export default function SpecialsHero() {
           </Stack>
 
           {/* Karusel vpravo */}
-          <Box flex={1} px="md" style={{ minWidth: 0 }}>
-            {/* Track */}
-            <Box ref={trackRef} className="carousel-track">
-              {TILES.map((tile) => (
-                <Box key={tile.title} className="carousel-tile">
+          <Box flex={1} px="md" style={{ minWidth: 0, overflow: 'visible' }}>
+            {/* Outer: scroll container + horizontální clip. trackRef zde = scrollLeft funguje */}
+            <div
+              ref={trackRef}
+              className={`carousel-outer${dragging ? ' is-dragging' : ''}`}
+              style={{ userSelect: 'none' }}
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+              onMouseDown={onMouseDown}
+              onMouseMove={onMouseMove}
+              onMouseUp={onMouseUp}
+              onMouseLeave={onMouseLeave}
+              onClickCapture={onClickCapture}
+              onDragStart={onDragStart}
+            >
+            {/* Track — flex, overflow visible, dlaždice se mohou vertikálně přetéct při scale */}
+            <Box ref={innerRef} className="carousel-track">
+              {EXT_TILES.map((tile, i) => (
+                <Box key={`${tile.title}-${i}`} className="carousel-tile">
                   <SpecialTile {...tile} />
                 </Box>
               ))}
             </Box>
+            </div>
 
-            {/* Tečky — jedna na každou pozici */}
-            <Group gap={7} justify="center" mt={12}>
-              {Array.from({ length: POSITIONS }).map((_, i) => (
+            {/* Tečky — jedna na každou dlaždici, aktivní je sytější */}
+            <Group gap={8} justify="center" mt={12}>
+              {TILES.map((_, i) => (
                 <Box
                   key={i}
                   onClick={() => handleDot(i)}
                   style={{
-                    width: i === pos ? 22 : 8,
+                    width: 8,
                     height: 8,
-                    borderRadius: 4,
-                    background: i === pos ? WHITE : 'rgba(255,255,255,0.28)',
+                    borderRadius: '50%',
+                    background: WHITE,
+                    opacity: i === logicalPos ? 1 : 0.3,
                     cursor: 'pointer',
-                    transition: 'width 0.4s ease, background 0.4s ease',
+                    transition: 'opacity 0.35s ease',
                     flexShrink: 0,
                   }}
                 />

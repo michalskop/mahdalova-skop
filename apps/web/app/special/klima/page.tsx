@@ -3,6 +3,7 @@ import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import SupportBanner from '@/components/common/SupportBanner';
 import type { Metadata } from 'next';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
@@ -37,6 +38,7 @@ export default async function KlimaPage() {
         articles={articles}
         themeColor="linear-gradient(135deg, #2a3f04, #639e0a)"
       />
+      <SupportBanner />
       <SubscribeNewsletter actionUrl="https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088" />
     </Container>
   );
