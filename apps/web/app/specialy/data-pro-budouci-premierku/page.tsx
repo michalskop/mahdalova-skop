@@ -1,4 +1,4 @@
-﻿// app/special/data-pro-budouci-premierku/page.tsx
+// app/special/data-pro-budouci-premierku/page.tsx
 import { Container, Title, Text, Box, SimpleGrid, Paper } from '@mantine/core';
 import type { Metadata } from 'next';
 import SupportBanner from '@/components/common/SupportBanner';

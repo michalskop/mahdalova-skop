@@ -1,4 +1,4 @@
-﻿// app/special/svobodna-media/page.tsx
+// app/special/svobodna-media/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';

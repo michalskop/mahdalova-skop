@@ -1,4 +1,4 @@
-﻿// app/special/investigace/page.tsx
+// app/special/investigace/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';

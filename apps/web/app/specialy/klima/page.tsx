@@ -1,4 +1,4 @@
-﻿// app/special/klima/page.tsx
+// app/special/klima/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';

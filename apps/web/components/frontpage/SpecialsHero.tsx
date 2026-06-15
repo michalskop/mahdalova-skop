@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { Box, Group, Stack, Title, Paper } from '@mantine/core';
 import { useState, useRef, useEffect, useCallback } from 'react';

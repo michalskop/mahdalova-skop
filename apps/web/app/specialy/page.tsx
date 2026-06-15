@@ -1,4 +1,4 @@
-﻿// app/special/page.tsx â€” Landing page vÅ¡ech speciÃ¡lÅ¯
+// app/special/page.tsx â€” Landing page vÅ¡ech speciÃ¡lÅ¯
 import { Box, Group, Stack, Title, Paper, SimpleGrid, Container } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Arrow } from '@repo/ui/components/Arrow';
