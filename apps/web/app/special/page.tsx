@@ -77,44 +77,34 @@ function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      style={{ textDecoration: 'none', display: 'block' }}
+      className="specials-tile"
+      style={{
+        textDecoration: 'none',
+        display: 'block',
+        borderRadius: 12,
+        overflow: 'hidden',
+        aspectRatio: '1 / 1',
+        position: 'relative',
+        background: bg,
+        transition: 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        cursor: 'pointer',
+      }}
     >
-      <Box
-        style={{
-          background: bg,
-          borderRadius: 12,
-          overflow: 'hidden',
-          aspectRatio: '1 / 1',
-          display: 'flex',
-          flexDirection: 'column',
-          position: 'relative',
-          transition: 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-          cursor: 'pointer',
-        }}
-        className="specials-tile"
-      >
-        {coverImage && (
-          <>
-            <img
-              src={coverImage}
-              alt={title}
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            />
-            <Box style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 50%, transparent 100%)' }} />
-          </>
-        )}
-        <Box style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 20px 18px', minHeight: 72, display: 'flex', alignItems: 'flex-start' }}>
-          <Title order={3} style={{
-            color: WHITE,
-            fontFamily: "'Roboto Slab', Georgia, serif",
-            fontWeight: 500,
-            fontSize: 'var(--mantine-font-size-lg)',
-            lineHeight: 1.35,
-          }}>
-            {title}
-          </Title>
-        </Box>
-      </Box>
+      {coverImage && (
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+      )}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 50%, transparent 100%)' }} />
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 20px 18px', minHeight: 72, display: 'flex', alignItems: 'flex-start' }}>
+        <Title order={3} style={{
+          color: WHITE,
+          fontFamily: "'Roboto Slab', Georgia, serif",
+          fontWeight: 500,
+          fontSize: 'var(--mantine-font-size-lg)',
+          lineHeight: 1.35,
+        }}>
+          {title}
+        </Title>
+      </div>
     </a>
   );
 }
@@ -122,7 +112,19 @@ function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES
 export default function SpecialsLandingPage() {
   return (
     <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
-      <style>{`.specials-tile:hover { transform: scale(1.025); }`}</style>
+      <style>{`
+        .specials-tile { position: relative; }
+        .specials-tile:hover { transform: scale(1.025); }
+        .specials-tile::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 1px solid var(--mantine-color-default-border);
+          border-radius: inherit;
+          pointer-events: none;
+          z-index: 10;
+        }
+      `}</style>
       <Paper py={20} bg={BG} radius={0} style={{ minHeight: '60vh' }}>
         <Group gap={0} align="flex-start" wrap="wrap">
           {/* Levý sloupec — nadpis (stejná šířka jako u ArticlesSection) */}
@@ -159,6 +161,26 @@ export default function SpecialsLandingPage() {
           </Box>
         </Group>
       </Paper>
+      <Box style={{
+        background: '#fff3e8',
+        borderLeft: '4px solid #f76800',
+        borderRadius: 6,
+        padding: '18px 22px',
+        margin: '28px 24px 8px',
+        fontSize: 14,
+        color: '#2a2a2a',
+        lineHeight: 1.6,
+        fontFamily: 'inherit',
+      }}>
+        <strong>O speciálu Data pro budoucí premiérku.</strong>{' '}
+        Dlouhodobý projekt dvojice datových novinářů a analytiků{' '}
+        <a href="https://www.mahdalova-skop.cz" style={{ color: '#f76800' }}>Mahdalová &amp; Škop</a>,
+        {' '}který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich.
+        Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat.
+        Projekt vzniká s grantovou podporou{' '}
+        <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#f76800' }}>Nadačního fondu nezávislé žurnalistiky</a>
+        {' '}a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
+      </Box>
       <SupportBanner />
     </Container>
   );
