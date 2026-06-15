@@ -500,7 +500,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
           <span style={{
             fontSize: 13, fontWeight: 500,
             fontFamily: "'Roboto Slab', Georgia, serif",
-            color: chapter.available ? '#f76800' : 'rgba(247,104,0,0.45)',
+            color: '#f76800',
           }}>
             Číst kapitolu →
           </span>
