@@ -63,7 +63,7 @@ export default function RootLayout({
         </Suspense>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
-      <body>
+      <body style={{ backgroundColor: '#fdfbf7' }}>
         <ThemeProvider>
           <Layout>
             {children}

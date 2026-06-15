@@ -1,17 +1,17 @@
-// app/special/page.tsx — Landing page všech speciálů
+﻿// app/special/page.tsx â€” Landing page vÅ¡ech speciÃ¡lÅ¯
 import { Box, Group, Stack, Title, Paper, SimpleGrid, Container } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Arrow } from '@repo/ui/components/Arrow';
 import SupportBanner from '@/components/common/SupportBanner';
 
 export const metadata: Metadata = {
-  title: 'Speciály',
-  description: 'Speciální projekty a investigativní série Mahdalová & Skop.',
-  alternates: { canonical: '/special' },
+  title: 'SpeciÃ¡ly',
+  description: 'SpeciÃ¡lnÃ­ projekty a investigativnÃ­ sÃ©rie MahdalovÃ¡ & Skop.',
+  alternates: { canonical: '/specialy' },
   openGraph: {
-    title: 'Speciály',
-    description: 'Speciální projekty a investigativní série Mahdalová & Skop.',
-    url: '/special',
+    title: 'SpeciÃ¡ly',
+    description: 'SpeciÃ¡lnÃ­ projekty a investigativnÃ­ sÃ©rie MahdalovÃ¡ & Skop.',
+    url: '/specialy',
     type: 'website',
   },
 };
@@ -21,24 +21,24 @@ const WHITE = '#ffffff';
 
 const TILES = [
   {
-    href: '/special/data-pro-budouci-premierku',
-    title: 'Data pro budoucí premiérku',
+    href: '/specialy/data-pro-budouci-premierku',
+    title: 'Data pro budoucÃ­ premiÃ©rku',
     bg: '#ff3f30',
     external: false,
     logo: 'dpbp',
     coverImage: '/images/specials/data-pro-budouci-premierku.svg',
   },
   {
-    href: '/special/svobodna-media',
-    title: 'Svobodná média',
+    href: '/specialy/svobodna-media',
+    title: 'SvobodnÃ¡ mÃ©dia',
     bg: '#812840',
     external: false,
     logo: 'tv',
     coverImage: '/images/specials/svobodna-media.svg',
   },
   {
-    href: '/special/investigace',
-    title: 'M & Š investigace',
+    href: '/specialy/investigace',
+    title: 'M & Å  investigace',
     bg: '#351040',
     external: false,
     logo: 'lupa',
@@ -46,7 +46,7 @@ const TILES = [
   },
   {
     href: 'https://snemovna.datatimes.cz',
-    title: 'Sněmovna DataTimes.cz',
+    title: 'SnÄ›movna DataTimes.cz',
     bg: '#2f325c',
     external: true,
     logo: 'flag',
@@ -54,14 +54,14 @@ const TILES = [
   },
   {
     href: 'https://mandaty.cz',
-    title: 'Mandáty.cz',
+    title: 'MandÃ¡ty.cz',
     bg: 'linear-gradient(90deg, #f71b4b, #101432)',
     external: true,
     logo: 'mandaty',
     coverImage: '/images/specials/mandaty.svg',
   },
   {
-    href: '/special/klima',
+    href: '/specialy/klima',
     title: 'Data o klimatu',
     bg: 'linear-gradient(135deg, #2a3f04, #639e0a)',
     external: false,
@@ -70,7 +70,7 @@ const TILES = [
   },
 ];
 
-/* ── Tile ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Tile â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES[0]) {
   return (
     <a
@@ -127,7 +127,7 @@ export default function SpecialsLandingPage() {
       `}</style>
       <Paper py={20} bg={BG} radius={0} style={{ minHeight: '60vh' }}>
         <Group gap={0} align="flex-start" wrap="wrap">
-          {/* Levý sloupec — nadpis (stejná šířka jako u ArticlesSection) */}
+          {/* LevÃ½ sloupec â€” nadpis (stejnÃ¡ Å¡Ã­Å™ka jako u ArticlesSection) */}
           <Stack
             w={{ base: '100%', md: 200 }}
             mb={{ base: 'xs', md: 0 }}
@@ -135,7 +135,7 @@ export default function SpecialsLandingPage() {
             pl={{ base: 'md', md: 'md' }}
           >
             <a
-              href="/special"
+              href="/specialy"
               style={{ textDecoration: 'none', display: 'inline-flex', maxWidth: '100%', color: WHITE }}
             >
               <Title
@@ -143,13 +143,13 @@ export default function SpecialsLandingPage() {
                 ta="left"
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '5px', color: WHITE, fontFamily: "'Roboto Slab', serif" }}
               >
-                Speciály
+                SpeciÃ¡ly
                 <Arrow size={80} color={WHITE} />
               </Title>
             </a>
           </Stack>
 
-          {/* Pravý sloupec — dlaždice */}
+          {/* PravÃ½ sloupec â€” dlaÅ¾dice */}
           <Box flex={1}>
             <Container size="lg" px="md" py={16}>
               <SimpleGrid cols={{ base: 1, xs: 2, sm: 3 }} spacing="md">
@@ -161,26 +161,6 @@ export default function SpecialsLandingPage() {
           </Box>
         </Group>
       </Paper>
-      <Box style={{
-        background: '#fff3e8',
-        borderLeft: '4px solid #f76800',
-        borderRadius: 6,
-        padding: '18px 22px',
-        margin: '28px 24px 8px',
-        fontSize: 14,
-        color: '#2a2a2a',
-        lineHeight: 1.6,
-        fontFamily: 'inherit',
-      }}>
-        <strong>O speciálu Data pro budoucí premiérku.</strong>{' '}
-        Dlouhodobý projekt dvojice datových novinářů a analytiků{' '}
-        <a href="https://www.mahdalova-skop.cz" style={{ color: '#f76800' }}>Mahdalová &amp; Škop</a>,
-        {' '}který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich.
-        Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat.
-        Projekt vzniká s grantovou podporou{' '}
-        <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#f76800' }}>Nadačního fondu nezávislé žurnalistiky</a>
-        {' '}a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
-      </Box>
       <SupportBanner />
     </Container>
   );

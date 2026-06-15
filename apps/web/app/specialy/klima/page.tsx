@@ -1,4 +1,4 @@
-// app/special/klima/page.tsx
+﻿// app/special/klima/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
@@ -11,19 +11,19 @@ const COVER = `${BASE_URL}/images/specials/klima.svg`;
 
 export const metadata: Metadata = {
   title: 'Data o klimatu',
-  description: 'Analýzy a datová žurnalistika o změnách klimatu, jejich dopadech a klimatické politice.',
-  alternates: { canonical: '/special/klima' },
+  description: 'AnalÃ½zy a datovÃ¡ Å¾urnalistika o zmÄ›nÃ¡ch klimatu, jejich dopadech a klimatickÃ© politice.',
+  alternates: { canonical: '/specialy/klima' },
   openGraph: {
     title: 'Data o klimatu',
-    description: 'Analýzy a datová žurnalistika o změnách klimatu, jejich dopadech a klimatické politice.',
-    url: '/special/klima',
+    description: 'AnalÃ½zy a datovÃ¡ Å¾urnalistika o zmÄ›nÃ¡ch klimatu, jejich dopadech a klimatickÃ© politice.',
+    url: '/specialy/klima',
     type: 'website',
     images: [{ url: COVER, width: 1200, height: 630, alt: 'Data o klimatu' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Data o klimatu',
-    description: 'Analýzy a datová žurnalistika o změnách klimatu, jejich dopadech a klimatické politice.',
+    description: 'AnalÃ½zy a datovÃ¡ Å¾urnalistika o zmÄ›nÃ¡ch klimatu, jejich dopadech a klimatickÃ© politice.',
     images: [COVER],
   },
 };

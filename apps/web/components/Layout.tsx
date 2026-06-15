@@ -9,8 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <AppShell
       header={{ height: 60 }}
-      // footer={{ height: 60 }}
-      // padding={0}
+      styles={{ main: { backgroundColor: '#fdfbf7', minHeight: '100vh' } }}
     >
       <AppShell.Header>
         <HeaderSimple />

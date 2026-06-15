@@ -1,4 +1,4 @@
-// app/special/investigace/page.tsx
+﻿// app/special/investigace/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
@@ -11,19 +11,19 @@ const COVER = `${BASE_URL}/images/specials/investigace.jpg`;
 
 export const metadata: Metadata = {
   title: 'Investigace',
-  description: 'Investigativní články Mahdalová & Skop – odhalujeme to, co zůstává skryté.',
-  alternates: { canonical: '/special/investigace' },
+  description: 'InvestigativnÃ­ ÄlÃ¡nky MahdalovÃ¡ & Skop â€“ odhalujeme to, co zÅ¯stÃ¡vÃ¡ skrytÃ©.',
+  alternates: { canonical: '/specialy/investigace' },
   openGraph: {
     title: 'Investigace',
-    description: 'Investigativní články Mahdalová & Skop – odhalujeme to, co zůstává skryté.',
-    url: '/special/investigace',
+    description: 'InvestigativnÃ­ ÄlÃ¡nky MahdalovÃ¡ & Skop â€“ odhalujeme to, co zÅ¯stÃ¡vÃ¡ skrytÃ©.',
+    url: '/specialy/investigace',
     type: 'website',
     images: [{ url: COVER, width: 1200, height: 630, alt: 'Investigace' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Investigace',
-    description: 'Investigativní články Mahdalová & Skop – odhalujeme to, co zůstává skryté.',
+    description: 'InvestigativnÃ­ ÄlÃ¡nky MahdalovÃ¡ & Skop â€“ odhalujeme to, co zÅ¯stÃ¡vÃ¡ skrytÃ©.',
     images: [COVER],
   },
 };

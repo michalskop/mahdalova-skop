@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Box, Group, Stack, Title, Paper } from '@mantine/core';
 import { useState, useRef, useEffect, useCallback } from 'react';
@@ -10,7 +10,7 @@ const AUTOPLAY_MS = 6000;
 const GAP = 16;
 const VISIBLE = 3;
 
-/* ── SVG loga ────────────────────────────────────────────────────── */
+/* â”€â”€ SVG loga â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const DpbpLogo = () => (
   <svg viewBox="-8 -8 716 716" xmlns="http://www.w3.org/2000/svg" overflow="visible"
     style={{ width: '100%', height: '100%', display: 'block' }}>
@@ -82,23 +82,23 @@ const KlimaIcon = () => (
   </svg>
 );
 
-/* ── Data dlaždic ─────────────────────────────────────────────────── */
-// coverImage: cesta z /public/images/specials/ — stačí sem přidat soubor a vyplnit cestu.
-// Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
+/* â”€â”€ Data dlaÅ¾dic â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+// coverImage: cesta z /public/images/specials/ â€” staÄÃ­ sem pÅ™idat soubor a vyplnit cestu.
+// Pokud coverImage chybÃ­, zobrazÃ­ se SVG ikona (logoType).
 const TILES = [
-  { href: '/special/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
-  { href: '/special/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
-  { href: '/special/investigace', title: 'M & Š investigace', bg: '#351040', external: false, logoType: 'lupa', coverImage: '/images/specials/investigace.svg' },
-  { href: 'https://snemovna.datatimes.cz', title: 'Sněmovna.DataTimes.cz', bg: '#2f325c', external: true, logoType: 'flag', coverImage: '/images/specials/snemovna.svg' },
-  { href: 'https://mandaty.cz', title: 'Mandáty.cz', bg: 'linear-gradient(90deg, #f71b4b, #101432)', external: true, logoType: 'mandaty', coverImage: '/images/specials/mandaty.svg' },
-  { href: '/special/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
+  { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucÃ­ premiÃ©rku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
+  { href: '/specialy/svobodna-media', title: 'SvobodnÃ¡ mÃ©dia', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
+  { href: '/specialy/investigace', title: 'M & Å  investigace', bg: '#351040', external: false, logoType: 'lupa', coverImage: '/images/specials/investigace.svg' },
+  { href: 'https://snemovna.datatimes.cz', title: 'SnÄ›movna.DataTimes.cz', bg: '#2f325c', external: true, logoType: 'flag', coverImage: '/images/specials/snemovna.svg' },
+  { href: 'https://mandaty.cz', title: 'MandÃ¡ty.cz', bg: 'linear-gradient(90deg, #f71b4b, #101432)', external: true, logoType: 'mandaty', coverImage: '/images/specials/mandaty.svg' },
+  { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
 ];
 
-// Nekonečná smyčka: klonujeme VISIBLE dlaždic na začátek a konec tracku.
-// posRef pracuje v "extended" prostoru; logicalPos (0..N-1) určuje aktivní tečku.
+// NekoneÄnÃ¡ smyÄka: klonujeme VISIBLE dlaÅ¾dic na zaÄÃ¡tek a konec tracku.
+// posRef pracuje v "extended" prostoru; logicalPos (0..N-1) urÄuje aktivnÃ­ teÄku.
 const N = TILES.length;
 const EXT_TILES = [...TILES.slice(-VISIBLE), ...TILES, ...TILES.slice(0, VISIBLE)];
-const EXT_START = VISIBLE; // index první skutečné dlaždice v EXT_TILES
+const EXT_START = VISIBLE; // index prvnÃ­ skuteÄnÃ© dlaÅ¾dice v EXT_TILES
 
 function TileLogo({ type }: { type: string }) {
   if (type === 'dpbp') return <DpbpLogo />;
@@ -107,19 +107,19 @@ function TileLogo({ type }: { type: string }) {
   if (type === 'flag') return <CzechFlag />;
   if (type === 'klima') return <KlimaIcon />;
   if (type === 'media') return (
-    <img src="/images/svobodna-media-logo.svg" alt="Svobodná média"
+    <img src="/images/svobodna-media-logo.svg" alt="SvobodnÃ¡ mÃ©dia"
       style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
   );
   return null;
 }
 
-/* ── Tile ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Tile â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof TILES[0]) {
   const hasCover = Boolean(coverImage);
   const isFullBleed = logoType === 'media' || hasCover;
 
-  // Stejný pattern jako ArticleCard: border + overflow + border-radius + scale jsou na jednom elementu.
-  // Background je přímo na <a> (barevné tile) nebo je image přímé dítě <a> (image tile).
+  // StejnÃ½ pattern jako ArticleCard: border + overflow + border-radius + scale jsou na jednom elementu.
+  // Background je pÅ™Ã­mo na <a> (barevnÃ© tile) nebo je image pÅ™Ã­mÃ© dÃ­tÄ› <a> (image tile).
   const base: React.CSSProperties = {
     textDecoration: 'none',
     display: 'block',
@@ -166,8 +166,8 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
   );
 }
 
-/* ── Plynulý scroll přes RAF ─────────────────────────────────────── */
-const SCROLL_DURATION = 700; // ms — čím více, tím pomalejší a plynulejší
+/* â”€â”€ PlynulÃ½ scroll pÅ™es RAF â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+const SCROLL_DURATION = 700; // ms â€” ÄÃ­m vÃ­ce, tÃ­m pomalejÅ¡Ã­ a plynulejÅ¡Ã­
 
 function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
@@ -193,21 +193,21 @@ function animateScroll(el: HTMLElement, targetLeft: number, duration = SCROLL_DU
   requestAnimationFrame(step);
 }
 
-/* ── SpecialsHero ─────────────────────────────────────────────────── */
+/* â”€â”€ SpecialsHero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 export default function SpecialsHero() {
   const [titleHovered, setTitleHovered] = useState(false);
-  const [logicalPos, setLogicalPos] = useState(0); // 0..N-1, pro tečky
+  const [logicalPos, setLogicalPos] = useState(0); // 0..N-1, pro teÄky
   const [dragging, setDragging] = useState(false);
   const draggingRef = useRef(false);
   const trackRef = useRef<HTMLDivElement>(null); // scroll container (carousel-outer)
   const innerRef = useRef<HTMLDivElement>(null); // flex track (carousel-track)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const posRef = useRef(EXT_START); // aktuální pozice v EXT_TILES
+  const posRef = useRef(EXT_START); // aktuÃ¡lnÃ­ pozice v EXT_TILES
   const dragStartX = useRef(0);
   const dragStartScroll = useRef(0);
   const wrapping = useRef(false); // blokuje double-wrap
-  const dragOccurred = useRef(false); // rozlišuje drag od kliknutí
-  // Sledování rychlosti pohybu pro momentum swipe: [{x, t}, ...]
+  const dragOccurred = useRef(false); // rozliÅ¡uje drag od kliknutÃ­
+  // SledovÃ¡nÃ­ rychlosti pohybu pro momentum swipe: [{x, t}, ...]
   const velEvents = useRef<Array<{ x: number; t: number }>>([]);
 
   const getTileW = () => {
@@ -217,7 +217,7 @@ export default function SpecialsHero() {
     return tile ? tile.offsetWidth + GAP : 0;
   };
 
-  // Okamžitý skok bez animace (při přechodu klon→skutečná dlaždice)
+  // OkamÅ¾itÃ½ skok bez animace (pÅ™i pÅ™echodu klonâ†’skuteÄnÃ¡ dlaÅ¾dice)
   const jumpTo = useCallback((extPos: number) => {
     const track = trackRef.current;
     const tileW = getTileW();
@@ -231,7 +231,7 @@ export default function SpecialsHero() {
     });
   }, []);
 
-  // Animovaný posun na extendovanou pozici + případný silent wrap po animaci
+  // AnimovanÃ½ posun na extendovanou pozici + pÅ™Ã­padnÃ½ silent wrap po animaci
   const goToExt = useCallback((extPos: number, duration = SCROLL_DURATION) => {
     const track = trackRef.current;
     const tileW = getTileW();
@@ -240,7 +240,7 @@ export default function SpecialsHero() {
     posRef.current = extPos;
     setLogicalPos((extPos - EXT_START + N) % N);
 
-    // Po animaci: pokud jsme v clone zóně, přeskočíme na skutečnou dlaždici
+    // Po animaci: pokud jsme v clone zÃ³nÄ›, pÅ™eskoÄÃ­me na skuteÄnou dlaÅ¾dici
     if (!wrapping.current) {
       wrapping.current = true;
       setTimeout(() => {
@@ -259,7 +259,7 @@ export default function SpecialsHero() {
     }, AUTOPLAY_MS);
   }, [goToExt]);
 
-  // Inicializace: nastavíme scroll na EXT_START (první skutečná dlaždice)
+  // Inicializace: nastavÃ­me scroll na EXT_START (prvnÃ­ skuteÄnÃ¡ dlaÅ¾dice)
   useEffect(() => {
     const track = trackRef.current;
     const tileW = getTileW();
@@ -276,7 +276,7 @@ export default function SpecialsHero() {
     resetTimer();
   }
 
-  // ── Sdílená rychlost a finish ────────────────────────────────────
+  // â”€â”€ SdÃ­lenÃ¡ rychlost a finish â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   function getVelocity(): number {
     const ev = velEvents.current;
@@ -286,19 +286,19 @@ export default function SpecialsHero() {
     return (ev[ev.length - 1].x - ev[0].x) / dt;
   }
 
-  // Ukončení dragu: snapne na nejbližší dlaždici s momentem dle rychlosti.
-  // Sdílené pro myš i touch.
+  // UkonÄenÃ­ dragu: snapne na nejbliÅ¾Å¡Ã­ dlaÅ¾dici s momentem dle rychlosti.
+  // SdÃ­lenÃ© pro myÅ¡ i touch.
   function finishDrag(endX: number) {
     draggingRef.current = false;
     setDragging(false);
-    const diff = endX - dragStartX.current; // >0 = prst šel doprava = posun zpět
+    const diff = endX - dragStartX.current; // >0 = prst Å¡el doprava = posun zpÄ›t
     const track = trackRef.current;
     const tileW = getTileW();
     if (!track || !tileW) { velEvents.current = []; resetTimer(); return; }
 
     if (Math.abs(diff) > 12) {
-      // Cíl = aktuální pozice + setrvačnost (velocity × čas decelerace)
-      const velocity = getVelocity(); // px/ms, záporná = prst doleva = scroll doleva
+      // CÃ­l = aktuÃ¡lnÃ­ pozice + setrvaÄnost (velocity Ã— Äas decelerace)
+      const velocity = getVelocity(); // px/ms, zÃ¡pornÃ¡ = prst doleva = scroll doleva
       const projected = track.scrollLeft + velocity * 320;
       const targetPos = Math.round(projected / tileW);
       const currentPos = Math.round(track.scrollLeft / tileW);
@@ -313,7 +313,7 @@ export default function SpecialsHero() {
     resetTimer();
   }
 
-  // ── Touch ─────────────────────────────────────────────────────────
+  // â”€â”€ Touch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const touchStartX = useRef<number | null>(null);
 
   function onTouchStart(e: React.TouchEvent) {
@@ -337,12 +337,12 @@ export default function SpecialsHero() {
   }
   function onTouchEnd(e: React.TouchEvent) {
     if (touchStartX.current === null) return;
-    if (dragOccurred.current) e.preventDefault(); // blokuje syntetický klik
+    if (dragOccurred.current) e.preventDefault(); // blokuje syntetickÃ½ klik
     finishDrag(e.changedTouches[0].clientX);
     touchStartX.current = null;
   }
 
-  // ── Mouse ─────────────────────────────────────────────────────────
+  // â”€â”€ Mouse â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function onMouseDown(e: React.MouseEvent) {
     if (timerRef.current) clearInterval(timerRef.current); // pause autoplay
     draggingRef.current = true;
@@ -372,7 +372,7 @@ export default function SpecialsHero() {
   }
   function onDragStart(e: React.DragEvent) { e.preventDefault(); }
 
-  // Zachytí kliknutí na <a> dlaždic — pokud předcházel drag, klik zablokuje
+  // ZachytÃ­ kliknutÃ­ na <a> dlaÅ¾dic â€” pokud pÅ™edchÃ¡zel drag, klik zablokuje
   function onClickCapture(e: React.MouseEvent) {
     if (dragOccurred.current) {
       e.preventDefault();
@@ -426,7 +426,7 @@ export default function SpecialsHero() {
               style={{ textDecoration: titleHovered ? 'underline' : 'none', display: 'inline-flex', color: WHITE }}
             >
               <Title order={2} style={{ display: 'flex', alignItems: 'center', gap: 5, color: WHITE }}>
-                Speciály
+                SpeciÃ¡ly
                 <Arrow size={80} color={WHITE} />
               </Title>
             </a>
@@ -434,7 +434,7 @@ export default function SpecialsHero() {
 
           {/* Karusel vpravo */}
           <Box flex={1} px="md" style={{ minWidth: 0, overflow: 'visible' }}>
-            {/* Outer: scroll container + horizontální clip. trackRef zde = scrollLeft funguje */}
+            {/* Outer: scroll container + horizontÃ¡lnÃ­ clip. trackRef zde = scrollLeft funguje */}
             <div
               ref={trackRef}
               className={`carousel-outer${dragging ? ' is-dragging' : ''}`}
@@ -449,7 +449,7 @@ export default function SpecialsHero() {
               onClickCapture={onClickCapture}
               onDragStart={onDragStart}
             >
-            {/* Track — flex, overflow visible, dlaždice se mohou vertikálně přetéct při scale */}
+            {/* Track â€” flex, overflow visible, dlaÅ¾dice se mohou vertikÃ¡lnÄ› pÅ™etÃ©ct pÅ™i scale */}
             <Box ref={innerRef} className="carousel-track">
               {EXT_TILES.map((tile, i) => (
                 <Box key={`${tile.title}-${i}`} className="carousel-tile">
@@ -459,7 +459,7 @@ export default function SpecialsHero() {
             </Box>
             </div>
 
-            {/* Tečky — jedna na každou dlaždici, aktivní je sytější */}
+            {/* TeÄky â€” jedna na kaÅ¾dou dlaÅ¾dici, aktivnÃ­ je sytÄ›jÅ¡Ã­ */}
             <Group gap={8} justify="center" mt={12}>
               {TILES.map((_, i) => (
                 <Box
