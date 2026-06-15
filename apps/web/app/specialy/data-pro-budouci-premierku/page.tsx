@@ -18,14 +18,14 @@ export const metadata: Metadata = {
 // Hero head silhouette
 const SIL_PATH = "M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z";
 const SIL_T = "translate(-117.098299,796.836783) scale(0.100000,-0.100000)";
-// Hero head: logo-dpbp(36) — silueta #697fe6, kroužky karmin→purpur→modrá
+// Hero head: logo-dpbp(42) — silueta #ff1a4a, kroužky pestrobarevná paleta
 const HERO_DOTS: [number, number, number, string][] = [
-  [358.4,156.6,40.6,'#b72f6f'],[412.8,347.0,35.3,'#9d3f8e'],[340.9,512.7,24.7,'#c02965'],
-  [280.6,220.0,24.7,'#de1743'],[379.8,253.5,21.2,'#ad357b'],[311.7,364.6,17.6,'#cf2155'],
-  [537.3,304.7,17.6,'#5f65d4'],[313.7,292.3,17.6,'#ce2156'],[449.8,213.0,17.6,'#8a4ba3'],
-  [358.4,435.1,15.9,'#b72f6f'],[471.2,424.6,12.3,'#8051af'],[525.6,361.1,12.3,'#6562cd'],
-  [469.2,280.0,12.3,'#8151ad'],[457.6,138.9,12.3,'#864da7'],[412.8,488.0,8.8,'#9d3f8e'],
-  [539.2,234.1,8.8,'#5e66d5'],
+  [358.4,156.6,40.6,'#ff3f30'],[412.8,347.0,35.3,'#ff7f2a'],[340.9,512.7,24.7,'#5fcce6'],
+  [280.6,220.0,24.7,'#4a51ab'],[379.8,253.5,21.2,'#ff7e6e'],[311.7,364.6,17.6,'#5e66d5'],
+  [537.3,304.7,17.6,'#efb704'],[313.7,292.3,17.6,'#7997e1'],[449.8,213.0,17.6,'#efb704'],
+  [358.4,435.1,15.9,'#6493d4'],[471.2,424.6,12.3,'#ff5c4a'],[525.6,361.1,12.3,'#ff7f2a'],
+  [469.2,280.0,12.3,'#ff934d'],[457.6,138.9,12.3,'#ffdc33'],[412.8,488.0,8.8,'#ff934d'],
+  [539.2,234.1,8.8,'#ffe680'],
 ];
 
 // Abstract dot compositions per chapter
@@ -452,7 +452,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
       <div style={{ flex: '1 1 0', padding: '8px 8px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         {chapter.customSvg ? (
           <svg viewBox="-10 -10 220 220" xmlns="http://www.w3.org/2000/svg"
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            style={{ width: '100%', maxWidth: 200, height: 'auto', display: 'block', margin: '0 auto' }}
             aria-hidden>
             {chapter.customSvg}
           </svg>
@@ -497,29 +497,13 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
           {chapter.title}
         </div>
         <div>
-          {chapter.available ? (
-            <span style={{
-              fontSize: 10, fontWeight: 700,
-              fontFamily: "'Roboto', system-ui, sans-serif",
-              color: chapter.accent, letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-            }}>
-              Číst kapitolu →
-            </span>
-          ) : (
-            <span style={{
-              display: 'inline-block',
-              fontSize: 10, fontWeight: 700,
-              fontFamily: "'Roboto', system-ui, sans-serif",
-              letterSpacing: '0.12em', textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.4)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 4,
-              padding: '4px 8px',
-            }}>
-              Připravujeme
-            </span>
-          )}
+          <span style={{
+            fontSize: 13, fontWeight: 500,
+            fontFamily: "'Roboto Slab', Georgia, serif",
+            color: chapter.available ? chapter.accent : 'rgba(255,255,255,0.4)',
+          }}>
+            Číst kapitolu →
+          </span>
         </div>
       </div>
     </div>
@@ -566,7 +550,7 @@ export default function DpbpLandingPage() {
           transform: translateX(3px);
         }
         .dt-hero {
-          background: linear-gradient(135deg, #101432 0%, #f71b4b 100%);
+          background: linear-gradient(90deg, #101432 0%, #f71b4b 100%);
           padding: 52px 40px 44px;
           display: flex;
           flex-direction: column-reverse;
@@ -585,12 +569,13 @@ export default function DpbpLandingPage() {
           max-width: 750px;
         }
         .dt-tag {
-          font-size: 13px;
+          font-size: clamp(15px, 1.5vw, 18px);
           font-weight: 400;
-          letter-spacing: 0.04em;
-          color: rgba(255,255,255,0.45);
+          letter-spacing: 0em;
+          color: rgba(255,255,255,0.7);
           margin-bottom: 16px;
           font-family: 'Roboto Slab', Georgia, serif;
+          text-align: center;
         }
         .dt-hero-title {
           font-family: 'Roboto Slab', Georgia, serif;
@@ -655,7 +640,13 @@ export default function DpbpLandingPage() {
               chceme návrhy opřené o data a fakta. Jaká je skutečná kondice Česka –
               a co s ní může politika reálně udělat?
             </p>
-            <div className="dt-tag" style={{ marginTop: '2rem', marginBottom: 0 }}>Speciál · DataTimes.cz · Mahdalová &amp; Škop</div>
+            <div className="dt-tag" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.6em' }}>
+              <span>Speciál</span>
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(255,255,255,0.5)', display: 'inline-block', flexShrink: 0 }}/>
+              <span>DataTimes.cz</span>
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(255,255,255,0.5)', display: 'inline-block', flexShrink: 0 }}/>
+              <span>Mahdalová &amp; Škop</span>
+            </div>
           </div>
           <div className="dt-hero-visual">
             <div className="dt-hero-profile">
@@ -666,9 +657,9 @@ export default function DpbpLandingPage() {
                   </clipPath>
                 </defs>
                 <g clipPath="url(#sil-hero)">
-                  <rect x="0" y="0" width="700" height="700" fill="#697fe6" />
+                  <rect x="0" y="0" width="700" height="700" fill="#ff1a4a" />
                 </g>
-                <path transform={SIL_T} d={SIL_PATH} fill="none" stroke="#697fe6" strokeWidth={80} />
+                <path transform={SIL_T} d={SIL_PATH} fill="none" stroke="#ff1a4a" strokeWidth={80} />
                 {HERO_DOTS.map(([cx,cy,r,fill],i) => (
                   <circle key={i} cx={cx} cy={cy} r={r} fill={fill} stroke={fill} strokeWidth={8} />
                 ))}
@@ -679,7 +670,7 @@ export default function DpbpLandingPage() {
 
         {/* Kapitoly */}
         <Container size="lg" py={44} px="md">
-          <SimpleGrid cols={{ base: 2, xs: 3, sm: 4 }} spacing="md">
+          <SimpleGrid cols={{ base: 2, sm: 3 }} spacing="md">
             {CHAPTERS.map(ch => (
               <ChapterTile key={ch.n} chapter={ch} />
             ))}
