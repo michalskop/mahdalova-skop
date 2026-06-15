@@ -1,4 +1,4 @@
-// app/special/svobodna-media/page.tsx
+// app/specialy/svobodna-media/page.tsx
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
@@ -10,31 +10,31 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop
 const COVER = `${BASE_URL}/images/specials/svobodna-media.svg`;
 
 export const metadata: Metadata = {
-  title: 'SvobodnÃ¡ mÃ©dia',
-  description: 'ÄŒlÃ¡nky MahdalovÃ¡ & Skop o svobodÄ› mÃ©diÃ­, jejich vlastnictvÃ­ a nezÃ¡vislosti.',
+  title: 'Svobodná média',
+  description: 'Články Mahdalová & Škop o svobodě médií, jejich vlastnictví a nezávislosti.',
   alternates: { canonical: '/specialy/svobodna-media' },
   openGraph: {
-    title: 'SvobodnÃ¡ mÃ©dia',
-    description: 'ÄŒlÃ¡nky MahdalovÃ¡ & Skop o svobodÄ› mÃ©diÃ­, jejich vlastnictvÃ­ a nezÃ¡vislosti.',
+    title: 'Svobodná média',
+    description: 'Články Mahdalová & Škop o svobodě médií, jejich vlastnictví a nezávislosti.',
     url: '/specialy/svobodna-media',
     type: 'website',
-    images: [{ url: COVER, width: 1200, height: 630, alt: 'SvobodnÃ¡ mÃ©dia' }],
+    images: [{ url: COVER, width: 1200, height: 630, alt: 'Svobodná média' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SvobodnÃ¡ mÃ©dia',
-    description: 'ÄŒlÃ¡nky MahdalovÃ¡ & Skop o svobodÄ› mÃ©diÃ­, jejich vlastnictvÃ­ a nezÃ¡vislosti.',
+    title: 'Svobodná média',
+    description: 'Články Mahdalová & Škop o svobodě médií, jejich vlastnictví a nezávislosti.',
     images: [COVER],
   },
 };
 
 export default async function SvobodnaMediaPage() {
-  const articles = await getArticles(100, 'svobodnÃ¡-mÃ©dia');
+  const articles = await getArticles(100, 'svobodná-média');
 
   return (
     <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
       <ArticlesSection
-        sectionTitle="SvobodnÃ¡ mÃ©dia"
+        sectionTitle="Svobodná média"
         articles={articles}
         themeColor="#812840"
       />
