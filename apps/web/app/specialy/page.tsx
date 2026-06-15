@@ -1,16 +1,16 @@
-// app/special/page.tsx â€” Landing page vÅ¡ech speciÃ¡lÅ¯
+// app/special/page.tsx — Landing page všech speciálů
 import { Box, Group, Stack, Title, Paper, SimpleGrid, Container } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Arrow } from '@repo/ui/components/Arrow';
 import SupportBanner from '@/components/common/SupportBanner';
 
 export const metadata: Metadata = {
-  title: 'SpeciÃ¡ly',
-  description: 'SpeciÃ¡lnÃ­ projekty a investigativnÃ­ sÃ©rie MahdalovÃ¡ & Skop.',
+  title: 'Speciály',
+  description: 'Speciální projekty a investigativní série Mahdalová & Skop.',
   alternates: { canonical: '/specialy' },
   openGraph: {
-    title: 'SpeciÃ¡ly',
-    description: 'SpeciÃ¡lnÃ­ projekty a investigativnÃ­ sÃ©rie MahdalovÃ¡ & Skop.',
+    title: 'Speciály',
+    description: 'Speciální projekty a investigativní série Mahdalová & Skop.',
     url: '/specialy',
     type: 'website',
   },
@@ -22,7 +22,7 @@ const WHITE = '#ffffff';
 const TILES = [
   {
     href: '/specialy/data-pro-budouci-premierku',
-    title: 'Data pro budoucÃ­ premiÃ©rku',
+    title: 'Data pro budoucí premiérku',
     bg: '#ff3f30',
     external: false,
     logo: 'dpbp',
@@ -30,7 +30,7 @@ const TILES = [
   },
   {
     href: '/specialy/svobodna-media',
-    title: 'SvobodnÃ¡ mÃ©dia',
+    title: 'Svobodná média',
     bg: '#812840',
     external: false,
     logo: 'tv',
@@ -38,7 +38,7 @@ const TILES = [
   },
   {
     href: '/specialy/investigace',
-    title: 'M & Å  investigace',
+    title: 'M & Š investigace',
     bg: '#351040',
     external: false,
     logo: 'lupa',
@@ -46,7 +46,7 @@ const TILES = [
   },
   {
     href: 'https://snemovna.datatimes.cz',
-    title: 'SnÄ›movna DataTimes.cz',
+    title: 'Sněmovna DataTimes.cz',
     bg: '#2f325c',
     external: true,
     logo: 'flag',
@@ -54,7 +54,7 @@ const TILES = [
   },
   {
     href: 'https://mandaty.cz',
-    title: 'MandÃ¡ty.cz',
+    title: 'Mandáty.cz',
     bg: 'linear-gradient(90deg, #f71b4b, #101432)',
     external: true,
     logo: 'mandaty',
@@ -70,7 +70,7 @@ const TILES = [
   },
 ];
 
-/* â”€â”€ Tile â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Tile ─────────────────────────────────────────────────────────── */
 function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES[0]) {
   return (
     <a
@@ -124,10 +124,12 @@ export default function SpecialsLandingPage() {
           pointer-events: none;
           z-index: 10;
         }
+        .section-title-link { text-decoration: none; }
+        .section-title-link:hover { text-decoration: underline; }
       `}</style>
       <Paper py={20} bg={BG} radius={0} style={{ minHeight: '60vh' }}>
         <Group gap={0} align="flex-start" wrap="wrap">
-          {/* LevÃ½ sloupec â€” nadpis (stejnÃ¡ Å¡Ã­Å™ka jako u ArticlesSection) */}
+          {/* Levý sloupec — nadpis (stejná šířka jako u ArticlesSection) */}
           <Stack
             w={{ base: '100%', md: 200 }}
             mb={{ base: 'xs', md: 0 }}
@@ -135,21 +137,22 @@ export default function SpecialsLandingPage() {
             pl={{ base: 'md', md: 'md' }}
           >
             <a
-              href="/specialy"
-              style={{ textDecoration: 'none', display: 'inline-flex', maxWidth: '100%', color: WHITE }}
+              href="#"
+              className="section-title-link"
+              style={{ display: 'inline-flex', maxWidth: '100%', color: WHITE }}
             >
               <Title
                 order={2}
                 ta="left"
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '5px', color: WHITE, fontFamily: "'Roboto Slab', serif" }}
               >
-                SpeciÃ¡ly
+                Speciály
                 <Arrow size={80} color={WHITE} />
               </Title>
             </a>
           </Stack>
 
-          {/* PravÃ½ sloupec â€” dlaÅ¾dice */}
+          {/* Pravý sloupec — dlaždice */}
           <Box flex={1}>
             <Container size="lg" px="md" py={16}>
               <SimpleGrid cols={{ base: 1, xs: 2, sm: 3 }} spacing="md">

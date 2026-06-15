@@ -35,7 +35,7 @@ export default async function HomePage() {
 
       {/* <SubscribeHH /> */}
 
-      <SpecialsHero />
+      <SpecialsHero sectionLink="/specialy" />
 
       <ArticlesSection
         sectionTitle="Výběr"

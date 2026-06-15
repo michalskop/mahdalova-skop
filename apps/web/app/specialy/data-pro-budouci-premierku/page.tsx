@@ -4,12 +4,12 @@ import type { Metadata } from 'next';
 import SupportBanner from '@/components/common/SupportBanner';
 
 export const metadata: Metadata = {
-  title: 'Data pro budoucÃ­ premiÃ©rku',
-  description: 'DvanÃ¡ct datovÃ½ch kapitol o klÃ­ÄovÃ½ch vÃ½zvÃ¡ch, kterÃ© ÄekajÃ­ na novÃ© vedenÃ­ ÄŒeskÃ© republiky.',
+  title: 'Data pro budoucí premiérku',
+  description: 'Dvanáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
   alternates: { canonical: '/specialy/data-pro-budouci-premierku' },
   openGraph: {
-    title: 'Data pro budoucÃ­ premiÃ©rku',
-    description: 'DvanÃ¡ct datovÃ½ch kapitol o klÃ­ÄovÃ½ch vÃ½zvÃ¡ch, kterÃ© ÄekajÃ­ na novÃ© vedenÃ­ ÄŒeskÃ© republiky.',
+    title: 'Data pro budoucí premiérku',
+    description: 'Dvanáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
     url: '/specialy/data-pro-budouci-premierku',
     type: 'website',
   },
@@ -19,39 +19,39 @@ const CHAPTERS = [
   {
     n: '01',
     title: 'Demografie',
-    subtitle: 'Opravdu vymÃ­rÃ¡me? Co se doopravdy dÄ›je s Äeskou populacÃ­',
-    href: '/specialy/data-pro-budouci-premierku-01-demografie',
+    subtitle: 'Opravdu vymíráme? Co se doopravdy děje s českou populací',
+    href: '/special/data-pro-budouci-premierku-01-demografie',
     available: true,
     color: '#34628a',
   },
   {
     n: '02',
-    title: 'VzdÄ›lÃ¡vÃ¡nÃ­',
-    subtitle: 'ÄŒeskÃ¡ Å¡kola v datech: od pÅ™edÅ¡kolnÃ­ vÃ½chovy po vysokÃ© Å¡koly',
+    title: 'Vzdělávání',
+    subtitle: 'Česká škola v datech: od předškolní výchovy po vysoké školy',
     href: '#',
     available: false,
     color: '#4a51ab',
   },
   {
     n: '03',
-    title: 'ZdravotnictvÃ­',
-    subtitle: 'Jak si stojÃ­ ÄeskÃ¡ zdravotnÃ­ pÃ©Äe ve srovnÃ¡nÃ­ s Evropou',
+    title: 'Zdravotnictví',
+    subtitle: 'Jak si stojí česká zdravotní péče ve srovnání s Evropou',
     href: '#',
     available: false,
     color: '#0e839e',
   },
   {
     n: '04',
-    title: 'Trh prÃ¡ce',
-    subtitle: 'ZamÄ›stnanost, mzdy a budoucnost prÃ¡ce v ÄŒesku',
+    title: 'Trh práce',
+    subtitle: 'Zaměstnanost, mzdy a budoucnost práce v Česku',
     href: '#',
     available: false,
     color: '#344e7a',
   },
   {
     n: '05',
-    title: 'BydlenÃ­',
-    subtitle: 'BytovÃ¡ krize v ÄÃ­slech: dostupnost, ceny a vÃ½stavba',
+    title: 'Bydlení',
+    subtitle: 'Bytová krize v číslech: dostupnost, ceny a výstavba',
     href: '#',
     available: false,
     color: '#a03250',
@@ -59,31 +59,31 @@ const CHAPTERS = [
   {
     n: '06',
     title: 'Ekonomika',
-    subtitle: 'HDP, pÅ™Ã­jmy domÃ¡cnostÃ­ a nerovnosti v ekonomice',
+    subtitle: 'HDP, příjmy domácností a nerovnosti v ekonomice',
     href: '#',
     available: false,
     color: '#639e0a',
   },
   {
     n: '07',
-    title: 'Å½ivotnÃ­ prostÅ™edÃ­',
-    subtitle: 'Klima, emise a ÄeskÃ¡ cesta k udrÅ¾itelnosti',
+    title: 'Životní prostředí',
+    subtitle: 'Klima, emise a česká cesta k udržitelnosti',
     href: '#',
     available: false,
     color: '#0b6b4e',
   },
   {
     n: '08',
-    title: 'BezpeÄnost',
-    subtitle: 'Kriminalita, bezpeÄnostnÃ­ hrozby a vÃ½daje na obranu',
+    title: 'Bezpečnost',
+    subtitle: 'Kriminalita, bezpečnostní hrozby a výdaje na obranu',
     href: '#',
     available: false,
     color: '#272a59',
   },
   {
     n: '09',
-    title: 'SociÃ¡lnÃ­ systÃ©m',
-    subtitle: 'SociÃ¡lnÃ­ dÃ¡vky, chudoba a nerovnosti v ÄŒesku',
+    title: 'Sociální systém',
+    subtitle: 'Sociální dávky, chudoba a nerovnosti v Česku',
     href: '#',
     available: false,
     color: '#6267a3',
@@ -91,7 +91,7 @@ const CHAPTERS = [
   {
     n: '10',
     title: 'Digitalizace',
-    subtitle: 'StÃ¡t v 21. stoletÃ­: e-government a digitÃ¡lnÃ­ infrastruktura',
+    subtitle: 'Stát v 21. století: e-government a digitální infrastruktura',
     href: '#',
     available: false,
     color: '#06677d',
@@ -99,15 +99,15 @@ const CHAPTERS = [
   {
     n: '11',
     title: 'Doprava a infrastruktura',
-    subtitle: 'Silnice, Å¾eleznice a dostupnost v regionech',
+    subtitle: 'Silnice, železnice a dostupnost v regionech',
     href: '#',
     available: false,
     color: '#523361',
   },
   {
     n: '12',
-    title: 'VÄ›da a inovace',
-    subtitle: 'Investice do vÃ½zkumu a ÄeskÃ¡ inovaÄnÃ­ kapacita',
+    title: 'Věda a inovace',
+    subtitle: 'Investice do výzkumu a česká inovační kapacita',
     href: '#',
     available: false,
     color: '#343b67',
@@ -145,9 +145,9 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
         {chapter.subtitle}
       </Text>
       {chapter.available ? (
-        <Text style={{ fontSize: 12, fontWeight: 600, color: '#ffffff', marginTop: 8 }}>ÄŒÃ­st â†’</Text>
+        <Text style={{ fontSize: 12, fontWeight: 600, color: '#ffffff', marginTop: 8 }}>Číst →</Text>
       ) : (
-        <Text style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 8 }}>PÅ™ipravujeme</Text>
+        <Text style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 8 }}>Připravujeme</Text>
       )}
     </Paper>
   );
@@ -218,11 +218,11 @@ export default function DpbpLandingPage() {
             order={1}
             style={{ fontFamily: "'Roboto Slab', serif", fontWeight: 700, fontSize: 'clamp(28px, 5vw, 48px)', color: '#ffffff', lineHeight: 1.2, marginBottom: 16 }}
           >
-            Data pro budoucÃ­ premiÃ©rku
+            Data pro budoucí premiérku
           </Title>
           <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', maxWidth: 600, margin: '0 auto', lineHeight: 1.6 }}>
-            DvanÃ¡ct datovÃ½ch kapitol o klÃ­ÄovÃ½ch vÃ½zvÃ¡ch, kterÃ© ÄekajÃ­ na novÃ© vedenÃ­ ÄŒeskÃ© republiky.
-            Co Å™Ã­kajÃ­ ÄÃ­sla? A co s nimi mÅ¯Å¾e politika udÄ›lat?
+            Dvanáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.
+            Co říkají čísla? A co s nimi může politika udělat?
           </Text>
         </Container>
       </Box>
@@ -246,14 +246,14 @@ export default function DpbpLandingPage() {
         lineHeight: 1.6,
         fontFamily: 'inherit',
       }}>
-        <strong>O speciÃ¡lu Data pro budoucÃ­ premiÃ©rku.</strong>{' '}
-        DlouhodobÃ½ projekt dvojice datovÃ½ch novinÃ¡Å™Å¯ a analytikÅ¯{' '}
-        <a href="https://www.mahdalova-skop.cz" style={{ color: '#f76800' }}>MahdalovÃ¡ &amp; Å kop</a>,
-        {' '}kterÃ½ pÅ™ed volbami 2029 mapuje stav vÄ›cÃ­ v nÄ›kolika tematickÃ½ch blocÃ­ch â€“ demografie je prvnÃ­ z nich.
-        CÃ­lem pochopitelnÄ› nenÃ­ volebnÃ­ agitace, ale vÄ›cnÃ½ obraz toho, o Äem se bude rozhodovat.
-        Projekt vznikÃ¡ s grantovou podporou{' '}
-        <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#f76800' }}>NadaÄnÃ­ho fondu nezÃ¡vislÃ© Å¾urnalistiky</a>
-        {' '}a stojÃ­ na originÃ¡lnÃ­ch datovÃ½ch analÃ½zÃ¡ch, podrobnÃ© regionÃ¡lnÃ­ granularitÄ› a vlastnÃ­m zpracovÃ¡nÃ­ velkÃ©ho mnoÅ¾stvÃ­ zdrojÅ¯.
+        <strong>O speciálu Data pro budoucí premiérku.</strong>{' '}
+        Dlouhodobý projekt dvojice datových novinářů a analytiků{' '}
+        <a href="https://www.mahdalova-skop.cz" style={{ color: '#f76800' }}>Mahdalová &amp; Škop</a>,
+        {' '}který před volbami 2029 mapuje stav věcí v několika tematických blocích – demografie je první z nich.
+        Cílem pochopitelně není volební agitace, ale věcný obraz toho, o čem se bude rozhodovat.
+        Projekt vzniká s grantovou podporou{' '}
+        <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#f76800' }}>Nadačního fondu nezávislé žurnalistiky</a>
+        {' '}a stojí na originálních datových analýzách, podrobné regionální granularitě a vlastním zpracování velkého množství zdrojů.
       </Box>
       <SupportBanner />
     </Box>
