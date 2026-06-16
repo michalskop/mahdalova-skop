@@ -1,0 +1,31 @@
+{
+  "id": "01",
+  "slug": "01-energie-a-energeticka-bezpecnost",
+  "title": "Energie a energetická bezpečnost",
+  "accent": "#ffcf02",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-01",
+  "cardOrder": [
+    "SPINA",
+    "REPKA",
+    "JADRO"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/01.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-lipsko",
+      "primaryChart": "CHART_COAL_PRICE"
+    },
+    {
+      "slug": "02-krajina",
+      "primaryChart": "CHART_LAND_USE"
+    },
+    {
+      "slug": "03-mezera",
+      "primaryChart": "CHART_NUCLEAR_DELAYS"
+    }
+  ]
+}

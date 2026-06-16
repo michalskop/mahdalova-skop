@@ -1,0 +1,53 @@
+import Link from 'next/link';
+import VegaChart from './VegaChart';
+import styles from './DpbpArticleCard.module.css';
+
+interface DpbpArticleCardProps {
+  href: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  chapterTitle: string;
+  primaryChartSpec: Record<string, unknown> | null;
+  accent?: string;
+  type?: string;
+  image?: string;
+}
+
+export default function DpbpArticleCard({
+  href,
+  title,
+  excerpt,
+  author,
+  chapterTitle,
+  primaryChartSpec,
+  accent = '#de1743',
+  type = 'Analýza',
+  image,
+}: DpbpArticleCardProps) {
+  return (
+    <Link href={href} className={styles.card} style={{ borderTopColor: accent }}>
+      <div className={styles.thumb}>
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={image} alt="" className={styles.thumbImg} />
+        ) : primaryChartSpec ? (
+          <VegaChart spec={primaryChartSpec} mini />
+        ) : (
+          <div
+            className={styles.thumbPlaceholder}
+            style={{ background: `color-mix(in srgb, ${accent} 25%, #f8f6f0)` }}
+          />
+        )}
+      </div>
+      <div className={styles.body}>
+        <div className={styles.topic}>{chapterTitle} · {type}</div>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.desc}>{excerpt}</p>
+        <div className={styles.meta}>
+          <span>{author}</span>
+        </div>
+      </div>
+    </Link>
+  );
+}

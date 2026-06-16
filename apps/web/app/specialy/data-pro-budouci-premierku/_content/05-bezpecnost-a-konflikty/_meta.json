@@ -1,0 +1,31 @@
+{
+  "id": "05",
+  "slug": "05-bezpecnost-a-konflikty",
+  "title": "Bezpečnost a konflikty",
+  "accent": "#efb704",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "DRONY",
+    "TANKY",
+    "KRYTY"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/05.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-asymetrie",
+      "primaryChart": "CHART_COST_RATIO"
+    },
+    {
+      "slug": "02-fragmentace",
+      "primaryChart": "CHART_AMMO_GAP"
+    },
+    {
+      "slug": "03-odolnost",
+      "primaryChart": "CHART_CIVIL_DEFENCE"
+    }
+  ]
+}

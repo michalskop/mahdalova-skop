@@ -1,0 +1,90 @@
+{
+  "_source": "Zdroj: Data Brno, Bytový trh v Brně k roku 2025 / Deloitte Property Index 2025",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Srovnání dostupnosti bytů v Praze, Brně a Ostravě podle počtu ročních průměrných platů",
+  "title": {
+    "text": "Bytová krize není jen Praha",
+    "subtitle": "Počet ročních průměrných platů potřebných ke koupi bytu v roce 2025"
+  },
+  "width": 450,
+  "height": 260,
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "data": {
+    "values": [
+      {"city": "Ostrava", "value": 10.9, "label": "10,9", "group": "Srovnání"},
+      {"city": "Brno", "value": 14.0, "label": "14,0", "group": "Metropolitní tlak"},
+      {"city": "Praha", "value": 15.0, "label": "15,0", "group": "Praha"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 3},
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "title": null,
+          "sort": ["Ostrava", "Brno", "Praha"]
+        },
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Roční průměrné platy",
+          "scale": {"domain": [0, 16]},
+          "axis": {"tickCount": 5}
+        },
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Praha", "Metropolitní tlak", "Srovnání"],
+            "range": ["#de1743", "#f76800", "#0e839e"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "font": "Work Sans",
+        "fontSize": 10,
+        "color": "#272a59"
+      },
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "sort": ["Ostrava", "Brno", "Praha"]
+        },
+        "x": {"field": "value", "type": "quantitative"},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 14,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3",
+      "gridColor": "#e9e9dd"
+    }
+  }
+}

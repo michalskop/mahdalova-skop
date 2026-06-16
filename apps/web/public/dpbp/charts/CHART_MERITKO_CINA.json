@@ -1,0 +1,47 @@
+{
+  "_source": "Zdroj: EDGAR Database 2025 / Fakta o klimatu",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Měřítko věcí: Roční emise ČR vs. roční nárůst Číny",
+  "width": 450,
+  "height": 200,
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "data": {
+    "values": [
+      {"cat": "Celoroční emise ČR (2024)", "val": 90, "color": "#de1743"},
+      {"cat": "Roční NÁRŮST emisí Číny (2023)", "val": 600, "color": "#272a59"}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4},
+  "encoding": {
+    "y": {"field": "cat", "type": "nominal", "title": null, "sort": "x"},
+    "x": {"field": "val", "type": "quantitative", "title": "Miliony tun CO2 (Mt)"},
+    "color": {"field": "color", "type": "nominal", "scale": null}
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

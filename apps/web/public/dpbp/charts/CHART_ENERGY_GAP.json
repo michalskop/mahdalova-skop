@@ -1,0 +1,74 @@
+{
+  "_source": "Zdroj: ČEPS MAF CZ 2023 (scénář Respondentní), analýza DataTimes 2026",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Energetické vakuum 2030-2036: Odchod uhlí vs. náběh nového jádra",
+  "width": 450,
+  "height": 280,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 60},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Energetické vakuum 2030–2036",
+    "subtitle": "Odchod uhlí vs. náběh EDU II (TWh)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"year": "2024", "source": "Jádro", "val": 30},
+      {"year": "2024", "source": "Uhlí", "val": 24},
+      {"year": "2027", "source": "Jádro", "val": 30},
+      {"year": "2027", "source": "Uhlí", "val": 12},
+      {"year": "2030", "source": "Jádro", "val": 29},
+      {"year": "2030", "source": "Uhlí", "val": 2},
+      {"year": "2033", "source": "Jádro", "val": 29},
+      {"year": "2033", "source": "Uhlí", "val": 0},
+      {"year": "2036", "source": "Jádro", "val": 29},
+      {"year": "2036", "source": "Nové Jádro", "val": 9},
+      {"year": "2040", "source": "Jádro", "val": 29},
+      {"year": "2040", "source": "Nové Jádro", "val": 15}
+    ]
+  },
+  "mark": {"type": "bar", "width": 40, "tooltip": true, "stroke": "#fdfbf7", "strokeWidth": 1},
+  "encoding": {
+    "x": {
+      "field": "year", 
+      "type": "nominal", 
+      "title": null,
+      "axis": {"labelFont": "Work Sans", "labelFontSize": 10, "labelAngle": 0}
+    },
+    "y": {
+      "field": "val", 
+      "type": "quantitative", 
+      "title": "Výroba elektřiny (TWh)",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10}
+    },
+    "color": {
+      "field": "source",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Jádro", "Nové Jádro", "Uhlí"],
+        "range": ["#272a59", "#4a51ab", "#bcbcb0"]
+      },
+      "legend": {
+        "title": null, 
+        "orient": "bottom", 
+        "offset": 20,
+        "labelFont": "Roboto Slab",
+        "labelFontSize": 10,
+        "symbolType": "square",
+        "padding": 10
+      }
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

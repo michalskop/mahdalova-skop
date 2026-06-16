@@ -1,0 +1,93 @@
+{
+  "_source": "Zdroj: ČHMÚ, Intersucho, Fakta o klimatu (1961–2024)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Nůžky sucha: Stabilní srážky vs. rostoucí výpar (1961-2024)",
+  "width": 450,
+  "height": 300,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 40},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Nůžky sucha: Česko vysychá horkem",
+    "subtitle": "Stabilní srážkové úhrny vs. rostoucí výpar (mm / rok)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#272a59",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"year": 1961, "type": "Srážky (normál)", "val": 670},
+      {"year": 2024, "type": "Srážky (normál)", "val": 670},
+      {"year": 1961, "type": "Evapotranspirace (výpar)", "val": 450},
+      {"year": 2024, "type": "Evapotranspirace (výpar)", "val": 580}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 4, "point": {"size": 60, "fill": "white", "strokeWidth": 2}},
+      "encoding": {
+        "x": {
+          "field": "year", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labelFont": "Roboto Slab", "labelFontSize": 10, "labelAngle": 0, "ticks": false, "domain": false}
+        },
+        "y": {
+          "field": "val", 
+          "type": "quantitative", 
+          "title": "Srážky / Výpar (mm)",
+          "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Srážky (normál)", "Evapotranspirace (výpar)"],
+            "range": ["#272a59", "#de1743"]
+          },
+          "legend": {
+            "title": null,
+            "orient": "bottom",
+            "offset": 10,
+            "labelFont": "Roboto Slab",
+            "labelFontSize": 10,
+            "symbolType": "square",
+            "padding": 10
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

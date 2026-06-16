@@ -1,0 +1,11 @@
+{
+  "id": "VZDELANI",
+  "number": "22",
+  "unit": "%",
+  "perUnit": "",
+  "label": "Vliv rodiny na úspěch žáka",
+  "sublabel": "Vliv rodiny na úspěch žáka",
+  "context": "V Česku určuje PSČ vašeho rodiště budoucí příjem víc než IQ. Patříme k zemím s nejnižší sociální mobilitou v OECD – škola rozdíly nevyrovnává, ale konzervuje.",
+  "source": "OECD PISA 2022 / MŠMT",
+  "accent": "#efb704"
+}

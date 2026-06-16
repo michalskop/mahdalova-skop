@@ -1,0 +1,11 @@
+{
+  "id": "CINA",
+  "number": "10,8",
+  "unit": "t",
+  "perUnit": "",
+  "label": "Emise na obyvatele v Číně",
+  "sublabel": "Emise na obyvatele v Číně",
+  "context": "Historický zlom: Průměrný Číňan už vypouští více emisí než průměrný Čech (8,3 t). Alibi 'jsme moc malí na změnu' v globálním měřítku končí.",
+  "source": "EDGAR Database 2025",
+  "accent": "#de1743"
+}

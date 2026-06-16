@@ -1,0 +1,11 @@
+{
+  "id": "ZDRAVI",
+  "number": "7,6",
+  "unit": "let",
+  "perUnit": "",
+  "label": "Dožití ve zdraví po 65. roce",
+  "sublabel": "Dožití ve zdraví po 65. roce",
+  "context": "Češi po 65. narozenině prožijí v plné síle jen 7 let. Švédové téměř 14. Platíme miliardy za 'nemocnou dlouhověkost' místo prevence.",
+  "source": "OECD Health Statistics 2025",
+  "accent": "#5e66d5"
+}

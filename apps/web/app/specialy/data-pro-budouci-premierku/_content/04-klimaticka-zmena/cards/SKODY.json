@@ -1,0 +1,11 @@
+{
+  "id": "SKODY",
+  "number": "800",
+  "unit": "mld.",
+  "perUnit": "",
+  "label": "Roční ztráta produktivity",
+  "sublabel": "Roční ztráta produktivity",
+  "context": "Pokud neupravíme budovy na horko, přijde česká ekonomika do r. 2060 o 15 % HDP ročně. Každá 1 Kč do adaptace dnes ušetří 3,60 Kč zítra.",
+  "source": "Studie Šance pro budovy / Nature 2024",
+  "accent": "#de1743"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "DOKTORI",
+  "number": "53",
+  "unit": "%",
+  "perUnit": "",
+  "label": "Praktiků směřuje do důchodu",
+  "sublabel": "Praktiků směřuje do důchodu",
+  "context": "Do roku 2035 odejde do důchodu více než polovina všech praktických lékařů. Slibovat vyšší platy nepomůže, když v systému fyzicky chybí lidé.",
+  "source": "ÚZIS, Registr zdravotnických pracovníků 2024",
+  "accent": "#5e66d5"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "07",
+  "slug": "07-oligarchizace-a-korupce",
+  "title": "Oligarchizace a korupce",
+  "accent": "#ffcf02",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "DOTACNI_SKLON",
+    "MEDIA",
+    "STOPA"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/07.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-capture",
+      "primaryChart": "GRAF_07_SUBSIDY_PYRAMID"
+    },
+    {
+      "slug": "02-media",
+      "primaryChart": "GRAF_07_MEDIA_OWNERSHIP"
+    },
+    {
+      "slug": "03-transparency",
+      "primaryChart": "GRAF_07_LOBBY_FLOW"
+    }
+  ]
+}

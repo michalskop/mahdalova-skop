@@ -1,0 +1,389 @@
+{
+  "chapters": [
+    {
+      "id": "01",
+      "slug": "01-energie-a-energeticka-bezpecnost",
+      "title": "Energie a energetická bezpečnost",
+      "accent": "#ffcf02",
+      "sourceDir": "01_ENERGIE_A_BEZPECNOST",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-01",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/01.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-lipsko",
+          "sourceFile": "DIST_ARTICLE_01_LIPSKO.md",
+          "primaryChart": "CHART_COAL_PRICE",
+          "charts": ["CHART_COAL_PRICE_v1", "CHART_ENERGY_BALANCE_v1"]
+        },
+        {
+          "slug": "02-krajina",
+          "sourceFile": "DIST_ARTICLE_02_KRAJINA.md",
+          "primaryChart": "CHART_LAND_USE",
+          "charts": ["CHART_LAND_USE_v1", "CHART_LAND_MULTIPLES_v1"]
+        },
+        {
+          "slug": "03-mezera",
+          "sourceFile": "DIST_ARTICLE_03_MEZERA.md",
+          "primaryChart": "CHART_NUCLEAR_DELAYS",
+          "charts": ["CHART_NUCLEAR_DELAYS_v1", "CHART_SEASONAL_COMPARISON_v1", "CHART_ENERGY_GAP_v1"]
+        }
+      ],
+      "cardOrder": ["SPINA", "REPKA", "JADRO"]
+    },
+    {
+      "id": "03",
+      "slug": "03-zdravotnictvi-a-pece",
+      "title": "Zdravotnictví a péče",
+      "accent": "#5e66d5",
+      "sourceDir": "03_ZDRAVOTNICTVI_A_PECE",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/03.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-pyramida",
+          "sourceFile": "DIST_ARTICLE_01_PYRAMIDA.md",
+          "primaryChart": "CHART_MD_AGE",
+          "charts": ["CHART_MD_AGE_v1"]
+        },
+        {
+          "slug": "02-stari",
+          "sourceFile": "DIST_ARTICLE_02_STARI.md",
+          "primaryChart": "CHART_HEALTHY_LIFE",
+          "charts": ["CHART_HEALTHY_LIFE_v1"]
+        },
+        {
+          "slug": "03-digital",
+          "sourceFile": "DIST_ARTICLE_03_DIGITAL.md",
+          "primaryChart": "",
+          "charts": []
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "04",
+      "slug": "04-klimaticka-zmena",
+      "title": "Klimatická změna",
+      "accent": "#de1743",
+      "sourceDir": "04_KLIMATICKA_ZMENA",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/04.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-sucho",
+          "sourceFile": "DIST_ARTICLE_01_SUCHO.md",
+          "primaryChart": "CHART_STRIPES_CZ",
+          "charts": ["CHART_STRIPES_CZ_v1", "CHART_SUCHO_GAP_v1"]
+        },
+        {
+          "slug": "02-meritko",
+          "sourceFile": "DIST_ARTICLE_02_MERITKO.md",
+          "primaryChart": "CHART_EMISSIONS_PER_CAPITA",
+          "charts": ["CHART_EMISSIONS_PER_CAPITA_v1", "CHART_MERITKO_CINA_v1"]
+        },
+        {
+          "slug": "03-ekonomika",
+          "sourceFile": "DIST_ARTICLE_03_EKONOMIKA.md",
+          "primaryChart": "CHART_EKONOMIKA_ADAPTACE",
+          "charts": ["CHART_EKONOMIKA_ADAPTACE_v1"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "05",
+      "slug": "05-bezpecnost-a-konflikty",
+      "title": "Bezpečnost a konflikty",
+      "accent": "#efb704",
+      "sourceDir": "05_BEZPECNOST_A_KONFLIKTY",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/05.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-asymetrie",
+          "sourceFile": "DIST_ARTICLE_01_ASYMETRIE.md",
+          "primaryChart": "CHART_COST_RATIO",
+          "charts": ["CHART_COST_RATIO_v1"]
+        },
+        {
+          "slug": "02-fragmentace",
+          "sourceFile": "DIST_ARTICLE_02_FRAGMENTACE.md",
+          "primaryChart": "CHART_AMMO_GAP",
+          "charts": ["CHART_AMMO_GAP_v1"]
+        },
+        {
+          "slug": "03-odolnost",
+          "sourceFile": "DIST_ARTICLE_03_ODOLNOST.md",
+          "primaryChart": "CHART_CIVIL_DEFENCE",
+          "charts": ["CHART_CIVIL_DEFENCE_v1"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "06",
+      "slug": "06-ai-a-trh-prace",
+      "title": "AI a trh práce",
+      "accent": "#ffcf02",
+      "sourceDir": "06_AI_A_TRH_PRACE",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/06.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-paradox",
+          "sourceFile": "DIST_ARTICLE_01_PARADOX.md",
+          "primaryChart": "CHART_AI_PARADOX",
+          "charts": ["CHART_AI_PARADOX_v1"]
+        },
+        {
+          "slug": "02-fiskal",
+          "sourceFile": "DIST_ARTICLE_02_FISKAL.md",
+          "primaryChart": "CHART_TAX_WEDGE",
+          "charts": ["CHART_TAX_WEDGE_v1"]
+        },
+        {
+          "slug": "03-reskilling",
+          "sourceFile": "DIST_ARTICLE_03_RESKILLING.md",
+          "primaryChart": "CHART_RESKILLING_GAP",
+          "charts": ["CHART_RESKILLING_GAP_v1"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "07",
+      "slug": "07-oligarchizace-a-korupce",
+      "title": "Oligarchizace a korupce",
+      "accent": "#ffcf02",
+      "sourceDir": "07_OLIGARCHIZACE_A_KORUPCE",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/07.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-capture",
+          "sourceFile": "DIST_ARTICLE_01_CAPTURE.md",
+          "primaryChart": "GRAF_07_SUBSIDY_PYRAMID",
+          "charts": ["GRAF_07_SUBSIDY_PYRAMID_v1"]
+        },
+        {
+          "slug": "02-media",
+          "sourceFile": "DIST_ARTICLE_02_MEDIA.md",
+          "primaryChart": "GRAF_07_MEDIA_OWNERSHIP",
+          "charts": ["GRAF_07_MEDIA_OWNERSHIP_v1"]
+        },
+        {
+          "slug": "03-transparency",
+          "sourceFile": "DIST_ARTICLE_03_TRANSPARENCY.md",
+          "primaryChart": "GRAF_07_LOBBY_FLOW",
+          "charts": ["GRAF_07_LOBBY_FLOW_v1"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "08",
+      "slug": "08-nedostupnost-bydleni",
+      "title": "Nedostupnost bydlení",
+      "accent": "#de1743",
+      "sourceDir": "08_NEDOSTUPNOST_BYDLENI",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/08.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-platy",
+          "sourceFile": "DIST_ARTICLE_01_PLATY.md",
+          "primaryChart": "CHART_AFFORDABILITY_INDEX",
+          "charts": ["CHART_AFFORDABILITY_INDEX_v1"]
+        },
+        {
+          "slug": "02-deficit",
+          "sourceFile": "DIST_ARTICLE_02_DEFICIT.md",
+          "primaryChart": "CHART_PRAGUE_DEFICIT",
+          "charts": ["CHART_PRAGUE_DEFICIT_v1"]
+        },
+        {
+          "slug": "03-rent",
+          "sourceFile": "DIST_ARTICLE_03_RENT.md",
+          "primaryChart": "CHART_PERMIT_GAP",
+          "charts": ["CHART_PERMIT_GAP_v1"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "09",
+      "slug": "09-ekonomicka-nerovnost",
+      "title": "Ekonomická nerovnost",
+      "accent": "#efb704",
+      "sourceDir": "09_EKONOMICKA_NEROVNOST",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/09.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-regiony",
+          "sourceFile": "DIST_ARTICLE_01_REGIONY.md",
+          "primaryChart": "G09_01_REGION_GAP",
+          "charts": ["G09_01_REGION_GAP"]
+        },
+        {
+          "slug": "02-dluhy",
+          "sourceFile": "DIST_ARTICLE_02_DLUHY.md",
+          "primaryChart": "G09_02_EXECUTION_TRAP",
+          "charts": ["G09_02_EXECUTION_TRAP"]
+        },
+        {
+          "slug": "03-mobilita",
+          "sourceFile": "DIST_ARTICLE_03_MOBILITA.md",
+          "primaryChart": "G09_03_PISA_STATUS",
+          "charts": ["G09_03_PISA_STATUS"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "10",
+      "slug": "10-digitalizace-a-inovace",
+      "title": "Digitalizace a inovace",
+      "accent": "#5e66d5",
+      "sourceDir": "10_DIGITALIZACE_A_INOVACE",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/10.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-egov",
+          "sourceFile": "DIST_ARTICLE_01_EGOV.md",
+          "primaryChart": "DIGI_EGOV_ADOPTION_01",
+          "charts": ["DIGI_EGOV_ADOPTION_01_v1"]
+        },
+        {
+          "slug": "02-inovace",
+          "sourceFile": "DIST_ARTICLE_02_INOVACE.md",
+          "primaryChart": "DIGI_INOVACE_RANKING_02",
+          "charts": ["DIGI_INOVACE_RANKING_02_v1"]
+        },
+        {
+          "slug": "03-tech-dluh",
+          "sourceFile": "DIST_ARTICLE_03_TECH_DLUH.md",
+          "primaryChart": "DIGI_CYBER_INCIDENTS_03",
+          "charts": ["DIGI_CYBER_INCIDENTS_03_v1"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "11",
+      "slug": "11-uroven-vzdelavani",
+      "title": "Úroveň vzdělávání",
+      "accent": "#5e66d5",
+      "sourceDir": "11_UROVEN_VZDELAVANI",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/11.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-pisa",
+          "sourceFile": "DIST_ARTICLE_01_PISA.md",
+          "primaryChart": "GRAF_01_PISA_TRENDS",
+          "charts": ["GRAF_01_PISA_TRENDS"]
+        },
+        {
+          "slug": "02-nerovnost",
+          "sourceFile": "DIST_ARTICLE_02_NEROVNOST.md",
+          "primaryChart": "GRAF_02_EQUITY_GAP",
+          "charts": ["GRAF_02_EQUITY_GAP"]
+        },
+        {
+          "slug": "03-zrizovatele",
+          "sourceFile": "DIST_ARTICLE_03_ZRIZOVATELE.md",
+          "primaryChart": "GRAF_03_FRAGMENTATION",
+          "charts": ["GRAF_03_FRAGMENTATION"]
+        }
+      ],
+      "cardOrder": []
+    },
+    {
+      "id": "12",
+      "slug": "12-medialni-manipulace",
+      "title": "Informační manipulace",
+      "accent": "#de1743",
+      "sourceDir": "12_MEDIALNI_MANIPULACE",
+      "author": "Kateřina Mahdalová & Michal Škop",
+      "date": "2026-06-12",
+      "onePager": {
+        "slug": "one-pager",
+        "sourceFile": "PM_ONE_PAGER_v2.md",
+        "logo": "/dpbp/chapters/12.svg"
+      },
+      "articles": [
+        {
+          "slug": "01-algoritmy",
+          "sourceFile": "DIST_ARTICLE_01_ALGORITMY.md",
+          "primaryChart": "GRAF_12_01_ALGO_REACH",
+          "charts": ["GRAF_12_01_ALGO_REACH"]
+        },
+        {
+          "slug": "02-dezinfo",
+          "sourceFile": "DIST_ARTICLE_02_DEZINFO.md",
+          "primaryChart": "GRAF_12_02_FUNDING",
+          "charts": ["GRAF_12_02_FUNDING"]
+        },
+        {
+          "slug": "03-odolnost",
+          "sourceFile": "DIST_ARTICLE_03_ODOLNOST.md",
+          "primaryChart": "GRAF_12_03_RESILIENCE",
+          "charts": ["GRAF_12_03_RESILIENCE"]
+        }
+      ],
+      "cardOrder": []
+    }
+  ]
+}

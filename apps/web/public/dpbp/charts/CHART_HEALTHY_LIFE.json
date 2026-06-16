@@ -1,0 +1,48 @@
+{
+  "_source": "Zdroj: OECD Health Statistics 2025",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Měřítko věcí: Naděje dožití ve zdraví po 65. roce (Healthy Life Years)",
+  "width": 450,
+  "height": 250,
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "data": {
+    "values": [
+      {"country": "Švédsko", "val": 13.9, "color": "#27ae60"},
+      {"country": "Průměr EU", "val": 9.5, "color": "#bcbcb0"},
+      {"country": "Česká republika", "val": 7.6, "color": "#de1743"}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4},
+  "encoding": {
+    "y": {"field": "country", "type": "nominal", "title": null, "sort": "-x"},
+    "x": {"field": "val", "type": "quantitative", "title": "Počet let prožitých ve zdraví po 65. roce"},
+    "color": {"field": "color", "type": "nominal", "scale": null}
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

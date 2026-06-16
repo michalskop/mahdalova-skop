@@ -7,10 +7,11 @@
     "prebuild": "node scripts/copyImages.js && node scripts/generateSitemap.js && node scripts/generateLlmsTxt.js",
     "build": "next build && node scripts/buildSearchIndex.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:dpbp": "node scripts/sync-dpbp.mjs",
+    "setup:dpbp": "node scripts/setup-dpbp.mjs"
   },
   "dependencies": {
-    "@repo/ui": "*",
     "@emotion/react": "^11.13.3",
     "@emotion/server": "^11.x.x",
     "@mantine/core": "^7.13.4",
@@ -18,6 +19,7 @@
     "@mantinex/mantine-logo": "^1.0.1",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
+    "@repo/ui": "*",
     "@tabler/icons-react": "^3.21.0",
     "gray-matter": "^4.0.3",
     "next": "^14.2.22",
@@ -37,7 +39,8 @@
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
     "remark-rehype": "^11.1.1",
-    "sass": "^1.80.5"
+    "sass": "^1.80.5",
+    "vega-embed": "^7.1.0"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.13",

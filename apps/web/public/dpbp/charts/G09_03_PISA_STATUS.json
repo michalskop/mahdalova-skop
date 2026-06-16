@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Vliv zázemí na výsledky PISA (ČR vs. OECD)",
+    "fontSize": 13,
+    "font": "Roboto Slab",
+    "anchor": "start"
+  },
+  "width": 450,
+  "padding": 5,
+  "data": {
+    "values": [
+      {"status": "Nejnižší 25%", "zeme": "Česká republika", "skore": 440},
+      {"status": "Nejvyšší 25%", "zeme": "Česká republika", "skore": 556},
+      {"status": "Nejnižší 25%", "zeme": "OECD průměr", "skore": 450},
+      {"status": "Nejvyšší 25%", "zeme": "OECD průměr", "skore": 543},
+      {"status": "Nejnižší 25%", "zeme": "Estonsko", "skore": 485},
+      {"status": "Nejvyšší 25%", "zeme": "Estonsko", "skore": 545}
+    ]
+  },
+  "config": {
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10
+    },
+    "legend": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10
+    }
+  },
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {
+      "field": "status",
+      "type": "nominal",
+      "title": "Socioekonomický status (ESCS index)",
+      "sort": ["Nejnižší 25%", "Nejvyšší 25%"]
+    },
+    "y": {
+      "field": "skore",
+      "type": "quantitative",
+      "title": "Skóre v matematice (PISA 2022)",
+      "scale": {"domain": [400, 600]}
+    },
+    "color": {
+      "field": "zeme",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Česká republika", "OECD průměr", "Estonsko"],
+        "range": ["#de1743", "#6267a3", "#0e839e"]
+      },
+      "legend": {"orient": "bottom", "title": null}
+    }
+  },
+  "_source": "OECD PISA 2022 results, PAQ Research – Mapa vzdělávání, MŠMT – Strategie 2030+"
+}

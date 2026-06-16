@@ -1,0 +1,132 @@
+{
+  "_source": "Zdroj: HZS ČR / ČT24, stálé úkryty v ČR pojmou přibližně 3 % obyvatel; research audit kapitoly 05.",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Civilní ochrana: 100 ikon obyvatel, 3 s místem ve stálém úkrytu",
+  "width": 450,
+  "height": 280,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 25},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Civilní ochrana: 3 ze 100 mají místo v krytu",
+    "subtitle": "Kapacita stálých úkrytů v ČR jako podíl populace",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#272a59",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "sequence": {"start": 0, "stop": 100, "step": 1}
+  },
+  "transform": [
+    {"calculate": "datum.data % 10", "as": "col"},
+    {"calculate": "floor(datum.data / 10)", "as": "row"},
+    {"calculate": "floor(datum.data / 10) - 0.18", "as": "head_row"},
+    {"calculate": "floor(datum.data / 10) + 0.12", "as": "body_row"},
+    {"calculate": "datum.data < 3 ? 'místo ve stálém krytu' : 'bez zajištěného stálého krytu'", "as": "status"},
+    {"calculate": "datum.data < 3 ? 1 : 0", "as": "protected"}
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "shape": "square",
+        "filled": true,
+        "size": 58
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {"domain": [-0.5, 9.5]}
+        },
+        "y": {
+          "field": "body_row",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {"domain": [-0.5, 10.8], "reverse": true}
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": ["místo ve stálém krytu", "bez zajištěného stálého krytu"],
+            "range": ["#de1743", "#c9c7bc"]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "field": "protected",
+          "type": "quantitative",
+          "scale": {"domain": [0, 1], "range": [0.55, 1]},
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "filled": true,
+        "size": 46
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {"domain": [-0.5, 9.5]}
+        },
+        "y": {
+          "field": "head_row",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {"domain": [-0.5, 10.8], "reverse": true}
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": ["místo ve stálém krytu", "bez zajištěného stálého krytu"],
+            "range": ["#de1743", "#c9c7bc"]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "field": "protected",
+          "type": "quantitative",
+          "scale": {"domain": [0, 1], "range": [0.55, 1]},
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 0, "y": 10.25, "label": "3 % v krytu", "color": "#de1743"},
+          {"x": 9, "y": 10.25, "label": "97 % bez stálého krytu", "color": "#6267a3"}
+        ]
+      },
+      "mark": {"type": "text", "font": "Roboto Slab", "fontSize": 11, "fontWeight": "bold", "baseline": "top"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "scale": {"domain": [0, 9]}, "axis": null},
+        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [-0.5, 10.8], "reverse": true}, "axis": null},
+        "text": {"field": "label"},
+        "color": {"field": "color", "type": "nominal", "scale": null},
+        "align": {
+          "condition": {"test": "datum.x > 4", "value": "right"},
+          "value": "left"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

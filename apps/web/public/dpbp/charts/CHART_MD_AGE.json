@@ -1,0 +1,95 @@
+{
+  "_source": "Zdroj: ÚZIS, Registr zdravotnických pracovníků 2024",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Věková struktura lékařů v ČR: Podíl lékařů v důchodovém věku (65+)",
+  "width": 450,
+  "height": 300,
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "data": {
+    "values": [
+      {"spec": "Dětští praktičtí lékaři", "val": 34.6, "label": "34,6 %", "cat": "Primární péče"},
+      {"spec": "Dětští psychiatři", "val": 33.3, "label": "33,3 %", "cat": "Specialisté"},
+      {"spec": "Praktičtí lékaři", "val": 30.2, "label": "30,2 %", "cat": "Primární péče"},
+      {"spec": "Ostatní lékaři", "val": 15.0, "label": "15,0 %", "cat": "Průměr"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4},
+      "encoding": {
+        "y": {
+          "field": "spec",
+          "type": "nominal",
+          "title": null,
+          "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"]
+        },
+        "x": {
+          "field": "val",
+          "type": "quantitative",
+          "title": "Podíl lékařů ve věku 65+ (%)",
+          "scale": {"domain": [0, 100]},
+          "axis": {"values": [0, 25, 50, 75, 100]}
+        },
+        "color": {
+          "field": "cat", 
+          "type": "nominal", 
+          "scale": {"domain": ["Primární péče", "Specialisté", "Průměr"], "range": ["#de1743", "#272a59", "#bcbcb0"]},
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "font": "Work Sans",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#1a1a1a"
+      },
+      "encoding": {
+        "y": {
+          "field": "spec",
+          "type": "nominal",
+          "title": null,
+          "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"]
+        },
+        "x": {
+          "field": "val",
+          "type": "quantitative",
+          "scale": {"domain": [0, 100]}
+        },
+        "text": {"field": "label"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

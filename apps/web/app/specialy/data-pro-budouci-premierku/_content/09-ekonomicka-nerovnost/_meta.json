@@ -1,0 +1,31 @@
+{
+  "id": "09",
+  "slug": "09-ekonomicka-nerovnost",
+  "title": "Ekonomická nerovnost",
+  "accent": "#efb704",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "MZDY",
+    "EXEKUCE",
+    "VZDELANI"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/09.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-regiony",
+      "primaryChart": "G09_01_REGION_GAP"
+    },
+    {
+      "slug": "02-dluhy",
+      "primaryChart": "G09_02_EXECUTION_TRAP"
+    },
+    {
+      "slug": "03-mobilita",
+      "primaryChart": "G09_03_PISA_STATUS"
+    }
+  ]
+}

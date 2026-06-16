@@ -1,0 +1,92 @@
+{
+  "_source": "Zdroj: ERÚ, Měsíční zprávy o provozu ES ČR (Leden a Červenec 2024)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Sezónní propast: Výroba elektřiny v ČR (Leden vs. Červenec 2024)",
+  "width": 200,
+  "height": 200,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 60},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Dva světy jedné soustavy",
+    "subtitle": "Srovnání výroby v TWh brutto: Leden vs. Červenec 2024",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"period": "ZIMA (Leden)", "source": "Jádro", "value": 2.90},
+      {"period": "ZIMA (Leden)", "source": "Uhlí", "value": 3.19},
+      {"period": "ZIMA (Leden)", "source": "Slunce (FVE)", "value": 0.05},
+      {"period": "ZIMA (Leden)", "source": "Ostatní (Plyn, Vítr, Bio)", "value": 1.29},
+      
+      {"period": "LÉTO (Červenec)", "source": "Jádro", "value": 2.58},
+      {"period": "LÉTO (Červenec)", "source": "Uhlí", "value": 2.01},
+      {"period": "LÉTO (Červenec)", "source": "Slunce (FVE)", "value": 0.55},
+      {"period": "LÉTO (Červenec)", "source": "Ostatní (Plyn, Vítr, Bio)", "value": 0.54}
+    ]
+  },
+  "facet": {
+    "column": {
+      "field": "period", 
+      "type": "nominal", 
+      "title": null,
+      "sort": ["ZIMA (Leden)", "LÉTO (Červenec)"],
+      "header": {"labelFont": "Work Sans", "labelFontSize": 10, "labelPadding": 10}
+    }
+  },
+  "spec": {
+    "mark": {"type": "bar", "tooltip": true, "stroke": "#fdfbf7", "strokeWidth": 1},
+    "encoding": {
+      "y": {
+        "field": "source", 
+        "type": "nominal", 
+        "title": null,
+        "sort": ["Jádro", "Uhlí", "Slunce (FVE)", "Ostatní (Plyn, Vítr, Bio)"],
+        "axis": {"labelFont": "Work Sans", "labelFontSize": 10}
+      },
+      "x": {
+        "field": "value", 
+        "type": "quantitative", 
+        "title": "Výroba (TWh)",
+        "axis": {
+          "titleFont": "Work Sans", 
+          "titleFontSize": 10,
+          "gridColor": "#e8e8dc", 
+          "domain": false,
+          "labelFont": "Work Sans",
+          "labelFontSize": 10
+        },
+        "scale": {"domain": [0, 3.5]}
+      },
+      "color": {
+        "field": "source",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Jádro", "Uhlí", "Slunce (FVE)", "Ostatní (Plyn, Vítr, Bio)"],
+          "range": ["#272a59", "#bcbcb0", "#ffcf02", "#6267a3"]
+        },
+        "legend": {
+          "title": null,
+          "orient": "bottom",
+          "offset": 20,
+          "labelFont": "Roboto Slab",
+          "labelFontSize": 10,
+          "symbolType": "square",
+          "padding": 10,
+          "columns": 2
+        }
+      }
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

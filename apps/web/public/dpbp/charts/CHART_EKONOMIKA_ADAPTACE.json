@@ -1,0 +1,76 @@
+{
+  "_source": "Zdroj: Nature (2024), Studie Zámečník (Šance pro budovy), MŽP (Strategie adaptace)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ekonomika nečinnosti: Náklady na adaptaci vs. klimatické škody (projekce ročního dopadu)",
+  "width": 450,
+  "height": 180,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 20},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Cena nečinnosti: 1 Kč dnes šetří 3,60 Kč zítra",
+    "subtitle": "Srovnání ročních nákladů (miliardy Kč)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#272a59",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"cat": "Škody nečinnosti (Odhad HDP)", "val": 750, "color": "#de1743"},
+      {"cat": "Investice do adaptace krajiny", "val": 139, "color": "#27ae60"}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4, "size": 35},
+  "encoding": {
+    "y": {
+      "field": "cat", 
+      "type": "nominal", 
+      "title": null, 
+      "sort": "-x",
+      "axis": {"labelFont": "Roboto Slab", "labelFontSize": 10, "ticks": false, "domain": false}
+    },
+    "x": {
+      "field": "val", 
+      "type": "quantitative", 
+      "title": "Miliardy Kč / rok",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
+    },
+    "color": {
+      "field": "color", 
+      "type": "nominal", 
+      "scale": null
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

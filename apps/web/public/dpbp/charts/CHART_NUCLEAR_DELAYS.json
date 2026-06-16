@@ -1,0 +1,73 @@
+{
+  "_source": "Zdroj: WNA, IEA, výroční zprávy ČEZ a KHNP (stav k 2025)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Jaderný optimismus vs. Evropská realita: Zpoždění staveb",
+  "width": 450,
+  "height": 280,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 60},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Jádro: Sliby vs. realita výstavby",
+    "subtitle": "Délka výstavby v letech: Původní plán + zpoždění",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"project": "Olkiluoto 3 (Finsko)", "type": "Původní plán", "years": 4, "order": 1},
+      {"project": "Olkiluoto 3 (Finsko)", "type": "Zpoždění", "years": 14, "order": 2},
+      {"project": "Flamanville 3 (Francie)", "type": "Původní plán", "years": 5, "order": 1},
+      {"project": "Flamanville 3 (Francie)", "type": "Zpoždění", "years": 14, "order": 2},
+      {"project": "Vogtle 3 (USA)", "type": "Původní plán", "years": 7, "order": 1},
+      {"project": "Vogtle 3 (USA)", "type": "Zpoždění", "years": 7, "order": 2},
+      {"project": "Mochovce 3 (Slovensko)", "type": "Původní plán", "years": 4, "order": 1},
+      {"project": "Mochovce 3 (Slovensko)", "type": "Zpoždění", "years": 11, "order": 2},
+      {"project": "Dukovany II (CZ - Slib)", "type": "Původní plán", "years": 7, "order": 1}
+    ]
+  },
+  "mark": {"type": "bar", "size": 25, "cornerRadiusEnd": 4, "tooltip": true, "stroke": "#fdfbf7", "strokeWidth": 1},
+  "encoding": {
+    "y": {
+      "field": "project", 
+      "type": "nominal", 
+      "title": null, 
+      "sort": {"field": "years", "op": "sum", "order": "descending"},
+      "axis": {"labelFont": "Work Sans", "labelFontSize": 10, "ticks": false, "domain": false}
+    },
+    "x": {
+      "field": "years", 
+      "type": "quantitative", 
+      "title": "Celková délka výstavby (roky)",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Původní plán", "Zpoždění"],
+        "range": ["#272a59", "#de1743"]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "offset": 20,
+        "labelFont": "Roboto Slab",
+        "labelFontSize": 10,
+        "symbolType": "square",
+        "padding": 10
+      }
+    },
+    "order": {"field": "order", "type": "quantitative"}
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

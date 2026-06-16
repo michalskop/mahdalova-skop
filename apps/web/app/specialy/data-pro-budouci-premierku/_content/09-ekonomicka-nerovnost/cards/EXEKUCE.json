@@ -1,0 +1,11 @@
+{
+  "id": "EXEKUCE",
+  "number": "600 000",
+  "unit": "",
+  "perUnit": "",
+  "label": "Lidí v pasti exekucí",
+  "sublabel": "Lidí v pasti exekucí",
+  "context": "Populace o velikosti Brna a Plzně dohromady je vyřazena z legálního trhu práce. Současný systém srážek trestá legální práci efektivním zdaněním přes 80 %.",
+  "source": "Mapa exekucí / IPŘP 2024",
+  "accent": "#efb704"
+}

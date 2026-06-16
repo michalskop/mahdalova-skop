@@ -1,0 +1,75 @@
+{
+  "_source": "Zdroj: ERÚ, EU ETS Market data (Odhad 2025)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Složení nákladové ceny elektřiny z hnědého uhlí v ČR (2025)",
+  "width": 450,
+  "height": 80,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 40},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Uhelná kWh: Daň za špínu dominuje",
+    "subtitle": "Odhad nákladů 2025 (Kč/kWh bez DPH)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"label": "Palivo a provoz", "value": 0.65, "p": 3},
+      {"label": "Regulované sítě", "value": 1.95, "p": 2},
+      {"label": "Emisní povolenka", "value": 2.20, "p": 1}
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "stroke": "#fdfbf7",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Kč / kWh",
+      "axis": {
+        "titleFont": "Work Sans",
+        "titleFontSize": 10,
+        "labelFont": "Work Sans",
+        "labelFontSize": 10,
+        "grid": true,
+        "gridColor": "#e8e8dc",
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "color": {
+      "field": "label",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Emisní povolenka", "Regulované sítě", "Palivo a provoz"],
+        "range": ["#de1743", "#6267a3", "#272a59"]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "offset": 10,
+        "labelFont": "Roboto Slab",
+        "labelFontSize": 10,
+        "symbolType": "square",
+        "padding": 10,
+        "columns": 3
+      }
+    },
+    "order": {"field": "p", "type": "quantitative"}
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

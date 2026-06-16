@@ -1,0 +1,47 @@
+{
+  "_source": "Zdroje: [OECD Taxing Wages 2026: Czechia – tax wedge, single worker 2025](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/taxing-wages-2026-country-notes_491a0e97/czechia_43e03785/e5066e64-en.pdf), [zákon č. 586/1992 Sb., o daních z příjmů, § 21 odst. 1](https://www.zakonyprolidi.cz/cs/1992-586#p21)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Fiskální hrozba: daňový klín práce vs. základní sazba daně z příjmů právnických osob v ČR",
+  "width": 450,
+  "height": 250,
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "data": {
+    "values": [
+      {"cat": "Daňový klín práce (OECD, 2025)", "val": 41.2, "color": "#de1743"},
+      {"cat": "Základní sazba daně z příjmů právnických osob", "val": 21.0, "color": "#272a59"}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4},
+  "encoding": {
+    "y": {"field": "cat", "type": "nominal", "title": null, "sort": "-x"},
+    "x": {"field": "val", "type": "quantitative", "title": "Hodnota (%)"},
+    "color": {"field": "color", "type": "nominal", "scale": null}
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "_source": "Zdroj: IPR Praha / Mahdalová & Škop (vlastní výpočty, Seznam Zprávy 2024) / SocialHousing.wien",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Praha, Ostrava a Vídeň: orientační velikost stabilizační vrstvy bydlení",
+  "title": {
+    "text": "Vídeň má stabilizační vrstvu, česká města jen zlomek",
+    "subtitle": "Praha: podíl obecního bytového fondu; Ostrava: podíl města v bytovkách (4+ bytů); Vídeň: podíl obyvatel v dotovaném bydlení. Nejde o plně harmonizovanou statistiku."
+  },
+  "width": 450,
+  "height": 260,
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "data": {
+    "values": [
+      {
+        "city": "Praha",
+        "metric": "Obecní bytový fond",
+        "value": 4.1,
+        "label": "4,1 %",
+        "note": "podíl bytového fondu"
+      },
+      {
+        "city": "Ostrava",
+        "metric": "Podíl města v bytovkách",
+        "value": 11,
+        "label": "11 %",
+        "note": "podíl města v bytovkách (4+ bytů)"
+      },
+      {
+        "city": "Vídeň",
+        "metric": "Dotované bydlení",
+        "value": 50,
+        "label": "cca 50 %",
+        "note": "přibližný podíl obyvatel"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 3},
+      "encoding": {
+        "y": {"field": "city", "type": "nominal", "title": null, "sort": ["Praha", "Ostrava", "Vídeň"]},
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Podíl (%)",
+          "scale": {"domain": [0, 55]},
+          "axis": {"tickCount": 6}
+        },
+        "color": {
+          "field": "city",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Praha", "Ostrava", "Vídeň"],
+            "range": ["#de1743", "#f76800", "#0e839e"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "font": "Work Sans",
+        "fontSize": 10,
+        "color": "#272a59"
+      },
+      "encoding": {
+        "y": {"field": "city", "type": "nominal", "sort": ["Praha", "Ostrava", "Vídeň"]},
+        "x": {"field": "value", "type": "quantitative"},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 14,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3",
+      "gridColor": "#e9e9dd"
+    }
+  }
+}

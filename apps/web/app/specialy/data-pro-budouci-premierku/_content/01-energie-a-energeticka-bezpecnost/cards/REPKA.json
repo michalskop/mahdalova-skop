@@ -1,0 +1,11 @@
+{
+  "id": "REPKA",
+  "number": "8,5",
+  "unit": "×",
+  "perUnit": "",
+  "label": "Plocha řepky vs. solárů",
+  "sublabel": "Plocha řepky vs. solárů",
+  "context": "Plocha, na které v ČR pěstujeme řepku, je 8,5× větší než celková rozloha solárních panelů nutná k úplnému nahrazení všech uhelných elektráren.",
+  "source": "ČSÚ, osevní plochy 2024 / Fakta o klimatu",
+  "accent": "#ffcf02"
+}

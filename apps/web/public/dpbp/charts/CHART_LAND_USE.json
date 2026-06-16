@@ -1,0 +1,56 @@
+{
+  "_source": "Zdroj: ČÚZK (2024), ŘSD (Délka vozovek), CzechInvest (Brownfieldy)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Srovnání plochy v ČR: Doprava vs. Energetika",
+  "width": 450,
+  "height": 200,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 20},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Bitva o krajinu: Křemík vs. Asfalt",
+    "subtitle": "Srovnání plochy v km² (data ČÚZK 2024 vs. odhad pro FVE)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"cat": "Dopravní sítě celkem", "val": 2950, "color": "#bcbcb0"},
+      {"cat": "Silnice a dálnice (Vozovka)", "val": 1270, "color": "#272a59"},
+      {"cat": "Parkoviště a manipulace", "val": 705, "color": "#6267a3"},
+      {"cat": "FVE pro náhradu uhlí", "val": 400, "color": "#de1743"},
+      {"cat": "Brownfieldy v ČR", "val": 380, "color": "#ffcf02"}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4},
+  "encoding": {
+    "y": {
+      "field": "cat", 
+      "type": "nominal", 
+      "title": null, 
+      "sort": "-x",
+      "axis": {"labelFont": "Work Sans", "labelFontSize": 10, "ticks": false, "domain": false}
+    },
+    "x": {
+      "field": "val", 
+      "type": "quantitative", 
+      "title": "Plocha v km²",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
+    },
+    "color": {
+      "field": "color", 
+      "type": "nominal", 
+      "scale": null
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

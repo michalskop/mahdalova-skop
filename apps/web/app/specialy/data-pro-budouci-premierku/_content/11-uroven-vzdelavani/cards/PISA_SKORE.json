@@ -1,0 +1,11 @@
+{
+  "id": "PISA_SKORE",
+  "number": "-29",
+  "unit": "bodů",
+  "perUnit": "",
+  "label": "Pokles matematiky od roku 2003",
+  "sublabel": "Pokles matematiky od roku 2003",
+  "context": "Česko je v PISA stále nad průměrem OECD, ale matematická gramotnost od roku 2003 klesla z 516 na 487 bodů. Není to kolaps, ale dlouhý sestup schopnosti používat matematiku v praxi.",
+  "source": "OECD PISA 2022 / MŠMT 2025",
+  "accent": "#5e66d5"
+}

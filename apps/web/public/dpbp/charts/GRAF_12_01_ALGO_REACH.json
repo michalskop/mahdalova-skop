@@ -1,0 +1,62 @@
+{
+  "_source": "Zdroj: Online Risk Labs 2025, analýza DataTimes 2026",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Asymetrie pozornosti: Dosah dezinformačních sítí na TikToku vs. mainstreamoví politici",
+  "width": 450,
+  "height": 280,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 60},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Asymetrie pozornosti: TikTok vs. Politici",
+    "subtitle": "Týdenní dosah v milionech zhlédnutí (ČR 2025)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"entity": "TikTok Dezinfo síť (286 účtů)", "reach": 7, "type": "Dezinformace"},
+      {"entity": "Top 3 Mainstream politici", "reach": 1.5, "type": "Demokratický dialog"}
+    ]
+  },
+  "mark": {"type": "bar", "cornerRadiusEnd": 4, "tooltip": true},
+  "encoding": {
+    "y": {
+      "field": "entity",
+      "type": "nominal",
+      "title": null,
+      "axis": {"labelFont": "Work Sans", "labelFontSize": 10}
+    },
+    "x": {
+      "field": "reach",
+      "type": "quantitative",
+      "title": "Miliony zhlédnutí týdně",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10}
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Dezinformace", "Demokratický dialog"],
+        "range": ["#e63946", "#457b9d"]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "offset": 20,
+        "labelFont": "Work Sans",
+        "labelFontSize": 10
+      }
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "12",
+  "slug": "12-medialni-manipulace",
+  "title": "Informační manipulace",
+  "accent": "#de1743",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "DUVERA",
+    "DOSAH",
+    "DUVERA_MEDIA"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/12.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-algoritmy",
+      "primaryChart": "GRAF_12_01_ALGO_REACH"
+    },
+    {
+      "slug": "02-dezinfo",
+      "primaryChart": "GRAF_12_02_FUNDING"
+    },
+    {
+      "slug": "03-odolnost",
+      "primaryChart": "GRAF_12_03_RESILIENCE"
+    }
+  ]
+}

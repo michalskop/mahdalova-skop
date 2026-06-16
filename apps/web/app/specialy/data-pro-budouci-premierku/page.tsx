@@ -411,18 +411,18 @@ const G12 = <>
 </>;
 
 const CHAPTERS = [
-  {n:'01',title:'Energie a bezpečnost',href:'#',available:false,dots:D01,accent:'#ffcf02',customSvg:G01},
+  {n:'01',title:'Energie a bezpečnost',href:'/specialy/data-pro-budouci-premierku/01-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#ffcf02',customSvg:G01},
   {n:'02',title:'Demografie',href:'/specialy/data-pro-budouci-premierku-01-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
-  {n:'03',title:'Zdravotnictví a péče',href:'#',available:false,dots:D03,accent:'#5e66d5',customSvg:G03},
-  {n:'04',title:'Klimatická změna',href:'#',available:false,dots:D04,accent:'#de1743',customSvg:G04},
-  {n:'05',title:'Bezpečnost a konflikty',href:'#',available:false,dots:D05,accent:'#efb704',customSvg:G08},
-  {n:'06',title:'AI a trh práce',href:'#',available:false,dots:D06,accent:'#ffcf02',customSvg:G06},
-  {n:'07',title:'Oligarchizace a korupce',href:'#',available:false,dots:D07,accent:'#ffcf02',customSvg:G07},
-  {n:'08',title:'Nedostupnost bydlení',href:'#',available:false,dots:D05,accent:'#de1743',customSvg:G05},
-  {n:'09',title:'Ekonomická nerovnost',href:'#',available:false,dots:D09,accent:'#efb704',customSvg:G09},
-  {n:'10',title:'Digitalizace a inovace',href:'#',available:false,dots:D10,accent:'#5e66d5',customSvg:G10},
-  {n:'11',title:'Úroveň vzdělávání',href:'#',available:false,dots:D02,accent:'#5e66d5',customSvg:G02},
-  {n:'12',title:'Informační manipulace',href:'#',available:false,dots:D12,accent:'#de1743',customSvg:G12},
+  {n:'03',title:'Zdravotnictví a péče',href:'/specialy/data-pro-budouci-premierku/03-zdravotnictvi-a-pece',available:true,dots:D03,accent:'#5e66d5',customSvg:G03},
+  {n:'04',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/04-klimaticka-zmena',available:true,dots:D04,accent:'#de1743',customSvg:G04},
+  {n:'05',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/05-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#efb704',customSvg:G08},
+  {n:'06',title:'AI a trh práce',href:'/specialy/data-pro-budouci-premierku/06-ai-a-trh-prace',available:true,dots:D06,accent:'#ffcf02',customSvg:G06},
+  {n:'07',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/07-oligarchizace-a-korupce',available:true,dots:D07,accent:'#ffcf02',customSvg:G07},
+  {n:'08',title:'Nedostupnost bydlení',href:'/specialy/data-pro-budouci-premierku/08-nedostupnost-bydleni',available:true,dots:D05,accent:'#de1743',customSvg:G05},
+  {n:'09',title:'Ekonomická nerovnost',href:'/specialy/data-pro-budouci-premierku/09-ekonomicka-nerovnost',available:true,dots:D09,accent:'#efb704',customSvg:G09},
+  {n:'10',title:'Digitalizace a inovace',href:'/specialy/data-pro-budouci-premierku/10-digitalizace-a-inovace',available:true,dots:D10,accent:'#5e66d5',customSvg:G10},
+  {n:'11',title:'Úroveň vzdělávání',href:'/specialy/data-pro-budouci-premierku/11-uroven-vzdelavani',available:true,dots:D02,accent:'#5e66d5',customSvg:G02},
+  {n:'12',title:'Informační manipulace',href:'/specialy/data-pro-budouci-premierku/12-medialni-manipulace',available:true,dots:D12,accent:'#de1743',customSvg:G12},
 ];
 
 const DARK = '#101432';

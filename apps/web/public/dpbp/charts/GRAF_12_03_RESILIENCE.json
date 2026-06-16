@@ -1,0 +1,67 @@
+{
+  "_source": "Zdroj: Reuters Institute Digital News Report 2025, Media Literacy Index 2024, EurOMo 2025, The Guardian 2026; Maďarsko zachycuje stav mediálního capture před změnou vlády v květnu 2026.",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Index odolnosti: Korelace mezi mediální gramotností a důvěrou v média",
+  "width": 450,
+  "height": 280,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 60},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Odolnost: prevence vs. oprava systému",
+    "subtitle": "Důvěra v média (%) a index mediální gramotnosti (0–100)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"Země": "Finsko", "Metrika": "Důvěra v média", "Hodnota": 67},
+      {"Země": "Finsko", "Metrika": "Mediální gramotnost", "Hodnota": 95},
+      {"Země": "Česko", "Metrika": "Důvěra v média", "Hodnota": 33},
+      {"Země": "Česko", "Metrika": "Mediální gramotnost", "Hodnota": 48},
+      {"Země": "Maďarsko", "Metrika": "Důvěra v média", "Hodnota": 18},
+      {"Země": "Maďarsko", "Metrika": "Mediální gramotnost", "Hodnota": 25}
+    ]
+  },
+  "mark": {"type": "bar", "cornerRadiusEnd": 2, "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "Země",
+      "type": "nominal",
+      "title": null,
+      "axis": {"labelFont": "Work Sans", "labelFontSize": 11, "labelAngle": 0},
+      "sort": ["Finsko", "Česko", "Maďarsko"]
+    },
+    "y": {
+      "field": "Hodnota",
+      "type": "quantitative",
+      "title": "Procento / Index",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10}
+    },
+    "xOffset": {"field": "Metrika"},
+    "color": {
+      "field": "Metrika",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Důvěra v média", "Mediální gramotnost"],
+        "range": ["#de1743", "#4a51ab"]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "labelFont": "Work Sans",
+        "labelFontSize": 10
+      }
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "11",
+  "slug": "11-uroven-vzdelavani",
+  "title": "Úroveň vzdělávání",
+  "accent": "#5e66d5",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "PISA_SKORE",
+    "VLIV_STATUSU",
+    "P_ZRIZOVATELU"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/11.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-pisa",
+      "primaryChart": "GRAF_01_PISA_TRENDS"
+    },
+    {
+      "slug": "02-nerovnost",
+      "primaryChart": "GRAF_02_EQUITY_GAP"
+    },
+    {
+      "slug": "03-zrizovatele",
+      "primaryChart": "GRAF_03_FRAGMENTATION"
+    }
+  ]
+}

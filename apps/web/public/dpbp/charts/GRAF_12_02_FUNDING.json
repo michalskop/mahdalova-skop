@@ -1,0 +1,105 @@
+{
+  "_source": "Zdroje: Česko v datech (20. 9. 2022; data Bezpečnostního centra Evropské hodnoty): 46 aktivních prokremelsky orientovaných dezinformačních webů a 197 177 článků za rok; NELEŽ: dezinformační weby jsou financovány převážně z darů a reklamy, PSSI 2020 odhad až 190 tis. Kč měsíčně pro největší weby; PSSI, Dezinformační aktéři v šedé zóně zákona a etického byznysu, září 2024: 36 webů financovaných dary, 29 z nich (80 %) používalo běžný netransparentní účet; případ Zdravé fórum přes 1,2 mil. Kč.",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ekonomika strachu: doložené zdroje financování a měřítko české dezinformační scény",
+  "width": 450,
+  "height": 250,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 30},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Ekonomika strachu: kdo platí dezinformační stroj?",
+    "subtitle": "Doložené metriky místo odhadovaných podílů",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {
+        "metric": "Reklama",
+        "value": "až 190 tis. Kč / měsíc",
+        "detail": "největší dezinformační weby",
+        "source": "PSSI 2020 / NELEŽ"
+      },
+      {
+        "metric": "Dary",
+        "value": "29 z 36 webů",
+        "detail": "běžný netransparentní účet",
+        "source": "PSSI 2024"
+      },
+      {
+        "metric": "Spolky",
+        "value": "> 1,2 mil. Kč",
+        "detail": "příklad Zdravé fórum",
+        "source": "PSSI 2024"
+      },
+      {
+        "metric": "Produkce",
+        "value": "197 177 článků / rok",
+        "detail": "46 aktivních webů",
+        "source": "Česko v datech / EH"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "height": 42, "cornerRadius": 2},
+      "encoding": {
+        "y": {
+          "field": "metric",
+          "type": "nominal",
+          "sort": ["Reklama", "Dary", "Spolky", "Produkce"],
+          "axis": null
+        },
+        "color": {
+          "field": "metric",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Reklama", "Dary", "Spolky", "Produkce"],
+            "range": ["#e63946", "#f4a261", "#a8dadc", "#457b9d"]
+          },
+          "legend": null
+        },
+        "opacity": {"value": 0.16}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": -216, "font": "Work Sans", "fontSize": 10, "fontWeight": "bold", "color": "#1a1a1a"},
+      "encoding": {
+        "y": {"field": "metric", "type": "nominal", "sort": ["Reklama", "Dary", "Spolky", "Produkce"], "axis": null},
+        "text": {"field": "metric"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": -128, "font": "Roboto Slab", "fontSize": 12, "fontWeight": "bold", "color": "#de1743"},
+      "encoding": {
+        "y": {"field": "metric", "type": "nominal", "sort": ["Reklama", "Dary", "Spolky", "Produkce"], "axis": null},
+        "text": {"field": "value"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 20, "font": "Work Sans", "fontSize": 8.5, "color": "#333333"},
+      "encoding": {
+        "y": {"field": "metric", "type": "nominal", "sort": ["Reklama", "Dary", "Spolky", "Produkce"], "axis": null},
+        "text": {"field": "detail"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "right", "baseline": "middle", "dx": 214, "font": "Work Sans", "fontSize": 7.5, "color": "#6267a3"},
+      "encoding": {
+        "y": {"field": "metric", "type": "nominal", "sort": ["Reklama", "Dary", "Spolky", "Produkce"], "axis": null},
+        "text": {"field": "source"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

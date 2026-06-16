@@ -1,0 +1,104 @@
+{
+  "_source": "Zdroj: ERÚ (Roční zprávy o provozu ES ČR 2018–2024)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bilance výroby a spotřeby elektřiny v ČR (2018-2024)",
+  "width": 450,
+  "height": 300,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 40},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Energetické nůžky se zavírají",
+    "subtitle": "Výroba podle zdrojů vs. celková spotřeba (TWh brutto)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#1a1a1a",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"year": "2018", "source": "Jádro", "val": 29.9},
+      {"year": "2018", "source": "Uhlí", "val": 43.1},
+      {"year": "2018", "source": "Slunce (FVE)", "val": 2.36},
+      {"year": "2018", "source": "Ostatní (Plyn, Voda, Vítr, Bio)", "val": 9.14},
+      {"year": "2018", "source": "Spotřeba", "val": 73.9, "type": "line"},
+
+      {"year": "2021", "source": "Jádro", "val": 30.7},
+      {"year": "2021", "source": "Uhlí", "val": 35.1},
+      {"year": "2021", "source": "Slunce (FVE)", "val": 2.32},
+      {"year": "2021", "source": "Ostatní (Plyn, Voda, Vítr, Bio)", "val": 10.58},
+      {"year": "2021", "source": "Spotřeba", "val": 73.7, "type": "line"},
+
+      {"year": "2023", "source": "Jádro", "val": 30.4},
+      {"year": "2023", "source": "Uhlí", "val": 27.5},
+      {"year": "2023", "source": "Slunce (FVE)", "val": 3.42},
+      {"year": "2023", "source": "Ostatní (Plyn, Voda, Vítr, Bio)", "val": 9.68},
+      {"year": "2023", "source": "Spotřeba", "val": 67.8, "type": "line"},
+
+      {"year": "2024", "source": "Jádro", "val": 28.0},
+      {"year": "2024", "source": "Uhlí", "val": 23.7},
+      {"year": "2024", "source": "Slunce (FVE)", "val": 3.90},
+      {"year": "2024", "source": "Ostatní (Plyn, Voda, Vítr, Bio)", "val": 18.3},
+      {"year": "2024", "source": "Spotřeba", "val": 67.2, "type": "line"}
+    ]
+  },
+  "layer": [
+    {
+      "transform": [{"filter": "datum.type != 'line'"}],
+      "mark": {"type": "bar", "width": 45, "tooltip": true, "stroke": "#fdfbf7", "strokeWidth": 1},
+      "encoding": {
+        "x": {
+          "field": "year", 
+          "type": "nominal", 
+          "title": null,
+          "axis": {"labelFont": "Work Sans", "labelFontSize": 10, "labelAngle": 0, "ticks": false, "domain": false}
+        },
+        "y": {
+          "field": "val", 
+          "type": "quantitative", 
+          "title": "Terawatthodiny (TWh)",
+          "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
+        },
+        "color": {
+          "field": "source",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Jádro", "Uhlí", "Slunce (FVE)", "Ostatní (Plyn, Voda, Vítr, Bio)", "Spotřeba"],
+            "range": ["#272a59", "#bcbcb0", "#ffcf02", "#6267a3", "#de1743"]
+          },
+          "legend": {
+            "title": null, 
+            "orient": "bottom", 
+            "offset": 10,
+            "labelFont": "Roboto Slab",
+            "labelFontSize": 10,
+            "symbolType": "square",
+            "padding": 10,
+            "columns": 3
+          }
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.type == 'line'"}],
+      "mark": {
+        "type": "line", 
+        "color": "#de1743", 
+        "strokeWidth": 3, 
+        "point": {"color": "#de1743", "size": 60, "fill": "white", "strokeWidth": 2}
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "nominal"},
+        "y": {"field": "val", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"}
+  }
+}

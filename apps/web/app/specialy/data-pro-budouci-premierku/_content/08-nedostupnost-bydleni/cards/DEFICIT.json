@@ -1,0 +1,11 @@
+{
+  "id": "DEFICIT",
+  "number": "5 303",
+  "unit": "",
+  "perUnit": "",
+  "label": "Dokončených bytů v Praze v roce 2025",
+  "sublabel": "Dokončených bytů v Praze v roce 2025",
+  "context": "Praha má strategický cíl stavět kolem 9 000 bytů ročně. Skutečné dokončení v roce 2025 bylo zhruba o 3 700 bytů pod tímto tempem.",
+  "source": "ČSÚ Praha 2025 / IPR Praha",
+  "accent": "#de1743"
+}

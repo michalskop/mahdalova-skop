@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Kyberincidenty evidované NÚKIB rostou",
+    "subtitle": "2024: 268 incidentů, o 84 % více než v roce 2022",
+    "anchor": "start",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "color": "#272a59",
+    "subtitleColor": "#272a59"
+  },
+  "width": 450,
+  "height": 220,
+  "data": {
+    "values": [
+      {"rok": "2022", "incidenty": 146, "label": "146"},
+      {"rok": "2023", "incidenty": 220, "label": "220"},
+      {"rok": "2024", "incidenty": 268, "label": "268"}
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFont": "Work Sans",
+        "labelFontSize": 11,
+        "labelColor": "#272a59",
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "incidenty",
+      "type": "quantitative",
+      "title": "Počet incidentů",
+      "scale": {"domain": [0, 300]},
+      "axis": {
+        "labelFont": "Work Sans",
+        "labelFontSize": 10,
+        "labelColor": "#272a59",
+        "titleFont": "Work Sans",
+        "titleFontSize": 11,
+        "titleColor": "#272a59",
+        "gridColor": "#e8e8dc",
+        "domainColor": "#e8e8dc",
+        "tickColor": "#e8e8dc"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 2, "color": "#de1743"}
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -6,
+        "font": "Work Sans",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#272a59"
+      },
+      "encoding": {
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.rok == '2024'"}],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dy": 18,
+        "font": "Work Sans",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "text": {"value": "+84 % od roku 2022"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Work Sans",
+    "axis": {"labelFont": "Work Sans", "titleFont": "Work Sans"}
+  },
+  "_source": "NÚKIB, Zprávy o stavu kybernetické bezpečnosti ČR",
+  "usermeta": {
+    "note": "NÚKIB evidoval 146 incidentů v roce 2022, 220 v roce 2023 a 268 v roce 2024."
+  }
+}

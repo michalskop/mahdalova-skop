@@ -1,0 +1,31 @@
+{
+  "id": "04",
+  "slug": "04-klimaticka-zmena",
+  "title": "Klimatická změna",
+  "accent": "#de1743",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "TEPLOTA",
+    "CINA",
+    "SKODY"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/04.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-sucho",
+      "primaryChart": "CHART_STRIPES_CZ"
+    },
+    {
+      "slug": "02-meritko",
+      "primaryChart": "CHART_EMISSIONS_PER_CAPITA"
+    },
+    {
+      "slug": "03-ekonomika",
+      "primaryChart": "CHART_EKONOMIKA_ADAPTACE"
+    }
+  ]
+}

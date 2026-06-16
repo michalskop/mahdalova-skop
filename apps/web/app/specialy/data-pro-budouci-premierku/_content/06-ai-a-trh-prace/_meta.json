@@ -1,0 +1,31 @@
+{
+  "id": "06",
+  "slug": "06-ai-a-trh-prace",
+  "title": "AI a trh práce",
+  "accent": "#ffcf02",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "PARADOX",
+    "DANE",
+    "RESKILL"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/06.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-paradox",
+      "primaryChart": "CHART_AI_PARADOX"
+    },
+    {
+      "slug": "02-fiskal",
+      "primaryChart": "CHART_TAX_WEDGE"
+    },
+    {
+      "slug": "03-reskilling",
+      "primaryChart": "CHART_RESKILLING_GAP"
+    }
+  ]
+}

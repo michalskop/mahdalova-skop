@@ -1,0 +1,77 @@
+{
+  "_source": "Zdroj: NATO Support and Procurement Agency (2024), analýza výroby dělostřelecké munice",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Munice 155mm: Výrobní kapacity Západu vs. spotřeba na frontě",
+  "width": 450,
+  "height": 200,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 20},
+  "autosize": {"type": "pad", "resize": true},
+  "background": "#fdfbf7",
+  "title": {
+    "text": "Munice: Propast mezi výrobou a frontou",
+    "subtitle": "Měsíční objem dělostřelecké munice 155mm (kusy)",
+    "font": "Roboto Slab",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#272a59",
+    "subtitleFont": "Work Sans",
+    "subtitleFontSize": 10,
+    "subtitleColor": "#6267a3",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"cat": "Spotřeba Ukrajiny (Potřeba)", "val": 200000, "color": "#de1743"},
+      {"cat": "Výroba EU celkem (2024)", "val": 80000, "color": "#272a59"},
+      {"cat": "Výroba USA (2024)", "val": 36000, "color": "#6267a3"}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4, "size": 30},
+  "encoding": {
+    "y": {
+      "field": "cat", 
+      "type": "nominal", 
+      "title": null, 
+      "sort": "-x",
+      "axis": {"labelFont": "Roboto Slab", "labelFontSize": 10, "ticks": false, "domain": false}
+    },
+    "x": {
+      "field": "val", 
+      "type": "quantitative", 
+      "title": "Počet kusů za měsíc",
+      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
+    },
+    "color": {
+      "field": "color", 
+      "type": "nominal", 
+      "scale": null
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {
+      "font": "Roboto Slab",
+      "fontWeight": "bold",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#272a59",
+      "subtitleFont": "Work Sans",
+      "subtitleFontSize": 10,
+      "subtitleColor": "#6267a3"
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "labelFontSize": 10,
+      "titleFont": "Work Sans",
+      "titleFontSize": 10,
+      "titleColor": "#6267a3"
+    },
+    "legend": {
+      "labelFont": "Roboto Slab",
+      "labelFontSize": 10,
+      "titleFont": "Roboto Slab",
+      "titleFontSize": 10
+    }
+  }
+}

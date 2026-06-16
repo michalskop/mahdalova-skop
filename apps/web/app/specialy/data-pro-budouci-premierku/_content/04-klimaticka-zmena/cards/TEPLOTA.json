@@ -1,0 +1,11 @@
+{
+  "id": "TEPLOTA",
+  "number": "+2,3",
+  "unit": "°C",
+  "perUnit": "",
+  "label": "Oteplení v ČR od r. 1961",
+  "sublabel": "Oteplení v ČR od r. 1961",
+  "context": "Česko se otepluje 2× rychleji než zbytek planety. Jako vnitrozemí reagujeme na fyziku pevniny okamžitě. Sucho není z nedostatku deště, ale z výparu.",
+  "source": "ČHMÚ, Fakta o klimatu 2024",
+  "accent": "#de1743"
+}

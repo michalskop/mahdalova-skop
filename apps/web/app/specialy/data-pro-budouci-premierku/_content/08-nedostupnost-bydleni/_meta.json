@@ -1,0 +1,31 @@
+{
+  "id": "08",
+  "slug": "08-nedostupnost-bydleni",
+  "title": "Nedostupnost bydlení",
+  "accent": "#de1743",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "PLATY",
+    "DEFICIT",
+    "RAZITKA"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/08.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-platy",
+      "primaryChart": "CHART_AFFORDABILITY_INDEX"
+    },
+    {
+      "slug": "02-deficit",
+      "primaryChart": "CHART_PRAGUE_DEFICIT"
+    },
+    {
+      "slug": "03-rent",
+      "primaryChart": "CHART_PERMIT_GAP"
+    }
+  ]
+}

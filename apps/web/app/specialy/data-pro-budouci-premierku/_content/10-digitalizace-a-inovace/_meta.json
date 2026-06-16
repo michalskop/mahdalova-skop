@@ -1,0 +1,31 @@
+{
+  "id": "10",
+  "slug": "10-digitalizace-a-inovace",
+  "title": "Digitalizace a inovace",
+  "accent": "#5e66d5",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-12",
+  "cardOrder": [
+    "DESI",
+    "VYZKUM",
+    "KYBER"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": "/dpbp/chapters/10.svg"
+  },
+  "articles": [
+    {
+      "slug": "01-egov",
+      "primaryChart": "DIGI_EGOV_ADOPTION_01"
+    },
+    {
+      "slug": "02-inovace",
+      "primaryChart": "DIGI_INOVACE_RANKING_02"
+    },
+    {
+      "slug": "03-tech-dluh",
+      "primaryChart": "DIGI_CYBER_INCIDENTS_03"
+    }
+  ]
+}

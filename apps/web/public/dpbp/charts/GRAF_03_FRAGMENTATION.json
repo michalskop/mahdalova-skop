@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Extrémní fragmentace zřizovatelů škol v ČR",
+    "subtitle": "Počet obcí podle počtu zřizovaných základních škol",
+    "fontSize": 13,
+    "font": "Roboto Slab",
+    "anchor": "start"
+  },
+  "width": 450,
+  "height": 350,
+  "data": {
+    "values": [
+      {"kategorie": "Obce s 1 školou", "pocet": 2371, "skoly": "1 škola"},
+      {"kategorie": "Obce se 2-5 školami", "pocet": 204, "skoly": "2-5 škol"},
+      {"kategorie": "Velká města (>5 škol)", "pocet": 60, "skoly": "více než 5 škol"}
+    ]
+  },
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "kategorie",
+      "type": "nominal",
+      "sort": ["Obce s 1 školou", "Obce se 2-5 školami", "Velká města (>5 škol)"],
+      "title": null,
+      "axis": {"labelAngle": 0, "labelFontSize": 10, "labelFont": "Work Sans"}
+    },
+    "y": {
+      "field": "pocet",
+      "type": "quantitative",
+      "title": "Počet zřizovatelů (obcí)",
+      "axis": {"labelFontSize": 10, "labelFont": "Work Sans", "titleFont": "Work Sans"}
+    },
+    "color": {
+      "field": "kategorie",
+      "type": "nominal",
+      "scale": {
+        "range": ["#de1743", "#6267a3", "#272a59"]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -5,
+        "font": "Work Sans",
+        "fontSize": 12
+      },
+      "encoding": {"text": {"field": "pocet", "type": "quantitative"}}
+    }
+  ],
+  "_source": "PAQ Research - Mapa vzdělávání / MŠMT",
+  "usermeta": {
+    "description": "90 % zřizovatelů v ČR spravuje pouze jednu jedinou školu, což vede k obrovské administrativní zátěži ředitelů."
+  }
+}

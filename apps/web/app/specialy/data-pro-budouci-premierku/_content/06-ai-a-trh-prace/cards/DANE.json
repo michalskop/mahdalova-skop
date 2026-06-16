@@ -1,0 +1,11 @@
+{
+  "id": "DANE",
+  "number": "41,2",
+  "unit": "%",
+  "perUnit": "",
+  "label": "Zdanění lidské práce v ČR",
+  "sublabel": "Zdanění lidské práce v ČR",
+  "context": "Daňový klín práce u průměrného zaměstnance je v Česku 41,2 %. Základní sazba daně ze zisku firem je 21 %. AI přesouvá hodnotu od mezd k softwaru a kapitálu, ale financování státu dál stojí hlavně na práci.",
+  "source": "OECD Taxing Wages 2026 / zákon o daních z příjmů, § 21",
+  "accent": "#ffcf02"
+}

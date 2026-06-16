@@ -21,7 +21,13 @@ const nextConfig = {
       ...config.resolve,
       fallback: {
         ...config.resolve.fallback,
-      }
+      },
+      // vega-canvas optionally requires 'canvas' for server-side rendering;
+      // we use the SVG renderer in the browser only, so stub it out.
+      alias: {
+        ...config.resolve.alias,
+        canvas: false,
+      },
     }
     return config
   },
