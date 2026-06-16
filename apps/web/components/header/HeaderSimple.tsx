@@ -105,7 +105,7 @@ export function HeaderSimple() {
           <LogoWithText  color={logoColor}/>
           <Button
             component="a"
-            href="https://herohero.co/mahdalovaskop/"
+            href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
             c={theme.colors.brandRoyalBlue[9]}
             color={theme.colors.brandYellow[6]}
             target="_blank"

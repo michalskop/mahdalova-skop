@@ -1,6 +1,17 @@
 ﻿<style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&family=Roboto+Slab:wght@400;500;700;800&display=swap');
 
+/* Tato kapitola má vlastní tmavomodrou hlavičku (.dt-chapter-banner) místo
+   generického titulku/data článku — schováváme je, aby byla hlavička první
+   věc na stránce, stejně jako u ostatních kapitol speciálu. */
+.markdown-content:has(.dt-chapter-banner) > div > h1,
+.markdown-content:has(.dt-chapter-banner) > div > p {
+  display: none !important;
+}
+.markdown-content:has(.dt-chapter-banner) {
+  padding-top: 0 !important;
+}
+
 .dt-hub {
   --dt-crimson: #de1743;
   --dt-deep-red: #8b0e2b;
@@ -15,6 +26,41 @@
   line-height: 1.55;
 }
 .dt-hub * { box-sizing: border-box; }
+.dt-chapter-banner {
+  background: var(--dt-ink);
+  padding: 48px 0 40px;
+  margin: 0 calc(50% - 50vw) 32px;
+  width: 100vw;
+}
+.dt-chapter-banner-inner {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.dt-chapter-crumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 12px;
+}
+.dt-chapter-crumb a {
+  color: inherit;
+  text-decoration: none;
+}
+.dt-chapter-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+.dt-chapter-rule {
+  width: 48px;
+  height: 3px;
+  background: var(--dt-crimson);
+  margin-top: 16px;
+}
 .dt-tag {
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -107,11 +153,14 @@
               border-color 0.25s ease,
               box-shadow 0.25s ease;
   will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0) scale(1);
 }
 .dt-card:hover {
   border-color: var(--dt-crimson);
   box-shadow: 0 6px 20px rgba(222, 23, 67, 0.12);
-  transform: scale(1.02);
+  transform: translateZ(0) scale(1.02);
 }
 .dt-card-link {
   color: inherit;
@@ -127,7 +176,7 @@
 }
 .dt-card-thumb {
   width: 130px;
-  height: 90px;
+  height: 130px;
   flex-shrink: 0;
   background: var(--dt-soft);
   border-radius: 4px;
@@ -136,6 +185,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.dt-card--lead .dt-card-thumb {
+  width: auto;
+  height: auto;
+  flex: 0 0 33%;
+  aspect-ratio: 1 / 1;
+  align-self: stretch;
 }
 .dt-card-thumb svg,
 .dt-card-thumb img {
@@ -594,9 +650,12 @@
     align-items: stretch;
     gap: 14px;
   }
-  .dt-card-thumb {
+  .dt-card-thumb,
+  .dt-card--lead .dt-card-thumb {
     width: 100%;
     height: 160px;
+    flex: none;
+    aspect-ratio: auto;
   }
   .dt-data-grid {
     grid-template-columns: 1fr;
@@ -683,6 +742,16 @@
 </style>
 
 <div class="dt-hub">
+  <div class="dt-chapter-banner">
+    <div class="dt-chapter-banner-inner">
+      <div class="dt-chapter-crumb">
+        <a href="/specialy/data-pro-budouci-premierku">Data pro budoucí premiérku</a> · Kapitola 02
+      </div>
+      <h1 class="dt-chapter-title">Demografie</h1>
+      <div class="dt-chapter-rule"></div>
+    </div>
+  </div>
+
   <div class="dt-tag">Speciál • Data pro budoucí premiérku • Demografie</div>
 
   <h2 class="dt-section-h">Bez kontextu to nejde</h2>
@@ -789,7 +858,7 @@
   <div class="dt-grid">
     <a class="dt-card dt-card--lead dt-card-link" href="https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-01-demografie-plodnost">
       <div class="dt-card-thumb">
-        <img src="/images/data-pro-budouci-premierku-demografie-plodnost-2.webp"
+        <img src="/images/data-pro-budouci-premierku-02-demografie-plodnost.webp"
           alt="Dvě děti na ženu — obálka článku"
           loading="lazy">
       </div>
