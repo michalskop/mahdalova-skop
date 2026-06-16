@@ -168,7 +168,7 @@ const G_DEMO = <>
     <circle cx={92.5} cy={85} r={4.5}/><circle cx={77.5} cy={85} r={4.5}/><circle cx={62.5} cy={85} r={4.5}/><circle cx={47.5} cy={85} r={4.5}/><circle cx={32.5} cy={85} r={4.5}/><circle cx={17.5} cy={85} r={4.5}/>
     <circle cx={92.5} cy={104} r={4.5}/><circle cx={77.5} cy={104} r={4.5}/><circle cx={62.5} cy={104} r={4.5}/><circle cx={47.5} cy={104} r={4.5}/><circle cx={32.5} cy={104} r={4.5}/>
     <circle cx={92.5} cy={123} r={4.5}/><circle cx={77.5} cy={123} r={4.5}/><circle cx={62.5} cy={123} r={4.5}/>
-    <circle cx={92.5} cy={142} r={4.5}/><circle cx={77.5} cy={142} r={4.5}/>
+    <circle cx={92.5} cy={142} r={4.5}/><circle cx={77.5} cy={142} r={4.5}/><circle cx={62.5} cy={142} r={4.5}/>
     <circle cx={92.5} cy={161} r={4.5}/><circle cx={77.5} cy={161} r={4.5}/><circle cx={62.5} cy={161} r={4.5}/><circle cx={47.5} cy={161} r={4.5}/>
   </g>
   <g fill="#de1743">
@@ -178,7 +178,7 @@ const G_DEMO = <>
     <circle cx={107.5} cy={85} r={4.5}/><circle cx={122.5} cy={85} r={4.5}/><circle cx={137.5} cy={85} r={4.5}/><circle cx={152.5} cy={85} r={4.5}/><circle cx={167.5} cy={85} r={4.5}/><circle cx={182.5} cy={85} r={4.5}/>
     <circle cx={107.5} cy={104} r={4.5}/><circle cx={122.5} cy={104} r={4.5}/><circle cx={137.5} cy={104} r={4.5}/><circle cx={152.5} cy={104} r={4.5}/><circle cx={167.5} cy={104} r={4.5}/>
     <circle cx={107.5} cy={123} r={4.5}/><circle cx={122.5} cy={123} r={4.5}/><circle cx={137.5} cy={123} r={4.5}/>
-    <circle cx={107.5} cy={142} r={4.5}/><circle cx={122.5} cy={142} r={4.5}/>
+    <circle cx={107.5} cy={142} r={4.5}/><circle cx={122.5} cy={142} r={4.5}/><circle cx={137.5} cy={142} r={4.5}/>
     <circle cx={107.5} cy={161} r={4.5}/><circle cx={122.5} cy={161} r={4.5}/><circle cx={137.5} cy={161} r={4.5}/><circle cx={152.5} cy={161} r={4.5}/>
   </g>
 </>;
