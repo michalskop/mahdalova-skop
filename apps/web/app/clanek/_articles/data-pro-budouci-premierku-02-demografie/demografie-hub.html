@@ -38,27 +38,37 @@
   padding: 0 16px;
 }
 .dt-chapter-crumb {
-  font-size: 11px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.4);
+  color: #f8f6f0;
   margin: 0 0 12px;
 }
 .dt-chapter-crumb a {
-  color: inherit;
+  color: #de1743;
   text-decoration: none;
+  padding: 1px 4px;
+  margin: -1px -4px;
+  border-radius: 3px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.dt-chapter-crumb a:hover,
+.dt-chapter-crumb a:focus-visible {
+  background-color: #de1743;
+  color: #101432;
 }
 .dt-chapter-title {
   font-family: 'Roboto Slab', serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #f8f6f0;
   margin: 0;
 }
 .dt-chapter-rule {
   width: 48px;
   height: 3px;
-  background: var(--dt-crimson);
+  background: #f76800;
   margin-top: 16px;
 }
 .dt-tag {
@@ -149,18 +159,12 @@
   min-height: 180px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              border-color 0.25s ease,
-              box-shadow 0.25s ease;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0) scale(1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .dt-card:hover {
   border-color: var(--dt-crimson);
   box-shadow: 0 6px 20px rgba(222, 23, 67, 0.12);
-  transform: translateZ(0) scale(1.02);
+  transform: scale(1.02);
 }
 .dt-card-link {
   color: inherit;
@@ -201,10 +205,6 @@
 }
 .dt-card-thumb img {
   object-fit: cover;
-  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.dt-card:hover .dt-card-thumb img {
-  transform: scale(1.05);
 }
 .dt-card-thumb--contain img {
   object-fit: contain;
@@ -856,7 +856,7 @@
   </div>
 
   <div class="dt-grid">
-    <a class="dt-card dt-card--lead dt-card-link" href="https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-01-demografie-plodnost">
+    <a class="dt-card dt-card--lead dt-card-link" href="https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-plodnost">
       <div class="dt-card-thumb">
         <img src="/images/data-pro-budouci-premierku-02-demografie-plodnost.webp"
           alt="Dvě děti na ženu — obálka článku"

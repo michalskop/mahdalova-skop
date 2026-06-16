@@ -93,10 +93,24 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
       {/* Chapter header */}
       <Box style={{ background: '#101432', padding: '48px 0 40px' }}>
         <Container size="md">
-          <Text size="xs" style={{ color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
-            <Link href="/specialy/data-pro-budouci-premierku" style={{ color: 'inherit', textDecoration: 'none' }}>Data pro budoucí premiérku</Link> · Kapitola {meta.id}
+          <Text size="xs" style={{ color: '#f8f6f0', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
+            <Link href="/specialy/data-pro-budouci-premierku" className="dpbp-crumb-link" style={{ textDecoration: 'none' }}>Data pro budoucí premiérku</Link> · Kapitola {meta.id}
           </Text>
-          <Title order={1} style={{ color: '#ffffff', fontFamily: 'Roboto Slab, serif', fontSize: '2rem', fontWeight: 800 }}>
+          <style>{`
+            .dpbp-crumb-link {
+              color: #de1743;
+              padding: 1px 4px;
+              margin: -1px -4px;
+              border-radius: 3px;
+              transition: background-color 0.18s ease, color 0.18s ease;
+            }
+            .dpbp-crumb-link:hover,
+            .dpbp-crumb-link:focus-visible {
+              background-color: #de1743;
+              color: #101432;
+            }
+          `}</style>
+          <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'Roboto Slab, serif', fontSize: '2rem', fontWeight: 800 }}>
             {meta.title}
           </Title>
           <Box style={{ width: 48, height: 3, background: meta.accent, marginTop: 16 }} />
