@@ -188,24 +188,34 @@ const G_DEMO = <>
 // 03 Zdravotnictví a péče — zdvojené H
 const G03 = <>
   <g fill="#5e66d5">
-    <circle cx={55} cy={25} r={4.5}/><circle cx={145} cy={25} r={4.5}/>
-    <circle cx={40} cy={40} r={4.5}/><circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/><circle cx={160} cy={40} r={4.5}/>
-    <circle cx={25} cy={55} r={4.5}/><circle cx={40} cy={55} r={4.5}/><circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={55} r={4.5}/><circle cx={175} cy={55} r={4.5}/>
+    {/* řádek 1 (25): 3+3, mezera nahoře mezi oblouky */}
+    <circle cx={40} cy={25} r={4.5}/><circle cx={55} cy={25} r={4.5}/><circle cx={70} cy={25} r={4.5}/><circle cx={130} cy={25} r={4.5}/><circle cx={145} cy={25} r={4.5}/><circle cx={160} cy={25} r={4.5}/>
+    {/* řádek 2 (40): 11 bodů, souvislé splynutí oblouků */}
+    <circle cx={25} cy={40} r={4.5}/><circle cx={40} cy={40} r={4.5}/><circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/><circle cx={85} cy={40} r={4.5}/><circle cx={100} cy={40} r={4.5}/><circle cx={115} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/><circle cx={160} cy={40} r={4.5}/><circle cx={175} cy={40} r={4.5}/>
+    {/* řádek 3 (55): 13 bodů, předsunutý okrajový bod */}
+    <circle cx={10} cy={55} r={4.5}/><circle cx={25} cy={55} r={4.5}/><circle cx={40} cy={55} r={4.5}/><circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/><circle cx={85} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={55} r={4.5}/><circle cx={175} cy={55} r={4.5}/><circle cx={190} cy={55} r={4.5}/>
+    {/* řádek 4 (70): 13 bodů, druhý předsunutý okrajový bod (pár nad sebou) */}
     <circle cx={10} cy={70} r={4.5}/><circle cx={25} cy={70} r={4.5}/><circle cx={40} cy={70} r={4.5}/><circle cx={55} cy={70} r={4.5}/><circle cx={70} cy={70} r={4.5}/><circle cx={85} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/><circle cx={130} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/><circle cx={160} cy={70} r={4.5}/><circle cx={175} cy={70} r={4.5}/><circle cx={190} cy={70} r={4.5}/>
-    <circle cx={10} cy={85} r={4.5}/><circle cx={25} cy={85} r={4.5}/><circle cx={40} cy={85} r={4.5}/><circle cx={55} cy={85} r={4.5}/><circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/><circle cx={160} cy={85} r={4.5}/><circle cx={175} cy={85} r={4.5}/><circle cx={190} cy={85} r={4.5}/>
-    <circle cx={25} cy={100} r={4.5}/><circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/><circle cx={175} cy={100} r={4.5}/>
-    <circle cx={40} cy={115} r={4.5}/><circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/><circle cx={160} cy={115} r={4.5}/>
-    <circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
-    <circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/>
-    <circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/>
+    {/* řádek 5 (85): vodorovné raménko kříže uprostřed */}
+    <circle cx={25} cy={85} r={4.5}/><circle cx={40} cy={85} r={4.5}/><circle cx={55} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/><circle cx={160} cy={85} r={4.5}/><circle cx={175} cy={85} r={4.5}/>
+    {/* řádek 6 (100) */}
+    <circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
+    {/* řádek 7 (115) */}
+    <circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
+    {/* řádek 8 (130) */}
+    <circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/>
+    {/* řádek 9 (145) */}
+    <circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/>
+    {/* řádek 10 (160) — špička srdce */}
+    <circle cx={100} cy={160} r={4.5}/>
   </g>
-  {/* bílý kříž — plný plus, 9 bodů, ramena 2 body od vyplněného středu */}
+  {/* bílý kříž — plný plus, 9 bodů, vyplněný střed + ramena 2 body do všech stran */}
   <g fill="#f8f6f0">
+    <circle cx={100} cy={55} r={4.5}/>
     <circle cx={100} cy={70} r={4.5}/>
-    <circle cx={100} cy={85} r={4.5}/>
-    <circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/>
+    <circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
+    <circle cx={100} cy={100} r={4.5}/>
     <circle cx={100} cy={115} r={4.5}/>
-    <circle cx={100} cy={130} r={4.5}/>
   </g>
 </>;
 
