@@ -198,10 +198,10 @@ const G03 = <>
     <circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/>
     <circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/>
   </g>
-  {/* bílý kříž uprostřed srdce */}
+  {/* bílý kříž — pouze 4 body, střed chybí (zůstává v barvě srdce) */}
   <g fill="#fdfbf7">
     <circle cx={100} cy={85} r={4.5}/>
-    <circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/>
+    <circle cx={85} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/>
     <circle cx={100} cy={115} r={4.5}/>
   </g>
 </>;
