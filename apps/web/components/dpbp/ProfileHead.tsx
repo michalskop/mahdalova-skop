@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useId, useState } from 'react';
+import { useCallback, useId, useRef, useState } from 'react';
 
 // Profile-head silhouette used across the DPBP special (homepage hero +
 // chapter headers). One shared SVG source so colour/shape tweaks only need
@@ -40,6 +40,14 @@ function randomColor(pool: string[]): string {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
+// SVG viewBox is "-8 -8 716 716" → x/y range from -8 to 708.
+const VB_MIN = -8;
+const VB_SIZE = 716;
+// How close the cursor must be (in viewBox units) to a dot before it
+// "catches" the cursor and repaints — tuned to the dots' own spacing
+// (roughly 50–150 units apart) so passing nearby paints a few at a time.
+const PROXIMITY = 90;
+
 interface ProfileHeadProps {
   silColor?: string;
   dots?: [number, number, number, string][];
@@ -58,16 +66,49 @@ export default function ProfileHead({
   const uid = useId().replace(/:/g, '');
   const clipId = `sil-${uid}`;
   const hoverClass = `ph-${uid}`;
+  const svgRef = useRef<SVGSVGElement>(null);
+  // Dots the cursor is currently "inside" — lets each dot repaint once per
+  // entry instead of re-rolling on every mousemove tick while hovering.
+  const insideRef = useRef<Set<number>>(new Set());
 
   const [activeSil, setActiveSil] = useState(silColor);
   const [activeDots, setActiveDots] = useState<string[]>(dots.map(d => d[3]));
 
-  const randomize = useCallback(() => {
+  const handleEnter = useCallback(() => {
     setActiveSil(randomColor(palette));
-    setActiveDots(dots.map(() => randomColor(palette)));
+  }, [palette]);
+
+  const handleMove = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const rect = svg.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    // Cursor position translated from screen pixels into the SVG's own
+    // viewBox coordinate space, so distance-to-dot comparisons line up.
+    const x = VB_MIN + ((e.clientX - rect.left) / rect.width) * VB_SIZE;
+    const y = VB_MIN + ((e.clientY - rect.top) / rect.height) * VB_SIZE;
+
+    setActiveDots(prev => {
+      let changed = false;
+      const next = prev.slice();
+      dots.forEach((d, i) => {
+        const dist = Math.hypot(x - d[0], y - d[1]);
+        const inRange = dist < PROXIMITY;
+        const wasIn = insideRef.current.has(i);
+        if (inRange && !wasIn) {
+          insideRef.current.add(i);
+          next[i] = randomColor(palette);
+          changed = true;
+        } else if (!inRange && wasIn) {
+          insideRef.current.delete(i);
+        }
+      });
+      return changed ? next : prev;
+    });
   }, [dots, palette]);
 
-  const reset = useCallback(() => {
+  const handleLeave = useCallback(() => {
+    insideRef.current.clear();
     setActiveSil(silColor);
     setActiveDots(dots.map(d => d[3]));
   }, [dots, silColor]);
@@ -81,18 +122,20 @@ export default function ProfileHead({
         .${hoverClass} .ph-sil-fill,
         .${hoverClass} .ph-sil-stroke,
         .${hoverClass} .ph-dot {
-          transition: fill 0.4s ease-in-out, stroke 0.4s ease-in-out;
+          transition: fill 0.3s ease-out, stroke 0.3s ease-out;
         }
       `}</style>
       <svg
+        ref={svgRef}
         viewBox="-8 -8 716 716"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden
         overflow="visible"
         className={className ? `${hoverClass} ${className}` : hoverClass}
         style={style}
-        onMouseEnter={randomize}
-        onMouseLeave={reset}
+        onMouseEnter={handleEnter}
+        onMouseMove={handleMove}
+        onMouseLeave={handleLeave}
       >
         <defs>
           <clipPath id={clipId} clipPathUnits="userSpaceOnUse">
