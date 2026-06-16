@@ -27,5 +27,10 @@
       "slug": "03-mezera",
       "primaryChart": "CHART_NUCLEAR_DELAYS"
     }
-  ]
+  ],
+  "intro": {
+    "title": "Zlevníme elektřinu odchodem z burzy? Fyzika napovídá jinou cestu aneb Suverenita je hardware, ne izolace",
+    "textBefore": "„Opustíme lipskou burzu, to je náš plán. Elektřina vyráběná v České republice by měla zůstat českým občanům a až následné přebytky by se měly vyvážet,“ slíbil v červnu 2025 předseda hnutí ANO Andrej Babiš. Zní to jako selský rozum: máme vlastní elektrárny, tak proč platit německé ceny? Energetika roku 2025 ale naráží na fyziku a ekonomiku, které politici v kampani nezmiňují.",
+    "textAfter": "Jen za právo vypustit kouř z uhlí zaplatíme v roce 2025 víc, než kolik stojí samotné palivo i práce horníků. Uhlí je drahé samo o sobě, ne kvůli burze – a to platí i po případném odchodu z Lipska. Skutečná otázka pro budoucí premiérku tedy nezní „jak se odstřihnout od Evropy“, ale „jak rychle nahradit drahé uhlí levnějšími zdroji“. Suverenita roku 2030 se neměří politickými gesty, ale megawatthodinami a kilometry drátů."
+  }
 }

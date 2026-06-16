@@ -27,5 +27,10 @@
       "slug": "03-rent",
       "primaryChart": "CHART_PERMIT_GAP"
     }
-  ]
+  ],
+  "intro": {
+    "title": "Kolik platů stojí byt v Praze? Patnáct a půl aneb Krize bydlení není o spekulantech",
+    "textBefore": "Debata o nedostupném bydlení se obvykle stočí k vinění spekulantů a fondů, které kupují byty na investici. Jenže za cenou bytu v Praze nestojí primárně chování kupujících – stojí za ní tvrdý, měřitelný deficit v tom, kolik bytů se vůbec staví.",
+    "textAfter": "Průměrná rodina musí na byt v Praze vydělávat skoro šestnáct hrubých ročních mezd – třetí nejhorší poměr v Evropě po Amsterdamu a Aténách. Praha přitom dlouhodobě nestaví ani tolik bytů, kolik si sama stanovila jako cíl. Otázka pro budoucí premiérku tedy nezní, jak zkrotit spekulanty, ale jak zkrátit cestu od pozemku k hotovému bytu, která dnes trvá skoro deset let."
+  }
 }

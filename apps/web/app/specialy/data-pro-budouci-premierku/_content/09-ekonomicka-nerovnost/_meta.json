@@ -27,5 +27,10 @@
       "slug": "03-mobilita",
       "primaryChart": "G09_03_PISA_STATUS"
     }
-  ]
+  ],
+  "intro": {
+    "title": "Jsme rovnostářská země? Jen v zrcadle, které si sami vyrobili aneb Geografie úpadku",
+    "textBefore": "Česko se rádo chlubí nízkou nerovností – a v národním srovnání na tom skutečně není špatně. To srovnání ale používá vlastní, nízký medián jako měřítko. Stačí přiložit evropské pravítko, a obrázek se změní.",
+    "textAfter": "Pokud bychom místo českého mediánu použili jednotný evropský příjmový práh, pod něj by spadlo přes 40 % českých domácností. Nízká celostátní nerovnost zároveň maskuje mikroregiony, kde je v exekuci až polovina dospělých obyvatel. Otázka pro budoucí premiérku tedy nezní, jak udržet hezké národní číslo, ale jak řešit propadlé regiony, které se v průměru ztrácí."
+  }
 }

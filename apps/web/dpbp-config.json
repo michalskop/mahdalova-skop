@@ -13,6 +13,11 @@
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/01.svg"
       },
+      "intro": {
+        "title": "Zlevníme elektřinu odchodem z burzy? Fyzika napovídá jinou cestu aneb Suverenita je hardware, ne izolace",
+        "textBefore": "„Opustíme lipskou burzu, to je náš plán. Elektřina vyráběná v České republice by měla zůstat českým občanům a až následné přebytky by se měly vyvážet,“ slíbil v červnu 2025 předseda hnutí ANO Andrej Babiš. Zní to jako selský rozum: máme vlastní elektrárny, tak proč platit německé ceny? Energetika roku 2025 ale naráží na fyziku a ekonomiku, které politici v kampani nezmiňují.",
+        "textAfter": "Jen za právo vypustit kouř z uhlí zaplatíme v roce 2025 víc, než kolik stojí samotné palivo i práce horníků. Uhlí je drahé samo o sobě, ne kvůli burze – a to platí i po případném odchodu z Lipska. Skutečná otázka pro budoucí premiérku tedy nezní „jak se odstřihnout od Evropy“, ale „jak rychle nahradit drahé uhlí levnějšími zdroji“. Suverenita roku 2030 se neměří politickými gesty, ale megawatthodinami a kilometry drátů."
+      },
       "articles": [
         {
           "slug": "01-lipsko",
@@ -47,6 +52,11 @@
         "slug": "one-pager",
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/03.svg"
+      },
+      "intro": {
+        "title": "Kdo vás bude léčit za deset let? Polovina praktiků míří do důchodu aneb Soumrak rodinného lékaře",
+        "textBefore": "Slib zní jednoduše: víc peněz pro zdravotnictví, víc sester, víc lékařů, a problém se vyřeší. Jenže do ordinace praktického lékaře nikoho nedosadíte vyhláškou ani rozpočtovou kapitolou – musí se napřed narodit, vystudovat a hlavně chtít v ordinaci zůstat. A čas, který na to máme, se nepočítá na volební období, ale na roky, které už uplynuly.",
+        "textAfter": "Do roku 2035 odejde do důchodu víc než polovina praktických lékařů pro dospělé – u dětských lékařů je na tom podobně už čtvrtina dnešních ordinací. Není to selhání rozpočtu, je to demografie lékařského sboru, kterou jednorázová investice nezvrátí. Otázka pro budoucí premiérku tedy nezní, kolik peněz uvolnit, ale jak rychle rozšířit kompetence sester a telemedicínu dřív, než ordinace v menších městech jedna po druhé zhasnou."
       },
       "articles": [
         {
@@ -83,6 +93,11 @@
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/04.svg"
       },
+      "intro": {
+        "title": "Léto, které nezapomenete? Česko se ohřívá dvakrát rychleji než svět aneb Sucho nepřichází z nebe",
+        "textBefore": "Léto 2024 v Česku nebylo jen o rekordních teplotách v titulcích zpráv o počasí – bylo o 544 lidech, kteří v jeho důsledku zemřeli. Klimatickou změnu si dlouho představujeme jako vzdálenou hrozbu pro budoucí generace, ledovce a tání na druhém konci světa. Realita je prozaičtější a bližší: je to horko, které cítíme přímo tady, a které se zhoršuje rychleji, než kdo čekal.",
+        "textAfter": "Česko se otepluje zhruba dvakrát rychleji než planeta jako celek – a sucho, které z toho plyne, není primárně o tom, že by méně pršelo. Je o tom, že voda se z přehřáté krajiny vypaří dřív, než ji stihneme využít. Otázka pro budoucí premiérku tedy nezní, jak zastavit klima, ale jak rychle adaptovat budovy, krajinu a horké ostrovy měst na svět, který už nečeká."
+      },
       "articles": [
         {
           "slug": "01-sucho",
@@ -117,6 +132,11 @@
         "slug": "one-pager",
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/05.svg"
+      },
+      "intro": {
+        "title": "Kolik stojí sestřelit dron za dvacet tisíc? Matematika, kterou prohráváme aneb Past ekonomické asymetrie",
+        "textBefore": "Bezpečnost se v politické debatě často redukuje na otázku, kolik stíhačů a tanků si pořídíme. Jenže moderní válka se čím dál víc nerozhoduje jen na bitevním poli, ale v účetnictví – v tom, kdo dřív dojde peněz. A tady má současná architektura obrany problém, který se nedá vyřešit jedním nákupem zbraní.",
+        "textAfter": "Útočný dron typu Shahed stojí kolem dvacet až osmdesát tisíc dolarů. Raketa, která ho musí sestřelit, stojí miliony. V konfliktu, kde protivník posílá vlny levných dronů, dojdou Západu peníze dřív, než protivníkovi drony. Otázka pro budoucí premiérku proto nezní jen, kolik procent HDP dát na obranu, ale jak rychle vybudovat levné prostředky obrany, než se z nákladové asymetrie stane vojenská prohra."
       },
       "articles": [
         {
@@ -153,6 +173,11 @@
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/06.svg"
       },
+      "intro": {
+        "title": "Bojíme se AI, nebo se bojíme špatné věci? Čeští pracovníci jsou klidní, ale nepřipravení aneb Paradox nebezpečného klidu",
+        "textBefore": "Když se řekne umělá inteligence a práce, debata se obvykle stočí ke strachu, že nám AI vezme místa. Čeští pracovníci se ale podle dat bojí automatizace nejméně ze sledovaných zemí OECD. Problém je, že právě česká pracovní síla má strukturu, která je vůči automatizaci nejzranitelnější.",
+        "textAfter": "Téměř 35 % české zaměstnanosti je v profesích s vysokým rizikem automatizace – víc než průměr OECD. Přesto se ztráty práce kvůli AI bojí jen 7 % lidí, nejméně ze sledovaných zemí. Tahle falešná jistota transformaci nezastaví, jen nás na ni nechává nepřipravené. Otázka pro budoucí premiérku tedy nezní, jak AI zabránit, ale jak rychle rekvalifikovat 2,2 milionu lidí, než to za nás vyřeší trh sám – a bolestněji."
+      },
       "articles": [
         {
           "slug": "01-paradox",
@@ -187,6 +212,11 @@
         "slug": "one-pager",
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/07.svg"
+      },
+      "intro": {
+        "title": "Kdo dostává dotace, které nikdo nevidí? Jedno procento, čtyřicet procent peněz aneb Capture nezačíná obálkou",
+        "textBefore": "Korupci si nejčastěji představujeme jako úředníka, který si nechá zaplatit za razítko. Skutečná koncentrace moci v Česku vypadá jinak, a je nenápadnější – odehrává se v technických parametrech dotačních programů a veřejných zakázek, které píšou ti, kdo z nich budou čerpat.",
+        "textAfter": "V rámci Společné zemědělské politiky EU dostává jedno procento nejbohatších příjemců až 40 % všech vyplacených peněz. V Česku to ztělesňuje jediný holding, který za sedm let na investičních dotacích vybral přes 14 miliard korun. State capture nezačíná obálkou s penězi, začíná pravidly hry – a tu otázku si budoucí premiérka musí položit jako první: kdo psal podmínky, ze kterých teď čerpá?"
       },
       "articles": [
         {
@@ -223,6 +253,11 @@
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/08.svg"
       },
+      "intro": {
+        "title": "Kolik platů stojí byt v Praze? Patnáct a půl aneb Krize bydlení není o spekulantech",
+        "textBefore": "Debata o nedostupném bydlení se obvykle stočí k vinění spekulantů a fondů, které kupují byty na investici. Jenže za cenou bytu v Praze nestojí primárně chování kupujících – stojí za ní tvrdý, měřitelný deficit v tom, kolik bytů se vůbec staví.",
+        "textAfter": "Průměrná rodina musí na byt v Praze vydělávat skoro šestnáct hrubých ročních mezd – třetí nejhorší poměr v Evropě po Amsterdamu a Aténách. Praha přitom dlouhodobě nestaví ani tolik bytů, kolik si sama stanovila jako cíl. Otázka pro budoucí premiérku tedy nezní, jak zkrotit spekulanty, ale jak zkrátit cestu od pozemku k hotovému bytu, která dnes trvá skoro deset let."
+      },
       "articles": [
         {
           "slug": "01-platy",
@@ -257,6 +292,11 @@
         "slug": "one-pager",
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/09.svg"
+      },
+      "intro": {
+        "title": "Jsme rovnostářská země? Jen v zrcadle, které si sami vyrobili aneb Geografie úpadku",
+        "textBefore": "Česko se rádo chlubí nízkou nerovností – a v národním srovnání na tom skutečně není špatně. To srovnání ale používá vlastní, nízký medián jako měřítko. Stačí přiložit evropské pravítko, a obrázek se změní.",
+        "textAfter": "Pokud bychom místo českého mediánu použili jednotný evropský příjmový práh, pod něj by spadlo přes 40 % českých domácností. Nízká celostátní nerovnost zároveň maskuje mikroregiony, kde je v exekuci až polovina dospělých obyvatel. Otázka pro budoucí premiérku tedy nezní, jak udržet hezké národní číslo, ale jak řešit propadlé regiony, které se v průměru ztrácí."
       },
       "articles": [
         {
@@ -293,6 +333,11 @@
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/10.svg"
       },
+      "intro": {
+        "title": "Jsme digitální tygr, nebo jen velká faktura? Stát utratil padesát miliard a cíl stejně nesplnil aneb Iluze digitálního tygra",
+        "textBefore": "Když přijde řeč na digitalizaci státu, slyšíme dvě verze příběhu: že Češi na nové technologie nejsou připraveni, nebo že stát potřebuje jen víc peněz. Ani jedna verze nesedí s tím, co ukazují data.",
+        "textAfter": "Téměř sedm z deseti Čechů má nadprůměrné digitální dovednosti – víc než průměr EU. Problémem nejsou lidé, je to architektura: nové portály se stavějí nad starými databázemi bez sdílených standardů, a tak i přes desítky miliard korun investic zákonný cíl plné digitalizace k únoru 2025 nebyl naplněn. Otázka pro budoucí premiérku tedy nezní, jak přesvědčit lidi k digitálu, ale jak konečně sjednotit základ, na kterém se dá stavět."
+      },
       "articles": [
         {
           "slug": "01-egov",
@@ -328,6 +373,11 @@
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/11.svg"
       },
+      "intro": {
+        "title": "Jsme v troskách, nebo nadprůměrní? Obojí najednou aneb Vzdělání, které tiše ztrácí náskok",
+        "textBefore": "O českém školství se v posledních letech mluví hlavně jako o krizi – inkluze, přetížení učitelé, propad výsledků v mezinárodních testech. Realita je míň dramatická a zároveň znepokojivější: nejsme v troskách, ale pomalu a nenápadně ztrácíme náskok, který jsme měli.",
+        "textAfter": "Česko je v matematice stále nad průměrem OECD, jenže od roku 2003 jsme ztratili skoro třicet bodů – a třetina učitelů odejde za deset let do důchodu. Otázka pro budoucí premiérku tedy nezní, jak zachránit propadající se systém, ale jak udržet kvalitu, kterou ještě máme, dřív, než nám fyzicky dojdou učitelé, kteří ji předávají."
+      },
       "articles": [
         {
           "slug": "01-pisa",
@@ -362,6 +412,11 @@
         "slug": "one-pager",
         "sourceFile": "PM_ONE_PAGER_v2.md",
         "logo": "/dpbp/chapters/12.svg"
+      },
+      "intro": {
+        "title": "Komu nevěříme? Politikům, sobě navzájem, i zprávám aneb Podhoubí pro cizí vlivové operace",
+        "textBefore": "Debata o dezinformacích se obvykle soustředí na jednotlivé lži a na to, kdo je šíří. Skutečné riziko ale není jedna virální lež – je to půda, na které se jí daří. A ta půda je v Česku připravená dávno před tím, než se objeví první falešný titulek.",
+        "textAfter": "91 % Čechů nevěří, že politici plní své sliby. Taková hluboká skepse vůči institucím je přesně to prostředí, ve kterém se jakákoliv zahraniční vlivová operace šíří nejsnáz – nemusí přesvědčovat, jen potvrzovat to, čemu lidé už věří. Otázka pro budoucí premiérku tedy nezní, jak vyvracet jednotlivé lži, ale jak obnovit důvěru v instituce, která dezinformace dělá neúčinnými."
       },
       "articles": [
         {

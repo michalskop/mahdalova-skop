@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { Container, Title, Text, Box } from '@mantine/core';
 import ImpactCard, { type ImpactCardData } from '@/components/dpbp/ImpactCard';
 import DpbpArticleCard from '@/components/dpbp/DpbpArticleCard';
+import VegaChart from '@/components/dpbp/VegaChart';
 import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
@@ -26,6 +27,7 @@ interface ChapterMeta {
   cardOrder: string[];
   onePager: { slug: string; logo: string | null } | null;
   articles: Array<{ slug: string; primaryChart: string }>;
+  intro?: { title: string; textBefore: string; textAfter: string };
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -87,6 +89,8 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
     const chartSpec = loadChartSpec(a.primaryChart);
     return { ...a, fm, chartSpec };
   });
+  const introCard = meta.intro ? loadCard(params.chapter, meta.cardOrder[0]) : null;
+  const introChartSpec = meta.intro ? loadChartSpec(meta.articles[0]?.primaryChart) : null;
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
@@ -118,6 +122,40 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
       </Box>
 
       <Container size="md" style={{ padding: '0 16px' }}>
+        {/* Intro: titulek → text → číslo v boxu → text → graf */}
+        {meta.intro && (
+          <Box style={{ paddingTop: 32 }}>
+            <Title order={2} style={{
+              fontFamily: 'Roboto Slab, Georgia, serif',
+              fontSize: '1.6rem',
+              fontWeight: 700,
+              color: '#1a1a1a',
+              lineHeight: 1.25,
+              marginBottom: 16,
+            }}>
+              {meta.intro.title}
+            </Title>
+            <Text style={{
+              fontFamily: 'Roboto Slab, Georgia, serif',
+              fontSize: 16,
+              lineHeight: 1.65,
+              color: '#2a2a2a',
+            }}>
+              {meta.intro.textBefore}
+            </Text>
+            {introCard && <ImpactCard card={introCard} />}
+            <Text style={{
+              fontFamily: 'Roboto Slab, Georgia, serif',
+              fontSize: 16,
+              lineHeight: 1.65,
+              color: '#2a2a2a',
+            }}>
+              {meta.intro.textAfter}
+            </Text>
+            {introChartSpec && <VegaChart spec={introChartSpec} />}
+          </Box>
+        )}
+
         {/* One-pager — navy, small top gap */}
         {onePagerFm && meta.onePager && (
           <Box style={{ paddingTop: 32 }}>

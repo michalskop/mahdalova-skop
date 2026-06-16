@@ -305,6 +305,7 @@ for (const ch of CHAPTERS) {
       slug: a.slug,
       primaryChart: a.primaryChart,
     })),
+    ...(ch.intro ? { intro: ch.intro } : {}),
   };
   fs.writeFileSync(path.join(chOut, '_meta.json'), JSON.stringify(meta, null, 2));
   console.log(`  [${ch.id}] _meta.json`);

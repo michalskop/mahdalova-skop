@@ -27,5 +27,10 @@
       "slug": "03-tech-dluh",
       "primaryChart": "DIGI_CYBER_INCIDENTS_03"
     }
-  ]
+  ],
+  "intro": {
+    "title": "Jsme digitální tygr, nebo jen velká faktura? Stát utratil padesát miliard a cíl stejně nesplnil aneb Iluze digitálního tygra",
+    "textBefore": "Když přijde řeč na digitalizaci státu, slyšíme dvě verze příběhu: že Češi na nové technologie nejsou připraveni, nebo že stát potřebuje jen víc peněz. Ani jedna verze nesedí s tím, co ukazují data.",
+    "textAfter": "Téměř sedm z deseti Čechů má nadprůměrné digitální dovednosti – víc než průměr EU. Problémem nejsou lidé, je to architektura: nové portály se stavějí nad starými databázemi bez sdílených standardů, a tak i přes desítky miliard korun investic zákonný cíl plné digitalizace k únoru 2025 nebyl naplněn. Otázka pro budoucí premiérku tedy nezní, jak přesvědčit lidi k digitálu, ale jak konečně sjednotit základ, na kterém se dá stavět."
+  }
 }

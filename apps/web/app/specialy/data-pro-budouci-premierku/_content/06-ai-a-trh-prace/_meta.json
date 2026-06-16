@@ -27,5 +27,10 @@
       "slug": "03-reskilling",
       "primaryChart": "CHART_RESKILLING_GAP"
     }
-  ]
+  ],
+  "intro": {
+    "title": "Bojíme se AI, nebo se bojíme špatné věci? Čeští pracovníci jsou klidní, ale nepřipravení aneb Paradox nebezpečného klidu",
+    "textBefore": "Když se řekne umělá inteligence a práce, debata se obvykle stočí ke strachu, že nám AI vezme místa. Čeští pracovníci se ale podle dat bojí automatizace nejméně ze sledovaných zemí OECD. Problém je, že právě česká pracovní síla má strukturu, která je vůči automatizaci nejzranitelnější.",
+    "textAfter": "Téměř 35 % české zaměstnanosti je v profesích s vysokým rizikem automatizace – víc než průměr OECD. Přesto se ztráty práce kvůli AI bojí jen 7 % lidí, nejméně ze sledovaných zemí. Tahle falešná jistota transformaci nezastaví, jen nás na ni nechává nepřipravené. Otázka pro budoucí premiérku tedy nezní, jak AI zabránit, ale jak rychle rekvalifikovat 2,2 milionu lidí, než to za nás vyřeší trh sám – a bolestněji."
+  }
 }

@@ -27,5 +27,10 @@
       "slug": "03-digital",
       "primaryChart": ""
     }
-  ]
+  ],
+  "intro": {
+    "title": "Kdo vás bude léčit za deset let? Polovina praktiků míří do důchodu aneb Soumrak rodinného lékaře",
+    "textBefore": "Slib zní jednoduše: víc peněz pro zdravotnictví, víc sester, víc lékařů, a problém se vyřeší. Jenže do ordinace praktického lékaře nikoho nedosadíte vyhláškou ani rozpočtovou kapitolou – musí se napřed narodit, vystudovat a hlavně chtít v ordinaci zůstat. A čas, který na to máme, se nepočítá na volební období, ale na roky, které už uplynuly.",
+    "textAfter": "Do roku 2035 odejde do důchodu víc než polovina praktických lékařů pro dospělé – u dětských lékařů je na tom podobně už čtvrtina dnešních ordinací. Není to selhání rozpočtu, je to demografie lékařského sboru, kterou jednorázová investice nezvrátí. Otázka pro budoucí premiérku tedy nezní, kolik peněz uvolnit, ale jak rychle rozšířit kompetence sester a telemedicínu dřív, než ordinace v menších městech jedna po druhé zhasnou."
+  }
 }

@@ -233,10 +233,34 @@ The web sync and the book build are **independent** — they both read the same 
 | `articles[].sourceFile` | Filename inside `03_primary_content/` |
 | `articles[].primaryChart` | Chart ID shown as the article card thumbnail (pubName, no `_v1`) |
 | `articles[].charts` | Source chart filenames to copy (include version suffix, e.g. `CHART_X_v1`) |
+| `intro.title` | Headline for the chapter intro block (see "Landing page structure" below) |
+| `intro.textBefore` | Intro paragraph #1 — frames the common/political assumption |
+| `intro.textAfter` | Intro paragraph #2 — the actual finding, reframing `textBefore` against the number/chart |
 
 **Impact cards** (`cardOrder`) are no longer in `dpbp-config.json` — they come from `BOOK.md` automatically.
 
+**`intro` is optional.** Omit it for a chapter and the intro block simply doesn't render — the page falls back to just the one-pager card + article pairs.
+
 **Pinning versions:** Update `sourceFile` here when you want to publish a new version. The source project can have newer drafts that are not yet published on the web.
+
+---
+
+## Landing page structure
+
+Every chapter landing page (`/specialy/data-pro-budouci-premierku/{chapter}`, rendered by `[chapter]/page.tsx`) follows the same fixed structure top to bottom. This applies uniformly across all chapters — when adding a new chapter, replicate this exact order rather than improvising a new layout.
+
+1. **Header (banner)** — full-bleed navy (`#101432`) box. Breadcrumb "Data pro budoucí premiérku · Kapitola {id}" (crimson `#de1743` link, inverts to navy-on-crimson on hover/focus), chapter title in `#f8f6f0` (`Roboto Slab`, `2rem`, `800`), and a 48×3px accent rule in the chapter's brand color.
+2. **Titulek** — `intro.title` from `dpbp-config.json`. A provocative, story-driven headline: `[short question]? [twist] aneb [tagline]`. Not the chapter name again — a hook specific to the chapter's central tension.
+3. **Text (problem framing)** — `intro.textBefore`. One paragraph, narrative, grounded in a real quote/promise/common assumption. Write like Ezra Klein or Tomáš Němeček: a flowing scene or argument, not a bullet list, that sets up what people *think* is going on.
+4. **Číslo v boxu (number box)** — the chapter's first `ImpactCard` (`cardOrder[0]`), reused as-is — no separate component needed; its big-number layout already matches this slot.
+5. **Text (reframe)** — `intro.textAfter`. The actual finding: takes the number from step 4 and uses it to overturn or complicate the framing from step 3, closing with what the real question for "budoucí premiérka" should be.
+6. **První graf (first chart)** — the first article's chart (`articles[0].primaryChart`), rendered full-size via `<VegaChart spec={...} />` (not `mini`).
+
+After step 6, the page continues with the one-pager card and paired article cards/impact cards — that part is unchanged and out of scope for the intro block.
+
+**Writing intro text:** Don't invent new claims — adapt language and findings already published in the chapter's `PM_ONE_PAGER_v2.md` / `DIST_ARTICLE_*.md` / impact card descriptions in the source project. The point is tone (engaging, narrative, fact-anchored), not new research.
+
+**Chapter 02 (Demografie) is the one exception**: it predates this system and lives as a standalone article (`app/clanek/_articles/data-pro-budouci-premierku-02-demografie/demografie-hub.html`) with `htmlInclude`, not in `_content/`. It replicates the same visual structure (steps 1–6) by hand in raw HTML/CSS rather than through `dpbp-config.json` — keep both in sync manually if the shared styling (header colors, hover states, card transitions) changes.
 
 ---
 

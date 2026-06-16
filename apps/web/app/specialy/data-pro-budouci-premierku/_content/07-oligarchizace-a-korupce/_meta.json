@@ -27,5 +27,10 @@
       "slug": "03-transparency",
       "primaryChart": "GRAF_07_LOBBY_FLOW"
     }
-  ]
+  ],
+  "intro": {
+    "title": "Kdo dostává dotace, které nikdo nevidí? Jedno procento, čtyřicet procent peněz aneb Capture nezačíná obálkou",
+    "textBefore": "Korupci si nejčastěji představujeme jako úředníka, který si nechá zaplatit za razítko. Skutečná koncentrace moci v Česku vypadá jinak, a je nenápadnější – odehrává se v technických parametrech dotačních programů a veřejných zakázek, které píšou ti, kdo z nich budou čerpat.",
+    "textAfter": "V rámci Společné zemědělské politiky EU dostává jedno procento nejbohatších příjemců až 40 % všech vyplacených peněz. V Česku to ztělesňuje jediný holding, který za sedm let na investičních dotacích vybral přes 14 miliard korun. State capture nezačíná obálkou s penězi, začíná pravidly hry – a tu otázku si budoucí premiérka musí položit jako první: kdo psal podmínky, ze kterých teď čerpá?"
+  }
 }
