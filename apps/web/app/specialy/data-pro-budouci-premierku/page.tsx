@@ -188,27 +188,21 @@ const G_DEMO = <>
 // 03 Zdravotnictví a péče — zdvojené H
 const G03 = <>
   <g fill="#5e66d5">
-    <circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/>
-    <circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/>
-    <circle cx={55} cy={70} r={4.5}/><circle cx={70} cy={70} r={4.5}/>
-    <circle cx={55} cy={85} r={4.5}/><circle cx={70} cy={85} r={4.5}/>
-    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/>
-    <circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/>
-    <circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/>
-    <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/>
-    <circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/>
-    <circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/>
-    <circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
-    <circle cx={130} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/>
-    <circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
-    <circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
-    <circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
-    <circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
-    <circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
-    <circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/>
-    <circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/>
+    <circle cx={40} cy={40} r={4.5}/><circle cx={55} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/><circle cx={160} cy={40} r={4.5}/>
+    <circle cx={25} cy={55} r={4.5}/><circle cx={40} cy={55} r={4.5}/><circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={55} r={4.5}/><circle cx={175} cy={55} r={4.5}/>
+    <circle cx={25} cy={70} r={4.5}/><circle cx={40} cy={70} r={4.5}/><circle cx={55} cy={70} r={4.5}/><circle cx={70} cy={70} r={4.5}/><circle cx={85} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/><circle cx={130} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/><circle cx={160} cy={70} r={4.5}/><circle cx={175} cy={70} r={4.5}/>
+    <circle cx={25} cy={85} r={4.5}/><circle cx={40} cy={85} r={4.5}/><circle cx={55} cy={85} r={4.5}/><circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/><circle cx={160} cy={85} r={4.5}/><circle cx={175} cy={85} r={4.5}/>
+    <circle cx={25} cy={100} r={4.5}/><circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/><circle cx={175} cy={100} r={4.5}/>
+    <circle cx={40} cy={115} r={4.5}/><circle cx={55} cy={115} r={4.5}/><circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/><circle cx={160} cy={115} r={4.5}/>
+    <circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
+    <circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/>
+    <circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/>
+  </g>
+  {/* bílý kříž uprostřed srdce */}
+  <g fill="#fdfbf7">
+    <circle cx={100} cy={85} r={4.5}/>
     <circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/>
-    <circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/>
+    <circle cx={100} cy={115} r={4.5}/>
   </g>
 </>;
 
