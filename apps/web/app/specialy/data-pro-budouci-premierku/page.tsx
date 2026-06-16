@@ -170,6 +170,7 @@ const G_DEMO = <>
     <circle cx={92.5} cy={123} r={4.5}/><circle cx={77.5} cy={123} r={4.5}/><circle cx={62.5} cy={123} r={4.5}/>
     <circle cx={92.5} cy={142} r={4.5}/><circle cx={77.5} cy={142} r={4.5}/><circle cx={62.5} cy={142} r={4.5}/>
     <circle cx={92.5} cy={161} r={4.5}/><circle cx={77.5} cy={161} r={4.5}/><circle cx={62.5} cy={161} r={4.5}/><circle cx={47.5} cy={161} r={4.5}/>
+    <circle cx={92.5} cy={180} r={4.5}/><circle cx={77.5} cy={180} r={4.5}/>
   </g>
   <g fill="#de1743">
     <circle cx={107.5} cy={28} r={4.5}/>
@@ -180,6 +181,7 @@ const G_DEMO = <>
     <circle cx={107.5} cy={123} r={4.5}/><circle cx={122.5} cy={123} r={4.5}/><circle cx={137.5} cy={123} r={4.5}/>
     <circle cx={107.5} cy={142} r={4.5}/><circle cx={122.5} cy={142} r={4.5}/><circle cx={137.5} cy={142} r={4.5}/>
     <circle cx={107.5} cy={161} r={4.5}/><circle cx={122.5} cy={161} r={4.5}/><circle cx={137.5} cy={161} r={4.5}/><circle cx={152.5} cy={161} r={4.5}/>
+    <circle cx={107.5} cy={180} r={4.5}/><circle cx={122.5} cy={180} r={4.5}/>
   </g>
 </>;
 
