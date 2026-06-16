@@ -7,6 +7,7 @@ import { Container, Title, Text, Box } from '@mantine/core';
 import ImpactCard, { type ImpactCardData } from '@/components/dpbp/ImpactCard';
 import DpbpArticleCard from '@/components/dpbp/DpbpArticleCard';
 import VegaChart from '@/components/dpbp/VegaChart';
+import ProfileHead from '@/components/dpbp/ProfileHead';
 import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
@@ -97,9 +98,20 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
       {/* Chapter header */}
       <Box style={{ background: '#101432', padding: '48px 0 40px' }}>
         <Container size="md">
-          <Text size="xs" style={{ color: '#f8f6f0', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
-            <Link href="/specialy/data-pro-budouci-premierku" className="dpbp-crumb-link" style={{ textDecoration: 'none' }}>Data pro budoucí premiérku</Link> · Kapitola {meta.id}
-          </Text>
+          <Box className="dpbp-chapter-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24 }}>
+            <Box style={{ minWidth: 0 }}>
+              <Text size="xs" style={{ color: '#f8f6f0', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
+                <Link href="/specialy/data-pro-budouci-premierku" className="dpbp-crumb-link" style={{ textDecoration: 'none' }}>Data pro budoucí premiérku</Link> · Kapitola {meta.id}
+              </Text>
+              <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '2rem', fontWeight: 800, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
+                {meta.title}
+              </Title>
+              <Box style={{ width: 48, height: 3, background: meta.accent, marginTop: 16 }} />
+            </Box>
+            <Box className="dpbp-chapter-head-profile" style={{ flex: '0 0 auto' }}>
+              <ProfileHead style={{ maxHeight: 120, width: 'auto', display: 'block' }} />
+            </Box>
+          </Box>
           <style>{`
             .dpbp-crumb-link {
               color: #de1743;
@@ -113,11 +125,10 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               background-color: #de1743;
               color: #101432;
             }
+            @media (max-width: 768px) {
+              .dpbp-chapter-head-profile { display: none; }
+            }
           `}</style>
-          <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'Roboto Slab, serif', fontSize: '2rem', fontWeight: 800 }}>
-            {meta.title}
-          </Title>
-          <Box style={{ width: 48, height: 3, background: meta.accent, marginTop: 16 }} />
         </Container>
       </Box>
 

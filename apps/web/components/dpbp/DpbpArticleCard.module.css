@@ -60,16 +60,18 @@
 }
 
 .title {
-  font-family: 'Roboto Slab', Georgia, serif;
+  font-family: var(--font-roboto-slab), Georgia, serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.18;
   color: #1a1a1a;
   margin: 0 0 8px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .desc {
-  font-family: 'Roboto Slab', Georgia, serif;
+  font-family: var(--font-roboto-slab), Georgia, serif;
   font-size: 13.5px;
   color: #555;
   line-height: 1.55;

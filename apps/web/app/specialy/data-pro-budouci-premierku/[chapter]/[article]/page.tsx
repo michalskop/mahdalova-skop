@@ -83,7 +83,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
               {chapterMeta?.title ?? 'Kapitola'}
             </Link>
           </Text>
-          <Title order={1} style={{ color: '#ffffff', fontFamily: 'Roboto Slab, serif', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1.2 }}>
+          <Title order={1} style={{ color: '#ffffff', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1.2, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
             {fm.title}
           </Title>
           <Box style={{ width: 40, height: 3, background: chapterMeta?.accent ?? '#de1743', marginTop: 16, marginBottom: 16 }} />

@@ -12,13 +12,15 @@
 }
 
 .num {
-  font-family: 'Roboto Slab', Georgia, serif;
+  font-family: var(--font-roboto-slab), Georgia, serif;
   font-size: 44px;
   font-weight: 800;
   color: #de1743; /* overridden per card via inline style */
   line-height: 1;
   font-variant-numeric: lining-nums tabular-nums;
   white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .unit {
@@ -35,7 +37,7 @@
 }
 
 .text {
-  font-family: 'Roboto Slab', Georgia, serif;
+  font-family: var(--font-roboto-slab), Georgia, serif;
   font-size: 14px;
   color: #444;
   line-height: 1.55;

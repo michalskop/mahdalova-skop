@@ -3,13 +3,7 @@
 
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Roboto_Slab } from 'next/font/google';
-
-const robotoSlab = Roboto_Slab({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-roboto-slab',
-});
+import { robotoSlab } from '../fonts';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
