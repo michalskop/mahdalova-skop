@@ -45,7 +45,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Dezinformace", "Demokratický dialog"],
-        "range": ["#e63946", "#457b9d"]
+        "range": ["#de1743", "#0e839e"]
       },
       "legend": {
         "title": null,

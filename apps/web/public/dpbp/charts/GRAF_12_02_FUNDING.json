@@ -63,7 +63,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Reklama", "Dary", "Spolky", "Produkce"],
-            "range": ["#e63946", "#f4a261", "#a8dadc", "#457b9d"]
+            "range": ["#de1743", "#f76800", "#0e839e", "#4a51ab"]
           },
           "legend": null
         },

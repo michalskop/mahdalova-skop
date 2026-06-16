@@ -124,7 +124,12 @@ function mkdir(p) {
  * - Build YAML frontmatter
  */
 function transformArticle(raw, articleCfg, chapterCfg) {
-  let text = raw;
+  // Normalize CRLF → LF first — source files are sometimes saved with Windows
+  // line endings, which breaks every regex below that matches a literal \n
+  // (e.g. the chart-placeholder fence below silently fails to match and the
+  // raw ```markdown fence + placeholder text leaks onto the page instead of
+  // becoming a <VegaChart>).
+  let text = raw.replace(/\r\n/g, '\n');
 
   // ── Extract title from H1 ──────────────────────────────────────────────────
   const titleMatch = text.match(/^#[^\n]+?:\s*(.+)$/m);
@@ -160,6 +165,15 @@ function transformArticle(raw, articleCfg, chapterCfg) {
     (_, chartId) => `<VegaChart chartId="${chartId}" />\n`
   );
 
+  // ── Safety net: unwrap a stray ```markdown fence directly around a
+  // <VegaChart /> tag. Catches any chart-placeholder formatting variant the
+  // two replacements above don't anticipate, so a fence never leaks onto
+  // the live page as raw text instead of rendering a chart.
+  text = text.replace(
+    /```markdown\n(<VegaChart[^\n]*\/>)\n```/g,
+    (_, tag) => tag
+  );
+
   // ── Clean up excessive blank lines ────────────────────────────────────────
   text = text.replace(/\n{3,}/g, '\n\n').trim();
 
@@ -179,7 +193,8 @@ function transformArticle(raw, articleCfg, chapterCfg) {
 }
 
 function transformOnePager(raw, onePagerCfg, chapterCfg) {
-  let text = raw;
+  // Normalize CRLF → LF first — see comment in transformArticle.
+  let text = raw.replace(/\r\n/g, '\n');
 
   // ── Extract title from H1 (flexible — handles all known formats) ──────────
   // Formats seen:  # EXECUTIVE ONE-PAGER: Topic (V2)
