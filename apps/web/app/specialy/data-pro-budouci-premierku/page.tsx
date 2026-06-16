@@ -157,27 +157,29 @@ const G01 = <>
   </g>
 </>;
 
-// 02 Demografie — populační pyramida
+// 02 Demografie — věková pyramida (tvar podle reálných dat: úzký vrchol 85+,
+// vyboulené patro 55–69 = silné poválečné ročníky, zúžení kolem 25–34,
+// mírné rozšíření u dětí 0–14)
 const G_DEMO = <>
   <g fill="#f76800">
-    <circle cx={92.5} cy={70} r={4.5}/>
-    <circle cx={92.5} cy={85} r={4.5}/><circle cx={77.5} cy={85} r={4.5}/>
-    <circle cx={92.5} cy={100} r={4.5}/><circle cx={77.5} cy={100} r={4.5}/><circle cx={62.5} cy={100} r={4.5}/>
-    <circle cx={92.5} cy={115} r={4.5}/><circle cx={77.5} cy={115} r={4.5}/><circle cx={62.5} cy={115} r={4.5}/><circle cx={47.5} cy={115} r={4.5}/>
-    <circle cx={92.5} cy={130} r={4.5}/><circle cx={77.5} cy={130} r={4.5}/><circle cx={62.5} cy={130} r={4.5}/><circle cx={47.5} cy={130} r={4.5}/><circle cx={32.5} cy={130} r={4.5}/>
-    <circle cx={92.5} cy={145} r={4.5}/><circle cx={77.5} cy={145} r={4.5}/><circle cx={62.5} cy={145} r={4.5}/><circle cx={47.5} cy={145} r={4.5}/><circle cx={32.5} cy={145} r={4.5}/><circle cx={17.5} cy={145} r={4.5}/>
+    <circle cx={92.5} cy={28} r={4.5}/>
+    <circle cx={92.5} cy={47} r={4.5}/><circle cx={77.5} cy={47} r={4.5}/>
+    <circle cx={92.5} cy={66} r={4.5}/><circle cx={77.5} cy={66} r={4.5}/><circle cx={62.5} cy={66} r={4.5}/>
+    <circle cx={92.5} cy={85} r={4.5}/><circle cx={77.5} cy={85} r={4.5}/><circle cx={62.5} cy={85} r={4.5}/><circle cx={47.5} cy={85} r={4.5}/><circle cx={32.5} cy={85} r={4.5}/><circle cx={17.5} cy={85} r={4.5}/>
+    <circle cx={92.5} cy={104} r={4.5}/><circle cx={77.5} cy={104} r={4.5}/><circle cx={62.5} cy={104} r={4.5}/><circle cx={47.5} cy={104} r={4.5}/><circle cx={32.5} cy={104} r={4.5}/>
+    <circle cx={92.5} cy={123} r={4.5}/><circle cx={77.5} cy={123} r={4.5}/><circle cx={62.5} cy={123} r={4.5}/>
+    <circle cx={92.5} cy={142} r={4.5}/><circle cx={77.5} cy={142} r={4.5}/>
+    <circle cx={92.5} cy={161} r={4.5}/><circle cx={77.5} cy={161} r={4.5}/><circle cx={62.5} cy={161} r={4.5}/><circle cx={47.5} cy={161} r={4.5}/>
   </g>
   <g fill="#de1743">
-    <circle cx={107.5} cy={70} r={4.5}/>
-    <circle cx={107.5} cy={85} r={4.5}/><circle cx={122.5} cy={85} r={4.5}/>
-    <circle cx={107.5} cy={100} r={4.5}/><circle cx={122.5} cy={100} r={4.5}/><circle cx={137.5} cy={100} r={4.5}/>
-    <circle cx={107.5} cy={115} r={4.5}/><circle cx={122.5} cy={115} r={4.5}/><circle cx={137.5} cy={115} r={4.5}/><circle cx={152.5} cy={115} r={4.5}/>
-    <circle cx={107.5} cy={130} r={4.5}/><circle cx={122.5} cy={130} r={4.5}/><circle cx={137.5} cy={130} r={4.5}/><circle cx={152.5} cy={130} r={4.5}/><circle cx={167.5} cy={130} r={4.5}/>
-    <circle cx={107.5} cy={145} r={4.5}/><circle cx={122.5} cy={145} r={4.5}/><circle cx={137.5} cy={145} r={4.5}/><circle cx={152.5} cy={145} r={4.5}/><circle cx={167.5} cy={145} r={4.5}/><circle cx={182.5} cy={145} r={4.5}/>
-  </g>
-  <g fill="rgba(255,255,255,0.1)">
-    <circle cx={92.5} cy={160} r={4.5}/><circle cx={77.5} cy={160} r={4.5}/><circle cx={62.5} cy={160} r={4.5}/><circle cx={47.5} cy={160} r={4.5}/><circle cx={32.5} cy={160} r={4.5}/><circle cx={17.5} cy={160} r={4.5}/>
-    <circle cx={107.5} cy={160} r={4.5}/><circle cx={122.5} cy={160} r={4.5}/><circle cx={137.5} cy={160} r={4.5}/><circle cx={152.5} cy={160} r={4.5}/><circle cx={167.5} cy={160} r={4.5}/><circle cx={182.5} cy={160} r={4.5}/>
+    <circle cx={107.5} cy={28} r={4.5}/>
+    <circle cx={107.5} cy={47} r={4.5}/><circle cx={122.5} cy={47} r={4.5}/>
+    <circle cx={107.5} cy={66} r={4.5}/><circle cx={122.5} cy={66} r={4.5}/><circle cx={137.5} cy={66} r={4.5}/>
+    <circle cx={107.5} cy={85} r={4.5}/><circle cx={122.5} cy={85} r={4.5}/><circle cx={137.5} cy={85} r={4.5}/><circle cx={152.5} cy={85} r={4.5}/><circle cx={167.5} cy={85} r={4.5}/><circle cx={182.5} cy={85} r={4.5}/>
+    <circle cx={107.5} cy={104} r={4.5}/><circle cx={122.5} cy={104} r={4.5}/><circle cx={137.5} cy={104} r={4.5}/><circle cx={152.5} cy={104} r={4.5}/><circle cx={167.5} cy={104} r={4.5}/>
+    <circle cx={107.5} cy={123} r={4.5}/><circle cx={122.5} cy={123} r={4.5}/><circle cx={137.5} cy={123} r={4.5}/>
+    <circle cx={107.5} cy={142} r={4.5}/><circle cx={122.5} cy={142} r={4.5}/>
+    <circle cx={107.5} cy={161} r={4.5}/><circle cx={122.5} cy={161} r={4.5}/><circle cx={137.5} cy={161} r={4.5}/><circle cx={152.5} cy={161} r={4.5}/>
   </g>
 </>;
 
