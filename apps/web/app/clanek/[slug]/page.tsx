@@ -78,12 +78,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 
 
+// Slugs moved to /specialy — excluded from /clanek/ route
+const EXCLUDED_SLUGS = [
+  'data-pro-budouci-premierku-02-demografie',
+  'data-pro-budouci-premierku-02-demografie-plodnost',
+];
+
 export async function generateStaticParams() {
   const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
   try {
     const articles = fs.readdirSync(articlesDirectory, { withFileTypes: true });
     const slugs = articles
-      .filter(dirent => dirent.isDirectory())
+      .filter(dirent => dirent.isDirectory() && !EXCLUDED_SLUGS.includes(dirent.name))
       .map(dirent => ({ slug: dirent.name }));
     return slugs;
   } catch (error) {
