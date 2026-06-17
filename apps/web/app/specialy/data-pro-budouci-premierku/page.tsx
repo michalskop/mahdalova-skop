@@ -411,7 +411,7 @@ const G12 = <>
 
 const CHAPTERS = [
   {n:'01',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/01-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#ffcf02',customSvg:G01},
-  {n:'02',title:'Demografie',href:'/clanek/data-pro-budouci-premierku-02-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
+  {n:'02',title:'Demografie',href:'/specialy/data-pro-budouci-premierku/02-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
   {n:'03',title:'Zdravotnictví a péče',href:'/specialy/data-pro-budouci-premierku/03-zdravotnictvi-a-pece',available:true,dots:D03,accent:'#5e66d5',customSvg:G03},
   {n:'04',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/04-klimaticka-zmena',available:true,dots:D04,accent:'#de1743',customSvg:G04},
   {n:'05',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/05-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#efb704',customSvg:G08},
