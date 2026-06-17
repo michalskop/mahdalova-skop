@@ -1,9 +1,9 @@
 ---
-title: "Dvě děti na ženu. Babiš slibuje zázrak, který nikdo na světě nesvedl - a nedokáže to ani on"
+title: "Vymíráme? Co se doopravdy děje s českou populací a proč samotná čísla k pochopení nestačí"
 date: "2026-03-30"
 author: "Kateřina Mahdalová & Michal Škop"
 slug: "data-pro-budouci-premierku-02-demografie-plodnost"
-excerpt: "Česká plodnost je nyní druhá nejnižší v naší moderní historii. Premiér Babiš to chce zvrátit, ale nemá šanci. Tzv. vymírání je totiž nová normalita skoro všude."
+excerpt: "Demografie není jen účetnictví narozených dětí. Je to zpráva o celkovém stavu společnosti. Pokud chceme pochopit současný historický propad, nestačí upírat zrak pouze na porodnice. Musíme číst mezi řádky: v datech o nedostupném bydlení, proměnách pracovního trhu, regionálních nerovnostech i tom, jak se proměnila samotná definice rodiny. Český vývoj navíc nelze izolovat – mění se totiž skladba celého západního světa."
 coverImage: "/images/data-pro-budouci-premierku-demografie-plodnost-3.webp"
 filter: ["data-pro-budouci-premierku", "demografie"]
 tags: ["demografie", "speciál", "data-pro-budouci-premierku", "seriál", "plodnost", "stárnutí populace", "ČSÚ"]
@@ -17,7 +17,7 @@ V pondělí 27. dubna 2026 se v Poslanecké sněmovně sešli experti a expertky
   <div class="dt-visual">
     <div class="dt-visual-kicker">Datový modul</div>
     <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
-    <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
+    <p class="dt-visual-note">dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři ženy) – to je odhadovaná úhrnná plodnost v Česku za rok 2025. Leží hluboko pod magickou hranicí 2,10, kterou chtějí Andrej Babiš a Alena Schillerová „zachránit" Česko před vymíráním, a padá dokonce pod nejpesimističtější scénář ČSÚ. V loňském roce se v Česku živě narodilo pouze 77,6 tisíce dětí. Jde o absolutní minimum v historii celoplošného statistického zjišťování, které na našem území probíhá od roku 1785.</p>
  
     <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku od roku 1990 do roku 2025 v pětiletých intervalech, hranice prosté reprodukce 2,10 dítěte na ženu">
       <line x1="72" y1="230" x2="810" y2="230" stroke="#101432" stroke-width="1"/>
@@ -35,25 +35,27 @@ V pondělí 27. dubna 2026 se v Poslanecké sněmovně sešli experti a expertky
       <line x1="72" y1="65" x2="810" y2="65" stroke="#1a9fbd" stroke-width="2" stroke-dasharray="5,4"/>
       <text x="804" y="57" font-size="12" fill="#1a9fbd" text-anchor="end" font-family="Roboto, system-ui, sans-serif" font-weight="700">hranice 2,10</text>
  
-      <path d="M72,96.5 L177,188 L283,209 L388,188 L494,156.5 L599,144.5 L705,123.5 L810,188"
-        fill="none" stroke="#de1743" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M72,96.5 L177,188 L283,209 L388,188 L494,156.5 L599,144.5 L705,123.5"
+        fill="none" stroke="#6267a3" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M705,123.5 L810,188"
+        fill="none" stroke="#de1743" stroke-width="3" stroke-dasharray="4,3" stroke-linejoin="round" stroke-linecap="round"/>
  
-      <circle cx="72"  cy="96.5"  r="4" fill="#de1743"/>
-      <circle cx="177" cy="188"   r="4" fill="#de1743"/>
-      <circle cx="283" cy="209"   r="4" fill="#de1743"/>
-      <circle cx="388" cy="188"   r="4" fill="#de1743"/>
-      <circle cx="494" cy="156.5" r="4" fill="#de1743"/>
-      <circle cx="599" cy="144.5" r="4" fill="#de1743"/>
-      <circle cx="705" cy="123.5" r="4" fill="#de1743"/>
+      <circle cx="72"  cy="96.5"  r="4" fill="#6267a3"/>
+      <circle cx="177" cy="188"   r="4" fill="#6267a3"/>
+      <circle cx="283" cy="209"   r="4" fill="#6267a3"/>
+      <circle cx="388" cy="188"   r="4" fill="#6267a3"/>
+      <circle cx="494" cy="156.5" r="4" fill="#6267a3"/>
+      <circle cx="599" cy="144.5" r="4" fill="#6267a3"/>
+      <circle cx="705" cy="123.5" r="4" fill="#6267a3"/>
       <circle cx="810" cy="188"   r="6" fill="#de1743"/>
  
-      <text x="72"  y="84"  font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,89</text>
-      <text x="177" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
-      <text x="283" y="225" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,14</text>
-      <text x="388" y="176" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
-      <text x="494" y="145" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,49</text>
-      <text x="599" y="133" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,57</text>
-      <text x="705" y="112" font-size="12" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,71</text>
+      <text x="72"  y="84"  font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,89</text>
+      <text x="177" y="176" font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
+      <text x="283" y="225" font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,14</text>
+      <text x="388" y="176" font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,28</text>
+      <text x="494" y="145" font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,49</text>
+      <text x="599" y="133" font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,57</text>
+      <text x="705" y="112" font-size="12" fill="#6267a3" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="700">1,71</text>
       <text x="810" y="176" font-size="13" fill="#de1743" text-anchor="middle" font-family="Roboto, system-ui, sans-serif" font-weight="800">1,28</text>
  
       <text x="72"  y="254" font-size="12" fill="#444" text-anchor="middle" font-family="Roboto, system-ui, sans-serif">1990</text>
@@ -72,6 +74,10 @@ V pondělí 27. dubna 2026 se v Poslanecké sněmovně sešli experti a expertky
 To samo o sobě není historické minimum plodnosti - v devadesátých letech klesla až na 1,13. Historický rekord leží jinde: v roce 2025 se živě narodilo 77 636 dětí, nejméně od roku 1785 - tedy od dob Josefa II., který zavedl celoplošné statistické zjišťování jako součást svých osvícenských reforem. Tentokrát se sešly dvě věci najednou - slabá plodnost a slabá generace potenciálních matek. Děti si dnes nejčastěji pořizují ženy narozené přibližně v letech 1990 až 2000. Jenže právě tato desetiletí jsou v porodních statistikách poznamenána postupným prudkým propadem - v důsledku ekonomické transformace po roce 1989 se rodilo citelně méně dětí než v předchozích dekádách. Žen v nejplodnějším věku je proto nyní výrazně méně. „Kromě výrazného poklesu plodnosti stojí za úbytkem narozených v posledních letech částečně i věková skladba současných rodiček," potvrzuje Terezie Štyglerová, vedoucí oddělení demografické statistiky ČSÚ.
 
 <div class="flourish-embed flourish-chart" data-src="visualisation/29223995"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29223995/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+### Za oponou demografického propadu
+
+Proč se křivka po nadějném růstu kolem roku 2015 znovu tak ostře zlomila? Zastánci jednoduchých politických hesel často ukazují prstem na neochotu mladé generace zakládat rodiny. Skutečné příčiny jsou ale strukturální. Vstupujeme do fáze, kdy se naplno projevuje vliv slábnoucích ročníků matek, narážíme na limity státní infrastruktury a čelíme fenoménu takzvaného intenzivního rodičovství. Slibovat za této situace rychlý návrat k reprodukční hranici 2,10 je čistě teoretická úvaha bez realistického základu.
 
 K tomu se přidává druhý důvod, který si zaslouží samostatnou pozornost: ochota mít děti vůbec citelně klesá. „Ocitli jsme se na prahu hodnotových změn, kdy se lidé nebudou rozhodovat jen o tom, kdy a kolik dětí budou mít, ale jestli vůbec založí rodinu," varovala začátkem roku 2026 demografka Jiřina Kocourková z Přírodovědecké fakulty UK. Příčina není jen ekonomická. „Děti se prostě přestaly hodit do moderního života," říká Kocourková. Na ekonomické bariéry se navrstvil takzvaný koncept intenzivního rodičovství - rodiče dnes do výchovy vkládají daleko více zdrojů a času než dříve, rozhodnutí mít dítě je proto pečlivěji zvažováno. Klíčovou roli přitom hraje stabilní partnerský vztah - bez něj se rodina zakládá jen těžko. A co je možná nejdůležitější pro politické rozhodování: „Nejhorší není ten přímý ekonomický dopad, když se nějaké prorodinné opatření zruší. Ale negativní signál, který se celé společnosti vydá a může mít dalekosáhlé a nezamýšlené důsledky na plánování rodiny."
 
