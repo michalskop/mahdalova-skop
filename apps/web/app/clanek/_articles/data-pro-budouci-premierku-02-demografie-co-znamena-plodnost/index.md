@@ -12,7 +12,7 @@ promoted: 32
 
 Číslo, kterým se leckdo ohání v politických debatách, ale málokdo zná jeho reálný obsah. Přitom ukazatel úhrnné plodnosti by nás měl zajímat víc než sliby o záchraně národa.
 
-Hodnota 1,28 znamená, že ženy za celý svůj reprodukční věk (statisticky vymezený intervalem 15 až 49 let) porodí průměrně méně než dvě děti. Lze to vyjádřit i tak, že na čtyři ženy připadá v průměru pět dětí.
+Aktuální hodnota 1,28 znamená, že ženy za celý svůj reprodukční věk (statisticky vymezený intervalem 15 až 49 let) porodí průměrně méně než dvě děti. Lze to vyjádřit i tak, že na čtyři ženy připadá v průměru pět dětí.
 
 To je oproti stavu před deseti lety drastický propad. Jestliže se nedávno česká společnost blížila k evropským průměrům, nyní se vracíme k hlubokému propadu z konce devadesátých let, kdy zakládání rodin brzdil ekonomický šok z transformace.
 
