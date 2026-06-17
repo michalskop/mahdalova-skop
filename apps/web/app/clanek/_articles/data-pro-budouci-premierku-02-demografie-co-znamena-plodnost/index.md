@@ -31,7 +31,7 @@ Podívejme se ale blíž na samotnou plodnost a to, co vlastně měří.
   <img src="/clanek/_articles/data-pro-budouci-premierku-02-demografie-co-znamena-plodnost/images/tempo-efekt.svg"
     alt="Schéma tempo efektu: ženy v roce 1995 rodily první dítě ve 22 letech, dnes ve 30"
     loading="lazy"
-    style="width:100%;display:block;">
+    style="width:100%;display:block;" />
   <p style="font-size:12px;color:#666;line-height:1.4;margin:6px 0 0;">Tempo efekt: posunutí věku rození dítěte způsobuje v daném roce pokles statistické plodnosti, i když ženy nakonec děti mít budou.</p>
 </div>
 
