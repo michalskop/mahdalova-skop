@@ -64,10 +64,15 @@ function SectionDivider({ accent }: { accent: string }) {
   );
 }
 
+// Chapters with dedicated static page.tsx files — excluded from dynamic generation
+// to prevent output file collision in `output: 'export'` builds.
+const STATIC_CHAPTER_ROUTES = new Set(['02-demografie']);
+
 export async function generateStaticParams() {
   if (!fs.existsSync(CONTENT_ROOT)) return [];
   return fs.readdirSync(CONTENT_ROOT)
     .filter(d => fs.statSync(path.join(CONTENT_ROOT, d)).isDirectory())
+    .filter(d => !STATIC_CHAPTER_ROUTES.has(d))
     .map(d => ({ chapter: d }));
 }
 

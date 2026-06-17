@@ -30,10 +30,15 @@ function loadChapterMeta(chapterSlug: string) {
   return JSON.parse(fs.readFileSync(p, 'utf8')) as { title: string; accent: string };
 }
 
+// Chapters with dedicated static page.tsx files — excluded from dynamic generation
+// to prevent output file collision in `output: 'export'` builds.
+const STATIC_CHAPTER_ROUTES = new Set(['02-demografie']);
+
 export async function generateStaticParams() {
   if (!fs.existsSync(CONTENT_ROOT)) return [];
   const params: Array<{ chapter: string; article: string }> = [];
   for (const chapter of fs.readdirSync(CONTENT_ROOT)) {
+    if (STATIC_CHAPTER_ROUTES.has(chapter)) continue;
     const articlesDir = path.join(CONTENT_ROOT, chapter, 'articles');
     if (!fs.existsSync(articlesDir)) continue;
     for (const file of fs.readdirSync(articlesDir)) {
