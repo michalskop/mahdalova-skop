@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import type { Metadata } from 'next';
+import { Box, Container } from '@mantine/core';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 
 export const metadata: Metadata = {
@@ -24,9 +25,13 @@ export default function DemografieHubPage() {
   const html = fs.readFileSync(htmlPath, 'utf8');
 
   return (
-    <RawHtmlEmbed
-      html={html}
-      assetBasePath="/clanek/_articles/data-pro-budouci-premierku-02-demografie"
-    />
+    <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
+      <Container size="md" style={{ padding: '0 16px' }}>
+        <RawHtmlEmbed
+          html={html}
+          assetBasePath="/clanek/_articles/data-pro-budouci-premierku-02-demografie"
+        />
+      </Container>
+    </Box>
   );
 }
