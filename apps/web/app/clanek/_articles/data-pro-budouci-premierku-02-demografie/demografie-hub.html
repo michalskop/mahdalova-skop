@@ -131,6 +131,12 @@
   display: block;
   margin-top: 4px;
 }
+.dt-hub p {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #2a2a2a;
+}
 .dt-section-h {
   font-family: 'Roboto Slab', Georgia, serif;
   font-size: 22px;
@@ -194,8 +200,12 @@
   width: auto;
   height: auto;
   flex: 0 0 33%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   align-self: stretch;
+}
+.dt-card--lead .dt-card-thumb img {
+  object-fit: contain;
+  background: var(--dt-soft);
 }
 .dt-card-thumb svg,
 .dt-card-thumb img {
@@ -752,7 +762,7 @@
     </div>
   </div>
 
-  <h2 class="dt-section-h">Vymíráme? Co se doopravdy děje s českou populací a proč samotná čísla k pochopení nestačí</h2>
+  <h2 class="dt-section-h">Vymíráme? Co se doopravdy děje s českou populací</h2>
 
   <p class="dt-lead">Demografie není jen účetnictví narozených dětí. Je to zpráva o celkovém stavu společnosti. Pokud chceme pochopit současný historický propad, nestačí upírat zrak pouze na porodnice. Musíme číst mezi řádky: v datech o nedostupném bydlení, proměnách pracovního trhu, regionálních nerovnostech i tom, jak se proměnila samotná definice rodiny. Český vývoj navíc nelze izolovat – mění se totiž skladba celého západního světa.</p>
 
@@ -784,7 +794,6 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
       </svg>
       <span>DataTimes.cz</span>
     </a>
-    <div class="dt-visual-kicker">Vývoj plodnosti</div>
     <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
     <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
 
@@ -856,13 +865,13 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
     </div>
   </div>
 
-  <h3 class="dt-section-h">Za oponou demografického propadu</h3>
-  <p>Proč se křivka po nadějném růstu kolem roku 2015 znovu tak ostře zlomila? Zastánci jednoduchých politických hesel často ukazují prstem na neochotu mladé generace zakládat rodiny. Skutečné příčiny jsou ale strukturální. Vstupujeme do fáze, kdy se naplno projevuje vliv slábnoucích ročníků matek, narážíme na limity státní infrastruktury a čelíme fenoménu takzvaného intenzivního rodičovství. Slibovat za této situace rychlý návrat k reprodukční hranici 2,10 je čistě teoretická úvaha bez realistického základu.</p>
+  <h3 class="dt-visual-title">Jak jsme se ocitli na historickém dně</h3>
+  <p>Proč se křivka po nadějném růstu v nultých a desátých letech znovu tak ostře zlomila? Zastánci jednoduchých politických hesel často ukazují prstem na neochotu mladé generace zakládat rodiny. Skutečné příčiny jsou ale strukturální. Vstupujeme do fáze, kdy se naplno projevuje vliv slábnoucích ročníků matek, narážíme na limity státní infrastruktury a čelíme fenoménu takzvaného intenzivního rodičovství. Slibovat za této situace rychlý návrat k reprodukční hranici 2,10 je čistě teoretická úvaha bez realistického základu.</p>
 
   <div class="dt-grid">
     <a class="dt-card dt-card--lead dt-card-link" href="/clanek/data-pro-budouci-premierku-02-demografie-plodnost">
       <div class="dt-card-thumb">
-        <img src="/images/data-pro-budouci-premierku-02-demografie-plodnost.webp"
+        <img src="/images/data-pro-budouci-premierku-02-demografie-plodnost-thumb.svg"
           alt="Dvě děti na ženu — obálka článku"
           loading="lazy">
       </div>
@@ -873,7 +882,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
         <div class="dt-card-meta">
           <span>Kateřina Mahdalová &amp; Michal Škop</span>
           <span aria-hidden="true">·</span>
-          <time datetime="2026-03-30">30. 3. 2026</time>
+          <time datetime="2026-04-30">30. 4. 2026</time>
         </div>
       </div>
     </a>

@@ -1,6 +1,6 @@
 ---
 title: "Dvě děti na ženu. Babiš slibuje zázrak, který nikdo na světě nesvedl - a nedokáže to ani on"
-date: "2026-03-30"
+date: "2026-04-30"
 author: "Kateřina Mahdalová & Michal Škop"
 slug: "data-pro-budouci-premierku-02-demografie-plodnost"
 excerpt: "Česká plodnost je nyní druhá nejnižší v naší moderní historii. Premiér Babiš to chce zvrátit, ale nemá šanci. Tzv. vymírání je totiž nová normalita skoro všude."
