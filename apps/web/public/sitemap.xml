@@ -115,14 +115,14 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie</loc>
-    <lastmod>2026-03-19T00:00:00.000Z</lastmod>
+    <loc>https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku/02-demografie</loc>
+    <lastmod>2026-06-17T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-plodnost</loc>
-    <lastmod>2026-03-30T00:00:00.000Z</lastmod>
+    <loc>https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku/02-demografie/plodnost</loc>
+    <lastmod>2026-04-30T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
