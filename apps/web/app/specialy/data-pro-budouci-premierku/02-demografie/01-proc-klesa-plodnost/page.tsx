@@ -1,4 +1,4 @@
-// app/specialy/data-pro-budouci-premierku/02-demografie/proc-klesa-plodnost/page.tsx
+// app/specialy/data-pro-budouci-premierku/02-demografie/01-proc-klesa-plodnost/page.tsx
 import { getArticleBySlug } from '@/lib/articles';
 import { ArticleRenderer } from '@/components/clanek/ArticleRenderer';
 import type { Metadata } from 'next';
@@ -10,11 +10,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: article.title,
     description: article.excerpt,
-    alternates: { canonical: '/specialy/data-pro-budouci-premierku/02-demografie/proc-klesa-plodnost' },
+    alternates: { canonical: '/specialy/data-pro-budouci-premierku/02-demografie/01-proc-klesa-plodnost' },
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      url: '/specialy/data-pro-budouci-premierku/02-demografie/proc-klesa-plodnost',
+      url: '/specialy/data-pro-budouci-premierku/02-demografie/01-proc-klesa-plodnost',
       type: 'article',
     },
   };
