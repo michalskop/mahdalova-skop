@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/05.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-hybridni-hrozby", "topic": "Explainer · Bezpečnost" },
+    { "slug": "svet-finsko-nato", "topic": "Bezpečnost · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-asymetrie",

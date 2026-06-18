@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/12.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-algoritmy", "topic": "Explainer · Média" },
+    { "slug": "svet-taiwan-dezinformace", "topic": "Média · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-algoritmy",

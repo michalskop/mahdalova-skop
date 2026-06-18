@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/07.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-state-capture", "topic": "Explainer · Korupce" },
+    { "slug": "svet-madarsko-koncentrace", "topic": "Oligarchizace · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-capture",

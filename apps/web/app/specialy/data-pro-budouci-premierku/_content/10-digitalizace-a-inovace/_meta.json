@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/10.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-technologicky-dluh", "topic": "Explainer · Digitalizace" },
+    { "slug": "svet-estonsko-digitat", "topic": "Digitalizace · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-egov",

@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/11.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-pisa", "topic": "Explainer · Vzdělávání" },
+    { "slug": "svet-polsko-vs-finsko", "topic": "Vzdělávání · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-pisa",

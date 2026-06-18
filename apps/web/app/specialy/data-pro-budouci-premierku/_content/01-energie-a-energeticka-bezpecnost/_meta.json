@@ -28,6 +28,10 @@
       "primaryChart": "CHART_NUCLEAR_DELAYS"
     }
   ],
+  "miniArticles": [
+    { "slug": "explainer-merit-order", "topic": "Explainer · Energie" },
+    { "slug": "svet-nemecko-energiewende", "topic": "Energie · Svět" }
+  ],
   "intro": {
     "title": "Zlevníme elektřinu odchodem z burzy? Fyzika napovídá jinou cestu aneb Suverenita je hardware, ne izolace",
     "textBefore": "„Opustíme lipskou burzu, to je náš plán. Elektřina vyráběná v České republice by měla zůstat českým občanům a až následné přebytky by se měly vyvážet,“ slíbil v červnu 2025 předseda hnutí ANO Andrej Babiš. Zní to jako selský rozum: máme vlastní elektrárny, tak proč platit německé ceny? Energetika roku 2025 ale naráží na fyziku a ekonomiku, které politici v kampani nezmiňují.",

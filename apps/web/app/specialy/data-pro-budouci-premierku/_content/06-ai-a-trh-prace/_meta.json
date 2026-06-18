@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/06.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-ai-automatizace", "topic": "Explainer · AI" },
+    { "slug": "svet-jizni-korea-ai", "topic": "AI · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-paradox",

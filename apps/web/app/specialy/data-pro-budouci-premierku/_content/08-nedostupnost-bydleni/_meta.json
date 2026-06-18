@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/08.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-bytovy-deficit", "topic": "Explainer · Bydlení" },
+    { "slug": "svet-viden-socialni-bydleni", "topic": "Bydlení · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-platy",

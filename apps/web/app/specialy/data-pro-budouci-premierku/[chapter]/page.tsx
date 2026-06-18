@@ -29,6 +29,7 @@ interface ChapterMeta {
   onePager: { slug: string; logo: string | null } | null;
   articles: Array<{ slug: string; primaryChart: string }>;
   intro?: { title: string; textBefore: string; textAfter: string };
+  miniArticles?: Array<{ slug: string; topic: string }>;
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -217,6 +218,35 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           );
         })}
       </Container>
+
+      {/* Mini-articles: 2-column card grid */}
+      {meta.miniArticles && meta.miniArticles.length > 0 && (() => {
+        const miniData = meta.miniArticles!.map(m => ({
+          ...m,
+          fm: loadArticleFrontmatter(params.chapter, m.slug),
+        })).filter(m => m.fm != null);
+        if (miniData.length === 0) return null;
+        return (
+          <Container size="md" style={{ padding: '0 16px' }}>
+            <SectionDivider accent={meta.accent} />
+            <Box style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 32 }}>
+              {miniData.map(m => (
+                <DpbpArticleCard
+                  key={m.slug}
+                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${m.slug}`}
+                  title={m.fm!.title}
+                  excerpt={m.fm!.excerpt}
+                  author={m.fm!.author}
+                  chapterTitle={meta.title}
+                  primaryChartSpec={null}
+                  accent={meta.accent}
+                  type={m.topic}
+                />
+              ))}
+            </Box>
+          </Container>
+        );
+      })()}
 
       {/* End-of-chapter engagement */}
       <Container size="md" style={{ padding: '0 16px' }}>

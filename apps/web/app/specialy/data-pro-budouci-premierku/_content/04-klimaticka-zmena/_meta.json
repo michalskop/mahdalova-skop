@@ -14,6 +14,10 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/04.svg"
   },
+  "miniArticles": [
+    { "slug": "explainer-uhlikovy-rozpocet", "topic": "Explainer · Klima" },
+    { "slug": "svet-pakistan-klimaticka-katastrofa", "topic": "Klima · Svět" }
+  ],
   "articles": [
     {
       "slug": "01-sucho",
