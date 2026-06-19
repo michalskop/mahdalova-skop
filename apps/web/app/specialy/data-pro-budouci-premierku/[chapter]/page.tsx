@@ -87,17 +87,27 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   const meta = loadMeta(params.chapter);
   if (!meta) notFound();
 
-  const cards = meta.cardOrder.map(id => loadCard(params.chapter, id));
+  const introCard = meta.cardOrder.length > 0 ? loadCard(params.chapter, meta.cardOrder[0]) : null;
+  const introChartSpec = meta.articles[0]?.primaryChart
+    ? loadChartSpec(meta.articles[0].primaryChart)
+    : null;
+
   const onePagerFm = meta.onePager
     ? loadArticleFrontmatter(params.chapter, meta.onePager.slug)
     : null;
-  const articles = meta.articles.map(a => {
-    const fm = loadArticleFrontmatter(params.chapter, a.slug);
-    const chartSpec = loadChartSpec(a.primaryChart);
-    return { ...a, fm, chartSpec };
-  });
-  const introCard = meta.intro ? loadCard(params.chapter, meta.cardOrder[0]) : null;
-  const introChartSpec = meta.intro ? loadChartSpec(meta.articles[0]?.primaryChart) : null;
+
+  // Build unified tile list:
+  // Pair 1 (left): Explainer  |  Pair 1 (right): World/European context
+  // Pair 2 (left): main article 01  |  Pair 2 (right): main article 02
+  // Pair 3 (left): main article 03  |  Pair 3 (right): main article 04 (if exists)
+  const tileSlugs: Array<{ slug: string; topic: string }> = [
+    ...(meta.miniArticles ?? []),
+    ...meta.articles.map(a => ({ slug: a.slug, topic: meta.title })),
+  ];
+
+  const tiles = tileSlugs
+    .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
+    .filter(t => t.fm != null);
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
@@ -133,13 +143,18 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             }
             @media (max-width: 768px) {
               .dpbp-chapter-head-profile { display: none; }
+              .dpbp-tile-grid { grid-template-columns: 1fr !important; }
+              .dpbp-tile-grid > * { grid-column: 1 !important; }
+            }
+            .dpbp-tile-grid > *:last-child:nth-child(odd) {
+              grid-column: 1 / -1;
             }
           `}</style>
         </Container>
       </Box>
 
       <Container size="md" style={{ padding: '0 16px' }}>
-        {/* Intro: titulek → text → číslo v boxu → text → graf */}
+        {/* Intro: titulek → textBefore → infobox s číslem → textAfter → graf */}
         {meta.intro && (
           <Box style={{ paddingTop: 32 }}>
             <Title order={2} style={{
@@ -157,6 +172,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               fontSize: 16,
               lineHeight: 1.65,
               color: '#2a2a2a',
+              marginBottom: 20,
             }}>
               {meta.intro.textBefore}
             </Text>
@@ -166,6 +182,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               fontSize: 16,
               lineHeight: 1.65,
               color: '#2a2a2a',
+              marginBottom: 20,
             }}>
               {meta.intro.textAfter}
             </Text>
@@ -173,7 +190,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* One-pager — navy, small top gap */}
+        {/* Shrnutí — full-width dlaždice */}
         {onePagerFm && meta.onePager && (
           <Box style={{ paddingTop: 32 }}>
             <DpbpArticleCard
@@ -190,62 +207,36 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* Mini-articles: 2-column card grid — directly after one-pager */}
-        {meta.miniArticles && meta.miniArticles.length > 0 && (() => {
-          const miniData = meta.miniArticles!.map(m => ({
-            ...m,
-            fm: loadArticleFrontmatter(params.chapter, m.slug),
-          })).filter(m => m.fm != null);
-          if (miniData.length === 0) return null;
-          return (
-            <Box>
-              <SectionDivider accent={meta.accent} />
-              <Box style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 8 }}>
-                {miniData.map(m => (
-                  <DpbpArticleCard
-                    key={m.slug}
-                    href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${m.slug}`}
-                    title={m.fm!.title}
-                    excerpt={m.fm!.excerpt}
-                    author={m.fm!.author}
-                    chapterTitle={meta.title}
-                    primaryChartSpec={null}
-                    accent={meta.accent}
-                    type={m.topic}
-                  />
-                ))}
-              </Box>
-            </Box>
-          );
-        })()}
-
-        {/* Pairs: divider before each pair except pair[1] which is preceded by SupportBanner */}
-        {articles.map((art, i) => {
-          const card = cards[i] ?? null;
-          const pairAccent = card?.accent ?? meta.accent;
-          const chapterLogo = meta.onePager?.logo ?? null;
-          const thumbImage = (!art.chartSpec && chapterLogo) ? chapterLogo : undefined;
-          return (
-            <Box key={art.slug}>
-              {i === 1
-                ? <Box style={{ margin: '8px 0 0' }}><SupportBanner /></Box>
-                : <SectionDivider accent={pairAccent} />}
-              {card && <ImpactCard card={card} />}
-              {art.fm && (
+        {/* 3 páry dlaždic (2 sloupce):
+            Pár 1: Explainer (vlevo) | Světový/evropský kontext (vpravo)
+            Pár 2: Analýza 01 (vlevo) | Analýza 02 (vpravo)
+            Pár 3: Analýza 03 (vlevo) | Analýza 04 (vpravo, pokud existuje) */}
+        {tiles.length > 0 && (
+          <Box>
+            <SectionDivider accent={meta.accent} />
+            <Box
+              className="dpbp-tile-grid"
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 8 }}
+            >
+              {tiles.map(t => (
                 <DpbpArticleCard
-                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${art.slug}`}
-                  title={art.fm.title}
-                  excerpt={art.fm.excerpt}
-                  author={art.fm.author}
+                  key={t.slug}
+                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
+                  title={t.fm!.title}
+                  excerpt={t.fm!.excerpt}
+                  author={t.fm!.author}
                   chapterTitle={meta.title}
-                  primaryChartSpec={art.chartSpec}
-                  image={thumbImage}
-                  accent={pairAccent}
+                  primaryChartSpec={null}
+                  accent={meta.accent}
+                  type={t.topic}
                 />
-              )}
+              ))}
             </Box>
-          );
-        })}
+            <Box style={{ marginTop: 24 }}>
+              <SupportBanner />
+            </Box>
+          </Box>
+        )}
       </Container>
 
       {/* End-of-chapter engagement */}
