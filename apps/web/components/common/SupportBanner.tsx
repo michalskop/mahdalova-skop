@@ -8,17 +8,7 @@ export default function SupportBanner() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Podpořit DataTimes přes Stripe"
-        style={{
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 16,
-          width: '100%',
-          padding: '14px 12px',
-          background: '#0d1438',
-          textDecoration: 'none',
-          overflow: 'hidden',
-        }}
+        className="dt-support-banner"
         onMouseEnter={e => (e.currentTarget.style.filter = 'brightness(1.05)')}
         onMouseLeave={e => (e.currentTarget.style.filter = '')}
       >
@@ -34,7 +24,7 @@ export default function SupportBanner() {
         }} />
 
         {/* Brand */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flex: '0 0 auto', minWidth: 175 }}>
+        <div className="dt-support-brand" style={{ display: 'flex', alignItems: 'center', gap: 10, flex: '0 0 auto' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" style={{ display: 'block', width: 38, height: 38, flexShrink: 0 }}>
             <defs>
               <linearGradient id="dtSupportG" x1="1" x2=".25" y1=".5" y2="1">
@@ -57,18 +47,17 @@ export default function SupportBanner() {
         </div>
 
         {/* Text */}
-        <p style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 15, fontWeight: 400, lineHeight: 1.35 }}>
+        <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 15, fontWeight: 400, lineHeight: 1.35 }}>
           Veřejný prostor i&nbsp;politiku zaplavují blbosti, fake news a&nbsp;propaganda.
           Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy. Za cenu jednoho oběda.
         </p>
 
         {/* CTA */}
-        <span style={{
+        <span className="dt-support-cta" style={{
           flex: '0 0 auto',
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
-          minWidth: 148,
           padding: '14px 26px',
           background: '#f01952',
           color: '#ffffff',
@@ -82,6 +71,33 @@ export default function SupportBanner() {
           Jdu do toho
         </span>
       </a>
+
+      <style>{`
+        .dt-support-banner {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          width: 100%;
+          padding: 14px 12px;
+          background: #0d1438;
+          text-decoration: none;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+        .dt-support-brand { min-width: 175px; }
+        @media (max-width: 640px) {
+          .dt-support-banner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 20px 16px;
+          }
+          .dt-support-brand { min-width: 0; }
+          .dt-support-text { flex: 1 1 auto; width: 100%; }
+          .dt-support-cta { width: 100%; }
+        }
+      `}</style>
     </div>
   );
 }
