@@ -27,9 +27,9 @@ interface ChapterMeta {
   date: string;
   cardOrder: string[];
   onePager: { slug: string; logo: string | null } | null;
-  articles: Array<{ slug: string; primaryChart: string }>;
-  intro?: { title: string; textBefore: string; textAfter: string };
-  miniArticles?: Array<{ slug: string; topic: string }>;
+  introChart?: string;
+  intro?: { title: string; textBefore: string; textAfter: string; textClosing?: string };
+  tiles?: Array<{ slug: string; topic: string }>;
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -88,24 +88,18 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   if (!meta) notFound();
 
   const introCard = meta.cardOrder.length > 0 ? loadCard(params.chapter, meta.cardOrder[0]) : null;
-  const introChartSpec = meta.articles[0]?.primaryChart
-    ? loadChartSpec(meta.articles[0].primaryChart)
-    : null;
+  const introChartSpec = meta.introChart ? loadChartSpec(meta.introChart) : null;
 
   const onePagerFm = meta.onePager
     ? loadArticleFrontmatter(params.chapter, meta.onePager.slug)
     : null;
 
-  // Build unified tile list:
-  // Pair 1 (left): Explainer  |  Pair 1 (right): World/European context
-  // Pair 2 (left): main article 01  |  Pair 2 (right): main article 02
-  // Pair 3 (left): main article 03  |  Pair 3 (right): main article 04 (if exists)
-  const tileSlugs: Array<{ slug: string; topic: string }> = [
-    ...(meta.miniArticles ?? []),
-    ...meta.articles.map(a => ({ slug: a.slug, topic: meta.title })),
-  ];
-
-  const tiles = tileSlugs
+  // Unified tile grid, 4 pairs (8 tiles) in fixed editorial order:
+  // Pár 1: Explainer (vlevo) | Svět/Evropa (vpravo)
+  // Pár 2: mezinárodní kontext (vlevo) | hlavní analýza 01 (vpravo)
+  // Pár 3: hlavní analýza 02 (vlevo) | hlavní analýza 03 (vpravo)
+  // Pár 4: datová investigace (vlevo) | komparace/solution journalism (vpravo)
+  const tiles = (meta.tiles ?? [])
     .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
     .filter(t => t.fm != null);
 
@@ -187,6 +181,17 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               {meta.intro.textAfter}
             </Text>
             {introChartSpec && <VegaChart spec={introChartSpec} />}
+            {meta.intro.textClosing && (
+              <Text style={{
+                fontFamily: 'Roboto Slab, Georgia, serif',
+                fontSize: 16,
+                lineHeight: 1.65,
+                color: '#2a2a2a',
+                marginTop: 20,
+              }}>
+                {meta.intro.textClosing}
+              </Text>
+            )}
           </Box>
         )}
 
@@ -207,10 +212,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* 3 páry dlaždic (2 sloupce):
-            Pár 1: Explainer (vlevo) | Světový/evropský kontext (vpravo)
-            Pár 2: Analýza 01 (vlevo) | Analýza 02 (vpravo)
-            Pár 3: Analýza 03 (vlevo) | Analýza 04 (vpravo, pokud existuje) */}
+        {/* 4 páry dlaždic (2 sloupce) — viz pořadí v meta.tiles */}
         {tiles.length > 0 && (
           <Box>
             <SectionDivider accent={meta.accent} />

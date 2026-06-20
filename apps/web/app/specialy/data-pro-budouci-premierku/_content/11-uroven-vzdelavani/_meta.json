@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/11.svg"
   },
-  "miniArticles": [
-    { "slug": "explainer-pisa", "topic": "Explainer · Vzdělávání" },
-    { "slug": "svet-polsko-vs-finsko", "topic": "Vzdělávání · Svět" }
-  ],
-  "articles": [
-    {
-      "slug": "01-pisa",
-      "primaryChart": "GRAF_01_PISA_TRENDS"
-    },
-    {
-      "slug": "02-nerovnost",
-      "primaryChart": "GRAF_02_EQUITY_GAP"
-    },
-    {
-      "slug": "03-zrizovatele",
-      "primaryChart": "GRAF_03_FRAGMENTATION"
-    }
-  ],
+  "introChart": "GRAF_01_PISA_TRENDS",
   "intro": {
     "title": "Jsme v troskách, nebo nadprůměrní? Obojí najednou aneb Vzdělání, které tiše ztrácí náskok",
     "textBefore": "O českém školství se v posledních letech mluví hlavně jako o krizi – inkluze, přetížení učitelé, propad výsledků v mezinárodních testech. Realita je míň dramatická a zároveň znepokojivější: nejsme v troskách, ale pomalu a nenápadně ztrácíme náskok, který jsme měli.",
-    "textAfter": "Česko je v matematice stále nad průměrem OECD, jenže od roku 2003 jsme ztratili skoro třicet bodů – a třetina učitelů odejde za deset let do důchodu. Otázka pro budoucí premiérku tedy nezní, jak zachránit propadající se systém, ale jak udržet kvalitu, kterou ještě máme, dřív, než nám fyzicky dojdou učitelé, kteří ji předávají."
-  }
+    "textAfter": "Česko je v matematice stále nad průměrem OECD, jenže od roku 2003 jsme ztratili skoro třicet bodů – a třetina učitelů odejde za deset let do důchodu. Otázka pro budoucí premiérku tedy nezní, jak zachránit propadající se systém, ale jak udržet kvalitu, kterou ještě máme, dřív, než nám fyzicky dojdou učitelé, kteří ji předávají.",
+    "textClosing": "Estonsko ukazuje, že odložení rozřazování dětí do pozdějšího věku zvyšuje průměr celého systému i bez vyšších výdajů. Singapur naopak ukazuje, jak vypadá kariérní struktura, která učitele v profesi udrží – přesně to, co Česku před blížícím se odchodem třetiny sboru chybí."
+  },
+  "tiles": [
+    { "slug": "explainer-pisa", "topic": "Explainer" },
+    { "slug": "svet-polsko-vs-finsko", "topic": "Svět" },
+    { "slug": "04-estonsko-rovnost", "topic": "Evropa" },
+    { "slug": "01-pisa", "topic": "Analýza" },
+    { "slug": "02-nerovnost", "topic": "Analýza" },
+    { "slug": "03-zrizovatele", "topic": "Analýza" },
+    { "slug": "05-overili-116-bodu", "topic": "Investigace" },
+    { "slug": "06-singapur-ucitele", "topic": "Komparace" }
+  ]
 }

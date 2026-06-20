@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/05.svg"
   },
-  "miniArticles": [
-    { "slug": "explainer-hybridni-hrozby", "topic": "Explainer · Bezpečnost" },
-    { "slug": "svet-finsko-nato", "topic": "Bezpečnost · Svět" }
-  ],
-  "articles": [
-    {
-      "slug": "01-asymetrie",
-      "primaryChart": "CHART_COST_RATIO"
-    },
-    {
-      "slug": "02-fragmentace",
-      "primaryChart": "CHART_AMMO_GAP"
-    },
-    {
-      "slug": "03-odolnost",
-      "primaryChart": "CHART_CIVIL_DEFENCE"
-    }
-  ],
+  "introChart": "CHART_COST_RATIO",
   "intro": {
     "title": "Kolik stojí sestřelit dron za dvacet tisíc? Matematika, kterou prohráváme aneb Past ekonomické asymetrie",
     "textBefore": "Bezpečnost se v politické debatě často redukuje na otázku, kolik stíhačů a tanků si pořídíme. Jenže moderní válka se čím dál víc nerozhoduje jen na bitevním poli, ale v účetnictví – v tom, kdo dřív dojde peněz. A tady má současná architektura obrany problém, který se nedá vyřešit jedním nákupem zbraní.",
-    "textAfter": "Útočný dron typu Shahed stojí kolem dvacet až osmdesát tisíc dolarů. Raketa, která ho musí sestřelit, stojí miliony. V konfliktu, kde protivník posílá vlny levných dronů, dojdou Západu peníze dřív, než protivníkovi drony. Otázka pro budoucí premiérku proto nezní jen, kolik procent HDP dát na obranu, ale jak rychle vybudovat levné prostředky obrany, než se z nákladové asymetrie stane vojenská prohra."
-  }
+    "textAfter": "Útočný dron typu Shahed stojí kolem dvacet až osmdesát tisíc dolarů. Raketa, která ho musí sestřelit, stojí miliony. V konfliktu, kde protivník posílá vlny levných dronů, dojdou Západu peníze dřív, než protivníkovi drony. Otázka pro budoucí premiérku proto nezní jen, kolik procent HDP dát na obranu, ale jak rychle vybudovat levné prostředky obrany, než se z nákladové asymetrie stane vojenská prohra.",
+    "textClosing": "Estonsko a Finsko ukazují dvě různé odpovědi na tuto otázku – jedno sází na existenční mobilizaci a kybernetickou odolnost, druhé na desetiletí budovanou totální obranu s kapacitou krytů pro většinu populace. Tato kapitola se dívá na to, co je z obou modelů pro Česko reálně dosažitelné."
+  },
+  "tiles": [
+    { "slug": "explainer-hybridni-hrozby", "topic": "Explainer" },
+    { "slug": "svet-finsko-nato", "topic": "Svět" },
+    { "slug": "04-estonsko-existencni-hrozba", "topic": "Evropa" },
+    { "slug": "01-asymetrie", "topic": "Analýza" },
+    { "slug": "02-fragmentace", "topic": "Analýza" },
+    { "slug": "03-odolnost", "topic": "Analýza" },
+    { "slug": "05-overili-2-procenta", "topic": "Investigace" },
+    { "slug": "06-baltske-kryty", "topic": "Komparace" }
+  ]
 }

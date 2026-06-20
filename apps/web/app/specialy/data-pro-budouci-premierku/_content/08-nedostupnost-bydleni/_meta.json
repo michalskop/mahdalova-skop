@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/08.svg"
   },
-  "miniArticles": [
-    { "slug": "explainer-bytovy-deficit", "topic": "Explainer · Bydlení" },
-    { "slug": "svet-viden-socialni-bydleni", "topic": "Bydlení · Svět" }
-  ],
-  "articles": [
-    {
-      "slug": "01-platy",
-      "primaryChart": "CHART_AFFORDABILITY_INDEX"
-    },
-    {
-      "slug": "02-deficit",
-      "primaryChart": "CHART_PRAGUE_DEFICIT"
-    },
-    {
-      "slug": "03-rent",
-      "primaryChart": "CHART_PERMIT_GAP"
-    }
-  ],
+  "introChart": "CHART_AFFORDABILITY_INDEX",
   "intro": {
     "title": "Kolik platů stojí byt v Praze? Patnáct a půl aneb Krize bydlení není o spekulantech",
     "textBefore": "Debata o nedostupném bydlení se obvykle stočí k vinění spekulantů a fondů, které kupují byty na investici. Jenže za cenou bytu v Praze nestojí primárně chování kupujících – stojí za ní tvrdý, měřitelný deficit v tom, kolik bytů se vůbec staví.",
-    "textAfter": "Průměrná rodina musí na byt v Praze vydělávat skoro šestnáct hrubých ročních mezd – třetí nejhorší poměr v Evropě po Amsterdamu a Aténách. Praha přitom dlouhodobě nestaví ani tolik bytů, kolik si sama stanovila jako cíl. Otázka pro budoucí premiérku tedy nezní, jak zkrotit spekulanty, ale jak zkrátit cestu od pozemku k hotovému bytu, která dnes trvá skoro deset let."
-  }
+    "textAfter": "Průměrná rodina musí na byt v Praze vydělávat skoro šestnáct hrubých ročních mezd – třetí nejhorší poměr v Evropě po Amsterdamu a Aténách. Praha přitom dlouhodobě nestaví ani tolik bytů, kolik si sama stanovila jako cíl. Otázka pro budoucí premiérku tedy nezní, jak zkrotit spekulanty, ale jak zkrátit cestu od pozemku k hotovému bytu, která dnes trvá skoro deset let.",
+    "textClosing": "Polský případ ale varuje, že zrychlení povolování samo o sobě nestačí, pokud poptávka zůstává koncentrovaná v jedné metropoli. Tokio naopak ukazuje, jak vypadá trh, kde nabídka skutečně rychle reaguje na poptávku – za cenu institucionálních změn, které jsou v českém kontextu obtížně přenositelné celé, ale částečně ano."
+  },
+  "tiles": [
+    { "slug": "explainer-bytovy-deficit", "topic": "Explainer" },
+    { "slug": "svet-viden-socialni-bydleni", "topic": "Svět" },
+    { "slug": "04-polsky-paradox", "topic": "Evropa" },
+    { "slug": "01-platy", "topic": "Analýza" },
+    { "slug": "02-deficit", "topic": "Analýza" },
+    { "slug": "03-rent", "topic": "Analýza" },
+    { "slug": "05-overili-159-mezd", "topic": "Investigace" },
+    { "slug": "06-japonsko-zoning", "topic": "Komparace" }
+  ]
 }

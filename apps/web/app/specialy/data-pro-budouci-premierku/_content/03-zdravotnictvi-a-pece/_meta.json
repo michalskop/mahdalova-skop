@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/03.svg"
   },
-  "miniArticles": [
-    { "slug": "explainer-drg", "topic": "Explainer · Zdravotnictví" },
-    { "slug": "svet-japonsko-stari", "topic": "Zdravotnictví · Svět" }
-  ],
-  "articles": [
-    {
-      "slug": "01-pyramida",
-      "primaryChart": "CHART_MD_AGE"
-    },
-    {
-      "slug": "02-stari",
-      "primaryChart": "CHART_HEALTHY_LIFE"
-    },
-    {
-      "slug": "03-digital",
-      "primaryChart": ""
-    }
-  ],
+  "introChart": "CHART_MD_AGE",
   "intro": {
     "title": "Kdo vás bude léčit za deset let? Polovina praktiků míří do důchodu aneb Soumrak rodinného lékaře",
     "textBefore": "Slib zní jednoduše: víc peněz pro zdravotnictví, víc sester, víc lékařů, a problém se vyřeší. Jenže do ordinace praktického lékaře nikoho nedosadíte vyhláškou ani rozpočtovou kapitolou – musí se napřed narodit, vystudovat a hlavně chtít v ordinaci zůstat. A čas, který na to máme, se nepočítá na volební období, ale na roky, které už uplynuly.",
-    "textAfter": "Do roku 2035 odejde do důchodu víc než polovina praktických lékařů pro dospělé – u dětských lékařů je na tom podobně už čtvrtina dnešních ordinací. Není to selhání rozpočtu, je to demografie lékařského sboru, kterou jednorázová investice nezvrátí. Otázka pro budoucí premiérku tedy nezní, kolik peněz uvolnit, ale jak rychle rozšířit kompetence sester a telemedicínu dřív, než ordinace v menších městech jedna po druhé zhasnou."
-  }
+    "textAfter": "Do roku 2035 odejde do důchodu víc než polovina praktických lékařů pro dospělé – u dětských lékařů je na tom podobně už čtvrtina dnešních ordinací. Není to selhání rozpočtu, je to demografie lékařského sboru, kterou jednorázová investice nezvrátí. Otázka pro budoucí premiérku tedy nezní, kolik peněz uvolnit, ale jak rychle rozšířit kompetence sester a telemedicínu dřív, než ordinace v menších městech jedna po druhé zhasnou.",
+    "textClosing": "Tato kapitola se proto dívá na to, jak podobný problém řeší jiné evropské země – od norského modelu sester s rozšířenými kompetencemi po rakouské cílené pobídky pro venkovské lékaře – a co z toho je pro Česko reálně přenositelné bez srovnatelného rozpočtu."
+  },
+  "tiles": [
+    { "slug": "explainer-drg", "topic": "Explainer" },
+    { "slug": "svet-japonsko-stari", "topic": "Svět" },
+    { "slug": "04-norsko-sestry", "topic": "Evropa" },
+    { "slug": "01-pyramida", "topic": "Analýza" },
+    { "slug": "02-stari", "topic": "Analýza" },
+    { "slug": "03-digital", "topic": "Analýza" },
+    { "slug": "05-overili-53-procent", "topic": "Investigace" },
+    { "slug": "06-rakousko-udrzet-lekare", "topic": "Komparace" }
+  ]
 }

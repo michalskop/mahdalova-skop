@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/07.svg"
   },
-  "miniArticles": [
-    { "slug": "explainer-state-capture", "topic": "Explainer · Korupce" },
-    { "slug": "svet-madarsko-koncentrace", "topic": "Oligarchizace · Svět" }
-  ],
-  "articles": [
-    {
-      "slug": "01-capture",
-      "primaryChart": "GRAF_07_SUBSIDY_PYRAMID"
-    },
-    {
-      "slug": "02-media",
-      "primaryChart": "GRAF_07_MEDIA_OWNERSHIP"
-    },
-    {
-      "slug": "03-transparency",
-      "primaryChart": "GRAF_07_LOBBY_FLOW"
-    }
-  ],
+  "introChart": "GRAF_07_SUBSIDY_PYRAMID",
   "intro": {
     "title": "Kdo dostává dotace, které nikdo nevidí? Jedno procento, čtyřicet procent peněz aneb Capture nezačíná obálkou",
     "textBefore": "Korupci si nejčastěji představujeme jako úředníka, který si nechá zaplatit za razítko. Skutečná koncentrace moci v Česku vypadá jinak, a je nenápadnější – odehrává se v technických parametrech dotačních programů a veřejných zakázek, které píšou ti, kdo z nich budou čerpat.",
-    "textAfter": "V rámci Společné zemědělské politiky EU dostává jedno procento nejbohatších příjemců až 40 % všech vyplacených peněz. V Česku to ztělesňuje jediný holding, který za sedm let na investičních dotacích vybral přes 14 miliard korun. State capture nezačíná obálkou s penězi, začíná pravidly hry – a tu otázku si budoucí premiérka musí položit jako první: kdo psal podmínky, ze kterých teď čerpá?"
-  }
+    "textAfter": "V rámci Společné zemědělské politiky EU dostává jedno procento nejbohatších příjemců až 40 % všech vyplacených peněz. V Česku to ztělesňuje jediný holding, který za sedm let na investičních dotacích vybral přes 14 miliard korun. State capture nezačíná obálkou s penězi, začíná pravidly hry – a tu otázku si budoucí premiérka musí položit jako první: kdo psal podmínky, ze kterých teď čerpá?",
+    "textClosing": "Slovensko ukazuje, jak rychle se mohou kontrolní instituce oslabit, pokud jim chybí silnější ochrana než běžná legislativní většina. Gruzie naopak ukazuje, že systematický redesign procesů s minimální diskreční pravomocí dokáže korupci omezit i v zemi s mnohem horší výchozí pozicí než Česko."
+  },
+  "tiles": [
+    { "slug": "explainer-state-capture", "topic": "Explainer" },
+    { "slug": "svet-madarsko-koncentrace", "topic": "Svět" },
+    { "slug": "04-slovensko-autokratizace", "topic": "Evropa" },
+    { "slug": "01-capture", "topic": "Analýza" },
+    { "slug": "02-media", "topic": "Analýza" },
+    { "slug": "03-transparency", "topic": "Analýza" },
+    { "slug": "05-overili-40-procent", "topic": "Investigace" },
+    { "slug": "06-gruzie-reforma", "topic": "Komparace" }
+  ]
 }

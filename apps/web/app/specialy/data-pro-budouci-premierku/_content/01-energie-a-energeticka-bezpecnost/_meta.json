@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/01.svg"
   },
-  "articles": [
-    {
-      "slug": "01-lipsko",
-      "primaryChart": "CHART_COAL_PRICE"
-    },
-    {
-      "slug": "02-krajina",
-      "primaryChart": "CHART_LAND_USE"
-    },
-    {
-      "slug": "03-mezera",
-      "primaryChart": "CHART_NUCLEAR_DELAYS"
-    }
-  ],
-  "miniArticles": [
-    { "slug": "explainer-merit-order", "topic": "Explainer · Energie" },
-    { "slug": "svet-nemecko-energiewende", "topic": "Energie · Svět" }
-  ],
+  "introChart": "CHART_COAL_PRICE",
   "intro": {
     "title": "Elektřina naším odchodem z burzy nezlevní, cesta budoucí premiérky musí vést jinudy",
     "textBefore": "„Opustíme lipskou burzu, to je náš plán. Elektřina vyráběná v České republice by měla zůstat českým občanům a až následné přebytky by se měly vyvážet,“ slíbil v červnu 2025 předseda hnutí ANO Andrej Babiš. Zní to jako selský rozum: máme vlastní elektrárny, tak proč platit německé ceny? Energetika roku 2025 ale naráží na fyziku a ekonomiku, které politici v kampani nezmiňují.",
-    "textAfter": "Jen za právo vypustit kouř z uhlí zaplatíme v roce 2025 víc, než kolik stojí samotné palivo i práce horníků. Uhlí je drahé samo o sobě, ne kvůli burze – a to platí i po případném odchodu z Lipska. Skutečná otázka pro budoucí premiérku tedy nezní „jak se odstřihnout od Evropy“, ale „jak rychle nahradit drahé uhlí levnějšími zdroji“. Suverenita roku 2030 se neměří politickými gesty, ale megawatthodinami a kilometry drátů."
-  }
+    "textAfter": "Jen za právo vypustit kouř z uhlí zaplatíme v roce 2025 víc, než kolik stojí samotné palivo i práce horníků. Uhlí je drahé samo o sobě, ne kvůli burze – a to platí i po případném odchodu z Lipska. Skutečná otázka pro budoucí premiérku tedy nezní „jak se odstřihnout od Evropy“, ale „jak rychle nahradit drahé uhlí levnějšími zdroji“.",
+    "textClosing": "Suverenita roku 2030 se neměří politickými gesty, ale megawatthodinami a kilometry drátů. V této kapitole se proto díváme na to, kde Česko skutečně ztrácí energetickou nezávislost, jak si stojí ve srovnání s Francií, Polskem a Finskem, a jaké konkrétní kroky – od brownfieldů po rychlejší povolování větru – data podporují bez ohledu na to, co se hodí do volební kampaně."
+  },
+  "tiles": [
+    { "slug": "explainer-merit-order", "topic": "Explainer" },
+    { "slug": "svet-nemecko-energiewende", "topic": "Svět" },
+    { "slug": "04-evropske-cesty", "topic": "Evropa" },
+    { "slug": "01-lipsko", "topic": "Analýza" },
+    { "slug": "02-krajina", "topic": "Analýza" },
+    { "slug": "03-mezera", "topic": "Analýza" },
+    { "slug": "05-vypocet-350km2", "topic": "Investigace" },
+    { "slug": "06-jak-rychle-oze", "topic": "Komparace" }
+  ]
 }

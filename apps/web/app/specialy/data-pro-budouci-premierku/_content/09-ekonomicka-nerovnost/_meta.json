@@ -14,27 +14,21 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/09.svg"
   },
-  "miniArticles": [
-    { "slug": "explainer-gini", "topic": "Explainer · Nerovnost" },
-    { "slug": "svet-usa-vs-skandinavie", "topic": "Nerovnost · Svět" }
-  ],
-  "articles": [
-    {
-      "slug": "01-regiony",
-      "primaryChart": "G09_01_REGION_GAP"
-    },
-    {
-      "slug": "02-dluhy",
-      "primaryChart": "G09_02_EXECUTION_TRAP"
-    },
-    {
-      "slug": "03-mobilita",
-      "primaryChart": "G09_03_PISA_STATUS"
-    }
-  ],
+  "introChart": "G09_01_REGION_GAP",
   "intro": {
     "title": "Jsme rovnostářská země? Jen v zrcadle, které si sami vyrobili aneb Geografie úpadku",
     "textBefore": "Česko se rádo chlubí nízkou nerovností – a v národním srovnání na tom skutečně není špatně. To srovnání ale používá vlastní, nízký medián jako měřítko. Stačí přiložit evropské pravítko, a obrázek se změní.",
-    "textAfter": "Pokud bychom místo českého mediánu použili jednotný evropský příjmový práh, pod něj by spadlo přes 40 % českých domácností. Nízká celostátní nerovnost zároveň maskuje mikroregiony, kde je v exekuci až polovina dospělých obyvatel. Otázka pro budoucí premiérku tedy nezní, jak udržet hezké národní číslo, ale jak řešit propadlé regiony, které se v průměru ztrácí."
-  }
+    "textAfter": "Pokud bychom místo českého mediánu použili jednotný evropský příjmový práh, pod něj by spadlo přes 40 % českých domácností. Nízká celostátní nerovnost zároveň maskuje mikroregiony, kde je v exekuci až polovina dospělých obyvatel. Otázka pro budoucí premiérku tedy nezní, jak udržet hezké národní číslo, ale jak řešit propadlé regiony, které se v průměru ztrácí.",
+    "textClosing": "Německo ukazuje, že ani stovky miliard eur transferů nedokážou plně vyrovnat chybějící koncentraci firem a institucí. Slovinsko naopak ukazuje, že rozptýlení vysokých škol a výzkumných kapacit mimo jediné centrum udržuje regionální rozdíly nízké od počátku – řešení, které Česko nikdy systematicky nezkusilo."
+  },
+  "tiles": [
+    { "slug": "explainer-gini", "topic": "Explainer" },
+    { "slug": "svet-usa-vs-skandinavie", "topic": "Svět" },
+    { "slug": "04-nemecko-vyrovnavani", "topic": "Evropa" },
+    { "slug": "01-regiony", "topic": "Analýza" },
+    { "slug": "02-dluhy", "topic": "Analýza" },
+    { "slug": "03-mobilita", "topic": "Analýza" },
+    { "slug": "05-overili-40-procent-domacnosti", "topic": "Investigace" },
+    { "slug": "06-slovinsko-konvergence", "topic": "Komparace" }
+  ]
 }
