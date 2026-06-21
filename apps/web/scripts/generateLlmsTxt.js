@@ -4,11 +4,20 @@ const path = require('path');
 const baseUrl = 'https://www.mahdalova-skop.cz';
 const articlesDir = path.join(__dirname, '../app/clanek/_articles');
 
+// Kept in sync with EXCLUDED_SLUGS in app/clanek/[slug]/page.tsx — these
+// folders are content sources only; their canonical page lives under
+// /specialy/, and /clanek/[slug] deliberately won't generate a static route
+// for them (output: export would 500 if it tried).
+const EXCLUDED_SLUGS = [
+  'data-pro-budouci-premierku-02-demografie',
+  'data-pro-budouci-premierku-02-demografie-plodnost',
+];
+
 function getArticleSlugs() {
   try {
     const items = fs.readdirSync(articlesDir, { withFileTypes: true });
     return items
-      .filter(item => item.isDirectory() && !item.name.startsWith('zzz-'))
+      .filter(item => item.isDirectory() && !item.name.startsWith('zzz-') && !EXCLUDED_SLUGS.includes(item.name))
       .map(item => item.name);
   } catch (error) {
     console.error('Error reading articles directory:', error);

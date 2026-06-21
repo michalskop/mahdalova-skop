@@ -192,7 +192,7 @@ function MiniCard({
   locale,
 }: MiniCardProps) {
   const theme = useMantineTheme();
-  const href = `${articleBasePath}/${article.slug}`;
+  const href = article.href || `${articleBasePath}/${article.slug}`;
   const bg = cardBgValue(cardBackground);
   const filterColor = useFilterColor(article.filter);
   const filterLabel = getFilterLabel(article.filter);
