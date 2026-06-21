@@ -16,6 +16,8 @@ export interface Article {
   topic?: string;
   readingTime?: number;
   embedHtml?: string;
+  /** Full link override. When set, ArticleCard links here instead of `${articleBasePath}/${slug}`. */
+  href?: string;
 }
 
 interface ArticleWithScore extends Article {
@@ -29,9 +31,13 @@ interface GetArticlesOptions {
   filter?: string | string[];
   useExplicitPromotion?: boolean;
   tag?: string;
+  /** Pre-built articles from another content source (e.g. a different folder layout), merged in before scoring/sorting. */
+  extraArticles?: Article[];
+  /** Absolute path to the app's `public/` dir. When set, any local cover image that doesn't exist on disk falls back to null (→ ArticleCard's placeholder) instead of rendering a broken image. */
+  publicDir?: string;
 }
 
-const isAbsoluteUrl = (value: unknown): value is string => {
+const isExternalUrl = (value: unknown): value is string => {
   if (typeof value !== 'string') return false;
   return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
 };
@@ -43,11 +49,28 @@ export async function getArticles({
   filter,
   useExplicitPromotion = false,
   tag,
+  extraArticles = [],
+  publicDir,
 }: GetArticlesOptions): Promise<Article[]> {
   const articleFolders = fs.readdirSync(articlesDir);
   const currentDate = new Date();
 
-  const articles = articleFolders
+  function resolveCoverImage(raw: unknown, folder: string): string | null {
+    if (!raw || typeof raw !== 'string') return null;
+    if (isExternalUrl(raw)) return raw;
+    // Convention across the corpus: `coverImage` is always relative to the
+    // article's own folder, even when authored with a leading "/" (e.g.
+    // "/images/foo.webp" meaning "foo.webp inside this article's images/
+    // subfolder"). path.posix.join collapses the resulting double slash.
+    const resolved = path.posix.join(coverImageBase, folder, raw);
+    if (publicDir) {
+      const onDisk = path.join(publicDir, resolved.replace(/^\//, ''));
+      if (!fs.existsSync(onDisk)) return null;
+    }
+    return resolved;
+  }
+
+  const folderArticles = articleFolders
     .map((folder) => {
       const fullPath = path.join(articlesDir, folder, 'index.md');
       if (!fs.existsSync(fullPath)) return null;
@@ -55,9 +78,7 @@ export async function getArticles({
       try {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data } = matter(fileContents);
-        const coverImage = data.coverImage
-          ? (isAbsoluteUrl(data.coverImage) ? data.coverImage : `${coverImageBase}/${folder}/${data.coverImage}`)
-          : null;
+        const coverImage = resolveCoverImage(data.coverImage, folder);
 
         return {
           title: data.title || 'Untitled',
@@ -78,6 +99,8 @@ export async function getArticles({
       }
     })
     .filter((a): a is Article => a !== null);
+
+  const articles = [...folderArticles, ...extraArticles];
 
   let filteredArticles = articles.filter(article => new Date(article.date) <= currentDate);
 

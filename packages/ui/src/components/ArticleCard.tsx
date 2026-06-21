@@ -20,6 +20,7 @@ interface ArticleCardProps {
   coverImage: string | null;
   tags: string[];
   articleBasePath?: string;
+  href?: string;
   locale?: string;
 }
 
@@ -32,6 +33,7 @@ export function ArticleCard({
   coverImage,
   tags,
   articleBasePath = '/clanek',
+  href,
   locale = 'cs-CZ',
 }: ArticleCardProps) {
   const theme = useMantineTheme();
@@ -42,14 +44,14 @@ export function ArticleCard({
     return withLeadingSlash.endsWith('/') ? withLeadingSlash.slice(0, -1) : withLeadingSlash;
   })();
 
-  const linkProps = { href: `${normalizedBasePath}/${slug}` };
+  const linkProps = { href: href || `${normalizedBasePath}/${slug}` };
 
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
         <a {...linkProps}>
           <Image
-            src={coverImage || '/placeholder-image.jpg'}
+            src={coverImage || '/placeholder-image.svg'}
             height={180}
             alt={title}
           />

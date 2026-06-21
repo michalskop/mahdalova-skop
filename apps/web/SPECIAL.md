@@ -2,35 +2,89 @@
 
 Operations guide for the `/specialy/data-pro-budouci-premierku` web section and the PDF book pipeline.
 
+> **⚠ Pipeline direction changed 2026-06-21.** The `dpbp-config.json` → `sync-dpbp.mjs` flow described further below is **legacy**. As of this date, new chapter content (article text, `_meta.json`) is authored **directly in this repo** (`mahdalova-skop`), not generated from `data-pro-premierku` source files. `data-pro-premierku` remains the place where research/facts originate, but it is no longer the literal source of `.mdx` content. See "Current content pipeline" below before touching anything in `dpbp-config.json` or running `npm run sync:dpbp`.
+
 ---
 
-## Two projects, one content base
+## Current content pipeline (authoritative — read this first)
 
 ```
-data-pro-premierku/          ← source project (content authoring, git repo)
+data-pro-premierku/                    ← research & fact-finding workspace
+  XX_KAPITOLA/01_research_and_audit/   ← RESEARCH_AUDIT*.md, SOURCES_DIRECTORY*.md
+  XX_KAPITOLA/03_primary_content/      ← DIST_ARTICLE_*.md (reference material, not copied verbatim)
+
+apps/web/app/specialy/data-pro-budouci-premierku/
+  _content/{chapter-slug}/
+    _meta.json                         ← HAND-WRITTEN — see schema below
+    articles/*.mdx                     ← HAND-WRITTEN — frontmatter + body
+    cards/*.json                       ← ImpactCard data (still fine to hand-write or keep from a past sync)
+```
+
+**Workflow when adding or revising an article:**
+1. Read the relevant research files in `data-pro-premierku` (`RESEARCH_AUDIT*`, `DIST_ARTICLE_*`, `SOURCES_DIRECTORY*`) to ground the claims — never invent statistics.
+2. Write the `.mdx` file directly in `apps/web/.../_content/{chapter}/articles/`.
+3. Register it in that chapter's `_meta.json` under `tiles` (or `onePager`/`introChart` if relevant) — see schema below.
+4. Validate the JSON (`python3 -c "import json; json.load(open(path))"`), then sanity-check by running `npm run dev` and loading the chapter + article URL.
+5. **Copy-back to `data-pro-premierku` is currently manual and deferred.** Once an article is finalized here, it should eventually be placed in a new subfolder of the matching chapter in `data-pro-premierku` for the editorial record / book pipeline — there is no script for this yet. Don't block on it.
+
+**Writing guidelines** (tone, title patterns, tile taxonomy, sourcing rules) live in [`DPBP_WRITING_GUIDE.md`](./DPBP_WRITING_GUIDE.md) — read that before drafting new articles.
+
+### `_meta.json` schema (current)
+
+```json
+{
+  "id": "01",
+  "slug": "01-energie-a-energeticka-bezpecnost",
+  "title": "Energie a energetická bezpečnost",
+  "accent": "#ffcf02",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-01",
+  "cardOrder": ["SPINA", "REPKA", "JADRO"],
+  "onePager": { "slug": "one-pager", "logo": "/dpbp/chapters/01.svg" },
+  "introChart": "CHART_COAL_PRICE",
+  "intro": {
+    "title": "...",
+    "textBefore": "...",
+    "textAfter": "...",
+    "textClosing": "..."
+  },
+  "tiles": [
+    { "slug": "explainer-merit-order", "topic": "Explainer" },
+    { "slug": "svet-nemecko-energiewende", "topic": "Svět" },
+    { "slug": "04-evropske-cesty", "topic": "Evropa" },
+    { "slug": "01-lipsko", "topic": "Analýza" },
+    { "slug": "02-krajina", "topic": "Analýza" },
+    { "slug": "03-mezera", "topic": "Analýza" },
+    { "slug": "05-vypocet-350km2", "topic": "Investigace" },
+    { "slug": "06-jak-rychle-oze", "topic": "Komparace" }
+  ]
+}
+```
+
+`tiles` renders as a 2-column grid of 4 pairs below the one-pager — see "Landing page structure" below for the fixed editorial order. `topic` is a single short word/concept; the chapter title is already prefixed by the card component (`DpbpArticleCard`), so don't repeat it in `topic`.
+
+### Legacy sync pipeline (do not run on migrated chapters)
+
+```
+data-pro-premierku/          ← source project (content authoring, git repo) — OLD MODEL
   BOOK.md                    ← book manifest + impact cards (YAML front-matter)
   01_ENERGIE_A_BEZPECNOST/
     02_executive_briefs/PM_ONE_PAGER_v2.md
     03_primary_content/DIST_ARTICLE_01_LIPSKO.md
     _source_data/charts/CHART_COAL_PRICE_v1.json
   book/
-    build.py                 ← PDF pipeline
+    build.py                 ← PDF pipeline (still active, unaffected by this change)
     requirements.txt
     .venv-book/              ← Python venv (gitignored)
 
 apps/web/                    ← web project (this repo)
-  dpbp-config.json           ← controls what is published (edit to add chapters)
-  scripts/sync-dpbp.mjs      ← sync engine
-  scripts/setup-dpbp.mjs     ← one-time machine setup
+  dpbp-config.json           ← OLD MODEL — only drives the legacy sync, not current authoring
+  scripts/sync-dpbp.mjs      ← OLD MODEL sync engine
+  scripts/setup-dpbp.mjs     ← one-time machine setup (for the legacy sync only)
   .env.local                 ← DPBP_SOURCE path (gitignored, per-machine)
-  app/specialy/data-pro-budouci-premierku/
-    _content/                ← generated by sync (committed to git)
-  public/dpbp/
-    charts/                  ← generated Vega-Lite JSON files (committed)
-    chapters/01.svg          ← chapter logo SVGs (hand-crafted, committed)
 ```
 
-The sync is **one-way and explicit**: only files listed in `dpbp-config.json` are pulled. New drafts in the source project are ignored until added to the config — this lets the source project have in-progress work that is not yet published.
+**`npm run sync:dpbp` fully overwrites `_meta.json`** using a hardcoded field list (`id, slug, title, accent, author, date, cardOrder, onePager, articles[], intro{title,textBefore,textAfter}`) that does **not** know about `introChart`, `tiles`, or `intro.textClosing`. Running it on a chapter that has been migrated to the current pipeline will silently destroy those fields (the `.mdx` files themselves survive — the sync script never deletes unlisted files — but they'll be orphaned because `tiles` referencing them is gone). **Do not run this script** until/unless it's rewritten to match the current schema. The book PDF pipeline (`book/build.py`) is unaffected and still reads directly from `data-pro-premierku`.
 
 ---
 
@@ -250,17 +304,18 @@ The web sync and the book build are **independent** — they both read the same 
 Every chapter landing page (`/specialy/data-pro-budouci-premierku/{chapter}`, rendered by `[chapter]/page.tsx`) follows the same fixed structure top to bottom. This applies uniformly across all chapters — when adding a new chapter, replicate this exact order rather than improvising a new layout.
 
 1. **Header (banner)** — full-bleed navy (`#101432`) box. Breadcrumb "Data pro budoucí premiérku · Kapitola {id}" (crimson `#de1743` link, inverts to navy-on-crimson on hover/focus), chapter title in `#f8f6f0` (`Roboto Slab`, `2rem`, `800`), and a 48×3px accent rule in the chapter's brand color.
-2. **Titulek** — `intro.title` from `dpbp-config.json`. A provocative, story-driven headline: `[short question]? [twist] aneb [tagline]`. Not the chapter name again — a hook specific to the chapter's central tension.
-3. **Text (problem framing)** — `intro.textBefore`. One paragraph, narrative, grounded in a real quote/promise/common assumption. Write like Ezra Klein or Tomáš Němeček: a flowing scene or argument, not a bullet list, that sets up what people *think* is going on.
+2. **Titulek** — `intro.title` in `_meta.json`. A hook specific to the chapter's central tension — not the chapter name again. See [`DPBP_WRITING_GUIDE.md`](./DPBP_WRITING_GUIDE.md) for title patterns and why not to force the same formula every time.
+3. **Text (problem framing)** — `intro.textBefore`. One paragraph, narrative, grounded in a real quote/promise/common assumption. A flowing scene or argument, not a bullet list, that sets up what people *think* is going on.
 4. **Číslo v boxu (number box)** — the chapter's first `ImpactCard` (`cardOrder[0]`), reused as-is — no separate component needed; its big-number layout already matches this slot.
-5. **Text (reframe)** — `intro.textAfter`. The actual finding: takes the number from step 4 and uses it to overturn or complicate the framing from step 3, closing with what the real question for "budoucí premiérka" should be.
-6. **První graf (first chart)** — the first article's chart (`articles[0].primaryChart`), rendered full-size via `<VegaChart spec={...} />` (not `mini`).
+5. **Text (reframe)** — `intro.textAfter`. The actual finding: takes the number from step 4 and uses it to overturn or complicate the framing from step 3.
+6. **První graf (first chart)** — `introChart` from `_meta.json`, rendered full-size via `<VegaChart spec={...} />` (not `mini`).
+7. **Text (closing)** — `intro.textClosing`. Wraps up the intro and bridges into the tiles below — often a one-sentence preview of what the international-comparison tiles cover.
 
-After step 6, the page continues with the one-pager card and paired article cards/impact cards — that part is unchanged and out of scope for the intro block.
+After step 7: a full-width "Shrnutí" tile (the one-pager), then 4 pairs of tiles (8 total) in a 2-column grid, driven by `tiles` in `_meta.json` — see schema above for the fixed editorial order (Explainer/Svět, mezinárodní kontext/Analýza, Analýza/Analýza, Investigace/Komparace).
 
-**Writing intro text:** Don't invent new claims — adapt language and findings already published in the chapter's `PM_ONE_PAGER_v2.md` / `DIST_ARTICLE_*.md` / impact card descriptions in the source project. The point is tone (engaging, narrative, fact-anchored), not new research.
+**Writing intro and tile text:** Don't invent new claims — ground them in `RESEARCH_AUDIT*.md` / `DIST_ARTICLE_*.md` in `data-pro-premierku`, or in verifiable institutional sources (OECD, Eurostat, NATO, national statistical offices) when covering a foreign comparison not in the source project. See [`DPBP_WRITING_GUIDE.md`](./DPBP_WRITING_GUIDE.md).
 
-**Chapter 02 (Demografie) is the one exception**: it predates this system and lives as a standalone article (`app/clanek/_articles/data-pro-budouci-premierku-02-demografie/demografie-hub.html`) with `htmlInclude`, not in `_content/`. It replicates the same visual structure (steps 1–6) by hand in raw HTML/CSS rather than through `dpbp-config.json` — keep both in sync manually if the shared styling (header colors, hover states, card transitions) changes.
+**Chapter 02 (Demografie) is the one exception**: it predates this system and lives as a standalone article (`app/clanek/_articles/data-pro-budouci-premierku-02-demografie/demografie-hub.html`) with `htmlInclude`, not in `_content/`. It replicates the same visual structure (steps 1–7) by hand in raw HTML/CSS — keep both in sync manually if the shared styling (header colors, hover states, card transitions) changes.
 
 ---
 
