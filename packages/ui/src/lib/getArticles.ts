@@ -37,8 +37,7 @@ interface GetArticlesOptions {
   publicDir?: string;
 }
 
-const isExternalUrl = (value: unknown): value is string => {
-  if (typeof value !== 'string') return false;
+const isExternalUrl = (value: string): boolean => {
   return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
 };
 
@@ -58,16 +57,26 @@ export async function getArticles({
   function resolveCoverImage(raw: unknown, folder: string): string | null {
     if (!raw || typeof raw !== 'string') return null;
     if (isExternalUrl(raw)) return raw;
-    // Convention across the corpus: `coverImage` is always relative to the
-    // article's own folder, even when authored with a leading "/" (e.g.
-    // "/images/foo.webp" meaning "foo.webp inside this article's images/
-    // subfolder"). path.posix.join collapses the resulting double slash.
-    const resolved = path.posix.join(coverImageBase, folder, raw);
-    if (publicDir) {
-      const onDisk = path.join(publicDir, resolved.replace(/^\//, ''));
-      if (!fs.existsSync(onDisk)) return null;
-    }
-    return resolved;
+
+    // The corpus uses the same syntax ("/images/foo.ext") for two different
+    // things depending on the article: most commonly "foo.ext inside this
+    // article's own images/ subfolder", but some older articles really mean
+    // a genuine site-root file under public/images/. Without publicDir we
+    // can't tell them apart, so default to the more common folder-relative
+    // reading. With publicDir, try folder-relative first, then site-root,
+    // then give up (→ ArticleCard's placeholder) — whichever actually
+    // exists on disk wins.
+    const folderRelative = path.posix.join(coverImageBase, folder, raw);
+    if (!publicDir) return folderRelative;
+
+    const folderRelativeOnDisk = path.join(publicDir, folderRelative.replace(/^\//, ''));
+    if (fs.existsSync(folderRelativeOnDisk)) return folderRelative;
+
+    const siteRoot = raw.startsWith('/') ? raw : `/${raw}`;
+    const siteRootOnDisk = path.join(publicDir, siteRoot.replace(/^\//, ''));
+    if (fs.existsSync(siteRootOnDisk)) return siteRoot;
+
+    return null;
   }
 
   const folderArticles = articleFolders
