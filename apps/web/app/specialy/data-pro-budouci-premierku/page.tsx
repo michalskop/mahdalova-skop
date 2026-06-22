@@ -467,18 +467,40 @@ const G_FINANCE = <>
   </g>
 </>;
 
-// 15 Efektivní vládnutí — hodiny/stopky se dvěma ručičkami (téma: čas
-// promluv, efektivita jednání)
+// 15 Efektivní vládnutí — volant se zjednodušeným barevným obvodem
+// (spektrum společnosti) a strukturálně šedými ramenami/jádrem
 const G_VLADNUTI = <>
-  <g fill="#3a4a8f">
-    <circle cx={100} cy={40} r={4.5}/><circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={100} r={4.5}/><circle cx={145} cy={145} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={55} cy={145} r={4.5}/><circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={55} r={4.5}/>
+  <g fill="#5e66d5">
+    <circle cx={60} cy={60} r={4.5}/>
+    <circle cx={40} cy={80} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/>
+    <circle cx={40} cy={120} r={4.5}/>
   </g>
-  <circle cx={100} cy={25} r={4.5} fill="rgba(255,255,255,0.4)"/>
+  <g fill="#efb704">
+    <circle cx={80} cy={40} r={4.5}/>
+    <circle cx={100} cy={40} r={4.5}/>
+    <circle cx={120} cy={40} r={4.5}/>
+    <circle cx={140} cy={60} r={4.5}/>
+  </g>
+  <g fill="#ef6925">
+    <circle cx={160} cy={80} r={4.5}/>
+    <circle cx={160} cy={100} r={4.5}/>
+    <circle cx={160} cy={120} r={4.5}/>
+    <circle cx={140} cy={140} r={4.5}/>
+  </g>
   <g fill="#de1743">
-    <circle cx={115} cy={85} r={4.5}/><circle cx={125} cy={70} r={4.5}/>
-    <circle cx={85} cy={85} r={4.5}/><circle cx={70} cy={70} r={4.5}/><circle cx={60} cy={60} r={4.5}/>
+    <circle cx={120} cy={160} r={4.5}/>
+    <circle cx={100} cy={160} r={4.5}/>
+    <circle cx={80} cy={160} r={4.5}/>
+    <circle cx={60} cy={140} r={4.5}/>
   </g>
-  <circle cx={100} cy={100} r={4.5} fill="#f8f6f0"/>
+  <g fill="#4d5469">
+    <circle cx={100} cy={100} r={4.5}/>
+    <circle cx={60} cy={100} r={4.5}/><circle cx={80} cy={100} r={4.5}/>
+    <circle cx={120} cy={100} r={4.5}/><circle cx={140} cy={100} r={4.5}/>
+    <circle cx={100} cy={60} r={4.5}/><circle cx={100} cy={80} r={4.5}/>
+    <circle cx={100} cy={120} r={4.5}/><circle cx={100} cy={140} r={4.5}/>
+  </g>
 </>;
 
 const CHAPTERS = [
