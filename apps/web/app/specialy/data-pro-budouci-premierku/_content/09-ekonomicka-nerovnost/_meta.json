@@ -1,5 +1,5 @@
 {
-  "id": "09",
+  "id": "06",
   "slug": "09-ekonomicka-nerovnost",
   "title": "Ekonomická nerovnost",
   "accent": "#efb704",
@@ -12,23 +12,23 @@
   ],
   "onePager": {
     "slug": "one-pager",
-    "logo": "/dpbp/chapters/09.svg"
+    "logo": null
   },
-  "introChart": "G09_01_REGION_GAP",
+  "introChart": "G09_02_EXECUTION_TRAP",
   "intro": {
-    "title": "Jsme rovnostářská země? Jen v zrcadle, které si sami vyrobili aneb Geografie úpadku",
+    "title": "Nízký Gini, vysoký dluh: dvě čísla, která si v Česku odporují",
     "textBefore": "Česko se rádo chlubí nízkou nerovností – a v národním srovnání na tom skutečně není špatně. To srovnání ale používá vlastní, nízký medián jako měřítko. Stačí přiložit evropské pravítko, a obrázek se změní.",
-    "textAfter": "Pokud bychom místo českého mediánu použili jednotný evropský příjmový práh, pod něj by spadlo přes 40 % českých domácností. Nízká celostátní nerovnost zároveň maskuje mikroregiony, kde je v exekuci až polovina dospělých obyvatel. Otázka pro budoucí premiérku tedy nezní, jak udržet hezké národní číslo, ale jak řešit propadlé regiony, které se v průměru ztrácí.",
-    "textClosing": "Německo ukazuje, že ani stovky miliard eur transferů nedokážou plně vyrovnat chybějící koncentraci firem a institucí. Slovinsko naopak ukazuje, že rozptýlení vysokých škol a výzkumných kapacit mimo jediné centrum udržuje regionální rozdíly nízké od počátku – řešení, které Česko nikdy systematicky nezkusilo."
+    "textAfter": "Pokud bychom místo českého mediánu použili jednotný evropský příjmový práh, pod něj by spadlo přes 40 % českých domácností. Šest set tisíc lidí je navíc v exekuci, a srážkový systém jim efektivně nevyplácí navyšovat legální příjem. Otázka pro budoucí premiérku tedy nezní, jak udržet hezké národní číslo nerovnosti, ale jak řešit past, ve které jsou nízký příjem, dluh a omezená mobilita propletené.",
+    "textClosing": "Francie ukazuje, jak složité je zdanit mobilní majetek bohatých bez vyvolání odlivu kapitálu. Německo naopak ukazuje, že zvýšení minimální mzdy nemusí vyvolat předpokládaný nárůst nezaměstnanosti, pokud je zavedeno postupně."
   },
   "tiles": [
     { "slug": "explainer-gini", "topic": "Explainer" },
     { "slug": "svet-usa-vs-skandinavie", "topic": "Svět" },
-    { "slug": "04-nemecko-vyrovnavani", "topic": "Evropa" },
-    { "slug": "01-regiony", "topic": "Analýza" },
+    { "slug": "05-francie-majetkova-dan", "topic": "Evropa" },
     { "slug": "02-dluhy", "topic": "Analýza" },
     { "slug": "03-mobilita", "topic": "Analýza" },
+    { "slug": "04-majetkova-koncentrace", "topic": "Analýza" },
     { "slug": "05-overili-40-procent-domacnosti", "topic": "Investigace" },
-    { "slug": "06-slovinsko-konvergence", "topic": "Komparace" }
+    { "slug": "06-nemecko-minimalni-mzda", "topic": "Komparace" }
   ]
 }
