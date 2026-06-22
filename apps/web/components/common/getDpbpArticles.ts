@@ -12,16 +12,13 @@ const CONTENT_ROOT = path.join(
   'app/specialy/data-pro-budouci-premierku/_content'
 );
 
-// Chapter 02-demografie uses the older app/clanek/_articles/ system already
-// scanned elsewhere — skip it here to avoid duplicate cards.
-const SKIP_CHAPTERS = new Set(['02-demografie']);
-
 const SPECIAL_NAME = 'Data pro budoucí premiérku';
 
 // Short, human-readable chapter label for the first tag/badge — hand-curated
 // because deriving it from the slug (e.g. "08-nedostupnost-bydleni" → first
 // word "nedostupnost") produces awkward results.
 const CHAPTER_LABELS: Record<string, string> = {
+  '02-demografie': 'Demografie',
   '01-energie-a-energeticka-bezpecnost': 'Energetika',
   '03-zdravotnictvi-a-pece': 'Zdravotnictví',
   '04-klimaticka-zmena': 'Klima',
@@ -49,7 +46,6 @@ export function getDpbpArticles(): Article[] {
   const result: Article[] = [];
 
   for (const chapter of fs.readdirSync(CONTENT_ROOT)) {
-    if (SKIP_CHAPTERS.has(chapter)) continue;
     const chapterDir = path.join(CONTENT_ROOT, chapter);
     if (!fs.statSync(chapterDir).isDirectory()) continue;
 
@@ -83,8 +79,11 @@ export function getDpbpArticles(): Article[] {
         slug: `${chapter}-${slug}`,
         coverImage: null,
         filter: [],
-        tags: [label, SPECIAL_NAME],
-        promoted: 0,
+        // Articles migrated from the older _articles/ system carry their own
+        // `tags`/`promoted` in frontmatter — preserve those instead of the
+        // synthesized defaults so homepage ranking doesn't regress.
+        tags: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags : [label, SPECIAL_NAME],
+        promoted: typeof data.promoted === 'number' ? data.promoted : 0,
         href: `/specialy/data-pro-budouci-premierku/${chapter}/${slug}`,
       });
     }

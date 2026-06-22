@@ -5,11 +5,13 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { Container, Box, Text, Title } from '@mantine/core';
 import VegaChart from '@/components/dpbp/VegaChart';
 import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -18,9 +20,26 @@ function loadArticle(chapterSlug: string, articleSlug: string) {
   if (!fs.existsSync(p)) return null;
   const raw = fs.readFileSync(p, 'utf8');
   const { data, content } = matter(raw);
+
+  // Articles with raw HTML/SVG containing literal "{...}" (e.g. inline <style>
+  // blocks with CSS) can't go through the MDX/JSX parser at all — MDX always
+  // tries to read "{" as a JS expression, even inside what looks like plain
+  // HTML text, and fails ("Could not parse expression with acorn"). Such
+  // articles set `htmlInclude` in frontmatter pointing to a sibling .html
+  // file, rendered via dangerouslySetInnerHTML instead of MDXRemote — same
+  // mechanism the older /clanek/_articles/ system uses.
+  let htmlContent: string | null = null;
+  if (typeof data.htmlInclude === 'string') {
+    const htmlPath = path.join(CONTENT_ROOT, chapterSlug, 'articles', data.htmlInclude);
+    if (fs.existsSync(htmlPath)) {
+      htmlContent = fs.readFileSync(htmlPath, 'utf8');
+    }
+  }
+
   return {
     frontmatter: data as { title: string; excerpt: string; author: string; date: string },
     content,
+    htmlContent,
   };
 }
 
@@ -30,9 +49,11 @@ function loadChapterMeta(chapterSlug: string) {
   return JSON.parse(fs.readFileSync(p, 'utf8')) as { title: string; accent: string };
 }
 
-// Chapters with dedicated static page.tsx files — excluded from dynamic generation
-// to prevent output file collision in `output: 'export'` builds.
-const STATIC_CHAPTER_ROUTES = new Set(['02-demografie']);
+// Chapters with a dedicated static hub page.tsx — excluded from dynamic
+// generation to prevent output file collision in `output: 'export'` builds.
+// Note: this only applies to the chapter HUB route ([chapter]/page.tsx);
+// individual articles for 02-demografie are generated dynamically here.
+const STATIC_CHAPTER_ROUTES = new Set<string>([]);
 
 export async function generateStaticParams() {
   if (!fs.existsSync(CONTENT_ROOT)) return [];
@@ -74,7 +95,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   if (!art) notFound();
 
   const chapterMeta = loadChapterMeta(params.chapter);
-  const { frontmatter: fm, content } = art;
+  const { frontmatter: fm, content, htmlContent } = art;
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
@@ -101,11 +122,20 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
       {/* Article body */}
       <Container size="sm" style={{ padding: '32px 16px 48px' }}>
         <div className="dpbp-article">
-          <MDXRemote
-            source={content}
-            components={mdxComponents}
-            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
-          />
+          {htmlContent ? (
+            <RawHtmlEmbed html={htmlContent} assetBasePath={`/specialy/data-pro-budouci-premierku/_content/${params.chapter}/articles`} />
+          ) : (
+            <MDXRemote
+              source={content}
+              components={mdxComponents}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                  rehypePlugins: [[rehypeRaw, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement', 'mdxFlowExpression', 'mdxTextExpression', 'mdxjsEsm'] }]],
+                },
+              }}
+            />
+          )}
         </div>
       </Container>
 
