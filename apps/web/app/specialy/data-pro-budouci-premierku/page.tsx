@@ -409,35 +409,54 @@ const G12 = <>
   </g>
 </>;
 
-// 04 Regionální propasti — propast: malý sloupec (periferie) vs. velký sloupec
-// (Praha), s viditelnou mezerou mezi nimi
+// 04 Regionální propasti — plný kosočtverec (bohaté centrum) obklopený
+// vyloučeným obvodem (periferie)
 const G_REGIONS = <>
-  <g fill="rgba(255,255,255,0.35)">
-    <circle cx={40} cy={135} r={4.5}/><circle cx={55} cy={135} r={4.5}/>
-    <circle cx={40} cy={150} r={4.5}/><circle cx={55} cy={150} r={4.5}/>
-    <circle cx={40} cy={165} r={4.5}/><circle cx={55} cy={165} r={4.5}/>
+  {/* Středový plný kosočtverec — bohaté centrum */}
+  <g fill="#5e66d5">
+    <circle cx={100} cy={60} r={4.5}/>
+    <circle cx={80} cy={80} r={4.5}/><circle cx={100} cy={80} r={4.5}/><circle cx={120} cy={80} r={4.5}/>
+    <circle cx={60} cy={100} r={4.5}/><circle cx={80} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={120} cy={100} r={4.5}/><circle cx={140} cy={100} r={4.5}/>
+    <circle cx={80} cy={120} r={4.5}/><circle cx={100} cy={120} r={4.5}/><circle cx={120} cy={120} r={4.5}/>
+    <circle cx={100} cy={140} r={4.5}/>
   </g>
-  <g fill="#1a9fbd">
-    <circle cx={145} cy={40} r={4.5}/><circle cx={160} cy={40} r={4.5}/>
-    <circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={55} r={4.5}/>
-    <circle cx={145} cy={70} r={4.5}/><circle cx={160} cy={70} r={4.5}/>
-    <circle cx={145} cy={85} r={4.5}/><circle cx={160} cy={85} r={4.5}/>
-    <circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
-    <circle cx={145} cy={115} r={4.5}/><circle cx={160} cy={115} r={4.5}/>
-    <circle cx={145} cy={130} r={4.5}/><circle cx={160} cy={130} r={4.5}/>
-    <circle cx={145} cy={145} r={4.5}/><circle cx={160} cy={145} r={4.5}/>
-    <circle cx={145} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/>
+  {/* Vyloučený obvod — periferie */}
+  <g fill="#de1743">
+    <circle cx={100} cy={20} r={4.5}/>
+    <circle cx={80} cy={40} r={4.5}/><circle cx={120} cy={40} r={4.5}/>
+    <circle cx={60} cy={60} r={4.5}/><circle cx={140} cy={60} r={4.5}/>
+    <circle cx={40} cy={80} r={4.5}/><circle cx={160} cy={80} r={4.5}/>
+    <circle cx={20} cy={100} r={4.5}/><circle cx={180} cy={100} r={4.5}/>
+    <circle cx={40} cy={120} r={4.5}/><circle cx={160} cy={120} r={4.5}/>
+    <circle cx={60} cy={140} r={4.5}/><circle cx={140} cy={140} r={4.5}/>
+    <circle cx={80} cy={160} r={4.5}/><circle cx={120} cy={160} r={4.5}/>
+    <circle cx={100} cy={180} r={4.5}/>
   </g>
 </>;
 
-// 14 Veřejné finance a daně — zatím prázdný placeholder (kapitola se
-// zpracuje samostatně později)
+// 14 Veřejné finance a daně — systémová síť s propojovacími uzly a
+// centrálním jádrem
 const G_FINANCE = <>
-  <g fill="rgba(255,255,255,0.2)">
-    <circle cx={70} cy={70} r={4.5}/><circle cx={100} cy={55} r={4.5}/><circle cx={130} cy={70} r={4.5}/>
-    <circle cx={55} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
-    <circle cx={70} cy={130} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={130} cy={130} r={4.5}/>
+  {/* Vnější ochranná/systémová síť */}
+  <g fill="#5e66d5">
+    <circle cx={100} cy={40} r={4.5}/>
+    <circle cx={100} cy={160} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/>
+    <circle cx={160} cy={100} r={4.5}/>
+    <circle cx={60} cy={60} r={4.5}/>
+    <circle cx={140} cy={60} r={4.5}/>
+    <circle cx={60} cy={140} r={4.5}/>
+    <circle cx={140} cy={140} r={4.5}/>
   </g>
+  {/* Vnitřní propojovací uzly */}
+  <g fill="#efb704">
+    <circle cx={100} cy={80} r={4.5}/>
+    <circle cx={100} cy={120} r={4.5}/>
+    <circle cx={80} cy={100} r={4.5}/>
+    <circle cx={120} cy={100} r={4.5}/>
+  </g>
+  {/* Centrální jádro */}
+  <circle cx={100} cy={100} r={4.5} fill="#de1743"/>
 </>;
 
 // 15 Efektivní vládnutí — hodiny/stopky se dvěma ručičkami (téma: čas
