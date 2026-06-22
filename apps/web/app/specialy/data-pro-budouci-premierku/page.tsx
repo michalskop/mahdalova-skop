@@ -434,29 +434,33 @@ const G_REGIONS = <>
   </g>
 </>;
 
-// 14 Veřejné finance a daně — systémová síť s propojovacími uzly a
-// centrálním jádrem
+// 14 Veřejné finance a daně — stupňovitý gradient (daňová pásma): šedá
+// masa vlevo nahoře, žlutá/oranžová/crimson schodiště vpravo dole
 const G_FINANCE = <>
-  {/* Vnější ochranná/systémová síť */}
-  <g fill="#5e66d5">
-    <circle cx={100} cy={40} r={4.5}/>
-    <circle cx={100} cy={160} r={4.5}/>
-    <circle cx={40} cy={100} r={4.5}/>
-    <circle cx={160} cy={100} r={4.5}/>
-    <circle cx={60} cy={60} r={4.5}/>
-    <circle cx={140} cy={60} r={4.5}/>
-    <circle cx={60} cy={140} r={4.5}/>
-    <circle cx={140} cy={140} r={4.5}/>
+  <g fill="#4d5469">
+    <circle cx={80} cy={40} r={4.5}/><circle cx={100} cy={40} r={4.5}/><circle cx={120} cy={40} r={4.5}/>
+    <circle cx={60} cy={60} r={4.5}/><circle cx={80} cy={60} r={4.5}/><circle cx={100} cy={60} r={4.5}/><circle cx={120} cy={60} r={4.5}/><circle cx={140} cy={60} r={4.5}/>
+    <circle cx={40} cy={80} r={4.5}/><circle cx={60} cy={80} r={4.5}/><circle cx={80} cy={80} r={4.5}/><circle cx={100} cy={80} r={4.5}/><circle cx={120} cy={80} r={4.5}/><circle cx={140} cy={80} r={4.5}/><circle cx={160} cy={80} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/><circle cx={60} cy={100} r={4.5}/><circle cx={80} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/>
+    <circle cx={40} cy={120} r={4.5}/><circle cx={60} cy={120} r={4.5}/><circle cx={80} cy={120} r={4.5}/><circle cx={100} cy={120} r={4.5}/>
+    <circle cx={60} cy={140} r={4.5}/><circle cx={80} cy={140} r={4.5}/><circle cx={100} cy={140} r={4.5}/>
+    <circle cx={80} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/>
   </g>
-  {/* Vnitřní propojovací uzly */}
   <g fill="#efb704">
-    <circle cx={100} cy={80} r={4.5}/>
-    <circle cx={100} cy={120} r={4.5}/>
-    <circle cx={80} cy={100} r={4.5}/>
     <circle cx={120} cy={100} r={4.5}/>
+    <circle cx={120} cy={120} r={4.5}/>
   </g>
-  {/* Centrální jádro */}
-  <circle cx={100} cy={100} r={4.5} fill="#de1743"/>
+  <g fill="#ef6925">
+    <circle cx={140} cy={100} r={4.5}/>
+    <circle cx={140} cy={120} r={4.5}/>
+    <circle cx={120} cy={140} r={4.5}/>
+  </g>
+  <g fill="#de1743">
+    <circle cx={160} cy={100} r={4.5}/>
+    <circle cx={160} cy={120} r={4.5}/>
+    <circle cx={140} cy={140} r={4.5}/>
+    <circle cx={120} cy={160} r={4.5}/>
+  </g>
 </>;
 
 // 15 Efektivní vládnutí — hodiny/stopky se dvěma ručičkami (téma: čas
