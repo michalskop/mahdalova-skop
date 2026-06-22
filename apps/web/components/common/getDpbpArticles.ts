@@ -32,6 +32,7 @@ const CHAPTER_LABELS: Record<string, string> = {
   '12-medialni-manipulace': 'Média',
   'regionalni-propasti': 'Regiony',
   'efektivni-vladnuti': 'Vládnutí',
+  'verejne-finance-a-dane': 'Daně',
 };
 
 interface ChapterMetaLite {

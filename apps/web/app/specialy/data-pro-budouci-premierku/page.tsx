@@ -6,11 +6,11 @@ import ProfileHead from '@/components/dpbp/ProfileHead';
 
 export const metadata: Metadata = {
   title: 'Data pro budoucí premiérku',
-  description: 'Dvanáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
+  description: 'Patnáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
   alternates: { canonical: '/specialy/data-pro-budouci-premierku' },
   openGraph: {
     title: 'Data pro budoucí premiérku',
-    description: 'Dvanáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
+    description: 'Patnáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
     url: '/specialy/data-pro-budouci-premierku',
     type: 'website',
   },
@@ -409,19 +409,72 @@ const G12 = <>
   </g>
 </>;
 
+// 04 Regionální propasti — propast: malý sloupec (periferie) vs. velký sloupec
+// (Praha), s viditelnou mezerou mezi nimi
+const G_REGIONS = <>
+  <g fill="rgba(255,255,255,0.35)">
+    <circle cx={40} cy={135} r={4.5}/><circle cx={55} cy={135} r={4.5}/>
+    <circle cx={40} cy={150} r={4.5}/><circle cx={55} cy={150} r={4.5}/>
+    <circle cx={40} cy={165} r={4.5}/><circle cx={55} cy={165} r={4.5}/>
+  </g>
+  <g fill="#1a9fbd">
+    <circle cx={145} cy={40} r={4.5}/><circle cx={160} cy={40} r={4.5}/>
+    <circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={55} r={4.5}/>
+    <circle cx={145} cy={70} r={4.5}/><circle cx={160} cy={70} r={4.5}/>
+    <circle cx={145} cy={85} r={4.5}/><circle cx={160} cy={85} r={4.5}/>
+    <circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
+    <circle cx={145} cy={115} r={4.5}/><circle cx={160} cy={115} r={4.5}/>
+    <circle cx={145} cy={130} r={4.5}/><circle cx={160} cy={130} r={4.5}/>
+    <circle cx={145} cy={145} r={4.5}/><circle cx={160} cy={145} r={4.5}/>
+    <circle cx={145} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/>
+  </g>
+</>;
+
+// 14 Veřejné finance a daně — zatím prázdný placeholder (kapitola se
+// zpracuje samostatně později)
+const G_FINANCE = <>
+  <g fill="rgba(255,255,255,0.2)">
+    <circle cx={70} cy={70} r={4.5}/><circle cx={100} cy={55} r={4.5}/><circle cx={130} cy={70} r={4.5}/>
+    <circle cx={55} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+    <circle cx={70} cy={130} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={130} cy={130} r={4.5}/>
+  </g>
+</>;
+
+// 15 Efektivní vládnutí — hodiny/stopky se dvěma ručičkami (téma: čas
+// promluv, efektivita jednání)
+const G_VLADNUTI = <>
+  <g fill="#3a4a8f">
+    <circle cx={100} cy={40} r={4.5}/><circle cx={145} cy={55} r={4.5}/><circle cx={160} cy={100} r={4.5}/><circle cx={145} cy={145} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={55} cy={145} r={4.5}/><circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={55} r={4.5}/>
+  </g>
+  <circle cx={100} cy={25} r={4.5} fill="rgba(255,255,255,0.4)"/>
+  <g fill="#de1743">
+    <circle cx={115} cy={85} r={4.5}/><circle cx={125} cy={70} r={4.5}/>
+    <circle cx={85} cy={85} r={4.5}/><circle cx={70} cy={70} r={4.5}/><circle cx={60} cy={60} r={4.5}/>
+  </g>
+  <circle cx={100} cy={100} r={4.5} fill="#f8f6f0"/>
+</>;
+
 const CHAPTERS = [
-  {n:'01',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/01-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#ffcf02',customSvg:G01},
-  {n:'02',title:'Demografie',href:'/specialy/data-pro-budouci-premierku/02-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
-  {n:'03',title:'Zdravotnictví a péče',href:'/specialy/data-pro-budouci-premierku/03-zdravotnictvi-a-pece',available:true,dots:D03,accent:'#5e66d5',customSvg:G03},
-  {n:'04',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/04-klimaticka-zmena',available:true,dots:D04,accent:'#de1743',customSvg:G04},
-  {n:'05',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/05-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#efb704',customSvg:G08},
-  {n:'06',title:'AI a trh práce',href:'/specialy/data-pro-budouci-premierku/06-ai-a-trh-prace',available:true,dots:D06,accent:'#ffcf02',customSvg:G06},
-  {n:'07',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/07-oligarchizace-a-korupce',available:true,dots:D07,accent:'#ffcf02',customSvg:G07},
-  {n:'08',title:'Nedostupnost bydlení',href:'/specialy/data-pro-budouci-premierku/08-nedostupnost-bydleni',available:true,dots:D05,accent:'#de1743',customSvg:G05},
-  {n:'09',title:'Ekonomická nerovnost',href:'/specialy/data-pro-budouci-premierku/09-ekonomicka-nerovnost',available:true,dots:D09,accent:'#efb704',customSvg:G09},
-  {n:'10',title:'Digitalizace a inovace',href:'/specialy/data-pro-budouci-premierku/10-digitalizace-a-inovace',available:true,dots:D10,accent:'#5e66d5',customSvg:G10},
-  {n:'11',title:'Úroveň vzdělávání',href:'/specialy/data-pro-budouci-premierku/11-uroven-vzdelavani',available:true,dots:D02,accent:'#5e66d5',customSvg:G02},
+  // BLOK 1: Obyvatelstvo a základní životní úroveň
+  {n:'01',title:'Demografie',href:'/specialy/data-pro-budouci-premierku/02-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
+  {n:'02',title:'Zdravotnictví a péče',href:'/specialy/data-pro-budouci-premierku/03-zdravotnictvi-a-pece',available:true,dots:D03,accent:'#5e66d5',customSvg:G03},
+  {n:'03',title:'Nedostupnost bydlení',href:'/specialy/data-pro-budouci-premierku/08-nedostupnost-bydleni',available:true,dots:D05,accent:'#de1743',customSvg:G05},
+  // BLOK 2: Rozdělená země
+  {n:'04',title:'Regionální propasti',href:'/specialy/data-pro-budouci-premierku/regionalni-propasti',available:true,dots:D09,accent:'#1a9fbd',customSvg:G_REGIONS},
+  {n:'05',title:'Úroveň vzdělávání',href:'/specialy/data-pro-budouci-premierku/11-uroven-vzdelavani',available:true,dots:D02,accent:'#5e66d5',customSvg:G02},
+  {n:'06',title:'Ekonomická nerovnost',href:'/specialy/data-pro-budouci-premierku/09-ekonomicka-nerovnost',available:true,dots:D09,accent:'#efb704',customSvg:G09},
+  // BLOK 3: Technologie a ekonomika budoucnosti
+  {n:'07',title:'AI a trh práce',href:'/specialy/data-pro-budouci-premierku/06-ai-a-trh-prace',available:true,dots:D06,accent:'#ffcf02',customSvg:G06},
+  {n:'08',title:'Digitalizace a inovace',href:'/specialy/data-pro-budouci-premierku/10-digitalizace-a-inovace',available:true,dots:D10,accent:'#5e66d5',customSvg:G10},
+  {n:'09',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/01-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#ffcf02',customSvg:G01},
+  // BLOK 4: Fyzický svět a vnější hrozby
+  {n:'10',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/04-klimaticka-zmena',available:true,dots:D04,accent:'#de1743',customSvg:G04},
+  {n:'11',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/05-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#efb704',customSvg:G08},
   {n:'12',title:'Informační manipulace',href:'/specialy/data-pro-budouci-premierku/12-medialni-manipulace',available:true,dots:D12,accent:'#de1743',customSvg:G12},
+  // BLOK 5: Systém, stát a peníze
+  {n:'13',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/07-oligarchizace-a-korupce',available:true,dots:D07,accent:'#ffcf02',customSvg:G07},
+  {n:'14',title:'Veřejné finance a daně',href:'/specialy/data-pro-budouci-premierku/verejne-finance-a-dane',available:true,dots:D06,accent:'#2d7a4f',customSvg:G_FINANCE},
+  {n:'15',title:'Efektivní vládnutí',href:'/specialy/data-pro-budouci-premierku/efektivni-vladnuti',available:true,dots:D08,accent:'#3a4a8f',customSvg:G_VLADNUTI},
 ];
 
 const DARK = '#101432';
@@ -685,7 +738,7 @@ export default function DpbpLandingPage() {
             </div>
             <h1 className="dt-hero-title">Data pro budoucí premiérku</h1>
             <p className="dt-hero-lead">
-              Dvanáct klíčových výzev pro budoucí vedení státu, opřených o data a fakta
+              Patnáct klíčových výzev pro budoucí vedení státu, opřených o data a fakta
             </p>
           </div>
           <div className="dt-hero-visual">

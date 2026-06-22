@@ -1,0 +1,32 @@
+{
+  "id": "14",
+  "slug": "verejne-finance-a-dane",
+  "title": "Veřejné finance a daně",
+  "accent": "#2d7a4f",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-19",
+  "cardOrder": [
+    "KLIN"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": null
+  },
+  "introChart": null,
+  "intro": {
+    "title": "Stejný celkový výnos, naprosto jiný daňový systém",
+    "textBefore": "Když se řekne, že Česko vybírá daně „v evropském průměru“, zní to jako uklidňující zpráva. Toto agregátní číslo ale skrývá, z čeho přesně peníze pocházejí — a tady se český systém od většiny Evropy výrazně odlišuje.",
+    "textAfter": "Český daňový klín pro bezdětného jednotlivce na průměrné mzdě patří k nejvyšším v OECD — ne kvůli dani z příjmu, ale kvůli povinným odvodům na sociální a zdravotní pojištění. Naopak daň z nemovitého majetku, ekonomicky méně škodlivý zdroj příjmů, vybírá Česko v jednom z nejnižších objemů v celé OECD. Otázka pro budoucí premiérku tedy nezní, jak vybrat víc daní celkem, ale odkud je vybírat, aby to nejméně škodilo zaměstnanosti.",
+    "textClosing": "Estonsko a Nový Zéland ukazují dvě různé cesty ke stejnému cíli — jednoduchý, méně narušující daňový systém. Evropské srovnání daně z nemovitosti zase ukazuje, kde Česko nechává nevyužitý fiskální prostor ležet ladem."
+  },
+  "tiles": [
+    { "slug": "explainer-danovy-mix", "topic": "Explainer" },
+    { "slug": "svet-estonsko-dan", "topic": "Svět" },
+    { "slug": "evropa-dan-z-nemovitosti", "topic": "Evropa" },
+    { "slug": "01-danovy-klin", "topic": "Analýza" },
+    { "slug": "02-mandatorni-vydaje", "topic": "Analýza" },
+    { "slug": "03-dph-mezera", "topic": "Analýza" },
+    { "slug": "05-overili-nejvyssi-klin", "topic": "Investigace" },
+    { "slug": "06-novy-zeland-gst", "topic": "Komparace" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "KLIN",
+  "number": "43",
+  "unit": "%",
+  "perUnit": "",
+  "label": "Daňový klín pro bezdětného jednotlivce",
+  "sublabel": "Daňový klín pro bezdětného jednotlivce",
+  "context": "Rozdíl mezi náklady práce a čistou mzdou je tvořen převážně povinnými odvody na sociální a zdravotní pojištění, ne daní z příjmu samotnou. Číslo se výrazně liší podle rodinné situace.",
+  "source": "OECD: Taxing Wages — odhad pro průměrnou mzdu bezdětného jednotlivce",
+  "accent": "#2d7a4f"
+}
