@@ -300,22 +300,24 @@ const G07 = <>
 // 08 Nedostupnost bydlení — dům s okny
 const G05 = <>
   <g fill="#de1743">
-    <circle cx={100} cy={55} r={4.5}/>
-    <circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/>
-    <circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
-    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
+    <circle cx={100} cy={40} r={4.5}/>
+    <circle cx={85} cy={55} r={4.5}/><circle cx={100} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/>
+    <circle cx={70} cy={70} r={4.5}/><circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/><circle cx={130} cy={70} r={4.5}/>
+    <circle cx={55} cy={85} r={4.5}/><circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
   </g>
   <g fill="rgba(255,255,255,0.3)">
-    <circle cx={55} cy={115} r={4.5}/><circle cx={145} cy={115} r={4.5}/>
-    <circle cx={55} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/>
-    <circle cx={55} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
-    <circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/>
+    <circle cx={40} cy={115} r={4.5}/><circle cx={160} cy={115} r={4.5}/>
+    <circle cx={40} cy={130} r={4.5}/><circle cx={160} cy={130} r={4.5}/>
+    <circle cx={40} cy={145} r={4.5}/><circle cx={160} cy={145} r={4.5}/>
+    <circle cx={40} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/>
+    <circle cx={40} cy={175} r={4.5}/><circle cx={55} cy={175} r={4.5}/><circle cx={70} cy={175} r={4.5}/><circle cx={85} cy={175} r={4.5}/><circle cx={115} cy={175} r={4.5}/><circle cx={130} cy={175} r={4.5}/><circle cx={145} cy={175} r={4.5}/><circle cx={160} cy={175} r={4.5}/>
   </g>
   <circle cx={85} cy={115} r={4.5} fill="#ffcf02"/><circle cx={115} cy={115} r={4.5} fill="#ffcf02"/>
   <circle cx={85} cy={130} r={4.5} fill="#ffcf02"/><circle cx={115} cy={130} r={4.5} fill="#ffcf02"/>
-  <circle cx={100} cy={130} r={4.5} fill="#f76800"/>
   <circle cx={100} cy={145} r={4.5} fill="#f76800"/>
   <circle cx={100} cy={160} r={4.5} fill="#f76800"/>
+  <circle cx={100} cy={175} r={4.5} fill="#f76800"/>
 </>;
 
 // 09 Ekonomická nerovnost — váhy příjmů
@@ -344,10 +346,11 @@ const G09 = <>
   <circle cx={145} cy={40} r={4.5} fill="#de1743"/>
 </>;
 
-// 10 Digitalizace a inovace — notebook s daty
+// 10 Digitalizace a inovace — notebook se sloupcovým grafem na displeji
 const G10 = <>
   <g fill="rgba(255,255,255,0.25)">
-    <circle cx={55} cy={55} r={4.5}/><circle cx={70} cy={55} r={4.5}/><circle cx={85} cy={55} r={4.5}/><circle cx={100} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
+    <circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/><circle cx={85} cy={40} r={4.5}/><circle cx={100} cy={40} r={4.5}/><circle cx={115} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/>
+    <circle cx={55} cy={55} r={4.5}/><circle cx={145} cy={55} r={4.5}/>
     <circle cx={55} cy={70} r={4.5}/><circle cx={145} cy={70} r={4.5}/>
     <circle cx={55} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
     <circle cx={55} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/>
@@ -355,12 +358,14 @@ const G10 = <>
   </g>
   <g fill="rgba(255,255,255,0.5)">
     <circle cx={40} cy={130} r={4.5}/><circle cx={55} cy={130} r={4.5}/><circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/><circle cx={145} cy={130} r={4.5}/><circle cx={160} cy={130} r={4.5}/>
+    <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/><circle cx={130} cy={145} r={4.5}/><circle cx={145} cy={145} r={4.5}/>
   </g>
-  <circle cx={100} cy={70} r={4.5} fill="#de1743"/>
-  <circle cx={85} cy={85} r={4.5} fill="#5e66d5"/>
-  <circle cx={100} cy={85} r={4.5} fill="#ffcf02"/>
-  <circle cx={115} cy={85} r={4.5} fill="#f76800"/>
-  <circle cx={100} cy={100} r={4.5} fill="#5e66d5"/>
+  {/* Sloupcový graf dat na displeji */}
+  <circle cx={70} cy={100} r={4.5} fill="#5e66d5"/>
+  <circle cx={85} cy={100} r={4.5} fill="#ffcf02"/><circle cx={85} cy={85} r={4.5} fill="#ffcf02"/>
+  <circle cx={100} cy={100} r={4.5} fill="#f76800"/><circle cx={100} cy={85} r={4.5} fill="#f76800"/><circle cx={100} cy={70} r={4.5} fill="#f76800"/>
+  <circle cx={115} cy={100} r={4.5} fill="#de1743"/><circle cx={115} cy={85} r={4.5} fill="#de1743"/>
+  <circle cx={130} cy={100} r={4.5} fill="#5e66d5"/>
 </>;
 
 // 11 Vzdělávání — otevřená kniha
