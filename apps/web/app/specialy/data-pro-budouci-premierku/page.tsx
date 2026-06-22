@@ -420,17 +420,15 @@ const G_REGIONS = <>
     <circle cx={80} cy={120} r={4.5}/><circle cx={100} cy={120} r={4.5}/><circle cx={120} cy={120} r={4.5}/>
     <circle cx={100} cy={140} r={4.5}/>
   </g>
-  {/* Vyloučený obvod — periferie */}
+  {/* Vyloučený obvod — periferie, blíž ke středu pro kompaktnější tvar */}
   <g fill="#de1743">
-    <circle cx={100} cy={20} r={4.5}/>
-    <circle cx={80} cy={40} r={4.5}/><circle cx={120} cy={40} r={4.5}/>
-    <circle cx={60} cy={60} r={4.5}/><circle cx={140} cy={60} r={4.5}/>
-    <circle cx={40} cy={80} r={4.5}/><circle cx={160} cy={80} r={4.5}/>
-    <circle cx={20} cy={100} r={4.5}/><circle cx={180} cy={100} r={4.5}/>
-    <circle cx={40} cy={120} r={4.5}/><circle cx={160} cy={120} r={4.5}/>
-    <circle cx={60} cy={140} r={4.5}/><circle cx={140} cy={140} r={4.5}/>
-    <circle cx={80} cy={160} r={4.5}/><circle cx={120} cy={160} r={4.5}/>
-    <circle cx={100} cy={180} r={4.5}/>
+    <circle cx={100} cy={40} r={4.5}/>
+    <circle cx={80} cy={60} r={4.5}/><circle cx={120} cy={60} r={4.5}/>
+    <circle cx={60} cy={80} r={4.5}/><circle cx={140} cy={80} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
+    <circle cx={60} cy={120} r={4.5}/><circle cx={140} cy={120} r={4.5}/>
+    <circle cx={80} cy={140} r={4.5}/><circle cx={120} cy={140} r={4.5}/>
+    <circle cx={100} cy={160} r={4.5}/>
   </g>
 </>;
 
