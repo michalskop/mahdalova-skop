@@ -1,0 +1,11 @@
+{
+  "id": "OBSTRUKCE",
+  "number": "39",
+  "unit": "hodin/měsíc",
+  "perUnit": "",
+  "label": "Projevy v Sněmovně, dvakrát víc než za Nečase",
+  "sublabel": "Projevy v Sněmovně, dvakrát víc než za Nečase",
+  "context": "Za vlády Petra Nečase poslanci mluvili necelých 19 hodin měsíčně. V aktuálním volebním období je to 39 hodin — a méně bodů se za srovnatelnou dobu skutečně projedná.",
+  "source": "Poslanecká sněmovna PČR, iROZHLAS.cz (2025)",
+  "accent": "#101432"
+}

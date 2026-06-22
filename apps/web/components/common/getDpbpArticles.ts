@@ -30,6 +30,8 @@ const CHAPTER_LABELS: Record<string, string> = {
   '10-digitalizace-a-inovace': 'Digitalizace',
   '11-uroven-vzdelavani': 'Vzdělávání',
   '12-medialni-manipulace': 'Média',
+  'regionalni-propasti': 'Regiony',
+  'efektivni-vladnuti': 'Vládnutí',
 };
 
 interface ChapterMetaLite {

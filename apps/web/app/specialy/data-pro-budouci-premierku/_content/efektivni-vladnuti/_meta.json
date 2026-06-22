@@ -1,0 +1,32 @@
+{
+  "id": "15",
+  "slug": "efektivni-vladnuti",
+  "title": "Efektivní vládnutí",
+  "accent": "#101432",
+  "author": "Kateřina Mahdalová & Michal Škop",
+  "date": "2026-06-19",
+  "cardOrder": [
+    "OBSTRUKCE"
+  ],
+  "onePager": {
+    "slug": "one-pager",
+    "logo": null
+  },
+  "introChart": null,
+  "intro": {
+    "title": "Sněmovna mluví 39 hodin měsíčně. Za Nečase to bylo necelých dvacet.",
+    "textBefore": "Počátkem roku 2025 se začali ozývat zákonodárci, že aktuální způsob fungování Sněmovny není slučitelný s osobním životem. Dvě poslankyně oznámily, že nebudou znovu kandidovat — jednání jsou podle nich nepředvídatelná a neefektivní. Přidal se i předseda rozpočtového výboru, který si stěžoval, že tak neefektivně strávený pracovní čas za celý svůj život neměl.",
+    "textAfter": "Analýza sněmovních dat za poslední čtyři volební období potvrzuje, že nejde o subjektivní pocit. Čas u řečnického pultu se za dekádu víc než zdvojnásobil, počet skutečně projednaných bodů za srovnatelnou dobu klesá a jednání se třikrát častěji protahuje do noci než za předchozí tři volební období dohromady. Otázka pro budoucí premiérku tedy nezní, kdo z politiků mluví nejvíc, ale jak nastavit jednací řád, aby debata zůstala možností, ne nástrojem k zablokování vlastní práce parlamentu.",
+    "textClosing": "Evropský parlament a německý Bundestag řeší riziko zdržování jinak než Británie — přidělováním pevného času politickým skupinám místo spoléhání na autoritu předsedajícího. Francie po roce 2009 ukazuje, jak vypadá konkrétní reforma tohoto typu v praxi."
+  },
+  "tiles": [
+    { "slug": "explainer-obstrukce", "topic": "Explainer" },
+    { "slug": "svet-britanie-speaker", "topic": "Svět" },
+    { "slug": "evropa-europarlament", "topic": "Evropa" },
+    { "slug": "01-obstrukce", "topic": "Analýza" },
+    { "slug": "02-dochazka", "topic": "Analýza" },
+    { "slug": "03-hlasovani-rebelovani", "topic": "Analýza" },
+    { "slug": "05-overili-480-hodin", "topic": "Investigace" },
+    { "slug": "06-francie-programovany-cas", "topic": "Komparace" }
+  ]
+}
