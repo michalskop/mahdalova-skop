@@ -441,12 +441,14 @@ const G_FINANCE = <>
     <circle cx={80} cy={40} r={4.5}/><circle cx={100} cy={40} r={4.5}/><circle cx={120} cy={40} r={4.5}/>
     <circle cx={60} cy={60} r={4.5}/><circle cx={80} cy={60} r={4.5}/><circle cx={100} cy={60} r={4.5}/><circle cx={120} cy={60} r={4.5}/><circle cx={140} cy={60} r={4.5}/>
     <circle cx={40} cy={80} r={4.5}/><circle cx={60} cy={80} r={4.5}/><circle cx={80} cy={80} r={4.5}/><circle cx={100} cy={80} r={4.5}/><circle cx={120} cy={80} r={4.5}/><circle cx={140} cy={80} r={4.5}/><circle cx={160} cy={80} r={4.5}/>
-    <circle cx={40} cy={100} r={4.5}/><circle cx={60} cy={100} r={4.5}/><circle cx={80} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/>
-    <circle cx={40} cy={120} r={4.5}/><circle cx={60} cy={120} r={4.5}/><circle cx={80} cy={120} r={4.5}/><circle cx={100} cy={120} r={4.5}/>
+    <circle cx={40} cy={100} r={4.5}/><circle cx={60} cy={100} r={4.5}/><circle cx={80} cy={100} r={4.5}/>
+    <circle cx={40} cy={120} r={4.5}/><circle cx={60} cy={120} r={4.5}/><circle cx={80} cy={120} r={4.5}/>
     <circle cx={60} cy={140} r={4.5}/><circle cx={80} cy={140} r={4.5}/><circle cx={100} cy={140} r={4.5}/>
     <circle cx={80} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/>
   </g>
   <g fill="#efb704">
+    <circle cx={100} cy={100} r={4.5}/>
+    <circle cx={100} cy={120} r={4.5}/>
     <circle cx={120} cy={100} r={4.5}/>
     <circle cx={120} cy={120} r={4.5}/>
   </g>
