@@ -12,6 +12,7 @@ import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
+import ProfileHead from '@/components/dpbp/ProfileHead';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -102,20 +103,38 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
       {/* Article header */}
       <Box style={{ background: '#101432', padding: '48px 0 40px' }}>
         <Container size="sm">
-          <Text size="xs" style={{ color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>
-            <Link href="/specialy/data-pro-budouci-premierku" style={{ color: 'inherit', textDecoration: 'none' }}>Data pro budoucí premiérku</Link>
-            {' · '}
-            <Link href={`/specialy/data-pro-budouci-premierku/${params.chapter}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-              {chapterMeta?.title ?? 'Kapitola'}
-            </Link>
-          </Text>
-          <Title order={1} style={{ color: '#ffffff', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1.2, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
-            {fm.title}
-          </Title>
-          <Box style={{ width: 40, height: 3, background: chapterMeta?.accent ?? '#de1743', marginTop: 16, marginBottom: 16 }} />
-          <Text style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
-            {fm.author} · {formatDate(fm.date)}
-          </Text>
+          <Box style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24 }}>
+            <Box style={{ minWidth: 0 }}>
+              <Text size="xs" style={{ color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>
+                <Link href="/specialy/data-pro-budouci-premierku" style={{ color: 'inherit', textDecoration: 'none' }}>Data pro budoucí premiérku</Link>
+                {' · '}
+                <Link href={`/specialy/data-pro-budouci-premierku/${params.chapter}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {chapterMeta?.title ?? 'Kapitola'}
+                </Link>
+              </Text>
+              <Title order={1} style={{ color: '#ffffff', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1.2, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
+                {fm.title}
+              </Title>
+              <Box style={{ width: 40, height: 3, background: chapterMeta?.accent ?? '#de1743', marginTop: 16, marginBottom: 16 }} />
+              <Text style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
+                {fm.author} · {formatDate(fm.date)}
+              </Text>
+            </Box>
+            <Box className="dpbp-article-head-profile" style={{ flex: '0 0 auto' }}>
+              <a
+                href="https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku"
+                aria-label="Zpět na Data pro budoucí premiérku"
+                style={{ display: 'block' }}
+              >
+                <ProfileHead initialRandom style={{ maxHeight: 100, width: 'auto', display: 'block' }} />
+              </a>
+            </Box>
+          </Box>
+          <style>{`
+            @media (max-width: 600px) {
+              .dpbp-article-head-profile { display: none; }
+            }
+          `}</style>
         </Container>
       </Box>
 

@@ -119,7 +119,13 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               <Box style={{ width: 48, height: 3, background: meta.accent, marginTop: 16 }} />
             </Box>
             <Box className="dpbp-chapter-head-profile" style={{ flex: '0 0 auto' }}>
-              <ProfileHead style={{ maxHeight: 120, width: 'auto', display: 'block' }} />
+              <a
+                href="https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku"
+                aria-label="Zpět na Data pro budoucí premiérku"
+                style={{ display: 'block' }}
+              >
+                <ProfileHead initialRandom style={{ maxHeight: 120, width: 'auto', display: 'block' }} />
+              </a>
             </Box>
           </Box>
           <style>{`
