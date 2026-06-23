@@ -1,4 +1,4 @@
-// app/specialy/data-pro-budouci-premierku/02-demografie/page.tsx
+// app/specialy/data-pro-budouci-premierku/01-demografie/page.tsx
 import fs from 'fs';
 import path from 'path';
 import type { Metadata } from 'next';
@@ -8,11 +8,11 @@ import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 export const metadata: Metadata = {
   title: 'Demografie | Data pro budoucí premiérku',
   description: 'Vymíráme? Co se doopravdy děje s českou populací a proč samotná čísla k pochopení nestačí.',
-  alternates: { canonical: '/specialy/data-pro-budouci-premierku/02-demografie' },
+  alternates: { canonical: '/specialy/data-pro-budouci-premierku/01-demografie' },
   openGraph: {
     title: 'Demografie | Data pro budoucí premiérku',
     description: 'Vymíráme? Co se doopravdy děje s českou populací a proč samotná čísla k pochopení nestačí.',
-    url: '/specialy/data-pro-budouci-premierku/02-demografie',
+    url: '/specialy/data-pro-budouci-premierku/01-demografie',
     type: 'article',
   },
 };

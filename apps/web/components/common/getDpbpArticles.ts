@@ -18,21 +18,21 @@ const SPECIAL_NAME = 'Data pro budoucí premiérku';
 // because deriving it from the slug (e.g. "08-nedostupnost-bydleni" → first
 // word "nedostupnost") produces awkward results.
 const CHAPTER_LABELS: Record<string, string> = {
-  '02-demografie': 'Demografie',
-  '01-energie-a-energeticka-bezpecnost': 'Energetika',
-  '03-zdravotnictvi-a-pece': 'Zdravotnictví',
-  '04-klimaticka-zmena': 'Klima',
-  '05-bezpecnost-a-konflikty': 'Bezpečnost',
-  '06-ai-a-trh-prace': 'AI a práce',
-  '07-oligarchizace-a-korupce': 'Korupce',
-  '08-nedostupnost-bydleni': 'Bydlení',
-  '09-ekonomicka-nerovnost': 'Nerovnost',
-  '10-digitalizace-a-inovace': 'Digitalizace',
-  '11-uroven-vzdelavani': 'Vzdělávání',
+  '01-demografie': 'Demografie',
+  '02-zdravotnictvi-a-pece': 'Zdravotnictví',
+  '03-nedostupnost-bydleni': 'Bydlení',
+  '04-regionalni-propasti': 'Regiony',
+  '05-uroven-vzdelavani': 'Vzdělávání',
+  '06-ekonomicka-nerovnost': 'Nerovnost',
+  '07-ai-a-trh-prace': 'AI a práce',
+  '08-digitalizace-a-inovace': 'Digitalizace',
+  '09-energie-a-energeticka-bezpecnost': 'Energetika',
+  '10-klimaticka-zmena': 'Klima',
+  '11-bezpecnost-a-konflikty': 'Bezpečnost',
   '12-medialni-manipulace': 'Média',
-  'regionalni-propasti': 'Regiony',
-  'efektivni-vladnuti': 'Vládnutí',
-  'verejne-finance-a-dane': 'Daně',
+  '13-oligarchizace-a-korupce': 'Korupce',
+  '14-verejne-finance-a-dane': 'Daně',
+  '15-efektivni-vladnuti': 'Vládnutí',
 };
 
 interface ChapterMetaLite {

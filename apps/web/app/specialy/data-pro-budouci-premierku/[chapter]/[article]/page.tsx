@@ -53,7 +53,7 @@ function loadChapterMeta(chapterSlug: string) {
 // Chapters with a dedicated static hub page.tsx — excluded from dynamic
 // generation to prevent output file collision in `output: 'export'` builds.
 // Note: this only applies to the chapter HUB route ([chapter]/page.tsx);
-// individual articles for 02-demografie are generated dynamically here.
+// individual articles for 01-demografie are generated dynamically here.
 const STATIC_CHAPTER_ROUTES = new Set<string>([]);
 
 export async function generateStaticParams() {

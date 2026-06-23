@@ -1,0 +1,30 @@
+# Data pro budoucí premiérku — staré číslování kapitol (redirect na nové URL
+# po přečíslování do 5 bloků / 15 kapitol, 2026-06-23)
+/specialy/data-pro-budouci-premierku/02-demografie/*       /specialy/data-pro-budouci-premierku/01-demografie/:splat       301
+/specialy/data-pro-budouci-premierku/02-demografie         /specialy/data-pro-budouci-premierku/01-demografie              301
+/specialy/data-pro-budouci-premierku/03-zdravotnictvi-a-pece/*   /specialy/data-pro-budouci-premierku/02-zdravotnictvi-a-pece/:splat   301
+/specialy/data-pro-budouci-premierku/03-zdravotnictvi-a-pece     /specialy/data-pro-budouci-premierku/02-zdravotnictvi-a-pece         301
+/specialy/data-pro-budouci-premierku/08-nedostupnost-bydleni/*   /specialy/data-pro-budouci-premierku/03-nedostupnost-bydleni/:splat   301
+/specialy/data-pro-budouci-premierku/08-nedostupnost-bydleni     /specialy/data-pro-budouci-premierku/03-nedostupnost-bydleni         301
+/specialy/data-pro-budouci-premierku/regionalni-propasti/*       /specialy/data-pro-budouci-premierku/04-regionalni-propasti/:splat   301
+/specialy/data-pro-budouci-premierku/regionalni-propasti         /specialy/data-pro-budouci-premierku/04-regionalni-propasti         301
+/specialy/data-pro-budouci-premierku/11-uroven-vzdelavani/*      /specialy/data-pro-budouci-premierku/05-uroven-vzdelavani/:splat     301
+/specialy/data-pro-budouci-premierku/11-uroven-vzdelavani        /specialy/data-pro-budouci-premierku/05-uroven-vzdelavani           301
+/specialy/data-pro-budouci-premierku/09-ekonomicka-nerovnost/*   /specialy/data-pro-budouci-premierku/06-ekonomicka-nerovnost/:splat  301
+/specialy/data-pro-budouci-premierku/09-ekonomicka-nerovnost     /specialy/data-pro-budouci-premierku/06-ekonomicka-nerovnost        301
+/specialy/data-pro-budouci-premierku/06-ai-a-trh-prace/*         /specialy/data-pro-budouci-premierku/07-ai-a-trh-prace/:splat        301
+/specialy/data-pro-budouci-premierku/06-ai-a-trh-prace           /specialy/data-pro-budouci-premierku/07-ai-a-trh-prace              301
+/specialy/data-pro-budouci-premierku/10-digitalizace-a-inovace/* /specialy/data-pro-budouci-premierku/08-digitalizace-a-inovace/:splat 301
+/specialy/data-pro-budouci-premierku/10-digitalizace-a-inovace   /specialy/data-pro-budouci-premierku/08-digitalizace-a-inovace      301
+/specialy/data-pro-budouci-premierku/01-energie-a-energeticka-bezpecnost/*  /specialy/data-pro-budouci-premierku/09-energie-a-energeticka-bezpecnost/:splat  301
+/specialy/data-pro-budouci-premierku/01-energie-a-energeticka-bezpecnost    /specialy/data-pro-budouci-premierku/09-energie-a-energeticka-bezpecnost        301
+/specialy/data-pro-budouci-premierku/04-klimaticka-zmena/*       /specialy/data-pro-budouci-premierku/10-klimaticka-zmena/:splat      301
+/specialy/data-pro-budouci-premierku/04-klimaticka-zmena         /specialy/data-pro-budouci-premierku/10-klimaticka-zmena            301
+/specialy/data-pro-budouci-premierku/05-bezpecnost-a-konflikty/* /specialy/data-pro-budouci-premierku/11-bezpecnost-a-konflikty/:splat 301
+/specialy/data-pro-budouci-premierku/05-bezpecnost-a-konflikty   /specialy/data-pro-budouci-premierku/11-bezpecnost-a-konflikty      301
+/specialy/data-pro-budouci-premierku/07-oligarchizace-a-korupce/* /specialy/data-pro-budouci-premierku/13-oligarchizace-a-korupce/:splat 301
+/specialy/data-pro-budouci-premierku/07-oligarchizace-a-korupce   /specialy/data-pro-budouci-premierku/13-oligarchizace-a-korupce      301
+/specialy/data-pro-budouci-premierku/verejne-finance-a-dane/*    /specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane/:splat 301
+/specialy/data-pro-budouci-premierku/verejne-finance-a-dane      /specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane       301
+/specialy/data-pro-budouci-premierku/efektivni-vladnuti/*        /specialy/data-pro-budouci-premierku/15-efektivni-vladnuti/:splat    301
+/specialy/data-pro-budouci-premierku/efektivni-vladnuti          /specialy/data-pro-budouci-premierku/15-efektivni-vladnuti           301

@@ -13,9 +13,9 @@ export type { Article } from '@repo/ui/lib/getArticles';
 // export` errors with "missing param" when someone clicks the card.
 const ARTICLE_HREF_OVERRIDES: Record<string, string> = {
   'data-pro-budouci-premierku-02-demografie':
-    '/specialy/data-pro-budouci-premierku/02-demografie',
+    '/specialy/data-pro-budouci-premierku/01-demografie',
   'data-pro-budouci-premierku-02-demografie-plodnost':
-    '/specialy/data-pro-budouci-premierku/02-demografie/01-proc-klesa-plodnost',
+    '/specialy/data-pro-budouci-premierku/01-demografie/01-proc-klesa-plodnost',
 };
 
 export async function getArticles(
