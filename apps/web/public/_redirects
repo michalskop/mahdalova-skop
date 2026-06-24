@@ -1,4 +1,4 @@
-# Data pro budoucí premiérku — staré číslování kapitol (redirect na nové URL
+# Data pro budoucí premiérku – staré číslování kapitol (redirect na nové URL
 # po přečíslování do 5 bloků / 15 kapitol, 2026-06-23)
 /specialy/data-pro-budouci-premierku/02-demografie/*       /specialy/data-pro-budouci-premierku/01-demografie/:splat       301
 /specialy/data-pro-budouci-premierku/02-demografie         /specialy/data-pro-budouci-premierku/01-demografie              301

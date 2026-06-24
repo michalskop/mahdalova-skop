@@ -49,7 +49,7 @@
     margin: 0 0 18px;
   }
 
-  /* Tlačítko UPROSTŘED — velké zaoblené pill */
+  /* Tlačítko UPROSTŘED – velké zaoblené pill */
   .dt-btn-wrap { text-align: center; }
   .dt-btn {
     display: inline-block;

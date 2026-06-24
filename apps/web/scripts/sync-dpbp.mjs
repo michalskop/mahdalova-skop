@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * sync-dpbp.mjs — Sync content from data-pro-premierku source project to web.
+ * sync-dpbp.mjs – Sync content from data-pro-premierku source project to web.
  *
  * Configuration:
  *   - Chapter structure: edit dpbp-config.json at the web root
@@ -124,7 +124,7 @@ function mkdir(p) {
  * - Build YAML frontmatter
  */
 function transformArticle(raw, articleCfg, chapterCfg) {
-  // Normalize CRLF → LF first — source files are sometimes saved with Windows
+  // Normalize CRLF → LF first – source files are sometimes saved with Windows
   // line endings, which breaks every regex below that matches a literal \n
   // (e.g. the chart-placeholder fence below silently fails to match and the
   // raw ```markdown fence + placeholder text leaks onto the page instead of
@@ -193,10 +193,10 @@ function transformArticle(raw, articleCfg, chapterCfg) {
 }
 
 function transformOnePager(raw, onePagerCfg, chapterCfg) {
-  // Normalize CRLF → LF first — see comment in transformArticle.
+  // Normalize CRLF → LF first – see comment in transformArticle.
   let text = raw.replace(/\r\n/g, '\n');
 
-  // ── Extract title from H1 (flexible — handles all known formats) ──────────
+  // ── Extract title from H1 (flexible – handles all known formats) ──────────
   // Formats seen:  # EXECUTIVE ONE-PAGER: Topic (V2)
   //                # 🏥 PM ONE-PAGER: Topic
   //                # PM_ONE_PAGER_v2.md: Topic
@@ -234,7 +234,7 @@ function transformOnePager(raw, onePagerCfg, chapterCfg) {
         if (val.length >= 60) { excerpt = val.length > 250 ? val.slice(0, 247) + '…' : val; break; }
         continue;
       }
-      // Full bold paragraph — use full content (not just first sentence) up to 250 chars
+      // Full bold paragraph – use full content (not just first sentence) up to 250 chars
       const content = clean.replace(/\*\*/g, '').trim();
       if (content.length >= 60) {
         excerpt = content.length > 250 ? content.slice(0, 247) + '…' : content;
@@ -370,7 +370,7 @@ for (const ch of CHAPTERS) {
 }
 
 if (warnings > 0) {
-  console.log(`\n⚠  Sync complete with ${warnings} missing file(s) — check warnings above.\n`);
+  console.log(`\n⚠  Sync complete with ${warnings} missing file(s) – check warnings above.\n`);
 } else {
   console.log('\n✓ Sync complete.\n');
 }

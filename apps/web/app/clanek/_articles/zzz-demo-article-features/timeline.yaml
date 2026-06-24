@@ -24,7 +24,7 @@ events:
     title: "MediaBox (```box)"
     emoji: "📦"
     summary: "Dark navy box for quoted text and source citations."
-    description: "The original box component. Use ```box fences in markdown — no import needed."
+    description: "The original box component. Use ```box fences in markdown – no import needed."
 
   - year: 2024
     month: 6

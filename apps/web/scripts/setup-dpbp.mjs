@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * setup-dpbp.mjs — Configure the local path to the data-pro-premierku source repo.
+ * setup-dpbp.mjs – Configure the local path to the data-pro-premierku source repo.
  *
  * Saves DPBP_SOURCE to .env.local (gitignored). Run once per machine.
  *
@@ -63,7 +63,7 @@ const prompt = current
   ? `  Path to data-pro-premierku [current: ${current}]: `
   : `  Path to data-pro-premierku: `;
 
-console.log('\n  DPBP Setup — configure your local source directory\n');
+console.log('\n  DPBP Setup – configure your local source directory\n');
 rl.question(prompt, answer => {
   rl.close();
   const input = answer.trim() || current;
