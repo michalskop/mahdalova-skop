@@ -7,5 +7,20 @@
   "date": "2026-04-30",
   "cardOrder": [],
   "onePager": null,
-  "articles": []
+  "articles": [
+    { "slug": "01-proc-klesa-plodnost", "title": "Proč klesá plodnost", "status": "hotovo" },
+    { "slug": "02-co-znamena-plodnost", "title": "Co znamená plodnost 1,28", "status": "hotovo" },
+    { "slug": "03-svet-populace", "title": "Svět a populace", "status": "hotovo" },
+    { "slug": "04-skandinavska-past", "title": "Skandinávská past", "status": "hotovo" },
+    { "slug": "05-cas-rodicovstvi", "title": "Čas rodičovství", "status": "hotovo" },
+    { "slug": "06-zeny-rozhodovani", "title": "Ženy a rozhodování", "status": "hotovo" },
+    { "slug": "07-kohortni-plodnost", "title": "Kohortní plodnost — co ukazují data za celý život generace", "status": "hotovo" },
+    { "slug": "08-politicke-sliby", "title": "Politické sliby vs. mezinárodní data o tom, co funguje", "status": "hotovo" },
+    { "slug": "09-pary-a-partnerstvi", "title": "Méně párů, méně dětí", "status": "hotovo" },
+    { "slug": "10-data-porody", "title": "55 let dat o porodech — vzdělání matky jako nejsilnější prediktor", "status": "hotovo" },
+    { "slug": "11-vylidnovani-obci", "title": "Vylidňování obcí — čtyři demografické typy regionů", "status": "hotovo" },
+    { "slug": "12-mezinarodni-srovnani", "title": "Švédsko, Francie, Maďarsko, Kanada — čtyři modely reakce", "status": "hotovo" },
+    { "slug": "13-generace-z", "title": "Generace Z vstupuje do reprodukčního věku", "status": "hotovo" },
+    { "slug": "14-vzdelanostni-propast", "title": "Vzdělanostní propast a její demografický rozměr", "status": "hotovo" }
+  ]
 }
