@@ -147,9 +147,10 @@ const G01 = <>
     <circle cx={100} cy={55} r={4.5}/><circle cx={115} cy={55} r={4.5}/><circle cx={130} cy={55} r={4.5}/>
     <circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/>
     <circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/>
+    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/>
   </g>
   <g fill="#f76800">
-    <circle cx={55} cy={100} r={4.5}/><circle cx={70} cy={100} r={4.5}/><circle cx={85} cy={100} r={4.5}/><circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/>
+    <circle cx={100} cy={100} r={4.5}/><circle cx={115} cy={100} r={4.5}/><circle cx={130} cy={100} r={4.5}/>
     <circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/>
     <circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/>
     <circle cx={55} cy={145} r={4.5}/><circle cx={70} cy={145} r={4.5}/><circle cx={85} cy={145} r={4.5}/>
