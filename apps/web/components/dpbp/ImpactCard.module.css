@@ -53,3 +53,15 @@
   display: block;
   margin-top: 4px;
 }
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 8px;
+  }
+
+  .num {
+    white-space: normal;
+  }
+}
