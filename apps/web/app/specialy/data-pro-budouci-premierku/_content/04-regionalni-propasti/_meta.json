@@ -15,9 +15,9 @@
   "introChart": "G09_01_REGION_GAP",
   "intro": {
     "title": "Praha vytváří 27 % HDP. Ústecký kraj se k průměru EU nepřiblížil ani za dvacet let",
-    "textBefore": "Budoucí premiérka vystupuje z vlaku na nádraží v Ústí nad Labem. Před chvílí opustila Prahu, kde průměrný byt stojí přes 15 milionů a průměrná mzda se blíží 70 tisícům korun. Tady, o 90 kilometrů dál, je realita jiná — ne horší v každém ohledu, ale strukturálně jiná.",
-    "textAfter": "Na Prahu připadá zhruba 27 % českého HDP, přestože v ní žije jen 12–13 % obyvatel. Část rozdílu je účetní artefakt — koncentrace firemních sídel a denní dojížďka, ne odčerpávání bohatství z regionů. Skutečným problémem periferií není bohatství Prahy, ale to, že Ústecký a Karlovarský kraj se k průměru EU posledních dvacet let prakticky nepřiblížily.",
-    "textClosing": "Itálie řeší podobnou propast mezi severem a jihem už sto padesát let a ani masivní investice ji nezavřely. Německo a Slovinsko naopak ukazují dvě různé cesty, jak regionální rozdíly aktivně zmenšovat — a co z obou modelů je pro Česko reálně použitelné."
+    "textBefore": "Budoucí premiérka vystupuje z vlaku na nádraží v Ústí nad Labem. Před chvílí opustila Prahu, kde průměrný byt stojí přes 15 milionů a průměrná mzda se blíží 70 tisícům korun. Tady, o 90 kilometrů dál, je realita jiná – ne horší v každém ohledu, ale strukturálně jiná.",
+    "textAfter": "Na Prahu připadá zhruba 27 % českého HDP, přestože v ní žije jen 12–13 % obyvatel. Část rozdílu je účetní artefakt – koncentrace firemních sídel a denní dojížďka, ne odčerpávání bohatství z regionů. Skutečným problémem periferií není bohatství Prahy, ale to, že Ústecký a Karlovarský kraj se k průměru EU posledních dvacet let prakticky nepřiblížily.",
+    "textClosing": "Itálie řeší podobnou propast mezi severem a jihem už sto padesát let a ani masivní investice ji nezavřely. Německo a Slovinsko naopak ukazují dvě různé cesty, jak regionální rozdíly aktivně zmenšovat – a co z obou modelů je pro Česko reálně použitelné."
   },
   "tiles": [
     { "slug": "explainer-regionalni-mezera", "topic": "Explainer" },

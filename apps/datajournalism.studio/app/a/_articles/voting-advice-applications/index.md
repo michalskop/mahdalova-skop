@@ -61,7 +61,7 @@ The VAA generates a tailored recommendation, showing how closely the voter’s p
 
 ### For Organizations
 A VAA can bring substantial benefits to your organization:
-1. **Increased Recognition**: VAAs are highly popular among voters. For instance, the Czech VAA for the 2023 presidential election attracted **2.4 million users**—over **40% of all voters**.
+1. **Increased Recognition**: VAAs are highly popular among voters. For instance, the Czech VAA for the 2023 presidential election attracted **2.4 million users**–over **40% of all voters**.
 2. **Media Partnerships**: Media outlets often adopt branded versions of VAAs, incorporating customized colors and features. This boosts your organization’s visibility and strengthens connections with both voters and the media.
 
 ---

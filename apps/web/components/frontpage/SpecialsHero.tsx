@@ -83,7 +83,7 @@ const KlimaIcon = () => (
 );
 
 /* ── Data dlaždic ─────────────────────────────────────────────────── */
-// coverImage: cesta z /public/images/specials/ — stačí sem přidat soubor a vyplnit cestu.
+// coverImage: cesta z /public/images/specials/ – stačí sem přidat soubor a vyplnit cestu.
 // Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
 const TILES = [
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
@@ -167,7 +167,7 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
 }
 
 /* ── Plynulý scroll přes RAF ─────────────────────────────────────── */
-const SCROLL_DURATION = 700; // ms — čím více, tím pomalejší a plynulejší
+const SCROLL_DURATION = 700; // ms – čím více, tím pomalejší a plynulejší
 
 function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
@@ -372,7 +372,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
   }
   function onDragStart(e: React.DragEvent) { e.preventDefault(); }
 
-  // Zachytí kliknutí na <a> dlaždic — pokud předcházel drag, klik zablokuje
+  // Zachytí kliknutí na <a> dlaždic – pokud předcházel drag, klik zablokuje
   function onClickCapture(e: React.MouseEvent) {
     if (dragOccurred.current) {
       e.preventDefault();
@@ -449,7 +449,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
               onClickCapture={onClickCapture}
               onDragStart={onDragStart}
             >
-            {/* Track — flex, overflow visible, dlaždice se mohou vertikálně přetéct při scale */}
+            {/* Track – flex, overflow visible, dlaždice se mohou vertikálně přetéct při scale */}
             <Box ref={innerRef} className="carousel-track">
               {EXT_TILES.map((tile, i) => (
                 <Box key={`${tile.title}-${i}`} className="carousel-tile">
@@ -459,7 +459,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
             </Box>
             </div>
 
-            {/* Tečky — jedna na každou dlaždici, aktivní je sytější */}
+            {/* Tečky – jedna na každou dlaždici, aktivní je sytější */}
             <Group gap={8} justify="center" mt={12}>
               {TILES.map((_, i) => (
                 <Box

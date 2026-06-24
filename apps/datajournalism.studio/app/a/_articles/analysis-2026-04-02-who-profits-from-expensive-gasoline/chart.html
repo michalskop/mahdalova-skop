@@ -356,7 +356,7 @@
       <div class="dtp-title">Co tvoří cenu benzínu a nafty 2026</div>
       <div class="dtp-subtitle">1. leden vs. 1. duben 2026</div>
     </div>
-    <a href="https://datatimes.cz" target="_blank" rel="noopener" class="dtp-logo-link" title="DataTimes.cz — Mahdalová &amp; Škop">
+    <a href="https://datatimes.cz" target="_blank" rel="noopener" class="dtp-logo-link" title="DataTimes.cz – Mahdalová &amp; Škop">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
         <defs>
           <linearGradient id="dtpGF" x1="1" x2="0.25" y1="0.5" y2="1">
@@ -403,14 +403,14 @@
 
   const DATA = {
     benzin: [
-      { label: 'Benzin 95 — 1. ledna 2026',   values: [12.84, 5.80,  7.87,  3.19, 3.71] },
-      { label: 'Benzin 95 — 1. dubna 2026',   values: [12.84, 7.22, 13.96,  5.08, 2.50] },
-      { label: 'Benzin 95 — vládní regulace', values: [12.84, 7.22, 13.96,  5.08, 2.30], highlight: true },
+      { label: 'Benzin 95 – 1. ledna 2026',   values: [12.84, 5.80,  7.87,  3.19, 3.71] },
+      { label: 'Benzin 95 – 1. dubna 2026',   values: [12.84, 7.22, 13.96,  5.08, 2.50] },
+      { label: 'Benzin 95 – vládní regulace', values: [12.84, 7.22, 13.96,  5.08, 2.30], highlight: true },
     ],
     nafta: [
-      { label: 'Nafta — 1. ledna 2026',        values: [ 9.95, 5.66,  7.87,  5.22, 3.93] },
-      { label: 'Nafta — 1. dubna 2026',        values: [ 9.95, 8.39, 13.96, 13.80, 2.23] },
-      { label: 'Nafta — vládní regulace',      values: [ 8.01, 7.98, 13.96, 13.80, 2.03], highlight: true },
+      { label: 'Nafta – 1. ledna 2026',        values: [ 9.95, 5.66,  7.87,  5.22, 3.93] },
+      { label: 'Nafta – 1. dubna 2026',        values: [ 9.95, 8.39, 13.96, 13.80, 2.23] },
+      { label: 'Nafta – vládní regulace',      values: [ 8.01, 7.98, 13.96, 13.80, 2.03], highlight: true },
     ]
   };
 
@@ -421,7 +421,7 @@
   function fmt(n, dec = 2) { return n.toFixed(dec).replace('.', ','); }
   function fmtRound(n)      { return String(Math.round(n)); }
 
-  // Výška plot area z CSS custom property — stabilní, nezávislá na DOM
+  // Výška plot area z CSS custom property – stabilní, nezávislá na DOM
   function getChartH(wrap) {
     const container = wrap.closest('.dtp-chart-container');
     const h = parseFloat(getComputedStyle(container).getPropertyValue('--dtp-plot-h'));
@@ -430,7 +430,7 @@
 
   // Zkrácené labely pod sloupci
   function formatBarLabel(label) {
-    const raw = label.replace(/^.* — /, '');
+    const raw = label.replace(/^.* – /, '');
     const mobile = window.innerWidth <= 640;
     if (mobile) {
       return raw
@@ -526,7 +526,7 @@
         // Najdeme barvu segmentu pro plovoucí label
         const color = COLORS[i];
 
-        // Plovoucí label — pozicovaný nad vrcholem sloupce
+        // Plovoucí label – pozicovaný nad vrcholem sloupce
         // Pod stackem je ještě .dtp-bar-label (~36px) → přičteme offset
         const BAR_LABEL_H = 38; // px výška bar-label pod stackem
         const existingFloats = col.querySelectorAll('.dtp-float-lbl').length;
@@ -577,7 +577,7 @@
         <span class="dtp-tt-dot" style="background:${COLORS[i]}"></span>
         <span class="dtp-tt-name">${LABELS_FULL[i]}</span>
         <span class="dtp-tt-val">${fmt(val)} Kč</span>
-        <span class="dtp-tt-pct">${off ? '—' : Math.round(val / total * 100) + ' %'}</span>
+        <span class="dtp-tt-pct">${off ? '–' : Math.round(val / total * 100) + ' %'}</span>
       </div>`;
     }).reverse().join('');
     return `<div class="dtp-tt-title">${bar.label}</div>${rows}
@@ -705,7 +705,7 @@
       allCols.push({ col, bar });
     });
 
-    // ResizeObserver — přepočítá po změně velikosti
+    // ResizeObserver – přepočítá po změně velikosti
     const ro = new ResizeObserver(() => {
       const h = getChartH(wrap);
       allCols

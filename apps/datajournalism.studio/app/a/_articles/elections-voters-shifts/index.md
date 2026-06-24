@@ -50,7 +50,7 @@ By eliminating the need for extensive polling and interviews, **ecological infer
 
 ## Conclusion
 
-Analyzing voter shifts between elections provides a deeper understanding of the changing political landscape. By combining detailed election results with advanced statistical methods, we **uncover the hidden stories behind the numbers**—stories that inform strategy, reporting, and public discourse. Ecological inference represents a transformative approach, delivering actionable insights with unprecedented **speed and cost-efficiency**.
+Analyzing voter shifts between elections provides a deeper understanding of the changing political landscape. By combining detailed election results with advanced statistical methods, we **uncover the hidden stories behind the numbers**–stories that inform strategy, reporting, and public discourse. Ecological inference represents a transformative approach, delivering actionable insights with unprecedented **speed and cost-efficiency**.
 
 For more information or to collaborate on ecological inference, feel free to reach out.
 

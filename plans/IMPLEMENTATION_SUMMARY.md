@@ -272,22 +272,22 @@ Visit https://isitagentready.com/ and test both domains.
 
 ---
 
-## Full-Text Search (Pagefind) — added after AI readability
+## Full-Text Search (Pagefind) – added after AI readability
 
 See `plans/SEARCH_IMPLEMENTATION.md` for full details.
 
 ### apps/web (datatimes.cz) ✅ DONE
 
-**Problem:** Articles are client-side rendered (`'use client'` + `MDXRemote`) — pagefind can't index the HTML output (it contains `BAILOUT_TO_CLIENT_SIDE_RENDERING` placeholder, no text).
+**Problem:** Articles are client-side rendered (`'use client'` + `MDXRemote`) – pagefind can't index the HTML output (it contains `BAILOUT_TO_CLIENT_SIDE_RENDERING` placeholder, no text).
 
 **Solution:** `apps/web/scripts/buildSearchIndex.js` reads MDX source files directly, strips markup, generates temp HTML, runs `npx pagefind`, then cleans up.
 
 **Files added/modified:**
-- `apps/web/scripts/buildSearchIndex.js` — custom MDX-to-pagefind indexer
-- `apps/web/app/search/page.tsx` — Mantine-based search UI with countdown loading
-- `apps/web/app/search/search.module.css` — result hover + `<mark>` highlight styles
-- `apps/web/components/header/HeaderSimple.tsx` — "Hledat" added to nav
-- `apps/web/package.json` — build script extended: `"next build && node scripts/buildSearchIndex.js"`
+- `apps/web/scripts/buildSearchIndex.js` – custom MDX-to-pagefind indexer
+- `apps/web/app/search/page.tsx` – Mantine-based search UI with countdown loading
+- `apps/web/app/search/search.module.css` – result hover + `<mark>` highlight styles
+- `apps/web/components/header/HeaderSimple.tsx` – "Hledat" added to nav
+- `apps/web/package.json` – build script extended: `"next build && node scripts/buildSearchIndex.js"`
 
 ### apps/datajournalism.studio ✅ DONE
 

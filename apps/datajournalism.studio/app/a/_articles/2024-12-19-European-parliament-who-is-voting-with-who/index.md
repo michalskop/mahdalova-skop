@@ -39,7 +39,7 @@ Individual MEPs cannot focus on every discussed topic in detail, so they often r
 ### Distribution of Power
 An analysis of voting patterns confirms the importance of political factions. While the focus is not directly on MEPs' membership in groups, their voting behavior usually reveals their affiliations clearly.
 
-In a graph summarizing voting results, each point represents an MEP. Most points cluster into groups corresponding to factions, as members of the same faction tend to vote similarly. However, unanimity is never absolute—differences of opinion can arise even within the same group.
+In a graph summarizing voting results, each point represents an MEP. Most points cluster into groups corresponding to factions, as members of the same faction tend to vote similarly. However, unanimity is never absolute–differences of opinion can arise even within the same group.
 
 ---
 
@@ -66,7 +66,7 @@ Factions outside the main coalition, such as the Patriots, Sovereignists, and in
 ## Voting on the Commission
 The European Commission, known as the "EU government," is the executive body of the European Union responsible for proposing legislation, managing the EU's daily agenda, and enforcing EU laws. Its president is Ursula von der Leyen. Commissioners are nominated by member states and approved by the European Parliament. The Czech commissioner is Jozef Síkela (STAN), and the Slovak commissioner is Maroš Šefčovič (nominated by SMER).
 
-Voting on the new European Commission on November 27, 2024, illustrates divisions within the European Parliament. **Most of the main coalition supported the Commission's composition**, including Czech People's Party members and Slovak Renew representatives, while opposition groups generally voted against it. The graph shows individual MEPs' positions—green points indicate support, red points indicate opposition.
+Voting on the new European Commission on November 27, 2024, illustrates divisions within the European Parliament. **Most of the main coalition supported the Commission's composition**, including Czech People's Party members and Slovak Renew representatives, while opposition groups generally voted against it. The graph shows individual MEPs' positions–green points indicate support, red points indicate opposition.
 
 
 
@@ -98,4 +98,4 @@ A model of MEPs based on their voting patterns aligns with the [Horseshoe Theory
 ## How Voting Coalitions Are Calculated
 The analysis covers all recorded roll-call votes for the 2019–2024 term, based on European Parliament data. It uses a weighted principal component analysis method. Each point in the graph represents an MEP, with the distance between points reflecting how often they voted together. The method highlights key voting blocs and subtle differences among MEPs.
 
-Greater weight is given to votes where the Parliament was more divided and had higher participation. Votes decided by a narrow margin have the greatest influence, while unanimous decisions—often procedural—have the least.
+Greater weight is given to votes where the Parliament was more divided and had higher participation. Votes decided by a narrow margin have the greatest influence, while unanimous decisions–often procedural–have the least.

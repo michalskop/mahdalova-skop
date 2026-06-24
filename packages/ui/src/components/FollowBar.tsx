@@ -2,7 +2,7 @@
 import { Box, Button, Anchor, useMantineTheme } from '@mantine/core';
 
 /**
- * FollowBar — DataTimes
+ * FollowBar – DataTimes
  * Follow bar with all social media channels, placement: below article / above footer.
  *
  * Usage:

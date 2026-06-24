@@ -78,7 +78,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 
 
-// Slugs moved to /specialy — excluded from /clanek/ route
+// Slugs moved to /specialy – excluded from /clanek/ route
 const EXCLUDED_SLUGS = [
   'data-pro-budouci-premierku-02-demografie',
   'data-pro-budouci-premierku-02-demografie-plodnost',

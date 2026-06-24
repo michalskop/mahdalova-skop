@@ -65,7 +65,7 @@ function SectionDivider({ accent }: { accent: string }) {
   );
 }
 
-// Chapters with dedicated static page.tsx files — excluded from dynamic generation
+// Chapters with dedicated static page.tsx files – excluded from dynamic generation
 // to prevent output file collision in `output: 'export'` builds.
 const STATIC_CHAPTER_ROUTES = new Set(['01-demografie']);
 
@@ -201,7 +201,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* Shrnutí — full-width dlaždice */}
+        {/* Shrnutí – full-width dlaždice */}
         {onePagerFm && meta.onePager && (
           <Box style={{ paddingTop: 32 }}>
             <DpbpArticleCard
@@ -218,7 +218,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* 4 páry dlaždic (2 sloupce) — viz pořadí v meta.tiles */}
+        {/* 4 páry dlaždic (2 sloupce) – viz pořadí v meta.tiles */}
         {tiles.length > 0 && (
           <Box>
             <SectionDivider accent={meta.accent} />

@@ -6,7 +6,7 @@ import { getDpbpArticles } from './getDpbpArticles';
 export type { Article } from '@repo/ui/lib/getArticles';
 
 // These _articles/ folders are kept only as content sources (read via
-// getArticleBySlug for their real page) — their /clanek/[slug] route is
+// getArticleBySlug for their real page) – their /clanek/[slug] route is
 // deliberately excluded from generateStaticParams() there (see
 // app/clanek/[slug]/page.tsx EXCLUDED_SLUGS) because the canonical page
 // lives under /specialy/. Card links must point there too, or `output:
@@ -33,7 +33,7 @@ export async function getArticles(
     useExplicitPromotion,
     tag,
     // dpbp articles have no `filter`/`tag` set, so they only surface in the
-    // unfiltered homepage call (Výběr) — Analýzy/Kontext/Podcasty sections
+    // unfiltered homepage call (Výběr) – Analýzy/Kontext/Podcasty sections
     // (which pass an explicit filter) are unaffected until that's mapped.
     extraArticles: getDpbpArticles(),
   });

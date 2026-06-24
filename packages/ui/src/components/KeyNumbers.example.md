@@ -28,7 +28,7 @@ const keyStats: KeyNumberItem[] = [
   {
     value: '+0,47',
     title: 'Historický rekord',
-    description: 'Největší nárůst zaznamenaný kdekoli v bohatém světě za 10 let. Švédsko, po roce 2000 — a dočasně.',
+    description: 'Největší nárůst zaznamenaný kdekoli v bohatém světě za 10 let. Švédsko, po roce 2000 – a dočasně.',
     color: 'brandTeal',
   },
 ];
@@ -167,25 +167,25 @@ numbers:
 
 Use predefined colors from the design system by their theme names:
 
-- **`brand`** (default): `#de1743` — Primary crimson red
-- **`brandTeal`**: `#0f6c78` — Teal green
-- **`brandOrange`**: `#f76800` — Orange
-- **`brandNavy`**: `#6267a3` — Navy purple
-- **`brandYellow`**: `#ffcf02` — Yellow highlights
-- **`brandForestGreen`**: `#639e0a` — Forest green
-- **`brandEmeraldMint`**: `#12b886` — Emerald mint
-- **`brandDeepRed`**: `#a03250` — Deep red
-- **`brandRoyalBlue`**: `#4a51ab` — Royal blue
-- **`background`**: `#e8e8dc` — Neutral background
+- **`brand`** (default): `#de1743` – Primary crimson red
+- **`brandTeal`**: `#0f6c78` – Teal green
+- **`brandOrange`**: `#f76800` – Orange
+- **`brandNavy`**: `#6267a3` – Navy purple
+- **`brandYellow`**: `#ffcf02` – Yellow highlights
+- **`brandForestGreen`**: `#639e0a` – Forest green
+- **`brandEmeraldMint`**: `#12b886` – Emerald mint
+- **`brandDeepRed`**: `#a03250` – Deep red
+- **`brandRoyalBlue`**: `#4a51ab` – Royal blue
+- **`background`**: `#e8e8dc` – Neutral background
 
 ### Shade Notation
 
 Access any shade (0-9) from any color scale:
 
-- **`brand[9]`** — Darkest brand shade
-- **`brand[0]`** — Lightest brand shade
-- **`brandTeal[3]`** — Light teal shade
-- **`brandOrange[8]`** — Dark orange shade
+- **`brand[9]`** – Darkest brand shade
+- **`brand[0]`** – Lightest brand shade
+- **`brandTeal[3]`** – Light teal shade
+- **`brandOrange[8]`** – Dark orange shade
 
 All theme colors support this notation.
 

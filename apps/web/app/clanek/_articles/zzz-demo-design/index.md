@@ -8,7 +8,7 @@ promoted: 0
 htmlInclude: "swatches.html"
 ---
 
-> This article is hidden from listings (future date). Visual reference for developers and designers — complements `packages/ui/DESIGN.md` which documents the same system in text form.
+> This article is hidden from listings (future date). Visual reference for developers and designers – complements `packages/ui/DESIGN.md` which documents the same system in text form.
 
 All colors are Mantine custom scales (10 shades, index 0–9). The **main shade is always `[6]`** unless noted. Access via `theme.colors.colorName[index]` or Mantine's `c="colorName.6"` shorthand.
 
@@ -21,27 +21,27 @@ The color palette above is injected from `swatches.html` via `htmlInclude`.
 All five types rendered live. Use the `type` prop in JSX or the fence keyword in markdown articles. `box` and `mediabox` fence names are legacy aliases for the default type.
 
 ```infobox
-**`default`** (default) — Neutral warm background. Used by ` ```box ` and ` ```infobox ` without a type keyword.
+**`default`** (default) – Neutral warm background. Used by ` ```box ` and ` ```infobox ` without a type keyword.
 Border: `background[6]` `#e8e8dc` · Background: `background[2]` `#f8f6f0`
 ```
 
 ```infobox info
-**`info`** — General notes, methodology, neutral context with a blue tint.
+**`info`** – General notes, methodology, neutral context with a blue tint.
 Border: `brandNavy[6]` `#6267a3` · Background: `#f0f1f8`
 ```
 
 ```infobox warning
-**`warning`** — Caveats, data limitations, things to keep in mind.
+**`warning`** – Caveats, data limitations, things to keep in mind.
 Border: `brandOrange[6]` `#f76800` · Background: `brandOrange[0]` `#fff3e8`
 ```
 
 ```infobox success
-**`success`** — Confirmed facts, corrections, positive findings.
+**`success`** – Confirmed facts, corrections, positive findings.
 Border: `brandTeal[6]` `#0e839e` · Background: `brandTeal[0]` `#e5fdfc`
 ```
 
 ```infobox error
-**`error`** — Corrections, debunked claims, important warnings.
+**`error`** – Corrections, debunked claims, important warnings.
 Border: `brand[6]` `#de1743` · Background: `brand[0]` `#fff4f6`
 ```
 
@@ -65,7 +65,7 @@ This paragraph is hidden on load. Place `<!-- more -->` on its own line to fold 
 
 ## Typography
 
-The font is set globally by `ThemeProvider` — do **not** set `fontFamily` on individual components.
+The font is set globally by `ThemeProvider` – do **not** set `fontFamily` on individual components.
 
 | App | Font | Weights |
 |-----|------|---------|
@@ -74,11 +74,11 @@ The font is set globally by `ThemeProvider` — do **not** set `fontFamily` on i
 
 ### Heading scale (rendered)
 
-## H2 — Major section heading
+## H2 – Major section heading
 
-### H3 — Sub-section heading
+### H3 – Sub-section heading
 
-#### H4 — Minor heading
+#### H4 – Minor heading
 
 Regular body text. Used at `md` (16px) base size with Mantine's default line-height.
 
@@ -109,10 +109,10 @@ Container sizes: `size="md"` for article content, `size="lg"` for article grids.
 - Keep `ArticlesSection` titles short (≤ 14 chars) to get the Arrow decoration
 
 ### Don't
-- Don't hardcode hex colours in components — always use theme tokens
+- Don't hardcode hex colours in components – always use theme tokens
 - Don't use accent colours (`brandYellow`, `brandForestGreen`, `brandEmeraldMint`, `brandDeepRed`) without design sign-off
 - Don't set `fontFamily` manually on any component
-- Don't use `type="info"` as a generic neutral box — use the default type (no `type` prop / plain ` ```box ` fence)
+- Don't use `type="info"` as a generic neutral box – use the default type (no `type` prop / plain ` ```box ` fence)
 - Don't use `getArticles` or filesystem logic in client components (`'use client'`)
 
 ---

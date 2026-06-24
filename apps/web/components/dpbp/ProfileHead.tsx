@@ -17,7 +17,7 @@ export const DEFAULT_DOTS: [number, number, number, string][] = [
   [539.2,234.1,8.8,'#ffe680'],
 ];
 
-// Brand palette only — every hover re-roll picks colours exclusively from
+// Brand palette only – every hover re-roll picks colours exclusively from
 // this pool (DESIGN.md / theme.ts brand colours), so the logo always stays
 // on-brand no matter what combination lands.
 export const BRAND_PALETTE: string[] = [
@@ -44,7 +44,7 @@ function randomColor(pool: string[]): string {
 const VB_MIN = -8;
 const VB_SIZE = 716;
 // How close the cursor must be (in viewBox units) to a dot before it
-// "catches" the cursor and repaints — tuned to the dots' own spacing
+// "catches" the cursor and repaints – tuned to the dots' own spacing
 // (roughly 50–150 units apart) so passing nearby paints a few at a time.
 const PROXIMITY = 90;
 
@@ -55,7 +55,7 @@ interface ProfileHeadProps {
   className?: string;
   style?: React.CSSProperties;
   /** Pick a random starting colour combination on mount instead of the
-   * fixed silColor/dots defaults — used on chapter/article headers so each
+   * fixed silColor/dots defaults – used on chapter/article headers so each
    * page load shows a fresh combination. Mouse-leave reverts to that same
    * mount-time combination, not the hardcoded defaults. */
   initialRandom?: boolean;
@@ -73,7 +73,7 @@ export default function ProfileHead({
   const clipId = `sil-${uid}`;
   const hoverClass = `ph-${uid}`;
   const svgRef = useRef<SVGSVGElement>(null);
-  // Dots the cursor is currently "inside" — lets each dot repaint once per
+  // Dots the cursor is currently "inside" – lets each dot repaint once per
   // entry instead of re-rolling on every mousemove tick while hovering.
   const insideRef = useRef<Set<number>>(new Set());
 

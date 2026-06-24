@@ -20,4 +20,4 @@ As an internationally connected team, we partner with organizations and individu
 
 ## What We Offer
 
-Our analyses and visualizations are designed for a wide range of audiences, including the general public, academic institutions, non-profits, and media organizations. We demonstrate that data is more than just numbers—it is a vital tool for understanding the world around us and driving meaningful change.
+Our analyses and visualizations are designed for a wide range of audiences, including the general public, academic institutions, non-profits, and media organizations. We demonstrate that data is more than just numbers–it is a vital tool for understanding the world around us and driving meaningful change.

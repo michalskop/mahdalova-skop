@@ -1,4 +1,4 @@
-# Handover: Demografie — nové články na webu
+# Handover: Demografie – nové články na webu
 
 **Datum:** 19. 6. 2026  
 **Autor:** Claude Code (claude-sonnet-4-6)  
@@ -20,11 +20,11 @@ Tři nové články z editorského repozitáře `data-pro-premierku` byly zapoje
 
 ---
 
-## Architektura — důležité pochopit před editací
+## Architektura – důležité pochopit před editací
 
 ### Dva repozitáře, dva různé systémy
 
-**`data-pro-premierku`** je editorský workspace. Obsahuje `.md` soubory jako `DIST_ARTICLE_*.md`. Tyto soubory **se nezobrazují na webu přímo** — jsou zdrojovým materiálem.
+**`data-pro-premierku`** je editorský workspace. Obsahuje `.md` soubory jako `DIST_ARTICLE_*.md`. Tyto soubory **se nezobrazují na webu přímo** – jsou zdrojovým materiálem.
 
 **`mahdalova-skop`** je Next.js webová aplikace. Jen to, co je zde, se zobrazí na mahdalova-skop.cz.
 
@@ -42,7 +42,7 @@ apps/web/app/specialy/data-pro-budouci-premierku/02-demografie/[název]/
 └── page.tsx       ← Next.js stránka (viz vzor níže)
 ```
 
-**Proč starý systém pro demografie?** Kapitola 02-demografie má vlastní hardcoded `page.tsx` pro hub stránku. Nové články v ní musí používat stejný systém (raw HTML), protože MDX v2 (nový systém) nepodporuje inline SVG s HTML atributy jako `stroke-width` — vyžaduje JSX camelCase (`strokeWidth`).
+**Proč starý systém pro demografie?** Kapitola 02-demografie má vlastní hardcoded `page.tsx` pro hub stránku. Nové články v ní musí používat stejný systém (raw HTML), protože MDX v2 (nový systém) nepodporuje inline SVG s HTML atributy jako `stroke-width` – vyžaduje JSX camelCase (`strokeWidth`).
 
 #### NOVÝ systém (kapitoly 01, 03–12)
 ```
@@ -121,16 +121,16 @@ Tři placeholder karty (`<div class="dt-card">`) konvertovány na klikatelné li
    coverImage: "/images/data-pro-budouci-premierku-demografie-landing.webp"
    filter: ["data-pro-budouci-premierku", "demografie"]
    tags: ["demografie", "speciál", "data-pro-budouci-premierku"]
-   promoted: [číslo — next po 37]
+   promoted: [číslo – next po 37]
    htmlInclude: article.html
    ---
    ```
 
-3. **Napsat `article.html`** — HTML obsah. Zabalit do `<div class="dp-art">`. SVG inline funguje bez omezení.
+3. **Napsat `article.html`** – HTML obsah. Zabalit do `<div class="dp-art">`. SVG inline funguje bez omezení.
 
 4. **Vytvořit `page.tsx`** v `apps/web/app/specialy/data-pro-budouci-premierku/02-demografie/[NN-slug]/page.tsx` podle vzoru výše.
 
-5. **Aktualizovat `demografie-hub.html`** — konvertovat `<div class="dt-card">` na `<a class="dt-card dt-card-link" href="/specialy/.../[NN-slug]">`.
+5. **Aktualizovat `demografie-hub.html`** – konvertovat `<div class="dt-card">` na `<a class="dt-card dt-card-link" href="/specialy/.../[NN-slug]">`.
 
 ---
 
@@ -145,11 +145,11 @@ Tři placeholder karty (`<div class="dt-card">`) konvertovány na klikatelné li
 | `08-cas-rodicovstvi` | ✅ nový (tento commit) |
 | `12-zeny-rozhodovani` | ✅ nový (tento commit) |
 
-Ostatní karty v hub stránce jsou zatím placeholder (`<div>` bez href) — článek pro ně neexistuje.
+Ostatní karty v hub stránce jsou zatím placeholder (`<div>` bez href) – článek pro ně neexistuje.
 
 ---
 
-## Static export — důležité
+## Static export – důležité
 
 Web používá `output: 'export'` (Next.js static export). To znamená:
 - Každá URL musí mít odpovídající `page.tsx` soubor (nebo `generateStaticParams`)
@@ -160,4 +160,4 @@ Web používá `output: 'export'` (Next.js static export). To znamená:
 
 ## Kontakt na editorský repozitář
 
-Zdrojový obsah článků je v `data-pro-premierku/02_DEMOGRAFIE/03_primary_content/DIST_ARTICLE_*.md`. Tyto soubory slouží jako referenční zdrojový materiál — obsah z nich se ručně konvertuje do `article.html` formátu při publikaci.
+Zdrojový obsah článků je v `data-pro-premierku/02_DEMOGRAFIE/03_primary_content/DIST_ARTICLE_*.md`. Tyto soubory slouží jako referenční zdrojový materiál – obsah z nich se ručně konvertuje do `article.html` formátu při publikaci.

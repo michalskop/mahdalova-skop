@@ -4,7 +4,7 @@ const path = require('path');
 const baseUrl = 'https://www.mahdalova-skop.cz';
 const articlesDir = path.join(__dirname, '../app/clanek/_articles');
 
-// Kept in sync with EXCLUDED_SLUGS in app/clanek/[slug]/page.tsx — these
+// Kept in sync with EXCLUDED_SLUGS in app/clanek/[slug]/page.tsx – these
 // folders are content sources only; their canonical page lives under
 // /specialy/, and /clanek/[slug] deliberately won't generate a static route
 // for them (output: export would 500 if it tried).

@@ -24,11 +24,11 @@ function loadArticle(chapterSlug: string, articleSlug: string) {
   const { data, content } = matter(raw);
 
   // Articles with raw HTML/SVG containing literal "{...}" (e.g. inline <style>
-  // blocks with CSS) can't go through the MDX/JSX parser at all — MDX always
+  // blocks with CSS) can't go through the MDX/JSX parser at all – MDX always
   // tries to read "{" as a JS expression, even inside what looks like plain
   // HTML text, and fails ("Could not parse expression with acorn"). Such
   // articles set `htmlInclude` in frontmatter pointing to a sibling .html
-  // file, rendered via dangerouslySetInnerHTML instead of MDXRemote — same
+  // file, rendered via dangerouslySetInnerHTML instead of MDXRemote – same
   // mechanism the older /clanek/_articles/ system uses.
   let htmlContent: string | null = null;
   if (typeof data.htmlInclude === 'string') {
@@ -51,7 +51,7 @@ function loadChapterMeta(chapterSlug: string) {
   return JSON.parse(fs.readFileSync(p, 'utf8')) as { title: string; accent: string };
 }
 
-// Chapters with a dedicated static hub page.tsx — excluded from dynamic
+// Chapters with a dedicated static hub page.tsx – excluded from dynamic
 // generation to prevent output file collision in `output: 'export'` builds.
 // Note: this only applies to the chapter HUB route ([chapter]/page.tsx);
 // individual articles for 01-demografie are generated dynamically here.

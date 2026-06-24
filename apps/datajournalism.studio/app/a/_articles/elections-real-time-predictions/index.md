@@ -8,7 +8,7 @@ filter: ["work"]
 tags: ["Elections", "Predictions", "Czechia", "Slovakia", "Brazil", "Romania", "USA", "Data Science", "Visualization"]
 promoted: 100
 ---
-In a world where speed and accuracy dominate, real-time election predictions are reshaping how we experience election nights. Imagine knowing the winner within minutes of polls closing—that’s the promise of our cutting-edge models.
+In a world where speed and accuracy dominate, real-time election predictions are reshaping how we experience election nights. Imagine knowing the winner within minutes of polls closing–that’s the promise of our cutting-edge models.
 
 ![Election Needle](images/main.png)
 *Figure: Prediction trends compared to official counts over time.*

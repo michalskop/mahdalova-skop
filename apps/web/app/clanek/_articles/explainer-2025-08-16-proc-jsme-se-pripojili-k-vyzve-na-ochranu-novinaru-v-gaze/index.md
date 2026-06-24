@@ -34,9 +34,9 @@ Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, 
 
 **Proč podpis a proč zrovna teď**
 
-Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni — a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
+Podepsali jsme výzvu, která žádá okamžitou pomoc novinářům v Gaze. Udělali jsme to jednoduše proto, že novináři jsou tam zabíjeni – a to systematicky, záměrně, s vysvětleními, která odborné organizace po celém světě opakovaně odmítají jako nepodložená.
 
-Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je — zradili bychom samotný smysl žurnalistiky.
+Kdybychom mlčeli, zatímco jsou novináři mučeni hladem a likvidováni za to, že dělají svou práci, zradili bychom nejen je – zradili bychom samotný smysl žurnalistiky.
 
 A přece je tato solidarita zpochybňována, dokonce i ze strany našich profesních kolegů a kolegyň. Slýcháme, že data jsou zfalšovaná. Že ti mrtví vůbec nebyli novináři a novinářky. Že žádný hladomor neexistuje. Že kdo takové věci říká, naskočil na propagandu Hamásu.
 
@@ -44,13 +44,13 @@ Pojďme si tato tvrzení projít jedno po druhém.
 
 **„Data o mrtvých jsou zfalšovaná Hamásem."**
 
-Toto tvrzení je dnes — s ohledem na dostupné důkazy — neudržitelné.
+Toto tvrzení je dnes – s ohledem na dostupné důkazy – neudržitelné.
 
 Gazanské ministerstvo zdravotnictví historicky patří k nejspolehlivějším zdrojům válečné statistiky ve svém regionu. Odborná studie publikovaná v prestižním lékařském časopise *The Lancet* ukázala, že v předchozích konfliktech se jeho údaje lišily od nezávislých odhadů OSN jen o 1,5 až 3,8 procenta.
 
-V aktuálním konfliktu navíc přibyly zcela nezávislé ověřovací studie. Výzkumníci z Royal Holloway, University of London, provedli v prosinci 2024 a lednu 2025 terénní šetření ve 2 000 domácnostech napříč Gazou — bez jakékoli závislosti na administrativních záznamech ministerstva zdravotnictví. 
+V aktuálním konfliktu navíc přibyly zcela nezávislé ověřovací studie. Výzkumníci z Royal Holloway, University of London, provedli v prosinci 2024 a lednu 2025 terénní šetření ve 2 000 domácnostech napříč Gazou – bez jakékoli závislosti na administrativních záznamech ministerstva zdravotnictví. 
 
-Výsledek publikoval *The Lancet Global Health* v únoru 2026: pouze v prvních 15 měsících války bylo násilně zabito více než 75 200 lidí, přičemž oficiální ministerské číslo bylo v té době 49 090. Ministerstvo tedy nepřehánělo — naopak **podhodnocovalo, o přibližně třetinu**.
+Výsledek publikoval *The Lancet Global Health* v únoru 2026: pouze v prvních 15 měsících války bylo násilně zabito více než 75 200 lidí, přičemž oficiální ministerské číslo bylo v té době 49 090. Ministerstvo tedy nepřehánělo – naopak **podhodnocovalo, o přibližně třetinu**.
 
 Celkem 56,2 procenta násilných obětí tvoří ženy, děti a starší lidé. To jednoznačně zpochybňuje narativ, že izraelská armáda zasahuje převážně bojovníky.
 
@@ -64,7 +64,7 @@ Celkem 56,2 procenta násilných obětí tvoří ženy, děti a starší lidé. 
   heading="Psali jsme"
 />
 
-A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou databázi s jmény. K 6. lednu 2026 eviduje minimálně 252 zabitých novinářů a mediálních pracovníků od začátku války. Izraelské úřady opakovaně označovaly zabité novináře za teroristy — ale jak CPJ dokumentuje, v žádném z těchto případů nepředložily věrohodné důkazy. V srpnu 2025 deník *+972 Magazine* odhalil, že izraelská armáda vytvořila speciální jednotku nazvanou „Legitimization Cell", jejíž úkolem bylo propojovat palestinské novináře s Hamásem — právě proto, aby bylo jejich zabití ospravedlnitelné.
+A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou databázi s jmény. K 6. lednu 2026 eviduje minimálně 252 zabitých novinářů a mediálních pracovníků od začátku války. Izraelské úřady opakovaně označovaly zabité novináře za teroristy – ale jak CPJ dokumentuje, v žádném z těchto případů nepředložily věrohodné důkazy. V srpnu 2025 deník *+972 Magazine* odhalil, že izraelská armáda vytvořila speciální jednotku nazvanou „Legitimization Cell", jejíž úkolem bylo propojovat palestinské novináře s Hamásem – právě proto, aby bylo jejich zabití ospravedlnitelné.
 
 ---
 
@@ -72,23 +72,23 @@ A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou 
 
 Toto tvrzení má svou logiku: pokud lze kohokoli předem označit za teroristu, pak jeho smrt přestává být válečným zločinem. Je to pohodlné. A právě proto je nebezpečné.
 
-CPJ ve svém výzkumu z května 2023 — tedy ještě před říjnem 2023 — zdokumentoval u Izraele opakující se vzorec: vážné obvinění novináře z vazeb na teroristické organizace bez věrohodných důkazů, po němž zpravidla následuje jeho fyzická likvidace. Po říjnu 2023 se tento vzorec výrazně zintenzivnil.
+CPJ ve svém výzkumu z května 2023 – tedy ještě před říjnem 2023 – zdokumentoval u Izraele opakující se vzorec: vážné obvinění novináře z vazeb na teroristické organizace bez věrohodných důkazů, po němž zpravidla následuje jeho fyzická likvidace. Po říjnu 2023 se tento vzorec výrazně zintenzivnil.
 
-Konkrétní příklady: Ismail Al-Ghoul, novinář Al-Džazíry, byl zabit v červenci 2024. Jako „důkaz" jeho příslušnosti k Hamásu Izrael předložil dokumenty, podle nichž prý obdržel vojenskou hodnost — **v deseti letech**. Tento „důkaz" odborníci i Al-Džazíra odmítli. Hamza Dahdouh, kameraman a syn šéfa gazanské kanceláře Al-Džazíry, byl zabit v lednu 2024. Anas Al-Šaríf byl zabit v srpnu 2025 spolu s dalšími čtyřmi kolegy — izraelská armáda útok potvrdila a označila ho za operativce Hamásu, opět bez věrohodných důkazů. Všechny renomované mezinárodní novinářské organizace toto obvinění odmítly.
+Konkrétní příklady: Ismail Al-Ghoul, novinář Al-Džazíry, byl zabit v červenci 2024. Jako „důkaz" jeho příslušnosti k Hamásu Izrael předložil dokumenty, podle nichž prý obdržel vojenskou hodnost – **v deseti letech**. Tento „důkaz" odborníci i Al-Džazíra odmítli. Hamza Dahdouh, kameraman a syn šéfa gazanské kanceláře Al-Džazíry, byl zabit v lednu 2024. Anas Al-Šaríf byl zabit v srpnu 2025 spolu s dalšími čtyřmi kolegy – izraelská armáda útok potvrdila a označila ho za operativce Hamásu, opět bez věrohodných důkazů. Všechny renomované mezinárodní novinářské organizace toto obvinění odmítly.
 
-Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejsmrtelnější konflikt pro novináře, jaký tato organizace za více než 30 let existence dokumentuje. Podle Projektu Costs of War je to nejsmrtelnější konflikt pro média v celé zaznamenané historii válek — smrtelnější než druhá světová válka, Vietnam, Irák dohromady.
+Válka v Gaze je v historii novinářství bezprecedentní. Podle CPJ je to nejsmrtelnější konflikt pro novináře, jaký tato organizace za více než 30 let existence dokumentuje. Podle Projektu Costs of War je to nejsmrtelnější konflikt pro média v celé zaznamenané historii válek – smrtelnější než druhá světová válka, Vietnam, Irák dohromady.
 
 ---
 
 **„V Gaze není hladomor, to je propaganda Hamásu."**
 
-Klasifikaci hladomoru neprovádí Al-Džazíra ani palestinská ministerstva. Provádí ji IPC — Integrated Food Security Phase Classification, mezinárodní systém 21 partnerů včetně OSN, WHO, UNICEF, WFP a dalších. Jde o stejný nástroj, který se používá k hodnocení potravinových krizí v Etiopii, Jemenu nebo Súdánu.
+Klasifikaci hladomoru neprovádí Al-Džazíra ani palestinská ministerstva. Provádí ji IPC – Integrated Food Security Phase Classification, mezinárodní systém 21 partnerů včetně OSN, WHO, UNICEF, WFP a dalších. Jde o stejný nástroj, který se používá k hodnocení potravinových krizí v Etiopii, Jemenu nebo Súdánu.
 
-K 15. srpnu 2025 IPC formálně potvrdil hladomor (IPC fáze 5) v gazanském governorátu. Podmínky pro tuto klasifikaci jsou přísné: musí být překročeny tři nezávislé prahové hodnoty zároveň — extrémní nedostatek potravin, akutní podvýživa a smrtnost způsobená hladověním. Všechny tři byly naplněny.
+K 15. srpnu 2025 IPC formálně potvrdil hladomor (IPC fáze 5) v gazanském governorátu. Podmínky pro tuto klasifikaci jsou přísné: musí být překročeny tři nezávislé prahové hodnoty zároveň – extrémní nedostatek potravin, akutní podvýživa a smrtnost způsobená hladověním. Všechny tři byly naplněny.
 
-UNRWA a její partneři publikovali v *The Lancet* studii sledující podvýživu u dětí do pěti let — téměř 220 000 dětí bylo screenováno za 20 měsíců. Výsledek je jednoznačný: podvýživa se přesně kopíruje s omezením přístupu humanitární pomoci. Když Izrael přísun povolil, čísla klesala. Když byl přísun blokován, čísla raketově rostla. V srpnu 2025 trpělo akutní podvýživou téměř 30 procent malých dětí v Gaze.
+UNRWA a její partneři publikovali v *The Lancet* studii sledující podvýživu u dětí do pěti let – téměř 220 000 dětí bylo screenováno za 20 měsíců. Výsledek je jednoznačný: podvýživa se přesně kopíruje s omezením přístupu humanitární pomoci. Když Izrael přísun povolil, čísla klesala. Když byl přísun blokován, čísla raketově rostla. V srpnu 2025 trpělo akutní podvýživou téměř 30 procent malých dětí v Gaze.
 
-WHO v srpnu 2025 vydalo prohlášení o „člověkem způsobeném hladomoru", na který svět příliš dlouho čekal. Agentura AFP vydala v červenci 2025 vlastní prohlášení, že její novináři v Gaze jsou v bezprostředním nebezpečí, že zemřou hlady — jeden z nich byl již fyzicky neschopen pracovat.
+WHO v srpnu 2025 vydalo prohlášení o „člověkem způsobeném hladomoru", na který svět příliš dlouho čekal. Agentura AFP vydala v červenci 2025 vlastní prohlášení, že její novináři v Gaze jsou v bezprostředním nebezpečí, že zemřou hlady – jeden z nich byl již fyzicky neschopen pracovat.
 
 Hladomor v Gaze existoval a data to dokládají. Označovat to za „propagandu" vůbec není na místě.
 
@@ -102,21 +102,21 @@ A česky: výzvu podepsalo 262 novinářů ze 66 redakcí (23 šéfredaktorů a 
 
 ## Jak odpovědět na konkrétní námitky
 
-### „Zdrojem vašich informací je jen Hamas — zahraniční novináři se do Gazy dostat nemohou."
+### „Zdrojem vašich informací je jen Hamas – zahraniční novináři se do Gazy dostat nemohou."
 
-Ano, zahraniční novináři jsou z Gazy blokováni. To je přesně jeden ze čtyř bodů výzvy, kterou jsme podepsali — požadujeme, aby byl tento blok zrušen. Zdrojem problému je tedy to samé, co je předmětem naší výzvy.
+Ano, zahraniční novináři jsou z Gazy blokováni. To je přesně jeden ze čtyř bodů výzvy, kterou jsme podepsali – požadujeme, aby byl tento blok zrušen. Zdrojem problému je tedy to samé, co je předmětem naší výzvy.
 
-Blokáda přístupu zároveň neznamená, že neexistují žádné nezávislé informace. Existují palestinští novináři s mezinárodní akreditací, kteří pro AFP, Reuters, AP, BBC pracují roky a jejichž materiály jsou editovány zahraničními redakcemi s vysokými standardy. Existují satelitní snímky, data z nemocnic, záznamy OSN a humanitárních organizací. Existují nezávislé recenzované studie — jako šetření *The Lancet*, IPC, UNRWA — jejichž metodologie je veřejně dostupná a hodnocena odborníky bez vazby na žádnou válčící stranu.
+Blokáda přístupu zároveň neznamená, že neexistují žádné nezávislé informace. Existují palestinští novináři s mezinárodní akreditací, kteří pro AFP, Reuters, AP, BBC pracují roky a jejichž materiály jsou editovány zahraničními redakcemi s vysokými standardy. Existují satelitní snímky, data z nemocnic, záznamy OSN a humanitárních organizací. Existují nezávislé recenzované studie – jako šetření *The Lancet*, IPC, UNRWA – jejichž metodologie je veřejně dostupná a hodnocena odborníky bez vazby na žádnou válčící stranu.
 
-Izraelská armáda novinářům přístup do míst konfliktu nabízí — ale výhradně ve formě organizovaných press tours pod vlastním dozorem. Žádná seriózní novinářská organizace na světě nepovažuje přístup pod dohledem bojující strany za nezávislé zpravodajství. To platí stejně pro Izrael jako pro jakoukoli jinou armádu.
+Izraelská armáda novinářům přístup do míst konfliktu nabízí – ale výhradně ve formě organizovaných press tours pod vlastním dozorem. Žádná seriózní novinářská organizace na světě nepovažuje přístup pod dohledem bojující strany za nezávislé zpravodajství. To platí stejně pro Izrael jako pro jakoukoli jinou armádu.
 
 ### „Novináři nemají podepisovat politické výzvy. To je aktivismus."
 
 Novinářská nestrannost je skutečná hodnota a myslíme si, že by se novináři neměli stávat mluvčími žádné válčící strany.
 
-Výzva, kterou jsme podepsali, ale není politická výzva ve smyslu podpory té nebo oné strany konfliktu. Je to **profesní výzva**: chceme, aby naši kolegové měli přístup k jídlu, vodě a lékařské péči a aby zahraniční novináři mohli do Gazy vstoupit. Tyto požadavky nejsou ani pro, ani proti Izraeli nebo Hamásu — jsou pro základní podmínky výkonu novinářské práce.
+Výzva, kterou jsme podepsali, ale není politická výzva ve smyslu podpory té nebo oné strany konfliktu. Je to **profesní výzva**: chceme, aby naši kolegové měli přístup k jídlu, vodě a lékařské péči a aby zahraniční novináři mohli do Gazy vstoupit. Tyto požadavky nejsou ani pro, ani proti Izraeli nebo Hamásu – jsou pro základní podmínky výkonu novinářské práce.
 
-Nestrannost přece neznamená mlčení, když jsou naši profesní kolegové a kolegyně zabíjeni. Pro nás nestrannost znamená poctivost při hledání faktů — a přesně tohle nás přivedlo k podpisu výzvy.
+Nestrannost přece neznamená mlčení, když jsou naši profesní kolegové a kolegyně zabíjeni. Pro nás nestrannost znamená poctivost při hledání faktů – a přesně tohle nás přivedlo k podpisu výzvy.
 
 ### „Ukrajinci také nepouštějí novináře volně na frontu."
 
@@ -130,7 +130,7 @@ A co do počtu zabitých novinářů: v celém konfliktu na Ukrajině bylo od ro
 
 ## O českém zpravodajství
 
-Bohužel musíme říct jednu nepříjemnou věc: česká mediální krajina není v pokrytí Gazy a Izraele vyvážená. Existuje systematické vychýlení ve prospěch izraelské perspektivy — v tom, koho tuzemská média většinově citují, jak rámují události, co považují za „kontroverzní" a co za samozřejmé. Takováto asymetrie pak vede k tomu, že některé příběhy — třeba zabití novinářů nebo rozsah hladomoru — dostávají méně prostoru, než by dostaly v jiném kontextu.
+Bohužel musíme říct jednu nepříjemnou věc: česká mediální krajina není v pokrytí Gazy a Izraele vyvážená. Existuje systematické vychýlení ve prospěch izraelské perspektivy – v tom, koho tuzemská média většinově citují, jak rámují události, co považují za „kontroverzní" a co za samozřejmé. Takováto asymetrie pak vede k tomu, že některé příběhy – třeba zabití novinářů nebo rozsah hladomoru – dostávají méně prostoru, než by dostaly v jiném kontextu.
 
 Náš podpis pod výzvou je také připomínka sobě samým: abychom se ptali stejně přísně na obě strany.
 
@@ -295,7 +295,7 @@ Abecední seznam signatářů/ek:
 - Ivana Kozáková, redaktorka, Deník N
 - Jakub Krahulec, externí spolupracovník Českého rozhlasu
 - Lenka Králová, podcasterka, V Tranzu
-- Milan Krám, regionální novinář, Regionální média — Mostecko
+- Milan Krám, regionální novinář, Regionální média – Mostecko
 - Lucie Kyliánová, moderátorka, Zkratky života
 - Aneta Lakomá, novinářka
 - Timon Láska, kulturní novinář
@@ -307,7 +307,7 @@ Abecední seznam signatářů/ek:
 - Eliška Mádrová, novinářka, Český rozhlas
 - Kateřina Mahdalová, datová novinářka, šéfredaktorka, DataTimes.cz
 - Zuzana Machálková, novinářka, Respekt
-- Adam Malý, redaktor, Regionální média — Mostecko
+- Adam Malý, redaktor, Regionální média – Mostecko
 - Martin Marek, novinář, YouTube Věděli jste
 - Marek Martinovský, redaktor, Česká televize
 - Alžběta Medková, redaktorka, A2

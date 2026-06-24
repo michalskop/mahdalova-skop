@@ -12,7 +12,7 @@ promoted: 60
 
 Chceme, aby bylo jasné, jakou optikou se díváme na svět. Stoprocentně objektivní žurnalistika totiž neexistuje: každý z nás přichází s nějakým vzděláním, rodinným zázemím, životní zkušeností, hodnotami i slepými skvrnami. A tohle je něco, co se nedá jednoduše odložit přede dveřmi redakce. Člověk to nosí s sebou. Pořád.
 
-O co se ale můžeme poctivě snažit, je být přesní, ověřovat, dávat prostor relevantním argumentům, přiznávat nejistotu, opravovat chyby, oddělovat zpravodajství od publicistiky a samozřejmě komerční sdělení od samotné redakční práce. Pokud máme nějakou hodnotovou orientaci (a tu máme — jako každý), je podle nás lepší ji otevřeně přiznat, než ji schovávat za předstíranou neutralitu. Čtenářům a čtenářkám to dává šanci lépe posoudit naši práci a nám to připomíná odpovědnost, kterou na sebe bereme.
+O co se ale můžeme poctivě snažit, je být přesní, ověřovat, dávat prostor relevantním argumentům, přiznávat nejistotu, opravovat chyby, oddělovat zpravodajství od publicistiky a samozřejmě komerční sdělení od samotné redakční práce. Pokud máme nějakou hodnotovou orientaci (a tu máme – jako každý), je podle nás lepší ji otevřeně přiznat, než ji schovávat za předstíranou neutralitu. Čtenářům a čtenářkám to dává šanci lépe posoudit naši práci a nám to připomíná odpovědnost, kterou na sebe bereme.
 
 *Kateřina & Michal*
 

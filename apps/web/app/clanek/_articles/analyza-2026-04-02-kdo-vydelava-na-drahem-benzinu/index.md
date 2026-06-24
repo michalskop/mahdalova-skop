@@ -19,7 +19,7 @@ Balíček, který těsně před Velikonocemi představil premiér Andrej Babiš,
 
 ### Jak se vás změny dotknou při tankování
 
-**Jezdíte na benzín a tankujete na běžné pumpě** – Většina osobních aut, která každý den vozí lidi do práce nebo děti do školy, jezdí na Natural 95 – v roce 2025 tvoří benzínová osobní auta přibližně dvě třetiny nových registrací, v celém parku pak většinu. Vládní zásah pro vás prakticky nic neznamená. Spotřební daň na benzín se nemění — zůstává na 12,84 Kč za litr, stejně jako v roce 2010. A marže vaší pumpy? Ta byla pod zastropovanou hranicí 2,50 Kč dávno před regulací.
+**Jezdíte na benzín a tankujete na běžné pumpě** – Většina osobních aut, která každý den vozí lidi do práce nebo děti do školy, jezdí na Natural 95 – v roce 2025 tvoří benzínová osobní auta přibližně dvě třetiny nových registrací, v celém parku pak většinu. Vládní zásah pro vás prakticky nic neznamená. Spotřební daň na benzín se nemění – zůstává na 12,84 Kč za litr, stejně jako v roce 2010. A marže vaší pumpy? Ta byla pod zastropovanou hranicí 2,50 Kč dávno před regulací.
 
 **Jezdíte na naftu a tankujete mimo dálnici** – Dieselová osobní auta tvoří v ČR asi čtvrtinu celého vozového parku. Na naftu ale jezdí téměř všechna nákladní vozidla, dodávky a autobusy – v Evropě je to přes 90 % dodávek a skoro 97 % kamionů. Nafta tedy tvoří 73 % veškeré spotřeby pohonných hmot v Česku, a právě proto se zdražení nafty dotýká ekonomiky jako celku. Vláda sice snížila spotřební daň o 2,35 Kč za litr včetně DPH, což je reálná úleva, jenže u mnoha běžných čerpacích stanic se marže nafty pohybovaly těsně u nuly nebo pod ní. Marže na hranici nuly jsou dlouhodobě neudržitelné, a zda se celé snížení daně promítne do nižší ceny na stojanu, záleží na konkrétní stanici.
 

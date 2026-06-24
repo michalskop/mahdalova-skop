@@ -36,7 +36,7 @@ interface RelatedArticlesProps {
   slugs?: string[];   // hard-coded list; overrides filter/tag when provided
   count?: number;
 
-  // Heading — pass false to suppress the heading and its border entirely
+  // Heading – pass false to suppress the heading and its border entirely
   heading?: string | false;
 
   // Sort order
@@ -283,7 +283,7 @@ function MiniCard({
     );
   }
 
-  // left or right — fixed-size container enforces uniform thumbnail dimensions
+  // left or right – fixed-size container enforces uniform thumbnail dimensions
   const imgEl = (
     <Anchor
       href={href}

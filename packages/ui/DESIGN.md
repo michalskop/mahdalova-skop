@@ -12,7 +12,7 @@ All shared components live in `packages/ui/src/`. Both apps consume them via `@r
 | `apps/web` | Roboto Slab (serif) | 400, 500, 600, 700 |
 | `apps/datajournalism.studio` | Work Sans (sans-serif) | 400, 500, 600, 700 |
 
-Font is set globally via `ThemeProvider` in each app. Do not set `fontFamily` on individual components — it inherits automatically.
+Font is set globally via `ThemeProvider` in each app. Do not set `fontFamily` on individual components – it inherits automatically.
 
 ---
 
@@ -20,12 +20,12 @@ Font is set globally via `ThemeProvider` in each app. Do not set `fontFamily` on
 
 All colors are Mantine custom color scales (10 shades, index 0–9). The **main shade** is always index `[6]` unless noted. Access via `theme.colors.colorName[index]` in components or `c="colorName.6"` in Mantine props.
 
-### `brand` — Primary crimson red
+### `brand` – Primary crimson red
 
 | Index | Hex | Use |
 |-------|-----|-----|
 | [0] | `#fff4f6` | InfoBox 'error' background |
-| [6] | `#de1743` | **Default** — links, headings, tag badges, Arrow, section titles, InfoBox 'error' border |
+| [6] | `#de1743` | **Default** – links, headings, tag badges, Arrow, section titles, InfoBox 'error' border |
 | [7] | `#c5143c` | Hover state for brand links |
 | [8] | `#a81134` | Active/visited state for brand links |
 
@@ -36,7 +36,7 @@ gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[8] }}  // articl
 color={theme.colors.brand[6]}  // Arrow SVG
 ```
 
-### `background` — Warm off-white page scale
+### `background` – Warm off-white page scale
 
 | Index | Hex | Use |
 |-------|-----|-----|
@@ -50,27 +50,27 @@ bg="background.2"   // table header, Citation
 c="background.0"    // white text on coloured section header
 ```
 
-### `brandNavy` — Navy purple
+### `brandNavy` – Navy purple
 
 | Index | Hex | Use |
 |-------|-----|-----|
 | [6] | `#6267a3` | InfoBox 'info' border |
 
-### `brandTeal` — Teal green
+### `brandTeal` – Teal green
 
 | Index | Hex | Use |
 |-------|-----|-----|
 | [0] | `#e5f9fc` | InfoBox 'success' background |
 | [6] | `#0f6c78` | InfoBox 'success' border, SubscribeHH button (`color="teal"`) |
 
-### `brandOrange` — Orange
+### `brandOrange` – Orange
 
 | Index | Hex | Use |
 |-------|-----|-----|
 | [0] | `#fff4eb` | InfoBox 'warning' background |
 | [6] | `#f76800` | InfoBox 'warning' border |
 
-### `brandRoyalBlue` — Deep blue
+### `brandRoyalBlue` – Deep blue
 
 | Index | Hex | Use |
 |-------|-----|-----|
@@ -95,7 +95,7 @@ Mantine's default spacing scale is used throughout. Common values:
 | Prop value | Approx px | Use |
 |------------|-----------|-----|
 | `xs` | 10px | Small gaps, badge top offset |
-| `sm` | 12px | — |
+| `sm` | 12px | – |
 | `md` | 16px | Standard padding, paragraph margins |
 | `lg` | 20px | Section gaps |
 | `xl` | 24px | Heading top margin |
@@ -241,7 +241,7 @@ import { InfoBox } from '@repo/ui/components/InfoBox';
 | `success` | `brandTeal[6]` #0f6c78 | #e5f9fc | Positive findings |
 | `error` | `brand[6]` #de1743 | #fff4f6 | Corrections, important warnings |
 
-**In markdown articles** — use code fences:
+**In markdown articles** – use code fences:
 ````md
 ```box
 Key fact using the default neutral style.
@@ -256,7 +256,7 @@ This is a full-width success box.
 ```
 ````
 
-**"Read more" — fold content with `<!-- more -->`:**
+**"Read more" – fold content with `<!-- more -->`:**
 ````md
 ```infobox
 This paragraph is always visible.
@@ -267,7 +267,7 @@ This paragraph is hidden until the reader taps "Číst více".
 ```
 ````
 
-Props: `type`, `float`, `readMoreAt` (set by the remark plugin — do not set manually), `readMoreLabel`, `readLessLabel`.
+Props: `type`, `float`, `readMoreAt` (set by the remark plugin – do not set manually), `readMoreLabel`, `readLessLabel`.
 
 ---
 
@@ -280,7 +280,7 @@ import { FlourishEmbed } from '@repo/ui/components/FlourishEmbed';
 <FlourishEmbed dataSrc="visualisation/1234567" />
 ```
 
-**In markdown articles** — paste the Flourish embed div directly; `remarkFlourishPlugin` converts it automatically:
+**In markdown articles** – paste the Flourish embed div directly; `remarkFlourishPlugin` converts it automatically:
 ```html
 <div class="flourish-embed flourish-chart" data-src="visualisation/1234567"></div>
 ```
@@ -321,7 +321,7 @@ import { TagList } from '@repo/ui/components/TagList';
 Drop into app layout. `siteId` is app-specific (set in each app's wrapper).
 
 ```tsx
-// In apps/web — already wrapped, just use:
+// In apps/web – already wrapped, just use:
 import { MatomoAnalytics } from '@/components/common/MatomoAnalytics';
 <MatomoAnalytics />
 
@@ -384,7 +384,7 @@ import { TestimonialCard } from '@repo/ui/components/TestimonialCard';
 
 ## Utility: `getArticles`
 
-Server-side function (Node.js only — use in `page.tsx`, never in client components).
+Server-side function (Node.js only – use in `page.tsx`, never in client components).
 
 ```ts
 // apps/web wrapper (already configured):
@@ -394,9 +394,9 @@ const articles = await getArticles(9, 'analyzy');
 // Parameters:
 getArticles(
   limit = 9,
-  filter?,              // string | string[] — matches article frontmatter 'filter' field
+  filter?,              // string | string[] – matches article frontmatter 'filter' field
   useExplicitPromotion = false,
-  tag?                  // string — matches article frontmatter 'tags' array
+  tag?                  // string – matches article frontmatter 'tags' array
 )
 ```
 
@@ -415,15 +415,15 @@ normalizeTag('Volby & Politika') // → 'volby-politika'
 
 ## Remark Plugins
 
-Used in `articles.ts` MDX pipeline — do not import in client components.
+Used in `articles.ts` MDX pipeline – do not import in client components.
 
 ```ts
 import { remarkBoxPlugin } from '@repo/ui/lib/remark-box-plugin';
 import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 ```
 
-- **`remarkBoxPlugin`** — transforms ` ```box `, ` ```mediabox `, ` ```infobox ` fences into `<MediaBox>` / `<InfoBox>` MDX elements
-- **`remarkFlourishPlugin`** — transforms Flourish `<div>` embeds into `<FlourishEmbed>` MDX elements
+- **`remarkBoxPlugin`** – transforms ` ```box `, ` ```mediabox `, ` ```infobox ` fences into `<MediaBox>` / `<InfoBox>` MDX elements
+- **`remarkFlourishPlugin`** – transforms Flourish `<div>` embeds into `<FlourishEmbed>` MDX elements
 
 ---
 
@@ -434,19 +434,19 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 - Use `background.1` for card/paper backgrounds
 - Use `background.0` for text that sits on a coloured (`brand`, `brandNavy`, etc.) background
 - Use `InfoBox` type semantically: `warning` for caveats, `success` for positive findings, `error` for corrections
-- Float boxes (`float="right"`) only when there is enough surrounding text — at least 3–4 paragraphs
+- Float boxes (`float="right"`) only when there is enough surrounding text – at least 3–4 paragraphs
 - Keep `ArticlesSection` titles short (≤ 14 chars) if you want the Arrow decoration
 
 ### Don't
-- Don't hardcode hex colours in new components — always use theme tokens
-- Don't use `brandYellow` / `brandForestGreen` / `brandEmeraldMint` / `brandDeepRed` in new components without design sign-off — they are reserved for future use
-- Don't set `fontFamily` manually — it comes from `ThemeProvider`
-- Don't use `MediaBox` for semantic content (warnings, corrections) — use `InfoBox` instead
+- Don't hardcode hex colours in new components – always use theme tokens
+- Don't use `brandYellow` / `brandForestGreen` / `brandEmeraldMint` / `brandDeepRed` in new components without design sign-off – they are reserved for future use
+- Don't set `fontFamily` manually – it comes from `ThemeProvider`
+- Don't use `MediaBox` for semantic content (warnings, corrections) – use `InfoBox` instead
 - Don't put `getArticles` or file-system logic in client components (`'use client'`)
 
 ---
 
-## Speciály — správa a rozšiřování
+## Speciály – správa a rozšiřování
 
 Speciály jsou tematické projekty zobrazované na třech místech:
 
@@ -475,7 +475,7 @@ apps/web/public/images/specials/
 **Pravidla:**
 - Formát SVG nebo JPG, ideálně čtvercový poměr 1:1
 - Název souboru musí odpovídat hodnotě `coverImage` v definici dlaždice v `SpecialsHero.tsx`
-- Soubory > 256 KB nelze vkládat inline — musí být v `public/` a referencovány přes `<img src>`
+- Soubory > 256 KB nelze vkládat inline – musí být v `public/` a referencovány přes `<img src>`
 - Obrázek se zobrazí jako full-bleed pozadí dlaždice, přes spodek jde tmavý gradient pro čitelnost titulku
 
 ---
@@ -488,7 +488,7 @@ V hlavičce článku `app/clanek/_articles/[slug]/index.md` přidat hodnotu do p
 filter: ["kontext", "klima"]
 ```
 
-`filter` je pole — článek může patřit do více rubrik zároveň.
+`filter` je pole – článek může patřit do více rubrik zároveň.
 
 **Dostupné hodnoty filtru a jejich cíl:**
 
@@ -496,7 +496,7 @@ filter: ["kontext", "klima"]
 |---|---|
 | `"analýza"` | `/analyzy` |
 | `"kontext"` | `/kontext` |
-| `"explainer"` | — |
+| `"explainer"` | – |
 | `"investigace"` | `/special/investigace` |
 | `"svobodná-média"` | `/special/svobodna-media` |
 | `"klima"` | `/special/klima` |
@@ -505,7 +505,7 @@ Hodnota musí přesně odpovídat tomu, co stránka předává do `getArticles(1
 
 ---
 
-### Přidat nový speciál — checklist
+### Přidat nový speciál – checklist
 
 **1.** Nakopírovat obrázek do `apps/web/public/images/specials/novy-special.svg`
 
@@ -542,12 +542,12 @@ filter: ["kontext", "novy-special"]
 | Svobodná média | `/special/svobodna-media` | `svobodná-média` | `#812840` |
 | M & Š investigace | `/special/investigace` | `investigace` | `#351040` |
 | Data o klimatu | `/special/klima` | `klima` | `linear-gradient(135deg, #2a3f04, #639e0a)` |
-| Sněmovna DataTimes | ext. odkaz | — | `#2f325c` |
-| Mandáty.cz | ext. odkaz | — | `linear-gradient(90deg, #f71b4b, #101432)` |
+| Sněmovna DataTimes | ext. odkaz | – | `#2f325c` |
+| Mandáty.cz | ext. odkaz | – | `linear-gradient(90deg, #f71b4b, #101432)` |
 
 ---
 
-### Karusel — technické parametry
+### Karusel – technické parametry
 
 Implementace v `SpecialsHero.tsx`, čistý CSS scroll-snap + vlastní RAF animace (žádná externí knihovna).
 
@@ -559,7 +559,7 @@ Implementace v `SpecialsHero.tsx`, čistý CSS scroll-snap + vlastní RAF animac
 | `GAP` | `16` | Mezera mezi dlaždicemi (px) |
 | `POSITIONS` | `TILES.length - VISIBLE + 1` | Počet dot-indikátorů |
 
-Animace používá `easeInOut` přes `requestAnimationFrame` — scroll-snap se dočasně vypíná během animace, aby nepřerušoval přechod.
+Animace používá `easeInOut` přes `requestAnimationFrame` – scroll-snap se dočasně vypíná během animace, aby nepřerušoval přechod.
 
 ---
 

@@ -29,7 +29,7 @@ Lawmakers for **Motorists to Themselves** are doing worst. In total, they lead e
 
 <RelatedArticles preset="sidebar" slugs={["kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku","analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane", "analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli"]} position="right" heading="We Wrote"/>
 
-Minister of Foreign Affairs and party chairman [Petr Macinka](https://snemovna.datatimes.cz/member/7022) chairs the **Motorists Club** and is secretary of the board of the **Center for Terrorism Research**. Both associations violate the law — they have never submitted accounting documents to the Collection of Documents.
+Minister of Foreign Affairs and party chairman [Petr Macinka](https://snemovna.datatimes.cz/member/7022) chairs the **Motorists Club** and is secretary of the board of the **Center for Terrorism Research**. Both associations violate the law – they have never submitted accounting documents to the Collection of Documents.
 
 ### Macinka's 800 Thousand from Nowhere
 Moreover, the **Motorists Club** donated **[800 thousand crowns](https://www.hlidacstatu.cz/sponzori/strana/05989175?rok=2024)** to the **Motorists to Themselves** party in 2024 - whose chairman is again Macinka. Where did that money come from and what portion of the association's budget did they donate? Due to the absence of mandatory documents, this cannot be determined.
@@ -100,7 +100,7 @@ Paradoxically, this **"youth NGO"** was founded by only two people, besides Libo
 
 ## <PartyFace party="ANO" size={24} text="ANO" /> ANO Lawmakers in NGO Leadership
 
-A special case is the **Doctors Against Wars** association — it has two government lawmakers in leadership, [Ivana Mádlová](https://snemovna.datatimes.cz/member/6732) and [Věra Adámková](https://snemovna.datatimes.cz/member/6254) (both ANO). This association also doesn't fulfill legal obligations. Doctor Věra Adámková additionally leads two other associations, the Světice Hunting Association and the Healthy Heart Foundation, both also without mandatory financial documents.
+A special case is the **Doctors Against Wars** association – it has two government lawmakers in leadership, [Ivana Mádlová](https://snemovna.datatimes.cz/member/6732) and [Věra Adámková](https://snemovna.datatimes.cz/member/6254) (both ANO). This association also doesn't fulfill legal obligations. Doctor Věra Adámková additionally leads two other associations, the Světice Hunting Association and the Healthy Heart Foundation, both also without mandatory financial documents.
 
 Lawmakers [Marek Novák](https://snemovna.datatimes.cz/member/6533) and [Denis Doksanský](https://snemovna.datatimes.cz/member/7000) lead the most NGOs - both four organizations.
 

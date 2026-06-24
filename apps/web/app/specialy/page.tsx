@@ -1,4 +1,4 @@
-// app/special/page.tsx — Landing page všech speciálů
+// app/special/page.tsx – Landing page všech speciálů
 import { Box, Group, Stack, Title, Paper, SimpleGrid, Container } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Arrow } from '@repo/ui/components/Arrow';
@@ -129,7 +129,7 @@ export default function SpecialsLandingPage() {
       `}</style>
       <Paper py={20} bg={BG} radius={0} style={{ minHeight: '60vh' }}>
         <Group gap={0} align="flex-start" wrap="wrap">
-          {/* Levý sloupec — nadpis (stejná šířka jako u ArticlesSection) */}
+          {/* Levý sloupec – nadpis (stejná šířka jako u ArticlesSection) */}
           <Stack
             w={{ base: '100%', md: 200 }}
             mb={{ base: 'xs', md: 0 }}
@@ -152,7 +152,7 @@ export default function SpecialsLandingPage() {
             </a>
           </Stack>
 
-          {/* Pravý sloupec — dlaždice */}
+          {/* Pravý sloupec – dlaždice */}
           <Box flex={1}>
             <Container size="lg" px="md" py={16}>
               <SimpleGrid cols={{ base: 1, xs: 2, sm: 3 }} spacing="md">

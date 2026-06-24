@@ -64,7 +64,7 @@ export async function getArticles({
     // a genuine site-root file under public/images/. Without publicDir we
     // can't tell them apart, so default to the more common folder-relative
     // reading. With publicDir, try folder-relative first, then site-root,
-    // then give up (→ ArticleCard's placeholder) — whichever actually
+    // then give up (→ ArticleCard's placeholder) – whichever actually
     // exists on disk wins.
     const folderRelative = path.posix.join(coverImageBase, folder, raw);
     if (!publicDir) return folderRelative;

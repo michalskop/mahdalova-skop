@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 // viewBox: 0 0 280 165 (legacy dots) nebo 0 0 200 200 (ISOTYPE customSvg)
 type Dot = { cx: number; cy: number; r: number; fill: string };
 
-// 01 Demografie — population pyramid (wider at base = more people)
+// 01 Demografie – population pyramid (wider at base = more people)
 const D01: Dot[] = [
   {cx:140,cy:22,r:9,fill:'#341535'},
   {cx:118,cy:50,r:10,fill:'#551538'},{cx:162,cy:50,r:10,fill:'#451537'},
@@ -29,14 +29,14 @@ const D01: Dot[] = [
   {cx:52,cy:145,r:14,fill:'#de1743'},{cx:93,cy:145,r:14,fill:'#db1743'},{cx:134,cy:145,r:14,fill:'#de1743'},{cx:175,cy:145,r:14,fill:'#db1743'},{cx:216,cy:145,r:14,fill:'#de1743'},
 ];
 
-// 02 Vzdělávání — ordered 4×3 grid (structured, systematic)
+// 02 Vzdělávání – ordered 4×3 grid (structured, systematic)
 const D02: Dot[] = [
   {cx:52,cy:32,r:16,fill:'#1a2080'},{cx:108,cy:32,r:16,fill:'#2030a0'},{cx:172,cy:32,r:16,fill:'#4a51ab'},{cx:228,cy:32,r:16,fill:'#5e66d5'},
   {cx:52,cy:82,r:16,fill:'#6870dc'},{cx:108,cy:82,r:16,fill:'#7c85e8'},{cx:172,cy:82,r:16,fill:'#2838b0'},{cx:228,cy:82,r:16,fill:'#8090f4'},
   {cx:52,cy:132,r:16,fill:'#3048c0'},{cx:108,cy:132,r:16,fill:'#6880e8'},{cx:172,cy:132,r:16,fill:'#4060d0'},{cx:228,cy:132,r:16,fill:'#9098f0'},
 ];
 
-// 03 Zdravotnictví — cross / plus pattern (medical)
+// 03 Zdravotnictví – cross / plus pattern (medical)
 const D03: Dot[] = [
   {cx:140,cy:18,r:14,fill:'#b262c0'},
   {cx:140,cy:50,r:14,fill:'#9671b6'},
@@ -49,7 +49,7 @@ const D03: Dot[] = [
   {cx:250,cy:82,r:14,fill:'#33a692'},
 ];
 
-// 04 Trh práce — bar chart (4 bars of 3, 5, 4, 2)
+// 04 Trh práce – bar chart (4 bars of 3, 5, 4, 2)
 const D04: Dot[] = [
   {cx:55,cy:148,r:13,fill:'#de1743'},{cx:55,cy:115,r:13,fill:'#da1947'},{cx:55,cy:82,r:13,fill:'#cd2257'},
   {cx:105,cy:148,r:13,fill:'#b72f6f'},{cx:105,cy:115,r:13,fill:'#b53072'},{cx:105,cy:82,r:13,fill:'#a13d89'},{cx:105,cy:49,r:13,fill:'#8f489d'},{cx:105,cy:16,r:13,fill:'#8151ae'},
@@ -57,7 +57,7 @@ const D04: Dot[] = [
   {cx:225,cy:148,r:13,fill:'#994292'},{cx:225,cy:115,r:13,fill:'#cd2257'},
 ];
 
-// 05 Bydlení — building windows (3×4 grid = apartment block)
+// 05 Bydlení – building windows (3×4 grid = apartment block)
 const D05: Dot[] = [
   {cx:85,cy:28,r:14,fill:'#1a4060'},{cx:140,cy:28,r:14,fill:'#0d5a82'},{cx:195,cy:28,r:14,fill:'#1e6090'},
   {cx:85,cy:66,r:14,fill:'#0a4a70'},{cx:140,cy:66,r:14,fill:'#157098'},{cx:195,cy:66,r:14,fill:'#0c5278'},
@@ -65,7 +65,7 @@ const D05: Dot[] = [
   {cx:85,cy:142,r:14,fill:'#0b4f78'},{cx:140,cy:142,r:14,fill:'#1a68a0'},{cx:195,cy:142,r:14,fill:'#0d5080'},
 ];
 
-// 06 Ekonomika — growth curve scatter (exponential)
+// 06 Ekonomika – growth curve scatter (exponential)
 const D06: Dot[] = [
   {cx:28,cy:148,r:9,fill:'#341535'},
   {cx:58,cy:138,r:10,fill:'#5f1539'},
@@ -77,7 +77,7 @@ const D06: Dot[] = [
   {cx:255,cy:16,r:16,fill:'#ffcf02'},
 ];
 
-// 07 Životní prostředí — concentric rings (tree rings / ecology)
+// 07 Životní prostředí – concentric rings (tree rings / ecology)
 // Center (140,84), inner R=44 (6 nodes), outer R=66 (9 nodes)
 const D07: Dot[] = [
   {cx:140,cy:84,r:18,fill:'#1b5e20'},
@@ -88,7 +88,7 @@ const D07: Dot[] = [
   {cx:96,cy:27,r:9,fill:'#45b050'},{cx:140,cy:18,r:9,fill:'#3a9a42'},{cx:184,cy:27,r:9,fill:'#37903c'},
 ];
 
-// 08 Bezpečnost — shield perimeter (concentric circles)
+// 08 Bezpečnost – shield perimeter (concentric circles)
 // Center (140,82), inner R=38 (5 nodes), outer R=65 (8 nodes)
 const D08: Dot[] = [
   {cx:140,cy:82,r:18,fill:'#0c447c'},
@@ -99,7 +99,7 @@ const D08: Dot[] = [
   {cx:140,cy:17,r:9,fill:'#2048a8'},{cx:186,cy:36,r:9,fill:'#185898'},
 ];
 
-// 09 Sociální systém — network hub + satellites
+// 09 Sociální systém – network hub + satellites
 // Hub (140,82), 5 satellites R=62, 5 secondary R=36
 const D09: Dot[] = [
   {cx:140,cy:82,r:20,fill:'#006064'},
@@ -111,7 +111,7 @@ const D09: Dot[] = [
   {cx:169,cy:61,r:9,fill:'#3db3ae'},
 ];
 
-// 10 Digitalizace — binary grid (large=1, small=0)
+// 10 Digitalizace – binary grid (large=1, small=0)
 const D10: Dot[] = [
   {cx:30,cy:22,r:15,fill:'#58a43b'},{cx:87,cy:22,r:9,fill:'#4bac73'},{cx:140,cy:22,r:15,fill:'#34b9d6'},{cx:193,cy:22,r:9,fill:'#4aac75'},{cx:250,cy:22,r:15,fill:'#50a85a'},
   {cx:30,cy:68,r:9,fill:'#3fb2a4'},{cx:87,cy:68,r:15,fill:'#5ba32e'},{cx:140,cy:68,r:15,fill:'#46ae85'},{cx:193,cy:68,r:15,fill:'#5ba22c'},{cx:250,cy:68,r:9,fill:'#3db3ae'},
@@ -119,7 +119,7 @@ const D10: Dot[] = [
   {cx:30,cy:148,r:9,fill:'#629f10'},{cx:87,cy:148,r:15,fill:'#58a43b'},{cx:140,cy:148,r:15,fill:'#4bac73'},{cx:193,cy:148,r:15,fill:'#34b9d6'},{cx:250,cy:148,r:9,fill:'#4aac75'},
 ];
 
-// 11 Doprava — winding route (S-curve path)
+// 11 Doprava – winding route (S-curve path)
 const D11: Dot[] = [
   {cx:25,cy:148,r:9,fill:'#e65100'},{cx:60,cy:130,r:10,fill:'#ef6c00'},
   {cx:96,cy:108,r:11,fill:'#f57c00'},{cx:132,cy:96,r:12,fill:'#ff8f00'},
@@ -127,7 +127,7 @@ const D11: Dot[] = [
   {cx:238,cy:58,r:14,fill:'#ffc107'},{cx:256,cy:30,r:15,fill:'#ffd53d'},
 ];
 
-// 12 Věda — atomic orbital (nucleus + 2 orbits)
+// 12 Věda – atomic orbital (nucleus + 2 orbits)
 // Center (138,82), orbit1 R=65 (4 nodes), orbit2 R=75 (6 nodes)
 const D12: Dot[] = [
   {cx:135,cy:82,r:14,fill:'#4a148c'},{cx:150,cy:76,r:10,fill:'#6a1b9a'},{cx:142,cy:96,r:8,fill:'#38006b'},
@@ -140,7 +140,7 @@ const D12: Dot[] = [
 
 // ── ISOTYPE piktogramy (viewBox 0 0 200 200, 15px grid, r=4.5) ───────────
 
-// 01 Energie a bezpečnost — blesk
+// 01 Energie a bezpečnost – blesk
 const G01 = <>
   <g fill="#ffcf02">
     <circle cx={115} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/>
@@ -158,7 +158,7 @@ const G01 = <>
   </g>
 </>;
 
-// 02 Demografie — věková pyramida (tvar podle reálných dat: úzký vrchol 85+,
+// 02 Demografie – věková pyramida (tvar podle reálných dat: úzký vrchol 85+,
 // vyboulené patro 55–69 = silné poválečné ročníky, zúžení kolem 25–34,
 // mírné rozšíření u dětí 0–14)
 const G_DEMO = <>
@@ -186,7 +186,7 @@ const G_DEMO = <>
   </g>
 </>;
 
-// 03 Zdravotnictví a péče — zdvojené H
+// 03 Zdravotnictví a péče – zdvojené H
 const G03 = <>
   <g fill="#5e66d5">
     {/* řádek 1 (25): 3+3, mezera nahoře mezi oblouky */}
@@ -207,10 +207,10 @@ const G03 = <>
     <circle cx={70} cy={130} r={4.5}/><circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/><circle cx={130} cy={130} r={4.5}/>
     {/* řádek 9 (145) */}
     <circle cx={85} cy={145} r={4.5}/><circle cx={100} cy={145} r={4.5}/><circle cx={115} cy={145} r={4.5}/>
-    {/* řádek 10 (160) — špička srdce */}
+    {/* řádek 10 (160) – špička srdce */}
     <circle cx={100} cy={160} r={4.5}/>
   </g>
-  {/* bílý kříž — plný plus, 9 bodů, vyplněný střed + ramena 2 body do všech stran */}
+  {/* bílý kříž – plný plus, 9 bodů, vyplněný střed + ramena 2 body do všech stran */}
   <g fill="#f8f6f0">
     <circle cx={100} cy={55} r={4.5}/>
     <circle cx={100} cy={70} r={4.5}/>
@@ -220,7 +220,7 @@ const G03 = <>
   </g>
 </>;
 
-// 04 Klimatická změna — koule r=78, střed (100,100), vzor 3-7-9-9-11-11-11-9-9-7-3
+// 04 Klimatická změna – koule r=78, střed (100,100), vzor 3-7-9-9-11-11-11-9-9-7-3
 const G04 = <>
   <g fill="#de1743">
     <circle cx={85} cy={25} r={4.5}/><circle cx={100} cy={25} r={4.5}/><circle cx={115} cy={25} r={4.5}/>
@@ -243,7 +243,7 @@ const G04 = <>
   </g>
 </>;
 
-// 05 Bezpečnost a konflikty — bytelný zámek
+// 05 Bezpečnost a konflikty – bytelný zámek
 const G08 = <>
   <g fill="rgba(255,255,255,0.4)">
     <circle cx={70} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
@@ -262,7 +262,7 @@ const G08 = <>
   <circle cx={100} cy={130} r={4.5} fill="#101432"/>
 </>;
 
-// 06 AI a trh práce — neuronový čip
+// 06 AI a trh práce – neuronový čip
 const G06 = <>
   <g fill="rgba(255,255,255,0.2)">
     <circle cx={85} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/>
@@ -283,7 +283,7 @@ const G06 = <>
   <circle cx={100} cy={100} r={4.5} fill="#ffcf02"/>
 </>;
 
-// 07 Oligarchizace a korupce — odtržená elita
+// 07 Oligarchizace a korupce – odtržená elita
 const G07 = <>
   <g fill="rgba(255,255,255,0.25)">
     <circle cx={25} cy={160} r={4.5}/><circle cx={40} cy={160} r={4.5}/><circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/><circle cx={175} cy={160} r={4.5}/>
@@ -298,7 +298,7 @@ const G07 = <>
   <circle cx={100} cy={55} r={4.5} fill="#de1743"/>
 </>;
 
-// 08 Nedostupnost bydlení — dům s okny
+// 08 Nedostupnost bydlení – dům s okny
 const G05 = <>
   <g fill="#de1743">
     <circle cx={100} cy={40} r={4.5}/>
@@ -321,7 +321,7 @@ const G05 = <>
   <circle cx={100} cy={175} r={4.5} fill="#f76800"/>
 </>;
 
-// 09 Ekonomická nerovnost — váhy příjmů
+// 09 Ekonomická nerovnost – váhy příjmů
 const G09 = <>
   <g fill="rgba(255,255,255,0.15)">
     <circle cx={25} cy={160} r={4.5}/><circle cx={40} cy={160} r={4.5}/><circle cx={55} cy={160} r={4.5}/><circle cx={70} cy={160} r={4.5}/><circle cx={85} cy={160} r={4.5}/><circle cx={100} cy={160} r={4.5}/><circle cx={115} cy={160} r={4.5}/><circle cx={130} cy={160} r={4.5}/><circle cx={145} cy={160} r={4.5}/><circle cx={160} cy={160} r={4.5}/><circle cx={175} cy={160} r={4.5}/>
@@ -347,7 +347,7 @@ const G09 = <>
   <circle cx={145} cy={40} r={4.5} fill="#de1743"/>
 </>;
 
-// 10 Digitalizace a inovace — notebook se sloupcovým grafem na displeji
+// 10 Digitalizace a inovace – notebook se sloupcovým grafem na displeji
 const G10 = <>
   <g fill="rgba(255,255,255,0.25)">
     <circle cx={40} cy={40} r={4.5}/><circle cx={55} cy={40} r={4.5}/><circle cx={70} cy={40} r={4.5}/><circle cx={85} cy={40} r={4.5}/><circle cx={100} cy={40} r={4.5}/><circle cx={115} cy={40} r={4.5}/><circle cx={130} cy={40} r={4.5}/><circle cx={145} cy={40} r={4.5}/><circle cx={160} cy={40} r={4.5}/>
@@ -369,7 +369,7 @@ const G10 = <>
   <circle cx={130} cy={100} r={4.5} fill="#5e66d5"/>
 </>;
 
-// 11 Vzdělávání — otevřená kniha
+// 11 Vzdělávání – otevřená kniha
 const G02 = <>
   <g fill="#5e66d5">
     <circle cx={25} cy={130} r={4.5}/><circle cx={40} cy={130} r={4.5}/>
@@ -395,11 +395,11 @@ const G02 = <>
   </g>
 </>;
 
-// 12 Informační manipulace — digitální oko
+// 12 Informační manipulace – digitální oko
 const G12 = <>
   {/* pupila */}
   <circle cx={100} cy={100} r={4.5} fill="#de1743"/>
-  {/* duhovka — teal */}
+  {/* duhovka – teal */}
   <g fill="#5e66d5">
     <circle cx={85} cy={70} r={4.5}/><circle cx={100} cy={70} r={4.5}/><circle cx={115} cy={70} r={4.5}/>
     <circle cx={70} cy={85} r={4.5}/><circle cx={85} cy={85} r={4.5}/><circle cx={100} cy={85} r={4.5}/><circle cx={115} cy={85} r={4.5}/><circle cx={130} cy={85} r={4.5}/>
@@ -407,7 +407,7 @@ const G12 = <>
     <circle cx={70} cy={115} r={4.5}/><circle cx={85} cy={115} r={4.5}/><circle cx={100} cy={115} r={4.5}/><circle cx={115} cy={115} r={4.5}/><circle cx={130} cy={115} r={4.5}/>
     <circle cx={85} cy={130} r={4.5}/><circle cx={100} cy={130} r={4.5}/><circle cx={115} cy={130} r={4.5}/>
   </g>
-  {/* bělmo — šedé body po stranách */}
+  {/* bělmo – šedé body po stranách */}
   <g fill="rgba(255,255,255,0.3)">
     <circle cx={55} cy={85} r={4.5}/><circle cx={145} cy={85} r={4.5}/>
     <circle cx={40} cy={100} r={4.5}/><circle cx={55} cy={100} r={4.5}/><circle cx={145} cy={100} r={4.5}/><circle cx={160} cy={100} r={4.5}/>
@@ -415,10 +415,10 @@ const G12 = <>
   </g>
 </>;
 
-// 04 Regionální propasti — plný kosočtverec (bohaté centrum) obklopený
+// 04 Regionální propasti – plný kosočtverec (bohaté centrum) obklopený
 // vyloučeným obvodem (periferie)
 const G_REGIONS = <>
-  {/* Středový plný kosočtverec — bohaté centrum */}
+  {/* Středový plný kosočtverec – bohaté centrum */}
   <g fill="#5e66d5">
     <circle cx={100} cy={60} r={4.5}/>
     <circle cx={80} cy={80} r={4.5}/><circle cx={100} cy={80} r={4.5}/><circle cx={120} cy={80} r={4.5}/>
@@ -426,7 +426,7 @@ const G_REGIONS = <>
     <circle cx={80} cy={120} r={4.5}/><circle cx={100} cy={120} r={4.5}/><circle cx={120} cy={120} r={4.5}/>
     <circle cx={100} cy={140} r={4.5}/>
   </g>
-  {/* Vyloučený obvod — periferie, blíž ke středu pro kompaktnější tvar */}
+  {/* Vyloučený obvod – periferie, blíž ke středu pro kompaktnější tvar */}
   <g fill="#de1743">
     <circle cx={100} cy={40} r={4.5}/>
     <circle cx={80} cy={60} r={4.5}/><circle cx={120} cy={60} r={4.5}/>
@@ -438,7 +438,7 @@ const G_REGIONS = <>
   </g>
 </>;
 
-// 14 Veřejné finance a daně — stupňovitý gradient (daňová pásma), otočeno
+// 14 Veřejné finance a daně – stupňovitý gradient (daňová pásma), otočeno
 // o 90° proti směru hodinových ručiček: šedá masa vpravo nahoře,
 // žlutá/oranžová/crimson schodiště vlevo dole
 const G_FINANCE = <>
@@ -466,7 +466,7 @@ const G_FINANCE = <>
   </g>
 </>;
 
-// 15 Efektivní vládnutí — volant se zjednodušeným barevným obvodem
+// 15 Efektivní vládnutí – volant se zjednodušeným barevným obvodem
 // (spektrum společnosti) a strukturálně šedými ramenami/jádrem
 const G_VLADNUTI = <>
   <g fill="#5e66d5">
@@ -550,7 +550,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
     >
       {/* Top row: large number (left) + piktogram (right). The SVG viewBox has
           built-in empty padding below the dots, so plain flex align-items:
-          flex-end aligns the invisible box, not the ink — translateY below
+          flex-end aligns the invisible box, not the ink – translateY below
           nudges the icon down to visually compensate. */}
       <div style={{ flex: '1 1 0', padding: '8px 8px 0', marginBottom: 24, display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', gap: 4 }}>
         <div className="ch-card-number" style={{
@@ -586,7 +586,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
         </div>
       </div>
 
-      {/* Accent line — chapter color */}
+      {/* Accent line – chapter color */}
       <div style={{ height: 2, background: '#ff3f30', margin: '0 16px', opacity: 0.7 }} />
 
       {/* Info area */}
@@ -777,7 +777,7 @@ export default function DpbpLandingPage() {
       `}</style>
       <Box style={{ background: DARK, minHeight: '100vh' }}>
 
-        {/* Hero — eyebrow → nadpis → jedna úderná věta; hover na nadpis
+        {/* Hero – eyebrow → nadpis → jedna úderná věta; hover na nadpis
             "probarví" profilovou hlavu vpravo (sibling-selector, beze JS) */}
         <div className="dt-hero">
           <div className="dt-hero-content">
@@ -796,7 +796,7 @@ export default function DpbpLandingPage() {
           </div>
         </div>
 
-        {/* Kapitoly + Infobox — stejný Container pro přesné zarovnání */}
+        {/* Kapitoly + Infobox – stejný Container pro přesné zarovnání */}
         <Container size="lg" py={44} px="md">
           <SimpleGrid cols={{ base: 2, sm: 3 }} spacing="md">
             {CHAPTERS.map(ch => (

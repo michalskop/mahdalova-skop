@@ -2,14 +2,14 @@
 title: "Americká cla: Trest za to, že jste moc dobří"
 date: "2025-04-03"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Prezident Trump představil nová cla na dovoz do USA — třeba 20 % na zboží z EU. Říká jim „reciproční“, ale ve skutečnosti jsou to cla z obchodního schodku."
+excerpt: "Prezident Trump představil nová cla na dovoz do USA – třeba 20 % na zboží z EU. Říká jim „reciproční“, ale ve skutečnosti jsou to cla z obchodního schodku."
 coverImage: "images/trump_clown.webp"
 filter: ["kontext"]
 tags: ["USA", "Trump", "EU", "cla"]
 promoted: 10
 ---
 
-Prezident Trump představil [nová cla na dovoz do USA](https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/) — třeba 20 % na zboží z EU. Říká jim **„reciproční“**, ale ve skutečnosti to nejsou žádná reciproční cla. Jsou to **„50% cla z obchodního schodku“**, vypočtená jednoduše:
+Prezident Trump představil [nová cla na dovoz do USA](https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/) – třeba 20 % na zboží z EU. Říká jim **„reciproční“**, ale ve skutečnosti to nejsou žádná reciproční cla. Jsou to **„50% cla z obchodního schodku“**, vypočtená jednoduše:
 
 **Trumpovo clo = (obchodní deficit USA s danou zemí ÷ dovoz z té země) ÷ 2**
 
@@ -18,13 +18,13 @@ Prezident Trump představil [nová cla na dovoz do USA](https://www.whitehouse.g
 - **Obnova domácí výroby**: Dlouhodobé deficity prý přispěly k úpadku amerického průmyslu.  
 - **Národní bezpečnost**: Závislost na dodávkách ze zahraničí ohrožuje obranu USA.
 
-Ale ten první důvod — že USA trpí kvůli neférovým podmínkám — moc nesedí. Problém není v tom, že ostatní země „podvádějí“. Jen prostě vyrábějí levněji, chytřeji nebo lépe.
+Ale ten první důvod – že USA trpí kvůli neférovým podmínkám – moc nesedí. Problém není v tom, že ostatní země „podvádějí“. Jen prostě vyrábějí levněji, chytřeji nebo lépe.
 
 ---
 
 ## Trumpova logika?
 
-> „Pokud od vás kupujeme hodně, ale vy od nás málo — zaplatíte clo.“
+> „Pokud od vás kupujeme hodně, ale vy od nás málo – zaplatíte clo.“
 
 A proto vznikla překvapivá celně-matematická tabulka:
 
@@ -33,11 +33,11 @@ A proto vznikla překvapivá celně-matematická tabulka:
 - **Vietnam**: 46 % (údajně kvůli 91% vietnamským clům)  
 - **Japonsko**: 24 % (údajně kvůli 46% japonským clům)
 
-Ve skutečnosti tato čísla **nevyjadřují cizí cla proti USA** — ale jen **poměr amerického obchodního schodku k dovozu z dané země**.
+Ve skutečnosti tato čísla **nevyjadřují cizí cla proti USA** – ale jen **poměr amerického obchodního schodku k dovozu z dané země**.
 
 Například 39 % u EU neznamená, že EU má na americké zboží 39% cla. Znamená to, že USA mají s EU deficit ve výši 39 % importu.
 
-Vietnam? Tam je „Trumpův poměr“ skoro 90 %. Ne kvůli clům. Ale protože Vietnam dováží z USA málo — a vyváží hodně.
+Vietnam? Tam je „Trumpův poměr“ skoro 90 %. Ne kvůli clům. Ale protože Vietnam dováží z USA málo – a vyváží hodně.
 
 ---
 

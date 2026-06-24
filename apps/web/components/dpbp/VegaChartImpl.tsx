@@ -75,7 +75,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
         },
       };
     } else if (isConcatSpec(base)) {
-      // width:'container' is unsupported on concat specs in Vega-Lite v5 — leave widths alone
+      // width:'container' is unsupported on concat specs in Vega-Lite v5 – leave widths alone
       final = { ...base, background: '#f8f6f0' };
     } else {
       final = {
@@ -125,7 +125,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       padding: '20px 16px 14px',
       margin: '2em 0',
     }}>
-      {/* Header — always present; content appears once meta loads */}
+      {/* Header – always present; content appears once meta loads */}
       <div style={{ marginBottom: (meta.title || meta.subtitle) ? 14 : 0 }}>
         {meta.title && (
           <div style={{

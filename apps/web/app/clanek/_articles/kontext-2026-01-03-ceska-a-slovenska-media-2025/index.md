@@ -37,7 +37,7 @@ V listopadu 2025 veřejně propukl konflikt mezi moderátorem *Otázek Václava 
 V květnu 2025 nabyla účinnosti tzv. velká mediální novela, která zvýšila televizní poplatek ze 135 na 150 Kč měsíčně a rozšířila okruh plátců. Jenže po podzimních volbách koalice ANO-SPD-Motoristé deklarovala záměr poplatky zrušit a nahradit je financováním ze státního rozpočtu.
 
 > 💬 *„Nezávislost veřejnoprávních médií je pilířem demokratické společnosti."*  
-> — Prezident Petr Pavel, opakovaná varování v průběhu roku 2025
+> – Prezident Petr Pavel, opakovaná varování v průběhu roku 2025
 
 ---
 
@@ -122,7 +122,7 @@ V dubnu 2025 odstartoval zpravodajský projekt [Publico.cz](https://www.publico.
 **Financování:** Projekt podporuje finančník **Karel Goláň** (vzdálený příbuzný senátora ODS Tomáše Goláně) prostřednictvím společnosti Central European Financial Management.
 
 > 💬 *„Polarizací ve společnosti je více než dost. Většina názorových barikád je na domácím trhu již obsazena."*  
-> — Veselin Vačkov pro [MediaGuru](https://www.mediaguru.cz/clanky/2025/04/veselin-vackov-uvadi-novy-zpravodajsky-projekt-publico/)
+> – Veselin Vačkov pro [MediaGuru](https://www.mediaguru.cz/clanky/2025/04/veselin-vackov-uvadi-novy-zpravodajsky-projekt-publico/)
 
 ### PastVina: Investigativa mimo mainstream
 
@@ -186,7 +186,7 @@ Podle [studie Seer Interactive](https://www.seerinteractive.com/insights/aio-imp
 - I dotazy BEZ AI Overviews zaznamenaly pokles o 41 % meziročně
 
 > 💬 *„Byznys model online médií stojí na tom, že uživatel na web přijde. Pokud platformy nahrazují návštěvu zdrojových webů vlastními AI odpověďmi, dochází k přenesení hodnoty od médií k technologickým firmám."*  
-> — Michal Hanák, předseda předsednictva SPIR
+> – Michal Hanák, předseda předsednictva SPIR
 
 ### SPIR zvažuje stížnost
 

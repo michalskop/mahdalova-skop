@@ -14,7 +14,7 @@ const CONTENT_ROOT = path.join(
 
 const SPECIAL_NAME = 'Data pro budoucí premiérku';
 
-// Short, human-readable chapter label for the first tag/badge — hand-curated
+// Short, human-readable chapter label for the first tag/badge – hand-curated
 // because deriving it from the slug (e.g. "08-nedostupnost-bydleni" → first
 // word "nedostupnost") produces awkward results.
 const CHAPTER_LABELS: Record<string, string> = {
@@ -83,7 +83,7 @@ export function getDpbpArticles(): Article[] {
         coverImage: null,
         filter: [],
         // Articles migrated from the older _articles/ system carry their own
-        // `tags`/`promoted` in frontmatter — preserve those instead of the
+        // `tags`/`promoted` in frontmatter – preserve those instead of the
         // synthesized defaults so homepage ranking doesn't regress.
         tags: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags : [label, SPECIAL_NAME],
         promoted: typeof data.promoted === 'number' ? data.promoted : 0,

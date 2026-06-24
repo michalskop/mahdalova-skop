@@ -1,5 +1,5 @@
 ---
-title: "Demo: RelatedArticles — all options"
+title: "Demo: RelatedArticles – all options"
 date: "9999-12-31"
 author: "Editorial Team"
 excerpt: "Full reference for the RelatedArticles component: presets, sorting, image position, author and date visibility, filtering by category or tag, and hard-coded slug lists."
@@ -17,7 +17,7 @@ The `<RelatedArticles />` component lets authors place a block of recommended ar
 
 A preset sets all layout and visibility defaults at once. Individual props always override the preset.
 
-### `cards` (default) — 3 columns, image on top
+### `cards` (default) – 3 columns, image on top
 
 ```mdx
 <RelatedArticles filter="analýza" count={3} />
@@ -27,7 +27,7 @@ A preset sets all layout and visibility defaults at once. Individual props alway
 
 ---
 
-### `sidebar` — 1 column, thumbnail left, no excerpt
+### `sidebar` – 1 column, thumbnail left, no excerpt
 
 ```mdx
 <RelatedArticles filter="kontext" preset="sidebar" count={4} />
@@ -37,7 +37,7 @@ A preset sets all layout and visibility defaults at once. Individual props alway
 
 ---
 
-### `list` — 1 column, thumbnail left, everything visible
+### `list` – 1 column, thumbnail left, everything visible
 
 ```mdx
 <RelatedArticles filter="analýza" preset="list" count={3} />
@@ -49,7 +49,7 @@ A preset sets all layout and visibility defaults at once. Individual props alway
 
 ## 2. Sorting (`sort`)
 
-### `sort="default"` — by score (promotion + recency decay)
+### `sort="default"` – by score (promotion + recency decay)
 
 ```mdx
 <RelatedArticles filter="analýza" count={4} sort="default" heading="Sort: default (score)" />
@@ -59,7 +59,7 @@ A preset sets all layout and visibility defaults at once. Individual props alway
 
 ---
 
-### `sort="newest"` — newest article first
+### `sort="newest"` – newest article first
 
 ```mdx
 <RelatedArticles filter="analýza" count={4} sort="newest" heading="Sort: newest first" />
@@ -101,7 +101,7 @@ A preset sets all layout and visibility defaults at once. Individual props alway
 
 ---
 
-### `imagePosition="none"` — no image
+### `imagePosition="none"` – no image
 
 ```mdx
 <RelatedArticles filter="analýza" imagePosition="none" count={3} heading="Image: hidden" />
@@ -157,7 +157,7 @@ A preset sets all layout and visibility defaults at once. Individual props alway
 
 ## 6. Hard-coded slug list (`slugs`)
 
-Bypasses all filtering — displays exactly the articles listed, in the given order.
+Bypasses all filtering – displays exactly the articles listed, in the given order.
 
 ```mdx
 <RelatedArticles
@@ -185,7 +185,7 @@ Bypasses all filtering — displays exactly the articles listed, in the given or
 
 ## 7. No heading
 
-Pass `heading={false}` to suppress the heading and its divider line entirely — useful when embedding the block in a context that already has its own title.
+Pass `heading={false}` to suppress the heading and its divider line entirely – useful when embedding the block in a context that already has its own title.
 
 ```mdx
 <RelatedArticles filter="analýza" count={3} heading={false} />
@@ -197,7 +197,7 @@ Pass `heading={false}` to suppress the heading and its divider line entirely —
 
 ## 8. Filtering
 
-### Array of filters — match any category
+### Array of filters – match any category
 
 ```mdx
 <RelatedArticles filter={["analýza", "explainer"]} count={4} heading="Analyses and explainers" />
@@ -217,9 +217,9 @@ Pass `heading={false}` to suppress the heading and its divider line entirely —
 
 ---
 
-## 9. No match — nothing renders
+## 9. No match – nothing renders
 
-When no article in the pool matches the filter, the component renders nothing — not even the heading.
+When no article in the pool matches the filter, the component renders nothing – not even the heading.
 
 ```mdx
 <RelatedArticles filter="nonexistent-category" count={3} />
@@ -227,13 +227,13 @@ When no article in the pool matches the filter, the component renders nothing �
 
 <RelatedArticles filter="nonexistent-category" count={3} />
 
-_(Nothing above — correct behaviour.)_
+_(Nothing above – correct behaviour.)_
 
 ---
 
 ## 10. Floating position (`position` / `float`)
 
-By default, the component is inline (no floating). You can optionally float it left or right — same behaviour as `<InfoBox />`. On mobile it automatically stops floating and takes full width.
+By default, the component is inline (no floating). You can optionally float it left or right – same behaviour as `<InfoBox />`. On mobile it automatically stops floating and takes full width.
 
 ### `position="right"`
 
@@ -255,7 +255,7 @@ By default, the component is inline (no floating). You can optionally float it l
 
 ---
 
-### `position="none"` (or omit) — inline
+### `position="none"` (or omit) – inline
 
 ```mdx
 <RelatedArticles filter="kontext" preset="sidebar" count={4} heading="Floating: none (inline)" position="none" />
@@ -267,13 +267,13 @@ By default, the component is inline (no floating). You can optionally float it l
 
 | Parameter | Type | Default | Values | Description |
 |-----------|------|---------|--------|-------------|
-| `slugs` | `string[]` | — | array of slug strings | Hard-coded article list in given order; overrides `filter`, `tag`, and `sort` |
-| `filter` | `string \| string[]` | — | any `filter` frontmatter value | Filter pool by article category |
-| `tag` | `string` | — | any tag | Filter pool by tag |
+| `slugs` | `string[]` | – | array of slug strings | Hard-coded article list in given order; overrides `filter`, `tag`, and `sort` |
+| `filter` | `string \| string[]` | – | any `filter` frontmatter value | Filter pool by article category |
+| `tag` | `string` | – | any tag | Filter pool by tag |
 | `count` | `number` | `4` | positive integer | Maximum number of articles to show |
 | `heading` | `string \| false` | `"Čtěte dál"` | any text, or `false` | Section heading; `false` hides the heading and divider |
 | `sort` | `string` | `"default"` | `"default"` `"newest"` | Sort order: score (promotion + recency) or newest first |
-| `preset` | `string` | `"cards"` | `"cards"` `"sidebar"` `"list"` | Layout preset — sets all defaults at once |
+| `preset` | `string` | `"cards"` | `"cards"` `"sidebar"` `"list"` | Layout preset – sets all defaults at once |
 | `columns` | `number` | by preset | `1` `2` `3` `4` | Number of columns |
 | `imagePosition` | `string` | by preset | `"top"` `"left"` `"right"` `"none"` | Thumbnail position |
 | `cardBackground` | `string` | by preset | `"white"` `"cream"` `"transparent"` | Card background colour |
@@ -286,8 +286,8 @@ By default, the component is inline (no floating). You can optionally float it l
 | `showFormatBadge` | `boolean` | by preset | `true` `false` | Show category badge |
 | `showTopicBadge` | `boolean` | by preset | `true` `false` | Show topic/series badge |
 | `showEmbed` | `boolean` | by preset | `true` `false` | Show embedded player (podcasts) |
-| `position` | `"left" \| "right" \| "none"` | — | `"left"` `"right"` `"none"` | Float the block left/right (alias: `float`) |
-| `float` | `"left" \| "right" \| "none"` | — | `"left"` `"right"` `"none"` | Alias of `position` |
+| `position` | `"left" \| "right" \| "none"` | – | `"left"` `"right"` `"none"` | Float the block left/right (alias: `float`) |
+| `float` | `"left" \| "right" \| "none"` | – | `"left"` `"right"` `"none"` | Alias of `position` |
 
 ### Preset defaults
 

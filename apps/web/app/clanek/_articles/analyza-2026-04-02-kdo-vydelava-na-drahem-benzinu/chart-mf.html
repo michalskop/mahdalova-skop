@@ -89,15 +89,15 @@
     <svg class="dtp-svg-outer" id="dtp-svg" xmlns="http://www.w3.org/2000/svg"></svg>
   </div>
 
-  <div class="dtp-source">Zdroj: Ministerstvo financí ČR — výsledky monitoringu marží čerpacích stanic, 19. 3. 2026 · Mahdalová &amp; Škop, vlastní zpracování</div>
+  <div class="dtp-source">Zdroj: Ministerstvo financí ČR – výsledky monitoringu marží čerpacích stanic, 19. 3. 2026 · Mahdalová &amp; Škop, vlastní zpracování</div>
   <div class="dtp-note">Indikativní hrubá marže = prodejní cena bez DPH − nákupní cena z burzy Rotterdam − spotřební daň</div>
 </div>
 <div class="dtp-tt" id="dtp-tt"></div>
 
 <script>
 (function () {
-  const C_N95  = '#b57ac8';  // fialová — Natural 95
-  const C_NAFT = '#1a9fbd';  // teal — Nafta
+  const C_N95  = '#b57ac8';  // fialová – Natural 95
+  const C_NAFT = '#1a9fbd';  // teal – Nafta
   const BG     = '#f8f6f0';
 
   const DATES = [
@@ -117,8 +117,8 @@
 
   function phase(i) {
     if (i < IDX_KONFLIKT)   return 'Před útokem na Írán';
-    if (i < IDX_MONITORING) return 'Po útoku — 28. 2. 2026';
-    return 'Po spuštění monitoringu — 6. 3. 2026';
+    if (i < IDX_MONITORING) return 'Po útoku – 28. 2. 2026';
+    return 'Po spuštění monitoringu – 6. 3. 2026';
   }
 
   const Y_MIN   = 0;
@@ -192,7 +192,7 @@
       svg.appendChild(lbl);
     });
 
-    // ── Strop marže 2,50 Kč — výrazná referenční linie ────
+    // ── Strop marže 2,50 Kč – výrazná referenční linie ────
     {
       const yCap = toY(2.50);
 
@@ -204,7 +204,7 @@
       capLine.setAttribute('stroke-width', '2');
       svg.appendChild(capLine);
 
-      // Label zarovnaný vpravo — nad linií
+      // Label zarovnaný vpravo – nad linií
       const capLbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       capLbl.setAttribute('x', PAD_L + plotW - 4);
       capLbl.setAttribute('y', yCap - 6);
@@ -226,7 +226,7 @@
       vline.setAttribute('stroke-dasharray', '6,4');
       svg.appendChild(vline);
 
-      // Popisek — v ploše grafu, pod horním okrajem
+      // Popisek – v ploše grafu, pod horním okrajem
       // Odhadneme, kde jsou linky v místě x, a dáme text tam kde nepřekrývá
       // V IDX_KONFLIKT: N95=2.54, NAFT=2.60 → toY(2.54)
       const lineY = toY(2.54);
@@ -240,7 +240,7 @@
       lbl.setAttribute('fill', '#c0392b');
       lbl.setAttribute('font-family', 'Roboto Slab, serif');
       lbl.setAttribute('font-weight', '700');
-      lbl.textContent = '28. 2. — útok na Írán';
+      lbl.textContent = '28. 2. – útok na Írán';
       svg.appendChild(lbl);
     }
 
@@ -263,7 +263,7 @@
       lbl.setAttribute('fill', '#666');
       lbl.setAttribute('font-family', 'Roboto Slab, serif');
       lbl.setAttribute('font-weight', '700');
-      lbl.textContent = '6. 3. — monitoring MF';
+      lbl.textContent = '6. 3. – monitoring MF';
       svg.appendChild(lbl);
     }
 
@@ -303,10 +303,10 @@
       const yN95  = toY(D_N95[i]);
       const yNaft = toY(D_NAFT[i]);
 
-      // Která linka je výše (nižší Y) — ta dostane větší odsazení nahoru
+      // Která linka je výše (nižší Y) – ta dostane větší odsazení nahoru
       const n95Higher = yN95 < yNaft;
 
-      // Natural 95 — fialová
+      // Natural 95 – fialová
       const lblN95 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       lblN95.setAttribute('x', cx);
       lblN95.setAttribute('y', yN95 - (n95Higher ? 18 : 10));
@@ -318,7 +318,7 @@
       lblN95.textContent = D_N95[i].toFixed(2).replace('.', ',');
       svg.appendChild(lblN95);
 
-      // Nafta — teal
+      // Nafta – teal
       const lblNaft = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       lblNaft.setAttribute('x', cx);
       lblNaft.setAttribute('y', yNaft - (!n95Higher ? 18 : 10));
