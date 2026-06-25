@@ -71,6 +71,29 @@
   background: #f76800;
   margin-top: 16px;
 }
+.dt-chapter-banner-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+.dt-chapter-profile {
+  flex: 0 0 auto;
+}
+.dt-chapter-profile a { display: block; }
+.dt-chapter-profile svg {
+  max-height: 120px;
+  width: auto;
+  display: block;
+}
+.dt-chapter-profile .dt-ph-sil-fill,
+.dt-chapter-profile .dt-ph-sil-stroke,
+.dt-chapter-profile .dt-ph-dot {
+  transition: fill 0.3s ease-out, stroke 0.3s ease-out;
+}
+@media (max-width: 768px) {
+  .dt-chapter-profile { display: none; }
+}
 .dt-tag {
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -754,11 +777,44 @@
 <div class="dt-hub">
   <div class="dt-chapter-banner">
     <div class="dt-chapter-banner-inner">
-      <div class="dt-chapter-crumb">
-        <a href="/specialy/data-pro-budouci-premierku">Data pro budoucí premiérku</a> · Kapitola 01
+      <div>
+        <div class="dt-chapter-crumb">
+          <a href="/specialy/data-pro-budouci-premierku">Data pro budoucí premiérku</a> · Kapitola 01
+        </div>
+        <h1 class="dt-chapter-title">Demografie</h1>
+        <div class="dt-chapter-rule"></div>
       </div>
-      <h1 class="dt-chapter-title">Demografie</h1>
-      <div class="dt-chapter-rule"></div>
+      <div class="dt-chapter-profile">
+        <a href="https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku" aria-label="Zpět na Data pro budoucí premiérku">
+          <svg id="dt-ph-01" viewBox="-8 -8 716 716" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" overflow="visible">
+            <defs>
+              <clipPath id="dt-ph-01-clip" clipPathUnits="userSpaceOnUse">
+                <path transform="translate(-117.098299,796.836783) scale(0.100000,-0.100000)" d="M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#dt-ph-01-clip)">
+              <rect class="dt-ph-sil-fill" x="0" y="0" width="700" height="700" fill="#ff1a4a" />
+            </g>
+            <path class="dt-ph-sil-stroke" transform="translate(-117.098299,796.836783) scale(0.100000,-0.100000)" d="M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z" fill="none" stroke="#ff1a4a" stroke-width="80" />
+            <circle class="dt-ph-dot" cx="358.4" cy="156.6" r="40.6" fill="#ff3f30" stroke="#ff3f30" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="412.8" cy="347.0" r="35.3" fill="#ff7f2a" stroke="#ff7f2a" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="340.9" cy="512.7" r="24.7" fill="#5fcce6" stroke="#5fcce6" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="280.6" cy="220.0" r="24.7" fill="#4a51ab" stroke="#4a51ab" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="379.8" cy="253.5" r="21.2" fill="#ff7e6e" stroke="#ff7e6e" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="311.7" cy="364.6" r="17.6" fill="#5e66d5" stroke="#5e66d5" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="537.3" cy="304.7" r="17.6" fill="#efb704" stroke="#efb704" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="313.7" cy="292.3" r="17.6" fill="#7997e1" stroke="#7997e1" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="449.8" cy="213.0" r="17.6" fill="#efb704" stroke="#efb704" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="358.4" cy="435.1" r="15.9" fill="#6493d4" stroke="#6493d4" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="471.2" cy="424.6" r="12.3" fill="#ff5c4a" stroke="#ff5c4a" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="525.6" cy="361.1" r="12.3" fill="#ff7f2a" stroke="#ff7f2a" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="469.2" cy="280.0" r="12.3" fill="#ff934d" stroke="#ff934d" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="457.6" cy="138.9" r="12.3" fill="#ffdc33" stroke="#ffdc33" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="412.8" cy="488.0" r="8.8" fill="#ff934d" stroke="#ff934d" stroke-width="8" />
+            <circle class="dt-ph-dot" cx="539.2" cy="234.1" r="8.8" fill="#ffe680" stroke="#ffe680" stroke-width="8" />
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -1217,3 +1273,69 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
     </p>
   </div>
 </div>
+
+<script>
+(function () {
+  // Vanilla-JS port of components/dpbp/ProfileHead.tsx's hover behaviour –
+  // this chapter renders raw static HTML (no React), so the same proximity
+  // re-roll logic is re-implemented here instead of being shared.
+  var svg = document.getElementById('dt-ph-01');
+  if (!svg) return;
+
+  var BRAND_PALETTE = ['#de1743', '#ffcf02', '#f76800', '#5e66d5', '#4a51ab', '#0e839e', '#1a9fbd', '#5fcce6', '#6267a3', '#639e0a', '#12b886', '#a03250', '#ff5c4a'];
+  var VB_MIN = -8, VB_SIZE = 716, PROXIMITY = 90;
+
+  var sil = svg.querySelector('.dt-ph-sil-fill');
+  var silStroke = svg.querySelector('.dt-ph-sil-stroke');
+  var dots = Array.prototype.slice.call(svg.querySelectorAll('.dt-ph-dot'));
+  var inside = new Set();
+
+  function randomColor() {
+    return BRAND_PALETTE[Math.floor(Math.random() * BRAND_PALETTE.length)];
+  }
+  function setSil(c) {
+    sil.setAttribute('fill', c);
+    silStroke.setAttribute('stroke', c);
+  }
+  function setDot(el, c) {
+    el.setAttribute('fill', c);
+    el.setAttribute('stroke', c);
+  }
+
+  svg.addEventListener('mouseenter', function () {
+    setSil(randomColor());
+  });
+
+  svg.addEventListener('mousemove', function (e) {
+    var rect = svg.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    var x = VB_MIN + ((e.clientX - rect.left) / rect.width) * VB_SIZE;
+    var y = VB_MIN + ((e.clientY - rect.top) / rect.height) * VB_SIZE;
+    dots.forEach(function (el, i) {
+      var cx = parseFloat(el.getAttribute('cx'));
+      var cy = parseFloat(el.getAttribute('cy'));
+      var dist = Math.hypot(x - cx, y - cy);
+      var inRange = dist < PROXIMITY;
+      var wasIn = inside.has(i);
+      if (inRange && !wasIn) {
+        inside.add(i);
+        setDot(el, randomColor());
+      } else if (!inRange && wasIn) {
+        inside.delete(i);
+      }
+    });
+  });
+
+  svg.addEventListener('mouseleave', function () {
+    inside.clear();
+    setSil('#ff1a4a');
+    dots.forEach(function (el) {
+      setDot(el, el.getAttribute('data-default'));
+    });
+  });
+
+  dots.forEach(function (el) {
+    el.setAttribute('data-default', el.getAttribute('fill'));
+  });
+})();
+</script>

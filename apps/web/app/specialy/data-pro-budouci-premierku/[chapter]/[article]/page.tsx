@@ -99,6 +99,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
 
   const chapterMeta = loadChapterMeta(params.chapter);
   const { frontmatter: fm, content, htmlContent } = art;
+  const accent = chapterMeta?.accent ?? '#de1743';
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
@@ -117,7 +118,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
               <Title order={1} style={{ color: '#ffffff', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1.2, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
                 {fm.title}
               </Title>
-              <Box style={{ width: 40, height: 3, background: chapterMeta?.accent ?? '#de1743', marginTop: 16, marginBottom: 16 }} />
+              <Box style={{ width: 40, height: 3, background: accent, marginTop: 16, marginBottom: 16 }} />
               <Text style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
                 {fm.author} · {formatDate(fm.date)}
               </Text>
@@ -128,7 +129,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
                 aria-label="Zpět na Data pro budoucí premiérku"
                 style={{ display: 'block' }}
               >
-                <ProfileHead initialRandom style={{ maxHeight: 100, width: 'auto', display: 'block' }} />
+                <ProfileHead initialRandom style={{ width: 100, height: 100, display: 'block' }} />
               </a>
             </Box>
           </Box>

@@ -124,7 +124,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 aria-label="Zpět na Data pro budoucí premiérku"
                 style={{ display: 'block' }}
               >
-                <ProfileHead initialRandom style={{ maxHeight: 120, width: 'auto', display: 'block' }} />
+                <ProfileHead initialRandom style={{ width: 120, height: 120, display: 'block' }} />
               </a>
             </Box>
           </Box>

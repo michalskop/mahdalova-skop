@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mahdalova-skop.cz/</loc>
-    <lastmod>2026-06-21T14:23:38.804Z</lastmod>
+    <lastmod>2026-06-24T20:10:54.191Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/analyzy</loc>
-    <lastmod>2026-06-21T14:23:38.805Z</lastmod>
+    <lastmod>2026-06-24T20:10:54.192Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/kontext</loc>
-    <lastmod>2026-06-21T14:23:38.805Z</lastmod>
+    <lastmod>2026-06-24T20:10:54.192Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/podcasty</loc>
-    <lastmod>2026-06-21T14:23:38.805Z</lastmod>
+    <lastmod>2026-06-24T20:10:54.192Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/kdo-jsme</loc>
-    <lastmod>2026-06-21T14:23:38.805Z</lastmod>
+    <lastmod>2026-06-24T20:10:54.192Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -111,36 +111,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/cislo-dne-2026-03-11-new-york-meni-panorama-a-zdrazuje-luxusni-bydleni</loc>
     <lastmod>2026-03-11T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-05-skandinavska-past</loc>
-    <lastmod>2026-06-19T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-08-cas-rodicovstvi</loc>
-    <lastmod>2026-06-19T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-12-zeny-rozhodovani</loc>
-    <lastmod>2026-06-19T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-co-znamena-plodnost</loc>
-    <lastmod>2026-04-30T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/data-pro-budouci-premierku-02-demografie-svet-populace</loc>
-    <lastmod>2026-06-18T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
