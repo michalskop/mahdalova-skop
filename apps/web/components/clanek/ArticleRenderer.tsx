@@ -21,6 +21,7 @@ import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import HtmlEmbed from '@/components/clanek/HtmlEmbed';
+import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import type { Article } from '@repo/ui/lib/getArticles';
@@ -370,6 +371,11 @@ export function ArticleRenderer({
       const htmlEmbedData = (mdxSource.scope as any)?.htmlEmbedData as Record<string, string> | undefined;
       const htmlContent = file ? htmlEmbedData?.[file] : undefined;
       return <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+    },
+
+    AttendanceSwarm: ({ dataFile, title, subtitle, source }: { dataFile?: string; title?: string; subtitle?: string; source?: string }) => {
+      const attendanceSwarmData = (mdxSource.scope as any)?.attendanceSwarmData as Record<string, any[]> | undefined;
+      return <AttendanceSwarm attendanceSwarmData={attendanceSwarmData} dataFile={dataFile} title={title} subtitle={subtitle} source={source} />;
     },
 
   };

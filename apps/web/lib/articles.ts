@@ -151,6 +151,20 @@ export async function getArticleBySlug(directorySlug: string) {
     styledTableData[csvFile] = parseCsv(csvContent);
   }
 
+  // Find and load data for AttendanceSwarm components (JSON files)
+  const attendanceSwarmData: Record<string, any[]> = {};
+  const swarmRegex = /<AttendanceSwarm[^>]*dataFile="([^"]+)"[^>]*\/?>/g;
+  let swarmMatch: RegExpExecArray | null;
+  while ((swarmMatch = swarmRegex.exec(content)) !== null) {
+    const dataFile = swarmMatch[1];
+    if (!dataFile || attendanceSwarmData[dataFile]) continue;
+    const filePath = path.join(articleDir, dataFile);
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`AttendanceSwarm dataFile not found: ${directorySlug}/${dataFile}`);
+    }
+    attendanceSwarmData[dataFile] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  }
+
   // Find and load HTML files for HtmlEmbed components (supports multiple instances)
   const htmlEmbedData: Record<string, string> = {};
   const htmlEmbedRegex = /<HtmlEmbed[^>]*file="([^"]+)"[^>]*\/?>/g;
@@ -201,6 +215,7 @@ export async function getArticleBySlug(directorySlug: string) {
       keyNumbersData: keyNumbersData,
       styledTableData: styledTableData,
       htmlEmbedData: htmlEmbedData,
+      attendanceSwarmData: attendanceSwarmData,
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {

@@ -1,0 +1,1942 @@
+[
+  {
+    "id": "7068",
+    "label": "Jana Demjanová",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 24,
+    "absent": 0,
+    "unknown": 7,
+    "extra": "Petiční výbor, Rozpočtový výbor, Ústavně-právní výbor"
+  },
+  {
+    "id": "6730",
+    "label": "Lubomír Wenzl",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 24,
+    "absent": 0,
+    "unknown": 5,
+    "extra": "Rozpočtový výbor, Výbor pro obranu"
+  },
+  {
+    "id": "7051",
+    "label": "Vendula Svobodová",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 22,
+    "absent": 0,
+    "unknown": 5,
+    "extra": "Petiční výbor, Rozpočtový výbor"
+  },
+  {
+    "id": "6993",
+    "label": "Jiří Bouška",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 19,
+    "absent": 0,
+    "unknown": 5,
+    "extra": "Rozpočtový výbor, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6782",
+    "label": "Drahoslav Ryba",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 19,
+    "absent": 0,
+    "unknown": 5,
+    "extra": "Rozpočtový výbor, Výbor pro bezpečnost, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "7021",
+    "label": "Martin Kupec",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 17,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Hospodářský výbor, Ústavně-právní výbor"
+  },
+  {
+    "id": "6520",
+    "label": "Pavel Růžička",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 16,
+    "absent": 0,
+    "unknown": 2,
+    "extra": "Výbor pro bezpečnost, Výbor pro obranu"
+  },
+  {
+    "id": "7061",
+    "label": "Ester Weimerová",
+    "group": "STAN",
+    "value": 1.0,
+    "present": 16,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Petiční výbor, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "7014",
+    "label": "Petr Kowanda",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 15,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7029",
+    "label": "Pavel Outrata",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 15,
+    "absent": 0,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7032",
+    "label": "Jana Patková",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 15,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Rozpočtový výbor"
+  },
+  {
+    "id": "7058",
+    "label": "Libor Vondráček",
+    "group": "SPD",
+    "value": 1.0,
+    "present": 15,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Ústavně-právní výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "7001",
+    "label": "Tomáš Doležal",
+    "group": "SPD",
+    "value": 1.0,
+    "present": 14,
+    "absent": 0,
+    "unknown": 5,
+    "extra": "Kontrolní výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6459",
+    "label": "Jakub Janda",
+    "group": "ODS",
+    "value": 1.0,
+    "present": 14,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Kontrolní výbor, Petiční výbor"
+  },
+  {
+    "id": "7015",
+    "label": "Jakub Krainer",
+    "group": "STAN",
+    "value": 1.0,
+    "present": 14,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Kontrolní výbor, Výbor pro bezpečnost"
+  },
+  {
+    "id": "6409",
+    "label": "František Petrtýl",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 14,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Petiční výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "7013",
+    "label": "Veronika Kovářová",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 13,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Hospodářský výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6168",
+    "label": "Helena Válková",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 13,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Petiční výbor, Ústavně-právní výbor"
+  },
+  {
+    "id": "6992",
+    "label": "Zdeňka Blišťanová",
+    "group": "TOP09",
+    "value": 1.0,
+    "present": 12,
+    "absent": 0,
+    "unknown": 6,
+    "extra": "Výbor pro sociální politiku, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6466",
+    "label": "Jana Krutáková",
+    "group": "STAN",
+    "value": 1.0,
+    "present": 12,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Výbor pro životní prostředí, Zemědělský výbor"
+  },
+  {
+    "id": "7065",
+    "label": "Martin Šmída",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 12,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Výbor pro životní prostředí, Zemědělský výbor"
+  },
+  {
+    "id": "6254",
+    "label": "Věra Adámková",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 11,
+    "absent": 0,
+    "unknown": 5,
+    "extra": "Výbor pro sociální politiku, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6457",
+    "label": "Eva Fialová",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 11,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6484",
+    "label": "David Štolpa",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 11,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj, Výbor pro životní prostředí"
+  },
+  {
+    "id": "7064",
+    "label": "Miroslav Žbánek",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 11,
+    "absent": 0,
+    "unknown": 3,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj, Výbor pro životní prostředí"
+  },
+  {
+    "id": "7007",
+    "label": "Monika Hubíková",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 10,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Výbor pro životní prostředí"
+  },
+  {
+    "id": "7052",
+    "label": "František Talíř",
+    "group": "KDU-ČSL",
+    "value": 1.0,
+    "present": 10,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6433",
+    "label": "Ivan Bartoš",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 9,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Výbor pro obranu"
+  },
+  {
+    "id": "6997",
+    "label": "Adriana Chochelová",
+    "group": "STAN",
+    "value": 1.0,
+    "present": 9,
+    "absent": 0,
+    "unknown": 2,
+    "extra": "Ústavně-právní výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "6722",
+    "label": "Jan Berki",
+    "group": "STAN",
+    "value": 1.0,
+    "present": 8,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Hospodářský výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7046",
+    "label": "Eva Šrámková",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 8,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6508",
+    "label": "Radek Koten",
+    "group": "SPD",
+    "value": 1.0,
+    "present": 7,
+    "absent": 0,
+    "unknown": 1,
+    "extra": "Výbor pro bezpečnost"
+  },
+  {
+    "id": "7002",
+    "label": "Karel Dvořák",
+    "group": "STAN",
+    "value": 1.0,
+    "present": 6,
+    "absent": 0,
+    "unknown": 2,
+    "extra": "Ústavně-právní výbor"
+  },
+  {
+    "id": "6751",
+    "label": "Karel Haas",
+    "group": "ODS",
+    "value": 1.0,
+    "present": 6,
+    "absent": 0,
+    "unknown": 2,
+    "extra": "Ústavně-právní výbor"
+  },
+  {
+    "id": "7035",
+    "label": "Barbora Pipášová",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 6,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "6986",
+    "label": "Hana Ančincová",
+    "group": "Piráti",
+    "value": 1.0,
+    "present": 5,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku"
+  },
+  {
+    "id": "6545",
+    "label": "Alena Schillerová",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 5,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Rozpočtový výbor"
+  },
+  {
+    "id": "6479",
+    "label": "Lucie Šafránková",
+    "group": "SPD",
+    "value": 1.0,
+    "present": 5,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku"
+  },
+  {
+    "id": "6205",
+    "label": "Marian Jurečka",
+    "group": "KDU-ČSL",
+    "value": 1.0,
+    "present": 3,
+    "absent": 0,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku"
+  },
+  {
+    "id": "7106",
+    "label": "Libor Forman",
+    "group": "MS",
+    "value": 1.0,
+    "present": 2,
+    "absent": 0,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro obranu"
+  },
+  {
+    "id": "7040",
+    "label": "Zuzana Mrázová",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 2,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6491",
+    "label": "Adam Vojtěch",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 2,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6463",
+    "label": "Aleš Juchelka",
+    "group": "ANO2011",
+    "value": 1.0,
+    "present": 1,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro sociální politiku"
+  },
+  {
+    "id": "5512",
+    "label": "Boris Šťastný",
+    "group": "MS",
+    "value": 1.0,
+    "present": 1,
+    "absent": 0,
+    "unknown": 0,
+    "extra": "Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6687",
+    "label": "Jan Jakob",
+    "group": "TOP09",
+    "value": 0.958,
+    "present": 23,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Rozpočtový výbor, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "6688",
+    "label": "Miroslav Samaš",
+    "group": "ANO2011",
+    "value": 0.958,
+    "present": 23,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Rozpočtový výbor, Výbor pro obranu"
+  },
+  {
+    "id": "6455",
+    "label": "Jan Hrnčíř",
+    "group": "SPD",
+    "value": 0.955,
+    "present": 21,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Petiční výbor, Rozpočtový výbor"
+  },
+  {
+    "id": "7017",
+    "label": "Vojtěch Krňanský",
+    "group": "MS",
+    "value": 0.955,
+    "present": 21,
+    "absent": 1,
+    "unknown": 6,
+    "extra": "Rozpočtový výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "7034",
+    "label": "Vladimír Pikora",
+    "group": "MS",
+    "value": 0.95,
+    "present": 19,
+    "absent": 1,
+    "unknown": 8,
+    "extra": "Rozpočtový výbor, Výbor pro sociální politiku"
+  },
+  {
+    "id": "6475",
+    "label": "Monika Oborná",
+    "group": "ANO2011",
+    "value": 0.947,
+    "present": 18,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Hospodářský výbor, Zemědělský výbor"
+  },
+  {
+    "id": "6756",
+    "label": "Tomáš Helebrant",
+    "group": "ANO2011",
+    "value": 0.944,
+    "present": 17,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "7033",
+    "label": "Jiří Svoboda",
+    "group": "ANO2011",
+    "value": 0.944,
+    "present": 17,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Hospodářský výbor, Kontrolní výbor"
+  },
+  {
+    "id": "6991",
+    "label": "Drahomír Blažej",
+    "group": "ANO2011",
+    "value": 0.941,
+    "present": 16,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro obranu, Zahraniční výbor"
+  },
+  {
+    "id": "7000",
+    "label": "Denis Doksanský",
+    "group": "ANO2011",
+    "value": 0.941,
+    "present": 16,
+    "absent": 1,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Zahraniční výbor"
+  },
+  {
+    "id": "7016",
+    "label": "Miroslav Krejčí",
+    "group": "MS",
+    "value": 0.941,
+    "present": 16,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Hospodářský výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7012",
+    "label": "Vladimír Kolek",
+    "group": "ANO2011",
+    "value": 0.938,
+    "present": 15,
+    "absent": 1,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro obranu, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "7018",
+    "label": "Marie Kršková",
+    "group": "KDU-ČSL",
+    "value": 0.938,
+    "present": 15,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6533",
+    "label": "Marek Novák",
+    "group": "ANO2011",
+    "value": 0.938,
+    "present": 15,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Hospodářský výbor, Výbor pro sociální politiku"
+  },
+  {
+    "id": "7038",
+    "label": "Barbora Rázga",
+    "group": "ANO2011",
+    "value": 0.938,
+    "present": 15,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6246",
+    "label": "Josef Kott",
+    "group": "ANO2011",
+    "value": 0.933,
+    "present": 14,
+    "absent": 1,
+    "unknown": 3,
+    "extra": "Kontrolní výbor, Zemědělský výbor"
+  },
+  {
+    "id": "6534",
+    "label": "Jiří Mašek",
+    "group": "ANO2011",
+    "value": 0.933,
+    "present": 14,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro bezpečnost, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6732",
+    "label": "Ivana Mádlová",
+    "group": "ANO2011",
+    "value": 0.933,
+    "present": 14,
+    "absent": 1,
+    "unknown": 3,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6506",
+    "label": "Tomáš Kohoutek",
+    "group": "ANO2011",
+    "value": 0.929,
+    "present": 13,
+    "absent": 1,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Zahraniční výbor"
+  },
+  {
+    "id": "7036",
+    "label": "Václav Pláteník",
+    "group": "KDU-ČSL",
+    "value": 0.929,
+    "present": 13,
+    "absent": 1,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7053",
+    "label": "Václav Trojan",
+    "group": "ANO2011",
+    "value": 0.929,
+    "present": 13,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro zdravotnictví, Zemědělský výbor"
+  },
+  {
+    "id": "6490",
+    "label": "Petr Vrána",
+    "group": "ANO2011",
+    "value": 0.929,
+    "present": 13,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Kontrolní výbor, Petiční výbor"
+  },
+  {
+    "id": "6623",
+    "label": "Ondřej Babka",
+    "group": "ANO2011",
+    "value": 0.923,
+    "present": 12,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6995",
+    "label": "František Bureš",
+    "group": "ANO2011",
+    "value": 0.923,
+    "present": 12,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Ústavně-právní výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6431",
+    "label": "Lenka Dražilová",
+    "group": "ANO2011",
+    "value": 0.923,
+    "present": 12,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Výbor pro sociální politiku, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6201",
+    "label": "Miloslav Janulík",
+    "group": "ANO2011",
+    "value": 0.923,
+    "present": 12,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Výbor pro sociální politiku, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7066",
+    "label": "Vlastimil Hebr",
+    "group": "ANO2011",
+    "value": 0.917,
+    "present": 22,
+    "absent": 2,
+    "unknown": 6,
+    "extra": "Rozpočtový výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "346",
+    "label": "Petr Bendl",
+    "group": "ODS",
+    "value": 0.917,
+    "present": 11,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro životní prostředí, Zemědělský výbor"
+  },
+  {
+    "id": "6770",
+    "label": "Renata Oulehlová",
+    "group": "ANO2011",
+    "value": 0.917,
+    "present": 11,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Petiční výbor, Výbor pro sociální politiku"
+  },
+  {
+    "id": "6783",
+    "label": "Jan Síla",
+    "group": "SPD",
+    "value": 0.917,
+    "present": 11,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro zdravotnictví, Výbor pro životní prostředí"
+  },
+  {
+    "id": "5903",
+    "label": "Jana Černochová",
+    "group": "ODS",
+    "value": 0.917,
+    "present": 11,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro bezpečnost, Výbor pro obranu"
+  },
+  {
+    "id": "6214",
+    "label": "Věra Kovářová",
+    "group": "STAN",
+    "value": 0.909,
+    "present": 20,
+    "absent": 2,
+    "unknown": 6,
+    "extra": "Rozpočtový výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "7056",
+    "label": "Jitka Volfová",
+    "group": "ANO2011",
+    "value": 0.909,
+    "present": 20,
+    "absent": 2,
+    "unknown": 6,
+    "extra": "Rozpočtový výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "5459",
+    "label": "Radim Fiala",
+    "group": "SPD",
+    "value": 0.909,
+    "present": 10,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Hospodářský výbor"
+  },
+  {
+    "id": "7005",
+    "label": "Karin Gajdová",
+    "group": "ANO2011",
+    "value": 0.909,
+    "present": 10,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "6211",
+    "label": "Martin Kolovratník",
+    "group": "ANO2011",
+    "value": 0.9,
+    "present": 18,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Hospodářský výbor, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "6215",
+    "label": "Roman Kubíček",
+    "group": "ANO2011",
+    "value": 0.9,
+    "present": 18,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro obranu"
+  },
+  {
+    "id": "7067",
+    "label": "Jiří Penc",
+    "group": "ANO2011",
+    "value": 0.9,
+    "present": 18,
+    "absent": 2,
+    "unknown": 5,
+    "extra": "Kontrolní výbor, Petiční výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6758",
+    "label": "Igor Hendrych",
+    "group": "ANO2011",
+    "value": 0.9,
+    "present": 9,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Výbor pro bezpečnost, Výbor pro sociální politiku"
+  },
+  {
+    "id": "6996",
+    "label": "Igor Červený",
+    "group": "MS",
+    "value": 0.9,
+    "present": 9,
+    "absent": 1,
+    "unknown": 0,
+    "extra": "Hospodářský výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6185",
+    "label": "Milan Brázdil",
+    "group": "ANO2011",
+    "value": 0.889,
+    "present": 16,
+    "absent": 2,
+    "unknown": 5,
+    "extra": "Rozpočtový výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7024",
+    "label": "Michaela Moricová",
+    "group": "Piráti",
+    "value": 0.889,
+    "present": 8,
+    "absent": 1,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "7027",
+    "label": "Irena Němcová",
+    "group": "SPD",
+    "value": 0.889,
+    "present": 8,
+    "absent": 1,
+    "unknown": 5,
+    "extra": "Výbor pro sociální politiku, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6555",
+    "label": "Tom Philipp",
+    "group": "KDU-ČSL",
+    "value": 0.889,
+    "present": 8,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6763",
+    "label": "Michaela Šebelová",
+    "group": "STAN",
+    "value": 0.889,
+    "present": 8,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7031",
+    "label": "Patrik Pařil",
+    "group": "ANO2011",
+    "value": 0.885,
+    "present": 23,
+    "absent": 3,
+    "unknown": 5,
+    "extra": "Hospodářský výbor, Rozpočtový výbor"
+  },
+  {
+    "id": "6474",
+    "label": "Zuzana Ožanová",
+    "group": "ANO2011",
+    "value": 0.882,
+    "present": 15,
+    "absent": 2,
+    "unknown": 3,
+    "extra": "Hospodářský výbor, Ústavně-právní výbor"
+  },
+  {
+    "id": "6523",
+    "label": "Michal Ratiborský",
+    "group": "ANO2011",
+    "value": 0.882,
+    "present": 15,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro obranu, Zahraniční výbor"
+  },
+  {
+    "id": "7045",
+    "label": "Petr Sokol",
+    "group": "ODS",
+    "value": 0.882,
+    "present": 15,
+    "absent": 2,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Zahraniční výbor"
+  },
+  {
+    "id": "7025",
+    "label": "Jana Murová",
+    "group": "ANO2011",
+    "value": 0.875,
+    "present": 21,
+    "absent": 3,
+    "unknown": 6,
+    "extra": "Rozpočtový výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "6743",
+    "label": "Robert Stržínek",
+    "group": "ANO2011",
+    "value": 0.875,
+    "present": 14,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6447",
+    "label": "Kamal Farhan",
+    "group": "ANO2011",
+    "value": 0.875,
+    "present": 7,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6209",
+    "label": "David Kasal",
+    "group": "ANO2011",
+    "value": 0.875,
+    "present": 7,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6988",
+    "label": "Pavel Bartoň",
+    "group": "ANO2011",
+    "value": 0.867,
+    "present": 13,
+    "absent": 2,
+    "unknown": 0,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "6989",
+    "label": "Lucie Bartošová",
+    "group": "ODS",
+    "value": 0.867,
+    "present": 13,
+    "absent": 2,
+    "unknown": 0,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7028",
+    "label": "Bohuslav Niemiec",
+    "group": "KDU-ČSL",
+    "value": 0.867,
+    "present": 13,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6769",
+    "label": "Hayato Okamura",
+    "group": "KDU-ČSL",
+    "value": 0.867,
+    "present": 13,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Petiční výbor, Zahraniční výbor"
+  },
+  {
+    "id": "7042",
+    "label": "Lucie Sedmihradská",
+    "group": "STAN",
+    "value": 0.864,
+    "present": 19,
+    "absent": 3,
+    "unknown": 7,
+    "extra": "Kontrolní výbor, Rozpočtový výbor"
+  },
+  {
+    "id": "6451",
+    "label": "Stanislav Fridrich",
+    "group": "ANO2011",
+    "value": 0.857,
+    "present": 12,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Zahraniční výbor, Zemědělský výbor"
+  },
+  {
+    "id": "6473",
+    "label": "Olga Richterová",
+    "group": "Piráti",
+    "value": 0.857,
+    "present": 12,
+    "absent": 2,
+    "unknown": 5,
+    "extra": "Kontrolní výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6518",
+    "label": "Petr Sadovský",
+    "group": "ANO2011",
+    "value": 0.857,
+    "present": 12,
+    "absent": 2,
+    "unknown": 4,
+    "extra": "Kontrolní výbor, Výbor pro bezpečnost"
+  },
+  {
+    "id": "6165",
+    "label": "Radek Vondráček",
+    "group": "ANO2011",
+    "value": 0.857,
+    "present": 12,
+    "absent": 2,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Zahraniční výbor"
+  },
+  {
+    "id": "6994",
+    "label": "Monika Brzesková",
+    "group": "KDU-ČSL",
+    "value": 0.857,
+    "present": 6,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro sociální politiku"
+  },
+  {
+    "id": "6509",
+    "label": "Robert Králíček",
+    "group": "ANO2011",
+    "value": 0.857,
+    "present": 6,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro bezpečnost"
+  },
+  {
+    "id": "6767",
+    "label": "Michaela Opltová",
+    "group": "STAN",
+    "value": 0.857,
+    "present": 6,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro bezpečnost"
+  },
+  {
+    "id": "6796",
+    "label": "Michal Zuna",
+    "group": "TOP09",
+    "value": 0.857,
+    "present": 6,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro bezpečnost"
+  },
+  {
+    "id": "5943",
+    "label": "Helena Langšádlová",
+    "group": "TOP09",
+    "value": 0.846,
+    "present": 11,
+    "absent": 2,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6225",
+    "label": "Jana Pastuchová",
+    "group": "ANO2011",
+    "value": 0.846,
+    "present": 11,
+    "absent": 2,
+    "unknown": 5,
+    "extra": "Výbor pro sociální politiku, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6500",
+    "label": "Jan Richter",
+    "group": "ANO2011",
+    "value": 0.846,
+    "present": 11,
+    "absent": 2,
+    "unknown": 3,
+    "extra": "Kontrolní výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "6154",
+    "label": "Marek Ženíšek",
+    "group": "TOP09",
+    "value": 0.846,
+    "present": 11,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Výbor pro obranu, Zahraniční výbor"
+  },
+  {
+    "id": "6216",
+    "label": "Michal Kučera",
+    "group": "TOP09",
+    "value": 0.842,
+    "present": 16,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Hospodářský výbor, Zemědělský výbor"
+  },
+  {
+    "id": "6786",
+    "label": "Róbert Teleky",
+    "group": "KDU-ČSL",
+    "value": 0.842,
+    "present": 16,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7060",
+    "label": "Otto Vopěnka",
+    "group": "ANO2011",
+    "value": 0.833,
+    "present": 15,
+    "absent": 3,
+    "unknown": 5,
+    "extra": "Kontrolní výbor, Petiční výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "6527",
+    "label": "David Pražák",
+    "group": "ANO2011",
+    "value": 0.833,
+    "present": 10,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Výbor pro životní prostředí, Zemědělský výbor"
+  },
+  {
+    "id": "7039",
+    "label": "Vítězslav Schrek",
+    "group": "ODS",
+    "value": 0.833,
+    "present": 10,
+    "absent": 2,
+    "unknown": 6,
+    "extra": "Výbor pro sociální politiku, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "7043",
+    "label": "Štěpán Slovák",
+    "group": "ODS",
+    "value": 0.833,
+    "present": 10,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7049",
+    "label": "Gabriela Svárovská",
+    "group": "Piráti",
+    "value": 0.833,
+    "present": 10,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro životní prostředí, Zahraniční výbor"
+  },
+  {
+    "id": "7057",
+    "label": "Samuel Volpe",
+    "group": "Piráti",
+    "value": 0.833,
+    "present": 10,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Hospodářský výbor, Výbor pro bezpečnost"
+  },
+  {
+    "id": "6549",
+    "label": "Robert Plaga",
+    "group": "ANO2011",
+    "value": 0.833,
+    "present": 5,
+    "absent": 1,
+    "unknown": 0,
+    "extra": "Rozpočtový výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7004",
+    "label": "Jana Filipovičová",
+    "group": "KDU-ČSL",
+    "value": 0.824,
+    "present": 14,
+    "absent": 3,
+    "unknown": 4,
+    "extra": "Rozpočtový výbor, Výbor pro sociální politiku"
+  },
+  {
+    "id": "6750",
+    "label": "Josef Flek",
+    "group": "STAN",
+    "value": 0.824,
+    "present": 14,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Výbor pro obranu, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6240",
+    "label": "Karel Tureček",
+    "group": "ANO2011",
+    "value": 0.824,
+    "present": 14,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti, Zemědělský výbor"
+  },
+  {
+    "id": "7030",
+    "label": "Jan Papajanovský",
+    "group": "STAN",
+    "value": 0.818,
+    "present": 18,
+    "absent": 4,
+    "unknown": 6,
+    "extra": "Rozpočtový výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6946",
+    "label": "Josef Váňa",
+    "group": "ANO2011",
+    "value": 0.818,
+    "present": 18,
+    "absent": 4,
+    "unknown": 4,
+    "extra": "Kontrolní výbor, Petiční výbor, Zemědělský výbor"
+  },
+  {
+    "id": "6753",
+    "label": "Jana Hanzlíková",
+    "group": "ANO2011",
+    "value": 0.818,
+    "present": 9,
+    "absent": 2,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "5379",
+    "label": "Jan Bauer",
+    "group": "ODS",
+    "value": 0.813,
+    "present": 13,
+    "absent": 3,
+    "unknown": 5,
+    "extra": "Hospodářský výbor, Výbor pro sociální politiku"
+  },
+  {
+    "id": "5226",
+    "label": "Pavel Žáček",
+    "group": "ODS",
+    "value": 0.813,
+    "present": 13,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Výbor pro bezpečnost, Výbor pro obranu"
+  },
+  {
+    "id": "6998",
+    "label": "Benjamin Činčila",
+    "group": "KDU-ČSL",
+    "value": 0.808,
+    "present": 21,
+    "absent": 5,
+    "unknown": 5,
+    "extra": "Hospodářský výbor, Rozpočtový výbor"
+  },
+  {
+    "id": "6755",
+    "label": "Jiří Havránek",
+    "group": "ODS",
+    "value": 0.8,
+    "present": 16,
+    "absent": 4,
+    "unknown": 8,
+    "extra": "Rozpočtový výbor, Výbor pro sociální politiku"
+  },
+  {
+    "id": "5700",
+    "label": "Ivan Adamec",
+    "group": "ODS",
+    "value": 0.8,
+    "present": 12,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6905",
+    "label": "Andrea Hoffmannová",
+    "group": "Piráti",
+    "value": 0.8,
+    "present": 12,
+    "absent": 3,
+    "unknown": 0,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "6486",
+    "label": "Vojtěch Munzar",
+    "group": "ODS",
+    "value": 0.8,
+    "present": 12,
+    "absent": 3,
+    "unknown": 4,
+    "extra": "Rozpočtový výbor"
+  },
+  {
+    "id": "6745",
+    "label": "Marie Pošarová",
+    "group": "SPD",
+    "value": 0.8,
+    "present": 12,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj, Zemědělský výbor"
+  },
+  {
+    "id": "6787",
+    "label": "Libor Turek",
+    "group": "ODS",
+    "value": 0.8,
+    "present": 12,
+    "absent": 3,
+    "unknown": 4,
+    "extra": "Rozpočtový výbor"
+  },
+  {
+    "id": "6789",
+    "label": "Lukáš Vlček",
+    "group": "STAN",
+    "value": 0.8,
+    "present": 12,
+    "absent": 3,
+    "unknown": 3,
+    "extra": "Hospodářský výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "7006",
+    "label": "Matěj Gregor",
+    "group": "MS",
+    "value": 0.8,
+    "present": 8,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Výbor pro životní prostředí"
+  },
+  {
+    "id": "7009",
+    "label": "Jiřina Klčová",
+    "group": "ANO2011",
+    "value": 0.8,
+    "present": 8,
+    "absent": 2,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Výbor pro životní prostředí"
+  },
+  {
+    "id": "7023",
+    "label": "Lenka Martínková Španihelová",
+    "group": "Piráti",
+    "value": 0.8,
+    "present": 4,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku"
+  },
+  {
+    "id": "6766",
+    "label": "Eliška Olšáková",
+    "group": "STAN",
+    "value": 0.8,
+    "present": 4,
+    "absent": 1,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku"
+  },
+  {
+    "id": "6515",
+    "label": "Jiří Strýček",
+    "group": "ANO2011",
+    "value": 0.79,
+    "present": 15,
+    "absent": 4,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Zahraniční výbor"
+  },
+  {
+    "id": "6435",
+    "label": "Martin Baxa",
+    "group": "ODS",
+    "value": 0.786,
+    "present": 11,
+    "absent": 3,
+    "unknown": 3,
+    "extra": "Kontrolní výbor, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "6999",
+    "label": "Katerina Demetrashvili",
+    "group": "Piráti",
+    "value": 0.786,
+    "present": 11,
+    "absent": 3,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Zahraniční výbor"
+  },
+  {
+    "id": "6468",
+    "label": "Taťána Malá",
+    "group": "ANO2011",
+    "value": 0.786,
+    "present": 11,
+    "absent": 3,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7041",
+    "label": "Gabriela Sedláčková",
+    "group": "MS",
+    "value": 0.783,
+    "present": 18,
+    "absent": 5,
+    "unknown": 2,
+    "extra": "Petiční výbor, Výbor pro bezpečnost, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "7003",
+    "label": "Irena Ferčíková Konečná",
+    "group": "Piráti",
+    "value": 0.778,
+    "present": 7,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "7062",
+    "label": "Martin Záhoř",
+    "group": "ANO2011",
+    "value": 0.769,
+    "present": 20,
+    "absent": 6,
+    "unknown": 5,
+    "extra": "Hospodářský výbor, Rozpočtový výbor"
+  },
+  {
+    "id": "6754",
+    "label": "Matěj Ondřej Havel",
+    "group": "TOP09",
+    "value": 0.769,
+    "present": 10,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Petiční výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7044",
+    "label": "Julie Smejkalová",
+    "group": "STAN",
+    "value": 0.769,
+    "present": 10,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Petiční výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7037",
+    "label": "Jindřich Rajchl",
+    "group": "SPD",
+    "value": 0.765,
+    "present": 13,
+    "absent": 4,
+    "unknown": 2,
+    "extra": "Výbor pro obranu, Zahraniční výbor"
+  },
+  {
+    "id": "6738",
+    "label": "Hubert Lang",
+    "group": "ANO2011",
+    "value": 0.75,
+    "present": 9,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Výbor pro bezpečnost, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "7055",
+    "label": "Jiří Vojáček",
+    "group": "KDU-ČSL",
+    "value": 0.75,
+    "present": 9,
+    "absent": 3,
+    "unknown": 4,
+    "extra": "Kontrolní výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "5899",
+    "label": "Jan Bureš",
+    "group": "ODS",
+    "value": 0.75,
+    "present": 3,
+    "absent": 1,
+    "unknown": 1,
+    "extra": "Výbor pro životní prostředí"
+  },
+  {
+    "id": "6552",
+    "label": "Zdeněk Hřib",
+    "group": "Piráti",
+    "value": 0.737,
+    "present": 14,
+    "absent": 5,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6990",
+    "label": "Karel Beran",
+    "group": "MS",
+    "value": 0.733,
+    "present": 11,
+    "absent": 4,
+    "unknown": 0,
+    "extra": "Výbor pro obranu, Zahraniční výbor, Zemědělský výbor"
+  },
+  {
+    "id": "6780",
+    "label": "Berenika Peštová",
+    "group": "ANO2011",
+    "value": 0.733,
+    "present": 11,
+    "absent": 4,
+    "unknown": 2,
+    "extra": "Hospodářský výbor, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6803",
+    "label": "Jiří Horák",
+    "group": "KDU-ČSL",
+    "value": 0.727,
+    "present": 8,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Výbor pro obranu, Zemědělský výbor"
+  },
+  {
+    "id": "6513",
+    "label": "Marek Výborný",
+    "group": "KDU-ČSL",
+    "value": 0.727,
+    "present": 8,
+    "absent": 3,
+    "unknown": 0,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Zemědělský výbor"
+  },
+  {
+    "id": "7011",
+    "label": "Matěj Hlavatý",
+    "group": "STAN",
+    "value": 0.722,
+    "present": 13,
+    "absent": 5,
+    "unknown": 1,
+    "extra": "Výbor pro mediální záležitosti, Výbor pro obranu"
+  },
+  {
+    "id": "6064",
+    "label": "Miroslav Ševčík",
+    "group": "SPD",
+    "value": 0.714,
+    "present": 15,
+    "absent": 6,
+    "unknown": 4,
+    "extra": "Rozpočtový výbor, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "4",
+    "label": "Marek Benda",
+    "group": "ODS",
+    "value": 0.714,
+    "present": 10,
+    "absent": 4,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Zahraniční výbor"
+  },
+  {
+    "id": "6723",
+    "label": "Jana Berkovcová",
+    "group": "ANO2011",
+    "value": 0.714,
+    "present": 10,
+    "absent": 4,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Zahraniční výbor"
+  },
+  {
+    "id": "6693",
+    "label": "Libor Hoppe",
+    "group": "ODS",
+    "value": 0.714,
+    "present": 5,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6603",
+    "label": "Pavel Karpíšek",
+    "group": "ODS",
+    "value": 0.714,
+    "present": 5,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6881",
+    "label": "Petr Hladík",
+    "group": "KDU-ČSL",
+    "value": 0.7,
+    "present": 7,
+    "absent": 3,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro životní prostředí"
+  },
+  {
+    "id": "7008",
+    "label": "Zdena Kašparová",
+    "group": "STAN",
+    "value": 0.7,
+    "present": 7,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport, Výbor pro životní prostředí"
+  },
+  {
+    "id": "6537",
+    "label": "Jan Lipavský",
+    "group": "ODS",
+    "value": 0.692,
+    "present": 9,
+    "absent": 4,
+    "unknown": 2,
+    "extra": "Výbor pro evropské záležitosti, Zahraniční výbor"
+  },
+  {
+    "id": "6762",
+    "label": "Pavla Pivoňka Vaňková",
+    "group": "STAN",
+    "value": 0.692,
+    "present": 9,
+    "absent": 4,
+    "unknown": 4,
+    "extra": "Výbor pro sociální politiku, Zemědělský výbor"
+  },
+  {
+    "id": "5911",
+    "label": "Jaroslav Foldyna",
+    "group": "SPD",
+    "value": 0.684,
+    "present": 13,
+    "absent": 6,
+    "unknown": 1,
+    "extra": "Hospodářský výbor, Výbor pro mediální záležitosti"
+  },
+  {
+    "id": "7054",
+    "label": "Renata Vesecká",
+    "group": "MS",
+    "value": 0.667,
+    "present": 8,
+    "absent": 4,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6538",
+    "label": "Martin Kupka",
+    "group": "ODS",
+    "value": 0.667,
+    "present": 6,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Hospodářský výbor"
+  },
+  {
+    "id": "7048",
+    "label": "Kateřina Stojanová",
+    "group": "Piráti",
+    "value": 0.667,
+    "present": 4,
+    "absent": 2,
+    "unknown": 2,
+    "extra": "Ústavně-právní výbor"
+  },
+  {
+    "id": "7026",
+    "label": "Anežka Nedomová",
+    "group": "STAN",
+    "value": 0.647,
+    "present": 11,
+    "absent": 6,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Zahraniční výbor"
+  },
+  {
+    "id": "6719",
+    "label": "Jana Bačíková",
+    "group": "ODS",
+    "value": 0.625,
+    "present": 5,
+    "absent": 3,
+    "unknown": 0,
+    "extra": "Zemědělský výbor"
+  },
+  {
+    "id": "6190",
+    "label": "Jaroslav Faltýnek",
+    "group": "ANO2011",
+    "value": 0.625,
+    "present": 5,
+    "absent": 3,
+    "unknown": 0,
+    "extra": "Zemědělský výbor"
+  },
+  {
+    "id": "6804",
+    "label": "Zdenka Němečková Crkvenjaš",
+    "group": "ODS",
+    "value": 0.625,
+    "present": 5,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6467",
+    "label": "Zuzana Majerová",
+    "group": "SPD",
+    "value": 0.6,
+    "present": 9,
+    "absent": 6,
+    "unknown": 1,
+    "extra": "Výbor pro evropské záležitosti, Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "6074",
+    "label": "Petr Fiala",
+    "group": "ODS",
+    "value": 0.6,
+    "present": 3,
+    "absent": 2,
+    "unknown": 0,
+    "extra": "Výbor pro vědu, vzdělávání, mládež a sport"
+  },
+  {
+    "id": "5273",
+    "label": "Jiří Pospíšil",
+    "group": "TOP09",
+    "value": 0.583,
+    "present": 7,
+    "absent": 5,
+    "unknown": 5,
+    "extra": "Kontrolní výbor, Ústavně-právní výbor"
+  },
+  {
+    "id": "6793",
+    "label": "Renáta Zajíčková",
+    "group": "ODS",
+    "value": 0.571,
+    "present": 12,
+    "absent": 9,
+    "unknown": 2,
+    "extra": "Petiční výbor, Výbor pro vědu, vzdělávání, mládež a sport, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "6788",
+    "label": "Barbora Urbanová",
+    "group": "STAN",
+    "value": 0.571,
+    "present": 8,
+    "absent": 6,
+    "unknown": 2,
+    "extra": "Ústavně-právní výbor, Zahraniční výbor"
+  },
+  {
+    "id": "6178",
+    "label": "Jan Bartošek",
+    "group": "KDU-ČSL",
+    "value": 0.571,
+    "present": 4,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Výbor pro bezpečnost"
+  },
+  {
+    "id": "7050",
+    "label": "Jan Sviták",
+    "group": "STAN",
+    "value": 0.546,
+    "present": 6,
+    "absent": 5,
+    "unknown": 1,
+    "extra": "Hospodářský výbor"
+  },
+  {
+    "id": "7059",
+    "label": "Filip Turek",
+    "group": "MS",
+    "value": 0.529,
+    "present": 9,
+    "absent": 8,
+    "unknown": 3,
+    "extra": "Výbor pro evropské záležitosti, Zahraniční výbor"
+  },
+  {
+    "id": "6727",
+    "label": "Eva Decroix",
+    "group": "ODS",
+    "value": 0.5,
+    "present": 4,
+    "absent": 4,
+    "unknown": 3,
+    "extra": "Ústavně-právní výbor, Výbor pro evropské záležitosti"
+  },
+  {
+    "id": "6172",
+    "label": "Ladislav Okleštěk",
+    "group": "ANO2011",
+    "value": 0.5,
+    "present": 3,
+    "absent": 3,
+    "unknown": 2,
+    "extra": "Rozpočtový výbor, Výbor pro veřejnou správu a regionální rozvoj"
+  },
+  {
+    "id": "6482",
+    "label": "Vlastimil Válek",
+    "group": "TOP09",
+    "value": 0.5,
+    "present": 3,
+    "absent": 3,
+    "unknown": 1,
+    "extra": "Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7022",
+    "label": "Petr Macinka",
+    "group": "MS",
+    "value": 0.5,
+    "present": 1,
+    "absent": 1,
+    "unknown": 0,
+    "extra": "Zemědělský výbor"
+  },
+  {
+    "id": "6544",
+    "label": "Lubomír Metnar",
+    "group": "ANO2011",
+    "value": 0.5,
+    "present": 1,
+    "absent": 1,
+    "unknown": 0,
+    "extra": "Výbor pro bezpečnost"
+  },
+  {
+    "id": "7047",
+    "label": "Markéta Šichtařová",
+    "group": "SPD",
+    "value": 0.333,
+    "present": 1,
+    "absent": 2,
+    "unknown": 0,
+    "extra": "Hospodářský výbor, Výbor pro zdravotnictví"
+  },
+  {
+    "id": "7010",
+    "label": "Oto Klempíř",
+    "group": "MS",
+    "value": 0.0,
+    "present": 0,
+    "absent": 1,
+    "unknown": 0,
+    "extra": "Výbor pro mediální záležitosti"
+  }
+]

@@ -6,7 +6,6 @@ import { Arrow } from '@repo/ui/components/Arrow';
 
 const BG = '#044d5e';
 const WHITE = '#ffffff';
-const AUTOPLAY_MS = 6000;
 const GAP = 16;
 const VISIBLE = 3;
 
@@ -95,7 +94,6 @@ const TILES = [
 ];
 
 // Nekonečná smyčka: klonujeme VISIBLE dlaždic na začátek a konec tracku.
-// posRef pracuje v "extended" prostoru; logicalPos (0..N-1) určuje aktivní tečku.
 const N = TILES.length;
 const EXT_TILES = [...TILES.slice(-VISIBLE), ...TILES, ...TILES.slice(0, VISIBLE)];
 const EXT_START = VISIBLE; // index první skutečné dlaždice v EXT_TILES
@@ -118,8 +116,6 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
   const hasCover = Boolean(coverImage);
   const isFullBleed = logoType === 'media' || hasCover;
 
-  // Stejný pattern jako ArticleCard: border + overflow + border-radius + scale jsou na jednom elementu.
-  // Background je přímo na <a> (barevné tile) nebo je image přímé dítě <a> (image tile).
   const base: React.CSSProperties = {
     textDecoration: 'none',
     display: 'block',
@@ -166,49 +162,60 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
   );
 }
 
-/* ── Plynulý scroll přes RAF ─────────────────────────────────────── */
-const SCROLL_DURATION = 700; // ms – čím více, tím pomalejší a plynulejší
+/* ── Animace scrollu přes RAF, vrací cancel funkci ───────────────── */
+const SCROLL_DURATION = 700;
 
 function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 
-function animateScroll(el: HTMLElement, targetLeft: number, duration = SCROLL_DURATION) {
+function animateScroll(el: HTMLElement, targetLeft: number, duration = SCROLL_DURATION): () => void {
   const startLeft = el.scrollLeft;
   const distance = targetLeft - startLeft;
-  if (Math.abs(distance) < 1) return;
+  if (Math.abs(distance) < 1) return () => {};
+  let frameId: number | null = null;
+  let cancelled = false;
   const startTime = performance.now();
-  const prevSnap = el.style.scrollSnapType;
   el.style.scrollSnapType = 'none';
   function step(now: number) {
+    if (cancelled) return;
     const elapsed = now - startTime;
     const progress = Math.min(elapsed / duration, 1);
     el.scrollLeft = startLeft + distance * easeInOut(progress);
     if (progress < 1) {
-      requestAnimationFrame(step);
+      frameId = requestAnimationFrame(step);
     } else {
-      el.style.scrollSnapType = prevSnap;
+      el.style.scrollSnapType = '';
     }
   }
-  requestAnimationFrame(step);
+  frameId = requestAnimationFrame(step);
+  return () => {
+    cancelled = true;
+    if (frameId !== null) cancelAnimationFrame(frameId);
+    el.style.scrollSnapType = '';
+  };
 }
 
 /* ── SpecialsHero ─────────────────────────────────────────────────── */
 export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLink?: string }) {
   const [titleHovered, setTitleHovered] = useState(false);
-  const [logicalPos, setLogicalPos] = useState(0); // 0..N-1, pro tečky
+  const [logicalPos, setLogicalPos] = useState(0);
   const [dragging, setDragging] = useState(false);
-  const draggingRef = useRef(false);
-  const trackRef = useRef<HTMLDivElement>(null); // scroll container (carousel-outer)
-  const innerRef = useRef<HTMLDivElement>(null); // flex track (carousel-track)
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const posRef = useRef(EXT_START); // aktuální pozice v EXT_TILES
+
+  const trackRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef(EXT_START);
   const dragStartX = useRef(0);
   const dragStartScroll = useRef(0);
-  const wrapping = useRef(false); // blokuje double-wrap
-  const dragOccurred = useRef(false); // rozlišuje drag od kliknutí
-  // Sledování rychlosti pohybu pro momentum swipe: [{x, t}, ...]
+  const draggingRef = useRef(false);
+  const wrapping = useRef(false);
+  const dragOccurred = useRef(false);
   const velEvents = useRef<Array<{ x: number; t: number }>>([]);
+  const cancelAnimRef = useRef<(() => void) | null>(null);
+  const wrapTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const touchAxis = useRef<'h' | 'v' | null>(null);
 
   const getTileW = () => {
     const inner = innerRef.current;
@@ -216,6 +223,12 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
     const tile = inner.firstElementChild as HTMLElement | null;
     return tile ? tile.offsetWidth + GAP : 0;
   };
+
+  // Zruší probíhající RAF animaci i čekající wrap setTimeout
+  const cancelCurrentAnim = useCallback(() => {
+    if (cancelAnimRef.current) { cancelAnimRef.current(); cancelAnimRef.current = null; }
+    if (wrapTimerRef.current) { clearTimeout(wrapTimerRef.current); wrapTimerRef.current = null; wrapping.current = false; }
+  }, []);
 
   // Okamžitý skok bez animace (při přechodu klon→skutečná dlaždice)
   const jumpTo = useCallback((extPos: number) => {
@@ -231,33 +244,27 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
     });
   }, []);
 
-  // Animovaný posun na extendovanou pozici + případný silent wrap po animaci
+  // Animovaný posun + silent wrap po animaci
   const goToExt = useCallback((extPos: number, duration = SCROLL_DURATION) => {
     const track = trackRef.current;
     const tileW = getTileW();
     if (!track || !tileW) return;
-    animateScroll(track, extPos * tileW, duration);
+    if (cancelAnimRef.current) cancelAnimRef.current();
+    cancelAnimRef.current = animateScroll(track, extPos * tileW, duration);
     posRef.current = extPos;
     setLogicalPos((extPos - EXT_START + N) % N);
 
-    // Po animaci: pokud jsme v clone zóně, přeskočíme na skutečnou dlaždici
     if (!wrapping.current) {
       wrapping.current = true;
-      setTimeout(() => {
+      wrapTimerRef.current = setTimeout(() => {
         const ep = posRef.current;
         if (ep >= N + EXT_START) jumpTo(ep - N);
         else if (ep < EXT_START) jumpTo(ep + N);
         wrapping.current = false;
+        wrapTimerRef.current = null;
       }, duration + 80);
     }
   }, [jumpTo]);
-
-  const resetTimer = useCallback(() => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      goToExt(posRef.current + 1);
-    }, AUTOPLAY_MS);
-  }, [goToExt]);
 
   // Inicializace: nastavíme scroll na EXT_START (první skutečná dlaždice)
   useEffect(() => {
@@ -267,84 +274,104 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
       track.style.scrollSnapType = 'none';
       track.scrollLeft = EXT_START * tileW;
     }
-    resetTimer();
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [resetTimer]);
+    return () => { cancelCurrentAnim(); };
+  }, [cancelCurrentAnim]);
 
   function handleDot(i: number) {
     goToExt(i + EXT_START);
-    resetTimer();
   }
-
-  // ── Sdílená rychlost a finish ────────────────────────────────────
 
   function getVelocity(): number {
     const ev = velEvents.current;
     if (ev.length < 2) return 0;
     const dt = ev[ev.length - 1].t - ev[0].t;
     if (dt < 16) return 0;
-    return (ev[ev.length - 1].x - ev[0].x) / dt;
+    return (ev[ev.length - 1].x - ev[0].x) / dt; // px/ms, kladná = pohyb doprava
   }
 
   // Ukončení dragu: snapne na nejbližší dlaždici s momentem dle rychlosti.
-  // Sdílené pro myš i touch.
   function finishDrag(endX: number) {
     draggingRef.current = false;
     setDragging(false);
-    const diff = endX - dragStartX.current; // >0 = prst šel doprava = posun zpět
+    const diff = endX - dragStartX.current;
     const track = trackRef.current;
     const tileW = getTileW();
-    if (!track || !tileW) { velEvents.current = []; resetTimer(); return; }
+    if (!track || !tileW) { velEvents.current = []; return; }
 
     if (Math.abs(diff) > 12) {
-      // Cíl = aktuální pozice + setrvačnost (velocity × čas decelerace)
-      const velocity = getVelocity(); // px/ms, záporná = prst doleva = scroll doleva
-      const projected = track.scrollLeft + velocity * 320;
+      // velocity kladná = pohyb doprava = scrollLeft klesá → odečítáme
+      const velocity = getVelocity();
+      const projected = track.scrollLeft - velocity * 320;
       const targetPos = Math.round(projected / tileW);
       const currentPos = Math.round(track.scrollLeft / tileW);
       const steps = Math.abs(targetPos - currentPos);
       const duration = Math.min(600, 200 + steps * 160);
       goToExt(targetPos, duration);
     } else {
-      dragOccurred.current = false; // byl to klik, ne drag
-      animateScroll(track, posRef.current * tileW, 260);
+      dragOccurred.current = false;
+      cancelAnimRef.current = animateScroll(track, posRef.current * tileW, 260);
     }
     velEvents.current = [];
-    resetTimer();
   }
 
   // ── Touch ─────────────────────────────────────────────────────────
-  const touchStartX = useRef<number | null>(null);
-
   function onTouchStart(e: React.TouchEvent) {
-    if (timerRef.current) clearInterval(timerRef.current); // pause autoplay
-    const x = e.touches[0].clientX;
-    touchStartX.current = x;
-    dragStartX.current = x;
-    dragStartScroll.current = trackRef.current?.scrollLeft ?? 0;
+    // Don't cancel animation yet — wait until we know the gesture axis.
+    const t = e.touches[0];
+    touchStartX.current = t.clientX;
+    touchStartY.current = t.clientY;
+    touchAxis.current = null;
     dragOccurred.current = false;
-    velEvents.current = [{ x, t: performance.now() }];
+    velEvents.current = [{ x: t.clientX, t: performance.now() }];
   }
   function onTouchMove(e: React.TouchEvent) {
-    if (touchStartX.current === null || !trackRef.current) return;
+    if (touchStartX.current === null || touchStartY.current === null || !trackRef.current) return;
     const x = e.touches[0].clientX;
-    const t = performance.now();
-    velEvents.current.push({ x, t });
-    if (velEvents.current.length > 6) velEvents.current.shift();
-    const dx = x - touchStartX.current;
+    const y = e.touches[0].clientY;
+
+    // Determine axis on first significant movement
+    if (touchAxis.current === null) {
+      const adx = Math.abs(x - touchStartX.current);
+      const ady = Math.abs(y - touchStartY.current);
+      if (adx < 5 && ady < 5) return;
+      touchAxis.current = adx >= ady ? 'h' : 'v';
+      if (touchAxis.current === 'h') {
+        cancelCurrentAnim();
+        // Re-anchor to current position to avoid a jump
+        dragStartX.current = x;
+        dragStartScroll.current = trackRef.current.scrollLeft;
+      }
+    }
+
+    if (touchAxis.current === 'v') return; // let browser handle vertical scroll
+
+    const dx = x - dragStartX.current;
     if (Math.abs(dx) > 5) dragOccurred.current = true;
+    velEvents.current.push({ x, t: performance.now() });
+    if (velEvents.current.length > 6) velEvents.current.shift();
     trackRef.current.scrollLeft = dragStartScroll.current - dx;
   }
   function onTouchEnd(e: React.TouchEvent) {
     if (touchStartX.current === null) return;
-    if (dragOccurred.current) e.preventDefault(); // blokuje syntetický klik
-    finishDrag(e.changedTouches[0].clientX);
+    const axis = touchAxis.current;
     touchStartX.current = null;
+    touchStartY.current = null;
+    touchAxis.current = null;
+
+    if (axis !== 'h') {
+      // Vertical or undetermined gesture — don't snap the carousel
+      dragOccurred.current = false;
+      velEvents.current = [];
+      return;
+    }
+
+    if (dragOccurred.current) e.preventDefault();
+    finishDrag(e.changedTouches[0].clientX);
   }
 
   // ── Mouse ─────────────────────────────────────────────────────────
   function onMouseDown(e: React.MouseEvent) {
-    if (timerRef.current) clearInterval(timerRef.current); // pause autoplay
+    cancelCurrentAnim();
     draggingRef.current = true;
     setDragging(true);
     dragOccurred.current = false;
@@ -434,7 +461,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
 
           {/* Karusel vpravo */}
           <Box flex={1} px="md" style={{ minWidth: 0, overflow: 'visible' }}>
-            {/* Outer: scroll container + horizontální clip. trackRef zde = scrollLeft funguje */}
+            {/* Outer: scroll container + horizontální clip */}
             <div
               ref={trackRef}
               className={`carousel-outer${dragging ? ' is-dragging' : ''}`}
