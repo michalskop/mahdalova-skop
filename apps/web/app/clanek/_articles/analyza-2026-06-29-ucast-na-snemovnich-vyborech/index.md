@@ -4,7 +4,7 @@ date: "2026-07-15"
 author: "Michal Škop, Kateřina Mahdalová"
 excerpt: "Poslanecká sněmovna zvolená v říjnu 2025 má 18 výborů. Zmapovali jsme, jak často jejich členové přicházejí na jednání. Průměrná účast je 86 %, ale rozdíly mezi poslanci jsou velké."
 filter: ["analýza"]
-tags: ["sněmovna", "výbory", "poslanci", "účast", "PSP10"]
+tags: ["sněmovna", "výbory", "poslanci", "účast", "parlament"]
 promoted: 0
 ---
 
