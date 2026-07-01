@@ -1,8 +1,9 @@
 ---
 title: "Data: Výbory Sněmovny – Turek, Decroix, Okleštěk, Válek"
-date: "2026-07-15"
+date: "2026-06-29"
 author: "Michal Škop, Kateřina Mahdalová"
 excerpt: "Poslanecká sněmovna zvolená v říjnu 2025 má 18 výborů. Zmapovali jsme, jak často jejich členové přicházejí na jednání. Průměrná účast je 86 %, ale rozdíly mezi poslanci jsou velké."
+coverImage: "images/turek.webp"
 filter: ["analýza"]
 tags: ["sněmovna", "výbory", "poslanci", "účast", "parlament"]
 promoted: 0
