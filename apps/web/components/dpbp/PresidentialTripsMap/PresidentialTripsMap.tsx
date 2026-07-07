@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import * as d3geo from 'd3-geo';
 import * as d3proj from 'd3-geo-projection';
 import * as topojson from 'topojson-client';
@@ -72,6 +72,8 @@ function tripTooltip(t: Trip): string {
   return `${president} · ${formatCzDate(t.d0)} · ${place} · ${t.t}`;
 }
 
+type HoverInfo = { text: string; left: number; top: number } | null;
+
 function mandateLabel(days: number): string {
   const years = Math.floor(days / 365.25);
   const months = Math.round((days - years * 365.25) / 30.44);
@@ -94,10 +96,17 @@ interface HalfMapProps {
   width: number;
   visible: Trip[];
   frozen: boolean;
+  containerRef: React.RefObject<HTMLDivElement>;
+  onHover: (info: HoverInfo) => void;
 }
 
-function HalfMap({ president, label, years, countries, path, height, width, visible, frozen }: HalfMapProps) {
+function HalfMap({ president, label, years, countries, path, height, width, visible, frozen, containerRef, onHover }: HalfMapProps) {
   const visited = useMemo(() => new Set(visible.map(d => d.z)), [visible]);
+  function showTip(e: React.MouseEvent, text: string) {
+    const rect = (e.currentTarget as SVGElement).getBoundingClientRect();
+    const box = containerRef.current!.getBoundingClientRect();
+    onHover({ text, left: rect.left - box.left + rect.width / 2, top: rect.top - box.top });
+  }
   return (
     <div style={{ marginBottom: 10 }}>
       <div style={{
@@ -118,6 +127,9 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
             const d = feat.d;
             if (!d) return null;
             const countryTrips = czech ? visible.filter(t => t.z === czech) : [];
+            const countryTip = czech
+              ? `${czech} · ${countryTrips.length} ${countryTrips.length === 1 ? 'návštěva' : countryTrips.length < 5 ? 'návštěvy' : 'návštěv'}`
+              : null;
             return (
               <path
                 key={i}
@@ -125,11 +137,10 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
                 fill={czech ? TINT[president] : LAND_BASE}
                 stroke={czech ? COLORS[president] : LAND_BORDER}
                 strokeWidth={czech ? 1.1 : 0.6}
-              >
-                {czech && (
-                  <title>{`${czech} · ${countryTrips.length} ${countryTrips.length === 1 ? 'návštěva' : countryTrips.length < 5 ? 'návštěvy' : 'návštěv'}`}</title>
-                )}
-              </path>
+                onMouseEnter={countryTip ? (e => showTip(e, countryTip)) : undefined}
+                onMouseLeave={countryTip ? (() => onHover(null)) : undefined}
+                style={{ cursor: countryTip ? 'pointer' : 'default' }}
+              />
             );
           })}
         </g>
@@ -147,9 +158,10 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
                 fillOpacity={0.95}
                 stroke={OCEAN}
                 strokeWidth={1}
-              >
-                <title>{tripTooltip(d)}</title>
-              </circle>
+                onMouseEnter={e => showTip(e, tripTooltip(d))}
+                onMouseLeave={() => onHover(null)}
+                style={{ cursor: 'pointer' }}
+              />
             );
           })}
         </g>
@@ -163,6 +175,8 @@ export default function PresidentialTripsMap() {
   const [value, setValue] = useState(ZEMAN_MAX_DI);
   const [playing, setPlaying] = useState(false);
   const [world, setWorld] = useState<{ objects: { countries: unknown } } | null>(null);
+  const [hover, setHover] = useState<HoverInfo>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -243,28 +257,51 @@ export default function PresidentialTripsMap() {
         </button>
       </div>
 
-      <HalfMap
-        president="Z"
-        label="ZEMAN"
-        years="2013–2023"
-        countries={countries}
-        path={path}
-        height={height}
-        width={width}
-        visible={visibleZ}
-        frozen={false}
-      />
-      <HalfMap
-        president="P"
-        label="PAVEL"
-        years="2023–2026"
-        countries={countries}
-        path={path}
-        height={height}
-        width={width}
-        visible={visibleP}
-        frozen={frozenP}
-      />
+      <div ref={containerRef} style={{ position: 'relative' }}>
+        <HalfMap
+          president="Z"
+          label="ZEMAN"
+          years="2013–2023"
+          countries={countries}
+          path={path}
+          height={height}
+          width={width}
+          visible={visibleZ}
+          frozen={false}
+          containerRef={containerRef}
+          onHover={setHover}
+        />
+        <HalfMap
+          president="P"
+          label="PAVEL"
+          years="2023–2026"
+          countries={countries}
+          path={path}
+          height={height}
+          width={width}
+          visible={visibleP}
+          frozen={frozenP}
+          containerRef={containerRef}
+          onHover={setHover}
+        />
+        {hover && (
+          <div
+            style={{
+              position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
+              background: '#101432', color: '#fdfbf7', padding: '5px 9px', borderRadius: 4, fontSize: 11.5,
+              fontFamily: "'Roboto Condensed', Arial, sans-serif", whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
+              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+            }}
+          >
+            {hover.text}
+            <div style={{
+              position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
+              width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
+              borderTop: '5px solid #101432',
+            }} />
+          </div>
+        )}
+      </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 8 }}>
         <button

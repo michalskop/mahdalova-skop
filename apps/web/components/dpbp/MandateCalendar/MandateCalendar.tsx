@@ -1,7 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import travelDaysData from './data.json';
+
+type HoverInfo = { text: string; left: number; top: number } | null;
 
 type TripDetail = { z: string; m: string; t: string };
 type TravelDays = {
@@ -104,9 +106,16 @@ interface GridProps {
   showPavel: boolean;
   zemanDi: number[];
   pavelDi: number[];
+  containerRef: React.RefObject<HTMLDivElement>;
+  onHover: (info: HoverInfo) => void;
 }
 
-function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi }: GridProps) {
+function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi, containerRef, onHover }: GridProps) {
+  function showTip(e: React.MouseEvent, text: string) {
+    const rect = (e.currentTarget as SVGElement).getBoundingClientRect();
+    const box = containerRef.current!.getBoundingClientRect();
+    onHover({ text, left: rect.left - box.left + rect.width / 2, top: rect.top - box.top });
+  }
   const height = years.length * ROW_H;
   return (
     <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
@@ -147,24 +156,28 @@ function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi }:
                   if (!revealed) {
                     return <rect key={day.d} x={x} y={y} width={CELL} height={CELL} fill={NOT_YET} />;
                   }
+                  const zActive = showZeman && !!day.zDetail;
+                  const pActive = showPavel && !!day.pDetail;
+                  if (topFill === bottomFill) {
+                    // no activity visible in this cell (or nothing revealed/shown) – fully inert
+                    return <rect key={day.d} x={x} y={y} width={CELL} height={CELL} fill={topFill} />;
+                  }
                   const zTip = tripTooltip('Zeman', day.zDate, day.zDetail);
                   const pTip = tripTooltip('Pavel', day.pDate, day.pDetail);
                   return (
                     <g key={day.d}>
-                      {topFill === bottomFill ? (
-                        <rect x={x} y={y} width={CELL} height={CELL} fill={topFill}>
-                          <title>{zTip}{'\n'}{pTip}</title>
-                        </rect>
-                      ) : (
-                        <>
-                          <rect x={x} y={y} width={CELL} height={CELL / 2} fill={topFill}>
-                            {showZeman && <title>{zTip}</title>}
-                          </rect>
-                          <rect x={x} y={y + CELL / 2} width={CELL} height={CELL / 2} fill={bottomFill}>
-                            {showPavel && <title>{pTip}</title>}
-                          </rect>
-                        </>
-                      )}
+                      <rect
+                        x={x} y={y} width={CELL} height={CELL / 2} fill={topFill}
+                        onMouseEnter={zActive ? (e => showTip(e, zTip)) : undefined}
+                        onMouseLeave={zActive ? (() => onHover(null)) : undefined}
+                        style={{ cursor: zActive ? 'pointer' : 'default' }}
+                      />
+                      <rect
+                        x={x} y={y + CELL / 2} width={CELL} height={CELL / 2} fill={bottomFill}
+                        onMouseEnter={pActive ? (e => showTip(e, pTip)) : undefined}
+                        onMouseLeave={pActive ? (() => onHover(null)) : undefined}
+                        style={{ cursor: pActive ? 'pointer' : 'default' }}
+                      />
                     </g>
                   );
                 })}
@@ -183,6 +196,8 @@ export default function MandateCalendar() {
   const [playing, setPlaying] = useState(false);
   const [showZeman, setShowZeman] = useState(true);
   const [showPavel, setShowPavel] = useState(true);
+  const [hover, setHover] = useState<HoverInfo>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const maxCounter = useMemo(() => {
     const today = todayUTC();
@@ -249,7 +264,26 @@ export default function MandateCalendar() {
         </button>
       </div>
 
-      <Grid years={years} counter={counter} width={width} showZeman={showZeman} showPavel={showPavel} zemanDi={TRAVEL.zemanDi} pavelDi={TRAVEL.pavelDi} />
+      <div ref={containerRef} style={{ position: 'relative' }}>
+        <Grid years={years} counter={counter} width={width} showZeman={showZeman} showPavel={showPavel} zemanDi={TRAVEL.zemanDi} pavelDi={TRAVEL.pavelDi} containerRef={containerRef} onHover={setHover} />
+        {hover && (
+          <div
+            style={{
+              position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
+              background: '#101432', color: '#fdfbf7', padding: '5px 9px', borderRadius: 4, fontSize: 11.5,
+              fontFamily: "'Roboto Condensed', Arial, sans-serif", whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
+              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+            }}
+          >
+            {hover.text}
+            <div style={{
+              position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
+              width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
+              borderTop: '5px solid #101432',
+            }} />
+          </div>
+        )}
+      </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 12 }}>
         <button
@@ -272,7 +306,7 @@ export default function MandateCalendar() {
         </span>
       </div>
       <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
-        Mřížka jde jen po dnešní den mandátu ({maxCounter} dní od inaugurace) – zítra přibude další den, u Zemana i u Pavla stejně. Každá kostička je jeden den mandátu: horní půlka Zeman, dolní půlka Pavel. Barevně se vybarví den zahájení zahraniční cesty, šedě zůstanou ostatní dny – u obou počítáme jen jeden den na cestu, protože u Zemana (zdroj: Wikipedie) většinou neznáme délku pobytu.
+        Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
       </p>
     </div>
   );
