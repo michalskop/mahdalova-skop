@@ -14,11 +14,11 @@ export default function ChartSignature({ size = 22, color = '#101432', style }: 
       rel="noopener noreferrer"
       style={{
         display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none',
-        fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: size * 0.6, fontWeight: 700,
-        color, opacity: 0.85, ...style,
+        fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: size * 0.64, fontWeight: 700,
+        color, lineHeight: 1, ...style,
       }}
     >
-      <svg width={size} height={size} viewBox="60 60 330 330" style={{ flex: '0 0 auto' }}>
+      <svg width={size} height={size} viewBox="60 60 330 330" style={{ flex: '0 0 auto', display: 'block' }}>
         <defs>
           <linearGradient id="chartSignatureGradient" x1="1" x2="0.25" y1="0.5" y2="1">
             <stop offset="0%" stopColor="#ffdc33" stopOpacity="0" />

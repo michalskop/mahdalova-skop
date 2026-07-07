@@ -278,10 +278,7 @@ export default function PresidentialTripsMap() {
             }} />
           </div>
         )}
-        <div style={{
-          position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
-          background: '#f8f6f0', borderRadius: 999, padding: '5px 10px 5px 6px', boxShadow: '0 1px 4px rgba(0,0,0,0.18)',
-        }}>
+        <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
           <ChartSignature size={20} />
         </div>
       </div>
