@@ -424,8 +424,6 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
         }
         .carousel-outer {
           overflow: hidden;
-          padding: 16px;
-          margin: -16px;
           cursor: grab;
         }
         .carousel-outer.is-dragging { cursor: grabbing; }
