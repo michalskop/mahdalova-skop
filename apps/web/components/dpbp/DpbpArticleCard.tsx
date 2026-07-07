@@ -12,6 +12,7 @@ interface DpbpArticleCardProps {
   accent?: string;
   type?: string;
   image?: string;
+  stacked?: boolean;
 }
 
 export default function DpbpArticleCard({
@@ -24,9 +25,14 @@ export default function DpbpArticleCard({
   accent = '#de1743',
   type = 'Analýza',
   image,
+  stacked = false,
 }: DpbpArticleCardProps) {
   return (
-    <Link href={href} className={styles.card} style={{ borderTopColor: accent }}>
+    <Link
+      href={href}
+      className={stacked ? `${styles.card} ${styles.stacked}` : styles.card}
+      style={{ borderTopColor: accent }}
+    >
       {(image || primaryChartSpec) && (
         <div className={styles.thumb}>
           {image ? (

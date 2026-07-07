@@ -31,6 +31,7 @@
     { "slug": "07-obstrukce-2026", "topic": "Aktualizace" }
   ],
   "postSupportTiles": [
-    { "slug": "08-prezidentske-cesty", "topic": "Data story" }
+    { "slug": "08-prezidentske-cesty", "topic": "Data story", "fullWidth": true },
+    { "slug": "09-milosti", "topic": "Data story" }
   ]
 }

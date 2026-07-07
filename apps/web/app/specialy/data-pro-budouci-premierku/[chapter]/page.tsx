@@ -29,8 +29,8 @@ interface ChapterMeta {
   onePager: { slug: string; logo: string | null } | null;
   introChart?: string;
   intro?: { title: string; textBefore: string; textAfter: string; textClosing?: string };
-  tiles?: Array<{ slug: string; topic: string }>;
-  postSupportTiles?: Array<{ slug: string; topic: string }>;
+  tiles?: Array<{ slug: string; topic: string; fullWidth?: boolean }>;
+  postSupportTiles?: Array<{ slug: string; topic: string; fullWidth?: boolean }>;
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -232,7 +232,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 8 }}
             >
               {tiles.map(t => (
-                <div key={t.slug} style={t.fm!.logo ? { gridColumn: '1 / -1' } : undefined}>
+                <div key={t.slug} style={t.fullWidth ? { gridColumn: '1 / -1' } : undefined}>
                   <DpbpArticleCard
                     href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
                     title={t.fm!.title}
@@ -243,6 +243,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                     image={t.fm!.logo}
                     accent={meta.accent}
                     type={t.topic}
+                    stacked={!t.fullWidth}
                   />
                 </div>
               ))}
@@ -261,7 +262,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginTop: 24, marginBottom: 8 }}
           >
             {postSupportTiles.map(t => (
-              <div key={t.slug} style={t.fm!.logo ? { gridColumn: '1 / -1' } : undefined}>
+              <div key={t.slug} style={t.fullWidth ? { gridColumn: '1 / -1' } : undefined}>
                 <DpbpArticleCard
                   href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
                   title={t.fm!.title}
@@ -272,6 +273,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                   image={t.fm!.logo}
                   accent={meta.accent}
                   type={t.topic}
+                  stacked={!t.fullWidth}
                 />
               </div>
             ))}

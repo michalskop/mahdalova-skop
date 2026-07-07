@@ -16,6 +16,7 @@ import ProfileHead from '@/components/dpbp/ProfileHead';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/PresidentialTripsMap';
 import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
+import ChartSignature from '@/components/dpbp/ChartSignature';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -95,6 +96,7 @@ const mdxComponents = {
   FlourishEmbed,
   PresidentialTripsMap,
   MandateCalendar,
+  ChartSignature,
 };
 
 export default function ArticlePage({ params }: { params: { chapter: string; article: string } }) {
