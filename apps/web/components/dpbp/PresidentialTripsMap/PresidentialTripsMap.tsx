@@ -123,7 +123,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
       <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
         <g>
           {(countries as Array<{ properties: { name: string }; d: string | null }>).map((feat, i) => {
-            const czech = [...visited].find(z => matchName(feat.properties.name, z));
+            const czech = Array.from(visited).find(z => matchName(feat.properties.name, z));
             const d = feat.d;
             if (!d) return null;
             const countryTrips = czech ? visible.filter(t => t.z === czech) : [];
@@ -146,7 +146,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
         </g>
         <g>
           {visible.map((d, i) => {
-            const p = path.projection()!([d.lon, d.lat]);
+            const p = path.projection<d3geo.GeoProjection>()([d.lon, d.lat]);
             if (!p) return null;
             return (
               <circle
@@ -214,7 +214,7 @@ export default function PresidentialTripsMap() {
     const top = projection([0, 72])![1];
     const bottom = projection([0, -50])![1];
     projection.translate([width / 2, -top]);
-    return { path: d3geo.geoPath(projection), height: bottom - top };
+    return { path: d3geo.geoPath(projection as d3geo.GeoProjection), height: bottom - top };
   }, []);
 
   const countries = useMemo(() => {
