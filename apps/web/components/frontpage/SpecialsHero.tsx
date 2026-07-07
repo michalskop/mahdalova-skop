@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Group, Stack, Title, Paper } from '@mantine/core';
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react';
 import { Arrow } from '@repo/ui/components/Arrow';
 
 const BG = '#044d5e';
@@ -267,7 +267,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
   }, [jumpTo]);
 
   // Inicializace: nastavíme scroll na EXT_START (první skutečná dlaždice)
-  useEffect(() => {
+  useLayoutEffect(() => {
     const track = trackRef.current;
     const tileW = getTileW();
     if (track && tileW) {
