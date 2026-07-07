@@ -18,7 +18,7 @@ export default function ChartSignature({ size = 22, color = '#101432', style }: 
         color, lineHeight: 1, ...style,
       }}
     >
-      <svg width={size} height={size} viewBox="60 60 330 330" style={{ flex: '0 0 auto', display: 'block' }}>
+      <svg width={size} height={size} viewBox="112 112 276 276" style={{ flex: '0 0 auto', display: 'block' }}>
         <defs>
           <linearGradient id="chartSignatureGradient" x1="1" x2="0.25" y1="0.5" y2="1">
             <stop offset="0%" stopColor="#ffdc33" stopOpacity="0" />

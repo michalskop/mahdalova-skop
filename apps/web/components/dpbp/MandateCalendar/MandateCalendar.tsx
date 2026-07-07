@@ -41,15 +41,20 @@ const PAVEL_START = new Date(Date.UTC(2023, 2, 9));
 
 const MONTH_LABELS = ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'];
 
-const CELL = 6.4;
+const CELL = 9;
 const CELL_GAP = 1.1;
-const MONTH_GAP = 7;
+const MONTH_GAP = 8;
 const YEAR_LABEL_W = 56;
 const COLS = 7;
 const ROWS = 5; // ceil(31/7)
+const MONTHS_PER_ROW = 6; // two sub-rows of 6 months per year, so month blocks stay square-ish and cells get bigger
 const MONTH_W = COLS * (CELL + CELL_GAP);
 const MONTH_H = ROWS * (CELL + CELL_GAP);
-const ROW_H = MONTH_H + 22;
+const MONTH_LABEL_H = 12;
+const SUBROW_GAP = 6;
+const SUBROW_STRIDE = MONTH_LABEL_H + MONTH_H + SUBROW_GAP;
+const YEAR_GAP = 14;
+const ROW_H = 2 * (MONTH_LABEL_H + MONTH_H) + SUBROW_GAP + YEAR_GAP;
 
 function toISO(d: Date): string {
   return d.toISOString().slice(0, 10);
@@ -140,9 +145,13 @@ function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi, c
             </text>
           )}
           {yb.months.map(mb => {
-            const mx = YEAR_LABEL_W + (mb.month - 1) * (MONTH_W + MONTH_GAP);
+            const monthIdx = mb.month - 1;
+            const subrow = Math.floor(monthIdx / MONTHS_PER_ROW);
+            const col = monthIdx % MONTHS_PER_ROW;
+            const mx = YEAR_LABEL_W + col * (MONTH_W + MONTH_GAP);
+            const my = MONTH_LABEL_H + subrow * SUBROW_STRIDE;
             return (
-              <g key={mb.month} transform={`translate(${mx}, 12)`}>
+              <g key={mb.month} transform={`translate(${mx}, ${my})`}>
                 <text x={0} y={-2.5} fontSize={5.8} fill="#8a8577" fontFamily="'Roboto Condensed', Arial, sans-serif">
                   {MONTH_LABELS[mb.month - 1]}
                 </text>
@@ -208,7 +217,7 @@ export default function MandateCalendar() {
   useEffect(() => { setCounter(maxCounter); }, [maxCounter]);
 
   const years = useMemo(() => buildGrid(maxCounter, TRAVEL.zeman, TRAVEL.pavel), [maxCounter]);
-  const width = YEAR_LABEL_W + 12 * (MONTH_W + MONTH_GAP);
+  const width = YEAR_LABEL_W + MONTHS_PER_ROW * (MONTH_W + MONTH_GAP);
 
   useEffect(() => {
     if (!playing) return;
@@ -238,16 +247,17 @@ export default function MandateCalendar() {
         <ChartSignature style={{ flex: '0 0 auto', lineHeight: 1 }} />
       </div>
       <div style={{
-        display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 14, flexWrap: 'wrap',
+        display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 14, flexWrap: 'wrap',
         background: '#101432', padding: '10px 14px', borderRadius: 4,
       }}>
-        <span style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 22, fontWeight: 700, color: '#fdfbf7' }}>
+        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 22, fontWeight: 700, color: '#fdfbf7' }}>
           <span style={{ display: 'inline-block', minWidth: '4ch', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{counter}</span>. den mandátu
         </span>
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: 'rgba(253,251,247,0.7)' }}>
+        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, color: 'rgba(253,251,247,0.75)' }}>
           Zeman: <span style={{ display: 'inline-block', minWidth: '2ch', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{zemanCount}</span>{' '}
           <span style={{ display: 'inline-block', minWidth: '4.5ch' }}>{zemanCount === 1 ? 'cesta' : zemanCount < 5 ? 'cesty' : 'cest'}</span>
-          {' · '}Pavel: <span style={{ display: 'inline-block', minWidth: '2ch', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{pavelCount}</span>{' '}
+          <span style={{ fontSize: 18, margin: '0 8px', display: 'inline-block', verticalAlign: -1 }}>·</span>
+          Pavel: <span style={{ display: 'inline-block', minWidth: '2ch', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{pavelCount}</span>{' '}
           <span style={{ display: 'inline-block', minWidth: '4.5ch' }}>{pavelCount === 1 ? 'cesta' : pavelCount < 5 ? 'cesty' : 'cest'}</span>
         </span>
       </div>
@@ -320,6 +330,9 @@ export default function MandateCalendar() {
       </div>
       <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
         Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
+      </p>
+      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 11.5, color: '#888', marginTop: 10 }}>
+        • autoři: <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#de1743', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>
   );
