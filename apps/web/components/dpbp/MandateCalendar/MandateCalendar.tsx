@@ -39,22 +39,26 @@ const OCEAN = '#F8F6F0';
 const ZEMAN_START = new Date(Date.UTC(2013, 2, 8));
 const PAVEL_START = new Date(Date.UTC(2023, 2, 9));
 
-const MONTH_LABELS = ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'];
+// Grid position is derived purely from the mandate-day index (di), split into fixed
+// 30-day "months" / 360-day "years" – NOT from either president's real calendar date.
+// Zeman's and Pavel's terms cross a different number of leap days at the same di, so
+// deriving position from a real calendar (as before) made the two calendars drift out
+// of alignment by a day here and there – a cell's position no longer matched the date
+// drawn there. A fixed-length synthetic calendar makes position a pure function of di,
+// identical for both presidents by construction, so this can't happen.
+const DAYS_PER_MONTH = 30;
+const MONTHS_PER_YEAR = 12;
+const DAYS_PER_YEAR = DAYS_PER_MONTH * MONTHS_PER_YEAR;
 
-const CELL = 9;
-const CELL_GAP = 1.1;
-const MONTH_GAP = 8;
-const YEAR_LABEL_W = 56;
+const CELL = 6.5;
+const CELL_GAP = 1;
+const MONTH_GAP = 6;
+const YEAR_LABEL_W = 50;
 const COLS = 7;
-const ROWS = 5; // ceil(31/7)
-const MONTHS_PER_ROW = 6; // two sub-rows of 6 months per year, so month blocks stay square-ish and cells get bigger
+const ROWS = 5; // ceil(30/7)
 const MONTH_W = COLS * (CELL + CELL_GAP);
 const MONTH_H = ROWS * (CELL + CELL_GAP);
-const MONTH_LABEL_H = 12;
-const SUBROW_GAP = 6;
-const SUBROW_STRIDE = MONTH_LABEL_H + MONTH_H + SUBROW_GAP;
-const YEAR_GAP = 14;
-const ROW_H = 2 * (MONTH_LABEL_H + MONTH_H) + SUBROW_GAP + YEAR_GAP;
+const ROW_H = MONTH_H + 22;
 
 function toISO(d: Date): string {
   return d.toISOString().slice(0, 10);
@@ -71,35 +75,33 @@ type YearBlock = { yearIndex: number; yearStart: number; yearEnd: number; months
 
 function buildGrid(maxDi: number, zemanDetail: Record<string, TripDetail>, pavelDetail: Record<string, TripDetail>): YearBlock[] {
   const years: YearBlock[] = [];
-  let yearBlock: YearBlock | null = null;
-  let monthBlock: MonthBlock | null = null;
-  let curYearStart = 0;
+  const numYears = Math.floor(maxDi / DAYS_PER_YEAR) + 1;
 
-  for (let di = 0; di <= maxDi; di++) {
-    const zDate = new Date(ZEMAN_START.getTime() + di * 86400000);
-    const pDate = new Date(PAVEL_START.getTime() + di * 86400000);
-    const m = zDate.getUTCMonth() + 1;
-    const day = zDate.getUTCDate();
+  for (let yi = 0; yi < numYears; yi++) {
+    const yearStart = yi * DAYS_PER_YEAR;
+    const yearEnd = Math.min(yearStart + DAYS_PER_YEAR - 1, maxDi);
+    const months: MonthBlock[] = [];
+    const numMonths = Math.floor((yearEnd - yearStart) / DAYS_PER_MONTH) + 1;
 
-    if (!yearBlock || di - curYearStart >= 365) {
-      curYearStart = di;
-      yearBlock = { yearIndex: years.length + 1, yearStart: curYearStart, yearEnd: Math.min(curYearStart + 364, maxDi), months: [] };
-      years.push(yearBlock);
-      monthBlock = null;
+    for (let mi = 0; mi < numMonths; mi++) {
+      const monthStart = yearStart + mi * DAYS_PER_MONTH;
+      const monthEnd = Math.min(monthStart + DAYS_PER_MONTH - 1, yearEnd);
+      const days: DayCell[] = [];
+      for (let di = monthStart; di <= monthEnd; di++) {
+        const zDate = new Date(ZEMAN_START.getTime() + di * 86400000);
+        const pDate = new Date(PAVEL_START.getTime() + di * 86400000);
+        days.push({
+          d: di - monthStart + 1,
+          di,
+          zDate,
+          pDate,
+          zDetail: zemanDetail[toISO(zDate)],
+          pDetail: pavelDetail[toISO(pDate)],
+        });
+      }
+      months.push({ month: mi + 1, days });
     }
-    if (!monthBlock || monthBlock.month !== m) {
-      monthBlock = { month: m, days: [] };
-      yearBlock.months.push(monthBlock);
-    }
-
-    monthBlock.days.push({
-      d: day,
-      di,
-      zDate,
-      pDate,
-      zDetail: zemanDetail[toISO(zDate)],
-      pDetail: pavelDetail[toISO(pDate)],
-    });
+    years.push({ yearIndex: yi + 1, yearStart, yearEnd, months });
   }
   return years;
 }
@@ -145,15 +147,11 @@ function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi, c
             </text>
           )}
           {yb.months.map(mb => {
-            const monthIdx = mb.month - 1;
-            const subrow = Math.floor(monthIdx / MONTHS_PER_ROW);
-            const col = monthIdx % MONTHS_PER_ROW;
-            const mx = YEAR_LABEL_W + col * (MONTH_W + MONTH_GAP);
-            const my = MONTH_LABEL_H + subrow * SUBROW_STRIDE;
+            const mx = YEAR_LABEL_W + (mb.month - 1) * (MONTH_W + MONTH_GAP);
             return (
-              <g key={mb.month} transform={`translate(${mx}, ${my})`}>
+              <g key={mb.month} transform={`translate(${mx}, 12)`}>
                 <text x={0} y={-2.5} fontSize={5.8} fill="#8a8577" fontFamily="'Roboto Condensed', Arial, sans-serif">
-                  {MONTH_LABELS[mb.month - 1]}
+                  {mb.month}
                 </text>
                 {mb.days.map(day => {
                   const col = (day.d - 1) % COLS;
@@ -217,7 +215,7 @@ export default function MandateCalendar() {
   useEffect(() => { setCounter(maxCounter); }, [maxCounter]);
 
   const years = useMemo(() => buildGrid(maxCounter, TRAVEL.zeman, TRAVEL.pavel), [maxCounter]);
-  const width = YEAR_LABEL_W + MONTHS_PER_ROW * (MONTH_W + MONTH_GAP);
+  const width = YEAR_LABEL_W + MONTHS_PER_YEAR * (MONTH_W + MONTH_GAP);
 
   useEffect(() => {
     if (!playing) return;
@@ -239,12 +237,12 @@ export default function MandateCalendar() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
         <div style={{
-          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 20, fontWeight: 700,
+          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 26, fontWeight: 700,
           color: '#101432', lineHeight: 1,
         }}>
           Mapujeme cesty prezidentů den po dni
         </div>
-        <ChartSignature style={{ flex: '0 0 auto', lineHeight: 1 }} />
+        <ChartSignature size={30} style={{ flex: '0 0 auto', lineHeight: 1 }} />
       </div>
       <div style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 14, flexWrap: 'wrap',
@@ -331,7 +329,7 @@ export default function MandateCalendar() {
       <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
         Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
       </p>
-      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 11.5, color: '#333333', marginTop: 10 }}>
+      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12.5, color: '#333333', marginTop: 10 }}>
         • autoři: <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>

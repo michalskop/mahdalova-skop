@@ -225,7 +225,7 @@ export default function PresidentialTripsMap() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div
         style={{
-          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 20, fontWeight: 700,
+          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 26, fontWeight: 700,
           color: '#101432', lineHeight: 1.25, marginBottom: 2,
         }}
       >
@@ -311,7 +311,7 @@ export default function PresidentialTripsMap() {
       <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
         Srovnání podle počtu dnů od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
       </p>
-      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 11.5, color: '#333333', marginTop: 10 }}>
+      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12.5, color: '#333333', marginTop: 10 }}>
         • autoři: <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>
