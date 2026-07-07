@@ -227,17 +227,19 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 8 }}
             >
               {tiles.map(t => (
-                <DpbpArticleCard
-                  key={t.slug}
-                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
-                  title={t.fm!.title}
-                  excerpt={t.fm!.excerpt}
-                  author={t.fm!.author}
-                  chapterTitle={meta.title}
-                  primaryChartSpec={null}
-                  accent={meta.accent}
-                  type={t.topic}
-                />
+                <div key={t.slug} style={t.fm!.logo ? { gridColumn: '1 / -1' } : undefined}>
+                  <DpbpArticleCard
+                    href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
+                    title={t.fm!.title}
+                    excerpt={t.fm!.excerpt}
+                    author={t.fm!.author}
+                    chapterTitle={meta.title}
+                    primaryChartSpec={null}
+                    image={t.fm!.logo}
+                    accent={meta.accent}
+                    type={t.topic}
+                  />
+                </div>
               ))}
             </Box>
             <Box style={{ marginTop: 24 }}>

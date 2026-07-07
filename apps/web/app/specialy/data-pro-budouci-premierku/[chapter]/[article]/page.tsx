@@ -14,6 +14,8 @@ import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import ProfileHead from '@/components/dpbp/ProfileHead';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
+import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/PresidentialTripsMap';
+import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -91,6 +93,8 @@ function formatDate(iso: string) {
 const mdxComponents = {
   VegaChart: ({ chartId }: { chartId: string }) => <VegaChart chartId={chartId} />,
   FlourishEmbed,
+  PresidentialTripsMap,
+  MandateCalendar,
 };
 
 export default function ArticlePage({ params }: { params: { chapter: string; article: string } }) {
