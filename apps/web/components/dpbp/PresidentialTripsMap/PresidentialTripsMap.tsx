@@ -48,8 +48,6 @@ const OCEAN = '#F8F6F0';
 
 const ZEMAN_MAX_DI = Math.max(...TRIPS.filter(d => d.p === 'Z').map(d => d.di));
 const PAVEL_MAX_DI = Math.max(...TRIPS.filter(d => d.p === 'P').map(d => d.di));
-const CALENDAR_MAX_CD = Math.max(...TRIPS.map(d => d.cd));
-const ANCHOR = new Date('2013-03-08');
 
 function matchName(featureName: string, czech: string): boolean {
   const aliases = ALIASES[czech] || [];
@@ -79,11 +77,6 @@ function mandateLabel(days: number): string {
   const months = Math.round((days - years * 365.25) / 30.44);
   if (years <= 0) return `${months}. měsíc mandátu`;
   return `${years}. rok, ${months}. měsíc mandátu`;
-}
-
-function calendarLabel(days: number): string {
-  const d = new Date(ANCHOR.getTime() + days * 86400000);
-  return d.toLocaleDateString('cs-CZ', { month: 'long', year: 'numeric' });
 }
 
 interface HalfMapProps {
@@ -171,7 +164,6 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
 }
 
 export default function PresidentialTripsMap() {
-  const [mode, setMode] = useState<'calendar' | 'mandate'>('mandate');
   const [value, setValue] = useState(ZEMAN_MAX_DI);
   const [playing, setPlaying] = useState(false);
   const [world, setWorld] = useState<{ objects: { countries: unknown } } | null>(null);
@@ -186,13 +178,7 @@ export default function PresidentialTripsMap() {
     return () => { cancelled = true; };
   }, []);
 
-  const maxValue = mode === 'calendar' ? CALENDAR_MAX_CD : ZEMAN_MAX_DI;
-
-  useEffect(() => {
-    setValue(maxValue);
-    setPlaying(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mode]);
+  const maxValue = ZEMAN_MAX_DI;
 
   useEffect(() => {
     if (!playing) return;
@@ -223,38 +209,28 @@ export default function PresidentialTripsMap() {
     return feats.features.map(f => ({ ...f, d: path(f as never) }));
   }, [world, path]);
 
-  const key = mode === 'calendar' ? 'cd' : 'di';
-  const visibleZ = useMemo(() => TRIPS.filter(d => d.p === 'Z' && d[key] <= value), [key, value]);
-  const visibleP = useMemo(() => TRIPS.filter(d => d.p === 'P' && d[key] <= value), [key, value]);
+  const visibleZ = useMemo(() => TRIPS.filter(d => d.p === 'Z' && d.di <= value), [value]);
+  const visibleP = useMemo(() => TRIPS.filter(d => d.p === 'P' && d.di <= value), [value]);
 
-  const frozenP = mode === 'mandate' && value > PAVEL_MAX_DI;
-  const label = mode === 'calendar' ? calendarLabel(value) : mandateLabel(value);
+  const frozenP = value > PAVEL_MAX_DI;
+  const label = mandateLabel(value);
 
   return (
     <div style={{ margin: '24px 0' }}>
-      <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
-        <button
-          onClick={() => setMode('calendar')}
-          style={{
-            fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, padding: '6px 12px',
-            borderRadius: 4, border: `1px solid ${mode === 'calendar' ? '#101432' : '#c9c2af'}`,
-            background: mode === 'calendar' ? '#101432' : '#fff', color: mode === 'calendar' ? '#fdfbf7' : '#333',
-            cursor: 'pointer',
-          }}
-        >
-          Podle kalendářních let
-        </button>
-        <button
-          onClick={() => setMode('mandate')}
-          style={{
-            fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, padding: '6px 12px',
-            borderRadius: 4, border: `1px solid ${mode === 'mandate' ? '#101432' : '#c9c2af'}`,
-            background: mode === 'mandate' ? '#101432' : '#fff', color: mode === 'mandate' ? '#fdfbf7' : '#333',
-            cursor: 'pointer',
-          }}
-        >
-          Podle délky mandátu
-        </button>
+      <div
+        style={{
+          fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 20, fontWeight: 700,
+          color: '#101432', lineHeight: 1.25, marginBottom: 2,
+        }}
+      >
+        Zahraniční cesty prezidentů Zemana a Pavla
+      </div>
+      <div
+        style={{
+          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, color: '#666', marginBottom: 14,
+        }}
+      >
+        Podle délky mandátu ● Přehrajte stisknutím play
       </div>
 
       <div ref={containerRef} style={{ position: 'relative' }}>
@@ -324,9 +300,7 @@ export default function PresidentialTripsMap() {
         </span>
       </div>
       <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
-        {mode === 'mandate'
-          ? 'Srovnání podle počtu měsíců od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.'
-          : 'Zobrazeny cesty do vybraného měsíce včetně, podle skutečného kalendářního data.'}
+        Srovnání podle počtu měsíců od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
       </p>
     </div>
   );
