@@ -319,7 +319,7 @@ export default function PresidentialTripsMap() {
           onChange={e => { setPlaying(false); setValue(Number(e.target.value)); }}
           style={{ flex: 1, accentColor: '#de1743' }}
         />
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, fontWeight: 700, color: '#101432', minWidth: 150, textAlign: 'right' }}>
+        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, fontWeight: 700, color: '#101432', minWidth: 150, textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
           {label}
         </span>
       </div>

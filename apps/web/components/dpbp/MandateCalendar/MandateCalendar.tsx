@@ -231,10 +231,10 @@ export default function MandateCalendar() {
         display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 14, flexWrap: 'wrap',
         background: '#101432', padding: '10px 14px', borderRadius: 4,
       }}>
-        <span style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 22, fontWeight: 700, color: '#fdfbf7' }}>
+        <span style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 22, fontWeight: 700, color: '#fdfbf7', fontVariantNumeric: 'tabular-nums' }}>
           {counter}. den mandátu
         </span>
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: 'rgba(253,251,247,0.7)' }}>
+        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: 'rgba(253,251,247,0.7)', fontVariantNumeric: 'tabular-nums' }}>
           Zeman: {zemanCount} {zemanCount === 1 ? 'cesta' : zemanCount < 5 ? 'cesty' : 'cest'} · Pavel: {pavelCount} {pavelCount === 1 ? 'cesta' : pavelCount < 5 ? 'cesty' : 'cest'}
         </span>
       </div>
