@@ -114,52 +114,57 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
           {years}{frozen ? ' · mandát dosud běží' : ''}
         </span>
       </div>
-      <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
-        <g>
-          {(countries as Array<{ properties: { name: string }; d: string | null }>).map((feat, i) => {
-            const czech = Array.from(visited).find(z => matchName(feat.properties.name, z));
-            const d = feat.d;
-            if (!d) return null;
-            const countryTrips = czech ? visible.filter(t => t.z === czech) : [];
-            const countryTip = czech
-              ? `${czech} · ${countryTrips.length} ${countryTrips.length === 1 ? 'návštěva' : countryTrips.length < 5 ? 'návštěvy' : 'návštěv'}`
-              : null;
-            return (
-              <path
-                key={i}
-                d={d}
-                fill={czech ? TINT[president] : LAND_BASE}
-                stroke={czech ? COLORS[president] : LAND_BORDER}
-                strokeWidth={czech ? 1.1 : 0.6}
-                onMouseEnter={countryTip ? (e => showTip(e, countryTip)) : undefined}
-                onMouseLeave={countryTip ? (() => onHover(null)) : undefined}
-                style={{ cursor: countryTip ? 'pointer' : 'default' }}
-              />
-            );
-          })}
-        </g>
-        <g>
-          {visible.map((d, i) => {
-            const p = path.projection<d3geo.GeoProjection>()([d.lon, d.lat]);
-            if (!p) return null;
-            return (
-              <circle
-                key={i}
-                cx={p[0]}
-                cy={p[1]}
-                r={4.5}
-                fill={COLORS[president]}
-                fillOpacity={0.95}
-                stroke={OCEAN}
-                strokeWidth={1}
-                onMouseEnter={e => showTip(e, tripTooltip(d))}
-                onMouseLeave={() => onHover(null)}
-                style={{ cursor: 'pointer' }}
-              />
-            );
-          })}
-        </g>
-      </svg>
+      <div style={{ position: 'relative' }}>
+        <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
+          <g>
+            {(countries as Array<{ properties: { name: string }; d: string | null }>).map((feat, i) => {
+              const czech = Array.from(visited).find(z => matchName(feat.properties.name, z));
+              const d = feat.d;
+              if (!d) return null;
+              const countryTrips = czech ? visible.filter(t => t.z === czech) : [];
+              const countryTip = czech
+                ? `${czech} · ${countryTrips.length} ${countryTrips.length === 1 ? 'návštěva' : countryTrips.length < 5 ? 'návštěvy' : 'návštěv'}`
+                : null;
+              return (
+                <path
+                  key={i}
+                  d={d}
+                  fill={czech ? TINT[president] : LAND_BASE}
+                  stroke={czech ? COLORS[president] : LAND_BORDER}
+                  strokeWidth={czech ? 1.1 : 0.6}
+                  onMouseEnter={countryTip ? (e => showTip(e, countryTip)) : undefined}
+                  onMouseLeave={countryTip ? (() => onHover(null)) : undefined}
+                  style={{ cursor: countryTip ? 'pointer' : 'default' }}
+                />
+              );
+            })}
+          </g>
+          <g>
+            {visible.map((d, i) => {
+              const p = path.projection<d3geo.GeoProjection>()([d.lon, d.lat]);
+              if (!p) return null;
+              return (
+                <circle
+                  key={i}
+                  cx={p[0]}
+                  cy={p[1]}
+                  r={4.5}
+                  fill={COLORS[president]}
+                  fillOpacity={0.95}
+                  stroke={OCEAN}
+                  strokeWidth={1}
+                  onMouseEnter={e => showTip(e, tripTooltip(d))}
+                  onMouseLeave={() => onHover(null)}
+                  style={{ cursor: 'pointer' }}
+                />
+              );
+            })}
+          </g>
+        </svg>
+        <div style={{ position: 'absolute', left: '50%', bottom: 12, transform: 'translateX(-50%)' }}>
+          <ChartSignature size={18} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -217,10 +222,10 @@ export default function PresidentialTripsMap() {
   const label = mandateLabel(value);
 
   return (
-    <div style={{ margin: '24px 0' }}>
+    <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div
         style={{
-          fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 20, fontWeight: 700,
+          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 20, fontWeight: 700,
           color: '#101432', lineHeight: 1.25, marginBottom: 2,
         }}
       >
@@ -238,7 +243,7 @@ export default function PresidentialTripsMap() {
         <HalfMap
           president="Z"
           label="ZEMAN"
-          years="2013–2023"
+          years="2013–23"
           countries={countries}
           path={path}
           height={height}
@@ -251,7 +256,7 @@ export default function PresidentialTripsMap() {
         <HalfMap
           president="P"
           label="PAVEL"
-          years="2023–2026"
+          years="2023–26"
           countries={countries}
           path={path}
           height={height}
@@ -278,14 +283,14 @@ export default function PresidentialTripsMap() {
             }} />
           </div>
         )}
-        <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-          <ChartSignature size={20} />
-        </div>
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 8 }}>
         <button
-          onClick={() => setPlaying(p => !p)}
+          onClick={() => {
+            if (!playing && value >= maxValue) setValue(0);
+            setPlaying(p => !p);
+          }}
           aria-label={playing ? 'Pozastavit mapu cest' : 'Přehrát mapu cest'}
           style={{ width: 32, height: 32, borderRadius: 4, border: '1px solid #c9c2af', background: '#fff', cursor: 'pointer' }}
         >
@@ -304,7 +309,7 @@ export default function PresidentialTripsMap() {
         </span>
       </div>
       <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
-        Srovnání podle počtu měsíců od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
+        Srovnání podle počtu dnů od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
       </p>
     </div>
   );

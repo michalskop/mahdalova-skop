@@ -41,15 +41,15 @@ const PAVEL_START = new Date(Date.UTC(2023, 2, 9));
 
 const MONTH_LABELS = ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'];
 
-const CELL = 5.2;
-const CELL_GAP = 0.9;
-const MONTH_GAP = 6;
+const CELL = 6.4;
+const CELL_GAP = 1.1;
+const MONTH_GAP = 7;
 const YEAR_LABEL_W = 56;
 const COLS = 7;
 const ROWS = 5; // ceil(31/7)
 const MONTH_W = COLS * (CELL + CELL_GAP);
 const MONTH_H = ROWS * (CELL + CELL_GAP);
-const ROW_H = MONTH_H + 20;
+const ROW_H = MONTH_H + 22;
 
 function toISO(d: Date): string {
   return d.toISOString().slice(0, 10);
@@ -227,15 +227,15 @@ export default function MandateCalendar() {
   const pavelCount = useMemo(() => countTripsUpTo(TRAVEL.pavelDi, counter), [counter]);
 
   return (
-    <div style={{ margin: '24px 0' }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
+    <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
         <div style={{
-          fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 20, fontWeight: 700,
-          color: '#101432', lineHeight: 1.25,
+          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 20, fontWeight: 700,
+          color: '#101432', lineHeight: 1,
         }}>
           Mapujeme cesty prezidentů den po dni
         </div>
-        <ChartSignature style={{ flex: '0 0 auto', marginTop: 3 }} />
+        <ChartSignature style={{ flex: '0 0 auto', lineHeight: 1 }} />
       </div>
       <div style={{
         display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 14, flexWrap: 'wrap',
