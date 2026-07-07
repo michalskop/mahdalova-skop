@@ -411,10 +411,21 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
   return (
     <>
       <style>{`
-        .specials-tile { box-shadow: inset 0 0 0 1px var(--mantine-color-default-border); }
+        .specials-tile { -webkit-mask-image: -webkit-radial-gradient(white, black); }
         .specials-tile:hover { transform: scale(1.025); }
+        .specials-tile::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 1px solid var(--mantine-color-default-border);
+          border-radius: inherit;
+          pointer-events: none;
+          z-index: 10;
+        }
         .carousel-outer {
           overflow: hidden;
+          padding: 16px;
+          margin: -16px;
           cursor: grab;
         }
         .carousel-outer.is-dragging { cursor: grabbing; }
