@@ -117,7 +117,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
           {label}
         </span>
         <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 11, color: '#fdfbf7', opacity: 0.85 }}>
-          {years}{frozen ? ' · mandát u konce, data se dál nemění' : ''}
+          {years}{frozen ? ' · mandát dosud běží, další data zatím nejsou' : ''}
         </span>
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
