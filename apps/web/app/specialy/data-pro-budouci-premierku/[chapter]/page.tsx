@@ -30,6 +30,7 @@ interface ChapterMeta {
   introChart?: string;
   intro?: { title: string; textBefore: string; textAfter: string; textClosing?: string };
   tiles?: Array<{ slug: string; topic: string }>;
+  postSupportTiles?: Array<{ slug: string; topic: string }>;
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -100,6 +101,10 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   // Pár 3: hlavní analýza 02 (vlevo) | hlavní analýza 03 (vpravo)
   // Pár 4: datová investigace (vlevo) | komparace/solution journalism (vpravo)
   const tiles = (meta.tiles ?? [])
+    .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
+    .filter(t => t.fm != null);
+
+  const postSupportTiles = (meta.postSupportTiles ?? [])
     .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
     .filter(t => t.fm != null);
 
@@ -242,9 +247,34 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 </div>
               ))}
             </Box>
-            <Box style={{ marginTop: 24 }}>
-              <SupportBanner />
-            </Box>
+          </Box>
+        )}
+
+        <Box style={{ marginTop: 24 }}>
+          <SupportBanner />
+        </Box>
+
+        {/* Pokračování kapitoly – dlaždice zařazené pod support banner */}
+        {postSupportTiles.length > 0 && (
+          <Box
+            className="dpbp-tile-grid"
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginTop: 24, marginBottom: 8 }}
+          >
+            {postSupportTiles.map(t => (
+              <div key={t.slug} style={t.fm!.logo ? { gridColumn: '1 / -1' } : undefined}>
+                <DpbpArticleCard
+                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
+                  title={t.fm!.title}
+                  excerpt={t.fm!.excerpt}
+                  author={t.fm!.author}
+                  chapterTitle={meta.title}
+                  primaryChartSpec={null}
+                  image={t.fm!.logo}
+                  accent={meta.accent}
+                  type={t.topic}
+                />
+              </div>
+            ))}
           </Box>
         )}
       </Container>

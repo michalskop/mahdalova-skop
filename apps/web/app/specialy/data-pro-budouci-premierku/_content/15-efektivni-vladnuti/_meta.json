@@ -28,7 +28,9 @@
     { "slug": "03-hlasovani-rebelovani", "topic": "Analýza" },
     { "slug": "05-overili-480-hodin", "topic": "Investigace" },
     { "slug": "06-francie-programovany-cas", "topic": "Komparace" },
-    { "slug": "07-obstrukce-2026", "topic": "Aktualizace" },
+    { "slug": "07-obstrukce-2026", "topic": "Aktualizace" }
+  ],
+  "postSupportTiles": [
     { "slug": "08-prezidentske-cesty", "topic": "Data story" }
   ]
 }
