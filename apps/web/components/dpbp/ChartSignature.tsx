@@ -1,0 +1,40 @@
+import Link from 'next/link';
+
+interface ChartSignatureProps {
+  size?: number;
+  color?: string;
+  style?: React.CSSProperties;
+}
+
+export default function ChartSignature({ size = 22, color = '#101432', style }: ChartSignatureProps) {
+  return (
+    <Link
+      href="https://datatimes.cz"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none',
+        fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: size * 0.6, fontWeight: 700,
+        color, opacity: 0.85, ...style,
+      }}
+    >
+      <svg width={size} height={size} viewBox="60 60 330 330" style={{ flex: '0 0 auto' }}>
+        <defs>
+          <linearGradient id="chartSignatureGradient" x1="1" x2="0.25" y1="0.5" y2="1">
+            <stop offset="0%" stopColor="#ffdc33" stopOpacity="0" />
+            <stop offset="50%" stopColor="#ffdc33" stopOpacity="0" />
+            <stop offset="50%" stopColor="#ffdc33" stopOpacity="1" />
+            <stop offset="100%" stopColor="#ffdc33" stopOpacity="1" />
+          </linearGradient>
+        </defs>
+        <g transform="rotate(-30 250 250)">
+          <path fill="none" stroke="#ffdc33" strokeWidth="76" strokeLinecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300" />
+          <path fill="none" stroke="#f76800" strokeWidth="76" strokeLinecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150" />
+          <path fill="none" stroke="#de1743" strokeWidth="76" strokeLinecap="round" d="M 250 150 A 100 100 0 0 0 250 350" />
+          <path fill="none" stroke="url(#chartSignatureGradient)" strokeWidth="76" strokeLinecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300" />
+        </g>
+      </svg>
+      DataTimes.cz
+    </Link>
+  );
+}

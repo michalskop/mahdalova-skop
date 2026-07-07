@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import travelDaysData from './data.json';
+import ChartSignature from '../ChartSignature';
 
 type HoverInfo = { text: string; left: number; top: number } | null;
 
@@ -227,6 +228,15 @@ export default function MandateCalendar() {
 
   return (
     <div style={{ margin: '24px 0' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
+        <div style={{
+          fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 20, fontWeight: 700,
+          color: '#101432', lineHeight: 1.25,
+        }}>
+          Mapujeme cesty prezidentů den po dni
+        </div>
+        <ChartSignature style={{ flex: '0 0 auto', marginTop: 3 }} />
+      </div>
       <div style={{
         display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 14, flexWrap: 'wrap',
         background: '#101432', padding: '10px 14px', borderRadius: 4,

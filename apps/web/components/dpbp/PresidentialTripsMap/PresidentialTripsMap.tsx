@@ -5,6 +5,7 @@ import * as d3geo from 'd3-geo';
 import * as d3proj from 'd3-geo-projection';
 import * as topojson from 'topojson-client';
 import tripsData from './data.json';
+import ChartSignature from '../ChartSignature';
 
 type Trip = {
   p: 'Z' | 'P';
@@ -110,7 +111,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
           {label}
         </span>
         <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 11, color: '#fdfbf7', opacity: 0.85 }}>
-          {years}{frozen ? ' · mandát dosud běží, další data zatím nejsou' : ''}
+          {years}{frozen ? ' · mandát dosud běží' : ''}
         </span>
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
@@ -277,6 +278,12 @@ export default function PresidentialTripsMap() {
             }} />
           </div>
         )}
+        <div style={{
+          position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
+          background: '#f8f6f0', borderRadius: 999, padding: '5px 10px 5px 6px', boxShadow: '0 1px 4px rgba(0,0,0,0.18)',
+        }}>
+          <ChartSignature size={20} />
+        </div>
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 8 }}>
