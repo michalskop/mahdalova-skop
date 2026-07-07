@@ -221,7 +221,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
     const inner = innerRef.current;
     if (!inner) return 0;
     const tile = inner.firstElementChild as HTMLElement | null;
-    return tile ? tile.offsetWidth + GAP : 0;
+    return tile ? tile.getBoundingClientRect().width + GAP : 0;
   };
 
   // Zruší probíhající RAF animaci i čekající wrap setTimeout
