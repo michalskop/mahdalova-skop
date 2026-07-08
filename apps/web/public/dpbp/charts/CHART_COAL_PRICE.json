@@ -16,17 +16,8 @@
  },
  "background": "#fdfbf7",
  "title": {
-  "text": "Uhelná kWh: Daň za špínu dominuje",
-  "subtitle": "Odhad nákladů 2025 (Kč/kWh bez DPH)",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Na uhelné elektřině je nejdražší povolenka, ne uhlí",
+  "subtitle": "Odhad nákladů na 1 kWh z hnědého uhlí, 2025 (Kč bez DPH)"
  },
  "data": {
   "values": [

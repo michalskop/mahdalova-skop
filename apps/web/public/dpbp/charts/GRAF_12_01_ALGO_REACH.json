@@ -1,85 +1,144 @@
 {
- "_source": "Zdroj: Online Risk Labs 2025, analýza DataTimes 2026",
+ "_source": "Zdroj: Online Risk Labs 2025, analýza DataTimes 2026 · Dosah sítě anonymních účtů kolísá mezi 5 a 9 miliony zhlédnutí týdně; sloupec ukazuje střed odhadu.",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "description": "Asymetrie pozornosti: Dosah dezinformačních sítí na TikToku vs. mainstreamoví politici",
- "width": 450,
- "height": 280,
- "padding": {
-  "top": 20,
-  "left": 10,
-  "right": 10,
-  "bottom": 60
- },
- "autosize": {
-  "type": "pad",
-  "resize": true
- },
- "background": "#fdfbf7",
+ "description": "Týdenní dosah dezinformační sítě vs. politiků na českém TikToku",
  "title": {
-  "text": "Asymetrie pozornosti: TikTok vs. Politici",
-  "subtitle": "Týdenní dosah v milionech zhlédnutí (ČR 2025)",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "286 anonymních účtů má na TikToku větší publikum než politici",
+  "subtitle": "Odhad týdenního dosahu na českém TikToku (miliony zhlédnutí, 2025)"
  },
+ "height": 130,
+ "background": "#f8f6f0",
  "data": {
   "values": [
    {
-    "entity": "TikTok Dezinfo síť (286 účtů)",
+    "entity": "286 anonymních účtů šířících prokremelské narativy",
+    "kratky": "286 anonymních účtů",
     "reach": 7,
-    "type": "Dezinformace"
+    "label": "5–9 mil. týdně",
+    "c": "dezinfo",
+    "poradi": 1
    },
    {
-    "entity": "Top 3 Mainstream politici",
+    "entity": "Tři nejsledovanější demokratičtí politici dohromady",
+    "kratky": "3 nejsledovanější politici",
     "reach": 1.5,
-    "type": "Demokratický dialog"
+    "label": "≈ 1,5 mil. týdně",
+    "c": "politici",
+    "poradi": 2
    }
   ]
  },
- "mark": {
-  "type": "bar",
-  "cornerRadiusEnd": 4,
-  "tooltip": true
- },
- "encoding": {
-  "y": {
-   "field": "entity",
-   "type": "nominal",
-   "title": null,
-   "axis": {}
-  },
-  "x": {
-   "field": "reach",
-   "type": "quantitative",
-   "title": "Miliony zhlédnutí týdně",
-   "axis": {}
-  },
-  "color": {
-   "field": "type",
-   "type": "nominal",
-   "scale": {
-    "domain": [
-     "Dezinformace",
-     "Demokratický dialog"
-    ],
-    "range": [
-     "#de1743",
-     "#0e839e"
-    ]
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "cornerRadiusEnd": 2,
+    "height": 46
    },
-   "legend": {
-    "title": null,
-    "orient": "bottom",
-    "offset": 20
+   "encoding": {
+    "y": {
+     "field": "poradi",
+     "type": "ordinal",
+     "axis": null
+    },
+    "x": {
+     "field": "reach",
+     "type": "quantitative",
+     "title": "miliony zhlédnutí týdně",
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "tickCount": 4
+     }
+    },
+    "color": {
+     "field": "c",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "dezinfo",
+       "politici"
+      ],
+      "range": [
+       "#de1743",
+       "#0e839e"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "entity",
+      "title": "Kdo"
+     },
+     {
+      "field": "label",
+      "title": "Týdenní dosah"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.c == 'dezinfo'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 12,
+    "fontWeight": "bold",
+    "fontSize": 15,
+    "color": "#ffffff"
+   },
+   "encoding": {
+    "y": {
+     "field": "poradi",
+     "type": "ordinal",
+     "axis": null
+    },
+    "x": {
+     "value": 0
+    },
+    "text": {
+     "value": "286 anonymních účtů · 5–9 mil. zhlédnutí týdně"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.c == 'politici'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontWeight": "bold",
+    "fontSize": 15,
+    "color": "#06677d"
+   },
+   "encoding": {
+    "y": {
+     "field": "poradi",
+     "type": "ordinal",
+     "axis": null
+    },
+    "x": {
+     "field": "reach",
+     "type": "quantitative"
+    },
+    "text": {
+     "value": "3 nejsledovanější politici dohromady · ≈ 1,5 mil."
+    }
    }
   }
- },
+ ],
  "config": {
   "view": {
    "stroke": "transparent"

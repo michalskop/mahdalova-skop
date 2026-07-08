@@ -1,10 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Vliv zázemí na výsledky PISA (ČR vs. OECD)",
-  "fontSize": 13,
-  "font": "Roboto Slab",
-  "anchor": "start"
+  "text": "Chudší čtvrtina žáků ztrácí v Česku víc než jinde",
+  "subtitle": "Skóre PISA v matematice: nejchudší vs. nejbohatší čtvrtina žáků"
  },
  "width": 450,
  "padding": 5,

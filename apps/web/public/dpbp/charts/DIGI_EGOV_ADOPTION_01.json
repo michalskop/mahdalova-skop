@@ -1,11 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Digitální dovednosti vs. adopce e-governmentu (2025)",
-  "subtitle": "Česko má talentovanou populaci, ale naráží na bariéry služeb",
-  "anchor": "start",
-  "font": "Roboto Slab",
-  "fontSize": 13
+  "text": "Lidé digitální jsou, služby státu za nimi zaostávají",
+  "subtitle": "Podíl obyvatel se základními digitálními dovednostmi a využití e-governmentu, ČR vs. EU (2025)"
  },
  "width": 450,
  "height": 200,
@@ -86,5 +83,6 @@
  ],
  "usermeta": {
   "_source": "Digital Decade 2025 (Evropská komise)"
- }
+ },
+ "_source": "• autoři: Kateřina Mahdalová & Michal Škop • data: Evropská komise, Digital Decade Report 2025"
 }

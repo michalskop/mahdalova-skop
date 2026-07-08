@@ -16,17 +16,8 @@
  },
  "background": "#fdfbf7",
  "title": {
-  "text": "Dva světy jedné soustavy",
-  "subtitle": "Srovnání výroby v TWh brutto: Leden vs. Červenec 2024",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Slunce: v lednu setina výroby, v červenci desetina",
+  "subtitle": "Výroba elektřiny podle zdrojů, leden vs. červenec 2024 (TWh)"
  },
  "data": {
   "values": [

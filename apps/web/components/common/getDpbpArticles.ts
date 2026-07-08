@@ -29,7 +29,7 @@ const CHAPTER_LABELS: Record<string, string> = {
   '09-energie-a-energeticka-bezpecnost': 'Energetika',
   '10-klimaticka-zmena': 'Klima',
   '11-bezpecnost-a-konflikty': 'Bezpečnost',
-  '12-medialni-manipulace': 'Média',
+  '12-informacni-manipulace': 'Média',
   '13-oligarchizace-a-korupce': 'Korupce',
   '14-verejne-finance-a-dane': 'Daně',
   '15-efektivni-vladnuti': 'Vládnutí',

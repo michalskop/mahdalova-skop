@@ -16,17 +16,8 @@
  },
  "background": "#fdfbf7",
  "title": {
-  "text": "Kolik peněz potřebuje stopu",
-  "subtitle": "Roční objemy a jedna kauza pro měřítko rizika",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Kauza Motol je kapka. Systém rozděluje bilion ročně",
+  "subtitle": "Roční objem veřejných nákupů a dotací vs. jedna medializovaná kauza (mld. Kč)"
  },
  "data": {
   "values": [

@@ -2,15 +2,17 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { robotoCondensed } from '@/app/fonts';
+import ChartSignature from './ChartSignature';
 
-// Jednotná typografie grafů (viz Flourish vzor): Roboto Condensed všude,
-// titulek 20/bold, podtitulek 14, patička/osy 11,5, legenda 12,5.
+// Jednotná typografie grafů (viz Flourish vzor a DESIGN.md §Grafy):
+// Roboto Condensed všude, titulek 20/bold, podtitulek 14, osy/hodnoty 13,
+// legenda 13,5, patička 12 – vše #333333 (kromě titulku #1a1a1a).
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
-  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 11.5, titleFontSize: 11.5 },
-  legend: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 12.5, titleFontSize: 12.5 },
-  text: { font: CHART_FONT },
+  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13, titleFontSize: 13, labelColor: '#333333', titleColor: '#333333' },
+  legend: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13.5, titleFontSize: 13.5, labelColor: '#333333' },
+  text: { font: CHART_FONT, fontSize: 13 },
   header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
 };
 
@@ -149,8 +151,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       padding: '20px 16px 14px',
       margin: '2em 0',
     }}>
-      {/* Header – always present; content appears once meta loads */}
-      <div style={{ marginBottom: (meta.title || meta.subtitle) ? 14 : 0 }}>
+      {/* Header – always present; content appears once meta loads.
+          Vpravo podpis DataTimes.cz (horizontální varianta loga). */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: (meta.title || meta.subtitle) ? 14 : 0 }}>
+      <div style={{ minWidth: 0 }}>
         {meta.title && (
           <div style={{
             fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
@@ -174,6 +178,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
           </div>
         )}
       </div>
+      {(meta.title || meta.subtitle) && (
+        <ChartSignature size={30} style={{ flex: '0 0 auto', marginTop: 2 }} />
+      )}
+      </div>
 
       {/* Chart canvas */}
       <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
@@ -190,7 +198,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       {meta.source && (
         <div style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 11.5,
+          fontSize: 12,
           color: '#333333',
           marginTop: 10,
         }}>

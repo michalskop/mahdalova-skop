@@ -1,11 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Trend výsledků PISA v matematice (2003–2022)",
-  "subtitle": "Průměrné bodové skóre; ČR vs. Estonsko a OECD",
-  "fontSize": 13,
-  "font": "Roboto Slab",
-  "anchor": "start"
+  "text": "Od roku 2003 ztratilo Česko v matematice skoro třicet bodů",
+  "subtitle": "Průměrné skóre PISA v matematice; ČR vs. Estonsko a průměr OECD"
  },
  "width": 450,
  "height": 300,

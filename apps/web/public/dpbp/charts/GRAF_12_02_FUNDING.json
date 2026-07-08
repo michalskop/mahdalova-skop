@@ -17,16 +17,7 @@
  "background": "#fdfbf7",
  "title": {
   "text": "Ekonomika strachu: kdo platí dezinformační stroj?",
-  "subtitle": "Doložené metriky místo odhadovaných podílů",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "subtitle": "Co se o penězích dezinformačních webů podařilo doložit (PSSI, NELEŽ)"
  },
  "data": {
   "values": [

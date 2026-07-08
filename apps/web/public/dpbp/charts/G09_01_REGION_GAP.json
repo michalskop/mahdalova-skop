@@ -1,10 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Regionální GDP Gap v ČR vs. EU průměr",
-  "fontSize": 13,
-  "font": "Roboto Slab",
-  "anchor": "start"
+  "text": "Praha odskakuje, Severozápad se za dekádu nepohnul",
+  "subtitle": "HDP na obyvatele jako procento průměru EU (2015 vs. 2025)"
  },
  "width": 450,
  "padding": 5,

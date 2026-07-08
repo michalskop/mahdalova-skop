@@ -16,17 +16,8 @@
  },
  "background": "#fdfbf7",
  "title": {
-  "text": "Munice: Propast mezi výrobou a frontou",
-  "subtitle": "Měsíční objem dělostřelecké munice 155mm (kusy)",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#272a59",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Ukrajina spotřebuje víc munice, než Západ stíhá vyrábět",
+  "subtitle": "Měsíční objem dělostřeleckých granátů ráže 155 mm (kusy, 2024)"
  },
  "data": {
   "values": [

@@ -1,11 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Extrémní fragmentace zřizovatelů škol v ČR",
-  "subtitle": "Počet obcí podle počtu zřizovaných základních škol",
-  "fontSize": 13,
-  "font": "Roboto Slab",
-  "anchor": "start"
+  "text": "2 635 zřizovatelů: devět z deseti obcí řídí jedinou školu",
+  "subtitle": "Počet obcí podle počtu zřizovaných základních škol"
  },
  "width": 450,
  "height": 350,

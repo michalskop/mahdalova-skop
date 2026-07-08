@@ -16,17 +16,8 @@
  },
  "background": "#fdfbf7",
  "title": {
-  "text": "Bitva o krajinu: Křemík vs. Asfalt",
-  "subtitle": "Srovnání plochy v km² (data ČÚZK 2024 vs. odhad pro FVE)",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Silnice zabírají trojnásobek plochy, kterou by chtěly soláry",
+  "subtitle": "Zábor plochy v km² (ČÚZK 2024; FVE = odhad plochy pro náhradu uhlí)"
  },
  "data": {
   "values": [

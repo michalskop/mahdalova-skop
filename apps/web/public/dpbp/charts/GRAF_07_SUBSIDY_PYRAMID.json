@@ -16,17 +16,8 @@
  },
  "background": "#fdfbf7",
  "title": {
-  "text": "Dotační sklon: 1 % proti zbytku",
-  "subtitle": "Podíl na penězích SZP, lineární měřítko",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#1a1a1a",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Jedno procento příjemců, čtyřicet procent peněz",
+  "subtitle": "Rozdělení plateb Společné zemědělské politiky EU"
  },
  "data": {
   "values": [

@@ -14,7 +14,7 @@ export default function ChartSignature({ size = 22, color = '#101432', style }: 
       rel="noopener noreferrer"
       style={{
         display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none',
-        fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: size * 0.64, fontWeight: 700,
+        fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: size * 0.52, fontWeight: 700,
         color, lineHeight: 1, ...style,
       }}
     >
