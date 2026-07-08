@@ -277,6 +277,24 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
     return () => { cancelCurrentAnim(); };
   }, [cancelCurrentAnim]);
 
+  // Při resize přepočítáme scrollLeft podle aktuální šířky dlaždic
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const observer = new ResizeObserver(() => {
+      cancelCurrentAnim();
+      const tileW = getTileW();
+      if (!tileW) return;
+      track.style.scrollSnapType = 'none';
+      track.scrollLeft = posRef.current * tileW;
+      requestAnimationFrame(() => {
+        if (trackRef.current) trackRef.current.style.scrollSnapType = '';
+      });
+    });
+    observer.observe(track);
+    return () => observer.disconnect();
+  }, [cancelCurrentAnim]);
+
   function handleDot(i: number) {
     goToExt(i + EXT_START);
   }
