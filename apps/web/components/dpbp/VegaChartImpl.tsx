@@ -8,10 +8,17 @@ import ChartSignature from './ChartSignature';
 // Roboto Condensed všude, titulek 20/bold, podtitulek 14, osy/hodnoty 13,
 // legenda 13,5, patička 12 – vše #333333 (kromě titulku #1a1a1a).
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
+// Legenda: čtvercová tlačítka se zakulacenými rohy, standardně nahoře na středu
+// (vypínání sérií řeší per-spec param s bind: "legend").
+const LEGEND_SYMBOL = 'M -0.45 -0.65 L 0.45 -0.65 Q 0.65 -0.65 0.65 -0.45 L 0.65 0.45 Q 0.65 0.65 0.45 0.65 L -0.45 0.65 Q -0.65 0.65 -0.65 0.45 L -0.65 -0.45 Q -0.65 -0.65 -0.45 -0.65 Z';
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
   axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13, titleFontSize: 13, labelColor: '#333333', titleColor: '#333333' },
-  legend: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13.5, titleFontSize: 13.5, labelColor: '#333333' },
+  legend: {
+    labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13.5, titleFontSize: 13.5, labelColor: '#333333',
+    orient: 'top', symbolType: LEGEND_SYMBOL, symbolSize: 280, symbolStrokeWidth: 0,
+    layout: { top: { anchor: 'middle' } },
+  },
   text: { font: CHART_FONT, fontSize: 13 },
   header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
 };

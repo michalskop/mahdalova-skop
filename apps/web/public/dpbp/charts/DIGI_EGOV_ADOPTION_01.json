@@ -6,7 +6,7 @@
   "text": "Lidé digitální dovednosti mají, služby státu za nimi zaostávají",
   "subtitle": "Podíl obyvatel se základními digitálními dovednostmi a využití e-governmentu, ČR vs. EU (2025)"
  },
- "height": 210,
+ "height": 240,
  "background": "#f8f6f0",
  "data": {
   "values": [
@@ -38,11 +38,23 @@
  },
  "layer": [
   {
+   "params": [
+    {
+     "name": "serie",
+     "select": {
+      "type": "point",
+      "fields": [
+       "e"
+      ]
+     },
+     "bind": "legend"
+    }
+   ],
    "mark": {
     "type": "bar",
     "tooltip": true,
     "cornerRadiusEnd": 2,
-    "height": 26
+    "height": 30
    },
    "encoding": {
     "y": {
@@ -69,7 +81,7 @@
      "scale": {
       "domain": [
        0,
-       90
+       97
       ]
      },
      "axis": {
@@ -77,7 +89,17 @@
       "gridColor": "#e8e8dc",
       "domain": false,
       "ticks": false,
-      "tickCount": 6
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "titleAngle": 0,
+      "titleAnchor": "end",
+      "titleAlign": "right",
+      "titlePadding": -14,
+      "titleFontWeight": "bold"
      }
     },
     "color": {
@@ -95,8 +117,21 @@
      },
      "legend": {
       "title": null,
-      "orient": "right"
+      "orient": "top",
+      "direction": "horizontal",
+      "symbolType": "M -0.45 -0.65 L 0.45 -0.65 Q 0.65 -0.65 0.65 -0.45 L 0.65 0.45 Q 0.65 0.65 0.45 0.65 L -0.45 0.65 Q -0.65 0.65 -0.65 0.45 L -0.65 -0.45 Q -0.65 -0.65 -0.45 -0.65 Z",
+      "symbolSize": 280,
+      "symbolStrokeWidth": 0,
+      "labelFontSize": 14,
+      "padding": 4
      }
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
     },
     "tooltip": [
      {
@@ -118,9 +153,9 @@
    "mark": {
     "type": "text",
     "align": "left",
-    "dx": 5,
+    "dx": 6,
     "fontWeight": "bold",
-    "fontSize": 13.5
+    "fontSize": 14.5
    },
    "encoding": {
     "y": {
@@ -173,7 +208,7 @@
     "align": "left",
     "dx": 12,
     "fontWeight": "bold",
-    "fontSize": 15,
+    "fontSize": 16,
     "color": "#ffffff"
    },
    "encoding": {
@@ -204,6 +239,13 @@
  "config": {
   "view": {
    "stroke": "transparent"
+  },
+  "legend": {
+   "layout": {
+    "top": {
+     "anchor": "middle"
+    }
+   }
   }
  }
 }
