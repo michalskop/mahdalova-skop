@@ -242,7 +242,7 @@ export default function MandateCalendar() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
         <div style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 26, fontWeight: 700,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
           color: '#101432', lineHeight: 1,
         }}>
           Cesty prezidentů den po dni
@@ -327,11 +327,11 @@ export default function MandateCalendar() {
           onChange={e => { setPlaying(false); setCounter(Number(e.target.value)); }}
           style={{ flex: 1, accentColor: '#de1743' }}
         />
-        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#888', minWidth: 60, textAlign: 'right' }}>
+        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', minWidth: 60, textAlign: 'right' }}>
           {counter}/{maxCounter}
         </span>
       </div>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#888', marginTop: 6 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 6 }}>
         Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
       </p>
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12.5, color: '#333333', marginTop: 10 }}>

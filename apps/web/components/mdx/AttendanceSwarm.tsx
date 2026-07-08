@@ -189,8 +189,8 @@ export function AttendanceSwarmChart({
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 14 }}>
         <div>
-          <div style={{ fontSize: 21, fontWeight: 700, lineHeight: 1.2, marginBottom: 4 }}>{title}</div>
-          <div style={{ fontSize: 13, color: '#666', lineHeight: 1.3 }}>{subtitle}</div>
+          <div style={{ fontSize: 20, fontWeight: 700, lineHeight: 1.2, marginBottom: 4 }}>{title}</div>
+          <div style={{ fontSize: 14, color: '#333333', lineHeight: 1.3 }}>{subtitle}</div>
         </div>
         <a
           href="https://datatimes.cz"
@@ -221,7 +221,7 @@ export function AttendanceSwarmChart({
                       strokeDasharray={t === yMin ? undefined : '3 3'}
                       opacity={0.6}
                     />
-                    <text x={-8} y={y} dy="0.35em" textAnchor="end" fontSize={11} fill="#888" fontFamily="inherit">
+                    <text x={-8} y={y} dy="0.35em" textAnchor="end" fontSize={11} fill="#333333" fontFamily="inherit">
                       {formatY(t)}
                     </text>
                   </g>
@@ -320,7 +320,7 @@ export function AttendanceSwarmChart({
                     {/* Count */}
                     <text
                       x={cx} y={innerH + 8 + ICON + 12}
-                      textAnchor="middle" fontSize={10} fill="#888" fontFamily="inherit"
+                      textAnchor="middle" fontSize={10} fill="#333333" fontFamily="inherit"
                     >
                       {`n=${items.length}`}
                     </text>
