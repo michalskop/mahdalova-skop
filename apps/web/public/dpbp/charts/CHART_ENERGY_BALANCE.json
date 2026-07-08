@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ERÚ (Roční zprávy o provozu ES ČR 2018–2024)",
+ "_source": "ERÚ (Roční zprávy o provozu ES ČR 2018–2024)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Bilance výroby a spotřeby elektřiny v ČR (2018-2024)",
  "width": 450,

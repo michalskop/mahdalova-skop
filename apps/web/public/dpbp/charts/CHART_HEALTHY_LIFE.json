@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: OECD Health Statistics 2025",
+ "_source": "OECD Health Statistics 2025",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Měřítko věcí: Naděje dožití ve zdraví po 65. roce (Healthy Life Years)",
  "width": 450,

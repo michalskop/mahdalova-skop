@@ -1,5 +1,5 @@
 {
- "_source": "Zdroje: [OECD Employment Outlook 2023, Fig. 4.20 – occupations at highest risk of automation, 2019](https://stat.link/xkr98z), [Cedefop 2024 – Fear of losing your job due to AI](https://digital-skills-jobs.europa.eu/en/latest/news/ai-changing-workplaces-slovakia)",
+ "_source": "[OECD Employment Outlook 2023, Fig. 4.20 – occupations at highest risk of automation, 2019](https://stat.link/xkr98z), [Cedefop 2024 – Fear of losing your job due to AI](https://digital-skills-jobs.europa.eu/en/latest/news/ai-changing-workplaces-slovakia)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Paradox nebezpečného klidu: klasické automatizační riziko vs. obavy pracovníků ze ztráty práce kvůli automatizaci a AI",
  "width": 450,

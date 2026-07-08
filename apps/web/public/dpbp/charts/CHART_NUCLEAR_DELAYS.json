@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: WNA, IEA, výroční zprávy ČEZ a KHNP (stav k 2025)",
+ "_source": "WNA, IEA, výroční zprávy ČEZ a KHNP (stav k 2025)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Jaderný optimismus vs. Evropská realita: Zpoždění staveb",
  "width": 450,

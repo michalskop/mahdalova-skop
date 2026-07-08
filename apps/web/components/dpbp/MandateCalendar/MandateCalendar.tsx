@@ -334,8 +334,8 @@ export default function MandateCalendar() {
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 6 }}>
         Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
       </p>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12.5, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
+        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>
   );

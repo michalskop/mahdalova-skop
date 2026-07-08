@@ -16,6 +16,29 @@ const CHART_FONT_CONFIG = {
   header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
 };
 
+// Patička: _source ve specu obsahuje UZ JEN zdroj dat (bez autorů) –
+// autory s prolinkem na DataTimes.cz doplňuje komponenta u každého grafu.
+// Markdownové odkazy [text](url) ve zdroji se vykreslí jako <a>.
+function renderSource(src: string) {
+  const parts: React.ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let i = 0;
+  while ((m = re.exec(src)) !== null) {
+    if (m.index > last) parts.push(src.slice(last, m.index));
+    parts.push(
+      <a key={i++} href={m[2]} target="_blank" rel="noopener noreferrer"
+        style={{ color: '#333333', textDecoration: 'underline' }}>
+        {m[1]}
+      </a>
+    );
+    last = m.index + m[0].length;
+  }
+  parts.push(src.slice(last));
+  return parts;
+}
+
 function mergeFontConfig(config: unknown): Record<string, unknown> {
   const base = typeof config === 'object' && config !== null ? config as Record<string, unknown> : {};
   return {
@@ -198,11 +221,18 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       {meta.source && (
         <div style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 12,
+          fontSize: 14,
           color: '#333333',
           marginTop: 10,
+          lineHeight: 1.45,
         }}>
-          {meta.source}
+          {'• autoři: '}
+          <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer"
+            style={{ color: '#333333', textDecoration: 'underline' }}>
+            Kateřina Mahdalová &amp; Michal Škop
+          </a>
+          {' • data: '}
+          {renderSource(meta.source)}
         </div>
       )}
     </div>

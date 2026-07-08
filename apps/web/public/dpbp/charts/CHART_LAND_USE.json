@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ČÚZK (2024), ŘSD (Délka vozovek), CzechInvest (Brownfieldy)",
+ "_source": "ČÚZK (2024), ŘSD (Délka vozovek), CzechInvest (Brownfieldy)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Srovnání plochy v ČR: Doprava vs. Energetika",
  "width": 450,

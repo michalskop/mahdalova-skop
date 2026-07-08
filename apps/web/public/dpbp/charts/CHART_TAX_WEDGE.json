@@ -1,5 +1,5 @@
 {
- "_source": "Zdroje: [OECD Taxing Wages 2026: Czechia – tax wedge, single worker 2025](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/taxing-wages-2026-country-notes_491a0e97/czechia_43e03785/e5066e64-en.pdf), [zákon č. 586/1992 Sb., o daních z příjmů, § 21 odst. 1](https://www.zakonyprolidi.cz/cs/1992-586#p21)",
+ "_source": "[OECD Taxing Wages 2026: Czechia – tax wedge, single worker 2025](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/taxing-wages-2026-country-notes_491a0e97/czechia_43e03785/e5066e64-en.pdf), [zákon č. 586/1992 Sb., o daních z příjmů, § 21 odst. 1](https://www.zakonyprolidi.cz/cs/1992-586#p21)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Fiskální hrozba: daňový klín práce vs. základní sazba daně z příjmů právnických osob v ČR",
  "width": 450,

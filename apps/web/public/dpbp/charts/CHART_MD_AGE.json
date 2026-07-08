@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ÚZIS, Registr zdravotnických pracovníků 2024",
+ "_source": "ÚZIS, Registr zdravotnických pracovníků 2024",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Věková struktura lékařů v ČR: Podíl lékařů v důchodovém věku (65+)",
  "width": 450,

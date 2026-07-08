@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ČHMÚ, Intersucho, Fakta o klimatu (1961–2024)",
+ "_source": "ČHMÚ, Intersucho, Fakta o klimatu (1961–2024)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Nůžky sucha: Stabilní srážky vs. rostoucí výpar (1961-2024)",
  "width": 450,

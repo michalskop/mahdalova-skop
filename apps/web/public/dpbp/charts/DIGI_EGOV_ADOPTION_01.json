@@ -1,88 +1,209 @@
 {
+ "_source": "Evropská komise, Digital Decade Report 2025",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Digitální dovednosti obyvatel vs. využití e-governmentu, ČR a EU",
  "title": {
-  "text": "Lidé digitální jsou, služby státu za nimi zaostávají",
+  "text": "Lidé digitální dovednosti mají, služby státu za nimi zaostávají",
   "subtitle": "Podíl obyvatel se základními digitálními dovednostmi a využití e-governmentu, ČR vs. EU (2025)"
  },
- "width": 450,
- "height": 200,
+ "height": 210,
+ "background": "#f8f6f0",
  "data": {
   "values": [
    {
-    "Metric": "Digitální dovednosti",
-    "Entity": "ČR",
-    "Value": 0.6911
+    "m": "Adopce e-governmentu",
+    "e": "EU průměr",
+    "v": 82,
+    "lab": "82 %"
    },
    {
-    "Metric": "Digitální dovednosti",
-    "Entity": "EU průměr",
-    "Value": 0.5556
+    "m": "Adopce e-governmentu",
+    "e": "ČR",
+    "v": 78,
+    "lab": "78 %"
    },
    {
-    "Metric": "Adopce e-governmentu",
-    "Entity": "ČR",
-    "Value": 0.78
+    "m": "Digitální dovednosti",
+    "e": "EU průměr",
+    "v": 56,
+    "lab": "56 %"
    },
    {
-    "Metric": "Adopce e-governmentu",
-    "Entity": "EU průměr",
-    "Value": 0.82
+    "m": "Digitální dovednosti",
+    "e": "ČR",
+    "v": 69,
+    "lab": "69 %"
    }
   ]
  },
- "encoding": {
-  "y": {
-   "field": "Metric",
-   "type": "nominal",
-   "title": null,
-   "axis": {}
-  },
-  "x": {
-   "field": "Value",
-   "type": "quantitative",
-   "title": "Podíl populace (%)",
-   "axis": {
-    "format": "%"
-   }
-  },
-  "color": {
-   "field": "Entity",
-   "type": "nominal",
-   "scale": {
-    "range": [
-     "#de1743",
-     "#6267a3"
-    ]
-   },
-   "legend": {}
-  },
-  "yOffset": {
-   "field": "Entity"
-  }
- },
  "layer": [
   {
-   "mark": "bar"
+   "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "cornerRadiusEnd": 2,
+    "height": 26
+   },
+   "encoding": {
+    "y": {
+     "field": "m",
+     "type": "nominal",
+     "sort": [
+      "Adopce e-governmentu",
+      "Digitální dovednosti"
+     ],
+     "axis": null,
+     "title": null
+    },
+    "yOffset": {
+     "field": "e",
+     "sort": [
+      "EU průměr",
+      "ČR"
+     ]
+    },
+    "x": {
+     "field": "v",
+     "type": "quantitative",
+     "title": "podíl populace (%)",
+     "scale": {
+      "domain": [
+       0,
+       90
+      ]
+     },
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "tickCount": 6
+     }
+    },
+    "color": {
+     "field": "e",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "EU průměr",
+       "ČR"
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "right"
+     }
+    },
+    "tooltip": [
+     {
+      "field": "m",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "e",
+      "title": "Kdo"
+     },
+     {
+      "field": "lab",
+      "title": "Podíl populace"
+     }
+    ]
+   }
   },
   {
    "mark": {
     "type": "text",
     "align": "left",
-    "baseline": "middle",
-    "dx": 3,
-    "fontSize": 10
+    "dx": 5,
+    "fontWeight": "bold",
+    "fontSize": 13.5
    },
    "encoding": {
+    "y": {
+     "field": "m",
+     "type": "nominal",
+     "sort": [
+      "Adopce e-governmentu",
+      "Digitální dovednosti"
+     ]
+    },
+    "yOffset": {
+     "field": "e",
+     "sort": [
+      "EU průměr",
+      "ČR"
+     ]
+    },
+    "x": {
+     "field": "v",
+     "type": "quantitative"
+    },
     "text": {
-     "field": "Value",
-     "type": "quantitative",
-     "format": ".0%"
+     "field": "lab"
+    },
+    "color": {
+     "field": "e",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "EU průměr",
+       "ČR"
+      ],
+      "range": [
+       "#c5143c",
+       "#4c4f8e"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.e == 'EU průměr'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 12,
+    "fontWeight": "bold",
+    "fontSize": 15,
+    "color": "#ffffff"
+   },
+   "encoding": {
+    "y": {
+     "field": "m",
+     "type": "nominal",
+     "sort": [
+      "Adopce e-governmentu",
+      "Digitální dovednosti"
+     ]
+    },
+    "yOffset": {
+     "field": "e",
+     "sort": [
+      "EU průměr",
+      "ČR"
+     ]
+    },
+    "x": {
+     "value": 0
+    },
+    "text": {
+     "field": "m"
     }
    }
   }
  ],
- "usermeta": {
-  "_source": "Digital Decade 2025 (Evropská komise)"
- },
- "_source": "• autoři: Kateřina Mahdalová & Michal Škop • data: Evropská komise, Digital Decade Report 2025"
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ }
 }

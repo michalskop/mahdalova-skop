@@ -1,5 +1,5 @@
 {
- "_source": "Zdroje: CSIS Epic Fury; Reuters k PAC-3 MSE kontraktu 2025; War on the Rocks k nákladům střel; Pozn.: Poměry jsou orientační intervaly, ceny střel a dronů nejsou vždy zcela metodicky srovnatelné.",
+ "_source": "CSIS Epic Fury; Reuters k PAC-3 MSE kontraktu 2025; War on the Rocks k nákladům střel; Pozn.: Poměry jsou orientační intervaly, ceny střel a dronů nejsou vždy zcela metodicky srovnatelné.",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Poměr ceny obranné střely k ceně sestřelovaného dronu",
  "title": {

@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: Data Brno, Bytový trh v Brně k roku 2025 / Deloitte Property Index 2025",
+ "_source": "Data Brno, Bytový trh v Brně k roku 2025 / Deloitte Property Index 2025",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Srovnání dostupnosti bytů v Praze, Brně a Ostravě podle počtu ročních průměrných platů",
  "title": {

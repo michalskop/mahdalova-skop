@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ČÚZK (2024), ŘSD, CzechInvest, NREL / Rozloha ČR: 78 866 km²",
+ "_source": "ČÚZK (2024), ŘSD, CzechInvest, NREL / Rozloha ČR: 78 866 km²",
  "_total_width": 430,
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Srovnání plochy: 4 silhouety ČR v mřížce 2×2, každá s čtvercem v poměru k rozloze ČR",

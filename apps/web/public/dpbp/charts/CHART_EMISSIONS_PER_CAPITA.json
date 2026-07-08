@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: EDGAR (Emissions Database for Global Atmospheric Research) 2025, Eurostat",
+ "_source": "EDGAR (Emissions Database for Global Atmospheric Research) 2025, Eurostat",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Historický zlom: Emise na obyvatele (t CO2eq / os)",
  "width": 450,

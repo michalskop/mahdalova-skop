@@ -1,5 +1,5 @@
 {
- "_source": "• autoři: Kateřina Mahdalová & Michal Škop • data: Poslanecká sněmovna PČR",
+ "_source": "Poslanecká sněmovna PČR",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Kolik měsíců potřebovala Sněmovna k projednání 600 bodů",
  "title": {

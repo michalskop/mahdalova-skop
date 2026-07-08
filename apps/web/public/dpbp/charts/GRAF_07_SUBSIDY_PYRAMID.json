@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: SZIF / Greenpeace EU 2026",
+ "_source": "SZIF / Greenpeace EU 2026",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Podíl zemědělských dotací podle velikosti příjemců",
  "width": 450,

@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ERÚ, EU ETS Market data (Odhad 2025)",
+ "_source": "ERÚ, EU ETS Market data (Odhad 2025)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Složení nákladové ceny elektřiny z hnědého uhlí v ČR (2025)",
  "width": 450,

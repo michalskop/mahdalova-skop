@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: Kancelář prezidenta republiky, Wikipedie (Prezidentské milosti Miloše Zemana / Petra Pavla), ČT24, iROZHLAS, Česká justice. Data k 7. 7. 2026.",
+ "_source": "Kancelář prezidenta republiky, veřejná oznámení o udělených milostech",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Kumulativní počet udělených prezidentských milostí podle dne mandátu",
  "height": 260,

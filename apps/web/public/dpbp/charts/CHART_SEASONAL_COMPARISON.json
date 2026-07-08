@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: ERÚ, Měsíční zprávy o provozu ES ČR (Leden a Červenec 2024)",
+ "_source": "ERÚ, Měsíční zprávy o provozu ES ČR (Leden a Červenec 2024)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Sezónní propast: Výroba elektřiny v ČR (Leden vs. Červenec 2024)",
  "width": 200,

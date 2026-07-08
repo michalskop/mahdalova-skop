@@ -1,5 +1,5 @@
 {
- "_source": "Zdroj: EDGAR Database 2025 / Fakta o klimatu",
+ "_source": "EDGAR Database 2025 / Fakta o klimatu",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Měřítko věcí: Roční emise ČR vs. roční nárůst Číny",
  "width": 450,
