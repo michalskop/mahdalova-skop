@@ -149,7 +149,7 @@
 .dt-infobox a:hover,
 .dt-visual-source a:hover { text-decoration-color: var(--dt-crimson); }
 .dt-keystat-source {
-  color: #888;
+  color: #333333;
   font-size: 12px;
   display: block;
   margin-top: 4px;
@@ -336,20 +336,24 @@
   margin: 0 0 8px;
 }
 .dt-visual-title {
-  font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 17px;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1.25;
   margin: 0 0 8px;
   padding-right: 86px;
   color: var(--dt-text);
 }
 .dt-visual-note {
-  font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 13px;
-  color: var(--dt-muted);
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
   line-height: 1.55;
   margin: 0 0 14px;
   padding-right: 86px;
+}
+.dt-visual svg text {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
 }
 .dt-visual-svg {
   width: 100%;
@@ -368,9 +372,9 @@
 }
 .dt-visual-source,
 .dt-visual-authors {
-  font-family: 'Roboto', system-ui, sans-serif;
-  font-size: 13px;
-  color: #777;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 12px;
+  color: #333333;
   line-height: 1.55;
   margin: 0;
 }
@@ -894,7 +898,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
         <text x="540" y="102">1,71</text>
         <text x="620" y="184" fill="#de1743">1,28</text>
       </g>
-      <g font-size="11" fill="#555" text-anchor="middle">
+      <g font-size="11" fill="#333333" text-anchor="middle">
         <text x="60" y="285">1990</text>
         <text x="140" y="285">1995</text>
         <text x="220" y="285">2000</text>
