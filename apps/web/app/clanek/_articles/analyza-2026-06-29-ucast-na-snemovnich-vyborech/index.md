@@ -1,15 +1,15 @@
 ---
-title: "Data: Výbory Sněmovny – Turek, Decroix, Okleštěk, Válek"
+title: "Data: Na výbory chodí poslanci poctivě. Decroix, Okleštěk a Válek ale vynechali každou druhou schůzi"
 date: "2026-06-29"
 author: "Michal Škop, Kateřina Mahdalová"
-excerpt: "Poslanecká sněmovna zvolená v říjnu 2025 má 18 výborů. Zmapovali jsme, jak často jejich členové přicházejí na jednání. Průměrná účast je 86 %, ale rozdíly mezi poslanci jsou velké."
+excerpt: "Poslanecká sněmovna zvolená v říjnu 2025 má 18 výborů. Zmapovali jsme, jak často jejich členové chodí na jednání. Průměrná účast je 86 procent – ale mezi pětinou poslanců, kteří nevynechali nic, a těmi, kdo chybí na každé druhé schůzi, leží velký rozdíl."
 coverImage: "images/turek.webp"
 filter: ["analýza"]
 tags: ["sněmovna", "výbory", "poslanci", "účast", "parlament"]
 promoted: 0
 ---
 
-Skoro každý poslanec Sněmovny Parlamentu České republiky pracuje obvykle v jednom nebo dvou výborech. Výbory projednávají zákony, kontrolují vládu a jsou místem, kde se odehrává největší část legislativní práce - daleko od večerních zpráv a televizních kamer. V žádném výboru obvykle nejsou jen poslanci, kteří jsou zároveň členy vlády nebo členy vedení Sněmovny.
+Večerní zprávy ukazují řečnický pult a hlasovací tabuli. Většina skutečné parlamentní práce se ale odehrává jinde: ve výborech, kde se projednávají zákony a kontroluje vláda – bez kamer a bez potlesku. Skoro každý poslanec pracuje v jednom nebo dvou výborech; výjimkou jsou členové vlády a vedení Sněmovny, kteří ve výborech obvykle nezasedají.
 
 <AttendanceSwarm
   dataFile="prehled.json"
@@ -18,35 +18,30 @@ Skoro každý poslanec Sněmovny Parlamentu České republiky pracuje obvykle v 
   source="Zdroj: Poslanecká sněmovna ČR · DataTimes.cz · data: říjen 2025 – červen 2026"
 />
 
-Shromáždili jsme záznamy ze 123 jednání 18 výborů současné Sněmovny (říjen 2025 – červen 2026), za která jsou dostupné zápisy. Celkem jsme zpracovali data pro 191 poslankyň a poslanců.
+Prošli jsme záznamy ze 123 jednání všech 18 výborů současné Sněmovny, od ustavení v říjnu 2025 do června 2026, a zpracovali docházku 191 poslankyň a poslanců.
 
 ### Co data říkají
 
-**Průměrná účast je 86 %.** Výrazná většina poslanců chodí na výbory pravidelně. Medián je dokonce 89 %, což znamená, že polovina poslanců vynechala méně než jednu z deseti schůzí.
+**Průměrná účast je 86 %.** Výrazná většina poslanců chodí na výbory pravidelně. Medián je dokonce 89 % – polovina poslanců tedy vynechala méně než jednu schůzi z deseti. A zhruba pětina poslanců nevynechala vůbec nic.
 
-**Nejlepší průměr mají Piráti a ANO** – oba kluby se pohybují kolem 90 %. Nejnižší průměr má ODS se 78 %.
+**Nejlepší průměr mají Piráti a ANO,** oba kluby se pohybují kolem 90 %. Nejnižší průměr má ODS: 78 %.
 
-**Rozdíly uvnitř klubů jsou větší než rozdíly mezi kluby.** Skoro ve všech stranách najdeme poslance s účastí kolem 50 % i takové, kteří nepropásli jedinou schůzi. Menší výjimkou je jen klub Pirátů, kde je rozptyl menší.
+**Rozdíly uvnitř klubů jsou větší než rozdíly mezi kluby.** Téměř v každé straně najdeme jak poslance se stoprocentní docházkou, tak takové, kteří dorazili jen na polovinu schůzí. Výjimkou jsou Piráti, kde je rozptyl znatelně menší.
 
-**Někteří poslanci vynechali polovinu zasedání.** Ze současných poslanců mají nejnižší zaznamenané účasti bývalá ministryně spravedlnosti Eva Decroix (ODS, 50 %), olomoucký hejtman Ladislav Oklešťák (ANO, 50 %), bývalý ministr zdravotnictví Vlastimil Válek (50 %) a poslanec Filip Turek (53 %). Na druhou stranu je zde zhruba pětina poslanců, kteří se zúčastnili všech schůzí svých výborů.
+**Čtyři poslanci vynechali zhruba polovinu zasedání.** Nejnižší zaznamenanou účast mají bývalá ministryně spravedlnosti Eva Decroix (ODS, 50 %), olomoucký hejtman Ladislav Okleštěk (ANO, 50 %), bývalý ministr zdravotnictví Vlastimil Válek (TOP 09, 50 %) a Filip Turek (53 %). U hejtmana se dá nízká účast vysvětlit souběhem funkcí – u poslanců bez další exekutivní role podobné vysvětlení chybí.
 
-### Zasedání výborů
-Pokud Směmovna funguje pravidelně, tak se práce plánují po týdnech a každý týden má své určité zaměření: Jednací týden (zasedá plénum), výborový týden (zasedají výbory) a poslanecký týden (poslanci jsou ve svých regionech).
+### Jak často výbory zasedají
 
-K tomu ale jsou i mimořádnosti - svátky, mimořádná zasedání, apod.
+Když Sněmovna běží v normálním režimu, střídají se týdny po třech: jednací (zasedá plénum), výborový (zasedají výbory) a poslanecký (poslanci pracují v regionech). Do toho vstupují svátky a mimořádné schůze, takže velká většina výborů se zatím sešla osmkrát až jedenáctkrát.
 
-Ale celkově velká většina výborů doposud tedy zasedala 8× - 11×.
-
-Jsou zde ale výjimky, nejčastěji zasedal Rozpočtový výbor (předsedá mu Pikora z Moto), který se sešel již 19×. Nejméně potom Výbor pro životní prostředí (předsedkyně Peštová, ANO), který se sešel pouze 4×.
-
-Výbory zasedají obvykle veřejně, ale můžou si uspořádat i uzavřené zasedání.
+Existují ale výjimky na obou koncích. Rozpočtový výbor, kterému předsedá Vladimír Pikora (Motoristé), jednal už devatenáctkrát. Výbor pro životní prostředí pod vedením Jany Peštové (ANO) se sešel čtyřikrát. Výbory zasedají zpravidla veřejně, mohou si ale uspořádat i uzavřené jednání.
 
 ### Jak jsme data získávali
-Každý výbor si zápisy dělá po svém, nejsou v jednotném formátu, což podstatně ztěžuje zpracování. Některé výbory evidují zvlášť i jednotlivá hlasování.
 
-Občas některé zápisy chybějí, příp. v nich není evidována účast. V takových případech jsme nyní takové zasedání nemohli zahrnout do statistik.
+Každý výbor si vede zápisy po svém a jednotný formát neexistuje, což zpracování podstatně ztěžuje. Některé výbory evidují zvlášť i jednotlivá hlasování, jinde občas zápis chybí nebo v něm není zaznamenána účast – taková zasedání jsme do statistik zahrnout nemohli.
 
-### Co se děje na výborech
-Často se u poslanců opakuje, že samotná účast toho moc o práci neznamená. Nicméně u výborů je účast důležitější, protože práce výborů je základem legislativní práce Parlamentu. A pokud se poslanec nebo poslankyně práce neúčastní, nezastupuje ani v té chvíli své voliče.
+### Proč na docházce do výborů záleží
 
-Shrnutí zasedání výborů můžete vždy večer po zasedání vidět na našem projektu [Digest](https://snemovna.datatimes.cz/digest).
+Poslanci často namítají, že samotná docházka o kvalitě práce mnoho neříká. U pléna na tom něco je. U výborů je to ale jinak: právě tam se odehrává základ legislativní práce, věcné čtení zákonů a kontrola vlády. Kdo na výbor nepřijde, v té chvíli své voliče nezastupuje nikde.
+
+Shrnutí každého zasedání výborů najdete vždy večer po jednání v našem projektu [Digest](https://snemovna.datatimes.cz/digest).
