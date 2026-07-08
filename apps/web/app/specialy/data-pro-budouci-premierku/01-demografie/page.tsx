@@ -7,11 +7,11 @@ import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 
 export const metadata: Metadata = {
   title: 'Demografie | Data pro budoucí premiérku',
-  description: 'Vymíráme? Co se doopravdy děje s českou populací a proč samotná čísla k pochopení nestačí.',
+  description: 'Vymíráme? Co se skutečně děje s českou populací a proč samotná čísla k pochopení nestačí.',
   alternates: { canonical: '/specialy/data-pro-budouci-premierku/01-demografie' },
   openGraph: {
     title: 'Demografie | Data pro budoucí premiérku',
-    description: 'Vymíráme? Co se doopravdy děje s českou populací a proč samotná čísla k pochopení nestačí.',
+    description: 'Vymíráme? Co se skutečně děje s českou populací a proč samotná čísla k pochopení nestačí.',
     url: '/specialy/data-pro-budouci-premierku/01-demografie',
     type: 'article',
   },

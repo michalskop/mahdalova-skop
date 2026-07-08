@@ -1,5 +1,5 @@
 ---
-title: "Opravdu vymíráme? Co se doopravdy děje s českou populací"
+title: "Opravdu vymíráme? Co se skutečně děje s českou populací"
 date: "2026-03-19"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Co s tím zmůže nebo nezmůže politika? A co my sami?"
