@@ -6,7 +6,7 @@ import { ThemeProvider } from './providers/ThemeProvider';
 import type { Metadata } from 'next';
 import { MatomoAnalytics } from '@/components/common/MatomoAnalytics';
 import { Suspense } from 'react';
-import { robotoSlab } from './fonts';
+import { robotoCondensed, robotoSlab } from './fonts';
 
 export const metadata: Metadata = {
   title: {
@@ -64,7 +64,7 @@ export default function RootLayout({
         </Suspense>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
-      <body className={robotoSlab.variable} style={{ backgroundColor: '#fdfbf7' }}>
+      <body className={`${robotoSlab.variable} ${robotoCondensed.variable}`} style={{ backgroundColor: '#fdfbf7' }}>
         <ThemeProvider>
           <Layout>
             {children}

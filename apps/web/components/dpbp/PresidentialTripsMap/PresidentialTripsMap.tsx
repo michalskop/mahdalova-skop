@@ -110,7 +110,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
         <span style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontWeight: 700, fontSize: 13, color: '#fdfbf7', letterSpacing: '0.02em' }}>
           {label}
         </span>
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 11, color: '#fdfbf7', opacity: 0.85 }}>
+        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 11, color: '#fdfbf7', opacity: 0.85 }}>
           {years}{frozen ? ' · mandát dosud běží' : ''}
         </span>
       </div>
@@ -225,7 +225,7 @@ export default function PresidentialTripsMap() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div
         style={{
-          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 26, fontWeight: 700,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 26, fontWeight: 700,
           color: '#101432', lineHeight: 1.25, marginBottom: 2,
         }}
       >
@@ -233,7 +233,7 @@ export default function PresidentialTripsMap() {
       </div>
       <div
         style={{
-          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, color: '#666', marginBottom: 14,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 13, color: '#666', marginBottom: 14,
         }}
       >
         Podle délky mandátu ● Přehrajte stisknutím play
@@ -271,7 +271,7 @@ export default function PresidentialTripsMap() {
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
               background: '#101432', color: '#fdfbf7', padding: '5px 9px', borderRadius: 4, fontSize: 11.5,
-              fontFamily: "'Roboto Condensed', Arial, sans-serif", whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
               boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
             }}
           >
@@ -304,14 +304,14 @@ export default function PresidentialTripsMap() {
           onChange={e => { setPlaying(false); setValue(Number(e.target.value)); }}
           style={{ flex: 1, accentColor: '#de1743' }}
         />
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, fontWeight: 700, color: '#101432', minWidth: 150, textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
+        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 13, fontWeight: 700, color: '#101432', minWidth: 150, textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
           {label}
         </span>
       </div>
-      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#888', marginTop: 6 }}>
         Srovnání podle počtu dnů od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
       </p>
-      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12.5, color: '#333333', marginTop: 10 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12.5, color: '#333333', marginTop: 10 }}>
         • autoři: <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>

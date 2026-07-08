@@ -181,7 +181,7 @@ export function AttendanceSwarmChart({
         width: '100%',
         padding: '20px 16px 16px',
         background: '#f8f6f0',
-        fontFamily: "'Roboto Condensed', Arial, sans-serif",
+        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
         color: '#1a1a1a',
         margin: '0 -16px',
       }}

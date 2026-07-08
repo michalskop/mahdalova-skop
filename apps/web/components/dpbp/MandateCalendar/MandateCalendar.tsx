@@ -50,15 +50,20 @@ const DAYS_PER_MONTH = 30;
 const MONTHS_PER_YEAR = 12;
 const DAYS_PER_YEAR = DAYS_PER_MONTH * MONTHS_PER_YEAR;
 
-const CELL = 6.5;
-const CELL_GAP = 1;
+// Cells are deliberately taller than wide: the compact one-row-per-year layout caps
+// how wide a cell can get (12 months have to fit across the article width), but there's
+// no such ceiling on height, so we grow there instead – gives more legible cells and
+// more room for the year/count labels without giving up the compact width.
+const CELL_W = 6.5;
+const CELL_H = 13;
+const CELL_GAP = 1.3;
 const MONTH_GAP = 6;
-const YEAR_LABEL_W = 50;
+const YEAR_LABEL_W = 54;
 const COLS = 7;
 const ROWS = 5; // ceil(30/7)
-const MONTH_W = COLS * (CELL + CELL_GAP);
-const MONTH_H = ROWS * (CELL + CELL_GAP);
-const ROW_H = MONTH_H + 22;
+const MONTH_W = COLS * (CELL_W + CELL_GAP);
+const MONTH_H = ROWS * (CELL_H + CELL_GAP);
+const ROW_H = MONTH_H + 24;
 
 function toISO(d: Date): string {
   return d.toISOString().slice(0, 10);
@@ -133,55 +138,55 @@ function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi, c
         const pYearCount = revealedEnd >= yb.yearStart ? pavelDi.filter(v => v >= yb.yearStart && v <= revealedEnd).length : 0;
         return (
       <g key={yb.yearIndex} transform={`translate(0, ${yi * ROW_H})`}>
-          <text x={0} y={ROW_H / 2 - 3} fontSize={9.5} fontWeight={700} fill="#101432" fontFamily="'Roboto Condensed', Arial, sans-serif">
+          <text x={0} y={ROW_H / 2 - 14} fontSize={13} fontWeight={700} fill="#101432" fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
             {yb.yearIndex}. rok
           </text>
           {showZeman && (
-            <text x={0} y={ROW_H / 2 + 8} fontSize={7.5} fontWeight={700} fill={COLORS.Z} fontFamily="'Roboto Condensed', Arial, sans-serif">
+            <text x={0} y={ROW_H / 2 + 3} fontSize={10} fontWeight={700} fill={COLORS.Z} fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
               Z {zYearCount}
             </text>
           )}
           {showPavel && (
-            <text x={0} y={ROW_H / 2 + 18} fontSize={7.5} fontWeight={700} fill={COLORS.P} fontFamily="'Roboto Condensed', Arial, sans-serif">
+            <text x={0} y={ROW_H / 2 + 16} fontSize={10} fontWeight={700} fill={COLORS.P} fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
               P {pYearCount}
             </text>
           )}
           {yb.months.map(mb => {
             const mx = YEAR_LABEL_W + (mb.month - 1) * (MONTH_W + MONTH_GAP);
             return (
-              <g key={mb.month} transform={`translate(${mx}, 12)`}>
-                <text x={0} y={-2.5} fontSize={5.8} fill="#8a8577" fontFamily="'Roboto Condensed', Arial, sans-serif">
+              <g key={mb.month} transform={`translate(${mx}, 14)`}>
+                <text x={0} y={-3} fontSize={7.5} fill="#8a8577" fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
                   {mb.month}
                 </text>
                 {mb.days.map(day => {
                   const col = (day.d - 1) % COLS;
                   const row = Math.floor((day.d - 1) / COLS);
                   const revealed = day.di <= counter;
-                  const x = col * (CELL + CELL_GAP);
-                  const y = row * (CELL + CELL_GAP);
+                  const x = col * (CELL_W + CELL_GAP);
+                  const y = row * (CELL_H + CELL_GAP);
                   const topFill = !showZeman ? OCEAN : !revealed ? NOT_YET : day.zDetail ? COLORS.Z : NOT_TRAVEL;
                   const bottomFill = !showPavel ? OCEAN : !revealed ? NOT_YET : day.pDetail ? COLORS.P : NOT_TRAVEL;
                   if (!revealed) {
-                    return <rect key={day.d} x={x} y={y} width={CELL} height={CELL} fill={NOT_YET} />;
+                    return <rect key={day.d} x={x} y={y} width={CELL_W} height={CELL_H} fill={NOT_YET} />;
                   }
                   const zActive = showZeman && !!day.zDetail;
                   const pActive = showPavel && !!day.pDetail;
                   if (topFill === bottomFill) {
                     // no activity visible in this cell (or nothing revealed/shown) – fully inert
-                    return <rect key={day.d} x={x} y={y} width={CELL} height={CELL} fill={topFill} />;
+                    return <rect key={day.d} x={x} y={y} width={CELL_W} height={CELL_H} fill={topFill} />;
                   }
                   const zTip = tripTooltip('Zeman', day.zDate, day.zDetail);
                   const pTip = tripTooltip('Pavel', day.pDate, day.pDetail);
                   return (
                     <g key={day.d}>
                       <rect
-                        x={x} y={y} width={CELL} height={CELL / 2} fill={topFill}
+                        x={x} y={y} width={CELL_W} height={CELL_H / 2} fill={topFill}
                         onMouseEnter={zActive ? (e => showTip(e, zTip)) : undefined}
                         onMouseLeave={zActive ? (() => onHover(null)) : undefined}
                         style={{ cursor: zActive ? 'pointer' : 'default' }}
                       />
                       <rect
-                        x={x} y={y + CELL / 2} width={CELL} height={CELL / 2} fill={bottomFill}
+                        x={x} y={y + CELL_H / 2} width={CELL_W} height={CELL_H / 2} fill={bottomFill}
                         onMouseEnter={pActive ? (e => showTip(e, pTip)) : undefined}
                         onMouseLeave={pActive ? (() => onHover(null)) : undefined}
                         style={{ cursor: pActive ? 'pointer' : 'default' }}
@@ -237,10 +242,10 @@ export default function MandateCalendar() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
         <div style={{
-          fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 26, fontWeight: 700,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 26, fontWeight: 700,
           color: '#101432', lineHeight: 1,
         }}>
-          Mapujeme cesty prezidentů den po dni
+          Cesty prezidentů den po dni
         </div>
         <ChartSignature size={30} style={{ flex: '0 0 auto', lineHeight: 1 }} />
       </div>
@@ -248,10 +253,10 @@ export default function MandateCalendar() {
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 14, flexWrap: 'wrap',
         background: '#101432', padding: '10px 14px', borderRadius: 4,
       }}>
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 22, fontWeight: 700, color: '#fdfbf7' }}>
+        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700, color: '#fdfbf7' }}>
           <span style={{ display: 'inline-block', minWidth: '4ch', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{counter}</span>. den mandátu
         </span>
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 13, color: 'rgba(253,251,247,0.75)' }}>
+        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 13, color: 'rgba(253,251,247,0.75)' }}>
           Zeman: <span style={{ display: 'inline-block', minWidth: '2ch', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{zemanCount}</span>{' '}
           <span style={{ display: 'inline-block', minWidth: '4.5ch' }}>{zemanCount === 1 ? 'cesta' : zemanCount < 5 ? 'cesty' : 'cest'}</span>
           <span style={{ fontSize: 18, margin: '0 8px', display: 'inline-block', verticalAlign: -1 }}>·</span>
@@ -265,7 +270,7 @@ export default function MandateCalendar() {
           onClick={() => setShowZeman(v => !v)}
           aria-pressed={showZeman}
           style={{
-            display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, fontFamily: "'Roboto Condensed', Arial, sans-serif",
+            display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
             color: showZeman ? '#333' : '#aaa', background: 'none', border: 'none', padding: 0, cursor: 'pointer', opacity: showZeman ? 1 : 0.5,
           }}
         >
@@ -276,7 +281,7 @@ export default function MandateCalendar() {
           onClick={() => setShowPavel(v => !v)}
           aria-pressed={showPavel}
           style={{
-            display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, fontFamily: "'Roboto Condensed', Arial, sans-serif",
+            display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
             color: showPavel ? '#333' : '#aaa', background: 'none', border: 'none', padding: 0, cursor: 'pointer', opacity: showPavel ? 1 : 0.5,
           }}
         >
@@ -292,7 +297,7 @@ export default function MandateCalendar() {
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
               background: '#101432', color: '#fdfbf7', padding: '5px 9px', borderRadius: 4, fontSize: 11.5,
-              fontFamily: "'Roboto Condensed', Arial, sans-serif", whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
               boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
             }}
           >
@@ -322,14 +327,14 @@ export default function MandateCalendar() {
           onChange={e => { setPlaying(false); setCounter(Number(e.target.value)); }}
           style={{ flex: 1, accentColor: '#de1743' }}
         />
-        <span style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', minWidth: 60, textAlign: 'right' }}>
+        <span style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#888', minWidth: 60, textAlign: 'right' }}>
           {counter}/{maxCounter}
         </span>
       </div>
-      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12, color: '#888', marginTop: 6 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#888', marginTop: 6 }}>
         Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
       </p>
-      <p style={{ fontFamily: "'Roboto Condensed', Arial, sans-serif", fontSize: 12.5, color: '#333333', marginTop: 10 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12.5, color: '#333333', marginTop: 10 }}>
         • autoři: <a href="https://www.mahdalova-skop.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>
