@@ -17,6 +17,7 @@ import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/PresidentialTripsMap';
 import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
 import ChartSignature from '@/components/dpbp/ChartSignature';
+import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -126,7 +127,15 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
               </Title>
               <Box style={{ width: 40, height: 3, background: accent, marginTop: 16, marginBottom: 16 }} />
               <Text style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
-                {fm.author} · {formatDate(fm.date)}
+                {splitAuthors(fm.author).map((name, i, arr) => (
+                  <span key={name}>
+                    <Link href={`/autor/${normalizeAuthor(name)}`} className="dpbp-author-link">
+                      {name}
+                    </Link>
+                    {i < arr.length - 1 ? ' & ' : ''}
+                  </span>
+                ))}
+                {' · '}{formatDate(fm.date)}
               </Text>
             </Box>
             <Box className="dpbp-article-head-profile" style={{ flex: '0 0 auto' }}>
@@ -142,6 +151,14 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           <style>{`
             @media (max-width: 600px) {
               .dpbp-article-head-profile { display: none; }
+            }
+            .dpbp-author-link {
+              color: inherit;
+              text-decoration: none;
+            }
+            .dpbp-author-link:hover,
+            .dpbp-author-link:focus-visible {
+              text-decoration: underline;
             }
           `}</style>
         </Container>
