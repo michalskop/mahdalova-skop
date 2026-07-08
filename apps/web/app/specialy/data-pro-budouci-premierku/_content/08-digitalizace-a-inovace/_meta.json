@@ -18,8 +18,8 @@
   "intro": {
     "title": "Sedm z deseti Čechů umí digitálně. Stát ne",
     "textBefore": "Když přijde řeč na digitalizaci státu, slyšíme dvě verze příběhu: že Češi na nové technologie nejsou připraveni, nebo že stát potřebuje jen víc peněz. Ani jedna verze nesedí s tím, co ukazují data.",
-    "textAfter": "Téměř sedm z deseti Čechů má nadprůměrné digitální dovednosti – víc než průměr EU. Problémem nejsou lidé, je to architektura: nové portály se stavějí nad starými databázemi bez sdílených standardů, a tak i přes desítky miliard korun investic zákonný cíl plné digitalizace k únoru 2025 nebyl naplněn. Otázka pro budoucí premiérku tedy nezní, jak přesvědčit lidi k digitálu, ale jak konečně sjednotit základ, na kterém se dá stavět.",
-    "textClosing": "Dánsko a Singapur ukazují dvě různé cesty ke stejnému řešení – sdílenou identitní a datovou infrastrukturu, na které stojí všechny ostatní digitální služby. Tato kapitola se dívá na to, co je z obou modelů pro Česko reálně dosažitelné bez nutnosti kopírovat celý systém."
+    "textAfter": "Téměř sedm z deseti Čechů má nadprůměrné digitální dovednosti – víc než průměr EU. Problémem nejsou lidé, je to architektura: nové portály se stavějí nad starými databázemi bez sdílených standardů, a tak i přes desítky miliard korun investic zákonný cíl plné digitalizace k únoru 2025 nebyl naplněn. Lidi přesvědčovat netřeba – umějí to. Sjednotit se musí základ, na kterém stát staví: identita, registry a standardy, které si dnes každý portál řeší po svém.",
+    "textClosing": "Dánsko postavilo všechny digitální služby na jediné sdílené identitě, Singapur došel ke stejnému cíli centrální agenturou. Co je z obou modelů dosažitelné bez kopírování celého systému, rozebírá zbytek kapitoly."
   },
   "tiles": [
     { "slug": "explainer-technologicky-dluh", "topic": "Explainer" },
