@@ -1,203 +1,128 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import travelDaysData from './data.json';
+import tripsData from './data.json';
 import ChartSignature from '../ChartSignature';
 
-type HoverInfo = { text: string; left: number; top: number } | null;
-
-type TripDetail = { z: string; m: string; t: string };
-type TravelDays = {
-  zeman: Record<string, TripDetail>;
-  pavel: Record<string, TripDetail>;
-  zemanDi: number[];
-  pavelDi: number[];
+type Trip = {
+  n: number;    // pořadí cesty
+  d: string;    // ISO datum zahájení
+  dl: string;   // český popisek data (vč. rozsahu)
+  di: number;   // den mandátu
+  z: string;    // země (u vícezemých cest spojené „a“)
+  m: string;    // města
+  t: string;    // bilaterální / multilaterální / protokolární / soukromá
+  w: string;    // oficiální / pracovní / státní / soukromá (dle KPR a Wikipedie)
+  nz: number;   // kolikátá návštěva první země cesty
+  desc: string; // průběh cesty
 };
-const TRAVEL = travelDaysData as TravelDays;
+type TripsData = { zeman: Trip[]; pavel: Trip[] };
+const TRIPS = tripsData as TripsData;
 
-function countTripsUpTo(di: number[], counter: number): number {
-  let n = 0;
-  for (const v of di) if (v <= counter) n++;
-  return n;
-}
-
-function formatCzDate(d: Date): string {
-  return d.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'numeric', year: 'numeric' });
-}
-
-function tripTooltip(president: string, d: Date, detail: TripDetail | undefined): string {
-  if (!detail) return `${president} · ${formatCzDate(d)} · doma`;
-  const place = detail.m ? `${detail.z} (${detail.m})` : detail.z;
-  return `${president} · ${formatCzDate(d)} · ${place} · ${detail.t}`;
-}
+type HoverInfo = { trip: Trip; president: 'Zeman' | 'Pavel'; left: number; top: number } | null;
 
 const COLORS = { Z: '#DE1743', P: '#6267A3' };
-const NOT_TRAVEL = '#F1ECDF';
-const NOT_YET = '#F1ECDF';
-const OCEAN = '#F8F6F0';
-
-const ZEMAN_START = new Date(Date.UTC(2013, 2, 8));
 const PAVEL_START = new Date(Date.UTC(2023, 2, 9));
 
-// Grid position is derived purely from the mandate-day index (di), split into fixed
-// 30-day "months" / 360-day "years" – NOT from either president's real calendar date.
-// Zeman's and Pavel's terms cross a different number of leap days at the same di, so
-// deriving position from a real calendar (as before) made the two calendars drift out
-// of alignment by a day here and there – a cell's position no longer matched the date
-// drawn there. A fixed-length synthetic calendar makes position a pure function of di,
-// identical for both presidents by construction, so this can't happen.
-const DAYS_PER_MONTH = 30;
-const MONTHS_PER_YEAR = 12;
-const DAYS_PER_YEAR = DAYS_PER_MONTH * MONTHS_PER_YEAR;
-
-// Cells are deliberately taller than wide: the compact one-row-per-year layout caps
-// how wide a cell can get (12 months have to fit across the article width), but there's
-// no such ceiling on height, so we grow there instead – gives more legible cells and
-// more room for the year/count labels without giving up the compact width.
-const CELL_W = 6.5;
-const CELL_H = 13;
-const CELL_GAP = 1.3;
-const MONTH_GAP = 6;
-const YEAR_LABEL_W = 54;
-const COLS = 7;
-const ROWS = 5; // ceil(30/7)
-const MONTH_W = COLS * (CELL_W + CELL_GAP);
-const MONTH_H = ROWS * (CELL_H + CELL_GAP);
-const ROW_H = MONTH_H + 24;
-
-function toISO(d: Date): string {
-  return d.toISOString().slice(0, 10);
-}
+// Řádek = rok mandátu (365 dní od inaugurace), v něm dvě linky kostiček nad sebou:
+// Zeman nahoře, Pavel dole. Kostička = jedna zahraniční cesta, řadí se chronologicky
+// těsně vedle sebe – délka řady je tak zároveň počtem cest v daném roce mandátu.
+const DAYS_PER_YEAR = 365;
+const SQ = 21;          // strana kostičky
+const SQ_GAP = 3;
+const LANE_GAP = 5;     // mezera mezi linkou Zemana a Pavla
+const ROW_GAP = 22;     // mezera mezi roky
+const LABEL_W = 64;
+const ROW_H = SQ * 2 + LANE_GAP + ROW_GAP;
+const VIEW_W = LABEL_W + 23 * (SQ + SQ_GAP); // nejplnější linka má 22 cest + rezerva
 
 function todayUTC(): Date {
   const n = new Date();
   return new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()));
 }
 
-type DayCell = { d: number; di: number; zDate: Date; pDate: Date; zDetail?: TripDetail; pDetail?: TripDetail };
-type MonthBlock = { month: number; days: DayCell[] };
-type YearBlock = { yearIndex: number; yearStart: number; yearEnd: number; months: MonthBlock[] };
+function yearOf(trip: Trip): number {
+  return Math.floor(trip.di / DAYS_PER_YEAR);
+}
 
-function buildGrid(maxDi: number, zemanDetail: Record<string, TripDetail>, pavelDetail: Record<string, TripDetail>): YearBlock[] {
-  const years: YearBlock[] = [];
-  const numYears = Math.floor(maxDi / DAYS_PER_YEAR) + 1;
-
-  for (let yi = 0; yi < numYears; yi++) {
-    const yearStart = yi * DAYS_PER_YEAR;
-    const yearEnd = Math.min(yearStart + DAYS_PER_YEAR - 1, maxDi);
-    const months: MonthBlock[] = [];
-    const numMonths = Math.floor((yearEnd - yearStart) / DAYS_PER_MONTH) + 1;
-
-    for (let mi = 0; mi < numMonths; mi++) {
-      const monthStart = yearStart + mi * DAYS_PER_MONTH;
-      const monthEnd = Math.min(monthStart + DAYS_PER_MONTH - 1, yearEnd);
-      const days: DayCell[] = [];
-      for (let di = monthStart; di <= monthEnd; di++) {
-        const zDate = new Date(ZEMAN_START.getTime() + di * 86400000);
-        const pDate = new Date(PAVEL_START.getTime() + di * 86400000);
-        days.push({
-          d: di - monthStart + 1,
-          di,
-          zDate,
-          pDate,
-          zDetail: zemanDetail[toISO(zDate)],
-          pDetail: pavelDetail[toISO(pDate)],
-        });
-      }
-      months.push({ month: mi + 1, days });
-    }
-    years.push({ yearIndex: yi + 1, yearStart, yearEnd, months });
-  }
-  return years;
+function typeLabel(trip: Trip): string {
+  const parts = [trip.t];
+  if (trip.w && trip.w !== trip.t) parts.push(trip.w);
+  return parts.join(' · ');
 }
 
 interface GridProps {
-  years: YearBlock[];
+  numYears: number;
   counter: number;
-  width: number;
   showZeman: boolean;
   showPavel: boolean;
-  zemanDi: number[];
-  pavelDi: number[];
   containerRef: React.RefObject<HTMLDivElement>;
   onHover: (info: HoverInfo) => void;
 }
 
-function Grid({ years, counter, width, showZeman, showPavel, zemanDi, pavelDi, containerRef, onHover }: GridProps) {
-  function showTip(e: React.MouseEvent, text: string) {
+function Grid({ numYears, counter, showZeman, showPavel, containerRef, onHover }: GridProps) {
+  function showTip(e: React.MouseEvent, trip: Trip, president: 'Zeman' | 'Pavel') {
     const rect = (e.currentTarget as SVGElement).getBoundingClientRect();
     const box = containerRef.current!.getBoundingClientRect();
-    onHover({ text, left: rect.left - box.left + rect.width / 2, top: rect.top - box.top });
+    const left = Math.min(Math.max(rect.left - box.left + rect.width / 2, 120), box.width - 120);
+    onHover({ trip, president, left, top: rect.top - box.top });
   }
-  const height = years.length * ROW_H;
+
+  const height = numYears * ROW_H - ROW_GAP + 8;
+
+  function lane(trips: Trip[], year: number, color: string, y: number, president: 'Zeman' | 'Pavel') {
+    const inYear = trips.filter(t => yearOf(t) === year);
+    return inYear.map((trip, i) => {
+      const revealed = trip.di <= counter;
+      const isPrivate = trip.t === 'soukromá' || trip.w === 'soukromá';
+      return (
+        <rect
+          key={trip.n}
+          x={LABEL_W + i * (SQ + SQ_GAP)}
+          y={y}
+          width={SQ}
+          height={SQ}
+          rx={4}
+          fill={color}
+          fillOpacity={isPrivate ? 0.4 : 1}
+          stroke={isPrivate ? color : 'none'}
+          strokeWidth={isPrivate ? 1.2 : 0}
+          strokeDasharray={isPrivate ? '3 2' : undefined}
+          opacity={revealed ? 1 : 0}
+          style={{ transition: 'opacity 0.25s', cursor: revealed ? 'pointer' : 'default', pointerEvents: revealed ? 'auto' : 'none' }}
+          onMouseEnter={e => showTip(e, trip, president)}
+          onMouseLeave={() => onHover(null)}
+          onClick={e => showTip(e, trip, president)}
+        />
+      );
+    });
+  }
+
   return (
-    <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={{ display: 'block', background: OCEAN }}>
-      {years.map((yb, yi) => {
-        const revealedEnd = Math.min(yb.yearEnd, counter);
-        const zYearCount = revealedEnd >= yb.yearStart ? zemanDi.filter(v => v >= yb.yearStart && v <= revealedEnd).length : 0;
-        const pYearCount = revealedEnd >= yb.yearStart ? pavelDi.filter(v => v >= yb.yearStart && v <= revealedEnd).length : 0;
+    <svg viewBox={`0 0 ${VIEW_W} ${height}`} width="100%" style={{ display: 'block' }}>
+      {Array.from({ length: numYears }, (_, year) => {
+        const zCount = TRIPS.zeman.filter(t => yearOf(t) === year && t.di <= counter).length;
+        const pCount = TRIPS.pavel.filter(t => yearOf(t) === year && t.di <= counter).length;
+        const rowY = year * ROW_H;
+        const midY = rowY + SQ + LANE_GAP / 2;
         return (
-      <g key={yb.yearIndex} transform={`translate(0, ${yi * ROW_H})`}>
-          <text x={0} y={ROW_H / 2 - 14} fontSize={13} fontWeight={700} fill="#101432" fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
-            {yb.yearIndex}. rok
-          </text>
-          {showZeman && (
-            <text x={0} y={ROW_H / 2 + 3} fontSize={10} fontWeight={700} fill={COLORS.Z} fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
-              Z {zYearCount}
+          <g key={year}>
+            <text x={0} y={midY - 10} fontSize={13.5} fontWeight={700} fill="#101432" fontFamily="var(--font-roboto-condensed), Arial, sans-serif">
+              {year + 1}. rok
             </text>
-          )}
-          {showPavel && (
-            <text x={0} y={ROW_H / 2 + 16} fontSize={10} fontWeight={700} fill={COLORS.P} fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
-              P {pYearCount}
-            </text>
-          )}
-          {yb.months.map(mb => {
-            const mx = YEAR_LABEL_W + (mb.month - 1) * (MONTH_W + MONTH_GAP);
-            return (
-              <g key={mb.month} transform={`translate(${mx}, 14)`}>
-                <text x={0} y={-3} fontSize={7.5} fill="#8a8577" fontFamily='var(--font-roboto-condensed), Arial, sans-serif'>
-                  {mb.month}
-                </text>
-                {mb.days.map(day => {
-                  const col = (day.d - 1) % COLS;
-                  const row = Math.floor((day.d - 1) / COLS);
-                  const revealed = day.di <= counter;
-                  const x = col * (CELL_W + CELL_GAP);
-                  const y = row * (CELL_H + CELL_GAP);
-                  const topFill = !showZeman ? OCEAN : !revealed ? NOT_YET : day.zDetail ? COLORS.Z : NOT_TRAVEL;
-                  const bottomFill = !showPavel ? OCEAN : !revealed ? NOT_YET : day.pDetail ? COLORS.P : NOT_TRAVEL;
-                  if (!revealed) {
-                    return <rect key={day.d} x={x} y={y} width={CELL_W} height={CELL_H} fill={NOT_YET} />;
-                  }
-                  const zActive = showZeman && !!day.zDetail;
-                  const pActive = showPavel && !!day.pDetail;
-                  if (topFill === bottomFill) {
-                    // no activity visible in this cell (or nothing revealed/shown) – fully inert
-                    return <rect key={day.d} x={x} y={y} width={CELL_W} height={CELL_H} fill={topFill} />;
-                  }
-                  const zTip = tripTooltip('Zeman', day.zDate, day.zDetail);
-                  const pTip = tripTooltip('Pavel', day.pDate, day.pDetail);
-                  return (
-                    <g key={day.d}>
-                      <rect
-                        x={x} y={y} width={CELL_W} height={CELL_H / 2} fill={topFill}
-                        onMouseEnter={zActive ? (e => showTip(e, zTip)) : undefined}
-                        onMouseLeave={zActive ? (() => onHover(null)) : undefined}
-                        style={{ cursor: zActive ? 'pointer' : 'default' }}
-                      />
-                      <rect
-                        x={x} y={y + CELL_H / 2} width={CELL_W} height={CELL_H / 2} fill={bottomFill}
-                        onMouseEnter={pActive ? (e => showTip(e, pTip)) : undefined}
-                        onMouseLeave={pActive ? (() => onHover(null)) : undefined}
-                        style={{ cursor: pActive ? 'pointer' : 'default' }}
-                      />
-                    </g>
-                  );
-                })}
-              </g>
-            );
-          })}
-        </g>
+            {showZeman && (
+              <text x={0} y={midY + 5} fontSize={11} fontWeight={700} fill={COLORS.Z} fontFamily="var(--font-roboto-condensed), Arial, sans-serif">
+                Z {zCount}
+              </text>
+            )}
+            {showPavel && (
+              <text x={0} y={midY + 18} fontSize={11} fontWeight={700} fill={COLORS.P} fontFamily="var(--font-roboto-condensed), Arial, sans-serif">
+                P {pCount}
+              </text>
+            )}
+            {showZeman && lane(TRIPS.zeman, year, COLORS.Z, rowY, 'Zeman')}
+            {showPavel && lane(TRIPS.pavel, year, COLORS.P, rowY + SQ + LANE_GAP, 'Pavel')}
+          </g>
         );
       })}
     </svg>
@@ -219,8 +144,7 @@ export default function MandateCalendar() {
 
   useEffect(() => { setCounter(maxCounter); }, [maxCounter]);
 
-  const years = useMemo(() => buildGrid(maxCounter, TRAVEL.zeman, TRAVEL.pavel), [maxCounter]);
-  const width = YEAR_LABEL_W + MONTHS_PER_YEAR * (MONTH_W + MONTH_GAP);
+  const numYears = Math.floor(maxCounter / DAYS_PER_YEAR) + 1;
 
   useEffect(() => {
     if (!playing) return;
@@ -235,8 +159,8 @@ export default function MandateCalendar() {
     return () => clearInterval(id);
   }, [playing, maxCounter]);
 
-  const zemanCount = useMemo(() => countTripsUpTo(TRAVEL.zemanDi, counter), [counter]);
-  const pavelCount = useMemo(() => countTripsUpTo(TRAVEL.pavelDi, counter), [counter]);
+  const zemanCount = useMemo(() => TRIPS.zeman.filter(t => t.di <= counter).length, [counter]);
+  const pavelCount = useMemo(() => TRIPS.pavel.filter(t => t.di <= counter).length, [counter]);
 
   return (
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
@@ -245,7 +169,7 @@ export default function MandateCalendar() {
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
           color: '#101432', lineHeight: 1,
         }}>
-          Cesty prezidentů den po dni
+          Cesty prezidentů: kostička za každou cestu
         </div>
         <ChartSignature size={30} style={{ flex: '0 0 auto', lineHeight: 1 }} />
       </div>
@@ -265,7 +189,7 @@ export default function MandateCalendar() {
         </span>
       </div>
 
-      <div style={{ display: 'flex', gap: 16, marginBottom: 8 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 12, flexWrap: 'wrap' }}>
         <button
           onClick={() => setShowZeman(v => !v)}
           aria-pressed={showZeman}
@@ -288,20 +212,42 @@ export default function MandateCalendar() {
           <span style={{ width: 10, height: 10, background: COLORS.P, display: 'inline-block', borderRadius: 2 }} />
           Pavel
         </button>
+        <span style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', color: '#666' }}>
+          <span style={{ width: 10, height: 10, background: COLORS.P, opacity: 0.4, display: 'inline-block', borderRadius: 2, border: `1px dashed ${COLORS.P}` }} />
+          soukromá cesta
+        </span>
       </div>
 
       <div ref={containerRef} style={{ position: 'relative' }}>
-        <Grid years={years} counter={counter} width={width} showZeman={showZeman} showPavel={showPavel} zemanDi={TRAVEL.zemanDi} pavelDi={TRAVEL.pavelDi} containerRef={containerRef} onHover={setHover} />
+        <Grid numYears={numYears} counter={counter} showZeman={showZeman} showPavel={showPavel} containerRef={containerRef} onHover={setHover} />
         {hover && (
           <div
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
-              background: '#101432', color: '#fdfbf7', padding: '5px 9px', borderRadius: 4, fontSize: 11.5,
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
-              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+              background: '#101432', color: '#fdfbf7', padding: '8px 11px', borderRadius: 4, fontSize: 12,
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', width: 250, pointerEvents: 'none', zIndex: 10,
+              boxShadow: '0 2px 6px rgba(0,0,0,0.25)', lineHeight: 1.45,
             }}
           >
-            {hover.text}
+            <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 2 }}>
+              <span style={{ color: hover.president === 'Zeman' ? '#ff7a99' : '#aeb3e0' }}>{hover.president}</span>
+              {' · '}{hover.trip.n}. cesta{' · '}{hover.trip.z}
+            </div>
+            {hover.trip.m && (
+              <div style={{ color: 'rgba(253,251,247,0.85)' }}>{hover.trip.m}</div>
+            )}
+            <div style={{ color: 'rgba(253,251,247,0.7)', marginTop: 2 }}>
+              {hover.trip.dl} · {hover.trip.di}. den mandátu
+            </div>
+            <div style={{ color: 'rgba(253,251,247,0.7)' }}>
+              {typeLabel(hover.trip)}
+              {hover.trip.nz > 1 ? ` · ${hover.trip.nz}. návštěva země` : ''}
+            </div>
+            {hover.trip.desc && (
+              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid rgba(253,251,247,0.2)', color: 'rgba(253,251,247,0.9)' }}>
+                {hover.trip.desc}
+              </div>
+            )}
             <div style={{
               position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
               width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
@@ -314,7 +260,7 @@ export default function MandateCalendar() {
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 12 }}>
         <button
           onClick={() => { if (counter >= maxCounter) setCounter(0); setPlaying(p => !p); }}
-          aria-label={playing ? 'Pozastavit kalendář mandátu' : 'Přehrát kalendář mandátu'}
+          aria-label={playing ? 'Pozastavit přehrávání cest' : 'Přehrát cesty den po dni'}
           style={{ width: 32, height: 32, borderRadius: 4, border: '1px solid #c9c2af', background: '#fff', cursor: 'pointer', flex: '0 0 auto' }}
         >
           {playing ? '⏸' : '▶'}
@@ -332,10 +278,12 @@ export default function MandateCalendar() {
         </span>
       </div>
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 6 }}>
-        Mřížka zachycuje aktivity po dnešní den mandátu ({maxCounter} dní od inaugurace) – denně přibude další den, u obou prezidentů stejně. Každá kostička znamená jeden den mandátu. Aktivita prezidentů se vybarví v den zahájení zahraniční cesty a u obou zobrazujeme právě tento den, neboť u Zemana většinou neznáme délku pobytu na jeho zahraniční cestě.
+        Každá kostička je jedna zahraniční cesta, kostičky se řadí chronologicky po rocích mandátu – délka řady tak rovnou ukazuje počet cest.
+        Oba prezidenty srovnáváme za stejnou fázi mandátu: prvních {maxCounter} dní od inaugurace (u Zemana od března 2013, u Pavla od března 2023).
+        Zemanových {TRIPS.zeman.length - TRIPS.zeman.filter(t => t.di <= maxCounter).length} cest z pozdějších let mandátu v grafu není. Najetím nebo klepnutím na kostičku se zobrazí podrobnosti cesty.
       </p>
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
+        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky, Wikipedie
       </p>
     </div>
   );
