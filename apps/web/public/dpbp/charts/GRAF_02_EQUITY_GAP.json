@@ -1,76 +1,98 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Vliv socioekonomického statusu na výsledky žáků",
-    "subtitle": "Podíl variability výsledků vysvětlený zázemím rodiny (%)",
-    "fontSize": 13,
-    "font": "Roboto Slab",
-    "anchor": "start"
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Vliv socioekonomického statusu na výsledky žáků",
+  "subtitle": "Podíl variability výsledků vysvětlený zázemím rodiny (%)",
+  "fontSize": 13,
+  "font": "Roboto Slab",
+  "anchor": "start"
+ },
+ "width": 450,
+ "height": 250,
+ "data": {
+  "values": [
+   {
+    "zeme": "Česká republika",
+    "podil": 22,
+    "role": "ČR"
+   },
+   {
+    "zeme": "Průměr OECD",
+    "podil": 15,
+    "role": "Průměr OECD"
+   },
+   {
+    "zeme": "Polsko",
+    "podil": 15,
+    "role": "Srovnání"
+   },
+   {
+    "zeme": "Finsko",
+    "podil": 14,
+    "role": "Srovnání"
+   },
+   {
+    "zeme": "Estonsko",
+    "podil": 13,
+    "role": "Srovnání"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "zeme",
+   "type": "nominal",
+   "title": null,
+   "sort": "-x",
+   "axis": {}
   },
-  "width": 450,
-  "height": 250,
-  "data": {
-    "values": [
-      {"zeme": "Česká republika", "podil": 22, "role": "ČR"},
-      {"zeme": "Průměr OECD", "podil": 15, "role": "Průměr OECD"},
-      {"zeme": "Polsko", "podil": 15, "role": "Srovnání"},
-      {"zeme": "Finsko", "podil": 14, "role": "Srovnání"},
-      {"zeme": "Estonsko", "podil": 13, "role": "Srovnání"}
-    ]
-  },
-  "encoding": {
-    "y": {
-      "field": "zeme",
-      "type": "nominal",
-      "title": null,
-      "sort": "-x",
-      "axis": {
-        "labelFontSize": 11,
-        "labelFont": "Work Sans"
-      }
-    },
-    "x": {
-      "field": "podil",
-      "type": "quantitative",
-      "title": "Vliv rodinného zázemí (%)",
-      "axis": {
-        "labelFontSize": 10,
-        "labelFont": "Work Sans",
-        "titleFontSize": 11,
-        "titleFont": "Work Sans"
-      }
-    }
-  },
-  "layer": [
-    {
-      "mark": "bar",
-      "encoding": {
-        "color": {
-          "field": "role",
-          "type": "nominal",
-          "scale": {
-            "domain": ["ČR", "Průměr OECD", "Srovnání"],
-            "range": ["#de1743", "#f76800", "#6267a3"]
-          },
-          "legend": null
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 3,
-        "font": "Work Sans"
-      },
-      "encoding": {
-        "text": {"field": "podil", "type": "quantitative"}
-      }
-    }
-  ],
-  "_source": "OECD PISA 2022 - Equity Database",
-  "usermeta": {
-    "note": "V ČR rozhoduje rodina o úspěchu dítěte o 50 % více než v průměru OECD."
+  "x": {
+   "field": "podil",
+   "type": "quantitative",
+   "title": "Vliv rodinného zázemí (%)",
+   "axis": {}
   }
+ },
+ "layer": [
+  {
+   "mark": "bar",
+   "encoding": {
+    "color": {
+     "field": "role",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "ČR",
+       "Průměr OECD",
+       "Srovnání"
+      ],
+      "range": [
+       "#de1743",
+       "#f76800",
+       "#6267a3"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 3
+   },
+   "encoding": {
+    "text": {
+     "field": "podil",
+     "type": "quantitative"
+    }
+   }
+  }
+ ],
+ "_source": "OECD PISA 2022 - Equity Database",
+ "usermeta": {
+  "note": "V ČR rozhoduje rodina o úspěchu dítěte o 50 % více než v průměru OECD."
+ }
 }

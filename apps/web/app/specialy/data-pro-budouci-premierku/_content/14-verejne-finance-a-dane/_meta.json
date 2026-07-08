@@ -10,9 +10,9 @@
   ],
   "onePager": {
     "slug": "one-pager",
-    "logo": null
+    "logo": "/dpbp/chapters/14.svg"
   },
-  "introChart": null,
+  "introChart": "CHART_TAX_WEDGE",
   "intro": {
     "title": "Stejný celkový výnos, naprosto jiný daňový systém",
     "textBefore": "Když se řekne, že Česko vybírá daně „v evropském průměru“, zní to jako uklidňující zpráva. Toto agregátní číslo ale skrývá, z čeho přesně peníze pocházejí – a tady se český systém od většiny Evropy výrazně odlišuje.",

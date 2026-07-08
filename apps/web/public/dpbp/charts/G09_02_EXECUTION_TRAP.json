@@ -1,60 +1,95 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Past exekučních srážek - přírůstek čistého příjmu",
-    "fontSize": 13,
-    "font": "Roboto Slab",
-    "anchor": "start"
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Past exekučních srážek - přírůstek čistého příjmu",
+  "fontSize": 13,
+  "font": "Roboto Slab",
+  "anchor": "start"
+ },
+ "width": 450,
+ "padding": 5,
+ "data": {
+  "values": [
+   {
+    "hruba_mzda": "25 000",
+    "typ": "Zůstatek dlužníkovi",
+    "castka": 18500,
+    "order": 2
+   },
+   {
+    "hruba_mzda": "25 000",
+    "typ": "Srážky a daně",
+    "castka": 6500,
+    "order": 1
+   },
+   {
+    "hruba_mzda": "35 000",
+    "typ": "Zůstatek dlužníkovi",
+    "castka": 19200,
+    "order": 2
+   },
+   {
+    "hruba_mzda": "35 000",
+    "typ": "Srážky a daně",
+    "castka": 15800,
+    "order": 1
+   },
+   {
+    "hruba_mzda": "45 000",
+    "typ": "Zůstatek dlužníkovi",
+    "castka": 20100,
+    "order": 2
+   },
+   {
+    "hruba_mzda": "45 000",
+    "typ": "Srážky a daně",
+    "castka": 24900,
+    "order": 1
+   }
+  ]
+ },
+ "config": {
+  "axis": {},
+  "legend": {}
+ },
+ "mark": "bar",
+ "encoding": {
+  "x": {
+   "field": "hruba_mzda",
+   "type": "nominal",
+   "title": "Hrubá mzda (Kč)",
+   "sort": [
+    "25 000",
+    "35 000",
+    "45 000"
+   ]
   },
-  "width": 450,
-  "padding": 5,
-  "data": {
-    "values": [
-      {"hruba_mzda": "25 000", "typ": "Zůstatek dlužníkovi", "castka": 18500, "order": 2},
-      {"hruba_mzda": "25 000", "typ": "Srážky a daně", "castka": 6500, "order": 1},
-      {"hruba_mzda": "35 000", "typ": "Zůstatek dlužníkovi", "castka": 19200, "order": 2},
-      {"hruba_mzda": "35 000", "typ": "Srážky a daně", "castka": 15800, "order": 1},
-      {"hruba_mzda": "45 000", "typ": "Zůstatek dlužníkovi", "castka": 20100, "order": 2},
-      {"hruba_mzda": "45 000", "typ": "Srážky a daně", "castka": 24900, "order": 1}
+  "y": {
+   "field": "castka",
+   "type": "quantitative",
+   "title": "Měsíční příjem / srážka (Kč)"
+  },
+  "color": {
+   "field": "typ",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Zůstatek dlužníkovi",
+     "Srážky a daně"
+    ],
+    "range": [
+     "#0e839e",
+     "#de1743"
     ]
+   },
+   "legend": {
+    "orient": "bottom",
+    "title": null
+   }
   },
-  "config": {
-    "axis": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10
-    },
-    "legend": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10
-    }
-  },
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "field": "hruba_mzda",
-      "type": "nominal",
-      "title": "Hrubá mzda (Kč)",
-      "sort": ["25 000", "35 000", "45 000"]
-    },
-    "y": {
-      "field": "castka",
-      "type": "quantitative",
-      "title": "Měsíční příjem / srážka (Kč)"
-    },
-    "color": {
-      "field": "typ",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Zůstatek dlužníkovi", "Srážky a daně"],
-        "range": ["#0e839e", "#de1743"]
-      },
-      "legend": {"orient": "bottom", "title": null}
-    },
-    "order": {"field": "order"}
-  },
-  "_source": "Mapa zadlužení / IPŘP, PAQ Research, Daniel Prokop: Slepé skvrny"
+  "order": {
+   "field": "order"
+  }
+ },
+ "_source": "Mapa zadlužení / IPŘP, PAQ Research, Daniel Prokop: Slepé skvrny"
 }

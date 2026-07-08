@@ -1,0 +1,144 @@
+{
+ "_source": "• autoři: Kateřina Mahdalová & Michal Škop • data: Poslanecká sněmovna PČR",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Kolik měsíců potřebovala Sněmovna k projednání 600 bodů",
+ "title": {
+  "text": "Sněmovna zpomaluje",
+  "subtitle": "Počet měsíců, které Sněmovna potřebovala k projednání 600 bodů"
+ },
+ "height": 190,
+ "background": "#f8f6f0",
+ "data": {
+  "values": [
+   {
+    "vlada": "Nečas (2010–2013)",
+    "mesice": 24,
+    "poradi": 1,
+    "zvyrazneni": "ne"
+   },
+   {
+    "vlada": "Sobotka (2013–2017)",
+    "mesice": 28,
+    "poradi": 2,
+    "zvyrazneni": "ne"
+   },
+   {
+    "vlada": "Babiš (2017–2021)",
+    "mesice": 36,
+    "poradi": 3,
+    "zvyrazneni": "ne"
+   },
+   {
+    "vlada": "Fiala (2021–2025)",
+    "mesice": 37,
+    "poradi": 4,
+    "zvyrazneni": "ano"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "cornerRadiusEnd": 2
+   },
+   "encoding": {
+    "y": {
+     "field": "vlada",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "title": null,
+     "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 6
+     }
+    },
+    "x": {
+     "field": "mesice",
+     "type": "quantitative",
+     "title": "měsíce",
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "color": {
+     "field": "zvyrazneni",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "ne",
+       "ano"
+      ],
+      "range": [
+       "#6267a3",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "vlada",
+      "title": "Období"
+     },
+     {
+      "field": "mesice",
+      "title": "Měsíců na 600 bodů"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "fontWeight": "bold",
+    "fontSize": 12.5
+   },
+   "encoding": {
+    "y": {
+     "field": "vlada",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     }
+    },
+    "x": {
+     "field": "mesice",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "mesice"
+    },
+    "color": {
+     "field": "zvyrazneni",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "ne",
+       "ano"
+      ],
+      "range": [
+       "#6267a3",
+       "#de1743"
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ }
+}

@@ -1,59 +1,92 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Regionální GDP Gap v ČR vs. EU průměr",
-    "fontSize": 13,
-    "font": "Roboto Slab",
-    "anchor": "start"
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Regionální GDP Gap v ČR vs. EU průměr",
+  "fontSize": 13,
+  "font": "Roboto Slab",
+  "anchor": "start"
+ },
+ "width": 450,
+ "padding": 5,
+ "data": {
+  "values": [
+   {
+    "rok": 2015,
+    "region": "Praha",
+    "gdp": 182
+   },
+   {
+    "rok": 2025,
+    "region": "Praha",
+    "gdp": 210
+   },
+   {
+    "rok": 2015,
+    "region": "ČR průměr",
+    "gdp": 87
+   },
+   {
+    "rok": 2025,
+    "region": "ČR průměr",
+    "gdp": 92
+   },
+   {
+    "rok": 2015,
+    "region": "Severozápad",
+    "gdp": 67
+   },
+   {
+    "rok": 2025,
+    "region": "Severozápad",
+    "gdp": 66
+   }
+  ]
+ },
+ "config": {
+  "axis": {},
+  "legend": {}
+ },
+ "mark": {
+  "type": "line",
+  "point": true
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "title": "Rok"
   },
-  "width": 450,
-  "padding": 5,
-  "data": {
-    "values": [
-      {"rok": 2015, "region": "Praha", "gdp": 182},
-      {"rok": 2025, "region": "Praha", "gdp": 210},
-      {"rok": 2015, "region": "ČR průměr", "gdp": 87},
-      {"rok": 2025, "region": "ČR průměr", "gdp": 92},
-      {"rok": 2015, "region": "Severozápad", "gdp": 67},
-      {"rok": 2025, "region": "Severozápad", "gdp": 66}
+  "y": {
+   "field": "gdp",
+   "type": "quantitative",
+   "title": "GDP per capita (% EU27)",
+   "scale": {
+    "domain": [
+     50,
+     220
     ]
+   }
   },
-  "config": {
-    "axis": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10
-    },
-    "legend": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10
-    }
-  },
-  "mark": {"type": "line", "point": true},
-  "encoding": {
-    "x": {
-      "field": "rok",
-      "type": "ordinal",
-      "title": "Rok"
-    },
-    "y": {
-      "field": "gdp",
-      "type": "quantitative",
-      "title": "GDP per capita (% EU27)",
-      "scale": {"domain": [50, 220]}
-    },
-    "color": {
-      "field": "region",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Praha", "ČR průměr", "Severozápad"],
-        "range": ["#0e839e", "#6267a3", "#de1743"]
-      },
-      "legend": {"orient": "bottom", "title": null}
-    }
-  },
-  "_source": "Eurostat regional GDP, OECD Czechia Note, PAQ Research"
+  "color": {
+   "field": "region",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Praha",
+     "ČR průměr",
+     "Severozápad"
+    ],
+    "range": [
+     "#0e839e",
+     "#6267a3",
+     "#de1743"
+    ]
+   },
+   "legend": {
+    "orient": "bottom",
+    "title": null
+   }
+  }
+ },
+ "_source": "Eurostat regional GDP, OECD Czechia Note, PAQ Research"
 }

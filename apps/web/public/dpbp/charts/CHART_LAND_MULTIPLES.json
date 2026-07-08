@@ -1,123 +1,376 @@
 {
-  "_source": "Zdroj: ČÚZK (2024), ŘSD, CzechInvest, NREL / Rozloha ČR: 78 866 km²",
-  "_total_width": 430,
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Srovnání plochy: 4 silhouety ČR v mřížce 2×2, každá s čtvercem v poměru k rozloze ČR",
-  "background": "#fdfbf7",
-  "padding": {"top": 10, "left": 10, "right": 10, "bottom": 10},
-  "title": {
-    "text": "Co se vejde do České republiky?",
-    "subtitle": "Čtverce jsou v přesném geografickém měřítku – silhoueta = 78 866 km²",
-    "font": "Roboto Slab",
-    "fontSize": 13,
-    "fontWeight": "bold",
-    "anchor": "start",
-    "color": "#1a1a1a",
-    "subtitleFont": "Work Sans",
-    "subtitleFontSize": 9,
-    "subtitleColor": "#6267a3",
-    "offset": 8
-  },
-  "vconcat": [
+ "_source": "Zdroj: ČÚZK (2024), ŘSD, CzechInvest, NREL / Rozloha ČR: 78 866 km²",
+ "_total_width": 430,
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Srovnání plochy: 4 silhouety ČR v mřížce 2×2, každá s čtvercem v poměru k rozloze ČR",
+ "background": "#fdfbf7",
+ "padding": {
+  "top": 10,
+  "left": 10,
+  "right": 10,
+  "bottom": 10
+ },
+ "title": {
+  "text": "Co se vejde do České republiky?",
+  "subtitle": "Čtverce jsou v přesném geografickém měřítku – silhoueta = 78 866 km²",
+  "font": "Roboto Slab",
+  "fontSize": 13,
+  "fontWeight": "bold",
+  "anchor": "start",
+  "color": "#1a1a1a",
+  "subtitleFont": "Work Sans",
+  "subtitleFontSize": 9,
+  "subtitleColor": "#6267a3",
+  "offset": 8
+ },
+ "vconcat": [
+  {
+   "hconcat": [
     {
-      "hconcat": [
-        {
-          "title": {"text": "Dopravní síť", "font": "Work Sans", "fontSize": 10, "fontWeight": "600", "color": "#272a59", "offset": 4},
-          "width": 200, "height": 136,
-          "layer": [
-            {
-              "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json", "format": {"type": "topojson", "feature": "countries"}},
-              "transform": [{"filter": "datum.id == 203"}],
-              "projection": {"type": "mercator"},
-              "mark": {"type": "geoshape", "fill": "#eae6dd", "stroke": "#999999", "strokeWidth": 0.8}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "point", "shape": "square", "filled": true, "opacity": 0.82, "size": 524, "color": "#555555"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 68}}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "text", "font": "Work Sans", "fontSize": 9, "fontWeight": "700", "color": "#1a1a1a", "baseline": "top", "text": "2 950 km²"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 95}}
-            }
-          ]
-        },
-        {
-          "title": {"text": "FVE – náhrada uhlí", "font": "Work Sans", "fontSize": 10, "fontWeight": "600", "color": "#272a59", "offset": 4},
-          "width": 200, "height": 136,
-          "layer": [
-            {
-              "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json", "format": {"type": "topojson", "feature": "countries"}},
-              "transform": [{"filter": "datum.id == 203"}],
-              "projection": {"type": "mercator"},
-              "mark": {"type": "geoshape", "fill": "#eae6dd", "stroke": "#999999", "strokeWidth": 0.8}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "point", "shape": "square", "filled": true, "opacity": 0.85, "size": 77, "color": "#de1743"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 68}}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "text", "font": "Work Sans", "fontSize": 9, "fontWeight": "700", "color": "#1a1a1a", "baseline": "top", "text": "434 km²"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 95}}
-            }
-          ]
+     "title": {
+      "text": "Dopravní síť",
+      "font": "Work Sans",
+      "fontSize": 10,
+      "fontWeight": "600",
+      "color": "#272a59",
+      "offset": 4
+     },
+     "width": 200,
+     "height": 136,
+     "layer": [
+      {
+       "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": {
+         "type": "topojson",
+         "feature": "countries"
         }
-      ]
+       },
+       "transform": [
+        {
+         "filter": "datum.id == 203"
+        }
+       ],
+       "projection": {
+        "type": "mercator"
+       },
+       "mark": {
+        "type": "geoshape",
+        "fill": "#eae6dd",
+        "stroke": "#999999",
+        "strokeWidth": 0.8
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "point",
+        "shape": "square",
+        "filled": true,
+        "opacity": 0.82,
+        "size": 524,
+        "color": "#555555"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 68
+        }
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "700",
+        "color": "#1a1a1a",
+        "baseline": "top",
+        "text": "2 950 km²"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 95
+        }
+       }
+      }
+     ]
     },
     {
-      "hconcat": [
-        {
-          "title": {"text": "Brownfieldy", "font": "Work Sans", "fontSize": 10, "fontWeight": "600", "color": "#272a59", "offset": 4},
-          "width": 200, "height": 136,
-          "layer": [
-            {
-              "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json", "format": {"type": "topojson", "feature": "countries"}},
-              "transform": [{"filter": "datum.id == 203"}],
-              "projection": {"type": "mercator"},
-              "mark": {"type": "geoshape", "fill": "#eae6dd", "stroke": "#999999", "strokeWidth": 0.8}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "point", "shape": "square", "filled": true, "opacity": 0.85, "size": 67, "color": "#4a51ab"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 68}}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "text", "font": "Work Sans", "fontSize": 9, "fontWeight": "700", "color": "#1a1a1a", "baseline": "top", "text": "380 km²"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 95}}
-            }
-          ]
-        },
-        {
-          "title": {"text": "Parkoviště (½)", "font": "Work Sans", "fontSize": 10, "fontWeight": "600", "color": "#272a59", "offset": 4},
-          "width": 200, "height": 136,
-          "layer": [
-            {
-              "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json", "format": {"type": "topojson", "feature": "countries"}},
-              "transform": [{"filter": "datum.id == 203"}],
-              "projection": {"type": "mercator"},
-              "mark": {"type": "geoshape", "fill": "#eae6dd", "stroke": "#999999", "strokeWidth": 0.8}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "point", "shape": "square", "filled": true, "opacity": 0.85, "size": 66, "color": "#f76800"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 68}}
-            },
-            {
-              "data": {"values": [{}]},
-              "mark": {"type": "text", "font": "Work Sans", "fontSize": 9, "fontWeight": "700", "color": "#1a1a1a", "baseline": "top", "text": "375 km²"},
-              "encoding": {"x": {"value": 100}, "y": {"value": 95}}
-            }
-          ]
+     "title": {
+      "text": "FVE – náhrada uhlí",
+      "font": "Work Sans",
+      "fontSize": 10,
+      "fontWeight": "600",
+      "color": "#272a59",
+      "offset": 4
+     },
+     "width": 200,
+     "height": 136,
+     "layer": [
+      {
+       "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": {
+         "type": "topojson",
+         "feature": "countries"
         }
-      ]
+       },
+       "transform": [
+        {
+         "filter": "datum.id == 203"
+        }
+       ],
+       "projection": {
+        "type": "mercator"
+       },
+       "mark": {
+        "type": "geoshape",
+        "fill": "#eae6dd",
+        "stroke": "#999999",
+        "strokeWidth": 0.8
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "point",
+        "shape": "square",
+        "filled": true,
+        "opacity": 0.85,
+        "size": 77,
+        "color": "#de1743"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 68
+        }
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "700",
+        "color": "#1a1a1a",
+        "baseline": "top",
+        "text": "434 km²"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 95
+        }
+       }
+      }
+     ]
     }
-  ],
-  "config": {
-    "view": {"stroke": "transparent"},
-    "concat": {"spacing": 10}
+   ]
+  },
+  {
+   "hconcat": [
+    {
+     "title": {
+      "text": "Brownfieldy",
+      "font": "Work Sans",
+      "fontSize": 10,
+      "fontWeight": "600",
+      "color": "#272a59",
+      "offset": 4
+     },
+     "width": 200,
+     "height": 136,
+     "layer": [
+      {
+       "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": {
+         "type": "topojson",
+         "feature": "countries"
+        }
+       },
+       "transform": [
+        {
+         "filter": "datum.id == 203"
+        }
+       ],
+       "projection": {
+        "type": "mercator"
+       },
+       "mark": {
+        "type": "geoshape",
+        "fill": "#eae6dd",
+        "stroke": "#999999",
+        "strokeWidth": 0.8
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "point",
+        "shape": "square",
+        "filled": true,
+        "opacity": 0.85,
+        "size": 67,
+        "color": "#4a51ab"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 68
+        }
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "700",
+        "color": "#1a1a1a",
+        "baseline": "top",
+        "text": "380 km²"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 95
+        }
+       }
+      }
+     ]
+    },
+    {
+     "title": {
+      "text": "Parkoviště (½)",
+      "font": "Work Sans",
+      "fontSize": 10,
+      "fontWeight": "600",
+      "color": "#272a59",
+      "offset": 4
+     },
+     "width": 200,
+     "height": 136,
+     "layer": [
+      {
+       "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": {
+         "type": "topojson",
+         "feature": "countries"
+        }
+       },
+       "transform": [
+        {
+         "filter": "datum.id == 203"
+        }
+       ],
+       "projection": {
+        "type": "mercator"
+       },
+       "mark": {
+        "type": "geoshape",
+        "fill": "#eae6dd",
+        "stroke": "#999999",
+        "strokeWidth": 0.8
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "point",
+        "shape": "square",
+        "filled": true,
+        "opacity": 0.85,
+        "size": 66,
+        "color": "#f76800"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 68
+        }
+       }
+      },
+      {
+       "data": {
+        "values": [
+         {}
+        ]
+       },
+       "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "700",
+        "color": "#1a1a1a",
+        "baseline": "top",
+        "text": "375 km²"
+       },
+       "encoding": {
+        "x": {
+         "value": 100
+        },
+        "y": {
+         "value": 95
+        }
+       }
+      }
+     ]
+    }
+   ]
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  },
+  "concat": {
+   "spacing": 10
+  }
+ }
 }

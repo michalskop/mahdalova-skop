@@ -1,47 +1,67 @@
 {
-  "_source": "Zdroj: MPSV, Strategie reskillingu 2030",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Propast v rekvalifikaci: Současná kapacita vs. skutečná potřeba (2030)",
-  "width": 450,
-  "height": 200,
-  "autosize": {"type": "pad", "resize": true},
-  "background": "#fdfbf7",
-  "data": {
-    "values": [
-      {"cat": "Dosud proškoleno (kurzy NPO)", "val": 110000, "color": "#bcbcb0"},
-      {"cat": "Potřeba rekvalifikace do 2030", "val": 2200000, "color": "#de1743"}
-    ]
+ "_source": "Zdroj: MPSV, Strategie reskillingu 2030",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Propast v rekvalifikaci: Současná kapacita vs. skutečná potřeba (2030)",
+ "width": 450,
+ "height": 200,
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "background": "#fdfbf7",
+ "data": {
+  "values": [
+   {
+    "cat": "Dosud proškoleno (kurzy NPO)",
+    "val": 110000,
+    "color": "#bcbcb0"
+   },
+   {
+    "cat": "Potřeba rekvalifikace do 2030",
+    "val": 2200000,
+    "color": "#de1743"
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar",
+  "tooltip": true,
+  "cornerRadiusEnd": 4
+ },
+ "encoding": {
+  "y": {
+   "field": "cat",
+   "type": "nominal",
+   "title": null
   },
-  "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 4},
-  "encoding": {
-    "y": {"field": "cat", "type": "nominal", "title": null},
-    "x": {"field": "val", "type": "quantitative", "title": "Počet osob"},
-    "color": {"field": "color", "type": "nominal", "scale": null}
+  "x": {
+   "field": "val",
+   "type": "quantitative",
+   "title": "Počet osob"
   },
-  "config": {
-    "view": {"stroke": "transparent"},
-    "title": {
-      "font": "Roboto Slab",
-      "fontWeight": "bold",
-      "fontSize": 13,
-      "anchor": "start",
-      "color": "#272a59",
-      "subtitleFont": "Work Sans",
-      "subtitleFontSize": 10,
-      "subtitleColor": "#6267a3"
-    },
-    "axis": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10,
-      "titleColor": "#6267a3"
-    },
-    "legend": {
-      "labelFont": "Roboto Slab",
-      "labelFontSize": 10,
-      "titleFont": "Roboto Slab",
-      "titleFontSize": 10
-    }
+  "color": {
+   "field": "color",
+   "type": "nominal",
+   "scale": null
   }
+ },
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  },
+  "title": {
+   "font": "Roboto Slab",
+   "fontWeight": "bold",
+   "fontSize": 13,
+   "anchor": "start",
+   "color": "#272a59",
+   "subtitleFont": "Work Sans",
+   "subtitleFontSize": 10,
+   "subtitleColor": "#6267a3"
+  },
+  "axis": {
+   "titleColor": "#6267a3"
+  },
+  "legend": {}
+ }
 }

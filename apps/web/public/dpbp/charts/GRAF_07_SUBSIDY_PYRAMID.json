@@ -1,94 +1,145 @@
 {
-  "_source": "Zdroj: SZIF / Greenpeace EU 2026",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Podíl zemědělských dotací podle velikosti příjemců",
-  "width": 450,
-  "height": 150,
-  "padding": {"top": 20, "left": 12, "right": 20, "bottom": 36},
-  "autosize": {"type": "pad", "resize": true},
-  "background": "#fdfbf7",
-  "title": {
-    "text": "Dotační sklon: 1 % proti zbytku",
-    "subtitle": "Podíl na penězích SZP, lineární měřítko",
-    "font": "Roboto Slab",
-    "fontSize": 13,
-    "fontWeight": "bold",
-    "anchor": "start",
-    "color": "#1a1a1a",
-    "subtitleFont": "Work Sans",
-    "subtitleFontSize": 10,
-    "subtitleColor": "#6267a3",
-    "offset": 10
-  },
-  "data": {
-    "values": [
-      {"skupina": "Horní 1 % příjemců", "podil": 40, "poradi": 1, "label": "40 %"},
-      {"skupina": "Ostatních 99 % příjemců", "podil": 60, "poradi": 2, "label": "60 %"}
-    ]
-  },
-  "layer": [
-    {
-      "mark": {
-        "type": "bar",
-        "tooltip": true,
-        "cornerRadiusEnd": 3,
-        "height": 40
-      },
-      "encoding": {
-        "x": {
-          "field": "podil",
-          "type": "quantitative",
-          "title": null,
-          "scale": {"domain": [0, 100]},
-          "axis": {
-            "grid": false,
-            "domain": false,
-            "ticks": false,
-            "labels": false
-          }
-        },
-        "y": {
-          "field": "skupina",
-          "type": "nominal",
-          "title": null,
-          "axis": {
-            "labelFont": "Work Sans",
-            "labelFontSize": 10,
-            "domain": false,
-            "ticks": false
-          },
-          "sort": {"field": "poradi"}
-        },
-        "color": {
-          "field": "skupina",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Horní 1 % příjemců", "Ostatních 99 % příjemců"],
-            "range": ["#ffcf02", "#d4d4c8"]
-          },
-          "legend": null
-        }
-      }
+ "_source": "Zdroj: SZIF / Greenpeace EU 2026",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Podíl zemědělských dotací podle velikosti příjemců",
+ "width": 450,
+ "height": 150,
+ "padding": {
+  "top": 20,
+  "left": 12,
+  "right": 20,
+  "bottom": 36
+ },
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "background": "#fdfbf7",
+ "title": {
+  "text": "Dotační sklon: 1 % proti zbytku",
+  "subtitle": "Podíl na penězích SZP, lineární měřítko",
+  "font": "Roboto Slab",
+  "fontSize": 13,
+  "fontWeight": "bold",
+  "anchor": "start",
+  "color": "#1a1a1a",
+  "subtitleFont": "Work Sans",
+  "subtitleFontSize": 10,
+  "subtitleColor": "#6267a3",
+  "offset": 10
+ },
+ "data": {
+  "values": [
+   {
+    "skupina": "Horní 1 % příjemců",
+    "podil": 40,
+    "poradi": 1,
+    "label": "40 %"
+   },
+   {
+    "skupina": "Ostatních 99 % příjemců",
+    "podil": 60,
+    "poradi": 2,
+    "label": "60 %"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "cornerRadiusEnd": 3,
+    "height": 40
+   },
+   "encoding": {
+    "x": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labels": false
+     }
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "font": "Work Sans",
-        "fontSize": 12,
-        "fontWeight": "bold"
-      },
-      "encoding": {
-        "x": {"field": "podil", "type": "quantitative", "scale": {"domain": [0, 100]}},
-        "dx": {"value": 16},
-        "y": {"field": "skupina", "type": "nominal", "sort": {"field": "poradi"}},
-        "text": {"field": "label"},
-        "color": {"value": "#1a1a1a"}
-      }
+    "y": {
+     "field": "skupina",
+     "type": "nominal",
+     "title": null,
+     "axis": {
+      "domain": false,
+      "ticks": false
+     },
+     "sort": {
+      "field": "poradi"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Horní 1 % příjemců",
+       "Ostatních 99 % příjemců"
+      ],
+      "range": [
+       "#ffcf02",
+       "#d4d4c8"
+      ]
+     },
+     "legend": null
     }
-  ],
-  "config": {
-    "view": {"stroke": "transparent"}
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "middle",
+    "fontSize": 12,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "podil",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "dx": {
+     "value": 16
+    },
+    "y": {
+     "field": "skupina",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     }
+    },
+    "text": {
+     "field": "label"
+    },
+    "color": {
+     "value": "#1a1a1a"
+    }
+   }
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ }
 }

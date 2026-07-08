@@ -163,7 +163,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
         {meta.intro && (
           <Box style={{ paddingTop: 32 }}>
             <Title order={2} style={{
-              fontFamily: 'Roboto Slab, Georgia, serif',
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: '1.6rem',
               fontWeight: 700,
               color: '#1a1a1a',
@@ -173,7 +173,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               {meta.intro.title}
             </Title>
             <Text style={{
-              fontFamily: 'Roboto Slab, Georgia, serif',
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: 16,
               lineHeight: 1.65,
               color: '#2a2a2a',
@@ -183,7 +183,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             </Text>
             {introCard && <ImpactCard card={introCard} />}
             <Text style={{
-              fontFamily: 'Roboto Slab, Georgia, serif',
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: 16,
               lineHeight: 1.65,
               color: '#2a2a2a',
@@ -194,7 +194,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             {introChartSpec && <VegaChart spec={introChartSpec} />}
             {meta.intro.textClosing && (
               <Text style={{
-                fontFamily: 'Roboto Slab, Georgia, serif',
+                fontFamily: 'var(--font-roboto-slab), Georgia, serif',
                 fontSize: 16,
                 lineHeight: 1.65,
                 color: '#2a2a2a',

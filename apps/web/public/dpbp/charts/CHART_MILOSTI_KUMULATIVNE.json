@@ -1,100 +1,286 @@
 {
-  "_source": "Zdroj: Kancelář prezidenta republiky, Wikipedie (Prezidentské milosti Miloše Zemana / Petra Pavla), ČT24, iROZHLAS, Česká justice. Data k 7. 7. 2026.",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Kumulativní počet udělených prezidentských milostí podle dne mandátu",
-  "height": 260,
-  "padding": {"top": 10, "left": 10, "right": 10, "bottom": 10},
-  "data": {
-    "values": [
-      {"prezident": "Zeman", "den": 0, "kumulativ": 0, "label": "8. 3. 2013 – nástup do úřadu"},
-      {"prezident": "Zeman", "den": 1075, "kumulativ": 1, "label": "únor 2016 – Pavel Mareš (roztroušená skleróza)"},
-      {"prezident": "Zeman", "den": 1181, "kumulativ": 2, "label": "31. 5. 2016 – zdravotní stav, dialýza"},
-      {"prezident": "Zeman", "den": 1300, "kumulativ": 3, "label": "27. 9. 2016 – poškození mozku po CMP"},
-      {"prezident": "Zeman", "den": 1354, "kumulativ": 5, "label": "20. 11. 2016 – L. G. (péče o syna ve věznici) + Jiřina Mošnová (psychická nemoc)"},
-      {"prezident": "Zeman", "den": 1377, "kumulativ": 6, "label": "13. 12. 2016 – onkologické onemocnění"},
-      {"prezident": "Zeman", "den": 1489, "kumulativ": 7, "label": "4. 4. 2017 – rakovina plic s metastázami"},
-      {"prezident": "Zeman", "den": 1538, "kumulativ": 8, "label": "23. 5. 2017 – Jiří Kajínek (doživotní trest)"},
-      {"prezident": "Zeman", "den": 1820, "kumulativ": 9, "label": "1. 3. 2018 – péče o syna po dopravní nehodě"},
-      {"prezident": "Zeman", "den": 2000, "kumulativ": 10, "label": "28. 8. 2018 – Drahomír Nosek (onkologické onemocnění)"},
-      {"prezident": "Zeman", "den": 2055, "kumulativ": 11, "label": "22. 10. 2018 – amputace nohou, neplacení výživného"},
-      {"prezident": "Zeman", "den": 2512, "kumulativ": 12, "label": "22. 1. 2020 – Václav Grimm (rakovina plic)"},
-      {"prezident": "Zeman", "den": 2569, "kumulativ": 14, "label": "19. 3. 2020 – Ondřej (záchrana života resuscitací) + srdeční selhání, transplantace"},
-      {"prezident": "Zeman", "den": 2752, "kumulativ": 15, "label": "18. 9. 2020 – onkologické onemocnění, mladý věk"},
-      {"prezident": "Zeman", "den": 2784, "kumulativ": 16, "label": "20. 10. 2020 – matka pěti dětí"},
-      {"prezident": "Zeman", "den": 2841, "kumulativ": 17, "label": "16. 12. 2020 – Daniel Vlachynský (záchrana tonoucí ženy)"},
-      {"prezident": "Zeman", "den": 2946, "kumulativ": 18, "label": "31. 3. 2021 – rakovina, dřívější loupež"},
-      {"prezident": "Zeman", "den": 3008, "kumulativ": 19, "label": "1. 6. 2021 – péče o děti"},
-      {"prezident": "Zeman", "den": 3108, "kumulativ": 20, "label": "9. 9. 2021 – Pavel Podroužek"},
-      {"prezident": "Zeman", "den": 3306, "kumulativ": 21, "label": "26. 3. 2022 – Miloš Balák (Lesní správa Lány)"},
-      {"prezident": "Zeman", "den": 3548, "kumulativ": 24, "label": "23. 11. 2022 – manželé Kordysovi + společník (3 osoby)"},
-      {"prezident": "Zeman", "den": 3597, "kumulativ": 25, "label": "11. 1. 2023 – Jana Nečasová"},
-      {"prezident": "Zeman", "den": 3652, "kumulativ": 26, "label": "7. 3. 2023 – poslední den mandátu, dopad na zaměstnance firmy"},
-      {"prezident": "Pavel", "den": 0, "kumulativ": 0, "label": "9. 3. 2023 – nástup do úřadu"},
-      {"prezident": "Pavel", "den": 510, "kumulativ": 4, "label": "30. 7. 2024 – 4 milosti (samoživitelky, cizinec, pašování drog)"},
-      {"prezident": "Pavel", "den": 730, "kumulativ": 9, "label": "7. 3. 2025 – 5 milostí (4× marihuana + 1 další)"},
-      {"prezident": "Pavel", "den": 805, "kumulativ": 13, "label": "21. 5. 2025 – 4 milosti (vojáci, abolice v kauze afghánského zajatce)"},
-      {"prezident": "Pavel", "den": 848, "kumulativ": 17, "label": "3. 7. 2025 – 4 milosti (samoživitelky, marihuana)"},
-      {"prezident": "Pavel", "den": 975, "kumulativ": 19, "label": "7. 11. 2025 – 2 milosti (žena 76 let, žena 23 let)"},
-      {"prezident": "Pavel", "den": 1118, "kumulativ": 23, "label": "30. 3. 2026 – 4 milosti (zdravotní stav, zpronevěra, podvod, výživné)"},
-      {"prezident": "Pavel", "den": 1217, "kumulativ": 23, "label": "7. 7. 2026 – zatím poslední bilance"}
+ "_source": "Zdroj: Kancelář prezidenta republiky, Wikipedie (Prezidentské milosti Miloše Zemana / Petra Pavla), ČT24, iROZHLAS, Česká justice. Data k 7. 7. 2026.",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Kumulativní počet udělených prezidentských milostí podle dne mandátu",
+ "height": 260,
+ "padding": {
+  "top": 10,
+  "left": 10,
+  "right": 10,
+  "bottom": 10
+ },
+ "data": {
+  "values": [
+   {
+    "prezident": "Zeman",
+    "den": 0,
+    "kumulativ": 0,
+    "label": "8. 3. 2013 – nástup do úřadu"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1075,
+    "kumulativ": 1,
+    "label": "únor 2016 – Pavel Mareš (roztroušená skleróza)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1181,
+    "kumulativ": 2,
+    "label": "31. 5. 2016 – zdravotní stav, dialýza"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1300,
+    "kumulativ": 3,
+    "label": "27. 9. 2016 – poškození mozku po CMP"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1354,
+    "kumulativ": 5,
+    "label": "20. 11. 2016 – L. G. (péče o syna ve věznici) + Jiřina Mošnová (psychická nemoc)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1377,
+    "kumulativ": 6,
+    "label": "13. 12. 2016 – onkologické onemocnění"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1489,
+    "kumulativ": 7,
+    "label": "4. 4. 2017 – rakovina plic s metastázami"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1538,
+    "kumulativ": 8,
+    "label": "23. 5. 2017 – Jiří Kajínek (doživotní trest)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 1820,
+    "kumulativ": 9,
+    "label": "1. 3. 2018 – péče o syna po dopravní nehodě"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2000,
+    "kumulativ": 10,
+    "label": "28. 8. 2018 – Drahomír Nosek (onkologické onemocnění)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2055,
+    "kumulativ": 11,
+    "label": "22. 10. 2018 – amputace nohou, neplacení výživného"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2512,
+    "kumulativ": 12,
+    "label": "22. 1. 2020 – Václav Grimm (rakovina plic)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2569,
+    "kumulativ": 14,
+    "label": "19. 3. 2020 – Ondřej (záchrana života resuscitací) + srdeční selhání, transplantace"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2752,
+    "kumulativ": 15,
+    "label": "18. 9. 2020 – onkologické onemocnění, mladý věk"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2784,
+    "kumulativ": 16,
+    "label": "20. 10. 2020 – matka pěti dětí"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2841,
+    "kumulativ": 17,
+    "label": "16. 12. 2020 – Daniel Vlachynský (záchrana tonoucí ženy)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 2946,
+    "kumulativ": 18,
+    "label": "31. 3. 2021 – rakovina, dřívější loupež"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 3008,
+    "kumulativ": 19,
+    "label": "1. 6. 2021 – péče o děti"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 3108,
+    "kumulativ": 20,
+    "label": "9. 9. 2021 – Pavel Podroužek"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 3306,
+    "kumulativ": 21,
+    "label": "26. 3. 2022 – Miloš Balák (Lesní správa Lány)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 3548,
+    "kumulativ": 24,
+    "label": "23. 11. 2022 – manželé Kordysovi + společník (3 osoby)"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 3597,
+    "kumulativ": 25,
+    "label": "11. 1. 2023 – Jana Nečasová"
+   },
+   {
+    "prezident": "Zeman",
+    "den": 3652,
+    "kumulativ": 26,
+    "label": "7. 3. 2023 – poslední den mandátu, dopad na zaměstnance firmy"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 0,
+    "kumulativ": 0,
+    "label": "9. 3. 2023 – nástup do úřadu"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 510,
+    "kumulativ": 4,
+    "label": "30. 7. 2024 – 4 milosti (samoživitelky, cizinec, pašování drog)"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 730,
+    "kumulativ": 9,
+    "label": "7. 3. 2025 – 5 milostí (4× marihuana + 1 další)"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 805,
+    "kumulativ": 13,
+    "label": "21. 5. 2025 – 4 milosti (vojáci, abolice v kauze afghánského zajatce)"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 848,
+    "kumulativ": 17,
+    "label": "3. 7. 2025 – 4 milosti (samoživitelky, marihuana)"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 975,
+    "kumulativ": 19,
+    "label": "7. 11. 2025 – 2 milosti (žena 76 let, žena 23 let)"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 1118,
+    "kumulativ": 23,
+    "label": "30. 3. 2026 – 4 milosti (zdravotní stav, zpronevěra, podvod, výživné)"
+   },
+   {
+    "prezident": "Pavel",
+    "den": 1217,
+    "kumulativ": 23,
+    "label": "7. 7. 2026 – zatím poslední bilance"
+   }
+  ]
+ },
+ "mark": {
+  "type": "line",
+  "interpolate": "step-after",
+  "point": {
+   "filled": true,
+   "size": 45
+  },
+  "strokeWidth": 2,
+  "tooltip": true
+ },
+ "encoding": {
+  "x": {
+   "field": "den",
+   "type": "quantitative",
+   "title": "den mandátu",
+   "axis": {
+    "gridColor": "#e8e8dc",
+    "domain": false
+   }
+  },
+  "y": {
+   "field": "kumulativ",
+   "type": "quantitative",
+   "title": "milostí celkem (kumulativně)",
+   "axis": {
+    "gridColor": "#e8e8dc",
+    "domain": false
+   }
+  },
+  "color": {
+   "field": "prezident",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Zeman",
+     "Pavel"
+    ],
+    "range": [
+     "#de1743",
+     "#6267a3"
     ]
+   },
+   "legend": {
+    "title": null,
+    "orient": "top-left"
+   }
   },
-  "mark": {
-    "type": "line",
-    "interpolate": "step-after",
-    "point": {"filled": true, "size": 45},
-    "strokeWidth": 2,
-    "tooltip": true
+  "tooltip": [
+   {
+    "field": "prezident",
+    "type": "nominal",
+    "title": "Prezident"
+   },
+   {
+    "field": "label",
+    "type": "nominal",
+    "title": "Případ"
+   },
+   {
+    "field": "kumulativ",
+    "type": "quantitative",
+    "title": "Milostí celkem"
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": "transparent"
   },
-  "encoding": {
-    "x": {
-      "field": "den",
-      "type": "quantitative",
-      "title": "den mandátu",
-      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
-    },
-    "y": {
-      "field": "kumulativ",
-      "type": "quantitative",
-      "title": "milostí celkem (kumulativně)",
-      "axis": {"titleFont": "Work Sans", "titleFontSize": 10, "labelFont": "Work Sans", "labelFontSize": 10, "gridColor": "#e8e8dc", "domain": false}
-    },
-    "color": {
-      "field": "prezident",
-      "type": "nominal",
-      "scale": {"domain": ["Zeman", "Pavel"], "range": ["#de1743", "#6267a3"]},
-      "legend": {"title": null, "labelFont": "Roboto Slab", "labelFontSize": 11, "orient": "top-left"}
-    },
-    "tooltip": [
-      {"field": "prezident", "type": "nominal", "title": "Prezident"},
-      {"field": "label", "type": "nominal", "title": "Případ"},
-      {"field": "kumulativ", "type": "quantitative", "title": "Milostí celkem"}
-    ]
+  "title": {
+   "font": "Roboto Slab",
+   "fontWeight": "bold",
+   "fontSize": 15,
+   "anchor": "start",
+   "color": "#272a59",
+   "subtitleFont": "Work Sans",
+   "subtitleFontSize": 11,
+   "subtitleColor": "#6267a3"
   },
-  "config": {
-    "view": {"stroke": "transparent"},
-    "title": {
-      "font": "Roboto Slab",
-      "fontWeight": "bold",
-      "fontSize": 15,
-      "anchor": "start",
-      "color": "#272a59",
-      "subtitleFont": "Work Sans",
-      "subtitleFontSize": 11,
-      "subtitleColor": "#6267a3"
-    },
-    "axis": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10,
-      "titleColor": "#6267a3"
-    },
-    "legend": {
-      "labelFont": "Roboto Slab",
-      "labelFontSize": 11,
-      "titleFont": "Roboto Slab",
-      "titleFontSize": 11
-    }
-  }
+  "axis": {
+   "titleColor": "#6267a3"
+  },
+  "legend": {}
+ }
 }

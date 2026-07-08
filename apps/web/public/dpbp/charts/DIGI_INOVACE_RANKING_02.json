@@ -1,112 +1,132 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "background": "#fdfbf7",
-  "title": {
-    "text": "Kolik rizikového kapitálu má český nápad?",
-    "subtitle": "VC investice přepočtené na 100 000 Kč HDP",
-    "anchor": "start",
-    "font": "Roboto Slab",
-    "fontSize": 13,
-    "subtitleFont": "Work Sans",
-    "subtitleFontSize": 10,
-    "color": "#272a59",
-    "subtitleColor": "#272a59"
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "#fdfbf7",
+ "title": {
+  "text": "Kolik rizikového kapitálu má český nápad?",
+  "subtitle": "VC investice přepočtené na 100 000 Kč HDP",
+  "anchor": "start",
+  "font": "Roboto Slab",
+  "fontSize": 13,
+  "subtitleFont": "Work Sans",
+  "subtitleFontSize": 10,
+  "color": "#272a59",
+  "subtitleColor": "#272a59"
+ },
+ "width": 450,
+ "height": 210,
+ "data": {
+  "values": [
+   {
+    "oblast": "Česko",
+    "kc": 70,
+    "label": "70 Kč",
+    "role": "Česko"
+   },
+   {
+    "oblast": "Evropský průměr",
+    "kc": 170,
+    "label": "170 Kč",
+    "role": "Srovnání"
+   },
+   {
+    "oblast": "Evropská ambice",
+    "kc": 1000,
+    "label": "1 000 Kč",
+    "role": "Cíl"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "oblast",
+   "type": "nominal",
+   "sort": [
+    "Česko",
+    "Evropský průměr",
+    "Evropská ambice"
+   ],
+   "title": null,
+   "axis": {
+    "labelColor": "#272a59",
+    "domain": false,
+    "ticks": false
+   }
   },
-  "width": 450,
-  "height": 210,
-  "data": {
-    "values": [
-      {
-        "oblast": "Česko",
-        "kc": 70,
-        "label": "70 Kč",
-        "role": "Česko"
-      },
-      {
-        "oblast": "Evropský průměr",
-        "kc": 170,
-        "label": "170 Kč",
-        "role": "Srovnání"
-      },
-      {
-        "oblast": "Evropská ambice",
-        "kc": 1000,
-        "label": "1 000 Kč",
-        "role": "Cíl"
-      }
+  "x": {
+   "field": "kc",
+   "type": "quantitative",
+   "title": "Rizikový kapitál na 100 000 Kč HDP",
+   "scale": {
+    "domain": [
+     0,
+     1050
     ]
+   },
+   "axis": {
+    "labelColor": "#272a59",
+    "titleColor": "#272a59",
+    "gridColor": "#e8e8dc",
+    "domainColor": "#e8e8dc",
+    "tickColor": "#e8e8dc"
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": 24,
+    "cornerRadiusEnd": 2
+   },
+   "encoding": {
+    "color": {
+     "field": "role",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Česko",
+       "Srovnání",
+       "Cíl"
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3",
+       "#0e839e"
+      ]
+     },
+     "legend": null
+    }
+   }
   },
-  "encoding": {
-    "y": {
-      "field": "oblast",
-      "type": "nominal",
-      "sort": ["Česko", "Evropský průměr", "Evropská ambice"],
-      "title": null,
-      "axis": {
-        "labelFont": "Work Sans",
-        "labelFontSize": 11,
-        "labelColor": "#272a59",
-        "domain": false,
-        "ticks": false
-      }
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 6,
+    "fontSize": 11,
+    "fontWeight": 600,
+    "color": "#272a59"
+   },
+   "encoding": {
+    "text": {
+     "field": "label"
     },
     "x": {
-      "field": "kc",
-      "type": "quantitative",
-      "title": "Rizikový kapitál na 100 000 Kč HDP",
-      "scale": {"domain": [0, 1050]},
-      "axis": {
-        "labelFont": "Work Sans",
-        "labelFontSize": 10,
-        "labelColor": "#272a59",
-        "titleFont": "Work Sans",
-        "titleFontSize": 11,
-        "titleColor": "#272a59",
-        "gridColor": "#e8e8dc",
-        "domainColor": "#e8e8dc",
-        "tickColor": "#e8e8dc"
-      }
+     "field": "kc",
+     "type": "quantitative"
     }
-  },
-  "layer": [
-    {
-      "mark": {"type": "bar", "height": 24, "cornerRadiusEnd": 2},
-      "encoding": {
-        "color": {
-          "field": "role",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Česko", "Srovnání", "Cíl"],
-            "range": ["#de1743", "#6267a3", "#0e839e"]
-          },
-          "legend": null
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 6,
-        "font": "Work Sans",
-        "fontSize": 11,
-        "fontWeight": 600,
-        "color": "#272a59"
-      },
-      "encoding": {
-        "text": {"field": "label"},
-        "x": {"field": "kc", "type": "quantitative"}
-      }
-    }
-  ],
-  "config": {
-    "view": {"stroke": null},
-    "font": "Work Sans",
-    "axis": {"labelFont": "Work Sans", "titleFont": "Work Sans"}
-  },
-  "_source": "Czech Founders / State of European Tech 2024",
-  "usermeta": {
-    "note": "Přepočet z VC investic jako podílu HDP: ČR 0,07 %, Evropa 0,17 %, evropská ambice 1 % HDP."
+   }
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  },
+  "axis": {}
+ },
+ "_source": "Czech Founders / State of European Tech 2024",
+ "usermeta": {
+  "note": "Přepočet z VC investic jako podílu HDP: ČR 0,07 %, Evropa 0,17 %, evropská ambice 1 % HDP."
+ }
 }

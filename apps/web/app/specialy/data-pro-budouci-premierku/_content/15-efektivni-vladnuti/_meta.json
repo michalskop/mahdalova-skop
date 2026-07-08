@@ -2,7 +2,7 @@
   "id": "15",
   "slug": "15-efektivni-vladnuti",
   "title": "Efektivní vládnutí",
-  "accent": "#101432",
+  "accent": "#4a51ab",
   "author": "Kateřina Mahdalová & Michal Škop",
   "date": "2026-06-19",
   "cardOrder": [
@@ -10,9 +10,9 @@
   ],
   "onePager": {
     "slug": "one-pager",
-    "logo": null
+    "logo": "/dpbp/chapters/15.svg"
   },
-  "introChart": null,
+  "introChart": "GRAF_15_SNEMOVNA_TEMPO",
   "intro": {
     "title": "Sněmovna mluvila 39 hodin měsíčně. Po výměně vlády je to 31.",
     "textBefore": "Počátkem roku 2025 se začali ozývat zákonodárci, že aktuální způsob fungování Sněmovny není slučitelný s osobním životem. Dvě poslankyně oznámily, že nebudou znovu kandidovat – jednání jsou podle nich nepředvídatelná a neefektivní. Přidal se i předseda rozpočtového výboru, který si stěžoval, že tak neefektivně strávený pracovní čas za celý svůj život neměl.",

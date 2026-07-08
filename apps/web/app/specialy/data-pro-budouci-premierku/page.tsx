@@ -6,11 +6,11 @@ import ProfileHead from '@/components/dpbp/ProfileHead';
 
 export const metadata: Metadata = {
   title: 'Data pro budoucí premiérku',
-  description: 'Patnáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
+  description: 'Patnáct klíčových výzev pro budoucí vedení státu, opřených o data a fakta.',
   alternates: { canonical: '/specialy/data-pro-budouci-premierku' },
   openGraph: {
     title: 'Data pro budoucí premiérku',
-    description: 'Patnáct datových kapitol o klíčových výzvách, které čekají na nové vedení České republiky.',
+    description: 'Patnáct klíčových výzev pro budoucí vedení státu, opřených o data a fakta.',
     url: '/specialy/data-pro-budouci-premierku',
     type: 'website',
   },
@@ -522,7 +522,7 @@ const CHAPTERS = [
   // BLOK 5: Systém, stát a peníze
   {n:'13',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/13-oligarchizace-a-korupce',available:true,dots:D07,accent:'#ffcf02',customSvg:G07},
   {n:'14',title:'Veřejné finance a daně',href:'/specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane',available:true,dots:D06,accent:'#2d7a4f',customSvg:G_FINANCE},
-  {n:'15',title:'Efektivní vládnutí',href:'/specialy/data-pro-budouci-premierku/15-efektivni-vladnuti',available:true,dots:D08,accent:'#3a4a8f',customSvg:G_VLADNUTI},
+  {n:'15',title:'Efektivní vládnutí',href:'/specialy/data-pro-budouci-premierku/15-efektivni-vladnuti',available:true,dots:D08,accent:'#4a51ab',customSvg:G_VLADNUTI},
 ];
 
 const DARK = '#101432';
@@ -587,7 +587,7 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
       </div>
 
       {/* Accent line – chapter color */}
-      <div style={{ height: 2, background: '#ff3f30', margin: '0 16px', opacity: 0.7 }} />
+      <div style={{ height: 2, background: 'var(--ch-accent)', margin: '0 16px', opacity: 0.85 }} />
 
       {/* Info area */}
       <div style={{ padding: '10px 16px 18px', display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -600,9 +600,10 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
           letterSpacing: '0.01em',
           paddingTop: 12,
           marginBottom: 12,
-          whiteSpace: 'nowrap',
+          display: '-webkit-box',
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: 'vertical' as const,
           overflow: 'hidden',
-          textOverflow: 'ellipsis',
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
         }}>
@@ -612,13 +613,13 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
           <span style={{
             fontSize: 13, fontWeight: 600,
             fontFamily: "'Roboto', system-ui, sans-serif",
-            color: '#f76800',
+            color: '#ff4d70',
           }}>
             Číst kapitolu
           </span>
           <svg className="ch-card-arrow" width="34" height="10" viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-            <line x1="0" y1="5" x2="27" y2="5" stroke="#f76800" strokeWidth="2.5" />
-            <path d="M22 1 L28 5 L22 9" fill="none" stroke="#f76800" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+            <line x1="0" y1="5" x2="27" y2="5" stroke="#ff4d70" strokeWidth="2.5" />
+            <path d="M22 1 L28 5 L22 9" fill="none" stroke="#ff4d70" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
       </div>
@@ -672,7 +673,7 @@ export default function DpbpLandingPage() {
           transform: scaleX(1.4) translateX(2px);
         }
         .dt-hero {
-          background: linear-gradient(90deg, #101432 0%, #f71b4b 100%);
+          background: linear-gradient(90deg, #101432 0%, #de1743 100%);
           padding: 52px 40px 44px;
           display: flex;
           flex-direction: column-reverse;
@@ -684,13 +685,6 @@ export default function DpbpLandingPage() {
             flex-direction: row;
             justify-content: space-between;
             align-items: stretch;
-          }
-        }
-        @media (max-width: 600px) {
-          .ch-card-title {
-            white-space: normal !important;
-            overflow: visible !important;
-            text-overflow: unset !important;
           }
         }
         .dt-hero-content {
@@ -726,8 +720,7 @@ export default function DpbpLandingPage() {
           cursor: default;
         }
         .dt-hero-title:hover {
-          color: #ff3f30;
-          text-shadow: 0 0 24px rgba(255, 63, 48, 0.45);
+          color: #ff4d70;
         }
         .dt-hero-lead {
           font-size: clamp(15px, 1.5vw, 18px);

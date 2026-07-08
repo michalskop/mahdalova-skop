@@ -1,6 +1,29 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { robotoCondensed } from '@/app/fonts';
+
+// Jednotná typografie grafů (viz Flourish vzor): Roboto Condensed všude,
+// titulek 20/bold, podtitulek 14, patička/osy 11,5, legenda 12,5.
+const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
+const CHART_FONT_CONFIG = {
+  font: CHART_FONT,
+  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 11.5, titleFontSize: 11.5 },
+  legend: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 12.5, titleFontSize: 12.5 },
+  text: { font: CHART_FONT },
+  header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
+};
+
+function mergeFontConfig(config: unknown): Record<string, unknown> {
+  const base = typeof config === 'object' && config !== null ? config as Record<string, unknown> : {};
+  return {
+    ...base,
+    ...CHART_FONT_CONFIG,
+    axis: { ...(base.axis as object ?? {}), ...CHART_FONT_CONFIG.axis },
+    legend: { ...(base.legend as object ?? {}), ...CHART_FONT_CONFIG.legend },
+    text: { ...(base.text as object ?? {}), ...CHART_FONT_CONFIG.text },
+  };
+}
 
 export interface VegaChartProps {
   chartId?: string;
@@ -76,13 +99,14 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       };
     } else if (isConcatSpec(base)) {
       // width:'container' is unsupported on concat specs in Vega-Lite v5 – leave widths alone
-      final = { ...base, background: '#f8f6f0' };
+      final = { ...base, background: '#f8f6f0', config: mergeFontConfig(base.config) };
     } else {
       final = {
         ...base,
         background: '#f8f6f0',
         width: 'container',
         autosize: { type: 'fit-x', contains: 'padding' },
+        config: mergeFontConfig(base.config),
       };
     }
 
@@ -129,8 +153,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       <div style={{ marginBottom: (meta.title || meta.subtitle) ? 14 : 0 }}>
         {meta.title && (
           <div style={{
-            fontFamily: "'Roboto Slab', Georgia, serif",
-            fontSize: 21,
+            fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+            fontSize: 20,
             fontWeight: 700,
             lineHeight: 1.2,
             color: '#1a1a1a',
@@ -141,10 +165,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
         )}
         {meta.subtitle && (
           <div style={{
-            fontFamily: "'Roboto Slab', Georgia, serif",
-            fontSize: 13,
+            fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+            fontSize: 14,
             lineHeight: 1.3,
-            color: '#666',
+            color: '#333333',
           }}>
             {meta.subtitle}
           </div>
@@ -165,9 +189,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       {/* Source */}
       {meta.source && (
         <div style={{
-          fontFamily: "'Roboto Slab', Georgia, serif",
-          fontSize: 11,
-          color: '#888',
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+          fontSize: 11.5,
+          color: '#333333',
           marginTop: 10,
         }}>
           {meta.source}

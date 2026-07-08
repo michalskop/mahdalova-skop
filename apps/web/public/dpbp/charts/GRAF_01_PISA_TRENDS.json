@@ -1,91 +1,174 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Trend výsledků PISA v matematice (2003–2022)",
-    "subtitle": "Průměrné bodové skóre; ČR vs. Estonsko a OECD",
-    "fontSize": 13,
-    "font": "Roboto Slab",
-    "anchor": "start"
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Trend výsledků PISA v matematice (2003–2022)",
+  "subtitle": "Průměrné bodové skóre; ČR vs. Estonsko a OECD",
+  "fontSize": 13,
+  "font": "Roboto Slab",
+  "anchor": "start"
+ },
+ "width": 450,
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": 2003,
+    "zeme": "ČR",
+    "body": 516
+   },
+   {
+    "rok": 2009,
+    "zeme": "ČR",
+    "body": 493
+   },
+   {
+    "rok": 2012,
+    "zeme": "ČR",
+    "body": 499
+   },
+   {
+    "rok": 2015,
+    "zeme": "ČR",
+    "body": 492
+   },
+   {
+    "rok": 2018,
+    "zeme": "ČR",
+    "body": 499
+   },
+   {
+    "rok": 2022,
+    "zeme": "ČR",
+    "body": 487
+   },
+   {
+    "rok": 2009,
+    "zeme": "Estonsko",
+    "body": 512
+   },
+   {
+    "rok": 2012,
+    "zeme": "Estonsko",
+    "body": 521
+   },
+   {
+    "rok": 2015,
+    "zeme": "Estonsko",
+    "body": 520
+   },
+   {
+    "rok": 2018,
+    "zeme": "Estonsko",
+    "body": 523
+   },
+   {
+    "rok": 2022,
+    "zeme": "Estonsko",
+    "body": 510
+   },
+   {
+    "rok": 2003,
+    "zeme": "Průměr OECD",
+    "body": 500
+   },
+   {
+    "rok": 2009,
+    "zeme": "Průměr OECD",
+    "body": 496
+   },
+   {
+    "rok": 2012,
+    "zeme": "Průměr OECD",
+    "body": 494
+   },
+   {
+    "rok": 2015,
+    "zeme": "Průměr OECD",
+    "body": 490
+   },
+   {
+    "rok": 2018,
+    "zeme": "Průměr OECD",
+    "body": 489
+   },
+   {
+    "rok": 2022,
+    "zeme": "Průměr OECD",
+    "body": 472
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "quantitative",
+   "title": "Rok",
+   "axis": {
+    "format": "d"
+   }
   },
-  "width": 450,
-  "height": 300,
-  "data": {
-    "values": [
-      {"rok": 2003, "zeme": "ČR", "body": 516},
-      {"rok": 2009, "zeme": "ČR", "body": 493},
-      {"rok": 2012, "zeme": "ČR", "body": 499},
-      {"rok": 2015, "zeme": "ČR", "body": 492},
-      {"rok": 2018, "zeme": "ČR", "body": 499},
-      {"rok": 2022, "zeme": "ČR", "body": 487},
-      {"rok": 2009, "zeme": "Estonsko", "body": 512},
-      {"rok": 2012, "zeme": "Estonsko", "body": 521},
-      {"rok": 2015, "zeme": "Estonsko", "body": 520},
-      {"rok": 2018, "zeme": "Estonsko", "body": 523},
-      {"rok": 2022, "zeme": "Estonsko", "body": 510},
-      {"rok": 2003, "zeme": "Průměr OECD", "body": 500},
-      {"rok": 2009, "zeme": "Průměr OECD", "body": 496},
-      {"rok": 2012, "zeme": "Průměr OECD", "body": 494},
-      {"rok": 2015, "zeme": "Průměr OECD", "body": 490},
-      {"rok": 2018, "zeme": "Průměr OECD", "body": 489},
-      {"rok": 2022, "zeme": "Průměr OECD", "body": 472}
+  "y": {
+   "field": "body",
+   "type": "quantitative",
+   "title": "PISA skóre (body)",
+   "scale": {
+    "domain": [
+     460,
+     540
     ]
+   },
+   "axis": {}
   },
-  "encoding": {
-    "x": {
-      "field": "rok",
-      "type": "quantitative",
-      "title": "Rok",
-      "axis": {
-        "format": "d",
-        "labelFontSize": 10,
-        "labelFont": "Work Sans",
-        "titleFontSize": 11,
-        "titleFont": "Work Sans"
-      }
-    },
-    "y": {
-      "field": "body",
-      "type": "quantitative",
-      "title": "PISA skóre (body)",
-      "scale": {"domain": [460, 540]},
-      "axis": {
-        "labelFontSize": 10,
-        "labelFont": "Work Sans",
-        "titleFontSize": 11,
-        "titleFont": "Work Sans"
-      }
-    },
-    "color": {
-      "field": "zeme",
-      "type": "nominal",
-      "scale": {
-        "domain": ["ČR", "Estonsko", "Průměr OECD"],
-        "range": ["#de1743", "#0e839e", "#6267a3"]
-      },
-      "legend": {
-        "labelFont": "Work Sans",
-        "titleFont": "Work Sans",
-        "orient": "bottom"
-      }
-    }
-  },
-  "layer": [
-    {"mark": {"type": "line", "point": true}},
-    {
-      "transform": [{"filter": "datum.rok == 2022 && datum.zeme == 'ČR'"}],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 5,
-        "dy": -10,
-        "font": "Work Sans",
-        "fontSize": 10
-      },
-      "encoding": {"text": {"field": "body", "type": "quantitative"}}
-    }
-  ],
-  "_source": "OECD PISA 2022 Summary Report",
-  "usermeta": {
-    "description": "Zobrazení křížení křivek. Estonsko stoupající/vysoké, ČR klesající trend, OECD pokles."
+  "color": {
+   "field": "zeme",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "ČR",
+     "Estonsko",
+     "Průměr OECD"
+    ],
+    "range": [
+     "#de1743",
+     "#0e839e",
+     "#6267a3"
+    ]
+   },
+   "legend": {
+    "orient": "bottom"
+   }
   }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "point": true
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.rok == 2022 && datum.zeme == 'ČR'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "dy": -10,
+    "fontSize": 10
+   },
+   "encoding": {
+    "text": {
+     "field": "body",
+     "type": "quantitative"
+    }
+   }
+  }
+ ],
+ "_source": "OECD PISA 2022 Summary Report",
+ "usermeta": {
+  "description": "Zobrazení křížení křivek. Estonsko stoupající/vysoké, ČR klesající trend, OECD pokles."
+ }
 }

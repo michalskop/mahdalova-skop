@@ -1,157 +1,247 @@
 {
-  "_source": "Zdroj: MMR, Národní strategie veřejného zadávání; Hlídač státu, Přehled dotací 2024; Reuters / EPPO, Motol 2025",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Měřítko veřejných peněz, které potřebují auditní stopu",
-  "width": 450,
-  "height": 210,
-  "padding": {"top": 20, "left": 10, "right": 24, "bottom": 34},
-  "autosize": {"type": "pad", "resize": true},
-  "background": "#fdfbf7",
-  "title": {
-    "text": "Kolik peněz potřebuje stopu",
-    "subtitle": "Roční objemy a jedna kauza pro měřítko rizika",
-    "font": "Roboto Slab",
-    "fontSize": 13,
-    "fontWeight": "bold",
-    "anchor": "start",
-    "color": "#1a1a1a",
-    "subtitleFont": "Work Sans",
-    "subtitleFontSize": 10,
-    "subtitleColor": "#6267a3",
-    "offset": 10
-  },
-  "data": {
-    "values": [
-      {
-        "oblast": "Veřejné nákupy",
-        "mld": 1000,
-        "label": "~1 bil. Kč ročně",
-        "detail": "cca 15 % HDP",
-        "typ": "system"
-      },
-      {
-        "oblast": "Dotace",
-        "mld": 706,
-        "label": "706 mld. Kč",
-        "detail": "rozděleno v roce 2024",
-        "typ": "system"
-      },
-      {
-        "oblast": "Motol",
-        "mld": 4,
-        "label": "160 mil. EUR",
-        "detail": "podezření v EU fondech",
-        "typ": "case"
-      }
+ "_source": "Zdroj: MMR, Národní strategie veřejného zadávání; Hlídač státu, Přehled dotací 2024; Reuters / EPPO, Motol 2025",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Měřítko veřejných peněz, které potřebují auditní stopu",
+ "width": 450,
+ "height": 210,
+ "padding": {
+  "top": 20,
+  "left": 10,
+  "right": 24,
+  "bottom": 34
+ },
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "background": "#fdfbf7",
+ "title": {
+  "text": "Kolik peněz potřebuje stopu",
+  "subtitle": "Roční objemy a jedna kauza pro měřítko rizika",
+  "font": "Roboto Slab",
+  "fontSize": 13,
+  "fontWeight": "bold",
+  "anchor": "start",
+  "color": "#1a1a1a",
+  "subtitleFont": "Work Sans",
+  "subtitleFontSize": 10,
+  "subtitleColor": "#6267a3",
+  "offset": 10
+ },
+ "data": {
+  "values": [
+   {
+    "oblast": "Veřejné nákupy",
+    "mld": 1000,
+    "label": "~1 bil. Kč ročně",
+    "detail": "cca 15 % HDP",
+    "typ": "system"
+   },
+   {
+    "oblast": "Dotace",
+    "mld": 706,
+    "label": "706 mld. Kč",
+    "detail": "rozděleno v roce 2024",
+    "typ": "system"
+   },
+   {
+    "oblast": "Motol",
+    "mld": 4,
+    "label": "160 mil. EUR",
+    "detail": "podezření v EU fondech",
+    "typ": "case"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": 28,
+    "cornerRadiusEnd": 3,
+    "tooltip": true
+   },
+   "encoding": {
+    "x": {
+     "field": "mld",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       1050
+      ]
+     },
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labels": false
+     }
+    },
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "title": null,
+     "sort": [
+      "Veřejné nákupy",
+      "Dotace",
+      "Motol"
+     ],
+     "axis": {
+      "labelFontWeight": "bold",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "color": {
+     "field": "typ",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "system",
+       "case"
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "oblast",
+      "title": "Oblast"
+     },
+     {
+      "field": "label",
+      "title": "Měřítko"
+     },
+     {
+      "field": "detail",
+      "title": "Poznámka"
+     }
     ]
+   }
   },
-  "layer": [
-    {
-      "mark": {
-        "type": "bar",
-        "height": 28,
-        "cornerRadiusEnd": 3,
-        "tooltip": true
-      },
-      "encoding": {
-        "x": {
-          "field": "mld",
-          "type": "quantitative",
-          "title": null,
-          "scale": {"domain": [0, 1050]},
-          "axis": {
-            "grid": false,
-            "domain": false,
-            "ticks": false,
-            "labels": false
-          }
-        },
-        "y": {
-          "field": "oblast",
-          "type": "nominal",
-          "title": null,
-          "sort": ["Veřejné nákupy", "Dotace", "Motol"],
-          "axis": {
-            "labelFont": "Roboto Slab",
-            "labelFontSize": 10,
-            "labelFontWeight": "bold",
-            "domain": false,
-            "ticks": false
-          }
-        },
-        "color": {
-          "field": "typ",
-          "type": "nominal",
-          "scale": {
-            "domain": ["system", "case"],
-            "range": ["#de1743", "#6267a3"]
-          },
-          "legend": null
-        },
-        "tooltip": [
-          {"field": "oblast", "title": "Oblast"},
-          {"field": "label", "title": "Měřítko"},
-          {"field": "detail", "title": "Poznámka"}
-        ]
-      }
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 6,
+    "fontSize": 10,
+    "fontWeight": "bold",
+    "color": "#1a1a1a"
+   },
+   "encoding": {
+    "x": {
+     "field": "mld",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1050
+      ]
+     }
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 6,
-        "font": "Work Sans",
-        "fontSize": 10,
-        "fontWeight": "bold",
-        "color": "#1a1a1a"
-      },
-      "encoding": {
-        "x": {"field": "mld", "type": "quantitative", "scale": {"domain": [0, 1050]}},
-        "y": {"field": "oblast", "type": "nominal", "sort": ["Veřejné nákupy", "Dotace", "Motol"]},
-        "text": {"field": "label"}
-      }
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "sort": [
+      "Veřejné nákupy",
+      "Dotace",
+      "Motol"
+     ]
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 6,
-        "dy": 15,
-        "font": "Work Sans",
-        "fontSize": 8,
-        "color": "#6267a3"
-      },
-      "encoding": {
-        "x": {"field": "mld", "type": "quantitative", "scale": {"domain": [0, 1050]}},
-        "y": {"field": "oblast", "type": "nominal", "sort": ["Veřejné nákupy", "Dotace", "Motol"]},
-        "text": {"field": "detail"}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {"x": 4, "oblast": "Motol", "text": "příliš malé vůči systému"}
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 72,
-        "font": "Work Sans",
-        "fontSize": 8,
-        "color": "#6267a3"
-      },
-      "encoding": {
-        "x": {"field": "x", "type": "quantitative", "scale": {"domain": [0, 1050]}},
-        "y": {"field": "oblast", "type": "nominal", "sort": ["Veřejné nákupy", "Dotace", "Motol"]},
-        "text": {"field": "text"}
-      }
+    "text": {
+     "field": "label"
     }
-  ],
-  "config": {
-    "view": {"stroke": "transparent"}
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 6,
+    "dy": 15,
+    "fontSize": 8,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "x": {
+     "field": "mld",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1050
+      ]
+     }
+    },
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "sort": [
+      "Veřejné nákupy",
+      "Dotace",
+      "Motol"
+     ]
+    },
+    "text": {
+     "field": "detail"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 4,
+      "oblast": "Motol",
+      "text": "příliš malé vůči systému"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 72,
+    "fontSize": 8,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1050
+      ]
+     }
+    },
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "sort": [
+      "Veřejné nákupy",
+      "Dotace",
+      "Motol"
+     ]
+    },
+    "text": {
+     "field": "text"
+    }
+   }
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ }
 }

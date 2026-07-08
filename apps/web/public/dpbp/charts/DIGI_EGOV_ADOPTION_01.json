@@ -1,60 +1,90 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Digitální dovednosti vs. adopce e-governmentu (2025)",
-    "subtitle": "Česko má talentovanou populaci, ale naráží na bariéry služeb",
-    "anchor": "start",
-    "font": "Roboto Slab",
-    "fontSize": 13
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Digitální dovednosti vs. adopce e-governmentu (2025)",
+  "subtitle": "Česko má talentovanou populaci, ale naráží na bariéry služeb",
+  "anchor": "start",
+  "font": "Roboto Slab",
+  "fontSize": 13
+ },
+ "width": 450,
+ "height": 200,
+ "data": {
+  "values": [
+   {
+    "Metric": "Digitální dovednosti",
+    "Entity": "ČR",
+    "Value": 0.6911
+   },
+   {
+    "Metric": "Digitální dovednosti",
+    "Entity": "EU průměr",
+    "Value": 0.5556
+   },
+   {
+    "Metric": "Adopce e-governmentu",
+    "Entity": "ČR",
+    "Value": 0.78
+   },
+   {
+    "Metric": "Adopce e-governmentu",
+    "Entity": "EU průměr",
+    "Value": 0.82
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "Metric",
+   "type": "nominal",
+   "title": null,
+   "axis": {}
   },
-  "width": 450,
-  "height": 200,
-  "data": {
-    "values": [
-      {"Metric": "Digitální dovednosti", "Entity": "ČR", "Value": 0.6911},
-      {"Metric": "Digitální dovednosti", "Entity": "EU průměr", "Value": 0.5556},
-      {"Metric": "Adopce e-governmentu", "Entity": "ČR", "Value": 0.78},
-      {"Metric": "Adopce e-governmentu", "Entity": "EU průměr", "Value": 0.82}
+  "x": {
+   "field": "Value",
+   "type": "quantitative",
+   "title": "Podíl populace (%)",
+   "axis": {
+    "format": "%"
+   }
+  },
+  "color": {
+   "field": "Entity",
+   "type": "nominal",
+   "scale": {
+    "range": [
+     "#de1743",
+     "#6267a3"
     ]
+   },
+   "legend": {}
   },
-  "encoding": {
-    "y": {
-      "field": "Metric",
-      "type": "nominal",
-      "title": null,
-      "axis": {"labelFont": "Work Sans", "labelFontSize": 10}
-    },
-    "x": {
-      "field": "Value",
-      "type": "quantitative",
-      "title": "Podíl populace (%)",
-      "axis": {"format": "%", "labelFont": "Work Sans", "labelFontSize": 10}
-    },
-    "color": {
-      "field": "Entity",
-      "type": "nominal",
-      "scale": {"range": ["#de1743", "#6267a3"]},
-      "legend": {"labelFont": "Work Sans", "labelFontSize": 10, "titleFont": "Work Sans"}
-    },
-    "yOffset": {"field": "Entity"}
-  },
-  "layer": [
-    {"mark": "bar"},
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 3,
-        "font": "Work Sans",
-        "fontSize": 10
-      },
-      "encoding": {
-        "text": {"field": "Value", "type": "quantitative", "format": ".0%"}
-      }
-    }
-  ],
-  "usermeta": {
-    "_source": "Digital Decade 2025 (Evropská komise)"
+  "yOffset": {
+   "field": "Entity"
   }
+ },
+ "layer": [
+  {
+   "mark": "bar"
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 3,
+    "fontSize": 10
+   },
+   "encoding": {
+    "text": {
+     "field": "Value",
+     "type": "quantitative",
+     "format": ".0%"
+    }
+   }
+  }
+ ],
+ "usermeta": {
+  "_source": "Digital Decade 2025 (Evropská komise)"
+ }
 }

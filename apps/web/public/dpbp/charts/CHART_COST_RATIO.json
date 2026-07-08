@@ -1,105 +1,171 @@
 {
-  "_source": "Zdroje: CSIS Epic Fury; Reuters k PAC-3 MSE kontraktu 2025; War on the Rocks k nákladům střel; Pozn.: Poměry jsou orientační intervaly, ceny střel a dronů nejsou vždy zcela metodicky srovnatelné.",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Cost-to-kill ratio bez logaritmického měřítka",
-  "width": 450,
-  "height": 255,
-  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 45},
-  "autosize": {"type": "pad", "resize": true},
-  "background": "#fdfbf7",
-  "title": {
-    "text": "Matematika vyčerpání: kolikrát dražší je sestřel",
-    "subtitle": "Lineární srovnání nákladového poměru obrany vůči levným dronům",
-    "font": "Roboto Slab",
-    "fontSize": 13,
-    "fontWeight": "bold",
-    "anchor": "start",
-    "color": "#272a59",
-    "subtitleFont": "Work Sans",
-    "subtitleFontSize": 10,
-    "subtitleColor": "#6267a3",
-    "offset": 10
-  },
-  "data": {
-    "values": [
-      {
-        "system": "Patriot PAC-3 vs. Shahed",
-        "ratio": 130,
-        "label": "50× až 130×",
-        "note": "Shahed 20–80 tis. USD"
-      },
-      {
-        "system": "SM-2/SM-6 vs. húthíjský dron",
-        "ratio": 200,
-        "label": "až 200×",
-        "note": "Rudé moře"
-      },
-      {
-        "system": "RBS-70NG vs. FPV dron",
-        "ratio": 75,
-        "label": "cca 75×",
-        "note": "levná taktická hrozba"
-      }
-    ]
-  },
-  "layer": [
-    {
-      "mark": {"type": "bar", "cornerRadiusEnd": 3, "height": 28},
-      "encoding": {
-        "y": {
-          "field": "system",
-          "type": "nominal",
-          "title": null,
-          "sort": ["SM-2/SM-6 vs. húthíjský dron", "Patriot PAC-3 vs. Shahed", "RBS-70NG vs. FPV dron"],
-          "axis": {
-            "labelFont": "Work Sans",
-            "labelFontSize": 9,
-            "labelLimit": 175,
-            "ticks": false,
-            "domain": false
-          }
-        },
-        "x": {
-          "field": "ratio",
-          "type": "quantitative",
-          "title": "Kolikrát dražší je sestřel než cíl",
-          "scale": {"domain": [0, 200]},
-          "axis": {
-            "titleFont": "Work Sans",
-            "titleFontSize": 10,
-            "labelFont": "Work Sans",
-            "labelFontSize": 9,
-            "gridColor": "#e8e8dc",
-            "domain": false
-          }
-        },
-        "color": {
-          "field": "system",
-          "type": "nominal",
-          "scale": {
-            "range": ["#de1743", "#a51635", "#6267a3"]
-          },
-          "legend": null
-        }
-      }
+ "_source": "Zdroje: CSIS Epic Fury; Reuters k PAC-3 MSE kontraktu 2025; War on the Rocks k nákladům střel; Pozn.: Poměry jsou orientační intervaly, ceny střel a dronů nejsou vždy zcela metodicky srovnatelné.",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Cost-to-kill ratio bez logaritmického měřítka",
+ "width": 450,
+ "height": 255,
+ "padding": {
+  "top": 20,
+  "left": 10,
+  "right": 10,
+  "bottom": 45
+ },
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "background": "#fdfbf7",
+ "title": {
+  "text": "Matematika vyčerpání: kolikrát dražší je sestřel",
+  "subtitle": "Lineární srovnání nákladového poměru obrany vůči levným dronům",
+  "font": "Roboto Slab",
+  "fontSize": 13,
+  "fontWeight": "bold",
+  "anchor": "start",
+  "color": "#272a59",
+  "subtitleFont": "Work Sans",
+  "subtitleFontSize": 10,
+  "subtitleColor": "#6267a3",
+  "offset": 10
+ },
+ "data": {
+  "values": [
+   {
+    "system": "Patriot PAC-3 vs. Shahed",
+    "ratio": 130,
+    "label": "50× až 130×",
+    "note": "Shahed 20–80 tis. USD"
+   },
+   {
+    "system": "SM-2/SM-6 vs. húthíjský dron",
+    "ratio": 200,
+    "label": "až 200×",
+    "note": "Rudé moře"
+   },
+   {
+    "system": "RBS-70NG vs. FPV dron",
+    "ratio": 75,
+    "label": "cca 75×",
+    "note": "levná taktická hrozba"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "height": 28
+   },
+   "encoding": {
+    "y": {
+     "field": "system",
+     "type": "nominal",
+     "title": null,
+     "sort": [
+      "SM-2/SM-6 vs. húthíjský dron",
+      "Patriot PAC-3 vs. Shahed",
+      "RBS-70NG vs. FPV dron"
+     ],
+     "axis": {
+      "labelLimit": 175,
+      "ticks": false,
+      "domain": false
+     }
     },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 6, "font": "Roboto Slab", "fontSize": 10, "fontWeight": "bold", "color": "#1a1a1a"},
-      "encoding": {
-        "y": {"field": "system", "type": "nominal", "sort": ["SM-2/SM-6 vs. húthíjský dron", "Patriot PAC-3 vs. Shahed", "RBS-70NG vs. FPV dron"]},
-        "x": {"field": "ratio", "type": "quantitative", "scale": {"domain": [0, 200]}},
-        "text": {"field": "label"}
-      }
+    "x": {
+     "field": "ratio",
+     "type": "quantitative",
+     "title": "Kolikrát dražší je sestřel než cíl",
+     "scale": {
+      "domain": [
+       0,
+       200
+      ]
+     },
+     "axis": {
+      "gridColor": "#e8e8dc",
+      "domain": false
+     }
     },
-    {
-      "mark": {"type": "text", "align": "right", "baseline": "middle", "dx": 215, "dy": 17, "font": "Work Sans", "fontSize": 7.5, "color": "#6267a3"},
-      "encoding": {
-        "y": {"field": "system", "type": "nominal", "sort": ["SM-2/SM-6 vs. húthíjský dron", "Patriot PAC-3 vs. Shahed", "RBS-70NG vs. FPV dron"]},
-        "text": {"field": "note"}
-      }
+    "color": {
+     "field": "system",
+     "type": "nominal",
+     "scale": {
+      "range": [
+       "#de1743",
+       "#a51635",
+       "#6267a3"
+      ]
+     },
+     "legend": null
     }
-  ],
-  "config": {
-    "view": {"stroke": "transparent"}
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 6,
+    "fontSize": 10,
+    "fontWeight": "bold",
+    "color": "#1a1a1a"
+   },
+   "encoding": {
+    "y": {
+     "field": "system",
+     "type": "nominal",
+     "sort": [
+      "SM-2/SM-6 vs. húthíjský dron",
+      "Patriot PAC-3 vs. Shahed",
+      "RBS-70NG vs. FPV dron"
+     ]
+    },
+    "x": {
+     "field": "ratio",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "middle",
+    "dx": 215,
+    "dy": 17,
+    "fontSize": 7.5,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "system",
+     "type": "nominal",
+     "sort": [
+      "SM-2/SM-6 vs. húthíjský dron",
+      "Patriot PAC-3 vs. Shahed",
+      "RBS-70NG vs. FPV dron"
+     ]
+    },
+    "text": {
+     "field": "note"
+    }
+   }
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ }
 }

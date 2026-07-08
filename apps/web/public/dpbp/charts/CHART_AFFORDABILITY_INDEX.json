@@ -1,91 +1,147 @@
 {
-  "_source": "Zdroj: Deloitte Property Index 2025 / Central Group CG-Index 2025",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Dostupnost nového bytu 70 m2 ve vybraných evropských metropolích",
-  "title": {
-    "text": "Praha je mimo měřítko i proti blízkým metropolím",
-    "subtitle": "Počet hrubých ročních mezd na nový byt 70 m2, vybraná městská srovnání 2025"
-  },
-  "width": 450,
-  "height": 260,
-  "autosize": {"type": "pad", "resize": true},
-  "background": "#fdfbf7",
-  "data": {
-    "values": [
-      {"city": "Vídeň", "value": 8.1, "group": "Blízký benchmark"},
-      {"city": "Berlín", "value": 8.4, "group": "Blízký benchmark"},
-      {"city": "Varšava", "value": 9.2, "group": "Blízký benchmark"},
-      {"city": "Bratislava", "value": 13.9, "group": "Regionální srovnání"},
-      {"city": "Praha", "value": 15.0, "group": "Praha"}
-    ]
-  },
-  "layer": [
-    {
-      "mark": {"type": "bar", "tooltip": true, "cornerRadiusEnd": 3},
-      "encoding": {
-        "y": {
-          "field": "city",
-          "type": "nominal",
-          "title": null,
-          "sort": ["Vídeň", "Berlín", "Varšava", "Bratislava", "Praha"]
-        },
-        "x": {
-          "field": "value",
-          "type": "quantitative",
-          "title": "Hrubé roční mzdy",
-          "scale": {"domain": [0, 16]}
-        },
-        "color": {
-          "field": "group",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Praha", "Regionální srovnání", "Blízký benchmark"],
-            "range": ["#de1743", "#f76800", "#6267a3"]
-          },
-          "legend": null
-        }
-      }
+ "_source": "Zdroj: Deloitte Property Index 2025 / Central Group CG-Index 2025",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Dostupnost nového bytu 70 m2 ve vybraných evropských metropolích",
+ "title": {
+  "text": "Praha je mimo měřítko i proti blízkým metropolím",
+  "subtitle": "Počet hrubých ročních mezd na nový byt 70 m2, vybraná městská srovnání 2025"
+ },
+ "width": 450,
+ "height": 260,
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "background": "#fdfbf7",
+ "data": {
+  "values": [
+   {
+    "city": "Vídeň",
+    "value": 8.1,
+    "group": "Blízký benchmark"
+   },
+   {
+    "city": "Berlín",
+    "value": 8.4,
+    "group": "Blízký benchmark"
+   },
+   {
+    "city": "Varšava",
+    "value": 9.2,
+    "group": "Blízký benchmark"
+   },
+   {
+    "city": "Bratislava",
+    "value": 13.9,
+    "group": "Regionální srovnání"
+   },
+   {
+    "city": "Praha",
+    "value": 15.0,
+    "group": "Praha"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "cornerRadiusEnd": 3
+   },
+   "encoding": {
+    "y": {
+     "field": "city",
+     "type": "nominal",
+     "title": null,
+     "sort": [
+      "Vídeň",
+      "Berlín",
+      "Varšava",
+      "Bratislava",
+      "Praha"
+     ]
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 5,
-        "font": "Work Sans",
-        "fontSize": 10,
-        "color": "#272a59"
-      },
-      "encoding": {
-        "y": {
-          "field": "city",
-          "type": "nominal",
-          "sort": ["Vídeň", "Berlín", "Varšava", "Bratislava", "Praha"]
-        },
-        "x": {"field": "value", "type": "quantitative"},
-        "text": {"field": "value", "type": "quantitative", "format": ".1f"}
-      }
-    }
-  ],
-  "config": {
-    "view": {"stroke": "transparent"},
-    "title": {
-      "font": "Roboto Slab",
-      "fontWeight": "bold",
-      "fontSize": 14,
-      "anchor": "start",
-      "color": "#272a59",
-      "subtitleFont": "Work Sans",
-      "subtitleFontSize": 10,
-      "subtitleColor": "#6267a3"
+    "x": {
+     "field": "value",
+     "type": "quantitative",
+     "title": "Hrubé roční mzdy",
+     "scale": {
+      "domain": [
+       0,
+       16
+      ]
+     }
     },
-    "axis": {
-      "labelFont": "Work Sans",
-      "labelFontSize": 10,
-      "titleFont": "Work Sans",
-      "titleFontSize": 10,
-      "titleColor": "#6267a3",
-      "gridColor": "#e9e9dd"
+    "color": {
+     "field": "group",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Praha",
+       "Regionální srovnání",
+       "Blízký benchmark"
+      ],
+      "range": [
+       "#de1743",
+       "#f76800",
+       "#6267a3"
+      ]
+     },
+     "legend": null
     }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 5,
+    "fontSize": 10,
+    "color": "#272a59"
+   },
+   "encoding": {
+    "y": {
+     "field": "city",
+     "type": "nominal",
+     "sort": [
+      "Vídeň",
+      "Berlín",
+      "Varšava",
+      "Bratislava",
+      "Praha"
+     ]
+    },
+    "x": {
+     "field": "value",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "value",
+     "type": "quantitative",
+     "format": ".1f"
+    }
+   }
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  },
+  "title": {
+   "font": "Roboto Slab",
+   "fontWeight": "bold",
+   "fontSize": 14,
+   "anchor": "start",
+   "color": "#272a59",
+   "subtitleFont": "Work Sans",
+   "subtitleFontSize": 10,
+   "subtitleColor": "#6267a3"
+  },
+  "axis": {
+   "titleColor": "#6267a3",
+   "gridColor": "#e9e9dd"
+  }
+ }
 }

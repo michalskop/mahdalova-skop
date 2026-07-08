@@ -1,113 +1,239 @@
 {
-  "_source": "Zdroj: Euromedia Ownership Monitor 2025; Media Pluralism Monitor 2025",
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Mapa hlavních soukromých pramenů zpráv a mimomediálních zájmů v ČR",
-  "width": 450,
-  "height": 230,
-  "padding": {"top": 20, "left": 8, "right": 8, "bottom": 28},
-  "autosize": {"type": "pad", "resize": true},
-  "background": "#fdfbf7",
-  "title": {
-    "text": "Kdo drží prameny zpráv",
-    "subtitle": "Soukromá zdrojová média a hlavní mimomediální sektory",
-    "font": "Roboto Slab",
-    "fontSize": 13,
-    "fontWeight": "bold",
-    "anchor": "start",
-    "color": "#1a1a1a",
-    "subtitleFont": "Work Sans",
-    "subtitleFontSize": 10,
-    "subtitleColor": "#6267a3",
-    "offset": 10
-  },
-  "data": {
-    "values": [
-      {"x": 1, "y": 5, "skupina": "CMI / CNC", "media": "Blesk, Reflex, e15", "sektor": "energetika"},
-      {"x": 1, "y": 4, "skupina": "Mafra", "media": "MF DNES, iDnes", "sektor": "chemie / energetika"},
-      {"x": 1, "y": 3, "skupina": "PPF / CME", "media": "Nova, Oneplay", "sektor": "finance / telco"},
-      {"x": 1, "y": 2, "skupina": "Penta / VLM", "media": "Deník, regiony", "sektor": "finance / zdravotnictví"},
-      {"x": 1, "y": 1, "skupina": "Seznam.cz", "media": "homepage, SZ, Novinky", "sektor": "vyhledávání / reklama"}
-    ]
-  },
-  "layer": [
-    {
-      "mark": {"type": "rule", "strokeWidth": 1.5, "color": "#d4d4c8"},
-      "encoding": {
-        "x": {"value": 150},
-        "x2": {"value": 308},
-        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [0.4, 5.6]}, "axis": null}
-      }
+ "_source": "Zdroj: Euromedia Ownership Monitor 2025; Media Pluralism Monitor 2025",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Mapa hlavních soukromých pramenů zpráv a mimomediálních zájmů v ČR",
+ "width": 450,
+ "height": 230,
+ "padding": {
+  "top": 20,
+  "left": 8,
+  "right": 8,
+  "bottom": 28
+ },
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "background": "#fdfbf7",
+ "title": {
+  "text": "Kdo drží prameny zpráv",
+  "subtitle": "Soukromá zdrojová média a hlavní mimomediální sektory",
+  "font": "Roboto Slab",
+  "fontSize": 13,
+  "fontWeight": "bold",
+  "anchor": "start",
+  "color": "#1a1a1a",
+  "subtitleFont": "Work Sans",
+  "subtitleFontSize": 10,
+  "subtitleColor": "#6267a3",
+  "offset": 10
+ },
+ "data": {
+  "values": [
+   {
+    "x": 1,
+    "y": 5,
+    "skupina": "CMI / CNC",
+    "media": "Blesk, Reflex, e15",
+    "sektor": "energetika"
+   },
+   {
+    "x": 1,
+    "y": 4,
+    "skupina": "Mafra",
+    "media": "MF DNES, iDnes",
+    "sektor": "chemie / energetika"
+   },
+   {
+    "x": 1,
+    "y": 3,
+    "skupina": "PPF / CME",
+    "media": "Nova, Oneplay",
+    "sektor": "finance / telco"
+   },
+   {
+    "x": 1,
+    "y": 2,
+    "skupina": "Penta / VLM",
+    "media": "Deník, regiony",
+    "sektor": "finance / zdravotnictví"
+   },
+   {
+    "x": 1,
+    "y": 1,
+    "skupina": "Seznam.cz",
+    "media": "homepage, SZ, Novinky",
+    "sektor": "vyhledávání / reklama"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 1.5,
+    "color": "#d4d4c8"
+   },
+   "encoding": {
+    "x": {
+     "value": 150
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "font": "Roboto Slab",
-        "fontSize": 10,
-        "fontWeight": "bold",
-        "color": "#1a1a1a"
-      },
-      "encoding": {
-        "x": {"value": 142},
-        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [0.4, 5.6]}, "axis": null},
-        "text": {"field": "skupina"}
-      }
+    "x2": {
+     "value": 308
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "font": "Work Sans",
-        "fontSize": 9,
-        "fontWeight": "bold",
-        "color": "#de1743"
-      },
-      "encoding": {
-        "x": {"value": 158},
-        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [0.4, 5.6]}, "axis": null},
-        "text": {"field": "media"}
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "font": "Work Sans",
-        "fontSize": 9,
-        "color": "#6267a3"
-      },
-      "encoding": {
-        "x": {"value": 320},
-        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [0.4, 5.6]}, "axis": null},
-        "text": {"field": "sektor"}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {"x": 158, "y": 5.55, "text": "zdrojová média"},
-          {"x": 320, "y": 5.55, "text": "hlavní sektor mimo média"}
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "baseline": "middle",
-        "font": "Work Sans",
-        "fontSize": 8,
-        "fontWeight": "bold",
-        "color": "#6267a3"
-      },
-      "encoding": {
-        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 450]}},
-        "y": {"field": "y", "type": "quantitative", "axis": null, "scale": {"domain": [0.4, 5.8]}},
-        "text": {"field": "text"}
-      }
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0.4,
+       5.6
+      ]
+     },
+     "axis": null
     }
-  ],
-  "config": {
-    "view": {"stroke": "transparent"}
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "middle",
+    "fontSize": 10,
+    "fontWeight": "bold",
+    "color": "#1a1a1a"
+   },
+   "encoding": {
+    "x": {
+     "value": 142
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0.4,
+       5.6
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "skupina"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 9,
+    "fontWeight": "bold",
+    "color": "#de1743"
+   },
+   "encoding": {
+    "x": {
+     "value": 158
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0.4,
+       5.6
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "media"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 9,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "x": {
+     "value": 320
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0.4,
+       5.6
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "sektor"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 158,
+      "y": 5.55,
+      "text": "zdrojová média"
+     },
+     {
+      "x": 320,
+      "y": 5.55,
+      "text": "hlavní sektor mimo média"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "middle",
+    "fontSize": 8,
+    "fontWeight": "bold",
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "axis": null,
+     "scale": {
+      "domain": [
+       0,
+       450
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "axis": null,
+     "scale": {
+      "domain": [
+       0.4,
+       5.8
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
   }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ }
 }
