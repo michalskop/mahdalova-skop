@@ -3,29 +3,28 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Poměr ceny obranné střely k ceně sestřelovaného dronu",
  "title": {
-  "text": "Sestřelit dron je až dvěstěkrát dražší než dron samotný",
+  "text": "Sestřelit dron je až 200× dražší než dron samotný",
   "subtitle": "Odhadovaný poměr ceny obranné střely k ceně cíle (2025)"
  },
  "height": 170,
- "background": "#f8f6f0",
  "data": {
   "values": [
    {
-    "duel": "Húsíjský dron × lodní střela SM-2/SM-6",
+    "duel": "Húsíjský dron × střela SM-2/SM-6",
     "ratio": 200,
     "label": "až 200×",
     "poradi": 1,
     "zvyraznit": "ano"
    },
    {
-    "duel": "Íránský Shahed × střela Patriot PAC-3",
+    "duel": "Dron Shahed × střela Patriot PAC-3",
     "ratio": 130,
     "label": "50× až 130×",
     "poradi": 2,
     "zvyraznit": "ne"
    },
    {
-    "duel": "Levný FPV dron × střela RBS-70NG",
+    "duel": "FPV dron × střela RBS-70 NG",
     "ratio": 75,
     "label": "cca 75×",
     "poradi": 3,
@@ -37,7 +36,6 @@
   {
    "mark": {
     "type": "bar",
-    "tooltip": true,
     "cornerRadiusEnd": 2,
     "height": 30
    },
@@ -45,9 +43,11 @@
     "y": {
      "field": "duel",
      "type": "nominal",
-     "sort": {
-      "field": "poradi"
-     },
+     "sort": [
+      "Húsíjský dron × střela SM-2/SM-6",
+      "Dron Shahed × střela Patriot PAC-3",
+      "FPV dron × střela RBS-70 NG"
+     ],
      "title": null,
      "axis": {
       "domain": false,
@@ -59,13 +59,23 @@
     "x": {
      "field": "ratio",
      "type": "quantitative",
-     "title": "kolikrát je obrana dražší než útok",
+     "title": "kolikrát dražší je obrana",
      "axis": {
       "grid": true,
       "gridColor": "#e8e8dc",
       "domain": false,
       "ticks": false,
-      "tickCount": 4
+      "values": [
+       0,
+       50,
+       100,
+       150
+      ],
+      "titleAngle": 0,
+      "titleAnchor": "end",
+      "titleAlign": "right",
+      "titlePadding": -14,
+      "titleFontWeight": "bold"
      }
     },
     "color": {
@@ -107,9 +117,11 @@
     "y": {
      "field": "duel",
      "type": "nominal",
-     "sort": {
-      "field": "poradi"
-     }
+     "sort": [
+      "Húsíjský dron × střela SM-2/SM-6",
+      "Dron Shahed × střela Patriot PAC-3",
+      "FPV dron × střela RBS-70 NG"
+     ]
     },
     "x": {
      "field": "ratio",

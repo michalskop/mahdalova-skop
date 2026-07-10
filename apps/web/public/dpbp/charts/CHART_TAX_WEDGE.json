@@ -1,72 +1,283 @@
 {
- "_source": "[OECD Taxing Wages 2026: Czechia – tax wedge, single worker 2025](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/taxing-wages-2026-country-notes_491a0e97/czechia_43e03785/e5066e64-en.pdf), [zákon č. 586/1992 Sb., o daních z příjmů, § 21 odst. 1](https://www.zakonyprolidi.cz/cs/1992-586#p21)",
+ "_source": "[OECD Revenue Statistics 2025: Czechia](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/revenue-statistics-2025-country-notes_3708be73/czechia_244d71ac/e2145d19-en.pdf), [OECD Taxing Wages 2026: Czechia](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/taxing-wages-2026-country-notes_491a0e97/czechia_43e03785/e5066e64-en.pdf)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "description": "Fiskální hrozba: daňový klín práce vs. základní sazba daně z příjmů právnických osob v ČR",
- "width": 450,
- "height": 250,
- "autosize": {
-  "type": "pad",
-  "resize": true
+ "description": "Struktura daňových příjmů ČR vs. průměr OECD: odvody z práce dominují, majetkové daně minimální (OECD Revenue Statistics 2025, data 2023)",
+ "height": 340,
+ "title": {
+  "text": "Odvody z práce tvoří 45 % českých daní, majetkové daně půl procenta",
+  "subtitle": "Struktura daňových příjmů, % celkových daňových výnosů (2023)"
  },
- "background": "#fdfbf7",
  "data": {
   "values": [
    {
-    "cat": "Daňový klín práce (OECD, 2025)",
-    "val": 41.2,
-    "color": "#de1743"
+    "kat": "Sociální a zdravotní pojistné",
+    "kdo": "ČR",
+    "podil": 45.5,
+    "label": "45,5 %",
+    "poradi": 1
    },
    {
-    "cat": "Základní sazba daně z příjmů právnických osob",
-    "val": 21.0,
-    "color": "#272a59"
+    "kat": "Sociální a zdravotní pojistné",
+    "kdo": "Průměr OECD",
+    "podil": 25.5,
+    "label": "25,5 %",
+    "poradi": 1
+   },
+   {
+    "kat": "DPH",
+    "kdo": "ČR",
+    "podil": 22.5,
+    "label": "22,5 %",
+    "poradi": 2
+   },
+   {
+    "kat": "DPH",
+    "kdo": "Průměr OECD",
+    "podil": 20.5,
+    "label": "20,5 %",
+    "poradi": 2
+   },
+   {
+    "kat": "Daně z příjmů firem",
+    "kdo": "ČR",
+    "podil": 13.3,
+    "label": "13,3 %",
+    "poradi": 3
+   },
+   {
+    "kat": "Daně z příjmů firem",
+    "kdo": "Průměr OECD",
+    "podil": 11.9,
+    "label": "11,9 %",
+    "poradi": 3
+   },
+   {
+    "kat": "Daně z příjmů fyzických osob",
+    "kdo": "ČR",
+    "podil": 9.7,
+    "label": "9,7 %",
+    "poradi": 4
+   },
+   {
+    "kat": "Daně z příjmů fyzických osob",
+    "kdo": "Průměr OECD",
+    "podil": 23.7,
+    "label": "23,7 %",
+    "poradi": 4
+   },
+   {
+    "kat": "Ostatní daně ze zboží a služeb",
+    "kdo": "ČR",
+    "podil": 8.4,
+    "label": "8,4 %",
+    "poradi": 5
+   },
+   {
+    "kat": "Ostatní daně ze zboží a služeb",
+    "kdo": "Průměr OECD",
+    "podil": 10.8,
+    "label": "10,8 %",
+    "poradi": 5
+   },
+   {
+    "kat": "Majetkové daně",
+    "kdo": "ČR",
+    "podil": 0.5,
+    "label": "0,5 %",
+    "poradi": 6
+   },
+   {
+    "kat": "Majetkové daně",
+    "kdo": "Průměr OECD",
+    "podil": 5.1,
+    "label": "5,1 %",
+    "poradi": 6
    }
   ]
  },
- "mark": {
-  "type": "bar",
-  "tooltip": true,
-  "cornerRadiusEnd": 4
- },
- "encoding": {
-  "y": {
-   "field": "cat",
-   "type": "nominal",
-   "title": null,
-   "sort": "-x"
+ "layer": [
+  {
+   "params": [
+    {
+     "name": "serie",
+     "select": {
+      "type": "point",
+      "fields": [
+       "kdo"
+      ]
+     },
+     "bind": "legend"
+    }
+   ],
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2,
+    "height": 17
+   },
+   "encoding": {
+    "y": {
+     "field": "kat",
+     "type": "nominal",
+     "title": null,
+     "sort": [
+      "Sociální a zdravotní pojistné",
+      "DPH",
+      "Daně z příjmů firem",
+      "Daně z příjmů fyzických osob",
+      "Ostatní daně ze zboží a služeb",
+      "Majetkové daně"
+     ],
+     "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelLimit": 200
+     }
+    },
+    "yOffset": {
+     "field": "kdo",
+     "sort": [
+      "ČR",
+      "Průměr OECD"
+     ]
+    },
+    "x": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": "% všech daňových příjmů",
+     "scale": {
+      "domain": [
+       0,
+       56
+      ]
+     },
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       10,
+       20
+      ],
+      "titleAngle": 0,
+      "titleAnchor": "end",
+      "titleAlign": "right",
+      "titlePadding": -14,
+      "titleFontWeight": "bold"
+     }
+    },
+    "color": {
+     "field": "kdo",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "ČR",
+       "Průměr OECD"
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3"
+      ]
+     },
+     "legend": {
+      "title": null
+     }
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    },
+    "tooltip": [
+     {
+      "field": "kat",
+      "title": "Kategorie daní"
+     },
+     {
+      "field": "kdo",
+      "title": "Kdo"
+     },
+     {
+      "field": "label",
+      "title": "Podíl na daňových příjmech"
+     }
+    ]
+   }
   },
-  "x": {
-   "field": "val",
-   "type": "quantitative",
-   "title": "Hodnota (%)"
-  },
-  "color": {
-   "field": "color",
-   "type": "nominal",
-   "scale": null
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 5,
+    "fontSize": 13,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "y": {
+     "field": "kat",
+     "type": "nominal",
+     "sort": [
+      "Sociální a zdravotní pojistné",
+      "DPH",
+      "Daně z příjmů firem",
+      "Daně z příjmů fyzických osob",
+      "Ostatní daně ze zboží a služeb",
+      "Majetkové daně"
+     ]
+    },
+    "yOffset": {
+     "field": "kdo",
+     "sort": [
+      "ČR",
+      "Průměr OECD"
+     ]
+    },
+    "x": {
+     "field": "podil",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       56
+      ]
+     }
+    },
+    "text": {
+     "field": "label"
+    },
+    "color": {
+     "field": "kdo",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "ČR",
+       "Průměr OECD"
+      ],
+      "range": [
+       "#c5143c",
+       "#4c4f8e"
+      ]
+     }
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    }
+   }
   }
- },
+ ],
  "config": {
   "view": {
    "stroke": "transparent"
-  },
-  "title": {
-   "font": "Roboto Slab",
-   "fontWeight": "bold",
-   "fontSize": 13,
-   "anchor": "start",
-   "color": "#272a59",
-   "subtitleFont": "Work Sans",
-   "subtitleFontSize": 10,
-   "subtitleColor": "#6267a3"
-  },
-  "axis": {
-   "titleColor": "#6267a3"
-  },
-  "legend": {}
- },
- "title": {
-  "text": "Práci stát zatěžuje dvakrát víc než zisk firem",
-  "subtitle": "Daňový klín jednotlivce na průměrné mzdě vs. základní sazba daně z příjmů firem (2025, v %)"
+  }
  }
 }

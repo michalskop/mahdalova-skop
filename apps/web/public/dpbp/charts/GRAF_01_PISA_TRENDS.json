@@ -2,16 +2,24 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "Od roku 2003 ztratilo Česko v matematice skoro třicet bodů",
-  "subtitle": "Průměrné skóre PISA v matematice; ČR vs. Estonsko a průměr OECD"
+  "subtitle": "Průměrné skóre PISA v matematice, 2003–2022; ČR vs. Estonsko a průměr OECD"
  },
  "width": 450,
  "height": 300,
+ "padding": {
+  "right": 34
+ },
  "data": {
   "values": [
    {
     "rok": 2003,
     "zeme": "ČR",
     "body": 516
+   },
+   {
+    "rok": 2006,
+    "zeme": "ČR",
+    "body": 510
    },
    {
     "rok": 2009,
@@ -37,6 +45,11 @@
     "rok": 2022,
     "zeme": "ČR",
     "body": 487
+   },
+   {
+    "rok": 2006,
+    "zeme": "Estonsko",
+    "body": 515
    },
    {
     "rok": 2009,
@@ -69,6 +82,11 @@
     "body": 500
    },
    {
+    "rok": 2006,
+    "zeme": "Průměr OECD",
+    "body": 498
+   },
+   {
     "rok": 2009,
     "zeme": "Průměr OECD",
     "body": 496
@@ -99,22 +117,45 @@
   "x": {
    "field": "rok",
    "type": "quantitative",
-   "title": "Rok",
+   "title": null,
+   "scale": {
+    "domain": [
+     2003,
+     2022
+    ]
+   },
    "axis": {
-    "format": "d"
+    "format": "d",
+    "values": [
+     2003,
+     2006,
+     2009,
+     2012,
+     2015,
+     2018,
+     2022
+    ],
+    "grid": false,
+    "domain": false,
+    "ticks": false
    }
   },
   "y": {
    "field": "body",
    "type": "quantitative",
-   "title": "PISA skóre (body)",
+   "title": null,
    "scale": {
     "domain": [
      460,
      540
     ]
    },
-   "axis": {}
+   "axis": {
+    "grid": true,
+    "gridColor": "#e8e8dc",
+    "domain": false,
+    "ticks": false
+   }
   },
   "color": {
    "field": "zeme",
@@ -132,40 +173,105 @@
     ]
    },
    "legend": {
-    "orient": "bottom"
+    "title": null
    }
   }
  },
  "layer": [
   {
+   "params": [
+    {
+     "name": "serie",
+     "select": {
+      "type": "point",
+      "fields": [
+       "zeme"
+      ]
+     },
+     "bind": "legend"
+    }
+   ],
    "mark": {
     "type": "line",
     "point": true
+   },
+   "encoding": {
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "rok",
+      "title": "Rok testování",
+      "format": "d"
+     },
+     {
+      "field": "body",
+      "title": "Skóre v matematice",
+      "format": "d"
+     }
+    ]
    }
   },
   {
    "transform": [
     {
-     "filter": "datum.rok == 2022 && datum.zeme == 'ČR'"
+     "filter": "datum.rok == 2022"
     }
    ],
    "mark": {
     "type": "text",
     "align": "left",
-    "dx": 5,
-    "dy": -10,
-    "fontSize": 10
+    "dx": 7,
+    "fontSize": 13,
+    "fontWeight": "bold"
    },
    "encoding": {
     "text": {
      "field": "body",
-     "type": "quantitative"
+     "type": "quantitative",
+     "format": "d"
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    },
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2003,
+       2022
+      ]
+     }
+    },
+    "y": {
+     "field": "body",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       460,
+       540
+      ]
+     }
     }
    }
   }
  ],
- "_source": "OECD PISA 2022 Summary Report",
+ "_source": "[OECD, databáze PISA – matematická gramotnost](https://www.oecd.org/en/data/indicators/mathematics-performance-pisa.html)",
  "usermeta": {
-  "description": "Zobrazení křížení křivek. Estonsko stoupající/vysoké, ČR klesající trend, OECD pokles."
+  "description": "Zobrazení křížení křivek. Estonsko stoupající/vysoké, ČR klesající trend, OECD pokles. Vlna 2006: ČR 510, Estonsko 515, OECD 498 (PISA 2006 report)."
  }
 }

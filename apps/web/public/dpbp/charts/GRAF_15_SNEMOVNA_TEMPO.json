@@ -1,13 +1,12 @@
 {
- "_source": "Poslanecká sněmovna PČR",
+ "_source": "Poslanecká sněmovna PČR, [analýza DataTimes pro iROZHLAS.cz](https://www.irozhlas.cz/zpravy-domov/snemovna-obstrukce-opozice-babis-okamura_2504040500_jab) · Nové volební období (od prosince 2025) srovnatelnou porci bodů zatím neprojednalo; řečnický čas v jeho prvním půlroce klesl z 39 na 31 hodin měsíčně.",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Kolik měsíců potřebovala Sněmovna k projednání 600 bodů",
  "title": {
-  "text": "Sněmovna zpomaluje",
-  "subtitle": "Počet měsíců, které Sněmovna potřebovala k projednání 600 bodů"
+  "text": "Stejná porce sněmovní práce trvá o víc než rok déle než před dekádou",
+  "subtitle": "Počet měsíců, které Sněmovna potřebovala k projednání 600 bodů pořadu; čtyři uplynulá volební období"
  },
  "height": 190,
- "background": "#f8f6f0",
  "data": {
   "values": [
    {
@@ -40,16 +39,18 @@
   {
    "mark": {
     "type": "bar",
-    "tooltip": true,
     "cornerRadiusEnd": 2
    },
    "encoding": {
     "y": {
      "field": "vlada",
      "type": "nominal",
-     "sort": {
-      "field": "poradi"
-     },
+     "sort": [
+      "Nečas (2010–2013)",
+      "Sobotka (2013–2017)",
+      "Babiš (2017–2021)",
+      "Fiala (2021–2025)"
+     ],
      "title": null,
      "axis": {
       "domain": false,
@@ -60,12 +61,22 @@
     "x": {
      "field": "mesice",
      "type": "quantitative",
-     "title": "měsíce",
+     "title": "měsíců na 600 bodů",
      "axis": {
       "grid": true,
       "gridColor": "#e8e8dc",
       "domain": false,
-      "ticks": false
+      "ticks": false,
+      "values": [
+       0,
+       10,
+       20
+      ],
+      "titleAngle": 0,
+      "titleAnchor": "end",
+      "titleAlign": "right",
+      "titlePadding": -14,
+      "titleFontWeight": "bold"
      }
     },
     "color": {
@@ -101,15 +112,18 @@
     "align": "left",
     "dx": 5,
     "fontWeight": "bold",
-    "fontSize": 12.5
+    "fontSize": 13
    },
    "encoding": {
     "y": {
      "field": "vlada",
      "type": "nominal",
-     "sort": {
-      "field": "poradi"
-     }
+     "sort": [
+      "Nečas (2010–2013)",
+      "Sobotka (2013–2017)",
+      "Babiš (2017–2021)",
+      "Fiala (2021–2025)"
+     ]
     },
     "x": {
      "field": "mesice",

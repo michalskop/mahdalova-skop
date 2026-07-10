@@ -4,95 +4,72 @@
  "description": "Věková struktura lékařů v ČR: Podíl lékařů v důchodovém věku (65+)",
  "width": 450,
  "height": 300,
- "autosize": {
-  "type": "pad",
-  "resize": true
+ "title": {
+  "text": "Třetina dětských lékařů už je v důchodovém věku",
+  "subtitle": "Podíl lékařů ve věku 65 a více let podle specializace (%, 2024)"
  },
- "background": "#fdfbf7",
  "data": {
   "values": [
-   {
-    "spec": "Dětští praktičtí lékaři",
-    "val": 34.6,
-    "label": "34,6 %",
-    "cat": "Primární péče"
-   },
-   {
-    "spec": "Dětští psychiatři",
-    "val": 33.3,
-    "label": "33,3 %",
-    "cat": "Specialisté"
-   },
-   {
-    "spec": "Praktičtí lékaři",
-    "val": 30.2,
-    "label": "30,2 %",
-    "cat": "Primární péče"
-   },
-   {
-    "spec": "Ostatní lékaři",
-    "val": 15.0,
-    "label": "15,0 %",
-    "cat": "Průměr"
-   }
+   {"spec": "Dětští praktičtí lékaři", "val": 34.6, "label": "34,6 %", "cat": "Primární péče"},
+   {"spec": "Dětští psychiatři", "val": 33.3, "label": "33,3 %", "cat": "Specialisté"},
+   {"spec": "Praktičtí lékaři", "val": 30.2, "label": "30,2 %", "cat": "Primární péče"},
+   {"spec": "Ostatní lékaři", "val": 15.0, "label": "15,0 %", "cat": "Průměr"}
   ]
  },
  "layer": [
   {
-   "mark": {
-    "type": "bar",
-    "tooltip": true,
-    "cornerRadiusEnd": 4
-   },
+   "params": [
+    {
+     "name": "serie",
+     "select": {"type": "point", "fields": ["cat"]},
+     "bind": "legend"
+    }
+   ],
+   "mark": {"type": "bar", "cornerRadiusEnd": 4},
    "encoding": {
     "y": {
      "field": "spec",
      "type": "nominal",
      "title": null,
-     "sort": [
-      "Dětští praktičtí lékaři",
-      "Dětští psychiatři",
-      "Praktičtí lékaři",
-      "Ostatní lékaři"
-     ]
+     "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"],
+     "axis": {"domain": false, "ticks": false, "labelPadding": 8}
     },
     "x": {
      "field": "val",
      "type": "quantitative",
-     "title": "Podíl lékařů ve věku 65+ (%)",
-     "scale": {
-      "domain": [
-       0,
-       100
-      ]
-     },
+     "title": "podíl lékařů 65+ (%)",
+     "scale": {"domain": [0, 100]},
      "axis": {
-      "values": [
-       0,
-       25,
-       50,
-       75,
-       100
-      ]
+      "values": [0, 25, 50],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "titleAngle": 0,
+      "titleAnchor": "end",
+      "titleAlign": "right",
+      "titlePadding": -14,
+      "titleFontWeight": "bold"
      }
     },
     "color": {
      "field": "cat",
      "type": "nominal",
      "scale": {
-      "domain": [
-       "Primární péče",
-       "Specialisté",
-       "Průměr"
-      ],
-      "range": [
-       "#de1743",
-       "#272a59",
-       "#bcbcb0"
-      ]
+      "domain": ["Primární péče", "Specialisté", "Průměr"],
+      "range": ["#de1743", "#272a59", "#bcbcb0"]
      },
-     "legend": null
-    }
+     "legend": {"title": null}
+    },
+    "opacity": {
+     "condition": {"param": "serie", "value": 1},
+     "value": 0.18
+    },
+    "tooltip": [
+     {"field": "spec", "title": "Specializace"},
+     {"field": "cat", "title": "Skupina"},
+     {"field": "label", "title": "Podíl lékařů 65+"}
+    ]
    }
   },
   {
@@ -100,8 +77,8 @@
     "type": "text",
     "align": "left",
     "baseline": "middle",
-    "dx": 5,
-    "fontSize": 10,
+    "dx": 6,
+    "fontSize": 13,
     "fontWeight": "bold",
     "color": "#1a1a1a"
    },
@@ -109,51 +86,19 @@
     "y": {
      "field": "spec",
      "type": "nominal",
-     "title": null,
-     "sort": [
-      "Dětští praktičtí lékaři",
-      "Dětští psychiatři",
-      "Praktičtí lékaři",
-      "Ostatní lékaři"
-     ]
+     "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"]
     },
     "x": {
      "field": "val",
      "type": "quantitative",
-     "scale": {
-      "domain": [
-       0,
-       100
-      ]
-     }
+     "scale": {"domain": [0, 100]}
     },
-    "text": {
-     "field": "label"
-    }
+    "text": {"field": "label"},
+    "opacity": {"condition": {"param": "serie", "value": 1}, "value": 0.18}
    }
   }
  ],
  "config": {
-  "view": {
-   "stroke": "transparent"
-  },
-  "title": {
-   "font": "Roboto Slab",
-   "fontWeight": "bold",
-   "fontSize": 13,
-   "anchor": "start",
-   "color": "#272a59",
-   "subtitleFont": "Work Sans",
-   "subtitleFontSize": 10,
-   "subtitleColor": "#6267a3"
-  },
-  "axis": {
-   "titleColor": "#6267a3"
-  },
-  "legend": {}
- },
- "title": {
-  "text": "Třetina dětských lékařů už je v důchodovém věku",
-  "subtitle": "Podíl lékařů ve věku 65+ podle specializace (%)"
+  "view": {"stroke": "transparent"}
  }
 }

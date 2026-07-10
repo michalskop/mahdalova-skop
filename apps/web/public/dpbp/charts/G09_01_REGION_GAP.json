@@ -1,90 +1,425 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Praha odskakuje, Severozápad se za dekádu nepohnul",
-  "subtitle": "HDP na obyvatele jako procento průměru EU (2015 vs. 2025)"
+  "text": "Praha drží dvojnásobek průměru EU, Severozápad se nepřiblížil ani o krok",
+  "subtitle": "HDP na obyvatele v paritě kupní síly jako % průměru EU27, 2014–2024"
  },
  "width": 450,
- "padding": 5,
+ "height": 300,
+ "padding": {
+  "right": 34
+ },
  "data": {
   "values": [
    {
-    "rok": 2015,
+    "rok": 2014,
     "region": "Praha",
-    "gdp": 182
+    "gdp": 192
    },
    {
-    "rok": 2025,
+    "rok": 2015,
     "region": "Praha",
-    "gdp": 210
+    "gdp": 195
+   },
+   {
+    "rok": 2016,
+    "region": "Praha",
+    "gdp": 197
+   },
+   {
+    "rok": 2017,
+    "region": "Praha",
+    "gdp": 200
+   },
+   {
+    "rok": 2018,
+    "region": "Praha",
+    "gdp": 206
+   },
+   {
+    "rok": 2019,
+    "region": "Praha",
+    "gdp": 209
+   },
+   {
+    "rok": 2020,
+    "region": "Praha",
+    "gdp": 211
+   },
+   {
+    "rok": 2021,
+    "region": "Praha",
+    "gdp": 206
+   },
+   {
+    "rok": 2022,
+    "region": "Praha",
+    "gdp": 200
+   },
+   {
+    "rok": 2023,
+    "region": "Praha",
+    "gdp": 197
+   },
+   {
+    "rok": 2024,
+    "region": "Praha",
+    "gdp": 192
+   },
+   {
+    "rok": 2014,
+    "region": "ČR průměr",
+    "gdp": 88
    },
    {
     "rok": 2015,
     "region": "ČR průměr",
-    "gdp": 87
+    "gdp": 89
    },
    {
-    "rok": 2025,
+    "rok": 2016,
+    "region": "ČR průměr",
+    "gdp": 89
+   },
+   {
+    "rok": 2017,
     "region": "ČR průměr",
     "gdp": 92
    },
    {
-    "rok": 2015,
-    "region": "Severozápad",
-    "gdp": 67
+    "rok": 2018,
+    "region": "ČR průměr",
+    "gdp": 93
    },
    {
-    "rok": 2025,
+    "rok": 2019,
+    "region": "ČR průměr",
+    "gdp": 95
+   },
+   {
+    "rok": 2020,
+    "region": "ČR průměr",
+    "gdp": 96
+   },
+   {
+    "rok": 2021,
+    "region": "ČR průměr",
+    "gdp": 92
+   },
+   {
+    "rok": 2022,
+    "region": "ČR průměr",
+    "gdp": 90
+   },
+   {
+    "rok": 2023,
+    "region": "ČR průměr",
+    "gdp": 91
+   },
+   {
+    "rok": 2024,
+    "region": "ČR průměr",
+    "gdp": 90
+   },
+   {
+    "rok": 2014,
     "region": "Severozápad",
-    "gdp": 66
+    "gdp": 62
+   },
+   {
+    "rok": 2015,
+    "region": "Severozápad",
+    "gdp": 64
+   },
+   {
+    "rok": 2016,
+    "region": "Severozápad",
+    "gdp": 62
+   },
+   {
+    "rok": 2017,
+    "region": "Severozápad",
+    "gdp": 64
+   },
+   {
+    "rok": 2018,
+    "region": "Severozápad",
+    "gdp": 63
+   },
+   {
+    "rok": 2019,
+    "region": "Severozápad",
+    "gdp": 65
+   },
+   {
+    "rok": 2020,
+    "region": "Severozápad",
+    "gdp": 65
+   },
+   {
+    "rok": 2021,
+    "region": "Severozápad",
+    "gdp": 61
+   },
+   {
+    "rok": 2022,
+    "region": "Severozápad",
+    "gdp": 62
+   },
+   {
+    "rok": 2023,
+    "region": "Severozápad",
+    "gdp": 62
+   },
+   {
+    "rok": 2024,
+    "region": "Severozápad",
+    "gdp": 61
    }
   ]
  },
- "config": {
-  "axis": {},
-  "legend": {}
- },
- "mark": {
-  "type": "line",
-  "point": true
- },
- "encoding": {
-  "x": {
-   "field": "rok",
-   "type": "ordinal",
-   "title": "Rok"
-  },
-  "y": {
-   "field": "gdp",
-   "type": "quantitative",
-   "title": "GDP per capita (% EU27)",
-   "scale": {
-    "domain": [
-     50,
-     220
-    ]
-   }
-  },
-  "color": {
-   "field": "region",
-   "type": "nominal",
-   "scale": {
-    "domain": [
-     "Praha",
-     "ČR průměr",
-     "Severozápad"
-    ],
-    "range": [
-     "#0e839e",
-     "#6267a3",
-     "#de1743"
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {}
     ]
    },
-   "legend": {
-    "orient": "bottom",
-    "title": null
+   "mark": {
+    "type": "rule",
+    "strokeDash": [
+     5,
+     4
+    ],
+    "stroke": "#0e839e",
+    "strokeWidth": 1.5
+   },
+   "encoding": {
+    "y": {
+     "datum": 100,
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2024,
+      "ref": 100
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -2,
+    "dy": -9,
+    "fontSize": 13,
+    "color": "#0e839e"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2014,
+       2024
+      ]
+     }
+    },
+    "y": {
+     "field": "ref",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       220
+      ]
+     }
+    },
+    "text": {
+     "value": "průměr EU27"
+    }
+   }
+  },
+  {
+   "params": [
+    {
+     "name": "serie",
+     "select": {
+      "type": "point",
+      "fields": [
+       "region"
+      ]
+     },
+     "bind": "legend"
+    }
+   ],
+   "mark": {
+    "type": "line",
+    "point": true
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2014,
+       2024
+      ]
+     },
+     "axis": {
+      "format": "d",
+      "values": [
+       2014,
+       2016,
+       2018,
+       2020,
+       2022,
+       2024
+      ],
+      "grid": false,
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "y": {
+     "field": "gdp",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       220
+      ]
+     },
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "color": {
+     "field": "region",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Praha",
+       "ČR průměr",
+       "Severozápad"
+      ],
+      "range": [
+       "#272a59",
+       "#6267a3",
+       "#de1743"
+      ]
+     },
+     "legend": {
+      "title": null
+     }
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    },
+    "tooltip": [
+     {
+      "field": "region",
+      "title": "Region"
+     },
+     {
+      "field": "rok",
+      "title": "Rok",
+      "format": "d"
+     },
+     {
+      "field": "gdp",
+      "title": "HDP na obyvatele (% průměru EU)",
+      "format": "d"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.rok == 2024"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 7,
+    "fontSize": 13,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2014,
+       2024
+      ]
+     }
+    },
+    "y": {
+     "field": "gdp",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       220
+      ]
+     }
+    },
+    "text": {
+     "field": "gdp",
+     "type": "quantitative",
+     "format": "d"
+    },
+    "color": {
+     "field": "region",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Praha",
+       "ČR průměr",
+       "Severozápad"
+      ],
+      "range": [
+       "#272a59",
+       "#6267a3",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    }
    }
   }
- },
- "_source": "Eurostat regional GDP, OECD Czechia Note, PAQ Research"
+ ],
+ "_source": "[Eurostat, regionální HDP na obyvatele v PPS (tgs00006)](https://ec.europa.eu/eurostat/databrowser/view/tgs00006/default/table?lang=en), [HDP na obyvatele ČR (tec00114)](https://ec.europa.eu/eurostat/databrowser/view/tec00114/default/table?lang=en)"
 }

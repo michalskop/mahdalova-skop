@@ -6,11 +6,30 @@ import ChartSignature from './ChartSignature';
 
 // Jednotná typografie grafů (viz Flourish vzor a DESIGN.md §Grafy):
 // Roboto Condensed všude, titulek 20/bold, podtitulek 14, osy/hodnoty 13,
-// legenda 13,5, patička 12 – vše #333333 (kromě titulku #1a1a1a).
+// legenda 13,5, patička 14 – vše #333333 (kromě titulku #1a1a1a).
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
 // Legenda: čtvercová tlačítka se zakulacenými rohy, standardně nahoře na středu
 // (vypínání sérií řeší per-spec param s bind: "legend").
 const LEGEND_SYMBOL = 'M -0.45 -0.65 L 0.45 -0.65 Q 0.65 -0.65 0.65 -0.45 L 0.65 0.45 Q 0.65 0.65 0.45 0.65 L -0.45 0.65 Q -0.65 0.65 -0.65 0.45 L -0.65 -0.45 Q -0.65 -0.65 -0.45 -0.65 Z';
+// České formátování čísel a datumů ve Vega (osy, tooltipy): desetinná čárka,
+// nezlomitelná mezera jako oddělovač tisíců. Bez toho d3 renderuje "41.2" a "20,000".
+const CS_NUMBER_LOCALE = {
+  decimal: ',',
+  thousands: ' ',
+  grouping: [3],
+  currency: ['', ' Kč'],
+  minus: '−',
+};
+const CS_TIME_LOCALE = {
+  dateTime: '%A %e. %B %Y, %X',
+  date: '%d.%m.%Y',
+  time: '%H:%M:%S',
+  periods: ['dop.', 'odp.'],
+  days: ['neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'],
+  shortDays: ['ne', 'po', 'út', 'st', 'čt', 'pá', 'so'],
+  months: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
+  shortMonths: ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'],
+};
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
   axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13, titleFontSize: 13, labelColor: '#333333', titleColor: '#333333' },
@@ -148,6 +167,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       embed(containerRef.current, final as never, {
         actions: false,
         renderer: 'svg',
+        formatLocale: CS_NUMBER_LOCALE,
+        timeFormatLocale: CS_TIME_LOCALE,
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
       }).catch(e => setError(String(e)));

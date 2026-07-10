@@ -1,23 +1,12 @@
 {
- "_source": "SZIF / Greenpeace EU 2026",
+ "_source": "[Greenpeace EU 2026: 40 % zemědělských dotací EU inkasuje 1 % příjemců](https://www.greenpeace.org/czech/tiskova-zprava/23328/40-zemedelskych-dotaci-eu-inkasuje-pouhe-jedno-procento-prijemcu-mezi-nimi-i-agrofert/), SZIF",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Podíl zemědělských dotací podle velikosti příjemců",
  "width": 450,
  "height": 150,
- "padding": {
-  "top": 20,
-  "left": 12,
-  "right": 20,
-  "bottom": 36
- },
- "autosize": {
-  "type": "pad",
-  "resize": true
- },
- "background": "#fdfbf7",
  "title": {
   "text": "Jedno procento příjemců, čtyřicet procent peněz",
-  "subtitle": "Rozdělení plateb Společné zemědělské politiky EU"
+  "subtitle": "Rozdělení přímých plateb Společné zemědělské politiky mezi příjemce v EU"
  },
  "data": {
   "values": [
@@ -39,7 +28,6 @@
   {
    "mark": {
     "type": "bar",
-    "tooltip": true,
     "cornerRadiusEnd": 3,
     "height": 40
    },
@@ -67,11 +55,13 @@
      "title": null,
      "axis": {
       "domain": false,
-      "ticks": false
+      "ticks": false,
+      "labelPadding": 8
      },
-     "sort": {
-      "field": "poradi"
-     }
+     "sort": [
+      "Horní 1 % příjemců",
+      "Ostatních 99 % příjemců"
+     ]
     },
     "color": {
      "field": "skupina",
@@ -82,20 +72,31 @@
        "Ostatních 99 % příjemců"
       ],
       "range": [
-       "#ffcf02",
+       "#de1743",
        "#d4d4c8"
       ]
      },
      "legend": null
-    }
+    },
+    "tooltip": [
+     {
+      "field": "skupina",
+      "title": "Skupina příjemců"
+     },
+     {
+      "field": "label",
+      "title": "Podíl vyplacených peněz"
+     }
+    ]
    }
   },
   {
    "mark": {
     "type": "text",
-    "align": "center",
+    "align": "right",
     "baseline": "middle",
-    "fontSize": 12,
+    "dx": -10,
+    "fontSize": 14,
     "fontWeight": "bold"
    },
    "encoding": {
@@ -109,20 +110,22 @@
       ]
      }
     },
-    "dx": {
-     "value": 16
-    },
     "y": {
      "field": "skupina",
      "type": "nominal",
-     "sort": {
-      "field": "poradi"
-     }
+     "sort": [
+      "Horní 1 % příjemců",
+      "Ostatních 99 % příjemců"
+     ]
     },
     "text": {
      "field": "label"
     },
     "color": {
+     "condition": {
+      "test": "datum.skupina == 'Horní 1 % příjemců'",
+      "value": "#ffffff"
+     },
      "value": "#1a1a1a"
     }
    }

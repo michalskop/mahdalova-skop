@@ -1,90 +1,153 @@
 {
- "_source": "ERÚ, EU ETS Market data (Odhad 2025)",
+ "_source": "ERÚ, EU ETS Market data (odhad 2025)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "description": "Složení nákladové ceny elektřiny z hnědého uhlí v ČR (2025)",
+ "description": "Složení ceny elektřiny z hnědého uhlí pro odběratele v ČR (2025)",
  "width": 450,
- "height": 80,
- "padding": {
-  "top": 20,
-  "left": 10,
-  "right": 10,
-  "bottom": 40
- },
- "autosize": {
-  "type": "pad",
-  "resize": true
- },
- "background": "#fdfbf7",
+ "height": 170,
  "title": {
   "text": "Na uhelné elektřině je nejdražší povolenka, ne uhlí",
-  "subtitle": "Odhad nákladů na 1 kWh z hnědého uhlí, 2025 (Kč bez DPH)"
+  "subtitle": "Odhad složek ceny 1 kWh elektřiny z hnědého uhlí pro odběratele, 2025 (Kč bez DPH)"
  },
  "data": {
   "values": [
    {
-    "label": "Palivo a provoz",
-    "value": 0.65,
-    "p": 3
+    "label": "Emisní povolenka",
+    "value": 2.2,
+    "text": "2,20 Kč",
+    "p": 1
    },
    {
-    "label": "Regulované sítě",
+    "label": "Regulované sítě (distribuce)",
     "value": 1.95,
+    "text": "1,95 Kč",
     "p": 2
    },
    {
-    "label": "Emisní povolenka",
-    "value": 2.2,
-    "p": 1
+    "label": "Palivo a provoz elektrárny",
+    "value": 0.65,
+    "text": "0,65 Kč",
+    "p": 3
    }
   ]
  },
- "mark": {
-  "type": "bar",
-  "tooltip": true,
-  "stroke": "#fdfbf7",
-  "strokeWidth": 2
- },
- "encoding": {
-  "x": {
-   "field": "value",
-   "type": "quantitative",
-   "title": "Kč / kWh",
-   "axis": {
-    "grid": true,
-    "gridColor": "#e8e8dc",
-    "domain": false,
-    "ticks": false
-   }
-  },
-  "color": {
-   "field": "label",
-   "type": "nominal",
-   "scale": {
-    "domain": [
-     "Emisní povolenka",
-     "Regulované sítě",
-     "Palivo a provoz"
-    ],
-    "range": [
-     "#de1743",
-     "#6267a3",
-     "#272a59"
-    ]
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "height": 30
    },
-   "legend": {
-    "title": null,
-    "orient": "bottom",
-    "offset": 10,
-    "symbolType": "square",
-    "padding": 10,
-    "columns": 3
+   "encoding": {
+    "y": {
+     "field": "label",
+     "type": "nominal",
+     "title": null,
+     "sort": [
+      "Emisní povolenka",
+      "Regulované sítě (distribuce)",
+      "Palivo a provoz elektrárny"
+     ],
+     "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelLimit": 220
+     }
+    },
+    "x": {
+     "field": "value",
+     "type": "quantitative",
+     "title": "Kč za kWh",
+     "scale": {
+      "domain": [
+       0,
+       2.6
+      ]
+     },
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       0.5,
+       1,
+       1.5
+      ],
+      "format": ".1f",
+      "titleAngle": 0,
+      "titleAnchor": "end",
+      "titleAlign": "right",
+      "titlePadding": -14,
+      "titleFontWeight": "bold"
+     }
+    },
+    "color": {
+     "field": "label",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Emisní povolenka",
+       "Regulované sítě (distribuce)",
+       "Palivo a provoz elektrárny"
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3",
+       "#272a59"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "label",
+      "title": "Složka ceny"
+     },
+     {
+      "field": "text",
+      "title": "Kč za kWh"
+     }
+    ]
    }
   },
-  "order": {
-   "field": "p",
-   "type": "quantitative"
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 6,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#1a1a1a"
+   },
+   "encoding": {
+    "y": {
+     "field": "label",
+     "type": "nominal",
+     "sort": [
+      "Emisní povolenka",
+      "Regulované sítě (distribuce)",
+      "Palivo a provoz elektrárny"
+     ]
+    },
+    "x": {
+     "field": "value",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       2.6
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
   }
- },
+ ],
  "config": {
   "view": {
    "stroke": "transparent"

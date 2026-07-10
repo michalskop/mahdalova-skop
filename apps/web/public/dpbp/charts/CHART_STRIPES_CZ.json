@@ -1,5 +1,5 @@
 {
- "_source": "ČHMÚ, Fakta o klimatu (1975–2024), vizuální koncept 'Climate Stripes'",
+ "_source": "[ČHMÚ / Fakta o klimatu – průměrná roční teplota v ČR](https://faktaoklimatu.cz/infografiky/teplota-cr), vizuální koncept 'Climate Stripes' (1975–2024)",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "50 REPUBLIK: Oteplování ČR v posledních 50 letech",
  "width": 450,
@@ -14,19 +14,9 @@
   "type": "pad",
   "resize": true
  },
- "background": "#fdfbf7",
  "title": {
-  "text": "50 let Česka: Od modré k rudé",
-  "subtitle": "Odchylka průměrné roční teploty od normálu 1961–1990",
-  "font": "Roboto Slab",
-  "fontSize": 13,
-  "fontWeight": "bold",
-  "anchor": "start",
-  "color": "#272a59",
-  "subtitleFont": "Work Sans",
-  "subtitleFontSize": 10,
-  "subtitleColor": "#6267a3",
-  "offset": 10
+  "text": "Chladnější rok, než býval normál, zažilo Česko naposledy v roce 1996",
+  "subtitle": "Odchylka průměrné roční teploty v ČR od normálu 1961–1990 (°C)"
  },
  "data": {
   "values": [
@@ -233,8 +223,7 @@
   ]
  },
  "mark": {
-  "type": "rect",
-  "tooltip": true
+  "type": "rect"
  },
  "encoding": {
   "x": {
@@ -251,7 +240,8 @@
      2024
     ],
     "ticks": false,
-    "domain": false
+    "domain": false,
+    "labelAngle": 0
    }
   },
   "color": {
@@ -261,7 +251,7 @@
     "domain": [
      -1.5,
      0,
-     2.5
+     2.7
     ],
     "range": [
      "#08306b",
@@ -270,28 +260,21 @@
     ]
    },
    "legend": {
-    "title": "Odchylka (°C)",
-    "orient": "right"
+    "title": "odchylka (°C)",
+    "orient": "top",
+    "direction": "horizontal",
+    "gradientLength": 220,
+    "gradientThickness": 10
    }
-  }
+  },
+  "tooltip": [
+   {"field": "year", "title": "Rok"},
+   {"field": "anom", "title": "Odchylka od normálu (°C)", "format": "+.1f"}
+  ]
  },
  "config": {
   "view": {
    "stroke": "transparent"
-  },
-  "title": {
-   "font": "Roboto Slab",
-   "fontWeight": "bold",
-   "fontSize": 13,
-   "anchor": "start",
-   "color": "#272a59",
-   "subtitleFont": "Work Sans",
-   "subtitleFontSize": 10,
-   "subtitleColor": "#6267a3"
-  },
-  "axis": {
-   "titleColor": "#6267a3"
-  },
-  "legend": {}
+  }
  }
 }
