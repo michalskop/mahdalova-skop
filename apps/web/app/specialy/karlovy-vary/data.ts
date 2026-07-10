@@ -17,6 +17,8 @@ export const kviffSources = [
   'Archiv filmů KVIFF',
   'Finální tiskové zprávy festivalu',
   'Stránka cen KVIFF',
+  'Historické ročníkové stránky KVIFF a finální tiskové zprávy',
+  'AP / festivalové zprávy k oznámeným poctám 60. ročníku 2026',
   'Wikidata, IMDb, TMDb, The Numbers a Box Office Mojo',
   'Filmová kritika a publicistika, včetně textů Kamila Fily',
 ];
@@ -91,6 +93,7 @@ export const kviffBranches: KviffBranch[] = [
         heading: 'Co oddělíme',
         body: [
           'Oficiální archiv použijeme pro fakta: kdo přijel, kdo dostal cenu a s jakým filmem byl spojován. Kritiku použijeme pro výklad, ne jako náhradu databáze.',
+          'První hotová datová řada sleduje Crystal Globe za mimořádný umělecký přínos světu filmu od roku 1998 do oznámených poct 60. ročníku 2026. U každé osobnosti vedeme rok, zemi, profesní roli a gender.',
         ],
       },
     ],
@@ -109,6 +112,7 @@ export const kviffBranches: KviffBranch[] = [
         body: [
           'Genderová analýza bude postavená jen na veřejně doložitelných údajích. Pokud údaj nepůjde spolehlivě ověřit, záznam zůstane jako unknown. Podíl unknown údajů bude součástí grafů, ne poznámka pod čarou.',
           'Budeme sledovat režii, scénář, produkci, herecké ceny, poroty, čestná ocenění a vítězné filmy. Důležitá otázka není jen kolik žen se v datech objevuje, ale ve kterých rolích a u jakého typu prestiže.',
+          'U čestných cen už máme první publikovatelný graf: Crystal Globe za mimořádný umělecký přínos ukazuje dlouhou mužskou řadu s několika viditelnými ženskými vlnami.',
         ],
       },
     ],
@@ -190,4 +194,3 @@ export const kviffBranches: KviffBranch[] = [
 export function getKviffBranch(slug: string) {
   return kviffBranches.find((branch) => branch.slug === slug);
 }
-

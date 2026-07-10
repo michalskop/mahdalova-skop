@@ -16,6 +16,7 @@ import {
   spendingRatio2026,
   ticketShare2026,
 } from '../stats';
+import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from '../honors';
 
 type PageProps = {
   params: { slug: string };
@@ -32,6 +33,78 @@ function DataBar({ label, value, max, color = '#547ca8', suffix = '' }: { label:
         <Box h="100%" w={`${width}%`} style={{ background: color, borderRadius: 999 }} />
       </Box>
       <Text ta="right" ff="monospace" fw={800}>{display}</Text>
+    </Box>
+  );
+}
+
+function GenderSplitBar({ label, women, men }: { label: string; women: number; men: number }) {
+  const total = women + men;
+  const womenWidth = total ? Math.round((women / total) * 1000) / 10 : 0;
+
+  return (
+    <Stack gap={4}>
+      <Group justify="space-between">
+        <Text fw={800}>{label}</Text>
+        <Text ff="monospace" fw={800}>{women} žen / {men} mužů</Text>
+      </Group>
+      <Box h={24} bg="#d9e1e7" style={{ borderRadius: 999, overflow: 'hidden', border: '1px solid #c8d3da' }}>
+        <Box h="100%" w={`${womenWidth}%`} style={{ background: '#c95b7a', borderRadius: 999 }} />
+      </Box>
+    </Stack>
+  );
+}
+
+function HonoraryGenderBlock() {
+  const latestRecipients = honoraryCrystalGlobeRecipients.slice(-8).reverse();
+
+  return (
+    <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+        <Paper p="lg" radius={8} withBorder bg="#fffdf8">
+          <Badge w="fit-content" color="pink" variant="light" mb="sm">Hotový genderový graf</Badge>
+          <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Čestná prestiž je pořád hlavně mužská</Title>
+          <Text size="lg">
+            V řadě Crystal Globe za mimořádný umělecký přínos světu filmu evidujeme od roku 1998 do oznámených poct roku 2026 celkem {honoraryTotal} oceněných osobností. Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
+          </Text>
+          <Stack gap="md" mt="lg">
+            {honoraryByPeriod.map((row) => (
+              <GenderSplitBar key={row.period} label={row.period} women={row.woman} men={row.man} />
+            ))}
+          </Stack>
+          <Text mt="md" c="dimmed">
+            Gender uvádíme podle veřejně prezentované identity osobností; kde by nebyla jistota, záznam by šel do kategorie unknown. V této první řadě zatím unknown nemáme.
+          </Text>
+        </Paper>
+
+        <Paper p="lg" radius={8} withBorder bg="#11100e" c="#fffaf0">
+          <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Sdělení do článku</Title>
+          <Text c="#f4ead8" size="lg">
+            Vary umějí pozvat a ocenit velká ženská jména: Věru Chytilovou, Liv Ullmann, Sharon Stone, Isabelle Huppert, Judi Dench, Susan Sarandon, Helen Mirren, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě.
+          </Text>
+          <SimpleGrid cols={2} spacing="sm" mt="lg">
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">2009-2012</Text><Text size="sm">nejvýraznější ženská vlna</Text></Paper>
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">2026*</Text><Text size="sm">Hoffman, Binoche, Richardson</Text></Paper>
+          </SimpleGrid>
+        </Paper>
+
+        <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
+          <Group justify="space-between" align="end" mb="md">
+            <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Poslední oceněné osobnosti v datové řadě</Title>
+            <Button component={Link} href="/specialy/karlovy-vary/live" variant="outline" color="dark">Souvislosti návštěvnosti</Button>
+          </Group>
+          <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
+            {latestRecipients.map((recipient) => (
+              <Paper key={`${recipient.year}-${recipient.name}`} p="md" radius={8} withBorder bg={recipient.gender === 'woman' ? '#fff0f4' : '#f4f7fa'}>
+                <Text fw={900}>{recipient.name}</Text>
+                <Text size="sm" c="dimmed">{recipient.year}{recipient.status === 'announced' ? ' oznámeno' : ''} · {recipient.country}</Text>
+                <Text size="sm">{recipient.role}</Text>
+              </Paper>
+            ))}
+          </SimpleGrid>
+        </Paper>
+      </SimpleGrid>
     </Box>
   );
 }
@@ -150,6 +223,8 @@ export default function KviffBranchPage({ params }: PageProps) {
             </SimpleGrid>
           </Box>
         )}
+
+        {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'gender-ve-varech') && <HonoraryGenderBlock />}
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
           <Paper p="lg" radius={8} withBorder bg="#fffaf0">

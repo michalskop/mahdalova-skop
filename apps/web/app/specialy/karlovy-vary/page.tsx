@@ -5,6 +5,7 @@ import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { kviffBranches, kviffSources } from './data';
 import { current2026, finalStats, formatNumber, maxTickets, spendingRatio2026, ticketShare2026 } from './stats';
+import { honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from './honors';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
 const COVER = `${BASE_URL}/images/specials/karlovy-vary.svg`;
@@ -132,6 +133,32 @@ export default function KarlovyVarySpecialPage() {
             </SimpleGrid>
           </Paper>
         </SimpleGrid>
+      </Box>
+
+      <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
+        <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#fffdf8">
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+            <Stack gap="sm">
+              <Badge w="fit-content" color="pink" variant="light">Nová historická stopa</Badge>
+              <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>
+                Když Vary rozdávají prestiž, častěji ji dostávají muži.
+              </Title>
+              <Text size="lg">
+                V řadě Crystal Globe za mimořádný umělecký přínos světu filmu máme od roku 1998 do oznámených poct roku 2026 celkem {honoraryTotal} osobností. Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
+              </Text>
+              <Group>
+                <Button component={Link} href="/specialy/karlovy-vary/gender-ve-varech" color="dark">Otevřít genderovou kapitolu</Button>
+                <Button component={Link} href="/specialy/karlovy-vary/hoste-a-prestiz" variant="outline" color="dark">Hosté a prestiž</Button>
+              </Group>
+            </Stack>
+            <SimpleGrid cols={2} spacing="sm">
+              <Paper p="md" radius={8} bg="#fff0f4"><Text fw={900} ff="monospace">{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
+              <Paper p="md" radius={8} bg="#f4f7fa"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0"><Text fw={900} ff="monospace">2009-2012</Text><Text size="sm">nejhustší ženská vlna</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0"><Text fw={900} ff="monospace">2026*</Text><Text size="sm">Binoche mezi třemi poctami</Text></Paper>
+            </SimpleGrid>
+          </SimpleGrid>
+        </Paper>
       </Box>
 
       <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
