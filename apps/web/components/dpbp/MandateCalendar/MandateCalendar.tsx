@@ -58,14 +58,25 @@ interface GridProps {
   showPavel: boolean;
   containerRef: React.RefObject<HTMLDivElement>;
   onHover: (info: HoverInfo) => void;
+  onDetail: (info: HoverInfo) => void;
 }
 
-function Grid({ numYears, counter, showZeman, showPavel, containerRef, onHover }: GridProps) {
-  function showTip(e: React.MouseEvent, trip: Trip, president: 'Zeman' | 'Pavel') {
+function Grid({ numYears, counter, showZeman, showPavel, containerRef, onHover, onDetail }: GridProps) {
+  function tipInfo(e: React.MouseEvent, trip: Trip, president: 'Zeman' | 'Pavel', margin: number): NonNullable<HoverInfo> {
     const rect = (e.currentTarget as SVGElement).getBoundingClientRect();
     const box = containerRef.current!.getBoundingClientRect();
-    const left = Math.min(Math.max(rect.left - box.left + rect.width / 2, 120), box.width - 120);
-    onHover({ trip, president, left, top: rect.top - box.top });
+    const left = Math.min(Math.max(rect.left - box.left + rect.width / 2, margin), box.width - margin);
+    return { trip, president, left, top: rect.top - box.top };
+  }
+  function showTip(e: React.MouseEvent, trip: Trip, president: 'Zeman' | 'Pavel') {
+    onHover(tipInfo(e, trip, president, 120));
+  }
+  // Klik otevírá detailní panel (dlouhý průběh cesty nepatří do hover tooltipu)
+  function showDetail(e: React.MouseEvent, trip: Trip, president: 'Zeman' | 'Pavel') {
+    e.stopPropagation();
+    const info = tipInfo(e, trip, president, 165);
+    onDetail({ ...info, top: Math.max(info.top + 26, 8) });
+    onHover(null);
   }
 
   const height = numYears * ROW_H - ROW_GAP + 8;
@@ -92,7 +103,7 @@ function Grid({ numYears, counter, showZeman, showPavel, containerRef, onHover }
           style={{ transition: 'opacity 0.25s', cursor: revealed ? 'pointer' : 'default', pointerEvents: revealed ? 'auto' : 'none' }}
           onMouseEnter={e => showTip(e, trip, president)}
           onMouseLeave={() => onHover(null)}
-          onClick={e => showTip(e, trip, president)}
+          onClick={e => showDetail(e, trip, president)}
         />
       );
     });
@@ -135,6 +146,7 @@ export default function MandateCalendar() {
   const [showZeman, setShowZeman] = useState(true);
   const [showPavel, setShowPavel] = useState(true);
   const [hover, setHover] = useState<HoverInfo>(null);
+  const [detail, setDetail] = useState<HoverInfo>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const maxCounter = useMemo(() => {
@@ -172,8 +184,8 @@ export default function MandateCalendar() {
         marginBottom: 8,
       }}>
         <div style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700,
-          color: '#101432', lineHeight: 1.16,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
+          color: '#101432', lineHeight: 1.2,
         }}>
           Cesty prezidentů: kostička za každou cestu
         </div>
@@ -225,14 +237,14 @@ export default function MandateCalendar() {
       </div>
 
       <div ref={containerRef} style={{ position: 'relative' }}>
-        <Grid numYears={numYears} counter={counter} showZeman={showZeman} showPavel={showPavel} containerRef={containerRef} onHover={setHover} />
-        {/* Jednotný tooltip: béžové pozadí s mírnou průhledností, Roboto Slab (vzor: graf plodnosti, kap. Demografie) */}
+        <Grid numYears={numYears} counter={counter} showZeman={showZeman} showPavel={showPavel} containerRef={containerRef} onHover={setHover} onDetail={setDetail} />
+        {/* Krátký hover tooltip; dlouhý průběh cesty se otevírá kliknutím do panelu. */}
         {hover && (
           <div
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
               background: 'rgba(248,246,240,0.95)', color: '#1a1a1a', padding: '8px 11px', borderRadius: 7, fontSize: 12,
-              fontFamily: 'var(--font-roboto-slab), Georgia, serif', width: 250, pointerEvents: 'none', zIndex: 10,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif', width: 230, pointerEvents: 'none', zIndex: 10,
               border: '1px solid #e8e3d2', boxShadow: '0 4px 10px rgba(16,20,50,0.14)', lineHeight: 1.45,
             }}
           >
@@ -240,26 +252,80 @@ export default function MandateCalendar() {
               <span style={{ color: hover.president === 'Zeman' ? COLORS.Z : COLORS.P }}>{hover.president}</span>
               {' · '}{hover.trip.n}. cesta{' · '}{hover.trip.z}
             </div>
-            {hover.trip.m && (
-              <div style={{ color: '#333333' }}>{hover.trip.m}</div>
-            )}
-            <div style={{ color: '#333333', marginTop: 2 }}>
+            <div style={{ color: '#333333' }}>
               {hover.trip.dl} · {hover.trip.di}. den mandátu
             </div>
-            <div style={{ color: '#333333' }}>
-              {typeLabel(hover.trip)}
-              {hover.trip.nz > 1 ? ` · ${hover.trip.nz}. návštěva země` : ''}
+            <div style={{ marginTop: 5, color: '#de1743', fontWeight: 700 }}>
+              Kliknutím otevřete detail
             </div>
-            {hover.trip.desc && (
-              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid #e8e3d2', color: '#1a1a1a' }}>
-                {hover.trip.desc}
-              </div>
-            )}
             <div style={{
               position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
               width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
               borderTop: '5px solid rgba(248,246,240,0.97)',
             }} />
+          </div>
+        )}
+
+        {detail && (
+          <div
+            role="dialog"
+            aria-label={`Detail cesty: ${detail.president}, ${detail.trip.n}. cesta`}
+            style={{
+              position: 'absolute',
+              left: detail.left,
+              top: detail.top,
+              transform: 'translateX(-50%)',
+              width: 'min(330px, calc(100% - 18px))',
+              background: 'rgba(248,246,240,0.95)',
+              color: '#1a1a1a',
+              padding: '12px 14px 13px',
+              borderRadius: 7,
+              fontSize: 12,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+              zIndex: 20,
+              border: '1px solid #e8e3d2',
+              boxShadow: '0 8px 22px rgba(16,20,50,0.18)',
+              lineHeight: 1.45,
+            }}
+          >
+            <button
+              type="button"
+              aria-label="Zavřít detail"
+              onClick={() => setDetail(null)}
+              style={{
+                position: 'absolute',
+                right: 7,
+                top: 6,
+                width: 24,
+                height: 24,
+                border: 0,
+                background: 'transparent',
+                color: '#333333',
+                fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+                fontSize: 18,
+                lineHeight: 1,
+                cursor: 'pointer',
+              }}
+            >
+              ×
+            </button>
+            <div style={{ paddingRight: 22, fontWeight: 700, fontSize: 13, marginBottom: 3 }}>
+              <span style={{ color: detail.president === 'Zeman' ? COLORS.Z : COLORS.P }}>{detail.president}</span>
+              {' · '}{detail.trip.n}. cesta{' · '}{detail.trip.z}
+            </div>
+            {detail.trip.m && <div style={{ color: '#333333' }}>{detail.trip.m}</div>}
+            <div style={{ color: '#333333', marginTop: 2 }}>
+              {detail.trip.dl} · {detail.trip.di}. den mandátu
+            </div>
+            <div style={{ color: '#333333' }}>
+              {typeLabel(detail.trip)}
+              {detail.trip.nz > 1 ? ` · ${detail.trip.nz}. návštěva země` : ''}
+            </div>
+            {detail.trip.desc && (
+              <div style={{ marginTop: 6, paddingTop: 6, borderTop: '1px solid #e8e3d2', color: '#333333' }}>
+                {detail.trip.desc}
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -289,7 +355,7 @@ export default function MandateCalendar() {
         Oba prezidenty srovnáváme za stejnou fázi mandátu: prvních {maxCounter} dní od inaugurace (u Zemana od března 2013, u Pavla od března 2023).
         Zemanových {TRIPS.zeman.length - TRIPS.zeman.filter(t => t.di <= maxCounter).length} cest z pozdějších let mandátu v grafu není. Najetím nebo klepnutím na kostičku se zobrazí podrobnosti cesty.
       </p>
-      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.5 }}>
         <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
         <div>• data: Kancelář prezidenta republiky</div>
       </div>

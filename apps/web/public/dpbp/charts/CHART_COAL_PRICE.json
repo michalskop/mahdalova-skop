@@ -134,10 +134,10 @@
      "field": "value",
      "type": "quantitative",
      "scale": {
-     "domain": [
-      0,
-      3
-     ]
+      "domain": [
+       0,
+       3
+      ]
      }
     },
     "text": {

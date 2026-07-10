@@ -148,7 +148,7 @@
      "scale": {
       "domain": [
        0,
-       56
+       62
       ]
      },
      "axis": {
@@ -214,7 +214,7 @@
     "align": "left",
     "baseline": "middle",
     "dx": 5,
-    "fontSize": 13,
+    "fontSize": 12,
     "fontWeight": "bold"
    },
    "encoding": {
@@ -243,7 +243,7 @@
      "scale": {
       "domain": [
        0,
-       56
+       62
       ]
      }
     },

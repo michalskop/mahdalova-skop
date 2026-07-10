@@ -4,9 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import { robotoCondensed } from '@/app/fonts';
 import ChartSignature from './ChartSignature';
 
-// Jednotná typografie grafů (viz DESIGN.md §Grafy):
-// Roboto Condensed všude, titulek 16/bold, podtitulek 14, patička 12,
-// osy/legendy/hodnoty 10–12 podle hustoty – vše #333333 (titulek #1a1a1a).
+// Jednotná typografie grafů (závazná škála, DESIGN.md §9, revize 2026-07-10):
+// Roboto Condensed všude, titulek 20/bold, podtitulek 14, datové popisky 12/bold,
+// legenda 12, osy/hodnoty 10,5, patička 12, minimum 8 (jen drobné anotace) –
+// vše #333333 (kromě titulku #1a1a1a).
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
 // Legenda: čtvercová tlačítka se zakulacenými rohy, standardně nahoře na středu
 // (vypínání sérií řeší per-spec param s bind: "legend").
@@ -250,11 +251,11 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
           {meta.title && (
             <div style={{
               fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              fontSize: 22,
+              fontSize: 20,
               fontWeight: 700,
-              lineHeight: 1.16,
+              lineHeight: 1.2,
               color: '#1a1a1a',
-              marginBottom: meta.subtitle ? 8 : 0,
+              marginBottom: meta.subtitle ? 6 : 0,
             }}>
               {meta.title}
             </div>
@@ -262,7 +263,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
           {meta.subtitle && (
             <div style={{
               fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              fontSize: 17,
+              fontSize: 14,
               lineHeight: 1.3,
               color: '#333333',
             }}>
@@ -295,10 +296,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       {meta.source && (
         <div style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 16,
+          fontSize: 12,
           color: '#333333',
           marginTop: 10,
-          lineHeight: 1.45,
+          lineHeight: 1.5,
         }}>
           <div>
             {'• autoři: '}

@@ -132,8 +132,8 @@ export default function VetoChart() {
         marginBottom: 8,
       }}>
         <div style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700,
-          color: '#101432', lineHeight: 1.16,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
+          color: '#101432', lineHeight: 1.2,
         }}>
           93 vet a jedna hranice: 101 hlasů
         </div>
@@ -321,13 +321,13 @@ export default function VetoChart() {
         )}
       </div>
 
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 8, lineHeight: 1.45 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 8, lineHeight: 1.5 }}>
         Každý bod je jedno prezidentské veto (1993–2026), výška bodu udává počet poslanců, kteří při opakovaném hlasování zvedli ruku pro vrácený
         zákon. Nad přerušovanou čarou 101 hlasů sněmovna veto přehlasovala a zákon platí, pod ní zákon padl. V pásu dole jsou veta, o kterých už
         sněmovna nestihla hlasovat. Vícero zákonů vetovaných najednou počítáme jako jedno veto. Najetím nebo klepnutím na bod se zobrazí zákon,
         prezidentovo odůvodnění i výsledek hlasování.
       </p>
-      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.5 }}>
         <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
         <div>• data: Poslanecká sněmovna PČR</div>
       </div>

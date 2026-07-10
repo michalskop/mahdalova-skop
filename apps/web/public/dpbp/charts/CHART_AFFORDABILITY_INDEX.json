@@ -99,7 +99,7 @@
      "scale": {
       "domain": [
        0,
-       17
+       19.5
       ]
      },
      "axis": {
@@ -163,7 +163,7 @@
     "align": "left",
     "baseline": "middle",
     "dx": 6,
-    "fontSize": 13,
+    "fontSize": 12,
     "fontWeight": "bold",
     "color": "#1a1a1a"
    },
@@ -187,7 +187,7 @@
      "scale": {
       "domain": [
        0,
-       17
+       19.5
       ]
      }
     },

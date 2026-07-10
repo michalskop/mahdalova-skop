@@ -8,12 +8,54 @@
  "height": 300,
  "data": {
   "values": [
-   {"hruba_mzda": "25 000", "typ": "Zůstatek dlužníkovi", "castka": 18500, "label": "18 500 Kč", "label_y": 9250, "order": 1},
-   {"hruba_mzda": "25 000", "typ": "Srážky a daně", "castka": 6500, "label": "6 500 Kč", "label_y": 0, "order": 2},
-   {"hruba_mzda": "35 000", "typ": "Zůstatek dlužníkovi", "castka": 19200, "label": "19 200 Kč", "label_y": 9600, "order": 1},
-   {"hruba_mzda": "35 000", "typ": "Srážky a daně", "castka": 15800, "label": "15 800 Kč", "label_y": 0, "order": 2},
-   {"hruba_mzda": "45 000", "typ": "Zůstatek dlužníkovi", "castka": 20100, "label": "20 100 Kč", "label_y": 10050, "order": 1},
-   {"hruba_mzda": "45 000", "typ": "Srážky a daně", "castka": 24900, "label": "24 900 Kč", "label_y": 0, "order": 2}
+   {
+    "hruba_mzda": "25 000",
+    "typ": "Zůstatek dlužníkovi",
+    "castka": 18500,
+    "label": "18 500 Kč",
+    "label_y": 9250,
+    "order": 1
+   },
+   {
+    "hruba_mzda": "25 000",
+    "typ": "Srážky a daně",
+    "castka": 6500,
+    "label": "6 500 Kč",
+    "label_y": 0,
+    "order": 2
+   },
+   {
+    "hruba_mzda": "35 000",
+    "typ": "Zůstatek dlužníkovi",
+    "castka": 19200,
+    "label": "19 200 Kč",
+    "label_y": 9600,
+    "order": 1
+   },
+   {
+    "hruba_mzda": "35 000",
+    "typ": "Srážky a daně",
+    "castka": 15800,
+    "label": "15 800 Kč",
+    "label_y": 0,
+    "order": 2
+   },
+   {
+    "hruba_mzda": "45 000",
+    "typ": "Zůstatek dlužníkovi",
+    "castka": 20100,
+    "label": "20 100 Kč",
+    "label_y": 10050,
+    "order": 1
+   },
+   {
+    "hruba_mzda": "45 000",
+    "typ": "Srážky a daně",
+    "castka": 24900,
+    "label": "24 900 Kč",
+    "label_y": 0,
+    "order": 2
+   }
   ]
  },
  "layer": [
@@ -21,59 +63,134 @@
    "params": [
     {
      "name": "serie",
-     "select": {"type": "point", "fields": ["typ"]},
+     "select": {
+      "type": "point",
+      "fields": [
+       "typ"
+      ]
+     },
      "bind": "legend"
     }
    ],
-   "mark": {"type": "bar"},
+   "mark": {
+    "type": "bar"
+   },
    "encoding": {
     "x": {
      "field": "hruba_mzda",
      "type": "nominal",
      "title": "hrubá mzda (Kč)",
-     "sort": ["25 000", "35 000", "45 000"],
-     "axis": {"labelAngle": 0, "domain": false, "ticks": false, "titleFontWeight": "bold"}
+     "sort": [
+      "25 000",
+      "35 000",
+      "45 000"
+     ],
+     "axis": {
+      "labelAngle": 0,
+      "domain": false,
+      "ticks": false,
+      "titleFontWeight": "bold"
+     }
     },
     "y": {
      "field": "castka",
      "type": "quantitative",
      "title": null,
-     "axis": {"grid": true, "gridColor": "#e8e8dc", "domain": false, "ticks": false}
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
     },
     "color": {
      "field": "typ",
      "type": "nominal",
      "scale": {
-      "domain": ["Zůstatek dlužníkovi", "Srážky a daně"],
-      "range": ["#0e839e", "#de1743"]
+      "domain": [
+       "Zůstatek dlužníkovi",
+       "Srážky a daně"
+      ],
+      "range": [
+       "#0e839e",
+       "#de1743"
+      ]
      },
-     "legend": {"title": null}
+     "legend": {
+      "title": null
+     }
     },
-    "order": {"field": "order"},
+    "order": {
+     "field": "order"
+    },
     "opacity": {
-     "condition": {"param": "serie", "value": 1},
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
      "value": 0.18
     },
     "tooltip": [
-     {"field": "hruba_mzda", "title": "Hrubá mzda (Kč)"},
-     {"field": "typ", "title": "Položka"},
-     {"field": "label", "title": "Částka měsíčně"}
+     {
+      "field": "hruba_mzda",
+      "title": "Hrubá mzda (Kč)"
+     },
+     {
+      "field": "typ",
+      "title": "Položka"
+     },
+     {
+      "field": "label",
+      "title": "Částka měsíčně"
+     }
     ]
    }
   },
   {
-   "transform": [{"filter": "datum.typ == 'Zůstatek dlužníkovi'"}],
-   "mark": {"type": "text", "align": "center", "baseline": "middle", "fontSize": 13, "fontWeight": "bold", "color": "#ffffff"},
+   "transform": [
+    {
+     "filter": "datum.typ == 'Zůstatek dlužníkovi'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "middle",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#ffffff"
+   },
    "encoding": {
-    "x": {"field": "hruba_mzda", "type": "nominal", "sort": ["25 000", "35 000", "45 000"]},
-    "y": {"field": "label_y", "type": "quantitative"},
-    "text": {"field": "label"},
-    "opacity": {"condition": {"param": "serie", "value": 1}, "value": 0.18}
+    "x": {
+     "field": "hruba_mzda",
+     "type": "nominal",
+     "sort": [
+      "25 000",
+      "35 000",
+      "45 000"
+     ]
+    },
+    "y": {
+     "field": "label_y",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "label"
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    }
    }
   }
  ],
  "config": {
-  "view": {"stroke": "transparent"}
+  "view": {
+   "stroke": "transparent"
+  }
  },
  "_source": "Mapa zadlužení / IPŘP, PAQ Research, Daniel Prokop: Slepé skvrny"
 }

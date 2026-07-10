@@ -10,10 +10,30 @@
  },
  "data": {
   "values": [
-   {"spec": "Dětští praktičtí lékaři", "val": 34.6, "label": "34,6 %", "cat": "Primární péče"},
-   {"spec": "Dětští psychiatři", "val": 33.3, "label": "33,3 %", "cat": "Specialisté"},
-   {"spec": "Praktičtí lékaři", "val": 30.2, "label": "30,2 %", "cat": "Primární péče"},
-   {"spec": "Ostatní lékaři", "val": 15.0, "label": "15,0 %", "cat": "Průměr"}
+   {
+    "spec": "Dětští praktičtí lékaři",
+    "val": 34.6,
+    "label": "34,6 %",
+    "cat": "Primární péče"
+   },
+   {
+    "spec": "Dětští psychiatři",
+    "val": 33.3,
+    "label": "33,3 %",
+    "cat": "Specialisté"
+   },
+   {
+    "spec": "Praktičtí lékaři",
+    "val": 30.2,
+    "label": "30,2 %",
+    "cat": "Primární péče"
+   },
+   {
+    "spec": "Ostatní lékaři",
+    "val": 15.0,
+    "label": "15,0 %",
+    "cat": "Průměr"
+   }
   ]
  },
  "layer": [
@@ -21,17 +41,30 @@
    "params": [
     {
      "name": "serie",
-     "select": {"type": "point", "fields": ["cat"]},
+     "select": {
+      "type": "point",
+      "fields": [
+       "cat"
+      ]
+     },
      "bind": "legend"
     }
    ],
-   "mark": {"type": "bar", "cornerRadiusEnd": 4},
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4
+   },
    "encoding": {
     "x": {
      "field": "spec",
      "type": "nominal",
      "title": null,
-     "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"],
+     "sort": [
+      "Dětští praktičtí lékaři",
+      "Dětští psychiatři",
+      "Praktičtí lékaři",
+      "Ostatní lékaři"
+     ],
      "axis": {
       "domain": false,
       "ticks": false,
@@ -44,13 +77,22 @@
      "field": "val",
      "type": "quantitative",
      "title": null,
-     "scale": {"domain": [0, 50]},
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
      "axis": {
       "grid": true,
       "gridColor": "#e8e8dc",
       "domain": false,
       "ticks": false,
-      "values": [0, 25, 50],
+      "values": [
+       0,
+       25,
+       50
+      ],
       "labelExpr": "datum.value + ' %'"
      }
     },
@@ -58,19 +100,41 @@
      "field": "cat",
      "type": "nominal",
      "scale": {
-      "domain": ["Primární péče", "Specialisté", "Průměr"],
-      "range": ["#de1743", "#272a59", "#bcbcb0"]
+      "domain": [
+       "Primární péče",
+       "Specialisté",
+       "Průměr"
+      ],
+      "range": [
+       "#de1743",
+       "#272a59",
+       "#bcbcb0"
+      ]
      },
-     "legend": {"title": null}
+     "legend": {
+      "title": null
+     }
     },
     "opacity": {
-     "condition": {"param": "serie", "value": 1},
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
      "value": 0.18
     },
     "tooltip": [
-     {"field": "spec", "title": "Specializace"},
-     {"field": "cat", "title": "Skupina"},
-     {"field": "label", "title": "Podíl lékařů a lékařek 65+"}
+     {
+      "field": "spec",
+      "title": "Specializace"
+     },
+     {
+      "field": "cat",
+      "title": "Skupina"
+     },
+     {
+      "field": "label",
+      "title": "Podíl lékařů a lékařek 65+"
+     }
     ]
    }
   },
@@ -88,19 +152,39 @@
     "x": {
      "field": "spec",
      "type": "nominal",
-     "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"]
+     "sort": [
+      "Dětští praktičtí lékaři",
+      "Dětští psychiatři",
+      "Praktičtí lékaři",
+      "Ostatní lékaři"
+     ]
     },
     "y": {
      "field": "val",
      "type": "quantitative",
-     "scale": {"domain": [0, 50]}
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     }
     },
-    "text": {"field": "label"},
-    "opacity": {"condition": {"param": "serie", "value": 1}, "value": 0.18}
+    "text": {
+     "field": "label"
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    }
    }
   }
  ],
  "config": {
-  "view": {"stroke": "transparent"}
+  "view": {
+   "stroke": "transparent"
+  }
  }
 }

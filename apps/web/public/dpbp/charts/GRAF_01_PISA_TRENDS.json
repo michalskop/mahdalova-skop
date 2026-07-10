@@ -231,7 +231,7 @@
     "type": "text",
     "align": "left",
     "dx": 7,
-    "fontSize": 13,
+    "fontSize": 12,
     "fontWeight": "bold"
    },
    "encoding": {

@@ -75,6 +75,12 @@
       "titleAlign": "right",
       "titlePadding": -14,
       "titleFontWeight": "bold"
+     },
+     "scale": {
+      "domain": [
+       0,
+       265
+      ]
      }
     },
     "color": {
@@ -110,7 +116,7 @@
     "align": "left",
     "dx": 6,
     "fontWeight": "bold",
-    "fontSize": 13
+    "fontSize": 12
    },
    "encoding": {
     "y": {
@@ -124,7 +130,13 @@
     },
     "x": {
      "field": "ratio",
-     "type": "quantitative"
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       265
+      ]
+     }
     },
     "text": {
      "field": "label"

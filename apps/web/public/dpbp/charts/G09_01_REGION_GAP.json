@@ -215,7 +215,7 @@
     "align": "right",
     "dx": -2,
     "dy": -9,
-    "fontSize": 13,
+    "fontSize": 12,
     "color": "#0e839e"
    },
    "encoding": {
@@ -365,7 +365,7 @@
     "type": "text",
     "align": "left",
     "dx": 7,
-    "fontSize": 13,
+    "fontSize": 12,
     "fontWeight": "bold"
    },
    "encoding": {

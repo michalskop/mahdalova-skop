@@ -10,18 +10,90 @@
  },
  "data": {
   "values": [
-   {"country": "Česko", "automation_risk": 35.2, "fear": 7, "cat": "Česko", "note": "OECD 2023: jedna z nejvyšších hodnot; Cedefop 2024: nejnižší obavy"},
-   {"country": "Slovensko", "automation_risk": 35.7, "fear": 19, "cat": "další země stř. a vých. Evropy", "note": "OECD 2023: jedna z nejvyšších hodnot; Cedefop 2024: 19 % obav"},
-   {"country": "Polsko", "automation_risk": 33.5, "fear": 19, "cat": "další země stř. a vých. Evropy", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Řecko", "automation_risk": 27.6, "fear": 24, "cat": "další země EU", "note": "OECD 2023: blízko průměru OECD; Cedefop 2024: nejvyšší obavy"},
-   {"country": "Portugalsko", "automation_risk": 30.1, "fear": 16, "cat": "další země EU", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Německo", "automation_risk": 28.7, "fear": 13, "cat": "další země EU", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Španělsko", "automation_risk": 28.0, "fear": 12, "cat": "další země EU", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Francie", "automation_risk": 27.4, "fear": 12, "cat": "další země EU", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Belgie", "automation_risk": 25.6, "fear": 11, "cat": "další země EU", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Irsko", "automation_risk": 22.5, "fear": 11, "cat": "další země EU", "note": "OECD 2023 StatLink; Cedefop 2024 chart"},
-   {"country": "Lucembursko", "automation_risk": 17.7, "fear": 16, "cat": "další země EU", "note": "OECD 2023: nejnižší automatizační riziko v grafu; Cedefop 2024 chart"},
-   {"country": "Referenční průměr", "automation_risk": 26.8, "fear": 15, "cat": "Průměr", "note": "OECD průměr automatizačního rizika; Cedefop uvádí průměr sledovaných zemí pod 15 %"}
+   {
+    "country": "Česko",
+    "automation_risk": 35.2,
+    "fear": 7,
+    "cat": "Česko",
+    "note": "OECD 2023: jedna z nejvyšších hodnot; Cedefop 2024: nejnižší obavy"
+   },
+   {
+    "country": "Slovensko",
+    "automation_risk": 35.7,
+    "fear": 19,
+    "cat": "další země stř. a vých. Evropy",
+    "note": "OECD 2023: jedna z nejvyšších hodnot; Cedefop 2024: 19 % obav"
+   },
+   {
+    "country": "Polsko",
+    "automation_risk": 33.5,
+    "fear": 19,
+    "cat": "další země stř. a vých. Evropy",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Řecko",
+    "automation_risk": 27.6,
+    "fear": 24,
+    "cat": "další země EU",
+    "note": "OECD 2023: blízko průměru OECD; Cedefop 2024: nejvyšší obavy"
+   },
+   {
+    "country": "Portugalsko",
+    "automation_risk": 30.1,
+    "fear": 16,
+    "cat": "další země EU",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Německo",
+    "automation_risk": 28.7,
+    "fear": 13,
+    "cat": "další země EU",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Španělsko",
+    "automation_risk": 28.0,
+    "fear": 12,
+    "cat": "další země EU",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Francie",
+    "automation_risk": 27.4,
+    "fear": 12,
+    "cat": "další země EU",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Belgie",
+    "automation_risk": 25.6,
+    "fear": 11,
+    "cat": "další země EU",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Irsko",
+    "automation_risk": 22.5,
+    "fear": 11,
+    "cat": "další země EU",
+    "note": "OECD 2023 StatLink; Cedefop 2024 chart"
+   },
+   {
+    "country": "Lucembursko",
+    "automation_risk": 17.7,
+    "fear": 16,
+    "cat": "další země EU",
+    "note": "OECD 2023: nejnižší automatizační riziko v grafu; Cedefop 2024 chart"
+   },
+   {
+    "country": "Referenční průměr",
+    "automation_risk": 26.8,
+    "fear": 15,
+    "cat": "Průměr",
+    "note": "OECD průměr automatizačního rizika; Cedefop uvádí průměr sledovaných zemí pod 15 %"
+   }
   ]
  },
  "layer": [
@@ -29,23 +101,42 @@
    "params": [
     {
      "name": "serie",
-     "select": {"type": "point", "fields": ["cat"]},
+     "select": {
+      "type": "point",
+      "fields": [
+       "cat"
+      ]
+     },
      "bind": "legend"
     }
    ],
-   "mark": {"type": "point", "size": 170, "filled": true},
+   "mark": {
+    "type": "point",
+    "size": 170,
+    "filled": true
+   },
    "encoding": {
     "x": {
      "field": "automation_risk",
      "type": "quantitative",
      "title": "riziko automatizace (%)",
-     "scale": {"domain": [15, 40]},
+     "scale": {
+      "domain": [
+       15,
+       40
+      ]
+     },
      "axis": {
       "grid": true,
       "gridColor": "#e8e8dc",
       "domain": false,
       "ticks": false,
-      "values": [15, 20, 25, 30],
+      "values": [
+       15,
+       20,
+       25,
+       30
+      ],
       "titleAngle": 0,
       "titleAnchor": "end",
       "titleAlign": "right",
@@ -57,41 +148,103 @@
      "field": "fear",
      "type": "quantitative",
      "title": "obavy ze ztráty práce (%)",
-     "scale": {"domain": [0, 25]},
-     "axis": {"grid": true, "gridColor": "#e8e8dc", "domain": false, "ticks": false, "titleFontWeight": "bold"}
+     "scale": {
+      "domain": [
+       0,
+       25
+      ]
+     },
+     "axis": {
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "titleFontWeight": "bold"
+     }
     },
     "color": {
      "field": "cat",
      "type": "nominal",
      "scale": {
-      "domain": ["Česko", "další země stř. a vých. Evropy", "další země EU", "Průměr"],
-      "range": ["#de1743", "#4a51ab", "#bcbcb0", "#404040"]
+      "domain": [
+       "Česko",
+       "další země stř. a vých. Evropy",
+       "další země EU",
+       "Průměr"
+      ],
+      "range": [
+       "#de1743",
+       "#4a51ab",
+       "#bcbcb0",
+       "#404040"
+      ]
      },
-     "legend": {"title": null, "columns": 2}
+     "legend": {
+      "title": null,
+      "columns": 2
+     }
     },
     "opacity": {
-     "condition": {"param": "serie", "value": 1},
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
      "value": 0.18
     },
     "tooltip": [
-     {"field": "country", "title": "Země / reference"},
-     {"field": "automation_risk", "title": "Riziko automatizace (%)", "format": ".1f"},
-     {"field": "fear", "title": "Obavy ze ztráty práce (%)", "format": "d"},
-     {"field": "note", "title": "Poznámka"}
+     {
+      "field": "country",
+      "title": "Země / reference"
+     },
+     {
+      "field": "automation_risk",
+      "title": "Riziko automatizace (%)",
+      "format": ".1f"
+     },
+     {
+      "field": "fear",
+      "title": "Obavy ze ztráty práce (%)",
+      "format": "d"
+     },
+     {
+      "field": "note",
+      "title": "Poznámka"
+     }
     ]
    }
   },
   {
-   "transform": [{"filter": "datum.country == 'Česko'"}],
-   "mark": {"type": "text", "align": "right", "dx": -12, "fontSize": 13.5, "fontWeight": "bold", "color": "#de1743"},
+   "transform": [
+    {
+     "filter": "datum.country == 'Česko'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -12,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#de1743"
+   },
    "encoding": {
-    "x": {"field": "automation_risk", "type": "quantitative"},
-    "y": {"field": "fear", "type": "quantitative"},
-    "text": {"value": "Česko"}
+    "x": {
+     "field": "automation_risk",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "fear",
+     "type": "quantitative"
+    },
+    "text": {
+     "value": "Česko"
+    }
    }
   }
  ],
  "config": {
-  "view": {"stroke": "transparent"}
+  "view": {
+   "stroke": "transparent"
+  }
  }
 }

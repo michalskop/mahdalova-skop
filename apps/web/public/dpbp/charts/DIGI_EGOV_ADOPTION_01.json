@@ -155,7 +155,7 @@
     "align": "left",
     "dx": 6,
     "fontWeight": "bold",
-    "fontSize": 14.5
+    "fontSize": 12
    },
    "encoding": {
     "y": {
@@ -208,7 +208,7 @@
     "align": "left",
     "dx": 12,
     "fontWeight": "bold",
-    "fontSize": 16,
+    "fontSize": 12,
     "color": "#ffffff"
    },
    "encoding": {
