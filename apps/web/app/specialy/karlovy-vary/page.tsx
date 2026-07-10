@@ -5,7 +5,7 @@ import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { kviffBranches, kviffSources } from './data';
 import { current2026, finalStats, formatNumber, maxTickets, spendingRatio2026, ticketShare2026 } from './stats';
-import { honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from './honors';
+import { honoraryDoubleWomanYears, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from './honors';
 import { firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from './films';
 import { countryPresenceTop, countryPresenceTotal, czCountry } from './countries';
 
@@ -176,7 +176,7 @@ export default function KarlovyVarySpecialPage() {
                 Když Vary rozdávají prestiž, častěji ji dostávají muži.
               </Title>
               <Text size="lg">
-                V řadě Crystal Globe za mimořádný umělecký přínos světu filmu máme od roku 1998 do oznámených poct roku 2026 celkem {honoraryTotal} osobností. Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
+                V řadě Crystal Globe za mimořádný umělecký přínos světu filmu máme od roku 1995 do oznámených poct roku 2026 celkem {honoraryTotal} osobností (ověřeno proti oficiálnímu archivu KVIFF). Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
               </Text>
               <Group>
                 <Button component={Link} href="/specialy/karlovy-vary/gender-ve-varech" color="dark">Otevřít genderovou kapitolu</Button>
@@ -186,7 +186,7 @@ export default function KarlovyVarySpecialPage() {
             <SimpleGrid cols={2} spacing="sm">
               <Paper p="md" radius={8} bg="brand.0"><Text fw={800} style={NUM_FONT}>{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
               <Paper p="md" radius={8} bg="brandNavy.0"><Text fw={800} style={NUM_FONT}>{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
-              <Paper p="md" radius={8} bg="background.2"><Text fw={800} style={NUM_FONT}>2009–2012</Text><Text size="sm">nejhustší ženská vlna</Text></Paper>
+              <Paper p="md" radius={8} bg="background.2"><Text fw={800} style={NUM_FONT}>{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
               <Paper p="md" radius={8} bg="background.2"><Text fw={800} style={NUM_FONT}>2026*</Text><Text size="sm">Binoche mezi třemi poctami</Text></Paper>
             </SimpleGrid>
           </SimpleGrid>

@@ -16,7 +16,7 @@ import {
   spendingRatio2026,
   ticketShare2026,
 } from '../stats';
-import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honorarySelectionNote, honoraryTotal, honoraryWomenShare, pre1989AwardsNotes } from '../honors';
+import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryDoubleWomanYears, honoraryGenderCounts, honorarySelectionNote, honoraryTotal, honoraryWomenShare, pre1989AwardsNotes } from '../honors';
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
 import { countryHistory, countryHistoryTopCountries } from '../countries-history';
@@ -41,6 +41,14 @@ function DataBar({ label, value, max, color = 'var(--mantine-color-brandNavy-6)'
   );
 }
 
+// Český plurál: 1 žena/muž, 2-4 ženy/muži, 0 a 5+ žen/mužů
+function czWomanCount(n: number) {
+  return n === 1 ? 'žena' : n >= 2 && n <= 4 ? 'ženy' : 'žen';
+}
+function czManCount(n: number) {
+  return n === 1 ? 'muž' : n >= 2 && n <= 4 ? 'muži' : 'mužů';
+}
+
 function GenderSplitBar({ label, women, men }: { label: string; women: number; men: number }) {
   const total = women + men;
   const womenWidth = total ? Math.round((women / total) * 1000) / 10 : 0;
@@ -49,7 +57,7 @@ function GenderSplitBar({ label, women, men }: { label: string; women: number; m
     <Stack gap={4}>
       <Group justify="space-between">
         <Text fw={800}>{label}</Text>
-        <Text ff="monospace" fw={800}>{women} žen / {men} mužů</Text>
+        <Text ff="monospace" fw={800}>{women} {czWomanCount(women)} / {men} {czManCount(men)}</Text>
       </Group>
       <Box h={24} bg="var(--mantine-color-brandNavy-0)" style={{ borderRadius: 999, overflow: 'hidden', border: '1px solid var(--mantine-color-background-6)' }}>
         <Box h="100%" w={`${womenWidth}%`} style={{ background: 'var(--mantine-color-brand-6)', borderRadius: 999 }} />
@@ -144,7 +152,7 @@ function HonoraryDotTimeline() {
                   {recipients.map((recipient) => (
                     <Tooltip
                       key={`${recipient.year}-${recipient.name}`}
-                      label={`${recipient.year}${recipient.status === 'announced' ? ' oznámeno' : ''}: ${recipient.name} · ${recipient.country} · ${recipient.role}. Ocenění: ${recipient.awardCz}. Za co: ${recipient.reason}`}
+                      label={`${recipient.year}${recipient.status === 'announced' ? ' oznámeno' : ''}: ${recipient.name} · ${recipient.country} · ${recipient.roleCz}. Ocenění: ${recipient.awardCz}. Za co: ${recipient.reason}`}
                       multiline
                       maw={420}
                       withArrow
@@ -152,7 +160,7 @@ function HonoraryDotTimeline() {
                       <Box
                         component="span"
                         role="img"
-                        aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}, ${recipient.role}`}
+                        aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}, ${recipient.roleCz}`}
                         tabIndex={0}
                         title={`${recipient.year}: ${recipient.name} · ${recipient.awardCz}. ${recipient.reason}`}
                         style={{
@@ -178,7 +186,7 @@ function HonoraryDotTimeline() {
         </Box>
       </Box>
       <Text mt="md" size="sm" c="dimmed">
-        Čtení grafu: růžové tečky nejsou rozprostřené rovnoměrně. Největší koncentrace ženských jmen přichází v letech 2009-2012 a znovu až jednotlivě v roce 2019 a oznámeném roce 2026.
+        Čtení grafu: růžové tečky nejsou rozprostřené rovnoměrně. Jediné roky, kdy ocenění dostaly dvě ženy zároveň, jsou {honoraryDoubleWomanYears.join(' a ')} – jinak jde vždy nejvýš o jednu ženu v ročníku, často žádnou.
       </Text>
       <Text mt="xs" size="sm">
         Všechny tečky v tomto grafu jsou jedna konkrétní čestná kategorie: Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Není to cena poroty za soutěžní film, ale festivalové ocenění osobností, které dlouhodobě formovaly světový film.
@@ -288,7 +296,7 @@ function HonoraryGenderBlock() {
           <Badge w="fit-content" color="pink" variant="light" mb="sm">Hotový genderový graf</Badge>
           <Title order={2} mb="xs" >Čestná prestiž je pořád hlavně mužská</Title>
           <Text size="lg">
-            V řadě Crystal Globe za mimořádný umělecký přínos světu filmu evidujeme od roku 1998 do oznámených poct roku 2026 celkem {honoraryTotal} oceněných osobností. Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
+            V řadě Crystal Globe za mimořádný umělecký přínos světu filmu evidujeme od roku 1995 do oznámených poct roku 2026 celkem {honoraryTotal} oceněných osobností (ověřeno proti oficiálnímu archivu KVIFF, ročník po ročníku). Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
           </Text>
           <Stack gap="md" mt="lg">
             {honoraryByPeriod.map((row) => (
@@ -312,7 +320,7 @@ function HonoraryGenderBlock() {
           <SimpleGrid cols={3} spacing="sm" mt="lg">
             <Paper p="md" radius={8} bg="brand.0"><Text fw={900} ff="monospace">{formatPercent(honoraryWomenShare)}</Text><Text size="sm">žen v evidované řadě</Text></Paper>
             <Paper p="md" radius={8} bg="brandNavy.0"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2"><Text fw={900} ff="monospace">2009-2012</Text><Text size="sm">největší koncentrace žen</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2"><Text fw={900} ff="monospace">{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
           </SimpleGrid>
           <Text mt="md" size="sm" c="dimmed">
             Tooltip u každé tečky proto uvádí nejen jméno a zemi, ale i přesnou kategorii a důvod: čestné ocenění za mimořádný umělecký přínos a výraznou stopu ve vývoji světové kinematografie.
@@ -322,12 +330,12 @@ function HonoraryGenderBlock() {
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
           <Title order={2} mb="xs" >Sdělení do článku</Title>
           <Text c="background.2" size="lg">
-            Vary umějí pozvat a ocenit velká ženská jména: Věru Chytilovou, Liv Ullmann, Sharon Stone, Isabelle Huppert, Judi Dench, Susan Sarandon, Helen Mirren, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě.
+            Vary umějí pozvat a ocenit velká ženská jména: Ginu Lollobrigidu, Liv Ullmann, Judi Dench, Helen Mirren, Susan Sarandon, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě – od roku 1995 jde jen o 8 žen z {honoraryTotal} oceněných.
           </Text>
           <SimpleGrid cols={2} spacing="sm" mt="lg">
             <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
             <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">2009-2012</Text><Text size="sm">nejvýraznější ženská vlna</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
             <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">2026*</Text><Text size="sm">Hoffman, Binoche, Richardson</Text></Paper>
           </SimpleGrid>
         </Paper>
@@ -366,7 +374,7 @@ function HonoraryGenderBlock() {
               <Paper key={`${recipient.year}-${recipient.name}`} p="md" radius={8} withBorder bg={recipient.gender === 'woman' ? 'brand.0' : 'brandNavy.0'}>
                 <Text fw={900}>{recipient.name}</Text>
                 <Text size="sm" c="dimmed">{recipient.year}{recipient.status === 'announced' ? ' oznámeno' : ''} · {recipient.country}</Text>
-                <Text size="sm">{recipient.role}</Text>
+                <Text size="sm">{recipient.roleCz}</Text>
               </Paper>
             ))}
           </SimpleGrid>
