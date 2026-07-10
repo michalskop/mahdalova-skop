@@ -134,6 +134,97 @@ function HonoraryDotTimeline() {
   );
 }
 
+function Pre1989AwardsOverview() {
+  const phaseColors = [
+    'var(--mantine-color-background-7)',
+    'var(--mantine-color-brandOrange-6)',
+    'var(--mantine-color-brandTeal-6)',
+    'var(--mantine-color-brand-6)',
+  ];
+
+  return (
+    <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
+      <Group justify="space-between" align="end" mb="lg">
+        <Stack gap={2} maw={760}>
+          <Badge w="fit-content" color="orange" variant="light">Infografika</Badge>
+          <Title order={2}>Jak se měnila logika festivalových cen</Title>
+          <Text c="dimmed">
+            Před rokem 1989 sledujeme jiný systém než dnešní čestný Křišťálový glóbus pro osobnosti. Archiv ukazuje přechod od nesoutěžních ročníků k soutěžním filmovým cenám a po roce 1989 k nové festivalové éře.
+          </Text>
+        </Stack>
+        <Text fw={900} ff="monospace">1946 → 1990 → novodobá éra</Text>
+      </Group>
+
+      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
+        <Box
+          style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${pre1989AwardsNotes.length}, minmax(220px, 1fr))`,
+            gap: 0,
+            minWidth: 920,
+            alignItems: 'stretch',
+          }}
+        >
+          {pre1989AwardsNotes.map((note, index) => (
+            <Box key={note.period} style={{ position: 'relative', padding: '0 10px' }}>
+              <Box
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: index === 0 ? 22 : 0,
+                  right: index === pre1989AwardsNotes.length - 1 ? 22 : 0,
+                  top: 28,
+                  height: 4,
+                  background: phaseColors[index],
+                  opacity: 0.72,
+                }}
+              />
+              <Stack gap="sm" align="center" style={{ position: 'relative' }}>
+                <Box
+                  style={{
+                    width: 58,
+                    height: 58,
+                    borderRadius: 999,
+                    background: phaseColors[index],
+                    border: '4px solid var(--mantine-color-background-1)',
+                    boxShadow: '0 0 0 1px var(--mantine-color-background-6)',
+                    display: 'grid',
+                    placeItems: 'center',
+                    color: index === 0 ? 'var(--mantine-color-brandRoyalBlue-8)' : 'var(--mantine-color-background-0)',
+                  }}
+                >
+                  <Text fw={900} ff="monospace" size="sm" ta="center" lh={1.05}>
+                    {note.period}
+                  </Text>
+                </Box>
+                <Paper p="md" radius={8} withBorder bg={index === 0 ? 'background.2' : 'background.1'} h="100%">
+                  <Text fw={900}>{note.title}</Text>
+                  <Text size="sm" mt={6}>{note.body}</Text>
+                </Paper>
+              </Stack>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+
+      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm" mt="lg">
+        <Paper p="md" radius={8} bg="background.2">
+          <Text fw={900}>Co je první „ocenění“?</Text>
+          <Text size="sm">První dva ročníky byly nesoutěžní, takže první stopa ocenění začíná až rokem 1948.</Text>
+        </Paper>
+        <Paper p="md" radius={8} bg="background.2">
+          <Text fw={900}>Co znamenají 60. léta?</Text>
+          <Text size="sm">Festival oceňoval hlavně filmy, režii a herecké výkony, ne dnešní typ světových čestných hostů.</Text>
+        </Paper>
+        <Paper p="md" radius={8} bg="background.2">
+          <Text fw={900}>Proč oddělujeme grafy?</Text>
+          <Text size="sm">Soutěžní ceny a čestná prestiž osobností jsou dva různé mechanismy festivalové autority.</Text>
+        </Paper>
+      </SimpleGrid>
+    </Paper>
+  );
+}
+
 function HonoraryGenderBlock() {
   const latestRecipients = honoraryCrystalGlobeRecipients.slice(-8).reverse();
 
@@ -192,16 +283,9 @@ function HonoraryGenderBlock() {
               </Text>
             </Stack>
           </SimpleGrid>
-          <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm" mt="lg">
-            {pre1989AwardsNotes.map((note) => (
-              <Paper key={note.period} p="md" radius={8} withBorder bg="background.1">
-                <Text fw={900} ff="monospace">{note.period}</Text>
-                <Text fw={900} mt={4}>{note.title}</Text>
-                <Text size="sm" mt={4}>{note.body}</Text>
-              </Paper>
-            ))}
-          </SimpleGrid>
         </Paper>
+
+        <Pre1989AwardsOverview />
 
         <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">
