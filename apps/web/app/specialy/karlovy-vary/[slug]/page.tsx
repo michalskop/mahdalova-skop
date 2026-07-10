@@ -464,6 +464,9 @@ function FilmScaleBlock() {
           <Text size="lg">
             Nejvíc filmů v dostupné řadě má rok {peakFilmYear.year}: {peakFilmYear.totalFilms} titulů. Uzavřený rok {latestClosedFilmYear.year} má {latestClosedFilmYear.totalFilms} filmů, ale {latestClosedFilmYear.screenings} projekcí. Jeden film tak dnes připadá zhruba na {latestScreeningsPerFilm.toString().replace('.', ',')} projekce; v roce 1996 to bylo {firstScreeningsPerFilm.toString().replace('.', ',')}.
           </Text>
+          <Text mt="sm">
+            Samotný počet filmů měří šířku katalogu. Počet projekcí naopak ukazuje, kolik prostoru dostane jeden vybraný titul v programu a jak reálně dostupný může být pro diváky.
+          </Text>
           <Stack gap="sm" mt="lg">
             {filmScaleByPeriod.map((row) => (
               <DataBar key={row.period} label={row.period} value={row.avgFilms} max={maxFilms} color="var(--mantine-color-brandTeal-6)" />
@@ -589,7 +592,13 @@ function FilmScaleBlock() {
             </Box>
           </Box>
           <Text mt="md" size="sm" c="dimmed">
-            Čtení grafu: zelené sloupce po roce 2003 klesají, žluté projekce ale neklesají stejným tempem. Festival tak po čase neukazuje jen méně titulů; dává každému filmu víc projekčního prostoru.
+            Čtení grafu: zelené sloupce po roce 2003 klesají, žluté projekce ale neklesají stejným tempem. V praxi to znamená, že Vary se po vrcholu nerozpadly na menší festival; spíš se posunuly od obřího katalogu k užšímu výběru, kterému dávají víc projekčního prostoru.
+          </Text>
+          <Text mt="xs" size="sm">
+            Pro publikum je to většinou dobrá zpráva: vybraný film se častěji nepromítne jen jednou nebo dvakrát, takže je větší šance se na něj dostat. Z kritického pohledu je to ambivalentní. Méně titulů může znamenat silnější kurátorský výběr, ale také otázku, zda nezmizel prostor pro riziko, objev a menší kinematografie.
+          </Text>
+          <Text mt="xs" size="sm">
+            Proto tento graf nečteme jako jednoduché „dobře“ nebo „špatně“. Ukazuje změnu festivalové logiky: méně titulů, ale intenzivnější práce s každým z nich.
           </Text>
         </Paper>
 
