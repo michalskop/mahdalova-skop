@@ -80,10 +80,13 @@ export default function KviffBranchPage({ params }: PageProps) {
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
           <Paper p="lg" radius={8} withBorder bg="#fffaf0">
-            <Title order={3} mb="sm" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Co doplníme v datové fázi</Title>
+            <Title order={3} mb="sm" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Hotové grafy k použití</Title>
             <Text>
-              Tato kapitola je založená jako redakční a metodologický draft. Další krok je napojit finální dataset z oficiálního archivu KVIFF, ověřit sekundární zdroje a doplnit vizualizace.
+              Pro živé vysílání už je připravený samostatný datový brief s grafy: vstupenky 2023-2026, průběžný stav 2026 proti finálnímu roku 2025, rozpočet, financování 80/20 a ekonomická stopa návštěvníků. Ostatní kapitoly rozšiřujeme postupně podle archivních dat.
             </Text>
+            <Button component={Link} href="/specialy/karlovy-vary/live" mt="md" color="dark">
+              Otevřít hotové grafy
+            </Button>
           </Paper>
         </Box>
 
@@ -127,4 +130,3 @@ export default function KviffBranchPage({ params }: PageProps) {
     </Container>
   );
 }
-

@@ -48,6 +48,9 @@ export default function KarlovyVarySpecialPage() {
               Kdo vypráví světový film, kdo získává prestiž a co ukazuje osmdesát let festivalu, když se nedíváme jen na červený koberec, ale na filmy, země, ceny, tvůrce, témata a publikum.
             </Text>
             <Group>
+              <Button component={Link} href="/specialy/karlovy-vary/live" color="red" variant="filled">
+                Hotové grafy pro vysílání
+              </Button>
               <Button component={Link} href="/specialy/karlovy-vary/historie-festivalu" color="yellow" variant="filled">
                 Začít historií
               </Button>
@@ -77,6 +80,36 @@ export default function KarlovyVarySpecialPage() {
             </Paper>
           ))}
         </SimpleGrid>
+      </Box>
+
+      <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
+        <Paper
+          component={Link}
+          href="/specialy/karlovy-vary/live"
+          p={{ base: 'lg', md: 'xl' }}
+          radius={8}
+          withBorder
+          bg="#11100e"
+          style={{ color: '#fffaf0', textDecoration: 'none', display: 'block' }}
+        >
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+            <Stack gap="sm">
+              <Badge w="fit-content" color="yellow" variant="light">Hotovo teď</Badge>
+              <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>
+                Grafy a citace pro živé vysílání
+              </Title>
+              <Text size="lg" c="#f4ead8">
+                Vstupenky 2023-2026, letošní průběžný stav proti finálnímu roku 2025, rozpočet, financování 80/20 a ekonomická stopa návštěvníků.
+              </Text>
+            </Stack>
+            <SimpleGrid cols={2} spacing="sm">
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">97 075</Text><Text size="sm">vstupenek k 8. 7.</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">650 mil.</Text><Text size="sm">útrata návštěvníků</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">80/20</Text><Text size="sm">sponzoři / veřejné</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">2,6×</Text><Text size="sm">útrata vs. rozpočet</Text></Paper>
+            </SimpleGrid>
+          </SimpleGrid>
+        </Paper>
       </Box>
 
       <Box component="section" px={{ base: 16, md: 24 }} py={{ base: 20, md: 36 }}>
@@ -152,4 +185,3 @@ export default function KarlovyVarySpecialPage() {
     </Container>
   );
 }
-
