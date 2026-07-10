@@ -324,7 +324,120 @@ function projectCountry(lon: number, lat: number) {
   };
 }
 
+function CountryLayerMap({
+  title,
+  subtitle,
+  rows,
+  minHeight = 260,
+}: {
+  title: string;
+  subtitle: string;
+  rows: typeof countryPresence2026;
+  minHeight?: number;
+}) {
+  const total = rows.reduce((sum, row) => sum + row.count, 0);
+
+  return (
+    <Paper p="md" radius={8} withBorder bg="background.1">
+      <Group justify="space-between" align="start" mb="sm" gap="sm">
+        <Stack gap={2} style={{ flex: 1 }}>
+          <Text fw={900}>{title}</Text>
+          <Text size="sm" c="dimmed">{subtitle}</Text>
+        </Stack>
+        <Text fw={900} ff="monospace" size="sm">{rows.length} zemí · {total}</Text>
+      </Group>
+      <Box
+        style={{
+          position: 'relative',
+          minHeight,
+          borderRadius: 8,
+          overflow: 'hidden',
+          border: '1px solid var(--mantine-color-background-6)',
+          background: 'linear-gradient(180deg, var(--mantine-color-brandTeal-0) 0%, var(--mantine-color-background-2) 100%)',
+        }}
+      >
+        {['North America', 'Europe', 'Asia', 'Latin America', 'Africa', 'Oceania'].map((label) => {
+          const positions: Record<string, { left: string; top: string }> = {
+            'North America': { left: '16%', top: '30%' },
+            Europe: { left: '51%', top: '28%' },
+            Asia: { left: '68%', top: '36%' },
+            'Latin America': { left: '29%', top: '70%' },
+            Africa: { left: '52%', top: '58%' },
+            Oceania: { left: '78%', top: '76%' },
+          };
+          return (
+            <Text
+              key={label}
+              size="xs"
+              fw={900}
+              c="var(--mantine-color-background-8)"
+              style={{ position: 'absolute', ...positions[label], textTransform: 'uppercase', letterSpacing: 0, opacity: 0.58 }}
+            >
+              {label}
+            </Text>
+          );
+        })}
+
+        {rows.map((row) => {
+          const point = projectCountry(row.lon, row.lat);
+          const size = 7 + Math.sqrt(row.count / countryPresenceMax) * 30;
+          const color = regionColors[row.region];
+          return (
+            <Tooltip
+              key={`${title}-${row.country}`}
+              label={`${row.country}: ${row.count} výskytů v katalogu 2026 · ${row.region}`}
+              multiline
+              maw={260}
+              withArrow
+            >
+              <Box
+                component="span"
+                role="img"
+                aria-label={`${row.country}: ${row.count} výskytů v katalogu 2026`}
+                title={`${row.country}: ${row.count} výskytů v katalogu 2026`}
+                style={{
+                  position: 'absolute',
+                  left: `${point.x}%`,
+                  top: `${point.y}%`,
+                  width: size,
+                  height: size,
+                  marginLeft: -size / 2,
+                  marginTop: -size / 2,
+                  borderRadius: 999,
+                  background: color,
+                  border: '2px solid var(--mantine-color-background-1)',
+                  boxShadow: '0 2px 12px rgba(17, 16, 14, 0.2)',
+                  opacity: 0.88,
+                  cursor: 'help',
+                }}
+              />
+            </Tooltip>
+          );
+        })}
+      </Box>
+    </Paper>
+  );
+}
+
 function CountryBubbleMap() {
+  const europeanRows = countryPresence2026.filter((row) => row.region === 'Europe');
+  const nonEuropeanRows = countryPresence2026.filter((row) => row.region !== 'Europe');
+  const atlanticRows = countryPresence2026.filter((row) => ['Europe', 'North America', 'Latin America'].includes(row.region));
+  const nextLayers = [
+    {
+      title: 'Hlavní soutěž',
+      body: 'Tady budeme filtrovat jen soutěž Crystal Globe. Uvidíme, zda se prestižní výběr chová stejně jako celý katalog.',
+    },
+    {
+      title: 'Proxima a objevy',
+      body: 'Samostatná vrstva pro nové hlasy. Teprve ta ukáže, odkud festival bere riziko a budoucí jména.',
+    },
+    {
+      title: 'Vítězové hlavních cen',
+      body: 'Mapa vítězů nebude mapa prostoru v programu, ale mapa nejvyšší festivalové prestiže.',
+    },
+  ];
+
   return (
     <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
       <Group justify="space-between" align="end" mb="md">
@@ -444,6 +557,61 @@ function CountryBubbleMap() {
           </Stack>
         </Stack>
       </SimpleGrid>
+
+      <Divider my="lg" />
+
+      <Stack gap="md">
+        <Stack gap={2}>
+          <Title order={3}>Jedna mapa nestačí</Title>
+          <Text c="dimmed">
+            Stejný katalog čteme ve více vrstvách. Celková mapa říká, kde se země objevují. Evropská mapa ukazuje koprodukční jádro. Mimoevropská mapa oddělí severoamerický pól, Latinskou Ameriku, Asii, Blízký východ, Afriku a Oceánii.
+          </Text>
+        </Stack>
+        <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="md">
+          <CountryLayerMap
+            title="1. Všechny výskyty"
+            subtitle="Presence count: jedna země v jedné koprodukci znamená jeden výskyt."
+            rows={countryPresence2026}
+          />
+          <CountryLayerMap
+            title="2. Evropská síť"
+            subtitle="Tady je vidět, že Vary stojí hlavně na francouzsko-německo-české koprodukční hustotě."
+            rows={europeanRows}
+          />
+          <CountryLayerMap
+            title="3. Mimo Evropu"
+            subtitle="Odděleně vynikne USA a širší vrstva Latinské Ameriky, Asie a Blízkého východu."
+            rows={nonEuropeanRows}
+          />
+        </SimpleGrid>
+
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          <CountryLayerMap
+            title="4. Atlantická osa"
+            subtitle="Evropa plus Severní a Latinská Amerika: dobrá kontrola, jestli obraz netáhne jen evropská dominance."
+            rows={atlanticRows}
+            minHeight={300}
+          />
+          <Paper p="md" radius={8} withBorder bg="background.2">
+            <Text fw={900} mb="sm">5. Fractional count zatím kreslit nebudeme</Text>
+            <Text size="sm">
+              Fractional count potřebuje seznam jednotlivých filmů a jejich koprodukčních zemí. U filmu se třemi zeměmi by každá dostala třetinu bodu. Současná mapa má jen souhrnné počty výskytů podle zemí, takže by „fractional mapa“ byla odhad, ne data.
+            </Text>
+            <Text size="sm" mt="sm" c="dimmed">
+              Jakmile napojíme film-level katalog, vedle sebe poběží dvě mapy: presence count pro viditelnost zemí a fractional count pro férovější váhu koprodukcí.
+            </Text>
+          </Paper>
+        </SimpleGrid>
+
+        <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm">
+          {nextLayers.map((layer) => (
+            <Paper key={layer.title} p="md" radius={8} withBorder bg="background.2">
+              <Text fw={900}>{layer.title}</Text>
+              <Text size="sm" mt={6}>{layer.body}</Text>
+            </Paper>
+          ))}
+        </SimpleGrid>
+      </Stack>
     </Paper>
   );
 }
@@ -474,7 +642,7 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
         <Group gap="sm">
           <Badge color="teal" variant="light">hrané</Badge>
           <Badge color="orange" variant="light">dokumenty</Badge>
-          <Badge color="indigo" variant="light">krátké</Badge>
+          <Badge color="brandNavy" variant="light">krátké</Badge>
         </Group>
       </Group>
 
@@ -624,6 +792,21 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
 function FilmScaleBlock() {
   const maxFilms = peakFilmYear.totalFilms ?? 1;
   const maxScreenings = Math.max(...filmCountAvailableRows.map((row) => row.screenings ?? 0));
+  const screeningDensityRows = filmCountAvailableRows
+    .map((row, index) => ({
+      row,
+      index,
+      ratio: row.screenings && row.totalFilms ? Math.round((row.screenings / row.totalFilms) * 100) / 100 : null,
+    }))
+    .filter((item): item is { row: typeof filmCountAvailableRows[number]; index: number; ratio: number } => item.ratio !== null);
+  const maxScreeningsPerFilm = Math.ceil(Math.max(...screeningDensityRows.map((item) => item.ratio)) * 2) / 2;
+  const densityLinePoints = screeningDensityRows
+    .map((item) => {
+      const x = ((item.index + 0.5) / filmCountAvailableRows.length) * 1000;
+      const y = 18 + (1 - item.ratio / maxScreeningsPerFilm) * 170;
+      return `${Math.round(x)},${Math.round(y)}`;
+    })
+    .join(' ');
 
   return (
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
@@ -697,16 +880,18 @@ function FilmScaleBlock() {
           <Group justify="space-between" align="end" mb="md">
             <Stack gap={2}>
               <Title order={2} >Filmy a projekce po ročnících</Title>
-              <Text c="dimmed">Každý sloupec má tooltip s rokem, ročníkem, počtem filmů, projekcí a metodickou poznámkou.</Text>
+              <Text c="dimmed">Sloupce ukazují velikost katalogu a počet projekcí, červená linka ukazuje projekční hustotu: kolikrát se v průměru promítl jeden film.</Text>
             </Stack>
             <Group gap="sm">
               <Badge color="teal" variant="light">filmy</Badge>
-              <Badge color="yellow" variant="light">projekce</Badge>
+              <Badge color="orange" variant="light">projekce</Badge>
+              <Badge color="red" variant="light">projekce / film</Badge>
             </Group>
           </Group>
           <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
             <Box
               style={{
+                position: 'relative',
                 display: 'grid',
                 gridTemplateColumns: `repeat(${filmCountAvailableRows.length}, minmax(32px, 1fr))`,
                 gap: 6,
@@ -717,6 +902,57 @@ function FilmScaleBlock() {
                 paddingTop: 8,
               }}
             >
+              <Box
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  inset: '2px 0 28px 0',
+                  pointerEvents: 'none',
+                  zIndex: 4,
+                }}
+              >
+                <svg viewBox="0 0 1000 198" preserveAspectRatio="none" width="100%" height="100%">
+                  <text x="990" y="16" textAnchor="end" fill="var(--mantine-color-brand-8)" fontSize="20" fontWeight="900">
+                    projekce / film
+                  </text>
+                  {[1, 2, 3].filter((tick) => tick <= maxScreeningsPerFilm).map((tick) => {
+                    const y = 18 + (1 - tick / maxScreeningsPerFilm) * 170;
+                    return (
+                      <g key={tick}>
+                        <line x1="0" x2="1000" y1={y} y2={y} stroke="var(--mantine-color-background-6)" strokeDasharray="6 10" strokeWidth="1.5" />
+                        <text x="990" y={Math.max(28, y - 5)} textAnchor="end" fill="var(--mantine-color-brand-8)" fontSize="20" fontWeight="900">
+                          {tick}x
+                        </text>
+                      </g>
+                    );
+                  })}
+                  <polyline
+                    points={densityLinePoints}
+                    fill="none"
+                    stroke="var(--mantine-color-brand-6)"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  {screeningDensityRows.map((item) => {
+                    const x = ((item.index + 0.5) / filmCountAvailableRows.length) * 1000;
+                    const y = 18 + (1 - item.ratio / maxScreeningsPerFilm) * 170;
+                    return (
+                      <circle
+                        key={item.row.year}
+                        cx={x}
+                        cy={y}
+                        r="5"
+                        fill="var(--mantine-color-background-1)"
+                        stroke="var(--mantine-color-brand-6)"
+                        strokeWidth="4"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    );
+                  })}
+                </svg>
+              </Box>
               {filmCountAvailableRows.map((row) => {
                 const filmsHeight = Math.max(10, Math.round(((row.totalFilms ?? 0) / maxFilms) * 190));
                 const screeningsHeight = row.screenings ? Math.max(10, Math.round((row.screenings / maxScreenings) * 190)) : 0;
@@ -732,7 +968,7 @@ function FilmScaleBlock() {
                 return (
                   <Tooltip key={row.year} label={tooltip} multiline maw={340} withArrow>
                     <Stack gap={4} align="center" justify="end" title={tooltip} style={{ cursor: 'help' }}>
-                      <Box h={198} w="100%" style={{ display: 'flex', alignItems: 'end', justifyContent: 'center', gap: 3 }}>
+                      <Box h={198} w="100%" style={{ display: 'flex', alignItems: 'end', justifyContent: 'center', gap: 3, position: 'relative', zIndex: 1 }}>
                         <Box
                           aria-label={`${row.year}: ${row.totalFilms} filmů`}
                           style={{
@@ -764,13 +1000,13 @@ function FilmScaleBlock() {
             </Box>
           </Box>
           <Text mt="md" size="sm" c="dimmed">
-            Čtení grafu: zelené sloupce po roce 2003 klesají, žluté projekce ale neklesají stejným tempem. V praxi to znamená, že Vary se po vrcholu nerozpadly na menší festival; spíš se posunuly od obřího katalogu k užšímu výběru, kterému dávají víc projekčního prostoru.
+            Čtení grafu: tyrkysové sloupce ukazují počet filmů, oranžové počet projekcí a červená linka poměr projekcí na jeden film. Po roce 2003 klesá šířka katalogu, ale hustota projekcí neklesá stejným tempem. To samo o sobě není důkaz poklesu prestiže festivalu.
           </Text>
           <Text mt="xs" size="sm">
-            Pro publikum je to většinou dobrá zpráva: vybraný film se častěji nepromítne jen jednou nebo dvakrát, takže je větší šance se na něj dostat. Z kritického pohledu je to ambivalentní. Méně titulů může znamenat silnější kurátorský výběr, ale také otázku, zda nezmizel prostor pro riziko, objev a menší kinematografie.
+            Přesnější interpretace je střídmější: Vary se posunuly od obřího katalogu k užšímu výběru, kterému dávají víc projekčního prostoru. Pro publikum to může znamenat lepší dostupnost programu, protože vybraný film se častěji nepromítne jen jednou nebo dvakrát.
           </Text>
           <Text mt="xs" size="sm">
-            Proto tento graf nečteme jako jednoduché „dobře“ nebo „špatně“. Ukazuje změnu festivalové logiky: méně titulů, ale intenzivnější práce s každým z nich.
+            Prestiž proto neměříme samotným počtem titulů. Korektnější bude sledovat také premiérový status, soutěžní sekce, hosty, účast filmového průmyslu, kritickou odezvu a další cestu filmů po festivalu. Teprve tyto vrstvy ukážou, zda menší katalog znamená silnější kurátorský výběr, nebo zúžení prostoru pro objev a menší kinematografie.
           </Text>
         </Paper>
 
