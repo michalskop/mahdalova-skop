@@ -18,6 +18,7 @@ import {
 } from '../stats';
 import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from '../honors';
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
+import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
 
 type PageProps = {
   params: { slug: string };
@@ -186,6 +187,144 @@ function HonoraryGenderBlock() {
   );
 }
 
+const regionColors: Record<string, string> = {
+  Europe: '#3f9f8f',
+  'North America': '#547ca8',
+  'Latin America': '#c95b7a',
+  Asia: '#d7a84a',
+  'Middle East': '#9a78b8',
+  Africa: '#b86f4c',
+  Oceania: '#6c8a5b',
+};
+
+function projectCountry(lon: number, lat: number) {
+  return {
+    x: ((lon + 180) / 360) * 100,
+    y: ((85 - lat) / 170) * 100,
+  };
+}
+
+function CountryBubbleMap() {
+  return (
+    <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
+      <Group justify="space-between" align="end" mb="md">
+        <Stack gap={2}>
+          <Badge w="fit-content" color="teal" variant="light">Mapa 2026</Badge>
+          <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Odkud přijíždějí filmy v letošním katalogu</Title>
+          <Text c="dimmed">Bubliny ukazují produkční země v katalogu KVIFF 2026. Koprodukce se počítají jako výskyt u každé uvedené země.</Text>
+        </Stack>
+        <Text fw={900} ff="monospace">{countryPresence2026.length} zemí · {countryPresenceTotal} výskytů</Text>
+      </Group>
+
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
+        <Box>
+          <Box
+            style={{
+              position: 'relative',
+              minHeight: 420,
+              borderRadius: 8,
+              overflow: 'hidden',
+              border: '1px solid #d8cbbb',
+              background:
+                'linear-gradient(180deg, #eef5f3 0%, #f8f4e9 100%)',
+            }}
+          >
+            {['North America', 'Europe', 'Asia', 'Latin America', 'Africa', 'Oceania'].map((label) => {
+              const positions: Record<string, { left: string; top: string }> = {
+                'North America': { left: '17%', top: '30%' },
+                Europe: { left: '51%', top: '28%' },
+                Asia: { left: '68%', top: '36%' },
+                'Latin America': { left: '29%', top: '70%' },
+                Africa: { left: '52%', top: '58%' },
+                Oceania: { left: '78%', top: '76%' },
+              };
+              return (
+                <Text
+                  key={label}
+                  size="xs"
+                  fw={900}
+                  c="#b7a98f"
+                  style={{ position: 'absolute', ...positions[label], textTransform: 'uppercase', letterSpacing: 0 }}
+                >
+                  {label}
+                </Text>
+              );
+            })}
+
+            {countryPresence2026.map((row) => {
+              const point = projectCountry(row.lon, row.lat);
+              const size = 8 + Math.sqrt(row.count / countryPresenceMax) * 34;
+              const color = regionColors[row.region];
+              return (
+                <Tooltip
+                  key={row.country}
+                  label={`${row.country}: ${row.count} výskytů v katalogu 2026 · ${row.region}`}
+                  multiline
+                  maw={260}
+                  withArrow
+                >
+                  <Box
+                    component="span"
+                    role="img"
+                    aria-label={`${row.country}: ${row.count} výskytů v katalogu 2026`}
+                    title={`${row.country}: ${row.count} výskytů v katalogu 2026`}
+                    style={{
+                      position: 'absolute',
+                      left: `${point.x}%`,
+                      top: `${point.y}%`,
+                      width: size,
+                      height: size,
+                      marginLeft: -size / 2,
+                      marginTop: -size / 2,
+                      borderRadius: 999,
+                      background: color,
+                      border: '2px solid #fffdf8',
+                      boxShadow: '0 2px 12px rgba(17, 16, 14, 0.22)',
+                      opacity: 0.88,
+                      cursor: 'help',
+                    }}
+                  />
+                </Tooltip>
+              );
+            })}
+          </Box>
+          <Text mt="sm" size="sm" c="dimmed">
+            Pozor: toto je mapa výskytů zemí v katalogu, ne mapa unikátních filmů. U koprodukcí se jeden film započítá více zemím.
+          </Text>
+        </Box>
+
+        <Stack gap="md">
+          <Paper p="md" radius={8} withBorder bg="#11100e" c="#fffaf0">
+            <Title order={3} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Co z mapy číst</Title>
+            <Text c="#f4ead8">
+              Letošní katalog je silně evropský, ale ne jen evropský. Po Francii, USA, Česku, Německu a Británii následuje široká vrstva koprodukčních zemí.
+            </Text>
+          </Paper>
+          <Stack gap={6}>
+            {countryPresenceTop.map((row) => (
+              <Group key={row.country} gap="sm" wrap="nowrap">
+                <Box w={10} h={10} bg={regionColors[row.region]} style={{ borderRadius: 999, flex: '0 0 auto' }} />
+                <Text size="sm" fw={800} style={{ flex: 1 }}>{row.country}</Text>
+                <Text size="sm" ff="monospace" fw={900}>{row.count}</Text>
+              </Group>
+            ))}
+          </Stack>
+          <Divider />
+          <Stack gap={6}>
+            {countryRegionTotals.map((row) => (
+              <Group key={row.region} gap="sm" wrap="nowrap">
+                <Box w={10} h={10} bg={regionColors[row.region]} style={{ borderRadius: 999, flex: '0 0 auto' }} />
+                <Text size="sm" style={{ flex: 1 }}>{row.region}</Text>
+                <Text size="sm" ff="monospace" fw={900}>{row.count}</Text>
+              </Group>
+            ))}
+          </Stack>
+        </Stack>
+      </SimpleGrid>
+    </Paper>
+  );
+}
+
 function FilmScaleBlock() {
   const maxFilms = peakFilmYear.totalFilms ?? 1;
   const maxScreenings = Math.max(...filmCountAvailableRows.map((row) => row.screenings ?? 0));
@@ -194,6 +333,8 @@ function FilmScaleBlock() {
   return (
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+        <CountryBubbleMap />
+
         <Paper p="lg" radius={8} withBorder bg="#fffdf8">
           <Badge w="fit-content" color="teal" variant="light" mb="sm">Hotová časová osa</Badge>
           <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Program se po maximu zmenšil, ale zhoustl</Title>
