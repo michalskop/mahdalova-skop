@@ -59,13 +59,13 @@ const TOOLTIP_CSS = `
 `;
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
-  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 11, titleFontSize: 11, labelColor: '#333333', titleColor: '#333333' },
+  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 10.5, titleFontSize: 10.5, labelColor: '#333333', titleColor: '#333333' },
   legend: {
     labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 12, titleFontSize: 12, labelColor: '#333333',
     orient: 'top', symbolType: LEGEND_SYMBOL, symbolSize: 280, symbolStrokeWidth: 0,
     layout: { top: { anchor: 'middle' } },
   },
-  text: { font: CHART_FONT, fontSize: 11 },
+  text: { font: CHART_FONT, fontSize: 12 },
   header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
 };
 
@@ -111,6 +111,10 @@ export interface VegaChartProps {
 
 function isConcatSpec(spec: Record<string, unknown>) {
   return 'vconcat' in spec || 'hconcat' in spec || 'concat' in spec;
+}
+
+function shouldUseStackedBrand(title?: string, subtitle?: string) {
+  return (title?.length ?? 0) > 58 || (subtitle?.length ?? 0) > 92;
 }
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
@@ -219,6 +223,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
 
   const isConcat = spec ? isConcatSpec(spec) : false;
   const totalWidth = spec?._total_width as number | undefined;
+  const stackedBrand = shouldUseStackedBrand(meta.title, meta.subtitle);
 
   // Always render the same 3-part structure (header · chart · source) so React
   // never needs to insert elements before containerRef, avoiding reconciliation
@@ -227,43 +232,56 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
     <div style={{
       background: '#f8f6f0',
       borderRadius: 4,
-      padding: '20px 16px 14px',
+      padding: '18px 16px 14px',
       margin: '2em 0',
     }}>
       <style>{TOOLTIP_CSS}</style>
       {/* Header – always present; content appears once meta loads.
           Titulek jde přes celou šířku karty (zalamuje se až na její šířce);
           podpis DataTimes.cz sedí na švu hlavičky a grafu vpravo, ne vedle titulku. */}
-      <div>
-        {meta.title && (
-          <div style={{
-            fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-            fontSize: 16,
-            fontWeight: 700,
-            lineHeight: 1.2,
-            color: '#1a1a1a',
-            marginBottom: meta.subtitle ? 4 : 0,
-          }}>
-            {meta.title}
-          </div>
-        )}
-        {meta.subtitle && (
-          <div style={{
-            fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-            fontSize: 14,
-            lineHeight: 1.3,
-            color: '#333333',
-          }}>
-            {meta.subtitle}
-          </div>
-        )}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', margin: (meta.title || meta.subtitle) ? '4px 0 2px' : 0 }}>
-          {(meta.title || meta.subtitle) && <ChartSignature size={30} />}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: (meta.title || meta.subtitle) ? 'minmax(0, 1fr) auto' : '1fr',
+        alignItems: 'center',
+        columnGap: 18,
+        marginBottom: 8,
+      }}>
+        <div style={{ minWidth: 0 }}>
+          {meta.title && (
+            <div style={{
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+              fontSize: 22,
+              fontWeight: 700,
+              lineHeight: 1.16,
+              color: '#1a1a1a',
+              marginBottom: meta.subtitle ? 8 : 0,
+            }}>
+              {meta.title}
+            </div>
+          )}
+          {meta.subtitle && (
+            <div style={{
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+              fontSize: 17,
+              lineHeight: 1.3,
+              color: '#333333',
+            }}>
+              {meta.subtitle}
+            </div>
+          )}
         </div>
+        {(meta.title || meta.subtitle) && (
+          <ChartSignature
+            size={30}
+            layout={stackedBrand ? 'stacked' : 'inline'}
+            textWeight={400}
+            style={{ lineHeight: 1, alignSelf: 'center' }}
+          />
+        )}
       </div>
 
       {/* Chart canvas */}
-      <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
+      <div style={{ overflowX: isConcat ? 'auto' : 'hidden', marginTop: 2 }}>
         <div
           ref={containerRef}
           style={{
@@ -277,7 +295,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       {meta.source && (
         <div style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 12,
+          fontSize: 16,
           color: '#333333',
           marginTop: 10,
           lineHeight: 1.45,

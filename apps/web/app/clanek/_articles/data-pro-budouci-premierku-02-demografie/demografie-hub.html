@@ -760,22 +760,41 @@
 /* Sjednocení s VegaChart kartami: článkové styly přebíjejí p-selektory,
    proto mají třídy grafu vyšší prioritu. Titulek 16 px, podtitulek 14 px,
    patička 12 px – shodné se všemi ostatními grafy a mapami. */
-.dt-hub .dt-visual-note,
-.dt-hub .dt-visual-source,
-.dt-hub .dt-visual-authors {
+.dt-hub .dt-visual .dt-visual-note,
+.dt-hub .dt-visual .dt-visual-source,
+.dt-hub .dt-visual .dt-visual-authors {
   font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
-  font-size: 12px !important;
+  font-size: 16px !important;
   line-height: 1.5 !important;
   color: #333333 !important;
 }
-.dt-hub .dt-visual-note {
-  font-size: 14px !important;
+.dt-hub .dt-visual .dt-visual-note {
+  font-size: 17px !important;
+  max-width: calc(100% - 190px);
 }
-.dt-hub .dt-visual-title {
+.dt-hub .dt-visual .dt-visual-title {
   font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.25 !important;
+  font-size: 22px !important;
+  line-height: 1.16 !important;
   color: #1a1a1a !important;
+}
+.dt-hub .dt-visual .dt-visual-brand {
+  position: absolute;
+  top: 18px;
+  right: calc(18px + 5%);
+  margin: 0;
+}
+.dt-hub .dt-visual .dt-visual-brand span {
+  font-weight: 400;
+}
+.dt-hub .dt-visual .dt-visual-meta {
+  justify-content: flex-start;
+  gap: 2px;
+}
+.dt-hub .dt-visual .dt-visual-source,
+.dt-hub .dt-visual .dt-visual-authors {
+  margin-left: 0 !important;
+  text-align: left !important;
 }
 .dt-hub .dt-support .dt-support-text {
   color: #fdfbf7 !important;
@@ -783,6 +802,59 @@
 .dt-hub .dt-support .dt-support-name,
 .dt-hub .dt-support .dt-support-cta {
   color: #ffffff !important;
+}
+.dt-hub .dt-fertility-visual {
+  padding: 14px 18px 14px;
+}
+.dt-hub .dt-fertility-visual .dt-visual-title {
+  font-size: 22px !important;
+  line-height: 1.16 !important;
+  margin-bottom: 8px;
+}
+.dt-hub .dt-fertility-visual .dt-visual-note {
+  font-size: 17px !important;
+  margin-bottom: 6px;
+  max-width: calc(100% - 190px);
+}
+.dt-hub .dt-fertility-visual .dt-visual-brand {
+  position: absolute;
+  top: 20px;
+  right: calc(18px + 5.2%);
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin: 0;
+}
+.dt-hub .dt-fertility-visual .dt-visual-brand span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+.dt-hub .dt-fertility-visual .dt-visual-svg {
+  margin-top: 2px;
+}
+.dt-hub .dt-fertility-visual .dt-visual-meta {
+  justify-content: flex-start;
+  gap: 2px;
+  margin-top: 8px;
+}
+.dt-hub .dt-fertility-visual .dt-visual-source,
+.dt-hub .dt-fertility-visual .dt-visual-authors {
+  font-size: 16px !important;
+  margin-left: 0 !important;
+  text-align: left !important;
+}
+@media (max-width: 640px) {
+  .dt-hub .dt-fertility-visual .dt-visual-title {
+    font-size: 20px !important;
+  }
+  .dt-hub .dt-fertility-visual .dt-visual-note {
+    max-width: none;
+  }
+  .dt-hub .dt-fertility-visual .dt-visual-brand {
+    position: static;
+    margin: 2px 0 6px auto;
+  }
 }
 </style>
 
@@ -842,7 +914,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
     </div>
   </div>
 
-  <div class="dt-visual">
+  <div class="dt-visual dt-fertility-visual">
     <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
     <p class="dt-visual-note">Úhrnná plodnost v Česku: počet dětí na jednu ženu ve věku 15–49 let, 1990–2025</p>
 
@@ -866,65 +938,67 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
       <span>DataTimes.cz</span>
     </a>
     <svg class="dt-visual-svg" viewBox="0 0 660 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku v letech 1990 až 2025">
+      <g class="dt-fertility-plot" transform="translate(6 7)">
       <g stroke="rgba(0,0,0,0.08)" stroke-width="1">
-        <line x1="60" y1="30" x2="620" y2="30"/>
-        <line x1="60" y1="87.5" x2="620" y2="87.5"/>
-        <line x1="60" y1="145" x2="620" y2="145"/>
-        <line x1="60" y1="202.5" x2="620" y2="202.5"/>
-        <line x1="60" y1="260" x2="620" y2="260"/>
+        <line x1="44" y1="22" x2="626" y2="22"/>
+        <line x1="44" y1="81" x2="626" y2="81"/>
+        <line x1="44" y1="140" x2="626" y2="140"/>
+        <line x1="44" y1="199" x2="626" y2="199"/>
+        <line x1="44" y1="258" x2="626" y2="258"/>
       </g>
-      <g font-size="13" fill="#333333" text-anchor="end">
-        <text x="52" y="33">2,2</text>
-        <text x="52" y="90.5">1,9</text>
-        <text x="52" y="148">1,6</text>
-        <text x="52" y="205.5">1,3</text>
-        <text x="52" y="263">1,0</text>
+      <g font-size="10.5" fill="#333333" text-anchor="end">
+        <text x="24" y="25">2,2</text>
+        <text x="24" y="84">1,9</text>
+        <text x="24" y="143">1,6</text>
+        <text x="24" y="202">1,3</text>
+        <text x="24" y="261">1,0</text>
       </g>
-      <line x1="60" y1="49.5" x2="620" y2="49.5" stroke="#0e8aab" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <text x="620" y="42" font-size="11" fill="#0e8aab" text-anchor="end">hranice 2,10</text>
-      <polyline points="60,89.4 140,206.34 220,233.17 300,206.34 380,166.18 460,150.85 540,123.97" fill="none" stroke="#2f325c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="540,123.97 620,206.34" fill="none" stroke="#de1743" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="44" y1="41.67" x2="626" y2="41.67" stroke="#0e8aab" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="626" y="34" font-size="10" fill="#0e8aab" text-anchor="end">hranice 2,10</text>
+      <polyline points="54,83 136,202.93 217,230.47 299,202.93 381,161.65 463,145.91 544,118.43" fill="none" stroke="#2f325c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="544,118.43 626,202.93" fill="none" stroke="#de1743" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
       <g fill="#2f325c">
-        <g class="dt-chart-hit dt-tip-fert-1990" tabindex="0"><circle class="dt-chart-point" cx="60" cy="89.4" r="5"/></g>
-        <g class="dt-chart-hit dt-tip-fert-1995" tabindex="0"><circle class="dt-chart-point" cx="140" cy="206.34" r="5"/></g>
-        <g class="dt-chart-hit dt-tip-fert-2000" tabindex="0"><circle class="dt-chart-point" cx="220" cy="233.17" r="5"/></g>
-        <g class="dt-chart-hit dt-tip-fert-2005" tabindex="0"><circle class="dt-chart-point" cx="300" cy="206.34" r="5"/></g>
-        <g class="dt-chart-hit dt-tip-fert-2010" tabindex="0"><circle class="dt-chart-point" cx="380" cy="166.18" r="5"/></g>
-        <g class="dt-chart-hit dt-tip-fert-2015" tabindex="0"><circle class="dt-chart-point" cx="460" cy="150.85" r="5"/></g>
-        <g class="dt-chart-hit dt-tip-fert-2020" tabindex="0"><circle class="dt-chart-point" cx="540" cy="123.97" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-1990" tabindex="0"><circle class="dt-chart-point" cx="54" cy="83" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-1995" tabindex="0"><circle class="dt-chart-point" cx="136" cy="202.93" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-2000" tabindex="0"><circle class="dt-chart-point" cx="217" cy="230.47" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-2005" tabindex="0"><circle class="dt-chart-point" cx="299" cy="202.93" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-2010" tabindex="0"><circle class="dt-chart-point" cx="381" cy="161.65" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-2015" tabindex="0"><circle class="dt-chart-point" cx="463" cy="145.91" r="5"/></g>
+        <g class="dt-chart-hit dt-tip-fert-2020" tabindex="0"><circle class="dt-chart-point" cx="544" cy="118.43" r="5"/></g>
       </g>
       <g fill="#de1743">
-        <g class="dt-chart-hit dt-tip-fert-2025" tabindex="0"><circle class="dt-chart-point" cx="620" cy="206.34" r="7"/></g>
+        <g class="dt-chart-hit dt-tip-fert-2025" tabindex="0"><circle class="dt-chart-point" cx="626" cy="202.93" r="7"/></g>
       </g>
-      <g font-size="13" font-weight="700" fill="#2f325c" text-anchor="middle">
-        <text x="60" y="67">1,89</text>
-        <text x="140" y="184">1,28</text>
-        <text x="220" y="211">1,14</text>
-        <text x="300" y="184">1,28</text>
-        <text x="380" y="144">1,49</text>
-        <text x="460" y="129">1,57</text>
-        <text x="540" y="102">1,71</text>
-        <text x="620" y="184" fill="#de1743">1,28</text>
+      <g font-size="12" font-weight="700" fill="#2f325c" text-anchor="middle">
+        <text x="54" y="61">1,89</text>
+        <text x="136" y="181">1,28</text>
+        <text x="217" y="208">1,14</text>
+        <text x="299" y="181">1,28</text>
+        <text x="381" y="139">1,49</text>
+        <text x="463" y="124">1,57</text>
+        <text x="544" y="96">1,71</text>
+        <text x="626" y="181" fill="#de1743">1,28</text>
       </g>
-      <g font-size="13" fill="#333333" text-anchor="middle">
-        <text x="60" y="285">1990</text>
-        <text x="140" y="285">1995</text>
-        <text x="220" y="285">2000</text>
-        <text x="300" y="285">2005</text>
-        <text x="380" y="285">2010</text>
-        <text x="460" y="285">2015</text>
-        <text x="540" y="285">2020</text>
-        <text x="620" y="285">2025</text>
+      <g font-size="10.5" fill="#333333" text-anchor="middle">
+        <text x="54" y="285">1990</text>
+        <text x="136" y="285">1995</text>
+        <text x="217" y="285">2000</text>
+        <text x="299" y="285">2005</text>
+        <text x="381" y="285">2010</text>
+        <text x="463" y="285">2015</text>
+        <text x="544" y="285">2020</text>
+        <text x="626" y="285">2025</text>
       </g>
       <g class="dt-chart-tooltip-layer">
-        <g class="dt-chart-tooltip dt-tooltip-fert-1990" transform="translate(74 62)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 1990 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,89 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: asi 19 dětí na 10 žen.</tspan></text></g>
-        <g class="dt-chart-tooltip dt-tooltip-fert-1995" transform="translate(154 118)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 1995 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,28 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: zhruba 5 dětí na 4 ženy.</tspan></text></g>
-        <g class="dt-chart-tooltip dt-tooltip-fert-2000" transform="translate(234 132)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2000 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,14 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: asi 8 dětí na 7 žen.</tspan></text></g>
-        <g class="dt-chart-tooltip dt-tooltip-fert-2005" transform="translate(314 118)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2005 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,28 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: zhruba 5 dětí na 4 ženy.</tspan></text></g>
-        <g class="dt-chart-tooltip dt-tooltip-fert-2010" transform="translate(314 72)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2010 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,49 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: skoro 3 děti na 2 ženy.</tspan></text></g>
+        <g class="dt-chart-tooltip dt-tooltip-fert-1990" transform="translate(104 62)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 1990 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,89 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: asi 19 dětí na 10 žen.</tspan></text></g>
+        <g class="dt-chart-tooltip dt-tooltip-fert-1995" transform="translate(180 118)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 1995 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,28 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: zhruba 5 dětí na 4 ženy.</tspan></text></g>
+        <g class="dt-chart-tooltip dt-tooltip-fert-2000" transform="translate(256 132)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2000 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,14 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: asi 8 dětí na 7 žen.</tspan></text></g>
+        <g class="dt-chart-tooltip dt-tooltip-fert-2005" transform="translate(332 118)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2005 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,28 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: zhruba 5 dětí na 4 ženy.</tspan></text></g>
+        <g class="dt-chart-tooltip dt-tooltip-fert-2010" transform="translate(344 72)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2010 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,49 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: skoro 3 děti na 2 ženy.</tspan></text></g>
         <g class="dt-chart-tooltip dt-tooltip-fert-2015" transform="translate(330 58)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2015 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,57 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: asi 11 dětí na 7 žen.</tspan></text></g>
         <g class="dt-chart-tooltip dt-tooltip-fert-2020" transform="translate(330 36)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2020 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,71 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: asi 12 dětí na 7 žen.</tspan></text></g>
         <g class="dt-chart-tooltip dt-tooltip-fert-2025" transform="translate(330 118)"><rect width="276" height="76"/><text x="12" y="19"><tspan>V roce 2025 připadalo na ženu</tspan><tspan x="12" dy="16">ve věku 15–49 let statisticky </tspan><tspan class="dt-tooltip-red">1,28 dítěte</tspan><tspan>.</tspan><tspan x="12" dy="16">Pro představu: zhruba 5 dětí na 4 ženy.</tspan></text></g>
+      </g>
       </g>
     </svg>
     <div class="dt-visual-meta">

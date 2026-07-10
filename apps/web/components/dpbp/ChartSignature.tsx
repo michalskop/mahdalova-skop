@@ -3,18 +3,36 @@ import Link from 'next/link';
 interface ChartSignatureProps {
   size?: number;
   color?: string;
+  layout?: 'inline' | 'stacked';
+  textWeight?: number;
   style?: React.CSSProperties;
 }
 
-export default function ChartSignature({ size = 22, color = '#101432', style }: ChartSignatureProps) {
+export default function ChartSignature({
+  size = 22,
+  color = '#101432',
+  layout = 'inline',
+  textWeight = 400,
+  style,
+}: ChartSignatureProps) {
+  const stacked = layout === 'stacked';
+
   return (
     <Link
       href="https://datatimes.cz"
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none',
-        fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: size * 0.52, fontWeight: 700,
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: stacked ? 'column' : 'row',
+        gap: stacked ? 3 : 6,
+        textDecoration: 'none',
+        textAlign: 'center',
+        fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+        fontSize: size * (stacked ? 0.47 : 0.52),
+        fontWeight: textWeight,
         color, lineHeight: 1, ...style,
       }}
     >

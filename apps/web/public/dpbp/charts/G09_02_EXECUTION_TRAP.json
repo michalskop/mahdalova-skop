@@ -1,8 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "O 20 tisíc vyšší hrubá mzda přinese dlužníkovi jen 1 600 korun",
-  "subtitle": "Modelový příklad: co z výplaty zůstane člověku v exekuci (Kč měsíčně)"
+  "text": "Modelový příklad: co z výplaty zůstane člověku v exekuci",
+  "subtitle": "O 20 tisíc vyšší hrubá mzda přinese dlužníkovi jen 1 600 korun"
  },
  "width": 450,
  "height": 300,

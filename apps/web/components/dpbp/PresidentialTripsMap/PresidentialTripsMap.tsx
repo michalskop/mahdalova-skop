@@ -161,9 +161,6 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
             })}
           </g>
         </svg>
-        <div style={{ position: 'absolute', left: '50%', bottom: 12, transform: 'translateX(-50%)' }}>
-          <ChartSignature size={18} />
-        </div>
       </div>
     </div>
   );
@@ -222,21 +219,32 @@ export default function PresidentialTripsMap() {
   const label = mandateLabel(value);
 
   return (
-    <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
-      <div
-        style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, fontWeight: 700,
-          color: '#101432', lineHeight: 1.25, marginBottom: 2,
-        }}
-      >
-        Zahraniční cesty prezidentů Zemana a Pavla
-      </div>
-      <div
-        style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 13, color: '#666', marginBottom: 14,
-        }}
-      >
-        Podle délky mandátu ● Přehrajte stisknutím play
+    <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px 14px', borderRadius: 4 }}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'minmax(0, 1fr) auto',
+        alignItems: 'center',
+        columnGap: 18,
+        marginBottom: 14,
+      }}>
+        <div style={{ minWidth: 0 }}>
+          <div
+            style={{
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700,
+              color: '#101432', lineHeight: 1.16, marginBottom: 8,
+            }}
+          >
+            Zahraniční cesty prezidentů Zemana a Pavla
+          </div>
+          <div
+            style={{
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 17, color: '#333333', lineHeight: 1.3,
+            }}
+          >
+            Podle délky mandátu ● Přehrajte stisknutím play
+          </div>
+        </div>
+        <ChartSignature size={30} layout="stacked" textWeight={400} style={{ lineHeight: 1, alignSelf: 'center' }} />
       </div>
 
       <div ref={containerRef} style={{ position: 'relative' }}>
@@ -309,10 +317,10 @@ export default function PresidentialTripsMap() {
           {label}
         </span>
       </div>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 6 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 6, lineHeight: 1.45 }}>
         Srovnání podle počtu dnů od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
       </p>
-      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
         <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
         <div>• data: Kancelář prezidenta republiky</div>
       </div>

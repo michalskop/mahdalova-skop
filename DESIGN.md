@@ -113,7 +113,9 @@ font-family: 'Work Sans', system-ui, sans-serif;
 
 ### DPBP Chart Typography
 
-Data Pro Budoucí Premiérku charts use **Roboto Condensed** as the working data font. Chart titles are `16px` bold, subtitles are `14px`, footers are `12px`, axes/legends/value labels usually sit at `10–12px`, and the smallest dense helper labels may go down to `8px`. Footer metadata is split into two hard lines: authors on the first line, data sources on the second.
+Data Pro Budoucí Premiérku charts use **Roboto Condensed** as the working data font. Chart frames use a shared header/body/footer system: title `22px` bold, subtitle `17px`, footer metadata `16px`, value labels around `12px`, and secondary axes around `10.5–11px`. Dense helper labels may go smaller only when needed. Footer metadata is always split into two hard lines: authors on the first line, data sources on the second, both left aligned.
+
+The DataTimes signature belongs to the chart header and is included in the chart area, not pushed into the card margin. Use the inline signature when title/subtitle copy is short; use the stacked two-line signature when a title wraps or the header needs visual balance. The signature text defaults to regular weight; return to bold only when a specific composition needs the extra weight.
 
 ## 4. Component Stylings
 

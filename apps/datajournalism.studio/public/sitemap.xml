@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.datajournalism.studio/</loc>
-    <lastmod>2026-05-31T12:37:38.194Z</lastmod>
+    <lastmod>2026-07-10T13:26:27.717Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.datajournalism.studio/blog</loc>
-    <lastmod>2026-05-31T12:37:38.195Z</lastmod>
+    <lastmod>2026-07-10T13:26:27.718Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.datajournalism.studio/work</loc>
-    <lastmod>2026-05-31T12:37:38.195Z</lastmod>
+    <lastmod>2026-07-10T13:26:27.718Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.datajournalism.studio/about</loc>
-    <lastmod>2026-05-31T12:37:38.195Z</lastmod>
+    <lastmod>2026-07-10T13:26:27.718Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -73,13 +73,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datajournalism.studio/a/2024-11-27-Rakousko-kartogramy</loc>
+    <loc>https://www.datajournalism.studio/a/2024-11-27-austria-cartogram</loc>
     <lastmod>2024-11-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datajournalism.studio/a/2024-11-27-austria-cartogram</loc>
+    <loc>https://www.datajournalism.studio/a/2024-11-27-Rakousko-kartogramy</loc>
     <lastmod>2024-11-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

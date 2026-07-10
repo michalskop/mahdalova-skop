@@ -52,7 +52,7 @@ Interactive maps and visualizations of election results.
 ### Data Visualization
 - https://www.datajournalism.studio/a/2025-02-28-elections-germany
 - https://www.datajournalism.studio/a/2025-02-21-election-germany-cartogram
-- https://www.datajournalism.studio/a/2024-11-27-Rakousko-kartogramy
+- https://www.datajournalism.studio/a/2024-11-27-austria-cartogram
 
 ### Recent Articles
 - https://www.datajournalism.studio/a/analysis-2026-04-02-who-profits-from-expensive-gasoline

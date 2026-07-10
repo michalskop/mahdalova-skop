@@ -163,16 +163,21 @@ export default function MandateCalendar() {
   const pavelCount = useMemo(() => TRIPS.pavel.filter(t => t.di <= counter).length, [counter]);
 
   return (
-    <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
-      {/* Titulek přes celou šířku, podpis na švu hlavičky vpravo (viz DESIGN.md §9) */}
+    <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px 14px', borderRadius: 4 }}>
       <div style={{
-        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, fontWeight: 700,
-        color: '#101432', lineHeight: 1.2,
+        display: 'grid',
+        gridTemplateColumns: 'minmax(0, 1fr) auto',
+        alignItems: 'center',
+        columnGap: 18,
+        marginBottom: 8,
       }}>
-        Cesty prezidentů: kostička za každou cestu
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '4px 0 6px' }}>
-        <ChartSignature size={30} style={{ lineHeight: 1 }} />
+        <div style={{
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700,
+          color: '#101432', lineHeight: 1.16,
+        }}>
+          Cesty prezidentů: kostička za každou cestu
+        </div>
+        <ChartSignature size={30} layout="inline" textWeight={400} style={{ lineHeight: 1, alignSelf: 'center' }} />
       </div>
       <div style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 14, flexWrap: 'wrap',
@@ -279,12 +284,12 @@ export default function MandateCalendar() {
           {counter}/{maxCounter}
         </span>
       </div>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 6 }}>
+      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 6, lineHeight: 1.45 }}>
         Každá kostička je jedna zahraniční cesta, kostičky se řadí chronologicky po rocích mandátu – délka řady tak rovnou ukazuje počet cest.
         Oba prezidenty srovnáváme za stejnou fázi mandátu: prvních {maxCounter} dní od inaugurace (u Zemana od března 2013, u Pavla od března 2023).
         Zemanových {TRIPS.zeman.length - TRIPS.zeman.filter(t => t.di <= maxCounter).length} cest z pozdějších let mandátu v grafu není. Najetím nebo klepnutím na kostičku se zobrazí podrobnosti cesty.
       </p>
-      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
         <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
         <div>• data: Kancelář prezidenta republiky</div>
       </div>
