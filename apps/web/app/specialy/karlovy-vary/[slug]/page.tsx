@@ -16,7 +16,7 @@ import {
   spendingRatio2026,
   ticketShare2026,
 } from '../stats';
-import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from '../honors';
+import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honorarySelectionNote, honoraryTotal, honoraryWomenShare, pre1989AwardsNotes } from '../honors';
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
@@ -91,9 +91,9 @@ function HonoraryDotTimeline() {
                   {recipients.map((recipient) => (
                     <Tooltip
                       key={`${recipient.year}-${recipient.name}`}
-                      label={`${recipient.year}${recipient.status === 'announced' ? ' oznámeno' : ''}: ${recipient.name} · ${recipient.country} · ${recipient.role}`}
+                      label={`${recipient.year}${recipient.status === 'announced' ? ' oznámeno' : ''}: ${recipient.name} · ${recipient.country} · ${recipient.role}. Ocenění: ${recipient.awardCz}. Za co: ${recipient.reason}`}
                       multiline
-                      maw={280}
+                      maw={420}
                       withArrow
                     >
                       <Box
@@ -101,7 +101,7 @@ function HonoraryDotTimeline() {
                         role="img"
                         aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}, ${recipient.role}`}
                         tabIndex={0}
-                        title={`${recipient.year}: ${recipient.name} · ${recipient.country} · ${recipient.role}`}
+                        title={`${recipient.year}: ${recipient.name} · ${recipient.awardCz}. ${recipient.reason}`}
                         style={{
                           width: recipient.gender === 'woman' ? 18 : 14,
                           height: recipient.gender === 'woman' ? 18 : 14,
@@ -127,6 +127,9 @@ function HonoraryDotTimeline() {
       <Text mt="md" size="sm" c="dimmed">
         Čtení grafu: růžové tečky nejsou rozprostřené rovnoměrně. Největší koncentrace ženských jmen přichází v letech 2009-2012 a znovu až jednotlivě v roce 2019 a oznámeném roce 2026.
       </Text>
+      <Text mt="xs" size="sm">
+        Všechny tečky v tomto grafu jsou jedna konkrétní čestná kategorie: Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Není to cena poroty za soutěžní film, ale festivalové ocenění osobností, které dlouhodobě formovaly světový film.
+      </Text>
     </Paper>
   );
 }
@@ -151,6 +154,9 @@ function HonoraryGenderBlock() {
           <Text mt="md" c="dimmed">
             Gender uvádíme podle veřejně prezentované identity osobností; kde by nebyla jistota, záznam by šel do kategorie unknown. V této první řadě zatím unknown nemáme.
           </Text>
+          <Text mt="sm">
+            Podle oficiálního popisu KVIFF jde o osobnosti, které zanechaly výraznou stopu ve vývoji světové kinematografie. Tuto čestnou řadu proto čteme jako mapu dlouhodobé prestiže, ne jako hodnocení výkonu v jednom roce.
+          </Text>
         </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
@@ -167,6 +173,35 @@ function HonoraryGenderBlock() {
         </Paper>
 
         <HonoraryDotTimeline />
+
+        <Paper p="lg" radius={8} withBorder bg="background.2" style={{ gridColumn: '1 / -1' }}>
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+            <Stack gap="sm">
+              <Badge w="fit-content" color="orange" variant="light">Jak se vybírá</Badge>
+              <Title order={2}>Kdo rozhoduje o čestné prestiži</Title>
+              <Text size="lg">{honorarySelectionNote}</Text>
+              <Text>
+                V grafu proto nemícháme několik typů ocenění dohromady. President's Award, Cena prezidenta za přínos české kinematografii nebo soutěžní ceny poroty budou samostatné vrstvy. Tady sledujeme jen čestný Křišťálový glóbus pro světovou kinematografii.
+              </Text>
+            </Stack>
+            <Stack gap="sm">
+              <Badge w="fit-content" color="grape" variant="light">Před rokem 1989</Badge>
+              <Title order={2}>Dřív to byla jiná logika cen</Title>
+              <Text>
+                Předlistopadový festival neměl stejnou nepřerušenou řadu čestných celebrit. Archiv ukazuje hlavně soutěžní ceny filmům, režii a hereckým výkonům. Proto by bylo metodicky chybné přilepit rok 1948 nebo 1968 do stejného genderového grafu čestných hostů.
+              </Text>
+            </Stack>
+          </SimpleGrid>
+          <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm" mt="lg">
+            {pre1989AwardsNotes.map((note) => (
+              <Paper key={note.period} p="md" radius={8} withBorder bg="background.1">
+                <Text fw={900} ff="monospace">{note.period}</Text>
+                <Text fw={900} mt={4}>{note.title}</Text>
+                <Text size="sm" mt={4}>{note.body}</Text>
+              </Paper>
+            ))}
+          </SimpleGrid>
+        </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">

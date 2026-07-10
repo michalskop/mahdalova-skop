@@ -98,6 +98,7 @@ export const kviffBranches: KviffBranch[] = [
         body: [
           'Oficiální archiv použijeme pro fakta: kdo přijel, kdo dostal cenu a s jakým filmem byl spojován. Kritiku použijeme pro výklad, ne jako náhradu databáze.',
           'První hotová datová řada sleduje Crystal Globe za mimořádný umělecký přínos světu filmu od roku 1998 do oznámených poct 60. ročníku 2026. U každé osobnosti vedeme rok, zemi, profesní roli a gender.',
+          'Tuto řadu držíme odděleně od President’s Award i od předlistopadových soutěžních cen. Před rokem 1989 archiv ukazuje hlavně ceny filmům, režii a hereckým výkonům; moderní čestné oceňování festivalových hostů je jiný typ prestiže.',
         ],
       },
     ],
@@ -118,6 +119,7 @@ export const kviffBranches: KviffBranch[] = [
           'Budeme sledovat režii, scénář, produkci, herecké ceny, poroty, čestná ocenění a vítězné filmy. Důležitá otázka není jen kolik žen se v datech objevuje, ale ve kterých rolích a u jakého typu prestiže.',
           'U čestných cen už máme první publikovatelný graf: Crystal Globe za mimořádný umělecký přínos ukazuje dlouhou mužskou řadu s několika viditelnými ženskými vlnami.',
           'Právě v tom je sdělení: festival může mít výjimečná ženská jména, a přesto může být nejvyšší symbolická prestiž rozdělovaná dlouhodobě nerovnoměrně.',
+          'V tooltipech u teček je nově přesně uvedeno, že jde o Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Nejde o soutěžní cenu za konkrétní film, ale o čestné ocenění dlouhodobé filmové stopy.',
         ],
       },
     ],
