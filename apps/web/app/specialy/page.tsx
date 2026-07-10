@@ -29,6 +29,14 @@ const TILES = [
     coverImage: '/images/specials/data-pro-budouci-premierku.svg',
   },
   {
+    href: '/specialy/karlovy-vary',
+    title: 'Festival Karlovy Vary v datech',
+    bg: '#121212',
+    external: false,
+    logo: 'kviff',
+    coverImage: '/images/specials/karlovy-vary.svg',
+  },
+  {
     href: '/specialy/svobodna-media',
     title: 'Svobodná média',
     bg: '#812840',
