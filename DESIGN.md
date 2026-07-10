@@ -111,6 +111,10 @@ font-family: 'Work Sans', system-ui, sans-serif;
 - **Crimson for structural emphasis**: Crimson Brand (`#de1743`) is the typographic accent – applied to links, active headings, and category labels. Avoid bold + crimson simultaneously; the color alone carries weight.
 - **Set font globally**: Font should be declared at the root/body level and inherited everywhere. Per-component font overrides break typographic consistency.
 
+### DPBP Chart Typography
+
+Data Pro Budoucí Premiérku charts use **Roboto Condensed** as the working data font. Chart titles are `16px` bold, subtitles are `14px`, footers are `12px`, axes/legends/value labels usually sit at `10–12px`, and the smallest dense helper labels may go down to `8px`. Footer metadata is split into two hard lines: authors on the first line, data sources on the second.
+
 ## 4. Component Stylings
 
 ### InfoBox – Journalistic Callout System

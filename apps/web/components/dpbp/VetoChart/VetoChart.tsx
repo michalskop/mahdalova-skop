@@ -19,7 +19,7 @@ type Veto = {
 };
 const VETOES = vetoData as Veto[];
 
-type HoverInfo = { veto: Veto; left: number; top: number } | null;
+type PointInfo = { veto: Veto; left: number; top: number } | null;
 
 const COLORS: Record<Veto['p'], string> = {
   Havel: '#2E8B6E',
@@ -74,7 +74,8 @@ function outcomeText(v: Veto): string {
 
 export default function VetoChart() {
   const [show, setShow] = useState<Record<Veto['p'], boolean>>({ Havel: true, Klaus: true, Zeman: true, Pavel: true });
-  const [hover, setHover] = useState<HoverInfo>(null);
+  const [hover, setHover] = useState<PointInfo>(null);
+  const [detail, setDetail] = useState<PointInfo>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // rozmístění bodů s rozražením kolizí (stejný termín + stejný počet hlasů)
@@ -101,6 +102,16 @@ export default function VetoChart() {
     setHover({ veto, left, top: rect.top - box.top });
   }
 
+  function showDetail(e: React.MouseEvent, veto: Veto) {
+    e.stopPropagation();
+    const rect = (e.currentTarget as SVGElement).getBoundingClientRect();
+    const box = containerRef.current!.getBoundingClientRect();
+    const left = Math.min(Math.max(rect.left - box.left + rect.width / 2, 165), box.width - 165);
+    const top = Math.min(Math.max(rect.top - box.top + 18, 8), 190);
+    setDetail({ veto, left, top });
+    setHover(null);
+  }
+
   const counts = useMemo(() => {
     const c: Record<string, { total: number; over: number }> = {};
     for (const p of PRESIDENTS) c[p] = { total: 0, over: 0 };
@@ -115,7 +126,7 @@ export default function VetoChart() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       {/* Titulek přes celou šířku, podpis na švu hlavičky vpravo (viz DESIGN.md §9) */}
       <div style={{
-        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
+        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, fontWeight: 700,
         color: '#101432', lineHeight: 1.2,
       }}>
         93 vet a jedna hranice: 101 hlasů
@@ -205,22 +216,22 @@ export default function VetoChart() {
                 fillOpacity={filled ? 0.9 : 1}
                 stroke={COLORS[v.p]}
                 strokeWidth={filled ? 0 : 2}
-                style={{ cursor: 'pointer' }}
-                onMouseEnter={e => showTip(e, v)}
-                onMouseLeave={() => setHover(null)}
-                onClick={e => showTip(e, v)}
+              style={{ cursor: 'pointer' }}
+              onMouseEnter={e => showTip(e, v)}
+              onMouseLeave={() => setHover(null)}
+                onClick={e => showDetail(e, v)}
               />
             );
           })}
         </svg>
 
-        {/* Jednotný tooltip: béžové pozadí s mírnou průhledností, Roboto Slab (vzor: graf plodnosti, kap. Demografie) */}
+        {/* Krátký hover tooltip; dlouhé detaily se otevírají kliknutím do panelu. */}
         {hover && (
           <div
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 9px))',
               background: 'rgba(248,246,240,0.95)', color: '#1a1a1a', padding: '8px 11px', borderRadius: 7, fontSize: 12,
-              fontFamily: 'var(--font-roboto-slab), Georgia, serif', width: 260, pointerEvents: 'none', zIndex: 10,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif', width: 230, pointerEvents: 'none', zIndex: 10,
               border: '1px solid #e8e3d2', boxShadow: '0 4px 10px rgba(16,20,50,0.14)', lineHeight: 1.45,
             }}
           >
@@ -231,20 +242,76 @@ export default function VetoChart() {
               {' · '}{hover.veto.n}. veto{' · '}{hover.veto.dl}
             </div>
             <div style={{ color: '#1a1a1a' }}>{hover.veto.law}</div>
-            {hover.veto.why && (
-              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid #e8e3d2', color: '#333333' }}>
-                {hover.veto.why}
-              </div>
-            )}
-            <div style={{ marginTop: 5, color: '#333333' }}>
-              {voteLine(hover.veto) && <div>{voteLine(hover.veto)}</div>}
-              <div>{outcomeText(hover.veto)}</div>
+            <div style={{ marginTop: 5, color: '#de1743', fontWeight: 700 }}>
+              Kliknutím otevřete detail
             </div>
             <div style={{
               position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
               width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
               borderTop: '5px solid rgba(248,246,240,0.97)',
             }} />
+          </div>
+        )}
+
+        {detail && (
+          <div
+            role="dialog"
+            aria-label={`Detail veta: ${detail.veto.p}, ${detail.veto.n}. veto`}
+            style={{
+              position: 'absolute',
+              left: detail.left,
+              top: detail.top,
+              transform: 'translateX(-50%)',
+              width: 'min(330px, calc(100% - 18px))',
+              background: 'rgba(248,246,240,0.95)',
+              color: '#1a1a1a',
+              padding: '12px 14px 13px',
+              borderRadius: 7,
+              fontSize: 12,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+              zIndex: 20,
+              border: '1px solid #e8e3d2',
+              boxShadow: '0 8px 22px rgba(16,20,50,0.18)',
+              lineHeight: 1.45,
+            }}
+          >
+            <button
+              type="button"
+              aria-label="Zavřít detail"
+              onClick={() => setDetail(null)}
+              style={{
+                position: 'absolute',
+                right: 7,
+                top: 6,
+                width: 24,
+                height: 24,
+                border: 0,
+                background: 'transparent',
+                color: '#333333',
+                fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+                fontSize: 18,
+                lineHeight: 1,
+                cursor: 'pointer',
+              }}
+            >
+              ×
+            </button>
+            <div style={{ paddingRight: 22, fontWeight: 700, fontSize: 13, marginBottom: 3 }}>
+              <span style={{ color: COLORS[detail.veto.p] }}>
+                {detail.veto.p}
+              </span>
+              {' · '}{detail.veto.n}. veto · {detail.veto.dl}
+            </div>
+            <div style={{ fontWeight: 700, marginBottom: 6 }}>{detail.veto.law}</div>
+            {detail.veto.why && (
+              <div style={{ paddingTop: 6, borderTop: '1px solid #e8e3d2', color: '#333333' }}>
+                {detail.veto.why}
+              </div>
+            )}
+            <div style={{ marginTop: 7, color: '#333333' }}>
+              {voteLine(detail.veto) && <div>{voteLine(detail.veto)}</div>}
+              <div>{outcomeText(detail.veto)}</div>
+            </div>
           </div>
         )}
       </div>
@@ -255,9 +322,10 @@ export default function VetoChart() {
         sněmovna nestihla hlasovat. Vícero zákonů vetovaných najednou počítáme jako jedno veto. Najetím nebo klepnutím na bod se zobrazí zákon,
         prezidentovo odůvodnění i výsledek hlasování.
       </p>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Poslanecká sněmovna PČR
-      </p>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+        <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
+        <div>• data: Poslanecká sněmovna PČR</div>
+      </div>
     </div>
   );
 }

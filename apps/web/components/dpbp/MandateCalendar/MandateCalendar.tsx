@@ -166,7 +166,7 @@ export default function MandateCalendar() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       {/* Titulek přes celou šířku, podpis na švu hlavičky vpravo (viz DESIGN.md §9) */}
       <div style={{
-        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
+        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, fontWeight: 700,
         color: '#101432', lineHeight: 1.2,
       }}>
         Cesty prezidentů: kostička za každou cestu
@@ -284,9 +284,10 @@ export default function MandateCalendar() {
         Oba prezidenty srovnáváme za stejnou fázi mandátu: prvních {maxCounter} dní od inaugurace (u Zemana od března 2013, u Pavla od března 2023).
         Zemanových {TRIPS.zeman.length - TRIPS.zeman.filter(t => t.di <= maxCounter).length} cest z pozdějších let mandátu v grafu není. Najetím nebo klepnutím na kostičku se zobrazí podrobnosti cesty.
       </p>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
-      </p>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+        <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
+        <div>• data: Kancelář prezidenta republiky</div>
+      </div>
     </div>
   );
 }

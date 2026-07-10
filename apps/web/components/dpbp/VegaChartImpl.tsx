@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { robotoCondensed } from '@/app/fonts';
 import ChartSignature from './ChartSignature';
 
-// Jednotná typografie grafů (viz Flourish vzor a DESIGN.md §Grafy):
-// Roboto Condensed všude, titulek 20/bold, podtitulek 14, osy/hodnoty 13,
-// legenda 13,5, patička 14 – vše #333333 (kromě titulku #1a1a1a).
+// Jednotná typografie grafů (viz DESIGN.md §Grafy):
+// Roboto Condensed všude, titulek 16/bold, podtitulek 14, patička 12,
+// osy/legendy/hodnoty 10–12 podle hustoty – vše #333333 (titulek #1a1a1a).
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
 // Legenda: čtvercová tlačítka se zakulacenými rohy, standardně nahoře na středu
 // (vypínání sérií řeší per-spec param s bind: "legend").
@@ -59,13 +59,13 @@ const TOOLTIP_CSS = `
 `;
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
-  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13, titleFontSize: 13, labelColor: '#333333', titleColor: '#333333' },
+  axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 11, titleFontSize: 11, labelColor: '#333333', titleColor: '#333333' },
   legend: {
-    labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13.5, titleFontSize: 13.5, labelColor: '#333333',
+    labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 12, titleFontSize: 12, labelColor: '#333333',
     orient: 'top', symbolType: LEGEND_SYMBOL, symbolSize: 280, symbolStrokeWidth: 0,
     layout: { top: { anchor: 'middle' } },
   },
-  text: { font: CHART_FONT, fontSize: 13 },
+  text: { font: CHART_FONT, fontSize: 11 },
   header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
 };
 
@@ -238,7 +238,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
         {meta.title && (
           <div style={{
             fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-            fontSize: 20,
+            fontSize: 16,
             fontWeight: 700,
             lineHeight: 1.2,
             color: '#1a1a1a',
@@ -277,18 +277,19 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       {meta.source && (
         <div style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 14,
+          fontSize: 12,
           color: '#333333',
           marginTop: 10,
           lineHeight: 1.45,
         }}>
-          {'• autoři: '}
-          <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer"
-            style={{ color: '#333333', textDecoration: 'underline' }}>
-            Kateřina Mahdalová &amp; Michal Škop
-          </a>
-          {' • data: '}
-          {renderSource(meta.source)}
+          <div>
+            {'• autoři: '}
+            <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer"
+              style={{ color: '#333333', textDecoration: 'underline' }}>
+              Kateřina Mahdalová &amp; Michal Škop
+            </a>
+          </div>
+          <div>{'• data: '}{renderSource(meta.source)}</div>
         </div>
       )}
     </div>

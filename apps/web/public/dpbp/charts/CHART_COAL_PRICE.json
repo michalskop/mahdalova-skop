@@ -61,7 +61,7 @@
      "scale": {
       "domain": [
        0,
-       2.6
+       3
       ]
      },
      "axis": {
@@ -116,7 +116,7 @@
     "align": "left",
     "baseline": "middle",
     "dx": 6,
-    "fontSize": 13,
+    "fontSize": 12,
     "fontWeight": "bold",
     "color": "#1a1a1a"
    },
@@ -134,10 +134,10 @@
      "field": "value",
      "type": "quantitative",
      "scale": {
-      "domain": [
-       0,
-       2.6
-      ]
+     "domain": [
+      0,
+      3
+     ]
      }
     },
     "text": {
@@ -152,6 +152,6 @@
   }
  },
  "padding": {
-  "right": 34
+  "right": 18
  }
 }

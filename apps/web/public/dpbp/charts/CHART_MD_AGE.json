@@ -80,7 +80,7 @@
     "align": "center",
     "baseline": "bottom",
     "dy": -6,
-    "fontSize": 14,
+    "fontSize": 12,
     "fontWeight": "bold",
     "color": "#1a1a1a"
    },

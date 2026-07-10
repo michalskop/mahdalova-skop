@@ -758,24 +758,31 @@
 }
 
 /* Sjednocení s VegaChart kartami: článkové styly přebíjejí p-selektory,
-   proto mají třídy grafu vyšší prioritu. Podtitulek 14 px Roboto Condensed,
-   patička 14 px – shodné se všemi ostatními grafy a mapami. */
+   proto mají třídy grafu vyšší prioritu. Titulek 16 px, podtitulek 14 px,
+   patička 12 px – shodné se všemi ostatními grafy a mapami. */
 .dt-hub .dt-visual-note,
 .dt-hub .dt-visual-source,
 .dt-hub .dt-visual-authors {
   font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   line-height: 1.5 !important;
   color: #333333 !important;
 }
+.dt-hub .dt-visual-note {
+  font-size: 14px !important;
+}
 .dt-hub .dt-visual-title {
   font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
-  font-size: 20px !important;
+  font-size: 16px !important;
   line-height: 1.25 !important;
   color: #1a1a1a !important;
 }
-@media (max-width: 560px) {
-  .dt-hub .dt-visual-title { font-size: 16px !important; }
+.dt-hub .dt-support .dt-support-text {
+  color: #fdfbf7 !important;
+}
+.dt-hub .dt-support .dt-support-name,
+.dt-hub .dt-support .dt-support-cta {
+  color: #ffffff !important;
 }
 </style>
 
@@ -921,7 +928,8 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
       </g>
     </svg>
     <div class="dt-visual-meta">
-      <p class="dt-visual-source" style="flex:0 0 100%;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a> • data: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
+      <p class="dt-visual-authors" style="flex:0 0 100%; margin:0;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a></p>
+      <p class="dt-visual-source" style="flex:0 0 100%; margin:0;">• data: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
     </div>
   </div>
 
@@ -1195,7 +1203,8 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
         </g>
       </svg>
       <div class="dt-visual-meta">
-        <p class="dt-visual-source" style="flex:0 0 100%;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a> • data: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
+        <p class="dt-visual-authors" style="flex:0 0 100%; margin:0;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a></p>
+        <p class="dt-visual-source" style="flex:0 0 100%; margin:0;">• data: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
       </div>
     </div>
 

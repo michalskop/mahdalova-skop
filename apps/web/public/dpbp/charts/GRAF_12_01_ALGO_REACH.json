@@ -99,7 +99,7 @@
     "align": "left",
     "dx": 12,
     "fontWeight": "bold",
-    "fontSize": 15,
+    "fontSize": 12,
     "color": "#ffffff"
    },
    "encoding": {
@@ -127,7 +127,7 @@
     "align": "left",
     "dx": 10,
     "fontWeight": "bold",
-    "fontSize": 15,
+    "fontSize": 12,
     "color": "#06677d"
    },
    "encoding": {

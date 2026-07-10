@@ -85,7 +85,7 @@ interface HalfMapProps {
   label: string;
   years: string;
   countries: unknown[];
-  path: d3geo.GeoPath;
+  path: any;
   height: number;
   width: number;
   visible: Trip[];
@@ -141,7 +141,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
           </g>
           <g>
             {visible.map((d, i) => {
-              const p = path.projection<d3geo.GeoProjection>()([d.lon, d.lat]);
+              const p = path.projection()([d.lon, d.lat]);
               if (!p) return null;
               return (
                 <circle
@@ -206,7 +206,7 @@ export default function PresidentialTripsMap() {
     const top = projection([0, 72])![1];
     const bottom = projection([0, -50])![1];
     projection.translate([width / 2, -top]);
-    return { path: d3geo.geoPath(projection as d3geo.GeoProjection), height: bottom - top };
+    return { path: d3geo.geoPath(projection as any), height: bottom - top };
   }, []);
 
   const countries = useMemo(() => {
@@ -225,7 +225,7 @@ export default function PresidentialTripsMap() {
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
       <div
         style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, fontWeight: 700,
           color: '#101432', lineHeight: 1.25, marginBottom: 2,
         }}
       >
@@ -312,9 +312,10 @@ export default function PresidentialTripsMap() {
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 6 }}>
         Srovnání podle počtu dnů od inaugurace, ne podle kalendářního data – Zeman odsloužil obě funkční období v kuse (2013–2023), Pavlův mandát dosud běží.
       </p>
-      <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
-      </p>
+      <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 12, color: '#333333', marginTop: 10, lineHeight: 1.45 }}>
+        <div>• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a></div>
+        <div>• data: Kancelář prezidenta republiky</div>
+      </div>
     </div>
   );
 }
