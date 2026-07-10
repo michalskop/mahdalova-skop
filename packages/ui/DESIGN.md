@@ -446,21 +446,21 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 
 ---
 
-## Speciály – správa a rozšiřování
+## Specials – Management and Extension
 
-Speciály jsou tematické projekty zobrazované na třech místech:
+Specials are themed projects displayed in three places:
 
-| Místo | Soubor |
+| Location | File |
 |---|---|
-| Karusel na homepage | `apps/web/components/frontpage/SpecialsHero.tsx` |
+| Homepage carousel | `apps/web/components/frontpage/SpecialsHero.tsx` |
 | Landing page `/special` | `apps/web/app/special/page.tsx` |
-| Vlastní landing page rubriky | `apps/web/app/special/[rubrika]/page.tsx` |
+| Section-specific landing page | `apps/web/app/special/[rubrika]/page.tsx` |
 
 ---
 
-### Obrázky dlaždic
+### Tile images
 
-Ukládají se do `apps/web/public/images/specials/`. Každý speciál má vlastní soubor:
+Stored in `apps/web/public/images/specials/`. Each special has its own file:
 
 ```
 apps/web/public/images/specials/
@@ -472,27 +472,27 @@ apps/web/public/images/specials/
   data-pro-budouci-premierku.svg
 ```
 
-**Pravidla:**
-- Formát SVG nebo JPG, ideálně čtvercový poměr 1:1
-- Název souboru musí odpovídat hodnotě `coverImage` v definici dlaždice v `SpecialsHero.tsx`
-- Soubory > 256 KB nelze vkládat inline – musí být v `public/` a referencovány přes `<img src>`
-- Obrázek se zobrazí jako full-bleed pozadí dlaždice, přes spodek jde tmavý gradient pro čitelnost titulku
+**Rules:**
+- SVG or JPG format, ideally a square 1:1 ratio
+- The filename must match the `coverImage` value in the tile definition in `SpecialsHero.tsx`
+- Files > 256 KB can't be inlined – they must live in `public/` and be referenced via `<img src>`
+- The image renders as the tile's full-bleed background, with a dark gradient over the bottom for title legibility
 
 ---
 
-### Přidat článek do speciálu (filtr)
+### Adding an article to a special (filter)
 
-V hlavičce článku `app/clanek/_articles/[slug]/index.md` přidat hodnotu do pole `filter`:
+In the article frontmatter `app/clanek/_articles/[slug]/index.md`, add a value to the `filter` field:
 
 ```yaml
 filter: ["kontext", "klima"]
 ```
 
-`filter` je pole – článek může patřit do více rubrik zároveň.
+`filter` is an array – an article can belong to more than one section at once.
 
-**Dostupné hodnoty filtru a jejich cíl:**
+**Available filter values and their target** (values stay in Czech – they're literal data, matched against page code):
 
-| Hodnota filtru | Landing page |
+| Filter value | Landing page |
 |---|---|
 | `"analýza"` | `/analyzy` |
 | `"kontext"` | `/kontext` |
@@ -501,65 +501,65 @@ filter: ["kontext", "klima"]
 | `"svobodná-média"` | `/special/svobodna-media` |
 | `"klima"` | `/special/klima` |
 
-Hodnota musí přesně odpovídat tomu, co stránka předává do `getArticles(100, 'klima')`.
+The value must exactly match what the page passes to `getArticles(100, 'klima')`.
 
 ---
 
-### Přidat nový speciál – checklist
+### Adding a new special – checklist
 
-**1.** Nakopírovat obrázek do `apps/web/public/images/specials/novy-special.svg`
+**1.** Copy the image to `apps/web/public/images/specials/novy-special.svg`
 
-**2.** Přidat dlaždici do `SpecialsHero.tsx` (pole `TILES`):
+**2.** Add a tile to `SpecialsHero.tsx` (the `TILES` array):
 ```ts
 {
   href: '/special/novy-special',
-  title: 'Název speciálu',
-  bg: '#barva',
+  title: 'Special title',
+  bg: '#color',
   external: false,
-  logoType: 'klima',        // fallback ikona (pokud chybí coverImage)
+  logoType: 'klima',        // fallback icon (used if coverImage is missing)
   coverImage: '/images/specials/novy-special.svg',
 },
 ```
 
-**3.** Přidat stejnou dlaždici do `apps/web/app/special/page.tsx` (pole `TILES`)
+**3.** Add the same tile to `apps/web/app/special/page.tsx` (the `TILES` array)
 
-**4.** Vytvořit landing page zkopírováním `apps/web/app/special/klima/page.tsx`:
-- Změnit filter: `getArticles(100, 'novy-special')`
-- Upravit `themeColor`, metadata, canonical URL a OG image
+**4.** Create the landing page by copying `apps/web/app/special/klima/page.tsx`:
+- Change the filter: `getArticles(100, 'novy-special')`
+- Update `themeColor`, metadata, canonical URL, and OG image
 
-**5.** Tagovat články přidáním filtru do frontmatteru:
+**5.** Tag articles by adding the filter to the frontmatter:
 ```yaml
 filter: ["kontext", "novy-special"]
 ```
 
 ---
 
-### Přehled speciálů a technické parametry
+### Overview of specials and their technical parameters
 
-| Speciál | URL | Filter | Barva |
+| Special | URL | Filter | Color |
 |---|---|---|---|
-| Data pro budoucí premiérku | `/special/data-pro-budouci-premierku` | vlastní landing, bez filter | `#ff3f30` |
+| Data pro budoucí premiérku | `/special/data-pro-budouci-premierku` | own landing page, no filter | `#ff3f30` |
 | Svobodná média | `/special/svobodna-media` | `svobodná-média` | `#812840` |
 | M & Š investigace | `/special/investigace` | `investigace` | `#351040` |
 | Data o klimatu | `/special/klima` | `klima` | `linear-gradient(135deg, #2a3f04, #639e0a)` |
-| Sněmovna DataTimes | ext. odkaz | – | `#2f325c` |
-| Mandáty.cz | ext. odkaz | – | `linear-gradient(90deg, #f71b4b, #101432)` |
+| Sněmovna DataTimes | ext. link | – | `#2f325c` |
+| Mandáty.cz | ext. link | – | `linear-gradient(90deg, #f71b4b, #101432)` |
 
 ---
 
-### Karusel – technické parametry
+### Carousel – technical parameters
 
-Implementace v `SpecialsHero.tsx`, čistý CSS scroll-snap + vlastní RAF animace (žádná externí knihovna).
+Implemented in `SpecialsHero.tsx`, plain CSS scroll-snap + a custom RAF animation (no external library).
 
-| Konstanta | Hodnota | Popis |
+| Constant | Value | Description |
 |---|---|---|
-| `VISIBLE` | `3` | Počet viditelných dlaždic |
-| `AUTOPLAY_MS` | `6000` | Interval přepínání (ms) |
-| `SCROLL_DURATION` | `700` | Délka animace přechodu (ms) |
-| `GAP` | `16` | Mezera mezi dlaždicemi (px) |
-| `POSITIONS` | `TILES.length - VISIBLE + 1` | Počet dot-indikátorů |
+| `VISIBLE` | `3` | Number of visible tiles |
+| `AUTOPLAY_MS` | `6000` | Switch interval (ms) |
+| `SCROLL_DURATION` | `700` | Transition animation length (ms) |
+| `GAP` | `16` | Gap between tiles (px) |
+| `POSITIONS` | `TILES.length - VISIBLE + 1` | Number of dot indicators |
 
-Animace používá `easeInOut` přes `requestAnimationFrame` – scroll-snap se dočasně vypíná během animace, aby nepřerušoval přechod.
+The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is temporarily disabled during the animation so it doesn't interrupt the transition.
 
 ---
 
