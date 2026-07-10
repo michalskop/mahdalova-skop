@@ -221,7 +221,7 @@ InfoBox can be floated right (`float="right"`) – only when there are ≥ 3–4
 - Cards: ~8px
 - Buttons: ~4–8px
 - InfoBox: no radius – the flat left border is the defining shape
-- **Sněmovna.DataTimes a Mandáty.cz – odlišný roh karty:** na rozdíl od standardních karet (všechny 4 rohy zaoblené ~8px) mají karty v těchto dvou projektech jeden roh do špičky (ostrý, 0px) a zbylé tři zaoblené stejně jako jinde. Jde o záměrnou vizuální odlišnost těchto dvou projektů, kterou zachováváme – není to nesrovnalost k opravě.
+- **Sněmovna.DataTimes and Mandáty.cz – distinct card corner:** unlike standard cards (all 4 corners rounded ~8px), cards in these two projects have one sharp corner (0px) and the remaining three rounded as elsewhere. This is a deliberate visual distinction for these two projects that we preserve – it is not an inconsistency to fix.
 
 ## 6. Depth & Elevation
 
@@ -313,3 +313,40 @@ The InfoBox left-border system is the most distinctive depth signal: a 4px solid
 ---
 
 *Canonical source: color scales in `apps/web/app/providers/ThemeProvider.tsx` · component usage in `packages/ui/DESIGN.md`*
+
+## 10. Charts and Data Visualization – Binding Standard (added 2026-07-09)
+
+The Flourish template (see the charts "Presidential Pardons," "Presidents' Foreign Trips") is the model for readability and hierarchy – but it serves as **inspiration and a benchmark, not a cage**. Custom components may take liberties (labels placed directly inside bars, in-chart annotations, interactive elements) as long as they follow the typography and colors below.
+
+### Typographic scale (Roboto Condensed unless noted otherwise; revised 2026-07-10)
+
+| Element | Size | Weight | Color |
+|-------|----------|-----|-------|
+| Chart title | 20 px | bold | `#1a1a1a` |
+| Subtitle (what the chart measures + units + year) | 14 px | regular | `#333333` |
+| In-chart data labels (in-bar, at line ends) | 12 px | bold | per background |
+| Legend | 12 px | regular | `#333333` |
+| Axis labels, values | 10.5 px | regular | `#333333` |
+| Small in-chart annotations | 10 px | regular | `#333333` |
+| Footer (authors + data) – **two lines: 1. authors, 2. data** | 12 px | regular | `#333333` |
+| Absolute minimum (only exceptionally, for small notes) | 8 px | regular | `#333333` |
+
+- **The value axis of horizontal bars must carry headroom in the domain** (`scale.domain` ~25–30% above the max data value), so that neither the longest bar nor its label touches the card's right edge – otherwise they "pop out" on mobile and labels get clipped.
+- **Long labels belong in a click-open panel, not a hover tooltip** (Flourish "Popups & panels" pattern): hover shows only the title line plus a "Click for detail" prompt; a click opens a panel with the full content, a close (×) button, and a `rgba(248,246,240,0.95)` background.
+
+- **Background of the whole chart card:** Ink Wash `#f8f6f0` (never `#fdfbf7` – that's the page background).
+- **Every chart MUST have:** a title (a thesis, not a description – "Roads take up three times the area solar panels would," not "Comparison of land use"), a subtitle with units and year, and a two-line footer – line 1 `• authors: Kateřina Mahdalová & Michal Škop`, line 2 `• data: [institution]`. Authors in the footer are ALWAYS linked to https://datatimes.cz (the same target as the logo). Footer links are underlined but also `#333333` (never crimson in the footer). Wikipedia is never cited as a source.
+- **Series colors:** from the §2 palette. Semantics: Amethyst `#6267a3` / Midnight `#272a59` = history, context, comparison value; Crimson `#de1743` = current state, inflection point, warning. One metric = one color + one highlight.
+- **Legend: above the chart, centered, toggleable.** Legend items are square buttons with rounded corners; clicking mutes/highlights a series (via a Vega-Lite param with `bind: "legend"`). The default appearance comes from `VegaChartImpl`; only the toggle param is added per-spec.
+- **The X-axis title belongs beside the axis** (right-aligned on the value-label row, bold), not on its own line below the chart – it saves vertical space. Watch for collisions with the last value label on narrow screens (fix by omitting the last gridline value).
+- **Prefer labels placed directly at the data** (at line ends, inside bars) over a legend and an axis with long names – the chart then reads without eye-jumping.
+- **Technical note (Next.js):** write the font as `var(--font-roboto-condensed), Arial, sans-serif` – the literal `'Roboto Condensed'` webfont string fails to load and falls back to Arial. Don't specify fonts inside Vega specs – `VegaChartImpl` supplies them centrally.
+
+### DataTimes.cz logo / signature
+
+Two variants, **never both at once** on a single visualization:
+
+1. **Horizontal** – the text "DataTimes.cz" (Roboto Slab, bold) and a dot side by side, vertically centered. Ratio: font size ≈ 0.52× the dot's diameter (30px dot → ~15.5px type). Standard for chart headers, top right (the `ChartSignature` component).
+2. **Vertical** – dot above the text, horizontally centered. For narrow/tall layouts (e.g. AttendanceSwarm).
+
+Placement: top right of the chart card (or on the header seam), no frame, no background fill, linked to datatimes.cz.
