@@ -4,6 +4,7 @@ import { Badge, Box, Button, Container, Divider, Group, Paper, SimpleGrid, Stack
 import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { kviffBranches, kviffSources } from './data';
+import { current2026, finalStats, formatNumber, maxTickets, spendingRatio2026, ticketShare2026 } from './stats';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
 const COVER = `${BASE_URL}/images/specials/karlovy-vary.svg`;
@@ -33,6 +34,20 @@ const keyNumbers = [
   { value: '128 133', label: 'prodaných vstupenek v roce 2025' },
   { value: '8', label: 'analytických větví speciálu' },
 ];
+
+function InlineBar({ label, value, max, color = '#547ca8' }: { label: string; value: number; max: number; color?: string }) {
+  const width = Math.min(100, Math.round((value / max) * 1000) / 10);
+
+  return (
+    <Box style={{ display: 'grid', gridTemplateColumns: '74px 1fr 92px', gap: 10, alignItems: 'center' }}>
+      <Text fw={800}>{label}</Text>
+      <Box h={18} bg="#efe7d8" style={{ borderRadius: 999, overflow: 'hidden', border: '1px solid #ded2bf' }}>
+        <Box h="100%" w={`${width}%`} style={{ background: color, borderRadius: 999 }} />
+      </Box>
+      <Text ta="right" ff="monospace" fw={800}>{formatNumber(value)}</Text>
+    </Box>
+  );
+}
 
 export default function KarlovyVarySpecialPage() {
   return (
@@ -79,6 +94,43 @@ export default function KarlovyVarySpecialPage() {
               <Text size="sm" c="dimmed">{item.label}</Text>
             </Paper>
           ))}
+        </SimpleGrid>
+      </Box>
+
+      <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#fffdf8">
+            <Group justify="space-between" align="start" mb="md">
+              <Stack gap={2}>
+                <Badge w="fit-content" color="yellow" variant="light">Hotový graf</Badge>
+                <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Vstupenky: finální roky a průběžný stav</Title>
+              </Stack>
+              <Button component={Link} href="/specialy/karlovy-vary/live" variant="outline" color="dark">Detail</Button>
+            </Group>
+            <Stack gap="sm">
+              {finalStats.map((row) => (
+                <InlineBar key={row.year} label={String(row.year)} value={row.tickets} max={maxTickets} />
+              ))}
+              <InlineBar label="2026*" value={current2026.tickets} max={maxTickets} color="#d7a84a" />
+            </Stack>
+            <Text mt="md" c="dimmed">
+              Rok 2026 je stav k 8. 7. v 10:00. Už teď odpovídá {ticketShare2026.toString().replace('.', ',')} % finální návštěvnosti roku 2025 podle prodaných vstupenek.
+            </Text>
+          </Paper>
+
+          <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#11100e" c="#fffaf0">
+            <Badge w="fit-content" color="yellow" variant="light" mb="md">Ekonomika festivalu</Badge>
+            <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>250 milionů rozpočtu, 650 milionů útraty</Title>
+            <Text size="lg" c="#f4ead8" mt="sm">
+              Průběžná statistika 60. ročníku ukazuje festival jako kulturní událost i městskou ekonomiku pozornosti.
+            </Text>
+            <SimpleGrid cols={2} spacing="sm" mt="lg">
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">80 %</Text><Text size="sm">sponzoři</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">20 %</Text><Text size="sm">veřejné zdroje</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{spendingRatio2026.toString().replace('.', ',')}x</Text><Text size="sm">útrata vs. rozpočet</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">578</Text><Text size="sm">novinářů</Text></Paper>
+            </SimpleGrid>
+          </Paper>
         </SimpleGrid>
       </Box>
 
@@ -137,7 +189,7 @@ export default function KarlovyVarySpecialPage() {
       <Box id="analyzy" component="section" px={{ base: 16, md: 24 }} py={{ base: 28, md: 42 }}>
         <Group justify="space-between" align="end" mb="lg">
           <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Analýzy</Title>
-          <Text c="dimmed">Pracovní série, průběžně doplňovaná daty</Text>
+          <Text c="dimmed">Osm kapitol datového speciálu</Text>
         </Group>
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
           {kviffBranches.map((branch) => (
@@ -153,7 +205,7 @@ export default function KarlovyVarySpecialPage() {
               <Stack h="100%" justify="space-between">
                 <Stack gap="xs">
                   <Badge w="fit-content" variant="light" color={branch.status === 'ready' ? 'green' : branch.status === 'research' ? 'orange' : 'gray'}>
-                    {branch.status === 'ready' ? 'draft text' : branch.status === 'research' ? 'rešerše' : 'draft'}
+                    {branch.status === 'ready' ? 'hotová osa' : branch.status === 'research' ? 'datová metodika' : 'kapitola speciálu'}
                   </Badge>
                   <Text tt="uppercase" size="xs" fw={800} c="dimmed">{branch.kicker}</Text>
                   <Title order={3} style={{ fontFamily: "'Roboto Slab', Georgia, serif", lineHeight: 1.18 }}>{branch.title}</Title>
@@ -185,3 +237,4 @@ export default function KarlovyVarySpecialPage() {
     </Container>
   );
 }
+

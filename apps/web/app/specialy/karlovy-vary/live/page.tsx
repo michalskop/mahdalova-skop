@@ -1,43 +1,27 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Badge, Box, Button, Container, Group, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import {
+  current2026,
+  finalStats,
+  formatNumber,
+  industryShare2026,
+  journalistsShare2026,
+  maxTickets,
+  passesShare2026,
+  pct,
+  publicMil2026,
+  screeningsShare2026,
+  spendingRatio2026,
+  sponsorMil2026,
+  ticketShare2026,
+} from '../stats';
 
 export const metadata: Metadata = {
   title: 'KVIFF live brief | Karlovy Vary v datech',
   description: 'Rychlý datový podklad k průběžným statistikám 60. ročníku MFF Karlovy Vary a srovnání se závěrečnými statistikami 2023-2025.',
   alternates: { canonical: '/specialy/karlovy-vary/live' },
 };
-
-const finalStats = [
-  { year: 2023, tickets: 123517, screenings: 445, passes: 9085, filmmakers: 432, industry: 942, journalists: 537, films: 185 },
-  { year: 2024, tickets: 127325, screenings: 453, passes: 8726, filmmakers: 411, industry: 1097, journalists: 535, films: 177 },
-  { year: 2025, tickets: 128133, screenings: 465, passes: 7926, filmmakers: 411, industry: 1055, journalists: 557, films: 175 },
-];
-
-const current2026 = {
-  label: '2026*',
-  tickets: 97075,
-  screenings: 262,
-  passes: 7882,
-  filmmakers: 891,
-  industry: 1112,
-  journalists: 578,
-  budgetMil: 250,
-  sponsorsShare: 80,
-  publicShare: 20,
-  spendingMil: 650,
-};
-
-const maxTickets = 128133;
-const comparison2025 = finalStats[2];
-
-function pct(value: number, max: number) {
-  return Math.round((value / max) * 1000) / 10;
-}
-
-function formatNumber(value: number) {
-  return new Intl.NumberFormat('cs-CZ').format(value);
-}
 
 function BarRow({ label, value, max, color = '#547ca8', suffix = '' }: { label: string; value: number; max: number; color?: string; suffix?: string }) {
   return (
@@ -52,15 +36,6 @@ function BarRow({ label, value, max, color = '#547ca8', suffix = '' }: { label: 
 }
 
 export default function KviffLivePage() {
-  const ticketShare = pct(current2026.tickets, comparison2025.tickets);
-  const screeningsShare = pct(current2026.screenings, comparison2025.screenings);
-  const passesShare = pct(current2026.passes, comparison2025.passes);
-  const journalistsShare = pct(current2026.journalists, comparison2025.journalists);
-  const industryShare = pct(current2026.industry, comparison2025.industry);
-  const sponsorMil = current2026.budgetMil * current2026.sponsorsShare / 100;
-  const publicMil = current2026.budgetMil * current2026.publicShare / 100;
-  const spendingRatio = current2026.spendingMil / current2026.budgetMil;
-
   return (
     <Container size="lg" bg="#fffaf0" maw="1200px" w="100%" p={0} m="0 auto">
       <Box px={{ base: 18, md: 42 }} py={{ base: 28, md: 48 }} style={{ background: '#11100e', color: '#fffaf0' }}>
@@ -100,17 +75,17 @@ export default function KviffLivePage() {
           <Text c="dimmed" mb="md">2023-2025 jsou finální čísla. 2026 je průběžný stav, ne závěrečná statistika.</Text>
           {finalStats.map((row) => <BarRow key={row.year} label={String(row.year)} value={row.tickets} max={maxTickets} />)}
           <BarRow label="2026*" value={current2026.tickets} max={maxTickets} color="#d7a84a" />
-          <Text mt="md">Citace: k 8. červenci bylo prodáno zhruba <strong>{ticketShare.toString().replace('.', ',')} %</strong> loňského finálního počtu vstupenek.</Text>
+          <Text mt="md">Citace: k 8. červenci bylo prodáno zhruba <strong>{ticketShare2026.toString().replace('.', ',')} %</strong> loňského finálního počtu vstupenek.</Text>
         </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="#fffdf8">
           <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Stav 2026 proti finálnímu roku 2025</Title>
           <Text c="dimmed" mb="md">Srovnání je orientační: rozběhnutý ročník proti uzavřenému.</Text>
-          <BarRow label="Vstupenky" value={ticketShare} max={100} color="#d7a84a" suffix="%" />
-          <BarRow label="Projekce" value={screeningsShare} max={100} color="#c84a50" suffix="%" />
-          <BarRow label="Fest.Passy" value={passesShare} max={100} color="#6f9b75" suffix="%" />
-          <BarRow label="Novináři" value={journalistsShare} max={110} color="#6f9b75" suffix="%" />
-          <BarRow label="Industry" value={industryShare} max={110} color="#6f9b75" suffix="%" />
+          <BarRow label="Vstupenky" value={ticketShare2026} max={100} color="#d7a84a" suffix="%" />
+          <BarRow label="Projekce" value={screeningsShare2026} max={100} color="#c84a50" suffix="%" />
+          <BarRow label="Fest.Passy" value={passesShare2026} max={100} color="#6f9b75" suffix="%" />
+          <BarRow label="Novináři" value={journalistsShare2026} max={110} color="#6f9b75" suffix="%" />
+          <BarRow label="Industry" value={industryShare2026} max={110} color="#6f9b75" suffix="%" />
           <Text mt="md">Fest.Passy, novináři a filmoví profesionálové jsou už kolem loňského finále nebo nad ním.</Text>
         </Paper>
 
@@ -119,15 +94,15 @@ export default function KviffLivePage() {
           <Text c="dimmed" mb="md">Údaje 2026 podle průběžného stat stavu.</Text>
           <BarRow label="Rozpočet" value={current2026.budgetMil} max={current2026.spendingMil} color="#547ca8" suffix="mil." />
           <BarRow label="Útrata" value={current2026.spendingMil} max={current2026.spendingMil} color="#d7a84a" suffix="mil." />
-          <Text mt="md" size="lg">Každá koruna festivalového rozpočtu odpovídá zhruba <strong>{spendingRatio.toString().replace('.', ',')} korunám</strong> festivalové útraty ve městě a okolí.</Text>
+          <Text mt="md" size="lg">Každá koruna festivalového rozpočtu odpovídá zhruba <strong>{spendingRatio2026.toString().replace('.', ',')} korunám</strong> festivalové útraty ve městě a okolí.</Text>
           <Text c="dimmed" mt="xs">Říkat jako orientační poměr, ne jako kauzální návratnost.</Text>
         </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="#fffdf8">
           <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Financování rozpočtu 2026</Title>
           <Text c="dimmed" mb="md">Při rozpočtu 250 mil. Kč a poměru 80/20.</Text>
-          <BarRow label="Sponzoři" value={sponsorMil} max={current2026.budgetMil} color="#d7a84a" suffix="mil." />
-          <BarRow label="Veřejné" value={publicMil} max={current2026.budgetMil} color="#547ca8" suffix="mil." />
+          <BarRow label="Sponzoři" value={sponsorMil2026} max={current2026.budgetMil} color="#d7a84a" suffix="mil." />
+          <BarRow label="Veřejné" value={publicMil2026} max={current2026.budgetMil} color="#547ca8" suffix="mil." />
           <Text mt="md">Festival je z velké části soukromě financovaná kulturní infrastruktura. Veřejné peníze netvoří většinu rozpočtu, ale pomáhají držet instituci s výraznou ekonomickou stopou.</Text>
         </Paper>
       </SimpleGrid>
@@ -161,3 +136,4 @@ export default function KviffLivePage() {
     </Container>
   );
 }
+
