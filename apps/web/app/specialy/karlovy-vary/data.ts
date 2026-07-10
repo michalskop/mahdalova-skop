@@ -19,6 +19,7 @@ export const kviffSources = [
   'Stránka cen KVIFF',
   'Historické ročníkové stránky KVIFF a finální tiskové zprávy',
   'AP / festivalové zprávy k oznámeným poctám 60. ročníku 2026',
+  'Oficiální stránky partnerů KVIFF a stránka Proč podporujeme festival',
   'Wikidata, IMDb, TMDb, The Numbers a Box Office Mojo',
   'Filmová kritika a publicistika, včetně textů Kamila Fily',
 ];
@@ -159,16 +160,18 @@ export const kviffBranches: KviffBranch[] = [
     slug: 'ekonomika-pozornosti',
     title: 'Festival jako ekonomika pozornosti',
     kicker: 'Návštěvnost',
-    excerpt: 'Vstupenky, pasy, akreditace, novináři, industry profesionálové a delegace.',
+    excerpt: 'Vstupenky, pasy, akreditace, novináři, industry profesionálové, partneři a obchod s prestiží.',
     status: 'draft',
     accent: '#7a9dd8',
-    metrics: ['tickets sold', 'festivalové pasy', 'akreditace', 'industry'],
+    metrics: ['tickets sold', 'festivalové pasy', 'partnerství', 'prestiž'],
     sections: [
       {
         heading: 'Festival není jen program',
         body: [
           'Novější ročníky umožňují sledovat festival jako veřejnou, mediální a industry událost. Oficiální archiv uvádí prodané vstupenky, festivalové pasy, akreditované návštěvníky, filmaře, industry profesionály, novináře a projekce s delegací.',
           'Tato kapitola ukáže, jak se festivalová prestiž překládá do pozornosti publika, médií a filmového trhu.',
+          'Nově doplňujeme i partnerskou vrstvu. Nečteme ji jako seznam log, ale jako směnu různých druhů kapitálu: peníze, služby, mediální dosah, CSR, symbolické řemeslo, místo konání a přístup k publiku.',
+          'To je redakční interpretace oficiálně komunikovaných partnerství. U každé vrstvy proto držíme zdroj a oddělujeme doložený fakt od výkladu, co z něj pro ekonomiku pozornosti plyne.',
         ],
       },
     ],

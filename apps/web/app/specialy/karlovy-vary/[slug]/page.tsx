@@ -19,6 +19,7 @@ import {
 import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from '../honors';
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
+import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
 
 type PageProps = {
   params: { slug: string };
@@ -490,6 +491,117 @@ function FilmScaleBlock() {
   );
 }
 
+const capitalColors: Record<keyof typeof partnerCapitalLabels, string> = {
+  money: '#d7a84a',
+  service: '#6fb3a3',
+  access: '#547ca8',
+  image: '#c95b7a',
+  csr: '#6f9b75',
+  media: '#8fb8d8',
+  craft: '#b86f4c',
+  place: '#9a78b8',
+};
+
+function PartnerPrestigeBlock() {
+  const capitalEntries = Object.entries(partnerCapitalTotals)
+    .sort(([, a], [, b]) => b - a)
+    .map(([capital, count]) => ({ capital: capital as keyof typeof partnerCapitalLabels, count }));
+
+  return (
+    <Box px={{ base: 16, md: 24 }} pb={{ base: 20, md: 34 }}>
+      <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#fffdf8">
+        <Group justify="space-between" align="end" mb="lg">
+          <Stack gap={2} maw={760}>
+            <Badge w="fit-content" color="yellow" variant="light">Partneri jako data</Badge>
+            <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Obchod s prestizi neni jedna smlouva, ale cela infrastruktura</Title>
+            <Text c="dimmed">
+              Matice cte oficialne komunikovana partnerstvi podle toho, jaky typ kapitalu se vymenuje: penize, sluzby, pristup k publiku, media, remeslo, CSR nebo misto konani.
+            </Text>
+          </Stack>
+          <Button component="a" href="https://www.kviff.com/cs/o-nas/partneri" target="_blank" rel="noopener noreferrer" variant="outline" color="dark">
+            Zdroj KVIFF
+          </Button>
+        </Group>
+
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          <Paper p="lg" radius={8} withBorder bg="#11100e" c="#fffaf0">
+            <Title order={3} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Teze pro cteni</Title>
+            <Text c="#f4ead8" size="lg">
+              Festival ma kulturni a medialni auru, partneri maji penize, sluzby, distribuci nebo infrastrukturu. Vary jim neprodavaji jen logo na plote: prodavaji pritomnost uvnitr udalosti, kterou sleduji divaci, media, politici, filmari a byznys.
+            </Text>
+            <Text c="#f4ead8" mt="md">
+              Je to interpretace verejne komunikovanych partnerstvi, ne dukaz jednotlivych obchodnich jednani. Proto u kazde vrstvy drzime zvlast zdroj a faktickou oporu.
+            </Text>
+          </Paper>
+
+          <Paper p="lg" radius={8} withBorder bg="#fffaf0">
+            <Title order={3} mb="md" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Mapa typu kapitalu</Title>
+            <Stack gap="xs">
+              {capitalEntries.map(({ capital, count }) => (
+                <Group key={capital} gap="sm" wrap="nowrap">
+                  <Box w={14} h={14} bg={capitalColors[capital]} style={{ borderRadius: 4, flex: '0 0 auto' }} />
+                  <Text style={{ flex: 1 }} fw={800}>{partnerCapitalLabels[capital]}</Text>
+                  <Text ff="monospace" fw={900}>{count}x</Text>
+                </Group>
+              ))}
+            </Stack>
+            <Text mt="md" size="sm" c="dimmed">
+              Pocet neznamena velikost penez. Rika jen, jak casto se dany typ hodnoty objevuje v nasi redakcni klasifikaci partnerstvi.
+            </Text>
+          </Paper>
+        </SimpleGrid>
+
+        <Stack gap="md" mt="md">
+          {partnerExchangeRows.map((row) => (
+            <Tooltip key={row.segment} label={`${row.evidence} Zdroj: ${row.sourceLabel}`} multiline maw={420} withArrow>
+              <Paper p="md" radius={8} withBorder bg="#ffffff" style={{ cursor: 'help' }}>
+                <SimpleGrid cols={{ base: 1, md: 3 }} spacing="md">
+                  <Stack gap={6}>
+                    <Text size="xs" fw={900} tt="uppercase" c="dimmed">{row.segment}</Text>
+                    <Group gap={6}>
+                      {row.partners.map((partner) => (
+                        <Badge key={partner} variant="light" color="dark">{partner}</Badge>
+                      ))}
+                    </Group>
+                    <Group gap={6}>
+                      {row.capital.map((capital) => (
+                        <Badge
+                          key={capital}
+                          variant="filled"
+                          style={{ background: capitalColors[capital], color: '#11100e' }}
+                        >
+                          {partnerCapitalLabels[capital]}
+                        </Badge>
+                      ))}
+                    </Group>
+                  </Stack>
+
+                  <Stack gap={6}>
+                    <Text fw={900}>Partner dava festivalu</Text>
+                    {row.givesFestival.map((item) => (
+                      <Text key={item} size="sm">- {item}</Text>
+                    ))}
+                  </Stack>
+
+                  <Stack gap={6}>
+                    <Text fw={900}>Festival vraci partnerovi</Text>
+                    {row.getsFromFestival.map((item) => (
+                      <Text key={item} size="sm">- {item}</Text>
+                    ))}
+                    <Button component="a" href={row.sourceUrl} target="_blank" rel="noopener noreferrer" variant="subtle" color="dark" px={0} w="fit-content">
+                      Otevrit zdroj
+                    </Button>
+                  </Stack>
+                </SimpleGrid>
+              </Paper>
+            </Tooltip>
+          ))}
+        </Stack>
+      </Paper>
+    </Box>
+  );
+}
+
 export function generateStaticParams() {
   return kviffBranches.map((branch) => ({ slug: branch.slug }));
 }
@@ -604,6 +716,8 @@ export default function KviffBranchPage({ params }: PageProps) {
             </SimpleGrid>
           </Box>
         )}
+
+        {branch.slug === 'ekonomika-pozornosti' && <PartnerPrestigeBlock />}
 
         {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'gender-ve-varech') && <HonoraryGenderBlock />}
         {branch.slug === 'mapa-filmu' && <FilmScaleBlock />}

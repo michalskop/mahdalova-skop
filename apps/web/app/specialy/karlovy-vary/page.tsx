@@ -137,6 +137,31 @@ export default function KarlovyVarySpecialPage() {
       </Box>
 
       <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
+        <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#fffaf0">
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+            <Stack gap="sm">
+              <Badge w="fit-content" color="yellow" variant="light">Partneri a prestiž</Badge>
+              <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>
+                KVIFF neprodává jen loga. Prodává přístup k pozornosti.
+              </Title>
+              <Text size="lg">
+                Nová část ekonomické kapitoly skládá partnery do matice: co dávají festivalu a co si z něj odnášejí. Peníze, služby, mediální dosah, CSR a řemeslný symbol Křišťálového glóbu čteme jako různé měny jedné festivalové ekonomiky.
+              </Text>
+              <Button component={Link} href="/specialy/karlovy-vary/ekonomika-pozornosti" color="dark" w="fit-content">
+                Otevřít matici partnerství
+              </Button>
+            </Stack>
+            <SimpleGrid cols={2} spacing="sm">
+              <Paper p="md" radius={8} bg="#fffdf8"><Text fw={900} ff="monospace">80 %</Text><Text size="sm">rozpočtu od sponzorů</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffdf8"><Text fw={900} ff="monospace">20 %</Text><Text size="sm">veřejné zdroje</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffdf8"><Text fw={900}>Moser</Text><Text size="sm">ceny jako symbol prestiže</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffdf8"><Text fw={900}>innogy</Text><Text size="sm">Kino bez bariér a CSR vrstva</Text></Paper>
+            </SimpleGrid>
+          </SimpleGrid>
+        </Paper>
+      </Box>
+
+      <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
         <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#fffdf8">
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
