@@ -131,6 +131,7 @@ export const kviffBranches: KviffBranch[] = [
         body: [
           'Budeme rozlišovat všechny uvedené filmy, hlavní soutěž, Proxima nebo historické sekce a vítěze hlavních cen. Teprve rozdíl mezi těmito vrstvami ukáže, zda festival dával prostor jedněm regionům, zatímco nejvyšší prestiž směřovala jinam.',
           'Koprodukce budeme počítat dvojmo: presence count ukáže, kde se země objevila, fractional count rozdělí jeden film mezi všechny produkční země.',
+          'Souhrnné počty filmů a projekcí od roku 1995 používáme jako kontrolní rám: než budeme tvrdit, že některý region posílil, musíme vědět, jestli zrovna nerostl celý program nebo naopak neklesal počet titulů.',
         ],
       },
     ],

@@ -6,6 +6,7 @@ import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { kviffBranches, kviffSources } from './data';
 import { current2026, finalStats, formatNumber, maxTickets, spendingRatio2026, ticketShare2026 } from './stats';
 import { honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from './honors';
+import { firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from './films';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
 const COVER = `${BASE_URL}/images/specials/karlovy-vary.svg`;
@@ -156,6 +157,29 @@ export default function KarlovyVarySpecialPage() {
               <Paper p="md" radius={8} bg="#f4f7fa"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
               <Paper p="md" radius={8} bg="#fffaf0"><Text fw={900} ff="monospace">2009-2012</Text><Text size="sm">nejhustší ženská vlna</Text></Paper>
               <Paper p="md" radius={8} bg="#fffaf0"><Text fw={900} ff="monospace">2026*</Text><Text size="sm">Binoche mezi třemi poctami</Text></Paper>
+            </SimpleGrid>
+          </SimpleGrid>
+        </Paper>
+      </Box>
+
+      <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
+        <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="#fffdf8">
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+            <Stack gap="sm">
+              <Badge w="fit-content" color="teal" variant="light">Země a program v čase</Badge>
+              <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>
+                Méně filmů než na vrcholu, ale víc prostoru pro každý titul.
+              </Title>
+              <Text size="lg">
+                Dostupná řada počtů filmů vrcholí rokem {peakFilmYear.year} s {peakFilmYear.totalFilms} filmy. V roce {latestClosedFilmYear.year} bylo filmů {latestClosedFilmYear.totalFilms}, ale projekcí {latestClosedFilmYear.screenings}. Projekce na jeden film vzrostly z {firstScreeningsPerFilm.toString().replace('.', ',')} v roce 1996 na {latestScreeningsPerFilm.toString().replace('.', ',')} v roce {latestClosedFilmYear.year}.
+              </Text>
+              <Button component={Link} href="/specialy/karlovy-vary/mapa-filmu" color="dark" w="fit-content">Otevřít mapu filmů</Button>
+            </Stack>
+            <SimpleGrid cols={2} spacing="sm">
+              <Paper p="md" radius={8} bg="#eef8f4"><Text fw={900} ff="monospace">{peakFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {peakFilmYear.year}</Text></Paper>
+              <Paper p="md" radius={8} bg="#eef8f4"><Text fw={900} ff="monospace">{latestClosedFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {latestClosedFilmYear.year}</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0"><Text fw={900} ff="monospace">{firstScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film 1996</Text></Paper>
+              <Paper p="md" radius={8} bg="#fffaf0"><Text fw={900} ff="monospace">{latestScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film {latestClosedFilmYear.year}</Text></Paper>
             </SimpleGrid>
           </SimpleGrid>
         </Paper>

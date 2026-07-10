@@ -17,6 +17,7 @@ import {
   ticketShare2026,
 } from '../stats';
 import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from '../honors';
+import { completeBreakdownRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 
 type PageProps = {
   params: { slug: string };
@@ -100,6 +101,60 @@ function HonoraryGenderBlock() {
                 <Text fw={900}>{recipient.name}</Text>
                 <Text size="sm" c="dimmed">{recipient.year}{recipient.status === 'announced' ? ' oznámeno' : ''} · {recipient.country}</Text>
                 <Text size="sm">{recipient.role}</Text>
+              </Paper>
+            ))}
+          </SimpleGrid>
+        </Paper>
+      </SimpleGrid>
+    </Box>
+  );
+}
+
+function FilmScaleBlock() {
+  const maxFilms = peakFilmYear.totalFilms ?? 1;
+  const recentBreakdown = completeBreakdownRows.slice(-4);
+
+  return (
+    <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+        <Paper p="lg" radius={8} withBorder bg="#fffdf8">
+          <Badge w="fit-content" color="teal" variant="light" mb="sm">Hotová časová osa</Badge>
+          <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Program se po maximu zmenšil, ale zhoustl</Title>
+          <Text size="lg">
+            Nejvíc filmů v dostupné řadě má rok {peakFilmYear.year}: {peakFilmYear.totalFilms} titulů. Uzavřený rok {latestClosedFilmYear.year} má {latestClosedFilmYear.totalFilms} filmů, ale {latestClosedFilmYear.screenings} projekcí. Jeden film tak dnes připadá zhruba na {latestScreeningsPerFilm.toString().replace('.', ',')} projekce; v roce 1996 to bylo {firstScreeningsPerFilm.toString().replace('.', ',')}.
+          </Text>
+          <Stack gap="sm" mt="lg">
+            {filmScaleByPeriod.map((row) => (
+              <DataBar key={row.period} label={row.period} value={row.avgFilms} max={maxFilms} color="#6fb3a3" />
+            ))}
+          </Stack>
+          <Text mt="md" c="dimmed">Sloupce ukazují průměrný počet filmů v období. Projekce držíme odděleně, protože jedna země může mít méně titulů, ale výraznější festivalovou přítomnost.</Text>
+        </Paper>
+
+        <Paper p="lg" radius={8} withBorder bg="#11100e" c="#fffaf0">
+          <Title order={2} mb="xs" style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Co to znamená pro země</Title>
+          <Text c="#f4ead8" size="lg">
+            Země v čase nepůjde férově číst jen jako mapa všech vlaječek. Koprodukce budeme počítat dvěma způsoby: presence count řekne, kde se země objevila, fractional count rozdělí jeden film mezi všechny produkční země. Teprve rozdíl ukáže, jestli festival otevíral prostor novým regionům, nebo jen častěji uváděl mezinárodní koprodukce.
+          </Text>
+          <SimpleGrid cols={2} spacing="sm" mt="lg">
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{peakFilmYear.totalFilms}</Text><Text size="sm">filmů v maximu {peakFilmYear.year}</Text></Paper>
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{latestClosedFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {latestClosedFilmYear.year}</Text></Paper>
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{latestScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film v roce {latestClosedFilmYear.year}</Text></Paper>
+            <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">2x</Text><Text size="sm">metoda pro koprodukce</Text></Paper>
+          </SimpleGrid>
+        </Paper>
+
+        <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
+          <Group justify="space-between" align="end" mb="md">
+            <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Novější roky: složení programu</Title>
+            <Text c="dimmed">Úplné členění máme souvisle od roku 2022, plus rok 2018.</Text>
+          </Group>
+          <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
+            {recentBreakdown.map((row) => (
+              <Paper key={row.year} p="md" radius={8} withBorder>
+                <Text fw={900} ff="monospace">{row.year}</Text>
+                <Text size="sm">{row.totalFilms} filmů celkem</Text>
+                <Text size="sm" c="dimmed">{row.fictionFeatures} hraných · {row.documentaryFeatures} dokumentů · {row.shortFilms} krátkých</Text>
               </Paper>
             ))}
           </SimpleGrid>
@@ -225,6 +280,7 @@ export default function KviffBranchPage({ params }: PageProps) {
         )}
 
         {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'gender-ve-varech') && <HonoraryGenderBlock />}
+        {branch.slug === 'mapa-filmu' && <FilmScaleBlock />}
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
           <Paper p="lg" radius={8} withBorder bg="#fffaf0">
