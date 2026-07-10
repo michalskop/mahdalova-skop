@@ -48,6 +48,38 @@ REGION = {
 }
 COUNTRY_TO_REGION = {c: r for r, cs in REGION.items() for c in cs}
 COUNTRY_TO_REGION.update({c: 'Evropa' for c in REGION['Europe']})
+# doplňky map po prvním běhu
+COUNTRY_TO_REGION.update({
+    'Pakistan': 'Asie', 'Barma': 'Asie', 'Burma': 'Asie',
+    'Guinea': 'Afrika', 'Malawi': 'Afrika', 'Namibia': 'Afrika', 'Sierra Leone': 'Afrika',
+    'Iraqi Kurdistan': 'Blízký východ', 'Kurdistan': 'Blízký východ',
+    'Jamaica': 'Latinská Amerika',
+})
+
+# Očista parserových úniků: u vícerežisérských filmů se do "země" dostane
+# i jméno režiséra ("Jmeno / Russia") – bereme část za posledním lomítkem.
+def clean_country(c: str):
+    if '/' in c:
+        c = c.split('/')[-1].strip()
+    if c in ('various countries', 'various directors', ''):
+        return None
+    return c
+
+for r in DATA:
+    cleaned = {}
+    for c, n in r['countries'].items():
+        cc = clean_country(c)
+        if cc is None:
+            continue
+        cleaned[cc] = cleaned.get(cc, 0) + n
+    r['countries'] = cleaned
+
+REGION_EXTRA = {
+    'Asie': ['Pakistan', 'Barma', 'Burma'],
+    'Afrika': ['Guinea', 'Malawi', 'Namibia', 'Sierra Leone'],
+    'Blízký východ': ['Iraqi Kurdistan', 'Kurdistan'],
+    'Latinská Amerika': ['Jamaica'],
+}
 
 rows = sorted(DATA, key=lambda r: r['year'])
 unknown = set()
