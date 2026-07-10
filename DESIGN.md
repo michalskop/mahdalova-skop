@@ -221,6 +221,7 @@ InfoBox can be floated right (`float="right"`) – only when there are ≥ 3–4
 - Cards: ~8px
 - Buttons: ~4–8px
 - InfoBox: no radius – the flat left border is the defining shape
+- **Sněmovna.DataTimes a Mandáty.cz – odlišný roh karty:** na rozdíl od standardních karet (všechny 4 rohy zaoblené ~8px) mají karty v těchto dvou projektech jeden roh do špičky (ostrý, 0px) a zbylé tři zaoblené stejně jako jinde. Jde o záměrnou vizuální odlišnost těchto dvou projektů, kterou zachováváme – není to nesrovnalost k opravě.
 
 ## 6. Depth & Elevation
 
