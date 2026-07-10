@@ -54,6 +54,7 @@ const rawHonoraryCrystalGlobeRecipients = [
   { year: 2004, name: 'Roman Polanski', gender: 'man', country: 'Polsko / Francie', role: 'director', roleCz: 'režisér', source: src(2004) },
   { year: 2005, name: 'Robert Redford', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2005) },
   { year: 2005, name: 'Liv Ullmann', gender: 'woman', country: 'Norsko', role: 'actor, director', roleCz: 'herečka, režisérka', source: src(2005) },
+  { year: 2005, name: 'Sharon Stone', gender: 'woman', country: 'USA', role: 'actor', roleCz: 'herečka', source: src(2005) },
   { year: 2006, name: 'Andy García', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2006) },
   { year: 2007, name: 'Danny DeVito', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2007) },
   { year: 2008, name: 'Robert De Niro', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2008) },
