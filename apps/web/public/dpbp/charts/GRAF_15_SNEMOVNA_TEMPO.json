@@ -154,5 +154,8 @@
   "view": {
    "stroke": "transparent"
   }
+ },
+ "padding": {
+  "right": 30
  }
 }

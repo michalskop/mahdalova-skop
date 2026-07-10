@@ -221,38 +221,39 @@ export default function MandateCalendar() {
 
       <div ref={containerRef} style={{ position: 'relative' }}>
         <Grid numYears={numYears} counter={counter} showZeman={showZeman} showPavel={showPavel} containerRef={containerRef} onHover={setHover} />
+        {/* Jednotný tooltip: béžové pozadí s mírnou průhledností, Roboto Slab (vzor: graf plodnosti, kap. Demografie) */}
         {hover && (
           <div
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
-              background: '#101432', color: '#fdfbf7', padding: '8px 11px', borderRadius: 4, fontSize: 12,
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', width: 250, pointerEvents: 'none', zIndex: 10,
-              boxShadow: '0 2px 6px rgba(0,0,0,0.25)', lineHeight: 1.45,
+              background: 'rgba(248,246,240,0.95)', color: '#1a1a1a', padding: '8px 11px', borderRadius: 7, fontSize: 12,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif', width: 250, pointerEvents: 'none', zIndex: 10,
+              border: '1px solid #e8e3d2', boxShadow: '0 4px 10px rgba(16,20,50,0.14)', lineHeight: 1.45,
             }}
           >
             <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 2 }}>
-              <span style={{ color: hover.president === 'Zeman' ? '#ff7a99' : '#aeb3e0' }}>{hover.president}</span>
+              <span style={{ color: hover.president === 'Zeman' ? COLORS.Z : COLORS.P }}>{hover.president}</span>
               {' · '}{hover.trip.n}. cesta{' · '}{hover.trip.z}
             </div>
             {hover.trip.m && (
-              <div style={{ color: 'rgba(253,251,247,0.85)' }}>{hover.trip.m}</div>
+              <div style={{ color: '#333333' }}>{hover.trip.m}</div>
             )}
-            <div style={{ color: 'rgba(253,251,247,0.7)', marginTop: 2 }}>
+            <div style={{ color: '#333333', marginTop: 2 }}>
               {hover.trip.dl} · {hover.trip.di}. den mandátu
             </div>
-            <div style={{ color: 'rgba(253,251,247,0.7)' }}>
+            <div style={{ color: '#333333' }}>
               {typeLabel(hover.trip)}
               {hover.trip.nz > 1 ? ` · ${hover.trip.nz}. návštěva země` : ''}
             </div>
             {hover.trip.desc && (
-              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid rgba(253,251,247,0.2)', color: 'rgba(253,251,247,0.9)' }}>
+              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid #e8e3d2', color: '#1a1a1a' }}>
                 {hover.trip.desc}
               </div>
             )}
             <div style={{
               position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
               width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
-              borderTop: '5px solid #101432',
+              borderTop: '5px solid rgba(248,246,240,0.97)',
             }} />
           </div>
         )}
@@ -284,7 +285,7 @@ export default function MandateCalendar() {
         Zemanových {TRIPS.zeman.length - TRIPS.zeman.filter(t => t.di <= maxCounter).length} cest z pozdějších let mandátu v grafu není. Najetím nebo klepnutím na kostičku se zobrazí podrobnosti cesty.
       </p>
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky, Wikipedie
+        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Kancelář prezidenta republiky
       </p>
     </div>
   );

@@ -214,35 +214,36 @@ export default function VetoChart() {
           })}
         </svg>
 
+        {/* Jednotný tooltip: béžové pozadí s mírnou průhledností, Roboto Slab (vzor: graf plodnosti, kap. Demografie) */}
         {hover && (
           <div
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 9px))',
-              background: '#101432', color: '#fdfbf7', padding: '8px 11px', borderRadius: 4, fontSize: 12,
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', width: 260, pointerEvents: 'none', zIndex: 10,
-              boxShadow: '0 2px 6px rgba(0,0,0,0.25)', lineHeight: 1.45,
+              background: 'rgba(248,246,240,0.95)', color: '#1a1a1a', padding: '8px 11px', borderRadius: 7, fontSize: 12,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif', width: 260, pointerEvents: 'none', zIndex: 10,
+              border: '1px solid #e8e3d2', boxShadow: '0 4px 10px rgba(16,20,50,0.14)', lineHeight: 1.45,
             }}
           >
             <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 2 }}>
-              <span style={{ color: hover.veto.p === 'Zeman' ? '#ff7a99' : hover.veto.p === 'Pavel' ? '#aeb3e0' : hover.veto.p === 'Havel' ? '#7fd4b6' : '#f0c05a' }}>
+              <span style={{ color: COLORS[hover.veto.p] }}>
                 {hover.veto.p}
               </span>
               {' · '}{hover.veto.n}. veto{' · '}{hover.veto.dl}
             </div>
-            <div style={{ color: 'rgba(253,251,247,0.9)' }}>{hover.veto.law}</div>
+            <div style={{ color: '#1a1a1a' }}>{hover.veto.law}</div>
             {hover.veto.why && (
-              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid rgba(253,251,247,0.2)', color: 'rgba(253,251,247,0.85)' }}>
+              <div style={{ marginTop: 5, paddingTop: 5, borderTop: '1px solid #e8e3d2', color: '#333333' }}>
                 {hover.veto.why}
               </div>
             )}
-            <div style={{ marginTop: 5, color: 'rgba(253,251,247,0.7)' }}>
+            <div style={{ marginTop: 5, color: '#333333' }}>
               {voteLine(hover.veto) && <div>{voteLine(hover.veto)}</div>}
               <div>{outcomeText(hover.veto)}</div>
             </div>
             <div style={{
               position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
               width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
-              borderTop: '5px solid #101432',
+              borderTop: '5px solid rgba(248,246,240,0.97)',
             }} />
           </div>
         )}
@@ -255,7 +256,7 @@ export default function VetoChart() {
         prezidentovo odůvodnění i výsledek hlasování.
       </p>
       <p style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 14, color: '#333333', marginTop: 10 }}>
-        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Poslanecká sněmovna PČR, Wikipedie
+        • autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>Kateřina Mahdalová &amp; Michal Škop</a> • data: Poslanecká sněmovna PČR
       </p>
     </div>
   );

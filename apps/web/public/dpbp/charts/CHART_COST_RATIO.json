@@ -68,8 +68,7 @@
       "values": [
        0,
        50,
-       100,
-       150
+       100
       ],
       "titleAngle": 0,
       "titleAnchor": "end",
@@ -152,5 +151,8 @@
   "view": {
    "stroke": "transparent"
   }
+ },
+ "padding": {
+  "right": 48
  }
 }

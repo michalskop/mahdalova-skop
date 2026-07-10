@@ -299,32 +299,26 @@
   position: relative;
 }
 .dt-visual-brand {
-  position: absolute;
-  top: 38px;
-  right: 20px;
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3px;
-  width: 64px;
-  margin: 0;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0 0 6px auto;
+  width: fit-content;
   color: var(--dt-text);
   text-decoration: none;
 }
 .dt-visual-brand svg {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 30px;
+  height: 30px;
   flex: 0 0 auto;
 }
 .dt-visual-brand span {
   font-family: 'Roboto Slab', Georgia, serif;
-  font-size: 9.5px;
+  font-size: 15.5px;
   font-weight: 700;
-  line-height: 1.15;
-  text-align: center;
-  width: 100%;
+  line-height: 1;
   color: var(--dt-text);
 }
 .dt-visual-kicker {
@@ -341,7 +335,6 @@
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 8px;
-  padding-right: 86px;
   color: var(--dt-text);
 }
 .dt-visual-note {
@@ -349,8 +342,7 @@
   font-size: 14px;
   color: #333333;
   line-height: 1.55;
-  margin: 0 0 14px;
-  padding-right: 86px;
+  margin: 0 0 6px;
 }
 .dt-visual svg text {
   font-family: var(--font-roboto-condensed), Arial, sans-serif;
@@ -726,19 +718,11 @@
     padding: 16px 18px;
     margin: -4px 0 26px;
   }
-  .dt-visual-brand {
-    top: 36px;
-    right: 18px;
-    width: 64px;
-  }
-  .dt-visual-brand svg {
-    width: 42px;
-    height: 42px;
-  }
-  .dt-visual-brand span { font-size: 9px; }
+  
+  
+  
   .dt-visual-title { font-size: 16px; }
-  .dt-visual-title,
-  .dt-visual-note { padding-right: 76px; }
+  
   .dt-visual-source,
   .dt-visual-authors { font-size: 13px; }
   .dt-support-link {
@@ -760,11 +744,7 @@
   .dt-card-title { font-size: 16px; }
   .dt-card-title--lead { font-size: 17px; }
   .dt-card-thumb { height: 140px; }
-  .dt-visual-brand {
-    position: static;
-    margin-left: auto;
-    margin-bottom: 8px;
-  }
+  
   .dt-visual-authors {
     width: 100%;
     text-align: left;
@@ -775,6 +755,27 @@
     font-size: 10px;
     letter-spacing: 0.1em;
   }
+}
+
+/* Sjednocení s VegaChart kartami: článkové styly přebíjejí p-selektory,
+   proto mají třídy grafu vyšší prioritu. Podtitulek 14 px Roboto Condensed,
+   patička 14 px – shodné se všemi ostatními grafy a mapami. */
+.dt-hub .dt-visual-note,
+.dt-hub .dt-visual-source,
+.dt-hub .dt-visual-authors {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #333333 !important;
+}
+.dt-hub .dt-visual-title {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.25 !important;
+  color: #1a1a1a !important;
+}
+@media (max-width: 560px) {
+  .dt-hub .dt-visual-title { font-size: 16px !important; }
 }
 </style>
 
@@ -835,6 +836,9 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
   </div>
 
   <div class="dt-visual">
+    <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
+    <p class="dt-visual-note">Úhrnná plodnost v Česku: počet dětí na jednu ženu ve věku 15–49 let, 1990–2025</p>
+
     <a class="dt-visual-brand" href="https://datatimes.cz" target="_blank" rel="noopener" aria-label="DataTimes.cz">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
         <defs>
@@ -854,9 +858,6 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
       </svg>
       <span>DataTimes.cz</span>
     </a>
-    <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
-    <p class="dt-visual-note">Časová řada od roku 1990 v pětiletých intervalech ukazuje, proč je číslo 1,28 důležité až v kontextu dlouhodobého vývoje. Česko je dlouhodobě pod hranicí 2,10 dítěte na ženu a poslední roky znamenají další prudký propad.</p>
-
     <svg class="dt-visual-svg" viewBox="0 0 660 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku v letech 1990 až 2025">
       <g stroke="rgba(0,0,0,0.08)" stroke-width="1">
         <line x1="60" y1="30" x2="620" y2="30"/>
@@ -920,8 +921,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
       </g>
     </svg>
     <div class="dt-visual-meta">
-      <p class="dt-visual-authors" style="flex:0 0 100%;text-align:left;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a></p>
-      <p class="dt-visual-source" style="flex:0 0 100%;">• data: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
+      <p class="dt-visual-source" style="flex:0 0 100%;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a> • data: ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad z kulatého stolu PSP 27. 4. 2026</p>
     </div>
   </div>
 
@@ -1126,6 +1126,10 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
     <p class="dt-lead">Kdo skutečně rozhoduje o složení Sněmovny – a kdo se naopak politického rozhodování vzdává. Česká volební mapa se mění podle vlastních stranických preferencí, ale také podle toho, jak voličská populace stárne, kdo se kam přistěhuje a odkud odstěhuje, kdo dokončí který stupeň školy, kdo zůstává v menších obcích a kdo k volbám vůbec nepřijde. Pokud bude v roce 2029 většina českých voličů starší padesáti let, znamená to, že politické priority mladších ročníků mohou být ve volebním výsledku zastoupené ještě méně než dosud.</p>
 
     <div class="dt-visual">
+      <div class="dt-visual-kicker">Stárnoucí populace ovlivní volby</div>
+      <h3 class="dt-visual-title">Voličská populace stárne rychleji než politická debata</h3>
+      <p class="dt-visual-note">Sloupce ukazují podíl lidí ve věku 50 a více let mezi obyvateli ve věku 18 a více let. Roky 1990–2020 jsou dopočtené ze skutečné věkové skladby obyvatelstva podle věku; budoucí roky vycházejí ze střední varianty projekce ČSÚ.</p>
+
       <a class="dt-visual-brand" href="https://datatimes.cz" target="_blank" rel="noopener" aria-label="DataTimes.cz">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
           <defs>
@@ -1145,11 +1149,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
         </svg>
         <span>DataTimes.cz</span>
       </a>
-      <div class="dt-visual-kicker">Stárnoucí populace ovlivní volby</div>
-      <h3 class="dt-visual-title">Voličská populace stárne rychleji než politická debata</h3>
-      <p class="dt-visual-note">Sloupce ukazují podíl lidí ve věku 50 a více let mezi obyvateli ve věku 18 a více let. Roky 1990–2020 jsou dopočtené ze skutečné věkové skladby obyvatelstva podle věku; budoucí roky vycházejí ze střední varianty projekce ČSÚ.</p>
-
-      <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Podíl obyvatel ve věku 50 a více let mezi obyvateli ve věku 18 a více let v letech 1990 až 2040">
+    <svg class="dt-visual-svg" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Podíl obyvatel ve věku 50 a více let mezi obyvateli ve věku 18 a více let v letech 1990 až 2040">
         <line x1="72" y1="230" x2="810" y2="230" stroke="#101432" stroke-width="1"/>
         <line x1="72" y1="170" x2="810" y2="170" stroke="#d8d4c7" stroke-width="1"/>
         <line x1="72" y1="110" x2="810" y2="110" stroke="#d8d4c7" stroke-width="1"/>
@@ -1195,8 +1195,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
         </g>
       </svg>
       <div class="dt-visual-meta">
-        <p class="dt-visual-source">• Zdroj: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
-        <p class="dt-visual-authors">• Autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a></p>
+        <p class="dt-visual-source" style="flex:0 0 100%;">• autoři: <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer">Kateřina Mahdalová &amp; Michal Škop</a> • data: ČSÚ, <a href="https://csu.gov.cz/vekova-skladba-obyvatelstva-cr-1945-2024" target="_blank" rel="noopener">Věková skladba obyvatelstva ČR 1945–2024</a>; <a href="https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100" target="_blank" rel="noopener">Projekce obyvatelstva ČR 2023–2100</a>, Tab. 1 střední varianta. Graf ukazuje podíl 50+ mezi obyvateli ve věku 18+; hodnoty jsou dopočtené z jednotek věku a zaokrouhlené na jedno desetinné místo.</p>
       </div>
     </div>
 

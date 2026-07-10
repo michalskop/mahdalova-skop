@@ -266,20 +266,21 @@ export default function PresidentialTripsMap() {
           containerRef={containerRef}
           onHover={setHover}
         />
+        {/* Jednotný tooltip: béžové pozadí s mírnou průhledností, Roboto Slab (vzor: graf plodnosti, kap. Demografie) */}
         {hover && (
           <div
             style={{
               position: 'absolute', left: hover.left, top: hover.top, transform: 'translate(-50%, calc(-100% - 8px))',
-              background: '#101432', color: '#fdfbf7', padding: '5px 9px', borderRadius: 4, fontSize: 11.5,
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
-              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+              background: 'rgba(248,246,240,0.95)', color: '#1a1a1a', padding: '5px 9px', borderRadius: 7, fontSize: 11.5,
+              fontFamily: 'var(--font-roboto-slab), Georgia, serif', whiteSpace: 'nowrap', pointerEvents: 'none', zIndex: 10,
+              border: '1px solid #e8e3d2', boxShadow: '0 4px 10px rgba(16,20,50,0.14)',
             }}
           >
             {hover.text}
             <div style={{
               position: 'absolute', left: '50%', top: '100%', transform: 'translateX(-50%)',
               width: 0, height: 0, borderLeft: '5px solid transparent', borderRight: '5px solid transparent',
-              borderTop: '5px solid #101432',
+              borderTop: '5px solid rgba(248,246,240,0.97)',
             }} />
           </div>
         )}

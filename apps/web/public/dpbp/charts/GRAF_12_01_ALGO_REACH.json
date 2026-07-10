@@ -49,7 +49,11 @@
       "gridColor": "#e8e8dc",
       "domain": false,
       "ticks": false,
-      "values": [0, 2, 4, 6],
+      "values": [
+       0,
+       2,
+       4
+      ],
       "titleAngle": 0,
       "titleAnchor": "end",
       "titleAlign": "right",

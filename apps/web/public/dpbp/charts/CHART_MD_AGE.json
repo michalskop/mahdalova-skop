@@ -1,12 +1,12 @@
 {
  "_source": "ÚZIS, Registr zdravotnických pracovníků 2024",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "description": "Věková struktura lékařů v ČR: Podíl lékařů v důchodovém věku (65+)",
+ "description": "Věková struktura lékařů v ČR: podíl lékařů a lékařek v důchodovém věku (65+), svislé sloupce",
  "width": 450,
  "height": 300,
  "title": {
-  "text": "Třetina dětských lékařů už je v důchodovém věku",
-  "subtitle": "Podíl lékařů ve věku 65 a více let podle specializace (%, 2024)"
+  "text": "Podíl lékařů a lékařek ve věku 65 a více let podle specializace",
+  "subtitle": "Třetina dětských lékařů a lékařek už je v důchodovém věku; v procentech, 2024"
  },
  "data": {
   "values": [
@@ -27,29 +27,31 @@
    ],
    "mark": {"type": "bar", "cornerRadiusEnd": 4},
    "encoding": {
-    "y": {
+    "x": {
      "field": "spec",
      "type": "nominal",
      "title": null,
      "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"],
-     "axis": {"domain": false, "ticks": false, "labelPadding": 8}
+     "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0,
+      "labelPadding": 6,
+      "labelExpr": "split(datum.value, ' ')"
+     }
     },
-    "x": {
+    "y": {
      "field": "val",
      "type": "quantitative",
-     "title": "podíl lékařů 65+ (%)",
-     "scale": {"domain": [0, 100]},
+     "title": null,
+     "scale": {"domain": [0, 50]},
      "axis": {
-      "values": [0, 25, 50],
       "grid": true,
       "gridColor": "#e8e8dc",
       "domain": false,
       "ticks": false,
-      "titleAngle": 0,
-      "titleAnchor": "end",
-      "titleAlign": "right",
-      "titlePadding": -14,
-      "titleFontWeight": "bold"
+      "values": [0, 25, 50],
+      "labelExpr": "datum.value + ' %'"
      }
     },
     "color": {
@@ -68,30 +70,30 @@
     "tooltip": [
      {"field": "spec", "title": "Specializace"},
      {"field": "cat", "title": "Skupina"},
-     {"field": "label", "title": "Podíl lékařů 65+"}
+     {"field": "label", "title": "Podíl lékařů a lékařek 65+"}
     ]
    }
   },
   {
    "mark": {
     "type": "text",
-    "align": "left",
-    "baseline": "middle",
-    "dx": 6,
-    "fontSize": 13,
+    "align": "center",
+    "baseline": "bottom",
+    "dy": -6,
+    "fontSize": 14,
     "fontWeight": "bold",
     "color": "#1a1a1a"
    },
    "encoding": {
-    "y": {
+    "x": {
      "field": "spec",
      "type": "nominal",
      "sort": ["Dětští praktičtí lékaři", "Dětští psychiatři", "Praktičtí lékaři", "Ostatní lékaři"]
     },
-    "x": {
+    "y": {
      "field": "val",
      "type": "quantitative",
-     "scale": {"domain": [0, 100]}
+     "scale": {"domain": [0, 50]}
     },
     "text": {"field": "label"},
     "opacity": {"condition": {"param": "serie", "value": 1}, "value": 0.18}

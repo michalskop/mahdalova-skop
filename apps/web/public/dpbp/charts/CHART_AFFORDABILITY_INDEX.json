@@ -10,13 +10,48 @@
  "height": 300,
  "data": {
   "values": [
-   {"city": "Amsterdam", "value": 15.4, "label": "15,4", "group": "Evropská špička"},
-   {"city": "Atény", "value": 15.3, "label": "15,3", "group": "Evropská špička"},
-   {"city": "Praha", "value": 15.0, "label": "15,0", "group": "Praha"},
-   {"city": "Bratislava", "value": 13.9, "label": "13,9", "group": "Blízké metropole"},
-   {"city": "Varšava", "value": 9.2, "label": "9,2", "group": "Blízké metropole"},
-   {"city": "Berlín", "value": 8.4, "label": "8,4", "group": "Blízké metropole"},
-   {"city": "Vídeň", "value": 8.1, "label": "8,1", "group": "Blízké metropole"}
+   {
+    "city": "Amsterdam",
+    "value": 15.4,
+    "label": "15,4",
+    "group": "Evropská špička"
+   },
+   {
+    "city": "Atény",
+    "value": 15.3,
+    "label": "15,3",
+    "group": "Evropská špička"
+   },
+   {
+    "city": "Praha",
+    "value": 15.0,
+    "label": "15,0",
+    "group": "Praha"
+   },
+   {
+    "city": "Bratislava",
+    "value": 13.9,
+    "label": "13,9",
+    "group": "Blízké metropole"
+   },
+   {
+    "city": "Varšava",
+    "value": 9.2,
+    "label": "9,2",
+    "group": "Blízké metropole"
+   },
+   {
+    "city": "Berlín",
+    "value": 8.4,
+    "label": "8,4",
+    "group": "Blízké metropole"
+   },
+   {
+    "city": "Vídeň",
+    "value": 8.1,
+    "label": "8,1",
+    "group": "Blízké metropole"
+   }
   ]
  },
  "layer": [
@@ -24,26 +59,55 @@
    "params": [
     {
      "name": "serie",
-     "select": {"type": "point", "fields": ["group"]},
+     "select": {
+      "type": "point",
+      "fields": [
+       "group"
+      ]
+     },
      "bind": "legend"
     }
    ],
-   "mark": {"type": "bar", "cornerRadiusEnd": 3},
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+   },
    "encoding": {
     "y": {
      "field": "city",
      "type": "nominal",
      "title": null,
-     "sort": ["Amsterdam", "Atény", "Praha", "Bratislava", "Varšava", "Berlín", "Vídeň"],
-     "axis": {"domain": false, "ticks": false, "labelPadding": 8}
+     "sort": [
+      "Amsterdam",
+      "Atény",
+      "Praha",
+      "Bratislava",
+      "Varšava",
+      "Berlín",
+      "Vídeň"
+     ],
+     "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8
+     }
     },
     "x": {
      "field": "value",
      "type": "quantitative",
      "title": "hrubých ročních mezd",
-     "scale": {"domain": [0, 17]},
+     "scale": {
+      "domain": [
+       0,
+       17
+      ]
+     },
      "axis": {
-      "values": [0, 5, 10],
+      "values": [
+       0,
+       5,
+       10
+      ],
       "grid": true,
       "gridColor": "#e8e8dc",
       "domain": false,
@@ -59,18 +123,37 @@
      "field": "group",
      "type": "nominal",
      "scale": {
-      "domain": ["Praha", "Evropská špička", "Blízké metropole"],
-      "range": ["#de1743", "#272a59", "#6267a3"]
+      "domain": [
+       "Praha",
+       "Evropská špička",
+       "Blízké metropole"
+      ],
+      "range": [
+       "#de1743",
+       "#272a59",
+       "#6267a3"
+      ]
      },
-     "legend": {"title": null}
+     "legend": {
+      "title": null
+     }
     },
     "opacity": {
-     "condition": {"param": "serie", "value": 1},
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
      "value": 0.18
     },
     "tooltip": [
-     {"field": "city", "title": "Město"},
-     {"field": "label", "title": "Hrubých ročních mezd na byt"}
+     {
+      "field": "city",
+      "title": "Město"
+     },
+     {
+      "field": "label",
+      "title": "Hrubých ročních mezd na byt"
+     }
     ]
    }
   },
@@ -88,19 +171,45 @@
     "y": {
      "field": "city",
      "type": "nominal",
-     "sort": ["Amsterdam", "Atény", "Praha", "Bratislava", "Varšava", "Berlín", "Vídeň"]
+     "sort": [
+      "Amsterdam",
+      "Atény",
+      "Praha",
+      "Bratislava",
+      "Varšava",
+      "Berlín",
+      "Vídeň"
+     ]
     },
     "x": {
      "field": "value",
      "type": "quantitative",
-     "scale": {"domain": [0, 17]}
+     "scale": {
+      "domain": [
+       0,
+       17
+      ]
+     }
     },
-    "text": {"field": "label"},
-    "opacity": {"condition": {"param": "serie", "value": 1}, "value": 0.18}
+    "text": {
+     "field": "label"
+    },
+    "opacity": {
+     "condition": {
+      "param": "serie",
+      "value": 1
+     },
+     "value": 0.18
+    }
    }
   }
  ],
  "config": {
-  "view": {"stroke": "transparent"}
+  "view": {
+   "stroke": "transparent"
+  }
+ },
+ "padding": {
+  "right": 36
  }
 }

@@ -71,11 +71,9 @@
       "ticks": false,
       "values": [
        0,
-       0.5,
-       1,
-       1.5
+       1
       ],
-      "format": ".1f",
+      "format": "d",
       "titleAngle": 0,
       "titleAnchor": "end",
       "titleAlign": "right",
@@ -152,5 +150,8 @@
   "view": {
    "stroke": "transparent"
   }
+ },
+ "padding": {
+  "right": 34
  }
 }
