@@ -39,3 +39,5 @@ yarn-error.log*
 *.pem
 .~lock.*
 .claude/
+
+__pycache__/
