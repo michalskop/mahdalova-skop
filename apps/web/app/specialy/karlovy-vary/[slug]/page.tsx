@@ -448,10 +448,182 @@ function CountryBubbleMap() {
   );
 }
 
+const programSegmentColors = {
+  fictionFeatures: 'var(--mantine-color-brandTeal-6)',
+  documentaryFeatures: 'var(--mantine-color-brandOrange-6)',
+  shortFilms: 'var(--mantine-color-brandNavy-6)',
+};
+
+function percentShare(value: number, total: number) {
+  return Math.round((value / total) * 1000) / 10;
+}
+
+function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
+  const maxBreakdownFilms = Math.max(...completeBreakdownRows.map((row) => row.totalFilms ?? 0));
+
+  return (
+    <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
+      <Group justify="space-between" align="end" mb="md">
+        <Stack gap={2} maw={760}>
+          <Badge w="fit-content" color="teal" variant="light">Složení programu</Badge>
+          <Title order={2} >Novější roky: co je uvnitř katalogu</Title>
+          <Text c="dimmed">
+            Historickou řadu držíme jako kontext od roku 1995. Barevně rozkládáme jen roky, kde máme bezpečně oddělené kategorie hraných celovečerních filmů, dokumentárních celovečerních filmů a krátkých filmů.
+          </Text>
+        </Stack>
+        <Group gap="sm">
+          <Badge color="teal" variant="light">hrané</Badge>
+          <Badge color="orange" variant="light">dokumenty</Badge>
+          <Badge color="indigo" variant="light">krátké</Badge>
+        </Group>
+      </Group>
+
+      <Box mb="xl">
+        <Group justify="space-between" mb={6}>
+          <Text fw={900}>Celá dostupná řada: kolik filmů festival uváděl</Text>
+          <Text size="sm" c="dimmed">zvýrazněné roky mají úplné členění</Text>
+        </Group>
+        <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
+          <Box
+            style={{
+              display: 'grid',
+              gridTemplateColumns: `repeat(${filmCountAvailableRows.length}, minmax(26px, 1fr))`,
+              gap: 5,
+              minWidth: 940,
+              alignItems: 'end',
+              minHeight: 130,
+              borderBottom: '1px solid var(--mantine-color-background-6)',
+            }}
+          >
+            {filmCountAvailableRows.map((row) => {
+              const height = Math.max(8, Math.round(((row.totalFilms ?? 0) / maxFilms) * 104));
+              const hasBreakdown = row.availability === 'full-breakdown';
+              const tooltip = [
+                `${row.year}${row.edition ? ` · ${row.edition}. ročník` : ''}`,
+                `${row.totalFilms} filmů celkem`,
+                hasBreakdown ? 'máme úplné členění programu' : 'máme jen celkový počet',
+                row.note ?? null,
+              ].filter(Boolean).join(' · ');
+
+              return (
+                <Tooltip key={row.year} label={tooltip} multiline maw={320} withArrow>
+                  <Stack gap={4} align="center" justify="end" title={tooltip} style={{ cursor: 'help' }}>
+                    <Box
+                      aria-label={`${row.year}: ${row.totalFilms} filmů`}
+                      style={{
+                        width: 13,
+                        height,
+                        borderRadius: '5px 5px 0 0',
+                        background: hasBreakdown ? 'var(--mantine-color-brandTeal-6)' : 'var(--mantine-color-background-7)',
+                        boxShadow: row.year === peakFilmYear.year ? '0 0 0 2px var(--mantine-color-brandRoyalBlue-8)' : undefined,
+                      }}
+                    />
+                    <Text size="xs" fw={hasBreakdown ? 900 : 700} c={hasBreakdown ? 'var(--mantine-color-brandTeal-7)' : 'dimmed'}>
+                      {String(row.year).slice(2)}
+                    </Text>
+                  </Stack>
+                </Tooltip>
+              );
+            })}
+          </Box>
+        </Box>
+      </Box>
+
+      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
+        <Box
+          style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${completeBreakdownRows.length}, minmax(138px, 1fr))`,
+            gap: 18,
+            minWidth: 760,
+            alignItems: 'end',
+          }}
+        >
+          {completeBreakdownRows.map((row) => {
+            const fiction = row.fictionFeatures ?? 0;
+            const documentaries = row.documentaryFeatures ?? 0;
+            const shorts = row.shortFilms ?? 0;
+            const total = row.totalFilms ?? fiction + documentaries + shorts;
+            const barHeight = Math.max(130, Math.round((total / maxBreakdownFilms) * 230));
+            const segments = [
+              { key: 'shortFilms', label: 'krátké filmy', value: shorts, color: programSegmentColors.shortFilms },
+              { key: 'documentaryFeatures', label: 'celovečerní dokumenty', value: documentaries, color: programSegmentColors.documentaryFeatures },
+              { key: 'fictionFeatures', label: 'celovečerní hrané', value: fiction, color: programSegmentColors.fictionFeatures },
+            ];
+            const tooltip = [
+              `${row.year}${row.edition ? ` · ${row.edition}. ročník` : ''}`,
+              `${total} filmů celkem`,
+              `${fiction} hraných (${percentShare(fiction, total).toString().replace('.', ',')} %)`,
+              `${documentaries} dokumentů (${percentShare(documentaries, total).toString().replace('.', ',')} %)`,
+              `${shorts} krátkých (${percentShare(shorts, total).toString().replace('.', ',')} %)`,
+              row.note ?? null,
+            ].filter(Boolean).join(' · ');
+
+            return (
+              <Tooltip key={row.year} label={tooltip} multiline maw={360} withArrow>
+                <Stack gap="xs" align="center" title={tooltip} style={{ cursor: 'help' }}>
+                  <Text fw={900} ff="monospace">{total}</Text>
+                  <Box
+                    aria-label={`${row.year}: ${total} filmů, z toho ${fiction} hraných, ${documentaries} dokumentárních a ${shorts} krátkých`}
+                    style={{
+                      height: barHeight,
+                      width: 74,
+                      display: 'flex',
+                      flexDirection: 'column-reverse',
+                      borderRadius: 8,
+                      overflow: 'hidden',
+                      border: '1px solid var(--mantine-color-background-6)',
+                      background: 'var(--mantine-color-background-2)',
+                    }}
+                  >
+                    {segments.map((segment) => (
+                      <Box
+                        key={segment.key}
+                        style={{
+                          height: `${(segment.value / total) * 100}%`,
+                          background: segment.color,
+                          display: 'grid',
+                          placeItems: 'center',
+                          color: 'var(--mantine-color-background-0)',
+                          minHeight: segment.value > 0 ? 22 : 0,
+                        }}
+                      >
+                        <Text size="xs" fw={900} ff="monospace">{segment.value}</Text>
+                      </Box>
+                    ))}
+                  </Box>
+                  <Text fw={900}>{row.year}</Text>
+                  <Text size="xs" ta="center" c="dimmed">
+                    {fiction} hraných · {documentaries} dok. · {shorts} krát.
+                  </Text>
+                </Stack>
+              </Tooltip>
+            );
+          })}
+        </Box>
+      </Box>
+
+      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm" mt="lg">
+        <Box>
+          <Text fw={900}>Co je vidět hned</Text>
+          <Text size="sm">V letech s úplným členěním tvoří hrané celovečerní filmy pokaždé zhruba šest desetin programu.</Text>
+        </Box>
+        <Box>
+          <Text fw={900}>Co se mění</Text>
+          <Text size="sm">Krátké filmy jsou v roce 2025 početnější než dokumentární celovečerní filmy a drží programovou pestrost menšího katalogu.</Text>
+        </Box>
+        <Box>
+          <Text fw={900}>Co zatím nevíme</Text>
+          <Text size="sm">Starší roky neumíme touto skladbou poctivě dovybarvit. Kdybychom to udělali, tvářili bychom se přesněji, než dovolují zdroje.</Text>
+        </Box>
+      </SimpleGrid>
+    </Paper>
+  );
+}
+
 function FilmScaleBlock() {
   const maxFilms = peakFilmYear.totalFilms ?? 1;
   const maxScreenings = Math.max(...filmCountAvailableRows.map((row) => row.screenings ?? 0));
-  const recentBreakdown = completeBreakdownRows.slice(-4);
 
   return (
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
@@ -602,21 +774,7 @@ function FilmScaleBlock() {
           </Text>
         </Paper>
 
-        <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
-          <Group justify="space-between" align="end" mb="md">
-            <Title order={2} >Novější roky: složení programu</Title>
-            <Text c="dimmed">Úplné členění máme souvisle od roku 2022, plus rok 2018.</Text>
-          </Group>
-          <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
-            {recentBreakdown.map((row) => (
-              <Paper key={row.year} p="md" radius={8} withBorder>
-                <Text fw={900} ff="monospace">{row.year}</Text>
-                <Text size="sm">{row.totalFilms} filmů celkem</Text>
-                <Text size="sm" c="dimmed">{row.fictionFeatures} hraných · {row.documentaryFeatures} dokumentů · {row.shortFilms} krátkých</Text>
-              </Paper>
-            ))}
-          </SimpleGrid>
-        </Paper>
+        <ProgramCompositionGraphic maxFilms={maxFilms} />
       </SimpleGrid>
     </Box>
   );
