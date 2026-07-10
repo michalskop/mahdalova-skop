@@ -2,6 +2,8 @@
 
 Pokyny pro psaní obsahu (intro text, dlaždice/tiles, jednotlivé články) pro `/specialy/data-pro-budouci-premierku`. Technickou pipeline a `_meta.json` schéma popisuje [`SPECIAL.md`](./SPECIAL.md) – tento soubor je o tom, **co a jak psát**, ne kam to uložit.
 
+**Výchozí styl je vysvětlující žurnalistika** (viz STYLE_GUIDE.md §2 v repozitáři data-pro-premierku): konkrétní záhada → důkazy → co to znamená (Fisher/Klein), tah a jasné sázky (Cadwalladr), lidský detail a čistá čeština (Třešňák/Němeček).
+
 ---
 
 ## Titulky kapitol (`intro.title`)
