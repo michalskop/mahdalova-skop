@@ -19,6 +19,7 @@ import {
 import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honorarySelectionNote, honoraryTotal, honoraryWomenShare, pre1989AwardsNotes } from '../honors';
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
+import { countryHistory, countryHistoryTopCountries } from '../countries-history';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
 
 type PageProps = {
@@ -56,6 +57,58 @@ function GenderSplitBar({ label, women, men }: { label: string; women: number; m
     </Stack>
   );
 }
+
+function formatPercent(value: number) {
+  return `${value.toString().replace('.', ',')} %`;
+}
+
+function normalizeHistoryRegion(region: string) {
+  return region
+    .replace('SevernÃ­ Amerika', 'Severní Amerika')
+    .replace('LatinskÃ¡ Amerika', 'Latinská Amerika')
+    .replace('BlÃ­zkÃ½ vÃ½chod', 'Blízký východ')
+    .replace('OceÃ¡nie', 'Oceánie')
+    .replace('OstatnÃ­', 'Ostatní');
+}
+
+const countryHistoryPeriods = [
+  { period: '1992-2003', label: 'Obnova po revoluci', from: 1992, to: 2003 },
+  { period: '2004-2017', label: 'Stabilizovaná novodobá éra', from: 2004, to: 2017 },
+  { period: '2018-2026', label: 'Menší katalog, více koprodukcí', from: 2018, to: 2026 },
+].map((period) => {
+  const rows = countryHistory.filter((row) => row.year >= period.from && row.year <= period.to);
+  const regions: Record<string, number> = {};
+  let films = 0;
+  let coproductions = 0;
+  let occurrences = 0;
+
+  rows.forEach((row) => {
+    films += row.films;
+    coproductions += row.coproductions;
+    Object.entries(row.regions).forEach(([region, count]) => {
+      const normalized = normalizeHistoryRegion(region);
+      regions[normalized] = (regions[normalized] ?? 0) + count;
+      occurrences += count;
+    });
+  });
+
+  return {
+    ...period,
+    years: rows.length,
+    films,
+    coproductions,
+    coproductionShare: Math.round((coproductions / films) * 1000) / 10,
+    occurrences,
+    topRegions: Object.entries(regions)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+      .map(([region, count]) => ({
+        region,
+        count,
+        share: Math.round((count / occurrences) * 1000) / 10,
+      })),
+  };
+});
 
 function HonoraryDotTimeline() {
   const years = Array.from(new Set(honoraryCrystalGlobeRecipients.map((recipient) => recipient.year)));
@@ -250,6 +303,22 @@ function HonoraryGenderBlock() {
           </Text>
         </Paper>
 
+        <Paper p="lg" radius={8} withBorder bg="background.1">
+          <Badge w="fit-content" color="orange" variant="light" mb="sm">Odpověď k genderu</Badge>
+          <Title order={2} mb="xs">Nejde o cenu za jeden film, ale o kanonizaci osobností</Title>
+          <Text size="lg">
+            V této kategorii sledujeme jen Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. To je důležité: genderový graf neukazuje, kdo vyhrál soutěžní ročník, ale koho festival dlouhodobě zapisuje do vlastní paměti světového filmu.
+          </Text>
+          <SimpleGrid cols={3} spacing="sm" mt="lg">
+            <Paper p="md" radius={8} bg="brand.0"><Text fw={900} ff="monospace">{formatPercent(honoraryWomenShare)}</Text><Text size="sm">žen v evidované řadě</Text></Paper>
+            <Paper p="md" radius={8} bg="brandNavy.0"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2"><Text fw={900} ff="monospace">2009-2012</Text><Text size="sm">největší koncentrace žen</Text></Paper>
+          </SimpleGrid>
+          <Text mt="md" size="sm" c="dimmed">
+            Tooltip u každé tečky proto uvádí nejen jméno a zemi, ale i přesnou kategorii a důvod: čestné ocenění za mimořádný umělecký přínos a výraznou stopu ve vývoji světové kinematografie.
+          </Text>
+        </Paper>
+
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
           <Title order={2} mb="xs" >Sdělení do článku</Title>
           <Text c="background.2" size="lg">
@@ -415,6 +484,63 @@ function CountryLayerMap({
           );
         })}
       </Box>
+    </Paper>
+  );
+}
+
+function CountryHistoryOverview() {
+  const maxOccurrences = Math.max(...countryHistoryPeriods.map((period) => period.occurrences));
+
+  return (
+    <Paper p="lg" radius={8} withBorder bg="background.2">
+      <Group justify="space-between" align="end" mb="md">
+        <Stack gap={2}>
+          <Badge w="fit-content" color="orange" variant="light">Historický souhrn</Badge>
+          <Title order={3}>Změnilo se, odkud filmy přijíždějí?</Title>
+          <Text c="dimmed">
+            Film-level country dataset máme souvisle pro novodobou éru 1992-2026. Počítáme výskyty produkčních zemí: u koprodukcí se jeden film započítá každé uvedené zemi.
+          </Text>
+        </Stack>
+        <Text fw={900} ff="monospace">{countryHistory.length} ročníků</Text>
+      </Group>
+
+      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="md">
+        {countryHistoryPeriods.map((period) => (
+          <Paper key={period.period} p="md" radius={8} withBorder bg="background.1">
+            <Text fw={900}>{period.period}</Text>
+            <Text size="sm" c="dimmed">{period.label}</Text>
+            <DataBar label="výskyty" value={period.occurrences} max={maxOccurrences} color="var(--mantine-color-brandTeal-6)" />
+            <Text size="sm"><Text span fw={900} ff="monospace">{formatPercent(period.coproductionShare)}</Text> filmů je koprodukčních.</Text>
+            <Stack gap={4} mt="sm">
+              {period.topRegions.map((row) => (
+                <Group key={row.region} gap="xs" wrap="nowrap">
+                  <Text size="sm" style={{ flex: 1 }}>{row.region}</Text>
+                  <Text size="sm" fw={900} ff="monospace">{formatPercent(row.share)}</Text>
+                </Group>
+              ))}
+            </Stack>
+          </Paper>
+        ))}
+      </SimpleGrid>
+
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md" mt="md">
+        <Paper p="md" radius={8} withBorder bg="background.1">
+          <Text fw={900}>Odpověď: Evropa zůstává jádrem, koprodukce sílí</Text>
+          <Text size="sm" mt={6}>
+            Ve všech novodobých obdobích tvoří evropské produkční země zhruba dvě třetiny výskytů. Největší změna není prosté přesunutí festivalu z jednoho kontinentu na druhý, ale růst koprodukcí: z 14,9 % v letech 1992-2003 na 41,6 % v letech 2018-2026.
+          </Text>
+        </Paper>
+        <Paper p="md" radius={8} withBorder bg="background.1">
+          <Text fw={900}>Do roku 1989: zatím ne stejnou metodou</Text>
+          <Text size="sm" mt={6}>
+            Předlistopadové ročníky zatím neumíme porovnat stejným film-level výpočtem zemí jako novodobou éru. Metodicky je proto držíme odděleně: víme, že šlo o jinou institucionální a politickou logiku festivalu, ale přesné poměry zemí pro období do roku 1989 budeme tvrdit až po doplnění kompletního katalogu film po filmu.
+          </Text>
+        </Paper>
+      </SimpleGrid>
+
+      <Text mt="md" size="sm" c="dimmed">
+        Nejčastější země v novodobém historickém souhrnu: {countryHistoryTopCountries.slice(0, 8).map(([country, count]) => `${country} ${count}`).join(' · ')}.
+      </Text>
     </Paper>
   );
 }
@@ -611,6 +737,7 @@ function CountryBubbleMap() {
             </Paper>
           ))}
         </SimpleGrid>
+        <CountryHistoryOverview />
       </Stack>
     </Paper>
   );
@@ -1047,6 +1174,32 @@ function PartnerPrestigeBlock() {
             Zdroj KVIFF
           </Button>
         </Group>
+
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm" mb="md">
+          <Paper p="md" radius={8} withBorder bg="background.2">
+            <Text fw={900} ff="monospace">{current2026.budgetMil} mil. Kč</Text>
+            <Text size="sm">rozpočet 60. ročníku</Text>
+          </Paper>
+          <Paper p="md" radius={8} withBorder bg="brandOrange.0">
+            <Text fw={900} ff="monospace">{current2026.sponsorsShare} %</Text>
+            <Text size="sm">soukromí partneři a sponzoři</Text>
+          </Paper>
+          <Paper p="md" radius={8} withBorder bg="brandTeal.0">
+            <Text fw={900} ff="monospace">{current2026.publicShare} %</Text>
+            <Text size="sm">veřejné zdroje</Text>
+          </Paper>
+          <Paper p="md" radius={8} withBorder bg="background.2">
+            <Text fw={900} ff="monospace">{current2026.spendingMil} mil. Kč</Text>
+            <Text size="sm">odhad útraty lidí ve městě</Text>
+          </Paper>
+        </SimpleGrid>
+
+        <Paper p="md" radius={8} withBorder bg="background.2" mb="md">
+          <Text fw={900}>Odpověď ke sponzorům</Text>
+          <Text size="sm" mt={6}>
+            Festival není financovaný hlavně z veřejných peněz. V pracovním rozpočtu 60. ročníku držíme poměr 80 % soukromé zdroje a 20 % veřejné zdroje. Veřejná podpora je ale strategická: dává festivalu institucionální legitimitu a městu i kraji vrací turistickou a ekonomickou stopu. Soukromí partneři naopak kupují přístup k publiku, mediální pozornost, B2B prostředí a kulturní prestiž.
+          </Text>
+        </Paper>
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
           <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
