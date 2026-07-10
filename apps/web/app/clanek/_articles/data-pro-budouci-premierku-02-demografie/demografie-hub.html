@@ -849,8 +849,12 @@
   .dt-hub .dt-fertility-visual .dt-visual-note {
     max-width: none;
   }
+  /* Na uzkych displejich se logo u VSECH grafu zaradi do toku pod podtitulek,
+     jinak absolutni pozice koliduje s kickerem a titulkem. */
+  .dt-hub .dt-visual .dt-visual-brand,
   .dt-hub .dt-fertility-visual .dt-visual-brand {
     position: static;
+    flex-direction: row;
     margin: 2px 0 6px auto;
   }
 }
