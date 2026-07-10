@@ -74,6 +74,47 @@ export const countryPresence2026: CountryPresenceRow[] = [
   { country: 'Yemen', count: 1, region: 'Middle East', lat: 15.6, lon: 48.5 },
 ];
 
+// České názvy zemí pro zobrazení (archiv KVIFF je vede anglicky; historické
+// entity jako Československo necháváme dobově – viz metodika kapitoly Země).
+export const countryNamesCz: Record<string, string> = {
+  France: 'Francie', USA: 'USA', 'Czech Republic': 'Česko', Germany: 'Německo',
+  'United Kingdom': 'Británie', Belgium: 'Belgie', Spain: 'Španělsko', Italy: 'Itálie',
+  'Slovak Republic': 'Slovensko', Austria: 'Rakousko', Netherlands: 'Nizozemsko',
+  Poland: 'Polsko', Argentina: 'Argentina', Mexico: 'Mexiko', Norway: 'Norsko',
+  Greece: 'Řecko', Japan: 'Japonsko', Lithuania: 'Litva', Luxembourg: 'Lucembursko',
+  Brazil: 'Brazílie', Bulgaria: 'Bulharsko', Canada: 'Kanada', Chile: 'Chile',
+  Denmark: 'Dánsko', 'Saudi Arabia': 'Saúdská Arábie', Switzerland: 'Švýcarsko',
+  Croatia: 'Chorvatsko', Cyprus: 'Kypr', Czechoslovakia: 'Československo',
+  Hungary: 'Maďarsko', India: 'Indie', Ireland: 'Irsko', Latvia: 'Lotyšsko',
+  Lebanon: 'Libanon', Qatar: 'Katar', Romania: 'Rumunsko', Slovenia: 'Slovinsko',
+  Sweden: 'Švédsko', Colombia: 'Kolumbie', Finland: 'Finsko', Iran: 'Írán',
+  Nepal: 'Nepál', 'North Macedonia': 'Severní Makedonie', Serbia: 'Srbsko',
+  'South Korea': 'Jižní Korea', Albania: 'Albánie', Australia: 'Austrálie',
+  China: 'Čína', Estonia: 'Estonsko', Gabon: 'Gabon', 'Guinea-Bissau': 'Guinea-Bissau',
+  Indonesia: 'Indonésie', 'Ivory Coast': 'Pobřeží slonoviny', Jordan: 'Jordánsko',
+  Kosovo: 'Kosovo', Myanmar: 'Myanmar', Palestine: 'Palestina', Philippines: 'Filipíny',
+  Rwanda: 'Rwanda', Senegal: 'Senegal', Singapore: 'Singapur', Turkey: 'Turecko',
+  Ukraine: 'Ukrajina', Uruguay: 'Uruguay', Yemen: 'Jemen',
+  'Soviet Union': 'Sovětský svaz', USSR: 'SSSR', Yugoslavia: 'Jugoslávie',
+  'West Germany': 'Západní Německo', 'East Germany': 'Východní Německo (NDR)',
+  Russia: 'Rusko', Georgia: 'Gruzie', Israel: 'Izrael', Egypt: 'Egypt',
+  Portugal: 'Portugalsko', Iceland: 'Island', Slovakia: 'Slovensko',
+  'Hong Kong': 'Hongkong', Taiwan: 'Tchaj-wan', Thailand: 'Thajsko',
+  Vietnam: 'Vietnam', Morocco: 'Maroko', Tunisia: 'Tunisko', Algeria: 'Alžírsko',
+  'South Africa': 'Jižní Afrika', 'New Zealand': 'Nový Zéland', Peru: 'Peru',
+  Cuba: 'Kuba', Venezuela: 'Venezuela', Bolivia: 'Bolívie', Ecuador: 'Ekvádor',
+  Kazakhstan: 'Kazachstán', Armenia: 'Arménie', Azerbaijan: 'Ázerbájdžán',
+  Belarus: 'Bělorusko', Moldova: 'Moldavsko', 'Bosnia and Herzegovina': 'Bosna a Hercegovina',
+  Montenegro: 'Černá Hora', Malta: 'Malta', Bangladesh: 'Bangladéš',
+  'Sri Lanka': 'Srí Lanka', Mongolia: 'Mongolsko', Afghanistan: 'Afghánistán',
+  Iraq: 'Irák', Syria: 'Sýrie', 'United Arab Emirates': 'Spojené arabské emiráty',
+  Kuwait: 'Kuvajt', Nigeria: 'Nigérie', Kenya: 'Keňa', Ethiopia: 'Etiopie',
+};
+
+export function czCountry(name: string): string {
+  return countryNamesCz[name] ?? name;
+}
+
 export const countryPresenceTotal = countryPresence2026.reduce((sum, row) => sum + row.count, 0);
 export const countryPresenceTop = countryPresence2026.slice(0, 10);
 export const countryPresenceMax = countryPresence2026[0].count;
