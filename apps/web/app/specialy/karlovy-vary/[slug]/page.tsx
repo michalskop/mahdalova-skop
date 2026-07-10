@@ -21,6 +21,7 @@ import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, first
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
 import { countryHistory, countryHistoryTopCountries } from '../countries-history';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
+import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from '../ChartFrame';
 
 type PageProps = {
   params: { slug: string };
@@ -33,10 +34,10 @@ function DataBar({ label, value, max, color = 'var(--mantine-color-brandNavy-6)'
   return (
     <Box style={{ display: 'grid', gridTemplateColumns: '104px 1fr 96px', gap: 12, alignItems: 'center', margin: '10px 0' }}>
       <Text fw={800}>{label}</Text>
-      <Box h={22} bg="var(--mantine-color-background-3)" style={{ borderRadius: 999, overflow: 'hidden', border: '1px solid var(--mantine-color-background-6)' }}>
-        <Box h="100%" w={`${width}%`} style={{ background: color, borderRadius: 999 }} />
+      <Box h={16} bg={CHART_TRACK_BG} style={{ borderRadius: 3, overflow: 'hidden' }}>
+        <Box h="100%" w={`${width}%`} style={{ background: color, borderRadius: 3 }} />
       </Box>
-      <Text ta="right" ff="monospace" fw={800}>{display}</Text>
+      <Text ta="right" style={NUM_FONT} fw={800}>{display}</Text>
     </Box>
   );
 }
@@ -57,10 +58,10 @@ function GenderSplitBar({ label, women, men }: { label: string; women: number; m
     <Stack gap={4}>
       <Group justify="space-between">
         <Text fw={800}>{label}</Text>
-        <Text ff="monospace" fw={800}>{women} {czWomanCount(women)} / {men} {czManCount(men)}</Text>
+        <Text style={NUM_FONT} fw={800}>{women} {czWomanCount(women)} / {men} {czManCount(men)}</Text>
       </Group>
-      <Box h={24} bg="var(--mantine-color-brandNavy-0)" style={{ borderRadius: 999, overflow: 'hidden', border: '1px solid var(--mantine-color-background-6)' }}>
-        <Box h="100%" w={`${womenWidth}%`} style={{ background: 'var(--mantine-color-brand-6)', borderRadius: 999 }} />
+      <Box h={16} bg="var(--mantine-color-brandNavy-6)" style={{ borderRadius: 3, overflow: 'hidden' }}>
+        <Box h="100%" w={`${womenWidth}%`} style={{ background: 'var(--mantine-color-brand-6)', borderRadius: 3 }} />
       </Box>
     </Stack>
   );
@@ -122,17 +123,16 @@ function HonoraryDotTimeline() {
   const years = Array.from(new Set(honoraryCrystalGlobeRecipients.map((recipient) => recipient.year)));
 
   return (
-    <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
-      <Group justify="space-between" align="end" mb="md">
-        <Stack gap={2}>
-          <Title order={2} >Osobnosti po letech</Title>
-          <Text c="dimmed">Každá tečka je jedna oceněná osobnost. Najeďte na ni pro jméno, zemi a profesi.</Text>
-        </Stack>
-        <Group gap="sm">
-          <Badge color="pink" variant="light">ženy</Badge>
-          <Badge color="blue" variant="light">muži</Badge>
-          <Badge color="gray" variant="light">2026 oznámeno</Badge>
-        </Group>
+    <ChartFrame
+      title="Osobnosti po letech"
+      subtitle="Každá tečka je jedna oceněná osobnost, 1995–2026. Najeďte na ni pro jméno, zemi a profesi."
+      source="Oficiální archiv KVIFF, ročník po ročníku"
+      fullWidth
+    >
+      <Group gap="sm" mb="md">
+        <Badge color="brand" variant="filled">ženy</Badge>
+        <Badge color="brandNavy" variant="filled">muži</Badge>
+        <Badge color="gray" variant="light">2026 oznámeno</Badge>
       </Group>
       <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
         <Box
@@ -191,31 +191,25 @@ function HonoraryDotTimeline() {
       <Text mt="xs" size="sm">
         Všechny tečky v tomto grafu jsou jedna konkrétní čestná kategorie: Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Není to cena poroty za soutěžní film, ale festivalové ocenění osobností, které dlouhodobě formovaly světový film.
       </Text>
-    </Paper>
+    </ChartFrame>
   );
 }
 
 function Pre1989AwardsOverview() {
   const phaseColors = [
-    'var(--mantine-color-background-7)',
-    'var(--mantine-color-brandOrange-6)',
-    'var(--mantine-color-brandTeal-6)',
+    'var(--mantine-color-brandNavy-3)',
+    'var(--mantine-color-brandNavy-5)',
+    'var(--mantine-color-brandNavy-7)',
     'var(--mantine-color-brand-6)',
   ];
 
   return (
-    <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
-      <Group justify="space-between" align="end" mb="lg">
-        <Stack gap={2} maw={760}>
-          <Badge w="fit-content" color="orange" variant="light">Infografika</Badge>
-          <Title order={2}>Jak se měnila logika festivalových cen</Title>
-          <Text c="dimmed">
-            Před rokem 1989 sledujeme jiný systém než dnešní čestný Křišťálový glóbus pro osobnosti. Archiv ukazuje přechod od nesoutěžních ročníků k soutěžním filmovým cenám a po roce 1989 k nové festivalové éře.
-          </Text>
-        </Stack>
-        <Text fw={900} ff="monospace">1946 → 1990 → novodobá éra</Text>
-      </Group>
-
+    <ChartFrame
+      title="Jak se měnila logika festivalových cen"
+      subtitle="Před rokem 1989 sledujeme jiný systém než dnešní čestný Křišťálový glóbus pro osobnosti: 1946 → 1990 → novodobá éra"
+      source="Oficiální archiv KVIFF, festivalové ročníky"
+      fullWidth
+    >
       <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
         <Box
           style={{
@@ -254,11 +248,11 @@ function Pre1989AwardsOverview() {
                     color: index === 0 ? 'var(--mantine-color-brandRoyalBlue-8)' : 'var(--mantine-color-background-0)',
                   }}
                 >
-                  <Text fw={900} ff="monospace" size="sm" ta="center" lh={1.05}>
+                  <Text fw={900} style={NUM_FONT} size="sm" ta="center" lh={1.05}>
                     {note.period}
                   </Text>
                 </Box>
-                <Paper p="md" radius={8} withBorder bg={index === 0 ? 'background.2' : 'background.1'} h="100%">
+                <Paper p="md" radius={4} bg={index === 0 ? 'background.3' : 'background.0'} h="100%">
                   <Text fw={900}>{note.title}</Text>
                   <Text size="sm" mt={6}>{note.body}</Text>
                 </Paper>
@@ -269,20 +263,20 @@ function Pre1989AwardsOverview() {
       </Box>
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm" mt="lg">
-        <Paper p="md" radius={8} bg="background.2">
+        <Paper p="md" radius={4} bg="background.0">
           <Text fw={900}>Co je první „ocenění“?</Text>
           <Text size="sm">První dva ročníky byly nesoutěžní, takže první stopa ocenění začíná až rokem 1948.</Text>
         </Paper>
-        <Paper p="md" radius={8} bg="background.2">
+        <Paper p="md" radius={4} bg="background.0">
           <Text fw={900}>Co znamenají 60. léta?</Text>
           <Text size="sm">Festival oceňoval hlavně filmy, režii a herecké výkony, ne dnešní typ světových čestných hostů.</Text>
         </Paper>
-        <Paper p="md" radius={8} bg="background.2">
+        <Paper p="md" radius={4} bg="background.0">
           <Text fw={900}>Proč oddělujeme grafy?</Text>
           <Text size="sm">Soutěžní ceny a čestná prestiž osobností jsou dva různé mechanismy festivalové autority.</Text>
         </Paper>
       </SimpleGrid>
-    </Paper>
+    </ChartFrame>
   );
 }
 
@@ -292,9 +286,11 @@ function HonoraryGenderBlock() {
   return (
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
-        <Paper p="lg" radius={8} withBorder bg="background.1">
-          <Badge w="fit-content" color="pink" variant="light" mb="sm">Hotový genderový graf</Badge>
-          <Title order={2} mb="xs" >Čestná prestiž je pořád hlavně mužská</Title>
+        <ChartFrame
+          title="Čestná prestiž je pořád hlavně mužská"
+          subtitle={`Křišťálový glóbus za mimořádný umělecký přínos, podíl žen a mužů podle období, 1995–2026`}
+          source="Oficiální archiv KVIFF, ročník po ročníku"
+        >
           <Text size="lg">
             V řadě Crystal Globe za mimořádný umělecký přínos světu filmu evidujeme od roku 1995 do oznámených poct roku 2026 celkem {honoraryTotal} oceněných osobností (ověřeno proti oficiálnímu archivu KVIFF a ročníkovým souhrnům cen). Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
           </Text>
@@ -309,18 +305,18 @@ function HonoraryGenderBlock() {
           <Text mt="sm">
             Podle oficiálního popisu KVIFF jde o osobnosti, které zanechaly výraznou stopu ve vývoji světové kinematografie. Tuto čestnou řadu proto čteme jako mapu dlouhodobé prestiže, ne jako hodnocení výkonu v jednom roce.
           </Text>
-        </Paper>
+        </ChartFrame>
 
         <Paper p="lg" radius={8} withBorder bg="background.1">
-          <Badge w="fit-content" color="orange" variant="light" mb="sm">Odpověď k genderu</Badge>
+          <Badge w="fit-content" color="brand" variant="filled" mb="sm">Odpověď k genderu</Badge>
           <Title order={2} mb="xs">Nejde o cenu za jeden film, ale o kanonizaci osobností</Title>
           <Text size="lg">
             V této kategorii sledujeme jen Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. To je důležité: genderový graf neukazuje, kdo vyhrál soutěžní ročník, ale koho festival dlouhodobě zapisuje do vlastní paměti světového filmu.
           </Text>
           <SimpleGrid cols={3} spacing="sm" mt="lg">
-            <Paper p="md" radius={8} bg="brand.0"><Text fw={900} ff="monospace">{formatPercent(honoraryWomenShare)}</Text><Text size="sm">žen v evidované řadě</Text></Paper>
-            <Paper p="md" radius={8} bg="brandNavy.0"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2"><Text fw={900} ff="monospace">{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
+            <Paper p="md" radius={8} bg="brand.0"><Text fw={900} style={NUM_FONT}>{formatPercent(honoraryWomenShare)}</Text><Text size="sm">žen v evidované řadě</Text></Paper>
+            <Paper p="md" radius={8} bg="brandNavy.0"><Text fw={900} style={NUM_FONT}>{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2"><Text fw={900} style={NUM_FONT}>{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
           </SimpleGrid>
           <Text mt="md" size="sm" c="dimmed">
             Tooltip u každé tečky proto uvádí nejen jméno a zemi, ale i přesnou kategorii a důvod: čestné ocenění za mimořádný umělecký přínos a výraznou stopu ve vývoji světové kinematografie.
@@ -333,10 +329,10 @@ function HonoraryGenderBlock() {
             Vary umějí pozvat a ocenit velká ženská jména: od Giny Lollobrigidy, Věry Chytilové, Liv Ullmann, Sharon Stone a Isabelle Huppert po Judi Dench, Helen Mirren, Susan Sarandon, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě – od roku 1995 jde o {honoraryGenderCounts.woman} žen z {honoraryTotal} oceněných.
           </Text>
           <SimpleGrid cols={2} spacing="sm" mt="lg">
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">2026*</Text><Text size="sm">Hoffman, Binoche, Richardson</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>{honoraryGenderCounts.man}</Text><Text size="sm">oceněných mužů</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>2026*</Text><Text size="sm">Hoffman, Binoche, Richardson</Text></Paper>
           </SimpleGrid>
         </Paper>
 
@@ -345,7 +341,7 @@ function HonoraryGenderBlock() {
         <Paper p="lg" radius={8} withBorder bg="background.2" style={{ gridColumn: '1 / -1' }}>
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
-              <Badge w="fit-content" color="orange" variant="light">Jak se vybírá</Badge>
+              <Badge w="fit-content" color="brand" variant="filled">Jak se vybírá</Badge>
               <Title order={2}>Kdo rozhoduje o čestné prestiži</Title>
               <Text size="lg">{honorarySelectionNote}</Text>
               <Text>
@@ -353,7 +349,7 @@ function HonoraryGenderBlock() {
               </Text>
             </Stack>
             <Stack gap="sm">
-              <Badge w="fit-content" color="grape" variant="light">Před rokem 1989</Badge>
+              <Badge w="fit-content" color="brand" variant="filled">Před rokem 1989</Badge>
               <Title order={2}>Dřív to byla jiná logika cen</Title>
               <Text>
                 Předlistopadový festival neměl stejnou nepřerušenou řadu čestných celebrit. Archiv ukazuje hlavně soutěžní ceny filmům, režii a hereckým výkonům. Proto by bylo metodicky chybné přilepit rok 1948 nebo 1968 do stejného genderového grafu čestných hostů.
@@ -421,7 +417,7 @@ function CountryLayerMap({
           <Text fw={900}>{title}</Text>
           <Text size="sm" c="dimmed">{subtitle}</Text>
         </Stack>
-        <Text fw={900} ff="monospace" size="sm">{rows.length} zemí · {total}</Text>
+        <Text fw={900} style={NUM_FONT} size="sm">{rows.length} zemí · {total}</Text>
       </Group>
       <Box
         style={{
@@ -500,30 +496,30 @@ function CountryHistoryOverview() {
   const maxOccurrences = Math.max(...countryHistoryPeriods.map((period) => period.occurrences));
 
   return (
-    <Paper p="lg" radius={8} withBorder bg="background.2">
+    <Paper p="lg" radius={4} bg="background.0">
       <Group justify="space-between" align="end" mb="md">
         <Stack gap={2}>
-          <Badge w="fit-content" color="orange" variant="light">Historický souhrn</Badge>
+          <Badge w="fit-content" color="brand" variant="filled">Historický souhrn</Badge>
           <Title order={3}>Změnilo se, odkud filmy přijíždějí?</Title>
           <Text c="dimmed">
             Film-level country dataset máme souvisle pro novodobou éru 1992-2026. Počítáme výskyty produkčních zemí: u koprodukcí se jeden film započítá každé uvedené zemi.
           </Text>
         </Stack>
-        <Text fw={900} ff="monospace">{countryHistory.length} ročníků</Text>
+        <Text fw={900} style={NUM_FONT}>{countryHistory.length} ročníků</Text>
       </Group>
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="md">
         {countryHistoryPeriods.map((period) => (
-          <Paper key={period.period} p="md" radius={8} withBorder bg="background.1">
+          <Paper key={period.period} p="md" radius={8} withBorder bg="background.2">
             <Text fw={900}>{period.period}</Text>
             <Text size="sm" c="dimmed">{period.label}</Text>
             <DataBar label="výskyty" value={period.occurrences} max={maxOccurrences} color="var(--mantine-color-brandTeal-6)" />
-            <Text size="sm"><Text span fw={900} ff="monospace">{formatPercent(period.coproductionShare)}</Text> filmů je koprodukčních.</Text>
+            <Text size="sm"><Text span fw={900} style={NUM_FONT}>{formatPercent(period.coproductionShare)}</Text> filmů je koprodukčních.</Text>
             <Stack gap={4} mt="sm">
               {period.topRegions.map((row) => (
                 <Group key={row.region} gap="xs" wrap="nowrap">
                   <Text size="sm" style={{ flex: 1 }}>{row.region}</Text>
-                  <Text size="sm" fw={900} ff="monospace">{formatPercent(row.share)}</Text>
+                  <Text size="sm" fw={900} style={NUM_FONT}>{formatPercent(row.share)}</Text>
                 </Group>
               ))}
             </Stack>
@@ -532,13 +528,13 @@ function CountryHistoryOverview() {
       </SimpleGrid>
 
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md" mt="md">
-        <Paper p="md" radius={8} withBorder bg="background.1">
+        <Paper p="md" radius={8} withBorder bg="background.2">
           <Text fw={900}>Odpověď: Evropa zůstává jádrem, koprodukce sílí</Text>
           <Text size="sm" mt={6}>
             Ve všech novodobých obdobích tvoří evropské produkční země zhruba dvě třetiny výskytů. Největší změna není prosté přesunutí festivalu z jednoho kontinentu na druhý, ale růst koprodukcí: z 14,9 % v letech 1992-2003 na 41,6 % v letech 2018-2026.
           </Text>
         </Paper>
-        <Paper p="md" radius={8} withBorder bg="background.1">
+        <Paper p="md" radius={8} withBorder bg="background.2">
           <Text fw={900}>Do roku 1989: zatím ne stejnou metodou</Text>
           <Text size="sm" mt={6}>
             Předlistopadové ročníky zatím neumíme porovnat stejným film-level výpočtem zemí jako novodobou éru. Metodicky je proto držíme odděleně: víme, že šlo o jinou institucionální a politickou logiku festivalu, ale přesné poměry zemí pro období do roku 1989 budeme tvrdit až po doplnění kompletního katalogu film po filmu.
@@ -573,16 +569,12 @@ function CountryBubbleMap() {
   ];
 
   return (
-    <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
-      <Group justify="space-between" align="end" mb="md">
-        <Stack gap={2}>
-          <Badge w="fit-content" color="teal" variant="light">Mapa 2026</Badge>
-          <Title order={2} >Odkud přijíždějí filmy v letošním katalogu</Title>
-          <Text c="dimmed">Bubliny ukazují produkční země v katalogu KVIFF 2026. Koprodukce se počítají jako výskyt u každé uvedené země.</Text>
-        </Stack>
-        <Text fw={900} ff="monospace">{countryPresence2026.length} zemí · {countryPresenceTotal} výskytů</Text>
-      </Group>
-
+    <ChartFrame
+      title="Odkud přijíždějí filmy v letošním katalogu"
+      subtitle={`Bubliny = produkční země v katalogu KVIFF 2026 (${countryPresence2026.length} zemí, ${countryPresenceTotal} výskytů); koprodukce se počítá u každé uvedené země`}
+      source="Katalog filmů KVIFF 2026"
+      fullWidth
+    >
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
         <Box>
           <Box
@@ -675,7 +667,7 @@ function CountryBubbleMap() {
               <Group key={row.country} gap="sm" wrap="nowrap">
                 <Box w={10} h={10} bg={regionColors[row.region]} style={{ borderRadius: 999, flex: '0 0 auto' }} />
                 <Text size="sm" fw={800} style={{ flex: 1 }}>{row.country}</Text>
-                <Text size="sm" ff="monospace" fw={900}>{row.count}</Text>
+                <Text size="sm" style={NUM_FONT} fw={900}>{row.count}</Text>
               </Group>
             ))}
           </Stack>
@@ -685,7 +677,7 @@ function CountryBubbleMap() {
               <Group key={row.region} gap="sm" wrap="nowrap">
                 <Box w={10} h={10} bg={regionColors[row.region]} style={{ borderRadius: 999, flex: '0 0 auto' }} />
                 <Text size="sm" style={{ flex: 1 }}>{row.region}</Text>
-                <Text size="sm" ff="monospace" fw={900}>{row.count}</Text>
+                <Text size="sm" style={NUM_FONT} fw={900}>{row.count}</Text>
               </Group>
             ))}
           </Stack>
@@ -747,7 +739,7 @@ function CountryBubbleMap() {
         </SimpleGrid>
         <CountryHistoryOverview />
       </Stack>
-    </Paper>
+    </ChartFrame>
   );
 }
 
@@ -765,19 +757,20 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
   const maxBreakdownFilms = Math.max(...completeBreakdownRows.map((row) => row.totalFilms ?? 0));
 
   return (
-    <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
+    <ChartFrame
+      title="Novější roky: co je uvnitř katalogu"
+      subtitle="Skladba programu (hrané / dokumenty / krátké filmy), ročníky s úplným členěním, 1995–2025"
+      source="Oficiální finální statistiky ročníků KVIFF"
+      fullWidth
+    >
       <Group justify="space-between" align="end" mb="md">
-        <Stack gap={2} maw={760}>
-          <Badge w="fit-content" color="teal" variant="light">Složení programu</Badge>
-          <Title order={2} >Novější roky: co je uvnitř katalogu</Title>
-          <Text c="dimmed">
-            Historickou řadu držíme jako kontext od roku 1995. Barevně rozkládáme jen roky, kde máme bezpečně oddělené kategorie hraných celovečerních filmů, dokumentárních celovečerních filmů a krátkých filmů.
-          </Text>
-        </Stack>
+        <Text c="dimmed" maw={760}>
+          Historickou řadu držíme jako kontext od roku 1995. Barevně rozkládáme jen roky, kde máme bezpečně oddělené kategorie hraných celovečerních filmů, dokumentárních celovečerních filmů a krátkých filmů.
+        </Text>
         <Group gap="sm">
-          <Badge color="teal" variant="light">hrané</Badge>
-          <Badge color="orange" variant="light">dokumenty</Badge>
-          <Badge color="brandNavy" variant="light">krátké</Badge>
+          <Badge color="brandTeal" variant="filled">hrané</Badge>
+          <Badge color="brandOrange" variant="filled">dokumenty</Badge>
+          <Badge color="brandNavy" variant="filled">krátké</Badge>
         </Group>
       </Group>
 
@@ -865,7 +858,7 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
             return (
               <Tooltip key={row.year} label={tooltip} multiline maw={360} withArrow>
                 <Stack gap="xs" align="center" title={tooltip} style={{ cursor: 'help' }}>
-                  <Text fw={900} ff="monospace">{total}</Text>
+                  <Text fw={900} style={NUM_FONT}>{total}</Text>
                   <Box
                     aria-label={`${row.year}: ${total} filmů, z toho ${fiction} hraných, ${documentaries} dokumentárních a ${shorts} krátkých`}
                     style={{
@@ -891,7 +884,7 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
                           minHeight: segment.value > 0 ? 22 : 0,
                         }}
                       >
-                        <Text size="xs" fw={900} ff="monospace">{segment.value}</Text>
+                        <Text size="xs" fw={900} style={NUM_FONT}>{segment.value}</Text>
                       </Box>
                     ))}
                   </Box>
@@ -920,7 +913,7 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
           <Text size="sm">Starší roky neumíme touto skladbou poctivě dovybarvit. Kdybychom to udělali, tvářili bychom se přesněji, než dovolují zdroje.</Text>
         </Box>
       </SimpleGrid>
-    </Paper>
+    </ChartFrame>
   );
 }
 
@@ -948,9 +941,11 @@ function FilmScaleBlock() {
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
         <CountryBubbleMap />
 
-        <Paper p="lg" radius={8} withBorder bg="background.1">
-          <Badge w="fit-content" color="teal" variant="light" mb="sm">Hotová časová osa</Badge>
-          <Title order={2} mb="xs" >Program se po maximu zmenšil, ale zhoustl</Title>
+        <ChartFrame
+          title="Program se po maximu zmenšil, ale zhoustl"
+          subtitle="Průměrný počet filmů podle období, 1995–2025"
+          source="Oficiální finální statistiky ročníků KVIFF"
+        >
           <Text size="lg">
             Nejvíc filmů v dostupné řadě má rok {peakFilmYear.year}: {peakFilmYear.totalFilms} titulů. Uzavřený rok {latestClosedFilmYear.year} má {latestClosedFilmYear.totalFilms} filmů, ale {latestClosedFilmYear.screenings} projekcí. Jeden film tak dnes připadá zhruba na {latestScreeningsPerFilm.toString().replace('.', ',')} projekce; v roce 1996 to bylo {firstScreeningsPerFilm.toString().replace('.', ',')}.
           </Text>
@@ -959,11 +954,11 @@ function FilmScaleBlock() {
           </Text>
           <Stack gap="sm" mt="lg">
             {filmScaleByPeriod.map((row) => (
-              <DataBar key={row.period} label={row.period} value={row.avgFilms} max={maxFilms} color="var(--mantine-color-brandTeal-6)" />
+              <DataBar key={row.period} label={row.period} value={row.avgFilms} max={maxFilms} color="var(--mantine-color-brandNavy-6)" />
             ))}
           </Stack>
           <Text mt="md" c="dimmed">Sloupce ukazují průměrný počet filmů v období. Projekce držíme odděleně, protože jedna země může mít méně titulů, ale výraznější festivalovou přítomnost.</Text>
-        </Paper>
+        </ChartFrame>
 
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
           <Title order={2} mb="xs" >Co to znamená pro země</Title>
@@ -971,17 +966,17 @@ function FilmScaleBlock() {
             Země v čase nepůjde férově číst jen jako mapa všech vlaječek. Koprodukce budeme počítat dvěma způsoby: presence count řekne, kde se země objevila, fractional count rozdělí jeden film mezi všechny produkční země. Teprve rozdíl ukáže, jestli festival otevíral prostor novým regionům, nebo jen častěji uváděl mezinárodní koprodukce.
           </Text>
           <SimpleGrid cols={2} spacing="sm" mt="lg">
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{peakFilmYear.totalFilms}</Text><Text size="sm">filmů v maximu {peakFilmYear.year}</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{latestClosedFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {latestClosedFilmYear.year}</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{latestScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film v roce {latestClosedFilmYear.year}</Text></Paper>
-            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">2x</Text><Text size="sm">metoda pro koprodukce</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>{peakFilmYear.totalFilms}</Text><Text size="sm">filmů v maximu {peakFilmYear.year}</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>{latestClosedFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {latestClosedFilmYear.year}</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>{latestScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film v roce {latestClosedFilmYear.year}</Text></Paper>
+            <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>2x</Text><Text size="sm">metoda pro koprodukce</Text></Paper>
           </SimpleGrid>
         </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="background.2" style={{ gridColumn: '1 / -1' }}>
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
-              <Badge w="fit-content" color="teal" variant="light">Kdo vybírá filmy</Badge>
+              <Badge w="fit-content" color="brand" variant="filled">Kdo vybírá filmy</Badge>
               <Title order={2} >Program není práce poroty. Porota až hodnotí.</Title>
               <Text size="lg">
                 Mapa zemí musí vycházet z programového výběru, ne z cen. Filmy do programu skládá festivalové programové oddělení pod uměleckým vedením. Poroty vstupují až potom: hodnotí soutěžní filmy a rozhodují o cenách.
@@ -1011,16 +1006,17 @@ function FilmScaleBlock() {
           </SimpleGrid>
         </Paper>
 
-        <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
-          <Group justify="space-between" align="end" mb="md">
-            <Stack gap={2}>
-              <Title order={2} >Filmy a projekce po ročnících</Title>
-              <Text c="dimmed">Sloupce ukazují velikost katalogu a počet projekcí, červená linka ukazuje projekční hustotu: kolikrát se v průměru promítl jeden film.</Text>
-            </Stack>
+        <ChartFrame
+          title="Filmy a projekce po ročnících"
+          subtitle="Velikost katalogu a počet projekcí, s křivkou projekční hustoty (projekce na jeden film), 1996–2025"
+          source="Oficiální finální statistiky ročníků KVIFF"
+          fullWidth
+        >
+          <Group justify="flex-end" mb="md">
             <Group gap="sm">
-              <Badge color="teal" variant="light">filmy</Badge>
-              <Badge color="orange" variant="light">projekce</Badge>
-              <Badge color="red" variant="light">projekce / film</Badge>
+              <Badge color="brandTeal" variant="filled">filmy</Badge>
+              <Badge color="brandOrange" variant="filled">projekce</Badge>
+              <Badge color="brand" variant="filled">projekce / film</Badge>
             </Group>
           </Group>
           <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
@@ -1135,7 +1131,7 @@ function FilmScaleBlock() {
             </Box>
           </Box>
           <Text mt="md" size="sm" c="dimmed">
-            Čtení grafu: tyrkysové sloupce ukazují počet filmů, oranžové počet projekcí a červená linka poměr projekcí na jeden film. Po roce 2003 klesá šířka katalogu, ale hustota projekcí neklesá stejným tempem. To samo o sobě není důkaz poklesu prestiže festivalu.
+            Čtení grafu: tyrkysové sloupce ukazují počet filmů, oranžové počet projekcí a crimson linka poměr projekcí na jeden film. Po roce 2003 klesá šířka katalogu, ale hustota projekcí neklesá stejným tempem. To samo o sobě není důkaz poklesu prestiže festivalu.
           </Text>
           <Text mt="xs" size="sm">
             Přesnější interpretace je střídmější: Vary se posunuly od obřího katalogu k užšímu výběru, kterému dávají víc projekčního prostoru. Pro publikum to může znamenat lepší dostupnost programu, protože vybraný film se častěji nepromítne jen jednou nebo dvakrát.
@@ -1143,7 +1139,7 @@ function FilmScaleBlock() {
           <Text mt="xs" size="sm">
             Prestiž proto neměříme samotným počtem titulů. Korektnější bude sledovat také premiérový status, soutěžní sekce, hosty, účast filmového průmyslu, kritickou odezvu a další cestu filmů po festivalu. Teprve tyto vrstvy ukážou, zda menší katalog znamená silnější kurátorský výběr, nebo zúžení prostoru pro objev a menší kinematografie.
           </Text>
-        </Paper>
+        </ChartFrame>
 
         <ProgramCompositionGraphic maxFilms={maxFilms} />
       </SimpleGrid>
@@ -1169,40 +1165,38 @@ function PartnerPrestigeBlock() {
 
   return (
     <Box px={{ base: 16, md: 24 }} pb={{ base: 20, md: 34 }}>
-      <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="background.1">
-        <Group justify="space-between" align="end" mb="lg">
-          <Stack gap={2} maw={760}>
-            <Badge w="fit-content" color="yellow" variant="light">Partneri jako data</Badge>
-            <Title order={2} >Obchod s prestizi neni jedna smlouva, ale cela infrastruktura</Title>
-            <Text c="dimmed">
-              Matice cte oficialne komunikovana partnerstvi podle toho, jaky typ kapitalu se vymenuje: penize, sluzby, pristup k publiku, media, remeslo, CSR nebo misto konani.
-            </Text>
-          </Stack>
+      <ChartFrame
+        title="Obchod s prestiží není jedna smlouva, ale celá infrastruktura"
+        subtitle="Matice čte oficiálně komunikovaná partnerství podle typu vyměňovaného kapitálu, 60. ročník 2026"
+        source="Oficiální stránka partnerů KVIFF"
+        fullWidth
+      >
+        <Group justify="flex-end" mb="lg">
           <Button component="a" href="https://www.kviff.com/cs/o-nas/partneri" target="_blank" rel="noopener noreferrer" variant="outline" color="dark">
             Zdroj KVIFF
           </Button>
         </Group>
 
         <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm" mb="md">
-          <Paper p="md" radius={8} withBorder bg="background.2">
-            <Text fw={900} ff="monospace">{current2026.budgetMil} mil. Kč</Text>
+          <Paper p="md" radius={4} bg="background.0">
+            <Text fw={900} style={NUM_FONT}>{current2026.budgetMil} mil. Kč</Text>
             <Text size="sm">rozpočet 60. ročníku</Text>
           </Paper>
-          <Paper p="md" radius={8} withBorder bg="brandOrange.0">
-            <Text fw={900} ff="monospace">{current2026.sponsorsShare} %</Text>
+          <Paper p="md" radius={4} bg="background.0">
+            <Text fw={900} style={NUM_FONT} c="brand.7">{current2026.sponsorsShare} %</Text>
             <Text size="sm">soukromí partneři a sponzoři</Text>
           </Paper>
-          <Paper p="md" radius={8} withBorder bg="brandTeal.0">
-            <Text fw={900} ff="monospace">{current2026.publicShare} %</Text>
+          <Paper p="md" radius={4} bg="background.0">
+            <Text fw={900} style={NUM_FONT} c="brandNavy.7">{current2026.publicShare} %</Text>
             <Text size="sm">veřejné zdroje</Text>
           </Paper>
-          <Paper p="md" radius={8} withBorder bg="background.2">
-            <Text fw={900} ff="monospace">{current2026.spendingMil} mil. Kč</Text>
+          <Paper p="md" radius={4} bg="background.0">
+            <Text fw={900} style={NUM_FONT}>{current2026.spendingMil} mil. Kč</Text>
             <Text size="sm">odhad útraty lidí ve městě</Text>
           </Paper>
         </SimpleGrid>
 
-        <Paper p="md" radius={8} withBorder bg="background.2" mb="md">
+        <Paper p="md" radius={4} bg="background.0" mb="md">
           <Text fw={900}>Odpověď ke sponzorům</Text>
           <Text size="sm" mt={6}>
             Festival není financovaný hlavně z veřejných peněz. V pracovním rozpočtu 60. ročníku držíme poměr 80 % soukromé zdroje a 20 % veřejné zdroje. Veřejná podpora je ale strategická: dává festivalu institucionální legitimitu a městu i kraji vrací turistickou a ekonomickou stopu. Soukromí partneři naopak kupují přístup k publiku, mediální pozornost, B2B prostředí a kulturní prestiž.
@@ -1210,29 +1204,29 @@ function PartnerPrestigeBlock() {
         </Paper>
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
-          <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
-            <Title order={3} mb="xs" >Teze pro cteni</Title>
+          <Paper p="lg" radius={4} bg="brandRoyalBlue.8" c="background.0">
+            <Title order={3} mb="xs" >Teze pro čtení</Title>
             <Text c="background.2" size="lg">
-              Festival ma kulturni a medialni auru, partneri maji penize, sluzby, distribuci nebo infrastrukturu. Vary jim neprodavaji jen logo na plote: prodavaji pritomnost uvnitr udalosti, kterou sleduji divaci, media, politici, filmari a byznys.
+              Festival má kulturní a mediální auru, partneři mají peníze, služby, distribuci nebo infrastrukturu. Vary jim neprodávají jen logo na plotě: prodávají přítomnost uvnitř události, kterou sledují diváci, média, politici, filmaři a byznys.
             </Text>
             <Text c="background.2" mt="md">
-              Je to interpretace verejne komunikovanych partnerstvi, ne dukaz jednotlivych obchodnich jednani. Proto u kazde vrstvy drzime zvlast zdroj a faktickou oporu.
+              Je to interpretace veřejně komunikovaných partnerství, ne důkaz jednotlivých obchodních jednání. Proto u každé vrstvy držíme zvlášť zdroj a faktickou oporu.
             </Text>
           </Paper>
 
-          <Paper p="lg" radius={8} withBorder bg="background.2">
-            <Title order={3} mb="md" >Mapa typu kapitalu</Title>
+          <Paper p="lg" radius={4} bg="background.0">
+            <Title order={3} mb="md" >Mapa typu kapitálu</Title>
             <Stack gap="xs">
               {capitalEntries.map(({ capital, count }) => (
                 <Group key={capital} gap="sm" wrap="nowrap">
-                  <Box w={14} h={14} bg={capitalColors[capital]} style={{ borderRadius: 4, flex: '0 0 auto' }} />
+                  <Box w={14} h={14} bg={capitalColors[capital]} style={{ borderRadius: 3, flex: '0 0 auto' }} />
                   <Text style={{ flex: 1 }} fw={800}>{partnerCapitalLabels[capital]}</Text>
-                  <Text ff="monospace" fw={900}>{count}x</Text>
+                  <Text style={NUM_FONT} fw={900}>{count}×</Text>
                 </Group>
               ))}
             </Stack>
             <Text mt="md" size="sm" c="dimmed">
-              Pocet neznamena velikost penez. Rika jen, jak casto se dany typ hodnoty objevuje v nasi redakcni klasifikaci partnerstvi.
+              Počet neznamená velikost peněz. Říká jen, jak často se daný typ hodnoty objevuje v naší redakční klasifikaci partnerství.
             </Text>
           </Paper>
         </SimpleGrid>
@@ -1240,7 +1234,7 @@ function PartnerPrestigeBlock() {
         <Stack gap="md" mt="md">
           {partnerExchangeRows.map((row) => (
             <Tooltip key={row.segment} label={`${row.evidence} Zdroj: ${row.sourceLabel}`} multiline maw={420} withArrow>
-              <Paper p="md" radius={8} withBorder bg="background.1" style={{ cursor: 'help' }}>
+              <Paper p="md" radius={4} bg="background.0" style={{ cursor: 'help' }}>
                 <SimpleGrid cols={{ base: 1, md: 3 }} spacing="md">
                   <Stack gap={6}>
                     <Text size="xs" fw={900} tt="uppercase" c="dimmed">{row.segment}</Text>
@@ -1263,19 +1257,19 @@ function PartnerPrestigeBlock() {
                   </Stack>
 
                   <Stack gap={6}>
-                    <Text fw={900}>Partner dava festivalu</Text>
+                    <Text fw={900}>Partner dává festivalu</Text>
                     {row.givesFestival.map((item) => (
-                      <Text key={item} size="sm">- {item}</Text>
+                      <Text key={item} size="sm">– {item}</Text>
                     ))}
                   </Stack>
 
                   <Stack gap={6}>
-                    <Text fw={900}>Festival vraci partnerovi</Text>
+                    <Text fw={900}>Festival vrací partnerovi</Text>
                     {row.getsFromFestival.map((item) => (
-                      <Text key={item} size="sm">- {item}</Text>
+                      <Text key={item} size="sm">– {item}</Text>
                     ))}
                     <Button component="a" href={row.sourceUrl} target="_blank" rel="noopener noreferrer" variant="subtle" color="dark" px={0} w="fit-content">
-                      Otevrit zdroj
+                      Otevřít zdroj
                     </Button>
                   </Stack>
                 </SimpleGrid>
@@ -1283,7 +1277,7 @@ function PartnerPrestigeBlock() {
             </Tooltip>
           ))}
         </Stack>
-      </Paper>
+      </ChartFrame>
     </Box>
   );
 }
@@ -1382,10 +1376,10 @@ export default function KviffBranchPage({ params }: PageProps) {
                 <Title order={2} mb="xs" >Rozpočet a útrata</Title>
                 <Text c="background.2">Rozpočet 60. ročníku je 250 milionů korun. Odhad útraty lidí na festivalu je zhruba 650 milionů korun.</Text>
                 <SimpleGrid cols={2} spacing="sm" mt="lg">
-                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">80 %</Text><Text size="sm">sponzoři</Text></Paper>
-                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">20 %</Text><Text size="sm">veřejné zdroje</Text></Paper>
-                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">250 mil.</Text><Text size="sm">rozpočet</Text></Paper>
-                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">650 mil.</Text><Text size="sm">útrata</Text></Paper>
+                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>80 %</Text><Text size="sm">sponzoři</Text></Paper>
+                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>20 %</Text><Text size="sm">veřejné zdroje</Text></Paper>
+                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>250 mil.</Text><Text size="sm">rozpočet</Text></Paper>
+                  <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>650 mil.</Text><Text size="sm">útrata</Text></Paper>
                 </SimpleGrid>
                 <Text mt="md">Orientačně: útrata návštěvníků je asi {spendingRatio2026.toString().replace('.', ',')}násobek festivalového rozpočtu.</Text>
               </Paper>
