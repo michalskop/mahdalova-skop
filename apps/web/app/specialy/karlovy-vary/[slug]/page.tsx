@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Badge, Box, Button, Container, Divider, Group, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { Badge, Box, Button, Container, Divider, Group, Paper, SimpleGrid, Stack, Text, Title, Tooltip } from '@mantine/core';
 import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { getKviffBranch, kviffBranches, kviffSources } from '../data';
@@ -17,7 +17,7 @@ import {
   ticketShare2026,
 } from '../stats';
 import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from '../honors';
-import { completeBreakdownRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
+import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 
 type PageProps = {
   params: { slug: string };
@@ -52,6 +52,80 @@ function GenderSplitBar({ label, women, men }: { label: string; women: number; m
         <Box h="100%" w={`${womenWidth}%`} style={{ background: '#c95b7a', borderRadius: 999 }} />
       </Box>
     </Stack>
+  );
+}
+
+function HonoraryDotTimeline() {
+  const years = Array.from(new Set(honoraryCrystalGlobeRecipients.map((recipient) => recipient.year)));
+
+  return (
+    <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
+      <Group justify="space-between" align="end" mb="md">
+        <Stack gap={2}>
+          <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Osobnosti po letech</Title>
+          <Text c="dimmed">Každá tečka je jedna oceněná osobnost. Najeďte na ni pro jméno, zemi a profesi.</Text>
+        </Stack>
+        <Group gap="sm">
+          <Badge color="pink" variant="light">ženy</Badge>
+          <Badge color="blue" variant="light">muži</Badge>
+          <Badge color="gray" variant="light">2026 oznámeno</Badge>
+        </Group>
+      </Group>
+      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
+        <Box
+          style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${years.length}, minmax(38px, 1fr))`,
+            gap: 8,
+            minWidth: 980,
+            alignItems: 'end',
+          }}
+        >
+          {years.map((year) => {
+            const recipients = honoraryCrystalGlobeRecipients.filter((recipient) => recipient.year === year);
+            return (
+              <Stack key={year} gap={6} align="center" justify="end">
+                <Stack gap={4} align="center" justify="end" h={recipients.length > 2 ? 82 : 58}>
+                  {recipients.map((recipient) => (
+                    <Tooltip
+                      key={`${recipient.year}-${recipient.name}`}
+                      label={`${recipient.year}${recipient.status === 'announced' ? ' oznámeno' : ''}: ${recipient.name} · ${recipient.country} · ${recipient.role}`}
+                      multiline
+                      maw={280}
+                      withArrow
+                    >
+                      <Box
+                        component="span"
+                        role="img"
+                        aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}, ${recipient.role}`}
+                        tabIndex={0}
+                        title={`${recipient.year}: ${recipient.name} · ${recipient.country} · ${recipient.role}`}
+                        style={{
+                          width: recipient.gender === 'woman' ? 18 : 14,
+                          height: recipient.gender === 'woman' ? 18 : 14,
+                          borderRadius: 999,
+                          background: recipient.gender === 'woman' ? '#c95b7a' : '#547ca8',
+                          border: recipient.status === 'announced' ? '3px solid #11100e' : '2px solid #fffdf8',
+                          boxShadow: '0 0 0 1px rgba(17, 16, 14, 0.22)',
+                          display: 'inline-block',
+                          cursor: 'help',
+                        }}
+                      />
+                    </Tooltip>
+                  ))}
+                </Stack>
+                <Text size="xs" fw={800} c={recipients.some((recipient) => recipient.gender === 'woman') ? '#8d2d4a' : 'dimmed'}>
+                  {year}
+                </Text>
+              </Stack>
+            );
+          })}
+        </Box>
+      </Box>
+      <Text mt="md" size="sm" c="dimmed">
+        Čtení grafu: růžové tečky nejsou rozprostřené rovnoměrně. Největší koncentrace ženských jmen přichází v letech 2009-2012 a znovu až jednotlivě v roce 2019 a oznámeném roce 2026.
+      </Text>
+    </Paper>
   );
 }
 
@@ -90,6 +164,8 @@ function HonoraryGenderBlock() {
           </SimpleGrid>
         </Paper>
 
+        <HonoraryDotTimeline />
+
         <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">
             <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Poslední oceněné osobnosti v datové řadě</Title>
@@ -112,6 +188,7 @@ function HonoraryGenderBlock() {
 
 function FilmScaleBlock() {
   const maxFilms = peakFilmYear.totalFilms ?? 1;
+  const maxScreenings = Math.max(...filmCountAvailableRows.map((row) => row.screenings ?? 0));
   const recentBreakdown = completeBreakdownRows.slice(-4);
 
   return (
@@ -142,6 +219,81 @@ function FilmScaleBlock() {
             <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">{latestScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film v roce {latestClosedFilmYear.year}</Text></Paper>
             <Paper p="md" radius={8} bg="#fffaf0" c="#11100e"><Text fw={900} ff="monospace">2x</Text><Text size="sm">metoda pro koprodukce</Text></Paper>
           </SimpleGrid>
+        </Paper>
+
+        <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
+          <Group justify="space-between" align="end" mb="md">
+            <Stack gap={2}>
+              <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Filmy a projekce po ročnících</Title>
+              <Text c="dimmed">Každý sloupec má tooltip s rokem, ročníkem, počtem filmů, projekcí a metodickou poznámkou.</Text>
+            </Stack>
+            <Group gap="sm">
+              <Badge color="teal" variant="light">filmy</Badge>
+              <Badge color="yellow" variant="light">projekce</Badge>
+            </Group>
+          </Group>
+          <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
+            <Box
+              style={{
+                display: 'grid',
+                gridTemplateColumns: `repeat(${filmCountAvailableRows.length}, minmax(32px, 1fr))`,
+                gap: 6,
+                minWidth: 1040,
+                alignItems: 'end',
+                minHeight: 250,
+                borderBottom: '1px solid #d8cbbb',
+                paddingTop: 8,
+              }}
+            >
+              {filmCountAvailableRows.map((row) => {
+                const filmsHeight = Math.max(10, Math.round(((row.totalFilms ?? 0) / maxFilms) * 190));
+                const screeningsHeight = row.screenings ? Math.max(10, Math.round((row.screenings / maxScreenings) * 190)) : 0;
+                const perFilm = row.screenings && row.totalFilms ? Math.round((row.screenings / row.totalFilms) * 100) / 100 : null;
+                const tooltip = [
+                  `${row.year}${row.edition ? ` · ${row.edition}. ročník` : ''}`,
+                  `${row.totalFilms} filmů celkem`,
+                  row.screenings ? `${row.screenings} projekcí` : 'počet projekcí není v online souhrnu',
+                  perFilm ? `${perFilm.toString().replace('.', ',')} projekce na film` : null,
+                  row.note ?? null,
+                ].filter(Boolean).join(' · ');
+
+                return (
+                  <Tooltip key={row.year} label={tooltip} multiline maw={340} withArrow>
+                    <Stack gap={4} align="center" justify="end" title={tooltip} style={{ cursor: 'help' }}>
+                      <Box h={198} w="100%" style={{ display: 'flex', alignItems: 'end', justifyContent: 'center', gap: 3 }}>
+                        <Box
+                          aria-label={`${row.year}: ${row.totalFilms} filmů`}
+                          style={{
+                            width: 12,
+                            height: filmsHeight,
+                            background: row.availability === 'full-breakdown' ? '#3f9f8f' : '#6fb3a3',
+                            borderRadius: '5px 5px 0 0',
+                            boxShadow: row.year === peakFilmYear.year ? '0 0 0 2px #11100e' : undefined,
+                          }}
+                        />
+                        <Box
+                          aria-label={row.screenings ? `${row.year}: ${row.screenings} projekcí` : `${row.year}: projekce nejsou dostupné`}
+                          style={{
+                            width: 8,
+                            height: screeningsHeight,
+                            background: row.screenings ? '#d7a84a' : 'transparent',
+                            borderRadius: '5px 5px 0 0',
+                            opacity: row.screenings ? 0.92 : 0,
+                          }}
+                        />
+                      </Box>
+                      <Text size="xs" fw={row.year === peakFilmYear.year || row.year === latestClosedFilmYear.year ? 900 : 700} c={row.availability === 'full-breakdown' ? '#276b61' : 'dimmed'}>
+                        {String(row.year).slice(2)}
+                      </Text>
+                    </Stack>
+                  </Tooltip>
+                );
+              })}
+            </Box>
+          </Box>
+          <Text mt="md" size="sm" c="dimmed">
+            Čtení grafu: zelené sloupce po roce 2003 klesají, žluté projekce ale neklesají stejným tempem. Festival tak po čase neukazuje jen méně titulů; dává každému filmu víc projekčního prostoru.
+          </Text>
         </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
