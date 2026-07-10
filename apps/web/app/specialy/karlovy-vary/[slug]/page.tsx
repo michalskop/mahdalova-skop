@@ -221,6 +221,39 @@ function FilmScaleBlock() {
           </SimpleGrid>
         </Paper>
 
+        <Paper p="lg" radius={8} withBorder bg="#fffaf0" style={{ gridColumn: '1 / -1' }}>
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+            <Stack gap="sm">
+              <Badge w="fit-content" color="teal" variant="light">Kdo vybírá filmy</Badge>
+              <Title order={2} style={{ fontFamily: "'Roboto Slab', Georgia, serif" }}>Program není práce poroty. Porota až hodnotí.</Title>
+              <Text size="lg">
+                Mapa zemí musí vycházet z programového výběru, ne z cen. Filmy do programu skládá festivalové programové oddělení pod uměleckým vedením. Poroty vstupují až potom: hodnotí soutěžní filmy a rozhodují o cenách.
+              </Text>
+              <Text>
+                V novodobé historii je klíčová Eva Zaoralová: po roce 1994 spolu s Jiřím Bartoškou festival znovu postavila na mezinárodní prestiži. Podle oficiální historie KVIFF v roce 2011 předala umělecké vedení Karlu Ochovi a dál přispívala jako umělecká poradkyně až do roku 2022.
+              </Text>
+            </Stack>
+            <Stack gap="sm">
+              <Paper p="md" radius={8} withBorder bg="#fffdf8">
+                <Text fw={900}>Dnes</Text>
+                <Text>Karel Och je umělecký ředitel. Programové oddělení uvádí programátory, koordinaci programu, přidružené programátory a mezinárodní konzultanty.</Text>
+              </Paper>
+              <Paper p="md" radius={8} withBorder bg="#fffdf8">
+                <Text fw={900}>Co přesně vybírají</Text>
+                <Text>KVIFF uvádí zhruba dvě stovky filmů ročně, často jako české, evropské, mezinárodní nebo světové premiéry. Soutěž Crystal Globe má zvláštní pravidla: jde o celovečerní filmy z předchozí sezony, které nebyly v mezinárodní soutěži jiného festivalu.</Text>
+              </Paper>
+              <Group>
+                <Button component="a" href="https://www.kviff.com/en/about-us/festival-description" target="_blank" rel="noopener noreferrer" variant="outline" color="dark">
+                  Popis festivalu
+                </Button>
+                <Button component="a" href="https://www.kviff.com/en/about-us/contacts" target="_blank" rel="noopener noreferrer" variant="outline" color="dark">
+                  Programové oddělení
+                </Button>
+              </Group>
+            </Stack>
+          </SimpleGrid>
+        </Paper>
+
         <Paper p="lg" radius={8} withBorder bg="#fffdf8" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">
             <Stack gap={2}>
