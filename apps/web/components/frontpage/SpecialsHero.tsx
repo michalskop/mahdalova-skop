@@ -99,6 +99,19 @@ const N = TILES.length;
 const EXT_TILES = [...TILES.slice(-VISIBLE), ...TILES, ...TILES.slice(0, VISIBLE)];
 const EXT_START = VISIBLE; // index první skutečné dlaždice v EXT_TILES
 
+function renderSpecialTitle(title: string) {
+  if (title !== 'Festival Karlovy Vary v datech') return title;
+
+  return (
+    <>
+      Festival Karlovy Vary
+      <br className="kviff-mobile-title-break" />
+      <span className="kviff-desktop-title-space"> </span>
+      v datech
+    </>
+  );
+}
+
 function TileLogo({ type }: { type: string }) {
   if (type === 'dpbp') return <DpbpLogo />;
   if (type === 'lupa') return <LupaIcon />;
@@ -139,7 +152,7 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px' }}>
           <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
-            {title}
+            {renderSpecialTitle(title)}
           </Title>
         </div>
       </a>
@@ -156,7 +169,7 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
       </div>
       <div style={{ width: '100%', padding: '12px 16px 16px', background: 'rgba(0,0,0,0.28)', minHeight: 68, display: 'flex', alignItems: 'flex-start', flexShrink: 0 }}>
         <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
-          {title}
+          {renderSpecialTitle(title)}
         </Title>
       </div>
     </a>
@@ -457,6 +470,12 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
         .carousel-track::-webkit-scrollbar { display: none; }
         .carousel-tile {
           flex: 0 0 calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE});
+        }
+        .kviff-mobile-title-break { display: none; }
+        .kviff-desktop-title-space { display: inline; }
+        @media (max-width: 640px) {
+          .kviff-mobile-title-break { display: block; }
+          .kviff-desktop-title-space { display: none; }
         }
       `}</style>
 

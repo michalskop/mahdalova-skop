@@ -78,6 +78,19 @@ const TILES = [
   },
 ];
 
+function renderSpecialTitle(title: string) {
+  if (title !== 'Festival Karlovy Vary v datech') return title;
+
+  return (
+    <>
+      Festival Karlovy Vary
+      <br className="kviff-mobile-title-break" />
+      <span className="kviff-desktop-title-space"> </span>
+      v datech
+    </>
+  );
+}
+
 /* ── Tile ─────────────────────────────────────────────────────────── */
 function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES[0]) {
   return (
@@ -110,7 +123,7 @@ function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES
           fontSize: 'var(--mantine-font-size-lg)',
           lineHeight: 1.35,
         }}>
-          {title}
+          {renderSpecialTitle(title)}
         </Title>
       </div>
     </a>
@@ -134,6 +147,12 @@ export default function SpecialsLandingPage() {
         }
         .section-title-link { text-decoration: none; }
         .section-title-link:hover { text-decoration: underline; }
+        .kviff-mobile-title-break { display: none; }
+        .kviff-desktop-title-space { display: inline; }
+        @media (max-width: 640px) {
+          .kviff-mobile-title-break { display: block; }
+          .kviff-desktop-title-space { display: none; }
+        }
       `}</style>
       <Paper py={20} bg={BG} radius={0} style={{ minHeight: '60vh' }}>
         <Group gap={0} align="flex-start" wrap="wrap">
