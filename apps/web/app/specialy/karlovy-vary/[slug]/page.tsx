@@ -325,7 +325,7 @@ function CountryBubbleMap() {
             })}
           </Box>
           <Text mt="sm" size="sm" c="dimmed">
-            Pozor: toto je mapa výskytů zemí v katalogu, ne mapa unikátních filmů. U koprodukcí se jeden film započítá více zemím.
+            Pozor: toto není mapa unikátních filmů, ale mapa výskytů produkčních zemí. Když má jeden film uvedené země Francie, Německo a Česko, započítá se jednou Francii, jednou Německu a jednou Česku. Součet výskytů je proto vyšší než počet filmů.
           </Text>
           <Text mt="xs" size="sm">
             Co z toho plyne: nejsilnější není jen domácí česká stopa. Festival stojí na evropské koprodukční síti, do které se výrazně zapojují Francie a Německo, a zároveň má silný severoamerický pól přes USA.
