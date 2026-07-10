@@ -1,5 +1,8 @@
-// OVĚŘENO PROTI PRIMÁRNÍMU ZDROJI: https://www.kviff.com/en/about-us/festival-archive/{rok}
-// (sekce "Awarded Guests" na stránce každého ročníku, staženo a ručně zkontrolováno 2026-07-10).
+// OVĚŘENO PROTI OFICIÁLNÍMU ARCHIVU KVIFF A ROČNÍKOVÝM SOUHRNŮM:
+// https://www.kviff.com/en/about-us/festival-archive/{rok}
+// Dnešní archivní karty "Awarded Guests" nejsou u starších ročníků úplné,
+// proto u doplněných historických jmen držíme jako kontrolní vrstvu i
+// ročníkové souhrny cen.
 //
 // Držíme VÝHRADNĚ Křišťálový glóbus za mimořádný umělecký přínos světové
 // kinematografii (Crystal Globe for Outstanding Artistic Contribution to
@@ -11,9 +14,8 @@
 // Rok 1994 a starší: archiv na stránce ročníku sekci "Awarded Guests" vůbec
 // nemá, jediná zmínka "Crystal Globe" patří soutěžní Grand Prix. Čestná řada
 // pro osobnosti tedy podle dostupného archivu začíná až rokem 1995.
-// Chybí roky: 2002 a 2024 (festival ocenění toho roku dle archivu neudělil –
-// v obou letech jsou na stránce jen Ceny prezidenta) a 2020 (festival se
-// nekonal, covid).
+// Chybí roky: 2020 (festival se nekonal, covid) a 2024 (festival dle dostupného
+// archivu udělil jen Ceny prezidenta).
 export type HonorGender = 'woman' | 'man';
 
 export type HonorRecipient = {
@@ -38,33 +40,67 @@ function src(year: number) {
   return `https://www.kviff.com/en/about-us/festival-archive/${year}`;
 }
 
+function wiki(year: number) {
+  const editionByYear: Record<number, string> = {
+    1999: '34th',
+    2000: '35th',
+    2001: '36th',
+    2002: '37th',
+    2004: '39th',
+    2005: '40th',
+    2006: '41st',
+    2007: '42nd',
+    2008: '43rd',
+    2009: '44th',
+    2010: '45th',
+    2013: '48th',
+  };
+  return `https://en.wikipedia.org/wiki/${editionByYear[year]}_Karlovy_Vary_International_Film_Festival`;
+}
+
 const rawHonoraryCrystalGlobeRecipients = [
   { year: 1995, name: 'Gina Lollobrigida', gender: 'woman', country: 'Itálie', role: 'actor', roleCz: 'herečka', source: src(1995) },
   { year: 1996, name: 'Gregory Peck', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(1996) },
   { year: 1997, name: 'Miloš Forman', gender: 'man', country: 'Česko / USA', role: 'director', roleCz: 'režisér', source: src(1997) },
   { year: 1998, name: 'Michael Douglas', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(1998) },
+  { year: 1999, name: 'Karel Kachyňa', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: wiki(1999) },
   { year: 1999, name: 'Franco Zeffirelli', gender: 'man', country: 'Itálie', role: 'director', roleCz: 'režisér', source: src(1999) },
+  { year: 2000, name: 'Věra Chytilová', gender: 'woman', country: 'Česko', role: 'director', roleCz: 'režisérka', source: wiki(2000) },
   { year: 2000, name: 'Carlos Saura', gender: 'man', country: 'Španělsko', role: 'director', roleCz: 'režisér', source: src(2000) },
   { year: 2001, name: 'Ben Kingsley', gender: 'man', country: 'Británie', role: 'actor', roleCz: 'herec', source: src(2001) },
-  // 2002: dle archivu bez čestného oceněného (Kiera Knightley a Kim Ki-duk byli jen hosté)
+  { year: 2001, name: 'Otakar Vávra', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: wiki(2001) },
+  { year: 2002, name: 'John Boorman', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: wiki(2002) },
+  { year: 2002, name: 'Vlastimil Brodský', gender: 'man', country: 'Česko', role: 'actor', roleCz: 'herec', source: wiki(2002) },
+  { year: 2002, name: 'Sean Connery', gender: 'man', country: 'Británie', role: 'actor', roleCz: 'herec', source: wiki(2002) },
   { year: 2003, name: 'Morgan Freeman', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2003) },
   { year: 2003, name: 'Stephen Frears', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: src(2003) },
   { year: 2003, name: 'Jiří Menzel', gender: 'man', country: 'Česko', role: 'director, actor', roleCz: 'režisér, herec', source: src(2003) },
   { year: 2004, name: 'Harvey Keitel', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2004) },
+  { year: 2004, name: 'Miroslav Ondříček', gender: 'man', country: 'Česko', role: 'cinematographer', roleCz: 'kameraman', source: wiki(2004) },
   { year: 2004, name: 'Roman Polanski', gender: 'man', country: 'Polsko / Francie', role: 'director', roleCz: 'režisér', source: src(2004) },
   { year: 2005, name: 'Robert Redford', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2005) },
   { year: 2005, name: 'Liv Ullmann', gender: 'woman', country: 'Norsko', role: 'actor, director', roleCz: 'herečka, režisérka', source: src(2005) },
-  { year: 2005, name: 'Sharon Stone', gender: 'woman', country: 'USA', role: 'actor', roleCz: 'herečka', source: src(2005) },
+  { year: 2005, name: 'Sharon Stone', gender: 'woman', country: 'USA', role: 'actor', roleCz: 'herečka', source: wiki(2005) },
   { year: 2006, name: 'Andy García', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2006) },
+  { year: 2006, name: 'Robert Shaye', gender: 'man', country: 'USA', role: 'producer', roleCz: 'producent', source: wiki(2006) },
+  { year: 2006, name: 'Jan Němec', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: wiki(2006) },
   { year: 2007, name: 'Danny DeVito', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2007) },
+  { year: 2007, name: 'Břetislav Pojar', gender: 'man', country: 'Česko', role: 'animator, director', roleCz: 'animátor, režisér', source: wiki(2007) },
   { year: 2008, name: 'Robert De Niro', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2008) },
+  { year: 2008, name: 'Dušan Hanák', gender: 'man', country: 'Slovensko', role: 'director', roleCz: 'režisér', source: wiki(2008) },
+  { year: 2008, name: 'Juraj Jakubisko', gender: 'man', country: 'Slovensko', role: 'director', roleCz: 'režisér', source: wiki(2008) },
+  { year: 2008, name: 'Ivan Passer', gender: 'man', country: 'Česko / USA', role: 'director', roleCz: 'režisér', source: wiki(2008) },
+  { year: 2009, name: 'Isabelle Huppert', gender: 'woman', country: 'Francie', role: 'actor', roleCz: 'herečka', source: wiki(2009) },
   { year: 2009, name: 'John Malkovich', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2009) },
+  { year: 2009, name: 'Jan Švankmajer', gender: 'man', country: 'Česko', role: 'director, animator', roleCz: 'režisér, animátor', source: wiki(2009) },
   { year: 2010, name: 'Nikita Michalkov', gender: 'man', country: 'Rusko', role: 'director', roleCz: 'režisér', source: src(2010) },
+  { year: 2010, name: 'Juraj Herz', gender: 'man', country: 'Česko / Slovensko', role: 'director', roleCz: 'režisér', source: wiki(2010) },
   { year: 2011, name: 'Judi Dench', gender: 'woman', country: 'Británie', role: 'actor', roleCz: 'herečka', source: src(2011) },
   { year: 2012, name: 'Helen Mirren', gender: 'woman', country: 'Británie', role: 'actor', roleCz: 'herečka', source: src(2012) },
   { year: 2012, name: 'Susan Sarandon', gender: 'woman', country: 'USA', role: 'actor', roleCz: 'herečka', source: src(2012) },
   { year: 2013, name: 'Oliver Stone', gender: 'man', country: 'USA', role: 'director', roleCz: 'režisér', source: src(2013) },
   { year: 2013, name: 'John Travolta', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2013) },
+  { year: 2013, name: 'Theodor Pištěk', gender: 'man', country: 'Česko', role: 'costume designer', roleCz: 'kostýmní výtvarník', source: wiki(2013) },
   { year: 2014, name: 'Mel Gibson', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2014) },
   { year: 2014, name: 'William Friedkin', gender: 'man', country: 'USA', role: 'director', roleCz: 'režisér', source: src(2014) },
   { year: 2015, name: 'Richard Gere', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2015) },
@@ -140,11 +176,12 @@ export const honoraryTotal = honoraryCrystalGlobeRecipients.length;
 export const honoraryWomenShare = Math.round((honoraryGenderCounts.woman / honoraryTotal) * 1000) / 10;
 
 // Roky s nejvyšší koncentrací žen v jednom ročníku (fakticky ověřeno, ne odhad "vlny"):
-// 2012 (Mirren + Sarandon) a 2019 (Moore + Clarkson) jsou jediné roky se dvěma ženami zároveň.
-export const honoraryDoubleWomanYears = [2012, 2019];
+// 2005 (Ullmann + Stone), 2012 (Mirren + Sarandon) a 2019 (Moore + Clarkson)
+// jsou jediné roky se dvěma ženami zároveň.
+export const honoraryDoubleWomanYears = [2005, 2012, 2019];
 
 export const honoraryByPeriod = [
-  { period: '1995–2008', woman: 2, man: 15 },
-  { period: '2009–2019', woman: 5, man: 13 },
+  { period: '1995–2008', woman: 4, man: 27 },
+  { period: '2009–2019', woman: 6, man: 16 },
   { period: '2021–2026', woman: 1, man: 6 },
 ];

@@ -296,7 +296,7 @@ function HonoraryGenderBlock() {
           <Badge w="fit-content" color="pink" variant="light" mb="sm">Hotový genderový graf</Badge>
           <Title order={2} mb="xs" >Čestná prestiž je pořád hlavně mužská</Title>
           <Text size="lg">
-            V řadě Crystal Globe za mimořádný umělecký přínos světu filmu evidujeme od roku 1995 do oznámených poct roku 2026 celkem {honoraryTotal} oceněných osobností (ověřeno proti oficiálnímu archivu KVIFF, ročník po ročníku). Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
+            V řadě Crystal Globe za mimořádný umělecký přínos světu filmu evidujeme od roku 1995 do oznámených poct roku 2026 celkem {honoraryTotal} oceněných osobností (ověřeno proti oficiálnímu archivu KVIFF a ročníkovým souhrnům cen). Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
           </Text>
           <Stack gap="md" mt="lg">
             {honoraryByPeriod.map((row) => (
@@ -330,7 +330,7 @@ function HonoraryGenderBlock() {
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
           <Title order={2} mb="xs" >Sdělení do článku</Title>
           <Text c="background.2" size="lg">
-            Vary umějí pozvat a ocenit velká ženská jména: Ginu Lollobrigidu, Liv Ullmann, Judi Dench, Helen Mirren, Susan Sarandon, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě – od roku 1995 jde jen o 8 žen z {honoraryTotal} oceněných.
+            Vary umějí pozvat a ocenit velká ženská jména: od Giny Lollobrigidy, Věry Chytilové, Liv Ullmann, Sharon Stone a Isabelle Huppert po Judi Dench, Helen Mirren, Susan Sarandon, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě – od roku 1995 jde o {honoraryGenderCounts.woman} žen z {honoraryTotal} oceněných.
           </Text>
           <SimpleGrid cols={2} spacing="sm" mt="lg">
             <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} ff="monospace">{honoraryGenderCounts.woman}</Text><Text size="sm">oceněných žen</Text></Paper>
@@ -1460,5 +1460,4 @@ export default function KviffBranchPage({ params }: PageProps) {
     </Container>
   );
 }
-
 
