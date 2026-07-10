@@ -15,7 +15,7 @@
   "introChart": "GRAF_15_SNEMOVNA_TEMPO",
   "intro": {
     "title": "Sněmovna mluvila 39 hodin měsíčně. Po výměně vlády je to 31.",
-    "textBefore": "Počátkem roku 2025 se začali ozývat zákonodárci, že aktuální způsob fungování Sněmovny není slučitelný s osobním životem. Dvě poslankyně oznámily, že nebudou znovu kandidovat – jednání jsou podle nich nepředvídatelná a neefektivní. Přidal se i předseda rozpočtového výboru, který si stěžoval, že tak neefektivně strávený pracovní čas za celý svůj život neměl.",
+    "textBefore": "Na začátku roku 2025 začali sami zákonodárci říkat nahlas, že se práce ve Sněmovně nedá skloubit se životem. Dvě poslankyně oznámily, že už znovu kandidovat nebudou – jednání jsou podle nich nepředvídatelná a neefektivní. A předseda rozpočtového výboru dodal, že tak neefektivně strávený pracovní čas za celý život nezažil.",
     "textAfter": "Analýza sněmovních dat za poslední čtyři volební období potvrdila, že nejde o subjektivní pocit. Čas u řečnického pultu se za dekádu víc než zdvojnásobil – z necelých 19 hodin měsíčně za Petra Nečase na rekordních 39 hodin za Petra Fialy, hlavně díky dlouhým projevům tehdejší opozice vedené Andrejem Babišem. Po volbách 2025 se Babiš stal premiérem a Sněmovna v prvním půlroce nového období pracuje efektivněji – celkový čas klesl na 31 hodin měsíčně, protože současná opozice neblokuje jednání s takovou intenzitou, jakou sám Babiš prosazoval, dokud byl v opozici. Podstatné tedy není, kdo z politiků mluví nejvíc. Podstatné je nastavit jednací řád tak, aby debata zůstala možností, ne nástrojem k zablokování práce parlamentu – bez ohledu na to, kdo je zrovna u moci.",
     "textClosing": "Evropský parlament a německý Bundestag řeší riziko zdržování jinak než Británie – přidělováním pevného času politickým skupinám místo spoléhání na autoritu předsedajícího. Francie po roce 2009 ukazuje, jak vypadá konkrétní reforma tohoto typu v praxi."
   },
@@ -32,6 +32,7 @@
   ],
   "postSupportTiles": [
     { "slug": "08-prezidentske-cesty", "topic": "Data story", "fullWidth": true },
-    { "slug": "09-milosti", "topic": "Data story" }
+    { "slug": "09-milosti", "topic": "Data story" },
+    { "slug": "10-prezidentska-veta", "topic": "Data story" }
   ]
 }

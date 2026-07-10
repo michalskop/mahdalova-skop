@@ -164,14 +164,15 @@ export default function MandateCalendar() {
 
   return (
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px', borderRadius: 4 }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
-        <div style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
-          color: '#101432', lineHeight: 1,
-        }}>
-          Cesty prezidentů: kostička za každou cestu
-        </div>
-        <ChartSignature size={30} style={{ flex: '0 0 auto', lineHeight: 1 }} />
+      {/* Titulek přes celou šířku, podpis na švu hlavičky vpravo (viz DESIGN.md §9) */}
+      <div style={{
+        fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
+        color: '#101432', lineHeight: 1.2,
+      }}>
+        Cesty prezidentů: kostička za každou cestu
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '4px 0 6px' }}>
+        <ChartSignature size={30} style={{ lineHeight: 1 }} />
       </div>
       <div style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 14, flexWrap: 'wrap',

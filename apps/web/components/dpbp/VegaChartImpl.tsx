@@ -30,6 +30,33 @@ const CS_TIME_LOCALE = {
   months: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
   shortMonths: ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'],
 };
+// Jednotný vzhled tooltipu všech grafů (vzor: graf plodnosti v kap. Demografie):
+// béžové pozadí s mírnou průhledností, jemný rámeček a stín, Roboto Slab,
+// zvýrazněná hodnota crimson. Třídu .dpbp-theme dodává vega-embed (tooltip.theme).
+const TOOLTIP_CSS = `
+#vg-tooltip-element.vg-tooltip.dpbp-theme {
+  background: rgba(248, 246, 240, 0.95);
+  border: 1px solid #e8e3d2;
+  border-radius: 7px;
+  box-shadow: 0 4px 10px rgba(16, 20, 50, 0.14);
+  color: #1a1a1a;
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-size: 12px;
+  line-height: 1.35;
+  padding: 8px 10px;
+  max-width: 280px;
+}
+#vg-tooltip-element.vg-tooltip.dpbp-theme table tr td.key {
+  color: #333333;
+  font-weight: 400;
+  padding-right: 8px;
+}
+#vg-tooltip-element.vg-tooltip.dpbp-theme table tr td.value {
+  color: #de1743;
+  font-weight: 700;
+  max-width: 180px;
+}
+`;
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
   axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 13, titleFontSize: 13, labelColor: '#333333', titleColor: '#333333' },
@@ -169,6 +196,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
         renderer: 'svg',
         formatLocale: CS_NUMBER_LOCALE,
         timeFormatLocale: CS_TIME_LOCALE,
+        tooltip: { theme: 'dpbp' },
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
       }).catch(e => setError(String(e)));
@@ -202,10 +230,11 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       padding: '20px 16px 14px',
       margin: '2em 0',
     }}>
+      <style>{TOOLTIP_CSS}</style>
       {/* Header – always present; content appears once meta loads.
-          Vpravo podpis DataTimes.cz (horizontální varianta loga). */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: (meta.title || meta.subtitle) ? 14 : 0 }}>
-      <div style={{ minWidth: 0 }}>
+          Titulek jde přes celou šířku karty (zalamuje se až na její šířce);
+          podpis DataTimes.cz sedí na švu hlavičky a grafu vpravo, ne vedle titulku. */}
+      <div>
         {meta.title && (
           <div style={{
             fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
@@ -228,10 +257,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
             {meta.subtitle}
           </div>
         )}
-      </div>
-      {(meta.title || meta.subtitle) && (
-        <ChartSignature size={30} style={{ flex: '0 0 auto', marginTop: 2 }} />
-      )}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', margin: (meta.title || meta.subtitle) ? '4px 0 2px' : 0 }}>
+          {(meta.title || meta.subtitle) && <ChartSignature size={30} />}
+        </div>
       </div>
 
       {/* Chart canvas */}

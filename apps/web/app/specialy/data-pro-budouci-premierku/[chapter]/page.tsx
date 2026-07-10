@@ -39,6 +39,21 @@ function loadMeta(chapterSlug: string): ChapterMeta | null {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
+// Dlaždice s fullWidth zabírá celý řádek a resetuje párování; poloviční dlaždice,
+// která by zůstala v řádku sama (poslední bez souseda), se roztáhne přes celý řádek.
+function withRowSpan<T extends { fullWidth?: boolean }>(list: T[]): Array<T & { span: boolean }> {
+  let col = 0;
+  return list.map((t, i) => {
+    if (t.fullWidth) {
+      col = 0;
+      return { ...t, span: true };
+    }
+    const aloneInRow = col === 0 && i === list.length - 1;
+    col = aloneInRow ? 0 : (col + 1) % 2;
+    return { ...t, span: aloneInRow };
+  });
+}
+
 function loadCard(chapterSlug: string, cardId: string): ImpactCardData | null {
   const p = path.join(CONTENT_ROOT, chapterSlug, 'cards', `${cardId}.json`);
   if (!fs.existsSync(p)) return null;
@@ -100,13 +115,17 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   // Pár 2: mezinárodní kontext (vlevo) | hlavní analýza 01 (vpravo)
   // Pár 3: hlavní analýza 02 (vlevo) | hlavní analýza 03 (vpravo)
   // Pár 4: datová investigace (vlevo) | komparace/solution journalism (vpravo)
-  const tiles = (meta.tiles ?? [])
-    .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
-    .filter(t => t.fm != null);
+  const tiles = withRowSpan(
+    (meta.tiles ?? [])
+      .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
+      .filter(t => t.fm != null)
+  );
 
-  const postSupportTiles = (meta.postSupportTiles ?? [])
-    .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
-    .filter(t => t.fm != null);
+  const postSupportTiles = withRowSpan(
+    (meta.postSupportTiles ?? [])
+      .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
+      .filter(t => t.fm != null)
+  );
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
@@ -150,9 +169,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               .dpbp-chapter-head-profile { display: none; }
               .dpbp-tile-grid { grid-template-columns: 1fr !important; }
               .dpbp-tile-grid > * { grid-column: 1 !important; }
-            }
-            .dpbp-tile-grid > *:last-child:nth-child(odd) {
-              grid-column: 1 / -1;
             }
           `}</style>
         </Container>
@@ -232,7 +248,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 8 }}
             >
               {tiles.map(t => (
-                <div key={t.slug} style={t.fullWidth ? { gridColumn: '1 / -1' } : undefined}>
+                <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
                   <DpbpArticleCard
                     href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
                     title={t.fm!.title}
@@ -262,7 +278,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginTop: 24, marginBottom: 8 }}
           >
             {postSupportTiles.map(t => (
-              <div key={t.slug} style={t.fullWidth ? { gridColumn: '1 / -1' } : undefined}>
+              <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
                 <DpbpArticleCard
                   href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
                   title={t.fm!.title}

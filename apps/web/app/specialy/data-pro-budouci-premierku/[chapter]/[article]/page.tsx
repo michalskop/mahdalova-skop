@@ -16,6 +16,7 @@ import ProfileHead from '@/components/dpbp/ProfileHead';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/PresidentialTripsMap';
 import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
+import VetoChart from '@/components/dpbp/VetoChart/VetoChart';
 import ChartSignature from '@/components/dpbp/ChartSignature';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 
@@ -97,6 +98,7 @@ const mdxComponents = {
   FlourishEmbed,
   PresidentialTripsMap,
   MandateCalendar,
+  VetoChart,
   ChartSignature,
 };
 
