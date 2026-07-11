@@ -59,8 +59,8 @@ function InlineBar({ label, value, max, color = 'var(--mantine-color-brandNavy-6
 
 export default function KarlovyVarySpecialPage() {
   return (
-    <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
-      <Box component="section" bg="brandRoyalBlue.8" c="background.0">
+    <Container size="lg" bg="background.1" maw="1200px" w="100%" p={0} m="0 auto">
+      <Box component="section" style={{ background: 'var(--mantine-color-brandNavy-9)' }} c="background.0">
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing={0}>
           <Stack gap="lg" p={{ base: 24, md: 48 }} justify="center" mih={{ base: 520, md: 640 }}>
             <Badge w="fit-content" color="brand" variant="filled">Speciál</Badge>

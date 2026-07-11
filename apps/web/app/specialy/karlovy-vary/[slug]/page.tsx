@@ -1038,18 +1038,33 @@ export default function KviffBranchPage({ params }: PageProps) {
   if (!branch) notFound();
 
   return (
-    <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
+    <Container size="lg" bg="background.1" maw="1200px" w="100%" p={0} m="0 auto">
       <Box component="article">
-        <Box bg="brandRoyalBlue.8" c="background.0" px={{ base: 18, md: 44 }} py={{ base: 34, md: 64 }}>
-          <Stack gap="md" maw={860}>
-            <Button component={Link} href="/specialy/karlovy-vary" variant="subtle" color="yellow" w="fit-content" px={0}>
-              Karlovy Vary v datech
-            </Button>
-            <Badge w="fit-content" style={{ background: branch.accent, color: 'var(--mantine-color-brandRoyalBlue-8)' }}>{branch.kicker}</Badge>
-            <Title order={1} style={{ fontSize: 'clamp(2.2rem, 5vw, 4.8rem)', lineHeight: 1 }}>
+        <Box style={{ background: 'var(--mantine-color-brandNavy-9)' }} px={{ base: 18, md: 44 }} py={{ base: 36, md: 48 }}>
+          <Stack gap={0} maw={760}>
+            <Text
+              size="xs"
+              style={{ color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}
+            >
+              <Link href="/specialy/karlovy-vary" style={{ color: 'inherit', textDecoration: 'none' }}>Karlovy Vary v datech</Link>
+              {' · '}{branch.kicker}
+            </Text>
+            <Title
+              order={1}
+              style={{
+                color: '#ffffff',
+                fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                fontSize: '1.8rem',
+                fontWeight: 800,
+                lineHeight: 1.2,
+              }}
+            >
               {branch.title}
             </Title>
-            <Text size="xl" c="background.2">{branch.excerpt}</Text>
+            <Box style={{ width: 40, height: 3, background: branch.accent, marginTop: 16, marginBottom: 16 }} />
+            <Text style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: 1.5, maxWidth: 640 }}>
+              {branch.excerpt}
+            </Text>
           </Stack>
         </Box>
 
