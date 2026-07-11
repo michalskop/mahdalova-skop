@@ -71,6 +71,7 @@ const rawHonoraryCrystalGlobeRecipients = [
   { year: 1996, name: 'Gregory Peck', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(1996), citationCz: 'Hollywoodský herec dostal ocenění jako hvězda daného ročníku.' },
   { year: 1997, name: 'Miloš Forman', gender: 'man', country: 'Česko / USA', role: 'director', roleCz: 'režisér', source: src(1997), citationCz: 'Festival ocenil režiséra, jehož filmy jsou podle vlastního textu důležitou součástí českého i amerického filmového dědictví.' },
   { year: 1998, name: 'Michael Douglas', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(1998), citationCz: 'Byl hvězdou 33. ročníku a ocenění převzal osobně.' },
+  { year: 1998, name: 'František Vláčil', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: 'https://cs.wikipedia.org/wiki/Franti%C5%A1ek_Vl%C3%A1%C4%8Dil', citationCz: 'Ocenění dostal necelý rok před svou smrtí (leden 1999) – v roce 1978 navíc na stejném festivalu vyhrál soutěžní Grand Prix za film Stíny horkého léta.' },
   { year: 1999, name: 'Karel Kachyňa', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: wiki(1999), citationCz: 'Ocenění dostal za dlouholetý umělecký přínos jako jeden z klíčových režisérů poválečného československého filmu.', citationSource: 'https://www.filmovyprehled.cz/cs/person/3526/karel-kachyna' },
   { year: 1999, name: 'Franco Zeffirelli', gender: 'man', country: 'Itálie', role: 'director', roleCz: 'režisér', source: src(1999), citationCz: 'Festival vyzdvihl, že se celý život pohyboval mezi divadlem a filmem, zejména díky adaptacím Shakespearových her.' },
   { year: 2000, name: 'Věra Chytilová', gender: 'woman', country: 'Česko', role: 'director', roleCz: 'režisérka', source: wiki(2000), citationCz: 'Cenu přebírala s typickým černým humorem – slavnou se stala scéna ze zahajovací znělky, kdy se rozbitý glóbus snažila slepit lepidlem, které „nechytalo“.', citationSource: 'https://www.e15.cz/magazin/znelky-patri-k-festivalu-sedmnact-let-vybrali-jsme-sedm-nej-847973' },
@@ -187,7 +188,7 @@ export const honoraryWomenShare = Math.round((honoraryGenderCounts.woman / honor
 export const honoraryDoubleWomanYears = [2005, 2012, 2019];
 
 export const honoraryByPeriod = [
-  { period: '1995–2008', woman: 4, man: 28 },
+  { period: '1995–2008', woman: 4, man: 29 },
   { period: '2009–2019', woman: 6, man: 16 },
   { period: '2021–2026', woman: 1, man: 6 },
 ];
