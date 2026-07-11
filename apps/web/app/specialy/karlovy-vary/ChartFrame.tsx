@@ -47,7 +47,7 @@ export default function ChartFrame({ title, subtitle, source, children, fullWidt
 
       {children}
 
-      <div style={{ ...NUM_FONT, fontSize: 12, color: '#333333', marginTop: 12, lineHeight: 1.5 }}>
+      <div style={{ ...NUM_FONT, fontSize: 14, color: '#333333', marginTop: 12, lineHeight: 1.5 }}>
         <div>
           {'• autoři: '}
           <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'underline' }}>

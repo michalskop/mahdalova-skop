@@ -7,21 +7,20 @@ import type { HonorRecipient } from './honors';
 // Kostičkový unit chart podle vzoru MandateCalendar (Cesty prezidentů,
 // Efektivní vládnutí): SVG s viewBox škáluje na 100 % šířky karty, takže
 // se řada vždy vejde na šířku beze scrollování a chová se responzivně.
-// Hover ukazuje jen krátký titulek + výzvu ke kliknutí; celý popis (jméno,
-// zemi, profesi) dostane až klikací detail panel – dlouhé/opakující se
-// vysvětlení kategorie (co je Křišťálový glóbus, proč jde jen o jednu
-// kategorii) patří jednou do textu pod grafem, ne do každého tooltipu.
+// Hover ukazuje jen rok, jméno a zemi + výzvu ke kliknutí; klikací detail
+// panel navíc ukáže, jak konkrétní ocenění zdůvodnil sám festival KVIFF –
+// dlouhé/opakující se vysvětlení kategorie (co je Křišťálový glóbus obecně)
+// patří jednou do textu pod grafem, ne do popisu každé jednotlivé osoby.
 
 const NUM_FONT_FAMILY = 'var(--font-roboto-condensed), Arial, sans-serif';
 const COLOR_WOMAN = 'var(--mantine-color-brand-6)';
 const COLOR_MAN = 'var(--mantine-color-brandNavy-6)';
-const COLOR_ANNOUNCED = 'var(--mantine-color-brandRoyalBlue-8)';
 const VIEW_W = 1000;
 
 type HoverInfo = { recipient: HonorRecipient; left: number; top: number } | null;
 
 export default function HonoraryTimeline({ recipients }: { recipients: HonorRecipient[] }) {
-  const [activeKeys, setActiveKeys] = useState<Set<string>>(new Set(['woman', 'man', 'announced']));
+  const [activeKeys, setActiveKeys] = useState<Set<string>>(new Set(['woman', 'man']));
   const [hover, setHover] = useState<HoverInfo>(null);
   const [detail, setDetail] = useState<HoverInfo>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,12 +43,6 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
   const labelHeight = 15;
   const height = topPad + gridHeight + labelGap + labelHeight + 4;
 
-  function isVisible(r: HonorRecipient) {
-    if (!activeKeys.has(r.gender)) return false;
-    if (r.status === 'announced' && !activeKeys.has('announced')) return false;
-    return true;
-  }
-
   function tipInfo(e: React.MouseEvent, recipient: HonorRecipient, margin: number): NonNullable<HoverInfo> {
     const rect = (e.currentTarget as SVGElement).getBoundingClientRect();
     const box = containerRef.current!.getBoundingClientRect();
@@ -58,7 +51,7 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
   }
 
   function showTip(e: React.MouseEvent, recipient: HonorRecipient) {
-    setHover(tipInfo(e, recipient, 110));
+    setHover(tipInfo(e, recipient, 100));
   }
 
   function showDetail(e: React.MouseEvent, recipient: HonorRecipient) {
@@ -74,7 +67,6 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
         items={[
           { key: 'woman', label: 'ženy', color: COLOR_WOMAN },
           { key: 'man', label: 'muži', color: COLOR_MAN },
-          { key: 'announced', label: '2026 oznámeno', color: COLOR_ANNOUNCED, dashed: true },
         ]}
         onChange={(keys) => setActiveKeys(new Set(keys))}
       />
@@ -88,21 +80,17 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
               <g key={year}>
                 {yearRecipients.map((recipient, ri) => {
                   const y = topPad + gridHeight - (ri + 1) * sq - ri * sqGap;
-                  const visible = isVisible(recipient);
-                  const announced = recipient.status === 'announced';
+                  const visible = activeKeys.has(recipient.gender);
                   return (
                     <rect
                       key={`${recipient.year}-${recipient.name}`}
-                      aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}, ${recipient.roleCz}`}
+                      aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}`}
                       x={xCenter - sq / 2}
                       y={y}
                       width={sq}
                       height={sq}
                       rx={4}
                       fill={recipient.gender === 'woman' ? COLOR_WOMAN : COLOR_MAN}
-                      stroke={announced ? COLOR_ANNOUNCED : 'none'}
-                      strokeWidth={announced ? 2 : 0}
-                      strokeDasharray={announced ? '3 2' : undefined}
                       opacity={visible ? 1 : 0.14}
                       style={{
                         transition: 'opacity 0.15s',
@@ -142,9 +130,9 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
               color: '#1a1a1a',
               padding: '8px 11px',
               borderRadius: 7,
-              fontSize: 12,
+              fontSize: 13,
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-              width: 210,
+              width: 200,
               pointerEvents: 'none',
               zIndex: 10,
               border: '1px solid #e8e3d2',
@@ -152,11 +140,10 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
               lineHeight: 1.45,
             }}
           >
-            <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 2 }}>
-              {hover.recipient.year}
-              {hover.recipient.status === 'announced' ? ' · oznámeno' : ''} · {hover.recipient.name}
+            <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>
+              {hover.recipient.year} · {hover.recipient.name}
             </div>
-            <div style={{ color: '#333333' }}>{hover.recipient.country} · {hover.recipient.roleCz}</div>
+            <div style={{ color: '#333333' }}>{hover.recipient.country}</div>
             <div style={{ marginTop: 5, color: '#de1743', fontWeight: 700 }}>Kliknutím se zobrazí detaily</div>
             <div
               style={{
@@ -183,17 +170,17 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
               left: detail.left,
               top: detail.top,
               transform: 'translateX(-50%)',
-              width: 'min(280px, calc(100% - 18px))',
+              width: 'min(320px, calc(100% - 18px))',
               background: 'rgba(248,246,240,0.95)',
               color: '#1a1a1a',
               padding: '12px 14px 13px',
               borderRadius: 7,
-              fontSize: 12,
+              fontSize: 13,
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               zIndex: 20,
               border: '1px solid #e8e3d2',
               boxShadow: '0 8px 22px rgba(16,20,50,0.18)',
-              lineHeight: 1.45,
+              lineHeight: 1.5,
             }}
           >
             <button
@@ -217,13 +204,24 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
             >
               ×
             </button>
-            <div style={{ paddingRight: 22, fontWeight: 700, fontSize: 13, marginBottom: 3 }}>
+            <div style={{ paddingRight: 22, fontWeight: 700, fontSize: 14, marginBottom: 3 }}>
               {detail.recipient.name}
             </div>
             <div style={{ color: '#333333' }}>{detail.recipient.country} · {detail.recipient.roleCz}</div>
-            <div style={{ color: '#333333', marginTop: 2 }}>
-              {detail.recipient.year}
-              {detail.recipient.status === 'announced' ? ' · poctu oznámil festival, ještě neproběhla' : ''}
+            <div style={{ color: '#333333', marginTop: 2 }}>{detail.recipient.year}</div>
+            <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid #e8e3d2' }}>
+              <div style={{ fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.3, color: '#666' }}>
+                Jak to zdůvodnil festival
+              </div>
+              <div style={{ marginTop: 3, color: '#1a1a1a' }}>
+                {detail.recipient.citationCz
+                  ?? 'Archiv KVIFF u tohoto ročníku neuvádí bližší zdůvodnění, jen samotný název ocenění.'}
+              </div>
+              {detail.recipient.status === 'announced' && (
+                <div style={{ marginTop: 6, color: '#de1743', fontWeight: 700 }}>
+                  Festival ocenění zatím jen oznámil, slavnostní předání ještě neproběhlo.
+                </div>
+              )}
             </div>
           </div>
         )}

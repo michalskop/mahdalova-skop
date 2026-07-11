@@ -131,10 +131,7 @@ function HonoraryDotTimeline() {
       fullWidth
     >
       <HonoraryTimeline recipients={honoraryCrystalGlobeRecipients} />
-      <Text mt="md" size="sm" c="dimmed">
-        Čtení grafu: crimson kostičky nejsou rozprostřené rovnoměrně. Jediné roky, kdy ocenění dostaly dvě ženy zároveň, jsou {honoraryDoubleWomanYears.join(' a ')} – jinak jde vždy nejvýš o jednu ženu v ročníku, často žádnou.
-      </Text>
-      <Text mt="xs" size="sm">
+      <Text mt="md" size="sm">
         Všechny kostičky v tomto grafu jsou jedna konkrétní čestná kategorie: Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Není to cena poroty za soutěžní film, ale festivalové ocenění osobností, které dlouhodobě formovaly světový film.
       </Text>
     </ChartFrame>
@@ -265,7 +262,7 @@ function HonoraryGenderBlock() {
             <Paper p="md" radius={8} bg="background.2"><Text fw={900} style={NUM_FONT}>{honoraryDoubleWomanYears.join(', ')}</Text><Text size="sm">jediné roky se dvěma ženami</Text></Paper>
           </SimpleGrid>
           <Text mt="md" size="sm" c="dimmed">
-            Tooltip u každé tečky proto uvádí nejen jméno a zemi, ale i přesnou kategorii a důvod: čestné ocenění za mimořádný umělecký přínos a výraznou stopu ve vývoji světové kinematografie.
+            Čtení grafu níže: crimson kostičky žen nejsou rozprostřené rovnoměrně. Jediné roky, kdy ocenění dostaly dvě ženy zároveň, jsou {honoraryDoubleWomanYears.join(' a ')} – jinak jde vždy nejvýš o jednu ženu v ročníku, často žádnou.
           </Text>
         </Paper>
 
