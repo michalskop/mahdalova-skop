@@ -202,7 +202,7 @@ const festivalTimelinePhases: TimelineEntry[] = [
     key: '1956',
     year: '1956',
     label: 'Vary vedle Cannes, Benátek a Berlína',
-    body: 'FIAPF zařadila festival do prestižní kategorie A po bok největších světových přehlídek. Týž rok zaznamenal i nečekanou kuriozitu: příjezd okouzlující zahraniční herečky přiměl státní nakladatelství Orbis vydat sérii pohlednic s ní v plavkách – nevídaný počin v jinak cudné době.',
+    body: 'FIAPF zařadila festival do prestižní kategorie A po bok největších světových přehlídek. Týž rok sem festival záměrně pozval americký film Marty – podle výzkumu historičky Jindřišky Bláhové měl po čtyřech letech mlčení pomoci obnovit obchodní kontakty mezi Hollywoodem a komunistickým československým filmovým monopolem, aniž by dráždil cenzory. Rok korunovala i kuriozita: příjezd okouzlující zahraniční herečky přiměl státní nakladatelství Orbis vydat sérii pohlednic s ní v plavkách.',
   },
   {
     key: '1959',
@@ -248,7 +248,7 @@ function FestivalTimeline() {
     <ChartFrame
       title="Časová osa: 1946 → dnešek"
       subtitle="Kdy se festival konal, kdy se měnila periodicita a proč je rok 1994 metodologický zlom"
-      source="Oficiální archiv KVIFF; iROZHLAS, Reflex.cz, Radio Prague International"
+      source="Oficiální archiv KVIFF; iROZHLAS, Reflex.cz, Radio Prague International, J. Bláhová (Studies in European Cinema)"
       fullWidth
     >
       <VerticalTimeline entries={festivalTimelinePhases} />
