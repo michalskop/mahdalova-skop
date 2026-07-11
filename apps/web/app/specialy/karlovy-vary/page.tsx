@@ -111,7 +111,7 @@ export default function KarlovyVarySpecialPage() {
             <Group justify="space-between" align="start" mb="md">
               <Stack gap={2}>
                 <Badge w="fit-content" color="brand" variant="filled">Hotový graf</Badge>
-                <Title order={2} >Vstupenky: finální roky a průběžný stav</Title>
+                <Title order={2} fz="1.25rem" >Vstupenky: finální roky a průběžný stav</Title>
               </Stack>
               <Button component={Link} href="/specialy/karlovy-vary/live" variant="outline" color="dark">Detail</Button>
             </Group>
@@ -128,7 +128,7 @@ export default function KarlovyVarySpecialPage() {
 
           <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
             <Badge w="fit-content" color="brand" variant="filled" mb="md">Ekonomika festivalu</Badge>
-            <Title order={2} >250 milionů rozpočtu, 650 milionů útraty</Title>
+            <Title order={2} fz="1.25rem" >250 milionů rozpočtu, 650 milionů útraty</Title>
             <Text size="lg" c="background.2" mt="sm">
               Průběžná statistika 60. ročníku ukazuje festival jako kulturní událost i městskou ekonomiku pozornosti.
             </Text>
@@ -147,7 +147,7 @@ export default function KarlovyVarySpecialPage() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Partneři a prestiž</Badge>
-              <Title order={2} >
+              <Title order={2} fz="1.25rem" >
                 KVIFF neprodává jen loga. Prodává přístup k pozornosti.
               </Title>
               <Text size="lg">
@@ -172,7 +172,7 @@ export default function KarlovyVarySpecialPage() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Nová historická stopa</Badge>
-              <Title order={2} >
+              <Title order={2} fz="1.25rem" >
                 Když Vary rozdávají prestiž, častěji ji dostávají muži.
               </Title>
               <Text size="lg">
@@ -198,7 +198,7 @@ export default function KarlovyVarySpecialPage() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Mapa je hotová</Badge>
-              <Title order={2}>
+              <Title order={2} fz="1.25rem">
                 Odkud přijíždějí filmy: první mapa ukazuje katalog KVIFF 2026.
               </Title>
               <Text size="lg">
@@ -234,7 +234,7 @@ export default function KarlovyVarySpecialPage() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Země a program v čase</Badge>
-              <Title order={2} >
+              <Title order={2} fz="1.25rem" >
                 Méně filmů než na vrcholu, ale víc prostoru pro každý titul.
               </Title>
               <Text size="lg">
@@ -265,7 +265,7 @@ export default function KarlovyVarySpecialPage() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Hotovo teď</Badge>
-              <Title order={2} >
+              <Title order={2} fz="1.25rem" >
                 Grafy a citace pro živé vysílání
               </Title>
               <Text size="lg" c="background.2">
@@ -285,7 +285,7 @@ export default function KarlovyVarySpecialPage() {
       <Box component="section" px={{ base: 16, md: 24 }} py={{ base: 20, md: 36 }}>
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
           <Stack>
-            <Title order={2} >Co tím zjišťujeme</Title>
+            <Title order={2} fz="1.25rem" >Co tím zjišťujeme</Title>
             <Text size="lg">
               Karlovarský festival je kulturní instituce, na které se dá sledovat geopolitika filmu, návrat střední Evropy do festivalového provozu, proměna filmové prestiže i otázka, kdo dostává prostor vyprávět.
             </Text>
@@ -294,7 +294,7 @@ export default function KarlovyVarySpecialPage() {
             </Text>
           </Stack>
           <Paper p="lg" radius={8} withBorder>
-            <Title order={3} mb="sm" >Metodická hranice</Title>
+            <Title order={3} fz="1.05rem" mb="sm" >Metodická hranice</Title>
             <Text>
               Data dělíme na digitální éru s lepším pokrytím a archivní éru, kde budeme opatrně oddělovat ověřené ceny, data ročníků a zatím nekompletní filmový program. Gender neodvozujeme ze jmen, tržby nemícháme s festivalovou návštěvností.
             </Text>
@@ -306,7 +306,7 @@ export default function KarlovyVarySpecialPage() {
 
       <Box id="analyzy" component="section" px={{ base: 16, md: 24 }} py={{ base: 28, md: 42 }}>
         <Group justify="space-between" align="end" mb="lg">
-          <Title order={2} >Analýzy</Title>
+          <Title order={2} fz="1.25rem" >Analýzy</Title>
           <Text c="dimmed">Osm kapitol datového speciálu</Text>
         </Group>
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
@@ -326,7 +326,7 @@ export default function KarlovyVarySpecialPage() {
                     {branch.status === 'ready' ? 'hotová osa' : branch.status === 'research' ? 'datová metodika' : 'kapitola speciálu'}
                   </Badge>
                   <Text tt="uppercase" size="xs" fw={800} c="dimmed">{branch.kicker}</Text>
-                  <Title order={3} style={{ lineHeight: 1.18 }}>{branch.title}</Title>
+                  <Title order={3} fz="1.05rem" style={{ lineHeight: 1.18 }}>{branch.title}</Title>
                   <Text size="sm" c="dimmed">{branch.excerpt}</Text>
                 </Stack>
                 <Text size="sm" fw={700}>Otevřít kapitolu</Text>
@@ -337,7 +337,7 @@ export default function KarlovyVarySpecialPage() {
       </Box>
 
       <Box component="section" px={{ base: 16, md: 24 }} py={{ base: 28, md: 42 }} bg="background.2">
-        <Title order={2} mb="md" >Zdroje a interpretační vrstva</Title>
+        <Title order={2} fz="1.25rem" mb="md" >Zdroje a interpretační vrstva</Title>
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
           <Stack>
             {kviffSources.map((source) => (
