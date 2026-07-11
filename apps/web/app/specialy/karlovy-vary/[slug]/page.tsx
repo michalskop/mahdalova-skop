@@ -252,7 +252,7 @@ function HonoraryGenderBlock() {
 
         <Paper p="lg" radius={8} withBorder bg="background.1">
           <Badge w="fit-content" color="brand" variant="filled" mb="sm">Odpověď k genderu</Badge>
-          <Title order={2} fz="1.25rem" mb="xs">Nejde o cenu za jeden film, ale o kanonizaci osobností</Title>
+          <Title order={2} size="1.25rem" mb="xs">Nejde o cenu za jeden film, ale o kanonizaci osobností</Title>
           <Text size="lg">
             V této kategorii sledujeme jen Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. To je důležité: genderový graf neukazuje, kdo vyhrál soutěžní ročník, ale koho festival dlouhodobě zapisuje do vlastní paměti světového filmu.
           </Text>
@@ -267,7 +267,7 @@ function HonoraryGenderBlock() {
         </Paper>
 
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
-          <Title order={2} fz="1.25rem" mb="xs" >Sdělení do článku</Title>
+          <Title order={2} size="1.25rem" mb="xs" >Sdělení do článku</Title>
           <Text c="background.2" size="lg">
             Vary umějí pozvat a ocenit velká ženská jména: od Giny Lollobrigidy, Věry Chytilové, Liv Ullmann, Sharon Stone a Isabelle Huppert po Judi Dench, Helen Mirren, Susan Sarandon, Julianne Moore, Patricii Clarkson a pro rok 2026 Juliette Binoche. Jenže právě proto je vidět, že nejde o pravidlo, ale o výjimky v dlouhé mužské řadě – od roku 1995 jde o {honoraryGenderCounts.woman} žen z {honoraryTotal} oceněných.
           </Text>
@@ -285,7 +285,7 @@ function HonoraryGenderBlock() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Jak se vybírá</Badge>
-              <Title order={2} fz="1.25rem">Kdo rozhoduje o čestné prestiži</Title>
+              <Title order={2} size="1.25rem">Kdo rozhoduje o čestné prestiži</Title>
               <Text size="lg">{honorarySelectionNote}</Text>
               <Text>
                 V grafu proto nemícháme několik typů ocenění dohromady. President's Award, Cena prezidenta za přínos české kinematografii nebo soutěžní ceny poroty budou samostatné vrstvy. Tady sledujeme jen čestný Křišťálový glóbus pro světovou kinematografii.
@@ -293,7 +293,7 @@ function HonoraryGenderBlock() {
             </Stack>
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Před rokem 1989</Badge>
-              <Title order={2} fz="1.25rem">Dřív to byla jiná logika cen</Title>
+              <Title order={2} size="1.25rem">Dřív to byla jiná logika cen</Title>
               <Text>
                 Předlistopadový festival neměl stejnou nepřerušenou řadu čestných celebrit. Archiv ukazuje hlavně soutěžní ceny filmům, režii a hereckým výkonům. Proto by bylo metodicky chybné přilepit rok 1948 nebo 1968 do stejného genderového grafu čestných hostů.
               </Text>
@@ -305,7 +305,7 @@ function HonoraryGenderBlock() {
 
         <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">
-            <Title order={2} fz="1.25rem" >Poslední oceněné osobnosti v datové řadě</Title>
+            <Title order={2} size="1.25rem" >Poslední oceněné osobnosti v datové řadě</Title>
             <Button component={Link} href="/specialy/karlovy-vary/live" variant="outline" color="dark">Souvislosti návštěvnosti</Button>
           </Group>
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
@@ -443,7 +443,7 @@ function CountryHistoryOverview() {
       <Group justify="space-between" align="end" mb="md">
         <Stack gap={2}>
           <Badge w="fit-content" color="brand" variant="filled">Historický souhrn</Badge>
-          <Title order={3} fz="1.05rem">Změnilo se, odkud filmy přijíždějí?</Title>
+          <Title order={3} size="1.05rem">Změnilo se, odkud filmy přijíždějí?</Title>
           <Text c="dimmed">
             Film-level country dataset máme souvisle pro novodobou éru 1992-2026. Počítáme výskyty produkčních zemí: u koprodukcí se jeden film započítá každé uvedené zemi.
           </Text>
@@ -600,7 +600,7 @@ function CountryBubbleMap() {
 
         <Stack gap="md">
           <Paper p="md" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
-            <Title order={3} fz="1.05rem" mb="xs" >Co z mapy číst</Title>
+            <Title order={3} size="1.05rem" mb="xs" >Co z mapy číst</Title>
             <Text c="background.2">
               Letošní katalog je silně evropský, ale ne jen evropský. Po Francii, USA, Česku, Německu a Británii následuje široká vrstva koprodukčních zemí.
             </Text>
@@ -631,7 +631,7 @@ function CountryBubbleMap() {
 
       <Stack gap="md">
         <Stack gap={2}>
-          <Title order={3} fz="1.05rem">Jedna mapa nestačí</Title>
+          <Title order={3} size="1.05rem">Jedna mapa nestačí</Title>
           <Text c="dimmed">
             Stejný katalog čteme ve více vrstvách. Celková mapa říká, kde se země objevují. Evropská mapa ukazuje koprodukční jádro. Mimoevropská mapa oddělí severoamerický pól, Latinskou Ameriku, Asii, Blízký východ, Afriku a Oceánii.
           </Text>
@@ -799,7 +799,7 @@ function FilmScaleBlock() {
         </ChartFrame>
 
         <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
-          <Title order={2} fz="1.25rem" mb="xs" >Co to znamená pro země</Title>
+          <Title order={2} size="1.25rem" mb="xs" >Co to znamená pro země</Title>
           <Text c="background.2" size="lg">
             Země v čase nepůjde férově číst jen jako mapa všech vlaječek. Koprodukce budeme počítat dvěma způsoby: presence count řekne, kde se země objevila, fractional count rozdělí jeden film mezi všechny produkční země. Teprve rozdíl ukáže, jestli festival otevíral prostor novým regionům, nebo jen častěji uváděl mezinárodní koprodukce.
           </Text>
@@ -815,7 +815,7 @@ function FilmScaleBlock() {
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
             <Stack gap="sm">
               <Badge w="fit-content" color="brand" variant="filled">Kdo vybírá filmy</Badge>
-              <Title order={2} fz="1.25rem" >Program není práce poroty. Porota až hodnotí.</Title>
+              <Title order={2} size="1.25rem" >Program není práce poroty. Porota až hodnotí.</Title>
               <Text size="lg">
                 Mapa zemí musí vycházet z programového výběru, ne z cen. Filmy do programu skládá festivalové programové oddělení pod uměleckým vedením. Poroty vstupují až potom: hodnotí soutěžní filmy a rozhodují o cenách.
               </Text>
@@ -931,7 +931,7 @@ function PartnerPrestigeBlock() {
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
           <Paper p="lg" radius={4} bg="brandRoyalBlue.8" c="background.0">
-            <Title order={3} fz="1.05rem" mb="xs" >Teze pro čtení</Title>
+            <Title order={3} size="1.05rem" mb="xs" >Teze pro čtení</Title>
             <Text c="background.2" size="lg">
               Festival má kulturní a mediální auru, partneři mají peníze, služby, distribuci nebo infrastrukturu. Vary jim neprodávají jen logo na plotě: prodávají přítomnost uvnitř události, kterou sledují diváci, média, politici, filmaři a byznys.
             </Text>
@@ -941,7 +941,7 @@ function PartnerPrestigeBlock() {
           </Paper>
 
           <Paper p="lg" radius={4} bg="background.0">
-            <Title order={3} fz="1.05rem" mb="md" >Mapa typu kapitálu</Title>
+            <Title order={3} size="1.05rem" mb="md" >Mapa typu kapitálu</Title>
             <Stack gap="xs">
               {capitalEntries.map(({ capital, count }) => (
                 <Group key={capital} gap="sm" wrap="nowrap">
@@ -1067,7 +1067,7 @@ export default function KviffBranchPage({ params }: PageProps) {
           <Stack gap="xl" maw={860}>
             {branch.sections.map((section) => (
               <Stack key={section.heading} gap="sm">
-                <Title order={2} fz="1.25rem" >{section.heading}</Title>
+                <Title order={2} size="1.25rem" >{section.heading}</Title>
                 {section.body.map((paragraph) => (
                   <Text key={paragraph} size="lg" lh={1.65}>{paragraph}</Text>
                 ))}
@@ -1080,7 +1080,7 @@ export default function KviffBranchPage({ params }: PageProps) {
           <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
             <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
               <Paper p="lg" radius={8} withBorder bg="background.1">
-                <Title order={2} fz="1.25rem" mb="xs" >Prodané vstupenky</Title>
+                <Title order={2} size="1.25rem" mb="xs" >Prodané vstupenky</Title>
                 <Text c="dimmed" mb="md">Roky 2023-2025 jsou finální statistiky, rok 2026 je průběžný stav k 8. 7. v 10:00.</Text>
                 {finalStats.map((row) => (
                   <DataBar key={row.year} label={String(row.year)} value={row.tickets} max={maxTickets} />
@@ -1090,7 +1090,7 @@ export default function KviffBranchPage({ params }: PageProps) {
               </Paper>
 
               <Paper p="lg" radius={8} withBorder bg="background.1">
-                <Title order={2} fz="1.25rem" mb="xs" >Pozornost mimo kinosály</Title>
+                <Title order={2} size="1.25rem" mb="xs" >Pozornost mimo kinosály</Title>
                 <Text c="dimmed" mb="md">Vybrané ukazatele 2026 proti finální statistice 2025.</Text>
                 <DataBar label="Fest.Passy" value={passesShare2026} max={110} color="var(--mantine-color-brandTeal-6)" suffix="%" />
                 <DataBar label="Novináři" value={journalistsShare2026} max={110} color="var(--mantine-color-brandTeal-6)" suffix="%" />
@@ -1099,7 +1099,7 @@ export default function KviffBranchPage({ params }: PageProps) {
               </Paper>
 
               <Paper p="lg" radius={8} withBorder bg="brandRoyalBlue.8" c="background.0">
-                <Title order={2} fz="1.25rem" mb="xs" >Rozpočet a útrata</Title>
+                <Title order={2} size="1.25rem" mb="xs" >Rozpočet a útrata</Title>
                 <Text c="background.2">Rozpočet 60. ročníku je 250 milionů korun. Odhad útraty lidí na festivalu je zhruba 650 milionů korun.</Text>
                 <SimpleGrid cols={2} spacing="sm" mt="lg">
                   <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={900} style={NUM_FONT}>80 %</Text><Text size="sm">sponzoři</Text></Paper>
@@ -1111,7 +1111,7 @@ export default function KviffBranchPage({ params }: PageProps) {
               </Paper>
 
               <Paper p="lg" radius={8} withBorder bg="background.1">
-                <Title order={2} fz="1.25rem" mb="xs" >Metodická poznámka</Title>
+                <Title order={2} size="1.25rem" mb="xs" >Metodická poznámka</Title>
                 <Text>
                   Průběžná čísla 2026 nesmíme míchat s finálními statistikami starších ročníků. U vstupenek jde o rozběhnutý ročník proti uzavřeným rokům; u rozpočtu a útraty jde o velikost ekonomické stopy, ne o zisk festivalu.
                 </Text>
@@ -1130,7 +1130,7 @@ export default function KviffBranchPage({ params }: PageProps) {
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
           <Paper p="lg" radius={8} withBorder bg="background.2">
-            <Title order={3} fz="1.05rem" mb="sm" >Hotové grafy k použití</Title>
+            <Title order={3} size="1.05rem" mb="sm" >Hotové grafy k použití</Title>
             <Text>
               Pro živé vysílání už je připravený samostatný datový brief s grafy: vstupenky 2023-2026, průběžný stav 2026 proti finálnímu roku 2025, rozpočet, financování 80/20 a ekonomická stopa návštěvníků. Ostatní kapitoly rozšiřujeme postupně podle archivních dat.
             </Text>
@@ -1144,7 +1144,7 @@ export default function KviffBranchPage({ params }: PageProps) {
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
           <Group justify="space-between" align="end" mb="md">
-            <Title order={2} fz="1.25rem" >Další kapitoly</Title>
+            <Title order={2} size="1.25rem" >Další kapitoly</Title>
             <Button component={Link} href="/specialy/karlovy-vary" variant="outline">Zpět na landing page</Button>
           </Group>
           <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
@@ -1159,14 +1159,14 @@ export default function KviffBranchPage({ params }: PageProps) {
                 style={{ textDecoration: 'none', color: 'inherit', borderTop: `5px solid ${item.accent}` }}
               >
                 <Text size="xs" fw={800} tt="uppercase" c="dimmed">{item.kicker}</Text>
-                <Title order={4} fz="0.95rem" mt={4} >{item.title}</Title>
+                <Title order={4} size="0.95rem" mt={4} >{item.title}</Title>
               </Paper>
             ))}
           </SimpleGrid>
         </Box>
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }} bg="background.2">
-          <Title order={3} fz="1.05rem" mb="sm" >Pracovní zdroje</Title>
+          <Title order={3} size="1.05rem" mb="sm" >Pracovní zdroje</Title>
           <Stack gap={4}>
             {kviffSources.map((source) => (
               <Text key={source}>• {source}</Text>
