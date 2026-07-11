@@ -24,6 +24,8 @@ import HonoraryTimeline from '../HonoraryTimeline';
 import ProgramBreakdownChart from '../ProgramBreakdownChart';
 import FilmScreeningsChart from '../FilmScreeningsChart';
 import HistoricalCountryMap from '../HistoricalCountryMap';
+import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from '../GrandPrixHistory';
+import { grandPrixCommunistEra, grandPrixPostRevolution } from '../grandPrix';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
 import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from '../ChartFrame';
 
@@ -303,6 +305,9 @@ function HonoraryGenderBlock() {
         </Paper>
 
         <Pre1989AwardsOverview />
+
+        <CommunistEraGrandPrix winners={grandPrixCommunistEra} />
+        <PostRevolutionGrandPrix winners={grandPrixPostRevolution} />
 
         <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">
