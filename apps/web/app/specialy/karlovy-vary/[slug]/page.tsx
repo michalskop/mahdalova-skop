@@ -288,7 +288,7 @@ function HonoraryGenderBlock() {
               <Title order={2} size="1.25rem">Kdo rozhoduje o čestné prestiži</Title>
               <Text size="lg">{honorarySelectionNote}</Text>
               <Text>
-                V grafu proto nemícháme několik typů ocenění dohromady. President's Award, Cena prezidenta za přínos české kinematografii nebo soutěžní ceny poroty budou samostatné vrstvy. Tady sledujeme jen čestný Křišťálový glóbus pro světovou kinematografii.
+                V grafu proto nemícháme několik typů ocenění dohromady. President&apos;s Award, Cena prezidenta za přínos české kinematografii nebo soutěžní ceny poroty budou samostatné vrstvy. Tady sledujeme jen čestný Křišťálový glóbus pro světovou kinematografii.
               </Text>
             </Stack>
             <Stack gap="sm">
