@@ -226,6 +226,114 @@ function Pre1989AwardsOverview() {
   );
 }
 
+const festivalTimelinePhases = [
+  {
+    year: '1946',
+    label: 'Založení festivalu',
+    body: 'První dva ročníky (1946 a 1947) byly nesoutěžní – festival ještě neměl podobu mezinárodní filmové soutěže.',
+    highlight: true,
+  },
+  {
+    year: '1948',
+    label: 'Začátek soutěžního modelu',
+    body: 'Poprvé se uděluje hlavní cena, dnešní Grand Prix. Od tohoto roku vedeme vítěze jako samostatnou datovou řadu.',
+  },
+  {
+    year: '1959–1990',
+    label: 'Střídání s Moskvou',
+    body: 'Festival se koná jen v sudých letech – v lichých byl kvůli politickému rozhodnutí prostor pro Moskevský filmový festival.',
+  },
+  {
+    year: '1989–1993',
+    label: 'Transformační nejistota',
+    body: 'Po sametové revoluci festival hledá novou institucionální podobu; Grand Prix v roce 1990 nebyla udělena a rok 1993 se festival vůbec nekonal.',
+  },
+  {
+    year: '1994',
+    label: 'Nová každoroční éra',
+    body: 'Festival se od tohoto roku koná každoročně a začíná vznikat systematický archiv – proto je rok 1994 metodologický zlom pro naše data.',
+    highlight: true,
+  },
+  {
+    year: '2020',
+    label: 'Covidová pauza',
+    body: 'Jediný přerušený ročník novodobé éry – pandemie covidu-19 zastavila každoroční tradici.',
+  },
+  {
+    year: '2026',
+    label: '60. ročník',
+    body: 'Aktuální ročník festivalu probíhá 3.–11. července 2026.',
+  },
+];
+
+function FestivalTimeline() {
+  return (
+    <ChartFrame
+      title="Časová osa: 1946 → dnešek"
+      subtitle="Kdy se festival konal, kdy se měnila periodicita a proč je rok 1994 metodologický zlom"
+      source="Oficiální archiv KVIFF, festivalové ročníky"
+      fullWidth
+    >
+      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
+        <Box
+          style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${festivalTimelinePhases.length}, minmax(160px, 1fr))`,
+            gap: 0,
+            minWidth: 980,
+            alignItems: 'start',
+          }}
+        >
+          {festivalTimelinePhases.map((phase, index) => (
+            <Box key={phase.year} style={{ position: 'relative', padding: '0 8px' }}>
+              <Box
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: index === 0 ? 22 : 0,
+                  right: index === festivalTimelinePhases.length - 1 ? 22 : 0,
+                  top: 30,
+                  height: 4,
+                  background: phase.highlight ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-brandNavy-4)',
+                  opacity: 0.6,
+                }}
+              />
+              <Stack gap="sm" align="center" style={{ position: 'relative' }}>
+                <Box
+                  style={{
+                    width: phase.highlight ? 68 : 52,
+                    height: phase.highlight ? 68 : 52,
+                    borderRadius: 999,
+                    background: phase.highlight ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-brandNavy-6)',
+                    border: '4px solid var(--mantine-color-background-1)',
+                    boxShadow: phase.highlight
+                      ? '0 0 0 3px var(--mantine-color-brand-3)'
+                      : '0 0 0 1px var(--mantine-color-background-6)',
+                    display: 'grid',
+                    placeItems: 'center',
+                    color: 'var(--mantine-color-background-0)',
+                  }}
+                >
+                  <Text fw={900} style={NUM_FONT} size={phase.highlight ? 'md' : 'sm'} ta="center" lh={1.05}>
+                    {phase.year}
+                  </Text>
+                </Box>
+                <Paper p="sm" radius={4} bg={phase.highlight ? 'brand.0' : 'background.0'} h="100%">
+                  <Text fw={900} size="sm">{phase.label}</Text>
+                  <Text size="xs" mt={4}>{phase.body}</Text>
+                </Paper>
+              </Stack>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+      <Text mt="md" size="sm" c="dimmed">
+        Založení v roce 1946 a metodologický zlom v roce 1994 jsou v ose zvýrazněné – 1946 je počátek festivalu vůbec, 1994 je bod, od kterého máme souvislý, spolehlivě strukturovaný archiv pro každý další ročník.
+      </Text>
+    </ChartFrame>
+  );
+}
+
 function HonoraryGenderBlock() {
   const latestRecipients = honoraryCrystalGlobeRecipients.slice(-8).reverse();
 
@@ -1086,15 +1194,21 @@ export default function KviffBranchPage({ params }: PageProps) {
           </Stack>
         </Box>
 
-        <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
-          <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="md">
-            {branch.metrics.map((metric) => (
-              <Paper key={metric} p="md" radius={8} withBorder style={{ borderTop: `5px solid ${branch.accent}` }}>
-                <Text fw={800}>{metric}</Text>
-              </Paper>
-            ))}
-          </SimpleGrid>
-        </Box>
+        {branch.slug === 'historie-festivalu-v-datech' ? (
+          <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
+            <FestivalTimeline />
+          </Box>
+        ) : (
+          <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
+            <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="md">
+              {branch.metrics.map((metric) => (
+                <Paper key={metric} p="md" radius={8} withBorder style={{ borderTop: `5px solid ${branch.accent}` }}>
+                  <Text fw={800}>{metric}</Text>
+                </Paper>
+              ))}
+            </SimpleGrid>
+          </Box>
+        )}
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 12, md: 24 }}>
           <Stack gap="xl" maw={860}>
