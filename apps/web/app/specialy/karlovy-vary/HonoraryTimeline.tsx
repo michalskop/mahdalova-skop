@@ -214,8 +214,17 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
                 Jak to zdůvodnil festival
               </div>
               <div style={{ marginTop: 3, color: '#1a1a1a' }}>
-                {detail.recipient.citationCz
-                  ?? 'Archiv KVIFF u tohoto ročníku neuvádí bližší zdůvodnění, jen samotný název ocenění.'}
+                {detail.recipient.citationCz}
+              </div>
+              <div style={{ marginTop: 4 }}>
+                <a
+                  href={detail.recipient.citationSource ?? detail.recipient.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#666', fontSize: 11, textDecoration: 'underline' }}
+                >
+                  Zdroj
+                </a>
               </div>
               {detail.recipient.status === 'announced' && (
                 <div style={{ marginTop: 6, color: '#de1743', fontWeight: 700 }}>
