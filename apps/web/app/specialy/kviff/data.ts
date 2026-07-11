@@ -26,7 +26,7 @@ export const kviffSources = [
 
 export const kviffBranches: KviffBranch[] = [
   {
-    slug: 'historie-festivalu',
+    slug: 'historie-festivalu-v-datech',
     title: 'Historie festivalu v datech',
     kicker: 'Timeline',
     excerpt: 'Kdy se festival konal, kdy se měnila periodicita a proč je rok 1994 metodologický zlom.',
@@ -104,7 +104,7 @@ export const kviffBranches: KviffBranch[] = [
     ],
   },
   {
-    slug: 'gender-ve-varech',
+    slug: 'oceneni-v-datech',
     title: 'Gender ve Varech',
     kicker: 'Reprezentace',
     excerpt: 'Kdo měl prostor v programu, u cen, v porotách a v čestných oceněních.',

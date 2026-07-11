@@ -28,3 +28,11 @@
 /specialy/data-pro-budouci-premierku/verejne-finance-a-dane      /specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane       301
 /specialy/data-pro-budouci-premierku/efektivni-vladnuti/*        /specialy/data-pro-budouci-premierku/15-efektivni-vladnuti/:splat    301
 /specialy/data-pro-budouci-premierku/efektivni-vladnuti          /specialy/data-pro-budouci-premierku/15-efektivni-vladnuti           301
+
+# KVIFF speciál – přesun z /specialy/karlovy-vary na /specialy/kviff (2026-07-11),
+# se dvěma přejmenovanými podstránkami. Specifická pravidla musí být PŘED
+# obecným wildcardem níže, jinak by je Cloudflare nikdy nepoužilo.
+/specialy/karlovy-vary/gender-ve-varech      /specialy/kviff/oceneni-v-datech               301
+/specialy/karlovy-vary/historie-festivalu    /specialy/kviff/historie-festivalu-v-datech    301
+/specialy/karlovy-vary/*                     /specialy/kviff/:splat                         301
+/specialy/karlovy-vary                       /specialy/kviff                                301

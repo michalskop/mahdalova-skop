@@ -29,7 +29,7 @@ const TILES = [
     coverImage: '/images/specials/data-pro-budouci-premierku.svg',
   },
   {
-    href: '/specialy/karlovy-vary',
+    href: '/specialy/kviff',
     title: 'Festival Karlovy Vary v datech',
     bg: '#121212',
     external: false,

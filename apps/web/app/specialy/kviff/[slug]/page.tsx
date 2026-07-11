@@ -312,7 +312,7 @@ function HonoraryGenderBlock() {
         <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
           <Group justify="space-between" align="end" mb="md">
             <Title order={2} size="1.25rem" >Poslední oceněné osobnosti v datové řadě</Title>
-            <Button component={Link} href="/specialy/karlovy-vary/live" variant="outline" color="dark">Souvislosti návštěvnosti</Button>
+            <Button component={Link} href="/specialy/kviff/live" variant="outline" color="dark">Souvislosti návštěvnosti</Button>
           </Group>
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
             {latestRecipients.map((recipient) => (
@@ -1040,11 +1040,11 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: `${branch.title} | Karlovy Vary v datech`,
     description: branch.excerpt,
-    alternates: { canonical: `/specialy/karlovy-vary/${branch.slug}` },
+    alternates: { canonical: `/specialy/kviff/${branch.slug}` },
     openGraph: {
       title: `${branch.title} | Karlovy Vary v datech`,
       description: branch.excerpt,
-      url: `/specialy/karlovy-vary/${branch.slug}`,
+      url: `/specialy/kviff/${branch.slug}`,
       type: 'article',
       images: [{ url: image, width: 1200, height: 630, alt: branch.title }],
     },
@@ -1064,7 +1064,7 @@ export default function KviffBranchPage({ params }: PageProps) {
               size="xs"
               style={{ color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}
             >
-              <Link href="/specialy/karlovy-vary" style={{ color: 'inherit', textDecoration: 'none' }}>Karlovy Vary v datech</Link>
+              <Link href="/specialy/kviff" style={{ color: 'inherit', textDecoration: 'none' }}>Karlovy Vary v datech</Link>
               {' · '}{branch.kicker}
             </Text>
             <Title
@@ -1148,7 +1148,7 @@ export default function KviffBranchPage({ params }: PageProps) {
                 <Text>
                   Průběžná čísla 2026 nesmíme míchat s finálními statistikami starších ročníků. U vstupenek jde o rozběhnutý ročník proti uzavřeným rokům; u rozpočtu a útraty jde o velikost ekonomické stopy, ne o zisk festivalu.
                 </Text>
-                <Button component={Link} href="/specialy/karlovy-vary/live" mt="md" color="dark">
+                <Button component={Link} href="/specialy/kviff/live" mt="md" color="dark">
                   Otevřít live brief
                 </Button>
               </Paper>
@@ -1158,7 +1158,7 @@ export default function KviffBranchPage({ params }: PageProps) {
 
         {branch.slug === 'ekonomika-pozornosti' && <PartnerPrestigeBlock />}
 
-        {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'gender-ve-varech') && <HonoraryGenderBlock />}
+        {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'oceneni-v-datech') && <HonoraryGenderBlock />}
         {branch.slug === 'mapa-filmu' && <FilmScaleBlock />}
 
         <Divider my="md" />
@@ -1166,14 +1166,14 @@ export default function KviffBranchPage({ params }: PageProps) {
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
           <Group justify="space-between" align="end" mb="md">
             <Title order={2} size="1.25rem" >Další kapitoly</Title>
-            <Button component={Link} href="/specialy/karlovy-vary" variant="outline">Zpět na landing page</Button>
+            <Button component={Link} href="/specialy/kviff" variant="outline">Zpět na landing page</Button>
           </Group>
           <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
             {kviffBranches.filter((item) => item.slug !== branch.slug).map((item) => (
               <Paper
                 key={item.slug}
                 component={Link}
-                href={`/specialy/karlovy-vary/${item.slug}`}
+                href={`/specialy/kviff/${item.slug}`}
                 p="md"
                 radius={8}
                 withBorder

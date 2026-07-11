@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: 'KVIFF live brief | Karlovy Vary v datech',
   description: 'Rychlý datový podklad k průběžným statistikám 60. ročníku MFF Karlovy Vary a srovnání se závěrečnými statistikami 2023-2025.',
-  alternates: { canonical: '/specialy/karlovy-vary/live' },
+  alternates: { canonical: '/specialy/kviff/live' },
 };
 
 function BarRow({ label, value, max, color = 'var(--mantine-color-brandNavy-6)', suffix = '' }: { label: string; value: number; max: number; color?: string; suffix?: string }) {
@@ -40,7 +40,7 @@ export default function KviffLivePage() {
     <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
       <Box px={{ base: 18, md: 42 }} py={{ base: 28, md: 48 }} bg="brandRoyalBlue.8" c="background.0">
         <Stack gap="lg">
-          <Button component={Link} href="/specialy/karlovy-vary" variant="subtle" color="yellow" w="fit-content" px={0}>
+          <Button component={Link} href="/specialy/kviff" variant="subtle" color="yellow" w="fit-content" px={0}>
             Karlovy Vary v datech
           </Button>
           <Badge w="fit-content" color="yellow" variant="light">Live brief</Badge>

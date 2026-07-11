@@ -18,11 +18,11 @@ const COVER = `${BASE_URL}/images/specials/karlovy-vary.svg`;
 export const metadata: Metadata = {
   title: 'Karlovy Vary v datech',
   description: 'Datový speciál o historii, filmech, cenách, hostech, genderu, zemích, tématech a návštěvnosti Mezinárodního filmového festivalu Karlovy Vary.',
-  alternates: { canonical: '/specialy/karlovy-vary' },
+  alternates: { canonical: '/specialy/kviff' },
   openGraph: {
     title: 'Karlovy Vary v datech',
     description: 'Datový speciál o historii, filmech, cenách, hostech, genderu, zemích, tématech a návštěvnosti KVIFF.',
-    url: '/specialy/karlovy-vary',
+    url: '/specialy/kviff',
     type: 'website',
     images: [{ url: COVER, width: 1200, height: 630, alt: 'Karlovy Vary v datech' }],
   },
@@ -71,10 +71,10 @@ export default function KarlovyVarySpecialPage() {
               Kdo vypráví světový film, kdo získává prestiž a co ukazuje osmdesát let festivalu, když se nedíváme jen na červený koberec, ale na filmy, země, ceny, tvůrce, témata a publikum.
             </Text>
             <Group>
-              <Button component={Link} href="/specialy/karlovy-vary/live" color="brand" variant="filled">
+              <Button component={Link} href="/specialy/kviff/live" color="brand" variant="filled">
                 Hotové grafy pro vysílání
               </Button>
-              <Button component={Link} href="/specialy/karlovy-vary/historie-festivalu" variant="white" color="dark">
+              <Button component={Link} href="/specialy/kviff/historie-festivalu-v-datech" variant="white" color="dark">
                 Začít historií
               </Button>
               <Button component={Link} href="#analyzy" color="gray" variant="outline">
@@ -113,7 +113,7 @@ export default function KarlovyVarySpecialPage() {
                 <Badge w="fit-content" color="brand" variant="filled">Hotový graf</Badge>
                 <Title order={2} size="1.25rem" >Vstupenky: finální roky a průběžný stav</Title>
               </Stack>
-              <Button component={Link} href="/specialy/karlovy-vary/live" variant="outline" color="dark">Detail</Button>
+              <Button component={Link} href="/specialy/kviff/live" variant="outline" color="dark">Detail</Button>
             </Group>
             <Stack gap="sm">
               {finalStats.map((row) => (
@@ -153,7 +153,7 @@ export default function KarlovyVarySpecialPage() {
               <Text size="lg">
                 Nová část ekonomické kapitoly skládá partnery do matice: co dávají festivalu a co si z něj odnášejí. Peníze, služby, mediální dosah, CSR a řemeslný symbol Křišťálového glóbu čteme jako různé měny jedné festivalové ekonomiky.
               </Text>
-              <Button component={Link} href="/specialy/karlovy-vary/ekonomika-pozornosti" color="dark" w="fit-content">
+              <Button component={Link} href="/specialy/kviff/ekonomika-pozornosti" color="dark" w="fit-content">
                 Otevřít matici partnerství
               </Button>
             </Stack>
@@ -179,8 +179,8 @@ export default function KarlovyVarySpecialPage() {
                 V řadě Crystal Globe za mimořádný umělecký přínos světu filmu máme od roku 1995 do oznámených poct roku 2026 celkem {honoraryTotal} osobností (ověřeno proti oficiálnímu archivu KVIFF). Žen je {honoraryGenderCounts.woman}, tedy {honoraryWomenShare.toString().replace('.', ',')} %.
               </Text>
               <Group>
-                <Button component={Link} href="/specialy/karlovy-vary/gender-ve-varech" color="dark">Otevřít genderovou kapitolu</Button>
-                <Button component={Link} href="/specialy/karlovy-vary/hoste-a-prestiz" variant="outline" color="dark">Hosté a prestiž</Button>
+                <Button component={Link} href="/specialy/kviff/oceneni-v-datech" color="dark">Otevřít genderovou kapitolu</Button>
+                <Button component={Link} href="/specialy/kviff/hoste-a-prestiz" variant="outline" color="dark">Hosté a prestiž</Button>
               </Group>
             </Stack>
             <SimpleGrid cols={2} spacing="sm">
@@ -207,7 +207,7 @@ export default function KarlovyVarySpecialPage() {
               <Text>
                 Nejvýraznější země v katalogu jsou Francie, USA, Česko, Německo a Británie. Celkem mapa drží {countryPresenceTotal} výskytů zemí v katalogu 2026.
               </Text>
-              <Button component={Link} href="/specialy/karlovy-vary/mapa-filmu" color="dark" w="fit-content">
+              <Button component={Link} href="/specialy/kviff/mapa-filmu" color="dark" w="fit-content">
                 Otevřít mapu zemí
               </Button>
             </Stack>
@@ -240,7 +240,7 @@ export default function KarlovyVarySpecialPage() {
               <Text size="lg">
                 Dostupná řada počtů filmů vrcholí rokem {peakFilmYear.year} s {peakFilmYear.totalFilms} filmy. V roce {latestClosedFilmYear.year} bylo filmů {latestClosedFilmYear.totalFilms}, ale projekcí {latestClosedFilmYear.screenings}. Projekce na jeden film vzrostly z {firstScreeningsPerFilm.toString().replace('.', ',')} v roce 1996 na {latestScreeningsPerFilm.toString().replace('.', ',')} v roce {latestClosedFilmYear.year}.
               </Text>
-              <Button component={Link} href="/specialy/karlovy-vary/mapa-filmu" color="dark" w="fit-content">Otevřít mapu filmů</Button>
+              <Button component={Link} href="/specialy/kviff/mapa-filmu" color="dark" w="fit-content">Otevřít mapu filmů</Button>
             </Stack>
             <SimpleGrid cols={2} spacing="sm">
               <Paper p="md" radius={8} bg="brandTeal.0"><Text fw={800} style={NUM_FONT}>{peakFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {peakFilmYear.year}</Text></Paper>
@@ -255,7 +255,7 @@ export default function KarlovyVarySpecialPage() {
       <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
         <Paper
           component={Link}
-          href="/specialy/karlovy-vary/live"
+          href="/specialy/kviff/live"
           p={{ base: 'lg', md: 'xl' }}
           radius={8}
           withBorder
@@ -314,7 +314,7 @@ export default function KarlovyVarySpecialPage() {
             <Paper
               key={branch.slug}
               component={Link}
-              href={`/specialy/karlovy-vary/${branch.slug}`}
+              href={`/specialy/kviff/${branch.slug}`}
               p="lg"
               radius={8}
               withBorder
