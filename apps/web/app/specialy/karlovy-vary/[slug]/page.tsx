@@ -125,7 +125,7 @@ function HonoraryDotTimeline() {
   return (
     <ChartFrame
       title="Osobnosti po letech"
-      subtitle="Každá tečka je jedna oceněná osobnost, 1995–2026. Najeďte na ni pro jméno, zemi a profesi."
+      subtitle="Každá kostička je jedna oceněná osobnost, 1995–2026. Najeďte na ni pro jméno, zemi a profesi."
       source="Oficiální archiv KVIFF, ročník po ročníku"
       fullWidth
     >
@@ -138,17 +138,17 @@ function HonoraryDotTimeline() {
         <Box
           style={{
             display: 'grid',
-            gridTemplateColumns: `repeat(${years.length}, minmax(38px, 1fr))`,
-            gap: 8,
-            minWidth: 980,
+            gridTemplateColumns: `repeat(${years.length}, auto)`,
+            gap: 4,
             alignItems: 'end',
+            justifyContent: 'start',
           }}
         >
           {years.map((year) => {
             const recipients = honoraryCrystalGlobeRecipients.filter((recipient) => recipient.year === year);
             return (
-              <Stack key={year} gap={6} align="center" justify="end">
-                <Stack gap={4} align="center" justify="end" h={recipients.length > 2 ? 82 : 58}>
+              <Stack key={year} gap={4} align="center" justify="end">
+                <Stack gap={3} align="center" justify="end" h={recipients.length > 2 ? 70 : 46}>
                   {recipients.map((recipient) => (
                     <Tooltip
                       key={`${recipient.year}-${recipient.name}`}
@@ -164,12 +164,11 @@ function HonoraryDotTimeline() {
                         tabIndex={0}
                         title={`${recipient.year}: ${recipient.name} · ${recipient.awardCz}. ${recipient.reason}`}
                         style={{
-                          width: recipient.gender === 'woman' ? 18 : 14,
-                          height: recipient.gender === 'woman' ? 18 : 14,
-                          borderRadius: 999,
+                          width: recipient.gender === 'woman' ? 17 : 14,
+                          height: recipient.gender === 'woman' ? 17 : 14,
+                          borderRadius: 4,
                           background: recipient.gender === 'woman' ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-brandNavy-6)',
-                          border: recipient.status === 'announced' ? '3px solid var(--mantine-color-brandRoyalBlue-8)' : '2px solid var(--mantine-color-background-1)',
-                          boxShadow: '0 0 0 1px rgba(17, 16, 14, 0.22)',
+                          border: recipient.status === 'announced' ? '2px solid var(--mantine-color-brandRoyalBlue-8)' : 'none',
                           display: 'inline-block',
                           cursor: 'help',
                         }}
@@ -177,8 +176,8 @@ function HonoraryDotTimeline() {
                     </Tooltip>
                   ))}
                 </Stack>
-                <Text size="xs" fw={800} c={recipients.some((recipient) => recipient.gender === 'woman') ? 'var(--mantine-color-brand-8)' : 'dimmed'}>
-                  {year}
+                <Text size="xs" fw={800} style={NUM_FONT} c={recipients.some((recipient) => recipient.gender === 'woman') ? 'var(--mantine-color-brand-8)' : 'dimmed'}>
+                  {String(year).slice(2)}
                 </Text>
               </Stack>
             );
@@ -186,10 +185,10 @@ function HonoraryDotTimeline() {
         </Box>
       </Box>
       <Text mt="md" size="sm" c="dimmed">
-        Čtení grafu: růžové tečky nejsou rozprostřené rovnoměrně. Jediné roky, kdy ocenění dostaly dvě ženy zároveň, jsou {honoraryDoubleWomanYears.join(' a ')} – jinak jde vždy nejvýš o jednu ženu v ročníku, často žádnou.
+        Čtení grafu: crimson kostičky nejsou rozprostřené rovnoměrně. Jediné roky, kdy ocenění dostaly dvě ženy zároveň, jsou {honoraryDoubleWomanYears.join(' a ')} – jinak jde vždy nejvýš o jednu ženu v ročníku, často žádnou.
       </Text>
       <Text mt="xs" size="sm">
-        Všechny tečky v tomto grafu jsou jedna konkrétní čestná kategorie: Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Není to cena poroty za soutěžní film, ale festivalové ocenění osobností, které dlouhodobě formovaly světový film.
+        Všechny kostičky v tomto grafu jsou jedna konkrétní čestná kategorie: Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii. Není to cena poroty za soutěžní film, ale festivalové ocenění osobností, které dlouhodobě formovaly světový film.
       </Text>
     </ChartFrame>
   );
