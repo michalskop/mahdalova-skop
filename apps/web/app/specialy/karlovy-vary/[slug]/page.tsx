@@ -23,6 +23,7 @@ import { countryHistory, countryHistoryTopCountries } from '../countries-history
 import HonoraryTimeline from '../HonoraryTimeline';
 import ProgramBreakdownChart from '../ProgramBreakdownChart';
 import FilmScreeningsChart from '../FilmScreeningsChart';
+import HistoricalCountryMap from '../HistoricalCountryMap';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
 import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from '../ChartFrame';
 
@@ -778,6 +779,18 @@ function FilmScaleBlock() {
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
         <CountryBubbleMap />
+
+        <ChartFrame
+          title="Odkud přicházely filmy: přehrajte si historii 1992–2026"
+          subtitle={`Bublina = produkční země daného ročníku, velikost podle počtu výskytů; ${countryHistory.length} ročníků, přehrávejte tlačítkem nebo táhněte posuvníkem`}
+          source="Oficiální Archiv filmu KVIFF"
+          fullWidth
+        >
+          <HistoricalCountryMap history={countryHistory} />
+          <Text mt="md" size="sm" c="dimmed">
+            Poloha bubliny se mezi ročníky nemění, mění se jen její velikost a viditelnost – tak je vidět, jak festival v čase přidával nebo ztrácel jednotlivé produkční země, ne jen souhrnné regiony.
+          </Text>
+        </ChartFrame>
 
         <ChartFrame
           title="Program se po maximu zmenšil, ale zhoustl"

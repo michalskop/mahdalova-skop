@@ -115,6 +115,26 @@ export function czCountry(name: string): string {
   return countryNamesCz[name] ?? name;
 }
 
+// Souřadnice + region pro země, které se v katalogu 2026 neobjevily, ale v
+// historii festivalu (1992–2026) ano – potřebné pro historickou mapu zemí.
+const historicalOnlyCoordinates: Record<string, { lat: number; lon: number; region: CountryPresenceRow['region'] }> = {
+  Russia: { lat: 61.5, lon: 105.3, region: 'Europe' },
+  USSR: { lat: 61.5, lon: 105.3, region: 'Europe' },
+  Yugoslavia: { lat: 44.0, lon: 20.9, region: 'Europe' },
+  'Bosnia and Herzegovina': { lat: 43.9, lon: 17.7, region: 'Europe' },
+  'Hong Kong': { lat: 22.3, lon: 114.2, region: 'Asia' },
+  Kazakhstan: { lat: 48.0, lon: 66.9, region: 'Asia' },
+  Egypt: { lat: 26.8, lon: 30.8, region: 'Middle East' },
+};
+
+// Jednotný lookup souřadnic pro libovolnou zemi z celé historie festivalu
+// (2026 katalog + historické doplňky výše) – používá jak aktuální mapa 2026,
+// tak historická animovaná mapa.
+export const countryCoordinates: Record<string, { lat: number; lon: number; region: CountryPresenceRow['region'] }> = {
+  ...Object.fromEntries(countryPresence2026.map((row) => [row.country, { lat: row.lat, lon: row.lon, region: row.region }])),
+  ...historicalOnlyCoordinates,
+};
+
 export const countryPresenceTotal = countryPresence2026.reduce((sum, row) => sum + row.count, 0);
 export const countryPresenceTop = countryPresence2026.slice(0, 10);
 export const countryPresenceMax = countryPresence2026[0].count;
