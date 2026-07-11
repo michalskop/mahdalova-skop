@@ -1161,18 +1161,6 @@ export default function KviffBranchPage({ params }: PageProps) {
         {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'gender-ve-varech') && <HonoraryGenderBlock />}
         {branch.slug === 'mapa-filmu' && <FilmScaleBlock />}
 
-        <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
-          <Paper p="lg" radius={8} withBorder bg="background.2">
-            <Title order={3} size="1.05rem" mb="sm" >Hotové grafy k použití</Title>
-            <Text>
-              Pro živé vysílání už je připravený samostatný datový brief s grafy: vstupenky 2023-2026, průběžný stav 2026 proti finálnímu roku 2025, rozpočet, financování 80/20 a ekonomická stopa návštěvníků. Ostatní kapitoly rozšiřujeme postupně podle archivních dat.
-            </Text>
-            <Button component={Link} href="/specialy/karlovy-vary/live" mt="md" color="dark">
-              Otevřít hotové grafy
-            </Button>
-          </Paper>
-        </Box>
-
         <Divider my="md" />
 
         <Box px={{ base: 16, md: 24 }} py={{ base: 24, md: 36 }}>
