@@ -16,8 +16,7 @@
 }
 
 .card:hover {
-  border-top-color: #de1743;
-  box-shadow: 0 6px 20px rgba(222, 23, 67, 0.12);
+  box-shadow: 0 6px 20px rgba(var(--card-accent-rgb, 222, 23, 67), 0.18);
   transform: scale(1.02);
 }
 

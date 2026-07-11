@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import VegaChart from './VegaChart';
+import { hexToRgbString } from '@/utils/colorUtils';
 import styles from './DpbpArticleCard.module.css';
 
 interface DpbpArticleCardProps {
@@ -31,7 +32,7 @@ export default function DpbpArticleCard({
     <Link
       href={href}
       className={stacked ? `${styles.card} ${styles.stacked}` : styles.card}
-      style={{ borderTopColor: accent }}
+      style={{ borderTopColor: accent, ['--card-accent-rgb' as string]: hexToRgbString(accent) }}
     >
       {(image || primaryChartSpec) && (
         <div className={styles.thumb}>

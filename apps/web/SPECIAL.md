@@ -293,6 +293,34 @@ The web sync and the book build are **independent** – they both read the same 
 
 **Impact cards** (`cardOrder`) are no longer in `dpbp-config.json` – they come from `BOOK.md` automatically.
 
+**`accent` drives the chapter's whole colour identity, not just the header rule.** It's applied consistently across: the header accent rule, the profile-head logo (top-right, both chapter and article pages – it's the resting colour, the mouse-hover scatter still cycles the full brand palette for fun), every tile's top border and hover glow (chapter page tiles and the landing-page chapter tile), the intro `ImpactCard` number box (its own `cards/*.json` `accent` field is ignored – overridden with `meta.accent` in `[chapter]/page.tsx` since only `cardOrder[0]` is ever rendered), and the article body's `h2` colour and link colour (blockquote border and the divider rule use the raw accent – decorative, not text). The breadcrumb link and hero gradient stay fixed crimson/navy everywhere – that's global brand wayfinding, not per-chapter.
+
+**Each chapter must have a genuinely distinct `accent` – no two chapters share a colour.** The 15 chapters map 1:1 onto the 13 `BRAND_PALETTE` colours (`components/dpbp/ProfileHead.tsx`) plus two extra hand-picked shades already established for finance/inequality (`#2d7a4f`, `#efb704`). Current assignment (all 15 distinct):
+
+| # | Chapter | Accent | Why |
+|---|---------|--------|-----|
+| 01 | Demografie | `#f76800` orange | warmth/family |
+| 02 | Zdravotnictví a péče | `#5e66d5` royal blue | clinical/medical |
+| 03 | Nedostupnost bydlení | `#ff5c4a` coral/brick | housing material |
+| 04 | Regionální propasti | `#1a9fbd` teal | neutral/geographic |
+| 05 | Úroveň vzdělávání | `#12b886` mint | chalkboard green |
+| 06 | Ekonomická nerovnost | `#efb704` dark gold | money, but see contrast note below |
+| 07 | AI a trh práce | `#6267a3` violet | tech/futuristic |
+| 08 | Digitalizace a inovace | `#5fcce6` sky cyan | digital/screens |
+| 09 | Energie a energetická bezpečnost | `#ffcf02` bright yellow | electricity |
+| 10 | Klimatická změna | `#de1743` crimson | heat/alarm |
+| 11 | Bezpečnost a konflikty | `#639e0a` olive | military/defence |
+| 12 | Informační manipulace | `#0e839e` dark teal | murky/screens |
+| 13 | Oligarchizace a korupce | `#a03250` deep maroon | rot/corruption |
+| 14 | Veřejné finance a daně | `#2d7a4f` deep green | money |
+| 15 | Efektivní vládnutí | `#4a51ab` indigo | institutional |
+
+When adding a 16th chapter, either free up a colour by re-theming one of the above or extend `BRAND_PALETTE` – don't reuse an existing chapter's accent.
+
+**Contrast**: several of the above (bright yellow, mint, sky cyan, dark gold) fail WCAG contrast as bold text on a white/cream background. `utils/colorUtils.ts` exports `readableAccent(hex)`, which darkens (same hue/saturation, lower lightness) only as much as needed to clear a large-text-safe contrast ratio – already-legible colours (crimson, the blues, the darker greens/maroon) pass through unchanged. It's applied at the two text usage sites (`ImpactCard`'s number, article `h2`/link colour); everywhere else (logo, borders, glows, dividers) uses the raw accent since those aren't body text.
+
+**Chart colours are not automatically retinted.** `introChart` specs in `public/dpbp/charts/*.json` are static Vega-Lite JSON with their own hardcoded series colours – picking a chapter's `accent` doesn't change them. If a chapter's charts should read as "chapter-colour-dominant" (as requested for Regionální propasti's `G09_01_REGION_GAP.json`, now teal-dominant with the lagging region kept in alarm red for narrative emphasis), that's a manual per-chart edit.
+
 **`intro` is optional.** Omit it for a chapter and the intro block simply doesn't render – the page falls back to just the one-pager card + article pairs.
 
 **Pinning versions:** Update `sourceFile` here when you want to publish a new version. The source project can have newer drafts that are not yet published on the web.

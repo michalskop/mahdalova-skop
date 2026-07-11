@@ -54,11 +54,6 @@ interface ProfileHeadProps {
   palette?: string[];
   className?: string;
   style?: React.CSSProperties;
-  /** Pick a random starting colour combination on mount instead of the
-   * fixed silColor/dots defaults – used on chapter/article headers so each
-   * page load shows a fresh combination. Mouse-leave reverts to that same
-   * mount-time combination, not the hardcoded defaults. */
-  initialRandom?: boolean;
 }
 
 export default function ProfileHead({
@@ -67,7 +62,6 @@ export default function ProfileHead({
   palette = BRAND_PALETTE,
   className,
   style,
-  initialRandom = false,
 }: ProfileHeadProps) {
   const uid = useId().replace(/:/g, '');
   const clipId = `sil-${uid}`;
@@ -77,10 +71,8 @@ export default function ProfileHead({
   // entry instead of re-rolling on every mousemove tick while hovering.
   const insideRef = useRef<Set<number>>(new Set());
 
-  const [defaultSil] = useState(() => (initialRandom ? randomColor(palette) : silColor));
-  const [defaultDotColors] = useState<string[]>(() =>
-    initialRandom ? dots.map(() => randomColor(palette)) : dots.map(d => d[3])
-  );
+  const [defaultSil] = useState(silColor);
+  const [defaultDotColors] = useState<string[]>(() => dots.map(d => d[3]));
   const [activeSil, setActiveSil] = useState(defaultSil);
   const [activeDots, setActiveDots] = useState<string[]>(defaultDotColors);
 
@@ -119,9 +111,12 @@ export default function ProfileHead({
 
   const handleLeave = useCallback(() => {
     insideRef.current.clear();
+    // Only the silhouette reverts, to the chapter's dominant colour – it's
+    // the one fixed brand marker. The dots are playful confetti: they keep
+    // whatever colour the hover scatter left them in, even a combination
+    // that never appeared on load.
     setActiveSil(defaultSil);
-    setActiveDots(defaultDotColors);
-  }, [defaultSil, defaultDotColors]);
+  }, [defaultSil]);
 
   return (
     <>

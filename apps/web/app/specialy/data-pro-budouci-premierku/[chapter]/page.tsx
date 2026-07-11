@@ -12,6 +12,7 @@ import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import SupportBanner from '@/components/common/SupportBanner';
+import { readableAccent } from '@/utils/colorUtils';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 const CHARTS_ROOT  = path.join(process.cwd(), 'public/dpbp/charts');
@@ -103,7 +104,15 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   const meta = loadMeta(params.chapter);
   if (!meta) notFound();
 
-  const introCard = meta.cardOrder.length > 0 ? loadCard(params.chapter, meta.cardOrder[0]) : null;
+  // The per-card `accent` field in cards/*.json is an unused legacy default
+  // (always crimson) – only cardOrder[0] is ever rendered, as the chapter's
+  // intro number box, so it should match the chapter's own accent instead.
+  // readableAccent() darkens it if needed – the raw accent can be a light
+  // brand colour (bright yellow/teal/mint) picked for hue variety on dark or
+  // decorative surfaces, which fails contrast as bold text on this card's
+  // white background.
+  const introCardRaw = meta.cardOrder.length > 0 ? loadCard(params.chapter, meta.cardOrder[0]) : null;
+  const introCard = introCardRaw ? { ...introCardRaw, accent: readableAccent(meta.accent) } : null;
   const introChartSpec = meta.introChart ? loadChartSpec(meta.introChart) : null;
 
   const onePagerFm = meta.onePager
@@ -148,7 +157,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 aria-label="Zpět na Data pro budoucí premiérku"
                 style={{ display: 'block' }}
               >
-                <ProfileHead initialRandom style={{ width: 120, height: 120, display: 'block' }} />
+                <ProfileHead silColor={meta.accent} style={{ width: 120, height: 120, display: 'block' }} />
               </a>
             </Box>
           </Box>

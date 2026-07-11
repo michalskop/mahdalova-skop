@@ -19,6 +19,7 @@ import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
 import VetoChart from '@/components/dpbp/VetoChart/VetoChart';
 import ChartSignature from '@/components/dpbp/ChartSignature';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
+import { readableAccent } from '@/utils/colorUtils';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -109,6 +110,12 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   const chapterMeta = loadChapterMeta(params.chapter);
   const { frontmatter: fm, content, htmlContent } = art;
   const accent = chapterMeta?.accent ?? '#de1743';
+  // Body text (h2/links) needs WCAG-safe contrast on the white article
+  // background – the raw accent can be a light brand colour picked for hue
+  // variety on dark/decorative surfaces (logo, borders), which some chapters'
+  // accents fail as text. Divider rule and blockquote border stay on the raw
+  // accent since they're decorative, not text.
+  const textAccent = readableAccent(accent);
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
@@ -146,7 +153,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
                 aria-label="Zpět na Data pro budoucí premiérku"
                 style={{ display: 'block' }}
               >
-                <ProfileHead initialRandom style={{ width: 100, height: 100, display: 'block' }} />
+                <ProfileHead silColor={accent} style={{ width: 100, height: 100, display: 'block' }} />
               </a>
             </Box>
           </Box>
@@ -202,7 +209,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           font-family: 'Roboto Slab', Georgia, serif;
           font-size: 1.25rem;
           font-weight: 700;
-          color: #de1743;
+          color: ${textAccent};
           margin: 2em 0 0.6em;
         }
         .dpbp-article h3 {
@@ -228,10 +235,10 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           margin: 0 0 1em;
         }
         .dpbp-article strong { color: #101432; }
-        .dpbp-article a { color: #de1743; }
+        .dpbp-article a { color: ${textAccent}; }
         .dpbp-article hr { border: none; border-top: 1px solid #e8e2d9; margin: 2em 0; }
         .dpbp-article blockquote {
-          border-left: 3px solid #de1743;
+          border-left: 3px solid ${accent};
           padding-left: 1em;
           color: #555;
           margin: 1.5em 0;
