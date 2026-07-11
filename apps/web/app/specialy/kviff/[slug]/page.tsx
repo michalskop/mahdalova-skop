@@ -26,6 +26,7 @@ import FilmScreeningsChart from '../FilmScreeningsChart';
 import HistoricalCountryMap from '../HistoricalCountryMap';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from '../GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from '../grandPrix';
+import VerticalTimeline, { type TimelineEntry } from '../VerticalTimeline';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
 import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from '../ChartFrame';
 
@@ -142,12 +143,13 @@ function HonoraryDotTimeline() {
 }
 
 function Pre1989AwardsOverview() {
-  const phaseColors = [
-    'var(--mantine-color-brandNavy-3)',
-    'var(--mantine-color-brandNavy-5)',
-    'var(--mantine-color-brandNavy-7)',
-    'var(--mantine-color-brand-6)',
-  ];
+  const entries: TimelineEntry[] = pre1989AwardsNotes.map((note, index) => ({
+    key: note.period,
+    year: note.period,
+    label: note.title,
+    body: note.body,
+    highlight: index === 0 || index === pre1989AwardsNotes.length - 1,
+  }));
 
   return (
     <ChartFrame
@@ -156,57 +158,7 @@ function Pre1989AwardsOverview() {
       source="Oficiální archiv KVIFF, festivalové ročníky"
       fullWidth
     >
-      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
-        <Box
-          style={{
-            display: 'grid',
-            gridTemplateColumns: `repeat(${pre1989AwardsNotes.length}, minmax(220px, 1fr))`,
-            gap: 0,
-            minWidth: 920,
-            alignItems: 'stretch',
-          }}
-        >
-          {pre1989AwardsNotes.map((note, index) => (
-            <Box key={note.period} style={{ position: 'relative', padding: '0 10px' }}>
-              <Box
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  left: index === 0 ? 22 : 0,
-                  right: index === pre1989AwardsNotes.length - 1 ? 22 : 0,
-                  top: 28,
-                  height: 4,
-                  background: phaseColors[index],
-                  opacity: 0.72,
-                }}
-              />
-              <Stack gap="sm" align="center" style={{ position: 'relative' }}>
-                <Box
-                  style={{
-                    width: 58,
-                    height: 58,
-                    borderRadius: 999,
-                    background: phaseColors[index],
-                    border: '4px solid var(--mantine-color-background-1)',
-                    boxShadow: '0 0 0 1px var(--mantine-color-background-6)',
-                    display: 'grid',
-                    placeItems: 'center',
-                    color: index === 0 ? 'var(--mantine-color-brandRoyalBlue-8)' : 'var(--mantine-color-background-0)',
-                  }}
-                >
-                  <Text fw={900} style={NUM_FONT} size="sm" ta="center" lh={1.05}>
-                    {note.period}
-                  </Text>
-                </Box>
-                <Paper p="md" radius={4} bg={index === 0 ? 'background.3' : 'background.0'} h="100%">
-                  <Text fw={900}>{note.title}</Text>
-                  <Text size="sm" mt={6}>{note.body}</Text>
-                </Paper>
-              </Stack>
-            </Box>
-          ))}
-        </Box>
-      </Box>
+      <VerticalTimeline entries={entries} />
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm" mt="lg">
         <Paper p="md" radius={4} bg="background.0">
@@ -226,40 +178,65 @@ function Pre1989AwardsOverview() {
   );
 }
 
-const festivalTimelinePhases = [
+const festivalTimelinePhases: TimelineEntry[] = [
   {
+    key: '1946',
     year: '1946',
-    label: 'Založení festivalu',
-    body: 'První dva ročníky (1946 a 1947) byly nesoutěžní – festival ještě neměl podobu mezinárodní filmové soutěže.',
+    label: 'Založení v poválečném Československu',
+    body: 'První dva ročníky (1946 a 1947) byly nesoutěžní a odehrávaly se většinou v Mariánských Lázních – Karlovy Vary byly zpočátku jen vedlejší dějiště. Podle festivalu i dobových zdrojů jde o druhý nejstarší kontinuálně pořádaný filmový festival v Evropě po Benátkách.',
     highlight: true,
   },
   {
+    key: '1948',
     year: '1948',
-    label: 'Začátek soutěžního modelu',
-    body: 'Poprvé se uděluje hlavní cena, dnešní Grand Prix. Od tohoto roku vedeme vítěze jako samostatnou datovou řadu.',
+    label: 'Únorový převrat a první udělená cena',
+    body: 'V témže roce, kdy komunisté ovládli Československo, se poprvé udělila hlavní soutěžní cena – dnešní Grand Prix. Znárodněná kinematografie od té chvíle diktovala i dramaturgii festivalu.',
   },
   {
+    key: '1950',
+    year: '1950',
+    label: 'Natrvalo ve Varech, propaganda naplno',
+    body: 'V pátém ročníku se festival definitivně přestěhoval do Karlových Varů. Padesátá léta zároveň přinesla inflaci cen – vedle hlavní ceny se rozdávala cena míru, cena práce, cena za boj za svobodu i cena za boj za sociální pokrok, takže s prázdnou neodešel skoro nikdo. Festivalu vládlo heslo „o nového člověka, o dokonalejší lidstvo“.',
+  },
+  {
+    key: '1956',
+    year: '1956',
+    label: 'Vary vedle Cannes, Benátek a Berlína',
+    body: 'FIAPF zařadila festival do prestižní kategorie A po bok největších světových přehlídek. Týž rok zaznamenal i nečekanou kuriozitu: příjezd okouzlující zahraniční herečky přiměl státní nakladatelství Orbis vydat sérii pohlednic s ní v plavkách – nevídaný počin v jinak cudné době.',
+  },
+  {
+    key: '1959',
     year: '1959–1990',
-    label: 'Střídání s Moskvou',
-    body: 'Festival se koná jen v sudých letech – v lichých byl kvůli politickému rozhodnutí prostor pro Moskevský filmový festival.',
+    label: 'Střídání s Moskvou, přesto přijíždí Západ',
+    body: 'Sovětský svaz chtěl mít svůj vlastní „světový“ festival, a tak se od roku 1960 Vary konají jen v sudých letech. I přesto sem míří velká jména: v roce 1964 rozvášnila davy Claudia Cardinale, přijeli i Henry Fonda a Richard Attenborough. Stejný ročník 1964 vyhráli Ján Kadár a Elmar Klos s Obžalovaným, ve kterém malou roli právníka ztvárnil Jiří Menzel – ten sám o čtyři roky později vyhrál jako režisér s Rozmarným létem.',
   },
   {
+    key: '1968',
+    year: '1968',
+    label: 'Tanky zastaví nadějný rozvoj',
+    body: 'Invaze vojsk Varšavské smlouvy přeruší roky uvolňování. Lesk festivalu z konce 60. let se vrátí až po sametové revoluci.',
+  },
+  {
+    key: '1989',
     year: '1989–1993',
     label: 'Transformační nejistota',
-    body: 'Po sametové revoluci festival hledá novou institucionální podobu; Grand Prix v roce 1990 nebyla udělena a rok 1993 se festival vůbec nekonal.',
+    body: 'Sametová revoluce festival zbaví ideologie, ale ne chaosu – v roce 1990 nebyla udělena hlavní cena a ročník 1993 se vůbec nekonal.',
   },
   {
+    key: '1994',
     year: '1994',
     label: 'Nová každoroční éra',
-    body: 'Festival se od tohoto roku koná každoročně a začíná vznikat systematický archiv – proto je rok 1994 metodologický zlom pro naše data.',
+    body: 'Pod vedením Jiřího Bartošky festival ožívá jako soukromá instituce s pevnou každoroční periodicitou. Od tohoto roku také vzniká systematický digitální archiv – proto je 1994 metodologickým zlomem pro naše data.',
     highlight: true,
   },
   {
+    key: '2020',
     year: '2020',
     label: 'Covidová pauza',
     body: 'Jediný přerušený ročník novodobé éry – pandemie covidu-19 zastavila každoroční tradici.',
   },
   {
+    key: '2026',
     year: '2026',
     label: '60. ročník',
     body: 'Aktuální ročník festivalu probíhá 3.–11. července 2026.',
@@ -271,65 +248,10 @@ function FestivalTimeline() {
     <ChartFrame
       title="Časová osa: 1946 → dnešek"
       subtitle="Kdy se festival konal, kdy se měnila periodicita a proč je rok 1994 metodologický zlom"
-      source="Oficiální archiv KVIFF, festivalové ročníky"
+      source="Oficiální archiv KVIFF; iROZHLAS, Reflex.cz, Radio Prague International"
       fullWidth
     >
-      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
-        <Box
-          style={{
-            display: 'grid',
-            gridTemplateColumns: `repeat(${festivalTimelinePhases.length}, minmax(160px, 1fr))`,
-            gap: 0,
-            minWidth: 980,
-            alignItems: 'start',
-          }}
-        >
-          {festivalTimelinePhases.map((phase, index) => (
-            <Box key={phase.year} style={{ position: 'relative', padding: '0 8px' }}>
-              <Box
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  left: index === 0 ? 22 : 0,
-                  right: index === festivalTimelinePhases.length - 1 ? 22 : 0,
-                  top: 30,
-                  height: 4,
-                  background: phase.highlight ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-brandNavy-4)',
-                  opacity: 0.6,
-                }}
-              />
-              <Stack gap="sm" align="center" style={{ position: 'relative' }}>
-                <Box
-                  style={{
-                    width: phase.highlight ? 68 : 52,
-                    height: phase.highlight ? 68 : 52,
-                    borderRadius: 999,
-                    background: phase.highlight ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-brandNavy-6)',
-                    border: '4px solid var(--mantine-color-background-1)',
-                    boxShadow: phase.highlight
-                      ? '0 0 0 3px var(--mantine-color-brand-3)'
-                      : '0 0 0 1px var(--mantine-color-background-6)',
-                    display: 'grid',
-                    placeItems: 'center',
-                    color: 'var(--mantine-color-background-0)',
-                  }}
-                >
-                  <Text fw={900} style={NUM_FONT} size={phase.highlight ? 'md' : 'sm'} ta="center" lh={1.05}>
-                    {phase.year}
-                  </Text>
-                </Box>
-                <Paper p="sm" radius={4} bg={phase.highlight ? 'brand.0' : 'background.0'} h="100%">
-                  <Text fw={900} size="sm">{phase.label}</Text>
-                  <Text size="xs" mt={4}>{phase.body}</Text>
-                </Paper>
-              </Stack>
-            </Box>
-          ))}
-        </Box>
-      </Box>
-      <Text mt="md" size="sm" c="dimmed">
-        Založení v roce 1946 a metodologický zlom v roce 1994 jsou v ose zvýrazněné – 1946 je počátek festivalu vůbec, 1994 je bod, od kterého máme souvislý, spolehlivě strukturovaný archiv pro každý další ročník.
-      </Text>
+      <VerticalTimeline entries={festivalTimelinePhases} />
     </ChartFrame>
   );
 }
@@ -414,14 +336,8 @@ function HonoraryGenderBlock() {
 
         <Pre1989AwardsOverview />
 
-        <CommunistEraGrandPrix winners={grandPrixCommunistEra} />
-        <PostRevolutionGrandPrix winners={grandPrixPostRevolution} />
-
         <Paper p="lg" radius={8} withBorder bg="background.1" style={{ gridColumn: '1 / -1' }}>
-          <Group justify="space-between" align="end" mb="md">
-            <Title order={2} size="1.25rem" >Poslední oceněné osobnosti v datové řadě</Title>
-            <Button component={Link} href="/specialy/kviff/live" variant="outline" color="dark">Souvislosti návštěvnosti</Button>
-          </Group>
+          <Title order={2} size="1.25rem" mb="md" >Poslední oceněné osobnosti v datové řadě</Title>
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
             {latestRecipients.map((recipient) => (
               <Paper key={`${recipient.year}-${recipient.name}`} p="md" radius={8} withBorder bg={recipient.gender === 'woman' ? 'brand.0' : 'brandNavy.0'}>
@@ -433,6 +349,17 @@ function HonoraryGenderBlock() {
           </SimpleGrid>
         </Paper>
       </SimpleGrid>
+    </Box>
+  );
+}
+
+function CrystalGlobeBlock() {
+  return (
+    <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
+      <Stack gap="md">
+        <CommunistEraGrandPrix winners={grandPrixCommunistEra} />
+        <PostRevolutionGrandPrix winners={grandPrixPostRevolution} />
+      </Stack>
     </Box>
   );
 }
@@ -1262,9 +1189,6 @@ export default function KviffBranchPage({ params }: PageProps) {
                 <Text>
                   Průběžná čísla 2026 nesmíme míchat s finálními statistikami starších ročníků. U vstupenek jde o rozběhnutý ročník proti uzavřeným rokům; u rozpočtu a útraty jde o velikost ekonomické stopy, ne o zisk festivalu.
                 </Text>
-                <Button component={Link} href="/specialy/kviff/live" mt="md" color="dark">
-                  Otevřít live brief
-                </Button>
               </Paper>
             </SimpleGrid>
           </Box>
@@ -1274,6 +1198,7 @@ export default function KviffBranchPage({ params }: PageProps) {
 
         {(branch.slug === 'hoste-a-prestiz' || branch.slug === 'oceneni-v-datech') && <HonoraryGenderBlock />}
         {branch.slug === 'mapa-filmu' && <FilmScaleBlock />}
+        {branch.slug === 'crystal-globe' && <CrystalGlobeBlock />}
 
         <Divider my="md" />
 

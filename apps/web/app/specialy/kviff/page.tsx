@@ -71,10 +71,7 @@ export default function KarlovyVarySpecialPage() {
               Kdo vypráví světový film, kdo získává prestiž a co ukazuje osmdesát let festivalu, když se nedíváme jen na červený koberec, ale na filmy, země, ceny, tvůrce, témata a publikum.
             </Text>
             <Group>
-              <Button component={Link} href="/specialy/kviff/live" color="brand" variant="filled">
-                Hotové grafy pro vysílání
-              </Button>
-              <Button component={Link} href="/specialy/kviff/historie-festivalu-v-datech" variant="white" color="dark">
+              <Button component={Link} href="/specialy/kviff/historie-festivalu-v-datech" color="brand" variant="filled">
                 Začít historií
               </Button>
               <Button component={Link} href="#analyzy" color="gray" variant="outline">
@@ -108,13 +105,10 @@ export default function KarlovyVarySpecialPage() {
       <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
           <Paper p={{ base: 'lg', md: 'xl' }} radius={8} withBorder bg="background.1">
-            <Group justify="space-between" align="start" mb="md">
-              <Stack gap={2}>
-                <Badge w="fit-content" color="brand" variant="filled">Hotový graf</Badge>
-                <Title order={2} size="1.25rem" >Vstupenky: finální roky a průběžný stav</Title>
-              </Stack>
-              <Button component={Link} href="/specialy/kviff/live" variant="outline" color="dark">Detail</Button>
-            </Group>
+            <Stack gap={2} mb="md">
+              <Badge w="fit-content" color="brand" variant="filled">Hotový graf</Badge>
+              <Title order={2} size="1.25rem" >Vstupenky: finální roky a průběžný stav</Title>
+            </Stack>
             <Stack gap="sm">
               {finalStats.map((row) => (
                 <InlineBar key={row.year} label={String(row.year)} value={row.tickets} max={maxTickets} />
@@ -247,36 +241,6 @@ export default function KarlovyVarySpecialPage() {
               <Paper p="md" radius={8} bg="brandTeal.0"><Text fw={800} style={NUM_FONT}>{latestClosedFilmYear.totalFilms}</Text><Text size="sm">filmů v roce {latestClosedFilmYear.year}</Text></Paper>
               <Paper p="md" radius={8} bg="background.2"><Text fw={800} style={NUM_FONT}>{firstScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film 1996</Text></Paper>
               <Paper p="md" radius={8} bg="background.2"><Text fw={800} style={NUM_FONT}>{latestScreeningsPerFilm.toString().replace('.', ',')}</Text><Text size="sm">projekce na film {latestClosedFilmYear.year}</Text></Paper>
-            </SimpleGrid>
-          </SimpleGrid>
-        </Paper>
-      </Box>
-
-      <Box component="section" px={{ base: 16, md: 24 }} pb={{ base: 28, md: 42 }}>
-        <Paper
-          component={Link}
-          href="/specialy/kviff/live"
-          p={{ base: 'lg', md: 'xl' }}
-          radius={8}
-          withBorder
-          bg="brandRoyalBlue.8"
-          style={{ textDecoration: 'none', display: 'block' }}
-        >
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
-            <Stack gap="sm">
-              <Badge w="fit-content" color="brand" variant="filled">Hotovo teď</Badge>
-              <Title order={2} size="1.25rem" >
-                Grafy a citace pro živé vysílání
-              </Title>
-              <Text size="lg" c="background.2">
-                Vstupenky 2023–2026, letošní průběžný stav proti finálnímu roku 2025, rozpočet, financování 80/20 a ekonomická stopa návštěvníků.
-              </Text>
-            </Stack>
-            <SimpleGrid cols={2} spacing="sm">
-              <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={800} style={NUM_FONT}>97 075</Text><Text size="sm">vstupenek k 8. 7.</Text></Paper>
-              <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={800} style={NUM_FONT}>650 mil.</Text><Text size="sm">útrata návštěvníků</Text></Paper>
-              <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={800} style={NUM_FONT}>80/20</Text><Text size="sm">sponzoři / veřejné</Text></Paper>
-              <Paper p="md" radius={8} bg="background.2" c="var(--mantine-color-brandRoyalBlue-8)"><Text fw={800} style={NUM_FONT}>2,6×</Text><Text size="sm">útrata vs. rozpočet</Text></Paper>
             </SimpleGrid>
           </SimpleGrid>
         </Paper>
