@@ -20,6 +20,9 @@ import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryDoubleWomanYe
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
 import { countryHistory, countryHistoryTopCountries } from '../countries-history';
+import HonoraryTimeline from '../HonoraryTimeline';
+import ProgramBreakdownChart from '../ProgramBreakdownChart';
+import FilmScreeningsChart from '../FilmScreeningsChart';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
 import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from '../ChartFrame';
 
@@ -120,70 +123,14 @@ const countryHistoryPeriods = [
 });
 
 function HonoraryDotTimeline() {
-  const years = Array.from(new Set(honoraryCrystalGlobeRecipients.map((recipient) => recipient.year)));
-
   return (
     <ChartFrame
       title="Osobnosti po letech"
-      subtitle="Každá kostička je jedna oceněná osobnost, 1995–2026. Najeďte na ni pro jméno, zemi a profesi."
+      subtitle="Každá kostička je jedna oceněná osobnost, 1995–2026."
       source="Oficiální archiv KVIFF, ročník po ročníku"
       fullWidth
     >
-      <Group gap="sm" mb="md">
-        <Badge color="brand" variant="filled">ženy</Badge>
-        <Badge color="brandNavy" variant="filled">muži</Badge>
-        <Badge color="gray" variant="light">2026 oznámeno</Badge>
-      </Group>
-      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
-        <Box
-          style={{
-            display: 'grid',
-            gridTemplateColumns: `repeat(${years.length}, auto)`,
-            gap: 4,
-            alignItems: 'end',
-            justifyContent: 'start',
-          }}
-        >
-          {years.map((year) => {
-            const recipients = honoraryCrystalGlobeRecipients.filter((recipient) => recipient.year === year);
-            return (
-              <Stack key={year} gap={4} align="center" justify="end">
-                <Stack gap={3} align="center" justify="end" h={recipients.length > 2 ? 70 : 46}>
-                  {recipients.map((recipient) => (
-                    <Tooltip
-                      key={`${recipient.year}-${recipient.name}`}
-                      label={`${recipient.year}${recipient.status === 'announced' ? ' oznámeno' : ''}: ${recipient.name} · ${recipient.country} · ${recipient.roleCz}. Ocenění: ${recipient.awardCz}. Za co: ${recipient.reason}`}
-                      multiline
-                      maw={420}
-                      withArrow
-                    >
-                      <Box
-                        component="span"
-                        role="img"
-                        aria-label={`${recipient.year}: ${recipient.name}, ${recipient.country}, ${recipient.roleCz}`}
-                        tabIndex={0}
-                        title={`${recipient.year}: ${recipient.name} · ${recipient.awardCz}. ${recipient.reason}`}
-                        style={{
-                          width: recipient.gender === 'woman' ? 17 : 14,
-                          height: recipient.gender === 'woman' ? 17 : 14,
-                          borderRadius: 4,
-                          background: recipient.gender === 'woman' ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-brandNavy-6)',
-                          border: recipient.status === 'announced' ? '2px solid var(--mantine-color-brandRoyalBlue-8)' : 'none',
-                          display: 'inline-block',
-                          cursor: 'help',
-                        }}
-                      />
-                    </Tooltip>
-                  ))}
-                </Stack>
-                <Text size="xs" fw={800} style={NUM_FONT} c={recipients.some((recipient) => recipient.gender === 'woman') ? 'var(--mantine-color-brand-8)' : 'dimmed'}>
-                  {String(year).slice(2)}
-                </Text>
-              </Stack>
-            );
-          })}
-        </Box>
-      </Box>
+      <HonoraryTimeline recipients={honoraryCrystalGlobeRecipients} />
       <Text mt="md" size="sm" c="dimmed">
         Čtení grafu: crimson kostičky nejsou rozprostřené rovnoměrně. Jediné roky, kdy ocenění dostaly dvě ženy zároveň, jsou {honoraryDoubleWomanYears.join(' a ')} – jinak jde vždy nejvýš o jednu ženu v ročníku, často žádnou.
       </Text>
@@ -742,16 +689,6 @@ function CountryBubbleMap() {
   );
 }
 
-const programSegmentColors = {
-  fictionFeatures: 'var(--mantine-color-brandTeal-6)',
-  documentaryFeatures: 'var(--mantine-color-brandOrange-6)',
-  shortFilms: 'var(--mantine-color-brandNavy-6)',
-};
-
-function percentShare(value: number, total: number) {
-  return Math.round((value / total) * 1000) / 10;
-}
-
 function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
   const maxBreakdownFilms = Math.max(...completeBreakdownRows.map((row) => row.totalFilms ?? 0));
 
@@ -762,16 +699,9 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
       source="Oficiální finální statistiky ročníků KVIFF"
       fullWidth
     >
-      <Group justify="space-between" align="end" mb="md">
-        <Text c="dimmed" maw={760}>
-          Historickou řadu držíme jako kontext od roku 1995. Barevně rozkládáme jen roky, kde máme bezpečně oddělené kategorie hraných celovečerních filmů, dokumentárních celovečerních filmů a krátkých filmů.
-        </Text>
-        <Group gap="sm">
-          <Badge color="brandTeal" variant="filled">hrané</Badge>
-          <Badge color="brandOrange" variant="filled">dokumenty</Badge>
-          <Badge color="brandNavy" variant="filled">krátké</Badge>
-        </Group>
-      </Group>
+      <Text c="dimmed" maw={760} mb="md">
+        Historickou řadu držíme jako kontext od roku 1995. Barevně rozkládáme jen roky, kde máme bezpečně oddělené kategorie hraných celovečerních filmů, dokumentárních celovečerních filmů a krátkých filmů.
+      </Text>
 
       <Box mb="xl">
         <Group justify="space-between" mb={6}>
@@ -824,79 +754,7 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
         </Box>
       </Box>
 
-      <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
-        <Box
-          style={{
-            display: 'grid',
-            gridTemplateColumns: `repeat(${completeBreakdownRows.length}, minmax(138px, 1fr))`,
-            gap: 18,
-            minWidth: 760,
-            alignItems: 'end',
-          }}
-        >
-          {completeBreakdownRows.map((row) => {
-            const fiction = row.fictionFeatures ?? 0;
-            const documentaries = row.documentaryFeatures ?? 0;
-            const shorts = row.shortFilms ?? 0;
-            const total = row.totalFilms ?? fiction + documentaries + shorts;
-            const barHeight = Math.max(130, Math.round((total / maxBreakdownFilms) * 230));
-            const segments = [
-              { key: 'shortFilms', label: 'krátké filmy', value: shorts, color: programSegmentColors.shortFilms },
-              { key: 'documentaryFeatures', label: 'celovečerní dokumenty', value: documentaries, color: programSegmentColors.documentaryFeatures },
-              { key: 'fictionFeatures', label: 'celovečerní hrané', value: fiction, color: programSegmentColors.fictionFeatures },
-            ];
-            const tooltip = [
-              `${row.year}${row.edition ? ` · ${row.edition}. ročník` : ''}`,
-              `${total} filmů celkem`,
-              `${fiction} hraných (${percentShare(fiction, total).toString().replace('.', ',')} %)`,
-              `${documentaries} dokumentů (${percentShare(documentaries, total).toString().replace('.', ',')} %)`,
-              `${shorts} krátkých (${percentShare(shorts, total).toString().replace('.', ',')} %)`,
-              row.note ?? null,
-            ].filter(Boolean).join(' · ');
-
-            return (
-              <Tooltip key={row.year} label={tooltip} multiline maw={360} withArrow>
-                <Stack gap="xs" align="center" title={tooltip} style={{ cursor: 'help' }}>
-                  <Text fw={900} style={NUM_FONT}>{total}</Text>
-                  <Box
-                    aria-label={`${row.year}: ${total} filmů, z toho ${fiction} hraných, ${documentaries} dokumentárních a ${shorts} krátkých`}
-                    style={{
-                      height: barHeight,
-                      width: 74,
-                      display: 'flex',
-                      flexDirection: 'column-reverse',
-                      borderRadius: 8,
-                      overflow: 'hidden',
-                      border: '1px solid var(--mantine-color-background-6)',
-                      background: 'var(--mantine-color-background-2)',
-                    }}
-                  >
-                    {segments.map((segment) => (
-                      <Box
-                        key={segment.key}
-                        style={{
-                          height: `${(segment.value / total) * 100}%`,
-                          background: segment.color,
-                          display: 'grid',
-                          placeItems: 'center',
-                          color: 'var(--mantine-color-background-0)',
-                          minHeight: segment.value > 0 ? 22 : 0,
-                        }}
-                      >
-                        <Text size="xs" fw={900} style={NUM_FONT}>{segment.value}</Text>
-                      </Box>
-                    ))}
-                  </Box>
-                  <Text fw={900}>{row.year}</Text>
-                  <Text size="xs" ta="center" c="dimmed">
-                    {fiction} hraných · {documentaries} dok. · {shorts} krát.
-                  </Text>
-                </Stack>
-              </Tooltip>
-            );
-          })}
-        </Box>
-      </Box>
+      <ProgramBreakdownChart rows={completeBreakdownRows} maxBreakdownFilms={maxBreakdownFilms} />
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm" mt="lg">
         <Box>
@@ -918,22 +776,6 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
 
 function FilmScaleBlock() {
   const maxFilms = peakFilmYear.totalFilms ?? 1;
-  const maxScreenings = Math.max(...filmCountAvailableRows.map((row) => row.screenings ?? 0));
-  const screeningDensityRows = filmCountAvailableRows
-    .map((row, index) => ({
-      row,
-      index,
-      ratio: row.screenings && row.totalFilms ? Math.round((row.screenings / row.totalFilms) * 100) / 100 : null,
-    }))
-    .filter((item): item is { row: typeof filmCountAvailableRows[number]; index: number; ratio: number } => item.ratio !== null);
-  const maxScreeningsPerFilm = Math.ceil(Math.max(...screeningDensityRows.map((item) => item.ratio)) * 2) / 2;
-  const densityLinePoints = screeningDensityRows
-    .map((item) => {
-      const x = ((item.index + 0.5) / filmCountAvailableRows.length) * 1000;
-      const y = 18 + (1 - item.ratio / maxScreeningsPerFilm) * 170;
-      return `${Math.round(x)},${Math.round(y)}`;
-    })
-    .join(' ');
 
   return (
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
@@ -1011,124 +853,12 @@ function FilmScaleBlock() {
           source="Oficiální finální statistiky ročníků KVIFF"
           fullWidth
         >
-          <Group justify="flex-end" mb="md">
-            <Group gap="sm">
-              <Badge color="brandTeal" variant="filled">filmy</Badge>
-              <Badge color="brandOrange" variant="filled">projekce</Badge>
-              <Badge color="brand" variant="filled">projekce / film</Badge>
-            </Group>
-          </Group>
-          <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
-            <Box
-              style={{
-                position: 'relative',
-                display: 'grid',
-                gridTemplateColumns: `repeat(${filmCountAvailableRows.length}, minmax(32px, 1fr))`,
-                gap: 6,
-                minWidth: 1040,
-                alignItems: 'end',
-                minHeight: 250,
-                borderBottom: '1px solid var(--mantine-color-background-6)',
-                paddingTop: 8,
-              }}
-            >
-              <Box
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  inset: '2px 0 28px 0',
-                  pointerEvents: 'none',
-                  zIndex: 4,
-                }}
-              >
-                <svg viewBox="0 0 1000 198" preserveAspectRatio="none" width="100%" height="100%">
-                  <text x="990" y="16" textAnchor="end" fill="var(--mantine-color-brand-8)" fontSize="20" fontWeight="900">
-                    projekce / film
-                  </text>
-                  {[1, 2, 3].filter((tick) => tick <= maxScreeningsPerFilm).map((tick) => {
-                    const y = 18 + (1 - tick / maxScreeningsPerFilm) * 170;
-                    return (
-                      <g key={tick}>
-                        <line x1="0" x2="1000" y1={y} y2={y} stroke="var(--mantine-color-background-6)" strokeDasharray="6 10" strokeWidth="1.5" />
-                        <text x="990" y={Math.max(28, y - 5)} textAnchor="end" fill="var(--mantine-color-brand-8)" fontSize="20" fontWeight="900">
-                          {tick}x
-                        </text>
-                      </g>
-                    );
-                  })}
-                  <polyline
-                    points={densityLinePoints}
-                    fill="none"
-                    stroke="var(--mantine-color-brand-6)"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    vectorEffect="non-scaling-stroke"
-                  />
-                  {screeningDensityRows.map((item) => {
-                    const x = ((item.index + 0.5) / filmCountAvailableRows.length) * 1000;
-                    const y = 18 + (1 - item.ratio / maxScreeningsPerFilm) * 170;
-                    return (
-                      <circle
-                        key={item.row.year}
-                        cx={x}
-                        cy={y}
-                        r="5"
-                        fill="var(--mantine-color-background-1)"
-                        stroke="var(--mantine-color-brand-6)"
-                        strokeWidth="4"
-                        vectorEffect="non-scaling-stroke"
-                      />
-                    );
-                  })}
-                </svg>
-              </Box>
-              {filmCountAvailableRows.map((row) => {
-                const filmsHeight = Math.max(10, Math.round(((row.totalFilms ?? 0) / maxFilms) * 190));
-                const screeningsHeight = row.screenings ? Math.max(10, Math.round((row.screenings / maxScreenings) * 190)) : 0;
-                const perFilm = row.screenings && row.totalFilms ? Math.round((row.screenings / row.totalFilms) * 100) / 100 : null;
-                const tooltip = [
-                  `${row.year}${row.edition ? ` · ${row.edition}. ročník` : ''}`,
-                  `${row.totalFilms} filmů celkem`,
-                  row.screenings ? `${row.screenings} projekcí` : 'počet projekcí není v online souhrnu',
-                  perFilm ? `${perFilm.toString().replace('.', ',')} projekce na film` : null,
-                  row.note ?? null,
-                ].filter(Boolean).join(' · ');
-
-                return (
-                  <Tooltip key={row.year} label={tooltip} multiline maw={340} withArrow>
-                    <Stack gap={4} align="center" justify="end" title={tooltip} style={{ cursor: 'help' }}>
-                      <Box h={198} w="100%" style={{ display: 'flex', alignItems: 'end', justifyContent: 'center', gap: 3, position: 'relative', zIndex: 1 }}>
-                        <Box
-                          aria-label={`${row.year}: ${row.totalFilms} filmů`}
-                          style={{
-                            width: 12,
-                            height: filmsHeight,
-                            background: row.availability === 'full-breakdown' ? 'var(--mantine-color-brandTeal-7)' : 'var(--mantine-color-brandTeal-6)',
-                            borderRadius: '5px 5px 0 0',
-                            boxShadow: row.year === peakFilmYear.year ? '0 0 0 2px var(--mantine-color-brandRoyalBlue-8)' : undefined,
-                          }}
-                        />
-                        <Box
-                          aria-label={row.screenings ? `${row.year}: ${row.screenings} projekcí` : `${row.year}: projekce nejsou dostupné`}
-                          style={{
-                            width: 8,
-                            height: screeningsHeight,
-                            background: row.screenings ? 'var(--mantine-color-brandOrange-6)' : 'transparent',
-                            borderRadius: '5px 5px 0 0',
-                            opacity: row.screenings ? 0.92 : 0,
-                          }}
-                        />
-                      </Box>
-                      <Text size="xs" fw={row.year === peakFilmYear.year || row.year === latestClosedFilmYear.year ? 900 : 700} c={row.availability === 'full-breakdown' ? 'var(--mantine-color-brandTeal-7)' : 'dimmed'}>
-                        {String(row.year).slice(2)}
-                      </Text>
-                    </Stack>
-                  </Tooltip>
-                );
-              })}
-            </Box>
-          </Box>
+          <FilmScreeningsChart
+            rows={filmCountAvailableRows}
+            maxFilms={maxFilms}
+            peakYear={peakFilmYear.year}
+            latestClosedYear={latestClosedFilmYear.year}
+          />
           <Text mt="md" size="sm" c="dimmed">
             Čtení grafu: tyrkysové sloupce ukazují počet filmů, oranžové počet projekcí a crimson linka poměr projekcí na jeden film. Po roce 2003 klesá šířka katalogu, ale hustota projekcí neklesá stejným tempem. To samo o sobě není důkaz poklesu prestiže festivalu.
           </Text>
