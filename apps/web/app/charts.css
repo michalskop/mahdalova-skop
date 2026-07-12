@@ -1,0 +1,68 @@
+/*
+ * Globální typografická škála grafů – mahdalova-skop.cz
+ * Platí pro všechny grafy bez ohledu na to, zda jsou VegaChart, SVG v HTML nebo
+ * dynamicky generované přes D3. Pravidla jsou seřazena od nejobecnějších
+ * k nejkonkrétnějším.
+ *
+ * Škála (odpovídá DESIGN.md §9, revize 2026-07-12):
+ *   desktop  title → 24 px, subtitle/note/footer → 17 px
+ *   ≤ 768 px title → 20 px, subtitle/note/footer → 14 px
+ */
+
+/* ─── VegaChart React komponenta (dpbp-chart-*) ──────────────────────────── */
+
+.dpbp-chart-title {
+  font-size: 24px;
+}
+.dpbp-chart-subtitle,
+.dpbp-chart-footer {
+  font-size: 17px;
+}
+
+/* ─── .dt-visual (DPBP hub, demografie-hub.html) ─────────────────────────── */
+
+.dt-visual-title {
+  font-size: 24px !important;
+}
+.dt-visual-note,
+.dt-visual-source,
+.dt-visual-authors {
+  font-size: 17px !important;
+}
+.dt-visual-brand span {
+  font-size: 17px !important;
+}
+
+/* ─── .dtp-chart-container (analyza chart.html soubory) ──────────────────── */
+
+.dtp-chart-container .dtp-title {
+  font-size: 24px !important;
+}
+.dtp-chart-container .dtp-subtitle {
+  font-size: 17px !important;
+}
+.dtp-chart-container .dtp-footer,
+.dtp-chart-container .dtp-source,
+.dtp-chart-container .dtp-authors {
+  font-size: 17px !important;
+}
+
+/* ─── Responzivní zmenšení na mobilech ───────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .dpbp-chart-title { font-size: 20px; }
+  .dpbp-chart-subtitle,
+  .dpbp-chart-footer { font-size: 14px; }
+
+  .dt-visual-title { font-size: 20px !important; }
+  .dt-visual-note,
+  .dt-visual-source,
+  .dt-visual-authors { font-size: 14px !important; }
+  .dt-visual-brand span { font-size: 14px !important; }
+
+  .dtp-chart-container .dtp-title { font-size: 20px !important; }
+  .dtp-chart-container .dtp-subtitle { font-size: 14px !important; }
+  .dtp-chart-container .dtp-footer,
+  .dtp-chart-container .dtp-source,
+  .dtp-chart-container .dtp-authors { font-size: 14px !important; }
+}

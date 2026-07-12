@@ -68,7 +68,7 @@
 .dt-chapter-rule {
   width: 48px;
   height: 3px;
-  background: #f76800;
+  background: #de1743;
   margin-top: 16px;
 }
 .dt-chapter-banner-inner {
@@ -82,7 +82,7 @@
 }
 .dt-chapter-profile a { display: block; }
 .dt-chapter-profile svg {
-  max-height: 120px;
+  height: 120px;
   width: auto;
   display: block;
 }
@@ -91,9 +91,10 @@
 .dt-chapter-profile .dt-ph-dot {
   transition: fill 0.3s ease-out, stroke 0.3s ease-out;
 }
-@media (max-width: 768px) {
+/* logo hlavy se zobrazuje vždy – i na mobilu */
+/* @media (max-width: 480px) {
   .dt-chapter-profile { display: none; }
-}
+} */
 .dt-tag {
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -757,30 +758,29 @@
   }
 }
 
-/* Sjednocení s VegaChart kartami: článkové styly přebíjejí p-selektory,
-   proto mají třídy grafu vyšší prioritu. Titulek 16 px, podtitulek 14 px,
-   patička 12 px – shodné se všemi ostatními grafy a mapami. */
+/* Sjednocení s VegaChart kartami (revize 2026-07-12): titulek 24 px, podtitulek/note 17 px,
+   patička 17 px – shodné se všemi ostatními grafy a mapami. */
 .dt-hub .dt-visual .dt-visual-note,
 .dt-hub .dt-visual .dt-visual-source,
 .dt-hub .dt-visual .dt-visual-authors {
   font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
-  font-size: 12px !important;
+  font-size: 17px !important;
   line-height: 1.5 !important;
   color: #333333 !important;
 }
 .dt-hub .dt-visual .dt-visual-note {
-  font-size: 14px !important;
+  font-size: 17px !important;
 }
 .dt-hub .dt-visual .dt-visual-title {
   font-family: var(--font-roboto-condensed), Arial, sans-serif !important;
-  font-size: 20px !important;
+  font-size: 24px !important;
   line-height: 1.2 !important;
   color: #1a1a1a !important;
 }
 .dt-hub .dt-visual .dt-visual-brand {
   position: absolute;
   top: 18px;
-  right: calc(18px + 5%);
+  right: calc(20px + 5.7%);
   margin: 0;
 }
 .dt-hub .dt-visual .dt-visual-brand span {
@@ -806,18 +806,18 @@
   padding: 14px 18px 14px;
 }
 .dt-hub .dt-fertility-visual .dt-visual-title {
-  font-size: 20px !important;
+  font-size: 24px !important;
   line-height: 1.2 !important;
   margin-bottom: 8px;
 }
 .dt-hub .dt-fertility-visual .dt-visual-note {
-  font-size: 14px !important;
+  font-size: 17px !important;
   margin-bottom: 6px;
 }
 .dt-hub .dt-fertility-visual .dt-visual-brand {
   position: absolute;
   top: 20px;
-  right: calc(18px + 5.2%);
+  right: calc(20px + 4.2%);
   flex-direction: column;
   align-items: center;
   gap: 3px;
@@ -838,17 +838,21 @@
 }
 .dt-hub .dt-fertility-visual .dt-visual-source,
 .dt-hub .dt-fertility-visual .dt-visual-authors {
-  font-size: 12px !important;
+  font-size: 17px !important;
   margin-left: 0 !important;
   text-align: left !important;
 }
 @media (max-width: 640px) {
-  .dt-hub .dt-fertility-visual .dt-visual-title {
-    font-size: 20px !important;
-  }
-  .dt-hub .dt-fertility-visual .dt-visual-note {
-    max-width: none;
-  }
+  .dt-hub .dt-visual .dt-visual-title { font-size: 20px !important; }
+  .dt-hub .dt-visual .dt-visual-note,
+  .dt-hub .dt-visual .dt-visual-source,
+  .dt-hub .dt-visual .dt-visual-authors { font-size: 14px !important; }
+
+  .dt-hub .dt-fertility-visual .dt-visual-title { font-size: 20px !important; }
+  .dt-hub .dt-fertility-visual .dt-visual-note { max-width: none; font-size: 14px !important; }
+  .dt-hub .dt-fertility-visual .dt-visual-source,
+  .dt-hub .dt-fertility-visual .dt-visual-authors { font-size: 14px !important; }
+
   /* Na uzkych displejich se logo u VSECH grafu zaradi do toku pod podtitulek,
      jinak absolutni pozice koliduje s kickerem a titulkem. */
   .dt-hub .dt-visual .dt-visual-brand,
@@ -879,9 +883,9 @@
               </clipPath>
             </defs>
             <g clip-path="url(#dt-ph-01-clip)">
-              <rect class="dt-ph-sil-fill" x="0" y="0" width="700" height="700" fill="#ff1a4a" />
+              <rect class="dt-ph-sil-fill" x="0" y="0" width="700" height="700" fill="#de1743" />
             </g>
-            <path class="dt-ph-sil-stroke" transform="translate(-117.098299,796.836783) scale(0.100000,-0.100000)" d="M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z" fill="none" stroke="#ff1a4a" stroke-width="80" />
+            <path class="dt-ph-sil-stroke" transform="translate(-117.098299,796.836783) scale(0.100000,-0.100000)" d="M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z" fill="none" stroke="#de1743" stroke-width="80" />
             <circle class="dt-ph-dot" cx="358.4" cy="156.6" r="40.6" fill="#ff3f30" stroke="#ff3f30" stroke-width="8" />
             <circle class="dt-ph-dot" cx="412.8" cy="347.0" r="35.3" fill="#ff7f2a" stroke="#ff7f2a" stroke-width="8" />
             <circle class="dt-ph-dot" cx="340.9" cy="512.7" r="24.7" fill="#5fcce6" stroke="#5fcce6" stroke-width="8" />
@@ -1416,7 +1420,7 @@ dítěte na ženu (chcete-li pro lepší představu: pět dětí na čtyři žen
 
   svg.addEventListener('mouseleave', function () {
     inside.clear();
-    setSil('#ff1a4a');
+    setSil('#de1743');
     dots.forEach(function (el) {
       setDot(el, el.getAttribute('data-default'));
     });

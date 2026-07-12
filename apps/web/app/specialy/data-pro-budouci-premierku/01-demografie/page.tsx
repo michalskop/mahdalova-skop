@@ -26,7 +26,7 @@ export default function DemografieHubPage() {
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
-      <Container size="md" style={{ padding: '0 16px' }}>
+      <Container size="md" style={{ padding: '0 16px', overflow: 'visible' }}>
         <RawHtmlEmbed
           html={html}
           assetBasePath="/clanek/_articles/data-pro-budouci-premierku-02-demografie"

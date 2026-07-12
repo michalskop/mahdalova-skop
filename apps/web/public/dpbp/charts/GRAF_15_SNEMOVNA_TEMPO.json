@@ -61,7 +61,7 @@
     "x": {
      "field": "mesice",
      "type": "quantitative",
-     "title": "měsíců na 600 bodů",
+     "title": "počty měsíců",
      "axis": {
       "grid": true,
       "gridColor": "#e8e8dc",
@@ -70,7 +70,8 @@
       "values": [
        0,
        10,
-       20
+       20,
+       30
       ],
       "titleAngle": 0,
       "titleAnchor": "end",

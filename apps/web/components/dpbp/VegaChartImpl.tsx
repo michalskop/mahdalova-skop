@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import { robotoCondensed } from '@/app/fonts';
 import ChartSignature from './ChartSignature';
 
-// Jednotná typografie grafů (závazná škála, DESIGN.md §9, revize 2026-07-10):
-// Roboto Condensed všude, titulek 20/bold, podtitulek 14, datové popisky 12/bold,
-// legenda 12, osy/hodnoty 10,5, patička 12, minimum 8 (jen drobné anotace) –
-// vše #333333 (kromě titulku #1a1a1a).
+// Jednotná typografie grafů (závazná škála, DESIGN.md §9, revize 2026-07-12):
+// Roboto Condensed všude, titulek 24/bold, podtitulek 17, datové popisky 14/bold,
+// legenda 14, osy/hodnoty 13, patička 13, minimum 10 (jen drobné anotace) –
+// vše #333333 (kromě titulku #1a1a1a). Větší stupnice pro čitelnost ve sdílených screenshotech.
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
 // Legenda: čtvercová tlačítka se zakulacenými rohy, standardně nahoře na středu
 // (vypínání sérií řeší per-spec param s bind: "legend").
@@ -31,38 +31,84 @@ const CS_TIME_LOCALE = {
   months: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
   shortMonths: ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'],
 };
-// Jednotný vzhled tooltipu všech grafů (vzor: graf plodnosti v kap. Demografie):
-// béžové pozadí s mírnou průhledností, jemný rámeček a stín, Roboto Slab,
-// zvýrazněná hodnota crimson. Třídu .dpbp-theme dodává vega-embed (tooltip.theme).
+// Tooltip: béžové pozadí, Roboto Slab, hodnota obarvena barvou příslušného prvku
+// (bar/bod/plocha) – barvu čte vlastní handler ze scenegraphu (item.fill/stroke).
 const TOOLTIP_CSS = `
-#vg-tooltip-element.vg-tooltip.dpbp-theme {
+#vg-tooltip-element.dpbp-theme {
   background: rgba(248, 246, 240, 0.95);
   border: 1px solid #e8e3d2;
   border-radius: 7px;
   box-shadow: 0 4px 10px rgba(16, 20, 50, 0.14);
   color: #1a1a1a;
   font-family: var(--font-roboto-slab), Georgia, serif;
-  font-size: 12px;
-  line-height: 1.35;
-  padding: 8px 10px;
-  max-width: 280px;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 8px 12px;
+  max-width: 300px;
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  display: none;
 }
-#vg-tooltip-element.vg-tooltip.dpbp-theme table tr td.key {
-  color: #333333;
+#vg-tooltip-element.dpbp-theme.visible { display: block; }
+#vg-tooltip-element.dpbp-theme table { border-collapse: collapse; }
+#vg-tooltip-element.dpbp-theme td.key {
+  color: #555;
   font-weight: 400;
-  padding-right: 8px;
+  padding-right: 10px;
+  white-space: nowrap;
 }
-#vg-tooltip-element.vg-tooltip.dpbp-theme table tr td.value {
-  color: #de1743;
+#vg-tooltip-element.dpbp-theme td.value {
   font-weight: 700;
-  max-width: 180px;
+  max-width: 200px;
 }
 `;
+
+// Vlastní tooltip handler: hodnotu obarví barvou prvku (fill → stroke → fallback #1a1a1a).
+function makeDpbpTooltipHandler() {
+  let el: HTMLElement | null = null;
+  function getEl() {
+    if (!el) {
+      el = document.getElementById('vg-tooltip-element');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'vg-tooltip-element';
+        document.body.appendChild(el);
+      }
+    }
+    el.className = 'dpbp-theme';
+    return el;
+  }
+  return {
+    call(_: unknown, event: MouseEvent, item: Record<string, unknown> | null, value: unknown) {
+      const tip = getEl();
+      if (!value || value === '') { tip.classList.remove('visible'); return; }
+      const markColor = (item?.fill as string) || (item?.stroke as string) || '#1a1a1a';
+      let html = '<table>';
+      if (value && typeof value === 'object') {
+        for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
+          html += `<tr><td class="key">${k}:</td><td class="value" style="color:${markColor}">${v}</td></tr>`;
+        }
+      } else {
+        html += `<tr><td class="value" style="color:${markColor}">${value}</td></tr>`;
+      }
+      html += '</table>';
+      tip.innerHTML = html;
+      tip.classList.add('visible');
+      const pad = 12;
+      const tw = tip.offsetWidth, th = tip.offsetHeight;
+      const x = event.clientX + pad + tw > window.innerWidth ? event.clientX - tw - pad : event.clientX + pad;
+      const y = event.clientY + pad + th > window.innerHeight ? event.clientY - th - pad : event.clientY + pad;
+      tip.style.left = x + 'px';
+      tip.style.top = y + 'px';
+    },
+  };
+}
 const CHART_FONT_CONFIG = {
   font: CHART_FONT,
   axis: { labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 10.5, titleFontSize: 10.5, labelColor: '#333333', titleColor: '#333333' },
   legend: {
-    labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 12, titleFontSize: 12, labelColor: '#333333',
+    labelFont: CHART_FONT, titleFont: CHART_FONT, labelFontSize: 14, titleFontSize: 14, labelColor: '#333333',
     orient: 'top', symbolType: LEGEND_SYMBOL, symbolSize: 280, symbolStrokeWidth: 0,
     layout: { top: { anchor: 'middle' } },
   },
@@ -201,7 +247,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
         renderer: 'svg',
         formatLocale: CS_NUMBER_LOCALE,
         timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: { theme: 'dpbp' },
+        tooltip: makeDpbpTooltipHandler(),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
       }).catch(e => setError(String(e)));
@@ -233,8 +279,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
     <div style={{
       background: '#f8f6f0',
       borderRadius: 4,
-      padding: '18px 16px 14px',
-      margin: '2em 0',
+      padding: '28px 16px 24px',
+      margin: '1em 0',
     }}>
       <style>{TOOLTIP_CSS}</style>
       {/* Header – always present; content appears once meta loads.
@@ -249,9 +295,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       }}>
         <div style={{ minWidth: 0 }}>
           {meta.title && (
-            <div style={{
+            <div className="dpbp-chart-title" style={{
               fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              fontSize: 20,
               fontWeight: 700,
               lineHeight: 1.2,
               color: '#1a1a1a',
@@ -261,9 +306,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
             </div>
           )}
           {meta.subtitle && (
-            <div style={{
+            <div className="dpbp-chart-subtitle" style={{
               fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              fontSize: 14,
               lineHeight: 1.3,
               color: '#333333',
             }}>
@@ -282,7 +326,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       </div>
 
       {/* Chart canvas */}
-      <div style={{ overflowX: isConcat ? 'auto' : 'hidden', marginTop: 2 }}>
+      <div style={{ overflowX: isConcat ? 'auto' : 'hidden', marginTop: 22 }}>
         <div
           ref={containerRef}
           style={{
@@ -294,11 +338,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
 
       {/* Source */}
       {meta.source && (
-        <div style={{
+        <div className="dpbp-chart-footer" style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 12,
           color: '#333333',
-          marginTop: 10,
+          marginTop: 18,
           lineHeight: 1.5,
         }}>
           <div>
