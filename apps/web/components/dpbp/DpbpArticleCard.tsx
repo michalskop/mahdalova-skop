@@ -32,7 +32,11 @@ export default function DpbpArticleCard({
     <Link
       href={href}
       className={stacked ? `${styles.card} ${styles.stacked}` : styles.card}
-      style={{ borderTopColor: accent, ['--card-accent-rgb' as string]: hexToRgbString(accent) }}
+      style={{
+        borderTopColor: accent,
+        ['--card-accent' as string]: accent,
+        ['--card-accent-rgb' as string]: hexToRgbString(accent),
+      }}
     >
       {(image || primaryChartSpec) && (
         <div className={styles.thumb}>

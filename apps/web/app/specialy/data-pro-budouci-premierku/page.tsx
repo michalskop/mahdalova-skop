@@ -515,7 +515,7 @@ const CHAPTERS = [
   // BLOK 3: Technologie a ekonomika budoucnosti
   {n:'07',title:'AI a trh práce',href:'/specialy/data-pro-budouci-premierku/07-ai-a-trh-prace',available:true,dots:D06,accent:'#6267a3',customSvg:G06},
   {n:'08',title:'Digitalizace a inovace',href:'/specialy/data-pro-budouci-premierku/08-digitalizace-a-inovace',available:true,dots:D10,accent:'#5fcce6',customSvg:G10},
-  {n:'09',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/09-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#ffcf02',customSvg:G01},
+  {n:'09',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/09-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#b5541a',customSvg:G01},
   // BLOK 4: Fyzický svět a vnější hrozby
   {n:'10',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/10-klimaticka-zmena',available:true,dots:D04,accent:'#de1743',customSvg:G04},
   {n:'11',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/11-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#639e0a',customSvg:G08},
