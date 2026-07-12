@@ -60,6 +60,12 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Mahdalová & Škop"
+          href="/rss.xml"
+        />
         <Suspense fallback={null}>
           <MatomoAnalytics />
         </Suspense>

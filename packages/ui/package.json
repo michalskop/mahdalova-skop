@@ -28,6 +28,7 @@
     "./lib/remark-flourish-plugin": "./src/lib/remark-flourish-plugin.js",
     "./lib/getArticles": "./src/lib/getArticles.ts",
     "./lib/tagNormalizer": "./src/lib/tagNormalizer.ts",
+    "./lib/rss": "./src/lib/rss.ts",
     "./types/scrolly": "./src/types/scrolly.ts"
   },
   "scripts": {
@@ -46,6 +47,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "feed": "^6.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

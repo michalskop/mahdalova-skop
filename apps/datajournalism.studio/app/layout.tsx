@@ -58,6 +58,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Data Journalism Studio"
+          href="/rss.xml"
+        />
         <Suspense fallback={null}>
           <MatomoAnalytics />
         </Suspense>
