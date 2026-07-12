@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import type { TooltipHandler } from 'vega';
 import { robotoCondensed } from '@/app/fonts';
 import ChartSignature from './ChartSignature';
 
@@ -65,7 +66,7 @@ const TOOLTIP_CSS = `
 `;
 
 // Vlastní tooltip handler: hodnotu obarví barvou prvku (fill → stroke → fallback #1a1a1a).
-function makeDpbpTooltipHandler() {
+function makeDpbpTooltipHandler(): TooltipHandler {
   let el: HTMLElement | null = null;
   function getEl() {
     if (!el) {
@@ -79,29 +80,28 @@ function makeDpbpTooltipHandler() {
     el.className = 'dpbp-theme';
     return el;
   }
-  return {
-    call(_: unknown, event: MouseEvent, item: Record<string, unknown> | null, value: unknown) {
-      const tip = getEl();
-      if (!value || value === '') { tip.classList.remove('visible'); return; }
-      const markColor = (item?.fill as string) || (item?.stroke as string) || '#1a1a1a';
-      let html = '<table>';
-      if (value && typeof value === 'object') {
-        for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
-          html += `<tr><td class="key">${k}:</td><td class="value" style="color:${markColor}">${v}</td></tr>`;
-        }
-      } else {
-        html += `<tr><td class="value" style="color:${markColor}">${value}</td></tr>`;
+  return (_handler, event, item, value) => {
+    const tip = getEl();
+    if (!value || value === '') { tip.classList.remove('visible'); return; }
+    const sceneItem = item as unknown as Record<string, unknown> | null;
+    const markColor = (sceneItem?.fill as string) || (sceneItem?.stroke as string) || '#1a1a1a';
+    let html = '<table>';
+    if (value && typeof value === 'object') {
+      for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
+        html += `<tr><td class="key">${k}:</td><td class="value" style="color:${markColor}">${v}</td></tr>`;
       }
-      html += '</table>';
-      tip.innerHTML = html;
-      tip.classList.add('visible');
-      const pad = 12;
-      const tw = tip.offsetWidth, th = tip.offsetHeight;
-      const x = event.clientX + pad + tw > window.innerWidth ? event.clientX - tw - pad : event.clientX + pad;
-      const y = event.clientY + pad + th > window.innerHeight ? event.clientY - th - pad : event.clientY + pad;
-      tip.style.left = x + 'px';
-      tip.style.top = y + 'px';
-    },
+    } else {
+      html += `<tr><td class="value" style="color:${markColor}">${value}</td></tr>`;
+    }
+    html += '</table>';
+    tip.innerHTML = html;
+    tip.classList.add('visible');
+    const pad = 12;
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    const x = event.clientX + pad + tw > window.innerWidth ? event.clientX - tw - pad : event.clientX + pad;
+    const y = event.clientY + pad + th > window.innerHeight ? event.clientY - th - pad : event.clientY + pad;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
   };
 }
 const CHART_FONT_CONFIG = {
