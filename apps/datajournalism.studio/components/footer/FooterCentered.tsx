@@ -1,6 +1,6 @@
 // FooterCentered.tsx
 import { Anchor, Group, ActionIcon, rem, Stack, Center, useMantineTheme } from '@mantine/core'; // Add Stack
-import { IconBrandBluesky, IconBrandInstagram, IconBrandX, IconBrandSpotify } from '@tabler/icons-react';
+import { IconBrandBluesky, IconBrandX, IconBrandSpotify, IconRss } from '@tabler/icons-react';
 import LogoWithText from '../common/LogoWithText';
 import classes from './FooterCentered.module.css';
 
@@ -65,7 +65,13 @@ export function FooterCentered() {
 
           <Anchor href={`https://twitter.com/${contacts.social.twitter}`} target="_blank"  underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
-              <IconBrandX style={{ width: rem(18), height: rem(18) }} stroke={1.5} />  
+              <IconBrandX style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+          </Anchor>
+
+          <Anchor href="/rss.xml" title="RSS feed" underline="hover">
+            <ActionIcon size="lg" variant="default" radius="xl">
+              <IconRss style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>
           </Anchor>
 
