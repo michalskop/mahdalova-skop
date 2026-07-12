@@ -293,9 +293,15 @@ The web sync and the book build are **independent** – they both read the same 
 
 **Impact cards** (`cardOrder`) are no longer in `dpbp-config.json` – they come from `BOOK.md` automatically.
 
-**`accent` drives the chapter's whole colour identity, not just the header rule.** It's applied consistently across: the header accent rule, the profile-head logo (top-right, both chapter and article pages – it's the resting colour, the mouse-hover scatter still cycles the full brand palette for fun), every tile's top border and hover glow (chapter page tiles and the landing-page chapter tile), the intro `ImpactCard` number box (its own `cards/*.json` `accent` field is ignored – overridden with `meta.accent` in `[chapter]/page.tsx` since only `cardOrder[0]` is ever rendered), and the article body's `h2` colour and link colour (blockquote border and the divider rule use the raw accent – decorative, not text). The breadcrumb link and hero gradient stay fixed crimson/navy everywhere – that's global brand wayfinding, not per-chapter.
+**`accent` drives the chapter's whole colour identity, not just the header rule.** It's applied consistently across:
+- the profile-head logo (top-right, both chapter and article pages) – it's the *resting* colour of the silhouette only; on hover, the silhouette **and** its surrounding dots scatter into random brand-palette colours for fun, but on mouse-leave only the silhouette reverts to the chapter accent – the dots stay wherever the scatter left them (matches the legacy Demografie hub's hand-coded JS version of this same effect)
+- `DpbpArticleCard` tiles (chapter page and landing page): the top border always shows the accent, and on hover the **entire border ring** switches to it too (not just the top edge) plus a matching glow – this mirrors the legacy Demografie hub's `.dt-card:hover` behaviour, which the shared component didn't originally replicate
+- the intro `ImpactCard` number box (its own `cards/*.json` `accent` field is ignored – overridden with `meta.accent` in `[chapter]/page.tsx` since only `cardOrder[0]` is ever rendered)
+- the article body's `h2` colour and link colour (blockquote border and the divider rule use the raw accent – decorative, not text)
 
-**Each chapter must have a genuinely distinct `accent` – no two chapters share a colour.** The 15 chapters map 1:1 onto the 13 `BRAND_PALETTE` colours (`components/dpbp/ProfileHead.tsx`) plus two extra hand-picked shades already established for finance/inequality (`#2d7a4f`, `#efb704`). Current assignment (all 15 distinct):
+The breadcrumb link and hero gradient stay fixed crimson/navy everywhere – that's global brand wayfinding, not per-chapter.
+
+**Each chapter must have a genuinely distinct `accent` – no two chapters share a colour, and no two should be so close in hue/lightness that they read as the same colour at a glance** (checked with plain RGB Euclidean distance – anything under ~60 is a red flag). The 15 chapters map onto the 13 `BRAND_PALETTE` colours (`components/dpbp/ProfileHead.tsx`) plus three extra hand-picked shades not in that palette (`#2d7a4f` finance, `#efb704` economic inequality, `#b5541a` energy – the last one replaced `#ffcf02` because it was only 29 units from `#efb704`, i.e. basically the same yellow). Current assignment (all 15 distinct):
 
 | # | Chapter | Accent | Why |
 |---|---------|--------|-----|
@@ -307,7 +313,7 @@ The web sync and the book build are **independent** – they both read the same 
 | 06 | Ekonomická nerovnost | `#efb704` dark gold | money, but see contrast note below |
 | 07 | AI a trh práce | `#6267a3` violet | tech/futuristic |
 | 08 | Digitalizace a inovace | `#5fcce6` sky cyan | digital/screens |
-| 09 | Energie a energetická bezpečnost | `#ffcf02` bright yellow | electricity |
+| 09 | Energie a energetická bezpečnost | `#b5541a` copper/rust | electricity (copper wiring) / industrial |
 | 10 | Klimatická změna | `#de1743` crimson | heat/alarm |
 | 11 | Bezpečnost a konflikty | `#639e0a` olive | military/defence |
 | 12 | Informační manipulace | `#0e839e` dark teal | murky/screens |
