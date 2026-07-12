@@ -22,6 +22,7 @@ export default function ChartSignature({
       href="https://datatimes.cz"
       target="_blank"
       rel="noopener noreferrer"
+      className="dpbp-chart-signature"
       style={{
         display: 'inline-flex',
         alignItems: 'center',

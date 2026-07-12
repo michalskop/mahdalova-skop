@@ -65,4 +65,12 @@
   .dtp-chart-container .dtp-footer,
   .dtp-chart-container .dtp-source,
   .dtp-chart-container .dtp-authors { font-size: 14px !important; }
+
+  /* ─── Logo DataTimes.cz – zmenšení na mobilu ─────────────────────────── */
+  /* VegaChart (ChartSignature React komponenta) */
+  .dpbp-chart-signature svg { width: 20px !important; height: 20px !important; }
+  .dpbp-chart-signature { font-size: 10px !important; }
+
+  /* HTML grafy (demografie-hub.html a další .dt-visual karty) */
+  .dt-visual-brand svg { width: 20px !important; height: 20px !important; }
 }
