@@ -1,5 +1,5 @@
 // types/article.ts
-import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { ScrollyContent } from './scrolly';
 
 export interface ArticleProps {

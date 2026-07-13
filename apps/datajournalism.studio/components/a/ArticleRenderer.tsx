@@ -2,10 +2,9 @@
 'use client';
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
-import { Global } from '@mantine/styles';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MdxClient } from '@repo/ui/components/MdxClient';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock } from './MediaBox';
@@ -15,6 +14,8 @@ import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import HtmlEmbed from '@/components/a/HtmlEmbed';
+import { PartyFace } from '@/components/politics/PartyFace';
+import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
@@ -44,7 +45,6 @@ export function ArticleRenderer({
   textColor,
   withContainer = true  // Default to true for backward compatibility
 }: ArticleProps) {
-  const [mounted, setMounted] = useState(false);
   const theme = useMantineTheme();
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
@@ -166,18 +166,11 @@ export function ArticleRenderer({
     );
   };
 
-  // Ensure no hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  
-  if (!mounted) {
-    return null;
-  }
-
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
     FlourishEmbed,
+    PartyFace,
+    MotionsStancesTable: (props) => <MotionsStancesTable {...props} fileData={mdxSource.scope.tableData as any} />,
     code: CodeBlock,  // This handles the ```box syntax
 
     Tr,
@@ -358,32 +351,22 @@ export function ArticleRenderer({
 
         <div className="article-content">
           {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/a/_articles/${slug}`} /> : null}
-          <MDXRemote {...mdxSource} components={components} />
+          <MdxClient {...mdxSource} components={components} />
         </div>
       </Stack>
     </Paper>
   );
 
-  // Conditionally wrap with Container
+  // Conditionally wrap with Container. Link colours for the article body come
+  // from `.article-links` rules in app/globals.css; the optional per-article
+  // textColor is passed down as a CSS custom property.
   return withContainer ? (
-    <Container size="md" pb="lg">
-      <Global
-        styles={{
-          '.markdown-content a': {
-            color: textColor || theme.colors.brand[6],
-            textDecoration: 'none',
-            '&:hover': {
-              color: theme.colors.brand[7],
-            },
-            '&:active': {
-              color: theme.colors.brand[8],
-            },
-            '&:visited': {
-              color: theme.colors.brand[5],
-            },
-          },
-        }}
-      />
+    <Container
+      size="md"
+      pb="lg"
+      className="article-links"
+      style={textColor ? ({ '--article-link-color': textColor } as React.CSSProperties) : undefined}
+    >
       {content}
     </Container>
   ) : content;

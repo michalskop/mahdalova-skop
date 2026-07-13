@@ -2,7 +2,6 @@
 'use client';
 
 import { MantineProvider } from '@mantine/core';
-import { useEffect, useState } from 'react';
 import { Work_Sans } from 'next/font/google';
 
 const workSans = Work_Sans({
@@ -12,17 +11,6 @@ const workSans = Work_Sans({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-
-  // Ensure no hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <MantineProvider
       defaultColorScheme="light"

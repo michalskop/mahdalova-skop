@@ -2,9 +2,8 @@
 'use client';
 
 import { Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem,useMantineTheme }from '@mantine/core';
-import { Global } from '@mantine/styles';
-import { 
-  IconMail, 
+import {
+  IconMail,
   IconPhone, 
   IconBrandX, 
   IconBrandThreads,
@@ -100,25 +99,9 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
 export function ContactsBlock() {
   const theme = useMantineTheme();
   
+  // Link colours for #contacts come from app/globals.css.
   return (
     <>
-    <Global
-      styles={{
-        '#contacts a': {
-          color: theme.colors.brand[6],
-          textDecoration: 'none',
-          '&:hover': {
-            textDecoration: 'underline',
-          },
-          '&:active': {
-            color: theme.colors.brand[6],
-          },
-          '&:visited': {
-            color: theme.colors.brand[6],
-          },
-        },
-      }}
-    />
     <Paper
       id="contacts" 
       style={{ scrollMarginTop: '100px' }}

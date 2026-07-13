@@ -20,6 +20,7 @@
     "./components/ArticleCard": "./src/components/ArticleCard.tsx",
     "./components/ArticlesGrid": "./src/components/ArticlesGrid.tsx",
     "./components/ArticlesSection": "./src/components/ArticlesSection.tsx",
+    "./components/MdxClient": "./src/components/MdxClient.tsx",
     "./components/MediaBox": "./src/components/MediaBox.tsx",
     "./components/InfoBox": "./src/components/InfoBox.tsx",
     "./components/KeyNumbers": "./src/components/KeyNumbers.tsx",
@@ -52,6 +53,7 @@
     "react-dom": "^18.3.1"
   },
   "peerDependencies": {
+    "@mdx-js/react": ">=3.0.0",
     "@mantine/core": ">=7.0.0",
     "@mantine/hooks": ">=7.0.0",
     "@tabler/icons-react": ">=3.0.0",

@@ -2,21 +2,9 @@
 'use client';
 
 import { MantineProvider } from '@mantine/core';
-import { useEffect, useState } from 'react';
 import { robotoSlab } from '../fonts';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-
-  // Ensure no hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <MantineProvider
       defaultColorScheme="light"

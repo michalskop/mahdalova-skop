@@ -26,7 +26,6 @@
     "@mantine/carousel": "^7.14.0",
     "@mantine/core": "^7.15.1",
     "@mantine/hooks": "^7.15.1",
-    "@mantine/styles": "^6.0.22",
     "@tabler/icons-react": "^3.24.0",
     "@types/js-yaml": "^4.0.9",
     "embla-carousel-autoplay": "^8.3.1",

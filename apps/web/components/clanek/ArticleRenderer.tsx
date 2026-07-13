@@ -3,11 +3,10 @@
 'use client';
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
-import { Global } from '@mantine/styles';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MdxClient } from '@repo/ui/components/MdxClient';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock } from './MediaBox';
@@ -55,7 +54,6 @@ export function ArticleRenderer({
   withContainer = true  // Default to true for backward compatibility
 }: ArticleProps) {
 
-  const [mounted, setMounted] = useState(false);
   const theme = useMantineTheme();
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
@@ -176,15 +174,6 @@ export function ArticleRenderer({
       </div>
     );
   };
-
-  // Ensure no hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  
-  if (!mounted) {
-    return null;
-  }
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
@@ -459,32 +448,25 @@ export function ArticleRenderer({
 
         <div className="article-content">
           {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} /> : null}
-          <MDXRemote {...mdxSource} components={components} />
+          <MdxClient {...mdxSource} components={components} />
         </div>
       </Stack>
     </Paper>
   );
 
-  // Conditionally wrap with Container
+  // Conditionally wrap with Container. Link colours for the article body come
+  // from `.article-links` rules in app/globals.css; the optional per-article
+  // textColor is passed down as a CSS custom property.
   return withContainer ? (
-    <Container size="md" pb="lg" style={{ overflow: 'visible' }}>
-      <Global
-        styles={{
-          '.markdown-content a': {
-            color: textColor || theme.colors.brand[6],
-            textDecoration: 'none',
-            '&:hover': {
-              color: theme.colors.brand[7],
-            },
-            '&:active': {
-              color: theme.colors.brand[8],
-            },
-            '&:visited': {
-              color: theme.colors.brand[5],
-            },
-          },
-        }}
-      />
+    <Container
+      size="md"
+      pb="lg"
+      className="article-links"
+      style={{
+        overflow: 'visible',
+        ...(textColor ? ({ '--article-link-color': textColor } as React.CSSProperties) : {}),
+      }}
+    >
       {content}
     </Container>
   ) : content;
