@@ -136,6 +136,19 @@ function readFrontMatterTitle(articlesDir, slug) {
   return title[1];
 }
 
+function walkHtmlFiles(dir) {
+  const files = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...walkHtmlFiles(fullPath));
+    } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
 let failures = 0;
 let checks = 0;
 
@@ -150,6 +163,30 @@ for (const app of apps) {
   if (!fs.existsSync(app.outDir)) {
     fail(app.name, 'export directory', `${app.outDir} does not exist – run the build first`);
     continue;
+  }
+
+  const htmlFiles = walkHtmlFiles(app.outDir);
+  const brokenPages = [];
+  for (const filePath of htmlFiles) {
+    const html = fs.readFileSync(filePath, 'utf8');
+    const text = visibleText(html);
+    const relFile = path.relative(app.outDir, filePath);
+    if (html.includes('id="__next_error__"') || (!relFile.endsWith('404.html') && text.length < 120)) {
+      brokenPages.push(`${relFile} (${text.length} chars)`);
+    }
+  }
+
+  checks += 1;
+  if (brokenPages.length > 0) {
+    fail(
+      app.name,
+      'whole exported site',
+      `${brokenPages.length}/${htmlFiles.length} HTML files look like error shells: ${brokenPages
+        .slice(0, 20)
+        .join(', ')}`
+    );
+  } else {
+    console.log(`  ok   whole exported site – ${htmlFiles.length} HTML files checked`);
   }
 
   for (const route of app.routes) {
