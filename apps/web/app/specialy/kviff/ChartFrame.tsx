@@ -42,7 +42,7 @@ export default function ChartFrame({ title, subtitle, source, children, fullWidt
             <div style={{ ...NUM_FONT, fontSize: 14, lineHeight: 1.3, color: '#333333' }}>{subtitle}</div>
           )}
         </div>
-        <ChartSignature size={30} style={{ lineHeight: 1, alignSelf: 'center' }} />
+        <ChartSignature size={34} layout="stacked" style={{ lineHeight: 1, alignSelf: 'center' }} />
       </div>
 
       {children}

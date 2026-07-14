@@ -143,7 +143,7 @@ export const kviffBranches: KviffBranch[] = [
       {
         heading: 'Jedna mapa nestačí',
         body: [
-          'Letošní katalog je silně evropský, ale ne jen evropský: po Francii, USA, Česku, Německu a Británii následuje široká vrstva koprodukčních zemí od Latinské Ameriky po Blízký východ. Koprodukce počítáme jako výskyt – když má film uvedené tři země, započítá se jednou každé z nich, takže součet výskytů je vyšší než počet filmů.',
+          'Letošní katalog je silně evropský, ale ne jen evropský: po Francii, USA, Česku, Německu a Británii následuje široká vrstva koprodukčních zemí od Latinské Ameriky po Blízký východ. Koprodukční film započítáváme každé uvedené produkční zemi, takže součet záznamů zemí je vyšší než počet filmů.',
           'Aktuální mapa katalogu 2026 je jen jeden snímek v čase. Animovaná historická mapa vedle ní přehrává vývoj od roku 1992 dodnes: bublina jednotlivé země zůstává na stejném místě po celou dobu, mění se jen její velikost podle toho, kolikrát se země v katalogu daného ročníku objevila.',
         ],
       },
