@@ -293,7 +293,6 @@ export default function FilmOriginsDashboard() {
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mapDragRef = useRef<{ pointerId: number; startX: number; startY: number; originX: number; originY: number; moved: boolean } | null>(null);
-  const mapWasDraggedRef = useRef(false);
 
   const yearRows = useMemo(() => new Map(countryHistoryWithCurrentYear.map((row) => [row.year, row])), []);
   const selected: SelectedCountry = selectedKey ? countries.find((country) => country.country === selectedKey) ?? null : null;
@@ -591,10 +590,6 @@ export default function FilmOriginsDashboard() {
               onPointerUp={(event) => {
                 const drag = mapDragRef.current;
                 if (drag?.pointerId === event.pointerId) {
-                  mapWasDraggedRef.current = drag.moved;
-                  window.setTimeout(() => {
-                    mapWasDraggedRef.current = false;
-                  }, 0);
                   mapDragRef.current = null;
                   event.currentTarget.releasePointerCapture(event.pointerId);
                 }
@@ -632,7 +627,40 @@ export default function FilmOriginsDashboard() {
                   </text>
                 );
               })}
-              {countries.map((country) => {
+              {[...countries].sort((a, b) => valueFor(a) - valueFor(b)).map((country) => {
+                const point = projection([country.lon, country.lat]);
+                if (!point) return null;
+                const value = valueFor(country);
+                if (!value) return null;
+                const radius = 3 + Math.sqrt(value / maxForMode) * 28;
+                return (
+                  <circle
+                    key={`hit-${country.country}`}
+                    cx={point[0]}
+                    cy={point[1]}
+                    r={Math.max(10, radius + 5)}
+                    fill="rgba(255, 255, 255, 0.001)"
+                    stroke="transparent"
+                    aria-hidden="true"
+                    style={{ cursor: 'pointer', pointerEvents: 'all' }}
+                    onPointerDown={(event) => {
+                      event.stopPropagation();
+                    }}
+                    onPointerEnter={() => {
+                      if (!mapLabelKeys.has(country.country)) {
+                        setMapTooltip({ country, value, x: point[0], y: point[1] });
+                      }
+                    }}
+                    onPointerLeave={() => setMapTooltip((current) => (current?.country.country === country.country ? null : current))}
+                    onPointerUp={() => {
+                      const drag = mapDragRef.current;
+                      if (drag?.moved) return;
+                      selectCountry(country);
+                    }}
+                  />
+                );
+              })}
+              {[...countries].sort((a, b) => valueFor(a) - valueFor(b)).map((country) => {
                 const point = projection([country.lon, country.lat]);
                 if (!point) return null;
                 const value = valueFor(country);
@@ -653,14 +681,18 @@ export default function FilmOriginsDashboard() {
                     role="button"
                     aria-label={`${country.name}: uvedeno u ${value} ${filmPlural(value)}`}
                     style={{ cursor: value ? 'pointer' : 'default', transition: 'r .24s ease, opacity .24s ease' }}
+                    onPointerDown={(event) => {
+                      if (value) event.stopPropagation();
+                    }}
                     onPointerEnter={() => {
                       if (value && !mapLabelKeys.has(country.country)) {
                         setMapTooltip({ country, value, x: point[0], y: point[1] });
                       }
                     }}
                     onPointerLeave={() => setMapTooltip((current) => (current?.country.country === country.country ? null : current))}
-                    onClick={() => {
-                      if (mapWasDraggedRef.current) return;
+                    onPointerUp={() => {
+                      const drag = mapDragRef.current;
+                      if (drag?.moved) return;
                       if (value) selectCountry(country);
                     }}
                     onKeyDown={(event) => {
