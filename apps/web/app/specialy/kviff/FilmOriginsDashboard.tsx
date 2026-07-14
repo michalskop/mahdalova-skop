@@ -13,6 +13,8 @@ import worldTopology from '../../../public/dpbp/data/world-countries-110m.json';
 
 const YEAR_MIN = 1992;
 const YEAR_MAX = 2026;
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 6;
 const MISSED_YEARS = new Set([1993, 2020]);
 const KVIFF_2026_FILMS_TOTAL = 179;
 const KVIFF_2026_COPRODUCTIONS = 87;
@@ -292,7 +294,9 @@ export default function FilmOriginsDashboard() {
   const [mapOffset, setMapOffset] = useState({ x: 0, y: 0 });
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
   const mapDragRef = useRef<{ pointerId: number; startX: number; startY: number; originX: number; originY: number; moved: boolean } | null>(null);
+  const pressedCountryRef = useRef<CountrySummary | null>(null);
 
   const yearRows = useMemo(() => new Map(countryHistoryWithCurrentYear.map((row) => [row.year, row])), []);
   const selected: SelectedCountry = selectedKey ? countries.find((country) => country.country === selectedKey) ?? null : null;
@@ -379,6 +383,28 @@ export default function FilmOriginsDashboard() {
       x: Math.max(-maxX, Math.min(maxX, next.x)),
       y: Math.max(-maxY, Math.min(maxY, next.y)),
     };
+  }
+  function svgPointFromClient(clientX: number, clientY: number) {
+    const svg = svgRef.current;
+    const rect = svg?.getBoundingClientRect();
+    if (!rect || !rect.width || !rect.height) return { x: 480, y: 215 };
+    return {
+      x: ((clientX - rect.left) / rect.width) * 960,
+      y: ((clientY - rect.top) / rect.height) * 430,
+    };
+  }
+  function zoomToward(nextZoomRaw: number, anchor: { x: number; y: number }) {
+    const nextZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.round(nextZoomRaw * 100) / 100));
+    if (nextZoom === mapZoom) return;
+    const ratio = nextZoom / mapZoom;
+    const translateX = 500 + mapOffset.x;
+    const translateY = 220 + mapOffset.y;
+    const nextOffset = clampMapOffset(
+      { x: anchor.x - ratio * (anchor.x - translateX) - 500, y: anchor.y - ratio * (anchor.y - translateY) - 220 },
+      nextZoom,
+    );
+    setMapZoom(nextZoom);
+    setMapOffset(nextOffset);
   }
   function nextPlayableYear(currentYear: number): number {
     const next = currentYear >= YEAR_MAX ? YEAR_MIN : currentYear + 1;
@@ -517,9 +543,9 @@ export default function FilmOriginsDashboard() {
             <Group gap={4} style={{ position: 'absolute', zIndex: 4, right: 12, top: 12 }}>
               <button
                 type="button"
-                onClick={() => setMapZoom((current) => Math.max(1, Math.round((current - 0.25) * 100) / 100))}
+                onClick={() => zoomToward(mapZoom - 0.4, { x: 480, y: 215 })}
                 aria-label="Oddálit mapu"
-                disabled={mapZoom <= 1}
+                disabled={mapZoom <= MIN_ZOOM}
                 style={{
                   width: 28,
                   height: 28,
@@ -527,20 +553,20 @@ export default function FilmOriginsDashboard() {
                   borderRadius: 4,
                   background: 'rgba(253, 251, 247, 0.92)',
                   color: 'var(--mantine-color-dark-8)',
-                  cursor: mapZoom <= 1 ? 'not-allowed' : 'pointer',
+                  cursor: mapZoom <= MIN_ZOOM ? 'not-allowed' : 'pointer',
                   fontSize: 18,
                   fontWeight: 900,
                   lineHeight: '24px',
-                  opacity: mapZoom <= 1 ? 0.45 : 1,
+                  opacity: mapZoom <= MIN_ZOOM ? 0.45 : 1,
                 }}
               >
                 -
               </button>
               <button
                 type="button"
-                onClick={() => setMapZoom((current) => Math.min(2.25, Math.round((current + 0.25) * 100) / 100))}
+                onClick={() => zoomToward(mapZoom + 0.4, { x: 480, y: 215 })}
                 aria-label="Přiblížit mapu"
-                disabled={mapZoom >= 2.25}
+                disabled={mapZoom >= MAX_ZOOM}
                 style={{
                   width: 28,
                   height: 28,
@@ -548,11 +574,11 @@ export default function FilmOriginsDashboard() {
                   borderRadius: 4,
                   background: 'rgba(253, 251, 247, 0.92)',
                   color: 'var(--mantine-color-dark-8)',
-                  cursor: mapZoom >= 2.25 ? 'not-allowed' : 'pointer',
+                  cursor: mapZoom >= MAX_ZOOM ? 'not-allowed' : 'pointer',
                   fontSize: 18,
                   fontWeight: 900,
                   lineHeight: '24px',
-                  opacity: mapZoom >= 2.25 ? 0.45 : 1,
+                  opacity: mapZoom >= MAX_ZOOM ? 0.45 : 1,
                 }}
               >
                 +
@@ -560,10 +586,14 @@ export default function FilmOriginsDashboard() {
             </Group>
 
             <svg
+              ref={svgRef}
               viewBox="0 0 960 430"
               role="img"
               aria-label={`Mapa produkčních zemí filmů KVIFF v roce ${year}`}
               style={{ display: 'block', width: '100%', height: 'auto', minHeight: 430, cursor: mapZoom > 1 ? 'grab' : 'default', touchAction: 'none' }}
+              onPointerDownCapture={() => {
+                pressedCountryRef.current = null;
+              }}
               onPointerDown={(event) => {
                 if (mapZoom <= 1) return;
                 mapDragRef.current = {
@@ -589,15 +619,26 @@ export default function FilmOriginsDashboard() {
               }}
               onPointerUp={(event) => {
                 const drag = mapDragRef.current;
+                const wasClick = !drag || !drag.moved;
                 if (drag?.pointerId === event.pointerId) {
                   mapDragRef.current = null;
                   event.currentTarget.releasePointerCapture(event.pointerId);
                 }
+                if (wasClick && pressedCountryRef.current) {
+                  selectCountry(pressedCountryRef.current);
+                }
+                pressedCountryRef.current = null;
               }}
               onPointerCancel={() => {
                 mapDragRef.current = null;
+                pressedCountryRef.current = null;
               }}
               onPointerLeave={() => setMapTooltip(null)}
+              onWheel={(event) => {
+                event.preventDefault();
+                const anchor = svgPointFromClient(event.clientX, event.clientY);
+                zoomToward(mapZoom * (event.deltaY > 0 ? 0.87 : 1.15), anchor);
+              }}
             >
               <g>
                 {countryPaths.map((item) => (
@@ -643,8 +684,8 @@ export default function FilmOriginsDashboard() {
                     stroke="transparent"
                     aria-hidden="true"
                     style={{ cursor: 'pointer', pointerEvents: 'all' }}
-                    onPointerDown={(event) => {
-                      event.stopPropagation();
+                    onPointerDown={() => {
+                      pressedCountryRef.current = country;
                     }}
                     onPointerEnter={() => {
                       if (!mapLabelKeys.has(country.country)) {
@@ -652,11 +693,6 @@ export default function FilmOriginsDashboard() {
                       }
                     }}
                     onPointerLeave={() => setMapTooltip((current) => (current?.country.country === country.country ? null : current))}
-                    onPointerUp={() => {
-                      const drag = mapDragRef.current;
-                      if (drag?.moved) return;
-                      selectCountry(country);
-                    }}
                   />
                 );
               })}
@@ -681,8 +717,8 @@ export default function FilmOriginsDashboard() {
                     role="button"
                     aria-label={`${country.name}: uvedeno u ${value} ${filmPlural(value)}`}
                     style={{ cursor: value ? 'pointer' : 'default', transition: 'r .24s ease, opacity .24s ease' }}
-                    onPointerDown={(event) => {
-                      if (value) event.stopPropagation();
+                    onPointerDown={() => {
+                      if (value) pressedCountryRef.current = country;
                     }}
                     onPointerEnter={() => {
                       if (value && !mapLabelKeys.has(country.country)) {
@@ -690,11 +726,6 @@ export default function FilmOriginsDashboard() {
                       }
                     }}
                     onPointerLeave={() => setMapTooltip((current) => (current?.country.country === country.country ? null : current))}
-                    onPointerUp={() => {
-                      const drag = mapDragRef.current;
-                      if (drag?.moved) return;
-                      if (value) selectCountry(country);
-                    }}
                     onKeyDown={(event) => {
                       if (value && (event.key === 'Enter' || event.key === ' ')) {
                         event.preventDefault();
