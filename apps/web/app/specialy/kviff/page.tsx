@@ -196,10 +196,10 @@ export default function KarlovyVarySpecialPage() {
                 Odkud přijíždějí filmy: první mapa ukazuje katalog KVIFF 2026.
               </Title>
               <Text size="lg">
-                V mapě počítáme produkční země jako výskyty. Koprodukční film se proto započte každé uvedené zemi. Je to fér první čtení festivalové přítomnosti: neříká jen, odkud je „hlavní“ země filmu, ale kdo se na programu reálně objevuje.
+                V mapě počítáme záznamy produkčních zemí. Koprodukční film se proto započte každé uvedené zemi. Je to fér první čtení festivalové přítomnosti: neříká jen, odkud je „hlavní“ země filmu, ale kdo se na programu reálně objevuje.
               </Text>
               <Text>
-                Nejvýraznější země v katalogu jsou Francie, USA, Česko, Německo a Británie. Celkem mapa drží {countryPresenceTotal} výskytů zemí v katalogu 2026.
+                Nejvýraznější země v katalogu jsou Francie, USA, Česko, Německo a Británie. Celkem mapa drží {countryPresenceTotal} záznamů produkčních zemí v katalogu 2026.
               </Text>
               <Button component={Link} href="/specialy/kviff/mapa-filmu" color="dark" w="fit-content">
                 Otevřít mapu zemí
@@ -319,6 +319,4 @@ export default function KarlovyVarySpecialPage() {
     </Container>
   );
 }
-
-
 

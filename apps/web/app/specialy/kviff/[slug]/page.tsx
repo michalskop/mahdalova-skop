@@ -23,7 +23,7 @@ import { countryHistory, countryHistoryTopCountries } from '../countries-history
 import HonoraryTimeline from '../HonoraryTimeline';
 import ProgramBreakdownChart from '../ProgramBreakdownChart';
 import FilmScreeningsChart from '../FilmScreeningsChart';
-import HistoricalCountryMap from '../HistoricalCountryMap';
+import FilmOriginsDashboard from '../FilmOriginsDashboard';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from '../GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from '../grandPrix';
 import VerticalTimeline, { type TimelineEntry } from '../VerticalTimeline';
@@ -442,7 +442,7 @@ function CountryLayerMap({
           return (
             <Tooltip
               key={`${title}-${row.country}`}
-              label={`${row.country}: ${row.count} výskytů v katalogu 2026 · ${row.region}`}
+              label={`${row.country}: ${row.count} účastí v katalogu 2026 · ${row.region}`}
               multiline
               maw={260}
               withArrow
@@ -450,8 +450,8 @@ function CountryLayerMap({
               <Box
                 component="span"
                 role="img"
-                aria-label={`${row.country}: ${row.count} výskytů v katalogu 2026`}
-                title={`${row.country}: ${row.count} výskytů v katalogu 2026`}
+                aria-label={`${row.country}: ${row.count} účastí v katalogu 2026`}
+                title={`${row.country}: ${row.count} účastí v katalogu 2026`}
                 style={{
                   position: 'absolute',
                   left: `${point.x}%`,
@@ -486,7 +486,7 @@ function CountryHistoryOverview() {
           <Badge w="fit-content" color="brand" variant="filled">Historický souhrn</Badge>
           <Title order={3} size="1.05rem">Změnilo se, odkud filmy přijíždějí?</Title>
           <Text c="dimmed">
-            Film-level country dataset máme souvisle pro novodobou éru 1992-2026. Počítáme výskyty produkčních zemí: u koprodukcí se jeden film započítá každé uvedené zemi.
+            Film-level country dataset máme souvisle pro novodobou éru 1992-2026. Počítáme účasti produkčních zemí: u koprodukcí se jeden film započítá každé uvedené zemi.
           </Text>
         </Stack>
         <Text fw={900} style={NUM_FONT}>{countryHistory.length} ročníků</Text>
@@ -497,7 +497,7 @@ function CountryHistoryOverview() {
           <Paper key={period.period} p="md" radius={8} withBorder bg="background.2">
             <Text fw={900}>{period.period}</Text>
             <Text size="sm" c="dimmed">{period.label}</Text>
-            <DataBar label="výskyty" value={period.occurrences} max={maxOccurrences} color="var(--mantine-color-brandTeal-6)" />
+            <DataBar label="účasti" value={period.occurrences} max={maxOccurrences} color="var(--mantine-color-brandTeal-6)" />
             <Text size="sm"><Text span fw={900} style={NUM_FONT}>{formatPercent(period.coproductionShare)}</Text> filmů je koprodukčních.</Text>
             <Stack gap={4} mt="sm">
               {period.topRegions.map((row) => (
@@ -515,7 +515,7 @@ function CountryHistoryOverview() {
         <Paper p="md" radius={8} withBorder bg="background.2">
           <Text fw={900}>Odpověď: Evropa zůstává jádrem, koprodukce sílí</Text>
           <Text size="sm" mt={6}>
-            Ve všech novodobých obdobích tvoří evropské produkční země zhruba dvě třetiny výskytů. Největší změna není prosté přesunutí festivalu z jednoho kontinentu na druhý, ale růst koprodukcí: z 14,9 % v letech 1992-2003 na 41,6 % v letech 2018-2026.
+            Ve všech novodobých obdobích tvoří evropské produkční země zhruba dvě třetiny účastí. Největší změna není prosté přesunutí festivalu z jednoho kontinentu na druhý, ale růst koprodukcí: z 14,9 % v letech 1992-2003 na 41,6 % v letech 2018-2026.
           </Text>
         </Paper>
         <Paper p="md" radius={8} withBorder bg="background.2">
@@ -555,7 +555,7 @@ function CountryBubbleMap() {
   return (
     <ChartFrame
       title="Odkud přijíždějí filmy v letošním katalogu"
-      subtitle={`Bubliny = produkční země v katalogu KVIFF 2026 (${countryPresence2026.length} zemí, ${countryPresenceTotal} výskytů); koprodukce se počítá u každé uvedené země`}
+      subtitle={`Bubliny = produkční země v katalogu KVIFF 2026 (${countryPresence2026.length} zemí, ${countryPresenceTotal} účastí); koprodukce se počítá každé uvedené zemi`}
       source="Katalog filmů KVIFF 2026"
       fullWidth
     >
@@ -601,7 +601,7 @@ function CountryBubbleMap() {
               return (
                 <Tooltip
                   key={row.country}
-                  label={`${row.country}: ${row.count} výskytů v katalogu 2026 · ${row.region}`}
+                  label={`${row.country}: ${row.count} účastí v katalogu 2026 · ${row.region}`}
                   multiline
                   maw={260}
                   withArrow
@@ -609,8 +609,8 @@ function CountryBubbleMap() {
                   <Box
                     component="span"
                     role="img"
-                    aria-label={`${row.country}: ${row.count} výskytů v katalogu 2026`}
-                    title={`${row.country}: ${row.count} výskytů v katalogu 2026`}
+                    aria-label={`${row.country}: ${row.count} účastí v katalogu 2026`}
+                    title={`${row.country}: ${row.count} účastí v katalogu 2026`}
                     style={{
                       position: 'absolute',
                       left: `${point.x}%`,
@@ -632,7 +632,7 @@ function CountryBubbleMap() {
             })}
           </Box>
           <Text mt="sm" size="sm" c="dimmed">
-            Pozor: toto není mapa unikátních filmů, ale mapa výskytů produkčních zemí. Když má jeden film uvedené země Francie, Německo a Česko, započítá se jednou Francii, jednou Německu a jednou Česku. Součet výskytů je proto vyšší než počet filmů.
+            Pozor: toto není mapa unikátních filmů, ale mapa účastí produkčních zemí. Když má jeden film uvedené země Francie, Německo a Česko, započítá se jednou Francii, jednou Německu a jednou Česku. Součet účastí je proto vyšší než počet filmů.
           </Text>
           <Text mt="xs" size="sm">
             Co z toho plyne: nejsilnější není jen domácí česká stopa. Festival stojí na evropské koprodukční síti, do které se výrazně zapojují Francie a Německo, a zároveň má silný severoamerický pól přes USA.
@@ -679,8 +679,8 @@ function CountryBubbleMap() {
         </Stack>
         <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="md">
           <CountryLayerMap
-            title="1. Všechny výskyty"
-            subtitle="Presence count: jedna země v jedné koprodukci znamená jeden výskyt."
+            title="1. Všechny účasti"
+            subtitle="Jedna země v jedné koprodukci znamená jednu účast."
             rows={countryPresence2026}
           />
           <CountryLayerMap
@@ -705,7 +705,7 @@ function CountryBubbleMap() {
           <Paper p="md" radius={8} withBorder bg="background.2">
             <Text fw={900} mb="sm">5. Fractional count zatím kreslit nebudeme</Text>
             <Text size="sm">
-              Fractional count potřebuje seznam jednotlivých filmů a jejich koprodukčních zemí. U filmu se třemi zeměmi by každá dostala třetinu bodu. Současná mapa má jen souhrnné počty výskytů podle zemí, takže by „fractional mapa“ byla odhad, ne data.
+              Fractional count potřebuje seznam jednotlivých filmů a jejich koprodukčních zemí. U filmu se třemi zeměmi by každá dostala třetinu bodu. Současná mapa má jen souhrnné počty účastí podle zemí, takže by „fractional mapa“ byla odhad, ne data.
             </Text>
             <Text size="sm" mt="sm" c="dimmed">
               Jakmile napojíme film-level katalog, vedle sebe poběží dvě mapy: presence count pro viditelnost zemí a fractional count pro férovější váhu koprodukcí.
@@ -818,22 +818,17 @@ function FilmScaleBlock() {
   return (
     <Box px={{ base: 16, md: 24 }} py={{ base: 20, md: 34 }}>
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
-        <CountryBubbleMap />
-
         <ChartFrame
-          title="Odkud přicházely filmy: přehrajte si historii 1992–2026"
-          subtitle={`Bublina = produkční země daného ročníku, velikost podle počtu výskytů; ${countryHistory.length} ročníků, přehrávejte tlačítkem nebo táhněte posuvníkem`}
-          source="Oficiální Archiv filmu KVIFF"
+          title="Odkud přijíždějí filmy na festival v Karlových Varech"
+          subtitle={`Bublina = produkční země; velikost podle počtu filmů, u kterých je země uvedena. Dataset pokrývá ${countryHistory.length} ročníků novodobé éry.`}
+          source="Oficiální archiv filmu KVIFF, lokální country export"
           fullWidth
-        >
-          <HistoricalCountryMap history={countryHistory} />
-          <Text mt="md" size="sm" c="dimmed">
-            Poloha bubliny se mezi ročníky nemění, mění se jen její velikost a viditelnost – tak je vidět, jak festival v čase přidával nebo ztrácel jednotlivé produkční země, ne jen souhrnné regiony.
-          </Text>
-        </ChartFrame>
+      >
+        <FilmOriginsDashboard />
+      </ChartFrame>
 
-        <ChartFrame
-          title="Program se po maximu zmenšil, ale zhoustl"
+      <ChartFrame
+        title="Program se po maximu zmenšil, ale zhoustl"
           subtitle="Průměrný počet filmů podle období, 1995–2025"
           source="Oficiální finální statistiky ročníků KVIFF"
         >
@@ -1240,4 +1235,3 @@ export default function KviffBranchPage({ params }: PageProps) {
     </Container>
   );
 }
-
