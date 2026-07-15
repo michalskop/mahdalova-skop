@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Badge, Box, Button, Group, Paper, SimpleGrid, Stack, Text, TextInput, Title } from '@mantine/core';
-import { IconSearch, IconX } from '@tabler/icons-react';
+import { IconPlayerPauseFilled, IconPlayerPlayFilled, IconSearch, IconX } from '@tabler/icons-react';
 import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { filmCountAvailableRows } from './films';
 import { countryCoordinates, countryPresence2026, czCountry } from './countries';
 import { countryHistory, type CountryYearRow } from './countries-history';
+import { continentHistory } from './continents-history';
 import { CHART_TRACK_BG, NUM_FONT } from './ChartFrame';
 import worldTopology from '../../../public/dpbp/data/world-countries-110m.json';
 
@@ -131,6 +132,10 @@ const filmTotals = Object.fromEntries(
 );
 filmTotals[YEAR_MAX] = KVIFF_2026_FILMS_TOTAL;
 
+const continentByYear = new Map(continentHistory.map((row) => [row.year, row.continents]));
+
+const continentRegions = ['Evropa', 'Severní Amerika', 'Latinská Amerika', 'Asie', 'Blízký východ', 'Afrika', 'Austrálie'];
+
 const countryHistoryWithCurrentYear: CountryYearRow[] = [
   ...countryHistory.filter((row) => row.year !== YEAR_MAX),
   {
@@ -185,6 +190,7 @@ function buildCountries(): CountrySummary[] {
 }
 
 function CountryYearBars({ country, color, selectedYear }: { country: CountrySummary; color: string; selectedYear: number }) {
+  const [hoverYear, setHoverYear] = useState<number | null>(null);
   const years = Array.from({ length: YEAR_MAX - YEAR_MIN + 1 }, (_, i) => YEAR_MIN + i);
   const values = years.map((year) => (MISSED_YEARS.has(year) ? null : country.years[year] ?? 0));
   const max = Math.max(1, ...values.map((value) => value ?? 0));
@@ -196,9 +202,17 @@ function CountryYearBars({ country, color, selectedYear }: { country: CountrySum
   const plotBottom = 88;
   const step = (plotRight - plotLeft) / years.length;
   const barWidth = Math.max(2.5, step * 0.62);
+  const hoverIndex = hoverYear != null ? hoverYear - YEAR_MIN : null;
+  const hoverValue = hoverIndex != null ? values[hoverIndex] : null;
 
   return (
-    <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Sloupcový graf počtu filmů, u kterých je uvedena země ${country.name}`} style={{ width: '100%', height: 126 }}>
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      role="img"
+      aria-label={`Sloupcový graf počtu filmů, u kterých je uvedena země ${country.name}`}
+      style={{ width: '100%', height: 126 }}
+      onMouseLeave={() => setHoverYear(null)}
+    >
       <line x1={plotLeft} x2={plotRight} y1={plotBottom} y2={plotBottom} stroke="var(--mantine-color-background-6)" strokeWidth={1} />
       {years.map((year, index) => {
         const value = values[index];
@@ -228,14 +242,38 @@ function CountryYearBars({ country, color, selectedYear }: { country: CountrySum
               fill={year === selectedYear ? 'var(--mantine-color-brand-6)' : color}
               opacity={value ? 0.92 : 0.18}
             />
-            {value === max && value > 0 && (
+            {value === max && value > 0 && hoverYear == null && (
               <text x={x + barWidth / 2} y={Math.max(9, plotBottom - h - 4)} textAnchor="middle" fontSize={10} fontWeight={800} fill="var(--mantine-color-dark-9)">
                 {value}
               </text>
             )}
+            <rect
+              x={plotLeft + index * step}
+              y={plotTop}
+              width={step}
+              height={plotBottom - plotTop}
+              fill="transparent"
+              onMouseEnter={() => setHoverYear(year)}
+              style={{ cursor: 'help' }}
+            />
           </g>
         );
       })}
+      {hoverIndex != null && hoverValue != null && (() => {
+        const x = plotLeft + hoverIndex * step + step / 2;
+        const h = (hoverValue / max) * (plotBottom - plotTop);
+        const labelY = Math.max(9, plotBottom - h - 4);
+        const boxWidth = 40;
+        const boxX = Math.min(plotRight - boxWidth, Math.max(plotLeft, x - boxWidth / 2));
+        return (
+          <g pointerEvents="none">
+            <rect x={boxX} y={labelY - 12} width={boxWidth} height={16} rx={3} fill="var(--mantine-color-brandNavy-9)" />
+            <text x={boxX + boxWidth / 2} y={labelY} textAnchor="middle" fontSize={9} fontWeight={900} fill="#fdfbf7">
+              {hoverYear}: {hoverValue}
+            </text>
+          </g>
+        );
+      })()}
       {[1992, 2000, 2010, 2020, 2026].map((tick) => {
         const index = tick - YEAR_MIN;
         return (
@@ -312,18 +350,29 @@ export default function FilmOriginsDashboard() {
   );
   const currentRow = yearRows.get(year);
   const yearTotal = currentRow?.top.reduce((sum, [, count]) => sum + count, 0) ?? 0;
+  const filmsCumulativeToYear = years
+    .filter((item) => item <= year)
+    .reduce((sum, item) => sum + (yearRows.get(item)?.films ?? filmTotals[item] ?? 0), 0);
+  const filmsForCard = mode === 'annual' ? (currentRow?.films ?? filmTotals[year] ?? 0) : filmsCumulativeToYear;
+  const filmsCardLabel = mode === 'annual' ? `filmů v roce ${year}` : `filmů celkem k roku ${year}`;
   const activeCountries = countries.filter((country) => country.years[year]).length;
   const globalMaxAnnual = Math.max(...countries.flatMap((country) => years.map((item) => country.years[item] ?? 0)));
   const globalMaxCumulative = Math.max(...countries.map((country) => country.total));
   const cumulativeFor = (country: CountrySummary) => years.filter((item) => item <= year).reduce((sum, item) => sum + (country.years[item] ?? 0), 0);
   const valueFor = (country: CountrySummary) => (mode === 'annual' ? country.years[year] ?? 0 : cumulativeFor(country));
   const maxForMode = mode === 'annual' ? globalMaxAnnual : globalMaxCumulative;
-  const continentRows = Object.entries(
-    countries.reduce<Record<string, number>>((acc, country) => {
-      acc[country.region] = (acc[country.region] ?? 0) + (country.years[year] ?? 0);
-      return acc;
-    }, {}),
-  ).sort(([, a], [, b]) => b - a);
+  const modeTotal = mode === 'annual' ? yearTotal : countries.reduce((sum, country) => sum + cumulativeFor(country), 0);
+  function continentValueFor(region: string) {
+    if (mode === 'annual') return continentByYear.get(year)?.[region] ?? 0;
+    return years
+      .filter((item) => item <= year)
+      .reduce((sum, item) => sum + (continentByYear.get(item)?.[region] ?? 0), 0);
+  }
+  const continentRows = continentRegions
+    .map((region) => [region, continentValueFor(region)] as [string, number])
+    .filter(([, value]) => value > 0)
+    .sort(([, a], [, b]) => b - a);
+  const continentTotal = continentRows.reduce((sum, [, value]) => sum + value, 0);
   const maxContinent = Math.max(1, ...continentRows.map(([, value]) => value));
   const grandTotal = countries.reduce((sum, country) => sum + country.total, 0);
   const topCountries = countries.slice(0, 10);
@@ -463,13 +512,13 @@ export default function FilmOriginsDashboard() {
           <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{fmt(currentRow?.coproductions ?? 0)}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">filmů celkem</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{fmt(currentRow?.films ?? filmTotals[year] ?? 0)}</Text>
+          <Text c="dimmed" size="sm">{filmsCardLabel}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{fmt(filmsForCard)}</Text>
         </Paper>
       </SimpleGrid>
 
-      <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="lg">
-        <Paper p="md" radius={4} bg="#f8f6f0" style={{ gridColumn: '1 / -1' }}>
+      <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="sm">
+        <Paper p="sm" radius={4} bg="#f8f6f0" style={{ gridColumn: '1 / -1' }}>
           <Group justify="end" align="center" mb={6}>
             <Group gap="xs">
               <Button size="compact-sm" color="gray" variant={mode === 'annual' ? 'light' : 'subtle'} onClick={() => setMode('annual')}>Ročně</Button>
@@ -735,25 +784,27 @@ export default function FilmOriginsDashboard() {
                   />
                 );
               })}
-              {mapTooltip && (
-                <g pointerEvents="none">
-                  <rect
-                    x={Math.min(790, Math.max(12, mapTooltip.x + 12))}
-                    y={Math.min(386, Math.max(12, mapTooltip.y - 38))}
-                    width={158}
-                    height={34}
-                    rx={4}
-                    fill="rgba(253, 251, 247, 0.96)"
-                    stroke="var(--mantine-color-background-6)"
-                  />
-                  <text x={Math.min(798, Math.max(20, mapTooltip.x + 20))} y={Math.min(405, Math.max(31, mapTooltip.y - 17))} fontSize={11} fontWeight={900} fill="var(--mantine-color-dark-8)">
-                    {mapTooltip.country.name}
-                  </text>
-                  <text x={Math.min(798, Math.max(20, mapTooltip.x + 20))} y={Math.min(405, Math.max(47, mapTooltip.y - 3))} fontSize={10} fill="var(--mantine-color-dark-5)">
-                    {fmt(mapTooltip.value)} {filmPlural(mapTooltip.value)}
-                  </text>
-                </g>
-              )}
+              {mapTooltip && (() => {
+                const share = modeTotal ? Math.round((mapTooltip.value / modeTotal) * 1000) / 10 : null;
+                const boxX = Math.min(790, Math.max(12, mapTooltip.x + 12));
+                const boxY = Math.min(372, Math.max(12, mapTooltip.y - 52));
+                return (
+                  <g pointerEvents="none">
+                    <rect x={boxX} y={boxY} width={158} height={48} rx={4} fill="rgba(253, 251, 247, 0.96)" stroke="var(--mantine-color-background-6)" />
+                    <text x={boxX + 10} y={boxY + 16} fontSize={11} fontWeight={900} fill="var(--mantine-color-dark-8)">
+                      {mapTooltip.country.name}
+                    </text>
+                    <text x={boxX + 10} y={boxY + 32} fontSize={10} fill="var(--mantine-color-dark-5)">
+                      {fmt(mapTooltip.value)} {filmPlural(mapTooltip.value)}
+                    </text>
+                    {share != null && (
+                      <text x={boxX + 10} y={boxY + 44} fontSize={10} fill="var(--mantine-color-dark-5)">
+                        {pct(share)} % z {mode === 'annual' ? 'ročníku' : 'celkové řady'}
+                      </text>
+                    )}
+                  </g>
+                );
+              })()}
               {mapLabels.map(({ country, x, y, anchor, fontSize }) => {
                 return (
                   <text
@@ -846,25 +897,30 @@ export default function FilmOriginsDashboard() {
 
           <Stack gap={8} mt="md">
             <Group gap={8} align="end" wrap="nowrap">
-              <Box style={{ width: 126, minWidth: 126 }}>
+              <Box style={{ width: 126, minWidth: 126, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Text size="xs" c="dimmed" ta="center" mb={4} style={{ whiteSpace: 'nowrap' }}>kliknutím vybrat rok</Text>
                 <button
                   type="button"
                   onClick={() => setIsPlaying((current) => !current)}
                   aria-label={isPlaying ? 'Pozastavit přehrávání roků' : 'Přehrát roky'}
                   style={{
-                    width: '100%',
-                    height: 26,
-                    border: '1px solid var(--mantine-color-background-6)',
-                    borderRadius: 4,
-                    background: isPlaying ? 'var(--mantine-color-brand-6)' : 'var(--mantine-color-background-0)',
-                    color: isPlaying ? 'white' : 'var(--mantine-color-dark-8)',
+                    width: 30,
+                    height: 30,
+                    border: 0,
+                    borderRadius: 999,
+                    background: 'var(--mantine-color-brand-6)',
+                    color: 'white',
                     cursor: 'pointer',
-                    fontSize: 13,
-                    fontWeight: 900,
+                    display: 'grid',
+                    placeItems: 'center',
+                    boxShadow: '0 2px 6px rgba(16, 20, 50, 0.25)',
                   }}
                 >
-                  {isPlaying ? 'II' : '▶'}
+                  {isPlaying ? (
+                    <IconPlayerPauseFilled size={14} />
+                  ) : (
+                    <IconPlayerPlayFilled size={14} style={{ marginLeft: 1 }} />
+                  )}
                 </button>
               </Box>
               <Box
@@ -925,12 +981,40 @@ export default function FilmOriginsDashboard() {
         </Paper>
 
         <Paper p="lg" radius={4} bg="#f8f6f0">
-          <Title order={3} size="1.05rem" mb="md">Kontinenty v roce {year}</Title>
+          <Title order={3} size="1.05rem" mb="md">
+            {mode === 'annual' ? `Kontinenty v roce ${year}` : `Kontinenty celkem do roku ${year}`}
+          </Title>
           <Stack gap={7}>
             {continentRows.map(([region, value]) => (
               <DashboardBar key={region} label={normalizeRegion(region)} value={value} max={maxContinent} color={regionColors[normalizeRegion(region)] ?? regionColors.Ostatní} />
             ))}
           </Stack>
+          <Box mt="md">
+            <Text size="xs" c="dimmed" mb={4}>Stejná data jako podíl na katalogu (100 %)</Text>
+            <Box style={{ display: 'flex', height: 22, borderRadius: 4, overflow: 'hidden' }}>
+              {continentRows.map(([region, value]) => {
+                const width = continentTotal ? (value / continentTotal) * 100 : 0;
+                if (width < 0.5) return null;
+                return (
+                  <Box
+                    key={region}
+                    title={`${normalizeRegion(region)}: ${fmt(value)} (${pct((value / continentTotal) * 100)} %)`}
+                    style={{
+                      width: `${width}%`,
+                      background: regionColors[normalizeRegion(region)] ?? regionColors.Ostatní,
+                      display: 'grid',
+                      placeItems: 'center',
+                      minWidth: width > 4 ? undefined : 0,
+                    }}
+                  >
+                    {width > 6 && (
+                      <Text fw={900} c="white" style={{ ...NUM_FONT, fontSize: 10 }}>{fmt(value)}</Text>
+                    )}
+                  </Box>
+                );
+              })}
+            </Box>
+          </Box>
         </Paper>
       </SimpleGrid>
 
