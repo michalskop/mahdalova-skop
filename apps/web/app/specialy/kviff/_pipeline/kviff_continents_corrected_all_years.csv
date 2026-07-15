@@ -1,0 +1,224 @@
+year,continent,value
+1992,Evropa,13
+1992,Severní Amerika,1
+1992,Asie,1
+1992,Blízký východ,2
+1992,Austrálie,1
+1994,Evropa,126
+1994,Severní Amerika,20
+1994,Latinská Amerika,2
+1994,Asie,9
+1994,Austrálie,1
+1995,Evropa,115
+1995,Severní Amerika,39
+1995,Latinská Amerika,4
+1995,Asie,13
+1995,Blízký východ,3
+1995,Afrika,1
+1995,Austrálie,1
+1996,Evropa,107
+1996,Severní Amerika,46
+1996,Latinská Amerika,2
+1996,Asie,21
+1996,Blízký východ,4
+1996,Austrálie,1
+1997,Evropa,140
+1997,Severní Amerika,70
+1997,Latinská Amerika,1
+1997,Asie,13
+1997,Blízký východ,5
+1997,Afrika,1
+1997,Austrálie,24
+1998,Evropa,126
+1998,Severní Amerika,55
+1998,Latinská Amerika,7
+1998,Asie,28
+1998,Blízký východ,2
+1998,Afrika,2
+1998,Austrálie,3
+1999,Evropa,129
+1999,Severní Amerika,26
+1999,Latinská Amerika,2
+1999,Asie,13
+1999,Blízký východ,4
+2000,Evropa,173
+2000,Severní Amerika,41
+2000,Latinská Amerika,3
+2000,Asie,24
+2000,Blízký východ,4
+2000,Afrika,2
+2000,Austrálie,4
+2001,Evropa,165
+2001,Severní Amerika,40
+2001,Latinská Amerika,16
+2001,Asie,44
+2001,Blízký východ,8
+2001,Austrálie,2
+2002,Evropa,191
+2002,Severní Amerika,43
+2002,Latinská Amerika,29
+2002,Asie,37
+2002,Blízký východ,8
+2002,Afrika,2
+2002,Austrálie,5
+2003,Evropa,195
+2003,Severní Amerika,44
+2003,Latinská Amerika,11
+2003,Asie,29
+2003,Blízký východ,9
+2003,Afrika,3
+2003,Austrálie,5
+2004,Evropa,156
+2004,Severní Amerika,43
+2004,Latinská Amerika,10
+2004,Asie,24
+2004,Blízký východ,21
+2004,Afrika,1
+2004,Austrálie,2
+2005,Evropa,186
+2005,Severní Amerika,62
+2005,Latinská Amerika,15
+2005,Asie,28
+2005,Blízký východ,14
+2005,Afrika,5
+2005,Austrálie,3
+2006,Evropa,167
+2006,Severní Amerika,66
+2006,Latinská Amerika,20
+2006,Asie,20
+2006,Blízký východ,11
+2006,Afrika,5
+2006,Austrálie,4
+2007,Evropa,186
+2007,Severní Amerika,42
+2007,Latinská Amerika,10
+2007,Asie,34
+2007,Blízký východ,6
+2007,Afrika,3
+2007,Austrálie,3
+2008,Evropa,174
+2008,Severní Amerika,46
+2008,Latinská Amerika,14
+2008,Asie,15
+2008,Blízký východ,6
+2008,Afrika,1
+2008,Austrálie,3
+2009,Evropa,166
+2009,Severní Amerika,38
+2009,Latinská Amerika,13
+2009,Asie,25
+2009,Blízký východ,10
+2009,Afrika,2
+2009,Austrálie,4
+2010,Evropa,154
+2010,Severní Amerika,27
+2010,Latinská Amerika,7
+2010,Asie,13
+2010,Blízký východ,10
+2010,Afrika,1
+2010,Austrálie,10
+2011,Evropa,148
+2011,Severní Amerika,46
+2011,Latinská Amerika,7
+2011,Asie,12
+2011,Blízký východ,6
+2011,Afrika,1
+2011,Austrálie,1
+2012,Evropa,173
+2012,Severní Amerika,29
+2012,Latinská Amerika,6
+2012,Asie,10
+2012,Blízký východ,13
+2012,Afrika,2
+2012,Austrálie,3
+2013,Evropa,165
+2013,Severní Amerika,47
+2013,Latinská Amerika,9
+2013,Asie,21
+2013,Blízký východ,21
+2013,Afrika,2
+2013,Austrálie,2
+2014,Evropa,185
+2014,Severní Amerika,34
+2014,Latinská Amerika,9
+2014,Asie,28
+2014,Blízký východ,8
+2014,Afrika,3
+2014,Austrálie,5
+2015,Evropa,170
+2015,Severní Amerika,33
+2015,Latinská Amerika,11
+2015,Asie,16
+2015,Blízký východ,15
+2015,Afrika,1
+2015,Austrálie,4
+2016,Evropa,140
+2016,Severní Amerika,38
+2016,Latinská Amerika,14
+2016,Asie,21
+2016,Blízký východ,15
+2016,Afrika,2
+2016,Austrálie,1
+2017,Evropa,148
+2017,Severní Amerika,31
+2017,Latinská Amerika,9
+2017,Asie,31
+2017,Blízký východ,13
+2017,Afrika,1
+2017,Austrálie,1
+2018,Evropa,164
+2018,Severní Amerika,64
+2018,Latinská Amerika,16
+2018,Asie,13
+2018,Blízký východ,13
+2018,Afrika,2
+2018,Austrálie,3
+2019,Evropa,133
+2019,Severní Amerika,34
+2019,Latinská Amerika,12
+2019,Asie,9
+2019,Blízký východ,17
+2019,Afrika,5
+2019,Austrálie,1
+2021,Evropa,113
+2021,Severní Amerika,25
+2021,Latinská Amerika,8
+2021,Asie,17
+2021,Blízký východ,17
+2021,Afrika,3
+2021,Austrálie,1
+2022,Evropa,128
+2022,Severní Amerika,41
+2022,Latinská Amerika,11
+2022,Asie,13
+2022,Blízký východ,16
+2022,Afrika,7
+2022,Austrálie,5
+2023,Evropa,135
+2023,Severní Amerika,23
+2023,Latinská Amerika,7
+2023,Asie,32
+2023,Blízký východ,23
+2023,Afrika,6
+2023,Austrálie,2
+2024,Evropa,142
+2024,Severní Amerika,44
+2024,Latinská Amerika,8
+2024,Asie,26
+2024,Blízký východ,13
+2024,Afrika,6
+2024,Austrálie,1
+2025,Evropa,129
+2025,Severní Amerika,44
+2025,Latinská Amerika,9
+2025,Asie,14
+2025,Blízký východ,12
+2025,Afrika,2
+2025,Austrálie,3
+2026,Evropa,140
+2026,Severní Amerika,31
+2026,Latinská Amerika,19
+2026,Asie,14
+2026,Blízký východ,8
+2026,Afrika,2
+2026,Austrálie,1
