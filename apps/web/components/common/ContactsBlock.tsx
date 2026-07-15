@@ -2,8 +2,7 @@
 'use client';
 
 import { Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem,useMantineTheme }from '@mantine/core';
-import { Global } from '@mantine/styles';
-import { 
+import {
   IconMail, 
   IconPhone, 
   IconBrandX, 
@@ -102,23 +101,19 @@ export function ContactsBlock() {
   
   return (
     <>
-    <Global
-      styles={{
-        '#kontakty a': {
-          color: theme.colors.brand[6],
-          textDecoration: 'none',
-          '&:hover': {
-            textDecoration: 'underline',
-          },
-          '&:active': {
-            color: theme.colors.brand[6],
-          },
-          '&:visited': {
-            color: theme.colors.brand[6],
-          },
-        },
-      }}
-    />
+    <style>{`
+      #kontakty a {
+        color: ${theme.colors.brand[6]};
+        text-decoration: none;
+      }
+      #kontakty a:hover {
+        text-decoration: underline;
+      }
+      #kontakty a:active,
+      #kontakty a:visited {
+        color: ${theme.colors.brand[6]};
+      }
+    `}</style>
     <Paper
       id="kontakty" 
       style={{ scrollMarginTop: '100px' }}

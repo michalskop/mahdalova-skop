@@ -3,8 +3,6 @@
 'use client';
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
-import { Global } from '@mantine/styles';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
@@ -55,7 +53,6 @@ export function ArticleRenderer({
   withContainer = true  // Default to true for backward compatibility
 }: ArticleProps) {
 
-  const [mounted, setMounted] = useState(false);
   const theme = useMantineTheme();
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
@@ -176,15 +173,6 @@ export function ArticleRenderer({
       </div>
     );
   };
-
-  // Ensure no hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  
-  if (!mounted) {
-    return null;
-  }
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
@@ -468,23 +456,21 @@ export function ArticleRenderer({
   // Conditionally wrap with Container
   return withContainer ? (
     <Container size="md" pb="lg" style={{ overflow: 'visible' }}>
-      <Global
-        styles={{
-          '.markdown-content a': {
-            color: textColor || theme.colors.brand[6],
-            textDecoration: 'none',
-            '&:hover': {
-              color: theme.colors.brand[7],
-            },
-            '&:active': {
-              color: theme.colors.brand[8],
-            },
-            '&:visited': {
-              color: theme.colors.brand[5],
-            },
-          },
-        }}
-      />
+      <style>{`
+        .markdown-content a {
+          color: ${textColor || theme.colors.brand[6]};
+          text-decoration: none;
+        }
+        .markdown-content a:hover {
+          color: ${theme.colors.brand[7]};
+        }
+        .markdown-content a:active {
+          color: ${theme.colors.brand[8]};
+        }
+        .markdown-content a:visited {
+          color: ${theme.colors.brand[5]};
+        }
+      `}</style>
       {content}
     </Container>
   ) : content;

@@ -58,11 +58,14 @@ COUNTRY_TO_REGION.update({
 
 # Očista parserových úniků: u vícerežisérských filmů se do "země" dostane
 # i jméno režiséra ("Jmeno / Russia") – bereme část za posledním lomítkem.
+# Barma sloučena pod Myanmar (dobová/aktuální varianta téhož státu).
 def clean_country(c: str):
     if '/' in c:
         c = c.split('/')[-1].strip()
     if c in ('various countries', 'various directors', ''):
         return None
+    if c == 'Barma':
+        return 'Myanmar'
     return c
 
 for r in DATA:
@@ -101,7 +104,12 @@ for r in rows:
         'coproductionShare': r['coproductionShare'],
         'avgCountriesPerFilm': r['avgCountriesPerFilm'],
         'regions': regions,
-        'top': sorted(r['countries'].items(), key=lambda kv: -kv[1])[:12],
+        # POZOR: dříve oříznuto na [:12], což v každém ročníku (33/33) tiše
+        # mazalo desítky zemí z dashboardu (mapa/sparklines/žebříček zemí
+        # čtou právě 'top'). Regionální součty výše počítaly z plných dat,
+        # takže kontinentální panel byl v pořádku, ale karty jednotlivých
+        # zemí a mapa ne. Neořezávat.
+        'top': sorted(r['countries'].items(), key=lambda kv: -kv[1]),
     })
 
 top_all = sorted(top_countries_total.items(), key=lambda kv: -kv[1])[:15]
