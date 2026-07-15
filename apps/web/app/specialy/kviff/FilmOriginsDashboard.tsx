@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Badge, Box, Button, Group, Paper, SimpleGrid, Stack, Text, TextInput, Title } from '@mantine/core';
+import { Badge, Box, Group, Paper, SimpleGrid, Stack, Text, TextInput, Title } from '@mantine/core';
 import { IconPlayerPauseFilled, IconPlayerPlayFilled, IconSearch, IconX } from '@tabler/icons-react';
 import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
@@ -125,6 +125,15 @@ function filmPlural(n: number) {
   return n === 1 ? 'filmu' : n >= 2 && n <= 4 ? 'filmů' : 'filmů';
 }
 
+// Diakritika-necitlivé porovnání pro našeptávač (např. "e" má matchnout i "ě"),
+// hledáme jen shodu od začátku názvu země, ne kdekoli uvnitř slova.
+function normalizeForSearch(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLocaleLowerCase('cs-CZ');
+}
+
 const filmTotals = Object.fromEntries(
   filmCountAvailableRows
     .filter((row) => typeof row.totalFilms === 'number')
@@ -196,7 +205,7 @@ function CountryYearBars({ country, color, selectedYear }: { country: CountrySum
   const max = Math.max(1, ...values.map((value) => value ?? 0));
   const width = 360;
   const height = 112;
-  const plotLeft = 24;
+  const plotLeft = 28;
   const plotRight = 336;
   const plotTop = 14;
   const plotBottom = 88;
@@ -204,6 +213,8 @@ function CountryYearBars({ country, color, selectedYear }: { country: CountrySum
   const barWidth = Math.max(2.5, step * 0.62);
   const hoverIndex = hoverYear != null ? hoverYear - YEAR_MIN : null;
   const hoverValue = hoverIndex != null ? values[hoverIndex] : null;
+  const halfValue = Math.round(max / 2);
+  const halfY = plotTop + (plotBottom - plotTop) / 2;
 
   return (
     <svg
@@ -214,6 +225,9 @@ function CountryYearBars({ country, color, selectedYear }: { country: CountrySum
       onMouseLeave={() => setHoverYear(null)}
     >
       <line x1={plotLeft} x2={plotRight} y1={plotBottom} y2={plotBottom} stroke="var(--mantine-color-background-6)" strokeWidth={1} />
+      <line x1={plotLeft} x2={plotRight} y1={halfY} y2={halfY} stroke="var(--mantine-color-background-6)" strokeWidth={1} strokeDasharray="2 3" />
+      <text x={plotLeft - 4} y={plotTop + 4} textAnchor="end" fontSize={9} fill="var(--mantine-color-dark-5)">{max}</text>
+      <text x={plotLeft - 4} y={halfY + 3} textAnchor="end" fontSize={9} fill="var(--mantine-color-dark-5)">{halfValue}</text>
       {years.map((year, index) => {
         const value = values[index];
         const x = plotLeft + index * step + (step - barWidth) / 2;
@@ -323,10 +337,11 @@ export default function FilmOriginsDashboard() {
   const countries = useMemo(() => buildCountries(), []);
   const years = useMemo(() => Array.from({ length: YEAR_MAX - YEAR_MIN + 1 }, (_, i) => YEAR_MIN + i), []);
   const [year, setYear] = useState(2026);
-  const [mode, setMode] = useState<'annual' | 'cumulative'>('annual');
+  const [mode, setMode] = useState<'annual' | 'cumulative'>('cumulative');
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
+  const [highlightIndex, setHighlightIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [mapZoom, setMapZoom] = useState(1);
   const [mapOffset, setMapOffset] = useState({ x: 0, y: 0 });
@@ -339,7 +354,7 @@ export default function FilmOriginsDashboard() {
   const yearRows = useMemo(() => new Map(countryHistoryWithCurrentYear.map((row) => [row.year, row])), []);
   const selected: SelectedCountry = selectedKey ? countries.find((country) => country.country === selectedKey) ?? null : null;
   const world = useMemo(() => feature(worldTopology as any, (worldTopology as any).objects.countries) as any, []);
-  const projection = useMemo(() => geoNaturalEarth1().rotate([-12, 0]).scale(190 * mapZoom).translate([500 + mapOffset.x, 220 + mapOffset.y]), [mapOffset.x, mapOffset.y, mapZoom]);
+  const projection = useMemo(() => geoNaturalEarth1().rotate([-12, 0]).scale(190 * mapZoom).translate([500 + mapOffset.x, 415 + mapOffset.y]), [mapOffset.x, mapOffset.y, mapZoom]);
   const mapPath = useMemo(() => geoPath(projection), [projection]);
   const countryPaths: Array<{ key: string; d: string }> = useMemo(
     () => world.features.map((item: any, index: number) => ({
@@ -413,7 +428,7 @@ export default function FilmOriginsDashboard() {
       const x1 = placement.anchor === 'end' ? x - width : placement.anchor === 'middle' ? x - width / 2 : x;
       const x2 = placement.anchor === 'end' ? x : placement.anchor === 'middle' ? x + width / 2 : x + width;
       const rect = { x1, y1: y - height + 2, x2, y2: y + 3 };
-      const inView = rect.x1 > 8 && rect.x2 < 952 && rect.y1 > 12 && rect.y2 < 418;
+      const inView = rect.x1 > 8 && rect.x2 < 952 && rect.y1 > 12 && rect.y2 < 808;
       const collides = labelRects.some((existing) => labelsOverlap(rect, existing));
       if (inView && !collides) {
         labelRects.push(rect);
@@ -427,19 +442,23 @@ export default function FilmOriginsDashboard() {
   function clampMapOffset(next: { x: number; y: number }, zoom = mapZoom) {
     if (zoom <= 1) return { x: 0, y: 0 };
     const maxX = (zoom - 1) * 330;
-    const maxY = (zoom - 1) * 190;
+    // Sever (kladné offset.y odkrývá horní okraj mapy) potřebuje víc prostoru
+    // na posouvání než jih – Skandinávie/Rusko/Kanada jsou pro katalog
+    // relevantní, Antarktida ne.
+    const maxYUp = (zoom - 1) * 280;
+    const maxYDown = (zoom - 1) * 190;
     return {
       x: Math.max(-maxX, Math.min(maxX, next.x)),
-      y: Math.max(-maxY, Math.min(maxY, next.y)),
+      y: Math.max(-maxYDown, Math.min(maxYUp, next.y)),
     };
   }
   function svgPointFromClient(clientX: number, clientY: number) {
     const svg = svgRef.current;
     const rect = svg?.getBoundingClientRect();
-    if (!rect || !rect.width || !rect.height) return { x: 480, y: 215 };
+    if (!rect || !rect.width || !rect.height) return { x: 480, y: 410 };
     return {
       x: ((clientX - rect.left) / rect.width) * 960,
-      y: ((clientY - rect.top) / rect.height) * 430,
+      y: ((clientY - rect.top) / rect.height) * 820,
     };
   }
   function zoomToward(nextZoomRaw: number, anchor: { x: number; y: number }) {
@@ -447,9 +466,9 @@ export default function FilmOriginsDashboard() {
     if (nextZoom === mapZoom) return;
     const ratio = nextZoom / mapZoom;
     const translateX = 500 + mapOffset.x;
-    const translateY = 220 + mapOffset.y;
+    const translateY = 415 + mapOffset.y;
     const nextOffset = clampMapOffset(
-      { x: anchor.x - ratio * (anchor.x - translateX) - 500, y: anchor.y - ratio * (anchor.y - translateY) - 220 },
+      { x: anchor.x - ratio * (anchor.x - translateX) - 500, y: anchor.y - ratio * (anchor.y - translateY) - 415 },
       nextZoom,
     );
     setMapZoom(nextZoom);
@@ -487,12 +506,16 @@ export default function FilmOriginsDashboard() {
     setSearchOpen(false);
   }
 
+  const normalizedQuery = normalizeForSearch(search.trim());
+  const searchMatches = normalizedQuery
+    ? countries
+        .filter((country) => normalizeForSearch(country.name).startsWith(normalizedQuery))
+        .sort((a, b) => a.name.localeCompare(b.name, 'cs'))
+        .slice(0, 8)
+    : [];
+
   function selectSearchMatch() {
-    const query = search.trim().toLocaleLowerCase('cs-CZ');
-    if (!query) return;
-    const exact = countries.find((country) => country.name.toLocaleLowerCase('cs-CZ') === query);
-    const partial = countries.find((country) => country.name.toLocaleLowerCase('cs-CZ').includes(query));
-    const match = exact ?? partial;
+    const match = searchMatches[highlightIndex] ?? searchMatches[0];
     if (match) selectCountry(match);
   }
 
@@ -520,16 +543,50 @@ export default function FilmOriginsDashboard() {
       <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="sm">
         <Paper p="sm" radius={4} bg="#f8f6f0" style={{ gridColumn: '1 / -1' }}>
           <Group justify="end" align="center" mb={6}>
-            <Group gap="xs">
-              <Button size="compact-sm" color="gray" variant={mode === 'annual' ? 'light' : 'subtle'} onClick={() => setMode('annual')}>Ročně</Button>
-              <Button size="compact-sm" color="gray" variant={mode === 'cumulative' ? 'light' : 'subtle'} onClick={() => setMode('cumulative')}>Kumulativně</Button>
-            </Group>
+            <Box
+              role="group"
+              aria-label="Přepínač zobrazení: ročně, nebo kumulativně"
+              style={{
+                display: 'inline-flex',
+                border: '1.5px solid var(--mantine-color-brandNavy-9)',
+                borderRadius: 999,
+                overflow: 'hidden',
+                background: 'var(--mantine-color-background-0)',
+              }}
+            >
+              {([
+                { key: 'cumulative', label: 'Kumulativně' },
+                { key: 'annual', label: 'Ročně' },
+              ] as const).map(({ key, label }) => (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => setMode(key)}
+                  aria-pressed={mode === key}
+                  style={{
+                    border: 0,
+                    padding: '7px 16px',
+                    background: mode === key ? 'var(--mantine-color-brandNavy-9)' : 'transparent',
+                    color: mode === key ? '#fdfbf7' : 'var(--mantine-color-dark-6)',
+                    fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+                    fontWeight: 800,
+                    fontSize: 13,
+                    letterSpacing: '0.02em',
+                    textTransform: 'uppercase',
+                    cursor: 'pointer',
+                    transition: 'background 0.15s ease, color 0.15s ease',
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+            </Box>
           </Group>
 
           <Box
             style={{
               position: 'relative',
-              minHeight: 430,
+              minHeight: 820,
               borderRadius: 6,
               overflow: 'hidden',
               border: '1px solid var(--mantine-color-background-5)',
@@ -538,35 +595,95 @@ export default function FilmOriginsDashboard() {
           >
             <Box style={{ position: 'absolute', zIndex: 3, left: 12, top: 12, width: 'min(240px, calc(100% - 24px))' }}>
               {searchOpen ? (
-                <TextInput
-                  ref={searchInputRef}
-                  value={search}
-                  onChange={(event) => setSearch(event.currentTarget.value)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter') selectSearchMatch();
-                    if (event.key === 'Escape') {
-                      setSearch('');
-                      setSearchOpen(false);
-                    }
-                  }}
-                  onBlur={() => {
-                    if (!search.trim()) setSearchOpen(false);
-                  }}
-                  placeholder="Země"
-                  aria-label="Vyhledat zemi"
-                  size="xs"
-                  leftSection={<IconSearch size={14} stroke={1.8} aria-hidden="true" />}
-                  w={188}
-                  autoComplete="off"
-                  styles={{
-                    input: {
-                      background: 'rgba(253, 251, 247, 0.96)',
-                      borderColor: 'var(--mantine-color-background-6)',
-                      fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-                      paddingLeft: 30,
-                    },
-                  }}
-                />
+                <Box style={{ position: 'relative' }}>
+                  <TextInput
+                    ref={searchInputRef}
+                    value={search}
+                    onChange={(event) => {
+                      setSearch(event.currentTarget.value);
+                      setHighlightIndex(0);
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key === 'ArrowDown') {
+                        event.preventDefault();
+                        setHighlightIndex((current) => Math.min(current + 1, Math.max(0, searchMatches.length - 1)));
+                      } else if (event.key === 'ArrowUp') {
+                        event.preventDefault();
+                        setHighlightIndex((current) => Math.max(current - 1, 0));
+                      } else if (event.key === 'Enter') {
+                        selectSearchMatch();
+                      } else if (event.key === 'Escape') {
+                        setSearch('');
+                        setSearchOpen(false);
+                      }
+                    }}
+                    onBlur={() => {
+                      if (!search.trim()) setSearchOpen(false);
+                    }}
+                    placeholder="Země"
+                    aria-label="Vyhledat zemi"
+                    aria-autocomplete="list"
+                    aria-expanded={searchMatches.length > 0}
+                    role="combobox"
+                    size="xs"
+                    leftSection={<IconSearch size={14} stroke={1.8} aria-hidden="true" />}
+                    w={188}
+                    autoComplete="off"
+                    styles={{
+                      input: {
+                        background: 'rgba(253, 251, 247, 0.96)',
+                        borderColor: 'var(--mantine-color-background-6)',
+                        fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                        paddingLeft: 30,
+                      },
+                    }}
+                  />
+                  {searchMatches.length > 0 && (
+                    <Paper
+                      role="listbox"
+                      radius={4}
+                      withBorder
+                      shadow="md"
+                      style={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: 0,
+                        right: 0,
+                        marginTop: 4,
+                        maxHeight: 220,
+                        overflowY: 'auto',
+                        background: 'rgba(253, 251, 247, 0.98)',
+                        zIndex: 5,
+                      }}
+                    >
+                      {searchMatches.map((match, index) => (
+                        <button
+                          key={match.country}
+                          type="button"
+                          role="option"
+                          aria-selected={index === highlightIndex}
+                          onMouseDown={(event) => event.preventDefault()}
+                          onMouseEnter={() => setHighlightIndex(index)}
+                          onClick={() => selectCountry(match)}
+                          style={{
+                            display: 'block',
+                            width: '100%',
+                            textAlign: 'left',
+                            padding: '6px 10px',
+                            border: 0,
+                            background: index === highlightIndex ? 'var(--mantine-color-brand-1)' : 'transparent',
+                            color: 'var(--mantine-color-dark-8)',
+                            fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                            fontSize: 13,
+                            cursor: 'pointer',
+                          }}
+                        >
+                          {match.name}
+                        </button>
+                      ))}
+                    </Paper>
+                  )}
+                </Box>
               ) : (
                 <button
                   type="button"
@@ -592,7 +709,7 @@ export default function FilmOriginsDashboard() {
             <Group gap={4} style={{ position: 'absolute', zIndex: 4, right: 12, top: 12 }}>
               <button
                 type="button"
-                onClick={() => zoomToward(mapZoom - 0.4, { x: 480, y: 215 })}
+                onClick={() => zoomToward(mapZoom - 0.4, { x: 480, y: 410 })}
                 aria-label="Oddálit mapu"
                 disabled={mapZoom <= MIN_ZOOM}
                 style={{
@@ -613,7 +730,7 @@ export default function FilmOriginsDashboard() {
               </button>
               <button
                 type="button"
-                onClick={() => zoomToward(mapZoom + 0.4, { x: 480, y: 215 })}
+                onClick={() => zoomToward(mapZoom + 0.4, { x: 480, y: 410 })}
                 aria-label="Přiblížit mapu"
                 disabled={mapZoom >= MAX_ZOOM}
                 style={{
@@ -636,10 +753,10 @@ export default function FilmOriginsDashboard() {
 
             <svg
               ref={svgRef}
-              viewBox="0 0 960 430"
+              viewBox="0 0 960 820"
               role="img"
               aria-label={`Mapa produkčních zemí filmů KVIFF v roce ${year}`}
-              style={{ display: 'block', width: '100%', height: 'auto', minHeight: 430, cursor: mapZoom > 1 ? 'grab' : 'default', touchAction: 'none' }}
+              style={{ display: 'block', width: '100%', height: 'auto', minHeight: 820, cursor: mapZoom > 1 ? 'grab' : 'default', touchAction: 'none' }}
               onPointerDownCapture={() => {
                 pressedCountryRef.current = null;
               }}
@@ -787,7 +904,7 @@ export default function FilmOriginsDashboard() {
               {mapTooltip && (() => {
                 const share = modeTotal ? Math.round((mapTooltip.value / modeTotal) * 1000) / 10 : null;
                 const boxX = Math.min(790, Math.max(12, mapTooltip.x + 12));
-                const boxY = Math.min(372, Math.max(12, mapTooltip.y - 52));
+                const boxY = Math.min(762, Math.max(12, mapTooltip.y - 52));
                 return (
                   <g pointerEvents="none">
                     <rect x={boxX} y={boxY} width={158} height={48} rx={4} fill="rgba(253, 251, 247, 0.96)" stroke="var(--mantine-color-background-6)" />

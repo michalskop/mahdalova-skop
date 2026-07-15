@@ -158,7 +158,7 @@ const historicalOnlyCoordinates: Record<string, { lat: number; lon: number; regi
   'Bosnia and Herzegovina': { lat: 43.9, lon: 17.7, region: 'Europe' },
   'Hong Kong': { lat: 22.3, lon: 114.2, region: 'Asia' },
   Kazakhstan: { lat: 48.0, lon: 66.9, region: 'Asia' },
-  Egypt: { lat: 26.8, lon: 30.8, region: 'Middle East' },
+  Egypt: { lat: 26.8, lon: 30.8, region: 'Africa' },
   Israel: { lat: 31, lon: 35, region: 'Middle East' },
   Iceland: { lat: 64.9, lon: -18.6, region: 'Europe' },
   Portugal: { lat: 39.4, lon: -8.2, region: 'Europe' },

@@ -1190,8 +1190,8 @@ export const countryHistory: CountryYearRow[] = [
    "Severní Amerika": 41,
    "Evropa": 215,
    "Asie": 24,
-   "Blízký východ": 4,
-   "Afrika": 2,
+   "Blízký východ": 3,
+   "Afrika": 3,
    "Oceánie": 4,
    "Latinská Amerika": 3
   },
@@ -3685,10 +3685,10 @@ export const countryHistory: CountryYearRow[] = [
    "Evropa": 223,
    "Severní Amerika": 28,
    "Oceánie": 10,
-   "Blízký východ": 13,
+   "Blízký východ": 12,
    "Asie": 13,
    "Latinská Amerika": 8,
-   "Afrika": 1
+   "Afrika": 2
   },
   "top": [
    [
@@ -5237,9 +5237,9 @@ export const countryHistory: CountryYearRow[] = [
    "Evropa": 224,
    "Severní Amerika": 39,
    "Latinská Amerika": 16,
-   "Blízký východ": 18,
+   "Blízký východ": 17,
    "Asie": 23,
-   "Afrika": 2,
+   "Afrika": 3,
    "Oceánie": 1
   },
   "top": [
@@ -5769,10 +5769,10 @@ export const countryHistory: CountryYearRow[] = [
    "Severní Amerika": 64,
    "Evropa": 264,
    "Latinská Amerika": 22,
-   "Blízký východ": 17,
+   "Blízký východ": 15,
    "Asie": 14,
    "Oceánie": 3,
-   "Afrika": 2
+   "Afrika": 4
   },
   "top": [
    [
@@ -6054,10 +6054,10 @@ export const countryHistory: CountryYearRow[] = [
   "regions": {
    "Severní Amerika": 34,
    "Evropa": 203,
-   "Blízký východ": 17,
+   "Afrika": 16,
    "Latinská Amerika": 17,
    "Asie": 10,
-   "Afrika": 5,
+   "Blízký východ": 6,
    "Oceánie": 1
   },
   "top": [
@@ -6320,10 +6320,10 @@ export const countryHistory: CountryYearRow[] = [
   "regions": {
    "Evropa": 207,
    "Severní Amerika": 25,
-   "Blízký východ": 21,
+   "Blízký východ": 20,
    "Asie": 21,
    "Latinská Amerika": 13,
-   "Afrika": 3,
+   "Afrika": 4,
    "Oceánie": 1
   },
   "top": [
@@ -6865,9 +6865,9 @@ export const countryHistory: CountryYearRow[] = [
    "Evropa": 214,
    "Severní Amerika": 23,
    "Asie": 38,
-   "Blízký východ": 30,
+   "Blízký východ": 28,
    "Latinská Amerika": 12,
-   "Afrika": 7,
+   "Afrika": 9,
    "Oceánie": 2
   },
   "top": [
