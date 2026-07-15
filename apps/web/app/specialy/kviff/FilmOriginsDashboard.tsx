@@ -441,12 +441,15 @@ export default function FilmOriginsDashboard() {
 
   function clampMapOffset(next: { x: number; y: number }, zoom = mapZoom) {
     if (zoom <= 1) return { x: 0, y: 0 };
-    const maxX = (zoom - 1) * 330;
-    // Sever (kladné offset.y odkrývá horní okraj mapy) potřebuje víc prostoru
-    // na posouvání než jih – Skandinávie/Rusko/Kanada jsou pro katalog
-    // relevantní, Antarktida ne.
-    const maxYUp = (zoom - 1) * 280;
-    const maxYDown = (zoom - 1) * 190;
+    // Rozsah odvozený ze skutečných hranic vykreslené mapy při daném zoomu
+    // (změřeno geoPath.bounds na world-countries-110m.json) – roste přímo se
+    // zoomem, ne s (zoom - 1), protože i mírně přiblížená mapa má krajní body
+    // (Finsko, Argentina, Nový Zéland) posunuté daleko od středu plátna a
+    // dřívější vzorec (zoom - 1) * K jim na malém zoomu nedával dost místa.
+    // Konstanty mají cca 5-10 % rezervu nad naměřeným maximem při zoomu 1-6.
+    const maxX = zoom * 510;
+    const maxYUp = zoom * 290;
+    const maxYDown = zoom * 310;
     return {
       x: Math.max(-maxX, Math.min(maxX, next.x)),
       y: Math.max(-maxYDown, Math.min(maxYUp, next.y)),
