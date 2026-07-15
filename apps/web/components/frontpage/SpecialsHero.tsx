@@ -442,7 +442,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .specials-tile { -webkit-mask-image: -webkit-radial-gradient(white, black); }
         .specials-tile:hover { transform: scale(1.025); }
         .specials-tile::after {
@@ -477,7 +477,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
           .kviff-mobile-title-break { display: block; }
           .kviff-desktop-title-space { display: none; }
         }
-      `}</style>
+      ` }} />
 
       <Paper py={20} bg={BG} radius={0}>
         <Group gap={0} align="flex-start" wrap="wrap">
