@@ -48,7 +48,7 @@ const regionFromPresenceRow: Record<string, string> = {
   Oceania: 'Oceánie',
 };
 
-const regionColors: Record<string, string> = {
+export const regionColors: Record<string, string> = {
   Evropa: '#4a51ab',
   'Severní Amerika': '#0e839e',
   'Latinská Amerika': '#272a59',
@@ -143,7 +143,7 @@ filmTotals[YEAR_MAX] = KVIFF_2026_FILMS_TOTAL;
 
 const continentByYear = new Map(continentHistory.map((row) => [row.year, row.continents]));
 
-const continentRegions = ['Evropa', 'Severní Amerika', 'Latinská Amerika', 'Asie', 'Blízký východ', 'Afrika', 'Austrálie'];
+export const continentRegions = ['Evropa', 'Severní Amerika', 'Latinská Amerika', 'Asie', 'Blízký východ', 'Afrika', 'Austrálie'];
 
 const countryHistoryWithCurrentYear: CountryYearRow[] = [
   ...countryHistory.filter((row) => row.year !== YEAR_MAX),
