@@ -381,7 +381,17 @@ export default function FilmOriginsDashboard() {
     .reduce((sum, item) => sum + (yearRows.get(item)?.films ?? filmTotals[item] ?? 0), 0);
   const filmsForCard = mode === 'annual' ? (currentRow?.films ?? filmTotals[year] ?? 0) : filmsCumulativeToYear;
   const filmsCardLabel = mode === 'annual' ? `filmů v roce ${year}` : `filmů celkem k roku ${year}`;
-  const activeCountries = countries.filter((country) => country.years[year]).length;
+  const countriesForCard = mode === 'annual'
+    ? countries.filter((country) => country.years[year]).length
+    : countries.filter((country) => years.some((item) => item <= year && (country.years[item] ?? 0) > 0)).length;
+  const countriesCardLabel = mode === 'annual' ? `zemí v roce ${year}` : `zemí celkem k roku ${year}`;
+  const coproductionsCumulativeToYear = years
+    .filter((item) => item <= year)
+    .reduce((sum, item) => sum + (yearRows.get(item)?.coproductions ?? 0), 0);
+  const coproductionsForCard = mode === 'annual' ? (currentRow?.coproductions ?? 0) : coproductionsCumulativeToYear;
+  const coproductionsCardLabel = mode === 'annual'
+    ? `koprodukčních filmů v roce ${year}`
+    : `koprodukčních filmů celkem k roku ${year}`;
   const globalMaxAnnual = Math.max(...countries.flatMap((country) => years.map((item) => country.years[item] ?? 0)));
   const globalMaxCumulative = Math.max(...countries.map((country) => country.total));
   const cumulativeFor = (country: CountrySummary) => years.filter((item) => item <= year).reduce((sum, item) => sum + (country.years[item] ?? 0), 0);
@@ -546,12 +556,12 @@ export default function FilmOriginsDashboard() {
           <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{year}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">zemí celkem</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(activeCountries)}</Text>
+          <Text c="dimmed" size="sm">{countriesCardLabel}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(countriesForCard)}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">koprodukčních filmů</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(currentRow?.coproductions ?? 0)}</Text>
+          <Text c="dimmed" size="sm">{coproductionsCardLabel}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(coproductionsForCard)}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{filmsCardLabel}</Text>
