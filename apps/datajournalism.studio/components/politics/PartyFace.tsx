@@ -8,9 +8,9 @@ interface PartyFaceProps {
   party?: string;
 }
 
-export const PartyFace: React.FC<PartyFaceProps> = ({ 
-  size = 42, 
-  color, 
+export const PartyFace: React.FC<PartyFaceProps> = ({
+  size = 42,
+  color,
   text,
   textColor,
   party
@@ -33,15 +33,15 @@ export const PartyFace: React.FC<PartyFaceProps> = ({
   const getContrastColor = (hexColor: string) => {
     // Remove # if present
     const hex = hexColor.replace('#', '');
-    
+
     // Convert to RGB
     const r = parseInt(hex.substr(0, 2), 16);
     const g = parseInt(hex.substr(2, 2), 16);
     const b = parseInt(hex.substr(4, 2), 16);
-    
+
     // Calculate relative luminance
     const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    
+
     // Return white for dark colors, black for light colors
     return luminance > 0.5 ? '#1a1a1a' : '#ffffff';
   };
@@ -77,28 +77,28 @@ export const PartyFace: React.FC<PartyFaceProps> = ({
   const fontSize = calculateFontSize(size);
 
   return (
-    <div 
+    <div
       style={{ display: 'inline-block', fontFamily: "'Roboto Slab', serif" }}
       title={party} // Add tooltip with full party name
     >
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 30 30"
         width={size}
         height={size}
         style={{ display: 'block' }}
       >
-        <path 
-          d="M 11.29 0 Q 0 0 0 11.29 L 0 18.71 Q 0 30 11.29 30 L 18.71 30 Q 30 30 30 18.71 L 30 0 L 11.29 0 Z" 
+        <path
+          d="M 11.29 0 Q 0 0 0 11.29 L 0 18.71 Q 0 30 11.29 30 L 18.71 30 Q 30 30 30 18.71 L 30 0 L 11.29 0 Z"
           fill={backgroundColor}
         />
-        <text 
-          x="15" 
-          y="18" 
-          fontFamily="Roboto Slab, serif" 
-          fontSize={fontSize} 
-          fontWeight="700" 
-          fill={finalTextColor} 
+        <text
+          x="15"
+          y="18"
+          fontFamily="Roboto Slab, serif"
+          fontSize={fontSize}
+          fontWeight="700"
+          fill={finalTextColor}
           textAnchor="middle"
         >
           {faceText}
