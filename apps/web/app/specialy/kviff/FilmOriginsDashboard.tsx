@@ -365,10 +365,10 @@ export default function FilmOriginsDashboard() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [mapZoom, setMapZoom] = useState(WORLD_MAP_DEFAULT_VIEW.zoom);
+  const [mapZoom, setMapZoom] = useState<number>(WORLD_MAP_DEFAULT_VIEW.zoom);
   const [mode, setMode] = useState<MapMode>('cumulative');
   const [modePortalReady, setModePortalReady] = useState(false);
-  const [mapOffset, setMapOffset] = useState({ ...WORLD_MAP_DEFAULT_VIEW.offset });
+  const [mapOffset, setMapOffset] = useState<{ x: number; y: number }>({ ...WORLD_MAP_DEFAULT_VIEW.offset });
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
