@@ -348,8 +348,8 @@ export default function FilmOriginsDashboard() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [mapZoom, setMapZoom] = useState(WORLD_MAP_DEFAULT_VIEW.zoom);
-  const [mapOffset, setMapOffset] = useState({ ...WORLD_MAP_DEFAULT_VIEW.offset });
+  const [mapZoom, setMapZoom] = useState<number>(WORLD_MAP_DEFAULT_VIEW.zoom);
+  const [mapOffset, setMapOffset] = useState<{ x: number; y: number }>({ ...WORLD_MAP_DEFAULT_VIEW.offset });
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -549,27 +549,27 @@ export default function FilmOriginsDashboard() {
   }
 
   return (
-    <Stack gap="md">
+    <Stack gap="xs">
       <SimpleGrid cols={{ base: 2, md: 4 }} spacing="sm">
-        <Paper p="md" radius={4} bg="#f8f6f0">
+        <Paper p="sm" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">ročník</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{year}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 20 }}>{year}</Text>
         </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
+        <Paper p="sm" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{countriesCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(countriesForCard)}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 20 }}>{fmt(countriesForCard)}</Text>
         </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
+        <Paper p="sm" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{coproductionsCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(coproductionsForCard)}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 20 }}>{fmt(coproductionsForCard)}</Text>
         </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
+        <Paper p="sm" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{filmsCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(filmsForCard)}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 20 }}>{fmt(filmsForCard)}</Text>
         </Paper>
       </SimpleGrid>
 
-      <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="sm">
+      <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="xs">
         <Paper p="sm" radius={4} bg="#f8f6f0" style={{ gridColumn: '1 / -1' }}>
           <Group justify="end" align="center" mb={6}>
             <Box
