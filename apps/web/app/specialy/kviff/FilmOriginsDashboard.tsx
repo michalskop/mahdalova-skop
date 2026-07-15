@@ -128,7 +128,7 @@ function pct(n: number) {
 }
 
 function filmPlural(n: number) {
-  return n === 1 ? 'filmu' : n >= 2 && n <= 4 ? 'filmů' : 'filmů';
+  return n === 1 ? 'film' : n >= 2 && n <= 4 ? 'filmy' : 'filmů';
 }
 
 // Diakritika-necitlivé porovnání pro našeptávač (např. "e" má matchnout i "ě"),
@@ -910,7 +910,7 @@ export default function FilmOriginsDashboard() {
                     vectorEffect="non-scaling-stroke"
                     tabIndex={value ? 0 : -1}
                     role="button"
-                    aria-label={`${country.name}: uvedeno u ${value} ${filmPlural(value)}`}
+                    aria-label={`${country.name}: ${value} ${filmPlural(value)}`}
                     style={{ cursor: value ? 'pointer' : 'default', transition: 'r .24s ease, opacity .24s ease' }}
                     onPointerDown={() => {
                       if (value) pressedCountryRef.current = country;
@@ -1018,7 +1018,7 @@ export default function FilmOriginsDashboard() {
                 </Group>
                 <Text size="sm" c="dimmed" mt="xs">
                   {annualValue
-                    ? `${selected.name} je uvedeno u ${fmt(annualValue)} ${filmPlural(annualValue)} v roce ${year}.`
+                    ? `${fmt(annualValue)} ${filmPlural(annualValue)} v roce ${year}.`
                     : `V roce ${year} se v katalogu neobjevuje.`}
                 </Text>
                 {selectedProgramShare != null && <Box mt="sm"><ShareBar value={selectedProgramShare} color={selectedColor} /></Box>}
