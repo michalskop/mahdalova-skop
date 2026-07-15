@@ -3,6 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Badge, Box, Group, Paper, SimpleGrid, Stack, Text, TextInput, Title } from '@mantine/core';
 import { IconPlayerPauseFilled, IconPlayerPlayFilled, IconSearch, IconX } from '@tabler/icons-react';
+import {
+  WORLD_MAP_DEFAULT_VIEW,
+  WORLD_MAP_VIEWPORT,
+  WorldMapViewport,
+} from '@repo/ui/components/WorldMapViewport';
 import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { filmCountAvailableRows } from './films';
@@ -343,8 +348,8 @@ export default function FilmOriginsDashboard() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [mapZoom, setMapZoom] = useState(1);
-  const [mapOffset, setMapOffset] = useState({ x: 0, y: 0 });
+  const [mapZoom, setMapZoom] = useState(WORLD_MAP_DEFAULT_VIEW.zoom);
+  const [mapOffset, setMapOffset] = useState({ ...WORLD_MAP_DEFAULT_VIEW.offset });
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -354,7 +359,13 @@ export default function FilmOriginsDashboard() {
   const yearRows = useMemo(() => new Map(countryHistoryWithCurrentYear.map((row) => [row.year, row])), []);
   const selected: SelectedCountry = selectedKey ? countries.find((country) => country.country === selectedKey) ?? null : null;
   const world = useMemo(() => feature(worldTopology as any, (worldTopology as any).objects.countries) as any, []);
-  const projection = useMemo(() => geoNaturalEarth1().rotate([-12, 0]).scale(190 * mapZoom).translate([500 + mapOffset.x, 415 + mapOffset.y]), [mapOffset.x, mapOffset.y, mapZoom]);
+  const projection = useMemo(() => {
+    const { projection: profile } = WORLD_MAP_DEFAULT_VIEW;
+    return geoNaturalEarth1()
+      .rotate([...profile.rotate])
+      .scale(profile.scale * mapZoom)
+      .translate([profile.translate.x + mapOffset.x, profile.translate.y + mapOffset.y]);
+  }, [mapOffset.x, mapOffset.y, mapZoom]);
   const mapPath = useMemo(() => geoPath(projection), [projection]);
   const countryPaths: Array<{ key: string; d: string }> = useMemo(
     () => world.features.map((item: any, index: number) => ({
@@ -440,7 +451,12 @@ export default function FilmOriginsDashboard() {
   const mapLabelKeys = new Set(mapLabels.map((label) => label.country.country));
 
   function clampMapOffset(next: { x: number; y: number }, zoom = mapZoom) {
-    if (zoom <= 1) return { x: 0, y: 0 };
+    if (zoom <= 1) {
+      return {
+        x: Math.max(-180, Math.min(180, next.x)),
+        y: Math.max(-160, Math.min(160, next.y)),
+      };
+    }
     // Rozsah odvozený ze skutečných hranic vykreslené mapy při daném zoomu
     // (změřeno geoPath.bounds na world-countries-110m.json) – roste přímo se
     // zoomem, ne s (zoom - 1), protože i mírně přiblížená mapa má krajní body
@@ -460,8 +476,8 @@ export default function FilmOriginsDashboard() {
     const rect = svg?.getBoundingClientRect();
     if (!rect || !rect.width || !rect.height) return { x: 480, y: 410 };
     return {
-      x: ((clientX - rect.left) / rect.width) * 960,
-      y: ((clientY - rect.top) / rect.height) * 820,
+      x: ((clientX - rect.left) / rect.width) * WORLD_MAP_VIEWPORT.width,
+      y: WORLD_MAP_VIEWPORT.top + ((clientY - rect.top) / rect.height) * WORLD_MAP_VIEWPORT.height,
     };
   }
   function zoomToward(nextZoomRaw: number, anchor: { x: number; y: number }) {
@@ -527,19 +543,19 @@ export default function FilmOriginsDashboard() {
       <SimpleGrid cols={{ base: 2, md: 4 }} spacing="sm">
         <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">ročník</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{year}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{year}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">zemí celkem</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{fmt(activeCountries)}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(activeCountries)}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">koprodukčních filmů</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{fmt(currentRow?.coproductions ?? 0)}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(currentRow?.coproductions ?? 0)}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{filmsCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 34 }}>{fmt(filmsForCard)}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(filmsForCard)}</Text>
         </Paper>
       </SimpleGrid>
 
@@ -589,7 +605,6 @@ export default function FilmOriginsDashboard() {
           <Box
             style={{
               position: 'relative',
-              minHeight: 820,
               borderRadius: 6,
               overflow: 'hidden',
               border: '1px solid var(--mantine-color-background-5)',
@@ -754,21 +769,19 @@ export default function FilmOriginsDashboard() {
               </button>
             </Group>
 
-            <svg
+            <WorldMapViewport
               ref={svgRef}
-              viewBox="0 0 960 820"
               role="img"
               aria-label={`Mapa produkčních zemí filmů KVIFF v roce ${year}`}
-              style={{ display: 'block', width: '100%', height: 'auto', minHeight: 820, cursor: mapZoom > 1 ? 'grab' : 'default', touchAction: 'none' }}
               onPointerDownCapture={() => {
                 pressedCountryRef.current = null;
               }}
               onPointerDown={(event) => {
-                if (mapZoom <= 1) return;
+                const point = svgPointFromClient(event.clientX, event.clientY);
                 mapDragRef.current = {
                   pointerId: event.pointerId,
-                  startX: event.clientX,
-                  startY: event.clientY,
+                  startX: point.x,
+                  startY: point.y,
                   originX: mapOffset.x,
                   originY: mapOffset.y,
                   moved: false,
@@ -778,8 +791,9 @@ export default function FilmOriginsDashboard() {
               onPointerMove={(event) => {
                 const drag = mapDragRef.current;
                 if (!drag || drag.pointerId !== event.pointerId) return;
-                const dx = event.clientX - drag.startX;
-                const dy = event.clientY - drag.startY;
+                const point = svgPointFromClient(event.clientX, event.clientY);
+                const dx = point.x - drag.startX;
+                const dy = point.y - drag.startY;
                 if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
                 if (drag.moved) {
                   setMapTooltip(null);
@@ -944,7 +958,7 @@ export default function FilmOriginsDashboard() {
                   </text>
                 );
               })}
-            </svg>
+            </WorldMapViewport>
 
             {selected && (
               <Paper

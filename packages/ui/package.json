@@ -25,6 +25,7 @@
     "./components/InfoBox": "./src/components/InfoBox.tsx",
     "./components/KeyNumbers": "./src/components/KeyNumbers.tsx",
     "./components/RelatedArticles": "./src/components/RelatedArticles.tsx",
+    "./components/WorldMapViewport": "./src/components/WorldMapViewport.tsx",
     "./lib/remark-box-plugin": "./src/lib/remark-box-plugin.js",
     "./lib/remark-flourish-plugin": "./src/lib/remark-flourish-plugin.js",
     "./lib/getArticles": "./src/lib/getArticles.ts",

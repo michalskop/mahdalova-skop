@@ -573,3 +573,52 @@ Animace používá `easeInOut` přes `requestAnimationFrame` – scroll-snap se 
 | Matomo siteId | `4` | `5` |
 | Date locale | `cs-CZ` | `en-US` |
 | ScrollyTelling base | `/clanek/_articles` | `/a/_articles` |
+
+---
+
+## Standard pro mapu světa: `WorldMapViewport`
+
+Sdílený SVG viewport pro mapy světa. Výchozí profil je závazný pro nové celosvětové mapy v obou aplikacích, pokud konkrétní datový příběh nevyžaduje jiný geografický důraz.
+
+```tsx
+import {
+  WORLD_MAP_DEFAULT_VIEW,
+  WORLD_MAP_VIEWPORT,
+  WorldMapViewport,
+} from '@repo/ui/components/WorldMapViewport';
+
+const [zoom, setZoom] = useState(WORLD_MAP_DEFAULT_VIEW.zoom);
+const [offset, setOffset] = useState({ ...WORLD_MAP_DEFAULT_VIEW.offset });
+const profile = WORLD_MAP_DEFAULT_VIEW.projection;
+
+const projection = geoNaturalEarth1()
+  .rotate([...profile.rotate])
+  .scale(profile.scale * zoom)
+  .translate([profile.translate.x + offset.x, profile.translate.y + offset.y]);
+
+<WorldMapViewport aria-label="Popis mapy">
+  {/* země, datové značky a popisky */}
+</WorldMapViewport>;
+```
+
+### Výchozí profil
+
+| Parametr | Hodnota | Důvod |
+|---|---:|---|
+| Projekce | Natural Earth 1 | čitelná celosvětová mapa bez extrémního zkreslení pólů |
+| SVG šířka | `960` | společný souřadnicový systém |
+| Výřez | `y = 85`, výška `520` | obydlené kontinenty vyplní široký obdélník |
+| Základní scale | `190` | referenční měřítko projekce |
+| Výchozí zoom | `1.15×` | odstraní nevyužitou plochu |
+| Výchozí offset | `x = -69`, `y = -29` | zoom je ukotvený na jihovýchodě a roste na sever a západ |
+| Rotace | `[-12, 0]` | vyvážené rozložení Ameriky, Evropy, Asie a Oceánie |
+
+### Pravidla použití
+
+- První pohled musí zachovat Nový Zéland, Austrálii, jih Afriky a jižní okraj Ameriky.
+- Antarktida není v prvním pohledu, protože pro běžné socioekonomické a kulturní mapy nepřináší data; zůstává však v geometrii a lze ji odkrýt posunem.
+- Volné místo se při výchozím přiblížení využívá směrem na sever a západ. Nezoomovat kolem středu, protože by se ořízl jih a východ.
+- Vnější kontejner musí mít `overflow: hidden`; skrytá geografie se nemaže ani neořezává z dat.
+- Mapa musí podporovat tažení myší i jedním prstem (`Pointer Events`, `touchAction: 'none'`) a mít omezený posun, aby ji uživatel nemohl zcela ztratit.
+- Převod souřadnic ukazatele počítá s `WORLD_MAP_VIEWPORT.top` a `WORLD_MAP_VIEWPORT.height`; nepoužívat rozměry celého původního SVG.
+- Projektové barvy, bubliny, popisky, tooltipy a datové vrstvy zůstávají odpovědností konkrétní vizualizace.
