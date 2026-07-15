@@ -911,7 +911,7 @@ export default function FilmOriginsDashboard() {
                     tabIndex={value ? 0 : -1}
                     role="button"
                     aria-label={`${country.name}: ${value} ${filmPlural(value)}`}
-                    style={{ cursor: value ? 'pointer' : 'default', transition: 'r .24s ease, opacity .24s ease' }}
+                    style={{ cursor: value ? 'pointer' : 'default', transition: 'r .24s ease, opacity .24s ease', outline: 'none' }}
                     onPointerDown={() => {
                       if (value) pressedCountryRef.current = country;
                     }}
