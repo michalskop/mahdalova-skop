@@ -35,10 +35,10 @@ REGION = {
     ],
     'Blízký východ': [
         'Saudi Arabia', 'Lebanon', 'Qatar', 'Iran', 'Jordan', 'Palestine', 'Turkey', 'Yemen',
-        'Israel', 'Iraq', 'Syria', 'United Arab Emirates', 'Kuwait', 'Egypt', 'Bahrain', 'Oman',
+        'Israel', 'Iraq', 'Syria', 'United Arab Emirates', 'Kuwait', 'Bahrain', 'Oman',
     ],
     'Afrika': [
-        'Gabon', 'Guinea-Bissau', 'Ivory Coast', 'Rwanda', 'Senegal', 'Morocco', 'Tunisia',
+        'Egypt', 'Gabon', 'Guinea-Bissau', 'Ivory Coast', 'Rwanda', 'Senegal', 'Morocco', 'Tunisia',
         'Algeria', 'South Africa', 'Nigeria', 'Kenya', 'Ethiopia', 'Ghana', 'Mali',
         'Burkina Faso', 'Cameroon', 'Congo', 'Democratic Republic of the Congo', 'Angola',
         'Mozambique', 'Zimbabwe', 'Tanzania', 'Uganda', 'Sudan', 'Chad', 'Niger', 'Somalia',

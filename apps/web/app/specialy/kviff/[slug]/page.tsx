@@ -25,6 +25,7 @@ import HonoraryTimeline from '../HonoraryTimeline';
 import ProgramBreakdownChart from '../ProgramBreakdownChart';
 import FilmScreeningsChart from '../FilmScreeningsChart';
 import FilmOriginsDashboard from '../FilmOriginsDashboard';
+import ContinentStackedChart from '../ContinentStackedChart';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from '../GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from '../grandPrix';
 import VerticalTimeline, { type TimelineEntry } from '../VerticalTimeline';
@@ -966,6 +967,15 @@ function FilmScaleBlock() {
         </ChartFrame>
 
         <ProgramCompositionGraphic maxFilms={maxFilms} />
+
+        <ChartFrame
+          title="Kontinenty po ročnících, skládané na sebe"
+          subtitle="Účasti produkčních zemí podle kontinentu, 1992–2026 – přepínatelné mezi absolutním počtem a podílem na ročníku"
+          source="kviff_continents_corrected_all_years.csv – opravený souhrn proti dvojímu počítání kontinentů u koprodukcí"
+          fullWidth
+        >
+          <ContinentStackedChart />
+        </ChartFrame>
       </SimpleGrid>
     </Box>
   );
