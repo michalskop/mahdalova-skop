@@ -1,6 +1,6 @@
 // app/components/common/LogoWithText.tsx
 
-import { Group, Text, useMantineTheme } from '@mantine/core';
+import { Group, Text, VisuallyHidden, useMantineTheme } from '@mantine/core';
 import Link from 'next/link';
 
 const Logo = () => (
@@ -54,17 +54,20 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
   }[size];
 
   const content = (
-    <Group gap={0} wrap="nowrap">
-      <div style={{ width: logoSize, height: logoSize }}>
+    <Group gap={0} wrap="nowrap" style={{ flexShrink: 0 }}>
+      <div style={{ width: logoSize, height: logoSize, flexShrink: 0 }}>
         <Logo />
       </div>
-      <Text 
+      <Text
         fw={700}
         size={textSize}
         c={textColor}
+        visibleFrom="xs"
+        style={{ whiteSpace: 'nowrap' }}
       >
         Mahdalová & Škop
       </Text>
+      <VisuallyHidden hiddenFrom="xs">Mahdalová & Škop</VisuallyHidden>
     </Group>
   );
 
