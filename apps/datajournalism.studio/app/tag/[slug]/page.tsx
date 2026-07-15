@@ -3,7 +3,7 @@ import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
-import { getAllTags, normalizeTag } from '@/utils/tagUtils';
+import { normalizeTag } from '@/utils/tagUtils';
 import { notFound } from 'next/navigation';
 
 interface PageProps {
@@ -14,8 +14,14 @@ interface PageProps {
 
 // This must be a named export
 export async function generateStaticParams() {
-  const tagMap = await getAllTags();
-  const tags = Array.from(tagMap.keys());
+  const articles = await getArticles(Number.POSITIVE_INFINITY);
+  const tags = Array.from(
+    new Set(
+      articles.flatMap((article) =>
+        article.tags?.map((tag) => normalizeTag(tag)).filter(Boolean) ?? []
+      )
+    )
+  );
   console.log('Generated static paths for tags:', tags);
   return tags.map((tag) => ({ slug: tag }));
 }
@@ -24,19 +30,15 @@ export async function generateStaticParams() {
 export default async function Page({ params }: PageProps) {
   const { slug } = params;
   
-  const tagMap = await getAllTags();
-  const originalTag = tagMap.get(slug);
-
-  if (!originalTag) {
-    notFound();
-  }
-
-  const allArticles = await getArticles(100);
+  const allArticles = await getArticles(Number.POSITIVE_INFINITY);
+  const originalTag = allArticles
+    .flatMap((article) => article.tags ?? [])
+    .find((tag) => normalizeTag(tag) === slug);
   const articles = allArticles.filter(article => 
     article.tags?.some(tag => normalizeTag(tag) === slug)
   );
 
-  if (!articles || articles.length === 0) {
+  if (!originalTag || !articles || articles.length === 0) {
     notFound();
   }
 

@@ -157,12 +157,30 @@ export async function getArticleBySlug(directorySlug: string) {
     htmlEmbedData[htmlFile] = fs.readFileSync(htmlPath, 'utf8');
   }
 
+  // Find and load data for MotionsStancesTable
+  let tableData: any[] = [];
+  const tableRegex = /<MotionsStancesTable[^>]*dataFile="([^"]+)"/;
+  const match = content.match(tableRegex);
+
+  if (match && match[1]) {
+    const dataFilePath = path.join(articleDir, match[1]);
+    if (fs.existsSync(dataFilePath)) {
+      try {
+        const dataFileContent = fs.readFileSync(dataFilePath, 'utf8');
+        tableData = JSON.parse(dataFileContent);
+      } catch (e) {
+        console.error(`Failed to parse JSON from ${dataFilePath}`, e);
+      }
+    }
+  }
+
   // Pre-fetch article pool for RelatedArticles MDX component
   const relatedArticlesPool = await getArticles(9999, undefined, true);
   const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
 
   const mdxSource = await serialize(content, {
     scope: {
+      tableData: tableData,
       timelineData: timelineData,
       styledTableData: styledTableData,
       htmlEmbedData: htmlEmbedData,

@@ -57,8 +57,21 @@ export const minFilmYear = filmCountAvailableRows.reduce((min, row) => (row.tota
 export const latestScreeningsPerFilm = Math.round((latestClosedFilmYear.screenings! / latestClosedFilmYear.totalFilms!) * 100) / 100;
 export const firstScreeningsPerFilm = Math.round((filmScreeningRows[0].screenings! / filmScreeningRows[0].totalFilms!) * 100) / 100;
 
+function average(values: number[]) {
+  return Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
+}
+
+function periodStats(fromYear: number, toYear: number) {
+  const rows = filmCountAvailableRows.filter((row) => row.year >= fromYear && row.year <= toYear);
+  const screeningRows = rows.filter((row): row is FilmCountRow & { screenings: number } => typeof row.screenings === 'number');
+  return {
+    avgFilms: average(rows.map((row) => row.totalFilms!)),
+    avgScreenings: average(screeningRows.map((row) => row.screenings)),
+  };
+}
+
 export const filmScaleByPeriod = [
-  { period: '1995-2003', label: 'Růst programu', avgFilms: 267, avgScreenings: 457 },
-  { period: '2004-2017', label: 'Stabilizace', avgFilms: 231, avgScreenings: 463 },
-  { period: '2018-2025', label: 'Menší katalog, hustší provoz', avgFilms: 181, avgScreenings: 470 },
-];
+  { period: '1995-2003', label: 'Růst programu', from: 1995, to: 2003 },
+  { period: '2004-2017', label: 'Stabilizace', from: 2004, to: 2017 },
+  { period: '2018-2025', label: 'Menší katalog, hustší provoz', from: 2018, to: 2025 },
+].map((row) => ({ ...row, ...periodStats(row.from, row.to) }));

@@ -5,7 +5,8 @@
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MdxClient } from '@repo/ui/components/MdxClient';
 import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock } from './MediaBox';
@@ -447,30 +448,25 @@ export function ArticleRenderer({
 
         <div className="article-content">
           {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} /> : null}
-          <MDXRemote {...mdxSource} components={components} />
+          <MdxClient {...mdxSource} components={components} />
         </div>
       </Stack>
     </Paper>
   );
 
-  // Conditionally wrap with Container
+  // Conditionally wrap with Container. Link colours for the article body come
+  // from `.article-links` rules in app/globals.css; the optional per-article
+  // textColor is passed down as a CSS custom property.
   return withContainer ? (
-    <Container size="md" pb="lg" style={{ overflow: 'visible' }}>
-      <style>{`
-        .markdown-content a {
-          color: ${textColor || theme.colors.brand[6]};
-          text-decoration: none;
-        }
-        .markdown-content a:hover {
-          color: ${theme.colors.brand[7]};
-        }
-        .markdown-content a:active {
-          color: ${theme.colors.brand[8]};
-        }
-        .markdown-content a:visited {
-          color: ${theme.colors.brand[5]};
-        }
-      `}</style>
+    <Container
+      size="md"
+      pb="lg"
+      className="article-links"
+      style={{
+        overflow: 'visible',
+        ...(textColor ? ({ '--article-link-color': textColor } as React.CSSProperties) : {}),
+      }}
+    >
       {content}
     </Container>
   ) : content;

@@ -11,7 +11,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test:static": "node scripts/check-static-export.mjs"
   },
   "devDependencies": {
     "@types/estree": "^1.0.6",
@@ -26,7 +27,6 @@
     "@mantine/carousel": "^7.14.0",
     "@mantine/core": "^7.15.1",
     "@mantine/hooks": "^7.15.1",
-    "@mantine/styles": "^6.0.22",
     "@tabler/icons-react": "^3.24.0",
     "@types/js-yaml": "^4.0.9",
     "embla-carousel-autoplay": "^8.3.1",

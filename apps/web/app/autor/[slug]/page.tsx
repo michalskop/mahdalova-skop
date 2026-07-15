@@ -14,8 +14,14 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const authorMap = await getAllAuthors();
-  const authors = Array.from(authorMap.keys());
+  const articles = await getArticles(Number.POSITIVE_INFINITY);
+  const authors = Array.from(
+    new Set(
+      articles.flatMap((article) =>
+        splitAuthors(article.author).map((author) => normalizeAuthor(author)).filter(Boolean)
+      )
+    )
+  );
   console.log('Generated static paths for authors:', authors);
   return authors.map((author) => ({ slug: author }));
 }
@@ -30,7 +36,7 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  const allArticles = await getArticles(100);
+  const allArticles = await getArticles(Number.POSITIVE_INFINITY);
   const articles = allArticles.filter((article) =>
     splitAuthors(article.author).some((a) => normalizeAuthor(a) === slug)
   );

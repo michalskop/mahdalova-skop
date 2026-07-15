@@ -20,10 +20,12 @@ import { honoraryByPeriod, honoraryCrystalGlobeRecipients, honoraryDoubleWomanYe
 import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from '../films';
 import { countryPresence2026, countryPresenceMax, countryPresenceTop, countryPresenceTotal, countryRegionTotals } from '../countries';
 import { countryHistory, countryHistoryTopCountries } from '../countries-history';
+import { continentHistory } from '../continents-history';
 import HonoraryTimeline from '../HonoraryTimeline';
 import ProgramBreakdownChart from '../ProgramBreakdownChart';
 import FilmScreeningsChart from '../FilmScreeningsChart';
 import FilmOriginsDashboard from '../FilmOriginsDashboard';
+import ContinentStackedChart from '../ContinentStackedChart';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from '../GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from '../grandPrix';
 import VerticalTimeline, { type TimelineEntry } from '../VerticalTimeline';
@@ -125,6 +127,44 @@ const countryHistoryPeriods = [
       })),
   };
 });
+
+const middleEastByPeriod = [
+  { period: '1992–2003', from: 1992, to: 2003 },
+  { period: '2004–2017', from: 2004, to: 2017 },
+  { period: '2018–2026', from: 2018, to: 2026 },
+].map(({ period, from, to }) => {
+  const rows = continentHistory.filter((row) => row.year >= from && row.year <= to);
+  const middleEast = rows.reduce((sum, row) => sum + (row.continents['Blízký východ'] ?? 0), 0);
+  const total = rows.reduce((sum, row) => sum + Object.values(row.continents).reduce((a, b) => a + b, 0), 0);
+  return { period, share: Math.round((middleEast / total) * 1000) / 10 };
+});
+const maxMiddleEastShare = Math.max(...middleEastByPeriod.map((row) => row.share));
+
+function MiddleEastPanel() {
+  return (
+    <ChartFrame
+      title="Blízký východ získává na mapě víc místa"
+      subtitle="Podíl Blízkého východu na všech účastech produkčních zemí v katalogu, podle období"
+      source="kviff_continents_corrected_all_years.csv – opravený souhrn proti dvojímu počítání kontinentů u koprodukcí"
+      fullWidth
+    >
+      <Text size="lg">
+        V prvních dvanácti ročnících po roce 1992 tvořil Blízký východ jen {formatPercent(middleEastByPeriod[0].share)} všech účastí produkčních zemí v katalogu. V období 2004–2017 to bylo už {formatPercent(middleEastByPeriod[1].share)} a v posledních ročnících 2018–2026 {formatPercent(middleEastByPeriod[2].share)} – podíl se tedy za tři období víc než ztrojnásobil, i když celkový katalog byl v posledním období menší než v tom prvním.
+      </Text>
+      <Text mt="sm">
+        Nejde o to, že by Blízký východ najednou dodával desítky filmů ročně – v absolutních číslech pořád jde o menší kinematografie než evropská nebo severoamerická produkce. Roste ale jeho stabilní přítomnost v programu napříč ročníky, na rozdíl třeba od jednorázových vln typu Jižní Koreje 2001 nebo Austrálie 1997. To je čitelnější jako dlouhodobý posun v koprodukční síti a programové dramaturgii než jako náhodný výkyv jednoho ročníku.
+      </Text>
+      <Stack gap="sm" mt="lg">
+        {middleEastByPeriod.map((row) => (
+          <DataBar key={row.period} label={row.period} value={row.share} max={maxMiddleEastShare} color="var(--mantine-color-brandNavy-6)" suffix="%" />
+        ))}
+      </Stack>
+      <Text mt="md" size="sm" c="dimmed">
+        Podíl počítáme z účastí produkčních zemí (koprodukce se do kontinentu započítá jednou, i když má víc zemí ze stejného kontinentu), ne z počtu filmů – jde o vnitřní trend KVIFF, ne o srovnání s jinými festivaly nebo se světovou filmovou produkcí.
+      </Text>
+    </ChartFrame>
+  );
+}
 
 function HonoraryDotTimeline() {
   return (
@@ -742,9 +782,18 @@ function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
       </Text>
 
       <Box mb="xl">
-        <Group justify="space-between" mb={6}>
+        <Group justify="space-between" mb={6} wrap="wrap">
           <Text fw={900}>Celá dostupná řada: kolik filmů festival uváděl</Text>
-          <Text size="sm" c="dimmed">zvýrazněné roky mají úplné členění</Text>
+          <Group gap={12} wrap="nowrap">
+            <Group gap={5} wrap="nowrap">
+              <Box w={9} h={9} bg="var(--mantine-color-brandTeal-6)" style={{ borderRadius: 999, flex: '0 0 auto' }} />
+              <Text size="sm" c="dimmed">má členění</Text>
+            </Group>
+            <Group gap={5} wrap="nowrap">
+              <Box w={9} h={9} bg="var(--mantine-color-background-7)" style={{ borderRadius: 999, flex: '0 0 auto' }} />
+              <Text size="sm" c="dimmed">jen celkový počet</Text>
+            </Group>
+          </Group>
         </Group>
         <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
           <Box
@@ -826,6 +875,8 @@ function FilmScaleBlock() {
       >
         <FilmOriginsDashboard />
       </ChartFrame>
+
+      <MiddleEastPanel />
 
       <ChartFrame
         title="Program se po maximu zmenšil, ale zhoustl"
@@ -916,6 +967,15 @@ function FilmScaleBlock() {
         </ChartFrame>
 
         <ProgramCompositionGraphic maxFilms={maxFilms} />
+
+        <ChartFrame
+          title="Kontinenty po ročnících, skládané na sebe"
+          subtitle="Účasti produkčních zemí podle kontinentu, 1992–2026 – přepínatelné mezi absolutním počtem a podílem na ročníku"
+          source="kviff_continents_corrected_all_years.csv – opravený souhrn proti dvojímu počítání kontinentů u koprodukcí"
+          fullWidth
+        >
+          <ContinentStackedChart />
+        </ChartFrame>
       </SimpleGrid>
     </Box>
   );

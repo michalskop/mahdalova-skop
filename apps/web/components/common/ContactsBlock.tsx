@@ -3,7 +3,7 @@
 
 import { Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem,useMantineTheme }from '@mantine/core';
 import {
-  IconMail, 
+  IconMail,
   IconPhone, 
   IconBrandX, 
   IconBrandThreads,
@@ -99,21 +99,9 @@ function ProtectedEmail({ emailUser, emailDomain }: { emailUser: string; emailDo
 export function ContactsBlock() {
   const theme = useMantineTheme();
   
+  // Link colours for #kontakty come from app/globals.css.
   return (
     <>
-    <style>{`
-      #kontakty a {
-        color: ${theme.colors.brand[6]};
-        text-decoration: none;
-      }
-      #kontakty a:hover {
-        text-decoration: underline;
-      }
-      #kontakty a:active,
-      #kontakty a:visited {
-        color: ${theme.colors.brand[6]};
-      }
-    `}</style>
     <Paper
       id="kontakty" 
       style={{ scrollMarginTop: '100px' }}

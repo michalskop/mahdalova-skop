@@ -1,0 +1,38 @@
+/* Global styles that previously lived in <Global> components from the legacy
+   @mantine/styles (v6) package. Colour values reference Mantine v7 CSS
+   variables so they stay in sync with the theme in ThemeProvider. */
+
+/* Article body links (ArticleRenderer with withContainer=true).
+   --article-link-color is set by ArticleRenderer when an article defines a
+   custom text colour. */
+.article-links .markdown-content a {
+  color: var(--article-link-color, var(--mantine-color-brand-6));
+  text-decoration: none;
+}
+
+.article-links .markdown-content a:hover {
+  color: var(--mantine-color-brand-7);
+}
+
+.article-links .markdown-content a:active {
+  color: var(--mantine-color-brand-8);
+}
+
+.article-links .markdown-content a:visited {
+  color: var(--mantine-color-brand-5);
+}
+
+/* Contact block links (ContactsBlock). */
+#kontakty a {
+  color: var(--mantine-color-brand-6);
+  text-decoration: none;
+}
+
+#kontakty a:hover {
+  text-decoration: underline;
+}
+
+#kontakty a:active,
+#kontakty a:visited {
+  color: var(--mantine-color-brand-6);
+}
