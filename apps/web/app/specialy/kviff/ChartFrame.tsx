@@ -21,9 +21,10 @@ interface ChartFrameProps {
   source: string;
   children: React.ReactNode;
   fullWidth?: boolean;
+  headerContent?: React.ReactNode;
 }
 
-export default function ChartFrame({ title, subtitle, source, children, fullWidth }: ChartFrameProps) {
+export default function ChartFrame({ title, subtitle, source, children, fullWidth, headerContent }: ChartFrameProps) {
   return (
     <div
       style={{
@@ -41,6 +42,7 @@ export default function ChartFrame({ title, subtitle, source, children, fullWidt
           {subtitle && (
             <div style={{ ...NUM_FONT, fontSize: 14, lineHeight: 1.3, color: '#333333' }}>{subtitle}</div>
           )}
+          {headerContent && <div style={{ display: 'flex', justifyContent: 'center', marginTop: 10 }}>{headerContent}</div>}
         </div>
         <ChartSignature size={34} layout="stacked" style={{ lineHeight: 1, alignSelf: 'center' }} />
       </div>

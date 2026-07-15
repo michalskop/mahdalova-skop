@@ -871,6 +871,7 @@ function FilmScaleBlock() {
           title="Odkud přijíždějí filmy na festival v Karlových Varech"
           subtitle={`Bublina = produkční země; velikost podle počtu filmů, u kterých je země uvedena. Dataset pokrývá ${countryHistory.length} ročníků novodobé éry.`}
           source="Oficiální archiv filmu KVIFF, lokální country export"
+          headerContent={<div id="kviff-map-mode-toggle" />}
           fullWidth
       >
         <FilmOriginsDashboard />

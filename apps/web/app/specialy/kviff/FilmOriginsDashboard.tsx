@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Badge, Box, Group, Paper, SimpleGrid, Stack, Text, TextInput, Title } from '@mantine/core';
 import { IconPlayerPauseFilled, IconPlayerPlayFilled, IconSearch, IconX } from '@tabler/icons-react';
 import {
@@ -338,17 +339,35 @@ function labelsOverlap(a: { x1: number; y1: number; x2: number; y2: number }, b:
   return a.x1 < b.x2 && a.x2 > b.x1 && a.y1 < b.y2 && a.y2 > b.y1;
 }
 
+type MapMode = 'annual' | 'cumulative';
+
+function MapModeToggle({ mode, onChange }: { mode: MapMode; onChange: (mode: MapMode) => void }) {
+  return (
+    <Box role="group" aria-label="Přepínač zobrazení: ročně, nebo kumulativně" style={{ display: 'inline-flex', border: '1.5px solid var(--mantine-color-brandNavy-9)', borderRadius: 999, overflow: 'hidden', background: 'var(--mantine-color-background-0)' }}>
+      {([
+        { key: 'cumulative', label: 'Kumulativně' },
+        { key: 'annual', label: 'Ročně' },
+      ] as const).map(({ key, label }) => (
+        <button key={key} type="button" onClick={() => onChange(key)} aria-pressed={mode === key} style={{ border: 0, padding: '7px 16px', background: mode === key ? 'var(--mantine-color-brandNavy-9)' : 'transparent', color: mode === key ? '#fdfbf7' : 'var(--mantine-color-dark-6)', fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontWeight: 800, fontSize: 13, letterSpacing: '0.02em', textTransform: 'uppercase', cursor: 'pointer', transition: 'background 0.15s ease, color 0.15s ease' }}>
+          {label}
+        </button>
+      ))}
+    </Box>
+  );
+}
+
 export default function FilmOriginsDashboard() {
   const countries = useMemo(() => buildCountries(), []);
   const years = useMemo(() => Array.from({ length: YEAR_MAX - YEAR_MIN + 1 }, (_, i) => YEAR_MIN + i), []);
   const [year, setYear] = useState(2026);
-  const [mode, setMode] = useState<'annual' | 'cumulative'>('cumulative');
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [mapZoom, setMapZoom] = useState(WORLD_MAP_DEFAULT_VIEW.zoom);
+  const [mode, setMode] = useState<MapMode>('cumulative');
+  const [modePortalReady, setModePortalReady] = useState(false);
   const [mapOffset, setMapOffset] = useState({ ...WORLD_MAP_DEFAULT_VIEW.offset });
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -380,18 +399,18 @@ export default function FilmOriginsDashboard() {
     .filter((item) => item <= year)
     .reduce((sum, item) => sum + (yearRows.get(item)?.films ?? filmTotals[item] ?? 0), 0);
   const filmsForCard = mode === 'annual' ? (currentRow?.films ?? filmTotals[year] ?? 0) : filmsCumulativeToYear;
-  const filmsCardLabel = mode === 'annual' ? `filmů v roce ${year}` : `filmů celkem k roku ${year}`;
+  const periodCardLabel = mode === 'annual' ? 'ročník' : 'období';
+  const periodCardValue = mode === 'annual' ? year : `1992–${year}`;
+  const filmsCardLabel = mode === 'annual' ? `filmů v roce ${year}` : 'filmů celkem';
   const countriesForCard = mode === 'annual'
     ? countries.filter((country) => country.years[year]).length
     : countries.filter((country) => years.some((item) => item <= year && (country.years[item] ?? 0) > 0)).length;
-  const countriesCardLabel = mode === 'annual' ? `zemí v roce ${year}` : `zemí celkem k roku ${year}`;
+  const countriesCardLabel = mode === 'annual' ? `zemí v roce ${year}` : 'zemí celkem';
   const coproductionsCumulativeToYear = years
     .filter((item) => item <= year)
     .reduce((sum, item) => sum + (yearRows.get(item)?.coproductions ?? 0), 0);
   const coproductionsForCard = mode === 'annual' ? (currentRow?.coproductions ?? 0) : coproductionsCumulativeToYear;
-  const coproductionsCardLabel = mode === 'annual'
-    ? `koprodukčních filmů v roce ${year}`
-    : `koprodukčních filmů celkem k roku ${year}`;
+  const coproductionsCardLabel = 'koprodukčních';
   const globalMaxAnnual = Math.max(...countries.flatMap((country) => years.map((item) => country.years[item] ?? 0)));
   const globalMaxCumulative = Math.max(...countries.map((country) => country.total));
   const cumulativeFor = (country: CountrySummary) => years.filter((item) => item <= year).reduce((sum, item) => sum + (country.years[item] ?? 0), 0);
@@ -509,6 +528,10 @@ export default function FilmOriginsDashboard() {
   }
 
   useEffect(() => {
+    setModePortalReady(true);
+  }, []);
+
+  useEffect(() => {
     if (!isPlaying) return undefined;
     const timer = window.setInterval(() => {
       setYear((currentYear) => nextPlayableYear(currentYear));
@@ -549,69 +572,32 @@ export default function FilmOriginsDashboard() {
   }
 
   return (
-    <Stack gap="md">
+    <>
+      {modePortalReady && typeof document !== 'undefined' && document.getElementById('kviff-map-mode-toggle')
+        ? createPortal(<MapModeToggle mode={mode} onChange={setMode} />, document.getElementById('kviff-map-mode-toggle')!)
+        : null}
+      <Stack gap="md">
       <SimpleGrid cols={{ base: 2, md: 4 }} spacing="sm">
         <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">ročník</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{year}</Text>
+          <Text c="dimmed" size="sm">{periodCardLabel}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{periodCardValue}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{countriesCardLabel}</Text>
           <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(countriesForCard)}</Text>
         </Paper>
         <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">{coproductionsCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(coproductionsForCard)}</Text>
-        </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
           <Text c="dimmed" size="sm">{filmsCardLabel}</Text>
           <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(filmsForCard)}</Text>
+        </Paper>
+        <Paper p="md" radius={4} bg="#f8f6f0">
+          <Text c="dimmed" size="sm">{coproductionsCardLabel}</Text>
+          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(coproductionsForCard)}</Text>
         </Paper>
       </SimpleGrid>
 
       <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="sm">
         <Paper p="sm" radius={4} bg="#f8f6f0" style={{ gridColumn: '1 / -1' }}>
-          <Group justify="end" align="center" mb={6}>
-            <Box
-              role="group"
-              aria-label="Přepínač zobrazení: ročně, nebo kumulativně"
-              style={{
-                display: 'inline-flex',
-                border: '1.5px solid var(--mantine-color-brandNavy-9)',
-                borderRadius: 999,
-                overflow: 'hidden',
-                background: 'var(--mantine-color-background-0)',
-              }}
-            >
-              {([
-                { key: 'cumulative', label: 'Kumulativně' },
-                { key: 'annual', label: 'Ročně' },
-              ] as const).map(({ key, label }) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setMode(key)}
-                  aria-pressed={mode === key}
-                  style={{
-                    border: 0,
-                    padding: '7px 16px',
-                    background: mode === key ? 'var(--mantine-color-brandNavy-9)' : 'transparent',
-                    color: mode === key ? '#fdfbf7' : 'var(--mantine-color-dark-6)',
-                    fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-                    fontWeight: 800,
-                    fontSize: 13,
-                    letterSpacing: '0.02em',
-                    textTransform: 'uppercase',
-                    cursor: 'pointer',
-                    transition: 'background 0.15s ease, color 0.15s ease',
-                  }}
-                >
-                  {label}
-                </button>
-              ))}
-            </Box>
-          </Group>
-
           <Box
             style={{
               position: 'relative',
@@ -1183,6 +1169,7 @@ export default function FilmOriginsDashboard() {
           </Stack>
         </Paper>
       </SimpleGrid>
-    </Stack>
+      </Stack>
+    </>
   );
 }
