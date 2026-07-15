@@ -365,10 +365,10 @@ export default function FilmOriginsDashboard() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [mapZoom, setMapZoom] = useState(WORLD_MAP_DEFAULT_VIEW.zoom);
+  const [mapZoom, setMapZoom] = useState<number>(WORLD_MAP_DEFAULT_VIEW.zoom);
   const [mode, setMode] = useState<MapMode>('cumulative');
   const [modePortalReady, setModePortalReady] = useState(false);
-  const [mapOffset, setMapOffset] = useState({ ...WORLD_MAP_DEFAULT_VIEW.offset });
+  const [mapOffset, setMapOffset] = useState<{ x: number; y: number }>({ ...WORLD_MAP_DEFAULT_VIEW.offset });
   const [mapTooltip, setMapTooltip] = useState<MapTooltip>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -720,28 +720,24 @@ export default function FilmOriginsDashboard() {
               )}
             </Box>
 
-            <Group gap={4} style={{ position: 'absolute', zIndex: 4, right: 12, top: 12 }}>
-              <button
-                type="button"
-                onClick={() => zoomToward(mapZoom - 0.4, { x: 480, y: 410 })}
-                aria-label="Oddálit mapu"
-                disabled={mapZoom <= MIN_ZOOM}
-                style={{
-                  width: 28,
-                  height: 28,
-                  border: '1px solid var(--mantine-color-background-6)',
-                  borderRadius: 4,
-                  background: 'rgba(253, 251, 247, 0.92)',
-                  color: 'var(--mantine-color-dark-8)',
-                  cursor: mapZoom <= MIN_ZOOM ? 'not-allowed' : 'pointer',
-                  fontSize: 18,
-                  fontWeight: 900,
-                  lineHeight: '24px',
-                  opacity: mapZoom <= MIN_ZOOM ? 0.45 : 1,
-                }}
-              >
-                -
-              </button>
+            <Box
+              role="group"
+              aria-label="Ovládání přiblížení mapy"
+              style={{
+                position: 'absolute',
+                zIndex: 4,
+                right: 12,
+                top: 12,
+                display: 'flex',
+                flexDirection: 'column',
+                width: 28,
+                border: '1px solid var(--mantine-color-background-6)',
+                borderRadius: 4,
+                overflow: 'hidden',
+                background: 'rgba(253, 251, 247, 0.92)',
+                boxShadow: '0 1px 3px rgba(16, 20, 50, 0.15)',
+              }}
+            >
               <button
                 type="button"
                 onClick={() => zoomToward(mapZoom + 0.4, { x: 480, y: 410 })}
@@ -750,9 +746,8 @@ export default function FilmOriginsDashboard() {
                 style={{
                   width: 28,
                   height: 28,
-                  border: '1px solid var(--mantine-color-background-6)',
-                  borderRadius: 4,
-                  background: 'rgba(253, 251, 247, 0.92)',
+                  border: 0,
+                  background: 'transparent',
                   color: 'var(--mantine-color-dark-8)',
                   cursor: mapZoom >= MAX_ZOOM ? 'not-allowed' : 'pointer',
                   fontSize: 18,
@@ -763,7 +758,28 @@ export default function FilmOriginsDashboard() {
               >
                 +
               </button>
-            </Group>
+              <button
+                type="button"
+                onClick={() => zoomToward(mapZoom - 0.4, { x: 480, y: 410 })}
+                aria-label="Oddálit mapu"
+                disabled={mapZoom <= MIN_ZOOM}
+                style={{
+                  width: 28,
+                  height: 28,
+                  border: 0,
+                  borderTop: '1px solid var(--mantine-color-background-6)',
+                  background: 'transparent',
+                  color: 'var(--mantine-color-dark-8)',
+                  cursor: mapZoom <= MIN_ZOOM ? 'not-allowed' : 'pointer',
+                  fontSize: 18,
+                  fontWeight: 900,
+                  lineHeight: '24px',
+                  opacity: mapZoom <= MIN_ZOOM ? 0.45 : 1,
+                }}
+              >
+                −
+              </button>
+            </Box>
 
             <WorldMapViewport
               ref={svgRef}
