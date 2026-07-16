@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button, Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core'; 
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
+import { Box, Button, Container, Group, Burger, Drawer, Stack, ActionIcon, useMantineColorScheme, useMantineTheme } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LogoWithText from '@/components/common/LogoWithText';
@@ -24,7 +24,6 @@ export function HeaderSimple() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const theme = useMantineTheme();
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.xs})`);
 
 
   useEffect(() => {
@@ -77,7 +76,7 @@ export function HeaderSimple() {
       <header className={classes.header} style={{ height: headerHeight }}>
         <Container size="md" className={classes.inner}>
           <LogoWithText color={logoColor} size="md" />
-          <Group gap={5} visibleFrom="xs">
+          <Group gap={5} visibleFrom="md">
             {items}
           </Group>
         </Container>
@@ -102,27 +101,26 @@ export function HeaderSimple() {
           flex="flex" 
           style={{ justifyContent: 'space-between', alignItems: 'center', gap: '20px', paddingBottom: '0', borderBottom: 'none' }}
         >
-          <LogoWithText  color={logoColor}/>
-          <Button
-            component="a"
-            href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
-            c={theme.colors.brandRoyalBlue[9]}
-            color={theme.colors.brandYellow[6]}
-            target="_blank"
-            radius="xl"
-            style={{
-              fontSize: isMobile ? '0.7rem' : 'inherit',
-              // marginLeft: '20px', // Add padding to the left
-              '&:hover': {
-                bg: theme.colors.brand[7], // Change to your desired hover color
-              },
-            }}
-          >{isMobile ? 'Podpořit' : 'Podpořte nás'}</Button>
-          <Group gap={10} visibleFrom="sm" ml="auto">
-            {items}
-          </Group>
-          <Group>
-            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color={theme.colors.brand[5]} />
+          <Box style={{ flexShrink: 0 }}>
+            <LogoWithText color={logoColor} />
+          </Box>
+          <Group gap={16} wrap="nowrap" style={{ flexShrink: 0 }}>
+            <Button
+              component="a"
+              href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
+              c={theme.colors.brandRoyalBlue[9]}
+              color={theme.colors.brandYellow[6]}
+              target="_blank"
+              radius="xl"
+              style={{ flexShrink: 0 }}
+            >
+              <Box component="span" hiddenFrom="xs">Podpořit</Box>
+              <Box component="span" visibleFrom="xs">Podpořte nás</Box>
+            </Button>
+            <Group gap={10} visibleFrom="md" wrap="nowrap">
+              {items}
+            </Group>
+            <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" color={theme.colors.brand[5]} />
           </Group>
         </Container>
       </header>
@@ -133,7 +131,7 @@ export function HeaderSimple() {
         size="100%"
         padding="md"
         title="Menu"
-        hiddenFrom="xs"
+        hiddenFrom="md"
         zIndex={1000}
       >
         <Stack>
