@@ -16,6 +16,7 @@ import Timeline from '@/components/common/Timeline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import HtmlEmbed from '@/components/a/HtmlEmbed';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
+import { FactCheckBox } from '@repo/ui/components/FactCheckBox';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -177,6 +178,7 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
+    FactCheckBox: (props) => <FactCheckBox {...props} locale="en-US" />,
     FlourishEmbed,
     code: CodeBlock,  // This handles the ```box syntax
 

@@ -38,6 +38,7 @@ yarn-error.log*
 .DS_Store
 *.pem
 .~lock.*
-.claude/
+.claude/*
+!.claude/skills/
 
 __pycache__/

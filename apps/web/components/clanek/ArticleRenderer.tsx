@@ -24,6 +24,7 @@ import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
+import { FactCheckBox } from '@repo/ui/components/FactCheckBox';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -188,6 +189,7 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
+    FactCheckBox: (props) => <FactCheckBox {...props} locale="cs-CZ" />,
     KeyNumbers: ({ yamlFile, ...props }) => {
       // If yamlFile is provided, use pre-loaded data from server
       if (yamlFile) {

@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { remarkBoxPlugin } from './remark-box-plugin'; // Your custom plugin
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
+import { remarkFactCheckPlugin } from './remark-factcheck-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
 import type { TimelineContent } from '@/types/timeline';
 import { getArticles } from '@/components/common/getArticles';
@@ -169,7 +170,7 @@ export async function getArticleBySlug(directorySlug: string) {
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {
-      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
+      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin, remarkFactCheckPlugin],
       rehypePlugins: [[rehypeRaw, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement', 'mdxFlowExpression', 'mdxTextExpression', 'mdxjsEsm'] }]],
     },
   });
