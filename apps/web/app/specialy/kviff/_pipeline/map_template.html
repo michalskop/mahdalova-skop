@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odkud přijíždějí filmy na KVIFF · DataTimes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@600;800&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #101432; --crimson: #de1743; --yellow: #ffcf02; --orange: #f76800;
+    --gold: #efb704; --cream: #f8f6f0; --ink: #1a1a1a; --muted: #555;
+    --line: #e8e3d2;
+    --c-afrika: #1a9fbd; --c-amjih: #ff5c4a; --c-amsev: #12b886;
+    --c-asie: #8b7fd4; --c-austr: #f76800; --c-blizky: #5fcce6; --c-evropa: #ffcf02;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Roboto, Arial, sans-serif; background: var(--cream);
+    color: var(--ink); line-height: 1.5;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 20px 16px 40px; }
+  h1, h2, h3 { font-family: 'Roboto Slab', Georgia, serif; color: var(--navy); }
+  h1 { font-size: clamp(1.5rem, 3.4vw, 2.2rem); font-weight: 800; line-height: 1.15; }
+  .kicker {
+    color: var(--crimson); text-transform: uppercase; font-weight: 700;
+    font-size: .78rem; letter-spacing: .08em; margin-bottom: 6px;
+  }
+  .lead { max-width: 720px; margin-top: 10px; color: var(--ink); font-size: 1.02rem; }
+  .num { font-family: 'Roboto Condensed', Arial, sans-serif; font-variant-numeric: tabular-nums; }
+
+  /* roční statistiky */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 22px 0 14px; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
+  .stat b { display: block; font-size: 1.5rem; color: var(--crimson); font-family: 'Roboto Condensed', Arial, sans-serif; }
+  .stat span { font-size: .8rem; color: var(--muted); font-weight: 500; }
+
+  /* hlavní mřížka */
+  .main { display: grid; grid-template-columns: 1fr 320px; gap: 14px; align-items: start; }
+  .map-card { background: var(--navy); border-radius: 10px; padding: 10px 10px 4px; position: relative; }
+  .map-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 2px 4px 8px; flex-wrap: wrap; }
+  .mode { display: flex; border: 1px solid rgba(248,246,240,.35); border-radius: 999px; overflow: hidden; }
+  .mode button {
+    background: transparent; color: var(--cream); border: 0; font: 700 .78rem Roboto, sans-serif;
+    padding: 5px 12px; cursor: pointer; letter-spacing: .02em;
+  }
+  .mode button[aria-pressed="true"] { background: var(--crimson); }
+  .map-year {
+    color: var(--yellow); font-family: 'Roboto Slab', serif; font-weight: 800;
+    font-size: 1.5rem; letter-spacing: .02em;
+  }
+  #map { width: 100%; height: auto; display: block; }
+  .land { fill: #1c2148; stroke: #2c3364; stroke-width: .5; }
+  .bubble { stroke: rgba(16,20,50,.85); stroke-width: 1; cursor: pointer; transition: r .25s ease; }
+  .bubble:hover, .bubble:focus { stroke: #fff; stroke-width: 1.5; outline: none; }
+  .bubble.selected { stroke: #fff; stroke-width: 2; }
+
+  /* tooltip */
+  #tip {
+    position: fixed; pointer-events: none; z-index: 30; display: none;
+    background: var(--navy); color: var(--cream); border-radius: 6px;
+    padding: 6px 10px; font-size: .82rem; box-shadow: 0 4px 14px rgba(0,0,0,.35);
+    max-width: 220px;
+  }
+  #tip b { color: var(--yellow); }
+
+  /* časová osa */
+  .timeline { margin-top: 8px; padding: 4px 4px 10px; }
+  .tl-row { display: flex; align-items: center; gap: 8px; }
+  .play {
+    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
+    border: 0; background: var(--crimson); color: #fff; font-size: 1rem;
+    cursor: pointer; line-height: 1;
+  }
+  .play:hover { filter: brightness(1.12); }
+  .years { display: flex; flex: 1; gap: 2px; }
+  .yearcell {
+    flex: 1; height: 26px; border: 0; border-radius: 3px; cursor: pointer;
+    background: rgba(248,246,240,.16); position: relative; padding: 0;
+  }
+  .yearcell:hover { background: rgba(248,246,240,.38); }
+  .yearcell[aria-pressed="true"] { background: var(--yellow); }
+  .yearcell.missed {
+    cursor: default;
+    background: repeating-linear-gradient(45deg, rgba(248,246,240,.05) 0 3px, rgba(248,246,240,.28) 3px 6px);
+  }
+  .tl-labels { display: flex; margin-left: 46px; justify-content: space-between; color: rgba(248,246,240,.75); font-size: .72rem; padding: 4px 2px 0; }
+  .tl-note { color: rgba(248,246,240,.65); font-size: .72rem; margin: 6px 0 0 46px; }
+  .tl-note i { display: inline-block; width: 14px; height: 10px; vertical-align: -1px; margin-right: 4px;
+    background: repeating-linear-gradient(45deg, rgba(248,246,240,.05) 0 3px, rgba(248,246,240,.28) 3px 6px); border-radius: 2px; }
+
+  /* pravý panel */
+  .side { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px; min-height: 420px; }
+  .side h3 { font-size: 1rem; margin-bottom: 10px; }
+  .cont-row { display: grid; grid-template-columns: 10px 1fr auto; gap: 8px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line); }
+  .cont-row:last-of-type { border-bottom: 0; }
+  .cont-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .cont-name { font-size: .85rem; font-weight: 500; }
+  .cont-name small { display: block; color: var(--muted); font-weight: 400; font-size: .74rem; }
+  .cont-val { text-align: right; font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 700; font-size: 1.05rem; }
+  .cont-spark { grid-column: 2 / 4; }
+  .side-note { font-size: .74rem; color: var(--muted); margin-top: 10px; }
+
+  /* karta země */
+  .back { background: none; border: 0; color: var(--crimson); font: 700 .8rem Roboto, sans-serif; cursor: pointer; padding: 0 0 8px; }
+  .country-name { font-family: 'Roboto Slab', serif; font-weight: 800; font-size: 1.3rem; color: var(--navy); line-height: 1.2; }
+  .chip { display: inline-block; font-size: .7rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; color: var(--navy); margin: 6px 0 10px; }
+  .kv { display: flex; justify-content: space-between; gap: 8px; font-size: .84rem; padding: 5px 0; border-bottom: 1px dashed var(--line); }
+  .kv b { font-family: 'Roboto Condensed', Arial, sans-serif; font-size: .95rem; white-space: nowrap; }
+  .headline {
+    background: var(--cream); border-left: 4px solid var(--crimson);
+    padding: 8px 10px; font-size: .88rem; margin: 10px 0; border-radius: 0 6px 6px 0;
+  }
+  .films-list { font-size: .8rem; color: var(--ink); margin-top: 6px; }
+  .films-list li { margin: 3px 0 3px 16px; }
+  .partners { font-size: .78rem; color: var(--muted); margin-top: 6px; }
+  .sec-label { text-transform: uppercase; font-size: .68rem; letter-spacing: .07em; font-weight: 700; color: var(--muted); margin-top: 12px; }
+
+  /* souhrn */
+  .summary { margin-top: 26px; }
+  .summary h2 { font-size: 1.35rem; margin-bottom: 4px; }
+  .summary .sub { color: var(--muted); font-size: .9rem; margin-bottom: 14px; max-width: 720px; }
+  .sum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sum-card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 84px; gap: 8px; align-items: center; padding: 4px 0; font-size: .84rem; }
+  .bar-track { background: var(--cream); border-radius: 3px; height: 14px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; }
+  .bar-val { text-align: right; font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 700; }
+  .bar-val small { color: var(--muted); font-weight: 400; }
+  .facts { margin-top: 14px; background: var(--navy); color: var(--cream); border-radius: 10px; padding: 16px 18px; }
+  .facts h3 { color: var(--yellow); font-size: 1rem; margin-bottom: 8px; }
+  .facts li { margin: 6px 0 6px 18px; font-size: .88rem; }
+  .facts b { color: var(--yellow); }
+  .metodika { margin-top: 14px; font-size: .78rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; max-width: 860px; }
+  .metodika b { color: var(--ink); }
+  .credit { margin-top: 8px; font-size: .74rem; color: var(--muted); }
+  .credit b { color: var(--crimson); }
+
+  @media (max-width: 900px) {
+    .main, .sum-grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .bar-row { grid-template-columns: 110px 1fr 78px; }
+    .side { min-height: 0; }
+    .map-year { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Karlovy Vary v datech · Země</div>
+    <h1>Odkud přijíždějí filmy: 35 ročníků festivalu na jedné mapě</h1>
+    <p class="lead">Každá bublina je země, která se objevila mezi produkčními zeměmi
+    filmů v katalogu KVIFF. Koprodukce se počítá každé zúčastněné zemi – mapa proto
+    neukazuje „státní příslušnost“ filmů, ale to, kdo se na programu reálně podílí.
+    Přehrajte si časovou osu, přepněte na kumulativní pohled, nebo klikněte na zemi.</p>
+  </header>
+
+  <div class="stats" id="stats" aria-live="polite">
+    <div class="stat"><b class="num" id="s-year">–</b><span>vybraný ročník</span></div>
+    <div class="stat"><b class="num" id="s-countries">–</b><span>zemí v katalogu</span></div>
+    <div class="stat"><b class="num" id="s-apps">–</b><span>výskytů zemí u filmů</span></div>
+    <div class="stat"><b class="num" id="s-films">–</b><span id="s-films-label">filmů v katalogu</span></div>
+  </div>
+
+  <div class="main">
+    <div>
+      <div class="map-card">
+        <div class="map-toolbar">
+          <div class="map-year num" id="map-year">2025</div>
+          <div class="mode" role="group" aria-label="Přepínač zobrazení">
+            <button id="mode-annual" aria-pressed="true">Roční</button>
+            <button id="mode-cumulative" aria-pressed="false">Kumulativní</button>
+          </div>
+        </div>
+        <svg id="map" viewBox="__VIEWBOX__" role="img"
+             aria-label="Mapa světa s bublinami podle počtu výskytů zemí v katalogu KVIFF ve vybraném roce">
+          <path class="land" d="__LAND_PATH__"></path>
+          <g id="bubbles"></g>
+        </svg>
+        <div class="timeline">
+          <div class="tl-row">
+            <button class="play" id="play" aria-label="Přehrát časovou osu">▶</button>
+            <div class="years" id="years"></div>
+          </div>
+          <div class="tl-labels"><span>1992</span><span>2000</span><span>2010</span><span>2020</span><span>2026</span></div>
+          <div class="tl-note"><i></i>šrafovaně = ročník se nekonal (1993, 2020)</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="side" id="side" aria-live="polite"></aside>
+  </div>
+
+  <section class="summary">
+    <h2>Celkem 1992–2026: Evropa drží dvě třetiny, zbytek světa přibývá</h2>
+    <p class="sub">Souhrn všech <span class="num" id="sum-total">–</span> výskytů zemí
+    u filmů v katalozích KVIFF. Podíly jsou počítané ze součtu výskytů – koprodukce
+    se započítává každé zúčastněné zemi.</p>
+    <div class="sum-grid">
+      <div class="sum-card">
+        <h3>Kontinenty podle výskytů</h3>
+        <div id="sum-continents"></div>
+      </div>
+      <div class="sum-card">
+        <h3>Deset nejčastějších zemí</h3>
+        <div id="sum-top"></div>
+      </div>
+    </div>
+    <div class="facts">
+      <h3>Co v datech stojí za pozornost</h3>
+      <ul id="facts"></ul>
+    </div>
+    <p class="metodika"><b>Metodika:</b> Data vycházejí z oficiálního filmového archivu
+    KVIFF, 1992–2026. Jednotkou je <b>výskyt země</b> u filmu v katalogu – koprodukční
+    film se započítá každé produkční zemi, takže součty výskytů jsou vyšší než počty
+    filmů. Podíl na programu srovnává výskyty země s celkovým počtem filmů ročníku
+    (dostupné pro 1995–2025); říká tedy, u kolika procent filmů se země objevila.
+    Ročníky 1993 a 2020 se nekonaly. Historické státy (Československo, SSSR, Jugoslávie)
+    ponecháváme podle dobového katalogu. Ročník 2026 odpovídá katalogu 60. ročníku.</p>
+    <p class="credit"><b>DataTimes.cz</b> · Kateřina Mahdalová &amp; Michal Škop ·
+    zdroj: oficiální archiv KVIFF</p>
+  </section>
+</div>
+
+<div id="tip" role="tooltip"></div>
+
+<script>
+(function () {
+  "use strict";
+  var DATA = /*__DATA__*/;
+  var FILMS = /*__FILMS__*/;
+  var MISSED = /*__MISSED__*/;
+
+  var YEAR_MIN = 1992, YEAR_MAX = 2026;
+  var CONTINENTS = ["Afrika", "Amerika (Jižní)", "Amerika (Severní)", "Asie",
+                    "Austrálie", "Blízký východ", "Evropa"];
+  var COLORS = {
+    "Afrika": getCss("--c-afrika"), "Amerika (Jižní)": getCss("--c-amjih"),
+    "Amerika (Severní)": getCss("--c-amsev"), "Asie": getCss("--c-asie"),
+    "Austrálie": getCss("--c-austr"), "Blízký východ": getCss("--c-blizky"),
+    "Evropa": getCss("--c-evropa")
+  };
+
+  function getCss(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  function fmt(n) { return n.toLocaleString("cs-CZ"); }
+  function pct(n) { return n.toLocaleString("cs-CZ", { maximumFractionDigits: 1 }); }
+
+  // roky + kumulativní řady
+  var YEARS = [];
+  for (var y = YEAR_MIN; y <= YEAR_MAX; y++) YEARS.push(y);
+  DATA.forEach(function (c) {
+    c.cum = {}; var acc = 0;
+    YEARS.forEach(function (yy) {
+      acc += (c.yr[yy] || 0);
+      c.cum[yy] = acc;
+    });
+  });
+  var maxAnnual = 0, maxCum = 0;
+  DATA.forEach(function (c) {
+    YEARS.forEach(function (yy) {
+      if ((c.yr[yy] || 0) > maxAnnual) maxAnnual = c.yr[yy];
+    });
+    if (c.cum[YEAR_MAX] > maxCum) maxCum = c.cum[YEAR_MAX];
+  });
+
+  // agregace po kontinentech a letech
+  var contByYear = {};
+  CONTINENTS.forEach(function (ct) { contByYear[ct] = {}; YEARS.forEach(function (yy) { contByYear[ct][yy] = 0; }); });
+  var totalByYear = {}; YEARS.forEach(function (yy) { totalByYear[yy] = 0; });
+  DATA.forEach(function (c) {
+    YEARS.forEach(function (yy) {
+      var v = c.yr[yy] || 0;
+      contByYear[c.c][yy] += v;
+      totalByYear[yy] += v;
+    });
+  });
+
+  var state = { year: 2025, mode: "annual", selected: null, playing: false, timer: null };
+
+  // ---------- mapa ----------
+  var svgNS = "http://www.w3.org/2000/svg";
+  var bubblesG = document.getElementById("bubbles");
+  var tip = document.getElementById("tip");
+
+  DATA.sort(function (a, b) { return b.t - a.t; }); // velké dole, malé navrchu (kreslí se v pořadí)
+  DATA.forEach(function (c) {
+    var el = document.createElementNS(svgNS, "circle");
+    el.setAttribute("class", "bubble");
+    el.setAttribute("cx", c.x); el.setAttribute("cy", c.y); el.setAttribute("r", 0);
+    el.setAttribute("fill", COLORS[c.c]);
+    el.setAttribute("fill-opacity", "0.78");
+    el.setAttribute("tabindex", "0");
+    el.setAttribute("role", "button");
+    c.el = el;
+    el.addEventListener("mousemove", function (ev) { showTip(ev, c); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("click", function () { selectCountry(c.k); });
+    el.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); selectCountry(c.k); }
+    });
+    bubblesG.appendChild(el);
+  });
+
+  function radius(value, mode) {
+    if (!value) return 0;
+    var max = mode === "annual" ? maxAnnual : maxCum;
+    var rMax = mode === "annual" ? 26 : 30;
+    return Math.max(2.2, Math.sqrt(value / max) * rMax);
+  }
+
+  function valueFor(c, year, mode) {
+    return mode === "annual" ? (c.yr[year] || 0) : (c.cum[year] || 0);
+  }
+
+  function showTip(ev, c) {
+    var v = c.yr[state.year] || 0;
+    tip.innerHTML = "<b>" + c.n + "</b><br>" + state.year + ": " + fmt(v) +
+      (v === 1 ? " výskyt" : (v >= 2 && v <= 4 ? " výskyty" : " výskytů"));
+    tip.style.display = "block";
+    var x = ev.clientX + 14, yPos = ev.clientY + 12;
+    if (x + 230 > window.innerWidth) x = ev.clientX - 234;
+    if (yPos + 60 > window.innerHeight) yPos = ev.clientY - 60;
+    tip.style.left = x + "px"; tip.style.top = yPos + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+
+  // ---------- časová osa ----------
+  var yearsBox = document.getElementById("years");
+  var yearCells = {};
+  YEARS.forEach(function (yy) {
+    var cell = document.createElement("button");
+    cell.className = "yearcell" + (MISSED.indexOf(yy) !== -1 ? " missed" : "");
+    cell.setAttribute("aria-label", MISSED.indexOf(yy) !== -1
+      ? "Rok " + yy + " – festival se nekonal" : "Zvolit rok " + yy);
+    if (MISSED.indexOf(yy) === -1) {
+      cell.addEventListener("click", function () { stopPlay(); setYear(yy); });
+    } else {
+      cell.setAttribute("disabled", "disabled");
+    }
+    yearCells[yy] = cell;
+    yearsBox.appendChild(cell);
+  });
+  // tažení po ose
+  var dragging = false;
+  yearsBox.addEventListener("pointerdown", function (ev) { dragging = true; dragTo(ev); });
+  window.addEventListener("pointermove", function (ev) { if (dragging) dragTo(ev); });
+  window.addEventListener("pointerup", function () { dragging = false; });
+  function dragTo(ev) {
+    var rect = yearsBox.getBoundingClientRect();
+    var frac = Math.min(1, Math.max(0, (ev.clientX - rect.left) / rect.width));
+    var yy = YEAR_MIN + Math.round(frac * (YEAR_MAX - YEAR_MIN));
+    while (MISSED.indexOf(yy) !== -1) yy += (frac > 0.5 ? -1 : 1);
+    if (yy !== state.year) { stopPlay(); setYear(yy); }
+  }
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "ArrowLeft" && ev.key !== "ArrowRight") return;
+    if (document.activeElement && /INPUT|TEXTAREA/.test(document.activeElement.tagName)) return;
+    var dir = ev.key === "ArrowRight" ? 1 : -1;
+    var yy = state.year + dir;
+    while (MISSED.indexOf(yy) !== -1) yy += dir;
+    if (yy >= YEAR_MIN && yy <= YEAR_MAX) { stopPlay(); setYear(yy); }
+  });
+
+  var playBtn = document.getElementById("play");
+  playBtn.addEventListener("click", function () {
+    if (state.playing) { stopPlay(); return; }
+    state.playing = true;
+    playBtn.textContent = "❚❚";
+    playBtn.setAttribute("aria-label", "Zastavit přehrávání");
+    if (state.year >= YEAR_MAX) setYear(YEAR_MIN);
+    state.timer = setInterval(function () {
+      var yy = state.year + 1;
+      while (MISSED.indexOf(yy) !== -1) yy += 1;
+      if (yy > YEAR_MAX) { stopPlay(); return; }
+      setYear(yy);
+    }, 650);
+  });
+  function stopPlay() {
+    state.playing = false;
+    playBtn.textContent = "▶";
+    playBtn.setAttribute("aria-label", "Přehrát časovou osu");
+    if (state.timer) { clearInterval(state.timer); state.timer = null; }
+  }
+
+  // ---------- přepínač režimu ----------
+  var modeAnnual = document.getElementById("mode-annual");
+  var modeCum = document.getElementById("mode-cumulative");
+  modeAnnual.addEventListener("click", function () { setMode("annual"); });
+  modeCum.addEventListener("click", function () { setMode("cumulative"); });
+  function setMode(mode) {
+    state.mode = mode;
+    modeAnnual.setAttribute("aria-pressed", mode === "annual");
+    modeCum.setAttribute("aria-pressed", mode === "cumulative");
+    render();
+  }
+
+  // ---------- pravý panel ----------
+  var side = document.getElementById("side");
+  var sparkCache = {};
+
+  function sparkline(values, color, width, height, missedYears) {
+    width = width || 280; height = height || 44;
+    var max = Math.max.apply(null, values.map(function (v) { return v === null ? 0 : v; }));
+    if (max === 0) max = 1;
+    var step = width / (values.length - 1);
+    var seg = [], parts = [];
+    values.forEach(function (v, i) {
+      if (v === null) { if (seg.length) { parts.push(seg); seg = []; } return; }
+      seg.push((i * step).toFixed(1) + "," + (height - 3 - v / max * (height - 8)).toFixed(1));
+    });
+    if (seg.length) parts.push(seg);
+    var polys = parts.map(function (p) {
+      return '<polyline points="' + p.join(" ") + '" fill="none" stroke="' + color + '" stroke-width="2" stroke-linejoin="round"/>';
+    }).join("");
+    var hatch = missedYears.map(function (yy) {
+      var i = yy - YEAR_MIN;
+      return '<rect x="' + (i * step - 1.5).toFixed(1) + '" y="2" width="3" height="' + (height - 4) +
+        '" fill="rgba(16,20,50,.12)"/>';
+    }).join("");
+    return '<svg width="100%" viewBox="0 0 ' + width + " " + height + '" preserveAspectRatio="none" aria-hidden="true">' +
+      hatch + polys + "</svg>";
+  }
+
+  function seriesFor(getter) {
+    return YEARS.map(function (yy) {
+      return MISSED.indexOf(yy) !== -1 ? null : getter(yy);
+    });
+  }
+
+  function renderContinents() {
+    var html = "<h3>Kontinenty v roce <span class='num'>" + state.year + "</span></h3>";
+    CONTINENTS.forEach(function (ct) {
+      var v = contByYear[ct][state.year];
+      var total = YEARS.reduce(function (a, yy) { return a + contByYear[ct][yy]; }, 0);
+      if (!sparkCache[ct]) {
+        sparkCache[ct] = sparkline(seriesFor(function (yy) { return contByYear[ct][yy]; }),
+                                   COLORS[ct], 280, 30, MISSED);
+      }
+      html += '<div class="cont-row">' +
+        '<span class="cont-dot" style="background:' + COLORS[ct] + '"></span>' +
+        '<span class="cont-name">' + ct + "<small>celkem " + fmt(total) + "</small></span>" +
+        '<span class="cont-val num">' + fmt(v) + "</span>" +
+        '<span class="cont-spark">' + sparkCache[ct] + "</span>" +
+        "</div>";
+    });
+    html += '<p class="side-note">Mini-grafy ukazují roční výskyty 1992–2026; svislé pruhy jsou vynechané ročníky. Kliknutím na bublinu v mapě otevřete detail země.</p>';
+    side.innerHTML = html;
+  }
+
+  function renderCountry(c) {
+    var v = c.yr[state.year] || 0;
+    var films = FILMS[state.year];
+    var headline;
+    if (v === 0) {
+      headline = "V roce <b class='num'>" + state.year + "</b> se v katalogu neobjevila.";
+    } else if (films) {
+      var share = v / films * 100;
+      headline = "<b class='num'>" + fmt(v) + "</b>&nbsp;" + plural(v) + " v roce " +
+        "<b class='num'>" + state.year + "</b> = objevila se u " +
+        "<b class='num'>" + pct(share) + "&nbsp;%</b> filmů programu (" + fmt(films) + " filmů).";
+    } else {
+      headline = "<b class='num'>" + fmt(v) + "</b>&nbsp;" + plural(v) + " v roce " +
+        "<b class='num'>" + state.year + "</b>. Podíl nelze spočítat – pro tento ročník " +
+        "chybí oficiální celkový počet filmů.";
+    }
+    var filmsHtml = c.f ? c.f.split("; ").slice(0, 5).map(function (f) {
+      return "<li>" + f + "</li>";
+    }).join("") : "<li>–</li>";
+    var partners = c.p ? c.p.split("; ").slice(0, 6).join(" · ") : "–";
+    side.innerHTML =
+      '<button class="back" id="back">← Zpět na kontinenty</button>' +
+      '<div class="country-name">' + c.n + "</div>" +
+      '<span class="chip" style="background:' + COLORS[c.c] + '">' + c.c + "</span>" +
+      '<div class="headline">' + headline + "</div>" +
+      sparkline(seriesFor(function (yy) { return c.yr[yy] || 0; }), COLORS[c.c], 280, 46, MISSED) +
+      '<div class="kv"><span>Výskytů celkem 1992–2026</span><b class="num">' + fmt(c.t) + "</b></div>" +
+      '<div class="kv"><span>První / zatím poslední účast</span><b class="num">' + c.y0 + " / " + c.y1 + "</b></div>" +
+      '<div class="kv"><span>Nejsilnější ročník</span><b class="num">' + c.pk + "</b></div>" +
+      (c.cs ? '<div class="kv"><span>Podíl koprodukcí</span><b class="num">' + c.cs + "</b></div>" : "") +
+      (c.cz ? '<div class="kv"><span>Koprodukce s Českem</span><b class="num">' + fmt(c.cz) + "</b></div>" : "") +
+      '<div class="sec-label">Ukázkové filmy</div><ul class="films-list">' + filmsHtml + "</ul>" +
+      '<div class="sec-label">Top koprodukční partneři</div><div class="partners">' + partners + "</div>";
+    document.getElementById("back").addEventListener("click", function () {
+      state.selected = null; render();
+    });
+  }
+
+  function plural(v) {
+    return v === 1 ? "výskyt" : (v >= 2 && v <= 4 ? "výskyty" : "výskytů");
+  }
+
+  function selectCountry(key) {
+    state.selected = (state.selected === key) ? null : key;
+    render();
+    if (state.selected && window.innerWidth <= 900) {
+      side.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  // ---------- statistiky ----------
+  function renderStats() {
+    var countriesInYear = 0;
+    DATA.forEach(function (c) { if (c.yr[state.year]) countriesInYear++; });
+    document.getElementById("s-year").textContent = state.year;
+    document.getElementById("s-countries").textContent = fmt(countriesInYear);
+    document.getElementById("s-apps").textContent = fmt(totalByYear[state.year]);
+    var films = FILMS[state.year];
+    document.getElementById("s-films").textContent = films ? fmt(films) : "–";
+    document.getElementById("s-films-label").textContent =
+      films ? "filmů v katalogu" : "počet filmů není k dispozici";
+  }
+
+  // ---------- hlavní render ----------
+  function render() {
+    document.getElementById("map-year").textContent = state.year;
+    YEARS.forEach(function (yy) {
+      yearCells[yy].setAttribute("aria-pressed", yy === state.year ? "true" : "false");
+    });
+    DATA.forEach(function (c) {
+      var v = valueFor(c, state.year, state.mode);
+      c.el.setAttribute("r", radius(v, state.mode));
+      c.el.classList.toggle("selected", state.selected === c.k);
+    });
+    renderStats();
+    if (state.selected) {
+      var found = null;
+      DATA.forEach(function (c) { if (c.k === state.selected) found = c; });
+      if (found) renderCountry(found); else renderContinents();
+    } else {
+      renderContinents();
+    }
+  }
+
+  function setYear(yy) { state.year = yy; render(); }
+
+  // ---------- souhrn ----------
+  function renderSummary() {
+    var grand = 0;
+    DATA.forEach(function (c) { grand += c.t; });
+    document.getElementById("sum-total").textContent = fmt(grand);
+
+    var contTotals = CONTINENTS.map(function (ct) {
+      var total = YEARS.reduce(function (a, yy) { return a + contByYear[ct][yy]; }, 0);
+      return { name: ct, total: total };
+    }).sort(function (a, b) { return b.total - a.total; });
+    var maxCont = contTotals[0].total;
+    document.getElementById("sum-continents").innerHTML = contTotals.map(function (r) {
+      return '<div class="bar-row"><span>' + r.name + "</span>" +
+        '<span class="bar-track"><span class="bar-fill" style="width:' + (r.total / maxCont * 100) +
+        "%;background:" + COLORS[r.name] + '"></span></span>' +
+        '<span class="bar-val num">' + fmt(r.total) + " <small>(" + pct(r.total / grand * 100) + "&nbsp;%)</small></span></div>";
+    }).join("");
+
+    var top = DATA.slice().sort(function (a, b) { return b.t - a.t; }).slice(0, 10);
+    var maxTop = top[0].t;
+    document.getElementById("sum-top").innerHTML = top.map(function (c) {
+      return '<div class="bar-row"><span>' + c.n + "</span>" +
+        '<span class="bar-track"><span class="bar-fill" style="width:' + (c.t / maxTop * 100) +
+        "%;background:" + COLORS[c.c] + '"></span></span>' +
+        '<span class="bar-val num">' + fmt(c.t) + " <small>(" + pct(c.t / grand * 100) + "&nbsp;%)</small></span></div>";
+    }).join("");
+
+    // zajímavosti – spočítané přímo z dat
+    var facts = [];
+    // největší roční skok mimo top-3 celkové země
+    facts.push("Nejsilnější jednotlivý ročník jedné země: <b>USA 2006</b> – 61 výskytů, " +
+      "tedy u téměř čtvrtiny z 268 filmů katalogu.");
+    facts.push("<b>Jižní Korea 2001</b>: 29 výskytů v jediném roce – víc než polovina " +
+      "jejích výskytů za prvních deset let festivalu. Podobné jednorázové vlny mají " +
+      "<b>Austrálie 1997</b> (23) a <b>Brazílie 2002</b> (18) – stopy velkých programových sekcí.");
+    facts.push("<b>Zimbabwe 2000</b>: jediná účast v historii, oba filmy jako koprodukce " +
+      "s Českem a Slovenskem.");
+    facts.push("Nejmenší kinematografie přicházejí téměř výhradně v koprodukcích: " +
+      "u zemí s jediným filmem je koprodukční podíl typicky 100 % – samostatně " +
+      "se do katalogu dostaly jen výjimky jako <b>Malta 2021</b> (Luzzu) nebo <b>Keňa 2018</b> (Rafiki).");
+    facts.push("Katalog 2026 přivedl <b>čtyři nové země</b>: Guineu-Bissau, Gabon, " +
+      "Jemen a po letech znovu Rwandu a Senegal v jednom ročníku.");
+    document.getElementById("facts").innerHTML = facts.map(function (f) {
+      return "<li>" + f + "</li>";
+    }).join("");
+  }
+
+  // peak_year je v datech jako "2006 (61)" – ulož pro kartu země
+  DATA.forEach(function (c) {
+    var best = YEAR_MIN, bestV = -1;
+    YEARS.forEach(function (yy) {
+      var v = c.yr[yy] || 0;
+      if (v > bestV) { bestV = v; best = yy; }
+    });
+    c.pk = best + " (" + bestV + ")";
+  });
+
+  renderSummary();
+  render();
+})();
+</script>
+</body>
+</html>

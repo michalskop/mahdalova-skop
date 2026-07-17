@@ -113,6 +113,10 @@ function parseDateInput(value: string): Date | null {
     return new Date(Date.UTC(y, mo - 1, d));
   }
 
+  // Bare year ("1946") or a year range ("1959–1990") isn't a calendar date –
+  // don't let Date() silently invent a Jan 1 that nobody specified.
+  if (/^\d{4}$/.test(value.trim())) return null;
+
   const dt = new Date(value);
   if (Number.isNaN(dt.getTime())) return null;
   return dt;

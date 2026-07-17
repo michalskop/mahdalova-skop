@@ -8,6 +8,7 @@ import { current2026, finalStats, formatNumber, maxTickets, spendingRatio2026, t
 import { honoraryDoubleWomanYears, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from './honors';
 import { firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from './films';
 import { countryPresenceTop, countryPresenceTotal, czCountry } from './countries';
+import VaryWordmark from './VaryWordmark';
 
 // Typografie čísel dle DESIGN.md: Roboto Condensed, tabulkové číslice (žádný monospace)
 const NUM_FONT = { fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontVariantNumeric: 'tabular-nums' as const };
@@ -60,8 +61,8 @@ function InlineBar({ label, value, max, color = 'var(--mantine-color-brandNavy-6
 export default function KarlovyVarySpecialPage() {
   return (
     <Container size="lg" bg="background.1" maw="1200px" w="100%" p={0} m="0 auto">
-      <Box component="section" style={{ background: 'var(--mantine-color-brandNavy-9)' }} c="background.0">
-        <SimpleGrid cols={{ base: 1, md: 2 }} spacing={0}>
+      <Box component="section" style={{ background: '#1f102e' }} c="background.0">
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={0}>
           <Stack gap="lg" p={{ base: 24, md: 48 }} justify="center" mih={{ base: 520, md: 640 }}>
             <Badge w="fit-content" color="brand" variant="filled">Speciál</Badge>
             <Title order={1} style={{ fontSize: 'clamp(2.4rem, 6vw, 5.8rem)', lineHeight: 0.95, maxWidth: 760 }}>
@@ -83,11 +84,21 @@ export default function KarlovyVarySpecialPage() {
             aria-hidden="true"
             style={{
               minHeight: 420,
-              backgroundImage: 'url(/images/specials/karlovy-vary.svg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '1.25rem',
+              padding: '2rem 1.5rem',
             }}
-          />
+          >
+            <img
+              src="/images/specials/karlovy-vary-statue.webp"
+              alt=""
+              style={{ height: 'clamp(160px, 30vw, 320px)', width: 'auto', maxWidth: '65%', objectFit: 'contain' }}
+            />
+            <VaryWordmark style={{ width: 'clamp(200px, 40vw, 420px)', height: 'auto', color: '#522a7a' }} />
+          </Box>
         </SimpleGrid>
       </Box>
 

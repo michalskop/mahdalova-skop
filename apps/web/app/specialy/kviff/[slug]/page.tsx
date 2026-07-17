@@ -26,8 +26,9 @@ import FilmScreeningsChart from '../FilmScreeningsChart';
 import HistoricalCountryMap from '../HistoricalCountryMap';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from '../GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from '../grandPrix';
-import VerticalTimeline, { type TimelineEntry } from '../VerticalTimeline';
 import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from '../partners';
+import Timeline from '@/components/common/Timeline';
+import type { TimelineContent } from '@/types/timeline';
 import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from '../ChartFrame';
 
 type PageProps = {
@@ -142,15 +143,24 @@ function HonoraryDotTimeline() {
   );
 }
 
-function Pre1989AwardsOverview() {
-  const entries: TimelineEntry[] = pre1989AwardsNotes.map((note, index) => ({
-    key: note.period,
-    year: note.period,
-    label: note.title,
-    body: note.body,
-    highlight: index === 0 || index === pre1989AwardsNotes.length - 1,
-  }));
+const pre1989AwardsTimeline: TimelineContent = {
+  facetGroups: [
+    {
+      key: 'topic',
+      label: 'Typ',
+      values: [{ key: 'zlom', label: 'Předěl', color: 'brand.6' }],
+    },
+  ],
+  events: pre1989AwardsNotes.map((note, index) => ({
+    id: note.period,
+    date: note.period,
+    title: note.title,
+    summary: note.body,
+    facets: index === 0 || index === pre1989AwardsNotes.length - 1 ? { topic: 'zlom' } : undefined,
+  })),
+};
 
+function Pre1989AwardsOverview() {
   return (
     <ChartFrame
       title="Jak se měnila logika festivalových cen"
@@ -158,7 +168,7 @@ function Pre1989AwardsOverview() {
       source="Oficiální archiv KVIFF, festivalové ročníky"
       fullWidth
     >
-      <VerticalTimeline entries={entries} />
+      <Timeline content={pre1989AwardsTimeline} />
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="sm" mt="lg">
         <Paper p="md" radius={4} bg="background.0">
@@ -178,70 +188,79 @@ function Pre1989AwardsOverview() {
   );
 }
 
-const festivalTimelinePhases: TimelineEntry[] = [
-  {
-    key: '1946',
-    year: '1946',
-    label: 'Založení v poválečném Československu',
-    body: 'První dva ročníky (1946 a 1947) byly nesoutěžní a odehrávaly se většinou v Mariánských Lázních – Karlovy Vary byly zpočátku jen vedlejší dějiště. Podle festivalu i dobových zdrojů jde o druhý nejstarší kontinuálně pořádaný filmový festival v Evropě po Benátkách.',
-    highlight: true,
-  },
-  {
-    key: '1948',
-    year: '1948',
-    label: 'Únorový převrat a první udělená cena',
-    body: 'V témže roce, kdy komunisté ovládli Československo, se poprvé udělila hlavní soutěžní cena – dnešní Grand Prix. Znárodněná kinematografie od té chvíle diktovala i dramaturgii festivalu.',
-  },
-  {
-    key: '1950',
-    year: '1950',
-    label: 'Natrvalo ve Varech, propaganda naplno',
-    body: 'V pátém ročníku se festival definitivně přestěhoval do Karlových Varů. Padesátá léta zároveň přinesla inflaci cen – vedle hlavní ceny se rozdávala cena míru, cena práce, cena za boj za svobodu i cena za boj za sociální pokrok, takže s prázdnou neodešel skoro nikdo. Festivalu vládlo heslo „o nového člověka, o dokonalejší lidstvo“.',
-  },
-  {
-    key: '1956',
-    year: '1956',
-    label: 'Vary vedle Cannes, Benátek a Berlína',
-    body: 'FIAPF zařadila festival do prestižní kategorie A po bok největších světových přehlídek. Týž rok sem festival záměrně pozval americký film Marty – podle výzkumu historičky Jindřišky Bláhové měl po čtyřech letech mlčení pomoci obnovit obchodní kontakty mezi Hollywoodem a komunistickým československým filmovým monopolem, aniž by dráždil cenzory. Rok korunovala i kuriozita: příjezd okouzlující zahraniční herečky přiměl státní nakladatelství Orbis vydat sérii pohlednic s ní v plavkách.',
-  },
-  {
-    key: '1959',
-    year: '1959–1990',
-    label: 'Střídání s Moskvou, přesto přijíždí Západ',
-    body: 'Sovětský svaz chtěl mít svůj vlastní „světový“ festival, a tak se od roku 1960 Vary konají jen v sudých letech. I přesto sem míří velká jména: v roce 1964 rozvášnila davy Claudia Cardinale, přijeli i Henry Fonda a Richard Attenborough. Stejný ročník 1964 vyhráli Ján Kadár a Elmar Klos s Obžalovaným, ve kterém malou roli právníka ztvárnil Jiří Menzel – ten sám o čtyři roky později vyhrál jako režisér s Rozmarným létem.',
-  },
-  {
-    key: '1968',
-    year: '1968',
-    label: 'Tanky zastaví nadějný rozvoj',
-    body: 'Invaze vojsk Varšavské smlouvy přeruší roky uvolňování. Lesk festivalu z konce 60. let se vrátí až po sametové revoluci.',
-  },
-  {
-    key: '1989',
-    year: '1989–1993',
-    label: 'Transformační nejistota',
-    body: 'Sametová revoluce festival zbaví ideologie, ale ne chaosu – v roce 1990 nebyla udělena hlavní cena a ročník 1993 se vůbec nekonal.',
-  },
-  {
-    key: '1994',
-    year: '1994',
-    label: 'Nová každoroční éra',
-    body: 'Pod vedením Jiřího Bartošky festival ožívá jako soukromá instituce s pevnou každoroční periodicitou. Od tohoto roku také vzniká systematický digitální archiv – proto je 1994 metodologickým zlomem pro naše data.',
-    highlight: true,
-  },
-  {
-    key: '2020',
-    year: '2020',
-    label: 'Covidová pauza',
-    body: 'Jediný přerušený ročník novodobé éry – pandemie covidu-19 zastavila každoroční tradici.',
-  },
-  {
-    key: '2026',
-    year: '2026',
-    label: '60. ročník',
-    body: 'Aktuální ročník festivalu probíhá 3.–11. července 2026.',
-  },
-];
+const festivalTimelineContent: TimelineContent = {
+  facetGroups: [
+    {
+      key: 'topic',
+      label: 'Typ',
+      values: [{ key: 'zlom', label: 'Metodologický zlom', color: 'brand.6' }],
+    },
+  ],
+  events: [
+    {
+      id: '1946',
+      date: '1946',
+      title: 'Založení v poválečném Československu',
+      summary: 'První dva ročníky (1946 a 1947) byly nesoutěžní a odehrávaly se většinou v Mariánských Lázních – Karlovy Vary byly zpočátku jen vedlejší dějiště. Podle festivalu i dobových zdrojů jde o druhý nejstarší kontinuálně pořádaný filmový festival v Evropě po Benátkách.',
+      facets: { topic: 'zlom' },
+    },
+    {
+      id: '1948',
+      date: '1948',
+      title: 'Únorový převrat a první udělená cena',
+      summary: 'V témže roce, kdy komunisté ovládli Československo, se poprvé udělila hlavní soutěžní cena – dnešní Grand Prix. Znárodněná kinematografie od té chvíle diktovala i dramaturgii festivalu.',
+    },
+    {
+      id: '1950',
+      date: '1950',
+      title: 'Natrvalo ve Varech, propaganda naplno',
+      summary: 'V pátém ročníku se festival definitivně přestěhoval do Karlových Varů. Padesátá léta zároveň přinesla inflaci cen – vedle hlavní ceny se rozdávala cena míru, cena práce, cena za boj za svobodu i cena za boj za sociální pokrok, takže s prázdnou neodešel skoro nikdo. Festivalu vládlo heslo „o nového člověka, o dokonalejší lidstvo“.',
+    },
+    {
+      id: '1956',
+      date: '1956',
+      title: 'Vary vedle Cannes, Benátek a Berlína',
+      summary: 'FIAPF zařadila festival do prestižní kategorie A po bok největších světových přehlídek. Týž rok sem festival záměrně pozval americký film Marty – podle výzkumu historičky Jindřišky Bláhové měl po čtyřech letech mlčení pomoci obnovit obchodní kontakty mezi Hollywoodem a komunistickým československým filmovým monopolem, aniž by dráždil cenzory. Rok korunovala i kuriozita: příjezd okouzlující zahraniční herečky přiměl státní nakladatelství Orbis vydat sérii pohlednic s ní v plavkách.',
+    },
+    {
+      id: '1959',
+      date: '1959–1990',
+      title: 'Střídání s Moskvou, přesto přijíždí Západ',
+      summary: 'Sovětský svaz chtěl mít svůj vlastní „světový“ festival, a tak se od roku 1960 Vary konají jen v sudých letech. I přesto sem míří velká jména: v roce 1964 rozvášnila davy Claudia Cardinale, přijeli i Henry Fonda a Richard Attenborough. Stejný ročník 1964 vyhráli Ján Kadár a Elmar Klos s Obžalovaným, ve kterém malou roli právníka ztvárnil Jiří Menzel – ten sám o čtyři roky později vyhrál jako režisér s Rozmarným létem.',
+    },
+    {
+      id: '1968',
+      date: '1968',
+      title: 'Tanky zastaví nadějný rozvoj',
+      summary: 'Invaze vojsk Varšavské smlouvy přeruší roky uvolňování. Lesk festivalu z konce 60. let se vrátí až po sametové revoluci.',
+    },
+    {
+      id: '1989',
+      date: '1989–1993',
+      title: 'Transformační nejistota',
+      summary: 'Sametová revoluce festival zbaví ideologie, ale ne chaosu – v roce 1990 nebyla udělena hlavní cena a ročník 1993 se vůbec nekonal.',
+    },
+    {
+      id: '1994',
+      date: '1994',
+      title: 'Nová každoroční éra',
+      summary: 'Pod vedením Jiřího Bartošky festival ožívá jako soukromá instituce s pevnou každoroční periodicitou. Od tohoto roku také vzniká systematický digitální archiv – proto je 1994 metodologickým zlomem pro naše data.',
+      facets: { topic: 'zlom' },
+    },
+    {
+      id: '2020',
+      date: '2020',
+      title: 'Covidová pauza',
+      summary: 'Jediný přerušený ročník novodobé éry – pandemie covidu-19 zastavila každoroční tradici.',
+    },
+    {
+      id: '2026',
+      date: '2026',
+      title: '60. ročník',
+      summary: 'Aktuální ročník festivalu probíhá 3.–11. července 2026.',
+    },
+  ],
+};
 
 function FestivalTimeline() {
   return (
@@ -251,7 +270,7 @@ function FestivalTimeline() {
       source="Oficiální archiv KVIFF; iROZHLAS, Reflex.cz, Radio Prague International, J. Bláhová (Studies in European Cinema)"
       fullWidth
     >
-      <VerticalTimeline entries={festivalTimelinePhases} />
+      <Timeline content={festivalTimelineContent} />
     </ChartFrame>
   );
 }
