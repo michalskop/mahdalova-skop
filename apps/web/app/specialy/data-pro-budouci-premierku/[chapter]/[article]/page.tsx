@@ -83,9 +83,21 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { chapter: string; article: string } }) {
   const art = loadArticle(params.chapter, params.article);
   if (!art) return {};
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
+  const cover = (art.frontmatter as { coverImage?: string }).coverImage;
   return {
     title: `${art.frontmatter.title} – Data pro budoucí premiérku`,
     description: art.frontmatter.excerpt,
+    ...(cover
+      ? {
+          openGraph: {
+            title: art.frontmatter.title,
+            description: art.frontmatter.excerpt,
+            images: [{ url: `${baseUrl}${cover}`, width: 1200, height: 630 }],
+          },
+          twitter: { card: 'summary_large_image', images: [`${baseUrl}${cover}`] },
+        }
+      : {}),
   };
 }
 
