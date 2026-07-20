@@ -33,6 +33,10 @@
   "postSupportTiles": [
     { "slug": "08-prezidentske-cesty", "topic": "Data story", "fullWidth": true },
     { "slug": "09-milosti", "topic": "Data story" },
-    { "slug": "10-prezidentska-veta", "topic": "Data story" }
+    { "slug": "10-prezidentska-veta", "topic": "Data story" },
+    { "slug": "11-duvera-stat-vs-politika", "topic": "Důvěra", "fullWidth": true },
+    { "slug": "12-duvera-samosprava", "topic": "Důvěra" },
+    { "slug": "13-duvera-svet", "topic": "Důvěra" },
+    { "slug": "14-duvera-spolecnost", "topic": "Důvěra", "fullWidth": true }
   ]
 }
