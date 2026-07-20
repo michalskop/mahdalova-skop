@@ -83,9 +83,21 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { chapter: string; article: string } }) {
   const art = loadArticle(params.chapter, params.article);
   if (!art) return {};
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
+  const cover = (art.frontmatter as { coverImage?: string }).coverImage;
   return {
     title: `${art.frontmatter.title} – Data pro budoucí premiérku`,
     description: art.frontmatter.excerpt,
+    ...(cover
+      ? {
+          openGraph: {
+            title: art.frontmatter.title,
+            description: art.frontmatter.excerpt,
+            images: [{ url: `${baseUrl}${cover}`, width: 1200, height: 630 }],
+          },
+          twitter: { card: 'summary_large_image', images: [`${baseUrl}${cover}`] },
+        }
+      : {}),
   };
 }
 
@@ -206,7 +218,10 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
         <SubscribeNewsletter actionUrl="https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088" position="center" />
       </Container>
 
-      <style>{`
+      {/* dangerouslySetInnerHTML: React při SSR escapuje apostrofy v textovém
+          obsahu <style> na &#x27;, klient je pak porovnává s neescapovaným
+          zněním a hlásí hydration mismatch. innerHTML porovnání textu obchází. */}
+      <style dangerouslySetInnerHTML={{ __html: `
         .dpbp-article h2 {
           font-family: 'Roboto Slab', Georgia, serif;
           font-size: 1.25rem;
@@ -270,7 +285,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           color: #333;
         }
         .dpbp-article tr:last-child td { border-bottom: none; }
-      `}</style>
+      ` }} />
     </Box>
   );
 }

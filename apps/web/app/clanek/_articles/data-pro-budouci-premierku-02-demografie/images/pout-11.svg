@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f6f0"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#de1743"/>
+  <text x="70" y="92" font-family="Arial, sans-serif" font-size="26" letter-spacing="6" fill="#555555" font-weight="700">DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE</text>
+  <text x="70" y="216" font-family="Georgia, serif" font-size="96" font-weight="700" fill="#de1743">−12 % / +30 %</text>
+  <text x="70" y="290" font-family="Arial, sans-serif" font-size="30" fill="#555555">Karviná vs. Říčany za dekádu</text>
+  <text x="70" y="376" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#101432"><tspan x="70" dy="0">Šest tisíc obcí,</tspan><tspan x="70" dy="58">čtyři odlišné osudy</tspan></text>
+  <line x1="770" y1="170" x2="1110" y2="170" stroke="#e8e3d2" stroke-width="2"/><line x1="770" y1="260" x2="1110" y2="260" stroke="#e8e3d2" stroke-width="2"/><line x1="770" y1="350" x2="1110" y2="350" stroke="#e8e3d2" stroke-width="2"/><line x1="770" y1="440" x2="1110" y2="440" stroke="#e8e3d2" stroke-width="2"/><line x1="770" y1="440" x2="1110" y2="440" stroke="#101432" stroke-width="3"/><polyline points="770,220 1110,400" fill="none" stroke="#101432" stroke-width="7" stroke-linecap="round"/>
+      <polyline points="770,390 1110,210" fill="none" stroke="#de1743" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="946.8" cy="308" r="12" fill="#f76800"/>
+  <g transform="translate(70,566)">
+    <circle cx="16" cy="0" r="16" fill="none" stroke="#de1743" stroke-width="9"/>
+    <path d="M16 -16 A16 16 0 0 1 30 8" fill="none" stroke="#ffcf02" stroke-width="9"/>
+    <text x="48" y="10" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+      <tspan fill="#de1743">Data</tspan><tspan fill="#c99a00">Times</tspan><tspan fill="#555555" font-weight="400">.cz</tspan>
+    </text>
+  </g>
+  <text x="1130" y="576" font-family="Arial, sans-serif" font-size="26" fill="#555555" text-anchor="end">mahdalova-skop.cz</text>
+</svg>
