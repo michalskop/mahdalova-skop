@@ -2,7 +2,9 @@
 
 Guidance for writing content (intro text, tiles, individual articles) for `/specialy/data-pro-budouci-premierku`. The technical pipeline and `_meta.json` schema are described in [`SPECIAL.md`](./SPECIAL.md) – this file is about **what and how to write**, not where to save it.
 
-**The default style is explanatory journalism** (see STYLE_GUIDE.md §2 in the data-pro-premierku repository): concrete mystery → evidence → what it means (Fisher/Klein), drive and clearly named stakes (Cadwalladr), human detail and clean Czech (Třešňák/Němeček), a factual diagnosis of systemic failures that ends with a direction for the solution (Prokop).
+> **Projektový dodatek podřízený kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md).** Obsahuje pouze pravidla specifická pro Data pro budoucí premiérku. Při rozporu platí kanonický manuál.
+
+**The default style is explanatory journalism** according to the canonical manual: concrete mystery → evidence → what it means (Fisher/Klein), drive and clearly named stakes (Cadwalladr), human detail and clean Czech (Třešňák/Němeček), a factual diagnosis of systemic failures that ends with a direction for the solution (Prokop).
 
 ---
 

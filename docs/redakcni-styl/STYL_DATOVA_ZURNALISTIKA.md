@@ -1,10 +1,10 @@
 # Style guide: Datová žurnalistika bez berliček
 
-> **Hloubková reference s příklady, podřízená kanonickému [REDAKCNI_MANUAL.md](REDAKCNI_MANUAL.md)** (jeho Část III je zhuštěná verze tohoto dokumentu). Kde si odporují, platí manuál.
+> **Hloubková reference s příklady, podřízená kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md)** (jeho Část III je závazná zhuštěná verze tohoto dokumentu). Kde si odporují, platí manuál.
 
 Univerzální průvodce pro komentování dat, grafů a map – pro zkušenou novinářku, která chce výsledek, ne šablonu.
 
-**Přednost dokumentů:** U datových a analytických textů má tenhle guide přednost před `NAVOD_STYL_TRESNAK.md` i `REDAKCNI_MANUAL.md` všude, kde si odporují. Třešňákovy vyprávěcí nástroje se používají *uvnitř* těchto mantinelů – nikdy proti nim.
+**Přednost dokumentů:** U datových a analytických textů má závazný datový modul v `REDAKCNI_MANUAL.md` přednost před vyprávěcími doporučeními. Tento dokument jej rozvádí příklady; nesmí jej přepsat ani oslabit. Třešňákovy nástroje se používají uvnitř těchto mantinelů – nikdy proti nim.
 
 ---
 

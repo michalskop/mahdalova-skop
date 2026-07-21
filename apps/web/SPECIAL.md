@@ -2,6 +2,8 @@
 
 Operations guide for the `/specialy/data-pro-budouci-premierku` web section and the PDF book pipeline.
 
+> **Technický projektový manuál podřízený kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md).** Řeší umístění, datový model a publikační pipeline; obecná redakční a stylistická pravidla nemění.
+
 > **⚠ Pipeline direction changed 2026-06-21.** The `dpbp-config.json` → `sync-dpbp.mjs` flow described further below is **legacy**. As of this date, new chapter content (article text, `_meta.json`) is authored **directly in this repo** (`mahdalova-skop`), not generated from `data-pro-premierku` source files. `data-pro-premierku` remains the place where research/facts originate, but it is no longer the literal source of `.mdx` content. See "Current content pipeline" below before touching anything in `dpbp-config.json` or running `npm run sync:dpbp`.
 
 ---

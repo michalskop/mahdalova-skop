@@ -1,6 +1,8 @@
 # Redakční manuál DataTimes — kanonická verze
 
-Jediný zdroj pravdy pro to, jak píšeme, ověřujeme a navrhujeme. **Etika a srozumitelný styl platí závazně pro všechny naše analýzy bez ohledu na formát** — text, data, grafiku, audio i video. Žánry určují stavbu. Vzhled a lokální nuance doplňují projektové kapitoly.
+Jediný zdroj pravdy pro to, jak píšeme, ověřujeme a navrhujeme ve všem, co dělá dvojice Mahdalová & Škop. **Etika a srozumitelný styl platí závazně pro všechny naše analýzy bez ohledu na formát** — text, data, grafiku, audio i video — a napříč oběma značkami (mahdalova-skop.cz i datajournalism.studio) a všemi speciály. Žánry určují stavbu. Vzhled a lokální nuance doplňují projektové kapitoly.
+
+*Umístění: kořen repozitáře `mahdalova-skop`. Tohle je kanonická strojově i lidsky čitelná verze; čtenářský booklet (.docx) se z ní odvozuje.*
 
 Tenhle soubor nahrazuje roztříštěnost pravidel mezi dokumenty. Hlubší rozbory zůstávají jako podřízené reference (viz [Registr](#registr-zdrojů-a-projektových-kapitol)); žádný z nich nesmí tenhle manuál oslabit ani vytvořit druhou „ústavu".
 
@@ -64,7 +66,7 @@ Platí pro každý formát. Čtenář, posluchač i divák musí vždy poznat, *
 Nekopírujeme jednoho autora. Z různých linií bereme funkční nástroje a spojujeme je s vlastní odpovědností:
 - **Fisher & Klein** — konkrétní záhada nebo napětí → důkazy → vysvětlení mechanismu → význam pro čtenáře.
 - **Carole Cadwalladr** — tah textu a jasně pojmenované sázky: o co jde, koho se to týká, kdo má moc to změnit.
-- **Petr Třešňák a Tomáš Němeček** — lidské ukotvení, pozorovaný detail, čistá civilní čeština. Detail musí být reportovaný nebo transparentně odvozený z dat. (Podrobná metoda: [NAVOD_STYL_TRESNAK.md](NAVOD_STYL_TRESNAK.md).)
+- **Petr Třešňák a Tomáš Němeček** — lidské ukotvení, pozorovaný detail, čistá civilní čeština. Detail musí být reportovaný nebo transparentně odvozený z dat. (Podrobná metoda: [NAVOD_STYL_TRESNAK.md](docs/redakcni-styl/NAVOD_STYL_TRESNAK.md).)
 - **Daniel Prokop** — systémová diagnóza bez moralizování: příčiny, distribuce dopadů, realistický směr řešení.
 
 Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis musí být rozpoznatelně náš: **přesný, civilní, analytický a férový.**
@@ -117,7 +119,7 @@ Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci
 
 # ČÁST III — DATOVÁ ŽURNALISTIKA (závazný modul)
 
-U datových a analytických textů má tenhle modul přednost před vyprávěcími doporučeními všude, kde si odporují. Lidský detail a metafora smějí pomoci porozumění, nikdy však odsunout klíčový fakt, změnit význam dat nebo vytvořit dramatizaci. (Rozšířená verze s příklady: [STYL_DATOVA_ZURNALISTIKA.md](STYL_DATOVA_ZURNALISTIKA.md).)
+U datových a analytických textů má tenhle modul přednost před vyprávěcími doporučeními všude, kde si odporují. Lidský detail a metafora smějí pomoci porozumění, nikdy však odsunout klíčový fakt, změnit význam dat nebo vytvořit dramatizaci. (Rozšířená verze s příklady: [STYL_DATOVA_ZURNALISTIKA.md](docs/redakcni-styl/STYL_DATOVA_ZURNALISTIKA.md).)
 
 ## Nejdřív čti data, ne příběh
 Před prvním slovem odpověz na tři otázky:
@@ -285,8 +287,8 @@ Každá změna pravidel uvede: co se mění a proč · zda jde o univerzální, 
 **Vizuální systém:** `DESIGN.md` (a `data-pro-premierku/DESIGN.md`).
 
 **Hloubkové reference** (podřízené tomuto manuálu):
-- Metoda vyprávěcího stylu — `NAVOD_STYL_TRESNAK.md`
-- Datová žurnalistika s příklady — `STYL_DATOVA_ZURNALISTIKA.md`
+- Metoda vyprávěcího stylu — `docs/redakcni-styl/NAVOD_STYL_TRESNAK.md`
+- Datová žurnalistika s příklady — `docs/redakcni-styl/STYL_DATOVA_ZURNALISTIKA.md`
 
 **Čtenářská verze:** redakční booklet (DataTimes, .docx) — odvozený z tohoto zdroje.
 
