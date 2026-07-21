@@ -1,0 +1,179 @@
+.header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 34px 22px 0;
+}
+
+.crumb {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a564d;
+  margin-bottom: 16px;
+}
+.crumb a {
+  color: #de1743;
+  text-decoration: none;
+}
+.crumb a:hover,
+.crumb a:focus-visible {
+  text-decoration: underline;
+}
+.crumb .sep {
+  margin: 0 6px;
+  color: #b3ab98;
+}
+
+.title {
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4.6vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.perex {
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.5;
+  color: #3a3730;
+  margin: 0 0 24px;
+}
+
+/* autoři + datum + sdílení */
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  border-top: 1px solid #e8e3d2;
+  border-bottom: 1px solid #e8e3d2;
+}
+.authors {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.avatars {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+.avatars img,
+.avatars .mono {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.avatars .mono {
+  background: #101432;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.avatars .mono:nth-child(2) { background: #de1743; }
+.names {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: #1a1a1a;
+}
+.names a { color: inherit; text-decoration: none; }
+.names a:hover, .names a:focus-visible { text-decoration: underline; }
+.date {
+  font-size: 12.5px;
+  color: #5a564d;
+  margin-top: 2px;
+}
+
+.share {
+  display: flex;
+  gap: 7px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+.share a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e8e3d2;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #57514a;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.share a:hover,
+.share a:focus-visible {
+  background: #101432;
+  border-color: #101432;
+  color: #fff;
+}
+.share svg { width: 15px; height: 15px; }
+
+/* audio stopa přes celou šířku */
+.audio {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin: 16px 0 4px;
+  padding: 12px 16px;
+  background: #101432;
+  border-radius: 10px;
+  color: #e9e7df;
+}
+.audio .play {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #de1743;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio .play svg { width: 15px; height: 15px; color: #fff; margin-left: 2px; }
+.audio .wave {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 26px;
+  min-width: 0;
+  overflow: hidden;
+}
+.audio .wave span { flex: 1; background: rgba(233, 231, 223, 0.45); border-radius: 2px; }
+.audio .lbl { flex: 0 0 auto; font-size: 12.5px; color: #b9bcd6; line-height: 1.3; }
+.audio .lbl b { color: #fff; font-weight: 700; }
+
+/* náhledový (hero) obrázek */
+.hero { margin: 24px 0 0; }
+.hero img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+.hero figcaption {
+  font-size: 12.5px;
+  color: #5a564d;
+  margin-top: 8px;
+}
+
+@media (max-width: 560px) {
+  .share { margin-left: 0; width: 100%; }
+}

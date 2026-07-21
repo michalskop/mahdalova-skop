@@ -2,24 +2,22 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { Container, Box, Text, Title } from '@mantine/core';
+import { Container, Box } from '@mantine/core';
 import VegaChart from '@/components/dpbp/VegaChart';
 import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
-import ProfileHead from '@/components/dpbp/ProfileHead';
+import ArticleHeader from '@/components/dpbp/ArticleHeader';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/PresidentialTripsMap';
 import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
 import HistoricalPresidentialTrips from '@/components/dpbp/HistoricalPresidentialTrips/HistoricalPresidentialTrips';
 import VetoChart from '@/components/dpbp/VetoChart/VetoChart';
 import ChartSignature from '@/components/dpbp/ChartSignature';
-import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import { readableAccent } from '@/utils/colorUtils';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
@@ -46,7 +44,14 @@ function loadArticle(chapterSlug: string, articleSlug: string) {
   }
 
   return {
-    frontmatter: data as { title: string; excerpt: string; author: string; date: string },
+    frontmatter: data as {
+      title: string;
+      excerpt: string;
+      author: string;
+      date: string;
+      coverImage?: string;
+      heroInArticle?: boolean;
+    },
     content,
     htmlContent,
   };
@@ -101,12 +106,6 @@ export async function generateMetadata({ params }: { params: { chapter: string; 
   };
 }
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('cs-CZ', {
-    day: 'numeric', month: 'long', year: 'numeric',
-  });
-}
-
 const mdxComponents = {
   VegaChart: ({ chartId }: { chartId: string }) => <VegaChart chartId={chartId} />,
   FlourishEmbed,
@@ -131,61 +130,26 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   // accent since they're decorative, not text.
   const textAccent = readableAccent(accent);
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
+  const shareUrl = `${baseUrl}/specialy/data-pro-budouci-premierku/${params.chapter}/${params.article}`;
+
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
-      {/* Article header */}
-      <Box style={{ background: '#101432', padding: '48px 0 40px' }}>
-        <Container size="sm">
-          <Box style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24 }}>
-            <Box style={{ minWidth: 0 }}>
-              <Text size="xs" style={{ color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>
-                <Link href="/specialy/data-pro-budouci-premierku" style={{ color: 'inherit', textDecoration: 'none' }}>Data pro budoucí premiérku</Link>
-                {' · '}
-                <Link href={`/specialy/data-pro-budouci-premierku/${params.chapter}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-                  {chapterMeta?.title ?? 'Kapitola'}
-                </Link>
-              </Text>
-              <Title order={1} style={{ color: '#ffffff', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1.2, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
-                {fm.title}
-              </Title>
-              <Box style={{ width: 40, height: 3, background: accent, marginTop: 16, marginBottom: 16 }} />
-              <Text style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
-                {splitAuthors(fm.author).map((name, i, arr) => (
-                  <span key={name}>
-                    <Link href={`/autor/${normalizeAuthor(name)}`} className="dpbp-author-link">
-                      {name}
-                    </Link>
-                    {i < arr.length - 1 ? ' & ' : ''}
-                  </span>
-                ))}
-                {' · '}{formatDate(fm.date)}
-              </Text>
-            </Box>
-            <Box className="dpbp-article-head-profile" style={{ flex: '0 0 auto' }}>
-              <a
-                href="https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku"
-                aria-label="Zpět na Data pro budoucí premiérku"
-                style={{ display: 'block' }}
-              >
-                <ProfileHead silColor={accent} style={{ width: 100, height: 100, display: 'block' }} />
-              </a>
-            </Box>
-          </Box>
-          <style>{`
-            @media (max-width: 600px) {
-              .dpbp-article-head-profile { display: none; }
-            }
-            .dpbp-author-link {
-              color: inherit;
-              text-decoration: none;
-            }
-            .dpbp-author-link:hover,
-            .dpbp-author-link:focus-visible {
-              text-decoration: underline;
-            }
-          `}</style>
-        </Container>
-      </Box>
+      {/* Article header – náležitosti (titulek, perex, autoři, datum, sdílení,
+          audio stopa, náhledový obrázek s redakčním přepínačem heroInArticle) */}
+      <ArticleHeader
+        crumbs={[
+          { label: 'Data pro budoucí premiérku', href: '/specialy/data-pro-budouci-premierku' },
+          { label: chapterMeta?.title ?? 'Kapitola', href: `/specialy/data-pro-budouci-premierku/${params.chapter}` },
+        ]}
+        title={fm.title}
+        excerpt={fm.excerpt}
+        author={fm.author}
+        date={fm.date}
+        shareUrl={shareUrl}
+        heroImage={fm.coverImage}
+        showHero={fm.heroInArticle === true}
+      />
 
       {/* Article body */}
       <Container size="sm" style={{ padding: '32px 16px 48px' }}>
