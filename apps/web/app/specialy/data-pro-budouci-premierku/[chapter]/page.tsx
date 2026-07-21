@@ -96,8 +96,9 @@ function IntroEndMark({ accent }: { accent: string }) {
 }
 
 // Chapters with dedicated static page.tsx files – excluded from dynamic generation
-// to prevent output file collision in `output: 'export'` builds.
-const STATIC_CHAPTER_ROUTES = new Set(['01-demografie']);
+// to prevent output file collision in `output: 'export'` builds. Prázdné: všechny
+// kapitoly (včetně 01-demografie) jedou přes tuto jednotnou šablonu.
+const STATIC_CHAPTER_ROUTES = new Set<string>([]);
 
 export async function generateStaticParams() {
   if (!fs.existsSync(CONTENT_ROOT)) return [];

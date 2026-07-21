@@ -1,0 +1,83 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Úhrnná plodnost v Česku 1990–2025",
+ "title": {
+  "text": "Úhrnná plodnost klesla hluboko pod hranici prosté reprodukce",
+  "subtitle": "Počet dětí na jednu ženu ve věku 15–49 let, Česko 1990–2025; rok 2025 je odhad"
+ },
+ "width": 450,
+ "height": 300,
+ "padding": {
+  "right": 30
+ },
+ "data": {
+  "values": [
+   { "rok": 1990, "tfr": 1.89, "label": "1,89", "typ": "data" },
+   { "rok": 1995, "tfr": 1.28, "label": "1,28", "typ": "data" },
+   { "rok": 2000, "tfr": 1.14, "label": "1,14", "typ": "data" },
+   { "rok": 2005, "tfr": 1.28, "label": "1,28", "typ": "data" },
+   { "rok": 2010, "tfr": 1.49, "label": "1,49", "typ": "data" },
+   { "rok": 2015, "tfr": 1.57, "label": "1,57", "typ": "data" },
+   { "rok": 2020, "tfr": 1.71, "label": "1,71", "typ": "data" },
+   { "rok": 2025, "tfr": 1.28, "label": "1,28", "typ": "odhad" }
+  ]
+ },
+ "layer": [
+  {
+   "data": { "values": [ {} ] },
+   "mark": { "type": "rule", "strokeDash": [ 5, 4 ], "stroke": "#0e8aab", "strokeWidth": 1.5 },
+   "encoding": {
+    "y": { "datum": 2.1, "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] } }
+   }
+  },
+  {
+   "data": { "values": [ { "rok": 1990, "ref": 2.1 } ] },
+   "mark": { "type": "text", "align": "left", "dx": 2, "dy": -7, "fontSize": 11, "color": "#0e8aab" },
+   "encoding": {
+    "x": { "field": "rok", "type": "quantitative", "scale": { "domain": [ 1990, 2025 ] } },
+    "y": { "field": "ref", "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] } },
+    "text": { "value": "hranice prosté reprodukce 2,10" }
+   }
+  },
+  {
+   "mark": { "type": "line", "stroke": "#272a59", "strokeWidth": 2.5, "strokeLinejoin": "round", "point": { "filled": true, "fill": "#272a59", "size": 55 } },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": { "domain": [ 1990, 2025 ] },
+     "axis": { "format": "d", "values": [ 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025 ], "grid": false, "domain": false, "ticks": false, "labelAngle": 0 }
+    },
+    "y": {
+     "field": "tfr",
+     "type": "quantitative",
+     "title": null,
+     "scale": { "domain": [ 1.0, 2.2 ] },
+     "axis": { "grid": true, "gridColor": "#e8e8dc", "domain": false, "ticks": false, "values": [ 1.0, 1.3, 1.6, 1.9, 2.2 ], "labelExpr": "replace(format(datum.value, '.1f'), '.', ',')" }
+    }
+   }
+  },
+  {
+   "transform": [ { "filter": "datum.typ == 'odhad'" } ],
+   "mark": { "type": "point", "filled": true, "fill": "#de1743", "size": 110 },
+   "encoding": {
+    "x": { "field": "rok", "type": "quantitative", "scale": { "domain": [ 1990, 2025 ] } },
+    "y": { "field": "tfr", "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] } }
+   }
+  },
+  {
+   "mark": { "type": "text", "align": "center", "baseline": "bottom", "dy": -9, "fontSize": 12, "fontWeight": "bold" },
+   "encoding": {
+    "x": { "field": "rok", "type": "quantitative", "scale": { "domain": [ 1990, 2025 ] } },
+    "y": { "field": "tfr", "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] } },
+    "text": { "field": "label" },
+    "color": { "field": "typ", "type": "nominal", "scale": { "domain": [ "data", "odhad" ], "range": [ "#3a3730", "#de1743" ] }, "legend": null }
+   }
+  }
+ ],
+ "config": {
+  "view": { "stroke": "transparent" }
+ },
+ "_source": "ČSÚ, časové řady úhrnné plodnosti; rok 2025 odhad (kulatý stůl PSP, 27. 4. 2026)"
+}
