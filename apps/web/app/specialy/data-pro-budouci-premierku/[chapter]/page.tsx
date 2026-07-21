@@ -29,8 +29,17 @@ interface ChapterMeta {
   cardOrder: string[];
   onePager: { slug: string; logo: string | null } | null;
   introChart?: string;
-  intro?: { title: string; textBefore: string; textAfter: string; textClosing?: string };
+  intro?: {
+    title: string;
+    textBefore: string;
+    textAfter: string;
+    textClosing?: string;
+    chartTitle?: string;
+    chartCaption?: string;
+  };
   tiles?: Array<{ slug: string; topic: string; fullWidth?: boolean }>;
+  // Historické pole – dlaždice, které dřív visely pod support bannerem. Nově se
+  // slučují do jedné mřížky (viz redakční feedback: žádné dlaždice po banneru).
   postSupportTiles?: Array<{ slug: string; topic: string; fullWidth?: boolean }>;
 }
 
@@ -74,10 +83,14 @@ function loadChartSpec(chartId: string): Record<string, unknown> | null {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
-function SectionDivider({ accent }: { accent: string }) {
+// Jemná koncová značka úvodního textu – aby bylo poznat, kde úvod končí a kde
+// začíná sekce dlaždic (viz redakční feedback).
+function IntroEndMark({ accent }: { accent: string }) {
   return (
-    <Box style={{ margin: '40px 0', display: 'flex', justifyContent: 'center' }}>
-      <Box style={{ width: 48, height: 3, background: accent, borderRadius: 2 }} />
+    <Box style={{ display: 'flex', alignItems: 'center', gap: 14, margin: '30px 0 8px' }}>
+      <Box style={{ flex: 1, height: 1, background: '#e8e3d2' }} />
+      <Box style={{ width: 8, height: 8, background: accent, borderRadius: 1 }} />
+      <Box style={{ flex: 1, height: 1, background: '#e8e3d2' }} />
     </Box>
   );
 }
@@ -119,37 +132,29 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
     ? loadArticleFrontmatter(params.chapter, meta.onePager.slug)
     : null;
 
-  // Unified tile grid, 4 pairs (8 tiles) in fixed editorial order:
-  // Pár 1: Explainer (vlevo) | Svět/Evropa (vpravo)
-  // Pár 2: mezinárodní kontext (vlevo) | hlavní analýza 01 (vpravo)
-  // Pár 3: hlavní analýza 02 (vlevo) | hlavní analýza 03 (vpravo)
-  // Pár 4: datová investigace (vlevo) | komparace/solution journalism (vpravo)
+  // Jedna souvislá mřížka dlaždic. Historické `postSupportTiles` se slučují na
+  // konec `tiles` – všechny dlaždice jsou rovnocenné a v jednom bloku, support
+  // banner přichází až za nimi.
   const tiles = withRowSpan(
-    (meta.tiles ?? [])
-      .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
-      .filter(t => t.fm != null)
-  );
-
-  const postSupportTiles = withRowSpan(
-    (meta.postSupportTiles ?? [])
+    [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
       .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
       .filter(t => t.fm != null)
   );
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
-      {/* Chapter header */}
-      <Box style={{ background: '#101432', padding: '48px 0 40px' }}>
+      {/* Chapter header – jeden masthead, název kapitoly je největší prvek stránky */}
+      <Box style={{ background: '#101432', padding: '52px 0 44px' }}>
         <Container size="md">
-          <Box className="dpbp-chapter-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24 }}>
+          <Box className="dpbp-chapter-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 28 }}>
             <Box style={{ minWidth: 0 }}>
-              <Text size="xs" style={{ color: '#f8f6f0', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
+              <Text size="xs" style={{ color: '#f8f6f0', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 14 }}>
                 <Link href="/specialy/data-pro-budouci-premierku" className="dpbp-crumb-link" style={{ textDecoration: 'none' }}>Data pro budoucí premiérku</Link> · Kapitola {meta.id}
               </Text>
-              <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: '2rem', fontWeight: 800, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
+              <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 'clamp(2.1rem, 5vw, 2.9rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.01em', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
                 {meta.title}
               </Title>
-              <Box style={{ width: 48, height: 3, background: meta.accent, marginTop: 16 }} />
+              <Box style={{ width: 64, height: 4, background: meta.accent, marginTop: 20, borderRadius: 2 }} />
             </Box>
             <Box className="dpbp-chapter-head-profile" style={{ flex: '0 0 auto' }}>
               <a
@@ -184,126 +189,147 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
       </Box>
 
       <Container size="md" style={{ padding: '0 16px' }}>
-        {/* Intro: titulek → textBefore → infobox s číslem → textAfter → graf */}
+        {/* Intro: kicker → titulek → text → statistika → text → graf → uzávěr */}
         {meta.intro && (
-          <Box style={{ paddingTop: 32 }}>
+          <Box style={{ paddingTop: 40 }}>
+            <Text style={{
+              fontSize: 12,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: readableAccent(meta.accent),
+              fontWeight: 700,
+              marginBottom: 14,
+            }}>
+              Úvodní text kapitoly
+            </Text>
             <Title order={2} style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: '1.6rem',
               fontWeight: 700,
               color: '#1a1a1a',
               lineHeight: 1.25,
-              marginBottom: 16,
+              marginBottom: 20,
             }}>
               {meta.intro.title}
             </Title>
             <Text style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-              fontSize: 16,
-              lineHeight: 1.65,
-              color: '#2a2a2a',
-              marginBottom: 20,
+              fontSize: 17,
+              lineHeight: 1.7,
+              color: '#2b2a27',
+              marginBottom: 22,
             }}>
               {meta.intro.textBefore}
             </Text>
             {introCard && <ImpactCard card={introCard} />}
             <Text style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-              fontSize: 16,
-              lineHeight: 1.65,
-              color: '#2a2a2a',
-              marginBottom: 20,
+              fontSize: 17,
+              lineHeight: 1.7,
+              color: '#2b2a27',
+              marginBottom: 22,
             }}>
               {meta.intro.textAfter}
             </Text>
-            {introChartSpec && <VegaChart spec={introChartSpec} />}
+            {introChartSpec && (
+              <Box component="figure" style={{ margin: '8px 0 24px' }}>
+                {meta.intro.chartTitle && (
+                  <Text style={{
+                    fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                    fontWeight: 700,
+                    fontSize: '1.05rem',
+                    color: '#1a1a1a',
+                    marginBottom: 12,
+                  }}>
+                    {meta.intro.chartTitle}
+                  </Text>
+                )}
+                <VegaChart spec={introChartSpec} />
+                {meta.intro.chartCaption && (
+                  <Text component="figcaption" style={{ fontSize: 12.5, color: '#5a564d', lineHeight: 1.5, marginTop: 10 }}>
+                    {meta.intro.chartCaption}
+                  </Text>
+                )}
+              </Box>
+            )}
             {meta.intro.textClosing && (
               <Text style={{
                 fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-                fontSize: 16,
-                lineHeight: 1.65,
-                color: '#2a2a2a',
-                marginTop: 20,
+                fontSize: 17,
+                lineHeight: 1.7,
+                color: '#2b2a27',
+                marginTop: 4,
               }}>
                 {meta.intro.textClosing}
               </Text>
             )}
+            <IntroEndMark accent={meta.accent} />
           </Box>
         )}
 
-        {/* Shrnutí – full-width dlaždice */}
-        {onePagerFm && meta.onePager && (
-          <Box style={{ paddingTop: 32 }}>
-            <DpbpArticleCard
-              href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${meta.onePager.slug}`}
-              title={onePagerFm.title}
-              excerpt={onePagerFm.excerpt}
-              author={onePagerFm.author}
-              chapterTitle={meta.title}
-              primaryChartSpec={null}
-              image={onePagerFm?.logo ?? meta.onePager?.logo ?? undefined}
-              accent="#101432"
-              type="Shrnutí"
-            />
-          </Box>
-        )}
-
-        {/* 4 páry dlaždic (2 sloupce) – viz pořadí v meta.tiles */}
-        {tiles.length > 0 && (
-          <Box>
-            <SectionDivider accent={meta.accent} />
-            <Box
-              className="dpbp-tile-grid"
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginBottom: 8 }}
-            >
-              {tiles.map(t => (
-                <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
-                  <DpbpArticleCard
-                    href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
-                    title={t.fm!.title}
-                    excerpt={t.fm!.excerpt}
-                    author={t.fm!.author}
-                    chapterTitle={meta.title}
-                    primaryChartSpec={null}
-                    image={t.fm!.logo}
-                    accent={meta.accent}
-                    type={t.topic}
-                    stacked={!t.fullWidth}
-                  />
-                </div>
-              ))}
+        {/* Sekce dlaždic – jeden pojmenovaný blok, souhrn + rovnocenná mřížka */}
+        {(onePagerFm || tiles.length > 0) && (
+          <Box style={{ paddingTop: 20 }}>
+            <Box style={{ marginBottom: 20 }}>
+              <Title order={2} style={{
+                fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                fontSize: '1.5rem',
+                fontWeight: 700,
+                color: '#1a1a1a',
+                marginBottom: 8,
+              }}>
+                Co v této kapitole najdete
+              </Title>
+              <Text style={{ fontSize: 14.5, color: '#5a564d', lineHeight: 1.55, maxWidth: '64ch' }}>
+                Každá dlaždice je jeden samostatný text. Ikona u názvu říká žánr – od vysvětlujícího explaineru přes datovou analýzu a investigaci až po srovnání se světem. Začněte souhrnem, nebo skočte rovnou k tomu, co vás zajímá.
+              </Text>
             </Box>
+
+            {/* Souhrn kapitoly – dlaždice přes celou šířku, piktogram jako náhled */}
+            {onePagerFm && meta.onePager && (
+              <Box style={{ marginBottom: 18 }}>
+                <DpbpArticleCard
+                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${meta.onePager.slug}`}
+                  title={onePagerFm.title}
+                  excerpt={onePagerFm.excerpt}
+                  author={onePagerFm.author}
+                  primaryChartSpec={null}
+                  image={onePagerFm?.logo ?? meta.onePager?.logo ?? undefined}
+                  accent={meta.accent}
+                  type="Souhrn kapitoly"
+                />
+              </Box>
+            )}
+
+            {tiles.length > 0 && (
+              <Box
+                className="dpbp-tile-grid"
+                style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18 }}
+              >
+                {tiles.map(t => (
+                  <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
+                    <DpbpArticleCard
+                      href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
+                      title={t.fm!.title}
+                      excerpt={t.fm!.excerpt}
+                      author={t.fm!.author}
+                      primaryChartSpec={null}
+                      image={t.fm!.logo}
+                      accent={meta.accent}
+                      type={t.topic}
+                      stacked={!t.fullWidth}
+                    />
+                  </div>
+                ))}
+              </Box>
+            )}
           </Box>
         )}
 
-        <Box style={{ marginTop: 24 }}>
+        {/* Support banner – až za VŠEMI dlaždicemi */}
+        <Box style={{ marginTop: 40 }}>
           <SupportBanner />
         </Box>
-
-        {/* Pokračování kapitoly – dlaždice zařazené pod support banner */}
-        {postSupportTiles.length > 0 && (
-          <Box
-            className="dpbp-tile-grid"
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14, marginTop: 24, marginBottom: 8 }}
-          >
-            {postSupportTiles.map(t => (
-              <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
-                <DpbpArticleCard
-                  href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
-                  title={t.fm!.title}
-                  excerpt={t.fm!.excerpt}
-                  author={t.fm!.author}
-                  chapterTitle={meta.title}
-                  primaryChartSpec={null}
-                  image={t.fm!.logo}
-                  accent={meta.accent}
-                  type={t.topic}
-                  stacked={!t.fullWidth}
-                />
-              </div>
-            ))}
-          </Box>
-        )}
       </Container>
 
       {/* End-of-chapter engagement */}

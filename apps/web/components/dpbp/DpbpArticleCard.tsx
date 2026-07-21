@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import VegaChart from './VegaChart';
+import GenreBadge from './GenreBadge';
 import { hexToRgbString } from '@/utils/colorUtils';
 import styles from './DpbpArticleCard.module.css';
 
@@ -8,7 +9,6 @@ interface DpbpArticleCardProps {
   title: string;
   excerpt: string;
   author: string;
-  chapterTitle: string;
   primaryChartSpec: Record<string, unknown> | null;
   accent?: string;
   type?: string;
@@ -21,7 +21,6 @@ export default function DpbpArticleCard({
   title,
   excerpt,
   author,
-  chapterTitle,
   primaryChartSpec,
   accent = '#de1743',
   type = 'Analýza',
@@ -49,7 +48,7 @@ export default function DpbpArticleCard({
         </div>
       )}
       <div className={styles.body}>
-        <div className={styles.topic}>{chapterTitle} · {type}</div>
+        <GenreBadge topic={type} />
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.desc}>{excerpt}</p>
         <div className={styles.meta}>

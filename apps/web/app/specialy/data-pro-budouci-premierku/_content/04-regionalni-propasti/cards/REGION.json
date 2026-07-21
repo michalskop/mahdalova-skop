@@ -1,11 +1,11 @@
 {
   "id": "REGION",
-  "number": "27",
+  "number": "61",
   "unit": "%",
   "perUnit": "",
-  "label": "Českého HDP vzniká v Praze",
-  "sublabel": "Českého HDP vzniká v Praze",
-  "context": "Praha má jen 12–13 % obyvatel ČR. Rozdíl je z velké části účetní artefakt – koncentrace sídel firem a denní dojížďka, ne přímý transfer bohatství z regionů.",
-  "source": "ČSÚ: Regionální účty národního hospodářství",
+  "label": "Tolik dělá HDP Severozápadu na obyvatele z průměru EU",
+  "sublabel": "Tolik dělá HDP Severozápadu na obyvatele z průměru EU – a od roku 2014 se to nehne",
+  "context": "Severozápad = Ústecký a Karlovarský kraj (statistický region NUTS 2). HDP na obyvatele v paritě kupní síly proti průměru EU27; data jsou jen za oba kraje dohromady.",
+  "source": "Eurostat: regionální HDP na obyvatele v PPS (tgs00006), 2024",
   "accent": "#de1743"
 }

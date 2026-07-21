@@ -2,7 +2,10 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "Praha drží dvojnásobek průměru EU, Severozápad se nepřiblížil ani o krok",
-  "subtitle": "HDP na obyvatele v paritě kupní síly jako % průměru EU27, 2014–2024"
+  "subtitle": [
+   "HDP na obyvatele v paritě kupní síly jako % průměru EU27, 2014–2024",
+   "Severozápad = Ústecký a Karlovarský kraj (statistický region NUTS 2, data jsou jen za oba dohromady)"
+  ]
  },
  "width": 450,
  "height": 300,

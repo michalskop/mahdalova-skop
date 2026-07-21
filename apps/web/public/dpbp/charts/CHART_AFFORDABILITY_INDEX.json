@@ -17,12 +17,6 @@
     "group": "Evropská špička"
    },
    {
-    "city": "Atény",
-    "value": 15.3,
-    "label": "15,3",
-    "group": "Evropská špička"
-   },
-   {
     "city": "Praha",
     "value": 15.0,
     "label": "15,0",
@@ -79,7 +73,6 @@
      "title": null,
      "sort": [
       "Amsterdam",
-      "Atény",
       "Praha",
       "Bratislava",
       "Varšava",
@@ -173,7 +166,6 @@
      "type": "nominal",
      "sort": [
       "Amsterdam",
-      "Atény",
       "Praha",
       "Bratislava",
       "Varšava",

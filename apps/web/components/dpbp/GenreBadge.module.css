@@ -1,0 +1,22 @@
+/* Neutrální šedý chip – stejný na všech kapitolách, nezávislý na accentu. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a5445;
+  background: #f1ece0;
+  border: 1px solid #e3dcca;
+  padding: 4px 9px 4px 7px;
+  border-radius: 5px;
+}
+
+.badge svg {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 auto;
+}
