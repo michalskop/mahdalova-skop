@@ -75,7 +75,7 @@
    }
   },
   {
-   "mark": { "type": "text", "dy": -13, "fontWeight": "bold", "fontSize": 14 },
+   "mark": { "type": "text", "baseline": "bottom", "dy": -10, "fontWeight": "bold", "fontSize": 14 },
    "encoding": {
     "x": { "field": "rok", "type": "quantitative", "scale": { "domain": [ 1990, 2025 ], "nice": false }, "axis": null },
     "y": { "field": "tfr", "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] }, "axis": null },
