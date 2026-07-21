@@ -26,7 +26,7 @@
   },
   {
    "data": { "values": [ {} ] },
-   "mark": { "type": "text", "align": "left", "dx": 2, "dy": -7, "color": "#0e8aab", "fontSize": 11 },
+   "mark": { "type": "text", "align": "left", "dx": 2, "dy": -8, "color": "#0e8aab", "fontSize": 13 },
    "encoding": {
     "x": { "datum": 1990, "type": "quantitative", "scale": { "domain": [ 1990, 2025 ] } },
     "y": { "datum": 2.1, "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] } },
@@ -75,7 +75,7 @@
    }
   },
   {
-   "mark": { "type": "text", "dy": -12, "fontWeight": "bold", "fontSize": 12 },
+   "mark": { "type": "text", "dy": -13, "fontWeight": "bold", "fontSize": 14 },
    "encoding": {
     "x": { "field": "rok", "type": "quantitative", "scale": { "domain": [ 1990, 2025 ], "nice": false }, "axis": null },
     "y": { "field": "tfr", "type": "quantitative", "scale": { "domain": [ 1.0, 2.2 ] }, "axis": null },
