@@ -1,24 +1,27 @@
 .card {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0;
   background: #fff;
   border: 1px solid #e8e3d2;
   border-top: 4px solid #de1743; /* overridden per chapter via inline style */
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 0;
-  margin: 0 0 24px;
+  margin: 0;
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+/* Klidný hover – nadzvednutí + stín. Žádný scale, aby se náhled „netloukl“
+   o rámeček karty (viz feedback). */
 .card:hover {
   border-color: var(--card-accent, #de1743);
-  box-shadow: 0 6px 20px rgba(var(--card-accent-rgb, 222, 23, 67), 0.18);
-  transform: scale(1.02);
+  box-shadow: 0 12px 26px rgba(var(--card-accent-rgb, 222, 23, 67), 0.14);
+  transform: translateY(-3px);
 }
 
 .card.stacked {
@@ -29,13 +32,24 @@
   flex: 0 0 auto;
   align-self: stretch;
   width: 100%;
-  height: 180px;
+  height: 150px;
 }
 
+/* Dlaždice v mřížce (poloviční) mají menší titulek, aby nekonkurovaly
+   názvu kapitoly v mastheadu ani souhrnné dlaždici. */
+.card.stacked .title {
+  font-size: 18px;
+}
+
+.card.stacked .body {
+  padding: 14px 18px 18px;
+}
+
+/* Náhled bez rámečku, plná plocha. */
 .thumb {
-  flex: 0 0 33.333%;
+  flex: 0 0 34%;
   align-self: stretch;
-  background: #f8f6f0;
+  background: #f4f1e7;
   border-radius: 0;
   overflow: hidden;
   display: flex;
@@ -66,13 +80,9 @@
   padding: 16px 20px 20px;
 }
 
-.topic {
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #8b0e2b;
-  margin-bottom: 8px;
+/* odstup žánrové značky od titulku */
+.body > span {
+  margin-bottom: 10px;
 }
 
 .title {
@@ -111,6 +121,6 @@
     flex: 0 0 auto;
     align-self: stretch;
     width: 100%;
-    height: 180px;
+    height: 150px;
   }
 }

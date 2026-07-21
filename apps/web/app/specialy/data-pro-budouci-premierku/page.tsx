@@ -643,7 +643,10 @@ function ChapterTile({ chapter }: { chapter: typeof CHAPTERS[0] }) {
 export default function DpbpLandingPage() {
   return (
     <Container size="lg" maw="1200px" w="100%" p={0} m="0 auto">
-      <style>{`
+      {/* dangerouslySetInnerHTML: apostrofy ve font-family (`'Roboto Slab'`)
+          React při SSR escapuje na &#x27;, na klientu ne → hydration mismatch.
+          innerHTML porovnání textového obsahu <style> obchází. */}
+      <style dangerouslySetInnerHTML={{ __html: `
         .ch-card {
           box-shadow: 0 2px 12px rgba(0,0,0,0.35);
           will-change: transform, background-color, box-shadow;
@@ -769,7 +772,7 @@ export default function DpbpLandingPage() {
           color: #ffcf02;
           font-family: 'Roboto Slab', serif;
         }
-      `}</style>
+      `}} />
       <Box style={{ background: DARK, minHeight: '100vh' }}>
 
         {/* Hero – eyebrow → nadpis → jedna úderná věta; hover na nadpis

@@ -1,22 +1,23 @@
-.card {
-  background: #fff;
-  border: 1px solid #e8e3d2;
-  border-left: 4px solid #de1743; /* overridden per card via inline style */
-  border-radius: 6px;
-  padding: 18px 22px;
-  margin: 32px 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
+/* Editoriální statistika – linka nahoře i dole (accent), žádná karta. */
+.stat {
+  display: flex;
+  align-items: baseline;
   gap: 22px;
-  align-items: center;
+  flex-wrap: wrap;
+  padding: 22px 4px;
+  margin: 6px 0 26px;
+  border-top: 1px solid; /* barva z inline stylu (accent kapitoly) */
+  border-bottom: 1px solid;
+  border-left: 0;
+  border-right: 0;
+  background: none;
 }
 
-.num {
+.fig {
   font-family: var(--font-roboto-slab), Georgia, serif;
-  font-size: 44px;
   font-weight: 800;
-  color: #de1743; /* overridden per card via inline style */
-  line-height: 1;
+  font-size: clamp(2.6rem, 7vw, 3.6rem);
+  line-height: 0.9;
   font-variant-numeric: lining-nums tabular-nums;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
@@ -24,44 +25,34 @@
 }
 
 .unit {
-  font-size: 28px;
+  font-size: 0.42em;
   font-weight: 700;
+  margin-left: 3px;
+  vertical-align: super;
 }
 
 .perUnit {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  opacity: 0.65;
-  margin-top: 2px;
+  font-size: 0.42em;
+  font-weight: 700;
+  margin-left: 4px;
+  color: #5a564d;
 }
 
-.text {
+.cap {
+  flex: 1;
+  min-width: 220px;
+}
+
+.lbl {
   font-family: var(--font-roboto-slab), Georgia, serif;
-  font-size: 14px;
-  color: #444;
-  line-height: 1.55;
-}
-
-.text b {
+  font-size: 16px;
+  font-weight: 700;
   color: #1a1a1a;
+  line-height: 1.35;
 }
 
-.source {
-  color: #888;
+.src {
   font-size: 12px;
-  display: block;
-  margin-top: 4px;
-}
-
-@media (max-width: 600px) {
-  .card {
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 8px;
-  }
-
-  .num {
-    white-space: normal;
-  }
+  color: #5a564d;
+  margin-top: 6px;
 }

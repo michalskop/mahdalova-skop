@@ -14,10 +14,10 @@
   },
   "introChart": "G09_01_REGION_GAP",
   "intro": {
-    "title": "Praha vytváří 27 % HDP. Ústecký kraj se k průměru EU nepřiblížil ani za dvacet let",
-    "textBefore": "Budoucí premiérka vystupuje z vlaku na nádraží v Ústí nad Labem. Před chvílí opustila Prahu, kde průměrný byt stojí přes 15 milionů a průměrná mzda se blíží 70 tisícům korun. Tady, o 90 kilometrů dál, je realita jiná – ne horší v každém ohledu, ale strukturálně jiná.",
-    "textAfter": "Na Prahu připadá zhruba 27 % českého HDP, přestože v ní žije jen 12–13 % obyvatel. Část rozdílu je účetní artefakt – koncentrace firemních sídel a denní dojížďka, ne odčerpávání bohatství z regionů. Skutečným problémem periferií není bohatství Prahy, ale to, že Ústecký a Karlovarský kraj se k průměru EU posledních dvacet let prakticky nepřiblížily.",
-    "textClosing": "Itálie řeší podobnou propast mezi severem a jihem už sto padesát let a ani masivní investice ji nezavřely. Německo a Slovinsko naopak ukazují dvě různé cesty, jak regionální rozdíly aktivně zmenšovat – a co z obou modelů je pro Česko reálně použitelné."
+    "title": "Ústecko a Karlovarsko stojí na 61 % evropského průměru. Deset let se to nehne",
+    "textBefore": "Ústecký a Karlovarský kraj – ve statistice vedené dohromady jako region Severozápad – vytvoří na obyvatele 61 % průměru EU. Od roku 2014 se to prakticky nepohnulo, i když průměr celé ČR se k unii posunul. Praha přitom drží dvojnásobek unijního průměru.",
+    "textAfter": "Nejčastější číslo v debatě o regionech je pražských 27 % českého HDP. To ale neznamená, že Praha odčerpává bohatství regionů – velkou část tvoří sídla firem a denní dojížďka statisíců lidí, kteří výkon vytvářejí jinde a v Praze se jen účtuje. Kde periferie opravdu zaostávají, ukážou spíš exekuce a účty za energie než krajské HDP.",
+    "textClosing": "Itálie se stejnou propastí mezi severem a jihem zápasí sto padesát let a nezavřely ji ani obří dotace. Německo a Slovinsko ukazují dvě jiné cesty, jak rozdíly aktivně stlačovat – a co z nich by v Česku fungovalo, rozebírají texty níže."
   },
   "tiles": [
     { "slug": "explainer-regionalni-mezera", "topic": "Explainer" },

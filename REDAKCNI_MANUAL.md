@@ -1,6 +1,8 @@
 # Redakční manuál DataTimes — kanonická verze
 
-Jediný zdroj pravdy pro to, jak píšeme, ověřujeme a navrhujeme. **Etika a srozumitelný styl platí závazně pro všechny naše analýzy bez ohledu na formát** — text, data, grafiku, audio i video. Žánry určují stavbu. Vzhled a lokální nuance doplňují projektové kapitoly.
+Jediný zdroj pravdy pro to, jak píšeme, ověřujeme a navrhujeme ve všem, co dělá dvojice Mahdalová & Škop. **Etika a srozumitelný styl platí závazně pro všechny naše analýzy bez ohledu na formát** — text, data, grafiku, audio i video — a napříč oběma značkami (mahdalova-skop.cz i datajournalism.studio) a všemi speciály. Žánry určují stavbu. Vzhled a lokální nuance doplňují projektové kapitoly.
+
+*Umístění: kořen repozitáře `mahdalova-skop`. Tohle je kanonická strojově i lidsky čitelná verze; čtenářský booklet (.docx) se z ní odvozuje.*
 
 Tenhle soubor nahrazuje roztříštěnost pravidel mezi dokumenty. Hlubší rozbory zůstávají jako podřízené reference (viz [Registr](#registr-zdrojů-a-projektových-kapitol)); žádný z nich nesmí tenhle manuál oslabit ani vytvořit druhou „ústavu".
 
