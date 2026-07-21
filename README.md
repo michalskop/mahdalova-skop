@@ -1,4 +1,23 @@
-# Turborepo starter
+# Mahdalová & Škop · DataTimes
+
+Monorepo datové žurnalistiky dvojice Kateřina Mahdalová & Michal Škop. Obsahuje oba weby a všechny speciály:
+
+- **`apps/web`** — [mahdalova-skop.cz](https://www.mahdalova-skop.cz) (česky)
+- **`apps/datajournalism.studio`** — [datajournalism.studio](https://www.datajournalism.studio) (anglicky)
+
+## 📘 Jak píšeme, ověřujeme a navrhujeme
+
+**[REDAKCNI_MANUAL.md](REDAKCNI_MANUAL.md) — kanonický redakční manuál.** Jediný zdroj pravdy: etika a styl závazně pro všechny formáty (text, data, audio, video), žánry, fact-checking a provoz. Platí pro obě značky i všechny speciály.
+
+Podřízené a doplňkové dokumenty:
+- [STYL_DATOVA_ZURNALISTIKA.md](STYL_DATOVA_ZURNALISTIKA.md) — datová žurnalistika s příklady (hloubková reference)
+- [NAVOD_STYL_TRESNAK.md](NAVOD_STYL_TRESNAK.md) — replikovatelná metoda vyprávěcího stylu
+- [DESIGN.md](DESIGN.md) — vizuální systém a barevné tokeny
+- Projektové kapitoly: [`apps/web/SPECIAL.md`](apps/web/SPECIAL.md) a [`apps/web/DPBP_WRITING_GUIDE.md`](apps/web/DPBP_WRITING_GUIDE.md) (Data pro budoucí premiérku), [`apps/web/KVIFF_WRITING_GUIDE.md`](apps/web/KVIFF_WRITING_GUIDE.md) (Karlovy Vary v datech)
+
+---
+
+## Technická dokumentace (Turborepo)
 
 This is an official starter Turborepo.
 
