@@ -1,10 +1,10 @@
 # NÁVOD: Jak psát „třešňákovsky" – replikovatelná metoda
 
-> **Hloubková reference podřízená kanonickému [REDAKCNI_MANUAL.md](REDAKCNI_MANUAL.md).** Kde si odporují, platí manuál – zejména jeho etika (Část I), jazyk bez berliček (Část II) a datový modul (Část III).
+> **Hloubková reference podřízená kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md).** Kde si odporují, platí manuál – zejména jeho etika (Část I), jazyk bez berliček (Část II) a datový modul (Část III).
 
 Destilát z rozboru cca 20 textů Petra Třešňáka (Respekt, 2019–2025): Jak zvládnout bolest, Kdy začíná dospělost, Kouzlo dotyků, Jak přežít pocit viny, Proč děti nečtou, Jak mozek léčí tělo, Naučme se dýchat, My děti ze stanice C, Jazyk, který představuje výzvu, krátké glosy (V hlavě) a další. Cíl: aby kdokoli z redakce (člověk i AI) dokázal tímhle stylem napsat text na libovolné téma – včetně datové analýzy.
 
-Navazuje na obecná pravidla v `REDAKCNI_MANUAL.md` (ten říká *co* má kvalitní text splňovat; tenhle návod říká *jak přesně to udělat*). **U datových a analytických textů má přednost `STYL_DATOVA_ZURNALISTIKA.md`** – vyprávěcí nástroje odsud se používají uvnitř jeho mantinelů (fakta první, čísla kotvená, žádná dramatizace, žádné anglické kalky), nikdy proti nim.
+Navazuje na závazná pravidla v `REDAKCNI_MANUAL.md` (ten říká *co* má kvalitní text splňovat; tento návod ukazuje možné vyprávěcí nástroje). U datových a analytických textů se používá spolu s referencí [`STYL_DATOVA_ZURNALISTIKA.md`](STYL_DATOVA_ZURNALISTIKA.md), vždy pod autoritou datového modulu kanonického manuálu. Vyprávěcí nástroje nesmějí odsunout fakta, dramatizovat data ani zavést anglické kalky.
 
 ---
 

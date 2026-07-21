@@ -2,6 +2,8 @@
 
 Pravidla pro obsah, grafy a strukturu `/specialy/kviff` (`apps/web/app/specialy/kviff/`). Destilováno z redakčního auditu 2026-07-12 (viz shrnutí níže) – účel je zabránit stejným chybám v nových kapitolách (`temata-filmu`, `trzby-filmu`) a při revizích hotových.
 
+> **Projektový dodatek podřízený kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md).** Obsahuje pouze pravidla specifická pro KVIFF. Při rozporu platí kanonický manuál.
+
 Technický layout: `data.ts` (`KviffBranch[]`), `page.tsx` (landing), `[slug]/page.tsx` (kapitoly). Sdílené vizuální komponenty v `ChartFrame.tsx`, `ChartLegend.tsx`.
 
 ---
