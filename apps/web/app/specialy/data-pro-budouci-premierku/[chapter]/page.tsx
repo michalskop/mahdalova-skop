@@ -166,7 +166,13 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               </a>
             </Box>
           </Box>
-          <style>{`
+          {/* CSS předáváme přes dangerouslySetInnerHTML, ne jako textového
+              potomka <style>. Textový potomek React na serveru HTML-escapuje
+              (znak `>` v `.dpbp-tile-grid > *` → `&gt;`), na klientu ne –
+              což rozbíjí hydrataci. */}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
             .dpbp-crumb-link {
               color: #de1743;
               padding: 1px 4px;
@@ -184,7 +190,9 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               .dpbp-tile-grid { grid-template-columns: 1fr !important; }
               .dpbp-tile-grid > * { grid-column: 1 !important; }
             }
-          `}</style>
+          `,
+            }}
+          />
         </Container>
       </Box>
 
