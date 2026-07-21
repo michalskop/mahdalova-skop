@@ -1,6 +1,8 @@
 <style>
 .dt-visual { background: #f8f6f0; border: 1px solid #e8e3d2; border-radius: 6px; padding: 18px 20px 16px; margin: 8px 0 24px; position: relative; }
-.dt-visual-brand { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin: 0 0 6px auto; width: fit-content; color: #1a1a1a; text-decoration: none; }
+.dt-visual-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+.dt-visual-headtext { flex: 1 1 240px; min-width: 0; }
+.dt-visual-brand { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; margin: 0; color: #1a1a1a; text-decoration: none; }
 .dt-visual-brand svg { display: block; width: 30px; height: 30px; flex: 0 0 auto; }
 .dt-visual-brand span { font-family: 'Roboto Slab', Georgia, serif; font-size: 15.5px; font-weight: 700; line-height: 1; color: #1a1a1a; }
 .dt-visual-title { font-family: var(--font-roboto-condensed), 'Roboto Slab', Arial, sans-serif; font-size: 20px; font-weight: 700; line-height: 1.25; margin: 0 0 8px; color: #1a1a1a; }
@@ -36,10 +38,12 @@
 </style>
 
 <div class="dt-visual dt-fertility-visual">
-  <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
-  <p class="dt-visual-note">Úhrnná plodnost v Česku: počet dětí na jednu ženu ve věku 15–49 let, 1990–2025</p>
-
-  <a class="dt-visual-brand" href="https://datatimes.cz" target="_blank" rel="noopener" aria-label="DataTimes.cz">
+  <div class="dt-visual-head">
+    <div class="dt-visual-headtext">
+      <h3 class="dt-visual-title">Úhrnná plodnost v Česku klesla hluboko pod hranici prosté reprodukce</h3>
+      <p class="dt-visual-note">Úhrnná plodnost v Česku: počet dětí na jednu ženu ve věku 15–49 let, 1990–2025</p>
+    </div>
+    <a class="dt-visual-brand" href="https://datatimes.cz" target="_blank" rel="noopener" aria-label="DataTimes.cz">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" focusable="false">
       <defs>
         <linearGradient id="dtGraphLogo1" x1="1" x2=".25" y1=".5" y2="1">
@@ -56,8 +60,9 @@
         <path fill="none" stroke="url(#dtGraphLogo1)" stroke-width="76" stroke-linecap="round" d="M250 350 A100 100 0 0 0 336.60254 300"/>
       </g>
     </svg>
-    <span>DataTimes.cz</span>
-  </a>
+      <span>DataTimes.cz</span>
+    </a>
+  </div>
   <svg class="dt-visual-svg" viewBox="0 0 660 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Úhrnná plodnost v Česku v letech 1990 až 2025">
     <g class="dt-fertility-plot" transform="translate(6 7)">
     <g stroke="rgba(0,0,0,0.08)" stroke-width="1">

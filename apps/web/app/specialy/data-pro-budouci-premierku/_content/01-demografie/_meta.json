@@ -8,14 +8,14 @@
   "cardOrder": [],
   "onePager": null,
   "introChartHtml": "intro-chart.html",
+  "openerArticle": "01-proc-klesa-plodnost",
   "intro": {
     "title": "Vymíráme? Přijde na to, koho myslíme – a bez přistěhovalců se to nespraví",
     "textBefore": "Loni se v Česku narodilo 77 636 dětí, nejméně za 240 let, co se narození celoplošně počítají. Pokaždé, když z takového čísla někdo vyvodí, že vymíráme, je dobré se zeptat: kdo vlastně? Jako Češi, jako Evropané, nebo jako lidstvo? Každá odpověď je jiná – a znamená něco jiného pro to, co se s tím vůbec dá dělat. Tahle kapitola ty tři roviny odděluje, protože jen tak je vidět, kde je problém skutečný a kde jde spíš o strašení.",
     "textAfter": "Začněme doma. Úhrnná plodnost – kolik dětí připadá průměrně na jednu ženu – v Česku po růstu k 1,71 v roce 2020 spadla zpět na 1,28, pod nejpesimističtější scénář, s nímž ČSÚ počítal. Za rekordně nízkým počtem narozených ale nestojí jen ona: do plodného věku teď vstupují slabé ročníky narozené v 90. letech, takže i při stejné plodnosti by se dětí rodilo méně. Jak se česká plodnost vyvíjela od roku 1990, ukazuje graf.",
-    "textClosing": "V evropském měřítku Česko výjimkou není – pod hranicí prosté reprodukce je dnes skoro celá Evropa. Lidstvo jako celek přitom neubývá: svět dál roste, jen se jeho těžiště přesouvá jinam. Pro Česko a Evropu je proto skutečným tématem stárnutí a úbytek lidí v produktivním věku. Tuhle mezeru nezaplní ani nejštědřejší porodné; bez přistěhovalectví ji dohnat nejde a je poctivější to říct rovnou než slibovat návrat ke dvěma dětem na ženu, který se zatím nikde na světě nepovedl. O kolik lidí půjde, odkud by mohli přijít a co to obnáší, rozebírají texty níže."
+    "textClosing": "V evropském měřítku Česko výjimkou není – pod hranicí prosté reprodukce je dnes skoro celá Evropa, a lidstvo jako celek přitom neubývá. Pro Česko je tak skutečným tématem stárnutí a úbytek lidí v produktivním věku: mezeru, kterou samotné porodné nezaplní a bez přistěhovalectví ji dohnat nejde. Ostatně do programového prohlášení vlády z 5. ledna 2026 se číslo 2,1 už nedostalo; zůstala jen slova o tom, že mladí lidé mají moci „plánovat budoucnost, zakládat rodiny a mít dostupné bydlení“."
   },
   "tiles": [
-    { "slug": "01-proc-klesa-plodnost", "topic": "Analýza", "fullWidth": true },
     { "slug": "02-co-znamena-plodnost", "topic": "Explainer" },
     { "slug": "07-kohortni-plodnost", "topic": "Explainer" },
     { "slug": "03-svet-populace", "topic": "Svět" },

@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { Container, Title, Text, Box } from '@mantine/core';
 import ImpactCard, { type ImpactCardData } from '@/components/dpbp/ImpactCard';
 import DpbpArticleCard from '@/components/dpbp/DpbpArticleCard';
+import ArticleByline from '@/components/dpbp/ArticleByline';
 import VegaChart from '@/components/dpbp/VegaChart';
 import ProfileHead from '@/components/dpbp/ProfileHead';
 import { FollowBar } from '@/components/common/FollowBar';
@@ -33,6 +34,10 @@ interface ChapterMeta {
   // Alternativa k Vega grafu: syrové HTML/SVG (např. ručně vytvořený interaktivní
   // graf). Renderuje se přes RawHtmlEmbed. Má přednost před introChart.
   introChartHtml?: string;
+  // Vedoucí článek, který slouží jako otvírák kapitoly na landingu: jeho titulek,
+  // perex, autoři a OG se použijí pro úvodní blok + odkaz „Číst celý článek".
+  // Zároveň se vyloučí z mřížky dlaždic (aby nebyl dvakrát).
+  openerArticle?: string;
   intro?: {
     title: string;
     textBefore: string;
@@ -144,11 +149,19 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
     ? loadArticleFrontmatter(params.chapter, meta.onePager.slug)
     : null;
 
+  // Vedoucí článek jako otvírák kapitoly (Option A): landing ukazuje jeho začátek
+  // + „Číst celý článek", sdílení míří na jeho URL (má OG, titulek, perex, autory).
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
+  const openerFm = meta.openerArticle ? loadArticleFrontmatter(params.chapter, meta.openerArticle) : null;
+  const openerHref = meta.openerArticle
+    ? `/specialy/data-pro-budouci-premierku/${params.chapter}/${meta.openerArticle}`
+    : null;
+
   // Jedna souvislá mřížka dlaždic. Historické `postSupportTiles` se slučují na
-  // konec `tiles` – všechny dlaždice jsou rovnocenné a v jednom bloku, support
-  // banner přichází až za nimi.
+  // konec `tiles`; vedoucí (otvírákový) článek se z mřížky vyloučí, ať není dvakrát.
   const tiles = withRowSpan(
     [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
+      .filter(t => t.slug !== meta.openerArticle)
       .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
       .filter(t => t.fm != null)
   );
@@ -224,14 +237,37 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             </Text>
             <Title order={2} style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-              fontSize: '1.6rem',
-              fontWeight: 700,
+              fontSize: openerFm ? '2rem' : '1.6rem',
+              fontWeight: openerFm ? 800 : 700,
               color: '#1a1a1a',
-              lineHeight: 1.25,
-              marginBottom: 20,
+              lineHeight: 1.15,
+              letterSpacing: '-0.01em',
+              marginBottom: openerFm ? 14 : 20,
             }}>
-              {meta.intro.title}
+              {openerFm?.title ?? meta.intro.title}
             </Title>
+            {openerFm && (
+              <Text style={{
+                fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                fontSize: 19,
+                lineHeight: 1.5,
+                color: '#3a3730',
+                marginBottom: 10,
+              }}>
+                {openerFm.excerpt}
+              </Text>
+            )}
+            {openerFm && openerHref && (
+              <Box style={{ marginBottom: 24 }}>
+                <ArticleByline
+                  author={openerFm.author}
+                  date={openerFm.date}
+                  shareUrl={`${baseUrl}${openerHref}`}
+                  shareTitle={openerFm.title}
+                  audio
+                />
+              </Box>
+            )}
             <Text style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: 17,
@@ -286,6 +322,20 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               }}>
                 {meta.intro.textClosing}
               </Text>
+            )}
+            {openerHref && (
+              <Box style={{ marginTop: 20 }}>
+                <Link href={openerHref} style={{
+                  display: 'inline-block',
+                  color: readableAccent(meta.accent),
+                  fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+                  fontWeight: 700,
+                  fontSize: 17,
+                  textDecoration: 'none',
+                }}>
+                  Číst celý článek →
+                </Link>
+              </Box>
             )}
             <IntroEndMark accent={meta.accent} />
           </Box>
