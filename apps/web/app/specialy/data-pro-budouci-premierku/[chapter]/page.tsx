@@ -12,6 +12,7 @@ import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import SupportBanner from '@/components/common/SupportBanner';
+import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import { readableAccent } from '@/utils/colorUtils';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
@@ -29,6 +30,9 @@ interface ChapterMeta {
   cardOrder: string[];
   onePager: { slug: string; logo: string | null } | null;
   introChart?: string;
+  // Alternativa k Vega grafu: syrové HTML/SVG (např. ručně vytvořený interaktivní
+  // graf). Renderuje se přes RawHtmlEmbed. Má přednost před introChart.
+  introChartHtml?: string;
   intro?: {
     title: string;
     textBefore: string;
@@ -83,6 +87,12 @@ function loadChartSpec(chartId: string): Record<string, unknown> | null {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
+function loadIntroChartHtml(chapterSlug: string, file: string): string | null {
+  const p = path.join(CONTENT_ROOT, chapterSlug, file);
+  if (!fs.existsSync(p)) return null;
+  return fs.readFileSync(p, 'utf8');
+}
+
 // Jemná koncová značka úvodního textu – aby bylo poznat, kde úvod končí a kde
 // začíná sekce dlaždic (viz redakční feedback).
 function IntroEndMark({ accent }: { accent: string }) {
@@ -128,6 +138,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   const introCardRaw = meta.cardOrder.length > 0 ? loadCard(params.chapter, meta.cardOrder[0]) : null;
   const introCard = introCardRaw ? { ...introCardRaw, accent: readableAccent(meta.accent) } : null;
   const introChartSpec = meta.introChart ? loadChartSpec(meta.introChart) : null;
+  const introChartHtml = meta.introChartHtml ? loadIntroChartHtml(params.chapter, meta.introChartHtml) : null;
 
   const onePagerFm = meta.onePager
     ? loadArticleFrontmatter(params.chapter, meta.onePager.slug)
@@ -240,7 +251,11 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             }}>
               {meta.intro.textAfter}
             </Text>
-            {introChartSpec && (
+            {introChartHtml ? (
+              <Box component="figure" style={{ margin: '8px 0 24px' }}>
+                <RawHtmlEmbed html={introChartHtml} />
+              </Box>
+            ) : introChartSpec ? (
               <Box component="figure" style={{ margin: '8px 0 24px' }}>
                 {meta.intro.chartTitle && (
                   <Text style={{
@@ -260,7 +275,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                   </Text>
                 )}
               </Box>
-            )}
+            ) : null}
             {meta.intro.textClosing && (
               <Text style={{
                 fontFamily: 'var(--font-roboto-slab), Georgia, serif',

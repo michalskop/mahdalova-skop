@@ -7,12 +7,12 @@
   "date": "2026-04-30",
   "cardOrder": [],
   "onePager": null,
-  "introChart": "GRAF_01_PLODNOST",
+  "introChartHtml": "intro-chart.html",
   "intro": {
-    "title": "Loni se narodilo nejméně dětí za 240 let. Vysvětlení leží jinde než v předvolebních slibech",
-    "textBefore": "Loni se v Česku narodilo 77 636 dětí – nejméně za 240 let, co se narození celoplošně počítají. Předvolební debata z toho viní drahé bydlení nebo chybějící školky. Data ale ukazují, že hlavní příčina je jinde a politika s ní zmůže míň, než slibuje.",
-    "textAfter": "Za rekordem stojí dvě různé příčiny, které se pletou dohromady. První je počet žen v plodném věku: vstupují do něj slabé ročníky narozené v 90. letech, takže i při stejné plodnosti by se dětí rodilo méně. Druhá je úhrnná plodnost – kolik dětí připadá průměrně na jednu ženu. Ta po růstu k 1,71 v roce 2020 spadla zpět na 1,28, pod nejpesimističtější scénář, s nímž ČSÚ počítal. Porodné a podobné sliby míří jen na tu druhou, a i s ní zmůžou málo.",
-    "textClosing": "Na propad nejvíc doplatí dnešní mladí – a právě ti budou mít u rozhodování nejslabší hlas. V roce 2029 bude přes polovinu voličů starších 50 let. Čím se dá s plodností i se stárnutím elektorátu reálně hnout, a co jsou jen předvolební sliby, ukazují texty níže."
+    "title": "Vymíráme? Přijde na to, koho myslíme – a bez přistěhovalců se to nespraví",
+    "textBefore": "Loni se v Česku narodilo 77 636 dětí, nejméně za 240 let, co se narození celoplošně počítají. Pokaždé, když z takového čísla někdo vyvodí, že vymíráme, je dobré se zeptat: kdo vlastně? Jako Češi, jako Evropané, nebo jako lidstvo? Každá odpověď je jiná – a znamená něco jiného pro to, co se s tím vůbec dá dělat. Tahle kapitola ty tři roviny odděluje, protože jen tak je vidět, kde je problém skutečný a kde jde spíš o strašení.",
+    "textAfter": "Začněme doma. Úhrnná plodnost – kolik dětí připadá průměrně na jednu ženu – v Česku po růstu k 1,71 v roce 2020 spadla zpět na 1,28, pod nejpesimističtější scénář, s nímž ČSÚ počítal. Za rekordně nízkým počtem narozených ale nestojí jen ona: do plodného věku teď vstupují slabé ročníky narozené v 90. letech, takže i při stejné plodnosti by se dětí rodilo méně. Jak se česká plodnost vyvíjela od roku 1990, ukazuje graf.",
+    "textClosing": "V evropském měřítku Česko výjimkou není – pod hranicí prosté reprodukce je dnes skoro celá Evropa. Lidstvo jako celek přitom neubývá: svět dál roste, jen se jeho těžiště přesouvá jinam. Pro Česko a Evropu je proto skutečným tématem stárnutí a úbytek lidí v produktivním věku. Tuhle mezeru nezaplní ani nejštědřejší porodné; bez přistěhovalectví ji dohnat nejde a je poctivější to říct rovnou než slibovat návrat ke dvěma dětem na ženu, který se zatím nikde na světě nepovedl. O kolik lidí půjde, odkud by mohli přijít a co to obnáší, rozebírají texty níže."
   },
   "tiles": [
     { "slug": "01-proc-klesa-plodnost", "topic": "Analýza", "fullWidth": true },
