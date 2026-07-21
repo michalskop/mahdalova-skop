@@ -17,9 +17,9 @@
   "introChart": "CHART_MD_AGE",
   "intro": {
     "title": "Polovina praktiků odejde do roku 2035 do důchodu. Nového lékaře vyhláškou nedosadíte",
-    "textBefore": "Slib zní jednoduše: víc peněz pro zdravotnictví, víc sester, víc lékařů. Jenže nový praktik není rozpočtová položka. Musí se napřed narodit, vystudovat a hlavně chtít v ordinaci zůstat – a roky, které na to byly potřeba, už uplynuly. Tohle je kapitola o problému, který nejde koupit, jenom předběhnout.",
-    "textAfter": "Do roku 2035 odejde do důchodu víc než polovina praktických lékařů pro dospělé – u dětských lékařů je na tom podobně už čtvrtina dnešních ordinací. Není to selhání rozpočtu, je to demografie lékařského sboru, kterou jednorázová investice nezvrátí. Otázka pro budoucí premiérku tedy nezní, kolik peněz uvolnit, ale jak rychle rozšířit kompetence sester a telemedicínu dřív, než ordinace v menších městech jedna po druhé zhasnou.",
-    "textClosing": "Jak podobný problém řeší jiné evropské země – od norského modelu sester s rozšířenými kompetencemi po rakouské cílené pobídky pro venkovské lékaře – a co z toho Česko zvládne bez srovnatelného rozpočtu, rozebírají texty níže."
+    "textBefore": "Každá vláda slibuje do zdravotnictví víc peněz, víc sester a víc lékařů. Peníze ale novou ordinaci samy neotevřou. Praktik se musí vystudovat a pak chtít v oboru zůstat – a času na výchovu náhrady bylo potřeba deset let, které už uběhly.",
+    "textAfter": "Do roku 2035 dosáhne důchodového věku víc než polovina praktiků pro dospělé, u dětských lékařů je v důchodovém věku už dnes třetina. Rozpočet na tom nic rychle nezmění – lidi, kteří chybějí, nejde dokoupit. Pomůže spíš rozšíření kompetencí sester a telemedicína, a to dřív, než ordinace v menších městech začnou zavírat.",
+    "textClosing": "Jak stejný problém řeší jinde – norské sestry s rozšířenými kompetencemi, rakouské pobídky pro venkovské lékaře – a co z toho Česko zvládne i bez jejich rozpočtu, ukazují texty níže."
   },
   "tiles": [
     { "slug": "explainer-drg", "topic": "Explainer" },

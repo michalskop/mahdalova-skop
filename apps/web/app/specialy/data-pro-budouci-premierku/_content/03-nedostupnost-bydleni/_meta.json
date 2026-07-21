@@ -16,10 +16,10 @@
   },
   "introChart": "CHART_AFFORDABILITY_INDEX",
   "intro": {
-    "title": "Byt v Praze stojí patnáct ročních platů. Spekulanti za to nemůžou",
-    "textBefore": "Kdykoli se mluví o drahém bydlení, najde se rychlý viník: spekulanti a fondy, které skupují byty na investici. Má to jeden háček. Za cenou pražského bytu nestojí primárně ti, kdo byty kupují – ale to, kolik se jich vůbec postaví. A tenhle deficit se dá změřit.",
-    "textAfter": "Průměrná rodina musí na byt v Praze vydělávat patnáct hrubých ročních mezd – třetí nejhorší poměr v evropském srovnání po Amsterdamu a Aténách. Praha přitom dlouhodobě nestaví ani tolik bytů, kolik si sama stanovila jako cíl. Cesta od pozemku k hotovému bytu dnes trvá skoro deset let. Dokud se nezkrátí, žádná regulace kupujících ceny nesníží.",
-    "textClosing": "Polský případ ale varuje, že zrychlení povolování samo o sobě nestačí, pokud poptávka zůstává koncentrovaná v jedné metropoli. Tokio naopak ukazuje, jak vypadá trh, kde nabídka skutečně rychle reaguje na poptávku – za cenu institucionálních změn, které jsou v českém kontextu obtížně přenositelné celé, ale částečně ano."
+    "title": "Byt v Praze stojí patnáct ročních mezd. Za cenou stojí hlavně to, kolik se staví",
+    "textBefore": "Když se řekne drahá Praha, jako viník se nabídnou spekulanti a investiční fondy. Skupování bytů na investici ale vysvětluje jen část ceny. Většina se odvíjí od nabídky – od toho, kolik nových bytů ve městě vznikne. A ta v Praze dlouhodobě zaostává za vlastními plány.",
+    "textAfter": "Dráž než v Praze bydlí z evropských metropolí jen hrstka v čele s Amsterdamem; ve Vídni, Berlíně, Varšavě i Bratislavě domácnosti na byt dosáhnou snáz. Praha přitom roky nepostaví ani tolik bytů, kolik si sama určí jako cíl, a cesta od pozemku ke kolaudaci trvá skoro deset let. Zdejší data jsou zatím jen za Prahu – tam je problém nejostřejší; nájmy a nedostatek bytů ale doléhají i na zbytek země.",
+    "textClosing": "Polsko ukazuje, že samotné zrychlení povolování cenu nesrazí, když poptávka zůstane nahrnutá do jedné metropole. Tokio jde opačnou cestou, kde nabídka na poptávku rychle reaguje – za cenu institucionálních změn, z nichž se do Česka dá přenést jen část. Co přesně, rozebírají texty níže."
   },
   "tiles": [
     { "slug": "explainer-bytovy-deficit", "topic": "Explainer" },

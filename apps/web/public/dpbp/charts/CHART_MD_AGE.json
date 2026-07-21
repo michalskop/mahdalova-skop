@@ -32,7 +32,7 @@
     "spec": "Ostatní lékaři",
     "val": 15.0,
     "label": "15,0 %",
-    "cat": "Průměr"
+    "cat": "Ostatní"
    }
   ]
  },
@@ -103,7 +103,7 @@
       "domain": [
        "Primární péče",
        "Specialisté",
-       "Průměr"
+       "Ostatní"
       ],
       "range": [
        "#de1743",
