@@ -142,6 +142,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           { label: 'Data pro budoucí premiérku', href: '/specialy/data-pro-budouci-premierku' },
           { label: chapterMeta?.title ?? 'Kapitola', href: `/specialy/data-pro-budouci-premierku/${params.chapter}` },
         ]}
+        accent={textAccent}
         title={fm.title}
         excerpt={fm.excerpt}
         author={fm.author}

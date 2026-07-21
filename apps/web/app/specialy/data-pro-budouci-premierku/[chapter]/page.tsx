@@ -225,15 +225,18 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
         {/* Intro: kicker → titulek → text → statistika → text → graf → uzávěr */}
         {meta.intro && (
           <Box style={{ paddingTop: 40 }}>
-            <Text style={{
+            <Text component="div" style={{
               fontSize: 12,
-              letterSpacing: '0.12em',
+              letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: readableAccent(meta.accent),
               fontWeight: 700,
-              marginBottom: 14,
+              marginBottom: 16,
             }}>
-              Úvodní text kapitoly
+              <Link href="/specialy/data-pro-budouci-premierku" style={{ color: readableAccent(meta.accent), textDecoration: 'none' }}>Data pro budoucí premiérku</Link>
+              <span style={{ color: '#b3ab98', margin: '0 7px' }}>›</span>
+              <Link href={`/specialy/data-pro-budouci-premierku/${params.chapter}`} style={{ color: readableAccent(meta.accent), textDecoration: 'none' }}>{meta.title}</Link>
+              <span style={{ color: '#b3ab98', margin: '0 7px' }}>›</span>
+              <span style={{ color: readableAccent(meta.accent) }}>Úvod</span>
             </Text>
             <Title order={2} style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',

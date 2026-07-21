@@ -12,7 +12,7 @@
   margin-bottom: 16px;
 }
 .crumb a {
-  color: #de1743;
+  color: var(--crumb-accent, #de1743);
   text-decoration: none;
 }
 .crumb a:hover,

@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import ArticleByline from './ArticleByline';
 import styles from './ArticleHeader.module.css';
@@ -12,6 +13,8 @@ interface Crumb {
 
 interface ArticleHeaderProps {
   crumbs: Crumb[];
+  /** Barva odkazů v drobečkové navigaci – accent kapitoly (mění se per kapitola). */
+  accent?: string;
   title: string;
   excerpt: string;
   author: string;
@@ -26,6 +29,7 @@ interface ArticleHeaderProps {
 
 export default function ArticleHeader({
   crumbs,
+  accent,
   title,
   excerpt,
   author,
@@ -37,7 +41,7 @@ export default function ArticleHeader({
 }: ArticleHeaderProps) {
   return (
     <header className={styles.header}>
-      <div className={styles.crumb}>
+      <div className={styles.crumb} style={accent ? ({ ['--crumb-accent']: accent } as CSSProperties) : undefined}>
         {crumbs.map((c, i) => (
           <span key={`${c.label}-${i}`}>
             {c.href ? <Link href={c.href}>{c.label}</Link> : c.label}
