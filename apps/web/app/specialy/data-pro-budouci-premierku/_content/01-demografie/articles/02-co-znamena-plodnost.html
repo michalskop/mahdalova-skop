@@ -5,18 +5,12 @@
 <style>
   .te-box { background:#f5f0e8; border-left:4px solid #2f325c; border-radius:6px; padding:18px 22px 16px; margin:28px 0; }
   .te-kicker { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; color:#de1743; margin:0 0 12px; }
-  .te-body { display:flex; flex-direction:column; gap:20px; }
-  .te-text { flex:1; }
-  .te-text p { margin:0 0 10px; }
-  .te-text p:last-child { margin:0; }
-  .te-visual { flex:0 0 auto; }
-  .te-caption { color:#666; line-height:1.5; margin:8px 0 0; font-style:italic; }
+  .te-body { display:flex; flex-direction:column; gap:18px; }
+  .te-text p { margin:0; }
+  .te-visual { width:100%; }
+  .te-visual svg { display:block; width:100%; height:auto; }
+  .te-caption { color:#666; line-height:1.5; margin:10px 0 0; font-style:italic; }
   .te-tempo-label { margin:0 0 10px; }
-  @media (min-width:640px) {
-    .te-body { flex-direction:row; align-items:stretch; gap:28px; }
-    .te-visual { flex:0 0 48%; display:flex; flex-direction:column; }
-    .te-visual svg { flex:1; height:0; min-height:160px; }
-  }
 </style>
 
 <div class="te-box">
@@ -24,7 +18,6 @@
   <div class="te-body">
     <div class="te-text">
       <p>Abychom správně četli data, musíme vědět, jak číslo 1,28 vzniká. Úhrnná plodnost (Total Fertility Rate) je teoretický statistický model. Ukazuje, kolik dětí by se v průměru narodilo jedné ženě, pokud by se po celý její reprodukční věk udržela míra plodnosti přesně na hodnotách konkrétního sledovaného roku.</p>
-      <p>Tento ukazatel nezohledňuje pouze absolutní počet narozených dětí, ale především načasování mateřství. Pokud generace třicátnic odloží založení rodiny o dva roky kvůli drahým hypotékám nebo ekonomické nejistotě, hodnota úhrnné plodnosti v daném roce prudce klesne. Stane se tak i v případě, že tyto ženy své plánované děti v pozdějším věku nakonec porodí.</p>
     </div>
     <div class="te-visual">
       <p class="te-tempo-label">Demografové tento statistický propad označují jako „tempo efekt".</p>
@@ -72,6 +65,9 @@
         <text x="470" y="222" class="te-text-main" text-anchor="middle" font-weight="700">2. dítě</text>
       </svg>
       <p class="te-caption">Tempo efekt: posunutí věku rození dítěte způsobuje v daném roce pokles statistické plodnosti, i když ženy nakonec děti mít budou.</p>
+    </div>
+    <div class="te-text">
+      <p>Tento ukazatel nezohledňuje pouze absolutní počet narozených dětí, ale především načasování mateřství. Pokud generace třicátnic odloží založení rodiny o dva roky kvůli drahým hypotékám nebo ekonomické nejistotě, hodnota úhrnné plodnosti v daném roce prudce klesne. Stane se tak i v případě, že tyto ženy své plánované děti v pozdějším věku nakonec porodí.</p>
     </div>
   </div>
 </div>

@@ -5,7 +5,9 @@
   "accent": "#de1743",
   "author": "Kateřina Mahdalová & Michal Škop",
   "date": "2026-04-30",
-  "cardOrder": [],
+  "cardOrder": [
+    "PLODNOST"
+  ],
   "onePager": null,
   "introChart": "GRAF_01_PLODNOST",
   "openerArticle": "01-proc-klesa-plodnost",
