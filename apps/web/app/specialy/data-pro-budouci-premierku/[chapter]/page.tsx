@@ -46,10 +46,17 @@ interface ChapterMeta {
     chartTitle?: string;
     chartCaption?: string;
   };
-  tiles?: Array<{ slug: string; topic: string; fullWidth?: boolean }>;
+  tiles?: ChapterTile[];
   // Historické pole – dlaždice, které dřív visely pod support bannerem. Nově se
   // slučují do jedné mřížky (viz redakční feedback: žádné dlaždice po banneru).
-  postSupportTiles?: Array<{ slug: string; topic: string; fullWidth?: boolean }>;
+  postSupportTiles?: ChapterTile[];
+}
+
+interface ChapterTile {
+    slug: string;
+    topic: string;
+    fullWidth?: boolean;
+    related?: Array<{ slug: string; label: string }>;
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -84,6 +91,15 @@ function loadArticleFrontmatter(chapterSlug: string, articleSlug: string) {
   if (!fs.existsSync(p)) return null;
   const { data } = matter(fs.readFileSync(p, 'utf8'));
   return data as { title: string; excerpt: string; author: string; date: string; primaryChart: string; logo?: string };
+}
+
+function loadRelatedArticles(
+  chapterSlug: string,
+  related: Array<{ slug: string; label: string }> | undefined
+) {
+  return (related ?? [])
+    .map(item => ({ ...item, fm: loadArticleFrontmatter(chapterSlug, item.slug) }))
+    .filter(item => item.fm != null);
 }
 
 function loadChartSpec(chartId: string): Record<string, unknown> | null {
@@ -162,7 +178,11 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   const tiles = withRowSpan(
     [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
       .filter(t => t.slug !== meta.openerArticle)
-      .map(t => ({ ...t, fm: loadArticleFrontmatter(params.chapter, t.slug) }))
+      .map(t => ({
+        ...t,
+        fm: loadArticleFrontmatter(params.chapter, t.slug),
+        relatedArticles: loadRelatedArticles(params.chapter, t.related),
+      }))
       .filter(t => t.fm != null)
   );
 
@@ -358,7 +378,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 Co v této kapitole najdete
               </Title>
               <Text style={{ fontSize: 14.5, color: '#5a564d', lineHeight: 1.55, maxWidth: '64ch' }}>
-                Každá dlaždice je jeden samostatný text. Ikona u názvu říká žánr – od vysvětlujícího explaineru přes datovou analýzu a investigaci až po srovnání se světem. Začněte souhrnem, nebo skočte rovnou k tomu, co vás zajímá.
+                Osm hlavních textů vede od vysvětlení demografických ukazatelů přes české dopady až k možnostem politiky. Pod nimi najdete navazující analýzy, které jednotlivé části rozvíjejí.
               </Text>
             </Box>
 
@@ -396,6 +416,30 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                       type={t.topic}
                       stacked={!t.fullWidth}
                     />
+                    {t.relatedArticles.length > 0 && (
+                      <Box style={{ padding: '12px 14px 4px' }}>
+                        <Text style={{
+                          fontSize: 11,
+                          fontWeight: 700,
+                          letterSpacing: '0.07em',
+                          textTransform: 'uppercase',
+                          color: '#6d675c',
+                          marginBottom: 7,
+                        }}>
+                          Navazující čtení
+                        </Text>
+                        {t.relatedArticles.map(item => (
+                          <Text key={item.slug} style={{ fontSize: 14, lineHeight: 1.45, marginBottom: 6 }}>
+                            <Link
+                              href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${item.slug}`}
+                              style={{ color: readableAccent(meta.accent), textDecoration: 'underline', textUnderlineOffset: 3 }}
+                            >
+                              {item.label}: {item.fm!.title}
+                            </Link>
+                          </Text>
+                        ))}
+                      </Box>
+                    )}
                   </div>
                 ))}
               </Box>
