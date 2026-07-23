@@ -79,9 +79,9 @@
   line-height: 1.35;
 }
 
-.steps { padding: 18vh 0; }
+.steps { padding: 6vh 0; }
 .step {
-  min-height: 58vh;
+  min-height: max(220px, 26vh);
   display: flex;
   justify-content: center;
   opacity: 0.38;
@@ -101,14 +101,14 @@
   .steps {
     position: relative;
     z-index: 2;
-    margin-top: -42vh;
-    padding: 54vh 0 8vh;
+    margin-top: -40vh;
+    padding: 40vh 0 5vh;
     pointer-events: none;
   }
   .step {
-    min-height: 78vh;
+    min-height: max(240px, 32vh);
     justify-content: flex-end;
-    padding: 0 12px 11vh;
+    padding: 0 12px 4vh;
     opacity: 0.18;
   }
   .step.active { opacity: 1; }
