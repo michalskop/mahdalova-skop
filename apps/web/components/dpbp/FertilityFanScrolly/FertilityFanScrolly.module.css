@@ -79,9 +79,9 @@
   line-height: 1.35;
 }
 
-.steps { padding: 6vh 0; }
+.steps { padding: 18vh 0; }
 .step {
-  min-height: max(200px, 22vh);
+  min-height: 58vh;
   display: flex;
   justify-content: center;
   opacity: 0.38;
@@ -101,15 +101,15 @@
   .steps {
     position: relative;
     z-index: 2;
-    margin-top: -40vh;
-    padding: 40vh 0 0;
+    margin-top: -42vh;
+    padding: 54vh 0 8vh;
     pointer-events: none;
   }
   .step {
-    min-height: clamp(200px, 22vh, 240px);
+    min-height: 78vh;
     justify-content: flex-end;
-    padding: 0 12px 8px;
-    opacity: 0;
+    padding: 0 12px 11vh;
+    opacity: 0.18;
   }
   .step.active { opacity: 1; }
   .bubble {
