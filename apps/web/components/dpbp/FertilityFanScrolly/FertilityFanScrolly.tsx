@@ -136,6 +136,10 @@ function formatChange(value: number) {
   return `${value > 0 ? '+' : ''}${value.toFixed(2).replace('.', ',')}`;
 }
 
+function formatPeriod(startYear: number, endYear: number) {
+  return `${startYear}–${String(endYear).slice(-2)}`;
+}
+
 function policyContext(row: WindowRow) {
   const key = `${row.iso}-${row.startYear}-${row.endYear}`;
   const contexts: Record<string, string> = {
@@ -174,10 +178,15 @@ export default function FertilityFanScrolly() {
     : undefined;
   const duration = step.window;
   const endX = x(duration, duration);
-  const directLabel = selected
-    ? `${COUNTRY_LABELS[selected.iso] ?? selected.country}, ${selected.startYear}–${selected.endYear}: ${formatChange(selected.change)}`
+  const directLabelName = selected
+    ? `${COUNTRY_LABELS[selected.iso] ?? selected.country} (${formatPeriod(selected.startYear, selected.endYear)})`
     : 'target' in step && step.target
-      ? 'Politický cíl hnutí ANO: +0,82'
+      ? 'Politický cíl hnutí ANO'
+      : null;
+  const directLabelValue = selected
+    ? formatChange(selected.change)
+    : 'target' in step && step.target
+      ? '+0,82'
       : null;
 
   const handlePointerMove = (event: ReactPointerEvent<SVGRectElement>) => {
@@ -264,7 +273,8 @@ export default function FertilityFanScrolly() {
                   y={y(selected?.change ?? TARGET_CHANGE) - 11}
                   textAnchor="end"
                 >
-                  {directLabel}
+                  <tspan className={styles.labelName}>{directLabelName}</tspan>
+                  <tspan className={styles.labelValue} dx="7">{directLabelValue}</tspan>
                 </text>
               </g>
             )}
@@ -289,8 +299,10 @@ export default function FertilityFanScrolly() {
                 pointerEvents="none"
               >
                 <div className={styles.tooltip} role="tooltip">
-                  <strong>{COUNTRY_LABELS[hovered.row.iso] ?? hovered.row.country}</strong>
-                  <span>{hovered.row.startYear}–{hovered.row.endYear} · změna {formatChange(hovered.row.change)}</span>
+                  <strong>
+                    {COUNTRY_LABELS[hovered.row.iso] ?? hovered.row.country} ({formatPeriod(hovered.row.startYear, hovered.row.endYear)})
+                    <b className={styles.tooltipValue}> {formatChange(hovered.row.change)}</b>
+                  </strong>
                   {hoveredContext && <p><b>Politický kontext:</b> {hoveredContext}</p>}
                 </div>
               </foreignObject>

@@ -47,8 +47,6 @@
 .axisLabel { font-size: 14px; }
 .startLabel { font-size: 13px; }
 .directLabel, .targetLabel {
-  font-size: 17px;
-  font-weight: 700;
   paint-order: stroke;
   stroke: #fdfbf7;
   stroke-width: 6px;
@@ -56,6 +54,8 @@
 }
 .directLabel { fill: #146c82; }
 .targetLabel { fill: #c44f00; }
+.labelName { font-size: 17px; font-weight: 600; }
+.labelValue { font-size: 20px; font-weight: 800; }
 .fanLine { stroke: #474747; stroke-width: 1; stroke-opacity: 0.18; }
 .hoveredLine { stroke: #146c82; stroke-width: 3; stroke-opacity: 1; }
 .selectedLine { stroke: #146c82; stroke-width: 4; stroke-opacity: 1; }
@@ -78,7 +78,7 @@
   font: 400 16px/1.3 var(--font-roboto-condensed), Arial, sans-serif;
 }
 .tooltip strong { display: block; color: #146c82; font-size: 20px; line-height: 1.15; }
-.tooltip span { display: block; margin-top: 2px; color: #444; }
+.tooltipValue { color: #146c82; font-size: 1.12em; font-weight: 800; }
 .tooltip p { margin: 6px 0 0 !important; color: #222 !important; font: inherit !important; }
 .tooltip b { font-weight: 700; }
 
@@ -126,7 +126,9 @@
   .header { gap: 10px; }
   .header h2 { font-size: 20px !important; }
   .header p { font-size: 14px !important; }
-  .directLabel, .targetLabel { font-size: 26px; stroke-width: 7px; }
+  .directLabel, .targetLabel { stroke-width: 7px; }
+  .labelName { font-size: 25px; }
+  .labelValue { font-size: 29px; }
   .tooltip { font-size: 21px; }
   .tooltip strong { font-size: 25px; }
   .steps {
@@ -167,7 +169,7 @@
   .graphic { padding: 12px 10px; }
   .header h2 { font-size: 18px !important; }
   .header p { line-height: 1.25 !important; }
-  .directLabel, .targetLabel { font-size: 26px; stroke-width: 7px; }
+  .directLabel, .targetLabel { stroke-width: 7px; }
   .step { padding-right: 8px; padding-left: 8px; }
   .bubble {
     width: 100%;
