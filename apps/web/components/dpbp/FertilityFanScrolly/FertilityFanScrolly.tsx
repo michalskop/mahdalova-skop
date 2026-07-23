@@ -144,7 +144,7 @@ function policyContext(row: WindowRow) {
     'HUN-2011-2021': 'Daňové úlevy, zvýhodněné úvěry a podpora rodin; z grafu nelze určit, jakou část změny způsobila jednotlivá opatření.',
     'CZE-2011-2021': 'Bez jedné mimořádné pronatalitní reformy; změnu proto nelze připsat jedinému opatření.',
   };
-  return contexts[key] ?? 'K tomuto období nemáme ověřeně přiřazené konkrétní opatření.';
+  return contexts[key];
 }
 
 export default function FertilityFanScrolly() {
@@ -194,6 +194,8 @@ export default function FertilityFanScrolly() {
     if (!nearest) return;
     setHovered({ row: nearest.row, x: plotX, y: y(nearest.row.change * progress) });
   };
+  const hoveredContext = hovered ? policyContext(hovered.row) : undefined;
+  const tooltipHeight = hoveredContext ? 180 : 78;
 
   return (
     <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
@@ -280,15 +282,15 @@ export default function FertilityFanScrolly() {
               <foreignObject
                 className={styles.tooltipObject}
                 x={Math.min(Math.max(hovered.x + 10, MARGIN.left), WIDTH - 388)}
-                y={hovered.y > 190 ? hovered.y - 190 : hovered.y + 12}
+                y={hovered.y > tooltipHeight + 10 ? hovered.y - tooltipHeight - 8 : hovered.y + 12}
                 width="380"
-                height="180"
+                height={tooltipHeight}
                 pointerEvents="none"
               >
                 <div className={styles.tooltip} role="tooltip">
                   <strong>{COUNTRY_LABELS[hovered.row.iso] ?? hovered.row.country}</strong>
                   <span>{hovered.row.startYear}–{hovered.row.endYear} · změna {formatChange(hovered.row.change)}</span>
-                  <p><b>Politický kontext:</b> {policyContext(hovered.row)}</p>
+                  {hoveredContext && <p><b>Politický kontext:</b> {hoveredContext}</p>}
                 </div>
               </foreignObject>
             )}

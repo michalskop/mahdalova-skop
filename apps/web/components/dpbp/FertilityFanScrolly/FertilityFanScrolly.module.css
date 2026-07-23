@@ -62,7 +62,7 @@
 .targetLine { stroke: #f76800; stroke-width: 4; stroke-dasharray: 10 6; }
 .selectedDot { fill: #146c82; }
 .targetDot { fill: #f76800; }
-.hoverLayer { fill: transparent; cursor: crosshair; pointer-events: all; }
+.hoverLayer { fill: transparent; cursor: default; pointer-events: all; }
 .tooltipObject { overflow: visible; }
 .tooltip {
   box-sizing: border-box;
