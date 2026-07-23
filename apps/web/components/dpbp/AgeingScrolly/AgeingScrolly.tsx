@@ -4,6 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import ChartSignature from '../ChartSignature';
 import styles from './AgeingScrolly.module.css';
 
+type AgeCategory = 'young' | 'working' | 'senior';
+type InactiveCategoryMode = 'hidden' | 'muted';
+
+type AgeingScrollyProps = {
+  inactiveCategoryMode?: InactiveCategoryMode;
+};
+
 const SNAPSHOTS = [
   { year: 2023, young: 16, working: 64, senior: 20, ratio: '1 senior na 3,1 lidí ve věku 15–64 let' },
   { year: 2040, young: 12, working: 62, senior: 26, ratio: '1 senior na 2,4 lidí ve věku 15–64 let' },
@@ -18,14 +25,25 @@ const STEPS = [
   'Na konci století projekce neukazuje prázdnou zemi. Ukazuje zemi s podobným počtem obyvatel, ale výrazně jinou věkovou skladbou.',
 ] as const;
 
-function category(index: number, snapshot: (typeof SNAPSHOTS)[number]) {
+function category(index: number, snapshot: (typeof SNAPSHOTS)[number]): AgeCategory {
   if (index < snapshot.senior) return 'senior';
   if (index < snapshot.senior + snapshot.working) return 'working';
   return 'young';
 }
 
-export default function AgeingScrolly() {
+const LEGEND_ITEMS: ReadonlyArray<{ category: AgeCategory; label: string }> = [
+  { category: 'young', label: '0–14 let' },
+  { category: 'working', label: '15–64 let' },
+  { category: 'senior', label: '65+' },
+];
+
+export default function AgeingScrolly({ inactiveCategoryMode = 'hidden' }: AgeingScrollyProps) {
   const [active, setActive] = useState(0);
+  const [visibleCategories, setVisibleCategories] = useState<Record<AgeCategory, boolean>>({
+    young: true,
+    working: true,
+    senior: true,
+  });
   const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
@@ -43,6 +61,17 @@ export default function AgeingScrolly() {
   }, []);
 
   const snapshot = SNAPSHOTS[active];
+  const dots = Array.from({ length: 100 }, (_, index) => ({
+    index,
+    category: category(index, snapshot),
+  })).filter(dot => inactiveCategoryMode === 'muted' || visibleCategories[dot.category]);
+
+  const toggleCategory = (ageCategory: AgeCategory) => {
+    setVisibleCategories(current => ({
+      ...current,
+      [ageCategory]: !current[ageCategory],
+    }));
+  };
 
   return (
     <section className={styles.scrolly} aria-label="Jak se podle projekce ČSÚ změní věková skladba Česka">
@@ -58,21 +87,41 @@ export default function AgeingScrolly() {
 
           <div className={styles.year} aria-live="polite">{snapshot.year}</div>
           <div className={styles.people} aria-hidden="true">
-            {Array.from({ length: 100 }, (_, index) => (
-              <span key={index} className={styles[category(index, snapshot)]} />
+            {dots.map(dot => (
+              <span
+                key={dot.index}
+                className={`${styles[dot.category]} ${
+                  inactiveCategoryMode === 'muted' && !visibleCategories[dot.category] ? styles.muted : ''
+                }`}
+              />
             ))}
           </div>
 
-          <div className={styles.legend}>
-            <span><i className={styles.young} />0–14 let <strong>{snapshot.young} %</strong></span>
-            <span><i className={styles.working} />15–64 let <strong>{snapshot.working} %</strong></span>
-            <span><i className={styles.senior} />65+ <strong>{snapshot.senior} %</strong></span>
+          <div className={styles.legend} aria-label="Zobrazené věkové kategorie">
+            {LEGEND_ITEMS.map(item => {
+              const isVisible = visibleCategories[item.category];
+              return (
+                <button
+                  key={item.category}
+                  type="button"
+                  className={`${styles.legendItem} ${isVisible ? '' : styles.legendItemInactive}`}
+                  aria-pressed={isVisible}
+                  onClick={() => toggleCategory(item.category)}
+                >
+                  <i className={styles[item.category]} aria-hidden="true" />
+                  <span>{item.label}</span>
+                  <strong>{snapshot[item.category]} %</strong>
+                  <span className={styles.state}>{isVisible ? 'zapnuto' : 'vypnuto'}</span>
+                </button>
+              );
+            })}
           </div>
           <p className={styles.ratio}>{snapshot.ratio}</p>
 
           <footer className={styles.footer}>
             <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
             <div>• data: ČSÚ, Projekce obyvatelstva České republiky 2023–2100, střední varianta</div>
+            <div>• výchozí stav projekce: 1. 1. 2023; projekce byla vydána v roce 2023</div>
           </footer>
         </div>
       </div>

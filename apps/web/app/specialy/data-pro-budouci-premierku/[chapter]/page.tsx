@@ -416,30 +416,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                       type={t.topic}
                       stacked={!t.fullWidth}
                     />
-                    {t.relatedArticles.length > 0 && (
-                      <Box style={{ padding: '12px 14px 4px' }}>
-                        <Text style={{
-                          fontSize: 11,
-                          fontWeight: 700,
-                          letterSpacing: '0.07em',
-                          textTransform: 'uppercase',
-                          color: '#6d675c',
-                          marginBottom: 7,
-                        }}>
-                          Navazující čtení
-                        </Text>
-                        {t.relatedArticles.map(item => (
-                          <Text key={item.slug} style={{ fontSize: 14, lineHeight: 1.45, marginBottom: 6 }}>
-                            <Link
-                              href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${item.slug}`}
-                              style={{ color: readableAccent(meta.accent), textDecoration: 'underline', textUnderlineOffset: 3 }}
-                            >
-                              {item.label}: {item.fm!.title}
-                            </Link>
-                          </Text>
-                        ))}
-                      </Box>
-                    )}
                   </div>
                 ))}
               </Box>
