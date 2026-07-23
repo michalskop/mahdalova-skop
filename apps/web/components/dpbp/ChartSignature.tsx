@@ -1,9 +1,10 @@
 import Link from 'next/link';
 
 interface ChartSignatureProps {
-  size?: number;
+  size?: number | string;
   color?: string;
   layout?: 'inline' | 'stacked';
+  textSize?: number | string;
   textWeight?: number;
   style?: React.CSSProperties;
 }
@@ -12,10 +13,14 @@ export default function ChartSignature({
   size = 22,
   color = '#101432',
   layout = 'inline',
+  textSize,
   textWeight = 400,
   style,
 }: ChartSignatureProps) {
   const stacked = layout === 'stacked';
+  const fontSize = textSize ?? (
+    typeof size === 'number' ? size * (stacked ? 0.47 : 0.52) : 14
+  );
 
   return (
     <Link
@@ -32,7 +37,7 @@ export default function ChartSignature({
         textDecoration: 'none',
         textAlign: 'center',
         fontFamily: 'var(--font-roboto-slab), Georgia, serif',
-        fontSize: size * (stacked ? 0.47 : 0.52),
+        fontSize,
         fontWeight: textWeight,
         color, lineHeight: 1, ...style,
       }}

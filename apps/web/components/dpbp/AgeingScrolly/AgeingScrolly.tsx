@@ -82,7 +82,12 @@ export default function AgeingScrolly({ inactiveCategoryMode = 'hidden' }: Agein
             <h2>Česko nezmizí, ale výrazně zestárne</h2>
             <p>Věková skladba obyvatel v %, střední varianta projekce ČSÚ</p>
           </div>
-          <ChartSignature size={30} layout="stacked" textWeight={400} />
+          <ChartSignature
+            size="clamp(36px, 4.5vw, 44px)"
+            textSize="clamp(14px, 1.8vw, 18px)"
+            layout="stacked"
+            textWeight={400}
+          />
           </header>
 
           <div className={styles.year} aria-live="polite">{snapshot.year}</div>

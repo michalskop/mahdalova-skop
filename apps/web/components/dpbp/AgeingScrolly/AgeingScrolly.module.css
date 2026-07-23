@@ -14,13 +14,19 @@
 .header p { margin: 5px 0 0 !important; color: #555 !important; font: 400 17px/1.3 var(--font-roboto-condensed), Arial, sans-serif !important; }
 .year { margin: 18px 0 10px; color: #101432; font-size: 32px; font-weight: 700; }
 .people {
-  display: grid;
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-  align-content: end;
-  gap: 5px;
+  --dot-gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  gap: var(--dot-gap);
   aspect-ratio: 1;
 }
-.people span { aspect-ratio: 1; border-radius: 50%; transition: background-color 450ms ease, transform 450ms ease; }
+.people span {
+  flex: 0 0 calc((100% - 9 * var(--dot-gap)) / 10);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: background-color 450ms ease, transform 450ms ease;
+}
 .young { background: #d9d5cc; }
 .working { background: #aaa9b5; }
 .senior { background: #de1743; }
@@ -81,7 +87,7 @@
   }
   .graphic { width: 100%; padding: 16px; }
   .header { gap: 10px; }
-  .people { gap: 4px; }
+  .people { --dot-gap: 4px; }
   .steps {
     position: relative;
     z-index: 2;
