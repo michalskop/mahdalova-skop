@@ -298,7 +298,10 @@ export default function FertilityFanScrolly() {
 
           <div className={styles.current} aria-live="polite">
             <strong>{step.title}</strong>
-            <span>{rows.length} skutečných oken{selected ? ` · ${selected.startYear}–${selected.endYear}` : ''}</span>
+            <span>
+              {rows.length} {duration === 5 ? 'pětiletých' : 'desetiletých'} období různých zemí
+              {selected ? ` · zvýrazněno ${selected.startYear}–${selected.endYear}` : ''}
+            </span>
           </div>
 
           <footer className={styles.footer}>
