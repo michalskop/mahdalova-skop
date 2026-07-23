@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import ChartSignature from '../ChartSignature';
 import rawData from './data.json';
 import styles from './FertilityFanScrolly.module.css';
@@ -19,10 +19,56 @@ type WindowRow = {
 const data = rawData as WindowRow[];
 const TARGET_CHANGE = 0.82;
 const COUNTRY_LABELS: Record<string, string> = {
-  RUS: 'Rusko',
-  SWE: 'Švédsko',
-  HUN: 'Maďarsko',
+  ARE: 'Spojené arabské emiráty',
+  AUS: 'Austrálie',
+  AUT: 'Rakousko',
+  BEL: 'Belgie',
+  BGR: 'Bulharsko',
+  BHR: 'Bahrajn',
+  CAN: 'Kanada',
+  CHE: 'Švýcarsko',
+  CHL: 'Chile',
+  CRI: 'Kostarika',
+  CYP: 'Kypr',
   CZE: 'Česko',
+  DEU: 'Německo',
+  DNK: 'Dánsko',
+  ESP: 'Španělsko',
+  EST: 'Estonsko',
+  FIN: 'Finsko',
+  FRA: 'Francie',
+  GBR: 'Spojené království',
+  GRC: 'Řecko',
+  HKG: 'Hongkong',
+  HRV: 'Chorvatsko',
+  HUN: 'Maďarsko',
+  IRL: 'Irsko',
+  ISR: 'Izrael',
+  ITA: 'Itálie',
+  JPN: 'Japonsko',
+  KOR: 'Jižní Korea',
+  KWT: 'Kuvajt',
+  LTU: 'Litva',
+  LVA: 'Lotyšsko',
+  NLD: 'Nizozemsko',
+  NOR: 'Norsko',
+  NZL: 'Nový Zéland',
+  OMN: 'Omán',
+  PAN: 'Panama',
+  POL: 'Polsko',
+  PRI: 'Portoriko',
+  PRT: 'Portugalsko',
+  QAT: 'Katar',
+  ROU: 'Rumunsko',
+  RUS: 'Rusko',
+  SAU: 'Saúdská Arábie',
+  SGP: 'Singapur',
+  SVK: 'Slovensko',
+  SVN: 'Slovinsko',
+  SWE: 'Švédsko',
+  TTO: 'Trinidad a Tobago',
+  URY: 'Uruguay',
+  USA: 'Spojené státy',
 };
 
 const STEPS = [
@@ -90,8 +136,20 @@ function formatChange(value: number) {
   return `${value > 0 ? '+' : ''}${value.toFixed(2).replace('.', ',')}`;
 }
 
+function policyContext(row: WindowRow) {
+  const key = `${row.iso}-${row.startYear}-${row.endYear}`;
+  const contexts: Record<string, string> = {
+    'RUS-2005-2015': 'Mateřský kapitál a další pobídky byly v tomto období v platnosti; graf neodděluje jejich účinek od dalších změn.',
+    'SWE-2000-2010': 'Dostupná péče o děti, rodičovská vázaná na příjem a nepřenosné měsíce pro otce; vzestup se později neudržel.',
+    'HUN-2011-2021': 'Daňové úlevy, zvýhodněné úvěry a podpora rodin; z grafu nelze určit, jakou část změny způsobila jednotlivá opatření.',
+    'CZE-2011-2021': 'Bez jedné mimořádné pronatalitní reformy; změnu proto nelze připsat jedinému opatření.',
+  };
+  return contexts[key] ?? 'K tomuto období nemáme ověřeně přiřazené konkrétní opatření.';
+}
+
 export default function FertilityFanScrolly() {
   const [active, setActive] = useState(0);
+  const [hovered, setHovered] = useState<{ row: WindowRow; x: number; y: number } | null>(null);
   const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
   const step = STEPS[active];
 
@@ -120,6 +178,22 @@ export default function FertilityFanScrolly() {
     : 'target' in step && step.target
       ? 'Politický cíl hnutí ANO: +0,82'
       : null;
+
+  const handlePointerMove = (event: ReactPointerEvent<SVGRectElement>) => {
+    const svg = event.currentTarget.ownerSVGElement;
+    if (!svg) return;
+    const bounds = svg.getBoundingClientRect();
+    const localX = ((event.clientX - bounds.left) / bounds.width) * WIDTH;
+    const localY = ((event.clientY - bounds.top) / bounds.height) * HEIGHT;
+    const plotX = Math.max(MARGIN.left, Math.min(endX, localX));
+    const progress = (plotX - MARGIN.left) / (endX - MARGIN.left);
+    const nearest = rows.reduce<{ row: WindowRow; distance: number } | null>((best, row) => {
+      const distance = Math.abs(localY - y(row.change * progress));
+      return !best || distance < best.distance ? { row, distance } : best;
+    }, null);
+    if (!nearest) return;
+    setHovered({ row: nearest.row, x: plotX, y: y(nearest.row.change * progress) });
+  };
 
   return (
     <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
@@ -151,10 +225,11 @@ export default function FertilityFanScrolly() {
 
             {rows.map(row => {
               const isSelected = selected === row;
+              const isHovered = hovered?.row === row;
               return (
                 <line
                   key={`${row.iso}-${row.startYear}-${row.window}`}
-                  className={isSelected ? styles.selectedLine : styles.fanLine}
+                  className={isSelected ? styles.selectedLine : isHovered ? styles.hoveredLine : styles.fanLine}
                   x1={x(0, duration)}
                   y1={y(0)}
                   x2={endX}
@@ -189,6 +264,33 @@ export default function FertilityFanScrolly() {
                   {directLabel}
                 </text>
               </g>
+            )}
+
+            <rect
+              className={styles.hoverLayer}
+              x={MARGIN.left}
+              y={MARGIN.top}
+              width={endX - MARGIN.left}
+              height={HEIGHT - MARGIN.top - MARGIN.bottom}
+              onPointerMove={handlePointerMove}
+              onPointerLeave={() => setHovered(null)}
+            />
+
+            {hovered && (
+              <foreignObject
+                className={styles.tooltipObject}
+                x={Math.min(Math.max(hovered.x + 10, MARGIN.left), WIDTH - 388)}
+                y={hovered.y > 190 ? hovered.y - 190 : hovered.y + 12}
+                width="380"
+                height="180"
+                pointerEvents="none"
+              >
+                <div className={styles.tooltip} role="tooltip">
+                  <strong>{COUNTRY_LABELS[hovered.row.iso] ?? hovered.row.country}</strong>
+                  <span>{hovered.row.startYear}–{hovered.row.endYear} · změna {formatChange(hovered.row.change)}</span>
+                  <p><b>Politický kontext:</b> {policyContext(hovered.row)}</p>
+                </div>
+              </foreignObject>
             )}
           </svg>
 
