@@ -80,14 +80,14 @@ const STEPS = [
   {
     window: 10 as const,
     title: 'Deset let',
-    text: 'Za deset let se vějíř rozevře víc: rozdíly mezi počátkem a koncem sledovaných období jsou větší, směrem nahoru i dolů. Převládají poklesy. Nejvyšší růst zaznamenalo Rusko v letech 2005–2015, +0,48, ani ten se nepřiblížil cíli premiéra Babiše +0,82. Od roku 2007 Rusko zavedlo mateřský kapitál a zvýšilo další dávky; růst ale provázelo i ekonomické zotavení a jiné načasování porodů.',
+    text: 'Za deset let se vějíř rozevře víc: rozdíly mezi počátkem a koncem sledovaných období jsou větší, směrem nahoru i dolů. Převládají poklesy.\n\nNejvyšší růst zaznamenalo Rusko v letech 2005–2015, +0,48, ani ten se nepřiblížil cíli premiéra Babiše +0,82.\n\nOd roku 2007 stát nabízel rodinám po narození druhého či dalšího dítěte vysoký příspěvek využitelný zejména na bydlení, vzdělání nebo penzi matky a zvýšil také další dávky. Nelze však tvrdit, že zafungovalo jedno konkrétní opatření: růst provázelo ekonomické zotavení i jiné načasování porodů.',
   },
   {
     window: 10 as const,
     iso: 'RUS',
     startYear: 2005,
     title: 'Rusko 2005–2015',
-    text: 'Nejvyšší nárůst v tomto souboru: +0,48. V období fungoval mateřský kapitál a další pobídky, současně se ale měnila ekonomika i načasování porodů. Křivka sama nedokazuje účinek jedné politiky.',
+    text: 'Nejvyšší nárůst v tomto souboru: +0,48. Od roku 2007 stát nabízel rodinám po narození druhého či dalšího dítěte vysoký příspěvek využitelný zejména na bydlení, vzdělání nebo penzi matky a zvýšil také další dávky. Nelze tvrdit, že zafungovalo jedno konkrétní opatření: současně se měnila ekonomika i načasování porodů.',
   },
   {
     window: 10 as const,
@@ -140,7 +140,7 @@ function policyContext(row: WindowRow) {
   const key = `${row.iso}-${row.startYear}-${row.endYear}`;
   const contexts: Record<string, string> = {
     'NZL-2002-2007': 'Placená rodičovská dovolená od roku 2002 a postupně zaváděný balík Working for Families; graf neprokazuje jejich samostatný účinek.',
-    'RUS-2005-2015': 'Mateřský kapitál a další pobídky byly v tomto období v platnosti; graf neodděluje jejich účinek od dalších změn.',
+    'RUS-2005-2015': 'Od roku 2007 stát nabízel vysoký příspěvek po narození druhého či dalšího dítěte, využitelný hlavně na bydlení, vzdělání nebo penzi matky. Nelze tvrdit, že zafungoval právě on.',
     'SWE-2000-2010': 'Dostupná péče o děti, rodičovská vázaná na příjem a nepřenosné měsíce pro otce; vzestup se později neudržel.',
     'HUN-2011-2021': 'Daňové úlevy, zvýhodněné úvěry a podpora rodin; z grafu nelze určit, jakou část změny způsobila jednotlivá opatření.',
     'CZE-2011-2021': 'Bez jedné mimořádné pronatalitní reformy; změnu proto nelze připsat jedinému opatření.',
@@ -196,7 +196,7 @@ export default function FertilityFanScrolly() {
     setHovered({ row: nearest.row, x: plotX, y: y(nearest.row.change * progress) });
   };
   const hoveredContext = hovered ? policyContext(hovered.row) : undefined;
-  const tooltipHeight = hoveredContext ? 180 : 78;
+  const tooltipHeight = hoveredContext ? 280 : 78;
 
   return (
     <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
@@ -323,7 +323,9 @@ export default function FertilityFanScrolly() {
           >
             <div className={styles.bubble}>
               <strong>{item.title}</strong>
-              <p>{item.text}</p>
+              {item.text.split('\n\n').map((paragraph, paragraphIndex) => (
+                <p key={paragraphIndex}>{paragraph}</p>
+              ))}
             </div>
           </div>
         ))}
