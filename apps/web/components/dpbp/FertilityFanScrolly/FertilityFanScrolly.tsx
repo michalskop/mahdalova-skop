@@ -140,18 +140,6 @@ function formatPeriod(startYear: number, endYear: number) {
   return `${startYear}–${String(endYear).slice(-2)}`;
 }
 
-function policyContext(row: WindowRow) {
-  const key = `${row.iso}-${row.startYear}-${row.endYear}`;
-  const contexts: Record<string, string> = {
-    'NZL-2002-2007': 'Placená rodičovská dovolená od roku 2002 a postupně zaváděný balík Working for Families; graf neprokazuje jejich samostatný účinek.',
-    'RUS-2005-2015': 'Od roku 2007 stát nabízel vysoký příspěvek po narození druhého či dalšího dítěte, využitelný hlavně na bydlení, vzdělání nebo penzi matky. Nelze tvrdit, že zafungoval právě on.',
-    'SWE-2000-2010': 'Dostupná péče o děti, rodičovská vázaná na příjem a nepřenosné měsíce pro otce; vzestup se později neudržel.',
-    'HUN-2011-2021': 'Daňové úlevy, zvýhodněné úvěry a podpora rodin; z grafu nelze určit, jakou část změny způsobila jednotlivá opatření.',
-    'CZE-2011-2021': 'Bez jedné mimořádné pronatalitní reformy; změnu proto nelze připsat jedinému opatření.',
-  };
-  return contexts[key];
-}
-
 export default function FertilityFanScrolly() {
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState<{ row: WindowRow; x: number; y: number } | null>(null);
@@ -212,8 +200,7 @@ export default function FertilityFanScrolly() {
     }
     setHovered({ row: nearest.row, x: plotX, y: y(nearest.row.change * progress) });
   };
-  const hoveredContext = hovered ? policyContext(hovered.row) : undefined;
-  const tooltipHeight = hoveredContext ? 280 : 78;
+  const tooltipHeight = 68;
 
   return (
     <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
@@ -315,7 +302,6 @@ export default function FertilityFanScrolly() {
                     {COUNTRY_LABELS[hovered.row.iso] ?? hovered.row.country} ({formatPeriod(hovered.row.startYear, hovered.row.endYear)})
                     <b className={styles.tooltipValue}> {formatChange(hovered.row.change)}</b>
                   </strong>
-                  {hoveredContext && <p><b>Politický kontext:</b> {hoveredContext}</p>}
                 </div>
               </foreignObject>
             )}
