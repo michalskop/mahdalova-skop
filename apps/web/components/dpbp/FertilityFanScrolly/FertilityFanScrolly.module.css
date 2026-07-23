@@ -39,11 +39,20 @@
 .graphic svg { width: 100%; height: auto; overflow: visible; }
 .grid { stroke: #ddd8cc; stroke-width: 1; stroke-dasharray: 3 5; }
 .zero { stroke: #333; stroke-width: 1.4; }
-.tick, .axisLabel, .startLabel, .valueLabel { fill: #454545; font-family: var(--font-roboto-condensed), Arial, sans-serif; }
+.tick, .axisLabel, .startLabel, .directLabel, .targetLabel { fill: #454545; font-family: var(--font-roboto-condensed), Arial, sans-serif; }
 .tick { font-size: 13px; }
 .axisLabel { font-size: 14px; }
 .startLabel { font-size: 13px; }
-.valueLabel { font-size: 17px; font-weight: 700; }
+.directLabel, .targetLabel {
+  font-size: 17px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #fdfbf7;
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+.directLabel { fill: #146c82; }
+.targetLabel { fill: #c44f00; }
 .fanLine { stroke: #474747; stroke-width: 1; stroke-opacity: 0.18; }
 .selectedLine { stroke: #146c82; stroke-width: 4; stroke-opacity: 1; }
 .targetLine { stroke: #f76800; stroke-width: 4; stroke-dasharray: 10 6; }
@@ -74,26 +83,68 @@
 .step {
   min-height: 58vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   opacity: 0.38;
   transition: opacity 220ms ease;
 }
 .step.active { opacity: 1; }
-.step > strong { color: #f76800; font-size: 22px; }
-.step p { margin-top: 8px !important; font-size: 18px !important; line-height: 1.55 !important; }
+.bubble > strong { color: #f76800; font-size: 22px; }
+.bubble p { margin-top: 8px !important; font-size: 18px !important; line-height: 1.55 !important; }
 
-@media (max-width: 780px) {
+@media (max-width: 960px) {
   .scrolly { display: block; width: auto; margin: 36px 0; transform: none; }
   .graphic { top: 62px; z-index: 1; padding: 14px; }
   .header { gap: 10px; }
   .header h2 { font-size: 20px !important; }
   .header p { font-size: 14px !important; }
-  .steps { padding: 28vh 0 4vh; }
-  .step { min-height: 72vh; padding: 16px; }
-  .step p { background: rgba(253, 251, 247, 0.96); padding: 12px; border-left: 4px solid #f76800; }
+  .directLabel, .targetLabel { font-size: 26px; stroke-width: 7px; }
+  .steps {
+    position: relative;
+    z-index: 2;
+    margin-top: -42vh;
+    padding: 54vh 0 8vh;
+    pointer-events: none;
+  }
+  .step {
+    min-height: 78vh;
+    justify-content: flex-end;
+    padding: 0 12px 11vh;
+    opacity: 0.18;
+  }
+  .step.active { opacity: 1; }
+  .bubble {
+    width: min(430px, calc(100% - 8px));
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none;
+    align-self: flex-end;
+    margin-left: auto;
+    padding: 16px 18px;
+    background: rgba(253, 251, 247, 0.97);
+    border: 1px solid #d8d2c5;
+    border-left: 5px solid #f76800;
+    border-radius: 10px;
+    box-shadow: 0 8px 28px rgba(16, 20, 50, 0.16);
+  }
+  .bubble > strong { display: block; font-size: 20px; line-height: 1.2; }
+  .bubble p { margin-bottom: 0 !important; font-size: 17px !important; line-height: 1.48 !important; }
   .current { display: block; }
   .current span { display: block; margin-top: 3px; text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .graphic { padding: 12px 10px; }
+  .header h2 { font-size: 18px !important; }
+  .header p { line-height: 1.25 !important; }
+  .directLabel, .targetLabel { font-size: 26px; stroke-width: 7px; }
+  .step { padding-right: 8px; padding-left: 8px; }
+  .bubble {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 8px;
+  }
+  .bubble > strong { font-size: 18px; }
+  .bubble p { font-size: 16px !important; line-height: 1.45 !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

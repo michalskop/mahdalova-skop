@@ -18,6 +18,12 @@ type WindowRow = {
 
 const data = rawData as WindowRow[];
 const TARGET_CHANGE = 0.82;
+const COUNTRY_LABELS: Record<string, string> = {
+  RUS: 'Rusko',
+  SWE: 'Švédsko',
+  HUN: 'Maďarsko',
+  CZE: 'Česko',
+};
 
 const STEPS = [
   {
@@ -61,7 +67,7 @@ const STEPS = [
   {
     window: 10 as const,
     target: true,
-    title: 'Politický cíl +0,82',
+    title: 'Politický cíl hnutí ANO',
     text: 'Cesta z 1,28 na 2,10 leží výrazně nad všemi pozorovanými okny. Rodinná politika může odstraňovat překážky, ale dostupná data nedokládají nástroj, který by takový skok spolehlivě vyvolal.',
   },
 ] as const;
@@ -109,6 +115,11 @@ export default function FertilityFanScrolly() {
     : undefined;
   const duration = step.window;
   const endX = x(duration, duration);
+  const directLabel = selected
+    ? `${COUNTRY_LABELS[selected.iso] ?? selected.country}, ${selected.startYear}–${selected.endYear}: ${formatChange(selected.change)}`
+    : 'target' in step && step.target
+      ? 'Politický cíl hnutí ANO: +0,82'
+      : null;
 
   return (
     <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
@@ -168,8 +179,13 @@ export default function FertilityFanScrolly() {
                 cy={y(selected?.change ?? TARGET_CHANGE)}
                 r={5}
               />
-              <text className={styles.valueLabel} x={endX + 12} y={y(selected?.change ?? TARGET_CHANGE) + 5}>
-                {selected ? formatChange(selected.change) : '+0,82'}
+              <text
+                className={'target' in step && step.target ? styles.targetLabel : styles.directLabel}
+                x={endX - 8}
+                y={y(selected?.change ?? TARGET_CHANGE) - 11}
+                textAnchor="end"
+              >
+                {directLabel}
               </text>
             </g>
           )}
@@ -195,8 +211,10 @@ export default function FertilityFanScrolly() {
             data-step={index}
             className={`${styles.step} ${active === index ? styles.active : ''}`}
           >
-            <strong>{item.title}</strong>
-            <p>{item.text}</p>
+            <div className={styles.bubble}>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </div>
           </div>
         ))}
       </div>
