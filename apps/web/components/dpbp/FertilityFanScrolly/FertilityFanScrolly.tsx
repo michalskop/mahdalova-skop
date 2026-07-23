@@ -75,12 +75,12 @@ const STEPS = [
   {
     window: 5 as const,
     title: 'Pět let',
-    text: 'V pětiletých oknech je nejvyšší pozorovaný nárůst +0,29 dítěte na ženu. Krátké oživení existuje, ale k cíli +0,82 se žádná bohatá země nepřiblížila.',
+    text: 'Nejvyšší pětiletý nárůst patří Novému Zélandu v letech 2002–2007: +0,29 dítěte na ženu. Země tehdy zavedla placenou rodičovskou dovolenou a postupně balík Working for Families, který zvýšil podporu rodin. Graf ale neprokazuje, jakou část růstu tato opatření způsobila.',
   },
   {
     window: 10 as const,
     title: 'Deset let',
-    text: 'Za deset let se vějíř rozevře víc. Převládají poklesy a ani nejvyšší pozorovaný nárůst nedosahuje tří pětin českého politického cíle.',
+    text: 'Za deset let se vějíř rozevře víc: rozdíly mezi počátkem a koncem sledovaných období jsou větší, směrem nahoru i dolů. Převládají poklesy. Nejvyšší růst zaznamenalo Rusko v letech 2005–2015, +0,48, ani ten se nepřiblížil cíli premiéra Babiše +0,82. Od roku 2007 Rusko zavedlo mateřský kapitál a zvýšilo další dávky; růst ale provázelo i ekonomické zotavení a jiné načasování porodů.',
   },
   {
     window: 10 as const,
@@ -139,6 +139,7 @@ function formatChange(value: number) {
 function policyContext(row: WindowRow) {
   const key = `${row.iso}-${row.startYear}-${row.endYear}`;
   const contexts: Record<string, string> = {
+    'NZL-2002-2007': 'Placená rodičovská dovolená od roku 2002 a postupně zaváděný balík Working for Families; graf neprokazuje jejich samostatný účinek.',
     'RUS-2005-2015': 'Mateřský kapitál a další pobídky byly v tomto období v platnosti; graf neodděluje jejich účinek od dalších změn.',
     'SWE-2000-2010': 'Dostupná péče o děti, rodičovská vázaná na příjem a nepřenosné měsíce pro otce; vzestup se později neudržel.',
     'HUN-2011-2021': 'Daňové úlevy, zvýhodněné úvěry a podpora rodin; z grafu nelze určit, jakou část změny způsobila jednotlivá opatření.',
