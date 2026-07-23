@@ -164,7 +164,10 @@ export default function FertilityFanScrolly() {
         const visible = entries
           .filter(entry => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(Number((visible.target as HTMLElement).dataset.step));
+        if (visible) {
+          setHovered(null);
+          setActive(Number((visible.target as HTMLElement).dataset.step));
+        }
       },
       { rootMargin: '-28% 0px -48% 0px', threshold: [0.2, 0.5, 0.8] },
     );
@@ -188,6 +191,7 @@ export default function FertilityFanScrolly() {
     : 'target' in step && step.target
       ? '+0,82'
       : null;
+  const hasDirectLabel = Boolean(selected || ('target' in step && step.target));
 
   const handlePointerMove = (event: ReactPointerEvent<SVGRectElement>) => {
     const svg = event.currentTarget.ownerSVGElement;
@@ -202,6 +206,10 @@ export default function FertilityFanScrolly() {
       return !best || distance < best.distance ? { row, distance } : best;
     }, null);
     if (!nearest) return;
+    if (nearest.row === selected) {
+      setHovered(null);
+      return;
+    }
     setHovered({ row: nearest.row, x: plotX, y: y(nearest.row.change * progress) });
   };
   const hoveredContext = hovered ? policyContext(hovered.row) : undefined;
@@ -219,8 +227,12 @@ export default function FertilityFanScrolly() {
             <ChartSignature size={28} layout="stacked" textWeight={400} />
           </header>
 
-          <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-labelledby="fan-title fan-desc">
-            <title id="fan-title">Vějíř změn úhrnné plodnosti</title>
+          <svg
+            viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+            role="img"
+            aria-label="Vějíř změn úhrnné plodnosti"
+            aria-describedby="fan-desc"
+          >
             <desc id="fan-desc">
               Každá šedá úsečka představuje skutečné pětileté nebo desetileté okno jedné země.
               Zvýrazněná úsečka odpovídá právě popisovanému případu.
@@ -309,18 +321,17 @@ export default function FertilityFanScrolly() {
             )}
           </svg>
 
-          <div className={styles.current} aria-live="polite">
-            <strong>{step.title}</strong>
+          <div className={`${styles.current} ${hasDirectLabel ? styles.currentCompact : ''}`} aria-live="polite">
+            {!hasDirectLabel && <strong>{step.title}</strong>}
             <span>
               {rows.length} {duration === 5 ? 'pětiletých' : 'desetiletých'} období různých zemí
-              {selected ? ` · zvýrazněno ${selected.startYear}–${selected.endYear}` : ''}
             </span>
           </div>
 
           <footer className={styles.footer}>
             <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
             <div>• data: World Bank / UN Population Division; země a filtry podle dodaného analytického výstupu</div>
-            <div>• spojnice ukazuje pouze začátek a konec okna, nikoli průběh mezi nimi</div>
+            <div>• vějíř: každá spojnice zachycuje změnu v jednom období – pouze jeho začátek a konec, nikoli průběh mezi nimi</div>
           </footer>
         </div>
       </div>

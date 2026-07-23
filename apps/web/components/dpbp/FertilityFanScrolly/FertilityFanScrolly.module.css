@@ -92,6 +92,8 @@
 
 .current strong { color: #146c82; font-size: 18px; }
 .current span { color: #555; font-size: 15px; text-align: right; }
+.currentCompact { justify-content: flex-start; }
+.currentCompact span { text-align: left; }
 
 .footer {
   margin-top: 14px;
