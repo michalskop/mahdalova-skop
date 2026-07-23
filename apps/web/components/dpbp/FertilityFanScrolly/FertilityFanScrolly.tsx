@@ -76,11 +76,15 @@ const STEPS = [
     window: 5 as const,
     title: 'Pět let',
     text: 'Nejvyšší pětiletý nárůst patří Novému Zélandu v letech 2002–2007: +0,29 dítěte na ženu. Země tehdy zavedla placenou rodičovskou dovolenou a postupně balík Working for Families, který zvýšil podporu rodin. Graf ale neprokazuje, jakou část růstu tato opatření způsobila.',
+    sourceHref: 'https://www.treasury.govt.nz/publications/wp/working-families-changes-effect-labour-supply-new-zealand-wp-14-18',
+    sourceLabel: 'Podklad: New Zealand Treasury',
   },
   {
     window: 10 as const,
     title: 'Deset let',
     text: 'Za deset let se vějíř rozevře víc: rozdíly mezi počátkem a koncem sledovaných období jsou větší, směrem nahoru i dolů. Převládají poklesy.\n\nNejvyšší růst zaznamenalo Rusko v letech 2005–2015, +0,48, ani ten se nepřiblížil cíli premiéra Babiše +0,82.\n\nOd roku 2007 stát nabízel rodinám po narození druhého či dalšího dítěte vysoký příspěvek využitelný zejména na bydlení, vzdělání nebo penzi matky a zvýšil také další dávky. Nelze však tvrdit, že zafungovalo jedno konkrétní opatření: růst provázelo ekonomické zotavení i jiné načasování porodů.',
+    sourceHref: 'https://sfr.gov.ru/en/matcap/',
+    sourceLabel: 'Podklad: Sociální fond Ruska',
   },
   {
     window: 10 as const,
@@ -88,6 +92,8 @@ const STEPS = [
     startYear: 2005,
     title: 'Rusko 2005–2015',
     text: 'Nejvyšší nárůst v tomto souboru: +0,48. Od roku 2007 stát nabízel rodinám po narození druhého či dalšího dítěte vysoký příspěvek využitelný zejména na bydlení, vzdělání nebo penzi matky a zvýšil také další dávky. Nelze tvrdit, že zafungovalo jedno konkrétní opatření: současně se měnila ekonomika i načasování porodů.',
+    sourceHref: 'https://sfr.gov.ru/en/matcap/',
+    sourceLabel: 'Podklad: Sociální fond Ruska',
   },
   {
     window: 10 as const,
@@ -335,6 +341,11 @@ export default function FertilityFanScrolly() {
               {item.text.split('\n\n').map((paragraph, paragraphIndex) => (
                 <p key={paragraphIndex}>{paragraph}</p>
               ))}
+              {'sourceHref' in item && (
+                <a className={styles.stepSource} href={item.sourceHref} target="_blank" rel="noopener noreferrer">
+                  {item.sourceLabel}
+                </a>
+              )}
             </div>
           </div>
         ))}

@@ -46,33 +46,35 @@ export default function AgeingScrolly() {
 
   return (
     <section className={styles.scrolly} aria-label="Jak se podle projekce ČSÚ změní věková skladba Česka">
-      <div className={styles.graphic}>
-        <header className={styles.header}>
+      <div className={styles.graphicStage}>
+        <div className={styles.graphic}>
+          <header className={styles.header}>
           <div>
             <h2>Česko nezmizí, ale výrazně zestárne</h2>
             <p>Věková skladba obyvatel v %, střední varianta projekce ČSÚ</p>
           </div>
           <ChartSignature size={30} layout="stacked" textWeight={400} />
-        </header>
+          </header>
 
-        <div className={styles.year} aria-live="polite">{snapshot.year}</div>
-        <div className={styles.people} aria-hidden="true">
-          {Array.from({ length: 100 }, (_, index) => (
-            <span key={index} className={styles[category(index, snapshot)]} />
-          ))}
+          <div className={styles.year} aria-live="polite">{snapshot.year}</div>
+          <div className={styles.people} aria-hidden="true">
+            {Array.from({ length: 100 }, (_, index) => (
+              <span key={index} className={styles[category(index, snapshot)]} />
+            ))}
+          </div>
+
+          <div className={styles.legend}>
+            <span><i className={styles.young} />0–14 let <strong>{snapshot.young} %</strong></span>
+            <span><i className={styles.working} />15–64 let <strong>{snapshot.working} %</strong></span>
+            <span><i className={styles.senior} />65+ <strong>{snapshot.senior} %</strong></span>
+          </div>
+          <p className={styles.ratio}>{snapshot.ratio}</p>
+
+          <footer className={styles.footer}>
+            <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
+            <div>• data: ČSÚ, Projekce obyvatelstva České republiky 2023–2100, střední varianta</div>
+          </footer>
         </div>
-
-        <div className={styles.legend}>
-          <span><i className={styles.young} />0–14 let <strong>{snapshot.young} %</strong></span>
-          <span><i className={styles.working} />15–64 let <strong>{snapshot.working} %</strong></span>
-          <span><i className={styles.senior} />65+ <strong>{snapshot.senior} %</strong></span>
-        </div>
-        <p className={styles.ratio}>{snapshot.ratio}</p>
-
-        <footer className={styles.footer}>
-          <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
-          <div>• data: ČSÚ, Projekce obyvatelstva České republiky 2023–2100, střední varianta</div>
-        </footer>
       </div>
 
       <div className={styles.steps}>
@@ -83,8 +85,10 @@ export default function AgeingScrolly() {
             data-step={index}
             className={`${styles.step} ${active === index ? styles.active : ''}`}
           >
-            <strong>{SNAPSHOTS[index].year}</strong>
-            <p>{text}</p>
+            <div className={styles.bubble}>
+              <strong>{SNAPSHOTS[index].year}</strong>
+              <p>{text}</p>
+            </div>
           </div>
         ))}
       </div>

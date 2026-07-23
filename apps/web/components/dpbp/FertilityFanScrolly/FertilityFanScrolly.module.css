@@ -53,15 +53,15 @@
   stroke-linejoin: round;
 }
 .directLabel { fill: #146c82; }
-.targetLabel { fill: #c44f00; }
+.targetLabel { fill: #b51236; }
 .labelName { font-size: 17px; font-weight: 600; }
 .labelValue { font-size: 20px; font-weight: 800; }
 .fanLine { stroke: #474747; stroke-width: 1; stroke-opacity: 0.18; }
 .hoveredLine { stroke: #146c82; stroke-width: 3; stroke-opacity: 1; }
 .selectedLine { stroke: #146c82; stroke-width: 4; stroke-opacity: 1; }
-.targetLine { stroke: #f76800; stroke-width: 4; stroke-dasharray: 10 6; }
+.targetLine { stroke: #de1743; stroke-width: 4; stroke-dasharray: 10 6; }
 .selectedDot { fill: #146c82; }
-.targetDot { fill: #f76800; }
+.targetDot { fill: #de1743; }
 .hoverLayer { fill: transparent; cursor: default; pointer-events: all; }
 .tooltipObject { overflow: visible; }
 .tooltip {
@@ -111,8 +111,16 @@
   transition: opacity 220ms ease;
 }
 .step.active { opacity: 1; }
-.bubble > strong { color: #f76800; font-size: 22px; }
+.bubble > strong { color: #de1743; font-size: 22px; }
 .bubble p { margin-top: 8px !important; font-size: 18px !important; line-height: 1.55 !important; }
+.stepSource {
+  display: inline-block;
+  margin-top: 4px;
+  color: #146c82;
+  font-size: 14px;
+  text-underline-offset: 3px;
+  pointer-events: auto;
+}
 
 @media (max-width: 960px) {
   .scrolly { display: block; width: auto; margin: 36px 0; transform: none; }
@@ -155,7 +163,7 @@
     padding: 16px 18px;
     background: rgba(253, 251, 247, 0.97);
     border: 1px solid #d8d2c5;
-    border-left: 5px solid #f76800;
+    border-left: 5px solid #de1743;
     border-radius: 10px;
     box-shadow: 0 8px 28px rgba(16, 20, 50, 0.16);
   }

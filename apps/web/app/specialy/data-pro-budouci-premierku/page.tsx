@@ -505,7 +505,7 @@ const G_VLADNUTI = <>
 
 const CHAPTERS = [
   // BLOK 1: Obyvatelstvo a základní životní úroveň
-  {n:'01',title:'Demografie',href:'/specialy/data-pro-budouci-premierku/01-demografie',available:true,dots:D01,accent:'#f76800',customSvg:G_DEMO},
+  {n:'01',title:'Demografie',href:'/specialy/data-pro-budouci-premierku/01-demografie',available:true,dots:D01,accent:'#de1743',customSvg:G_DEMO},
   {n:'02',title:'Zdravotnictví a péče',href:'/specialy/data-pro-budouci-premierku/02-zdravotnictvi-a-pece',available:true,dots:D03,accent:'#5e66d5',customSvg:G03},
   {n:'03',title:'Nedostupnost bydlení',href:'/specialy/data-pro-budouci-premierku/03-nedostupnost-bydleni',available:true,dots:D05,accent:'#ff5c4a',customSvg:G05},
   // BLOK 2: Rozdělená země
