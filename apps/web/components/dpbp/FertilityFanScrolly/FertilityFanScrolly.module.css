@@ -8,10 +8,13 @@
   font-family: var(--font-roboto-condensed), Arial, sans-serif;
 }
 
-.graphic {
+.graphicStage {
   position: sticky;
   top: 76px;
   align-self: start;
+}
+
+.graphic {
   padding: 22px 24px 18px;
   background: #fdfbf7;
   border: 1px solid #e8e8dc;
@@ -93,7 +96,13 @@
 
 @media (max-width: 960px) {
   .scrolly { display: block; width: auto; margin: 36px 0; transform: none; }
-  .graphic { top: 62px; z-index: 1; padding: 14px; }
+  .graphicStage {
+    top: 62px;
+    z-index: 1;
+    height: max(calc(100dvh - 62px), 640px);
+    background: #fdfbf7;
+  }
+  .graphic { width: 100%; padding: 14px; }
   .header { gap: 10px; }
   .header h2 { font-size: 20px !important; }
   .header p { font-size: 14px !important; }
@@ -101,7 +110,7 @@
   .steps {
     position: relative;
     z-index: 2;
-    margin-top: -42vh;
+    margin-top: min(calc(62px - 100dvh), -640px);
     padding: 54vh 0 8vh;
     pointer-events: none;
   }

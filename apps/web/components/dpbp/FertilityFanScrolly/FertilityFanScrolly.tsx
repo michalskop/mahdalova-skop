@@ -123,84 +123,86 @@ export default function FertilityFanScrolly() {
 
   return (
     <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
-      <div className={styles.graphic}>
-        <header className={styles.header}>
-          <div>
-            <h2>Jak velký obrat dokázaly bohaté země</h2>
-            <p>Změna úhrnné plodnosti od začátku okna, dítěte na ženu</p>
+      <div className={styles.graphicStage}>
+        <div className={styles.graphic}>
+          <header className={styles.header}>
+            <div>
+              <h2>Jak velký obrat dokázaly bohaté země</h2>
+              <p>Změna úhrnné plodnosti od začátku okna, dítěte na ženu</p>
+            </div>
+            <ChartSignature size={28} layout="stacked" textWeight={400} />
+          </header>
+
+          <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-labelledby="fan-title fan-desc">
+            <title id="fan-title">Vějíř změn úhrnné plodnosti</title>
+            <desc id="fan-desc">
+              Každá šedá úsečka představuje skutečné pětileté nebo desetileté okno jedné země.
+              Zvýrazněná úsečka odpovídá právě popisovanému případu.
+            </desc>
+
+            {[-1.5, -1, -0.5, 0, 0.5, 1].map(tick => (
+              <g key={tick}>
+                <line className={tick === 0 ? styles.zero : styles.grid} x1={MARGIN.left} x2={endX} y1={y(tick)} y2={y(tick)} />
+                <text className={styles.tick} x={MARGIN.left - 10} y={y(tick) + 4} textAnchor="end">
+                  {tick > 0 ? '+' : ''}{tick.toFixed(1).replace('.', ',')}
+                </text>
+              </g>
+            ))}
+
+            {rows.map(row => {
+              const isSelected = selected === row;
+              return (
+                <line
+                  key={`${row.iso}-${row.startYear}-${row.window}`}
+                  className={isSelected ? styles.selectedLine : styles.fanLine}
+                  x1={x(0, duration)}
+                  y1={y(0)}
+                  x2={endX}
+                  y2={y(row.change)}
+                />
+              );
+            })}
+
+            {'target' in step && step.target && (
+              <line className={styles.targetLine} x1={x(0, duration)} y1={y(0)} x2={endX} y2={y(TARGET_CHANGE)} />
+            )}
+
+            <text className={styles.axisLabel} x={(MARGIN.left + endX) / 2} y={HEIGHT - 13} textAnchor="middle">
+              roky od začátku {duration}letého okna
+            </text>
+            <text className={styles.startLabel} x={MARGIN.left} y={y(0) - 10}>začátek = 0</text>
+
+            {(selected || ('target' in step && step.target)) && (
+              <g>
+                <circle
+                  className={'target' in step && step.target ? styles.targetDot : styles.selectedDot}
+                  cx={endX}
+                  cy={y(selected?.change ?? TARGET_CHANGE)}
+                  r={5}
+                />
+                <text
+                  className={'target' in step && step.target ? styles.targetLabel : styles.directLabel}
+                  x={endX - 8}
+                  y={y(selected?.change ?? TARGET_CHANGE) - 11}
+                  textAnchor="end"
+                >
+                  {directLabel}
+                </text>
+              </g>
+            )}
+          </svg>
+
+          <div className={styles.current} aria-live="polite">
+            <strong>{step.title}</strong>
+            <span>{rows.length} skutečných oken{selected ? ` · ${selected.startYear}–${selected.endYear}` : ''}</span>
           </div>
-          <ChartSignature size={28} layout="stacked" textWeight={400} />
-        </header>
 
-        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-labelledby="fan-title fan-desc">
-          <title id="fan-title">Vějíř změn úhrnné plodnosti</title>
-          <desc id="fan-desc">
-            Každá šedá úsečka představuje skutečné pětileté nebo desetileté okno jedné země.
-            Zvýrazněná úsečka odpovídá právě popisovanému případu.
-          </desc>
-
-          {[-1.5, -1, -0.5, 0, 0.5, 1].map(tick => (
-            <g key={tick}>
-              <line className={tick === 0 ? styles.zero : styles.grid} x1={MARGIN.left} x2={endX} y1={y(tick)} y2={y(tick)} />
-              <text className={styles.tick} x={MARGIN.left - 10} y={y(tick) + 4} textAnchor="end">
-                {tick > 0 ? '+' : ''}{tick.toFixed(1).replace('.', ',')}
-              </text>
-            </g>
-          ))}
-
-          {rows.map(row => {
-            const isSelected = selected === row;
-            return (
-              <line
-                key={`${row.iso}-${row.startYear}-${row.window}`}
-                className={isSelected ? styles.selectedLine : styles.fanLine}
-                x1={x(0, duration)}
-                y1={y(0)}
-                x2={endX}
-                y2={y(row.change)}
-              />
-            );
-          })}
-
-          {'target' in step && step.target && (
-            <line className={styles.targetLine} x1={x(0, duration)} y1={y(0)} x2={endX} y2={y(TARGET_CHANGE)} />
-          )}
-
-          <text className={styles.axisLabel} x={(MARGIN.left + endX) / 2} y={HEIGHT - 13} textAnchor="middle">
-            roky od začátku {duration}letého okna
-          </text>
-          <text className={styles.startLabel} x={MARGIN.left} y={y(0) - 10}>začátek = 0</text>
-
-          {(selected || ('target' in step && step.target)) && (
-            <g>
-              <circle
-                className={'target' in step && step.target ? styles.targetDot : styles.selectedDot}
-                cx={endX}
-                cy={y(selected?.change ?? TARGET_CHANGE)}
-                r={5}
-              />
-              <text
-                className={'target' in step && step.target ? styles.targetLabel : styles.directLabel}
-                x={endX - 8}
-                y={y(selected?.change ?? TARGET_CHANGE) - 11}
-                textAnchor="end"
-              >
-                {directLabel}
-              </text>
-            </g>
-          )}
-        </svg>
-
-        <div className={styles.current} aria-live="polite">
-          <strong>{step.title}</strong>
-          <span>{rows.length} skutečných oken{selected ? ` · ${selected.startYear}–${selected.endYear}` : ''}</span>
+          <footer className={styles.footer}>
+            <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
+            <div>• data: World Bank / UN Population Division; země a filtry podle dodaného analytického výstupu</div>
+            <div>• spojnice ukazuje pouze začátek a konec okna, nikoli průběh mezi nimi</div>
+          </footer>
         </div>
-
-        <footer className={styles.footer}>
-          <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
-          <div>• data: World Bank / UN Population Division; země a filtry podle dodaného analytického výstupu</div>
-          <div>• spojnice ukazuje pouze začátek a konec okna, nikoli průběh mezi nimi</div>
-        </footer>
       </div>
 
       <div className={styles.steps}>
