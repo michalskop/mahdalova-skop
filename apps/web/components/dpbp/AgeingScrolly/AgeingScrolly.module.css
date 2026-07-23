@@ -1,0 +1,40 @@
+.scrolly {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+  gap: 32px;
+  width: min(1120px, calc(100vw - 32px));
+  margin: 48px 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+}
+.graphic { position: sticky; top: 80px; align-self: start; padding: 22px 24px 18px; background: #fdfbf7; border: 1px solid #e8e8dc; }
+.header { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
+.header h2 { margin: 0 !important; color: #333 !important; font: 700 22px/1.15 var(--font-roboto-condensed), Arial, sans-serif !important; }
+.header p { margin: 5px 0 0 !important; color: #555 !important; font: 400 17px/1.3 var(--font-roboto-condensed), Arial, sans-serif !important; }
+.year { margin: 18px 0 10px; color: #101432; font-size: 32px; font-weight: 700; }
+.people { display: grid; grid-template-columns: repeat(20, 1fr); gap: 5px; }
+.people span { aspect-ratio: 1; border-radius: 50%; transition: background-color 450ms ease, transform 450ms ease; }
+.young { background: #f2b134; }
+.working { background: #6267a3; }
+.senior { background: #de1743; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 18px; color: #333; font-size: 15px; }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.legend i { width: 12px; height: 12px; border-radius: 50%; }
+.legend strong { color: #101432; }
+.ratio { margin: 12px 0 0 !important; color: #101432 !important; font: 700 18px/1.3 var(--font-roboto-condensed), Arial, sans-serif !important; }
+.footer { margin-top: 18px; padding-top: 12px; border-top: 1px solid #e8e8dc; color: #555; font-size: 16px; line-height: 1.35; }
+.steps { padding: 18vh 0; }
+.step { min-height: 58vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.42; transition: opacity 220ms ease; }
+.step.active { opacity: 1; }
+.step > strong { color: #de1743; font-size: 22px; }
+.step p { margin-top: 8px !important; font-size: 18px !important; line-height: 1.55 !important; }
+@media (max-width: 760px) {
+  .scrolly { display: block; width: auto; margin: 32px 0; transform: none; }
+  .graphic { top: 64px; padding: 16px; z-index: 1; }
+  .header { gap: 10px; }
+  .people { grid-template-columns: repeat(10, 1fr); gap: 4px; }
+  .steps { padding: 25vh 0 5vh; }
+  .step { min-height: 70vh; padding: 16px; }
+  .step p { background: rgba(253, 251, 247, 0.96); padding: 12px; border-left: 4px solid #de1743; }
+}
+@media (prefers-reduced-motion: reduce) { .people span, .step { transition: none; } }

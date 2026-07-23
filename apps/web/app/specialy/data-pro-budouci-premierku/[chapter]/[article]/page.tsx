@@ -18,6 +18,8 @@ import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
 import HistoricalPresidentialTrips from '@/components/dpbp/HistoricalPresidentialTrips/HistoricalPresidentialTrips';
 import VetoChart from '@/components/dpbp/VetoChart/VetoChart';
 import ChartSignature from '@/components/dpbp/ChartSignature';
+import AgeingScrolly from '@/components/dpbp/AgeingScrolly';
+import FertilityFanScrolly from '@/components/dpbp/FertilityFanScrolly';
 import { readableAccent } from '@/utils/colorUtils';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
@@ -114,6 +116,8 @@ const mdxComponents = {
   HistoricalPresidentialTrips,
   VetoChart,
   ChartSignature,
+  AgeingScrolly,
+  FertilityFanScrolly,
 };
 
 export default function ArticlePage({ params }: { params: { chapter: string; article: string } }) {

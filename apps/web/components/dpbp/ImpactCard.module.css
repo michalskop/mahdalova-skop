@@ -1,7 +1,7 @@
 /* Editoriální statistika – linka nahoře i dole (accent), žádná karta. */
 .stat {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 22px;
   flex-wrap: wrap;
   padding: 22px 4px;

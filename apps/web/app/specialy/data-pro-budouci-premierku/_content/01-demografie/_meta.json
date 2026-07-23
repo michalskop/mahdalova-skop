@@ -2,10 +2,12 @@
   "id": "01",
   "slug": "01-demografie",
   "title": "Demografie",
-  "accent": "#de1743",
+  "accent": "#f76800",
   "author": "Kateřina Mahdalová & Michal Škop",
   "date": "2026-04-30",
-  "cardOrder": [],
+  "cardOrder": [
+    "PLODNOST"
+  ],
   "onePager": null,
   "introChart": "GRAF_01_PLODNOST",
   "openerArticle": "01-proc-klesa-plodnost",
@@ -16,19 +18,39 @@
     "textClosing": "V evropském měřítku Česko výjimkou není – pod hranicí prosté reprodukce je dnes skoro celá Evropa, a lidstvo jako celek přitom neubývá. Pro Česko je tak skutečným tématem stárnutí a úbytek lidí v produktivním věku: mezeru, kterou samotné porodné nezaplní a bez přistěhovalectví ji dohnat nejde. Ostatně do programového prohlášení vlády z 5. ledna 2026 se číslo 2,1 už nedostalo; zůstala jen slova o tom, že mladí lidé mají moci „plánovat budoucnost, zakládat rodiny a mít dostupné bydlení“."
   },
   "tiles": [
-    { "slug": "02-co-znamena-plodnost", "topic": "Explainer" },
-    { "slug": "07-kohortni-plodnost", "topic": "Explainer" },
+    {
+      "slug": "02-co-znamena-plodnost",
+      "topic": "Explainer",
+      "related": [
+        { "slug": "07-kohortni-plodnost", "label": "Explainer" },
+        { "slug": "13-generace-z", "label": "Analýza" }
+      ]
+    },
     { "slug": "03-svet-populace", "topic": "Svět" },
     { "slug": "04-skandinavska-past", "topic": "Evropa" },
-    { "slug": "05-cas-rodicovstvi", "topic": "Analýza" },
-    { "slug": "09-pary-a-partnerstvi", "topic": "Analýza" },
-    { "slug": "13-generace-z", "topic": "Analýza" },
-    { "slug": "10-data-porody", "topic": "Analýza" },
+    {
+      "slug": "05-cas-rodicovstvi",
+      "topic": "Analýza",
+      "related": [
+        { "slug": "09-pary-a-partnerstvi", "label": "Analýza" },
+        { "slug": "14-vzdelanostni-propast", "label": "Analýza" },
+        { "slug": "06-zeny-rozhodovani", "label": "Přesah" }
+      ]
+    },
+    {
+      "slug": "16-starnuti-populace",
+      "topic": "Analýza",
+      "related": [
+        { "slug": "17-migrace-demografie", "label": "Explainer" },
+        { "slug": "15-volicska-zakladna", "label": "Analýza" }
+      ]
+    },
     { "slug": "11-vylidnovani-obci", "topic": "Analýza" },
-    { "slug": "06-zeny-rozhodovani", "topic": "Analýza" },
-    { "slug": "14-vzdelanostni-propast", "topic": "Analýza" },
-    { "slug": "08-politicke-sliby", "topic": "Komparace" },
+    { "slug": "10-data-porody", "topic": "Investigace" },
     { "slug": "12-mezinarodni-srovnani", "topic": "Komparace" },
-    { "slug": "15-volicska-zakladna", "topic": "Analýza" }
+    {
+      "slug": "08-politicke-sliby",
+      "topic": "Analýza"
+    }
   ]
 }
