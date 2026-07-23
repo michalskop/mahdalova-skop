@@ -204,7 +204,7 @@ export default function FertilityFanScrolly() {
           <header className={styles.header}>
             <div>
               <h2>Jak velký obrat dokázaly bohaté země</h2>
-              <p>Změna úhrnné plodnosti od začátku okna, dítěte na ženu</p>
+              <p>Hledáme největší nárůst, jaký se kdy podařil</p>
             </div>
             <ChartSignature size={28} layout="stacked" textWeight={400} />
           </header>
