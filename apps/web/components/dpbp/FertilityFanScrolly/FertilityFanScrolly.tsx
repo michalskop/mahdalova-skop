@@ -1,0 +1,205 @@
+'use client';
+
+import { useEffect, useMemo, useRef, useState } from 'react';
+import ChartSignature from '../ChartSignature';
+import rawData from './data.json';
+import styles from './FertilityFanScrolly.module.css';
+
+type WindowRow = {
+  window: 5 | 10;
+  country: string;
+  iso: string;
+  startYear: number;
+  endYear: number;
+  start: number;
+  end: number;
+  change: number;
+};
+
+const data = rawData as WindowRow[];
+const TARGET_CHANGE = 0.82;
+
+const STEPS = [
+  {
+    window: 5 as const,
+    title: 'Pět let',
+    text: 'V pětiletých oknech je nejvyšší pozorovaný nárůst +0,29 dítěte na ženu. Krátké oživení existuje, ale k cíli +0,82 se žádná bohatá země nepřiblížila.',
+  },
+  {
+    window: 10 as const,
+    title: 'Deset let',
+    text: 'Za deset let se vějíř rozevře víc. Převládají poklesy a ani nejvyšší pozorovaný nárůst nedosahuje tří pětin českého politického cíle.',
+  },
+  {
+    window: 10 as const,
+    iso: 'RUS',
+    startYear: 2005,
+    title: 'Rusko 2005–2015',
+    text: 'Nejvyšší nárůst v tomto souboru: +0,48. V období fungoval mateřský kapitál a další pobídky, současně se ale měnila ekonomika i načasování porodů. Křivka sama nedokazuje účinek jedné politiky.',
+  },
+  {
+    window: 10 as const,
+    iso: 'SWE',
+    startYear: 2000,
+    title: 'Švédsko 2000–2010',
+    text: 'Nárůst +0,44 provázela dostupná péče o děti, rodičovská vázaná na příjem a nepřenosné měsíce pro otce. Politiky snížily překážky rodičovství, ale vzestup se neudržel.',
+  },
+  {
+    window: 10 as const,
+    iso: 'HUN',
+    startYear: 2011,
+    title: 'Maďarsko 2011–2021',
+    text: 'Daňové úlevy, zvýhodněné úvěry a podpora rodin doprovázely nárůst +0,40. Z dat zatím nelze oddělit trvale vyšší počet dětí od dřívějšího načasování porodů.',
+  },
+  {
+    window: 10 as const,
+    iso: 'CZE',
+    startYear: 2011,
+    title: 'Česko 2011–2021',
+    text: 'Také Česko zažilo nárůst +0,40, aniž by mělo jednu mimořádnou pronatalitní reformu. Je to varování před přisuzováním celé změny jedinému opatření.',
+  },
+  {
+    window: 10 as const,
+    target: true,
+    title: 'Politický cíl +0,82',
+    text: 'Cesta z 1,28 na 2,10 leží výrazně nad všemi pozorovanými okny. Rodinná politika může odstraňovat překážky, ale dostupná data nedokládají nástroj, který by takový skok spolehlivě vyvolal.',
+  },
+] as const;
+
+const WIDTH = 760;
+const HEIGHT = 470;
+const MARGIN = { top: 24, right: 116, bottom: 52, left: 58 };
+const Y_MIN = -1.65;
+const Y_MAX = 1;
+
+function x(value: number, duration: number) {
+  return MARGIN.left + (value / duration) * (WIDTH - MARGIN.left - MARGIN.right);
+}
+
+function y(value: number) {
+  return MARGIN.top + ((Y_MAX - value) / (Y_MAX - Y_MIN)) * (HEIGHT - MARGIN.top - MARGIN.bottom);
+}
+
+function formatChange(value: number) {
+  return `${value > 0 ? '+' : ''}${value.toFixed(2).replace('.', ',')}`;
+}
+
+export default function FertilityFanScrolly() {
+  const [active, setActive] = useState(0);
+  const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const step = STEPS[active];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(Number((visible.target as HTMLElement).dataset.step));
+      },
+      { rootMargin: '-28% 0px -48% 0px', threshold: [0.2, 0.5, 0.8] },
+    );
+    stepRefs.current.forEach(element => element && observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
+  const rows = useMemo(() => data.filter(row => row.window === step.window), [step.window]);
+  const selected = 'iso' in step
+    ? rows.find(row => row.iso === step.iso && row.startYear === step.startYear)
+    : undefined;
+  const duration = step.window;
+  const endX = x(duration, duration);
+
+  return (
+    <section className={styles.scrolly} aria-label="Změny úhrnné plodnosti v pětiletých a desetiletých oknech">
+      <div className={styles.graphic}>
+        <header className={styles.header}>
+          <div>
+            <h2>Jak velký obrat dokázaly bohaté země</h2>
+            <p>Změna úhrnné plodnosti od začátku okna, dítěte na ženu</p>
+          </div>
+          <ChartSignature size={28} layout="stacked" textWeight={400} />
+        </header>
+
+        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-labelledby="fan-title fan-desc">
+          <title id="fan-title">Vějíř změn úhrnné plodnosti</title>
+          <desc id="fan-desc">
+            Každá šedá úsečka představuje skutečné pětileté nebo desetileté okno jedné země.
+            Zvýrazněná úsečka odpovídá právě popisovanému případu.
+          </desc>
+
+          {[-1.5, -1, -0.5, 0, 0.5, 1].map(tick => (
+            <g key={tick}>
+              <line className={tick === 0 ? styles.zero : styles.grid} x1={MARGIN.left} x2={endX} y1={y(tick)} y2={y(tick)} />
+              <text className={styles.tick} x={MARGIN.left - 10} y={y(tick) + 4} textAnchor="end">
+                {tick > 0 ? '+' : ''}{tick.toFixed(1).replace('.', ',')}
+              </text>
+            </g>
+          ))}
+
+          {rows.map(row => {
+            const isSelected = selected === row;
+            return (
+              <line
+                key={`${row.iso}-${row.startYear}-${row.window}`}
+                className={isSelected ? styles.selectedLine : styles.fanLine}
+                x1={x(0, duration)}
+                y1={y(0)}
+                x2={endX}
+                y2={y(row.change)}
+              />
+            );
+          })}
+
+          {'target' in step && step.target && (
+            <line className={styles.targetLine} x1={x(0, duration)} y1={y(0)} x2={endX} y2={y(TARGET_CHANGE)} />
+          )}
+
+          <text className={styles.axisLabel} x={(MARGIN.left + endX) / 2} y={HEIGHT - 13} textAnchor="middle">
+            roky od začátku {duration}letého okna
+          </text>
+          <text className={styles.startLabel} x={MARGIN.left} y={y(0) - 10}>začátek = 0</text>
+
+          {(selected || ('target' in step && step.target)) && (
+            <g>
+              <circle
+                className={'target' in step && step.target ? styles.targetDot : styles.selectedDot}
+                cx={endX}
+                cy={y(selected?.change ?? TARGET_CHANGE)}
+                r={5}
+              />
+              <text className={styles.valueLabel} x={endX + 12} y={y(selected?.change ?? TARGET_CHANGE) + 5}>
+                {selected ? formatChange(selected.change) : '+0,82'}
+              </text>
+            </g>
+          )}
+        </svg>
+
+        <div className={styles.current} aria-live="polite">
+          <strong>{step.title}</strong>
+          <span>{rows.length} skutečných oken{selected ? ` · ${selected.startYear}–${selected.endYear}` : ''}</span>
+        </div>
+
+        <footer className={styles.footer}>
+          <div>• autoři: Kateřina Mahdalová &amp; Michal Škop</div>
+          <div>• data: World Bank / UN Population Division; země a filtry podle dodaného analytického výstupu</div>
+          <div>• spojnice ukazuje pouze začátek a konec okna, nikoli průběh mezi nimi</div>
+        </footer>
+      </div>
+
+      <div className={styles.steps}>
+        {STEPS.map((item, index) => (
+          <div
+            key={item.title}
+            ref={element => { stepRefs.current[index] = element; }}
+            data-step={index}
+            className={`${styles.step} ${active === index ? styles.active : ''}`}
+          >
+            <strong>{item.title}</strong>
+            <p>{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
