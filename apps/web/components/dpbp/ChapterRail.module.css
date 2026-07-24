@@ -455,68 +455,63 @@
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  width: auto;
-  max-width: calc(100vw - 24px);
-  padding: 6px 12px;
-  border: 1px solid #dedbd3;
-  border-radius: 999px;
+  width: min(676px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   background: rgba(248, 246, 240, 0.95);
-  box-shadow: 0 8px 24px rgba(16, 20, 50, 0.14);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
   backdrop-filter: blur(12px);
   font-family: var(--font-roboto-condensed), Arial, sans-serif;
 }
 
-.stickyScroll {
-  display: flex;
-  align-items: center;
-  gap: 7px;
+.stickyDashProgress {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 4px;
 }
 
-.stickyPillWrapper {
+.stickyDashWrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.stickyTooltip {
+.stickyLightTooltip {
   position: absolute;
-  bottom: calc(100% + 10px);
+  bottom: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%);
-  padding: 4px 9px;
-  border-radius: 6px;
-  background: #101432;
-  border: 1px solid color-mix(in srgb, var(--chapter-accent, #56648b) 40%, #101432);
-  color: #f8fafc;
-  font-size: 11px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(248, 246, 240, 0.95);
+  border: 1px solid color-mix(in srgb, var(--chapter-accent, #64748b) 35%, #e2e8f0);
+  box-shadow: 0 6px 20px rgba(16, 20, 50, 0.14);
+  backdrop-filter: blur(8px);
+  color: #1e293b;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
   white-space: nowrap;
   pointer-events: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.14s ease-out;
 }
 
-.stickyTooltip strong {
-  color: var(--chapter-accent, #38bdf8);
+.tooltipNum {
+  font-weight: 800;
+  font-size: 13.5px;
 }
 
-.pillDotOnly {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--chapter-dot) 45%, #cbd5e1);
-  cursor: pointer;
-  transition: transform 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
-}
-
-.pillDotOnly:hover,
-.pillActive {
-  background: var(--chapter-dot) !important;
-  transform: scale(1.4);
-  box-shadow: 0 0 8px color-mix(in srgb, var(--chapter-dot) 60%, transparent);
+.tooltipTitle {
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 13.5px;
 }
 
 @media (max-width: 620px) {

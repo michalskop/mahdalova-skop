@@ -257,9 +257,9 @@ export default function ChapterRail({
         )}
       </nav>
 
-      {/* Sticky spodní lišta na mobilu i desktopu (pro články i landing pages všech kapitol) */}
+      {/* Sticky spodní lišta na mobilu i desktopu (15 vodorovných čárek se světlým hover tooltipem #f8f6f0 opacity 0.95) */}
       <nav className={styles.sticky} aria-label="Rychlá navigace kapitol">
-        <div className={styles.stickyScroll}>
+        <div className={styles.stickyDashProgress}>
           {DPBP_CHAPTERS.map(chapter => {
             const isCurrent = chapter.slug === currentChapter;
             const isHovered = chapter.slug === hoveredStickySlug;
@@ -267,19 +267,22 @@ export default function ChapterRail({
             const isActive = isCurrent || isHovered || isSelected;
 
             return (
-              <div key={chapter.id} className={styles.stickyPillWrapper}>
+              <div key={chapter.id} className={styles.stickyDashWrapper}>
                 {isHovered && (
                   <div
-                    className={styles.stickyTooltip}
+                    className={styles.stickyLightTooltip}
                     style={{ ['--chapter-accent' as string]: chapter.accent } as CSSProperties}
                   >
-                    <strong>{chapter.id}</strong> {chapter.shortTitle}
+                    <span className={styles.tooltipNum} style={{ color: chapter.accent }}>
+                      {chapter.id}
+                    </span>
+                    <span className={styles.tooltipTitle}>{chapter.shortTitle}</span>
                   </div>
                 )}
                 <button
                   type="button"
-                  className={`${styles.pillDotOnly} ${isActive ? styles.pillActive : ''}`}
-                  style={{ ['--chapter-dot' as string]: chapter.accent } as CSSProperties}
+                  className={`${styles.dashBtn} ${isActive ? styles.dashActive : ''}`}
+                  style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
                   onMouseEnter={() => setHoveredStickySlug(chapter.slug)}
                   onMouseLeave={() => setHoveredStickySlug(null)}
                   onClick={() => handleDashClick(chapter.slug)}
