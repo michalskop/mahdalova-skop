@@ -146,8 +146,6 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
-      <ChapterRail currentChapter={params.chapter} />
-
       {/* Article header – náležitosti (titulek, perex, autoři, datum, sdílení,
           audio stopa, náhledový obrázek s redakčním přepínačem heroInArticle) */}
       <ArticleHeader
@@ -164,6 +162,8 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
         heroImage={fm.coverImage}
         showHero={fm.heroInArticle === true}
       />
+
+      <ChapterRail currentChapter={params.chapter} variant="article" />
 
       {/* Article body */}
       <Container size="sm" style={{ padding: '32px 16px 48px' }}>

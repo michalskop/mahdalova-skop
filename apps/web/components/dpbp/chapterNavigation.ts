@@ -20,8 +20,8 @@ export const DPBP_CHAPTERS: DpbpChapterNavItem[] = [
   { id: '09', slug: '09-energie-a-energeticka-bezpecnost', shortTitle: 'Energie', title: 'Energie a energetická bezpečnost', accent: '#f76800' },
   { id: '10', slug: '10-klimaticka-zmena', shortTitle: 'Klima', title: 'Klimatická změna', accent: '#f01745' },
   { id: '11', slug: '11-bezpecnost-a-konflikty', shortTitle: 'Bezpečnost', title: 'Bezpečnost a konflikty', accent: '#a03250' },
-  { id: '12', slug: '12-informacni-manipulace', shortTitle: 'Manipulace', title: 'Informační manipulace', accent: '#8b6240' },
-  { id: '13', slug: '13-oligarchizace-a-korupce', shortTitle: 'Oligarchizace', title: 'Oligarchizace a korupce', accent: '#6e227d' },
+  { id: '12', slug: '12-informacni-manipulace', shortTitle: 'Manipulace', title: 'Informační manipulace', accent: '#53361e' },
+  { id: '13', slug: '13-oligarchizace-a-korupce', shortTitle: 'Oligarchizace', title: 'Oligarchizace a korupce', accent: '#9f319e' },
   { id: '14', slug: '14-verejne-finance-a-dane', shortTitle: 'Finance', title: 'Veřejné finance a daně', accent: '#a47d03' },
   { id: '15', slug: '15-efektivni-vladnuti', shortTitle: 'Vládnutí', title: 'Efektivní vládnutí', accent: '#0e926a' },
 ];

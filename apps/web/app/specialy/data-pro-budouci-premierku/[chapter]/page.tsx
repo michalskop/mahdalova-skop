@@ -189,8 +189,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
-      <ChapterRail currentChapter={params.chapter} />
-
       {/* Chapter header – jeden masthead, název kapitoly je největší prvek stránky */}
       <Box style={{ background: '#101432', padding: '52px 0 44px' }}>
         <Container size="md">
@@ -214,6 +212,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               </a>
             </Box>
           </Box>
+          <ChapterRail currentChapter={params.chapter} variant="landing" />
           {/* CSS předáváme přes dangerouslySetInnerHTML, ne jako textového
               potomka <style>. Textový potomek React na serveru HTML-escapuje
               (znak `>` v `.dpbp-tile-grid > *` → `&gt;`), na klientu ne –
