@@ -166,28 +166,9 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
-      {/* Chapter header – v hlavičce hero je jen čistých 15 posuvníků bez rámečku a bez nápisů "Obsah" a "Kapitoly" */}
+      {/* Chapter header – dynamicky reaguje na hover ve všech menu */}
       <Box style={{ background: '#101432', padding: '52px 0 44px' }}>
         <Container size="md">
-          <Box className="dpbp-chapter-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 28 }}>
-            <Box style={{ minWidth: 0 }}>
-              <Text size="xs" style={{ color: '#f8f6f0', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 14 }}>
-                <Link href="/specialy/data-pro-budouci-premierku" className="dpbp-crumb-link" style={{ textDecoration: 'none' }}>Data pro budoucí premiérku</Link> · Kapitola {meta.id}
-              </Text>
-              <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 'clamp(2.1rem, 5vw, 2.9rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.01em', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
-                {meta.title}
-              </Title>
-            </Box>
-            <Box className="dpbp-chapter-head-profile" style={{ flex: '0 0 auto' }}>
-              <a
-                href="https://www.mahdalova-skop.cz/specialy/data-pro-budouci-premierku"
-                aria-label="Zpět na Data pro budoucí premiérku"
-                style={{ display: 'block' }}
-              >
-                <ProfileHead silColor={meta.accent} style={{ width: 120, height: 120, display: 'block' }} />
-              </a>
-            </Box>
-          </Box>
           <ChapterRail currentChapter={params.chapter} variant="hero" chapterContents={chapterContents} />
           <style
             dangerouslySetInnerHTML={{

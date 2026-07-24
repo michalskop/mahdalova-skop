@@ -503,6 +503,60 @@
   font-style: italic;
 }
 
+.heroContainer {
+  width: 100%;
+}
+
+.heroHeadRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+}
+
+.heroHeadMeta {
+  min-width: 0;
+}
+
+.heroEyebrow {
+  display: block;
+  font-size: 12px;
+  color: #f8f6f0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.heroCrumbLink {
+  text-decoration: none;
+  padding: 1px 4px;
+  margin: -1px -4px;
+  border-radius: 3px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.heroTitle {
+  color: #f8f6f0;
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-size: clamp(2.1rem, 5vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heroProfileWrap {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .heroProfileWrap {
+    display: none;
+  }
+}
+
 .heroRail {
   width: 100%;
   margin-top: 24px;
