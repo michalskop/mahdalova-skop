@@ -1,0 +1,87 @@
+.visual {
+  width: 100%;
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visual .label {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.visual .caption {
+  color: #666;
+  line-height: 1.5;
+  margin: 10px 0 0;
+  font-style: italic;
+}
+
+.bg {
+  fill: #f7f6f2;
+}
+
+.textMain {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 16px;
+  fill: #333333;
+}
+
+.textTitle {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  fill: #222222;
+}
+
+.textAge {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 15px;
+  fill: #666666;
+}
+
+.textRed {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  fill: #d81b60;
+  letter-spacing: 0.5px;
+}
+
+.tick {
+  stroke: #c0c0c0;
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+
+.linePast {
+  stroke: #4d2c62;
+  stroke-width: 2;
+}
+
+.linePresent {
+  stroke: #d81b60;
+  stroke-width: 2;
+}
+
+.dotPast {
+  fill: #4d2c62;
+  stroke: #f7f6f2;
+  stroke-width: 2;
+}
+
+.dotPresent {
+  fill: #d81b60;
+  stroke: #f7f6f2;
+  stroke-width: 2;
+}
+
+.gapBox {
+  fill: #d81b60;
+  fill-opacity: 0.08;
+}

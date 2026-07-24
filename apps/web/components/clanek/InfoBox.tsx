@@ -14,6 +14,9 @@ interface InfoBoxProps {
   readMoreAt?: string | number;
   readMoreLabel?: string;
   readLessLabel?: string;
+  kicker?: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 const typeStyles: Record<InfoBoxType, { borderColor: string; backgroundColor: string; buttonColor: string }> = {
@@ -31,6 +34,9 @@ export function InfoBox({
   readMoreAt,
   readMoreLabel = 'Číst více',
   readLessLabel = 'Méně',
+  kicker,
+  className,
+  style,
 }: InfoBoxProps) {
   const theme = useMantineTheme();
   const [expanded, setExpanded] = useState(false);
@@ -53,13 +59,29 @@ export function InfoBox({
       py="xs"
       radius="md"
       my="lg"
-      className={floatClass}
+      className={[floatClass, className].filter(Boolean).join(' ')}
       style={{
         backgroundColor: boxStyles.backgroundColor,
         borderLeft: `4px solid ${boxStyles.borderColor}`,
         color: theme.colors.dark?.[7] ?? '#1a1a2e',
+        ...style,
       }}
     >
+      {kicker && (
+        <p
+          style={{
+            fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            fontWeight: 700,
+            color: '#de1743',
+            margin: '0 0 12px',
+          }}
+        >
+          {kicker}
+        </p>
+      )}
       {collapsedChildren.length > 0 ? (
         <div style={{ position: 'relative' }}>
           {visibleChildren}
