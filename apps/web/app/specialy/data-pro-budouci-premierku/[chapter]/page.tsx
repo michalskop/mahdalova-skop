@@ -16,6 +16,7 @@ import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import SupportBanner from '@/components/common/SupportBanner';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import { readableAccent } from '@/utils/colorUtils';
+import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 const CHARTS_ROOT  = path.join(process.cwd(), 'public/dpbp/charts');
@@ -149,6 +150,7 @@ export async function generateMetadata({ params }: { params: { chapter: string }
 export default function ChapterPage({ params }: { params: { chapter: string } }) {
   const meta = loadMeta(params.chapter);
   if (!meta) notFound();
+  const chapterContents = loadChapterContents(CONTENT_ROOT);
 
   // The per-card `accent` field in cards/*.json is an unused legacy default
   // (always crimson) – only cardOrder[0] is ever rendered, as the chapter's
@@ -212,7 +214,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               </a>
             </Box>
           </Box>
-          <ChapterRail currentChapter={params.chapter} variant="landing" />
+          <ChapterRail currentChapter={params.chapter} variant="landing" chapterContents={chapterContents} />
           {/* CSS předáváme přes dangerouslySetInnerHTML, ne jako textového
               potomka <style>. Textový potomek React na serveru HTML-escapuje
               (znak `>` v `.dpbp-tile-grid > *` → `&gt;`), na klientu ne –
@@ -269,7 +271,13 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               letterSpacing: '-0.01em',
               marginBottom: openerFm ? 14 : 20,
             }}>
-              {openerFm?.title ?? meta.intro.title}
+              {openerFm && openerHref ? (
+                <Link href={openerHref} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {openerFm.title}
+                </Link>
+              ) : (
+                meta.intro.title
+              )}
             </Title>
             {openerFm && (
               <Text style={{

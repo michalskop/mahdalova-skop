@@ -351,7 +351,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
               Kateřina Mahdalová &amp; Michal Škop
             </a>
           </div>
-          <div>{'• data: '}{renderSource(meta.source)}</div>
+          <div style={{ whiteSpace: 'pre-line' }}>{'• data: '}{renderSource(meta.source)}</div>
         </div>
       )}
     </div>

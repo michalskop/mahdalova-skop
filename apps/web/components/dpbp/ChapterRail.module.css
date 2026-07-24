@@ -15,10 +15,25 @@
 
 .landing {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 22px;
   border-color: #27354a;
-  background: #151e32;
+  background: transparent;
   color: #f8fafc;
+}
+
+.landingCompact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px 4px;
+}
+
+.landingLabel {
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .primary {
@@ -140,12 +155,29 @@
   background: #9ca3af;
 }
 
-.landing .progress span {
+.progress a {
+  height: 3px;
+  border-radius: 999px;
+  background: #9ca3af;
+  transition: background-color 0.14s ease, transform 0.14s ease;
+}
+
+.progress a:hover,
+.progress a:focus-visible,
+.progress .progressActive {
+  background: var(--preview-color);
+  outline: none;
+  transform: scaleY(1.7);
+}
+
+.landing .progress a {
   background: #475569;
 }
 
-.progress .progressActive {
-  background: var(--active-chapter);
+.landing .progress a:hover,
+.landing .progress a:focus-visible,
+.landing .progress .progressActive {
+  background: var(--preview-color);
 }
 
 .chapterList {
@@ -207,6 +239,57 @@
   background: var(--chapter-dot);
 }
 
+.tooltip {
+  margin: 0 14px 10px;
+  padding: 10px 12px;
+  border: 1px solid #dedbd3;
+  border-radius: 9px;
+  background: #fff;
+  color: #374151;
+  font-size: 11px;
+  line-height: 1.3;
+  box-shadow: 0 7px 18px rgba(16, 20, 50, 0.1);
+}
+
+.landing .tooltip {
+  border-color: #27354a;
+  background: #151e32;
+  color: #e2e8f0;
+}
+
+.tooltipHeading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+
+.tooltipHeading > span {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.tooltipHeading strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tooltip ul {
+  display: grid;
+  max-height: 116px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 18px;
+  margin: 0;
+  padding-left: 17px;
+  overflow-y: auto;
+}
+
+.tooltip p {
+  margin: 0;
+}
+
 .sticky {
   position: fixed;
   z-index: 70;
@@ -230,6 +313,19 @@
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
+}
+
+.stickyTooltip {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 7px);
+  left: 0;
+  margin: 0 auto;
+}
+
+.stickyTooltip .tooltip {
+  max-width: 676px;
+  margin: 0 auto;
 }
 
 .stickyScroll::-webkit-scrollbar {
@@ -329,6 +425,10 @@
     grid-template-rows: none;
     grid-auto-flow: row;
     padding: 9px 10px 12px;
+  }
+
+  .tooltip ul {
+    grid-template-columns: 1fr;
   }
 
   .sticky {

@@ -25,6 +25,7 @@ import { InfoBox } from '@/components/clanek/InfoBox';
 import TempoEffectDiagram from '@/components/dpbp/TempoEffectDiagram/TempoEffectDiagram';
 import FertilityComparisonChart from '@/components/dpbp/FertilityComparisonChart/FertilityComparisonChart';
 import { readableAccent } from '@/utils/colorUtils';
+import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 
@@ -132,6 +133,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   if (!art) notFound();
 
   const chapterMeta = loadChapterMeta(params.chapter);
+  const chapterContents = loadChapterContents(CONTENT_ROOT);
   const { frontmatter: fm, content, htmlContent } = art;
   const accent = chapterMeta?.accent ?? '#de1743';
   // Body text (h2/links) needs WCAG-safe contrast on the white article
@@ -163,7 +165,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
         showHero={fm.heroInArticle === true}
       />
 
-      <ChapterRail currentChapter={params.chapter} variant="article" />
+      <ChapterRail currentChapter={params.chapter} variant="article" chapterContents={chapterContents} />
 
       {/* Article body */}
       <Container size="sm" style={{ padding: '32px 16px 48px' }}>
