@@ -588,7 +588,7 @@
 }
 
 .stickyLanding {
-  width: min(896px, calc(100% - 32px));
+  width: min(928px, calc(100% - 32px));
 }
 
 .stickyProgress {
