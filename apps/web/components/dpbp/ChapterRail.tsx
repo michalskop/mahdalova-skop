@@ -19,22 +19,26 @@ export default function ChapterRail({
   variant = 'article',
   chapterContents = {},
 }: ChapterRailProps) {
-  // Separate panel modes for top and bottom rails so panels open in the rail that was clicked
+  // Separate panel modes for hero, top and bottom rails so panel opens in whichever menu was clicked
+  const [heroPanelMode, setHeroPanelMode] = useState<'closed' | 'chapters' | 'articleList'>('closed');
   const [topPanelMode, setTopPanelMode] = useState<'closed' | 'chapters' | 'articleList'>('closed');
   const [bottomPanelMode, setBottomPanelMode] = useState<'closed' | 'chapters' | 'articleList'>('closed');
 
+  const [heroSelectedSlug, setHeroSelectedSlug] = useState<string>(currentChapter);
   const [topSelectedSlug, setTopSelectedSlug] = useState<string>(currentChapter);
   const [bottomSelectedSlug, setBottomSelectedSlug] = useState<string>(currentChapter);
 
-  // Synchronized hover state across both top and bottom menus
+  // Synchronized hover state across ALL THREE menus
   const [sharedHoveredSlug, setSharedHoveredSlug] = useState<string | null>(null);
 
   const currentChapterMeta = DPBP_CHAPTERS.find(c => c.slug === currentChapter) ?? DPBP_CHAPTERS[0];
 
-  // The active chapter being inspected (prioritizes hover -> active top/bottom selected -> current chapter)
+  // Active chapter being inspected (prioritizes hover -> active panel selection -> current chapter)
   const activeSlug =
     sharedHoveredSlug ??
-    (topPanelMode === 'articleList'
+    (heroPanelMode === 'articleList'
+      ? heroSelectedSlug
+      : topPanelMode === 'articleList'
       ? topSelectedSlug
       : bottomPanelMode === 'articleList'
       ? bottomSelectedSlug
@@ -42,7 +46,15 @@ export default function ChapterRail({
 
   const activeChapterMeta = DPBP_CHAPTERS.find(c => c.slug === activeSlug) ?? currentChapterMeta;
 
-  // Selected chapter for top article list window
+  // Selected chapter articles for hero menu
+  const heroSelectedMeta = DPBP_CHAPTERS.find(c => c.slug === heroSelectedSlug) ?? currentChapterMeta;
+  const heroArticles: ChapterArticleItem[] = (chapterContents[heroSelectedMeta.slug] ?? []).map(item =>
+    typeof item === 'string'
+      ? { slug: item, title: item, href: `/specialy/data-pro-budouci-premierku/${heroSelectedMeta.slug}` }
+      : item
+  );
+
+  // Selected chapter articles for top menu
   const topSelectedMeta = DPBP_CHAPTERS.find(c => c.slug === topSelectedSlug) ?? currentChapterMeta;
   const topArticles: ChapterArticleItem[] = (chapterContents[topSelectedMeta.slug] ?? []).map(item =>
     typeof item === 'string'
@@ -50,7 +62,7 @@ export default function ChapterRail({
       : item
   );
 
-  // Selected chapter for bottom article list window
+  // Selected chapter articles for bottom menu
   const bottomSelectedMeta = DPBP_CHAPTERS.find(c => c.slug === bottomSelectedSlug) ?? currentChapterMeta;
   const bottomArticles: ChapterArticleItem[] = (chapterContents[bottomSelectedMeta.slug] ?? []).map(item =>
     typeof item === 'string'
@@ -58,10 +70,11 @@ export default function ChapterRail({
       : item
   );
 
-  // Close panels on Escape key
+  // Close all panels on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        setHeroPanelMode('closed');
         setTopPanelMode('closed');
         setBottomPanelMode('closed');
       }
@@ -70,7 +83,19 @@ export default function ChapterRail({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const handleHeroDashClick = (slug: string) => {
+    setTopPanelMode('closed');
+    setBottomPanelMode('closed');
+    if (heroPanelMode === 'articleList' && heroSelectedSlug === slug) {
+      setHeroPanelMode('closed');
+    } else {
+      setHeroSelectedSlug(slug);
+      setHeroPanelMode('articleList');
+    }
+  };
+
   const handleTopDashClick = (slug: string) => {
+    setHeroPanelMode('closed');
     setBottomPanelMode('closed');
     if (topPanelMode === 'articleList' && topSelectedSlug === slug) {
       setTopPanelMode('closed');
@@ -81,6 +106,7 @@ export default function ChapterRail({
   };
 
   const handleBottomDashClick = (slug: string) => {
+    setHeroPanelMode('closed');
     setTopPanelMode('closed');
     if (bottomPanelMode === 'articleList' && bottomSelectedSlug === slug) {
       setBottomPanelMode('closed');
@@ -91,11 +117,12 @@ export default function ChapterRail({
   };
 
   const toggleTopChaptersOverview = () => {
+    setHeroPanelMode('closed');
     setBottomPanelMode('closed');
     setTopPanelMode(prev => (prev === 'chapters' ? 'closed' : 'chapters'));
   };
 
-  // Dedicated clean hero variant: no borders, no text labels, just 15 progress dashes
+  // Dedicated clean hero variant (v tmavé hlavičce): bez rámečku, bez nápisů "Obsah" a "Kapitoly"
   if (variant === 'hero') {
     return (
       <div className={styles.heroRail} onMouseLeave={() => setSharedHoveredSlug(null)}>
@@ -106,7 +133,7 @@ export default function ChapterRail({
 
             return (
               <div key={chapter.id} className={styles.dashItem}>
-                {isHovered && (
+                {isHovered && heroPanelMode === 'closed' && (
                   <div
                     className={styles.dashPointerTooltip}
                     style={{ ['--chapter-accent' as string]: chapter.accent } as CSSProperties}
@@ -123,20 +150,68 @@ export default function ChapterRail({
                   style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
                   onMouseEnter={() => setSharedHoveredSlug(chapter.slug)}
                   onFocus={() => setSharedHoveredSlug(chapter.slug)}
-                  onClick={() => handleTopDashClick(chapter.slug)}
+                  onClick={() => handleHeroDashClick(chapter.slug)}
                   aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
                 />
               </div>
             );
           })}
         </div>
+
+        {/* HERO OKNO / PANEL (rozbalí se přímo pod posuvníky v hero hlavičce po kliknutí!) */}
+        {heroPanelMode === 'articleList' && (
+          <div
+            className={styles.windowPanel}
+            style={{ ['--chapter-accent' as string]: heroSelectedMeta.accent } as CSSProperties}
+          >
+            <div className={styles.windowHeader}>
+              <div className={styles.windowTitleGroup}>
+                <span className={styles.panelDot} style={{ background: heroSelectedMeta.accent }} aria-hidden />
+                <Link
+                  href={chapterHref(heroSelectedMeta.slug)}
+                  className={styles.windowTitleLink}
+                  title="Přejít na úvodní stránku kapitoly"
+                >
+                  <strong className={styles.windowTitle}>
+                    {heroSelectedMeta.id} · {heroSelectedMeta.title}
+                  </strong>
+                </Link>
+              </div>
+
+              <div className={styles.windowHeaderActions}>
+                <button
+                  type="button"
+                  className={styles.closeBtn}
+                  onClick={() => setHeroPanelMode('closed')}
+                  aria-label="Zavřít okno (Esc)"
+                >
+                  <IconX size={16} />
+                </button>
+              </div>
+            </div>
+
+            {heroArticles.length > 0 ? (
+              <ul className={styles.articleList}>
+                {heroArticles.map(article => (
+                  <li key={article.href || article.title}>
+                    <Link href={article.href} className={styles.articleLink}>
+                      <span>{article.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className={styles.emptyNotice}>Obsah kapitoly připravujeme.</p>
+            )}
+          </div>
+        )}
       </div>
     );
   }
 
   return (
     <>
-      {/* HORNÍ NAVIGAČNÍ LIŠTA */}
+      {/* HORNÍ NAVIGAČNÍ LIŠTA (pod audio lištou v článku / landing page) */}
       <nav
         className={`${styles.rail} ${variant === 'landing' ? styles.landing : styles.article}`}
         aria-label="Navigace mezi kapitolami projektu"
@@ -184,7 +259,7 @@ export default function ChapterRail({
           </div>
         </div>
 
-        {/* 15 Vodorovných čárek – svítí JEN JEDNA barva */}
+        {/* 15 Vodorovných čárek – svítí JEN JEDNA barva ve všech 3 menu! */}
         <div className={styles.progress}>
           {DPBP_CHAPTERS.map(chapter => {
             const isHovered = chapter.slug === sharedHoveredSlug;
@@ -312,7 +387,7 @@ export default function ChapterRail({
         )}
       </nav>
 
-      {/* DOLNÍ STICKY NAVIGAČNÍ LIŠTA */}
+      {/* DOLNÍ STICKY NAVIGAČNÍ LIŠTA (roztáhnutá na šířku audio lišty!) */}
       <nav
         className={styles.stickyRail}
         aria-label="Rychlá navigace kapitol (dole)"
