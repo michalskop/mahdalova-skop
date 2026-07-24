@@ -9,6 +9,7 @@ import DpbpArticleCard from '@/components/dpbp/DpbpArticleCard';
 import ArticleByline from '@/components/dpbp/ArticleByline';
 import VegaChart from '@/components/dpbp/VegaChart';
 import ProfileHead from '@/components/dpbp/ProfileHead';
+import ChapterRail from '@/components/dpbp/ChapterRail';
 import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
@@ -187,7 +188,9 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   );
 
   return (
-    <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
+    <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
+      <ChapterRail currentChapter={params.chapter} />
+
       {/* Chapter header – jeden masthead, název kapitoly je největší prvek stránky */}
       <Box style={{ background: '#101432', padding: '52px 0 44px' }}>
         <Container size="md">
@@ -219,7 +222,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             dangerouslySetInnerHTML={{
               __html: `
             .dpbp-crumb-link {
-              color: #de1743;
+              color: ${meta.accent};
               padding: 1px 4px;
               margin: -1px -4px;
               border-radius: 3px;
@@ -227,7 +230,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
             }
             .dpbp-crumb-link:hover,
             .dpbp-crumb-link:focus-visible {
-              background-color: #de1743;
+              background-color: ${meta.accent};
               color: #101432;
             }
             @media (max-width: 768px) {
@@ -262,7 +265,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: openerFm ? '2rem' : '1.6rem',
               fontWeight: openerFm ? 800 : 700,
-              color: '#1a1a1a',
+              color: readableAccent(meta.accent),
               lineHeight: 1.15,
               letterSpacing: '-0.01em',
               marginBottom: openerFm ? 14 : 20,
@@ -321,7 +324,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                     fontFamily: 'var(--font-roboto-slab), Georgia, serif',
                     fontWeight: 700,
                     fontSize: '1.05rem',
-                    color: '#1a1a1a',
+                    color: readableAccent(meta.accent),
                     marginBottom: 12,
                   }}>
                     {meta.intro.chartTitle}
@@ -372,7 +375,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 fontFamily: 'var(--font-roboto-slab), Georgia, serif',
                 fontSize: '1.5rem',
                 fontWeight: 700,
-                color: '#1a1a1a',
+                color: readableAccent(meta.accent),
                 marginBottom: 8,
               }}>
                 Co v této kapitole najdete

@@ -40,8 +40,11 @@ export default function ArticleHeader({
   heroCaption,
 }: ArticleHeaderProps) {
   return (
-    <header className={styles.header}>
-      <div className={styles.crumb} style={accent ? ({ ['--crumb-accent']: accent } as CSSProperties) : undefined}>
+    <header
+      className={styles.header}
+      style={accent ? ({ ['--chapter-accent']: accent } as CSSProperties) : undefined}
+    >
+      <div className={styles.crumb}>
         {crumbs.map((c, i) => (
           <span key={`${c.label}-${i}`}>
             {c.href ? <Link href={c.href}>{c.label}</Link> : c.label}

@@ -510,20 +510,20 @@ const CHAPTERS = [
   {n:'03',title:'Nedostupnost bydlení',href:'/specialy/data-pro-budouci-premierku/03-nedostupnost-bydleni',available:true,dots:D05,accent:'#ff5c4a',customSvg:G05},
   // BLOK 2: Rozdělená země
   {n:'04',title:'Regionální propasti',href:'/specialy/data-pro-budouci-premierku/04-regionalni-propasti',available:true,dots:D09,accent:'#1a9fbd',customSvg:G_REGIONS},
-  {n:'05',title:'Úroveň vzdělávání',href:'/specialy/data-pro-budouci-premierku/05-uroven-vzdelavani',available:true,dots:D02,accent:'#12b886',customSvg:G02},
+  {n:'05',title:'Úroveň vzdělávání',href:'/specialy/data-pro-budouci-premierku/05-uroven-vzdelavani',available:true,dots:D02,accent:'#639e0a',customSvg:G02},
   {n:'06',title:'Ekonomická nerovnost',href:'/specialy/data-pro-budouci-premierku/06-ekonomicka-nerovnost',available:true,dots:D09,accent:'#efb704',customSvg:G09},
   // BLOK 3: Technologie a ekonomika budoucnosti
-  {n:'07',title:'AI a trh práce',href:'/specialy/data-pro-budouci-premierku/07-ai-a-trh-prace',available:true,dots:D06,accent:'#6267a3',customSvg:G06},
+  {n:'07',title:'AI a trh práce',href:'/specialy/data-pro-budouci-premierku/07-ai-a-trh-prace',available:true,dots:D06,accent:'#4c4f8e',customSvg:G06},
   {n:'08',title:'Digitalizace a inovace',href:'/specialy/data-pro-budouci-premierku/08-digitalizace-a-inovace',available:true,dots:D10,accent:'#5fcce6',customSvg:G10},
-  {n:'09',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/09-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#b5541a',customSvg:G01},
+  {n:'09',title:'Energie a energetická bezpečnost',href:'/specialy/data-pro-budouci-premierku/09-energie-a-energeticka-bezpecnost',available:true,dots:D01,accent:'#f76800',customSvg:G01},
   // BLOK 4: Fyzický svět a vnější hrozby
-  {n:'10',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/10-klimaticka-zmena',available:true,dots:D04,accent:'#de1743',customSvg:G04},
-  {n:'11',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/11-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#639e0a',customSvg:G08},
-  {n:'12',title:'Informační manipulace',href:'/specialy/data-pro-budouci-premierku/12-informacni-manipulace',available:true,dots:D12,accent:'#0e839e',customSvg:G12},
+  {n:'10',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/10-klimaticka-zmena',available:true,dots:D04,accent:'#f01745',customSvg:G04},
+  {n:'11',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/11-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#a03250',customSvg:G08},
+  {n:'12',title:'Informační manipulace',href:'/specialy/data-pro-budouci-premierku/12-informacni-manipulace',available:true,dots:D12,accent:'#53361e',customSvg:G12},
   // BLOK 5: Systém, stát a peníze
-  {n:'13',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/13-oligarchizace-a-korupce',available:true,dots:D07,accent:'#a03250',customSvg:G07},
-  {n:'14',title:'Veřejné finance a daně',href:'/specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane',available:true,dots:D06,accent:'#2d7a4f',customSvg:G_FINANCE},
-  {n:'15',title:'Efektivní vládnutí',href:'/specialy/data-pro-budouci-premierku/15-efektivni-vladnuti',available:true,dots:D08,accent:'#4a51ab',customSvg:G_VLADNUTI},
+  {n:'13',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/13-oligarchizace-a-korupce',available:true,dots:D07,accent:'#6e227d',customSvg:G07},
+  {n:'14',title:'Veřejné finance a daně',href:'/specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane',available:true,dots:D06,accent:'#a47d03',customSvg:G_FINANCE},
+  {n:'15',title:'Efektivní vládnutí',href:'/specialy/data-pro-budouci-premierku/15-efektivni-vladnuti',available:true,dots:D08,accent:'#0e926a',customSvg:G_VLADNUTI},
 ];
 
 const DARK = '#101432';

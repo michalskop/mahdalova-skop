@@ -21,19 +21,9 @@ export const DEFAULT_DOTS: [number, number, number, string][] = [
 // this pool (DESIGN.md / theme.ts brand colours), so the logo always stays
 // on-brand no matter what combination lands.
 export const BRAND_PALETTE: string[] = [
-  '#de1743', // crimson
-  '#ffcf02', // gold
-  '#f76800', // orange
-  '#5e66d5', // royal blue
-  '#4a51ab', // royal blue (dark)
-  '#0e839e', // teal
-  '#1a9fbd', // teal (light)
-  '#5fcce6', // teal (lighter)
-  '#6267a3', // navy/purple
-  '#639e0a', // forest green
-  '#12b886', // emerald mint
-  '#a03250', // deep red
-  '#ff5c4a', // coral red
+  '#de1743', '#5e66d5', '#ff5c4a', '#1a9fbd', '#639e0a',
+  '#efb704', '#4c4f8e', '#5fcce6', '#f76800', '#f01745',
+  '#a03250', '#53361e', '#6e227d', '#a47d03', '#0e926a',
 ];
 
 function randomColor(pool: string[]): string {

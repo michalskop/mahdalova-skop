@@ -12,6 +12,7 @@ import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import ArticleHeader from '@/components/dpbp/ArticleHeader';
+import ChapterRail from '@/components/dpbp/ChapterRail';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/PresidentialTripsMap';
 import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
@@ -142,7 +143,9 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   const shareUrl = `${baseUrl}/specialy/data-pro-budouci-premierku/${params.chapter}/${params.article}`;
 
   return (
-    <Box style={{ background: '#fdfbf7', minHeight: '100vh' }}>
+    <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
+      <ChapterRail currentChapter={params.chapter} />
+
       {/* Article header – náležitosti (titulek, perex, autoři, datum, sdílení,
           audio stopa, náhledový obrázek s redakčním přepínačem heroInArticle) */}
       <ArticleHeader
@@ -206,7 +209,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           font-family: 'Roboto Slab', Georgia, serif;
           font-size: 1.05rem;
           font-weight: 700;
-          color: #101432;
+          color: ${textAccent};
           margin: 1.5em 0 0.5em;
         }
         .dpbp-article p {
@@ -224,7 +227,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
           padding-left: 1.4em;
           margin: 0 0 1em;
         }
-        .dpbp-article strong { color: #101432; }
+        .dpbp-article strong { color: ${textAccent}; }
         .dpbp-article a { color: ${textAccent}; }
         .dpbp-article hr { border: none; border-top: 1px solid #e8e2d9; margin: 2em 0; }
         .dpbp-article blockquote {
