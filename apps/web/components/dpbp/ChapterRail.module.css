@@ -579,13 +579,8 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
-  padding: 8px 14px;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  background: rgba(248, 246, 240, 0.95);
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
   backdrop-filter: blur(12px);
-  font-family: var(--font-roboto-condensed), Arial, sans-serif;
 }
 
 .stickyArticle {
