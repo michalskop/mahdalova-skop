@@ -33,12 +33,7 @@ interface ChapterMeta {
   cardOrder: string[];
   onePager: { slug: string; logo: string | null } | null;
   introChart?: string;
-  // Alternativa k Vega grafu: syrové HTML/SVG (např. ručně vytvořený interaktivní
-  // graf). Renderuje se přes RawHtmlEmbed. Má přednost před introChart.
   introChartHtml?: string;
-  // Vedoucí článek, který slouží jako otvírák kapitoly na landingu: jeho titulek,
-  // perex, autoři a OG se použijí pro úvodní blok + odkaz „Číst celý článek".
-  // Zároveň se vyloučí z mřížky dlaždic (aby nebyl dvakrát).
   openerArticle?: string;
   intro?: {
     title: string;
@@ -49,16 +44,14 @@ interface ChapterMeta {
     chartCaption?: string;
   };
   tiles?: ChapterTile[];
-  // Historické pole – dlaždice, které dřív visely pod support bannerem. Nově se
-  // slučují do jedné mřížky (viz redakční feedback: žádné dlaždice po banneru).
   postSupportTiles?: ChapterTile[];
 }
 
 interface ChapterTile {
-    slug: string;
-    topic: string;
-    fullWidth?: boolean;
-    related?: Array<{ slug: string; label: string }>;
+  slug: string;
+  topic: string;
+  fullWidth?: boolean;
+  related?: Array<{ slug: string; label: string }>;
 }
 
 function loadMeta(chapterSlug: string): ChapterMeta | null {
@@ -67,8 +60,6 @@ function loadMeta(chapterSlug: string): ChapterMeta | null {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
-// Dlaždice s fullWidth zabírá celý řádek a resetuje párování; poloviční dlaždice,
-// která by zůstala v řádku sama (poslední bez souseda), se roztáhne přes celý řádek.
 function withRowSpan<T extends { fullWidth?: boolean }>(list: T[]): Array<T & { span: boolean }> {
   let col = 0;
   return list.map((t, i) => {
@@ -116,8 +107,6 @@ function loadIntroChartHtml(chapterSlug: string, file: string): string | null {
   return fs.readFileSync(p, 'utf8');
 }
 
-// Jemná koncová značka úvodního textu – aby bylo poznat, kde úvod končí a kde
-// začíná sekce dlaždic (viz redakční feedback).
 function IntroEndMark({ accent }: { accent: string }) {
   return (
     <Box style={{ display: 'flex', alignItems: 'center', gap: 14, margin: '30px 0 8px' }}>
@@ -128,9 +117,6 @@ function IntroEndMark({ accent }: { accent: string }) {
   );
 }
 
-// Chapters with dedicated static page.tsx files – excluded from dynamic generation
-// to prevent output file collision in `output: 'export'` builds. Prázdné: všechny
-// kapitoly (včetně 01-demografie) jedou přes tuto jednotnou šablonu.
 const STATIC_CHAPTER_ROUTES = new Set<string>([]);
 
 export async function generateStaticParams() {
@@ -152,13 +138,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
   if (!meta) notFound();
   const chapterContents = loadChapterContents(CONTENT_ROOT);
 
-  // The per-card `accent` field in cards/*.json is an unused legacy default
-  // (always crimson) – only cardOrder[0] is ever rendered, as the chapter's
-  // intro number box, so it should match the chapter's own accent instead.
-  // readableAccent() darkens it if needed – the raw accent can be a light
-  // brand colour (bright yellow/teal/mint) picked for hue variety on dark or
-  // decorative surfaces, which fails contrast as bold text on this card's
-  // white background.
   const introCardRaw = meta.cardOrder.length > 0 ? loadCard(params.chapter, meta.cardOrder[0]) : null;
   const introCard = introCardRaw ? { ...introCardRaw, accent: readableAccent(meta.accent) } : null;
   const introChartSpec = meta.introChart ? loadChartSpec(meta.introChart) : null;
@@ -168,16 +147,12 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
     ? loadArticleFrontmatter(params.chapter, meta.onePager.slug)
     : null;
 
-  // Vedoucí článek jako otvírák kapitoly (Option A): landing ukazuje jeho začátek
-  // + „Číst celý článek", sdílení míří na jeho URL (má OG, titulek, perex, autory).
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
   const openerFm = meta.openerArticle ? loadArticleFrontmatter(params.chapter, meta.openerArticle) : null;
   const openerHref = meta.openerArticle
     ? `/specialy/data-pro-budouci-premierku/${params.chapter}/${meta.openerArticle}`
     : null;
 
-  // Jedna souvislá mřížka dlaždic. Historické `postSupportTiles` se slučují na
-  // konec `tiles`; vedoucí (otvírákový) článek se z mřížky vyloučí, ať není dvakrát.
   const tiles = withRowSpan(
     [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
       .filter(t => t.slug !== meta.openerArticle)
@@ -191,7 +166,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
-      {/* Chapter header – jeden masthead, název kapitoly je největší prvek stránky */}
+      {/* Chapter header – v hlavičce hero je jen čistých 15 posuvníků bez rámečku a bez nápisů "Obsah" a "Kapitoly" */}
       <Box style={{ background: '#101432', padding: '52px 0 44px' }}>
         <Container size="md">
           <Box className="dpbp-chapter-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 28 }}>
@@ -202,7 +177,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               <Title order={1} style={{ color: '#f8f6f0', fontFamily: 'var(--font-roboto-slab), Georgia, serif', fontSize: 'clamp(2.1rem, 5vw, 2.9rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.01em', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
                 {meta.title}
               </Title>
-              <Box style={{ width: 64, height: 4, background: meta.accent, marginTop: 20, borderRadius: 2 }} />
             </Box>
             <Box className="dpbp-chapter-head-profile" style={{ flex: '0 0 auto' }}>
               <a
@@ -214,11 +188,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               </a>
             </Box>
           </Box>
-          <ChapterRail currentChapter={params.chapter} variant="landing" chapterContents={chapterContents} />
-          {/* CSS předáváme přes dangerouslySetInnerHTML, ne jako textového
-              potomka <style>. Textový potomek React na serveru HTML-escapuje
-              (znak `>` v `.dpbp-tile-grid > *` → `&gt;`), na klientu ne –
-              což rozbíjí hydrataci. */}
+          <ChapterRail currentChapter={params.chapter} variant="hero" chapterContents={chapterContents} />
           <style
             dangerouslySetInnerHTML={{
               __html: `
@@ -246,7 +216,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
       </Box>
 
       <Container size="md" style={{ padding: '0 16px' }}>
-        {/* Intro: kicker → titulek → text → statistika → text → graf → uzávěr */}
+        {/* Intro: kicker → titulek → text → audio player & menu jako v článku → statistika → text → graf → uzávěr */}
         {meta.intro && (
           <Box style={{ paddingTop: 40 }}>
             <Text component="div" style={{
@@ -299,6 +269,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                   shareTitle={openerFm.title}
                   audio
                 />
+                <ChapterRail currentChapter={params.chapter} variant="article" chapterContents={chapterContents} />
               </Box>
             )}
             <Text style={{
@@ -374,7 +345,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* Sekce dlaždic – jeden pojmenovaný blok, souhrn + rovnocenná mřížka */}
+        {/* Sekce dlaždic */}
         {(onePagerFm || tiles.length > 0) && (
           <Box style={{ paddingTop: 20 }}>
             <Box style={{ marginBottom: 20 }}>
@@ -392,7 +363,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               </Text>
             </Box>
 
-            {/* Souhrn kapitoly – dlaždice přes celou šířku, piktogram jako náhled */}
             {onePagerFm && meta.onePager && (
               <Box style={{ marginBottom: 18 }}>
                 <DpbpArticleCard
@@ -433,13 +403,11 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
           </Box>
         )}
 
-        {/* Support banner – až za VŠEMI dlaždicemi */}
         <Box style={{ marginTop: 40 }}>
           <SupportBanner />
         </Box>
       </Container>
 
-      {/* End-of-chapter engagement */}
       <Container size="md" style={{ padding: '0 16px' }}>
         <FollowBar />
       </Container>

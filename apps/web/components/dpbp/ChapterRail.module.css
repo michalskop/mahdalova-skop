@@ -503,6 +503,21 @@
   font-style: italic;
 }
 
+.heroRail {
+  width: 100%;
+  margin-top: 24px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.heroProgress {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 4px;
+  width: 100%;
+}
+
 .stickyRail {
   position: fixed;
   z-index: 70;
