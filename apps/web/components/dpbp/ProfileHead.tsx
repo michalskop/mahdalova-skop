@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useId, useRef, useState } from 'react';
+import { useCallback, useId, useRef, useState, useEffect } from 'react';
 
 // Profile-head silhouette used across the DPBP special (homepage hero +
 // chapter headers). One shared SVG source so colour/shape tweaks only need
@@ -17,9 +17,6 @@ export const DEFAULT_DOTS: [number, number, number, string][] = [
   [539.2,234.1,8.8,'#ffe680'],
 ];
 
-// Brand palette only – every hover re-roll picks colours exclusively from
-// this pool (DESIGN.md / theme.ts brand colours), so the logo always stays
-// on-brand no matter what combination lands.
 export const BRAND_PALETTE: string[] = [
   '#de1743', '#5e66d5', '#ff5c4a', '#1a9fbd', '#639e0a',
   '#efb704', '#4c4f8e', '#5fcce6', '#f76800', '#f01745',
@@ -30,12 +27,8 @@ function randomColor(pool: string[]): string {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-// SVG viewBox is "-8 -8 716 716" → x/y range from -8 to 708.
 const VB_MIN = -8;
 const VB_SIZE = 716;
-// How close the cursor must be (in viewBox units) to a dot before it
-// "catches" the cursor and repaints – tuned to the dots' own spacing
-// (roughly 50–150 units apart) so passing nearby paints a few at a time.
 const PROXIMITY = 90;
 
 interface ProfileHeadProps {
@@ -44,6 +37,7 @@ interface ProfileHeadProps {
   palette?: string[];
   className?: string;
   style?: React.CSSProperties;
+  flipHorizontal?: boolean;
 }
 
 export default function ProfileHead({
@@ -52,22 +46,25 @@ export default function ProfileHead({
   palette = BRAND_PALETTE,
   className,
   style,
+  flipHorizontal = false,
 }: ProfileHeadProps) {
   const uid = useId().replace(/:/g, '');
   const clipId = `sil-${uid}`;
   const hoverClass = `ph-${uid}`;
   const svgRef = useRef<SVGSVGElement>(null);
-  // Dots the cursor is currently "inside" – lets each dot repaint once per
-  // entry instead of re-rolling on every mousemove tick while hovering.
   const insideRef = useRef<Set<number>>(new Set());
 
-  const [defaultSil] = useState(silColor);
+  const [isSelfHovered, setIsSelfHovered] = useState(false);
   const [defaultDotColors] = useState<string[]>(() => dots.map(d => d[3]));
-  const [activeSil, setActiveSil] = useState(defaultSil);
+  const [hoverSilColor, setHoverSilColor] = useState(silColor);
   const [activeDots, setActiveDots] = useState<string[]>(defaultDotColors);
 
+  // Effective color is silColor prop (from chapter accent) unless the user hovers the head directly
+  const activeSil = isSelfHovered ? hoverSilColor : silColor;
+
   const handleEnter = useCallback(() => {
-    setActiveSil(randomColor(palette));
+    setIsSelfHovered(true);
+    setHoverSilColor(randomColor(palette));
   }, [palette]);
 
   const handleMove = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
@@ -75,10 +72,9 @@ export default function ProfileHead({
     if (!svg) return;
     const rect = svg.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
-    // Cursor position translated from screen pixels into the SVG's own
-    // viewBox coordinate space, so distance-to-dot comparisons line up.
-    const x = VB_MIN + ((e.clientX - rect.left) / rect.width) * VB_SIZE;
+    const rawX = VB_MIN + ((e.clientX - rect.left) / rect.width) * VB_SIZE;
     const y = VB_MIN + ((e.clientY - rect.top) / rect.height) * VB_SIZE;
+    const x = flipHorizontal ? 700 - rawX : rawX;
 
     setActiveDots(prev => {
       let changed = false;
@@ -97,22 +93,21 @@ export default function ProfileHead({
       });
       return changed ? next : prev;
     });
-  }, [dots, palette]);
+  }, [dots, palette, flipHorizontal]);
 
   const handleLeave = useCallback(() => {
     insideRef.current.clear();
-    // Only the silhouette reverts, to the chapter's dominant colour – it's
-    // the one fixed brand marker. The dots are playful confetti: they keep
-    // whatever colour the hover scatter left them in, even a combination
-    // that never appeared on load.
-    setActiveSil(defaultSil);
-  }, [defaultSil]);
+    setIsSelfHovered(false);
+  }, []);
+
+  const svgStyle: React.CSSProperties = {
+    ...style,
+    transform: flipHorizontal ? 'scaleX(-1)' : style?.transform,
+    transformOrigin: 'center',
+  };
 
   return (
     <>
-      {/* Per-instance scoped transition so fill changes (triggered by the
-          random re-roll on hover, set via React state below) fade smoothly
-          instead of snapping instantly. */}
       <style>{`
         .${hoverClass} .ph-sil-fill,
         .${hoverClass} .ph-sil-stroke,
@@ -127,7 +122,7 @@ export default function ProfileHead({
         aria-hidden
         overflow="visible"
         className={className ? `${hoverClass} ${className}` : hoverClass}
-        style={style}
+        style={svgStyle}
         onMouseEnter={handleEnter}
         onMouseMove={handleMove}
         onMouseLeave={handleLeave}

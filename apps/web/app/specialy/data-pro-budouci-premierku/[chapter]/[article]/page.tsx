@@ -35,13 +35,6 @@ function loadArticle(chapterSlug: string, articleSlug: string) {
   const raw = fs.readFileSync(p, 'utf8');
   const { data, content } = matter(raw);
 
-  // Articles with raw HTML/SVG containing literal "{...}" (e.g. inline <style>
-  // blocks with CSS) can't go through the MDX/JSX parser at all – MDX always
-  // tries to read "{" as a JS expression, even inside what looks like plain
-  // HTML text, and fails ("Could not parse expression with acorn"). Such
-  // articles set `htmlInclude` in frontmatter pointing to a sibling .html
-  // file, rendered via dangerouslySetInnerHTML instead of MDXRemote – same
-  // mechanism the older /clanek/_articles/ system uses.
   let htmlContent: string | null = null;
   if (typeof data.htmlInclude === 'string') {
     const htmlPath = path.join(CONTENT_ROOT, chapterSlug, 'articles', data.htmlInclude);
@@ -70,10 +63,6 @@ function loadChapterMeta(chapterSlug: string) {
   return JSON.parse(fs.readFileSync(p, 'utf8')) as { title: string; accent: string };
 }
 
-// Chapters with a dedicated static hub page.tsx – excluded from dynamic
-// generation to prevent output file collision in `output: 'export'` builds.
-// Note: this only applies to the chapter HUB route ([chapter]/page.tsx);
-// individual articles for 01-demografie are generated dynamically here.
 const STATIC_CHAPTER_ROUTES = new Set<string>([]);
 
 export async function generateStaticParams() {
@@ -136,11 +125,6 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   const chapterContents = loadChapterContents(CONTENT_ROOT);
   const { frontmatter: fm, content, htmlContent } = art;
   const accent = chapterMeta?.accent ?? '#de1743';
-  // Body text (h2/links) needs WCAG-safe contrast on the white article
-  // background – the raw accent can be a light brand colour picked for hue
-  // variety on dark/decorative surfaces (logo, borders), which some chapters'
-  // accents fail as text. Divider rule and blockquote border stay on the raw
-  // accent since they're decorative, not text.
   const textAccent = readableAccent(accent);
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
@@ -149,7 +133,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
       {/* Article header – náležitosti (titulek, perex, autoři, datum, sdílení,
-          audio stopa, náhledový obrázek s redakčním přepínačem heroInArticle) */}
+          audio stopa, navigace kapitol, náhledový obrázek) */}
       <ArticleHeader
         crumbs={[
           { label: 'Data pro budoucí premiérku', href: '/specialy/data-pro-budouci-premierku' },
@@ -163,9 +147,10 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
         shareUrl={shareUrl}
         heroImage={fm.coverImage}
         showHero={fm.heroInArticle === true}
+        chapterRail={
+          <ChapterRail currentChapter={params.chapter} variant="article" chapterContents={chapterContents} />
+        }
       />
-
-      <ChapterRail currentChapter={params.chapter} variant="article" chapterContents={chapterContents} />
 
       {/* Article body */}
       <Container size="sm" style={{ padding: '32px 16px 48px' }}>
@@ -198,9 +183,6 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
         <SubscribeNewsletter actionUrl="https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088" position="center" />
       </Container>
 
-      {/* dangerouslySetInnerHTML: React při SSR escapuje apostrofy v textovém
-          obsahu <style> na &#x27;, klient je pak porovnává s neescapovaným
-          zněním a hlásí hydration mismatch. innerHTML porovnání textu obchází. */}
       <style dangerouslySetInnerHTML={{ __html: `
         .dpbp-article h2 {
           font-family: 'Roboto Slab', Georgia, serif;
