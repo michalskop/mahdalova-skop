@@ -257,9 +257,24 @@ export default function ChapterRail({
         )}
       </nav>
 
-      {/* Sticky spodní lišta na mobilu i desktopu (15 vodorovných čárek se světlým hover tooltipem #f8f6f0 opacity 0.95) */}
-      <nav className={styles.sticky} aria-label="Rychlá navigace kapitol">
-        <div className={styles.stickyDashProgress}>
+      {/* Sticky spodní lišta na mobilu i desktopu (15 vodorovných posuvníků se světlým hover oknem #f8f6f0, opacity 0.95) */}
+      <nav className={styles.stickyRail} aria-label="Rychlá navigace kapitol (dole)">
+        {hoveredStickySlug && (() => {
+          const stickyChapter = DPBP_CHAPTERS.find(c => c.slug === hoveredStickySlug);
+          if (!stickyChapter) return null;
+          return (
+            <div
+              className={styles.stickyWindow}
+              style={{ ['--chapter-accent' as string]: stickyChapter.accent } as CSSProperties}
+            >
+              <span className={styles.stickyNumber}>Kapitola {stickyChapter.id}/15</span>
+              <span className={styles.stickyAccent} style={{ background: stickyChapter.accent }} aria-hidden />
+              <strong className={styles.stickyTitle}>{stickyChapter.title}</strong>
+            </div>
+          );
+        })()}
+
+        <div className={styles.stickyProgress}>
           {DPBP_CHAPTERS.map(chapter => {
             const isCurrent = chapter.slug === currentChapter;
             const isHovered = chapter.slug === hoveredStickySlug;
@@ -267,28 +282,16 @@ export default function ChapterRail({
             const isActive = isCurrent || isHovered || isSelected;
 
             return (
-              <div key={chapter.id} className={styles.stickyDashWrapper}>
-                {isHovered && (
-                  <div
-                    className={styles.stickyLightTooltip}
-                    style={{ ['--chapter-accent' as string]: chapter.accent } as CSSProperties}
-                  >
-                    <span className={styles.tooltipNum} style={{ color: chapter.accent }}>
-                      {chapter.id}
-                    </span>
-                    <span className={styles.tooltipTitle}>{chapter.shortTitle}</span>
-                  </div>
-                )}
-                <button
-                  type="button"
-                  className={`${styles.dashBtn} ${isActive ? styles.dashActive : ''}`}
-                  style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
-                  onMouseEnter={() => setHoveredStickySlug(chapter.slug)}
-                  onMouseLeave={() => setHoveredStickySlug(null)}
-                  onClick={() => handleDashClick(chapter.slug)}
-                  aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
-                />
-              </div>
+              <button
+                key={chapter.id}
+                type="button"
+                className={`${styles.dashBtn} ${isActive ? styles.dashActive : ''}`}
+                style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
+                onMouseEnter={() => setHoveredStickySlug(chapter.slug)}
+                onMouseLeave={() => setHoveredStickySlug(null)}
+                onClick={() => handleDashClick(chapter.slug)}
+                aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
+              />
             );
           })}
         </div>
