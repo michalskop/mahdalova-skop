@@ -20,7 +20,11 @@ export default function ChapterRail({
   chapterContents = {},
 }: ChapterRailProps) {
   const [panelMode, setPanelMode] = useState<'closed' | 'chapters' | 'articleList'>('closed');
+  const [activePanelTarget, setActivePanelTarget] = useState<'top' | 'bottom' | null>(null);
   const [selectedSlug, setSelectedSlug] = useState<string>(currentChapter);
+
+  // Local hover flag so tooltips ONLY render in the menu where mouse is actively hovering
+  const [isHoveredHere, setIsHoveredHere] = useState(false);
 
   // Global hover state synchronized via CustomEvent across all ChapterRail instances
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null);
@@ -36,6 +40,12 @@ export default function ChapterRail({
 
   const triggerHover = (slug: string | null) => {
     window.dispatchEvent(new CustomEvent('dpbp-chapter-hover', { detail: slug }));
+  };
+
+  const handleMouseEnterRail = () => setIsHoveredHere(true);
+  const handleMouseLeaveRail = () => {
+    setIsHoveredHere(false);
+    triggerHover(null);
   };
 
   const currentChapterMeta = DPBP_CHAPTERS.find(c => c.slug === currentChapter) ?? DPBP_CHAPTERS[0];
@@ -60,23 +70,43 @@ export default function ChapterRail({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setPanelMode('closed');
+        setActivePanelTarget(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleDashClick = (slug: string) => {
-    if (panelMode === 'articleList' && selectedSlug === slug) {
+  const handleTopDashClick = (slug: string) => {
+    if (panelMode === 'articleList' && selectedSlug === slug && activePanelTarget === 'top') {
       setPanelMode('closed');
+      setActivePanelTarget(null);
     } else {
       setSelectedSlug(slug);
       setPanelMode('articleList');
+      setActivePanelTarget('top');
+    }
+  };
+
+  const handleBottomDashClick = (slug: string) => {
+    if (panelMode === 'articleList' && selectedSlug === slug && activePanelTarget === 'bottom') {
+      setPanelMode('closed');
+      setActivePanelTarget(null);
+    } else {
+      setSelectedSlug(slug);
+      setPanelMode('articleList');
+      setActivePanelTarget('bottom');
     }
   };
 
   const toggleChaptersOverview = () => {
-    setPanelMode(prev => (prev === 'chapters' ? 'closed' : 'chapters'));
+    if (panelMode === 'chapters' && activePanelTarget === 'top') {
+      setPanelMode('closed');
+      setActivePanelTarget(null);
+    } else {
+      setPanelMode('chapters');
+      setActivePanelTarget('top');
+    }
   };
 
   // 1. HERO VARIANT (Dark hero header in chapter landing page)
@@ -102,7 +132,11 @@ export default function ChapterRail({
         </div>
 
         {/* Clean 15 progress dashes without borders or text labels */}
-        <div className={styles.heroRail} onMouseLeave={() => triggerHover(null)}>
+        <div
+          className={styles.heroRail}
+          onMouseEnter={handleMouseEnterRail}
+          onMouseLeave={handleMouseLeaveRail}
+        >
           <div className={styles.heroProgress}>
             {DPBP_CHAPTERS.map(chapter => {
               const isHovered = chapter.slug === hoveredSlug;
@@ -110,7 +144,7 @@ export default function ChapterRail({
 
               return (
                 <div key={chapter.id} className={styles.dashItem}>
-                  {isHovered && panelMode === 'closed' && (
+                  {isHovered && isHoveredHere && panelMode === 'closed' && (
                     <div
                       className={styles.dashPointerTooltip}
                       style={{ ['--chapter-accent' as string]: chapter.accent } as CSSProperties}
@@ -127,7 +161,7 @@ export default function ChapterRail({
                     style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
                     onMouseEnter={() => triggerHover(chapter.slug)}
                     onFocus={() => triggerHover(chapter.slug)}
-                    onClick={() => handleDashClick(chapter.slug)}
+                    onClick={() => handleTopDashClick(chapter.slug)}
                     aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
                   />
                 </div>
@@ -136,7 +170,7 @@ export default function ChapterRail({
           </div>
 
           {/* HERO OKNO / PANEL (rozbalí se přímo pod posuvníky v hero hlavičce po kliknutí!) */}
-          {panelMode === 'articleList' && (
+          {panelMode === 'articleList' && activePanelTarget === 'top' && (
             <div
               className={styles.windowPanel}
               style={{ ['--chapter-accent' as string]: selectedChapterMeta.accent } as CSSProperties}
@@ -159,7 +193,10 @@ export default function ChapterRail({
                   <button
                     type="button"
                     className={styles.closeBtn}
-                    onClick={() => setPanelMode('closed')}
+                    onClick={() => {
+                      setPanelMode('closed');
+                      setActivePanelTarget(null);
+                    }}
                     aria-label="Zavřít okno (Esc)"
                   >
                     <IconX size={16} />
@@ -187,14 +224,15 @@ export default function ChapterRail({
     );
   }
 
-  // 2. ARTICLE / LANDING TOP RAIL (pod audio lištou)
+  // 2. ARTICLE / LANDING RAIL (pod audio lištou + 3. dolní sticky nav)
   return (
     <>
       <nav
         className={`${styles.rail} ${variant === 'landing' ? styles.landing : styles.article}`}
         aria-label="Navigace mezi kapitolami projektu"
         style={{ ['--active-chapter' as string]: activeChapterMeta.accent } as CSSProperties}
-        onMouseLeave={() => triggerHover(null)}
+        onMouseEnter={handleMouseEnterRail}
+        onMouseLeave={handleMouseLeaveRail}
       >
         <div className={styles.primary}>
           <div className={styles.identity}>
@@ -212,13 +250,13 @@ export default function ChapterRail({
                 className={styles.toggle}
                 type="button"
                 onClick={toggleChaptersOverview}
-                aria-expanded={panelMode === 'chapters'}
+                aria-expanded={panelMode === 'chapters' && activePanelTarget === 'top'}
                 aria-label={panelMode === 'chapters' ? 'Skrýt obsah' : 'Zobrazit obsah'}
               >
                 <span>Obsah</span>
                 <IconChevronDown
                   style={{
-                    transform: panelMode === 'chapters' ? 'rotate(180deg)' : 'none',
+                    transform: panelMode === 'chapters' && activePanelTarget === 'top' ? 'rotate(180deg)' : 'none',
                     transition: 'transform 0.18s ease',
                   }}
                   aria-hidden
@@ -245,7 +283,7 @@ export default function ChapterRail({
 
             return (
               <div key={chapter.id} className={styles.dashItem}>
-                {isHovered && panelMode === 'closed' && (
+                {isHovered && isHoveredHere && panelMode === 'closed' && (
                   <div
                     className={styles.dashPointerTooltip}
                     style={{ ['--chapter-accent' as string]: chapter.accent } as CSSProperties}
@@ -262,7 +300,7 @@ export default function ChapterRail({
                   style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
                   onMouseEnter={() => triggerHover(chapter.slug)}
                   onFocus={() => triggerHover(chapter.slug)}
-                  onClick={() => handleDashClick(chapter.slug)}
+                  onClick={() => handleTopDashClick(chapter.slug)}
                   aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
                 />
               </div>
@@ -270,15 +308,18 @@ export default function ChapterRail({
           })}
         </div>
 
-        {/* HORNÍ OKNO / PANEL */}
-        {panelMode === 'chapters' && (
+        {/* HORNÍ OKNO / PANEL (zobrazuje se POUZE při kliknutí v HORNÍM menu!) */}
+        {panelMode === 'chapters' && activePanelTarget === 'top' && (
           <div className={styles.windowPanel}>
             <div className={styles.windowHeader}>
               <span className={styles.windowHeaderTitle}>Všechny kapitoly speciálu</span>
               <button
                 type="button"
                 className={styles.closeBtn}
-                onClick={() => setPanelMode('closed')}
+                onClick={() => {
+                  setPanelMode('closed');
+                  setActivePanelTarget(null);
+                }}
                 aria-label="Zavřít okno (Esc)"
               >
                 <IconX size={16} />
@@ -296,6 +337,7 @@ export default function ChapterRail({
                   onClick={() => {
                     setSelectedSlug(chapter.slug);
                     setPanelMode('articleList');
+                    setActivePanelTarget('top');
                   }}
                 >
                   <span className={styles.chapterGridNum} style={{ color: chapter.accent }}>
@@ -309,7 +351,7 @@ export default function ChapterRail({
           </div>
         )}
 
-        {panelMode === 'articleList' && (
+        {panelMode === 'articleList' && activePanelTarget === 'top' && (
           <div
             className={styles.windowPanel}
             style={{ ['--chapter-accent' as string]: selectedChapterMeta.accent } as CSSProperties}
@@ -332,7 +374,10 @@ export default function ChapterRail({
                 <button
                   type="button"
                   className={styles.backBtn}
-                  onClick={() => setPanelMode('chapters')}
+                  onClick={() => {
+                    setPanelMode('chapters');
+                    setActivePanelTarget('top');
+                  }}
                 >
                   <IconArrowLeft size={14} />
                   <span>Obsah</span>
@@ -340,7 +385,10 @@ export default function ChapterRail({
                 <button
                   type="button"
                   className={styles.closeBtn}
-                  onClick={() => setPanelMode('closed')}
+                  onClick={() => {
+                    setPanelMode('closed');
+                    setActivePanelTarget(null);
+                  }}
                   aria-label="Zavřít okno (Esc)"
                 >
                   <IconX size={16} />
@@ -369,10 +417,11 @@ export default function ChapterRail({
       <nav
         className={`${styles.stickyRail} ${variant === 'landing' ? styles.stickyLanding : styles.stickyArticle}`}
         aria-label="Rychlá navigace kapitol (dole)"
-        onMouseLeave={() => triggerHover(null)}
+        onMouseEnter={handleMouseEnterRail}
+        onMouseLeave={handleMouseLeaveRail}
       >
-        {/* DOLNÍ OKNO S TITULKY ČLÁNKŮ */}
-        {panelMode === 'articleList' && (
+        {/* DOLNÍ OKNO S TITULKY ČLÁNKŮ (zobrazuje se POUZE při kliknutí v DOLNÍM menu!) */}
+        {panelMode === 'articleList' && activePanelTarget === 'bottom' && (
           <div
             className={styles.windowPanel}
             style={{ ['--chapter-accent' as string]: selectedChapterMeta.accent } as CSSProperties}
@@ -395,7 +444,10 @@ export default function ChapterRail({
                 <button
                   type="button"
                   className={styles.closeBtn}
-                  onClick={() => setPanelMode('closed')}
+                  onClick={() => {
+                    setPanelMode('closed');
+                    setActivePanelTarget(null);
+                  }}
                   aria-label="Zavřít okno (Esc)"
                 >
                   <IconX size={16} />
@@ -427,7 +479,7 @@ export default function ChapterRail({
 
             return (
               <div key={chapter.id} className={styles.dashItem}>
-                {isHovered && panelMode === 'closed' && (
+                {isHovered && isHoveredHere && panelMode === 'closed' && (
                   <div
                     className={styles.dashPointerTooltip}
                     style={{ ['--chapter-accent' as string]: chapter.accent } as CSSProperties}
@@ -444,7 +496,7 @@ export default function ChapterRail({
                   style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
                   onMouseEnter={() => triggerHover(chapter.slug)}
                   onFocus={() => triggerHover(chapter.slug)}
-                  onClick={() => handleDashClick(chapter.slug)}
+                  onClick={() => handleBottomDashClick(chapter.slug)}
                   aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
                 />
               </div>
