@@ -28,7 +28,7 @@
   transition: background-color 450ms ease, transform 450ms ease;
 }
 .young { background: #d9d5cc; }
-.working { background: #aaa9b5; }
+.working { background: #bcc4df; }
 .senior { background: #de1743; }
 .people .muted { background: #e8e8e4; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; color: #333; font-size: 15px; }

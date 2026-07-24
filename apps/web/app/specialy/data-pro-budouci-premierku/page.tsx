@@ -519,7 +519,7 @@ const CHAPTERS = [
   // BLOK 4: Fyzický svět a vnější hrozby
   {n:'10',title:'Klimatická změna',href:'/specialy/data-pro-budouci-premierku/10-klimaticka-zmena',available:true,dots:D04,accent:'#f01745',customSvg:G04},
   {n:'11',title:'Bezpečnost a konflikty',href:'/specialy/data-pro-budouci-premierku/11-bezpecnost-a-konflikty',available:true,dots:D05,accent:'#a03250',customSvg:G08},
-  {n:'12',title:'Informační manipulace',href:'/specialy/data-pro-budouci-premierku/12-informacni-manipulace',available:true,dots:D12,accent:'#53361e',customSvg:G12},
+  {n:'12',title:'Informační manipulace',href:'/specialy/data-pro-budouci-premierku/12-informacni-manipulace',available:true,dots:D12,accent:'#8b6240',customSvg:G12},
   // BLOK 5: Systém, stát a peníze
   {n:'13',title:'Oligarchizace a korupce',href:'/specialy/data-pro-budouci-premierku/13-oligarchizace-a-korupce',available:true,dots:D07,accent:'#6e227d',customSvg:G07},
   {n:'14',title:'Veřejné finance a daně',href:'/specialy/data-pro-budouci-premierku/14-verejne-finance-a-dane',available:true,dots:D06,accent:'#a47d03',customSvg:G_FINANCE},

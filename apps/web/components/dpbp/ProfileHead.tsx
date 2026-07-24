@@ -23,7 +23,7 @@ export const DEFAULT_DOTS: [number, number, number, string][] = [
 export const BRAND_PALETTE: string[] = [
   '#de1743', '#5e66d5', '#ff5c4a', '#1a9fbd', '#639e0a',
   '#efb704', '#4c4f8e', '#5fcce6', '#f76800', '#f01745',
-  '#a03250', '#53361e', '#6e227d', '#a47d03', '#0e926a',
+  '#a03250', '#8b6240', '#6e227d', '#a47d03', '#0e926a',
 ];
 
 function randomColor(pool: string[]): string {
