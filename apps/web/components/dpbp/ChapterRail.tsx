@@ -367,7 +367,7 @@ export default function ChapterRail({
 
       {/* 3. DOLNÍ STICKY NAVIGAČNÍ LIŠTA */}
       <nav
-        className={styles.stickyRail}
+        className={`${styles.stickyRail} ${variant === 'landing' ? styles.stickyLanding : styles.stickyArticle}`}
         aria-label="Rychlá navigace kapitol (dole)"
         onMouseLeave={() => triggerHover(null)}
       >

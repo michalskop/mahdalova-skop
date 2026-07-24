@@ -578,7 +578,6 @@
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(928px, calc(100% - 44px));
   margin: 0 auto;
   padding: 8px 14px;
   border: 1px solid #e2e8f0;
@@ -587,6 +586,14 @@
   box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
   backdrop-filter: blur(12px);
   font-family: var(--font-roboto-condensed), Arial, sans-serif;
+}
+
+.stickyArticle {
+  width: min(676px, calc(100% - 44px));
+}
+
+.stickyLanding {
+  width: min(896px, calc(100% - 32px));
 }
 
 .stickyProgress {
