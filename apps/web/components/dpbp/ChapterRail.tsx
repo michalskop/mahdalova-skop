@@ -52,11 +52,12 @@ export default function ChapterRail({
 
   const activeChapterMeta = DPBP_CHAPTERS.find(c => c.slug === activeSlug) ?? currentChapterMeta;
 
-  // Selected chapter for article list window
-  const selectedChapterMeta = DPBP_CHAPTERS.find(c => c.slug === selectedSlug) ?? activeChapterMeta;
-  const articles: ChapterArticleItem[] = (chapterContents[selectedChapterMeta.slug] ?? []).map(item =>
+  // Chapter displayed inside the opened modal panel (updates dynamically in real-time on hover!)
+  const displayChapterSlug = hoveredSlug ?? selectedSlug;
+  const displayChapterMeta = DPBP_CHAPTERS.find(c => c.slug === displayChapterSlug) ?? activeChapterMeta;
+  const displayArticles: ChapterArticleItem[] = (chapterContents[displayChapterMeta.slug] ?? []).map(item =>
     typeof item === 'string'
-      ? { slug: item, title: item, href: `/specialy/data-pro-budouci-premierku/${selectedChapterMeta.slug}` }
+      ? { slug: item, title: item, href: `/specialy/data-pro-budouci-premierku/${displayChapterMeta.slug}` }
       : item
   );
 
@@ -133,7 +134,7 @@ export default function ChapterRail({
 
             <div className={styles.heroProfileWrap}>
               <Link href="/specialy/data-pro-budouci-premierku" aria-label="Zpět na Data pro budoucí premiérku">
-                <ProfileHead silColor={activeChapterMeta.accent} style={{ width: 120, height: 120, display: 'block' }} />
+                <ProfileHead silColor={activeChapterMeta.accent} style={{ width: '100%', height: '100%', display: 'block' }} />
               </Link>
             </div>
           </div>
@@ -163,22 +164,22 @@ export default function ChapterRail({
               })}
             </div>
 
-            {/* HERO OKNO / PANEL */}
+            {/* HERO OKNO / PANEL (Tmavé reverzní pozadí s 5% průsvitností a živou aktualizací při hoveru) */}
             {panelMode === 'articleList' && activePanelTarget === 'top' && (
               <div
-                className={styles.windowPanel}
-                style={{ ['--chapter-accent' as string]: selectedChapterMeta.accent } as CSSProperties}
+                className={`${styles.windowPanel} ${styles.heroWindowPanel}`}
+                style={{ ['--chapter-accent' as string]: displayChapterMeta.accent } as CSSProperties}
               >
                 <div className={styles.windowHeader}>
                   <div className={styles.windowTitleGroup}>
-                    <span className={styles.panelDot} style={{ background: selectedChapterMeta.accent }} aria-hidden />
+                    <span className={styles.panelDot} style={{ background: displayChapterMeta.accent }} aria-hidden />
                     <Link
-                      href={chapterHref(selectedChapterMeta.slug)}
+                      href={chapterHref(displayChapterMeta.slug)}
                       className={styles.windowTitleLink}
                       title="Přejít na úvodní stránku kapitoly"
                     >
                       <strong className={styles.windowTitle}>
-                        {selectedChapterMeta.id} · {selectedChapterMeta.title}
+                        {displayChapterMeta.id} · {displayChapterMeta.title}
                       </strong>
                     </Link>
                   </div>
@@ -198,9 +199,9 @@ export default function ChapterRail({
                   </div>
                 </div>
 
-                {articles.length > 0 ? (
+                {displayArticles.length > 0 ? (
                   <ul className={styles.articleList}>
-                    {articles.map(article => (
+                    {displayArticles.map(article => (
                       <li key={article.href || article.title}>
                         <Link href={article.href} className={styles.articleLink}>
                           <span>{article.title}</span>
@@ -285,7 +286,7 @@ export default function ChapterRail({
             })}
           </div>
 
-          {/* HORNÍ OKNO / PANEL */}
+          {/* HORNÍ OKNO / PANEL (s živou aktualizací při hoveru na jiné kapitoly) */}
           {panelMode === 'chapters' && activePanelTarget === 'top' && (
             <div className={styles.windowPanel}>
               <div className={styles.windowHeader}>
@@ -331,18 +332,18 @@ export default function ChapterRail({
           {panelMode === 'articleList' && activePanelTarget === 'top' && (
             <div
               className={styles.windowPanel}
-              style={{ ['--chapter-accent' as string]: selectedChapterMeta.accent } as CSSProperties}
+              style={{ ['--chapter-accent' as string]: displayChapterMeta.accent } as CSSProperties}
             >
               <div className={styles.windowHeader}>
                 <div className={styles.windowTitleGroup}>
-                  <span className={styles.panelDot} style={{ background: selectedChapterMeta.accent }} aria-hidden />
+                  <span className={styles.panelDot} style={{ background: displayChapterMeta.accent }} aria-hidden />
                   <Link
-                    href={chapterHref(selectedChapterMeta.slug)}
+                    href={chapterHref(displayChapterMeta.slug)}
                     className={styles.windowTitleLink}
                     title="Přejít na úvodní stránku kapitoly"
                   >
                     <strong className={styles.windowTitle}>
-                      {selectedChapterMeta.id} · {selectedChapterMeta.title}
+                      {displayChapterMeta.id} · {displayChapterMeta.title}
                     </strong>
                   </Link>
                 </div>
@@ -373,9 +374,9 @@ export default function ChapterRail({
                 </div>
               </div>
 
-              {articles.length > 0 ? (
+              {displayArticles.length > 0 ? (
                 <ul className={styles.articleList}>
-                  {articles.map(article => (
+                  {displayArticles.map(article => (
                     <li key={article.href || article.title}>
                       <Link href={article.href} className={styles.articleLink}>
                         <span>{article.title}</span>
@@ -391,7 +392,7 @@ export default function ChapterRail({
         </nav>
       )}
 
-      {/* DOLNÍ STICKY MENU (připnuté dole, na landing page šířka 928px, v článku 676px) */}
+      {/* DOLNÍ STICKY MENU (s živou aktualizací při hoveru na jiné kapitoly) */}
       <nav
         className={`${styles.rail} ${styles.stickyRail} ${variant === 'hero' || variant === 'landing' ? styles.stickyLanding : styles.stickyArticle}`}
         aria-label="Rychlá navigace kapitol (dole sticky)"
@@ -506,18 +507,18 @@ export default function ChapterRail({
         {panelMode === 'articleList' && activePanelTarget === 'bottom' && (
           <div
             className={styles.windowPanel}
-            style={{ ['--chapter-accent' as string]: selectedChapterMeta.accent } as CSSProperties}
+            style={{ ['--chapter-accent' as string]: displayChapterMeta.accent } as CSSProperties}
           >
             <div className={styles.windowHeader}>
               <div className={styles.windowTitleGroup}>
-                <span className={styles.panelDot} style={{ background: selectedChapterMeta.accent }} aria-hidden />
+                <span className={styles.panelDot} style={{ background: displayChapterMeta.accent }} aria-hidden />
                 <Link
-                  href={chapterHref(selectedChapterMeta.slug)}
+                  href={chapterHref(displayChapterMeta.slug)}
                   className={styles.windowTitleLink}
                   title="Přejít na úvodní stránku kapitoly"
                 >
                   <strong className={styles.windowTitle}>
-                    {selectedChapterMeta.id} · {selectedChapterMeta.title}
+                    {displayChapterMeta.id} · {displayChapterMeta.title}
                   </strong>
                 </Link>
               </div>
@@ -548,9 +549,9 @@ export default function ChapterRail({
               </div>
             </div>
 
-            {articles.length > 0 ? (
+            {displayArticles.length > 0 ? (
               <ul className={styles.articleList}>
-                {articles.map(article => (
+                {displayArticles.map(article => (
                   <li key={article.href || article.title}>
                     <Link href={article.href} className={styles.articleLink}>
                       <span>{article.title}</span>

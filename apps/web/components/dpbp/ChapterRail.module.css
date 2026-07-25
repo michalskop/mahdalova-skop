@@ -551,18 +551,67 @@
   flex: 0 0 auto;
 }
 
-@media (max-width: 768px) {
-  .heroProfileWrap {
-    display: none;
-  }
+.heroProfileWrap svg {
+  width: clamp(70px, 14vw, 120px);
+  height: clamp(70px, 14vw, 120px);
+  display: block;
 }
 
 .heroRail {
+  position: relative;
   width: 100%;
   margin-top: 24px;
   background: transparent;
   border: 0;
   padding: 0;
+}
+
+.heroWindowPanel {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(16, 20, 50, 0.95);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  z-index: 100;
+  animation: panelSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #f8f6f0;
+}
+
+.heroWindowPanel .windowHeaderTitle {
+  color: #cbd5e1;
+}
+
+.heroWindowPanel .windowTitle {
+  color: #f8f6f0;
+}
+
+.heroWindowPanel .articleLink {
+  color: #f8f6f0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.heroWindowPanel .articleLink:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--chapter-accent, #de1743);
+  color: #ffffff;
+}
+
+.heroWindowPanel .closeBtn,
+.heroWindowPanel .backBtn {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.heroWindowPanel .closeBtn:hover,
+.heroWindowPanel .backBtn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .heroProgress {
