@@ -225,32 +225,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 color: #ffffff !important;
               }
             `}</style>
-            <Text component="div" style={{
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              fontSize: 13,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              fontWeight: 500,
-              marginBottom: 16,
-            }}>
-              <Link
-                href="/specialy/data-pro-budouci-premierku"
-                className="dpbpKickerLink"
-                style={{ ['--accent-color' as string]: readableAccent(meta.accent) } as React.CSSProperties}
-              >
-                Data pro budoucí premiérku
-              </Link>
-              <span style={{ color: '#b3ab98', margin: '0 7px' }}>›</span>
-              <Link
-                href={`/specialy/data-pro-budouci-premierku/${params.chapter}`}
-                className="dpbpKickerLink"
-                style={{ ['--accent-color' as string]: readableAccent(meta.accent) } as React.CSSProperties}
-              >
-                {meta.title}
-              </Link>
-              <span style={{ color: '#b3ab98', margin: '0 7px' }}>›</span>
-              <span style={{ color: readableAccent(meta.accent) }}>Úvod</span>
-            </Text>
             <Title order={2} style={{
               fontFamily: 'var(--font-roboto-slab), Georgia, serif',
               fontSize: openerFm ? '2rem' : '1.6rem',
