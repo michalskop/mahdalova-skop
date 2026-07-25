@@ -217,7 +217,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               fontSize: 13,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              fontWeight: 700,
+              fontWeight: 500,
               marginBottom: 16,
             }}>
               <Link href="/specialy/data-pro-budouci-premierku" style={{ color: readableAccent(meta.accent), textDecoration: 'none' }}>Data pro budoucí premiérku</Link>
