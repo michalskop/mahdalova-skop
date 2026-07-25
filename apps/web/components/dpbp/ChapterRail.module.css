@@ -554,8 +554,8 @@
 }
 
 .heroProfileWrap svg {
-  width: clamp(52px, 7.5vw, 68px);
-  height: clamp(52px, 7.5vw, 68px);
+  width: clamp(70px, 12vw, 120px);
+  height: clamp(70px, 12vw, 120px);
   display: block;
 }
 
