@@ -124,7 +124,11 @@ export default function ChapterRail({
           <div className={styles.heroHeadRow}>
             <div className={styles.heroHeadMeta}>
               <span className={styles.heroEyebrow}>
-                <Link href="/specialy/data-pro-budouci-premierku" className={styles.heroCrumbLink} style={{ color: activeChapterMeta.accent }}>
+                <Link
+                  href="/specialy/data-pro-budouci-premierku"
+                  className={styles.heroCrumbLink}
+                  style={{ color: activeChapterMeta.accent, ['--chapter-accent' as string]: activeChapterMeta.accent } as CSSProperties}
+                >
                   Data pro budoucí premiérku
                 </Link>{' '}
                 · Kapitola {activeChapterMeta.id}

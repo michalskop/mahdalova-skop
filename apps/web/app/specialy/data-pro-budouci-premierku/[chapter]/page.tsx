@@ -223,7 +223,15 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               marginBottom: openerFm ? 14 : 20,
             }}>
               {openerFm && openerHref ? (
-                <Link href={openerHref} style={{ color: 'inherit', textDecoration: 'none' }}>
+                <Link
+                  href={openerHref}
+                  style={{
+                    color: 'inherit',
+                    textDecoration: 'underline',
+                    textDecorationColor: readableAccent(meta.accent),
+                    textUnderlineOffset: '4px',
+                  }}
+                >
                   {openerFm.title}
                 </Link>
               ) : (
