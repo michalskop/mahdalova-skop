@@ -655,7 +655,7 @@ export default function DpbpLandingPage() {
         }
         .ch-active:hover {
           transform: scale(1.025);
-          background: #272a59 !important;
+          background: #2f325c !important;
           border-color: var(--ch-accent) !important;
           box-shadow:
             inset 0 0 0 1px var(--ch-accent),
