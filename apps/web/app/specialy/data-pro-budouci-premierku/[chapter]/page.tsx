@@ -211,6 +211,19 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 text-decoration-color: var(--accent-underline) !important;
                 text-underline-offset: 4px !important;
               }
+              .dpbpKickerLink {
+                color: var(--accent-color) !important;
+                text-decoration: none !important;
+                padding: 2px 6px;
+                margin: -2px -6px;
+                border-radius: 4px;
+                transition: background-color 0.18s ease, color 0.18s ease;
+              }
+              .dpbpKickerLink:hover,
+              .dpbpKickerLink:focus-visible {
+                background-color: var(--accent-color) !important;
+                color: #ffffff !important;
+              }
             `}</style>
             <Text component="div" style={{
               fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
@@ -220,9 +233,21 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               fontWeight: 500,
               marginBottom: 16,
             }}>
-              <Link href="/specialy/data-pro-budouci-premierku" style={{ color: readableAccent(meta.accent), textDecoration: 'none' }}>Data pro budoucí premiérku</Link>
+              <Link
+                href="/specialy/data-pro-budouci-premierku"
+                className="dpbpKickerLink"
+                style={{ ['--accent-color' as string]: readableAccent(meta.accent) } as React.CSSProperties}
+              >
+                Data pro budoucí premiérku
+              </Link>
               <span style={{ color: '#b3ab98', margin: '0 7px' }}>›</span>
-              <Link href={`/specialy/data-pro-budouci-premierku/${params.chapter}`} style={{ color: readableAccent(meta.accent), textDecoration: 'none' }}>{meta.title}</Link>
+              <Link
+                href={`/specialy/data-pro-budouci-premierku/${params.chapter}`}
+                className="dpbpKickerLink"
+                style={{ ['--accent-color' as string]: readableAccent(meta.accent) } as React.CSSProperties}
+              >
+                {meta.title}
+              </Link>
               <span style={{ color: '#b3ab98', margin: '0 7px' }}>›</span>
               <span style={{ color: readableAccent(meta.accent) }}>Úvod</span>
             </Text>
