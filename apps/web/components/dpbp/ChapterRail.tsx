@@ -396,13 +396,14 @@ export default function ChapterRail({
         </nav>
       )}
 
-      {/* DOLNÍ STICKY MENU (s živou aktualizací při hoveru na jiné kapitoly) */}
-      <nav
-        className={`${styles.rail} ${styles.stickyRail} ${variant === 'hero' || variant === 'landing' ? styles.stickyLanding : styles.stickyArticle}`}
-        aria-label="Rychlá navigace kapitol (dole sticky)"
-        style={{ ['--active-chapter' as string]: activeChapterMeta.accent } as CSSProperties}
-        onMouseLeave={handleMouseLeaveRail}
-      >
+      {/* DOLNÍ STICKY MENU (pouze v článcích, na landing page kapitol zcela zrušeno) */}
+      {variant === 'article' && (
+        <nav
+          className={`${styles.rail} ${styles.stickyRail} ${styles.stickyArticle}`}
+          aria-label="Rychlá navigace kapitol (dole sticky)"
+          style={{ ['--active-chapter' as string]: activeChapterMeta.accent } as CSSProperties}
+          onMouseLeave={handleMouseLeaveRail}
+        >
         <div className={styles.primary}>
           <div className={styles.identity}>
             {/* Řádek 1: Data pro budoucí premiérku + barevná hlava + Obsah ↓ */}
@@ -569,6 +570,7 @@ export default function ChapterRail({
           </div>
         )}
       </nav>
+      )}
     </>
   );
 }

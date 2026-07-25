@@ -16,6 +16,11 @@ interface ImpactCardProps {
   card: ImpactCardData;
 }
 
+function formatLowercaseStart(text: string): string {
+  if (!text) return text;
+  return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
 // Úvodní statistika kapitoly. Záměrně NENÍ karta ani odkaz – je to editoriální
 // „callout“ ve vlastním textovém toku (linka nahoře i dole, žádný stín, rámeček
 // ani šipka). Číslo je hák; delší kontext patří do úvodního textu, ne sem.
@@ -29,7 +34,7 @@ export default function ImpactCard({ card }: ImpactCardProps) {
       </div>
       <div className={styles.cap}>
         {(card.sublabel || card.label) && (
-          <div className={styles.lbl}>{card.sublabel || card.label}</div>
+          <div className={styles.lbl}>{formatLowercaseStart(card.sublabel || card.label)}</div>
         )}
         {card.source && <div className={styles.src}>Zdroj: {card.source}</div>}
       </div>
