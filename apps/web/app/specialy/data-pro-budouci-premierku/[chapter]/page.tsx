@@ -250,7 +250,6 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                   shareTitle={openerFm.title}
                   audio
                 />
-                <ChapterRail currentChapter={params.chapter} variant="article" chapterContents={chapterContents} />
               </Box>
             )}
             <Text style={{
