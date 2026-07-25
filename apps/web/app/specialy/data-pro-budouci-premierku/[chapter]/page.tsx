@@ -200,8 +200,21 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
         {/* Intro: kicker → titulek → text → audio player & menu jako v článku → statistika → text → graf → uzávěr */}
         {meta.intro && (
           <Box style={{ paddingTop: 40 }}>
+            <style>{`
+              .dpbpOpenerTitleLink {
+                text-decoration: none !important;
+                transition: text-decoration-color 0.18s ease;
+              }
+              .dpbpOpenerTitleLink:hover,
+              .dpbpOpenerTitleLink:focus-visible {
+                text-decoration: underline !important;
+                text-decoration-color: var(--accent-underline) !important;
+                text-underline-offset: 4px !important;
+              }
+            `}</style>
             <Text component="div" style={{
-              fontSize: 12,
+              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+              fontSize: 13,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               fontWeight: 700,
@@ -225,12 +238,11 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
               {openerFm && openerHref ? (
                 <Link
                   href={openerHref}
+                  className="dpbpOpenerTitleLink"
                   style={{
                     color: 'inherit',
-                    textDecoration: 'underline',
-                    textDecorationColor: readableAccent(meta.accent),
-                    textUnderlineOffset: '4px',
-                  }}
+                    ['--accent-underline' as string]: readableAccent(meta.accent),
+                  } as React.CSSProperties}
                 >
                   {openerFm.title}
                 </Link>
