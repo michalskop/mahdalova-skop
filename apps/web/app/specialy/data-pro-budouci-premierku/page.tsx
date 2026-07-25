@@ -679,63 +679,57 @@ export default function DpbpLandingPage() {
         }
         .dt-hero {
           background: linear-gradient(90deg, #101432 0%, #de1743 100%);
-          padding: 52px 40px 44px;
+          padding: clamp(28px, 5vw, 52px) clamp(20px, 4vw, 40px);
           display: flex;
-          flex-direction: column-reverse;
-          gap: 2rem;
+          flex-direction: row;
+          justify-content: space-between;
           align-items: center;
-        }
-        @media (min-width: 768px) {
-          .dt-hero {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: stretch;
-          }
+          gap: 1.5rem;
+          width: 100%;
         }
         .dt-hero-content {
-          flex: 1;
-          max-width: 750px;
+          flex: 1 1 auto;
+          min-width: 0;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          align-items: flex-start;
+          text-align: left;
         }
         .dt-tag {
           font-size: 0.85rem;
-          font-weight: 600;
+          font-weight: 500;
           letter-spacing: 1.5px;
           text-transform: uppercase;
           color: #f8f6f0;
           opacity: 0.7;
-          margin: 0;
-          font-family: 'Roboto', system-ui, sans-serif;
+          margin: 0 0 6px 0;
+          font-family: var(--font-roboto-condensed), 'Roboto', system-ui, sans-serif;
           text-align: left;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
         .dt-hero-title {
-          font-family: 'Roboto Slab', Georgia, serif;
+          font-family: var(--font-roboto-slab), Georgia, serif;
           font-weight: 700;
-          font-size: clamp(1.4rem, 2.2vw, 2rem);
-          white-space: nowrap;
+          font-size: clamp(1.4rem, 3.2vw, 2.3rem);
           color: #f8f6f0;
           line-height: 1.1;
           letter-spacing: -0.02em;
           margin: 0;
-          transition: color 0.35s ease, text-shadow 0.35s ease;
-          cursor: default;
-        }
-        .dt-hero-title:hover {
-          color: #ff4d70;
+          text-align: left;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
         .dt-hero-lead {
-          font-size: clamp(15px, 1.5vw, 18px);
+          font-size: clamp(13.5px, 1.6vw, 17.5px);
           font-weight: 400;
           color: #f8f6f0;
-          opacity: 0.7;
-          line-height: 1.6;
-          max-width: 65ch;
+          opacity: 0.85;
+          line-height: 1.35;
+          max-width: 600px;
           font-family: 'Roboto', system-ui, sans-serif;
-          margin: 0;
+          margin: 10px 0 0 0;
+          text-align: left;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
@@ -747,8 +741,8 @@ export default function DpbpLandingPage() {
         }
         .dt-hero-profile svg,
         .dt-hero-profile img {
-          width: clamp(140px, 16vw, 220px);
-          height: auto;
+          width: clamp(75px, 15vw, 160px);
+          height: clamp(75px, 15vw, 160px);
           display: block;
         }
         .dt-infobox {

@@ -13,7 +13,6 @@ interface Crumb {
 
 interface ArticleHeaderProps {
   crumbs: Crumb[];
-  /** Barva odkazů v drobečkové navigaci – accent kapitoly (mění se per kapitola). */
   accent?: string;
   title: string;
   excerpt: string;
@@ -21,10 +20,9 @@ interface ArticleHeaderProps {
   date: string;
   shareUrl: string;
   heroImage?: string;
-  /** Redakční přepínač: zobrazit náhledový obrázek v těle článku. Default false.
-   *  Obrázek (coverImage) se použije jako OG při sdílení bez ohledu na tuto volbu. */
   showHero?: boolean;
   heroCaption?: string;
+  chapterRail?: React.ReactNode;
 }
 
 export default function ArticleHeader({
@@ -38,6 +36,7 @@ export default function ArticleHeader({
   heroImage,
   showHero = false,
   heroCaption,
+  chapterRail,
 }: ArticleHeaderProps) {
   return (
     <header
@@ -57,6 +56,8 @@ export default function ArticleHeader({
       {excerpt && <p className={styles.perex}>{excerpt}</p>}
 
       <ArticleByline author={author} date={date} shareUrl={shareUrl} shareTitle={title} audio />
+
+      {chapterRail}
 
       {showHero && heroImage && (
         <figure className={styles.hero}>
