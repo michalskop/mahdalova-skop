@@ -523,23 +523,66 @@
 .heroHeadRow {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 28px;
+  align-items: center;
+  gap: 24px;
 }
 
-.heroHeadMeta {
+.heroHeadLeft {
+  flex: 1 1 auto;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  transition: gap 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroRail {
+  position: relative;
+  width: calc(100% - 145px);
+  margin-top: 4px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  transition: margin-top 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .heroRail {
+    width: 100%;
+  }
 }
 
 .heroEyebrow {
   display: block;
   font-family: var(--font-roboto-condensed), Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: #f8f6f0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 14px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.heroEyebrowChapter {
+  display: inline;
+}
+
+.heroScrolledSep,
+.heroScrolledNum,
+.heroScrolledTitle {
+  display: none;
+}
+
+.heroScrolledTitle {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 .heroCrumbLink {
@@ -548,6 +591,17 @@
   margin: -2px -6px;
   border-radius: 4px;
   transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.heroCrumbChapterLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.heroCrumbChapterLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .heroCrumbLink:hover,
@@ -559,82 +613,286 @@
 .heroTitle {
   color: #f8f6f0;
   font-family: var(--font-roboto-slab), Georgia, serif;
-  font-size: clamp(2.1rem, 5vw, 2.9rem);
+  font-size: clamp(1.9rem, 4.2vw, 2.5rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: font-size 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.16s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.heroTitle:hover {
+  opacity: 0.92;
 }
 
 .heroProfileWrap {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .heroProfileWrap svg {
-  width: clamp(70px, 12vw, 120px);
-  height: clamp(70px, 12vw, 120px);
+  width: clamp(80px, 12vw, 110px);
+  height: clamp(80px, 12vw, 110px);
   display: block;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom left;
 }
 
 .heroRail {
   position: relative;
-  width: 100%;
-  margin-top: 24px;
+  width: calc(100% - 145px) !important;
+  margin-top: 4px;
   background: transparent;
   border: 0;
   padding: 0;
+  transition: margin-top 0.25s ease;
 }
 
-.heroWindowPanel {
+@media (max-width: 768px) {
+  .heroRail {
+    width: 100% !important;
+  }
+}
+
+/* === WHEN SCROLLED (.heroContainerScrolled): Smooth, zero-flicker, fixed width posuvníky, Roboto Condensed title === */
+.heroContainerScrolled .heroHeadLeft {
+  gap: 3px;
+}
+
+/* Light theme overrides for article page */
+.heroContainerLight .heroEyebrow,
+.heroContainerLight .heroCrumbLink,
+.heroContainerLight .heroScrolledSep,
+.heroContainerLight .heroScrolledTitle,
+.heroContainerLight .heroTitle {
+  color: #101432 !important;
+}
+
+.heroContainerLight .dashBtn {
+  background: #d8d2c9;
+}
+
+.heroContainerLight .heroCurtainPanel {
+  background: #ffffff;
+  border: 1px solid rgba(16, 20, 50, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.heroContainerLight .heroCurtainTitle,
+.heroContainerLight .heroCurtainArticleLink {
+  color: #101432 !important;
+}
+
+.heroContainerLight .heroCurtainArticleLink:hover {
+  background: rgba(16, 20, 50, 0.05);
+  color: #101432 !important;
+}
+
+.heroContainerLight .heroCurtainCloseBtn {
+  background: rgba(16, 20, 50, 0.06);
+  color: #101432;
+}
+
+.heroContainerLight .heroCurtainCloseBtn:hover {
+  background: rgba(16, 20, 50, 0.12);
+  color: #101432;
+}
+
+.heroContainerScrolled .heroEyebrowChapter,
+.heroContainerScrolled .heroTitle {
+  display: none;
+}
+
+.heroContainerScrolled .heroScrolledSep,
+.heroContainerScrolled .heroScrolledNum,
+.heroContainerScrolled .heroScrolledTitle {
+  display: inline;
+}
+
+.heroScrolledTitle {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #f8f6f0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.heroScrolledTitle:hover {
+  text-decoration: none;
+}
+
+.heroContainerLight .heroScrolledSep,
+.heroContainerLight .heroScrolledTitle {
+  color: #101432 !important;
+  opacity: 1;
+}
+
+.heroContainerLight .heroScrolledTitle:hover {
+  color: #101432 !important;
+  text-decoration: none !important;
+}
+
+.heroContainerScrolled .heroScrolledNum {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+}
+
+.heroContainerScrolled .heroProfileWrap {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.heroContainerScrolled .heroProfileWrap svg {
+  width: 44px;
+  height: 44px;
+}
+
+.heroContainerScrolled .heroRail {
+  width: calc(100% - 145px) !important;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .heroHeadLeft {
+    height: auto;
+    gap: 10px;
+  }
+}
+
+/* HERO OPONA / ROZBALOVACÍ PANEL (Plovoucí opona přesahující přes text o šířce čtecího pole 676px s křížkem) */
+.heroCurtainPanel {
   position: absolute;
-  top: calc(100% + 12px);
-  left: 0;
-  width: 100%;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(676px, 100%);
   padding: 16px 20px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(16, 20, 50, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(16, 20, 50, 0.96);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: 100;
-  animation: panelSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: curtainSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   color: #f8f6f0;
 }
 
-.heroWindowPanel .windowHeaderTitle {
+@keyframes curtainSlideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.heroCurtainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.heroCurtainTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.heroCurtainTitleLink {
+  color: #f8f6f0;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: color 0.16s ease;
+}
+
+.heroCurtainTitleLink:hover {
+  color: var(--chapter-accent, #de1743);
+}
+
+.heroCurtainTitle {
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-weight: 700;
+}
+
+.heroCurtainCloseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
   color: #cbd5e1;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.heroWindowPanel .windowTitle {
+.heroCurtainCloseBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.heroCurtainArticleList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.heroCurtainArticleLink {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   color: #f8f6f0;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
 }
 
-.heroWindowPanel .articleLink {
-  color: #f8f6f0;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.heroWindowPanel .articleLink:hover {
-  background: rgba(255, 255, 255, 0.12);
+.heroCurtainArticleLink:hover {
+  background: rgba(255, 255, 255, 0.1);
   border-color: var(--chapter-accent, #de1743);
   color: #ffffff;
+  transform: translateX(3px);
 }
 
-.heroWindowPanel .closeBtn,
-.heroWindowPanel .backBtn {
-  color: #cbd5e1;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.heroWindowPanel .closeBtn:hover,
-.heroWindowPanel .backBtn:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.2);
+.heroEmptyNotice {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12.5px;
+  font-style: italic;
+  padding: 2px 0;
 }
 
 .heroProgress {

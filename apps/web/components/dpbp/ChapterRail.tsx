@@ -12,16 +12,41 @@ interface ChapterRailProps {
   currentChapter: string;
   variant?: 'article' | 'landing' | 'hero';
   chapterContents?: ChapterContents;
+  articleTitle?: string;
+  alwaysCompact?: boolean;
+  theme?: 'dark' | 'light';
 }
 
 export default function ChapterRail({
   currentChapter,
   variant = 'article',
   chapterContents = {},
+  articleTitle,
+  alwaysCompact = false,
+  theme = 'dark',
 }: ChapterRailProps) {
   const [panelMode, setPanelMode] = useState<'closed' | 'chapters' | 'articleList'>('closed');
   const [activePanelTarget, setActivePanelTarget] = useState<'top' | 'bottom' | null>(null);
   const [selectedSlug, setSelectedSlug] = useState<string>(currentChapter);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (alwaysCompact) return;
+    const handleScroll = () => {
+      const top = window.scrollY;
+      setIsScrolled(prev => {
+        if (top > 40) return true;
+        if (top < 5) return false;
+        return prev;
+      });
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [alwaysCompact]);
+
+  const compact = alwaysCompact || isScrolled;
+  const effectiveTheme = isScrolled ? 'light' : theme;
 
   // Global hover state synchronized via CustomEvent across all ChapterRail instances
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null);
@@ -36,6 +61,10 @@ export default function ChapterRail({
   }, []);
 
   const triggerHover = (slug: string | null) => {
+    if (panelMode === 'articleList' && slug !== null) {
+      // Ignorovat letmý hover, pokud je opona/menu ručně připnutá kliknutím
+      return;
+    }
     window.dispatchEvent(new CustomEvent('dpbp-chapter-hover', { detail: slug }));
   };
 
@@ -77,10 +106,12 @@ export default function ChapterRail({
     if (panelMode === 'articleList' && selectedSlug === slug && activePanelTarget === 'top') {
       setPanelMode('closed');
       setActivePanelTarget(null);
+      triggerHover(null);
     } else {
       setSelectedSlug(slug);
       setPanelMode('articleList');
       setActivePanelTarget('top');
+      triggerHover(null);
     }
   };
 
@@ -88,10 +119,12 @@ export default function ChapterRail({
     if (panelMode === 'articleList' && selectedSlug === slug && activePanelTarget === 'bottom') {
       setPanelMode('closed');
       setActivePanelTarget(null);
+      triggerHover(null);
     } else {
       setSelectedSlug(slug);
       setPanelMode('articleList');
       setActivePanelTarget('bottom');
+      triggerHover(null);
     }
   };
 
@@ -99,9 +132,11 @@ export default function ChapterRail({
     if (panelMode === 'chapters' && activePanelTarget === 'top') {
       setPanelMode('closed');
       setActivePanelTarget(null);
+      triggerHover(null);
     } else {
       setPanelMode('chapters');
       setActivePanelTarget('top');
+      triggerHover(null);
     }
   };
 
@@ -109,9 +144,11 @@ export default function ChapterRail({
     if (panelMode === 'chapters' && activePanelTarget === 'bottom') {
       setPanelMode('closed');
       setActivePanelTarget(null);
+      triggerHover(null);
     } else {
       setPanelMode('chapters');
       setActivePanelTarget('bottom');
+      triggerHover(null);
     }
   };
 
@@ -120,9 +157,9 @@ export default function ChapterRail({
       {/* HORNÍ ZÁHLAVÍ / MENU */}
       {variant === 'hero' ? (
         /* 1. HERO ZÁHLAVÍ (na landing page kapitoly v tmavém poli #101432) */
-        <div className={styles.heroContainer}>
+        <div className={`${styles.heroContainer} ${compact ? styles.heroContainerScrolled : ''}`}>
           <div className={styles.heroHeadRow}>
-            <div className={styles.heroHeadMeta}>
+            <div className={styles.heroHeadLeft}>
               <span className={styles.heroEyebrow}>
                 <Link
                   href="/specialy/data-pro-budouci-premierku"
@@ -130,10 +167,112 @@ export default function ChapterRail({
                   style={{ color: activeChapterMeta.accent, ['--chapter-accent' as string]: activeChapterMeta.accent } as CSSProperties}
                 >
                   Data pro budoucí premiérku
-                </Link>{' '}
-                · Kapitola {activeChapterMeta.id}
+                </Link>
+                <span className={styles.heroEyebrowChapter}>
+                  {' '}· Kapitola {activeChapterMeta.id}
+                  {articleTitle && (
+                    <>
+                      {' '}·{' '}
+                      <Link href={chapterHref(activeChapterMeta.slug)} className={styles.heroCrumbChapterLink}>
+                        {activeChapterMeta.title}
+                      </Link>
+                    </>
+                  )}
+                </span>
+                <span className={styles.heroScrolledSep}> · </span>
+                <span className={styles.heroScrolledNum}>Kapitola {activeChapterMeta.id}. </span>
+                <Link
+                  href={chapterHref(activeChapterMeta.slug)}
+                  className={styles.heroScrolledTitle}
+                  title={`Přejít na kapitolu ${activeChapterMeta.title}`}
+                >
+                  {activeChapterMeta.title}
+                </Link>
               </span>
-              <h1 className={styles.heroTitle}>{activeChapterMeta.title}</h1>
+
+              <h1
+                className={styles.heroTitle}
+                onClick={() => handleTopDashClick(currentChapter)}
+                title="Kliknutím rozbalíte / zavřete téma"
+              >
+                {articleTitle ?? activeChapterMeta.title}
+              </h1>
+
+              {/* 15 Posuvníků vázaných na spodní oranžovou vodící linku */}
+              <div
+                className={styles.heroRail}
+                onMouseLeave={handleMouseLeaveRail}
+              >
+                <div className={styles.heroProgress}>
+                  {DPBP_CHAPTERS.map(chapter => {
+                    const isActive = chapter.slug === activeSlug;
+
+                    return (
+                      <div key={chapter.id} className={styles.dashItem}>
+                        <button
+                          type="button"
+                          className={`${styles.dashBtn} ${isActive ? styles.dashActive : ''}`}
+                          style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
+                          onMouseEnter={() => triggerHover(chapter.slug)}
+                          onFocus={() => triggerHover(chapter.slug)}
+                          onClick={() => handleTopDashClick(chapter.slug)}
+                          aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* HERO OPONA / ROZBALOVACÍ PANEL */}
+                {(hoveredSlug !== null || (panelMode === 'articleList' && activePanelTarget === 'top')) && (
+                  <div
+                    className={styles.heroCurtainPanel}
+                    style={{ ['--chapter-accent' as string]: displayChapterMeta.accent } as CSSProperties}
+                  >
+                    <div className={styles.heroCurtainHeader}>
+                      <div className={styles.heroCurtainTitleGroup}>
+                        <span className={styles.panelDot} style={{ background: displayChapterMeta.accent }} aria-hidden />
+                        <Link
+                          href={chapterHref(displayChapterMeta.slug)}
+                          className={styles.heroCurtainTitleLink}
+                          title="Přejít na úvodní stránku kapitoly"
+                        >
+                          <strong className={styles.heroCurtainTitle}>
+                            {displayChapterMeta.id} · {displayChapterMeta.title}
+                          </strong>
+                        </Link>
+                      </div>
+
+                      <button
+                        type="button"
+                        className={styles.heroCurtainCloseBtn}
+                        onClick={() => {
+                          setPanelMode('closed');
+                          setActivePanelTarget(null);
+                          triggerHover(null);
+                        }}
+                        aria-label="Zavřít okno (Esc)"
+                      >
+                        <IconX size={16} />
+                      </button>
+                    </div>
+
+                    {displayArticles.length > 0 ? (
+                      <ul className={styles.heroCurtainArticleList}>
+                        {displayArticles.map(article => (
+                          <li key={article.href || article.title}>
+                            <Link href={article.href} className={styles.heroCurtainArticleLink}>
+                              <span>{article.title}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className={styles.heroEmptyNotice}>Obsah kapitoly připravujeme.</p>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className={styles.heroProfileWrap}>
@@ -141,83 +280,6 @@ export default function ChapterRail({
                 <ProfileHead silColor={activeChapterMeta.accent} />
               </Link>
             </div>
-          </div>
-
-          {/* 15 Vodorovných posuvníků v hero záhlaví bez rámečku */}
-          <div
-            className={styles.heroRail}
-            onMouseLeave={handleMouseLeaveRail}
-          >
-            <div className={styles.heroProgress}>
-              {DPBP_CHAPTERS.map(chapter => {
-                const isActive = chapter.slug === activeSlug;
-
-                return (
-                  <div key={chapter.id} className={styles.dashItem}>
-                    <button
-                      type="button"
-                      className={`${styles.dashBtn} ${isActive ? styles.dashActive : ''}`}
-                      style={{ ['--preview-color' as string]: chapter.accent } as CSSProperties}
-                      onMouseEnter={() => triggerHover(chapter.slug)}
-                      onFocus={() => triggerHover(chapter.slug)}
-                      onClick={() => handleTopDashClick(chapter.slug)}
-                      aria-label={`Kapitola ${chapter.id}: ${chapter.title}`}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* HERO OKNO / PANEL (Tmavé reverzní pozadí s 5% průsvitností a živou aktualizací při hoveru) */}
-            {panelMode === 'articleList' && activePanelTarget === 'top' && (
-              <div
-                className={`${styles.windowPanel} ${styles.heroWindowPanel}`}
-                style={{ ['--chapter-accent' as string]: displayChapterMeta.accent } as CSSProperties}
-              >
-                <div className={styles.windowHeader}>
-                  <div className={styles.windowTitleGroup}>
-                    <span className={styles.panelDot} style={{ background: displayChapterMeta.accent }} aria-hidden />
-                    <Link
-                      href={chapterHref(displayChapterMeta.slug)}
-                      className={styles.windowTitleLink}
-                      title="Přejít na úvodní stránku kapitoly"
-                    >
-                      <strong className={styles.windowTitle}>
-                        {displayChapterMeta.id} · {displayChapterMeta.title}
-                      </strong>
-                    </Link>
-                  </div>
-
-                  <div className={styles.windowHeaderActions}>
-                    <button
-                      type="button"
-                      className={styles.closeBtn}
-                      onClick={() => {
-                        setPanelMode('closed');
-                        setActivePanelTarget(null);
-                      }}
-                      aria-label="Zavřít okno (Esc)"
-                    >
-                      <IconX size={16} />
-                    </button>
-                  </div>
-                </div>
-
-                {displayArticles.length > 0 ? (
-                  <ul className={styles.articleList}>
-                    {displayArticles.map(article => (
-                      <li key={article.href || article.title}>
-                        <Link href={article.href} className={styles.articleLink}>
-                          <span>{article.title}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className={styles.emptyNotice}>Obsah kapitoly připravujeme.</p>
-                )}
-              </div>
-            )}
           </div>
         </div>
       ) : (

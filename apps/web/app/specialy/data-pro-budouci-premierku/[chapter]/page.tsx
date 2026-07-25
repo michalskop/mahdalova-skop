@@ -166,8 +166,8 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
-      {/* Chapter header – dynamicky reaguje na hover ve všech menu */}
-      <Box style={{ background: '#101432', padding: '52px 0 44px' }}>
+      {/* Chapter header – dynamicky reaguje na hover ve všech menu a drží sticky pod hlavní lištou */}
+      <Box style={{ position: 'sticky', top: 56, zIndex: 90, background: '#101432', padding: '24px 0 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', transition: 'padding 0.2s ease' }}>
         <Container size="md">
           <ChapterRail currentChapter={params.chapter} variant="hero" chapterContents={chapterContents} />
           <style

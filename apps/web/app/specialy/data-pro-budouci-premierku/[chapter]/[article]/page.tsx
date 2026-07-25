@@ -132,13 +132,22 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
 
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
-      {/* Article header – náležitosti (titulek, perex, autoři, datum, sdílení,
-          audio stopa, navigace kapitol, náhledový obrázek) */}
+      {/* Sticky Header Menu pro Článek (Světlé pozadí #fdfbf7, na šířku článku, název kapitoly) */}
+      <Box style={{ position: 'sticky', top: 56, zIndex: 90 }}>
+        <Container size="sm" style={{ padding: '0 16px' }}>
+          <ChapterRail
+            currentChapter={params.chapter}
+            variant="hero"
+            theme="light"
+            chapterContents={chapterContents}
+            alwaysCompact={true}
+          />
+        </Container>
+      </Box>
+
+      {/* Article header – titulek článku zůstává v těle článku tak, jak má být */}
       <ArticleHeader
-        crumbs={[
-          { label: 'Data pro budoucí premiérku', href: '/specialy/data-pro-budouci-premierku' },
-          { label: chapterMeta?.title ?? 'Kapitola', href: `/specialy/data-pro-budouci-premierku/${params.chapter}` },
-        ]}
+        crumbs={[]}
         accent={textAccent}
         title={fm.title}
         excerpt={fm.excerpt}
@@ -147,9 +156,6 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
         shareUrl={shareUrl}
         heroImage={fm.coverImage}
         showHero={fm.heroInArticle === true}
-        chapterRail={
-          <ChapterRail currentChapter={params.chapter} variant="article" chapterContents={chapterContents} />
-        }
       />
 
       {/* Article body */}

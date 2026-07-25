@@ -23,6 +23,7 @@ interface ArticleHeaderProps {
   showHero?: boolean;
   heroCaption?: string;
   chapterRail?: React.ReactNode;
+  hideTitleAndCrumbs?: boolean;
 }
 
 export default function ArticleHeader({
@@ -37,22 +38,28 @@ export default function ArticleHeader({
   showHero = false,
   heroCaption,
   chapterRail,
+  hideTitleAndCrumbs = false,
 }: ArticleHeaderProps) {
   return (
     <header
       className={styles.header}
       style={accent ? ({ ['--chapter-accent']: accent } as CSSProperties) : undefined}
     >
-      <div className={styles.crumb}>
-        {crumbs.map((c, i) => (
-          <span key={`${c.label}-${i}`}>
-            {c.href ? <Link href={c.href}>{c.label}</Link> : c.label}
-            {i < crumbs.length - 1 && <span className={styles.sep}>›</span>}
-          </span>
-        ))}
-      </div>
-
-      <h1 className={styles.title}>{title}</h1>
+      {!hideTitleAndCrumbs && (
+        <>
+          {crumbs.length > 0 && (
+            <div className={styles.crumb}>
+              {crumbs.map((c, i) => (
+                <span key={`${c.label}-${i}`}>
+                  {c.href ? <Link href={c.href}>{c.label}</Link> : c.label}
+                  {i < crumbs.length - 1 && <span className={styles.sep}>›</span>}
+                </span>
+              ))}
+            </div>
+          )}
+          <h1 className={styles.title}>{title}</h1>
+        </>
+      )}
       {excerpt && <p className={styles.perex}>{excerpt}</p>}
 
       <ArticleByline author={author} date={date} shareUrl={shareUrl} shareTitle={title} audio />
