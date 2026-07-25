@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, type CSSProperties } from 'react';
+import { useState, useEffect, useRef, type CSSProperties } from 'react';
 import Link from 'next/link';
 import { IconChevronDown, IconX, IconArrowLeft } from '@tabler/icons-react';
 import { chapterHref, DPBP_CHAPTERS, DPBP_HOME } from './chapterNavigation';
@@ -30,14 +30,16 @@ export default function ChapterRail({
   const [selectedSlug, setSelectedSlug] = useState<string>(currentChapter);
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const ignoreScrollRef = useRef(false);
 
   useEffect(() => {
     if (alwaysCompact) return;
     const handleScroll = () => {
+      if (ignoreScrollRef.current) return;
       const top = window.scrollY;
       setIsScrolled(prev => {
-        if (top > 40) return true;
-        if (top < 5) return false;
+        if (top > 90) return true;
+        if (top < 20) return false;
         return prev;
       });
     };
@@ -45,8 +47,16 @@ export default function ChapterRail({
     return () => window.removeEventListener('scroll', handleScroll);
   }, [alwaysCompact]);
 
+  useEffect(() => {
+    if (alwaysCompact) return;
+    ignoreScrollRef.current = true;
+    const id = setTimeout(() => {
+      ignoreScrollRef.current = false;
+    }, 120);
+    return () => clearTimeout(id);
+  }, [isScrolled, alwaysCompact]);
+
   const compact = alwaysCompact || isScrolled;
-  const effectiveTheme = isScrolled ? 'light' : theme;
 
   // Global hover state synchronized via CustomEvent across all ChapterRail instances
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null);
@@ -157,14 +167,14 @@ export default function ChapterRail({
       {/* HORNÍ ZÁHLAVÍ / MENU */}
       {variant === 'hero' ? (
         /* 1. HERO ZÁHLAVÍ (na landing page kapitoly v tmavém poli #101432) */
-        <div className={`${styles.heroContainer} ${compact ? styles.heroContainerScrolled : ''}`}>
+        <div className={`${styles.heroContainer} ${compact ? styles.heroContainerScrolled : ''} ${theme === 'light' ? styles.heroContainerLight : ''}`}>
           <div className={styles.heroHeadRow}>
             <div className={styles.heroHeadLeft}>
               <span className={styles.heroEyebrow}>
                 <Link
                   href="/specialy/data-pro-budouci-premierku"
                   className={styles.heroCrumbLink}
-                  style={{ color: activeChapterMeta.accent, ['--chapter-accent' as string]: activeChapterMeta.accent } as CSSProperties}
+                  style={{ ['--chapter-accent' as string]: activeChapterMeta.accent } as CSSProperties}
                 >
                   Data pro budoucí premiérku
                 </Link>
@@ -180,7 +190,6 @@ export default function ChapterRail({
                   )}
                 </span>
                 <span className={styles.heroScrolledSep}> · </span>
-                <span className={styles.heroScrolledNum}>Kapitola {activeChapterMeta.id}. </span>
                 <Link
                   href={chapterHref(activeChapterMeta.slug)}
                   className={styles.heroScrolledTitle}

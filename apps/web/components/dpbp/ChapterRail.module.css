@@ -570,22 +570,23 @@
 }
 
 .heroScrolledSep,
-.heroScrolledNum,
 .heroScrolledTitle {
   display: none;
 }
 
 .heroScrolledTitle {
   font-family: var(--font-roboto-condensed), Arial, sans-serif;
-  font-size: 13.5px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .heroCrumbLink {
+  color: inherit;
   text-decoration: none;
   padding: 2px 6px;
   margin: -2px -6px;
@@ -604,9 +605,24 @@
   text-decoration: underline;
 }
 
+.heroContainerLight .heroCrumbChapterLink {
+  color: #101432 !important;
+}
+
+.heroContainerLight .heroCrumbChapterLink:hover {
+  color: #101432 !important;
+  text-decoration: none !important;
+}
+
 .heroCrumbLink:hover,
 .heroCrumbLink:focus-visible {
   background-color: var(--chapter-accent, #de1743) !important;
+  color: #101432 !important;
+}
+
+.heroContainerLight .heroCrumbLink:hover,
+.heroContainerLight .heroCrumbLink:focus-visible {
+  background-color: transparent !important;
   color: #101432 !important;
 }
 
@@ -710,20 +726,14 @@
 }
 
 .heroContainerScrolled .heroScrolledSep,
-.heroContainerScrolled .heroScrolledNum,
 .heroContainerScrolled .heroScrolledTitle {
   display: inline;
 }
 
-.heroScrolledTitle {
-  font-family: var(--font-roboto-condensed), Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: #f8f6f0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  cursor: pointer;
+.heroContainerScrolled .heroCrumbLink,
+.heroContainerScrolled .heroScrolledSep,
+.heroContainerScrolled .heroScrolledTitle {
+  color: #ffffff !important;
 }
 
 .heroScrolledTitle:hover {
@@ -739,13 +749,6 @@
 .heroContainerLight .heroScrolledTitle:hover {
   color: #101432 !important;
   text-decoration: none !important;
-}
-
-.heroContainerScrolled .heroScrolledNum {
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 13.5px;
-  font-family: var(--font-roboto-condensed), Arial, sans-serif;
 }
 
 .heroContainerScrolled .heroProfileWrap {

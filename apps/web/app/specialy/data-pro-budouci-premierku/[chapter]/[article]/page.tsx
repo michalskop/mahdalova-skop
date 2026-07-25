@@ -135,7 +135,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   return (
     <Box style={{ background: '#fdfbf7', minHeight: '100vh', paddingBottom: 76 }}>
       {/* Sticky Header Menu pro Článek (Světlé pozadí #fdfbf7, na šířku článku, název kapitoly) */}
-      <Box style={{ position: 'sticky', top: 56, zIndex: 90 }}>
+      <Box style={{ position: 'sticky', top: 56, zIndex: 90, background: '#fdfbf7', borderBottom: '1px solid #e8e2d9' }}>
         <Container size="sm" style={{ padding: '0 16px' }}>
           <ChapterRail
             currentChapter={params.chapter}
