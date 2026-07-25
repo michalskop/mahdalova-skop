@@ -134,7 +134,7 @@ export default function ChapterRail({
 
             <div className={styles.heroProfileWrap}>
               <Link href="/specialy/data-pro-budouci-premierku" aria-label="Zpět na Data pro budoucí premiérku">
-                <ProfileHead silColor={activeChapterMeta.accent} style={{ width: '100%', height: '100%', display: 'block' }} />
+                <ProfileHead silColor={activeChapterMeta.accent} />
               </Link>
             </div>
           </div>
