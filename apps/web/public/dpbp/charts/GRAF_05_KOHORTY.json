@@ -1,0 +1,2616 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "České ženy mají dlouhodobě stále méně dětí i po započtení porodů v pozdějších věcích",
+    "subtitle": "Kumulativní plodnost podle věku matky pro vybrané ročníky narození"
+  },
+  "_source": "[Human Fertility Database – Česká republika](https://www.humanfertility.org/Country/Country?cntr=CZE) · [ČSÚ – Obyvatelstvo ČR](https://csu.gov.cz/produkty/oby_cr)",
+  "height": 350,
+  "data": {
+    "values": [
+      {
+        "vek": 12,
+        "kohort": 1940,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1945,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1950,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1955,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1960,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1965,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1970,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1975,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1980,
+        "plodnost": 3e-05
+      },
+      {
+        "vek": 12,
+        "kohort": 1985,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1990,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 12,
+        "kohort": 1995,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 13,
+        "kohort": 1940,
+        "plodnost": 1e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1945,
+        "plodnost": 1e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1950,
+        "plodnost": 1e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1955,
+        "plodnost": 1e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1960,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 13,
+        "kohort": 1965,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 13,
+        "kohort": 1970,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 13,
+        "kohort": 1975,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 13,
+        "kohort": 1980,
+        "plodnost": 4e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1985,
+        "plodnost": 2e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1990,
+        "plodnost": 3e-05
+      },
+      {
+        "vek": 13,
+        "kohort": 1995,
+        "plodnost": 0.0
+      },
+      {
+        "vek": 14,
+        "kohort": 1940,
+        "plodnost": 0.00019
+      },
+      {
+        "vek": 14,
+        "kohort": 1945,
+        "plodnost": 7e-05
+      },
+      {
+        "vek": 14,
+        "kohort": 1950,
+        "plodnost": 0.00011
+      },
+      {
+        "vek": 14,
+        "kohort": 1955,
+        "plodnost": 9e-05
+      },
+      {
+        "vek": 14,
+        "kohort": 1960,
+        "plodnost": 0.0001
+      },
+      {
+        "vek": 14,
+        "kohort": 1965,
+        "plodnost": 5e-05
+      },
+      {
+        "vek": 14,
+        "kohort": 1970,
+        "plodnost": 1e-05
+      },
+      {
+        "vek": 14,
+        "kohort": 1975,
+        "plodnost": 4e-05
+      },
+      {
+        "vek": 14,
+        "kohort": 1980,
+        "plodnost": 0.00015
+      },
+      {
+        "vek": 14,
+        "kohort": 1985,
+        "plodnost": 7e-05
+      },
+      {
+        "vek": 14,
+        "kohort": 1990,
+        "plodnost": 0.00011
+      },
+      {
+        "vek": 14,
+        "kohort": 1995,
+        "plodnost": 0.00015
+      },
+      {
+        "vek": 15,
+        "kohort": 1940,
+        "plodnost": 0.00126
+      },
+      {
+        "vek": 15,
+        "kohort": 1945,
+        "plodnost": 0.0006
+      },
+      {
+        "vek": 15,
+        "kohort": 1950,
+        "plodnost": 0.00073
+      },
+      {
+        "vek": 15,
+        "kohort": 1955,
+        "plodnost": 0.00084
+      },
+      {
+        "vek": 15,
+        "kohort": 1960,
+        "plodnost": 0.00071
+      },
+      {
+        "vek": 15,
+        "kohort": 1965,
+        "plodnost": 0.00059
+      },
+      {
+        "vek": 15,
+        "kohort": 1970,
+        "plodnost": 0.00032
+      },
+      {
+        "vek": 15,
+        "kohort": 1975,
+        "plodnost": 0.00059
+      },
+      {
+        "vek": 15,
+        "kohort": 1980,
+        "plodnost": 0.00068
+      },
+      {
+        "vek": 15,
+        "kohort": 1985,
+        "plodnost": 0.00048
+      },
+      {
+        "vek": 15,
+        "kohort": 1990,
+        "plodnost": 0.00083
+      },
+      {
+        "vek": 15,
+        "kohort": 1995,
+        "plodnost": 0.00077
+      },
+      {
+        "vek": 16,
+        "kohort": 1940,
+        "plodnost": 0.0073
+      },
+      {
+        "vek": 16,
+        "kohort": 1945,
+        "plodnost": 0.00401
+      },
+      {
+        "vek": 16,
+        "kohort": 1950,
+        "plodnost": 0.00415
+      },
+      {
+        "vek": 16,
+        "kohort": 1955,
+        "plodnost": 0.00504
+      },
+      {
+        "vek": 16,
+        "kohort": 1960,
+        "plodnost": 0.00451
+      },
+      {
+        "vek": 16,
+        "kohort": 1965,
+        "plodnost": 0.00408
+      },
+      {
+        "vek": 16,
+        "kohort": 1970,
+        "plodnost": 0.0034
+      },
+      {
+        "vek": 16,
+        "kohort": 1975,
+        "plodnost": 0.00366
+      },
+      {
+        "vek": 16,
+        "kohort": 1980,
+        "plodnost": 0.00316
+      },
+      {
+        "vek": 16,
+        "kohort": 1985,
+        "plodnost": 0.0025
+      },
+      {
+        "vek": 16,
+        "kohort": 1990,
+        "plodnost": 0.00305
+      },
+      {
+        "vek": 16,
+        "kohort": 1995,
+        "plodnost": 0.00373
+      },
+      {
+        "vek": 17,
+        "kohort": 1940,
+        "plodnost": 0.03063
+      },
+      {
+        "vek": 17,
+        "kohort": 1945,
+        "plodnost": 0.0189
+      },
+      {
+        "vek": 17,
+        "kohort": 1950,
+        "plodnost": 0.01887
+      },
+      {
+        "vek": 17,
+        "kohort": 1955,
+        "plodnost": 0.02198
+      },
+      {
+        "vek": 17,
+        "kohort": 1960,
+        "plodnost": 0.0228
+      },
+      {
+        "vek": 17,
+        "kohort": 1965,
+        "plodnost": 0.02035
+      },
+      {
+        "vek": 17,
+        "kohort": 1970,
+        "plodnost": 0.01789
+      },
+      {
+        "vek": 17,
+        "kohort": 1975,
+        "plodnost": 0.01702
+      },
+      {
+        "vek": 17,
+        "kohort": 1980,
+        "plodnost": 0.01014
+      },
+      {
+        "vek": 17,
+        "kohort": 1985,
+        "plodnost": 0.0089
+      },
+      {
+        "vek": 17,
+        "kohort": 1990,
+        "plodnost": 0.00895
+      },
+      {
+        "vek": 17,
+        "kohort": 1995,
+        "plodnost": 0.01086
+      },
+      {
+        "vek": 18,
+        "kohort": 1940,
+        "plodnost": 0.08283
+      },
+      {
+        "vek": 18,
+        "kohort": 1945,
+        "plodnost": 0.06958
+      },
+      {
+        "vek": 18,
+        "kohort": 1950,
+        "plodnost": 0.06433
+      },
+      {
+        "vek": 18,
+        "kohort": 1955,
+        "plodnost": 0.07228
+      },
+      {
+        "vek": 18,
+        "kohort": 1960,
+        "plodnost": 0.08184
+      },
+      {
+        "vek": 18,
+        "kohort": 1965,
+        "plodnost": 0.07388
+      },
+      {
+        "vek": 18,
+        "kohort": 1970,
+        "plodnost": 0.06836
+      },
+      {
+        "vek": 18,
+        "kohort": 1975,
+        "plodnost": 0.05695
+      },
+      {
+        "vek": 18,
+        "kohort": 1980,
+        "plodnost": 0.0257
+      },
+      {
+        "vek": 18,
+        "kohort": 1985,
+        "plodnost": 0.02172
+      },
+      {
+        "vek": 18,
+        "kohort": 1990,
+        "plodnost": 0.02177
+      },
+      {
+        "vek": 18,
+        "kohort": 1995,
+        "plodnost": 0.02359
+      },
+      {
+        "vek": 19,
+        "kohort": 1940,
+        "plodnost": 0.18367
+      },
+      {
+        "vek": 19,
+        "kohort": 1945,
+        "plodnost": 0.17897
+      },
+      {
+        "vek": 19,
+        "kohort": 1950,
+        "plodnost": 0.16483
+      },
+      {
+        "vek": 19,
+        "kohort": 1955,
+        "plodnost": 0.18716
+      },
+      {
+        "vek": 19,
+        "kohort": 1960,
+        "plodnost": 0.21178
+      },
+      {
+        "vek": 19,
+        "kohort": 1965,
+        "plodnost": 0.1904
+      },
+      {
+        "vek": 19,
+        "kohort": 1970,
+        "plodnost": 0.17963
+      },
+      {
+        "vek": 19,
+        "kohort": 1975,
+        "plodnost": 0.12469
+      },
+      {
+        "vek": 19,
+        "kohort": 1980,
+        "plodnost": 0.05472
+      },
+      {
+        "vek": 19,
+        "kohort": 1985,
+        "plodnost": 0.0419
+      },
+      {
+        "vek": 19,
+        "kohort": 1990,
+        "plodnost": 0.04307
+      },
+      {
+        "vek": 19,
+        "kohort": 1995,
+        "plodnost": 0.04487
+      },
+      {
+        "vek": 20,
+        "kohort": 1940,
+        "plodnost": 0.33976
+      },
+      {
+        "vek": 20,
+        "kohort": 1945,
+        "plodnost": 0.33796
+      },
+      {
+        "vek": 20,
+        "kohort": 1950,
+        "plodnost": 0.32128
+      },
+      {
+        "vek": 20,
+        "kohort": 1955,
+        "plodnost": 0.36659
+      },
+      {
+        "vek": 20,
+        "kohort": 1960,
+        "plodnost": 0.39491
+      },
+      {
+        "vek": 20,
+        "kohort": 1965,
+        "plodnost": 0.36053
+      },
+      {
+        "vek": 20,
+        "kohort": 1970,
+        "plodnost": 0.34361
+      },
+      {
+        "vek": 20,
+        "kohort": 1975,
+        "plodnost": 0.20049
+      },
+      {
+        "vek": 20,
+        "kohort": 1980,
+        "plodnost": 0.09423
+      },
+      {
+        "vek": 20,
+        "kohort": 1985,
+        "plodnost": 0.07045
+      },
+      {
+        "vek": 20,
+        "kohort": 1990,
+        "plodnost": 0.07137
+      },
+      {
+        "vek": 20,
+        "kohort": 1995,
+        "plodnost": 0.07282
+      },
+      {
+        "vek": 21,
+        "kohort": 1940,
+        "plodnost": 0.53003
+      },
+      {
+        "vek": 21,
+        "kohort": 1945,
+        "plodnost": 0.52308
+      },
+      {
+        "vek": 21,
+        "kohort": 1950,
+        "plodnost": 0.50252
+      },
+      {
+        "vek": 21,
+        "kohort": 1955,
+        "plodnost": 0.58224
+      },
+      {
+        "vek": 21,
+        "kohort": 1960,
+        "plodnost": 0.60052
+      },
+      {
+        "vek": 21,
+        "kohort": 1965,
+        "plodnost": 0.554
+      },
+      {
+        "vek": 21,
+        "kohort": 1970,
+        "plodnost": 0.52372
+      },
+      {
+        "vek": 21,
+        "kohort": 1975,
+        "plodnost": 0.27949
+      },
+      {
+        "vek": 21,
+        "kohort": 1980,
+        "plodnost": 0.13922
+      },
+      {
+        "vek": 21,
+        "kohort": 1985,
+        "plodnost": 0.10686
+      },
+      {
+        "vek": 21,
+        "kohort": 1990,
+        "plodnost": 0.10469
+      },
+      {
+        "vek": 21,
+        "kohort": 1995,
+        "plodnost": 0.10951
+      },
+      {
+        "vek": 22,
+        "kohort": 1940,
+        "plodnost": 0.7364
+      },
+      {
+        "vek": 22,
+        "kohort": 1945,
+        "plodnost": 0.70643
+      },
+      {
+        "vek": 22,
+        "kohort": 1950,
+        "plodnost": 0.70192
+      },
+      {
+        "vek": 22,
+        "kohort": 1955,
+        "plodnost": 0.8089
+      },
+      {
+        "vek": 22,
+        "kohort": 1960,
+        "plodnost": 0.80744
+      },
+      {
+        "vek": 22,
+        "kohort": 1965,
+        "plodnost": 0.74598
+      },
+      {
+        "vek": 22,
+        "kohort": 1970,
+        "plodnost": 0.68693
+      },
+      {
+        "vek": 22,
+        "kohort": 1975,
+        "plodnost": 0.36271
+      },
+      {
+        "vek": 22,
+        "kohort": 1980,
+        "plodnost": 0.19069
+      },
+      {
+        "vek": 22,
+        "kohort": 1985,
+        "plodnost": 0.14894
+      },
+      {
+        "vek": 22,
+        "kohort": 1990,
+        "plodnost": 0.1438
+      },
+      {
+        "vek": 22,
+        "kohort": 1995,
+        "plodnost": 0.1552
+      },
+      {
+        "vek": 23,
+        "kohort": 1940,
+        "plodnost": 0.95088
+      },
+      {
+        "vek": 23,
+        "kohort": 1945,
+        "plodnost": 0.8745
+      },
+      {
+        "vek": 23,
+        "kohort": 1950,
+        "plodnost": 0.91602
+      },
+      {
+        "vek": 23,
+        "kohort": 1955,
+        "plodnost": 1.02665
+      },
+      {
+        "vek": 23,
+        "kohort": 1960,
+        "plodnost": 0.99869
+      },
+      {
+        "vek": 23,
+        "kohort": 1965,
+        "plodnost": 0.92899
+      },
+      {
+        "vek": 23,
+        "kohort": 1970,
+        "plodnost": 0.83817
+      },
+      {
+        "vek": 23,
+        "kohort": 1975,
+        "plodnost": 0.45064
+      },
+      {
+        "vek": 23,
+        "kohort": 1980,
+        "plodnost": 0.24631
+      },
+      {
+        "vek": 23,
+        "kohort": 1985,
+        "plodnost": 0.19786
+      },
+      {
+        "vek": 23,
+        "kohort": 1990,
+        "plodnost": 0.18716
+      },
+      {
+        "vek": 23,
+        "kohort": 1995,
+        "plodnost": 0.20888
+      },
+      {
+        "vek": 24,
+        "kohort": 1940,
+        "plodnost": 1.14801
+      },
+      {
+        "vek": 24,
+        "kohort": 1945,
+        "plodnost": 1.03076
+      },
+      {
+        "vek": 24,
+        "kohort": 1950,
+        "plodnost": 1.12786
+      },
+      {
+        "vek": 24,
+        "kohort": 1955,
+        "plodnost": 1.22059
+      },
+      {
+        "vek": 24,
+        "kohort": 1960,
+        "plodnost": 1.17045
+      },
+      {
+        "vek": 24,
+        "kohort": 1965,
+        "plodnost": 1.097
+      },
+      {
+        "vek": 24,
+        "kohort": 1970,
+        "plodnost": 0.96274
+      },
+      {
+        "vek": 24,
+        "kohort": 1975,
+        "plodnost": 0.54136
+      },
+      {
+        "vek": 24,
+        "kohort": 1980,
+        "plodnost": 0.30923
+      },
+      {
+        "vek": 24,
+        "kohort": 1985,
+        "plodnost": 0.25557
+      },
+      {
+        "vek": 24,
+        "kohort": 1990,
+        "plodnost": 0.2386
+      },
+      {
+        "vek": 24,
+        "kohort": 1995,
+        "plodnost": 0.27281
+      },
+      {
+        "vek": 25,
+        "kohort": 1940,
+        "plodnost": 1.3133
+      },
+      {
+        "vek": 25,
+        "kohort": 1945,
+        "plodnost": 1.17369
+      },
+      {
+        "vek": 25,
+        "kohort": 1950,
+        "plodnost": 1.31645
+      },
+      {
+        "vek": 25,
+        "kohort": 1955,
+        "plodnost": 1.37963
+      },
+      {
+        "vek": 25,
+        "kohort": 1960,
+        "plodnost": 1.32363
+      },
+      {
+        "vek": 25,
+        "kohort": 1965,
+        "plodnost": 1.25002
+      },
+      {
+        "vek": 25,
+        "kohort": 1970,
+        "plodnost": 1.06817
+      },
+      {
+        "vek": 25,
+        "kohort": 1975,
+        "plodnost": 0.63678
+      },
+      {
+        "vek": 25,
+        "kohort": 1980,
+        "plodnost": 0.38347
+      },
+      {
+        "vek": 25,
+        "kohort": 1985,
+        "plodnost": 0.32237
+      },
+      {
+        "vek": 25,
+        "kohort": 1990,
+        "plodnost": 0.30499
+      },
+      {
+        "vek": 25,
+        "kohort": 1995,
+        "plodnost": 0.35263
+      },
+      {
+        "vek": 26,
+        "kohort": 1940,
+        "plodnost": 1.45034
+      },
+      {
+        "vek": 26,
+        "kohort": 1945,
+        "plodnost": 1.30676
+      },
+      {
+        "vek": 26,
+        "kohort": 1950,
+        "plodnost": 1.47616
+      },
+      {
+        "vek": 26,
+        "kohort": 1955,
+        "plodnost": 1.51148
+      },
+      {
+        "vek": 26,
+        "kohort": 1960,
+        "plodnost": 1.45574
+      },
+      {
+        "vek": 26,
+        "kohort": 1965,
+        "plodnost": 1.37738
+      },
+      {
+        "vek": 26,
+        "kohort": 1970,
+        "plodnost": 1.16321
+      },
+      {
+        "vek": 26,
+        "kohort": 1975,
+        "plodnost": 0.73452
+      },
+      {
+        "vek": 26,
+        "kohort": 1980,
+        "plodnost": 0.46996
+      },
+      {
+        "vek": 26,
+        "kohort": 1985,
+        "plodnost": 0.39835
+      },
+      {
+        "vek": 26,
+        "kohort": 1990,
+        "plodnost": 0.3868
+      },
+      {
+        "vek": 26,
+        "kohort": 1995,
+        "plodnost": 0.44825
+      },
+      {
+        "vek": 27,
+        "kohort": 1940,
+        "plodnost": 1.5597
+      },
+      {
+        "vek": 27,
+        "kohort": 1945,
+        "plodnost": 1.4296
+      },
+      {
+        "vek": 27,
+        "kohort": 1950,
+        "plodnost": 1.60943
+      },
+      {
+        "vek": 27,
+        "kohort": 1955,
+        "plodnost": 1.62339
+      },
+      {
+        "vek": 27,
+        "kohort": 1960,
+        "plodnost": 1.56793
+      },
+      {
+        "vek": 27,
+        "kohort": 1965,
+        "plodnost": 1.47856
+      },
+      {
+        "vek": 27,
+        "kohort": 1970,
+        "plodnost": 1.25033
+      },
+      {
+        "vek": 27,
+        "kohort": 1975,
+        "plodnost": 0.83254
+      },
+      {
+        "vek": 27,
+        "kohort": 1980,
+        "plodnost": 0.57358
+      },
+      {
+        "vek": 27,
+        "kohort": 1985,
+        "plodnost": 0.48482
+      },
+      {
+        "vek": 27,
+        "kohort": 1990,
+        "plodnost": 0.4856
+      },
+      {
+        "vek": 27,
+        "kohort": 1995,
+        "plodnost": 0.54932923477355
+      },
+      {
+        "vek": 28,
+        "kohort": 1940,
+        "plodnost": 1.65063
+      },
+      {
+        "vek": 28,
+        "kohort": 1945,
+        "plodnost": 1.54693
+      },
+      {
+        "vek": 28,
+        "kohort": 1950,
+        "plodnost": 1.72201
+      },
+      {
+        "vek": 28,
+        "kohort": 1955,
+        "plodnost": 1.71476
+      },
+      {
+        "vek": 28,
+        "kohort": 1960,
+        "plodnost": 1.66482
+      },
+      {
+        "vek": 28,
+        "kohort": 1965,
+        "plodnost": 1.56631
+      },
+      {
+        "vek": 28,
+        "kohort": 1970,
+        "plodnost": 1.3305
+      },
+      {
+        "vek": 28,
+        "kohort": 1975,
+        "plodnost": 0.93079
+      },
+      {
+        "vek": 28,
+        "kohort": 1980,
+        "plodnost": 0.68935
+      },
+      {
+        "vek": 28,
+        "kohort": 1985,
+        "plodnost": 0.58399
+      },
+      {
+        "vek": 28,
+        "kohort": 1990,
+        "plodnost": 0.60202
+      },
+      {
+        "vek": 28,
+        "kohort": 1995,
+        "plodnost": 0.64932322391985
+      },
+      {
+        "vek": 29,
+        "kohort": 1940,
+        "plodnost": 1.72783
+      },
+      {
+        "vek": 29,
+        "kohort": 1945,
+        "plodnost": 1.65361
+      },
+      {
+        "vek": 29,
+        "kohort": 1950,
+        "plodnost": 1.81287
+      },
+      {
+        "vek": 29,
+        "kohort": 1955,
+        "plodnost": 1.78929
+      },
+      {
+        "vek": 29,
+        "kohort": 1960,
+        "plodnost": 1.74073
+      },
+      {
+        "vek": 29,
+        "kohort": 1965,
+        "plodnost": 1.63412
+      },
+      {
+        "vek": 29,
+        "kohort": 1970,
+        "plodnost": 1.40468
+      },
+      {
+        "vek": 29,
+        "kohort": 1975,
+        "plodnost": 1.03191
+      },
+      {
+        "vek": 29,
+        "kohort": 1980,
+        "plodnost": 0.81253
+      },
+      {
+        "vek": 29,
+        "kohort": 1985,
+        "plodnost": 0.69931
+      },
+      {
+        "vek": 29,
+        "kohort": 1990,
+        "plodnost": 0.72811
+      },
+      {
+        "vek": 30,
+        "kohort": 1940,
+        "plodnost": 1.79492
+      },
+      {
+        "vek": 30,
+        "kohort": 1945,
+        "plodnost": 1.73969
+      },
+      {
+        "vek": 30,
+        "kohort": 1950,
+        "plodnost": 1.87907
+      },
+      {
+        "vek": 30,
+        "kohort": 1955,
+        "plodnost": 1.85047
+      },
+      {
+        "vek": 30,
+        "kohort": 1960,
+        "plodnost": 1.80331
+      },
+      {
+        "vek": 30,
+        "kohort": 1965,
+        "plodnost": 1.68857
+      },
+      {
+        "vek": 30,
+        "kohort": 1970,
+        "plodnost": 1.47321
+      },
+      {
+        "vek": 30,
+        "kohort": 1975,
+        "plodnost": 1.13482
+      },
+      {
+        "vek": 30,
+        "kohort": 1980,
+        "plodnost": 0.93598
+      },
+      {
+        "vek": 30,
+        "kohort": 1985,
+        "plodnost": 0.82297
+      },
+      {
+        "vek": 30,
+        "kohort": 1990,
+        "plodnost": 0.85958
+      },
+      {
+        "vek": 31,
+        "kohort": 1940,
+        "plodnost": 1.85401
+      },
+      {
+        "vek": 31,
+        "kohort": 1945,
+        "plodnost": 1.8091
+      },
+      {
+        "vek": 31,
+        "kohort": 1950,
+        "plodnost": 1.93146
+      },
+      {
+        "vek": 31,
+        "kohort": 1955,
+        "plodnost": 1.90079
+      },
+      {
+        "vek": 31,
+        "kohort": 1960,
+        "plodnost": 1.85166
+      },
+      {
+        "vek": 31,
+        "kohort": 1965,
+        "plodnost": 1.73607
+      },
+      {
+        "vek": 31,
+        "kohort": 1970,
+        "plodnost": 1.53639
+      },
+      {
+        "vek": 31,
+        "kohort": 1975,
+        "plodnost": 1.23311
+      },
+      {
+        "vek": 31,
+        "kohort": 1980,
+        "plodnost": 1.04885
+      },
+      {
+        "vek": 31,
+        "kohort": 1985,
+        "plodnost": 0.94932
+      },
+      {
+        "vek": 31,
+        "kohort": 1990,
+        "plodnost": 0.99743
+      },
+      {
+        "vek": 32,
+        "kohort": 1940,
+        "plodnost": 1.90574
+      },
+      {
+        "vek": 32,
+        "kohort": 1945,
+        "plodnost": 1.86308
+      },
+      {
+        "vek": 32,
+        "kohort": 1950,
+        "plodnost": 1.97259
+      },
+      {
+        "vek": 32,
+        "kohort": 1955,
+        "plodnost": 1.93978
+      },
+      {
+        "vek": 32,
+        "kohort": 1960,
+        "plodnost": 1.88945
+      },
+      {
+        "vek": 32,
+        "kohort": 1965,
+        "plodnost": 1.77469
+      },
+      {
+        "vek": 32,
+        "kohort": 1970,
+        "plodnost": 1.59053
+      },
+      {
+        "vek": 32,
+        "kohort": 1975,
+        "plodnost": 1.32943
+      },
+      {
+        "vek": 32,
+        "kohort": 1980,
+        "plodnost": 1.15756
+      },
+      {
+        "vek": 32,
+        "kohort": 1985,
+        "plodnost": 1.07157
+      },
+      {
+        "vek": 32,
+        "kohort": 1990,
+        "plodnost": 1.10049180969505
+      },
+      {
+        "vek": 33,
+        "kohort": 1940,
+        "plodnost": 1.95183
+      },
+      {
+        "vek": 33,
+        "kohort": 1945,
+        "plodnost": 1.90722
+      },
+      {
+        "vek": 33,
+        "kohort": 1950,
+        "plodnost": 2.00492
+      },
+      {
+        "vek": 33,
+        "kohort": 1955,
+        "plodnost": 1.97301
+      },
+      {
+        "vek": 33,
+        "kohort": 1960,
+        "plodnost": 1.92278
+      },
+      {
+        "vek": 33,
+        "kohort": 1965,
+        "plodnost": 1.80668
+      },
+      {
+        "vek": 33,
+        "kohort": 1970,
+        "plodnost": 1.63947
+      },
+      {
+        "vek": 33,
+        "kohort": 1975,
+        "plodnost": 1.41853
+      },
+      {
+        "vek": 33,
+        "kohort": 1980,
+        "plodnost": 1.25449
+      },
+      {
+        "vek": 33,
+        "kohort": 1985,
+        "plodnost": 1.18753
+      },
+      {
+        "vek": 33,
+        "kohort": 1990,
+        "plodnost": 1.18752071819165
+      },
+      {
+        "vek": 34,
+        "kohort": 1940,
+        "plodnost": 1.99322
+      },
+      {
+        "vek": 34,
+        "kohort": 1945,
+        "plodnost": 1.94181
+      },
+      {
+        "vek": 34,
+        "kohort": 1950,
+        "plodnost": 2.0308
+      },
+      {
+        "vek": 34,
+        "kohort": 1955,
+        "plodnost": 1.9994
+      },
+      {
+        "vek": 34,
+        "kohort": 1960,
+        "plodnost": 1.94745
+      },
+      {
+        "vek": 34,
+        "kohort": 1965,
+        "plodnost": 1.83482
+      },
+      {
+        "vek": 34,
+        "kohort": 1970,
+        "plodnost": 1.68331
+      },
+      {
+        "vek": 34,
+        "kohort": 1975,
+        "plodnost": 1.4948
+      },
+      {
+        "vek": 34,
+        "kohort": 1980,
+        "plodnost": 1.34381
+      },
+      {
+        "vek": 34,
+        "kohort": 1985,
+        "plodnost": 1.28974
+      },
+      {
+        "vek": 35,
+        "kohort": 1940,
+        "plodnost": 2.02489
+      },
+      {
+        "vek": 35,
+        "kohort": 1945,
+        "plodnost": 1.96543
+      },
+      {
+        "vek": 35,
+        "kohort": 1950,
+        "plodnost": 2.05163
+      },
+      {
+        "vek": 35,
+        "kohort": 1955,
+        "plodnost": 2.0208
+      },
+      {
+        "vek": 35,
+        "kohort": 1960,
+        "plodnost": 1.96771
+      },
+      {
+        "vek": 35,
+        "kohort": 1965,
+        "plodnost": 1.85982
+      },
+      {
+        "vek": 35,
+        "kohort": 1970,
+        "plodnost": 1.72389
+      },
+      {
+        "vek": 35,
+        "kohort": 1975,
+        "plodnost": 1.56109
+      },
+      {
+        "vek": 35,
+        "kohort": 1980,
+        "plodnost": 1.42273
+      },
+      {
+        "vek": 35,
+        "kohort": 1985,
+        "plodnost": 1.37801
+      },
+      {
+        "vek": 36,
+        "kohort": 1940,
+        "plodnost": 2.04887
+      },
+      {
+        "vek": 36,
+        "kohort": 1945,
+        "plodnost": 1.98286
+      },
+      {
+        "vek": 36,
+        "kohort": 1950,
+        "plodnost": 2.06816
+      },
+      {
+        "vek": 36,
+        "kohort": 1955,
+        "plodnost": 2.03696
+      },
+      {
+        "vek": 36,
+        "kohort": 1960,
+        "plodnost": 1.98313
+      },
+      {
+        "vek": 36,
+        "kohort": 1965,
+        "plodnost": 1.88132
+      },
+      {
+        "vek": 36,
+        "kohort": 1970,
+        "plodnost": 1.76031
+      },
+      {
+        "vek": 36,
+        "kohort": 1975,
+        "plodnost": 1.61293
+      },
+      {
+        "vek": 36,
+        "kohort": 1980,
+        "plodnost": 1.48995
+      },
+      {
+        "vek": 36,
+        "kohort": 1985,
+        "plodnost": 1.45669
+      },
+      {
+        "vek": 37,
+        "kohort": 1940,
+        "plodnost": 2.06701
+      },
+      {
+        "vek": 37,
+        "kohort": 1945,
+        "plodnost": 1.99639
+      },
+      {
+        "vek": 37,
+        "kohort": 1950,
+        "plodnost": 2.08089
+      },
+      {
+        "vek": 37,
+        "kohort": 1955,
+        "plodnost": 2.04845
+      },
+      {
+        "vek": 37,
+        "kohort": 1960,
+        "plodnost": 1.99639
+      },
+      {
+        "vek": 37,
+        "kohort": 1965,
+        "plodnost": 1.89982
+      },
+      {
+        "vek": 37,
+        "kohort": 1970,
+        "plodnost": 1.79245
+      },
+      {
+        "vek": 37,
+        "kohort": 1975,
+        "plodnost": 1.65481
+      },
+      {
+        "vek": 37,
+        "kohort": 1980,
+        "plodnost": 1.54566
+      },
+      {
+        "vek": 37,
+        "kohort": 1985,
+        "plodnost": 1.50443127109235
+      },
+      {
+        "vek": 38,
+        "kohort": 1940,
+        "plodnost": 2.08002
+      },
+      {
+        "vek": 38,
+        "kohort": 1945,
+        "plodnost": 2.00576
+      },
+      {
+        "vek": 38,
+        "kohort": 1950,
+        "plodnost": 2.08999
+      },
+      {
+        "vek": 38,
+        "kohort": 1955,
+        "plodnost": 2.05777
+      },
+      {
+        "vek": 38,
+        "kohort": 1960,
+        "plodnost": 2.00718
+      },
+      {
+        "vek": 38,
+        "kohort": 1965,
+        "plodnost": 1.91407
+      },
+      {
+        "vek": 38,
+        "kohort": 1970,
+        "plodnost": 1.81833
+      },
+      {
+        "vek": 38,
+        "kohort": 1975,
+        "plodnost": 1.68753
+      },
+      {
+        "vek": 38,
+        "kohort": 1980,
+        "plodnost": 1.5906
+      },
+      {
+        "vek": 38,
+        "kohort": 1985,
+        "plodnost": 1.53930469804405
+      },
+      {
+        "vek": 39,
+        "kohort": 1940,
+        "plodnost": 2.08845
+      },
+      {
+        "vek": 39,
+        "kohort": 1945,
+        "plodnost": 2.01141
+      },
+      {
+        "vek": 39,
+        "kohort": 1950,
+        "plodnost": 2.09652
+      },
+      {
+        "vek": 39,
+        "kohort": 1955,
+        "plodnost": 2.06423
+      },
+      {
+        "vek": 39,
+        "kohort": 1960,
+        "plodnost": 2.0151
+      },
+      {
+        "vek": 39,
+        "kohort": 1965,
+        "plodnost": 1.92621
+      },
+      {
+        "vek": 39,
+        "kohort": 1970,
+        "plodnost": 1.83983
+      },
+      {
+        "vek": 39,
+        "kohort": 1975,
+        "plodnost": 1.71412
+      },
+      {
+        "vek": 39,
+        "kohort": 1980,
+        "plodnost": 1.62669
+      },
+      {
+        "vek": 40,
+        "kohort": 1940,
+        "plodnost": 2.09367
+      },
+      {
+        "vek": 40,
+        "kohort": 1945,
+        "plodnost": 2.01568
+      },
+      {
+        "vek": 40,
+        "kohort": 1950,
+        "plodnost": 2.10109
+      },
+      {
+        "vek": 40,
+        "kohort": 1955,
+        "plodnost": 2.06879
+      },
+      {
+        "vek": 40,
+        "kohort": 1960,
+        "plodnost": 2.02108
+      },
+      {
+        "vek": 40,
+        "kohort": 1965,
+        "plodnost": 1.93516
+      },
+      {
+        "vek": 40,
+        "kohort": 1970,
+        "plodnost": 1.8551
+      },
+      {
+        "vek": 40,
+        "kohort": 1975,
+        "plodnost": 1.7349
+      },
+      {
+        "vek": 40,
+        "kohort": 1980,
+        "plodnost": 1.65318
+      },
+      {
+        "vek": 41,
+        "kohort": 1940,
+        "plodnost": 2.09762
+      },
+      {
+        "vek": 41,
+        "kohort": 1945,
+        "plodnost": 2.01831
+      },
+      {
+        "vek": 41,
+        "kohort": 1950,
+        "plodnost": 2.10416
+      },
+      {
+        "vek": 41,
+        "kohort": 1955,
+        "plodnost": 2.07188
+      },
+      {
+        "vek": 41,
+        "kohort": 1960,
+        "plodnost": 2.02594
+      },
+      {
+        "vek": 41,
+        "kohort": 1965,
+        "plodnost": 1.9423
+      },
+      {
+        "vek": 41,
+        "kohort": 1970,
+        "plodnost": 1.86483
+      },
+      {
+        "vek": 41,
+        "kohort": 1975,
+        "plodnost": 1.74963
+      },
+      {
+        "vek": 41,
+        "kohort": 1980,
+        "plodnost": 1.67334
+      },
+      {
+        "vek": 42,
+        "kohort": 1940,
+        "plodnost": 2.09984
+      },
+      {
+        "vek": 42,
+        "kohort": 1945,
+        "plodnost": 2.02001
+      },
+      {
+        "vek": 42,
+        "kohort": 1950,
+        "plodnost": 2.10602
+      },
+      {
+        "vek": 42,
+        "kohort": 1955,
+        "plodnost": 2.07368
+      },
+      {
+        "vek": 42,
+        "kohort": 1960,
+        "plodnost": 2.02885
+      },
+      {
+        "vek": 42,
+        "kohort": 1965,
+        "plodnost": 1.94694
+      },
+      {
+        "vek": 42,
+        "kohort": 1970,
+        "plodnost": 1.87137
+      },
+      {
+        "vek": 42,
+        "kohort": 1975,
+        "plodnost": 1.75899
+      },
+      {
+        "vek": 42,
+        "kohort": 1980,
+        "plodnost": 1.6824574435471
+      },
+      {
+        "vek": 43,
+        "kohort": 1940,
+        "plodnost": 2.10127
+      },
+      {
+        "vek": 43,
+        "kohort": 1945,
+        "plodnost": 2.0209
+      },
+      {
+        "vek": 43,
+        "kohort": 1950,
+        "plodnost": 2.10721
+      },
+      {
+        "vek": 43,
+        "kohort": 1955,
+        "plodnost": 2.07467
+      },
+      {
+        "vek": 43,
+        "kohort": 1960,
+        "plodnost": 2.03061
+      },
+      {
+        "vek": 43,
+        "kohort": 1965,
+        "plodnost": 1.95055
+      },
+      {
+        "vek": 43,
+        "kohort": 1970,
+        "plodnost": 1.87534
+      },
+      {
+        "vek": 43,
+        "kohort": 1975,
+        "plodnost": 1.76531
+      },
+      {
+        "vek": 43,
+        "kohort": 1980,
+        "plodnost": 1.687416020106
+      },
+      {
+        "vek": 44,
+        "kohort": 1940,
+        "plodnost": 2.10191
+      },
+      {
+        "vek": 44,
+        "kohort": 1945,
+        "plodnost": 2.02135
+      },
+      {
+        "vek": 44,
+        "kohort": 1950,
+        "plodnost": 2.10792
+      },
+      {
+        "vek": 44,
+        "kohort": 1955,
+        "plodnost": 2.07529
+      },
+      {
+        "vek": 44,
+        "kohort": 1960,
+        "plodnost": 2.03192
+      },
+      {
+        "vek": 44,
+        "kohort": 1965,
+        "plodnost": 1.95265
+      },
+      {
+        "vek": 44,
+        "kohort": 1970,
+        "plodnost": 1.87782
+      },
+      {
+        "vek": 44,
+        "kohort": 1975,
+        "plodnost": 1.76877
+      },
+      {
+        "vek": 45,
+        "kohort": 1940,
+        "plodnost": 2.10217
+      },
+      {
+        "vek": 45,
+        "kohort": 1945,
+        "plodnost": 2.0216
+      },
+      {
+        "vek": 45,
+        "kohort": 1950,
+        "plodnost": 2.10814
+      },
+      {
+        "vek": 45,
+        "kohort": 1955,
+        "plodnost": 2.0756
+      },
+      {
+        "vek": 45,
+        "kohort": 1960,
+        "plodnost": 2.03251
+      },
+      {
+        "vek": 45,
+        "kohort": 1965,
+        "plodnost": 1.95348
+      },
+      {
+        "vek": 45,
+        "kohort": 1970,
+        "plodnost": 1.87919
+      },
+      {
+        "vek": 45,
+        "kohort": 1975,
+        "plodnost": 1.77097
+      },
+      {
+        "vek": 46,
+        "kohort": 1940,
+        "plodnost": 2.10227
+      },
+      {
+        "vek": 46,
+        "kohort": 1945,
+        "plodnost": 2.02171
+      },
+      {
+        "vek": 46,
+        "kohort": 1950,
+        "plodnost": 2.1083
+      },
+      {
+        "vek": 46,
+        "kohort": 1955,
+        "plodnost": 2.07576
+      },
+      {
+        "vek": 46,
+        "kohort": 1960,
+        "plodnost": 2.03287
+      },
+      {
+        "vek": 46,
+        "kohort": 1965,
+        "plodnost": 1.95394
+      },
+      {
+        "vek": 46,
+        "kohort": 1970,
+        "plodnost": 1.87997
+      },
+      {
+        "vek": 46,
+        "kohort": 1975,
+        "plodnost": 1.77227
+      },
+      {
+        "vek": 47,
+        "kohort": 1940,
+        "plodnost": 2.10234
+      },
+      {
+        "vek": 47,
+        "kohort": 1945,
+        "plodnost": 2.02175
+      },
+      {
+        "vek": 47,
+        "kohort": 1950,
+        "plodnost": 2.10831
+      },
+      {
+        "vek": 47,
+        "kohort": 1955,
+        "plodnost": 2.07581
+      },
+      {
+        "vek": 47,
+        "kohort": 1960,
+        "plodnost": 2.03307
+      },
+      {
+        "vek": 47,
+        "kohort": 1965,
+        "plodnost": 1.95425
+      },
+      {
+        "vek": 47,
+        "kohort": 1970,
+        "plodnost": 1.88039
+      },
+      {
+        "vek": 47,
+        "kohort": 1975,
+        "plodnost": 1.7727319597775
+      },
+      {
+        "vek": 48,
+        "kohort": 1940,
+        "plodnost": 2.10235
+      },
+      {
+        "vek": 48,
+        "kohort": 1945,
+        "plodnost": 2.02175
+      },
+      {
+        "vek": 48,
+        "kohort": 1950,
+        "plodnost": 2.10831
+      },
+      {
+        "vek": 48,
+        "kohort": 1955,
+        "plodnost": 2.07585
+      },
+      {
+        "vek": 48,
+        "kohort": 1960,
+        "plodnost": 2.03314
+      },
+      {
+        "vek": 48,
+        "kohort": 1965,
+        "plodnost": 1.95435
+      },
+      {
+        "vek": 48,
+        "kohort": 1970,
+        "plodnost": 1.88054
+      },
+      {
+        "vek": 48,
+        "kohort": 1975,
+        "plodnost": 1.77310145117905
+      },
+      {
+        "vek": 49,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 49,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 49,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 49,
+        "kohort": 1955,
+        "plodnost": 2.07586
+      },
+      {
+        "vek": 49,
+        "kohort": 1960,
+        "plodnost": 2.03329
+      },
+      {
+        "vek": 49,
+        "kohort": 1965,
+        "plodnost": 1.95445
+      },
+      {
+        "vek": 49,
+        "kohort": 1970,
+        "plodnost": 1.88083
+      },
+      {
+        "vek": 50,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 50,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 50,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 50,
+        "kohort": 1955,
+        "plodnost": 2.07589
+      },
+      {
+        "vek": 50,
+        "kohort": 1960,
+        "plodnost": 2.03334
+      },
+      {
+        "vek": 50,
+        "kohort": 1965,
+        "plodnost": 1.95458
+      },
+      {
+        "vek": 50,
+        "kohort": 1970,
+        "plodnost": 1.88087
+      },
+      {
+        "vek": 51,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 51,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 51,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 51,
+        "kohort": 1955,
+        "plodnost": 2.07594
+      },
+      {
+        "vek": 51,
+        "kohort": 1960,
+        "plodnost": 2.03336
+      },
+      {
+        "vek": 51,
+        "kohort": 1965,
+        "plodnost": 1.95461
+      },
+      {
+        "vek": 51,
+        "kohort": 1970,
+        "plodnost": 1.88091
+      },
+      {
+        "vek": 52,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 52,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 52,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 52,
+        "kohort": 1955,
+        "plodnost": 2.07594
+      },
+      {
+        "vek": 52,
+        "kohort": 1960,
+        "plodnost": 2.03339
+      },
+      {
+        "vek": 52,
+        "kohort": 1965,
+        "plodnost": 1.95461
+      },
+      {
+        "vek": 53,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 53,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 53,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 53,
+        "kohort": 1955,
+        "plodnost": 2.07594
+      },
+      {
+        "vek": 53,
+        "kohort": 1960,
+        "plodnost": 2.03339
+      },
+      {
+        "vek": 53,
+        "kohort": 1965,
+        "plodnost": 1.95461
+      },
+      {
+        "vek": 54,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 54,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 54,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 54,
+        "kohort": 1955,
+        "plodnost": 2.07595
+      },
+      {
+        "vek": 54,
+        "kohort": 1960,
+        "plodnost": 2.03339
+      },
+      {
+        "vek": 54,
+        "kohort": 1965,
+        "plodnost": 1.95461
+      },
+      {
+        "vek": 55,
+        "kohort": 1940,
+        "plodnost": 2.10236
+      },
+      {
+        "vek": 55,
+        "kohort": 1945,
+        "plodnost": 2.02176
+      },
+      {
+        "vek": 55,
+        "kohort": 1950,
+        "plodnost": 2.10833
+      },
+      {
+        "vek": 55,
+        "kohort": 1955,
+        "plodnost": 2.07595
+      },
+      {
+        "vek": 55,
+        "kohort": 1960,
+        "plodnost": 2.03339
+      },
+      {
+        "vek": 55,
+        "kohort": 1965,
+        "plodnost": 1.95461
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          5,
+          4
+        ],
+        "stroke": "#0e839e",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "datum": 2.1,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2.4
+            ]
+          },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.4
+            ],
+            "format": ".1f"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "baseline": "bottom",
+        "color": "#0e839e",
+        "fontSize": 12,
+        "dy": -6
+      },
+      "encoding": {
+        "x": {
+          "datum": 12,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              12,
+              55
+            ],
+            "nice": false
+          },
+          "axis": {
+            "format": "d",
+            "values": [
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "datum": 2.1,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2.4
+            ]
+          },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.4
+            ],
+            "format": ".1f"
+          }
+        },
+        "text": {
+          "value": "hranice prosté reprodukce 2,10"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "x": {
+          "field": "vek",
+          "type": "quantitative",
+          "title": "Věk matky (roky)",
+          "scale": {
+            "domain": [
+              12,
+              55
+            ],
+            "nice": false
+          },
+          "axis": {
+            "format": "d",
+            "values": [
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "plodnost",
+          "type": "quantitative",
+          "title": "Kumulativní plodnost (dětí na ženu)",
+          "scale": {
+            "domain": [
+              0,
+              2.4
+            ]
+          },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.4
+            ],
+            "format": ".1f"
+          }
+        },
+        "color": {
+          "field": "kohort",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              1940,
+              1945,
+              1950,
+              1955,
+              1960,
+              1965,
+              1970,
+              1975,
+              1980,
+              1985,
+              1990,
+              1995
+            ],
+            "range": [
+              "#4a51aa",
+              "#4f45af",
+              "#5f40b4",
+              "#723cb8",
+              "#8837bd",
+              "#a132c2",
+              "#bd2ec6",
+              "#cb29ba",
+              "#d024a1",
+              "#d42084",
+              "#d91b65",
+              "#de1742"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "kohort",
+            "type": "quantitative",
+            "title": "Kohort"
+          },
+          {
+            "field": "vek",
+            "type": "quantitative",
+            "title": "Věk"
+          },
+          {
+            "field": "plodnost",
+            "type": "quantitative",
+            "title": "Kumulativní plodnost",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "max",
+              "field": "vek",
+              "as": "max_vek"
+            }
+          ],
+          "groupby": [
+            "kohort"
+          ]
+        },
+        {
+          "filter": "datum.vek == datum.max_vek"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "plodnost",
+              "order": "ascending"
+            }
+          ]
+        },
+        {
+          "calculate": "datum.plodnost + (datum.rank - 6.5) * 0.025",
+          "as": "label_y"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "normal"
+      },
+      "encoding": {
+        "x": {
+          "field": "vek",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              12,
+              55
+            ],
+            "nice": false
+          },
+          "axis": {
+            "format": "d",
+            "values": [
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55
+            ],
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2.4
+            ]
+          },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.4
+            ],
+            "format": ".1f"
+          }
+        },
+        "text": {
+          "field": "kohort",
+          "type": "quantitative",
+          "format": "d"
+        },
+        "color": {
+          "field": "kohort",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              1940,
+              1945,
+              1950,
+              1955,
+              1960,
+              1965,
+              1970,
+              1975,
+              1980,
+              1985,
+              1990,
+              1995
+            ],
+            "range": [
+              "#4a51aa",
+              "#4f45af",
+              "#5f40b4",
+              "#723cb8",
+              "#8837bd",
+              "#a132c2",
+              "#bd2ec6",
+              "#cb29ba",
+              "#d024a1",
+              "#d42084",
+              "#d91b65",
+              "#de1742"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "kohort",
+            "type": "quantitative",
+            "title": "Kohort"
+          },
+          {
+            "field": "vek",
+            "type": "quantitative",
+            "title": "Věk"
+          },
+          {
+            "field": "plodnost",
+            "type": "quantitative",
+            "title": "Kumulativní plodnost",
+            "format": ".2f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "padding": {
+    "left": 5,
+    "right": 60,
+    "top": 5,
+    "bottom": 5
+  }
+}

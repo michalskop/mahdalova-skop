@@ -24,6 +24,7 @@ import FertilityFanScrolly from '@/components/dpbp/FertilityFanScrolly';
 import { InfoBox } from '@/components/clanek/InfoBox';
 import TempoEffectDiagram from '@/components/dpbp/TempoEffectDiagram/TempoEffectDiagram';
 import FertilityComparisonChart from '@/components/dpbp/FertilityComparisonChart/FertilityComparisonChart';
+import MothersAgeShiftChart from '@/components/dpbp/MothersAgeShiftChart/MothersAgeShiftChart';
 import { readableAccent } from '@/utils/colorUtils';
 import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 
@@ -126,6 +127,7 @@ const mdxComponents = {
   InfoBox,
   TempoEffectDiagram,
   FertilityComparisonChart,
+  MothersAgeShiftChart,
 };
 
 export default function ArticlePage({ params }: { params: { chapter: string; article: string } }) {

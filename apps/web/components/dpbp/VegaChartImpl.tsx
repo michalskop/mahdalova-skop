@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { TooltipHandler } from 'vega';
 import { robotoCondensed } from '@/app/fonts';
-import ChartSignature from './ChartSignature';
+import ChartCard from './ChartCard';
 
 // Jednotná typografie grafů (závazná škála, DESIGN.md §9, revize 2026-07-12):
 // Roboto Condensed všude, titulek 24/bold, podtitulek 17, datové popisky 14/bold,
@@ -116,29 +116,6 @@ const CHART_FONT_CONFIG = {
   header: { labelFont: CHART_FONT, titleFont: CHART_FONT },
 };
 
-// Patička: _source ve specu obsahuje UZ JEN zdroj dat (bez autorů) –
-// autory s prolinkem na DataTimes.cz doplňuje komponenta u každého grafu.
-// Markdownové odkazy [text](url) ve zdroji se vykreslí jako <a>.
-function renderSource(src: string) {
-  const parts: React.ReactNode[] = [];
-  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
-  let last = 0;
-  let m: RegExpExecArray | null;
-  let i = 0;
-  while ((m = re.exec(src)) !== null) {
-    if (m.index > last) parts.push(src.slice(last, m.index));
-    parts.push(
-      <a key={i++} href={m[2]} target="_blank" rel="noopener noreferrer"
-        style={{ color: '#333333', textDecoration: 'underline' }}>
-        {m[1]}
-      </a>
-    );
-    last = m.index + m[0].length;
-  }
-  parts.push(src.slice(last));
-  return parts;
-}
-
 function mergeFontConfig(config: unknown): Record<string, unknown> {
   const base = typeof config === 'object' && config !== null ? config as Record<string, unknown> : {};
   return {
@@ -158,10 +135,6 @@ export interface VegaChartProps {
 
 function isConcatSpec(spec: Record<string, unknown>) {
   return 'vconcat' in spec || 'hconcat' in spec || 'concat' in spec;
-}
-
-function shouldUseStackedBrand(title?: string, subtitle?: string) {
-  return (title?.length ?? 0) > 58 || (subtitle?.length ?? 0) > 92;
 }
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
@@ -270,63 +243,11 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
 
   const isConcat = spec ? isConcatSpec(spec) : false;
   const totalWidth = spec?._total_width as number | undefined;
-  const stackedBrand = shouldUseStackedBrand(meta.title, meta.subtitle);
 
-  // Always render the same 3-part structure (header · chart · source) so React
-  // never needs to insert elements before containerRef, avoiding reconciliation
-  // re-ordering that would place the header below the chart.
   return (
-    <div style={{
-      background: '#f8f6f0',
-      borderRadius: 4,
-      padding: '28px 16px 24px',
-      margin: '1em 0',
-    }}>
+    <ChartCard title={meta.title} subtitle={meta.subtitle} source={meta.source}>
       <style>{TOOLTIP_CSS}</style>
-      {/* Header – always present; content appears once meta loads.
-          Titulek jde přes celou šířku karty (zalamuje se až na její šířce);
-          podpis DataTimes.cz sedí na švu hlavičky a grafu vpravo, ne vedle titulku. */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: (meta.title || meta.subtitle) ? 'minmax(0, 1fr) auto' : '1fr',
-        alignItems: 'center',
-        columnGap: 18,
-        marginBottom: 8,
-      }}>
-        <div style={{ minWidth: 0 }}>
-          {meta.title && (
-            <div className="dpbp-chart-title" style={{
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              fontWeight: 700,
-              lineHeight: 1.2,
-              color: '#1a1a1a',
-              marginBottom: meta.subtitle ? 6 : 0,
-            }}>
-              {meta.title}
-            </div>
-          )}
-          {meta.subtitle && (
-            <div className="dpbp-chart-subtitle" style={{
-              fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-              lineHeight: 1.3,
-              color: '#333333',
-            }}>
-              {meta.subtitle}
-            </div>
-          )}
-        </div>
-        {(meta.title || meta.subtitle) && (
-          <ChartSignature
-            size={30}
-            layout={stackedBrand ? 'stacked' : 'inline'}
-            textWeight={400}
-            style={{ lineHeight: 1, alignSelf: 'center' }}
-          />
-        )}
-      </div>
-
-      {/* Chart canvas */}
-      <div style={{ overflowX: isConcat ? 'auto' : 'hidden', marginTop: 22 }}>
+      <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
         <div
           ref={containerRef}
           style={{
@@ -335,25 +256,6 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
           }}
         />
       </div>
-
-      {/* Source */}
-      {meta.source && (
-        <div className="dpbp-chart-footer" style={{
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          color: '#333333',
-          marginTop: 18,
-          lineHeight: 1.5,
-        }}>
-          <div>
-            {'• autoři: '}
-            <a href="https://datatimes.cz" target="_blank" rel="noopener noreferrer"
-              style={{ color: '#333333', textDecoration: 'underline' }}>
-              Kateřina Mahdalová &amp; Michal Škop
-            </a>
-          </div>
-          <div style={{ whiteSpace: 'pre-line' }}>{'• data: '}{renderSource(meta.source)}</div>
-        </div>
-      )}
-    </div>
+    </ChartCard>
   );
 }
