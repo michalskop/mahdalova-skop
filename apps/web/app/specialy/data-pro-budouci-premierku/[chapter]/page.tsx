@@ -19,7 +19,7 @@ import { readableAccent } from '@/utils/colorUtils';
 import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
-const CHARTS_ROOT  = path.join(process.cwd(), 'public/dpbp/charts');
+const CHARTS_ROOT  = path.join(process.cwd(), 'public/specialy/dpbp/charts');
 
 const NEWSLETTER_URL = 'https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088';
 

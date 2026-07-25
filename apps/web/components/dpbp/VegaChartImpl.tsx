@@ -166,7 +166,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
       return;
     }
     if (!chartId) return;
-    fetch(`/dpbp/charts/${chartId}.json`)
+    fetch(`/specialy/dpbp/charts/${chartId}.json`)
       .then(r => {
         if (!r.ok) throw new Error(`${r.status} ${r.url}`);
         return r.json();

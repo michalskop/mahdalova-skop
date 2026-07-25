@@ -16,7 +16,7 @@ import { countryCoordinates, countryPresence2026, czCountry } from './countries'
 import { countryHistory, type CountryYearRow } from './countries-history';
 import { continentHistory } from './continents-history';
 import { CHART_TRACK_BG, NUM_FONT } from './ChartFrame';
-import worldTopology from '../../../public/dpbp/data/world-countries-110m.json';
+import worldTopology from '../../../public/specialy/dpbp/data/world-countries-110m.json';
 
 const YEAR_MIN = 1992;
 const YEAR_MAX = 2026;

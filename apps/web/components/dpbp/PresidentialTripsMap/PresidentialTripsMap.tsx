@@ -175,7 +175,7 @@ export default function PresidentialTripsMap() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch('/dpbp/data/world-countries-110m.json')
+    fetch('/specialy/dpbp/data/world-countries-110m.json')
       .then(r => r.json())
       .then(w => { if (!cancelled) setWorld(w); });
     return () => { cancelled = true; };
