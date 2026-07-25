@@ -645,7 +645,8 @@
 }
 
 .heroProgress .dashBtn {
-  background: #4c4f8e;
+  background: #171c42;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .stickyRail {
