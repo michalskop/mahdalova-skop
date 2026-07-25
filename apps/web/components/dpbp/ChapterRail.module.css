@@ -644,6 +644,10 @@
   width: 100%;
 }
 
+.heroProgress .dashBtn {
+  background: #4c4f8e;
+}
+
 .stickyRail {
   position: fixed;
   z-index: 70;
