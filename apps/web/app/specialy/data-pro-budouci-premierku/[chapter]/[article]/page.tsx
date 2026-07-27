@@ -143,6 +143,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
             theme="light"
             chapterContents={chapterContents}
             alwaysCompact={true}
+            headingLevel="none"
           />
         </Container>
       </Box>

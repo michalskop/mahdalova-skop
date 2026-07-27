@@ -15,6 +15,10 @@ interface ChapterRailProps {
   articleTitle?: string;
   alwaysCompact?: boolean;
   theme?: 'dark' | 'light';
+  /** 'h1' (default) renders the chapter name as the page's <h1> — use on chapter landing pages.
+   *  'none' renders it as a non-heading element instead — use on article pages, which already
+   *  have their own <h1> (the article title) elsewhere on the page. */
+  headingLevel?: 'h1' | 'none';
 }
 
 export default function ChapterRail({
@@ -24,6 +28,7 @@ export default function ChapterRail({
   articleTitle,
   alwaysCompact = false,
   theme = 'dark',
+  headingLevel = 'h1',
 }: ChapterRailProps) {
   const [panelMode, setPanelMode] = useState<'closed' | 'chapters' | 'articleList'>('closed');
   const [activePanelTarget, setActivePanelTarget] = useState<'top' | 'bottom' | null>(null);
@@ -162,12 +167,18 @@ export default function ChapterRail({
     }
   };
 
+  const HeroContainerTag: 'div' | 'nav' = headingLevel === 'none' ? 'nav' : 'div';
+  const HeroTitleTag: 'h1' | 'div' = headingLevel === 'none' ? 'div' : 'h1';
+
   return (
     <>
       {/* HORNÍ ZÁHLAVÍ / MENU */}
       {variant === 'hero' ? (
         /* 1. HERO ZÁHLAVÍ (na landing page kapitoly v tmavém poli #101432) */
-        <div className={`${styles.heroContainer} ${compact ? styles.heroContainerScrolled : ''} ${theme === 'light' ? styles.heroContainerLight : ''}`}>
+        <HeroContainerTag
+          className={`${styles.heroContainer} ${compact ? styles.heroContainerScrolled : ''} ${theme === 'light' ? styles.heroContainerLight : ''}`}
+          aria-label={headingLevel === 'none' ? `Kapitola: ${currentChapterMeta.title}` : undefined}
+        >
           <div className={styles.heroHeadRow}>
             <div className={styles.heroHeadLeft}>
               <span className={styles.heroEyebrow}>
@@ -199,13 +210,13 @@ export default function ChapterRail({
                 </Link>
               </span>
 
-              <h1
+              <HeroTitleTag
                 className={styles.heroTitle}
                 onClick={() => handleTopDashClick(currentChapter)}
                 title="Kliknutím rozbalíte / zavřete téma"
               >
                 {articleTitle ?? activeChapterMeta.title}
-              </h1>
+              </HeroTitleTag>
 
               {/* 15 Posuvníků vázaných na spodní oranžovou vodící linku */}
               <div
@@ -290,7 +301,7 @@ export default function ChapterRail({
               </Link>
             </div>
           </div>
-        </div>
+        </HeroContainerTag>
       ) : (
         /* 2. HORNÍ MENU POD AUDIO LIŠTOU (pouze v článcích) */
         <nav
