@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <meta charset="UTF-8">
-<title>Pouták editor — Data pro budoucí premiérku</title>
+<title>Poster editor — Data for the future PM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -133,101 +133,82 @@
 </style>
 
 <div id="modebar">
-  <div class="brand">Data pro budoucí premiérku <span>·</span> studio</div>
-  <button class="tab on" id="tab-poutak">Pouták</button>
-  <button class="tab" id="tab-paleta">Paleta</button>
+  <div class="brand">Data for the future PM <span>·</span> studio</div>
 </div>
 
 <div id="content">
-<div id="view-poutak" class="view on">
 <div id="app">
   <div id="stage">
     <div id="frame"></div>
     <div id="stagebar">
-      <span class="hint" id="hint">Náhled 1200 × 630 px · Roboto Slab + Roboto Condensed</span>
-      <button class="ghost" id="bgToggle">tmavé pozadí</button>
+      <span class="hint" id="hint">Preview 1200 × 630 px · Roboto Slab + Roboto Condensed</span>
+      <button class="ghost" id="bgToggle">dark background</button>
     </div>
   </div>
 
   <div id="panel">
     <div class="ps">
-      <h1>Pouták editor</h1>
-      <div class="subttl">Data pro budoucí premiérku · miniatury &amp; og:image</div>
+      <h1>Poster editor</h1>
+      <div class="subttl">Data for the future PM · thumbnails &amp; og:image</div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Formát (síť)</div>
+      <div class="plbl">Format (network)</div>
       <div class="chips" id="formats"></div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Kapitola — určuje barvu</div>
+      <div class="plbl">Chapter / colour</div>
       <div class="swgrid" id="accents"></div>
       <div class="swname" id="swname"></div>
-      <div class="note">15 kapitol = 15 barev z <code>DPBP_CHAPTERS</code>.
-        Jiná dominantní barva se v projektu nepoužívá a odstíny se neupravují.</div>
+      <div class="note">15 chapters = 15 colours from <code>DPBP_CHAPTERS</code>.
+        No other dominant colour is used and shades are not altered.</div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Kicker (nadřádek)</div>
+      <div class="plbl">Kicker (overline)</div>
       <div class="fld"><input type="text" id="f-kicker" maxlength="70"></div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Hlavní číslo</div>
-      <div class="fld"><input type="text" id="f-big" maxlength="16" placeholder="1,28"></div>
+      <div class="plbl">Headline number</div>
+      <div class="fld"><input type="text" id="f-big" maxlength="16" placeholder="1.28"></div>
       <div class="fld">
-        <label>Jednotka / podtitulek čísla</label>
-        <input type="text" id="f-unit" maxlength="48" placeholder="dítěte na ženu">
+        <label>Unit / number subtitle</label>
+        <input type="text" id="f-unit" maxlength="48" placeholder="children per woman">
       </div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Teze (2 řádky)</div>
-      <div class="fld"><textarea id="f-claim" rows="2" placeholder="Babiš slibuje 2,1. Rekord&#10;bohatého světa je +0,47."></textarea>
-        <div class="charhint">Enter = zalomení řádku</div></div>
+      <div class="plbl">Claim (2 lines)</div>
+      <div class="fld"><textarea id="f-claim" rows="2" placeholder="Line one&#10;Line two"></textarea>
+        <div class="charhint">Enter = line break</div></div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Datový motiv</div>
+      <div class="plbl">Data motif</div>
       <div class="chips" id="motifs"></div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Přednastavené — kapitola Demografie</div>
-      <div class="presets" id="presets"></div>
-    </div>
-
-    <div class="ps">
-      <div class="plbl">Jak výstup použít</div>
+      <div class="plbl">Using the output</div>
       <div class="note" style="margin-top:0">
-        <b>SVG</b> — miniatury na webu. Vložte ho do stránky inline (<code>&lt;svg&gt;</code>
-        přímo v HTML), pak si vezme Roboto Slab / Condensed, které web už načítá.
-        Jako <code>&lt;img src="…svg"&gt;</code> fonty spadnou na Georgii/Arial.<br>
-        <b>PNG</b> — og:image pro sociální sítě (SVG neberou). Fonty se do něj zapečou,
-        proto potřebuje připojení k internetu.
+        <b>SVG</b> — thumbnails on the web. Embed it inline (<code>&lt;svg&gt;</code>
+        directly in the HTML) so it picks up Roboto Slab / Condensed that the site
+        already loads. As <code>&lt;img src="…svg"&gt;</code> the fonts fall back to Georgia/Arial.<br>
+        <b>PNG</b> — og:image for social networks (they don't take SVG). Fonts are baked
+        in, so it needs an internet connection.
       </div>
     </div>
 
     <div id="actions">
-      <button class="btn btn-primary" id="dlsvg">Stáhnout SVG (~4 kB)</button>
+      <button class="btn btn-primary" id="dlsvg">Download SVG</button>
       <div class="btn-row">
-        <button class="btn btn-ghost" id="dlpng">PNG 1200×630</button>
-        <button class="btn btn-ghost" id="cp">Řádek pro gen.js</button>
+        <button class="btn btn-ghost" id="dlpng">PNG</button>
+        <button class="btn btn-ghost" id="cp">gen.js row</button>
       </div>
     </div>
   </div>
-</div>
-</div><!-- /view-poutak -->
-
-<div id="view-paleta" class="view">
-  <div class="pal-head">
-    <h2>Paleta speciálu</h2>
-    <p>Závazných 15 barev kapitol. Jediný zdroj je <code>apps/web/components/dpbp/dpbpChapters.json</code>
-       — odsud čerpá web, tento generátor i podklady pro sítě a podcasty. Klik na barvu nebo hex ji zkopíruje.
-       Jinou dominantní barvu v projektu nepoužívejte.</p>
-  </div>
-  <div class="palgrid" id="palgrid"></div>
 </div>
 </div><!-- /content -->
 <div class="toast" id="toast"></div>
@@ -258,26 +239,8 @@ const CHAPTERS = [
 ];
 
 const MOTIFS = [
-  ['fall','klesá'],['riseFall','vrchol'],['cross','křížení'],
-  ['bars','sloupce'],['gap','mezera'],['dots','tečky']
-];
-
-const PRESETS = [
-  { n:'01', big:'1,28', unit:'dítěte na ženu', claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.', motif:'fall' },
-  { n:'02', big:'5 : 4', unit:'dětí na ženy', claim:'Co doopravdy měří\núhrnná plodnost', motif:'dots' },
-  { n:'03', big:'2040', unit:'rok, kdy Togo přeroste Česko', claim:'Svět se nepřelidní.\nPřerozdělí se.', motif:'cross' },
-  { n:'04', big:'1,97 → 1,45', unit:'Švédsko 2010 → 2023', claim:'Skandinávský rekord\nnevydržel', motif:'riseFall' },
-  { n:'05', big:'22 → 30', unit:'věk matky u prvního dítěte', claim:'Největší posun\nmezi bohatými zeměmi', motif:'gap' },
-  { n:'06', big:'22 %', unit:'žen ve Sněmovně', claim:'Tímhle tempem přijde\nparita po roce 2050', motif:'bars' },
-  { n:'07', big:'1,28 / 1,8', unit:'rok vs. generace', claim:'Momentka roku,\nnebo film celé generace', motif:'dots' },
-  { n:'08', big:'5 % / 35 %', unit:'dětí do 3 let v jeslích, ČR vs. EU', claim:'Co ze slibů stran\npodle dat funguje', motif:'bars' },
-  { n:'09', big:'0,72', unit:'Jižní Korea 2023', claim:'200 miliard dolarů\nporodnost nezvedlo', motif:'fall' },
-  { n:'10', big:'55 let', unit:'dat o každém porodu', claim:'Nejsilnější prediktor:\nvzdělání matky', motif:'dots' },
-  { n:'11', big:'−12 % / +30 %', unit:'Karviná vs. Říčany za dekádu', claim:'Šest tisíc obcí,\nčtyři odlišné osudy', motif:'cross' },
-  { n:'12', big:'3,5 % HDP', unit:'Francie na rodiny, nejvíc v EU', claim:'Čtyři modely reakce.\nStrop drží všude.', motif:'riseFall' },
-  { n:'13', big:'190 → 90', unit:'tisíc narozených ročně', claim:'Poloviční generace\nvstupuje do hry', motif:'fall' },
-  { n:'14', big:'4×', unit:'rozdíl mezi kraji', claim:'Vzdělanostní propast\nse propisuje do porodnosti', motif:'bars' },
-  { n:'15', big:'53 %', unit:'voličů 2029 starších 50 let', claim:'Kdo bude volit\npříští Sněmovnu', motif:'gap' },
+  ['fall','fall'],['riseFall','peak'],['cross','cross'],
+  ['bars','bars'],['gap','gap'],['dots','dots']
 ];
 
 // ------- state -------
@@ -286,7 +249,7 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#de1743', format:'landscape'
+  motif:'fall', accent:'#de1743', format:'www'
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
@@ -327,18 +290,23 @@ function motifSvg(kind, accent, x0, y0, w, h){
 // Formáty pro sítě. Landscape = odkaz/og:image, který berou skoro všechny sítě
 // (FB, X, Bluesky, Threads, LinkedIn, Reddit, WhatsApp) i web. Ostatní jsou pro
 // nativní posty (Instagram feed, Stories/Reels).
+// Formats by network. www/FB/X/BSky all use the 1200×630 link preview (og:image);
+// separate buttons keep exports organised per network. Square = IG/FB feed,
+// IG story/reel = full-screen 9:16.
 const FORMATS = {
-  landscape: { w:1200, h:630,  label:'Odkaz · 1200×630' },
-  square:    { w:1080, h:1080, label:'Čtverec · 1080×1080' },
-  portrait:  { w:1080, h:1350, label:'Na výšku · 1080×1350' },
-  story:     { w:1080, h:1920, label:'Story · 1080×1920' },
+  www:     { w:1200, h:630,  label:'www' },
+  fb:      { w:1200, h:630,  label:'FB' },
+  x:       { w:1200, h:630,  label:'X' },
+  bsky:    { w:1200, h:630,  label:'BSky' },
+  square:  { w:1080, h:1080, label:'Square' },
+  igstory: { w:1080, h:1920, label:'IG story/reel' },
 };
 const F_SLAB="'Roboto Slab', Georgia, serif";
 const F_COND="'Roboto Condensed', Arial, sans-serif";
 
 // standalone = SVG na disk (přibalí @import fontů, ~250 B navíc)
 function buildSVG(s, standalone){
-  const F=FORMATS[s.format]||FORMATS.landscape, W=F.w, H=F.h;
+  const F=FORMATS[s.format]||FORMATS.www, W=F.w, H=F.h;
   const ink=s.accent;               // barva kapitoly – linka, číslo, graf, logo
   const fontImport = standalone
     ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
@@ -346,9 +314,9 @@ function buildSVG(s, standalone){
   const M = Math.round(W*0.0583);   // okraj (70 pro 1200, 63 pro 1080)
   const barH = W>=1200 ? 14 : 16;
   const RE = W-M;                    // pravý okraj obsahu
-  // logo posadíme tak, aby nejzazší bod hlavy lícoval s targetRight (hlava má
-  // v rámečku ~0,214·S rezervu vpravo)
-  const logoAt=(targetRight,y,S)=>specialLogo(ink, targetRight - S*0.786, y, S);
+  // logo posadíme tak, aby konec „vlasů" (obrys hlavy) lícoval s targetRight;
+  // barevné tečky pak smějí přesahovat dál doprava do prázdného okraje
+  const logoAt=(targetRight,y,S)=>specialLogo(ink, targetRight - S*0.757, y, S);
   // kicker s auto-zmenšením na dostupnou šířku
   const kicker=(x,y,maxW,anchor)=>{
     const LS0=6,SZ0=26;
@@ -421,11 +389,15 @@ function measureCond(text, size){
 // Prstenec je tlustý – ztlušťuje se dovnitř, vnější průměr zůstává (R+SW/2 = 20,5
 // jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
 function brandMark(name, side, y, LM, RM){
-  const R=14, SW=13, Rout=R+SW/2, gap=16;  // tenčí prstenec (byl SW 15)
-  const ex=(R*Math.sin(2*Math.PI/3)).toFixed(2);   // konec žlutého oblouku (120° od vrcholu)
-  const ey=(-R*Math.cos(2*Math.PI/3)).toFixed(2);
-  const ring = `<circle cx="0" cy="0" r="${R}" fill="none" stroke="${C.crimson}" stroke-width="${SW}"/>`
-    + `<path d="M0 ${-R} A${R} ${R} 0 0 1 ${ex} ${ey}" fill="none" stroke="${C.yellow}" stroke-width="${SW}"/>`;
+  const Rout=20.5, gap=16;   // vnější poloměr značky (kvůli zarovnání)
+  // skutečné logo DataTimes: tříbarevný kruh (crimson + oranžová + žlutá),
+  // žádný plný crimson prstenec = žádná „červená kontura". Zdroj: Logo.tsx.
+  const k=(Rout/138).toFixed(4);   // 138 = 100 (poloměr) + 76/2 (stroke) v originále
+  const ring = `<g transform="scale(${k}) translate(-250,-250) rotate(-30 250 250)">`
+    + `<path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.6025403784439 300"/>`
+    + `<path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>`
+    + `<path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>`
+    + `</g>`;
   const label = `<tspan fill="${C.ink}">${esc(name)}</tspan>`
     + `<tspan fill="${C.crimson}">.</tspan><tspan fill="${C.ink}">cz</tspan>`;
   const W = measureCond(name+'.cz', 30);
@@ -484,7 +456,7 @@ Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('butt
   b.className='chip'+(key===state.format?' on':'');b.dataset.f=key;b.textContent=f.label;
   b.onclick=()=>{state.format=key;[...fWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.f===key));
     document.getElementById('frame').classList.toggle('tall', f.h/f.w>1.1);
-    hintEl.textContent=`Náhled ${f.w} × ${f.h} px · Roboto Slab + Roboto Condensed`;render();};
+    hintEl.textContent=`Preview ${f.w} × ${f.h} px · Roboto Slab + Roboto Condensed`;render();};
   fWrap.appendChild(b);});
 
 // 15 chapter colours – výběr kapitoly přepíše barvu i kicker
@@ -509,22 +481,10 @@ function syncAcc(){
   swName.innerHTML=`<b>${ch[0]} ${esc(ch[2])}</b> · <b style="color:${ch[1]}">${ch[1]}</b>`;
 }
 
-// presets
-const pWrap=document.getElementById('presets');
-PRESETS.forEach(p=>{const b=document.createElement('button');b.className='pre';
-  b.innerHTML=`<b>${esc(p.big)}</b><span>${esc(p.claim.replace('\n',' '))}</span>`;
-  b.onclick=()=>{Object.assign(state,{big:p.big,unit:p.unit,claim:p.claim,motif:p.motif});
-    document.getElementById('f-big').value=p.big;
-    document.getElementById('f-unit').value=p.unit;
-    document.getElementById('f-claim').value=p.claim;
-    [...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===p.motif));
-    render();};
-  pWrap.appendChild(b);});
-
 // bg toggle
 document.getElementById('bgToggle').onclick=(e)=>{
   const st=document.getElementById('stage');st.classList.toggle('dark');
-  e.target.textContent=st.classList.contains('dark')?'světlé pozadí':'tmavé pozadí';
+  e.target.textContent=st.classList.contains('dark')?'light background':'dark background';
 };
 
 // toast
@@ -545,7 +505,7 @@ function saveBlob(blob,name){
 document.getElementById('dlsvg').onclick=()=>{
   const svg=buildSVG(state,true);
   saveBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), fileBase()+'.svg');
-  toast(`SVG staženo · ${(new Blob([svg]).size/1024).toFixed(1)} kB`);
+  toast(`SVG downloaded · ${(new Blob([svg]).size/1024).toFixed(1)} kB`);
 };
 
 /* PNG (og:image pro sociální sítě).
@@ -578,7 +538,7 @@ document.getElementById('dlpng').onclick=async()=>{
   const btn=document.getElementById('dlpng');
   btn.disabled=true;
   try{
-    toast('Připravuji fonty…');
+    toast('Preparing fonts…');
     const fmt=FORMATS[state.format]||FORMATS.landscape;
     const svg=buildSVG(state,false).replace(/(<svg[^>]*>)/,'$1'+await fontStyleTag());
     const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
@@ -588,13 +548,13 @@ document.getElementById('dlpng').onclick=async()=>{
         const cv=document.createElement('canvas');cv.width=fmt.w;cv.height=fmt.h;
         cv.getContext('2d').drawImage(img,0,0,fmt.w,fmt.h);
         URL.revokeObjectURL(url);
-        cv.toBlob(b=>{saveBlob(b,fileBase()+'.png');toast('PNG staženo');resolve();},'image/png');
+        cv.toBlob(b=>{saveBlob(b,fileBase()+'.png');toast('PNG downloaded');resolve();},'image/png');
       };
       img.onerror=()=>{URL.revokeObjectURL(url);reject();};
       img.src=url;
     });
   }catch(e){
-    toast('Export PNG selhal — jste offline? (fonty se stahují z Google Fonts)');
+    toast('PNG export failed — are you offline? (fonts load from Google Fonts)');
   }finally{ btn.disabled=false; }
 };
 
@@ -602,43 +562,9 @@ document.getElementById('dlpng').onclick=async()=>{
 document.getElementById('cp').onclick=()=>{
   const j=s=>JSON.stringify(s);
   const row=`  { ch: ${j(state.chapter)}, n: '00', big: ${j(state.big)}, unit: ${j(state.unit)}, claim: ${j(state.claim)}, motif: ${j(state.motif)} },`;
-  navigator.clipboard.writeText(row).then(()=>toast('Řádek zkopírován do schránky'),
-    ()=>toast('Kopírování se nezdařilo'));
+  navigator.clipboard.writeText(row).then(()=>toast('Row copied to clipboard'),
+    ()=>toast('Copy failed'));
 };
-
-// ------- Paleta (přehled pro sítě / podcasty) -------
-function contrastText(hex){ // bílý nebo tmavý text podle jasu barvy
-  const [r,g,b]=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
-  return (0.299*r+0.587*g+0.114*b)>150 ? '#101432' : '#ffffff';
-}
-function copyHex(hex){
-  navigator.clipboard.writeText(hex).then(()=>toast(hex+' zkopírováno'),
-    ()=>toast('Kopírování se nezdařilo'));
-}
-const palGrid=document.getElementById('palgrid');
-CHAPTERS.forEach(([id,hex,title])=>{
-  const fg=contrastText(hex);
-  const card=document.createElement('div');card.className='palcard';
-  card.innerHTML=
-    `<div class="palswatch" style="background:${hex};color:${fg}">`
-    + `<span class="num">${id}</span>`
-    + `<button class="palcopy" style="color:${fg}">Kopírovat</button></div>`
-    + `<div class="palmeta"><div class="t">${esc(title)}</div>`
-    + `<div class="h" title="klik zkopíruje">${hex}</div></div>`;
-  card.querySelector('.palswatch').onclick=()=>copyHex(hex);
-  card.querySelector('.palcopy').onclick=(e)=>{e.stopPropagation();copyHex(hex);};
-  card.querySelector('.h').onclick=()=>copyHex(hex);
-  palGrid.appendChild(card);
-});
-
-// ------- přepínač režimů -------
-const views={poutak:document.getElementById('view-poutak'),paleta:document.getElementById('view-paleta')};
-const tabs={poutak:document.getElementById('tab-poutak'),paleta:document.getElementById('tab-paleta')};
-function setMode(m){
-  for(const k in views){views[k].classList.toggle('on',k===m);tabs[k].classList.toggle('on',k===m);}
-}
-tabs.poutak.onclick=()=>setMode('poutak');
-tabs.paleta.onclick=()=>setMode('paleta');
 
 syncAcc();
 render();
