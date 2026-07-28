@@ -186,11 +186,6 @@
     </div>
 
     <div class="ps">
-      <div class="plbl">Patička (web)</div>
-      <div class="fld"><input type="text" id="f-url" maxlength="40" value="mahdalova-skop.cz"></div>
-    </div>
-
-    <div class="ps">
       <div class="plbl">Přednastavené — kapitola Demografie</div>
       <div class="presets" id="presets"></div>
     </div>
@@ -283,7 +278,7 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#f76800', url:'mahdalova-skop.cz'
+  motif:'fall', accent:'#f76800'
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
@@ -334,13 +329,26 @@ function buildSVG(s, standalone){
   <text x="70" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>
   <text x="70" y="${160+bigSize+120}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>
   ${motifSvg(s.motif,ink)}
-  <g transform="translate(70,566)">
-    <circle cx="16" cy="0" r="16" fill="none" stroke="${C.crimson}" stroke-width="9"/>
-    <path d="M16 -16 A16 16 0 0 1 30 8" fill="none" stroke="${C.yellow}" stroke-width="9"/>
-    <text x="48" y="10" font-family="${F_COND}" font-size="30" font-weight="700"><tspan fill="${C.crimson}">Data</tspan><tspan fill="#c99a00">Times</tspan><tspan fill="${C.muted}" font-weight="400">.cz</tspan></text>
-  </g>
-  <text x="1130" y="576" font-family="${F_COND}" font-size="26" fill="${C.muted}" text-anchor="end">${esc(s.url)}</text>
+  ${brandMark(70, 'DataTimes', 'start')}
+  ${brandMark(1094, 'mahdalova-skop', 'end')}
 </svg>`;
+}
+
+// Značka do rohu patičky: kolečko v našich barvách (červený kruh + žlutý oblouk)
+// a nápis v ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
+// anchor='start' → kolečko vlevo, text vpravo (levý roh).
+// anchor='end'   → text vlevo, kolečko u vnějšího (pravého) okraje – zrcadlově.
+function brandMark(gx, name, anchor){
+  const F_COND="'Roboto Condensed', Arial, sans-serif";
+  const ring = `<circle cx="16" cy="0" r="16" fill="none" stroke="${C.crimson}" stroke-width="9"/>`
+    + `<path d="M16 -16 A16 16 0 0 1 30 8" fill="none" stroke="${C.yellow}" stroke-width="9"/>`;
+  const label = `<tspan fill="${C.ink}">${name}</tspan>`
+    + `<tspan fill="${C.yellow}">.</tspan><tspan fill="${C.ink}">cz</tspan>`;
+  const text = tx => `<text x="${tx}" y="10" font-family="${F_COND}" font-size="30" `
+    + `font-weight="700" text-anchor="${anchor}">${label}</text>`;
+  // vlevo: kolečko na gx, text hned za ním; vpravo: text končí před kolečkem
+  const body = anchor==='start' ? ring + text(48) : text(-12) + ring;
+  return `<g transform="translate(${gx},566)">${body}</g>`;
 }
 
 // ------- render -------
@@ -351,7 +359,7 @@ function render(){ frame.innerHTML=buildSVG(state,false); }
 const bind=(id,key)=>{const el=document.getElementById(id);el.value=state[key];
   el.addEventListener('input',()=>{state[key]=el.value;render();});};
 bind('f-kicker','kicker'); bind('f-big','big'); bind('f-unit','unit');
-bind('f-claim','claim'); bind('f-url','url');
+bind('f-claim','claim');
 
 // motifs
 const mWrap=document.getElementById('motifs');
