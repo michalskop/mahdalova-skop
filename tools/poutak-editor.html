@@ -63,6 +63,9 @@
   .chip{border:1.5px solid var(--border);border-radius:5px;padding:6px 3px;font-size:10.5px;font-weight:600;
     cursor:pointer;background:#fff;color:#555;text-align:center;font-family:inherit;}
   .chip.on{background:var(--red);color:#fff;border-color:var(--red);}
+  /* formáty: všechny 4 na jeden řádek */
+  #formats{grid-template-columns:repeat(4,1fr);gap:4px;}
+  #formats .chip{padding:6px 2px;font-size:9px;line-height:1.15;letter-spacing:-.01em;}
 
   /* 15 chapter colours */
   .swgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
