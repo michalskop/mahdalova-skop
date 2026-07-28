@@ -1,0 +1,79 @@
+{
+  "_source": "ČSÚ, Zdravotnictví – personál a mzdy (data ÚZIS), 2020–2024",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Počet zubních lékařů v Česku 2020–2024, fyzické osoby: 6 817, 6 868, 7 208, 6 845, 6 993. Počet kolísá kolem sedmi tisíc – nedostupnost zubní péče proto nevysvětlí úbytek zubařů v součtu.",
+  "width": 450,
+  "height": 280,
+  "title": {
+    "text": "Zubních lékařů je zhruba stejně jako před pěti lety",
+    "subtitle": "Počet zubních lékařů v Česku, fyzické osoby, 2020–2024"
+  },
+  "data": {
+    "values": [
+      { "rok": "2020", "val": 6817, "label": "6 817" },
+      { "rok": "2021", "val": 6868, "label": "6 868" },
+      { "rok": "2022", "val": 7208, "label": "7 208" },
+      { "rok": "2023", "val": 6845, "label": "6 845" },
+      { "rok": "2024", "val": 6993, "label": "6 993" }
+    ]
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "cornerRadiusEnd": 4 },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "nominal",
+          "title": null,
+          "axis": { "domain": false, "ticks": false, "labelAngle": 0, "labelPadding": 6 }
+        },
+        "y": {
+          "field": "val",
+          "type": "quantitative",
+          "title": null,
+          "scale": { "domain": [0, 8000] },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [0, 4000, 8000],
+            "labelExpr": "replace(format(datum.value, ','), ',', ' ')"
+          }
+        },
+        "color": {
+          "field": "rok",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["2020", "2021", "2022", "2023", "2024"],
+            "range": ["#6267a3", "#6267a3", "#6267a3", "#6267a3", "#de1743"]
+          }
+        },
+        "tooltip": [
+          { "field": "rok", "title": "Rok" },
+          { "field": "label", "title": "Zubní lékaři (fyzické osoby)" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1a1a1a"
+      },
+      "encoding": {
+        "x": { "field": "rok", "type": "nominal" },
+        "y": { "field": "val", "type": "quantitative", "scale": { "domain": [0, 8000] } },
+        "text": { "field": "label" }
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": "transparent" }
+  }
+}

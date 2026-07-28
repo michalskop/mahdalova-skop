@@ -1,0 +1,76 @@
+{
+  "_source": "OECD, Health at a Glance 2025 – Czechia",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Odvratitelné hospitalizace na 100 000 obyvatel: Česko 592, průměr OECD 473. Vyšší česká hodnota ukazuje prostor, kde by lepší ambulantní a koordinovaná péče mohla zabránit pobytu v nemocnici.",
+  "width": 450,
+  "height": 160,
+  "title": {
+    "text": "Česko hospitalizuje častěji kvůli stavům, které umí podchytit ambulance",
+    "subtitle": "Odvratitelné hospitalizace na 100 000 obyvatel, poslední dostupný rok"
+  },
+  "data": {
+    "values": [
+      { "zeme": "Česko", "val": 592, "label": "592" },
+      { "zeme": "Průměr OECD", "val": 473, "label": "473" }
+    ]
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "cornerRadiusEnd": 4, "height": 42 },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "title": null,
+          "sort": ["Česko", "Průměr OECD"],
+          "axis": { "domain": false, "ticks": false, "labelPadding": 8 }
+        },
+        "x": {
+          "field": "val",
+          "type": "quantitative",
+          "title": null,
+          "scale": { "domain": [0, 760] },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [0, 250, 500, 750]
+          }
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["Česko", "Průměr OECD"],
+            "range": ["#de1743", "#bcbcb0"]
+          }
+        },
+        "tooltip": [
+          { "field": "zeme", "title": "Srovnání" },
+          { "field": "label", "title": "Hospitalizace na 100 000 obyvatel" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1a1a1a"
+      },
+      "encoding": {
+        "y": { "field": "zeme", "type": "nominal", "sort": ["Česko", "Průměr OECD"] },
+        "x": { "field": "val", "type": "quantitative", "scale": { "domain": [0, 760] } },
+        "text": { "field": "label" }
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": "transparent" }
+  }
+}

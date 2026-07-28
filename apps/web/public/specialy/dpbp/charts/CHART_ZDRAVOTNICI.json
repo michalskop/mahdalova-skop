@@ -1,0 +1,115 @@
+{
+  "_source": "ČSÚ, Zdravotnictví – personál a mzdy (data ÚZIS), 2020–2024",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Vývoj počtu čtyř velkých zdravotnických profesí v Česku 2020–2024 jako index (2020 = 100). Lékařů přibylo 7,8 %, zubních lékařů 2,6 %, fyzioterapeutů 2,5 %, všeobecných sester 0,8 %. Celkový součet zdravotníků roste – nedostatek péče proto nevzniká úbytkem lidí v součtu, ale jejich věkem, rozmístěním a úvazky.",
+  "width": 450,
+  "height": 300,
+  "title": {
+    "text": "Lékařů přibývá nejrychleji ze všech velkých zdravotnických profesí",
+    "subtitle": "Počet pracovníků ve zdravotnictví, fyzické osoby, index rok 2020 = 100"
+  },
+  "data": {
+    "values": [
+      { "rok": 2020, "obor": "Lékaři", "index": 100.0, "pocet": "45 252" },
+      { "rok": 2021, "obor": "Lékaři", "index": 102.1, "pocet": "46 185" },
+      { "rok": 2022, "obor": "Lékaři", "index": 103.7, "pocet": "46 917" },
+      { "rok": 2023, "obor": "Lékaři", "index": 104.6, "pocet": "47 329" },
+      { "rok": 2024, "obor": "Lékaři", "index": 107.8, "pocet": "48 781" },
+      { "rok": 2020, "obor": "Zubní lékaři", "index": 100.0, "pocet": "6 817" },
+      { "rok": 2021, "obor": "Zubní lékaři", "index": 100.7, "pocet": "6 868" },
+      { "rok": 2022, "obor": "Zubní lékaři", "index": 105.7, "pocet": "7 208" },
+      { "rok": 2023, "obor": "Zubní lékaři", "index": 100.4, "pocet": "6 845" },
+      { "rok": 2024, "obor": "Zubní lékaři", "index": 102.6, "pocet": "6 993" },
+      { "rok": 2020, "obor": "Všeobecné sestry", "index": 100.0, "pocet": "85 870" },
+      { "rok": 2021, "obor": "Všeobecné sestry", "index": 100.7, "pocet": "86 440" },
+      { "rok": 2022, "obor": "Všeobecné sestry", "index": 100.0, "pocet": "85 896" },
+      { "rok": 2023, "obor": "Všeobecné sestry", "index": 99.3, "pocet": "85 309" },
+      { "rok": 2024, "obor": "Všeobecné sestry", "index": 100.8, "pocet": "86 580" },
+      { "rok": 2020, "obor": "Fyzioterapeuti", "index": 100.0, "pocet": "9 287" },
+      { "rok": 2021, "obor": "Fyzioterapeuti", "index": 101.3, "pocet": "9 412" },
+      { "rok": 2022, "obor": "Fyzioterapeuti", "index": 102.5, "pocet": "9 523" },
+      { "rok": 2023, "obor": "Fyzioterapeuti", "index": 99.3, "pocet": "9 225" },
+      { "rok": 2024, "obor": "Fyzioterapeuti", "index": 102.5, "pocet": "9 516" }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": { "filled": true, "size": 45 },
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "title": null,
+          "scale": { "domain": [2020, 2025.7] },
+          "axis": {
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [2020, 2021, 2022, 2023, 2024],
+            "labelExpr": "datum.value",
+            "labelPadding": 6
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "title": null,
+          "scale": { "domain": [97, 110] },
+          "axis": {
+            "grid": true,
+            "gridColor": "#e8e8dc",
+            "domain": false,
+            "ticks": false,
+            "values": [100, 105, 110]
+          }
+        },
+        "color": {
+          "field": "obor",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["Lékaři", "Zubní lékaři", "Všeobecné sestry", "Fyzioterapeuti"],
+            "range": ["#de1743", "#6267a3", "#272a59", "#bcbcb0"]
+          }
+        },
+        "tooltip": [
+          { "field": "obor", "title": "Profese" },
+          { "field": "rok", "title": "Rok" },
+          { "field": "pocet", "title": "Fyzické osoby" },
+          { "field": "index", "title": "Index (2020 = 100)" }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          { "x": 2024.15, "y": 107.8, "text": "Lékaři +7,8 %", "barva": "#de1743" },
+          { "x": 2024.15, "y": 103.9, "text": "Zubní lékaři +2,6 %", "barva": "#6267a3" },
+          { "x": 2024.15, "y": 101.9, "text": "Fyzioterapeuti +2,5 %", "barva": "#8f8f83" },
+          { "x": 2024.15, "y": 100.2, "text": "Sestry +0,8 %", "barva": "#272a59" }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 4,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative", "scale": { "domain": [2020, 2025.7] } },
+        "y": { "field": "y", "type": "quantitative", "scale": { "domain": [97, 110] } },
+        "text": { "field": "text" },
+        "color": { "field": "barva", "type": "nominal", "scale": null, "legend": null }
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": "transparent" }
+  }
+}

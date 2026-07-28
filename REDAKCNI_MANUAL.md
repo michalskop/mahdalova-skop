@@ -139,6 +139,7 @@ Ještě před titulkem napiš jednou větou, co data dokazují: subjekt, změna 
 
 ## Mezititulky, titulek a konec
 - **Mezititulek nese informaci, ne štítek.** Test: odstraň ho — pokud text neztratí žádnou tezi ani orientační bod, byl to štítek. Špatně: „Situace v Česku". Správně: „Česko zaostává za polskými regiony i v počtu STEM absolventů".
+- **Mezititulek-zjištění musí být i logicky korektní.** Formulace nesmí naznačovat mechanismus, který data nedokládají, ani vydávat triviální souvislost za objev. Příklad: u tetování fotbalistů je „Starší hráči se více tetují" špatně — tetování je trvalé, starší hráči ho prostě **nasbírali za delší život**; korektní zjištění zní „Starší hráči stihli nasbírat víc tetování" nebo se mezititulek postaví na skutečném překvapení v datech (rozdíl mezi konfederacemi). Před publikací se u každého mezititulku ptej: *plyne tahle formulace z mechanismu, který data opravdu ukazují — a není to jen artefakt času, velikosti skupiny nebo složení vzorku?*
 - **Titulek je falsifikovatelná teze.** Říká, co text dokazuje; má být možné se s ním na základě důkazů přít. Neslibuje kauzalitu, kterou text neprokazuje. Spojka „aneb" je v titulcích zakázaná; v sérii neopakujeme jeden šablonovitý formát.
 - **Konec není rekapitulace.** Dokončí myšlenku novým faktem, významem nebo přesně vymezeným směrem řešení — nebo skončí, když je řečeno vše podstatné.
 

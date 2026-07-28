@@ -4,7 +4,7 @@
   "title": "Zdravotnictví a péče",
   "accent": "#5e66d5",
   "author": "Kateřina Mahdalová & Michal Škop",
-  "date": "2026-06-12",
+  "date": "2026-07-28",
   "openerArticle": "01-pyramida",
   "cardOrder": [
     "DOKTORI",
@@ -15,12 +15,12 @@
     "slug": "one-pager",
     "logo": "/dpbp/chapters/02.svg"
   },
-  "introChart": "CHART_MD_AGE",
+  "introChart": "CHART_ZDRAVOTNICI",
   "intro": {
-    "title": "Polovina praktiků odejde do roku 2035 do důchodu. Nového lékaře vyhláškou nedosadíte",
-    "textBefore": "Každá vláda slibuje do zdravotnictví víc peněz, víc sester a víc lékařů. Peníze ale novou ordinaci samy neotevřou. Praktik se musí vystudovat a pak chtít v oboru zůstat – a času na výchovu náhrady bylo potřeba deset let, které už uběhly.",
-    "textAfter": "Do roku 2035 dosáhne důchodového věku víc než polovina praktiků pro dospělé, u dětských lékařů je v důchodovém věku už dnes třetina. Rozpočet na tom nic rychle nezmění – lidi, kteří chybějí, nejde dokoupit. Pomůže spíš rozšíření kompetencí sester a telemedicína, a to dřív, než ordinace v menších městech začnou zavírat.",
-    "textClosing": "Jak stejný problém řeší jinde – norské sestry s rozšířenými kompetencemi, rakouské pobídky pro venkovské lékaře – a co z toho Česko zvládne i bez jejich rozpočtu, ukazují texty níže."
+    "title": "Kdo vás bude léčit – a kdo se o vás postará potom",
+    "textBefore": "Každá vláda slibuje do zdravotnictví víc peněz, víc sester a víc lékařů. A na první pohled se daří: lékařů je v Česku nejvíc v novodobé historii, mezi roky 2020 a 2024 jich přibylo přes tři a půl tisíce. Jenže ve stejné zemi zavírají ordinace bez náhrady a statisíce lidí hledají praktika, pediatra nebo zubaře, který by je vůbec přijal.",
+    "textAfter": "Celostátní součet totiž o dostupnosti péče nevypovídá. Rozhoduje věk lékařů – do roku 2035 dosáhne důchodového věku 53 % praktiků –, jejich rozmístění, skutečné úvazky a smlouvy s pojišťovnami. A rozhoduje i to, co nastává po nemocnici: do dlouhodobé péče posílá Česko 13 % zdravotních výdajů proti 18 % v EU a rozdíl dnes odpracovávají rodiny. Kapitola proto sleduje obě otázky z titulku – kdo bude léčit a kdo se postará potom.",
+    "textClosing": "Jak stejné problémy řeší jinde – norské sestry s rozšířenými kompetencemi, rakouské pobídky pro venkovské lékaře, japonská lekce ze stárnutí – a nově i to, co součty zakrývají: zubaři bez smluv, nemocniční miliardy bez měřitelných výsledků, neviditelná práce pečujících rodin, vlastníci soukromé péče a třetí návrat ministra Vojtěcha."
   },
   "tiles": [
     { "slug": "explainer-drg", "topic": "Explainer" },
@@ -31,5 +31,13 @@
     { "slug": "03-digital", "topic": "Analýza" },
     { "slug": "05-overili-53-procent", "topic": "Investigace" },
     { "slug": "06-rakousko-udrzet-lekare", "topic": "Komparace" }
+  ],
+  "postSupportTiles": [
+    { "slug": "07-zubari", "topic": "Analýza", "fullWidth": true },
+    { "slug": "08-odbornosti-2035", "topic": "Analýza" },
+    { "slug": "09-nemocnice", "topic": "Analýza" },
+    { "slug": "10-kdo-se-postara", "topic": "Péče", "fullWidth": true },
+    { "slug": "11-kdo-vlastni-peci", "topic": "Investigace" },
+    { "slug": "12-treti-navrat-vojtecha", "topic": "Kontext" }
   ]
 }
