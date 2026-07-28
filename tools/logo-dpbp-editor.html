@@ -1,0 +1,489 @@
+<html lang="cs"><head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;900&family=Roboto:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#101432;--red:#de1743;--orange:#f76800;--yellow:#ffcf02;--teal:#1a9fbd;--bg:#f8f6f0;--border:#e0dbd0;}
+body{font-family:'Roboto',sans-serif;background:var(--bg);height:100vh;overflow:hidden;}
+#app{display:grid;grid-template-columns:1fr 284px;height:100vh;}
+
+/* PREVIEW */
+#preview{display:flex;align-items:center;justify-content:center;background:var(--bg);position:relative;padding:16px;transition:background .3s;}
+#preview.dark{background:var(--navy);}
+#bg-toggle{position:absolute;top:10px;right:10px;background:rgba(100,100,100,.2);border:1.5px solid rgba(0,0,0,.2);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:500;cursor:pointer;color:#333;transition:color .3s,border-color .3s;}
+#preview.dark #bg-toggle{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.12);}
+
+/* PANEL */
+#panel{background:#fff;border-left:1px solid var(--border);overflow-y:auto;display:flex;flex-direction:column;}
+.ps{padding:12px 14px;border-bottom:1px solid var(--border);}
+.plbl{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+
+/* SCOPE SELECTOR – the key UX element */
+.scope-row{display:flex;gap:4px;}
+.scope-btn{flex:1;padding:7px 4px;border:1.5px solid var(--border);border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;background:#fff;color:#555;transition:all .15s;text-align:center;}
+.scope-btn.on{background:var(--red);color:#fff;border-color:var(--red);}
+
+/* SOLID COLOR */
+.crow{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.crow label{font-size:11px;color:#555;width:56px;flex-shrink:0;}
+.crow .hex{font-size:11px;font-family:monospace;color:#333;}
+.cbox{width:30px;height:24px;border-radius:3px;border:1px solid var(--border);cursor:pointer;flex-shrink:0;transition:outline .1s;}
+.cbox:hover{outline:2px solid var(--red);}
+
+/* GRADIENT */
+.gradwrap{background:var(--bg);border-radius:5px;padding:10px;}
+.gprev{height:14px;border-radius:3px;margin-top:6px;border:1px solid var(--border);}
+.arow{display:flex;align-items:center;gap:7px;margin-top:6px;}
+.arow label{font-size:11px;color:#555;width:38px;}
+.arow input[type=range]{flex:1;accent-color:var(--red);}
+.arow span{font-size:11px;font-family:monospace;width:28px;text-align:right;}
+
+/* INDIVIDUAL */
+#ind-section .empty{font-size:11px;color:#aaa;font-style:italic;}
+
+/* CONTOUR */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.toggle{position:relative;width:38px;height:20px;cursor:pointer;}
+.toggle input{opacity:0;width:0;height:0;}
+.tslider{position:absolute;inset:0;background:#ccc;border-radius:20px;transition:.3s;}
+.tslider:before{content:'';position:absolute;width:14px;height:14px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+input:checked+.tslider{background:var(--red);}
+input:checked+.tslider:before{transform:translateX(18px);}
+#k-ctrl{opacity:.4;pointer-events:none;transition:opacity .2s;}
+#k-ctrl.on{opacity:1;pointer-events:auto;}
+
+/* PRESETS */
+.preset{display:flex;align-items:center;gap:7px;cursor:pointer;padding:5px 7px;border-radius:4px;border:1.5px solid var(--border);margin-bottom:4px;transition:border-color .15s;}
+.preset:hover{border-color:var(--red);}
+.pdots{display:flex;gap:3px;}
+.pdot{width:12px;height:12px;border-radius:50%;}
+.pname{font-size:10.5px;color:#444;font-weight:500;}
+
+/* PALETTE POPUP */
+#pal-popup{display:none;position:fixed;z-index:9999;background:#fff;border:1px solid #ddd;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.18);padding:10px 11px;width:240px;max-height:460px;overflow-y:auto;}
+#pal-popup.open{display:block;}
+.pfam{margin-bottom:6px;}
+.pfam-name{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#bbb;margin-bottom:3px;}
+.prow{display:grid;grid-template-columns:repeat(10,18px);gap:3px;}
+.psw{width:18px;height:18px;border-radius:3px;cursor:pointer;border:1px solid rgba(0,0,0,.07);transition:transform .1s;}
+.psw:hover{transform:scale(1.35);outline:2px solid #333;z-index:2;position:relative;}
+
+/* BOTTOM BUTTONS */
+.btm-btn{display:block;width:calc(100% - 28px);margin:6px 14px 0;padding:8px;border:none;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Roboto Slab',serif;}
+.btm-btn:hover{opacity:.88;}
+</style>
+</head>
+<body>
+
+<div id="pal-popup"><div class="pfam"><div class="pfam-name">Warm</div><div class="prow"><div class="psw" title="#ffffff" style="background: rgb(255, 255, 255);"></div><div class="psw" title="#fdfbf7" style="background: rgb(253, 251, 247);"></div><div class="psw" title="#f8f6f0" style="background: rgb(248, 246, 240);"></div><div class="psw" title="#f3f1e9" style="background: rgb(243, 241, 233);"></div><div class="psw" title="#eeeae2" style="background: rgb(238, 234, 226);"></div><div class="psw" title="#e9e9dd" style="background: rgb(233, 233, 221);"></div><div class="psw" title="#e8e8dc" style="background: rgb(232, 232, 220);"></div><div class="psw" title="#d4d4c8" style="background: rgb(212, 212, 200);"></div><div class="psw" title="#c8c8bc" style="background: rgb(200, 200, 188);"></div><div class="psw" title="#bcbcb0" style="background: rgb(188, 188, 176);"></div><div class="psw" title="#fffdf0" style="background: rgb(255, 253, 240);"></div><div class="psw" title="#fff7d9" style="background: rgb(255, 247, 217);"></div><div class="psw" title="#fff0b3" style="background: rgb(255, 240, 179);"></div><div class="psw" title="#ffe680" style="background: rgb(255, 230, 128);"></div><div class="psw" title="#ffdc33" style="background: rgb(255, 220, 51);"></div><div class="psw" title="#ffd519" style="background: rgb(255, 213, 25);"></div><div class="psw" title="#ffcf02" style="background: rgb(255, 207, 2);"></div><div class="psw" title="#efb704" style="background: rgb(239, 183, 4);"></div><div class="psw" title="#bd9103" style="background: rgb(189, 145, 3);"></div><div class="psw" title="#a47d03" style="background: rgb(164, 125, 3);"></div><div class="psw" title="#fff3e8" style="background: rgb(255, 243, 232);"></div><div class="psw" title="#ffe0c7" style="background: rgb(255, 224, 199);"></div><div class="psw" title="#ffc89f" style="background: rgb(255, 200, 159);"></div><div class="psw" title="#fda668" style="background: rgb(253, 166, 104);"></div><div class="psw" title="#ff934d" style="background: rgb(255, 147, 77);"></div><div class="psw" title="#ff7f2a" style="background: rgb(255, 127, 42);"></div><div class="psw" title="#f76800" style="background: rgb(247, 104, 0);"></div><div class="psw" title="#cc5f00" style="background: rgb(204, 95, 0);"></div><div class="psw" title="#994800" style="background: rgb(153, 72, 0);"></div><div class="psw" title="#663200" style="background: rgb(102, 50, 0);"></div><div class="psw" title="#fff0ed" style="background: rgb(255, 240, 237);"></div><div class="psw" title="#ffcec6" style="background: rgb(255, 206, 198);"></div><div class="psw" title="#ffa99c" style="background: rgb(255, 169, 156);"></div><div class="psw" title="#ff7e6e" style="background: rgb(255, 126, 110);"></div><div class="psw" title="#ff5c4a" style="background: rgb(255, 92, 74);"></div><div class="psw" title="#ff3f30" style="background: rgb(255, 63, 48);"></div><div class="psw" title="#e8412c" style="background: rgb(232, 65, 44);"></div><div class="psw" title="#c93020" style="background: rgb(201, 48, 32);"></div><div class="psw" title="#a32318" style="background: rgb(163, 35, 24);"></div><div class="psw" title="#7d1810" style="background: rgb(125, 24, 16);"></div><div class="psw" title="#fff4f6" style="background: rgb(255, 244, 246);"></div><div class="psw" title="#ffb3c0" style="background: rgb(255, 179, 192);"></div><div class="psw" title="#ff8099" style="background: rgb(255, 128, 153);"></div><div class="psw" title="#ff4970" style="background: rgb(255, 73, 112);"></div><div class="psw" title="#ff1a4a" style="background: rgb(255, 26, 74);"></div><div class="psw" title="#f01745" style="background: rgb(240, 23, 69);"></div><div class="psw" title="#de1743" style="background: rgb(222, 23, 67);"></div><div class="psw" title="#c5143c" style="background: rgb(197, 20, 60);"></div><div class="psw" title="#a81134" style="background: rgb(168, 17, 52);"></div><div class="psw" title="#8b0e2b" style="background: rgb(139, 14, 43);"></div><div class="psw" title="#fbe8eb" style="background: rgb(251, 232, 235);"></div><div class="psw" title="#f5c4c9" style="background: rgb(245, 196, 201);"></div><div class="psw" title="#efa0af" style="background: rgb(239, 160, 175);"></div><div class="psw" title="#e87c91" style="background: rgb(232, 124, 145);"></div><div class="psw" title="#d85a74" style="background: rgb(216, 90, 116);"></div><div class="psw" title="#bb3a5d" style="background: rgb(187, 58, 93);"></div><div class="psw" title="#a03250" style="background: rgb(160, 50, 80);"></div><div class="psw" title="#812840" style="background: rgb(129, 40, 64);"></div><div class="psw" title="#621d30" style="background: rgb(98, 29, 48);"></div><div class="psw" title="#431320" style="background: rgb(67, 19, 32);"></div><div class="psw" title="#faf5fc" style="background: rgb(250, 245, 252);"></div><div class="psw" title="#f3eaf8" style="background: rgb(243, 234, 248);"></div><div class="psw" title="#e0c8ee" style="background: rgb(224, 200, 238);"></div><div class="psw" title="#c49ad8" style="background: rgb(196, 154, 216);"></div><div class="psw" title="#b57ac8" style="background: rgb(181, 122, 200);"></div><div class="psw" title="#b262c0" style="background: rgb(178, 98, 192);"></div><div class="psw" title="#9f319e" style="background: rgb(159, 49, 158);"></div><div class="psw" title="#6e227d" style="background: rgb(110, 34, 125);"></div><div class="psw" title="#522a7a" style="background: rgb(82, 42, 122);"></div><div class="psw" title="#351040" style="background: rgb(53, 16, 64);"></div></div></div><div class="pfam"><div class="pfam-name">Cool</div><div class="prow"><div class="psw" title="#e9ebfa" style="background: rgb(233, 235, 250);"></div><div class="psw" title="#c9d0f5" style="background: rgb(201, 208, 245);"></div><div class="psw" title="#a9b5f0" style="background: rgb(169, 181, 240);"></div><div class="psw" title="#899aeb" style="background: rgb(137, 154, 235);"></div><div class="psw" title="#697fe6" style="background: rgb(105, 127, 230);"></div><div class="psw" title="#5e66d5" style="background: rgb(94, 102, 213);"></div><div class="psw" title="#4a51ab" style="background: rgb(74, 81, 171);"></div><div class="psw" title="#383d82" style="background: rgb(56, 61, 130);"></div><div class="psw" title="#272a59" style="background: rgb(39, 42, 89);"></div><div class="psw" title="#161730" style="background: rgb(22, 23, 48);"></div><div class="psw" title="#e9ecf4" style="background: rgb(233, 236, 244);"></div><div class="psw" title="#d2d8e9" style="background: rgb(210, 216, 233);"></div><div class="psw" title="#bcc4df" style="background: rgb(188, 196, 223);"></div><div class="psw" title="#a6b0d4" style="background: rgb(166, 176, 212);"></div><div class="psw" title="#8f9dc9" style="background: rgb(143, 157, 201);"></div><div class="psw" title="#7889be" style="background: rgb(120, 137, 190);"></div><div class="psw" title="#6267a3" style="background: rgb(98, 103, 163);"></div><div class="psw" title="#4c4f8e" style="background: rgb(76, 79, 142);"></div><div class="psw" title="#2f325c" style="background: rgb(47, 50, 92);"></div><div class="psw" title="#101432" style="background: rgb(16, 20, 50);"></div><div class="psw" title="#e5fdfc" style="background: rgb(229, 253, 252);"></div><div class="psw" title="#b8eff6" style="background: rgb(184, 239, 246);"></div><div class="psw" title="#8cdfef" style="background: rgb(140, 223, 239);"></div><div class="psw" title="#5fcce6" style="background: rgb(95, 204, 230);"></div><div class="psw" title="#33b9d9" style="background: rgb(51, 185, 217);"></div><div class="psw" title="#1a9fbd" style="background: rgb(26, 159, 189);"></div><div class="psw" title="#0e839e" style="background: rgb(14, 131, 158);"></div><div class="psw" title="#06677d" style="background: rgb(6, 103, 125);"></div><div class="psw" title="#044d5e" style="background: rgb(4, 77, 94);"></div><div class="psw" title="#023440" style="background: rgb(2, 52, 64);"></div><div class="psw" title="#e8f9f4" style="background: rgb(232, 249, 244);"></div><div class="psw" title="#c2f0e4" style="background: rgb(194, 240, 228);"></div><div class="psw" title="#9be8d4" style="background: rgb(155, 232, 212);"></div><div class="psw" title="#75dfc4" style="background: rgb(117, 223, 196);"></div><div class="psw" title="#4fd6b4" style="background: rgb(79, 214, 180);"></div><div class="psw" title="#12b886" style="background: rgb(18, 184, 134);"></div><div class="psw" title="#0e926a" style="background: rgb(14, 146, 106);"></div><div class="psw" title="#0b6b4e" style="background: rgb(11, 107, 78);"></div><div class="psw" title="#084533" style="background: rgb(8, 69, 51);"></div><div class="psw" title="#042319" style="background: rgb(4, 35, 25);"></div><div class="psw" title="#eaf7d6" style="background: rgb(234, 247, 214);"></div><div class="psw" title="#cbeab1" style="background: rgb(203, 234, 177);"></div><div class="psw" title="#acde8b" style="background: rgb(172, 222, 139);"></div><div class="psw" title="#8dd265" style="background: rgb(141, 210, 101);"></div><div class="psw" title="#6ec53f" style="background: rgb(110, 197, 63);"></div><div class="psw" title="#639e0a" style="background: rgb(99, 158, 10);"></div><div class="psw" title="#507e08" style="background: rgb(80, 126, 8);"></div><div class="psw" title="#3d5f06" style="background: rgb(61, 95, 6);"></div><div class="psw" title="#2a3f04" style="background: rgb(42, 63, 4);"></div><div class="psw" title="#172002" style="background: rgb(23, 32, 2);"></div><div class="psw" title="#f5f0eb" style="background: rgb(245, 240, 235);"></div><div class="psw" title="#e6d5c3" style="background: rgb(230, 213, 195);"></div><div class="psw" title="#d4b89e" style="background: rgb(212, 184, 158);"></div><div class="psw" title="#c19a78" style="background: rgb(193, 154, 120);"></div><div class="psw" title="#a87d58" style="background: rgb(168, 125, 88);"></div><div class="psw" title="#8b6240" style="background: rgb(139, 98, 64);"></div><div class="psw" title="#6e4a2c" style="background: rgb(110, 74, 44);"></div><div class="psw" title="#53361e" style="background: rgb(83, 54, 30);"></div><div class="psw" title="#3b2414" style="background: rgb(59, 36, 20);"></div><div class="psw" title="#24150b" style="background: rgb(36, 21, 11);"></div></div></div></div>
+<div id="app">
+
+  <!-- PREVIEW -->
+  <div id="preview">
+    <button id="bg-toggle" onclick="toggleBg()">tmavé pozadí</button>
+    <svg id="logo-svg" viewBox="-8 -8 716 716" width="460" height="460" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+    <defs>
+      <clipPath id="sil-clip">
+        <path transform="translate(-117.098299,796.836783) scale(0.100000,-0.100000)" d="M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863
+-1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152
+-188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336
+-79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97
+-99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140
+868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392
+610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147
+28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843
+-23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386
+-102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407
+364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494
+125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z"></path>
+      </clipPath>
+    </defs>
+    <!-- SILHOUETTE -->
+    <g class="sil-area" onclick="selectEl('sil')">
+      <g clip-path="url(#sil-clip)">
+        <rect id="sil-rect" x="0" y="0" width="700" height="700" fill="#ffcf02"></rect>
+      </g>
+      <!-- KONTURA siluety -->
+      <path id="sil-stroke" transform="translate(-117.098299,796.836783) scale(0.100000,-0.100000)" d="M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863
+-1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152
+-188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336
+-79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97
+-99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140
+868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392
+610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147
+28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843
+-23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386
+-102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407
+364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494
+125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z" fill="none" stroke="none" stroke-width="0"></path>
+    </g>
+    <!-- CIRCLES -->
+    <circle id="d0" class="dot" cx="358.4" cy="156.6" r="40.6" onclick="selectEl(0)" fill="#e64234" stroke="none" stroke-width="0"></circle>
+    <circle id="d1" class="dot" cx="412.8" cy="347.0" r="35.3" onclick="selectEl(1)" fill="#ef7422" stroke="none" stroke-width="0"></circle>
+    <circle id="d2" class="dot" cx="340.9" cy="512.7" r="24.7" onclick="selectEl(2)" fill="#fecc03" stroke="none" stroke-width="0"></circle>
+    <circle id="d3" class="dot" cx="280.6" cy="220.0" r="24.7" onclick="selectEl(3)" fill="#ef7621" stroke="none" stroke-width="0"></circle>
+    <circle id="d4" class="dot" cx="379.8" cy="253.5" r="21.2" onclick="selectEl(4)" fill="#eb5e2a" stroke="none" stroke-width="0"></circle>
+    <circle id="d5" class="dot" cx="311.7" cy="364.6" r="17.6" onclick="selectEl(5)" fill="#f7a013" stroke="none" stroke-width="0"></circle>
+    <circle id="d6" class="dot" cx="537.3" cy="304.7" r="17.6" onclick="selectEl(6)" fill="#e43738" stroke="none" stroke-width="0"></circle>
+    <circle id="d7" class="dot" cx="313.7" cy="292.3" r="17.6" onclick="selectEl(7)" fill="#f2851c" stroke="none" stroke-width="0"></circle>
+    <circle id="d8" class="dot" cx="449.8" cy="213.0" r="17.6" onclick="selectEl(8)" fill="#e33538" stroke="none" stroke-width="0"></circle>
+    <circle id="d9" class="dot" cx="358.4" cy="435.1" r="15.9" onclick="selectEl(9)" fill="#f8a90f" stroke="none" stroke-width="0"></circle>
+    <circle id="d10" class="dot" cx="471.2" cy="424.6" r="12.3" onclick="selectEl(10)" fill="#f07b20" stroke="none" stroke-width="0"></circle>
+    <circle id="d11" class="dot" cx="525.6" cy="361.1" r="12.3" onclick="selectEl(11)" fill="#e8502f" stroke="none" stroke-width="0"></circle>
+    <circle id="d12" class="dot" cx="469.2" cy="280.0" r="12.3" onclick="selectEl(12)" fill="#e74732" stroke="none" stroke-width="0"></circle>
+    <circle id="d13" class="dot" cx="457.6" cy="138.9" r="12.3" onclick="selectEl(13)" fill="#de1743" stroke="none" stroke-width="0"></circle>
+    <circle id="d14" class="dot" cx="412.8" cy="488.0" r="8.8" onclick="selectEl(14)" fill="#f8a810" stroke="none" stroke-width="0"></circle>
+    <circle id="d15" class="dot" cx="539.2" cy="234.1" r="8.8" onclick="selectEl(15)" fill="#df1c41" stroke="none" stroke-width="0"></circle>
+  </svg>
+  </div>
+
+  <!-- PANEL -->
+  <div id="panel">
+
+    <!-- 1. SCOPE -->
+    <div class="ps">
+      <div class="plbl">Apply to</div>
+      <div class="scope-row">
+        <button class="scope-btn on" id="sc-all" onclick="setScope('all')">All</button>
+        <button class="scope-btn" id="sc-circles" onclick="setScope('circles')">Circles</button>
+        <button class="scope-btn" id="sc-sil" onclick="setScope('sil')">Silhouette</button>
+      </div>
+      <div style="font-size:10px;color:#aaa;margin-top:6px;line-height:1.4">Pick a color below → applies to selected scope. Click active scope again to deselect.</div>
+    </div>
+
+    <!-- 2. SOLID COLOR -->
+    <div class="ps">
+      <div class="plbl">Solid color</div>
+      <div class="crow">
+        <label>Color</label>
+        <div class="cbox" id="solid-c" data-color="#de1743" style="background: rgb(222, 23, 67);"></div>
+        <span class="hex" id="solid-hex">#de1743</span>
+      </div>
+    </div>
+
+    <!-- 3. GRADIENT -->
+    <div class="ps">
+      <div class="plbl">Gradient</div>
+      <div class="gradwrap">
+        <div class="crow"><label>From</label><div class="cbox" id="ga" data-color="#de1743" style="background: rgb(222, 23, 67);"></div><span class="hex" id="ga-h">#de1743</span></div>
+        <div class="crow"><label>To</label><div class="cbox" id="gb" data-color="#ffcf02" style="background: rgb(255, 207, 2);"></div><span class="hex" id="gb-h">#ffcf02</span></div>
+        <div class="arow">
+          <label>Angle</label>
+          <input type="range" id="gang" min="0" max="180" value="135" oninput="onAngle()">
+          <span id="gang-v">135°</span>
+        </div>
+        <div class="gprev" id="gprev" style="background: linear-gradient(135deg, rgb(222, 23, 67), rgb(255, 207, 2));"></div>
+      </div>
+    </div>
+
+    <!-- 4. INDIVIDUAL ELEMENT -->
+    <div class="ps" id="ind-section">
+      <div class="plbl">Individual element</div>
+      <div id="ind-info" class="empty">← click on logo element</div>
+      <div id="ind-controls" style="display:none">
+        <div class="crow" style="margin-top:6px">
+          <label>Color</label>
+          <div class="cbox" id="ind-color"></div>
+          <span class="hex" id="ind-hex">#de1743</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. CONTOUR -->
+    <div class="ps">
+      <div class="plbl">Contour</div>
+      <div class="toggle-row">
+        <span style="font-size:11px;font-weight:500">Enable contours</span>
+        <label class="toggle"><input type="checkbox" id="k-on" onchange="onContour()"><span class="tslider"></span></label>
+      </div>
+      <div id="k-ctrl">
+        <div class="crow"><label>Width</label><input type="range" id="k-w" min="1" max="8" value="2" step=".5" oninput="document.getElementById('k-wv').textContent=this.value+'px';onContour()"><span class="hex" id="k-wv">2px</span></div>
+        <div class="crow"><label>Color</label><div class="cbox" id="k-color" data-color="#1a1a1a" style="background: rgb(26, 26, 26);"></div><span class="hex" id="k-ch">#1a1a1a</span></div>
+        <div class="crow"><label style="width:auto;font-size:11px">Same as fill</label><input type="checkbox" id="k-same" onchange="onContour()" style="margin-left:6px;accent-color:var(--red)"></div>
+      </div>
+    </div>
+
+    <!-- 6. PRESETS -->
+    <div class="ps">
+      <div class="plbl">Presets</div>
+      <div id="presets"><div class="preset"><div class="pdots"><span class="pdot" style="background:#de1743"></span><span class="pdot" style="background:#f76800"></span><span class="pdot" style="background:#ffcf02"></span></div><span class="pname">Flame</span></div><div class="preset"><div class="pdots"><span class="pdot" style="background:#101432"></span><span class="pdot" style="background:#de1743"></span></div><span class="pname">Sunset</span></div><div class="preset"><div class="pdots"><span class="pdot" style="background:#101432"></span><span class="pdot" style="background:#1a9fbd"></span><span class="pdot" style="background:#f8f6f0"></span></div><span class="pname">Ocean</span></div><div class="preset"><div class="pdots"><span class="pdot" style="background:#de1743"></span><span class="pdot" style="background:#6b0820"></span></div><span class="pname">Mono</span></div></div>
+    </div>
+
+    <button class="btm-btn" onclick="resetAll()" style="background:var(--bg);border:1.5px solid var(--border);color:var(--navy);margin-top:8px;">↺ Reset</button>
+    <button class="btm-btn" onclick="dlEditor()" style="background:var(--teal);color:#fff;margin-top:4px;">⬇ Download editor</button>
+    <button class="btm-btn" onclick="dlSVG()" style="background:var(--navy);color:#fff;margin-top:4px;margin-bottom:14px;">⬇ Download SVG</button>
+  </div>
+</div>
+
+<script>
+const C=[[358.4,156.6,40.6],[412.8,347.0,35.3],[340.9,512.7,24.7],[280.6,220.0,24.7],[379.8,253.5,21.2],[311.7,364.6,17.6],[537.3,304.7,17.6],[313.7,292.3,17.6],[449.8,213.0,17.6],[358.4,435.1,15.9],[471.2,424.6,12.3],[525.6,361.1,12.3],[469.2,280.0,12.3],[457.6,138.9,12.3],[412.8,488.0,8.8],[539.2,234.1,8.8]];
+const DTP = {
+  'Warm': [
+    '#ffffff','#fdfbf7','#f8f6f0','#f3f1e9','#eeeae2','#e9e9dd','#e8e8dc','#d4d4c8','#c8c8bc','#bcbcb0',
+    '#fffdf0','#fff7d9','#fff0b3','#ffe680','#ffdc33','#ffd519','#ffcf02','#efb704','#bd9103','#a47d03',
+    '#fff3e8','#ffe0c7','#ffc89f','#fda668','#ff934d','#ff7f2a','#f76800','#cc5f00','#994800','#663200',
+    '#fff0ed','#ffcec6','#ffa99c','#ff7e6e','#ff5c4a','#ff3f30','#e8412c','#c93020','#a32318','#7d1810',
+    '#fff4f6','#ffb3c0','#ff8099','#ff4970','#ff1a4a','#f01745','#de1743','#c5143c','#a81134','#8b0e2b',
+    '#fbe8eb','#f5c4c9','#efa0af','#e87c91','#d85a74','#bb3a5d','#a03250','#812840','#621d30','#431320',
+    '#faf5fc','#f3eaf8','#e0c8ee','#c49ad8','#b57ac8','#b262c0','#9f319e','#6e227d','#522a7a','#351040'
+  ],
+  'Cool': [
+    '#e9ebfa','#c9d0f5','#a9b5f0','#899aeb','#697fe6','#5e66d5','#4a51ab','#383d82','#272a59','#161730',
+    '#e9ecf4','#d2d8e9','#bcc4df','#a6b0d4','#8f9dc9','#7889be','#6267a3','#4c4f8e','#2f325c','#101432',
+    '#e5fdfc','#b8eff6','#8cdfef','#5fcce6','#33b9d9','#1a9fbd','#0e839e','#06677d','#044d5e','#023440',
+    '#e8f9f4','#c2f0e4','#9be8d4','#75dfc4','#4fd6b4','#12b886','#0e926a','#0b6b4e','#084533','#042319',
+    '#eaf7d6','#cbeab1','#acde8b','#8dd265','#6ec53f','#639e0a','#507e08','#3d5f06','#2a3f04','#172002',
+    '#f5f0eb','#e6d5c3','#d4b89e','#c19a78','#a87d58','#8b6240','#6e4a2c','#53361e','#3b2414','#24150b'
+  ]
+};
+
+const PRESETS=[
+  {n:'Flame',   c:['#de1743','#f76800','#ffcf02'], g:['#de1743','#ffcf02',135]},
+  {n:'Sunset',  c:['#101432','#de1743'],           g:['#101432','#de1743',135]},
+  {n:'Ocean',   c:['#101432','#1a9fbd','#f8f6f0'], g:['#101432','#1a9fbd',135]},
+  {n:'Mono',    c:['#de1743','#6b0820'],            g:['#de1743','#6b0820',135]},
+];
+
+// STATE
+let st = {
+  sil: '#de1743',
+  cc: Array(C.length).fill('#de1743'),
+  scope: 'all',      // 'all' | 'circles' | 'sil' | null (individual)
+  indSel: null,      // null | 'sil' | index
+};
+
+// ── HELPERS ──────────────────────────────────
+function h2r(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];}
+function lerp(a,b,t){return'#'+[0,1,2].map(i=>Math.round(a[i]+(b[i]-a[i])*t).toString(16).padStart(2,'0')).join('');}
+function setDot(i,c){st.cc[i]=c;document.getElementById('d'+i).setAttribute('fill',c);}
+function setSil(c){st.sil=c;document.getElementById('sil-rect').setAttribute('fill',c);}
+function getCbox(id){return document.getElementById(id).dataset.color||'#de1743';}
+
+// ── SCOPE ────────────────────────────────────
+function setScope(s){
+  st.scope=s;  // always set – no toggle off, always one active
+  ['all','circles','sil'].forEach(k=>{
+    document.getElementById('sc-'+k).classList.toggle('on', st.scope===k);
+  });
+}
+
+// ── APPLY COLOR TO SCOPE ─────────────────────
+function applyColorToScope(c){
+  if(!st.scope) return;
+  if(st.scope==='sil'||st.scope==='all') setSil(c);
+  if(st.scope==='circles'||st.scope==='all') st.cc.forEach((_,i)=>setDot(i,c));
+  syncContour();
+}
+
+// ── APPLY GRADIENT TO SCOPE ──────────────────
+function applyGradToScope(){
+  if(!st.scope) return;
+  const cA=getCbox('ga'), cB=getCbox('gb');
+  const ang=parseInt(document.getElementById('gang').value)*Math.PI/180;
+  const dx=Math.cos(ang), dy=Math.sin(ang);
+  const rA=h2r(cA), rB=h2r(cB);
+  const els=[];
+  if(st.scope==='sil'||st.scope==='all') els.push({type:'sil',cx:200,cy:380});
+  if(st.scope==='circles'||st.scope==='all') C.forEach(([cx,cy],i)=>els.push({type:'dot',i,cx,cy}));
+  const pr=els.map(e=>e.cx*dx+e.cy*dy);
+  const mn=Math.min(...pr),mx=Math.max(...pr),rng=mx-mn||1;
+  els.forEach((e,j)=>{
+    const col=lerp(rA,rB,(pr[j]-mn)/rng);
+    if(e.type==='sil') setSil(col); else setDot(e.i,col);
+  });
+  syncContour();
+}
+
+// ── SOLID COLOR CBOX ─────────────────────────
+// When user picks from palette for solid-c, apply immediately
+function onSolidPick(c){
+  document.getElementById('solid-c').style.background=c;
+  document.getElementById('solid-c').dataset.color=c;
+  document.getElementById('solid-hex').textContent=c;
+  applyColorToScope(c);
+}
+
+// ── GRADIENT CONTROLS ────────────────────────
+function onGradPick(which, c){
+  document.getElementById(which).style.background=c;
+  document.getElementById(which).dataset.color=c;
+  document.getElementById(which+'-h').textContent=c;
+  updGradPreview();
+  applyGradToScope();
+}
+function onAngle(){
+  document.getElementById('gang-v').textContent=document.getElementById('gang').value+'°';
+  updGradPreview();
+  applyGradToScope();
+}
+function updGradPreview(){
+  const a=getCbox('ga'),b=getCbox('gb'),ang=document.getElementById('gang').value;
+  document.getElementById('gprev').style.background=`linear-gradient(${ang}deg,${a},${b})`;
+}
+
+// ── INDIVIDUAL ELEMENT ───────────────────────
+function selectEl(id){
+  st.indSel=id;
+  // Also sync the scope buttons so the global controls work on the clicked element
+  const autoScope = id==='sil' ? 'sil' : 'circles';
+  setScope(autoScope);
+
+  const info=document.getElementById('ind-info');
+  const ctrl=document.getElementById('ind-controls');
+  const col=id==='sil'?st.sil:st.cc[id];
+  info.textContent=id==='sil'?'Silhouette selected':`Circle ${id+1} selected`;
+  info.style.fontStyle='normal'; info.style.color='#333';
+  ctrl.style.display='block';
+  document.getElementById('ind-color').style.background=col;
+  document.getElementById('ind-color').dataset.color=col;
+  document.getElementById('ind-hex').textContent=col;
+  // Wire cbox for individual edit
+  document.getElementById('ind-color').onclick=(e)=>{
+    e.stopPropagation();
+    openPalette(document.getElementById('ind-color'),(c)=>{
+      document.getElementById('ind-color').style.background=c;
+      document.getElementById('ind-color').dataset.color=c;
+      document.getElementById('ind-hex').textContent=c;
+      if(st.indSel==='sil') setSil(c);
+      else if(st.indSel!==null) setDot(st.indSel,c);
+      syncContour();
+    });
+  };
+}
+
+// ── CONTOUR ──────────────────────────────────
+function onContour(){
+  const on=document.getElementById('k-on').checked;
+  document.getElementById('k-ctrl').classList.toggle('on',on);
+  syncContour();
+}
+function syncContour(){
+  const on=document.getElementById('k-on').checked;
+  const w=document.getElementById('k-w').value;
+  const same=document.getElementById('k-same').checked;
+  const kc=document.getElementById('k-color').dataset.color||'#1a1a1a';
+  document.querySelectorAll('.dot').forEach((d,i)=>{
+    d.setAttribute('stroke',on?(same?st.cc[i]:kc):'none');
+    d.setAttribute('stroke-width',on?w:'0');
+  });
+  const sp=document.getElementById('sil-stroke');
+  sp.setAttribute('stroke',on?(same?st.sil:kc):'none');
+  sp.setAttribute('stroke-width',on?(w/0.1):'0');
+}
+
+// ── PALETTE POPUP ────────────────────────────
+let _palCb=null;
+function openPalette(el,cb){
+  _palCb=cb;
+  const pop=document.getElementById('pal-popup');
+  pop.classList.add('open');
+  const r=el.getBoundingClientRect();
+  let top=r.bottom+4, left=r.left;
+  if(left+240>window.innerWidth) left=window.innerWidth-250;
+  if(top+460>window.innerHeight) top=r.top-464;
+  pop.style.top=top+'px'; pop.style.left=left+'px';
+}
+function closePalette(){document.getElementById('pal-popup').classList.remove('open');_palCb=null;}
+document.addEventListener('click',e=>{
+  const pop=document.getElementById('pal-popup');
+  if(pop.classList.contains('open')&&!pop.contains(e.target)&&!e.target.classList.contains('cbox'))
+    closePalette();
+});
+function buildPalette(){
+  const pop=document.getElementById('pal-popup');
+  Object.entries(DTP).forEach(([fam,colors])=>{
+    const div=document.createElement('div'); div.className='pfam';
+    const lbl=document.createElement('div'); lbl.className='pfam-name'; lbl.textContent=fam;
+    const row=document.createElement('div'); row.className='prow';
+    colors.forEach(c=>{
+      const sw=document.createElement('div'); sw.className='psw';
+      sw.style.background=c; sw.title=c;
+      sw.onclick=(e)=>{e.stopPropagation();if(_palCb){_palCb(c);closePalette();}};
+      row.appendChild(sw);
+    });
+    div.appendChild(lbl); div.appendChild(row); pop.appendChild(div);
+  });
+}
+
+// Wire a cbox to open palette with given callback
+function wireCbox(id, initColor, cb){
+  const el=document.getElementById(id);
+  if(!el) return;
+  el.style.background=initColor;
+  el.dataset.color=initColor;
+  el.onclick=(e)=>{e.stopPropagation(); openPalette(el,(c)=>{el.style.background=c;el.dataset.color=c;cb(c);});};
+}
+
+// ── PRESETS ──────────────────────────────────
+function buildPresets(){
+  const cont=document.getElementById('presets');
+  PRESETS.forEach(p=>{
+    const div=document.createElement('div'); div.className='preset';
+    div.innerHTML=`<div class="pdots">${p.c.map(c=>`<span class="pdot" style="background:${c}"></span>`).join('')}</div><span class="pname">${p.n}</span>`;
+    div.onclick=()=>{
+      // Apply preset gradient regardless of scope setting
+      const saved=st.scope; if(!st.scope) st.scope='all';
+      document.getElementById('ga').style.background=p.g[0]; document.getElementById('ga').dataset.color=p.g[0]; document.getElementById('ga-h').textContent=p.g[0];
+      document.getElementById('gb').style.background=p.g[1]; document.getElementById('gb').dataset.color=p.g[1]; document.getElementById('gb-h').textContent=p.g[1];
+      document.getElementById('gang').value=p.g[2];
+      document.getElementById('gang-v').textContent=p.g[2]+'°';
+      updGradPreview(); applyGradToScope();
+      if(!saved) st.scope=null;
+    };
+    cont.appendChild(div);
+  });
+}
+
+// ── RESET ────────────────────────────────────
+function resetAll(){
+  const c='#de1743';
+  setSil(c); C.forEach((_,i)=>setDot(i,c));
+  st.indSel=null;
+  document.getElementById('ind-info').textContent='← click on logo element';
+  document.getElementById('ind-info').style.fontStyle='italic';
+  document.getElementById('ind-info').style.color='#aaa';
+  document.getElementById('ind-controls').style.display='none';
+  document.getElementById('k-on').checked=false; onContour();
+  wireCbox('solid-c','#de1743',(c)=>{ document.getElementById('solid-hex').textContent=c; applyColorToScope(c); });
+  wireCbox('ga','#de1743',(c)=>{ document.getElementById('ga-h').textContent=c; updGradPreview(); applyGradToScope(); });
+  wireCbox('gb','#ffcf02',(c)=>{ document.getElementById('gb-h').textContent=c; updGradPreview(); applyGradToScope(); });
+}
+
+// ── BG TOGGLE ────────────────────────────────
+function toggleBg(){
+  const p=document.getElementById('preview'),b=document.getElementById('bg-toggle');
+  p.classList.toggle('dark');
+  b.textContent=p.classList.contains('dark')?'light bg':'dark bg';
+}
+
+// ── DOWNLOAD ─────────────────────────────────
+function dlSVG(){
+  const svg=document.getElementById('logo-svg').cloneNode(true);
+  svg.querySelectorAll('[onclick]').forEach(e=>e.removeAttribute('onclick'));
+  svg.removeAttribute('width'); svg.removeAttribute('height');
+  const blob=new Blob([svg.outerHTML],{type:'image/svg+xml'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='logo-dpbp.svg';a.click();
+}
+function dlEditor(){
+  const blob=new Blob([document.documentElement.outerHTML],{type:'text/html'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='logo-dpbp-editor.html';a.click();
+}
+
+// ── INIT ─────────────────────────────────────
+function init(){
+  buildPalette();
+  buildPresets();
+  wireCbox('solid-c','#de1743',(c)=>{ document.getElementById('solid-hex').textContent=c; applyColorToScope(c); });
+  wireCbox('ga','#de1743',(c)=>{ document.getElementById('ga-h').textContent=c; updGradPreview(); applyGradToScope(); });
+  wireCbox('gb','#ffcf02',(c)=>{ document.getElementById('gb-h').textContent=c; updGradPreview(); applyGradToScope(); });
+  wireCbox('k-color','#1a1a1a',(c)=>{ document.getElementById('k-ch').textContent=c; onContour(); });
+  updGradPreview();
+  // Apply default flame gradient
+  st.scope='all';
+  applyGradToScope();
+}
+
+init();
+</script>
+
+</body></html>
