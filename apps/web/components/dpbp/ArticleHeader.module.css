@@ -143,6 +143,40 @@
 }
 .share svg { width: 16px; height: 16px; }
 
+/* hover tooltip u kopírování odkazu (ikona řetězu není samovysvětlující) */
+.tip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #101432;
+  color: #fff;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 5px 9px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 5;
+}
+.tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #101432;
+}
+.share button:hover .tip,
+.share button:focus-visible .tip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* audio stopa přes celou šířku */
 .audio {
   display: flex;
