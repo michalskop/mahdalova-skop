@@ -285,7 +285,7 @@ const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function motifSvg(kind, accent){
-  const x0=770, y0=170, w=340, h=270;
+  const x0=770, y0=170, w=360, h=270;  // pravý okraj grafu = 1130 (lícuje s logem i patičkou)
   const grid=[0,1,2,3].map(i=>`<line x1="${x0}" y1="${y0+(h/3)*i}" x2="${x0+w}" y2="${y0+(h/3)*i}" stroke="${C.line}" stroke-width="2"/>`).join('');
   const base=`<line x1="${x0}" y1="${y0+h}" x2="${x0+w}" y2="${y0+h}" stroke="${C.ink}" stroke-width="3"/>`;
   let art='';
@@ -348,7 +348,7 @@ function measureCond(text, size){
 // Prstenec je tlustý – ztlušťuje se dovnitř, vnější průměr zůstává (R+SW/2 = 20,5
 // jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
 function brandMark(name, side){
-  const R=13, SW=15, Rout=R+SW/2, gap=16, LM=70, RM=1130;
+  const R=14, SW=13, Rout=R+SW/2, gap=16, LM=70, RM=1130;  // tenčí prstenec (byl SW 15)
   const ex=(R*Math.sin(2*Math.PI/3)).toFixed(2);   // konec žlutého oblouku (120° od vrcholu)
   const ey=(-R*Math.cos(2*Math.PI/3)).toFixed(2);
   const ring = `<circle cx="0" cy="0" r="${R}" fill="none" stroke="${C.crimson}" stroke-width="${SW}"/>`
@@ -377,7 +377,9 @@ const HEAD_DOTS = [
   [539.2,234.1,8.8,'#ffe680'],
 ];
 function specialLogo(accent){
-  const S=140, sc=S/716, x=1130-S, y=24;   // pravý horní roh, pravý okraj na 1130
+  // Obrys hlavy nesahá až k okraji svého rámečku (~30 px rezerva), proto rámeček
+  // posuneme dál doprava, aby nejzazší bod hlavy lícoval s grafem i textem na 1130.
+  const S=140, sc=S/716, x=1020, y=24;
   const dots = HEAD_DOTS.map(([cx,cy,r,col])=>
     `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${col}" stroke="${col}" stroke-width="8"/>`).join('');
   return `<g transform="translate(${x},${y}) scale(${sc.toFixed(4)}) translate(8,8)">`
