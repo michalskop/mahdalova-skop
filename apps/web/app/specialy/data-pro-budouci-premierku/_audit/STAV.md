@@ -1,6 +1,6 @@
 # Stav speciálu „Data pro budoucí premiérku"
 
-**Aktualizováno:** 27. 7. 2026 · **`main` na commitu:** `f79a3910`
+**Aktualizováno:** 28. 7. 2026
 
 Tento dokument je jediný zdroj pravdy o tom, co je hotové a co ne.
 Čísla níže jsou ověřená proti kódu, ne odhadnutá.
@@ -12,13 +12,14 @@ Tento dokument je jediný zdroj pravdy o tom, co je hotové a co ne.
 | Metrika | Hodnota |
 |---|---|
 | Kapitoly | 15 |
-| Články | 151 |
-| Datové grafy (spec soubory) | 42 |
-| Odkazy v metadatech | 165 — **0 rozbitých** |
+| Články | 157 |
+| Datové grafy (spec soubory) | 45 |
+| Odkazy v metadatech | 171 — **0 rozbitých** |
 | Osiřelé články (nikde nedostupné) | **0** |
-| Osiřelé grafy (hotové, nepoužité) | **1** → `CHART_MILOSTI_KUMULATIVNE` |
+| Osiřelé grafy (hotové, nepoužité) | **0** |
 
-**Rozložení článků:** Demografie 17, Efektivní vládnutí 17, zbývajících 13 kapitol po 9.
+**Rozložení článků:** Demografie 17, Efektivní vládnutí 17, Zdravotnictví a péče 15,
+zbývajících 12 kapitol po 9.
 
 **Kontrola stavu kdykoli jedním příkazem:**
 
@@ -38,6 +39,7 @@ Skončí chybou při rozbitém odkazu nebo chybějícím grafu.
 | **T0** | Inventura speciálu (počty, odkazy, placeholdery, duplicity) | — |
 | **T0b** | Oprava kontrolního skriptu: doplněny `onePager` a `postSupportTiles`, přidána kontrola grafů a osiřelých článků. Původní verze měla díru — u rozbitého odkazu hlásila „v pořádku". Opraveny sekce 6 a 7 v `inventory.md`. | `9ca44db5` |
 | **T1** | Přístupnost: články měly dva hlavní nadpisy (`<h1>`). Nově má stránka kapitoly jako `<h1>` název kapitoly, článek svůj titulek. Vizuálně beze změny. | `f79a3910` |
+| **T9** | Graf o milostech nasazen do článku *Milosti*. Nahradil Flourish embed se stejným obsahem — převod do vlastního systému grafů. Ověřeno v prohlížeči. | viz git log |
 
 ---
 
@@ -49,9 +51,7 @@ Skončí chybou při rozbitém odkazu nebo chybějícím grafu.
 | **T2** | Editorská klasifikace všech 151 článků | P1 | L | — připraveno |
 | **T4** | Smazání mrtvého kódu v `ChapterRail` | P1 | S | čeká na T3 |
 | **T7** | Regresní testy (kolize sticky prvků, validace odkazů v CI) | P2 | M | čeká na T3 |
-| **T5** | Audio: rozhodnout placeholder vs. skrýt přehrávač | P2 | S | čeká na rozhodnutí |
-| **T6** | Článek *Vylidňování obcí* slibuje mapy, které nejsou | P2 | S | čeká na rozhodnutí |
-| **T9** | Osiřelý graf `CHART_MILOSTI_KUMULATIVNE` | P3 | XS | čeká na rozhodnutí |
+| **T6** | Doplnit interaktivní mapy do článku *Vylidňování obcí* | P2 | S | čeká na podklady |
 | **T8** | Hustota dlaždic na úzkém mobilu (390/360 px) | P3 | S | — |
 
 ### Detail k T3 — proč je to největší úkol
@@ -76,13 +76,13 @@ Konkrétní vady:
 
 ---
 
-## 4. Otevřená rozhodnutí
+## 4. Rozhodnutá témata (28. 7. 2026)
 
-| Téma | Otázka | Kde to je |
+| Téma | Rozhodnutí | Kde to je |
 |---|---|---|
-| **Audio** | U článků svítí „audio doplníme". Nechat, nebo přehrávač skrýt, dokud nahrávky nebudou? | `components/dpbp/ArticleByline.tsx:108` |
-| **Mapy** | Text slibuje interaktivní mapy Česka a Rakouska „doplníme po dokončení". Přijdou, nebo přeformulovat? | `_content/01-demografie/articles/11-vylidnovani-obci.mdx:38` |
-| **Osiřelý graf** | `CHART_MILOSTI_KUMULATIVNE` — doplnit do článku o milostech, nebo smazat? | `public/specialy/dpbp/charts/` |
+| **Audio** | Nahrávky zatím nejsou, jsou v pořadí. Placeholder „audio doplníme" **zůstává** — neskrývat. | `components/dpbp/ArticleByline.tsx:108` |
+| **Mapy** | Mapy **přijdou**, text zůstává beze změny. Čeká se na podklady. | `_content/01-demografie/articles/11-vylidnovani-obci.mdx:38` |
+| **Graf o milostech** | **Nasazen** do článku *Milosti*. Vyřešeno. | `15-efektivni-vladnuti/articles/09-milosti.mdx` |
 
 ---
 
