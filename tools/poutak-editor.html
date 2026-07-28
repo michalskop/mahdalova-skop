@@ -275,7 +275,7 @@ const PRESETS = [
 // ------- state -------
 const state = {
   chapter:'01',
-  kicker:'DEMOGRAFIE',
+  kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
   motif:'fall', accent:'#de1743'
@@ -320,11 +320,17 @@ function buildSVG(s, standalone){
     ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
     : '';
   const ink = s.accent; // barva kapitoly beze změny – linka, číslo i graf
+  // kicker (i s „Data pro budoucí premiérku") se musí vejít vlevo od loga –
+  // u dlouhých názvů zmenši písmo i prostrkání, ať nepřeteče ani nenajede na hlavu
+  const kMaxW=930, kLS0=6, kSize0=26;
+  const kRaw=measureCond(s.kicker,kSize0)+Math.max(0,s.kicker.length-1)*kLS0;
+  const kSc=kRaw>kMaxW?kMaxW/kRaw:1;
+  const kSize=(kSize0*kSc).toFixed(1), kLS=(kLS0*kSc).toFixed(2);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   ${fontImport}
   <rect width="1200" height="630" fill="${C.bg}"/>
   <rect x="0" y="0" width="1200" height="14" fill="${s.accent}"/>
-  <text x="70" y="92" font-family="${F_COND}" font-size="26" letter-spacing="6" fill="${C.muted}" font-weight="700">${esc(s.kicker)}</text>
+  <text x="70" y="92" font-family="${F_COND}" font-size="${kSize}" letter-spacing="${kLS}" fill="${C.muted}" font-weight="700">${esc(s.kicker)}</text>
   <text x="70" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>
   <text x="70" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>
   <text x="70" y="${160+bigSize+120}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>
@@ -416,7 +422,7 @@ CHAPTERS.forEach(([id,hex,title])=>{
   b.title=`${id} · ${title} · ${hex}`;
   b.onclick=()=>{
     state.chapter=id; state.accent=hex;
-    state.kicker=title.toUpperCase();  // identitu speciálu nese logo vpravo nahoře
+    state.kicker=('DATA PRO BUDOUCÍ PREMIÉRKU · '+title).toUpperCase();
     document.getElementById('f-kicker').value=state.kicker;
     syncAcc(); render();
   };
