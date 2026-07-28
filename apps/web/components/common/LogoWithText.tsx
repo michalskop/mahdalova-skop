@@ -8,10 +8,10 @@ const Logo = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 60 330 330">
     <defs>
       <linearGradient id="Gradient" x1="1" x2="0.25" y1="0.5" y2="1">
-        <stop offset="0%" stop-color="#ffdc33" stop-opacity="0"  />
-        <stop offset="50%" stop-color="#ffdc33" stop-opacity="0" />
-        <stop offset="50%" stop-color="#ffdc33" stop-opacity="1" />
-        <stop offset="100%" stop-color="#ffdc33" stop-opacity="1" />
+        <stop offset="0%" stopColor="#ffdc33" stopOpacity="0"  />
+        <stop offset="50%" stopColor="#ffdc33" stopOpacity="0" />
+        <stop offset="50%" stopColor="#ffdc33" stopOpacity="1" />
+        <stop offset="100%" stopColor="#ffdc33" stopOpacity="1" />
       </linearGradient>
     </defs>
     <g transform="rotate(-30 250 250)">
