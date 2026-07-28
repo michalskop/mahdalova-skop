@@ -67,6 +67,15 @@
   #formats{grid-template-columns:repeat(4,1fr);gap:4px;}
   #formats .chip{padding:6px 2px;font-size:9px;line-height:1.15;letter-spacing:-.01em;}
 
+  /* upload obrázku */
+  .drop{border:1.5px dashed var(--border);border-radius:6px;padding:12px;text-align:center;
+    transition:border-color .15s,background .15s;}
+  .drop.over{border-color:var(--red);background:#fdf2f4;}
+  .drop .btn{width:auto;padding:7px 14px;display:inline-block;}
+  .drophint{font-size:10.5px;color:#999;margin-top:7px;line-height:1.4;}
+  #thumb{max-width:100%;max-height:120px;border-radius:4px;display:block;margin:0 auto 8px;
+    border:1px solid var(--border);}
+
   /* 15 chapter colours */
   .swgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
   .sw{position:relative;height:34px;border-radius:5px;cursor:pointer;border:2px solid transparent;
@@ -189,7 +198,19 @@
     </div>
 
     <div class="ps">
-      <div class="plbl">Data motif</div>
+      <div class="plbl">Visual — your image or a motif</div>
+      <div id="drop" class="drop">
+        <input type="file" id="f-file" accept="image/*" hidden>
+        <div id="drop-empty">
+          <button class="btn btn-ghost" id="pick" type="button">Upload image</button>
+          <div class="drophint">or paste (Ctrl+V) / drag &amp; drop — PNG, JPG, SVG</div>
+        </div>
+        <div id="drop-has" hidden>
+          <img id="thumb" alt="uploaded">
+          <button class="btn btn-ghost" id="rmimg" type="button">Remove image</button>
+        </div>
+      </div>
+      <div class="note" style="margin-top:8px">No image → the pictogram below is used instead:</div>
       <div class="chips" id="motifs"></div>
     </div>
 
@@ -252,7 +273,7 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#de1743', format:'link'
+  motif:'fall', accent:'#de1743', format:'link', image:null
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
@@ -326,23 +347,45 @@ function buildSVG(s, standalone){
     return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${C.muted}" font-weight="700" text-anchor="${anchor}">${esc(s.kicker)}</text>`;
   };
 
+  // Vizuální plocha: vlastní obrázek (velký obdélník imgRect) NEBO piktogram
+  // (motifRect). Obrázek se vejde celý (meet), ořezaný do zaoblených rohů.
+  const visual=(motifRect,imgRect)=>{
+    if(s.image){
+      const [ix,iy,iw,ih]=imgRect, cid='vc'+(''+Math.random()).slice(2,8);
+      return `<clipPath id="${cid}"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="8"/></clipPath>`
+        + `<image href="${s.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${cid})"/>`;
+    }
+    const [mx,my,mw2,mh2]=motifRect;
+    return motifSvg(s.motif,ink,mx,my,mw2,mh2);
+  };
+  // Béžový (v tmavém režimu ink) obdélník za tezí – jen když je pod ní obrázek,
+  // ať je čitelná i přes něj (smí ho překrýt).
+  const claimBox=(anchorX,topY,lines,size,lh,anchor)=>{
+    if(!s.image) return '';
+    const wmax=Math.max(...lines.map(l=>measureSlab(l,size))), padX=18, padY=12;
+    const boxW=wmax+padX*2, boxH=(lines.length-1)*lh+size+padY*2;
+    const bx=anchor==='middle'?anchorX-boxW/2:anchorX-padX;
+    return `<rect x="${bx.toFixed(1)}" y="${(topY-size*0.72-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${C.bg}"/>`;
+  };
+
   let inner;
   if(W/H >= 1.4){
-    // ---- LANDSCAPE: dva sloupce (text vlevo, graf vpravo) ----
+    // ---- LINK / LANDSCAPE: text vlevo, obrázek/piktogram vpravo ----
     const bigSize=s.big.length>9?96:s.big.length>5?120:170;
-    const claimT=s.claim.split('\n').map((l,i)=>`<tspan x="${M}" dy="${i===0?0:58}">${esc(l)}</tspan>`).join('');
-    inner = kicker(M,92,930,'start')
+    const claimLines=s.claim.split('\n');
+    const claimT=claimLines.map((l,i)=>`<tspan x="${M}" dy="${i===0?0:58}">${esc(l)}</tspan>`).join('');
+    const claimTop=160+bigSize+120;
+    inner = visual([RE-360,170,360,270],[400,120,730,420])   // obrázek dole
+      + kicker(M,92,930,'start')
       + `<text x="${M}" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
       + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>`
-      + `<text x="${M}" y="${160+bigSize+120}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>`
-      + logoAt(RE,24,140)
-      + motifSvg(s.motif,ink,RE-360,170,360,270)
+      + claimBox(M,claimTop,claimLines,48,58,'start')
+      + `<text x="${M}" y="${claimTop}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>`
+      + logoAt(RE,24,140)                                     // logo nahoře nad obrázkem
       + brandMark('DataTimes','left',566,M,RE)
       + brandMark('mahdalova-skop','right',566,M,RE);
   } else {
-    // ---- STACKED (čtverec / na výšku / story): jeden sloupec, centrovaně ----
-    // Rozvržení shora dolů s rozestupy i velikostmi škálovanými podle výšky (vs),
-    // aby nic nekolidovalo na 1:1 a zároveň to nebylo prázdné na 9:16.
+    // ---- STACKED (Square / Portrait / Story): jeden sloupec, centrovaně ----
     const cx=W/2, CW=W-2*M, S=Math.round(W*0.15), vs=H/1080;
     const bigSize=Math.round(Math.min(300,(s.big.length>9?130:s.big.length>5?185:250)*(0.8+0.2*vs)));
     const claimSize=Math.round(W*0.048), claimLH=claimSize*1.22;
@@ -355,16 +398,16 @@ function buildSVG(s, standalone){
     const claimY=unitY+Math.round(0.72*claimSize+40*vs);
     const claimEnd=claimY+(claimLines.length-1)*claimLH+0.2*claimSize;
     const footY=H-M-8;
-    // motiv: výška max 24 % plátna, vycentrovaný ve zbylém prostoru mezi tezí a patičkou
     const mBot=footY-Math.round(60*vs), mTop=claimEnd+Math.round(46*vs);
     const mh=Math.min(Math.round(H*0.24), mBot-mTop), mw=Math.round(CW*0.8);
     const myTop=mTop+Math.max(0,((mBot-mTop)-mh)/2);
-    inner = specialLogo(ink, cx-S/2, logoY, S)
+    inner = visual([cx-mw/2,myTop,mw,mh],[M,mTop,CW,Math.max(190,mBot-mTop)])
       + kicker(cx,kickY,CW,'middle')
       + `<text x="${cx}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(s.big)}</text>`
       + `<text x="${cx}" y="${unitY}" font-family="${F_COND}" font-size="32" fill="${C.muted}" text-anchor="middle">${esc(s.unit)}</text>`
+      + claimBox(cx,claimY,claimLines,claimSize,claimLH,'middle')
       + `<text x="${cx}" y="${claimY}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${C.ink}" text-anchor="middle">${claimT}</text>`
-      + motifSvg(s.motif,ink,cx-mw/2,myTop,mw,mh)
+      + specialLogo(ink, cx-S/2, logoY, S)                    // logo nahoře, nad obrázkem
       + brandMark('DataTimes','left',footY,M,RE)
       + brandMark('mahdalova-skop','right',footY,M,RE);
   }
@@ -383,6 +426,11 @@ let _measureCtx;
 function measureCond(text, size){
   if(!_measureCtx) _measureCtx = document.createElement('canvas').getContext('2d');
   _measureCtx.font = `700 ${size}px 'Roboto Condensed', Arial, sans-serif`;
+  return _measureCtx.measureText(text).width;
+}
+function measureSlab(text, size){
+  if(!_measureCtx) _measureCtx = document.createElement('canvas').getContext('2d');
+  _measureCtx.font = `700 ${size}px 'Roboto Slab', Georgia, serif`;
   return _measureCtx.measureText(text).width;
 }
 
@@ -459,6 +507,44 @@ Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('butt
     document.getElementById('frame').classList.toggle('tall', f.h/f.w>1.1);
     hintEl.textContent=`Preview ${f.w} × ${f.h} px · Roboto Slab + Roboto Condensed`;render();};
   fWrap.appendChild(b);});
+
+// ------- upload obrázku do vizuální plochy -------
+const dropEl=document.getElementById('drop');
+const fileInput=document.getElementById('f-file');
+function setImage(dataUrl){
+  state.image=dataUrl;
+  document.getElementById('thumb').src=dataUrl;
+  document.getElementById('drop-empty').hidden=true;
+  document.getElementById('drop-has').hidden=false;
+  render();
+}
+function clearImage(){
+  state.image=null; fileInput.value='';
+  document.getElementById('drop-empty').hidden=false;
+  document.getElementById('drop-has').hidden=true;
+  render();
+}
+function readImageFile(file){
+  if(!file || !file.type.startsWith('image/')){ toast('Not an image'); return; }
+  const r=new FileReader();
+  r.onload=()=>{ setImage(r.result); toast('Image inserted'); };
+  r.readAsDataURL(file);
+}
+document.getElementById('pick').onclick=()=>fileInput.click();
+fileInput.onchange=()=>readImageFile(fileInput.files[0]);
+document.getElementById('rmimg').onclick=clearImage;
+// drag & drop na dropzone i na náhled
+[dropEl, document.getElementById('stage')].forEach(zone=>{
+  zone.addEventListener('dragover',e=>{e.preventDefault();dropEl.classList.add('over');});
+  zone.addEventListener('dragleave',()=>dropEl.classList.remove('over'));
+  zone.addEventListener('drop',e=>{e.preventDefault();dropEl.classList.remove('over');
+    const f=e.dataTransfer.files[0]; if(f) readImageFile(f);});
+});
+// vložení screenshotu ze schránky (Ctrl+V) kdekoli mimo textová pole
+document.addEventListener('paste',e=>{
+  const items=e.clipboardData&&e.clipboardData.items; if(!items) return;
+  for(const it of items){ if(it.type.startsWith('image/')){ readImageFile(it.getAsFile()); e.preventDefault(); break; } }
+});
 
 // 15 chapter colours – výběr kapitoly přepíše barvu i kicker
 const aWrap=document.getElementById('accents');
