@@ -33,6 +33,9 @@
   #stage.dark{background:var(--navy);}
   #frame{width:100%;max-width:860px;box-shadow:0 10px 40px rgba(16,20,50,.18);border-radius:8px;overflow:hidden;background:#fff;}
   #frame svg{display:block;width:100%;height:auto;}
+  /* vysoké formáty (čtverec/výška/story) omez výškou, ať se vejdou do náhledu */
+  #frame.tall{width:auto;max-width:none;}
+  #frame.tall svg{width:auto;height:min(70vh,640px);max-width:100%;}
   #stagebar{display:flex;gap:10px;align-items:center;}
   #stagebar .hint{font-size:12px;color:var(--muted);}
   #stage.dark #stagebar .hint{color:rgba(255,255,255,.6);}
@@ -141,7 +144,7 @@
   <div id="stage">
     <div id="frame"></div>
     <div id="stagebar">
-      <span class="hint">Náhled 1200 × 630 px · Roboto Slab + Roboto Condensed</span>
+      <span class="hint" id="hint">Náhled 1200 × 630 px · Roboto Slab + Roboto Condensed</span>
       <button class="ghost" id="bgToggle">tmavé pozadí</button>
     </div>
   </div>
@@ -150,6 +153,11 @@
     <div class="ps">
       <h1>Pouták editor</h1>
       <div class="subttl">Data pro budoucí premiérku · miniatury &amp; og:image</div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Formát (síť)</div>
+      <div class="chips" id="formats"></div>
     </div>
 
     <div class="ps">
@@ -278,66 +286,125 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#de1743'
+  motif:'fall', accent:'#de1743', format:'landscape'
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-function motifSvg(kind, accent){
-  const x0=770, y0=170, w=360, h=270;  // pravý okraj grafu = 1130 (lícuje s logem i patičkou)
-  const grid=[0,1,2,3].map(i=>`<line x1="${x0}" y1="${y0+(h/3)*i}" x2="${x0+w}" y2="${y0+(h/3)*i}" stroke="${C.line}" stroke-width="2"/>`).join('');
-  const base=`<line x1="${x0}" y1="${y0+h}" x2="${x0+w}" y2="${y0+h}" stroke="${C.ink}" stroke-width="3"/>`;
+// Datový motiv v obdélníku (x0,y0,w,h). Tloušťky čar, značky i svislé polohy
+// se škálují podle velikosti rámečku, aby motiv vypadal dobře i na velkých
+// plochách (čtverec/story), ne jen v landscape 360×270.
+function motifSvg(kind, accent, x0, y0, w, h){
+  const kw=w/360, kh=h/270, k=Math.min(kw,kh);
+  const sw=(8*k).toFixed(1), swThin=(7*k).toFixed(1), swBase=(3*k).toFixed(1), swGrid=(2*k).toFixed(1);
+  const r=(12*k).toFixed(1);
+  const Y=f=>(y0+h*f).toFixed(1), X=f=>(x0+w*f).toFixed(1);
+  const grid=[0,1,2,3].map(i=>`<line x1="${x0}" y1="${(y0+(h/3)*i).toFixed(1)}" x2="${x0+w}" y2="${(y0+(h/3)*i).toFixed(1)}" stroke="${C.line}" stroke-width="${swGrid}"/>`).join('');
+  const base=`<line x1="${x0}" y1="${y0+h}" x2="${x0+w}" y2="${y0+h}" stroke="${C.ink}" stroke-width="${swBase}"/>`;
   let art='';
   if(kind==='fall'){
-    art=`<polyline points="${x0},${y0+40} ${x0+w*0.3},${y0+90} ${x0+w*0.6},${y0+70} ${x0+w},${y0+h-30}" fill="none" stroke="${accent}" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x0+w}" cy="${y0+h-30}" r="12" fill="${accent}"/>`;
+    art=`<polyline points="${x0},${Y(0.15)} ${X(0.3)},${Y(0.33)} ${X(0.6)},${Y(0.26)} ${x0+w},${Y(0.89)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x0+w}" cy="${Y(0.89)}" r="${r}" fill="${accent}"/>`;
   } else if(kind==='riseFall'){
-    art=`<polyline points="${x0},${y0+h-60} ${x0+w*0.45},${y0+30} ${x0+w},${y0+h-80}" fill="none" stroke="${accent}" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x0+w*0.45}" cy="${y0+30}" r="12" fill="${C.ink}"/><circle cx="${x0+w}" cy="${y0+h-80}" r="12" fill="${accent}"/>`;
+    art=`<polyline points="${x0},${Y(0.78)} ${X(0.45)},${Y(0.11)} ${x0+w},${Y(0.70)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${X(0.45)}" cy="${Y(0.11)}" r="${r}" fill="${C.ink}"/><circle cx="${x0+w}" cy="${Y(0.70)}" r="${r}" fill="${accent}"/>`;
   } else if(kind==='cross'){
-    art=`<polyline points="${x0},${y0+50} ${x0+w},${y0+h-40}" fill="none" stroke="${C.ink}" stroke-width="7" stroke-linecap="round"/><polyline points="${x0},${y0+h-50} ${x0+w},${y0+40}" fill="none" stroke="${accent}" stroke-width="8" stroke-linecap="round"/><circle cx="${x0+w*0.52}" cy="${y0+h*0.5+3}" r="12" fill="${C.orange}"/>`;
+    art=`<polyline points="${x0},${Y(0.19)} ${x0+w},${Y(0.85)}" fill="none" stroke="${C.ink}" stroke-width="${swThin}" stroke-linecap="round"/><polyline points="${x0},${Y(0.81)} ${x0+w},${Y(0.15)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linecap="round"/><circle cx="${X(0.52)}" cy="${Y(0.51)}" r="${r}" fill="${C.orange}"/>`;
   } else if(kind==='bars'){
-    const bw=54,gapx=32,bx=x0+30,hs=[0.35,0.55,0.42,0.95];
-    art=hs.map((v,i)=>`<rect x="${bx+i*(bw+gapx)}" y="${y0+h-h*v}" width="${bw}" height="${h*v}" fill="${i===3?accent:C.ink}" opacity="${i===3?1:0.75}"/>`).join('');
+    const bw=54*kw, gapx=32*kw, bx=x0+30*kw, hs=[0.35,0.55,0.42,0.95];
+    art=hs.map((v,i)=>`<rect x="${(bx+i*(bw+gapx)).toFixed(1)}" y="${(y0+h-h*v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(h*v).toFixed(1)}" fill="${i===3?accent:C.ink}" opacity="${i===3?1:0.75}"/>`).join('');
   } else if(kind==='gap'){
-    art=`<rect x="${x0+20}" y="${y0+40}" width="${w*0.32}" height="44" rx="22" fill="${C.ink}" opacity="0.8"/><rect x="${x0+20}" y="${y0+h-90}" width="${w*0.8}" height="44" rx="22" fill="${accent}"/><path d="M${x0+w*0.36} ${y0+62} C ${x0+w*0.7} ${y0+62}, ${x0+w*0.5} ${y0+h-68}, ${x0+w*0.78} ${y0+h-68}" fill="none" stroke="${C.orange}" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/>`;
+    const ph=(44*kh).toFixed(1);
+    art=`<rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.15)}" width="${(w*0.32).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${C.ink}" opacity="0.8"/><rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.67)}" width="${(w*0.8).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${accent}"/>`;
   } else {
-    const rows=3,cols=5,r=17,gx=70,gy=80; let d='';
+    const rows=3,cols=5,rr=(17*k),gx=(w-80*kw)/4.6,gy=(h-70*kh)/2.6; let d='';
     for(let i=0;i<rows;i++)for(let j=0;j<cols;j++){const idx=i*cols+j;
-      d+=`<circle cx="${x0+40+j*gx}" cy="${y0+45+i*gy}" r="${r}" fill="${idx<4?accent:C.ink}" opacity="${idx<4?1:0.55}"/>`;}
+      d+=`<circle cx="${(x0+40*kw+j*gx).toFixed(1)}" cy="${(y0+35*kh+i*gy).toFixed(1)}" r="${rr.toFixed(1)}" fill="${idx<4?accent:C.ink}" opacity="${idx<4?1:0.55}"/>`;}
     art=d;
   }
   return grid+base+art;
 }
 
+// Formáty pro sítě. Landscape = odkaz/og:image, který berou skoro všechny sítě
+// (FB, X, Bluesky, Threads, LinkedIn, Reddit, WhatsApp) i web. Ostatní jsou pro
+// nativní posty (Instagram feed, Stories/Reels).
+const FORMATS = {
+  landscape: { w:1200, h:630,  label:'Odkaz · 1200×630' },
+  square:    { w:1080, h:1080, label:'Čtverec · 1080×1080' },
+  portrait:  { w:1080, h:1350, label:'Na výšku · 1080×1350' },
+  story:     { w:1080, h:1920, label:'Story · 1080×1920' },
+};
+const F_SLAB="'Roboto Slab', Georgia, serif";
+const F_COND="'Roboto Condensed', Arial, sans-serif";
+
 // standalone = SVG na disk (přibalí @import fontů, ~250 B navíc)
 function buildSVG(s, standalone){
-  const F_SLAB="'Roboto Slab', Georgia, serif";
-  const F_COND="'Roboto Condensed', Arial, sans-serif";
-  const claimLines=s.claim.split('\n');
-  const claimT=claimLines.map((l,i)=>`<tspan x="70" dy="${i===0?0:58}">${esc(l)}</tspan>`).join('');
-  const bigSize=s.big.length>9?96:s.big.length>5?120:170;
+  const F=FORMATS[s.format]||FORMATS.landscape, W=F.w, H=F.h;
+  const ink=s.accent;               // barva kapitoly – linka, číslo, graf, logo
   const fontImport = standalone
     ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
     : '';
-  const ink = s.accent; // barva kapitoly beze změny – linka, číslo i graf
-  // kicker (i s „Data pro budoucí premiérku") se musí vejít vlevo od loga –
-  // u dlouhých názvů zmenši písmo i prostrkání, ať nepřeteče ani nenajede na hlavu
-  const kMaxW=930, kLS0=6, kSize0=26;
-  const kRaw=measureCond(s.kicker,kSize0)+Math.max(0,s.kicker.length-1)*kLS0;
-  const kSc=kRaw>kMaxW?kMaxW/kRaw:1;
-  const kSize=(kSize0*kSc).toFixed(1), kLS=(kLS0*kSc).toFixed(2);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  const M = Math.round(W*0.0583);   // okraj (70 pro 1200, 63 pro 1080)
+  const barH = W>=1200 ? 14 : 16;
+  const RE = W-M;                    // pravý okraj obsahu
+  // logo posadíme tak, aby nejzazší bod hlavy lícoval s targetRight (hlava má
+  // v rámečku ~0,214·S rezervu vpravo)
+  const logoAt=(targetRight,y,S)=>specialLogo(ink, targetRight - S*0.786, y, S);
+  // kicker s auto-zmenšením na dostupnou šířku
+  const kicker=(x,y,maxW,anchor)=>{
+    const LS0=6,SZ0=26;
+    const raw=measureCond(s.kicker,SZ0)+Math.max(0,s.kicker.length-1)*LS0;
+    const sc=raw>maxW?maxW/raw:1;
+    return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${C.muted}" font-weight="700" text-anchor="${anchor}">${esc(s.kicker)}</text>`;
+  };
+
+  let inner;
+  if(W/H >= 1.4){
+    // ---- LANDSCAPE: dva sloupce (text vlevo, graf vpravo) ----
+    const bigSize=s.big.length>9?96:s.big.length>5?120:170;
+    const claimT=s.claim.split('\n').map((l,i)=>`<tspan x="${M}" dy="${i===0?0:58}">${esc(l)}</tspan>`).join('');
+    inner = kicker(M,92,930,'start')
+      + `<text x="${M}" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
+      + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>`
+      + `<text x="${M}" y="${160+bigSize+120}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>`
+      + logoAt(RE,24,140)
+      + motifSvg(s.motif,ink,RE-360,170,360,270)
+      + brandMark('DataTimes','left',566,M,RE)
+      + brandMark('mahdalova-skop','right',566,M,RE);
+  } else {
+    // ---- STACKED (čtverec / na výšku / story): jeden sloupec, centrovaně ----
+    // Rozvržení shora dolů s rozestupy i velikostmi škálovanými podle výšky (vs),
+    // aby nic nekolidovalo na 1:1 a zároveň to nebylo prázdné na 9:16.
+    const cx=W/2, CW=W-2*M, S=Math.round(W*0.15), vs=H/1080;
+    const bigSize=Math.round(Math.min(300,(s.big.length>9?130:s.big.length>5?185:250)*(0.8+0.2*vs)));
+    const claimSize=Math.round(W*0.048), claimLH=claimSize*1.22;
+    const claimLines=s.claim.split('\n');
+    const claimT=claimLines.map((l,i)=>`<tspan x="${cx}" dy="${i===0?0:claimLH}">${esc(l)}</tspan>`).join('');
+    const logoY=Math.round(H*0.05);
+    const kickY=logoY+S+Math.round(44*vs);
+    const numY=kickY+Math.round(0.72*bigSize+30*vs);
+    const unitY=numY+Math.round(0.22*bigSize+34*vs);
+    const claimY=unitY+Math.round(0.72*claimSize+40*vs);
+    const claimEnd=claimY+(claimLines.length-1)*claimLH+0.2*claimSize;
+    const footY=H-M-8;
+    // motiv: výška max 24 % plátna, vycentrovaný ve zbylém prostoru mezi tezí a patičkou
+    const mBot=footY-Math.round(60*vs), mTop=claimEnd+Math.round(46*vs);
+    const mh=Math.min(Math.round(H*0.24), mBot-mTop), mw=Math.round(CW*0.8);
+    const myTop=mTop+Math.max(0,((mBot-mTop)-mh)/2);
+    inner = specialLogo(ink, cx-S/2, logoY, S)
+      + kicker(cx,kickY,CW,'middle')
+      + `<text x="${cx}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(s.big)}</text>`
+      + `<text x="${cx}" y="${unitY}" font-family="${F_COND}" font-size="32" fill="${C.muted}" text-anchor="middle">${esc(s.unit)}</text>`
+      + `<text x="${cx}" y="${claimY}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${C.ink}" text-anchor="middle">${claimT}</text>`
+      + motifSvg(s.motif,ink,cx-mw/2,myTop,mw,mh)
+      + brandMark('DataTimes','left',footY,M,RE)
+      + brandMark('mahdalova-skop','right',footY,M,RE);
+  }
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   ${fontImport}
-  <rect width="1200" height="630" fill="${C.bg}"/>
-  <rect x="0" y="0" width="1200" height="14" fill="${s.accent}"/>
-  <text x="70" y="92" font-family="${F_COND}" font-size="${kSize}" letter-spacing="${kLS}" fill="${C.muted}" font-weight="700">${esc(s.kicker)}</text>
-  <text x="70" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>
-  <text x="70" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>
-  <text x="70" y="${160+bigSize+120}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>
-  ${specialLogo(s.accent)}
-  ${motifSvg(s.motif,ink)}
-  ${brandMark('DataTimes', 'left')}
-  ${brandMark('mahdalova-skop', 'right')}
+  <rect width="${W}" height="${H}" fill="${C.bg}"/>
+  <rect x="0" y="0" width="${W}" height="${barH}" fill="${s.accent}"/>
+  ${inner}
 </svg>`;
 }
 
@@ -353,8 +420,8 @@ function measureCond(text, size){
 // Značka do rohu patičky: kolečko (červený kruh + žlutý oblouk) VŽDY před nápisem.
 // Prstenec je tlustý – ztlušťuje se dovnitř, vnější průměr zůstává (R+SW/2 = 20,5
 // jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
-function brandMark(name, side){
-  const R=14, SW=13, Rout=R+SW/2, gap=16, LM=70, RM=1130;  // tenčí prstenec (byl SW 15)
+function brandMark(name, side, y, LM, RM){
+  const R=14, SW=13, Rout=R+SW/2, gap=16;  // tenčí prstenec (byl SW 15)
   const ex=(R*Math.sin(2*Math.PI/3)).toFixed(2);   // konec žlutého oblouku (120° od vrcholu)
   const ey=(-R*Math.cos(2*Math.PI/3)).toFixed(2);
   const ring = `<circle cx="0" cy="0" r="${R}" fill="none" stroke="${C.crimson}" stroke-width="${SW}"/>`
@@ -365,8 +432,8 @@ function brandMark(name, side){
   let markCx, textX, anchor;
   if(side==='left'){ markCx = LM+Rout; textX = markCx+Rout+gap; anchor='start'; }
   else { textX = RM; anchor='end'; markCx = (RM-W)-gap-Rout; }
-  return `<g transform="translate(${markCx.toFixed(1)},566)">${ring}</g>`
-    + `<text x="${textX.toFixed(1)}" y="576" font-family="'Roboto Condensed', Arial, sans-serif" `
+  return `<g transform="translate(${markCx.toFixed(1)},${y})">${ring}</g>`
+    + `<text x="${textX.toFixed(1)}" y="${y+10}" font-family="'Roboto Condensed', Arial, sans-serif" `
     + `font-size="30" font-weight="700" text-anchor="${anchor}">${label}</text>`;
 }
 
@@ -382,10 +449,8 @@ const HEAD_DOTS = [
   [469.2,280.0,12.3,'#ff934d'],[457.6,138.9,12.3,'#ffdc33'],[412.8,488.0,8.8,'#ff934d'],
   [539.2,234.1,8.8,'#ffe680'],
 ];
-function specialLogo(accent){
-  // Obrys hlavy nesahá až k okraji svého rámečku (~30 px rezerva), proto rámeček
-  // posuneme dál doprava, aby nejzazší bod hlavy lícoval s grafem i textem na 1130.
-  const S=140, sc=S/716, x=1020, y=24;
+function specialLogo(accent, x, y, S){
+  const sc=S/716;
   const dots = HEAD_DOTS.map(([cx,cy,r,col])=>
     `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${col}" stroke="${col}" stroke-width="8"/>`).join('');
   return `<g transform="translate(${x},${y}) scale(${sc.toFixed(4)}) translate(8,8)">`
@@ -397,6 +462,7 @@ function specialLogo(accent){
 
 // ------- render -------
 const frame=document.getElementById('frame');
+const hintEl=document.getElementById('hint');
 function render(){ frame.innerHTML=buildSVG(state,false); }
 
 // bind inputs
@@ -411,6 +477,15 @@ MOTIFS.forEach(([v,label])=>{const b=document.createElement('button');b.classNam
   b.textContent=label;b.dataset.v=v;
   b.onclick=()=>{state.motif=v;[...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};
   mWrap.appendChild(b);});
+
+// formáty (poměry stran pro sítě)
+const fWrap=document.getElementById('formats');
+Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('button');
+  b.className='chip'+(key===state.format?' on':'');b.dataset.f=key;b.textContent=f.label;
+  b.onclick=()=>{state.format=key;[...fWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.f===key));
+    document.getElementById('frame').classList.toggle('tall', f.h/f.w>1.1);
+    hintEl.textContent=`Náhled ${f.w} × ${f.h} px · Roboto Slab + Roboto Condensed`;render();};
+  fWrap.appendChild(b);});
 
 // 15 chapter colours – výběr kapitoly přepíše barvu i kicker
 const aWrap=document.getElementById('accents');
@@ -459,7 +534,7 @@ function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t
 
 function fileBase(){
   const slug=(state.big||'poutak').replace(/[^0-9a-zA-Z]+/g,'-').replace(/(^-|-$)/g,'')||'poutak';
-  return `poutak-${state.chapter}-${slug}`;
+  return `poutak-${state.chapter}-${state.format}-${slug}`;
 }
 function saveBlob(blob,name){
   const a=document.createElement('a');a.download=name;a.href=URL.createObjectURL(blob);a.click();
@@ -504,13 +579,14 @@ document.getElementById('dlpng').onclick=async()=>{
   btn.disabled=true;
   try{
     toast('Připravuji fonty…');
+    const fmt=FORMATS[state.format]||FORMATS.landscape;
     const svg=buildSVG(state,false).replace(/(<svg[^>]*>)/,'$1'+await fontStyleTag());
     const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
     await new Promise((resolve,reject)=>{
       const img=new Image();
       img.onload=()=>{
-        const cv=document.createElement('canvas');cv.width=1200;cv.height=630;
-        cv.getContext('2d').drawImage(img,0,0,1200,630);
+        const cv=document.createElement('canvas');cv.width=fmt.w;cv.height=fmt.h;
+        cv.getContext('2d').drawImage(img,0,0,fmt.w,fmt.h);
         URL.revokeObjectURL(url);
         cv.toBlob(b=>{saveBlob(b,fileBase()+'.png');toast('PNG staženo');resolve();},'image/png');
       };
