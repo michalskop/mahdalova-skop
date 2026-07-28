@@ -249,7 +249,7 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#de1743', format:'www'
+  motif:'fall', accent:'#de1743', format:'link'
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
@@ -290,23 +290,21 @@ function motifSvg(kind, accent, x0, y0, w, h){
 // Formáty pro sítě. Landscape = odkaz/og:image, který berou skoro všechny sítě
 // (FB, X, Bluesky, Threads, LinkedIn, Reddit, WhatsApp) i web. Ostatní jsou pro
 // nativní posty (Instagram feed, Stories/Reels).
-// Formats by network. www/FB/X/BSky all use the 1200×630 link preview (og:image);
-// separate buttons keep exports organised per network. Square = IG/FB feed,
-// IG story/reel = full-screen 9:16.
+// Formats by use. Link = 1200×630 og:image, shared by www, FB, X, BSky,
+// LinkedIn, Threads, Reddit, WhatsApp (all link previews). Square = IG/FB feed,
+// Portrait = IG feed 4:5, IG story/reel = full-screen 9:16.
 const FORMATS = {
-  www:     { w:1200, h:630,  label:'www' },
-  fb:      { w:1200, h:630,  label:'FB' },
-  x:       { w:1200, h:630,  label:'X' },
-  bsky:    { w:1200, h:630,  label:'BSky' },
-  square:  { w:1080, h:1080, label:'Square' },
-  igstory: { w:1080, h:1920, label:'IG story/reel' },
+  link:     { w:1200, h:630,  label:'www·FB·X·BSky' },
+  square:   { w:1080, h:1080, label:'Square' },
+  portrait: { w:1080, h:1350, label:'Portrait' },
+  igstory:  { w:1080, h:1920, label:'IG story/reel' },
 };
 const F_SLAB="'Roboto Slab', Georgia, serif";
 const F_COND="'Roboto Condensed', Arial, sans-serif";
 
 // standalone = SVG na disk (přibalí @import fontů, ~250 B navíc)
 function buildSVG(s, standalone){
-  const F=FORMATS[s.format]||FORMATS.www, W=F.w, H=F.h;
+  const F=FORMATS[s.format]||FORMATS.link, W=F.w, H=F.h;
   const ink=s.accent;               // barva kapitoly – linka, číslo, graf, logo
   const fontImport = standalone
     ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
