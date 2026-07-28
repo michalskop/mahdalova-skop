@@ -17,6 +17,7 @@ import SupportBanner from '@/components/common/SupportBanner';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import { readableAccent } from '@/utils/colorUtils';
 import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
+import { chapterAccent } from '@/components/dpbp/chapterNavigation';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 const CHARTS_ROOT  = path.join(process.cwd(), 'public/specialy/dpbp/charts');
@@ -57,7 +58,9 @@ interface ChapterTile {
 function loadMeta(chapterSlug: string): ChapterMeta | null {
   const p = path.join(CONTENT_ROOT, chapterSlug, '_meta.json');
   if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8'));
+  const meta = JSON.parse(fs.readFileSync(p, 'utf8')) as Omit<ChapterMeta, 'accent'>;
+  // Barva nepochází z JSONu, ale z kanonické palety – viz chapterNavigation.ts.
+  return { ...meta, accent: chapterAccent(chapterSlug) };
 }
 
 function withRowSpan<T extends { fullWidth?: boolean }>(list: T[]): Array<T & { span: boolean }> {

@@ -34,6 +34,7 @@ import {
   OwnershipNetwork,
 } from '@/components/dpbp/HealthcareVisuals';
 import { readableAccent } from '@/utils/colorUtils';
+import { chapterAccent } from '@/components/dpbp/chapterNavigation';
 import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
@@ -69,7 +70,7 @@ function loadArticle(chapterSlug: string, articleSlug: string) {
 function loadChapterMeta(chapterSlug: string) {
   const p = path.join(CONTENT_ROOT, chapterSlug, '_meta.json');
   if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as { title: string; accent: string };
+  return JSON.parse(fs.readFileSync(p, 'utf8')) as { title: string };
 }
 
 const STATIC_CHAPTER_ROUTES = new Set<string>([]);
@@ -140,7 +141,7 @@ export default function ArticlePage({ params }: { params: { chapter: string; art
   const chapterMeta = loadChapterMeta(params.chapter);
   const chapterContents = loadChapterContents(CONTENT_ROOT);
   const { frontmatter: fm, content, htmlContent } = art;
-  const accent = chapterMeta?.accent ?? '#de1743';
+  const accent = chapterAccent(params.chapter);
   const textAccent = readableAccent(accent);
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.mahdalova-skop.cz';
