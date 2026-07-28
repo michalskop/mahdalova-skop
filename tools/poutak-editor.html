@@ -273,7 +273,7 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#de1743', format:'link', image:null
+  motif:'fall', accent:'#de1743', format:'link', image:null, dark:false
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
@@ -282,30 +282,31 @@ function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 // Datový motiv v obdélníku (x0,y0,w,h). Tloušťky čar, značky i svislé polohy
 // se škálují podle velikosti rámečku, aby motiv vypadal dobře i na velkých
 // plochách (čtverec/story), ne jen v landscape 360×270.
-function motifSvg(kind, accent, x0, y0, w, h){
+function motifSvg(kind, accent, x0, y0, w, h, th){
+  th = th || { line:C.line, sec:C.ink };   // barvy dle režimu (světlý/tmavý)
   const kw=w/360, kh=h/270, k=Math.min(kw,kh);
   const sw=(8*k).toFixed(1), swThin=(7*k).toFixed(1), swBase=(3*k).toFixed(1), swGrid=(2*k).toFixed(1);
   const r=(12*k).toFixed(1);
   const Y=f=>(y0+h*f).toFixed(1), X=f=>(x0+w*f).toFixed(1);
-  const grid=[0,1,2,3].map(i=>`<line x1="${x0}" y1="${(y0+(h/3)*i).toFixed(1)}" x2="${x0+w}" y2="${(y0+(h/3)*i).toFixed(1)}" stroke="${C.line}" stroke-width="${swGrid}"/>`).join('');
-  const base=`<line x1="${x0}" y1="${y0+h}" x2="${x0+w}" y2="${y0+h}" stroke="${C.ink}" stroke-width="${swBase}"/>`;
+  const grid=[0,1,2,3].map(i=>`<line x1="${x0}" y1="${(y0+(h/3)*i).toFixed(1)}" x2="${x0+w}" y2="${(y0+(h/3)*i).toFixed(1)}" stroke="${th.line}" stroke-width="${swGrid}"/>`).join('');
+  const base=`<line x1="${x0}" y1="${y0+h}" x2="${x0+w}" y2="${y0+h}" stroke="${th.sec}" stroke-width="${swBase}"/>`;
   let art='';
   if(kind==='fall'){
     art=`<polyline points="${x0},${Y(0.15)} ${X(0.3)},${Y(0.33)} ${X(0.6)},${Y(0.26)} ${x0+w},${Y(0.89)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x0+w}" cy="${Y(0.89)}" r="${r}" fill="${accent}"/>`;
   } else if(kind==='riseFall'){
-    art=`<polyline points="${x0},${Y(0.78)} ${X(0.45)},${Y(0.11)} ${x0+w},${Y(0.70)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${X(0.45)}" cy="${Y(0.11)}" r="${r}" fill="${C.ink}"/><circle cx="${x0+w}" cy="${Y(0.70)}" r="${r}" fill="${accent}"/>`;
+    art=`<polyline points="${x0},${Y(0.78)} ${X(0.45)},${Y(0.11)} ${x0+w},${Y(0.70)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${X(0.45)}" cy="${Y(0.11)}" r="${r}" fill="${th.sec}"/><circle cx="${x0+w}" cy="${Y(0.70)}" r="${r}" fill="${accent}"/>`;
   } else if(kind==='cross'){
-    art=`<polyline points="${x0},${Y(0.19)} ${x0+w},${Y(0.85)}" fill="none" stroke="${C.ink}" stroke-width="${swThin}" stroke-linecap="round"/><polyline points="${x0},${Y(0.81)} ${x0+w},${Y(0.15)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linecap="round"/><circle cx="${X(0.52)}" cy="${Y(0.51)}" r="${r}" fill="${C.orange}"/>`;
+    art=`<polyline points="${x0},${Y(0.19)} ${x0+w},${Y(0.85)}" fill="none" stroke="${th.sec}" stroke-width="${swThin}" stroke-linecap="round"/><polyline points="${x0},${Y(0.81)} ${x0+w},${Y(0.15)}" fill="none" stroke="${accent}" stroke-width="${sw}" stroke-linecap="round"/><circle cx="${X(0.52)}" cy="${Y(0.51)}" r="${r}" fill="${C.orange}"/>`;
   } else if(kind==='bars'){
     const bw=54*kw, gapx=32*kw, bx=x0+30*kw, hs=[0.35,0.55,0.42,0.95];
-    art=hs.map((v,i)=>`<rect x="${(bx+i*(bw+gapx)).toFixed(1)}" y="${(y0+h-h*v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(h*v).toFixed(1)}" fill="${i===3?accent:C.ink}" opacity="${i===3?1:0.75}"/>`).join('');
+    art=hs.map((v,i)=>`<rect x="${(bx+i*(bw+gapx)).toFixed(1)}" y="${(y0+h-h*v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(h*v).toFixed(1)}" fill="${i===3?accent:th.sec}" opacity="${i===3?1:0.75}"/>`).join('');
   } else if(kind==='gap'){
     const ph=(44*kh).toFixed(1);
-    art=`<rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.15)}" width="${(w*0.32).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${C.ink}" opacity="0.8"/><rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.67)}" width="${(w*0.8).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${accent}"/>`;
+    art=`<rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.15)}" width="${(w*0.32).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${th.sec}" opacity="0.8"/><rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.67)}" width="${(w*0.8).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${accent}"/>`;
   } else {
     const rows=3,cols=5,rr=(17*k),gx=(w-80*kw)/4.6,gy=(h-70*kh)/2.6; let d='';
     for(let i=0;i<rows;i++)for(let j=0;j<cols;j++){const idx=i*cols+j;
-      d+=`<circle cx="${(x0+40*kw+j*gx).toFixed(1)}" cy="${(y0+35*kh+i*gy).toFixed(1)}" r="${rr.toFixed(1)}" fill="${idx<4?accent:C.ink}" opacity="${idx<4?1:0.55}"/>`;}
+      d+=`<circle cx="${(x0+40*kw+j*gx).toFixed(1)}" cy="${(y0+35*kh+i*gy).toFixed(1)}" r="${rr.toFixed(1)}" fill="${idx<4?accent:th.sec}" opacity="${idx<4?1:0.55}"/>`;}
     art=d;
   }
   return grid+base+art;
@@ -330,6 +331,14 @@ const F_COND="'Roboto Condensed', Arial, sans-serif";
 function buildSVG(s, standalone){
   const F=FORMATS[s.format]||FORMATS.link, W=F.w, H=F.h;
   const ink=s.accent;               // barva kapitoly – linka, číslo, graf, logo
+  // barvy dle režimu: světlý = béžová plocha, tmavý = ink blue #101432
+  const dark=s.dark;
+  const cBg  = dark ? '#101432' : C.bg;
+  const cInk = dark ? '#f4f2ec' : C.ink;    // hlavní text (teze) + patička
+  const cMut = dark ? '#a9adca' : C.muted;  // kicker, jednotka
+  const cBox = dark ? '#20255a' : C.bg;     // obdélník za tezí
+  const mth  = { line: dark?'rgba(255,255,255,.16)':C.line,
+                 sec:  dark?'rgba(244,242,236,.72)':C.ink };  // barvy motivu
   const fontImport = standalone
     ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
     : '';
@@ -344,7 +353,7 @@ function buildSVG(s, standalone){
     const LS0=6,SZ0=26;
     const raw=measureCond(s.kicker,SZ0)+Math.max(0,s.kicker.length-1)*LS0;
     const sc=raw>maxW?maxW/raw:1;
-    return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${C.muted}" font-weight="700" text-anchor="${anchor}">${esc(s.kicker)}</text>`;
+    return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}">${esc(s.kicker)}</text>`;
   };
 
   // Vizuální plocha: vlastní obrázek (velký obdélník imgRect) NEBO piktogram
@@ -356,7 +365,7 @@ function buildSVG(s, standalone){
         + `<image href="${s.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${cid})"/>`;
     }
     const [mx,my,mw2,mh2]=motifRect;
-    return motifSvg(s.motif,ink,mx,my,mw2,mh2);
+    return motifSvg(s.motif,ink,mx,my,mw2,mh2,mth);
   };
   // Béžový (v tmavém režimu ink) obdélník za tezí – jen když je pod ní obrázek,
   // ať je čitelná i přes něj (smí ho překrýt).
@@ -365,7 +374,7 @@ function buildSVG(s, standalone){
     const wmax=Math.max(...lines.map(l=>measureSlab(l,size))), padX=18, padY=12;
     const boxW=wmax+padX*2, boxH=(lines.length-1)*lh+size+padY*2;
     const bx=anchor==='middle'?anchorX-boxW/2:anchorX-padX;
-    return `<rect x="${bx.toFixed(1)}" y="${(topY-size*0.72-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${C.bg}"/>`;
+    return `<rect x="${bx.toFixed(1)}" y="${(topY-size*0.72-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${cBox}"/>`;
   };
 
   let inner;
@@ -374,16 +383,21 @@ function buildSVG(s, standalone){
     const bigSize=s.big.length>9?96:s.big.length>5?120:170;
     const claimLines=s.claim.split('\n');
     const claimT=claimLines.map((l,i)=>`<tspan x="${M}" dy="${i===0?0:58}">${esc(l)}</tspan>`).join('');
-    const claimTop=160+bigSize+120;
-    inner = visual([RE-360,170,360,270],[400,120,730,420])   // obrázek dole
+    const imgRect=[400,120,730,420], imgBottom=imgRect[1]+imgRect[3];
+    // s obrázkem: spodní okraj béžového boxu s tezí lícuje se spodkem obrázku
+    // (padY=12, 0.28 = descender dolní části textu); bez obrázku sedí pod číslem
+    const claimTop = s.image
+      ? imgBottom - ((claimLines.length-1)*58 + 48*0.28 + 12)
+      : 160+bigSize+120;
+    inner = visual([RE-360,170,360,270],imgRect)   // obrázek dole
       + kicker(M,92,930,'start')
       + `<text x="${M}" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
-      + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>`
+      + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`
       + claimBox(M,claimTop,claimLines,48,58,'start')
-      + `<text x="${M}" y="${claimTop}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>`
+      + `<text x="${M}" y="${claimTop}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${cInk}">${claimT}</text>`
       + logoAt(RE,24,140)                                     // logo nahoře nad obrázkem
-      + brandMark('DataTimes','left',566,M,RE)
-      + brandMark('mahdalova-skop','right',566,M,RE);
+      + brandMark('DataTimes','left',566,M,RE,cInk)
+      + brandMark('mahdalova-skop','right',566,M,RE,cInk);
   } else {
     // ---- STACKED (Square / Portrait / Story): jeden sloupec, centrovaně ----
     const cx=W/2, CW=W-2*M, S=Math.round(W*0.15), vs=H/1080;
@@ -395,26 +409,37 @@ function buildSVG(s, standalone){
     const kickY=logoY+S+Math.round(44*vs);
     const numY=kickY+Math.round(0.72*bigSize+30*vs);
     const unitY=numY+Math.round(0.22*bigSize+34*vs);
-    const claimY=unitY+Math.round(0.72*claimSize+40*vs);
-    const claimEnd=claimY+(claimLines.length-1)*claimLH+0.2*claimSize;
     const footY=H-M-8;
-    const mBot=footY-Math.round(60*vs), mTop=claimEnd+Math.round(46*vs);
-    const mh=Math.min(Math.round(H*0.24), mBot-mTop), mw=Math.round(CW*0.8);
-    const myTop=mTop+Math.max(0,((mBot-mTop)-mh)/2);
-    inner = visual([cx-mw/2,myTop,mw,mh],[M,mTop,CW,Math.max(190,mBot-mTop)])
+    let claimY, motifRect, imgRect;
+    if(s.image){
+      // obrázek směle roztažený na výšku: od pod jednotkou po patičku;
+      // teze (s béžovým boxem) sedí na jeho spodním okraji jako v landscape
+      const imgTop=unitY+Math.round(34*vs), imgBot=footY-Math.round(74*vs);
+      imgRect=[M,imgTop,CW,imgBot-imgTop]; motifRect=[0,0,0,0];
+      claimY=imgBot-((claimLines.length-1)*claimLH + claimSize*0.28 + 12);
+    } else {
+      // piktogram: teze pod jednotkou, malý motiv vycentrovaný ve zbytku
+      claimY=unitY+Math.round(0.72*claimSize+40*vs);
+      const claimEnd=claimY+(claimLines.length-1)*claimLH+0.2*claimSize;
+      const mBot=footY-Math.round(60*vs), mTop=claimEnd+Math.round(46*vs);
+      const mh=Math.min(Math.round(H*0.24), mBot-mTop), mw=Math.round(CW*0.8);
+      const myTop=mTop+Math.max(0,((mBot-mTop)-mh)/2);
+      motifRect=[cx-mw/2,myTop,mw,mh]; imgRect=[0,0,0,0];
+    }
+    inner = visual(motifRect,imgRect)
       + kicker(cx,kickY,CW,'middle')
       + `<text x="${cx}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(s.big)}</text>`
-      + `<text x="${cx}" y="${unitY}" font-family="${F_COND}" font-size="32" fill="${C.muted}" text-anchor="middle">${esc(s.unit)}</text>`
+      + `<text x="${cx}" y="${unitY}" font-family="${F_COND}" font-size="32" fill="${cMut}" text-anchor="middle">${esc(s.unit)}</text>`
       + claimBox(cx,claimY,claimLines,claimSize,claimLH,'middle')
-      + `<text x="${cx}" y="${claimY}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${C.ink}" text-anchor="middle">${claimT}</text>`
+      + `<text x="${cx}" y="${claimY}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}" text-anchor="middle">${claimT}</text>`
       + specialLogo(ink, cx-S/2, logoY, S)                    // logo nahoře, nad obrázkem
-      + brandMark('DataTimes','left',footY,M,RE)
-      + brandMark('mahdalova-skop','right',footY,M,RE);
+      + brandMark('DataTimes','left',footY,M,RE,cInk)
+      + brandMark('mahdalova-skop','right',footY,M,RE,cInk);
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   ${fontImport}
-  <rect width="${W}" height="${H}" fill="${C.bg}"/>
+  <rect width="${W}" height="${H}" fill="${cBg}"/>
   <rect x="0" y="0" width="${W}" height="${barH}" fill="${s.accent}"/>
   ${inner}
 </svg>`;
@@ -437,7 +462,8 @@ function measureSlab(text, size){
 // Značka do rohu patičky: kolečko (červený kruh + žlutý oblouk) VŽDY před nápisem.
 // Prstenec je tlustý – ztlušťuje se dovnitř, vnější průměr zůstává (R+SW/2 = 20,5
 // jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
-function brandMark(name, side, y, LM, RM){
+function brandMark(name, side, y, LM, RM, ink){
+  ink = ink || C.ink;        // barva nápisu dle režimu
   const Rout=20.5, gap=16;   // vnější poloměr značky (kvůli zarovnání)
   // skutečné logo DataTimes: tříbarevný kruh (crimson + oranžová + žlutá),
   // žádný plný crimson prstenec = žádná „červená kontura". Zdroj: Logo.tsx.
@@ -447,8 +473,8 @@ function brandMark(name, side, y, LM, RM){
     + `<path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>`
     + `<path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>`
     + `</g>`;
-  const label = `<tspan fill="${C.ink}">${esc(name)}</tspan>`
-    + `<tspan fill="${C.crimson}">.</tspan><tspan fill="${C.ink}">cz</tspan>`;
+  const label = `<tspan fill="${ink}">${esc(name)}</tspan>`
+    + `<tspan fill="${C.crimson}">.</tspan><tspan fill="${ink}">cz</tspan>`;
   const W = measureCond(name+'.cz', 30);
   let markCx, textX, anchor;
   if(side==='left'){ markCx = LM+Rout; textX = markCx+Rout+gap; anchor='start'; }
@@ -568,10 +594,11 @@ function syncAcc(){
   swName.innerHTML=`<b>${ch[0]} ${esc(ch[2])}</b> · <b style="color:${ch[1]}">${ch[1]}</b>`;
 }
 
-// bg toggle
+// přepínač světlý / tmavý režim POUTÁKU (ne jen náhledu) – projeví se i v exportu
 document.getElementById('bgToggle').onclick=(e)=>{
-  const st=document.getElementById('stage');st.classList.toggle('dark');
-  e.target.textContent=st.classList.contains('dark')?'light background':'dark background';
+  state.dark=!state.dark;
+  e.target.textContent=state.dark?'light background':'dark background';
+  render();
 };
 
 // toast
@@ -626,7 +653,7 @@ document.getElementById('dlpng').onclick=async()=>{
   btn.disabled=true;
   try{
     toast('Preparing fonts…');
-    const fmt=FORMATS[state.format]||FORMATS.landscape;
+    const fmt=FORMATS[state.format]||FORMATS.link;
     const svg=buildSVG(state,false).replace(/(<svg[^>]*>)/,'$1'+await fontStyleTag());
     const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
     await new Promise((resolve,reject)=>{
