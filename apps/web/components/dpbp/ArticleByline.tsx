@@ -36,15 +36,18 @@ function shareTargets(url: string, title: string) {
   const t = encodeURIComponent(title);
   const ut = encodeURIComponent(`${title} ${url}`);
   const sz = 17;
+  // tier: pořadí skrývání na úzkém displeji (nejdřív se řada zmenší, pak ubývají
+  // odzadu méně užívané). Bez tier = vždy viditelné: Facebook, X, Bluesky, e-mail
+  // (+ kopírovat odkaz, které přidává ArticleByline za tento seznam).
   return [
     { label: 'E-mail', href: `mailto:?subject=${t}&body=${u}`, icon: <IconMail size={sz} stroke={1.8} /> },
     { label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}`, icon: <IconBrandMeta size={sz} stroke={1.8} /> },
     { label: 'X', href: `https://twitter.com/intent/tweet?url=${u}&text=${t}`, icon: <IconBrandX size={sz} stroke={1.8} /> },
-    { label: 'Threads', href: `https://www.threads.net/intent/post?text=${ut}`, icon: <IconBrandThreads size={sz} stroke={1.8} /> },
+    { label: 'Threads', href: `https://www.threads.net/intent/post?text=${ut}`, icon: <IconBrandThreads size={sz} stroke={1.8} />, tier: 'C' },
     { label: 'Bluesky', href: `https://bsky.app/intent/compose?text=${ut}`, icon: <IconBrandBluesky size={sz} stroke={1.8} /> },
-    { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`, icon: <IconBrandLinkedin size={sz} stroke={1.8} /> },
-    { label: 'Reddit', href: `https://www.reddit.com/submit?url=${u}&title=${t}`, icon: <IconBrandReddit size={sz} stroke={1.8} /> },
-    { label: 'WhatsApp', href: `https://wa.me/?text=${ut}`, icon: <IconBrandWhatsapp size={sz} stroke={1.8} /> },
+    { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`, icon: <IconBrandLinkedin size={sz} stroke={1.8} />, tier: 'C' },
+    { label: 'Reddit', href: `https://www.reddit.com/submit?url=${u}&title=${t}`, icon: <IconBrandReddit size={sz} stroke={1.8} />, tier: 'B' },
+    { label: 'WhatsApp', href: `https://wa.me/?text=${ut}`, icon: <IconBrandWhatsapp size={sz} stroke={1.8} />, tier: 'B' },
   ];
 }
 
@@ -89,7 +92,14 @@ export default function ArticleByline({ author, date, shareUrl, shareTitle, audi
 
         <div className={styles.share} aria-label="Sdílet">
           {shareTargets(shareUrl, shareTitle).map((s) => (
-            <a key={s.label} href={s.href} aria-label={s.label} target="_blank" rel="noopener noreferrer">
+            <a
+              key={s.label}
+              href={s.href}
+              aria-label={s.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.tier ? styles[`tier${s.tier}`] : undefined}
+            >
               {s.icon}
             </a>
           ))}

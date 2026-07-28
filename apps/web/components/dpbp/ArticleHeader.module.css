@@ -115,7 +115,7 @@
   display: flex;
   gap: 7px;
   margin-left: auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* řada ikon zůstává na jednom řádku (na úzku se zmenší/ubere) */
 }
 .share a,
 .share button {
@@ -235,6 +235,30 @@
   margin-top: 8px;
 }
 
+/* Úzký displej: řada sdílení jde přes celou šířku a drží se na jednom řádku.
+   Nejdřív se ikony i mezery zmenšují; když už to nestačí, ubírají se odzadu
+   méně užívané sítě (tier B: WhatsApp, Reddit → tier C: Threads, LinkedIn).
+   Vždy zůstává Facebook, X, Bluesky, e-mail a kopírovat odkaz. */
 @media (max-width: 560px) {
-  .share { margin-left: 0; width: 100%; }
+  .share {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .share a,
+  .share button { width: 30px; height: 30px; }
+}
+@media (max-width: 430px) {
+  .share a,
+  .share button { width: 27px; height: 27px; }
+  .share svg { width: 15px; height: 15px; }
+}
+@media (max-width: 400px) {
+  .share .tierB { display: none; }
+}
+@media (max-width: 340px) {
+  .share .tierC { display: none; }
+  .share a,
+  .share button { width: 26px; height: 26px; }
 }
