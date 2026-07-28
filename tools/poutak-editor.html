@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="cs">
+<meta charset="UTF-8">
+<title>Pouták editor — Data pro budoucí premiérku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101432; --red:#de1743; --orange:#f76800; --yellow:#ffcf02;
+    --bg:#f8f6f0; --panel:#ffffff; --border:#e0dbd0; --muted:#555; --line:#e8e3d2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:'Roboto Condensed',Arial,sans-serif;background:var(--bg);color:var(--navy);overflow:hidden;
+    display:flex;flex-direction:column;}
+
+  /* ---- MODE BAR ---- */
+  #modebar{flex:none;display:flex;align-items:center;gap:4px;padding:8px 14px;
+    background:var(--navy);border-bottom:1px solid #000;}
+  #modebar .brand{font-family:'Roboto Slab',Georgia,serif;color:#fff;font-size:13px;font-weight:700;margin-right:14px;}
+  #modebar .brand span{color:var(--yellow);}
+  .tab{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#fff;
+    border-radius:20px;padding:5px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;}
+  .tab.on{background:#fff;color:var(--navy);border-color:#fff;}
+  #content{flex:1;min-height:0;position:relative;}
+  .view{display:none;height:100%;}
+  .view.on{display:block;}
+  #app{display:grid;grid-template-columns:1fr 340px;height:100%;}
+
+  /* ---- PREVIEW ---- */
+  #stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;background:var(--bg);transition:background .3s;}
+  #stage.dark{background:var(--navy);}
+  #frame{width:100%;max-width:860px;box-shadow:0 10px 40px rgba(16,20,50,.18);border-radius:8px;overflow:hidden;background:#fff;}
+  #frame svg{display:block;width:100%;height:auto;}
+  #stagebar{display:flex;gap:10px;align-items:center;}
+  #stagebar .hint{font-size:12px;color:var(--muted);}
+  #stage.dark #stagebar .hint{color:rgba(255,255,255,.6);}
+  .ghost{background:transparent;border:1.5px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);font-family:inherit;}
+  #stage.dark .ghost{color:#fff;border-color:rgba(255,255,255,.4);}
+  .ghost:hover{border-color:var(--red);color:var(--red);}
+  #stage.dark .ghost:hover{color:var(--yellow);border-color:var(--yellow);}
+
+  /* ---- PANEL ---- */
+  #panel{background:var(--panel);border-left:1px solid var(--border);overflow-y:auto;display:flex;flex-direction:column;}
+  .ps{padding:13px 15px;border-bottom:1px solid var(--border);}
+  .plbl{font-size:9.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--red);margin-bottom:9px;}
+  .fld{margin-bottom:10px;}
+  .fld:last-child{margin-bottom:0;}
+  .fld label{display:block;font-size:11px;color:var(--muted);margin-bottom:3px;}
+  input[type=text],textarea,select{width:100%;font-family:inherit;font-size:13px;color:var(--navy);
+    border:1.5px solid var(--border);border-radius:4px;padding:6px 8px;background:#fff;resize:none;}
+  input[type=text]:focus,textarea:focus,select:focus{outline:none;border-color:var(--red);}
+  textarea{line-height:1.35;}
+  .charhint{font-size:10px;color:#aaa;margin-top:2px;text-align:right;}
+  .note{font-size:10.5px;color:#888;line-height:1.4;margin-top:7px;}
+
+  /* motif chips */
+  .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;}
+  .chip{border:1.5px solid var(--border);border-radius:5px;padding:6px 3px;font-size:10.5px;font-weight:600;
+    cursor:pointer;background:#fff;color:#555;text-align:center;font-family:inherit;}
+  .chip.on{background:var(--red);color:#fff;border-color:var(--red);}
+
+  /* 15 chapter colours */
+  .swgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
+  .sw{position:relative;height:34px;border-radius:5px;cursor:pointer;border:2px solid transparent;
+    display:flex;align-items:flex-end;justify-content:center;padding-bottom:2px;
+    font-size:9px;font-weight:700;color:rgba(255,255,255,.85);font-family:inherit;}
+  .sw.on{border-color:var(--navy);outline:1.5px solid #fff;outline-offset:-4px;}
+  .swname{font-size:11px;color:var(--muted);margin-top:8px;min-height:15px;}
+  .swname b{color:var(--navy);}
+
+  /* presets */
+  .presets{display:flex;flex-direction:column;gap:4px;}
+  .pre{display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:6px 8px;border-radius:4px;
+    border:1.5px solid var(--border);background:#fff;text-align:left;font-family:inherit;}
+  .pre:hover{border-color:var(--red);}
+  .pre b{font-family:'Roboto Slab',Georgia,serif;color:var(--red);font-size:13px;min-width:62px;}
+  .pre span{font-size:10.5px;color:#666;line-height:1.25;}
+
+  /* footer buttons */
+  #actions{position:sticky;bottom:0;background:var(--panel);border-top:1px solid var(--border);
+    padding:11px 15px;display:flex;flex-direction:column;gap:7px;}
+  .btn{width:100%;padding:9px;border:none;border-radius:5px;font-size:12px;font-weight:700;
+    cursor:pointer;font-family:inherit;}
+  .btn-primary{background:var(--red);color:#fff;}
+  .btn-primary:hover{background:#c5143c;}
+  .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--border);}
+  .btn-ghost:hover{border-color:var(--red);color:var(--red);}
+  .btn-row{display:flex;gap:7px;}
+  .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;
+    padding:9px 18px;border-radius:6px;font-size:12.5px;opacity:0;transition:opacity .25s;pointer-events:none;}
+  .toast.show{opacity:1;}
+  h1{font-family:'Roboto Slab',Georgia,serif;font-size:15px;font-weight:700;}
+  .subttl{font-size:11px;color:var(--muted);margin-top:2px;}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:10px;background:#f2efe6;padding:0 3px;border-radius:2px;}
+
+  /* ---- PALETA ---- */
+  #view-paleta{overflow-y:auto;padding:30px 34px 60px;}
+  .pal-head{max-width:1100px;margin:0 auto 22px;}
+  .pal-head h2{font-family:'Roboto Slab',Georgia,serif;font-size:22px;font-weight:700;}
+  .pal-head p{font-size:13px;color:var(--muted);line-height:1.5;margin-top:6px;max-width:70ch;}
+  .pal-head code{font-size:11px;}
+  .palgrid{max-width:1100px;margin:0 auto;display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
+  .palcard{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;
+    display:flex;flex-direction:column;}
+  .palswatch{height:96px;display:flex;align-items:flex-start;justify-content:space-between;padding:10px 12px;
+    color:#fff;font-family:'Roboto Slab',Georgia,serif;font-weight:700;}
+  .palswatch .num{font-size:26px;line-height:1;}
+  .palcopy{background:rgba(255,255,255,.22);border:none;color:#fff;font-family:inherit;font-weight:700;
+    font-size:10.5px;padding:4px 9px;border-radius:14px;cursor:pointer;}
+  .palcopy:hover{background:rgba(255,255,255,.4);}
+  .palmeta{padding:9px 12px 11px;}
+  .palmeta .t{font-size:13.5px;font-weight:700;}
+  .palmeta .h{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:var(--muted);margin-top:2px;
+    cursor:pointer;}
+  .palmeta .h:hover{color:var(--red);}
+
+  /* úzké okno – náhled nad panel místo vedle něj */
+  @media (max-width:900px){
+    body{overflow:auto;}
+    #content{overflow:visible;}
+    .view,.view.on{height:auto;}
+    #app{grid-template-columns:1fr;height:auto;}
+    #stage{padding:16px;}
+    #panel{border-left:none;border-top:1px solid var(--border);overflow:visible;}
+    #actions{position:static;}
+  }
+</style>
+
+<div id="modebar">
+  <div class="brand">Data pro budoucí premiérku <span>·</span> studio</div>
+  <button class="tab on" id="tab-poutak">Pouták</button>
+  <button class="tab" id="tab-paleta">Paleta</button>
+</div>
+
+<div id="content">
+<div id="view-poutak" class="view on">
+<div id="app">
+  <div id="stage">
+    <div id="frame"></div>
+    <div id="stagebar">
+      <span class="hint">Náhled 1200 × 630 px · Roboto Slab + Roboto Condensed</span>
+      <button class="ghost" id="bgToggle">tmavé pozadí</button>
+    </div>
+  </div>
+
+  <div id="panel">
+    <div class="ps">
+      <h1>Pouták editor</h1>
+      <div class="subttl">Data pro budoucí premiérku · miniatury &amp; og:image</div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Kapitola — určuje barvu</div>
+      <div class="swgrid" id="accents"></div>
+      <div class="swname" id="swname"></div>
+      <div class="note">15 kapitol = 15 barev z <code>DPBP_CHAPTERS</code>.
+        Jiná dominantní barva se v projektu nepoužívá a odstíny se neupravují.</div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Kicker (nadřádek)</div>
+      <div class="fld"><input type="text" id="f-kicker" maxlength="70"></div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Hlavní číslo</div>
+      <div class="fld"><input type="text" id="f-big" maxlength="16" placeholder="1,28"></div>
+      <div class="fld">
+        <label>Jednotka / podtitulek čísla</label>
+        <input type="text" id="f-unit" maxlength="48" placeholder="dítěte na ženu">
+      </div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Teze (2 řádky)</div>
+      <div class="fld"><textarea id="f-claim" rows="2" placeholder="Babiš slibuje 2,1. Rekord&#10;bohatého světa je +0,47."></textarea>
+        <div class="charhint">Enter = zalomení řádku</div></div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Datový motiv</div>
+      <div class="chips" id="motifs"></div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Patička (web)</div>
+      <div class="fld"><input type="text" id="f-url" maxlength="40" value="mahdalova-skop.cz"></div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Přednastavené — kapitola Demografie</div>
+      <div class="presets" id="presets"></div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Jak výstup použít</div>
+      <div class="note" style="margin-top:0">
+        <b>SVG</b> — miniatury na webu. Vložte ho do stránky inline (<code>&lt;svg&gt;</code>
+        přímo v HTML), pak si vezme Roboto Slab / Condensed, které web už načítá.
+        Jako <code>&lt;img src="…svg"&gt;</code> fonty spadnou na Georgii/Arial.<br>
+        <b>PNG</b> — og:image pro sociální sítě (SVG neberou). Fonty se do něj zapečou,
+        proto potřebuje připojení k internetu.
+      </div>
+    </div>
+
+    <div id="actions">
+      <button class="btn btn-primary" id="dlsvg">Stáhnout SVG (~4 kB)</button>
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="dlpng">PNG 1200×630</button>
+        <button class="btn btn-ghost" id="cp">Řádek pro gen.js</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /view-poutak -->
+
+<div id="view-paleta" class="view">
+  <div class="pal-head">
+    <h2>Paleta speciálu</h2>
+    <p>Závazných 15 barev kapitol. Jediný zdroj je <code>apps/web/components/dpbp/dpbpChapters.json</code>
+       — odsud čerpá web, tento generátor i podklady pro sítě a podcasty. Klik na barvu nebo hex ji zkopíruje.
+       Jinou dominantní barvu v projektu nepoužívejte.</p>
+  </div>
+  <div class="palgrid" id="palgrid"></div>
+</div>
+</div><!-- /content -->
+<div class="toast" id="toast"></div>
+
+<script>
+const C = { bg:'#f8f6f0', ink:'#101432', crimson:'#de1743', orange:'#f76800',
+            yellow:'#ffcf02', muted:'#555555', line:'#e8e3d2' };
+
+/* Kanonická paleta kapitol – jediný zdroj je DPBP_CHAPTERS
+   v apps/web/components/dpbp/chapterNavigation.ts.
+   Barvy se sem opisují přesně: nic se nedomýšlí, nepřibližuje ani neztmavuje. */
+const CHAPTERS = [
+  ['01','#de1743','Demografie','01-demografie'],
+  ['02','#5e66d5','Zdravotnictví a péče','02-zdravotnictvi-a-pece'],
+  ['03','#ff5c4a','Nedostupnost bydlení','03-nedostupnost-bydleni'],
+  ['04','#1a9fbd','Regionální propasti','04-regionalni-propasti'],
+  ['05','#639e0a','Úroveň vzdělávání','05-uroven-vzdelavani'],
+  ['06','#efb704','Ekonomická nerovnost','06-ekonomicka-nerovnost'],
+  ['07','#6b6ebc','AI a trh práce','07-ai-a-trh-prace'],
+  ['08','#5fcce6','Digitalizace a inovace','08-digitalizace-a-inovace'],
+  ['09','#f76800','Energie a energetická bezpečnost','09-energie-a-energeticka-bezpecnost'],
+  ['10','#f01745','Klimatická změna','10-klimaticka-zmena'],
+  ['11','#a03250','Bezpečnost a konflikty','11-bezpecnost-a-konflikty'],
+  ['12','#835634','Informační manipulace','12-informacni-manipulace'],
+  ['13','#9f319e','Oligarchizace a korupce','13-oligarchizace-a-korupce'],
+  ['14','#a47d03','Veřejné finance a daně','14-verejne-finance-a-dane'],
+  ['15','#0e926a','Efektivní vládnutí','15-efektivni-vladnuti'],
+];
+
+const MOTIFS = [
+  ['fall','klesá'],['riseFall','vrchol'],['cross','křížení'],
+  ['bars','sloupce'],['gap','mezera'],['dots','tečky']
+];
+
+const PRESETS = [
+  { n:'01', big:'1,28', unit:'dítěte na ženu', claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.', motif:'fall' },
+  { n:'02', big:'5 : 4', unit:'dětí na ženy', claim:'Co doopravdy měří\núhrnná plodnost', motif:'dots' },
+  { n:'03', big:'2040', unit:'rok, kdy Togo přeroste Česko', claim:'Svět se nepřelidní.\nPřerozdělí se.', motif:'cross' },
+  { n:'04', big:'1,97 → 1,45', unit:'Švédsko 2010 → 2023', claim:'Skandinávský rekord\nnevydržel', motif:'riseFall' },
+  { n:'05', big:'22 → 30', unit:'věk matky u prvního dítěte', claim:'Největší posun\nmezi bohatými zeměmi', motif:'gap' },
+  { n:'06', big:'22 %', unit:'žen ve Sněmovně', claim:'Tímhle tempem přijde\nparita po roce 2050', motif:'bars' },
+  { n:'07', big:'1,28 / 1,8', unit:'rok vs. generace', claim:'Momentka roku,\nnebo film celé generace', motif:'dots' },
+  { n:'08', big:'5 % / 35 %', unit:'dětí do 3 let v jeslích, ČR vs. EU', claim:'Co ze slibů stran\npodle dat funguje', motif:'bars' },
+  { n:'09', big:'0,72', unit:'Jižní Korea 2023', claim:'200 miliard dolarů\nporodnost nezvedlo', motif:'fall' },
+  { n:'10', big:'55 let', unit:'dat o každém porodu', claim:'Nejsilnější prediktor:\nvzdělání matky', motif:'dots' },
+  { n:'11', big:'−12 % / +30 %', unit:'Karviná vs. Říčany za dekádu', claim:'Šest tisíc obcí,\nčtyři odlišné osudy', motif:'cross' },
+  { n:'12', big:'3,5 % HDP', unit:'Francie na rodiny, nejvíc v EU', claim:'Čtyři modely reakce.\nStrop drží všude.', motif:'riseFall' },
+  { n:'13', big:'190 → 90', unit:'tisíc narozených ročně', claim:'Poloviční generace\nvstupuje do hry', motif:'fall' },
+  { n:'14', big:'4×', unit:'rozdíl mezi kraji', claim:'Vzdělanostní propast\nse propisuje do porodnosti', motif:'bars' },
+  { n:'15', big:'53 %', unit:'voličů 2029 starších 50 let', claim:'Kdo bude volit\npříští Sněmovnu', motif:'gap' },
+];
+
+// ------- state -------
+const state = {
+  chapter:'01',
+  kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
+  big:'1,28', unit:'dítěte na ženu',
+  claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
+  motif:'fall', accent:'#f76800', url:'mahdalova-skop.cz'
+};
+const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function motifSvg(kind, accent){
+  const x0=770, y0=170, w=340, h=270;
+  const grid=[0,1,2,3].map(i=>`<line x1="${x0}" y1="${y0+(h/3)*i}" x2="${x0+w}" y2="${y0+(h/3)*i}" stroke="${C.line}" stroke-width="2"/>`).join('');
+  const base=`<line x1="${x0}" y1="${y0+h}" x2="${x0+w}" y2="${y0+h}" stroke="${C.ink}" stroke-width="3"/>`;
+  let art='';
+  if(kind==='fall'){
+    art=`<polyline points="${x0},${y0+40} ${x0+w*0.3},${y0+90} ${x0+w*0.6},${y0+70} ${x0+w},${y0+h-30}" fill="none" stroke="${accent}" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x0+w}" cy="${y0+h-30}" r="12" fill="${accent}"/>`;
+  } else if(kind==='riseFall'){
+    art=`<polyline points="${x0},${y0+h-60} ${x0+w*0.45},${y0+30} ${x0+w},${y0+h-80}" fill="none" stroke="${accent}" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x0+w*0.45}" cy="${y0+30}" r="12" fill="${C.ink}"/><circle cx="${x0+w}" cy="${y0+h-80}" r="12" fill="${accent}"/>`;
+  } else if(kind==='cross'){
+    art=`<polyline points="${x0},${y0+50} ${x0+w},${y0+h-40}" fill="none" stroke="${C.ink}" stroke-width="7" stroke-linecap="round"/><polyline points="${x0},${y0+h-50} ${x0+w},${y0+40}" fill="none" stroke="${accent}" stroke-width="8" stroke-linecap="round"/><circle cx="${x0+w*0.52}" cy="${y0+h*0.5+3}" r="12" fill="${C.orange}"/>`;
+  } else if(kind==='bars'){
+    const bw=54,gapx=32,bx=x0+30,hs=[0.35,0.55,0.42,0.95];
+    art=hs.map((v,i)=>`<rect x="${bx+i*(bw+gapx)}" y="${y0+h-h*v}" width="${bw}" height="${h*v}" fill="${i===3?accent:C.ink}" opacity="${i===3?1:0.75}"/>`).join('');
+  } else if(kind==='gap'){
+    art=`<rect x="${x0+20}" y="${y0+40}" width="${w*0.32}" height="44" rx="22" fill="${C.ink}" opacity="0.8"/><rect x="${x0+20}" y="${y0+h-90}" width="${w*0.8}" height="44" rx="22" fill="${accent}"/><path d="M${x0+w*0.36} ${y0+62} C ${x0+w*0.7} ${y0+62}, ${x0+w*0.5} ${y0+h-68}, ${x0+w*0.78} ${y0+h-68}" fill="none" stroke="${C.orange}" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/>`;
+  } else {
+    const rows=3,cols=5,r=17,gx=70,gy=80; let d='';
+    for(let i=0;i<rows;i++)for(let j=0;j<cols;j++){const idx=i*cols+j;
+      d+=`<circle cx="${x0+40+j*gx}" cy="${y0+45+i*gy}" r="${r}" fill="${idx<4?accent:C.ink}" opacity="${idx<4?1:0.55}"/>`;}
+    art=d;
+  }
+  return grid+base+art;
+}
+
+// standalone = SVG na disk (přibalí @import fontů, ~250 B navíc)
+function buildSVG(s, standalone){
+  const F_SLAB="'Roboto Slab', Georgia, serif";
+  const F_COND="'Roboto Condensed', Arial, sans-serif";
+  const claimLines=s.claim.split('\n');
+  const claimT=claimLines.map((l,i)=>`<tspan x="70" dy="${i===0?0:58}">${esc(l)}</tspan>`).join('');
+  const bigSize=s.big.length>9?96:s.big.length>5?120:170;
+  const fontImport = standalone
+    ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
+    : '';
+  const ink = s.accent; // barva kapitoly beze změny – linka, číslo i graf
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  ${fontImport}
+  <rect width="1200" height="630" fill="${C.bg}"/>
+  <rect x="0" y="0" width="1200" height="14" fill="${s.accent}"/>
+  <text x="70" y="92" font-family="${F_COND}" font-size="26" letter-spacing="6" fill="${C.muted}" font-weight="700">${esc(s.kicker)}</text>
+  <text x="70" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>
+  <text x="70" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${C.muted}">${esc(s.unit)}</text>
+  <text x="70" y="${160+bigSize+120}" font-family="${F_SLAB}" font-size="48" font-weight="700" fill="${C.ink}">${claimT}</text>
+  ${motifSvg(s.motif,ink)}
+  <g transform="translate(70,566)">
+    <circle cx="16" cy="0" r="16" fill="none" stroke="${C.crimson}" stroke-width="9"/>
+    <path d="M16 -16 A16 16 0 0 1 30 8" fill="none" stroke="${C.yellow}" stroke-width="9"/>
+    <text x="48" y="10" font-family="${F_COND}" font-size="30" font-weight="700"><tspan fill="${C.crimson}">Data</tspan><tspan fill="#c99a00">Times</tspan><tspan fill="${C.muted}" font-weight="400">.cz</tspan></text>
+  </g>
+  <text x="1130" y="576" font-family="${F_COND}" font-size="26" fill="${C.muted}" text-anchor="end">${esc(s.url)}</text>
+</svg>`;
+}
+
+// ------- render -------
+const frame=document.getElementById('frame');
+function render(){ frame.innerHTML=buildSVG(state,false); }
+
+// bind inputs
+const bind=(id,key)=>{const el=document.getElementById(id);el.value=state[key];
+  el.addEventListener('input',()=>{state[key]=el.value;render();});};
+bind('f-kicker','kicker'); bind('f-big','big'); bind('f-unit','unit');
+bind('f-claim','claim'); bind('f-url','url');
+
+// motifs
+const mWrap=document.getElementById('motifs');
+MOTIFS.forEach(([v,label])=>{const b=document.createElement('button');b.className='chip'+(v===state.motif?' on':'');
+  b.textContent=label;b.dataset.v=v;
+  b.onclick=()=>{state.motif=v;[...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};
+  mWrap.appendChild(b);});
+
+// 15 chapter colours – výběr kapitoly přepíše barvu i kicker
+const aWrap=document.getElementById('accents');
+const swName=document.getElementById('swname');
+CHAPTERS.forEach(([id,hex,title])=>{
+  const b=document.createElement('button');
+  b.className='sw'+(id===state.chapter?' on':'');
+  b.style.background=hex; b.dataset.id=id; b.textContent=id;
+  b.title=`${id} · ${title} · ${hex}`;
+  b.onclick=()=>{
+    state.chapter=id; state.accent=hex;
+    state.kicker=('DATA PRO BUDOUCÍ PREMIÉRKU · '+title).toUpperCase();
+    document.getElementById('f-kicker').value=state.kicker;
+    syncAcc(); render();
+  };
+  aWrap.appendChild(b);
+});
+function syncAcc(){
+  [...aWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.id===state.chapter));
+  const ch=chapterOf(state.chapter);
+  swName.innerHTML=`<b>${ch[0]} ${esc(ch[2])}</b> · <b style="color:${ch[1]}">${ch[1]}</b>`;
+}
+
+// presets
+const pWrap=document.getElementById('presets');
+PRESETS.forEach(p=>{const b=document.createElement('button');b.className='pre';
+  b.innerHTML=`<b>${esc(p.big)}</b><span>${esc(p.claim.replace('\n',' '))}</span>`;
+  b.onclick=()=>{Object.assign(state,{big:p.big,unit:p.unit,claim:p.claim,motif:p.motif});
+    document.getElementById('f-big').value=p.big;
+    document.getElementById('f-unit').value=p.unit;
+    document.getElementById('f-claim').value=p.claim;
+    [...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===p.motif));
+    render();};
+  pWrap.appendChild(b);});
+
+// bg toggle
+document.getElementById('bgToggle').onclick=(e)=>{
+  const st=document.getElementById('stage');st.classList.toggle('dark');
+  e.target.textContent=st.classList.contains('dark')?'světlé pozadí':'tmavé pozadí';
+};
+
+// toast
+let tT;
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),2200);}
+
+function fileBase(){
+  const slug=(state.big||'poutak').replace(/[^0-9a-zA-Z]+/g,'-').replace(/(^-|-$)/g,'')||'poutak';
+  return `poutak-${state.chapter}-${slug}`;
+}
+function saveBlob(blob,name){
+  const a=document.createElement('a');a.download=name;a.href=URL.createObjectURL(blob);a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
+// download SVG (primární formát)
+document.getElementById('dlsvg').onclick=()=>{
+  const svg=buildSVG(state,true);
+  saveBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), fileBase()+'.svg');
+  toast(`SVG staženo · ${(new Blob([svg]).size/1024).toFixed(1)} kB`);
+};
+
+/* PNG (og:image pro sociální sítě).
+   SVG načtené do <img> je izolovaný dokument – nevidí fonty stránky ani externí
+   @import, takže by rastr spadl na Georgii. Pro rasterizaci proto fonty jednou
+   stáhneme a vložíme do SVG jako base64. Na disk uložené SVG zůstává bez nich. */
+const FONT_CSS_URL="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap";
+let fontStyleCache=null;
+async function fontStyleTag(){
+  if(fontStyleCache) return fontStyleCache;
+  const css=await (await fetch(FONT_CSS_URL)).text();
+  const faces=[...css.matchAll(/@font-face\s*\{([^}]+)\}/g)].map(m=>m[1]).map(b=>({
+    fam:(b.match(/font-family:\s*'([^']+)'/)||[])[1],
+    weight:(b.match(/font-weight:\s*(\d+)/)||[])[1],
+    url:(b.match(/url\(([^)]+)\)/)||[])[1],
+    range:(b.match(/unicode-range:\s*([^;]+)/)||[])[1]
+  })) // jen latin + latin-ext (česká diakritika), ne cyrilice/řečtina/vietnamština
+    .filter(f=>f.range&&(f.range.includes('U+0000')||f.range.includes('U+0100')));
+  const b64=buf=>{let s='';const a=new Uint8Array(buf),CH=0x8000;
+    for(let i=0;i<a.length;i+=CH)s+=String.fromCharCode.apply(null,a.subarray(i,i+CH));return btoa(s);};
+  const blocks=await Promise.all(faces.map(async f=>{
+    const d=b64(await (await fetch(f.url)).arrayBuffer());
+    return `@font-face{font-family:'${f.fam}';font-style:normal;font-weight:${f.weight};src:url(data:font/woff2;base64,${d}) format('woff2');}`;
+  }));
+  fontStyleCache=`<style>${blocks.join('')}</style>`;
+  return fontStyleCache;
+}
+
+document.getElementById('dlpng').onclick=async()=>{
+  const btn=document.getElementById('dlpng');
+  btn.disabled=true;
+  try{
+    toast('Připravuji fonty…');
+    const svg=buildSVG(state,false).replace(/(<svg[^>]*>)/,'$1'+await fontStyleTag());
+    const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
+    await new Promise((resolve,reject)=>{
+      const img=new Image();
+      img.onload=()=>{
+        const cv=document.createElement('canvas');cv.width=1200;cv.height=630;
+        cv.getContext('2d').drawImage(img,0,0,1200,630);
+        URL.revokeObjectURL(url);
+        cv.toBlob(b=>{saveBlob(b,fileBase()+'.png');toast('PNG staženo');resolve();},'image/png');
+      };
+      img.onerror=()=>{URL.revokeObjectURL(url);reject();};
+      img.src=url;
+    });
+  }catch(e){
+    toast('Export PNG selhal — jste offline? (fonty se stahují z Google Fonts)');
+  }finally{ btn.disabled=false; }
+};
+
+// copy gen.js row
+document.getElementById('cp').onclick=()=>{
+  const j=s=>JSON.stringify(s);
+  const row=`  { ch: ${j(state.chapter)}, n: '00', big: ${j(state.big)}, unit: ${j(state.unit)}, claim: ${j(state.claim)}, motif: ${j(state.motif)} },`;
+  navigator.clipboard.writeText(row).then(()=>toast('Řádek zkopírován do schránky'),
+    ()=>toast('Kopírování se nezdařilo'));
+};
+
+// ------- Paleta (přehled pro sítě / podcasty) -------
+function contrastText(hex){ // bílý nebo tmavý text podle jasu barvy
+  const [r,g,b]=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
+  return (0.299*r+0.587*g+0.114*b)>150 ? '#101432' : '#ffffff';
+}
+function copyHex(hex){
+  navigator.clipboard.writeText(hex).then(()=>toast(hex+' zkopírováno'),
+    ()=>toast('Kopírování se nezdařilo'));
+}
+const palGrid=document.getElementById('palgrid');
+CHAPTERS.forEach(([id,hex,title])=>{
+  const fg=contrastText(hex);
+  const card=document.createElement('div');card.className='palcard';
+  card.innerHTML=
+    `<div class="palswatch" style="background:${hex};color:${fg}">`
+    + `<span class="num">${id}</span>`
+    + `<button class="palcopy" style="color:${fg}">Kopírovat</button></div>`
+    + `<div class="palmeta"><div class="t">${esc(title)}</div>`
+    + `<div class="h" title="klik zkopíruje">${hex}</div></div>`;
+  card.querySelector('.palswatch').onclick=()=>copyHex(hex);
+  card.querySelector('.palcopy').onclick=(e)=>{e.stopPropagation();copyHex(hex);};
+  card.querySelector('.h').onclick=()=>copyHex(hex);
+  palGrid.appendChild(card);
+});
+
+// ------- přepínač režimů -------
+const views={poutak:document.getElementById('view-poutak'),paleta:document.getElementById('view-paleta')};
+const tabs={poutak:document.getElementById('tab-poutak'),paleta:document.getElementById('tab-paleta')};
+function setMode(m){
+  for(const k in views){views[k].classList.toggle('on',k===m);tabs[k].classList.toggle('on',k===m);}
+}
+tabs.poutak.onclick=()=>setMode('poutak');
+tabs.paleta.onclick=()=>setMode('paleta');
+
+syncAcc();
+render();
+</script>
+</html>
