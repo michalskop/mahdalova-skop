@@ -1,4 +1,4 @@
-import { Box, Group, SimpleGrid, Stack, Text } from '@mantine/core';
+import { Box, Group, Paper, Stack, Text } from '@mantine/core';
 import ChartFrame, { NUM_FONT } from './ChartFrame';
 import type { GrandPrixWinner } from './grandPrix';
 
@@ -7,50 +7,20 @@ const BLOC_COLOR: Record<GrandPrixWinner['bloc'], string> = {
   ostatni: 'var(--mantine-color-brandTeal-6)',
 };
 
-function WinnerTile({ winner }: { winner: GrandPrixWinner }) {
+// Kompaktní obsah karty pro cikcak osu – rok je v uzlu osy, karta nese jen film.
+function WinnerCardBody({ winner }: { winner: GrandPrixWinner }) {
   if (!winner.awarded) {
-    return (
-      <Group gap="md" wrap="nowrap" align="flex-start">
-        <Box
-          style={{
-            width: 58,
-            minWidth: 58,
-            padding: '7px 4px',
-            borderRadius: 4,
-            border: '2px dashed var(--mantine-color-background-7)',
-            textAlign: 'center',
-          }}
-        >
-          <Text size="sm" fw={800} style={NUM_FONT}>{winner.year}</Text>
-        </Box>
-        <Text size="sm" c="dimmed" pt={7}>Hlavní cena nebyla udělena.</Text>
-      </Group>
-    );
+    return <Text size="sm" c="dimmed" fs="italic">Hlavní cena nebyla udělena.</Text>;
   }
-
   return (
-    <Group gap="md" wrap="nowrap" align="flex-start">
-      <Box
-        style={{
-          width: 58,
-          minWidth: 58,
-          padding: '7px 4px',
-          borderRadius: 4,
-          border: `2px solid ${BLOC_COLOR[winner.bloc]}`,
-          textAlign: 'center',
-        }}
-      >
-        <Text size="sm" fw={800} style={NUM_FONT}>{winner.year}</Text>
-      </Box>
-      <Stack gap={2}>
-        <Text fw={800} lh={1.25}>{winner.filmCz}</Text>
-        {winner.filmCz !== winner.filmOriginal && (
-          <Text size="sm" c="dimmed" fs="italic">{winner.filmOriginal}</Text>
-        )}
-        <Text size="sm">Režie: {winner.directors.join(', ')}</Text>
-        <Text size="sm" c="dimmed">{winner.countries.join(', ')}</Text>
-      </Stack>
-    </Group>
+    <Box style={{ borderLeft: `3px solid ${BLOC_COLOR[winner.bloc]}`, paddingLeft: 10 }}>
+      <Text fw={800} size="sm" lh={1.2}>{winner.filmCz}</Text>
+      {winner.filmCz !== winner.filmOriginal && (
+        <Text size="xs" c="dimmed" fs="italic" lh={1.2}>{winner.filmOriginal}</Text>
+      )}
+      <Text size="xs" mt={3}>Režie: {winner.directors.join(', ')}</Text>
+      <Text size="xs" c="dimmed">{winner.countries.join(', ')}</Text>
+    </Box>
   );
 }
 
@@ -116,6 +86,9 @@ function GrandPrixUnitChart({ winners }: { winners: GrandPrixWinner[] }) {
   );
 }
 
+// Cikcak vertikální časová osa (§7, §18): čas plyne shora dolů, roky se
+// střídají po obou stranách centrální osy. Na mobilu osa u levého okraje a
+// jednosloupcový tok. Rok je v uzlu na ose, barva uzlu = blok vítěze.
 function WinnerTimeline({ winners }: { winners: GrandPrixWinner[] }) {
   const byYear = new Map<number, GrandPrixWinner[]>();
   winners.forEach((winner) => {
@@ -123,24 +96,66 @@ function WinnerTimeline({ winners }: { winners: GrandPrixWinner[] }) {
     rows.push(winner);
     byYear.set(winner.year, rows);
   });
+  const years = Array.from(byYear.entries());
 
   return (
-    <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg" verticalSpacing="md">
-      {Array.from(byYear.entries()).map(([year, yearWinners]) => (
-        <Box
-          key={year}
-          pl="md"
-          py={4}
-          style={{ borderLeft: '2px solid var(--mantine-color-background-6)' }}
-        >
-          <Stack gap="sm">
-            {yearWinners.map((winner) => (
-              <WinnerTile key={`${winner.year}-${winner.filmCz || 'none'}`} winner={winner} />
-            ))}
-          </Stack>
-        </Box>
-      ))}
-    </SimpleGrid>
+    <Box style={{ position: 'relative' }}>
+      <style>{`
+        .gpz-axis { position: absolute; top: 10px; bottom: 10px; width: 3px; left: 50%; transform: translateX(-50%); background: var(--mantine-color-brandNavy-3); border-radius: 2px; }
+        .gpz-row { display: grid; grid-template-columns: 1fr 52px 1fr; column-gap: 16px; align-items: center; margin-bottom: 12px; }
+        .gpz-row:last-child { margin-bottom: 0; }
+        .gpz-card { grid-column: 1; }
+        .gpz-row.right .gpz-card { grid-column: 3; }
+        .gpz-node { grid-column: 2; display: flex; justify-content: center; }
+        .gpz-spacer { grid-column: 3; }
+        .gpz-row.right .gpz-spacer { grid-column: 1; }
+        @media (max-width: 720px) {
+          .gpz-axis { left: 21px; }
+          .gpz-row { grid-template-columns: 42px 1fr; column-gap: 12px; }
+          .gpz-card, .gpz-row.right .gpz-card { grid-column: 2; }
+          .gpz-node { grid-column: 1; }
+          .gpz-spacer { display: none; }
+        }
+      `}</style>
+      <div className="gpz-axis" aria-hidden="true" />
+      {years.map(([year, yearWinners], i) => {
+        const awardedWinner = yearWinners.find((w) => w.awarded);
+        const nodeColor = awardedWinner ? BLOC_COLOR[awardedWinner.bloc] : 'transparent';
+        return (
+          <div key={year} className={`gpz-row${i % 2 === 0 ? '' : ' right'}`}>
+            <div className="gpz-card">
+              <Paper withBorder p="xs" radius={8} bg="background.0">
+                <Stack gap={8}>
+                  {yearWinners.map((winner) => (
+                    <WinnerCardBody key={`${winner.year}-${winner.filmCz || 'none'}`} winner={winner} />
+                  ))}
+                </Stack>
+              </Paper>
+            </div>
+            <div className="gpz-node">
+              <Box
+                style={{
+                  width: 42,
+                  height: 42,
+                  borderRadius: 999,
+                  background: nodeColor,
+                  border: awardedWinner ? '3px solid var(--mantine-color-background-1)' : '2px dashed var(--mantine-color-background-8)',
+                  boxShadow: awardedWinner ? '0 0 0 1px var(--mantine-color-background-6)' : 'none',
+                  display: 'grid',
+                  placeItems: 'center',
+                  flex: '0 0 auto',
+                }}
+              >
+                <Text fw={900} ta="center" lh={1} c={awardedWinner ? 'background.0' : 'dimmed'} style={{ ...NUM_FONT, fontSize: 11 }}>
+                  {year}
+                </Text>
+              </Box>
+            </div>
+            <div className="gpz-spacer" />
+          </div>
+        );
+      })}
+    </Box>
   );
 }
 
