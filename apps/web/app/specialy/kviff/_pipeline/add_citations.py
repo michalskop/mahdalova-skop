@@ -3,8 +3,9 @@
 for recipients where the KVIFF archive fulltext had no descriptive text, and
 add the newly-discovered 2005 recipient Jiri Krejcik. Run once, then delete."""
 import re
+from pathlib import Path
 
-PATH = r"C:\Users\datov\Desktop\mahdalova-skop-projekty\mahdalova-skop\apps\web\app\specialy\karlovy-vary\honors.ts"
+PATH = Path(__file__).resolve().parent.parent / "honors.ts"
 
 CITATIONS = {
     "Karel Kachyňa": (
