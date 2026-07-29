@@ -75,6 +75,12 @@
   .drophint{font-size:10.5px;color:#999;margin-top:7px;line-height:1.4;}
   #thumb{max-width:100%;max-height:120px;border-radius:4px;display:block;margin:0 auto 8px;
     border:1px solid var(--border);}
+  .fitctl{display:flex;gap:10px;justify-content:center;margin-bottom:8px;}
+  .fitgrp{display:flex;gap:3px;}
+  .minichip{border:1.5px solid var(--border);border-radius:4px;padding:4px 8px;font-size:10px;
+    font-weight:600;cursor:pointer;background:#fff;color:#666;font-family:inherit;}
+  .minichip.on{background:var(--navy);color:#fff;border-color:var(--navy);}
+  #pos-grp.off{opacity:.35;pointer-events:none;}
 
   /* 15 chapter colours */
   .swgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
@@ -207,6 +213,17 @@
         </div>
         <div id="drop-has" hidden>
           <img id="thumb" alt="uploaded">
+          <div class="fitctl">
+            <div class="fitgrp" id="fit-grp">
+              <button class="minichip on" data-fit="fill">Fill</button>
+              <button class="minichip" data-fit="fit">Fit</button>
+            </div>
+            <div class="fitgrp" id="pos-grp">
+              <button class="minichip" data-pos="top">Top</button>
+              <button class="minichip on" data-pos="center">Center</button>
+              <button class="minichip" data-pos="bottom">Bottom</button>
+            </div>
+          </div>
           <button class="btn btn-ghost" id="rmimg" type="button">Remove image</button>
         </div>
       </div>
@@ -273,7 +290,8 @@ const state = {
   kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
-  motif:'fall', accent:'#de1743', format:'link', image:null, dark:false
+  motif:'fall', accent:'#de1743', format:'link', image:null, dark:false,
+  imgFit:'fill', imgPos:'center'
 };
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
@@ -356,13 +374,19 @@ function buildSVG(s, standalone){
     return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}">${esc(s.kicker)}</text>`;
   };
 
-  // Vizuální plocha: vlastní obrázek (velký obdélník imgRect) NEBO piktogram
-  // (motifRect). Obrázek se vejde celý (meet), ořezaný do zaoblených rohů.
+  // Vizuální plocha: vlastní obrázek (obdélník imgRect) NEBO piktogram (motifRect).
+  // „Kouzlo" na libovolný poměr stran: Fill = vyplní plochu (ořeže přebytek podle
+  // zvolené svislé polohy), Fit = celý obrázek na podložce v barvě pozadí.
   const visual=(motifRect,imgRect)=>{
     if(s.image){
       const [ix,iy,iw,ih]=imgRect, cid='vc'+(''+Math.random()).slice(2,8);
+      const par = s.imgFit==='fit' ? 'xMidYMid meet'
+        : 'xMid'+({top:'YMin',center:'YMid',bottom:'YMax'}[s.imgPos]||'YMid')+' slice';
+      const bg = s.imgFit==='fit'
+        ? `<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="8" fill="${cBg}"/>` : '';
       return `<clipPath id="${cid}"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="8"/></clipPath>`
-        + `<image href="${s.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${cid})"/>`;
+        + bg
+        + `<image href="${s.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="${par}" clip-path="url(#${cid})"/>`;
     }
     const [mx,my,mw2,mh2]=motifRect;
     return motifSvg(s.motif,ink,mx,my,mw2,mh2,mth);
@@ -399,40 +423,41 @@ function buildSVG(s, standalone){
       + brandMark('DataTimes','left',566,M,RE,cInk)
       + brandMark('mahdalova-skop','right',566,M,RE,cInk);
   } else {
-    // ---- STACKED (Square / Portrait / Story): jeden sloupec, centrovaně ----
-    const cx=W/2, CW=W-2*M, S=Math.round(W*0.15), vs=H/1080;
-    const bigSize=Math.round(Math.min(300,(s.big.length>9?130:s.big.length>5?185:250)*(0.8+0.2*vs)));
-    const claimSize=Math.round(W*0.048), claimLH=claimSize*1.22;
+    // ---- STACKED (Square / Portrait / Story): kompaktní hlavička, velký obrázek ----
+    // Řádek 1: kicker vlevo · logo-hlava vpravo. Řádek 2: velké číslo vlevo ·
+    // teze vpravo. Zbytek plátna = obrázek/piktogram (dostane co nejvíc místa).
+    const cx=W/2, CW=W-2*M, vs=H/1080, footY=H-M-8;
     const claimLines=s.claim.split('\n');
-    const claimT=claimLines.map((l,i)=>`<tspan x="${cx}" dy="${i===0?0:claimLH}">${esc(l)}</tspan>`).join('');
-    const logoY=Math.round(H*0.05);
-    const kickY=logoY+S+Math.round(44*vs);
-    const numY=kickY+Math.round(0.72*bigSize+30*vs);
-    const unitY=numY+Math.round(0.22*bigSize+34*vs);
-    const footY=H-M-8;
-    let claimY, motifRect, imgRect;
-    if(s.image){
-      // obrázek směle roztažený na výšku: od pod jednotkou po patičku;
-      // teze (s béžovým boxem) sedí na jeho spodním okraji jako v landscape
-      const imgTop=unitY+Math.round(34*vs), imgBot=footY-Math.round(74*vs);
-      imgRect=[M,imgTop,CW,imgBot-imgTop]; motifRect=[0,0,0,0];
-      claimY=imgBot-((claimLines.length-1)*claimLH + claimSize*0.28 + 12);
-    } else {
-      // piktogram: teze pod jednotkou, malý motiv vycentrovaný ve zbytku
-      claimY=unitY+Math.round(0.72*claimSize+40*vs);
-      const claimEnd=claimY+(claimLines.length-1)*claimLH+0.2*claimSize;
-      const mBot=footY-Math.round(60*vs), mTop=claimEnd+Math.round(46*vs);
-      const mh=Math.min(Math.round(H*0.24), mBot-mTop), mw=Math.round(CW*0.8);
-      const myTop=mTop+Math.max(0,((mBot-mTop)-mh)/2);
-      motifRect=[cx-mw/2,myTop,mw,mh]; imgRect=[0,0,0,0];
-    }
+    // Řádek 1
+    const S=Math.round(W*0.135), topY=Math.round(H*0.035);
+    const kickBaseY=Math.round(topY+S*0.42+9);
+    const headLeft=RE-Math.round(S*0.92);
+    // sloupce: číslo vlevo, teze vpravo
+    const claimLX=Math.round(W*0.45), claimColW=RE-claimLX, leftColW=claimLX-M-24;
+    // Řádek 2 – číslo (auto-fit do levého sloupce) + jednotka
+    const bs0=Math.round(Math.min(210,(s.big.length>9?110:s.big.length>5?150:190)*(0.85+0.15*vs)));
+    const bigSize=Math.round(bs0*Math.min(1,leftColW/Math.max(1,measureSlab(s.big,bs0))));
+    const row2Top=topY+S+Math.round(30*vs);
+    const numY=row2Top+Math.round(0.72*bigSize);
+    const unitY=numY+Math.round(0.2*bigSize+28);
+    const row2Bot=unitY+6;
+    // teze vpravo – auto-fit na šířku sloupce, vertikálně vycentrovaná proti číslu
+    const cs0=Math.round(W*0.046);
+    const claimSize=Math.round(cs0*Math.min(1,claimColW/Math.max(1,...claimLines.map(l=>measureSlab(l,cs0)))));
+    const claimLH=Math.round(claimSize*1.26);
+    const claimTop=Math.round((row2Top+row2Bot)/2-((claimLines.length-1)*claimLH)/2+claimSize*0.30);
+    const claimT=claimLines.map((l,i)=>`<tspan x="${claimLX}" dy="${i===0?0:claimLH}">${esc(l)}</tspan>`).join('');
+    // Řádek 3 – velká vizuální plocha
+    const vTop=row2Bot+Math.round(34*vs), vBot=footY-Math.round(58*vs);
+    const imgRect=[M,vTop,CW,vBot-vTop];
+    const mh=Math.min(Math.round(H*0.22),vBot-vTop), mw=Math.round(Math.min(CW*0.9,mh*1.5));
+    const motifRect=[cx-mw/2,Math.round(vTop+((vBot-vTop)-mh)/2),mw,mh];
     inner = visual(motifRect,imgRect)
-      + kicker(cx,kickY,CW,'middle')
-      + `<text x="${cx}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(s.big)}</text>`
-      + `<text x="${cx}" y="${unitY}" font-family="${F_COND}" font-size="32" fill="${cMut}" text-anchor="middle">${esc(s.unit)}</text>`
-      + claimBox(cx,claimY,claimLines,claimSize,claimLH,'middle')
-      + `<text x="${cx}" y="${claimY}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}" text-anchor="middle">${claimT}</text>`
-      + specialLogo(ink, cx-S/2, logoY, S)                    // logo nahoře, nad obrázkem
+      + kicker(M,kickBaseY,headLeft-M-16,'start')
+      + logoAt(RE,topY,S)
+      + `<text x="${M}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
+      + `<text x="${M}" y="${unitY}" font-family="${F_COND}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`
+      + `<text x="${claimLX}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}">${claimT}</text>`
       + brandMark('DataTimes','left',footY,M,RE,cInk)
       + brandMark('mahdalova-skop','right',footY,M,RE,cInk);
   }
@@ -570,6 +595,19 @@ document.getElementById('rmimg').onclick=clearImage;
 document.addEventListener('paste',e=>{
   const items=e.clipboardData&&e.clipboardData.items; if(!items) return;
   for(const it of items){ if(it.type.startsWith('image/')){ readImageFile(it.getAsFile()); e.preventDefault(); break; } }
+});
+// Fill / Fit + svislá poloha ořezu
+const fitGrp=document.getElementById('fit-grp'), posGrp=document.getElementById('pos-grp');
+fitGrp.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
+  state.imgFit=b.dataset.fit;
+  fitGrp.querySelectorAll('.minichip').forEach(c=>c.classList.toggle('on',c===b));
+  posGrp.classList.toggle('off', state.imgFit!=='fill');  // poloha jen pro Fill
+  render();
+});
+posGrp.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
+  state.imgPos=b.dataset.pos;
+  posGrp.querySelectorAll('.minichip').forEach(c=>c.classList.toggle('on',c===b));
+  render();
 });
 
 // 15 chapter colours – výběr kapitoly přepíše barvu i kicker
