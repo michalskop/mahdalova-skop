@@ -54,6 +54,47 @@ function WinnerTile({ winner }: { winner: GrandPrixWinner }) {
   );
 }
 
+const DECADE_BUCKETS = [
+  { label: '1948–59', from: 1948, to: 1959 },
+  { label: '1960–69', from: 1960, to: 1969 },
+  { label: '1970–79', from: 1970, to: 1979 },
+  { label: '1980–89', from: 1980, to: 1989 },
+];
+
+function DecadeBlocBars({ winners }: { winners: GrandPrixWinner[] }) {
+  const rows = DECADE_BUCKETS.map((bucket) => {
+    const inBucket = winners.filter((w) => w.awarded && w.year >= bucket.from && w.year <= bucket.to);
+    const socialisticky = inBucket.filter((w) => w.bloc === 'socialisticky').length;
+    const ostatni = inBucket.filter((w) => w.bloc === 'ostatni').length;
+    return { ...bucket, socialisticky, ostatni, total: socialisticky + ostatni };
+  });
+
+  return (
+    <Stack gap={6} mt="sm" mb="md">
+      {rows.map((row) => (
+        <Group key={row.label} gap="sm" wrap="nowrap" align="center">
+          <Text size="xs" fw={800} style={{ ...NUM_FONT, width: 54, minWidth: 54 }}>{row.label}</Text>
+          <Box style={{ display: 'flex', flex: 1, height: 20, borderRadius: 3, overflow: 'hidden', background: 'var(--mantine-color-background-6)' }}>
+            {row.socialisticky > 0 && (
+              <Box style={{ flex: row.socialisticky, background: BLOC_COLOR.socialisticky, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Text size="xs" fw={800} style={{ ...NUM_FONT, color: '#ffffff' }}>{row.socialisticky}</Text>
+              </Box>
+            )}
+            {row.ostatni > 0 && (
+              <Box style={{ flex: row.ostatni, background: BLOC_COLOR.ostatni, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Text size="xs" fw={800} style={{ ...NUM_FONT, color: '#ffffff' }}>{row.ostatni}</Text>
+              </Box>
+            )}
+          </Box>
+          {row.total > 0 && row.ostatni === 0 && (
+            <Text size="xs" c="dimmed" style={{ ...NUM_FONT, whiteSpace: 'nowrap' }}>bez neblokové výhry</Text>
+          )}
+        </Group>
+      ))}
+    </Stack>
+  );
+}
+
 function WinnerTimeline({ winners }: { winners: GrandPrixWinner[] }) {
   const byYear = new Map<number, GrandPrixWinner[]>();
   winners.forEach((winner) => {
@@ -111,8 +152,12 @@ export function CommunistEraGrandPrix({ winners }: { winners: GrandPrixWinner[] 
       <Text mt="lg" size="sm" c="dimmed">
         Od roku 1959 se Karlovy Vary kvůli politickému rozhodnutí střídaly s Moskevským filmovým festivalem. Proto se v šedesátých až osmdesátých letech konaly převážně v sudých letech.
       </Text>
-      <Text mt="xs" size="sm">
+      <Text mt="xs" size="sm" fw={700}>
         Převahu měly země sovětského bloku, hlavní cenu však získaly také filmy z USA, Francie, Indie, Japonska nebo Austrálie.
+      </Text>
+      <DecadeBlocBars winners={winners} />
+      <Text size="xs" c="dimmed">
+        Vítězové podle desetiletí a bloku; jen udělené ročníky. Šedesátá léta byla jediné desetiletí bez jediné neblokové výhry.
       </Text>
     </ChartFrame>
   );

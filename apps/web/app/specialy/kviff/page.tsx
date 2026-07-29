@@ -97,25 +97,24 @@ function AwardsSection() {
         <Text size="xl" lh={1.7} maw={780}>
           Grand Prix – Křišťálový globus uděluje hlavní porota nejlepšímu filmu. Křišťálový globus za mimořádný umělecký přínos světové kinematografii dostávají herci, režiséři a další tvůrci za dlouhodobou práci. Jsou to dvě různé ceny se stejným jménem.
         </Text>
-        <Text size="lg" lh={1.7} maw={780}>
-          Historické státy, například Československo, Sovětský svaz nebo NDR, ponecháváme v podobě uvedené v dobovém archivu. Přepis na dnešní hranice by zakryl politické uspořádání tehdejšího festivalu.
-        </Text>
 
-        <Stack gap="md" mt="md">
-          <CommunistEraGrandPrix winners={grandPrixCommunistEra} />
-          <PostRevolutionGrandPrix winners={grandPrixPostRevolution} />
-        </Stack>
-        <Text lh={1.7} maw={780}>
-          V letech 1948–1989 připadlo dvacet vítězství zemím sovětského bloku a šest ostatním zemím. Hlavní cenu si i v době státem řízeného festivalu odvážely filmy z USA, Francie, Indie, Japonska nebo Austrálie. Porevoluční řada od roku 1990 dává hlavní cenu malým i velkým kinematografiím od Islandu po Gruzii.
-        </Text>
-
-        <Text size="xl" lh={1.7} maw={780} mt="lg">
+        <Title order={3} size="1.35rem" mt="md">Čestný Křišťálový globus častěji získávají muži</Title>
+        <Text size="xl" lh={1.7} maw={780}>
           Od roku 1995 dostalo čestný Křišťálový globus {honoraryTotal} osobností. Žen bylo {honoraryGenderCounts.woman} z {honoraryTotal}, tedy {formatPercent(honoraryWomenShare)}. Ve většině ročníků nebyla mezi oceněnými ani jedna; dvě ženy najednou cenu dostaly jen v letech {honoraryDoubleWomanYears.join(', ')}.
         </Text>
         <HonoraryDotTimeline />
         <Text size="sm" c="dimmed" maw={780}>
           U každé osobnosti uvádíme rok, zemi, profesi a veřejně doložený gender. Tooltip doplňuje zdůvodnění ceny, pokud je festival nebo dobový tisk zveřejnil.
         </Text>
+
+        <Title order={3} size="1.35rem" mt="lg">Grand Prix: od sovětské nadvlády k otevřené soutěži</Title>
+        <Text size="lg" lh={1.7} maw={780}>
+          Historické státy, například Československo, Sovětský svaz nebo NDR, ponecháváme v podobě uvedené v dobovém archivu. Přepis na dnešní hranice by zakryl politické uspořádání tehdejšího festivalu.
+        </Text>
+        <Stack gap="md" mt="md">
+          <CommunistEraGrandPrix winners={grandPrixCommunistEra} />
+          <PostRevolutionGrandPrix winners={grandPrixPostRevolution} />
+        </Stack>
       </Stack>
     </Box>
   );
