@@ -15,6 +15,7 @@ import HonoraryTimeline from './HonoraryTimeline';
 import ProgramBreakdownChart from './ProgramBreakdownChart';
 import FilmScreeningsChart from './FilmScreeningsChart';
 import FilmOriginsDashboard from './FilmOriginsDashboard';
+import FilmOriginsTreemap from './FilmOriginsTreemap';
 import ContinentStackedChart from './ContinentStackedChart';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from './GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from './grandPrix';
@@ -157,6 +158,8 @@ function FilmsSection() {
         <Text size="lg" lh={1.7} maw={780}>
           Jeden film může mít několik produkčních zemí. V mapě proto počítáme vazby film–země: francouzsko-německo-česká koprodukce přidá jednu účast každé ze tří zemí. Součet těchto vazeb je vyšší než počet unikátních filmů.
         </Text>
+
+        <FilmOriginsTreemap />
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
           <ChartFrame
