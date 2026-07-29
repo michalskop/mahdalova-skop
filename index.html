@@ -3,241 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahdalová-Škop</title>
-    <meta property="og:title" content="Mahdalová-Škop" />
-    <meta property="og:description" content="Kateřina Mahdalová & Michal Škop - datoví novináři." />
-    <meta property="og:image" content="https://www.mahdalova-skop.cz/photo.jpg" />
-    <meta property="og:url" content="https://www.mahdalova-skop.cz" />
-    <meta property="og:type" content="website" />
-
-<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>Mahdalová & Škop — datová žurnalistika</title>
+    <meta name="description" content="Kateřina Mahdalová a Michal Škop — nezávislá datová žurnalistika.">
+    <meta property="og:title" content="Mahdalová & Škop">
+    <meta property="og:description" content="Nezávislá datová žurnalistika Kateřiny Mahdalové a Michala Škopa.">
+    <meta property="og:image" content="https://www.mahdalova-skop.cz/katerina-mahdalova.jpg">
+    <meta property="og:url" content="https://www.mahdalova-skop.cz">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
     <style>
-        body, html {
+        :root {
+            --ink: #101432;
+            --paper: #f4f2ec;
+            --white: #fff;
+            --crimson: #de1743;
+            --orange: #f76800;
+            --yellow: #ffdc33;
+            --muted: #5f6275;
+            --line: rgba(16, 20, 50, .14);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
             margin: 0;
-            padding: 0;
+            overflow-x: hidden;
+            color: var(--ink);
+            background: var(--paper);
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            font-size: 18px; /* Increased base font size */
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 0;
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-        }
-        nav a:hover {
-            color: #ff6347;
-        }
-        .hero-image {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        .description {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta {
-            text-align: center; /* Center the button container */
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 24px; /* Slightly larger padding */
-            margin: 20px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 18px; /* Increased button font size */
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #45a049;
-        }
-        .story, .contact {
-            margin: 40px 0;
-        }
-        h1 {
-            font-size: 32px; /* Larger h1 */
-        }
-        h2 {
-            color: #ff6347;
-            border-bottom: 2px solid #ffd700;
-            padding-bottom: 10px;
-            font-size: 28px; /* Larger h2 */
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 14px; /* Smaller font size for menu links */
-            position: relative;
-        }
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #333;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-        nav a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .hero-image {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px; /* Rounded corners for the photo */
-            overflow: hidden; /* Ensures the image doesn't overflow the rounded corners */
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 24px;
-            margin: 20px 0;
-            border: none;
-            border-radius: 20px; /* Rounded corners for the buttons */
-            cursor: pointer;
             font-size: 18px;
+            line-height: 1.65;
+        }
+        a { color: inherit; }
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 78px;
+            border-bottom: 1px solid var(--line);
+        }
+        .wordmark {
+            font-weight: 800;
+            letter-spacing: -.02em;
             text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
+        }
+        .wordmark::before {
+            content: "";
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+            border: 6px solid var(--crimson);
+            border-top-color: var(--yellow);
+            border-radius: 50%;
+            vertical-align: -5px;
+            transform: rotate(25deg);
+        }
+        nav { display: flex; gap: 28px; }
+        nav a {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        nav a:hover { color: var(--crimson); }
+
+        .hero {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 64px;
+            align-items: center;
+            padding: 70px 0 84px;
+        }
+        .eyebrow {
+            margin: 0 0 18px;
+            color: var(--crimson);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+        h1, h2, h3 { line-height: 1.1; }
+        h1 {
+            max-width: 9ch;
+            margin: 0 0 26px;
+            font-family: Georgia, serif;
+            font-size: clamp(52px, 7vw, 88px);
+            letter-spacing: -.055em;
+        }
+        .lede {
+            max-width: 32rem;
+            margin: 0 0 34px;
+            color: var(--muted);
+            font-size: 20px;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            min-height: 50px;
+            padding: 0 23px;
+            border-radius: 999px;
+            color: var(--white);
+            background: var(--crimson);
+            font-size: 15px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform .2s, background .2s;
         }
         .cta-button:hover {
-            background-color: #45a049;
-            transform: scale(1.05); /* Slight enlargement on hover for better interactivity */
+            background: #bd1035;
+            transform: translateY(-2px);
+        }
+        .portraits {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 32px;
+            background: var(--ink);
+            box-shadow: 0 28px 70px rgba(16, 20, 50, .18);
+        }
+        .portraits::after {
+            content: "";
+            position: absolute;
+            right: -16px;
+            bottom: -16px;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            background: conic-gradient(var(--yellow) 0 25%, var(--orange) 25% 48%, var(--crimson) 48% 100%);
+            z-index: -1;
+        }
+        .portrait {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1.18;
+            margin: 0;
+            border-radius: 22px;
+            background: #303777;
+        }
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        .portrait figcaption {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            left: 12px;
+            padding: 9px 12px;
+            border-radius: 12px;
+            color: var(--white);
+            background: rgba(16, 20, 50, .82);
+            font-size: 13px;
+            font-weight: 800;
+            backdrop-filter: blur(8px);
         }
 
-        .contact a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
+        .manifesto {
+            padding: 68px clamp(24px, 7vw, 86px);
+            border-radius: 32px;
+            color: var(--white);
+            background: var(--ink);
         }
-        .contact a:hover {
-            color: #ff6347;
+        .manifesto blockquote {
+            max-width: 900px;
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: clamp(28px, 4vw, 46px);
+            line-height: 1.28;
+            letter-spacing: -.025em;
+        }
+        .manifesto blockquote::before {
+            content: "“";
+            color: var(--yellow);
         }
 
         .newsletter-section {
-            margin: 40px 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 20px;
+            margin: 36px 0 84px;
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, .55);
             text-align: center;
         }
-        .newsletter-section h3 {
-            margin-bottom: 15px;
+        .story, .contact { padding: 36px 0 84px; }
+        h2 {
+            margin: 0 0 34px;
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 5vw, 58px);
+            letter-spacing: -.04em;
+        }
+        .story-copy {
+            max-width: 780px;
+            color: #33364c;
+        }
+        .story-copy p:first-child {
+            color: var(--ink);
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .story-signature {
+            margin-top: 34px;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .story-cta { margin-top: 36px; }
+
+        .contact {
+            border-top: 1px solid var(--line);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .contact-card {
+            display: grid;
+            grid-template-columns: 92px 1fr;
+            gap: 22px;
+            align-items: start;
+            min-width: 0;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: var(--white);
+        }
+        .contact-card img {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #303777;
+        }
+        .contact-card h3 {
+            margin: 5px 0 13px;
+            font-family: Georgia, serif;
+            font-size: 25px;
+        }
+        .contact-list {
+            display: grid;
+            gap: 7px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            color: var(--muted);
+            font-size: 15px;
+        }
+        .contact-list a {
+            overflow-wrap: anywhere;
+            text-decoration-color: rgba(222, 23, 67, .45);
+            text-underline-offset: 3px;
+        }
+        .contact-list a:hover { color: var(--crimson); }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 24px 0 40px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 13px;
         }
 
+        @media (max-width: 820px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 42px;
+                padding-top: 48px;
+            }
+            h1 { max-width: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) {
+            .container { width: min(100% - 28px, 1120px); }
+            header { align-items: flex-start; padding: 18px 0; }
+            nav { gap: 12px; flex-direction: column; align-items: flex-end; }
+            .hero { padding: 42px 0 64px; }
+            .portraits { gap: 7px; padding: 7px; border-radius: 22px; }
+            .portrait { border-radius: 16px; }
+            .portrait figcaption { right: 7px; bottom: 7px; left: 7px; padding: 7px 8px; font-size: 11px; }
+            .manifesto { border-radius: 22px; }
+            .contact-card { grid-template-columns: 68px 1fr; padding: 18px; }
+            .contact-card img { width: 68px; height: 68px; }
+            footer { flex-direction: column; }
+        }
     </style>
     <script>
         (function (w,d,s,o,f,js,fjs) {
-            w['ecm-widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
-            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-            js.id = '1-43c2cd496486bcc27217c3e790fb4088'; js.dataset.a = 'mahdalovaskop'; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-        }(window, document, 'script', 'ecmwidget', 'https://d70shl7vidtft.cloudfront.net/widget.js'));
+            w['ecm-widget']=o; w[o]=w[o] || function () { (w[o].q=w[o].q || []).push(arguments) };
+            js=d.createElement(s); fjs=d.getElementsByTagName(s)[0];
+            js.id='1-43c2cd496486bcc27217c3e790fb4088';
+            js.dataset.a='mahdalovaskop'; js.src=f; js.async=1;
+            fjs.parentNode.insertBefore(js,fjs);
+        }(window,document,'script','ecmwidget','https://d70shl7vidtft.cloudfront.net/widget.js'));
     </script>
 </head>
 <body>
     <div class="container">
         <header>
-            <nav>
-                <a href="#home">Mahdalová & Škop</a>
+            <a class="wordmark" href="#home">Mahdalová & Škop</a>
+            <nav aria-label="Hlavní navigace">
                 <a href="#story">Náš příběh</a>
                 <a href="#contact">Kontakt</a>
             </nav>
         </header>
 
-        <section id="home" class="hero-image">
-            <img src="/photo.webp" alt="Mahdalová & Škop" width="540" height="370">
-        </section>
+        <main>
+            <section id="home" class="hero">
+                <div>
+                    <p class="eyebrow">Nezávislá datová žurnalistika</p>
+                    <h1>Data místo dojmů.</h1>
+                    <p class="lede">Kateřina Mahdalová a Michal Škop hledají v datech skutečný stav věcí — bez ohledu na to, komu se výsledek hodí.</p>
+                    <a href="https://herohero.co/mahdalovaskop" class="cta-button" target="_blank" rel="noopener">Odebírejte naše analýzy</a>
+                </div>
+                <div class="portraits" aria-label="Kateřina Mahdalová a Michal Škop">
+                    <figure class="portrait">
+                        <img src="/katerina-mahdalova.jpg" alt="Kateřina Mahdalová" width="640" height="664">
+                        <figcaption>Kateřina Mahdalová</figcaption>
+                    </figure>
+                    <figure class="portrait">
+                        <img src="/michal-skop.jpg" alt="Michal Škop" width="640" height="664">
+                        <figcaption>Michal Škop</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="h1">
-            <h1>Mahdalová & Škop</h1>
-        </section>
+            <section class="manifesto" aria-label="Jak chápeme novinářské řemeslo">
+                <blockquote>Jestliže jeden říká, že venku prší, a druhý, že svítí slunce, není nutné citovat oba. Novinář či novinářka má otevřít okno a zjistit skutečný stav věcí.</blockquote>
+            </section>
 
-        <section class="description">
-            <p>Jestliže jeden říká, že venku prší, a druhý, že venku svítí slunce, není nutné citovat oba. Novinář/ka má otevřít okno a zjistit skutečný stav věcí. Takhle chápeme novinářské řemeslo a takhle budeme pracovat i nadále.</p>
-        </section>
+            <section class="newsletter-section" aria-label="Newsletter">
+                <div id="f-1-43c2cd496486bcc27217c3e790fb4088"></div>
+            </section>
 
-        <section class="cta">
-            <a href="https://herohero.co/mahdalovaskop" class="cta-button" target="_blank">Odebírejte naše analýzy</a>
-        </section>
+            <section id="story" class="story">
+                <p class="eyebrow">Proč to děláme</p>
+                <h2>Náš příběh</h2>
+                <div class="story-copy">
+                    <p>Na konci září 2024 jsme ještě pracovali pro Seznam Zprávy. Vedle výsledků krajských voleb jsme připravovali také datovou analýzu digitalizace stavebního řízení. Redakce ji zastavila a okamžitě s námi ukončila spolupráci.</p>
+                    <p>Analýzu jsme proto zveřejnili sami. Nejdůležitější části naší práce nechceme zamykat: kvalitní nezávislá žurnalistika založená na datech má popisovat skutečnost takovou, jaká je — bez ohledu na premiéry, vlastníky velkých médií nebo kohokoli dalšího.</p>
+                    <p>Hlavní výstupy zůstávají veřejné, hlubší analýzy připravujeme pro předplatitele a předplatitelky. Ti se mohou podílet také na výběru témat a být s námi v pravidelném kontaktu.</p>
+                    <p>Děkujeme, že nám umožňujete pokračovat.</p>
+                    <p class="story-signature">Kateřina Mahdalová & Michal Škop</p>
+                    <div class="story-cta">
+                        <a href="https://herohero.co/mahdalovaskop" class="cta-button" target="_blank" rel="noopener">Odebírejte naše analýzy</a>
+                    </div>
+                </div>
+            </section>
 
-        <section class="newsletter-section">
-            <div id="f-1-43c2cd496486bcc27217c3e790fb4088"></div>
-        </section>
+            <section id="contact" class="contact">
+                <p class="eyebrow">Napište nebo zavolejte</p>
+                <h2>Kontakty</h2>
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <img src="/katerina-mahdalova.jpg" alt="" width="92" height="92">
+                        <div>
+                            <h3>Kateřina Mahdalová</h3>
+                            <ul class="contact-list">
+                                <li><a href="tel:+420722279346">+420 722 279 346</a></li>
+                                <li><a href="mailto:datovazurnalistika@gmail.com">datovazurnalistika@gmail.com</a></li>
+                                <li>Instagram: <a href="https://www.instagram.com/katemahdalova/" target="_blank" rel="noopener">@katemahdalova</a></li>
+                                <li>X: <a href="https://twitter.com/data_zurnalist" target="_blank" rel="noopener">@data_zurnalist</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="contact-card">
+                        <img src="/michal-skop.jpg" alt="" width="92" height="92">
+                        <div>
+                            <h3>Michal Škop</h3>
+                            <ul class="contact-list">
+                                <li><a href="tel:+420735518529">+420 735 518 529</a></li>
+                                <li>X: <a href="https://twitter.com/skopmichal" target="_blank" rel="noopener">@skopmichal</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
 
-        <section id="story" class="story">
-            <h2>Náš příběh</h2>
-            
-            <p>Jak asi víte, ještě na konci září jsme pracovali pro Seznam Zprávy a kromě výsledků krajských voleb jsme v těchto posledních dnech zpracovali také analýzu o digitalizaci stavebního řízení. Redakce ji stopla a rozvázala s námi okamžitě spolupráci. Logicky tedy první, co zveřejňujeme, je vše, co jsme k tématu dali dohromady. Nejdůležitější části však zamykat nechceme. </p>
-
-            <p>Tato data ukazují, že problémy s DSŘ byly pro premiéra Fialu jen zástupný důvod k vyhazovu ministra Bartoše, a tedy i Pirátů z vlády.</p>
-            
-            <p>Tuto analýzu jsme původně připravovali pro Seznam Zprávy. Ty ji odmítly publikovat, což způsobilo nečekanou vlnu reakcí. A zdaleka nešlo jen o náš okamžitý nedobrovolný rozchod s redakcí.</p>
-            
-            <p>Majitel Seznamu I. Lukačovič se otevřeně a vědomě pustil do politiky. A zahrál si se svým médiem “na Babiše”, když veřejně hodnotil naši nepublikovanou analýzu. Obavy pana Lukačoviče, aby se k lidem nedostala informace, že DSŘ zase tak závažný problém nepředstavuje, otevřely nové kolo otázek o budoucnosti české nezávislé žurnalistiky.</p>
-            
-            <p>Děkujeme vám za podporu!</p>
-            
-            <p>Umožňujete, aby kvalitní nezávislá žurnalistika založená na datech mohla pokračovat. Abychom mohli popisovat skutečnost, jaká je. Ať to premiér, vlastník velkých médií nebo kdokoliv další spinuje, jak chce. Hlavní výstupy budou veřejné, další hlubší analýzy potom pro předplatitele.</p>
-            
-            <p>Abychom mohli pokračovat, potřebujeme teď alespoň 500 předplatitelů. Není to zase tak moc. Dejte o nás vědět i ostatním, je to potřeba.</p>
-            
-            <p>Kateřina Mahdalová & Michal Škop</p>
-
-            <p>Předplatitelům a předplatitelkám se otevře možnost spolupodílet se na výběru témat a být s námi v pravidelném kontaktu.</p>
-            
-        </section>
-
-        <section class="cta">
-            <a href="https://herohero.co/mahdalovaskop" class="cta-button" target="_blank">Odebírejte naše analýzy</a>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Kontakt</h2>
-            <p>Email: katerina@mahdalova-skop.cz</p>
-            <p>Telefon: +420 735 518 529</p>
-            <p>X: 
-                <a href="https://twitter.com/data_zurnalist" target="_blank">@data_zurnalist</a>, 
-                <a href="https://twitter.com/skopmichal" target="_blank">@skopmichal</a>
-            </p>
-        </section>
+        <footer>
+            <span>Mahdalová & Škop · nezávislá datová žurnalistika</span>
+            <span>© 2024–2026</span>
+        </footer>
     </div>
 </body>
 </html>
