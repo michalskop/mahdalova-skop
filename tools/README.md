@@ -12,7 +12,7 @@ otevře dvojklikem.
 
 | Soubor | Co dělá |
 |--------|---------|
-| [`poutak-editor.html`](poutak-editor.html) | Generátor **náhledových obrázků / og:image** (poutáků) speciálu *Data pro budoucí premiérku*. Formáty pro sítě (www·FB·X·BSky 1200×630, Square, Portrait, IG story/reel), barvy 15 kapitol, vlastní obrázek (Ctrl+V / drag&drop / soubor), světlý i tmavý režim. Export SVG (malý, na web) i PNG (na sítě). |
+| [`poster-editor.html`](poster-editor.html) | Generátor **náhledových obrázků / og:image** (poutáků) speciálu *Data pro budoucí premiérku*. Formáty pro sítě (www·FB·X·BSky 1200×630, Square, Portrait, IG story/reel), barvy 15 kapitol, vlastní obrázek (Ctrl+V / drag&drop / soubor), světlý i tmavý režim. Export SVG (malý, na web) i PNG (na sítě). |
 | [`logo-dpbp-editor.html`](logo-dpbp-editor.html) | Generátor **barevných log-hlav** (ProfileHead) speciálu — silueta profilu v barvě kapitoly s barevnými tečkami. |
 
 ## Zdroj barev

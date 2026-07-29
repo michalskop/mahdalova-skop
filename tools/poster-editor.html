@@ -371,7 +371,9 @@ function buildSVG(s, standalone){
     const LS0=6,SZ0=26;
     const raw=measureCond(s.kicker,SZ0)+Math.max(0,s.kicker.length-1)*LS0;
     const sc=raw>maxW?maxW/raw:1;
-    return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}">${esc(s.kicker)}</text>`;
+    const halo=s.image&&s.format==='square'
+      ? ` paint-order="stroke" stroke="${cBg}" stroke-width="10" stroke-linejoin="round"` : '';
+    return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}"${halo}>${esc(s.kicker)}</text>`;
   };
 
   // Vizuální plocha: vlastní obrázek (obdélník imgRect) NEBO piktogram (motifRect).
@@ -437,7 +439,10 @@ function buildSVG(s, standalone){
     // Řádek 2 – číslo (auto-fit do levého sloupce) + jednotka
     const bs0=Math.round(Math.min(210,(s.big.length>9?110:s.big.length>5?150:190)*(0.85+0.15*vs)));
     const bigSize=Math.round(bs0*Math.min(1,leftColW/Math.max(1,measureSlab(s.big,bs0))));
-    const row2Top=topY+S+Math.round(30*vs);
+    const square=s.format==='square';
+    const halo=square&&s.image
+      ? ` paint-order="stroke" stroke="${cBg}" stroke-width="12" stroke-linejoin="round"` : '';
+    const row2Top=topY+S+Math.round((square?10:30)*vs);
     const numY=row2Top+Math.round(0.72*bigSize);
     const unitY=numY+Math.round(0.2*bigSize+28);
     const row2Bot=unitY+6;
@@ -448,16 +453,18 @@ function buildSVG(s, standalone){
     const claimTop=Math.round((row2Top+row2Bot)/2-((claimLines.length-1)*claimLH)/2+claimSize*0.30);
     const claimT=claimLines.map((l,i)=>`<tspan x="${claimLX}" dy="${i===0?0:claimLH}">${esc(l)}</tspan>`).join('');
     // Řádek 3 – velká vizuální plocha
-    const vTop=row2Bot+Math.round(34*vs), vBot=footY-Math.round(58*vs);
+    // Ve čtverci využijeme obrazovou plochu naplno: začíná už pod horní linkou
+    // a text i logo smějí ležet nad ní. Ořez tak není zbytečně omezen hlavičkou.
+    const vTop=square?barH:row2Bot+Math.round(34*vs), vBot=footY-Math.round(58*vs);
     const imgRect=[M,vTop,CW,vBot-vTop];
     const mh=Math.min(Math.round(H*0.22),vBot-vTop), mw=Math.round(Math.min(CW*0.9,mh*1.5));
     const motifRect=[cx-mw/2,Math.round(vTop+((vBot-vTop)-mh)/2),mw,mh];
     inner = visual(motifRect,imgRect)
       + kicker(M,kickBaseY,headLeft-M-16,'start')
       + logoAt(RE,topY,S)
-      + `<text x="${M}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
-      + `<text x="${M}" y="${unitY}" font-family="${F_COND}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`
-      + `<text x="${claimLX}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}">${claimT}</text>`
+      + `<text x="${M}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}"${halo}>${esc(s.big)}</text>`
+      + `<text x="${M}" y="${unitY}" font-family="${F_COND}" font-size="30" fill="${cMut}"${halo}>${esc(s.unit)}</text>`
+      + `<text x="${claimLX}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}"${halo}>${claimT}</text>`
       + brandMark('DataTimes','left',footY,M,RE,cInk)
       + brandMark('mahdalova-skop','right',footY,M,RE,cInk);
   }
@@ -489,15 +496,12 @@ function measureSlab(text, size){
 // jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
 function brandMark(name, side, y, LM, RM, ink){
   ink = ink || C.ink;        // barva nápisu dle režimu
-  const Rout=20.5, gap=16;   // vnější poloměr značky (kvůli zarovnání)
-  // skutečné logo DataTimes: tříbarevný kruh (crimson + oranžová + žlutá),
-  // žádný plný crimson prstenec = žádná „červená kontura". Zdroj: Logo.tsx.
-  const k=(Rout/138).toFixed(4);   // 138 = 100 (poloměr) + 76/2 (stroke) v originále
-  const ring = `<g transform="scale(${k}) translate(-250,-250) rotate(-30 250 250)">`
-    + `<path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.6025403784439 300"/>`
-    + `<path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>`
-    + `<path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>`
-    + `</g>`;
+  // Původní značka beze změny: crimson prstenec se žlutým obloukem.
+  const R=14, SW=13, Rout=R+SW/2, gap=16;
+  const ex=(R*Math.sin(2*Math.PI/3)).toFixed(2);
+  const ey=(-R*Math.cos(2*Math.PI/3)).toFixed(2);
+  const ring = `<circle cx="0" cy="0" r="${R}" fill="none" stroke="${C.crimson}" stroke-width="${SW}"/>`
+    + `<path d="M0 ${-R} A${R} ${R} 0 0 1 ${ex} ${ey}" fill="none" stroke="${C.yellow}" stroke-width="${SW}"/>`;
   const label = `<tspan fill="${ink}">${esc(name)}</tspan>`
     + `<tspan fill="${C.crimson}">.</tspan><tspan fill="${ink}">cz</tspan>`;
   const W = measureCond(name+'.cz', 30);
@@ -713,7 +717,7 @@ document.getElementById('dlpng').onclick=async()=>{
 // download the tool itself (self-contained HTML → save / forward to a colleague)
 document.getElementById('dltool').onclick=()=>{
   const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
-  saveBlob(new Blob([html],{type:'text/html'}), 'poutak-editor.html');
+  saveBlob(new Blob([html],{type:'text/html'}), 'poster-editor.html');
   toast('Tool downloaded — open by double-click');
 };
 

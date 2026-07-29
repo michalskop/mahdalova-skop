@@ -1,5 +1,5 @@
 {
-  "$comment": "KANONICKÁ PALETA speciálu Data pro budoucí premiérku. Toto je JEDINÉ místo, kde se barvy a názvy kapitol zapisují – čerpá odsud web (chapterNavigation.ts), generátor poutáků (tools/poutak-editor.html) i navazující kroky pro sítě a podcasty. Barvu měňte pouze tady; skript scripts/checkDpbpPalette.mjs ohlídá, že generátor zůstane v souladu.",
+  "$comment": "KANONICKÁ PALETA speciálu Data pro budoucí premiérku. Toto je JEDINÉ místo, kde se barvy a názvy kapitol zapisují – čerpá odsud web (chapterNavigation.ts), generátor poutáků (tools/poster-editor.html) i navazující kroky pro sítě a podcasty. Barvu měňte pouze tady; skript scripts/checkDpbpPalette.mjs ohlídá, že generátor zůstane v souladu.",
   "chapters": [
     { "id": "01", "slug": "01-demografie", "shortTitle": "Demografie", "title": "Demografie", "accent": "#de1743" },
     { "id": "02", "slug": "02-zdravotnictvi-a-pece", "shortTitle": "Zdravotnictví", "title": "Zdravotnictví a péče", "accent": "#5e66d5" },
