@@ -1,16 +1,32 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import type { ReactNode } from 'react';
-import { Anchor, Box, Container, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { Anchor, Badge, Box, Button, Container, Group, Paper, SimpleGrid, Stack, Text, Title, Tooltip } from '@mantine/core';
 import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import {
+  comparison2025,
+  current2026,
+  formatNumber,
+} from './stats';
+import { honoraryCrystalGlobeRecipients, honoraryDoubleWomanYears, honoraryGenderCounts, honoraryTotal, honoraryWomenShare } from './honors';
+import { completeBreakdownRows, filmCountAvailableRows, filmScaleByPeriod, firstScreeningsPerFilm, latestClosedFilmYear, latestScreeningsPerFilm, peakFilmYear } from './films';
+import { countryHistory } from './countries-history';
+import HonoraryTimeline from './HonoraryTimeline';
+import ProgramBreakdownChart from './ProgramBreakdownChart';
+import FilmScreeningsChart from './FilmScreeningsChart';
+import FilmOriginsDashboard from './FilmOriginsDashboard';
+import ContinentStackedChart from './ContinentStackedChart';
+import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from './GrandPrixHistory';
+import { grandPrixCommunistEra, grandPrixPostRevolution } from './grandPrix';
+import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from './partners';
+import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from './ChartFrame';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
 const COVER = `${BASE_URL}/images/specials/karlovy-vary.svg`;
 const SOURCE_LINK = {
-  color: 'var(--mantine-color-brand-7)',
+  color: 'var(--mantine-color-brandNavy-7)',
   fontWeight: 700,
-  textDecorationColor: 'var(--mantine-color-brand-4)',
+  textDecorationColor: 'var(--mantine-color-brandNavy-4)',
   textUnderlineOffset: 3,
 } as const;
 
@@ -27,13 +43,381 @@ export const metadata: Metadata = {
   },
 };
 
-function StoryLink({ href, children }: { href: string; children: ReactNode }) {
+function formatPercent(value: number) {
+  return `${value.toString().replace('.', ',')} %`;
+}
+
+function DataBar({ label, value, max, color = 'var(--mantine-color-brandNavy-6)', suffix = '' }: { label: string; value: number; max: number; color?: string; suffix?: string }) {
+  const width = Math.min(100, Math.round((value / max) * 1000) / 10);
+  const display = suffix ? `${value.toString().replace('.', ',')} ${suffix}` : formatNumber(value);
+
   return (
-    <Anchor component={Link} href={href} style={SOURCE_LINK}>
-      {children}
-    </Anchor>
+    <Box style={{ display: 'grid', gridTemplateColumns: '104px 1fr 96px', gap: 12, alignItems: 'center', margin: '10px 0' }}>
+      <Text fw={800}>{label}</Text>
+      <Box h={16} bg={CHART_TRACK_BG} style={{ borderRadius: 3, overflow: 'hidden' }}>
+        <Box h="100%" w={`${width}%`} style={{ background: color, borderRadius: 3 }} />
+      </Box>
+      <Text ta="right" style={NUM_FONT} fw={800}>{display}</Text>
+    </Box>
   );
 }
+
+function SectionKicker({ children }: { children: React.ReactNode }) {
+  return (
+    <Text tt="uppercase" size="xs" fw={900} c="brandNavy.7" style={{ letterSpacing: '0.1em' }}>
+      {children}
+    </Text>
+  );
+}
+
+// ---- Ocenění a prestiž ------------------------------------------------
+
+function HonoraryDotTimeline() {
+  return (
+    <ChartFrame
+      title="Oceněné osobnosti v Karlových Varech"
+      subtitle="Každá kostička je jedna oceněná osobnost, 1995–2026."
+      source="Oficiální archiv KVIFF, ročník po ročníku"
+      fullWidth
+    >
+      <HonoraryTimeline recipients={honoraryCrystalGlobeRecipients} />
+      <Text mt="md" size="sm">
+        Graf sleduje jedinou čestnou kategorii: Křišťálový globus za mimořádný umělecký přínos světové kinematografii. Soutěžní cenu pro film uděluje hlavní porota; tuto cenu dostávají osobnosti za dlouhodobou práci.
+      </Text>
+    </ChartFrame>
+  );
+}
+
+function AwardsSection() {
+  return (
+    <Box component="section" id="oceneni" px={{ base: 20, md: 80 }} py={{ base: 48, md: 76 }}>
+      <Stack gap="xl" maw={980}>
+        <SectionKicker>Ceny a prestiž</SectionKicker>
+        <Title order={2} style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>Kdo získal Křišťálový globus</Title>
+        <Text size="xl" lh={1.7} maw={780}>
+          Grand Prix – Křišťálový globus uděluje hlavní porota nejlepšímu filmu. Křišťálový globus za mimořádný umělecký přínos světové kinematografii dostávají herci, režiséři a další tvůrci za dlouhodobou práci. Jsou to dvě různé ceny se stejným jménem.
+        </Text>
+        <Text size="lg" lh={1.7} maw={780}>
+          Historické státy, například Československo, Sovětský svaz nebo NDR, ponecháváme v podobě uvedené v dobovém archivu. Přepis na dnešní hranice by zakryl politické uspořádání tehdejšího festivalu.
+        </Text>
+
+        <Stack gap="md" mt="md">
+          <CommunistEraGrandPrix winners={grandPrixCommunistEra} />
+          <PostRevolutionGrandPrix winners={grandPrixPostRevolution} />
+        </Stack>
+        <Text lh={1.7} maw={780}>
+          V letech 1948–1989 připadlo dvacet vítězství zemím sovětského bloku a šest ostatním zemím. Hlavní cenu si i v době státem řízeného festivalu odvážely filmy z USA, Francie, Indie, Japonska nebo Austrálie. Porevoluční řada od roku 1990 dává hlavní cenu malým i velkým kinematografiím od Islandu po Gruzii.
+        </Text>
+
+        <Text size="xl" lh={1.7} maw={780} mt="lg">
+          Od roku 1995 dostalo čestný Křišťálový globus {honoraryTotal} osobností. Žen bylo {honoraryGenderCounts.woman} z {honoraryTotal}, tedy {formatPercent(honoraryWomenShare)}. Ve většině ročníků nebyla mezi oceněnými ani jedna; dvě ženy najednou cenu dostaly jen v letech {honoraryDoubleWomanYears.join(', ')}.
+        </Text>
+        <HonoraryDotTimeline />
+        <Text size="sm" c="dimmed" maw={780}>
+          U každé osobnosti uvádíme rok, zemi, profesi a veřejně doložený gender. Tooltip doplňuje zdůvodnění ceny, pokud je festival nebo dobový tisk zveřejnil.
+        </Text>
+      </Stack>
+    </Box>
+  );
+}
+
+// ---- Filmy a svět -------------------------------------------------------
+
+function ProgramCompositionGraphic({ maxFilms }: { maxFilms: number }) {
+  const maxBreakdownFilms = Math.max(...completeBreakdownRows.map((row) => row.totalFilms ?? 0));
+
+  return (
+    <ChartFrame
+      title="Hrané filmy tvoří přibližně šest desetin katalogu"
+      subtitle="Hrané celovečerní filmy, celovečerní dokumenty a krátké filmy v ročnících s úplným členěním programu"
+      source="Oficiální finální statistiky ročníků KVIFF"
+      fullWidth
+    >
+      <Text maw={760} mb="lg">
+        Graf zahrnuje pouze ročníky, u nichž závěrečná zpráva rozlišuje všechny tři vzájemně se vylučující kategorie. Starší souhrny často uvádějí jen celkový počet filmů, a proto je do skladby programu nedoplňujeme.
+      </Text>
+      <ProgramBreakdownChart rows={completeBreakdownRows} maxBreakdownFilms={maxBreakdownFilms} />
+      <Text mt="lg">
+        Hrané celovečerní filmy tvoří v dostupných ročnících přibližně šest desetin programu. Krátké filmy byly v roce 2025 početnější než celovečerní dokumenty.
+      </Text>
+    </ChartFrame>
+  );
+}
+
+function FilmsSection() {
+  const maxFilms = peakFilmYear.totalFilms ?? 1;
+
+  return (
+    <Box component="section" id="filmy-a-svet" bg="background.2" px={{ base: 20, md: 80 }} py={{ base: 48, md: 76 }}>
+      <Stack gap="xl" maw={1040}>
+        <SectionKicker>Program a země</SectionKicker>
+        <Title order={2} style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>Odkud přijíždějí filmy</Title>
+        <Text size="xl" lh={1.7} maw={780}>
+          Analyzujeme produkční země filmů v digitálně dostupném archivu KVIFF z let 1992–2026. Francie, Německo a Česko tvoří nejhustší část koprodukční sítě; mimo Evropu se nejčastěji objevují Spojené státy.
+        </Text>
+        <Text size="lg" lh={1.7} maw={780}>
+          Jeden film může mít několik produkčních zemí. V mapě proto počítáme vazby film–země: francouzsko-německo-česká koprodukce přidá jednu účast každé ze tří zemí. Součet těchto vazeb je vyšší než počet unikátních filmů.
+        </Text>
+
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          <ChartFrame
+            title="Odkud přijíždějí filmy na festival v Karlových Varech"
+            subtitle={`Bublina = produkční země; velikost podle počtu filmů, u kterých je země uvedena. Dataset pokrývá ${countryHistory.length} ročníků novodobé éry.`}
+            source="Oficiální archiv filmu KVIFF, lokální country export"
+            headerContent={<div id="kviff-map-mode-toggle" />}
+            fullWidth
+          >
+            <FilmOriginsDashboard />
+          </ChartFrame>
+
+          <ChartFrame
+            title="Méně titulů dostává více projekcí"
+            subtitle="Průměrný počet filmů podle období, 1995–2025"
+            source="Oficiální finální statistiky ročníků KVIFF"
+          >
+            <Text size="lg">
+              Nejvíc filmů v dostupné řadě má rok {peakFilmYear.year}: {peakFilmYear.totalFilms} titulů. Uzavřený rok {latestClosedFilmYear.year} má {latestClosedFilmYear.totalFilms} filmů, ale {latestClosedFilmYear.screenings} projekcí. Jeden film tak dnes připadá zhruba na {latestScreeningsPerFilm.toString().replace('.', ',')} projekce; v roce 1996 to bylo {firstScreeningsPerFilm.toString().replace('.', ',')}.
+            </Text>
+            <Text mt="sm">
+              Samotný počet filmů měří šířku katalogu. Počet projekcí naopak ukazuje, kolik prostoru dostane jeden vybraný titul v programu a jak reálně dostupný může být pro diváky.
+            </Text>
+            <Stack gap="sm" mt="lg">
+              {filmScaleByPeriod.map((row) => (
+                <DataBar key={row.period} label={row.period} value={row.avgFilms} max={maxFilms} />
+              ))}
+            </Stack>
+            <Text mt="md" c="dimmed">Sloupce ukazují průměrný počet filmů v období. Projekce držíme odděleně, protože jedna země může mít méně titulů, ale výraznější festivalovou přítomnost.</Text>
+          </ChartFrame>
+
+          <ChartFrame
+            title="Počet projekcí neklesl stejně rychle jako počet filmů"
+            subtitle="Filmy a projekce ve festivalovém programu, 1996–2025"
+            source="Oficiální finální statistiky ročníků KVIFF"
+            fullWidth
+          >
+            <FilmScreeningsChart
+              rows={filmCountAvailableRows}
+              maxFilms={maxFilms}
+              peakYear={peakFilmYear.year}
+              latestClosedYear={latestClosedFilmYear.year}
+            />
+            <Text mt="md" size="sm">
+              Počet filmů měří šířku katalogu, počet projekcí počet jednotlivých uvedení. Užší katalog proto automaticky neznamená méně příležitostí film vidět.
+            </Text>
+          </ChartFrame>
+
+          <ProgramCompositionGraphic maxFilms={maxFilms} />
+
+          <ChartFrame
+            title="Evropa zůstává v programu dominantní po celé novodobé období"
+            subtitle="Počet filmů se zastoupením daného kontinentu, 1992–2026; přepínání mezi počty a podíly"
+            source="kviff_continents_corrected_all_years.csv – opravený souhrn proti dvojímu počítání kontinentů u koprodukcí"
+            fullWidth
+          >
+            <ContinentStackedChart />
+          </ChartFrame>
+        </SimpleGrid>
+
+        <Text lh={1.7} maw={780}>
+          Evropa zůstává jádrem katalogu po celé novodobé období. Zřetelnější změnou je růst koprodukcí, které spojují více zemí v jednom filmu. Předlistopadové ročníky do stejného srovnání nezařazujeme, protože pro ně nemáme stejně úplný katalog filmů a produkčních zemí.
+        </Text>
+      </Stack>
+    </Box>
+  );
+}
+
+// ---- Festival a peníze ---------------------------------------------------
+
+const capitalColors: Record<keyof typeof partnerCapitalLabels, string> = {
+  money: 'var(--mantine-color-brandOrange-6)',
+  service: 'var(--mantine-color-brandTeal-6)',
+  access: 'var(--mantine-color-brandNavy-6)',
+  image: 'var(--mantine-color-brandYellow-8)',
+  csr: 'var(--mantine-color-brandTeal-6)',
+  media: 'var(--mantine-color-brandNavy-3)',
+  craft: 'var(--mantine-color-brandOrange-7)',
+  place: 'var(--mantine-color-brandNavy-6)',
+};
+
+const capitalTextOnDark: Record<keyof typeof partnerCapitalLabels, boolean> = {
+  money: true,
+  service: true,
+  access: true,
+  image: false,
+  csr: true,
+  media: true,
+  craft: true,
+  place: true,
+};
+
+function PartnerPrestigeBlock() {
+  const capitalEntries = Object.entries(partnerCapitalTotals)
+    .sort(([, a], [, b]) => b - a)
+    .map(([capital, count]) => ({ capital: capital as keyof typeof partnerCapitalLabels, count }));
+
+  return (
+    <ChartFrame
+      title="Obchod s prestiží není jedna smlouva, ale celá infrastruktura"
+      subtitle="Matice čte oficiálně komunikovaná partnerství podle typu vyměňovaného kapitálu, 60. ročník 2026"
+      source="Oficiální stránka partnerů KVIFF"
+      fullWidth
+    >
+      <Group justify="flex-end" mb="lg">
+        <Button component="a" href="https://www.kviff.com/cs/o-nas/partneri" target="_blank" rel="noopener noreferrer" variant="outline" color="dark">
+          Zdroj KVIFF
+        </Button>
+      </Group>
+
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm" mb="md">
+        <Paper p="md" radius={4} bg="background.0">
+          <Text fw={900} style={NUM_FONT}>{current2026.budgetMil} mil. Kč</Text>
+          <Text size="sm">rozpočet 60. ročníku</Text>
+        </Paper>
+        <Paper p="md" radius={4} bg="background.0">
+          <Text fw={900} style={NUM_FONT} c="brandYellow.8">{current2026.sponsorsShare} %</Text>
+          <Text size="sm">soukromí partneři a sponzoři</Text>
+        </Paper>
+        <Paper p="md" radius={4} bg="background.0">
+          <Text fw={900} style={NUM_FONT} c="brandNavy.7">{current2026.publicShare} %</Text>
+          <Text size="sm">veřejné zdroje</Text>
+        </Paper>
+        <Paper p="md" radius={4} bg="background.0">
+          <Text fw={900} style={NUM_FONT}>{current2026.spendingMil} mil. Kč</Text>
+          <Text size="sm">odhad útraty lidí ve městě</Text>
+        </Paper>
+      </SimpleGrid>
+
+      <Paper p="md" radius={4} bg="background.0" mb="md">
+        <Text fw={900}>Odpověď ke sponzorům</Text>
+        <Text size="sm" mt={6}>
+          Festival není financovaný hlavně z veřejných peněz. V pracovním rozpočtu 60. ročníku držíme poměr 80 % soukromé zdroje a 20 % veřejné zdroje. Veřejná podpora je ale strategická: dává festivalu institucionální legitimitu a městu i kraji vrací turistickou a ekonomickou stopu. Soukromí partneři naopak kupují přístup k publiku, mediální pozornost, B2B prostředí a kulturní prestiž.
+        </Text>
+      </Paper>
+
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+        <Paper p="lg" radius={4} bg="brandNavy.8" c="background.0">
+          <Title order={3} size="1.05rem" mb="xs">Teze pro čtení</Title>
+          <Text c="background.2" size="lg">
+            Festival má kulturní a mediální auru, partneři mají peníze, služby, distribuci nebo infrastrukturu. Vary jim neprodávají jen logo na plotě: prodávají přítomnost uvnitř události, kterou sledují diváci, média, politici, filmaři a byznys.
+          </Text>
+          <Text c="background.2" mt="md">
+            Je to interpretace veřejně komunikovaných partnerství, ne důkaz jednotlivých obchodních jednání. Proto u každé vrstvy držíme zvlášť zdroj a faktickou oporu.
+          </Text>
+        </Paper>
+
+        <Paper p="lg" radius={4} bg="background.0">
+          <Title order={3} size="1.05rem" mb="md">Mapa typu kapitálu</Title>
+          <Stack gap="xs">
+            {capitalEntries.map(({ capital, count }) => (
+              <Group key={capital} gap="sm" wrap="nowrap">
+                <Box w={14} h={14} bg={capitalColors[capital]} style={{ borderRadius: 3, flex: '0 0 auto' }} />
+                <Text style={{ flex: 1 }} fw={800}>{partnerCapitalLabels[capital]}</Text>
+                <Text style={NUM_FONT} fw={900}>{count}×</Text>
+              </Group>
+            ))}
+          </Stack>
+          <Text mt="md" size="sm" c="dimmed">
+            Počet neznamená velikost peněz. Říká jen, jak často se daný typ hodnoty objevuje v naší redakční klasifikaci partnerství.
+          </Text>
+        </Paper>
+      </SimpleGrid>
+
+      <Stack gap="md" mt="md">
+        {partnerExchangeRows.map((row) => (
+          <Tooltip key={row.segment} label={`${row.evidence} Zdroj: ${row.sourceLabel}`} multiline maw={420} withArrow>
+            <Paper p="md" radius={4} bg="background.0">
+              <SimpleGrid cols={{ base: 1, md: 3 }} spacing="md">
+                <Stack gap={6}>
+                  <Text size="xs" fw={900} tt="uppercase" c="dimmed">{row.segment}</Text>
+                  <Group gap={6}>
+                    {row.partners.map((partner) => (
+                      <Badge key={partner} variant="light" color="dark">{partner}</Badge>
+                    ))}
+                  </Group>
+                  <Group gap={6}>
+                    {row.capital.map((capital) => (
+                      <Badge
+                        key={capital}
+                        variant="filled"
+                        style={{ background: capitalColors[capital], color: capitalTextOnDark[capital] ? '#ffffff' : 'var(--mantine-color-brandNavy-9)' }}
+                      >
+                        {partnerCapitalLabels[capital]}
+                      </Badge>
+                    ))}
+                  </Group>
+                </Stack>
+
+                <Stack gap={6}>
+                  <Text fw={900}>Partner dává festivalu</Text>
+                  {row.givesFestival.map((item) => (
+                    <Text key={item} size="sm">– {item}</Text>
+                  ))}
+                </Stack>
+
+                <Stack gap={6}>
+                  <Text fw={900}>Festival vrací partnerovi</Text>
+                  {row.getsFromFestival.map((item) => (
+                    <Text key={item} size="sm">– {item}</Text>
+                  ))}
+                  <Button component="a" href={row.sourceUrl} target="_blank" rel="noopener noreferrer" variant="subtle" color="dark" px={0} w="fit-content">
+                    Otevřít zdroj
+                  </Button>
+                </Stack>
+              </SimpleGrid>
+            </Paper>
+          </Tooltip>
+        ))}
+      </Stack>
+    </ChartFrame>
+  );
+}
+
+function MoneySection() {
+  return (
+    <Box component="section" id="festival-a-penize" px={{ base: 20, md: 80 }} py={{ base: 48, md: 76 }}>
+      <Stack gap="xl" maw={1040}>
+        <SectionKicker>Návštěvnost a financování</SectionKicker>
+        <Title order={2} style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>Festival, publikum a peníze</Title>
+        <Text size="xl" lh={1.7} maw={780}>
+          Prodané vstupenky, akreditace, rozpočet a partnerství měří různé části festivalového provozu – neslučujeme je do jednoho čísla, protože každý popisuje jinou skupinu lidí nebo jiný typ zdroje.
+        </Text>
+
+        <ChartFrame
+          title="Šedesátý ročník přidal projekce i akreditované profesionály"
+          subtitle="Vybrané ukazatele roku 2026 ve srovnání s posledním předchozím ročníkem"
+          source="Závěrečné zprávy KVIFF 2025 a 2026"
+          fullWidth
+        >
+          <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg">
+            <Stack gap={6}>
+              <Text fw={900} style={{ ...NUM_FONT, fontSize: 30 }}>{formatNumber(current2026.tickets)}</Text>
+              <Text>prodaných vstupenek v roce 2026</Text>
+              <Text size="sm" c="dimmed">V roce 2025 jich bylo {formatNumber(comparison2025.tickets)}.</Text>
+            </Stack>
+            <Stack gap={6}>
+              <Text fw={900} style={{ ...NUM_FONT, fontSize: 30 }}>{formatNumber(current2026.screenings)}</Text>
+              <Text>filmových projekcí</Text>
+              <Text size="sm" c="dimmed">O sedm více než v roce 2025.</Text>
+            </Stack>
+            <Stack gap={6}>
+              <Text fw={900} style={{ ...NUM_FONT, fontSize: 30 }}>{formatNumber(current2026.industry)}</Text>
+              <Text>akreditovaných filmových profesionálů</Text>
+              <Text size="sm" c="dimmed">V roce 2025 jich bylo {formatNumber(comparison2025.industry)}.</Text>
+            </Stack>
+          </SimpleGrid>
+          <Text mt="xl" maw={780}>
+            Vstupenka zachycuje návštěvu jedné projekce, nikoli jednoho člověka. Proto tento údaj nesrovnáváme s počtem festivalových pasů ani akreditací. Podrobnosti uvádí{' '}
+            <Anchor href="https://www.kviff.com/en/press/press-release/2026/517508.pdf" target="_blank" rel="noopener noreferrer" style={SOURCE_LINK}>závěrečná zpráva 60. ročníku KVIFF</Anchor>.
+          </Text>
+        </ChartFrame>
+
+        <PartnerPrestigeBlock />
+      </Stack>
+    </Box>
+  );
+}
+
+// ---- Landing page ---------------------------------------------------------
 
 export default function KarlovyVarySpecialPage() {
   return (
@@ -42,7 +426,7 @@ export default function KarlovyVarySpecialPage() {
         <Box component="header" bg="brandNavy.9" c="background.0">
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={0}>
             <Stack gap="lg" p={{ base: 24, md: 52 }} justify="center" mih={{ base: 0, md: 620 }}>
-              <Text tt="uppercase" size="xs" fw={900} c="brand.4" style={{ letterSpacing: '0.12em' }}>
+              <Text tt="uppercase" size="xs" fw={900} c="brandYellow.5" style={{ letterSpacing: '0.12em' }}>
                 Datový speciál
               </Text>
               <Title order={1} style={{ fontSize: 'clamp(2.8rem, 7vw, 6rem)', lineHeight: 0.94 }}>
@@ -51,12 +435,17 @@ export default function KarlovyVarySpecialPage() {
               <Text size="xl" maw={650} c="background.2" lh={1.55}>
                 Festival za osmdesát let přežil státní propagandu, střídání s Moskvou, nejistotu po revoluci i pandemii. Jeho program a ceny dnes ukazují, odkud přichází evropský film a komu kulturní instituce přiznávají trvalou prestiž.
               </Text>
+              <Group gap="lg" mt="md">
+                <Anchor href="#oceneni" style={{ color: 'var(--mantine-color-brandYellow-5)', fontWeight: 700 }}>Ceny a prestiž</Anchor>
+                <Anchor href="#filmy-a-svet" style={{ color: 'var(--mantine-color-brandYellow-5)', fontWeight: 700 }}>Filmy a svět</Anchor>
+                <Anchor href="#festival-a-penize" style={{ color: 'var(--mantine-color-brandYellow-5)', fontWeight: 700 }}>Festival a peníze</Anchor>
+              </Group>
             </Stack>
             <Box
               role="img"
               aria-label="Logo speciálu Vary s piktogramem Křišťálového globusu"
               style={{
-                minHeight: 'clamp(180px, 35vw, 360px)',
+                minHeight: 'clamp(220px, 35vw, 360px)',
                 backgroundImage: 'url(/images/specials/karlovy-vary.svg)',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
@@ -66,7 +455,7 @@ export default function KarlovyVarySpecialPage() {
           </SimpleGrid>
         </Box>
 
-        <Stack component="section" gap="xl" px={{ base: 20, md: 80 }} py={{ base: 42, md: 72 }} maw={940}>
+        <Stack component="section" id="historie" gap="xl" px={{ base: 20, md: 80 }} py={{ base: 42, md: 72 }} maw={940}>
           <Text size="xl" lh={1.7}>
             V červenci 2026 se v Karlových Varech konal 60. ročník festivalu. Od jeho založení přitom uplynulo osmdesát let. Rozdíl dvaceti ročníků nevznikl jednou dlouhou přestávkou: od roku 1959 se Vary střídaly s mezinárodním festivalem v Moskvě, v roce 1993 se přehlídka nekonala a novodobou každoroční řadu přerušila pandemie v roce 2020.
           </Text>
@@ -74,14 +463,14 @@ export default function KarlovyVarySpecialPage() {
             První ročník začal v roce 1946 hlavně v Mariánských Lázních. Karlovy Vary byly zpočátku druhým dějištěm a festival ještě neměl soutěž. Křišťálový globus se poprvé uděloval v roce 1948, dva roky nato se přehlídka natrvalo přestěhovala do Varů a v roce 1956 získala od FIAPF kategorii A.
           </Text>
           <Text size="sm" c="dimmed">
-            Zdroj: <Anchor href="https://www.kviff.com/en/about-us/festival-description" target="_blank" rel="noopener noreferrer" style={SOURCE_LINK}>oficiální historie KVIFF</Anchor>.
+            Zdroj: <Anchor href="https://www.kviff.com/en/about-us/festival-description" target="_blank" rel="noopener noreferrer" style={SOURCE_LINK}>oficiální historie KVIFF</Anchor>
           </Text>
         </Stack>
 
         <Box component="section" bg="background.2" px={{ base: 20, md: 80 }} py={{ base: 42, md: 72 }}>
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={{ base: 'xl', md: 64 }}>
             <Stack gap="md">
-              <Text fw={900} c="brand.7">1948–1990</Text>
+              <Text fw={900} c="brandNavy.7">1948–1990</Text>
               <Title order={2}>Cena sloužila filmu i státní politice</Title>
               <Text size="lg" lh={1.7}>
                 Po únoru 1948 ovládla dramaturgii znárodněná kinematografie. Vedle hlavní ceny se udělovaly ceny míru, práce nebo sociálního pokroku. Ani tehdy však nevyhrávaly výhradně filmy sovětského bloku: hlavní cenu získaly také snímky z USA, Francie, Indie, Japonska či Austrálie.
@@ -89,9 +478,8 @@ export default function KarlovyVarySpecialPage() {
               <Text size="lg" lh={1.7}>
                 Od roku 1960 připadly Varům sudé roky a Moskvě liché. Toto politické rozhodnutí vysvětluje největší část rozdílu mezi stářím festivalu a počtem ročníků.
               </Text>
-              <StoryLink href="/specialy/kviff/oceneni">Které filmy získaly Křišťálový globus a komu Vary dávají čestné ceny</StoryLink>
             </Stack>
-            <Box style={{ borderLeft: '4px solid var(--mantine-color-brand-6)' }} pl={{ base: 20, md: 32 }}>
+            <Box style={{ borderLeft: '4px solid var(--mantine-color-brandNavy-6)' }} pl={{ base: 20, md: 32 }}>
               <Text size="xl" lh={1.65}>
                 Z šestadvaceti hlavních cen udělených do roku 1989 připadlo dvacet filmům ze sovětského bloku. Zbývajících šest připomíná, že ani státem řízený festival nebyl po celou dobu uzavřenou přehlídkou spojenců Moskvy.
               </Text>
@@ -100,7 +488,7 @@ export default function KarlovyVarySpecialPage() {
         </Box>
 
         <Stack component="section" gap="xl" px={{ base: 20, md: 80 }} py={{ base: 48, md: 80 }} maw={980}>
-          <Text fw={900} c="brand.7">1994</Text>
+          <Text fw={900} c="brandNavy.7">1994</Text>
           <Title order={2} style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>
             Bartoška a Zaoralová vrátili festivalu každoroční rytmus
           </Title>
@@ -110,34 +498,11 @@ export default function KarlovyVarySpecialPage() {
           <Text size="lg" lh={1.7}>
             Právě rok 1994 je předělem i pro tento speciál. U novodobých ročníků známe podstatně úplněji filmy, produkční země, projekce, hosty a prodané vstupenky. Starší katalogy proto nesrovnáváme se stejnou přesností.
           </Text>
-          <StoryLink href="/specialy/kviff/filmy-a-svet">Jak se od devadesátých let změnily země zastoupené v programu</StoryLink>
         </Stack>
 
-        <Box component="section" bg="brandRoyalBlue.8" c="background.0" px={{ base: 20, md: 80 }} py={{ base: 48, md: 76 }}>
-          <Stack gap="lg" maw={860}>
-            <Text fw={900} c="brand.3">2026</Text>
-            <Title order={2}>Šedesátý ročník prodal 132 553 vstupenek</Title>
-            <Text size="xl" c="background.2" lh={1.65}>
-              Festival uvedl 179 filmů na 472 projekcích. Akreditovalo se 11 014 lidí, z toho 1 249 profesionálů filmového průmyslu a 598 novinářů. Prodané vstupenky nejsou počet unikátních návštěvníků: jeden člověk může navštívit více projekcí.
-            </Text>
-            <Text size="sm" c="background.3">
-              Zdroj: <Anchor href="https://www.kviff.com/en/press/press-release/2026/517508.pdf" target="_blank" rel="noopener noreferrer" style={{ ...SOURCE_LINK, color: 'var(--mantine-color-brand-3)' }}>závěrečná zpráva 60. KVIFF</Anchor>.
-            </Text>
-            <StoryLink href="/specialy/kviff/festival-a-penize">Kdo festival financuje a co znamenají jeho návštěvnická čísla</StoryLink>
-          </Stack>
-        </Box>
-
-        <Stack component="section" gap="lg" px={{ base: 20, md: 80 }} py={{ base: 48, md: 76 }} maw={900}>
-          <Title order={2}>Tři otázky, které drží speciál pohromadě</Title>
-          <Text size="lg" lh={1.7}>
-            Kdo získává hlavní a čestné ceny? Odkud přicházejí filmy? A kdo platí provoz události, která na devět dní promění město? Odpovědi jsou rozdělené do tří analýz, protože každá stojí na jiných datech. Dohromady popisují festival jako program, instituci i veřejnou událost.
-          </Text>
-          <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl">
-            <StoryLink href="/specialy/kviff/oceneni">Ocenění a prestiž</StoryLink>
-            <StoryLink href="/specialy/kviff/filmy-a-svet">Filmy a svět</StoryLink>
-            <StoryLink href="/specialy/kviff/festival-a-penize">Festival a peníze</StoryLink>
-          </SimpleGrid>
-        </Stack>
+        <AwardsSection />
+        <FilmsSection />
+        <MoneySection />
       </Box>
 
       <SupportBanner />
