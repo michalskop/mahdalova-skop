@@ -259,8 +259,8 @@ function PartnerPrestigeBlock() {
 
   return (
     <ChartFrame
-      title="Obchod s prestiží není jedna smlouva, ale celá infrastruktura"
-      subtitle="Matice čte oficiálně komunikovaná partnerství podle typu vyměňovaného kapitálu, 60. ročník 2026"
+      title="Festival prodává partnerům přístup k publiku, pozornosti a prestiži"
+      subtitle="Oficiálně komunikovaná partnerství 60. ročníku (2026) podle typu vyměňovaného kapitálu"
       source="Oficiální stránka partnerů KVIFF"
       fullWidth
     >
@@ -290,20 +290,20 @@ function PartnerPrestigeBlock() {
       </SimpleGrid>
 
       <Paper p="md" radius={4} bg="background.0" mb="md">
-        <Text fw={900}>Odpověď ke sponzorům</Text>
+        <Text fw={900}>Festival platí hlavně soukromé zdroje, ne veřejné rozpočty</Text>
         <Text size="sm" mt={6}>
-          Festival není financovaný hlavně z veřejných peněz. V pracovním rozpočtu 60. ročníku držíme poměr 80 % soukromé zdroje a 20 % veřejné zdroje. Veřejná podpora je ale strategická: dává festivalu institucionální legitimitu a městu i kraji vrací turistickou a ekonomickou stopu. Soukromí partneři naopak kupují přístup k publiku, mediální pozornost, B2B prostředí a kulturní prestiž.
+          U 60. ročníku připadlo přibližně 80 % rozpočtu na soukromé partnery a sponzory a 20 % na veřejné zdroje. Menší veřejná podpora je přitom strategická: dává festivalu institucionální legitimitu a městu i kraji vrací turistickou a ekonomickou stopu. Soukromí partneři kupují přístup k publiku, mediální pozornost, B2B prostředí a kulturní prestiž.
         </Text>
       </Paper>
 
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
         <Paper p="lg" radius={4} bg="brandNavy.8" c="background.0">
-          <Title order={3} size="1.05rem" mb="xs">Teze pro čtení</Title>
+          <Title order={3} size="1.05rem" mb="xs">Za co partneři platí</Title>
           <Text c="background.2" size="lg">
-            Festival má kulturní a mediální auru, partneři mají peníze, služby, distribuci nebo infrastrukturu. Vary jim neprodávají jen logo na plotě: prodávají přítomnost uvnitř události, kterou sledují diváci, média, politici, filmaři a byznys.
+            Festival má kulturní a mediální auru, partneři mají peníze, služby, distribuci nebo infrastrukturu. Vary jim prodávají přítomnost uvnitř události, kterou sledují diváci, média, politici, filmaři a byznys.
           </Text>
           <Text c="background.2" mt="md">
-            Je to interpretace veřejně komunikovaných partnerství, ne důkaz jednotlivých obchodních jednání. Proto u každé vrstvy držíme zvlášť zdroj a faktickou oporu.
+            Následující řádky čtou veřejně komunikovaná partnerství, ne jednotlivá obchodní jednání. Zdroj má proto každá vrstva zvlášť.
           </Text>
         </Paper>
 
@@ -319,7 +319,7 @@ function PartnerPrestigeBlock() {
             ))}
           </Stack>
           <Text mt="md" size="sm" c="dimmed">
-            Počet neznamená velikost peněz. Říká jen, jak často se daný typ hodnoty objevuje v naší redakční klasifikaci partnerství.
+            Počet neznamená velikost peněz. Ukazuje, jak často se daný typ hodnoty v partnerstvích objevuje.
           </Text>
         </Paper>
       </SimpleGrid>
@@ -459,7 +459,7 @@ export default function KarlovyVarySpecialPage() {
 
         <Stack component="section" id="historie" gap="xl" px={{ base: 20, md: 80 }} py={{ base: 42, md: 72 }} maw={940}>
           <Text size="xl" lh={1.7}>
-            V červenci 2026 se v Karlových Varech konal 60. ročník festivalu. Od jeho založení přitom uplynulo osmdesát let. Rozdíl dvaceti ročníků nevznikl jednou dlouhou přestávkou: od roku 1959 se Vary střídaly s mezinárodním festivalem v Moskvě, v roce 1993 se přehlídka nekonala a novodobou každoroční řadu přerušila pandemie v roce 2020.
+            V červenci 2026 proběhl teprve šedesátý ročník festivalu, přestože od jeho vzniku uplynulo osmdesát let. Těch dvacet chybějících ročníků nezpůsobila jedna dlouhá přestávka: od roku 1959 se Vary střídaly s mezinárodním festivalem v Moskvě, v roce 1993 se přehlídka nekonala a novodobou každoroční řadu přerušila pandemie v roce 2020.
           </Text>
           <Text size="lg" lh={1.7}>
             První ročník začal v roce 1946 hlavně v Mariánských Lázních. Karlovy Vary byly zpočátku druhým dějištěm a festival ještě neměl soutěž. Křišťálový globus se poprvé uděloval v roce 1948, dva roky nato se přehlídka natrvalo přestěhovala do Varů a v roce 1956 získala od FIAPF kategorii A.
