@@ -229,7 +229,7 @@
       <button class="btn btn-primary" id="dlsvg">Download SVG</button>
       <div class="btn-row">
         <button class="btn btn-ghost" id="dlpng">PNG</button>
-        <button class="btn btn-ghost" id="cp">gen.js row</button>
+        <button class="btn btn-ghost" id="dltool">Download tool</button>
       </div>
     </div>
   </div>
@@ -672,12 +672,11 @@ document.getElementById('dlpng').onclick=async()=>{
   }finally{ btn.disabled=false; }
 };
 
-// copy gen.js row
-document.getElementById('cp').onclick=()=>{
-  const j=s=>JSON.stringify(s);
-  const row=`  { ch: ${j(state.chapter)}, n: '00', big: ${j(state.big)}, unit: ${j(state.unit)}, claim: ${j(state.claim)}, motif: ${j(state.motif)} },`;
-  navigator.clipboard.writeText(row).then(()=>toast('Row copied to clipboard'),
-    ()=>toast('Copy failed'));
+// download the tool itself (self-contained HTML → save / forward to a colleague)
+document.getElementById('dltool').onclick=()=>{
+  const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+  saveBlob(new Blob([html],{type:'text/html'}), 'poutak-editor.html');
+  toast('Tool downloaded — open by double-click');
 };
 
 syncAcc();
