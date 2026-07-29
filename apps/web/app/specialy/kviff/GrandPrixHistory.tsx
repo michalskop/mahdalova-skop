@@ -61,37 +61,58 @@ const DECADE_BUCKETS = [
   { label: '1980–89', from: 1980, to: 1989 },
 ];
 
-function DecadeBlocBars({ winners }: { winners: GrandPrixWinner[] }) {
-  const rows = DECADE_BUCKETS.map((bucket) => {
-    const inBucket = winners.filter((w) => w.awarded && w.year >= bucket.from && w.year <= bucket.to);
-    const socialisticky = inBucket.filter((w) => w.bloc === 'socialisticky').length;
-    const ostatni = inBucket.filter((w) => w.bloc === 'ostatni').length;
-    return { ...bucket, socialisticky, ostatni, total: socialisticky + ostatni };
-  });
+// Krátké popisky zemí pro anotaci přímo u jednotky v grafu (ne v legendě) –
+// zkráceno jen kvůli šířce sloupce, plný název zůstává v datech i tooltipu.
+const SHORT_COUNTRY: Record<string, string> = {
+  'Spojené království': 'Británie',
+};
+
+function shortCountry(countries: string[]) {
+  const first = countries[0] ?? '';
+  return SHORT_COUNTRY[first] ?? first;
+}
+
+// Unit chart: každý čtvereček je jeden udělený ročník (ne agregovaný podíl).
+// Seskupeno po dekádách, aby byl vidět i časový vzorec. Výjimky mimo blok
+// mají zemi napsanou přímo pod čtverečkem – anotace v grafu, ne v legendě.
+function GrandPrixUnitChart({ winners }: { winners: GrandPrixWinner[] }) {
+  const awarded = winners.filter((w) => w.awarded).sort((a, b) => a.year - b.year);
+  const decades = DECADE_BUCKETS.map((bucket) => ({
+    ...bucket,
+    items: awarded.filter((w) => w.year >= bucket.from && w.year <= bucket.to),
+  }));
 
   return (
-    <Stack gap={6} mt="sm" mb="md">
-      {rows.map((row) => (
-        <Group key={row.label} gap="sm" wrap="nowrap" align="center">
-          <Text size="xs" fw={800} style={{ ...NUM_FONT, width: 54, minWidth: 54 }}>{row.label}</Text>
-          <Box style={{ display: 'flex', flex: 1, height: 20, borderRadius: 3, overflow: 'hidden', background: 'var(--mantine-color-background-6)' }}>
-            {row.socialisticky > 0 && (
-              <Box style={{ flex: row.socialisticky, background: BLOC_COLOR.socialisticky, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Text size="xs" fw={800} style={{ ...NUM_FONT, color: '#ffffff' }}>{row.socialisticky}</Text>
-              </Box>
+    <Group gap={26} align="flex-start" wrap="wrap" mt="sm" mb="xs">
+      {decades.map((decade) => {
+        const ostatniCount = decade.items.filter((w) => w.bloc === 'ostatni').length;
+        return (
+          <Stack key={decade.label} gap={8} align="center" style={{ maxWidth: 168 }}>
+            <Group gap={4} justify="center">
+              {decade.items.map((winner) => (
+                <Stack key={`${winner.year}-${winner.filmCz}`} gap={2} align="center" style={{ width: 24 }}>
+                  <Box
+                    w={20}
+                    h={20}
+                    title={`${winner.year} · ${winner.filmCz} (${winner.countries.join(', ')})`}
+                    style={{ borderRadius: 4, background: BLOC_COLOR[winner.bloc] }}
+                  />
+                  {winner.bloc === 'ostatni' && (
+                    <Text fw={700} ta="center" lh={1.05} style={{ ...NUM_FONT, fontSize: 9 }}>
+                      {shortCountry(winner.countries)}
+                    </Text>
+                  )}
+                </Stack>
+              ))}
+            </Group>
+            <Text size="xs" fw={800} style={NUM_FONT}>{decade.label}</Text>
+            {ostatniCount === 0 && (
+              <Text c="dimmed" ta="center" lh={1.2} style={{ fontSize: 10 }}>ani jedna výhra mimo blok</Text>
             )}
-            {row.ostatni > 0 && (
-              <Box style={{ flex: row.ostatni, background: BLOC_COLOR.ostatni, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Text size="xs" fw={800} style={{ ...NUM_FONT, color: '#ffffff' }}>{row.ostatni}</Text>
-              </Box>
-            )}
-          </Box>
-          {row.total > 0 && row.ostatni === 0 && (
-            <Text size="xs" c="dimmed" style={{ ...NUM_FONT, whiteSpace: 'nowrap' }}>bez neblokové výhry</Text>
-          )}
-        </Group>
-      ))}
-    </Stack>
+          </Stack>
+        );
+      })}
+    </Group>
   );
 }
 
@@ -153,11 +174,11 @@ export function CommunistEraGrandPrix({ winners }: { winners: GrandPrixWinner[] 
         Od roku 1959 se Karlovy Vary kvůli politickému rozhodnutí střídaly s Moskevským filmovým festivalem. Proto se v šedesátých až osmdesátých letech konaly převážně v sudých letech.
       </Text>
       <Text mt="xs" size="sm" fw={700}>
-        Převahu měly země sovětského bloku, hlavní cenu však získaly také filmy z USA, Francie, Indie, Japonska nebo Austrálie.
+        Převahu měly země sovětského bloku, ale ne bez výjimek – ve třech ze čtyř desetiletí občas hlavní cenu získal i film odjinud.
       </Text>
-      <DecadeBlocBars winners={winners} />
+      <GrandPrixUnitChart winners={winners} />
       <Text size="xs" c="dimmed">
-        Vítězové podle desetiletí a bloku; jen udělené ročníky. Šedesátá léta byla jediné desetiletí bez jediné neblokové výhry.
+        Každý čtvereček je jeden udělený ročník; podepsané čtverečky ukazují zemi vítěze mimo sovětský blok.
       </Text>
     </ChartFrame>
   );
