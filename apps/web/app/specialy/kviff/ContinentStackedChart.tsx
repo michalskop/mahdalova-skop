@@ -137,7 +137,7 @@ export default function ContinentStackedChart() {
 
             return (
               <Tooltip key={year} label={tooltip} multiline maw={320} withArrow>
-                <Stack gap={4} align="center" title={tooltip} style={{ cursor: 'help' }}>
+              <Stack gap={4} align="center" title={tooltip}>
                   <Box
                     style={{
                       height: PLOT_HEIGHT,
@@ -180,7 +180,7 @@ export default function ContinentStackedChart() {
       </Box>
 
       <Text size="sm" c="dimmed">
-        Sloupce jsou skládané podle kontinentů 1992–2026 (bez 1993 a 2020, festival se nekonal); starší ročníky zatím nemáme na úrovni jednotlivých filmů, proto řada nesahá až do roku 1966. Kliknutím na kontinent v legendě ho z grafu vypnete – zbylé kontinenty se přeskládají zpátky na osu x, ne že by zůstaly viset na původním místě. V režimu „Podíl“ každý sloupec vyplňuje celou výšku a ukazuje procentní podíl mezi zapnutými kontinenty daného roku.
+        Jeden film se kontinentu započítá nejvýše jednou, i když na něm spolupracovalo několik zemí ze stejného kontinentu. Mezikontinentální koprodukce se započítá jednou každému zastoupenému kontinentu. Režim „Podíl“ proto ukazuje rozdělení všech vazeb film–kontinent v daném roce, nikoli podíl unikátních filmů. Po vypnutí kategorie se sloupce přepočítají pouze ze zbývajících kontinentů. Roky 1993 a 2020 chybějí, protože se festival nekonal.
       </Text>
     </Stack>
   );

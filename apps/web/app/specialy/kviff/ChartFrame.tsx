@@ -36,7 +36,7 @@ export default function ChartFrame({ title, subtitle, source, children, fullWidt
     >
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'center', columnGap: 18, marginBottom: 12 }}>
         <div style={{ minWidth: 0 }}>
-          <div style={{ ...NUM_FONT, fontSize: 20, fontWeight: 700, lineHeight: 1.2, color: '#1a1a1a', marginBottom: subtitle ? 4 : 0 }}>
+          <div style={{ ...NUM_FONT, fontSize: 24, fontWeight: 800, lineHeight: 1.15, color: '#1a1a1a', marginBottom: subtitle ? 6 : 0 }}>
             {title}
           </div>
           {subtitle && (
@@ -44,7 +44,7 @@ export default function ChartFrame({ title, subtitle, source, children, fullWidt
           )}
           {headerContent && <div style={{ display: 'flex', justifyContent: 'center', marginTop: 10 }}>{headerContent}</div>}
         </div>
-        <ChartSignature size={34} layout="stacked" style={{ lineHeight: 1, alignSelf: 'center' }} />
+        <ChartSignature size={24} layout="stacked" style={{ lineHeight: 1, alignSelf: 'start', opacity: 0.82 }} />
       </div>
 
       {children}

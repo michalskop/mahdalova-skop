@@ -51,37 +51,37 @@ export function FooterCentered() {
         </Group>
         <Group gap="xs" justify="center" w="100%">
 
-          <Anchor href={`https://creators.spotify.com/pod/show/${contacts.social.spotify}`} target="_blank"  underline="hover">
+          <Anchor aria-label="DataTimes na Spotify" href={`https://creators.spotify.com/pod/show/${contacts.social.spotify}`} target="_blank" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconBrandSpotify style={{ width: rem(18), height: rem(18) }} stroke={1.5} />  
             </ActionIcon>
           </Anchor>
 
-          <Anchor href={`https://${contacts.social.bluesky}`} target="_blank"  underline="hover">
+          <Anchor aria-label="DataTimes na Bluesky" href={`https://${contacts.social.bluesky}`} target="_blank" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconBrandBluesky style={{ width: rem(18), height: rem(18) }} stroke={1.5} />  
             </ActionIcon>
           </Anchor>
 
-          <Anchor href={`https://twitter.com/${contacts.social.twitter}`} target="_blank"  underline="hover">
+          <Anchor aria-label="DataTimes na síti X" href={`https://twitter.com/${contacts.social.twitter}`} target="_blank" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconBrandX style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>
           </Anchor>
 
-          <Anchor href={`https://facebook.com/${contacts.social.facebook}`} target="_blank"  underline="hover">
+          <Anchor aria-label="DataTimes na Facebooku" href={`https://facebook.com/${contacts.social.facebook}`} target="_blank" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconBrandFacebook style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>
           </Anchor>
 
-          <Anchor href={`https://instagram.com/${contacts.social.instagram}`} target="_blank"  underline="hover">
+          <Anchor aria-label="DataTimes na Instagramu" href={`https://instagram.com/${contacts.social.instagram}`} target="_blank" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>
           </Anchor>
 
-          <Anchor href="/rss.xml" title="RSS feed" underline="hover">
+          <Anchor aria-label="RSS kanál DataTimes" href="/rss.xml" title="RSS kanál DataTimes" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconRss style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>

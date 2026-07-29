@@ -69,7 +69,7 @@ export default function ProgramBreakdownChart({
 
             return (
               <Tooltip key={row.year} label={tooltip} multiline maw={360} withArrow>
-                <Stack gap="xs" align="center" title={tooltip} style={{ cursor: 'help' }}>
+          <Stack gap="xs" align="center" title={tooltip}>
                   <Text fw={900} style={NUM_FONT}>{total}</Text>
                   <Box
                     aria-label={`${row.year}: ${total} filmů, z toho ${fiction} hraných, ${documentaries} dokumentárních a ${shorts} krátkých`}

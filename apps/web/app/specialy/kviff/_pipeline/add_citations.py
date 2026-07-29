@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """One-off script: inject researched citationCz/citationSource into honors.ts
 for recipients where the KVIFF archive fulltext had no descriptive text, and
 add the newly-discovered 2005 recipient Jiri Krejcik. Run once, then delete."""
@@ -17,11 +17,11 @@ CITATIONS = {
         "https://www.e15.cz/magazin/znelky-patri-k-festivalu-sedmnact-let-vybrali-jsme-sedm-nej-847973",
     ),
     "Otakar Vávra": (
-        "Ocenění převzal v roce, kdy Křišťálový glóbus dostal svou dnešní podobu – křišťálovou kouli v objetí ženské postavy podle návrhu fotografa Tona Stana.",
+        "Ocenění převzal v roce, kdy Křišťálový globus dostal svou dnešní podobu – křišťálovou kouli v objetí ženské postavy podle návrhu fotografa Tona Stana.",
         "https://www.e15.cz/magazin/rezisera-vavru-uctila-nova-znelka-karlovarskeho-festivalu-777564",
     ),
     "John Boorman": (
-        "Šlo o čestné ocenění za celoživotní dílo, nikoli o soutěžní cenu – hlavní Křišťálový glóbus téhož ročníku vyhrál český film Rok ďábla.",
+        "Šlo o čestné ocenění za celoživotní dílo, nikoli o soutěžní cenu – hlavní Křišťálový globus téhož ročníku vyhrál český film Rok ďábla.",
         "https://en.wikipedia.org/wiki/37th_Karlovy_Vary_International_Film_Festival",
     ),
     "Vlastimil Brodský": (
@@ -89,7 +89,7 @@ CITATIONS = {
         "https://www.euronews.com/culture/2016/07/04/karlovy-vary-film-festival-honours-willem-dafoe-with-outstanding-contribution",
     ),
     "Ken Loach": (
-        "Festival dvojici s Paulem Lavertym označil za tvůrce, kteří společně na dvanácti filmech spoluvytvořili britský sociálně-realistický film – mimo jiné držitele Zlaté palmy za I, Daniel Blake a Vítr, který čechrá ječmen. Loach přijel do Varů poprvé už v roce 1967 s filmem Chudák Kráva a v roce 1970 tu za film Kes získal svůj první Křišťálový glóbus.",
+        "Festival dvojici s Paulem Lavertym označil za tvůrce, kteří společně na dvanácti filmech spoluvytvořili britský sociálně-realistický film – mimo jiné držitele Zlaté palmy za I, Daniel Blake a Vítr, který čechrá ječmen. Loach přijel do Varů poprvé už v roce 1967 s filmem Chudák Kráva a v roce 1970 tu za film Kes získal svůj první Křišťálový globus.",
         "https://www.criterion.com/current/posts/4737-a-cinema-of-conscience-ken-loach-and-paul-laverty-at-karlovy-vary",
     ),
     "Paul Laverty": (

@@ -1,11 +1,11 @@
-// Vítězové soutěžní Velké ceny (Grand Prix – Křišťálový glóbus pro nejlepší
+﻿// Vítězové soutěžní Velké ceny (Grand Prix – Křišťálový globus pro nejlepší
 // film), 1948-2025. POZOR: tohle je JINÁ cena než honoraryCrystalGlobeRecipients
 // v honors.ts – ta je čestná osobní cena za celoživotní přínos (od 1995),
 // tady jde o soutěžní cenu pro konkrétní vítězný film udílenou od roku 1948.
 // Festival sám vznikl už 1946, ale první dva ročníky byly nesoutěžní.
 //
-// Zdroj: česká Wikipedie, heslo "Křišťálový glóbus" (tabulka "Velká cena
-// Křišťálový glóbus – Grand Prix"), stažena přímo jako wikitext a ručně
+// Zdroj: česká Wikipedie, heslo "Křišťálový globus" (tabulka "Velká cena
+// Křišťálový globus – Grand Prix"), stažena přímo jako wikitext a ručně
 // přepsána – ne přes AI shrnutí. Vybrané roky mají ve wikitextu vlastní
 // citace (Český rozhlas, ČT24, Reflex.cz, iDNES.cz, České noviny).
 // Oficiální archiv KVIFF (kviff.com/.../festival-archive/{rok}) pro roky

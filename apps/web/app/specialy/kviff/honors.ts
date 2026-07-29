@@ -1,18 +1,18 @@
-// OVĚŘENO PROTI OFICIÁLNÍMU ARCHIVU KVIFF A ROČNÍKOVÝM SOUHRNŮM:
+﻿// OVĚŘENO PROTI OFICIÁLNÍMU ARCHIVU KVIFF A ROČNÍKOVÝM SOUHRNŮM:
 // https://www.kviff.com/en/about-us/festival-archive/{rok}
 // Dnešní archivní karty "Awarded Guests" nejsou u starších ročníků úplné,
 // proto u doplněných historických jmen držíme jako kontrolní vrstvu i
 // ročníkové souhrny cen.
 //
-// Držíme VÝHRADNĚ Křišťálový glóbus za mimořádný umělecký přínos světové
-// kinematografii (Crystal Globe for Outstanding Artistic Contribution to
+// Držíme VÝHRADNĚ Křišťálový globus za mimořádný umělecký přínos světové
+// kinematografii (Křišťálový globus for Outstanding Artistic Contribution to
 // World Cinema). Festival na téže stránce uděluje i Cenu prezidenta festivalu
 // (Festival President's Award) a Cenu prezidenta festivalu za přínos české
 // kinematografii (Festival President's Award for Contribution to Czech
 // Cinema) – to jsou JINÉ ceny a záměrně je do této řady neplníme.
 //
 // Rok 1994 a starší: archiv na stránce ročníku sekci "Awarded Guests" vůbec
-// nemá, jediná zmínka "Crystal Globe" patří soutěžní Grand Prix. Čestná řada
+// nemá, jediná zmínka "Křišťálový globus" patří soutěžní Grand Prix. Čestná řada
 // pro osobnosti tedy podle dostupného archivu začíná až rokem 1995.
 // Chybí roky: 2020 (festival se nekonal, covid) a 2024 (festival dle dostupného
 // archivu udělil jen Ceny prezidenta).
@@ -25,8 +25,8 @@ export type HonorRecipient = {
   country: string;
   role: string;
   roleCz: string;
-  award: 'Crystal Globe for Outstanding Artistic Contribution to World Cinema';
-  awardCz: 'Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii';
+  award: 'Křišťálový globus for Outstanding Artistic Contribution to World Cinema';
+  awardCz: 'Křišťálový globus za mimořádný umělecký přínos světové kinematografii';
   reason: string;
   source: string;
   status?: 'announced';
@@ -40,9 +40,9 @@ export type HonorRecipient = {
   citationSource?: string;
 };
 
-const award = 'Crystal Globe for Outstanding Artistic Contribution to World Cinema' as const;
-const awardCz = 'Křišťálový glóbus za mimořádný umělecký přínos světové kinematografii' as const;
-const reason = 'Čestné ocenění za mimořádný umělecký přínos a výraznou stopu ve vývoji světové kinematografie; nejde o soutěžní cenu za jeden konkrétní film.';
+const award = 'Křišťálový globus for Outstanding Artistic Contribution to World Cinema' as const;
+const awardCz = 'Křišťálový globus za mimořádný umělecký přínos světové kinematografii' as const;
+const reason = 'Čestné ocenění za mimořádný umělecký přínos a výraznou stopu ve vývoji světové kinematografie, udělované za dlouhodobou práci.';
 
 function src(year: number) {
   return `https://www.kviff.com/en/about-us/festival-archive/${year}`;
@@ -77,13 +77,13 @@ const rawHonoraryCrystalGlobeRecipients = [
   { year: 2000, name: 'Věra Chytilová', gender: 'woman', country: 'Česko', role: 'director', roleCz: 'režisérka', source: wiki(2000), citationCz: 'Cenu přebírala s typickým černým humorem – slavnou se stala scéna ze zahajovací znělky, kdy se rozbitý glóbus snažila slepit lepidlem, které „nechytalo“.', citationSource: 'https://www.e15.cz/magazin/znelky-patri-k-festivalu-sedmnact-let-vybrali-jsme-sedm-nej-847973' },
   { year: 2000, name: 'Carlos Saura', gender: 'man', country: 'Španělsko', role: 'director', roleCz: 'režisér', source: src(2000), citationCz: 'Festival ho označil za jednoho z nejzavedenějších španělských režisérů vedle Almodóvara a připomněl jeho dlouholetou spolupráci s Geraldine Chaplinovou.' },
   { year: 2001, name: 'Ben Kingsley', gender: 'man', country: 'Británie', role: 'actor', roleCz: 'herec', source: src(2001), citationCz: 'Festival připomněl jeho ikonické role – Itzhaka Sterna, Gándhího a Georgese Mélièse – u příležitosti držitele Oscaru a dvou Zlatých glóbů.' },
-  { year: 2001, name: 'Otakar Vávra', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: wiki(2001), citationCz: 'Ocenění převzal v roce, kdy Křišťálový glóbus dostal svou dnešní podobu – křišťálovou kouli v objetí ženské postavy podle návrhu fotografa Tona Stana.', citationSource: 'https://www.e15.cz/magazin/rezisera-vavru-uctila-nova-znelka-karlovarskeho-festivalu-777564' },
-  { year: 2002, name: 'John Boorman', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: wiki(2002), citationCz: 'Šlo o čestné ocenění za celoživotní dílo, nikoli o soutěžní cenu – hlavní Křišťálový glóbus téhož ročníku vyhrál český film Rok ďábla.', citationSource: 'https://en.wikipedia.org/wiki/37th_Karlovy_Vary_International_Film_Festival' },
+  { year: 2001, name: 'Otakar Vávra', gender: 'man', country: 'Česko', role: 'director', roleCz: 'režisér', source: wiki(2001), citationCz: 'Ocenění převzal v roce, kdy Křišťálový globus dostal svou dnešní podobu – křišťálovou kouli v objetí ženské postavy podle návrhu fotografa Tona Stana.', citationSource: 'https://www.e15.cz/magazin/rezisera-vavru-uctila-nova-znelka-karlovarskeho-festivalu-777564' },
+  { year: 2002, name: 'John Boorman', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: wiki(2002), citationCz: 'Šlo o čestné ocenění za celoživotní dílo, nikoli o soutěžní cenu – hlavní Křišťálový globus téhož ročníku vyhrál český film Rok ďábla.', citationSource: 'https://en.wikipedia.org/wiki/37th_Karlovy_Vary_International_Film_Festival' },
   { year: 2002, name: 'Vlastimil Brodský', gender: 'man', country: 'Česko', role: 'actor', roleCz: 'herec', source: wiki(2002), citationCz: 'Ocenění mu bylo uděleno in memoriam – český herec zemřel v dubnu 2002, několik měsíců před červencovým festivalem.', citationSource: 'https://en.wikipedia.org/wiki/Vlastimil_Brodsk%C3%BD' },
   { year: 2002, name: 'Sean Connery', gender: 'man', country: 'Británie', role: 'actor', roleCz: 'herec', source: wiki(2002), citationCz: 'Na osobní účast rezignoval ze zdravotních důvodů; v té době natáčel v Praze film Liga výjimečných.', citationSource: 'https://en.wikipedia.org/wiki/37th_Karlovy_Vary_International_Film_Festival' },
   { year: 2003, name: 'Morgan Freeman', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2003), citationCz: 'Festival ho popsal jako charismatického herce, jehož přítomnost byla poctou pro celý ročník.' },
-  { year: 2003, name: 'Stephen Frears', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: src(2003), citationCz: 'Křišťálový glóbus dostal společně s Jiřím Menzelem za celoživotní dílo.' },
-  { year: 2003, name: 'Jiří Menzel', gender: 'man', country: 'Česko', role: 'director, actor', roleCz: 'režisér, herec', source: src(2003), citationCz: 'Křišťálový glóbus dostal společně se Stephenem Frearsem za celoživotní dílo.' },
+  { year: 2003, name: 'Stephen Frears', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: src(2003), citationCz: 'Křišťálový globus dostal společně s Jiřím Menzelem za celoživotní dílo.' },
+  { year: 2003, name: 'Jiří Menzel', gender: 'man', country: 'Česko', role: 'director, actor', roleCz: 'režisér, herec', source: src(2003), citationCz: 'Křišťálový globus dostal společně se Stephenem Frearsem za celoživotní dílo.' },
   { year: 2004, name: 'Harvey Keitel', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2004), citationCz: 'Festival vyzdvihl širokou škálu jeho rolí – od brutálních násilníků po citlivé otce a manžely.' },
   { year: 2004, name: 'Miroslav Ondříček', gender: 'man', country: 'Česko', role: 'cinematographer', roleCz: 'kameraman', source: wiki(2004), citationCz: 'Slavný kameraman ocenění přebíral se slovy „Hlavně ať žije Slavia“ – narážkou na svou fotbalovou vášeň.', citationSource: 'https://isport.blesk.cz/clanek/fotbal/232118/slavny-filmar-i-fanousek-predevsim-at-zije-slavia-hlasal-ondricek.html' },
   { year: 2004, name: 'Roman Polanski', gender: 'man', country: 'Polsko / Francie', role: 'director', roleCz: 'režisér', source: src(2004), citationCz: 'Ocenění dostal jako tvůrce Čínské čtvrti, Rosemary má děťátko a Pianisty.' },
@@ -115,7 +115,7 @@ const rawHonoraryCrystalGlobeRecipients = [
   { year: 2014, name: 'William Friedkin', gender: 'man', country: 'USA', role: 'director', roleCz: 'režisér', source: src(2014), citationCz: 'Festival připomněl jeho režii filmů Mzda strachu a Vymítač ďábla.' },
   { year: 2015, name: 'Richard Gere', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2015), citationCz: 'Ocenění přebíral na zahájení 50. jubilejního ročníku festivalu, kde připomněl i 80. narozeniny dalajlamy.', citationSource: 'https://variety.com/2015/film/festivals/richard-gere-to-receive-crystal-globe-at-karlovy-vary-film-festival-1201524955/' },
   { year: 2016, name: 'Willem Dafoe', gender: 'man', country: 'USA', role: 'actor', roleCz: 'herec', source: src(2016), citationCz: 'Festival mu jako poctu promítl snímky Pasolini a Poslední pokušení Krista.', citationSource: 'https://www.euronews.com/culture/2016/07/04/karlovy-vary-film-festival-honours-willem-dafoe-with-outstanding-contribution' },
-  { year: 2017, name: 'Ken Loach', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: src(2017), citationCz: 'Festival dvojici s Paulem Lavertym označil za tvůrce, kteří společně na dvanácti filmech spoluvytvořili britský sociálně-realistický film – mimo jiné držitele Zlaté palmy za I, Daniel Blake a Vítr, který čechrá ječmen. Loach přijel do Varů poprvé už v roce 1967 s filmem Chudák Kráva a v roce 1970 tu za film Kes získal svůj první Křišťálový glóbus.', citationSource: 'https://www.criterion.com/current/posts/4737-a-cinema-of-conscience-ken-loach-and-paul-laverty-at-karlovy-vary' },
+  { year: 2017, name: 'Ken Loach', gender: 'man', country: 'Británie', role: 'director', roleCz: 'režisér', source: src(2017), citationCz: 'Festival dvojici s Paulem Lavertym označil za tvůrce, kteří společně na dvanácti filmech spoluvytvořili britský sociálně-realistický film – mimo jiné držitele Zlaté palmy za I, Daniel Blake a Vítr, který čechrá ječmen. Loach přijel do Varů poprvé už v roce 1967 s filmem Chudák Kráva a v roce 1970 tu za film Kes získal svůj první Křišťálový globus.', citationSource: 'https://www.criterion.com/current/posts/4737-a-cinema-of-conscience-ken-loach-and-paul-laverty-at-karlovy-vary' },
   { year: 2017, name: 'Paul Laverty', gender: 'man', country: 'Británie', role: 'screenwriter', roleCz: 'scenárista', source: src(2017), citationCz: 'Festival dvojici s Kenem Loachem označil za tvůrce, kteří společně na dvanácti filmech spoluvytvořili britský sociálně-realistický film – mimo jiné držitele Zlaté palmy za I, Daniel Blake a Vítr, který čechrá ječmen.', citationSource: 'https://www.criterion.com/current/posts/4737-a-cinema-of-conscience-ken-loach-and-paul-laverty-at-karlovy-vary' },
   { year: 2017, name: 'James Newton Howard', gender: 'man', country: 'USA', role: 'composer', roleCz: 'skladatel', source: src(2017), citationCz: 'Skladatel hudby k filmům Pretty Woman, Šestý smysl, Batman Begins i všem čtyřem dílům Hunger Games na zahájení dirigoval Symfonický orchestr Českého rozhlasu při světové premiéře hudby z Fantastických zvířat 2.', citationSource: 'https://variety.com/2017/film/festivals/ken-loach-james-newton-howard-honored-karlovy-vary-1202393875/' },
   { year: 2018, name: 'Tim Robbins', gender: 'man', country: 'USA', role: 'actor, director', roleCz: 'herec, režisér', source: src(2018), citationCz: 'Na festivalu vystoupil i se svou kapelou The Rogues Gallery Band a uvedl vlastní filmy Bob Roberts a Cradle Will Rock.', citationSource: 'https://variety.com/2018/film/global/tim-robbins-karlovy-vary-film-festival-1202850697/' },
@@ -167,7 +167,7 @@ export const pre1989AwardsNotes = [
   {
     period: '1988–1990',
     title: 'Předěl po listopadu',
-    body: 'Poslední předlistopadový ročník 1988 měl Grand Prix pro čínský film Hibiscus Town. V roce 1990 už po politickém zlomu Grand Prix udělena nebyla. Současná čestná řada oceněných hostů (Křišťálový glóbus za mimořádný umělecký přínos) začíná podle dostupného archivu až rokem 1995.',
+    body: 'Poslední předlistopadový ročník 1988 měl Grand Prix pro čínský film Hibiscus Town. V roce 1990 už po politickém zlomu Grand Prix udělena nebyla. Současná čestná řada oceněných hostů (Křišťálový globus za mimořádný umělecký přínos) začíná podle dostupného archivu až rokem 1995.',
   },
 ];
 

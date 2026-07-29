@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useRef, useState } from 'react';
+import { useReducedMotion } from '@mantine/hooks';
 import ChartLegend from './ChartLegend';
 import type { HonorRecipient } from './honors';
 
@@ -12,13 +13,14 @@ import type { HonorRecipient } from './honors';
 // potřeba samostatný klikací panel navíc.
 
 const NUM_FONT_FAMILY = 'var(--font-roboto-condensed), Arial, sans-serif';
-const COLOR_WOMAN = 'var(--mantine-color-brand-6)';
-const COLOR_MAN = 'var(--mantine-color-brandNavy-6)';
+const COLOR_WOMAN = 'var(--mantine-color-brandOrange-6)';
+const COLOR_MAN = 'var(--mantine-color-brandTeal-7)';
 const VIEW_W = 1000;
 
 type HoverInfo = { recipient: HonorRecipient; left: number; top: number } | null;
 
 export default function HonoraryTimeline({ recipients }: { recipients: HonorRecipient[] }) {
+  const reduceMotion = useReducedMotion();
   const [activeKeys, setActiveKeys] = useState<Set<string>>(new Set(['woman', 'man']));
   const [hover, setHover] = useState<HoverInfo>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -62,13 +64,16 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
         <svg viewBox={`0 0 ${VIEW_W} ${height}`} width="100%" style={{ display: 'block' }}>
           {years.map((year, yi) => {
             const yearRecipients = recipients.filter((r) => r.year === year);
+            const activeRecipients = yearRecipients.filter((r) => activeKeys.has(r.gender));
             const xCenter = colW * (yi + 0.5);
             const hasWoman = yearRecipients.some((r) => r.gender === 'woman');
             return (
               <g key={year}>
-                {yearRecipients.map((recipient, ri) => {
-                  const y = topPad + gridHeight - (ri + 1) * sq - ri * sqGap;
+                {yearRecipients.map((recipient) => {
+                  const activeIndex = activeRecipients.indexOf(recipient);
                   const visible = activeKeys.has(recipient.gender);
+                  const stackIndex = visible ? activeIndex : yearRecipients.indexOf(recipient);
+                  const y = topPad + gridHeight - (stackIndex + 1) * sq - stackIndex * sqGap;
                   return (
                     <rect
                       key={`${recipient.year}-${recipient.name}`}
@@ -79,10 +84,10 @@ export default function HonoraryTimeline({ recipients }: { recipients: HonorReci
                       height={sq}
                       rx={4}
                       fill={recipient.gender === 'woman' ? COLOR_WOMAN : COLOR_MAN}
-                      opacity={visible ? 1 : 0.14}
+                      opacity={visible ? 1 : 0}
                       style={{
-                        transition: 'opacity 0.15s',
-                        cursor: visible ? 'help' : 'default',
+                        transition: reduceMotion ? 'none' : 'opacity 0.2s ease, y 0.35s ease',
+                        cursor: 'default',
                         pointerEvents: visible ? 'auto' : 'none',
                       }}
                       onMouseEnter={(e) => showTip(e, recipient)}

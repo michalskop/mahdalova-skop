@@ -1,9 +1,9 @@
-{{Různé významy|druhý=ceně udělované za vítězství ve sportovních soutěžích|rozlišovač=sport}}
+﻿{{Různé významy|druhý=ceně udělované za vítězství ve sportovních soutěžích|rozlišovač=sport}}
 {{Infobox - cena
 | cena udělována = za nejlepší film
 | datum = červenec
 }}
-'''Křišťálový glóbus''' je hlavní cena pro nejlepší film na [[Mezinárodní filmový festival Karlovy Vary|Mezinárodním filmovém festivalu]] v&nbsp;[[Karlovy Vary|Karlových Varech]] udělovaná od roku [[1948 ve filmu|1948]], kdy proběhl první soutěžní ročník IFFKV (festival sám je o 2 roky starší).<ref>{{Citace elektronického periodika
+'''Křišťálový globus''' je hlavní cena pro nejlepší film na [[Mezinárodní filmový festival Karlovy Vary|Mezinárodním filmovém festivalu]] v&nbsp;[[Karlovy Vary|Karlových Varech]] udělovaná od roku [[1948 ve filmu|1948]], kdy proběhl první soutěžní ročník IFFKV (festival sám je o 2 roky starší).<ref>{{Citace elektronického periodika
  | titul = Mezinárodní filmový festival Karlovy Vary patří k nejstarším v Evropě. Jeho první ročník se konal už v roce 1946
  | periodikum = Český rozhlas Karlovy Vary
  | datum_vydání = 2020-07-03
@@ -42,7 +42,7 @@ Cena byla nejdříve předávána ve formě charakteristické [[Karlovarské opl
  | datum_přístupu = 2025-05-10
 }}</ref> 
 
-== Velká cena Křišťálový glóbus – Grand Prix ==
+== Velká cena Křišťálový globus – Grand Prix ==
 {| class="wikitable"
 |+ Caption text
 |-
@@ -163,7 +163,7 @@ Cena byla nejdříve předávána ve formě charakteristické [[Karlovarské opl
 | [[2018 ve filmu|2018]] || ''[[„Je mi jedno, že se zapíšeme do dějin jako barbaři“]]'' || ''„Îmi este indiferent dacă în istorie vom intra ca barbari”'' || [[Radu Jude]] || {{Vlajka a název|Rumunsko}}
 |-
 | [[Mezinárodní filmový festival Karlovy Vary 2019|2019]] || ''[[Otec (film, 2019)|Otec]]'' || ''Бащата'' || [[Kristina Grozevová]]<br>[[Petar Valčanov]]<ref>{{Citace elektronické monografie
- | titul = Křišťálový glóbus dostal film bulharských režisérů s názvem Otec
+ | titul = Křišťálový globus dostal film bulharských režisérů s názvem Otec
  | url = https://www.ceskenoviny.cz/zpravy/kristalovy-globus-dostal-film-bulharskych-reziseru-s-nazvem-otec/1774947
  | vydavatel = České noviny
  | datum_vydání = 2019-07-06
@@ -189,7 +189,7 @@ Cena byla nejdříve předávána ve formě charakteristické [[Karlovarské opl
 * {{Commonscat}}
 * [https://www.kviff.com/cs/uvod MFF Karlovy Vary] – oficiální stránky 
 
-{{Křišťálový glóbus}}
+{{Křišťálový globus}}
 {{Mezinárodní filmový festival Karlovy Vary}}
 {{Portály|Film}}
 
