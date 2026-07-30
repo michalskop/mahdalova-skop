@@ -285,7 +285,21 @@ export default function HistoryScrolly() {
           style={{ '--milestone-y': `${(milestone.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
         >
           <div className={styles.bubble}>
-            <span className={styles.bubbleTrace} aria-hidden="true" />
+            <svg
+              className={styles.bubbleTrace}
+              aria-hidden="true"
+              preserveAspectRatio="none"
+            >
+              <rect
+                className={styles.bubbleTraceLine}
+                x="1"
+                y="1"
+                width="calc(100% - 2px)"
+                height="calc(100% - 2px)"
+                rx="3"
+                pathLength="1"
+              />
+            </svg>
             <div className={styles.bubbleMeta}>
               <span className={styles.bubbleYear}>{milestone.year}</span>
               <span className={styles.bubbleEyebrow}>{milestone.eyebrow}</span>
