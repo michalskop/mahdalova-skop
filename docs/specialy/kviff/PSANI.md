@@ -94,9 +94,11 @@ Totéž pravidlo (rozdělit na nezávisle škálovatelné prvky, nikdy jeden plo
 
 Klíčové hodnoty z tooltipu musí být čitelné i bez hoveru (dotykové zařízení) – buď přímo v textu u grafu, nebo v přístupné tabulce pod ním.
 
-## 13. Časová osa: vždy sdílená `components/common/Timeline`, ne bespoke komponenta
+## 13. Běžná časová osa používá `components/common/Timeline`; narativní scrollytelling může být vlastní
 
 Bývalá kapitolová komponenta `VerticalTimeline.tsx` (vlastní cik-cak osa) měla na mobilu bug – svislá osa byla přišpendlená na `left: 50%` bez ohledu na to, že mobilní grid mění sloupce, takže na úzkých šířkách protínala text karet. Nahrazeno sdílenou `components/common/Timeline.tsx` (stejná komponenta jako v `<Timeline yamlFile="..." />` u článků) – 2026-07-12, viz `[slug]/page.tsx` (`festivalTimelineContent`, `pre1989AwardsTimeline`).
+
+Sdílená komponenta zůstává závazným výchozím řešením pro chronologické seznamy v kapitolách. Výjimkou může být ústřední redakční vizualizace, v níž scroll a tvar časové cesty samy nesou část vyprávění (např. historie festivalu na landing page). Takový scrollytelling musí mít samostatně navrženou mobilní kompozici, čitelný obsah bez hoveru, použitelnou statickou podobu bez animace a respektovat `prefers-reduced-motion`. Výjimka není důvodem vytvářet vlastní timeline pro běžný seznam událostí.
 
 Pro éry/období (ne přesná kalendářní data) nastav `date` na volný text ("1959–1990", "60. léta") – `formatEventDate` v `Timeline.tsx` se pokusí naparsovat ISO/JS datum, a když se to nepovede, zobrazí `date` beze změny. Žádné nové pole ani úprava sdílené komponenty nejsou potřeba.
 

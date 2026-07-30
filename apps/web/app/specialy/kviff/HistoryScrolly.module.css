@@ -1,86 +1,278 @@
-/* Scrollytelling časové osy historie festivalu. Skeleton převzatý z ověřeného
-   DPBP patternu (sticky grafika + kroky řízené IntersectionObserverem), ale
-   KVIFF-lokální a v zlato-fialové paletě. */
-
 .scrolly {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.7fr);
-  gap: 36px;
-  align-items: start;
-}
-
-.sticky {
-  position: sticky;
-  top: 96px;
-}
-
-.axisSvg {
-  display: block;
+  --route-purple: #522a7a;
+  --route-purple-dark: #1f102e;
+  --route-gold: var(--mantine-color-brandYellow-8);
+  height: clamp(2700px, 305vw, 3300px);
+  margin: 12px auto 20px;
+  max-width: 1080px;
+  position: relative;
   width: 100%;
-  height: auto;
 }
 
-.steps {
-  padding-bottom: 30vh;
+.route {
+  height: 100%;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
 }
 
-.step {
-  align-items: center;
-  display: flex;
-  min-height: 74vh;
-  opacity: 0.34;
-  transition: opacity 200ms ease;
+.routeMobile {
+  display: none;
 }
 
-.stepActive {
+.routeShadow,
+.routeProgress,
+.moscowSection {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.routeShadow {
+  stroke: var(--mantine-color-background-6);
+  stroke-width: 5;
+}
+
+.routeProgress {
+  stroke: var(--route-purple);
+  stroke-width: 6;
+  transition: stroke-dashoffset 90ms linear;
+}
+
+.moscowSection {
+  opacity: 0.72;
+  stroke: var(--route-gold);
+  stroke-dasharray: 2 13;
+  stroke-width: 9;
+}
+
+.markerHalo {
+  fill: var(--mantine-color-background-1);
+  opacity: 0.92;
+  stroke: var(--route-purple);
+  stroke-width: 1.5;
+  transition: r 220ms ease;
+  vector-effect: non-scaling-stroke;
+}
+
+.markerDot {
+  fill: var(--route-purple);
+  stroke: var(--mantine-color-background-1);
+  stroke-width: 3;
+  transition: fill 220ms ease, r 220ms ease;
+  vector-effect: non-scaling-stroke;
+}
+
+.markerDotActive {
+  fill: var(--route-gold);
+  stroke: var(--route-purple-dark);
+}
+
+.markerYear {
+  fill: var(--route-purple-dark);
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  opacity: 0.5;
+  transition: opacity 180ms ease;
+}
+
+.markerYearPast {
   opacity: 1;
 }
 
-.bubble {
-  background: var(--mantine-color-background-0);
-  border-left: 4px solid var(--mantine-color-brandYellow-8);
-  box-shadow: 0 6px 24px rgba(16, 20, 50, 0.1);
-  border-radius: 0 8px 8px 0;
-  padding: 18px 20px;
+.milestone {
+  position: absolute;
+  top: var(--milestone-y);
+  transform: translateY(-50%);
+  width: min(42%, 430px);
+  z-index: 2;
 }
 
-.bubble strong {
-  color: var(--mantine-color-brandNavy-9);
-  display: block;
-  font-size: 1.15rem;
-  line-height: 1.2;
-  margin-bottom: 8px;
+.left {
+  left: 4%;
+}
+
+.right {
+  right: 3%;
+}
+
+.bubble {
+  background: color-mix(in srgb, var(--mantine-color-background-0) 96%, transparent);
+  border: 1px solid var(--mantine-color-background-6);
+  border-radius: 4px;
+  box-shadow: 0 10px 34px rgba(31, 16, 46, 0.08);
+  opacity: 0.48;
+  padding: clamp(20px, 3vw, 30px);
+  position: relative;
+  transform: translateY(8px);
+  transition: border-color 220ms ease, box-shadow 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+.bubble::before {
+  background: var(--route-gold);
+  content: '';
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms ease;
+  width: 70px;
+}
+
+.milestoneActive .bubble {
+  border-color: color-mix(in srgb, var(--route-purple) 26%, var(--mantine-color-background-6));
+  box-shadow: 0 14px 42px rgba(31, 16, 46, 0.13);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.milestoneActive .bubble::before {
+  transform: scaleX(1);
+}
+
+.bubbleMeta {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 12px;
+}
+
+.bubbleYear {
+  color: var(--route-purple);
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.bubbleEyebrow {
+  color: var(--route-purple);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.bubble h3 {
+  color: var(--route-purple-dark);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.25;
+  margin: 0 0 10px;
 }
 
 .bubble p {
   color: #333;
   font-size: 1rem;
-  line-height: 1.55;
+  line-height: 1.62;
   margin: 0;
+}
+
+.routeNote,
+.covidNote {
+  color: var(--route-purple);
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.routeNote {
+  left: 50%;
+  top: 55%;
+  transform: rotate(13deg);
+}
+
+.covidNote {
+  left: 44%;
+  top: 85%;
 }
 
 @media (max-width: 760px) {
   .scrolly {
+    height: 3000px;
+    margin-left: -4px;
+  }
+
+  .routeDesktop {
+    display: none;
+  }
+
+  .routeMobile {
     display: block;
   }
 
-  .sticky {
-    top: 64px;
-    z-index: 2;
-    background: var(--mantine-color-background-2);
-    padding: 8px 0;
-    margin: 0 -20px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .routeMobile .markerYear {
+    transform: scaleX(1.85);
+    transform-box: fill-box;
+    transform-origin: center;
   }
 
-  .step {
-    min-height: 62vh;
+  .milestone {
+    width: auto;
+  }
+
+  .milestone.right {
+    left: 68px;
+    right: 0;
+  }
+
+  .milestone.left {
+    left: 0;
+    right: 68px;
+  }
+
+  .milestone.right .bubble {
+    transform: translateX(10px);
+  }
+
+  .milestone.left .bubble {
+    transform: translateX(-10px);
+  }
+
+  .milestoneActive.right .bubble,
+  .milestoneActive.left .bubble {
+    transform: translateX(0);
+  }
+
+  .milestone {
+    width: auto;
+  }
+
+  .bubble {
+    opacity: 0.58;
+    padding: 18px;
+  }
+
+  .routeNote {
+    left: 47%;
+    top: 55%;
+    transform: rotate(79deg);
+    transform-origin: center;
+  }
+
+  .covidNote {
+    left: 20px;
+    top: 85.5%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .step {
+  .routeProgress,
+  .markerHalo,
+  .markerDot,
+  .markerYear,
+  .bubble,
+  .bubble::before {
     transition: none;
   }
 }
