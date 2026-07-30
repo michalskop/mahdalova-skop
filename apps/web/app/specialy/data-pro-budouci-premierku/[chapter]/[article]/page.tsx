@@ -99,6 +99,9 @@ export async function generateMetadata({ params }: { params: { chapter: string; 
   return {
     title: `${art.frontmatter.title} – Data pro budoucí premiérku`,
     description: art.frontmatter.excerpt,
+    alternates: {
+      canonical: `/specialy/data-pro-budouci-premierku/${params.chapter}/${params.article}`,
+    },
     ...(cover
       ? {
           openGraph: {

@@ -11,6 +11,7 @@ import { Box, Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import ArticleRating from '@/components/common/ArticleRating';
 import { ArticleJsonLd } from '@/components/seo/ArticleJsonLd';
+import { getAuthorKeys } from '@/lib/schema';
 
 
 interface PageProps {
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.title,
       description: article.excerpt,
       authors: [{ name: article.author }],
+      alternates: { canonical: articleUrl },
       openGraph: {
         title: article.title,
         description: article.excerpt,
@@ -127,6 +129,7 @@ export default async function ArticlePage({ params }: PageProps) {
           imageUrl={imageUrl}
           articleUrl={articleUrl}
           tags={article.tags}
+          authorKeys={getAuthorKeys(article.author)}
         />
         <div data-pagefind-body>
           <ArticleRenderer {...article} slug={params.slug} />

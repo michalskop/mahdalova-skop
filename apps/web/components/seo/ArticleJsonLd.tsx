@@ -1,9 +1,10 @@
-import Script from 'next/script';
+import { authors, publisher, serializeJsonLd, type AuthorKey } from '@/lib/schema';
 
 interface ArticleJsonLdProps {
   title: string;
   description: string;
   author: string;
+  authorKeys: AuthorKey[];
   datePublished: string;
   dateModified?: string;
   imageUrl: string;
@@ -15,31 +16,30 @@ export function ArticleJsonLd({
   title,
   description,
   author,
+  authorKeys,
   datePublished,
   dateModified,
   imageUrl,
   articleUrl,
   tags = [],
 }: ArticleJsonLdProps) {
+  const publishedAt = new Date(datePublished).toISOString();
+  const modifiedAt = dateModified
+    ? new Date(dateModified).toISOString()
+    : publishedAt;
+
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'NewsArticle',
     headline: title,
-    description: description,
-    image: imageUrl,
-    datePublished: new Date(datePublished).toISOString(),
-    dateModified: dateModified 
-      ? new Date(dateModified).toISOString() 
-      : new Date(datePublished).toISOString(),
-    author: {
-      '@type': 'Person',
-      name: author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Mahdalová & Škop',
-      url: 'https://www.mahdalova-skop.cz',
-    },
+    description,
+    image: [imageUrl],
+    datePublished: publishedAt,
+    dateModified: modifiedAt,
+    author: authorKeys.length
+      ? authorKeys.map((key) => ({ '@id': authors[key]['@id'] }))
+      : [{ '@type': 'Person', name: author }],
+    publisher: { '@id': publisher['@id'] },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': articleUrl,
@@ -48,10 +48,9 @@ export function ArticleJsonLd({
   };
 
   return (
-    <Script
-      id="article-jsonld"
+    <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
     />
   );
 }
