@@ -1,6 +1,6 @@
 'use client';
 
-import ChartSignature from '@/components/dpbp/ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 
 // Sjednocený rám "grafové karty" podle DESIGN.md §9 (stejný standard jako
 // VegaChartImpl v Datech pro budoucí premiérku): Ink Wash pozadí #f8f6f0,

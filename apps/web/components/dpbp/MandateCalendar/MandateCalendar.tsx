@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import tripsData from './data.json';
-import ChartSignature from '../ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 
 type Trip = {
   n: number;    // pořadí cesty

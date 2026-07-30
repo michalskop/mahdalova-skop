@@ -1,0 +1,603 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "V červnu vystoupala teplota v {Berlíně|#272a59} i {Madridu|#f76800} na 39 °C",
+    "subtitle": "Týdenní maximální teplota (°C): {line} 2026   {band} rozmezí 2022–2025"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "city": "Berlín",
+        "week_start": "2025-12-29",
+        "band_min": 7.0,
+        "band_max": 14.5,
+        "band_mean": 10.7,
+        "temp_2026": 3.9
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-01-05",
+        "band_min": 3.0,
+        "band_max": 11.6,
+        "band_mean": 7.9,
+        "temp_2026": -0.5
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-01-12",
+        "band_min": 3.1,
+        "band_max": 6.9,
+        "band_mean": 5.4,
+        "temp_2026": 7.3
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-01-19",
+        "band_min": 3.2,
+        "band_max": 14.0,
+        "band_mean": 9.1,
+        "temp_2026": 4.5
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-01-26",
+        "band_min": 8.1,
+        "band_max": 11.2,
+        "band_mean": 9.5,
+        "temp_2026": 0.9
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-02-02",
+        "band_min": 5.5,
+        "band_max": 12.8,
+        "band_mean": 9.0,
+        "temp_2026": 3.0
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-02-09",
+        "band_min": 3.3,
+        "band_max": 16.0,
+        "band_mean": 11.0,
+        "temp_2026": 8.5
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-02-16",
+        "band_min": 10.5,
+        "band_max": 11.7,
+        "band_mean": 11.2,
+        "temp_2026": 10.3
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-02-23",
+        "band_min": 6.8,
+        "band_max": 13.7,
+        "band_mean": 10.3,
+        "temp_2026": 17.9
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-03-02",
+        "band_min": 10.6,
+        "band_max": 17.1,
+        "band_mean": 12.8,
+        "temp_2026": 16.2
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-03-09",
+        "band_min": 12.4,
+        "band_max": 17.5,
+        "band_mean": 15.5,
+        "temp_2026": 16.3
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-03-16",
+        "band_min": 16.0,
+        "band_max": 17.0,
+        "band_mean": 16.4,
+        "temp_2026": 14.0
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-03-23",
+        "band_min": 15.3,
+        "band_max": 22.2,
+        "band_mean": 17.4,
+        "temp_2026": 15.5
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-03-30",
+        "band_min": 12.5,
+        "band_max": 22.2,
+        "band_mean": 17.4,
+        "temp_2026": 17.8
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-04-06",
+        "band_min": 15.5,
+        "band_max": 25.8,
+        "band_mean": 21.1,
+        "temp_2026": 13.8
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-04-13",
+        "band_min": 13.6,
+        "band_max": 27.0,
+        "band_mean": 19.6,
+        "temp_2026": 21.5
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-04-20",
+        "band_min": 16.0,
+        "band_max": 22.9,
+        "band_mean": 19.1,
+        "temp_2026": 16.5
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-04-27",
+        "band_min": 19.1,
+        "band_max": 28.1,
+        "band_mean": 24.0,
+        "temp_2026": 29.3
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-05-04",
+        "band_min": 19.0,
+        "band_max": 27.7,
+        "band_mean": 22.5,
+        "temp_2026": 23.0
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-05-11",
+        "band_min": 22.2,
+        "band_max": 28.5,
+        "band_mean": 25.7,
+        "temp_2026": 18.2
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-05-18",
+        "band_min": 22.3,
+        "band_max": 25.7,
+        "band_mean": 24.1,
+        "temp_2026": 27.9
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-05-25",
+        "band_min": 24.2,
+        "band_max": 27.6,
+        "band_mean": 25.9,
+        "temp_2026": 29.2
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-06-01",
+        "band_min": 23.8,
+        "band_max": 29.0,
+        "band_mean": 26.7,
+        "temp_2026": 27.2
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-06-08",
+        "band_min": 23.1,
+        "band_max": 36.1,
+        "band_mean": 29.4,
+        "temp_2026": 25.2
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-06-15",
+        "band_min": 27.6,
+        "band_max": 34.1,
+        "band_mean": 30.3,
+        "temp_2026": 35.1
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-06-22",
+        "band_min": 29.2,
+        "band_max": 34.3,
+        "band_mean": 30.9,
+        "temp_2026": 39.6
+      },
+      {
+        "city": "Berlín",
+        "week_start": "2026-06-29",
+        "band_min": 24.6,
+        "band_max": 37.3,
+        "band_mean": 31.0,
+        "temp_2026": 30.1
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2025-12-29",
+        "band_min": 10.7,
+        "band_max": 14.5,
+        "band_mean": 12.6,
+        "temp_2026": 12.1
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-01-05",
+        "band_min": 9.4,
+        "band_max": 17.3,
+        "band_mean": 13.8,
+        "temp_2026": 11.0
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-01-12",
+        "band_min": 11.3,
+        "band_max": 14.6,
+        "band_mean": 12.9,
+        "temp_2026": 11.0
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-01-19",
+        "band_min": 9.4,
+        "band_max": 18.5,
+        "band_mean": 14.4,
+        "temp_2026": 10.8
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-01-26",
+        "band_min": 13.5,
+        "band_max": 19.5,
+        "band_mean": 16.6,
+        "temp_2026": 12.0
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-02-02",
+        "band_min": 11.5,
+        "band_max": 17.3,
+        "band_mean": 14.3,
+        "temp_2026": 12.8
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-02-09",
+        "band_min": 16.9,
+        "band_max": 19.6,
+        "band_mean": 18.2,
+        "temp_2026": 14.4
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-02-16",
+        "band_min": 16.5,
+        "band_max": 20.2,
+        "band_mean": 18.9,
+        "temp_2026": 18.0
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-02-23",
+        "band_min": 12.7,
+        "band_max": 18.1,
+        "band_mean": 15.3,
+        "temp_2026": 19.1
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-03-02",
+        "band_min": 13.7,
+        "band_max": 22.3,
+        "band_mean": 16.1,
+        "temp_2026": 16.9
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-03-09",
+        "band_min": 12.8,
+        "band_max": 23.7,
+        "band_mean": 19.1,
+        "temp_2026": 17.6
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-03-16",
+        "band_min": 15.1,
+        "band_max": 25.9,
+        "band_mean": 19.8,
+        "temp_2026": 20.4
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-03-23",
+        "band_min": 16.4,
+        "band_max": 25.5,
+        "band_mean": 19.3,
+        "temp_2026": 22.1
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-03-30",
+        "band_min": 21.8,
+        "band_max": 27.1,
+        "band_mean": 23.6,
+        "temp_2026": 25.9
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-04-06",
+        "band_min": 22.6,
+        "band_max": 27.6,
+        "band_mean": 25.7,
+        "temp_2026": 28.2
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-04-13",
+        "band_min": 17.8,
+        "band_max": 27.9,
+        "band_mean": 24.6,
+        "temp_2026": 27.5
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-04-20",
+        "band_min": 19.9,
+        "band_max": 31.4,
+        "band_mean": 25.1,
+        "temp_2026": 27.6
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-04-27",
+        "band_min": 22.2,
+        "band_max": 29.9,
+        "band_mean": 25.1,
+        "temp_2026": 26.3
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-05-04",
+        "band_min": 18.5,
+        "band_max": 30.8,
+        "band_mean": 26.6,
+        "temp_2026": 19.7
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-05-11",
+        "band_min": 23.6,
+        "band_max": 33.6,
+        "band_mean": 27.9,
+        "temp_2026": 22.0
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-05-18",
+        "band_min": 24.7,
+        "band_max": 32.2,
+        "band_mean": 28.8,
+        "temp_2026": 31.8
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-05-25",
+        "band_min": 24.3,
+        "band_max": 34.4,
+        "band_mean": 30.5,
+        "temp_2026": 35.4
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-06-01",
+        "band_min": 26.9,
+        "band_max": 35.9,
+        "band_mean": 33.1,
+        "temp_2026": 34.1
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-06-08",
+        "band_min": 29.5,
+        "band_max": 39.4,
+        "band_mean": 34.7,
+        "temp_2026": 33.7
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-06-15",
+        "band_min": 27.6,
+        "band_max": 37.3,
+        "band_mean": 33.0,
+        "temp_2026": 38.2
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-06-22",
+        "band_min": 34.3,
+        "band_max": 40.2,
+        "band_mean": 36.9,
+        "temp_2026": 39.1
+      },
+      {
+        "city": "Madrid",
+        "week_start": "2026-06-29",
+        "band_min": 35.3,
+        "band_max": 38.5,
+        "band_mean": 37.2,
+        "temp_2026": 38.3
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%d. %b",
+        "values": [
+          "2025-12-29",
+          "2026-01-12",
+          "2026-01-26",
+          "2026-02-09",
+          "2026-02-23",
+          "2026-03-09",
+          "2026-03-23",
+          "2026-04-06",
+          "2026-04-20",
+          "2026-05-04",
+          "2026-05-18",
+          "2026-06-01",
+          "2026-06-15",
+          "2026-06-29"
+        ]
+      }
+    },
+    "color": {
+      "field": "city",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Berlín",
+          "Madrid"
+        ],
+        "range": [
+          "#272a59",
+          "#f76800"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Teplota (°C)"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "Město"
+          },
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025 (°C)"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025 (°C)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "temp_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "Město"
+          },
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "temp_2026",
+            "title": "2026 (°C)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.city == \"Berlín\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "temp_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.city == \"Madrid\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": 14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "temp_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city"
+        }
+      }
+    }
+  ],
+  "_source": "[Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api), reanalýza ERA5/ERA5-Land"
+}

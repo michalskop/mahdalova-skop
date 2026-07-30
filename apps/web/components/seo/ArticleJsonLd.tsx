@@ -37,9 +37,9 @@ export function ArticleJsonLd({
     datePublished: publishedAt,
     dateModified: modifiedAt,
     author: authorKeys.length
-      ? authorKeys.map((key) => ({ '@id': authors[key]['@id'] }))
+      ? authorKeys.map((key) => authors[key])
       : [{ '@type': 'Person', name: author }],
-    publisher: { '@id': publisher['@id'] },
+    publisher,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': articleUrl,

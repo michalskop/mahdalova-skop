@@ -7,7 +7,7 @@ import { Container, Title, Text, Box } from '@mantine/core';
 import ImpactCard, { type ImpactCardData } from '@/components/dpbp/ImpactCard';
 import DpbpArticleCard from '@/components/dpbp/DpbpArticleCard';
 import ArticleByline from '@/components/dpbp/ArticleByline';
-import VegaChart from '@/components/dpbp/VegaChart';
+import VegaChart from '@/components/charts/VegaChart';
 import ProfileHead from '@/components/dpbp/ProfileHead';
 import ChapterRail from '@/components/dpbp/ChapterRail';
 import { FollowBar } from '@/components/common/FollowBar';

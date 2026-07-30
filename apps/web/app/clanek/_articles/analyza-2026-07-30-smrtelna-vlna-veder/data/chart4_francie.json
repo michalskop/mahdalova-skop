@@ -1,0 +1,1289 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Francie|#12b886}",
+    "subtitle": "{line} 2026   {dashed} 2020   {band} rozmezí 2022–2025"
+  },
+  "width": 300,
+  "height": 220,
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%b",
+        "values": [
+          "2025-12-29",
+          "2026-02-23",
+          "2026-04-27",
+          "2026-06-29",
+          "2026-08-31",
+          "2026-10-26"
+        ]
+      }
+    },
+    "color": {
+      "value": "#12b886"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "country": "Francie",
+            "week": 1,
+            "week_start": "2025-12-29",
+            "band_min": 11.33,
+            "band_max": 12.54,
+            "rate_2020": 10.13,
+            "rate_2026": 11.91
+          },
+          {
+            "country": "Francie",
+            "week": 2,
+            "week_start": "2026-01-05",
+            "band_min": 11.12,
+            "band_max": 12.66,
+            "rate_2020": 10.5,
+            "rate_2026": 13.06
+          },
+          {
+            "country": "Francie",
+            "week": 3,
+            "week_start": "2026-01-12",
+            "band_min": 10.64,
+            "band_max": 12.2,
+            "rate_2020": 10.02,
+            "rate_2026": 12.61
+          },
+          {
+            "country": "Francie",
+            "week": 4,
+            "week_start": "2026-01-19",
+            "band_min": 10.46,
+            "band_max": 12.17,
+            "rate_2020": 9.81,
+            "rate_2026": 11.6
+          },
+          {
+            "country": "Francie",
+            "week": 5,
+            "week_start": "2026-01-26",
+            "band_min": 10.23,
+            "band_max": 11.92,
+            "rate_2020": 9.98,
+            "rate_2026": 10.85
+          },
+          {
+            "country": "Francie",
+            "week": 6,
+            "week_start": "2026-02-02",
+            "band_min": 10.16,
+            "band_max": 11.29,
+            "rate_2020": 9.87,
+            "rate_2026": 10.52
+          },
+          {
+            "country": "Francie",
+            "week": 7,
+            "week_start": "2026-02-09",
+            "band_min": 9.98,
+            "band_max": 11.04,
+            "rate_2020": 9.75,
+            "rate_2026": 9.97
+          },
+          {
+            "country": "Francie",
+            "week": 8,
+            "week_start": "2026-02-16",
+            "band_min": 9.82,
+            "band_max": 10.66,
+            "rate_2020": 9.42,
+            "rate_2026": 9.57
+          },
+          {
+            "country": "Francie",
+            "week": 9,
+            "week_start": "2026-02-23",
+            "band_min": 9.71,
+            "band_max": 10.09,
+            "rate_2020": 9.58,
+            "rate_2026": 9.49
+          },
+          {
+            "country": "Francie",
+            "week": 10,
+            "week_start": "2026-03-02",
+            "band_min": 9.67,
+            "band_max": 9.99,
+            "rate_2020": 9.66,
+            "rate_2026": 9.27
+          },
+          {
+            "country": "Francie",
+            "week": 11,
+            "week_start": "2026-03-09",
+            "band_min": 9.62,
+            "band_max": 9.77,
+            "rate_2020": 9.99,
+            "rate_2026": 9.1
+          },
+          {
+            "country": "Francie",
+            "week": 12,
+            "week_start": "2026-03-16",
+            "band_min": 9.1,
+            "band_max": 9.8,
+            "rate_2020": 11.09,
+            "rate_2026": 9.27
+          },
+          {
+            "country": "Francie",
+            "week": 13,
+            "week_start": "2026-03-23",
+            "band_min": 9.13,
+            "band_max": 10.13,
+            "rate_2020": 12.88,
+            "rate_2026": 8.97
+          },
+          {
+            "country": "Francie",
+            "week": 14,
+            "week_start": "2026-03-30",
+            "band_min": 9.1,
+            "band_max": 10.33,
+            "rate_2020": 14.96,
+            "rate_2026": 9.4
+          },
+          {
+            "country": "Francie",
+            "week": 15,
+            "week_start": "2026-04-06",
+            "band_min": 9.15,
+            "band_max": 10.43,
+            "rate_2020": 13.97,
+            "rate_2026": 9.25
+          },
+          {
+            "country": "Francie",
+            "week": 16,
+            "week_start": "2026-04-13",
+            "band_min": 8.72,
+            "band_max": 10.03,
+            "rate_2020": 12.25,
+            "rate_2026": 8.94
+          },
+          {
+            "country": "Francie",
+            "week": 17,
+            "week_start": "2026-04-20",
+            "band_min": 8.95,
+            "band_max": 9.56,
+            "rate_2020": 10.2,
+            "rate_2026": 8.84
+          },
+          {
+            "country": "Francie",
+            "week": 18,
+            "week_start": "2026-04-27",
+            "band_min": 9.0,
+            "band_max": 9.51,
+            "rate_2020": 8.96,
+            "rate_2026": 8.86
+          },
+          {
+            "country": "Francie",
+            "week": 19,
+            "week_start": "2026-05-04",
+            "band_min": 8.62,
+            "band_max": 9.1,
+            "rate_2020": 8.77,
+            "rate_2026": 8.47
+          },
+          {
+            "country": "Francie",
+            "week": 20,
+            "week_start": "2026-05-11",
+            "band_min": 8.64,
+            "band_max": 8.91,
+            "rate_2020": 8.56,
+            "rate_2026": 8.66
+          },
+          {
+            "country": "Francie",
+            "week": 21,
+            "week_start": "2026-05-18",
+            "band_min": 8.19,
+            "band_max": 9.0,
+            "rate_2020": 8.84,
+            "rate_2026": 8.99
+          },
+          {
+            "country": "Francie",
+            "week": 22,
+            "week_start": "2026-05-25",
+            "band_min": 8.48,
+            "band_max": 8.83,
+            "rate_2020": 8.3,
+            "rate_2026": 9.42
+          },
+          {
+            "country": "Francie",
+            "week": 23,
+            "week_start": "2026-06-01",
+            "band_min": 8.35,
+            "band_max": 8.97,
+            "rate_2020": 8.27,
+            "rate_2026": 8.16
+          },
+          {
+            "country": "Francie",
+            "week": 24,
+            "week_start": "2026-06-08",
+            "band_min": 8.58,
+            "band_max": 8.96,
+            "rate_2020": 8.24,
+            "rate_2026": 8.33
+          },
+          {
+            "country": "Francie",
+            "week": 25,
+            "week_start": "2026-06-15",
+            "band_min": 8.44,
+            "band_max": 8.93,
+            "rate_2020": 8.3,
+            "rate_2026": 8.82
+          },
+          {
+            "country": "Francie",
+            "week": 26,
+            "week_start": "2026-06-22",
+            "band_min": 8.01,
+            "band_max": 8.91,
+            "rate_2020": 8.84,
+            "rate_2026": 12.41
+          },
+          {
+            "country": "Francie",
+            "week": 27,
+            "week_start": "2026-06-29",
+            "band_min": 8.32,
+            "band_max": 9.06,
+            "rate_2020": 7.97,
+            "rate_2026": 9.15
+          },
+          {
+            "country": "Francie",
+            "week": 28,
+            "week_start": "2026-07-06",
+            "band_min": 8.39,
+            "band_max": 9.87,
+            "rate_2020": 8.21,
+            "rate_2026": 8.48
+          },
+          {
+            "country": "Francie",
+            "week": 29,
+            "week_start": "2026-07-13",
+            "band_min": 8.22,
+            "band_max": 10.3,
+            "rate_2020": 8.06
+          },
+          {
+            "country": "Francie",
+            "week": 30,
+            "week_start": "2026-07-20",
+            "band_min": 8.3,
+            "band_max": 9.21,
+            "rate_2020": 8.39
+          },
+          {
+            "country": "Francie",
+            "week": 31,
+            "week_start": "2026-07-27",
+            "band_min": 8.0,
+            "band_max": 9.4,
+            "rate_2020": 8.64
+          },
+          {
+            "country": "Francie",
+            "week": 32,
+            "week_start": "2026-08-03",
+            "band_min": 8.62,
+            "band_max": 9.53,
+            "rate_2020": 8.55
+          },
+          {
+            "country": "Francie",
+            "week": 33,
+            "week_start": "2026-08-10",
+            "band_min": 8.61,
+            "band_max": 9.17,
+            "rate_2020": 9.36
+          },
+          {
+            "country": "Francie",
+            "week": 34,
+            "week_start": "2026-08-17",
+            "band_min": 8.34,
+            "band_max": 9.05,
+            "rate_2020": 8.35
+          },
+          {
+            "country": "Francie",
+            "week": 35,
+            "week_start": "2026-08-24",
+            "band_min": 8.48,
+            "band_max": 8.75,
+            "rate_2020": 8.36
+          },
+          {
+            "country": "Francie",
+            "week": 36,
+            "week_start": "2026-08-31",
+            "band_min": 8.37,
+            "band_max": 9.02,
+            "rate_2020": 8.45
+          },
+          {
+            "country": "Francie",
+            "week": 37,
+            "week_start": "2026-09-07",
+            "band_min": 8.42,
+            "band_max": 8.67,
+            "rate_2020": 8.91
+          },
+          {
+            "country": "Francie",
+            "week": 38,
+            "week_start": "2026-09-14",
+            "band_min": 8.42,
+            "band_max": 9.3,
+            "rate_2020": 9.37
+          },
+          {
+            "country": "Francie",
+            "week": 39,
+            "week_start": "2026-09-21",
+            "band_min": 8.69,
+            "band_max": 9.53,
+            "rate_2020": 8.65
+          },
+          {
+            "country": "Francie",
+            "week": 40,
+            "week_start": "2026-09-28",
+            "band_min": 8.95,
+            "band_max": 9.81,
+            "rate_2020": 9.43
+          },
+          {
+            "country": "Francie",
+            "week": 41,
+            "week_start": "2026-10-05",
+            "band_min": 9.15,
+            "band_max": 9.87,
+            "rate_2020": 9.42
+          },
+          {
+            "country": "Francie",
+            "week": 42,
+            "week_start": "2026-10-12",
+            "band_min": 9.41,
+            "band_max": 9.92,
+            "rate_2020": 9.68
+          },
+          {
+            "country": "Francie",
+            "week": 43,
+            "week_start": "2026-10-19",
+            "band_min": 9.37,
+            "band_max": 9.84,
+            "rate_2020": 10.89
+          },
+          {
+            "country": "Francie",
+            "week": 44,
+            "week_start": "2026-10-26",
+            "band_min": 9.12,
+            "band_max": 9.7,
+            "rate_2020": 11.63
+          },
+          {
+            "country": "Francie",
+            "week": 45,
+            "week_start": "2026-11-02",
+            "band_min": 9.09,
+            "band_max": 9.71,
+            "rate_2020": 12.42
+          },
+          {
+            "country": "Francie",
+            "week": 46,
+            "week_start": "2026-11-09",
+            "band_min": 9.24,
+            "band_max": 10.12,
+            "rate_2020": 12.3
+          },
+          {
+            "country": "Francie",
+            "week": 47,
+            "week_start": "2026-11-16",
+            "band_min": 9.31,
+            "band_max": 10.28,
+            "rate_2020": 11.93
+          },
+          {
+            "country": "Francie",
+            "week": 48,
+            "week_start": "2026-11-23",
+            "band_min": 9.79,
+            "band_max": 10.49,
+            "rate_2020": 11.69
+          },
+          {
+            "country": "Francie",
+            "week": 49,
+            "week_start": "2026-11-30",
+            "band_min": 9.78,
+            "band_max": 11.59,
+            "rate_2020": 11.56
+          },
+          {
+            "country": "Francie",
+            "week": 50,
+            "week_start": "2026-12-07",
+            "band_min": 9.99,
+            "band_max": 12.37,
+            "rate_2020": 11.54
+          },
+          {
+            "country": "Francie",
+            "week": 51,
+            "week_start": "2026-12-14",
+            "band_min": 10.23,
+            "band_max": 13.33,
+            "rate_2020": 11.22
+          },
+          {
+            "country": "Francie",
+            "week": 52,
+            "week_start": "2026-12-21",
+            "band_min": 10.47,
+            "band_max": 13.02,
+            "rate_2020": 10.98
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.week_start)",
+          "as": "date"
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Roční úmrtnost (na 1000 obyv.)"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "country": "Francie",
+            "week": 1,
+            "week_start": "2025-12-29",
+            "band_min": 11.33,
+            "band_max": 12.54,
+            "rate_2020": 10.13,
+            "rate_2026": 11.91
+          },
+          {
+            "country": "Francie",
+            "week": 2,
+            "week_start": "2026-01-05",
+            "band_min": 11.12,
+            "band_max": 12.66,
+            "rate_2020": 10.5,
+            "rate_2026": 13.06
+          },
+          {
+            "country": "Francie",
+            "week": 3,
+            "week_start": "2026-01-12",
+            "band_min": 10.64,
+            "band_max": 12.2,
+            "rate_2020": 10.02,
+            "rate_2026": 12.61
+          },
+          {
+            "country": "Francie",
+            "week": 4,
+            "week_start": "2026-01-19",
+            "band_min": 10.46,
+            "band_max": 12.17,
+            "rate_2020": 9.81,
+            "rate_2026": 11.6
+          },
+          {
+            "country": "Francie",
+            "week": 5,
+            "week_start": "2026-01-26",
+            "band_min": 10.23,
+            "band_max": 11.92,
+            "rate_2020": 9.98,
+            "rate_2026": 10.85
+          },
+          {
+            "country": "Francie",
+            "week": 6,
+            "week_start": "2026-02-02",
+            "band_min": 10.16,
+            "band_max": 11.29,
+            "rate_2020": 9.87,
+            "rate_2026": 10.52
+          },
+          {
+            "country": "Francie",
+            "week": 7,
+            "week_start": "2026-02-09",
+            "band_min": 9.98,
+            "band_max": 11.04,
+            "rate_2020": 9.75,
+            "rate_2026": 9.97
+          },
+          {
+            "country": "Francie",
+            "week": 8,
+            "week_start": "2026-02-16",
+            "band_min": 9.82,
+            "band_max": 10.66,
+            "rate_2020": 9.42,
+            "rate_2026": 9.57
+          },
+          {
+            "country": "Francie",
+            "week": 9,
+            "week_start": "2026-02-23",
+            "band_min": 9.71,
+            "band_max": 10.09,
+            "rate_2020": 9.58,
+            "rate_2026": 9.49
+          },
+          {
+            "country": "Francie",
+            "week": 10,
+            "week_start": "2026-03-02",
+            "band_min": 9.67,
+            "band_max": 9.99,
+            "rate_2020": 9.66,
+            "rate_2026": 9.27
+          },
+          {
+            "country": "Francie",
+            "week": 11,
+            "week_start": "2026-03-09",
+            "band_min": 9.62,
+            "band_max": 9.77,
+            "rate_2020": 9.99,
+            "rate_2026": 9.1
+          },
+          {
+            "country": "Francie",
+            "week": 12,
+            "week_start": "2026-03-16",
+            "band_min": 9.1,
+            "band_max": 9.8,
+            "rate_2020": 11.09,
+            "rate_2026": 9.27
+          },
+          {
+            "country": "Francie",
+            "week": 13,
+            "week_start": "2026-03-23",
+            "band_min": 9.13,
+            "band_max": 10.13,
+            "rate_2020": 12.88,
+            "rate_2026": 8.97
+          },
+          {
+            "country": "Francie",
+            "week": 14,
+            "week_start": "2026-03-30",
+            "band_min": 9.1,
+            "band_max": 10.33,
+            "rate_2020": 14.96,
+            "rate_2026": 9.4
+          },
+          {
+            "country": "Francie",
+            "week": 15,
+            "week_start": "2026-04-06",
+            "band_min": 9.15,
+            "band_max": 10.43,
+            "rate_2020": 13.97,
+            "rate_2026": 9.25
+          },
+          {
+            "country": "Francie",
+            "week": 16,
+            "week_start": "2026-04-13",
+            "band_min": 8.72,
+            "band_max": 10.03,
+            "rate_2020": 12.25,
+            "rate_2026": 8.94
+          },
+          {
+            "country": "Francie",
+            "week": 17,
+            "week_start": "2026-04-20",
+            "band_min": 8.95,
+            "band_max": 9.56,
+            "rate_2020": 10.2,
+            "rate_2026": 8.84
+          },
+          {
+            "country": "Francie",
+            "week": 18,
+            "week_start": "2026-04-27",
+            "band_min": 9.0,
+            "band_max": 9.51,
+            "rate_2020": 8.96,
+            "rate_2026": 8.86
+          },
+          {
+            "country": "Francie",
+            "week": 19,
+            "week_start": "2026-05-04",
+            "band_min": 8.62,
+            "band_max": 9.1,
+            "rate_2020": 8.77,
+            "rate_2026": 8.47
+          },
+          {
+            "country": "Francie",
+            "week": 20,
+            "week_start": "2026-05-11",
+            "band_min": 8.64,
+            "band_max": 8.91,
+            "rate_2020": 8.56,
+            "rate_2026": 8.66
+          },
+          {
+            "country": "Francie",
+            "week": 21,
+            "week_start": "2026-05-18",
+            "band_min": 8.19,
+            "band_max": 9.0,
+            "rate_2020": 8.84,
+            "rate_2026": 8.99
+          },
+          {
+            "country": "Francie",
+            "week": 22,
+            "week_start": "2026-05-25",
+            "band_min": 8.48,
+            "band_max": 8.83,
+            "rate_2020": 8.3,
+            "rate_2026": 9.42
+          },
+          {
+            "country": "Francie",
+            "week": 23,
+            "week_start": "2026-06-01",
+            "band_min": 8.35,
+            "band_max": 8.97,
+            "rate_2020": 8.27,
+            "rate_2026": 8.16
+          },
+          {
+            "country": "Francie",
+            "week": 24,
+            "week_start": "2026-06-08",
+            "band_min": 8.58,
+            "band_max": 8.96,
+            "rate_2020": 8.24,
+            "rate_2026": 8.33
+          },
+          {
+            "country": "Francie",
+            "week": 25,
+            "week_start": "2026-06-15",
+            "band_min": 8.44,
+            "band_max": 8.93,
+            "rate_2020": 8.3,
+            "rate_2026": 8.82
+          },
+          {
+            "country": "Francie",
+            "week": 26,
+            "week_start": "2026-06-22",
+            "band_min": 8.01,
+            "band_max": 8.91,
+            "rate_2020": 8.84,
+            "rate_2026": 12.41
+          },
+          {
+            "country": "Francie",
+            "week": 27,
+            "week_start": "2026-06-29",
+            "band_min": 8.32,
+            "band_max": 9.06,
+            "rate_2020": 7.97,
+            "rate_2026": 9.15
+          },
+          {
+            "country": "Francie",
+            "week": 28,
+            "week_start": "2026-07-06",
+            "band_min": 8.39,
+            "band_max": 9.87,
+            "rate_2020": 8.21,
+            "rate_2026": 8.48
+          },
+          {
+            "country": "Francie",
+            "week": 29,
+            "week_start": "2026-07-13",
+            "band_min": 8.22,
+            "band_max": 10.3,
+            "rate_2020": 8.06
+          },
+          {
+            "country": "Francie",
+            "week": 30,
+            "week_start": "2026-07-20",
+            "band_min": 8.3,
+            "band_max": 9.21,
+            "rate_2020": 8.39
+          },
+          {
+            "country": "Francie",
+            "week": 31,
+            "week_start": "2026-07-27",
+            "band_min": 8.0,
+            "band_max": 9.4,
+            "rate_2020": 8.64
+          },
+          {
+            "country": "Francie",
+            "week": 32,
+            "week_start": "2026-08-03",
+            "band_min": 8.62,
+            "band_max": 9.53,
+            "rate_2020": 8.55
+          },
+          {
+            "country": "Francie",
+            "week": 33,
+            "week_start": "2026-08-10",
+            "band_min": 8.61,
+            "band_max": 9.17,
+            "rate_2020": 9.36
+          },
+          {
+            "country": "Francie",
+            "week": 34,
+            "week_start": "2026-08-17",
+            "band_min": 8.34,
+            "band_max": 9.05,
+            "rate_2020": 8.35
+          },
+          {
+            "country": "Francie",
+            "week": 35,
+            "week_start": "2026-08-24",
+            "band_min": 8.48,
+            "band_max": 8.75,
+            "rate_2020": 8.36
+          },
+          {
+            "country": "Francie",
+            "week": 36,
+            "week_start": "2026-08-31",
+            "band_min": 8.37,
+            "band_max": 9.02,
+            "rate_2020": 8.45
+          },
+          {
+            "country": "Francie",
+            "week": 37,
+            "week_start": "2026-09-07",
+            "band_min": 8.42,
+            "band_max": 8.67,
+            "rate_2020": 8.91
+          },
+          {
+            "country": "Francie",
+            "week": 38,
+            "week_start": "2026-09-14",
+            "band_min": 8.42,
+            "band_max": 9.3,
+            "rate_2020": 9.37
+          },
+          {
+            "country": "Francie",
+            "week": 39,
+            "week_start": "2026-09-21",
+            "band_min": 8.69,
+            "band_max": 9.53,
+            "rate_2020": 8.65
+          },
+          {
+            "country": "Francie",
+            "week": 40,
+            "week_start": "2026-09-28",
+            "band_min": 8.95,
+            "band_max": 9.81,
+            "rate_2020": 9.43
+          },
+          {
+            "country": "Francie",
+            "week": 41,
+            "week_start": "2026-10-05",
+            "band_min": 9.15,
+            "band_max": 9.87,
+            "rate_2020": 9.42
+          },
+          {
+            "country": "Francie",
+            "week": 42,
+            "week_start": "2026-10-12",
+            "band_min": 9.41,
+            "band_max": 9.92,
+            "rate_2020": 9.68
+          },
+          {
+            "country": "Francie",
+            "week": 43,
+            "week_start": "2026-10-19",
+            "band_min": 9.37,
+            "band_max": 9.84,
+            "rate_2020": 10.89
+          },
+          {
+            "country": "Francie",
+            "week": 44,
+            "week_start": "2026-10-26",
+            "band_min": 9.12,
+            "band_max": 9.7,
+            "rate_2020": 11.63
+          },
+          {
+            "country": "Francie",
+            "week": 45,
+            "week_start": "2026-11-02",
+            "band_min": 9.09,
+            "band_max": 9.71,
+            "rate_2020": 12.42
+          },
+          {
+            "country": "Francie",
+            "week": 46,
+            "week_start": "2026-11-09",
+            "band_min": 9.24,
+            "band_max": 10.12,
+            "rate_2020": 12.3
+          },
+          {
+            "country": "Francie",
+            "week": 47,
+            "week_start": "2026-11-16",
+            "band_min": 9.31,
+            "band_max": 10.28,
+            "rate_2020": 11.93
+          },
+          {
+            "country": "Francie",
+            "week": 48,
+            "week_start": "2026-11-23",
+            "band_min": 9.79,
+            "band_max": 10.49,
+            "rate_2020": 11.69
+          },
+          {
+            "country": "Francie",
+            "week": 49,
+            "week_start": "2026-11-30",
+            "band_min": 9.78,
+            "band_max": 11.59,
+            "rate_2020": 11.56
+          },
+          {
+            "country": "Francie",
+            "week": 50,
+            "week_start": "2026-12-07",
+            "band_min": 9.99,
+            "band_max": 12.37,
+            "rate_2020": 11.54
+          },
+          {
+            "country": "Francie",
+            "week": 51,
+            "week_start": "2026-12-14",
+            "band_min": 10.23,
+            "band_max": 13.33,
+            "rate_2020": 11.22
+          },
+          {
+            "country": "Francie",
+            "week": 52,
+            "week_start": "2026-12-21",
+            "band_min": 10.47,
+            "band_max": 13.02,
+            "rate_2020": 10.98
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.week_start)",
+          "as": "date"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.8
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2020",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2020",
+            "title": "2020"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "country": "Francie",
+            "week": 1,
+            "week_start": "2025-12-29",
+            "band_min": 11.33,
+            "band_max": 12.54,
+            "rate_2020": 10.13,
+            "rate_2026": 11.91
+          },
+          {
+            "country": "Francie",
+            "week": 2,
+            "week_start": "2026-01-05",
+            "band_min": 11.12,
+            "band_max": 12.66,
+            "rate_2020": 10.5,
+            "rate_2026": 13.06
+          },
+          {
+            "country": "Francie",
+            "week": 3,
+            "week_start": "2026-01-12",
+            "band_min": 10.64,
+            "band_max": 12.2,
+            "rate_2020": 10.02,
+            "rate_2026": 12.61
+          },
+          {
+            "country": "Francie",
+            "week": 4,
+            "week_start": "2026-01-19",
+            "band_min": 10.46,
+            "band_max": 12.17,
+            "rate_2020": 9.81,
+            "rate_2026": 11.6
+          },
+          {
+            "country": "Francie",
+            "week": 5,
+            "week_start": "2026-01-26",
+            "band_min": 10.23,
+            "band_max": 11.92,
+            "rate_2020": 9.98,
+            "rate_2026": 10.85
+          },
+          {
+            "country": "Francie",
+            "week": 6,
+            "week_start": "2026-02-02",
+            "band_min": 10.16,
+            "band_max": 11.29,
+            "rate_2020": 9.87,
+            "rate_2026": 10.52
+          },
+          {
+            "country": "Francie",
+            "week": 7,
+            "week_start": "2026-02-09",
+            "band_min": 9.98,
+            "band_max": 11.04,
+            "rate_2020": 9.75,
+            "rate_2026": 9.97
+          },
+          {
+            "country": "Francie",
+            "week": 8,
+            "week_start": "2026-02-16",
+            "band_min": 9.82,
+            "band_max": 10.66,
+            "rate_2020": 9.42,
+            "rate_2026": 9.57
+          },
+          {
+            "country": "Francie",
+            "week": 9,
+            "week_start": "2026-02-23",
+            "band_min": 9.71,
+            "band_max": 10.09,
+            "rate_2020": 9.58,
+            "rate_2026": 9.49
+          },
+          {
+            "country": "Francie",
+            "week": 10,
+            "week_start": "2026-03-02",
+            "band_min": 9.67,
+            "band_max": 9.99,
+            "rate_2020": 9.66,
+            "rate_2026": 9.27
+          },
+          {
+            "country": "Francie",
+            "week": 11,
+            "week_start": "2026-03-09",
+            "band_min": 9.62,
+            "band_max": 9.77,
+            "rate_2020": 9.99,
+            "rate_2026": 9.1
+          },
+          {
+            "country": "Francie",
+            "week": 12,
+            "week_start": "2026-03-16",
+            "band_min": 9.1,
+            "band_max": 9.8,
+            "rate_2020": 11.09,
+            "rate_2026": 9.27
+          },
+          {
+            "country": "Francie",
+            "week": 13,
+            "week_start": "2026-03-23",
+            "band_min": 9.13,
+            "band_max": 10.13,
+            "rate_2020": 12.88,
+            "rate_2026": 8.97
+          },
+          {
+            "country": "Francie",
+            "week": 14,
+            "week_start": "2026-03-30",
+            "band_min": 9.1,
+            "band_max": 10.33,
+            "rate_2020": 14.96,
+            "rate_2026": 9.4
+          },
+          {
+            "country": "Francie",
+            "week": 15,
+            "week_start": "2026-04-06",
+            "band_min": 9.15,
+            "band_max": 10.43,
+            "rate_2020": 13.97,
+            "rate_2026": 9.25
+          },
+          {
+            "country": "Francie",
+            "week": 16,
+            "week_start": "2026-04-13",
+            "band_min": 8.72,
+            "band_max": 10.03,
+            "rate_2020": 12.25,
+            "rate_2026": 8.94
+          },
+          {
+            "country": "Francie",
+            "week": 17,
+            "week_start": "2026-04-20",
+            "band_min": 8.95,
+            "band_max": 9.56,
+            "rate_2020": 10.2,
+            "rate_2026": 8.84
+          },
+          {
+            "country": "Francie",
+            "week": 18,
+            "week_start": "2026-04-27",
+            "band_min": 9.0,
+            "band_max": 9.51,
+            "rate_2020": 8.96,
+            "rate_2026": 8.86
+          },
+          {
+            "country": "Francie",
+            "week": 19,
+            "week_start": "2026-05-04",
+            "band_min": 8.62,
+            "band_max": 9.1,
+            "rate_2020": 8.77,
+            "rate_2026": 8.47
+          },
+          {
+            "country": "Francie",
+            "week": 20,
+            "week_start": "2026-05-11",
+            "band_min": 8.64,
+            "band_max": 8.91,
+            "rate_2020": 8.56,
+            "rate_2026": 8.66
+          },
+          {
+            "country": "Francie",
+            "week": 21,
+            "week_start": "2026-05-18",
+            "band_min": 8.19,
+            "band_max": 9.0,
+            "rate_2020": 8.84,
+            "rate_2026": 8.99
+          },
+          {
+            "country": "Francie",
+            "week": 22,
+            "week_start": "2026-05-25",
+            "band_min": 8.48,
+            "band_max": 8.83,
+            "rate_2020": 8.3,
+            "rate_2026": 9.42
+          },
+          {
+            "country": "Francie",
+            "week": 23,
+            "week_start": "2026-06-01",
+            "band_min": 8.35,
+            "band_max": 8.97,
+            "rate_2020": 8.27,
+            "rate_2026": 8.16
+          },
+          {
+            "country": "Francie",
+            "week": 24,
+            "week_start": "2026-06-08",
+            "band_min": 8.58,
+            "band_max": 8.96,
+            "rate_2020": 8.24,
+            "rate_2026": 8.33
+          },
+          {
+            "country": "Francie",
+            "week": 25,
+            "week_start": "2026-06-15",
+            "band_min": 8.44,
+            "band_max": 8.93,
+            "rate_2020": 8.3,
+            "rate_2026": 8.82
+          },
+          {
+            "country": "Francie",
+            "week": 26,
+            "week_start": "2026-06-22",
+            "band_min": 8.01,
+            "band_max": 8.91,
+            "rate_2020": 8.84,
+            "rate_2026": 12.41
+          },
+          {
+            "country": "Francie",
+            "week": 27,
+            "week_start": "2026-06-29",
+            "band_min": 8.32,
+            "band_max": 9.06,
+            "rate_2020": 7.97,
+            "rate_2026": 9.15
+          },
+          {
+            "country": "Francie",
+            "week": 28,
+            "week_start": "2026-07-06",
+            "band_min": 8.39,
+            "band_max": 9.87,
+            "rate_2020": 8.21,
+            "rate_2026": 8.48
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.week_start)",
+          "as": "date"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2026",
+            "title": "2026"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}

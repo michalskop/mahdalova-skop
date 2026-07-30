@@ -21,6 +21,8 @@ import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
+import VegaChart from '@/components/charts/VegaChart';
+import ChartRow from '@/components/charts/ChartRow';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import type { Article } from '@repo/ui/lib/getArticles';
@@ -366,6 +368,17 @@ export function ArticleRenderer({
       const attendanceSwarmData = (mdxSource.scope as any)?.attendanceSwarmData as Record<string, any[]> | undefined;
       return <AttendanceSwarm attendanceSwarmData={attendanceSwarmData} dataFile={dataFile} title={title} subtitle={subtitle} source={source} />;
     },
+
+    VegaChart: ({ dataFile }: { dataFile?: string }) => {
+      const vegaChartData = (mdxSource.scope as any)?.vegaChartData as Record<string, any> | undefined;
+      const spec = dataFile ? vegaChartData?.[dataFile] : undefined;
+      if (!dataFile || !spec) {
+        return <div className="text-red-500">VegaChart data not found for {dataFile}</div>;
+      }
+      return <VegaChart spec={spec} />;
+    },
+
+    ChartRow,
 
   };
 

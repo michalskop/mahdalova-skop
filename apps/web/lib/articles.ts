@@ -165,6 +165,20 @@ export async function getArticleBySlug(directorySlug: string) {
     attendanceSwarmData[dataFile] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   }
 
+  // Find and load Vega-Lite spec JSON files for VegaChart components (supports multiple instances)
+  const vegaChartData: Record<string, any> = {};
+  const vegaChartRegex = /<VegaChart[^>]*dataFile="([^"]+)"[^>]*\/?>/g;
+  let vegaChartMatch: RegExpExecArray | null;
+  while ((vegaChartMatch = vegaChartRegex.exec(content)) !== null) {
+    const dataFile = vegaChartMatch[1];
+    if (!dataFile || vegaChartData[dataFile]) continue;
+    const filePath = path.join(articleDir, dataFile);
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`VegaChart dataFile not found: ${directorySlug}/${dataFile}`);
+    }
+    vegaChartData[dataFile] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  }
+
   // Find and load HTML files for HtmlEmbed components (supports multiple instances)
   const htmlEmbedData: Record<string, string> = {};
   const htmlEmbedRegex = /<HtmlEmbed[^>]*file="([^"]+)"[^>]*\/?>/g;
@@ -216,6 +230,7 @@ export async function getArticleBySlug(directorySlug: string) {
       styledTableData: styledTableData,
       htmlEmbedData: htmlEmbedData,
       attendanceSwarmData: attendanceSwarmData,
+      vegaChartData: vegaChartData,
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {

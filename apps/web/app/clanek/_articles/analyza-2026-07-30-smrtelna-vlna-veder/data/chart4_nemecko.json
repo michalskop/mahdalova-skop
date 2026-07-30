@@ -1,0 +1,1289 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Německo|#272a59}",
+    "subtitle": "{line} 2026   {dashed} 2020   {band} rozmezí 2022–2025"
+  },
+  "width": 300,
+  "height": 220,
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%b",
+        "values": [
+          "2025-12-29",
+          "2026-02-23",
+          "2026-04-27",
+          "2026-06-29",
+          "2026-08-31",
+          "2026-10-26"
+        ]
+      }
+    },
+    "color": {
+      "value": "#272a59"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "country": "Německo",
+            "week": 1,
+            "week_start": "2025-12-29",
+            "band_min": 13.1,
+            "band_max": 16.02,
+            "rate_2020": 11.81,
+            "rate_2026": 13.97
+          },
+          {
+            "country": "Německo",
+            "week": 2,
+            "week_start": "2026-01-05",
+            "band_min": 12.5,
+            "band_max": 14.29,
+            "rate_2020": 12.13,
+            "rate_2026": 14.8
+          },
+          {
+            "country": "Německo",
+            "week": 3,
+            "week_start": "2026-01-12",
+            "band_min": 12.45,
+            "band_max": 13.76,
+            "rate_2020": 11.85,
+            "rate_2026": 14.71
+          },
+          {
+            "country": "Německo",
+            "week": 4,
+            "week_start": "2026-01-19",
+            "band_min": 12.69,
+            "band_max": 14.65,
+            "rate_2020": 11.77,
+            "rate_2026": 13.97
+          },
+          {
+            "country": "Německo",
+            "week": 5,
+            "week_start": "2026-01-26",
+            "band_min": 12.99,
+            "band_max": 14.25,
+            "rate_2020": 12.36,
+            "rate_2026": 14.06
+          },
+          {
+            "country": "Německo",
+            "week": 6,
+            "week_start": "2026-02-02",
+            "band_min": 12.86,
+            "band_max": 14.21,
+            "rate_2020": 11.9,
+            "rate_2026": 14.04
+          },
+          {
+            "country": "Německo",
+            "week": 7,
+            "week_start": "2026-02-09",
+            "band_min": 13.21,
+            "band_max": 14.41,
+            "rate_2020": 12.29,
+            "rate_2026": 13.94
+          },
+          {
+            "country": "Německo",
+            "week": 8,
+            "week_start": "2026-02-16",
+            "band_min": 12.75,
+            "band_max": 14.8,
+            "rate_2020": 11.85,
+            "rate_2026": 13.6
+          },
+          {
+            "country": "Německo",
+            "week": 9,
+            "week_start": "2026-02-23",
+            "band_min": 12.56,
+            "band_max": 14.4,
+            "rate_2020": 12.2,
+            "rate_2026": 13.35
+          },
+          {
+            "country": "Německo",
+            "week": 10,
+            "week_start": "2026-03-02",
+            "band_min": 12.19,
+            "band_max": 13.96,
+            "rate_2020": 12.3,
+            "rate_2026": 12.52
+          },
+          {
+            "country": "Německo",
+            "week": 11,
+            "week_start": "2026-03-09",
+            "band_min": 12.24,
+            "band_max": 13.73,
+            "rate_2020": 12.41,
+            "rate_2026": 12.11
+          },
+          {
+            "country": "Německo",
+            "week": 12,
+            "week_start": "2026-03-16",
+            "band_min": 11.83,
+            "band_max": 13.45,
+            "rate_2020": 12.33,
+            "rate_2026": 11.89
+          },
+          {
+            "country": "Německo",
+            "week": 13,
+            "week_start": "2026-03-23",
+            "band_min": 11.88,
+            "band_max": 13.11,
+            "rate_2020": 12.3,
+            "rate_2026": 11.79
+          },
+          {
+            "country": "Německo",
+            "week": 14,
+            "week_start": "2026-03-30",
+            "band_min": 12.03,
+            "band_max": 13.15,
+            "rate_2020": 12.92,
+            "rate_2026": 11.91
+          },
+          {
+            "country": "Německo",
+            "week": 15,
+            "week_start": "2026-04-06",
+            "band_min": 11.61,
+            "band_max": 12.71,
+            "rate_2020": 12.82,
+            "rate_2026": 11.84
+          },
+          {
+            "country": "Německo",
+            "week": 16,
+            "week_start": "2026-04-13",
+            "band_min": 11.45,
+            "band_max": 12.49,
+            "rate_2020": 12.04,
+            "rate_2026": 11.97
+          },
+          {
+            "country": "Německo",
+            "week": 17,
+            "week_start": "2026-04-20",
+            "band_min": 11.4,
+            "band_max": 12.15,
+            "rate_2020": 11.6,
+            "rate_2026": 11.42
+          },
+          {
+            "country": "Německo",
+            "week": 18,
+            "week_start": "2026-04-27",
+            "band_min": 11.9,
+            "band_max": 12.07,
+            "rate_2020": 11.2,
+            "rate_2026": 11.66
+          },
+          {
+            "country": "Německo",
+            "week": 19,
+            "week_start": "2026-05-04",
+            "band_min": 11.17,
+            "band_max": 12.09,
+            "rate_2020": 11.04,
+            "rate_2026": 11.63
+          },
+          {
+            "country": "Německo",
+            "week": 20,
+            "week_start": "2026-05-11",
+            "band_min": 11.38,
+            "band_max": 11.82,
+            "rate_2020": 10.63,
+            "rate_2026": 11.18
+          },
+          {
+            "country": "Německo",
+            "week": 21,
+            "week_start": "2026-05-18",
+            "band_min": 10.81,
+            "band_max": 11.59,
+            "rate_2020": 10.73,
+            "rate_2026": 11.48
+          },
+          {
+            "country": "Německo",
+            "week": 22,
+            "week_start": "2026-05-25",
+            "band_min": 11.06,
+            "band_max": 11.58,
+            "rate_2020": 10.49,
+            "rate_2026": 11.33
+          },
+          {
+            "country": "Německo",
+            "week": 23,
+            "week_start": "2026-06-01",
+            "band_min": 11.02,
+            "band_max": 11.57,
+            "rate_2020": 10.79,
+            "rate_2026": 10.73
+          },
+          {
+            "country": "Německo",
+            "week": 24,
+            "week_start": "2026-06-08",
+            "band_min": 11.01,
+            "band_max": 11.61,
+            "rate_2020": 10.38,
+            "rate_2026": 10.64
+          },
+          {
+            "country": "Německo",
+            "week": 25,
+            "week_start": "2026-06-15",
+            "band_min": 10.99,
+            "band_max": 11.96,
+            "rate_2020": 10.25,
+            "rate_2026": 11.58
+          },
+          {
+            "country": "Německo",
+            "week": 26,
+            "week_start": "2026-06-22",
+            "band_min": 10.73,
+            "band_max": 12.09,
+            "rate_2020": 10.81,
+            "rate_2026": 15.29
+          },
+          {
+            "country": "Německo",
+            "week": 27,
+            "week_start": "2026-06-29",
+            "band_min": 10.8,
+            "band_max": 11.44,
+            "rate_2020": 10.29,
+            "rate_2026": 14.16
+          },
+          {
+            "country": "Německo",
+            "week": 28,
+            "week_start": "2026-07-06",
+            "band_min": 10.75,
+            "band_max": 11.94,
+            "rate_2020": 10.09,
+            "rate_2026": 12.06
+          },
+          {
+            "country": "Německo",
+            "week": 29,
+            "week_start": "2026-07-13",
+            "band_min": 10.56,
+            "band_max": 13.17,
+            "rate_2020": 10.34
+          },
+          {
+            "country": "Německo",
+            "week": 30,
+            "week_start": "2026-07-20",
+            "band_min": 10.68,
+            "band_max": 12.74,
+            "rate_2020": 10.56
+          },
+          {
+            "country": "Německo",
+            "week": 31,
+            "week_start": "2026-07-27",
+            "band_min": 10.51,
+            "band_max": 12.53,
+            "rate_2020": 10.9
+          },
+          {
+            "country": "Německo",
+            "week": 32,
+            "week_start": "2026-08-03",
+            "band_min": 11.0,
+            "band_max": 12.45,
+            "rate_2020": 10.92
+          },
+          {
+            "country": "Německo",
+            "week": 33,
+            "week_start": "2026-08-10",
+            "band_min": 11.62,
+            "band_max": 12.51,
+            "rate_2020": 12.33
+          },
+          {
+            "country": "Německo",
+            "week": 34,
+            "week_start": "2026-08-17",
+            "band_min": 10.7,
+            "band_max": 11.92,
+            "rate_2020": 10.98
+          },
+          {
+            "country": "Německo",
+            "week": 35,
+            "week_start": "2026-08-24",
+            "band_min": 10.55,
+            "band_max": 11.48,
+            "rate_2020": 10.41
+          },
+          {
+            "country": "Německo",
+            "week": 36,
+            "week_start": "2026-08-31",
+            "band_min": 10.86,
+            "band_max": 11.78,
+            "rate_2020": 10.5
+          },
+          {
+            "country": "Německo",
+            "week": 37,
+            "week_start": "2026-09-07",
+            "band_min": 10.69,
+            "band_max": 11.47,
+            "rate_2020": 10.73
+          },
+          {
+            "country": "Německo",
+            "week": 38,
+            "week_start": "2026-09-14",
+            "band_min": 10.94,
+            "band_max": 12.0,
+            "rate_2020": 10.98
+          },
+          {
+            "country": "Německo",
+            "week": 39,
+            "week_start": "2026-09-21",
+            "band_min": 11.05,
+            "band_max": 12.8,
+            "rate_2020": 10.91
+          },
+          {
+            "country": "Německo",
+            "week": 40,
+            "week_start": "2026-09-28",
+            "band_min": 11.46,
+            "band_max": 12.95,
+            "rate_2020": 11.01
+          },
+          {
+            "country": "Německo",
+            "week": 41,
+            "week_start": "2026-10-05",
+            "band_min": 11.83,
+            "band_max": 13.68,
+            "rate_2020": 10.94
+          },
+          {
+            "country": "Německo",
+            "week": 42,
+            "week_start": "2026-10-12",
+            "band_min": 11.63,
+            "band_max": 13.69,
+            "rate_2020": 11.1
+          },
+          {
+            "country": "Německo",
+            "week": 43,
+            "week_start": "2026-10-19",
+            "band_min": 12.33,
+            "band_max": 13.46,
+            "rate_2020": 11.62
+          },
+          {
+            "country": "Německo",
+            "week": 44,
+            "week_start": "2026-10-26",
+            "band_min": 12.0,
+            "band_max": 12.83,
+            "rate_2020": 11.62
+          },
+          {
+            "country": "Německo",
+            "week": 45,
+            "week_start": "2026-11-02",
+            "band_min": 12.0,
+            "band_max": 12.97,
+            "rate_2020": 11.88
+          },
+          {
+            "country": "Německo",
+            "week": 46,
+            "week_start": "2026-11-09",
+            "band_min": 12.09,
+            "band_max": 13.11,
+            "rate_2020": 12.33
+          },
+          {
+            "country": "Německo",
+            "week": 47,
+            "week_start": "2026-11-16",
+            "band_min": 12.1,
+            "band_max": 13.46,
+            "rate_2020": 12.62
+          },
+          {
+            "country": "Německo",
+            "week": 48,
+            "week_start": "2026-11-23",
+            "band_min": 12.73,
+            "band_max": 13.98,
+            "rate_2020": 13.32
+          },
+          {
+            "country": "Německo",
+            "week": 49,
+            "week_start": "2026-11-30",
+            "band_min": 12.71,
+            "band_max": 15.14,
+            "rate_2020": 14.13
+          },
+          {
+            "country": "Německo",
+            "week": 50,
+            "week_start": "2026-12-07",
+            "band_min": 12.7,
+            "band_max": 16.3,
+            "rate_2020": 15.01
+          },
+          {
+            "country": "Německo",
+            "week": 51,
+            "week_start": "2026-12-14",
+            "band_min": 12.74,
+            "band_max": 18.0,
+            "rate_2020": 15.46
+          },
+          {
+            "country": "Německo",
+            "week": 52,
+            "week_start": "2026-12-21",
+            "band_min": 12.6,
+            "band_max": 17.13,
+            "rate_2020": 15.98
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.week_start)",
+          "as": "date"
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Roční úmrtnost (na 1000 obyv.)"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "country": "Německo",
+            "week": 1,
+            "week_start": "2025-12-29",
+            "band_min": 13.1,
+            "band_max": 16.02,
+            "rate_2020": 11.81,
+            "rate_2026": 13.97
+          },
+          {
+            "country": "Německo",
+            "week": 2,
+            "week_start": "2026-01-05",
+            "band_min": 12.5,
+            "band_max": 14.29,
+            "rate_2020": 12.13,
+            "rate_2026": 14.8
+          },
+          {
+            "country": "Německo",
+            "week": 3,
+            "week_start": "2026-01-12",
+            "band_min": 12.45,
+            "band_max": 13.76,
+            "rate_2020": 11.85,
+            "rate_2026": 14.71
+          },
+          {
+            "country": "Německo",
+            "week": 4,
+            "week_start": "2026-01-19",
+            "band_min": 12.69,
+            "band_max": 14.65,
+            "rate_2020": 11.77,
+            "rate_2026": 13.97
+          },
+          {
+            "country": "Německo",
+            "week": 5,
+            "week_start": "2026-01-26",
+            "band_min": 12.99,
+            "band_max": 14.25,
+            "rate_2020": 12.36,
+            "rate_2026": 14.06
+          },
+          {
+            "country": "Německo",
+            "week": 6,
+            "week_start": "2026-02-02",
+            "band_min": 12.86,
+            "band_max": 14.21,
+            "rate_2020": 11.9,
+            "rate_2026": 14.04
+          },
+          {
+            "country": "Německo",
+            "week": 7,
+            "week_start": "2026-02-09",
+            "band_min": 13.21,
+            "band_max": 14.41,
+            "rate_2020": 12.29,
+            "rate_2026": 13.94
+          },
+          {
+            "country": "Německo",
+            "week": 8,
+            "week_start": "2026-02-16",
+            "band_min": 12.75,
+            "band_max": 14.8,
+            "rate_2020": 11.85,
+            "rate_2026": 13.6
+          },
+          {
+            "country": "Německo",
+            "week": 9,
+            "week_start": "2026-02-23",
+            "band_min": 12.56,
+            "band_max": 14.4,
+            "rate_2020": 12.2,
+            "rate_2026": 13.35
+          },
+          {
+            "country": "Německo",
+            "week": 10,
+            "week_start": "2026-03-02",
+            "band_min": 12.19,
+            "band_max": 13.96,
+            "rate_2020": 12.3,
+            "rate_2026": 12.52
+          },
+          {
+            "country": "Německo",
+            "week": 11,
+            "week_start": "2026-03-09",
+            "band_min": 12.24,
+            "band_max": 13.73,
+            "rate_2020": 12.41,
+            "rate_2026": 12.11
+          },
+          {
+            "country": "Německo",
+            "week": 12,
+            "week_start": "2026-03-16",
+            "band_min": 11.83,
+            "band_max": 13.45,
+            "rate_2020": 12.33,
+            "rate_2026": 11.89
+          },
+          {
+            "country": "Německo",
+            "week": 13,
+            "week_start": "2026-03-23",
+            "band_min": 11.88,
+            "band_max": 13.11,
+            "rate_2020": 12.3,
+            "rate_2026": 11.79
+          },
+          {
+            "country": "Německo",
+            "week": 14,
+            "week_start": "2026-03-30",
+            "band_min": 12.03,
+            "band_max": 13.15,
+            "rate_2020": 12.92,
+            "rate_2026": 11.91
+          },
+          {
+            "country": "Německo",
+            "week": 15,
+            "week_start": "2026-04-06",
+            "band_min": 11.61,
+            "band_max": 12.71,
+            "rate_2020": 12.82,
+            "rate_2026": 11.84
+          },
+          {
+            "country": "Německo",
+            "week": 16,
+            "week_start": "2026-04-13",
+            "band_min": 11.45,
+            "band_max": 12.49,
+            "rate_2020": 12.04,
+            "rate_2026": 11.97
+          },
+          {
+            "country": "Německo",
+            "week": 17,
+            "week_start": "2026-04-20",
+            "band_min": 11.4,
+            "band_max": 12.15,
+            "rate_2020": 11.6,
+            "rate_2026": 11.42
+          },
+          {
+            "country": "Německo",
+            "week": 18,
+            "week_start": "2026-04-27",
+            "band_min": 11.9,
+            "band_max": 12.07,
+            "rate_2020": 11.2,
+            "rate_2026": 11.66
+          },
+          {
+            "country": "Německo",
+            "week": 19,
+            "week_start": "2026-05-04",
+            "band_min": 11.17,
+            "band_max": 12.09,
+            "rate_2020": 11.04,
+            "rate_2026": 11.63
+          },
+          {
+            "country": "Německo",
+            "week": 20,
+            "week_start": "2026-05-11",
+            "band_min": 11.38,
+            "band_max": 11.82,
+            "rate_2020": 10.63,
+            "rate_2026": 11.18
+          },
+          {
+            "country": "Německo",
+            "week": 21,
+            "week_start": "2026-05-18",
+            "band_min": 10.81,
+            "band_max": 11.59,
+            "rate_2020": 10.73,
+            "rate_2026": 11.48
+          },
+          {
+            "country": "Německo",
+            "week": 22,
+            "week_start": "2026-05-25",
+            "band_min": 11.06,
+            "band_max": 11.58,
+            "rate_2020": 10.49,
+            "rate_2026": 11.33
+          },
+          {
+            "country": "Německo",
+            "week": 23,
+            "week_start": "2026-06-01",
+            "band_min": 11.02,
+            "band_max": 11.57,
+            "rate_2020": 10.79,
+            "rate_2026": 10.73
+          },
+          {
+            "country": "Německo",
+            "week": 24,
+            "week_start": "2026-06-08",
+            "band_min": 11.01,
+            "band_max": 11.61,
+            "rate_2020": 10.38,
+            "rate_2026": 10.64
+          },
+          {
+            "country": "Německo",
+            "week": 25,
+            "week_start": "2026-06-15",
+            "band_min": 10.99,
+            "band_max": 11.96,
+            "rate_2020": 10.25,
+            "rate_2026": 11.58
+          },
+          {
+            "country": "Německo",
+            "week": 26,
+            "week_start": "2026-06-22",
+            "band_min": 10.73,
+            "band_max": 12.09,
+            "rate_2020": 10.81,
+            "rate_2026": 15.29
+          },
+          {
+            "country": "Německo",
+            "week": 27,
+            "week_start": "2026-06-29",
+            "band_min": 10.8,
+            "band_max": 11.44,
+            "rate_2020": 10.29,
+            "rate_2026": 14.16
+          },
+          {
+            "country": "Německo",
+            "week": 28,
+            "week_start": "2026-07-06",
+            "band_min": 10.75,
+            "band_max": 11.94,
+            "rate_2020": 10.09,
+            "rate_2026": 12.06
+          },
+          {
+            "country": "Německo",
+            "week": 29,
+            "week_start": "2026-07-13",
+            "band_min": 10.56,
+            "band_max": 13.17,
+            "rate_2020": 10.34
+          },
+          {
+            "country": "Německo",
+            "week": 30,
+            "week_start": "2026-07-20",
+            "band_min": 10.68,
+            "band_max": 12.74,
+            "rate_2020": 10.56
+          },
+          {
+            "country": "Německo",
+            "week": 31,
+            "week_start": "2026-07-27",
+            "band_min": 10.51,
+            "band_max": 12.53,
+            "rate_2020": 10.9
+          },
+          {
+            "country": "Německo",
+            "week": 32,
+            "week_start": "2026-08-03",
+            "band_min": 11.0,
+            "band_max": 12.45,
+            "rate_2020": 10.92
+          },
+          {
+            "country": "Německo",
+            "week": 33,
+            "week_start": "2026-08-10",
+            "band_min": 11.62,
+            "band_max": 12.51,
+            "rate_2020": 12.33
+          },
+          {
+            "country": "Německo",
+            "week": 34,
+            "week_start": "2026-08-17",
+            "band_min": 10.7,
+            "band_max": 11.92,
+            "rate_2020": 10.98
+          },
+          {
+            "country": "Německo",
+            "week": 35,
+            "week_start": "2026-08-24",
+            "band_min": 10.55,
+            "band_max": 11.48,
+            "rate_2020": 10.41
+          },
+          {
+            "country": "Německo",
+            "week": 36,
+            "week_start": "2026-08-31",
+            "band_min": 10.86,
+            "band_max": 11.78,
+            "rate_2020": 10.5
+          },
+          {
+            "country": "Německo",
+            "week": 37,
+            "week_start": "2026-09-07",
+            "band_min": 10.69,
+            "band_max": 11.47,
+            "rate_2020": 10.73
+          },
+          {
+            "country": "Německo",
+            "week": 38,
+            "week_start": "2026-09-14",
+            "band_min": 10.94,
+            "band_max": 12.0,
+            "rate_2020": 10.98
+          },
+          {
+            "country": "Německo",
+            "week": 39,
+            "week_start": "2026-09-21",
+            "band_min": 11.05,
+            "band_max": 12.8,
+            "rate_2020": 10.91
+          },
+          {
+            "country": "Německo",
+            "week": 40,
+            "week_start": "2026-09-28",
+            "band_min": 11.46,
+            "band_max": 12.95,
+            "rate_2020": 11.01
+          },
+          {
+            "country": "Německo",
+            "week": 41,
+            "week_start": "2026-10-05",
+            "band_min": 11.83,
+            "band_max": 13.68,
+            "rate_2020": 10.94
+          },
+          {
+            "country": "Německo",
+            "week": 42,
+            "week_start": "2026-10-12",
+            "band_min": 11.63,
+            "band_max": 13.69,
+            "rate_2020": 11.1
+          },
+          {
+            "country": "Německo",
+            "week": 43,
+            "week_start": "2026-10-19",
+            "band_min": 12.33,
+            "band_max": 13.46,
+            "rate_2020": 11.62
+          },
+          {
+            "country": "Německo",
+            "week": 44,
+            "week_start": "2026-10-26",
+            "band_min": 12.0,
+            "band_max": 12.83,
+            "rate_2020": 11.62
+          },
+          {
+            "country": "Německo",
+            "week": 45,
+            "week_start": "2026-11-02",
+            "band_min": 12.0,
+            "band_max": 12.97,
+            "rate_2020": 11.88
+          },
+          {
+            "country": "Německo",
+            "week": 46,
+            "week_start": "2026-11-09",
+            "band_min": 12.09,
+            "band_max": 13.11,
+            "rate_2020": 12.33
+          },
+          {
+            "country": "Německo",
+            "week": 47,
+            "week_start": "2026-11-16",
+            "band_min": 12.1,
+            "band_max": 13.46,
+            "rate_2020": 12.62
+          },
+          {
+            "country": "Německo",
+            "week": 48,
+            "week_start": "2026-11-23",
+            "band_min": 12.73,
+            "band_max": 13.98,
+            "rate_2020": 13.32
+          },
+          {
+            "country": "Německo",
+            "week": 49,
+            "week_start": "2026-11-30",
+            "band_min": 12.71,
+            "band_max": 15.14,
+            "rate_2020": 14.13
+          },
+          {
+            "country": "Německo",
+            "week": 50,
+            "week_start": "2026-12-07",
+            "band_min": 12.7,
+            "band_max": 16.3,
+            "rate_2020": 15.01
+          },
+          {
+            "country": "Německo",
+            "week": 51,
+            "week_start": "2026-12-14",
+            "band_min": 12.74,
+            "band_max": 18.0,
+            "rate_2020": 15.46
+          },
+          {
+            "country": "Německo",
+            "week": 52,
+            "week_start": "2026-12-21",
+            "band_min": 12.6,
+            "band_max": 17.13,
+            "rate_2020": 15.98
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.week_start)",
+          "as": "date"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.8
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2020",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2020",
+            "title": "2020"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "country": "Německo",
+            "week": 1,
+            "week_start": "2025-12-29",
+            "band_min": 13.1,
+            "band_max": 16.02,
+            "rate_2020": 11.81,
+            "rate_2026": 13.97
+          },
+          {
+            "country": "Německo",
+            "week": 2,
+            "week_start": "2026-01-05",
+            "band_min": 12.5,
+            "band_max": 14.29,
+            "rate_2020": 12.13,
+            "rate_2026": 14.8
+          },
+          {
+            "country": "Německo",
+            "week": 3,
+            "week_start": "2026-01-12",
+            "band_min": 12.45,
+            "band_max": 13.76,
+            "rate_2020": 11.85,
+            "rate_2026": 14.71
+          },
+          {
+            "country": "Německo",
+            "week": 4,
+            "week_start": "2026-01-19",
+            "band_min": 12.69,
+            "band_max": 14.65,
+            "rate_2020": 11.77,
+            "rate_2026": 13.97
+          },
+          {
+            "country": "Německo",
+            "week": 5,
+            "week_start": "2026-01-26",
+            "band_min": 12.99,
+            "band_max": 14.25,
+            "rate_2020": 12.36,
+            "rate_2026": 14.06
+          },
+          {
+            "country": "Německo",
+            "week": 6,
+            "week_start": "2026-02-02",
+            "band_min": 12.86,
+            "band_max": 14.21,
+            "rate_2020": 11.9,
+            "rate_2026": 14.04
+          },
+          {
+            "country": "Německo",
+            "week": 7,
+            "week_start": "2026-02-09",
+            "band_min": 13.21,
+            "band_max": 14.41,
+            "rate_2020": 12.29,
+            "rate_2026": 13.94
+          },
+          {
+            "country": "Německo",
+            "week": 8,
+            "week_start": "2026-02-16",
+            "band_min": 12.75,
+            "band_max": 14.8,
+            "rate_2020": 11.85,
+            "rate_2026": 13.6
+          },
+          {
+            "country": "Německo",
+            "week": 9,
+            "week_start": "2026-02-23",
+            "band_min": 12.56,
+            "band_max": 14.4,
+            "rate_2020": 12.2,
+            "rate_2026": 13.35
+          },
+          {
+            "country": "Německo",
+            "week": 10,
+            "week_start": "2026-03-02",
+            "band_min": 12.19,
+            "band_max": 13.96,
+            "rate_2020": 12.3,
+            "rate_2026": 12.52
+          },
+          {
+            "country": "Německo",
+            "week": 11,
+            "week_start": "2026-03-09",
+            "band_min": 12.24,
+            "band_max": 13.73,
+            "rate_2020": 12.41,
+            "rate_2026": 12.11
+          },
+          {
+            "country": "Německo",
+            "week": 12,
+            "week_start": "2026-03-16",
+            "band_min": 11.83,
+            "band_max": 13.45,
+            "rate_2020": 12.33,
+            "rate_2026": 11.89
+          },
+          {
+            "country": "Německo",
+            "week": 13,
+            "week_start": "2026-03-23",
+            "band_min": 11.88,
+            "band_max": 13.11,
+            "rate_2020": 12.3,
+            "rate_2026": 11.79
+          },
+          {
+            "country": "Německo",
+            "week": 14,
+            "week_start": "2026-03-30",
+            "band_min": 12.03,
+            "band_max": 13.15,
+            "rate_2020": 12.92,
+            "rate_2026": 11.91
+          },
+          {
+            "country": "Německo",
+            "week": 15,
+            "week_start": "2026-04-06",
+            "band_min": 11.61,
+            "band_max": 12.71,
+            "rate_2020": 12.82,
+            "rate_2026": 11.84
+          },
+          {
+            "country": "Německo",
+            "week": 16,
+            "week_start": "2026-04-13",
+            "band_min": 11.45,
+            "band_max": 12.49,
+            "rate_2020": 12.04,
+            "rate_2026": 11.97
+          },
+          {
+            "country": "Německo",
+            "week": 17,
+            "week_start": "2026-04-20",
+            "band_min": 11.4,
+            "band_max": 12.15,
+            "rate_2020": 11.6,
+            "rate_2026": 11.42
+          },
+          {
+            "country": "Německo",
+            "week": 18,
+            "week_start": "2026-04-27",
+            "band_min": 11.9,
+            "band_max": 12.07,
+            "rate_2020": 11.2,
+            "rate_2026": 11.66
+          },
+          {
+            "country": "Německo",
+            "week": 19,
+            "week_start": "2026-05-04",
+            "band_min": 11.17,
+            "band_max": 12.09,
+            "rate_2020": 11.04,
+            "rate_2026": 11.63
+          },
+          {
+            "country": "Německo",
+            "week": 20,
+            "week_start": "2026-05-11",
+            "band_min": 11.38,
+            "band_max": 11.82,
+            "rate_2020": 10.63,
+            "rate_2026": 11.18
+          },
+          {
+            "country": "Německo",
+            "week": 21,
+            "week_start": "2026-05-18",
+            "band_min": 10.81,
+            "band_max": 11.59,
+            "rate_2020": 10.73,
+            "rate_2026": 11.48
+          },
+          {
+            "country": "Německo",
+            "week": 22,
+            "week_start": "2026-05-25",
+            "band_min": 11.06,
+            "band_max": 11.58,
+            "rate_2020": 10.49,
+            "rate_2026": 11.33
+          },
+          {
+            "country": "Německo",
+            "week": 23,
+            "week_start": "2026-06-01",
+            "band_min": 11.02,
+            "band_max": 11.57,
+            "rate_2020": 10.79,
+            "rate_2026": 10.73
+          },
+          {
+            "country": "Německo",
+            "week": 24,
+            "week_start": "2026-06-08",
+            "band_min": 11.01,
+            "band_max": 11.61,
+            "rate_2020": 10.38,
+            "rate_2026": 10.64
+          },
+          {
+            "country": "Německo",
+            "week": 25,
+            "week_start": "2026-06-15",
+            "band_min": 10.99,
+            "band_max": 11.96,
+            "rate_2020": 10.25,
+            "rate_2026": 11.58
+          },
+          {
+            "country": "Německo",
+            "week": 26,
+            "week_start": "2026-06-22",
+            "band_min": 10.73,
+            "band_max": 12.09,
+            "rate_2020": 10.81,
+            "rate_2026": 15.29
+          },
+          {
+            "country": "Německo",
+            "week": 27,
+            "week_start": "2026-06-29",
+            "band_min": 10.8,
+            "band_max": 11.44,
+            "rate_2020": 10.29,
+            "rate_2026": 14.16
+          },
+          {
+            "country": "Německo",
+            "week": 28,
+            "week_start": "2026-07-06",
+            "band_min": 10.75,
+            "band_max": 11.94,
+            "rate_2020": 10.09,
+            "rate_2026": 12.06
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.week_start)",
+          "as": "date"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2026",
+            "title": "2026"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}

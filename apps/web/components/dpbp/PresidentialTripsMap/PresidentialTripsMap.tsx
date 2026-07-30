@@ -5,7 +5,7 @@ import * as d3geo from 'd3-geo';
 import * as d3proj from 'd3-geo-projection';
 import * as topojson from 'topojson-client';
 import tripsData from './data.json';
-import ChartSignature from '../ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 
 type Trip = {
   p: 'Z' | 'P';

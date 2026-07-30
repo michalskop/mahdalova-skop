@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import ChartSignature from '../ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 import styles from './AgeingScrolly.module.css';
 
 type AgeCategory = 'young' | 'working' | 'senior';

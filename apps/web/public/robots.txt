@@ -25,9 +25,9 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# Block Common Crawl (used for training)
+# Allow Common Crawl in line with the declared AI training preference below
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 # Content Signals - preference for AI usage
 # search: allow traditional search indexing

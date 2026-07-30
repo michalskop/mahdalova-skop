@@ -1,0 +1,549 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Ve {Španělsku|#f76800} ani v {Bulharsku|#6267a3} vlna veder úmrtnost nezvýšila",
+    "subtitle": "Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "country": "Španělsko",
+        "week_start": "2025-12-29",
+        "band_min": 10.6,
+        "band_max": 12.75,
+        "rate_2026": 11.42
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-05",
+        "band_min": 10.81,
+        "band_max": 12.64,
+        "rate_2026": 11.54
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-12",
+        "band_min": 10.65,
+        "band_max": 12.03,
+        "rate_2026": 11.6
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-19",
+        "band_min": 10.45,
+        "band_max": 12.19,
+        "rate_2026": 11.04
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-26",
+        "band_min": 9.41,
+        "band_max": 11.85,
+        "rate_2026": 10.59
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-02",
+        "band_min": 9.6,
+        "band_max": 10.99,
+        "rate_2026": 10.26
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-09",
+        "band_min": 9.27,
+        "band_max": 10.57,
+        "rate_2026": 9.85
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-16",
+        "band_min": 9.03,
+        "band_max": 10.38,
+        "rate_2026": 9.38
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-23",
+        "band_min": 9.0,
+        "band_max": 10.32,
+        "rate_2026": 9.65
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-02",
+        "band_min": 9.29,
+        "band_max": 10.41,
+        "rate_2026": 9.22
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-09",
+        "band_min": 9.33,
+        "band_max": 9.61,
+        "rate_2026": 9.25
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-16",
+        "band_min": 9.01,
+        "band_max": 9.42,
+        "rate_2026": 9.17
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-23",
+        "band_min": 8.68,
+        "band_max": 9.28,
+        "rate_2026": 9.12
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-30",
+        "band_min": 8.7,
+        "band_max": 9.48,
+        "rate_2026": 8.98
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-06",
+        "band_min": 8.76,
+        "band_max": 9.48,
+        "rate_2026": 9.18
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-13",
+        "band_min": 8.51,
+        "band_max": 9.15,
+        "rate_2026": 9.02
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-20",
+        "band_min": 8.68,
+        "band_max": 9.26,
+        "rate_2026": 9.04
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-27",
+        "band_min": 8.16,
+        "band_max": 9.28,
+        "rate_2026": 8.43
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-04",
+        "band_min": 8.11,
+        "band_max": 9.61,
+        "rate_2026": 8.36
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-11",
+        "band_min": 8.12,
+        "band_max": 9.72,
+        "rate_2026": 8.37
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-18",
+        "band_min": 8.34,
+        "band_max": 8.97,
+        "rate_2026": 8.79
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-25",
+        "band_min": 8.11,
+        "band_max": 8.89,
+        "rate_2026": 9.13
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-01",
+        "band_min": 8.22,
+        "band_max": 8.92,
+        "rate_2026": 8.33
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-08",
+        "band_min": 8.15,
+        "band_max": 10.2,
+        "rate_2026": 8.13
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-15",
+        "band_min": 8.0,
+        "band_max": 9.33,
+        "rate_2026": 8.13
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-22",
+        "band_min": 8.29,
+        "band_max": 9.37,
+        "rate_2026": 8.86
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-29",
+        "band_min": 7.97,
+        "band_max": 9.92,
+        "rate_2026": 8.5
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2025-12-29",
+        "band_min": 16.97,
+        "band_max": 24.25,
+        "rate_2026": 17.76
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-01-05",
+        "band_min": 17.16,
+        "band_max": 24.22,
+        "rate_2026": 18.04
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-01-12",
+        "band_min": 17.52,
+        "band_max": 25.06,
+        "rate_2026": 17.54
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-01-19",
+        "band_min": 16.3,
+        "band_max": 26.78,
+        "rate_2026": 17.29
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-01-26",
+        "band_min": 15.92,
+        "band_max": 27.92,
+        "rate_2026": 17.37
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-02-02",
+        "band_min": 16.24,
+        "band_max": 27.93,
+        "rate_2026": 16.9
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-02-09",
+        "band_min": 16.02,
+        "band_max": 26.55,
+        "rate_2026": 16.43
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-02-16",
+        "band_min": 15.86,
+        "band_max": 23.3,
+        "rate_2026": 15.37
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-02-23",
+        "band_min": 14.8,
+        "band_max": 20.75,
+        "rate_2026": 15.37
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-03-02",
+        "band_min": 14.29,
+        "band_max": 20.43,
+        "rate_2026": 15.24
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-03-09",
+        "band_min": 14.69,
+        "band_max": 18.68,
+        "rate_2026": 15.41
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-03-16",
+        "band_min": 13.94,
+        "band_max": 19.16,
+        "rate_2026": 15.43
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-03-23",
+        "band_min": 14.36,
+        "band_max": 18.31,
+        "rate_2026": 15.38
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-03-30",
+        "band_min": 14.2,
+        "band_max": 17.68,
+        "rate_2026": 14.89
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-04-06",
+        "band_min": 14.25,
+        "band_max": 16.43,
+        "rate_2026": 14.81
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-04-13",
+        "band_min": 14.04,
+        "band_max": 15.75,
+        "rate_2026": 14.44
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-04-20",
+        "band_min": 13.55,
+        "band_max": 16.4,
+        "rate_2026": 14.28
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-04-27",
+        "band_min": 13.58,
+        "band_max": 14.48,
+        "rate_2026": 13.83
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-05-04",
+        "band_min": 14.09,
+        "band_max": 15.48,
+        "rate_2026": 14.04
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-05-11",
+        "band_min": 13.6,
+        "band_max": 15.17,
+        "rate_2026": 14.39
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-05-18",
+        "band_min": 14.13,
+        "band_max": 15.11,
+        "rate_2026": 13.63
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-05-25",
+        "band_min": 14.22,
+        "band_max": 14.56,
+        "rate_2026": 14.63
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-06-01",
+        "band_min": 13.52,
+        "band_max": 15.17,
+        "rate_2026": 14.32
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-06-08",
+        "band_min": 13.1,
+        "band_max": 14.71,
+        "rate_2026": 13.91
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-06-15",
+        "band_min": 13.35,
+        "band_max": 15.01,
+        "rate_2026": 13.19
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-06-22",
+        "band_min": 12.63,
+        "band_max": 14.48,
+        "rate_2026": 14.23
+      },
+      {
+        "country": "Bulharsko",
+        "week_start": "2026-06-29",
+        "band_min": 13.37,
+        "band_max": 14.26,
+        "rate_2026": 13.93
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%d. %b",
+        "values": [
+          "2025-12-29",
+          "2026-01-12",
+          "2026-01-26",
+          "2026-02-09",
+          "2026-02-23",
+          "2026-03-09",
+          "2026-03-23",
+          "2026-04-06",
+          "2026-04-20",
+          "2026-05-04",
+          "2026-05-18",
+          "2026-06-01",
+          "2026-06-15",
+          "2026-06-29"
+        ]
+      }
+    },
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Španělsko",
+          "Bulharsko"
+        ],
+        "range": [
+          "#f76800",
+          "#6267a3"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Roční úmrtnost (na 1000 obyv.)"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2026",
+            "title": "2026"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.country == \"Španělsko\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.country == \"Bulharsko\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": 14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}
