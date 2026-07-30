@@ -1,0 +1,86 @@
+/* Scrollytelling časové osy historie festivalu. Skeleton převzatý z ověřeného
+   DPBP patternu (sticky grafika + kroky řízené IntersectionObserverem), ale
+   KVIFF-lokální a v zlato-fialové paletě. */
+
+.scrolly {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.7fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.sticky {
+  position: sticky;
+  top: 96px;
+}
+
+.axisSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.steps {
+  padding-bottom: 30vh;
+}
+
+.step {
+  align-items: center;
+  display: flex;
+  min-height: 74vh;
+  opacity: 0.34;
+  transition: opacity 200ms ease;
+}
+
+.stepActive {
+  opacity: 1;
+}
+
+.bubble {
+  background: var(--mantine-color-background-0);
+  border-left: 4px solid var(--mantine-color-brandYellow-8);
+  box-shadow: 0 6px 24px rgba(16, 20, 50, 0.1);
+  border-radius: 0 8px 8px 0;
+  padding: 18px 20px;
+}
+
+.bubble strong {
+  color: var(--mantine-color-brandNavy-9);
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.bubble p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .scrolly {
+    display: block;
+  }
+
+  .sticky {
+    top: 64px;
+    z-index: 2;
+    background: var(--mantine-color-background-2);
+    padding: 8px 0;
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .step {
+    min-height: 62vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step {
+    transition: none;
+  }
+}

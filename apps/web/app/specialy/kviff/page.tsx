@@ -16,6 +16,7 @@ import ProgramBreakdownChart from './ProgramBreakdownChart';
 import FilmScreeningsChart from './FilmScreeningsChart';
 import FilmOriginsDashboard from './FilmOriginsDashboard';
 import FilmOriginsTreemap from './FilmOriginsTreemap';
+import HistoryScrolly from './HistoryScrolly';
 import ContinentStackedChart from './ContinentStackedChart';
 import { CommunistEraGrandPrix, PostRevolutionGrandPrix } from './GrandPrixHistory';
 import { grandPrixCommunistEra, grandPrixPostRevolution } from './grandPrix';
@@ -457,50 +458,18 @@ export default function KarlovyVarySpecialPage() {
           </SimpleGrid>
         </Box>
 
-        <Stack component="section" id="historie" gap="xl" px={{ base: 20, md: 80 }} py={{ base: 42, md: 72 }} maw={940}>
-          <Text size="xl" lh={1.7}>
-            V červenci 2026 proběhl teprve šedesátý ročník festivalu, přestože od jeho vzniku uplynulo osmdesát let. Těch dvacet chybějících ročníků nezpůsobila jedna dlouhá přestávka: od roku 1959 se Vary střídaly s mezinárodním festivalem v Moskvě, v roce 1993 se přehlídka nekonala a novodobou každoroční řadu přerušila pandemie v roce 2020.
-          </Text>
-          <Text size="lg" lh={1.7}>
-            První ročník začal v roce 1946 hlavně v Mariánských Lázních. Karlovy Vary byly zpočátku druhým dějištěm a festival ještě neměl soutěž. Křišťálový globus se poprvé uděloval v roce 1948, dva roky nato se přehlídka natrvalo přestěhovala do Varů a v roce 1956 získala od FIAPF kategorii A.
-          </Text>
-          <Text size="sm" c="dimmed">
-            Zdroj: <Anchor href="https://www.kviff.com/en/about-us/festival-description" target="_blank" rel="noopener noreferrer" style={SOURCE_LINK}>oficiální historie KVIFF</Anchor>
-          </Text>
-        </Stack>
-
-        <Box component="section" bg="background.2" px={{ base: 20, md: 80 }} py={{ base: 42, md: 72 }}>
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing={{ base: 'xl', md: 64 }}>
-            <Stack gap="md">
-              <Text fw={900} c="brandNavy.7">1948–1990</Text>
-              <Title order={2}>Cena sloužila filmu i státní politice</Title>
-              <Text size="lg" lh={1.7}>
-                Po únoru 1948 ovládla dramaturgii znárodněná kinematografie. Vedle hlavní ceny se udělovaly ceny míru, práce nebo sociálního pokroku. Ani tehdy však nevyhrávaly výhradně filmy sovětského bloku: hlavní cenu získaly také snímky z USA, Francie, Indie, Japonska či Austrálie.
-              </Text>
-              <Text size="lg" lh={1.7}>
-                Od roku 1960 připadly Varům sudé roky a Moskvě liché. Toto politické rozhodnutí vysvětluje největší část rozdílu mezi stářím festivalu a počtem ročníků.
-              </Text>
-            </Stack>
-            <Box style={{ borderLeft: '4px solid var(--mantine-color-brandNavy-6)' }} pl={{ base: 20, md: 32 }}>
-              <Text size="xl" lh={1.65}>
-                Z šestadvaceti hlavních cen udělených do roku 1989 připadlo dvacet filmům ze sovětského bloku. Zbývajících šest připomíná, že ani státem řízený festival nebyl po celou dobu uzavřenou přehlídkou spojenců Moskvy.
-              </Text>
-            </Box>
-          </SimpleGrid>
+        <Box component="section" id="historie" px={{ base: 20, md: 48 }} py={{ base: 42, md: 72 }}>
+          <Stack gap="lg" maw={1180} m="0 auto">
+            <SectionKicker>Historie festivalu</SectionKicker>
+            <Title order={2} style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
+              Šedesátý ročník přišel až osmdesát let po prvním
+            </Title>
+            <HistoryScrolly />
+            <Text size="sm" c="dimmed" maw={820}>
+              Zdroj: <Anchor href="https://www.kviff.com/en/about-us/festival-description" target="_blank" rel="noopener noreferrer" style={SOURCE_LINK}>oficiální historie KVIFF</Anchor>. Novodobá datová řada tohoto speciálu začíná rokem 1994, kdy se festival vrátil ke každoročnímu rytmu; u starších ročníků nejsou katalogy stejně úplné.
+            </Text>
+          </Stack>
         </Box>
-
-        <Stack component="section" gap="xl" px={{ base: 20, md: 80 }} py={{ base: 48, md: 80 }} maw={980}>
-          <Text fw={900} c="brandNavy.7">1994</Text>
-          <Title order={2} style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>
-            Bartoška a Zaoralová vrátili festivalu každoroční rytmus
-          </Title>
-          <Text size="xl" lh={1.7}>
-            Po sametové revoluci zmizel ideologický dohled, nikoli organizační nejistota. V roce 1990 nebyla udělena hlavní cena a ročník 1993 se nekonal. O rok později převzal festival tým Jiřího Bartošky a Evy Zaoralové. Znovu se konal každoročně a začal systematicky budovat program, zahraniční kontakty i digitální archiv.
-          </Text>
-          <Text size="lg" lh={1.7}>
-            Právě rok 1994 je předělem i pro tento speciál. U novodobých ročníků známe podstatně úplněji filmy, produkční země, projekce, hosty a prodané vstupenky. Starší katalogy proto nesrovnáváme se stejnou přesností.
-          </Text>
-        </Stack>
 
         <AwardsSection />
         <FilmsSection />
