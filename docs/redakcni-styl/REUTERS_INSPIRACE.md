@@ -104,7 +104,7 @@ Jedna URL, jedna nekonečně scrollovatelná stránka, do které redakce **průb
 
 ## 4. Průřezová řemeslná pravidla Reuters (checklist pro nás)
 
-1. **Mezititulek = zjištění — ale logicky korektní zjištění.** Ne „Graf 3: Podíl hráčů", ale věta, která něco tvrdí. Pozor na logiku: reutersovské „Older players tended to have more ink" je jako formulace sporné — starší hráči se „více netetují", jen tetování (které je trvalé) nasbírali za delší život. Korektní verze: „Starší hráči stihli nasbírat víc tetování." Mezititulek-zjištění nesmí vydávat artefakt času či složení vzorku za mechanismus (pravidlo doplněno do REDAKCNI_MANUAL.md, část Mezititulky).
+1. **Mezititulek = zjištění — ale logicky korektní zjištění.** Ne „Graf 3: Podíl hráčů", ale věta, která něco tvrdí. Pozor na logiku: reutersovské „Older players tended to have more ink" je jako formulace sporné — starší hráči se „více netetují", jen tetování (které je trvalé) nasbírali za delší život. Korektní verze: „Starší hráči stihli nasbírat víc tetování." Mezititulek-zjištění nesmí vydávat artefakt času či složení vzorku za mechanismus (pravidlo doplněno do `REDAKCNI_MANUAL.md`, část Mezititulky).
 2. **Čísla v prvním odstavci.** Teze je kvantifikovaná hned, ne po třech odstavcích kontextu.
 3. **Jeden graf = jedna myšlenka; anotace přímo v grafu** (šipky, popisky výjimek), ne v legendě.
 4. **Sémantická barevná dvojice na článek** (modrá/šedá; oranžová/zelená pro pod/nad). Šedá dělá práci — „ostatní" je vždy šedé.

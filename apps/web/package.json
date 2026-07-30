@@ -8,6 +8,7 @@
     "build": "next build && node scripts/buildSearchIndex.js",
     "start": "next start",
     "lint": "next lint",
+    "qa:kviff": "node scripts/qa-kviff.mjs",
     "sync:dpbp": "node scripts/sync-dpbp.mjs",
     "setup:dpbp": "node scripts/setup-dpbp.mjs"
   },
@@ -54,6 +55,7 @@
     "@types/topojson-client": "^3.1.5",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
+    "playwright": "^1.62.0",
     "postcss": "^8.4.38",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",

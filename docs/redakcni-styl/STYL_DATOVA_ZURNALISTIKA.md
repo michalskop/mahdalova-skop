@@ -1,6 +1,8 @@
 # Style guide: Datová žurnalistika bez berliček
 
-> **Hloubková reference s příklady, podřízená kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md)** (jeho Část III je závazná zhuštěná verze tohoto dokumentu). Kde si odporují, platí manuál.
+> **Hloubková reference s příklady, podřízená kanonickému
+> [REDAKCNI_MANUAL.md](REDAKCNI_MANUAL.md)** (jeho Část III je závazná
+> zhuštěná verze tohoto dokumentu). Kde si odporují, platí manuál.
 
 Univerzální průvodce pro komentování dat, grafů a map – pro zkušenou novinářku, která chce výsledek, ne šablonu.
 

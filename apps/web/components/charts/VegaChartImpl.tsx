@@ -5,7 +5,8 @@ import type { TooltipHandler } from 'vega';
 import { robotoCondensed } from '@/app/fonts';
 import ChartCard from './ChartCard';
 
-// Jednotná typografie grafů (závazná škála, DESIGN.md §9, revize 2026-07-12):
+// Jednotná typografie grafů (závazná škála,
+// docs/design/DESIGN.md §9, revize 2026-07-12):
 // Roboto Condensed všude, titulek 24/bold, podtitulek 17, datové popisky 14/bold,
 // legenda 14, osy/hodnoty 13, patička 13, minimum 10 (jen drobné anotace) –
 // vše #333333 (kromě titulku #1a1a1a). Větší stupnice pro čitelnost ve sdílených screenshotech.

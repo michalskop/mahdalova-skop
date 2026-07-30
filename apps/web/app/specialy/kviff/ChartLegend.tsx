@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-// Standardní vypínací legenda pro grafy v tomto speciálu (DESIGN.md §9:
+// Standardní vypínací legenda pro grafy v tomto speciálu (docs/design/DESIGN.md §9:
 // "nad grafem, na středu, vypínací; čtvercová tlačítka se zakulacenými rohy").
 // Kliknutí na položku danou sérii/skupinu ztlumí, další klik ji vrátí zpět.
 export type ChartLegendItem = {

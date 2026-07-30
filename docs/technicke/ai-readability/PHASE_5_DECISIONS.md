@@ -207,7 +207,7 @@ apps/datajournalism.studio/public/.well-known/agent-skills/
 - `apps/datajournalism.studio/middleware.ts`
 
 ### Documentation (1 file)
-- `plans/AI_READABILITY_PLAN.md` (added Phase 5)
+- `PLAN.md` (added Phase 5)
 
 ---
 

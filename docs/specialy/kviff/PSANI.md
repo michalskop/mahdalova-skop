@@ -1,8 +1,10 @@
-# KVIFF_WRITING_GUIDE.md – psaní a stavba speciálu „Karlovy Vary v datech"
+# Psaní a stavba speciálu „Karlovy Vary v datech"
 
 Pravidla pro obsah, grafy a strukturu `/specialy/kviff` (`apps/web/app/specialy/kviff/`). Destilováno z redakčního auditu 2026-07-12 (viz shrnutí níže) – účel je zabránit stejným chybám v nových kapitolách (`temata-filmu`, `trzby-filmu`) a při revizích hotových.
 
-> **Projektový dodatek podřízený kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md).** Obsahuje pouze pravidla specifická pro KVIFF. Při rozporu platí kanonický manuál.
+> **Projektový dodatek podřízený kanonickému
+> [REDAKCNI_MANUAL.md](../../redakcni-styl/REDAKCNI_MANUAL.md).** Obsahuje
+> pouze pravidla specifická pro KVIFF. Při rozporu platí kanonický manuál.
 
 Technický layout: `data.ts` (`KviffBranch[]`), `page.tsx` (landing), `[slug]/page.tsx` (kapitoly). Sdílené vizuální komponenty v `ChartFrame.tsx`, `ChartLegend.tsx`.
 
@@ -62,7 +64,11 @@ Titulek grafu/karty má tvar tvrzení („Odpověď: Evropa zůstává jádrem, 
 
 ## 8. Jedna barva na jeden význam napříč celým speciálem
 
-Barvy z `accent` v `data.ts` patří konkrétní kapitole – nepoužívej stejnou barvu pro jiný význam v jiné kapitole (kontrast k pravidlu z `SPECIAL.md` pro DPBP: tam je `accent` per-kapitola identita, tady analogicky). Uvnitř jedné kapitoly: pokud barva jednou znamená ženy/menšinu, nesmí ve stejném grafu nebo sousední kartě znamenat něco jiného.
+Barvy z `accent` v `data.ts` patří konkrétní kapitole – nepoužívej stejnou
+barvu pro jiný význam v jiné kapitole (kontrast k pravidlu z
+`TECHNICKY_MANUAL.md` pro DPBP: tam je `accent` per-kapitola identita, tady
+analogicky). Uvnitř jedné kapitoly: pokud barva jednou znamená ženy/menšinu,
+nesmí ve stejném grafu nebo sousední kartě znamenat něco jiného.
 
 ## 9. Návštěvnost a podobné „ekonomika pozornosti" metriky nesmí míchat jednotky
 

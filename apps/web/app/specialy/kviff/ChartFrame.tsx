@@ -2,7 +2,7 @@
 
 import ChartSignature from '@/components/charts/ChartSignature';
 
-// Sjednocený rám "grafové karty" podle DESIGN.md §9 (stejný standard jako
+// Sjednocený rám "grafové karty" podle docs/design/DESIGN.md §9 (stejný standard jako
 // VegaChartImpl v Datech pro budoucí premiérku): Ink Wash pozadí #f8f6f0,
 // titulek 20/bold, podtitulek 14, podpis DataTimes.cz na švu hlavičky vpravo,
 // patička ve dvou řádcích (autoři / data). Používat pro KAŽDÝ graf a mapu

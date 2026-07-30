@@ -7,13 +7,16 @@ Monorepo datové žurnalistiky dvojice Kateřina Mahdalová & Michal Škop. Obsa
 
 ## 📘 Jak píšeme, ověřujeme a navrhujeme
 
-**[REDAKCNI_MANUAL.md](REDAKCNI_MANUAL.md) — kanonický redakční manuál.** Jediný zdroj pravdy: etika a styl závazně pro všechny formáty (text, data, audio, video), žánry, fact-checking a provoz. Platí pro obě značky i všechny speciály.
+**[Redakční manuál](docs/redakcni-styl/REDAKCNI_MANUAL.md) je kanonický
+zdroj pravidel.** Etika a styl platí pro všechny formáty, obě značky i všechny
+speciály.
 
 Podřízené a doplňkové dokumenty:
-- [STYL_DATOVA_ZURNALISTIKA.md](STYL_DATOVA_ZURNALISTIKA.md) — datová žurnalistika s příklady (hloubková reference)
-- [NAVOD_STYL_TRESNAK.md](NAVOD_STYL_TRESNAK.md) — replikovatelná metoda vyprávěcího stylu
-- [DESIGN.md](DESIGN.md) — vizuální systém a barevné tokeny
-- Projektové kapitoly: [`apps/web/SPECIAL.md`](apps/web/SPECIAL.md) a [`apps/web/DPBP_WRITING_GUIDE.md`](apps/web/DPBP_WRITING_GUIDE.md) (Data pro budoucí premiérku), [`apps/web/KVIFF_WRITING_GUIDE.md`](apps/web/KVIFF_WRITING_GUIDE.md) (Karlovy Vary v datech)
+- [Dokumentace repozitáře](docs/README.md) — úplný rozcestník
+- [Redakční styl](docs/redakcni-styl/README.md) — psaní, ověřování a inspirace
+- [Design](docs/design/DESIGN.md) — vizuální systém a barevné tokeny
+- [Speciály](docs/specialy/README.md) — dokumentace jednotlivých projektů
+- [Technická dokumentace](docs/technicke/README.md) — implementační a provozní návody
 
 ---
 

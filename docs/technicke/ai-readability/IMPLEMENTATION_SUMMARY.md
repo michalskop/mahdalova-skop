@@ -130,9 +130,9 @@ apps/datajournalism.studio/
 
 ### Documentation
 ```
-plans/
-├── AI_READABILITY_PLAN.md         [NEW] Complete implementation plan
-├── TESTING_GUIDE.md               [NEW] Testing procedures
+docs/technicke/ai-readability/
+├── PLAN.md                         [NEW] Complete implementation plan
+├── TESTING_GUIDE.md                [NEW] Testing procedures
 └── IMPLEMENTATION_SUMMARY.md      [NEW] This file
 ```
 
@@ -274,7 +274,7 @@ Visit https://isitagentready.com/ and test both domains.
 
 ## Full-Text Search (Pagefind) – added after AI readability
 
-See `plans/SEARCH_IMPLEMENTATION.md` for full details.
+See `../search/IMPLEMENTATION.md` for full details.
 
 ### apps/web (datatimes.cz) ✅ DONE
 
@@ -291,14 +291,16 @@ See `plans/SEARCH_IMPLEMENTATION.md` for full details.
 
 ### apps/datajournalism.studio ✅ DONE
 
-Same approach as datatimes.cz. Articles at `app/a/_articles/`, route `/a/[slug]`, English UI strings. 28 articles indexed at build time. See `plans/SEARCH_IMPLEMENTATION.md` for details.
+Same approach as datatimes.cz. Articles at `app/a/_articles/`, route
+`/a/[slug]`, English UI strings. 28 articles indexed at build time. See
+`../search/IMPLEMENTATION.md` for details.
 
 ---
 
 ## Support & Resources
 
-- Implementation Plan: `plans/AI_READABILITY_PLAN.md`
-- Testing Guide: `plans/TESTING_GUIDE.md`
+- Implementation Plan: `PLAN.md`
+- Testing Guide: `TESTING_GUIDE.md`
 - Schema.org Validator: https://validator.schema.org/
 - Agent-Ready Test: https://isitagentready.com/
 - llms.txt Spec: https://llmstxt.org/

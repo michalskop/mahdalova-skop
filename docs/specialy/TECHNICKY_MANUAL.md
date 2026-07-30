@@ -1,8 +1,11 @@
-# SPECIAL.md – Data pro budoucí premiérku: ops guide
+# Technický manuál speciálů – Data pro budoucí premiérku
 
 Operations guide for the `/specialy/data-pro-budouci-premierku` web section and the PDF book pipeline.
 
-> **Technický projektový manuál podřízený kanonickému [REDAKCNI_MANUAL.md](../../REDAKCNI_MANUAL.md).** Řeší umístění, datový model a publikační pipeline; obecná redakční a stylistická pravidla nemění.
+> **Technický projektový manuál podřízený kanonickému
+> [REDAKCNI_MANUAL.md](../redakcni-styl/REDAKCNI_MANUAL.md).** Řeší
+> umístění, datový model a publikační pipeline; obecná redakční a stylistická
+> pravidla nemění.
 
 > **⚠ Pipeline direction changed 2026-06-21.** The `dpbp-config.json` → `sync-dpbp.mjs` flow described further below is **legacy**. As of this date, new chapter content (article text, `_meta.json`) is authored **directly in this repo** (`mahdalova-skop`), not generated from `data-pro-premierku` source files. `data-pro-premierku` remains the place where research/facts originate, but it is no longer the literal source of `.mdx` content. See "Current content pipeline" below before touching anything in `dpbp-config.json` or running `npm run sync:dpbp`.
 
@@ -29,7 +32,9 @@ apps/web/app/specialy/data-pro-budouci-premierku/
 4. Validate the JSON (`python3 -c "import json; json.load(open(path))"`), then sanity-check by running `npm run dev` and loading the chapter + article URL.
 5. **Copy-back to `data-pro-premierku` is currently manual and deferred.** Once an article is finalized here, it should eventually be placed in a new subfolder of the matching chapter in `data-pro-premierku` for the editorial record / book pipeline – there is no script for this yet. Don't block on it.
 
-**Writing guidelines** (tone, title patterns, tile taxonomy, sourcing rules) live in [`DPBP_WRITING_GUIDE.md`](./DPBP_WRITING_GUIDE.md) – read that before drafting new articles.
+**Writing guidelines** (tone, title patterns, tile taxonomy, sourcing rules)
+live in [`data-pro-budouci-premierku/PSANI.md`](data-pro-budouci-premierku/PSANI.md)
+– read that before drafting new articles.
 
 ### `_meta.json` schema (current)
 
@@ -340,7 +345,7 @@ When adding a 16th chapter, either free up a colour by re-theming one of the abo
 Every chapter landing page (`/specialy/data-pro-budouci-premierku/{chapter}`, rendered by `[chapter]/page.tsx`) follows the same fixed structure top to bottom. This applies uniformly across all chapters – when adding a new chapter, replicate this exact order rather than improvising a new layout.
 
 1. **Header (banner)** – full-bleed navy (`#101432`) box. Breadcrumb "Data pro budoucí premiérku · Kapitola {id}" (crimson `#de1743` link, inverts to navy-on-crimson on hover/focus), chapter title in `#f8f6f0` (`Roboto Slab`, `2rem`, `800`), and a 48×3px accent rule in the chapter's brand color.
-2. **Titulek** – `intro.title` in `_meta.json`. A hook specific to the chapter's central tension – not the chapter name again. See [`DPBP_WRITING_GUIDE.md`](./DPBP_WRITING_GUIDE.md) for title patterns and why not to force the same formula every time.
+2. **Titulek** – `intro.title` in `_meta.json`. A hook specific to the chapter's central tension – not the chapter name again. See [`data-pro-budouci-premierku/PSANI.md`](data-pro-budouci-premierku/PSANI.md) for title patterns and why not to force the same formula every time.
 3. **Text (problem framing)** – `intro.textBefore`. One paragraph, narrative, grounded in a real quote/promise/common assumption. A flowing scene or argument, not a bullet list, that sets up what people *think* is going on.
 4. **Číslo v boxu (number box)** – the chapter's first `ImpactCard` (`cardOrder[0]`), reused as-is – no separate component needed; its big-number layout already matches this slot.
 5. **Text (reframe)** – `intro.textAfter`. The actual finding: takes the number from step 4 and uses it to overturn or complicate the framing from step 3.
@@ -349,7 +354,7 @@ Every chapter landing page (`/specialy/data-pro-budouci-premierku/{chapter}`, re
 
 After step 7: a full-width "Shrnutí" tile (the one-pager), then 4 pairs of tiles (8 total) in a 2-column grid, driven by `tiles` in `_meta.json` – see schema above for the fixed editorial order (Explainer/Svět, mezinárodní kontext/Analýza, Analýza/Analýza, Investigace/Komparace).
 
-**Writing intro and tile text:** Don't invent new claims – ground them in `RESEARCH_AUDIT*.md` / `DIST_ARTICLE_*.md` in `data-pro-premierku`, or in verifiable institutional sources (OECD, Eurostat, NATO, national statistical offices) when covering a foreign comparison not in the source project. See [`DPBP_WRITING_GUIDE.md`](./DPBP_WRITING_GUIDE.md).
+**Writing intro and tile text:** Don't invent new claims – ground them in `RESEARCH_AUDIT*.md` / `DIST_ARTICLE_*.md` in `data-pro-premierku`, or in verifiable institutional sources (OECD, Eurostat, NATO, national statistical offices) when covering a foreign comparison not in the source project. See [`data-pro-budouci-premierku/PSANI.md`](data-pro-budouci-premierku/PSANI.md).
 
 **Chapter 02 (Demografie) is the one exception**: it predates this system and lives as a standalone article (`app/clanek/_articles/data-pro-budouci-premierku-02-demografie/demografie-hub.html`) with `htmlInclude`, not in `_content/`. It replicates the same visual structure (steps 1–7) by hand in raw HTML/CSS – keep both in sync manually if the shared styling (header colors, hover states, card transitions) changes.
 
