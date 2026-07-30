@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
 
 const baseUrl = 'https://www.mahdalova-skop.cz';
 const articlesDir = path.join(__dirname, '../app/clanek/_articles');
@@ -29,18 +30,16 @@ function getArticleMetadata(slug) {
   try {
     const indexPath = path.join(articlesDir, slug, 'index.md');
     const content = fs.readFileSync(indexPath, 'utf8');
-    
-    const titleMatch = content.match(/title:\s*["']([^"']+)["']/);
-    const dateMatch = content.match(/date:\s*["']([^"']+)["']/);
-    const filterMatch = content.match(/filter:\s*["']([^"']+)["']/);
-    const tagsMatch = content.match(/tags:\s*\[([^\]]+)\]/);
-    
+    const { data } = matter(content);
+    const parsedDate = data.date ? new Date(data.date) : null;
+
     return {
       slug,
-      title: titleMatch ? titleMatch[1] : slug,
-      date: dateMatch ? new Date(dateMatch[1]) : new Date(),
-      filter: filterMatch ? filterMatch[1] : 'Ostatní',
-      tags: tagsMatch ? tagsMatch[1].split(',').map(t => t.trim().replace(/["']/g, '')) : []
+      title: typeof data.title === 'string' ? data.title : slug,
+      date: parsedDate && !Number.isNaN(parsedDate.getTime()) ? parsedDate : new Date(0),
+      tags: Array.isArray(data.tags)
+        ? data.tags.filter(tag => typeof tag === 'string')
+        : [],
     };
   } catch (error) {
     console.error(`Error reading metadata for ${slug}:`, error);
@@ -54,14 +53,6 @@ function generateLlmsTxt() {
     .map(getArticleMetadata)
     .filter(a => a !== null)
     .sort((a, b) => b.date - a.date); // Sort by date, newest first
-  
-  // Group articles by category
-  const categories = {
-    'Analýzy': articles.filter(a => a.filter === 'Analýzy'),
-    'Kontext': articles.filter(a => a.filter === 'Kontext'),
-    'Komentáře': articles.filter(a => a.filter === 'Komentář'),
-    'Podcasty': articles.filter(a => a.filter === 'Podcast'),
-  };
   
   // Build llms.txt content
   let content = `# Mahdalová & Škop
@@ -78,25 +69,11 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ## Hlavní sekce
 
-### Analýzy
-${baseUrl}/analyzy
-Datově podložené rozbory politických, ekonomických a společenských témat.
-
-### Kontext
-${baseUrl}/kontext
-Kontextové články vysvětlující složitá témata a souvislosti.
-
-### Komentáře
-${baseUrl}/komentar
-Názorové komentáře k aktuálnímu dění.
-
-### Podcasty
-${baseUrl}/podcasty
-Audio rozhovory a diskuse k aktuálním tématům.
-
-### Volby
-${baseUrl}/volby
-Volební modely, kalkulačky a predikce výsledků voleb.
+- [Analýzy](${baseUrl}/analyzy): Datově podložené rozbory politických, ekonomických a společenských témat.
+- [Kontext](${baseUrl}/kontext): Kontextové články vysvětlující složitá témata a souvislosti.
+- [Podcasty](${baseUrl}/podcasty): Audio rozhovory a diskuse k aktuálním tématům.
+- [Speciály](${baseUrl}/specialy): Tematické datové projekty, investigace a dlouhodobé série.
+- [O autorech](${baseUrl}/kdo-jsme): Redakční profily, kontakty a informace o projektu.
 
 ## Vybrané články
 
@@ -124,7 +101,7 @@ Volební modely, kalkulačky a predikce výsledků voleb.
     if (topicArticles.length > 0) {
       content += `### ${topic}\n`;
       topicArticles.forEach(a => {
-        content += `- ${baseUrl}/clanek/${a.slug}\n`;
+        content += `- [${a.title}](${baseUrl}/clanek/${a.slug})\n`;
       });
       content += '\n';
     }
@@ -132,9 +109,9 @@ Volební modely, kalkulačky a predikce výsledků voleb.
 
   content += `## Kontakt
 
-- Email: info@mahdalova-skop.cz
-- Twitter/X: @data_zurnalist
-- Podpora: ${baseUrl}/podporte-nas
+- [O autorech a kontakt](${baseUrl}/kdo-jsme)
+- [Kateřina Mahdalová](${baseUrl}/autor/katerina-mahdalova)
+- [Michal Škop](${baseUrl}/autor/michal-skop)
 `;
 
   const outputPath = path.join(__dirname, '../public/llms.txt');

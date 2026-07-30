@@ -2,31 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mahdalova-skop.cz/</loc>
-    <lastmod>2026-07-25T12:53:33.777Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/analyzy</loc>
-    <lastmod>2026-07-25T12:53:33.779Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/kontext</loc>
-    <lastmod>2026-07-25T12:53:33.779Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/podcasty</loc>
-    <lastmod>2026-07-25T12:53:33.779Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/kdo-jsme</loc>
-    <lastmod>2026-07-25T12:53:33.779Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -87,6 +82,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-06-29-ucast-na-snemovnich-vyborech</loc>
     <lastmod>2026-06-29T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-07-30-smrtelna-vlna-veder</loc>
+    <lastmod>2026-07-31T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

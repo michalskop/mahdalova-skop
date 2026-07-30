@@ -12,60 +12,46 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ## Hlavní sekce
 
-### Analýzy
-https://www.mahdalova-skop.cz/analyzy
-Datově podložené rozbory politických, ekonomických a společenských témat.
-
-### Kontext
-https://www.mahdalova-skop.cz/kontext
-Kontextové články vysvětlující složitá témata a souvislosti.
-
-### Komentáře
-https://www.mahdalova-skop.cz/komentar
-Názorové komentáře k aktuálnímu dění.
-
-### Podcasty
-https://www.mahdalova-skop.cz/podcasty
-Audio rozhovory a diskuse k aktuálním tématům.
-
-### Volby
-https://www.mahdalova-skop.cz/volby
-Volební modely, kalkulačky a predikce výsledků voleb.
+- [Analýzy](https://www.mahdalova-skop.cz/analyzy): Datově podložené rozbory politických, ekonomických a společenských témat.
+- [Kontext](https://www.mahdalova-skop.cz/kontext): Kontextové články vysvětlující složitá témata a souvislosti.
+- [Podcasty](https://www.mahdalova-skop.cz/podcasty): Audio rozhovory a diskuse k aktuálním tématům.
+- [Speciály](https://www.mahdalova-skop.cz/specialy): Tematické datové projekty, investigace a dlouhodobé série.
+- [O autorech](https://www.mahdalova-skop.cz/kdo-jsme): Redakční profily, kontakty a informace o projektu.
 
 ## Vybrané články
 
 ### Volební analýzy a modely
-- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb
-- https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy
-- https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-13-kam-kracis-cesko
+- [Vývoj predikce výsledku voleb](https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb)
+- [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Kam kráčíš, Česko?](https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-13-kam-kracis-cesko)
 
 ### Ekonomika a ceny
-- https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu
-- https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026
-- https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti
+- [Data: Zastropování marží benzínek v peněžence moc nepoznáte](https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu)
+- [Filmový kalendář 2026](https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026)
+- [Esej: Ekonomie pozornosti, dopaminové pasti a život s ADHD v digitální době](https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti)
 
 ### Mezinárodní politika
-- https://www.mahdalova-skop.cz/clanek/cislo-dne-2026-03-11-new-york-meni-panorama-a-zdrazuje-luxusni-bydleni
-- https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho
-- https://www.mahdalova-skop.cz/clanek/explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad
+- [New York mění panorama a zdražuje luxusní bydlení](https://www.mahdalova-skop.cz/clanek/cislo-dne-2026-03-11-new-york-meni-panorama-a-zdrazuje-luxusni-bydleni)
+- [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
+- [Jak jedno zmanipulované video rozhýbalo pět evropských vlád (včetně české)](https://www.mahdalova-skop.cz/clanek/explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad)
 
 ### Dezinformace a média
-- https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy
-- https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho
-- https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu
+- [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
+- [Úniky z policejních spisů](https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu)
 
 ### Vzdělávání a společnost
-- https://www.mahdalova-skop.cz/clanek/podcast-2025-12-21-boj-o-pozornost
-- https://www.mahdalova-skop.cz/clanek/explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak
-- https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi
+- [Boj o udržení pozornosti](https://www.mahdalova-skop.cz/clanek/podcast-2025-12-21-boj-o-pozornost)
+- [Volba rektora VŠE: co říkají data o Ševčíkově fakultě](https://www.mahdalova-skop.cz/clanek/explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak)
+- [Změny klimatu: 75 % úmrtí způsobených horkem v Mexiku připadá na lidi mladší 35 let](https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi)
 
 ### Technologie a AI
-- https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost
-- https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho
-- https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu
+- [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
+- [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
+- [Úniky z policejních spisů](https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu)
 
 ## Kontakt
 
-- Email: info@mahdalova-skop.cz
-- Twitter/X: @data_zurnalist
-- Podpora: https://www.mahdalova-skop.cz/podporte-nas
+- [O autorech a kontakt](https://www.mahdalova-skop.cz/kdo-jsme)
+- [Kateřina Mahdalová](https://www.mahdalova-skop.cz/autor/katerina-mahdalova)
+- [Michal Škop](https://www.mahdalova-skop.cz/autor/michal-skop)

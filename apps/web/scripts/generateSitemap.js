@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
 
 const baseUrl = 'https://www.mahdalova-skop.cz';
 const articlesDir = path.join(__dirname, '../app/clanek/_articles');
@@ -18,7 +19,8 @@ function getArticleSlugs() {
     const items = fs.readdirSync(articlesDir, { withFileTypes: true });
     return items
       .filter(item => item.isDirectory() && !item.name.startsWith('zzz-') && !EXCLUDED_SLUGS.includes(item.name))
-      .map(item => item.name);
+      .map(item => item.name)
+      .sort();
   } catch (error) {
     console.error('Error reading articles directory:', error);
     return [];
@@ -29,14 +31,17 @@ function getArticleDate(slug) {
   try {
     const indexPath = path.join(articlesDir, slug, 'index.md');
     const content = fs.readFileSync(indexPath, 'utf8');
-    const dateMatch = content.match(/date:\s*["']([^"']+)["']/);
-    if (dateMatch) {
-      return new Date(dateMatch[1]).toISOString();
+    const { data } = matter(content);
+    const value = data.dateModified ?? data.modified ?? data.date;
+    const parsedDate = value ? new Date(value) : null;
+
+    if (parsedDate && !Number.isNaN(parsedDate.getTime())) {
+      return parsedDate.toISOString();
     }
   } catch (error) {
     console.error(`Error reading date for ${slug}:`, error);
   }
-  return new Date().toISOString();
+  return null;
 }
 
 function generateSitemap() {
@@ -48,7 +53,6 @@ function generateSitemap() {
   // Homepage
   xml += '  <url>\n';
   xml += `    <loc>${baseUrl}/</loc>\n`;
-  xml += `    <lastmod>${new Date().toISOString()}</lastmod>\n`;
   xml += '    <changefreq>daily</changefreq>\n';
   xml += '    <priority>1.0</priority>\n';
   xml += '  </url>\n';
@@ -58,7 +62,6 @@ function generateSitemap() {
   sections.forEach(section => {
     xml += '  <url>\n';
     xml += `    <loc>${baseUrl}/${section}</loc>\n`;
-    xml += `    <lastmod>${new Date().toISOString()}</lastmod>\n`;
     xml += '    <changefreq>weekly</changefreq>\n';
     xml += '    <priority>0.8</priority>\n';
     xml += '  </url>\n';
@@ -69,7 +72,9 @@ function generateSitemap() {
     const lastmod = getArticleDate(slug);
     xml += '  <url>\n';
     xml += `    <loc>${baseUrl}/clanek/${slug}</loc>\n`;
-    xml += `    <lastmod>${lastmod}</lastmod>\n`;
+    if (lastmod) {
+      xml += `    <lastmod>${lastmod}</lastmod>\n`;
+    }
     xml += '    <changefreq>monthly</changefreq>\n';
     xml += '    <priority>0.7</priority>\n';
     xml += '  </url>\n';
