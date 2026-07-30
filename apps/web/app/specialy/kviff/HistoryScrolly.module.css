@@ -3,7 +3,7 @@
   --route-purple-dark: #1f102e;
   --route-gold: var(--mantine-color-brandYellow-8);
   height: clamp(4700px, 500vw, 5400px);
-  margin: 12px auto 20px;
+  margin: 12px auto 300px;
   max-width: 1080px;
   position: relative;
   width: 100%;
@@ -43,15 +43,18 @@
 
 .markerNode {
   fill: var(--route-purple);
-  stroke: var(--mantine-color-background-1);
-  stroke-width: 2.5;
-  transition: fill 220ms ease, stroke 220ms ease;
+  stroke: none;
+  transition: fill 220ms ease, r 220ms ease;
   vector-effect: non-scaling-stroke;
 }
 
-.markerNodeActive {
+.markerNodeActive,
+.marker:hover .markerNode {
   fill: var(--route-gold);
-  stroke: var(--route-purple-dark);
+}
+
+.marker {
+  pointer-events: auto;
 }
 
 .markerYear {
@@ -95,19 +98,6 @@
   transition: border-color 220ms ease, box-shadow 220ms ease, opacity 220ms ease, transform 220ms ease;
 }
 
-.bubble::before {
-  background: var(--route-gold);
-  content: '';
-  height: 3px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 260ms ease;
-  width: 70px;
-}
-
 .milestoneActive .bubble {
   border-color: color-mix(in srgb, var(--route-purple) 26%, var(--mantine-color-background-6));
   box-shadow: 0 14px 42px rgba(31, 16, 46, 0.13);
@@ -115,8 +105,40 @@
   transform: translateY(0);
 }
 
-.milestoneActive .bubble::before {
-  transform: scaleX(1);
+@property --trace-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.bubbleTrace {
+  --trace-angle: 0deg;
+  background: conic-gradient(
+    from -90deg,
+    var(--route-gold) 0deg,
+    var(--route-gold) var(--trace-angle),
+    transparent var(--trace-angle),
+    transparent 360deg
+  );
+  border-radius: inherit;
+  inset: 0;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  transition: --trace-angle 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  z-index: 2;
+}
+
+.milestoneActive .bubbleTrace {
+  --trace-angle: 360deg;
 }
 
 .bubbleMeta {
@@ -141,6 +163,48 @@
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+}
+
+.bubbleMedia {
+  background: var(--route-purple-dark);
+  border: 1px solid color-mix(in srgb, var(--route-purple) 22%, var(--mantine-color-background-6));
+  border-radius: 2px;
+  margin: 0 0 17px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubbleMedia img {
+  display: block;
+  height: 178px;
+  object-fit: cover;
+  object-position: var(--image-position);
+  transition: filter 360ms ease, transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
+}
+
+.bubbleMediaPortrait img {
+  object-fit: contain;
+}
+
+.bubbleMedia figcaption {
+  background: var(--route-purple-dark);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.67rem;
+  line-height: 1.35;
+  margin: 0;
+  padding: 7px 9px 8px;
+}
+
+.bubbleMedia a {
+  color: var(--route-gold);
+  text-decoration-color: color-mix(in srgb, var(--route-gold) 58%, transparent);
+  text-underline-offset: 2px;
+}
+
+.milestoneActive .bubbleMedia img {
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.018);
 }
 
 .bubble h3 {
@@ -172,7 +236,13 @@
   }
 
   .routeMobile .markerYear {
-    font-size: 20px;
+    font-size: 18px;
+    transform: scaleX(1.85);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .routeMobile .markerNode {
     transform: scaleX(1.85);
     transform-box: fill-box;
     transform-origin: center;
@@ -209,6 +279,10 @@
     opacity: 1;
     padding: 18px;
   }
+
+  .bubbleMedia img {
+    height: 154px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -216,7 +290,8 @@
   .markerNode,
   .markerYear,
   .bubble,
-  .bubble::before {
+  .bubbleTrace,
+  .bubbleMedia img {
     transition: none;
   }
 }

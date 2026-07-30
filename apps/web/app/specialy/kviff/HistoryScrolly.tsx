@@ -11,6 +11,14 @@ type Milestone = {
   x: number;
   y: number;
   side: 'left' | 'right';
+  image?: {
+    src: string;
+    alt: string;
+    caption: string;
+    sourceUrl: string;
+    portrait?: boolean;
+    position?: string;
+  };
 };
 
 const milestones: Milestone[] = [
@@ -67,6 +75,13 @@ const milestones: Milestone[] = [
     x: 700,
     y: 2750,
     side: 'left',
+    image: {
+      src: '/images/specials/kviff/timeline/1994-poster.jpg',
+      alt: 'Oficiální plakát 29. ročníku Mezinárodního filmového festivalu Karlovy Vary',
+      caption: 'Plakát 29. ročníku, který otevřel moderní éru festivalu',
+      sourceUrl: 'https://www.kviff.com/en/about-us/festival-archive/1994',
+      portrait: true,
+    },
   },
   {
     year: 2011,
@@ -85,6 +100,14 @@ const milestones: Milestone[] = [
     x: 700,
     y: 3950,
     side: 'left',
+    image: {
+      src: '/images/specials/kviff/timeline/2020-cancellation.png',
+      alt: 'Jiří Bartoška s rouškou stojí v prázdném kinosále',
+      caption: 'Prázdný sál se stal obrazem festivalového roku bez festivalu',
+      sourceUrl:
+        'https://www.kviff.com/en/news/3290-the-55th-karlovy-vary-international-film-festival-will-take-place-in-2021',
+      position: 'center 43%',
+    },
   },
   {
     year: 2025,
@@ -94,6 +117,13 @@ const milestones: Milestone[] = [
     x: 380,
     y: 4500,
     side: 'right',
+    image: {
+      src: '/images/specials/kviff/timeline/2025-jiri-bartoska.jpg',
+      alt: 'Černobílý portrét Jiřího Bartošky v hotelu Pupp',
+      caption: 'Jiří Bartoška, prezident moderního KVIFF v letech 1994–2025',
+      sourceUrl: 'https://www.kviff.com/en/news/5228-tribute-to-jiri-bartoska-at-the-59th-kviff',
+      position: 'center 68%',
+    },
   },
   {
     year: 2026,
@@ -103,23 +133,38 @@ const milestones: Milestone[] = [
     x: 650,
     y: 5050,
     side: 'left',
+    image: {
+      src: '/images/specials/kviff/timeline/2026-opening.jpg',
+      alt: 'Dustin Hoffman drží Křišťálový glóbus na 60. ročníku KVIFF',
+      caption: 'Dustin Hoffman s Křišťálovým glóbem při zahájení 60. ročníku',
+      sourceUrl:
+        'https://www.kviff.com/en/news/5746-anniversary-edition-of-kviff-officially-opens-with-honours-for-dustin-hoffman-and-maggie-gyllenhaal',
+      position: 'center 38%',
+    },
   },
 ];
 
 const DESKTOP_PATH =
-  'M 320 30 L 320 300 C 300 440, 730 450, 690 650 C 655 870, 340 900, 405 1110 C 470 1310, 760 1340, 705 1570 C 650 1800, 310 1830, 355 2070 C 410 2380, 760 2420, 700 2750 C 650 3050, 340 3090, 390 3370 C 440 3630, 760 3670, 700 3950 C 650 4210, 330 4260, 380 4500 C 430 4760, 700 4810, 650 5170';
+  'M 180 30 C 210 110, 300 170, 320 300 C 340 430, 730 450, 690 650 C 655 870, 340 900, 405 1110 C 470 1310, 760 1340, 705 1570 C 650 1800, 310 1830, 355 2070 C 410 2380, 760 2420, 700 2750 C 650 3050, 340 3090, 390 3370 C 440 3630, 760 3670, 700 3950 C 650 4210, 330 4260, 380 4500 C 430 4760, 700 4930, 650 5050 C 600 5170, 520 5180, 445 5180';
 const MOBILE_PATH =
-  'M 92 30 L 92 300 C 90 440, 700 460, 650 650 C 610 870, 55 900, 100 1110 C 145 1320, 700 1350, 650 1570 C 605 1790, 65 1840, 110 2070 C 160 2400, 700 2430, 650 2750 C 605 3060, 65 3100, 110 3370 C 155 3630, 700 3680, 650 3950 C 610 4210, 65 4280, 110 4500 C 150 4770, 700 4840, 650 5170';
-const MOBILE_X = [92, 650, 100, 650, 110, 650, 110, 650, 110, 650];
+  'M 28 30 C 42 120, 96 200, 110 300 C 128 430, 700 460, 650 650 C 610 870, 70 900, 110 1110 C 150 1320, 700 1350, 650 1570 C 605 1790, 70 1840, 110 2070 C 150 2400, 700 2430, 650 2750 C 605 3060, 70 3100, 110 3370 C 150 3630, 700 3680, 650 3950 C 610 4210, 70 4280, 110 4500 C 150 4770, 700 4930, 650 5050 C 600 5170, 520 5180, 445 5180';
+const MOBILE_X = [110, 650, 110, 650, 110, 650, 110, 650, 110, 650];
 const ROUTE_HEIGHT = 5200;
 
 export default function HistoryScrolly() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const milestoneRefs = useRef<Array<HTMLElement | null>>([]);
-  const [active, setActive] = useState(0);
+  const desktopPathRef = useRef<SVGPathElement>(null);
+  const mobilePathRef = useRef<SVGPathElement>(null);
+  const [active, setActive] = useState(-1);
   const [progress, setProgress] = useState(0);
+  const [pathLengths, setPathLengths] = useState({ desktop: 1, mobile: 1 });
 
   useEffect(() => {
+    setPathLengths({
+      desktop: desktopPathRef.current?.getTotalLength() ?? 1,
+      mobile: mobilePathRef.current?.getTotalLength() ?? 1,
+    });
+
     let frame = 0;
     const updateProgress = () => {
       frame = 0;
@@ -127,58 +172,66 @@ export default function HistoryScrolly() {
       if (!section) return;
       const rect = section.getBoundingClientRect();
       const viewportMarker = window.innerHeight * 0.52;
-      const scrollable = Math.max(1, rect.height - window.innerHeight * 0.35);
-      setProgress(Math.min(1, Math.max(0, (viewportMarker - rect.top) / scrollable)));
+      const routeY = Math.min(
+        ROUTE_HEIGHT,
+        Math.max(0, ((viewportMarker - rect.top) / rect.height) * ROUTE_HEIGHT),
+      );
+      const path = window.innerWidth <= 760 ? mobilePathRef.current : desktopPathRef.current;
+
+      if (path) {
+        const totalLength = path.getTotalLength();
+        let low = 0;
+        let high = totalLength;
+        for (let iteration = 0; iteration < 16; iteration += 1) {
+          const middle = (low + high) / 2;
+          if (path.getPointAtLength(middle).y < routeY) low = middle;
+          else high = middle;
+        }
+        setProgress(Math.min(1, Math.max(0, ((low + high) / 2) / totalLength)));
+      }
+
+      let reachedIndex = -1;
+      milestones.forEach((milestone, index) => {
+        if (routeY >= milestone.y) reachedIndex = index;
+      });
+      setActive(reachedIndex);
     };
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(updateProgress);
     };
 
-    updateProgress();
+    frame = window.requestAnimationFrame(updateProgress);
+    const settleTimer = window.setTimeout(updateProgress, 120);
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
       if (frame) window.cancelAnimationFrame(frame);
+      window.clearTimeout(settleTimer);
     };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(Number((visible.target as HTMLElement).dataset.step));
-      },
-      { rootMargin: '-34% 0px -42% 0px', threshold: [0.1, 0.35, 0.65] },
-    );
-    milestoneRefs.current.forEach((node) => node && observer.observe(node));
-    return () => observer.disconnect();
   }, []);
 
   const renderDots = (mobile = false) =>
     milestones.map((milestone, index) => {
       const cx = mobile ? MOBILE_X[index] : milestone.x;
+      const nodeIsLeft = cx < (mobile ? 380 : 500);
+      const labelOffset = mobile ? 44 : 30;
       const isActive = index === active;
       const isPast = index <= active;
       return (
         <g key={milestone.year} className={styles.marker}>
-          <rect
+          <circle
             className={`${styles.markerNode} ${isActive ? styles.markerNodeActive : ''}`}
-            x={cx - (isActive ? 11 : 8)}
-            y={milestone.y - (isActive ? 11 : 8)}
-            width={isActive ? 22 : 16}
-            height={isActive ? 22 : 16}
-            rx="2"
-            transform={`rotate(45 ${cx} ${milestone.y})`}
+            cx={cx}
+            cy={milestone.y}
+            r={isActive ? 11 : 8}
           />
           <text
             className={`${styles.markerYear} ${isPast ? styles.markerYearPast : ''}`}
-            x={cx}
-            y={milestone.y - 25}
-            textAnchor="middle"
+            x={cx + (nodeIsLeft ? -labelOffset : labelOffset)}
+            y={milestone.y + 7}
+            textAnchor={nodeIsLeft ? 'end' : 'start'}
           >
             {milestone.year}
           </text>
@@ -196,10 +249,11 @@ export default function HistoryScrolly() {
       >
         <path className={styles.routeShadow} d={DESKTOP_PATH} />
         <path
+          ref={desktopPathRef}
           className={styles.routeProgress}
           d={DESKTOP_PATH}
-          pathLength={1}
-          style={{ strokeDasharray: 1, strokeDashoffset: 1 - progress }}
+          strokeDasharray={pathLengths.desktop}
+          strokeDashoffset={pathLengths.desktop * (1 - progress)}
         />
         {renderDots()}
       </svg>
@@ -212,10 +266,11 @@ export default function HistoryScrolly() {
       >
         <path className={styles.routeShadow} d={MOBILE_PATH} />
         <path
+          ref={mobilePathRef}
           className={styles.routeProgress}
           d={MOBILE_PATH}
-          pathLength={1}
-          style={{ strokeDasharray: 1, strokeDashoffset: 1 - progress }}
+          strokeDasharray={pathLengths.mobile}
+          strokeDashoffset={pathLengths.mobile * (1 - progress)}
         />
         {renderDots(true)}
       </svg>
@@ -223,9 +278,6 @@ export default function HistoryScrolly() {
       {milestones.map((milestone, index) => (
         <article
           key={milestone.year}
-          ref={(node) => {
-            milestoneRefs.current[index] = node;
-          }}
           data-step={index}
           className={`${styles.milestone} ${styles[milestone.side]} ${
             index === active ? styles.milestoneActive : ''
@@ -233,10 +285,35 @@ export default function HistoryScrolly() {
           style={{ '--milestone-y': `${(milestone.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
         >
           <div className={styles.bubble}>
+            <span className={styles.bubbleTrace} aria-hidden="true" />
             <div className={styles.bubbleMeta}>
               <span className={styles.bubbleYear}>{milestone.year}</span>
               <span className={styles.bubbleEyebrow}>{milestone.eyebrow}</span>
             </div>
+            {milestone.image ? (
+              <figure
+                className={`${styles.bubbleMedia} ${
+                  milestone.image.portrait ? styles.bubbleMediaPortrait : ''
+                }`}
+              >
+                <img
+                  src={milestone.image.src}
+                  alt={milestone.image.alt}
+                  loading="lazy"
+                  style={
+                    {
+                      '--image-position': milestone.image.position ?? 'center',
+                    } as React.CSSProperties
+                  }
+                />
+                <figcaption>
+                  {milestone.image.caption}.{' '}
+                  <a href={milestone.image.sourceUrl} target="_blank" rel="noreferrer">
+                    Zdroj: KVIFF
+                  </a>
+                </figcaption>
+              </figure>
+            ) : null}
             <h3>{milestone.title}</h3>
             <p>{milestone.text}</p>
           </div>
