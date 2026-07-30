@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import ChartSignature from '../ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 import rawData from './data.json';
 import styles from './FertilityFanScrolly.module.css';
 

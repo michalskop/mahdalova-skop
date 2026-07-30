@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react';
 import vetoData from './data.json';
-import ChartSignature from '../ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 
 type Veto = {
   p: 'Havel' | 'Klaus' | 'Zeman' | 'Pavel';

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import tripsData from './data.json';
-import ChartSignature from '../ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 
 type RawTrip = {
   president: 'Václav Havel' | 'Václav Klaus';

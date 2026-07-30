@@ -34,9 +34,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
     tsconfigPath: './tsconfig.json'
-  },
-  // Add strict mode for dynamic routes
-  strictMode: true
+  }
 };
 
 export default nextConfig;
