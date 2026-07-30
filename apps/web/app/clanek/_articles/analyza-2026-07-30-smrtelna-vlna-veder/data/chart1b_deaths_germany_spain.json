@@ -1,0 +1,579 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "V {Německu|#272a59} vlna veder zvýšila úmrtnost, ve {Španělsku|#f76800} ne",
+    "subtitle": "Týdenní počet zemřelých: {line} 2026   {band} rozmezí 2022–2025"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "country": "Německo",
+        "week_start": "2025-12-29",
+        "band_min": 20870,
+        "band_max": 25464,
+        "band_mean": 22398,
+        "deaths_2026": 22044
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-05",
+        "band_min": 19921,
+        "band_max": 22713,
+        "band_mean": 21539,
+        "deaths_2026": 23360
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-12",
+        "band_min": 19845,
+        "band_max": 21815,
+        "band_mean": 21146,
+        "deaths_2026": 23215
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-19",
+        "band_min": 20224,
+        "band_max": 23177,
+        "band_mean": 21547,
+        "deaths_2026": 22042
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-26",
+        "band_min": 20698,
+        "band_max": 22549,
+        "band_mean": 21566,
+        "deaths_2026": 22187
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-02",
+        "band_min": 20495,
+        "band_max": 22476,
+        "band_mean": 21442,
+        "deaths_2026": 22165
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-09",
+        "band_min": 20996,
+        "band_max": 22798,
+        "band_mean": 21543,
+        "deaths_2026": 21997
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-16",
+        "band_min": 20225,
+        "band_max": 23416,
+        "band_mean": 21229,
+        "deaths_2026": 21465
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-23",
+        "band_min": 19918,
+        "band_max": 22778,
+        "band_mean": 21140,
+        "deaths_2026": 21072
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-02",
+        "band_min": 19333,
+        "band_max": 22084,
+        "band_mean": 21151,
+        "deaths_2026": 19763
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-09",
+        "band_min": 19412,
+        "band_max": 21828,
+        "band_mean": 21074,
+        "deaths_2026": 19118
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-16",
+        "band_min": 18753,
+        "band_max": 21332,
+        "band_mean": 20650,
+        "deaths_2026": 18758
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-23",
+        "band_min": 18842,
+        "band_max": 20883,
+        "band_mean": 20234,
+        "deaths_2026": 18615
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-30",
+        "band_min": 19083,
+        "band_max": 20953,
+        "band_mean": 19970,
+        "deaths_2026": 18800
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-06",
+        "band_min": 18416,
+        "band_max": 20253,
+        "band_mean": 19641,
+        "deaths_2026": 18681
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-13",
+        "band_min": 18161,
+        "band_max": 19861,
+        "band_mean": 19237,
+        "deaths_2026": 18885
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-20",
+        "band_min": 18038,
+        "band_max": 19361,
+        "band_mean": 18848,
+        "deaths_2026": 18031
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-27",
+        "band_min": 18824,
+        "band_max": 19225,
+        "band_mean": 19020,
+        "deaths_2026": 18408
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-04",
+        "band_min": 17668,
+        "band_max": 19265,
+        "band_mean": 18497,
+        "deaths_2026": 18358
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-11",
+        "band_min": 18003,
+        "band_max": 18742,
+        "band_mean": 18424,
+        "deaths_2026": 17639
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-18",
+        "band_min": 17232,
+        "band_max": 18416,
+        "band_mean": 17710,
+        "deaths_2026": 18120
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-25",
+        "band_min": 17543,
+        "band_max": 18326,
+        "band_mean": 18001,
+        "deaths_2026": 17884
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-01",
+        "band_min": 17471,
+        "band_max": 18389,
+        "band_mean": 17894,
+        "deaths_2026": 16927
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-08",
+        "band_min": 17413,
+        "band_max": 18497,
+        "band_mean": 17898,
+        "deaths_2026": 16789
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-15",
+        "band_min": 17391,
+        "band_max": 19059,
+        "band_mean": 18194,
+        "deaths_2026": 18282
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-22",
+        "band_min": 17059,
+        "band_max": 19174,
+        "band_mean": 18149,
+        "deaths_2026": 24128
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-29",
+        "band_min": 17168,
+        "band_max": 18155,
+        "band_mean": 17655,
+        "deaths_2026": 22346
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2025-12-29",
+        "band_min": 9866,
+        "band_max": 11910,
+        "band_mean": 10413,
+        "deaths_2026": 10599
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-05",
+        "band_min": 10051,
+        "band_max": 11805,
+        "band_mean": 10817,
+        "deaths_2026": 10716
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-12",
+        "band_min": 9903,
+        "band_max": 11236,
+        "band_mean": 10610,
+        "deaths_2026": 10764
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-19",
+        "band_min": 9713,
+        "band_max": 11205,
+        "band_mean": 10280,
+        "deaths_2026": 10248
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-01-26",
+        "band_min": 8786,
+        "band_max": 10886,
+        "band_mean": 9941,
+        "deaths_2026": 9828
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-02",
+        "band_min": 8967,
+        "band_max": 10185,
+        "band_mean": 9677,
+        "deaths_2026": 9528
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-09",
+        "band_min": 8656,
+        "band_max": 9833,
+        "band_mean": 9346,
+        "deaths_2026": 9142
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-16",
+        "band_min": 8436,
+        "band_max": 9649,
+        "band_mean": 9040,
+        "deaths_2026": 8704
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-02-23",
+        "band_min": 8407,
+        "band_max": 9597,
+        "band_mean": 8908,
+        "deaths_2026": 8953
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-02",
+        "band_min": 8537,
+        "band_max": 9677,
+        "band_mean": 8927,
+        "deaths_2026": 8561
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-09",
+        "band_min": 8574,
+        "band_max": 8932,
+        "band_mean": 8736,
+        "deaths_2026": 8587
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-16",
+        "band_min": 8380,
+        "band_max": 8771,
+        "band_mean": 8575,
+        "deaths_2026": 8510
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-23",
+        "band_min": 8107,
+        "band_max": 8525,
+        "band_mean": 8348,
+        "deaths_2026": 8469
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-03-30",
+        "band_min": 8089,
+        "band_max": 8789,
+        "band_mean": 8489,
+        "deaths_2026": 8335
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-06",
+        "band_min": 8178,
+        "band_max": 8707,
+        "band_mean": 8395,
+        "deaths_2026": 8525
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-13",
+        "band_min": 7925,
+        "band_max": 8410,
+        "band_mean": 8129,
+        "deaths_2026": 8377
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-20",
+        "band_min": 8103,
+        "band_max": 8511,
+        "band_mean": 8209,
+        "deaths_2026": 8388
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-04-27",
+        "band_min": 7592,
+        "band_max": 8524,
+        "band_mean": 7982,
+        "deaths_2026": 7828
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-04",
+        "band_min": 7537,
+        "band_max": 8832,
+        "band_mean": 8139,
+        "deaths_2026": 7761
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-11",
+        "band_min": 7553,
+        "band_max": 8930,
+        "band_mean": 8078,
+        "deaths_2026": 7774
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-18",
+        "band_min": 7755,
+        "band_max": 8238,
+        "band_mean": 7994,
+        "deaths_2026": 8159
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-05-25",
+        "band_min": 7544,
+        "band_max": 8230,
+        "band_mean": 7984,
+        "deaths_2026": 8478
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-01",
+        "band_min": 7645,
+        "band_max": 8193,
+        "band_mean": 7987,
+        "deaths_2026": 7732
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-08",
+        "band_min": 7578,
+        "band_max": 9373,
+        "band_mean": 8143,
+        "deaths_2026": 7551
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-15",
+        "band_min": 7435,
+        "band_max": 8573,
+        "band_mean": 7972,
+        "deaths_2026": 7548
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-22",
+        "band_min": 7713,
+        "band_max": 8606,
+        "band_mean": 8127,
+        "deaths_2026": 8222
+      },
+      {
+        "country": "Španělsko",
+        "week_start": "2026-06-29",
+        "band_min": 7415,
+        "band_max": 9115,
+        "band_mean": 8245,
+        "deaths_2026": 7891
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%d. %b",
+        "values": [
+          "2025-12-29",
+          "2026-01-12",
+          "2026-01-26",
+          "2026-02-09",
+          "2026-02-23",
+          "2026-03-09",
+          "2026-03-23",
+          "2026-04-06",
+          "2026-04-20",
+          "2026-05-04",
+          "2026-05-18",
+          "2026-06-01",
+          "2026-06-15",
+          "2026-06-29"
+        ]
+      }
+    },
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Německo",
+          "Španělsko"
+        ],
+        "range": [
+          "#272a59",
+          "#f76800"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Počet zemřelých"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "deaths_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "deaths_2026",
+            "title": "2026"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\")"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -6,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "deaths_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}

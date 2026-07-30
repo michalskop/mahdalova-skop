@@ -1,0 +1,549 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "V {Německu|#272a59} i {Francii|#12b886} vlna veder zvýšila úmrtnost",
+    "subtitle": "Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "country": "Německo",
+        "week_start": "2025-12-29",
+        "band_min": 13.1,
+        "band_max": 16.02,
+        "rate_2026": 13.97
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-05",
+        "band_min": 12.5,
+        "band_max": 14.29,
+        "rate_2026": 14.8
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-12",
+        "band_min": 12.45,
+        "band_max": 13.76,
+        "rate_2026": 14.71
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-19",
+        "band_min": 12.69,
+        "band_max": 14.65,
+        "rate_2026": 13.97
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-01-26",
+        "band_min": 12.99,
+        "band_max": 14.25,
+        "rate_2026": 14.06
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-02",
+        "band_min": 12.86,
+        "band_max": 14.21,
+        "rate_2026": 14.04
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-09",
+        "band_min": 13.21,
+        "band_max": 14.41,
+        "rate_2026": 13.94
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-16",
+        "band_min": 12.75,
+        "band_max": 14.8,
+        "rate_2026": 13.6
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-02-23",
+        "band_min": 12.56,
+        "band_max": 14.4,
+        "rate_2026": 13.35
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-02",
+        "band_min": 12.19,
+        "band_max": 13.96,
+        "rate_2026": 12.52
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-09",
+        "band_min": 12.24,
+        "band_max": 13.73,
+        "rate_2026": 12.11
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-16",
+        "band_min": 11.83,
+        "band_max": 13.45,
+        "rate_2026": 11.89
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-23",
+        "band_min": 11.88,
+        "band_max": 13.11,
+        "rate_2026": 11.79
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-03-30",
+        "band_min": 12.03,
+        "band_max": 13.15,
+        "rate_2026": 11.91
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-06",
+        "band_min": 11.61,
+        "band_max": 12.71,
+        "rate_2026": 11.84
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-13",
+        "band_min": 11.45,
+        "band_max": 12.49,
+        "rate_2026": 11.97
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-20",
+        "band_min": 11.4,
+        "band_max": 12.15,
+        "rate_2026": 11.42
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-04-27",
+        "band_min": 11.9,
+        "band_max": 12.07,
+        "rate_2026": 11.66
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-04",
+        "band_min": 11.17,
+        "band_max": 12.09,
+        "rate_2026": 11.63
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-11",
+        "band_min": 11.38,
+        "band_max": 11.82,
+        "rate_2026": 11.18
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-18",
+        "band_min": 10.81,
+        "band_max": 11.59,
+        "rate_2026": 11.48
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-05-25",
+        "band_min": 11.06,
+        "band_max": 11.58,
+        "rate_2026": 11.33
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-01",
+        "band_min": 11.02,
+        "band_max": 11.57,
+        "rate_2026": 10.73
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-08",
+        "band_min": 11.01,
+        "band_max": 11.61,
+        "rate_2026": 10.64
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-15",
+        "band_min": 10.99,
+        "band_max": 11.96,
+        "rate_2026": 11.58
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-22",
+        "band_min": 10.73,
+        "band_max": 12.09,
+        "rate_2026": 15.29
+      },
+      {
+        "country": "Německo",
+        "week_start": "2026-06-29",
+        "band_min": 10.8,
+        "band_max": 11.44,
+        "rate_2026": 14.16
+      },
+      {
+        "country": "Francie",
+        "week_start": "2025-12-29",
+        "band_min": 11.33,
+        "band_max": 12.54,
+        "rate_2026": 11.91
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-01-05",
+        "band_min": 11.12,
+        "band_max": 12.66,
+        "rate_2026": 13.06
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-01-12",
+        "band_min": 10.64,
+        "band_max": 12.2,
+        "rate_2026": 12.61
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-01-19",
+        "band_min": 10.46,
+        "band_max": 12.17,
+        "rate_2026": 11.6
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-01-26",
+        "band_min": 10.23,
+        "band_max": 11.92,
+        "rate_2026": 10.85
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-02-02",
+        "band_min": 10.16,
+        "band_max": 11.29,
+        "rate_2026": 10.52
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-02-09",
+        "band_min": 9.98,
+        "band_max": 11.04,
+        "rate_2026": 9.97
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-02-16",
+        "band_min": 9.82,
+        "band_max": 10.66,
+        "rate_2026": 9.57
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-02-23",
+        "band_min": 9.71,
+        "band_max": 10.09,
+        "rate_2026": 9.49
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-03-02",
+        "band_min": 9.67,
+        "band_max": 9.99,
+        "rate_2026": 9.27
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-03-09",
+        "band_min": 9.62,
+        "band_max": 9.77,
+        "rate_2026": 9.1
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-03-16",
+        "band_min": 9.1,
+        "band_max": 9.8,
+        "rate_2026": 9.27
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-03-23",
+        "band_min": 9.13,
+        "band_max": 10.13,
+        "rate_2026": 8.97
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-03-30",
+        "band_min": 9.1,
+        "band_max": 10.33,
+        "rate_2026": 9.4
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-04-06",
+        "band_min": 9.15,
+        "band_max": 10.43,
+        "rate_2026": 9.25
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-04-13",
+        "band_min": 8.72,
+        "band_max": 10.03,
+        "rate_2026": 8.94
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-04-20",
+        "band_min": 8.95,
+        "band_max": 9.56,
+        "rate_2026": 8.84
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-04-27",
+        "band_min": 9.0,
+        "band_max": 9.51,
+        "rate_2026": 8.86
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-05-04",
+        "band_min": 8.62,
+        "band_max": 9.1,
+        "rate_2026": 8.47
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-05-11",
+        "band_min": 8.64,
+        "band_max": 8.91,
+        "rate_2026": 8.66
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-05-18",
+        "band_min": 8.19,
+        "band_max": 9.0,
+        "rate_2026": 8.99
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-05-25",
+        "band_min": 8.48,
+        "band_max": 8.83,
+        "rate_2026": 9.42
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-06-01",
+        "band_min": 8.35,
+        "band_max": 8.97,
+        "rate_2026": 8.16
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-06-08",
+        "band_min": 8.58,
+        "band_max": 8.96,
+        "rate_2026": 8.33
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-06-15",
+        "band_min": 8.44,
+        "band_max": 8.93,
+        "rate_2026": 8.82
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-06-22",
+        "band_min": 8.01,
+        "band_max": 8.91,
+        "rate_2026": 12.41
+      },
+      {
+        "country": "Francie",
+        "week_start": "2026-06-29",
+        "band_min": 8.32,
+        "band_max": 9.06,
+        "rate_2026": 9.15
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%d. %b",
+        "values": [
+          "2025-12-29",
+          "2026-01-12",
+          "2026-01-26",
+          "2026-02-09",
+          "2026-02-23",
+          "2026-03-09",
+          "2026-03-23",
+          "2026-04-06",
+          "2026-04-20",
+          "2026-05-04",
+          "2026-05-18",
+          "2026-06-01",
+          "2026-06-15",
+          "2026-06-29"
+        ]
+      }
+    },
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Německo",
+          "Francie"
+        ],
+        "range": [
+          "#272a59",
+          "#12b886"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Roční úmrtnost (na 1000 obyv.)"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2026",
+            "title": "2026"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.country == \"Německo\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.country == \"Francie\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": 14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}

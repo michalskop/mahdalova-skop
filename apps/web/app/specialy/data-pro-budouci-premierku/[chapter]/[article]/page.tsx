@@ -6,7 +6,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Container, Box } from '@mantine/core';
-import VegaChart from '@/components/dpbp/VegaChart';
+import VegaChart from '@/components/charts/VegaChart';
 import { FollowBar } from '@/components/common/FollowBar';
 import ArticleRating from '@/components/common/ArticleRating';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
@@ -18,7 +18,7 @@ import PresidentialTripsMap from '@/components/dpbp/PresidentialTripsMap/Preside
 import MandateCalendar from '@/components/dpbp/MandateCalendar/MandateCalendar';
 import HistoricalPresidentialTrips from '@/components/dpbp/HistoricalPresidentialTrips/HistoricalPresidentialTrips';
 import VetoChart from '@/components/dpbp/VetoChart/VetoChart';
-import ChartSignature from '@/components/dpbp/ChartSignature';
+import ChartSignature from '@/components/charts/ChartSignature';
 import AgeingScrolly from '@/components/dpbp/AgeingScrolly';
 import FertilityFanScrolly from '@/components/dpbp/FertilityFanScrolly';
 import { InfoBox } from '@/components/clanek/InfoBox';

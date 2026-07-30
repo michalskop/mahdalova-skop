@@ -1,0 +1,549 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "V {Litvě|#0e839e} ani v {Estonsku|#4a51ab} nebylo přes 35 °C",
+    "subtitle": "Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "country": "Litva",
+        "week_start": "2025-12-29",
+        "band_min": 15.45,
+        "band_max": 17.97,
+        "rate_2026": 16.27
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-01-05",
+        "band_min": 14.42,
+        "band_max": 17.27,
+        "rate_2026": 17.26
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-01-12",
+        "band_min": 13.88,
+        "band_max": 17.84,
+        "rate_2026": 16.25
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-01-19",
+        "band_min": 14.31,
+        "band_max": 16.83,
+        "rate_2026": 15.72
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-01-26",
+        "band_min": 13.24,
+        "band_max": 16.26,
+        "rate_2026": 17.28
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-02-02",
+        "band_min": 12.69,
+        "band_max": 19.01,
+        "rate_2026": 16.1
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-02-09",
+        "band_min": 10.05,
+        "band_max": 18.0,
+        "rate_2026": 16.45
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-02-16",
+        "band_min": 13.59,
+        "band_max": 17.38,
+        "rate_2026": 16.19
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-02-23",
+        "band_min": 13.05,
+        "band_max": 16.35,
+        "rate_2026": 14.51
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-03-02",
+        "band_min": 12.91,
+        "band_max": 16.46,
+        "rate_2026": 13.52
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-03-09",
+        "band_min": 12.98,
+        "band_max": 16.35,
+        "rate_2026": 13.8
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-03-16",
+        "band_min": 13.05,
+        "band_max": 16.28,
+        "rate_2026": 12.85
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-03-23",
+        "band_min": 12.34,
+        "band_max": 15.41,
+        "rate_2026": 12.07
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-03-30",
+        "band_min": 12.72,
+        "band_max": 14.94,
+        "rate_2026": 12.47
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-04-06",
+        "band_min": 12.33,
+        "band_max": 14.53,
+        "rate_2026": 13.16
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-04-13",
+        "band_min": 12.19,
+        "band_max": 16.22,
+        "rate_2026": 12.64
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-04-20",
+        "band_min": 11.49,
+        "band_max": 14.72,
+        "rate_2026": 13.29
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-04-27",
+        "band_min": 12.07,
+        "band_max": 14.15,
+        "rate_2026": 12.82
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-05-04",
+        "band_min": 11.26,
+        "band_max": 14.15,
+        "rate_2026": 12.6
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-05-11",
+        "band_min": 12.7,
+        "band_max": 13.52,
+        "rate_2026": 11.47
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-05-18",
+        "band_min": 11.57,
+        "band_max": 13.45,
+        "rate_2026": 12.73
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-05-25",
+        "band_min": 11.52,
+        "band_max": 13.21,
+        "rate_2026": 11.09
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-06-01",
+        "band_min": 11.62,
+        "band_max": 13.89,
+        "rate_2026": 11.18
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-06-08",
+        "band_min": 11.53,
+        "band_max": 13.49,
+        "rate_2026": 11.91
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-06-15",
+        "band_min": 11.9,
+        "band_max": 13.67,
+        "rate_2026": 12.27
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-06-22",
+        "band_min": 11.2,
+        "band_max": 16.22,
+        "rate_2026": 12.45
+      },
+      {
+        "country": "Litva",
+        "week_start": "2026-06-29",
+        "band_min": 11.3,
+        "band_max": 12.62,
+        "rate_2026": 13.16
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2025-12-29",
+        "band_min": 13.57,
+        "band_max": 14.72,
+        "rate_2026": 13.09
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-01-05",
+        "band_min": 13.23,
+        "band_max": 15.44,
+        "rate_2026": 13.2
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-01-12",
+        "band_min": 12.83,
+        "band_max": 15.08,
+        "rate_2026": 13.77
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-01-19",
+        "band_min": 12.32,
+        "band_max": 13.79,
+        "rate_2026": 13.77
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-01-26",
+        "band_min": 12.07,
+        "band_max": 15.03,
+        "rate_2026": 12.02
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-02-02",
+        "band_min": 11.44,
+        "band_max": 14.42,
+        "rate_2026": 13.09
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-02-09",
+        "band_min": 11.33,
+        "band_max": 16.53,
+        "rate_2026": 15.26
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-02-16",
+        "band_min": 11.23,
+        "band_max": 16.88,
+        "rate_2026": 13.54
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-02-23",
+        "band_min": 11.16,
+        "band_max": 15.42,
+        "rate_2026": 12.51
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-03-02",
+        "band_min": 10.68,
+        "band_max": 14.76,
+        "rate_2026": 11.71
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-03-09",
+        "band_min": 10.89,
+        "band_max": 13.95,
+        "rate_2026": 12.51
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-03-16",
+        "band_min": 10.89,
+        "band_max": 13.34,
+        "rate_2026": 11.03
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-03-23",
+        "band_min": 11.06,
+        "band_max": 12.57,
+        "rate_2026": 12.9
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-03-30",
+        "band_min": 10.74,
+        "band_max": 12.55,
+        "rate_2026": 11.98
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-04-06",
+        "band_min": 11.38,
+        "band_max": 12.12,
+        "rate_2026": 11.29
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-04-13",
+        "band_min": 11.18,
+        "band_max": 12.45,
+        "rate_2026": 11.52
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-04-20",
+        "band_min": 10.6,
+        "band_max": 12.01,
+        "rate_2026": 10.99
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-04-27",
+        "band_min": 9.85,
+        "band_max": 11.82,
+        "rate_2026": 10.07
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-05-04",
+        "band_min": 11.03,
+        "band_max": 12.37,
+        "rate_2026": 10.3
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-05-11",
+        "band_min": 10.98,
+        "band_max": 13.73,
+        "rate_2026": 12.02
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-05-18",
+        "band_min": 9.9,
+        "band_max": 10.79,
+        "rate_2026": 12.06
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-05-25",
+        "band_min": 9.66,
+        "band_max": 11.16,
+        "rate_2026": 9.88
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-06-01",
+        "band_min": 10.04,
+        "band_max": 12.53,
+        "rate_2026": 9.69
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-06-08",
+        "band_min": 9.51,
+        "band_max": 11.73,
+        "rate_2026": 10.64
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-06-15",
+        "band_min": 10.65,
+        "band_max": 12.83,
+        "rate_2026": 9.69
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-06-22",
+        "band_min": 9.49,
+        "band_max": 12.95,
+        "rate_2026": 10.22
+      },
+      {
+        "country": "Estonsko",
+        "week_start": "2026-06-29",
+        "band_min": 9.74,
+        "band_max": 11.79,
+        "rate_2026": 9.77
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%d. %b",
+        "values": [
+          "2025-12-29",
+          "2026-01-12",
+          "2026-01-26",
+          "2026-02-09",
+          "2026-02-23",
+          "2026-03-09",
+          "2026-03-23",
+          "2026-04-06",
+          "2026-04-20",
+          "2026-05-04",
+          "2026-05-18",
+          "2026-06-01",
+          "2026-06-15",
+          "2026-06-29"
+        ]
+      }
+    },
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Litva",
+          "Estonsko"
+        ],
+        "range": [
+          "#0e839e",
+          "#4a51ab"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.15,
+        "line": false
+      },
+      "encoding": {
+        "y": {
+          "field": "band_min",
+          "type": "quantitative",
+          "title": "Roční úmrtnost (na 1000 obyv.)"
+        },
+        "y2": {
+          "field": "band_max"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "band_min",
+            "title": "Min 2022–2025"
+          },
+          {
+            "field": "band_max",
+            "title": "Max 2022–2025"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "title": "Země"
+          },
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "rate_2026",
+            "title": "2026"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.country == \"Litva\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.date == toDate(\"2026-06-22\") && datum.country == \"Estonsko\""
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": 14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_2026",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country"
+        }
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}

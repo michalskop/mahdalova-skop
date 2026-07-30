@@ -1,4 +1,4 @@
-import ChartCard from '@/components/dpbp/ChartCard';
+import ChartCard from '@/components/charts/ChartCard';
 
 export default function MothersAgeShiftChart() {
   return (

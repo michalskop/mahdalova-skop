@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import VegaChart from './VegaChart';
+import VegaChart from '@/components/charts/VegaChart';
 import GenreBadge from './GenreBadge';
 import { hexToRgbString } from '@/utils/colorUtils';
 import styles from './DpbpArticleCard.module.css';

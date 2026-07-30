@@ -1,0 +1,675 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "V {Německu|#272a59} zvýšila vlna veder úmrtnost napříč všemi dospělými věkovými skupinami",
+    "subtitle": "Týdenní nadúmrtnost 2026 podle věku, vůči běžnému průměru pro daný týden (%)"
+  },
+  "width": 620,
+  "height": 340,
+  "data": {
+    "values": [
+      {
+        "age": "15–64 let",
+        "week_start": "2025-12-29",
+        "excess_pct": -10.2
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-01-05",
+        "excess_pct": -4.3
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-01-12",
+        "excess_pct": -5.8
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-01-19",
+        "excess_pct": -8.6
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-01-26",
+        "excess_pct": -10.1
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-02-02",
+        "excess_pct": -10.3
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-02-09",
+        "excess_pct": -8.1
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-02-16",
+        "excess_pct": -6.2
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-02-23",
+        "excess_pct": -11.4
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-03-02",
+        "excess_pct": -11.7
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-03-09",
+        "excess_pct": -15.1
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-03-16",
+        "excess_pct": -13.7
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-03-23",
+        "excess_pct": -17.4
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-03-30",
+        "excess_pct": -13.5
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-04-06",
+        "excess_pct": -9.9
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-04-13",
+        "excess_pct": -12.1
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-04-20",
+        "excess_pct": -15.8
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-04-27",
+        "excess_pct": -15.6
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-05-04",
+        "excess_pct": -10.7
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-05-11",
+        "excess_pct": -16.7
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-05-18",
+        "excess_pct": -8.7
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-05-25",
+        "excess_pct": -8.8
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-06-01",
+        "excess_pct": -13.0
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-06-08",
+        "excess_pct": -17.5
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-06-15",
+        "excess_pct": -11.3
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-06-22",
+        "excess_pct": 22.2
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-06-29",
+        "excess_pct": 19.9
+      },
+      {
+        "age": "15–64 let",
+        "week_start": "2026-07-06",
+        "excess_pct": -7.2
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2025-12-29",
+        "excess_pct": -0.3
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-01-05",
+        "excess_pct": 2.6
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-01-12",
+        "excess_pct": 5.8
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-01-19",
+        "excess_pct": -0.5
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-01-26",
+        "excess_pct": 5.3
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-02-02",
+        "excess_pct": 4.7
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-02-09",
+        "excess_pct": 3.1
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-02-16",
+        "excess_pct": 5.4
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-02-23",
+        "excess_pct": 3.4
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-03-02",
+        "excess_pct": 0.9
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-03-09",
+        "excess_pct": -4.5
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-03-16",
+        "excess_pct": -3.4
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-03-23",
+        "excess_pct": -3.9
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-03-30",
+        "excess_pct": -3.6
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-04-06",
+        "excess_pct": -6.2
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-04-13",
+        "excess_pct": -1.4
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-04-20",
+        "excess_pct": -3.8
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-04-27",
+        "excess_pct": -0.4
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-05-04",
+        "excess_pct": -3.0
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-05-11",
+        "excess_pct": -3.2
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-05-18",
+        "excess_pct": 0.5
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-05-25",
+        "excess_pct": -1.3
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-06-01",
+        "excess_pct": -4.0
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-06-08",
+        "excess_pct": -7.0
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-06-15",
+        "excess_pct": 7.3
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-06-22",
+        "excess_pct": 39.9
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-06-29",
+        "excess_pct": 36.8
+      },
+      {
+        "age": "65–74 let",
+        "week_start": "2026-07-06",
+        "excess_pct": 7.3
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2025-12-29",
+        "excess_pct": -14.2
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-01-05",
+        "excess_pct": -5.6
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-01-12",
+        "excess_pct": -4.9
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-01-19",
+        "excess_pct": -10.8
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-01-26",
+        "excess_pct": -9.6
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-02-02",
+        "excess_pct": -8.5
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-02-09",
+        "excess_pct": -6.7
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-02-16",
+        "excess_pct": -8.7
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-02-23",
+        "excess_pct": -7.4
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-03-02",
+        "excess_pct": -14.6
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-03-09",
+        "excess_pct": -15.9
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-03-16",
+        "excess_pct": -16.0
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-03-23",
+        "excess_pct": -15.7
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-03-30",
+        "excess_pct": -15.5
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-04-06",
+        "excess_pct": -14.9
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-04-13",
+        "excess_pct": -11.5
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-04-20",
+        "excess_pct": -13.2
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-04-27",
+        "excess_pct": -13.9
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-05-04",
+        "excess_pct": -10.2
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-05-11",
+        "excess_pct": -12.7
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-05-18",
+        "excess_pct": -6.8
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-05-25",
+        "excess_pct": -11.1
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-06-01",
+        "excess_pct": -14.8
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-06-08",
+        "excess_pct": -16.8
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-06-15",
+        "excess_pct": -8.3
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-06-22",
+        "excess_pct": 16.8
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-06-29",
+        "excess_pct": 11.3
+      },
+      {
+        "age": "75–84 let",
+        "week_start": "2026-07-06",
+        "excess_pct": -0.8
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2025-12-29",
+        "excess_pct": 4.2
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-01-05",
+        "excess_pct": 17.5
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-01-12",
+        "excess_pct": 19.2
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-01-19",
+        "excess_pct": 13.5
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-01-26",
+        "excess_pct": 14.5
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-02-02",
+        "excess_pct": 17.0
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-02-09",
+        "excess_pct": 13.5
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-02-16",
+        "excess_pct": 14.2
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-02-23",
+        "excess_pct": 13.2
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-03-02",
+        "excess_pct": 3.6
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-03-09",
+        "excess_pct": 1.1
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-03-16",
+        "excess_pct": -0.5
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-03-23",
+        "excess_pct": 2.9
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-03-30",
+        "excess_pct": 5.1
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-04-06",
+        "excess_pct": 5.7
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-04-13",
+        "excess_pct": 8.3
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-04-20",
+        "excess_pct": 3.9
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-04-27",
+        "excess_pct": 6.6
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-05-04",
+        "excess_pct": 10.1
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-05-11",
+        "excess_pct": 7.5
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-05-18",
+        "excess_pct": 14.9
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-05-25",
+        "excess_pct": 9.2
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-06-01",
+        "excess_pct": 4.6
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-06-08",
+        "excess_pct": 2.7
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-06-15",
+        "excess_pct": 11.0
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-06-22",
+        "excess_pct": 50.1
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-06-29",
+        "excess_pct": 38.8
+      },
+      {
+        "age": "85 a více let",
+        "week_start": "2026-07-06",
+        "excess_pct": 15.8
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.week_start)",
+      "as": "date"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%d. %b",
+        "values": [
+          "2025-12-29",
+          "2026-01-12",
+          "2026-01-26",
+          "2026-02-09",
+          "2026-02-23",
+          "2026-03-09",
+          "2026-03-23",
+          "2026-04-06",
+          "2026-04-20",
+          "2026-05-04",
+          "2026-05-18",
+          "2026-06-01",
+          "2026-06-15",
+          "2026-06-29"
+        ]
+      }
+    },
+    "color": {
+      "field": "age",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "15–64 let",
+          "65–74 let",
+          "75–84 let",
+          "85 a více let"
+        ],
+        "range": [
+          "#b3b4c5",
+          "#7d7f9b",
+          "#474a72",
+          "#272a59"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#999999",
+        "strokeDash": [
+          2,
+          2
+        ]
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "excess_pct",
+          "type": "quantitative",
+          "title": "Nadúmrtnost (%)"
+        },
+        "tooltip": [
+          {
+            "field": "age",
+            "title": "Věk"
+          },
+          {
+            "field": "date",
+            "title": "Týden od",
+            "type": "temporal",
+            "format": "%d. %b"
+          },
+          {
+            "field": "excess_pct",
+            "title": "Nadúmrtnost (%)"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+}
