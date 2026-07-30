@@ -30,7 +30,7 @@ Vysvětlením může být, že Španělé jsou na vysoké teploty dlouhodobě zv
 
 Stejně jako v Německu horko zabíjelo také ve Francii, Nizozemsku nebo Belgii, odkud již máme červnová data. Naopak Bulharsko na tom bylo podobně jako Španělsko. Litva se sice v tom týdnu oteplila, ale jen na 32 °C, nadúmrtnost tam vidět nebyla. Estonsko zůstalo chladnější a horko ho nezasáhlo vůbec.
 
-<ChartRow>
+<ChartRow title="Vlna veder měla různý dopad v zemích Evropy" subtitle="Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025" source="[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)">
 <VegaChart dataFile="data/chart2a_rate_germany_france.json" />
 <VegaChart dataFile="data/chart2b_rate_spain_bulgaria.json" />
 <VegaChart dataFile="data/chart2c_rate_lithuania_estonia.json" />
@@ -57,13 +57,10 @@ Ve svém špičkovém týdnu byla vlna veder v Německu smrtelnější než špi
 
 I Německo, které pandemií proplulo v evropském srovnání relativně dobře, mělo víc než jednu covidovou vlnu – tou nejhorší (konec prosince 2020) prošlo s nadúmrtností přes 40 %, tedy o něco víc než letošní vlna veder. Na rozdíl od horka ale covidové vlny trvaly týdny až měsíce, ne dny. Ve víc zasažených zemích byly rozdíly propastné: ve Španělsku vyskočila úmrtnost hned na jaře 2020, na samém začátku pandemie, o 150 %. V Bulharsku, kde patřila proočkovanost k nejnižším v Evropě, dosáhla nadúmrtnost na podzim 2021 skoro 90 % a vlny úmrtí pokračovaly až do roku 2021.
 
-<ChartRow>
+<ChartRow title="Covid vychýlil úmrtnost mnohem výš než letošní vlna veder" subtitle="{line} 2026   {dashed} 2020   {band} rozmezí 2022–2025" source="[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)">
 <VegaChart dataFile="data/chart4_nemecko.json" />
 <VegaChart dataFile="data/chart4_francie.json" />
 <VegaChart dataFile="data/chart4_spanelsko.json" />
-</ChartRow>
-
-<ChartRow>
 <VegaChart dataFile="data/chart4_bulharsko.json" />
 <VegaChart dataFile="data/chart4_litva.json" />
 <VegaChart dataFile="data/chart4_cesko.json" />

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import type { TooltipHandler } from 'vega';
 import { robotoCondensed } from '@/app/fonts';
 import ChartCard from './ChartCard';
+import { renderTitle } from './chartText';
+import { useChartGroup } from './ChartGroupContext';
 
 // Jednotná typografie grafů (závazná škála, DESIGN.md §9, revize 2026-07-12):
 // Roboto Condensed všude, titulek 24/bold, podtitulek 17, datové popisky 14/bold,
@@ -131,6 +133,12 @@ export interface VegaChartProps {
   chartId?: string;
   spec?: Record<string, unknown>;
   mini?: boolean;
+  // Renders just this chart's own title (still per-panel, e.g. a colored
+  // country badge) plus the chart itself — no card background/padding, no
+  // subtitle, no source, no signature. For grouping several charts under one
+  // shared ChartCard (see ChartRow) instead of stacking N identical headers
+  // and footers.
+  bare?: boolean;
 }
 
 function isConcatSpec(spec: Record<string, unknown>) {
@@ -143,7 +151,9 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   return { ...rest, title: null };
 }
 
-export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }: VegaChartProps) {
+export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
+  const { bare: bareFromGroup } = useChartGroup();
+  const bare = bareProp || bareFromGroup;
   const containerRef = useRef<HTMLDivElement>(null);
   const [spec, setSpec] = useState<Record<string, unknown> | null>(propSpec ?? null);
   const [meta, setMeta] = useState<{ title?: string; subtitle?: string; source?: string }>({});
@@ -205,7 +215,11 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
     } else {
       final = {
         ...base,
-        background: '#f8f6f0',
+        // bare charts sit inside a shared ChartCard (see ChartRow), which
+        // already paints the Ink Wash background — painting it again here
+        // would be harmless (same color) but relying on transparency is
+        // more correct if that shared background ever changes.
+        background: bare ? 'transparent' : '#f8f6f0',
         width: 'container',
         autosize: { type: 'fit-x', contains: 'padding' },
         config: mergeFontConfig(base.config),
@@ -227,7 +241,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
     });
 
     return () => { viewRef.current?.finalize(); };
-  }, [spec, mini]);
+  }, [spec, mini, bare]);
 
   if (error) return (
     <div style={{ padding: '8px', color: '#de1743', fontSize: '12px', fontFamily: 'monospace' }}>
@@ -238,6 +252,30 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false }:
   if (mini) {
     return (
       <div ref={containerRef} style={{ width: '100%', minHeight: 110, overflow: 'hidden' }} />
+    );
+  }
+
+  if (bare) {
+    return (
+      <div>
+        <style>{TOOLTIP_CSS}</style>
+        {/* Fixed-height header (room for 2 lines @ 14px/1.2) regardless of
+            whether this panel's title actually wraps — so the chart canvas
+            below starts at the same y in every panel of the row, whether
+            its neighbor's title took one line or two. */}
+        <div style={{
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+          fontWeight: 700,
+          fontSize: 14,
+          lineHeight: 1.2,
+          color: '#1a1a1a',
+          minHeight: 34,
+          marginBottom: 8,
+        }}>
+          {meta.title && renderTitle(meta.title)}
+        </div>
+        <div ref={containerRef} style={{ width: '100%', minHeight: 160 }} />
+      </div>
     );
   }
 

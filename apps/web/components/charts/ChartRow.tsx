@@ -1,15 +1,41 @@
 'use client';
 
 import { SimpleGrid } from '@mantine/core';
+import ChartCard from './ChartCard';
+import ChartGroupContext from './ChartGroupContext';
+
+export interface ChartRowProps {
+  children: React.ReactNode;
+  cols?: number;
+  title?: string;
+  subtitle?: string;
+  source?: string;
+}
 
 // Lays out several charts side by side on desktop, stacked on mobile — for
-// small multiples that are meant to be compared directly (e.g. the same
-// metric across country pairs), not read one after another like a normal
-// article flow.
-export default function ChartRow({ children, cols = 3 }: { children: React.ReactNode; cols?: number }) {
-  return (
+// small multiples meant to be compared directly (e.g. the same metric
+// across several countries), not read one after another like normal article
+// flow. When `subtitle`/`source` are given, the whole row renders as ONE
+// shared ChartCard (one subtitle, one footer): every VegaChart underneath
+// picks up `bare` via ChartGroupContext (own title only, no repeated
+// card/subtitle/footer/signature) instead of N nearly-identical cards
+// stacked side by side.
+export default function ChartRow({ children, cols = 3, title, subtitle, source }: ChartRowProps) {
+  const hasSharedHeader = Boolean(title || subtitle || source);
+
+  const grid = (
     <SimpleGrid cols={{ base: 1, md: cols }} spacing="md">
       {children}
     </SimpleGrid>
+  );
+
+  if (!hasSharedHeader) return grid;
+
+  return (
+    <ChartGroupContext.Provider value={{ bare: true }}>
+      <ChartCard title={title} subtitle={subtitle} source={source}>
+        {grid}
+      </ChartCard>
+    </ChartGroupContext.Provider>
   );
 }

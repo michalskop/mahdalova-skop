@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "V {Litvě|#0e839e} ani v {Estonsku|#4a51ab} nebylo přes 35 °C",
-    "subtitle": "Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025"
+    "text": "V {Litvě|#0e839e} ani v {Estonsku|#4a51ab} nebylo přes 35 °C"
   },
   "width": 600,
   "height": 320,
@@ -544,6 +543,5 @@
         }
       }
     }
-  ],
-  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+  ]
 }

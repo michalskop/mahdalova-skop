@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "{Španělsko|#f76800}",
-    "subtitle": "{line} 2026   {dashed} 2020   {band} rozmezí 2022–2025"
+    "text": "{Španělsko|#f76800}"
   },
   "width": 300,
   "height": 220,
@@ -1273,6 +1272,5 @@
         ]
       }
     }
-  ],
-  "_source": "[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)"
+  ]
 }
