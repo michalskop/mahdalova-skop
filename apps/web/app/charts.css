@@ -4,7 +4,7 @@
  * dynamicky generované přes D3. Pravidla jsou seřazena od nejobecnějších
  * k nejkonkrétnějším.
  *
- * Škála (odpovídá DESIGN.md §9, revize 2026-07-12):
+ * Škála (odpovídá docs/design/DESIGN.md §9, revize 2026-07-12):
  *   desktop  title → 24 px, subtitle/note/footer → 17 px
  *   ≤ 768 px title → 20 px, subtitle/note/footer → 14 px
  */

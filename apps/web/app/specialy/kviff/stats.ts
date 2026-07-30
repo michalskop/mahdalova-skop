@@ -5,20 +5,20 @@ export const finalStats = [
 ];
 
 export const current2026 = {
-  label: '2026*',
-  tickets: 97075,
-  screenings: 262,
-  passes: 7882,
-  filmmakers: 891,
-  industry: 1112,
-  journalists: 578,
+  label: '2026',
+  tickets: 132553,
+  screenings: 472,
+  passes: 8698,
+  filmmakers: 469,
+  industry: 1249,
+  journalists: 598,
   budgetMil: 250,
   sponsorsShare: 80,
   publicShare: 20,
   spendingMil: 650,
 };
 
-export const maxTickets = 128133;
+export const maxTickets = 132553;
 export const comparison2025 = finalStats[2];
 
 export function pct(value: number, max: number) {

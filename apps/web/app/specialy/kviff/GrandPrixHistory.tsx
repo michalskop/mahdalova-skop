@@ -1,142 +1,130 @@
-import { Badge, Box, Group, SimpleGrid, Stack, Text, Tooltip } from '@mantine/core';
+import { Box, Group, Stack, Text } from '@mantine/core';
+import Timeline from '@/components/common/Timeline';
 import ChartFrame, { NUM_FONT } from './ChartFrame';
 import type { GrandPrixWinner } from './grandPrix';
-
-// Soutěžní Grand Prix (Křišťálový glóbus pro nejlepší film) je JINÁ cena než
-// čestný osobní Křišťálový glóbus za mimořádný umělecký přínos v honors.ts /
-// HonoraryTimeline.tsx – tady jde o film, ne o osobnost, a řada sahá až do
-// roku 1948. Dva samostatné grafy podle éry (komunistická / porevoluční),
-// protože logika výběru vítěze byla v obou obdobích jiná – viz text u grafů.
+import { communistEraTimeline, postRevolutionTimeline } from './grandPrixTimeline';
 
 const BLOC_COLOR: Record<GrandPrixWinner['bloc'], string> = {
   socialisticky: 'var(--mantine-color-brandNavy-6)',
   ostatni: 'var(--mantine-color-brandTeal-6)',
 };
 
-function WinnerTile({ winner }: { winner: GrandPrixWinner }) {
-  if (!winner.awarded) {
-    return (
-      <Stack gap={4} align="center" justify="end" style={{ minWidth: 78 }}>
-        <Box
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 6,
-            border: '2px dashed var(--mantine-color-background-7)',
-            display: 'grid',
-            placeItems: 'center',
-          }}
-        >
-          <Text size="xs" c="dimmed" ta="center" lh={1.1}>
-            cena{' '}nebyla{' '}udělena
-          </Text>
-        </Box>
-        <Text size="xs" fw={800} style={NUM_FONT} c="dimmed">{winner.year}</Text>
-      </Stack>
-    );
-  }
+const DECADE_BUCKETS = [
+  { label: '1948–59', from: 1948, to: 1959 },
+  { label: '1960–69', from: 1960, to: 1969 },
+  { label: '1970–79', from: 1970, to: 1979 },
+  { label: '1980–89', from: 1980, to: 1989 },
+];
 
-  const tooltip = [
-    `${winner.year}: ${winner.filmCz}${winner.filmCz !== winner.filmOriginal ? ` (${winner.filmOriginal})` : ''}`,
-    `Režie: ${winner.directors.join(', ')}`,
-    `Země: ${winner.countries.join(', ')}`,
-  ].join(' · ');
+// Krátké popisky zemí pro anotaci přímo u jednotky v grafu (ne v legendě) –
+// zkráceno jen kvůli šířce sloupce, plný název zůstává v datech i tooltipu.
+const SHORT_COUNTRY: Record<string, string> = {
+  'Spojené království': 'Británie',
+};
+
+function shortCountry(countries: string[]) {
+  const first = countries[0] ?? '';
+  return SHORT_COUNTRY[first] ?? first;
+}
+
+// Unit chart: každý čtvereček je jeden udělený ročník (ne agregovaný podíl).
+// Seskupeno po dekádách, aby byl vidět i časový vzorec. Výjimky mimo blok
+// mají zemi napsanou přímo pod čtverečkem – anotace v grafu, ne v legendě.
+function GrandPrixUnitChart({ winners }: { winners: GrandPrixWinner[] }) {
+  const awarded = winners.filter((w) => w.awarded).sort((a, b) => a.year - b.year);
+  const decades = DECADE_BUCKETS.map((bucket) => ({
+    ...bucket,
+    items: awarded.filter((w) => w.year >= bucket.from && w.year <= bucket.to),
+  }));
 
   return (
-    <Tooltip label={tooltip} multiline maw={320} withArrow>
-      <Stack gap={4} align="center" justify="end" style={{ minWidth: 92, cursor: 'help' }}>
-        <Box
-          style={{
-            width: 78,
-            minHeight: 60,
-            borderRadius: 6,
-            padding: '6px 8px',
-            background: 'var(--mantine-color-background-1)',
-            border: `2px solid ${BLOC_COLOR[winner.bloc]}`,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
-          <Text size="xs" fw={800} lh={1.15} lineClamp={3}>{winner.filmCz}</Text>
-        </Box>
-        <Text size="xs" fw={800} style={NUM_FONT} c={winner.bloc === 'socialisticky' ? 'var(--mantine-color-brandNavy-7)' : 'var(--mantine-color-brandTeal-7)'}>
-          {winner.year}
-        </Text>
-      </Stack>
-    </Tooltip>
+    <Group gap={26} align="flex-start" wrap="wrap" mt="sm" mb="xs">
+      {decades.map((decade) => {
+        const ostatniCount = decade.items.filter((w) => w.bloc === 'ostatni').length;
+        return (
+          <Stack key={decade.label} gap={8} align="center" style={{ maxWidth: 168 }}>
+            <Group gap={4} justify="center">
+              {decade.items.map((winner) => (
+                <Stack key={`${winner.year}-${winner.filmCz}`} gap={2} align="center" style={{ width: 24 }}>
+                  <Box
+                    w={20}
+                    h={20}
+                    title={`${winner.year} · ${winner.filmCz} (${winner.countries.join(', ')})`}
+                    style={{ borderRadius: 4, background: BLOC_COLOR[winner.bloc] }}
+                  />
+                  {winner.bloc === 'ostatni' && (
+                    <Text fw={700} ta="center" lh={1.05} style={{ ...NUM_FONT, fontSize: 9 }}>
+                      {shortCountry(winner.countries)}
+                    </Text>
+                  )}
+                </Stack>
+              ))}
+            </Group>
+            <Text size="xs" fw={800} style={NUM_FONT}>{decade.label}</Text>
+            {ostatniCount === 0 && (
+              <Text c="dimmed" ta="center" lh={1.2} style={{ fontSize: 10 }}>ani jedna výhra mimo blok</Text>
+            )}
+          </Stack>
+        );
+      })}
+    </Group>
   );
 }
 
-function WinnerRow({ winners }: { winners: GrandPrixWinner[] }) {
-  const byYear = new Map<number, GrandPrixWinner[]>();
-  winners.forEach((w) => {
-    const arr = byYear.get(w.year) ?? [];
-    arr.push(w);
-    byYear.set(w.year, arr);
-  });
+// Souhrnná legenda barev bloku pro unit chart (stejný význam jako facet štítky
+// v časové ose níže, tady popisuje jen čtverečky nad ní).
+function BlocLegend() {
   return (
-    <Box style={{ overflowX: 'auto', paddingBottom: 8 }}>
-      <Group gap={6} wrap="nowrap" style={{ minWidth: 'max-content' }} align="end">
-        {Array.from(byYear.entries()).map(([year, ws]) => (
-          <Stack key={year} gap={4}>
-            {ws.map((w) => (
-              <WinnerTile key={`${w.year}-${w.filmCz || 'none'}`} winner={w} />
-            ))}
-          </Stack>
-        ))}
+    <Group gap="lg" mt="md">
+      <Group gap={6}>
+        <Box w={12} h={12} style={{ borderRadius: 3, background: BLOC_COLOR.socialisticky }} />
+        <Text size="sm">země sovětského bloku</Text>
       </Group>
-    </Box>
+      <Group gap={6}>
+        <Box w={12} h={12} style={{ borderRadius: 3, background: BLOC_COLOR.ostatni }} />
+        <Text size="sm">ostatní země</Text>
+      </Group>
+    </Group>
   );
 }
 
 export function CommunistEraGrandPrix({ winners }: { winners: GrandPrixWinner[] }) {
   const socialisticky = winners.filter((w) => w.awarded && w.bloc === 'socialisticky').length;
   const ostatni = winners.filter((w) => w.awarded && w.bloc === 'ostatni').length;
+
   return (
-    <ChartFrame
-      title="Grand Prix v éře komunistické (1948–1989)"
-      subtitle={`Vítězný film každého ročníku soutěže; ${socialisticky} vítězů ze zemí sovětského bloku, ${ostatni} odjinud`}
-      source="Česká Wikipedie, heslo Křišťálový glóbus (tabulka Grand Prix)"
-      fullWidth
-    >
-      <Group gap="lg" mb="md">
-        <Group gap={6}>
-          <Box w={12} h={12} style={{ borderRadius: 3, background: BLOC_COLOR.socialisticky }} />
-          <Text size="sm">země sovětského bloku</Text>
-        </Group>
-        <Group gap={6}>
-          <Box w={12} h={12} style={{ borderRadius: 3, background: BLOC_COLOR.ostatni }} />
-          <Text size="sm">ostatní země</Text>
-        </Group>
-        <Group gap={6}>
-          <Box w={12} h={12} style={{ borderRadius: 6, border: '2px dashed var(--mantine-color-background-7)' }} />
-          <Text size="sm">cena neudělena</Text>
-        </Group>
-      </Group>
-      <WinnerRow winners={winners} />
-      <Text mt="md" size="sm" c="dimmed">
-        Festival od roku 1959 kvůli politickému rozhodnutí střídal ročníky s Moskevským filmovým festivalem, proto se v 60. a 70. letech koná jen v sudých letech. Cena nebyla udělena v roce 1966 a znovu hned v roce 1990, prvním ročníku po sametové revoluci.
-      </Text>
-      <Text mt="xs" size="sm">
-        I v éře, kdy festival organizoval komunistický stát, vyhrávaly Grand Prix i filmy ze zemí mimo sovětský blok – Sůl země (USA, 1954), francouzský, indický, japonský nebo australský film. Přehled tedy nepotvrzuje představu čistě propagandistické přehlídky, ale spíš směs zemí, kde měl vždy hlavní slovo Sovětský svaz a jeho spojenci.
-      </Text>
-    </ChartFrame>
+    <Stack gap="lg">
+      <ChartFrame
+        title="Grand Prix v komunistické éře (1948–1989)"
+        subtitle={`Vítězný film každého soutěžního ročníku; ${socialisticky} vítězů ze zemí sovětského bloku a ${ostatni} z ostatních zemí`}
+        source="Česká Wikipedie, heslo Křišťálový globus (tabulka Grand Prix)"
+        fullWidth
+      >
+        <Text size="sm" c="dimmed">
+          Od roku 1959 se Karlovy Vary kvůli politickému rozhodnutí střídaly s Moskevským filmovým festivalem. Proto se v šedesátých až osmdesátých letech konaly převážně v sudých letech.
+        </Text>
+        <Text mt="xs" size="sm" fw={700}>
+          Převahu měly země sovětského bloku, ale ne bez výjimek – ve třech ze čtyř desetiletí občas hlavní cenu získal i film odjinud.
+        </Text>
+        <BlocLegend />
+        <GrandPrixUnitChart winners={winners} />
+        <Text size="xs" c="dimmed">
+          Každý čtvereček je jeden udělený ročník; podepsané čtverečky ukazují zemi vítěze mimo sovětský blok.
+        </Text>
+      </ChartFrame>
+
+      <Timeline content={communistEraTimeline(winners)} />
+    </Stack>
   );
 }
 
 export function PostRevolutionGrandPrix({ winners }: { winners: GrandPrixWinner[] }) {
   return (
-    <ChartFrame
-      title="Grand Prix po revoluci (1990–2025)"
-      subtitle="Vítězný film každého ročníku otevřené mezinárodní soutěže"
-      source="Česká Wikipedie, heslo Křišťálový glóbus (tabulka Grand Prix)"
-      fullWidth
-    >
-      <WinnerRow winners={winners} />
-      <Text mt="md" size="sm" c="dimmed">
-        Po roce 1989 se soutěž otevřela bez ideologického rámce: vítězí malé i velké kinematografie od Islandu po Gruzii, poprvé i český film hned v prvním porevolučním ročníku (Jízda, 1995). Rok 1990 zůstal bez ceny – první přechodný ročník po sametové revoluci.
+    <Stack gap="sm">
+      <Timeline content={postRevolutionTimeline(winners)} />
+      <Text size="sm" c="dimmed" maw={780}>
+        V roce 1990 se hlavní cena neudělila. Od obnovení každoročního festivalu v roce 1994 ji získávají filmy z malých i velkých kinematografií; prvním českým vítězem novodobé éry byla Jízda Jana Svěráka v roce 1995. Zdroj: Česká Wikipedie, heslo Křišťálový globus (tabulka Grand Prix).
       </Text>
-    </ChartFrame>
+    </Stack>
   );
 }

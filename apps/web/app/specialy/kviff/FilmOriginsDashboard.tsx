@@ -274,7 +274,7 @@ function CountryYearBars({ country, color, selectedYear }: { country: CountrySum
               height={plotBottom - plotTop}
               fill="transparent"
               onMouseEnter={() => setHoverYear(year)}
-              style={{ cursor: 'help' }}
+              style={{ cursor: 'default' }}
             />
           </g>
         );
@@ -395,22 +395,6 @@ export default function FilmOriginsDashboard() {
   );
   const currentRow = yearRows.get(year);
   const yearTotal = currentRow?.top.reduce((sum, [, count]) => sum + count, 0) ?? 0;
-  const filmsCumulativeToYear = years
-    .filter((item) => item <= year)
-    .reduce((sum, item) => sum + (yearRows.get(item)?.films ?? filmTotals[item] ?? 0), 0);
-  const filmsForCard = mode === 'annual' ? (currentRow?.films ?? filmTotals[year] ?? 0) : filmsCumulativeToYear;
-  const periodCardLabel = mode === 'annual' ? 'ročník' : 'období';
-  const periodCardValue = mode === 'annual' ? year : `1992–${year}`;
-  const filmsCardLabel = mode === 'annual' ? `filmů v roce ${year}` : 'filmů celkem';
-  const countriesForCard = mode === 'annual'
-    ? countries.filter((country) => country.years[year]).length
-    : countries.filter((country) => years.some((item) => item <= year && (country.years[item] ?? 0) > 0)).length;
-  const countriesCardLabel = mode === 'annual' ? `zemí v roce ${year}` : 'zemí celkem';
-  const coproductionsCumulativeToYear = years
-    .filter((item) => item <= year)
-    .reduce((sum, item) => sum + (yearRows.get(item)?.coproductions ?? 0), 0);
-  const coproductionsForCard = mode === 'annual' ? (currentRow?.coproductions ?? 0) : coproductionsCumulativeToYear;
-  const coproductionsCardLabel = 'koprodukčních';
   const globalMaxAnnual = Math.max(...countries.flatMap((country) => years.map((item) => country.years[item] ?? 0)));
   const globalMaxCumulative = Math.max(...countries.map((country) => country.total));
   const cumulativeFor = (country: CountrySummary) => years.filter((item) => item <= year).reduce((sum, item) => sum + (country.years[item] ?? 0), 0);
@@ -430,8 +414,16 @@ export default function FilmOriginsDashboard() {
   const continentTotal = continentRows.reduce((sum, [, value]) => sum + value, 0);
   const maxContinent = Math.max(1, ...continentRows.map(([, value]) => value));
   const grandTotal = countries.reduce((sum, country) => sum + country.total, 0);
-  const topCountries = countries.slice(0, 10);
-  const maxTop = topCountries[0]?.total ?? 1;
+  const namedCountries = countries.slice(0, 8);
+  const otherCountriesTotal = countries.slice(8).reduce((sum, country) => sum + country.total, 0);
+  const countryShareRows = [
+    ...namedCountries.map((country) => ({
+      label: country.name,
+      value: country.total,
+      color: regionColors[country.region] ?? regionColors.Ostatní,
+    })),
+    { label: 'Ostatní země', value: otherCountriesTotal, color: regionColors.Ostatní },
+  ];
   const annualValue = selected ? selected.years[year] ?? 0 : 0;
   const selectedProgramShare = selected && filmTotals[year] ? (annualValue / filmTotals[year]) * 100 : null;
   const selectedColor = selected ? regionColors[selected.region] ?? regionColors.Ostatní : regionColors.Ostatní;
@@ -577,25 +569,6 @@ export default function FilmOriginsDashboard() {
         ? createPortal(<MapModeToggle mode={mode} onChange={setMode} />, document.getElementById('kviff-map-mode-toggle')!)
         : null}
       <Stack gap="md">
-      <SimpleGrid cols={{ base: 2, md: 4 }} spacing="sm">
-        <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">{periodCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{periodCardValue}</Text>
-        </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">{countriesCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(countriesForCard)}</Text>
-        </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">{filmsCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(filmsForCard)}</Text>
-        </Paper>
-        <Paper p="md" radius={4} bg="#f8f6f0">
-          <Text c="dimmed" size="sm">{coproductionsCardLabel}</Text>
-          <Text fw={900} style={{ ...NUM_FONT, fontSize: 16 }}>{fmt(coproductionsForCard)}</Text>
-        </Paper>
-      </SimpleGrid>
-
       <SimpleGrid cols={{ base: 1, lg: 3 }} spacing="sm">
         <Paper p="sm" radius={4} bg="#f8f6f0" style={{ gridColumn: '1 / -1' }}>
           <Box
@@ -1166,19 +1139,36 @@ export default function FilmOriginsDashboard() {
 
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
         <Paper p="lg" radius={4} bg="#f8f6f0">
-          <Title order={3} size="1.05rem" mb="md">Celkový souhrn 1992-2026</Title>
+          <Title order={3} size="1.05rem" mb="md">Podíl produkčních zemí v letech 1992–2026</Title>
           <Text c="dimmed" mb="md">
-            V datech je {fmt(grandTotal)} záznamů produkčních zemí. Koprodukční film se započítá každé uvedené zemi, proto je součet vyšší než počet filmů.
+            Podíly vycházejí ze všech {fmt(grandTotal)} vazeb film–země. Koprodukční film se započítá každé uvedené zemi; kategorie „Ostatní země“ zahrnuje všechny země mimo osm nejčastějších.
           </Text>
-          <Stack gap={7}>
-            {topCountries.map((country) => (
-              <DashboardBar key={country.country} label={country.name} value={country.total} max={maxTop} color={regionColors[country.region] ?? regionColors.Ostatní} />
+          <Box style={{ display: 'flex', height: 30, overflow: 'hidden', borderRadius: 3 }} mb="md">
+            {countryShareRows.map((row) => (
+              <Box
+                key={row.label}
+                title={`${row.label}: ${pct((row.value / grandTotal) * 100)} % (${fmt(row.value)} vazeb film–země)`}
+                style={{ width: `${(row.value / grandTotal) * 100}%`, background: row.color }}
+              />
+            ))}
+          </Box>
+          <Stack gap={8}>
+            {countryShareRows.map((row) => (
+              <Group key={row.label} justify="space-between" wrap="nowrap">
+                <Group gap="xs" wrap="nowrap">
+                  <Box w={10} h={10} style={{ flex: '0 0 auto', borderRadius: 2, background: row.color }} />
+                  <Text size="sm">{row.label}</Text>
+                </Group>
+                <Text size="sm" fw={900} style={NUM_FONT}>
+                  {pct((row.value / grandTotal) * 100)} % <Text span c="dimmed" fw={500}>({fmt(row.value)})</Text>
+                </Text>
+              </Group>
             ))}
           </Stack>
         </Paper>
 
         <Paper p="lg" radius={4} bg="#f8f6f0">
-          <Title order={3} size="1.05rem" mb="md">Co je dobré číst z mapy</Title>
+          <Title order={3} size="1.05rem" mb="md">Evropa drží jádro programu, přibylo koprodukcí</Title>
           <Stack gap="sm">
             <Text size="sm">Evropa (zejména střední) zůstává každoročně jádrem festivalu, ale je možné vysledovat i programové vlny mimo evropský střed: Jižní Koreu, Austrálii, Brazílii nebo USA.</Text>
             <Text size="sm">Od roku 2018 je nabídka filmů menší než v první dekádě po roce 1994, ale koprodukční síť je hustší: průměrný počet produkčních zemí na film je v úplných rozpadech 2018-2025 zhruba 1,8 oproti 1,2 v letech 1994-2003. V úplných rozpadech 2018-2025 má katalog průměrně 181 filmů ročně.</Text>
