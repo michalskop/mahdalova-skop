@@ -11,7 +11,14 @@ import SpecialsHero from '@/components/frontpage/SpecialsHero';
 // import SubscribeHH from '@/components/frontpage/SubscribeHH';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
+import type { Metadata } from 'next';
 // import { ContactsBlock } from '@/components/common/ContactsBlock';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default async function HomePage() {
   const articles = await getArticles(3, undefined, true);

@@ -6,10 +6,36 @@ import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { getAllAuthors } from '@/utils/authorServerUtils';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface PageProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const authorMap = await getAllAuthors();
+  const authorName = authorMap.get(params.slug);
+
+  if (!authorName) {
+    return {};
+  }
+
+  const description = `Články autora ${authorName} na Mahdalová & Škop.`;
+
+  return {
+    title: authorName,
+    description,
+    alternates: {
+      canonical: `/autor/${params.slug}`,
+    },
+    openGraph: {
+      title: authorName,
+      description,
+      url: `/autor/${params.slug}`,
+      type: 'profile',
+    },
   };
 }
 

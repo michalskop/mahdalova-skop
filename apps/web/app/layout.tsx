@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import { MatomoAnalytics } from '@/components/common/MatomoAnalytics';
 import { Suspense } from 'react';
 import { robotoCondensed, robotoSlab } from './fonts';
+import { EntityGraphJsonLd } from '@/components/seo/EntityGraphJsonLd';
 
 export const metadata: Metadata = {
   title: {
@@ -48,9 +49,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true
   },
-  alternates: {
-    canonical: 'https://www.mahdalova-skop.cz/',
-  }
 };
 
 export default function RootLayout({
@@ -73,6 +71,7 @@ export default function RootLayout({
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
       <body className={`${robotoSlab.variable} ${robotoCondensed.variable}`} style={{ backgroundColor: '#fdfbf7' }}>
+        <EntityGraphJsonLd />
         <ThemeProvider>
           <Layout>
             {children}

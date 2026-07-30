@@ -133,7 +133,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { chapter: string } }) {
   const meta = loadMeta(params.chapter);
   if (!meta) return {};
-  return { title: `${meta.title} – Data pro budoucí premiérku` };
+  return {
+    title: `${meta.title} – Data pro budoucí premiérku`,
+    alternates: {
+      canonical: `/specialy/data-pro-budouci-premierku/${params.chapter}`,
+    },
+  };
 }
 
 export default function ChapterPage({ params }: { params: { chapter: string } }) {

@@ -7,7 +7,13 @@ import fs from 'fs/promises';
 import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/kdo-jsme',
+  },
+};
 
 async function getMarkdownContent(filename: string) {
   const filePath = path.join(process.cwd(), 'components', 'about', filename);

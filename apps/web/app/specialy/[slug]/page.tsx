@@ -12,6 +12,7 @@ import { Box, Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import ArticleRating from '@/components/common/ArticleRating';
 import { ArticleJsonLd } from '@/components/seo/ArticleJsonLd';
+import { getAuthorKeys } from '@/lib/schema';
 
 interface PageProps {
   params: { slug: string };
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   try {
     const article = await getArticleBySlug(params.slug);
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
-    const articleUrl = `${baseUrl}/special/${params.slug}`;
+    const articleUrl = `${baseUrl}/specialy/${params.slug}`;
 
     const isAbsoluteUrl = (v: unknown): v is string =>
       typeof v === 'string' && (v.startsWith('http://') || v.startsWith('https://') || v.startsWith('//'));
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.title,
       description: article.excerpt,
       authors: [{ name: article.author }],
-      alternates: { canonical: `/special/${params.slug}` },
+      alternates: { canonical: `/specialy/${params.slug}` },
       openGraph: {
         title: article.title,
         description: article.excerpt,
@@ -75,7 +76,7 @@ export default async function SpecialArticlePage({ params }: PageProps) {
   try {
     const article = await getArticleBySlug(params.slug);
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
-    const articleUrl = `${baseUrl}/special/${params.slug}`;
+    const articleUrl = `${baseUrl}/specialy/${params.slug}`;
 
     const isAbsoluteUrl = (v: unknown): v is string =>
       typeof v === 'string' && (v.startsWith('http://') || v.startsWith('https://') || v.startsWith('//'));
@@ -97,6 +98,7 @@ export default async function SpecialArticlePage({ params }: PageProps) {
           imageUrl={imageUrl}
           articleUrl={articleUrl}
           tags={article.tags}
+          authorKeys={getAuthorKeys(article.author)}
         />
         <div data-pagefind-body>
           <ArticleRenderer {...article} slug={params.slug} />

@@ -5,10 +5,19 @@ import { Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { normalizeTag } from '@/utils/tagUtils';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface PageProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: `/tag/${params.slug}`,
+    },
   };
 }
 
