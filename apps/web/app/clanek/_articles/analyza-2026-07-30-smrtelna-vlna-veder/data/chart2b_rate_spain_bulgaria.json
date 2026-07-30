@@ -416,6 +416,20 @@
           "2026-06-15",
           "2026-06-29"
         ]
+      },
+      "scale": {
+        "domain": [
+          {
+            "year": 2025,
+            "month": 12,
+            "date": 29
+          },
+          {
+            "year": 2026,
+            "month": 6,
+            "date": 29
+          }
+        ]
       }
     },
     "color": {
@@ -445,7 +459,13 @@
         "y": {
           "field": "band_min",
           "type": "quantitative",
-          "title": "Roční úmrtnost (na 1000 obyv.)"
+          "title": "Roční úmrtnost (na 1000 obyv.)",
+          "scale": {
+            "domain": [
+              6.77,
+              29.13
+            ]
+          }
         },
         "y2": {
           "field": "band_max"

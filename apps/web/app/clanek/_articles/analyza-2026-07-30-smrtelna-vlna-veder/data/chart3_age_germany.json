@@ -650,7 +650,10 @@
         "y": {
           "field": "excess_pct",
           "type": "quantitative",
-          "title": "Nadúmrtnost (%)"
+          "title": "Nadúmrtnost (%)",
+          "axis": {
+            "grid": true
+          }
         },
         "tooltip": [
           {
