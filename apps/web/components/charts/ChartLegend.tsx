@@ -78,10 +78,10 @@ export default function ChartLegend({
                 width: 13,
                 height: 13,
                 borderRadius: 4,
-                background: isActive && !item.dashed ? item.color : 'transparent',
+                background: item.dashed ? 'transparent' : item.color,
                 border: item.dashed
                   ? `2px dashed ${item.color}`
-                  : `2px solid ${item.color}`,
+                  : 'none',
                 boxSizing: 'border-box',
                 display: 'inline-block',
                 flex: '0 0 auto',
