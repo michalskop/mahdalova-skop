@@ -7,6 +7,17 @@ import ChartCard from './ChartCard';
 import { renderTitle } from './chartText';
 import { useChartGroup } from './ChartGroupContext';
 
+type PointerTooltipRow = {
+  label: string;
+  value: string;
+  color?: string;
+};
+
+type PointerTooltip = {
+  label: string;
+  rows: PointerTooltipRow[];
+};
+
 // Jednotná typografie grafů (závazná škála,
 // docs/design/DESIGN.md §9, revize 2026-07-12):
 // Roboto Condensed všude, titulek 24/bold, podtitulek 17, datové popisky 14/bold,
@@ -152,6 +163,77 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   return { ...rest, title: null };
 }
 
+function markType(mark: unknown) {
+  if (typeof mark === 'string') return mark;
+  if (mark && typeof mark === 'object') return (mark as { type?: string }).type;
+  return undefined;
+}
+
+function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): PointerTooltip | null {
+  const values = (spec.data as { values?: Record<string, unknown>[] } | undefined)?.values;
+  const encoding = spec.encoding as Record<string, { field?: string; scale?: { domain?: unknown[]; range?: string[] } }> | undefined;
+  const xField = encoding?.x?.field;
+  const layers = Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [];
+  const lineLayers = layers.filter(layer => markType(layer.mark) === 'line');
+  if (!values?.length || !xField || !lineLayers.length) return null;
+
+  const dateTransform = (spec.transform as { calculate?: string; as?: string }[] | undefined)
+    ?.find(transform => transform.as === xField && transform.calculate?.includes('toDate'));
+  const rawDateField = dateTransform?.calculate?.match(/datum\.([A-Za-z0-9_]+)/)?.[1] ?? xField;
+  const datedRows = values
+    .map(row => ({ row, date: new Date(String(row[rawDateField])) }))
+    .filter(item => !Number.isNaN(item.date.getTime()));
+  if (!datedRows.length) return null;
+
+  const timestamps = Array.from(new Set(datedRows.map(item => item.date.getTime()))).sort((a, b) => a - b);
+  const target = timestamps[0] + Math.max(0, Math.min(1, ratio)) * (timestamps[timestamps.length - 1] - timestamps[0]);
+  const nearest = timestamps.reduce((best, current) =>
+    Math.abs(current - target) < Math.abs(best - target) ? current : best,
+  );
+  const nearestRows = datedRows.filter(item => item.date.getTime() === nearest).map(item => item.row);
+  const seriesField = encoding?.color?.field;
+  const colorScale = encoding?.color?.scale;
+  const colorForSeries = (series: string) => {
+    const index = colorScale?.domain?.findIndex(value => String(value) === series) ?? -1;
+    return index >= 0 ? colorScale?.range?.[index] : undefined;
+  };
+  const numberFormat = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 2 });
+  const rows: PointerTooltipRow[] = [];
+
+  if (seriesField) {
+    const valueField = ((lineLayers[0].encoding as Record<string, { field?: string }> | undefined)?.y?.field);
+    if (!valueField) return null;
+    for (const row of nearestRows) {
+      const series = String(row[seriesField]);
+      const value = row[valueField];
+      if (typeof value === 'number') {
+        rows.push({ label: series, value: numberFormat.format(value), color: colorForSeries(series) });
+      }
+    }
+  } else {
+    const row = nearestRows[0];
+    if (!row) return null;
+    for (const layer of lineLayers) {
+      const layerEncoding = layer.encoding as Record<string, { field?: string }> | undefined;
+      const valueField = layerEncoding?.y?.field;
+      if (!valueField || typeof row[valueField] !== 'number') continue;
+      const tooltipEncoding = layerEncoding?.tooltip as unknown as { field?: string; title?: string }[] | undefined;
+      const title = tooltipEncoding?.find(item => item.field === valueField)?.title;
+      const mark = layer.mark as { color?: string; stroke?: string } | undefined;
+      rows.push({
+        label: title ?? valueField.replace(/^rate_/, ''),
+        value: numberFormat.format(row[valueField] as number),
+        color: mark?.color ?? mark?.stroke,
+      });
+    }
+  }
+
+  return rows.length ? {
+    label: new Intl.DateTimeFormat('cs-CZ', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(nearest)),
+    rows,
+  } : null;
+}
+
 export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
   const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio } = useChartGroup();
   const bare = bareProp || bareFromGroup;
@@ -160,6 +242,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const [meta, setMeta] = useState<{ title?: string; subtitle?: string; source?: string }>({});
   const [error, setError] = useState<string | null>(null);
   const [localHoverRatio, setLocalHoverRatio] = useState<number | null>(null);
+  const [pointerTooltip, setPointerTooltip] = useState<(PointerTooltip & { x: number; y: number }) | null>(null);
   const viewRef = useRef<{ finalize: () => void } | null>(null);
 
   function extractMeta(data: Record<string, unknown>) {
@@ -236,7 +319,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         renderer: 'svg',
         formatLocale: CS_NUMBER_LOCALE,
         timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: makeDpbpTooltipHandler(),
+        tooltip: pointerTooltipAt(spec, 0) ? false : makeDpbpTooltipHandler(),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
       }).catch(e => setError(String(e)));
@@ -264,9 +347,19 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       style={{ position: 'relative', width, minHeight }}
       onPointerMove={(event) => {
         const rect = event.currentTarget.getBoundingClientRect();
-        setHoverRatio(Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)));
+        const ratio = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+        setHoverRatio(ratio);
+        const tooltip = spec ? pointerTooltipAt(spec, ratio) : null;
+        setPointerTooltip(tooltip ? {
+          ...tooltip,
+          x: event.clientX - rect.left,
+          y: event.clientY - rect.top,
+        } : null);
       }}
-      onPointerLeave={() => setHoverRatio(null)}
+      onPointerLeave={() => {
+        setHoverRatio(null);
+        setPointerTooltip(null);
+      }}
     >
       <div ref={containerRef} style={{ width: '100%' }} />
       {hoverRatio !== null && (
@@ -282,6 +375,37 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
             pointerEvents: 'none',
           }}
         />
+      )}
+      {pointerTooltip && (
+        <div
+          role="tooltip"
+          style={{
+            position: 'absolute',
+            left: pointerTooltip.x,
+            top: pointerTooltip.y,
+            transform: pointerTooltip.x > 180 ? 'translate(calc(-100% - 10px), 10px)' : 'translate(10px, 10px)',
+            zIndex: 4,
+            minWidth: 132,
+            padding: '8px 10px',
+            border: '1px solid #e8e3d2',
+            borderRadius: 7,
+            background: 'rgba(248, 246, 240, 0.97)',
+            boxShadow: '0 4px 10px rgba(16, 20, 50, 0.14)',
+            color: '#1a1a1a',
+            fontFamily: 'var(--font-roboto-slab), Georgia, serif',
+            fontSize: 13,
+            lineHeight: 1.35,
+            pointerEvents: 'none',
+          }}
+        >
+          <div style={{ marginBottom: 4, color: '#555', whiteSpace: 'nowrap' }}>{pointerTooltip.label}</div>
+          {pointerTooltip.rows.map(row => (
+            <div key={row.label} style={{ display: 'flex', justifyContent: 'space-between', gap: 14 }}>
+              <span style={{ color: '#555', whiteSpace: 'nowrap' }}>{row.label}</span>
+              <strong style={{ color: row.color ?? '#1a1a1a', whiteSpace: 'nowrap' }}>{row.value}</strong>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
