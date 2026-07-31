@@ -1,8 +1,8 @@
 ---
-title: "Horko v Německu zabíjelo, ale ve Španělsku nikoliv."
+title: "Horko zabíjelo v Německu víc než ve Španělsku. Rozdíl nedělá teplota, ale zvyk"
 date: "2026-07-31"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Vlna veder zabila jen v Německu, Francii, Belgii a Nizozemsku zhruba 20 000 lidí navíc. Ve Španělsku a Bulharsku, zvyklých na horko, se nadúmrtnost neobjevila – a další vlna je na cestě během následujících dní."
+excerpt: "Vlna veder zabila jen v Německu, Francii, Belgii a Nizozemsku zhruba 20 000 lidí navíc. Ve Španělsku a Bulharsku, zvyklých na horko, celková úmrtnost nad obvyklou úroveň nevystoupala – a další vlna je na cestě během následujících dní."
 coverImage: "images/main.png"
 filter: ["analýza", "klima"]
 tags: ["klimatická změna", "nadúmrtnost", "klima", "demografie"]
@@ -18,17 +18,19 @@ Podobné horko se do Evropy vrací i v nejbližších dnech. Data ukazují na ro
 
 V nejteplejším týdnu od 22. do 28. června vystoupala teplota v německém hlavním městě Berlíně i v hlavním městě Španělska Madridu na stejných maximálních 39 °C.
 
-Ale v celém Německu ten týden zemřelo o třetinu víc lidí, než je pro tuhle dobu roku běžné, zatímco ve Španělsku se nic výjimečného nestalo.
+Ale v celém Německu ten týden zemřelo o třetinu víc lidí, než je pro tuhle dobu roku běžné, zatímco ve Španělsku zůstala celková úmrtnost v obvyklém rozmezí.
 
 <VegaChart dataFile="data/chart1a_temp_berlin_madrid.json" />
 
 <VegaChart dataFile="data/chart1b_deaths_germany_spain.json" />
 
-To znamená, že i při stejném vedru umírali lidí "navíc" jen v Německu – v stejně horkém Španělsku ne.
+To znamená, že i při stejném vedru umírali lidí "navíc" jen v Německu – v stejně horkém Španělsku zůstala celková úmrtnost v obvyklém pásmu.
 
 ```infobox info
 Co graf ukazuje a co ne: Světle barevný pruh je pro porovnání, je to rozmezí - nejteplejší a nejstudenější - z posledních čtyř let pro stejný týden v roce. Čísla jsou hrubá úmrtnost, tedy počet zemřelých na 1000 obyvatel přepočteno na celý rok – tam, kde srovnáváme více zemí, na to upozorňujeme zvlášť. Teplotu srovnáváme mezi konkrétními hlavními městy (Berlín, Madrid), jsou to ilustrační reprezentanti za celé země. Úmrtnost je přímo za celou zemi. Nejnovější týdny jsou v datech označené jako předběžné a mohou se ještě revidovat.
 ```
+
+Neznamená to ale, že ve Španělsku horko nikoho nezabíjelo. Podle španělského systému MoMo, který vede Instituto de Salud Carlos III, bylo horku v červnu 2026 přisouzeno rekordních 1 028 úmrtí – nejvíc od začátku měření v roce 2015 ([data španělského systému MoMo](https://www.que.es/2026/07/01/muertes-ola-calor-junio-2026/)). Do celkové úmrtnosti v grafu výše se to ale nepromítlo jako výrazný nárůst: Španělsko srovnáváme s jeho vlastními nedávnými roky, které byly rovněž horké, takže vyšší úmrtnost při vedru je v jeho běžném pásmu „započítaná". A i uvnitř Španělska umíralo nejvíc lidí na chladnějším atlantském severu – v Baskicku, Katalánsku či Galicii –, ne na horkem otužilém jihu. I to potvrzuje, že nezabíjí samo horko, ale nezvyk na něj.
 
 Vysvětlením může být, že Španělé jsou na vysoké teploty dlouhodobě zvyklí a přizpůsobili se jim – architekturou a vybavením budov (garniže, okenice), denním rytmem (siesta, pozdní večerní život) i klimatizací: tu má odhadem 40 % španělských domácností, v Německu podle odhadu spolkového úřadu pro životní prostředí je to jen asi 6 % ([Carbon Brief](https://www.carbonbrief.org/eight-facts-about-air-conditioning-amid-an-overheated-global-debate)). Německo zatím podobnou mnohaletou zkušenost oproti Španělsku s horky nemá.
 
@@ -44,7 +46,7 @@ Stejně jako v Německu vlna veder zabíjela také ve Francii, Nizozemsku nebo B
 <VegaChart dataFile="data/chart2c_rate_lithuania_estonia.json" />
 </ChartRow>
 
-To znamená, že vlna veder zvýšila úmrtnost v Německu i ve Francii, ale ne ve Španělsku, Bulharsku, Litvě ani v Estonsku.
+To znamená, že celková úmrtnost vystoupala nad obvyklé pásmo v Německu i ve Francii, ale ne ve Španělsku, Bulharsku, Litvě ani v Estonsku.
 
 Rozdílné úrovně počtů úmrtí jsou dané hlavně rozdílnou věkovou strukturou v daných zemích – čísla pro jednoduchost nejsou přepočtená na stejnou věkovou strukturu (tzv. věková standardizace). Procentuální nárůst nad běžnou úmrtnost ale vždy porovnáváme vůči vlastní historii dané země, takže věková struktura není tak podstatná.
 
@@ -81,5 +83,5 @@ Porovnání s covidem? I Německo, které pandemií proplulo v evropském srovn
 To znamená: i tam, kde letošní vlna veder úmrtnost zvýšila, byla covidová vlna mnohem výraznější a delší.
 
 ```infobox default
-Co dělat v horkých dnech: hlídejte si pitný režim, omezte pobyt venku v nejteplejších hodinách a zajděte za osamělými sousedy a staršími příbuznými – právě oni jsou nejohroženější a často si o pomoc neřeknou sami. Zkuste na pár dní přizpůsobit denní rytmus jako ve Španělsku: stín přes den, aktivita hlavně ráno a potom až večer. Např. 40 % lidí ve Španělsku si aspoň někdy po obědě v čase siesty zdřímne, každý šestý španěl dokonce každý den - jak reportoval [El País](https://verne.elpais.com/verne/2016/04/05/articulo/1459866604_782462.html).
+Co dělat v horkých dnech: hlídejte si pitný režim, omezte pobyt venku v nejteplejších hodinách a zajděte za osamělými sousedy a staršími příbuznými – právě oni jsou nejohroženější a často si o pomoc neřeknou sami. Zkuste na pár dní přizpůsobit denní rytmus jako ve Španělsku: stín přes den, aktivita hlavně ráno a potom až večer. Např. 40 % lidí ve Španělsku si aspoň někdy po obědě v čase siesty zdřímne, každý šestý Španěl dokonce každý den - jak reportoval [El País](https://verne.elpais.com/verne/2016/04/05/articulo/1459866604_782462.html).
 ```

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "V {Německu|#272a59} vlna veder zvýšila úmrtnost, ve {Španělsku|#f76800} ne",
+    "text": "V {Německu|#272a59} vlna veder zvýšila úmrtnost, ve {Španělsku|#f76800} zůstala v pásmu",
     "subtitle": "Týdenní počet zemřelých: {line} 2026   {band} rozmezí 2022–2025"
   },
   "width": 600,
