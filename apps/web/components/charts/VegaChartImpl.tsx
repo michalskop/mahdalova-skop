@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { TooltipHandler } from 'vega';
 import { robotoCondensed } from '@/app/fonts';
 import ChartCard from './ChartCard';
+import ChartLegend, { type ChartLegendInactiveStyle } from './ChartLegend';
 import { renderTitle } from './chartText';
 import { useChartGroup } from './ChartGroupContext';
 
@@ -24,8 +25,8 @@ type PointerTooltip = {
 // legenda 14, osy/hodnoty 13, patička 13, minimum 10 (jen drobné anotace) –
 // vše #333333 (kromě titulku #1a1a1a). Větší stupnice pro čitelnost ve sdílených screenshotech.
 const CHART_FONT = `${robotoCondensed.style.fontFamily}, Arial, sans-serif`;
-// Legenda: čtvercová tlačítka se zakulacenými rohy, standardně nahoře na středu
-// (vypínání sérií řeší per-spec param s bind: "legend").
+// Nativní Vega legenda používá stejný symbol. Interaktivní vypínání sérií
+// zajišťuje sdílený React ChartLegend přes `_toggle_legend: true`.
 const LEGEND_SYMBOL = 'M -0.45 -0.65 L 0.45 -0.65 Q 0.65 -0.65 0.65 -0.45 L 0.65 0.45 Q 0.65 0.65 0.45 0.65 L -0.45 0.65 Q -0.65 0.65 -0.65 0.45 L -0.65 -0.45 Q -0.65 -0.65 -0.45 -0.65 Z';
 // České formátování čísel a datumů ve Vega (osy, tooltipy): desetinná čárka,
 // nezlomitelná mezera jako oddělovač tisíců. Bez toho d3 renderuje "41.2" a "20,000".
@@ -159,7 +160,14 @@ function isConcatSpec(spec: Record<string, unknown>) {
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   // Exclude display fields we render ourselves; suppress Vega title explicitly
-  const { title: _t, _source: _s, _total_width: _w, _toggle_legend: _l, ...rest } = spec as Record<string, unknown>;
+  const {
+    title: _t,
+    _source: _s,
+    _total_width: _w,
+    _toggle_legend: _l,
+    _legend_inactive_style: _lis,
+    ...rest
+  } = spec as Record<string, unknown>;
   return { ...rest, title: null };
 }
 
@@ -172,6 +180,9 @@ function toggleLegendConfig(spec: Record<string, unknown> | null) {
   if (!color?.field || !color.scale?.domain?.length) return null;
   return {
     field: color.field,
+    inactiveStyle: spec._legend_inactive_style === 'strikethrough'
+      ? 'strikethrough' as ChartLegendInactiveStyle
+      : 'muted' as ChartLegendInactiveStyle,
     items: color.scale.domain.map((label, index) => ({
       label: String(label),
       color: color.scale?.range?.[index] ?? '#777',
@@ -179,25 +190,35 @@ function toggleLegendConfig(spec: Record<string, unknown> | null) {
   };
 }
 
-function filterHiddenSeries(spec: Record<string, unknown>, field: string, hidden: Set<string>) {
+function applyHiddenSeriesOpacity(
+  spec: Record<string, unknown>,
+  field: string,
+  hidden: Set<string>,
+): Record<string, unknown> {
   if (!hidden.size) return spec;
-  const filterData = (data: unknown) => {
-    if (!data || typeof data !== 'object') return data;
-    const typed = data as { values?: Record<string, unknown>[] };
-    return Array.isArray(typed.values)
-      ? { ...typed, values: typed.values.filter(row => !hidden.has(String(row[field]))) }
-      : data;
+  const test = `indexof(${JSON.stringify(Array.from(hidden))}, datum[${JSON.stringify(field)}]) < 0`;
+  const withOpacity = (unit: Record<string, unknown>): Record<string, unknown> => {
+    const mark = unit.mark;
+    const markOpacity = mark && typeof mark === 'object' && typeof (mark as { opacity?: unknown }).opacity === 'number'
+      ? (mark as { opacity: number }).opacity
+      : 1;
+    const encoding = unit.encoding && typeof unit.encoding === 'object'
+      ? unit.encoding as Record<string, unknown>
+      : {};
+    return {
+      ...unit,
+      encoding: {
+        ...encoding,
+        opacity: {
+          condition: { test, value: markOpacity },
+          value: 0,
+        },
+      },
+    };
   };
-  return {
-    ...spec,
-    data: filterData(spec.data),
-    ...(Array.isArray(spec.layer) ? {
-      layer: (spec.layer as Record<string, unknown>[]).map(layer => ({
-        ...layer,
-        data: filterData(layer.data),
-      })),
-    } : {}),
-  };
+  return Array.isArray(spec.layer)
+    ? { ...spec, layer: (spec.layer as Record<string, unknown>[]).map(withOpacity) }
+    : withOpacity(spec);
 }
 
 function stripVegaTooltips(spec: Record<string, unknown>): Record<string, unknown> {
@@ -317,6 +338,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const viewRef = useRef<{ finalize: () => void } | null>(null);
   const toggleLegend = toggleLegendConfig(spec);
 
+  useEffect(() => {
+    setHiddenSeries(new Set());
+  }, [spec]);
+
   function extractMeta(data: Record<string, unknown>) {
     const t = data.title;
     const titleObj = t && typeof t === 'object' ? (t as Record<string, unknown>) : null;
@@ -352,7 +377,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
 
     const hasPointerTooltip = Boolean(pointerTooltipAt(spec, 0));
     const stripped = hasPointerTooltip ? stripVegaTooltips(stripMeta(spec)) : stripMeta(spec);
-    const base = toggleLegend ? filterHiddenSeries(stripped, toggleLegend.field, hiddenSeries) : stripped;
+    const base = toggleLegend ? applyHiddenSeriesOpacity(stripped, toggleLegend.field, hiddenSeries) : stripped;
     let final: Record<string, unknown>;
 
     if (mini) {
@@ -555,53 +580,16 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     <ChartCard title={meta.title} subtitle={meta.subtitle} source={meta.source}>
       <style>{TOOLTIP_CSS}</style>
       {toggleLegend && (
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          gap: 14,
-          margin: '2px 0 8px',
-          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
-          fontSize: 13,
-        }}>
-          {toggleLegend.items.map(item => {
-            const enabled = !hiddenSeries.has(item.label);
-            return (
-              <button
-                key={item.label}
-                type="button"
-                aria-pressed={enabled}
-                onClick={() => setHiddenSeries(current => {
-                  const next = new Set(current);
-                  if (next.has(item.label)) next.delete(item.label);
-                  else next.add(item.label);
-                  return next;
-                })}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 6,
-                  padding: 0,
-                  border: 0,
-                  background: 'transparent',
-                  color: enabled ? '#333' : '#888',
-                  cursor: 'pointer',
-                  opacity: enabled ? 1 : 0.55,
-                }}
-              >
-                <span aria-hidden="true" style={{
-                  width: 12,
-                  height: 12,
-                  borderRadius: 3,
-                  background: enabled ? item.color : 'transparent',
-                  border: `2px solid ${item.color}`,
-                  boxSizing: 'border-box',
-                }} />
-                {item.label}
-              </button>
-            );
-          })}
-        </div>
+        <ChartLegend
+          items={toggleLegend.items.map(item => ({ key: item.label, ...item }))}
+          activeKeys={toggleLegend.items.filter(item => !hiddenSeries.has(item.label)).map(item => item.label)}
+          inactiveStyle={toggleLegend.inactiveStyle}
+          marginBottom={8}
+          onChange={activeKeys => {
+            const active = new Set(activeKeys);
+            setHiddenSeries(new Set(toggleLegend.items.filter(item => !active.has(item.label)).map(item => item.label)));
+          }}
+        />
       )}
       <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
         {chartCanvas(200, isConcat && totalWidth ? `${totalWidth}px` : '100%')}

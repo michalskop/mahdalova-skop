@@ -316,6 +316,15 @@ The InfoBox left-border system is the most distinctive depth signal: a 4px solid
 
 ## 10. Charts and Data Visualization – Binding Standard (added 2026-07-09)
 
+### Default implementation for a new chart
+
+- Start with `apps/web/components/charts/VegaChart.tsx` / `VegaChartImpl.tsx` for every new chart, regardless of whether its marks are bars, columns, lines, dots or areas. Build a custom renderer only when the interaction or layout cannot be expressed through this shared component.
+- Put the chart thesis, subtitle and source in the Vega-Lite spec; the shared component supplies the card, signature, typography, Czech number/date locale, responsive width, unified pointer tooltip and safe viewport-aware positioning.
+- For a toggleable series legend, set `_toggle_legend: true` and define the categorical `encoding.color.scale.domain` and `range`. The shared `ChartLegend` hides the same field in marks and tooltips. Do not add a Vega-Lite selection with `bind: "legend"`.
+- Toggling a series changes mark visibility only. Axes and scale domains MUST remain fixed unless a visualization explicitly documents a rescaling interaction.
+- In selected visualizations, `_legend_inactive_style: "strikethrough"` uses the optional crossed-out inactive label. The default is the quieter `muted` treatment.
+- Non-Vega charts must reuse `apps/web/components/charts/ChartLegend.tsx` rather than creating a local legend. The KVIFF charts are the reference implementation.
+
 The Flourish template (see the charts "Presidential Pardons," "Presidents' Foreign Trips") is the model for readability and hierarchy – but it serves as **inspiration and a benchmark, not a cage**. Custom components may take liberties (labels placed directly inside bars, in-chart annotations, interactive elements) as long as they follow the typography and colors below.
 
 ### Typographic scale (Roboto Condensed unless noted otherwise; revised 2026-07-10)
@@ -337,7 +346,7 @@ The Flourish template (see the charts "Presidential Pardons," "Presidents' Forei
 - **Background of the whole chart card:** Ink Wash `#f8f6f0` (never `#fdfbf7` – that's the page background).
 - **Every chart MUST have:** a title (a thesis, not a description – "Roads take up three times the area solar panels would," not "Comparison of land use"), a subtitle with units and year, and a two-line footer – line 1 `• authors: Kateřina Mahdalová & Michal Škop`, line 2 `• data: [institution]`. Authors in the footer are ALWAYS linked to https://datatimes.cz (the same target as the logo). Footer links are underlined but also `#333333` (never crimson in the footer). Wikipedia is never cited as a source.
 - **Series colors:** from the §2 palette. Semantics: Amethyst `#6267a3` / Midnight `#272a59` = history, context, comparison value; Crimson `#de1743` = current state, inflection point, warning. One metric = one color + one highlight.
-- **Legend: above the chart, centered, toggleable.** Legend items are square buttons with rounded corners; clicking mutes/highlights a series (via a Vega-Lite param with `bind: "legend"`). The default appearance comes from `VegaChartImpl`; only the toggle param is added per-spec.
+- **Legend: above the chart, centered, toggleable.** Legend items are square buttons with rounded corners. Use the shared `ChartLegend`; in Vega specs enable it with `_toggle_legend: true`. The optional `strikethrough` inactive style is reserved for cases where a stronger indication of a disabled series improves comprehension.
 - **The X-axis title belongs beside the axis** (right-aligned on the value-label row, bold), not on its own line below the chart – it saves vertical space. Watch for collisions with the last value label on narrow screens (fix by omitting the last gridline value).
 - **Prefer labels placed directly at the data** (at line ends, inside bars) over a legend and an axis with long names – the chart then reads without eye-jumping.
 - **Technical note (Next.js):** write the font as `var(--font-roboto-condensed), Arial, sans-serif` – the literal `'Roboto Condensed'` webfont string fails to load and falls back to Arial. Don't specify fonts inside Vega specs – `VegaChartImpl` supplies them centrally.
