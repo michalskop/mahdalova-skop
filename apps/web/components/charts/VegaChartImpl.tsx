@@ -174,8 +174,8 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
   const encoding = spec.encoding as Record<string, { field?: string; scale?: { domain?: unknown[]; range?: string[] } }> | undefined;
   const xField = encoding?.x?.field;
   const layers = Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [];
-  const lineLayers = layers.filter(layer => markType(layer.mark) === 'line');
-  if (!values?.length || !xField || !lineLayers.length) return null;
+  const seriesLayers = layers.filter(layer => ['line', 'area'].includes(markType(layer.mark) ?? ''));
+  if (!values?.length || !xField || !seriesLayers.length) return null;
 
   const dateTransform = (spec.transform as { calculate?: string; as?: string }[] | undefined)
     ?.find(transform => transform.as === xField && transform.calculate?.includes('toDate'));
@@ -201,7 +201,7 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
   const rows: PointerTooltipRow[] = [];
 
   if (seriesField) {
-    const valueField = ((lineLayers[0].encoding as Record<string, { field?: string }> | undefined)?.y?.field);
+    const valueField = ((seriesLayers[0].encoding as Record<string, { field?: string }> | undefined)?.y?.field);
     if (!valueField) return null;
     for (const row of nearestRows) {
       const series = String(row[seriesField]);
@@ -213,7 +213,7 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
   } else {
     const row = nearestRows[0];
     if (!row) return null;
-    for (const layer of lineLayers) {
+    for (const layer of seriesLayers) {
       const layerEncoding = layer.encoding as Record<string, { field?: string }> | undefined;
       const valueField = layerEncoding?.y?.field;
       if (!valueField || typeof row[valueField] !== 'number') continue;

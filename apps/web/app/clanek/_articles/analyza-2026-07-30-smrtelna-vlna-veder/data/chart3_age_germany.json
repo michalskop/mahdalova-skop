@@ -606,10 +606,10 @@
           "85 a více let"
         ],
         "range": [
-          "#4a51ab",
-          "#0e839e",
-          "#f76800",
-          "#de1743"
+          "#b3b4c5",
+          "#7d7f9b",
+          "#474a72",
+          "#272a59"
         ]
       },
       "legend": {
@@ -635,20 +635,11 @@
       }
     },
     {
-      "params": [
-        {
-          "name": "ageSel",
-          "select": {
-            "type": "point",
-            "fields": ["age"],
-            "bind": "legend"
-          }
-        }
-      ],
       "mark": {
         "type": "area",
+        "fillOpacity": 0.18,
         "line": {
-          "strokeWidth": 1.5
+          "strokeWidth": 2
         }
       },
       "encoding": {
@@ -659,13 +650,6 @@
           "axis": {
             "grid": true
           }
-        },
-        "opacity": {
-          "condition": {
-            "param": "ageSel",
-            "value": 0.4
-          },
-          "value": 0.06
         },
         "tooltip": [
           {
