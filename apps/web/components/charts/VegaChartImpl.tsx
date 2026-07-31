@@ -268,7 +268,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       }}
       onPointerLeave={() => setHoverRatio(null)}
     >
-      <div ref={containerRef} />
+      <div ref={containerRef} style={{ width: '100%' }} />
       {hoverRatio !== null && (
         <div
           aria-hidden="true"
