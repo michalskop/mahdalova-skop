@@ -6,10 +6,7 @@
   },
   "width": 600,
   "height": 320,
-  "_reveal_order": [
-    "Madrid",
-    "Berlín"
-  ],
+  "_toggle_legend": true,
   "data": {
     "values": [
       {

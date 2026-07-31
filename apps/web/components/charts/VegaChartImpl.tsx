@@ -159,8 +159,45 @@ function isConcatSpec(spec: Record<string, unknown>) {
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   // Exclude display fields we render ourselves; suppress Vega title explicitly
-  const { title: _t, _source: _s, _total_width: _w, _reveal_order: _r, ...rest } = spec as Record<string, unknown>;
+  const { title: _t, _source: _s, _total_width: _w, _toggle_legend: _l, ...rest } = spec as Record<string, unknown>;
   return { ...rest, title: null };
+}
+
+function toggleLegendConfig(spec: Record<string, unknown> | null) {
+  if (!spec || spec._toggle_legend !== true) return null;
+  const color = (spec.encoding as Record<string, unknown> | undefined)?.color as {
+    field?: string;
+    scale?: { domain?: unknown[]; range?: string[] };
+  } | undefined;
+  if (!color?.field || !color.scale?.domain?.length) return null;
+  return {
+    field: color.field,
+    items: color.scale.domain.map((label, index) => ({
+      label: String(label),
+      color: color.scale?.range?.[index] ?? '#777',
+    })),
+  };
+}
+
+function filterHiddenSeries(spec: Record<string, unknown>, field: string, hidden: Set<string>) {
+  if (!hidden.size) return spec;
+  const filterData = (data: unknown) => {
+    if (!data || typeof data !== 'object') return data;
+    const typed = data as { values?: Record<string, unknown>[] };
+    return Array.isArray(typed.values)
+      ? { ...typed, values: typed.values.filter(row => !hidden.has(String(row[field]))) }
+      : data;
+  };
+  return {
+    ...spec,
+    data: filterData(spec.data),
+    ...(Array.isArray(spec.layer) ? {
+      layer: (spec.layer as Record<string, unknown>[]).map(layer => ({
+        ...layer,
+        data: filterData(layer.data),
+      })),
+    } : {}),
+  };
 }
 
 function stripVegaTooltips(spec: Record<string, unknown>): Record<string, unknown> {
@@ -188,7 +225,7 @@ function markType(mark: unknown) {
   return undefined;
 }
 
-function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): PointerTooltip | null {
+function pointerTooltipAt(spec: Record<string, unknown>, ratio: number, hiddenSeries?: Set<string>): PointerTooltip | null {
   const encoding = spec.encoding as Record<string, { field?: string; scale?: { domain?: unknown[]; range?: string[] } }> | undefined;
   const xField = encoding?.x?.field;
   const layers = Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [];
@@ -229,6 +266,7 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
     if (!valueField) return null;
     for (const row of nearestRows) {
       const series = String(row[seriesField]);
+      if (hiddenSeries?.has(series)) continue;
       const value = row[valueField];
       if (typeof value === 'number') {
         rows.push({ label: series, value: numberFormat.format(value), color: colorForSeries(series) });
@@ -275,7 +313,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const [error, setError] = useState<string | null>(null);
   const [localHoverRatio, setLocalHoverRatio] = useState<number | null>(null);
   const [pointerTooltip, setPointerTooltip] = useState<(PointerTooltip & { x: number; y: number }) | null>(null);
+  const [hiddenSeries, setHiddenSeries] = useState<Set<string>>(() => new Set());
   const viewRef = useRef<{ finalize: () => void } | null>(null);
+  const toggleLegend = toggleLegendConfig(spec);
 
   function extractMeta(data: Record<string, unknown>) {
     const t = data.title;
@@ -309,7 +349,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     if (!spec || !containerRef.current) return;
 
     const hasPointerTooltip = Boolean(pointerTooltipAt(spec, 0));
-    const base = hasPointerTooltip ? stripVegaTooltips(stripMeta(spec)) : stripMeta(spec);
+    const stripped = hasPointerTooltip ? stripVegaTooltips(stripMeta(spec)) : stripMeta(spec);
+    const base = toggleLegend ? filterHiddenSeries(stripped, toggleLegend.field, hiddenSeries) : stripped;
     let final: Record<string, unknown>;
 
     if (mini) {
@@ -344,9 +385,6 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       };
     }
 
-    let revealObserver: IntersectionObserver | null = null;
-    const revealTimers: number[] = [];
-
     import('vega-embed').then(({ default: embed }) => {
       if (!containerRef.current) return;
       viewRef.current?.finalize();
@@ -361,53 +399,13 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
-        const revealOrder = spec._reveal_order;
-        if (!Array.isArray(revealOrder) || !revealOrder.length || !containerRef.current) return;
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-        const marks = Array.from(containerRef.current.querySelectorAll<SVGPathElement>('g.mark-area path, g.mark-line path'));
-        marks.forEach(mark => {
-          mark.style.opacity = '0';
-          if (mark.parentElement?.classList.contains('mark-line')) {
-            const length = mark.getTotalLength();
-            mark.style.strokeDasharray = `${length}`;
-            mark.style.strokeDashoffset = `${length}`;
-          }
-        });
-
-        const reveal = () => {
-          revealOrder.forEach((series, index) => {
-            const timer = window.setTimeout(() => {
-              marks
-                .filter(mark => mark.getAttribute('aria-label')?.includes(String(series)))
-                .forEach(mark => {
-                  const isLine = mark.parentElement?.classList.contains('mark-line');
-                  mark.style.transition = isLine
-                    ? 'opacity 180ms ease, stroke-dashoffset 850ms ease'
-                    : 'opacity 500ms ease';
-                  mark.style.opacity = '1';
-                  if (isLine) mark.style.strokeDashoffset = '0';
-                });
-            }, index * 900);
-            revealTimers.push(timer);
-          });
-        };
-
-        revealObserver = new IntersectionObserver(entries => {
-          if (!entries.some(entry => entry.isIntersecting)) return;
-          revealObserver?.disconnect();
-          reveal();
-        }, { threshold: 0.25 });
-        revealObserver.observe(containerRef.current);
       }).catch(e => setError(String(e)));
     });
 
     return () => {
-      revealObserver?.disconnect();
-      revealTimers.forEach(timer => window.clearTimeout(timer));
       viewRef.current?.finalize();
     };
-  }, [spec, mini, bare]);
+  }, [spec, mini, bare, hiddenSeries]);
 
   if (error) return (
     <div style={{ padding: '8px', color: '#de1743', fontSize: '12px', fontFamily: 'monospace' }}>
@@ -440,7 +438,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         if (inGroup) {
           setSharedHoverY?.(event.clientY - rect.top);
         } else {
-          const t = spec ? pointerTooltipAt(spec, ratio) : null;
+          const t = spec ? pointerTooltipAt(spec, ratio, hiddenSeries) : null;
           setPointerTooltip(t ? { ...t, x: event.clientX - rect.left, y: event.clientY - rect.top } : null);
         }
       }}
@@ -549,6 +547,55 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   return (
     <ChartCard title={meta.title} subtitle={meta.subtitle} source={meta.source}>
       <style>{TOOLTIP_CSS}</style>
+      {toggleLegend && (
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexWrap: 'wrap',
+          gap: 14,
+          margin: '2px 0 8px',
+          fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
+          fontSize: 13,
+        }}>
+          {toggleLegend.items.map(item => {
+            const enabled = !hiddenSeries.has(item.label);
+            return (
+              <button
+                key={item.label}
+                type="button"
+                aria-pressed={enabled}
+                onClick={() => setHiddenSeries(current => {
+                  const next = new Set(current);
+                  if (next.has(item.label)) next.delete(item.label);
+                  else next.add(item.label);
+                  return next;
+                })}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: 0,
+                  border: 0,
+                  background: 'transparent',
+                  color: enabled ? '#333' : '#888',
+                  cursor: 'pointer',
+                  opacity: enabled ? 1 : 0.55,
+                }}
+              >
+                <span aria-hidden="true" style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 3,
+                  background: enabled ? item.color : 'transparent',
+                  border: `2px solid ${item.color}`,
+                  boxSizing: 'border-box',
+                }} />
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
       <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
         {chartCanvas(200, isConcat && totalWidth ? `${totalWidth}px` : '100%')}
       </div>
