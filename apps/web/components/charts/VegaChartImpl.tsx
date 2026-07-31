@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { TooltipHandler } from 'vega';
 import { robotoCondensed } from '@/app/fonts';
 import ChartCard from './ChartCard';
@@ -336,11 +336,73 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const [pointerTooltip, setPointerTooltip] = useState<(PointerTooltip & { x: number; y: number }) | null>(null);
   const [hiddenSeries, setHiddenSeries] = useState<Set<string>>(() => new Set());
   const viewRef = useRef<{ finalize: () => void } | null>(null);
-  const toggleLegend = toggleLegendConfig(spec);
+  const hasEnteredViewRef = useRef(false);
+  const initialRevealDoneRef = useRef(false);
+  const pendingRevealSeriesRef = useRef<string[]>([]);
+  const toggleLegend = useMemo(() => toggleLegendConfig(spec), [spec]);
+
+  const animateDataMarks = useCallback((direction: 'show' | 'hide', series?: string[]) => {
+    const container = containerRef.current;
+    if (!container || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return Promise.resolve();
+    }
+    const seriesColors = series?.length
+      ? toggleLegend?.items
+          .filter(item => series.includes(item.label))
+          .map(item => item.color) ?? []
+      : null;
+    const normalizeColor = (color: string) => {
+      const probe = document.createElement('span');
+      probe.style.color = color;
+      document.body.appendChild(probe);
+      const normalized = getComputedStyle(probe).color;
+      probe.remove();
+      return normalized;
+    };
+    const normalizedSeriesColors = seriesColors?.map(normalizeColor);
+    const marks = Array.from(container.querySelectorAll<SVGGraphicsElement>(
+      '.mark-line path, .mark-area path, .mark-symbol path, .mark-rule path',
+    )).filter(mark => {
+      if (!normalizedSeriesColors) return true;
+      const styles = getComputedStyle(mark);
+      return normalizedSeriesColors.includes(styles.stroke) || normalizedSeriesColors.includes(styles.fill);
+    });
+    if (!marks.length) return Promise.resolve();
+
+    const keyframes = direction === 'show'
+      ? [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)' }]
+      : [{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 0 100%)' }];
+    const animations = marks.map(mark => mark.animate(keyframes, {
+      duration: 650,
+      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      fill: 'forwards',
+    }));
+    return Promise.all(animations.map(animation => animation.finished.catch(() => undefined))).then(() => {
+      animations.forEach(animation => animation.cancel());
+    });
+  }, [toggleLegend]);
 
   useEffect(() => {
     setHiddenSeries(new Set());
+    initialRevealDoneRef.current = false;
+    pendingRevealSeriesRef.current = [];
   }, [spec]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      hasEnteredViewRef.current = true;
+      if (!initialRevealDoneRef.current && container.querySelector('svg')) {
+        initialRevealDoneRef.current = true;
+        void animateDataMarks('show');
+      }
+      observer.disconnect();
+    }, { threshold: 0.18 });
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [animateDataMarks]);
 
   function extractMeta(data: Record<string, unknown>) {
     const t = data.title;
@@ -426,6 +488,14 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
+        const pendingSeries = pendingRevealSeriesRef.current;
+        if (pendingSeries.length) {
+          pendingRevealSeriesRef.current = [];
+          void animateDataMarks('show', pendingSeries);
+        } else if (hasEnteredViewRef.current && !initialRevealDoneRef.current) {
+          initialRevealDoneRef.current = true;
+          void animateDataMarks('show');
+        }
       }).catch(e => setError(String(e)));
     });
 
@@ -587,7 +657,15 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
           marginBottom={8}
           onChange={activeKeys => {
             const active = new Set(activeKeys);
-            setHiddenSeries(new Set(toggleLegend.items.filter(item => !active.has(item.label)).map(item => item.label)));
+            const nextHidden = new Set(toggleLegend.items.filter(item => !active.has(item.label)).map(item => item.label));
+            const turningOff = Array.from(nextHidden).filter(label => !hiddenSeries.has(label));
+            const turningOn = Array.from(hiddenSeries).filter(label => !nextHidden.has(label));
+            if (turningOff.length) {
+              void animateDataMarks('hide', turningOff).then(() => setHiddenSeries(nextHidden));
+              return;
+            }
+            if (turningOn.length) pendingRevealSeriesRef.current = turningOn;
+            setHiddenSeries(nextHidden);
           }}
         />
       )}
