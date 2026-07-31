@@ -11,6 +11,10 @@ export type ChartGroupState = {
   bare: boolean;
   hoverRatio: number | null;
   setHoverRatio?: (ratio: number | null) => void;
+  // Pointer Y (px from the panel's top) of the hovered panel, shared so every
+  // panel's synchronized tooltip rises/falls together with the cursor.
+  hoverY?: number | null;
+  setHoverY?: (y: number | null) => void;
 };
 
 const ChartGroupContext = createContext<ChartGroupState>({

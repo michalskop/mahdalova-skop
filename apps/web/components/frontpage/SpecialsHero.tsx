@@ -91,7 +91,7 @@ const TILES = [
   { href: '/specialy/investigace', title: 'M & Š investigace', bg: '#351040', external: false, logoType: 'lupa', coverImage: '/images/specials/investigace.svg' },
   { href: 'https://snemovna.datatimes.cz', title: 'Sněmovna.DataTimes.cz', bg: '#2f325c', external: true, logoType: 'flag', coverImage: '/images/specials/snemovna.svg' },
   { href: 'https://mandaty.cz', title: 'Mandáty.cz', bg: 'linear-gradient(90deg, #f71b4b, #101432)', external: true, logoType: 'mandaty', coverImage: '/images/specials/mandaty.svg' },
-  { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
+  { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
 ];
 
 // Nekonečná smyčka: klonujeme VISIBLE dlaždic na začátek a konec tracku.

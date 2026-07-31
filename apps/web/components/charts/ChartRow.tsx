@@ -24,9 +24,10 @@ export interface ChartRowProps {
 export default function ChartRow({ children, cols = 3, title, subtitle, source }: ChartRowProps) {
   const hasSharedHeader = Boolean(title || subtitle || source);
   const [hoverRatio, setHoverRatio] = useState<number | null>(null);
+  const [hoverY, setHoverY] = useState<number | null>(null);
   const group = useMemo(
-    () => ({ bare: hasSharedHeader, hoverRatio, setHoverRatio }),
-    [hasSharedHeader, hoverRatio],
+    () => ({ bare: hasSharedHeader, hoverRatio, setHoverRatio, hoverY, setHoverY }),
+    [hasSharedHeader, hoverRatio, hoverY],
   );
 
   const grid = (

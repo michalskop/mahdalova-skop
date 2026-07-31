@@ -70,7 +70,7 @@ const TILES = [
   },
   {
     href: '/specialy/klima',
-    title: 'Data o klimatu',
+    title: 'Data o klimatu',
     bg: 'linear-gradient(135deg, #2a3f04, #639e0a)',
     external: false,
     logo: 'klima',

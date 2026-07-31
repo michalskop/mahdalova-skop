@@ -34,7 +34,7 @@ export default async function KlimaPage() {
   return (
     <Container size="lg" bg="background.2" maw="1200px" w="100%" p={0} m="0 auto">
       <ArticlesSection
-        sectionTitle="Data o klimatu"
+        sectionTitle={'Data o klimatu'}
         articles={articles}
         themeColor="linear-gradient(135deg, #2a3f04, #639e0a)"
       />

@@ -1,5 +1,5 @@
 ---
-title: "Horko zabíjelo v Německu víc než ve Španělsku. Rozdíl nedělá teplota, ale zvyk"
+title: "Klimatická krize žene vedra do nepřipravených zemí včetně Česka. Promítá se to ve vyšších úmrtích"
 date: "2026-07-31"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vlna veder zabila jen v Německu, Francii, Belgii a Nizozemsku zhruba 20 000 lidí navíc. Ve Španělsku a Bulharsku, zvyklých na horko, celková úmrtnost nad obvyklou úroveň nevystoupala – a další vlna je na cestě během následujících dní."
@@ -10,11 +10,11 @@ promoted: 1
 ---
 
 Vlna veder na konci června zabila v Evropě desítky tisíc lidí. Jen v Německu, Francii, Belgii a Nizozemsku, odkud již máme data, jde o zhruba 20 000 lidí navíc za dva klíčové nejteplejší týdny než jiné roky.
-Nezabíjela však samotná vysoká teplota, ale nepřipravenost na ni.
+Nezabíjela přitom samotná vysoká teplota. Klimatická krize žene stále silnější vedra do míst, kde lidé, budovy i zdravotnictví vznikaly pro chladnější podnebí – a právě tam, kde na extrémy nejsou stavěné, umírá nejvíc lidí navíc.
 
-Podobné horko se do Evropy vrací i v nejbližších dnech. Data ukazují na rozdíl mezi zeměmi, kde jsou lidé na horko zvyklí, a těmi, kde horko zabíjí.
+Podobné horko se do Evropy vrací i v nejbližších dnech a s oteplováním postupuje dál na sever. Data ukazují rozdíl mezi zeměmi, které se na vedra dokázaly přizpůsobit, a těmi, kam smrtící horko teprve dorazilo.
 
-## V Berlíně bylo stejně horko jako v Madridu, umíralo se ale jen v Německu
+## Horko zabíjelo v Německu víc než ve Španělsku
 
 V nejteplejším týdnu od 22. do 28. června vystoupala teplota v německém hlavním městě Berlíně i v hlavním městě Španělska Madridu na stejných maximálních 39 °C.
 
@@ -38,7 +38,7 @@ Vysvětlením může být, že Španělé jsou na vysoké teploty dlouhodobě zv
 
 ## Francie a Nizozemsko na tom byly jako Německo, Bulharsko a Pobaltí ne
 
-Stejně jako v Německu vlna veder zabíjela také ve Francii, Nizozemsku nebo Belgii, odkud již máme červnová data. Naopak Bulharsko, kde jsou na horka také již dávno zvyklí a připravení, na tom bylo podobně jako Španělsko. Litva se sice v tom týdnu také oteplila, ale jen na 32 °C, což neohrožuje lidské zdraví, nárůst úmrtí tam nebyl. Estonsko zůstalo chladnější a horko ho nezasáhlo vůbec.
+Stejně jako v Německu vlna veder zabíjela také ve Francii, Nizozemsku nebo Belgii, odkud již máme červnová data. Naopak Bulharsko, kde jsou na horka také již dávno zvyklí a připravení, na tom bylo podobně jako Španělsko. Litva se sice v tom týdnu také oteplila, ale jen na 32 °C, což neohrožuje lidské zdraví, nárůst úmrtí tam nebyl. Estonsko zůstalo chladnější a horko ho nezasáhlo vůbec. Zatím – [Evropa se otepluje nejrychleji ze všech kontinentů](https://www.euronews.com/health/2026/06/29/europes-record-breaking-heatwave-what-you-need-to-know) a vlny veder postupují na sever, do zemí s nejnižším podílem klimatizace a s domy stavěnými spíš na udržení tepla než na odolnost vůči vedru.
 
 <ChartRow title="Vlna veder měla různý dopad v zemích Evropy" subtitle="Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025" source="[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)">
 <VegaChart dataFile="data/chart2a_rate_germany_france.json" />

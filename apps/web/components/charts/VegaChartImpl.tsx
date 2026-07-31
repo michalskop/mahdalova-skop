@@ -235,7 +235,7 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
 }
 
 export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
-  const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio } = useChartGroup();
+  const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio, hoverY: sharedHoverY, setHoverY: setSharedHoverY } = useChartGroup();
   const bare = bareProp || bareFromGroup;
   const containerRef = useRef<HTMLDivElement>(null);
   const [spec, setSpec] = useState<Record<string, unknown> | null>(propSpec ?? null);
@@ -342,6 +342,13 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
 
   const hoverRatio = setSharedHoverRatio ? sharedHoverRatio : localHoverRatio;
   const setHoverRatio = setSharedHoverRatio ?? setLocalHoverRatio;
+  const inGroup = Boolean(setSharedHoverRatio);
+  // In a ChartRow (small multiples), every panel shows the tooltip for the SAME
+  // week — driven by the shared hover ratio — so the countries can be compared
+  // at a glance even in panels the cursor isn't over. It sits at the shared
+  // vertical guide. Standalone charts keep the classic cursor-following tooltip.
+  const groupTooltip = inGroup && hoverRatio !== null && spec ? pointerTooltipAt(spec, hoverRatio) : null;
+  const tooltip = inGroup ? groupTooltip : pointerTooltip;
   const chartCanvas = (minHeight: number, width: string = '100%') => (
     <div
       style={{ position: 'relative', width, minHeight }}
@@ -349,16 +356,17 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         const rect = event.currentTarget.getBoundingClientRect();
         const ratio = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
         setHoverRatio(ratio);
-        const tooltip = spec ? pointerTooltipAt(spec, ratio) : null;
-        setPointerTooltip(tooltip ? {
-          ...tooltip,
-          x: event.clientX - rect.left,
-          y: event.clientY - rect.top,
-        } : null);
+        if (inGroup) {
+          setSharedHoverY?.(event.clientY - rect.top);
+        } else {
+          const t = spec ? pointerTooltipAt(spec, ratio) : null;
+          setPointerTooltip(t ? { ...t, x: event.clientX - rect.left, y: event.clientY - rect.top } : null);
+        }
       }}
       onPointerLeave={() => {
         setHoverRatio(null);
-        setPointerTooltip(null);
+        if (inGroup) setSharedHoverY?.(null);
+        else setPointerTooltip(null);
       }}
     >
       <div ref={containerRef} style={{ width: '100%' }} />
@@ -376,17 +384,25 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
           }}
         />
       )}
-      {pointerTooltip && (
+      {tooltip && (
         <div
           role="tooltip"
           style={{
             position: 'absolute',
-            left: pointerTooltip.x,
-            top: pointerTooltip.y,
-            transform: pointerTooltip.x > 180 ? 'translate(calc(-100% - 10px), 10px)' : 'translate(10px, 10px)',
+            ...(inGroup
+              ? {
+                  left: `${(hoverRatio ?? 0) * 100}%`,
+                  top: sharedHoverY ?? 8,
+                  transform: (hoverRatio ?? 0) > 0.6 ? 'translate(calc(-100% - 8px), 10px)' : 'translate(8px, 10px)',
+                }
+              : {
+                  left: (tooltip as PointerTooltip & { x: number; y: number }).x,
+                  top: (tooltip as PointerTooltip & { x: number; y: number }).y,
+                  transform: (tooltip as PointerTooltip & { x: number }).x > 180 ? 'translate(calc(-100% - 10px), 10px)' : 'translate(10px, 10px)',
+                }),
             zIndex: 4,
             minWidth: 132,
-            padding: '8px 10px',
+            padding: '7px 10px 8px',
             border: '1px solid #e8e3d2',
             borderRadius: 7,
             background: 'rgba(248, 246, 240, 0.97)',
@@ -398,8 +414,16 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
             pointerEvents: 'none',
           }}
         >
-          <div style={{ marginBottom: 4, color: '#555', whiteSpace: 'nowrap' }}>{pointerTooltip.label}</div>
-          {pointerTooltip.rows.map(row => (
+          <div style={{
+            fontWeight: 700,
+            fontSize: 13.5,
+            color: '#1a1a1a',
+            whiteSpace: 'nowrap',
+            paddingBottom: 4,
+            marginBottom: 5,
+            borderBottom: '1px solid #e8e3d2',
+          }}>{tooltip.label}</div>
+          {tooltip.rows.map(row => (
             <div key={row.label} style={{ display: 'flex', justifyContent: 'space-between', gap: 14 }}>
               <span style={{ color: '#555', whiteSpace: 'nowrap' }}>{row.label}</span>
               <strong style={{ color: row.color ?? '#1a1a1a', whiteSpace: 'nowrap' }}>{row.value}</strong>

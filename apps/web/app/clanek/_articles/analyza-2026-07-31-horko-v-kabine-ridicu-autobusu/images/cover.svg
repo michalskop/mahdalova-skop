@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Horko v kabině řidičů autobusů">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff934d"/>
+      <stop offset="0.55" stop-color="#f76800"/>
+      <stop offset="1" stop-color="#a81134"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="965" cy="175" r="95" fill="#ffcf02" opacity="0.9"/>
+  <circle cx="965" cy="175" r="140" fill="#ffcf02" opacity="0.18"/>
+  <!-- heat shimmer -->
+  <g fill="none" stroke="#fff3e8" stroke-width="6" stroke-linecap="round" opacity="0.55">
+    <path d="M120 150 q30 -28 60 0 q30 28 60 0 q30 -28 60 0"/>
+    <path d="M120 210 q30 -28 60 0 q30 28 60 0 q30 -28 60 0"/>
+    <path d="M120 270 q30 -28 60 0 q30 28 60 0 q30 -28 60 0"/>
+  </g>
+  <!-- road -->
+  <rect x="0" y="500" width="1200" height="130" fill="#663200" opacity="0.5"/>
+  <g fill="#fff3e8" opacity="0.7">
+    <rect x="120" y="560" width="90" height="12" rx="6"/>
+    <rect x="320" y="560" width="90" height="12" rx="6"/>
+    <rect x="520" y="560" width="90" height="12" rx="6"/>
+    <rect x="720" y="560" width="90" height="12" rx="6"/>
+    <rect x="920" y="560" width="90" height="12" rx="6"/>
+  </g>
+  <!-- bus -->
+  <g>
+    <rect x="300" y="335" width="560" height="180" rx="26" fill="#272a59"/>
+    <rect x="300" y="335" width="560" height="180" rx="26" fill="#000000" opacity="0.12"/>
+    <!-- windows -->
+    <g fill="#8cdfef" opacity="0.92">
+      <rect x="332" y="368" width="96" height="72" rx="10"/>
+      <rect x="448" y="368" width="96" height="72" rx="10"/>
+      <rect x="564" y="368" width="96" height="72" rx="10"/>
+      <rect x="680" y="368" width="150" height="72" rx="10"/>
+    </g>
+    <!-- door -->
+    <rect x="332" y="452" width="60" height="63" rx="6" fill="#161730"/>
+    <!-- wheels -->
+    <circle cx="410" cy="515" r="34" fill="#161730"/>
+    <circle cx="410" cy="515" r="14" fill="#4a51ab"/>
+    <circle cx="760" cy="515" r="34" fill="#161730"/>
+    <circle cx="760" cy="515" r="14" fill="#4a51ab"/>
+  </g>
+</svg>
