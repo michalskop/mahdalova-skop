@@ -27,7 +27,7 @@ Ale v celém Německu ten týden zemřelo o třetinu víc lidí, než je pro tuh
 To znamená, že i při stejném vedru umírali lidí "navíc" jen v Německu – v stejně horkém Španělsku zůstala celková úmrtnost v obvyklém pásmu.
 
 ```infobox info
-Co graf ukazuje a co ne: Světle barevný pruh je pro porovnání, je to rozmezí - nejteplejší a nejstudenější - z posledních čtyř let pro stejný týden v roce. Čísla jsou hrubá úmrtnost, tedy počet zemřelých na 1000 obyvatel přepočteno na celý rok – tam, kde srovnáváme více zemí, na to upozorňujeme zvlášť. Teplotu srovnáváme mezi konkrétními hlavními městy (Berlín, Madrid), jsou to ilustrační reprezentanti za celé země. Úmrtnost je přímo za celou zemi. Nejnovější týdny jsou v datech označené jako předběžné a mohou se ještě revidovat.
+Co graf ukazuje: Světle barevný pruh je pro porovnání, je to rozmezí - nejteplejší a nejstudenější - z posledních čtyř let pro stejný týden v roce. Čísla jsou hrubá úmrtnost, tedy počet zemřelých na 1000 obyvatel přepočteno na celý rok – tam, kde srovnáváme více zemí, na to upozorňujeme zvlášť. Teplotu srovnáváme mezi konkrétními hlavními městy (Berlín, Madrid), jsou to ilustrační reprezentanti za celé země. Úmrtnost je přímo za celou zemi. Nejnovější týdny jsou v datech označené jako předběžné a mohou se ještě revidovat.
 ```
 
 Neznamená to ale, že ve Španělsku horko nikoho nezabíjelo. Podle španělského systému MoMo, který vede Instituto de Salud Carlos III, bylo horku v červnu 2026 přisouzeno rekordních 1 028 úmrtí – nejvíc od začátku měření v roce 2015 ([data španělského systému MoMo](https://www.que.es/2026/07/01/muertes-ola-calor-junio-2026/)). Do celkové úmrtnosti v grafu výše se to ale nepromítlo jako výrazný nárůst: Španělsko srovnáváme s jeho vlastními nedávnými roky, které byly rovněž horké, takže vyšší úmrtnost při vedru je v jeho běžném pásmu „započítaná". A i uvnitř Španělska umíralo nejvíc lidí na chladnějším atlantském severu – v Baskicku, Katalánsku či Galicii –, ne na horkem otužilém jihu. I to potvrzuje, že nezabíjí samo horko, ale nezvyk na něj.
@@ -50,7 +50,7 @@ To znamená, že celková úmrtnost vystoupala nad obvyklé pásmo v Německu i 
 
 Rozdílné úrovně počtů úmrtí jsou dané hlavně rozdílnou věkovou strukturou v daných zemích – čísla pro jednoduchost nejsou přepočtená na stejnou věkovou strukturu (tzv. věková standardizace). Procentuální nárůst nad běžnou úmrtnost ale vždy porovnáváme vůči vlastní historii dané země, takže věková struktura není tak podstatná.
 
-## Zda horko zabíjelo i v Česku, zatím nevíme. Ale tušíme.
+## Zda horko zabíjelo i v Česku, zatím nevíme. Ale tušíme
 
 Jak to bylo v Česku? Teplotně byla vlna veder stejně výjimečná jako v Německu – v Praze stejně jako v Berlíně bylo 39 °C. Čísla o úmrtích za konec června ale ještě nejsou k dispozici. Pokud teplota a úmrtnost souvisí stejně jako v Německu, uvidíme podobný nárůst, až data dorazí.
 

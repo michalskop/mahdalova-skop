@@ -159,8 +159,27 @@ function isConcatSpec(spec: Record<string, unknown>) {
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   // Exclude display fields we render ourselves; suppress Vega title explicitly
-  const { title: _t, _source: _s, _total_width: _w, ...rest } = spec as Record<string, unknown>;
+  const { title: _t, _source: _s, _total_width: _w, _reveal_order: _r, ...rest } = spec as Record<string, unknown>;
   return { ...rest, title: null };
+}
+
+function stripVegaTooltips(spec: Record<string, unknown>): Record<string, unknown> {
+  const stripEncoding = (encoding: unknown) => {
+    if (!encoding || typeof encoding !== 'object') return encoding;
+    const { tooltip: _tooltip, ...rest } = encoding as Record<string, unknown>;
+    return rest;
+  };
+  const layers = Array.isArray(spec.layer)
+    ? (spec.layer as Record<string, unknown>[]).map(layer => ({
+        ...layer,
+        encoding: stripEncoding(layer.encoding),
+      }))
+    : spec.layer;
+  return {
+    ...spec,
+    encoding: stripEncoding(spec.encoding),
+    ...(layers ? { layer: layers } : {}),
+  };
 }
 
 function markType(mark: unknown) {
@@ -170,11 +189,16 @@ function markType(mark: unknown) {
 }
 
 function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): PointerTooltip | null {
-  const values = (spec.data as { values?: Record<string, unknown>[] } | undefined)?.values;
   const encoding = spec.encoding as Record<string, { field?: string; scale?: { domain?: unknown[]; range?: string[] } }> | undefined;
   const xField = encoding?.x?.field;
   const layers = Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [];
   const seriesLayers = layers.filter(layer => ['line', 'area'].includes(markType(layer.mark) ?? ''));
+  // Most charts keep one shared dataset at the top level. Some layered specs
+  // repeat it inside each layer; use the first available layer dataset there.
+  const values = (spec.data as { values?: Record<string, unknown>[] } | undefined)?.values
+    ?? layers
+      .map(layer => (layer.data as { values?: Record<string, unknown>[] } | undefined)?.values)
+      .find(layerValues => layerValues?.length);
   if (!values?.length || !xField || !seriesLayers.length) return null;
 
   const dateTransform = (spec.transform as { calculate?: string; as?: string }[] | undefined)
@@ -213,7 +237,10 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
   } else {
     const row = nearestRows[0];
     if (!row) return null;
-    for (const layer of seriesLayers) {
+    // Without a categorical series field, areas usually encode a reference
+    // band. The tooltip should enumerate the actual lines, not a band edge.
+    const valueLayers = seriesLayers.filter(layer => markType(layer.mark) === 'line');
+    for (const layer of valueLayers) {
       const layerEncoding = layer.encoding as Record<string, { field?: string }> | undefined;
       const valueField = layerEncoding?.y?.field;
       if (!valueField || typeof row[valueField] !== 'number') continue;
@@ -226,6 +253,11 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number): Pointer
         color: mark?.color ?? mark?.stroke,
       });
     }
+    rows.sort((a, b) => {
+      const aYear = /^\d{4}$/.test(a.label) ? Number(a.label) : null;
+      const bYear = /^\d{4}$/.test(b.label) ? Number(b.label) : null;
+      return aYear !== null && bYear !== null ? bYear - aYear : 0;
+    });
   }
 
   return rows.length ? {
@@ -276,7 +308,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   useEffect(() => {
     if (!spec || !containerRef.current) return;
 
-    const base = stripMeta(spec);
+    const hasPointerTooltip = Boolean(pointerTooltipAt(spec, 0));
+    const base = hasPointerTooltip ? stripVegaTooltips(stripMeta(spec)) : stripMeta(spec);
     let final: Record<string, unknown>;
 
     if (mini) {
@@ -311,6 +344,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       };
     }
 
+    let revealObserver: IntersectionObserver | null = null;
+    const revealTimers: number[] = [];
+
     import('vega-embed').then(({ default: embed }) => {
       if (!containerRef.current) return;
       viewRef.current?.finalize();
@@ -322,13 +358,55 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         renderer: 'svg',
         formatLocale: CS_NUMBER_LOCALE,
         timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: pointerTooltipAt(spec, 0) ? false : makeDpbpTooltipHandler(),
+        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
+        const revealOrder = spec._reveal_order;
+        if (!Array.isArray(revealOrder) || !revealOrder.length || !containerRef.current) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const marks = Array.from(containerRef.current.querySelectorAll<SVGPathElement>('g.mark-area path, g.mark-line path'));
+        marks.forEach(mark => {
+          mark.style.opacity = '0';
+          if (mark.parentElement?.classList.contains('mark-line')) {
+            const length = mark.getTotalLength();
+            mark.style.strokeDasharray = `${length}`;
+            mark.style.strokeDashoffset = `${length}`;
+          }
+        });
+
+        const reveal = () => {
+          revealOrder.forEach((series, index) => {
+            const timer = window.setTimeout(() => {
+              marks
+                .filter(mark => mark.getAttribute('aria-label')?.includes(String(series)))
+                .forEach(mark => {
+                  const isLine = mark.parentElement?.classList.contains('mark-line');
+                  mark.style.transition = isLine
+                    ? 'opacity 180ms ease, stroke-dashoffset 850ms ease'
+                    : 'opacity 500ms ease';
+                  mark.style.opacity = '1';
+                  if (isLine) mark.style.strokeDashoffset = '0';
+                });
+            }, index * 900);
+            revealTimers.push(timer);
+          });
+        };
+
+        revealObserver = new IntersectionObserver(entries => {
+          if (!entries.some(entry => entry.isIntersecting)) return;
+          revealObserver?.disconnect();
+          reveal();
+        }, { threshold: 0.25 });
+        revealObserver.observe(containerRef.current);
       }).catch(e => setError(String(e)));
     });
 
-    return () => { viewRef.current?.finalize(); };
+    return () => {
+      revealObserver?.disconnect();
+      revealTimers.forEach(timer => window.clearTimeout(timer));
+      viewRef.current?.finalize();
+    };
   }, [spec, mini, bare]);
 
   if (error) return (
