@@ -314,6 +314,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     import('vega-embed').then(({ default: embed }) => {
       if (!containerRef.current) return;
       viewRef.current?.finalize();
+      // Vega Embed appends its wrapper. During hot reload or a spec update the
+      // finalized SVG otherwise remains in the container and doubles its height.
+      containerRef.current.replaceChildren();
       embed(containerRef.current, final as never, {
         actions: false,
         renderer: 'svg',
@@ -393,12 +396,16 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
               ? {
                   left: `${(hoverRatio ?? 0) * 100}%`,
                   top: sharedHoverY ?? 8,
-                  transform: (hoverRatio ?? 0) > 0.6 ? 'translate(calc(-100% - 8px), 10px)' : 'translate(8px, 10px)',
+                  transform: `${(hoverRatio ?? 0) > 0.6 ? 'translateX(calc(-100% - 8px))' : 'translateX(8px)'} ${
+                    (sharedHoverY ?? 0) > 180 ? 'translateY(calc(-100% - 10px))' : 'translateY(10px)'
+                  }`,
                 }
               : {
                   left: (tooltip as PointerTooltip & { x: number; y: number }).x,
                   top: (tooltip as PointerTooltip & { x: number; y: number }).y,
-                  transform: (tooltip as PointerTooltip & { x: number }).x > 180 ? 'translate(calc(-100% - 10px), 10px)' : 'translate(10px, 10px)',
+                  transform: `${(tooltip as PointerTooltip & { x: number }).x > 180 ? 'translateX(calc(-100% - 10px))' : 'translateX(10px)'} ${
+                    (tooltip as PointerTooltip & { y: number }).y > 180 ? 'translateY(calc(-100% - 10px))' : 'translateY(10px)'
+                  }`,
                 }),
             zIndex: 4,
             minWidth: 132,

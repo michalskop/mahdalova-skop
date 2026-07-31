@@ -646,7 +646,14 @@
         "y": {
           "field": "excess_pct",
           "type": "quantitative",
+          "stack": null,
           "title": "Nadúmrtnost (%)",
+          "scale": {
+            "domain": [
+              -20,
+              60
+            ]
+          },
           "axis": {
             "grid": true
           }
