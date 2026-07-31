@@ -32,6 +32,8 @@ Co graf ukazuje a co ne: Světle barevný pruh je pro porovnání, je to rozmez�
 
 Vysvětlením může být, že Španělé jsou na vysoké teploty dlouhodobě zvyklí a přizpůsobili se jim – architekturou a vybavením budov (garniže, okenice), denním rytmem (siesta, pozdní večerní život) i klimatizací: tu má odhadem 40 % španělských domácností, v Německu podle odhadu spolkového úřadu pro životní prostředí je to jen asi 6 % ([Carbon Brief](https://www.carbonbrief.org/eight-facts-about-air-conditioning-amid-an-overheated-global-debate)). Německo zatím podobnou mnohaletou zkušenost oproti Španělsku s horky nemá.
 
+Španělsko řeší horka také na vládní úrovni: má plán, který určuje, co dělat při jednotlivých stupních nebezpečí, a každý den monitoruje počty zemřelých. [Podrobně jsme španělský systém varování popsali v našem článku.](/specialy/data-pro-budouci-premierku/10-klimaticka-zmena/06-spanelsko-varovani)
+
 ## Francie a Nizozemsko na tom byly jako Německo, Bulharsko a Pobaltí ne
 
 Stejně jako v Německu vlna veder zabíjela také ve Francii, Nizozemsku nebo Belgii, odkud již máme červnová data. Naopak Bulharsko, kde jsou na horka také již dávno zvyklí a připravení, na tom bylo podobně jako Španělsko. Litva se sice v tom týdnu také oteplila, ale jen na 32 °C, což neohrožuje lidské zdraví, nárůst úmrtí tam nebyl. Estonsko zůstalo chladnější a horko ho nezasáhlo vůbec.

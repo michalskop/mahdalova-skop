@@ -152,66 +152,6 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   return { ...rest, title: null };
 }
 
-function addUnifiedLineTooltip(spec: Record<string, unknown>): Record<string, unknown> {
-  const layers = Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : null;
-  const values = (spec.data as { values?: Record<string, unknown>[] } | undefined)?.values;
-  const encoding = spec.encoding as Record<string, { field?: string; type?: string }> | undefined;
-  const xField = encoding?.x?.field;
-  const seriesField = encoding?.color?.field;
-  const lineLayer = layers?.find(layer => {
-    const mark = layer.mark;
-    return mark === 'line' || (typeof mark === 'object' && mark !== null && (mark as { type?: string }).type === 'line');
-  });
-  const valueField = (lineLayer?.encoding as Record<string, { field?: string }> | undefined)?.y?.field;
-
-  if (!layers || !values?.length || !xField || !seriesField || !valueField || encoding?.x?.type !== 'temporal') {
-    return spec;
-  }
-
-  const series = Array.from(new Set(values.map(row => String(row[seriesField])).filter(Boolean)));
-  const hoverName = 'unified_hover';
-  const hoverTransform = [{ pivot: seriesField, value: valueField, groupby: [xField] }];
-
-  return {
-    ...spec,
-    layer: [
-      ...layers,
-      {
-        transform: hoverTransform,
-        params: [{
-          name: hoverName,
-          select: {
-            type: 'point',
-            fields: [xField],
-            nearest: true,
-            on: 'pointerover, pointermove',
-            clear: 'pointerout',
-          },
-        }],
-        mark: { type: 'point', opacity: 0 },
-        encoding: {
-          x: { field: xField, type: 'temporal' },
-          tooltip: [
-            { field: xField, type: 'temporal', title: 'Období', format: '%d. %b %Y' },
-            ...series.map(name => ({ field: name, type: 'quantitative', title: name })),
-          ],
-        },
-      },
-      {
-        transform: hoverTransform,
-        mark: { type: 'rule', color: '#777', strokeWidth: 1 },
-        encoding: {
-          x: { field: xField, type: 'temporal' },
-          opacity: {
-            condition: { param: hoverName, empty: false, value: 1 },
-            value: 0,
-          },
-        },
-      },
-    ],
-  };
-}
-
 export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
   const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio } = useChartGroup();
   const bare = bareProp || bareFromGroup;
@@ -253,7 +193,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   useEffect(() => {
     if (!spec || !containerRef.current) return;
 
-    const base = addUnifiedLineTooltip(stripMeta(spec));
+    const base = stripMeta(spec);
     let final: Record<string, unknown>;
 
     if (mini) {
