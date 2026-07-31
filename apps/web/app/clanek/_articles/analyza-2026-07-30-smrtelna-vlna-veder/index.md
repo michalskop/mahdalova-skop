@@ -4,7 +4,7 @@ date: "2026-07-31"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vlna veder zabila jen v Německu, Francii, Belgii a Nizozemsku zhruba 20 000 lidí navíc. Ve Španělsku a Bulharsku, zvyklých na horko, se nadúmrtnost neobjevila – a další vlna je na cestě během následujících dní."
 coverImage: "images/main.png"
-filter: ["analýza"]
+filter: ["analýza", "klima"]
 tags: ["klimatická změna", "nadúmrtnost", "klima", "demografie"]
 promoted: 1
 ---

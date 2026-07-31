@@ -7,7 +7,16 @@ import { createContext, useContext } from 'react';
 // element, a <p>, a fragment...). Prop-cloning only reaches *direct*
 // children and breaks the moment there's an extra wrapper in between;
 // context reaches through any nesting shape.
-const ChartGroupContext = createContext<{ bare: boolean }>({ bare: false });
+export type ChartGroupState = {
+  bare: boolean;
+  hoverRatio: number | null;
+  setHoverRatio?: (ratio: number | null) => void;
+};
+
+const ChartGroupContext = createContext<ChartGroupState>({
+  bare: false,
+  hoverRatio: null,
+});
 
 export function useChartGroup() {
   return useContext(ChartGroupContext);

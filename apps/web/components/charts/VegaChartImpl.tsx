@@ -152,13 +152,74 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
   return { ...rest, title: null };
 }
 
+function addUnifiedLineTooltip(spec: Record<string, unknown>): Record<string, unknown> {
+  const layers = Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : null;
+  const values = (spec.data as { values?: Record<string, unknown>[] } | undefined)?.values;
+  const encoding = spec.encoding as Record<string, { field?: string; type?: string }> | undefined;
+  const xField = encoding?.x?.field;
+  const seriesField = encoding?.color?.field;
+  const lineLayer = layers?.find(layer => {
+    const mark = layer.mark;
+    return mark === 'line' || (typeof mark === 'object' && mark !== null && (mark as { type?: string }).type === 'line');
+  });
+  const valueField = (lineLayer?.encoding as Record<string, { field?: string }> | undefined)?.y?.field;
+
+  if (!layers || !values?.length || !xField || !seriesField || !valueField || encoding?.x?.type !== 'temporal') {
+    return spec;
+  }
+
+  const series = Array.from(new Set(values.map(row => String(row[seriesField])).filter(Boolean)));
+  const hoverName = 'unified_hover';
+  const hoverTransform = [{ pivot: seriesField, value: valueField, groupby: [xField] }];
+
+  return {
+    ...spec,
+    layer: [
+      ...layers,
+      {
+        transform: hoverTransform,
+        params: [{
+          name: hoverName,
+          select: {
+            type: 'point',
+            fields: [xField],
+            nearest: true,
+            on: 'pointerover, pointermove',
+            clear: 'pointerout',
+          },
+        }],
+        mark: { type: 'point', opacity: 0 },
+        encoding: {
+          x: { field: xField, type: 'temporal' },
+          tooltip: [
+            { field: xField, type: 'temporal', title: 'Období', format: '%d. %b %Y' },
+            ...series.map(name => ({ field: name, type: 'quantitative', title: name })),
+          ],
+        },
+      },
+      {
+        transform: hoverTransform,
+        mark: { type: 'rule', color: '#777', strokeWidth: 1 },
+        encoding: {
+          x: { field: xField, type: 'temporal' },
+          opacity: {
+            condition: { param: hoverName, empty: false, value: 1 },
+            value: 0,
+          },
+        },
+      },
+    ],
+  };
+}
+
 export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
-  const { bare: bareFromGroup } = useChartGroup();
+  const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio } = useChartGroup();
   const bare = bareProp || bareFromGroup;
   const containerRef = useRef<HTMLDivElement>(null);
   const [spec, setSpec] = useState<Record<string, unknown> | null>(propSpec ?? null);
   const [meta, setMeta] = useState<{ title?: string; subtitle?: string; source?: string }>({});
   const [error, setError] = useState<string | null>(null);
+  const [localHoverRatio, setLocalHoverRatio] = useState<number | null>(null);
   const viewRef = useRef<{ finalize: () => void } | null>(null);
 
   function extractMeta(data: Record<string, unknown>) {
@@ -192,7 +253,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   useEffect(() => {
     if (!spec || !containerRef.current) return;
 
-    const base = stripMeta(spec);
+    const base = addUnifiedLineTooltip(stripMeta(spec));
     let final: Record<string, unknown>;
 
     if (mini) {
@@ -256,6 +317,35 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     );
   }
 
+  const hoverRatio = setSharedHoverRatio ? sharedHoverRatio : localHoverRatio;
+  const setHoverRatio = setSharedHoverRatio ?? setLocalHoverRatio;
+  const chartCanvas = (minHeight: number, width: string = '100%') => (
+    <div
+      style={{ position: 'relative', width, minHeight }}
+      onPointerMove={(event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        setHoverRatio(Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)));
+      }}
+      onPointerLeave={() => setHoverRatio(null)}
+    >
+      <div ref={containerRef} />
+      {hoverRatio !== null && (
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            insetBlock: 0,
+            left: `${hoverRatio * 100}%`,
+            width: 1,
+            background: '#777',
+            opacity: 0.55,
+            pointerEvents: 'none',
+          }}
+        />
+      )}
+    </div>
+  );
+
   if (bare) {
     return (
       <div>
@@ -275,7 +365,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         }}>
           {meta.title && renderTitle(meta.title)}
         </div>
-        <div ref={containerRef} style={{ width: '100%', minHeight: 160 }} />
+        {chartCanvas(160)}
       </div>
     );
   }
@@ -287,13 +377,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     <ChartCard title={meta.title} subtitle={meta.subtitle} source={meta.source}>
       <style>{TOOLTIP_CSS}</style>
       <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
-        <div
-          ref={containerRef}
-          style={{
-            width: isConcat && totalWidth ? `${totalWidth}px` : '100%',
-            minHeight: 200,
-          }}
-        />
+        {chartCanvas(200, isConcat && totalWidth ? `${totalWidth}px` : '100%')}
       </div>
     </ChartCard>
   );

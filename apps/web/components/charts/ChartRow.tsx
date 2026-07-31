@@ -1,6 +1,7 @@
 'use client';
 
 import { SimpleGrid } from '@mantine/core';
+import { useMemo, useState } from 'react';
 import ChartCard from './ChartCard';
 import ChartGroupContext from './ChartGroupContext';
 
@@ -22,20 +23,25 @@ export interface ChartRowProps {
 // stacked side by side.
 export default function ChartRow({ children, cols = 3, title, subtitle, source }: ChartRowProps) {
   const hasSharedHeader = Boolean(title || subtitle || source);
+  const [hoverRatio, setHoverRatio] = useState<number | null>(null);
+  const group = useMemo(
+    () => ({ bare: hasSharedHeader, hoverRatio, setHoverRatio }),
+    [hasSharedHeader, hoverRatio],
+  );
 
   const grid = (
-    <SimpleGrid cols={{ base: 1, md: cols }} spacing="md">
-      {children}
-    </SimpleGrid>
+    <ChartGroupContext.Provider value={group}>
+      <SimpleGrid cols={{ base: 1, md: cols }} spacing="md">
+        {children}
+      </SimpleGrid>
+    </ChartGroupContext.Provider>
   );
 
   if (!hasSharedHeader) return grid;
 
   return (
-    <ChartGroupContext.Provider value={{ bare: true }}>
-      <ChartCard title={title} subtitle={subtitle} source={source}>
-        {grid}
-      </ChartCard>
-    </ChartGroupContext.Provider>
+    <ChartCard title={title} subtitle={subtitle} source={source}>
+      {grid}
+    </ChartCard>
   );
 }
