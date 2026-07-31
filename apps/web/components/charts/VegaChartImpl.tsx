@@ -329,7 +329,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
 
   useEffect(() => {
     if (propSpec) {
+      setError(null);
       setMeta(extractMeta(propSpec));
+      setSpec(propSpec);
       return;
     }
     if (!chartId) return;
@@ -428,12 +430,17 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   // vertical guide. Standalone charts keep the classic cursor-following tooltip.
   const groupTooltip = inGroup && hoverRatio !== null && spec ? pointerTooltipAt(spec, hoverRatio) : null;
   const tooltip = inGroup ? groupTooltip : pointerTooltip;
+  const plotInsetLeft = 42;
+  const plotInsetRight = 8;
+  const guidePosition = (ratio: number) =>
+    `calc(${ratio * 100}% + ${plotInsetLeft - ratio * (plotInsetLeft + plotInsetRight)}px)`;
   const chartCanvas = (minHeight: number, width: string = '100%') => (
     <div
       style={{ position: 'relative', width, minHeight }}
       onPointerMove={(event) => {
         const rect = event.currentTarget.getBoundingClientRect();
-        const ratio = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+        const plotWidth = Math.max(1, rect.width - plotInsetLeft - plotInsetRight);
+        const ratio = Math.max(0, Math.min(1, (event.clientX - rect.left - plotInsetLeft) / plotWidth));
         setHoverRatio(ratio);
         if (inGroup) {
           setSharedHoverY?.(event.clientY - rect.top);
@@ -455,7 +462,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
           style={{
             position: 'absolute',
             insetBlock: 0,
-            left: `${hoverRatio * 100}%`,
+            left: guidePosition(hoverRatio),
             width: 1,
             background: '#777',
             opacity: 0.55,
@@ -470,7 +477,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
             position: 'absolute',
             ...(inGroup
               ? {
-                  left: `${(hoverRatio ?? 0) * 100}%`,
+                  left: guidePosition(hoverRatio ?? 0),
                   top: sharedHoverY ?? 8,
                   transform: `${(hoverRatio ?? 0) > 0.6 ? 'translateX(calc(-100% - 8px))' : 'translateX(8px)'} ${
                     (sharedHoverY ?? 0) > 180 ? 'translateY(calc(-100% - 10px))' : 'translateY(10px)'
