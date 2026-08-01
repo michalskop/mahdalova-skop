@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="cs">
+<meta charset="UTF-8">
+<title>Chart simplifier — motif generator for poster-editor.html</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&family=Roboto+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --navy:#101432; --red:#de1743; --bg:#f8f6f0; --panel:#ffffff; --border:#e0dbd0; --muted:#555; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Roboto Condensed',Arial,sans-serif;background:var(--bg);color:var(--navy);
+    display:grid;grid-template-columns:420px 1fr;min-height:100vh;}
+  h1{font-family:'Roboto Slab',Georgia,serif;font-size:16px;padding:14px 16px 4px;}
+  h1 span{color:var(--red);}
+  #hdr{border-bottom:1px solid var(--border);}
+  #hdr a{display:block;padding:0 16px 12px;font-size:11px;color:var(--muted);text-decoration:none;}
+  #hdr a:hover{color:var(--red);text-decoration:underline;}
+  #panel{background:var(--panel);border-right:1px solid var(--border);overflow-y:auto;max-height:100vh;}
+  #main{padding:20px;overflow-y:auto;max-height:100vh;}
+  .sec{padding:12px 16px;border-bottom:1px solid var(--border);}
+  .lbl{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+  .row{display:flex;gap:8px;margin-bottom:8px;}
+  .row>*{flex:1;}
+  label{display:block;font-size:11px;color:var(--muted);margin-bottom:3px;}
+  input[type=text],input[type=number],input[type=date],select,textarea{
+    width:100%;font-family:inherit;font-size:12.5px;color:var(--navy);
+    border:1.5px solid var(--border);border-radius:4px;padding:5px 7px;background:#fff;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);}
+  textarea{font-family:ui-monospace,Consolas,monospace;font-size:10.5px;line-height:1.4;resize:vertical;}
+  #specInput{height:140px;}
+  .note{font-size:10.5px;color:#888;line-height:1.4;margin-top:5px;}
+  .radiogrp{display:flex;gap:14px;font-size:12px;align-items:center;}
+  .radiogrp label{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--navy);margin:0;}
+  .btn{padding:8px 14px;border:none;border-radius:5px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;}
+  .btn-primary{background:var(--red);color:#fff;}
+  .btn-primary:hover{background:#c5143c;}
+  .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--border);}
+  .btn-ghost:hover{border-color:var(--red);color:var(--red);}
+  #colorList{display:flex;flex-direction:column;gap:6px;}
+  .colrow{display:flex;align-items:center;gap:8px;font-size:12px;}
+  .colrow input[type=color]{width:34px;height:26px;padding:0;border:1.5px solid var(--border);border-radius:4px;}
+  .colrow select{flex:none;width:100px;}
+  .colrow .name{flex:1;font-weight:600;}
+  #err{color:var(--red);font-size:12px;white-space:pre-wrap;margin-top:6px;}
+
+  #stage{display:flex;align-items:center;justify-content:center;background:#eeeae2;border-radius:8px;
+    padding:30px;margin-bottom:16px;}
+  #frame{width:360px;height:270px;background:#fff;border-radius:6px;box-shadow:0 6px 24px rgba(16,20,50,.12);}
+  #frame svg{display:block;width:100%;height:100%;}
+  #out{width:100%;height:220px;}
+  .outhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;
+    padding:9px 18px;border-radius:6px;font-size:12.5px;opacity:0;transition:opacity .25s;pointer-events:none;}
+  .toast.show{opacity:1;}
+</style>
+
+<div id="panel">
+  <div id="hdr">
+    <h1>Chart <span>simplifier</span></h1>
+    <a href="poster-editor.html">&larr; back to poster editor</a>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">1 — Source spec</div>
+    <label>Paste a Vega-Lite spec from an article's <code>data/*.json</code>, or load a file</label>
+    <textarea id="specInput" spellcheck="false"></textarea>
+    <div class="row" style="margin-top:6px">
+      <button class="btn btn-ghost" id="loadFileBtn" type="button">Load .json file</button>
+      <button class="btn btn-ghost" id="parseBtn" type="button">Parse spec</button>
+    </div>
+    <input type="file" id="fileInput" accept=".json,application/json" hidden>
+    <div id="err"></div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">2 — Field mapping</div>
+    <div class="row">
+      <div><label>X field (date)</label><input type="text" id="f-x"></div>
+      <div><label>Series field</label><input type="text" id="f-series"></div>
+    </div>
+    <div class="row">
+      <div><label>Value field (Y)</label><input type="text" id="f-value"></div>
+    </div>
+    <div class="note">Auto-detected from <code>encoding</code> / <code>transform</code>; edit if the guess is wrong.</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">3 — Crop &amp; simplify</div>
+    <div class="row">
+      <div><label>From date</label><input type="date" id="f-from"></div>
+      <div><label>To date</label><input type="date" id="f-to"></div>
+    </div>
+    <div class="row">
+      <div><label>Max points per series</label><input type="number" id="f-maxpts" value="20" min="3" max="60"></div>
+    </div>
+    <label>Y scale</label>
+    <div class="radiogrp">
+      <label><input type="radio" name="scaleMode" value="shared" checked> shared (true difference)</label>
+      <label><input type="radio" name="scaleMode" value="independent"> per-series (shape only)</label>
+    </div>
+    <div class="note">Shared keeps real magnitude — use it when the point is "one moves, the other doesn't." Independent normalizes each series to its own range — use it only when you want shape, not scale, to be honest.</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">4 — Colours &amp; primary series</div>
+    <div id="colorList"></div>
+    <div class="note">The primary series draws bold in whatever <code>accent</code> colour the poster-editor chapter swatch has selected; every other series draws thin in the poster-editor's muted <code>th.sec</code> ink. Colours here are only for this preview.</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">5 — Motif identity</div>
+    <div class="row">
+      <div><label>Motif key</label><input type="text" id="f-key" value="heatgap"></div>
+      <div><label>Chip label</label><input type="text" id="f-label" value="DE/ES"></div>
+    </div>
+  </div>
+</div>
+
+<div id="main">
+  <div id="stage"><div id="frame"></div></div>
+
+  <div class="outhead">
+    <div class="lbl" style="margin:0">Paste into poster-editor.html's <code>motifSvg()</code></div>
+    <button class="btn btn-primary" id="copyCodeBtn" type="button">Copy code</button>
+  </div>
+  <textarea id="out" readonly spellcheck="false"></textarea>
+
+  <div class="outhead" style="margin-top:16px">
+    <div class="lbl" style="margin:0">Paste into the <code>MOTIFS</code> array</div>
+    <button class="btn btn-ghost" id="copyMotifBtn" type="button">Copy entry</button>
+  </div>
+  <textarea id="outMotif" readonly spellcheck="false" style="height:34px"></textarea>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ---------- default example: chart1b from the heatwave article ----------
+const EXAMPLE_SPEC = {
+  data: { values: (function(){
+    const de = {"2025-12-29":22044,"2026-01-05":23360,"2026-01-12":23215,"2026-01-19":22042,"2026-01-26":22187,"2026-02-02":22165,"2026-02-09":21997,"2026-02-16":21465,"2026-02-23":21072,"2026-03-02":19763,"2026-03-09":19118,"2026-03-16":18758,"2026-03-23":18615,"2026-03-30":18800,"2026-04-06":18681,"2026-04-13":18885,"2026-04-20":18031,"2026-04-27":18408,"2026-05-04":18358,"2026-05-11":17639,"2026-05-18":18120,"2026-05-25":17884,"2026-06-01":16927,"2026-06-08":16789,"2026-06-15":18282,"2026-06-22":24128,"2026-06-29":22346};
+    const es = {"2025-12-29":10599,"2026-01-05":10716,"2026-01-12":10764,"2026-01-19":10248,"2026-01-26":9828,"2026-02-02":9528,"2026-02-09":9142,"2026-02-16":8704,"2026-02-23":8953,"2026-03-02":8561,"2026-03-09":8587,"2026-03-16":8510,"2026-03-23":8469,"2026-03-30":8335,"2026-04-06":8525,"2026-04-13":8377,"2026-04-20":8388,"2026-04-27":7828,"2026-05-04":7761,"2026-05-11":7774,"2026-05-18":8159,"2026-05-25":8478,"2026-06-01":7732,"2026-06-08":7551,"2026-06-15":7548,"2026-06-22":8222,"2026-06-29":7891};
+    const out=[];
+    for(const k in de) out.push({country:'Německo', week_start:k, deaths_2026:de[k]});
+    for(const k in es) out.push({country:'Španělsko', week_start:k, deaths_2026:es[k]});
+    return out;
+  })() },
+  transform: [{ calculate: 'toDate(datum.week_start)', as: 'date' }],
+  encoding: {
+    x: { field: 'date', type: 'temporal' },
+    color: { field: 'country', type: 'nominal', scale: { domain: ['Německo','Španělsko'], range: ['#272a59','#f76800'] } }
+  },
+  layer: [
+    { mark: { type:'line', point:true }, encoding: { y: { field:'deaths_2026', type:'quantitative' } } }
+  ]
+};
+document.getElementById('specInput').value = JSON.stringify(EXAMPLE_SPEC, null, 2);
+
+// ---------- state ----------
+let detected = null;   // {keys, xField, seriesField, valueField, colorDomain, colorRange}
+let seriesColors = {}; // name -> hex (preview only)
+let primarySeries = null;
+
+function extractSpecFields(spec){
+  const values = (spec.data && spec.data.values) || [];
+  const keys = values.length ? Object.keys(values[0]) : [];
+  let xField = spec.encoding && spec.encoding.x && spec.encoding.x.field;
+  let seriesField = spec.encoding && spec.encoding.color && spec.encoding.color.field;
+  let valueField = null;
+  const layers = spec.layer || (spec.encoding && spec.encoding.y ? [{mark:{type:'line'}, encoding:spec.encoding}] : []);
+  for(const layer of layers){
+    const mt = layer.mark && (layer.mark.type || layer.mark);
+    const y = layer.encoding && layer.encoding.y;
+    if((mt==='line'||mt==='point') && y && y.field && !valueField) valueField = y.field;
+  }
+  if(!valueField && spec.encoding && spec.encoding.y) valueField = spec.encoding.y.field;
+  // resolve a calculated x field back to its raw source column
+  if(xField && !keys.includes(xField) && Array.isArray(spec.transform)){
+    for(const t of spec.transform){
+      if(t.as===xField && t.calculate){
+        const m = t.calculate.match(/datum\.(\w+)/);
+        if(m) xField = m[1];
+      }
+    }
+  }
+  const colorScale = spec.encoding && spec.encoding.color && spec.encoding.color.scale;
+  const colorDomain = (colorScale && colorScale.domain) || [];
+  const colorRange = (colorScale && colorScale.range) || [];
+  return { keys, xField, seriesField, valueField, colorDomain, colorRange, values };
+}
+
+function parseSpec(){
+  const errEl = document.getElementById('err');
+  errEl.textContent = '';
+  let spec;
+  try{ spec = JSON.parse(document.getElementById('specInput').value); }
+  catch(e){ errEl.textContent = 'Invalid JSON: ' + e.message; return; }
+  try{
+    detected = extractSpecFields(spec);
+  }catch(e){ errEl.textContent = 'Could not read fields: ' + e.message; return; }
+
+  document.getElementById('f-x').value = detected.xField || '';
+  document.getElementById('f-series').value = detected.seriesField || '';
+  document.getElementById('f-value').value = detected.valueField || '';
+
+  // date range from data
+  if(detected.xField){
+    const dates = detected.values.map(r=>new Date(r[detected.xField])).filter(d=>!isNaN(d));
+    if(dates.length){
+      const min = new Date(Math.min(...dates)), max = new Date(Math.max(...dates));
+      document.getElementById('f-from').value = min.toISOString().slice(0,10);
+      document.getElementById('f-to').value = max.toISOString().slice(0,10);
+    }
+  }
+
+  // series + colours
+  const names = detected.seriesField
+    ? [...new Set(detected.values.map(r=>r[detected.seriesField]))]
+    : [];
+  seriesColors = {};
+  names.forEach((n,i)=>{
+    const domIdx = detected.colorDomain.indexOf(n);
+    seriesColors[n] = (domIdx>=0 && detected.colorRange[domIdx]) || ['#272a59','#f76800','#0e839e','#f76800'][i%4];
+  });
+  primarySeries = names[0] || null;
+  renderColorList(names);
+  regenerate();
+}
+
+function renderColorList(names){
+  const wrap = document.getElementById('colorList');
+  wrap.innerHTML = '';
+  names.forEach(n=>{
+    const row = document.createElement('div'); row.className='colrow';
+    row.innerHTML = `
+      <input type="color" value="${seriesColors[n]}" data-name="${n}">
+      <span class="name">${n}</span>
+      <select data-role="primary" data-name="${n}">
+        <option value="0">secondary</option>
+        <option value="1">primary</option>
+      </select>`;
+    wrap.appendChild(row);
+  });
+  wrap.querySelectorAll('input[type=color]').forEach(inp=>{
+    inp.oninput = ()=>{ seriesColors[inp.dataset.name]=inp.value; regenerate(); };
+  });
+  wrap.querySelectorAll('select[data-role=primary]').forEach(sel=>{
+    sel.value = sel.dataset.name===primarySeries ? '1' : '0';
+    sel.onchange = ()=>{
+      if(sel.value==='1'){
+        primarySeries = sel.dataset.name;
+        wrap.querySelectorAll('select[data-role=primary]').forEach(s2=>{ if(s2!==sel) s2.value='0'; });
+      } else if(primarySeries===sel.dataset.name){
+        primarySeries = null;
+      }
+      regenerate();
+    };
+  });
+}
+
+function decimate(rows, target){
+  if(rows.length<=target) return rows;
+  const n = rows.length, out=[];
+  for(let i=0;i<target;i++) out.push(rows[Math.round(i*(n-1)/(target-1))]);
+  return out.filter((r,i)=>i===0||r!==out[i-1]);
+}
+
+function frac(value,min,max){
+  const t = max>min ? (value-min)/(max-min) : 0.5;
+  const topPad=0.12, botPad=0.90;
+  return topPad + (1-t)*(botPad-topPad);
+}
+
+function computeSeries(){
+  if(!detected || !detected.xField || !detected.seriesField || !detected.valueField) return null;
+  const from = document.getElementById('f-from').value ? new Date(document.getElementById('f-from').value) : null;
+  const to = document.getElementById('f-to').value ? new Date(document.getElementById('f-to').value) : null;
+  const maxPts = +document.getElementById('f-maxpts').value || 20;
+  const scaleMode = document.querySelector('input[name=scaleMode]:checked').value;
+
+  const xField = document.getElementById('f-x').value || detected.xField;
+  const seriesField = document.getElementById('f-series').value || detected.seriesField;
+  const valueField = document.getElementById('f-value').value || detected.valueField;
+
+  const bySeries = {};
+  for(const row of detected.values){
+    const xd = new Date(row[xField]);
+    if(isNaN(xd)) continue;
+    if(from && xd<from) continue;
+    if(to && xd>to) continue;
+    const s = row[seriesField];
+    const v = +row[valueField];
+    if(!isFinite(v)) continue;
+    (bySeries[s]=bySeries[s]||[]).push({x:xd.getTime(), y:v});
+  }
+  for(const s in bySeries){ bySeries[s].sort((a,b)=>a.x-b.x); bySeries[s]=decimate(bySeries[s],maxPts); }
+
+  const allX = Object.values(bySeries).flat().map(d=>d.x);
+  if(!allX.length) return null;
+  const x0=Math.min(...allX), x1=Math.max(...allX), xr = x1>x0 ? x1-x0 : 1;
+
+  let gMin=Infinity, gMax=-Infinity;
+  for(const s in bySeries) for(const d of bySeries[s]){ gMin=Math.min(gMin,d.y); gMax=Math.max(gMax,d.y); }
+
+  const out = {};
+  for(const s in bySeries){
+    let mn=gMin, mx=gMax;
+    if(scaleMode==='independent'){
+      mn=Math.min(...bySeries[s].map(d=>d.y)); mx=Math.max(...bySeries[s].map(d=>d.y));
+    }
+    out[s]=bySeries[s].map(d=>[ (d.x-x0)/xr, frac(d.y,mn,mx) ]);
+  }
+  return out;
+}
+
+// ---------- preview (mirrors poster-editor.html motifSvg conventions) ----------
+function renderPreview(seriesMap){
+  const frame = document.getElementById('frame');
+  if(!seriesMap){ frame.innerHTML=''; return; }
+  const w=360,h=270,k=1;
+  const sw=8*k, swThin=7*k, swGrid=2*k, swBase=3*k, r=12*k;
+  const X=f=>(f*w).toFixed(1), Y=f=>(f*h).toFixed(1);
+  const grid=[0,1,2,3].map(i=>`<line x1="0" y1="${(h/3*i).toFixed(1)}" x2="${w}" y2="${(h/3*i).toFixed(1)}" stroke="#e8e3d2" stroke-width="${swGrid}"/>`).join('');
+  const base=`<line x1="0" y1="${h}" x2="${w}" y2="${h}" stroke="#101432" stroke-width="${swBase}"/>`;
+  const names = Object.keys(seriesMap);
+  const primary = primarySeries && seriesMap[primarySeries] ? primarySeries : names[0];
+  let art='';
+  names.filter(n=>n!==primary).forEach(n=>{
+    const pts = seriesMap[n].map(([fx,fy])=>`${X(fx)},${Y(fy)}`).join(' ');
+    art += `<polyline points="${pts}" fill="none" stroke="${seriesColors[n]}" stroke-width="${swThin}" stroke-linejoin="round" stroke-linecap="round"/>`;
+  });
+  if(primary && seriesMap[primary]){
+    const arr = seriesMap[primary];
+    const pts = arr.map(([fx,fy])=>`${X(fx)},${Y(fy)}`).join(' ');
+    art += `<polyline points="${pts}" fill="none" stroke="${seriesColors[primary]}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const last = arr[arr.length-1];
+    art += `<circle cx="${X(1)}" cy="${Y(last[1])}" r="${r}" fill="${seriesColors[primary]}"/>`;
+  }
+  frame.innerHTML = `<svg viewBox="0 0 ${w} ${h}">${grid}${base}${art}</svg>`;
+}
+
+// ---------- code generation ----------
+function buildMotifCode(seriesMap, key){
+  const names = Object.keys(seriesMap);
+  const primary = primarySeries && seriesMap[primarySeries] ? primarySeries : names[0];
+  const others = names.filter(n=>n!==primary);
+  const varName = {}; names.forEach((n,i)=>varName[n]='s'+i);
+  const fmtArr = arr => '[' + arr.map(([x,y])=>`[${x.toFixed(3)},${y.toFixed(3)}]`).join(',') + ']';
+
+  let lines = [];
+  lines.push(`  } else if(kind==='${key}'){`);
+  names.forEach(n=>{ lines.push(`    const ${varName[n]}=${fmtArr(seriesMap[n])}; // ${n}`); });
+  lines.push(`    const toPts=a=>a.map(([fx,fy])=>\`\${X(fx)},\${Y(fy)}\`).join(' ');`);
+  others.forEach(n=>{
+    lines.push(`    art${lines.some(l=>l.startsWith('    art'))?'+=':'='} \`<polyline points="\${toPts(${varName[n]})}" fill="none" stroke="\${th.sec}" stroke-width="\${swThin}" stroke-linejoin="round" stroke-linecap="round"/>\`;`);
+  });
+  const artAssignOp = others.length ? '+=' : '=';
+  lines.push(`    art${artAssignOp} \`<polyline points="\${toPts(${varName[primary]})}" fill="none" stroke="\${accent}" stroke-width="\${sw}" stroke-linejoin="round" stroke-linecap="round"/>\`;`);
+  lines.push(`    art += \`<circle cx="\${X(1)}" cy="\${Y(${varName[primary]}[${varName[primary]}.length-1][1])}" r="\${r}" fill="\${accent}"/>\`;`);
+  lines.push(`  } else {`);
+  return lines.join('\n');
+}
+
+function regenerate(){
+  const seriesMap = computeSeries();
+  renderPreview(seriesMap);
+  const key = document.getElementById('f-key').value.trim() || 'custom';
+  const label = document.getElementById('f-label').value.trim() || 'custom';
+  document.getElementById('out').value = seriesMap
+    ? buildMotifCode(seriesMap, key)
+    : '// fill in field mapping above (X / series / value) to generate code';
+  document.getElementById('outMotif').value = `['${key}','${label}'],`;
+}
+
+// ---------- wiring ----------
+document.getElementById('parseBtn').onclick = parseSpec;
+document.getElementById('loadFileBtn').onclick = ()=>document.getElementById('fileInput').click();
+document.getElementById('fileInput').onchange = (e)=>{
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ()=>{ document.getElementById('specInput').value = r.result; parseSpec(); };
+  r.readAsText(f);
+};
+['f-x','f-series','f-value','f-from','f-to','f-maxpts','f-key','f-label'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', regenerate);
+});
+document.querySelectorAll('input[name=scaleMode]').forEach(r=>r.addEventListener('change', regenerate));
+
+let tT;
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(tT); tT=setTimeout(()=>t.classList.remove('show'),2200); }
+
+document.getElementById('copyCodeBtn').onclick = ()=>{
+  navigator.clipboard.writeText(document.getElementById('out').value);
+  toast('Motif code copied — paste into motifSvg() in poster-editor.html');
+};
+document.getElementById('copyMotifBtn').onclick = ()=>{
+  navigator.clipboard.writeText(document.getElementById('outMotif').value);
+  toast('MOTIFS entry copied');
+};
+
+parseSpec();
+</script>
+</html>

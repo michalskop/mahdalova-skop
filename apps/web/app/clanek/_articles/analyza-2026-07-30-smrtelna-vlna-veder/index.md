@@ -17,7 +17,7 @@ Zdánlivý rozpor ukazuje, proč se následky veder nedají vyčíst z teploměr
 
 ## Stejných 39 °C, jiná odchylka v úmrtnosti
 
-V nejteplejším týdnu od 22. do 28. června vystoupala maximální teplota v Berlíně i Madridu na 39 °C. Pro obě města šlo o neobvyklé horko, jeho dopad na celkovou úmrtnost obou zemí se však lišil.
+V nejteplejším týdnu od 22. do 28. června vystoupala maximální teplota v Berlíně i Madridu na 39 °C. Dopad této vlny veder na celkovou úmrtnost obou zemí se však lišil.
 
 <VegaChart dataFile="data/chart1a_temp_berlin_madrid.json" />
 
@@ -29,7 +29,7 @@ V Německu se týdenní úmrtnost dostala výrazně nad celé rozpětí stejnéh
 Co graf ukazuje: Světlé pásmo zachycuje rozpětí hodnot za stejný týden v letech 2022–2025. Úmrtnost uvádíme jako hrubý počet zemřelých na 1000 obyvatel, přepočtený na celý rok. Teploty pocházejí z hlavních měst a ilustrují počasí v Berlíně a Madridu; údaje o úmrtnosti se vztahují k celým zemím. Nejnovější týdny jsou předběžné a mohou se ještě změnit.
 ```
 
-Tento graf nedokazuje, že ve Španělsku horko nikoho nezabilo. Španělský systém MoMo odhadl za červen [1 029 úmrtí připsatelných vysokým teplotám](https://www.theguardian.com/environment/2026/jul/02/spain-france-new-heatwave-warning). Už mezi 21. a 24. červnem jich evidoval 212. Červen byl ve Španělsku podle tohoto modelu druhý nejsmrtelnější z hlediska horka od začátku srovnatelné řady v roce 2015.
+Tento graf nedokazuje, že ve Španělsku horko nikoho nezabilo. Španělský systém MoMo odhadl za červen [937 úmrtí připsatelných vysokým teplotám](https://momo.isciii.es/panel_momo/). Jen mezi 24. a 26. červnem jich evidoval 316. Červen byl ve Španělsku podle tohoto modelu druhý nejsmrtelnější z hlediska horka od začátku srovnatelné řady v roce 2015.
 
 Obě čísla mohou platit současně. MoMo modeluje, kolik úmrtí lze připsat teplotě – porovnává pozorovanou úmrtnost s očekávaným počtem a zohledňuje vztah mezi horkem a úmrtími. Náš graf se ptá, zda celková úmrtnost vybočila z rozpětí čtyř předchozích let. Ve Španělsku jsou úmrtí spojená s vedrem součástí i nedávných let, s nimiž letošek srovnáváme. Běžné pásmo proto není pásmem bez obětí.
 
@@ -39,13 +39,13 @@ Obě čísla mohou platit současně. MoMo modeluje, kolik úmrtí lze připsat 
 
 Rozdíl je také v organizaci státu. Španělské ministerstvo zdravotnictví každý rok spouští plán, který propojuje předpověď počasí, teplotní prahy pro 182 oblastí, denní sledování úmrtí a konkrétní postupy při jednotlivých stupních nebezpečí. [Plán pro rok 2026](https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=6926) upravil místní výstražné hranice podle nových dat o teplotě a úmrtnosti. [Podrobně jsme španělský systém popsali v samostatném článku.](/specialy/data-pro-budouci-premierku/10-klimaticka-zmena/06-spanelsko-varovani)
 
-Ani to ze Španělska nedělá bezpečnou zemi. Červnových 1 029 úmrtí připsaných horku ukazuje hranice adaptace. Ochrana může následky snížit, ale s rostoucí teplotou je neodstraní.
+Ani to ze Španělska nedělá bezpečnou zemi. Červnových 937 úmrtí připsaných horku ukazuje hranice adaptace. Ochrana může následky snížit, ale s rostoucí teplotou je neodstraní.
 
 Z našich dat navíc nelze určit, nakolik rozdíl mezi Německem a Španělskem způsobila právě připravenost. Výsledek ovlivňuje délka a noční průběh horka, vlhkost, věková a zdravotní skladba obyvatel, regionální rozložení teplot i odlišné zpoždění hlášení úmrtí. Srovnání proto ukazuje rozdílný dopad, nikoli jedinou příčinu.
 
 ## Horko zasáhlo západ Evropy nerovnoměrně
 
-Podobný nárůst celkové úmrtnosti jako v Německu vidíme ve Francii, Nizozemsku a Belgii, odkud už máme červnová data. Bulharsko se naopak podobalo Španělsku: jeho úmrtnost zůstala v rozpětí nedávných let. V Litvě vystoupala teplota přibližně na 32 °C, ale úmrtnost nad běžné pásmo nevzrostla. Estonsko tato vlna zasáhla méně.
+Podobný nárůst celkové úmrtnosti jako v Německu vidíme ve Francii, Nizozemsku a Belgii, odkud už máme červnová data. Bulharsko se naopak podobalo Španělsku: jeho úmrtnost zůstala v rozpětí nedávných let. V Litvě vystoupala teplota přibližně jen na 32 °C, úmrtnost nad běžné pásmo nevzrostla. Estonsko tato vlna zasáhla méně.
 
 <ChartRow title="Vlna veder měla různý dopad v zemích Evropy" subtitle="Roční úmrtnost přepočtená z dat daného týdne (na 1000 obyvatel): {line} 2026   {band} rozmezí 2022–2025" source="[Human Mortality Database – Short-term Mortality Fluctuations](https://www.mortality.org/Data/STMF)">
 <VegaChart dataFile="data/chart2a_rate_germany_france.json" />
@@ -102,7 +102,7 @@ Covid byl ještě výraznější. Německo zaznamenalo na konci prosince 2020 na
 <VegaChart dataFile="data/chart4_cesko.json" />
 </ChartRow>
 
-Srovnání není soutěží příčin smrti. Ukazuje měřítko: letošní vedra dokázala během jediného týdne posunout úmrtnost nad běžnou zimní špičku, ale nedosáhla délky ani výšky pandemických vln.
+Srovnání ukazuje měřítko: letošní vedra dokázala během jediného týdne posunout úmrtnost nad běžnou zimní špičku, ale nedosáhla délky ani výšky pandemických vln.
 
 ```infobox default
 Co dělat v horkých dnech: Světová zdravotnická organizace doporučuje zůstat v nejteplejší části dne mimo slunce, přes den zavřít okna a zatáhnout žaluzie, v noci větrat a pít pravidelně ještě před pocitem žízně. Alespoň jednou denně se ozvěte starším příbuzným, sousedům a lidem, kteří žijí sami. Pokud má člověk horkou suchou kůži, je zmatený, má křeče nebo upadá do bezvědomí, volejte zdravotnickou pomoc. [Doporučení WHO pro vlny veder](https://www.who.int/europe/news-room/fact-sheets/item/keepcool-in-the-heat)
