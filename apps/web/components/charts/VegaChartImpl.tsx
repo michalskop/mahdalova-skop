@@ -372,12 +372,19 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     const keyframes = direction === 'show'
       ? [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)' }]
       : [{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 0 100%)' }];
+    const finalClipPath = direction === 'show'
+      ? 'inset(0 0 0 0)'
+      : 'inset(0 0 0 100%)';
     const animations = marks.map(mark => mark.animate(keyframes, {
-      duration: 650,
-      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      duration: 1600,
+      easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
       fill: 'forwards',
     }));
     return Promise.all(animations.map(animation => animation.finished.catch(() => undefined))).then(() => {
+      // Preserve the exact final frame before removing the Web Animations
+      // layer. Otherwise clip-path briefly jumps from a nearly-open inset to
+      // `none`, which causes a visible flash at the end of the reveal.
+      marks.forEach(mark => { mark.style.clipPath = finalClipPath; });
       animations.forEach(animation => animation.cancel());
     });
   }, [toggleLegend]);

@@ -29,7 +29,7 @@ V Německu se týdenní úmrtnost dostala výrazně nad celé rozpětí stejnéh
 Co graf ukazuje: Světlé pásmo zachycuje rozpětí hodnot za stejný týden v letech 2022–2025. Úmrtnost uvádíme jako hrubý počet zemřelých na 1000 obyvatel, přepočtený na celý rok. Teploty pocházejí z hlavních měst a ilustrují počasí v Berlíně a Madridu; údaje o úmrtnosti se vztahují k celým zemím. Nejnovější týdny jsou předběžné a mohou se ještě změnit.
 ```
 
-Tento graf nedokazuje, že ve Španělsku horko nikoho nezabilo. Španělský systém MoMo odhadl za červen [937 úmrtí připsatelných vysokým teplotám](https://momo.isciii.es/panel_momo/). Jen mezi 24. a 26. červnem jich evidoval 316. Červen byl ve Španělsku podle tohoto modelu druhý nejsmrtelnější z hlediska horka od začátku srovnatelné řady v roce 2015.
+Vlna veder se projevila na úmrtích i ve Španělsku. Systém MoMo odhadl za červen [937 úmrtí připsatelných vysokým teplotám](https://momo.isciii.es/panel_momo/) (jen mezi 24. a 26. červnem jich evidoval 316) a měsíc červen 2026 byl ve Španělsku podle tohoto modelu druhý nejsmrtelnější co do následků horka, a to od začátku srovnatelné řady v roce 2015.
 
 Obě čísla mohou platit současně. MoMo modeluje, kolik úmrtí lze připsat teplotě – porovnává pozorovanou úmrtnost s očekávaným počtem a zohledňuje vztah mezi horkem a úmrtími. Náš graf se ptá, zda celková úmrtnost vybočila z rozpětí čtyř předchozích let. Ve Španělsku jsou úmrtí spojená s vedrem součástí i nedávných let, s nimiž letošek srovnáváme. Běžné pásmo proto není pásmem bez obětí.
 
