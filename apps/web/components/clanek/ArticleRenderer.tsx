@@ -25,6 +25,7 @@ import VegaChart from '@/components/charts/VegaChart';
 import ChartRow from '@/components/charts/ChartRow';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
+import { Gauge } from '@repo/ui/components/Gauge';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -195,6 +196,7 @@ export function ArticleRenderer({
       // Otherwise use inline data
       return <KeyNumbers {...props} />;
     },
+    Gauge: (props) => <Gauge {...(props as any)} />,
     TestComponent,
     FlourishEmbed,
     PartyFace,

@@ -532,6 +532,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   // vertical guide. Standalone charts keep the classic cursor-following tooltip.
   const groupTooltip = inGroup && hoverRatio !== null && spec ? pointerTooltipAt(spec, hoverRatio) : null;
   const tooltip = inGroup ? groupTooltip : pointerTooltip;
+  // The vertical crosshair guide is meaningful only for time-series charts that
+  // read a value at the cursor's x (line/area). Categorical charts (bar/dot) use
+  // per-mark tooltips instead, so the guide there is just visual noise.
+  const hasPointerGuide = spec ? Boolean(pointerTooltipAt(spec, 0)) : false;
   const plotInsetLeft = 42;
   const plotInsetRight = 8;
   const guidePosition = (ratio: number) =>
@@ -558,7 +562,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       }}
     >
       <div ref={containerRef} style={{ width: '100%' }} />
-      {hoverRatio !== null && (
+      {hasPointerGuide && hoverRatio !== null && (
         <div
           aria-hidden="true"
           style={{

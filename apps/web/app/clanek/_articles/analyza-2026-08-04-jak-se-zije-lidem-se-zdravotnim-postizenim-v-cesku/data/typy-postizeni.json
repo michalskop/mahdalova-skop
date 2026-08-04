@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Nejčastější je {omezení pohybu|#de1743} – týká se 952 tisíc lidí",
+    "subtitle": "Počet osob se zdravotním postižením podle oblasti omezení (v tisících, 2024)"
+  },
+  "height": 300,
+  "data": {
+    "values": [
+      { "oblast": "Pohybové obtíže", "pocet": 952 },
+      { "oblast": "Nemoci vnitřních orgánů", "pocet": 581 },
+      { "oblast": "Zrakové postižení", "pocet": 213 },
+      { "oblast": "Sluchové postižení", "pocet": 167 },
+      { "oblast": "Duševní poruchy", "pocet": 145 },
+      { "oblast": "Mentální omezení", "pocet": 115 }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "oblast",
+      "type": "nominal",
+      "sort": "-x",
+      "scale": { "paddingInner": 0.3 },
+      "axis": { "title": null, "labelLimit": 220 }
+    },
+    "x": {
+      "field": "pocet",
+      "type": "quantitative",
+      "scale": { "domain": [0, 1050] },
+      "axis": { "title": "tisíce osob", "grid": false, "values": [0, 200, 400, 600, 800, 1000] }
+    }
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "color": "#de1743", "cornerRadiusEnd": 4 },
+      "encoding": {
+        "tooltip": [
+          { "field": "oblast", "title": "Oblast" },
+          { "field": "pocet", "title": "Počet (tis.)" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "left", "dx": 7, "fontWeight": 700, "color": "#333333" },
+      "encoding": {
+        "text": { "field": "pocet" }
+      }
+    }
+  ],
+  "_source": "[Výběrové šetření osob se zdravotním postižením 2024, Český statistický úřad](https://csu.gov.cz/produkty/osoby-se-zdravotnim-postizenim-v-domacnostech-2024)"
+}

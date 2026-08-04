@@ -1,0 +1,120 @@
+.gaugeSection {
+  padding: 56px 0 48px;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mantine-color-brand-6);
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Single-item alignment, mirrors KeyNumbers */
+.alignCenter .sectionLabel { text-align: center; }
+.alignRight .sectionLabel { text-align: right; }
+.alignLeft .sectionLabel { text-align: left; }
+
+.alignCenter .card:only-child { grid-column: 2 / 3; }
+.alignRight .card:only-child { grid-column: 3 / 4; }
+.alignLeft .card:only-child { grid-column: 1 / 2; }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alignCenter .sectionLabel,
+  .alignRight .sectionLabel,
+  .alignLeft .sectionLabel {
+    text-align: left;
+  }
+
+  .alignCenter .card:only-child,
+  .alignRight .card:only-child,
+  .alignLeft .card:only-child {
+    grid-column: 1 / 2;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 4px;
+  padding: 24px 24px 24px;
+  border-top: 4px solid var(--mantine-color-brand-6);
+  text-align: center;
+}
+
+.dial {
+  width: 100%;
+  max-width: 208px;
+  height: auto;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+.track {
+  fill: none;
+  stroke: var(--mantine-color-background-4, #eeeae2);
+  stroke-width: 15;
+  stroke-linecap: round;
+}
+
+.value {
+  fill: none;
+  stroke-width: 15;
+  stroke-linecap: round;
+}
+
+.needle {
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.hub {
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+.tick {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--mantine-color-gray-6, #868e96);
+}
+
+.value_num {
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: var(--mantine-color-brand-6);
+}
+
+.suffix {
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.caption {
+  font-size: 13px;
+  color: var(--mantine-color-gray-6);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.caption strong {
+  display: block;
+  font-size: 15px;
+  color: var(--mantine-color-text);
+  margin-bottom: 3px;
+  font-weight: 600;
+}
