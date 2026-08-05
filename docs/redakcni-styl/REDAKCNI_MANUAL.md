@@ -117,6 +117,7 @@ Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci
 - **Žádné zavádějící ořezy** ani úpravy měnící vyznění; ilustrační a montážní obraz označíme.
 - **Licence** ověřená před publikací.
 - **Alternativní text** shrnuje obsah, ne vzhled.
+- **Vlajky zemí vždy jako SVG, nikdy jako emoji.** Windows a Chrome (na Windows) emoji vlajek nevykreslují — místo vlajky se čtenáři ukáže jen kód země (např. „DE" místo 🇩🇪). Vlaječky proto sázíme sdílenou komponentou `Flag` (`@repo/ui`) ze sad *square-flags* / *circle-flags*; technické detaily a galerie viz [design systém](../../packages/ui/DESIGN.md#flag). Sdíleno napříč mahdalova-skop.cz i datajournalism.studio.
 
 ---
 

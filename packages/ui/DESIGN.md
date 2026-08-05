@@ -122,6 +122,36 @@ Props: `size` (px, controls width; height = size/3), `color` (hex), any SVG prop
 
 ---
 
+### `Flag`
+Country flag rendered as an SVG image. Shared by `apps/web` and `apps/datajournalism.studio`.
+
+**Why an image, not an emoji:** Windows (and Chrome on Windows) does **not** render
+emoji flags – the "regional indicator" characters fall back to the bare country code
+(e.g. `🇩🇪` shows as `DE`). Any flag shown to readers must therefore use this component,
+never an emoji. (This is also stated as an editorial standard in the redakční manuál,
+section *Fotografie a obraz*.)
+
+```tsx
+import { Flag } from '@repo/ui/components/Flag';
+
+<Flag code="de" size={20} />                 // hranatá (square), 20 px
+<Flag code="cz" shape="circle" size={16} />  // kulatá (circle), 16 px
+```
+
+Props: `code` (ISO 3166-1 alpha-2, case-insensitive), `size` (px, width = height, default `20`),
+`shape` (`'square' | 'circle'`, default `'square'`), `basePath` (default `'/flags'`), any `<img>` prop.
+
+**Flag galleries (SVG):** served from `public/flags/square/` and `public/flags/circle/`.
+Canonical copy lives in `apps/web/public/flags/` (sources: [square-flags](https://kapowaz.github.io/square-flags/gallery),
+[circle-flags](https://hatscripts.github.io/circle-flags/gallery), file name = ISO code).
+To use `<Flag>` in `datajournalism.studio`, copy the same folder into its `public/flags/`
+(e.g. `cp -r apps/web/public/flags apps/datajournalism.studio/public/`).
+
+**Rule:** Use square by default; circle only when it reads better inline. Always keep the
+gallery in sync between both apps so no flag 404s.
+
+---
+
 ### `ArticleCard`
 Card linking to an article. Used inside `ArticlesGrid`.
 
