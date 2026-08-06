@@ -3,7 +3,7 @@ title: "Skoro polovina řidičů autobusů naměřila v kabině přes 40 °C. Kr
 date: "2026-07-31"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Odborový svaz dopravy oslovil všech 14 krajů. Z odpovědí plyne, že dohled v horku míří na klimatizaci pro cestující – kabina řidiče zůstává stranou. Aktivněji reagovaly jen dva kraje."
-coverImage: "images/cover.svg"
+coverImage: "images/datatimes-vlna-veder-ridici-2026.jpg"
 filter: ["analýza", "klima"]
 tags: ["klima", "vlny veder", "doprava", "pracovní podmínky", "kraje"]
 promoted: 1
