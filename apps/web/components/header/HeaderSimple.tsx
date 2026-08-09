@@ -198,7 +198,7 @@ export function HeaderSimple() {
             <LogoWithText color={logoColor} />
           </Box>
           <Group gap={16} wrap="nowrap" style={{ flexShrink: 0 }}>
-            <Menu shadow="lg" width={230} position="bottom-end" offset={8}>
+            <Menu shadow="lg" width={250} position="bottom-end" offset={8}>
               <Menu.Target>
                 <Button
                   c={theme.colors.brandRoyalBlue[9]}
@@ -217,7 +217,7 @@ export function HeaderSimple() {
                   target="_blank"
                   style={{ color: '#101432', fontSize: '13.5px', fontWeight: 600, borderRadius: '6px' }}
                 >
-                  Student &nbsp;29 Kč
+                  Student &nbsp;29 Kč / měs.
                 </Menu.Item>
                 <Menu.Item
                   component="a"
@@ -232,7 +232,7 @@ export function HeaderSimple() {
                     borderRadius: '6px',
                   }}
                 >
-                  Standard &nbsp;199 Kč
+                  Standard &nbsp;199 Kč / měs.
                 </Menu.Item>
                 <Menu.Item
                   component="a"
@@ -240,7 +240,7 @@ export function HeaderSimple() {
                   target="_blank"
                   style={{ color: '#101432', fontSize: '13.5px', fontWeight: 600, borderRadius: '6px' }}
                 >
-                  Patron &nbsp;499 Kč
+                  Patron &nbsp;499 Kč / měs.
                 </Menu.Item>
               </Menu.Dropdown>
             </Menu>
