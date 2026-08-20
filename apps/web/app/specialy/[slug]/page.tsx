@@ -101,7 +101,7 @@ export default async function SpecialArticlePage({ params }: PageProps) {
           authorKeys={getAuthorKeys(article.author)}
         />
         <div data-pagefind-body>
-          <ArticleRenderer {...article} slug={params.slug} />
+          <ArticleRenderer {...article} slug={params.slug} shareUrl={articleUrl} />
         </div>
         <Box my="lg">
           <TagList tags={article.tags} />

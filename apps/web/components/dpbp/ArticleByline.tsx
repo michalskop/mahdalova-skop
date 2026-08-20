@@ -58,11 +58,13 @@ interface ArticleBylineProps {
   date: string;
   shareUrl: string;
   shareTitle: string;
+  translator?: string;
   audio?: boolean;
 }
 
-export default function ArticleByline({ author, date, shareUrl, shareTitle, audio = false }: ArticleBylineProps) {
+export default function ArticleByline({ author, date, shareUrl, shareTitle, translator, audio = false }: ArticleBylineProps) {
   const authors = splitAuthors(author);
+  const translators = splitAuthors(translator);
   return (
     <>
       <div className={styles.byline}>
@@ -87,6 +89,17 @@ export default function ArticleByline({ author, date, shareUrl, shareTitle, audi
               ))}
             </div>
             <div className={styles.date}>{formatDate(date)}</div>
+            {translators.length > 0 && (
+              <div className={styles.date}>
+                Překlad:{' '}
+                {translators.map((name, i) => (
+                  <span key={name}>
+                    <Link href={`/autor/${normalizeAuthor(name)}`} style={{ color: 'inherit' }}>{name}</Link>
+                    {i < translators.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 

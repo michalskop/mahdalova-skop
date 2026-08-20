@@ -4,7 +4,6 @@
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
 import Image from 'next/image';
-import Link from 'next/link';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MdxClient } from '@repo/ui/components/MdxClient';
 import type { MDXComponents } from 'mdx/types';
@@ -17,7 +16,7 @@ import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
-import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
+import ArticleByline from '@/components/dpbp/ArticleByline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
@@ -35,6 +34,7 @@ interface ArticleProps {
   date?: string;
   author?: string;
   translator?: string;
+  shareUrl?: string;
   slug: string;
   scrollyContent?: any;     // Add scrollyContent to the ArticleProps
   htmlContent?: string | null;
@@ -49,6 +49,7 @@ export function ArticleRenderer({
   date,
   author,
   translator,
+  shareUrl,
   slug = '',
   scrollyContent,
   htmlContent,
@@ -415,51 +416,19 @@ export function ArticleRenderer({
           </Title>
         )}
 
-        {date && (
+        {date && author ? (
+          <ArticleByline
+            author={author}
+            translator={translator}
+            date={date}
+            shareUrl={shareUrl ?? ''}
+            shareTitle={title ?? ''}
+          />
+        ) : date ? (
           <Text size="sm" c={textColor || 'dimmed'}>
-            {author ? (
-              <>
-                {splitAuthors(author).map((authorName, index, arr) => (
-                  <span key={`${authorName}-${index}`}>
-                    <Anchor
-                      component={Link}
-                      href={`/autor/${normalizeAuthor(authorName)}`}
-                      underline="hover"
-                      c={textColor || 'dimmed'}
-                    >
-                      {authorName.toUpperCase()}
-                    </Anchor>
-                    {index < arr.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </>
-            ) : null}
-
-            {(author || translator) ? ' • ' : ''}
-
-            {translator ? (
-              <>
-                {'PŘEKLAD: '}
-                {splitAuthors(translator).map((translatorName, index, arr) => (
-                  <span key={`${translatorName}-${index}`}>
-                    <Anchor
-                      component={Link}
-                      href={`/autor/${normalizeAuthor(translatorName)}`}
-                      underline="hover"
-                      c={textColor || 'dimmed'}
-                    >
-                      {translatorName.toUpperCase()}
-                    </Anchor>
-                    {index < arr.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-                {' • '}
-              </>
-            ) : null}
-
             {new Date(date).toLocaleDateString('cs-CZ')}
           </Text>
-        )}
+        ) : null}
 
         <div className="article-content">
           {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} /> : null}
