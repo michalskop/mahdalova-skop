@@ -4,21 +4,23 @@
 
 /* Article body links (ArticleRenderer with withContainer=true).
    --article-link-color is set by ArticleRenderer when an article defines a
-   custom text colour. */
-.article-links .markdown-content a {
+   custom text colour. Scoped to .article-content so the byline (author links
+   + share icons) keeps its own dark-navy colours from ArticleHeader.module.css
+   instead of inheriting the crimson body-link colour. */
+.article-links .markdown-content .article-content a {
   color: var(--article-link-color, var(--mantine-color-brand-6));
   text-decoration: none;
 }
 
-.article-links .markdown-content a:hover {
+.article-links .markdown-content .article-content a:hover {
   color: var(--mantine-color-brand-7);
 }
 
-.article-links .markdown-content a:active {
+.article-links .markdown-content .article-content a:active {
   color: var(--mantine-color-brand-8);
 }
 
-.article-links .markdown-content a:visited {
+.article-links .markdown-content .article-content a:visited {
   color: var(--mantine-color-brand-5);
 }
 
