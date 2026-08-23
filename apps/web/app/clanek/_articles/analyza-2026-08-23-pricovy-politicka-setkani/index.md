@@ -106,4 +106,29 @@ Program se přitom během roku měnil. Červnová verze uváděla u druhého pan
 
 Setkání bývá lidmi spojenými s jeho pořádáním [označováno za nepolitické](https://denik.to/komu-a-proc-se-prici-vlastenecke-pricovy/), alespoň ve stranickém smyslu. Program a skladba řečníků však ukazují opak. To, že Příčovy nejsou akcí jediné strany, z nich nedělá nepolitické setkání. Osm let se tu diskutuje o migraci, Evropské unii, válce na Ukrajině, „změně režimu“, médiích nebo státní svrchovanosti. Zaznívají zde politické projevy a záštitu nad akcí převzali prezident republiky i předseda Sněmovny. Příčovy jsou místem, kde se potkávají poměrně jasně vymezené politické proudy.
 
+## Fotogalerie: kdo se letos sešel v Příčovech
+
+```fotogalerie
+- gallery-01.jpg | Vlastenecké setkání na zámku v Příčovech, srpen 2026
+- gallery-02.jpg
+- gallery-03.jpg
+- gallery-04.jpg | Petr Drulák a Alice Tomková
+- gallery-05.jpg | Petr Drulák a Alice Tomková
+- gallery-06.jpg | Petr Drulák a Alice Tomková
+- gallery-07.jpg | Jaroslav Foldyna
+- gallery-08.jpg | Martina Kociánová
+- gallery-09.jpg
+- gallery-10.jpg | Tomio Okamura
+- gallery-11.jpg | Tomio Okamura
+- gallery-12.jpg | Tomio Okamura
+- gallery-13.jpg
+- gallery-14.jpg
+- gallery-15.jpg | Michal Semín
+- gallery-16.jpg | Marek Stoniš, Martina Kociánová a Petr Žantovský
+- gallery-17.jpg | Turoňová, Stanislav Novotný a Erik Best
+- gallery-18.jpg
+- gallery-19.jpg | Ladislav Větvička
+- gallery-20.jpg | Petr Žantovský, Marek Stoniš a Martina Kociánová
+```
+
 <RelatedArticles filter="analýza" count={3} />
