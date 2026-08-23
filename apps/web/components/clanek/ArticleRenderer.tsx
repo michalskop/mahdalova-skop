@@ -15,6 +15,7 @@ import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
 import { PartyFace } from '@/components/politics/PartyFace';
+import { Person } from '@/components/politics/Person';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import ArticleByline from '@/components/dpbp/ArticleByline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
@@ -25,6 +26,8 @@ import ChartRow from '@/components/charts/ChartRow';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import { Gauge } from '@repo/ui/components/Gauge';
+import { PhotoGallery } from '@repo/ui/components/PhotoGallery';
+import type { GalleryImage } from '@repo/ui/components/PhotoGallery';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -198,9 +201,21 @@ export function ArticleRenderer({
       return <KeyNumbers {...props} />;
     },
     Gauge: (props) => <Gauge {...(props as any)} />,
+    PhotoGallery: ({ images, previewCount }: any) => {
+      const parsed: GalleryImage[] =
+        typeof images === 'string' ? JSON.parse(images) : Array.isArray(images) ? images : [];
+      const resolved = parsed.map((img) => ({
+        ...img,
+        src: img.src?.startsWith('http')
+          ? img.src
+          : `/clanek/_articles/${slug}/images/${img.src.replace('images/', '')}`,
+      }));
+      return <PhotoGallery images={resolved} previewCount={previewCount ? Number(previewCount) : undefined} />;
+    },
     TestComponent,
     FlourishEmbed,
     PartyFace,
+    Person: (props) => <Person {...props} data={(mdxSource.scope as any)?.personsData} />,
     MotionsStancesTable: (props) => <MotionsStancesTable {...props} fileData={mdxSource.scope.tableData as any} />,
     code: CodeBlock,  // This handles the ```box syntax
 

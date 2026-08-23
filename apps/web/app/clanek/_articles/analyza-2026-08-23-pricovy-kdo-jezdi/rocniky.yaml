@@ -1,0 +1,116 @@
+title: "Osm ročníků Příčov"
+subtitle: "Jak se rok od roku proměňovala témata a kdo dostával prostor na pódiu. Rozklikněte rok pro detail."
+collapsedYears: []
+
+events:
+  - year: 2019
+    month: 8
+    date: "1. ročník"
+    title: "První ročník: historie, kultura, vlastenectví"
+    emoji: "🏰"
+    summary: "Zámek v Příčovech hostí první vlastenecké setkání. Na pódiu se vedle sebe objevují poslanci napříč tehdejšími stranami."
+    description: "Program otevírají témata české historie, kultury a národní identity. Mezi řečníky je poslanec ČSSD Jaroslav Foldyna, bývalý ministr Jaroslav Bašta a Ladislav Jakl; mezi doloženými hosty předseda DSSS Tomáš Vandas, poslanec SPD Jiří Kobza a aktivista Martin Konvička. Ministerstvo vnitra tehdy Příčovy ve výroční zprávě zmínilo v souvislosti s prostředím protiislámských aktivistů, domobran a dezinformačních médií."
+    persons:
+      - name: "Jaroslav Foldyna"
+        bio: "poslanec ČSSD (později SPD)"
+      - name: "Jaroslav Bašta"
+        bio: "bývalý ministr za ČSSD, později poslanec SPD"
+      - name: "Tomáš Vandas"
+        bio: "předseda krajně pravicové DSSS"
+
+  - year: 2020
+    month: 8
+    date: "2. ročník"
+    title: "Záštita prezidenta Zemana, projev Tomia Okamury"
+    emoji: "🎙️"
+    summary: "Druhý ročník získává prezidentskou záštitu Miloše Zemana. Politický projev pronáší předseda SPD."
+    description: "Tomio Okamura zde pronesl samostatný politický projev. V programu byli poslanec SPD Jiří Kobza, dlouholetý politik KSČM Josef Skála a předsedkyně Aliance národních sil Vladimíra Vítová."
+    persons:
+      - name: "Tomio Okamura"
+        bio: "předseda SPD, poslanec"
+      - name: "Josef Skála"
+        bio: "dlouholetý politik KSČM"
+      - name: "Vladimíra Vítová"
+        bio: "předsedkyně Aliance národních sil"
+
+  - year: 2021
+    month: 8
+    date: "3. ročník"
+    title: "Historie a její zkreslování, soběstačnost, mladí vlastenci"
+    emoji: "🌲"
+    summary: "Panely nesou názvy Historie a její zkreslování, Mladí vlastenci a národní perspektivy nebo Lesy, voda, soběstačnost."
+    description: "V programu vystupuje poslanec SPD Jiří Kobza i europoslanec SPD Ivan David. Josef Skála vede samostatnou diskusi s Ivo Budilem. Panelistou je právník a bývalý poslanec ČSSD Zdeněk Koudelka, dnes místopředseda Trikolory. Zveřejněné materiály uvádějí u ročníku znovu záštitu Miloše Zemana."
+    persons:
+      - name: "Ivan David"
+        bio: "europoslanec SPD"
+      - name: "Zdeněk Koudelka"
+        bio: "bývalý poslanec ČSSD, místopředseda Trikolory"
+
+  - year: 2022
+    month: 8
+    date: "4. ročník"
+    title: "Velký reset a předsedové tří stran na jednom místě"
+    emoji: "⚡"
+    summary: "Nastupují témata Velký reset, „protinárodní energetická a zemědělská politika“ a Mladá generace v alternativě."
+    description: "Na jednom místě jsou doloženi předsedové tří stran: Zuzana Majerová (Trikolora), Jindřich Rajchl (PRO) a Libor Vondráček (Svobodní). Raptor TV přímo v Příčovech natočila rozhovory mimo jiné s Ivanem Davidem, Josefem Skálou, Zuzanou Majerovou, Josefem Nerušilem nebo členem Mladých SPD."
+    persons:
+      - name: "Jindřich Rajchl"
+        bio: "zakladatel a předseda PRO"
+      - name: "Libor Vondráček"
+        bio: "předseda Svobodných"
+      - name: "Zuzana Majerová"
+        bio: "předsedkyně Trikolory"
+
+  - year: 2023
+    month: 8
+    date: "5. ročník"
+    title: "Celý panel pro spolek Svatopluk, slovenská Republika"
+    emoji: "🤝"
+    summary: "Jeden celý panel dostává spolek Svatopluk. Přijíždí slovenský europoslanec Milan Uhrík."
+    description: "Panel spolku Svatopluk propojuje jeho spoluzakladatele Michala Semína a Petra Druláka i politika SPD Tomáše Doležala. Milan Uhrík vystupuje ve „slovenském panelu“. Josef Skála a Martina Bednářová mají zvláštní vsuvku nazvanou Političtí vězni dnešních dnů. Deník Referendum tehdy akci popsal jako setkání nacionalistů, tradicionalistů, konspirátorů a konzervativní levice."
+    persons:
+      - name: "Milan Uhrík"
+        bio: "slovenský europoslanec, předseda hnutí Republika"
+      - name: "Tomáš Doležal"
+        bio: "politik SPD, spolek Svatopluk"
+
+  - year: 2024
+    month: 8
+    date: "6. ročník"
+    title: "Panel „Americkoruská válka na Ukrajině“"
+    emoji: "🗺️"
+    summary: "Program má přímo panel nazvaný Americkoruská válka na Ukrajině. Organizátoři akci označují za nepolitickou."
+    description: "V panelu sedí bývalý ministr kultury Vítězslav Jandák (ČSSD) a ekonom Miroslav Ševčík. Petr Žantovský po akci zdůrazňoval, že jde „ve stranickém smyslu“ o nepolitickou akci; účastnická reportáž z prostředí KSČM přitom mezi návštěvníky zaznamenává Foldynu, Skálu, Majerovou a Rajchla."
+    persons:
+      - name: "Vítězslav Jandák"
+        bio: "bývalý ministr kultury a poslanec ČSSD"
+      - name: "Miroslav Ševčík"
+        bio: "ekonom, o rok později kandidát SPD"
+
+  - year: 2025
+    month: 8
+    date: "7. ročník"
+    title: "Panel „Změna režimu“ vedou budoucí poslanci SPD"
+    emoji: "🗳️"
+    summary: "Vazby na parlamentní politiku jsou nejkonkrétnější: panel moderuje kandidát SPD."
+    description: "Tomáš Doležal moderoval panel Změna režimu v době, kdy byl členem SPD a kandidoval za ni do Sněmovny. Miroslav Ševčík byl ve stejné době jedničkou kandidátky SPD na jižní Moravě jako nestraník. Oba byli v říjnu zvoleni poslanci."
+    persons:
+      - name: "Tomáš Doležal"
+        bio: "kandidát SPD, moderátor panelu Změna režimu"
+      - name: "Miroslav Ševčík"
+        bio: "nestraník na kandidátce SPD"
+
+  - year: 2026
+    month: 8
+    date: "8. ročník"
+    title: "Osmý ročník zaštiťuje předseda Sněmovny"
+    emoji: "🏛️"
+    summary: "Záštitu přebírá předseda Poslanecké sněmovny Tomio Okamura. Heslem je „Ani na Západ, ani na Východ“."
+    description: "Program tvoří tři panely: o nestrannosti a objektivitě zpravodajství (moderuje Petr Žantovský), o příčinách a následcích válečných konfliktů (Stanislav Novotný) a Ani na Západ, ani na Východ o možných podobách středoevropské spolupráce (Michal Semín). Vystupuje bývalý ministr zahraničí Jan Kavan (ČSSD) i první místopředseda Trikolory Petr Štěpánek."
+    persons:
+      - name: "Tomio Okamura"
+        bio: "předseda SPD a předseda Poslanecké sněmovny"
+      - name: "Jan Kavan"
+        bio: "bývalý ministr zahraničí za ČSSD"
+      - name: "Petr Štěpánek"
+        bio: "první místopředseda Trikolory"

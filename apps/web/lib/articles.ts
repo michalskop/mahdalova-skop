@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { remarkBoxPlugin } from './remark-box-plugin';
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
+import { remarkGalleryPlugin } from './remark-gallery-plugin';
 import type { ScrollyContent } from '@/types/scrolly';
 import type { TimelineContent } from '@/types/timeline';
 import { getArticles } from '@/components/common/getArticles';
@@ -218,6 +219,18 @@ export async function getArticleBySlug(directorySlug: string) {
     }
   }
 
+  // Optional: load osobnosti.json (medailonky for the inline <Person> component).
+  // The whole map is injected once; markdown references entries by id.
+  let personsData: Record<string, any> = {};
+  const personsPath = path.join(articleDir, 'osobnosti.json');
+  if (fs.existsSync(personsPath)) {
+    try {
+      personsData = JSON.parse(fs.readFileSync(personsPath, 'utf8'));
+    } catch (e) {
+      console.error(`Failed to parse JSON from ${personsPath}`, e);
+    }
+  }
+
   // Pre-fetch article pool for RelatedArticles MDX component
   const relatedArticlesPool = await getArticles(9999, undefined, true);
   const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
@@ -231,10 +244,11 @@ export async function getArticleBySlug(directorySlug: string) {
       htmlEmbedData: htmlEmbedData,
       attendanceSwarmData: attendanceSwarmData,
       vegaChartData: vegaChartData,
+      personsData: personsData,
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {
-      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin],
+      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin, remarkGalleryPlugin],
       rehypePlugins: [[rehypeRaw, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement', 'mdxFlowExpression', 'mdxTextExpression', 'mdxjsEsm'] }]],
     },
   });
