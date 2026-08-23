@@ -3,7 +3,7 @@ title: "Příčovy: „nadstranické“ vlastenecké setkání, kam osm let jezd
 date: "2026-08-23"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Pořadatelé setkání na zámku v Příčovech ho popisují jako nadstranické. Za osm ročníků se ale na jeho pódiu vystřídali předsedové stran, poslanci, europoslanci, bývalí ministři – a letos i předseda Sněmovny. Kdo tam vlastně jezdí a jaké proudy se tu potkávají."
-filter: ["analýza"]
+filter: ["kontext"]
 tags: ["Příčovy", "vlastenectví", "nacionalismus", "SPD", "dezinformace", "Svatopluk", "dezinfoscéna"]
 promoted: 60
 ---
