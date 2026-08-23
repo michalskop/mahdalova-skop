@@ -1,0 +1,177 @@
+/* PhotoGallery – náhledová mřížka + rozbalení do svislého sloupce */
+
+.wrapper {
+  margin: 24px 0;
+}
+
+/* --- Sbalený stav: mřížka náhledů --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--pg-mat);
+  outline-offset: 2px;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.thumb:hover .thumbImg,
+.thumb:focus-visible .thumbImg {
+  transform: scale(1.05);
+}
+
+/* poslední dlaždice s "+N" překryvem, když se fotky nevešly */
+.moreOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* malý odznak v rohu náhledu (obdoba "i" na super.cz) */
+.badge {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pg-accent);
+  cursor: pointer;
+  user-select: none;
+}
+
+.hint svg {
+  flex: 0 0 auto;
+}
+
+/* --- Rozbalený stav: svislý sloupec velkých fotek --- */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.figure {
+  margin: 0;
+  scroll-margin-top: 16px;
+}
+
+.frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--pg-mat);
+  line-height: 0;
+}
+
+.fullImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.counter {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 11px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.caption {
+  margin: 8px 2px 0;
+  line-height: 0;
+}
+
+.captionText {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--pg-accent);
+}
+
+.credit {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.collapseBar {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.collapseBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pg-accent);
+  padding: 6px 4px;
+}

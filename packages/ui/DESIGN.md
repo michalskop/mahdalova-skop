@@ -382,6 +382,36 @@ import RawHtmlEmbed from '@repo/ui/components/RawHtmlEmbed';
 
 ---
 
+### `PhotoGallery`
+Fotogalerie ve stylu super.cz: náhledová mřížka stejně velkých dlaždic vložená přímo do textu,
+která se po kliknutí na kteroukoli fotku **rozbalí na místě** do svislého sloupce velkých fotek.
+Náhledy se ořezávají do čtverce (`object-fit: cover`); zvětšené fotky jsou vidět celé, s červeným
+popiskem (`brand.6`) pod fotkou a počítadlem `n / N` v rohu. Responzivní (mobil 3 sloupce, desktop 4).
+
+**V markdown článcích** – použij code fence `fotogalerie`, jeden obrázek na řádek
+(`- soubor | popisek | zdroj`; popisek a zdroj jsou nepovinné):
+
+````md
+```fotogalerie
+- gallery-01.jpg | Popisek první fotky | Foto: ČTK
+- gallery-02.jpg | Popisek druhé fotky
+- gallery-03.jpg
+```
+````
+
+Přidáním čísla za fence (` ```fotogalerie 4 `) ukážeš jen část náhledů; zbytek se schová pod
+dlaždici „+N". Externí fotku lze zadat i plnou `https://` URL. Renderer doplní cestu
+`/clanek/_articles/<slug>/images/` k holým názvům souborů automaticky.
+
+Fotky se do článku připraví skillem **`fotogalerie`** (`.claude/skills/fotogalerie/`): zmenší,
+zkomprimuje a nakopíruje je do `images/` a vygeneruje tenhle blok.
+
+Props: `images` (`GalleryImage[]` – `{ src, caption?, credit?, alt? }`), `previewCount`
+(kolik náhledů ukázat před „+N", default 6). V článku se `images` předává jako JSON string
+přes remark plugin `remark-gallery-plugin`.
+
+---
+
 ### `Citation`
 Branded blockquote with the editorial philosophy quote. Used on the about/frontpage.
 
