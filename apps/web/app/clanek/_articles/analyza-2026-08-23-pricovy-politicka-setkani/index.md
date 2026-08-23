@@ -110,7 +110,6 @@ Setkání bývá lidmi spojenými s jeho pořádáním [označováno za nepoliti
 
 ```fotogalerie
 - gallery-01.jpg | V Příčovech byly k vidění zdaleka nejen státní symboly.
-- gallery-02.jpg
 - gallery-03.jpg
 - gallery-04.jpg | Petr Drulák a Alice Tomková
 - gallery-05.jpg | Petr Drulák a Alice Tomková
