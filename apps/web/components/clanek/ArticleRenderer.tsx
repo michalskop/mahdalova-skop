@@ -15,6 +15,7 @@ import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
 import { PartyFace } from '@/components/politics/PartyFace';
+import { Person } from '@/components/politics/Person';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import ArticleByline from '@/components/dpbp/ArticleByline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
@@ -214,6 +215,7 @@ export function ArticleRenderer({
     TestComponent,
     FlourishEmbed,
     PartyFace,
+    Person: (props) => <Person {...props} data={(mdxSource.scope as any)?.personsData} />,
     MotionsStancesTable: (props) => <MotionsStancesTable {...props} fileData={mdxSource.scope.tableData as any} />,
     code: CodeBlock,  // This handles the ```box syntax
 

@@ -1,0 +1,227 @@
+{
+  "tomkova": {
+    "name": "Alice Tomková",
+    "role": "majitelka zámku v Příčovech, pořadatelka setkání",
+    "proud": "pořadatelka",
+    "bio": "Vlastenecké setkání na svém zámku u Sedlčan pořádá každoročně od roku 2019. Kolem akce se za osm ročníků vytvořil poměrně stálý okruh moderátorů, řečníků a návštěvníků.",
+    "pricovy": "pořadatelka všech ročníků 2019–2026"
+  },
+  "okamura": {
+    "name": "Tomio Okamura",
+    "role": "předseda SPD a předseda Poslanecké sněmovny",
+    "party": "SPD",
+    "proud": "nacionalistická, pravicově populistická scéna",
+    "bio": "Předseda nacionalistického a pravicově populistického hnutí SPD. V roce 2020 v Příčovech pronesl politický projev; v roce 2026 už osmý ročník zaštítil jako předseda Poslanecké sněmovny a osobně jej zahájil úvodním projevem.",
+    "pricovy": "projev 2020; záštita a úvodní projev 2026"
+  },
+  "kobza": {
+    "name": "Jiří Kobza",
+    "role": "dlouholetý poslanec SPD",
+    "party": "SPD",
+    "proud": "SPD",
+    "bio": "Dlouholetý poslanec SPD. V Příčovech je doložen nejméně ve čtyřech po sobě jdoucích ročnících 2019–2022, jako účastník, panelista i host autogramiády.",
+    "pricovy": "doložen 2019, 2020, 2021, 2022"
+  },
+  "david": {
+    "name": "Ivan David",
+    "role": "europoslanec SPD, bývalý ministr zdravotnictví",
+    "party": "SPD",
+    "proud": "SPD",
+    "bio": "Europoslanec SPD a někdejší ministr zdravotnictví za ČSSD. V Příčovech vystoupil během programu v roce 2021, jeho účast je doložena i v roce 2022.",
+    "pricovy": "vystoupil 2021; doložen 2022"
+  },
+  "nerusil": {
+    "name": "Josef Nerušil",
+    "role": "politik SPD",
+    "party": "SPD",
+    "proud": "SPD",
+    "bio": "Politik SPD, jeho účast v Příčovech je doložena v roce 2022 mezi lidmi, s nimiž tam natáčela rozhovory Raptor TV.",
+    "pricovy": "doložen 2022"
+  },
+  "zadrobilek": {
+    "name": "Jaroslav Zadrobílek",
+    "role": "Mladí SPD",
+    "party": "SPD",
+    "proud": "SPD",
+    "bio": "Představitel Mladých SPD; doložen mezi účastníky ročníku 2022.",
+    "pricovy": "doložen 2022"
+  },
+  "foldyna": {
+    "name": "Jaroslav Foldyna",
+    "role": "poslanec SPD (dříve ČSSD)",
+    "party": "SPD",
+    "proud": "od suverenistické ČSSD k SPD",
+    "bio": "Na první ročník Příčov přijel v roce 2019 ještě jako poslanec sociální demokracie. V únoru 2020 z ČSSD odešel a v dubnu vstoupil do poslaneckého klubu SPD; v roce 2024 je v Příčovech doložen už jako její poslanec.",
+    "pricovy": "vystoupil 2019; doložen 2024"
+  },
+  "basta": {
+    "name": "Jaroslav Bašta",
+    "role": "bývalý ministr za ČSSD a diplomat; později poslanec SPD",
+    "proud": "od ČSSD k SPD",
+    "bio": "Někdejší ministr za ČSSD a diplomat. Na prvním ročníku Příčov v roce 2019 vystoupil jako řečník; později se stal poslancem a prezidentským kandidátem SPD.",
+    "pricovy": "vystoupil 2019"
+  },
+  "dolezal": {
+    "name": "Tomáš Doležal",
+    "role": "poslanec SPD, představitel spolku Svatopluk",
+    "party": "SPD",
+    "proud": "SPD / Svatopluk",
+    "bio": "Politik SPD a představitel spolku Svatopluk. V roce 2023 vystoupil v panelu Svatopluku, v roce 2025 už jako kandidát SPD do Sněmovny moderoval příčovský panel Změna režimu. O šest týdnů později byl zvolen poslancem.",
+    "pricovy": "panelista 2023; moderátor 2025"
+  },
+  "sevcik": {
+    "name": "Miroslav Ševčík",
+    "role": "ekonom, bývalý děkan Národohospodářské fakulty VŠE",
+    "proud": "kandidát SPD (nestraník)",
+    "bio": "Ekonom a bývalý děkan Národohospodářské fakulty VŠE. V Příčovech vystoupil v letech 2024 a 2025; při druhé účasti už kandidoval do Sněmovny jako nestraník na kandidátce SPD, z níž byl následně zvolen poslancem.",
+    "pricovy": "panelista 2024 a 2025"
+  },
+  "vandas": {
+    "name": "Tomáš Vandas",
+    "role": "dlouholetý předseda DSSS",
+    "proud": "krajně pravicová, nacionalistická DSSS",
+    "bio": "Dlouholetý předseda Dělnické strany sociální spravedlnosti, krajně pravicové nacionalistické strany. Jeho přítomnost je doložena už na prvním ročníku Příčov v roce 2019.",
+    "pricovy": "doložen 2019"
+  },
+  "konvicka": {
+    "name": "Martin Konvička",
+    "role": "protiislámský aktivista, spojený s Blokem proti islámu",
+    "proud": "protiislámský aktivismus",
+    "bio": "Protiislámský aktivista spojený s Blokem proti islámu. Vystoupil na prvním ročníku Příčov v roce 2019, který Ministerstvo vnitra ve své výroční zprávě zmínilo v souvislosti s prostředím protiislámských aktivistů, domobran a dezinformačních médií.",
+    "pricovy": "vystoupil 2019"
+  },
+  "skala": {
+    "name": "Josef Skála",
+    "role": "bývalý místopředseda KSČM",
+    "party": "KSČM",
+    "proud": "národně konzervativní proud KSČM",
+    "bio": "Bývalý místopředseda KSČM a představitel jejího národně konzervativního proudu. Patří k nejvytrvalejším politicky činným hostům Příčov – jeho účast je doložena nejméně v pěti ročnících mezi lety 2020 a 2024.",
+    "pricovy": "doložen 2020, 2021, 2022, 2023, 2024"
+  },
+  "vitova": {
+    "name": "Vladimíra Vítová",
+    "role": "předsedkyně Aliance národních sil",
+    "proud": "nacionalistické, suverenistické prostředí",
+    "bio": "Předsedkyně Aliance národních sil, nacionalistického a tvrdě euroskeptického uskupení. V Příčovech vystoupila v roce 2020.",
+    "pricovy": "vystoupila 2020"
+  },
+  "rajchl": {
+    "name": "Jindřich Rajchl",
+    "role": "zakladatel a předseda strany PRO",
+    "proud": "národně konzervativní, populistická PRO",
+    "bio": "Zakladatel a předseda strany PRO, která se sama označuje za národně konzervativní. V roce 2022 byl panelistou Příčov krátce po založení své strany, v roce 2024 je znovu doložen mezi návštěvníky.",
+    "pricovy": "panelista 2022; doložen 2024"
+  },
+  "vondracek": {
+    "name": "Libor Vondráček",
+    "role": "předseda Svobodných",
+    "proud": "pravicově libertariánští, euroskeptičtí Svobodní",
+    "bio": "Předseda pravicově libertariánských a euroskeptických Svobodných. V roce 2022 vystoupil v panelu Mladá generace v alternativě.",
+    "pricovy": "panelista 2022"
+  },
+  "majerova": {
+    "name": "Zuzana Majerová",
+    "role": "předsedkyně Trikolory",
+    "proud": "pravicově konzervativní Trikolora",
+    "bio": "Předsedkyně pravicově konzervativní a euroskeptické Trikolory. Její účast v Příčovech je doložena v letech 2022 a 2024.",
+    "pricovy": "doložena 2022 a 2024"
+  },
+  "koudelka": {
+    "name": "Zdeněk Koudelka",
+    "role": "právník, bývalý poslanec ČSSD; místopředseda Trikolory",
+    "proud": "od ČSSD k Trikoloře",
+    "bio": "Právník a bývalý poslanec ČSSD, dnes místopředseda Trikolory. V roce 2021 vystoupil jako panelista.",
+    "pricovy": "panelista 2021"
+  },
+  "uhrik": {
+    "name": "Milan Uhrík",
+    "role": "slovenský europoslanec, předseda hnutí Republika",
+    "proud": "slovenská národně konzervativní Republika",
+    "bio": "Slovenský europoslanec a předseda národně konzervativního hnutí Republika, které vzniklo odštěpením části politiků od Kotlebovy ĽSNS. V roce 2023 vystoupil ve „slovenském panelu“.",
+    "pricovy": "panelista 2023"
+  },
+  "jandak": {
+    "name": "Vítězslav Jandák",
+    "role": "bývalý ministr kultury a poslanec ČSSD",
+    "proud": "bývalá ČSSD",
+    "bio": "Někdejší ministr kultury a poslanec ČSSD. V roce 2024 seděl v jednom z příčovských panelů.",
+    "pricovy": "panelista 2024"
+  },
+  "kavan": {
+    "name": "Jan Kavan",
+    "role": "bývalý ministr zahraničí ČSSD, expředseda Valného shromáždění OSN",
+    "proud": "bývalá ČSSD",
+    "bio": "Bývalý ministr zahraničí za ČSSD a někdejší předseda Valného shromáždění OSN. Vystoupil na ročníku 2026 v panelu o příčinách a následcích válečných konfliktů.",
+    "pricovy": "panelista 2026"
+  },
+  "semin": {
+    "name": "Michal Semín",
+    "role": "publicista a konzervativní aktivista, spoluzakladatel spolku Svatopluk",
+    "proud": "konzervativní aktivismus / Svatopluk",
+    "bio": "Publicista a konzervativní aktivista, spoluzakladatel spolku Svatopluk. Patří k nejstálejším moderátorům příčovských panelů – v dohledaných programech moderoval v letech 2021, 2022, 2023, 2024 i 2026.",
+    "pricovy": "moderátor 2021, 2022, 2023, 2024, 2026"
+  },
+  "drulak": {
+    "name": "Petr Drulák",
+    "role": "politolog, bývalý náměstek ministra zahraničí a velvyslanec ve Francii",
+    "proud": "spolek Svatopluk",
+    "bio": "Politolog, někdejší náměstek ministra zahraničí a bývalý český velvyslanec ve Francii; spoluzakladatel a předseda spolku Svatopluk, který mezi své cíle řadí vlastenectví a státní svrchovanost.",
+    "pricovy": "opakovaně, mj. panel Svatopluku 2023 a 2026"
+  },
+  "novotny": {
+    "name": "Stanislav Novotný",
+    "role": "bývalý policejní prezident, publicista",
+    "proud": "stálé jádro akce",
+    "bio": "Bývalý policejní prezident a publicista. Patří ke stálým moderátorům Příčov; v roce 2026 vedl panel o příčinách a následcích válečných konfliktů.",
+    "pricovy": "opakovaně; moderátor panelu 2026"
+  },
+  "zantovsky": {
+    "name": "Petr Žantovský",
+    "role": "mediální publicista a vysokoškolský pedagog",
+    "proud": "stálé jádro akce",
+    "bio": "Mediální publicista a pedagog, jeden z nejčastějších řečníků Příčov. V roce 2026 moderoval panel o nestrannosti a objektivitě ve zpravodajství; po dřívějším ročníku akci označil „ve stranickém smyslu“ za nepolitickou.",
+    "pricovy": "opakovaně; moderátor panelu 2026"
+  },
+  "bahnik": {
+    "name": "Petr Bahník",
+    "role": "historik a publicista",
+    "proud": "stálé jádro akce",
+    "bio": "Historik a publicista z okruhu stálých hostů Příčov. V červnové verzi programu 2026 byl avizován jako panelista tématu středoevropské spolupráce.",
+    "pricovy": "opakovaně; avizován 2026"
+  },
+  "kocianova": {
+    "name": "Martina Kociánová",
+    "role": "bývalá moderátorka, spoluzakladatelka Rádia Universum",
+    "proud": "Společnost pro obranu svobody projevu",
+    "bio": "Bývalá moderátorka hlavních zpráv TV Nova a Prima a pořadu Českého rozhlasu, od roku 2018 spoluzakladatelka internetového Rádia Universum. Moderuje akce Společnosti pro obranu svobody projevu a v roce 2026 vede porotu jejích cen za svobodu projevu.",
+    "pricovy": "moderovala na místě 2026"
+  },
+  "stonis": {
+    "name": "Marek Stoniš",
+    "role": "šéfredaktor časopisu a webu TO, dříve Reflex",
+    "proud": "Společnost pro obranu svobody projevu",
+    "bio": "Někdejší dlouholetý šéfredaktor Reflexu, dnes šéfredaktor časopisu a webu TO. Je členem poroty cen Společnosti pro obranu svobody projevu; v roce 2026 byl avizován v panelu o médiích.",
+    "pricovy": "panelista 2026"
+  },
+  "kulidakis": {
+    "name": "Thomas Kulidakis",
+    "role": "politický komentátor",
+    "proud": "Společnost pro obranu svobody projevu",
+    "bio": "Politický komentátor, který pravidelně vystupuje například na CNN Prima News. Je členem poroty cen Společnosti pro obranu svobody projevu. Pro ročník 2026 byl avizován mezi čtyřmi panelisty o médiích.",
+    "pricovy": "avizován 2026"
+  },
+  "stepanek": {
+    "name": "Petr Štěpánek",
+    "role": "publicista, první místopředseda Trikolory",
+    "proud": "Trikolora / média",
+    "bio": "Publicista a někdejší člen Rady pro rozhlasové a televizní vysílání, v současnosti první místopředseda Trikolory. V roce 2026 byl hostem panelu věnovaného médiím. Je třeba ho odlišit od stejnojmenného politika STAN.",
+    "pricovy": "panelista 2026"
+  },
+  "zelezny": {
+    "name": "Vladimír Železný",
+    "role": "mediální podnikatel, zakladatel TV Nova, bývalý senátor a europoslanec",
+    "proud": "média",
+    "bio": "Mediální podnikatel, zakladatel televize Nova a někdejší senátor a europoslanec. Pro ročník 2026 byl avizován jako panelista o médiích; ve zveřejněném programu se nakonec neobjevil.",
+    "pricovy": "avizován 2026"
+  }
+}
