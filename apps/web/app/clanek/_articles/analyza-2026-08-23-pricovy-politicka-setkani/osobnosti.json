@@ -27,8 +27,8 @@
     "role": "europoslanec SPD, bývalý ministr zdravotnictví",
     "party": "SPD",
     "proud": "SPD",
-    "bio": "Europoslanec SPD a někdejší ministr zdravotnictví za ČSSD. V Příčovech vystoupil během programu v roce 2021, jeho účast je doložena i v roce 2022.",
-    "pricovy": "vystoupil 2021; doložen 2022"
+    "bio": "Europoslanec SPD a někdejší ministr zdravotnictví za ČSSD. Jeho účast v Příčovech je doložena v roce 2022, kdy s ním přímo na místě natočila rozhovor Raptor TV.",
+    "pricovy": "doložen 2022"
   },
   "nerusil": {
     "name": "Josef Nerušil",
@@ -151,8 +151,8 @@
     "name": "Jan Kavan",
     "role": "bývalý ministr zahraničí ČSSD, expředseda Valného shromáždění OSN",
     "proud": "bývalá ČSSD",
-    "bio": "Bývalý ministr zahraničí za ČSSD a někdejší předseda Valného shromáždění OSN. Vystoupil na ročníku 2026 v panelu o příčinách a následcích válečných konfliktů.",
-    "pricovy": "panelista 2026"
+    "bio": "Bývalý ministr zahraničí za ČSSD a někdejší předseda Valného shromáždění OSN. Pro ročník 2026 byl mezi avizovanými hosty, nakonec ale nedorazil.",
+    "pricovy": "avizován 2026 (nedorazil)"
   },
   "semin": {
     "name": "Michal Semín",
@@ -193,15 +193,15 @@
     "name": "Martina Kociánová",
     "role": "bývalá moderátorka, spoluzakladatelka Rádia Universum",
     "proud": "Společnost pro obranu svobody projevu",
-    "bio": "Bývalá moderátorka hlavních zpráv TV Nova a Prima a pořadu Českého rozhlasu, od roku 2018 spoluzakladatelka internetového Rádia Universum. Moderuje akce Společnosti pro obranu svobody projevu a v roce 2026 vede porotu jejích cen za svobodu projevu.",
-    "pricovy": "moderovala na místě 2026"
+    "bio": "Bývalá moderátorka hlavních zpráv TV Nova a Prima a pořadu Českého rozhlasu, od roku 2018 spoluzakladatelka internetového Rádia Universum. Moderuje akce Společnosti pro obranu svobody projevu a v roce 2026 předsedá porotě jejích Cen za svobodu projevu.",
+    "pricovy": "z okruhu SOSP kolem setkání"
   },
   "stonis": {
     "name": "Marek Stoniš",
     "role": "šéfredaktor časopisu a webu TO, dříve Reflex",
     "proud": "Společnost pro obranu svobody projevu",
-    "bio": "Někdejší dlouholetý šéfredaktor Reflexu, dnes šéfredaktor časopisu a webu TO. Je členem poroty cen Společnosti pro obranu svobody projevu; v roce 2026 byl avizován v panelu o médiích.",
-    "pricovy": "panelista 2026"
+    "bio": "Někdejší dlouholetý šéfredaktor Reflexu, dnes šéfredaktor časopisu a webu TO. Je členem poroty Cen za svobodu projevu Společnosti pro obranu svobody projevu; pro ročník 2026 byl avizován v panelu o médiích.",
+    "pricovy": "avizován 2026"
   },
   "kulidakis": {
     "name": "Thomas Kulidakis",
@@ -221,7 +221,7 @@
     "name": "Vladimír Železný",
     "role": "mediální podnikatel, zakladatel TV Nova, bývalý senátor a europoslanec",
     "proud": "média",
-    "bio": "Mediální podnikatel, zakladatel televize Nova a někdejší senátor a europoslanec. Pro ročník 2026 byl avizován jako panelista o médiích; ve zveřejněném programu se nakonec neobjevil.",
+    "bio": "Mediální podnikatel, zakladatel televize Nova a někdejší senátor a europoslanec. Pro ročník 2026 byl avizován jako panelista o médiích, nakonec ale nedorazil.",
     "pricovy": "avizován 2026"
   }
 }

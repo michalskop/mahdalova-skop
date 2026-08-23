@@ -13,8 +13,8 @@ events:
     persons:
       - name: "Jaroslav Foldyna"
         bio: "poslanec ČSSD (později SPD)"
-      - name: "Jaroslav Bašta"
-        bio: "bývalý ministr za ČSSD, později poslanec SPD"
+      - name: "Jiří Kobza"
+        bio: "poslanec SPD"
       - name: "Tomáš Vandas"
         bio: "předseda krajně pravicové DSSS"
 
@@ -39,12 +39,14 @@ events:
     title: "Historie a její zkreslování, soběstačnost, mladí vlastenci"
     emoji: "🌲"
     summary: "Panely nesou názvy Historie a její zkreslování, Mladí vlastenci a národní perspektivy nebo Lesy, voda, soběstačnost."
-    description: "V programu vystupuje poslanec SPD Jiří Kobza i europoslanec SPD Ivan David. Josef Skála vede samostatnou diskusi s Ivo Budilem. Panelistou je právník a bývalý poslanec ČSSD Zdeněk Koudelka, dnes místopředseda Trikolory. Zveřejněné materiály uvádějí u ročníku znovu záštitu Miloše Zemana."
+    description: "V programu vystupuje poslanec SPD Jiří Kobza a panelista Zdeněk Koudelka, právník a bývalý poslanec ČSSD, dnes místopředseda Trikolory. Josef Skála vede samostatnou diskusi s Ivo Budilem. Zveřejněné materiály uvádějí u ročníku znovu záštitu Miloše Zemana."
     persons:
-      - name: "Ivan David"
-        bio: "europoslanec SPD"
       - name: "Zdeněk Koudelka"
         bio: "bývalý poslanec ČSSD, místopředseda Trikolory"
+      - name: "Jiří Kobza"
+        bio: "poslanec SPD"
+      - name: "Josef Skála"
+        bio: "dlouholetý politik KSČM"
 
   - year: 2022
     month: 8
@@ -79,13 +81,15 @@ events:
     date: "6. ročník"
     title: "Panel „Americkoruská válka na Ukrajině“"
     emoji: "🗺️"
-    summary: "Program má přímo panel nazvaný Americkoruská válka na Ukrajině. Organizátoři akci označují za nepolitickou."
-    description: "V panelu sedí bývalý ministr kultury Vítězslav Jandák (ČSSD) a ekonom Miroslav Ševčík. Petr Žantovský po akci zdůrazňoval, že jde „ve stranickém smyslu“ o nepolitickou akci; účastnická reportáž z prostředí KSČM přitom mezi návštěvníky zaznamenává Foldynu, Skálu, Majerovou a Rajchla."
+    summary: "Program má přímo panel nazvaný Americkoruská válka na Ukrajině."
+    description: "V panelu o válce na Ukrajině vystupují mimo jiné Petr Drulák, Jaroslav Štefec a Marek Obrtel. Petr Žantovský, jeden z dlouholetých moderátorů, označuje setkání za nepolitické ve stranickém smyslu; účastnická reportáž z prostředí KSČM přitom mezi návštěvníky zaznamenává Foldynu, Skálu, Majerovou a Rajchla."
     persons:
-      - name: "Vítězslav Jandák"
-        bio: "bývalý ministr kultury a poslanec ČSSD"
-      - name: "Miroslav Ševčík"
-        bio: "ekonom, o rok později kandidát SPD"
+      - name: "Petr Drulák"
+        bio: "politolog, spoluzakladatel spolku Svatopluk"
+      - name: "Jaroslav Štefec"
+        bio: "bezpečnostní analytik"
+      - name: "Marek Obrtel"
+        bio: "bývalý vojenský lékař"
 
   - year: 2025
     month: 8
@@ -106,11 +110,9 @@ events:
     title: "Osmý ročník zaštiťuje předseda Sněmovny"
     emoji: "🏛️"
     summary: "Záštitu přebírá předseda Poslanecké sněmovny Tomio Okamura. Heslem je „Ani na Západ, ani na Východ“."
-    description: "Program tvoří tři panely: o nestrannosti a objektivitě zpravodajství (moderuje Petr Žantovský), o příčinách a následcích válečných konfliktů (Stanislav Novotný) a Ani na Západ, ani na Východ o možných podobách středoevropské spolupráce (Michal Semín). Vystupuje bývalý ministr zahraničí Jan Kavan (ČSSD) i první místopředseda Trikolory Petr Štěpánek."
+    description: "Program tvoří tři panely: o nestrannosti a objektivitě zpravodajství (moderuje Petr Žantovský), o příčinách a následcích válečných konfliktů (Stanislav Novotný) a Ani na Západ, ani na Východ o možných podobách středoevropské spolupráce (Michal Semín). Mezi hosty je první místopředseda Trikolory Petr Štěpánek."
     persons:
       - name: "Tomio Okamura"
         bio: "předseda SPD a předseda Poslanecké sněmovny"
-      - name: "Jan Kavan"
-        bio: "bývalý ministr zahraničí za ČSSD"
       - name: "Petr Štěpánek"
         bio: "první místopředseda Trikolory"
