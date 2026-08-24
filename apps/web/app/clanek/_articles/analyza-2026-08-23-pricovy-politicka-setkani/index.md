@@ -111,23 +111,20 @@ Setkání bývá lidmi spojenými s jeho pořádáním [označováno za nepoliti
 ```fotogalerie
 - gallery-01.jpg | V Příčovech byly k vidění zdaleka nejen státní symboly.
 - gallery-03.jpg
-- gallery-04.jpg | Petr Drulák a Alice Tomková
-- gallery-05.jpg | Petr Drulák a Alice Tomková
-- gallery-06.jpg | Petr Drulák a Alice Tomková
-- gallery-07.jpg | V košili poslanec za SPD (v minulosti člen ČSSD) Jaroslav Foldyna, blízký známý ruských Nočních vlků a hlasitý podporovatel Srbska. Okresní soud v Děčíně na konci července 2026 rozhodl o předběžném opatření kvůli podezření z domácího násilí; návrh podala Foldynova manželka.
-- gallery-08.jpg | Bývalá moderátorka TV Nova, později Českého rozhlasu Martina Kociánová dnes vlastní Rádio Universum – internetovou dezinformační a konspirační platformu, která v dlouhých rozhovorech opakovaně dává nekritický prostor zavádějícím tvrzením, konspiračním teoriím a narativům blízkým ruské propagandě.
-- gallery-09.jpg
 - gallery-10.jpg | Předseda Poslanecké sněmovny Tomio Okamura udělil letošní akci svou záštitu.
-- gallery-11.jpg
-- gallery-12.jpg | Tomio Okamura (SPD) dříve ostře kritizoval svou předchůdkyni Markétu Pekarovou Adamovou (TOP 09), že nejezdí škodovkou, ale luxusním BMW – a nepravdivě tvrdil, že vůz byl pořízen pro ni, ačkoli šlo o auto pro dřívějšího předsedu Sněmovny Radka Vondráčka (ANO). Jako předseda Sněmovny teď Okamura jezdí luxusním vozem sám.
-- gallery-13.jpg | Lenka Procházková ve stánku s protestními materiály a reklamami na dezinformační televizi Raptor TV.
-- gallery-14.jpg | Lenka Procházková.
-- gallery-15.jpg | Michal Semín.
-- gallery-16.jpg | Martina Kociánová na pódiu s Markem Stonišem.
-- gallery-17.jpg | V letech 1993–1994 byl Stanislav Novotný policejním prezidentem; na letošním ročníku moderoval blok s političkou Janou Turoňovou (vlevo v pruhovaném svetru; dříve ČSSD, nyní Stačilo) a publicistou Erikem Bestem.
-- gallery-18.jpg | Vlastimil Veselý ze Společnosti pro obranu svobody projevu; zády ke kameře stojí Lukáš Pollert.
-- gallery-19.jpg | Ladislav Větvička, publicista a někdejší populární bloger z iDnes.
+- gallery-07.jpg | V košili poslanec za SPD (v minulosti člen ČSSD) Jaroslav Foldyna, blízký známý ruských Nočních vlků a hlasitý podporovatel Srbska. Okresní soud v Děčíně na konci července 2026 rozhodl o předběžném opatření kvůli podezření z domácího násilí; návrh podala Foldynova manželka.
+- gallery-08.jpg | Bývalá moderátorka TV Nova, později Českého rozhlasu Martina Kociánová nyní vlastní Rádio Universum. Rádio Universum – internetová dezinformační a konspirační platforma Martiny Kociánové, která v dlouhých rozhovorech opakovaně poskytuje nekritický prostor zavádějícím tvrzením, konspiračním teoriím a narativům blízkým ruské propagandě. Je to poměrně dobře doložitelné: projekt Konšpirátori.sk zařadil radiouniversum.cz mezi weby se sporným obsahem se skóre 7,5/10. Analýza konstatuje výskyt dezinformačních zpráv a konspiračních teorií a uvádí konkrétní příklady: zavádějící tvrzení o nebezpečnosti očkování proti covidu, konspirace kolem „Velkého resetu“, tvrzení, že pandemie byla nástrojem k ovládání společnosti, a rámování války na Ukrajině přenášející odpovědnost na Západ. Upozorňuje také na používání problematických zdrojů typu Gateway Pundit.
 - gallery-20.jpg | Dlouholetý autor Parlamentních listů Petr Žantovský, dříve radní ČTK (nominant ANO, který se v této roli vyjádřil, že lidé mají právo i na nepravdivé informace), nyní radní Českého rozhlasu a v minulosti neúspěšný kandidát SPD do Senátu. Vpravo sedí Marek „napravo už je jen zeď“ Stoniš, publicista, dřívější šéfredaktor Reflexu, dnes vedoucí deníku TO.
+- gallery-16.jpg | Martina Kociánová na pódiu s Markem Stonišem.
+- gallery-18.jpg | Vlastimil Veselý ze Společnosti pro obranu svobody projevu; zády ke kameře stojí Lukáš Pollert.
+- gallery-14.jpg | Lenka Procházková.
+- gallery-13.jpg | Lenka Procházková ve stánku s protestními materiály a reklamami na dezinformační televizi Raptor TV.
+- gallery-12.jpg | Tomio Okamura (SPD) dříve ostře kritizoval svou předchůdkyni Markétu Pekarovou Adamovou (TOP 09), že nejezdí škodovkou, ale luxusním BMW – a nepravdivě tvrdil, že vůz byl pořízen pro ni, ačkoli šlo o auto pro dřívějšího předsedu Sněmovny Radka Vondráčka (ANO). Jako předseda Sněmovny teď Okamura jezdí luxusním vozem sám.
+- gallery-11.jpg | Tomio Okamura v obležení příznivců.
+- gallery-15.jpg | Ultrakonzervativní aktivista a publicista Michal Semín.
+- gallery-04.jpg | Petr Drulák, někdejší náměstek ministra zahraničí a velvyslanec ve Francii, dnes zakladatel spolku Svatopluk, který akci pořádá. Vpravo stojí majitelka zámku v Příčovech, lékařka Alice Tomková.
+- gallery-17.jpg | V letech 1993–1994 byl Stanislav Novotný policejním prezidentem; na letošním ročníku moderoval blok s političkou Janou Turoňovou (vlevo v pruhovaném svetru; dříve ČSSD, nyní Stačilo) a publicistou Erikem Bestem.
+- gallery-19.jpg | Ladislav Větvička, publicista a někdejší populární bloger z iDnes.
 ```
 
 <RelatedArticles filter="analýza" count={3} />
