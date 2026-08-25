@@ -17,7 +17,8 @@ interface ArticlesGridProps {
   adaptiveRows?: number;
 }
 
-const MIN_CARD = 230; // px – minimální šířka karty pro fluidní mřížku
+const MIN_CARD = 300; // px – min. šířka karty; na širokém desktopu vyjdou 3 sloupce,
+// při zúžení na 2 sloupce logika níže doplní 4. kartu (2+2, žádná osamocená v řádku)
 
 export function ArticlesGrid({ articles, articleBasePath, locale, adaptiveRows }: ArticlesGridProps) {
   if (!adaptiveRows) {
@@ -66,16 +67,23 @@ function AdaptiveGrid({
   useEffect(() => {
     const el = gridRef.current;
     if (!el) return;
-    const GAP = 16; // odpovídá gap: var(--mantine-spacing-md)
-    // Stejný výpočet, jaký dělá CSS auto-fill: kolik sloupců minmax(MIN_CARD) se vejde.
-    const compute = (w: number) => Math.max(1, Math.floor((w + GAP) / (MIN_CARD + GAP)));
-    setCols(compute(el.clientWidth));
-    const ro = new ResizeObserver((entries) => {
-      const w = entries[0]?.contentRect.width ?? el.clientWidth;
-      setCols(compute(w));
+    // Přečti skutečný počet CSS sloupců, které auto-fill vykreslil pro danou šířku.
+    const measure = () => {
+      const tracks = getComputedStyle(el)
+        .gridTemplateColumns.split(' ')
+        .filter((t) => t && t !== '0px').length;
+      if (tracks > 0) setCols(tracks);
+    };
+    // Změř až po ustálení layoutu (dvojitý rAF), ať nechytneme přechodnou šířku.
+    let raf = requestAnimationFrame(() => {
+      raf = requestAnimationFrame(measure);
     });
+    const ro = new ResizeObserver(measure);
     ro.observe(el);
-    return () => ro.disconnect();
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+    };
   }, []);
 
   // Vyplň celé řádky; na úzkých displejích (málo sloupců) ukaž aspoň 3 karty.
