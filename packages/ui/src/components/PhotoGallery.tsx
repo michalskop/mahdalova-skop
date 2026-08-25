@@ -1,8 +1,28 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useMantineTheme, useMantineColorScheme } from '@mantine/core';
 import styles from './PhotoGallery.module.css';
+
+/** Změří reálný počet sloupců CSS gridu a překreslí při změně šířky. */
+function useColumnCount(ref: React.RefObject<HTMLElement | null>, fallback: number) {
+  const [cols, setCols] = useState(fallback);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const measure = () => {
+      const tracks = getComputedStyle(el)
+        .gridTemplateColumns.split(' ')
+        .filter((t) => t && t !== '0px').length;
+      if (tracks > 0) setCols(tracks);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [ref]);
+  return cols;
+}
 
 export interface GalleryImage {
   /** Plná URL fotky (rozřešená z názvu souboru ve wrapperu aplikace). */
@@ -44,13 +64,17 @@ const CaptionIcon = () => (
   </svg>
 );
 
-export function PhotoGallery({ images, previewCount = 6 }: PhotoGalleryProps) {
+export function PhotoGallery({ images, previewCount }: PhotoGalleryProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   const [expanded, setExpanded] = useState(false);
   // Popisky jsou ve výchozím stavu otevřené; tady evidujeme ty zavřené.
   const [closedCaptions, setClosedCaptions] = useState<Set<number>>(() => new Set());
   const figureRefs = useRef<Array<HTMLElement | null>>([]);
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  // Kolik náhledů ukázat: buď pevně z propu, nebo dynamicky = plné dva řádky.
+  const columns = useColumnCount(gridRef, 4);
+  const effectivePreview = previewCount ?? columns * 2;
 
   const accent = theme.colors.brand[6];
   const mat = colorScheme === 'dark' ? theme.colors.gray[8] : theme.colors.background[2];
@@ -84,12 +108,12 @@ export function PhotoGallery({ images, previewCount = 6 }: PhotoGalleryProps) {
 
   // --- Sbalený stav: mřížka náhledů ---
   if (!expanded) {
-    const hasMore = images.length > previewCount;
-    const shown = hasMore ? images.slice(0, previewCount) : images;
+    const hasMore = images.length > effectivePreview;
+    const shown = hasMore ? images.slice(0, effectivePreview) : images;
 
     return (
       <div className={styles.wrapper} style={cssVars}>
-        <div className={styles.grid}>
+        <div className={styles.grid} ref={gridRef}>
           {shown.map((img, i) => {
             const isLastWithMore = hasMore && i === shown.length - 1;
             return (
@@ -103,7 +127,7 @@ export function PhotoGallery({ images, previewCount = 6 }: PhotoGalleryProps) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img className={styles.thumbImg} src={img.src} alt={img.alt || img.caption || ''} loading="lazy" />
                 {isLastWithMore ? (
-                  <span className={styles.moreOverlay}>+{images.length - previewCount + 1}</span>
+                  <span className={styles.moreOverlay}>+{images.length - effectivePreview + 1}</span>
                 ) : (
                   <span className={styles.badge}>{i + 1}</span>
                 )}

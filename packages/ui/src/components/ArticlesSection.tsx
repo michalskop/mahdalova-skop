@@ -64,7 +64,7 @@ export function ArticlesSection({
           </a>
         </Stack>
         <Box flex={1}>
-          <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} />
+          <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={1} />
         </Box>
       </Group>
     </Paper>

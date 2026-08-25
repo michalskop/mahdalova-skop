@@ -21,10 +21,12 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const articles = await getArticles(3, undefined, true);
-  const articles_analyses = await getArticles(3, "analýza");
-  const articles_contexts = await getArticles(3, "kontext");
-  const articles_podcasts = await getArticles(3, "podcast");
+  // Zásobník článků na sekci – adaptivní mřížka z nich zobrazí tolik,
+  // aby vyplnily celé řádky podle šířky displeje (3 na běžném desktopu, více na širokém).
+  const articles = await getArticles(8, undefined, true);
+  const articles_analyses = await getArticles(8, "analýza");
+  const articles_contexts = await getArticles(8, "kontext");
+  const articles_podcasts = await getArticles(8, "podcast");
 
   return (
     <Container 
