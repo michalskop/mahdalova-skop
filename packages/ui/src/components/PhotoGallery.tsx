@@ -7,7 +7,7 @@ import styles from './PhotoGallery.module.css';
 export interface GalleryImage {
   /** Plná URL fotky (rozřešená z názvu souboru ve wrapperu aplikace). */
   src: string;
-  /** Popisek pod fotkou v rozbaleném stavu (červeně). */
+  /** Popisek přes spodní okraj fotky (výsuvný panel). */
   caption?: string;
   /** Nepovinný zdroj / autor fotky (menší, pod popiskem). */
   credit?: string;
@@ -38,10 +38,18 @@ const CollapseIcon = () => (
   </svg>
 );
 
+const CaptionIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M5 6h14M5 11h14M5 16h9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
 export function PhotoGallery({ images, previewCount = 6 }: PhotoGalleryProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   const [expanded, setExpanded] = useState(false);
+  // Popisky jsou ve výchozím stavu otevřené; tady evidujeme ty zavřené.
+  const [closedCaptions, setClosedCaptions] = useState<Set<number>>(() => new Set());
   const figureRefs = useRef<Array<HTMLElement | null>>([]);
 
   const accent = theme.colors.brand[6];
@@ -65,6 +73,14 @@ export function PhotoGallery({ images, previewCount = 6 }: PhotoGalleryProps) {
   };
 
   const collapse = () => setExpanded(false);
+
+  const toggleCaption = (index: number) =>
+    setClosedCaptions((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
 
   // --- Sbalený stav: mřížka náhledů ---
   if (!expanded) {
@@ -118,27 +134,52 @@ export function PhotoGallery({ images, previewCount = 6 }: PhotoGalleryProps) {
   return (
     <div className={styles.wrapper} style={cssVars}>
       <div className={styles.stack}>
-        {images.map((img, i) => (
-          <figure
-            key={i}
-            className={styles.figure}
-            ref={(el) => {
-              figureRefs.current[i] = el;
-            }}
-          >
-            <div className={styles.frame}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className={styles.fullImg} src={img.src} alt={img.alt || img.caption || ''} loading="lazy" />
-              <span className={styles.counter}>{i + 1} / {images.length}</span>
-            </div>
-            {(img.caption || img.credit) && (
-              <figcaption className={styles.caption}>
-                {img.caption && <span className={styles.captionText}>{img.caption}</span>}
-                {img.credit && <span className={styles.credit}>{img.credit}</span>}
-              </figcaption>
-            )}
-          </figure>
-        ))}
+        {images.map((img, i) => {
+          const hasCaption = Boolean(img.caption || img.credit);
+          const isClosed = closedCaptions.has(i);
+          return (
+            <figure
+              key={i}
+              className={styles.figure}
+              ref={(el) => {
+                figureRefs.current[i] = el;
+              }}
+            >
+              <div className={styles.frame}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className={styles.fullImg} src={img.src} alt={img.alt || img.caption || ''} loading="lazy" />
+                <span className={styles.counter}>{i + 1} / {images.length}</span>
+
+                {hasCaption && !isClosed && (
+                  <figcaption className={styles.captionPanel}>
+                    <button
+                      type="button"
+                      className={styles.captionClose}
+                      onClick={() => toggleCaption(i)}
+                      aria-label="Skrýt popisek"
+                    >
+                      ×
+                    </button>
+                    {img.caption && <span className={styles.captionText}>{img.caption}</span>}
+                    {img.credit && <span className={styles.credit}>{img.credit}</span>}
+                  </figcaption>
+                )}
+
+                {hasCaption && isClosed && (
+                  <button
+                    type="button"
+                    className={styles.captionReopen}
+                    onClick={() => toggleCaption(i)}
+                    aria-label="Zobrazit popisek"
+                  >
+                    <CaptionIcon />
+                    Popisek
+                  </button>
+                )}
+              </div>
+            </figure>
+          );
+        })}
       </div>
       <div className={styles.collapseBar}>
         <button type="button" className={styles.collapseBtn} onClick={collapse}>
