@@ -13,6 +13,12 @@ interface ArticlesSectionProps {
   themeColor?: string;
   articleBasePath?: string;
   locale?: string;
+  /**
+   * Když je nastaveno (např. na homepage), sekce zobrazí jen tolik karet,
+   * aby vyplnily celé řádky podle šířky. Bez tohoto propu (výpisy rubrik,
+   * autor, tag…) se zobrazí VŠECHNY předané články.
+   */
+  adaptiveRows?: number;
 }
 
 export function ArticlesSection({
@@ -22,6 +28,7 @@ export function ArticlesSection({
   themeColor = 'red',
   articleBasePath,
   locale,
+  adaptiveRows,
 }: ArticlesSectionProps) {
   const theme = useMantineTheme();
   const [isTitleHovered, setIsTitleHovered] = useState(false);
@@ -64,7 +71,7 @@ export function ArticlesSection({
           </a>
         </Stack>
         <Box flex={1}>
-          <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={1} />
+          <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} />
         </Box>
       </Group>
     </Paper>

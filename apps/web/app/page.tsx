@@ -50,7 +50,7 @@ export default async function HomePage() {
         sectionTitle="Výběr"
         sectionLink="/vyber"
         articles={articles}
-        themeColor="#5e66d5" />
+        themeColor="#5e66d5" adaptiveRows={1} />
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
 
@@ -58,19 +58,19 @@ export default async function HomePage() {
         sectionTitle="Analýzy"
         sectionLink="/analyzy"
         articles={articles_analyses}
-        themeColor="brand" />
+        themeColor="brand" adaptiveRows={1} />
 
       <ArticlesSection
         sectionTitle="Kontext"
         sectionLink="/kontext"
         articles={articles_contexts}
-        themeColor="brandOrange.4" />
+        themeColor="brandOrange.4" adaptiveRows={1} />
 
       <ArticlesSection 
         sectionTitle="Podcasty"
         sectionLink="/podcasty"
         articles={articles_podcasts}
-        themeColor="brandRoyalBlue.9" />
+        themeColor="brandRoyalBlue.9" adaptiveRows={1} />
 
       <Testimonials />
 
