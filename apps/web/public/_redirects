@@ -1,3 +1,10 @@
+# Klub DataTimes – podpora (2026-08-28). Sjednocené vstupní URL → /klub.
+/podpora           /klub   301
+/podpora/*         /klub   301
+/pridejte-se       /klub   301
+/podporte-nas      /klub   301
+/support           /klub   301
+
 # Data pro budoucí premiérku – staré číslování kapitol (redirect na nové URL
 # po přečíslování do 5 bloků / 15 kapitol, 2026-06-23)
 /specialy/data-pro-budouci-premierku/02-demografie/*       /specialy/data-pro-budouci-premierku/01-demografie/:splat       301

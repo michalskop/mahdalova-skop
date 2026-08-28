@@ -4,10 +4,8 @@ export default function SupportBanner() {
   return (
     <div style={{ width: '100%', fontFamily: "'Roboto', Arial, sans-serif" }}>
       <a
-        href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Podpořit DataTimes přes Stripe"
+        href="/klub"
+        aria-label="Podpořit DataTimes – Klub DataTimes"
         className="dt-support-banner"
         onMouseEnter={e => (e.currentTarget.style.filter = 'brightness(1.05)')}
         onMouseLeave={e => (e.currentTarget.style.filter = '')}
