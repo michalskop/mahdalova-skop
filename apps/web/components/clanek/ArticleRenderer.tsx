@@ -29,7 +29,16 @@ import { Gauge } from '@repo/ui/components/Gauge';
 import { PhotoGallery } from '@repo/ui/components/PhotoGallery';
 import type { GalleryImage } from '@repo/ui/components/PhotoGallery';
 import type { Article } from '@repo/ui/lib/getArticles';
+import { ibmPlexSerif } from '@/app/fonts';
 // import yaml from 'js-yaml';
+
+// Experimental: articles listed here render their body in IBM Plex Serif
+// instead of the site default (Roboto Slab). Scoped preview before deciding
+// whether to switch the whole site over. Only the font-family changes –
+// sizes and colours are untouched.
+const IBM_PLEX_SERIF_SLUGS = new Set<string>([
+  'analyza-2026-08-23-pricovy-politicka-setkani',
+]);
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -62,6 +71,21 @@ export function ArticleRenderer({
 }: ArticleProps) {
 
   const theme = useMantineTheme();
+
+  // When this article opts into the IBM Plex Serif experiment, override the
+  // Mantine font-family CSS variables on the article wrapper. They cascade to
+  // every Mantine component inside (Title, Text, Anchor…), so the font swaps
+  // while all sizes and colours stay exactly as configured elsewhere.
+  const fontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
+    ? ({
+        // Direct value so body copy (which just inherits font-family from
+        // <body>) picks it up, plus the Mantine CSS variables so components
+        // that re-evaluate them (Title uses the headings one) switch too.
+        fontFamily: ibmPlexSerif.style.fontFamily,
+        '--mantine-font-family': ibmPlexSerif.style.fontFamily,
+        '--mantine-font-family-headings': ibmPlexSerif.style.fontFamily,
+      } as React.CSSProperties)
+    : {};
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
     if (typeof spec !== 'string') return undefined;
@@ -407,6 +431,7 @@ export function ArticleRenderer({
       pt="xl"
       className='markdown-content'
       c="gray.8"
+      style={fontOverride}
       styles={{
         root: {
           backgroundColor: backgroundColor || theme.colors.background[1],
