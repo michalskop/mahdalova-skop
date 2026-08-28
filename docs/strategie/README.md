@@ -9,6 +9,8 @@ nenasazují jako součást webu, ale řídí rozhodnutí v `apps/`.
   platící podporovatele; podklad pro stránku `/klub` a komunikaci na sítích.
   Rozpracovává pilíř „komunita a crowdfunding" z finančního modelu v
   `impact-materials`.
+- [`VYZVA-K-PODPORE.md`](VYZVA-K-PODPORE.md) — hotové kopírovací bloky „proč nás
+  podpořit + odkaz" na konec příspěvků na sociálních sítích.
 
 ## Vztah k ostatní dokumentaci
 

@@ -288,6 +288,8 @@ jako jednu z motivací (doslova navazuje na text SupportBanneru).
 - **Assety:** pinned copy per platforma, brandovaný QR obrázek
   (crimson/newsprint), 15s video ask, link-in-bio (může být přímo `/klub`),
   šablona impact karty.
+- **Kopírovací bloky výzvy k podpoře** (krátká / střední / dlouhá / Donio /
+  „na sítích" / podcast): [`VYZVA-K-PODPORE.md`](VYZVA-K-PODPORE.md).
 - **UTM na všechno:** `?utm_source=bluesky&utm_campaign=klub`.
 
 ---
