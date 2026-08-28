@@ -10,6 +10,8 @@ webových stránek.
 - `redakcni-styl/` – společná redakční a datově-žurnalistická pravidla pro
   celý web.
 - `design/` – společný vizuální systém.
+- `strategie/` – strategické podklady (podporovatelé, komunikace), které řídí
+  rozhodnutí v `apps/`, ale samy se nenasazují.
 - `technicke/` – průřezové implementační, testovací a provozní návody.
 
 Produkční kód zůstává v `apps/`. Dokumentace popisuje účel, zdroje, stav,

@@ -15,6 +15,7 @@ Podřízené a doplňkové dokumenty:
 - [Dokumentace repozitáře](docs/README.md) — úplný rozcestník
 - [Redakční styl](docs/redakcni-styl/README.md) — psaní, ověřování a inspirace
 - [Design](docs/design/DESIGN.md) — vizuální systém a barevné tokeny
+- [Strategie](docs/strategie/README.md) — podporovatelé a komunikace (podklad pro `/klub`)
 - [Speciály](docs/specialy/README.md) — dokumentace jednotlivých projektů
 - [Technická dokumentace](docs/technicke/README.md) — implementační a provozní návody
 
