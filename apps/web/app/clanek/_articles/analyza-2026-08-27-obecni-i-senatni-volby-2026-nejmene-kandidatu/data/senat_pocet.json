@@ -1,0 +1,261 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Senátních kandidátů je nejméně od roku 2000",
+    "subtitle": "Počet kandidátů v řádných volbách do Senátu (obnovuje se třetina obvodů)"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "idx": 0,
+        "idx_key": "r0",
+        "year": 1998,
+        "v": 140
+      },
+      {
+        "idx": 1,
+        "idx_key": "r1",
+        "year": 2000,
+        "v": 165
+      },
+      {
+        "idx": 2,
+        "idx_key": "r2",
+        "year": 2002,
+        "v": 170
+      },
+      {
+        "idx": 3,
+        "idx_key": "r3",
+        "year": 2004,
+        "v": 197
+      },
+      {
+        "idx": 4,
+        "idx_key": "r4",
+        "year": 2006,
+        "v": 204
+      },
+      {
+        "idx": 5,
+        "idx_key": "r5",
+        "year": 2008,
+        "v": 200
+      },
+      {
+        "idx": 6,
+        "idx_key": "r6",
+        "year": 2010,
+        "v": 227
+      },
+      {
+        "idx": 7,
+        "idx_key": "r7",
+        "year": 2012,
+        "v": 233
+      },
+      {
+        "idx": 8,
+        "idx_key": "r8",
+        "year": 2014,
+        "v": 243
+      },
+      {
+        "idx": 9,
+        "idx_key": "r9",
+        "year": 2016,
+        "v": 233
+      },
+      {
+        "idx": 10,
+        "idx_key": "r10",
+        "year": 2018,
+        "v": 236
+      },
+      {
+        "idx": 11,
+        "idx_key": "r11",
+        "year": 2020,
+        "v": 235
+      },
+      {
+        "idx": 12,
+        "idx_key": "r12",
+        "year": 2022,
+        "v": 179
+      },
+      {
+        "idx": 13,
+        "idx_key": "r13",
+        "year": 2024,
+        "v": 169
+      },
+      {
+        "idx": 14,
+        "idx_key": "r14",
+        "year": 2026,
+        "v": 154
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "idx_key",
+      "type": "ordinal",
+      "sort": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8",
+        "r9",
+        "r10",
+        "r11",
+        "r12",
+        "r13",
+        "r14"
+      ],
+      "axis": {
+        "title": null,
+        "labelExpr": "{'r0':'1998','r1':'2000','r2':'2002','r3':'2004','r4':'2006','r5':'2008','r6':'2010','r7':'2012','r8':'2014','r9':'2016','r10':'2018','r11':'2020','r12':'2022','r13':'2024','r14':'2026'}[datum.value]"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#272a59",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#272a59",
+        "size": 55
+      },
+      "transform": [
+        {
+          "filter": "datum.idx != 14"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Kandidátů",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#de1743",
+        "size": 90
+      },
+      "transform": [
+        {
+          "filter": "datum.idx == 14"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Kandidátů",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "dy": -12,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#de1743"
+      },
+      "transform": [
+        {
+          "filter": "datum.idx == 14"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ",.0f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -18,
+        "fontSize": 10,
+        "color": "#999",
+        "fontWeight": "bold"
+      },
+      "transform": [
+        {
+          "filter": "datum.idx == 8"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "vrchol 243"
+        }
+      }
+    }
+  ],
+  "_source": "volby.gov.cz – registry kandidátů SE1996–SE2026, řádné volby"
+}

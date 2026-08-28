@@ -1,0 +1,175 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "ANO: 0 → 7 602"
+  },
+  "width": 600,
+  "height": 200,
+  "data": {
+    "values": [
+      {
+        "idx": 0,
+        "idx_key": "r0",
+        "year": 2002,
+        "v": 0
+      },
+      {
+        "idx": 1,
+        "idx_key": "r1",
+        "year": 2006,
+        "v": 0
+      },
+      {
+        "idx": 2,
+        "idx_key": "r2",
+        "year": 2010,
+        "v": 0
+      },
+      {
+        "idx": 3,
+        "idx_key": "r3",
+        "year": 2014,
+        "v": 8744
+      },
+      {
+        "idx": 4,
+        "idx_key": "r4",
+        "year": 2018,
+        "v": 8576
+      },
+      {
+        "idx": 5,
+        "idx_key": "r5",
+        "year": 2022,
+        "v": 6237
+      },
+      {
+        "idx": 6,
+        "idx_key": "r6",
+        "year": 2026,
+        "v": 7602
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "idx_key",
+      "type": "ordinal",
+      "sort": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "axis": {
+        "title": null,
+        "labels": false,
+        "ticks": false,
+        "labelExpr": "{'r0':'2002','r1':'2006','r2':'2010','r3':'2014','r4':'2018','r5':'2022','r6':'2026'}[datum.value]"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#272a59",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              27391.100000000002
+            ]
+          },
+          "axis": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#272a59",
+        "size": 30
+      },
+      "transform": [
+        {
+          "filter": "datum.idx != 6"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              27391.100000000002
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Kandidátů",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#de1743",
+        "size": 55
+      },
+      "transform": [
+        {
+          "filter": "datum.idx == 6"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              27391.100000000002
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Kandidátů",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ]
+}

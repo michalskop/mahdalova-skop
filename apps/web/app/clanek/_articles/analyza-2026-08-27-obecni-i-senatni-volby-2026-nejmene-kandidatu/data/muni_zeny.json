@@ -1,0 +1,205 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Podíl žen mezi komunálními kandidáty roste už přes dvacet let",
+    "subtitle": "Podíl žen mezi kandidáty (%), řádné volby"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "idx": 0,
+        "idx_key": "r0",
+        "year": 2002,
+        "v": 27.8
+      },
+      {
+        "idx": 1,
+        "idx_key": "r1",
+        "year": 2006,
+        "v": 30.0
+      },
+      {
+        "idx": 2,
+        "idx_key": "r2",
+        "year": 2010,
+        "v": 31.6
+      },
+      {
+        "idx": 3,
+        "idx_key": "r3",
+        "year": 2014,
+        "v": 32.7
+      },
+      {
+        "idx": 4,
+        "idx_key": "r4",
+        "year": 2018,
+        "v": 33.3
+      },
+      {
+        "idx": 5,
+        "idx_key": "r5",
+        "year": 2022,
+        "v": 33.8
+      },
+      {
+        "idx": 6,
+        "idx_key": "r6",
+        "year": 2026,
+        "v": 35.0
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "idx_key",
+      "type": "ordinal",
+      "sort": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "axis": {
+        "title": null,
+        "labelExpr": "{'r0':'2002','r1':'2006','r2':'2010','r3':'2014','r4':'2018','r5':'2022','r6':'2026'}[datum.value]"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#272a59",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#272a59",
+        "size": 55
+      },
+      "transform": [
+        {
+          "filter": "datum.idx != 6"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl žen",
+            "format": ",.1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#de1743",
+        "size": 90
+      },
+      "transform": [
+        {
+          "filter": "datum.idx == 6"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl žen",
+            "format": ",.1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "dy": -12,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#de1743"
+      },
+      "transform": [
+        {
+          "filter": "datum.idx == 6"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          }
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ",.1f"
+        }
+      }
+    }
+  ],
+  "_source": "volby.gov.cz – registry kandidátů KV2002–KV2026; pohlaví odhadnuto ze jména"
+}

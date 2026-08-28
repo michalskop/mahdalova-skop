@@ -1,0 +1,14 @@
+label: Klíčová čísla
+numbers:
+  - value: "190 174"
+    title: Komunálních kandidátů 2026
+    description: Nejméně od roku 2002, kdy začínají srovnatelná data. Vrchol byl v roce 2014, 233 877 kandidátů.
+    color: brand
+  - value: "154"
+    title: Senátních kandidátů 2026
+    description: Nejméně od roku 2000. Nižší byl jen rok 1998 – teprve druhé volby v historii Senátu.
+    color: brandNavy
+  - value: "16"
+    title: Řádné senátní volby
+    description: Senátoři a senátorky se volí pravidelně od roku 1996, obvykle po třetinách obvodů jednou za dva roky. 2026 je v pořadí šestnáctá taková volba.
+    color: brandOrange

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    width: 1200px; height: 630px;
+    background: #fdfbf7;
+    font-family: 'Roboto Slab', Georgia, serif;
+    overflow: hidden;
+  }
+  .topbar {
+    position: absolute; top: 0; left: 0; width: 1200px; height: 10px;
+    background: #de1743;
+  }
+  .eyebrow {
+    position: absolute; top: 46px; left: 70px;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #de1743;
+  }
+  .headline {
+    position: absolute; top: 100px; left: 70px; width: 570px;
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: 66px;
+    line-height: 1.14;
+    color: #1a1a1a;
+  }
+  .caption {
+    position: absolute; top: 350px; left: 70px; width: 540px;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 1.55;
+    color: #55524a;
+  }
+  .caption b { color: #de1743; font-weight: 700; }
+  .logo-row {
+    position: absolute; top: 44px; right: 70px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-row svg { width: 32px; height: 32px; }
+  .logo-row span {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1a1a1a;
+  }
+  .chart-wrap { position: absolute; top: 0; left: 0; width: 1200px; height: 630px; }
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+
+  <div class="eyebrow">Volby 2026</div>
+
+  <div class="headline">Nejméně kandidujících<br>za víc než 20 let</div>
+
+  <div class="caption">Komunální: <b>190 174</b> kandidujících.<br>Senátní: <b>154</b> kandidujících.</div>
+
+  <div class="logo-row">
+    <svg viewBox="112 112 276 276" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g1" x1="1" x2="0.25" y1="0.5" y2="1">
+          <stop offset="0%" stop-color="#ffdc33" stop-opacity="0" />
+          <stop offset="50%" stop-color="#ffdc33" stop-opacity="0" />
+          <stop offset="50%" stop-color="#ffdc33" stop-opacity="1" />
+          <stop offset="100%" stop-color="#ffdc33" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+      <g transform="rotate(-30 250 250)">
+        <path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+        <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
+        <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>
+        <path fill="none" stroke="url(#g1)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+      </g>
+    </svg>
+    <span>mahdalova-skop.cz</span>
+  </div>
+
+  <div class="chart-wrap">
+    <svg width="1200" height="630" viewBox="0 0 1200 630">
+      <!-- faint reference gridlines -->
+      <line x1="660" y1="230" x2="1130" y2="230" stroke="#e2ddcf" stroke-width="1.5" />
+      <line x1="660" y1="480" x2="1130" y2="480" stroke="#1a1a1a" stroke-width="2" />
+
+      <!-- simplified line: municipal candidate count 2002-2026, one series.
+           Scaled against a wider value range than the data's own min/max
+           (90k-330k vs the actual 190k-234k) so the ~19% real-world swing
+           reads as the modest wave it is, not an exaggerated peak. -->
+      <path d="M 660.0,326.5 L 738.3,316.2 L 816.7,283.9 L 895.0,274.2 L 973.3,296.6 L 1051.7,323.8 L 1130.0,330.6"
+            fill="none" stroke="#272a59" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+
+      <!-- endpoint: 2026, lowest since 2002 -->
+      <circle cx="1130" cy="330.6" r="12" fill="#de1743" />
+    </svg>
+  </div>
+</body>
+</html>
