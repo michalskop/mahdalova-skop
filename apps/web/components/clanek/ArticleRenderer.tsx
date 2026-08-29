@@ -29,7 +29,7 @@ import { Gauge } from '@repo/ui/components/Gauge';
 import { PhotoGallery } from '@repo/ui/components/PhotoGallery';
 import type { GalleryImage } from '@repo/ui/components/PhotoGallery';
 import type { Article } from '@repo/ui/lib/getArticles';
-import { ibmPlexSerif } from '@/app/fonts';
+import { ibmPlexSans, ibmPlexSerif } from '@/app/fonts';
 // import yaml from 'js-yaml';
 
 // Experimental: articles listed here render their body in IBM Plex Serif
@@ -85,6 +85,12 @@ export function ArticleRenderer({
         '--mantine-font-family': ibmPlexSerif.style.fontFamily,
         '--mantine-font-family-headings': ibmPlexSerif.style.fontFamily,
       } as React.CSSProperties)
+    : {};
+
+  // For the IBM Plex experiment, the main article title (H1) uses IBM Plex Sans
+  // (sans-serif) at weight 500, contrasting with the IBM Plex Serif body.
+  const titleFontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
+    ? { fontFamily: ibmPlexSans.style.fontFamily }
     : {};
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
@@ -445,6 +451,7 @@ export function ArticleRenderer({
             size="h1"
             fw={500}
             c={textColor}
+            style={titleFontOverride}
             styles={{
               root: {
                 color: textColor || theme.colors.brand[6],

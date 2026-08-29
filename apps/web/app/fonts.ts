@@ -3,7 +3,7 @@
 // instance (and its generated @font-face) is shared between the root
 // layout (which exposes --font-roboto-slab on <body>) and ThemeProvider
 // (which feeds Mantine's default theme.fontFamily).
-import { IBM_Plex_Serif, Roboto_Condensed, Roboto_Slab } from 'next/font/google';
+import { IBM_Plex_Sans, IBM_Plex_Serif, Roboto_Condensed, Roboto_Slab } from 'next/font/google';
 
 export const robotoSlab = Roboto_Slab({
   subsets: ['latin'],
@@ -17,6 +17,14 @@ export const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ['latin', 'latin-ext'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-ibm-plex-serif',
+});
+
+// IBM Plex Sans – experimental article title font (paired with the Serif body
+// above). Currently scoped to a single article's H1 for a visual preview.
+export const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex-sans',
 });
 
 // dpbp chart/map body copy (axis labels, captions, footers) uses Roboto Condensed –
