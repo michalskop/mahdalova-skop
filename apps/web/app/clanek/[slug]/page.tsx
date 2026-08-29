@@ -139,7 +139,7 @@ export default async function ArticlePage({ params }: PageProps) {
         </Box>
         <Container
           size="md"
-          maw="928px"
+          maw="800px"
           w="100%"
           px={0}
           my="lg"
@@ -150,7 +150,7 @@ export default async function ArticlePage({ params }: PageProps) {
               size="md" 
               // py="xl"
               bg="background.2"
-              maw="928px"
+              maw="800px"
               w="100%"
               p={0}
               m="0 auto"
@@ -161,7 +161,7 @@ export default async function ArticlePage({ params }: PageProps) {
               size="md" 
               // py="xl"
               bg="background.2"
-              maw="928px"
+              maw="800px"
               w="100%"
               p={0}
               m="0 auto"

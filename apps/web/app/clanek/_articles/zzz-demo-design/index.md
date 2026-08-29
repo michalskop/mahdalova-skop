@@ -67,10 +67,14 @@ This paragraph is hidden on load. Place `<!-- more -->` on its own line to fold 
 
 The font is set globally by `ThemeProvider` – do **not** set `fontFamily` on individual components.
 
-| App | Font | Weights |
-|-----|------|---------|
-| `apps/web` | Roboto Slab (serif) | 400, 500, 600, 700 |
-| `apps/datajournalism.studio` | Work Sans (sans-serif) | 400, 500, 600, 700 |
+| App | Body font | Heading font | Weights |
+|-----|-----------|--------------|---------|
+| `apps/web` | IBM Plex Serif | IBM Plex Sans | 400, 500, 600, 700 |
+| `apps/datajournalism.studio` | Work Sans | Work Sans | 400, 500, 600, 700 |
+
+On `apps/web` the body is serif and all headings (H1–H6) are sans-serif. The
+article hero title (H1) is IBM Plex Sans 600, responsive `2.625rem`/`2rem`
+(breakpoint 768px). Body copy renders at **17px**.
 
 ### Heading scale (rendered)
 
@@ -80,7 +84,7 @@ The font is set globally by `ThemeProvider` – do **not** set `fontFamily` on i
 
 #### H4 – Minor heading
 
-Regular body text. Used at `md` (16px) base size with Mantine's default line-height.
+Regular body text. Rendered at **17px** (`1.0625rem`) in articles, IBM Plex Serif, weight 400.
 
 ---
 
@@ -121,7 +125,7 @@ Container sizes: `size="md"` for article content, `size="lg"` for article grids.
 
 | | `apps/web` | `apps/datajournalism.studio` |
 |-|------------|------------------------------|
-| Font | Roboto Slab (serif) | Work Sans (sans-serif) |
+| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | Work Sans (sans-serif) |
 | Article path | `/clanek/[slug]` | `/a/[slug]` |
 | Articles dir | `app/clanek/_articles/` | `app/a/_articles/` |
 | Matomo siteId | `4` | `5` |

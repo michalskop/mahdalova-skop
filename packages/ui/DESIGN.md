@@ -7,12 +7,31 @@ All shared components live in `packages/ui/src/`. Both apps consume them via `@r
 
 ## Typography
 
-| App | Font | Weights |
-|-----|------|---------|
-| `apps/web` | Roboto Slab (serif) | 400, 500, 600, 700 |
-| `apps/datajournalism.studio` | Work Sans (sans-serif) | 400, 500, 600, 700 |
+| App | Body font | Heading font | Weights |
+|-----|-----------|--------------|---------|
+| `apps/web` | **IBM Plex Serif** | **IBM Plex Sans** | 400, 500, 600, 700 |
+| `apps/datajournalism.studio` | Work Sans (sans-serif) | Work Sans | 400, 500, 600, 700 |
 
-Font is set globally via `ThemeProvider` in each app. Do not set `fontFamily` on individual components – it inherits automatically.
+Fonts are set globally via `ThemeProvider` in each app (`theme.fontFamily` = body,
+`theme.headings.fontFamily` = headings). The webfonts are declared once in
+`apps/web/app/fonts.ts` (`next/font/google`, subsets `latin` + `latin-ext` for
+Czech diacritics). **Do not set `fontFamily` on individual components** – it
+inherits automatically. On `apps/web`, body copy is serif and every Mantine
+`Title` (all heading levels) is sans-serif.
+
+### Article layout (`apps/web`)
+
+Applied to every article via `ArticleRenderer` (both `/clanek/*` and
+`/specialy/*`); values live as named constants at the top of
+`apps/web/components/clanek/ArticleRenderer.tsx`.
+
+| Element | Value | Notes |
+|---------|-------|-------|
+| Reading column | `Container maw={800}` (≈736px text) | after The Nerve; blocks under the article (`page.tsx`) also use `maw="800px"` so everything aligns |
+| Hero title (H1) | IBM Plex Sans, weight **600**, **responsive** | `2.625rem` (42px) ≥769px, `2rem` (32px) ≤768px — hard breakpoint at 768px, `line-height: 1.1`. Rule: `.article-hero-title` in `apps/web/app/globals.css` |
+| Section headings (H2) | IBM Plex Sans, Mantine `order={2}` size/weight | colour `brand.6` (crimson) |
+| Sub-headings (H3) | IBM Plex Sans, Mantine `order={3}` size/weight | dark/black (keeps default colour) |
+| Body copy | IBM Plex Serif, **17px** (`1.0625rem`), weight 400 | `size="lg"` line-height retained |
 
 ---
 
@@ -100,7 +119,20 @@ Mantine's default spacing scale is used throughout. Common values:
 | `lg` | 20px | Section gaps |
 | `xl` | 24px | Heading top margin |
 
-Container sizes: `size="md"` for article content, `size="lg"` for article grids.
+Container sizes: article content is capped at `maw={800}` (see Article layout
+above); `size="lg"` for article grids.
+
+---
+
+## RelatedArticles ("Čtěte dál")
+
+The `cards` preset renders as a **framed section**: a cream `background.2`
+(`#f8f6f0`) container with `p="lg"` that underlays the cards. Each card is the
+lighter layer — `background.0` (white `#ffffff`) under the text/excerpt below
+the cover image. The heading keeps `brand.6` (crimson) with a thin
+`background.4` underline so it stays visible on the cream. Other presets
+(`sidebar`, `list`) remain frameless. Card background is chosen by
+`cardBackground` → `cardBgValue()` in `RelatedArticles.tsx`.
 
 ---
 
@@ -627,7 +659,7 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 
 | | `apps/web` | `apps/datajournalism.studio` |
 |-|------------|------------------------------|
-| Font | Roboto Slab (serif) | Work Sans (sans-serif) |
+| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | Work Sans (sans-serif) |
 | Article path | `/clanek/[slug]` | `/a/[slug]` |
 | Articles dir | `app/clanek/_articles/` | `app/a/_articles/` |
 | Matomo siteId | `4` | `5` |

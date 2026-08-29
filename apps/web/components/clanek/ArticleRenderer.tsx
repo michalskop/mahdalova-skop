@@ -29,16 +29,15 @@ import { Gauge } from '@repo/ui/components/Gauge';
 import { PhotoGallery } from '@repo/ui/components/PhotoGallery';
 import type { GalleryImage } from '@repo/ui/components/PhotoGallery';
 import type { Article } from '@repo/ui/lib/getArticles';
-import { ibmPlexSans, ibmPlexSerif } from '@/app/fonts';
 // import yaml from 'js-yaml';
 
-// Experimental: articles listed here render their body in IBM Plex Serif
-// instead of the site default (Roboto Slab). Scoped preview before deciding
-// whether to switch the whole site over. Only the font-family changes –
-// sizes and colours are untouched.
-const IBM_PLEX_SERIF_SLUGS = new Set<string>([
-  'analyza-2026-08-23-pricovy-politicka-setkani',
-]);
+// Article layout constants (see packages/ui/DESIGN.md → Article layout).
+// Fonts themselves come from the theme (IBM Plex Serif body / IBM Plex Sans
+// headings, set in ThemeProvider). These control the reading column and text
+// sizing, applied to every article.
+const ARTICLE_MAX_WIDTH = 800;            // reading column width (px)
+const ARTICLE_BODY_FONT_SIZE = '1.0625rem'; // body copy = 17px
+const ARTICLE_TITLE_WEIGHT = 600;         // H1 weight (IBM Plex Sans SemiBold)
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -71,35 +70,6 @@ export function ArticleRenderer({
 }: ArticleProps) {
 
   const theme = useMantineTheme();
-
-  // IBM Plex experiment: body copy is IBM Plex Serif (weight 400, default),
-  // while all headings are IBM Plex Sans. Set on the article wrapper so it
-  // cascades to every Mantine component inside; sizes, weights and colours
-  // stay exactly as configured elsewhere.
-  const fontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
-    ? ({
-        // Direct value so body copy (which just inherits font-family from
-        // <body>) picks it up; the plain --mantine-font-family variable backs
-        // components that re-evaluate it. Headings use their own variable →
-        // IBM Plex Sans, so H2/H3 (and the main H1) render sans-serif.
-        fontFamily: ibmPlexSerif.style.fontFamily,
-        '--mantine-font-family': ibmPlexSerif.style.fontFamily,
-        '--mantine-font-family-headings': ibmPlexSans.style.fontFamily,
-      } as React.CSSProperties)
-    : {};
-
-  // The main article title (H1) uses IBM Plex Sans; its weight (600) is set on
-  // the Title's fw prop below. (Headings already resolve to Sans via the
-  // variable above, but the H1 sets it explicitly to be independent of it.)
-  const titleFontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
-    ? ({ fontFamily: ibmPlexSans.style.fontFamily } as React.CSSProperties)
-    : {};
-
-  // Body copy a touch smaller for the IBM Plex experiment: 17px (1.0625rem)
-  // instead of the site default 18px (Mantine size="lg"). A gentle −1px – The
-  // Nerve sits at 16px, we deliberately stop halfway. Line-height stays from
-  // size="lg". Other articles keep 18px (undefined → no override).
-  const bodyFontSize = IBM_PLEX_SERIF_SLUGS.has(slug) ? '1.0625rem' : undefined;
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
     if (typeof spec !== 'string') return undefined;
@@ -301,7 +271,7 @@ export function ArticleRenderer({
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md" size="lg" fz={bodyFontSize} c={textColor}>
+      <Text component="div" mb="md" size="lg" fz={ARTICLE_BODY_FONT_SIZE} c={textColor}>
         {children}
       </Text>
     ),
@@ -445,7 +415,6 @@ export function ArticleRenderer({
       pt="xl"
       className='markdown-content'
       c="gray.8"
-      style={fontOverride}
       styles={{
         root: {
           backgroundColor: backgroundColor || theme.colors.background[1],
@@ -457,18 +426,15 @@ export function ArticleRenderer({
           <Title
             order={1}
             size="h1"
-            fw={IBM_PLEX_SERIF_SLUGS.has(slug) ? 600 : 500}
+            fw={ARTICLE_TITLE_WEIGHT}
             c={textColor}
-            style={titleFontOverride}
-            className={IBM_PLEX_SERIF_SLUGS.has(slug) ? 'article-hero-title' : undefined}
+            className="article-hero-title"
             styles={{
               root: {
                 color: textColor || theme.colors.brand[6],
-                // Default articles keep the fixed 2.75rem. For the IBM Plex
-                // experiment the size is responsive via .article-hero-title in
-                // globals.css, so no inline size here (inline would beat the
-                // media query).
-                ...(IBM_PLEX_SERIF_SLUGS.has(slug) ? {} : { fontSize: '2.75rem' }),
+                // Size is responsive via .article-hero-title in globals.css
+                // (2.625rem ≥769px / 2rem ≤768px); no inline fontSize here –
+                // inline would beat the media query.
               }
             }}
           >
@@ -504,10 +470,9 @@ export function ArticleRenderer({
   return withContainer ? (
     <Container
       size="md"
-      // IBM Plex experiment: narrower reading column (800px) after The Nerve,
-      // vs. the site default of Container size="md" (960px). Text ends up
-      // ~768px wide after the Paper padding. Other articles keep 960px.
-      maw={IBM_PLEX_SERIF_SLUGS.has(slug) ? 800 : undefined}
+      // Narrower reading column (800px) after The Nerve, vs. Mantine size="md"
+      // (960px). Text ends up ~736px wide after the container + Paper padding.
+      maw={ARTICLE_MAX_WIDTH}
       pb="lg"
       className="article-links"
       style={{

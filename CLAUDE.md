@@ -82,7 +82,7 @@ Data for `ScrollyTelling`, `Timeline`, `MotionsStancesTable`, and `RelatedArticl
 
 - `apps/*/components/clanek/ArticleRenderer.tsx` (or `a/` in DJS) – client component that renders the serialised MDX, defines all MDX component mappings and custom renderers for standard HTML elements
 - `apps/*/app/clanek/[slug]/page.tsx` – server component that calls `getArticleBySlug()`, generates metadata, and renders `<ArticleRenderer>`
-- `apps/*/app/providers/ThemeProvider.tsx` – sets up `MantineProvider` with the app-specific font (Roboto Slab for web, Work Sans for DJS) and the full colour token palette
+- `apps/*/app/providers/ThemeProvider.tsx` – sets up `MantineProvider` with the app-specific fonts (web: IBM Plex Serif body + IBM Plex Sans headings; DJS: Work Sans) and the full colour token palette
 
 ### Key app differences
 
@@ -90,7 +90,7 @@ Data for `ScrollyTelling`, `Timeline`, `MotionsStancesTable`, and `RelatedArticl
 |-|------------|------------------------------|
 | Article path | `/clanek/[slug]` | `/a/[slug]` |
 | Articles dir | `app/clanek/_articles/` | `app/a/_articles/` |
-| Font | Roboto Slab (serif) | Work Sans (sans-serif) |
+| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | Work Sans (sans-serif) |
 | Date locale | `cs-CZ` | `en-US` |
 | Matomo siteId | `4` | `5` |
 | Base URL env | `NEXT_PUBLIC_BASE_URL` defaults to `https://www.mahdalova-skop.cz` | defaults to `https://www.datajournalism.studio` |

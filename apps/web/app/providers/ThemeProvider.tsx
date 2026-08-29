@@ -2,14 +2,17 @@
 'use client';
 
 import { MantineProvider } from '@mantine/core';
-import { robotoSlab } from '../fonts';
+import { ibmPlexSans, ibmPlexSerif } from '../fonts';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: robotoSlab.style.fontFamily,
+        // Site-wide typography: IBM Plex Serif for body copy, IBM Plex Sans for
+        // all headings (Mantine Title). See packages/ui/DESIGN.md → Typography.
+        fontFamily: ibmPlexSerif.style.fontFamily,
+        headings: { fontFamily: ibmPlexSans.style.fontFamily },
         colors: {
           // PRIMARY – crimson red. Use for: links, headings, tag badges, primary
           // buttons, Arrow component, section titles, InfoBox 'error' border.

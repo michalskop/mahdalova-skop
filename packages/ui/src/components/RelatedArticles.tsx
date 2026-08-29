@@ -153,7 +153,10 @@ function useFilterColor(filter: string | string[] | undefined): string {
 }
 
 function cardBgValue(bg: CardBg): string {
-  if (bg === 'white') return 'background.2';
+  // Cards sit as the lighter layer on top of the section frame: pure white for
+  // the text/excerpt area under the cover image, cream one step down for the
+  // 'cream' variant. See packages/ui/DESIGN.md → RelatedArticles.
+  if (bg === 'white') return 'background.0';
   if (bg === 'cream') return 'background.1';
   return 'transparent';
 }
@@ -389,15 +392,25 @@ export function RelatedArticles({
 
   if (displayed.length === 0) return null;
 
+  // 'cards' renders as a framed section: a cream (#f8f6f0) container that
+  // underlays the lighter (white) cards. Other presets stay frameless.
+  const framed = preset === 'cards';
+
   return (
-    <Box my="xl" className={floatClass}>
+    <Box
+      my="xl"
+      className={floatClass}
+      bg={framed ? 'background.2' : undefined}
+      p={framed ? 'lg' : undefined}
+      style={framed ? { borderRadius: 10 } : undefined}
+    >
       {effectiveHeading && (
         <Title
           order={3}
           c="brand.6"
           mb="xs"
           pb="xs"
-          style={{ borderBottom: `2px solid ${theme.colors.background[2]}` }}
+          style={{ borderBottom: `2px solid ${theme.colors.background[4]}` }}
         >
           {effectiveHeading}
         </Title>

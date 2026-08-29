@@ -106,13 +106,13 @@ export default async function SpecialArticlePage({ params }: PageProps) {
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>
-        <Container size="md" maw="928px" w="100%" px={0} my="lg">
+        <Container size="md" maw="800px" w="100%" px={0} my="lg">
           <FollowBar />
         </Container>
-        <Container size="md" bg="background.2" maw="928px" w="100%" p={0} m="0 auto">
+        <Container size="md" bg="background.2" maw="800px" w="100%" p={0} m="0 auto">
           <ArticleRating />
         </Container>
-        <Container size="md" bg="background.2" maw="928px" w="100%" p={0} m="0 auto">
+        <Container size="md" bg="background.2" maw="800px" w="100%" p={0} m="0 auto">
           <SubscribeNewsletter
             actionUrl="https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088"
             position="center"
