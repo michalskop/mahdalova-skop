@@ -72,34 +72,28 @@ export function ArticleRenderer({
 
   const theme = useMantineTheme();
 
-  // When this article opts into the IBM Plex Serif experiment, override the
-  // Mantine font-family CSS variables on the article wrapper. They cascade to
-  // every Mantine component inside (Title, Text, Anchor…), so the font swaps
-  // while all sizes and colours stay exactly as configured elsewhere.
+  // IBM Plex experiment: body copy is IBM Plex Serif (weight 400, default),
+  // while all headings are IBM Plex Sans. Set on the article wrapper so it
+  // cascades to every Mantine component inside; sizes, weights and colours
+  // stay exactly as configured elsewhere.
   const fontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
     ? ({
         // Direct value so body copy (which just inherits font-family from
-        // <body>) picks it up, plus the Mantine CSS variables so components
-        // that re-evaluate them (Title uses the headings one) switch too.
+        // <body>) picks it up; the plain --mantine-font-family variable backs
+        // components that re-evaluate it. Headings use their own variable →
+        // IBM Plex Sans, so H2/H3 (and the main H1) render sans-serif.
         fontFamily: ibmPlexSerif.style.fontFamily,
         '--mantine-font-family': ibmPlexSerif.style.fontFamily,
-        '--mantine-font-family-headings': ibmPlexSerif.style.fontFamily,
-        // Body copy a touch heavier: real IBM Plex Serif 500 (Medium) face –
-        // crisp, no synthetic thickening. Inherited by all body text.
-        fontWeight: 500,
+        '--mantine-font-family-headings': ibmPlexSans.style.fontFamily,
       } as React.CSSProperties)
     : {};
 
-  // For the IBM Plex experiment, the main article title (H1) uses IBM Plex Sans
-  // (sans-serif); its weight (600) is set on the Title's fw prop below.
+  // The main article title (H1) uses IBM Plex Sans; its weight (600) is set on
+  // the Title's fw prop below. (Headings already resolve to Sans via the
+  // variable above, but the H1 sets it explicitly to be independent of it.)
   const titleFontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
     ? ({ fontFamily: ibmPlexSans.style.fontFamily } as React.CSSProperties)
     : {};
-
-  // Mantine <Text> (the paragraph renderer) forces its own font-weight, so the
-  // wrapper's inherited 500 doesn't reach it – set it directly. Plain block
-  // elements (li, td, blockquote…) inherit 500 from the wrapper already.
-  const bodyTextWeight = IBM_PLEX_SERIF_SLUGS.has(slug) ? 500 : undefined;
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
     if (typeof spec !== 'string') return undefined;
@@ -301,7 +295,7 @@ export function ArticleRenderer({
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md" size="lg" c={textColor} fw={bodyTextWeight}>
+      <Text component="div" mb="md" size="lg" c={textColor}>
         {children}
       </Text>
     ),
