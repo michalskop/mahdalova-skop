@@ -454,10 +454,15 @@ export function ArticleRenderer({
             fw={IBM_PLEX_SERIF_SLUGS.has(slug) ? 600 : 500}
             c={textColor}
             style={titleFontOverride}
+            className={IBM_PLEX_SERIF_SLUGS.has(slug) ? 'article-hero-title' : undefined}
             styles={{
               root: {
                 color: textColor || theme.colors.brand[6],
-                fontSize: '2.75rem',
+                // Default articles keep the fixed 2.75rem. For the IBM Plex
+                // experiment the size is responsive via .article-hero-title in
+                // globals.css, so no inline size here (inline would beat the
+                // media query).
+                ...(IBM_PLEX_SERIF_SLUGS.has(slug) ? {} : { fontSize: '2.75rem' }),
               }
             }}
           >

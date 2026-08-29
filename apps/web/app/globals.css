@@ -24,6 +24,22 @@
   color: var(--mantine-color-brand-5);
 }
 
+/* IBM Plex experiment (Příčovy): responsive hero title sized after The Nerve –
+   a single hard breakpoint at 768px rather than fluid scaling. 2.625rem (42px)
+   from 769px up, 2rem (32px) at 768px and below. Scoped under .article-links so
+   it overrides Mantine's default h1 size; only the size changes (font, weight
+   and colour stay as set on the <Title>). */
+.article-links .article-hero-title {
+  font-size: 2.625rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .article-links .article-hero-title {
+    font-size: 2rem;
+  }
+}
+
 /* Contact block links (ContactsBlock). */
 #kontakty a {
   color: var(--mantine-color-brand-6);
