@@ -504,6 +504,10 @@ export function ArticleRenderer({
   return withContainer ? (
     <Container
       size="md"
+      // IBM Plex experiment: narrower reading column (800px) after The Nerve,
+      // vs. the site default of Container size="md" (960px). Text ends up
+      // ~768px wide after the Paper padding. Other articles keep 960px.
+      maw={IBM_PLEX_SERIF_SLUGS.has(slug) ? 800 : undefined}
       pb="lg"
       className="article-links"
       style={{
