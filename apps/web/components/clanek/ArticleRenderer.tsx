@@ -84,14 +84,22 @@ export function ArticleRenderer({
         fontFamily: ibmPlexSerif.style.fontFamily,
         '--mantine-font-family': ibmPlexSerif.style.fontFamily,
         '--mantine-font-family-headings': ibmPlexSerif.style.fontFamily,
+        // Body copy a touch heavier: real IBM Plex Serif 500 (Medium) face –
+        // crisp, no synthetic thickening. Inherited by all body text.
+        fontWeight: 500,
       } as React.CSSProperties)
     : {};
 
   // For the IBM Plex experiment, the main article title (H1) uses IBM Plex Sans
-  // (sans-serif) at weight 500, contrasting with the IBM Plex Serif body.
+  // (sans-serif); its weight (600) is set on the Title's fw prop below.
   const titleFontOverride: React.CSSProperties = IBM_PLEX_SERIF_SLUGS.has(slug)
-    ? { fontFamily: ibmPlexSans.style.fontFamily }
+    ? ({ fontFamily: ibmPlexSans.style.fontFamily } as React.CSSProperties)
     : {};
+
+  // Mantine <Text> (the paragraph renderer) forces its own font-weight, so the
+  // wrapper's inherited 500 doesn't reach it – set it directly. Plain block
+  // elements (li, td, blockquote…) inherit 500 from the wrapper already.
+  const bodyTextWeight = IBM_PLEX_SERIF_SLUGS.has(slug) ? 500 : undefined;
 
   const resolveThemeColor = (spec: unknown): string | undefined => {
     if (typeof spec !== 'string') return undefined;
@@ -293,7 +301,7 @@ export function ArticleRenderer({
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md" size="lg" c={textColor}>
+      <Text component="div" mb="md" size="lg" c={textColor} fw={bodyTextWeight}>
         {children}
       </Text>
     ),
@@ -449,7 +457,7 @@ export function ArticleRenderer({
           <Title
             order={1}
             size="h1"
-            fw={500}
+            fw={IBM_PLEX_SERIF_SLUGS.has(slug) ? 600 : 500}
             c={textColor}
             style={titleFontOverride}
             styles={{
