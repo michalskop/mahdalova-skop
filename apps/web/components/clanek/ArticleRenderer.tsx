@@ -95,6 +95,12 @@ export function ArticleRenderer({
     ? ({ fontFamily: ibmPlexSans.style.fontFamily } as React.CSSProperties)
     : {};
 
+  // Body copy a touch smaller for the IBM Plex experiment: 17px (1.0625rem)
+  // instead of the site default 18px (Mantine size="lg"). A gentle −1px – The
+  // Nerve sits at 16px, we deliberately stop halfway. Line-height stays from
+  // size="lg". Other articles keep 18px (undefined → no override).
+  const bodyFontSize = IBM_PLEX_SERIF_SLUGS.has(slug) ? '1.0625rem' : undefined;
+
   const resolveThemeColor = (spec: unknown): string | undefined => {
     if (typeof spec !== 'string') return undefined;
     const s = spec.trim();
@@ -295,7 +301,7 @@ export function ArticleRenderer({
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md" size="lg" c={textColor}>
+      <Text component="div" mb="md" size="lg" fz={bodyFontSize} c={textColor}>
         {children}
       </Text>
     ),
