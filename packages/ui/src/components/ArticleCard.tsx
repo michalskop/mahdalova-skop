@@ -61,7 +61,7 @@ function resolvePaletteColor(
   if (!value) return fallback;
   if (value.startsWith('#')) return value;
   const [name, idxRaw] = value.split('.');
-  const scale = (theme.colors as Record<string, string[]>)[name];
+  const scale = (theme.colors as Record<string, readonly string[]>)[name];
   if (!scale) return fallback;
   const idx = idxRaw ? Number.parseInt(idxRaw, 10) : 6;
   return scale[idx] ?? scale[6] ?? fallback;
