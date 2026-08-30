@@ -18,6 +18,7 @@ import Image from 'next/image';
 import { CircleFlag } from 'react-circle-flags';
 import { CSSProperties, useMemo, useState } from 'react';
 import type { TimelineContent, TimelineEvent, TimelineCategory, TimelineFacetGroup } from '@/types/timeline';
+import { fixCzechTypography } from '@/lib/remark-czech-typography';
 
 type TimelineProps = {
   content: TimelineContent;
@@ -272,11 +273,11 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
       <Card withBorder radius={0} p="xl" style={{ background: theme.white, borderColor: borderColor }}>
         <Stack gap={4} align="center">
           <Title order={2} style={{ color: theme.colors.brandNavy?.[9] || theme.colors.dark[9] }}>
-            {content.title || ''}
+            {fixCzechTypography(content.title || '')}
           </Title>
           {content.subtitle ? (
             <Text c="dimmed" size="sm" ta="center">
-              {content.subtitle}
+              {fixCzechTypography(content.subtitle)}
             </Text>
           ) : null}
           {content.lastUpdated ? (
@@ -438,11 +439,11 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                       {formatEventDate(e.date, 'cs-CZ')}
                     </Text>
                     <Text fw={600} style={{ fontSize: 15, lineHeight: 1.3 }}>
-                      {e.title}
+                      {fixCzechTypography(e.title)}
                     </Text>
                     {e.summary ? (
                       <Text size="sm" mt={4} style={{ color: theme.colors.gray[7], lineHeight: 1.45 }}>
-                        {e.summary}
+                        {fixCzechTypography(e.summary)}
                       </Text>
                     ) : null}
                     {e.persons?.length ? (
@@ -571,7 +572,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                             {formatEventDate(e.date, 'cs-CZ')}
                           </Text>
                           <Text fw={600} style={{ fontSize: 15, lineHeight: 1.3 }}>
-                            {e.title}
+                            {fixCzechTypography(e.title)}
                           </Text>
                           {e.summary ? (
                             <Text
@@ -582,7 +583,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                                 lineHeight: 1.45,
                               }}
                             >
-                              {e.summary}
+                              {fixCzechTypography(e.summary)}
                             </Text>
                           ) : null}
                           {e.persons?.length ? (
@@ -655,7 +656,7 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
 
                   <Text style={{ fontSize: 32, marginBottom: 6 }}>{selected.emoji || '📌'}</Text>
                   <Title order={3} style={{ margin: 0, fontWeight: 600, color: theme.white }}>
-                    {selected.title}
+                    {fixCzechTypography(selected.title)}
                   </Title>
                   <Text
                     mt={8}
@@ -708,11 +709,11 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                 {selected.description ? (
                   <Text
                     style={{ fontSize: 14, lineHeight: 1.5, color: theme.colors.brandNavy?.[9] || theme.black }}
-                    dangerouslySetInnerHTML={{ __html: selected.description }}
+                    dangerouslySetInnerHTML={{ __html: fixCzechTypography(selected.description) }}
                   />
                 ) : (
                   <Text style={{ fontSize: 14, lineHeight: 1.5, color: theme.colors.brandNavy?.[9] || theme.black }}>
-                    {selected.summary || ''}
+                    {fixCzechTypography(selected.summary || '')}
                   </Text>
                 )}
               </Box>

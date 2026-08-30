@@ -19,6 +19,17 @@ Czech diacritics). **Do not set `fontFamily` on individual components** – it
 inherits automatically. On `apps/web`, body copy is serif and every Mantine
 `Title` (all heading levels) is sans-serif.
 
+### Czech typography (`apps/web`)
+
+Article text is run through `remarkCzechTypography` (a remark plugin, wired in
+`lib/articles.ts`) at build time, and the hero title through `fixCzechTypography`
+in `ArticleRenderer`. Both live in `packages/ui/src/lib/remark-czech-typography.js`
+and insert non-breaking spaces so that **one-letter prepositions/conjunctions**
+(`k s v z o u a i` + capitals) never end a line, and **brackets** are never
+orphaned at a line edge (`( ` → `(&nbsp;`, ` )` → `&nbsp;)`). Only mdast `text`
+nodes are touched — code, raw HTML and URLs are left alone. These are hard
+rules: never ship copy with a dangling one-letter word or a lone bracket.
+
 ### Article layout (`apps/web`)
 
 Applied to every article via `ArticleRenderer` (both `/clanek/*` and

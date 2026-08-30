@@ -32,6 +32,7 @@
     "./lib/remark-box-plugin": "./src/lib/remark-box-plugin.js",
     "./lib/remark-gallery-plugin": "./src/lib/remark-gallery-plugin.js",
     "./lib/remark-flourish-plugin": "./src/lib/remark-flourish-plugin.js",
+    "./lib/remark-czech-typography": "./src/lib/remark-czech-typography.js",
     "./lib/getArticles": "./src/lib/getArticles.ts",
     "./lib/tagNormalizer": "./src/lib/tagNormalizer.ts",
     "./lib/rss": "./src/lib/rss.ts",

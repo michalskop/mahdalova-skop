@@ -14,6 +14,7 @@ import {
 } from '@mantine/core';
 import type { MantineSize } from '@mantine/core';
 import type { Article } from '../lib/getArticles';
+import { fixCzechTypography } from '../lib/remark-czech-typography';
 import styles from './box.module.css';
 
 type Preset = 'sidebar' | 'cards' | 'list';
@@ -226,14 +227,14 @@ function MiniCard({
   const titleEl = (
     <Anchor href={href} underline="hover" c="inherit" target="_blank" rel="noopener noreferrer">
       <Text fw={600} size={titleSize} lh={1.3}>
-        {article.title}
+        {fixCzechTypography(article.title)}
       </Text>
     </Anchor>
   );
 
   const excerpt = showExcerpt && article.excerpt && (
     <Text size="sm" c="dimmed" lineClamp={3}>
-      {article.excerpt}
+      {fixCzechTypography(article.excerpt)}
     </Text>
   );
 

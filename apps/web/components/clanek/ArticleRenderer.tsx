@@ -29,6 +29,7 @@ import { Gauge } from '@repo/ui/components/Gauge';
 import { PhotoGallery } from '@repo/ui/components/PhotoGallery';
 import type { GalleryImage } from '@repo/ui/components/PhotoGallery';
 import type { Article } from '@repo/ui/lib/getArticles';
+import { fixCzechTypography } from '@/lib/remark-czech-typography';
 // import yaml from 'js-yaml';
 
 // Article layout constants (see packages/ui/DESIGN.md → Article layout).
@@ -438,7 +439,7 @@ export function ArticleRenderer({
               }
             }}
           >
-            {title}
+            {fixCzechTypography(title)}
           </Title>
         )}
 
