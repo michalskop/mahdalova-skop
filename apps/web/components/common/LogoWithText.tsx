@@ -1,4 +1,5 @@
 // app/components/common/LogoWithText.tsx
+// Header name switch breakpoint lives in LogoWithText.module.css (640px).
 
 import { Group, Text, useMantineTheme } from '@mantine/core';
 import Link from 'next/link';

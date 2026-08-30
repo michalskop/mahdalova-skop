@@ -32,6 +32,16 @@
   color: var(--mantine-color-brandNavy-9);
 }
 
+/* Natažený odkaz: titulek je jediný odkaz karty, ale jeho ::after pokryje celou
+   kartu (.card má position: relative), takže na článek vede kliknutí kamkoli –
+   obrázek, perex i prázdné pozadí. */
+.title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .action {
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
 

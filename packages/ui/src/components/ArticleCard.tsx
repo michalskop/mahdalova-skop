@@ -113,9 +113,10 @@ export function ArticleCard({
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
         {/* Náhled 5:4. Podle `fit`: buď se obrázek ořízne (cover), nebo se ukáže
-            celý a okolo se doplní pruh barvy coverBgColor (contain). */}
-        <a
-          {...linkProps}
+            celý a okolo se doplní pruh barvy coverBgColor (contain).
+            Obrázek NENÍ samostatný odkaz – proklik zajišťuje natažený odkaz
+            z titulku (.title::after), takže je klikatelná celá karta. */}
+        <div
           style={{
             display: 'block',
             aspectRatio: '5 / 4',
@@ -136,7 +137,7 @@ export function ArticleCard({
             }}
             style={{ width: '100%', height: '100%', objectFit: fit, display: 'block' }}
           />
-        </a>
+        </div>
       </Card.Section>
 
       {tags.length > 0 && (
@@ -152,7 +153,7 @@ export function ArticleCard({
 
       <Text
         className={classes.title}
-        fw={500}
+        fw={600}
         component="a"
         {...linkProps}
         size='lg'
