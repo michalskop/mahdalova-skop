@@ -4,6 +4,7 @@ date: "2026-01-10"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Je fér říct nahlas, z jakých pozic píšeme"
 coverImage: "images/pf-2026-datatimes.webp"
+coverFit: cover
 filter: ["kontext"]
 tags: ["video", "žurnalistika", "objektivita", "novináři", "demokracie"]
 promoted: 60

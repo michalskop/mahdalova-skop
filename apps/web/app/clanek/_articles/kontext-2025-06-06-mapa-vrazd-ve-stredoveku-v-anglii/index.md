@@ -4,6 +4,7 @@ date: "2025-12-23"
 author: "Kateřina Mahdalová"
 excerpt: "Historická data vědců z Cambridge nám pomáhají pochopit, jak byla vražda ukotvena v rytmu každodenního života. Zmapovali 355 vražd ve třech anglických městech 14. století. Výsledky překvapivě připomínají to, co víme o násilí v dnešních metropolích – a zároveň odhalují jeden zásadní rozdíl."
 coverImage: "images/murder-of-cain.webp"
+coverFit: cover
 filter: ["kontext"]
 tags: ["historická data", "mapy", "historie", "kriminalita", "středověk", "výzkum"]
 promoted: 72

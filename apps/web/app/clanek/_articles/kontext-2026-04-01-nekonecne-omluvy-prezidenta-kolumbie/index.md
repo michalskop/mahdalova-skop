@@ -4,6 +4,7 @@ date: "2026-04-01"
 author: "Michal Škop, Kateřina Mahdalová"
 excerpt: "Gustavo Petro, prezident a šéf vlády Kolumbie, se musel již 19× omlouvat z rozhodnutí soudu."
 coverImage: "images/kolumbie-gustavo-petro-nekonecne-omluvy-datatimes-00.webp"
+coverFit: cover
 filter: ["kontext"]
 tags: ["politika", "soudy", "Kolumbie"]
 promoted: 33

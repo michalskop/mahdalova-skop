@@ -10,6 +10,11 @@ export interface Article {
   author: string;
   slug: string;
   coverImage: string | null;
+  /** Barva pruhů kolem náhledu (poměr 5:4), když obrázek není 5:4. Token palety
+   * "scale.index" (např. "brandNavy.9") nebo hex. Viz ArticleCard. */
+  coverBg?: string;
+  /** Chování náhledu: 'cover' (ořez), 'contain' (celý + pruhy), 'auto' (dle poměru). */
+  coverFit?: 'cover' | 'contain' | 'auto';
   filter?: string | string[];
   tags: string[];
   promoted?: number;
@@ -96,6 +101,8 @@ export async function getArticles({
           author: data.author || 'Anonymous',
           slug: folder,
           coverImage,
+          coverBg: data.coverBg ?? undefined,
+          coverFit: data.coverFit ?? undefined,
           filter: data.filter || [],
           tags: data.tags || [],
           promoted: data.promoted || 0,

@@ -4,6 +4,7 @@ date: "2026-08-23"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Lidé spojení s vlasteneckým setkáním na zámku v Příčovech ho označují za nepolitické, alespoň ve stranickém smyslu. Za osm ročníků se ale na jeho pódiu vystřídali předsedové stran, poslanci, europoslanci, bývalí ministři – a letos i předseda Sněmovny. Kdo tam jezdí a jaké proudy se tu potkávají."
 coverImage: "images/main.jpg"
+coverFit: cover
 filter: ["analýza"]
 tags: ["Příčovy", "vlastenectví", "nacionalismus", "SPD", "dezinformace", "Svatopluk", "dezinfoscéna"]
 promoted: 60
