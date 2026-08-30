@@ -217,7 +217,7 @@ function MiniCard({
   );
 
   const dateText = (showDate || showReadingTime) && (
-    <Text size="xs" c="dimmed">
+    <Text size="xs" c="brandNavy.9">
       {showDate && new Date(article.date).toLocaleDateString(locale)}
       {showDate && showReadingTime && article.readingTime ? ' · ' : ''}
       {showReadingTime && article.readingTime ? `${article.readingTime} min` : ''}
@@ -233,13 +233,13 @@ function MiniCard({
   );
 
   const excerpt = showExcerpt && article.excerpt && (
-    <Text size="sm" c="dimmed" lineClamp={3}>
+    <Text size="sm" c="brandNavy.9" lineClamp={3}>
       {fixCzechTypography(article.excerpt)}
     </Text>
   );
 
   const authorText = showAuthor && article.author && (
-    <Text size="xs" c="dimmed">
+    <Text size="xs" c="brandNavy.9">
       {article.author}
     </Text>
   );

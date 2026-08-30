@@ -415,7 +415,7 @@ export function ArticleRenderer({
       p="md"
       pt="xl"
       className='markdown-content'
-      c="gray.8"
+      c="brandNavy.9"
       styles={{
         root: {
           backgroundColor: backgroundColor || theme.colors.background[1],

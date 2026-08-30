@@ -40,9 +40,17 @@ Applied to every article via `ArticleRenderer` (both `/clanek/*` and
 |---------|-------|-------|
 | Reading column | `Container maw={800}` (≈736px text) | after The Nerve; blocks under the article (`page.tsx`) also use `maw="800px"` so everything aligns |
 | Hero title (H1) | IBM Plex Sans, weight **600**, **responsive** | `2.625rem` (42px) ≥769px, `2rem` (32px) ≤768px — hard breakpoint at 768px, `line-height: 1.1`. Rule: `.article-hero-title` in `apps/web/app/globals.css` |
-| Section headings (H2) | IBM Plex Sans, Mantine `order={2}` size/weight | colour `brand.6` (crimson) |
-| Sub-headings (H3) | IBM Plex Sans, Mantine `order={3}` size/weight | dark/black (keeps default colour) |
-| Body copy | IBM Plex Serif, **17px** (`1.0625rem`), weight 400 | `size="lg"` line-height retained |
+| Section headings (H2) | IBM Plex Sans, colour `brand.6` (crimson) | **responsive**: 1.625rem (26px) desktop, **1.375rem (22px) ≤768px** |
+| Sub-headings (H3) | IBM Plex Sans, colour `brandNavy.9` (ink) | **responsive**: 1.375rem (22px) desktop, **1.125rem (18px) ≤768px** |
+| Body copy | IBM Plex Serif, **17px** (`1.0625rem`), weight 400 | `size="lg"` line-height; colour `brandNavy.9` |
+
+**Text colour:** body copy, sub-headings, card titles, excerpts and dates use
+`brandNavy.9` (**#101432**, "ink blue") instead of Mantine's off-palette gray /
+`dimmed`. Only the crimson H1/H2 keep `brand.6`.
+
+**Article/card titles are sans-serif** (`--mantine-font-family-headings`). Card
+titles (`ArticleCard`) are container-responsive (md→lg→xl by card width); H1/H2/H3
+use the 768px breakpoint above.
 
 ---
 

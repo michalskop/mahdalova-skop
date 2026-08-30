@@ -79,7 +79,7 @@ export function ArticleCard({
         {title}
       </Text>
 
-      <Text fz="sm" c="dimmed" lineClamp={4}>
+      <Text fz="sm" c="brandNavy.9" lineClamp={4}>
         {excerpt}
       </Text>
 
@@ -89,7 +89,7 @@ export function ArticleCard({
             <Text
               fz="sm"
               inline
-              c="dimmed"
+              c="brandNavy.9"
             >
               {new Date(date).toLocaleDateString(locale)}
             </Text>

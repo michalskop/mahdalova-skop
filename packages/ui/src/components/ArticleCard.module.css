@@ -23,9 +23,13 @@
   display: block;
   margin-top: var(--mantine-spacing-md);
   margin-bottom: rem(5px);
+  /* Sans-serif headings font (IBM Plex Sans on web), matching article titles.
+     Size is already responsive via the container queries below. */
+  font-family: var(--mantine-font-family-headings);
   font-size: var(--mantine-font-size-md);
   line-height: 1.5;
-  color: var(--mantine-color-gray-8);
+  /* Ink blue (brandNavy.9 #101432) instead of the off-palette Mantine gray. */
+  color: var(--mantine-color-brandNavy-9);
 }
 
 .action {
