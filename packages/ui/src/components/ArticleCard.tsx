@@ -8,7 +8,7 @@ import {
   Center,
   useMantineTheme,
 } from '@mantine/core';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import classes from './ArticleCard.module.css';
 
 // Cílový poměr náhledu 5:4 a max. ořez, který ještě necháme „na plno“ (cover).
@@ -84,11 +84,22 @@ export function ArticleCard({
   const theme = useMantineTheme();
   const coverBgColor = resolvePaletteColor(theme, coverBg, '#ffffff');
 
-  // U 'auto' se rozhodne až po načtení obrázku podle jeho skutečného poměru;
-  // 'cover'/'contain' jsou pevně dané autorem.
+  // U 'auto' se rozhodne podle skutečného poměru obrázku; 'cover'/'contain'
+  // jsou pevně dané autorem.
   const [autoFit, setAutoFit] = useState<'cover' | 'contain'>('cover');
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const fit: 'cover' | 'contain' =
     coverFit === 'cover' || coverFit === 'contain' ? coverFit : autoFit;
+
+  // Po mountu změř obrázek i pro případ, že se načetl z cache dřív, než stihl
+  // proběhnout onLoad (jinak by u těchto obrázků zůstalo defaultní 'cover').
+  useEffect(() => {
+    if (coverFit !== 'auto') return;
+    const el = imgRef.current;
+    if (el && el.naturalWidth && el.naturalHeight) {
+      setAutoFit(fitFor(el.naturalWidth, el.naturalHeight));
+    }
+  }, [coverImage, coverFit]);
   const normalizedBasePath = (() => {
     const base = articleBasePath?.trim() || '';
     if (!base) return '';
@@ -113,6 +124,7 @@ export function ArticleCard({
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
+            ref={imgRef}
             src={coverImage || '/placeholder-image.svg'}
             alt={title}
             loading="lazy"

@@ -12,6 +12,15 @@
   display: grid;
   gap: var(--mantine-spacing-md);
   grid-template-columns: 1fr;
+  /* Odsazení od okrajů sekce, ať je kolem karet vidět barva pozadí (dle The Nerve)
+     – karty se nedotýkají okrajů displeje ani sebe navzájem. */
+  padding-inline: var(--mantine-spacing-md);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    gap: var(--mantine-spacing-lg);
+  }
 }
 
 @media (min-width: 500px) {
