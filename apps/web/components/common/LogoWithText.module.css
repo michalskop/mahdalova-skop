@@ -1,0 +1,23 @@
+/*
+ * Přepínání názvu v hlavičce přesně v bodě, kde se karty článků v rubrikách
+ * zlomí na jeden sloupec – dle The Nerve na 640px. Nad tímto bodem svítí vždy
+ * hlavní název „Mahdalová & Škop“; pod ním kratší „DataTimes.cz“ (a po
+ * odscrollování se hlavní název vrací – řídí komponenta přes prop `scrolled`).
+ */
+.wideName {
+  display: inline;
+}
+
+.narrowName {
+  display: none;
+}
+
+@media (max-width: 639.98px) {
+  .wideName {
+    display: none;
+  }
+
+  .narrowName {
+    display: inline;
+  }
+}

@@ -168,7 +168,7 @@ export function HeaderSimple() {
     return (
       <header className={classes.header} style={{ height: headerHeight }}>
         <Container size="md" className={classes.inner}>
-          <LogoWithText color={logoColor} size="md" />
+          <LogoWithText color={logoColor} size="md" scrolled={scrolled} />
           <Group gap={5} visibleFrom="md">
             {desktopNavItems}
           </Group>
@@ -195,7 +195,7 @@ export function HeaderSimple() {
           style={{ justifyContent: 'space-between', alignItems: 'center', gap: '20px', paddingBottom: '0', borderBottom: 'none' }}
         >
           <Box style={{ flexShrink: 0 }}>
-            <LogoWithText color={logoColor} />
+            <LogoWithText color={logoColor} scrolled={scrolled} />
           </Box>
           <Group gap={16} wrap="nowrap" style={{ flexShrink: 0 }}>
             <Menu shadow="lg" width={250} position="bottom-end" offset={8}>

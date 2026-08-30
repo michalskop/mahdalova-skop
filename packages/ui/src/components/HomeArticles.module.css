@@ -1,0 +1,46 @@
+/*
+ * Rozložení karet na homepage – laděno podle The Nerve.
+ * Zlomy: 640px (karty se pod ním rovnají po jednom pod sebe) a 1024px
+ * (široký desktop). Nad 1024px se vedle karet zobrazuje boční nadpis rubriky,
+ * pod ním nadpis mizí úplně (viz .sideTitle).
+ *
+ *   featured (Výběr): 1 sloupec < 640px → 2 sloupce od 640px  (2×2 karty)
+ *   standard (ostatní): 1 sloupec < 640px → 2 sloupce od 640px → 3 od 1024px
+ */
+.grid {
+  display: grid;
+  gap: var(--mantine-spacing-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .standard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .standard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*
+ * Boční nadpis rubriky (Výběr, Analýzy…). Na širokém desktopu stojí vlevo
+ * jako 200px sloupec; jakmile by se displej zúžil natolik, že by se nadpis
+ * musel přesunout nad karty, úplně zmizí (dle přání – žádný nadpis nad kartami).
+ */
+.sideTitle {
+  width: 200px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1023.98px) {
+  .sideTitle {
+    display: none;
+  }
+}

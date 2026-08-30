@@ -2,9 +2,10 @@
 
 import { Box, Group, Title, Stack, Paper, useMantineTheme } from '@mantine/core';
 import { useState } from 'react';
-import { ArticlesGrid } from './ArticlesGrid';
+import { ArticlesGrid, type ArticlesGridVariant } from './ArticlesGrid';
 import type { Article } from '../lib/getArticles';
 import { Arrow } from './Arrow';
+import classes from './HomeArticles.module.css';
 
 interface ArticlesSectionProps {
   sectionTitle: string;
@@ -19,6 +20,12 @@ interface ArticlesSectionProps {
    * autor, tag…) se zobrazí VŠECHNY předané články.
    */
   adaptiveRows?: number;
+  /**
+   * Homepage rozložení dle The Nerve ('featured' = Výběr 2×2, 'standard' = 3 sloupce).
+   * Zapíná zároveň skrytí bočního nadpisu na užších displejích (nadpis se
+   * nikdy nepřesune nad karty – místo toho zmizí).
+   */
+  variant?: ArticlesGridVariant;
 }
 
 export function ArticlesSection({
@@ -29,6 +36,7 @@ export function ArticlesSection({
   articleBasePath,
   locale,
   adaptiveRows,
+  variant,
 }: ArticlesSectionProps) {
   const theme = useMantineTheme();
   const [isTitleHovered, setIsTitleHovered] = useState(false);
@@ -42,10 +50,11 @@ export function ArticlesSection({
         wrap="wrap"
       >
         <Stack
-          w={{ base: '100%', md: 200 }}
-          mb={{ base: 'xs', md: 0 }}
+          className={variant ? classes.sideTitle : undefined}
+          w={variant ? undefined : { base: '100%', md: 200 }}
+          mb={variant ? undefined : { base: 'xs', md: 0 }}
           pt={15}
-          pl={{ base: 'md', md: 'md' }}
+          pl="md"
         >
           <a
             href={sectionLink}
@@ -70,8 +79,8 @@ export function ArticlesSection({
             </Title>
           </a>
         </Stack>
-        <Box flex={1}>
-          <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} />
+        <Box flex={1} style={{ minWidth: 0 }}>
+          <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} variant={variant} />
         </Box>
       </Group>
     </Paper>

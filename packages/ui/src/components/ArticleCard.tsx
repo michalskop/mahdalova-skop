@@ -52,8 +52,9 @@ export function ArticleCard({
         <a {...linkProps}>
           <Image
             src={coverImage || '/placeholder-image.svg'}
-            height={180}
             alt={title}
+            // Téměř čtvercový náhled (dle The Nerve) – výška se dopočítá z šířky karty.
+            style={{ aspectRatio: '5 / 4', objectFit: 'cover', width: '100%' }}
           />
         </a>
       </Card.Section>

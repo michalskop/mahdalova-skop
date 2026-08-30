@@ -1,7 +1,8 @@
 // app/components/common/LogoWithText.tsx
 
-import { Group, Text, VisuallyHidden, useMantineTheme } from '@mantine/core';
+import { Group, Text, useMantineTheme } from '@mantine/core';
 import Link from 'next/link';
+import classes from './LogoWithText.module.css';
 
 const Logo = () => (
   // center of the svg: 250, 250; last point is slightly adjust manually to make the circle looked closed even in small sizes
@@ -29,14 +30,25 @@ interface LogoWithTextProps {
   // inverted?: boolean;
   color?: string;
   onClick?: () => void; // Make onClick optional
+  /**
+   * Zda už uživatel odscrolloval z vršku stránky. Ovlivňuje jen úzké displeje:
+   * nahoře (scrolled=false) ukážeme kratší druhý název „DataTimes.cz“ (hlavní
+   * název „Mahdalová & Škop“ je v tu chvíli velký v heru, ať se neopakuje),
+   * po odscrollování se do lišty vrátí „Mahdalová & Škop“ a responzivně se zmenší.
+   */
+  scrolled?: boolean;
 }
 
-const LogoWithText: React.FC<LogoWithTextProps> = ({ 
+const BRAND_NAME = 'Mahdalová & Škop';
+const ALT_NAME = 'DataTimes.cz';
+
+const LogoWithText: React.FC<LogoWithTextProps> = ({
   href = "/",
   size = "md",
   // inverted = false,
   color,
-  onClick
+  onClick,
+  scrolled = false,
 }) => {
   const theme = useMantineTheme();
   const textColor = color || theme.colors.brand[6];
@@ -58,16 +70,30 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
       <div style={{ width: logoSize, height: logoSize, flexShrink: 0 }}>
         <Logo />
       </div>
+      {/* Široký displej (karty ve 2+ sloupcích): vždy hlavní název */}
       <Text
+        component="span"
+        className={classes.wideName}
         fw={700}
         size={textSize}
         c={textColor}
-        visibleFrom="xs"
         style={{ whiteSpace: 'nowrap' }}
       >
-        Mahdalová & Škop
+        {BRAND_NAME}
       </Text>
-      <VisuallyHidden hiddenFrom="xs">Mahdalová & Škop</VisuallyHidden>
+      {/* Úzký displej (karty pod sebou): nahoře „DataTimes.cz“, po odscrollování zmenšený hlavní název */}
+      <Text
+        component="span"
+        className={classes.narrowName}
+        fw={700}
+        c={textColor}
+        style={{
+          whiteSpace: 'nowrap',
+          fontSize: 'clamp(0.95rem, 4.8vw, 1.25rem)',
+        }}
+      >
+        {scrolled ? BRAND_NAME : ALT_NAME}
+      </Text>
     </Group>
   );
 

@@ -477,13 +477,18 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
           .kviff-mobile-title-break { display: block; }
           .kviff-desktop-title-space { display: none; }
         }
+        /* Boční nadpis „Speciály“ – nad kartami se nikdy nezobrazí; pod 1024px zmizí. */
+        .specials-side-title { width: 200px; flex-shrink: 0; }
+        @media (max-width: 1023.98px) {
+          .specials-side-title { display: none; }
+        }
       ` }} />
 
       <Paper py={20} bg={BG} radius={0}>
         <Group gap={0} align="flex-start" wrap="wrap">
 
-          {/* Nadpis vlevo */}
-          <Stack w={{ base: '100%', md: 200 }} mb={{ base: 'xs', md: 0 }} pt={15} pl={{ base: 'md', md: 'md' }}>
+          {/* Nadpis vlevo (na užších displejích mizí – viz .specials-side-title) */}
+          <Stack className="specials-side-title" pt={15} pl="md">
             <a
               href={sectionLink}
               onMouseEnter={() => setTitleHovered(true)}
