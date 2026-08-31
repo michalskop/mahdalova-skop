@@ -71,7 +71,7 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
       <div style={{ width: logoSize, height: logoSize, flexShrink: 0 }}>
         <Logo />
       </div>
-      {/* Široký displej (karty ve 2+ sloupcích): vždy hlavní název */}
+      {/* Široký displej: nahoře „DataTimes.cz“ (hero ukazuje velký M&Š), po odscrollování M&Š */}
       <Text
         component="span"
         className={classes.wideName}
@@ -80,7 +80,7 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
         c={textColor}
         style={{ whiteSpace: 'nowrap' }}
       >
-        {BRAND_NAME}
+        {scrolled ? BRAND_NAME : ALT_NAME}
       </Text>
       {/* Úzký displej (karty pod sebou): nahoře „DataTimes.cz“, po odscrollování zmenšený hlavní název */}
       <Text
