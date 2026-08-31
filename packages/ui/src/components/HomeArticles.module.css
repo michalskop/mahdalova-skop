@@ -10,18 +10,11 @@
  */
 .grid {
   display: grid;
-  gap: var(--mantine-spacing-lg);
+  /* Stejné mezery jako u karuselu Speciály (16 px) – kolem karet i mezi nimi,
+     ať to lícuje ve všech rubrikách. Horní/dolní mezeru dává py sekce (16 px). */
+  gap: var(--mantine-spacing-md);
   grid-template-columns: 1fr;
-  /* Odsazení od okrajů sekce, ať je kolem karet zřetelně vidět barva pozadí
-     (dle The Nerve) – karty se nedotýkají okrajů displeje ani sebe navzájem. */
-  padding-inline: var(--mantine-spacing-lg);
-}
-
-@media (min-width: 640px) {
-  .grid {
-    gap: var(--mantine-spacing-lg);
-    padding-inline: var(--mantine-spacing-xl);
-  }
+  padding-inline: var(--mantine-spacing-md);
 }
 
 @media (min-width: 500px) {

@@ -43,7 +43,7 @@ export function ArticlesSection({
   const shouldShowArrow = sectionTitle.length <= 14;
 
   return (
-    <Paper py={20} bg={themeColor} radius={0}>
+    <Paper py={16} bg={themeColor} radius={0}>
       <Group
         gap={0}
         align="flex-start"

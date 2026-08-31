@@ -484,7 +484,7 @@ export default function SpecialsHero({ sectionLink = '/specialy' }: { sectionLin
         }
       ` }} />
 
-      <Paper py={20} bg={BG} radius={0}>
+      <Paper py={16} bg={BG} radius={0}>
         <Group gap={0} align="flex-start" wrap="wrap">
 
           {/* Nadpis vlevo (na užších displejích mizí – viz .specials-side-title) */}

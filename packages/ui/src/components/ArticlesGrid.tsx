@@ -116,7 +116,8 @@ function AdaptiveGrid({
 
   const grid = (
     <>
-      <Space h="md" />
+      {/* U homepage variant dává horní mezeru py sekce (16 px), ať je stejná jako dole. */}
+      {!variant && <Space h="md" />}
       <div
         ref={gridRef}
         className={variant ? `${classes.grid} ${classes[variant]}` : undefined}
