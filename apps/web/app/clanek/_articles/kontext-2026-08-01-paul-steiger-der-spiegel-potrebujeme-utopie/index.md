@@ -1,17 +1,17 @@
 ---
 title: "Paul Steiger: Co chtěli majitelé Amazonu a eBay od žurnalistiky"
-date: "2026-08-27"
+date: "2026-08-01"
 author: "Janko Tietz & Marcel Rosenbach"
 translator: "Kateřina Mahdalová"
 excerpt: "Rozhovor se šéfredaktorem The Wall Street Journal a Pro Publica z roku 2013 o tom, jak miliardáři svým vstupem do médií začali měnit celý ekosystém zpravodajství. Redakce DataTimes.cz reflektuje, co se v médiích po jejich vstupu skutečně změnilo."
 coverImage: "images/paul-steiger-pro-publica-1-datatimes.webp"
 coverFit: cover
-filter: ["kontext", "svobodná-média"]
+filter: ["kontext"]
 tags: ["rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "USA"]
 promoted: 0
 ---
 ```infobox
-**Redakční poznámka.** Tento rozhovor vyšel v německém týdeníku Der Spiegel (44/2013). Přinášíme jej v našem překladu jako doplněk k [medailonku Paula Steigera](/clanek/kontext-2026-08-28-paul-steiger-jsi-fakt-dobra). Dnes zní některé pasáže jinak než před dvanácti lety: Jeff Bezos, o jehož koupi Washington Post tu Steiger mluví s nadějí, list dovedl do hluboké krize a v posledních letech čelí kritice za sbližování s Donaldem Trumpem. Steigerova věta „potřebujeme utopie“ tak dostává hořkou příchuť.
+**Rozhovor z roku 2013.** Vyšel v německém týdeníku Der Spiegel (44/2013), přinášíme jej v našem překladu. Volně navazuje na [medailonek Paula Steigera](/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra). Reflexi redakce DataTimes.cz — co se od té doby v médiích skutečně změnilo — najdete na konci rozhovoru.
 ```
 
 Paul Steiger, tehdy jednasedmdesátiletý, patřil k veteránům americké žurnalistiky. V roce 1966 začínal jako reportér Wall Street Journal v San Francisku. Poté přešel do Los Angeles Times a v roce 1983 se vrátil do Wall Street Journal, který v letech 1991 až 2007 vedl jako šéfredaktor v New Yorku.
@@ -139,3 +139,17 @@ Patří do něj zavedené platformy, jako jsou noviny a časopisy, stejně jako 
 ---
 
 Rozhovor vedli Janko Tietz a Marcel Rosenbach v Hamburku. Vyšel v týdeníku Der Spiegel 44/2013 pod titulkem, který sliboval, že bossové Amazonu a eBay chtějí nový zpravodajský ekosystém. Do češtiny přeložila redakce DataTimes.
+
+---
+
+## Co se od té doby změnilo
+
+*Reflexe redakce DataTimes.cz*
+
+Když Paul Steiger v roce 2013 mluvil o vstupu miliardářů do médií, znělo to spíš jako naděje než varování. Jeff Bezos podle něj „něco vymyslí“, Pierre Omidyar věří v žurnalistiku i v její úspěch a společně budují „nový zpravodajský ekosystém“. Po víc než deseti letech víme, jak ten experiment (zatím) dopadá.
+
+Bezosův Washington Post prošel oběma extrémy. Nejdřív přišly investice, růst digitálního předplatného, zisk a slogan „Democracy Dies in Darkness“. Po roce 2020 ale předplatitelé začali odcházet, list se propadl do ztrát a opakovaně propouštěl. Na podzim 2024 Bezos zablokoval už připravenou podporu Kamaly Harrisové v prezidentských volbách; kvůli tomu list opustily statisíce předplatitelů. V roce 2025 Bezos oznámil, že se názorová rubrika napříště zaměří na „osobní svobody a volný trh“, z redakce odešla řada lidí a sám Bezos se viditelně sblížil s Donaldem Trumpem.
+
+Omidyarův vstup do médií vypadal jinak, ale také rozporuplně: z jeho First Look Media vzešel web The Intercept, který se ale s Glennem Greenwaldem — reportérem, jehož angažmá tu Steiger zmiňuje jako naději — nakonec rozešel právě ve sporu o nezávislost vlastní redakce.
+
+Steigerova věta „potřebujeme utopie“ tak dnes zní hořce. Ukázalo se, že majitel je pořád majitel — a že „nezávislost“, kterou Steiger popisoval u ProPublica financované ze širokého okruhu dárců, se u miliardářského vlastnictví jednoho zavedeného titulu sama od sebe nezaručí.

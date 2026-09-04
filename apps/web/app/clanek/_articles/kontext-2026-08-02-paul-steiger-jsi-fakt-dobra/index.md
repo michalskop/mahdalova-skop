@@ -1,6 +1,6 @@
 ---
 title: "Paul Steiger: Jsi fakt dobrá! Spoj se s těmi nejlepšími"
-date: "2026-08-28"
+date: "2026-08-02"
 author: "Kateřina Mahdalová"
 excerpt: "V nočním Lisabonu jsem pomohla staršímu pánovi s hůlkou po schodech – a ukázalo se, že šestnáct let vedl The Wall Street Journal a založil ProPublica. Vzpomínka na Paula Steigera a na to, proč objektivita neznamená stát uprostřed."
 coverImage: "images/paul-steiger-pro-publica-datatimes.webp"
@@ -18,7 +18,7 @@ ProPublica vznikla z přesvědčení, že nákladná investigativní práce je p
 Jeho úvahy o financování médií z té doby dnes znějí až překvapivě současně. V rozhovoru pro německý Der Spiegel v roce 2013 mluvil o investigativní žurnalistice jako o veřejném statku, o neziskových redakcích, filantropii, spolupráci mezi médii i o vznikajícím novém „ekosystému zpráv“.
 
 ```infobox right
-**Čtěte také:** [Co chtěli majitelé Amazonu a eBay od žurnalistiky – celý rozhovor Paula Steigera pro Der Spiegel (2013) v našem překladu](/clanek/kontext-2026-08-27-paul-steiger-der-spiegel-potrebujeme-utopie)
+**Čtěte také:** [Co chtěli majitelé Amazonu a eBay od žurnalistiky – celý rozhovor Paula Steigera pro Der Spiegel (2013) v našem překladu](/clanek/kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie)
 ```
 
 ## Starší pán s hůlkou v lisabonském klubu
