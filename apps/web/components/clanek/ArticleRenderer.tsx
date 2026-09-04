@@ -10,6 +10,7 @@ import type { MDXComponents } from 'mdx/types';
 import type { ImageProps } from 'next/image';
 import { CodeBlock } from './MediaBox';
 import { InfoBox } from './InfoBox'; // Import the InfoBox component
+import { Figure } from './Figure'; // Floated photo that bleeds out of the reading column
 import { TestComponent } from '@/components/mdx/TestComponent';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
@@ -193,6 +194,7 @@ export function ArticleRenderer({
 
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
+    Figure: (props: any) => <Figure slug={slug} {...props} />,
     KeyNumbers: ({ yamlFile, ...props }) => {
       // If yamlFile is provided, use pre-loaded data from server
       if (yamlFile) {

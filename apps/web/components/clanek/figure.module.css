@@ -1,0 +1,59 @@
+/* Floated photo that bleeds out of the reading column on its outer edge.
+   The inner edge sits inside the text column and the running text wraps
+   around it; the outer edge extends into the page margin (negative margin).
+   On mobile it becomes a normal full-width block. */
+
+.right,
+.left {
+  width: 48%;
+  margin-top: 0.3rem;
+  margin-bottom: 1.1rem;
+}
+
+.right {
+  float: right;
+  margin-left: 1.75rem;
+  margin-right: -12%; /* bleed into the right-hand margin */
+}
+
+.left {
+  float: left;
+  margin-right: 1.75rem;
+  margin-left: -12%; /* bleed into the left-hand margin */
+}
+
+/* Centered, non-floated variant – good for tall/portrait visuals that would
+   crowd the reading column as a side float. */
+.center {
+  display: block;
+  max-width: 420px;
+  margin: 1.25rem auto 1.5rem;
+}
+.center .caption {
+  text-align: center;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.caption {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--mantine-color-dimmed);
+}
+
+@media (max-width: 768px) {
+  .right,
+  .left {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
