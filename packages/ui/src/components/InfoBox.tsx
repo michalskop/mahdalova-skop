@@ -40,6 +40,12 @@ export function InfoBox({
     float === 'left'  ? styles.floatLeft  :
     undefined;
 
+  // Font: body inherits the app body font (web: IBM Plex Serif); the box title
+  // (leading bold / any heading) is switched to the headings font (IBM Plex
+  // Sans) via styles.infoBox rules in box.module.css. Uses Mantine's font CSS
+  // variables so it adapts per app (DJS → Work Sans).
+  const boxClass = [styles.infoBox, floatClass].filter(Boolean).join(' ');
+
   const splitAt = readMoreAt !== undefined ? Number(readMoreAt) : undefined;
   const childArray = React.Children.toArray(children);
   const visibleChildren = splitAt !== undefined ? childArray.slice(0, splitAt) : childArray;
@@ -52,7 +58,7 @@ export function InfoBox({
       py="xs"
       radius="md"
       my="lg"
-      className={floatClass}
+      className={boxClass}
       style={{
         backgroundColor: boxStyles.backgroundColor,
         borderLeft: `4px solid ${boxStyles.borderColor}`,

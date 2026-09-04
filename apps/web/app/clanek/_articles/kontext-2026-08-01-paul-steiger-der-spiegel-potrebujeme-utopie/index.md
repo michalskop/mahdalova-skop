@@ -11,7 +11,7 @@ tags: ["rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washi
 promoted: 0
 ---
 ```infobox
-**Rozhovor z roku 2013.** Vyšel v německém týdeníku Der Spiegel (44/2013), přinášíme jej v našem překladu. Volně navazuje na [medailonek Paula Steigera](/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra). Reflexi redakce DataTimes.cz — co se od té doby v médiích skutečně změnilo — najdete na konci rozhovoru.
+**Rozhovor z roku 2013.** Vyšel v německém týdeníku Der Spiegel (44/2013), přinášíme jej v našem překladu. Volně navazuje na [profesní medailonek Paula Steigera](/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra), ve kterém se zaměřujeme na novinářské principy, jimiž se sami řídíme. Reflexi redakce DataTimes.cz – co se od té doby v médiích skutečně změnilo – najdete na konci rozhovoru.
 ```
 
 Paul Steiger, tehdy jednasedmdesátiletý, patřil k veteránům americké žurnalistiky. V roce 1966 začínal jako reportér Wall Street Journal v San Francisku. Poté přešel do Los Angeles Times a v roce 1983 se vrátil do Wall Street Journal, který v letech 1991 až 2007 vedl jako šéfredaktor v New Yorku.
@@ -150,6 +150,6 @@ Když Paul Steiger v roce 2013 mluvil o vstupu miliardářů do médií, znělo 
 
 Bezosův Washington Post prošel oběma extrémy. Nejdřív přišly investice, růst digitálního předplatného, zisk a slogan „Democracy Dies in Darkness“. Po roce 2020 ale předplatitelé začali odcházet, list se propadl do ztrát a opakovaně propouštěl. Na podzim 2024 Bezos zablokoval už připravenou podporu Kamaly Harrisové v prezidentských volbách; kvůli tomu list opustily statisíce předplatitelů. V roce 2025 Bezos oznámil, že se názorová rubrika napříště zaměří na „osobní svobody a volný trh“, z redakce odešla řada lidí a sám Bezos se viditelně sblížil s Donaldem Trumpem.
 
-Omidyarův vstup do médií vypadal jinak, ale také rozporuplně: z jeho First Look Media vzešel web The Intercept, který se ale s Glennem Greenwaldem — reportérem, jehož angažmá tu Steiger zmiňuje jako naději — nakonec rozešel právě ve sporu o nezávislost vlastní redakce.
+Omidyarův vstup do médií vypadal jinak, ale také rozporuplně: z jeho First Look Media vzešel web The Intercept, který se ale s Glennem Greenwaldem – reportérem, jehož angažmá tu Steiger zmiňuje jako naději – nakonec rozešel právě ve sporu o nezávislost vlastní redakce.
 
-Steigerova věta „potřebujeme utopie“ tak dnes zní hořce. Ukázalo se, že majitel je pořád majitel — a že „nezávislost“, kterou Steiger popisoval u ProPublica financované ze širokého okruhu dárců, se u miliardářského vlastnictví jednoho zavedeného titulu sama od sebe nezaručí.
+Steigerova věta „potřebujeme utopie“ tak dnes zní hořce. Ukázalo se, že majitel je pořád majitel – a že „nezávislost“, kterou Steiger popisoval u ProPublica financované ze širokého okruhu dárců, se u miliardářského vlastnictví jednoho zavedeného titulu sama od sebe nezaručí.

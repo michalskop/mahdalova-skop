@@ -1,3 +1,16 @@
+/* Typography: body copy inherits the app body font (web: IBM Plex Serif);
+   the box title – a leading bold or any heading – uses the headings font
+   (web: IBM Plex Sans). Mantine font variables keep this app-agnostic. */
+.infoBox {
+  font-family: var(--mantine-font-family);
+}
+.infoBox :where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--mantine-font-family-headings, inherit);
+}
+.infoBox :where(div, p) > strong:first-child {
+  font-family: var(--mantine-font-family-headings, inherit);
+}
+
 .floatRight {
   float: right;
   width: 45%;
