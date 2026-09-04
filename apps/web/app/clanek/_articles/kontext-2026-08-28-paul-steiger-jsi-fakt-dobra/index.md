@@ -18,7 +18,7 @@ ProPublica vznikla z přesvědčení, že nákladná investigativní práce je p
 Jeho úvahy o financování médií z té doby dnes znějí až překvapivě současně. V rozhovoru pro německý Der Spiegel v roce 2013 mluvil o investigativní žurnalistice jako o veřejném statku, o neziskových redakcích, filantropii, spolupráci mezi médii i o vznikajícím novém „ekosystému zpráv“.
 
 ```infobox right
-**Čtěte také:** [Majitelé Amazonu a eBay vstupují do žurnalistiky – celý rozhovor Paula Steigera pro Der Spiegel (2013) v našem překladu](/clanek/kontext-2026-08-27-paul-steiger-der-spiegel-potrebujeme-utopie)
+**Čtěte také:** [Co chtěli majitelé Amazonu a eBay od žurnalistiky – celý rozhovor Paula Steigera pro Der Spiegel (2013) v našem překladu](/clanek/kontext-2026-08-27-paul-steiger-der-spiegel-potrebujeme-utopie)
 ```
 
 ## Starší pán s hůlkou v lisabonském klubu

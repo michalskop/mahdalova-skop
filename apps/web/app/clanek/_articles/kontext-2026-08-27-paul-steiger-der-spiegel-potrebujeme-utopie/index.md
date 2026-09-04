@@ -1,9 +1,9 @@
 ---
-title: "Majitelé Amazonu a eBay vstupují do žurnalistiky: co od médií chtějí Bezos a Omidyar"
+title: "Paul Steiger: Co chtěli majitelé Amazonu a eBay od žurnalistiky"
 date: "2026-08-27"
 author: "Janko Tietz & Marcel Rosenbach"
 translator: "Kateřina Mahdalová"
-excerpt: "Rozhovor šéfa ProPublica Paula Steigera pro Der Spiegel z roku 2013 v našem překladu – o financování investigativní žurnalistiky, filantropii a o tom, proč do médií vstupují Jeff Bezos a zakladatel eBay Pierre Omidyar. Po letech Bezosových ústupků Trumpovi a krize Washington Post zní jeho tehdejší optimismus jinak."
+excerpt: "Rozhovor se šéfredaktorem The Wall Street Journal a Pro Publica z roku 2013 o tom, jak miliardáři svým vstupem do médií začali měnit celý ekosystém zpravodajství. Redakce DataTimes.cz reflektuje, co se v médiích po jejich vstupu skutečně změnilo."
 coverImage: "images/paul-steiger-pro-publica-1-datatimes.webp"
 coverFit: cover
 filter: ["kontext", "svobodná-média"]
