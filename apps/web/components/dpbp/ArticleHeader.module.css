@@ -88,8 +88,10 @@
   filter: grayscale(1) contrast(0.96) brightness(1.02);
 }
 .avatars .mono {
-  background: #101432;
-  color: #fff;
+  /* Autoři bez fotky: iniciály v kroužku. Nejtmavší béžová z palety
+     (brandChocolate[3]); černý text má na ní dobrý kontrast (~8:1). */
+  background: #c19a78;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +99,6 @@
   font-weight: 700;
   font-size: 14px;
 }
-.avatars .mono:nth-child(2) { background: #de1743; }
 .names {
   font-weight: 700;
   font-size: 14.5px;
