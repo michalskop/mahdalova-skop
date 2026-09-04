@@ -38,6 +38,48 @@
   width: 100%;
   height: auto;
   border-radius: 4px;
+  cursor: zoom-in;
+}
+
+/* Full-screen lightbox for reading photo details. Deliberately dark in both
+   themes, as is conventional for a photo viewer. */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5vmin;
+  background: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+.lightboxImg {
+  max-width: 96vw;
+  max-height: 96vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightboxClose {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .caption {

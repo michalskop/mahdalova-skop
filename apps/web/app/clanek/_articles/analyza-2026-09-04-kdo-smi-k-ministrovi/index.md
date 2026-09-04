@@ -1,5 +1,5 @@
 ---
-title: "Kdo smí k ministrovi? Novinářku ne, zakuklence ano"
+title: "Kdo smí k ministrovi? Novinářku nepustí na úřad, anonyma v kukle poctí návštěvou"
 date: "2026-09-04"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Ministerstvo zahraničí odmítlo pustit akreditovanou novinářku Deníku N na tiskovou konferenci a její redakci označilo za „alternativní média a konspirační blogy“. O tři týdny později šel ministr Petr Macinka dobrovolně na rozhovor k maskovanému muži, jehož totožnost neznal – a ochranku před schůzkou tajil. Naše infožádosti na všechna ministerstva ukazují, jak moc se tím Macinka vymyká."
@@ -11,7 +11,7 @@ promoted: 70
 ---
 
 ```infobox
-Tento text stojí na dvou zdrojích: na odpovědích čtrnácti ministerstev a Úřadu vlády na naše žádosti podle [zákona č. 106/1999 Sb.](https://www.infoprovsechny.cz/request/novinarske_akreditace) o svobodném přístupu k informacím a na zpravodajství českých redakcí o rozhovoru Petra Macinky se skupinou Detektivní parta. Důsledně oddělujeme, co je doloženo, co tvrdí sami aktéři a co teprve prověřuje policie.
+Tento text stojí na dvou zdrojích: na odpovědích čtrnácti ministerstev a Úřadu vlády na naše žádosti podle zákona č. 106/1999 Sb. o svobodném přístupu k informacím a na zpravodajství českých redakcí o rozhovoru Petra Macinky se skupinou Detektivní parta. Důsledně oddělujeme, co je doloženo, co tvrdí sami aktéři a co teprve prověřuje policie.
 ```
 
 Je pátek 31. července 2026. V Černínském paláci se koná tisková konference k budoucnosti Českých center. Reportérka Deníku N Zdislava Pokorná se na ni včas akreditovala – poslala jméno, redakci, funkci i telefon, přesně jak ministerstvo požadovalo. Dovnitř ji nepustili. Ministr zahraničí Petr Macinka (Motoristé) to později vysvětlil takto:
@@ -32,7 +32,7 @@ To otevřelo otázku, na kterou jde odpovědět daty: **je akreditace bezpečnos
 
 Napříč resorty, které odpověděly věcně, je vzorec pozoruhodně jednotný. Akreditace slouží jako **organizační a bezpečnostní procedura**, ne jako sítko na obsah nebo názor média.
 
-[Ministerstvo financí](https://www.infoprovsechny.cz/request/novinarske_akreditace_3) v letech 2024–2026 neodmítlo nikoho a akreditaci výslovně popisuje jako organizační proces, nikoli rozhodovací řízení. [Ministerstvo pro místní rozvoj](https://www.infoprovsechny.cz/request/novinarske_akreditace_7) akreditaci vyžaduje před každou akcí, ale současné vedení nezná jediný případ zamítnutí. [Ministerstvo školství](https://www.infoprovsechny.cz/request/novinarske_akreditace_11) nezná za posledních patnáct let případ, kdy by akreditovaného novináře nepustilo dovnitř. Ministerstvo zemědělství uvádí, že akreditaci uděluje automaticky všem novinářům, kteří o ni požádají.
+**Ministerstvo financí** v letech 2024–2026 neodmítlo nikoho a akreditaci výslovně popisuje jako organizační proces, nikoli rozhodovací řízení. **Ministerstvo pro místní rozvoj** akreditaci vyžaduje před každou akcí, ale současné vedení nezná jediný případ zamítnutí. **Ministerstvo školství** nezná za posledních patnáct let případ, kdy by akreditovaného novináře nepustilo dovnitř. **Ministerstvo zemědělství** uvádí, že akreditaci uděluje automaticky všem novinářům, kteří o ni požádají.
 
 | Úřad | Vyžaduje akreditaci? | Odmítl akreditovaného novináře? | Co uvádí jako důvod / omezení |
 |------|:--------------------:|:-------------------------------:|-------------------------------|
@@ -46,13 +46,13 @@ Napříč resorty, které odpověděly věcně, je vzorec pozoruhodně jednotný
 | Ministerstvo zemědělství | ano, v avízu | ne (uděluje automaticky) | kapacita nikdy nepřekročena |
 | **Ministerstvo zahraničí** | **—** | **ano – Z. Pokorná, 31. 7. 2026** | **„alternativní média a konspirační blogy“** |
 
-_Zjednodušený přehled odpovědí na naše infožádosti. Zdroj: [zákon č. 106/1999 Sb., infoprovsechny.cz](https://www.infoprovsechny.cz/request/novinarske_akreditace). Ministerstva obrany, vnitra a průmyslu a obchodu do uzávěrky neodpověděla; Úřad vlády a Ministerstvo životního prostředí si prodloužily lhůtu._
+_Přehled odpovědí na naše infožádosti._
 
 ```infobox warning
 Jde o odpovědi resortů na naše žádosti, nikoli o nezávislý audit jejich každodenní praxe. Ministerstva obrany, vnitra a průmyslu a obchodu neodpověděla vůbec, Ministerstvo kultury odpovědělo, že seznam důvodů nemá. Přesto je vzorec u těch, kdo odpověděli věcně, jednoznačný.
 ```
 
-Nejpřísnějším resortem je z odpovědí Ministerstvo pro místní rozvoj, které akreditaci vyžaduje pokaždé. Jediné [Ministerstvo spravedlnosti](https://www.infoprovsechny.cz/request/novinarske_akreditace) otevřeně přiznává, že akreditaci ojediněle neudělí – ale jen u kapacitně či tematicky omezených akcí. A dodává přesně to, co dělá z případu MZV výjimku. Důvodem k odmítnutí podle něj mohou být kapacita, organizace, bezpečnost nebo věcná relevance média k tématu. A pak pokračuje:
+Nejpřísnějším resortem je z odpovědí Ministerstvo pro místní rozvoj, které akreditaci vyžaduje pokaždé. Jediné **Ministerstvo spravedlnosti** otevřeně přiznává, že akreditaci ojediněle neudělí – ale jen u kapacitně či tematicky omezených akcí. A dodává přesně to, co dělá z případu MZV výjimku. Důvodem k odmítnutí podle něj mohou být kapacita, organizace, bezpečnost nebo věcná relevance média k tématu. A pak pokračuje:
 
 > „Charakter či názorová orientace média, obsah předchozích článků nebo reportáží, kritické informování o ministerstvu, ministrovi či vládě nejsou samy o sobě důvodem [pro neudělení akreditace].“
 
@@ -62,15 +62,15 @@ Jiné ministerstvo tedy samo formuluje pravidlo, které Ministerstvo zahraničí
 
 <Figure src="images/zakuklenec-macinka.jpg" side="right" alt="Muž v kukle vystupující jako Thomas Paukner na záběru z rozhovoru s Petrem Macinkou." caption="Proti ministru zahraničí seděl maskovaný muž, jehož totožnost neznal. Ve skutečnosti šlo o aktivistu Vojtěcha Pšenáka. Foto: video Detektivní parta." />
 
-Úsměvná historka o tom, jak se ministr nechal „vytrolit“, končí ve chvíli, kdy do ní vstoupí bezpečnost státu. Za léčkou stála skupina Detektivní parta influencerů Mika Oganesjana a Vojtěcha Pšenáka; posledně jmenovaný se za „Thomase Pauknera“ vydával. Podle [zjištění Deníku N](https://denikn.cz/2173718/macinka-mluvil-s-falesnym-pauknerem-rozhovor-chtel-tajit-pred-ochrankou-ve-studiu-byly-atrapy-zbrani/) i [Aktuálně.cz](https://zpravy.aktualne.cz/domaci/tri-klicove-chyby-petra-macinky-mel-sanci-rozvratit-podvod-provokateru-ale-nestalo-se/r~aaa299a7a35e4b52c25b85ebf1c160a1/) přišla pozvánka z e-mailu na doméně `pauknermedia.cz`, kterou lze veřejně dohledat jako doménu spojenou s Pšenákem. Macinka pozvání přijal během několika hodin a sám navrhl přesun komunikace na šifrovaný Signal.
+Úsměvná historka o tom, jak se ministr nechal „vytrolit“, končí ve chvíli, kdy do ní vstoupí bezpečnost státu. Za léčkou stála skupina Detektivní parta influencerů Mika Oganesjana a Vojtěcha Pšenáka; posledně jmenovaný se za „Thomase Pauknera“ vydával. Pozvánku na rozhovor poslali z e-mailu na doméně `pauknermedia.cz`, kterou lze veřejně dohledat jako doménu spojenou s Pšenákem. Macinka pozvání přijal během několika hodin a sám navrhl přesun komunikace na komunikační platformu Signal.
 
-Tam přišla podstatná věc. Macinka domnělému Pauknerovi napsal, že je od 15. prosince 2025 ze zákona chráněnou osobou a všude s ním musí chodit policejní ochranka. A rovnou dodal, že schůzku neohlásí:
+Tam pak Macinka domnělému Pauknerovi napsal, že je od 15. prosince 2025 ze zákona chráněnou osobou a všude s ním musí chodit policejní ochranka. A rovnou dodal, že schůzku neohlásí:
 
 > „Neudělám to samozřejmě tak, že bych to ‚nahlásil‘ (to byste tam měli manévry), ale jeden člověk tam asi se mnou bude muset být. Zkusím ho nějak nechat aspoň přede dveřma.“
 
 <Figure src="images/komunikace-signal-datatimes.jpg" side="center" alt="Výběr z komunikace Petra Macinky na Signalu, jak ji zveřejnila Detektivní parta." caption="S návrhem, že schůzku ochrance nenahlásí, přišel podle zveřejněné komunikace sám ministr. Vizualizace: DataTimes.cz z podkladů Detektivní party." />
 
-První termín Macinka zrušil, na náhradní 21. srpna dorazil. Podle Detektivní party studio před jeho příchodem nikdo bezpečnostně neprohlédl a jediného člena Ochranné služby, který s ním přišel, poslal ministr po pár vteřinách pryč. V místnosti byly podle organizátorů rozmístěny makety střelných zbraní a pod stůl, u nějž ministr seděl, upevněná atrapa nástražného výbušného systému. Další lidé se skrývali za závěsem.
+První termín Macinka zrušil, na náhradní 21. srpna dorazil. Podle Detektivní party studio před jeho příchodem nikdo bezpečnostně neprohlédl a jediného člena Ochranné služby, který s ním přišel, poslal ministr po pár vteřinách pryč. Organizátoři na videu ukazují, že v místnosti byly rozmístěny makety střelných zbraní a pod stůl, u nějž ministr seděl, upevněná atrapa nástražného výbušného systému. Další lidé se skrývali za závěsem.
 
 <Figure src="images/za-zaclonou.jpg" side="left" alt="Petr Macinka u stolu; popiska Mike a Tereza za záclonou z videa Detektivní party." caption="Podle organizátorů byli ve studiu ukryti další lidé. Tuto část zatím známe hlavně z jejich vlastní dokumentace. Foto: video Detektivní parta." />
 
@@ -78,21 +78,15 @@ První termín Macinka zrušil, na náhradní 21. srpna dorazil. Podle Detektivn
 
 <Figure src="images/rozhovor-mrizka-datatimes.jpg" side="right" alt="Čtyři záběry z rozhovoru, na nichž Macinka vysvětluje, proč do studia přišel." caption="Z ukázek rozhovoru zveřejněných Detektivní partou. Vizualizace: DataTimes.cz." />
 
-Součástí schůzky byly i rekvizity vlastní žánru: maskovaný tazatel předal ministrovi láhev rumu. „Rovnou to otevřem, ne?“ zeptal se Macinka na kameru. Právě tahle scéna posloužila k titulku videa o ministrovi, který „vyměnil bezpečnost státu za láhev rumu“.
+Součástí schůzky byly i rekvizity vlastní žánru: maskovaný tazatel předal ministrovi láhev rumu. „Rovnou to otevřem, ne?“ zeptal se Macinka na kameru.
 
 <Figure src="images/rum-general.jpg" side="left" alt="Petr Macinka s lahví rumu, kterou dostal ve studiu darem." caption="Rovnou to otevřem, ne? Láhev rumu jako dárek od maskovaného tazatele. Foto: video Detektivní parta." />
 
-Hodnotící soudy Detektivní party – že jde o „bezprecedentní selhání“ nebo „ohrožení bezpečnosti republiky“ – si nepřebíráme; jsou to jejich výroky, ne prokázaná fakta. Zajímavější než rekvizity pod stolem je totiž něco jiného.
-
 ## Co znamená „chráněná osoba“
 
-Ministr zahraničí není jen předseda strany. Sám uvádí, že je od 15. prosince 2025 ze zákona chráněnou osobou, a [nařízení vlády č. 468/2008 Sb.](https://www.zakonyprolidi.cz/cs/2008-468), o zajišťování bezpečnosti určených ústavních činitelů, definuje „zajištění bezpečnosti“ jako celý souhrn policejních ochranných a bezpečnostních opatření, jehož rozsah se řídí mírou ohrožení. Bodyguard vedle ministra je až poslední článek toho systému. Policie sama veřejně zdůrazňuje, že nedílnou součástí ochrany je spolupráce s tvůrci a organizátory programu chráněné osoby – tedy že ochranka musí o programu vědět, aby mohla vyhodnotit riziko.
+Ministr zahraničí je nejen předseda strany, ale – jak sám uvádí – od 15. prosince 2025 je rovněž tzv. chráněnou osobou. Podle [nařízení vlády č. 468/2008 Sb.](https://www.zakonyprolidi.cz/cs/2008-468), o zajišťování bezpečnosti určených ústavních činitelů, je „zajištění bezpečnosti“ celý souhrn policejních ochranných a bezpečnostních opatření, jehož rozsah se řídí mírou ohrožení. Bodyguard vedle ministra je až poslední článek toho systému. Policie sama veřejně zdůrazňuje, že nedílnou součástí ochrany je spolupráce s tvůrci a organizátory programu chráněné osoby – tedy že ochranka musí o programu vědět, aby mohla vyhodnotit riziko.
 
-To se s Macinkovou obhajobou obtížně slučuje. Aktuálně.cz řekl:
-
-> „Starají se o to, aby se nic nestalo mně, ale s kým se potkávám, to je moje věc.“
-
-A Respektu dodal, že [„Ochranná služba musí vyjít vstříc požadavkům chráněné osoby“](https://www.respekt.cz/cesko/napaleny-macinka-chtel-pred-ochrankou-utajit-rozhovor-s-falesnym-pauknerem). Ve veřejně dostupných předpisech takto formulované pravidlo není. Podrobné zásady policejní ochrany upravují interní pokyny, jejichž obsah veřejný není – a právě proto by o tom, zda byly postupy dodrženy, neměl rozhodovat ministr, ale kontrola.
+Macinka nyní médiím tvrdí, že se ochranná služba „stará o to, aby se nic nestalo mně, ale s kým se potkávám, to je moje věc“, popř. že „ochranná služba musí vyjít vstříc požadavkům chráněné osoby“. Ve veřejně dostupných předpisech ale takto formulované pravidlo není. Podrobné zásady policejní ochrany upravují interní pokyny, jejichž obsah veřejný není – a právě proto by o tom, zda byly postupy dodrženy, neměl rozhodovat ministr, ale kontrola.
 
 A ta už běží. Ochranná služba podle [Deníku N](https://denikn.cz/2174067/neslo-o-standardni-situaci-policie-proveri-postup-macinkovy-ochranky-pri-schuzce-s-falesnym-pauknerem) uvedla, že „z vícero úhlů pohledu nešlo o zcela standardní situaci při zajišťování bezpečnosti chráněné osoby“, a její ředitel nařídil prověřit veškeré okolnosti oddělením vnitřní kontroly. Aktivní i bývalí policejní ochránci, které oslovilo [Aktuálně.cz](https://zpravy.aktualne.cz/domaci/mohl-to-byt-megaprusvih-ohrozil-macinka-sam-sebe-v-rozhovoru-s-pauknerem/r~aaa29514e909708e0a365a29f43d1ba8/), popsali, že podobné návštěvě běžně předchází prohlídka místa a ztotožnění přítomných; jeden z nich to shrnul slovy „tady to mohl být megaprůšvih“.
 

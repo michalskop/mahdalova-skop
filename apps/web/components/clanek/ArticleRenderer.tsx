@@ -259,16 +259,18 @@ export function ArticleRenderer({
         styles={(theme) => ({
           root: {
             color: theme.colors.brand[6],
+            clear: 'both', // start a new section below any floated figures
           },
         })}
       >
         {children}
       </Title>
     ),
-    
+
     h3: ({ children }) => (
       <Title order={3} mt="lg" mb="md"
-        c={textColor}>
+        c={textColor}
+        styles={{ root: { clear: 'both' } }}>
         {children}
       </Title>
     ),
