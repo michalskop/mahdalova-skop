@@ -88,9 +88,9 @@
   filter: grayscale(1) contrast(0.96) brightness(1.02);
 }
 .avatars .mono {
-  /* Autoři bez fotky: iniciály v kroužku. Nejtmavší béžová z palety
-     (brandChocolate[3]); černý text má na ní dobrý kontrast (~8:1). */
-  background: #c19a78;
+  /* Autoři bez fotky: iniciály v kroužku. Nejtmavší (šedo)béžová z palety
+     (background[9]); černý text má na ní výborný kontrast (~11:1). */
+  background: #bcbcb0;
   color: #000;
   display: flex;
   align-items: center;
