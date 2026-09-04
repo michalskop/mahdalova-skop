@@ -2,14 +2,14 @@
 title: "Paul Steiger: Jsi fakt dobrá! Spoj se s těmi nejlepšími"
 date: "2026-08-02"
 author: "Kateřina Mahdalová"
-excerpt: "V nočním Lisabonu jsem pomohla staršímu pánovi s hůlkou po schodech – a ukázalo se, že šestnáct let vedl The Wall Street Journal a založil ProPublica. Vzpomínka na Paula Steigera a na to, proč objektivita neznamená stát uprostřed."
+excerpt: "V nočním Lisabonu jsem pomohla staršímu pánovi s holí po schodech – a ukázalo se, že šestnáct let vedl The Wall Street Journal a založil ProPublica. Vzpomínka na Paula Steigera a na to, proč objektivita neznamená stát uprostřed."
 coverImage: "images/paul-steiger-pro-publica-datatimes.webp"
 coverFit: cover
 filter: ["kontext"]
 tags: ["profil", "žurnalistika", "média", "ProPublica", "The Wall Street Journal", "objektivita", "Daniel Pearl", "USA"]
 promoted: 0
 ---
-Paula Steigera jsem několik minut vůbec nepoznala. Bylo to v roce 2018 v Lisabonu, po skončení jednoho z večerů GEN Summitu. Pomohla jsem staršímu pánovi s hůlkou po schodech, sedli jsme si k venkovnímu stolku a začali si povídat – o žurnalistice. Až po nějaké chvíli mu říkám, že jsme se vlastně ještě nepředstavili – smál se, podali jsme si ruku a já zjistila, že tu v centru nočního Lisabonu sedím s člověkem, který šestnáct let vedl The Wall Street Journal. A že později založil projekt ProPublica, který významně ovlivnil můj start coby samostatné datové novinářky. A tohle noční setkání nakonec ovlivnilo i moji další profesní cestu. Ukazovala jsem mu, co dělám, jak jsem si objevila úžasný obor – datovou žurnalistiku – a že už několik let mimo jiné tvořím vizualizace. Vedla jsem v té době datové projekty v ČTK, a on říkal, že jsem fakt dobrá.
+Paula Steigera jsem několik minut vůbec nepoznala. Bylo to v roce 2018 v Lisabonu, po skončení jednoho z večerů GEN Summitu. Pomohla jsem staršímu pánovi s holí po schodech, sedli jsme si k venkovnímu stolku a začali si povídat – o žurnalistice. Až po nějaké chvíli mu říkám, že jsme se vlastně ještě nepředstavili – smál se, podali jsme si ruku a já zjistila, že tu v centru nočního Lisabonu sedím s člověkem, který šestnáct let vedl The Wall Street Journal. A že později založil projekt ProPublica, který významně ovlivnil můj start coby samostatné datové novinářky. A tohle noční setkání nakonec ovlivnilo i moji další profesní cestu. Ukazovala jsem mu, co dělám, jak jsem si objevila úžasný obor – datovou žurnalistiku – a že už několik let mimo jiné tvořím vizualizace. Vedla jsem v té době datové projekty v ČTK, a on říkal, že jsem fakt dobrá.
 
 Paul Steiger patřil k nejvýraznějším americkým novinářům své generace. V žurnalistice strávil více než půl století. Pracoval v Los Angeles Times a The Wall Street Journal, který v letech 1991 až 2007 vedl jako managing editor. Za dobu jeho vedení získala redakce šestnáct Pulitzerových cen. Později založil neziskovou investigativní redakci ProPublica a stal se jejím prvním šéfredaktorem, prezidentem a CEO. Vedl také Committee to Protect Journalists a působil v Pulitzerově výboru.
 
@@ -21,7 +21,7 @@ Jeho úvahy o financování médií z té doby dnes znějí až překvapivě sou
 **Čtěte také:** [Co chtěli majitelé Amazonu a eBay od žurnalistiky – celý rozhovor Paula Steigera pro Der Spiegel (2013) v našem překladu](/clanek/kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie)
 ```
 
-## Starší pán s hůlkou v lisabonském klubu
+## Starší pán s holí v lisabonském klubu
 
 Se Steigerem jsem se poprvé opravdu potkala v roce 2018 na GEN Summitu v Lisabonu.
 
@@ -31,7 +31,7 @@ Paul Steiger byl s touto soutěží spojen dlouhodobě. V roce 2018 předsedal j
 
 Po jedné z ceremonií jsme pokračovali později večer do klubu. Seděla jsem tam s Martinem Štverákem, o němž jsem tehdy ještě netušila, že se za několik let stane mým kolegou v Seznamu.
 
-Ze dveří vedoucích po schodech ze suterénu vyšel starší muž s hůlkou. Šel do schodů s obtížemi, tak jsem mu nabídla pomoc, kterou přijal.
+Ze dveří vedoucích po schodech ze suterénu vyšel starší muž s holí. Šel do schodů s obtížemi, tak jsem mu nabídla pomoc, kterou přijal.
 
 Nabídla jsem mu rámě, on se o mě opřel a potom jsme si sedli ke stolu.
 
