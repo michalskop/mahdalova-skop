@@ -34,19 +34,9 @@ Napříč resorty, které odpověděly věcně, je vzorec pozoruhodně jednotný
 
 **Ministerstvo financí** v letech 2024–2026 neodmítlo nikoho a akreditaci výslovně popisuje jako organizační proces, nikoli rozhodovací řízení. **Ministerstvo pro místní rozvoj** akreditaci vyžaduje před každou akcí, ale současné vedení nezná jediný případ zamítnutí. **Ministerstvo školství** nezná za posledních patnáct let případ, kdy by akreditovaného novináře nepustilo dovnitř. **Ministerstvo zemědělství** uvádí, že akreditaci uděluje automaticky všem novinářům, kteří o ni požádají.
 
-| Úřad | Vyžaduje akreditaci? | Odmítl akreditovaného novináře? | Co uvádí jako důvod / omezení |
-|------|:--------------------:|:-------------------------------:|-------------------------------|
-| Ministerstvo dopravy | ne | ne | akreditace není podmínkou vstupu; výjimečně kapacita a bezpečnost |
-| Ministerstvo financí | jako formalita | ne (2024–2026 nikoho) | akreditace = organizační proces |
-| Ministerstvo práce a soc. věcí | ne | ne (od roku 2024) | nemá seznam důvodů |
-| Ministerstvo pro místní rozvoj | ano, před každou akcí | ne (nezná případ) | kapacita, pořadí žádostí |
-| Ministerstvo spravedlnosti | ne striktně | ojediněle | kapacita, bezpečnost, věcná relevance |
-| Ministerstvo školství | ne striktně | ne (15 let) | bezpečnost a vstup do budovy |
-| Ministerstvo zdravotnictví | ne | neuvedeno | organizační, kapacitní a bezpečnostní podmínky |
-| Ministerstvo zemědělství | ano, v avízu | ne (uděluje automaticky) | kapacita nikdy nepřekročena |
-| **Ministerstvo zahraničí** | **—** | **ano – Z. Pokorná, 31. 7. 2026** | **„alternativní média a konspirační blogy“** |
+<AccreditationScale />
 
-_Přehled odpovědí na naše infožádosti._
+_Osm úřadů, které odpověděly věcně, bere akreditaci jako organizační formalitu a novináře kvůli obsahu jeho média neodmítá. Jediné Ministerstvo zahraničí se vymyká – akreditovanou novinářku odmítlo. Najetím na tečku se ukáže, co který úřad odpověděl._
 
 ```infobox warning
 Jde o odpovědi resortů na naše žádosti, nikoli o nezávislý audit jejich každodenní praxe. Ministerstva obrany, vnitra a průmyslu a obchodu neodpověděla vůbec, Ministerstvo kultury odpovědělo, že seznam důvodů nemá. Přesto je vzorec u těch, kdo odpověděli věcně, jednoznačný.
