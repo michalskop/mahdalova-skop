@@ -36,10 +36,10 @@ Napříč resorty, které odpověděly věcně, je vzorec pozoruhodně jednotný
 
 <AccreditationScale />
 
-_Osm úřadů, které odpověděly věcně, bere akreditaci jako organizační formalitu a novináře kvůli obsahu jeho média neodmítá. Jediné Ministerstvo zahraničí se vymyká – akreditovanou novinářku odmítlo. Najetím na tečku se ukáže, co který úřad odpověděl._
+_Jak úřady odpověděly na naši infožádost o akreditaci novinářů. Osm z těch, které odpověděly věcně, bere akreditaci jako organizační formalitu; jediné Ministerstvo zahraničí odmítlo akreditovanou novinářku._
 
 ```infobox warning
-Jde o odpovědi resortů na naše žádosti, nikoli o nezávislý audit jejich každodenní praxe. Ministerstva obrany, vnitra a průmyslu a obchodu neodpověděla vůbec, Ministerstvo kultury odpovědělo, že seznam důvodů nemá. Přesto je vzorec u těch, kdo odpověděli věcně, jednoznačný.
+Jde o odpovědi resortů na naše žádosti podle zákona č. 106/1999 Sb., nikoli o nezávislý audit jejich každodenní praxe. Přesto je vzorec u těch, kdo odpověděli věcně, jednoznačný.
 ```
 
 Nejpřísnějším resortem je z odpovědí Ministerstvo pro místní rozvoj, které akreditaci vyžaduje pokaždé. Jediné **Ministerstvo spravedlnosti** otevřeně přiznává, že akreditaci ojediněle neudělí – ale jen u kapacitně či tematicky omezených akcí. A dodává přesně to, co dělá z případu MZV výjimku. Důvodem k odmítnutí podle něj mohou být kapacita, organizace, bezpečnost nebo věcná relevance média k tématu. A pak pokračuje:
