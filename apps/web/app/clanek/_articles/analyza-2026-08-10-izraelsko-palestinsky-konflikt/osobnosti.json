@@ -1,0 +1,38 @@
+{
+  "netanjahu": {
+    "name": "Benjamin Netanjahu",
+    "proud": "Izrael",
+    "role": "izraelský premiér",
+    "bio": "Nejdéle sloužící premiér v dějinách Izraele. Na konci roku 2022 sestavil vládu s několika krajně pravicovými stranami, která prosazuje rozšiřování osad na Západním břehu. Válku v Gaze vede od útoku Hamásu ze 7. října 2023."
+  },
+  "trump": {
+    "name": "Donald Trump",
+    "proud": "Spojené státy",
+    "role": "americký prezident",
+    "bio": "V roce 2020 pomohl zprostředkovat Abrahámovské dohody o normalizaci vztahů arabských států s Izraelem. V říjnu 2025 oznámil příměří mezi Izraelem a Hamásem jako součást dvacetibodového mírového rámce pro Gazu."
+  },
+  "sinvar": {
+    "name": "Jahjá Sinvár",
+    "proud": "Hamás",
+    "role": "vůdce Hamásu (zabit 2024)",
+    "bio": "Jeden z hlavních strůjců útoku ze 7. října 2023. Po smrti Ismáíla Haníji se stal vůdcem Hamásu. Izraelská armáda ho zabila v roce 2024, spolu s dalšími nejvyššími představiteli hnutí."
+  },
+  "hanija": {
+    "name": "Ismáíl Haníja",
+    "proud": "Hamás",
+    "role": "šéf politbyra Hamásu (zabit 2024)",
+    "bio": "Nejvyšší politický představitel Hamásu, dlouhodobě působící v zahraničí. Byl zabit v roce 2024. Patřil k vedení, které Izrael během války v Gaze postupně zlikvidoval."
+  },
+  "abbas": {
+    "name": "Mahmúd Abbás",
+    "proud": "Palestinská samospráva",
+    "role": "předseda Palestinské samosprávy",
+    "bio": "Vůdce hnutí Fatah, které uznává stát Izrael a stojí v čele Palestinské samosprávy na Západním břehu. Odmítl Abrahámovské dohody, protože nepodmínily normalizaci pokrokem k palestinské státnosti."
+  },
+  "saron": {
+    "name": "Ariel Šaron",
+    "proud": "Izrael",
+    "role": "izraelský premiér (2001–2006)",
+    "bio": "Jeho návštěva Chrámové hory u mešity al-Aksá v roce 2000 patřila ke spouštěčům druhé intifády. V roce 2005 nechal Izrael jednostranně stáhnout z Pásma Gazy."
+  }
+}

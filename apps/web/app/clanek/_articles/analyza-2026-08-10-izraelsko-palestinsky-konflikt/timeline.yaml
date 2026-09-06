@@ -1,0 +1,198 @@
+title: "Izraelsko-palestinský konflikt: od plánu OSN po příměří v Gaze"
+subtitle: "Osm desetiletí válek, dohod a příměří, která zastavila boje, ale nechala stát jejich příčiny (1947–2027)"
+lastUpdated: "Stav k 10. srpnu 2026"
+collapsedYears: []
+
+facetGroups:
+  - key: topic
+    label: "Typ události"
+    values:
+      - key: war
+        label: "Válka a eskalace"
+        color: "brandDeepRed.4"
+      - key: truce
+        label: "Dohoda a příměří"
+        color: "brandTeal.4"
+      - key: diplomacy
+        label: "Diplomacie a plány"
+        color: "brandRoyalBlue.4"
+      - key: turning
+        label: "Zlom a mezník"
+        color: "brandOrange.5"
+
+events:
+  - id: un-181-1947
+    year: 1947
+    month: 11
+    facets:
+      topic: diplomacy
+    date: "Listopad 1947"
+    title: "OSN navrhla dva státy, Židé souhlasili, Arabové odmítli"
+    emoji: "🗳️"
+    summary: "Valné shromáždění OSN přijalo rezoluci 181 o rozdělení britské Palestiny na židovský a arabský stát. Jeruzalém měl zůstat pod mezinárodní správou."
+    description: "Židovská agentura plán přijala, Arabská liga i palestinské vedení ho odmítly. Arabský stát, s nímž rezoluce počítala, nikdy nevznikl – a spor o rozdělení téhož území trvá dodnes."
+
+  - id: nakba-1948
+    year: 1948
+    month: 5
+    facets:
+      topic: turning
+    date: "Květen 1948"
+    title: "Izrael vyhlásil nezávislost, pět arabských zemí zaútočilo"
+    emoji: "🏳️"
+    summary: "Den po vyhlášení státu Izrael na něj zaútočilo pět arabských armád. Válka skončila izraelským vítězstvím a vyhnáním či útěkem asi 750 tisíc Palestinců."
+    description: "Palestinci tuto událost nazývají Nakba, arabsky katastrofa. Gazu obsadil Egypt, Západní břeh a východní Jeruzalém Jordánsko. Přibližně stejný počet Židů byl v následujících letech nucen opustit arabské země a odešel do Izraele."
+
+  - id: six-day-1967
+    year: 1967
+    month: 6
+    facets:
+      topic: war
+    date: "Červen 1967"
+    title: "Za šest dní obsadil Izrael území, o která se vede spor dodnes"
+    emoji: "🗺️"
+    summary: "Šestidenní válka. Izrael preventivně zaútočil a získal Sinaj a Pásmo Gazy od Egypta, Západní břeh a východní Jeruzalém od Jordánska a Golanské výšiny od Sýrie."
+    description: "Právě hranice z roku 1967 tvoří dodnes základ většiny debat o budoucím uspořádání. Rada bezpečnosti OSN pak přijala rezoluci 242 a princip „území za mír“."
+
+  - id: yom-kippur-1973
+    year: 1973
+    month: 10
+    facets:
+      topic: war
+    date: "Říjen 1973"
+    title: "Jomkipurská válka otevřela cestu k míru s Egyptem"
+    emoji: "⚔️"
+    summary: "Egypt a Sýrie zaútočily na Izrael ve snaze získat zpět ztracená území. Vojensky válka nikoho zásadně neposunula, otevřela ale prostor k jednání."
+    description: "Egyptský prezident Anwar Sadat válku prohlásil za vítězství, protože umožnila vyjednávat o dříve ztraceném území."
+
+  - id: camp-david-1979
+    year: 1979
+    month: 3
+    facets:
+      topic: diplomacy
+    date: "Březen 1979"
+    title: "Egypt uzavřel s Izraelem mír, Sinaj dostal zpět"
+    emoji: "🤝"
+    summary: "Po jednáních v Camp Davidu podepsaly Egypt a Izrael mírovou smlouvu. Izrael vrátil Egyptu Sinajský poloostrov."
+    description: "Princip „území za mír“ tu poprvé zafungoval. Palestinská otázka ale zůstala otevřená."
+
+  - id: intifada1-1987
+    year: 1987
+    month: 12
+    facets:
+      topic: war
+    date: "1987"
+    title: "První intifáda: povstání proti okupaci"
+    emoji: "✊"
+    summary: "Na Západním břehu a v Gaze vypuklo první masové palestinské povstání proti izraelské okupaci."
+    description: "Intifáda proměnila palestinskou otázku ve stálé téma světové politiky a připravila půdu pro pozdější jednání."
+
+  - id: oslo-1993
+    year: 1993
+    month: 9
+    facets:
+      topic: diplomacy
+    date: "Září 1993"
+    title: "Oslo: naděje na dva státy, která se nenaplnila"
+    emoji: "🕊️"
+    summary: "Dohody z Osla vytvořily Palestinskou samosprávu a přinesly vzájemné uznání Izraele a Organizace pro osvobození Palestiny."
+    description: "Přechodné uspořádání mělo postupně vést ke vzniku palestinského státu. Mírový proces se ale v následujícím desetiletí rozpadl."
+
+  - id: intifada2-2000
+    year: 2000
+    month: 9
+    facets:
+      topic: war
+    date: "2000–2005"
+    title: "Druhá intifáda pohřbila mírový proces"
+    emoji: "💥"
+    summary: "Druhé povstání bylo mnohem krvavější. Palestinské skupiny včetně Hamásu podnikaly sebevražedné atentáty, Izrael odpovídal rozsáhlými operacemi a začal stavět bariéru kolem Západního břehu."
+    description: "Impulsem byla i návštěva Ariela Šarona na Chrámové hoře u mešity al-Aksá. Izrael se v roce 2005 jednostranně stáhl z Pásma Gazy."
+
+  - id: hamas-2007
+    year: 2007
+    month: 6
+    facets:
+      topic: turning
+    date: "2006–2007"
+    title: "Hamás vyhrál volby a silou převzal Gazu"
+    emoji: "🔻"
+    summary: "Hamás zvítězil v palestinských volbách 2006 a v roce 2007 násilím ovládl Gazu. Palestinská území se politicky rozdělila."
+    description: "Gazu od té doby kontroloval Hamás, Západní břeh Palestinská samospráva vedená Fatahem. Izrael a Egypt na Gazu uvalily blokádu."
+
+  - id: gaza-wars-2008
+    year: 2014
+    month: 7
+    facets:
+      topic: war
+    date: "2008 · 2012 · 2014 · 2021"
+    title: "Čtyři velké války Gazy, žádné politické řešení"
+    emoji: "🚀"
+    summary: "Opakující se cyklus raketových útoků z Gazy a izraelských operací. V roce 2014 zahynulo přes 2 200 Palestinců a 73 Izraelců, v roce 2021 přes 250 Palestinců a 13 Izraelců."
+    description: "Každá z těchto válek skončila příměřím. Žádná nevyřešila základní politický spor o Gazu, hranice ani palestinský stát."
+
+  - id: oct7-2023
+    year: 2023
+    month: 10
+    facets:
+      topic: turning
+    date: "7. října 2023"
+    title: "Nejkrvavější den v dějinách Izraele"
+    emoji: "🖤"
+    summary: "Ozbrojenci Hamásu pronikli z Gazy do jižního Izraele, zabili přes 1 200 lidí a odvlekli 251 rukojmích. Šlo o nejkrvavější útok na Izrael v jeho historii."
+    description: "Izrael následující den vyhlásil Hamásu válku a ministr obrany nařídil „úplnou blokádu“ Gazy."
+
+  - id: invasion-2023
+    year: 2023
+    month: 10
+    facets:
+      topic: war
+    date: "27. října 2023"
+    title: "Pozemní invaze do Gazy"
+    emoji: "🪖"
+    summary: "Izrael zahájil rozsáhlou pozemní invazi s cílem zničit vojenské schopnosti Hamásu a osvobodit rukojmí. Armáda postupovala přes Chán Júnis, Rafáh i severní Gazu."
+    description: "Do roku 2026 si válka podle palestinského ministerstva zdravotnictví vyžádala přes 70 tisíc mrtvých mezi civilisty i bojovníky a vysídlila téměř celou populaci Gazy."
+
+  - id: ceasefire-break-2025
+    year: 2025
+    month: 3
+    facets:
+      topic: war
+    date: "Leden–březen 2025"
+    title: "Křehké příměří vydrželo dva měsíce"
+    emoji: "⏳"
+    summary: "V lednu 2025 zprostředkovaly USA, Egypt a Katar příměří. Izrael ho v březnu ukončil kvůli sporu o propouštění rukojmích a obnovil rozsáhlou ofenzivu."
+    description: "Ofenziva zasáhla Gazu, Chán Júnis i Rafáh. Humanitární situace se dále zhoršila."
+
+  - id: truce-2025
+    year: 2025
+    month: 10
+    facets:
+      topic: truce
+    date: "Říjen 2025"
+    title: "Příměří vrátilo rukojmí a Hamás rozpustil vládu"
+    emoji: "🤍"
+    summary: "Prezident Trump oznámil příměří jako součást dvacetibodového rámce. Hamás propustil zbývající rukojmí a rozpustil svou vládu v Gaze, správu měl převzít technokratický výbor."
+    description: "Izrael zmírnil omezení humanitární pomoci. Hamás ale odmítl složit zbraně a obě strany se dál obviňovaly z porušování příměří."
+
+  - id: reject-2026
+    year: 2026
+    month: 8
+    facets:
+      topic: diplomacy
+    date: "9. srpna 2026"
+    title: "Izrael odmítl další část Trumpova plánu"
+    emoji: "🚧"
+    summary: "Premiér Netanjahu oznámil, že se izraelská armáda nestáhne z Gazy, dokud Hamás neodzbrojí. Hamás odmítá odzbrojit bez záruk stažení."
+    description: "Obě podmínky se navzájem blokují – a právě na tomto pořadí kroků se poválečné uspořádání znovu zadrhlo."
+
+  - id: mandate-2027
+    year: 2027
+    month: 1
+    facets:
+      topic: diplomacy
+    date: "Výhled na rok 2027"
+    title: "Gazu má převzít reformovaná Palestinská samospráva"
+    emoji: "🏛️"
+    summary: "Návrh rezoluce OSN počítá s mezinárodní správou a bezpečnostní silou v Gaze. Po vypršení mandátu v roce 2027 má území převzít reformovaná Palestinská samospráva."
+    description: "Zda k tomu dojde, závisí na dosud nevyřešených otázkách: odzbrojení Hamásu, stažení izraelské armády a podobě budoucí palestinské správy."
