@@ -1,6 +1,6 @@
 ---
 title: "Soud nařídil státu omluvu za výroky ministra o Palestincích"
-date: "2026-08-27"
+date: "2026-06-16"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Pražský soud rozhodl, že výrok bývalého ministra Martina Dvořáka o „genetické výbavě“ Palestinců byl protiprávní a stát se za něj musí veřejně omluvit; přirovnání ke Goebbelsovi označil za přiléhavé. Ve zpravodajství velkých redakcí rozsudek zapadl. Podobné spory přitom soudy vedou po celé Evropě – v Německu, Rakousku, Švédsku i Polsku – a rozhodují je na obě strany."
 coverImage: "images/gaza-nenavist-soudy-datatimes.jpg"
