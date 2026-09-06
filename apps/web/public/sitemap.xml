@@ -104,6 +104,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-23-pricovy-politicka-setkani</loc>
+    <lastmod>2026-08-23T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu</loc>
+    <lastmod>2026-08-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-09-04-kdo-smi-k-ministrovi</loc>
+    <lastmod>2026-09-04T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy</loc>
     <lastmod>2025-02-14T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -208,6 +226,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho</loc>
     <lastmod>2026-03-03T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika</loc>
+    <lastmod>2026-09-05T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -338,6 +362,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie</loc>
+    <lastmod>2026-08-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra</loc>
+    <lastmod>2026-08-02T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-nenavist-k-palestincum-u-soudu-evropa</loc>
+    <lastmod>2026-08-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/mandaty-2024-10-31-ctyrkoalice-by-se-nad-vodou-drzela-jen-stezi</loc>
     <lastmod>2024-10-31T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -382,6 +424,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost</loc>
     <lastmod>2027-03-26T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/skutecna-velikost</loc>
+    <lastmod>2026-09-05T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

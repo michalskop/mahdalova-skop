@@ -23,7 +23,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 ### Volební analýzy a modely
 - [Vývoj predikce výsledku voleb](https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb)
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Kam kráčíš, Česko?](https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-13-kam-kracis-cesko)
+- [Do obecních zastupitelstev i Senátu 2026 kandiduje nejméně lidí za víc než dvacet let](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu)
 
 ### Ekonomika a ceny
 - [Data: Zastropování marží benzínek v peněžence moc nepoznáte](https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu)
@@ -31,14 +31,14 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Esej: Ekonomie pozornosti, dopaminové pasti a život s ADHD v digitální době](https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti)
 
 ### Mezinárodní politika
-- [New York mění panorama a zdražuje luxusní bydlení](https://www.mahdalova-skop.cz/clanek/cislo-dne-2026-03-11-new-york-meni-panorama-a-zdrazuje-luxusni-bydleni)
-- [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
-- [Jak jedno zmanipulované video rozhýbalo pět evropských vlád (včetně české)](https://www.mahdalova-skop.cz/clanek/explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad)
+- [Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně](https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika)
+- [Soud nařídil státu omluvu za výrok ministra o Palestincích. Hlavní česká média o rozsudku mlčela](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-nenavist-k-palestincum-u-soudu-evropa)
+- [Paul Steiger: Jsi fakt dobrá! Spoj se s těmi nejlepšími](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra)
 
 ### Dezinformace a média
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
-- [Úniky z policejních spisů](https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu)
+- [Soud nařídil státu omluvu za výrok ministra o Palestincích. Hlavní česká média o rozsudku mlčela](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-nenavist-k-palestincum-u-soudu-evropa)
+- [Příčovy: „nepolitické“ vlastenecké setkání, kam osm let jezdí předsedové stran](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-23-pricovy-politicka-setkani)
 
 ### Vzdělávání a společnost
 - [Boj o udržení pozornosti](https://www.mahdalova-skop.cz/clanek/podcast-2025-12-21-boj-o-pozornost)
@@ -47,8 +47,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
+- [Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně](https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika)
 - [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
-- [Úniky z policejních spisů](https://www.mahdalova-skop.cz/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu)
 
 ## Kontakt
 
