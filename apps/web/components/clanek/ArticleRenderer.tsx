@@ -12,6 +12,7 @@ import { CodeBlock } from './MediaBox';
 import { InfoBox } from './InfoBox'; // Import the InfoBox component
 import { Figure } from './Figure'; // Floated photo that bleeds out of the reading column
 import { AccreditationScale } from './AccreditationScale'; // One-off outlier-scale viz
+import TrueSizeGame from './TrueSizeGame/TrueSizeGame'; // "Skutečná velikost" map guessing game
 import { TestComponent } from '@/components/mdx/TestComponent';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
@@ -197,6 +198,7 @@ export function ArticleRenderer({
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
     Figure: (props: any) => <Figure slug={slug} {...props} />,
     AccreditationScale: () => <AccreditationScale />,
+    TrueSizeGame: () => <TrueSizeGame />,
     KeyNumbers: ({ yamlFile, ...props }) => {
       // If yamlFile is provided, use pre-loaded data from server
       if (yamlFile) {
