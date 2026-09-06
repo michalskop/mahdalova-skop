@@ -123,7 +123,7 @@ const countryFacts: Record<
   Brazil: {
     population: "203 milionů",
     capital: "Brasília",
-    note: "Jižní Amerika; člen Mercosuru",
+    note: "Jižní Amerika; Mercosur je společný trh jihoamerických států",
   },
   India: {
     population: "1,43 miliardy",
@@ -143,17 +143,17 @@ const countryFacts: Record<
   Czechia: {
     population: "10,9 milionu",
     capital: "Praha",
-    note: "Střední Evropa; člen EU",
+    note: "Střední Evropa; EU je politické a hospodářské sdružení evropských států",
   },
   France: {
     population: "68 milionů",
     capital: "Paříž",
-    note: "Západní Evropa; člen EU",
+    note: "Západní Evropa; EU je politické a hospodářské sdružení evropských států",
   },
   Germany: {
     population: "84 milionů",
     capital: "Berlín",
-    note: "Střední Evropa; člen EU",
+    note: "Střední Evropa; EU je politické a hospodářské sdružení evropských států",
   },
   UnitedStates: {
     population: "340 milionů",
@@ -178,8 +178,54 @@ const countryFacts: Record<
   SouthAfrica: {
     population: "63 milionů",
     capital: "Pretoria",
-    note: "Jižní Afrika",
+    note: "Jižní Afrika; Africká unie podporuje spolupráci afrických států",
   },
+};
+
+const countryFlags: Record<string, string> = {
+  Greenland: "🇬🇱",
+  Brazil: "🇧🇷",
+  India: "🇮🇳",
+  Australia: "🇦🇺",
+  Madagascar: "🇲🇬",
+  Czechia: "🇨🇿",
+  France: "🇫🇷",
+  Germany: "🇩🇪",
+  China: "🇨🇳",
+  Russia: "🇷🇺",
+  Japan: "🇯🇵",
+  "South Africa": "🇿🇦",
+  Ukraine: "🇺🇦",
+  Poland: "🇵🇱",
+  Spain: "🇪🇸",
+  "United Kingdom": "🇬🇧",
+  Norway: "🇳🇴",
+  Sweden: "🇸🇪",
+  Finland: "🇫🇮",
+  Mexico: "🇲🇽",
+  Argentina: "🇦🇷",
+  Chile: "🇨🇱",
+  Iran: "🇮🇷",
+  Afghanistan: "🇦🇫",
+  Mongolia: "🇲🇳",
+  Kazakhstan: "🇰🇿",
+  "Saudi Arabia": "🇸🇦",
+  Turkey: "🇹🇷",
+  Morocco: "🇲🇦",
+  Algeria: "🇩🇿",
+  Tunisia: "🇹🇳",
+  Libya: "🇱🇾",
+  Egypt: "🇪🇬",
+  Niger: "🇳🇪",
+  Chad: "🇹🇩",
+  Sudan: "🇸🇩",
+  Ethiopia: "🇪🇹",
+  Kenya: "🇰🇪",
+  Mali: "🇲🇱",
+  Angola: "🇦🇴",
+  Nigeria: "🇳🇬",
+  Somalia: "🇸🇴",
+  "Dem. Rep. Congo": "🇨🇩",
 };
 
 const Basemap = memo(function Basemap({
@@ -1000,13 +1046,16 @@ export default function TrueSizeGame() {
               ×
             </button>
             <strong style={{ color: detail.color }}>
+              <span className={styles.detailFlag} aria-hidden="true">
+                {countryFlags[detail.name] || "🌐"}
+              </span>{" "}
               {label(detail.name)}
             </strong>
             <small>
               ≈ {number.format(areaKm2(byName.get(detail.name)!))} km²
             </small>
             <span>
-              Obyvatel:{" "}
+              Počet obyvatel:{" "}
               {countryFacts[detail.name]?.population || "údaj není k dispozici"}
             </span>
             <span>
@@ -1017,7 +1066,6 @@ export default function TrueSizeGame() {
               {countryFacts[detail.name]?.note ||
                 `Geografická poloha: ${COUNTRIES[detail.name]?.continent || "svět"}`}
             </span>
-            <div></div>
           </aside>
         )}
         {shareUrl && (

@@ -525,6 +525,10 @@
   font-size: 18px;
   padding-right: 30px;
 }
+.detailFlag {
+  font-size: 20px;
+  vertical-align: -1px;
+}
 .detail > small {
   color: #505365;
 }
@@ -541,9 +545,12 @@
   position: absolute;
   right: 5px;
   top: 5px;
-  min-width: 30px;
-  min-height: 30px;
+  min-width: 38px;
+  min-height: 38px;
   background: transparent;
+  color: #73777a;
+  font-size: 25px;
+  font-weight: 600;
 }
 .share {
   position: absolute;
