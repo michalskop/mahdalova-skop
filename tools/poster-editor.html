@@ -93,6 +93,12 @@
   .swname{font-size:11px;color:var(--muted);margin-top:8px;min-height:15px;}
   .swname b{color:var(--navy);}
 
+  /* rozšířená firemní paleta (pod paletou kapitol) */
+  .extlbl{font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#999;margin:7px 0 3px;}
+  .extrow{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;}
+  .extsw{height:22px;border-radius:3px;cursor:pointer;border:2px solid transparent;padding:0;}
+  .extsw.on{border-color:var(--navy);outline:1.5px solid #fff;outline-offset:-3px;}
+
   /* presets */
   .presets{display:flex;flex-direction:column;gap:4px;}
   .pre{display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:6px 8px;border-radius:4px;
@@ -179,11 +185,20 @@
     </div>
 
     <div class="ps">
+      <div class="plbl">Logo (nahoře)</div>
+      <div class="chips" id="toplogo" style="grid-template-columns:repeat(2,1fr)"></div>
+      <div class="note">DataTimes.cz = barevné kolečko + slovo. „Hlava speciálu“ = ProfileHead pro Data pro budoucí premiérku.</div>
+    </div>
+
+    <div class="ps">
       <div class="plbl">Chapter / colour</div>
       <div class="swgrid" id="accents"></div>
       <div class="swname" id="swname"></div>
       <div class="note">15 chapters = 15 colours from <code>DPBP_CHAPTERS</code>.
         No other dominant colour is used and shades are not altered.</div>
+      <div class="plbl" style="margin-top:12px">Rozšířená paleta (DataTimes)</div>
+      <div id="extpal"></div>
+      <div class="note">Barvy kapitol výše se nemění – tohle je celá firemní paleta pro další použití.</div>
     </div>
 
     <div class="ps">
@@ -192,7 +207,7 @@
     </div>
 
     <div class="ps">
-      <div class="plbl">Headline number</div>
+      <div class="plbl">Headline</div>
       <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--navy);margin-bottom:8px">
         <input type="checkbox" id="f-hidenum"> Hide number — spread chart &amp; claim to fill the space
       </label>
@@ -299,8 +314,24 @@ const state = {
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
   motif:'fall', accent:'#de1743', format:'link', image:null, dark:false,
-  imgFit:'fill', imgPos:'center', hideNumber:false
+  imgFit:'fill', imgPos:'center', hideNumber:false, topLogo:'special'
 };
+
+// Rozšířená firemní paleta – kompletní scale z apps/web/app/providers/ThemeProvider.tsx.
+// Barvy kapitol (CHAPTERS) se tím NEMĚNÍ; tohle je doplněk pro další použití.
+const PALETTE_EXT = [
+  ['Crimson',      ['#fff4f6','#ffb3c0','#ff8099','#ff4d70','#ff1a4a','#f01745','#de1743','#c5143c','#a81134','#8b0e2b']],
+  ['Yellow',       ['#fffdf0','#fff7d9','#fff0b3','#ffe680','#ffdc33','#ffd519','#ffcf02','#efb704','#bd9103','#a47d03']],
+  ['Orange',       ['#fff3e8','#ffe0c7','#ffc89f','#fda668','#ff934d','#ff7f2a','#f76800','#cc5f00','#994800','#663200']],
+  ['Royal blue',   ['#e9ebfa','#c9d0f5','#a9b5f0','#899aeb','#697fe6','#5e66d5','#4a51ab','#383d82','#272a59','#161730']],
+  ['Teal',         ['#e5fdfc','#b8eff6','#8cdfef','#5fcce6','#33b9d9','#1a9fbd','#0e839e','#06677d','#044d5e','#023440']],
+  ['Forest green', ['#eaf7d6','#cbeab1','#acde8b','#8dd265','#6ec53f','#639e0a','#507e08','#3d5f06','#2a3f04','#172002']],
+  ['Emerald mint', ['#e8f9f4','#c2f0e4','#9be8d4','#75dfc4','#4fd6b4','#12b886','#0e926a','#0b6b4e','#084533','#042319']],
+  ['Navy',         ['#e9ecf4','#d2d8e9','#bcc4df','#a6b0d4','#8f9dc9','#7889be','#6267a3','#4c4f8e','#2f325c','#101432']],
+  ['Deep red',     ['#fbe8eb','#f5c4c9','#efa0af','#e87c91','#d85a74','#bb3a5d','#a03250','#812840','#621d30','#431320']],
+  ['Coral red',    ['#fff0ed','#ffcec6','#ffa99c','#ff7e6e','#ff5c4a','#ff3f30','#e8412c','#c93020','#a32318','#7d1810']],
+  ['Chocolate',    ['#f5f0eb','#e6d5c3','#d4b89e','#c19a78','#a87d58','#8b6240','#6e4a2c','#53361e','#3b2414','#24150b']],
+];
 const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -457,8 +488,10 @@ function buildSVG(s, standalone){
         + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`)
       + claimBox(M,claimTop,claimLines,claimSize,claimLH,'start')
       + `<text x="${M}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}">${claimT}</text>`
-      + logoAt(RE,24,140)                                     // logo nahoře nad obrázkem
-      + brandMark('DataTimes','left',566,M,RE,cInk)
+      + (s.topLogo==='datatimes'
+          ? brandMark('DataTimes','right',60,M,RE,cInk,60)    // DataTimes.cz kolečko + slovo vpravo nahoře
+          : logoAt(RE,24,140))                                // hlava speciálu nad obrázkem
+      + (s.topLogo==='datatimes' ? '' : brandMark('DataTimes','left',566,M,RE,cInk))
       + brandMark('mahdalova-skop','right',566,M,RE,cInk);
   } else {
     // ---- STACKED (Square / Portrait / Story): kompaktní hlavička, velký obrázek ----
@@ -519,12 +552,14 @@ function buildSVG(s, standalone){
     const motifRect=[cx-mw/2,Math.round(vTopMotif+((vBot-vTopMotif)-mh)/2),mw,mh];
     inner = visual(motifRect,imgRect)
       + kicker(M,kickBaseY,headLeft-M-16,'start')
-      + logoAt(RE,topY,S)
+      + (s.topLogo==='datatimes'
+          ? brandMark('DataTimes','right',topY+Math.round(S*0.28),M,RE,cInk,Math.round(S*0.42))
+          : logoAt(RE,topY,S))
       + (hideNum ? '' :
           `<text x="${M}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}"${halo}>${esc(s.big)}</text>`
         + `<text x="${M}" y="${unitY}" font-family="${F_COND}" font-size="30" fill="${cMut}"${halo}>${esc(s.unit)}</text>`)
       + `<text x="${claimLX}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}"${halo}>${claimT}</text>`
-      + brandMark('DataTimes','left',footY,M,RE,cInk)
+      + (s.topLogo==='datatimes' ? '' : brandMark('DataTimes','left',footY,M,RE,cInk))
       + brandMark('mahdalova-skop','right',footY,M,RE,cInk);
   }
 
@@ -553,11 +588,13 @@ function measureSlab(text, size){
 // Značka do rohu patičky: kolečko (červený kruh + žlutý oblouk) VŽDY před nápisem.
 // Prstenec je tlustý – ztlušťuje se dovnitř, vnější průměr zůstává (R+SW/2 = 20,5
 // jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
-function brandMark(name, side, y, LM, RM, ink){
+function brandMark(name, side, y, LM, RM, ink, size){
   ink = ink || C.ink;        // barva nápisu dle režimu
+  size = size || 41;         // vnější průměr kolečka (default 41 = původní patička)
   // Přesná geometrie oficiálního logo.svg: žlutá, oranžová a crimson
   // včetně žlutého překryvného gradientu.
-  const Rout=20.5, gap=16, k=(Rout/138).toFixed(4);
+  const Rout=size/2, gap=Rout*0.78, k=(Rout/138).toFixed(4);
+  const fs=Math.round(Rout*1.4634);   // 30 px při Rout 20.5 – poměr zachován
   const gid='brandGradient';
   const ring = `<defs><linearGradient id="${gid}" x1="1" x2=".25" y1=".5" y2="1">`
     + `<stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/>`
@@ -572,13 +609,13 @@ function brandMark(name, side, y, LM, RM, ink){
     + `</g>`;
   const label = `<tspan fill="${ink}">${esc(name)}</tspan>`
     + `<tspan fill="${C.crimson}">.</tspan><tspan fill="${ink}">cz</tspan>`;
-  const W = measureCond(name+'.cz', 30);
+  const W = measureCond(name+'.cz', fs);
   let markCx, textX, anchor;
   if(side==='left'){ markCx = LM+Rout; textX = markCx+Rout+gap; anchor='start'; }
   else { textX = RM; anchor='end'; markCx = (RM-W)-gap-Rout; }
   return `<g transform="translate(${markCx.toFixed(1)},${y})">${ring}</g>`
-    + `<text x="${textX.toFixed(1)}" y="${y+10}" font-family="'Roboto Condensed', Arial, sans-serif" `
-    + `font-size="30" font-weight="700" text-anchor="${anchor}">${label}</text>`;
+    + `<text x="${textX.toFixed(1)}" y="${(y+fs*0.34).toFixed(1)}" font-family="'Roboto Condensed', Arial, sans-serif" `
+    + `font-size="${fs}" font-weight="700" text-anchor="${anchor}">${label}</text>`;
 }
 
 // Logo speciálu = profilová hlava (ProfileHead): silueta v barvě kapitoly, uvnitř
@@ -641,6 +678,33 @@ Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('butt
     document.getElementById('frame').classList.toggle('tall', f.h/f.w>1.1);
     hintEl.textContent=`Preview ${f.w} × ${f.h} px · Roboto Slab + Roboto Condensed`;render();};
   fWrap.appendChild(b);});
+
+// logo nahoře: DataTimes.cz (kolečko + slovo) vs. hlava speciálu
+const tlWrap=document.getElementById('toplogo');
+[['datatimes','DataTimes.cz'],['special','Hlava speciálu']].forEach(([v,label])=>{
+  const b=document.createElement('button');
+  b.className='chip'+(v===state.topLogo?' on':'');b.dataset.v=v;b.textContent=label;
+  b.onclick=()=>{state.topLogo=v;[...tlWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};
+  tlWrap.appendChild(b);});
+
+// rozšířená firemní paleta – klik nastaví accent (barvy kapitol zůstávají nedotčené)
+const extWrap=document.getElementById('extpal');
+PALETTE_EXT.forEach(([fam,hexes])=>{
+  const lbl=document.createElement('div');lbl.className='extlbl';lbl.textContent=fam;extWrap.appendChild(lbl);
+  const row=document.createElement('div');row.className='extrow';
+  hexes.forEach(hex=>{
+    const b=document.createElement('button');b.className='extsw';b.style.background=hex;b.dataset.hex=hex;b.title=hex;
+    b.onclick=()=>{
+      state.accent=hex;
+      document.querySelectorAll('#accents .sw').forEach(c=>c.classList.remove('on'));
+      extWrap.querySelectorAll('.extsw').forEach(c=>c.classList.toggle('on',c===b));
+      const sn=document.getElementById('swname'); if(sn) sn.innerHTML=`vlastní barva · <b style="color:${hex}">${hex}</b>`;
+      render();
+    };
+    row.appendChild(b);
+  });
+  extWrap.appendChild(row);
+});
 
 // ------- upload obrázku do vizuální plochy -------
 const dropEl=document.getElementById('drop');
@@ -705,6 +769,7 @@ CHAPTERS.forEach(([id,hex,title])=>{
     state.chapter=id; state.accent=hex;
     state.kicker=('DATA PRO BUDOUCÍ PREMIÉRKU · '+title).toUpperCase();
     document.getElementById('f-kicker').value=state.kicker;
+    document.querySelectorAll('#extpal .extsw').forEach(c=>c.classList.remove('on'));
     syncAcc(); render();
   };
   aWrap.appendChild(b);
