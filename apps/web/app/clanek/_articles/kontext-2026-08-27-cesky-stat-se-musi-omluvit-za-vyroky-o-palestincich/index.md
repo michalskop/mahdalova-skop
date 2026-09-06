@@ -1,5 +1,5 @@
 ---
-title: "Soud nařídil státu omluvu za výrok ministra o Palestincích. Hlavní česká média o rozsudku mlčela"
+title: "Soud nařídil státu omluvu za výroky ministra o Palestincích"
 date: "2026-08-27"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Pražský soud rozhodl, že výrok bývalého ministra Martina Dvořáka o „genetické výbavě“ Palestinců byl protiprávní a stát se za něj musí veřejně omluvit; přirovnání ke Goebbelsovi označil za přiléhavé. Ve zpravodajství velkých redakcí rozsudek zapadl. Podobné spory přitom soudy vedou po celé Evropě – v Německu, Rakousku, Švédsku i Polsku – a rozhodují je na obě strany."
@@ -9,7 +9,13 @@ filter: ["kontext"]
 tags: ["Justice", "Palestinci", "Izrael", "Gaza", "hate speech", "Martin Dvořák", "svobodná média", "Česká televize", "soudy", "lidská práva", "Evropa"]
 promoted: 70
 ---
-Pražský soud v červnu 2026 poprvé rozhodl, že se český stát musí veřejně omluvit za to, že jeho ministr v hlavním vysílacím čase veřejnoprávní televize prohlásil, že nenávist je součástí „genetické výbavy“ celého národa. Soudkyně přirovnání toho výroku k větě Josepha Goebbelse označila za přiléhavé. Rozsudek, který konstatuje protiprávní jednání státu při dehumanizaci Palestinců, přinesl a sledoval jediný český web. Ve zpravodajství České televize, Českého rozhlasu, Seznam Zpráv ani dalších celostátních redakcí jsme k němu samostatnou zprávu nenašli.
+Pražský soud v červnu 2026 rozhodl, že se český stát musí veřejně omluvit za výroky bývalého ministra Martina Dvořáka na adresu Palestinců. Soud tyto výroky označil za protiprávní, nepravdivé a zcela nepřiměřené.
+
+Tehdejší ministr pro evropské záležitosti Dvořák je pronesl v hlavním vysílacím čase veřejnoprávní televize a o Palestincích prohlásil, že nenávist je součástí „genetické výbavy“ celého národa: „Ne všichni Palestinci jsou hamásovci, ale všichni Palestinci od malých dětí jsou vychováváni v nenávisti k Izraeli (…) a základem jejich genetické výbavy je nenávist ke všemu izraelskému.“
+
+Jedna ze tří žalujících, Helena Shanaáhová, přirovnala během soudního líčení Dvořákův výrok k výroku Josepha Goebbelse z časopisu Das Reich z roku 1940, že „všichni Židé jsou již svým narozením a svou rasou součástí mezinárodního spiknutí proti nacionálně socialistickému Německu. Chtějí jeho porážku a zničení a dělají vše, co je v jejich silách, aby toho dosáhli.“ Soudkyně Barbora Šumová při odůvodnění rozsudku označila toto přirovnání za „zcela přiléhavé“, [upozorňuje novinářka Saša Uhlová v Deníku Alarm](https://denikalarm.cz/2026/06/soud-oznacil-srovnani-vyroku-byvaleho-ministra-dvoraka-a-goebbelse-za-prilehave/).
+
+Rozsudek, který konstatuje protiprávní jednání státu při dehumanizaci Palestinců, přinesl a sledoval jediný český web. Ve zpravodajství České televize, Českého rozhlasu, Seznam Zpráv ani dalších celostátních redakcí jsme k němu samostatnou zprávu nenašli.
 
 A nejde o českou zvláštnost. Zda kolektivizující výrok o Palestincích, Izraelcích nebo Židech je ještě politický názor, nebo už podněcování k nenávisti, řeší soudy napříč Evropou. Rozhodují to na obě strany a čím dál přesněji rozlišují, kdy míří kritika na stát, a kdy na lidi.
 
@@ -19,11 +25,9 @@ Text vychází z rozsudku Obvodního soudu pro Prahu 1, o němž informoval Den�
 
 ## Co soud rozhodl
 
-Tři členové palestinské komunity – antropolog Yasar Abu Ghosh a manželé Helena a Mohamed Shanaáhovi – zažalovali Ministerstvo zahraničních věcí o přiměřené zadostiučinění za nemajetkovou újmu. Předmětem byly dva výroky, které ministr pro evropské záležitosti Martin Dvořák pronesl 17. října 2024 v pořadu České televize Události, komentáře v diskusi s europoslanci Kateřinou Konečnou a Ondřejem Kovaříkem.
+Žalobu podali tři členové palestinské komunity – antropolog Yasar Abu Ghosh a manželé Helena a Mohamed Shanaáhovi – proti Ministerstvu zahraničních věcí a domáhali se přiměřeného zadostiučinění za nemajetkovou újmu. Výroky padly 17. října 2024 v pořadu České televize Události, komentáře v diskusi s europoslanci Kateřinou Konečnou a Ondřejem Kovaříkem.
 
-Soudkyně Barbora Šumová jim [přiznala újmu u prvního z nich](https://denikalarm.cz/2026/06/soud-oznacil-srovnani-vyroku-byvaleho-ministra-dvoraka-a-goebbelse-za-prilehave/): „Ne všichni Palestinci jsou hamásovci, ale všichni Palestinci od malých dětí jsou vychováváni v nenávisti k Izraeli (…) a základem jejich genetické výbavy je nenávist ke všemu izraelskému.“ Druhý výrok – o Izraeli „obklopeném mořem arabských zemí“ – podle soudu skutkovou podstatu nenaplnil.
-
-Soud označil výrok o genetické výbavě za protiprávní, nepravdivý a zcela nepřiměřený a shledal ho diskriminačním vůči všem Palestincům. „Tento výrok je ve společnosti, která se řídí Listinou práv a svobod, zcela nepřijatelný a jednání Dvořáka bylo protiprávní,“ odůvodnila soudkyně. Přirovnání, které u soudu vyslovila Helena Shanaáhová – k větě nacistického ministra propagandy Josepha Goebbelse z roku 1940, že Židé jsou „již svým narozením a svou rasou“ součástí spiknutí – označila Šumová za „zcela přiléhavé“.
+Soudkyně přiznala újmu jen u výroku o „genetické výbavě“; druhý výrok – o Izraeli „obklopeném mořem arabských zemí“ – podle soudu skutkovou podstatu nenaplnil. Výrok o genetické výbavě označila za diskriminační vůči všem Palestincům: „Tento výrok je ve společnosti, která se řídí Listinou práv a svobod, zcela nepřijatelný a jednání Dvořáka bylo protiprávní.“
 
 Finanční odškodné soud nepřiznal. Uložil státu, aby se žalobcům omluvil formou tiskové zprávy zveřejněné nejméně 90 dní na webu ministerstva. Odpovědnost státu odvodil z toho, že Dvořák mluvil jako ministr o vládní politice ve veřejnoprávním médiu. Dvořák sám žalován nebyl, protože žaloba mířila na stát; soudkyně to komentovala slovy, že mu v tomto řízení nemůže uložit, „aby se zachoval jako chlap a omluvil se“. Původní Dvořákovu omluvu na síti X, v níž výrok označil za „nešťastný“, soud za dostatečnou nepovažoval. V polovině června pak Dvořák zveřejnil [novou, adresnější omluvu](https://www.martindvorak.cz/omluva/), v níž uvádí, že „rozsudek soudu respektuje“.
 
@@ -47,15 +51,18 @@ Jak daleko tahle ochrana projevu sahá, ukázal loni [Bavorský nejvyšší zems
 
 ## Evropa: stejné rozsudky padají na obou stranách
 
-Rešerše napříč evropskou judikaturou po 7. říjnu 2023 ukazuje, že Dvořákův rozsudek nestojí osamoceně a že soudy trestají kolektivizující nenávist bez ohledu na to, koho míří.
+Rešerše evropské judikatury po 7. říjnu 2023 ukazuje, že Dvořákův rozsudek nestojí osamoceně – a že soudy trestají kolektivizující nenávist bez ohledu na to, koho míří. Palestinci, Izraelci i Židé jsou přitom chráněné skupiny, zatímco ostrá kritika izraelského státu zůstává chráněným projevem.
 
-**Rakousko** má případy z obou stran. Landesgericht Salzburg odsoudil muže, který k fotografiím zabitých dětí z Gazy napsal, že „sionisté jsou nacisté“, [k sedmi měsícům podmíněně](https://salzburg.orf.at/stories/3267915/) za podněcování k nenávisti vůči Izraelcům a Židům; rozsudek je pravomocný. Naopak mezi skutky, za které [Oberlandesgericht Linz](https://www.ris.bka.gv.at/Dokumente/Justiz/JJT_20251125_OLG0459_0080BS00168_25Z0000_000/JJT_20251125_OLG0459_0080BS00168_25Z0000_000.pdf) potvrdil odsouzení, byl i ponižující facebookový příspěvek zaměřený na Palestince jako skupinu definovanou původem. Ve dvou vídeňských řízeních soudy naopak zprostily obžalované, protože jejich výroky vyložily jako mířené na izraelskou vládu a armádu, ne na Židy jako takové – přesně po hraně, kterou popisuje bavorský rozsudek.
+| Země | Právní kvalifikace | Výsledek / trest | Výrok nebo skutek |
+|---|---|---|---|
+| 🇦🇹 Rakousko – Salzburg | Verhetzung (proti Izraelcům a Židům) | 7 měsíců podmíněně, pravomocné | K fotografiím zabitých dětí z Gazy napsal, že „sionisté jsou nacisté“. [ORF](https://salzburg.orf.at/stories/3267915/) |
+| 🇦🇹 Rakousko – OLG Linz | Verhetzung (v širším případu) | součást tříletého nepodmíněného trestu | Ponižující facebookový příspěvek cílený na Palestince jako skupinu podle původu. [OLG Linz](https://www.ris.bka.gv.at/Dokumente/Justiz/JJT_20251125_OLG0459_0080BS00168_25Z0000_000/JJT_20251125_OLG0459_0080BS00168_25Z0000_000.pdf) |
+| 🇩🇪 Německo – BayObLG | Volksverhetzung – **zproštění** | odsouzení zrušeno | „Sionisté jsou invazoři, teroristé, vrazi a genocidníci“ – soud musí zvážit, zda míří na Židy, nebo na politiku Izraele. [BayObLG](https://blog.burhoff.de/2025/05/mal-wieder-volksverhetzung-durch-twitterpost-oder-zionisten-sind-invasoren-terroristen-voelkermoerder/) |
+| 🇩🇪 Německo – Flensburg | Volksverhetzung | 6 měsíců podmíněně + 1 200 eur | Cedule „Juden haben hier Hausverbot“ – „Židé sem mají zákaz vstupu“. [LTO](https://www.lto.de/recht/nachrichten/n/ag-flensburg-455ds114js21952/25-aushang-hausverbot-juden-antisemitismus-flensburger-haendler-verurteilt) |
+| 🇸🇪 Švédsko – Borås | Hets mot folkgrupp + pokus o těžké ublížení na zdraví | 3 roky vězení + odškodné poškozeným | Autem najel do propalestinské demonstrace; dříve psal „Palestinci jsou nejlepší mrtví“. [SVT](https://www.svt.se/nyheter/lokalt/vast/bilist-korde-in-i-propalestinsk-demonstration-i-boras-doms-till-fangelse) |
+| 🇵🇱 Polsko – Varšava | civilní ochrana osobnosti (řízení běží) | zatím bez rozsudku | Žaloba člena chráněné skupiny za antisemitské projevy; žádá veřejnou omluvu. [IJL](https://www.ijl.org/combating-antisemitism/lawsuit-against-marie-andersen-in-poland/) |
 
-**Německo** má judikaturu nejbohatší a stejně obousměrnou. Vedle ochrany kritiky Izraele stojí tvrdé postihy nenávisti vůči lidem: obchodníka z Flensburgu, který ve výloze vyvěsil ceduli „Juden haben hier Hausverbot“ – „Židé sem mají zákaz vstupu“ –, soud [odsoudil k šesti měsícům podmíněně](https://www.lto.de/recht/nachrichten/n/ag-flensburg-455ds114js21952/25-aushang-hausverbot-juden-antisemitismus-flensburger-haendler-verurteilt) a k platbě 1 200 eur památníku koncentračního tábora.
-
-**Švédsko** má patrně nejtvrdší protipalestinský případ. Muž, který v srpnu 2024 najel autem do propalestinské demonstrace v Borås a dlouhodobě šířil příspěvky typu „Palestinci jsou nejlepší mrtví“, dostal [tři roky vězení](https://www.svt.se/nyheter/lokalt/vast/bilist-korde-in-i-propalestinsk-demonstration-i-boras-doms-till-fangelse) za pokus o těžké ublížení na zdraví a za podněcování proti národnostní skupině; [soud výslovně pracoval s motivem](https://www.domstol.se/nyheter/2025/10/man-doms-till-flerarigt-fangelsestraff-for-att-ha-kort-in-i-ett-demonstrationstag/) zasáhnout Palestince jako etnickou skupinu a přiznal odškodné desítkám poškozených.
-
-**Polsko** nabízí případ, který je Dvořákově kauze konstrukčně nejblíž. Židovský izraelský student medicíny [zažaloval studentku i Lékařskou univerzitu ve Varšavě](https://www.ijl.org/combating-antisemitism/lawsuit-against-marie-andersen-in-poland/) za antisemitské projevy a domáhá se veřejné omluvy a ochranných opatření. Také tady konkrétní člen chráněné skupiny tvrdí, že kolektivizující veřejný projev zasáhl jeho osobnostní práva. Řízení běží a rozsudek zatím není; zdroj informací o něm je současně stranou, která žalobu podporuje.
+Dva vídeňské soudy naopak obžalované zprostily, když jejich výroky vyložily jako mířené na izraelskou vládu a armádu, ne na Židy – po stejné hraně, jakou vede bavorský rozsudek. U polského případu je zdrojem strana, která žalobu podporuje.
 
 ## Proč je Dvořákův případ jiný
 
