@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "qa:kviff": "node scripts/qa-kviff.mjs",
+    "qa:true-size": "node scripts/qa-true-size.mjs",
     "sync:dpbp": "node scripts/sync-dpbp.mjs",
     "setup:dpbp": "node scripts/setup-dpbp.mjs"
   },
