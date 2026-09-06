@@ -6,7 +6,7 @@ excerpt: "Pražský soud rozhodl, že výrok bývalého ministra Martina Dvořá
 coverImage: "images/gaza-nenavist-soudy-datatimes.jpg"
 coverFit: cover
 filter: ["kontext"]
-tags: ["Palestinci", "Izrael", "Gaza", "hate speech", "Martin Dvořák", "svobodná média", "Česká televize", "soudy", "lidská práva", "Evropa"]
+tags: ["Justice", "Palestinci", "Izrael", "Gaza", "hate speech", "Martin Dvořák", "svobodná média", "Česká televize", "soudy", "lidská práva", "Evropa"]
 promoted: 70
 ---
 Pražský soud v červnu 2026 poprvé rozhodl, že se český stát musí veřejně omluvit za to, že jeho ministr v hlavním vysílacím čase veřejnoprávní televize prohlásil, že nenávist je součástí „genetické výbavy“ celého národa. Soudkyně přirovnání toho výroku k větě Josepha Goebbelse označila za přiléhavé. Rozsudek, který konstatuje protiprávní jednání státu při dehumanizaci Palestinců, přinesl a sledoval jediný český web. Ve zpravodajství České televize, Českého rozhlasu, Seznam Zpráv ani dalších celostátních redakcí jsme k němu samostatnou zprávu nenašli.

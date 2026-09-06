@@ -6,7 +6,7 @@ excerpt: "V nočním Lisabonu jsem pomohla staršímu pánovi s holí po schodec
 coverImage: "images/paul-steiger-pro-publica-datatimes.webp"
 coverFit: cover
 filter: ["kontext"]
-tags: ["profil", "žurnalistika", "média", "ProPublica", "The Wall Street Journal", "objektivita", "Daniel Pearl", "USA"]
+tags: ["Profil: novinářské principy", "profil", "žurnalistika", "média", "ProPublica", "The Wall Street Journal", "objektivita", "Daniel Pearl", "USA"]
 promoted: 0
 ---
 Paula Steigera jsem několik minut vůbec nepoznala. Bylo to v roce 2018 v Lisabonu, po skončení jednoho z večerů GEN Summitu. Pomohla jsem staršímu pánovi s holí po schodech, sedli jsme si k venkovnímu stolku a začali si povídat – o žurnalistice. Až po nějaké chvíli mu říkám, že jsme se vlastně ještě nepředstavili – smál se, podali jsme si ruku a já zjistila, že tu v centru nočního Lisabonu sedím s člověkem, který šestnáct let vedl The Wall Street Journal. A že později založil projekt ProPublica, který významně ovlivnil můj start coby samostatné datové novinářky. A tohle noční setkání nakonec ovlivnilo i moji další profesní cestu. Ukazovala jsem mu, co dělám, jak jsem si objevila úžasný obor – datovou žurnalistiku – a že už několik let mimo jiné tvořím vizualizace. Vedla jsem v té době datové projekty v ČTK, a on říkal, že jsem fakt dobrá.
