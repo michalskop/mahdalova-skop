@@ -227,6 +227,20 @@ const countryFlags: Record<string, string> = {
   Somalia: "🇸🇴",
   "Dem. Rep. Congo": "🇨🇩",
 };
+const projectionGuides: Record<ProjectionId, string> = {
+  mercator:
+    "Mercatorova projekce vznikla v 16. století pro námořní navigaci. Zachovává úhly a směry, ale směrem k pólům výrazně zvětšuje plochy.",
+  equal:
+    "Equal Earth je moderní plochojevná projekce z roku 2018. Dobře porovnává rozlohy kontinentů, ale tvary a úhly se od zeměkoule liší.",
+  peters:
+    "Gall-Petersova projekce byla navržena v 19. století. Zachovává poměr ploch, takže je vhodná pro srovnání rozloh, za cenu výrazně protažených tvarů.",
+  mollweide:
+    "Mollweidova projekce z roku 1805 zobrazuje celý svět jako elipsu a zachovává plochu. Používá se hlavně pro globální tematická data, například klima nebo populaci.",
+  robinson:
+    "Robinsonova projekce vznikla v roce 1963 jako kompromis pro školní a obecné mapy světa. Nevystihuje dokonale plochy ani úhly, ale působí vyváženě.",
+  winkel:
+    "Winkel-Tripelova projekce byla představena v roce 1921 a kombinuje více druhů zkreslení. Snaží se současně zmírnit chyby v plochách, tvarech i vzdálenostech.",
+};
 
 const Basemap = memo(function Basemap({
   countries,
@@ -270,6 +284,7 @@ export default function TrueSizeGame() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [projectionId, setProjectionId] = useState<ProjectionId>("mercator");
   const [projectionTouched, setProjectionTouched] = useState(false);
+  const [projectionText, setProjectionText] = useState("");
   const [correct, setCorrect] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [query, setQuery] = useState("");
@@ -373,6 +388,17 @@ export default function TrueSizeGame() {
     return () => controller.abort();
   }, [retry]);
   useEffect(() => () => cancelAnimationFrame(frame.current), []);
+  useEffect(() => {
+    const text = projectionGuides[projectionId];
+    let index = 0;
+    setProjectionText("");
+    const timer = window.setInterval(() => {
+      index += 1;
+      setProjectionText(text.slice(0, index));
+      if (index >= text.length) window.clearInterval(timer);
+    }, 18);
+    return () => window.clearInterval(timer);
+  }, [projectionId]);
   useEffect(() => {
     if (!expanded) return;
     const old = document.body.style.overflow;
@@ -1010,6 +1036,12 @@ export default function TrueSizeGame() {
             );
           })}
         </svg>
+        <aside className={styles.projectionGuide} aria-live="polite">
+          <strong>
+            {PROJECTIONS.find((item) => item.id === projectionId)?.name}
+          </strong>
+          <span>{projectionText}</span>
+        </aside>
         <div className={styles.zoom}>
           <button
             onClick={() => zoom(1 / 1.5)}

@@ -11,6 +11,8 @@ promoted: 0
 
 Skoro každá mapa světa, kterou znáte ze školy nebo z telefonu, používá [Mercatorovu projekci](https://cs.wikipedia.org/wiki/Mercatorovo_zobrazen%C3%AD). Ta vznikla v 16. století pro námořní navigaci a má jednu vlastnost: čím dál od rovníku, tím víc zemi zvětšuje. Grónsko tak vypadá jako celá Afrika, Rusko jako polovina planety a Evropa mohutněji, než jaká doopravdy je.
 
+Žádná mapa světa nemůže být ve všem přesná. Země je zakřivená koule a její povrch nelze rozvinout na plochu bez toho, aby se změnily některé plochy, tvary, úhly nebo vzdálenosti. Proto nabízíme vedle Mercatorovy projekce i další běžně používané metody. Plochojevné projekce pomáhají porovnávat rozlohy, kompromisní projekce vytvářejí vyváženější obraz celého světa a některé jiné lépe zachovávají úhly nebo směry. Každá slouží jinému účelu a každá se od skutečné zeměkoule v něčem liší.
+
 Nejlíp to pochopíte, když si to osaháte sami. Vyberte zemi a **táhněte ji po mapě**. Jak ji posunete k rovníku, zmenší se do své skutečné velikosti; jak ji potáhnete na sever, nafoukne se. Číslo ×N u každé země ukazuje, kolikrát je na dané zeměpisné šířce větší, než ve skutečnosti je.
 
 <TrueSizeGame />
