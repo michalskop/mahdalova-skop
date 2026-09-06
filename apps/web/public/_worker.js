@@ -3,6 +3,14 @@
 
 export default {
   async fetch(request, env) {
+    // Retired article URL must not be served as a second article or soft 404.
+    const pathname = new URL(request.url).pathname.replace(/\/$/, '');
+    if (pathname === '/clanek/skutecna-velikost') {
+      return new Response('Stránka nebyla nalezena.', {
+        status: 404,
+        headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' },
+      });
+    }
     // Check if request accepts markdown
     const acceptHeader = request.headers.get('accept') || '';
     const wantsMarkdown = acceptHeader.includes('text/markdown');

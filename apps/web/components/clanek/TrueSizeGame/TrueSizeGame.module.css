@@ -120,6 +120,7 @@
 .projectionGuide strong {
   font-size: 13px;
 }
+.projectionGuide a { pointer-events: auto; font-size: 10px; color: #505365; }
 
 .mapArea .detail,
 .mapArea .share {
@@ -214,7 +215,7 @@
   opacity: 0.4;
   cursor: default;
 }
-.board :is(button, input, select, g):focus-visible {
+.board :is(button, input):focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
@@ -240,6 +241,7 @@
 }
 .piece {
   cursor: grab;
+  outline: none !important;
 }
 .piece > path {
   fill-opacity: 0.16;
@@ -632,7 +634,7 @@
   gap: 14px;
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   .board:not(.expanded) {
     width: min(1180px, calc(100vw - 64px));
     margin-left: 50%;
@@ -753,4 +755,91 @@
   background: transparent;
   box-shadow: none;
   padding: 0;
+}
+
+.dashboard .search,
+.dashboard .projection {
+  flex: 1 1 190px;
+  min-width: 0;
+  max-width: 260px;
+  height: 48px;
+}
+.dashboard .projection {
+  position: relative;
+  display: block;
+  padding: 0;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 3px 16px #10143212;
+}
+.projection summary {
+  list-style: none;
+  cursor: pointer;
+  height: 48px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 12px;
+  outline: none;
+}
+.projection summary::-webkit-details-marker {
+  display: none;
+}
+.projection summary:focus-visible {
+  background: #f5f0eb;
+}
+.dashboard .projection summary span {
+  font-size: 20px;
+}
+.projectionOptions {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px #10143220;
+  z-index: 30;
+  max-height: 300px;
+  overflow: auto;
+}
+.board .projectionOptions button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  outline: none;
+}
+.board
+  .projectionOptions
+  button:is(:hover, :focus-visible, [aria-pressed="true"]) {
+  background: #f5f0eb;
+}
+.board :is(.suggestions, .projectionOptions, .dock) {
+  scrollbar-color: #b9bfb4 #f5f0eb;
+  scrollbar-width: thin;
+}
+.creditBrand {
+  bottom: 28px;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .dashboard .search,
+  .dashboard .projection {
+    flex: 1 1 calc(50% - 6px);
+    max-width: none;
+  }
+  .dashboard .projection {
+    font-size: 12px;
+  }
+  .board .dockPiece {
+    height: 48px;
+  }
+  .creditBrand {
+    bottom: 24px;
+  }
 }

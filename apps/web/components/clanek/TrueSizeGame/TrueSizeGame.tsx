@@ -24,6 +24,7 @@ import {
 } from "./geometry";
 import type { Country, LonLat, Piece, ProjectionId } from "./geometry";
 import styles from "./TrueSizeGame.module.css";
+import LogoWithText from "../../common/LogoWithText";
 
 type Result = "correct" | "revealed";
 type GamePiece = Piece & { anonymous: boolean; result?: Result };
@@ -91,6 +92,80 @@ const START_POSITIONS: LonLat[] = [
   [112, 10],
   [150, -24],
 ];
+function spreadPieces<T extends Piece>(
+  pieces: T[],
+  countries: Map<string, Country>,
+  projectionId: ProjectionId = "mercator",
+): T[] {
+  const projection = makeProjection(projectionId);
+  const path = geoPath(projection);
+  const occupied: number[][] = [];
+  const positions = new Map<number, LonLat>();
+  const sorted = [...pieces].sort(
+    (a, b) => areaKm2(countries.get(b.name)!) - areaKm2(countries.get(a.name)!),
+  );
+  for (const piece of sorted) {
+    let best: LonLat = [0, 0];
+    let bestBox: number[] = [];
+    let bestCost = Infinity;
+    for (let lat = -48; lat <= 55; lat += 13) {
+      for (let lon = -150; lon <= 150; lon += 20) {
+        const bounds = path.bounds(
+          placeCountry(countries.get(piece.name)!, { ...piece, lon, lat }),
+        );
+        const box = [
+          bounds[0][0] - 10,
+          bounds[0][1] - 10,
+          bounds[1][0] + 10,
+          bounds[1][1] + 10,
+        ];
+        if (
+          box[0] < 15 ||
+          box[2] > WIDTH - 15 ||
+          box[1] < 100 ||
+          box[3] > HEIGHT - 45
+        )
+          continue;
+        const overlap = occupied.reduce(
+          (sum, other) =>
+            sum +
+            Math.max(
+              0,
+              Math.min(box[2], other[2]) - Math.max(box[0], other[0]),
+            ) *
+              Math.max(
+                0,
+                Math.min(box[3], other[3]) - Math.max(box[1], other[1]),
+              ),
+          0,
+        );
+        const separation = occupied.length
+          ? Math.min(
+              ...occupied.map((other) =>
+                Math.hypot(
+                  (box[0] + box[2] - other[0] - other[2]) / 2,
+                  (box[1] + box[3] - other[1] - other[3]) / 2,
+                ),
+              ),
+            )
+          : 0;
+        const cost = overlap * 10000 - separation;
+        if (cost < bestCost) {
+          bestCost = cost;
+          best = [lon, lat];
+          bestBox = box;
+        }
+      }
+    }
+    if (bestBox.length) occupied.push(bestBox);
+    positions.set(piece.id, best);
+  }
+  return pieces.map((piece) => ({
+    ...piece,
+    lon: positions.get(piece.id)![0],
+    lat: positions.get(piece.id)![1],
+  }));
+}
 const VIEW = { x: 0, y: 0, width: WIDTH, height: HEIGHT };
 const GREEN = "#639e0a";
 const ORANGE = "#f76800";
@@ -229,17 +304,25 @@ const countryFlags: Record<string, string> = {
 };
 const projectionGuides: Record<ProjectionId, string> = {
   mercator:
-    "Mercatorova projekce vznikla v 16. století pro námořní navigaci. Zachovává úhly a směry, ale směrem k pólům výrazně zvětšuje plochy.",
+    "Gerardus Mercator, 1569. Zachovává místní úhly; trasy se stálým kurzem jsou přímky. U pólů výrazně zvětšuje plochy. Použití: námořní mapy NOAA a elektronické navigační systémy ECDIS.",
   equal:
-    "Equal Earth je moderní plochojevná projekce z roku 2018. Dobře porovnává rozlohy kontinentů, ale tvary a úhly se od zeměkoule liší.",
+    "Equal Earth, 2018. Zachovává poměry ploch, nikoli tvary a úhly. Použití: politická nástěnná mapa Equal Earth pro školy a organizace; výuková mapa změn zásob vody od Esri.",
   peters:
-    "Gall-Petersova projekce byla navržena v 19. století. Zachovává poměr ploch, takže je vhodná pro srovnání rozloh, za cenu výrazně protažených tvarů.",
+    "James Gall, 1855; později ji popularizoval Arno Peters. Zachovává poměry ploch a protahuje tvary. Použití: irské kurikulární metodiky ji uvádějí pro výuku porovnávání rozloh a vegetačních oblastí.",
   mollweide:
-    "Mollweidova projekce z roku 1805 zobrazuje celý svět jako elipsu a zachovává plochu. Používá se hlavně pro globální tematická data, například klima nebo populaci.",
+    "Karl Mollweide, 1805. Eliptická mapa zachovává plochy, deformuje však tvary u okrajů. Použití: Esri ji doporučuje pro globální tematické mapy a znázornění prostorového rozložení jevů.",
   robinson:
-    "Robinsonova projekce vznikla v roce 1963 jako kompromis pro školní a obecné mapy světa. Nevystihuje dokonale plochy ani úhly, ale působí vyváženě.",
+    "Arthur Robinson, 1963. Vizuální kompromis pro přehled celého světa; nezachovává přesně plochy ani úhly. Použití: dřívější mapy světa National Geographic, později nahrazené Winkelovou projekcí.",
   winkel:
-    "Winkel-Tripelova projekce byla představena v roce 1921 a kombinuje více druhů zkreslení. Snaží se současně zmírnit chyby v plochách, tvarech i vzdálenostech.",
+    "Oswald Winkel, 1921. Kombinuje dvě projekce, aby omezila zkreslení ploch, vzdáleností a směrů; žádnou vlastnost nezachovává dokonale. Použití: referenční mapy světa National Geographic.",
+};
+const projectionSources: Record<ProjectionId, string> = {
+  mercator: "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html",
+  equal: "https://equal-earth.com/",
+  peters: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
+  mollweide: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
+  robinson: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
+  winkel: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
 };
 
 const Basemap = memo(function Basemap({
@@ -374,7 +457,7 @@ export default function TrueSizeGame() {
               color: COLORS[i % COLORS.length],
               anonymous: true,
             }));
-        setPieces(initial);
+        setPieces(saved ? initial : spreadPieces(initial, map));
         previousRound.current = initial.map((piece) => piece.name);
         setActiveId(initial[initial.length - 1]?.id || null);
         nextId.current = initial.length + 1;
@@ -506,7 +589,7 @@ export default function TrueSizeGame() {
       color: COLORS[i % COLORS.length],
       anonymous: true,
     }));
-    setPieces(additions);
+    setPieces(spreadPieces(additions, byName, projectionId));
     setActiveId(additions[additions.length - 1]?.id || null);
     setCorrect(0);
     setAttempts(0);
@@ -820,34 +903,52 @@ export default function TrueSizeGame() {
               </ul>
             )}
           </div>
-          <label className={styles.projection}>
-            <select
-              aria-label="Typ zobrazení"
-              value={projectionTouched ? projectionId : ""}
-              onChange={(e) => {
-                stopDrag();
-                setProjectionTouched(true);
-                setProjectionId(e.target.value as ProjectionId);
-                setView(VIEW);
-              }}
-            >
-              <option value="" disabled>
-                Typ zobrazení
-              </option>
+          <details
+            className={styles.projection}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node))
+                e.currentTarget.open = false;
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                e.currentTarget.open = false;
+                e.currentTarget.querySelector("summary")?.focus();
+              }
+            }}
+          >
+            <summary aria-label="Typ zobrazení">
+              {projectionTouched
+                ? PROJECTIONS.find((p) => p.id === projectionId)?.name
+                : "Typ zobrazení"}
+              <span aria-hidden="true">⌄</span>
+            </summary>
+            <div className={styles.projectionOptions}>
               {PROJECTIONS.map((p) => (
-                <option key={p.id} value={p.id}>
+                <button
+                  key={p.id}
+                  aria-pressed={p.id === projectionId}
+                  onClick={(e) => {
+                    stopDrag();
+                    setProjectionTouched(true);
+                    setProjectionId(p.id);
+                    setView(VIEW);
+                    const menu = e.currentTarget.closest("details")!;
+                    menu.open = false;
+                    menu.querySelector("summary")?.focus();
+                  }}
+                >
                   {p.name}
-                </option>
+                </button>
               ))}
-            </select>
-          </label>
+            </div>
+          </details>
           <button
             className={styles.expand}
             onClick={() => setExpanded(!expanded)}
-            aria-label={expanded ? "Zavřít velkou mapu" : "Zvětšit mapu"}
-            title={expanded ? "Zavřít" : "Zvětšit mapu"}
+            aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}
+            title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}
           >
-            {expanded ? "⤡" : "⤢"}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d={expanded ? "M4 9h5V4M15 4v5h5M20 15h-5v5M9 20v-5H4" : "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
           </button>
         </div>
         <div className={styles.bottom}>
@@ -943,8 +1044,7 @@ export default function TrueSizeGame() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M7 17 17 7" />
-                <path d="M10 7h7v7" />
+                <path d="M14 4v5C7 9 4 13 3 20c3-5 6-6 11-6v5l7-8-7-7Z" />
               </svg>
             </button>
           </div>
@@ -971,6 +1071,7 @@ export default function TrueSizeGame() {
             if (drag.current || pan.current) cancelDrag();
           }}
           onPointerDown={(e) => {
+            setProjectionTouched(true);
             if (e.button !== 0 || drag.current || pan.current) return;
             setDetailId(null);
             e.currentTarget.setPointerCapture(e.pointerId);
@@ -1013,14 +1114,6 @@ export default function TrueSizeGame() {
                 />
                 {anchor && (
                   <g transform={`translate(${anchor[0]},${anchor[1]})`}>
-                    <circle r={r * 2.3} fill="transparent" />
-                    <circle
-                      r={r}
-                      fill={piece.color}
-                      stroke="#fdfbf7"
-                      strokeWidth={1.5}
-                      vectorEffect="non-scaling-stroke"
-                    />
                     {(!piece.anonymous || piece.result) && (
                       <text
                         y={-r - 5}
@@ -1041,6 +1134,7 @@ export default function TrueSizeGame() {
             {PROJECTIONS.find((item) => item.id === projectionId)?.name}
           </strong>
           <span>{projectionText}</span>
+          <a href={projectionSources[projectionId]} target="_blank" rel="noopener noreferrer">Zdroj a příklad použití</a>
         </aside>
         <div className={styles.zoom}>
           <button
@@ -1122,7 +1216,9 @@ export default function TrueSizeGame() {
             The True Size Of…
           </a>
         </div>
-        <div className={styles.creditBrand}>DataTimes.cz</div>
+        <div className={styles.creditBrand}>
+          <LogoWithText size="md" color="#101432" />
+        </div>
       </div>
     </section>
   );
