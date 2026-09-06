@@ -12,7 +12,7 @@ otevře dvojklikem.
 
 | Soubor | Co dělá |
 |--------|---------|
-| [`poster-editor.html`](poster-editor.html) | Generátor **náhledových obrázků / og:image** (poutáků) speciálu *Data pro budoucí premiérku*. Formáty pro sítě (www·FB·X·BSky 1200×630, Square, Portrait, IG story/reel), barvy 15 kapitol, vlastní obrázek (Ctrl+V / drag&drop / soubor), světlý i tmavý režim. Export SVG (malý, na web) i PNG (na sítě). |
+| [`poster-editor.html`](poster-editor.html) | Generátor **cover / náhledových obrázků / og:image** pro **všechny články** (zpětně i do budoucna) – i pro poutáky speciálu *Data pro budoucí premiérku*. Nahoře volitelně **logo DataTimes.cz** (běžné články) nebo hlava speciálu; kicker, titulek, číslo/claim, motiv-graf **nebo vlastní fotka** (Ctrl+V / drag&drop / soubor); paleta 15 kapitol **+ rozšířená firemní paleta**; formáty pro web i sítě (1200×630, Square, Portrait, IG story/reel), světlý i tmavý režim. Export **SVG** (na web) i **PNG** (na sítě). |
 | [`logo-dpbp-editor.html`](logo-dpbp-editor.html) | Generátor **barevných log-hlav** (ProfileHead) speciálu — silueta profilu v barvě kapitoly s barevnými tečkami. |
 
 ## Zdroj barev
