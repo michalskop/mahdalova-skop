@@ -37,6 +37,13 @@ type Drag = {
   moved: boolean;
 };
 const STARTERS = ["Greenland", "Brazil", "India", "Australia", "Madagascar"];
+const START_POSITIONS: LonLat[] = [
+  [-115, 24],
+  [-35, -12],
+  [35, 22],
+  [112, 10],
+  [150, -24],
+];
 const VIEW = { x: 0, y: 0, width: WIDTH, height: HEIGHT };
 const GREEN = "#639e0a";
 const ORANGE = "#f76800";
@@ -57,6 +64,76 @@ const fold = (value: string) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 const number = new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 });
+const countryFacts: Record<
+  string,
+  { population: string; capital: string; note: string }
+> = {
+  Greenland: {
+    population: "56 tisíc",
+    capital: "Nuuk",
+    note: "Arktida; autonomní území Dánska",
+  },
+  Brazil: {
+    population: "203 milionů",
+    capital: "Brasília",
+    note: "Jižní Amerika; člen Mercosuru",
+  },
+  India: {
+    population: "1,43 miliardy",
+    capital: "Nové Dillí",
+    note: "Jižní Asie; federativní republika",
+  },
+  Australia: {
+    population: "26 milionů",
+    capital: "Canberra",
+    note: "Oceánie; stát i kontinent",
+  },
+  Madagascar: {
+    population: "31 milionů",
+    capital: "Antananarivo",
+    note: "Indický oceán; ostrovní stát",
+  },
+  Czechia: {
+    population: "10,9 milionu",
+    capital: "Praha",
+    note: "Střední Evropa; člen EU",
+  },
+  France: {
+    population: "68 milionů",
+    capital: "Paříž",
+    note: "Západní Evropa; člen EU",
+  },
+  Germany: {
+    population: "84 milionů",
+    capital: "Berlín",
+    note: "Střední Evropa; člen EU",
+  },
+  UnitedStates: {
+    population: "340 milionů",
+    capital: "Washington, D.C.",
+    note: "Severní Amerika; federální republika",
+  },
+  China: {
+    population: "1,41 miliardy",
+    capital: "Peking",
+    note: "Východní Asie",
+  },
+  Russia: {
+    population: "144 milionů",
+    capital: "Moskva",
+    note: "Východní Evropa a severní Asie",
+  },
+  Japan: {
+    population: "124 milionů",
+    capital: "Tokio",
+    note: "Východní Asie; ostrovní stát",
+  },
+  SouthAfrica: {
+    population: "63 milionů",
+    capital: "Pretoria",
+    note: "Jižní Afrika",
+  },
+};
 
 const Basemap = memo(function Basemap({
   countries,
@@ -99,6 +176,7 @@ export default function TrueSizeGame() {
   const [pieces, setPieces] = useState<GamePiece[]>([]);
   const [activeId, setActiveId] = useState<number | null>(null);
   const [projectionId, setProjectionId] = useState<ProjectionId>("mercator");
+  const [projectionTouched, setProjectionTouched] = useState(false);
   const [correct, setCorrect] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [query, setQuery] = useState("");
@@ -181,8 +259,8 @@ export default function TrueSizeGame() {
           : STARTERS.filter((n) => map.has(n)).map((name, i) => ({
               id: i + 1,
               name,
-              lon: 0,
-              lat: 10,
+              lon: START_POSITIONS[i]?.[0] ?? 0,
+              lat: START_POSITIONS[i]?.[1] ?? 10,
               angle: 0,
               pinned: false,
               color: COLORS[i % COLORS.length],
@@ -258,8 +336,8 @@ export default function TrueSizeGame() {
     const piece: GamePiece = {
       id: nextId.current++,
       name,
-      lon: 0,
-      lat: 10,
+      lon: START_POSITIONS[pieces.length % START_POSITIONS.length]?.[0] ?? 0,
+      lat: START_POSITIONS[pieces.length % START_POSITIONS.length]?.[1] ?? 10,
       angle: 0,
       pinned: false,
       color: COLORS[pieces.length % COLORS.length],
@@ -287,8 +365,8 @@ export default function TrueSizeGame() {
     const additions: GamePiece[] = names.map((name, i) => ({
       id: nextId.current++,
       name,
-      lon: 0,
-      lat: 10,
+      lon: START_POSITIONS[i % START_POSITIONS.length]?.[0] ?? 0,
+      lat: START_POSITIONS[i % START_POSITIONS.length]?.[1] ?? 10,
       angle: 0,
       pinned: false,
       color: COLORS[i % COLORS.length],
@@ -306,22 +384,21 @@ export default function TrueSizeGame() {
     setRoundMenuOpen(false);
     restartButton.current?.focus();
   }
-  function checkPosition() {
-    if (!selected || selected.result || resolved.current.has(selected.id))
-      return;
+  function resolvePosition(piece: GamePiece) {
+    if (piece.result || resolved.current.has(piece.id)) return;
     stopDrag();
-    resolved.current.add(selected.id);
-    const country = byName.get(selected.name)!;
+    resolved.current.add(piece.id);
+    const country = byName.get(piece.name)!;
     const matrix = svg.current?.getScreenCTM();
     const success = isHome(
-      selected,
+      piece,
       country,
       projection,
       matrix ? Math.hypot(matrix.a, matrix.b) : 1,
     );
     const result: Result = success ? "correct" : "revealed";
     update({
-      ...homePiece(selected, country),
+      ...homePiece(piece, country),
       anonymous: false,
       result,
       pinned: true,
@@ -329,11 +406,12 @@ export default function TrueSizeGame() {
     });
     setAttempts((n) => n + 1);
     if (success) setCorrect((n) => n + 1);
-    setNotice(
-      success ? "" : `To je ${label(selected.name)}. Tady je její místo.`,
-    );
+    setNotice(success ? "" : `To je ${label(piece.name)}. Tady je její místo.`);
     setNoticeResult(result);
     setDetailId(null);
+  }
+  function checkPosition() {
+    if (selected) resolvePosition(selected);
   }
   function mapPosition(x: number, y: number): LonLat | null {
     const matrix = svg.current?.getScreenCTM();
@@ -434,6 +512,11 @@ export default function TrueSizeGame() {
         )
           piece = { ...piece, ...homePiece(piece, byName.get(piece.name)!) };
         update(piece);
+        if (
+          piece.lat === homePiece(piece, byName.get(piece.name)!).lat &&
+          piece.lon === homePiece(piece, byName.get(piece.name)!).lon
+        )
+          resolvePosition(piece);
       } else select(piece);
     }
     if (e.currentTarget.hasPointerCapture(e.pointerId))
@@ -604,16 +687,19 @@ export default function TrueSizeGame() {
             )}
           </div>
           <label className={styles.projection}>
-            <span>Typ zobrazení</span>
             <select
               aria-label="Typ zobrazení"
-              value={projectionId}
+              value={projectionTouched ? projectionId : ""}
               onChange={(e) => {
                 stopDrag();
+                setProjectionTouched(true);
                 setProjectionId(e.target.value as ProjectionId);
                 setView(VIEW);
               }}
             >
+              <option value="" disabled>
+                Typ zobrazení
+              </option>
               {PROJECTIONS.map((p) => (
                 <option key={p.id} value={p.id}>
                   {p.name}
@@ -627,7 +713,7 @@ export default function TrueSizeGame() {
             aria-label={expanded ? "Zavřít velkou mapu" : "Zvětšit mapu"}
             title={expanded ? "Zavřít" : "Zvětšit mapu"}
           >
-            {expanded ? "×" : "⛶"}
+            {expanded ? "⤡" : "⤢"}
           </button>
         </div>
         <div className={styles.bottom}>
@@ -716,27 +802,15 @@ export default function TrueSizeGame() {
             >
               ↗
             </button>
-            <button
-              onClick={() => {
-                stopDrag();
-                setPieces([]);
-                setDetailId(null);
-                setNotice("");
-              }}
-              disabled={!pieces.length}
-              aria-label="Vyčistit mapu"
-              title="Vyčistit mapu"
-            >
-              ⌫
-            </button>
           </div>
         </div>
         <div
           className={styles.score}
-          aria-label={`${correct} správných z ${attempts} ověřených pokusů`}
+          aria-label={`${attempts ? Math.round((correct / attempts) * 100) : 0}% správně`}
           title="Správné / ověřené pokusy"
         >
-          <span aria-hidden="true">✓</span> {correct}/{attempts}
+          <span aria-hidden="true">✓</span>{" "}
+          {attempts ? Math.round((correct / attempts) * 100) : 0}%
         </div>
       </div>
       <div className={styles.mapArea}>
@@ -870,30 +944,19 @@ export default function TrueSizeGame() {
             <small>
               ≈ {number.format(areaKm2(byName.get(detail.name)!))} km²
             </small>
-            {detail.result && (
-              <span>
-                {detail.result === "correct"
-                  ? "✓ Správně umístěno"
-                  : "Odhalené řešení"}
-              </span>
-            )}
-            <div>
-              {!detail.result && (
-                <button
-                  onClick={() => update({ ...detail, pinned: !detail.pinned })}
-                >
-                  {detail.pinned ? "Odepnout" : "Připnout"}
-                </button>
-              )}
-              <button
-                onClick={() => {
-                  setPieces((prev) => prev.filter((p) => p.id !== detail.id));
-                  setDetailId(null);
-                }}
-              >
-                Odebrat
-              </button>
-            </div>
+            <span>
+              Obyvatel:{" "}
+              {countryFacts[detail.name]?.population || "údaj není k dispozici"}
+            </span>
+            <span>
+              Hlavní město:{" "}
+              {countryFacts[detail.name]?.capital || "údaj není k dispozici"}
+            </span>
+            <span>
+              {countryFacts[detail.name]?.note ||
+                `Geografická poloha: ${COUNTRIES[detail.name]?.continent || "svět"}`}
+            </span>
+            <div></div>
           </aside>
         )}
         {shareUrl && (
@@ -910,7 +973,6 @@ export default function TrueSizeGame() {
           </div>
         )}
         <div className={styles.credit}>
-          Natural Earth ·{" "}
           <a
             href="https://thetruesize.com/"
             target="_blank"
@@ -919,6 +981,7 @@ export default function TrueSizeGame() {
             The True Size Of…
           </a>
         </div>
+        <div className={styles.creditBrand}>DataTimes.cz</div>
       </div>
     </section>
   );

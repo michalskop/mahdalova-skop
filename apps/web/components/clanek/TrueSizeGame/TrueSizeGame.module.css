@@ -217,6 +217,9 @@
 .piece {
   cursor: grab;
 }
+.piece > path {
+  fill-opacity: 0.16;
+}
 .piece:active {
   cursor: grabbing;
 }
@@ -349,6 +352,11 @@
   height: 25px;
   padding: 0;
 }
+.projection select:focus,
+.projection select:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
 .expand {
   box-shadow: 0 3px 16px #10143212;
   font-size: 21px !important;
@@ -424,11 +432,11 @@
   display: flex;
   min-width: 0;
   overflow-x: auto;
-  background: #fdfbf7ee;
-  border-radius: 14px;
-  padding: 5px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
   gap: 4px;
-  box-shadow: 0 4px 20px #10143218;
+  box-shadow: none;
 }
 .board .dockPiece {
   position: relative;
@@ -442,7 +450,7 @@
   padding: 7px;
 }
 .board .dockPiece[aria-pressed="true"] {
-  background: #e9e9dd;
+  background: #f5f0eb;
   border-color: currentColor;
 }
 .dockPiece svg {
@@ -463,11 +471,12 @@
 }
 .board .confirm {
   min-width: 84px;
-  min-height: 58px;
+  min-height: 48px;
+  height: 48px;
   padding: 7px 13px;
   border-radius: 13px;
   background: #639e0a;
-  color: #101432;
+  color: #f8f6f0;
   box-shadow: 0 4px 20px #10143218;
   display: flex;
   align-items: center;
@@ -485,9 +494,9 @@
   display: flex;
   gap: 2px;
   padding: 5px;
-  background: #fdfbf7ee;
-  border-radius: 13px;
-  box-shadow: 0 4px 20px #10143218;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 .utilities button {
   font-size: 20px;
@@ -499,7 +508,7 @@
   bottom: 104px;
   display: grid;
   gap: 7px;
-  min-width: 200px;
+  min-width: 290px;
   max-width: calc(100% - 80px);
   background: #fdfbf7f5;
   border-radius: 12px;
@@ -559,6 +568,16 @@
 }
 .credit a {
   color: inherit;
+}
+.creditBrand {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  color: #101432;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 .expanded {
   position: fixed;
@@ -681,4 +700,21 @@
     margin: 0;
     height: 100dvh;
   }
+}
+
+/* Final dashboard alignment overrides, including the compact mobile row. */
+.dashboard .dock {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.dashboard .confirm {
+  min-height: 48px;
+  height: 48px;
+  color: #f8f6f0;
+}
+.dashboard .utilities {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
 }
