@@ -468,8 +468,8 @@ export default function TrueSizeGame() {
     });
     setAttempts((n) => n + 1);
     if (success) setCorrect((n) => n + 1);
-    setNotice(success ? "" : `To je ${label(piece.name)}. Tady je její místo.`);
-    setNoticeResult(result);
+    setNotice("");
+    setNoticeResult(null);
     setDetailId(null);
   }
   function checkPosition() {
@@ -964,18 +964,6 @@ export default function TrueSizeGame() {
             );
           })}
         </svg>
-        {notice && (
-          <div
-            className={styles.notice}
-            data-result={noticeResult || ""}
-            role="status"
-          >
-            {notice}
-            <button onClick={() => setNotice("")} aria-label="Zavřít oznámení">
-              ×
-            </button>
-          </div>
-        )}
         <div className={styles.zoom}>
           <button
             onClick={() => zoom(1 / 1.5)}
