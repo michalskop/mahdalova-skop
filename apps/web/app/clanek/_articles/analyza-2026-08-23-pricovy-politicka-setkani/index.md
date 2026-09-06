@@ -6,7 +6,7 @@ excerpt: "Lidé spojení s vlasteneckým setkáním na zámku v Příčovech ho 
 coverImage: "images/main.jpg"
 coverFit: cover
 filter: ["analýza"]
-tags: ["Příčovy", "vlastenectví", "nacionalismus", "SPD", "dezinformace", "Svatopluk", "dezinfoscéna"]
+tags: ["Reportáž", "Příčovy", "vlastenectví", "nacionalismus", "SPD", "dezinformace", "Svatopluk", "dezinfoscéna"]
 promoted: 60
 ---
 

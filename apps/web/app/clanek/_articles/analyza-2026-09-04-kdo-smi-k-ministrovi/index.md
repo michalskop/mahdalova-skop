@@ -6,7 +6,7 @@ excerpt: "Ministerstvo zahraničí odmítlo pustit akreditovanou novinářku Den
 coverImage: "images/cover.jpg"
 coverFit: cover
 filter: ["analýza"]
-tags: ["Petr Macinka", "Motoristé", "svoboda médií", "akreditace novinářů", "Deník N", "Zdislava Pokorná", "Ministerstvo zahraničí", "Detektivní parta", "Thomas Paukner", "infožádost", "Ochranná služba", "bezpečnost"]
+tags: ["Přístup k novinářům", "Petr Macinka", "Motoristé", "svoboda médií", "akreditace novinářů", "Deník N", "Zdislava Pokorná", "Ministerstvo zahraničí", "Detektivní parta", "Thomas Paukner", "infožádost", "Ochranná služba", "bezpečnost"]
 promoted: 70
 ---
 

@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Komunální volby 2026 mají nejméně kandidátů od roku 2002, senátní od roku 2000. Za poklesem na obou úrovních stojí to samé: SOCDEM (ČSSD), KSČM a další zavedené strany přišly o dvě třetiny kandidátů, v obcích i v Senátu zároveň. Žen naopak přibývá, hlavně na radnicích – v Senátu jejich podíl zůstává stejně nestálý jako dřív."
 coverImage: "images/main.png"
 filter: ["analýza"]
-tags: ["volby", "volby 2026", "komunální volby", "Senát", "kandidáti", "ženy", "muži", "politika", "data"]
+tags: ["Volby 2026", "volby", "komunální volby", "Senát", "kandidáti", "ženy", "muži", "politika", "data"]
 promoted: 0
 ---
 

@@ -7,7 +7,7 @@ excerpt: "Rozhovor se šéfredaktorem The Wall Street Journal a Pro Publica z ro
 coverImage: "images/paul-steiger-pro-publica-1-datatimes.webp"
 coverFit: cover
 filter: ["kontext"]
-tags: ["rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "USA"]
+tags: ["Rozhovor: mediální byznys", "rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "USA"]
 promoted: 0
 ---
 ```infobox

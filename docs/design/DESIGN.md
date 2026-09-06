@@ -150,6 +150,15 @@ The InfoBox is the most distinctive editorial component. It provides five semant
 
 InfoBox can be floated right (`float="right"`) – only when there are ≥ 3–4 paragraphs of surrounding text. Content after `<!-- more -->` is collapsed behind a "Číst více" / "Read more" toggle.
 
+**Typography (unified across the whole site)**
+
+InfoBoxes follow the same type split as articles: the **title is sans-serif, the rest of the text is serif**.
+
+- **Title** – a leading bold (`**Titulek.**` at the start of the box) or a Markdown heading (`### Titulek`) – renders in the headings font (`apps/web`: IBM Plex Sans), exactly like article headings.
+- **Body** – everything else – renders in the body font (`apps/web`: IBM Plex Serif).
+- Implemented once on the shared component, so it applies to **every InfoBox on the site** with no per-article markup: `packages/ui/src/components/InfoBox.tsx` puts a `styles.infoBox` class on the box, and `box.module.css` switches headings and the box's leading `<strong>` to `var(--mantine-font-family-headings)` while the box body keeps `var(--mantine-font-family)`. It uses Mantine's font variables, so it adapts per app (`datajournalism.studio` → Work Sans) rather than hard-coding a font.
+- **Authoring convention:** start the box with a bold title sentence (`**Rozhovor z roku 2013.** …`) or a heading; the sans-serif switch is automatic. Don't wrap the whole box in bold.
+
 ### Buttons
 
 **Primary Brand**
