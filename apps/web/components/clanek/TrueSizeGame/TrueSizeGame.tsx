@@ -37,6 +37,53 @@ type Drag = {
   moved: boolean;
 };
 const STARTERS = ["Greenland", "Brazil", "India", "Australia", "Madagascar"];
+const CURATED_COUNTRIES = [
+  // Europe
+  "Germany",
+  "Ukraine",
+  "Poland",
+  "Spain",
+  "France",
+  "United Kingdom",
+  "Norway",
+  "Sweden",
+  "Finland",
+  "Czechia",
+  // North and South America
+  "Greenland",
+  "Mexico",
+  "Brazil",
+  "Argentina",
+  "Chile",
+  // Asia
+  "China",
+  "India",
+  "Japan",
+  "Russia",
+  "Iran",
+  "Afghanistan",
+  "Mongolia",
+  "Kazakhstan",
+  "Saudi Arabia",
+  "Turkey",
+  // Africa: north, large areas and recognisable silhouettes
+  "Morocco",
+  "Algeria",
+  "Tunisia",
+  "Libya",
+  "Egypt",
+  "Niger",
+  "Chad",
+  "Sudan",
+  "Ethiopia",
+  "Kenya",
+  "Mali",
+  "South Africa",
+  "Angola",
+  "Nigeria",
+  "Somalia",
+  "Dem. Rep. Congo",
+];
 const START_POSITIONS: LonLat[] = [
   [-115, 24],
   [-35, -12],
@@ -309,8 +356,7 @@ export default function TrueSizeGame() {
           Number(fold(label(b)).startsWith(q)) -
             Number(fold(label(a)).startsWith(q)) ||
           label(a).localeCompare(label(b), "cs"),
-      )
-      .slice(0, 7);
+      );
   }, [countries, pieces, query]);
 
   function stopDrag() {
@@ -353,14 +399,30 @@ export default function TrueSizeGame() {
   }
   function newGame(count: 5 | 10 | 15) {
     stopDrag();
-    const pool = countries
-      .filter(
-        (country) =>
-          COUNTRIES[country.properties.name]?.target &&
-          areaKm2(country) >= 50000,
-      )
-      .map((country) => country.properties.name);
+    const pool = CURATED_COUNTRIES.filter((name) => {
+      const country = byName.get(name);
+      return country && COUNTRIES[name]?.target && areaKm2(country) >= 50000;
+    });
     const names = chooseRound(pool, previousRound.current, count);
+    // Keep each round visually and geographically varied when the random draw
+    // happens to cluster in one region.
+    const represented = new Set(
+      names.map((name) => COUNTRIES[name]?.continent),
+    );
+    if (represented.size < Math.min(3, count)) {
+      const replacements = pool.filter(
+        (name) =>
+          !names.includes(name) && !represented.has(COUNTRIES[name]?.continent),
+      );
+      for (let i = 0; i < names.length && replacements.length; i += 1) {
+        const continent = COUNTRIES[names[i]]?.continent;
+        if (represented.has(continent)) continue;
+        const replacement = replacements.shift();
+        if (!replacement) break;
+        names[i] = replacement;
+        represented.add(COUNTRIES[replacement]?.continent);
+      }
+    }
     previousRound.current = names;
     const additions: GamePiece[] = names.map((name, i) => ({
       id: nextId.current++,
@@ -800,7 +862,18 @@ export default function TrueSizeGame() {
               aria-label="Sdílet mapu"
               title="Sdílet mapu"
             >
-              ↗
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17 17 7" />
+                <path d="M10 7h7v7" />
+              </svg>
             </button>
           </div>
         </div>

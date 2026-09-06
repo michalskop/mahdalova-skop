@@ -502,6 +502,11 @@
   font-size: 20px;
   background: transparent;
 }
+.utilities button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
 .detail {
   position: absolute;
   left: 16px;
