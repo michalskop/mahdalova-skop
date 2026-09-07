@@ -3,7 +3,7 @@
 .root .title { margin: 10px 0 12px; font-family: inherit; font-size: clamp(24px, 4vw, 32px); line-height: 1.15; color: var(--ink); }
 .root .intro { margin: 0 0 24px; font-size: 16px; }
 .overview { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-.group, .office { --accent: #396881; }
+.group, .office { --accent: #5f9bb5; }
 [data-kind='outlier'].group, [data-kind='outlier'].office { --accent: #ae2044; }
 [data-kind='unknown'].group, [data-kind='unknown'].office { --accent: #62666a; }
 .group { border-top: 3px solid var(--accent); padding-top: 10px; }
