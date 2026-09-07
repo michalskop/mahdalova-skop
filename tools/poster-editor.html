@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <meta charset="UTF-8">
-<title>Poster editor — Data for the future PM</title>
+<title>Poster editor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -159,7 +159,7 @@
 </style>
 
 <div id="modebar">
-  <div class="brand">Data for the future PM <span>·</span> studio</div>
+  <div class="brand">Poster editor</div>
   <a class="tool-link" href="chart-simplifier.html">chart simplifier &rarr;</a>
 </div>
 
@@ -176,12 +176,18 @@
   <div id="panel">
     <div class="ps">
       <h1>Poster editor</h1>
-      <div class="subttl">Data for the future PM · thumbnails &amp; og:image</div>
+      <div class="subttl">Jediný generátor náhledů webu · cover / og:image</div>
     </div>
 
     <div class="ps">
       <div class="plbl">Format (network)</div>
       <div class="chips" id="formats"></div>
+    </div>
+
+    <div class="ps">
+      <div class="plbl">Pozadí (background)</div>
+      <div class="chips" id="bgchips" style="grid-template-columns:repeat(2,1fr)"></div>
+      <div class="note">Tmavé = ink blue <code>#101432</code>; text a prvky se automaticky prohodí na světle béžové <code>#f8f6f0</code>.</div>
     </div>
 
     <div class="ps">
@@ -191,7 +197,7 @@
     </div>
 
     <div class="ps">
-      <div class="plbl">Chapter / colour</div>
+      <div class="plbl">Special / colour</div>
       <div class="swgrid" id="accents"></div>
       <div class="swname" id="swname"></div>
       <div class="note">15 chapters = 15 colours from <code>DPBP_CHAPTERS</code>.
@@ -209,7 +215,7 @@
     <div class="ps">
       <div class="plbl">Headline</div>
       <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--navy);margin-bottom:8px">
-        <input type="checkbox" id="f-hidenum"> Hide number — spread chart &amp; claim to fill the space
+        <input type="checkbox" id="f-hidenum"> Hide – spread image &amp; claim to fill the space
       </label>
       <div id="numfields">
         <div class="fld"><input type="text" id="f-big" maxlength="16" placeholder="1.28"></div>
@@ -227,12 +233,12 @@
     </div>
 
     <div class="ps">
-      <div class="plbl">Visual — your image or a motif</div>
+      <div class="plbl">Visual – your image or a motif</div>
       <div id="drop" class="drop">
         <input type="file" id="f-file" accept="image/*" hidden>
         <div id="drop-empty">
           <button class="btn btn-ghost" id="pick" type="button">Upload image</button>
-          <div class="drophint">or paste (Ctrl+V) / drag &amp; drop — PNG, JPG, SVG</div>
+          <div class="drophint">or paste (Ctrl+V) / drag &amp; drop – PNG, JPG, SVG</div>
         </div>
         <div id="drop-has" hidden>
           <img id="thumb" alt="uploaded">
@@ -257,10 +263,10 @@
     <div class="ps">
       <div class="plbl">Using the output</div>
       <div class="note" style="margin-top:0">
-        <b>SVG</b> — thumbnails on the web. Embed it inline (<code>&lt;svg&gt;</code>
+        <b>SVG</b> – thumbnails on the web. Embed it inline (<code>&lt;svg&gt;</code>
         directly in the HTML) so it picks up Roboto Slab / Condensed that the site
         already loads. As <code>&lt;img src="…svg"&gt;</code> the fonts fall back to Georgia/Arial.<br>
-        <b>PNG</b> — og:image for social networks (they don't take SVG). Fonts are baked
+        <b>PNG</b> – og:image for social networks (they don't take SVG). Fonts are baked
         in, so it needs an internet connection.
       </div>
     </div>
@@ -362,7 +368,7 @@ function motifSvg(kind, accent, x0, y0, w, h, th){
     art=`<rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.15)}" width="${(w*0.32).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${th.sec}" opacity="0.8"/><rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.67)}" width="${(w*0.8).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${accent}"/>`;
   } else if(kind==='heatgap'){
     // Reálná data: Německo vs. Španělsko, týdenní počet zemřelých, duben–červen 2026
-    // (HMD STMF). Sdílené měřítko obou zemí — schválně, ať je vidět, že Španělsko
+    // (HMD STMF). Sdílené měřítko obou zemí – schválně, ať je vidět, že Španělsko
     // je skoro rovná čára, zatímco Německo v posledních týdnech prudce vyskočí.
     // Vygenerováno nástrojem tools/chart-simplifier.html.
     const de=[[0.000,0.376],[0.083,0.367],[0.167,0.407],[0.250,0.389],[0.333,0.391],[0.417,0.425],[0.500,0.403],[0.583,0.414],[0.667,0.459],[0.750,0.465],[0.833,0.395],[0.917,0.120],[1.000,0.204]];
@@ -401,10 +407,12 @@ function buildSVG(s, standalone){
   const ink=s.accent;               // barva kapitoly – linka, číslo, graf, logo
   // barvy dle režimu: světlý = béžová plocha, tmavý = ink blue #101432
   const dark=s.dark;
+  // Tmavé pozadí = ink blue #101432, na něm se všechny prvky, které jsou na
+  // světlém tmavé, prohodí za světle béžové #f8f6f0 (kicker/jednotka tlumeně).
   const cBg  = dark ? '#101432' : C.bg;
-  const cInk = dark ? '#f4f2ec' : C.ink;    // hlavní text (teze) + patička
-  const cMut = dark ? '#a9adca' : C.muted;  // kicker, jednotka
-  const cBox = dark ? '#20255a' : C.bg;     // obdélník za tezí
+  const cInk = dark ? C.bg      : C.ink;                 // hlavní text (teze) + patička + logo
+  const cMut = dark ? 'rgba(248,246,240,.72)' : C.muted; // kicker, jednotka
+  const cBox = dark ? '#20255a' : C.bg;                  // obdélník za tezí
   const mth  = { line: dark?'rgba(255,255,255,.16)':C.line,
                  sec:  dark?'rgba(244,242,236,.72)':C.ink };  // barvy motivu
   const fontImport = standalone
@@ -416,16 +424,39 @@ function buildSVG(s, standalone){
   // logo posadíme tak, aby konec „vlasů" (obrys hlavy) lícoval s targetRight;
   // barevné tečky pak smějí přesahovat dál doprava do prázdného okraje
   const logoAt=(targetRight,y,S)=>specialLogo(ink, targetRight - S*0.757, y, S);
-  // kicker s auto-zmenšením na dostupnou šířku
+
+  // Šířka jednoho řádku kickeru (Roboto Condensed 700 + letter-spacing).
+  const kickLineW=(line,sz,ls)=>measureCond(line,sz)+Math.max(0,line.length-1)*ls;
+  // Rozdělení kickeru na 2 co nejvyváženější řádky. Dělí se jen v mezerách
+  // (odrážka „·" tak zůstane na konci prvního řádku); obsah se nemění.
+  const kickSplit=(text)=>{
+    const words=text.split(/\s+/); if(words.length<2) return [text];
+    let best=1,bestMax=Infinity;
+    for(let i=1;i<words.length;i++){
+      const m=Math.max(kickLineW(words.slice(0,i).join(' '),26,6),
+                       kickLineW(words.slice(i).join(' '),26,6));
+      if(m<bestMax){bestMax=m;best=i;}
+    }
+    return [words.slice(0,best).join(' '),words.slice(best).join(' ')];
+  };
+  // Kicker: nejdřív jeden řádek s auto-zmenšením; jakmile se nevejde do dostupné
+  // šířky (typicky vedle loga vpravo), radši se zalomí na 2 řádky a teprve pak se
+  // případně dál zmenší – takže do loga nevstupuje. Zarovnává se na SPODNÍ řádek
+  // (baseline = y), aby spodní hrana textu lícovala s baseline loga DataTimes.cz.
   const kicker=(x,y,maxW,anchor)=>{
     const LS0=6,SZ0=26;
-    const raw=measureCond(s.kicker,SZ0)+Math.max(0,s.kicker.length-1)*LS0;
-    const sc=raw>maxW?maxW/raw:1;
-    // halo chrání text i nad piktogramem/grafem (nejen nad fotkou) — ve čtverci
+    // halo chrání text i nad piktogramem/grafem (nejen nad fotkou) – ve čtverci
     // je vizuální plocha vždy full-bleed pod textem, takže hrozí střet vždy.
     const halo=s.format==='square'
       ? ` paint-order="stroke" stroke="${cBg}" stroke-width="10" stroke-linejoin="round"` : '';
-    return `<text x="${x}" y="${y}" font-family="${F_COND}" font-size="${(SZ0*sc).toFixed(1)}" letter-spacing="${(LS0*sc).toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}"${halo}>${esc(s.kicker)}</text>`;
+    const T=(line,yy,sz,ls)=>`<text x="${x}" y="${yy.toFixed(1)}" font-family="${F_COND}" font-size="${sz.toFixed(1)}" letter-spacing="${ls.toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}"${halo}>${esc(line)}</text>`;
+    const raw=kickLineW(s.kicker,SZ0,LS0);
+    if(raw<=maxW) return T(s.kicker,y,SZ0,LS0);            // vejde se na jeden řádek
+    const lines=kickSplit(s.kicker);
+    if(lines.length<2){ const sc=maxW/raw; return T(s.kicker,y,SZ0*sc,LS0*sc); }
+    const wmax=Math.max(...lines.map(l=>kickLineW(l,SZ0,LS0)));
+    const sc=Math.min(1,maxW/wmax), sz=SZ0*sc, ls=LS0*sc, lh=Math.round(sz*1.22);
+    return T(lines[0],y-lh,sz,ls)+T(lines[1],y,sz,ls);     // spodní řádek na baseline y
   };
 
   // Vizuální plocha: vlastní obrázek (obdélník imgRect) NEBO piktogram (motifRect).
@@ -466,7 +497,7 @@ function buildSVG(s, standalone){
     const visRect = hideNum ? [RE-490,130,490,368] : [RE-360,170,360,270];
     // teze u obrázku má vlastní box na pozadí (claimBox), takže se s vizuálem
     // nepere; bez obrázku sedí přímo ve sloupci textu a NESMÍ zajet pod piktogram/
-    // graf vpravo — auto-zmenšení na dostupnou šířku sloupce jako ve stackovaných
+    // graf vpravo – auto-zmenšení na dostupnou šířku sloupce jako ve stackovaných
     // formátech.
     const baseClaimSize = hideNum ? 64 : 48, baseClaimLH = hideNum ? 76 : 58;
     const claimColW = visRect[0]-M-30;
@@ -481,16 +512,23 @@ function buildSVG(s, standalone){
       : hideNum
         ? Math.round(325-(claimLines.length-1)*claimLH/2)
         : 160+bigSize+120;
+    // DataTimes.cz vpravo nahoře posadíme tak, aby SPODNÍ hrana slova lícovala
+    // s baseline kickeru (kickBase), NE podle kolečka. Levý okraj loga bere
+    // kicker jako mez, aby se do něj nezalomil / nevlezl.
+    const kickBase=92, dtSize=60, dtRout=dtSize/2, dtFs=Math.round(dtRout*1.4634);
+    const dtY=kickBase-dtFs*0.34;                 // střed kolečka → text baseline = kickBase
+    const dtLeft=RE-measureCond('DataTimes.cz',dtFs)-dtRout*0.78-2*dtRout;
+    const kickMaxW=s.topLogo==='datatimes'?Math.round(dtLeft-M-24):930;
     inner = visual(visRect,imgRect)   // obrázek dole
-      + kicker(M,92,930,'start')
+      + kicker(M,kickBase,kickMaxW,'start')
       + (hideNum ? '' :
           `<text x="${M}" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
         + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`)
       + claimBox(M,claimTop,claimLines,claimSize,claimLH,'start')
       + `<text x="${M}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}">${claimT}</text>`
       + (s.topLogo==='datatimes'
-          ? brandMark('DataTimes','right',60,M,RE,cInk,60)    // DataTimes.cz kolečko + slovo vpravo nahoře
-          : logoAt(RE,24,140))                                // hlava speciálu nad obrázkem
+          ? brandMark('DataTimes','right',dtY,M,RE,cInk,dtSize)  // DataTimes.cz vpravo nahoře, text na baseline kickeru
+          : logoAt(RE,24,140))                                   // hlava speciálu nad obrázkem
       + (s.topLogo==='datatimes' ? '' : brandMark('DataTimes','left',566,M,RE,cInk))
       + brandMark('mahdalova-skop','right',566,M,RE,cInk);
   } else {
@@ -550,10 +588,16 @@ function buildSVG(s, standalone){
     const mhFrac = hideNum ? 0.52 : 0.40;
     const mh=Math.min(Math.round(H*mhFrac),vBot-vTopMotif), mw=Math.round(Math.min(CW*0.9,mh*1.5));
     const motifRect=[cx-mw/2,Math.round(vTopMotif+((vBot-vTopMotif)-mh)/2),mw,mh];
+    // DataTimes.cz vpravo v řádku 1: text na baseline kickeru (ne podle kolečka),
+    // kicker se zalomí/zmenší do zbylé šířky nalevo od loga.
+    const dtSizeS=Math.round(S*0.42), dtRoutS=dtSizeS/2, dtFsS=Math.round(dtRoutS*1.4634);
+    const dtYS=kickBaseY-dtFsS*0.34;
+    const dtLeftS=RE-measureCond('DataTimes.cz',dtFsS)-dtRoutS*0.78-2*dtRoutS;
+    const kickMaxWS=s.topLogo==='datatimes'?Math.round(dtLeftS-M-16):(headLeft-M-16);
     inner = visual(motifRect,imgRect)
-      + kicker(M,kickBaseY,headLeft-M-16,'start')
+      + kicker(M,kickBaseY,kickMaxWS,'start')
       + (s.topLogo==='datatimes'
-          ? brandMark('DataTimes','right',topY+Math.round(S*0.28),M,RE,cInk,Math.round(S*0.42))
+          ? brandMark('DataTimes','right',dtYS,M,RE,cInk,dtSizeS)
           : logoAt(RE,topY,S))
       + (hideNum ? '' :
           `<text x="${M}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}"${halo}>${esc(s.big)}</text>`
@@ -780,12 +824,22 @@ function syncAcc(){
   swName.innerHTML=`<b>${ch[0]} ${esc(ch[2])}</b> · <b style="color:${ch[1]}">${ch[1]}</b>`;
 }
 
-// přepínač světlý / tmavý režim POUTÁKU (ne jen náhledu) – projeví se i v exportu
-document.getElementById('bgToggle').onclick=(e)=>{
-  state.dark=!state.dark;
-  e.target.textContent=state.dark?'light background':'dark background';
+// přepínač světlý / tmavý režim POUTÁKU (ne jen náhledu) – projeví se i v exportu.
+// Dvě ovládání (chipy v panelu + tlačítko u náhledu) sdílejí jeden stav.
+const bgWrap=document.getElementById('bgchips');
+[['light','Světlé'],['dark','Tmavé (ink blue)']].forEach(([v,label])=>{
+  const b=document.createElement('button');
+  b.className='chip'+((v==='dark')===state.dark?' on':'');b.dataset.v=v;b.textContent=label;
+  b.onclick=()=>setBg(v==='dark');
+  bgWrap.appendChild(b);
+});
+function setBg(dark){
+  state.dark=dark;
+  [...bgWrap.children].forEach(c=>c.classList.toggle('on',(c.dataset.v==='dark')===dark));
+  document.getElementById('bgToggle').textContent=dark?'light background':'dark background';
   render();
-};
+}
+document.getElementById('bgToggle').onclick=()=>setBg(!state.dark);
 
 // toast
 let tT;
@@ -854,7 +908,7 @@ document.getElementById('dlpng').onclick=async()=>{
       img.src=url;
     });
   }catch(e){
-    toast('PNG export failed — are you offline? (fonts load from Google Fonts)');
+    toast('PNG export failed – are you offline? (fonts load from Google Fonts)');
   }finally{ btn.disabled=false; }
 };
 
@@ -862,7 +916,7 @@ document.getElementById('dlpng').onclick=async()=>{
 document.getElementById('dltool').onclick=()=>{
   const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
   saveBlob(new Blob([html],{type:'text/html'}), 'poster-editor.html');
-  toast('Tool downloaded — open by double-click');
+  toast('Tool downloaded – open by double-click');
 };
 
 syncAcc();

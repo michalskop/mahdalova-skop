@@ -1,7 +1,7 @@
-# tools/ — redakční generátory
+# tools/ – redakční generátory
 
 Samostatné **HTML nástroje**, které nejsou součástí webu. Spouští se **dvojklikem**
-(otevřou se v prohlížeči) — žádný server, build ani instalace. Potřebují jen
+(otevřou se v prohlížeči) – žádný server, build ani instalace. Potřebují jen
 **připojení k internetu** (načítají firemní fonty z Google Fonts; PNG export je do
 obrázku zapéká).
 
@@ -10,10 +10,15 @@ otevře dvojklikem.
 
 ## Nástroje
 
+> **`poster-editor.html` je náš jediný generátor cover / náhledových obrázků.**
+> Všechny náhledy k článkům (na web i na sociální sítě) děláme tady – žádný jiný
+> nástroj na to není. (Dřívější `cover-bg-picker.html` byl **zrušen**, ať v tom
+> není zmatek; barvu si vybíráš přímo v poster-editoru.)
+
 | Soubor | Co dělá |
 |--------|---------|
-| [`poster-editor.html`](poster-editor.html) | Generátor **cover / náhledových obrázků / og:image** pro **všechny články** (zpětně i do budoucna) – i pro poutáky speciálu *Data pro budoucí premiérku*. Nahoře volitelně **logo DataTimes.cz** (běžné články) nebo hlava speciálu; kicker, titulek, číslo/claim, motiv-graf **nebo vlastní fotka** (Ctrl+V / drag&drop / soubor); paleta 15 kapitol **+ rozšířená firemní paleta**; formáty pro web i sítě (1200×630, Square, Portrait, IG story/reel), světlý i tmavý režim. Export **SVG** (na web) i **PNG** (na sítě). |
-| [`logo-dpbp-editor.html`](logo-dpbp-editor.html) | Generátor **barevných log-hlav** (ProfileHead) speciálu — silueta profilu v barvě kapitoly s barevnými tečkami. |
+| [`poster-editor.html`](poster-editor.html) | Generátor **cover / náhledových obrázků / og:image** pro **všechny články** (zpětně i do budoucna) – i pro poutáky speciálu *Data pro budoucí premiérku*. Nahoře volitelně **logo DataTimes.cz** (běžné články) nebo hlava speciálu; kicker (auto-zmenšení + zalomení), titulek, číslo/claim, motiv-graf **nebo vlastní fotka** (Ctrl+V / drag&drop / soubor); paleta 15 kapitol **+ rozšířená firemní paleta**; formáty pro web i sítě (1200×630, Square, Portrait, IG story/reel), světlé i **tmavé pozadí** (ink blue `#101432` ↔ béžová `#f8f6f0`). Export **SVG** (na web) i **PNG** (na sítě). |
+| [`logo-dpbp-editor.html`](logo-dpbp-editor.html) | Generátor **barevných log-hlav** (ProfileHead) speciálu – silueta profilu v barvě kapitoly s barevnými tečkami. |
 
 ## Zdroj barev
 
@@ -26,5 +31,5 @@ Kontrolu shody hlídá `npm run check:palette`.
 - **Data, která se vizualizují v článku** → do složky článku vedle obrázků
   (`apps/web/app/clanek/_articles/<slug>/…`, resp. `_content/<kapitola>/…`).
 - **Surová / nezpracovaná data** (možná se nikdy nepoužijí) → do editorského repa
-  `../data-pro-premierku/` (organizovaný po kapitolách). **Nedávat do `apps/web`** —
+  `../data-pro-premierku/` (organizovaný po kapitolách). **Nedávat do `apps/web`** –
   nafouklo by to build a zkopírovalo se to do `public/`.
