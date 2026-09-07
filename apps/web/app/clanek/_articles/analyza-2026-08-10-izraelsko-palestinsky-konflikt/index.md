@@ -6,7 +6,7 @@ excerpt: "V říjnu 2025 se z Gazy vrátili poslední živí rukojmí, Hamás ro
 coverImage: "images/gaza-2026-cover-datatimes.webp"
 coverFit: cover
 filter: ["analýza"]
-tags: ["Izrael", "Palestina", "Gaza", "Hamás", "Benjamin Netanjahu", "Donald Trump", "Blízký východ", "Západní břeh", "příměří", "OSN", "Palestinská samospráva", "Fatah", "dějiny konfliktu", "explainer"]
+tags: ["Izrael-Palestina", "Izrael", "Palestina", "Gaza", "Hamás", "Benjamin Netanjahu", "Donald Trump", "Blízký východ", "Západní břeh", "příměří", "OSN", "Palestinská samospráva", "Fatah", "dějiny konfliktu", "explainer"]
 promoted: 60
 ---
 
