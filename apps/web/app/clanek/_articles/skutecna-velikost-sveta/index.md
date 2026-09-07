@@ -6,7 +6,7 @@ excerpt: "Interaktivní hra ve stylu The True Size Of…: vyberte zemi a táhně
 coverImage: "images/main.svg"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "Mercator", "hra", "interaktivní"]
-promoted: 90
+promoted: 0
 ---
 
 Skoro každá mapa světa, kterou znáte ze školy nebo z telefonu, používá [Mercatorovu projekci](https://cs.wikipedia.org/wiki/Mercatorovo_zobrazen%C3%AD). Ta vznikla v 16. století pro námořní navigaci a má jednu vlastnost: čím dál od rovníku, tím víc zemi zvětšuje. Grónsko tak vypadá jako celá Afrika, Rusko jako polovina planety a Evropa mohutněji, než jaká doopravdy je.
