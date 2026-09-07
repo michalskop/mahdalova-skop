@@ -1,18 +1,6 @@
 'use client';
-
-/**
- * Data visualisation for the Macinka accreditation article.
- * Top: a qualitative "outlier scale" – ministries that answered on the substance
- * cluster on the left (accreditation = organisational formality), the Ministry of
- * Foreign Affairs sits alone on the far right as the only office that turned a
- * journalist away over the character of her outlet.
- * Below: a named, colour-coded breakdown of every office and how it answered.
- */
-
-const CRIMSON = '#de1743'; // brand[6]
-const GREEN = '#639e0a'; // brandForestGreen[6]
-const AXIS = '#c3c2b7'; // background[8] – reads on both light and dark
-
+import { useId, useState } from 'react';
+import styles from './AccreditationScale.module.css';
 type Item = { name: string; detail: string };
 
 const answered: Item[] = [
@@ -40,80 +28,56 @@ const noAnswer: Item[] = [
   { name: 'Úřad vlády', detail: 'prodloužil lhůtu, odpověď zatím nedodal.' },
 ];
 
-const cluster = [
-  { cx: 95, cy: 150 }, { cx: 118, cy: 174 }, { cx: 138, cy: 148 }, { cx: 158, cy: 172 },
-  { cx: 115, cy: 162 }, { cx: 143, cy: 188 }, { cx: 168, cy: 156 }, { cx: 186, cy: 176 },
+const groups = [
+  { key: 'answered', label: 'Bez odmítání kvůli obsahu', symbol: '✓', items: answered, note: 'Podle odpovědí úřadů; organizační či kapacitní omezení se liší.' },
+  { key: 'outlier', label: 'Doložené odmítnutí', symbol: '!', items: [outlier], note: 'MZV nepustilo akreditovanou novinářku Deníku N.' },
+  { key: 'unknown', label: 'Bez věcné odpovědi', symbol: '?', items: noAnswer, note: 'Z těchto odpovědí nelze praxi úřadů posoudit.' },
 ];
-
-function Group({ color, label, count, items }: { color: string; label: string; count: string; items: Item[] }) {
-  return (
-    <div style={{ borderLeft: `3px solid ${color}`, paddingLeft: 14, marginTop: 20 }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 6 }}>
-        <strong style={{ fontSize: 14, color: 'var(--mantine-color-text)' }}>{label}</strong>
-        <span style={{ fontSize: 13, color: 'var(--mantine-color-dimmed)' }}>· {count}</span>
-      </div>
-      {items.map((it) => (
-        <div key={it.name} style={{ fontSize: 14, lineHeight: 1.5, padding: '3px 0', color: 'var(--mantine-color-text)' }}>
-          <strong>{it.name}</strong> <span style={{ color: 'var(--mantine-color-dimmed)' }}>— {it.detail}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
+const abbreviations = ['MD', 'MF', 'MPSV', 'MMR', 'MS', 'MŠMT', 'MZ', 'MZe', 'MZV', 'MO', 'MV', 'MPO', 'MK', 'MŽP', 'ÚV'];
+const offices = groups.flatMap(group => group.items.map(item => ({ ...item, group })));
 
 export function AccreditationScale() {
-  const muted = { fill: 'var(--mantine-color-dimmed)' } as const;
+  const id = useId();
+  const [filter, setFilter] = useState('all');
+  const [selected, setSelected] = useState<string | null>(null);
+  const visible = offices.filter(item => filter === 'all' || item.group.key === filter);
+  function selectOffice(name: string) {
+    setFilter('all');
+    setSelected(name);
+    requestAnimationFrame(() => document.getElementById(`${id}-${offices.findIndex(item => item.name === name)}`)?.focus());
+  }
   return (
-    <div style={{ margin: '1.5rem 0' }}>
-      <svg
-        viewBox="0 0 640 240"
-        width="100%"
-        role="img"
-        aria-labelledby="accs-title accs-desc"
-        style={{ display: 'block', maxWidth: 620, height: 'auto', margin: '0 auto', fontFamily: 'var(--mantine-font-family)' }}
-      >
-        <title id="accs-title">Škála používání akreditace napříč úřady</title>
-        <desc id="accs-desc">
-          Osm ministerstev, která odpověděla věcně, se shlukuje vlevo, kde je akreditace jen
-          organizační formalitou. Ministerstvo zahraničí leží osamoceně daleko vpravo jako jediné,
-          které odmítlo akreditovanou novinářku kvůli charakteru jejího média.
-        </desc>
-
-        <line x1="50" y1="160" x2="600" y2="160" stroke={AXIS} strokeWidth="1.5" />
-        <line x1="200" y1="160" x2="485" y2="160" stroke={AXIS} strokeWidth="1.5" strokeDasharray="3 5" />
-
-        {cluster.map((d, i) => (
-          <circle key={i} cx={d.cx} cy={d.cy} r="7" fill={GREEN} />
-        ))}
-
-        <line x1="88" y1="126" x2="192" y2="126" stroke={AXIS} strokeWidth="1" />
-        <line x1="88" y1="126" x2="88" y2="132" stroke={AXIS} strokeWidth="1" />
-        <line x1="192" y1="126" x2="192" y2="132" stroke={AXIS} strokeWidth="1" />
-        <text x="140" y="118" textAnchor="middle" fontSize="12.5" style={muted}>
-          8 úřadů · akreditace = formalita
-        </text>
-
-        <circle cx="545" cy="160" r="11" fill={CRIMSON} />
-        <text x="545" y="126" textAnchor="middle" fontSize="13.5" fontWeight="500" fill={CRIMSON}>
-          Ministerstvo zahraničí
-        </text>
-        <text x="545" y="188" textAnchor="middle" fontSize="12" fill={CRIMSON}>
-          odmítlo akreditovanou novinářku
-        </text>
-
-        <text x="50" y="220" textAnchor="start" fontSize="11.5" style={muted}>
-          akreditace jako organizační formalita
-        </text>
-        <text x="600" y="220" textAnchor="end" fontSize="11.5" style={muted}>
-          výběr novinářů podle obsahu média
-        </text>
-      </svg>
-
-      <Group color={GREEN} label="Vpouští / neodmítá kvůli obsahu média" count="8 úřadů, které odpověděly věcně" items={answered} />
-      <Group color={CRIMSON} label="Vybočuje" count="1 úřad" items={[outlier]} />
-      <Group color={AXIS} label="Zatím bez věcné odpovědi" count="6 úřadů" items={noAnswer} />
-    </div>
+    <section className={styles.root} aria-labelledby={`${id}-title`}>
+      <div className={styles.eyebrow}>PŘÍSTUP NOVINÁŘŮ NA ÚŘADY · 4. 9. 2026</div>
+      <h3 id={`${id}-title`} className={styles.title}>Jak se úřady staví k akreditacím</h3>
+      <p className={styles.intro}>14 ministerstev a Úřad vlády. Osm úřadů popisuje přístup bez odmítání kvůli obsahu média, u MZV je doložen opačný případ. U šesti úřadů chybí věcná odpověď.</p>
+      <div className={styles.overview}>
+        {groups.map(group => <div key={group.key} className={styles.group} data-kind={group.key}>
+          <div className={styles.groupHeading}><strong>{group.items.length}</strong><span>{group.label}</span></div>
+          <div className={styles.tiles}>
+            {group.items.map(item => <button type="button" key={item.name} className={styles.tile} aria-label={`${item.name}: ${group.label}. Zobrazit podrobnosti`} onClick={() => selectOffice(item.name)}>
+              <span aria-hidden="true" className={styles.symbol}>{group.symbol}</span>
+              <span>{abbreviations[offices.findIndex(office => office.name === item.name)]}</span>
+            </button>)}
+          </div>
+          <p className={styles.groupNote}>{group.note}</p>
+        </div>)}
+      </div>
+      <p className={styles.hint}>1 políčko = 1 úřad. Vyberte políčko nebo rozbalte řádek níže.</p>
+      <div className={styles.filters} role="group" aria-label="Filtrovat úřady">
+        {[{ key: 'all', label: 'Všechny úřady', items: offices }, ...groups].map(group => <button type="button" key={group.key} aria-pressed={filter === group.key} onClick={() => setFilter(group.key)}>{group.label} <span>{group.items.length}</span></button>)}
+      </div>
+      <p className={styles.result} role="status">Zobrazeno {visible.length} z {offices.length} úřadů</p>
+      <div className={styles.list}>
+        {visible.map(item => <details key={item.name} className={styles.office} data-kind={item.group.key} open={selected === item.name}>
+          <summary id={`${id}-${offices.indexOf(item)}`} onClick={event => { event.preventDefault(); setSelected(selected === item.name ? null : item.name); }}>
+            <span className={styles.rowSymbol} aria-hidden="true">{item.group.symbol}</span><strong>{item.name}</strong><span className={styles.status}>{item.group.label}</span><span className={styles.expand} aria-hidden="true">+</span>
+          </summary>
+          <div className={styles.detail}><p>{item.detail.charAt(0).toUpperCase() + item.detail.slice(1)}</p><span>{item.group.key === 'outlier' ? 'Doložený případ · 31. 7. 2026 · zpravodajské zdroje odkazované v článku' : 'Zdroj: redakční souhrn odpovědi na infožádost · stav k uzávěrce článku'}</span></div>
+        </details>)}
+      </div>
+      <p className={styles.source}>Zdroj: infožádosti redakce podle zákona č. 106/1999 Sb. a zpravodajské zdroje uvedené v článku. Stav k uzávěrce 4. září 2026. Jde o souhrn doložených odpovědí a případu MZV, nikoli o nezávislý audit praxe. Chybějící odpověď neznamená odmítání novinářů.</p>
+    </section>
   );
 }
-
 export default AccreditationScale;

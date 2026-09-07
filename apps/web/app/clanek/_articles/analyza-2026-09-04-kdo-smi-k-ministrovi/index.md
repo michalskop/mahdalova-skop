@@ -36,8 +36,6 @@ Napříč resorty, které odpověděly věcně, je vzorec pozoruhodně jednotný
 
 <AccreditationScale />
 
-_Jak úřady odpověděly na naši infožádost o akreditaci novinářů. Osm z těch, které odpověděly věcně, bere akreditaci jako organizační formalitu; jediné Ministerstvo zahraničí odmítlo akreditovanou novinářku._
-
 ```infobox warning
 Jde o odpovědi resortů na naše žádosti podle zákona č. 106/1999 Sb., nikoli o nezávislý audit jejich každodenní praxe. Přesto je vzorec u těch, kdo odpověděli věcně, jednoznačný.
 ```
