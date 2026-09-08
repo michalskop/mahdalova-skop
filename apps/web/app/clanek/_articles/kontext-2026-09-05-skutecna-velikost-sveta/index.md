@@ -3,7 +3,7 @@ title: "Skutečná velikost světa: Podívejte se, jak vás klamou různé mapy"
 date: "2026-09-05"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Interaktivní hra ve stylu The True Size Of…: vyberte zemi a táhněte ji po Mercatorově mapě. Jak se blíží k rovníku, zmenšuje se – Grónsko, které na severu vypadá jako celá Afrika, je ve skutečnosti patnáctkrát menší, než se zdá."
-coverImage: "images/main.svg"
+coverImage: "images/main.png"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "Mercator", "hra", "interaktivní"]
 promoted: 0

@@ -104,8 +104,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-10-izraelsko-palestinsky-konflikt</loc>
+    <lastmod>2026-08-10T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-23-pricovy-politicka-setkani</loc>
     <lastmod>2026-08-23T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci</loc>
+    <lastmod>2026-08-25T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -326,6 +338,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus</loc>
+    <lastmod>2025-10-25T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane</loc>
     <lastmod>2025-10-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -374,8 +392,14 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-nenavist-k-palestincum-u-soudu-evropa</loc>
-    <lastmod>2026-08-27T00:00:00.000Z</lastmod>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich</loc>
+    <lastmod>2026-06-16T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-05-skutecna-velikost-sveta</loc>
+    <lastmod>2026-09-05T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -424,12 +448,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost</loc>
     <lastmod>2027-03-26T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/skutecna-velikost-sveta</loc>
-    <lastmod>2026-09-05T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

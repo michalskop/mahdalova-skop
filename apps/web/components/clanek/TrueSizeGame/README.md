@@ -21,7 +21,7 @@ npm ci
 npm run dev --workspace=web
 ```
 
-Use **http://localhost:3001/clanek/skutecna-velikost-sveta**. Stop an existing development server before restarting or building in the same checkout. No other port is needed.
+Use **http://localhost:3001/clanek/kontext-2026-09-05-skutecna-velikost-sveta**. Stop an existing development server before restarting or building in the same checkout. No other port is needed.
 
 ## Verification
 
