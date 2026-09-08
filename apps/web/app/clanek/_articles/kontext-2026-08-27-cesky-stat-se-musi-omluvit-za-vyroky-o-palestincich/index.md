@@ -9,7 +9,7 @@ filter: ["kontext"]
 tags: ["Justice", "Palestinci", "Izrael", "Gaza", "hate speech", "Martin Dvořák", "svobodná média", "Česká televize", "soudy", "lidská práva", "Evropa"]
 promoted: 70
 ---
-Pražský soud v červnu 2026 rozhodl, že se český stát musí veřejně omluvit za výroky bývalého ministra Martina Dvořáka na adresu Palestinců. Soud tyto výroky označil za protiprávní, nepravdivé a zcela nepřiměřené.
+Pražský soud 8. června 2026 rozhodl, že se český stát musí veřejně omluvit za výroky bývalého ministra Martina Dvořáka na adresu Palestinců. Soud tyto výroky označil za protiprávní, nepravdivé a zcela nepřiměřené.
 
 Tehdejší ministr pro evropské záležitosti Dvořák je pronesl v hlavním vysílacím čase veřejnoprávní televize a o Palestincích prohlásil, že nenávist je součástí „genetické výbavy“ celého národa: „Ne všichni Palestinci jsou hamásovci, ale všichni Palestinci od malých dětí jsou vychováváni v nenávisti k Izraeli (…) a základem jejich genetické výbavy je nenávist ke všemu izraelskému.“
 
@@ -31,15 +31,9 @@ Soudkyně přiznala újmu jen u výroku o „genetické výbavě“; druhý výr
 
 Finanční odškodné soud nepřiznal. Uložil státu, aby se žalobcům omluvil formou tiskové zprávy zveřejněné nejméně 90 dní na webu ministerstva. Odpovědnost státu odvodil z toho, že Dvořák mluvil jako ministr o vládní politice ve veřejnoprávním médiu. Dvořák sám žalován nebyl, protože žaloba mířila na stát; soudkyně to komentovala slovy, že mu v tomto řízení nemůže uložit, „aby se zachoval jako chlap a omluvil se“. Původní Dvořákovu omluvu na síti X, v níž výrok označil za „nešťastný“, soud za dostatečnou nepovažoval. V polovině června pak Dvořák zveřejnil [novou, adresnější omluvu](https://www.martindvorak.cz/omluva/), v níž uvádí, že „rozsudek soudu respektuje“.
 
-Rozsudek je prvostupňový a ve veřejných zdrojích jsme nenašli potvrzení jeho pravomocnosti.
+Rozsudek je prvoinstanční.
 
-## Kdo o tom napsal – a kdo ne
-
-Případ od začátku vedl [Deník Alarm](https://denikalarm.cz/2026/04/vyroky-ministra-dvoraka-legitimizuji-predstavu-ze-palestince-je-mozne-zabijet-zaznelo-u-soudu/), který referoval z dubnového dokazování i z červnového vyhlášení. Analyticky na rozsudek navázal [Deník Referendum](https://denikreferendum.cz/clanek/238991-killabilita-palestincu-jako-odraz-rasismu-v-ceske-verejne-debate) textem antropologa Yasara Abu Ghoshe o „killabilitě“ Palestinců v české veřejné debatě. Dál se zpráva šířila prakticky jen přes agregátory a názorové servery – převzaly ji [ParlamentníListy](https://www.parlamentnilisty.cz/arena/monitor/Soud-Cesko-se-musi-omluvit-za-Fialova-ministra-792514) i oborový Media24, mlčení redakcí si všiml komentář na webu [Naše pravda](https://www.nasepravda.cz/aktualne/bohumil-smutny-eministr-dvorak-prestrelil-a-medialni-ticho-po-pesine/).
-
-Ve zpravodajství velkých celostátních redakcí – České televize, iROZHLASu, Seznam Zpráv, Novinek, Aktuálně.cz či Deníku N – jsme k datu vydání tohoto textu samostatnou zprávu o rozsudku nenašli. Přitom o původním Dvořákově výroku z října 2024 i o jeho tehdejší omluvě informovaly. A trestní odsouzení řeporyjského starosty Pavla Novotného, který v témže roce označil Palestince za „opice“ a volal po jejich vybombardování, [Česká televize odvysílala](https://ct24.ceskatelevize.cz/clanek/regiony/za-vyroky-o-palestincich-ulozil-soud-starostovi-novotnemu-penezity-trest-346391) běžně. Rozdíl je v tom, kdo byl odsouzen: u Novotného exhibicionista na sociální síti, u Dvořáka stát a jeho ministr.
-
-Že o obsahu izraelsko-palestinské debaty nejde mlčet, jsme [psali už v květnu 2025](/clanek/kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost). Tehdejší text i tento rozsudek říkají totéž z jiné strany: dehumanizující jazyk o celém národě má důsledky, a když ho pronese představitel státu, nese odpovědnost stát.
+<RelatedArticles slugs={["kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "analyza-2026-08-10-izraelsko-palestinsky-konflikt", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} heading="Psali jsme" />
 
 ## Čtyři pojmy, které soudy nezaměňují
 
@@ -66,6 +60,6 @@ Dva vídeňské soudy naopak obžalované zprostily, když jejich výroky vylož
 
 ## Proč je Dvořákův případ jiný
 
-Novotný i Švéd z Borås byli odsouzeni trestně jako fyzické osoby. Dvořák žalován nebyl. Žalobci zvolili civilní cestu ochrany osobnosti a rovného zacházení a zažalovali stát za újmu způsobenou výrokem člena vlády. Právě to dělá z rozsudku precedent: soud nepřezkoumával nějakou obecnou „kontroverzní podporu Izraele“, ale paušální tvrzení o vrozené vlastnosti celého národa z úst ministra ve veřejnoprávní televizi – a odpovědnost za ně přiřkl státu.
+Řeporyjský starosta Pavel Novotný, odsouzený za výrok, že Palestinci jsou „opice“, i Švéd z Borås byli potrestáni trestně jako fyzické osoby. Dvořák žalován nebyl. Žalobci zvolili civilní cestu ochrany osobnosti a rovného zacházení a zažalovali stát za újmu způsobenou výrokem člena vlády. Právě to dělá z rozsudku precedent: soud nepřezkoumával nějakou obecnou „kontroverzní podporu Izraele“, ale paušální tvrzení o vrozené vlastnosti celého národa z úst ministra ve veřejnoprávní televizi – a odpovědnost za ně přiřkl státu.
 
 Stát se přitom bránil argumenty, které soudkyně odmítla: že Dvořákovu omluvu na síti X vidělo mnoho lidí, nebo že pořad mohl běžet v obývácích, které nikdo neposlouchá. Zástupkyně státu u soudu zpochybnila i výši nároku manželky palestinského žalobce s tím, že „sama není Palestinka“. Soudkyně v závěru řekla, že je vystupováním žalované strany zklamaná a čekala vstřícnější postoj. Ministr, jehož výrok šel do vysílání v hlavním čase, nakonec zveřejnil omluvu a uvedl, že rozsudek respektuje. Redakce, které mu tehdy daly prostor, o samotném rozsudku svým divákům a čtenářům neřekly nic.
