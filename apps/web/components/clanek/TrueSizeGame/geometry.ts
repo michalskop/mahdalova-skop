@@ -181,7 +181,13 @@ export function placeCountry(
   return { ...country, geometry };
 }
 
-export function makeProjection(id: ProjectionId): GeoProjection {
+// `height` is the viewport height the projection is fitted to. It defaults to
+// HEIGHT (desktop); on mobile a taller value is passed so the map gains vertical
+// room. The projection is fully recomputed for the given height – no distortion.
+export function makeProjection(
+  id: ProjectionId,
+  height: number = HEIGHT,
+): GeoProjection {
   let projection: GeoProjection;
   switch (id) {
     case "equal":
@@ -203,20 +209,20 @@ export function makeProjection(id: ProjectionId): GeoProjection {
       // Keep the useful world in a landscape viewport; the infinite poles are clipped.
       projection = geoMercator()
         .scale((WIDTH - 32) / (2 * Math.PI))
-        .translate([WIDTH / 2, HEIGHT * 0.68]);
+        .translate([WIDTH / 2, height * 0.68]);
       break;
   }
   if (id !== "mercator")
     projection.fitExtent(
       [
         [16, 16],
-        [WIDTH - 16, HEIGHT - 16],
+        [WIDTH - 16, height - 16],
       ],
       { type: "Sphere" },
     );
   return projection.precision(0.2).clipExtent([
     [0, 0],
-    [WIDTH, HEIGHT],
+    [WIDTH, height],
   ]);
 }
 

@@ -99,8 +99,9 @@ function spreadPieces<T extends Piece>(
   pieces: T[],
   countries: Map<string, Country>,
   projectionId: ProjectionId = "mercator",
+  height: number = HEIGHT,
 ): T[] {
-  const projection = makeProjection(projectionId);
+  const projection = makeProjection(projectionId, height);
   const path = geoPath(projection);
   const occupied: number[][] = [];
   const positions = new Map<number, LonLat>();
@@ -126,7 +127,7 @@ function spreadPieces<T extends Piece>(
           box[0] < 15 ||
           box[2] > WIDTH - 15 ||
           box[1] < 100 ||
-          box[3] > HEIGHT - 45
+          box[3] > height - 45
         )
           continue;
         const overlap = occupied.reduce(
@@ -169,7 +170,10 @@ function spreadPieces<T extends Piece>(
     lat: positions.get(piece.id)![1],
   }));
 }
-const VIEW = { x: 0, y: 0, width: WIDTH, height: HEIGHT };
+type Rect = { x: number; y: number; width: number; height: number };
+// Mobile map gets 25 % more viewport height (see makeProjection's `height`).
+const MOBILE_QUERY = "(max-width: 600px)";
+const MOBILE_HEIGHT = Math.round(HEIGHT * 1.25);
 const GREEN = "#639e0a";
 const ORANGE = "#f76800";
 const label = (name: string) =>
@@ -326,11 +330,13 @@ const projectionInfo: Record<
 const Basemap = memo(function Basemap({
   countries,
   projectionId,
+  height,
 }: {
   countries: Country[];
   projectionId: ProjectionId;
+  height: number;
 }) {
-  const path = geoPath(makeProjection(projectionId));
+  const path = geoPath(makeProjection(projectionId, height));
   return (
     <g className={styles.basemap} aria-hidden="true">
       {countries.map((country) => (
@@ -380,14 +386,28 @@ export default function TrueSizeGame() {
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
-  const [view, setView] = useState(VIEW);
+  const [mapHeight, setMapHeight] = useState(HEIGHT);
+  const [view, setView] = useState<Rect>(() => ({
+    x: 0,
+    y: 0,
+    width: WIDTH,
+    height: HEIGHT,
+  }));
   const svg = useRef<SVGSVGElement>(null);
   const drag = useRef<Drag | null>(null);
   const pan = useRef<{
     pointer: number;
     x: number;
     y: number;
-    view: typeof VIEW;
+    view: Rect;
+  } | null>(null);
+  // Active touch points on the map, and the in-progress two-finger pinch.
+  const pointers = useRef<Map<number, { x: number; y: number }>>(new Map());
+  const pinch = useRef<{
+    dist: number;
+    width: number;
+    anchorX: number;
+    anchorY: number;
   } | null>(null);
   const pending = useRef<GamePiece | null>(null);
   const frame = useRef(0);
@@ -402,10 +422,14 @@ export default function TrueSizeGame() {
     [countries],
   );
   const projection = useMemo(
-    () => makeProjection(projectionId),
-    [projectionId],
+    () => makeProjection(projectionId, mapHeight),
+    [projectionId, mapHeight],
   );
   const path = useMemo(() => geoPath(projection), [projection]);
+  const fullView = useMemo<Rect>(
+    () => ({ x: 0, y: 0, width: WIDTH, height: mapHeight }),
+    [mapHeight],
+  );
   const selected =
     pieces.find((p) => p.id === activeId) ||
     pieces.find((p) => !p.result) ||
@@ -462,7 +486,9 @@ export default function TrueSizeGame() {
               color: COLORS[i % COLORS.length],
               anonymous: true,
             }));
-        setPieces(saved ? initial : spreadPieces(initial, map));
+        setPieces(
+          saved ? initial : spreadPieces(initial, map, "mercator", mapHeight),
+        );
         previousRound.current = initial.map((piece) => piece.name);
         setActiveId(initial[initial.length - 1]?.id || null);
         nextId.current = initial.length + 1;
@@ -476,6 +502,19 @@ export default function TrueSizeGame() {
     return () => controller.abort();
   }, [retry]);
   useEffect(() => () => cancelAnimationFrame(frame.current), []);
+  // Mobile viewport gets 25 % more map height; projection recomputes for it.
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia(MOBILE_QUERY);
+    const apply = () => setMapHeight(mq.matches ? MOBILE_HEIGHT : HEIGHT);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+  // Reset to the full world whenever the viewport height changes.
+  useEffect(() => {
+    setView({ x: 0, y: 0, width: WIDTH, height: mapHeight });
+  }, [mapHeight]);
   // Briefly reveal a country's name when it becomes selected, then fade out.
   // Anonymous (still-to-guess) pieces stay unnamed.
   useEffect(() => {
@@ -524,6 +563,8 @@ export default function TrueSizeGame() {
     pending.current = null;
     drag.current = null;
     pan.current = null;
+    pinch.current = null;
+    pointers.current.clear();
   }
   function update(piece: GamePiece) {
     setPieces((prev) => prev.map((p) => (p.id === piece.id ? piece : p)));
@@ -617,7 +658,7 @@ export default function TrueSizeGame() {
       color: COLORS[i % COLORS.length],
       anonymous: true,
     }));
-    setPieces(spreadPieces(additions, byName, projectionId));
+    setPieces(spreadPieces(additions, byName, projectionId, mapHeight));
     setActiveId(additions[additions.length - 1]?.id || null);
     didAutoCollapse.current = false;
     setGuideOpen(true);
@@ -625,7 +666,7 @@ export default function TrueSizeGame() {
     setNotice("");
     setDetailId(null);
     setShareUrl("");
-    setView(VIEW);
+    setView(fullView);
     setRoundMenuOpen(false);
     restartButton.current?.focus();
   }
@@ -673,6 +714,14 @@ export default function TrueSizeGame() {
     piece: GamePiece,
     fromDock = false,
   ) {
+    if (!fromDock) {
+      pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.current.size >= 2) {
+        e.stopPropagation();
+        startPinch();
+        return;
+      }
+    }
     if (e.button !== 0 || drag.current || pan.current) return;
     e.stopPropagation();
     setActiveId(piece.id);
@@ -710,7 +759,67 @@ export default function TrueSizeGame() {
       lat: clampLat(point[1] + current.offLat),
     };
   }
+  // Begin a two-finger pinch. Cancels any single-finger pan/drag (without
+  // reverting a moved country) and anchors the map point under the fingers.
+  function startPinch() {
+    cancelAnimationFrame(frame.current);
+    drag.current = null;
+    pending.current = null;
+    pan.current = null;
+    const pts = Array.from(pointers.current.values());
+    if (pts.length < 2) return;
+    const [a, b] = pts;
+    const midX = (a.x + b.x) / 2;
+    const midY = (a.y + b.y) / 2;
+    const ctm = svg.current?.getScreenCTM();
+    let anchorX = view.x + view.width / 2;
+    let anchorY = view.y + view.height / 2;
+    if (ctm) {
+      const u = new DOMPoint(midX, midY).matrixTransform(ctm.inverse());
+      anchorX = u.x;
+      anchorY = u.y;
+    }
+    pinch.current = {
+      dist: Math.hypot(a.x - b.x, a.y - b.y) || 1,
+      width: view.width,
+      anchorX,
+      anchorY,
+    };
+  }
+  // Continuously rescale around the point between the fingers; the midpoint may
+  // also translate, which naturally pans the map.
+  function applyPinch() {
+    const p = pinch.current;
+    const rect = svg.current?.getBoundingClientRect();
+    if (!p || !rect) return;
+    const pts = Array.from(pointers.current.values());
+    if (pts.length < 2) return;
+    const [a, b] = pts;
+    const dist = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+    const midX = (a.x + b.x) / 2;
+    const midY = (a.y + b.y) / 2;
+    const width = Math.max(
+      WIDTH / 6,
+      Math.min(WIDTH, (p.width * p.dist) / dist),
+    );
+    const height = (width * mapHeight) / WIDTH;
+    const s = Math.min(rect.width / width, rect.height / height);
+    const offX = (rect.width - s * width) / 2;
+    const offY = (rect.height - s * height) / 2;
+    setView({
+      x: p.anchorX - (midX - rect.left - offX) / s,
+      y: p.anchorY - (midY - rect.top - offY) / s,
+      width,
+      height,
+    });
+  }
   function onMove(e: Pointer<SVGSVGElement>) {
+    if (pointers.current.has(e.pointerId))
+      pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pinch.current) {
+      applyPinch();
+      return;
+    }
     if (pan.current?.pointer === e.pointerId) {
       const old = pan.current;
       const matrix = svg.current?.getScreenCTM();
@@ -734,6 +843,8 @@ export default function TrueSizeGame() {
     });
   }
   function onUp(e: Pointer<SVGSVGElement>) {
+    pointers.current.delete(e.pointerId);
+    if (pointers.current.size < 2) pinch.current = null;
     if (pan.current?.pointer === e.pointerId) pan.current = null;
     const current = drag.current;
     if (current?.pointer === e.pointerId) {
@@ -801,9 +912,9 @@ export default function TrueSizeGame() {
     stopDrag();
     setView((old) => {
       const width = Math.max(WIDTH / 6, Math.min(WIDTH, old.width * factor));
-      const height = (width * HEIGHT) / WIDTH;
+      const height = (width * mapHeight) / WIDTH;
       return width === WIDTH
-        ? VIEW
+        ? fullView
         : {
             x: old.x + (old.width - width) / 2,
             y: old.y + (old.height - height) / 2,
@@ -969,7 +1080,7 @@ export default function TrueSizeGame() {
                     stopDrag();
                     setProjectionTouched(true);
                     setProjectionId(p.id);
-                    setView(VIEW);
+                    setView(fullView);
                     const menu = e.currentTarget.closest("details")!;
                     menu.open = false;
                     menu.querySelector("summary")?.focus();
@@ -1096,12 +1207,21 @@ export default function TrueSizeGame() {
           aria-label="Mapa. Obrys přesuň tažením nebo šipkami, polohu ověř fajfkou."
           onPointerMove={onMove}
           onPointerUp={onUp}
-          onPointerCancel={cancelDrag}
+          onPointerCancel={(e) => {
+            pointers.current.delete(e.pointerId);
+            if (pointers.current.size < 2) pinch.current = null;
+            cancelDrag();
+          }}
           onLostPointerCapture={() => {
             if (drag.current || pan.current) cancelDrag();
           }}
           onPointerDown={(e) => {
             setProjectionTouched(true);
+            pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+            if (pointers.current.size >= 2) {
+              startPinch();
+              return;
+            }
             if (e.button !== 0 || drag.current || pan.current) return;
             setDetailId(null);
             e.currentTarget.setPointerCapture(e.pointerId);
@@ -1113,7 +1233,11 @@ export default function TrueSizeGame() {
             };
           }}
         >
-          <Basemap countries={countries} projectionId={projectionId} />
+          <Basemap
+            countries={countries}
+            projectionId={projectionId}
+            height={mapHeight}
+          />
           {ordered.map((piece) => {
             const anchor = projection([piece.lon, piece.lat]);
             const r = Math.max(3, (6 * view.width) / WIDTH);
@@ -1230,7 +1354,7 @@ export default function TrueSizeGame() {
           <button
             onClick={() => {
               stopDrag();
-              setView(VIEW);
+              setView(fullView);
             }}
             aria-label="Celý svět"
             title="Celý svět"
