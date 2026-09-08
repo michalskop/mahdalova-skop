@@ -260,27 +260,67 @@ const countryFacts: Record<
   },
 };
 
-const projectionGuides: Record<ProjectionId, string> = {
-  mercator:
-    "Gerardus Mercator, 1569. Zachovává místní úhly; trasy se stálým kurzem jsou přímky. U pólů výrazně zvětšuje plochy. Použití: námořní mapy NOAA a elektronické navigační systémy ECDIS.",
-  equal:
-    "Equal Earth, 2018. Zachovává poměry ploch, nikoli tvary a úhly. Použití: politická nástěnná mapa Equal Earth pro školy a organizace; výuková mapa změn zásob vody od Esri.",
-  peters:
-    "James Gall, 1855; později ji popularizoval Arno Peters. Zachovává poměry ploch a protahuje tvary. Použití: irské kurikulární metodiky ji uvádějí pro výuku porovnávání rozloh a vegetačních oblastí.",
-  mollweide:
-    "Karl Mollweide, 1805. Eliptická mapa zachovává plochy, deformuje však tvary u okrajů. Použití: Esri ji doporučuje pro globální tematické mapy a znázornění prostorového rozložení jevů.",
-  robinson:
-    "Arthur Robinson, 1963. Vizuální kompromis pro přehled celého světa; nezachovává přesně plochy ani úhly. Použití: dřívější mapy světa National Geographic, později nahrazené Winkelovou projekcí.",
-  winkel:
-    "Oswald Winkel, 1921. Kombinuje dvě projekce, aby omezila zkreslení ploch, vzdáleností a směrů; žádnou vlastnost nezachovává dokonale. Použití: referenční mapy světa National Geographic.",
-};
-const projectionSources: Record<ProjectionId, string> = {
-  mercator: "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html",
-  equal: "https://equal-earth.com/",
-  peters: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
-  mollweide: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
-  robinson: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
-  winkel: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
+// Per-projection copy: a short base description always shown, plus an expandable
+// "K čemu se používá" sentence with a concrete, real use whose source is linked
+// inline (no separate "Zdroj" line). Facts and links reuse the existing citations.
+const projectionInfo: Record<
+  ProjectionId,
+  { base: string; use: { pre: string; link: string; href: string; post: string } }
+> = {
+  mercator: {
+    base: "Gerardus Mercator, 1569. Zachovává místní úhly a směry; trasa se stálým kompasovým kurzem (loxodroma) je na ní přímka. Směrem k pólům ale silně zvětšuje plochy.",
+    use: {
+      pre: "Používá se v námořní navigaci – lodní trasy na ní zobrazují ",
+      link: "elektronické navigační mapy NOAA",
+      href: "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html",
+      post: ".",
+    },
+  },
+  equal: {
+    base: "Equal Earth, 2018. Plochojevná projekce: stejně velké území zabírá na mapě stejnou plochu, tvary se přesto mírně mění.",
+    use: {
+      pre: "Jako férovější obraz světa ji šíří ",
+      link: "nástěnná mapa Equal Earth pro školy",
+      href: "https://equal-earth.com/",
+      post: " a používají ji i výukové mapy Esri.",
+    },
+  },
+  peters: {
+    base: "Gall-Peters, 1855/1973. Zachovává poměry ploch za cenu výrazného protažení tvarů.",
+    use: {
+      pre: "Pro výuku porovnávání rozloh ji doporučují ",
+      link: "irské kurikulární metodiky pro zeměpis",
+      href: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
+      post: ".",
+    },
+  },
+  mollweide: {
+    base: "Karl Mollweide, 1805. Eliptická plochojevná mapa; zachovává plochy, u okrajů ale deformuje tvary.",
+    use: {
+      pre: "Esri ji doporučuje pro ",
+      link: "globální tematické mapy rozložení jevů",
+      href: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
+      post: ".",
+    },
+  },
+  robinson: {
+    base: "Arthur Robinson, 1963. Kompromisní projekce pro přehled celého světa; nezachovává přesně plochy ani úhly.",
+    use: {
+      pre: "Dřív ji používaly ",
+      link: "mapy světa National Geographic",
+      href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
+      post: ", než přešly na Winkelovu projekci.",
+    },
+  },
+  winkel: {
+    base: "Oswald Winkel, 1921. Kompromis omezující současně zkreslení ploch, vzdáleností i směrů; žádnou vlastnost nezachovává dokonale.",
+    use: {
+      pre: "Jako referenční ",
+      link: "mapy světa National Geographic",
+      href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
+      post: " ji používají dodnes.",
+    },
+  },
 };
 
 const Basemap = memo(function Basemap({
@@ -325,9 +365,9 @@ export default function TrueSizeGame() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [projectionId, setProjectionId] = useState<ProjectionId>("mercator");
   const [projectionTouched, setProjectionTouched] = useState(false);
-  const [projectionText, setProjectionText] = useState("");
-  const [correct, setCorrect] = useState(0);
-  const [attempts, setAttempts] = useState(0);
+  const [guideOpen, setGuideOpen] = useState(true);
+  const [flashId, setFlashId] = useState<number | null>(null);
+  const [flashKey, setFlashKey] = useState(0);
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const [optionIndex, setOptionIndex] = useState(-1);
@@ -353,6 +393,9 @@ export default function TrueSizeGame() {
   const frame = useRef(0);
   const nextId = useRef(6);
   const resolved = useRef(new Set<number>());
+  const didAutoCollapse = useRef(false);
+  const piecesRef = useRef<GamePiece[]>(pieces);
+  piecesRef.current = pieces;
   const searchId = useId();
   const byName = useMemo(
     () => new Map(countries.map((c) => [c.properties.name, c])),
@@ -433,17 +476,17 @@ export default function TrueSizeGame() {
     return () => controller.abort();
   }, [retry]);
   useEffect(() => () => cancelAnimationFrame(frame.current), []);
+  // Briefly reveal a country's name when it becomes selected, then fade out.
+  // Anonymous (still-to-guess) pieces stay unnamed.
   useEffect(() => {
-    const text = projectionGuides[projectionId];
-    let index = 0;
-    setProjectionText("");
-    const timer = window.setInterval(() => {
-      index += 1;
-      setProjectionText(text.slice(0, index));
-      if (index >= text.length) window.clearInterval(timer);
-    }, 18);
-    return () => window.clearInterval(timer);
-  }, [projectionId]);
+    const p = piecesRef.current.find((x) => x.id === activeId);
+    if (p && (!p.anonymous || p.result)) {
+      setFlashKey((k) => k + 1);
+      setFlashId(activeId);
+    } else {
+      setFlashId(null);
+    }
+  }, [activeId]);
   useEffect(() => {
     if (!expanded) return;
     const old = document.body.style.overflow;
@@ -490,6 +533,15 @@ export default function TrueSizeGame() {
     setDetailId(piece.anonymous && !piece.result ? null : piece.id);
     setNotice("");
   }
+  // The projection "K čemu se používá" panel collapses itself once the user
+  // starts working with countries, so it never sits in the way mid-game. After
+  // that the user controls it manually.
+  function startInteracting() {
+    if (!didAutoCollapse.current) {
+      didAutoCollapse.current = true;
+      setGuideOpen(false);
+    }
+  }
   // Center of the currently visible map, in lon/lat. New countries drop here so
   // they land in front of the user at the current zoom/pan instead of jumping to
   // their real position. Falls back to a safe point if the center is off-globe.
@@ -508,6 +560,7 @@ export default function TrueSizeGame() {
       return;
     }
     if (pieces.some((p) => p.name === name)) return;
+    startInteracting();
     const [lon, lat] = viewportCenter();
     const piece: GamePiece = {
       id: nextId.current++,
@@ -566,8 +619,8 @@ export default function TrueSizeGame() {
     }));
     setPieces(spreadPieces(additions, byName, projectionId));
     setActiveId(additions[additions.length - 1]?.id || null);
-    setCorrect(0);
-    setAttempts(0);
+    didAutoCollapse.current = false;
+    setGuideOpen(true);
     resolved.current.clear();
     setNotice("");
     setDetailId(null);
@@ -596,8 +649,6 @@ export default function TrueSizeGame() {
       pinned: true,
       color: success ? GREEN : ORANGE,
     });
-    setAttempts((n) => n + 1);
-    if (success) setCorrect((n) => n + 1);
     setNotice("");
     setNoticeResult(null);
     setDetailId(null);
@@ -625,6 +676,7 @@ export default function TrueSizeGame() {
     if (e.button !== 0 || drag.current || pan.current) return;
     e.stopPropagation();
     setActiveId(piece.id);
+    startInteracting();
     if (piece.pinned || piece.result) {
       setDetailId(piece.id);
       return;
@@ -895,7 +947,18 @@ export default function TrueSizeGame() {
               {projectionTouched
                 ? PROJECTIONS.find((p) => p.id === projectionId)?.name
                 : "Typ zobrazení"}
-              <span aria-hidden="true">⌄</span>
+              <svg
+                className={styles.caret}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </summary>
             <div className={styles.projectionOptions}>
               {PROJECTIONS.map((p) => (
@@ -1024,14 +1087,6 @@ export default function TrueSizeGame() {
             </button>
           </div>
         </div>
-        <div
-          className={styles.score}
-          aria-label={`${attempts ? Math.round((correct / attempts) * 100) : 0}% správně`}
-          title="Správné / ověřené pokusy"
-        >
-          <span aria-hidden="true">✓</span>{" "}
-          {attempts ? Math.round((correct / attempts) * 100) : 0}%
-        </div>
       </div>
       <div className={styles.mapArea}>
         <svg
@@ -1090,19 +1145,21 @@ export default function TrueSizeGame() {
                   strokeWidth={selected?.id === piece.id ? 2.4 : 1.4}
                   vectorEffect="non-scaling-stroke"
                 />
-                {anchor && (
-                  <g transform={`translate(${anchor[0]},${anchor[1]})`}>
-                    {(!piece.anonymous || piece.result) && (
+                {anchor &&
+                  flashId === piece.id &&
+                  (!piece.anonymous || piece.result) && (
+                    <g transform={`translate(${anchor[0]},${anchor[1]})`}>
                       <text
+                        key={flashKey}
                         y={-r - 5}
-                        className={styles.countryLabel}
+                        className={`${styles.countryLabel} ${styles.flashLabel}`}
                         textAnchor="middle"
+                        onAnimationEnd={() => setFlashId(null)}
                       >
                         {label(piece.name)}
                       </text>
-                    )}
-                  </g>
-                )}
+                    </g>
+                  )}
               </g>
             );
           })}
@@ -1111,8 +1168,49 @@ export default function TrueSizeGame() {
           <strong>
             {PROJECTIONS.find((item) => item.id === projectionId)?.name}
           </strong>
-          <span>{projectionText}</span>
-          <a href={projectionSources[projectionId]} target="_blank" rel="noopener noreferrer">Zdroj a příklad použití</a>
+          <p className={styles.guideBase}>{projectionInfo[projectionId].base}</p>
+          <div
+            className={`${styles.guideExtra} ${guideOpen ? styles.guideOpen : ""}`}
+          >
+            <div>
+              <p className={styles.guideUse}>
+                <span className={styles.guideUseLabel}>K čemu se používá: </span>
+                {projectionInfo[projectionId].use.pre}
+                <a
+                  href={projectionInfo[projectionId].use.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {projectionInfo[projectionId].use.link}
+                </a>
+                {projectionInfo[projectionId].use.post}
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            className={styles.guideToggle}
+            onClick={() => {
+              didAutoCollapse.current = true;
+              setGuideOpen((open) => !open);
+            }}
+            aria-expanded={guideOpen}
+          >
+            {guideOpen ? "Méně" : "Více"}
+            <svg
+              className={styles.guideChevron}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+              style={{ transform: guideOpen ? "rotate(180deg)" : undefined }}
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
         </aside>
         <div className={styles.zoom}>
           <button
@@ -1191,12 +1289,13 @@ export default function TrueSizeGame() {
           </div>
         )}
         <div className={styles.credit}>
+          Inspirováno:{" "}
           <a
             href="https://thetruesize.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            The True Size Of…
+            The True Size
           </a>
         </div>
         <div className={styles.creditBrand}>

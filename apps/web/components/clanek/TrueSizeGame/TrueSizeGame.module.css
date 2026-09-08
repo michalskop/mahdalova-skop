@@ -120,7 +120,55 @@
 .projectionGuide strong {
   font-size: 13px;
 }
-.projectionGuide a { pointer-events: auto; font-size: 10px; color: #505365; }
+.projectionGuide a {
+  pointer-events: auto;
+  color: #4a51ab;
+  text-decoration: underline;
+}
+.projectionGuide button {
+  pointer-events: auto;
+}
+.guideBase {
+  margin: 0;
+}
+/* Collapsible "K čemu se používá" – grid-rows animation avoids layout jump. */
+.guideExtra {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.26s ease;
+}
+.guideExtra.guideOpen {
+  grid-template-rows: 1fr;
+}
+.guideExtra > div {
+  overflow: hidden;
+  min-height: 0;
+}
+.guideUse {
+  margin: 4px 0 0;
+}
+.guideUseLabel {
+  font-weight: 700;
+}
+.guideToggle {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 3px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #505365;
+  font: inherit;
+  font-size: 11px;
+}
+.guideChevron {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
 
 .mapArea .detail,
 .mapArea .share {
@@ -264,6 +312,25 @@
   paint-order: stroke;
   pointer-events: none;
   stroke-linejoin: round;
+}
+/* Country name flashes briefly on selection, then fades out (never permanent,
+   never blocks the map – pointer-events stay none via .countryLabel). */
+.flashLabel {
+  animation: tsgFlash 2.2s ease forwards;
+}
+@keyframes tsgFlash {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .toolbar {
   position: absolute;
@@ -601,11 +668,12 @@
   position: absolute;
   bottom: 7px;
   left: 16px;
-  font-size: 9px;
-  color: #505365;
+  font-size: 10px;
+  color: #101432;
 }
 .credit a {
   color: inherit;
+  text-decoration: underline;
 }
 .creditBrand {
   position: absolute;
@@ -791,8 +859,11 @@
 .projection summary:focus-visible {
   background: #f5f0eb;
 }
-.dashboard .projection summary span {
-  font-size: 20px;
+.projection summary .caret {
+  width: 18px;
+  height: 18px;
+  color: #8b8f9a;
+  flex: none;
 }
 .projectionOptions {
   position: absolute;
