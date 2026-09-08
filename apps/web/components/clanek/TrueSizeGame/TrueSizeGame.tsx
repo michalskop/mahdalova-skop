@@ -28,6 +28,7 @@ import styles from "./TrueSizeGame.module.css";
 import LogoWithText from "../../common/LogoWithText";
 import { Flag } from "@repo/ui/components/Flag";
 import { ISO2 } from "./flags";
+import { FACTS } from "./facts";
 
 type Result = "correct" | "revealed";
 type GamePiece = Piece & { anonymous: boolean; result?: Result };
@@ -193,76 +194,6 @@ const fold = (value: string) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 const number = new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 });
-const countryFacts: Record<
-  string,
-  { population: string; capital: string; note: string }
-> = {
-  Greenland: {
-    population: "56 tisíc",
-    capital: "Nuuk",
-    note: "Arktida; autonomní území Dánska",
-  },
-  Brazil: {
-    population: "203 milionů",
-    capital: "Brasília",
-    note: "Jižní Amerika; Mercosur je společný trh jihoamerických států",
-  },
-  India: {
-    population: "1,43 miliardy",
-    capital: "Nové Dillí",
-    note: "Jižní Asie; federativní republika",
-  },
-  Australia: {
-    population: "26 milionů",
-    capital: "Canberra",
-    note: "Oceánie; stát i kontinent",
-  },
-  Madagascar: {
-    population: "31 milionů",
-    capital: "Antananarivo",
-    note: "Indický oceán; ostrovní stát",
-  },
-  Czechia: {
-    population: "10,9 milionu",
-    capital: "Praha",
-    note: "Střední Evropa; EU je politické a hospodářské sdružení evropských států",
-  },
-  France: {
-    population: "68 milionů",
-    capital: "Paříž",
-    note: "Západní Evropa; EU je politické a hospodářské sdružení evropských států",
-  },
-  Germany: {
-    population: "84 milionů",
-    capital: "Berlín",
-    note: "Střední Evropa; EU je politické a hospodářské sdružení evropských států",
-  },
-  UnitedStates: {
-    population: "340 milionů",
-    capital: "Washington, D.C.",
-    note: "Severní Amerika; federální republika",
-  },
-  China: {
-    population: "1,41 miliardy",
-    capital: "Peking",
-    note: "Východní Asie",
-  },
-  Russia: {
-    population: "144 milionů",
-    capital: "Moskva",
-    note: "Východní Evropa a severní Asie",
-  },
-  Japan: {
-    population: "124 milionů",
-    capital: "Tokio",
-    note: "Východní Asie; ostrovní stát",
-  },
-  SouthAfrica: {
-    population: "63 milionů",
-    capital: "Pretoria",
-    note: "Jižní Afrika; Africká unie podporuje spolupráci afrických států",
-  },
-};
 
 // Per-projection copy: a short base description always shown, plus an expandable
 // "K čemu se používá" sentence with a concrete, real use whose source is linked
@@ -1399,16 +1330,10 @@ export default function TrueSizeGame() {
             <small>
               ≈ {number.format(areaKm2(byName.get(detail.name)!))} km²
             </small>
+            <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
+            <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
             <span>
-              Počet obyvatel:{" "}
-              {countryFacts[detail.name]?.population || "údaj není k dispozici"}
-            </span>
-            <span>
-              Hlavní město:{" "}
-              {countryFacts[detail.name]?.capital || "údaj není k dispozici"}
-            </span>
-            <span>
-              {countryFacts[detail.name]?.note ||
+              {FACTS[detail.name]?.note ||
                 `Geografická poloha: ${COUNTRIES[detail.name]?.continent || "svět"}`}
             </span>
           </aside>
