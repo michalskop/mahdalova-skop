@@ -380,6 +380,7 @@ export default function TrueSizeGame() {
   const [notice, setNotice] = useState("");
   const [noticeResult, setNoticeResult] = useState<Result | null>(null);
   const [detailId, setDetailId] = useState<number | null>(null);
+  const [hoverId, setHoverId] = useState<number | null>(null);
   const [shareUrl, setShareUrl] = useState("");
   const [expanded, setExpanded] = useState(false);
   const [roundMenuOpen, setRoundMenuOpen] = useState(false);
@@ -434,14 +435,15 @@ export default function TrueSizeGame() {
     pieces.find((p) => p.id === activeId) ||
     pieces.find((p) => !p.result) ||
     pieces[pieces.length - 1];
-  const detail = pieces.find((p) => p.id === detailId);
-  // Paint order: already-placed (result) pieces at the bottom, unplaced pieces
-  // above them, and the selected/dragged piece on top. Combined with disabling
-  // pointer events on placed pieces, an unplaced country under a large placed one
-  // stays grabbable.
+  // Hover (desktop) previews info; a click/tap pins it. Hover wins while active.
+  const detail = pieces.find((p) => p.id === (hoverId ?? detailId));
+  // Paint order: placed (result) pieces always at the bottom, unplaced pieces
+  // above them, the selected/dragged piece on top. So an unplaced country under a
+  // large placed one stays grabbable, while placed pieces keep pointer events and
+  // remain clickable/hoverable for their info.
   const ordered = useMemo(() => {
     const rank = (p: GamePiece) =>
-      (p.result ? 0 : 1) + (p.id === selected?.id ? 2 : 0);
+      p.result ? 0 : 1 + (p.id === selected?.id ? 2 : 0);
     return [...pieces].sort((a, b) => rank(a) - rank(b));
   }, [pieces, selected?.id]);
   const accessibleName = (p: GamePiece) =>
@@ -725,6 +727,7 @@ export default function TrueSizeGame() {
     if (e.button !== 0 || drag.current || pan.current) return;
     e.stopPropagation();
     setActiveId(piece.id);
+    setHoverId(null);
     startInteracting();
     if (piece.pinned || piece.result) {
       setDetailId(piece.id);
@@ -1245,13 +1248,21 @@ export default function TrueSizeGame() {
               <g
                 key={piece.id}
                 role="button"
-                tabIndex={piece.result ? -1 : 0}
+                tabIndex={0}
                 aria-label={`${accessibleName(piece)}${piece.result === "correct" ? ", správně" : piece.result === "revealed" ? ", odhaleno" : ", přesuň po mapě"}`}
                 className={`${styles.piece} ${piece.pinned ? styles.pinned : ""}`}
-                // Resolved pieces are done: stop them capturing pointer events so
-                // they never block dragging an unplaced country underneath.
-                style={piece.result ? { pointerEvents: "none" } : undefined}
                 onPointerDown={(e) => beginDrag(e, piece)}
+                // Desktop hover previews the country's info; touch uses tap.
+                onPointerEnter={(e) => {
+                  if (e.pointerType === "touch") return;
+                  if (drag.current || pan.current || pinch.current) return;
+                  if (piece.anonymous && !piece.result) return;
+                  setHoverId(piece.id);
+                }}
+                onPointerLeave={(e) => {
+                  if (e.pointerType === "touch") return;
+                  setHoverId((id) => (id === piece.id ? null : id));
+                }}
                 onFocus={() => setActiveId(piece.id)}
                 onKeyDown={(e) => keyMove(e, piece)}
               >
@@ -1366,7 +1377,10 @@ export default function TrueSizeGame() {
           <aside className={styles.detail} aria-label="Vybraná země">
             <button
               className={styles.close}
-              onClick={() => setDetailId(null)}
+              onClick={() => {
+                setDetailId(null);
+                setHoverId(null);
+              }}
               aria-label="Zavřít detail"
             >
               ×
