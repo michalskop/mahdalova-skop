@@ -102,76 +102,39 @@
   top: 16px;
 }
 .projectionGuide {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  z-index: 2;
-  width: min(430px, calc(100% - 100px));
-  display: grid;
-  gap: 3px;
-  padding: 9px 12px;
-  border-left: 3px solid #4a51ab;
-  background: #fdfbf7d9;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  background: #f5f0eb;
   color: #101432;
-  font-size: 12px;
-  line-height: 1.35;
-  pointer-events: none;
-}
-.projectionGuide strong {
   font-size: 13px;
+  line-height: 1.5;
 }
 .projectionGuide a {
-  pointer-events: auto;
   color: #4a51ab;
   text-decoration: underline;
 }
-.projectionGuide button {
-  pointer-events: auto;
-}
-.guideBase {
-  margin: 0;
-}
-/* Collapsible "K čemu se používá" – grid-rows animation avoids layout jump. */
-.guideExtra {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.26s ease;
-}
-.guideExtra.guideOpen {
-  grid-template-rows: 1fr;
-}
-.guideExtra > div {
-  overflow: hidden;
-  min-height: 0;
-}
-.guideUse {
+.guideText {
+  position: relative;
   margin: 4px 0 0;
 }
-.guideUseLabel {
-  font-weight: 700;
+.guideMeasure {
+  visibility: hidden;
 }
-.guideToggle {
-  align-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  margin-top: 3px;
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  color: #505365;
-  font: inherit;
-  font-size: 11px;
+.guideTyped {
+  position: absolute;
+  inset: 0;
 }
-.guideChevron {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.2s ease;
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
 }
 
-.mapArea .detail,
-.mapArea .share {
+.mapArea .detail {
   bottom: 28px;
 }
 
@@ -211,9 +174,7 @@
     margin-left: auto;
   }
   .projectionGuide {
-    left: 10px;
-    top: 10px;
-    width: calc(100% - 20px);
+    padding: 10px;
   }
 }
 
@@ -606,8 +567,10 @@
   bottom: 104px;
   display: grid;
   gap: 7px;
-  min-width: 290px;
-  max-width: calc(100% - 80px);
+  width: 320px;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  z-index: 3;
   background: #fdfbf7f5;
   border-radius: 12px;
   padding: 15px;
@@ -645,25 +608,7 @@
   font-size: 25px;
   font-weight: 600;
 }
-.share {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 102px;
-  display: flex;
-  gap: 5px;
-  background: #fdfbf7;
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 5px 25px #10143220;
-}
-.share input {
-  flex: 1;
-  min-width: 0;
-  border: 1px solid #dfe2db;
-  padding: 7px;
-  border-radius: 5px;
-}
+
 .credit {
   position: absolute;
   bottom: 7px;
@@ -794,10 +739,6 @@
     font-size: 18px;
   }
   .detail,
-  .share {
-    bottom: 131px;
-    left: 10px;
-  }
   .credit {
     left: 10px;
     font-size: 8px;

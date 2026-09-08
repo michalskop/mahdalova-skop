@@ -1,3 +1,10 @@
+import { merge } from "topojson-client";
+import type {
+  Topology,
+  GeometryCollection,
+  Polygon as TopoPolygon,
+  MultiPolygon as TopoMultiPolygon,
+} from "topojson-specification";
 import {
   geoArea,
   geoCentroid,
@@ -109,37 +116,6 @@ export function normLon(value: number) {
   return ((((value + 180) % 360) + 360) % 360) - 180;
 }
 
-/** Draw a round with a hard cap on countries repeated from the previous round. */
-export function chooseRound(
-  pool: string[],
-  previous: string[],
-  count: 5 | 10 | 15,
-  random = Math.random,
-): string[] {
-  const shuffle = (values: string[]) => {
-    const result = [...values];
-    for (let i = result.length - 1; i > 0; i--) {
-      const j = Math.floor(random() * (i + 1));
-      [result[i], result[j]] = [result[j], result[i]];
-    }
-    return result;
-  };
-  const unique = Array.from(new Set(pool));
-  const prior = new Set(previous);
-  const fresh = unique.filter((name) => !prior.has(name));
-  const repeats = unique.filter((name) => prior.has(name));
-  const limit = Math.min(Math.floor(count * 0.2), repeats.length);
-  if (fresh.length + limit < count)
-    throw new Error("Not enough countries for a varied round");
-  const repeatCount = Math.max(
-    count - fresh.length,
-    Math.floor(random() * (limit + 1)),
-  );
-  return shuffle([
-    ...shuffle(fresh).slice(0, count - repeatCount),
-    ...shuffle(repeats).slice(0, repeatCount),
-  ]);
-}
 export function clampLat(value: number) {
   return Math.max(-80, Math.min(80, value));
 }
@@ -254,7 +230,7 @@ export function homePiece(piece: Piece, country: Country): Piece {
 // Reassign it to Ukraine so every consumer of these features (basemap, country
 // selection, dragged polygon, area computations) treats Crimea as Ukrainian.
 // Detected by geographic region, not by a hard-coded polygon index.
-export function reassignCrimea(features: Country[]): void {
+export function reassignCrimea(features: Country[], world: Topology): void {
   const russia = features.find((f) => f.properties.name === "Russia");
   const ukraine = features.find((f) => f.properties.name === "Ukraine");
   if (!russia || !ukraine) return;
@@ -272,75 +248,26 @@ export function reassignCrimea(features: Country[]): void {
   const toPolys = (g: Polygon | MultiPolygon): Position[][][] =>
     g.type === "Polygon" ? [g.coordinates] : g.coordinates;
   const keep: Position[][][] = [];
-  const moved: Position[][][] = [];
-  for (const poly of toPolys(russia.geometry))
-    (inCrimea(poly[0]) ? moved : keep).push(poly);
-  if (!moved.length) return;
-  russia.geometry = { type: "MultiPolygon", coordinates: keep };
-  ukraine.geometry = {
+  const movedIndices: number[] = [];
+  toPolys(russia.geometry).forEach((poly, index) => {
+    if (inCrimea(poly[0])) movedIndices.push(index);
+    else keep.push(poly);
+  });
+  if (!movedIndices.length) return;
+  const objects = (
+    world.objects.countries as GeometryCollection<{ name: string }>
+  ).geometries;
+  const sourceRussia = objects.find(
+    (g) => (g.properties as { name?: string } | undefined)?.name === "Russia",
+  ) as TopoMultiPolygon;
+  const sourceUkraine = objects.find(
+    (g) => (g.properties as { name?: string } | undefined)?.name === "Ukraine",
+  ) as TopoPolygon | TopoMultiPolygon;
+  // Dissolve shared TopoJSON arcs: the isthmus is interior, never a stroked edge.
+  const crimea: TopoMultiPolygon = {
     type: "MultiPolygon",
-    coordinates: [...toPolys(ukraine.geometry), ...moved],
+    arcs: movedIndices.map((i) => sourceRussia.arcs[i]),
   };
-}
-
-export function encodeExperiment(projection: ProjectionId, pieces: Piece[]) {
-  return encodeURIComponent(
-    JSON.stringify({
-      v: 1,
-      projection,
-      pieces: pieces.map(({ name, lon, lat, angle, pinned }) => ({
-        name,
-        lon: +lon.toFixed(4),
-        lat: +lat.toFixed(4),
-        angle,
-        pinned,
-      })),
-    }),
-  );
-}
-
-export function decodeExperiment(
-  hash: string,
-  countries: Map<string, Country>,
-): { projection: ProjectionId; pieces: Piece[] } | null {
-  if (!hash.startsWith("#mapa=") || hash.length > 12000) return null;
-  try {
-    const data = JSON.parse(decodeURIComponent(hash.slice(6)));
-    if (
-      data.v !== 1 ||
-      !PROJECTIONS.some((p) => p.id === data.projection) ||
-      !Array.isArray(data.pieces) ||
-      data.pieces.length > 20
-    )
-      return null;
-    const names = new Set<string>();
-    const pieces: Piece[] = [];
-    for (const p of data.pieces) {
-      if (
-        typeof p.name !== "string" ||
-        !countries.has(p.name) ||
-        names.has(p.name) ||
-        !Number.isFinite(p.lon) ||
-        !Number.isFinite(p.lat) ||
-        !Number.isFinite(p.angle) ||
-        Math.abs(p.lat) > 90 ||
-        Math.abs(p.lon) > 180 ||
-        Math.abs(p.angle) > 360
-      )
-        return null;
-      names.add(p.name);
-      pieces.push({
-        id: pieces.length + 1,
-        name: p.name,
-        lon: p.lon,
-        lat: p.lat,
-        angle: p.angle,
-        pinned: p.pinned === true,
-        color: COLORS[pieces.length % COLORS.length],
-      });
-    }
-    return { projection: data.projection, pieces };
-  } catch {
-    return null;
-  }
+  ukraine.geometry = merge(world, [sourceUkraine, crimea]);
+  russia.geometry = { type: "MultiPolygon", coordinates: keep };
 }

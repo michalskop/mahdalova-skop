@@ -2,15 +2,15 @@
 
 React client component embedded by `<TrueSizeGame />` in the existing Markdown article. The surrounding article copy is maintained separately.
 
-- One board, five anonymous outlines initially stacked at `[0, 10]`.
-- Search adds named countries to the same board; the silhouette dock selects and drags individual pieces.
-- Dragging near home aligns the original geometry. Only **✓ Ověřit** records an attempt.
-- A correct check locks the country at home in brand forest green (`#639e0a`). An incorrect check reveals its name and locks it at home in brand orange (`#f76800`).
-- Score is correct checks / all checks. Each piece can be checked once. Removing pieces does not rewrite past attempts; a new game resets the score.
-- Restart offers 5, 10, or 15 countries. At most 20% of the new round repeats the previous round, including countries removed from the board. Search additions do not change the previous-round record.
-- Six projections; Mercator by default. Projection changes keep geographic positions.
-- Shared URLs restore a named comparison (positions and pins), not a scored game.
-- Original Natural Earth boundaries are rotated rigidly on the sphere and then projected. Areas in the optional country detail are approximate spherical calculations, not official statistics.
+- A new reload draws five anonymous countries from a 57-country pool. Each round uses the same rules: at least four continents for five pieces, at least five for 10/15, and no more than 20% repeated countries. The previous round is remembered in sessionStorage when available.
+- Rounds of 10/15 include at least two Latin American countries (Mexico, Brazil, Argentina, Peru, Bolivia, Colombia, Chile). Five-piece rounds include at least one.
+- Initial positions use randomized candidate locations and minimize bounding-box overlap. Larger shapes are placed first; subsequent shapes favour available space. Dense 15-piece rounds can still have some overlap.
+- Search adds named countries to the current viewport. Dock selection, pointer dragging, keyboard movement, touch pinch zoom and the taller mobile viewport are preserved.
+- Near-home dragging snaps and records a correct result. Manual verification reveals an incorrect answer in orange; correct answers are green.
+- Six projections, Mercator by default. Full-width descriptions remain visible and type out in roughly one second, restarting with each projection. Reduced-motion preference shows the text immediately.
+- Map sharing and hash state serialization have been removed.
+- Crimea is dissolved into Ukraine with TopoJSON merge before projection, leaving no shared internal boundary in either basemap or draggable silhouettes.
+- Country details use a consistent comparison: approximate area relative to Czechia and average population per km², alongside flag, capital and population. These comparisons derive from the same simplified map geometry and rounded population estimates in facts.ts; they are educational approximations, not official area/density statistics. Population distribution within a country is uneven.
 
 ## Local development
 
@@ -31,4 +31,4 @@ npx tsc --noEmit -p apps/web/tsconfig.json
 npm run lint --workspace=web -- --file components/clanek/TrueSizeGame/TrueSizeGame.tsx --file components/clanek/TrueSizeGame/geometry.ts
 ```
 
-The geometry check covers all countries, spherical area preservation, exact home geometry, projection inverses, the antimeridian, equal-area projections, snap tolerance, and malformed shared URLs. Browser checks must also cover both check outcomes, repeat checks, search, dock selection, drag, and mobile layout.
+The geometry check covers all countries, spherical area preservation, exact home geometry, projection inverses, the antimeridian, equal-area projections, snap tolerance, the dissolved Ukraine geometry and 3,000 rounds with diversity, Latin America and repetition constraints. Browser checks must also cover both check outcomes, repeat checks, search, dock selection, drag, and mobile layout.

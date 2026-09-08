@@ -8,11 +8,8 @@ import type { FeatureCollection } from "geojson";
 import { COUNTRIES } from "./countries";
 import {
   areaKm2,
-  chooseRound,
   clampLat,
   COLORS,
-  decodeExperiment,
-  encodeExperiment,
   HEIGHT,
   homePiece,
   isHome,
@@ -29,6 +26,8 @@ import LogoWithText from "../../common/LogoWithText";
 import { Flag } from "@repo/ui/components/Flag";
 import { ISO2 } from "./flags";
 import { FACTS } from "./facts";
+import { drawRound, ROUND_POOL } from "./rounds";
+import ProjectionGuide from "./ProjectionGuide";
 
 type Result = "correct" | "revealed";
 type GamePiece = Piece & { anonymous: boolean; result?: Result };
@@ -41,61 +40,6 @@ type Drag = {
   offLat: number;
   moved: boolean;
 };
-const STARTERS = ["Greenland", "Brazil", "India", "Australia", "Madagascar"];
-const CURATED_COUNTRIES = [
-  // Europe
-  "Germany",
-  "Ukraine",
-  "Poland",
-  "Spain",
-  "France",
-  "United Kingdom",
-  "Norway",
-  "Sweden",
-  "Finland",
-  "Czechia",
-  // North and South America
-  "Greenland",
-  "Mexico",
-  "Brazil",
-  "Argentina",
-  "Chile",
-  // Asia
-  "China",
-  "India",
-  "Japan",
-  "Russia",
-  "Iran",
-  "Afghanistan",
-  "Mongolia",
-  "Kazakhstan",
-  "Saudi Arabia",
-  "Turkey",
-  // Africa: north, large areas and recognisable silhouettes
-  "Morocco",
-  "Algeria",
-  "Tunisia",
-  "Libya",
-  "Egypt",
-  "Niger",
-  "Chad",
-  "Sudan",
-  "Ethiopia",
-  "Kenya",
-  "Mali",
-  "South Africa",
-  "Angola",
-  "Nigeria",
-  "Somalia",
-  "Dem. Rep. Congo",
-];
-const START_POSITIONS: LonLat[] = [
-  [-115, 24],
-  [-35, -12],
-  [35, 22],
-  [112, 10],
-  [150, -24],
-];
 function spreadPieces<T extends Piece>(
   pieces: T[],
   countries: Map<string, Country>,
@@ -113,8 +57,8 @@ function spreadPieces<T extends Piece>(
     let best: LonLat = [0, 0];
     let bestBox: number[] = [];
     let bestCost = Infinity;
-    for (let lat = -48; lat <= 55; lat += 13) {
-      for (let lon = -150; lon <= 150; lon += 20) {
+    for (let lat = -48 + Math.random() * 10; lat <= 55; lat += 13) {
+      for (let lon = -150 + Math.random() * 15; lon <= 150; lon += 20) {
         const bounds = path.bounds(
           placeCountry(countries.get(piece.name)!, { ...piece, lon, lat }),
         );
@@ -154,7 +98,7 @@ function spreadPieces<T extends Piece>(
               ),
             )
           : 0;
-        const cost = overlap * 10000 - separation;
+        const cost = overlap * 10000 - separation + Math.random() * 240;
         if (cost < bestCost) {
           bestCost = cost;
           best = [lon, lat];
@@ -194,69 +138,6 @@ const fold = (value: string) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 const number = new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 });
-
-// Per-projection copy: a short base description always shown, plus an expandable
-// "K čemu se používá" sentence with a concrete, real use whose source is linked
-// inline (no separate "Zdroj" line). Facts and links reuse the existing citations.
-const projectionInfo: Record<
-  ProjectionId,
-  { base: string; use: { pre: string; link: string; href: string; post: string } }
-> = {
-  mercator: {
-    base: "Gerardus Mercator, 1569. Zachovává místní úhly a směry; trasa se stálým kompasovým kurzem (loxodroma) je na ní přímka. Směrem k pólům ale silně zvětšuje plochy.",
-    use: {
-      pre: "Používá se v námořní navigaci – lodní trasy na ní zobrazují ",
-      link: "elektronické navigační mapy NOAA",
-      href: "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html",
-      post: ".",
-    },
-  },
-  equal: {
-    base: "Equal Earth, 2018. Plochojevná projekce: stejně velké území zabírá na mapě stejnou plochu, tvary se přesto mírně mění.",
-    use: {
-      pre: "Jako férovější obraz světa ji šíří ",
-      link: "nástěnná mapa Equal Earth pro školy",
-      href: "https://equal-earth.com/",
-      post: " a používají ji i výukové mapy Esri.",
-    },
-  },
-  peters: {
-    base: "Gall-Peters, 1855/1973. Zachovává poměry ploch za cenu výrazného protažení tvarů.",
-    use: {
-      pre: "Pro výuku porovnávání rozloh ji doporučují ",
-      link: "irské kurikulární metodiky pro zeměpis",
-      href: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
-      post: ".",
-    },
-  },
-  mollweide: {
-    base: "Karl Mollweide, 1805. Eliptická plochojevná mapa; zachovává plochy, u okrajů ale deformuje tvary.",
-    use: {
-      pre: "Esri ji doporučuje pro ",
-      link: "globální tematické mapy rozložení jevů",
-      href: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
-      post: ".",
-    },
-  },
-  robinson: {
-    base: "Arthur Robinson, 1963. Kompromisní projekce pro přehled celého světa; nezachovává přesně plochy ani úhly.",
-    use: {
-      pre: "Dřív ji používaly ",
-      link: "mapy světa National Geographic",
-      href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
-      post: ", než přešly na Winkelovu projekci.",
-    },
-  },
-  winkel: {
-    base: "Oswald Winkel, 1921. Kompromis omezující současně zkreslení ploch, vzdáleností i směrů; žádnou vlastnost nezachovává dokonale.",
-    use: {
-      pre: "Jako referenční ",
-      link: "mapy světa National Geographic",
-      href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
-      post: " ji používají dodnes.",
-    },
-  },
-};
 
 const Basemap = memo(function Basemap({
   countries,
@@ -302,20 +183,16 @@ export default function TrueSizeGame() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [projectionId, setProjectionId] = useState<ProjectionId>("mercator");
   const [projectionTouched, setProjectionTouched] = useState(false);
-  const [guideOpen, setGuideOpen] = useState(true);
   const [flashId, setFlashId] = useState<number | null>(null);
   const [flashKey, setFlashKey] = useState(0);
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const [optionIndex, setOptionIndex] = useState(-1);
-  const [notice, setNotice] = useState("");
-  const [noticeResult, setNoticeResult] = useState<Result | null>(null);
   const [detailId, setDetailId] = useState<number | null>(null);
   const [hoverId, setHoverId] = useState<number | null>(null);
-  const [shareUrl, setShareUrl] = useState("");
   const [expanded, setExpanded] = useState(false);
   const [roundMenuOpen, setRoundMenuOpen] = useState(false);
-  const previousRound = useRef<string[]>(STARTERS);
+  const previousRound = useRef<string[]>([]);
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
   const [mapHeight, setMapHeight] = useState(HEIGHT);
@@ -345,7 +222,6 @@ export default function TrueSizeGame() {
   const frame = useRef(0);
   const nextId = useRef(6);
   const resolved = useRef(new Set<number>());
-  const didAutoCollapse = useRef(false);
   const piecesRef = useRef<GamePiece[]>(pieces);
   piecesRef.current = pieces;
   const searchId = useId();
@@ -397,7 +273,7 @@ export default function TrueSizeGame() {
           world.objects.countries,
         ) as unknown as FeatureCollection;
         // Correct the source data before anything consumes it: Crimea → Ukraine.
-        reassignCrimea(collection.features as unknown as Country[]);
+        reassignCrimea(collection.features as unknown as Country[], world);
         const data = collection.features.filter(
           (f) =>
             (f.geometry.type === "Polygon" ||
@@ -406,28 +282,37 @@ export default function TrueSizeGame() {
         ) as Country[];
         const map = new Map(data.map((c) => [c.properties.name, c]));
         setCountries(data);
-        const saved = decodeExperiment(window.location.hash, map);
-        const initial: GamePiece[] = saved
-          ? saved.pieces.map((p) => ({ ...p, anonymous: false }))
-          : STARTERS.filter((n) => map.has(n)).map((name, i) => ({
-              id: i + 1,
-              name,
-              lon: START_POSITIONS[i]?.[0] ?? 0,
-              lat: START_POSITIONS[i]?.[1] ?? 10,
-              angle: 0,
-              pinned: false,
-              color: COLORS[i % COLORS.length],
-              anonymous: true,
-            }));
-        setPieces(
-          saved ? initial : spreadPieces(initial, map, "mercator", mapHeight),
+        let previous: string[] = [];
+        try {
+          previous = JSON.parse(
+            sessionStorage.getItem("true-size-round") || "[]",
+          );
+        } catch {}
+        const names = drawRound(
+          ROUND_POOL.filter((name) => map.has(name)),
+          Array.isArray(previous) ? previous : [],
+          5,
         );
-        previousRound.current = initial.map((piece) => piece.name);
+        const initial: GamePiece[] = names.map((name, i) => ({
+          id: i + 1,
+          name,
+          lon: 0,
+          lat: 0,
+          angle: 0,
+          pinned: false,
+          color: COLORS[i % COLORS.length],
+          anonymous: true,
+        }));
+        const height = window.matchMedia(MOBILE_QUERY).matches
+          ? MOBILE_HEIGHT
+          : HEIGHT;
+        setPieces(spreadPieces(initial, map, "mercator", height));
+        previousRound.current = names;
+        try {
+          sessionStorage.setItem("true-size-round", JSON.stringify(names));
+        } catch {}
         setActiveId(initial[initial.length - 1]?.id || null);
         nextId.current = initial.length + 1;
-        if (saved) setProjectionId(saved.projection);
-        else if (window.location.hash.startsWith("#mapa="))
-          setNotice("Odkaz se nepodařilo načíst. Začíná nová hra.");
       })
       .catch(() => {
         if (!controller.signal.aborted) setError(true);
@@ -474,6 +359,7 @@ export default function TrueSizeGame() {
   }, [expanded]);
 
   const results = useMemo(() => {
+    if (pieces.length >= 20) return [];
     const q = fold(query.trim());
     return countries
       .map((c) => c.properties.name)
@@ -491,6 +377,28 @@ export default function TrueSizeGame() {
       );
   }, [countries, pieces, query]);
 
+  function countryContext(name: string) {
+    const country = byName.get(name)!;
+    const area = areaKm2(country);
+    const czechArea = byName.has("Czechia")
+      ? areaKm2(byName.get("Czechia")!)
+      : 78871;
+    const ratio = area / czechArea;
+    const comparison =
+      name === "Czechia"
+        ? "Česko je měřítkem pro porovnání ostatních zemí."
+        : ratio >= 1
+          ? `Rozlohou přibližně ${new Intl.NumberFormat("cs-CZ", { maximumSignificantDigits: 2 }).format(ratio)}× Česko.`
+          : `Rozlohou přibližně ${new Intl.NumberFormat("cs-CZ", { maximumSignificantDigits: 2 }).format(ratio * 100)} % Česka.`;
+    const population = FACTS[name]?.population || "";
+    const match = population.match(/^([\d,]+)\s+(milion|miliard|tisíc)/);
+    if (!match) return comparison;
+    const residents =
+      Number(match[1].replace(",", ".")) *
+      (match[2] === "milion" ? 1e6 : match[2] === "miliard" ? 1e9 : 1e3);
+    const density = residents / area;
+    return `${comparison} V průměru ${density < 1 ? "méně než 1 člověk" : `asi ${number.format(Math.round(density))} lidí`} na km².`;
+  }
   function stopDrag() {
     cancelAnimationFrame(frame.current);
     pending.current = null;
@@ -505,16 +413,6 @@ export default function TrueSizeGame() {
   function select(piece: GamePiece) {
     setActiveId(piece.id);
     setDetailId(piece.anonymous && !piece.result ? null : piece.id);
-    setNotice("");
-  }
-  // The projection "K čemu se používá" panel collapses itself once the user
-  // starts working with countries, so it never sits in the way mid-game. After
-  // that the user controls it manually.
-  function startInteracting() {
-    if (!didAutoCollapse.current) {
-      didAutoCollapse.current = true;
-      setGuideOpen(false);
-    }
   }
   // Center of the currently visible map, in lon/lat. New countries drop here so
   // they land in front of the user at the current zoom/pan instead of jumping to
@@ -530,11 +428,9 @@ export default function TrueSizeGame() {
   }
   function addCountry(name: string) {
     if (pieces.length >= 20) {
-      setNotice("Na mapě může být 20 zemí. Některou nejdřív odeber.");
       return;
     }
     if (pieces.some((p) => p.name === name)) return;
-    startInteracting();
     const [lon, lat] = viewportCenter();
     const piece: GamePiece = {
       id: nextId.current++,
@@ -552,40 +448,23 @@ export default function TrueSizeGame() {
     setQuery("");
     setSearchOpen(false);
     setOptionIndex(-1);
-    setNotice("");
   }
   function newGame(count: 5 | 10 | 15) {
     stopDrag();
-    const pool = CURATED_COUNTRIES.filter((name) => {
-      const country = byName.get(name);
-      return country && COUNTRIES[name]?.target && areaKm2(country) >= 50000;
-    });
-    const names = chooseRound(pool, previousRound.current, count);
-    // Keep each round visually and geographically varied when the random draw
-    // happens to cluster in one region.
-    const represented = new Set(
-      names.map((name) => COUNTRIES[name]?.continent),
+    const names = drawRound(
+      ROUND_POOL.filter((name) => byName.has(name)),
+      previousRound.current,
+      count,
     );
-    if (represented.size < Math.min(3, count)) {
-      const replacements = pool.filter(
-        (name) =>
-          !names.includes(name) && !represented.has(COUNTRIES[name]?.continent),
-      );
-      for (let i = 0; i < names.length && replacements.length; i += 1) {
-        const continent = COUNTRIES[names[i]]?.continent;
-        if (represented.has(continent)) continue;
-        const replacement = replacements.shift();
-        if (!replacement) break;
-        names[i] = replacement;
-        represented.add(COUNTRIES[replacement]?.continent);
-      }
-    }
+    try {
+      sessionStorage.setItem("true-size-round", JSON.stringify(names));
+    } catch {}
     previousRound.current = names;
     const additions: GamePiece[] = names.map((name, i) => ({
       id: nextId.current++,
       name,
-      lon: START_POSITIONS[i % START_POSITIONS.length]?.[0] ?? 0,
-      lat: START_POSITIONS[i % START_POSITIONS.length]?.[1] ?? 10,
+      lon: 0,
+      lat: 0,
       angle: 0,
       pinned: false,
       color: COLORS[i % COLORS.length],
@@ -593,12 +472,8 @@ export default function TrueSizeGame() {
     }));
     setPieces(spreadPieces(additions, byName, projectionId, mapHeight));
     setActiveId(additions[additions.length - 1]?.id || null);
-    didAutoCollapse.current = false;
-    setGuideOpen(true);
     resolved.current.clear();
-    setNotice("");
     setDetailId(null);
-    setShareUrl("");
     setView(fullView);
     setRoundMenuOpen(false);
     restartButton.current?.focus();
@@ -623,8 +498,6 @@ export default function TrueSizeGame() {
       pinned: true,
       color: success ? GREEN : ORANGE,
     });
-    setNotice("");
-    setNoticeResult(null);
     setDetailId(null);
   }
   function checkPosition() {
@@ -659,7 +532,6 @@ export default function TrueSizeGame() {
     e.stopPropagation();
     setActiveId(piece.id);
     setHoverId(null);
-    startInteracting();
     if (piece.pinned || piece.result) {
       setDetailId(piece.id);
       return;
@@ -670,7 +542,6 @@ export default function TrueSizeGame() {
     e.currentTarget.focus();
     svg.current?.setPointerCapture(e.pointerId);
     setDetailId(null);
-    setNotice("");
     drag.current = {
       pointer: e.pointerId,
       piece,
@@ -857,18 +728,6 @@ export default function TrueSizeGame() {
           };
     });
   }
-  async function share() {
-    const url = new URL(window.location.href);
-    url.hash = "mapa=" + encodeExperiment(projectionId, pieces);
-    setShareUrl(url.toString());
-    try {
-      await navigator.clipboard.writeText(url.toString());
-      setNotice("Odkaz na mapu je zkopírovaný.");
-    } catch {
-      setNotice("Odkaz můžeš zkopírovat z pole.");
-    }
-    setNoticeResult(null);
-  }
 
   if (!countries.length)
     return (
@@ -970,7 +829,7 @@ export default function TrueSizeGame() {
                   </li>
                 ))}
                 {!results.length && (
-                  <li role="presentation">Žádná další země nenalezena.</li>
+                  <li role="presentation">{pieces.length >= 20 ? "Na mapě už je 20 zemí. Pro další výběr začni novou hru." : "Žádná další země nenalezena."}</li>
                 )}
               </ul>
             )}
@@ -1031,7 +890,23 @@ export default function TrueSizeGame() {
             aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}
             title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d={expanded ? "M4 9h5V4M15 4v5h5M20 15h-5v5M9 20v-5H4" : "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+            >
+              <path
+                d={
+                  expanded
+                    ? "M4 9h5V4M15 4v5h5M20 15h-5v5M9 20v-5H4"
+                    : "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5"
+                }
+              />
+            </svg>
           </button>
         </div>
         <div className={styles.bottom}>
@@ -1112,27 +987,10 @@ export default function TrueSizeGame() {
                 </div>
               )}
             </div>
-            <button
-              onClick={share}
-              disabled={!pieces.length}
-              aria-label="Sdílet mapu"
-              title="Sdílet mapu"
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M14 4v5C7 9 4 13 3 20c3-5 6-6 11-6v5l7-8-7-7Z" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
+      <ProjectionGuide key={projectionId} projectionId={projectionId} />
       <div className={styles.mapArea}>
         <svg
           ref={svg}
@@ -1230,54 +1088,6 @@ export default function TrueSizeGame() {
             );
           })}
         </svg>
-        <aside className={styles.projectionGuide} aria-live="polite">
-          <strong>
-            {PROJECTIONS.find((item) => item.id === projectionId)?.name}
-          </strong>
-          <p className={styles.guideBase}>{projectionInfo[projectionId].base}</p>
-          <div
-            className={`${styles.guideExtra} ${guideOpen ? styles.guideOpen : ""}`}
-          >
-            <div>
-              <p className={styles.guideUse}>
-                <span className={styles.guideUseLabel}>K čemu se používá: </span>
-                {projectionInfo[projectionId].use.pre}
-                <a
-                  href={projectionInfo[projectionId].use.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {projectionInfo[projectionId].use.link}
-                </a>
-                {projectionInfo[projectionId].use.post}
-              </p>
-            </div>
-          </div>
-          <button
-            type="button"
-            className={styles.guideToggle}
-            onClick={() => {
-              didAutoCollapse.current = true;
-              setGuideOpen((open) => !open);
-            }}
-            aria-expanded={guideOpen}
-          >
-            {guideOpen ? "Méně" : "Více"}
-            <svg
-              className={styles.guideChevron}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              style={{ transform: guideOpen ? "rotate(180deg)" : undefined }}
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
-          </button>
-        </aside>
         <div className={styles.zoom}>
           <button
             onClick={() => zoom(1 / 1.5)}
@@ -1332,24 +1142,8 @@ export default function TrueSizeGame() {
             </small>
             <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
             <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
-            <span>
-              {FACTS[detail.name]?.note ||
-                `Geografická poloha: ${COUNTRIES[detail.name]?.continent || "svět"}`}
-            </span>
+            <span>{countryContext(detail.name)}</span>
           </aside>
-        )}
-        {shareUrl && (
-          <div className={styles.share}>
-            <input
-              aria-label="Odkaz na mapu"
-              readOnly
-              value={shareUrl}
-              onFocus={(e) => e.target.select()}
-            />
-            <button onClick={() => setShareUrl("")} aria-label="Zavřít odkaz">
-              ×
-            </button>
-          </div>
         )}
         <div className={styles.credit}>
           Inspirováno:{" "}
