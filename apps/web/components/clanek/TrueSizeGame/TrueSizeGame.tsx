@@ -20,11 +20,14 @@ import {
   normLon,
   placeCountry,
   PROJECTIONS,
+  reassignCrimea,
   WIDTH,
 } from "./geometry";
 import type { Country, LonLat, Piece, ProjectionId } from "./geometry";
 import styles from "./TrueSizeGame.module.css";
 import LogoWithText from "../../common/LogoWithText";
+import { Flag } from "@repo/ui/components/Flag";
+import { ISO2 } from "./flags";
 
 type Result = "correct" | "revealed";
 type GamePiece = Piece & { anonymous: boolean; result?: Result };
@@ -257,51 +260,6 @@ const countryFacts: Record<
   },
 };
 
-const countryFlags: Record<string, string> = {
-  Greenland: "🇬🇱",
-  Brazil: "🇧🇷",
-  India: "🇮🇳",
-  Australia: "🇦🇺",
-  Madagascar: "🇲🇬",
-  Czechia: "🇨🇿",
-  France: "🇫🇷",
-  Germany: "🇩🇪",
-  China: "🇨🇳",
-  Russia: "🇷🇺",
-  Japan: "🇯🇵",
-  "South Africa": "🇿🇦",
-  Ukraine: "🇺🇦",
-  Poland: "🇵🇱",
-  Spain: "🇪🇸",
-  "United Kingdom": "🇬🇧",
-  Norway: "🇳🇴",
-  Sweden: "🇸🇪",
-  Finland: "🇫🇮",
-  Mexico: "🇲🇽",
-  Argentina: "🇦🇷",
-  Chile: "🇨🇱",
-  Iran: "🇮🇷",
-  Afghanistan: "🇦🇫",
-  Mongolia: "🇲🇳",
-  Kazakhstan: "🇰🇿",
-  "Saudi Arabia": "🇸🇦",
-  Turkey: "🇹🇷",
-  Morocco: "🇲🇦",
-  Algeria: "🇩🇿",
-  Tunisia: "🇹🇳",
-  Libya: "🇱🇾",
-  Egypt: "🇪🇬",
-  Niger: "🇳🇪",
-  Chad: "🇹🇩",
-  Sudan: "🇸🇩",
-  Ethiopia: "🇪🇹",
-  Kenya: "🇰🇪",
-  Mali: "🇲🇱",
-  Angola: "🇦🇴",
-  Nigeria: "🇳🇬",
-  Somalia: "🇸🇴",
-  "Dem. Rep. Congo": "🇨🇩",
-};
 const projectionGuides: Record<ProjectionId, string> = {
   mercator:
     "Gerardus Mercator, 1569. Zachovává místní úhly; trasy se stálým kurzem jsou přímky. U pólů výrazně zvětšuje plochy. Použití: námořní mapy NOAA a elektronické navigační systémy ECDIS.",
@@ -410,13 +368,15 @@ export default function TrueSizeGame() {
     pieces.find((p) => !p.result) ||
     pieces[pieces.length - 1];
   const detail = pieces.find((p) => p.id === detailId);
-  const ordered = useMemo(
-    () =>
-      [...pieces].sort(
-        (a, b) => Number(a.id === selected?.id) - Number(b.id === selected?.id),
-      ),
-    [pieces, selected?.id],
-  );
+  // Paint order: already-placed (result) pieces at the bottom, unplaced pieces
+  // above them, and the selected/dragged piece on top. Combined with disabling
+  // pointer events on placed pieces, an unplaced country under a large placed one
+  // stays grabbable.
+  const ordered = useMemo(() => {
+    const rank = (p: GamePiece) =>
+      (p.result ? 0 : 1) + (p.id === selected?.id ? 2 : 0);
+    return [...pieces].sort((a, b) => rank(a) - rank(b));
+  }, [pieces, selected?.id]);
   const accessibleName = (p: GamePiece) =>
     p.anonymous && !p.result ? `Obrys ${p.id}` : label(p.name);
 
@@ -436,6 +396,8 @@ export default function TrueSizeGame() {
           world,
           world.objects.countries,
         ) as unknown as FeatureCollection;
+        // Correct the source data before anything consumes it: Crimea → Ukraine.
+        reassignCrimea(collection.features as unknown as Country[]);
         const data = collection.features.filter(
           (f) =>
             (f.geometry.type === "Polygon" ||
@@ -528,17 +490,30 @@ export default function TrueSizeGame() {
     setDetailId(piece.anonymous && !piece.result ? null : piece.id);
     setNotice("");
   }
+  // Center of the currently visible map, in lon/lat. New countries drop here so
+  // they land in front of the user at the current zoom/pan instead of jumping to
+  // their real position. Falls back to a safe point if the center is off-globe.
+  function viewportCenter(): LonLat {
+    const center = projection.invert?.([
+      view.x + view.width / 2,
+      view.y + view.height / 2,
+    ]);
+    if (center && center.every(Number.isFinite) && Math.abs(center[1]) <= 90)
+      return [normLon(center[0]), clampLat(center[1])];
+    return [0, 20];
+  }
   function addCountry(name: string) {
     if (pieces.length >= 20) {
       setNotice("Na mapě může být 20 zemí. Některou nejdřív odeber.");
       return;
     }
     if (pieces.some((p) => p.name === name)) return;
+    const [lon, lat] = viewportCenter();
     const piece: GamePiece = {
       id: nextId.current++,
       name,
-      lon: START_POSITIONS[pieces.length % START_POSITIONS.length]?.[0] ?? 0,
-      lat: START_POSITIONS[pieces.length % START_POSITIONS.length]?.[1] ?? 10,
+      lon,
+      lat,
       angle: 0,
       pinned: false,
       color: COLORS[pieces.length % COLORS.length],
@@ -1091,9 +1066,12 @@ export default function TrueSizeGame() {
               <g
                 key={piece.id}
                 role="button"
-                tabIndex={0}
+                tabIndex={piece.result ? -1 : 0}
                 aria-label={`${accessibleName(piece)}${piece.result === "correct" ? ", správně" : piece.result === "revealed" ? ", odhaleno" : ", přesuň po mapě"}`}
                 className={`${styles.piece} ${piece.pinned ? styles.pinned : ""}`}
+                // Resolved pieces are done: stop them capturing pointer events so
+                // they never block dragging an unplaced country underneath.
+                style={piece.result ? { pointerEvents: "none" } : undefined}
                 onPointerDown={(e) => beginDrag(e, piece)}
                 onFocus={() => setActiveId(piece.id)}
                 onKeyDown={(e) => keyMove(e, piece)}
@@ -1172,9 +1150,14 @@ export default function TrueSizeGame() {
               ×
             </button>
             <strong style={{ color: detail.color }}>
-              <span className={styles.detailFlag} aria-hidden="true">
-                {countryFlags[detail.name] || "🌐"}
-              </span>{" "}
+              {ISO2[detail.name] && (
+                <Flag
+                  code={ISO2[detail.name]}
+                  size={20}
+                  alt=""
+                  style={{ marginRight: 6 }}
+                />
+              )}
               {label(detail.name)}
             </strong>
             <small>

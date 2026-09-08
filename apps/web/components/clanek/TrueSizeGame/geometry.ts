@@ -244,6 +244,39 @@ export function homePiece(piece: Piece, country: Country): Piece {
   return { ...piece, lon, lat, angle: 0 };
 }
 
+// Data correction: Natural Earth 110m assigns the Crimean peninsula to Russia.
+// Reassign it to Ukraine so every consumer of these features (basemap, country
+// selection, dragged polygon, area computations) treats Crimea as Ukrainian.
+// Detected by geographic region, not by a hard-coded polygon index.
+export function reassignCrimea(features: Country[]): void {
+  const russia = features.find((f) => f.properties.name === "Russia");
+  const ukraine = features.find((f) => f.properties.name === "Ukraine");
+  if (!russia || !ukraine) return;
+  const inCrimea = (ring: Position[]) => {
+    let x = 0;
+    let y = 0;
+    for (const point of ring) {
+      x += point[0];
+      y += point[1];
+    }
+    x /= ring.length;
+    y /= ring.length;
+    return x >= 32 && x <= 37 && y >= 44 && y <= 46.5;
+  };
+  const toPolys = (g: Polygon | MultiPolygon): Position[][][] =>
+    g.type === "Polygon" ? [g.coordinates] : g.coordinates;
+  const keep: Position[][][] = [];
+  const moved: Position[][][] = [];
+  for (const poly of toPolys(russia.geometry))
+    (inCrimea(poly[0]) ? moved : keep).push(poly);
+  if (!moved.length) return;
+  russia.geometry = { type: "MultiPolygon", coordinates: keep };
+  ukraine.geometry = {
+    type: "MultiPolygon",
+    coordinates: [...toPolys(ukraine.geometry), ...moved],
+  };
+}
+
 export function encodeExperiment(projection: ProjectionId, pieces: Piece[]) {
   return encodeURIComponent(
     JSON.stringify({
