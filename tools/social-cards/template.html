@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --w: {{WIDTH}}px;
+    --h: {{HEIGHT}}px;
+    --newsprint: #fdfbf7;
+    --ink: #1a1a1a;
+    --muted: #55524a;
+    --crimson: #de1743;
+    --midnight: #272a59;
+  }
+  html, body {
+    margin: 0; padding: 0;
+    width: var(--w); height: var(--h);
+    background: var(--newsprint);
+    font-family: 'Roboto Slab', Georgia, serif;
+    overflow: hidden;
+  }
+  .card {
+    position: relative;
+    width: var(--w); height: var(--h);
+    display: flex; flex-direction: column;
+  }
+  .topbar { height: calc(var(--h) * 0.016); background: var(--crimson); flex: none; }
+  .header {
+    flex: none;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: calc(var(--h) * 0.055) calc(var(--w) * 0.06) 0;
+  }
+  .eyebrow {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: 700;
+    font-size: calc(var(--w) * 0.021);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--crimson);
+  }
+  .logo-row { display: flex; align-items: center; gap: calc(var(--w) * 0.008); }
+  .logo-row svg { width: calc(var(--w) * 0.028); height: calc(var(--w) * 0.028); }
+  .logo-row span {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: calc(var(--w) * 0.02);
+    color: var(--ink);
+  }
+  .body {
+    flex: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    gap: calc(var(--h) * 0.035);
+    padding: 0 calc(var(--w) * 0.06);
+    min-height: 0;
+  }
+  .headline {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: calc(var(--w) * 0.058);
+    line-height: 1.14;
+    color: var(--ink);
+    max-width: 92%;
+  }
+  .chart {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex; align-items: center;
+  }
+  .chart svg { width: 100%; height: 100%; display: block; }
+  .caption {
+    flex: none;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: 400;
+    font-size: calc(var(--w) * 0.024);
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 94%;
+  }
+  .caption b { color: var(--crimson); font-weight: 700; }
+  .footer {
+    flex: none;
+    padding: 0 calc(var(--w) * 0.06) calc(var(--h) * 0.045);
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-size: calc(var(--w) * 0.015);
+    color: var(--muted);
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="topbar"></div>
+    <div class="header">
+      <div class="eyebrow">{{EYEBROW}}</div>
+      <div class="logo-row">
+        <svg viewBox="112 112 276 276" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="1" x2="0.25" y1="0.5" y2="1">
+              <stop offset="0%" stop-color="#ffdc33" stop-opacity="0" />
+              <stop offset="50%" stop-color="#ffdc33" stop-opacity="0" />
+              <stop offset="50%" stop-color="#ffdc33" stop-opacity="1" />
+              <stop offset="100%" stop-color="#ffdc33" stop-opacity="1" />
+            </linearGradient>
+          </defs>
+          <g transform="rotate(-30 250 250)">
+            <path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+            <path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
+            <path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/>
+            <path fill="none" stroke="url(#g1)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+          </g>
+        </svg>
+        <span>{{SITE}}</span>
+      </div>
+    </div>
+    <div class="body">
+      <div class="headline">{{HEADLINE_HTML}}</div>
+      <div class="chart">{{CHART_SVG}}</div>
+      <div class="caption">{{CAPTION_HTML}}</div>
+    </div>
+    <div class="footer">{{FOOTER}}</div>
+  </div>
+</body>
+</html>

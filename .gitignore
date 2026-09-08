@@ -43,3 +43,6 @@ yarn-error.log*
 .claude/
 
 __pycache__/
+
+# social-cards generator scratch dir (must live under $HOME for snap-confined Chromium)
+tools/social-cards/.tmp/
