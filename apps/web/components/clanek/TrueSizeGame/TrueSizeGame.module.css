@@ -104,21 +104,27 @@
 .projectionGuide {
   position: absolute;
   left: 16px;
+  right: 16px;
   top: 16px;
   z-index: 2;
-  width: min(430px, calc(100% - 100px));
-  display: grid;
-  gap: 3px;
-  padding: 9px 12px;
+  display: block;
+  padding: 8px 14px;
   border-left: 3px solid #4a51ab;
   background: #fdfbf7d9;
   color: #101432;
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.45;
   pointer-events: none;
 }
 .projectionGuide strong {
   font-size: 13px;
+  margin-right: 4px;
+}
+.guideSource {
+  white-space: nowrap;
+}
+.detailSize {
+  font-weight: 600;
 }
 .projectionGuide a {
   pointer-events: auto;
