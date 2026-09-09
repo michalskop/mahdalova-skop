@@ -304,18 +304,24 @@
     <div class="ps">
       <div class="plbl">Using the output</div>
       <div class="note" style="margin-top:0">
-        <b>SVG</b> – thumbnails on the web. Embed it inline (<code>&lt;svg&gt;</code>
-        directly in the HTML) so it picks up IBM Plex Serif / Sans that the site
-        already loads.<br>
-        <b>PNG</b> – og:image for social networks (they don't take SVG). Fonts are baked
-        in, so it needs an internet connection.
+        <b>OG image</b> – náhled pro sdílení odkazu (Facebook, WhatsApp, X, LinkedIn…).
+        Web ho uvede v <code>og:image</code> metadatech a síť si ho při sdílení načte sama –
+        nemusíš ho nikam ručně nahrávat. Auto volí <b>JPEG</b> (fotka / gradient, menší soubor)
+        nebo <b>PNG</b> (grafika, výrazný text, plné plochy, průhlednost). Výchozí 1200×630 px (1,91:1).
+        <br><b>SVG (web)</b> je jen pro vložení náhledu přímo do stránky webu (inline
+        <code>&lt;svg&gt;</code>), <b>ne</b> pro sociální sítě.
       </div>
     </div>
 
     <div id="actions">
-      <button class="btn btn-primary" id="dlsvg">Download SVG</button>
+      <div class="fld" style="margin-bottom:2px">
+        <label style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Formát OG image</label>
+        <div class="segrow" id="ogfmt"></div>
+      </div>
+      <button class="btn btn-primary" id="dlog">⬇ Download OG image</button>
+      <div class="note" id="ogfmt-note" style="margin:0 0 3px"></div>
       <div class="btn-row">
-        <button class="btn btn-ghost" id="dlpng">PNG</button>
+        <button class="btn btn-ghost" id="dlsvg">SVG (web)</button>
         <button class="btn btn-ghost" id="dltool">Download tool</button>
       </div>
     </div>
@@ -361,7 +367,7 @@ const state = {
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
   motif:'fall', accent:'#de1743', format:'link', image:null, dark:false,
-  imgFit:'fill', imgPos:'center', hideNumber:false, topLogo:'special',
+  imgFit:'fill', imgPos:'center', hideNumber:false, topLogo:'special', ogFormat:'auto',
   // nové: fonty per prvek (výchozí = sans pro kicker, serif pro číslo/claim)
   font:{ kicker:'sans', number:'serif', claim:'serif' },
   // nové: vlastní barva pozadí (null = auto ze světlý/tmavý) + barva plochy za claimem
@@ -717,6 +723,7 @@ function render(){
   frame.innerHTML=buildSVG(state,false);
   addHitAreas();
   refreshSel();
+  if(typeof updateOgNote==='function') updateOgNote();
 }
 // každému pohyblivému objektu přidej průhledný hit-rect přes celou jeho bbox,
 // aby šel chytit kdekoli (ne jen na tazích písmen).
@@ -1168,27 +1175,61 @@ async function fontStyleTag(){
   return fontStyleCache;
 }
 
-document.getElementById('dlpng').onclick=async()=>{
-  const btn=document.getElementById('dlpng');
-  btn.disabled=true;
+// Rasterizace aktuálního plátna do zvoleného formátu (JPEG má bílé/pozadí pod,
+// PNG zachovává vše). Fonty se přibalí jako base64, ať rastr nespadne na Georgii.
+async function exportRaster(mime, quality){
+  const fmt=FORMATS[state.format]||FORMATS.link;
+  const svg=buildSVG(state,false).replace(/(<svg[^>]*>)/,'$1'+await fontStyleTag());
+  const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
+  return await new Promise((resolve,reject)=>{
+    const img=new Image();
+    img.onload=()=>{
+      const cv=document.createElement('canvas');cv.width=fmt.w;cv.height=fmt.h;
+      const ctx=cv.getContext('2d');
+      if(mime==='image/jpeg'){  // JPEG neumí průhlednost → podklad barvou pozadí
+        ctx.fillStyle=state.bgColor||(state.dark?'#101432':'#f8f6f0');
+        ctx.fillRect(0,0,fmt.w,fmt.h);
+      }
+      ctx.drawImage(img,0,0,fmt.w,fmt.h);
+      URL.revokeObjectURL(url);
+      cv.toBlob(b=>b?resolve(b):reject(), mime, quality);
+    };
+    img.onerror=()=>{URL.revokeObjectURL(url);reject();};
+    img.src=url;
+  });
+}
+
+// Auto výběr OG formátu: fotka/gradient (nahraný rastr) → JPEG (menší, ostrý text
+// při vysoké kvalitě); čistě grafický DataTimes vizuál / motiv / SVG → PNG.
+function pickOgFormat(){
+  if(state.ogFormat!=='auto') return state.ogFormat;
+  const rasterPhoto = state.image && !/^data:image\/svg/i.test(state.image);
+  return rasterPhoto ? 'jpeg' : 'png';
+}
+const ogWrap=document.getElementById('ogfmt');
+[['auto','Auto'],['jpeg','JPEG'],['png','PNG']].forEach(([v,label])=>{
+  const b=document.createElement('button');
+  b.className='minichip'+(state.ogFormat===v?' on':'');b.textContent=label;b.dataset.v=v;
+  b.onclick=()=>{state.ogFormat=v;[...ogWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));updateOgNote();};
+  ogWrap.appendChild(b);
+});
+function updateOgNote(){
+  const el=document.getElementById('ogfmt-note'); if(!el) return;
+  const F=FORMATS[state.format]||FORMATS.link, f=pickOgFormat(), auto=state.ogFormat==='auto';
+  el.innerHTML=`${F.w}×${F.h} px · `+(auto
+    ? `auto → <b>${f.toUpperCase()}</b> (${f==='jpeg'?'fotka / gradient':'grafika / text / plné plochy'})`
+    : `ručně <b>${f.toUpperCase()}</b>`);
+}
+document.getElementById('dlog').onclick=async()=>{
+  const btn=document.getElementById('dlog'); btn.disabled=true;
   try{
     toast('Preparing fonts…');
-    const fmt=FORMATS[state.format]||FORMATS.link;
-    const svg=buildSVG(state,false).replace(/(<svg[^>]*>)/,'$1'+await fontStyleTag());
-    const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
-    await new Promise((resolve,reject)=>{
-      const img=new Image();
-      img.onload=()=>{
-        const cv=document.createElement('canvas');cv.width=fmt.w;cv.height=fmt.h;
-        cv.getContext('2d').drawImage(img,0,0,fmt.w,fmt.h);
-        URL.revokeObjectURL(url);
-        cv.toBlob(b=>{saveBlob(b,fileBase()+'.png');toast('PNG downloaded');resolve();},'image/png');
-      };
-      img.onerror=()=>{URL.revokeObjectURL(url);reject();};
-      img.src=url;
-    });
+    const f=pickOgFormat(), mime=f==='jpeg'?'image/jpeg':'image/png';
+    const blob=await exportRaster(mime, f==='jpeg'?0.92:undefined);
+    saveBlob(blob, fileBase()+'-og.'+(f==='jpeg'?'jpg':'png'));
+    toast(`OG image · ${f.toUpperCase()} · ${(blob.size/1024).toFixed(0)} kB`);
   }catch(e){
-    toast('PNG export failed – are you offline? (fonts load from Google Fonts)');
+    toast('Export failed – offline? (fonty se stahují z Google Fonts)');
   }finally{ btn.disabled=false; }
 };
 
