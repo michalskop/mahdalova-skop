@@ -155,8 +155,8 @@
       </div>
     </div>
     <div id="stagebar">
-      <span class="hint" id="hint">1200 × 630 px · klikni na objekt a uprav ho</span>
-      <button class="ghost" id="undo">↶ zpět</button>
+      <span class="hint" id="hint">1200 × 630 px · click an object to edit it</span>
+      <button class="ghost" id="undo">↶ undo</button>
       <button class="ghost" id="bgToggle">dark background</button>
       <button class="ghost" id="autolayout">auto-layout</button>
     </div>
@@ -165,54 +165,55 @@
   <div id="panel">
     <div class="ps">
       <h1>Poster editor</h1>
-      <div class="subttl">Klikni na objekt v náhledu → uprav ho vpravo. Táhni myší, rohy/strany mění velikost.</div>
+      <div class="subttl">Click an object in the preview → edit it on the right. Drag to move; corners/sides resize. Double-click a text to edit it on the canvas.</div>
     </div>
 
-    <!-- OBSAH -->
+    <!-- CONTENT -->
     <div class="ps">
-      <div class="plbl">Obsah</div>
+      <div class="plbl">Content</div>
       <div class="fld"><label>Kicker</label><input type="text" id="f-kicker" maxlength="70"></div>
-      <div class="fld"><label>Headline</label><input type="text" id="f-headline" maxlength="20" placeholder="1,28"></div>
-      <div class="fld"><label>Subtitle</label><input type="text" id="f-subtitle" maxlength="48" placeholder="dítěte na ženu"></div>
-      <div class="fld"><label>Claim</label><textarea id="f-claim" rows="2" placeholder="Řádek 1&#10;Řádek 2"></textarea>
-        <div class="charhint">Enter = nový řádek</div></div>
+      <div class="fld"><label>Headline</label><input type="text" id="f-headline" maxlength="20" placeholder="1.28"></div>
+      <div class="fld"><label>Subtitle</label><input type="text" id="f-subtitle" maxlength="48" placeholder="subtitle / unit"></div>
+      <div class="fld"><label>Claim</label><textarea id="f-claim" rows="2" placeholder="Line 1&#10;Line 2"></textarea>
+        <div class="charhint">Enter = line break</div></div>
     </div>
 
-    <!-- PLÁTNO -->
+    <!-- CANVAS -->
     <div class="ps">
-      <div class="plbl">Formát</div>
+      <div class="plbl">Format</div>
       <div class="chips" id="formats"></div>
       <div class="segrow" id="bgchips" style="margin-top:8px"></div>
     </div>
 
     <div class="ps">
-      <div class="plbl">Kapitola / hlavní barva</div>
+      <div class="plbl">Chapter / accent colour</div>
       <div class="swgrid" id="accents"></div>
       <div class="swname" id="swname"></div>
+      <button class="minichip" id="usechapter" style="width:100%;margin-top:8px">Use this chapter in the kicker text</button>
       <div class="segrow" id="toplogo" style="margin-top:9px"></div>
-      <div class="note">15 kapitol = 15 barev z <code>DPBP_CHAPTERS</code> (výchozí, nemění se). Nastaví hlavní barvu a text kickeru.</div>
+      <div class="note">15 chapters = 15 colours from <code>DPBP_CHAPTERS</code>. Picking a chapter changes only the accent colour; the texts stay as you typed them.</div>
     </div>
 
-    <!-- OBRÁZEK / MOTIV (stálá sekce) -->
+    <!-- IMAGE / MOTIF (always visible) -->
     <div class="ps">
-      <div class="plbl">Obrázek / motiv</div>
-      <button class="btn btn-ghost" id="pick" type="button">Nahrát vlastní obrázek</button>
-      <button class="minichip" id="rmimg" type="button" hidden style="width:100%;margin-top:7px">Odebrat obrázek</button>
-      <div class="note">Nebo přetáhni soubor sem / vlož ze schránky (Ctrl+V). Po vložení klikni na obrázek v náhledu → zoom, posun, roztažení, rámeček.</div>
-      <div class="note" style="margin-top:7px">Bez obrázku se použije piktogram:</div>
+      <div class="plbl">Image / motif</div>
+      <button class="btn btn-ghost" id="pick" type="button">Upload image</button>
+      <button class="minichip" id="rmimg" type="button" hidden style="width:100%;margin-top:7px">Remove image</button>
+      <div class="note">Or drop a file here / paste (Ctrl+V). After inserting, click the image in the preview → zoom, pan, stretch, border.</div>
+      <div class="note" style="margin-top:7px">No image → a pictogram is used:</div>
       <div class="chips" id="motifs" style="grid-template-columns:repeat(4,1fr);margin-top:5px"></div>
     </div>
 
-    <!-- KONTEXTOVÝ PANEL VYBRANÉHO OBJEKTU -->
+    <!-- CONTEXTUAL PANEL FOR SELECTED OBJECT -->
     <div class="ps" id="ctx"></div>
 
     <div class="ps">
       <div class="plbl">Export</div>
       <div class="note" style="margin-top:0">
-        <b>OG image</b> – náhled pro sdílení odkazu (FB, WhatsApp, X, LinkedIn…). Web ho uvede
-        v <code>og:image</code> a síť si ho načte sama. Auto volí <b>JPEG</b> (fotka/gradient) nebo
-        <b>PNG</b> (grafika, text, plné plochy). Výchozí 1200×630 px.
-        <br><b>SVG (web)</b> jen pro vložení náhledu přímo do stránky, <b>ne</b> pro sítě.
+        <b>OG image</b> – the preview used when the article link is shared (FB, WhatsApp, X, LinkedIn…).
+        The site declares it in <code>og:image</code> and the network fetches it itself. Auto picks
+        <b>JPEG</b> (photo/gradient) or <b>PNG</b> (graphics, text, solid areas). Default 1200×630 px.
+        <br><b>SVG (web)</b> is only for embedding the preview directly in a web page, <b>not</b> for social networks.
       </div>
     </div>
 
@@ -246,6 +247,7 @@ const CHAPTERS = [
 ];
 const MOTIFS = [['fall','fall'],['riseFall','peak'],['cross','cross'],['bars','bars'],['gap','gap'],['dots','dots'],['heatgap','DE/ES']];
 const PALETTE_EXT = [
+  ['Paper (beige)',['#ffffff','#fdfbf7','#f8f6f0','#f3f1e9','#eeeae2','#e9e9dd','#e8e8dc','#d4d4c8','#c8c8bc','#bcbcb0']],
   ['Crimson',      ['#fff4f6','#ffb3c0','#ff8099','#ff4d70','#ff1a4a','#f01745','#de1743','#c5143c','#a81134','#8b0e2b']],
   ['Yellow',       ['#fffdf0','#fff7d9','#fff0b3','#ffe680','#ffdc33','#ffd519','#ffcf02','#efb704','#bd9103','#a47d03']],
   ['Orange',       ['#fff3e8','#ffe0c7','#ffc89f','#fda668','#ff934d','#ff7f2a','#f76800','#cc5f00','#994800','#663200']],
@@ -282,7 +284,7 @@ const state = {
     claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.'
   },
   font:{ kicker:'sans', headline:'serif', subtitle:'sans', claim:'serif' },
-  color:{ bg:null, kicker:null, headline:null, subtitle:null, claim:null, logo:null, brand:null, brand2:null },
+  color:{ bg:null, kicker:null, headline:null, subtitle:null, claim:null, claimBox:null, logo:null, brand:null, brand2:null },
   border:{ on:false, color:'#101432', width:8, radius:8 },
   img:{ zoom:1, panX:0, panY:0 },
   ov:{}    // ov[format][objName] = {dx,dy,sc,w}  (image: {dx,dy,dw,dh})
@@ -377,6 +379,7 @@ function wordmark(name, x, y, size, ink){
   const w=2*Rout+gap+measure(name+'.cz',fs,FF.sans,700);
   return {svg,w};
 }
+function wmWidth(name,size){ const Rout=size/2, gap=Rout*0.78, fs=Math.round(Rout*1.4634); return 2*Rout+gap+measure(name+'.cz',fs,FF.sans,700); }
 const SIL_PATH = "M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z";
 const SIL_T = "translate(-117.098299,796.836783) scale(0.100000,-0.100000)";
 const HEAD_DOTS = [
@@ -420,9 +423,9 @@ function autoLayout(){
     const claimSize=48;
     T.claim={x:M,y:470,size:claimSize,w:560,lhFactor:1.2,anchor:'start',color:cInk,halo:false};
     T.image={x:560,y:120,w:570,h:420};
-    T.logo={kind:state.topLogo,size:dtSize, x: state.topLogo==='datatimes'? RE-260 : RE-150, y:24};
-    T.brand={x:RE-260,y:545,size:41};
-    T.brand2={x:M,y:545,size:41};   // DataTimes.cz vlevo dole (jen v režimu hlava)
+    T.logo={kind:state.topLogo,size:dtSize, x: state.topLogo==='datatimes'? RE-wmWidth('DataTimes',dtSize) : RE-dtSize*2.4, y:24};
+    T.brand={x:RE-wmWidth('mahdalova-skop',41),y:545,size:41};
+    T.brand2={x:M,y:545,size:41};   // DataTimes.cz bottom-left (special-head mode only)
   } else {
     // svislý stack: kicker → headline → subtitle → claim → obrázek. Logo vpravo
     // nahoře, patičkové značky dole. Vše zarovnané k levému okraji, bez překryvů.
@@ -445,8 +448,8 @@ function autoLayout(){
     cy=Math.round(cy+claimSize*1.3*claimN);
     const imgTop=cy+34;
     T.image={x:M,y:imgTop,w:CW,h:Math.max(120,footY-40-imgTop)};
-    T.logo={kind:state.topLogo,size:dtSize, x: state.topLogo==='datatimes'? RE-260 : RE-logoBoxW, y:topY};
-    T.brand={x:RE-260,y:footY-30,size:44};
+    T.logo={kind:state.topLogo,size:dtSize, x: state.topLogo==='datatimes'? RE-wmWidth('DataTimes',dtSize) : RE-logoBoxW, y:topY};
+    T.brand={x:RE-wmWidth('mahdalova-skop',44),y:footY-30,size:44};
     T.brand2={x:M,y:footY-30,size:44};
   }
   T._M=M; T._RE=RE; T._W=W; T._H=H; T._cBg=cBg; T._cInk=cInk;
@@ -518,11 +521,12 @@ function buildSVG(s, standalone){
     ? `<style>@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&amp;family=IBM+Plex+Serif:wght@400;700&amp;display=swap');</style>` : '';
   // claim box (podklad pod tezí, jen s obrázkem)
   T.claim._box=(lines,size,lh)=>{
-    if(!state.image || state.boxMode==='none') return '';
+    if(state.boxMode==='none') return '';
+    if(!state.image && !state.color.claimBox) return '';   // auto: jen s obrázkem; s vlastní barvou vždy
     const fam=FF[state.font.claim]||FF.serif;
     const wmax=Math.max(...lines.map(l=>measure(l,size,fam,700))), padX=18,padY=12;
     const boxW=wmax+padX*2, boxH=(lines.length-1)*lh+size+padY*2;
-    return `<rect x="${(T.claim.x-padX).toFixed(1)}" y="${(T.claim.y-size*0.78-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${T._cBox}"/>`;
+    return `<rect x="${(T.claim.x-padX).toFixed(1)}" y="${(T.claim.y-size*0.78-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${state.color.claimBox||T._cBox}"/>`;
   };
   T.kicker._cBg=T._cBg; T.headline._cBg=T._cBg; T.subtitle._cBg=T._cBg; T.claim._cBg=T._cBg;
 
@@ -535,11 +539,15 @@ function buildSVG(s, standalone){
     + (state.topLogo==='special'?emitLogo('brand2',T.brand2):'')
     + emitLogo('brand',T.brand);
 
+  // Veškerý obsah se ořízne na plochu plátna → zvětšený obrázek nebo objekt posunutý
+  // za hranici se čistě uřízne u okraje. Horní barevná lišta je navrch (přetékající
+  // objekty se schovají pod ni).
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   ${fontImport}
+  <clipPath id="canvasClip"><rect x="0" y="0" width="${W}" height="${H}"/></clipPath>
   <rect width="${W}" height="${H}" fill="${T._cBg}"/>
+  <g clip-path="url(#canvasClip)">${inner}</g>
   <rect x="0" y="0" width="${W}" height="${barH}" fill="${state.accent}"/>
-  ${inner}
 </svg>`;
 }
 
@@ -577,14 +585,14 @@ Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('butt
   b.className='chip'+(key===state.format?' on':'');b.dataset.f=key;b.textContent=f.label;
   b.onclick=()=>{pushHistory();state.format=key;[...fWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.f===key));
     frame.classList.toggle('tall', f.h/f.w>1.1);
-    hintEl.textContent=`${f.w} × ${f.h} px · klikni na objekt a uprav ho`;
+    hintEl.textContent=`${f.w} × ${f.h} px · click an object to edit it`;
     selectObj(null); render();};
   fWrap.appendChild(b);});
 frame.classList.toggle('tall', FORMATS[state.format].h/FORMATS[state.format].w>1.1);
 
 // světlé/tmavé
 const bgWrap=document.getElementById('bgchips');
-[['light','Světlé pozadí'],['dark','Tmavé (ink)']].forEach(([v,label])=>{
+[['light','Light bg'],['dark','Dark (ink)']].forEach(([v,label])=>{
   const b=document.createElement('button');b.className='minichip'+((v==='dark')===state.dark?' on':'');b.dataset.v=v;b.textContent=label;
   b.onclick=()=>{pushHistory();setBg(v==='dark');}; bgWrap.appendChild(b);});
 function setBg(dark){
@@ -602,78 +610,99 @@ const swName=document.getElementById('swname');
 CHAPTERS.forEach(([id,hex,title])=>{
   const b=document.createElement('button');b.className='sw'+(id===state.chapter?' on':'');
   b.style.background=hex;b.dataset.id=id;b.textContent=id;b.title=`${id} · ${title} · ${hex}`;
-  b.onclick=()=>{pushHistory();state.chapter=id;state.accent=hex;
-    state.content.kicker=('DATA PRO BUDOUCÍ PREMIÉRKU · '+title).toUpperCase();
-    document.getElementById('f-kicker').value=state.content.kicker;
-    syncAcc();render();};
+  // Chapter swatch changes ONLY the accent colour, independently of the texts.
+  // Use the button below to also fill in the kicker text if you want it.
+  b.onclick=()=>{pushHistory();state.chapter=id;state.accent=hex;syncAcc();render();};
   aWrap.appendChild(b);});
 function syncAcc(){
   [...aWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.id===state.chapter));
   const ch=chapterOf(state.chapter);
   swName.innerHTML=`<b>${ch[0]} ${esc(ch[2])}</b> · <b style="color:${ch[1]}">${ch[1]}</b>`;
 }
+// optional helper: fill the kicker from the selected chapter (text stays otherwise free)
+document.getElementById('usechapter').onclick=()=>{
+  pushHistory(); const ch=chapterOf(state.chapter);
+  // poster content stays Czech (mahdalova-skop.cz); only the tool UI is English
+  state.content.kicker=('DATA PRO BUDOUCÍ PREMIÉRKU · '+ch[2]).toUpperCase();
+  document.getElementById('f-kicker').value=state.content.kicker; render();
+};
 
 // logo nahoře
 const tlWrap=document.getElementById('toplogo');
-[['special','Hlava speciálu'],['datatimes','DataTimes.cz']].forEach(([v,label])=>{
+[['special','Special head'],['datatimes','DataTimes.cz']].forEach(([v,label])=>{
   const b=document.createElement('button');b.className='minichip'+(v===state.topLogo?' on':'');b.dataset.v=v;b.textContent=label;
   b.onclick=()=>{pushHistory();state.topLogo=v;[...tlWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));selectObj(null);render();};
   tlWrap.appendChild(b);});
 
 // ------- KONTEXTOVÝ PANEL -------
-const OBJ_LABEL={background:'Pozadí',kicker:'Kicker',headline:'Headline',subtitle:'Subtitle',claim:'Claim',
-  image:'Obrázek / motiv',logo:'Logo (nahoře)',brand:'mahdalova-skop.cz',brand2:'DataTimes.cz (dole)'};
+const OBJ_LABEL={background:'Background',kicker:'Kicker',headline:'Headline',subtitle:'Subtitle',claim:'Claim',
+  image:'Image / motif',logo:'Logo (top)',brand:'mahdalova-skop.cz',brand2:'DataTimes.cz (bottom)'};
 const TEXTIDS=['kicker','headline','subtitle','claim'];
 function palHTML(){
   return '<div id="ctxpal">'+PALETTE_EXT.map(([fam,hx])=>'<div class="extrow">'+hx.map(h=>`<button class="extsw" data-hex="${h}" style="background:${h}" title="${fam} ${h}"></button>`).join('')+'</div>').join('')+'</div>';
 }
 function showCtx(){
   const ctx=document.getElementById('ctx');
-  if(!selected){ ctx.innerHTML='<div class="plbl">Vybraný objekt</div><div class="ctxhint">Klikni na libovolný objekt v náhledu (text, obrázek, logo nebo plochu pozadí) a tady se objeví jeho úpravy: barva z palety, font, velikost, posun…</div>'; return; }
-  const col = selected==='background'? (state.color.bg||'') : (state.color[selected]||'');
+  if(!selected){ ctx.innerHTML='<div class="plbl">Selected object</div><div class="ctxhint">Click any object in the preview (text, image, logo, or the background) and its controls appear here: colour from the palette, font, size, position… Double-click a text to edit it right on the canvas.</div>'; return; }
+  const col = selected==='background'? (state.color.bg||'') : (selected==='claim'&&claimAffects==='bg'? (state.color.claimBox||'') : (state.color[selected]||''));
   let h='<div class="ctxtitle"><span class="dotc" style="background:'+(col||'var(--red)')+'"></span>'+(OBJ_LABEL[selected]||selected)+'</div>';
   if(selected==='image'){
-    h+='<div class="segrow" style="margin-bottom:8px"><button class="minichip" id="c-pick">Nahrát obrázek</button>'
-      +(state.image?'<button class="minichip" id="c-rm">Odebrat</button>':'')+'</div>';
-    h+='<div class="ctxhint" style="margin-bottom:8px">Táhni = posun · rohy = velikost obou stran · strany = jen šířka/výška (roztažení) · kolečko myši = zoom.</div>';
+    h+='<div class="segrow" style="margin-bottom:8px"><button class="minichip" id="c-pick">Upload image</button>'
+      +(state.image?'<button class="minichip" id="c-rm">Remove</button>':'')+'</div>';
+    h+='<div class="ctxhint" style="margin-bottom:8px">Drag = move · corners = resize both sides · side handles = width/height only (stretch) · mouse wheel = zoom.</div>';
     if(state.image){
       h+='<div class="slrow"><label>Zoom</label><input type="range" id="c-zoom" min="0.3" max="3" step="0.02" value="'+state.img.zoom+'"><span class="val" id="c-zoom-v">'+state.img.zoom.toFixed(2)+'×</span></div>';
-      h+='<div class="slrow"><label>Posun ↔</label><input type="range" id="c-px" min="-1" max="1" step="0.01" value="'+state.img.panX+'"><span class="val">'+Math.round(state.img.panX*100)+'</span></div>';
-      h+='<div class="slrow"><label>Posun ↕</label><input type="range" id="c-py" min="-1" max="1" step="0.01" value="'+state.img.panY+'"><span class="val">'+Math.round(state.img.panY*100)+'</span></div>';
+      h+='<div class="slrow"><label>Pan ↔</label><input type="range" id="c-px" min="-1" max="1" step="0.01" value="'+state.img.panX+'"><span class="val">'+Math.round(state.img.panX*100)+'</span></div>';
+      h+='<div class="slrow"><label>Pan ↕</label><input type="range" id="c-py" min="-1" max="1" step="0.01" value="'+state.img.panY+'"><span class="val">'+Math.round(state.img.panY*100)+'</span></div>';
     }
-    h+='<div class="sub">Rámeček</div>';
-    h+='<label style="display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:6px"><input type="checkbox" id="c-bd"'+(state.border.on?' checked':'')+'> zapnout rámeček</label>';
-    h+='<div class="slrow"><label>Tloušťka</label><input type="range" id="c-bw" min="1" max="40" step="1" value="'+state.border.width+'"><span class="val">'+state.border.width+'</span></div>';
-    h+='<div class="slrow"><label>Zaoblení</label><input type="range" id="c-br" min="0" max="80" step="1" value="'+state.border.radius+'"><span class="val">'+state.border.radius+'</span></div>';
-    h+='<div class="sub">Barva rámečku (z palety)</div>'+palHTML();
+    h+='<div class="sub">Border</div>';
+    h+='<label style="display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:6px"><input type="checkbox" id="c-bd"'+(state.border.on?' checked':'')+'> show border</label>';
+    h+='<div class="slrow"><label>Width</label><input type="range" id="c-bw" min="1" max="40" step="1" value="'+state.border.width+'"><span class="val">'+state.border.width+'</span></div>';
+    h+='<div class="slrow"><label>Radius</label><input type="range" id="c-br" min="0" max="80" step="1" value="'+state.border.radius+'"><span class="val">'+state.border.radius+'</span></div>';
+    h+='<div class="sub">Border colour (from palette)</div>'+palHTML();
+  } else if(TEXTIDS.includes(selected)){
+    if(selected==='claim'){
+      h+='<div class="sub">Palette changes</div><div class="segrow" id="c-affects"><button class="minichip'+(claimAffects==='text'?' on':'')+'" data-v="text">Text colour</button><button class="minichip'+(claimAffects==='bg'?' on':'')+'" data-v="bg">Background</button></div>';
+    }
+    h+='<div class="sub">'+(selected==='claim'&&claimAffects==='bg'?'Background colour':'Text colour')+' (from palette)</div>'+palHTML();
+    h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto colour</button>';
+    h+='<div class="sub">Font</div><div class="segrow" id="c-font"><button class="minichip'+(state.font[selected]==='serif'?' on':'')+'" data-v="serif">Serif</button><button class="minichip'+(state.font[selected]==='sans'?' on':'')+'" data-v="sans">Sans</button></div>';
+    if(selected==='claim'){
+      h+='<div class="sub">Claim background</div><div class="segrow" id="c-box"><button class="minichip'+(state.boxMode==='auto'?' on':'')+'" data-v="auto">Auto</button><button class="minichip'+(state.boxMode==='none'?' on':'')+'" data-v="none">None</button></div>';
+    }
+    h+='<div class="ctxhint" style="margin-top:8px"><b>Double-click</b> to edit the text on the canvas. Drag = move · <b>side handle</b> = box width (text reflows to more/fewer lines) · <b>corner</b> = font size. Arrow keys nudge.</div>';
+  } else if(selected==='background'){
+    h+='<div class="sub">Background colour (from palette)</div>'+palHTML();
+    h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto (light / dark)</button>';
+    h+='<div class="ctxhint" style="margin-top:8px">Sets the whole background colour. “auto” returns to the light/dark preset.</div>';
   } else {
-    h+='<div class="sub">Barva '+(selected==='background'?'pozadí':'')+'(z palety)</div>'+palHTML();
-    h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto barva</button>';
-    if(TEXTIDS.includes(selected)){
-      h+='<div class="sub">Font</div><div class="segrow" id="c-font"><button class="minichip'+(state.font[selected]==='serif'?' on':'')+'" data-v="serif">Serif</button><button class="minichip'+(state.font[selected]==='sans'?' on':'')+'" data-v="sans">Sans</button></div>';
-      if(selected==='claim'){
-        h+='<div class="sub">Podklad pod claimem</div><div class="segrow" id="c-box"><button class="minichip'+(state.boxMode==='auto'?' on':'')+'" data-v="auto">Auto</button><button class="minichip'+(state.boxMode==='none'?' on':'')+'" data-v="none">Bez</button></div>';
-      }
-      h+='<div class="ctxhint" style="margin-top:8px">Na plátně: táhni = posun · <b>boční úchyt</b> = šířka boxu (přeteče na víc/míň řádků) · <b>roh</b> = velikost písma. Šipky = jemný posun.</div>';
-    } else if(selected==='background'){
-      h+='<div class="ctxhint" style="margin-top:8px">Nastaví barvu celého pozadí. „auto barva" se vrátí ke světlému/tmavému režimu.</div>';
-    } else {
-      h+='<div class="ctxhint" style="margin-top:8px">Logo lze táhnout myší a rohy zvětšit. Barva mění text/siluetu loga.</div>';
-    }
+    h+='<div class="sub">Logo colour (from palette)</div>'+palHTML();
+    h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto colour</button>';
+    h+='<div class="ctxhint" style="margin-top:8px">Drag the logo to move it, corners to resize. Colour changes the wordmark / silhouette.</div>';
   }
-  ctx.innerHTML='<div class="plbl">Vybraný objekt</div>'+h;
+  ctx.innerHTML='<div class="plbl">Selected object</div>'+h;
   wireCtx();
 }
 function wireCtx(){
   const ctx=document.getElementById('ctx');
+  const curColor = selected==='image' ? (state.color.border||state.border.color)
+    : selected==='background' ? state.color.bg
+    : (selected==='claim'&&claimAffects==='bg') ? state.color.claimBox
+    : state.color[selected];
   ctx.querySelectorAll('.extsw').forEach(b=>{
-    if(b.dataset.hex===(selected==='image'?(state.color.border||state.border.color):(state.color[selected]||state.color.bg))) b.classList.add('on');
+    if(b.dataset.hex===curColor) b.classList.add('on');
     b.onclick=()=>applyColor(b.dataset.hex);
   });
+  const aff=ctx.querySelector('#c-affects'); if(aff) aff.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
+    claimAffects=b.dataset.v; showCtx();});
   const pick=ctx.querySelector('#c-pick'); if(pick) pick.onclick=()=>fileInput.click();
   const rm=ctx.querySelector('#c-rm'); if(rm) rm.onclick=clearImage;
   const auto=ctx.querySelector('#c-auto'); if(auto) auto.onclick=()=>{
-    pushHistory(); if(selected==='background') state.color.bg=null; else state.color[selected]=null; render(); showCtx();
+    pushHistory();
+    if(selected==='claim'&&claimAffects==='bg') state.color.claimBox=null;
+    else if(selected==='background') state.color.bg=null;
+    else state.color[selected]=null;
+    render(); showCtx();
   };
   const z=ctx.querySelector('#c-zoom'); if(z) z.oninput=()=>{state.img.zoom=parseFloat(z.value);ctx.querySelector('#c-zoom-v').textContent=state.img.zoom.toFixed(2)+'×';render();};
   const px=ctx.querySelector('#c-px'); if(px) px.oninput=()=>{state.img.panX=parseFloat(px.value);render();};
@@ -688,7 +717,8 @@ function wireCtx(){
 }
 function applyColor(hex){
   pushHistory();
-  if(selected==='background') state.color.bg=hex;
+  if(selected==='claim' && claimAffects==='bg'){ state.color.claimBox=hex; if(state.boxMode==='none') state.boxMode='auto'; }
+  else if(selected==='background') state.color.bg=hex;
   else if(selected==='image'){ state.border.on=true; state.color.border=hex; }
   else state.color[selected]=hex;
   render(); showCtx();
@@ -697,8 +727,8 @@ function applyColor(hex){
 // ------- upload obrázku -------
 const fileInput=document.createElement('input'); fileInput.type='file'; fileInput.accept='image/*'; fileInput.hidden=true; document.body.appendChild(fileInput);
 function readImageFile(file){
-  if(!file||!file.type.startsWith('image/')){toast('To není obrázek');return;}
-  const r=new FileReader(); r.onload=()=>{pushHistory();state.image=r.result;render();selectObj('image');toast('Obrázek vložen');}; r.readAsDataURL(file);
+  if(!file||!file.type.startsWith('image/')){toast('Not an image');return;}
+  const r=new FileReader(); r.onload=()=>{pushHistory();state.image=r.result;render();selectObj('image');toast('Image inserted');}; r.readAsDataURL(file);
 }
 fileInput.onchange=()=>readImageFile(fileInput.files[0]);
 function clearImage(){ state.image=null; state.img={zoom:1,panX:0,panY:0}; Object.values(state.ov).forEach(f=>{if(f.image)delete f.image;}); render(); showCtx(); }
@@ -715,7 +745,7 @@ MOTIFS.forEach(([v,label])=>{const b=document.createElement('button');b.classNam
   b.onclick=()=>{pushHistory();state.motif=v;[...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};mWrap.appendChild(b);});
 
 // ------- INTERAKCE: výběr, tažení + snap, úchyty -------
-let selected=null;
+let selected=null, claimAffects='text';
 const selbox=document.getElementById('selbox');
 const guideV=document.getElementById('guideV'), guideH=document.getElementById('guideH');
 function svgEl(){ return frame.querySelector('svg'); }
@@ -739,7 +769,7 @@ function refreshSel(){
   else if(t==='logo'){/* jen rohy */}
   selbox.querySelectorAll('.hdl').forEach(hd=>{hd.style.display=show[hd.dataset.h]?'block':'none';});
 }
-function selectObj(name){ selected=name; refreshSel(); showCtx(); }
+function selectObj(name){ if(name!=='claim') claimAffects='text'; selected=name; refreshSel(); showCtx(); }
 
 // snap cíle
 function localBoxes(){
@@ -757,9 +787,12 @@ frame.addEventListener('pointerdown',e=>{
   if(objType(name)==='bg') return;
   const k=svgScale(), cur=ovGet(name);
   const boxes=localBoxes(); const me=boxes[name];
+  // canvas: levý/pravý okraj, střed, horní/dolní okraj, vertikální střed
   const targetsX=[T_M(), T_W()/2, T_W()-T_M()], targetsY=[T_M(), T_H()/2, T_H()-T_M()];
-  for(const id in boxes){ if(id===name)continue; const b=boxes[id];
-    targetsX.push(b.x,b.x+b.w/2,b.x+b.w); targetsY.push(b.y,b.y+b.h/2,b.y+b.h); }
+  // ostatní objekty: hrany + středy, VČETNĚ jejich ručního posunu (o.dx/o.dy)
+  for(const id in boxes){ if(id===name)continue; const b=boxes[id], oo=ovGet(id), ox=oo.dx||0, oy=oo.dy||0;
+    targetsX.push(b.x+ox, b.x+b.w/2+ox, b.x+b.w+ox);
+    targetsY.push(b.y+oy, b.y+b.h/2+oy, b.y+b.h+oy); }
   drag={name,g,sx:e.clientX,sy:e.clientY,k,dx0:cur.dx||0,dy0:cur.dy||0,me,targetsX,targetsY};
   g.classList.add('dragging'); g.setPointerCapture(e.pointerId); e.preventDefault();
 });
@@ -836,6 +869,34 @@ window.addEventListener('pointermove',e=>{
 });
 window.addEventListener('pointerup',()=>{ if(hdrag) hdrag=null; });
 
+// editace textu přímo na plátně (dvojklik)
+let editEl=null;
+function openEditor(id){
+  if(!TEXTIDS.includes(id)) return;
+  closeEditor(); pushHistory();
+  const g=svgEl().querySelector(`.dobj[data-obj="${id}"]`); if(!g) return;
+  const bb=g.getBoundingClientRect(), st=stageRect();
+  editEl=document.createElement('textarea'); editEl.id='canvasEdit'; editEl.value=state.content[id];
+  Object.assign(editEl.style,{position:'absolute',left:(bb.left-st.left)+'px',top:(bb.top-st.top)+'px',
+    width:Math.max(140,bb.width)+'px',height:Math.max(32,bb.height+6)+'px',zIndex:12,
+    fontFamily:(state.font[id]==='serif'?"'IBM Plex Serif',serif":"'IBM Plex Sans',sans-serif"),
+    fontSize:'15px',fontWeight:'600',lineHeight:'1.25',padding:'4px 6px',border:'2px solid var(--red)',
+    borderRadius:'4px',background:'#fff',color:'#101432',resize:'none',boxShadow:'0 4px 16px rgba(16,20,50,.25)'});
+  document.getElementById('stage').appendChild(editEl);
+  editEl.focus(); editEl.select();
+  editEl.addEventListener('input',()=>{ state.content[id]=editEl.value;
+    const f=document.getElementById('f-'+id); if(f) f.value=editEl.value; render(); reposEditor(id); });
+  editEl.addEventListener('keydown',ev=>{ ev.stopPropagation();
+    if(ev.key==='Escape'){closeEditor();}
+    else if(ev.key==='Enter'&&!ev.shiftKey&&id!=='claim'){ev.preventDefault();closeEditor();} });
+  editEl.addEventListener('blur',()=>closeEditor());
+}
+function reposEditor(id){ if(!editEl)return; const g=svgEl().querySelector(`.dobj[data-obj="${id}"]`); if(!g)return;
+  const bb=g.getBoundingClientRect(), st=stageRect(); editEl.style.left=(bb.left-st.left)+'px'; editEl.style.top=(bb.top-st.top)+'px'; }
+function closeEditor(){ const el=editEl; editEl=null; if(el){ try{ el.remove(); }catch(e){} } }
+frame.addEventListener('dblclick',e=>{ const g=e.target.closest('.dobj');
+  if(g&&TEXTIDS.includes(g.dataset.obj)){ selectObj(g.dataset.obj); openEditor(g.dataset.obj); } });
+
 // kolečko myši = zoom obrázku
 frame.addEventListener('wheel',e=>{
   const g=e.target.closest('.dobj[data-obj="image"]'); if(!g||!state.image) return;
@@ -855,10 +916,10 @@ window.addEventListener('keydown',e=>{
 });
 window.addEventListener('resize',refreshSel);
 document.getElementById('panel').addEventListener('scroll',refreshSel,true);
-document.getElementById('autolayout').onclick=()=>{ pushHistory(); delete state.ov[state.format]; state.img={zoom:1,panX:0,panY:0}; selectObj(null); render(); toast('Auto-layout obnoven (tento formát)'); };
+document.getElementById('autolayout').onclick=()=>{ pushHistory(); delete state.ov[state.format]; state.img={zoom:1,panX:0,panY:0}; selectObj(null); render(); toast('Auto-layout restored (this format)'); };
 // klik mimo objekt (kolem plátna) = odznačit; úchyty (#selbox) a plátno neruší
 document.getElementById('stage').addEventListener('pointerdown',e=>{
-  if(!e.target.closest('#frame') && !e.target.closest('#selbox')) selectObj(null);
+  if(!e.target.closest('#frame') && !e.target.closest('#selbox') && !e.target.closest('#canvasEdit')) selectObj(null);
 });
 
 // ------- UNDO (historie po krocích) -------
@@ -868,7 +929,7 @@ function snapshot(){ return JSON.stringify({format:state.format,dark:state.dark,
   content:state.content,font:state.font,color:state.color,border:state.border,img:state.img,ov:state.ov}); }
 function pushHistory(){ history.push(snapshot()); if(history.length>30) history.shift(); }
 function applySnap(js){ Object.assign(state, JSON.parse(js)); syncUI(); selectObj(null); render(); }
-function undo(){ if(!history.length){ toast('Není co vrátit'); return; } applySnap(history.pop()); toast('Vráceno o krok zpět'); }
+function undo(){ if(!history.length){ toast('Nothing to undo'); return; } applySnap(history.pop()); toast('Undone one step'); }
 document.getElementById('undo').onclick=undo;
 function syncUI(){
   document.getElementById('f-kicker').value=state.content.kicker;
@@ -921,14 +982,14 @@ const ogWrap=document.getElementById('ogfmt');
   b.className='minichip'+(state.ogFormat===v?' on':'');b.textContent=label;b.dataset.v=v;
   b.onclick=()=>{state.ogFormat=v;[...ogWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));updateOgNote();};ogWrap.appendChild(b);});
 function updateOgNote(){const el=document.getElementById('ogfmt-note');if(!el)return;const F=FORMATS[state.format],f=pickOgFormat(),auto=state.ogFormat==='auto';
-  el.innerHTML=`${F.w}×${F.h} px · `+(auto?`auto → <b>${f.toUpperCase()}</b> (${f==='jpeg'?'fotka / gradient':'grafika / text'})`:`ručně <b>${f.toUpperCase()}</b>`);}
+  el.innerHTML=`${F.w}×${F.h} px · `+(auto?`auto → <b>${f.toUpperCase()}</b> (${f==='jpeg'?'photo / gradient':'graphics / text'})`:`manual <b>${f.toUpperCase()}</b>`);}
 document.getElementById('dlog').onclick=async()=>{const btn=document.getElementById('dlog');btn.disabled=true;
-  try{toast('Připravuji fonty…');const f=pickOgFormat(),mime=f==='jpeg'?'image/jpeg':'image/png';
+  try{toast('Preparing fonts…');const f=pickOgFormat(),mime=f==='jpeg'?'image/jpeg':'image/png';
     const blob=await exportRaster(mime,f==='jpeg'?0.92:undefined);saveBlob(blob,fileBase()+'-og.'+(f==='jpeg'?'jpg':'png'));
     toast(`OG image · ${f.toUpperCase()} · ${(blob.size/1024).toFixed(0)} kB`);}
-  catch(e){toast('Export selhal – jsi offline? (fonty z Google Fonts)');}finally{btn.disabled=false;}};
+  catch(e){toast('Export failed – are you offline? (fonts from Google Fonts)');}finally{btn.disabled=false;}};
 document.getElementById('dlsvg').onclick=()=>{const svg=buildSVG(state,true);saveBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}),fileBase()+'.svg');toast(`SVG · ${(new Blob([svg]).size/1024).toFixed(1)} kB`);};
-document.getElementById('dltool').onclick=()=>{selectObj(null);const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;saveBlob(new Blob([html],{type:'text/html'}),'poster-editor.html');toast('Nástroj stažen – otevři dvojklikem');};
+document.getElementById('dltool').onclick=()=>{selectObj(null);const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;saveBlob(new Blob([html],{type:'text/html'}),'poster-editor.html');toast('Tool downloaded – open by double-click');};
 
 syncAcc(); showCtx(); render();
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(render);
