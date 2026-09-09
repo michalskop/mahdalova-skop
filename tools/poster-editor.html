@@ -4,7 +4,7 @@
 <title>Poster editor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#101432; --red:#de1743; --orange:#f76800; --yellow:#ffcf02;
@@ -12,13 +12,13 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
-  body{font-family:'Roboto Condensed',Arial,sans-serif;background:var(--bg);color:var(--navy);overflow:hidden;
+  body{font-family:'IBM Plex Sans','Roboto Condensed',Arial,sans-serif;background:var(--bg);color:var(--navy);overflow:hidden;
     display:flex;flex-direction:column;}
 
   /* ---- MODE BAR ---- */
   #modebar{flex:none;display:flex;align-items:center;gap:4px;padding:8px 14px;
     background:var(--navy);border-bottom:1px solid #000;}
-  #modebar .brand{font-family:'Roboto Slab',Georgia,serif;color:#fff;font-size:13px;font-weight:700;margin-right:14px;}
+  #modebar .brand{font-family:'IBM Plex Serif','Roboto Slab',Georgia,serif;color:#fff;font-size:13px;font-weight:700;margin-right:14px;}
   #modebar .brand span{color:var(--yellow);}
   .tab{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#fff;
     border-radius:20px;padding:5px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;}
@@ -28,17 +28,31 @@
   #content{flex:1;min-height:0;position:relative;}
   .view{display:none;height:100%;}
   .view.on{display:block;}
-  #app{display:grid;grid-template-columns:1fr 340px;height:100%;}
+  #app{display:grid;grid-template-columns:1fr 350px;height:100%;}
 
   /* ---- PREVIEW ---- */
-  #stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;background:var(--bg);transition:background .3s;}
+  #stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;background:var(--bg);transition:background .3s;}
   #stage.dark{background:var(--navy);}
-  #frame{width:100%;max-width:860px;box-shadow:0 10px 40px rgba(16,20,50,.18);border-radius:8px;overflow:hidden;background:#fff;}
-  #frame svg{display:block;width:100%;height:auto;}
+  #frame{position:relative;width:100%;max-width:860px;box-shadow:0 10px 40px rgba(16,20,50,.18);border-radius:8px;overflow:hidden;background:#fff;}
+  #frame svg{display:block;width:100%;height:auto;touch-action:none;}
   /* vysoké formáty (čtverec/výška/story) omez výškou, ať se vejdou do náhledu */
   #frame.tall{width:auto;max-width:none;}
-  #frame.tall svg{width:auto;height:min(70vh,640px);max-width:100%;}
-  #stagebar{display:flex;gap:10px;align-items:center;}
+  #frame.tall svg{width:auto;height:min(66vh,620px);max-width:100%;}
+  .dobj{cursor:grab;}
+  .dobj.dragging{cursor:grabbing;}
+  /* overlay s výběrem/úchyty – kreslí se v souřadnicích #frame */
+  #ovl{position:absolute;inset:0;pointer-events:none;z-index:5;}
+  #selbox{position:absolute;border:1.5px solid var(--red);border-radius:3px;pointer-events:none;
+    box-shadow:0 0 0 1px rgba(255,255,255,.6);display:none;}
+  #selbox .hdl{position:absolute;width:14px;height:14px;background:#fff;border:2px solid var(--red);border-radius:50%;
+    pointer-events:auto;transform:translate(-50%,-50%);}
+  #selbox .hdl.nw{left:0;top:0;cursor:nwse-resize;}
+  #selbox .hdl.ne{left:100%;top:0;cursor:nesw-resize;}
+  #selbox .hdl.sw{left:0;top:100%;cursor:nesw-resize;}
+  #selbox .hdl.se{left:100%;top:100%;cursor:nwse-resize;}
+  #selbox .tag{position:absolute;left:0;top:-22px;background:var(--red);color:#fff;font-size:9.5px;font-weight:700;
+    letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:10px;white-space:nowrap;font-family:'IBM Plex Sans',sans-serif;}
+  #stagebar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center;}
   #stagebar .hint{font-size:12px;color:var(--muted);}
   #stage.dark #stagebar .hint{color:rgba(255,255,255,.6);}
   .ghost{background:transparent;border:1.5px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);font-family:inherit;}
@@ -57,6 +71,7 @@
     border:1.5px solid var(--border);border-radius:4px;padding:6px 8px;background:#fff;resize:none;}
   input[type=text]:focus,textarea:focus,select:focus{outline:none;border-color:var(--red);}
   textarea{line-height:1.35;}
+  input[type=range]{width:100%;accent-color:var(--red);}
   .charhint{font-size:10px;color:#aaa;margin-top:2px;text-align:right;}
   .note{font-size:10.5px;color:#888;line-height:1.4;margin-top:7px;}
 
@@ -65,8 +80,8 @@
   .chip{border:1.5px solid var(--border);border-radius:5px;padding:6px 3px;font-size:10.5px;font-weight:600;
     cursor:pointer;background:#fff;color:#555;text-align:center;font-family:inherit;}
   .chip.on{background:var(--red);color:#fff;border-color:var(--red);}
-  /* formáty: všechny 4 na jeden řádek */
-  #formats{grid-template-columns:repeat(4,1fr);gap:4px;}
+  /* formáty: všechny na jeden řádek */
+  #formats{grid-template-columns:repeat(5,1fr);gap:4px;}
   #formats .chip{padding:6px 2px;font-size:9px;line-height:1.15;letter-spacing:-.01em;}
 
   /* upload obrázku */
@@ -75,7 +90,7 @@
   .drop.over{border-color:var(--red);background:#fdf2f4;}
   .drop .btn{width:auto;padding:7px 14px;display:inline-block;}
   .drophint{font-size:10.5px;color:#999;margin-top:7px;line-height:1.4;}
-  #thumb{max-width:100%;max-height:120px;border-radius:4px;display:block;margin:0 auto 8px;
+  #thumb{max-width:100%;max-height:110px;border-radius:4px;display:block;margin:0 auto 8px;
     border:1px solid var(--border);}
   .fitctl{display:flex;gap:10px;justify-content:center;margin-bottom:8px;}
   .fitgrp{display:flex;gap:3px;}
@@ -83,6 +98,9 @@
     font-weight:600;cursor:pointer;background:#fff;color:#666;font-family:inherit;}
   .minichip.on{background:var(--navy);color:#fff;border-color:var(--navy);}
   #pos-grp.off{opacity:.35;pointer-events:none;}
+  .slrow{display:grid;grid-template-columns:58px 1fr 42px;align-items:center;gap:8px;margin-bottom:6px;}
+  .slrow label{font-size:11px;color:var(--muted);margin:0;}
+  .slrow .val{font-size:10.5px;color:#999;text-align:right;font-variant-numeric:tabular-nums;}
 
   /* 15 chapter colours */
   .swgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
@@ -93,19 +111,19 @@
   .swname{font-size:11px;color:var(--muted);margin-top:8px;min-height:15px;}
   .swname b{color:var(--navy);}
 
-  /* rozšířená firemní paleta (pod paletou kapitol) */
+  /* rozšířená firemní paleta + rozklikávací sekce */
+  details.exp{margin-top:9px;border-top:1px dashed var(--border);padding-top:8px;}
+  details.exp>summary{cursor:pointer;font-size:11px;font-weight:600;color:var(--muted);list-style:none;
+    display:flex;align-items:center;gap:6px;user-select:none;}
+  details.exp>summary::-webkit-details-marker{display:none;}
+  details.exp>summary::before{content:'▸';color:var(--red);font-size:11px;transition:transform .15s;}
+  details.exp[open]>summary::before{transform:rotate(90deg);}
   .extlbl{font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#999;margin:7px 0 3px;}
   .extrow{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;}
   .extsw{height:22px;border-radius:3px;cursor:pointer;border:2px solid transparent;padding:0;}
   .extsw.on{border-color:var(--navy);outline:1.5px solid #fff;outline-offset:-3px;}
-
-  /* presets */
-  .presets{display:flex;flex-direction:column;gap:4px;}
-  .pre{display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:6px 8px;border-radius:4px;
-    border:1.5px solid var(--border);background:#fff;text-align:left;font-family:inherit;}
-  .pre:hover{border-color:var(--red);}
-  .pre b{font-family:'Roboto Slab',Georgia,serif;color:var(--red);font-size:13px;min-width:62px;}
-  .pre span{font-size:10.5px;color:#666;line-height:1.25;}
+  .picked{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);margin-top:6px;}
+  .picked .dot{width:16px;height:16px;border-radius:4px;border:1px solid var(--border);}
 
   /* footer buttons */
   #actions{position:sticky;bottom:0;background:var(--panel);border-top:1px solid var(--border);
@@ -118,33 +136,13 @@
   .btn-ghost:hover{border-color:var(--red);color:var(--red);}
   .btn-row{display:flex;gap:7px;}
   .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;
-    padding:9px 18px;border-radius:6px;font-size:12.5px;opacity:0;transition:opacity .25s;pointer-events:none;}
+    padding:9px 18px;border-radius:6px;font-size:12.5px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:20;}
   .toast.show{opacity:1;}
-  h1{font-family:'Roboto Slab',Georgia,serif;font-size:15px;font-weight:700;}
+  h1{font-family:'IBM Plex Serif','Roboto Slab',Georgia,serif;font-size:15px;font-weight:700;}
   .subttl{font-size:11px;color:var(--muted);margin-top:2px;}
   code{font-family:ui-monospace,Consolas,monospace;font-size:10px;background:#f2efe6;padding:0 3px;border-radius:2px;}
-
-  /* ---- PALETA ---- */
-  #view-paleta{overflow-y:auto;padding:30px 34px 60px;}
-  .pal-head{max-width:1100px;margin:0 auto 22px;}
-  .pal-head h2{font-family:'Roboto Slab',Georgia,serif;font-size:22px;font-weight:700;}
-  .pal-head p{font-size:13px;color:var(--muted);line-height:1.5;margin-top:6px;max-width:70ch;}
-  .pal-head code{font-size:11px;}
-  .palgrid{max-width:1100px;margin:0 auto;display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
-  .palcard{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;
-    display:flex;flex-direction:column;}
-  .palswatch{height:96px;display:flex;align-items:flex-start;justify-content:space-between;padding:10px 12px;
-    color:#fff;font-family:'Roboto Slab',Georgia,serif;font-weight:700;}
-  .palswatch .num{font-size:26px;line-height:1;}
-  .palcopy{background:rgba(255,255,255,.22);border:none;color:#fff;font-family:inherit;font-weight:700;
-    font-size:10.5px;padding:4px 9px;border-radius:14px;cursor:pointer;}
-  .palcopy:hover{background:rgba(255,255,255,.4);}
-  .palmeta{padding:9px 12px 11px;}
-  .palmeta .t{font-size:13.5px;font-weight:700;}
-  .palmeta .h{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:var(--muted);margin-top:2px;
-    cursor:pointer;}
-  .palmeta .h:hover{color:var(--red);}
+  .segrow{display:flex;gap:4px;}
+  .segrow .minichip{flex:1;text-align:center;}
 
   /* úzké okno – náhled nad panel místo vedle něj */
   @media (max-width:900px){
@@ -167,16 +165,26 @@
 <div id="app">
   <div id="stage">
     <div id="frame"></div>
+    <div id="ovl">
+      <div id="selbox">
+        <span class="tag"></span>
+        <span class="hdl nw" data-h="nw"></span>
+        <span class="hdl ne" data-h="ne"></span>
+        <span class="hdl sw" data-h="sw"></span>
+        <span class="hdl se" data-h="se"></span>
+      </div>
+    </div>
     <div id="stagebar">
-      <span class="hint" id="hint">Preview 1200 × 630 px · Roboto Slab + Roboto Condensed</span>
+      <span class="hint" id="hint">Preview 1200 × 630 px · IBM Plex Serif + Sans</span>
       <button class="ghost" id="bgToggle">dark background</button>
+      <button class="ghost" id="resetAll">reset layout</button>
     </div>
   </div>
 
   <div id="panel">
     <div class="ps">
       <h1>Poster editor</h1>
-      <div class="subttl">Jediný generátor náhledů webu · cover / og:image</div>
+      <div class="subttl">Vizuální editor náhledů · cover / og:image · <b>táhni objekty myší</b></div>
     </div>
 
     <div class="ps">
@@ -188,28 +196,35 @@
       <div class="plbl">Pozadí (background)</div>
       <div class="chips" id="bgchips" style="grid-template-columns:repeat(2,1fr)"></div>
       <div class="note">Tmavé = ink blue <code>#101432</code>; text a prvky se automaticky prohodí na světle béžové <code>#f8f6f0</code>.</div>
+      <details class="exp" id="bgcustom-wrap">
+        <summary>Vlastní barva pozadí</summary>
+        <div id="bgcustom" style="margin-top:6px"></div>
+        <div class="picked" id="bgpicked"></div>
+        <button class="minichip" id="bgauto" style="margin-top:6px">← zpět na auto (světlé/tmavé)</button>
+      </details>
     </div>
 
     <div class="ps">
-      <div class="plbl">Logo (nahoře)</div>
+      <div class="plbl">Logo (nahoře) · <span style="color:#999;text-transform:none;letter-spacing:0;font-weight:600">pak lze posunout myší</span></div>
       <div class="chips" id="toplogo" style="grid-template-columns:repeat(2,1fr)"></div>
-      <div class="note">DataTimes.cz = barevné kolečko + slovo. „Hlava speciálu“ = ProfileHead pro Data pro budoucí premiérku.</div>
+      <div class="note">DataTimes.cz = barevné kolečko + slovo. „Hlava speciálu“ = ProfileHead pro Data pro budoucí premiérku. Logo lze na plátně chytit a přesunout (např. do levého horního rohu).</div>
     </div>
 
     <div class="ps">
       <div class="plbl">Special / colour</div>
       <div class="swgrid" id="accents"></div>
       <div class="swname" id="swname"></div>
-      <div class="note">15 chapters = 15 colours from <code>DPBP_CHAPTERS</code>.
-        No other dominant colour is used and shades are not altered.</div>
-      <div class="plbl" style="margin-top:12px">Rozšířená paleta (DataTimes)</div>
-      <div id="extpal"></div>
-      <div class="note">Barvy kapitol výše se nemění – tohle je celá firemní paleta pro další použití.</div>
+      <div class="note">15 kapitol = 15 barev z <code>DPBP_CHAPTERS</code>. Barvy kapitol jsou výchozí a nemění se.</div>
+      <details class="exp">
+        <summary>Rozšířená paleta (DataTimes)</summary>
+        <div id="extpal" style="margin-top:6px"></div>
+      </details>
     </div>
 
     <div class="ps">
       <div class="plbl">Kicker (overline)</div>
       <div class="fld"><input type="text" id="f-kicker" maxlength="70"></div>
+      <div class="segrow" id="font-kicker"></div>
     </div>
 
     <div class="ps">
@@ -223,6 +238,7 @@
           <label>Unit / number subtitle</label>
           <input type="text" id="f-unit" maxlength="48" placeholder="children per woman">
         </div>
+        <div class="segrow" id="font-number"></div>
       </div>
     </div>
 
@@ -230,6 +246,14 @@
       <div class="plbl">Claim (2 lines)</div>
       <div class="fld"><textarea id="f-claim" rows="2" placeholder="Line one&#10;Line two"></textarea>
         <div class="charhint">Enter = line break</div></div>
+      <div class="segrow" id="font-claim"></div>
+      <details class="exp" id="boxcustom-wrap">
+        <summary>Pozadí za claimem (jen s obrázkem)</summary>
+        <div class="segrow" id="boxmode" style="margin:6px 0"></div>
+        <div id="boxcustom"></div>
+        <div class="picked" id="boxpicked"></div>
+        <div class="note">Výchozí: světlé = béžová, tmavé = tmavší modrá. Zde lze zvolit vlastní barvu plochy pod tezí, nebo ji úplně vypnout.</div>
+      </details>
     </div>
 
     <div class="ps">
@@ -253,7 +277,24 @@
               <button class="minichip" data-pos="bottom">Bottom</button>
             </div>
           </div>
-          <button class="btn btn-ghost" id="rmimg" type="button">Remove image</button>
+          <div class="slrow"><label>Zoom</label><input type="range" id="img-zoom" min="0.3" max="3" step="0.02" value="1"><span class="val" id="img-zoom-v">1.00×</span></div>
+          <div class="slrow"><label>Posun ↔</label><input type="range" id="img-px" min="-1" max="1" step="0.01" value="0"><span class="val" id="img-px-v">0</span></div>
+          <div class="slrow"><label>Posun ↕</label><input type="range" id="img-py" min="-1" max="1" step="0.01" value="0"><span class="val" id="img-py-v">0</span></div>
+          <div class="note" style="margin-top:2px">Na plátně: <b>táhni obrázek</b> = posun rámečku, <b>rohy</b> = roztažení/zúžení (i do čtverce), <b>kolečko myši</b> = zoom.</div>
+          <details class="exp" id="border-wrap">
+            <summary>Rámeček kolem obrázku</summary>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--navy);margin:8px 0">
+              <input type="checkbox" id="bd-on"> zapnout rámeček
+            </label>
+            <div id="bd-fields">
+              <div id="bd-pal" style="margin-bottom:6px"></div>
+              <div class="picked" id="bd-picked"></div>
+              <div class="slrow"><label>Tloušťka</label><input type="range" id="bd-w" min="1" max="40" step="1" value="8"><span class="val" id="bd-w-v">8</span></div>
+              <div class="slrow"><label>Zaoblení</label><input type="range" id="bd-r" min="0" max="60" step="1" value="8"><span class="val" id="bd-r-v">8</span></div>
+            </div>
+          </details>
+          <button class="btn btn-ghost" id="rmimg" type="button" style="margin-top:8px">Remove image</button>
+          <button class="minichip" id="img-reset" style="margin-top:6px;width:100%">Reset obrázku (zoom/posun/rámeček)</button>
         </div>
       </div>
       <div class="note" style="margin-top:8px">No image → the pictogram below is used instead:</div>
@@ -264,8 +305,8 @@
       <div class="plbl">Using the output</div>
       <div class="note" style="margin-top:0">
         <b>SVG</b> – thumbnails on the web. Embed it inline (<code>&lt;svg&gt;</code>
-        directly in the HTML) so it picks up Roboto Slab / Condensed that the site
-        already loads. As <code>&lt;img src="…svg"&gt;</code> the fonts fall back to Georgia/Arial.<br>
+        directly in the HTML) so it picks up IBM Plex Serif / Sans that the site
+        already loads.<br>
         <b>PNG</b> – og:image for social networks (they don't take SVG). Fonts are baked
         in, so it needs an internet connection.
       </div>
@@ -320,11 +361,20 @@ const state = {
   big:'1,28', unit:'dítěte na ženu',
   claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.',
   motif:'fall', accent:'#de1743', format:'link', image:null, dark:false,
-  imgFit:'fill', imgPos:'center', hideNumber:false, topLogo:'special'
+  imgFit:'fill', imgPos:'center', hideNumber:false, topLogo:'special',
+  // nové: fonty per prvek (výchozí = sans pro kicker, serif pro číslo/claim)
+  font:{ kicker:'sans', number:'serif', claim:'serif' },
+  // nové: vlastní barva pozadí (null = auto ze světlý/tmavý) + barva plochy za claimem
+  bgColor:null, boxColor:null,        // boxColor: null=auto, 'none'=vypnuto, jinak hex
+  // nové: rámeček kolem obrázku
+  border:{ on:false, color:'#101432', width:8, radius:8 },
+  // nové: transformace obrázku (společné pro všechny formáty)
+  img:{ zoom:1, panX:0, panY:0 },
+  // nové: ruční posun/škála objektů – KLÍČOVÁNO PODLE FORMÁTU (souřadnice se liší)
+  ov:{}   // ov[format][objName] = {dx,dy,sc}  |  image: {dx,dy,dw,dh}
 };
 
 // Rozšířená firemní paleta – kompletní scale z apps/web/app/providers/ThemeProvider.tsx.
-// Barvy kapitol (CHAPTERS) se tím NEMĚNÍ; tohle je doplněk pro další použití.
 const PALETTE_EXT = [
   ['Crimson',      ['#fff4f6','#ffb3c0','#ff8099','#ff4d70','#ff1a4a','#f01745','#de1743','#c5143c','#a81134','#8b0e2b']],
   ['Yellow',       ['#fffdf0','#fff7d9','#fff0b3','#ffe680','#ffdc33','#ffd519','#ffcf02','#efb704','#bd9103','#a47d03']],
@@ -342,11 +392,26 @@ const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-// Datový motiv v obdélníku (x0,y0,w,h). Tloušťky čar, značky i svislé polohy
-// se škálují podle velikosti rámečku, aby motiv vypadal dobře i na velkých
-// plochách (čtverec/story), ne jen v landscape 360×270.
+// ------- fonty -------
+// Primární rodina = IBM Plex; Roboto zůstává jen jako fallback pro starší cache.
+const FF = {
+  sans:  "'IBM Plex Sans', 'Roboto Condensed', Arial, sans-serif",
+  serif: "'IBM Plex Serif', 'Roboto Slab', Georgia, serif"
+};
+const ffOf = role => FF[state.font[role]] || FF.sans;
+
+// Změření šířky nápisu daným písmem (canvas). weight default 700.
+let _measureCtx;
+function measure(text, size, fam, weight){
+  if(!_measureCtx) _measureCtx = document.createElement('canvas').getContext('2d');
+  _measureCtx.font = `${weight||700} ${size}px ${fam}`;
+  return _measureCtx.measureText(text).width;
+}
+const measSans = (t,s)=>measure(t,s,FF.sans,700);   // brand/logo = vždy IBM Plex Sans
+
+// Datový motiv v obdélníku (x0,y0,w,h).
 function motifSvg(kind, accent, x0, y0, w, h, th){
-  th = th || { line:C.line, sec:C.ink };   // barvy dle režimu (světlý/tmavý)
+  th = th || { line:C.line, sec:C.ink };
   const kw=w/360, kh=h/270, k=Math.min(kw,kh);
   const sw=(8*k).toFixed(1), swThin=(7*k).toFixed(1), swBase=(3*k).toFixed(1), swGrid=(2*k).toFixed(1);
   const r=(12*k).toFixed(1);
@@ -367,10 +432,6 @@ function motifSvg(kind, accent, x0, y0, w, h, th){
     const ph=(44*kh).toFixed(1);
     art=`<rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.15)}" width="${(w*0.32).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${th.sec}" opacity="0.8"/><rect x="${(x0+20*kw).toFixed(1)}" y="${Y(0.67)}" width="${(w*0.8).toFixed(1)}" height="${ph}" rx="${(22*kh).toFixed(1)}" fill="${accent}"/>`;
   } else if(kind==='heatgap'){
-    // Reálná data: Německo vs. Španělsko, týdenní počet zemřelých, duben–červen 2026
-    // (HMD STMF). Sdílené měřítko obou zemí – schválně, ať je vidět, že Španělsko
-    // je skoro rovná čára, zatímco Německo v posledních týdnech prudce vyskočí.
-    // Vygenerováno nástrojem tools/chart-simplifier.html.
     const de=[[0.000,0.376],[0.083,0.367],[0.167,0.407],[0.250,0.389],[0.333,0.391],[0.417,0.425],[0.500,0.403],[0.583,0.414],[0.667,0.459],[0.750,0.465],[0.833,0.395],[0.917,0.120],[1.000,0.204]];
     const es=[[0.000,0.854],[0.083,0.861],[0.167,0.861],[0.250,0.887],[0.333,0.890],[0.417,0.889],[0.500,0.871],[0.583,0.856],[0.667,0.891],[0.750,0.900],[0.833,0.900],[0.917,0.868],[1.000,0.884]];
     const toPts=a=>a.map(([fx,fy])=>`${X(fx)},${Y(fy)}`).join(' ');
@@ -386,49 +447,49 @@ function motifSvg(kind, accent, x0, y0, w, h, th){
   return grid+base+art;
 }
 
-// Formáty pro sítě. Landscape = odkaz/og:image, který berou skoro všechny sítě
-// (FB, X, Bluesky, Threads, LinkedIn, Reddit, WhatsApp) i web. Ostatní jsou pro
-// nativní posty (Instagram feed, Stories/Reels).
-// Formats by use. Link = 1200×630 og:image, shared by www, FB, X, BSky,
-// LinkedIn, Threads, Reddit, WhatsApp (all link previews). Square = IG/FB feed,
-// Portrait = IG feed 4:5, IG story/reel = full-screen 9:16.
 const FORMATS = {
   link:     { w:1200, h:630,  label:'www·FB·X·BSky' },
   square:   { w:1080, h:1080, label:'Square' },
   portrait: { w:1080, h:1350, label:'Portrait' },
   igstory:  { w:1080, h:1920, label:'IG story/reel' },
 };
-const F_SLAB="'Roboto Slab', Georgia, serif";
-const F_COND="'Roboto Condensed', Arial, sans-serif";
 
-// standalone = SVG na disk (přibalí @import fontů, ~250 B navíc)
+// ------- override helpers -------
+function ovFmt(){ return state.ov[state.format] || (state.ov[state.format]={}); }
+function ovGet(name){ const f=state.ov[state.format]; return (f&&f[name])||{}; }
+function ovSet(name, patch){ const f=ovFmt(); f[name]=Object.assign({}, f[name], patch); }
+
+// standalone = SVG na disk (přibalí @import fontů)
 function buildSVG(s, standalone){
   const F=FORMATS[s.format]||FORMATS.link, W=F.w, H=F.h;
-  const ink=s.accent;               // barva kapitoly – linka, číslo, graf, logo
-  // barvy dle režimu: světlý = béžová plocha, tmavý = ink blue #101432
+  const ink=s.accent;
   const dark=s.dark;
-  // Tmavé pozadí = ink blue #101432, na něm se všechny prvky, které jsou na
-  // světlém tmavé, prohodí za světle béžové #f8f6f0 (kicker/jednotka tlumeně).
-  const cBg  = dark ? '#101432' : C.bg;
-  const cInk = dark ? C.bg      : C.ink;                 // hlavní text (teze) + patička + logo
-  const cMut = dark ? 'rgba(248,246,240,.72)' : C.muted; // kicker, jednotka
-  const cBox = dark ? '#20255a' : C.bg;                  // obdélník za tezí
+  const cBg  = s.bgColor || (dark ? '#101432' : C.bg);
+  const cInk = dark ? C.bg      : C.ink;
+  const cMut = dark ? 'rgba(248,246,240,.72)' : C.muted;
+  const cBoxAuto = dark ? '#20255a' : C.bg;
+  const cBox = s.boxColor || cBoxAuto;      // 'none' řešeno v claimBox()
   const mth  = { line: dark?'rgba(255,255,255,.16)':C.line,
-                 sec:  dark?'rgba(244,242,236,.72)':C.ink };  // barvy motivu
+                 sec:  dark?'rgba(244,242,236,.72)':C.ink };
+  const ffKick = ffOf('kicker'), ffNum = ffOf('number'), ffClaim = ffOf('claim');
   const fontImport = standalone
-    ? `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap');</style>`
+    ? `<style>@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&amp;family=IBM+Plex+Serif:wght@400;700&amp;display=swap');</style>`
     : '';
-  const M = Math.round(W*0.0583);   // okraj (70 pro 1200, 63 pro 1080)
+  const M = Math.round(W*0.0583);
   const barH = W>=1200 ? 14 : 16;
-  const RE = W-M;                    // pravý okraj obsahu
-  // logo posadíme tak, aby konec „vlasů" (obrys hlavy) lícoval s targetRight;
-  // barevné tečky pak smějí přesahovat dál doprava do prázdného okraje
+  const RE = W-M;
+
+  // Obal každého pohyblivého objektu: ruční posun (dx,dy) + škála (sc) kolem kotvy.
+  const objG=(name, ax, ay, body)=>{
+    const o=ovGet(name), dx=o.dx||0, dy=o.dy||0, sc=o.sc||1;
+    let t=`translate(${dx.toFixed(1)},${dy.toFixed(1)})`;
+    if(sc!==1) t+=` translate(${ax.toFixed(1)},${ay.toFixed(1)}) scale(${sc}) translate(${(-ax).toFixed(1)},${(-ay).toFixed(1)})`;
+    return `<g class="dobj" data-obj="${name}" transform="${t}">${body}</g>`;
+  };
+
   const logoAt=(targetRight,y,S)=>specialLogo(ink, targetRight - S*0.757, y, S);
 
-  // Šířka jednoho řádku kickeru (Roboto Condensed 700 + letter-spacing).
-  const kickLineW=(line,sz,ls)=>measureCond(line,sz)+Math.max(0,line.length-1)*ls;
-  // Rozdělení kickeru na 2 co nejvyváženější řádky. Dělí se jen v mezerách
-  // (odrážka „·" tak zůstane na konci prvního řádku); obsah se nemění.
+  const kickLineW=(line,sz,ls)=>measure(line,sz,ffKick,700)+Math.max(0,line.length-1)*ls;
   const kickSplit=(text)=>{
     const words=text.split(/\s+/); if(words.length<2) return [text];
     let best=1,bestMax=Infinity;
@@ -439,48 +500,51 @@ function buildSVG(s, standalone){
     }
     return [words.slice(0,best).join(' '),words.slice(best).join(' ')];
   };
-  // Kicker: nejdřív jeden řádek s auto-zmenšením; jakmile se nevejde do dostupné
-  // šířky (typicky vedle loga vpravo), radši se zalomí na 2 řádky a teprve pak se
-  // případně dál zmenší – takže do loga nevstupuje. Zarovnává se na SPODNÍ řádek
-  // (baseline = y), aby spodní hrana textu lícovala s baseline loga DataTimes.cz.
   const kicker=(x,y,maxW,anchor)=>{
     const LS0=6,SZ0=26;
-    // halo chrání text i nad piktogramem/grafem (nejen nad fotkou) – ve čtverci
-    // je vizuální plocha vždy full-bleed pod textem, takže hrozí střet vždy.
     const halo=s.format==='square'
       ? ` paint-order="stroke" stroke="${cBg}" stroke-width="10" stroke-linejoin="round"` : '';
-    const T=(line,yy,sz,ls)=>`<text x="${x}" y="${yy.toFixed(1)}" font-family="${F_COND}" font-size="${sz.toFixed(1)}" letter-spacing="${ls.toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}"${halo}>${esc(line)}</text>`;
+    const T=(line,yy,sz,ls)=>`<text x="${x}" y="${yy.toFixed(1)}" font-family="${ffKick}" font-size="${sz.toFixed(1)}" letter-spacing="${ls.toFixed(2)}" fill="${cMut}" font-weight="700" text-anchor="${anchor}"${halo}>${esc(line)}</text>`;
     const raw=kickLineW(s.kicker,SZ0,LS0);
-    if(raw<=maxW) return T(s.kicker,y,SZ0,LS0);            // vejde se na jeden řádek
+    if(raw<=maxW) return T(s.kicker,y,SZ0,LS0);
     const lines=kickSplit(s.kicker);
     if(lines.length<2){ const sc=maxW/raw; return T(s.kicker,y,SZ0*sc,LS0*sc); }
     const wmax=Math.max(...lines.map(l=>kickLineW(l,SZ0,LS0)));
     const sc=Math.min(1,maxW/wmax), sz=SZ0*sc, ls=LS0*sc, lh=Math.round(sz*1.22);
-    return T(lines[0],y-lh,sz,ls)+T(lines[1],y,sz,ls);     // spodní řádek na baseline y
+    return T(lines[0],y-lh,sz,ls)+T(lines[1],y,sz,ls);
   };
 
-  // Vizuální plocha: vlastní obrázek (obdélník imgRect) NEBO piktogram (motifRect).
-  // „Kouzlo" na libovolný poměr stran: Fill = vyplní plochu (ořeže přebytek podle
-  // zvolené svislé polohy), Fit = celý obrázek na podložce v barvě pozadí.
+  // Vizuální plocha: vlastní obrázek (rám imgRect + zoom/pan + rámeček) NEBO piktogram.
   const visual=(motifRect,imgRect)=>{
     if(s.image){
-      const [ix,iy,iw,ih]=imgRect, cid='vc'+(''+Math.random()).slice(2,8);
+      const o=ovGet('image');
+      let [ix,iy,iw,ih]=imgRect;
+      iw=Math.max(40, iw+(o.dw||0)); ih=Math.max(40, ih+(o.dh||0));   // roztažení rohy
+      const dx=o.dx||0, dy=o.dy||0;                                    // posun rámečku
+      const cid='vc'+(''+Math.random()).slice(2,8);
+      const rad=(s.border.on?s.border.radius:8);
       const par = s.imgFit==='fit' ? 'xMidYMid meet'
         : 'xMid'+({top:'YMin',center:'YMid',bottom:'YMax'}[s.imgPos]||'YMid')+' slice';
       const bg = s.imgFit==='fit'
-        ? `<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="8" fill="${cBg}"/>` : '';
-      return `<clipPath id="${cid}"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="8"/></clipPath>`
+        ? `<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="${rad}" fill="${cBg}"/>` : '';
+      // zoom + pan uvnitř rámečku (kolem středu), pak clip na rámeček
+      const cx=ix+iw/2, cy=iy+ih/2, z=s.img.zoom||1, px=(s.img.panX||0)*iw/2, py=(s.img.panY||0)*ih/2;
+      const itf=`translate(${(cx+px).toFixed(1)},${(cy+py).toFixed(1)}) scale(${z}) translate(${(-cx).toFixed(1)},${(-cy).toFixed(1)})`;
+      const border = s.border.on
+        ? `<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="${rad}" fill="none" stroke="${s.border.color}" stroke-width="${s.border.width}"/>` : '';
+      const body = `<clipPath id="${cid}"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="${rad}"/></clipPath>`
         + bg
-        + `<image href="${s.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="${par}" clip-path="url(#${cid})"/>`;
+        + `<g clip-path="url(#${cid})"><g transform="${itf}"><image href="${s.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="${par}"/></g></g>`
+        + border;
+      return `<g class="dobj" data-obj="image" data-frame="1" transform="translate(${dx.toFixed(1)},${dy.toFixed(1)})">${body}</g>`;
     }
     const [mx,my,mw2,mh2]=motifRect;
-    return motifSvg(s.motif,ink,mx,my,mw2,mh2,mth);
+    return objG('image', mx+mw2/2, my+mh2/2, motifSvg(s.motif,ink,mx,my,mw2,mh2,mth));
   };
-  // Béžový (v tmavém režimu ink) obdélník za tezí – jen když je pod ní obrázek,
-  // ať je čitelná i přes něj (smí ho překrýt).
+
   const claimBox=(anchorX,topY,lines,size,lh,anchor)=>{
-    if(!s.image) return '';
-    const wmax=Math.max(...lines.map(l=>measureSlab(l,size))), padX=18, padY=12;
+    if(!s.image || s.boxColor==='none') return '';
+    const wmax=Math.max(...lines.map(l=>measure(l,size,ffClaim,700))), padX=18, padY=12;
     const boxW=wmax+padX*2, boxH=(lines.length-1)*lh+size+padY*2;
     const bx=anchor==='middle'?anchorX-boxW/2:anchorX-padX;
     return `<rect x="${bx.toFixed(1)}" y="${(topY-size*0.72-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${cBox}"/>`;
@@ -488,87 +552,69 @@ function buildSVG(s, standalone){
 
   let inner;
   if(W/H >= 1.4){
-    // ---- LINK / LANDSCAPE: text vlevo, obrázek/piktogram vpravo ----
+    // ---- LINK / LANDSCAPE ----
     const hideNum = s.hideNumber;
     const bigSize=s.big.length>9?96:s.big.length>5?120:170;
     const claimLines=s.claim.split('\n');
     const imgRect=[400,120,730,420], imgBottom=imgRect[1]+imgRect[3];
-    // bez čísla/jednotky se piktogram/graf roztáhne, ať vyplní uvolněný prostor
     const visRect = hideNum ? [RE-490,130,490,368] : [RE-360,170,360,270];
-    // teze u obrázku má vlastní box na pozadí (claimBox), takže se s vizuálem
-    // nepere; bez obrázku sedí přímo ve sloupci textu a NESMÍ zajet pod piktogram/
-    // graf vpravo – auto-zmenšení na dostupnou šířku sloupce jako ve stackovaných
-    // formátech.
     const baseClaimSize = hideNum ? 64 : 48, baseClaimLH = hideNum ? 76 : 58;
     const claimColW = visRect[0]-M-30;
-    const claimSize = s.image ? baseClaimSize : Math.round(baseClaimSize*Math.min(1,claimColW/Math.max(1,...claimLines.map(l=>measureSlab(l,baseClaimSize)))));
+    const claimSize = s.image ? baseClaimSize : Math.round(baseClaimSize*Math.min(1,claimColW/Math.max(1,...claimLines.map(l=>measure(l,baseClaimSize,ffClaim,700)))));
     const claimLH = Math.round(claimSize*(baseClaimLH/baseClaimSize));
     const claimT=claimLines.map((l,i)=>`<tspan x="${M}" dy="${i===0?0:claimLH}">${esc(l)}</tspan>`).join('');
-    // s obrázkem: spodní okraj béžového boxu s tezí lícuje se spodkem obrázku
-    // (padY=12, 0.28 = descender dolní části textu); bez obrázku sedí pod číslem,
-    // bez čísla je vycentrovaná mezi kickerem a patičkou
     const claimTop = s.image
       ? imgBottom - ((claimLines.length-1)*claimLH + claimSize*0.28 + 12)
       : hideNum
         ? Math.round(325-(claimLines.length-1)*claimLH/2)
         : 160+bigSize+120;
-    // DataTimes.cz vpravo nahoře posadíme tak, aby SPODNÍ hrana slova lícovala
-    // s baseline kickeru (kickBase), NE podle kolečka. Levý okraj loga bere
-    // kicker jako mez, aby se do něj nezalomil / nevlezl.
     const kickBase=92, dtSize=60, dtRout=dtSize/2, dtFs=Math.round(dtRout*1.4634);
-    const dtY=kickBase-dtFs*0.34;                 // střed kolečka → text baseline = kickBase
-    const dtLeft=RE-measureCond('DataTimes.cz',dtFs)-dtRout*0.78-2*dtRout;
+    const dtY=kickBase-dtFs*0.34;
+    const dtLeft=RE-measSans('DataTimes.cz',dtFs)-dtRout*0.78-2*dtRout;
     const kickMaxW=s.topLogo==='datatimes'?Math.round(dtLeft-M-24):930;
-    inner = visual(visRect,imgRect)   // obrázek dole
-      + kicker(M,kickBase,kickMaxW,'start')
-      + (hideNum ? '' :
-          `<text x="${M}" y="${120+bigSize}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
-        + `<text x="${M}" y="${160+bigSize+34}" font-family="${F_COND}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`)
-      + claimBox(M,claimTop,claimLines,claimSize,claimLH,'start')
-      + `<text x="${M}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}">${claimT}</text>`
-      + (s.topLogo==='datatimes'
-          ? brandMark('DataTimes','right',dtY,M,RE,cInk,dtSize)  // DataTimes.cz vpravo nahoře, text na baseline kickeru
-          : logoAt(RE,24,140))                                   // hlava speciálu nad obrázkem
-      + (s.topLogo==='datatimes' ? '' : brandMark('DataTimes','left',566,M,RE,cInk))
-      + brandMark('mahdalova-skop','right',566,M,RE,cInk);
+    const numBody =
+        `<text x="${M}" y="${120+bigSize}" font-family="${ffNum}" font-size="${bigSize}" font-weight="700" fill="${ink}">${esc(s.big)}</text>`
+      + `<text x="${M}" y="${160+bigSize+34}" font-family="${FF.sans}" font-size="30" fill="${cMut}">${esc(s.unit)}</text>`;
+    const claimBody = claimBox(M,claimTop,claimLines,claimSize,claimLH,'start')
+      + `<text x="${M}" y="${claimTop}" font-family="${ffClaim}" font-size="${claimSize}" font-weight="700" fill="${cInk}">${claimT}</text>`;
+    const logoBody = s.topLogo==='datatimes'
+        ? brandMark('DataTimes','right',dtY,M,RE,cInk,dtSize)
+        : logoAt(RE,24,140);
+    inner = visual(visRect,imgRect)
+      + objG('kicker', M, kickBase, kicker(M,kickBase,kickMaxW,'start'))
+      + (hideNum ? '' : objG('number', M, 120+bigSize, numBody))
+      + objG('claim', M, claimTop, claimBody)
+      + objG('logo', s.topLogo==='datatimes'?RE:RE-70, s.topLogo==='datatimes'?dtY:94, logoBody)
+      + (s.topLogo==='datatimes' ? '' : objG('footerL', M, 566, brandMark('DataTimes','left',566,M,RE,cInk)))
+      + objG('footerR', RE, 566, brandMark('mahdalova-skop','right',566,M,RE,cInk));
   } else {
-    // ---- STACKED (Square / Portrait / Story): kompaktní hlavička, velký obrázek ----
-    // Řádek 1: kicker vlevo · logo-hlava vpravo. Řádek 2 (volitelně): velké číslo
-    // vlevo · teze vpravo. Bez čísla dostane teze celou šířku a graf pod ní
-    // vyplní uvolněný prostor. Vestavěný piktogram/graf je defaultně větší než
-    // dřív ve všech třech stackovaných formátech (viz mhFrac níže).
+    // ---- STACKED (Square / Portrait / Story) ----
     const hideNum = s.hideNumber;
     const cx=W/2, CW=W-2*M, vs=H/1080, footY=H-M-8;
     const claimLines=s.claim.split('\n');
-    // Řádek 1
     const S=Math.round(W*0.135), topY=Math.round(H*0.035);
     const kickBaseY=Math.round(topY+S*0.42+9);
     const headLeft=RE-Math.round(S*0.92);
     const square=s.format==='square';
-    // stejný důvod jako u kickeru: chránit text nad plnou vizuální plochou platí
-    // i pro vestavěný piktogram/graf, ne jen nahranou fotku.
     const halo=square
       ? ` paint-order="stroke" stroke="${cBg}" stroke-width="12" stroke-linejoin="round"` : '';
     const row2Top=topY+S+Math.round((square?10:30)*vs);
 
-    // sloupce: bez čísla teze přes celou šířku, s číslem jen v pravém sloupci
     const claimLX = hideNum ? M : Math.round(W*0.45);
     const claimColW = RE-claimLX;
 
     let bigSize=0, numY=0, unitY=0, row2Bot=row2Top;
     if(!hideNum){
       const leftColW=claimLX-M-24;
-      // Řádek 2 – číslo (auto-fit do levého sloupce) + jednotka
       const bs0=Math.round(Math.min(210,(s.big.length>9?110:s.big.length>5?150:190)*(0.85+0.15*vs)));
-      bigSize=Math.round(bs0*Math.min(1,leftColW/Math.max(1,measureSlab(s.big,bs0))));
+      bigSize=Math.round(bs0*Math.min(1,leftColW/Math.max(1,measure(s.big,bs0,ffNum,700))));
       numY=row2Top+Math.round(0.72*bigSize);
       unitY=numY+Math.round(0.2*bigSize+28);
       row2Bot=unitY+6;
     }
 
-    // teze – auto-fit na šířku sloupce; bez čísla větší písmo, hned pod řádkem 1
     const cs0=Math.round(W*(hideNum?0.066:0.046));
-    const claimSize=Math.round(cs0*Math.min(1,claimColW/Math.max(1,...claimLines.map(l=>measureSlab(l,cs0)))));
+    const claimSize=Math.round(cs0*Math.min(1,claimColW/Math.max(1,...claimLines.map(l=>measure(l,cs0,ffClaim,700)))));
     const claimLH=Math.round(claimSize*1.26);
     const claimTop = hideNum
       ? Math.round(row2Top+claimSize*0.85)
@@ -576,11 +622,6 @@ function buildSVG(s, standalone){
     const claimBot = hideNum ? claimTop+(claimLines.length-1)*claimLH+Math.round(claimSize*0.4) : row2Bot;
     const claimT=claimLines.map((l,i)=>`<tspan x="${claimLX}" dy="${i===0?0:claimLH}">${esc(l)}</tspan>`).join('');
 
-    // Řádek 3 – velká vizuální plocha
-    // Nahraná FOTKA smí ve čtverci jít full-bleed pod celou hlavičku (text nad
-    // ní chrání halo). Vestavěný piktogram/graf ale není pozadí – je to kresba,
-    // která by textu křižovala přes písmena i s halo pořád vypadala rozbitě –
-    // proto vždy sedí AŽ POD hlavičkou/tezí, stejně jako v portrait/story.
     const vTopImg=square?barH:claimBot+Math.round(34*vs);
     const vTopMotif=claimBot+Math.round(34*vs);
     const vBot=footY-Math.round(58*vs);
@@ -588,23 +629,25 @@ function buildSVG(s, standalone){
     const mhFrac = hideNum ? 0.52 : 0.40;
     const mh=Math.min(Math.round(H*mhFrac),vBot-vTopMotif), mw=Math.round(Math.min(CW*0.9,mh*1.5));
     const motifRect=[cx-mw/2,Math.round(vTopMotif+((vBot-vTopMotif)-mh)/2),mw,mh];
-    // DataTimes.cz vpravo v řádku 1: text na baseline kickeru (ne podle kolečka),
-    // kicker se zalomí/zmenší do zbylé šířky nalevo od loga.
     const dtSizeS=Math.round(S*0.42), dtRoutS=dtSizeS/2, dtFsS=Math.round(dtRoutS*1.4634);
     const dtYS=kickBaseY-dtFsS*0.34;
-    const dtLeftS=RE-measureCond('DataTimes.cz',dtFsS)-dtRoutS*0.78-2*dtRoutS;
+    const dtLeftS=RE-measSans('DataTimes.cz',dtFsS)-dtRoutS*0.78-2*dtRoutS;
     const kickMaxWS=s.topLogo==='datatimes'?Math.round(dtLeftS-M-16):(headLeft-M-16);
+    const numBody =
+        `<text x="${M}" y="${numY}" font-family="${ffNum}" font-size="${bigSize}" font-weight="700" fill="${ink}"${halo}>${esc(s.big)}</text>`
+      + `<text x="${M}" y="${unitY}" font-family="${FF.sans}" font-size="30" fill="${cMut}"${halo}>${esc(s.unit)}</text>`;
+    const claimBody = claimBox(claimLX,claimTop,claimLines,claimSize,claimLH, hideNum?'start':'start')
+      + `<text x="${claimLX}" y="${claimTop}" font-family="${ffClaim}" font-size="${claimSize}" font-weight="700" fill="${cInk}"${halo}>${claimT}</text>`;
+    const logoBody = s.topLogo==='datatimes'
+        ? brandMark('DataTimes','right',dtYS,M,RE,cInk,dtSizeS)
+        : logoAt(RE,topY,S);
     inner = visual(motifRect,imgRect)
-      + kicker(M,kickBaseY,kickMaxWS,'start')
-      + (s.topLogo==='datatimes'
-          ? brandMark('DataTimes','right',dtYS,M,RE,cInk,dtSizeS)
-          : logoAt(RE,topY,S))
-      + (hideNum ? '' :
-          `<text x="${M}" y="${numY}" font-family="${F_SLAB}" font-size="${bigSize}" font-weight="700" fill="${ink}"${halo}>${esc(s.big)}</text>`
-        + `<text x="${M}" y="${unitY}" font-family="${F_COND}" font-size="30" fill="${cMut}"${halo}>${esc(s.unit)}</text>`)
-      + `<text x="${claimLX}" y="${claimTop}" font-family="${F_SLAB}" font-size="${claimSize}" font-weight="700" fill="${cInk}"${halo}>${claimT}</text>`
-      + (s.topLogo==='datatimes' ? '' : brandMark('DataTimes','left',footY,M,RE,cInk))
-      + brandMark('mahdalova-skop','right',footY,M,RE,cInk);
+      + objG('kicker', M, kickBaseY, kicker(M,kickBaseY,kickMaxWS,'start'))
+      + objG('logo', s.topLogo==='datatimes'?RE:RE-S*0.46, s.topLogo==='datatimes'?dtYS:topY+S*0.46, logoBody)
+      + (hideNum ? '' : objG('number', M, numY, numBody))
+      + objG('claim', claimLX, claimTop, claimBody)
+      + (s.topLogo==='datatimes' ? '' : objG('footerL', M, footY, brandMark('DataTimes','left',footY,M,RE,cInk)))
+      + objG('footerR', RE, footY, brandMark('mahdalova-skop','right',footY,M,RE,cInk));
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
@@ -615,30 +658,12 @@ function buildSVG(s, standalone){
 </svg>`;
 }
 
-// Změření šířky nápisu (Roboto Condensed 700), aby kolečko sedělo těsně před ním
-// i u pravého (na pravý okraj zarovnaného) rohu.
-let _measureCtx;
-function measureCond(text, size){
-  if(!_measureCtx) _measureCtx = document.createElement('canvas').getContext('2d');
-  _measureCtx.font = `700 ${size}px 'Roboto Condensed', Arial, sans-serif`;
-  return _measureCtx.measureText(text).width;
-}
-function measureSlab(text, size){
-  if(!_measureCtx) _measureCtx = document.createElement('canvas').getContext('2d');
-  _measureCtx.font = `700 ${size}px 'Roboto Slab', Georgia, serif`;
-  return _measureCtx.measureText(text).width;
-}
-
-// Značka do rohu patičky: kolečko (červený kruh + žlutý oblouk) VŽDY před nápisem.
-// Prstenec je tlustý – ztlušťuje se dovnitř, vnější průměr zůstává (R+SW/2 = 20,5
-// jako dřív). Nápis ink blue, jen tečka před „cz" žlutá. Stejný web, dvě domény.
+// Značka do rohu patičky.
 function brandMark(name, side, y, LM, RM, ink, size){
-  ink = ink || C.ink;        // barva nápisu dle režimu
-  size = size || 41;         // vnější průměr kolečka (default 41 = původní patička)
-  // Přesná geometrie oficiálního logo.svg: žlutá, oranžová a crimson
-  // včetně žlutého překryvného gradientu.
+  ink = ink || C.ink;
+  size = size || 41;
   const Rout=size/2, gap=Rout*0.78, k=(Rout/138).toFixed(4);
-  const fs=Math.round(Rout*1.4634);   // 30 px při Rout 20.5 – poměr zachován
+  const fs=Math.round(Rout*1.4634);
   const gid='brandGradient';
   const ring = `<defs><linearGradient id="${gid}" x1="1" x2=".25" y1=".5" y2="1">`
     + `<stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/>`
@@ -653,17 +678,16 @@ function brandMark(name, side, y, LM, RM, ink, size){
     + `</g>`;
   const label = `<tspan fill="${ink}">${esc(name)}</tspan>`
     + `<tspan fill="${C.crimson}">.</tspan><tspan fill="${ink}">cz</tspan>`;
-  const W = measureCond(name+'.cz', fs);
+  const W = measSans(name+'.cz', fs);
   let markCx, textX, anchor;
   if(side==='left'){ markCx = LM+Rout; textX = markCx+Rout+gap; anchor='start'; }
   else { textX = RM; anchor='end'; markCx = (RM-W)-gap-Rout; }
   return `<g transform="translate(${markCx.toFixed(1)},${y})">${ring}</g>`
-    + `<text x="${textX.toFixed(1)}" y="${(y+fs*0.34).toFixed(1)}" font-family="'Roboto Condensed', Arial, sans-serif" `
+    + `<text x="${textX.toFixed(1)}" y="${(y+fs*0.34).toFixed(1)}" font-family="${FF.sans}" `
     + `font-size="${fs}" font-weight="700" text-anchor="${anchor}">${label}</text>`;
 }
 
-// Logo speciálu = profilová hlava (ProfileHead): silueta v barvě kapitoly, uvnitř
-// barevné tečky. Staticky, bez hoveru. Zdroj: apps/web/components/dpbp/ProfileHead.tsx
+// Logo speciálu = profilová hlava (ProfileHead).
 const SIL_PATH = "M4505 7963 c-130 -6 -403 -34 -524 -53 -875 -143 -1458 -484 -1863 -1090 -346 -518 -477 -1123 -368 -1705 43 -227 39 -248 -73 -460 -80 -152 -188 -320 -354 -551 -209 -292 -206 -335 33 -435 232 -98 281 -180 198 -336 -79 -149 -63 -208 69 -257 80 -30 86 -62 22 -137 -73 -85 -67 -119 34 -223 97 -99 125 -156 153 -308 35 -198 89 -290 200 -339 72 -32 227 -32 338 0 487 140 868 94 1071 -127 132 -144 194 -445 149 -727 -30 -196 -25 -214 37 -117 392 610 481 1639 233 2680 -56 232 -151 553 -257 860 -212 618 -252 809 -240 1147 28 809 505 1251 1512 1400 322 47 693 35 950 -31 455 -117 664 -411 601 -843 -23 -155 -12 -163 42 -31 99 245 86 520 -34 708 -290 453 -1118 597 -2214 386 -102 -19 -277 -55 -390 -79 -274 -57 -296 -60 -326 -40 -95 62 112 247 407 364 466 185 1039 256 1523 190 135 -18 160 -18 140 0 -28 27 -336 105 -494 125 -129 16 -422 37 -475 34 -16 -1 -61 -3 -100 -5z";
 const SIL_T = "translate(-117.098299,796.836783) scale(0.100000,-0.100000)";
 const HEAD_DOTS = [
@@ -676,11 +700,12 @@ const HEAD_DOTS = [
 ];
 function specialLogo(accent, x, y, S){
   const sc=S/716;
+  const cid='dpbpSil'+(''+Math.random()).slice(2,7);
   const dots = HEAD_DOTS.map(([cx,cy,r,col])=>
     `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${col}" stroke="${col}" stroke-width="8"/>`).join('');
   return `<g transform="translate(${x},${y}) scale(${sc.toFixed(4)}) translate(8,8)">`
-    + `<clipPath id="dpbpSil" clipPathUnits="userSpaceOnUse"><path transform="${SIL_T}" d="${SIL_PATH}"/></clipPath>`
-    + `<g clip-path="url(#dpbpSil)"><rect x="0" y="0" width="700" height="700" fill="${accent}"/></g>`
+    + `<clipPath id="${cid}" clipPathUnits="userSpaceOnUse"><path transform="${SIL_T}" d="${SIL_PATH}"/></clipPath>`
+    + `<g clip-path="url(#${cid})"><rect x="0" y="0" width="700" height="700" fill="${accent}"/></g>`
     + `<path transform="${SIL_T}" d="${SIL_PATH}" fill="none" stroke="${accent}" stroke-width="80"/>`
     + dots + `</g>`;
 }
@@ -688,7 +713,26 @@ function specialLogo(accent, x, y, S){
 // ------- render -------
 const frame=document.getElementById('frame');
 const hintEl=document.getElementById('hint');
-function render(){ frame.innerHTML=buildSVG(state,false); }
+function render(){
+  frame.innerHTML=buildSVG(state,false);
+  addHitAreas();
+  refreshSel();
+}
+// každému pohyblivému objektu přidej průhledný hit-rect přes celou jeho bbox,
+// aby šel chytit kdekoli (ne jen na tazích písmen).
+function addHitAreas(){
+  const svg=frame.querySelector('svg'); if(!svg) return;
+  svg.querySelectorAll('.dobj').forEach(g=>{
+    let bb; try{ bb=g.getBBox(); }catch(e){ return; }
+    if(!bb || !bb.width || !bb.height) return;
+    const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    r.setAttribute('x',bb.x); r.setAttribute('y',bb.y);
+    r.setAttribute('width',bb.width); r.setAttribute('height',bb.height);
+    r.setAttribute('fill','transparent'); r.setAttribute('class','hit');
+    r.style.pointerEvents='all';
+    g.insertBefore(r,g.firstChild);
+  });
+}
 
 // bind inputs
 const bind=(id,key)=>{const el=document.getElementById(id);el.value=state[key];
@@ -707,6 +751,18 @@ hideNumEl.addEventListener('change',()=>{
   render();
 });
 
+// per-prvek font (Serif / Sans)
+function fontSeg(container, role){
+  const wrap=document.getElementById(container);
+  [['serif','Serif'],['sans','Sans']].forEach(([v,label])=>{
+    const b=document.createElement('button');
+    b.className='minichip'+(state.font[role]===v?' on':'');b.textContent=label;b.dataset.v=v;
+    b.onclick=()=>{state.font[role]=v;[...wrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};
+    wrap.appendChild(b);
+  });
+}
+fontSeg('font-kicker','kicker'); fontSeg('font-number','number'); fontSeg('font-claim','claim');
+
 // motifs
 const mWrap=document.getElementById('motifs');
 MOTIFS.forEach(([v,label])=>{const b=document.createElement('button');b.className='chip'+(v===state.motif?' on':'');
@@ -714,16 +770,17 @@ MOTIFS.forEach(([v,label])=>{const b=document.createElement('button');b.classNam
   b.onclick=()=>{state.motif=v;[...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};
   mWrap.appendChild(b);});
 
-// formáty (poměry stran pro sítě)
+// formáty
 const fWrap=document.getElementById('formats');
 Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('button');
   b.className='chip'+(key===state.format?' on':'');b.dataset.f=key;b.textContent=f.label;
   b.onclick=()=>{state.format=key;[...fWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.f===key));
     document.getElementById('frame').classList.toggle('tall', f.h/f.w>1.1);
-    hintEl.textContent=`Preview ${f.w} × ${f.h} px · Roboto Slab + Roboto Condensed`;render();};
+    hintEl.textContent=`Preview ${f.w} × ${f.h} px · IBM Plex Serif + Sans`;
+    selected=null; render();};
   fWrap.appendChild(b);});
 
-// logo nahoře: DataTimes.cz (kolečko + slovo) vs. hlava speciálu
+// logo nahoře
 const tlWrap=document.getElementById('toplogo');
 [['datatimes','DataTimes.cz'],['special','Hlava speciálu']].forEach(([v,label])=>{
   const b=document.createElement('button');
@@ -731,7 +788,7 @@ const tlWrap=document.getElementById('toplogo');
   b.onclick=()=>{state.topLogo=v;[...tlWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};
   tlWrap.appendChild(b);});
 
-// rozšířená firemní paleta – klik nastaví accent (barvy kapitol zůstávají nedotčené)
+// rozšířená firemní paleta → accent
 const extWrap=document.getElementById('extpal');
 PALETTE_EXT.forEach(([fam,hexes])=>{
   const lbl=document.createElement('div');lbl.className='extlbl';lbl.textContent=fam;extWrap.appendChild(lbl);
@@ -750,7 +807,56 @@ PALETTE_EXT.forEach(([fam,hexes])=>{
   extWrap.appendChild(row);
 });
 
-// ------- upload obrázku do vizuální plochy -------
+// obecný palette-picker (řádky rodin, klik → callback)
+function buildPalettePicker(container, onPick){
+  const wrap=document.getElementById(container);
+  PALETTE_EXT.forEach(([fam,hexes])=>{
+    const row=document.createElement('div');row.className='extrow';
+    hexes.forEach(hex=>{
+      const b=document.createElement('button');b.className='extsw';b.style.background=hex;b.title=hex;
+      b.onclick=()=>onPick(hex,wrap,b);
+      row.appendChild(b);
+    });
+    wrap.appendChild(row);
+  });
+}
+
+// vlastní barva pozadí
+buildPalettePicker('bgcustom',(hex,wrap,b)=>{
+  state.bgColor=hex;
+  wrap.querySelectorAll('.extsw').forEach(c=>c.classList.toggle('on',c===b));
+  document.getElementById('bgpicked').innerHTML=`<span class="dot" style="background:${hex}"></span>pozadí: ${hex}`;
+  render();
+});
+document.getElementById('bgauto').onclick=()=>{
+  state.bgColor=null;
+  document.querySelectorAll('#bgcustom .extsw').forEach(c=>c.classList.remove('on'));
+  document.getElementById('bgpicked').innerHTML='';
+  render();
+};
+
+// pozadí za claimem: auto / vlastní / vypnuto
+const boxModeWrap=document.getElementById('boxmode');
+[['auto','Auto'],['custom','Vlastní'],['none','Bez pozadí']].forEach(([v,label])=>{
+  const b=document.createElement('button');b.className='minichip'+((v==='auto'&&state.boxColor===null)?' on':'');
+  b.textContent=label;b.dataset.v=v;
+  b.onclick=()=>{
+    [...boxModeWrap.children].forEach(c=>c.classList.toggle('on',c===b));
+    if(v==='auto'){state.boxColor=null;document.getElementById('boxpicked').innerHTML='';document.querySelectorAll('#boxcustom .extsw').forEach(c=>c.classList.remove('on'));}
+    else if(v==='none'){state.boxColor='none';document.getElementById('boxpicked').innerHTML='';document.querySelectorAll('#boxcustom .extsw').forEach(c=>c.classList.remove('on'));}
+    render();
+  };
+  boxModeWrap.appendChild(b);
+});
+buildPalettePicker('boxcustom',(hex,wrap,b)=>{
+  state.boxColor=hex;
+  [...boxModeWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v==='custom'));
+  wrap.querySelectorAll('.extsw').forEach(c=>c.classList.toggle('on',c===b));
+  document.getElementById('boxpicked').innerHTML=`<span class="dot" style="background:${hex}"></span>plocha: ${hex}`;
+  render();
+});
+
+// ------- upload obrázku -------
 const dropEl=document.getElementById('drop');
 const fileInput=document.getElementById('f-file');
 function setImage(dataUrl){
@@ -762,6 +868,10 @@ function setImage(dataUrl){
 }
 function clearImage(){
   state.image=null; fileInput.value='';
+  state.img={zoom:1,panX:0,panY:0};
+  // vyčistit obrazové override napříč formáty
+  Object.values(state.ov).forEach(f=>{ if(f.image) delete f.image; });
+  syncImgSliders();
   document.getElementById('drop-empty').hidden=false;
   document.getElementById('drop-has').hidden=true;
   render();
@@ -775,24 +885,21 @@ function readImageFile(file){
 document.getElementById('pick').onclick=()=>fileInput.click();
 fileInput.onchange=()=>readImageFile(fileInput.files[0]);
 document.getElementById('rmimg').onclick=clearImage;
-// drag & drop na dropzone i na náhled
 [dropEl, document.getElementById('stage')].forEach(zone=>{
   zone.addEventListener('dragover',e=>{e.preventDefault();dropEl.classList.add('over');});
   zone.addEventListener('dragleave',()=>dropEl.classList.remove('over'));
   zone.addEventListener('drop',e=>{e.preventDefault();dropEl.classList.remove('over');
     const f=e.dataTransfer.files[0]; if(f) readImageFile(f);});
 });
-// vložení screenshotu ze schránky (Ctrl+V) kdekoli mimo textová pole
 document.addEventListener('paste',e=>{
   const items=e.clipboardData&&e.clipboardData.items; if(!items) return;
   for(const it of items){ if(it.type.startsWith('image/')){ readImageFile(it.getAsFile()); e.preventDefault(); break; } }
 });
-// Fill / Fit + svislá poloha ořezu
 const fitGrp=document.getElementById('fit-grp'), posGrp=document.getElementById('pos-grp');
 fitGrp.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
   state.imgFit=b.dataset.fit;
   fitGrp.querySelectorAll('.minichip').forEach(c=>c.classList.toggle('on',c===b));
-  posGrp.classList.toggle('off', state.imgFit!=='fill');  // poloha jen pro Fill
+  posGrp.classList.toggle('off', state.imgFit!=='fill');
   render();
 });
 posGrp.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
@@ -800,8 +907,48 @@ posGrp.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
   posGrp.querySelectorAll('.minichip').forEach(c=>c.classList.toggle('on',c===b));
   render();
 });
+// zoom / pan slidery
+function sl(id,vid,key,fmt){
+  const el=document.getElementById(id), v=document.getElementById(vid);
+  el.addEventListener('input',()=>{state.img[key]=parseFloat(el.value);v.textContent=fmt(el.value);render();});
+}
+sl('img-zoom','img-zoom-v','zoom',x=>parseFloat(x).toFixed(2)+'×');
+sl('img-px','img-px-v','panX',x=>Math.round(x*100));
+sl('img-py','img-py-v','panY',x=>Math.round(x*100));
+function syncImgSliders(){
+  document.getElementById('img-zoom').value=state.img.zoom;
+  document.getElementById('img-zoom-v').textContent=state.img.zoom.toFixed(2)+'×';
+  document.getElementById('img-px').value=state.img.panX;
+  document.getElementById('img-px-v').textContent=Math.round(state.img.panX*100);
+  document.getElementById('img-py').value=state.img.panY;
+  document.getElementById('img-py-v').textContent=Math.round(state.img.panY*100);
+}
+document.getElementById('img-reset').onclick=()=>{
+  state.img={zoom:1,panX:0,panY:0};
+  Object.values(state.ov).forEach(f=>{ if(f.image) delete f.image; });
+  state.border={on:false,color:state.border.color,width:state.border.width,radius:state.border.radius};
+  document.getElementById('bd-on').checked=false; toggleBorderFields();
+  syncImgSliders(); render(); toast('Obrázek resetován');
+};
 
-// 15 chapter colours – výběr kapitoly přepíše barvu i kicker
+// rámeček obrázku
+const bdOn=document.getElementById('bd-on');
+function toggleBorderFields(){document.getElementById('bd-fields').style.opacity=state.border.on?1:0.4;
+  document.getElementById('bd-fields').style.pointerEvents=state.border.on?'auto':'none';}
+bdOn.addEventListener('change',()=>{state.border.on=bdOn.checked;toggleBorderFields();render();});
+toggleBorderFields();
+buildPalettePicker('bd-pal',(hex,wrap,b)=>{
+  state.border.color=hex;
+  wrap.querySelectorAll('.extsw').forEach(c=>c.classList.toggle('on',c===b));
+  document.getElementById('bd-picked').innerHTML=`<span class="dot" style="background:${hex}"></span>rámeček: ${hex}`;
+  render();
+});
+function slB(id,vid,key){const el=document.getElementById(id),v=document.getElementById(vid);
+  el.value=state.border[key];v.textContent=el.value;
+  el.addEventListener('input',()=>{state.border[key]=parseInt(el.value,10);v.textContent=el.value;render();});}
+slB('bd-w','bd-w-v','width'); slB('bd-r','bd-r-v','radius');
+
+// 15 chapter colours
 const aWrap=document.getElementById('accents');
 const swName=document.getElementById('swname');
 CHAPTERS.forEach(([id,hex,title])=>{
@@ -824,8 +971,7 @@ function syncAcc(){
   swName.innerHTML=`<b>${ch[0]} ${esc(ch[2])}</b> · <b style="color:${ch[1]}">${ch[1]}</b>`;
 }
 
-// přepínač světlý / tmavý režim POUTÁKU (ne jen náhledu) – projeví se i v exportu.
-// Dvě ovládání (chipy v panelu + tlačítko u náhledu) sdílejí jeden stav.
+// světlý / tmavý režim
 const bgWrap=document.getElementById('bgchips');
 [['light','Světlé'],['dark','Tmavé (ink blue)']].forEach(([v,label])=>{
   const b=document.createElement('button');
@@ -837,9 +983,147 @@ function setBg(dark){
   state.dark=dark;
   [...bgWrap.children].forEach(c=>c.classList.toggle('on',(c.dataset.v==='dark')===dark));
   document.getElementById('bgToggle').textContent=dark?'light background':'dark background';
+  document.getElementById('stage').classList.toggle('dark',dark);
   render();
 }
 document.getElementById('bgToggle').onclick=()=>setBg(!state.dark);
+
+// ------- INTERAKCE: výběr, tažení, škála/rozměr, kolečko myši -------
+let selected=null;
+const OBJ_LABEL={kicker:'Kicker',number:'Headline',claim:'Claim',logo:'Logo',footerL:'DataTimes',footerR:'mahdalova-skop',image:'Obrázek / motiv'};
+const selbox=document.getElementById('selbox');
+
+function svgScale(){ // kolik SVG jednotek připadá na 1 px na obrazovce
+  const svg=frame.querySelector('svg'); if(!svg) return 1;
+  const F=FORMATS[state.format]||FORMATS.link;
+  return F.w/svg.getBoundingClientRect().width;
+}
+function refreshSel(){
+  const svg=frame.querySelector('svg');
+  if(!selected || !svg){ selbox.style.display='none'; return; }
+  const g=svg.querySelector(`.dobj[data-obj="${selected}"]`);
+  if(!g){ selbox.style.display='none'; return; }
+  let bb; try{ bb=g.getBoundingClientRect(); }catch(e){ selbox.style.display='none'; return; }
+  // #ovl vyplňuje #stage (inset:0), takže polohu počítáme vůči #stage, ne #frame
+  const fr=document.getElementById('stage').getBoundingClientRect();
+  selbox.style.display='block';
+  selbox.style.left=(bb.left-fr.left)+'px';
+  selbox.style.top=(bb.top-fr.top)+'px';
+  selbox.style.width=bb.width+'px';
+  selbox.style.height=bb.height+'px';
+  selbox.querySelector('.tag').textContent=OBJ_LABEL[selected]||selected;
+  // úhlové úchyty: obrázek = všechny 4 (rozměr), ostatní = jen SE (škála)
+  const isImg=selected==='image';
+  selbox.querySelectorAll('.hdl').forEach(h=>{h.style.display=(isImg||h.dataset.h==='se')?'block':'none';});
+}
+function selectObj(name){ selected=name; refreshSel(); }
+
+// tažení těla objektu
+let drag=null;
+frame.addEventListener('pointerdown',e=>{
+  if(e.target.closest('.hdl')) return;             // úchyt řeší vlastní handler
+  const g=e.target.closest('.dobj');
+  const svg=frame.querySelector('svg'); if(!svg) return;
+  if(!g){ selectObj(null); return; }
+  const name=g.dataset.obj;
+  selectObj(name);
+  const k=svgScale();
+  const cur=ovGet(name);
+  drag={name,g,startX:e.clientX,startY:e.clientY,k,dx0:cur.dx||0,dy0:cur.dy||0,
+        baseT:g.getAttribute('transform')||''};
+  g.classList.add('dragging');
+  g.setPointerCapture(e.pointerId);
+  e.preventDefault();
+});
+frame.addEventListener('pointermove',e=>{
+  if(!drag) return;
+  const ddx=(e.clientX-drag.startX)*drag.k, ddy=(e.clientY-drag.startY)*drag.k;
+  // živě jen posuneme skupinu (bez rerenderu) přes leading translate
+  const rest=drag.baseT.replace(/^translate\([^)]*\)\s*/,'');
+  drag.g.setAttribute('transform',`translate(${(drag.dx0+ddx).toFixed(1)},${(drag.dy0+ddy).toFixed(1)}) ${rest}`);
+  refreshSel();
+});
+frame.addEventListener('pointerup',e=>{
+  if(!drag) return;
+  const ddx=(e.clientX-drag.startX)*drag.k, ddy=(e.clientY-drag.startY)*drag.k;
+  ovSet(drag.name,{dx:drag.dx0+ddx, dy:drag.dy0+ddy});
+  drag.g.classList.remove('dragging');
+  drag=null; render();
+});
+
+// úchyty: škála (text/logo) nebo rozměr rámečku (obrázek)
+let hdrag=null;
+selbox.querySelectorAll('.hdl').forEach(h=>{
+  h.addEventListener('pointerdown',e=>{
+    if(!selected) return;
+    const svg=frame.querySelector('svg'); const g=svg.querySelector(`.dobj[data-obj="${selected}"]`);
+    const bb=g.getBoundingClientRect();
+    hdrag={name:selected,corner:h.dataset.h,k:svgScale(),
+           startX:e.clientX,startY:e.clientY,
+           cx:bb.left+bb.width/2,cy:bb.top+bb.height/2,
+           startDist:Math.hypot(e.clientX-(bb.left+bb.width/2),e.clientY-(bb.top+bb.height/2)),
+           cur:Object.assign({},ovGet(selected))};
+    h.setPointerCapture(e.pointerId);
+    e.preventDefault(); e.stopPropagation();
+  });
+});
+window.addEventListener('pointermove',e=>{
+  if(!hdrag) return;
+  if(hdrag.name==='image'){
+    // rozměr rámečku: změna dw/dh podle posunu rohu (+ dx/dy pro kotvení protějšku)
+    const ddx=(e.clientX-hdrag.startX)*hdrag.k, ddy=(e.clientY-hdrag.startY)*hdrag.k;
+    const c=hdrag.corner;
+    let dw=hdrag.cur.dw||0, dh=hdrag.cur.dh||0, dx=hdrag.cur.dx||0, dy=hdrag.cur.dy||0;
+    if(c==='se'){ dw+=ddx; dh+=ddy; }
+    else if(c==='ne'){ dw+=ddx; dh-=ddy; dy+=ddy; }
+    else if(c==='sw'){ dw-=ddx; dh+=ddy; dx+=ddx; }
+    else if(c==='nw'){ dw-=ddx; dh-=ddy; dx+=ddx; dy+=ddy; }
+    ovSet('image',{dw,dh,dx,dy});
+    render();
+  } else {
+    const dist=Math.hypot(e.clientX-hdrag.cx,e.clientY-hdrag.cy);
+    let sc=(hdrag.cur.sc||1)*(dist/Math.max(6,hdrag.startDist));
+    sc=Math.max(0.3,Math.min(4,sc));
+    ovSet(hdrag.name,{sc});
+    render();
+  }
+});
+window.addEventListener('pointerup',()=>{ if(hdrag){ hdrag=null; } });
+
+// kolečko myši nad obrázkem = zoom obsahu
+frame.addEventListener('wheel',e=>{
+  const g=e.target.closest('.dobj[data-obj="image"]');
+  if(!g || !state.image) return;
+  e.preventDefault();
+  let z=(state.img.zoom||1)*(e.deltaY<0?1.08:0.926);
+  z=Math.max(0.3,Math.min(3,z));
+  state.img.zoom=z; syncImgSliders();
+  selectObj('image'); render();
+},{passive:false});
+
+// šipky = jemný posun vybraného objektu; Esc = odznačit
+window.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){ selectObj(null); return; }
+  if(!selected) return;
+  const tag=(e.target.tagName||'').toLowerCase();
+  if(tag==='input'||tag==='textarea') return;
+  const step=e.shiftKey?20:4;
+  const map={ArrowLeft:[-step,0],ArrowRight:[step,0],ArrowUp:[0,-step],ArrowDown:[0,step]};
+  if(map[e.key]){
+    const [mx,my]=map[e.key], o=ovGet(selected);
+    ovSet(selected,{dx:(o.dx||0)+mx, dy:(o.dy||0)+my});
+    e.preventDefault(); render();
+  }
+});
+window.addEventListener('resize',refreshSel);
+document.getElementById('panel').addEventListener('scroll',refreshSel,true);
+
+// reset celého layoutu (jen aktuální formát)
+document.getElementById('resetAll').onclick=()=>{
+  delete state.ov[state.format];
+  state.img={zoom:1,panX:0,panY:0};
+  syncImgSliders(); selectObj(null); render(); toast('Layout resetován (tento formát)');
+};
 
 // toast
 let tT;
@@ -855,18 +1139,14 @@ function saveBlob(blob,name){
   setTimeout(()=>URL.revokeObjectURL(a.href),1000);
 }
 
-// download SVG (primární formát)
 document.getElementById('dlsvg').onclick=()=>{
   const svg=buildSVG(state,true);
   saveBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), fileBase()+'.svg');
   toast(`SVG downloaded · ${(new Blob([svg]).size/1024).toFixed(1)} kB`);
 };
 
-/* PNG (og:image pro sociální sítě).
-   SVG načtené do <img> je izolovaný dokument – nevidí fonty stránky ani externí
-   @import, takže by rastr spadl na Georgii. Pro rasterizaci proto fonty jednou
-   stáhneme a vložíme do SVG jako base64. Na disk uložené SVG zůstává bez nich. */
-const FONT_CSS_URL="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap";
+/* PNG (og:image). Fonty stáhneme a vložíme do SVG jako base64. */
+const FONT_CSS_URL="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Serif:wght@400;700&display=swap";
 let fontStyleCache=null;
 async function fontStyleTag(){
   if(fontStyleCache) return fontStyleCache;
@@ -876,7 +1156,7 @@ async function fontStyleTag(){
     weight:(b.match(/font-weight:\s*(\d+)/)||[])[1],
     url:(b.match(/url\(([^)]+)\)/)||[])[1],
     range:(b.match(/unicode-range:\s*([^;]+)/)||[])[1]
-  })) // jen latin + latin-ext (česká diakritika), ne cyrilice/řečtina/vietnamština
+  }))
     .filter(f=>f.range&&(f.range.includes('U+0000')||f.range.includes('U+0100')));
   const b64=buf=>{let s='';const a=new Uint8Array(buf),CH=0x8000;
     for(let i=0;i<a.length;i+=CH)s+=String.fromCharCode.apply(null,a.subarray(i,i+CH));return btoa(s);};
@@ -912,17 +1192,17 @@ document.getElementById('dlpng').onclick=async()=>{
   }finally{ btn.disabled=false; }
 };
 
-// download the tool itself (self-contained HTML → save / forward to a colleague)
 document.getElementById('dltool').onclick=()=>{
+  // ulož nástroj v čistém výchozím stavu (bez rozeditovaného obrázku/override)
+  selectObj(null);
   const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
   saveBlob(new Blob([html],{type:'text/html'}), 'poster-editor.html');
   toast('Tool downloaded – open by double-click');
 };
 
 syncAcc();
+syncImgSliders();
 render();
-// fonty se načtou async → po jejich načtení překreslit, aby změřená šířka
-// nápisu (a tím pozice kolečka u pravé značky) seděla přesně
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(render);
 </script>
 </html>
