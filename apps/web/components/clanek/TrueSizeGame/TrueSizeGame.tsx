@@ -10,7 +10,7 @@ import {
   areaKm2,
   chooseRound,
   clampLat,
-  COLORS,
+  chooseColors,
   HEIGHT,
   homePiece,
   isHome,
@@ -139,21 +139,21 @@ function spreadPieces<T extends Piece>(
     let best: LonLat = [0, 0];
     let bestBox: number[] = [];
     let bestCost = Infinity;
-    for (let lat = -48; lat <= 55; lat += 13) {
-      for (let lon = -150; lon <= 150; lon += 20) {
+    for (let lat = -48 + Math.random() * 4; lat <= 55; lat += 7) {
+      for (let lon = -165 + Math.random() * 4; lon <= 165; lon += 10) {
         const bounds = path.bounds(
           placeCountry(countries.get(piece.name)!, { ...piece, lon, lat }),
         );
         const box = [
-          bounds[0][0] - 10,
-          bounds[0][1] - 10,
-          bounds[1][0] + 10,
-          bounds[1][1] + 10,
+          bounds[0][0] - 4,
+          bounds[0][1] - 4,
+          bounds[1][0] + 4,
+          bounds[1][1] + 4,
         ];
         if (
           box[0] < 15 ||
           box[2] > WIDTH - 15 ||
-          box[1] < 100 ||
+          box[1] < 30 ||
           box[3] > height - 45
         )
           continue;
@@ -180,7 +180,7 @@ function spreadPieces<T extends Piece>(
               ),
             )
           : 0;
-        const cost = overlap * 10000 - separation;
+        const cost = overlap * 10000 - separation + Math.random() * 180;
         if (cost < bestCost) {
           bestCost = cost;
           best = [lon, lat];
@@ -523,6 +523,7 @@ export default function TrueSizeGame() {
         });
         const names = chooseNames(pool, previousRound.current, 5);
         previousRound.current = names;
+        const colors = chooseColors(names.length);
         const initial: GamePiece[] = names.map((name, i) => ({
           id: i + 1,
           name,
@@ -530,7 +531,7 @@ export default function TrueSizeGame() {
           lat: START_POSITIONS[i % START_POSITIONS.length]?.[1] ?? 10,
           angle: 0,
           pinned: false,
-          color: COLORS[i % COLORS.length],
+          color: colors[i],
           anonymous: true,
         }));
         setPieces(spreadPieces(initial, map, "mercator", mapHeight));
@@ -654,7 +655,7 @@ export default function TrueSizeGame() {
       lat,
       angle: 0,
       pinned: false,
-      color: COLORS[pieces.length % COLORS.length],
+      color: chooseColors(1, pieces.map(p => p.color))[0],
       anonymous: false,
     };
     setPieces((prev) => [...prev, piece]);
@@ -673,6 +674,7 @@ export default function TrueSizeGame() {
     });
     const names = chooseNames(pool, previousRound.current, count);
     previousRound.current = names;
+    const colors = chooseColors(names.length);
     const additions: GamePiece[] = names.map((name, i) => ({
       id: nextId.current++,
       name,
@@ -680,7 +682,7 @@ export default function TrueSizeGame() {
       lat: START_POSITIONS[i % START_POSITIONS.length]?.[1] ?? 10,
       angle: 0,
       pinned: false,
-      color: COLORS[i % COLORS.length],
+      color: colors[i],
       anonymous: true,
     }));
     setPieces(spreadPieces(additions, byName, projectionId, mapHeight));
