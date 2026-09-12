@@ -442,6 +442,15 @@
   background: #f5f0eb;
 }
 .roundControl > button { color: #4a51ab; }
+.roundControl > button svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .projection {
   margin-left: auto;
   background: #fdfbf7;
