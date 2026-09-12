@@ -1165,7 +1165,7 @@ export default function TrueSizeGame() {
               className={`${styles.hintButton} ${hintPulsing ? styles.hintPulse : ""}`}
               aria-label="Nápověda"
               title="Nápověda"
-              onClick={() => { setHintPulsing(false); setDetailId(selected.id); setHintLevel((level) => Math.min(3, level + 1)); }}
+              onClick={() => { setHintPulsing(false); setDetailId(selected.id); }}
             >💡</button>
           )}
           <div className={styles.utilities}>
@@ -1396,9 +1396,6 @@ export default function TrueSizeGame() {
               <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
               <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
             </>}
-            {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
-              <span className={styles.hintText}>Přetáhni ji na správné místo.</span>
-            )}
             {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
               <span className={styles.hintText}>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
             )}
