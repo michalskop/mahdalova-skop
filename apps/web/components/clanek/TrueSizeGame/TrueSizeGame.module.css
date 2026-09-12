@@ -7,7 +7,7 @@
   min-height: 520px;
   margin: 28px 0;
   isolation: isolate;
-  background: #f3edf7;
+  background: #f8f6f0;
   color: var(--ink);
   border-radius: 8px;
   overflow: hidden;
@@ -305,7 +305,7 @@
   outline-offset: 2px;
 }
 .map {
-  background: #f3edf7;
+  background: #f8f6f0;
   display: block;
   width: 100%;
   height: 100%;
@@ -1187,3 +1187,7 @@
   .board { height: auto; min-height: 72dvh; }
   .mapArea > .map { min-height: 45dvh; }
 }
+
+/* Solved thumbnails inherit the same outcome color as the map piece. */
+.sideDock .dockPiece[data-solved="true"] svg { color: inherit; }
+.sideDock .dockPiece[data-solved="true"] svg path { stroke: currentColor; }
