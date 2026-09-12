@@ -415,6 +415,7 @@ export default function TrueSizeGame() {
   const [roundCount, setRoundCount] = useState<5 | 10 | 15>(5);
   const [roundHover, setRoundHover] = useState<5 | 10 | 15 | null>(null);
   const [hintLevel, setHintLevel] = useState(0);
+  const [hintPulsing, setHintPulsing] = useState(false);
   const hintTimer = useRef<number | null>(null);
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
@@ -678,6 +679,7 @@ export default function TrueSizeGame() {
     setPieces((prev) => [...prev, piece]);
     setActiveId(piece.id);
     setHintLevel(0);
+    setHintPulsing(false);
     setDetailId(null);
     setQuery("");
     setSearchOpen(false);
@@ -708,6 +710,7 @@ export default function TrueSizeGame() {
     setActiveId(additions[additions.length - 1]?.id || null);
     resolved.current.clear();
     setHintLevel(0);
+    setHintPulsing(false);
     setNotice("");
     setDetailId(null);
     // Keep the current projection viewport when changing round size. Resetting
@@ -784,7 +787,11 @@ export default function TrueSizeGame() {
     setDetailId(null);
     setNotice("");
     setHintLevel(0);
-    hintTimer.current = window.setTimeout(() => setHintLevel(1), 3000);
+    setHintPulsing(false);
+    hintTimer.current = window.setTimeout(() => {
+      setHintLevel(1);
+      setHintPulsing(true);
+    }, 3000);
     drag.current = {
       pointer: e.pointerId,
       piece,
@@ -1151,10 +1158,10 @@ export default function TrueSizeGame() {
           </div>
           {hintLevel > 0 && selected && !selected.result && (
             <button
-              className={`${styles.hintButton} ${styles.hintPulse}`}
+              className={`${styles.hintButton} ${hintPulsing ? styles.hintPulse : ""}`}
               aria-label="Nápověda"
               title="Nápověda"
-              onClick={() => { setDetailId(selected.id); setHintLevel((level) => Math.min(3, level + 1)); }}
+              onClick={() => { setHintPulsing(false); setDetailId(selected.id); setHintLevel((level) => Math.min(3, level + 1)); }}
             >💡</button>
           )}
           <div className={styles.utilities}>
