@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { PointerEvent as Pointer, KeyboardEvent } from "react";
-import { geoGraticule10, geoPath } from "d3-geo";
+import { geoGraticule, geoPath } from "d3-geo";
 import { useProjectionMorph } from "./useProjectionMorph";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
@@ -427,7 +427,7 @@ export default function TrueSizeGame() {
   const roundMenuId = useId();
   const [mapHeight, setMapHeight] = useState(HEIGHT);
   const [portraitMobile, setPortraitMobile] = useState(false);
-  const [trayRows, setTrayRows] = useState(8);
+  const trayRows = 5;
   const [logoPosition, setLogoPosition] = useState<{left: number; top: number} | null>(null);
   const [view, setView] = useState<Rect>(() => ({
     x: 0,
@@ -485,7 +485,10 @@ export default function TrueSizeGame() {
   );
   const { rendered, animating } = useProjectionMorph(projection, mapHeight);
   const path = useMemo(() => geoPath(rendered), [rendered]);
-  const graticule = useMemo(() => geoGraticule10(), []);
+  const graticule = useMemo(() => geoGraticule()
+    .extentMajor([[-180, -89.999999], [180, 89.999999]])
+    .extentMinor([[-180, -89.999999], [180, 89.999999]])
+    .stepMinor([10, 10])(), []);
   const fullView = useMemo<Rect>(
     () => ({ x: 0, y: 0, width: WIDTH, height: mapHeight }),
     [mapHeight],
@@ -586,7 +589,7 @@ export default function TrueSizeGame() {
     return () => mq.removeEventListener("change", apply);
   }, []);
   useEffect(() => {
-    const scale = projectionId === "mercator" ? (portraitMobile ? 0.85 : 1) : (portraitMobile ? 0.67 : 0.76);
+    const scale = projectionId === "peters" ? 1 : projectionId === "mercator" ? (portraitMobile ? 0.85 : 1) : (portraitMobile ? 0.67 : 0.76);
     const target = { x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) / 2,
       width: WIDTH * scale, height: mapHeight * scale };
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setView(target); return; }
@@ -604,17 +607,11 @@ export default function TrueSizeGame() {
     return () => cancelAnimationFrame(frame);
   }, [mapHeight, portraitMobile, projectionId]);
   useEffect(() => {
-    const resize = () => setTrayRows(Math.max(3, Math.min(8, Math.floor((window.innerHeight * .72 - 200) / 46))));
-    resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
-  }, []);
-  useEffect(() => {
     const map = svg.current;
     const area = map?.parentElement;
     if (!map || !area) return;
     const positionLogo = () => {
-      const projected = rendered([22, -43]);
+      const projected = rendered([17, -39]);
       const matrix = map.getScreenCTM();
       const brand = area.querySelector<HTMLElement>(`.${styles.creditBrand}`);
       if (!projected || !matrix || !brand) return;

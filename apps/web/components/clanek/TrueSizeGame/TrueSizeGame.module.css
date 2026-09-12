@@ -270,10 +270,11 @@
   background: var(--paper);
   border-bottom: 1px solid #dfe2db;
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 .mapArea {
   position: relative;
+  isolation: isolate;
   flex: 1;
   min-height: 0;
   overflow: hidden;
@@ -1092,7 +1093,7 @@
 .mapArea .countryControls {
   position: absolute;
   left: 10px;
-  top: 90px;
+  top: 140px;
   z-index: 3;
   display: flex;
   flex-direction: column;

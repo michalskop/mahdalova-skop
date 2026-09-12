@@ -244,7 +244,7 @@ export function makeProjection(
       // Keep the useful world in a landscape viewport; the infinite poles are clipped.
       projection = geoMercator()
         .scale((WIDTH - 32) / (2 * Math.PI))
-        .translate([WIDTH / 2, height * 0.68]);
+        .translate([WIDTH / 2, height / 2]);
       break;
   }
   if (id !== "mercator")
