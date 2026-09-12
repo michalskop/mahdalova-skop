@@ -1396,7 +1396,7 @@ export default function TrueSizeGame() {
             {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
               <span className={styles.hintText}>Přetáhni ji na správné místo.</span>
             )}
-            {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
+            {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
               <span className={styles.hintText}>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
             )}
             {hintLevel > 2 && detail.id === selected?.id && !detail.result && (
