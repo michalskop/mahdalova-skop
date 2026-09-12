@@ -677,6 +677,17 @@
   font-size: 18px;
   padding-right: 30px;
 }
+.hintTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+.hintLabel,
+.hintText,
+.hintSolution { animation: hint-type 240ms steps(16, end) both; }
+@keyframes hint-type { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+.hintSolution { color: var(--accent); font-weight: 700; }
 .detailFlag {
   font-size: 20px;
   vertical-align: -1px;

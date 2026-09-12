@@ -1368,16 +1368,16 @@ export default function TrueSizeGame() {
             >
               ×
             </button>
-            <strong style={{ color: detail.color }}>
+            <strong className={hintLevel > 0 && !detail.result ? styles.hintTitle : undefined} style={{ color: detail.color }}>
               {ISO2[detail.name] && (
                 <Flag
                   code={ISO2[detail.name]}
-                  size={20}
+                  size={24}
                   alt=""
-                  style={{ marginRight: 6 }}
+                  style={{ marginRight: 8, width: 36, height: 24, objectFit: "cover", borderRadius: 2 }}
                 />
               )}
-              {label(detail.name)}
+              {hintLevel > 0 && !detail.result ? <><span className={styles.hintLabel}>Hledaná země</span><span>{label(detail.name)}</span></> : label(detail.name)}
             </strong>
             {(!hintLevel || detail.result) && <>
               <small>≈ {number.format(areaKm2(byName.get(detail.name)!))} km²</small>
@@ -1390,10 +1390,10 @@ export default function TrueSizeGame() {
               <span>Hledaná země: {label(detail.name)}. Přetáhni ji na správné místo.</span>
             )}
             {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
-              <span>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
+              <span className={styles.hintText}>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
             )}
             {hintLevel > 2 && detail.id === selected?.id && !detail.result && (
-              <button onClick={() => resolvePosition(detail)}>Ukázat řešení</button>
+              <button className={styles.hintSolution} onClick={() => resolvePosition(detail)}>👉 Ukázat řešení</button>
             )}
           </aside>
         )}
