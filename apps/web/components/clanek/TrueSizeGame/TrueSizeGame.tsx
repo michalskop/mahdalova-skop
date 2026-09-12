@@ -798,8 +798,9 @@ export default function TrueSizeGame() {
     setNotice("");
     if (hintLevel === 0 || selected?.id !== piece.id) setHintLevel(0);
     setHintPulsing(false);
-    if (hintLevel === 0) hintTimer.current = window.setTimeout(() => {
-      setHintLevel(1);
+    if (hintTimer.current !== null) window.clearTimeout(hintTimer.current);
+    hintTimer.current = window.setTimeout(() => {
+      setHintLevel((level) => Math.max(1, level));
       setHintPulsing(true);
     }, 3000);
     drag.current = {
@@ -908,6 +909,8 @@ export default function TrueSizeGame() {
     });
   }
   function onUp(e: Pointer<SVGSVGElement>) {
+    if (hintTimer.current !== null) window.clearTimeout(hintTimer.current);
+    hintTimer.current = null;
     pointers.current.delete(e.pointerId);
     if (pointers.current.size < 2) pinch.current = null;
     if (pan.current?.pointer === e.pointerId) pan.current = null;
@@ -1198,14 +1201,20 @@ export default function TrueSizeGame() {
               )}
             </div>
 
-          {hintLevel > 0 && selected && !selected.result && (
             <button
-              className={`${styles.hintButton} ${styles.dockHint} ${hintPulsing ? styles.hintPulse : ""}`}
+              className={`${styles.hintButton} ${styles.dockHint} ${hintPulsing && selected && !selected.result ? styles.hintPulse : ""}`}
               aria-label="Nápověda"
               title="Nápověda"
-              onClick={() => { setHintPulsing(false); setDetailId(selected.id); }}
+              disabled={!selected || !!selected.result}
+              onClick={() => {
+                if (!selected || selected.result) return;
+                if (hintTimer.current !== null) window.clearTimeout(hintTimer.current);
+                hintTimer.current = null;
+                setHintPulsing(false);
+                setHintLevel((level) => Math.max(1, level));
+                setDetailId(selected.id);
+              }}
             >💡</button>
-          )}
 
           <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí">
             {pieces.map((piece, index) => (
@@ -1405,9 +1414,6 @@ export default function TrueSizeGame() {
               <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
               <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
             </>}
-            {hintLevel > 0 && hintLevel < 3 && detail.id === selected?.id && !detail.result && (
-              <span className={styles.hintText}>Přetáhni ji na správné místo.</span>
-            )}
             {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
               <span className={styles.hintText}>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
             )}

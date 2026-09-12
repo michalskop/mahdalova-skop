@@ -1129,3 +1129,15 @@
   .countryControls .sideDock { width: auto; flex: 1 1 0; }
   .countryControls .roundMenu { left: 0; top: auto; bottom: calc(100% + 8px); }
 }
+
+/* Keep help beside, and outside, the independently framed country tray. */
+@media (min-width: 601px), (orientation: landscape) {
+  .mapArea .countryControls {
+    display: grid;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 48px minmax(0, 1fr);
+  }
+  .countryControls .roundControl { grid-column: 1; grid-row: 1; }
+  .countryControls > .dockHint { grid-column: 1; grid-row: 2; }
+  .countryControls .sideDock { grid-column: 2; grid-row: 1 / span 2; }
+}
