@@ -7,7 +7,7 @@
   min-height: 520px;
   margin: 28px 0;
   isolation: isolate;
-  background: #f0f1ed;
+  background: #eaf2f3;
   color: var(--ink);
   border-radius: 12px;
   overflow: hidden;
@@ -303,7 +303,7 @@
   outline-offset: 2px;
 }
 .map {
-  background: #f0f1ed;
+  background: #eaf2f3;
   display: block;
   width: 100%;
   height: 100%;
@@ -316,9 +316,9 @@
 }
 .basemap {
   pointer-events: none;
-  fill: #dfe2db;
-  stroke: #b9bfb4;
-  stroke-width: 0.6;
+  fill: #d4d4c8;
+  stroke: #eef0e8;
+  stroke-width: 0.7;
 }
 .basemap path {
   vector-effect: non-scaling-stroke;
