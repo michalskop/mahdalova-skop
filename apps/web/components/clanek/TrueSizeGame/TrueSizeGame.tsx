@@ -1214,7 +1214,7 @@ export default function TrueSizeGame() {
                 aria-controls={roundMenuOpen ? roundMenuId : undefined}
                 title="Nová hra"
               >
-                <svg viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2.4 5.7" /></svg>
+                <svg viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0 1.2 5.4" /><path d="M20 5v6h-6" /></svg>
               </button>
               {roundMenuOpen && (
                 <div
