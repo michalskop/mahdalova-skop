@@ -8,7 +8,9 @@ export function interpolateProjection(from: GeoProjection, to: GeoProjection, t:
   const a0 = from([0, 0])!;
   const b0 = to([0, 0])!;
   return geoProjection((lambda: number, phi: number) => {
-    const point: [number, number] = [lambda * 180 / Math.PI, phi * 180 / Math.PI];
+    // Mercator is infinite at the poles. d3's antimeridian stream visits
+    // those points when closing polygons; keep them finite during the tween.
+    const point: [number, number] = [lambda * 180 / Math.PI, Math.max(-89.999999, Math.min(89.999999, phi * 180 / Math.PI))];
     const a = from(point)!;
     const b = to(point)!;
     return [a[0] + (b[0] - a[0]) * t, -(a[1] + (b[1] - a[1]) * t)];
