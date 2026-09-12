@@ -379,9 +379,12 @@ function Silhouette({ country }: { country: Country }) {
   const d = useMemo(() => {
     const projection = makeProjection("equal");
     const path = geoPath(projection);
-    const bounds = path.bounds(country);
+    const silhouette: Country = country.properties.name === "France" && country.geometry.type === "MultiPolygon"
+      ? { ...country, geometry: { ...country.geometry, coordinates: country.geometry.coordinates.filter((polygon) => polygon[0].some(([lon, lat]) => lon > -10 && lon < 15 && lat > 40 && lat < 52)) } }
+      : country;
+    const bounds = path.bounds(silhouette);
     return {
-      path: path(country) || "",
+      path: path(silhouette) || "",
       box: `${bounds[0][0] - 2} ${bounds[0][1] - 2} ${bounds[1][0] - bounds[0][0] + 4} ${bounds[1][1] - bounds[0][1] + 4}`,
     };
   }, [country]);
