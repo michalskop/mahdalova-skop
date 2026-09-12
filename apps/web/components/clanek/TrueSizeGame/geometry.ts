@@ -54,6 +54,11 @@ export const COUNTRY_COLOR_ROWS = [
   ["#a87d58", "#8b6240", "#6e4a2c", "#53361e", "#3b2414"],
 ];
 export const COLORS = COUNTRY_COLOR_ROWS.flat();
+// Keep game pieces visually distinct from the green success state and the
+// pale neutral map/background: those rows are reserved for UI semantics.
+export const PLAYABLE_COLOR_ROWS = COUNTRY_COLOR_ROWS.filter(
+  (_, index) => index !== 0 && index !== 10 && index !== 11,
+);
 export function chooseColors(count: number, used: string[] = [], random = Math.random): string[] {
   const shuffle = <T,>(values: T[]) => {
     const result = [...values];
@@ -66,7 +71,7 @@ export function chooseColors(count: number, used: string[] = [], random = Math.r
   const selected: string[] = [];
   while (selected.length < count) {
     let added = false;
-    for (const row of shuffle(COUNTRY_COLOR_ROWS)) {
+    for (const row of shuffle(PLAYABLE_COLOR_ROWS)) {
       const color = shuffle(row).find(c => !used.includes(c) && !selected.includes(c));
       if (color) { selected.push(color); added = true; }
       if (selected.length === count) break;
