@@ -1323,7 +1323,7 @@ export default function TrueSizeGame() {
             aria-label="Celý svět"
             title="Celý svět"
           >
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-7 8 7M6 10v10h12V10M9 20v-6h6v6" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg>
           </button>
         </div>
         {detail && !detail.anonymous && (
