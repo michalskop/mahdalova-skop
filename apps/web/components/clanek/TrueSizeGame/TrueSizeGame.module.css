@@ -699,6 +699,20 @@
   display: flex;
   gap: 8px;
 }
+.detail .factGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 18px;
+  align-items: baseline;
+}
+.factGrid > span { color: #6f7180; }
+.factGrid > strong { text-align: right; }
+.factGrid .rankFact {
+  grid-column: 1 / -1;
+  color: var(--accent);
+  text-align: left;
+  margin-top: 4px;
+}
 .detail > div button {
   padding: 6px 10px;
   border: 1px solid #dfe2db;
