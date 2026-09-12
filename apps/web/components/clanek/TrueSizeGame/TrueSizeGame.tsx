@@ -414,6 +414,8 @@ export default function TrueSizeGame() {
   const [roundMenuOpen, setRoundMenuOpen] = useState(false);
   const [roundCount, setRoundCount] = useState<5 | 10 | 15>(5);
   const [roundHover, setRoundHover] = useState<5 | 10 | 15 | null>(null);
+  const [hintLevel, setHintLevel] = useState(0);
+  const hintTimer = useRef<number | null>(null);
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
@@ -627,6 +629,8 @@ export default function TrueSizeGame() {
   }, [countries, pieces, query]);
 
   function stopDrag() {
+    if (hintTimer.current !== null) window.clearTimeout(hintTimer.current);
+    hintTimer.current = null;
     cancelAnimationFrame(frame.current);
     pending.current = null;
     drag.current = null;
@@ -673,6 +677,7 @@ export default function TrueSizeGame() {
     };
     setPieces((prev) => [...prev, piece]);
     setActiveId(piece.id);
+    setHintLevel(0);
     setDetailId(null);
     setQuery("");
     setSearchOpen(false);
@@ -702,6 +707,7 @@ export default function TrueSizeGame() {
     setPieces(spreadPieces(additions, byName, projectionId, mapHeight));
     setActiveId(additions[additions.length - 1]?.id || null);
     resolved.current.clear();
+    setHintLevel(0);
     setNotice("");
     setDetailId(null);
     // Keep the current projection viewport when changing round size. Resetting
@@ -736,9 +742,6 @@ export default function TrueSizeGame() {
     // useful after the automatic snap-to-position.
     setDetailId(piece.id);
     setHoverId(null);
-  }
-  function checkPosition() {
-    if (selected) resolvePosition(selected);
   }
   function mapPosition(x: number, y: number): LonLat | null {
     const matrix = svg.current?.getScreenCTM();
@@ -780,6 +783,8 @@ export default function TrueSizeGame() {
     svg.current?.setPointerCapture(e.pointerId);
     setDetailId(null);
     setNotice("");
+    setHintLevel(0);
+    hintTimer.current = window.setTimeout(() => setHintLevel(1), 3000);
     drag.current = {
       pointer: e.pointerId,
       piece,
@@ -1144,16 +1149,14 @@ export default function TrueSizeGame() {
               </button>
             ))}
           </div>
-          <button
-            className={styles.confirm}
-            onClick={checkPosition}
-            disabled={!selected || !!selected.result}
-            aria-label="Ověřit polohu vybrané země"
-            title="Ověřit polohu"
-          >
-            <span aria-hidden="true">✓</span>
-            <span>Ověřit</span>
-          </button>
+          {hintLevel > 0 && selected && !selected.result && (
+            <button
+              className={`${styles.hintButton} ${styles.hintPulse}`}
+              aria-label="Nápověda"
+              title="Nápověda"
+              onClick={() => { setDetailId(selected.id); setHintLevel((level) => Math.min(3, level + 1)); }}
+            >💡</button>
+          )}
           <div className={styles.utilities}>
             <div
               className={styles.roundControl}
@@ -1344,7 +1347,7 @@ export default function TrueSizeGame() {
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg>
           </button>
         </div>
-        {detail && !detail.anonymous && (
+        {detail && (!detail.anonymous || hintLevel > 0) && (
           <aside className={styles.detail} aria-label="Vybraná země">
             <button
               className={styles.close}
@@ -1374,6 +1377,15 @@ export default function TrueSizeGame() {
             <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
             <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
             <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
+            {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
+              <span>Hledaná země: {label(detail.name)}. Přetáhni ji na správné místo.</span>
+            )}
+            {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
+              <span>Kontinent: {FACTS[detail.name]?.note?.split(";")[0] ?? "světa"}</span>
+            )}
+            {hintLevel > 2 && detail.id === selected?.id && !detail.result && (
+              <button onClick={() => resolvePosition(detail)}>Ukázat řešení</button>
+            )}
           </aside>
         )}
         <div className={styles.credit}>
