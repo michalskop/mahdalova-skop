@@ -1381,7 +1381,7 @@ export default function TrueSizeGame() {
               <span>Hledaná země: {label(detail.name)}. Přetáhni ji na správné místo.</span>
             )}
             {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
-              <span>Kontinent: {detailCountry?.continent ?? "neuveden"}</span>
+              <span>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
             )}
             {hintLevel > 2 && detail.id === selected?.id && !detail.result && (
               <button onClick={() => resolvePosition(detail)}>Ukázat řešení</button>
