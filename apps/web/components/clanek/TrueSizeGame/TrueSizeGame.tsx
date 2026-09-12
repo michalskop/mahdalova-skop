@@ -208,7 +208,7 @@ type Rect = { x: number; y: number; width: number; height: number };
 const MOBILE_QUERY = "(max-width: 600px)";
 const MOBILE_HEIGHT = Math.round(HEIGHT * 1.25);
 const GREEN = "#639e0a";
-const ORANGE = "#f76800";
+const ORANGE = "#ff934d";
 const label = (name: string) =>
   COUNTRIES[name]?.cs ||
   (
@@ -416,6 +416,7 @@ export default function TrueSizeGame() {
   const [roundHover, setRoundHover] = useState<5 | 10 | 15 | null>(null);
   const [hintLevel, setHintLevel] = useState(0);
   const [hintPulsing, setHintPulsing] = useState(false);
+  const hintedPieces = useRef(new Set<number>());
   const hintTimer = useRef<number | null>(null);
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
@@ -719,6 +720,7 @@ export default function TrueSizeGame() {
     setPieces(spreadPieces(additions, byName, projectionId, mapHeight));
     setActiveId(additions[additions.length - 1]?.id || null);
     resolved.current.clear();
+    hintedPieces.current.clear();
     setHintLevel(0);
     setHintPulsing(false);
     setNotice("");
@@ -741,13 +743,13 @@ export default function TrueSizeGame() {
       projection,
       matrix ? Math.hypot(matrix.a, matrix.b) : 1,
     );
-    const result: Result = success ? "correct" : "revealed";
+    const result: Result = success && !hintedPieces.current.has(piece.id) ? "correct" : "revealed";
     update({
       ...homePiece(piece, country),
       anonymous: false,
       result,
       pinned: true,
-      color: success ? GREEN : ORANGE,
+      color: result === "correct" ? GREEN : ORANGE,
     });
     setNotice("");
     setNoticeResult(null);
@@ -1174,7 +1176,7 @@ export default function TrueSizeGame() {
                 aria-controls={roundMenuOpen ? roundMenuId : undefined}
                 title="Nová hra"
               >
-                ↻
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2.4 5.7" /></svg>
               </button>
               {roundMenuOpen && (
                 <div
@@ -1210,6 +1212,7 @@ export default function TrueSizeGame() {
                 if (!selected || selected.result) return;
                 if (hintTimer.current !== null) window.clearTimeout(hintTimer.current);
                 hintTimer.current = null;
+                hintedPieces.current.add(selected.id);
                 setHintPulsing(false);
                 setHintLevel((level) => Math.max(1, level));
                 setDetailId(selected.id);
@@ -1308,7 +1311,8 @@ export default function TrueSizeGame() {
               >
                 <path
                   d={path(placeCountry(byName.get(piece.name)!, piece)) || ""}
-                  fill={piece.color}
+                  fill={piece.result === "revealed" ? "#fff3e8" : piece.color}
+                  style={piece.result === "revealed" ? { fillOpacity: 1 } : undefined}
                   fillOpacity={
                     piece.result
                       ? 0.32
