@@ -1363,7 +1363,7 @@ export default function TrueSizeGame() {
                         : 0.18
                   }
                   stroke={piece.color}
-                  strokeWidth={selected?.id === piece.id ? 2.4 : 1.4}
+                  strokeWidth={1.4}
                   vectorEffect="non-scaling-stroke"
                 />
                 {anchor &&

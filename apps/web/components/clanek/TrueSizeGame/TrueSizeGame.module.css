@@ -338,9 +338,6 @@
 .piece.pinned {
   cursor: pointer;
 }
-.piece:focus-visible > path {
-  stroke-width: 3;
-}
 .countryLabel {
   fill: var(--ink);
   font-size: 11px;
