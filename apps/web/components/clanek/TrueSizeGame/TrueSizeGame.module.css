@@ -1216,7 +1216,8 @@
 .detail .close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
 .board .detail .close:hover { background: #f5f0eb; transform: none; }
 .creditBrand { max-width: min(180px, 36%); pointer-events: none; }
-.creditBrand { font-family: var(--mantine-font-family), "IBM Plex Sans", sans-serif; }
+.creditBrand { font-family: var(--mantine-font-family), "IBM Plex Sans", sans-serif; scale: 0.9; transform-origin: top left; }
+.creditBrand span { font-weight: 400 !important; font-family: inherit; }
 @media (max-width: 600px) {
   .mapArea .detail { left: auto; bottom: auto; max-width: none; }
 }
