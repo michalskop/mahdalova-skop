@@ -100,11 +100,12 @@
 
 .mapArea .zoom {
   top: 16px;
+  width: 44px;
 }
 .projectionGuide {
   position: absolute;
   left: 16px;
-  right: 16px;
+  right: 72px;
   top: 16px;
   z-index: 2;
   display: block;
@@ -218,8 +219,9 @@
   }
   .projectionGuide {
     left: 10px;
-    top: 10px;
-    width: calc(100% - 20px);
+    right: 72px;
+    top: 16px;
+    width: auto;
   }
 }
 
