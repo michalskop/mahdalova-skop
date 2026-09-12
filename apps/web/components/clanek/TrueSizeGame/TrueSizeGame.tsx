@@ -789,7 +789,7 @@ export default function TrueSizeGame() {
     setNotice("");
     if (hintLevel === 0 || selected?.id !== piece.id) setHintLevel(0);
     setHintPulsing(false);
-    hintTimer.current = window.setTimeout(() => {
+    if (hintLevel === 0) hintTimer.current = window.setTimeout(() => {
       setHintLevel(1);
       setHintPulsing(true);
     }, 3000);
@@ -923,11 +923,14 @@ export default function TrueSizeGame() {
         )
           piece = { ...piece, ...homePiece(piece, byName.get(piece.name)!) };
         update(piece);
-        if (
+        const solved =
           piece.lat === homePiece(piece, byName.get(piece.name)!).lat &&
           piece.lon === homePiece(piece, byName.get(piece.name)!).lon
-        )
-          resolvePosition(piece);
+        if (solved) resolvePosition(piece);
+        else if (hintLevel > 0) {
+          setDetailId(piece.id);
+          setHintLevel((level) => Math.min(2, level + 1));
+        }
       } else select(piece);
     }
     if (e.currentTarget.hasPointerCapture(e.pointerId))
@@ -1393,7 +1396,7 @@ export default function TrueSizeGame() {
               <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
               <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
             </>}
-            {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
+            {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
               <span className={styles.hintText}>Přetáhni ji na správné místo.</span>
             )}
             {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
