@@ -424,6 +424,7 @@ export default function TrueSizeGame() {
   const [mapHeight, setMapHeight] = useState(HEIGHT);
   const [portraitMobile, setPortraitMobile] = useState(false);
   const [trayRows, setTrayRows] = useState(8);
+  const [logoPosition, setLogoPosition] = useState<{left: number; top: number} | null>(null);
   const [view, setView] = useState<Rect>(() => ({
     x: 0,
     y: 0,
@@ -591,6 +592,36 @@ export default function TrueSizeGame() {
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
   }, []);
+  useEffect(() => {
+    const map = svg.current;
+    const area = map?.parentElement;
+    if (!map || !area) return;
+    const positionLogo = () => {
+      const projected = rendered([22, -43]);
+      const matrix = map.getScreenCTM();
+      const brand = area.querySelector<HTMLElement>(`.${styles.creditBrand}`);
+      if (!projected || !matrix || !brand) return;
+      const point = new DOMPoint(...projected).matrixTransform(matrix);
+      const bounds = area.getBoundingClientRect();
+      const mapBounds = map.getBoundingClientRect();
+      const width = brand.offsetWidth;
+      const height = brand.offsetHeight;
+      let left = Math.max(8, Math.min(bounds.width - width - 8, point.x - bounds.left - width / 2));
+      const top = Math.max(mapBounds.top - bounds.top + 8, Math.min(mapBounds.bottom - bounds.top - height - 22, point.y - bounds.top));
+      for (const selector of [styles.detail, styles.countryControls]) {
+        const obstacle = area.querySelector<HTMLElement>(`.${selector}`)?.getBoundingClientRect();
+        if (obstacle && left + width > obstacle.left - bounds.left && left < obstacle.right - bounds.left && top + height > obstacle.top - bounds.top && top < obstacle.bottom - bounds.top) {
+          left = Math.min(bounds.width - width - 8, obstacle.right - bounds.left + 8);
+        }
+      }
+      setLogoPosition({left, top});
+    };
+    positionLogo();
+    const observer = new ResizeObserver(positionLogo);
+    observer.observe(area);
+    observer.observe(map);
+    return () => observer.disconnect();
+  }, [rendered, view, detailId, hintLevel, pieces.length, portraitMobile]);
   // Briefly reveal a country's name when it becomes selected, then fade out.
   // Anonymous (still-to-guess) pieces stay unnamed.
   useEffect(() => {
@@ -1286,7 +1317,7 @@ export default function TrueSizeGame() {
             };
           }}
         >
-          <path d={path(graticule) || ""} fill="none" stroke="#d8c6e2" strokeWidth={0.5} opacity={0.32} pointerEvents="none" aria-hidden="true" />
+          <path d={path(graticule) || ""} fill="none" stroke="#c8b2d5" strokeWidth={0.55} opacity={0.42} pointerEvents="none" aria-hidden="true" />
           <Basemap
             countries={countries}
             path={path}
@@ -1395,7 +1426,7 @@ export default function TrueSizeGame() {
               }}
               aria-label="Zavřít detail"
             >
-              ×
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
             </button>
             <strong className={hintLevel > 0 && !detail.result ? styles.hintTitle : undefined} style={{ color: hintLevel > 0 && !detail.result ? "var(--ink)" : detail.color }}>
               {hintLevel > 0 && !detail.result && <span className={styles.hintLabel}>Hledaná země</span>}
@@ -1404,7 +1435,7 @@ export default function TrueSizeGame() {
                   code={ISO2[detail.name]}
                   size={18}
                   alt=""
-                  style={{ marginRight: 8, width: 36, height: 18, objectFit: "fill", borderRadius: 2 }}
+                  style={{ marginRight: 8, width: 36, height: 24, aspectRatio: "3 / 2", objectFit: "contain", background: "#f8f6f0", borderRadius: 2 }}
                 />
               )}
               {hintLevel > 0 && !detail.result ? <span className={styles.hintCountryName} style={{ color: detail.color }}>{label(detail.name)}</span> : label(detail.name)}
@@ -1413,7 +1444,7 @@ export default function TrueSizeGame() {
               <span>Hlavní město</span><strong>{FACTS[detail.name]?.capital}</strong>
               <span>Rozloha</span><strong>{number.format(areaKm2(byName.get(detail.name)!))} km²</strong>
               <span>Obyvatelstvo</span><strong>{FACTS[detail.name]?.population}</strong>
-              <span>Hustota</span><strong>{FACTS[detail.name]?.density ?? "—"}</strong>
+              <span>Hustota osídlení</span><strong>{FACTS[detail.name]?.density ?? "—"}</strong>
               <strong className={styles.rankFact}>Rozlohou {detailAreaRank}. největší země světa</strong>
             </div> : !hintLevel && <>
               <small>≈ {number.format(areaKm2(byName.get(detail.name)!))} km²</small>
@@ -1440,7 +1471,7 @@ export default function TrueSizeGame() {
             The True Size
           </a>
         </div>
-        <div className={styles.creditBrand}>
+        <div className={styles.creditBrand} style={logoPosition ? { ...logoPosition, bottom: "auto", transform: "none" } : undefined}>
           <LogoWithText size="md" color="#101432" />
         </div>
       </div>

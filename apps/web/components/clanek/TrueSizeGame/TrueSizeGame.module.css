@@ -716,12 +716,12 @@
 }
 .detail .factGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3px;
+  grid-template-columns: 1fr auto;
+  gap: 4px 14px;
   align-items: baseline;
 }
 .factGrid > span { color: #6f7180; }
-.factGrid > strong { text-align: left; }
+.factGrid > strong { text-align: right; }
 .factGrid .rankFact {
   grid-column: 1 / -1;
   color: var(--accent);
@@ -1191,3 +1191,24 @@
 /* Solved thumbnails inherit the same outcome color as the map piece. */
 .sideDock .dockPiece[data-solved="true"] svg { color: inherit; }
 .sideDock .dockPiece[data-solved="true"] svg path { stroke: currentColor; }
+
+.mapArea .detail { left: 12px; bottom: 28px; max-width: min(280px, calc(100% - 84px)); }
+.board .detail .close {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  transform: none;
+}
+.detail .close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.board .detail .close:hover { background: #f5f0eb; transform: none; }
+.creditBrand { max-width: min(180px, 36%); pointer-events: none; }
+.creditBrand { font-family: var(--mantine-font-family), "IBM Plex Sans", sans-serif; }
+@media (max-width: 600px) {
+  .mapArea .detail { left: auto; bottom: auto; max-width: none; }
+}
