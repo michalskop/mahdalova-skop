@@ -787,7 +787,7 @@ export default function TrueSizeGame() {
     svg.current?.setPointerCapture(e.pointerId);
     setDetailId(null);
     setNotice("");
-    setHintLevel(0);
+    if (hintLevel === 0 || selected?.id !== piece.id) setHintLevel(0);
     setHintPulsing(false);
     hintTimer.current = window.setTimeout(() => {
       setHintLevel(1);
