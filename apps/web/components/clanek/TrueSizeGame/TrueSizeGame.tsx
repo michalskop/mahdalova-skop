@@ -1148,7 +1148,56 @@ export default function TrueSizeGame() {
         </div>
       </div>
       <div className={styles.mapArea}>
-          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí">
+          <div className={styles.countryControls}>
+            <div
+              className={styles.roundControl}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node | null))
+                  setRoundMenuOpen(false);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  setRoundMenuOpen(false);
+                  restartButton.current?.focus();
+                }
+              }}
+            >
+              <button
+                ref={restartButton}
+                className={styles.hintButton}
+                onClick={() => setRoundMenuOpen((open) => !open)}
+                aria-label="Nová hra – vybrat počet zemí"
+                aria-expanded={roundMenuOpen}
+                aria-controls={roundMenuOpen ? roundMenuId : undefined}
+                title="Nová hra"
+              >
+                ↻
+              </button>
+              {roundMenuOpen && (
+                <div
+                  className={styles.roundMenu}
+                  id={roundMenuId}
+                  role="group"
+                  aria-label="Počet zemí"
+                >
+                  <span>Počet zemí</span>
+                  <div>
+                    {([5, 10, 15] as const).map((count) => (
+                      <button
+                        key={count}
+                        onClick={() => newGame(count)}
+                        aria-label={`${count} zemí`}
+                        aria-selected={(roundHover ?? roundCount) === count}
+                        onMouseEnter={() => setRoundHover(count)}
+                      >
+                        {count}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
           {hintLevel > 0 && selected && !selected.result && (
             <button
               className={`${styles.hintButton} ${styles.dockHint} ${hintPulsing ? styles.hintPulse : ""}`}
@@ -1158,6 +1207,7 @@ export default function TrueSizeGame() {
             >💡</button>
           )}
 
+          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí">
             {pieces.map((piece, index) => (
               <button
                 key={piece.id}
@@ -1165,7 +1215,7 @@ export default function TrueSizeGame() {
                 aria-label={`Vybrat ${accessibleName(piece)}`}
                 aria-pressed={selected?.id === piece.id}
                 title={`${accessibleName(piece)}${piece.result === "correct" ? " · správně" : piece.result === "revealed" ? " · odhaleno" : ""}`}
-                style={{ color: piece.color, gridColumn: pieces.length <= 5 || index < 7 ? 1 : 2, gridRow: (pieces.length <= 5 || index < 7 ? index + 1 : index - 6) + (hintLevel > 0 && selected && !selected.result ? 1 : 0) }}
+                style={{ color: piece.color, gridColumn: pieces.length <= 5 || index < 7 ? 1 : 2, gridRow: (pieces.length <= 5 || index < 7 ? index + 1 : index - 6) }}
                 onPointerDown={(e) => beginDrag(e, piece, true)}
                 onClick={() => select(piece)}
               >
@@ -1177,6 +1227,7 @@ export default function TrueSizeGame() {
                 )}
               </button>
             ))}
+          </div>
           </div>
 
         <svg
@@ -1289,55 +1340,6 @@ export default function TrueSizeGame() {
           <span className={styles.guideText}>{projectionText}</span>
         </aside>
         <div className={styles.zoom}>
-            <div
-              className={styles.roundControl}
-              onBlur={(e) => {
-                if (!e.currentTarget.contains(e.relatedTarget as Node | null))
-                  setRoundMenuOpen(false);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Escape") {
-                  setRoundMenuOpen(false);
-                  restartButton.current?.focus();
-                }
-              }}
-            >
-              <button
-                ref={restartButton}
-                className={styles.hintButton}
-                onClick={() => setRoundMenuOpen((open) => !open)}
-                aria-label="Nová hra – vybrat počet zemí"
-                aria-expanded={roundMenuOpen}
-                aria-controls={roundMenuOpen ? roundMenuId : undefined}
-                title="Nová hra"
-              >
-                ↻
-              </button>
-              {roundMenuOpen && (
-                <div
-                  className={styles.roundMenu}
-                  id={roundMenuId}
-                  role="group"
-                  aria-label="Počet zemí"
-                >
-                  <span>Počet zemí</span>
-                  <div>
-                    {([5, 10, 15] as const).map((count) => (
-                      <button
-                        key={count}
-                        onClick={() => newGame(count)}
-                        aria-label={`${count} zemí`}
-                        aria-selected={(roundHover ?? roundCount) === count}
-                        onMouseEnter={() => setRoundHover(count)}
-                      >
-                        {count}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
           <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
           </button>

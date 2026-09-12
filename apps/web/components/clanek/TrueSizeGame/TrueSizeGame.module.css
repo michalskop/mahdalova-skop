@@ -1088,3 +1088,44 @@
   place-items: center;
   padding: 0;
 }
+
+.mapArea .countryControls {
+  position: absolute;
+  left: 10px;
+  top: 90px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  max-height: calc(100% - 100px);
+}
+.countryControls .sideDock {
+  position: static;
+  margin: 0;
+  flex: 0 1 auto;
+  min-height: 0;
+}
+.board .countryControls > .dockHint { font-size: 29px; flex-shrink: 0; }
+.countryControls .roundControl { flex-shrink: 0; }
+.countryControls .roundMenu {
+  left: calc(100% + 8px);
+  right: auto;
+  top: 0;
+  bottom: auto;
+  transform: none;
+  z-index: 5;
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  .mapArea .countryControls {
+    position: static;
+    grid-row: 2;
+    grid-column: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    max-height: none;
+    padding: 8px 10px 10px;
+  }
+  .countryControls .sideDock { width: auto; flex: 1 1 0; }
+  .countryControls .roundMenu { left: 0; top: auto; bottom: calc(100% + 8px); }
+}
