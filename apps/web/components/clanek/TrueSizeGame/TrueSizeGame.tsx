@@ -726,6 +726,7 @@ export default function TrueSizeGame() {
   function addCountry(name: string) {
     if (pieces.length >= 15) {
       setNotice("Dosažen maximální počet zemí v tomto kole, spusť novou hru.");
+      window.setTimeout(() => setNotice(""), 4200);
       return;
     }
     if (pieces.some((p) => p.name === name)) return;
@@ -1403,6 +1404,7 @@ export default function TrueSizeGame() {
             );
           })}
         </svg>
+        {notice && <div className={styles.notice} role="status">{notice}</div>}
         <aside className={styles.projectionGuide} aria-live="polite">
           <strong>
             {PROJECTIONS.find((item) => item.id === projectionId)?.name}
