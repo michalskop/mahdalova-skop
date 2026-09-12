@@ -1257,7 +1257,7 @@ export default function TrueSizeGame() {
             };
           }}
         >
-          <path d={path(graticule) || ""} fill="none" stroke="#8f9dc9" strokeWidth={0.5} opacity={0.3} pointerEvents="none" aria-hidden="true" />
+          <path d={path(graticule) || ""} fill="none" stroke="#d8c6e2" strokeWidth={0.5} opacity={0.32} pointerEvents="none" aria-hidden="true" />
           <Basemap
             countries={countries}
             path={path}

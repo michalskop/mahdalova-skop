@@ -1,13 +1,13 @@
 .board {
   --ink: #101432;
-  --accent: #4a51ab;
+  --accent: #522a7a;
   --paper: #fdfbf7;
   position: relative;
   height: min(76dvh, 800px);
   min-height: 520px;
   margin: 28px 0;
   isolation: isolate;
-  background: #eaf2f3;
+  background: #f3edf7;
   color: var(--ink);
   border-radius: 12px;
   overflow: hidden;
@@ -74,14 +74,14 @@
   padding: 0;
   border-radius: 12px;
   background: var(--paper);
-  color: #4a51ab;
+  color: var(--accent);
   box-shadow: 0 3px 16px #10143212;
   font-size: 21px;
 }
 .board .hintButton {
   border: 1px solid #e5e0d8;
   background: var(--paper);
-  color: #4a51ab;
+  color: var(--accent);
   box-shadow: 0 3px 16px #10143212;
 }
 .board .hintButton:hover,
@@ -89,7 +89,7 @@
   background: #f5f0eb;
 }
 .hintPulse { animation: hint-pulse 1.8s ease-in-out infinite; }
-@keyframes hint-pulse { 50% { box-shadow: 0 0 0 5px #4a51ab24, 0 3px 16px #10143212; } }
+@keyframes hint-pulse { 50% { box-shadow: 0 0 0 5px #522a7a24, 0 3px 16px #10143212; } }
 
 .dashboard .score {
   order: 6;
@@ -137,7 +137,7 @@
   z-index: 2;
   display: block;
   padding: 8px 14px;
-  border-left: 3px solid #4a51ab;
+  border-left: 3px solid var(--accent);
   background: #fdfbf7d9;
   color: #101432;
   font-size: 12px;
@@ -156,7 +156,7 @@
 }
 .projectionGuide a {
   pointer-events: auto;
-  color: #4a51ab;
+  color: var(--accent);
   text-decoration: underline;
 }
 .projectionGuide button {
@@ -303,7 +303,7 @@
   outline-offset: 2px;
 }
 .map {
-  background: #eaf2f3;
+  background: #f3edf7;
   display: block;
   width: 100%;
   height: 100%;
@@ -468,7 +468,7 @@
 .suggestions li[aria-selected="true"] {
   background: #f5f0eb;
 }
-.roundControl > button { color: #4a51ab; }
+.roundControl > button { color: var(--accent); }
 .projection {
   margin-left: auto;
   background: #fdfbf7;
