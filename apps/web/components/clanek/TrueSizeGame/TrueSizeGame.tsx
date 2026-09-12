@@ -1225,6 +1225,11 @@ export default function TrueSizeGame() {
           }}
           onPointerDown={(e) => {
             setProjectionTouched(true);
+            // Clicking/panning empty map space clears the active piece. A
+            // piece stops propagation in beginDrag, so selecting another
+            // country still works normally.
+            setActiveId(null);
+            setHoverId(null);
             pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
             if (pointers.current.size >= 2) {
               startPinch();
