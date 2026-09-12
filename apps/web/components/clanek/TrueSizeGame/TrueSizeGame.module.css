@@ -274,6 +274,7 @@
   outline-offset: 2px;
 }
 .map {
+  background: #f0f1ed;
   display: block;
   width: 100%;
   height: 100%;

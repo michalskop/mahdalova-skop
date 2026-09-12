@@ -2,7 +2,8 @@
 
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { PointerEvent as Pointer, KeyboardEvent } from "react";
-import { geoPath } from "d3-geo";
+import { geoGraticule10, geoPath } from "d3-geo";
+import { useProjectionMorph } from "./useProjectionMorph";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
 import { COUNTRIES } from "./countries";
@@ -355,14 +356,11 @@ function fixCrimea(topo: any): void {
 
 const Basemap = memo(function Basemap({
   countries,
-  projectionId,
-  height,
+  path,
 }: {
   countries: Country[];
-  projectionId: ProjectionId;
-  height: number;
+  path: ReturnType<typeof geoPath>;
 }) {
-  const path = geoPath(makeProjection(projectionId, height));
   return (
     <g className={styles.basemap} aria-hidden="true">
       {countries.map((country) => (
@@ -467,7 +465,9 @@ export default function TrueSizeGame() {
     () => makeProjection(projectionId, mapHeight),
     [projectionId, mapHeight],
   );
-  const path = useMemo(() => geoPath(projection), [projection]);
+  const { rendered, animating } = useProjectionMorph(projection, mapHeight);
+  const path = useMemo(() => geoPath(rendered), [rendered]);
+  const graticule = useMemo(() => geoGraticule10(), []);
   const fullView = useMemo<Rect>(
     () => ({ x: 0, y: 0, width: WIDTH, height: mapHeight }),
     [mapHeight],
@@ -1196,6 +1196,8 @@ export default function TrueSizeGame() {
         <svg
           ref={svg}
           className={styles.map}
+          style={{ pointerEvents: animating ? "none" : undefined }}
+          aria-busy={animating}
           viewBox={`${view.x} ${view.y} ${view.width} ${view.height}`}
           aria-label="Mapa. Obrys přesuň tažením nebo šipkami, polohu ověř fajfkou."
           onPointerMove={onMove}
@@ -1228,11 +1230,11 @@ export default function TrueSizeGame() {
         >
           <Basemap
             countries={countries}
-            projectionId={projectionId}
-            height={mapHeight}
+            path={path}
           />
+          <path d={path(graticule) || ""} fill="none" stroke="#8f9dc9" strokeWidth={0.5} opacity={0.45} pointerEvents="none" aria-hidden="true" />
           {ordered.map((piece) => {
-            const anchor = projection([piece.lon, piece.lat]);
+            const anchor = rendered([piece.lon, piece.lat]);
             const r = Math.max(3, (6 * view.width) / WIDTH);
             return (
               <g
@@ -1254,7 +1256,7 @@ export default function TrueSizeGame() {
                   setHoverId((id) => (id === piece.id ? null : id));
                 }}
                 onFocus={() => setActiveId(piece.id)}
-                onKeyDown={(e) => keyMove(e, piece)}
+                onKeyDown={(e) => { if (!animating) keyMove(e, piece); }}
               >
                 <path
                   d={path(placeCountry(byName.get(piece.name)!, piece)) || ""}
