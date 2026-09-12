@@ -1171,7 +1171,14 @@
 }
 
 .board .roundControl > button { display: grid; place-items: center; padding: 0; }
-.mapArea .zoom .roundControl > button { color: #101432; }
+.board .mapArea .zoom > button,
+.board .mapArea .countryControls .roundControl > button {
+  color: #101432;
+  opacity: 1;
+}
+.board .mapArea .zoom > button:disabled {
+  background: #eeeae2;
+}
 .sideDock .dockPiece svg { color: #f3eaf8; }
 .board .sideDock .dockPiece svg { opacity: 1; }
 .sideDock .dockPiece svg path { stroke: #8c7899; stroke-width: .8px; vector-effect: non-scaling-stroke; }
