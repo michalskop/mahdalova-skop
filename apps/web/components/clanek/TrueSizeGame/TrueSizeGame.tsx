@@ -408,6 +408,7 @@ export default function TrueSizeGame() {
   const [expanded, setExpanded] = useState(false);
   const [roundMenuOpen, setRoundMenuOpen] = useState(false);
   const [roundCount, setRoundCount] = useState<5 | 10 | 15>(5);
+  const [roundHover, setRoundHover] = useState<5 | 10 | 15 | null>(null);
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
@@ -1042,6 +1043,7 @@ export default function TrueSizeGame() {
                 role="listbox"
                 className={styles.suggestions}
                 aria-label="Nalezené země"
+                onMouseLeave={() => setOptionIndex(-1)}
               >
                 {results.map((name, i) => (
                   <li
@@ -1178,13 +1180,14 @@ export default function TrueSizeGame() {
                   aria-label="Počet zemí"
                 >
                   <span>Počet zemí</span>
-                  <div>
+                  <div onMouseLeave={() => setRoundHover(null)}>
                     {([5, 10, 15] as const).map((count) => (
                       <button
                         key={count}
                         onClick={() => newGame(count)}
                         aria-label={`${count} zemí`}
-                        aria-selected={count === roundCount}
+                        aria-selected={(roundHover ?? roundCount) === count}
+                        onMouseEnter={() => setRoundHover(count)}
                       >
                         {count}
                       </button>
