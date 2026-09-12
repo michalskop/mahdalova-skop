@@ -487,8 +487,8 @@ export default function TrueSizeGame() {
   const { rendered, animating } = useProjectionMorph(projection, mapHeight);
   const path = useMemo(() => geoPath(rendered), [rendered]);
   const graticule = useMemo(() => geoGraticule()
-    .extentMajor([[-180, -89.999999], [180, 89.999999]])
-    .extentMinor([[-180, -89.999999], [180, 89.999999]])
+    .extentMajor([[-180, -80], [180, 80]])
+    .extentMinor([[-180, -80], [180, 80]])
     .stepMinor([10, 10])(), []);
   const fullView = useMemo<Rect>(
     () => ({ x: 0, y: 0, width: WIDTH, height: mapHeight }),
