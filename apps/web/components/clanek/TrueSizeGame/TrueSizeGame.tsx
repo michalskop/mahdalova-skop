@@ -482,10 +482,11 @@ export default function TrueSizeGame() {
     () => ({ x: 0, y: 0, width: WIDTH, height: mapHeight }),
     [mapHeight],
   );
-  const selected =
-    pieces.find((p) => p.id === activeId) ||
-    pieces.find((p) => !p.result) ||
-    pieces[pieces.length - 1];
+  // Only an explicitly active piece is highlighted. Clicking empty map space
+  // clears activeId, leaving the dock visually neutral until the next choice.
+  const selected = activeId === null
+    ? undefined
+    : pieces.find((p) => p.id === activeId) || pieces.find((p) => !p.result) || pieces[pieces.length - 1];
   // Hover (desktop) previews info; a click/tap pins it. Hover wins while active.
   // A clicked tooltip stays open until the user clicks elsewhere or closes it;
   // hover only previews a country while no tooltip has been pinned.
