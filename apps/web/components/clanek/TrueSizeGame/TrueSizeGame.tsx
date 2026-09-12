@@ -722,7 +722,10 @@ export default function TrueSizeGame() {
     });
     setNotice("");
     setNoticeResult(null);
-    setDetailId(null);
+    // Keep the solved/revealed country's tooltip open so the result remains
+    // useful after the automatic snap-to-position.
+    setDetailId(piece.id);
+    setHoverId(null);
   }
   function checkPosition() {
     if (selected) resolvePosition(selected);

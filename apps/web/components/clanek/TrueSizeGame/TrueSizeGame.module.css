@@ -404,7 +404,7 @@
   position: absolute;
   right: 0;
   bottom: calc(100% + 12px);
-  width: 180px;
+  width: 120px;
   padding: 12px;
   border-radius: 12px;
   background: var(--paper);
@@ -423,8 +423,12 @@
   width: 100%;
   min-height: 36px;
   font-size: 15px;
-  background: #e9e9dd;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 7px;
 }
+.board .roundMenu button:hover,
+.board .roundMenu button:focus-visible { background: #f5f0eb; }
 .suggestions li {
   display: flex;
   justify-content: space-between;
@@ -434,8 +438,9 @@
 }
 .suggestions li[aria-selected="true"],
 .suggestions li:hover {
-  background: #e9e9dd;
+  background: #f5f0eb;
 }
+.roundControl > button { color: #4a51ab; }
 .projection {
   margin-left: auto;
   background: #fdfbf7;
