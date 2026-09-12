@@ -1241,11 +1241,11 @@ export default function TrueSizeGame() {
             };
           }}
         >
+          <path d={path(graticule) || ""} fill="none" stroke="#8f9dc9" strokeWidth={0.5} opacity={0.3} pointerEvents="none" aria-hidden="true" />
           <Basemap
             countries={countries}
             path={path}
           />
-          <path d={path(graticule) || ""} fill="none" stroke="#8f9dc9" strokeWidth={0.5} opacity={0.3} pointerEvents="none" aria-hidden="true" />
           {ordered.map((piece) => {
             const anchor = rendered([piece.lon, piece.lat]);
             const r = Math.max(3, (6 * view.width) / WIDTH);
