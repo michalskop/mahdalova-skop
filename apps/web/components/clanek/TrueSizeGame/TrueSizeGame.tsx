@@ -400,6 +400,7 @@ export default function TrueSizeGame() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [projectionId, setProjectionId] = useState<ProjectionId>("mercator");
   const [projectionTouched, setProjectionTouched] = useState(false);
+  const [projectionHighlight, setProjectionHighlight] = useState<ProjectionId | null>(null);
   const [projectionText, setProjectionText] = useState("");
   const [flashId, setFlashId] = useState<number | null>(null);
   const [flashKey, setFlashKey] = useState(0);
@@ -1173,6 +1174,9 @@ export default function TrueSizeGame() {
                 <button
                   key={p.id}
                   aria-pressed={p.id === projectionId}
+                  data-highlighted={(projectionHighlight ?? projectionId) === p.id}
+                  onMouseEnter={() => setProjectionHighlight(p.id)}
+                  onFocus={() => setProjectionHighlight(p.id)}
                   onClick={(e) => {
                     stopDrag();
                     setProjectionTouched(true);

@@ -987,7 +987,7 @@
 }
 .board
   .projectionOptions
-  button:is(:hover, :focus-visible, [aria-pressed="true"]) {
+  button[data-highlighted="true"] {
   background: #f5f0eb;
 }
 .board :is(.suggestions, .projectionOptions, .dock) {
@@ -1177,7 +1177,7 @@
   opacity: 1;
 }
 .board .mapArea .zoom > button:disabled {
-  background: #eeeae2;
+  background: var(--paper);
 }
 .sideDock .dockPiece svg { color: #f3eaf8; }
 .board .sideDock .dockPiece svg { opacity: 1; }
