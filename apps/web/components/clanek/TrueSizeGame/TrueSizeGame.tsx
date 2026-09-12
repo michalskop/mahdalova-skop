@@ -1102,14 +1102,6 @@ export default function TrueSizeGame() {
               ))}
             </div>
           </details>
-          <button
-            className={styles.expand}
-            onClick={() => setExpanded(!expanded)}
-            aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}
-            title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d={expanded ? "M4 9h5V4M15 4v5h5M20 15h-5v5M9 20v-5H4" : "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
-          </button>
         </div>
         <div className={styles.bottom}>
           <div className={styles.dock} aria-label="Obrysy zemí">
@@ -1306,19 +1298,22 @@ export default function TrueSizeGame() {
           </a>
         </aside>
         <div className={styles.zoom}>
+          <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
+          </button>
           <button
             onClick={() => zoom(1 / 1.5)}
             disabled={view.width <= WIDTH / 6}
             aria-label="Přiblížit mapu"
           >
-            ＋
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
           </button>
           <button
             onClick={() => zoom(1.5)}
             disabled={view.width >= WIDTH}
             aria-label="Oddálit mapu"
           >
-            −
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>
           </button>
           <button
             onClick={() => {
@@ -1328,7 +1323,7 @@ export default function TrueSizeGame() {
             aria-label="Celý svět"
             title="Celý svět"
           >
-            ⌂
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-7 8 7M6 10v10h12V10M9 20v-6h6v6" /></svg>
           </button>
         </div>
         {detail && !detail.anonymous && (
