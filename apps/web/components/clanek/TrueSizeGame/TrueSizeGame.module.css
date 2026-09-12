@@ -684,6 +684,7 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 4px 8px;
+  margin-bottom: 3px;
   animation: hint-type 1100ms steps(42, end) both;
 }
 .hintText,
@@ -696,6 +697,7 @@
 .hintCountryName { font-weight: 700; }
 .hintTitle .hintLabel,
 .hintText { font-size: 12px; }
+.detail > .hintText { display: block; margin-top: 1px; }
 @keyframes hint-type { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 .hintSolution { color: var(--accent); font-weight: 700; }
 .detailFlag {
