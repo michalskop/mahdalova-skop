@@ -1043,7 +1043,6 @@ export default function TrueSizeGame() {
                 role="listbox"
                 className={styles.suggestions}
                 aria-label="Nalezené země"
-                onMouseLeave={() => setOptionIndex(-1)}
               >
                 {results.map((name, i) => (
                   <li
@@ -1180,7 +1179,7 @@ export default function TrueSizeGame() {
                   aria-label="Počet zemí"
                 >
                   <span>Počet zemí</span>
-                  <div onMouseLeave={() => setRoundHover(null)}>
+                  <div>
                     {([5, 10, 15] as const).map((count) => (
                       <button
                         key={count}
