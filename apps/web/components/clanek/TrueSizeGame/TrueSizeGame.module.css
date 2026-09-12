@@ -665,7 +665,8 @@
   bottom: 104px;
   display: grid;
   gap: 7px;
-  width: 270px;
+  width: 250px;
+  min-height: 180px;
   min-width: 0;
   max-width: calc(100% - 32px);
   background: #fdfbf7f5;
