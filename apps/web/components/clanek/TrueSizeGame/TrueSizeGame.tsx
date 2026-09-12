@@ -928,7 +928,6 @@ export default function TrueSizeGame() {
           piece.lon === homePiece(piece, byName.get(piece.name)!).lon
         if (solved) resolvePosition(piece);
         else if (hintLevel > 0) {
-          setDetailId(piece.id);
           setHintLevel((level) => Math.min(2, level + 1));
         }
       } else select(piece);
