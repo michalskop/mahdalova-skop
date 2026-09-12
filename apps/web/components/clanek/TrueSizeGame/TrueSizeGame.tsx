@@ -423,6 +423,7 @@ export default function TrueSizeGame() {
   const roundMenuId = useId();
   const [mapHeight, setMapHeight] = useState(HEIGHT);
   const [portraitMobile, setPortraitMobile] = useState(false);
+  const [trayRows, setTrayRows] = useState(8);
   const [view, setView] = useState<Rect>(() => ({
     x: 0,
     y: 0,
@@ -580,10 +581,16 @@ export default function TrueSizeGame() {
     return () => mq.removeEventListener("change", apply);
   }, []);
   useEffect(() => {
-    const scale = portraitMobile ? 0.85 : 1;
+    const scale = projectionId === "mercator" ? (portraitMobile ? 0.85 : 1) : (portraitMobile ? 0.67 : 0.76);
     setView({ x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) / 2,
       width: WIDTH * scale, height: mapHeight * scale });
-  }, [mapHeight, portraitMobile]);
+  }, [mapHeight, portraitMobile, projectionId]);
+  useEffect(() => {
+    const resize = () => setTrayRows(Math.max(3, Math.min(8, Math.floor((window.innerHeight * .72 - 200) / 46))));
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
   // Briefly reveal a country's name when it becomes selected, then fade out.
   // Anonymous (still-to-guess) pieces stay unnamed.
   useEffect(() => {
@@ -1176,7 +1183,7 @@ export default function TrueSizeGame() {
                 aria-controls={roundMenuOpen ? roundMenuId : undefined}
                 title="Nová hra"
               >
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2.4 5.7" /></svg>
+                <svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M20.4 4.7 23 2v8.5h-8.5l3-3A7 7 0 1 0 18 16l3 2A10.5 10.5 0 1 1 20.4 4.7Z" /></svg>
               </button>
               {roundMenuOpen && (
                 <div
@@ -1219,7 +1226,7 @@ export default function TrueSizeGame() {
               }}
             >💡</button>
 
-          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí" style={{ gridTemplateRows: `repeat(${pieces.length <= 5 ? pieces.length : Math.max(7, pieces.length - 7)}, minmax(0, 42px))` }}>
+          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí" style={{ gridTemplateRows: `repeat(${Math.min(pieces.length, trayRows)}, minmax(0, 42px))` }}>
             {pieces.map((piece, index) => (
               <button
                 key={piece.id}
@@ -1228,7 +1235,7 @@ export default function TrueSizeGame() {
                 aria-label={`Vybrat ${accessibleName(piece)}`}
                 aria-pressed={selected?.id === piece.id}
                 title={`${accessibleName(piece)}${piece.result === "correct" ? " · správně" : piece.result === "revealed" ? " · odhaleno" : ""}`}
-                style={{ color: piece.color, gridColumn: pieces.length <= 5 || index < 7 ? 1 : 2, gridRow: (pieces.length <= 5 || index < 7 ? index + 1 : index - 6) }}
+                style={{ color: piece.color, gridColumn: Math.floor(index / trayRows) + 1, gridRow: index % trayRows + 1 }}
                 onPointerDown={(e) => beginDrag(e, piece, true)}
                 onClick={() => select(piece)}
               >
