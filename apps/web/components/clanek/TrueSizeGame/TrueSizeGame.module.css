@@ -679,8 +679,8 @@
   padding-right: 30px;
 }
 .hintTitle {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 4px 8px;
   animation: hint-type 760ms steps(34, end) both;
@@ -691,7 +691,7 @@
 .detail .hintText { animation-delay: 760ms; }
 .detail .hintText + .hintText { animation-delay: 1520ms; }
 .detail .hintSolution { animation-delay: 2280ms; }
-.hintTitle .hintLabel { font-weight: 400; }
+.hintTitle .hintLabel { grid-column: 1 / -1; font-weight: 400; }
 .hintCountryName { font-weight: 700; }
 .hintTitle .hintLabel,
 .hintText { font-size: 12px; }
