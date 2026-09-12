@@ -1368,7 +1368,7 @@ export default function TrueSizeGame() {
             >
               ×
             </button>
-            <strong className={hintLevel > 0 && !detail.result ? styles.hintTitle : undefined} style={{ color: detail.color }}>
+            <strong className={hintLevel > 0 && !detail.result ? styles.hintTitle : undefined} style={{ color: hintLevel > 0 && !detail.result ? "var(--ink)" : detail.color }}>
               {ISO2[detail.name] && (
                 <Flag
                   code={ISO2[detail.name]}
@@ -1377,7 +1377,7 @@ export default function TrueSizeGame() {
                   style={{ marginRight: 8, width: 36, height: 24, objectFit: "cover", borderRadius: 2 }}
                 />
               )}
-              {hintLevel > 0 && !detail.result ? <><span className={styles.hintLabel}>Hledaná země</span><span>{label(detail.name)}</span></> : label(detail.name)}
+              {hintLevel > 0 && !detail.result ? <><span className={styles.hintLabel}>Hledaná země</span><span style={{ color: detail.color }}>{label(detail.name)}</span></> : label(detail.name)}
             </strong>
             {detail.result ? <div className={styles.factGrid}>
               <span>Hlavní město</span><strong>{FACTS[detail.name]?.capital}</strong>
@@ -1393,7 +1393,7 @@ export default function TrueSizeGame() {
               <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
             </>}
             {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
-              <span>Hledaná země: {label(detail.name)}. Přetáhni ji na správné místo.</span>
+              <span className={styles.hintText}>Přetáhni ji na správné místo.</span>
             )}
             {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
               <span className={styles.hintText}>Kontinent: {COUNTRIES[detail.name]?.continent ?? "neuveden"}</span>
