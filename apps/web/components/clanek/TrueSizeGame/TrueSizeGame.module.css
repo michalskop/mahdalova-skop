@@ -60,7 +60,7 @@
   flex: 1 1 250px;
   min-width: 160px;
   max-width: 420px;
-  border: 1px solid #e5e0d8;
+  border: 0;
   box-shadow: 0 3px 16px #10143212;
 }
 
@@ -79,7 +79,7 @@
   font-size: 21px;
 }
 .board .hintButton {
-  border: 1px solid #e5e0d8;
+  border: 0;
   background: var(--paper);
   color: var(--accent);
   box-shadow: 0 3px 16px #10143212;
@@ -585,9 +585,10 @@
   overflow-x: auto;
   background: var(--paper);
   border-radius: 12px;
-  padding: 5px;
+  height: 48px;
+  padding: 0 5px;
   gap: 4px;
-  box-shadow: none;
+  box-shadow: 0 3px 16px #10143212;
 }
 .board .dockPiece {
   position: relative;
