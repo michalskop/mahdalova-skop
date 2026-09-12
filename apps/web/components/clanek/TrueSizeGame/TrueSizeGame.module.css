@@ -686,7 +686,11 @@
   animation: hint-type 760ms steps(34, end) both;
 }
 .hintText,
-.hintSolution { animation: hint-type 240ms steps(16, end) both; }
+.hintSolution { animation: hint-type 520ms steps(22, end) both; }
+.hintTitle { animation-delay: 0ms; }
+.detail .hintText { animation-delay: 760ms; }
+.detail .hintText + .hintText { animation-delay: 1520ms; }
+.detail .hintSolution { animation-delay: 2280ms; }
 .hintTitle .hintLabel { font-weight: 400; }
 .hintCountryName { font-weight: 700; }
 .hintTitle .hintLabel,
