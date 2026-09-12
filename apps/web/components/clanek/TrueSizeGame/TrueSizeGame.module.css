@@ -1218,6 +1218,28 @@
 .creditBrand { max-width: min(180px, 36%); pointer-events: none; }
 .creditBrand { font-family: var(--mantine-font-family), "IBM Plex Sans", sans-serif; scale: 0.9; transform-origin: top left; }
 .creditBrand span { font-weight: 400 !important; font-family: inherit; }
+
+/* Shared rendered stroke: SVG scaling must not change icon weight. */
+.board .zoom button svg,
+.board .roundControl > button svg,
+.board .searchIcon,
+.board .projection summary .caret {
+  width: 21px;
+  height: 21px;
+  color: #101432;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.board .zoom button svg *,
+.board .roundControl > button svg *,
+.board .searchIcon *,
+.board .projection summary .caret * {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1.8px;
+}
 @media (max-width: 600px) {
   .mapArea .detail { left: auto; bottom: auto; max-width: none; }
 }
