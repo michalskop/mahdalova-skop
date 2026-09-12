@@ -78,6 +78,16 @@
   box-shadow: 0 3px 16px #10143212;
   font-size: 21px;
 }
+.board .hintButton {
+  border: 1px solid #e5e0d8;
+  background: var(--paper);
+  color: #4a51ab;
+  box-shadow: 0 3px 16px #10143212;
+}
+.board .hintButton:hover,
+.board .hintButton:focus-visible {
+  background: #f5f0eb;
+}
 .hintPulse { animation: hint-pulse 1.8s ease-in-out infinite; }
 @keyframes hint-pulse { 50% { box-shadow: 0 0 0 5px #4a51ab24, 0 3px 16px #10143212; } }
 

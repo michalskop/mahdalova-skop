@@ -1173,6 +1173,7 @@ export default function TrueSizeGame() {
             >
               <button
                 ref={restartButton}
+                className={styles.hintButton}
                 onClick={() => setRoundMenuOpen((open) => !open)}
                 aria-label="Nová hra – vybrat počet zemí"
                 aria-expanded={roundMenuOpen}
