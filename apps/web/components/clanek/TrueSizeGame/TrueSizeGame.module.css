@@ -713,7 +713,8 @@
   transform: translateX(-50%);
   color: #101432;
   font-size: 12px;
-  font-weight: 800;
+  font-family: var(--font-ibm-plex-serif), Georgia, serif;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 .expanded {

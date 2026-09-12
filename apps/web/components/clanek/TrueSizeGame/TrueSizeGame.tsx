@@ -137,10 +137,12 @@ function spreadPieces<T extends Piece>(
     (a, b) => areaKm2(countries.get(b.name)!) - areaKm2(countries.get(a.name)!),
   );
   for (const piece of sorted) {
+    const pieceArea = areaKm2(countries.get(piece.name)!);
+    const smallCountry = pieceArea < 1_000_000;
     let best: LonLat = [0, 0];
     let bestBox: number[] = [];
     let bestCost = Infinity;
-    for (let lat = -48 + Math.random() * 4; lat <= 55; lat += 7) {
+    for (let lat = -32 + Math.random() * 4; lat <= 68; lat += 7) {
       for (let lon = -165 + Math.random() * 4; lon <= 165; lon += 10) {
         const bounds = path.bounds(
           placeCountry(countries.get(piece.name)!, { ...piece, lon, lat }),
@@ -155,7 +157,7 @@ function spreadPieces<T extends Piece>(
           box[0] < 15 ||
           box[2] > WIDTH - 15 ||
           box[1] < 30 ||
-          box[3] > height - 45
+          box[3] > height - 105
         )
           continue;
         const overlap = occupied.reduce(
@@ -181,7 +183,10 @@ function spreadPieces<T extends Piece>(
               ),
             )
           : 0;
-        const cost = overlap * 10000 - separation + Math.random() * 180;
+        // Prefer the upper half for the opening arrangement, especially for
+        // smaller silhouettes. Keep a little randomness so every round differs.
+        const upperBias = Math.max(0, 18 - lat) * (smallCountry ? 5 : 2);
+        const cost = overlap * 10000 - separation + upperBias + Math.random() * 180;
         if (cost < bestCost) {
           bestCost = cost;
           best = [lon, lat];
