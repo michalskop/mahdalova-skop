@@ -785,7 +785,7 @@ export default function TrueSizeGame() {
     e.preventDefault();
     e.currentTarget.focus();
     svg.current?.setPointerCapture(e.pointerId);
-    setDetailId(null);
+    if (!(hintLevel > 0 && selected?.id === piece.id)) setDetailId(null);
     setNotice("");
     if (hintLevel === 0 || selected?.id !== piece.id) setHintLevel(0);
     setHintPulsing(false);
@@ -1373,9 +1373,9 @@ export default function TrueSizeGame() {
               {ISO2[detail.name] && (
                 <Flag
                   code={ISO2[detail.name]}
-                  size={24}
+                  size={18}
                   alt=""
-                  style={{ marginRight: 8, width: 36, height: 24, objectFit: "cover", borderRadius: 2 }}
+                  style={{ marginRight: 8, width: 36, height: 18, objectFit: "fill", borderRadius: 2 }}
                 />
               )}
               {hintLevel > 0 && !detail.result ? <span className={styles.hintCountryName} style={{ color: detail.color }}>{label(detail.name)}</span> : label(detail.name)}
