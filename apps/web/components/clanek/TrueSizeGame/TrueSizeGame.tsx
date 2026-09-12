@@ -780,7 +780,7 @@ export default function TrueSizeGame() {
       setDetailId(piece.id);
       return;
     }
-    const point = mapPosition(e.clientX, e.clientY);
+    const point = mapPosition(e.clientX, e.clientY) ?? (fromDock ? [piece.lon, piece.lat] as LonLat : null);
     if (!point) return;
     e.preventDefault();
     e.currentTarget.focus();
@@ -1138,27 +1138,6 @@ export default function TrueSizeGame() {
           </details>
         </div>
         <div className={styles.bottom}>
-          <div className={styles.dock} aria-label="Obrysy zemí">
-            {pieces.map((piece) => (
-              <button
-                key={piece.id}
-                className={styles.dockPiece}
-                aria-label={`Vybrat ${accessibleName(piece)}`}
-                aria-pressed={selected?.id === piece.id}
-                title={`${accessibleName(piece)}${piece.result === "correct" ? " · správně" : piece.result === "revealed" ? " · odhaleno" : ""}`}
-                style={{ color: piece.color }}
-                onPointerDown={(e) => beginDrag(e, piece, true)}
-                onClick={() => select(piece)}
-              >
-                <Silhouette country={byName.get(piece.name)!} />
-                {piece.result && (
-                  <span className={styles.resultMark}>
-                    {piece.result === "correct" ? "✓" : "!"}
-                  </span>
-                )}
-              </button>
-            ))}
-          </div>
           {hintLevel > 0 && selected && !selected.result && (
             <button
               className={`${styles.hintButton} ${hintPulsing ? styles.hintPulse : ""}`}
@@ -1220,6 +1199,28 @@ export default function TrueSizeGame() {
         </div>
       </div>
       <div className={styles.mapArea}>
+          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí">
+            {pieces.map((piece, index) => (
+              <button
+                key={piece.id}
+                className={styles.dockPiece}
+                aria-label={`Vybrat ${accessibleName(piece)}`}
+                aria-pressed={selected?.id === piece.id}
+                title={`${accessibleName(piece)}${piece.result === "correct" ? " · správně" : piece.result === "revealed" ? " · odhaleno" : ""}`}
+                style={{ color: piece.color, gridColumn: pieces.length <= 5 || index < 7 ? 1 : 2, gridRow: pieces.length <= 5 || index < 7 ? index + 1 : index - 6 }}
+                onPointerDown={(e) => beginDrag(e, piece, true)}
+                onClick={() => select(piece)}
+              >
+                <Silhouette country={byName.get(piece.name)!} />
+                {piece.result && (
+                  <span className={styles.resultMark}>
+                    {piece.result === "correct" ? "✓" : "!"}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
         <svg
           ref={svg}
           className={styles.map}
