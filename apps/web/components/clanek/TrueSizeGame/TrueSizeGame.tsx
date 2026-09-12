@@ -1216,11 +1216,12 @@ export default function TrueSizeGame() {
               }}
             >💡</button>
 
-          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí">
+          <div className={`${styles.dock} ${styles.sideDock}`} aria-label="Obrysy zemí" style={{ gridTemplateRows: `repeat(${pieces.length <= 5 ? pieces.length : Math.max(7, pieces.length - 7)}, minmax(0, 42px))` }}>
             {pieces.map((piece, index) => (
               <button
                 key={piece.id}
                 className={styles.dockPiece}
+                data-solved={piece.result ? "true" : undefined}
                 aria-label={`Vybrat ${accessibleName(piece)}`}
                 aria-pressed={selected?.id === piece.id}
                 title={`${accessibleName(piece)}${piece.result === "correct" ? " · správně" : piece.result === "revealed" ? " · odhaleno" : ""}`}
@@ -1229,11 +1230,7 @@ export default function TrueSizeGame() {
                 onClick={() => select(piece)}
               >
                 <Silhouette country={byName.get(piece.name)!} />
-                {piece.result && (
-                  <span className={styles.resultMark}>
-                    {piece.result === "correct" ? "✓" : "!"}
-                  </span>
-                )}
+
               </button>
             ))}
           </div>
