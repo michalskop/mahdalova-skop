@@ -1106,6 +1106,11 @@
 }
 .board .countryControls > .dockHint { font-size: 29px; flex-shrink: 0; }
 .countryControls .roundControl { flex-shrink: 0; }
+.mapArea .countryControls,
+.countryControls .sideDock,
+.countryControls .roundControl { pointer-events: none; }
+.countryControls button,
+.countryControls .roundMenu { pointer-events: auto; }
 .countryControls .roundMenu {
   left: calc(100% + 8px);
   right: auto;
