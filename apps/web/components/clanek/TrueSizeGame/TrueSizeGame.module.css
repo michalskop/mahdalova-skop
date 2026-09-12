@@ -1037,3 +1037,25 @@
   min-height: 0;
   padding: 5px;
 }
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .mapArea {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+  .mapArea > .map { grid-row: 1; grid-column: 1; }
+  .mapArea .sideDock {
+    position: static;
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-height: none;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 0;
+  }
+  .board .sideDock .dockPiece { flex: 0 0 42px; }
+}

@@ -421,6 +421,7 @@ export default function TrueSizeGame() {
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
   const [mapHeight, setMapHeight] = useState(HEIGHT);
+  const [portraitMobile, setPortraitMobile] = useState(false);
   const [view, setView] = useState<Rect>(() => ({
     x: 0,
     y: 0,
@@ -570,10 +571,18 @@ export default function TrueSizeGame() {
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
   }, []);
-  // Reset to the full world whenever the viewport height changes.
   useEffect(() => {
-    setView({ x: 0, y: 0, width: WIDTH, height: mapHeight });
-  }, [mapHeight]);
+    const mq = window.matchMedia("(max-width: 600px) and (orientation: portrait)");
+    const apply = () => setPortraitMobile(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+  useEffect(() => {
+    const scale = portraitMobile ? 0.85 : 1;
+    setView({ x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) / 2,
+      width: WIDTH * scale, height: mapHeight * scale });
+  }, [mapHeight, portraitMobile]);
   // Briefly reveal a country's name when it becomes selected, then fade out.
   // Anonymous (still-to-guess) pieces stay unnamed.
   useEffect(() => {
