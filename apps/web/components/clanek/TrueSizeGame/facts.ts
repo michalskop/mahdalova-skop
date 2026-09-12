@@ -5,6 +5,7 @@
 export interface CountryFact {
   capital: string;
   population: string;
+  density?: string;
   note?: string;
 }
 

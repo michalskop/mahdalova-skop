@@ -1379,7 +1379,13 @@ export default function TrueSizeGame() {
               )}
               {hintLevel > 0 && !detail.result ? <><span className={styles.hintLabel}>Hledaná země</span><span>{label(detail.name)}</span></> : label(detail.name)}
             </strong>
-            {(!hintLevel || detail.result) && <>
+            {detail.result ? <div className={styles.factGrid}>
+              <span>Hlavní město</span><strong>{FACTS[detail.name]?.capital}</strong>
+              <span>Rozloha</span><strong>{number.format(areaKm2(byName.get(detail.name)!))} km²</strong>
+              <span>Obyvatelstvo</span><strong>{FACTS[detail.name]?.population}</strong>
+              <span>Hustota</span><strong>{FACTS[detail.name]?.density ?? "—"}</strong>
+              <strong className={styles.rankFact}>Rozlohou {detailAreaRank}. největší země světa</strong>
+            </div> : !hintLevel && <>
               <small>≈ {number.format(areaKm2(byName.get(detail.name)!))} km²</small>
               <span>Rozlohou {detailAreaRank}. největší země světa</span>
               <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
