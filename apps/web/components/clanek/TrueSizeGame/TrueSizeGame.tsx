@@ -1369,6 +1369,7 @@ export default function TrueSizeGame() {
               ×
             </button>
             <strong className={hintLevel > 0 && !detail.result ? styles.hintTitle : undefined} style={{ color: hintLevel > 0 && !detail.result ? "var(--ink)" : detail.color }}>
+              {hintLevel > 0 && !detail.result && <span className={styles.hintLabel}>Hledaná země</span>}
               {ISO2[detail.name] && (
                 <Flag
                   code={ISO2[detail.name]}
@@ -1377,7 +1378,7 @@ export default function TrueSizeGame() {
                   style={{ marginRight: 8, width: 36, height: 24, objectFit: "cover", borderRadius: 2 }}
                 />
               )}
-              {hintLevel > 0 && !detail.result ? <><span className={styles.hintLabel}>Hledaná země</span><span style={{ color: detail.color }}>{label(detail.name)}</span></> : label(detail.name)}
+              {hintLevel > 0 && !detail.result ? <span className={styles.hintCountryName} style={{ color: detail.color }}>{label(detail.name)}</span> : label(detail.name)}
             </strong>
             {detail.result ? <div className={styles.factGrid}>
               <span>Hlavní město</span><strong>{FACTS[detail.name]?.capital}</strong>
