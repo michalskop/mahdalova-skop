@@ -376,8 +376,9 @@
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
   color: var(--accent);
   pointer-events: none;
 }
@@ -415,12 +416,12 @@
   margin-bottom: 8px;
 }
 .roundMenu > div {
-  display: flex;
-  gap: 7px;
+  display: grid;
+  gap: 5px;
 }
 .board .roundMenu button {
-  flex: 1;
-  min-width: 40px;
+  width: 100%;
+  min-height: 36px;
   font-size: 15px;
   background: #e9e9dd;
 }

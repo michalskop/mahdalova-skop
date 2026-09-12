@@ -477,7 +477,13 @@ export default function TrueSizeGame() {
     pieces.find((p) => !p.result) ||
     pieces[pieces.length - 1];
   // Hover (desktop) previews info; a click/tap pins it. Hover wins while active.
-  const detail = pieces.find((p) => p.id === (hoverId ?? detailId));
+  // A clicked tooltip stays open until the user clicks elsewhere or closes it;
+  // hover only previews a country while no tooltip has been pinned.
+  const detail = pieces.find((p) => p.id === (detailId ?? hoverId));
+  const detailCountry = detail ? byName.get(detail.name) : undefined;
+  const detailAreaRank = detailCountry
+    ? 1 + countries.filter((country) => areaKm2(country) > areaKm2(detailCountry)).length
+    : 0;
   // Paint order: placed (result) pieces always at the bottom, unplaced pieces
   // above them, the selected/dragged piece on top. So an unplaced country under a
   // large placed one stays grabbable, while placed pieces keep pointer events and
@@ -1287,15 +1293,7 @@ export default function TrueSizeGame() {
           <strong>
             {PROJECTIONS.find((item) => item.id === projectionId)?.name}
           </strong>{" "}
-          <span className={styles.guideText}>{projectionText}</span>{" "}
-          <a
-            className={styles.guideSource}
-            href={projectionInfo[projectionId].href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            zdroj
-          </a>
+          <span className={styles.guideText}>{projectionText}</span>
         </aside>
         <div className={styles.zoom}>
           <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
@@ -1352,11 +1350,10 @@ export default function TrueSizeGame() {
             <small>
               ≈ {number.format(areaKm2(byName.get(detail.name)!))} km²
             </small>
+            <span>Rozlohou {detailAreaRank}. největší země světa</span>
             <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
             <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
-            <span className={styles.detailSize}>
-              {sizeVsCzechia(detail.name)}
-            </span>
+            <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
           </aside>
         )}
         <div className={styles.credit}>
