@@ -1370,18 +1370,18 @@ export default function TrueSizeGame() {
               )}
               {label(detail.name)}
             </strong>
-            <small>
-              ≈ {number.format(areaKm2(byName.get(detail.name)!))} km²
-            </small>
-            <span>Rozlohou {detailAreaRank}. největší země světa</span>
-            <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
-            <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
-            <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
+            {(!hintLevel || detail.result) && <>
+              <small>≈ {number.format(areaKm2(byName.get(detail.name)!))} km²</small>
+              <span>Rozlohou {detailAreaRank}. největší země světa</span>
+              <span>Počet obyvatel: {FACTS[detail.name]?.population}</span>
+              <span>Hlavní město: {FACTS[detail.name]?.capital}</span>
+              <span className={styles.detailSize}>{sizeVsCzechia(detail.name)}</span>
+            </>}
             {hintLevel > 0 && detail.id === selected?.id && !detail.result && (
               <span>Hledaná země: {label(detail.name)}. Přetáhni ji na správné místo.</span>
             )}
             {hintLevel > 1 && detail.id === selected?.id && !detail.result && (
-              <span>Kontinent: {FACTS[detail.name]?.note?.split(";")[0] ?? "světa"}</span>
+              <span>Kontinent: {detailCountry?.continent ?? "neuveden"}</span>
             )}
             {hintLevel > 2 && detail.id === selected?.id && !detail.result && (
               <button onClick={() => resolvePosition(detail)}>Ukázat řešení</button>
