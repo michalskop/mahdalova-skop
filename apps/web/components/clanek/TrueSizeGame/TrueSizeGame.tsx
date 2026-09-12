@@ -699,7 +699,9 @@ export default function TrueSizeGame() {
     resolved.current.clear();
     setNotice("");
     setDetailId(null);
-    setView(fullView);
+    // Keep the current projection viewport when changing round size. Resetting
+    // to fullView here made the map visibly jump, especially for the 5-country
+    // option; a new round should only replace pieces and their starting layout.
     setRoundMenuOpen(false);
     restartButton.current?.focus();
   }
