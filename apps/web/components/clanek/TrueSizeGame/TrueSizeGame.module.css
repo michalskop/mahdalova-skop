@@ -1066,3 +1066,25 @@
   }
   .board .sideDock .dockPiece { flex: 0 0 42px; }
 }
+
+.mapArea .zoom { overflow: visible; z-index: 4; }
+.zoom .roundMenu {
+  top: 0;
+  bottom: auto;
+  right: calc(100% + 8px);
+  transform: none;
+  z-index: 20;
+}
+.zoom .roundMenu button { width: 100%; height: auto; }
+.board .sideDock .dockHint {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  font-size: 29px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
