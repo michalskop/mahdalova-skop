@@ -402,9 +402,10 @@
 }
 .roundMenu {
   position: absolute;
-  right: 0;
+  right: 50%;
+  transform: translateX(50%);
   bottom: calc(100% + 12px);
-  width: 120px;
+  width: 110px;
   padding: 12px;
   border-radius: 12px;
   background: var(--paper);
@@ -428,7 +429,8 @@
   border-radius: 7px;
 }
 .board .roundMenu button:hover,
-.board .roundMenu button:focus-visible { background: #f5f0eb; }
+.board .roundMenu button:focus-visible,
+.board .roundMenu button[aria-selected="true"] { background: #f5f0eb; }
 .suggestions li {
   display: flex;
   justify-content: space-between;

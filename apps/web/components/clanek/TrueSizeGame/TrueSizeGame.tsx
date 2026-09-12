@@ -407,6 +407,7 @@ export default function TrueSizeGame() {
   const [hoverId, setHoverId] = useState<number | null>(null);
   const [expanded, setExpanded] = useState(false);
   const [roundMenuOpen, setRoundMenuOpen] = useState(false);
+  const [roundCount, setRoundCount] = useState<5 | 10 | 15>(5);
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
@@ -674,6 +675,7 @@ export default function TrueSizeGame() {
   }
   function newGame(count: 5 | 10 | 15) {
     stopDrag();
+    setRoundCount(count);
     const pool = CURATED_COUNTRIES.filter((name) => {
       const country = byName.get(name);
       return country && COUNTRIES[name]?.target && areaKm2(country) >= 40000;
@@ -1046,7 +1048,7 @@ export default function TrueSizeGame() {
                     key={name}
                     role="option"
                     id={`${searchId}-${i}`}
-                    aria-selected={optionIndex === i}
+                    aria-selected={optionIndex === i || (optionIndex < 0 && i === 0)}
                     onPointerDown={(e) => e.preventDefault()}
                     onMouseEnter={() => setOptionIndex(i)}
                     onClick={() => addCountry(name)}
@@ -1182,6 +1184,7 @@ export default function TrueSizeGame() {
                         key={count}
                         onClick={() => newGame(count)}
                         aria-label={`${count} zemí`}
+                        aria-selected={count === roundCount}
                       >
                         {count}
                       </button>
