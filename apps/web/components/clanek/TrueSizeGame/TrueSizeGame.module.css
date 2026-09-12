@@ -144,7 +144,9 @@
   color: #101432;
   font-size: 12px;
   line-height: 1.45;
-  pointer-events: none;
+  pointer-events: auto;
+  user-select: text;
+  cursor: text;
 }
 .projectionGuide strong {
   font-size: 13px;

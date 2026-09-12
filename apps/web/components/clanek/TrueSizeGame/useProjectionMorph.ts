@@ -34,9 +34,9 @@ export function useProjectionMorph(target: GeoProjection, height: number) {
     if (reduced.matches || document.hidden) { finish(); return; }
     const start = performance.now();
     const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / 760);
+      const t = Math.min(1, (now - start) / 950);
       if (t >= 1) { finish(); return; }
-      const eased = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      const eased = t * t * (3 - 2 * t);
       current.current = interpolateProjection(from, target, eased, height);
       setRendered(() => current.current);
       frame = requestAnimationFrame(tick);

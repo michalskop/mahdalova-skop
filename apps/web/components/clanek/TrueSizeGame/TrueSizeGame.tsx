@@ -587,8 +587,21 @@ export default function TrueSizeGame() {
   }, []);
   useEffect(() => {
     const scale = projectionId === "mercator" ? (portraitMobile ? 0.85 : 1) : (portraitMobile ? 0.67 : 0.76);
-    setView({ x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) / 2,
-      width: WIDTH * scale, height: mapHeight * scale });
+    const target = { x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) / 2,
+      width: WIDTH * scale, height: mapHeight * scale };
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setView(target); return; }
+    const from = view;
+    const start = performance.now();
+    let frame = 0;
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / 950);
+      const eased = t * t * (3 - 2 * t);
+      setView({ x: from.x + (target.x - from.x) * eased, y: from.y + (target.y - from.y) * eased,
+        width: from.width + (target.width - from.width) * eased, height: from.height + (target.height - from.height) * eased });
+      if (t < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
   }, [mapHeight, portraitMobile, projectionId]);
   useEffect(() => {
     const resize = () => setTrayRows(Math.max(3, Math.min(8, Math.floor((window.innerHeight * .72 - 200) / 46))));
@@ -831,6 +844,10 @@ export default function TrueSizeGame() {
     setHoverId(null);
     if (piece.pinned || piece.result) {
       setDetailId(piece.id);
+      if (!fromDock) {
+        svg.current?.setPointerCapture(e.pointerId);
+        pan.current = { pointer: e.pointerId, x: e.clientX, y: e.clientY, view };
+      }
       return;
     }
     const point = mapPosition(e.clientX, e.clientY) ?? (fromDock ? [piece.lon, piece.lat] as LonLat : null);
@@ -1184,7 +1201,6 @@ export default function TrueSizeGame() {
                     stopDrag();
                     setProjectionTouched(true);
                     setProjectionId(p.id);
-                    setView(fullView);
                     const menu = e.currentTarget.closest("details")!;
                     menu.open = false;
                     menu.querySelector("summary")?.focus();
@@ -1252,15 +1268,16 @@ export default function TrueSizeGame() {
               className={`${styles.hintButton} ${styles.dockHint} ${hintPulsing && selected && !selected.result ? styles.hintPulse : ""}`}
               aria-label="Nápověda"
               title="Nápověda"
-              disabled={!selected || !!selected.result}
               onClick={() => {
-                if (!selected || selected.result) return;
+                const target = selected && !selected.result ? selected : pieces.find((piece) => !piece.result);
+                if (!target) return;
+                setActiveId(target.id);
                 if (hintTimer.current !== null) window.clearTimeout(hintTimer.current);
                 hintTimer.current = null;
-                hintedPieces.current.add(selected.id);
+                hintedPieces.current.add(target.id);
                 setHintPulsing(false);
                 setHintLevel((level) => Math.max(1, level));
-                setDetailId(selected.id);
+                setDetailId(target.id);
               }}
             >💡</button>
 
@@ -1356,7 +1373,7 @@ export default function TrueSizeGame() {
               >
                 <path
                   d={path(placeCountry(byName.get(piece.name)!, piece)) || ""}
-                  fill={piece.result === "revealed" ? "#fff3e8" : piece.color}
+                  fill={piece.result === "revealed" ? "#ffd5b5" : piece.color}
                   style={piece.result === "revealed" ? { fillOpacity: 1 } : undefined}
                   fillOpacity={
                     piece.result
