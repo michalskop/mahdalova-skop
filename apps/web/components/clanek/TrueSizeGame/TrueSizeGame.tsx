@@ -608,7 +608,10 @@ export default function TrueSizeGame() {
   useEffect(() => {
     const scale = projectionId === "peters" ? 1 : projectionId === "mercator" ? (portraitMobile ? 0.78 : 0.9) : (portraitMobile ? 0.67 : 0.76);
     const extraSouth = projectionId === "mercator" ? 0 : Math.min(140, mapHeight * 0.16);
-    const northShift = mapHeight * 0.045;
+    // Mercator benefits from a lower equator to expose its strongly enlarged
+    // northern latitudes; the other projections sit a little higher to avoid
+    // an empty band above the map.
+    const northShift = mapHeight * (projectionId === "mercator" ? 0.09 : 0.015);
     const target = { x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) * EQUATOR_POSITION - extraSouth / 2 + northShift,
       width: WIDTH * scale, height: mapHeight * scale + extraSouth };
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setView(target); return; }
