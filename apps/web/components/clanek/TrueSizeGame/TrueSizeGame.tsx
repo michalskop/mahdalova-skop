@@ -1320,6 +1320,10 @@ export default function TrueSizeGame() {
               ))}
             </div>
           </details>
+          <aside className={styles.projectionGuide} aria-live="polite">
+            <strong>{PROJECTIONS.find((item) => item.id === projectionId)?.name}</strong>{" "}
+            <span className={styles.guideText}>{projectionText}</span>
+          </aside>
         </div>
       </div>
       <div className={styles.mapArea}>
@@ -1518,12 +1522,6 @@ export default function TrueSizeGame() {
           })}
         </svg>
         {notice && <div className={styles.notice} role="status">{notice}</div>}
-        <aside className={styles.projectionGuide} aria-live="polite">
-          <strong>
-            {PROJECTIONS.find((item) => item.id === projectionId)?.name}
-          </strong>{" "}
-          <span className={styles.guideText}>{projectionText}</span>
-        </aside>
         <div className={styles.zoom}>
           <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>

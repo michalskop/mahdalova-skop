@@ -1361,3 +1361,18 @@
 .searchDropdown[hidden] { display: none; }
 .board .searchDropdown input { padding: 0 12px; height: 40px; background: #f5f0eb; }
 .board .searchDropdown .suggestions { position: static; width: 100%; margin: 4px 0 0; box-shadow: none; max-height: min(300px, 45dvh); }
+.dashboard .projection { flex: 0 0 140px; width: 140px; max-width: 140px; }
+.dashboard .projectionGuide {
+  position: relative;
+  inset: auto;
+  order: 3;
+  flex: 1 1 260px;
+  min-width: 0;
+  margin: 0;
+}
+@media (min-width: 601px) {
+  .mapArea .countryControls { top: 16px; }
+}
+@media (max-width: 600px) {
+  .dashboard .projectionGuide { flex-basis: 100%; }
+}
