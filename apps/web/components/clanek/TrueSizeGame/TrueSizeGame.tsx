@@ -493,8 +493,9 @@ export default function TrueSizeGame() {
   const { rendered, animating } = useProjectionMorph(projection, mapHeight);
   const path = useMemo(() => geoPath(rendered), [rendered]);
   const graticule = useMemo(() => geoGraticule()
-    .extentMajor([[-180, -80], [180, 80]])
+    .extentMajor([[-180, -90], [180, 90]])
     .extentMinor([[-180, -80], [180, 80]])
+    .stepMajor([10, 90])
     .stepMinor([10, 10])(), []);
   const fullView = useMemo<Rect>(
     () => ({ x: 0, y: 0, width: WIDTH, height: mapHeight }),
@@ -618,6 +619,8 @@ export default function TrueSizeGame() {
     const area = map?.parentElement;
     if (!map || !area) return;
     const positionLogo = () => {
+      const guide = area.querySelector<HTMLElement>(`.${styles.projectionGuide}`);
+      if (guide) area.style.setProperty("--guide-bottom", `${guide.offsetTop + guide.offsetHeight + 8}px`);
       const projected = rendered([17, -39]);
       const matrix = map.getScreenCTM();
       const brand = area.querySelector<HTMLElement>(`.${styles.creditBrand}`);
@@ -641,6 +644,8 @@ export default function TrueSizeGame() {
     const observer = new ResizeObserver(positionLogo);
     observer.observe(area);
     observer.observe(map);
+    const guide = area.querySelector<HTMLElement>(`.${styles.projectionGuide}`);
+    if (guide) observer.observe(guide);
     return () => observer.disconnect();
   }, [rendered, view, detailId, hintLevel, pieces.length, portraitMobile]);
   // Briefly reveal a country's name when it becomes selected, then fade out.

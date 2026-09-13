@@ -15,7 +15,7 @@ export function interpolateProjection(from: GeoProjection, to: GeoProjection, t:
     const b = to(point)!;
     return [a[0] + (b[0] - a[0]) * t, -(a[1] + (b[1] - a[1]) * t)];
   }).scale(1).translate([a0[0] + (b0[0] - a0[0]) * t, a0[1] + (b0[1] - a0[1]) * t])
-    .precision(0.2).clipExtent([[0, 0], [WIDTH, height]]);
+    .precision(0.2).clipExtent([[-WIDTH * 4, -height * 4], [WIDTH * 5, height * 5]]);
 }
 
 export function useProjectionMorph(target: GeoProjection, height: number) {

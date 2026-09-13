@@ -22,7 +22,8 @@ export interface GeoProjection {
   (point: LonLat): LonLat | null;
   invert(point: LonLat): LonLat | null;
   precision(value: number): GeoProjection;
-  clipExtent(extent: [LonLat, LonLat]): GeoProjection;
+  translate(point: LonLat): GeoProjection;
+  clipExtent(extent: [LonLat, LonLat] | null): GeoProjection;
   fitExtent(
     extent: [LonLat, LonLat],
     object: { type: "Sphere" },
@@ -37,6 +38,7 @@ export type ProjectionId =
   | "winkel";
 export const WIDTH = 960;
 export const HEIGHT = 700;
+export const EQUATOR_POSITION = 0.58;
 // Exact five-shade rows supplied by the editor (September 2026).
 export const COUNTRY_COLOR_ROWS = [
   ["#eeeae2", "#e9e9dd", "#e8e8dc", "#d4d4c8", "#c8c8bc"],
@@ -255,10 +257,10 @@ export function makeProjection(
       ],
       { type: "Sphere" },
     );
-  return projection.precision(0.2).clipExtent([
-    [0, 0],
-    [WIDTH, height],
-  ]);
+  // Clip only the infinite Mercator ends, never the initial viewport.
+  return projection.translate([WIDTH / 2, height * EQUATOR_POSITION]).precision(0.2).clipExtent(
+    id === "mercator" ? [[-WIDTH * 4, -height * 4], [WIDTH * 5, height * 5]] : null,
+  );
 }
 
 export function isHome(

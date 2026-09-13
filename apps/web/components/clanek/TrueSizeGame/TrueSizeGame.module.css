@@ -1140,12 +1140,12 @@
 @media (min-width: 601px), (orientation: landscape) {
   .mapArea .countryControls {
     display: grid;
-    grid-template-columns: 48px auto;
-    grid-template-rows: 48px minmax(0, 1fr);
+    grid-template-columns: auto;
+    grid-template-rows: 36px 36px auto;
   }
   .countryControls .roundControl { grid-column: 1; grid-row: 1; }
   .countryControls > .dockHint { grid-column: 1; grid-row: 2; }
-  .countryControls .sideDock { grid-column: 2; grid-row: 1 / span 2; }
+  .countryControls .sideDock { grid-column: 1; grid-row: 3; }
 }
 
 /* Fit the complete tray; communicate selection with the silhouette itself. */
@@ -1247,4 +1247,25 @@
 }
 @media (max-width: 600px) {
   .mapArea .detail { left: auto; bottom: auto; max-width: none; }
+}
+
+/* Compact, evenly spaced controls; the tray grows only as countries are added. */
+.board .mapArea .zoom { width: 36px; gap: 8px; box-shadow: none; background: transparent; }
+.board .mapArea .zoom > button,
+.board .countryControls .roundControl > button,
+.board .countryControls > .dockHint {
+  width: 36px; height: 36px; min-width: 36px; min-height: 36px;
+  padding: 0; border-radius: 8px; display: grid; place-items: center;
+  box-shadow: 0 3px 12px #10143218;
+}
+.board .countryControls > .dockHint { font-size: 24px; }
+@media (min-width: 601px) {
+  .mapArea .countryControls { top: var(--guide-bottom, 100px); gap: 8px; }
+  .mapArea .countryControls .sideDock { max-height: none; grid-auto-columns: 36px; gap: 4px; padding: 4px; }
+  .board .sideDock .dockPiece { width: 36px; padding: 3px; }
+}
+@media (max-width: 600px) {
+  .mapArea .countryControls { gap: 8px; }
+  .mapArea .countryControls .sideDock { justify-content: space-evenly; gap: 4px; }
+  .board .sideDock .dockPiece { flex: 0 1 40px; width: 40px; padding: 3px; }
 }
