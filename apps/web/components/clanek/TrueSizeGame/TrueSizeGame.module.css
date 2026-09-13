@@ -1339,3 +1339,4 @@
   line-height: 1;
 }
 .board button:has(> svg) > svg { display: block; }
+.board .roundControl > button > svg { transform: translate(-1px, -3px); }
