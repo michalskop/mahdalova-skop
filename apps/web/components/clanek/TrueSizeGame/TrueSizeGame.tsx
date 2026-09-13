@@ -606,7 +606,7 @@ export default function TrueSizeGame() {
     return () => mq.removeEventListener("change", apply);
   }, []);
   useEffect(() => {
-    const scale = projectionId === "peters" ? (portraitMobile ? 0.76 : 0.80) : projectionId === "mercator" ? (portraitMobile ? 0.78 : 0.9) : projectionId === "mollweide" ? (portraitMobile ? 0.62 : 0.66) : ["robinson", "winkel", "equal"].includes(projectionId) ? (portraitMobile ? 0.64 : 0.68) : (portraitMobile ? 0.68 : 0.72);
+    const scale = projectionId === "peters" ? (portraitMobile ? 0.76 : 0.80) : projectionId === "mercator" ? (portraitMobile ? 0.72 : 0.82) : projectionId === "mollweide" ? (portraitMobile ? 0.62 : 0.66) : ["robinson", "winkel", "equal"].includes(projectionId) ? (portraitMobile ? 0.64 : 0.68) : (portraitMobile ? 0.68 : 0.72);
     const extraSouth = projectionId === "mercator" ? 0 : Math.min(140, mapHeight * 0.16);
     // Mercator benefits from a lower equator to expose its strongly enlarged
     // northern latitudes; the other projections sit a little higher to avoid
