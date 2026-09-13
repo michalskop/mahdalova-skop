@@ -244,7 +244,7 @@ const projectionInfo: Record<ProjectionId, { text: string; href: string }> = {
     href: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
   },
   mollweide: {
-    text: "Zachovává rozlohy, u okrajů mění tvary. Používá se v mapách podnebí či obyvatelstva.",
+    text: "Zachovává rozlohy, u okrajů mění tvary. Používá se v populačních mapách či v mapách podnebí.",
     href: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
   },
   robinson: {
