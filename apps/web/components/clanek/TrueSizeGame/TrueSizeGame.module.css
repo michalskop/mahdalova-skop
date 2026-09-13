@@ -1469,6 +1469,7 @@
   line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .dashboard .projection summary .caret { margin-left: 6px; }
+.dashboard .projection summary { white-space: nowrap; }
 .dashboard .projectionOptions {
   right: auto;
   width: max-content;
@@ -1512,5 +1513,5 @@
 .board .mapArea .zoom { width: 48px; right: 8px; top: 8px; gap: 8px; }
 .board .dashboard .projectionGuide { min-height: 48px; }
 @media (max-width: 600px) {
-  .board .dashboard { grid-template-columns: 48px 104px minmax(0, 1fr); }
+  .board .dashboard { grid-template-columns: 48px minmax(124px, max-content) minmax(0, 1fr); }
 }
