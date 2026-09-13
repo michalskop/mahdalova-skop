@@ -428,6 +428,7 @@ export default function TrueSizeGame() {
   const [hintLevel, setHintLevel] = useState(0);
   const [hintPulsing, setHintPulsing] = useState(false);
   const hintedPieces = useRef(new Set<number>());
+  const handledPieces = useRef(new Set<number>());
   const hintTimer = useRef<number | null>(null);
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
@@ -648,6 +649,75 @@ export default function TrueSizeGame() {
     if (guide) observer.observe(guide);
     return () => observer.disconnect();
   }, [rendered, view, detailId, hintLevel, pieces.length, portraitMobile]);
+  // Keep untouched pieces clear of the responsive map controls.
+  useEffect(() => {
+    const map = svg.current;
+    const area = map?.parentElement;
+    if (!map || !area || animating || !byName.size) return;
+    let timer = 0;
+    let disposed = false;
+    const arrange = () => {
+      if (disposed) return;
+      if (drag.current || pan.current || pinch.current) { schedule(); return; }
+      const matrix = map.getScreenCTM();
+      if (!matrix) return;
+      const inverse = matrix.inverse();
+      const viewport = map.getBoundingClientRect();
+      type Box = [number, number, number, number];
+      const overlap = (a: Box, b: Box) => Math.max(0, Math.min(a[2], b[2]) - Math.max(a[0], b[0])) * Math.max(0, Math.min(a[3], b[3]) - Math.max(a[1], b[1]));
+      const obstacles: Box[] = [];
+      for (const selector of [styles.projectionGuide, styles.zoom, styles.sideDock, styles.dockHint, styles.roundControl, styles.creditBrand, styles.detail]) {
+        area.querySelectorAll<HTMLElement>(`.${selector}`).forEach(element => {
+          const r = element.getBoundingClientRect();
+          if (r.width && r.height && r.bottom > viewport.top && r.top < viewport.bottom)
+            obstacles.push([r.left - 10, r.top - 10, r.right + 10, r.bottom + 10]);
+        });
+      }
+      const outline = geoPath(projection);
+      const boundsOf = (piece: GamePiece): Box => {
+        const bounds = outline.bounds(placeCountry(byName.get(piece.name)!, piece));
+        const a = new DOMPoint(...bounds[0]).matrixTransform(matrix);
+        const b = new DOMPoint(...bounds[1]).matrixTransform(matrix);
+        return [a.x - 6, a.y - 6, b.x + 6, b.y + 6];
+      };
+      const fits = (box: Box) => box.every(Number.isFinite) && box[0] >= viewport.left + 6 && box[1] >= viewport.top + 6 && box[2] <= viewport.right - 6 && box[3] <= viewport.bottom - 6 && obstacles.every(o => overlap(box, o) === 0);
+      const current = piecesRef.current;
+      const boxes = new Map(current.map(piece => [piece.id, boundsOf(piece)]));
+      let changed = false;
+      const next = current.map(piece => {
+        if (piece.result || piece.pinned || handledPieces.current.has(piece.id) || fits(boxes.get(piece.id)!)) return piece;
+        let best = piece;
+        let bestCost = Infinity;
+        // Search the actual visible map, in screen pixels, after responsive UI layout.
+        for (let y = viewport.top + 24; y < viewport.bottom - 24; y += 28) {
+          for (let x = viewport.left + 24; x < viewport.right - 24; x += 28) {
+            const point = new DOMPoint(x, y).matrixTransform(inverse);
+            const location = projection.invert([point.x, point.y]);
+            if (!location || !location.every(Number.isFinite) || Math.abs(location[1]) > 80 || Math.abs(location[0]) > 180) continue;
+            const candidate = { ...piece, lon: location[0], lat: location[1] };
+            const box = boundsOf(candidate);
+            if (!fits(box)) continue;
+            const otherOverlap = Array.from(boxes).reduce((sum, [id, other]) => sum + (id === piece.id ? 0 : overlap(box, other)), 0);
+            const cost = otherOverlap * 1000 + Math.hypot(x - (boxes.get(piece.id)![0] + boxes.get(piece.id)![2]) / 2, y - (boxes.get(piece.id)![1] + boxes.get(piece.id)![3]) / 2);
+            if (cost < bestCost) { best = candidate; bestCost = cost; }
+          }
+        }
+        if (best !== piece) { changed = true; boxes.set(piece.id, boundsOf(best)); }
+        return best;
+      });
+      if (changed) setPieces(next);
+    };
+    const schedule = () => { window.clearTimeout(timer); timer = window.setTimeout(arrange, 180); };
+    const observer = new ResizeObserver(schedule);
+    observer.observe(map);
+    for (const selector of [styles.projectionGuide, styles.countryControls]) {
+      const element = area.querySelector(`.${selector}`);
+      if (element) observer.observe(element);
+    }
+    schedule();
+    return () => { disposed = true; window.clearTimeout(timer); observer.disconnect(); };
+  }, [pieces.length, projection, animating, expanded, byName]);
+
   // Briefly reveal a country's name when it becomes selected, then fade out.
   // Anonymous (still-to-guess) pieces stay unnamed.
   useEffect(() => {
@@ -786,6 +856,7 @@ export default function TrueSizeGame() {
     setActiveId(additions[additions.length - 1]?.id || null);
     resolved.current.clear();
     hintedPieces.current.clear();
+    handledPieces.current.clear();
     setHintLevel(0);
     setHintPulsing(false);
     setNotice("");
@@ -862,6 +933,7 @@ export default function TrueSizeGame() {
     }
     const point = mapPosition(e.clientX, e.clientY) ?? (fromDock ? [piece.lon, piece.lat] as LonLat : null);
     if (!point) return;
+    handledPieces.current.add(piece.id);
     e.preventDefault();
     e.currentTarget.focus();
     svg.current?.setPointerCapture(e.pointerId);
