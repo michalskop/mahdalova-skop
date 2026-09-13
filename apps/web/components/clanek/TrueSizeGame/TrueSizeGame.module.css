@@ -1418,3 +1418,27 @@
   .dashboard .projection summary .caret { flex-shrink: 0; width: 16px; }
   .dashboard .projectionGuide { width: auto; padding: 8px; }
 }
+
+/* Shared 48px control geometry and aligned 8px layout gutters. */
+.board .dashboard { padding: 8px; gap: 8px; align-items: start; }
+.board .dashboard .search,
+.board .dashboard .search[data-expanded="false"] {
+  flex: 0 0 48px; width: 48px; max-width: 48px; height: 48px;
+}
+.board .searchTrigger,
+.board .mapArea .zoom > button,
+.board .countryControls .roundControl > button,
+.board .countryControls > .dockHint,
+.board .detail .close {
+  width: 48px; height: 48px; min-width: 48px; min-height: 48px;
+  max-width: 48px; padding: 0; border-radius: 8px;
+  display: grid; place-items: center; line-height: 1;
+}
+.board > .horizontalControls { grid-template-columns: 48px 48px minmax(0, 1fr); gap: 8px; }
+.board > .horizontalControls .sideDock { grid-auto-rows: 40px; }
+.board > .horizontalControls .sideDock .dockPiece { height: 40px; }
+.board .mapArea .zoom { width: 48px; right: 8px; top: 8px; gap: 8px; }
+.board .dashboard .projectionGuide { min-height: 48px; }
+@media (max-width: 600px) {
+  .board .dashboard { grid-template-columns: 48px 104px minmax(0, 1fr); }
+}
