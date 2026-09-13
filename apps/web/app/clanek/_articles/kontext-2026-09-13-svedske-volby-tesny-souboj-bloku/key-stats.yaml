@@ -1,0 +1,14 @@
+label: Klíčová čísla
+numbers:
+  - value: "175 : 174"
+    title: Nejtěsnější odhad mandátů
+    description: Podle průzkumu Ipsos (7.–10. 9.) dělí opoziční červeno-zelený blok a vládní blok Tidö jediný mandát ze 349.
+    color: brand
+  - value: "0"
+    title: Křesel SD ve vládě dosud
+    description: Od vstupu do Riksdagu v roce 2010 stáli nacionalističtí Švédští demokraté vždy mimo kabinet. Letos by se to poprvé mohlo změnit, pokud zvítězí blok Tidö.
+    color: brandNavy
+  - value: "0,5 p. b."
+    title: Rezerva Liberálů nad prahem
+    description: V posledních pěti průzkumech se Liberálové pohybují od 4,5 do 5,5 procenta – nejtěsněji u agentury Infostat, jen půl bodu nad čtyřprocentní hranicí pro vstup do Riksdagu.
+    color: brandOrange
