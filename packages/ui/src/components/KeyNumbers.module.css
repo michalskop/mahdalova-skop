@@ -68,15 +68,20 @@
   padding: 28px 24px 24px;
   border-top: 4px solid var(--mantine-color-brand-6);
   position: relative;
+  container-type: inline-size;
 }
 
 .numBig {
   font-family: 'Roboto Slab', serif;
-  font-size: 56px;
+  /* Scales with the card's own width (via container queries) so longer
+     values (e.g. "175 : 174", "0,5 p. b.") shrink to fit one line instead
+     of wrapping mid-value; short values still render at the full 56px. */
+  font-size: clamp(28px, 15cqi, 56px);
   font-weight: 900;
   line-height: 1;
   margin-bottom: 8px;
   color: var(--mantine-color-brand-6);
+  white-space: nowrap;
 }
 
 .numLabel {
