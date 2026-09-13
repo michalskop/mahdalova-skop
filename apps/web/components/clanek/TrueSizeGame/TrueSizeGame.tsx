@@ -590,17 +590,12 @@ export default function TrueSizeGame() {
   useEffect(() => () => cancelAnimationFrame(frame.current), []);
   // Mobile viewport gets 25 % more map height; projection recomputes for it.
   useEffect(() => {
-    const map = svg.current;
-    if (!map) return;
-    const apply = () => {
-      const box = map.getBoundingClientRect();
-      if (box.width > 0 && box.height > 0) setMapHeight(Math.round(WIDTH * box.height / box.width));
-    };
-    const observer = new ResizeObserver(apply);
-    observer.observe(map);
+    const mq = window.matchMedia(MOBILE_QUERY);
+    const apply = () => setMapHeight(mq.matches ? MOBILE_HEIGHT : HEIGHT);
     apply();
-    return () => observer.disconnect();
-  }, [countries.length]);
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 600px) and (orientation: portrait)");
     const apply = () => setPortraitMobile(mq.matches);
