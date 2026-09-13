@@ -1381,6 +1381,14 @@
   grid-column: auto; grid-row: auto;
   width: 100%; min-width: 0; height: clamp(28px, 4vw, 42px); padding: clamp(2px, .5vw, 5px);
 }
+@media (min-width: 1000px) {
+  .board > .horizontalControls .sideDock[data-tray-count="10"] { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .board > .horizontalControls .sideDock[data-tray-count="15"] { grid-template-columns: repeat(15, minmax(0, 1fr)); }
+  .board > .horizontalControls .sideDock[data-tray-count="10"],
+  .board > .horizontalControls .sideDock[data-tray-count="15"] { grid-template-rows: 42px !important; }
+  .board > .horizontalControls .sideDock[data-tray-count="10"] .dockPiece,
+  .board > .horizontalControls .sideDock[data-tray-count="15"] .dockPiece { grid-column: auto !important; grid-row: 1 !important; }
+}
 .board > .horizontalControls .dockPiece svg { width: 100%; height: 100%; }
 .board > .horizontalControls .roundMenu { top: calc(100% + 8px); left: 0; bottom: auto; }
 @media (max-width: 600px) and (orientation: portrait) {
