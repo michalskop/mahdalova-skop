@@ -412,7 +412,7 @@ export default function TrueSizeGame() {
   const [pieces, setPieces] = useState<GamePiece[]>([]);
   const [activeId, setActiveId] = useState<number | null>(null);
   const [projectionId, setProjectionId] = useState<ProjectionId>("mercator");
-  const [projectionTouched, setProjectionTouched] = useState(false);
+  const [projectionTouched, setProjectionTouched] = useState(true);
   const [projectionHighlight, setProjectionHighlight] = useState<ProjectionId | null>(null);
   const [projectionText, setProjectionText] = useState("");
   const [flashId, setFlashId] = useState<number | null>(null);
@@ -872,7 +872,7 @@ export default function TrueSizeGame() {
     stopDrag();
     setRoundCount(count);
     setProjectionId("mercator");
-    setProjectionTouched(false);
+    setProjectionTouched(true);
     setProjectionText("");
     const pool = CURATED_COUNTRIES.filter((name) => {
       const country = byName.get(name);
@@ -1301,9 +1301,7 @@ export default function TrueSizeGame() {
             }}
           >
             <summary aria-label="Typ zobrazení">
-              {projectionTouched
-                ? PROJECTIONS.find((p) => p.id === projectionId)?.name
-                : "Vybrat"}
+                {PROJECTIONS.find((p) => p.id === projectionId)?.name ?? "Mercator"}
               <svg
                 className={styles.caret}
                 viewBox="0 0 24 24"
@@ -1317,7 +1315,7 @@ export default function TrueSizeGame() {
                 <path d="m6 9 6 6 6-6" />
               </svg>
               <span className={styles.guideText} onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>
-                {projectionTouched ? projectionText : "mapové zobrazení"}
+                {projectionText}
               </span>
             </summary>
             <div className={styles.projectionOptions}>
