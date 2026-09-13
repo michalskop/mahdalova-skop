@@ -1328,3 +1328,14 @@
     flex: none;
   }
 }
+
+/* Keep every icon geometrically centered inside its button at every breakpoint. */
+.board button:has(> svg),
+.board button:has(> svg) > svg {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  line-height: 1;
+}
+.board button:has(> svg) > svg { display: block; }
