@@ -420,6 +420,8 @@ export default function TrueSizeGame() {
   const [labelUnitsPerPixel, setLabelUnitsPerPixel] = useState(1);
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
+  const searchInput = useRef<HTMLInputElement>(null);
+  useEffect(() => { if (searchOpen) searchInput.current?.focus(); }, [searchOpen]);
   const [optionIndex, setOptionIndex] = useState(-1);
   const [notice, setNotice] = useState("");
   const [noticeResult, setNoticeResult] = useState<Result | null>(null);
@@ -1176,7 +1178,8 @@ export default function TrueSizeGame() {
     >
       <div className={styles.dashboard}>
         <div className={styles.toolbar}>
-          <div className={styles.search}>
+          <div className={styles.search} data-expanded={searchOpen}>
+            {!searchOpen && <button className={styles.searchTrigger} aria-label="Hledat zemi" title="Hledat zemi" onClick={() => setSearchOpen(true)} />}
             <svg
               aria-hidden="true"
               className={styles.searchIcon}
@@ -1190,9 +1193,11 @@ export default function TrueSizeGame() {
               <path d="m16 16 4.5 4.5" />
             </svg>
             <input
+              ref={searchInput}
+              hidden={!searchOpen}
               role="combobox"
               aria-label="Hledat"
-              placeholder="Hledat"
+              placeholder=""
               autoComplete="off"
               value={query}
               aria-autocomplete="list"
@@ -1204,7 +1209,7 @@ export default function TrueSizeGame() {
                   : undefined
               }
               onFocus={() => setSearchOpen(true)}
-              onBlur={() => setSearchOpen(false)}
+              onBlur={() => { setSearchOpen(false); setQuery(""); }}
               onChange={(e) => {
                 setQuery(e.target.value);
                 setOptionIndex(-1);

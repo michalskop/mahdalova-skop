@@ -1342,4 +1342,8 @@
 .board .roundControl > button > svg { transform: translate(-1px, -3px); }
 
 /* Shorter search control leaves the projection selector closer to it. */
-.dashboard .search { flex-basis: 150px; max-width: 150px; }
+.dashboard .search { flex: 0 1 180px; max-width: 180px; }
+.dashboard .search[data-expanded="false"] { flex: 0 0 48px; width: 48px; max-width: 48px; }
+.board .searchTrigger { width: 48px; height: 48px; padding: 0; border: 0; border-radius: 8px; background: transparent; }
+.board .search[data-expanded="false"] .searchIcon { left: 50%; transform: translate(-50%, -50%); }
+.board .search input[hidden] { display: none; }
