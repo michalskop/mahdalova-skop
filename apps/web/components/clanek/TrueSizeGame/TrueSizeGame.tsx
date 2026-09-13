@@ -610,8 +610,9 @@ export default function TrueSizeGame() {
   }, []);
   useEffect(() => {
     const scale = projectionId === "peters" ? 1 : projectionId === "mercator" ? (portraitMobile ? 0.85 : 1) : (portraitMobile ? 0.67 : 0.76);
-    const target = { x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) * EQUATOR_POSITION,
-      width: WIDTH * scale, height: mapHeight * scale };
+    const extraSouth = projectionId === "mercator" ? 0 : Math.min(140, mapHeight * 0.16);
+    const target = { x: WIDTH * (1 - scale) / 2, y: mapHeight * (1 - scale) * EQUATOR_POSITION - extraSouth / 2,
+      width: WIDTH * scale, height: mapHeight * scale + extraSouth };
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setView(target); return; }
     const from = view;
     const start = performance.now();
