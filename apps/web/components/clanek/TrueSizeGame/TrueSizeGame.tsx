@@ -1191,8 +1191,8 @@ export default function TrueSizeGame() {
             </svg>
             <input
               role="combobox"
-              aria-label="Vyhledat zemi"
-              placeholder="Vyhledat zemi"
+              aria-label="Hledat"
+              placeholder="Hledat"
               autoComplete="off"
               value={query}
               aria-autocomplete="list"

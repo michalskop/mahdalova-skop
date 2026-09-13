@@ -1340,3 +1340,6 @@
 }
 .board button:has(> svg) > svg { display: block; }
 .board .roundControl > button > svg { transform: translate(-1px, -3px); }
+
+/* Shorter search control leaves the projection selector closer to it. */
+.dashboard .search { flex-basis: 150px; max-width: 150px; }
