@@ -590,13 +590,17 @@ export default function TrueSizeGame() {
   useEffect(() => () => cancelAnimationFrame(frame.current), []);
   // Mobile viewport gets 25 % more map height; projection recomputes for it.
   useEffect(() => {
-    if (typeof window === "undefined" || !window.matchMedia) return;
-    const mq = window.matchMedia(MOBILE_QUERY);
-    const apply = () => setMapHeight(mq.matches ? MOBILE_HEIGHT : HEIGHT);
+    const map = svg.current;
+    if (!map) return;
+    const apply = () => {
+      const box = map.getBoundingClientRect();
+      if (box.width > 0 && box.height > 0) setMapHeight(Math.round(WIDTH * box.height / box.width));
+    };
+    const observer = new ResizeObserver(apply);
+    observer.observe(map);
     apply();
-    mq.addEventListener("change", apply);
-    return () => mq.removeEventListener("change", apply);
-  }, []);
+    return () => observer.disconnect();
+  }, [countries.length]);
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 600px) and (orientation: portrait)");
     const apply = () => setPortraitMobile(mq.matches);
@@ -636,6 +640,13 @@ export default function TrueSizeGame() {
       const point = new DOMPoint(...projected).matrixTransform(matrix);
       const bounds = area.getBoundingClientRect();
       const mapBounds = map.getBoundingClientRect();
+      const controls = area.parentElement?.querySelector<HTMLElement>(`.${styles.horizontalControls}`);
+      if (controls) {
+        const globe = geoPath(rendered).bounds({ type: "Sphere" });
+        const edge = new DOMPoint(globe[1][0], 0).matrixTransform(matrix).x;
+        const inset = Math.max(16, Math.min(bounds.width * 0.18, bounds.right - Math.min(mapBounds.right, edge) + 16));
+        controls.style.setProperty("--map-controls-inset", `${inset}px`);
+      }
       const width = brand.offsetWidth;
       const height = brand.offsetHeight;
       let left = Math.max(8, Math.min(bounds.width - width - 8, point.x - bounds.left - width / 2));

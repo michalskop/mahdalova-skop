@@ -3,7 +3,7 @@
   --accent: #522a7a;
   --paper: #fdfbf7;
   position: relative;
-  height: min(76dvh, 800px);
+  height: 82dvh;
   min-height: 520px;
   margin: 28px 0;
   isolation: isolate;
@@ -805,7 +805,7 @@
 }
 @media (min-width: 800px) {
   .board:not(.expanded) {
-    width: min(1180px, calc(100vw - 64px));
+    width: calc(100vw - 48px);
     margin-left: 50%;
     transform: translateX(-50%);
   }
@@ -1434,8 +1434,8 @@
   max-width: 48px; padding: 0; border-radius: 8px;
   display: grid; place-items: center; line-height: 1;
 }
-.board > .horizontalControls { grid-template-columns: 48px 48px minmax(0, 1fr); gap: 8px; padding-right: 64px; }
-.board > .horizontalControls .zoom { position: absolute; top: 8px; right: 4px; width: 48px; gap: 8px; z-index: 5; overflow: visible; box-shadow: none; background: transparent; }
+.board > .horizontalControls { grid-template-columns: 48px 48px minmax(0, 1fr); gap: 8px; padding-right: calc(var(--map-controls-inset, 16px) + 56px); }
+.board > .horizontalControls .zoom { position: absolute; top: 8px; right: var(--map-controls-inset, 16px); width: 48px; gap: 8px; z-index: 5; overflow: visible; box-shadow: none; background: transparent; }
 .board > .horizontalControls .zoom > button { width: 48px; height: 48px; min-width: 48px; padding: 0; display: grid; place-items: center; color: #101432; opacity: 1; }
 .board > .horizontalControls .sideDock { grid-auto-rows: 40px; }
 .board > .horizontalControls .sideDock .dockPiece { height: 40px; }
