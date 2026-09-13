@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { PointerEvent as Pointer, KeyboardEvent } from "react";
-import { geoArea, geoEqualEarth, geoGraticule, geoPath } from "d3-geo";
+import { geoArea, geoEqualEarth, geoGraticule, geoMercator, geoPath } from "d3-geo";
 import { useProjectionMorph } from "./useProjectionMorph";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
