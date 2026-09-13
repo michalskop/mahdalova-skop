@@ -381,6 +381,8 @@ function Silhouette({ country }: { country: Country }) {
     // Keep Russia's mainland across the date line in one continuous thumbnail.
     const projection = country.properties.name === "Russia"
       ? geoEqualEarth().rotate([-100, 0]).precision(0.2)
+      : country.properties.name === "Greenland"
+        ? geoMercator().scale(150).translate([0, 0]).precision(0.2)
       : makeProjection("equal");
     const path = geoPath(projection);
     let silhouette: Country = country.properties.name === "France" && country.geometry.type === "MultiPolygon"
