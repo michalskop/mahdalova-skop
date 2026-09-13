@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { PointerEvent as Pointer, KeyboardEvent } from "react";
-import { geoArea, geoGraticule, geoPath } from "d3-geo";
+import { geoArea, geoEqualEarth, geoGraticule, geoPath } from "d3-geo";
 import { useProjectionMorph } from "./useProjectionMorph";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
@@ -378,7 +378,10 @@ const Basemap = memo(function Basemap({
 
 function Silhouette({ country }: { country: Country }) {
   const d = useMemo(() => {
-    const projection = makeProjection("equal");
+    // Keep Russia's mainland across the date line in one continuous thumbnail.
+    const projection = country.properties.name === "Russia"
+      ? geoEqualEarth().rotate([-100, 0]).precision(0.2)
+      : makeProjection("equal");
     const path = geoPath(projection);
     let silhouette: Country = country.properties.name === "France" && country.geometry.type === "MultiPolygon"
       ? { ...country, geometry: { ...country.geometry, coordinates: country.geometry.coordinates.filter((polygon) => polygon[0].some(([lon, lat]) => lon > -10 && lon < 15 && lat > 40 && lat < 52)) } }
