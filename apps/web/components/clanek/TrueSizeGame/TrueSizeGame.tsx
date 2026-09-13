@@ -606,7 +606,7 @@ export default function TrueSizeGame() {
     return () => mq.removeEventListener("change", apply);
   }, []);
   useEffect(() => {
-    const scale = projectionId === "peters" ? 1 : projectionId === "mercator" ? (portraitMobile ? 0.78 : 0.9) : (portraitMobile ? 0.74 : 0.84);
+    const scale = projectionId === "peters" ? 1 : projectionId === "mercator" ? (portraitMobile ? 0.78 : 0.9) : (portraitMobile ? 0.84 : 0.94);
     const extraSouth = projectionId === "mercator" ? 0 : Math.min(140, mapHeight * 0.16);
     // Mercator benefits from a lower equator to expose its strongly enlarged
     // northern latitudes; the other projections sit a little higher to avoid
@@ -1348,14 +1348,14 @@ export default function TrueSizeGame() {
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
           </button>
           <button
-            onClick={() => zoom(1 / 1.5)}
+            onClick={() => zoom(1 / 1.25)}
             disabled={view.width <= WIDTH / 6}
             aria-label="Přiblížit mapu"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
           </button>
           <button
-            onClick={() => zoom(1.5)}
+            onClick={() => zoom(1.25)}
             disabled={view.width >= WIDTH}
             aria-label="Oddálit mapu"
           >
