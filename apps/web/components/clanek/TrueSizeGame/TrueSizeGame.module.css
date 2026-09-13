@@ -526,6 +526,7 @@
   gap: 10px;
   font-size: 13px;
   box-shadow: 0 2px 12px #10143212;
+  animation: tsgFlash 3s ease forwards;
 }
 .notice[data-result="correct"] {
   border-left: 4px solid #639e0a;

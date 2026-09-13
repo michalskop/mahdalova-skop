@@ -1379,7 +1379,10 @@ export default function TrueSizeGame() {
                 hintedPieces.current.add(target.id);
                 setHintPulsing(false);
                 setHintLevel((level) => Math.max(1, level));
-                setDetailId(target.id);
+                setDetailId(null);
+                setHoverId(null);
+                setFlashId(target.id);
+                setFlashKey((key) => key + 1);
               }}
             >💡</button>
 
@@ -1489,7 +1492,7 @@ export default function TrueSizeGame() {
                 />
                 {anchor &&
                   flashId === piece.id &&
-                  (!piece.anonymous || piece.result) && (
+                  (!piece.anonymous || piece.result || (hintLevel > 0 && selected?.id === piece.id)) && (
                     <g transform={`translate(${anchor[0]},${anchor[1]})`}>
                       <text
                         key={flashKey}
