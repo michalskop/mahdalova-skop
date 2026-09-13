@@ -688,7 +688,7 @@ export default function TrueSizeGame() {
       const overlap = (a: Box, b: Box) => Math.max(0, Math.min(a[2], b[2]) - Math.max(a[0], b[0])) * Math.max(0, Math.min(a[3], b[3]) - Math.max(a[1], b[1]));
       const obstacles: Box[] = [];
       for (const selector of [styles.projectionGuide, styles.zoom, styles.sideDock, styles.dockHint, styles.roundControl, styles.creditBrand, styles.detail]) {
-        area.querySelectorAll<HTMLElement>(`.${selector}`).forEach(element => {
+        (selector === styles.zoom ? area.parentElement! : area).querySelectorAll<HTMLElement>(`.${selector}`).forEach(element => {
           const r = element.getBoundingClientRect();
           if (r.width && r.height && r.bottom > viewport.top && r.top < viewport.bottom)
             obstacles.push([r.left - 10, r.top - 10, r.right + 10, r.bottom + 10]);
@@ -1330,6 +1330,35 @@ export default function TrueSizeGame() {
         </div>
       </div>
           <div className={`${styles.countryControls} ${styles.horizontalControls}`}>
+        <div className={styles.zoom}>
+          <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
+          </button>
+          <button
+            onClick={() => zoom(1 / 1.5)}
+            disabled={view.width <= WIDTH / 6}
+            aria-label="Přiblížit mapu"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+          </button>
+          <button
+            onClick={() => zoom(1.5)}
+            disabled={view.width >= WIDTH}
+            aria-label="Oddálit mapu"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>
+          </button>
+          <button
+            onClick={() => {
+              stopDrag();
+              setView(fullView);
+            }}
+            aria-label="Celý svět"
+            title="Celý svět"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg>
+          </button>
+        </div>
             <div
               className={styles.roundControl}
               onBlur={(e) => {
@@ -1525,35 +1554,6 @@ export default function TrueSizeGame() {
           })}
         </svg>
         {notice && <div key={noticeKey} className={`${styles.notice} ${styles.limitNotice}`} role="status" onAnimationEnd={() => setNotice("")}>Dosažen maximální počet zemí v tomto kole,<br />spusť novou hru.</div>}
-        <div className={styles.zoom}>
-          <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
-          </button>
-          <button
-            onClick={() => zoom(1 / 1.5)}
-            disabled={view.width <= WIDTH / 6}
-            aria-label="Přiblížit mapu"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
-          </button>
-          <button
-            onClick={() => zoom(1.5)}
-            disabled={view.width >= WIDTH}
-            aria-label="Oddálit mapu"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>
-          </button>
-          <button
-            onClick={() => {
-              stopDrag();
-              setView(fullView);
-            }}
-            aria-label="Celý svět"
-            title="Celý svět"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg>
-          </button>
-        </div>
         {detail && (!detail.anonymous || hintLevel > 0) && (
           <aside className={styles.detail} aria-label="Vybraná země">
             <button
