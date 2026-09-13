@@ -394,7 +394,7 @@
 .search input {
   border: 0;
   width: 100%;
-  padding: 14px 14px 14px 39px;
+  padding: 14px 14px 14px 47px;
   border-radius: 8px;
   background: transparent;
   color: var(--ink);
@@ -825,7 +825,7 @@
     flex: 1;
   }
   .search input {
-    padding-left: 30px;
+    padding-left: 42px;
     font-size: 12px;
   }
   .searchIcon {
@@ -1181,6 +1181,14 @@
   color: #101432;
   opacity: 1;
 }
+
+.board .search input,
+.board .search input::placeholder,
+.board .projection summary {
+  color: #101432;
+  opacity: 1;
+  font-weight: 400;
+}
 .board .mapArea .zoom > button:disabled {
   background: var(--paper);
 }
@@ -1263,6 +1271,13 @@
   .mapArea .countryControls { top: var(--guide-bottom, 100px); gap: 8px; }
   .mapArea .countryControls .sideDock { max-height: none; grid-auto-columns: 36px; gap: 4px; padding: 4px; }
   .board .sideDock .dockPiece { width: 36px; padding: 3px; }
+  .mapArea .countryControls .sideDock[data-single-column="true"] {
+    width: 36px;
+    min-width: 36px;
+    grid-auto-columns: 32px;
+    padding: 4px 2px;
+  }
+  .board .sideDock[data-single-column="true"] .dockPiece { width: 32px; padding: 2px; }
 }
 @media (max-width: 600px) {
   .mapArea .countryControls { gap: 8px; }
