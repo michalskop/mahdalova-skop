@@ -1329,6 +1329,13 @@
   }
 }
 
+/* Final responsive tray sizing: every preview in a round shares one size. */
+.board > .horizontalControls .sideDock .dockPiece { height: var(--control-size, 48px); }
+@media (min-width: 1000px) {
+  .board > .horizontalControls .sideDock[data-tray-count="10"] .dockPiece,
+  .board > .horizontalControls .sideDock[data-tray-count="15"] .dockPiece { height: var(--control-size, 48px); }
+}
+
 /* Keep every icon geometrically centered inside its button at every breakpoint. */
 .board button:has(> svg),
 .board button:has(> svg) > svg {
@@ -1391,6 +1398,29 @@
 .board > .horizontalControls .sideDock[data-tray-count="5"] .dockPiece,
 .board > .horizontalControls .sideDock[data-tray-count="10"] .dockPiece { width: 48px; height: 48px; }
 .board > .horizontalControls .sideDock[data-tray-count="15"] .dockPiece { width: var(--tray-size); height: var(--tray-size); }
+
+/* One responsive control size keeps icons and country previews legible together. */
+.board { --control-size: clamp(40px, 3.35vw, 48px); }
+.board .dashboard .search,
+.board .dashboard .search[data-expanded="false"],
+.board .searchTrigger,
+.board .mapArea .zoom > button,
+.board .countryControls .roundControl > button,
+.board .countryControls > .dockHint {
+  width: var(--control-size); height: var(--control-size);
+  min-width: var(--control-size); min-height: var(--control-size);
+  max-width: var(--control-size);
+}
+.board > .horizontalControls { grid-template-columns: var(--control-size) var(--control-size) minmax(0, 1fr); }
+.board > .horizontalControls .zoom { width: var(--control-size); }
+.board > .horizontalControls .zoom > button { width: var(--control-size); height: var(--control-size); min-width: var(--control-size); }
+.board > .horizontalControls .sideDock[data-tray-count="5"],
+.board > .horizontalControls .sideDock[data-tray-count="10"] { grid-template-columns: repeat(10, var(--control-size)); }
+.board > .horizontalControls .sideDock[data-tray-count="5"] { grid-template-columns: repeat(5, var(--control-size)); }
+.board > .horizontalControls .sideDock[data-tray-count="5"] .dockPiece,
+.board > .horizontalControls .sideDock[data-tray-count="10"] .dockPiece { width: var(--control-size); height: var(--control-size); }
+.board > .horizontalControls .sideDock[data-tray-count="15"] { grid-template-columns: repeat(15, var(--control-size)); }
+.board > .horizontalControls .sideDock[data-tray-count="15"] .dockPiece { width: var(--control-size); height: var(--control-size); }
 .board > .horizontalControls .sideDock[data-tray-count="10"] { grid-template-columns: repeat(10, minmax(0, 1fr)); }
 .board > .horizontalControls .sideDock[data-tray-count="15"] { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 .board > .horizontalControls .sideDock .dockPiece {
