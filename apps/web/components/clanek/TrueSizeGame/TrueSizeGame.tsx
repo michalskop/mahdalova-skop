@@ -1296,6 +1296,7 @@ export default function TrueSizeGame() {
               {projectionTouched
                 ? PROJECTIONS.find((p) => p.id === projectionId)?.name
                 : "Typ zobrazení"}
+              <span className={styles.guideText}>{projectionText}</span>
               <svg
                 className={styles.caret}
                 viewBox="0 0 24 24"
@@ -1331,10 +1332,6 @@ export default function TrueSizeGame() {
               ))}
             </div>
           </details>
-          <aside className={styles.projectionGuide} aria-live="polite">
-            <strong>{PROJECTIONS.find((item) => item.id === projectionId)?.name}</strong>{" "}
-            <span className={styles.guideText}>{projectionText}</span>
-          </aside>
         </div>
       </div>
           <div className={`${styles.countryControls} ${styles.horizontalControls}`}>
