@@ -1434,8 +1434,8 @@
   max-width: 48px; padding: 0; border-radius: 8px;
   display: grid; place-items: center; line-height: 1;
 }
-.board > .horizontalControls { grid-template-columns: 48px 48px minmax(0, 1fr); gap: 8px; padding-left: 64px; padding-right: 8px; }
-.board > .horizontalControls .zoom { position: absolute; top: 8px; left: 8px; right: auto; width: 48px; gap: 8px; z-index: 5; overflow: visible; box-shadow: none; background: transparent; }
+.board > .horizontalControls { grid-template-columns: 48px 48px minmax(0, 1fr); gap: 8px; padding-left: 8px; padding-right: 64px; }
+.board > .horizontalControls .zoom { position: absolute; top: 8px; right: 8px; left: auto; width: 48px; gap: 8px; z-index: 5; overflow: visible; box-shadow: none; background: transparent; }
 .board > .horizontalControls .zoom > button { width: 48px; height: 48px; min-width: 48px; padding: 0; display: grid; place-items: center; color: #101432; opacity: 1; }
 .board > .horizontalControls .sideDock { grid-auto-rows: 40px; }
 .board > .horizontalControls .sideDock .dockPiece { height: 40px; }
