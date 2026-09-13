@@ -1378,14 +1378,23 @@
 .board > .horizontalControls .sideDock[data-tray-count="10"] { grid-template-columns: repeat(10, minmax(0, 1fr)); }
 .board > .horizontalControls .sideDock[data-tray-count="15"] { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 .board > .horizontalControls .sideDock .dockPiece {
-  grid-column: auto !important; grid-row: auto !important;
+  grid-column: auto; grid-row: auto;
   width: 100%; min-width: 0; height: 28px; padding: 2px;
 }
 .board > .horizontalControls .dockPiece svg { width: 100%; height: 100%; }
 .board > .horizontalControls .roundMenu { top: calc(100% + 8px); left: 0; bottom: auto; }
 @media (max-width: 600px) and (orientation: portrait) {
-  .board > .horizontalControls .sideDock[data-tray-count="10"] { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .board > .horizontalControls .sideDock[data-two-rows="false"][data-single-column="false"] { grid-template-columns: repeat(5, minmax(0, 32px)) !important; width: min(100%, 184px) !important; }
   .board > .horizontalControls .sideDock[data-single-column="false"] { grid-column: 1 / -1; grid-row: 2; }
+}
+.board .mapArea .limitNotice {
+  top: 16px; left: 50%; transform: translateX(-50%); z-index: 8;
+  width: max-content; max-width: calc(100% - 16px); display: block;
+  padding: 0; background: transparent; box-shadow: none; border: 0;
+  text-align: center; font-size: 13px; font-weight: 600; line-height: 1.5;
+  color: var(--ink); pointer-events: none;
+  text-shadow: 0 1px 2px #fdfbf7, 0 -1px 2px #fdfbf7, 1px 0 2px #fdfbf7, -1px 0 2px #fdfbf7;
+  animation: tsgFlash 3s ease forwards;
 }
 .dashboard .projection { flex: 0 0 140px; width: 140px; max-width: 140px; }
 .dashboard .projectionGuide {

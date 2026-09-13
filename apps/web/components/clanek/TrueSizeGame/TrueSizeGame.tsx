@@ -424,6 +424,7 @@ export default function TrueSizeGame() {
   useEffect(() => { if (searchOpen) searchInput.current?.focus(); }, [searchOpen]);
   const [optionIndex, setOptionIndex] = useState(-1);
   const [notice, setNotice] = useState("");
+  const [noticeKey, setNoticeKey] = useState(0);
   const [noticeResult, setNoticeResult] = useState<Result | null>(null);
   const [detailId, setDetailId] = useState<number | null>(null);
   const [hoverId, setHoverId] = useState<number | null>(null);
@@ -827,7 +828,9 @@ export default function TrueSizeGame() {
   function addCountry(name: string) {
     if (pieces.length >= 15) {
       setNotice("Dosažen maximální počet zemí v tomto kole, spusť novou hru.");
-      window.setTimeout(() => setNotice(""), 4200);
+      setNoticeKey(key => key + 1);
+      setSearchOpen(false);
+      setQuery("");
       return;
     }
     if (pieces.some((p) => p.name === name)) return;
@@ -1396,7 +1399,7 @@ export default function TrueSizeGame() {
               }}
             >💡</button>
 
-          <div className={`${styles.dock} ${styles.sideDock}`} data-single-column={pieces.length <= 5} data-tray-count={pieces.length} aria-label="Obrysy zemí" style={{ gridTemplateRows: `repeat(${Math.min(pieces.length, trayRows)}, minmax(0, 42px))` }}>
+          <div className={`${styles.dock} ${styles.sideDock}`} data-single-column={pieces.length <= 5} data-two-rows={pieces.length > 10} data-tray-count={pieces.length} aria-label="Obrysy zemí" style={{ gridTemplateColumns: `repeat(${pieces.length > 10 ? Math.ceil(pieces.length / 2) : pieces.length}, minmax(0, 32px))`, width: `min(100%, ${(pieces.length > 10 ? Math.ceil(pieces.length / 2) : pieces.length) * 36 + 4}px)` }}>
             {pieces.map((piece, index) => (
               <button
                 key={piece.id}
@@ -1405,7 +1408,7 @@ export default function TrueSizeGame() {
                 aria-label={`Vybrat ${accessibleName(piece)}`}
                 aria-pressed={selected?.id === piece.id}
                 title={`${accessibleName(piece)}${piece.result === "correct" ? " · správně" : piece.result === "revealed" ? " · odhaleno" : ""}`}
-                style={{ color: piece.color, gridColumn: Math.floor(index / trayRows) + 1, gridRow: index % trayRows + 1 }}
+                style={{ color: piece.color, gridColumn: pieces.length > 10 ? (index < 10 ? index % 5 + 1 : 6 + Math.floor((index - 10) / 2)) : undefined, gridRow: pieces.length > 10 ? (index < 10 ? Math.floor(index / 5) + 1 : (index - 10) % 2 + 1) : undefined }}
                 onPointerDown={(e) => beginDrag(e, piece, true)}
                 onClick={() => select(piece)}
               >
@@ -1508,7 +1511,7 @@ export default function TrueSizeGame() {
                       <text
                         key={flashKey}
                         y={-12 * labelUnitsPerPixel}
-                        style={{ fontSize: 16 * labelUnitsPerPixel, strokeWidth: 3 * labelUnitsPerPixel }}
+                        style={{ fontSize: 13 * labelUnitsPerPixel, strokeWidth: 3 * labelUnitsPerPixel }}
                         className={`${styles.countryLabel} ${styles.flashLabel}`}
                         textAnchor="middle"
                         onAnimationEnd={() => setFlashId(null)}
@@ -1521,7 +1524,7 @@ export default function TrueSizeGame() {
             );
           })}
         </svg>
-        {notice && <div className={styles.notice} role="status">{notice}</div>}
+        {notice && <div key={noticeKey} className={`${styles.notice} ${styles.limitNotice}`} role="status" onAnimationEnd={() => setNotice("")}>Dosažen maximální počet zemí v tomto kole,<br />spusť novou hru.</div>}
         <div className={styles.zoom}>
           <button onClick={() => setExpanded(!expanded)} aria-label={expanded ? "Zmenšit mapu" : "Zvětšit mapu"} title={expanded ? "Zmenšit mapu" : "Zvětšit mapu"}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d={expanded ? "M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" : "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"} /></svg>
