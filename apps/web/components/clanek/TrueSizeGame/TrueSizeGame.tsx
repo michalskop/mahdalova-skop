@@ -1326,8 +1326,7 @@ export default function TrueSizeGame() {
           </aside>
         </div>
       </div>
-      <div className={styles.mapArea}>
-          <div className={styles.countryControls}>
+          <div className={`${styles.countryControls} ${styles.horizontalControls}`}>
             <div
               className={styles.roundControl}
               onBlur={(e) => {
@@ -1417,6 +1416,7 @@ export default function TrueSizeGame() {
           </div>
           </div>
 
+      <div className={styles.mapArea}>
         <svg
           ref={svg}
           className={styles.map}
