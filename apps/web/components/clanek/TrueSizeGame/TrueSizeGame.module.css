@@ -1374,5 +1374,12 @@
   .mapArea .countryControls { top: 16px; }
 }
 @media (max-width: 600px) {
-  .dashboard .projectionGuide { flex-basis: 100%; }
+  .dashboard { display: grid; grid-template-columns: 36px 104px minmax(0, 1fr); gap: 6px; padding: 8px; align-items: center; }
+  .dashboard .search,
+  .dashboard .search[data-expanded="false"],
+  .board .searchTrigger { width: 36px; min-width: 0; max-width: 36px; }
+  .dashboard .projection { width: 104px; max-width: 104px; }
+  .dashboard .projection summary { padding: 0 8px; gap: 4px; }
+  .dashboard .projection summary .caret { flex-shrink: 0; width: 16px; }
+  .dashboard .projectionGuide { width: auto; padding: 8px; }
 }
