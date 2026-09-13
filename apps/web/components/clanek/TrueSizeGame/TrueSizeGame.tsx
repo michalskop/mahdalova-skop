@@ -1179,7 +1179,7 @@ export default function TrueSizeGame() {
       <div className={styles.dashboard}>
         <div className={styles.toolbar}>
           <div className={styles.search} data-expanded={searchOpen}>
-            {!searchOpen && <button className={styles.searchTrigger} aria-label="Hledat zemi" title="Hledat zemi" onClick={() => setSearchOpen(true)} />}
+            <button className={styles.searchTrigger} aria-label="Hledat zemi" title="Hledat zemi" aria-expanded={searchOpen} onPointerDown={e => { if (searchOpen) e.preventDefault(); }} onClick={() => { setSearchOpen(!searchOpen); setQuery(""); }} />
             <svg
               aria-hidden="true"
               className={styles.searchIcon}
@@ -1192,12 +1192,13 @@ export default function TrueSizeGame() {
               <circle cx="10.5" cy="10.5" r="6.5" />
               <path d="m16 16 4.5 4.5" />
             </svg>
+            <div className={styles.searchDropdown} hidden={!searchOpen}>
             <input
               ref={searchInput}
               hidden={!searchOpen}
               role="combobox"
               aria-label="Hledat"
-              placeholder=""
+              placeholder="Název země"
               autoComplete="off"
               value={query}
               aria-autocomplete="list"
@@ -1265,6 +1266,7 @@ export default function TrueSizeGame() {
                 )}
               </ul>
             )}
+            </div>
           </div>
           <details
             className={styles.projection}

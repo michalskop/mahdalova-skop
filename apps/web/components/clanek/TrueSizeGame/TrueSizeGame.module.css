@@ -1342,8 +1342,22 @@
 .board .roundControl > button > svg { transform: translate(-1px, -3px); }
 
 /* Shorter search control leaves the projection selector closer to it. */
-.dashboard .search { flex: 0 1 180px; max-width: 180px; }
+.dashboard .search { flex: 0 0 48px; width: 48px; max-width: 48px; }
 .dashboard .search[data-expanded="false"] { flex: 0 0 48px; width: 48px; max-width: 48px; }
 .board .searchTrigger { width: 48px; height: 48px; padding: 0; border: 0; border-radius: 8px; background: transparent; }
-.board .search[data-expanded="false"] .searchIcon { left: 50%; transform: translate(-50%, -50%); }
+.board .search .searchIcon { left: 50%; transform: translate(-50%, -50%); }
 .board .search input[hidden] { display: none; }
+.searchDropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: min(240px, calc(100vw - 64px));
+  z-index: 20;
+  background: var(--paper);
+  border-radius: 8px;
+  box-shadow: 0 3px 16px #10143212;
+  padding: 5px;
+}
+.searchDropdown[hidden] { display: none; }
+.board .searchDropdown input { padding: 0 12px; height: 40px; background: #f5f0eb; }
+.board .searchDropdown .suggestions { position: static; width: 100%; margin: 4px 0 0; box-shadow: none; max-height: min(300px, 45dvh); }
