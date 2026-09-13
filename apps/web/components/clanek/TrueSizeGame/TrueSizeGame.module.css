@@ -1468,6 +1468,12 @@
   font-size: clamp(12px, 1.15vw, 15px); font-weight: 400;
   line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.dashboard .projectionOptions {
+  right: auto;
+  width: max-content;
+  min-width: 148px;
+  max-width: min(190px, calc(100vw - 16px));
+}
 @media (min-width: 601px) {
   .mapArea .countryControls { top: 16px; }
 }
