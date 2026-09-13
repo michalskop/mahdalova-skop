@@ -609,15 +609,10 @@ export default function TrueSizeGame() {
     return () => mq.removeEventListener("change", apply);
   }, []);
   useEffect(() => {
-    const scale = projectionId === "peters" ? (portraitMobile ? 0.76 : 0.80) : projectionId === "mercator" ? (portraitMobile ? 0.72 : 0.82) : projectionId === "mollweide" ? (portraitMobile ? 0.62 : 0.66) : ["robinson", "winkel", "equal"].includes(projectionId) ? (portraitMobile ? 0.64 : 0.68) : (portraitMobile ? 0.68 : 0.72);
-    const extraSouth = projectionId === "mercator" ? 0 : Math.min(140, mapHeight * 0.16);
     // Mercator benefits from a lower equator to expose its strongly enlarged
     // northern latitudes; the other projections sit a little higher to avoid
     // an empty band above the map.
-    const northShift = mapHeight * (projectionId === "mercator" ? -0.04 : 0.10);
-    const westShift = projectionId === "mercator" ? 0 : -WIDTH * 0.02;
-    const target = { x: WIDTH * (1 - scale) / 2 + westShift, y: mapHeight * (1 - scale) * EQUATOR_POSITION - extraSouth / 2 + northShift,
-      width: WIDTH * scale, height: mapHeight * scale + extraSouth };
+    const target = { x: 0, y: 0, width: WIDTH, height: mapHeight };
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setView(target); return; }
     const from = view;
     const start = performance.now();
@@ -1368,11 +1363,7 @@ export default function TrueSizeGame() {
           <button
             onClick={() => {
               stopDrag();
-              const scale = projectionId === "peters" ? (portraitMobile ? 0.76 : 0.80) : projectionId === "mercator" ? (portraitMobile ? 0.72 : 0.82) : projectionId === "mollweide" ? (portraitMobile ? 0.62 : 0.66) : ["robinson", "winkel", "equal"].includes(projectionId) ? (portraitMobile ? 0.64 : 0.68) : (portraitMobile ? 0.68 : 0.72);
-              const extraSouth = projectionId === "mercator" ? 0 : Math.min(140, mapHeight * 0.16);
-              const northShift = mapHeight * (projectionId === "mercator" ? -0.04 : 0.10);
-              const westShift = projectionId === "mercator" ? 0 : -WIDTH * 0.02;
-              setView({ x: WIDTH * (1 - scale) / 2 + westShift, y: mapHeight * (1 - scale) * EQUATOR_POSITION - extraSouth / 2 + northShift, width: WIDTH * scale, height: mapHeight * scale + extraSouth });
+              setView(fullView);
             }}
             aria-label="Celý svět"
             title="Celý svět"
