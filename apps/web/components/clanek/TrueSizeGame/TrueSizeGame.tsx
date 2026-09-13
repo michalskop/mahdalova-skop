@@ -1439,7 +1439,7 @@ export default function TrueSizeGame() {
               }}
             >💡</button>
 
-          <div className={`${styles.dock} ${styles.sideDock}`} data-single-column={pieces.length <= 5} data-two-rows={pieces.length > 10} data-tray-count={pieces.length} aria-label="Obrysy zemí" style={{ gridTemplateColumns: `repeat(${pieces.length > 10 ? Math.ceil(pieces.length / 2) : pieces.length}, minmax(0, 32px))`, width: `min(100%, ${(pieces.length > 10 ? Math.ceil(pieces.length / 2) : pieces.length) * 36 + 4}px)` }}>
+          <div className={`${styles.dock} ${styles.sideDock}`} data-single-column={pieces.length <= 5} data-two-rows={pieces.length > 10} data-tray-count={pieces.length} aria-label="Obrysy zemí" style={{ gridTemplateColumns: `repeat(${pieces.length > 10 ? Math.ceil(pieces.length / 2) : pieces.length}, minmax(0, 1fr))` }}>
             {pieces.map((piece, index) => (
               <button
                 key={piece.id}
