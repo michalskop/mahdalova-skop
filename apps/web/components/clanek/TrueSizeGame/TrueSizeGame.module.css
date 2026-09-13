@@ -1287,7 +1287,7 @@
     flex: 1 1 0;
     width: auto;
     min-width: 0;
-    max-width: 188px;
+    max-width: none;
     height: 36px;
     padding: 4px;
     gap: 2px;
