@@ -38,7 +38,7 @@ export type ProjectionId =
   | "winkel";
 export const WIDTH = 960;
 export const HEIGHT = 700;
-export const EQUATOR_POSITION = 0.58;
+export const EQUATOR_POSITION = 0.64;
 // Exact five-shade rows supplied by the editor (September 2026).
 export const COUNTRY_COLOR_ROWS = [
   ["#eeeae2", "#e9e9dd", "#e8e8dc", "#d4d4c8", "#c8c8bc"],
