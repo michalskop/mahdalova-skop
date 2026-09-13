@@ -1296,7 +1296,7 @@ export default function TrueSizeGame() {
               {projectionTouched
                 ? PROJECTIONS.find((p) => p.id === projectionId)?.name
                 : "Typ zobrazení"}
-              <span className={styles.guideText}>{projectionText}</span>
+              <span className={styles.guideText} onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>{projectionText}</span>
               <svg
                 className={styles.caret}
                 viewBox="0 0 24 24"
