@@ -144,16 +144,24 @@ function spreadPieces<T extends Piece>(
     let best: LonLat = [0, 0];
     let bestBox: number[] = [];
     let bestCost = Infinity;
+    // Project the whole outline ONCE to size the piece; each candidate then only
+    // projects its centre point. Turns ~500 full-polygon projections per piece
+    // into one; the later arrange() pass fixes residual overlap in exact screen
+    // space, so an approximate (latitude-independent) box here is fine.
+    const sample = path.bounds(
+      placeCountry(countries.get(piece.name)!, { ...piece, lon: 0, lat: 20 }),
+    );
+    const halfW = (sample[1][0] - sample[0][0]) / 2 + 4;
+    const halfH = (sample[1][1] - sample[0][1]) / 2 + 4;
     for (let lat = -32 + Math.random() * 4; lat <= 68; lat += 7) {
       for (let lon = -165 + Math.random() * 4; lon <= 165; lon += 10) {
-        const bounds = path.bounds(
-          placeCountry(countries.get(piece.name)!, { ...piece, lon, lat }),
-        );
+        const centre = projection([lon, lat]);
+        if (!centre) continue;
         const box = [
-          bounds[0][0] - 4,
-          bounds[0][1] - 4,
-          bounds[1][0] + 4,
-          bounds[1][1] + 4,
+          centre[0] - halfW,
+          centre[1] - halfH,
+          centre[0] + halfW,
+          centre[1] + halfH,
         ];
         if (
           box[0] < 15 ||

@@ -334,6 +334,12 @@
 }
 .piece > path {
   fill-opacity: 0.16;
+  transition: fill-opacity 0.12s ease;
+}
+/* Brighten the country under the cursor so its position on the map is obvious. */
+.piece:not(.pinned):hover > path,
+.piece:not(.pinned):focus-visible > path {
+  fill-opacity: 0.5;
 }
 .piece:active {
   cursor: grabbing;
