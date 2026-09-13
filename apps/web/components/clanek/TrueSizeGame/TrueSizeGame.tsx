@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { PointerEvent as Pointer, KeyboardEvent } from "react";
-import { geoGraticule, geoPath } from "d3-geo";
+import { geoArea, geoGraticule, geoPath } from "d3-geo";
 import { useProjectionMorph } from "./useProjectionMorph";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
@@ -380,9 +380,15 @@ function Silhouette({ country }: { country: Country }) {
   const d = useMemo(() => {
     const projection = makeProjection("equal");
     const path = geoPath(projection);
-    const silhouette: Country = country.properties.name === "France" && country.geometry.type === "MultiPolygon"
+    let silhouette: Country = country.properties.name === "France" && country.geometry.type === "MultiPolygon"
       ? { ...country, geometry: { ...country.geometry, coordinates: country.geometry.coordinates.filter((polygon) => polygon[0].some(([lon, lat]) => lon > -10 && lon < 15 && lat > 40 && lat < 52)) } }
       : country;
+    if (country.properties.name === "Russia" && country.geometry.type === "MultiPolygon") {
+      const mainland = country.geometry.coordinates.reduce((largest, polygon) =>
+        geoArea({ type: "Polygon", coordinates: polygon }) > geoArea({ type: "Polygon", coordinates: largest }) ? polygon : largest,
+      );
+      silhouette = { ...country, geometry: { type: "Polygon", coordinates: mainland } };
+    }
     const bounds = path.bounds(silhouette);
     return {
       path: path(silhouette) || "",
