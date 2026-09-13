@@ -565,7 +565,9 @@ export default function TrueSizeGame() {
           const c = map.get(n);
           return c && COUNTRIES[n]?.target && areaKm2(c) >= 40000;
         });
-        const names = chooseNames(pool, previousRound.current, 5);
+        const chosen = chooseNames(pool, previousRound.current, 5);
+        // Every fresh page load starts with the iconic Greenland comparison.
+        const names = ["Greenland", ...chosen.filter((name) => name !== "Greenland")].slice(0, 5);
         previousRound.current = names;
         const colors = chooseColors(names.length);
         const initial: GamePiece[] = names.map((name, i) => ({
@@ -866,6 +868,9 @@ export default function TrueSizeGame() {
   function newGame(count: 5 | 10 | 15) {
     stopDrag();
     setRoundCount(count);
+    setProjectionId("mercator");
+    setProjectionTouched(false);
+    setProjectionText("");
     const pool = CURATED_COUNTRIES.filter((name) => {
       const country = byName.get(name);
       return country && COUNTRIES[name]?.target && areaKm2(country) >= 40000;
