@@ -506,6 +506,30 @@ export default function TrueSizeGame() {
     if (ratio > 0.67) return "Rozlohou je zhruba jako Česko.";
     return `Je menší než Česko – vešla by se do něj zhruba ${Math.round(1 / ratio)}×.`;
   }
+  // Population is stored as a Czech display string ("144 milionů", "1,41 miliardy",
+  // "57 tisíc"); parse it to a number so density can be shown against the real
+  // (spherical) area used elsewhere in the tooltip. A hand-set FACTS.density wins.
+  function parsePopulation(text: string | undefined): number | null {
+    if (!text) return null;
+    const m = text.match(/([\d\s.,]+)\s*(miliard|milion|tis)/i);
+    if (!m) return null;
+    const value = parseFloat(m[1].replace(/\s/g, "").replace(",", "."));
+    if (!Number.isFinite(value)) return null;
+    const unit = m[2].toLowerCase();
+    const mult = unit.startsWith("miliard") ? 1e9 : unit.startsWith("milion") ? 1e6 : 1e3;
+    return value * mult;
+  }
+  function populationDensity(name: string): string {
+    const fact = FACTS[name];
+    if (fact?.density) return fact.density;
+    const c = byName.get(name);
+    const pop = parsePopulation(fact?.population);
+    if (!c || pop === null) return "—";
+    const d = pop / areaKm2(c);
+    if (!Number.isFinite(d) || d <= 0) return "—";
+    const digits = d < 1 ? 2 : d < 10 ? 1 : 0;
+    return `${new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: digits }).format(d)} obyv./km²`;
+  }
   const projection = useMemo(
     () => makeMapProjection(projectionId, mapHeight),
     [projectionId, mapHeight],
@@ -1605,7 +1629,7 @@ export default function TrueSizeGame() {
               <span>Hlavní město</span><strong>{FACTS[detail.name]?.capital}</strong>
               <span>Rozloha</span><strong>{number.format(areaKm2(byName.get(detail.name)!))} km²</strong>
               <span>Obyvatelstvo</span><strong>{FACTS[detail.name]?.population}</strong>
-              <span>Hustota osídlení</span><strong>{FACTS[detail.name]?.density ?? "—"}</strong>
+              <span>Hustota osídlení</span><strong>{populationDensity(detail.name)}</strong>
               <strong className={styles.rankFact}>Rozlohou {detailAreaRank}. největší země světa</strong>
             </div> : !hintLevel && <>
               <small>≈ {number.format(areaKm2(byName.get(detail.name)!))} km²</small>
