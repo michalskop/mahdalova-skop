@@ -748,7 +748,10 @@ export default function TrueSizeGame() {
       const element = area.querySelector(`.${selector}`);
       if (element) observer.observe(element);
     }
-    schedule();
+    // Arrange immediately on new game / projection / resize-observer setup so
+    // pieces appear already laid out (no 180ms settle jump). The ResizeObserver
+    // keeps the debounced schedule() to avoid thrash during live resizing.
+    arrange();
     return () => { disposed = true; window.clearTimeout(timer); observer.disconnect(); };
   }, [pieces.length, projection, animating, expanded, byName]);
 
@@ -1403,7 +1406,6 @@ export default function TrueSizeGame() {
                   role="group"
                   aria-label="Počet zemí"
                 >
-                  <span>Počet zemí</span>
                   <div>
                     {([5, 10, 15] as const).map((count) => (
                       <button
