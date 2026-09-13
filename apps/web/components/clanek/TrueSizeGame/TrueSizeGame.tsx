@@ -1315,7 +1315,7 @@ export default function TrueSizeGame() {
                 <path d="m6 9 6 6 6-6" />
               </svg>
               <span className={styles.guideText} onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>
-                {projectionTouched ? projectionText : "Vybrat mapové zobrazení"}
+                {projectionTouched ? projectionText : "Vybrat → mapové zobrazení"}
               </span>
             </summary>
             <div className={styles.projectionOptions}>
