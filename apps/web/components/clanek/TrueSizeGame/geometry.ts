@@ -2,6 +2,7 @@ import {
   geoArea,
   geoCentroid,
   geoEqualEarth,
+  geoGraticule,
   geoMercator,
   geoPath,
   geoRotation,
@@ -287,3 +288,32 @@ export function homePiece(piece: Piece, country: Country): Piece {
   return { ...piece, lon, lat, angle: 0 };
 }
 
+
+// Fit every projection into the same inhabited-world frame (Tierra del Fuego to
+// northern Greenland/Canada, no empty Antarctic band) and clip to the viewport,
+// which also suppresses antimeridian seams. This is the frame the map renders in.
+const WORLD_BAND = geoGraticule()
+  .extentMajor([
+    [-180, -58],
+    [180, 84],
+  ])
+  .outline();
+
+export function makeMapProjection(
+  id: ProjectionId,
+  height: number = HEIGHT,
+): GeoProjection {
+  const projection = makeProjection(id, height);
+  const pad = 12;
+  projection.fitExtent(
+    [
+      [pad, pad],
+      [WIDTH - pad, height - pad],
+    ],
+    WORLD_BAND as never,
+  );
+  return projection.clipExtent([
+    [0, 0],
+    [WIDTH, height],
+  ]);
+}

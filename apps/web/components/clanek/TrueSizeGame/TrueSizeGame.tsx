@@ -4,7 +4,6 @@ import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { PointerEvent as Pointer, KeyboardEvent } from "react";
 import { geoArea, geoEqualEarth, geoGraticule, geoMercator, geoPath } from "d3-geo";
 import { useProjectionMorph } from "./useProjectionMorph";
-import { makeMapProjection } from "../../map-game-v2/engine";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
 import { COUNTRIES } from "./countries";
@@ -17,6 +16,7 @@ import {
   EQUATOR_POSITION,
   homePiece,
   isHome,
+  makeMapProjection,
   makeProjection,
   normLon,
   placeCountry,
