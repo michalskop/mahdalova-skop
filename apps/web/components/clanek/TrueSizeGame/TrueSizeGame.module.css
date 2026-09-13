@@ -1309,12 +1309,15 @@
   .mapArea .countryControls .sideDock[data-tray-count="10"],
   .mapArea .countryControls .sideDock[data-tray-count="15"] {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 32px);
+    grid-template-rows: repeat(2, 32px) !important;
+    grid-auto-rows: 32px;
+    grid-auto-flow: row;
     width: 100%;
     height: auto;
     align-items: center;
   }
+  .mapArea .countryControls .sideDock[data-tray-count="10"] { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .mapArea .countryControls .sideDock[data-tray-count="15"] { grid-template-columns: repeat(8, minmax(0, 1fr)); }
   .mapArea .countryControls .sideDock[data-tray-count="10"] .dockPiece,
   .mapArea .countryControls .sideDock[data-tray-count="15"] .dockPiece {
     grid-column: auto !important;
