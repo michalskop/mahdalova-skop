@@ -354,7 +354,7 @@
 /* Country name flashes briefly on selection, then fades out (never permanent,
    never blocks the map – pointer-events stay none via .countryLabel). */
 .flashLabel {
-  animation: tsgFlash 2.2s ease forwards;
+  animation: tsgFlash 3s ease forwards;
 }
 @keyframes tsgFlash {
   0% {

@@ -417,6 +417,7 @@ export default function TrueSizeGame() {
   const [projectionText, setProjectionText] = useState("");
   const [flashId, setFlashId] = useState<number | null>(null);
   const [flashKey, setFlashKey] = useState(0);
+  const [labelUnitsPerPixel, setLabelUnitsPerPixel] = useState(1);
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const [optionIndex, setOptionIndex] = useState(-1);
@@ -652,6 +653,20 @@ export default function TrueSizeGame() {
     if (guide) observer.observe(guide);
     return () => observer.disconnect();
   }, [rendered, view, detailId, hintLevel, pieces.length, portraitMobile]);
+  // SVG text should keep its screen size as the viewport and map zoom change.
+  useEffect(() => {
+    const map = svg.current;
+    if (!map) return;
+    const measure = () => {
+      const matrix = map.getScreenCTM();
+      if (matrix) setLabelUnitsPerPixel(1 / Math.max(0.001, Math.hypot(matrix.a, matrix.b)));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(map);
+    return () => observer.disconnect();
+  }, [view, mapHeight, expanded]);
+
   // Keep untouched pieces clear of the responsive map controls.
   useEffect(() => {
     const map = svg.current;
@@ -927,6 +942,8 @@ export default function TrueSizeGame() {
     setActiveId(piece.id);
     setHoverId(null);
     if (piece.pinned || piece.result) {
+      setFlashId(piece.id);
+      setFlashKey(key => key + 1);
       setDetailId(piece.id);
       if (!fromDock) {
         svg.current?.setPointerCapture(e.pointerId);
@@ -1433,7 +1450,6 @@ export default function TrueSizeGame() {
           />
           {ordered.map((piece) => {
             const anchor = rendered([piece.lon, piece.lat]);
-            const r = Math.max(3, (6 * view.width) / WIDTH);
             return (
               <g
                 key={piece.id}
@@ -1477,7 +1493,8 @@ export default function TrueSizeGame() {
                     <g transform={`translate(${anchor[0]},${anchor[1]})`}>
                       <text
                         key={flashKey}
-                        y={-r - 5}
+                        y={-12 * labelUnitsPerPixel}
+                        style={{ fontSize: 16 * labelUnitsPerPixel, strokeWidth: 3 * labelUnitsPerPixel }}
                         className={`${styles.countryLabel} ${styles.flashLabel}`}
                         textAnchor="middle"
                         onAnimationEnd={() => setFlashId(null)}
