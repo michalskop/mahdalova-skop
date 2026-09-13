@@ -1301,9 +1301,7 @@ export default function TrueSizeGame() {
             }}
           >
             <summary aria-label="Typ zobrazení">
-              {projectionTouched
-                ? PROJECTIONS.find((p) => p.id === projectionId)?.name
-                : "Typ zobrazení"}
+              Typ zobrazení
               <svg
                 className={styles.caret}
                 viewBox="0 0 24 24"
@@ -1316,7 +1314,9 @@ export default function TrueSizeGame() {
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
-              <span className={styles.guideText} onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>{projectionText}</span>
+              <span className={styles.guideText} onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>
+                {projectionTouched ? projectionText : "Vybrat mapové zobrazení"}
+              </span>
             </summary>
             <div className={styles.projectionOptions}>
               {PROJECTIONS.map((p) => (
