@@ -232,27 +232,27 @@ const number = new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 });
 // it is normally used. `href` links a source with a real example.
 const projectionInfo: Record<ProjectionId, { text: string; href: string }> = {
   mercator: {
-    text: "Čím dál od rovníku, tím větší země vypadají – Grónsko nebo Rusko se zdají mnohem větší, než ve skutečnosti jsou. Používá se hlavně v námořní a letecké navigaci a v mapách na internetu.",
+    text: "Směrem k pólům zvětšuje země, zachovává místní úhly. Slouží námořní navigaci.",
     href: "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html",
   },
   equal: {
-    text: "Ukazuje státy a kontinenty ve správném poměru velikostí, jen tvary jsou trochu protažené. Hodí se, když chcete poctivě porovnat rozlohy – třeba ve školních mapách světa.",
+    text: "Zachovává poměry rozloh, mění tvary. Hodí se pro porovnávání velikostí zemí.",
     href: "https://equal-earth.com/",
   },
   peters: {
-    text: "Taky drží správné poměry velikostí, ale tvary hodně natahuje do výšky. Používá se ve výuce, aby vynikla skutečná velikost oblastí u rovníku, hlavně Afriky.",
+    text: "Zachovává poměry rozloh, protahuje tvary u rovníku. Ve výuce ukazuje skutečné velikosti.",
     href: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
   },
   mollweide: {
-    text: "Oválná mapa, kde velikosti sedí, ale u okrajů se tvary ohýbají. Hodí se pro mapy celého světa – třeba podnebí nebo rozložení lidí na planetě.",
+    text: "Zachovává rozlohy, u okrajů mění tvary. Používá se pro mapy podnebí či obyvatelstva.",
     href: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
   },
   robinson: {
-    text: "Kompromis: nic není úplně přesné, zato svět vypadá přirozeně a vyváženě. Dlouho se používala v atlasech a školních mapách.",
+    text: "Vyvažuje zkreslení tvarů a rozloh. Známá z atlasů a školních map světa.",
     href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
   },
   winkel: {
-    text: "Vyvážený kompromis s malým zkreslením velikostí i tvarů zároveň. Používá ji třeba National Geographic pro své mapy světa.",
+    text: "Vyvažuje zkreslení ploch, směrů a vzdáleností. Používá ji National Geographic.",
     href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
   },
 };
