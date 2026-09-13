@@ -208,7 +208,8 @@ function spreadPieces<T extends Piece>(
 type Rect = { x: number; y: number; width: number; height: number };
 // Mobile map gets 25 % more viewport height (see makeProjection's `height`).
 const MOBILE_QUERY = "(max-width: 600px)";
-const MOBILE_HEIGHT = Math.round(HEIGHT * 1.25);
+const MAP_HEIGHT = 520;
+const MOBILE_HEIGHT = Math.round(MAP_HEIGHT * 1.25);
 const GREEN = "#639e0a";
 const ORANGE = "#ff934d";
 const label = (name: string) =>
@@ -443,7 +444,7 @@ export default function TrueSizeGame() {
   const previousRound = useRef<string[]>(STARTERS);
   const restartButton = useRef<HTMLButtonElement>(null);
   const roundMenuId = useId();
-  const [mapHeight, setMapHeight] = useState(HEIGHT);
+  const [mapHeight, setMapHeight] = useState(MAP_HEIGHT);
   const [portraitMobile, setPortraitMobile] = useState(false);
   const trayRows = 5;
   const [logoPosition, setLogoPosition] = useState<{left: number; top: number} | null>(null);
@@ -596,7 +597,7 @@ export default function TrueSizeGame() {
   // Mobile viewport gets 25 % more map height; projection recomputes for it.
   useEffect(() => {
     const mq = window.matchMedia(MOBILE_QUERY);
-    const apply = () => setMapHeight(mq.matches ? MOBILE_HEIGHT : HEIGHT);
+    const apply = () => setMapHeight(mq.matches ? MOBILE_HEIGHT : MAP_HEIGHT);
     apply();
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
