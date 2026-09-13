@@ -232,7 +232,7 @@ const number = new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 });
 // it is normally used. `href` links a source with a real example.
 const projectionInfo: Record<ProjectionId, { text: string; href: string }> = {
   mercator: {
-    text: "Směrem k pólům zvětšuje země, zachovává místní úhly. Slouží námořní navigaci.",
+    text: "Směrem k pólům zvětšuje plochy, zachovává místní úhly. Slouží námořní navigaci.",
     href: "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html",
   },
   equal: {
@@ -240,15 +240,15 @@ const projectionInfo: Record<ProjectionId, { text: string; href: string }> = {
     href: "https://equal-earth.com/",
   },
   peters: {
-    text: "Zachovává poměry rozloh, protahuje tvary u rovníku. Ve výuce ukazuje skutečné velikosti.",
+    text: "Zachovává poměry ploch, prodlužuje tvary u rovníku. Používá se pro zobrazení skutečných velikostí.",
     href: "https://www.curriculumonline.ie/getmedia/86f7ee50-2437-4327-a7c9-4a03ce7565a1/PSEC03b_Geography_Guidelines.pdf",
   },
   mollweide: {
-    text: "Zachovává rozlohy, u okrajů mění tvary. Používá se pro mapy podnebí či obyvatelstva.",
+    text: "Zachovává rozlohy, u okrajů mění tvary. Používá se v mapách podnebí či obyvatelstva.",
     href: "https://support.esri.com/en-us/gis-dictionary/mollweide-projection",
   },
   robinson: {
-    text: "Vyvažuje zkreslení tvarů a rozloh. Známá z atlasů a školních map světa.",
+    text: "Vyvažuje zkreslení tvarů a rozloh. Projekce známá z atlasů a školních map světa.",
     href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
   },
   winkel: {
