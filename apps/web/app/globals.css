@@ -76,14 +76,16 @@
   font-weight: 700;
   font-size: 1.0625rem;
   line-height: var(--mantine-line-height, 1.55);
-  margin: 0.4em 0.75rem 0.5rem 0;
+  margin: 0.4em 0.75rem 0.25rem 0;
   margin-top: calc((1lh - 1cap) / 2);
 }
 .article-sidebar-photo img {
   display: block;
 }
 .article-sidebar-photo > div {
-  margin-bottom: 0;
+  /* The Markdown paragraph has an inline Mantine mb="md" (16px).
+     It must not enlarge the float's exclusion area below the image. */
+  margin-bottom: 0 !important;
 }
 .article-sidebar-flow > :is(h2, h3) {
   clear: none !important;
