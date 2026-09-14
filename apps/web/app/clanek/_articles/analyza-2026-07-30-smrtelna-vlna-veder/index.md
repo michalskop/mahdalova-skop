@@ -109,3 +109,5 @@ Co dělat v horkých dnech: Světová zdravotnická organizace doporučuje zůst
 ```
 
 Telefonát staršímu člověku trvá několik minut. Český systém, který by věděl, komu takovou pomoc nabídnout automaticky, vzniká podstatně pomaleji. Teplotní rekord už na něj čekat nemusel.
+
+<RelatedArticles slugs={["analyza-2026-07-31-horko-v-kabine-ridicu-autobusu", "cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi", "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku"]} heading="Psali jsme" />

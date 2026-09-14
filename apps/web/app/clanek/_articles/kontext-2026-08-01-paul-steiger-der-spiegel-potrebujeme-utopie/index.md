@@ -153,3 +153,5 @@ Bezosův Washington Post prošel oběma extrémy. Nejdřív přišly investice, 
 Omidyarův vstup do médií vypadal jinak, ale také rozporuplně: z jeho First Look Media vzešel web The Intercept, který se ale s Glennem Greenwaldem – reportérem, jehož angažmá tu Steiger zmiňuje jako naději – nakonec rozešel právě ve sporu o nezávislost vlastní redakce.
 
 Steigerova věta „potřebujeme utopie“ tak dnes zní hořce. Ukázalo se, že majitel je pořád majitel – a že „nezávislost“, kterou Steiger popisoval u ProPublica financované ze širokého okruhu dárců, se u miliardářského vlastnictví jednoho zavedeného titulu sama od sebe nezaručí.
+
+<RelatedArticles slugs={["kontext-2026-08-02-paul-steiger-jsi-fakt-dobra", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="Psali jsme" />

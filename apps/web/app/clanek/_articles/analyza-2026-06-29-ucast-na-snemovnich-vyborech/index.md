@@ -45,3 +45,5 @@ Každý výbor si vede zápisy po svém a jednotný formát neexistuje, což zpr
 Poslanci často namítají, že samotná docházka o kvalitě práce mnoho neříká. U pléna na tom něco je. U výborů je to ale jinak: právě tam se odehrává základ legislativní práce, věcné čtení zákonů a kontrola vlády. Kdo na výbor nepřijde, v té chvíli své voliče nezastupuje nikde.
 
 Shrnutí každého zasedání výborů najdete vždy večer po jednání v našem projektu [Digest](https://snemovna.datatimes.cz/digest).
+
+<RelatedArticles slugs={["analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami", "analyza-2026-09-04-kdo-smi-k-ministrovi", "analyza-2024-10-10-digitalizace-stavebniho-rizeni-analyza-prvnich-dostupnych-dat"]} heading="Psali jsme" />

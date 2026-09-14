@@ -161,3 +161,5 @@ BBC z této kauzy neodchází jako „lživý propagandistický moloch", jak tvr
 A tady se kruh uzavírá. Není to jen britský příběh. Je to příběh o budoucnosti všech veřejnoprávních médií v éře polarizace. O tom, jak to vypadá, když se „nestrannost" stane politickou zbraní.
 
 Může vůbec existovat médium, které je dostatečně nestranné pro všechny strany současného kulturního konfliktu? Nebo jsme svědky konce éry, kdy bylo možné věřit, že takové médium může existovat?
+
+<RelatedArticles slugs={["explainer-2025-11-15-skutecna-hrozba-pro-nezavislost-bbc", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho", "kontext-2026-01-03-ceska-a-slovenska-media-2025"]} heading="Psali jsme" />

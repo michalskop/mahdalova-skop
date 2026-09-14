@@ -58,3 +58,5 @@ Predikce sněmovních voleb 2025 tak nejsou jen „technologickou hračkou“ �
 <div style={{ textAlign: 'center' }}>┃┃┃</div>
 
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která mluví dřív, než se dopočítají výsledky.**</div>
+
+<RelatedArticles slugs={["volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb", "volby-cr-2025-10-04-nejvetsi-prekvapeni-voleb-2025", "mandaty-unikatni-volebni-model"]} heading="Psali jsme" />

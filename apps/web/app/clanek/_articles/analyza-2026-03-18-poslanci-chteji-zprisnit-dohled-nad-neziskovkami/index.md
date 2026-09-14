@@ -125,5 +125,4 @@ U organizací, které vyvíjejí politickou činnost a jsou financované ze zahr
 Zamezíme tomu, aby se veřejné peníze využívaly pro politický aktivismus. Neziskové organizace mohou prosazovat své politické názory, ale nikoli z peněz daňových poplatníků.
 ```
 
-<RelatedArticles slugs={["volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Napsali jsme" />
-
+<RelatedArticles slugs={["analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-09-04-kdo-smi-k-ministrovi", "analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu"]} heading="Psali jsme" />

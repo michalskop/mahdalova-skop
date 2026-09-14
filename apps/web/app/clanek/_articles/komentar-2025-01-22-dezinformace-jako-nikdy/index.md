@@ -40,3 +40,5 @@ Elon Musk, Mark Zuckerberg a Jeff Bezos, kteří se sjeli do hlavního města na
 Je na tom kus pravdy – Trump skutečně slíbil masivní daňové škrty pro miliardáře. Co se však často opomíjí, jsou hlubší a temnější motivy. Pro technologické „bros“ – nebo, jak je někteří nazývají, broligarchy – jde o něco víc než jen o udržení a růst jejich bohatství. Jde o ideologii. Ideologii inspirovanou sci-fi a fantasy. Ideologii, která jim vsugerovává, že jsou něco jako nadlidé, na něž by se neměla vztahovat pravidla platná pro nás ostatní.
 
 Právě tato ideologie činí z hnutí MAGA dar z nebes pro broligarchy, mezi které patří nejen Musk, Zuckerberg a Bezos, ale také venture kapitalisté Peter Thiel a Marc Andreessen. Hnutí MAGA totiž představuje udělení neomezené moci těm, kteří už moc drží pevně ve svých rukou.
+
+<RelatedArticles slugs={["komentar-2025-01-09-hitler-nebyl-komunista", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "analyza-2026-08-23-pricovy-politicka-setkani"]} heading="Psali jsme" />

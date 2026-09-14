@@ -94,3 +94,5 @@ Z těch to 17 europoslanců je 5 z nich z Německa (Německo má celkem 96 europ
 | 28. 11. 2024 | Posílení podpory EU Ukrajině proti ruské útočné válce a rostoucí vojenská spolupráce mezi Severní Koreou a Ruskem (konečné hlasování) |
 | 28. 11. 2024 | Zhoršující se gruzínská demokratická krize po nedávných parlamentních volbách a možné volební podvody (konečné hlasování) |
 | 19. 12. 2024 | 11. rok okupace Autonomní republiky Krym a města Sevastopol Ruskou federací a zhoršující se situace v oblasti lidských práv na okupovaném Krymu, zejména případy Iryny Danylovyč, Tofika Abdulhazijeva a Ameta Sulejmanova (konečné hlasování) |
+
+<RelatedArticles slugs={["europarlament-2024-12-19-kdo-hlasuje-s-kym", "europarlament-2024-12-17-kdo-z-ceska-a-slovenska-chybi-na-hlasovani", "komentar-2025-03-01-jsme-s-ukrajinou"]} heading="Psali jsme" />

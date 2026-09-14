@@ -114,3 +114,5 @@ Podtrženo sečteno, europoslanec Filip Turek:
 Podobně jako v případě jeho "[závodní kariéry](https://www.mahdalova-skop.cz/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli)" a "[prezidentství](https://www.mahdalova-skop.cz/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku)" spolků o třech členech, také v případě financí Filip Turek vytváří příběh, který při bližším zkoumání neodpovídá realitě.
 
 _Nabízí se otázky: Kdo skutečně platí europoslanci Turkovi čtvrt milionu korun měsíčně, když to podle účetnictví nejsou jeho vlastní frmy? A proč europoslanec nechce prozradit skutečný zdroj svých příjmů?_
+
+<RelatedArticles slugs={["analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli", "kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy", "kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane"]} heading="Psali jsme" />

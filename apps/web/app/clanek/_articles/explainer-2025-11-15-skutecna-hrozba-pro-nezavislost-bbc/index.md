@@ -104,3 +104,5 @@ Nebudu tak hrubý, abych naznačoval, že Prescott našponoval svůj vlastní do
 Pokud může z této chmurné epizody vzejít něco dobrého, přinejmenším zaměřuje pozornost na roli sira Robbieho Gibba. Poslanci SNP a Liberálních demokratů žádají jeho odvolání. Ale byl tam dosazen z vůle Borise Johnsona a Rishiho Sunaka a je pravděpodobně neodvolatelný.
 
 Kdyby měl alespoň trochu sebereflexe, nyní by rezignoval.
+
+<RelatedArticles slugs={["explainer-2025-11-18-bbc-musi-uhajit-svou-nezavislost", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho", "kontext-2026-01-03-ceska-a-slovenska-media-2025"]} heading="Psali jsme" />

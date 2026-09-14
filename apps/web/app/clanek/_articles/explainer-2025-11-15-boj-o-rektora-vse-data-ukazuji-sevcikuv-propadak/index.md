@@ -101,3 +101,5 @@ Mezi českými ekonomy má dnes Miroslav Ševčík pověst někoho, kdo je medi�
 V očích odborné veřejnosti se z Miroslava Ševčíka stal symbol radikalizovaného univerzitního funkcionáře, který svůj osobní mediální obraz staví nad pověst školy.
 
 Férové je dodat, že Ševčík má i své [zastánce](https://cs.wikipedia.org/wiki/Miroslav_%C5%A0ev%C4%8D%C3%ADk), zejména politické spojence (nejen) v SPD. Ti ho vidí jako „nepohodlného“ člověka, který si dovolí říkat nepopulární názory.
+
+<RelatedArticles slugs={["analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium", "cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy"]} heading="Psali jsme" />

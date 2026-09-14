@@ -90,3 +90,4 @@ CNN ještě prodána nebyla. Redakce se nezměnila. Novináři tam dál pracují
 Obchod musí ještě schválit antimonopolní regulátoři v USA i v Evropě. Uzavření je plánováno mezi zářím a prosincem 2026. Do té doby může přijít nový zájemce nebo regulátoři obchod zablokují.
 ```
 
+<RelatedArticles slugs={["explainer-2025-11-15-skutecna-hrozba-pro-nezavislost-bbc", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} heading="Psali jsme" />

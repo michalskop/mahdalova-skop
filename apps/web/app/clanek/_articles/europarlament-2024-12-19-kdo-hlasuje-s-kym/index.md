@@ -107,3 +107,4 @@ Analýza všech zaznamenaných jmenných hlasování za končící volební obdo
 Metoda je vážená, tedy upravená tak, aby vynikly rozdíly mezi europoslanci. Větší váha se přikládá hlasováním, při nichž byl parlament více rozdělen a účastnilo se ho více europoslanců. Vůbec největší vliv na rozmístění europoslanců by mělo hlasování, které by skončilo jen o jeden hlas, nejmenší pak jednomyslná rozhodnutí. Těm se nejčastěji blíží různá procedurální či formální hlasování.
 ```
 
+<RelatedArticles slugs={["europarlament-2024-12-17-kdo-z-ceska-a-slovenska-chybi-na-hlasovani", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku"]} heading="Psali jsme" />

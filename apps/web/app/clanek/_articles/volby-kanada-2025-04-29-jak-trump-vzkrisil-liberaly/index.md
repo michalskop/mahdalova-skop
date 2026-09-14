@@ -93,3 +93,5 @@ Světoznámý spisovatel a filosof Umberto Eco (1932-2016), který jako chlapec 
 ```box
 ![Kanada - volební model](images/kanada-volby-2025.jpg)
 [zdroj dat: celostátní průzkumy veřejného mínění provedené od kanadských federálních voleb v roce 2021 do voleb 2025](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2025_Canadian_federal_election)
+
+<RelatedArticles slugs={["cislo-dne-2025-03-03-v-kanade-se-vzedmula-liberalni-vlna", "volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="Psali jsme" />

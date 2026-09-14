@@ -66,3 +66,5 @@ I proto se komentátoři citovaní na Wikipedii shodují, že ani jasné vítěz
 Volby jsou v mnohém odvetou souboje z roku 2022: znovu proti sobě stojí Kristersson a Andersson, znovu rozhoduje pár procentních bodů. Mezitím ale Švédsko v březnu 2024 vstoupilo do NATO – jde o první parlamentní volby po vstupu – a vládní koalice za podpory SD zpřísnila migrační politiku až k historicky nejnižšímu počtu udělených povolení k pobytu. Otázka, kterou tyto volby nově otevírají, není jen kdo vyhraje, ale jestli SD po šestnácti letech v Riksdagu poprvé usednou přímo ve vládě.
 
 Oficiální ani průběžné výsledky v čase publikace tohoto textu ještě nejsou k dispozici – volební místnosti se zavírají ve 20:00 SELČ. Číslo v titulku je odhad z posledního předvolebního průzkumu, ne výsledek; až budou k dispozici skutečná data, doplníme je.
+
+<RelatedArticles slugs={["volby-rakousko-2024-11-27-kartogramy", "volby-rumunsko-2024-12-08-rumunsko-volby", "volby-nemecko-2025-02-21-jak-se-voli"]} heading="Psali jsme" />

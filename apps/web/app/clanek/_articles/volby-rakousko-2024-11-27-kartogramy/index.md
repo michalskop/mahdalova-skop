@@ -16,3 +16,5 @@ Stejným způsobem jsme vizualizovali výsledky voleb ve Spojených státech. An
 
 
 ![Klasická mapa primárně zobrazuje rozlogu jednotlivých států, zatímco kartogram zobrazuje - v tomto případě - počty voličů. Jak velký je to rozdíl, je vidět na těchto dvou mapách USA s výsledky prezidentských voleb.](images/Kartogram-USA-volby-2024.png)
+
+<RelatedArticles slugs={["volby-nemecko-2025-02-21-jak-se-voli", "volby-nemecko-2025-02-27-vysledky", "kontext-2025-07-01-profil-karin-kneissl"]} heading="Psali jsme" />

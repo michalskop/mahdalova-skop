@@ -57,3 +57,5 @@ Bezpodmínečná podpora Izraele oslabuje mezinárodní postavení České repub
 Jak varuje [sociolog Daniel Prokop](https://www.seznamzpravy.cz/clanek/komentare-komentar-evropa-dnes-prohrava-hned-dve-bitvy-245595), opouštění principů mezinárodního práva a šíření relativizujících výroků oslabuje naši schopnost obhajovat univerzální hodnoty. Takové jednání podrývá důvěru veřejnosti v instituce, zvyšuje prostor pro dezinformace a přispívá k radikalizaci společnosti. A co hůř – dává munici autoritářům, kteří český selektivní přístup používají jako argument pro vlastní porušování pravidel.
 
 Kateřina Mahdalová
+
+<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} heading="Psali jsme" />

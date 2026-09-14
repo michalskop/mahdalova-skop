@@ -128,3 +128,5 @@ Každopádně jde o nejpoužívanější odborný způsob, jak odhadovat voličs
 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují pohyby voličů.**</div>
+
+<RelatedArticles slugs={["volby-cr-2025-10-04-nejvetsi-prekvapeni-voleb-2025", "volby-cr-2025-10-04-vysledky-okrsky-jak-volili-vasi-sousede", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Psali jsme" />

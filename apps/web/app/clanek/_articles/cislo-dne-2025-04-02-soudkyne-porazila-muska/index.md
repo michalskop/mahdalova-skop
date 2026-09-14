@@ -42,3 +42,5 @@ Výhra Susan Crawford zároveň upevňuje převahu liberálně smýšlejících 
 ```
 
 ![Číslo dne: Soudkyně porazila Muska](images/cislo-dne-soudkyne-porazila-muska.jpg)
+
+<RelatedArticles slugs={["kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit", "cislo-dne-2025-03-03-v-kanade-se-vzedmula-liberalni-vlna"]} heading="Psali jsme" />

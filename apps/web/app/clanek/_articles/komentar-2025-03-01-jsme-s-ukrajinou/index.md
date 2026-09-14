@@ -28,3 +28,5 @@ My jsme s Ukrajinou.
 Kateřina Mahdalová & Michal Škop
 
 ![obrázek](images/ukrajina-zelensky.jpg)
+
+<RelatedArticles slugs={["komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc", "kontext-2025-07-07-byl-zelenskyj-v-obleku-nebo-ne-otazka-za-3-miliardy", "explainer-2025-01-06-znaky-fasismu-podle-eca"]} heading="Psali jsme" />

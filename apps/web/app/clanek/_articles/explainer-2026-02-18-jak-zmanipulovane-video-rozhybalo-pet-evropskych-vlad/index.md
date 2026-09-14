@@ -124,4 +124,4 @@ Případ Francescy Albanese je v podstatě tentýž model:
 Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francesky Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
 
 
-<RelatedArticles filter="explainer" count={9} showFormatBadge={false} showAuthor={false} sort="default" heading="Další články" />
+<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "analyza-2026-08-10-izraelsko-palestinsky-konflikt"]} heading="Psali jsme" />

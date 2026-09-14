@@ -69,3 +69,5 @@ McSpadden, K. (2015) '[You now have a shorter attention span than a goldfish](ht
 Deceptive Design (2025) [About us](https://www.deceptive.design/about-us). Deceptive.design.
 
 Testimonium (2016) [Harry Brignull – expert witness in deceptive design](https://testimonium.co).
+
+<RelatedArticles slugs={["podcast-2025-12-21-boj-o-pozornost", "komentar-2026-01-08-zla-ai-ne-nebezpeci-je-urputna-ai", "podcast-mahdalky-2026-03-24-ai-a-bezpecnost"]} heading="Psali jsme" />

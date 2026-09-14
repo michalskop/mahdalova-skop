@@ -95,3 +95,5 @@ Proč se to bere tak vážně, ukazuje případ, který je učebnicí evropské 
 Tím se vracíme na začátek. Nejde o to postavit tiskovou konferenci a soukromý rozhovor jako právně totožné situace – individuální rozhovor si politik samozřejmě vybírá sám. Síla srovnání je jinde. Ukazuje, jaké standardy Petr Macinka uplatňuje na profesionální média, jimž z titulu ministra přístup upírá – a jak nulové standardy uplatňuje na člověka, jemuž přístup k sobě sám otevře.
 
 Jedněmi dveřmi se snaží vstoupit akreditovaná novinářka a stát je před ní zavře. Druhými vejde anonym v kukle – a ministr je otevře sám. Že už nás to skoro nepřekvapuje, není zásluha Petra Macinky. Je to jen míra, na jakou jsme si zvykli.
+
+<RelatedArticles slugs={["explainer-2026-02-24-uniky-z-policejnich-spisu", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami"]} heading="Psali jsme" />

@@ -58,3 +58,5 @@ Před volbami jsme oslovili jsme všechny kandidující strany. 5 ze 6 stran, kt
 <div style={{ textAlign: 'center' }}>┃┃┃</div>
 
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují předvolební sliby.**</div>
+
+<RelatedArticles slugs={["volby-cr-2025-10-04-nejvetsi-prekvapeni-voleb-2025", "volby-cr-2025-10-08-presuny-volicu-2021-2025", "volby-cr-2025-10-01-volebni-kalkulacka-klasik"]} heading="Psali jsme" />

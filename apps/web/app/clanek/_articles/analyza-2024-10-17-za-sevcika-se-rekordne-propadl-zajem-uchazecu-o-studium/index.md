@@ -48,3 +48,5 @@ Konflikty mezi vedením VŠE a národohospodářské fakulty trvají dlouho a le
 V incidentu, k němuž došlo před prázdninami na fakultě, měl podle Potužáka přijít Ševčík do jeho kanceláře a agresivně ho obvinit ze lživého šíření informací o kleasajím zájmu uchazečů. Ševčík údajně Potužákovi vyhrožoval, že pokud nepřestane šířit informace o poklesu studentů, má na něj materiál, který by mohl poškodit jeho pověst. Ševčík tento popis incidentu zpochybnil. Tvrdil, že pouze upozorňoval na nesprávnou interpretaci statistických dat a že žádný materiál, který by mohl poškodit Potužáka, ve skutečnosti nemá.
 
 Z našich propočtů však vyplývá, že Pavel Potužák data interpretuje správně. Jak uvádíme výše, data za více než 140 fakult všech veřejných vysokých škol, ukazují, že národohospodářská fakulta je na tom v poklesu zájmu uchazečů nejhůře ze všech.
+
+<RelatedArticles slugs={["explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak", "cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy"]} heading="Psali jsme" />

@@ -22,3 +22,5 @@ Zatímco podle současného modelu [Mandáty.cz](https://www.mandaty.cz) by opoz
 <iframe width="100%" height="600" src="https://www.youtube.com/embed/ia_LECQmW0c?si=Ru-5vuIeiYnt8VN0" title="Skryté koalice – podcast Mahdalová & Škop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Kateřina Mahdalová & Michal Škop
+
+<RelatedArticles slugs={["analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem", "volby-cr-2025-10-13-kam-kracis-cesko", "volby-cr-2025-10-04-predikce"]} heading="Psali jsme" />

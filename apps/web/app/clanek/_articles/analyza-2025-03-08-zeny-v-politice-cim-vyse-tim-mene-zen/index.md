@@ -17,3 +17,5 @@ Také jsme psali:
 [Německé volby: Radikální a rozdělená tiktoková generace
 ](/clanek/volby-nemecko-2025-02-28-tiktokova-generace)
 ```
+
+<RelatedArticles slugs={["analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu", "volby-cr-2025-10-01-volebni-kalkulacka-zenska-rodinna-prava", "volby-nemecko-2025-02-28-tiktokova-generace"]} heading="Psali jsme" />

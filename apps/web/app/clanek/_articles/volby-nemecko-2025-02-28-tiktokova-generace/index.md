@@ -66,3 +66,4 @@ Mimo parlament:
 <span style="background-color: #eedc00; color: black;">FDP</span>  – liberálové, prosazují volný trh, slabší stát a digitální modernizaci
 ```
 
+<RelatedArticles slugs={["volby-nemecko-2025-02-27-vysledky", "volby-nemecko-2025-02-21-jak-se-voli", "volby-rumunsko-2024-12-20-rumunsko-volby-eu"]} heading="Psali jsme" />

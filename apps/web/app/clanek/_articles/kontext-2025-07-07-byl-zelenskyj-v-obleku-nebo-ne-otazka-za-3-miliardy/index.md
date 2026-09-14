@@ -61,3 +61,5 @@ Rozhodnutí tehdy znělo: **„Ještě je brzy na odpověď“**. Komunita se te
 Hlasovací lhůta uplyne krátce po půlnoci. Tehdy bychom se měli dozvědět, jak komunita držitelů UMA rozhodla, a tím pádem i to, **kdo získá milionové výhry a kdo odejde s prázdnou**.
 
 ![Vývoj kurzů na variantu „Ano, Zelenskyj bude v obleku do konce června“](images/chart.webp)
+
+<RelatedArticles slugs={["komentar-2025-03-01-jsme-s-ukrajinou", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc"]} heading="Psali jsme" />

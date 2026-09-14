@@ -48,3 +48,5 @@ Timothy Snyder (*1969) je americký historik a profesor na Yaleově univerzitě 
 Mezi jeho nejvýznamnější knihy patří Krvavé země (Bloodlands), kde analyzuje masové vraždy spáchané nacisty a sovětským stalinským režimem, a Černá zem (Black Earth), v níž interpretuje nejhrůznější událost 20. století – holokaust. Ve své knize Cesta k nesvobodě (The Road to Unfreedom), kde zaměřuje na vývoj v Rusku v letech 2010-16 a hledá odpověď na otázky, proč se Rusko odklonilo od komunikace se Západem, jaká je podle jeho vlády úloha Ruska v dějinách nebo jak souvisí ovlivňování amerických voleb a Donald Trump s Putinovým plánem na oslabení Evropy.
 
 ```
+
+<RelatedArticles slugs={["komentar-2025-03-01-jsme-s-ukrajinou", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Psali jsme" />

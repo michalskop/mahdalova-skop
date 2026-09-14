@@ -123,3 +123,5 @@ Pro Evropu je to varování: **Spojené státy zůstávají silou, ale nikoliv p
 - [Americká cla: Trest za to, že jste moc dobří](https://www.mahdalova-skop.cz/clanek/kontext-2025-04-03-americka-cla-trest-za-to-ze-jste-moc-dobri)
 
 ```
+
+<RelatedArticles slugs={["kontext-2025-04-03-americka-cla-trest-za-to-ze-jste-moc-dobri", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "volby-usa-2024-11-06-volby-vyhraje-trump-a-nebude-to-tesne"]} heading="Psali jsme" />

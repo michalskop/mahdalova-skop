@@ -86,3 +86,5 @@ Ne každá abstence byla protestem proti myšlence správných poměrů ploch. U
 Debata o mapách míří dál než k zeměpisu. Je spojená s koloniální historií i s tím, jak se po desetiletí utvářela symbolická hierarchie regionů. Když je Afrika soustavně zobrazovaná jako menší a okrajovější, posiluje to rámec, v němž je i vnímána jako periferní. Právě proto Togo v OSN mluvilo o přesnějším a férovějším obrazu světa, ne jen o kartografické opravě.
 
 Mapa totiž nevysvětluje jen prostor. Vytváří i představu o pořadí věcí. A jak nejlépe pochopit, jak moc nás běžná mapa klame? Zkusit si to. Chystáme k tomu interaktivní nástroj, ve kterém uvidíte, o kolik která projekce jednotlivé země zvětší – a jak je na tom vaše vlastní představa o velikosti světa.
+
+<RelatedArticles slugs={["kontext-2026-09-05-skutecna-velikost-sveta", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii", "volby-rakousko-2024-11-27-kartogramy"]} heading="Psali jsme" />

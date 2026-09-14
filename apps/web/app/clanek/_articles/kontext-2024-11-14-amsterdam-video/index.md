@@ -57,7 +57,4 @@ Pozitivní příklad ukázala německá veřejnoprávní stanice [ARD](https://w
 - V Amsterdamu žije necelých 900 000 obyvatel.  
 - Odhaduje se, že Židů je zde zhruba 6 000–15 000 a muslimů přibližně 105 000, zejména z Maroka a Turecka.  
 
-
-
-
-
+<RelatedArticles slugs={["explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut", "explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad", "analyza-2026-08-10-izraelsko-palestinsky-konflikt"]} heading="Psali jsme" />

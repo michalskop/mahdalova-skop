@@ -124,3 +124,5 @@ Když se lidí s postižením ptáme, co jim v životě nejvíc chybí, [nejčas
 Hlavní čísla se týkají lidí starších 15 let žijících v domácnostech. Děti s postižením do 15 let a osoby žijící mimo soukromé domácnosti, například v pobytových zařízeních, popisuje [Doplňková studie ČSÚ z dubna 2025](https://csu.gov.cz/produkty/osoby-se-zdravotnim-postizenim-v-institucich-a-deti-se-zdravotnim-postizenim-2024). V českých školách se podle ní vzdělává 123 tisíc dětí se zdravotním postižením.
 
 Šetření vzniklo v souladu s Národním plánem podpory rovných příležitostí pro osoby se zdravotním postižením na období 2021–2025. Právě proto, že nejčastější bariérou zůstávají peníze a dostupná péče, míří další kroky – od nastavení dávek přes dostupnost pomůcek po podporu pečujících příbuzných – ke stejnému cíli: k důstojnému a samostatnému životu bez zbytečných překážek.
+
+<RelatedArticles slugs={["data-pro-budouci-premierku-02-demografie", "cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi", "analyza-2026-07-30-smrtelna-vlna-veder"]} heading="Psali jsme" />

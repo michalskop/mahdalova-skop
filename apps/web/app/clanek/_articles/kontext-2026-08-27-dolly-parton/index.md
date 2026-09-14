@@ -94,3 +94,5 @@ Když se poskládá dohromady, na co za život upínala peníze a jméno, vyjde 
 
 A do třetice její patrně nejcitovanější bonmot, kterým shrnovala vlastní okázalý styl: **„Stojí to spoustu peněz, vypadat takhle lacině."**
 ```
+
+<RelatedArticles slugs={["kontext-2026-08-02-paul-steiger-jsi-fakt-dobra", "kontext-2025-07-01-profil-karin-kneissl", "kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026"]} heading="Psali jsme" />

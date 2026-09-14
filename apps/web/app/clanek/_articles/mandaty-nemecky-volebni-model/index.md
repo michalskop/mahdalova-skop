@@ -32,3 +32,5 @@ Volební model odráží aktuální rozložení voličské přízně a zahrnuje 
 
 Důležitou roli hrají voliči, kteří ještě nejsou rozhodnuti nebo váhají mezi stranami. Jejich rozhodnutí má zásadní vliv na přesnost průzkumů – strany, které dokážou aktivizovat tyto nerozhodnuté voliče či nevoliče, mohou nakonec dosáhnout lepšího volebního výsledku.
 ```
+
+<RelatedArticles slugs={["volby-nemecko-2025-02-21-jak-se-voli", "mandaty-unikatni-volebni-model", "volby-nemecko-2025-02-27-vysledky"]} heading="Psali jsme" />

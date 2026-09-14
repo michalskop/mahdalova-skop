@@ -68,3 +68,5 @@ Dokonalá mapa světa neexistuje a existovat nemůže. Každá z těch, které t
 
 Proč se mapy mění, jak o jejich podobě hlasuje OSN a kde v tom stojí Česko i USA, rozebíráme v [hlavním článku o proměně map světa](/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika).
 ```
+
+<RelatedArticles slugs={["explainer-2026-09-05-mapy-sveta-osn-afrika", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii", "volby-rakousko-2024-11-27-kartogramy"]} heading="Psali jsme" />

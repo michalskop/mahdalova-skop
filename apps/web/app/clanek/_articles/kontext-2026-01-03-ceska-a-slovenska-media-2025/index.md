@@ -275,3 +275,5 @@ Podle studie ResSolution Group (leden 2025) pokračuje od pandemie prudký pokle
 ---
 
 *Přehled zpracován na základě veřejně dostupných zdrojů: MediaGuru, Lupa.cz, Deník N, SME.sk, iRozhlas, SPIR a další.*
+
+<RelatedArticles slugs={["explainer-2025-11-15-skutecna-hrozba-pro-nezavislost-bbc", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho", "kontext-2026-01-01-pf-2026-stoprocentne-objektivni-zurnalistika-neexistuje"]} heading="Psali jsme" />

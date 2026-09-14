@@ -43,3 +43,5 @@ Na rozdíl od mladší populace jsou senioři paradoxně zranitelnější v obdo
 Výsledky studie byly publikovány v recenzovaném vědeckém časopise Science Advances, který je součástí rodiny časopisů Science a zaměřuje se na multidisciplinární výzkum s otevřeným přístupem. Výzkum byl veden odborníky z Kolumbijské univerzity, konkrétně z Centra pro ekonomiku a politiku životního prostředí.
 ```
 Jaká je serióznost výzkumu? Studie je založena na rozsáhlé analýze dat z let 1998–2019 a její výsledky prošly recenzním řízením. Kolumbijská univerzita patří mezi prestižní světové vědecké instituce, což zvyšuje důvěryhodnost závěrů výzkumu.
+
+<RelatedArticles slugs={["analyza-2026-07-30-smrtelna-vlna-veder", "analyza-2026-07-31-horko-v-kabine-ridicu-autobusu", "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku"]} heading="Psali jsme" />

@@ -9,3 +9,5 @@ tags: ["speciál", "demografie", "data-pro-budouci-premierku", "seriál", "plodn
 promoted: 1
 htmlInclude: "demografie-hub.html"
 ---
+
+<RelatedArticles slugs={["analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu"]} heading="Psali jsme" />

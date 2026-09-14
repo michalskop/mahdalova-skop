@@ -96,3 +96,5 @@ Ona protichůdná tvrzení mohou být klidně obě nepravdivá. Nebo obě pravdi
 Paul Steiger se se mnou samozřejmě vůbec nemusel bavit. Bylo už hodně pozdě večer, mohl se omluvit a jít spát. Byla jsem freelance novinářka z relativně malé země ve střední Evropě, která mu ukazovala svoje datové projekty. On měl za sebou vedení jedné z nejslavnějších redakcí světa, šestnáct Pulitzerových cen udělených jeho redakci a založení ProPublica.
 
 Přesto se díval na moji práci, ptal se na ni a nakonec mě popostrčil a vyhecoval, abych se dostala k lidem, od kterých jsem se mohla naučit ještě víc.
+
+<RelatedArticles slugs={["kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "kontext-2026-01-01-pf-2026-stoprocentne-objektivni-zurnalistika-neexistuje"]} heading="Psali jsme" />

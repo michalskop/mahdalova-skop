@@ -37,3 +37,31 @@
     margin-right: 0;
   }
 }
+
+/* RelatedArticles cards: the whole card is one link to the article, with a
+   subtle zoom on hover (mirrors ArticleCard on the homepage). */
+.relatedCard {
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.relatedCard:hover {
+  transform: scale(1.02);
+}
+
+/* Stretched link: the title is the card's single link, but its ::after covers
+   the whole card (.relatedCard is position: relative), so a click anywhere –
+   cover image, excerpt, empty space – opens the article. */
+.relatedCardLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Real links inside the card (author names) must sit above the stretched
+   ::after so they stay independently clickable. */
+.relatedAuthorLink {
+  position: relative;
+  z-index: 2;
+}

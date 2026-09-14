@@ -96,4 +96,4 @@ Stačila by například 2 % pro Harris oproti středovému údaji z průzkumů, 
 případě Donalda Trumpa, který by v takovém případě získal dokonce 322 volitelů, tedy o 52
 víc, než by potřeboval pro vítězství.
 
-
+<RelatedArticles slugs={["volby-usa-2024-11-06-volby-vyhraje-trump-a-nebude-to-tesne", "volby-kanada-2025-04-29-jak-trump-vzkrisil-liberaly", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="Psali jsme" />

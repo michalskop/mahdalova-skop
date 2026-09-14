@@ -76,3 +76,5 @@ Na rozdíl od českého nebo slovenského parlamentu se v tom evropském nezazna
 | 1      | 1x Piráti | Zelení a Svobodná aliance |
 | 0      | | Sociální demokraté |
 | 0      | | Levice |
+
+<RelatedArticles slugs={["europarlament-2024-12-19-kdo-hlasuje-s-kym", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli"]} heading="Psali jsme" />

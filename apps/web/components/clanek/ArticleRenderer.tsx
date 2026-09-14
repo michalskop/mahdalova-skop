@@ -387,6 +387,7 @@ export function ArticleRenderer({
         <RelatedArticlesComponent
           pool={pool ?? []}
           articleBasePath="/clanek"
+          authorBasePath="/autor"
           locale="cs-CZ"
           {...props}
         />
