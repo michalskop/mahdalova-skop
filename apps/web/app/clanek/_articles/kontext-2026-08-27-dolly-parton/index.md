@@ -86,7 +86,7 @@ Když se poskládá dohromady, na co za život upínala peníze a jméno, vyjde 
 
 
 
-**Prohrála soutěž dvojnic Dolly Parton.** V přestrojení se přihlásila do soutěže drag queens napodobujících Dolly Parton v jednom losangeleském gay baru. Záměrně přehnala make-up i vlasy, ale porota ji nepoznala a ona skončila s nejmenším potleskem. „Všechny ty krásné drag queens měly týdny a měsíce nachystané kostýmy, a byly oblečené jako já. Tak jsem se jen zařadila do řady a přešla přes pódium – a oni si mysleli, že jsem nějaký malý gay chlapík," vyprávěla později. Sama k tomu dodávala oblíbenou hlášku: „Ještě že jsem se narodila jako holka, jinak bych byla drag queen."
+**Prohrála v soutěži svých dvojnic.** V přestrojení se přihlásila do soutěže drag queens napodobujících Dolly Parton v jednom losangeleském gay baru. Záměrně přehnala make-up i vlasy, ale porota ji nepoznala a ona skončila s nejmenším potleskem. „Všechny ty krásné drag queens měly týdny a měsíce nachystané kostýmy, a byly oblečené jako já. Tak jsem se jen zařadila do řady a přešla přes pódium – a oni si mysleli, že jsem nějaký malý gay chlapík," vyprávěla později. Sama k tomu dodávala oblíbenou hlášku: „Ještě že jsem se narodila jako holka, jinak bych byla drag queen."
 
 **Naklonovaná ovce Dolly nese její jméno.** Když v roce 1996 tým skotského Roslinova institutu naklonoval první savec z dospělé buňky, pojmenoval ovci po Dolly Parton – buňka totiž pocházela z mléčné žlázy. Vedoucí vědec Ian Wilmut to prý komentoval slovy, že je nenapadl „působivější pár žláz, než má Dolly Parton". Dolly se místo urážky bavila: „Byla jsem polichocená. Když ji uspali, bylo mi to líto – i když sama klonovaná být nechci."
 
