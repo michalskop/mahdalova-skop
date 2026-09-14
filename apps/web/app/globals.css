@@ -52,7 +52,6 @@
   }
 }
 
-/* Contact block links (ContactsBlock). */
 /* Opt-in article sidebar: independent inner and outer text wrapping. */
 .article-sidebar-flow {
   display: flow-root;
@@ -60,7 +59,8 @@
 .article-sidebar {
   float: right;
   width: 48%;
-  margin: 0 -12% 1.1rem 1.75rem;
+  /* Keep the 12% bleed only where the viewport has room for it. */
+  margin: 0 calc(-1 * clamp(0px, (100vw - 800px) / 2, 12%)) 1.1rem 1.75rem;
 }
 .article-sidebar > div {
   display: flow-root;
@@ -68,8 +68,16 @@
 }
 .article-sidebar-photo {
   float: left;
-  width: 46%;
-  margin: 0.4rem 0.75rem 0.5rem 0;
+  width: clamp(4.5rem, 40%, 9rem);
+  max-width: 42%;
+  /* Match the adjacent bold opening: align the image with its cap height,
+     including when the reader changes the font size or zoom level. */
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: var(--mantine-line-height, 1.55);
+  margin: 0.4em 0.75rem 0.5rem 0;
+  margin-top: calc((1lh - 1cap) / 2);
 }
 .article-sidebar-photo img {
   display: block;
@@ -88,6 +96,7 @@
   }
 }
 
+/* Contact block links (ContactsBlock). */
 #kontakty a {
   color: var(--mantine-color-brand-6);
   text-decoration: none;
