@@ -53,6 +53,41 @@
 }
 
 /* Contact block links (ContactsBlock). */
+/* Opt-in article sidebar: independent inner and outer text wrapping. */
+.article-sidebar-flow {
+  display: flow-root;
+}
+.article-sidebar {
+  float: right;
+  width: 48%;
+  margin: 0 -12% 1.1rem 1.75rem;
+}
+.article-sidebar > div {
+  display: flow-root;
+  margin-top: 0 !important;
+}
+.article-sidebar-photo {
+  float: left;
+  width: 46%;
+  margin: 0 0.75rem 0.5rem 0;
+}
+.article-sidebar-photo img {
+  display: block;
+}
+.article-sidebar-photo > div {
+  margin-bottom: 0;
+}
+.article-sidebar-flow > :is(h2, h3) {
+  clear: none !important;
+}
+@media (max-width: 768px) {
+  .article-sidebar {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem;
+  }
+}
+
 #kontakty a {
   color: var(--mantine-color-brand-6);
   text-decoration: none;

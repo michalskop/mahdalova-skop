@@ -22,6 +22,32 @@ Narodila se 19. ledna 1946 jako čtvrté z dvanácti dětí a vyrůstala v jedno
 
 Jednu takovou vzpomínku znají po celém světě. Když bylo Dolly šest sedm let, neměla na zimu kabát a peníze na nový nebyly. Matka Avie Lee proto sešila jeden z hromádky hadrů a zbytků látek, a zatímco šila, vyprávěla dceři biblický příběh o Josefovi a jeho pestrobarevném plášti – kabátek z hadrů měl podle ní znamenat totéž co Josefův: znak lásky, ne chudoby. Dolly jí uvěřila a do školy si ho oblékla hrdě. Spolužáci se jí smáli. Píseň *Coat of Many Colors*, kterou o tom v roce 1969 napsala na zadní stranu účtenky z čistírny (nic jiného po ruce neměla), to shrnuje jednou slokou: „Můj pestrobarevný kabát, co mi máma ušila, ušitý jen z hadrů, ale nosila jsem ho tak hrdě. Vím, že jsme neměli peníze, ale byla jsem bohatá, jak jen to šlo." Chudoba v ní má konkrétní podobu: kus látky, práci matčiných rukou a dětskou snahu uhájit si vlastní důstojnost.
 
+<div className="article-sidebar-flow">
+
+<div className="article-sidebar">
+
+<InfoBox>
+
+**Dolly Parton proslula i sebeironií a nadhledem**
+
+<div className="article-sidebar-photo">
+
+![Dolly Parton](images/dolly-parton-datatimes.cz-square.webp)
+
+</div>
+
+**Prohrála v soutěži svých dvojnic.** V přestrojení se přihlásila do soutěže drag queens napodobujících Dolly Parton v jednom losangeleském gay baru. Záměrně přehnala make-up i vlasy, ale porota ji nepoznala a ona skončila s nejmenším potleskem. „Všechny ty krásné drag queens měly týdny a měsíce nachystané kostýmy, a byly oblečené jako já. Tak jsem se jen zařadila do řady a přešla přes pódium – a oni si mysleli, že jsem nějaký malý gay chlapík," vyprávěla později. Sama k tomu dodávala oblíbenou hlášku: „Ještě že jsem se narodila jako holka, jinak bych byla drag queen."
+
+**Naklonovaná ovce Dolly nese její jméno.** Když v roce 1996 tým skotského Roslinova institutu naklonoval první savec z dospělé buňky, pojmenoval ovci po Dolly Parton – buňka totiž pocházela z mléčné žlázy. Vedoucí vědec Ian Wilmut to prý komentoval slovy, že je nenapadl „působivější pár žláz, než má Dolly Parton". Dolly se místo urážky bavila: „Byla jsem polichocená. Když ji uspali, bylo mi to líto – i když sama klonovaná být nechci."
+
+**Silná podpora LGBTQ+ komunity.** Dolly patřila k nejhlasitějším spojencům queer komunity v country hudbě a svým fanouškům z ní dávala dlouhodobě najevo přijetí – historka se soutěží dvojnic je jen jedním z mnoha projevů tohoto vztahu.
+
+A do třetice její patrně nejcitovanější bonmot, kterým shrnovala vlastní okázalý styl: **„Stojí to spoustu peněz, vypadat takhle lacině."**
+
+</InfoBox>
+
+</div>
+
 Po maturitě v roce 1964 na vysokou školu nešla. Odjela do Nashvillu, psala písně a učila se, jak funguje hudební průmysl. V roce 1966 si vzala Carla Deana, s nímž zůstala až do jeho smrti v roce 2025 – bezmála šedesát let. V roce 1967 se dostala do televizní show Portera Wagonera; o sedm let později se vydala na samostatnou dráhu. Píseň *I Will Always Love You* napsala právě při rozchodu s Wagonerem a v roce 1974 s ní dvakrát dosáhla na první příčku country žebříčku.
 
 Když ji v roce 1992 nazpívala Whitney Houston pro film *Bodyguard*, píseň se dostala i k publiku, které původní country nahrávku neznalo. Jak velký úspěch to byl, je vidět dodnes: Houstonina verze strávila čtrnáct týdnů na první příčce žebříčku Billboard Hot 100 (tehdy nejdéle ze všech), prodalo se jí přes 24 milionů kusů a dodnes zůstává [nejprodávanějším singlem sólové zpěvačky v historii](https://www.whitneyhouston.com/news/whitney-houston-i-will-always-love-you-1992/) – a [šestým nejprodávanějším singlem všech dob vůbec](https://en.wikipedia.org/wiki/I_Will_Always_Love_You_(Whitney_Houston_recording)). Mnoho let po svém vzniku tak píseň začala žít zcela novou etapu své existence.
@@ -79,20 +105,6 @@ Když se poskládá dohromady, na co za život upínala peníze a jméno, vyjde 
 - **Dětská onkologie** – dlouhodobá podpora spojená mimo jiné s léčbou její neteře.
 - **Gramotnost a čtení obecně** – dětské knihy a alba, jejichž výtěžek mířil zpět do knižního programu.
 
----
-
-```infobox
-**Dolly Parton proslula i sebeironií a nadhledem**
-
-
-
-**Prohrála v soutěži svých dvojnic.** V přestrojení se přihlásila do soutěže drag queens napodobujících Dolly Parton v jednom losangeleském gay baru. Záměrně přehnala make-up i vlasy, ale porota ji nepoznala a ona skončila s nejmenším potleskem. „Všechny ty krásné drag queens měly týdny a měsíce nachystané kostýmy, a byly oblečené jako já. Tak jsem se jen zařadila do řady a přešla přes pódium – a oni si mysleli, že jsem nějaký malý gay chlapík," vyprávěla později. Sama k tomu dodávala oblíbenou hlášku: „Ještě že jsem se narodila jako holka, jinak bych byla drag queen."
-
-**Naklonovaná ovce Dolly nese její jméno.** Když v roce 1996 tým skotského Roslinova institutu naklonoval první savec z dospělé buňky, pojmenoval ovci po Dolly Parton – buňka totiž pocházela z mléčné žlázy. Vedoucí vědec Ian Wilmut to prý komentoval slovy, že je nenapadl „působivější pár žláz, než má Dolly Parton". Dolly se místo urážky bavila: „Byla jsem polichocená. Když ji uspali, bylo mi to líto – i když sama klonovaná být nechci."
-
-**Silná podpora LGBTQ+ komunity.** Dolly patřila k nejhlasitějším spojencům queer komunity v country hudbě a svým fanouškům z ní dávala dlouhodobě najevo přijetí – historka se soutěží dvojnic je jen jedním z mnoha projevů tohoto vztahu.
-
-A do třetice její patrně nejcitovanější bonmot, kterým shrnovala vlastní okázalý styl: **„Stojí to spoustu peněz, vypadat takhle lacině."**
-```
+</div>
 
 <RelatedArticles slugs={["kontext-2026-08-02-paul-steiger-jsi-fakt-dobra", "kontext-2025-07-01-profil-karin-kneissl", "kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026"]} heading="Psali jsme" />
