@@ -44,14 +44,14 @@ const ArticleRating = () => {
             Bylo to pro vás přínosné?
           </Title>
           
-          <SimpleGrid 
+          <SimpleGrid
             spacing="md"
-            cols={{ base: 1, sm: 2, lg: 4 }}
-            style={{ 
+            cols={{ base: 3 }}
+            style={{
               maxWidth: '100%',
               width: '100%',
               display: 'flex',
-              flexWrap: 'wrap',
+              flexWrap: 'nowrap',
               justifyContent: 'center',
               gap: '1rem'
             }}
