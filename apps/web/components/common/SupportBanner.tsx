@@ -110,7 +110,7 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         .dt-support-outer { width: 100%; }
 
         /* Bleeding variant (mid-article). Width sized to fit the fixed three-line
-           text block (see the <br/>s above); the OUTER edge still bleeds the
+           text block (see the line breaks above); the OUTER edge still bleeds the
            shared -12% so it lines up with Figure, side InfoBox and Napsali jsme. */
         .dt-support-float {
           width: 22.5rem;
