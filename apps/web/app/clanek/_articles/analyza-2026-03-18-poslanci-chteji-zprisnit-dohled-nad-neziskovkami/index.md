@@ -10,9 +10,11 @@ promoted: 55
 ---
 _Vládní koalice připravuje přísnější pravidla pro hospodaření neziskových organizací. Jenže poslanci, kteří zákon prosazují, už jaksi neříkají, že podobná pravidla již existují. A že je sami nedodržují._
 
-_Zjistili jsme, že více než třetina poslanců vládní koalice stojí přímo ve vedení některé z neziskových organizací a že většina těchto organizací nedodržuje současné zákony a nezveřejňuje ani nejzákladnější finanční údaje._
+Zjistili jsme, že více než třetina poslanců vládní koalice stojí přímo ve vedení některé z neziskových organizací a že většina těchto organizací nedodržuje současné zákony a nezveřejňuje ani nejzákladnější finanční údaje.
 
 Konkrétně jsme dohledali **padesát pět neziskových organizací, které mají přímo ve vedení některého ze sto osmi koaličních poslanců či poslankyň**. Samotné členství se neeviduje a nejde tedy ani vyčíslit, proto se zaměřujeme výlučně na vedení organizací. I z těchto dat je patrný značně bohatý spolkový život našich zákonodárců.
+
+<SupportBanner float="left" />
 
 ``` box right info
 #### Neziskovky vládních poslanců

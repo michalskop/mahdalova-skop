@@ -56,10 +56,10 @@ export function InfoBox({
     <Paper
       shadow="xs"
       px="md"
-      py="xs"
+      py={8}
       radius="md"
-      my="lg"
-      className={[floatClass, className].filter(Boolean).join(' ')}
+      my="sm"
+      className={['dt-infobox', floatClass, className].filter(Boolean).join(' ')}
       style={{
         backgroundColor: boxStyles.backgroundColor,
         borderLeft: `4px solid ${boxStyles.borderColor}`,
