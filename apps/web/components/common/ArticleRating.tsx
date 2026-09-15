@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { Container, Title, Stack, Paper, useMantineTheme, SimpleGrid } from '@mantine/core';
+import { Container, Title, Stack, Paper, useMantineTheme } from '@mantine/core';
+import classes from './ArticleRating.module.css';
 // import FreeArticleButton from './FreeArticleButton';
 
 interface StripeBuyButton extends HTMLElement {
@@ -44,19 +45,8 @@ const ArticleRating = () => {
             Bylo to pro vás přínosné?
           </Title>
           
-          <SimpleGrid
-            spacing="md"
-            cols={{ base: 3 }}
-            style={{
-              maxWidth: '100%',
-              width: '100%',
-              display: 'flex',
-              flexWrap: 'nowrap',
-              justifyContent: 'center',
-              gap: '1rem'
-            }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className={classes.options}>
+            <div className={classes.option}>
               <stripe-buy-button
                 // buy-button-id="buy_btn_1Qhe15KmkuqgWTg6tAwZvJzp"
                 // publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
@@ -65,7 +55,7 @@ const ArticleRating = () => {
               />
             </div>
             
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className={classes.option}>
               <stripe-buy-button
                 // buy-button-id="buy_btn_1Qhe4FKmkuqgWTg60Z5l4Fpt"
                 // publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
@@ -74,7 +64,7 @@ const ArticleRating = () => {
               />
             </div>
             
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className={classes.option}>
               <stripe-buy-button
                 // buy-button-id="buy_btn_1Qhe8OKmkuqgWTg6jovwx3Oo"
                 // publishable-key="pk_live_8qb1Ik0TojaL1MGjPUcQDnap00Mgsnwape"
@@ -83,10 +73,10 @@ const ArticleRating = () => {
               />
             </div>
 
-            {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
+            {/* <div className={classes.option}>
               <FreeArticleButton />
             </div> */}
-          </SimpleGrid>
+          </div>
         </Stack>
       </Container>
     </Paper>
