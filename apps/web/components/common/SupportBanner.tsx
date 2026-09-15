@@ -93,7 +93,9 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
           overflow: hidden;
           box-sizing: border-box;
         }
-        .dt-support-brand { min-width: 175px; }
+        /* Brand sized to its content (no extra min-width) so the white text sits
+           close to the logo and the gaps logo↔text / text↔CTA stay balanced. */
+        .dt-support-brand { min-width: 0; }
         .dt-support-outer { width: 100%; }
 
         /* Bleeding half-width variant (mid-article). Uses the shared bleed
