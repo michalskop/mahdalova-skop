@@ -54,10 +54,18 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
           </p>
         </div>
 
-        {/* Text */}
+        {/* Text. The bleeding (float) variant uses fixed line breaks for a tidy
+            three-line block; the full-width variant wraps naturally. */}
         <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 13.5, fontWeight: 400, lineHeight: 1.35 }}>
-          Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda.
-          Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.
+          {float ? (
+            <>
+              Veřejný prostor i&nbsp;politiku zaplavují hlouposti,<br />
+              fake news a&nbsp;propaganda. Pomozte nám šířit ověřená<br />
+              fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.
+            </>
+          ) : (
+            <>Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.</>
+          )}
         </p>
 
         {/* CTA */}
@@ -101,12 +109,11 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         .dt-support-banner--compact .dt-support-brand { flex-direction: row; gap: 8px; }
         .dt-support-outer { width: 100%; }
 
-        /* Bleeding variant (mid-article). Deliberately narrower than the shared
-           48% so the text wraps into more lines and the box stays slim; the
-           OUTER edge still bleeds the shared -12% so it lines up with Figure,
-           side InfoBox and Napsali jsme. */
+        /* Bleeding variant (mid-article). Width sized to fit the fixed three-line
+           text block (see the <br/>s above); the OUTER edge still bleeds the
+           shared -12% so it lines up with Figure, side InfoBox and Napsali jsme. */
         .dt-support-float {
-          width: 15rem;
+          width: 22.5rem;
           margin-top: 0.3rem;
           margin-bottom: 1.1rem;
         }
