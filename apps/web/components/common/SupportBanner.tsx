@@ -56,7 +56,7 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
 
         {/* Text */}
         <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 15, fontWeight: 400, lineHeight: 1.35 }}>
-          Veřejný prostor i&nbsp;politiku zaplavují blbosti, fake news a&nbsp;propaganda.
+          Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda.
           Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy. Za cenu jednoho oběda.
         </p>
 
