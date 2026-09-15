@@ -32,8 +32,8 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         }} />
 
         {/* Brand */}
-        <div className="dt-support-brand" style={{ display: 'flex', alignItems: 'center', gap: 10, flex: '0 0 auto' }}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" style={{ display: 'block', width: 38, height: 38, flexShrink: 0 }}>
+        <div className="dt-support-brand" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, flex: '0 0 auto' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" style={{ display: 'block', width: 26, height: 26, flexShrink: 0 }}>
             <defs>
               <linearGradient id="dtSupportG" x1="1" x2=".25" y1=".5" y2="1">
                 <stop offset="0%" stopColor="#ffcf02" stopOpacity="0" />
@@ -49,13 +49,13 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
               <path fill="none" stroke="url(#dtSupportG)" strokeWidth="76" strokeLinecap="round" d="M250 350 A100 100 0 0 0 336.60254 300" />
             </g>
           </svg>
-          <p style={{ margin: 0, fontFamily: "'Roboto Slab', serif", fontSize: 22, fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+          <p style={{ margin: 0, fontFamily: "'Roboto Slab', serif", fontSize: 18, fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
             <span style={{ color: '#de1743' }}>Data</span><span style={{ color: '#ffcf02' }}>Times</span>
           </p>
         </div>
 
         {/* Text */}
-        <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 15, fontWeight: 400, lineHeight: 1.35 }}>
+        <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 13.5, fontWeight: 400, lineHeight: 1.35 }}>
           Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda.
           Pomozte nám šířit ověřená fakta, data a&nbsp;analýzy. Za cenu jednoho oběda.
         </p>
@@ -66,11 +66,11 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '14px 26px',
+          padding: '10px 22px',
           background: '#f01952',
           color: '#ffffff',
           fontFamily: "'Roboto Slab', serif",
-          fontSize: 18,
+          fontSize: 16,
           fontWeight: 700,
           lineHeight: 1,
           whiteSpace: 'nowrap',
@@ -87,7 +87,7 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
           align-items: center;
           gap: 16px;
           width: 100%;
-          padding: 14px 12px;
+          padding: 10px 14px;
           background: #0d1438;
           text-decoration: none;
           overflow: hidden;
