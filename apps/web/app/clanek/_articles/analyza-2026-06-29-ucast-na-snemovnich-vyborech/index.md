@@ -34,6 +34,8 @@ Prošli jsme záznamy ze 123 jednání všech 18 výborů současné Sněmovny, 
 
 Když Sněmovna běží v normálním režimu, střídají se týdny po třech: jednací (zasedá plénum), výborový (zasedají výbory) a poslanecký (poslanci pracují v regionech). Do toho vstupují svátky a mimořádné schůze, takže velká většina výborů se zatím sešla osmkrát až jedenáctkrát.
 
+<SupportBanner float="left" />
+
 Existují ale výjimky na obou koncích. Rozpočtový výbor, kterému předsedá Vladimír Pikora (Motoristé), jednal už devatenáctkrát. Výbor pro životní prostředí pod vedením Jany Peštové (ANO) se sešel čtyřikrát. Výbory zasedají zpravidla veřejně, mohou si ale uspořádat i uzavřené jednání.
 
 ### Jak jsme data získávali
