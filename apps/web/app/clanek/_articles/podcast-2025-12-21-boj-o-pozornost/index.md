@@ -25,4 +25,4 @@ Zde si můžete přečíst zmiňovanou [esej Marie Anny Mahdalové](https://www.
 
 **Pro mozek s ADHD je to obzvlášť zhoubné.** ADHD se pojí s dysregulací dopaminu – takový mozek přirozeně vyhledává zvýšenou stimulaci. Digitální prostředí působí jako dokonalý katalyzátor symptomů. Studie ukazují, že intenzivní používání sociálních sítí může symptomy nepozornosti zhoršovat i u lidí, kteří s nimi dříve problémy neměli. A nastavené časové limity? Ty v okamžiku bažení po stimulu instinktivně obcházíme.
 
-<RelatedArticles slugs={["kontext-2025-12-21-ekonomie-pozornosti", "podcast-2024-11-12-dusevni-zdravi", "podcast-2026-01-21-mahdalky-o-penezich"]} heading="Psali jsme" />
+<RelatedArticles slugs={["kontext-2025-12-21-ekonomie-pozornosti", "podcast-2024-11-12-dusevni-zdravi", "podcast-2026-01-21-mahdalky-o-penezich"]} heading="Doporučujeme" />

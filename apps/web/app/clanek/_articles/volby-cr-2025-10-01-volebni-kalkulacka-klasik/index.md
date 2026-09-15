@@ -38,4 +38,4 @@ Právě proto je ale důležité, aby byla dobře udělaná. Záleží na výbě
 
 Pokud vám tedy někdo tvrdí, že Volební kalkulačka je k ničemu, můžete mu říct, že se mýlí. Mezinárodní výzkumy dokládají, že tento nástroj motivuje lidi jít volit, zvyšuje informovanost, nutí strany mluvit jasně a při těsných výsledcích může rozhodnout o konkrétních mandátech. V zemi, kde třetina lidí do poslední chvíle váhá, je to víc než jen hračka. Je to součást demokratické výbavy – a originální česká Volební kalkulačka od **KohoVolit.eu** patří mezi ty nejlepší v Evropě.
 
-<RelatedArticles slugs={["volby-cr-2025-10-01-volebni-kalkulacka-zenska-rodinna-prava", "volby-cr-2025-10-13-kam-kracis-cesko", "volby-cr-2025-10-04-predikce"]} heading="Psali jsme" />
+<RelatedArticles slugs={["volby-cr-2025-10-01-volebni-kalkulacka-zenska-rodinna-prava", "volby-cr-2025-10-13-kam-kracis-cesko", "volby-cr-2025-10-04-predikce"]} heading="Doporučujeme" />

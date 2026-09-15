@@ -116,4 +116,4 @@ Ledaže…
 
 Termonukleární výměny se bez hrdinů obejdou.
 
-<RelatedArticles slugs={["explainer-2025-01-06-znaky-fasismu-podle-eca", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "komentar-2025-01-09-hitler-nebyl-komunista"]} heading="Psali jsme" />
+<RelatedArticles slugs={["explainer-2025-01-06-znaky-fasismu-podle-eca", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "komentar-2025-01-09-hitler-nebyl-komunista"]} heading="Doporučujeme" />

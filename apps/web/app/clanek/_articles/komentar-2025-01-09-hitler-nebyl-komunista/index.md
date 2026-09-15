@@ -53,4 +53,4 @@ Musk představil Weidel jako „hlavní kandidátku na vedení Německa“, což
 
 AfD byla založena v roce 2013 a postupně se posunula ke krajní pravici. Původně kritizovala záchranné balíčky pro země eurozóny, ale její odpor k rozhodnutí kancléřky Angely Merkelové umožnit v roce 2015 příchod velkého počtu migrantů ji etabloval jako významnou politickou sílu.
 
-<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "explainer-2025-01-06-znaky-fasismu-podle-eca", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Psali jsme" />
+<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "explainer-2025-01-06-znaky-fasismu-podle-eca", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Doporučujeme" />

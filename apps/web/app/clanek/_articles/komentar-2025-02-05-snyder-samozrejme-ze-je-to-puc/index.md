@@ -49,4 +49,4 @@ Mezi jeho nejvýznamnější knihy patří Krvavé země (Bloodlands), kde analy
 
 ```
 
-<RelatedArticles slugs={["komentar-2025-03-01-jsme-s-ukrajinou", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Psali jsme" />
+<RelatedArticles slugs={["komentar-2025-03-01-jsme-s-ukrajinou", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Doporučujeme" />

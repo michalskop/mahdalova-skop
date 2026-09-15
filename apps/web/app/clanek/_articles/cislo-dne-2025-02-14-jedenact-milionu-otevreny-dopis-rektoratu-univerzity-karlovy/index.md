@@ -35,4 +35,4 @@ V debatách zaznělo, že tato situace je způsobena ministerstvem a že rektor�
 
 Tento otevřený dopis rozešleme 475 novinářům a redakcím, od nichž žádáme podporu našeho apelu. Je nepřístojné halit osobní finanční požadavky do slov o utrpení druhých.
 
-<RelatedArticles slugs={["analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium", "explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak"]} heading="Psali jsme" />
+<RelatedArticles slugs={["analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium", "explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak"]} heading="Doporučujeme" />

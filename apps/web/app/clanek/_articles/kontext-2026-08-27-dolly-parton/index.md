@@ -107,4 +107,4 @@ Když se poskládá dohromady, na co za život upínala peníze a jméno, vyjde 
 
 </div>
 
-<RelatedArticles slugs={["kontext-2026-08-02-paul-steiger-jsi-fakt-dobra", "kontext-2025-07-01-profil-karin-kneissl", "kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026"]} heading="Psali jsme" />
+<RelatedArticles slugs={["kontext-2026-08-02-paul-steiger-jsi-fakt-dobra", "kontext-2025-07-01-profil-karin-kneissl", "kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026"]} heading="Doporučujeme" />

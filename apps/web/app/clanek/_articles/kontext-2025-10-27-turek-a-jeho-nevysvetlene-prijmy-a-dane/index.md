@@ -91,4 +91,4 @@ Přesto v této době přijímal od klientů **milionové částky** a provádě
   height="750px"
 ></iframe>
 
-<RelatedArticles slugs={["kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy", "analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli"]} heading="Psali jsme" />
+<RelatedArticles slugs={["kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy", "analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli"]} heading="Doporučujeme" />

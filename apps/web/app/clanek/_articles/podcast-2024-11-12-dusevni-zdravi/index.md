@@ -29,4 +29,4 @@ A co generace? V USA je Gen Z nejotevřenější – [37 % mladých již má zku
 
 **V Česku jen [6 % lidí s duševními potížemi zvolí jako první volbu profesionální pomoc](https://www.ceskovdatech.cz/clanek/175-dusevni-zdravi/).** Podle analýzy [Národního ústavu duševního zdraví](https://www.nudz.cz/) není léčeno až 83 % jedinců, kteří splňují kritéria duševní poruchy. Stigma přetrvává – a dopadá nerovnoměrně.
 
-<RelatedArticles slugs={["podcast-2024-11-11-mahdalky", "podcast-2025-12-21-boj-o-pozornost", "podcast-2026-01-21-mahdalky-o-penezich"]} heading="Psali jsme" />
+<RelatedArticles slugs={["podcast-2024-11-11-mahdalky", "podcast-2025-12-21-boj-o-pozornost", "podcast-2026-01-21-mahdalky-o-penezich"]} heading="Doporučujeme" />

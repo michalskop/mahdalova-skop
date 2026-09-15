@@ -73,4 +73,4 @@ A město, které je dokáže postavit a nedokáže přitom ubytovat vlastní dě
 
 *Zdroje dat: Brown Harris Stevens Development Marketing, Miller Samuel/Elliman Report, Coalition for the Homeless, NYC Office of the State Comptroller, StreetEasy, Gothamist/HPD, Center for New York City Affairs, CooperatorNews.*
 
-<RelatedArticles slugs={["analyza-2025-03-04-trumpova-obchodni-valka", "kontext-2025-04-03-americka-cla-trest-za-to-ze-jste-moc-dobri", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="Psali jsme" />
+<RelatedArticles slugs={["analyza-2025-03-04-trumpova-obchodni-valka", "kontext-2025-04-03-americka-cla-trest-za-to-ze-jste-moc-dobri", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="Doporučujeme" />

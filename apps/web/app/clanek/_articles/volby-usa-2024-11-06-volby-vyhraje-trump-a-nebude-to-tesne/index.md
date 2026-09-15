@@ -21,4 +21,4 @@ Přesně vyšlo 44 států a poctivě bylo předem ohlášených i zbylých 7 sw
 
 <iframe src='https://flo.uri.sh/visualisation/20156677/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width='100%' height='600px' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 
-<RelatedArticles slugs={["volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit", "volby-kanada-2025-04-29-jak-trump-vzkrisil-liberaly", "analyza-2025-03-04-trumpova-obchodni-valka"]} heading="Psali jsme" />
+<RelatedArticles slugs={["volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit", "volby-kanada-2025-04-29-jak-trump-vzkrisil-liberaly", "analyza-2025-03-04-trumpova-obchodni-valka"]} heading="Doporučujeme" />

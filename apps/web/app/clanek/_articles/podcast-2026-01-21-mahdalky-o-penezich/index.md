@@ -27,4 +27,4 @@ Dvě generace, dva pohledy na stejný problém. Data, výzkumy i osobní zkušen
 
 **Chudoba se dědí – ovšem ne geneticky.** Když dítě vyrůstá v prostředí, kde se neustále řeší, jak vyjít do příští výplaty, nese si to s sebou. Maruška to zažila. Omezené možnosti, pocit jinakosti mezi spolužáky, strach z neočekávaných výdajů. Chudoba zanechává stopy v psychice i v přístupu k penězům na celý život.
 
-<RelatedArticles slugs={["podcast-2024-11-11-mahdalky", "podcast-2024-11-12-dusevni-zdravi", "podcast-2025-12-21-boj-o-pozornost"]} heading="Psali jsme" />
+<RelatedArticles slugs={["podcast-2024-11-11-mahdalky", "podcast-2024-11-12-dusevni-zdravi", "podcast-2025-12-21-boj-o-pozornost"]} heading="Doporučujeme" />

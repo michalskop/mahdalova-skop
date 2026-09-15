@@ -48,4 +48,4 @@ Druhý rozdíl je v obsahu. Soud neposuzoval nějakou neurčitou „kontroverzn�
 
 Nejblíž má český rozsudek k polskému sporu u varšavského soudu, kde se člen chráněné skupiny domáhá omluvy za kolektivizující veřejný projev. Ten ale zatím běží – rozhodnutí, které by řeklo totéž co to české, tam teprve může padnout.
 
-<RelatedArticles slugs={["kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "analyza-2026-08-10-izraelsko-palestinsky-konflikt"]} heading="Psali jsme" />
+<RelatedArticles slugs={["kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "analyza-2026-08-10-izraelsko-palestinsky-konflikt"]} heading="Doporučujeme" />

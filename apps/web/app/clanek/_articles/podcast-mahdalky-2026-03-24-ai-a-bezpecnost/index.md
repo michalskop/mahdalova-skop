@@ -39,4 +39,4 @@ V novém díle Mahdalek se bavíme o tom, jak moc lze věřit softwaru, který n
 
 *Fakta místo dojmů, dvě generace, dva pohledy. Jedna máma, jedna dcera a jeden podcast.*
 
-<RelatedArticles slugs={["komentar-2026-01-08-zla-ai-ne-nebezpeci-je-urputna-ai", "kontext-2025-12-21-ekonomie-pozornosti", "podcast-2025-12-21-boj-o-pozornost"]} heading="Psali jsme" />
+<RelatedArticles slugs={["komentar-2026-01-08-zla-ai-ne-nebezpeci-je-urputna-ai", "kontext-2025-12-21-ekonomie-pozornosti", "podcast-2025-12-21-boj-o-pozornost"]} heading="Doporučujeme" />

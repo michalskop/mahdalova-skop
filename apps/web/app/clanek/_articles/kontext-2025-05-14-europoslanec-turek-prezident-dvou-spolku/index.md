@@ -67,4 +67,4 @@ Dále k tématu:
 
 ```
 
-<RelatedArticles slugs={["analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli", "analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy"]} heading="Psali jsme" />
+<RelatedArticles slugs={["analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli", "analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy"]} heading="Doporučujeme" />

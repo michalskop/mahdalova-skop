@@ -66,4 +66,4 @@ Možná to největší riziko není v tom, co AI udělá. Možná je v tom, jak 
 
 – Kateřina
 
-<RelatedArticles slugs={["podcast-mahdalky-2026-03-24-ai-a-bezpecnost", "kontext-2025-12-21-ekonomie-pozornosti", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="Psali jsme" />
+<RelatedArticles slugs={["podcast-mahdalky-2026-03-24-ai-a-bezpecnost", "kontext-2025-12-21-ekonomie-pozornosti", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="Doporučujeme" />

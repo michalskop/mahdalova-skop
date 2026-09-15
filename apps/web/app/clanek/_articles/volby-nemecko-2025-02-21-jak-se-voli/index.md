@@ -16,4 +16,4 @@ tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
 
 Průzkumy jsme [průběžně sledovali v tomto článku](/clanek/mandaty-nemecky-volebni-model).
 
-<RelatedArticles slugs={["volby-nemecko-2025-02-27-vysledky", "volby-nemecko-2025-02-28-tiktokova-generace", "mandaty-nemecky-volebni-model"]} heading="Psali jsme" />
+<RelatedArticles slugs={["volby-nemecko-2025-02-27-vysledky", "volby-nemecko-2025-02-28-tiktokova-generace", "mandaty-nemecky-volebni-model"]} heading="Doporučujeme" />

@@ -23,4 +23,4 @@ Zatímco podle současného modelu [Mandáty.cz](https://www.mandaty.cz) by opoz
 
 Kateřina Mahdalová & Michal Škop
 
-<RelatedArticles slugs={["analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem", "volby-cr-2025-10-13-kam-kracis-cesko", "volby-cr-2025-10-04-predikce"]} heading="Psali jsme" />
+<RelatedArticles slugs={["analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem", "volby-cr-2025-10-13-kam-kracis-cesko", "volby-cr-2025-10-04-predikce"]} heading="Doporučujeme" />

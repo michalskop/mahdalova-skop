@@ -37,4 +37,4 @@ Důležitou roli hrají voliči, kteří ještě nejsou rozhodnuti nebo váhají
 
 <iframe src='https://flo.uri.sh/visualisation/20760946/embed' title='Interactive or visual content' className='flourish-embed-iframe' frameBorder='0' scrolling='no' width="100%" height="600px" allowFullScreen></iframe>
 
-<RelatedArticles slugs={["mandaty-2024-10-31-ctyrkoalice-by-se-nad-vodou-drzela-jen-stezi", "volby-cr-2025-10-04-predikce", "mandaty-nemecky-volebni-model"]} heading="Psali jsme" />
+<RelatedArticles slugs={["mandaty-2024-10-31-ctyrkoalice-by-se-nad-vodou-drzela-jen-stezi", "volby-cr-2025-10-04-predikce", "mandaty-nemecky-volebni-model"]} heading="Doporučujeme" />

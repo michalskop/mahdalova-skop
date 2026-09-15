@@ -49,4 +49,4 @@ V incidentu, k němuž došlo před prázdninami na fakultě, měl podle Potuž�
 
 Z našich propočtů však vyplývá, že Pavel Potužák data interpretuje správně. Jak uvádíme výše, data za více než 140 fakult všech veřejných vysokých škol, ukazují, že národohospodářská fakulta je na tom v poklesu zájmu uchazečů nejhůře ze všech.
 
-<RelatedArticles slugs={["explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak", "cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy"]} heading="Psali jsme" />
+<RelatedArticles slugs={["explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak", "cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy"]} heading="Doporučujeme" />

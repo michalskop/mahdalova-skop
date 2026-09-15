@@ -106,4 +106,4 @@ Stačilo! je letos založené hnutí, které navazuje na úspěšnou komunistick
 
 <iframe src='https://flo.uri.sh/visualisation/24813933/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style={{width: '100%', height: '300px'}} sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 
-<RelatedArticles slugs={["volby-cr-2025-10-04-predikce", "kontext-2025-08-29-volby-2025-skryte-koalice-podcast", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Psali jsme" />
+<RelatedArticles slugs={["volby-cr-2025-10-04-predikce", "kontext-2025-08-29-volby-2025-skryte-koalice-podcast", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Doporučujeme" />

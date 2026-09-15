@@ -82,4 +82,4 @@ Do budoucna se plánuje rozšíření reportovaných ukazatelů a zvýšení det
 
 Cílem digitalizace samo o sobě není získávat data, ale zjednodušit doposud komplikovaný a zdlouhavý proces všem účastníkům stavebních řízení. Zároveň ale platí, že pokud má veřejná správa kvalifikovaně rozhodovat, potřebuje mít jasný přehled o aktuálním stavu. Nový digitální systém poskytuje státu možnost sledovat data v reálném čase a podle jednotných pravidel. Data jsou nyní mnohem podrobnější a strukturovanější než dříve.
 
-<RelatedArticles slugs={["analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami", "analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu"]} heading="Psali jsme" />
+<RelatedArticles slugs={["analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami", "analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu"]} heading="Doporučujeme" />

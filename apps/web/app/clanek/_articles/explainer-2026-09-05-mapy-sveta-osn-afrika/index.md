@@ -87,4 +87,4 @@ Debata o mapách míří dál než k zeměpisu. Je spojená s koloniální histo
 
 Mapa totiž nevysvětluje jen prostor. Vytváří i představu o pořadí věcí. A jak nejlépe pochopit, jak moc nás běžná mapa klame? Zkusit si to. Chystáme k tomu interaktivní nástroj, ve kterém uvidíte, o kolik která projekce jednotlivé země zvětší – a jak je na tom vaše vlastní představa o velikosti světa.
 
-<RelatedArticles slugs={["kontext-2026-09-05-skutecna-velikost-sveta", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii", "volby-rakousko-2024-11-27-kartogramy"]} heading="Psali jsme" />
+<RelatedArticles slugs={["kontext-2026-09-05-skutecna-velikost-sveta", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii", "volby-rakousko-2024-11-27-kartogramy"]} heading="Doporučujeme" />
