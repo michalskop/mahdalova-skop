@@ -32,7 +32,7 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         }} />
 
         {/* Brand */}
-        <div className="dt-support-brand" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, flex: '0 0 auto' }}>
+        <div className="dt-support-brand" style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" style={{ display: 'block', width: 26, height: 26, flexShrink: 0 }}>
             <defs>
               <linearGradient id="dtSupportG" x1="1" x2=".25" y1=".5" y2="1">
@@ -50,7 +50,7 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
             </g>
           </svg>
           <p style={{ margin: 0, fontFamily: "'Roboto Slab', serif", fontSize: 18, fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
-            <span style={{ color: '#de1743' }}>Data</span><span style={{ color: '#ffcf02' }}>Times</span>
+            <span style={{ color: '#de1743' }}>Data</span><span style={{ color: '#ffcf02' }}>Times</span>{float ? <span style={{ color: '#ffffff' }}>.cz</span> : null}
           </p>
         </div>
 
@@ -94,8 +94,11 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
           box-sizing: border-box;
         }
         /* Brand sized to its content (no extra min-width) so the white text sits
-           close to the logo and the gaps logo↔text / text↔CTA stay balanced. */
-        .dt-support-brand { min-width: 0; }
+           close to the logo and the gaps logo↔text / text↔CTA stay balanced.
+           Full-width: logo stacked above the name. Compact (bleeding) variant:
+           logo + name side by side, to keep the box short. */
+        .dt-support-brand { min-width: 0; flex-direction: column; gap: 4px; }
+        .dt-support-banner--compact .dt-support-brand { flex-direction: row; gap: 8px; }
         .dt-support-outer { width: 100%; }
 
         /* Bleeding half-width variant (mid-article). Uses the shared bleed
@@ -119,8 +122,8 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         .dt-support-banner--compact {
           flex-direction: column;
           align-items: flex-start;
-          gap: 14px;
-          padding: 18px 16px;
+          gap: 10px;
+          padding: 14px 16px;
         }
         .dt-support-banner--compact .dt-support-brand { min-width: 0; }
         .dt-support-banner--compact .dt-support-text { flex: 1 1 auto; width: 100%; font-size: 14px; }
