@@ -263,7 +263,9 @@ export function ArticleRenderer({
         styles={(theme) => ({
           root: {
             color: theme.colors.brand[6],
-            clear: 'both', // start a new section below any floated figures
+            // No `clear`: headings and following text keep flowing around a
+            // bleeding/floated element (Figure, side InfoBox, "Napsali jsme")
+            // until it ends — no forced gap. See DESIGN.md → Bleed.
           },
         })}
       >
@@ -273,8 +275,7 @@ export function ArticleRenderer({
 
     h3: ({ children }) => (
       <Title order={3} mt="lg" mb="md"
-        c={textColor}
-        styles={{ root: { clear: 'both' } }}>
+        c={textColor}>
         {children}
       </Title>
     ),
