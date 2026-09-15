@@ -14,7 +14,7 @@ Vezměme si Grónsko a Afriku. Na mapě, kterou zná skoro každý ze školy, vy
 ![Grónsko je podle Mercatorovy projekce zhruba čtrnáctkrát větší, než je ve skutečnosti. Přesunuté k rovníku se scvrkne na velikost Alžírska.](images/grownsko-14x-mercator.png)
 _Grónsko podle Mercatorovy projekce a jeho skutečná velikost. Zdroj: DataTimes._
 
-Kulatou Zemi totiž nelze převést na plochý papír, aniž by se něco pokřivilo. Buď se zkreslí velikosti, nebo tvary, nebo vzdálenosti. Kartografové tomu říkají projekce a za pět století jich vytvořili desítky. Každá o něco usiluje a za něco platí.
+Kulatou Zemi totiž nelze převést na plochý papír, aniž by se něco pokřivilo. Buď se zkreslí velikosti, nebo tvary, nebo vzdálenosti. Kartografové tomu říkají projekce a za pět století jich vytvořili desítky.
 
 ## Mercator: mapa pro plavce
 
