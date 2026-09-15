@@ -97,7 +97,7 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         .dt-support-outer { width: 100%; }
 
         /* Bleeding half-width variant (mid-article). Uses the shared bleed
-           tokens so it lines up with <Figure>, side InfoBox and "Napsali jsme". */
+           tokens so it lines up with Figure, side InfoBox and Napsali jsme. */
         .dt-support-float {
           width: var(--dt-bleed-width, 48%);
           margin-top: 0.3rem;
