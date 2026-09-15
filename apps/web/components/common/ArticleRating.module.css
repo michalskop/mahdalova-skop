@@ -1,10 +1,18 @@
 /* Layout for the three Stripe "Buy Button" tips ("Bylo to pro vás přínosné?").
    Each Stripe button is a fixed-width (~288px) iframe that cannot be resized
-   from CSS, so we make the ARRANGEMENT responsive instead:
-   - narrow: one centred column, the three bars stacked with the royal-blue
-     background showing as spacing between them (never squeezed together);
-   - wide enough for 3 × 288px + gaps: a single centred row, side by side.
-   This avoids the unbalanced 2 + 1 wrap at in-between widths. */
+   from CSS. To keep all three side by side down to a 600px viewport, the row
+   is scaled to fit the available width in JS (see ArticleRating.tsx, `zoom`).
+   Below 600px they stack in one centred column with the royal-blue background
+   showing as spacing between them (never squeezed together, never an
+   unbalanced 2 + 1). */
+/* Full-width measuring wrapper: gives the JS a stable available width to scale
+   the row against, and centres the (possibly scaled) row. */
+.optionsWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .options {
   display: flex;
   flex-direction: column;
@@ -22,10 +30,20 @@
   max-width: 288px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 600px) {
   .options {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1.5rem;
+    /* keep the row at its natural width (don't flex-shrink); the JS `zoom`
+       scales it down to fit, and the wrapper centres it */
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+  }
+
+  .option {
+    width: auto;
+    max-width: none;
   }
 }
