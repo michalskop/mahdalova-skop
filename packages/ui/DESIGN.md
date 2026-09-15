@@ -54,6 +54,44 @@ use the 768px breakpoint above.
 
 ---
 
+### Bleed / vyčuhující prvky (`apps/web`)
+
+Some elements **bleed past the reading column on their outer edge** while the
+running text wraps around their inner edge. There is **one shared standard** so
+every bleeding element matches — the tokens live in `:root` in
+`apps/web/app/globals.css`:
+
+| Token | Value | Meaning |
+|-------|-------|---------|
+| `--dt-bleed-width` | `48%` | width of the floated element |
+| `--dt-bleed-out` | `12%` | how far the outer edge bleeds into the page margin |
+| `--dt-bleed-gap` | `1.75rem` | gap between the element and the wrapping text |
+
+**Which elements bleed (side / floated):**
+- `<Figure side="right|left">` — floated photo (`figure.module.css`)
+- `InfoBox` with `right`/`left` (```` ```infobox warning right ````) — via `box.module.css` `.floatRight/.floatLeft`
+- `RelatedArticles position="right|left"` — the floating **„Napsali jsme"** (same `box.module.css` floats)
+- `<SupportBanner float="right|left" />` — the compact mid-article donate banner
+
+**Which elements do NOT bleed (full-width, stay in the column):** a plain
+full-width `InfoBox` (no `right`/`left`), the end-of-article `<SupportBanner />`,
+and the `Doporučujeme` cards block. **Rule of thumb:** only the `right`/`left`
+(or `float`) variants bleed; everything else respects the 800px column.
+
+**Flow-around rule:** text *and* headings keep flowing/wrapping around a
+bleeding element **until it ends** — no forced gap. This is why H2/H3 must **not**
+set `clear` (see `ArticleRenderer`), and `.article-content` is `display: flow-root`
+so floats stay contained within the article body (byline above / `Doporučujeme` +
+`SupportBanner` below never overlap them).
+
+**Mobile:** at `≤768px` every bleeding element collapses to a normal full-width
+block (each component has its own `@media (max-width: 768px)` reset).
+
+**Changing the look:** edit the three tokens in `globals.css` once — Figure,
+InfoBox floats, „Napsali jsme" and the floating SupportBanner all update together.
+
+---
+
 ## Color Tokens
 
 **This is the BINDING DataTimes palette (závazná paleta).** Every color used anywhere — apps, specials, editorial tools, manuals — must be an exact value from a scale below. Never derive, tint, or invent an intermediate shade; pick the nearest existing index instead. All scales are Mantine custom color scales (10 shades, index 0–9); the **main shade** is index `[6]` unless noted. Access via `theme.colors.colorName[index]` or `c="colorName.6"`. Defined in `apps/web/app/providers/ThemeProvider.tsx` and mirrored in `apps/datajournalism.studio/app/providers/ThemeProvider.tsx`.
@@ -175,15 +213,27 @@ above); `size="lg"` for article grids.
 
 ---
 
-## RelatedArticles ("Čtěte dál")
+## RelatedArticles („Doporučujeme" / „Napsali jsme")
+
+Two roles from one component:
+- **Bottom cards block = „Doporučujeme"** (default heading; the `cards` preset).
+  Every article ends with `<RelatedArticles slugs={[…]} heading="Doporučujeme" />`.
+- **Floating side box = „Napsali jsme"** (`preset="sidebar" position="right"`).
+  Placed mid-article; it **bleeds** out of the column like `<Figure>` (see
+  *Bleed / vyčuhující prvky*).
 
 The `cards` preset renders as a **framed section**: a cream `background.2`
 (`#f8f6f0`) container with `p="lg"` that underlays the cards. Each card is the
 lighter layer — `background.0` (white `#ffffff`) under the text/excerpt below
-the cover image. The heading keeps `brand.6` (crimson) with a thin
-`background.4` underline so it stays visible on the cream. Other presets
-(`sidebar`, `list`) remain frameless. Card background is chosen by
+the cover image. The heading keeps `brand.6` (crimson) — **no underline**. Other
+presets (`sidebar`, `list`) remain frameless. Card background is chosen by
 `cardBackground` → `cardBgValue()` in `RelatedArticles.tsx`.
+
+**Card behaviour:** the whole card is a single link to the article (stretched
+link from the title) with a subtle hover zoom (`scale(1.02)`); the **author
+name(s)** are separate links to `/autor/<slug>` (dark, not bold), so they stay
+clickable above the stretched card link. Cover thumbnails use the same **5:4**
+ratio as the homepage cards.
 
 ---
 
@@ -369,6 +419,12 @@ This is a full-width success box.
 ```
 ````
 
+**Full-width vs. side (bleeding):** add `right` or `left` to make the box a
+**floated side box that bleeds** out of the reading column (like `<Figure>`; see
+*Bleed / vyčuhující prvky*) with the text wrapping around it. **Without** `right`/
+`left` the box is **full-width** and respects the column. Same distinction, one
+keyword.
+
 **"Read more" – fold content with `<!-- more -->`:**
 ````md
 ```infobox
@@ -525,6 +581,27 @@ import { TestimonialCard } from '@repo/ui/components/TestimonialCard';
 
 ---
 
+### `SupportBanner` (`apps/web`)
+
+Donate strip linking to Stripe. Two forms:
+
+- **Full-width, end of article** — added **automatically** to every article by
+  `ArticleRenderer` (below „Doporučujeme"). Controlled by the `withSupportBanner`
+  prop (default `true`). Also used on `/specialy/*` landing pages.
+- **Bleeding, mid-article** — `<SupportBanner float="right" />` placed **manually**
+  by the author inside a text-heavy paragraph. Compact vertical card that bleeds
+  out of the column (shared `--dt-bleed-*` tokens) with the text wrapping around
+  it. **Every article should get one** (see the new-article checklist below).
+
+```md
+<SupportBanner float="right" />
+```
+
+Place it in a stretch with **several paragraphs of running text** (not next to an
+infographic, chart, table or another float), so the text has room to wrap.
+
+---
+
 ## Utility: `getArticles`
 
 Server-side function (Node.js only – use in `page.tsx`, never in client components).
@@ -577,8 +654,14 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 - Use `background.1` for card/paper backgrounds
 - Use `background.0` for text that sits on a coloured (`brand`, `brandNavy`, etc.) background
 - Use `InfoBox` type semantically: `warning` for caveats, `success` for positive findings, `error` for corrections
-- Float boxes (`float="right"`) only when there is enough surrounding text – at least 3–4 paragraphs
+- Float / bleed boxes (`right`/`left`, `float="right"`) only when there is enough surrounding text – at least 3–4 paragraphs (they flow-wrap until the element ends)
 - Keep `ArticlesSection` titles short (≤ 14 chars) if you want the Arrow decoration
+
+### New-article checklist (`/clanek`)
+Every real article (not a special landing page) should have:
+1. **„Doporučujeme"** at the end — `<RelatedArticles slugs={[…]} heading="Doporučujeme" />` with 2–4 thematically related articles (group by tags/topic).
+2. **A mid-article `<SupportBanner float="right" />`** placed in a text-heavy paragraph (not next to an infographic/chart/table). The full-width end banner is automatic — don't add it by hand.
+3. Any side asides (`infobox … right`, „Napsali jsme" `position="right"`, `<Figure side="right">`) use the shared bleed — nothing else to set.
 
 ### Don't
 - Don't hardcode hex colours in new components – always use theme tokens
