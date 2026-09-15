@@ -20,6 +20,8 @@ Kulatou Zemi totiž nelze převést na plochý papír, aniž by se něco pokřiv
 
 V roce 1569 představil Gerardus Mercator [mapu](https://cs.wikipedia.org/wiki/Mercatorovo_zobrazen%C3%AD), kterou sám nazval Nova et Aucta Orbis Terrae Descriptio ad Usum Navigantium – tedy nové a úplnější zobrazení světa „upravené pro potřeby plavby". Ten podtitul prozrazuje všechno. Mapa nebyla pro školu ani pro pověšení na zeď. Byla pro námořníka.
 
+<SupportBanner float="right" />
+
 Její kouzlo spočívalo v tom, že cesta vedená stále stejným směrem podle kompasu se na ní kreslí jako rovná čára. Kapitán si mohl přiložit pravítko a odečíst kurz. Nic lepšího do té doby neexistovalo.
 
 Cena za to se ukázala, jakmile se mapa použila k zobrazení celé planety. Aby úhly a tvary seděly, musely se plochy směrem k pólům natahovat – čím dál od rovníku, tím víc. Na rovníku ještě přesně, u pólů do nekonečna. Proto je Grónsko velké jako Afrika. A proto vypadá Evropa mohutněji než Jižní Amerika, ač je ve skutečnosti sotva poloviční.

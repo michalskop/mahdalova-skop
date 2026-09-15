@@ -16,6 +16,13 @@
   --dt-bleed-gap: 1.75rem;  /* gap between the element and the wrapping text */
 }
 
+/* Contain the article's floats within the body so a bleeding element near the
+   end never overlaps the byline above or the "Doporučujeme"/SupportBanner
+   below. overflow stays visible, so the -12% bleed still paints outside. */
+.article-links .markdown-content .article-content {
+  display: flow-root;
+}
+
 /* Article body links (ArticleRenderer with withContainer=true).
    --article-link-color is set by ArticleRenderer when an article defines a
    custom text colour. Scoped to .article-content so the byline (author links

@@ -22,6 +22,7 @@ import { Person } from '@/components/politics/Person';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import ArticleByline from '@/components/dpbp/ArticleByline';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
+import SupportBanner from '@/components/common/SupportBanner';
 import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
 import VegaChart from '@/components/charts/VegaChart';
@@ -56,6 +57,7 @@ interface ArticleProps {
   backgroundColor?: string;  // Optional background color
   textColor?: string;       // Optional text color
   withContainer?: boolean;  // Optional flag to control Container wrapper
+  withSupportBanner?: boolean; // Full-width donate strip below the article (default true)
 }
 
 export function ArticleRenderer({ 
@@ -70,7 +72,8 @@ export function ArticleRenderer({
   htmlContent,
   backgroundColor,
   textColor,
-  withContainer = true  // Default to true for backward compatibility
+  withContainer = true,  // Default to true for backward compatibility
+  withSupportBanner = true
 }: ArticleProps) {
 
   const theme = useMantineTheme();
@@ -197,6 +200,10 @@ export function ArticleRenderer({
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
     Figure: (props: any) => <Figure slug={slug} {...props} />,
+    // Mid-article donate strip. Author places it manually in a text-heavy
+    // paragraph, usually bleeding: <SupportBanner float="right" />. The
+    // full-width end-of-article banner is added automatically below.
+    SupportBanner: (props: any) => <SupportBanner {...props} />,
     AccreditationScale: () => <AccreditationScale />,
     TrueSizeGame: () => <TrueSizeGame />,
     KeyNumbers: ({ yamlFile, ...props }) => {
@@ -471,6 +478,12 @@ export function ArticleRenderer({
           {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} /> : null}
           <MdxClient {...mdxSource} components={components} />
         </div>
+
+        {withSupportBanner ? (
+          <div style={{ clear: 'both', marginTop: '0.5rem' }}>
+            <SupportBanner />
+          </div>
+        ) : null}
       </Stack>
     </Paper>
   );

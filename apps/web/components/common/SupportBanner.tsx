@@ -1,14 +1,22 @@
 'use client';
 
-export default function SupportBanner() {
+export default function SupportBanner({ float }: { float?: 'left' | 'right' } = {}) {
+  // `float` = the bleeding half-width variant placed inside a text paragraph;
+  // it floats and bleeds out of the reading column exactly like <Figure> (shared
+  // --dt-bleed-* tokens) and stacks vertically so brand + text + CTA fit the
+  // narrow width. Without `float` it is the full-width strip (end of article /
+  // special landing pages). See packages/ui/DESIGN.md → Bleed & SupportBanner.
+  const outerClass = float
+    ? `dt-support-outer dt-support-float dt-support-float--${float}`
+    : 'dt-support-outer';
   return (
-    <div style={{ width: '100%', fontFamily: "'Roboto', Arial, sans-serif" }}>
+    <div className={outerClass} style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
       <a
         href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Podpořit DataTimes přes Stripe"
-        className="dt-support-banner"
+        className={float ? 'dt-support-banner dt-support-banner--compact' : 'dt-support-banner'}
         onMouseEnter={e => (e.currentTarget.style.filter = 'brightness(1.05)')}
         onMouseLeave={e => (e.currentTarget.style.filter = '')}
       >
@@ -86,6 +94,45 @@ export default function SupportBanner() {
           box-sizing: border-box;
         }
         .dt-support-brand { min-width: 175px; }
+        .dt-support-outer { width: 100%; }
+
+        /* Bleeding half-width variant (mid-article). Uses the shared bleed
+           tokens so it lines up with <Figure>, side InfoBox and "Napsali jsme". */
+        .dt-support-float {
+          width: var(--dt-bleed-width, 48%);
+          margin-top: 0.3rem;
+          margin-bottom: 1.1rem;
+        }
+        .dt-support-float--right {
+          float: right;
+          margin-left: var(--dt-bleed-gap, 1.75rem);
+          margin-right: calc(-1 * var(--dt-bleed-out, 12%));
+        }
+        .dt-support-float--left {
+          float: left;
+          margin-right: var(--dt-bleed-gap, 1.75rem);
+          margin-left: calc(-1 * var(--dt-bleed-out, 12%));
+        }
+        /* Compact = always stacked (brand / text / CTA) to fit the narrow width. */
+        .dt-support-banner--compact {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 14px;
+          padding: 18px 16px;
+        }
+        .dt-support-banner--compact .dt-support-brand { min-width: 0; }
+        .dt-support-banner--compact .dt-support-text { flex: 1 1 auto; width: 100%; font-size: 14px; }
+        .dt-support-banner--compact .dt-support-cta { width: 100%; }
+        @media (max-width: 768px) {
+          .dt-support-float,
+          .dt-support-float--right,
+          .dt-support-float--left {
+            float: none;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
         @media (max-width: 640px) {
           .dt-support-banner {
             flex-direction: column;
