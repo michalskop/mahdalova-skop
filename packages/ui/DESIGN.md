@@ -56,7 +56,36 @@ use the 768px breakpoint above.
 
 ## Color Tokens
 
-All colors are Mantine custom color scales (10 shades, index 0–9). The **main shade** is always index `[6]` unless noted. Access via `theme.colors.colorName[index]` in components or `c="colorName.6"` in Mantine props.
+**This is the BINDING DataTimes palette (závazná paleta).** Every color used anywhere — apps, specials, editorial tools, manuals — must be an exact value from a scale below. Never derive, tint, or invent an intermediate shade; pick the nearest existing index instead. All scales are Mantine custom color scales (10 shades, index 0–9); the **main shade** is index `[6]` unless noted. Access via `theme.colors.colorName[index]` or `c="colorName.6"`. Defined in `apps/web/app/providers/ThemeProvider.tsx` and mirrored in `apps/datajournalism.studio/app/providers/ThemeProvider.tsx`.
+
+### Full palette
+
+**Card 1 — "White, yellow, orange and red"**
+
+| Token | 0 | 1 | 2 | 3 | 4 | 5 | 6 (main) | 7 | 8 | 9 |
+|-------|---|---|---|---|---|---|----------|---|---|---|
+| `background` | `#ffffff` | `#fdfbf7` | `#f8f6f0` | `#f3f1e9` | `#eeeae2` | `#e9e9dd` | `#e8e8dc` | `#d4d4c8` | `#c8c8bc` | `#bcbcb0` |
+| `brandYellow` | `#fffdf0` | `#fff7d9` | `#fff0b3` | `#ffe680` | `#ffdc33` | `#ffd519` | `#ffcf02` | `#efb704` | `#bd9103` | `#a47d03` |
+| `brandOrange` | `#fff3e8` | `#ffe0c7` | `#ffc89f` | `#fda668` | `#ff934d` | `#ff7f2a` | `#f76800` | `#cc5f00` | `#994800` | `#663200` |
+| `brandCoralRed` | `#fff0ed` | `#ffcec6` | `#ffa99c` | `#ff7e6e` | `#ff5c4a` | `#ff3f30` | `#e8412c` | `#c93020` | `#a32318` | `#7d1810` |
+| `brand` | `#fff4f6` | `#ffb3c0` | `#ff8099` | `#ff4970` | `#ff1a4a` | `#f01745` | `#de1743` | `#c5143c` | `#a81134` | `#8b0e2b` |
+| `brandDeepRed` | `#fbe8eb` | `#f5c4c9` | `#efa0af` | `#e87c91` | `#d85a74` | `#bb3a5d` | `#a03250` | `#812840` | `#621d30` | `#431320` |
+| `brandAmethyst` | `#faf5fc` | `#f3eaf8` | `#e0c8ee` | `#c49ad8` | `#b57ac8` | `#b262c0` | `#9f319e` | `#6e227d` | `#522a7a` | `#351040` |
+
+**Card 2 — "Blue, green and brown"**
+
+| Token | 0 | 1 | 2 | 3 | 4 | 5 | 6 (main) | 7 | 8 | 9 |
+|-------|---|---|---|---|---|---|----------|---|---|---|
+| `brandRoyalBlue` | `#e9ebfa` | `#c9d0f5` | `#a9b5f0` | `#899aeb` | `#697fe6` | `#5e66d5` | `#4a51ab` | `#383d82` | `#272a59` | `#161730` |
+| `brandNavy` | `#e9ecf4` | `#d2d8e9` | `#bcc4df` | `#a6b0d4` | `#8f9dc9` | `#7889be` | `#6267a3` | `#4c4f8e` | `#2f325c` | `#101432` |
+| `brandTeal` | `#e5fdfc` | `#b8eff6` | `#8cdfef` | `#5fcce6` | `#33b9d9` | `#1a9fbd` | `#0e839e` | `#06677d` | `#044d5e` | `#023440` |
+| `brandEmeraldMint` | `#e8f9f4` | `#c2f0e4` | `#9be8d4` | `#75dfc4` | `#4fd6b4` | `#12b886` | `#0e926a` | `#0b6b4e` | `#084533` | `#042319` |
+| `brandForestGreen` | `#eaf7d6` | `#cbeab1` | `#acde8b` | `#8dd265` | `#6ec53f` | `#639e0a` | `#507e08` | `#3d5f06` | `#2a3f04` | `#172002` |
+| `brandChocolate` | `#f5f0eb` | `#e6d5c3` | `#d4b89e` | `#c19a78` | `#a87d58` | `#8b6240` | `#6e4a2c` | `#53361e` | `#3b2414` | `#24150b` |
+
+> The purple/**Amethyst** scale (`brandAmethyst`, main `#9f319e`, bright accent `#b262c0`) is the palette's answer whenever an "amethyst" or purple accent is requested — never introduce a new purple.
+
+### Component usage notes
 
 ### `brand` – Primary crimson red
 
@@ -115,14 +144,17 @@ c="background.0"    // white text on coloured section header
 | [6] | `#4a51ab` | Main shade |
 | [8] | `#272a59` | TestimonialCard background (`bg="brandRoyalBlue.8"`) |
 
-### Accent colors (decorative, not yet used in components)
+### Accent colors (decorative)
 
 | Token | Main [6] | Notes |
 |-------|----------|-------|
 | `brandYellow` | `#ffcf02` | Highlights |
 | `brandForestGreen` | `#639e0a` | Nature/environment topics |
 | `brandEmeraldMint` | `#12b886` | Available for success states |
-| `brandDeepRed` | `#a03250` | Darker crimson variant |
+| `brandDeepRed` | `#a03250` | Darker crimson / rose variant |
+| `brandAmethyst` | `#9f319e` | Purple accent; bright `#b262c0` [5] (e.g. DPBP hub). Use for "amethyst" accents. |
+| `brandCoralRed` | `#e8412c` | Warm coral red |
+| `brandChocolate` | `#6e4a2c` | Brown |
 
 ---
 

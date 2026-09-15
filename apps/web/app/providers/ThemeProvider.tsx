@@ -122,6 +122,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#812840",
             "#621d30",
             "#431320"],
+          // AMETHYST / PURPLE – binding palette, card "White, yellow, orange and red", row 7.
+          // Main shade: [6] = #9f319e. Bright accent: [5] = #b262c0 (e.g. DPBP hub dot).
+          brandAmethyst: [
+            "#faf5fc",
+            "#f3eaf8",
+            "#e0c8ee",
+            "#c49ad8",
+            "#b57ac8",
+            "#b262c0",
+            "#9f319e",
+            "#6e227d",
+            "#522a7a",
+            "#351040"],
           brandCoralRed: [
             "#fff0ed",
             "#ffcec6",
