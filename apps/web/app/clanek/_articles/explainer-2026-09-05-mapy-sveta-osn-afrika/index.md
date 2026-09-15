@@ -1,7 +1,7 @@
 ---
 title: "Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně"
 date: "2026-09-05"
-author: "Kateřina Mahdalová, Michal Škop"
+author: "Kateřina Mahdalová"
 excerpt: "Valné shromáždění OSN podpořilo přesnější a pestřejší zobrazování světa na mapách. Pro hlasovalo 164 zemí včetně Česka, jedinou zemí proti byly Spojené státy. Spor o mapy přitom není technický – je to spor o to, kdo určuje, co ve světě vypadá velké a důležité."
 coverImage: "images/cover.svg"
 filter: ["kontext"]
@@ -53,11 +53,7 @@ Drobnost, která se vyplatí hlídat: řada „srovnávacích“ obrázků, kter
 
 Americká delegace označila rezoluci za zbytečnou a spojila ji se širším ideologickým rámcem – zejména s formulacemi o „kognitivní spravedlnosti“ a reparacích. Podle jejího vyjádření je iniciativa součástí „mnohem většího a radikálnějšího ideologického projektu“ a OSN se místo skutečných problémů míru a prosperity zabývá mapami ze 16. století.
 
-Americký nesouhlas ale zapadá do širší politiky symbolické suverenity. Washington už v lednu 2025 nařídil přejmenovat Gulf of Mexico na Gulf of America v amerických federálních databázích, mapách a dokumentech. Koncem srpna 2026 pak přišel další příkaz, který v americkém úředním prostředí míří na přejmenování Lake Ontario na Lake America.
-
-Spor o mapy se tak v americkém podání netýká jen toho, jak zobrazit Afriku. Souvisí s mnohem širší snahou vtisknout do map a názvosloví politický výklad prostoru: kdo má právo pojmenovávat, nastavuje oficiální terminologii a tím ovlivňuje školy, média i digitální platformy. To už není drobná kartografická úprava, ale kulturní a geopolitické gesto.
-
-```infobox
+```infobox right
 **O co jde USA při „přepisování“ map a názvů světa**
 
 1. **Kontrola jazyka.** Kdo určuje oficiální názvy, ovlivňuje veřejnou debatu, školní atlasy i digitální služby.
@@ -66,6 +62,10 @@ Spor o mapy se tak v americkém podání netýká jen toho, jak zobrazit Afriku.
 4. **Tlak na mapové platformy.** Jakmile se název objeví ve federálních databázích, promítá se do dokumentů a může tlačit i na soukromé mapové služby.
 5. **Přepis symbolického pořádku.** Nejde jen o technickou změnu – v sázce je otázka, kdo má právo vymezovat svět a jeho pojmy.
 ```
+
+Americký nesouhlas ale zapadá do širší politiky symbolické suverenity. Washington už v lednu 2025 nařídil přejmenovat Gulf of Mexico na Gulf of America v amerických federálních databázích, mapách a dokumentech. Koncem srpna 2026 pak přišel další příkaz, který v americkém úředním prostředí míří na přejmenování Lake Ontario na Lake America.
+
+Spor o mapy se tak v americkém podání netýká jen toho, jak zobrazit Afriku. Souvisí s mnohem širší snahou vtisknout do map a názvosloví politický výklad prostoru: kdo má právo pojmenovávat, nastavuje oficiální terminologii a tím ovlivňuje školy, média i digitální platformy. To už není drobná kartografická úprava, ale kulturní a geopolitické gesto.
 
 ## Odkud iniciativa přišla
 

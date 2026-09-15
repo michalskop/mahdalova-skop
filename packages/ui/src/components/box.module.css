@@ -11,20 +11,27 @@
   font-family: var(--mantine-font-family-headings, inherit);
 }
 
+/* Floated side elements (InfoBox `right`/`left`, RelatedArticles
+   position="right"/"left") bleed past the reading column exactly like <Figure>,
+   using the shared bleed tokens from apps/web globals (with fallbacks so DJS
+   and any app without the tokens still get the same look). See
+   packages/ui/DESIGN.md → "Bleed / vyčuhující prvky". */
 .floatRight {
   float: right;
-  width: 45%;
-  max-width: 400px;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  width: var(--dt-bleed-width, 48%);
+  margin-top: 0.3rem;
+  margin-bottom: 1.1rem;
+  margin-left: var(--dt-bleed-gap, 1.75rem);
+  margin-right: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the right margin */
 }
 
 .floatLeft {
   float: left;
-  width: 45%;
-  max-width: 400px;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
+  width: var(--dt-bleed-width, 48%);
+  margin-top: 0.3rem;
+  margin-bottom: 1.1rem;
+  margin-right: var(--dt-bleed-gap, 1.75rem);
+  margin-left: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the left margin */
 }
 
 @media (max-width: 768px) {
