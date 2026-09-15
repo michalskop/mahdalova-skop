@@ -101,10 +101,12 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         .dt-support-banner--compact .dt-support-brand { flex-direction: row; gap: 8px; }
         .dt-support-outer { width: 100%; }
 
-        /* Bleeding half-width variant (mid-article). Uses the shared bleed
-           tokens so it lines up with Figure, side InfoBox and Napsali jsme. */
+        /* Bleeding variant (mid-article). Deliberately narrower than the shared
+           48% so the text wraps into more lines and the box stays slim; the
+           OUTER edge still bleeds the shared -12% so it lines up with Figure,
+           side InfoBox and Napsali jsme. */
         .dt-support-float {
-          width: var(--dt-bleed-width, 48%);
+          width: 15rem;
           margin-top: 0.3rem;
           margin-bottom: 1.1rem;
         }
