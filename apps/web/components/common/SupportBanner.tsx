@@ -88,6 +88,9 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         </span>
       </a>
 
+      {/* NB: never use the characters < > or " inside this inline <style> block
+          (not even in comments) — React escapes them on the server but not on
+          the client, which triggers a hydration mismatch. */}
       <style>{`
         .dt-support-banner {
           position: relative;
