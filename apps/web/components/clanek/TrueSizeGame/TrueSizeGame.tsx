@@ -1618,9 +1618,9 @@ export default function TrueSizeGame() {
               {ISO2[detail.name] && (
                 <Flag
                   code={ISO2[detail.name]}
-                  size={18}
+                  size={24}
                   alt=""
-                  style={{ marginRight: 8, width: 36, height: 24, aspectRatio: "3 / 2", objectFit: "contain", background: "#f8f6f0", borderRadius: 2 }}
+                  style={{ marginRight: 8 }}
                 />
               )}
               {hintLevel > 0 && !detail.result ? <span className={styles.hintCountryName} style={{ color: detail.color }}>{label(detail.name)}</span> : label(detail.name)}

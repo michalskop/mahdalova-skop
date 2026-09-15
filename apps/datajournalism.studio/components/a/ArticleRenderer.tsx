@@ -17,6 +17,7 @@ import HtmlEmbed from '@/components/a/HtmlEmbed';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
+import { Flag } from '@repo/ui/components/Flag';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -169,6 +170,7 @@ export function ArticleRenderer({
   const components: MDXComponents = {
     InfoBox,  // Register InfoBox for info/data boxes (covers box, mediabox, infobox fences)
     FlourishEmbed,
+    Flag: (props: any) => <Flag {...props} size={props.size ? Number(props.size) : undefined} />,
     PartyFace,
     MotionsStancesTable: (props) => <MotionsStancesTable {...props} fileData={mdxSource.scope.tableData as any} />,
     code: CodeBlock,  // This handles the ```box syntax

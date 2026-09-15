@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import type { ScrollyStep, ScrollyContent } from '../types/scrolly';
+import { replaceFlagEmojiInHtml } from '../lib/flag-emoji';
 
 interface ScrollyTellingProps {
   steps: ScrollyStep[];
@@ -170,7 +171,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   marginRight: 'auto',
                   position: 'relative'
                 }}>
-                  <div dangerouslySetInnerHTML={{ __html: step.text }} />
+                  <div dangerouslySetInnerHTML={{ __html: replaceFlagEmojiInHtml(step.text) }} />
                 </div>
               </Step>
             ))}
@@ -203,7 +204,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   borderRadius: '4px',
                   position: 'relative'
                 }}>
-                  <div dangerouslySetInnerHTML={{ __html: step.text }} />
+                  <div dangerouslySetInnerHTML={{ __html: replaceFlagEmojiInHtml(step.text) }} />
                 </div>
               </Step>
             ))}

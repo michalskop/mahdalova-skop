@@ -278,24 +278,34 @@ emoji flags – the "regional indicator" characters fall back to the bare countr
 never an emoji. (This is also stated as an editorial standard in the redakční manuál,
 section *Fotografie a obraz*.)
 
+**Automatic conversion in articles:** you do **not** need to write `<Flag>` by hand in
+article Markdown. Authors may type the plain emoji (`🇩🇪`, `🇪🇺`, …) anywhere in the body –
+headings, tables, lists, running text – and the `remarkFlagPlugin`
+(`apps/*/lib/remark-flag-plugin.js`) rewrites it to `<Flag>` at build time. The same happens
+for scrollytelling HTML via `replaceFlagEmojiInHtml` (`@repo/ui/lib/flag-emoji`). Use the
+component directly only when you need a non-default `size` or `shape`.
+
 ```tsx
 import { Flag } from '@repo/ui/components/Flag';
 
-<Flag code="de" size={20} />                 // hranatá (square), 20 px
-<Flag code="cz" shape="circle" size={16} />  // kulatá (circle), 16 px
+<Flag code="de" />                           // clean rectangle (4:3), height 20 px
+<Flag code="cz" size={16} />                 // rectangle, height 16 px
+<Flag code="cz" shape="circle" size={18} />  // circle – EXCEPTIONAL, ad-hoc only
 ```
 
-Props: `code` (ISO 3166-1 alpha-2, case-insensitive), `size` (px, width = height, default `20`),
-`shape` (`'square' | 'circle'`, default `'square'`), `basePath` (default `'/flags'`), any `<img>` prop.
+Props: `code` (ISO 3166-1 alpha-2, case-insensitive), `size` (px height, width follows 4:3;
+for `circle` width = height; default `20`), `shape` (`'rectangle' | 'circle'`, default
+`'rectangle'`), `basePath` (default `'/flags'`), any `<img>` prop.
 
-**Flag galleries (SVG):** served from `public/flags/square/` and `public/flags/circle/`.
-Canonical copy lives in `apps/web/public/flags/` (sources: [square-flags](https://kapowaz.github.io/square-flags/gallery),
-[circle-flags](https://hatscripts.github.io/circle-flags/gallery), file name = ISO code).
-To use `<Flag>` in `datajournalism.studio`, copy the same folder into its `public/flags/`
-(e.g. `cp -r apps/web/public/flags apps/datajournalism.studio/public/`).
+**Look:** a clean rectangle at the flag's natural 4:3 proportions – **no** border, shadow,
+background or rounding. The circular crop (`shape="circle"`) is reserved for exceptional,
+case-by-case use, not a default.
 
-**Rule:** Use square by default; circle only when it reads better inline. Always keep the
-gallery in sync between both apps so no flag 404s.
+**Flag galleries (SVG):** rectangles served from `public/flags/rectangle/` (source:
+[flag-icons](https://github.com/lipis/flag-icons) `4x3`, MIT, file name = ISO code); circles
+from `public/flags/circle/`. Canonical copy lives in `apps/web/public/flags/`; the same folder
+is mirrored into `apps/datajournalism.studio/public/flags/` so `<Flag>` never 404s. Keep both
+apps in sync. (The older square set in `public/flags/square/` is deprecated and no longer used.)
 
 ---
 

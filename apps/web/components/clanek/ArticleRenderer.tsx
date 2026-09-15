@@ -32,6 +32,7 @@ import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import { Gauge } from '@repo/ui/components/Gauge';
 import { PhotoGallery } from '@repo/ui/components/PhotoGallery';
 import type { GalleryImage } from '@repo/ui/components/PhotoGallery';
+import { Flag } from '@repo/ui/components/Flag';
 import type { Article } from '@repo/ui/lib/getArticles';
 import { fixCzechTypography } from '@/lib/remark-czech-typography';
 // import yaml from 'js-yaml';
@@ -236,6 +237,7 @@ export function ArticleRenderer({
     },
     TestComponent,
     FlourishEmbed,
+    Flag: (props: any) => <Flag {...props} size={props.size ? Number(props.size) : undefined} />,
     PartyFace,
     Person: (props) => <Person {...props} data={(mdxSource.scope as any)?.personsData} />,
     MotionsStancesTable: (props) => <MotionsStancesTable {...props} fileData={mdxSource.scope.tableData as any} />,

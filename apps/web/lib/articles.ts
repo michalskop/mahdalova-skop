@@ -9,6 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import { remarkBoxPlugin } from './remark-box-plugin';
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import { remarkGalleryPlugin } from './remark-gallery-plugin';
+import { remarkFlagPlugin } from './remark-flag-plugin';
 import { remarkCzechTypography } from './remark-czech-typography';
 import type { ScrollyContent } from '@/types/scrolly';
 import type { TimelineContent } from '@/types/timeline';
@@ -249,7 +250,7 @@ export async function getArticleBySlug(directorySlug: string) {
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {
-      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin, remarkGalleryPlugin, remarkCzechTypography],
+      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin, remarkGalleryPlugin, remarkFlagPlugin, remarkCzechTypography],
       rehypePlugins: [[rehypeRaw, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement', 'mdxFlowExpression', 'mdxTextExpression', 'mdxjsEsm'] }]],
     },
   });
