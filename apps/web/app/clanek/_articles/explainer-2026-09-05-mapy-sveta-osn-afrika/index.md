@@ -19,6 +19,8 @@ Na první pohled to může vypadat jako okrajová debata pro kartografy. Jenže 
 
 Nejznámější zobrazení světa – Mercatorova projekce z roku 1569 a její digitální varianty – kreslí oblasti blízko rovníku menší, než ve skutečnosti jsou, zatímco území ve vyšších zeměpisných šířkách vizuálně nafukuje. Afrika pak ve veřejné představě často vypadá srovnatelně velká jako Grónsko.
 
+<SupportBanner float="left" />
+
 Přitom má Afrika zhruba 30,4 milionu km², Grónsko asi 2,2 milionu km². Afrika je tedy přibližně **čtrnáctkrát větší** – a je také téměř třikrát větší než celá Evropa. Petice kampaně #CorrectTheMap to shrnuje jednou větou: do Afriky byste vešli Spojené státy, Čínu, Indii, Japonsko, Mexiko i velkou část Evropy – a ještě by zbylo místo.
 
 Togo před hlasováním připomnělo, že takové zkreslení není neškodné. Podle jeho ministra zahraničí Roberta Dusseyho mapy „vedou vzdělávání, živí představivost a ovlivňují kolektivní vnímání“ – a od školních let tak mohou upevňovat obraz, který neodpovídá geografické realitě.

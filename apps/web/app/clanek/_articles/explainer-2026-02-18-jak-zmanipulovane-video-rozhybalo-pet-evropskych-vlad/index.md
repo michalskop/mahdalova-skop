@@ -69,7 +69,7 @@ K 24. únoru 2026 žádná z pěti vlád veřejnou omluvu nevydala.
 
 Rakouská ministryně Meinl-Reisinger smazala svůj příspěvek na X – jako jediná z pětice alespoň částečně couvla, byť bez omluvy a opravy. Německé ministerstvo zahraničí v reakci na dotaz Computer Weekly uvedlo, že Wadephul „se odkazoval na celý výrok, nikoli na manipulované video" a že „paní Albanese opakovaně pronášela výroky a šířila neudržitelné nepravdy v minulosti, včetně těch o Německu". Francouzský ministr Barrot tvrdí, že jeho výzva „neměla nic společného se sestříhaným videem", a přesunul argumentaci na starší výroky Albanese. České ministerstvo zahraničí pod vedením Petra Macinky se k manipulaci videa vůbec nevyjádřilo a své výroky nedementovalo ani neodstranilo.
 
-```infobox warning left
+```infobox warning right
 > „Co je na tomto incidentu obzvláště šokující, je skutečnost, že právě Rakousko a Německo – dvě země, které se ucházejí o místo v Radě bezpečnosti OSN a předstírají, že hájí mezinárodní řád založený na pravidlech – se aktivně podílejí na podkopávání a poškozování právě těchto institucí OSN," říká ředitelka rakouské Amnesty International Shoura Hashemi.
 ```
 

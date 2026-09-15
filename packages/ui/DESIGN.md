@@ -78,6 +78,17 @@ full-width `InfoBox` (no `right`/`left`), the end-of-article `<SupportBanner />`
 and the `Doporučujeme` cards block. **Rule of thumb:** only the `right`/`left`
 (or `float`) variants bleed; everything else respects the 800px column.
 
+**Side convention (which side floats which way):**
+- **SupportBanner → left** (`<SupportBanner float="left" />`).
+- **Side InfoBox / „Napsali jsme" → right** (```` ```infobox … right ````, `position="right"`).
+- **Photos (`<Figure>`) alternate** left/right as the text flows (author's choice); `center` for tall/portrait.
+- **Big boxes → full-width** (no side keyword); on mobile (`≤768px`) everything is full-width.
+
+Keeping support on the left and context boxes on the right means the two never
+fight for the same margin. **Don't** put a left and a right float in the *same*
+short paragraph cluster — they would pinch the text into a thin middle column;
+give each its own text-heavy stretch (≥3–4 paragraphs).
+
 **Flow-around rule:** text *and* headings keep flowing/wrapping around a
 bleeding element **until it ends** — no forced gap. This is why H2/H3 must **not**
 set `clear` (see `ArticleRenderer`), and `.article-content` is `display: flow-root`
@@ -588,13 +599,14 @@ Donate strip linking to Stripe. Two forms:
 - **Full-width, end of article** — added **automatically** to every article by
   `ArticleRenderer` (below „Doporučujeme"). Controlled by the `withSupportBanner`
   prop (default `true`). Also used on `/specialy/*` landing pages.
-- **Bleeding, mid-article** — `<SupportBanner float="right" />` placed **manually**
-  by the author inside a text-heavy paragraph. Compact vertical card that bleeds
+- **Bleeding, mid-article** — `<SupportBanner float="left" />` placed **manually**
+  by the author inside a text-heavy paragraph (**left by convention** — context
+  boxes go right). Compact vertical card that bleeds
   out of the column (shared `--dt-bleed-*` tokens) with the text wrapping around
   it. **Every article should get one** (see the new-article checklist below).
 
 ```md
-<SupportBanner float="right" />
+<SupportBanner float="left" />
 ```
 
 Place it in a stretch with **several paragraphs of running text** (not next to an
