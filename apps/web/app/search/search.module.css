@@ -8,9 +8,13 @@
   box-shadow: var(--mantine-shadow-md);
 }
 
+.title {
+  color: #639e0a;
+}
+
 .excerpt mark {
-  background-color: #e5fdfc;
-  color: #06677d;
+  background-color: #eaf7d6;
+  color: #3d5f06;
   border-radius: 2px;
   padding: 0 2px;
   font-weight: 600;

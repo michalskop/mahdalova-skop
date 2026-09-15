@@ -97,7 +97,7 @@ export default function SearchPage() {
       <Stack gap="sm" mt="md">
         {results.map((r) => (
           <Paper key={r.url} shadow="xs" p="md" withBorder component={Link} href={r.url} className={classes.result}>
-            <Title order={3} size="h4" mb={4}>{r.meta.title ?? 'Článek'}</Title>
+            <Title order={3} size="h4" mb={4} className={classes.title}>{r.meta.title ?? 'Článek'}</Title>
             <Text
               size="sm"
               c="dimmed"

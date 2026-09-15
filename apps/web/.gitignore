@@ -133,3 +133,6 @@ dist
 
 # generated/copied article assets (build output)
 public/clanek/_articles/
+
+# pagefind search index copied into public/ for local dev preview (built into out/ at build time)
+public/pagefind/
