@@ -8,13 +8,9 @@ filter: ["analýza", "investigace"]
 tags: ["sněmovna", "vláda", "neziskovky"]
 promoted: 55
 ---
-_Vládní koalice připravuje přísnější pravidla pro hospodaření neziskových organizací. Jenže poslanci, kteří zákon prosazují, už jaksi neříkají, že podobná pravidla již existují. A že je sami nedodržují._
+Vládní koalice připravuje přísnější pravidla pro hospodaření neziskových organizací. Jenže poslanci, kteří zákon prosazují, už jaksi neříkají, že podobná pravidla již existují. A že je sami nedodržují.
 
 Zjistili jsme, že více než třetina poslanců vládní koalice stojí přímo ve vedení některé z neziskových organizací a že většina těchto organizací nedodržuje současné zákony a nezveřejňuje ani nejzákladnější finanční údaje.
-
-Konkrétně jsme dohledali **padesát pět neziskových organizací, které mají přímo ve vedení některého ze sto osmi koaličních poslanců či poslankyň**. Samotné členství se neeviduje a nejde tedy ani vyčíslit, proto se zaměřujeme výlučně na vedení organizací. I z těchto dat je patrný značně bohatý spolkový život našich zákonodárců.
-
-<SupportBanner float="left" />
 
 ``` box right info
 #### Neziskovky vládních poslanců
@@ -23,6 +19,10 @@ Konkrétně jsme dohledali **padesát pět neziskových organizací, které maj�
 - 19 splňuje
 - 4 nově založené (povinnost jim vyvstane až letos)
 ```
+
+Konkrétně jsme dohledali **padesát pět neziskových organizací, které mají přímo ve vedení některého ze sto osmi koaličních poslanců či poslankyň**. Samotné členství se neeviduje a nejde tedy ani vyčíslit, proto se zaměřujeme výlučně na vedení organizací. I z těchto dat je patrný značně bohatý spolkový život našich zákonodárců.
+
+<SupportBanner float="left" />
 
 Současné zákony jasně říkají, že každá nezisková organizace (spolek, ústav apod.) musí **každý rok zveřejnit ve Sbírce listin základní účetní dokumenty**. Vloni tuto povinnost splnilo jen devatenáct ze zmíněných padesáti pěti organizací. Třicet dva ji nesplnilo. Čtyři neziskovky byly nově založené a zatím tedy neměly co zveřejnit.
 
