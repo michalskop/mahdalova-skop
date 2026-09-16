@@ -113,22 +113,27 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         .dt-support-outer { width: 100%; }
 
         /* Bleeding variant (mid-article). Width sized to fit the fixed three-line
-           text block (see the line breaks above); the OUTER edge still bleeds the
-           shared -12% so it lines up with Figure, side InfoBox and Napsali jsme. */
+           text block (see the line breaks above). Unlike the other bleeding
+           elements, the banner only reaches HALF of its width into the text — the
+           outer half hangs out in the margin (bleed = half of the 22.5rem width). */
         .dt-support-float {
           width: 22.5rem;
           margin-top: 0.3rem;
           margin-bottom: 1.1rem;
         }
+        /* Bleed = half the banner width (11.25rem) so only the inner half reaches
+           into the text. Capped with max()/50vw so on narrower desktops the outer
+           edge never crosses the viewport (keeps an ~8px gutter); on wide screens
+           the full half hangs out. 383px ≈ the column's left offset + gutter. */
         .dt-support-float--right {
           float: right;
           margin-left: var(--dt-bleed-gap, 1.75rem);
-          margin-right: calc(-1 * var(--dt-bleed-out, 12%));
+          margin-right: max(-11.25rem, calc(383px - 50vw));
         }
         .dt-support-float--left {
           float: left;
           margin-right: var(--dt-bleed-gap, 1.75rem);
-          margin-left: calc(-1 * var(--dt-bleed-out, 12%));
+          margin-left: max(-11.25rem, calc(383px - 50vw));
         }
         /* Compact = always stacked (brand / text / CTA) to fit the narrow width. */
         .dt-support-banner--compact {

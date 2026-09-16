@@ -79,7 +79,10 @@ and the `Doporučujeme` cards block. **Rule of thumb:** only the `right`/`left`
 (or `float`) variants bleed; everything else respects the 800px column.
 
 **Side convention (which side floats which way):**
-- **SupportBanner → left** (`<SupportBanner float="left" />`).
+- **SupportBanner → left** (`<SupportBanner float="left" />`). Unlike the other
+  bleeding elements it reaches only **half its width** into the text; the outer
+  half hangs in the margin (capped so it never crosses the viewport on narrow
+  desktops). It also has fixed three-line copy and a set width — see `SupportBanner`.
 - **Side InfoBox / „Napsali jsme" → right** (```` ```infobox … right ````, `position="right"`).
 - **Photos (`<Figure>`) alternate** left/right as the text flows (author's choice); `center` for tall/portrait.
 - **Big boxes → full-width** (no side keyword); on mobile (`≤768px`) everything is full-width.
@@ -446,6 +449,16 @@ This paragraph is always visible.
 This paragraph is hidden until the reader taps "Číst více".
 ```
 ````
+
+**Padding, spacing & titles are central — never tweak a single box.** The look is
+set once for every InfoBox: compact padding (`py`/`my` on the `Paper` in
+`InfoBox.tsx`) plus the `.dt-infobox` rules in `apps/web/app/globals.css`, which
+give a **uniform internal rhythm** and make the box **hug its content** (no extra
+space at the top or bottom, at any nesting depth — even a `<div>` MDX wraps inside
+the last list item). **Titles are unified** regardless of the markdown level used
+(`###` vs `####`): one modest size, **bold**, dark `#242424`, and a title that is a
+link is **not** crimson. So authors just write ` ```infobox … ` and the sizing is
+consistent — don't add per-box padding/margins.
 
 Props: `type`, `float`, `readMoreAt` (set by the remark plugin – do not set manually), `readMoreLabel`, `readLessLabel`.
 

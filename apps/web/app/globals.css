@@ -23,12 +23,16 @@
   display: flow-root;
 }
 
-/* Trim the InfoBox's internal top/bottom whitespace (the first heading / last
-   paragraph or list margins) so the box hugs its content and isn't too tall. */
-.dt-infobox > :first-child {
+/* One central spacing rule for EVERY InfoBox — do not tweak padding/margins per
+   box. Uniform vertical rhythm inside: consistent gaps between blocks, and the
+   box hugs its content (no extra space at top or bottom). The `*:last-child`
+   rule zeroes the trailing margin at ANY nesting depth (e.g. a <div> that MDX
+   wraps inside the last list item), which is what caused uneven bottom space. */
+.dt-infobox > * {
   margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
 }
-.dt-infobox > :last-child {
+.dt-infobox *:last-child {
   margin-bottom: 0 !important;
 }
 
