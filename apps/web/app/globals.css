@@ -83,7 +83,7 @@
 .dt-support-float {
   --dt-support-w: 13rem;
   width: var(--dt-support-w);
-  margin-top: 0.3rem;
+  margin-top: 0; /* top aligns with the adjacent paragraph's first line */
   margin-bottom: 1.1rem;
 }
 .dt-support-float--right {

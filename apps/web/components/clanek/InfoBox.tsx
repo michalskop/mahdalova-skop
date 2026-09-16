@@ -58,7 +58,8 @@ export function InfoBox({
       px="md"
       py={8}
       radius="md"
-      my="sm"
+      mt={floatClass ? 0 : 'sm'}
+      mb="sm"
       className={['dt-infobox', floatClass, className].filter(Boolean).join(' ')}
       style={{
         backgroundColor: boxStyles.backgroundColor,

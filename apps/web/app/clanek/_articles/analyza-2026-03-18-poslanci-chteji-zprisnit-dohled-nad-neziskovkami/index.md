@@ -20,9 +20,9 @@ Vládní koalice připravuje přísnější pravidla pro hospodaření neziskov�
 
 Zjistili jsme, že více než třetina poslanců vládní koalice stojí přímo ve vedení některé z neziskových organizací a že většina těchto organizací nedodržuje současné zákony a nezveřejňuje ani nejzákladnější finanční údaje.
 
-Konkrétně jsme dohledali **padesát pět neziskových organizací, které mají přímo ve vedení některého ze sto osmi koaličních poslanců či poslankyň**. Samotné členství se neeviduje a nejde tedy ani vyčíslit, proto se zaměřujeme výlučně na vedení organizací. I z těchto dat je patrný značně bohatý spolkový život našich zákonodárců.
-
 <SupportBanner float="left" />
+
+Konkrétně jsme dohledali **padesát pět neziskových organizací, které mají přímo ve vedení některého ze sto osmi koaličních poslanců či poslankyň**. Samotné členství se neeviduje a nejde tedy ani vyčíslit, proto se zaměřujeme výlučně na vedení organizací. I z těchto dat je patrný značně bohatý spolkový život našich zákonodárců.
 
 Současné zákony jasně říkají, že každá nezisková organizace (spolek, ústav apod.) musí **každý rok zveřejnit ve Sbírce listin základní účetní dokumenty**. Vloni tuto povinnost splnilo jen devatenáct ze zmíněných padesáti pěti organizací. Třicet dva ji nesplnilo. Čtyři neziskovky byly nově založené a zatím tedy neměly co zveřejnit.
 
