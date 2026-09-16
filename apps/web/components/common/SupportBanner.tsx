@@ -59,9 +59,12 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 13.5, fontWeight: 400, lineHeight: 1.35 }}>
           {float ? (
             <>
-              Veřejný prostor i&nbsp;politiku zaplavují hlouposti,<br />
-              fake news a&nbsp;propaganda. Pomozte nám šířit ověřená<br />
-              fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.
+              Veřejný prostor i&nbsp;politiku<br />
+              zaplavují hlouposti,<br />
+              fake news a&nbsp;propaganda.<br />
+              Pomozte nám šířit ověřená<br />
+              fakta a&nbsp;hledat kontext.<br />
+              Za cenu jednoho oběda.
             </>
           ) : (
             <>Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.</>
@@ -88,85 +91,6 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         </span>
       </a>
 
-      {/* NB: never use the characters < > or " inside this inline <style> block
-          (not even in comments) — React escapes them on the server but not on
-          the client, which triggers a hydration mismatch. */}
-      <style>{`
-        .dt-support-banner {
-          position: relative;
-          display: flex;
-          align-items: center;
-          gap: 16px;
-          width: 100%;
-          padding: 10px 14px;
-          background: #0d1438;
-          text-decoration: none;
-          overflow: hidden;
-          box-sizing: border-box;
-        }
-        /* Brand sized to its content (no extra min-width) so the white text sits
-           close to the logo and the gaps logo↔text / text↔CTA stay balanced.
-           Full-width: logo stacked above the name. Compact (bleeding) variant:
-           logo + name side by side, to keep the box short. */
-        .dt-support-brand { min-width: 0; flex-direction: column; gap: 4px; }
-        .dt-support-banner--compact .dt-support-brand { flex-direction: row; gap: 8px; }
-        .dt-support-outer { width: 100%; }
-
-        /* Bleeding variant (mid-article). Width sized to fit the fixed three-line
-           text block (see the line breaks above). Unlike the other bleeding
-           elements, the banner only reaches HALF of its width into the text — the
-           outer half hangs out in the margin (bleed = half of the 22.5rem width). */
-        .dt-support-float {
-          width: 22.5rem;
-          margin-top: 0.3rem;
-          margin-bottom: 1.1rem;
-        }
-        /* Bleed = half the banner width (11.25rem) so only the inner half reaches
-           into the text. Capped with max()/50vw so on narrower desktops the outer
-           edge never crosses the viewport (keeps an ~8px gutter); on wide screens
-           the full half hangs out. 383px ≈ the column's left offset + gutter. */
-        .dt-support-float--right {
-          float: right;
-          margin-left: var(--dt-bleed-gap, 1.75rem);
-          margin-right: max(-11.25rem, calc(383px - 50vw));
-        }
-        .dt-support-float--left {
-          float: left;
-          margin-right: var(--dt-bleed-gap, 1.75rem);
-          margin-left: max(-11.25rem, calc(383px - 50vw));
-        }
-        /* Compact = always stacked (brand / text / CTA) to fit the narrow width. */
-        .dt-support-banner--compact {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px;
-          padding: 14px 16px;
-        }
-        .dt-support-banner--compact .dt-support-brand { min-width: 0; }
-        .dt-support-banner--compact .dt-support-text { flex: 1 1 auto; width: 100%; font-size: 14px; }
-        .dt-support-banner--compact .dt-support-cta { width: 100%; }
-        @media (max-width: 768px) {
-          .dt-support-float,
-          .dt-support-float--right,
-          .dt-support-float--left {
-            float: none;
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-          }
-        }
-        @media (max-width: 640px) {
-          .dt-support-banner {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 14px;
-            padding: 20px 16px;
-          }
-          .dt-support-brand { min-width: 0; }
-          .dt-support-text { flex: 1 1 auto; width: 100%; }
-          .dt-support-cta { width: 100%; }
-        }
-      `}</style>
     </div>
   );
 }

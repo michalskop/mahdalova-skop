@@ -51,6 +51,100 @@
   text-decoration: none !important;
 }
 
+/* SupportBanner. Kept in globals (not an inline <style> in the component) so the
+   CSS text is never re-serialised by React — inline <style> escapes < > " '
+   differently on server vs client and caused repeated hydration mismatches. */
+.dt-support-outer {
+  width: 100%;
+}
+.dt-support-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 10px 14px;
+  background: #0d1438;
+  text-decoration: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+/* Full-width: logo stacked above the name. */
+.dt-support-brand {
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Bleeding (float) variant. --dt-support-w drives BOTH the width and the bleed:
+   only half the width reaches into the text, the outer half hangs in the margin,
+   capped by max()/50vw so the outer edge never crosses the viewport on narrower
+   desktops (383px is approx the reading column's left offset + an 8px gutter). */
+.dt-support-float {
+  --dt-support-w: 13rem;
+  width: var(--dt-support-w);
+  margin-top: 0.3rem;
+  margin-bottom: 1.1rem;
+}
+.dt-support-float--right {
+  float: right;
+  margin-left: var(--dt-bleed-gap, 1.75rem);
+  margin-right: max(calc(-0.5 * var(--dt-support-w)), calc(383px - 50vw));
+}
+.dt-support-float--left {
+  float: left;
+  margin-right: var(--dt-bleed-gap, 1.75rem);
+  margin-left: max(calc(-0.5 * var(--dt-support-w)), calc(383px - 50vw));
+}
+/* Compact = brand/text/CTA stacked; logo + name side by side to keep it short. */
+.dt-support-banner--compact {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+}
+.dt-support-banner--compact .dt-support-brand {
+  flex-direction: row;
+  gap: 8px;
+  min-width: 0;
+}
+.dt-support-banner--compact .dt-support-text {
+  flex: 1 1 auto;
+  width: 100%;
+  font-size: 14px;
+}
+.dt-support-banner--compact .dt-support-cta {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .dt-support-float,
+  .dt-support-float--right,
+  .dt-support-float--left {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .dt-support-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 16px;
+  }
+  .dt-support-brand {
+    min-width: 0;
+  }
+  .dt-support-text {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .dt-support-cta {
+    width: 100%;
+  }
+}
+
 /* Article body links (ArticleRenderer with withContainer=true).
    --article-link-color is set by ArticleRenderer when an article defines a
    custom text colour. Scoped to .article-content so the byline (author links
