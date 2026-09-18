@@ -1,7 +1,7 @@
 ---
 title: "Rukojmí se vrátili, Hamás zůstal ozbrojený. Proč příměří v Gaze neukončilo izraelsko-palestinský konflikt"
 date: "2026-08-10"
-author: "Kateřina Mahdalová & Michal Škop"
+author: "Kateřina Mahdalová"
 excerpt: "V říjnu 2025 se z Gazy vrátili poslední živí rukojmí, Hamás rozpustil svou vládu a zbraně z velké části utichly. Válka o Gazu tím ale neskončila. Zůstaly otevřené tytéž otázky, které konflikt živí desítky let: kdo bude Gazu spravovat, zda Hamás odzbrojí, kdy se stáhne izraelská armáda a jestli vůbec může vzniknout palestinský stát. Průvodce sporem od plánu OSN z roku 1947 po srpen 2026."
 coverImage: "images/gaza-2026-cover-datatimes.webp"
 coverFit: cover
