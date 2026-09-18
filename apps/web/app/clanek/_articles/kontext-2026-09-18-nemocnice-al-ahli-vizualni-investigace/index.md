@@ -92,4 +92,4 @@ Výsledek takové práce nemusí mít podobu jednoznačného verdiktu. Někdy bu
 
 Al-Ahli ukázala, že přiznaná nejistota důvěru neoslabuje. Mnohem více ji poškozuje jistota, kterou důkazy neunesou.
 
-<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "komentar-2025-01-22-dezinformace-jako-nikdy", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "komentar-2025-01-22-dezinformace-jako-nikdy", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze"]} heading="Doporučujeme" />
