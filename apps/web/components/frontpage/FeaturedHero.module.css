@@ -44,11 +44,6 @@
   -webkit-line-clamp: 3 !important;
 }
 
-.sideItem :global(.mantine-Badge-root) {
-  left: var(--mantine-spacing-md);
-  right: auto;
-}
-
 /* Patička bočních karet na dva řádky: datum nahoře vlevo (posunuté o kousek
    výš menším horním marginem), autor (avatar + celé jméno) na samostatném
    řádku pod ním, zarovnaný vpravo – využije prázdné místo pod datem. */

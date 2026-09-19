@@ -97,9 +97,4 @@
     overflow: visible !important;
   }
 
-  /* Štítek rubriky patří nad obrázek (vlevo nahoře), ne přes text vpravo. */
-  :is(.listCol, .grid) :global(.mantine-Badge-root) {
-    left: var(--mantine-spacing-md);
-    right: auto;
-  }
 }

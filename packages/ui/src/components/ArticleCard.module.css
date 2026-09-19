@@ -14,6 +14,8 @@
   right: rem(12px);
   pointer-events: none;
   z-index: 3;
+  /* Štítek rubriky je vždy sans-serif (jako nadpisy), ne serif body font. */
+  font-family: var(--mantine-font-family-headings);
 }
 
 .imageLink {
