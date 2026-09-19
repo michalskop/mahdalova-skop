@@ -58,14 +58,22 @@
  * Na tabletu/desktopu (≥ 768 px) zůstává svislá karta v mřížce beze změny.
  */
 @media (max-width: 767.98px) {
+  /* Homepage varianty (Výběr 2×2 i „standard") na telefonu taky do 1 sloupce
+     (přebíjí 2sloupcový zlom od 500 px), ať sedí vodorovné dlaždice. */
+  .featured,
+  .standard {
+    grid-template-columns: 1fr;
+  }
+
   /* Blokový tok místo Mantine flex-column, aby float fungoval; flow-root
-     zároveň obalí floatnutý obrázek i u velmi krátkého textu. */
-  .listCol :global(.mantine-Card-root) {
+     zároveň obalí floatnutý obrázek i u velmi krátkého textu. Platí pro
+     výpisy (.listCol) i homepage rubriky (.grid). */
+  :is(.listCol, .grid) :global(.mantine-Card-root) {
     display: flow-root;
   }
 
   /* Náhledový obrázek (Card.Section) doleva na ~45 % šířky karty. */
-  .listCol :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
+  :is(.listCol, .grid) :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
     float: left;
     width: 45%;
     margin: 0 var(--mantine-spacing-md) var(--mantine-spacing-xs) 0;
@@ -76,21 +84,21 @@
   /* Titulek (jediný přímý potomek <a>) lícuje s horní hranou obrázku a je
      v úzkém sloupci vedle obrázku menší a s těsnějším prokladem, ať se neláme
      do zbytečně mnoha řádků. */
-  .listCol :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
+  :is(.listCol, .grid) :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
     margin-top: 0;
     font-size: var(--mantine-font-size-md) !important;
     line-height: 1.25 !important;
   }
 
   /* Perex (jediný přímý potomek <p>) se ukáže celý – zrušit lineClamp. */
-  .listCol :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
+  :is(.listCol, .grid) :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
     -webkit-line-clamp: unset !important;
     display: block !important;
     overflow: visible !important;
   }
 
   /* Štítek rubriky patří nad obrázek (vlevo nahoře), ne přes text vpravo. */
-  .listCol :global(.mantine-Badge-root) {
+  :is(.listCol, .grid) :global(.mantine-Badge-root) {
     left: var(--mantine-spacing-md);
     right: auto;
   }
