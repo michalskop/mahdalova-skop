@@ -13,8 +13,9 @@
 /**
  * Dvojice znaků „regional indicator" (U+1F1E6–U+1F1FF), tj. jedna vlajka.
  * Používá se globálně, proto flag `g`.
+ * UTF-16 surrogate pairs keep the pattern compatible with the ES5 TypeScript target.
  */
-export const FLAG_EMOJI_REGEX = /[\u{1F1E6}-\u{1F1FF}]{2}/gu;
+export const FLAG_EMOJI_REGEX = /(?:\uD83C[\uDDE6-\uDDFF]){2}/g;
 
 /**
  * Převede vlaječkové emoji (dvojici regional indicatorů) na ISO 3166-1 alpha-2
