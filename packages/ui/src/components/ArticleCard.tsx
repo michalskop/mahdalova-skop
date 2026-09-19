@@ -182,7 +182,14 @@ export function ArticleCard({
           </div>
         </Center>
 
+        {/* Autor(ka) – jen jméno (bez avataru). Není to odkaz: celá karta je
+            natažený odkaz na článek, vnořený odkaz by s ním kolidoval. */}
         <Group gap={8} mr={0}>
+          {author ? (
+            <Text fz="sm" c="brandNavy.9" fw={500} lineClamp={1}>
+              {author}
+            </Text>
+          ) : null}
         </Group>
       </Group>
     </Card>
