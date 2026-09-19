@@ -1,0 +1,84 @@
+.block {
+  padding-inline: var(--mantine-spacing-md);
+}
+
+/* Půl na půl: vlevo lead, vpravo sloupec tří karet + Více. */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mantine-spacing-lg);
+  align-items: start;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mantine-spacing-md);
+}
+
+/*
+ * Kompaktní karty vpravo (Nerve styl): obrázek vlevo (~40 %), titulek + perex +
+ * autor obtékají vpravo a přelévají se pod obrázek. Reuse ArticleCard přes float
+ * – nezávisle na mobilním pravidle výpisů.
+ */
+.sideItem :global(.mantine-Card-root) {
+  display: flow-root;
+}
+
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
+  float: left;
+  width: 40%;
+  margin: 0 var(--mantine-spacing-md) var(--mantine-spacing-xs) 0;
+  border-radius: var(--mantine-radius-sm);
+  overflow: hidden;
+}
+
+.sideItem :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
+  margin-top: 0;
+  font-size: var(--mantine-font-size-md) !important;
+  line-height: 1.25 !important;
+}
+
+/* Kompaktní perex (3 řádky), ať tři karty + tlačítko drží výšku leadu. */
+.sideItem :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
+  -webkit-line-clamp: 3 !important;
+}
+
+.sideItem :global(.mantine-Badge-root) {
+  left: var(--mantine-spacing-md);
+  right: auto;
+}
+
+/* Tlačítko „Více" → výpis rubriky. */
+.more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: var(--mantine-color-body, #fff);
+  color: var(--mantine-color-brandNavy-9, #101432);
+  font-family: var(--mantine-font-family-headings, inherit);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.more:hover,
+.more:focus-visible {
+  transform: translateX(3px);
+}
+
+.moreArrow {
+  font-weight: 700;
+}
+
+/* Mobil / užší tablet: lead nad sebou, pak tři karty, pak Více. */
+@media (max-width: 767.98px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--mantine-spacing-md);
+  }
+}

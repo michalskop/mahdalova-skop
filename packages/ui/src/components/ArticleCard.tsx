@@ -10,6 +10,7 @@ import {
 } from '@mantine/core';
 import { useEffect, useRef, useState } from 'react';
 import classes from './ArticleCard.module.css';
+import { AuthorByline } from './AuthorByline';
 
 // Cílový poměr náhledu 5:4 a max. ořez, který ještě necháme „na plno“ (cover).
 // Když by ořez do 5:4 ukrojil víc než tolik, obrázek se ukáže celý (contain)
@@ -182,17 +183,11 @@ export function ArticleCard({
           </div>
         </Center>
 
-        {/* Autor(ka) – jen jméno (bez avataru). Není to odkaz: celá karta je
-            natažený odkaz na článek, vnořený odkaz by s ním kolidoval.
-            Žádný lineClamp: jméno je podstatná informace, u dvojice autorů se
-            proto NEOŘEZÁVÁ tečkami, ale zalomí se na vlastní řádek (obě jména
-            vždy celá, při jakékoli šířce i počtu sloupců). */}
-        <Group gap={8} mr={0} style={{ flex: '1 1 100%', justifyContent: 'flex-end', textAlign: 'right' }}>
-          {author ? (
-            <Text fz="sm" c="brandNavy.9" fw={500}>
-              {author}
-            </Text>
-          ) : null}
+        {/* Autor(ka): avatar(y) + jméno (sdílená AuthorByline). U dvojice se
+            jméno zkrátí na příjmení, ať se vejde na jeden řádek i v úzké kartě.
+            Není to odkaz – celá karta je natažený odkaz na článek. */}
+        <Group gap={8} mr={0} style={{ justifyContent: 'flex-end' }}>
+          <AuthorByline author={author} />
         </Group>
       </Group>
     </Card>

@@ -11,6 +11,7 @@ import SpecialsHero from '@/components/frontpage/SpecialsHero';
 // import SubscribeHH from '@/components/frontpage/SubscribeHH';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
+import { FeaturedHero } from '@/components/frontpage/FeaturedHero';
 import type { Metadata } from 'next';
 // import { ContactsBlock } from '@/components/common/ContactsBlock';
 
@@ -46,11 +47,12 @@ export default async function HomePage() {
 
       <SpecialsHero sectionLink="/specialy" />
 
-      <ArticlesSection
-        sectionTitle="Výběr"
-        sectionLink="/vyber"
+      {/* Hero blok (styl The Nerve): hlavní článek vlevo, 3 nejnovější vpravo
+          + „Více" → /vyber. Nahrazuje původní 2×2 sekci „Výběr", celá šířka. */}
+      <FeaturedHero
         articles={articles}
-        themeColor="#5e66d5" variant="featured" />
+        themeColor="#5e66d5"
+        moreLink="/vyber" />
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
 

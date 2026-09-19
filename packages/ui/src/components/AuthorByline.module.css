@@ -1,0 +1,51 @@
+.byline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.avatars {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.avatars img,
+.initials {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mantine-color-body, #fff);
+  flex: 0 0 auto;
+}
+
+/* Šedotónová fotka jako v byline u článků. */
+.avatars img {
+  filter: grayscale(1) contrast(1.03) brightness(0.99);
+  object-position: 50% 42%;
+}
+
+/* Víc autorů: avatary se lehce překrývají. */
+.avatars > :not(:first-child) {
+  margin-left: -8px;
+}
+
+.initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #bcbcb0;
+  color: #000;
+  font-family: var(--mantine-font-family-headings, inherit);
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.name {
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--mantine-color-brandNavy-9, #101432);
+  white-space: nowrap;
+}
