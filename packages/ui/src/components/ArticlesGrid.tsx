@@ -50,6 +50,7 @@ export function ArticlesGrid({ articles, articleBasePath, locale, adaptiveRows, 
         <Grid gutter="md">
           {articles.map((article) => (
             <Grid.Col
+              className={classes.listCol}
               style={{ containerType: 'inline-size' }}
               key={article.slug}
               span={{ base: 12, sm: 6, md: 4 }}
