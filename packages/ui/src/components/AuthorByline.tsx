@@ -65,7 +65,7 @@ export function AuthorByline({ author, size = 24, full = false }: AuthorBylinePr
           );
         })}
       </span>
-      <span className={classes.name}>{label}</span>
+      <span className={full ? `${classes.name} ${classes.nameFull}` : classes.name}>{label}</span>
     </span>
   );
 }

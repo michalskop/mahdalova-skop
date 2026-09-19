@@ -41,7 +41,9 @@ export function FeaturedHero({
         <div className={classes.side}>
           {side.map((article) => (
             <div key={article.slug} className={classes.sideItem}>
-              <ArticleCard {...article} articleBasePath={articleBasePath} locale={locale} />
+              {/* bylineFull: v bočních kartách je pro jméno samostatný řádek pod
+                  datem, tak ukaž celé jméno (i u dvojice), ne zkrácené příjmení. */}
+              <ArticleCard {...article} articleBasePath={articleBasePath} locale={locale} bylineFull />
             </div>
           ))}
 

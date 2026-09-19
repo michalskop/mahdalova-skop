@@ -51,6 +51,9 @@ interface ArticleCardProps {
    *  - 'auto' / neuvedeno – rozhodne se podle poměru (ořez do ~20 % → cover, jinak contain).
    */
   coverFit?: 'cover' | 'contain' | 'auto';
+  /** Když true, byline ukáže celé jméno i u dvojice autorů (pro hero boční
+   *  karty, kde je pro jméno samostatný řádek). Default = zkrácené příjmení. */
+  bylineFull?: boolean;
 }
 
 /** Přeloží token palety "scale.index" (nebo hex) na konkrétní hex barvu. */
@@ -81,6 +84,7 @@ export function ArticleCard({
   locale = 'cs-CZ',
   coverBg,
   coverFit = 'auto',
+  bylineFull,
 }: ArticleCardProps) {
   const theme = useMantineTheme();
   const coverBgColor = resolvePaletteColor(theme, coverBg, '#ffffff');
@@ -187,7 +191,7 @@ export function ArticleCard({
             jméno zkrátí na příjmení, ať se vejde na jeden řádek i v úzké kartě.
             Není to odkaz – celá karta je natažený odkaz na článek. */}
         <Group gap={8} mr={0} style={{ justifyContent: 'flex-end' }}>
-          <AuthorByline author={author} />
+          <AuthorByline author={author} full={bylineFull} />
         </Group>
       </Group>
     </Card>

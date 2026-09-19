@@ -49,3 +49,10 @@
   color: var(--mantine-color-brandNavy-9, #101432);
   white-space: nowrap;
 }
+
+/* „Full" režim: celé jméno i u více autorů; smí se zalomit (na vlastním řádku,
+   např. v bočních kartách hero bloku), zarovnané doprava. */
+.nameFull {
+  white-space: normal;
+  text-align: right;
+}
