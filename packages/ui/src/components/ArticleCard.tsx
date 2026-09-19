@@ -183,10 +183,13 @@ export function ArticleCard({
         </Center>
 
         {/* Autor(ka) – jen jméno (bez avataru). Není to odkaz: celá karta je
-            natažený odkaz na článek, vnořený odkaz by s ním kolidoval. */}
-        <Group gap={8} mr={0}>
+            natažený odkaz na článek, vnořený odkaz by s ním kolidoval.
+            Žádný lineClamp: jméno je podstatná informace, u dvojice autorů se
+            proto NEOŘEZÁVÁ tečkami, ale zalomí se na vlastní řádek (obě jména
+            vždy celá, při jakékoli šířce i počtu sloupců). */}
+        <Group gap={8} mr={0} style={{ flex: '1 1 100%', justifyContent: 'flex-end', textAlign: 'right' }}>
           {author ? (
-            <Text fz="sm" c="brandNavy.9" fw={500} lineClamp={1}>
+            <Text fz="sm" c="brandNavy.9" fw={500}>
               {author}
             </Text>
           ) : null}
