@@ -26,7 +26,7 @@ interface FlagProps
  * výjimečné případy, které určujeme ad hoc.
  *
  * Sady SVG musí být servírované z `${basePath}/${shape}/` (viz
- * apps/*/public/flags/rectangle a /circle). Kód země = název souboru.
+ * public/flags/rectangle a public/flags/circle v jednotlivých aplikacích). Kód země = název souboru.
  *
  * @example
  * <Flag code="de" />                           // obdélník, výška 20 px
