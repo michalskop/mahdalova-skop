@@ -49,10 +49,13 @@ export function ArticlesSection({
         align="flex-start"
         wrap="wrap"
       >
+        {/* Boční nadpis rubriky (Analýzy, Kontext, Výběr…) je čistě desktopový
+            prvek: na širokém displeji stojí vlevo jako 200px popiska, na
+            mobilu i tabletu (< 1024 px) se schová úplně (classes.sideTitle →
+            display:none). Platí pro homepage i výpisové stránky – proto vždy
+            stejná třída, žádný nadpis nad kartami na mobilu. */}
         <Stack
-          className={variant ? classes.sideTitle : undefined}
-          w={variant ? undefined : { base: '100%', md: 200 }}
-          mb={variant ? undefined : { base: 'xs', md: 0 }}
+          className={classes.sideTitle}
           pt={15}
           pl="md"
         >
@@ -79,7 +82,11 @@ export function ArticlesSection({
             </Title>
           </a>
         </Stack>
-        <Box flex={1} style={{ minWidth: 0 }}>
+        {/* Mřížka: na mobilu (kde je nadpis skrytý) zabere celý řádek
+            (flex-basis 100 %), na desktopu vyplní zbytek vedle 200px nadpisu.
+            Nikdy nepoužívat flex={1} (basis 0) samotné – vedle 100% titulku by
+            se scvrkla do 0 px místo zalomení pod něj. */}
+        <Box flex={{ base: '0 0 100%', md: 1 }} style={{ minWidth: 0 }}>
           <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} variant={variant} />
         </Box>
       </Group>
