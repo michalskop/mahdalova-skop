@@ -13,6 +13,12 @@
   top: var(--mantine-spacing-xs);
   right: rem(12px);
   pointer-events: none;
+  z-index: 3;
+}
+
+.imageLink {
+  position: relative;
+  z-index: 2;
 }
 
 .cardContainer {
