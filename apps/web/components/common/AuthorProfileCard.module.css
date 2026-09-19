@@ -1,0 +1,98 @@
+/* Person-karta autora/autorky nad výpisem jeho článků. Styl navazuje na
+   bylinu u článků (kruhová šedotónová fotka, navy text, kroužkové ikony). */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px var(--mantine-spacing-md);
+  background: var(--mantine-color-body, #fff);
+}
+
+.avatar {
+  flex: 0 0 auto;
+}
+
+.avatar img,
+.avatar span {
+  display: flex;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar img {
+  filter: grayscale(1) contrast(1.05) brightness(0.99);
+  object-position: 50% 42%;
+}
+
+.avatar span {
+  align-items: center;
+  justify-content: center;
+  background: #bcbcb0;
+  color: #000;
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.body {
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  color: var(--mantine-color-brandNavy-9, #101432);
+}
+
+.bio {
+  margin: 8px 0 0;
+  max-width: 62ch;
+  color: #3a3a3a;
+  line-height: 1.5;
+}
+
+.social {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e8e3d2;
+  background: #fff;
+  color: var(--mantine-color-brandNavy-9, #101432);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.social a:hover,
+.social a:focus-visible {
+  background: #101432;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .card {
+    gap: 16px;
+    padding: 20px var(--mantine-spacing-md);
+  }
+  .avatar img,
+  .avatar span {
+    width: 76px;
+    height: 76px;
+    font-size: 26px;
+  }
+  .name {
+    font-size: 23px;
+  }
+}

@@ -3,6 +3,7 @@ import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import AuthorProfileCard from '@/components/common/AuthorProfileCard';
 import { getAllAuthors } from '@/utils/authorServerUtils';
 import { normalizeAuthor, splitAuthors } from '@/utils/authorUtils';
 import { notFound } from 'next/navigation';
@@ -74,7 +75,10 @@ export default async function Page({ params }: PageProps) {
   return (
     <Container size="lg" maw="1200px" w="100%" p={0} m="0 auto">
       <>
-        <ArticlesSection sectionTitle={`${originalAuthor}`} articles={articles} themeColor="brandRoyalBlue.3" />
+        <AuthorProfileCard name={originalAuthor} />
+        {/* Jméno autora už nese person-karta výše; boční nadpis sekce proto
+            není jméno (na desktopu by se duplikovalo), ale neutrální „Články". */}
+        <ArticlesSection sectionTitle="Články" articles={articles} themeColor="brandRoyalBlue.3" />
         <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088' />
       </>
     </Container>
