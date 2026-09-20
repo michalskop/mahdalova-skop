@@ -3,8 +3,9 @@ title: "Dolly Parton: Vyrostla s otcem, který neuměl číst. Dětem pak poslal
 date: "2026-08-27"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Byla čtvrtá z dvanácti dětí a vyrostla v horské chalupě, kde se zpívalo a vyprávělo. Vydělala jmění a část ho vracela dětem, rodinám v nouzi a nemocným. Dolly Parton zemřela 25. srpna 2026 ve věku 80 let po krátké nemoci."
-coverImage: "images/dolly-parton-datatimes.cz.jpg"
-coverFit: contain
+coverImage: "images/cover-dolly-datatimes.jpg"
+coverFit: "contain"
+coverBg: "brandDeepRed.9"
 filter:
   - kontext
 tags:

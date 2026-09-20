@@ -3,10 +3,11 @@ title: "Kdo smí k ministrovi? Novinářku nepustí na úřad, anonyma v kukle p
 date: "2026-09-04"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Ministerstvo zahraničí odmítlo pustit akreditovanou novinářku Deníku N na tiskovou konferenci a její redakci označilo za „alternativní média a konspirační blogy“. O tři týdny později šel ministr Petr Macinka dobrovolně na rozhovor k maskovanému muži, jehož totožnost neznal – a ochranku před schůzkou tajil. Naše infožádosti na všechna ministerstva ukazují, jak moc se tím Macinka vymyká."
-coverImage: "images/cover.jpg"
-coverFit: cover
+coverImage: "images/cover-kdo-smi-datatimes.jpg"
+coverFit: "contain"
+coverBg: "brandYellow.9"
 filter: ["analýza"]
-tags: ["Přístup k novinářům", "Petr Macinka", "Motoristé", "svoboda médií", "akreditace novinářů", "Deník N", "Zdislava Pokorná", "Ministerstvo zahraničí", "Detektivní parta", "Thomas Paukner", "infožádost", "Ochranná služba", "bezpečnost"]
+tags: ["Svoboda tisku", "Přístup k novinářům", "Petr Macinka", "Motoristé", "svoboda médií", "akreditace novinářů", "Deník N", "Zdislava Pokorná", "Ministerstvo zahraničí", "Detektivní parta", "Thomas Paukner", "infožádost", "Ochranná služba", "bezpečnost"]
 promoted: 70
 ---
 

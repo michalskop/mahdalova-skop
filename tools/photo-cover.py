@@ -31,11 +31,28 @@ stáhnou do cache (jen tento zdroj funguje — jsdelivr vrací stuby):
 """
 import argparse
 import os
+import re
 import sys
 import tempfile
 import urllib.request
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+# --- Česká typografie: jednopísmenné předložky/spojky (k s v z o u a i) NIKDY
+#     nenechat na konci řádku. Zrcadlí packages/ui/src/lib/remark-czech-typography.js
+#     (nbsp U+00A0 se v PIL kreslí jako běžná mezera, ale wrap() na něm nezalomí).
+NBSP = " "
+_ONE_LETTER_RE = re.compile(r'(^|[\s(\[{„"\'–—])([ksvzouaiKSVZOUAI])[ \t]+')
+
+
+def fix_czech_typography(s):
+    if not isinstance(s, str) or not s:
+        return s
+    s = _ONE_LETTER_RE.sub(lambda m: m.group(1) + m.group(2) + NBSP, s)
+    s = _ONE_LETTER_RE.sub(lambda m: m.group(1) + m.group(2) + NBSP, s)
+    s = re.sub(r'([(\[{])[ \t]+', lambda m: m.group(1) + NBSP, s)
+    s = re.sub(r'[ \t]+([)\]}])', lambda m: NBSP + m.group(1), s)
+    return s
 
 # --- Paleta (ThemeProvider.tsx) — accent barva kickeru/linky --------------
 PALETTE = {
@@ -48,6 +65,18 @@ PALETTE = {
 }
 NAVY = (16, 20, 50)     # brandNavy[9] #101432 — pozadí/scrim
 PAPER = (248, 246, 240)  # background[2] #f8f6f0 — světlý text
+
+# Barva scrimu/pozadí (ztmavení fotky). Tmavé [9] odstíny z palety kvůli
+# čitelnosti bílého textu; volí se přes --scrim, do frontmatteru pak jde
+# odpovídající coverBg (např. --scrim deepred -> coverBg: "brandDeepRed.9").
+SCRIMS = {
+    "navy": (16, 20, 50),      # brandNavy[9]     #101432
+    "deepred": (67, 19, 32),   # brandDeepRed[9]  #431320
+    "amethyst": (53, 16, 64),  # brandAmethyst[9] #351040
+    "forest": (23, 32, 2),     # brandForestGreen[9] #172002
+    "chocolate": (36, 21, 11), # brandChocolate[9] #24150b
+    "teal": (2, 52, 64),       # brandTeal[9]     #023440
+}
 
 # IBM Plex TTF — funkční zdroj (raw.githubusercontent, packages/ cesta)
 FONT_BASE = "https://raw.githubusercontent.com/IBM/plex/master/packages"
@@ -86,17 +115,28 @@ def main():
     ap.add_argument("--eyebrow", default="", help="místo/subjekt nad headlinem")
     ap.add_argument("--headline", required=True, help="úderná (kratší) verze titulku")
     ap.add_argument("--accent", default="crimson", choices=sorted(PALETTE), help="barva kickeru/linky")
+    ap.add_argument("--scrim", default="navy", choices=sorted(SCRIMS),
+                    help="barva scrimu/pozadí (tmavý [9] odstín); do frontmatteru dej odpovídající coverBg")
     ap.add_argument("--crop-bias", type=float, default=0.42,
                     help="0=drž horní okraj, 1=spodní; kolik ubrat shora při cover-crop")
     ap.add_argument("--width", type=int, default=1200)
     ap.add_argument("--height", type=int, default=630)
     ap.add_argument("--quality", type=int, default=86)
+    ap.add_argument("--badge-lift", type=int, default=70,
+                    help="posun odznaku DataTimes.cz nahoru (px) kvůli titulku, který X/Twitter vykreslí přes spodní okraj náhledu")
     ap.add_argument("--logo", default=os.path.join(REPO_ROOT, "logo.png"),
                     help="prstenec DataTimes.cz (default: logo.png v rootu repa)")
     args = ap.parse_args()
 
+    # Česká typografie: sváž jednopísmenné předložky/spojky s dalším slovem,
+    # ať wrap() nikdy nezalomí za "k/s/v/z/o/u/a/i".
+    args.headline = fix_czech_typography(args.headline)
+    args.eyebrow = fix_czech_typography(args.eyebrow)
+    args.section = fix_czech_typography(args.section)
+
     W, H = args.width, args.height
     accent = PALETTE[args.accent]
+    scrim_col = SCRIMS[args.scrim]
     cache = ensure_fonts()
     serif_sb = lambda s: font(cache, "IBMPlexSerif-SemiBold.ttf", s)
     sans_sb = lambda s: font(cache, "IBMPlexSans-SemiBold.ttf", s)
@@ -114,7 +154,7 @@ def main():
         top = int((sh - new_h) * args.crop_bias)
         img = img.crop((0, top, sw, top + new_h))
     img = img.resize((W, H), Image.LANCZOS)
-    img = Image.blend(img, Image.new("RGB", (W, H), NAVY), 0.14)
+    img = Image.blend(img, Image.new("RGB", (W, H), scrim_col), 0.14)
 
     # 2) navy scrim: gradient zleva + odspodu
     scrim = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -127,7 +167,7 @@ def main():
             a_bot = int(150 * (by ** 1.6))
             a = min(240, max(a_left, a_bot))
             if a:
-                sd[x, y] = (*NAVY, a)
+                sd[x, y] = (*scrim_col, a)
     img = Image.alpha_composite(img.convert("RGBA"), scrim)
 
     def shadow_text(xy, text, fnt, fill, ls=0, sh_alpha=165, sh_off=2):
@@ -185,7 +225,7 @@ def main():
     if os.path.exists(args.logo):
         RH = 74
         ring = Image.open(args.logo).convert("RGBA").resize((RH, RH), Image.LANCZOS)
-        rx, ry = W - 40 - RH, H - 40 - RH
+        rx, ry = W - 40 - RH, H - 40 - RH - args.badge_lift
         img.alpha_composite(ring, (rx, ry))
         bf = sans_sb(34)
         btxt = "DataTimes.cz"

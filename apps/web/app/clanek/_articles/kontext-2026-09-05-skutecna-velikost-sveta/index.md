@@ -3,7 +3,9 @@ title: "Grónsko není větší než Afrika. Na většině map ale ano"
 date: "2026-09-05"
 author: "Kateřina Mahdalová"
 excerpt: "Grónsko se do Afriky vejde čtrnáctkrát. Na školní mapě přesto vypadají stejně velké. Žádná mapa světa neříká celou pravdu – každá projekce si vybírá, co zkreslí, a za pět století jich kartografové vytvořili desítky."
-coverImage: "images/mapove-projekce-datatimes-2026.webp"
+coverImage: "images/cover-skutecna-velikost-datatimes.jpg"
+coverFit: "contain"
+coverBg: "brandDeepRed.7"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "Mercator", "Equal Earth", "kartografie"]
 promoted: 0

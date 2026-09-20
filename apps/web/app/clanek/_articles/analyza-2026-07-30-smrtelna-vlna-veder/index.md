@@ -3,7 +3,9 @@ title: "Berlín a Madrid měly 39 °C. Úmrtnost ale vybočila jen v Německu"
 date: "2026-07-31"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Stejně vysoká teplota měla v evropských zemích rozdílné následky. Data ukazují, proč nestačí sledovat teploměr – a co z toho plyne pro Česko, které se na podobná vedra teprve připravuje."
-coverImage: "images/main.png"
+coverImage: "images/cover-smrtelna-vlna-datatimes.jpg"
+coverFit: "cover"
+coverBg: "brandNavy.9"
 filter: ["analýza", "klima"]
 tags: ["klimatická změna", "nadúmrtnost", "klima", "demografie"]
 promoted: 1

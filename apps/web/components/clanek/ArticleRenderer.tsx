@@ -3,11 +3,9 @@
 'use client';
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
-import Image from 'next/image';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MdxClient } from '@repo/ui/components/MdxClient';
 import type { MDXComponents } from 'mdx/types';
-import type { ImageProps } from 'next/image';
 import { CodeBlock } from './MediaBox';
 import { InfoBox } from './InfoBox'; // Import the InfoBox component
 import { Figure } from './Figure'; // Floated photo that bleeds out of the reading column
@@ -309,26 +307,21 @@ export function ArticleRenderer({
     
     img: (props) => {
       const imageSrc = props.src
-        ? props.src.startsWith('http') 
-          ? props.src 
+        ? props.src.startsWith('http')
+          ? props.src
           : `/clanek/_articles/${slug}/images/${props.src.replace('images/', '')}`
         : '';
 
-      const imageProps: ImageProps = {
-        src: imageSrc,
-        alt: props.alt || '',
-        width: props.width ? Number(props.width) : 800,
-        height: props.height ? Number(props.height) : 400,
-        style: { maxWidth: '100%', height: 'auto' }
-      };
-
+      // Nativní responzivní obrázek: drží PŘIROZENÝ poměr stran (žádné vnucené
+      // 800×400 → 2:1, které deformovalo čtvercové/na výšku obrázky). Export má
+      // images.unoptimized, takže next/image tu stejně nic nepřidával.
       return (
-        <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
-          <Image 
-            {...imageProps} 
-            alt={props.alt || ''} 
-          />
-        </div>
+        <img
+          src={imageSrc}
+          alt={props.alt || ''}
+          loading="lazy"
+          style={{ display: 'block', maxWidth: '100%', height: 'auto', margin: '24px auto' }}
+        />
       );
     },
 

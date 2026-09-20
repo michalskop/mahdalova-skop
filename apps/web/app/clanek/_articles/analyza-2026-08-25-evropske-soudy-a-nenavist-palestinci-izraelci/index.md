@@ -3,8 +3,9 @@ title: "Nenávist k Palestincům i k Izraelcům skončí u soudu. Rozhoduje, zda
 date: "2026-08-25"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Po 7. říjnu 2023 rozhodly evropské soudy desítky sporů o hranici mezi svobodou projevu a nenávistí. Trestají kolektivní nenávist k Palestincům i k Izraelcům – a hranici vedou podle jediného kritéria: zda výrok míří na stát a jeho politiku, nebo na lidi podle původu. Srovnání Rakouska, Německa, Švédska a Polska ukazuje, čím je český případ ministra Dvořáka výjimečný."
-coverImage: "images/evropske-soudy-nenavist-datatimes.jpg"
-coverFit: cover
+coverImage: "images/cover-evropske-soudy-datatimes.jpg"
+coverFit: "contain"
+coverBg: "brandNavy.9"
 filter: ["analýza"]
 tags: ["Justice", "Palestinci", "Izrael", "hate speech", "svoboda projevu", "Volksverhetzung", "Martin Dvořák", "soudy", "lidská práva", "Evropa"]
 promoted: 69
