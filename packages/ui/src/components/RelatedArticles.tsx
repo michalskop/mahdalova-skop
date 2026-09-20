@@ -5,7 +5,6 @@ import {
   Badge,
   Box,
   Group,
-  Image,
   SimpleGrid,
   Stack,
   Text,
@@ -13,9 +12,10 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import type { MantineSize } from '@mantine/core';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import type { Article } from '../lib/getArticles';
 import { fixCzechTypography } from '../lib/remark-czech-typography';
+import { fitFor, resolvePaletteColor } from '../lib/coverFit';
 import styles from './box.module.css';
 
 // Mirrors apps/web/utils/authorUtils.ts so the author-page slugs produced here
@@ -109,7 +109,7 @@ const PRESET_DEFAULTS: Record<Preset, PresetConfig> = {
   sidebar: {
     columns: 1,
     imagePosition: 'left',
-    cardBackground: 'white',
+    cardBackground: 'cream',
     titleSize: 'sm',
     showAuthor: false,
     showExcerpt: false,
@@ -125,7 +125,7 @@ const PRESET_DEFAULTS: Record<Preset, PresetConfig> = {
     imagePosition: 'top',
     cardBackground: 'white',
     titleSize: 'md',
-    showAuthor: true,
+    showAuthor: false,
     showExcerpt: true,
     showDate: true,
     showReadingTime: false,
@@ -226,18 +226,57 @@ function MiniCard({
   const filterColor = useFilterColor(article.filter);
   const filterLabel = getFilterLabel(article.filter);
 
-  const badges = (
+  // Náhled 5:4 se chová stejně jako na homepage (ArticleCard): u 'auto' se podle
+  // skutečného poměru obrázku rozhodne mezi ořezem (cover) a celým obrázkem +
+  // pruhem barvy (contain), ať se z náhledu neztratí text/důležitá část.
+  const coverBgColor = resolvePaletteColor(theme, article.coverBg, '#ffffff');
+  const [autoFit, setAutoFit] = useState<'cover' | 'contain'>('cover');
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  const coverFit = article.coverFit ?? 'auto';
+  const fit: 'cover' | 'contain' =
+    coverFit === 'cover' || coverFit === 'contain' ? coverFit : autoFit;
+  useEffect(() => {
+    if (coverFit !== 'auto') return;
+    const el = imgRef.current;
+    if (el && el.naturalWidth && el.naturalHeight) {
+      setAutoFit(fitFor(el.naturalWidth, el.naturalHeight));
+    }
+  }, [article.coverImage, coverFit]);
+
+  const hasImage = showImage && article.coverImage;
+
+  // Rubric badge (ANALÝZA/KONTEXT…) – an oval that sits in the top-right corner
+  // of the cover thumbnail, exactly like the homepage ArticleCard. When the card
+  // has no image, it falls back into the text block instead.
+  const formatBadge =
+    showFormatBadge && filterLabel ? (
+      <Badge
+        size="xs"
+        className={styles.relatedBadge}
+        style={{ backgroundColor: filterColor, color: '#fff' }}
+      >
+        {filterLabel}
+      </Badge>
+    ) : null;
+
+  const topicBadge =
+    showTopicBadge && article.topic ? (
+      <Badge size="xs" variant="outline" color="brandNavy.6" className={styles.relatedBadge}>
+        {article.topic}
+      </Badge>
+    ) : null;
+
+  // Overlay placed inside the (position: relative) image container.
+  const overlayBadge = formatBadge && (
+    <Box className={styles.relatedBadgeOverlay}>{formatBadge}</Box>
+  );
+
+  // In-text badges: topic always; the rubric badge only as a fallback when there
+  // is no cover image to overlay it on.
+  const textBadges = (topicBadge || (!hasImage && formatBadge)) && (
     <Group gap={4} wrap="wrap">
-      {showFormatBadge && filterLabel && (
-        <Badge size="xs" style={{ backgroundColor: filterColor, color: '#fff' }}>
-          {filterLabel}
-        </Badge>
-      )}
-      {showTopicBadge && article.topic && (
-        <Badge size="xs" variant="outline" color="brandNavy.6">
-          {article.topic}
-        </Badge>
-      )}
+      {!hasImage && formatBadge}
+      {topicBadge}
     </Group>
   );
 
@@ -300,7 +339,7 @@ function MiniCard({
 
   const textBlock = (
     <Stack gap={4} style={{ flex: 1 }}>
-      {badges}
+      {textBadges}
       {titleEl}
       {excerpt}
       {dateText}
@@ -308,8 +347,6 @@ function MiniCard({
       {embed}
     </Stack>
   );
-
-  const hasImage = showImage && article.coverImage;
 
   if (!hasImage || imagePosition === 'none') {
     return (
@@ -327,12 +364,29 @@ function MiniCard({
   if (imagePosition === 'top') {
     return (
       <Box className={styles.relatedCard} bg={bg} style={{ borderRadius: 6, overflow: 'hidden' }}>
-        <Box style={{ aspectRatio: '5 / 4', overflow: 'hidden' }}>
-          <Image
+        <Box
+          style={{
+            position: 'relative',
+            aspectRatio: '5 / 4',
+            overflow: 'hidden',
+            background: fit === 'contain' ? coverBgColor : undefined,
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            ref={imgRef}
             src={article.coverImage!}
             alt={article.title}
-            style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%' }}
+            loading="lazy"
+            onLoad={(e) => {
+              if (coverFit === 'auto') {
+                const el = e.currentTarget;
+                setAutoFit(fitFor(el.naturalWidth, el.naturalHeight));
+              }
+            }}
+            style={{ objectFit: fit, display: 'block', width: '100%', height: '100%' }}
           />
+          {overlayBadge}
         </Box>
         <Box p="sm">
           {textBlock}
@@ -341,16 +395,36 @@ function MiniCard({
     );
   }
 
-  // left or right – fixed-size container enforces uniform thumbnail dimensions
+  // left or right – fixed-width 5:4 container keeps thumbnails uniform. The cover
+  // uses the same fit logic as the homepage (contain + colour band instead of a
+  // crop that would cut text out of the image).
   const imgEl = (
     <Box
-      style={{ flexShrink: 0, width: 120, height: 90, overflow: 'hidden', borderRadius: 4 }}
+      style={{
+        position: 'relative',
+        flexShrink: 0,
+        width: 120,
+        aspectRatio: '5 / 4',
+        overflow: 'hidden',
+        borderRadius: 4,
+        background: fit === 'contain' ? coverBgColor : undefined,
+      }}
     >
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        ref={imgRef}
         src={article.coverImage!}
         alt={article.title}
-        style={{ objectFit: 'cover', width: '100%', height: '100%', display: 'block' }}
+        loading="lazy"
+        onLoad={(e) => {
+          if (coverFit === 'auto') {
+            const el = e.currentTarget;
+            setAutoFit(fitFor(el.naturalWidth, el.naturalHeight));
+          }
+        }}
+        style={{ objectFit: fit, width: '100%', height: '100%', display: 'block' }}
       />
+      {overlayBadge}
     </Box>
   );
 

@@ -11,19 +11,7 @@ import {
 import { useEffect, useRef, useState } from 'react';
 import classes from './ArticleCard.module.css';
 import { AuthorByline } from './AuthorByline';
-
-// Cílový poměr náhledu 5:4 a max. ořez, který ještě necháme „na plno“ (cover).
-// Když by ořez do 5:4 ukrojil víc než tolik, obrázek se ukáže celý (contain)
-// a okolo se doplní pruh barvy – ať se neztratí text/důležitá část obrázku.
-const TARGET_RATIO = 5 / 4;
-const MAX_COVER_CROP = 0.2;
-
-function fitFor(naturalW: number, naturalH: number): 'cover' | 'contain' {
-  if (!naturalW || !naturalH) return 'cover';
-  const r = naturalW / naturalH;
-  const crop = r > TARGET_RATIO ? 1 - TARGET_RATIO / r : 1 - r / TARGET_RATIO;
-  return crop > MAX_COVER_CROP ? 'contain' : 'cover';
-}
+import { fitFor, resolvePaletteColor } from '../lib/coverFit';
 
 interface ArticleCardProps {
   title: string;
@@ -54,21 +42,6 @@ interface ArticleCardProps {
   /** Když true, byline ukáže celé jméno i u dvojice autorů (pro hero boční
    *  karty, kde je pro jméno samostatný řádek). Default = zkrácené příjmení. */
   bylineFull?: boolean;
-}
-
-/** Přeloží token palety "scale.index" (nebo hex) na konkrétní hex barvu. */
-function resolvePaletteColor(
-  theme: ReturnType<typeof useMantineTheme>,
-  value: string | undefined,
-  fallback: string,
-): string {
-  if (!value) return fallback;
-  if (value.startsWith('#')) return value;
-  const [name, idxRaw] = value.split('.');
-  const scale = (theme.colors as Record<string, readonly string[]>)[name];
-  if (!scale) return fallback;
-  const idx = idxRaw ? Number.parseInt(idxRaw, 10) : 6;
-  return scale[idx] ?? scale[6] ?? fallback;
 }
 
 export function ArticleCard({

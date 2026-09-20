@@ -72,3 +72,23 @@
   position: relative;
   z-index: 2;
 }
+
+/* Rubric badge (the oval "ANALÝZA"/"KONTEXT" pill) always uses the sans-serif
+   headings font, never the serif body font – matches the homepage ArticleCard
+   badge. This is a site-wide rule: the oval tag is always sans. See
+   packages/ui/DESIGN.md → "Oval tag/badge font". */
+.relatedBadge {
+  font-family: var(--mantine-font-family-headings);
+}
+
+/* The rubric badge sits in the top-right corner of the cover thumbnail (like the
+   homepage), which also saves a whole line of vertical space in the card body.
+   The image container is position: relative; the badge is above the image and
+   below the card's stretched link, and never intercepts clicks. */
+.relatedBadgeOverlay {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  right: var(--mantine-spacing-xs);
+  z-index: 3;
+  pointer-events: none;
+}

@@ -52,6 +52,14 @@ Applied to every article via `ArticleRenderer` (both `/clanek/*` and
 titles (`ArticleCard`) are container-responsive (md→lg→xl by card width); H1/H2/H3
 use the 768px breakpoint above.
 
+**Oval tag/badge font — always sans-serif.** Every oval tag/badge (the rubric
+pill "ANALÝZA"/"KONTEXT", the homepage tag pill, `TagList`, etc.) uses the
+sans-serif headings font (`--mantine-font-family-headings`), **never** the serif
+body font — on `apps/web` a serif badge looks wrong at pill size. Mantine's
+`Badge` defaults to the body font, so this must be set explicitly (e.g.
+`.rating` in `ArticleCard.module.css`, `.relatedBadge` in `box.module.css`).
+This is a site-wide rule for any new badge.
+
 ---
 
 ### Bleed / vyčuhující prvky (`apps/web`)
@@ -239,15 +247,26 @@ Two roles from one component:
 The `cards` preset renders as a **framed section**: a cream `background.2`
 (`#f8f6f0`) container with `p="lg"` that underlays the cards. Each card is the
 lighter layer — `background.0` (white `#ffffff`) under the text/excerpt below
-the cover image. The heading keeps `brand.6` (crimson) — **no underline**. Other
-presets (`sidebar`, `list`) remain frameless. Card background is chosen by
+the cover image. The heading keeps `brand.6` (crimson) — **no underline**. The
+`sidebar` preset (the side "Napsali jsme" / "Více k tématu") is frameless but its
+card sits on a **slightly beige** `background.1` with rounded corners, so it
+reads as one card floated beside the text. Card background is chosen by
 `cardBackground` → `cardBgValue()` in `RelatedArticles.tsx`.
 
 **Card behaviour:** the whole card is a single link to the article (stretched
-link from the title) with a subtle hover zoom (`scale(1.02)`); the **author
-name(s)** are separate links to `/autor/<slug>` (dark, not bold), so they stay
-clickable above the stretched card link. Cover thumbnails use the same **5:4**
-ratio as the homepage cards.
+link from the title) with a subtle hover zoom (`scale(1.02)`). Cover thumbnails
+use the same **5:4** ratio and the **same fit logic** as the homepage
+`ArticleCard` — the shared `fitFor()` in `lib/coverFit.ts` shows the whole image
+with a `coverBg` colour band (`contain`) instead of a crop that would cut text
+out of the cover. This holds for both the top image (`cards`) and the horizontal
+side thumbnail (`sidebar`).
+
+**Badge = rubric pill on the cover.** The format/rubric badge (ANALÝZA/KONTEXT…)
+sits in the **top-right corner of the cover image** (`.relatedBadgeOverlay`),
+exactly like the homepage — this also saves a line of vertical space in the card
+body. It is sans-serif (`.relatedBadge`, see *Oval tag/badge font*). **No author
+line** in these boxes — the date is enough (authors clutter a recommendation
+list). Author names still render in the `list` preset only.
 
 ---
 
