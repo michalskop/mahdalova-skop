@@ -5,10 +5,10 @@ author: "Kateřina Mahdalová"
 excerpt: "Valné shromáždění OSN podpořilo přesnější a pestřejší zobrazování světa na mapách. Pro hlasovalo 164 zemí včetně Česka, jedinou zemí proti byly Spojené státy. Spor o mapy přitom není technický – je to spor o to, kdo určuje, co ve světě vypadá velké a důležité."
 coverImage: "images/cover-mapy-sveta-datatimes.jpg"
 coverFit: "contain"
-coverBg: "brandAmethyst.8"
+coverBg: "brandAmethyst.10"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "OSN", "Afrika", "Mercator", "Equal Earth", "USA", "geopolitika"]
-promoted: 90
+promoted: 10
 ---
 
 Valné shromáždění OSN v pátek 4. září přijalo rezoluci, která vyzývá k přesnějšímu a vyváženějšímu zobrazování světa na mapách. Návrh s názvem „Correct the Map“ (dokument A/80/L.104) předložilo Togo jménem africké skupiny; navazuje na kampaň podporovanou Africkou unií. Pro hlasovalo 164 zemí, šest se zdrželo a jedinou zemí, která byla proti, byly Spojené státy.
