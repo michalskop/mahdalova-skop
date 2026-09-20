@@ -31,6 +31,7 @@ interface ArticleCardProps {
   author: string;
   slug: string;
   coverImage: string | null;
+  instagramImage?: string | null;
   tags: string[];
   articleBasePath?: string;
   href?: string;
@@ -74,6 +75,7 @@ export function ArticleCard({
   author,
   slug,
   coverImage,
+  instagramImage,
   tags,
   articleBasePath = '/clanek',
   href,
@@ -143,6 +145,14 @@ export function ArticleCard({
           />
         </a>
       </Card.Section>
+
+      {instagramImage && (
+        <a href={instagramImage} target="_blank" rel="noopener noreferrer"
+          className={classes.instagramLink}
+          aria-label={`Instagram: ${title} – otevřít obrázek v nové kartě`}>
+          Instagram ↗
+        </a>
+      )}
 
       {tags.length > 0 && (
         <Badge

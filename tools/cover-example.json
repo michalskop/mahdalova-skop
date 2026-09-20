@@ -1,0 +1,15 @@
+{
+  "schema": "datatimes.cover/v1",
+  "state": {
+    "dark": false,
+    "accent": "#de1743",
+    "topLogo": "datatimes",
+    "motif": "none",
+    "content": {
+      "kicker": "DATATIMES · ANALÝZA",
+      "headline": "Co nám data říkají o proměnách světa",
+      "subtitle": "",
+      "claim": "Ukázka sazby coveru — nejde o publikovaný článek."
+    }
+  }
+}

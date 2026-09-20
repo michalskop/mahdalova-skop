@@ -6,6 +6,11 @@ async function copyImages() {
   const targetDir = path.join(process.cwd(), 'public/clanek/_articles');
 
   try {
+    await fs.ensureDir(path.join(process.cwd(), 'public/tools'));
+    await fs.copy(require.resolve('jszip/dist/jszip.min.js'), path.join(process.cwd(), 'public/tools/jszip.min.js'));
+    for (const name of ['poster-editor.html', 'cover-geometry.js', 'cover-text.js', 'cover-project.js']) {
+      await fs.copy(path.join(process.cwd(), '../../tools', name), path.join(process.cwd(), 'public/tools', name));
+    }
     // Ensure target directory exists
     await fs.ensureDir(targetDir);
     
@@ -36,6 +41,7 @@ async function copyImages() {
     console.log('Images copied successfully');
   } catch (error) {
     console.error('Error copying images:', error);
+    process.exitCode = 1;
   }
 }
 

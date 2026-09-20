@@ -21,6 +21,15 @@
   z-index: 2;
 }
 
+.instagramLink {
+  position: relative;
+  z-index: 2;
+  align-self: flex-end;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--mantine-color-brandNavy-9);
+}
+
 .cardContainer {
   container-type: inline-size;
 }
