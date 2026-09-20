@@ -3,7 +3,7 @@ title: "Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map by
 date: "2026-09-05"
 author: "Kateřina Mahdalová"
 excerpt: "Valné shromáždění OSN podpořilo přesnější a pestřejší zobrazování světa na mapách. Pro hlasovalo 164 zemí včetně Česka, jedinou zemí proti byly Spojené státy. Spor o mapy přitom není technický – je to spor o to, kdo určuje, co ve světě vypadá velké a důležité."
-coverImage: "images/cover-mapy-sveta-datatimes.jpg"
+coverImage: "images/cover-mapy-sveta-datatimes.png"
 coverFit: "contain"
 coverBg: "brandAmethyst.8"
 filter: ["kontext"]
