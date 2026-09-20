@@ -66,6 +66,7 @@ async function main() {
     recipe.state.content.tag = 'TEST TAG';
     recipe.state.textColors = { tag: [{ start: 0, end: 4, color: '#de1743' }] };
     await page.evaluate((p) => CoverProject.load(p), recipe);
+    assert.equal(await page.locator('#frame [data-obj="tag"] text').textContent(), 'TEST TAG');
     const saved = await page.evaluate(() => CoverProject.save());
     assert.deepEqual(saved.state.textColors, recipe.state.textColors);
     assert.deepEqual(saved.state.ov.portrait.tag, recipe.state.ov.portrait.tag);

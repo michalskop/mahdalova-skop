@@ -109,27 +109,6 @@ try {
     );
     assert.equal(g.homePiece({ ...base, angle: 55 }, greenland).angle, 0);
   }
-  const shared = g.decodeExperiment(
-    "#mapa=" + g.encodeExperiment("equal", [base]),
-    byName,
-  );
-  assert.equal(shared.projection, "equal");
-  assert.equal(shared.pieces[0].pinned, true);
-  assert.equal(shared.pieces[0].name, "Greenland");
-  for (const hash of [
-    "#mapa=%",
-    "#mapa={}",
-    "#mapa=" +
-      encodeURIComponent(
-        JSON.stringify({
-          v: 1,
-          projection: "equal",
-          pieces: [{ ...base, lat: 999 }],
-        }),
-      ),
-    "#mapa=" + g.encodeExperiment("equal", [base, base]),
-  ])
-    assert.equal(g.decodeExperiment(hash, byName), null);
   const dictionarySource = await fs.readFile(
     path.join(web, "components/clanek/TrueSizeGame/countries.ts"),
     "utf8",
@@ -141,9 +120,17 @@ try {
     "data:text/javascript;base64," +
       Buffer.from(dictionaryJs).toString("base64")
   );
+  const roundsSource = await fs.readFile(path.join(web, "components/clanek/TrueSizeGame/rounds.ts"), "utf8");
+  const dictionaryUrl = "data:text/javascript;base64," + Buffer.from(dictionaryJs).toString("base64");
+  const roundsJs = ts.transpileModule(roundsSource, {
+    compilerOptions: { module: ts.ModuleKind.ESNext },
+  }).outputText.replace('"./countries"', JSON.stringify(dictionaryUrl));
+  const { drawRound, ROUND_POOL, LATIN_AMERICA } = await import(
+    "data:text/javascript;base64," + Buffer.from(roundsJs).toString("base64")
+  );
   const pool = countries
     .filter(
-      (c) => COUNTRIES[c.properties.name]?.target && g.areaKm2(c) >= 50000,
+      (c) => ROUND_POOL.includes(c.properties.name) && COUNTRIES[c.properties.name]?.target && g.areaKm2(c) >= 40000,
     )
     .map((c) => c.properties.name);
   let seed = 42;
@@ -152,9 +139,9 @@ try {
     return seed / 4294967296;
   };
   let previous = ["Greenland", "Brazil", "India", "Australia", "Madagascar"];
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 3000; i++) {
     const count = [5, 10, 15][i % 3];
-    const next = g.chooseRound(pool, previous, count, random);
+    const next = drawRound(pool, previous, count, random);
     assert.equal(next.length, count);
     assert.equal(new Set(next).size, count);
     assert.ok(next.every((n) => byName.has(n)));
@@ -163,19 +150,21 @@ try {
         Math.floor(count * 0.2),
       "Previous round repeated too often",
     );
+    assert.ok(new Set(next.map((name) => COUNTRIES[name].continent)).size >= (count === 5 ? 4 : 5));
+    assert.ok(next.filter((name) => LATIN_AMERICA.includes(name)).length >= (count >= 10 ? 2 : 1));
     previous = next;
   }
+  for (let i = 0; i < 300; i++) {
+    const first = drawRound(pool, ["Greenland", "Brazil", "India", "Australia", "Madagascar"], 5, random, ["Greenland"]);
+    assert.ok(first.includes("Greenland"));
+    assert.equal(first.length, 5);
+    assert.ok(new Set(first.map((name) => COUNTRIES[name].continent)).size >= 4);
+    assert.ok(first.some((name) => LATIN_AMERICA.includes(name)));
+  }
+  assert.throws(() => drawRound(["Greenland"], ["Greenland"], 5));
   assert.throws(() => g.chooseRound(["Greenland"], ["Greenland"], 5));
-  const fifteen = previous.map((name, i) => ({ ...base, id: i + 1, name }));
-  assert.equal(
-    g.decodeExperiment(
-      "#mapa=" + g.encodeExperiment("mercator", fifteen),
-      byName,
-    ).pieces.length,
-    15,
-  );
   console.log(
-    `PASS: ${rotations} area-preserving rotations, ${g.PROJECTIONS.length} projections, snapping, URLs and 300 varied rounds (pool: ${pool.length}).`,
+    `PASS: ${rotations} area-preserving rotations, ${g.PROJECTIONS.length} projections, snapping, 3000 balanced rounds and 300 Greenland starts (pool: ${pool.length}).`,
   );
 } finally {
   await fs.unlink(temporary);

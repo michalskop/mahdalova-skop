@@ -7,9 +7,9 @@ import { useProjectionMorph } from "./useProjectionMorph";
 import { feature, mergeArcs } from "topojson-client";
 import type { FeatureCollection } from "geojson";
 import { COUNTRIES } from "./countries";
+import { drawRound, ROUND_POOL } from "./rounds";
 import {
   areaKm2,
-  chooseRound,
   clampLat,
   chooseColors,
   HEIGHT,
@@ -42,82 +42,7 @@ type Drag = {
   moved: boolean;
 };
 const STARTERS = ["Greenland", "Brazil", "India", "Australia", "Madagascar"];
-const CURATED_COUNTRIES = [
-  // Europe
-  "Germany",
-  "Ukraine",
-  "Poland",
-  "Spain",
-  "France",
-  "Italy",
-  "United Kingdom",
-  "Norway",
-  "Sweden",
-  "Finland",
-  "Romania",
-  "Greece",
-  "Czechia",
-  // North America
-  "Greenland",
-  "Canada",
-  "United States of America",
-  "Mexico",
-  // Latin America
-  "Brazil",
-  "Argentina",
-  "Peru",
-  "Bolivia",
-  "Colombia",
-  "Chile",
-  "Venezuela",
-  "Ecuador",
-  "Paraguay",
-  // Asia
-  "China",
-  "India",
-  "Japan",
-  "Russia",
-  "Iran",
-  "Iraq",
-  "Afghanistan",
-  "Pakistan",
-  "Mongolia",
-  "Kazakhstan",
-  "Saudi Arabia",
-  "Turkey",
-  "Thailand",
-  "Vietnam",
-  "Myanmar",
-  "Indonesia",
-  "Malaysia",
-  "Philippines",
-  // Oceania
-  "Australia",
-  "New Zealand",
-  "Papua New Guinea",
-  // Africa
-  "Morocco",
-  "Algeria",
-  "Tunisia",
-  "Libya",
-  "Egypt",
-  "Niger",
-  "Chad",
-  "Sudan",
-  "Ethiopia",
-  "Kenya",
-  "Mali",
-  "Mauritania",
-  "Namibia",
-  "Mozambique",
-  "Zambia",
-  "Madagascar",
-  "South Africa",
-  "Angola",
-  "Nigeria",
-  "Somalia",
-  "Dem. Rep. Congo",
-];
+
 const START_POSITIONS: LonLat[] = [
   [-115, 24],
   [-35, -12],
@@ -266,70 +191,6 @@ const projectionInfo: Record<ProjectionId, { text: string; href: string }> = {
     href: "https://media.nationalgeographic.org/assets/reference/assets/selecting-map-projection-4.pdf",
   },
 };
-
-function shuffle<T>(list: T[]): T[] {
-  const a = list.slice();
-  for (let i = a.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-const LATAM = new Set([
-  "Mexico",
-  "Brazil",
-  "Argentina",
-  "Peru",
-  "Bolivia",
-  "Colombia",
-  "Chile",
-  "Venezuela",
-  "Ecuador",
-  "Paraguay",
-  "Uruguay",
-]);
-
-// Draw a varied round: base random pick, then guarantee at least three continents
-// and (in the 10/15 rounds) at least two Latin-American countries.
-function chooseNames(
-  pool: string[],
-  previous: string[],
-  count: 5 | 10 | 15,
-): string[] {
-  const names = chooseRound(pool, previous, count);
-  const continents = () =>
-    new Set(names.map((n) => COUNTRIES[n]?.continent).filter(Boolean));
-  if (continents().size < Math.min(3, count)) {
-    const spare = shuffle(pool.filter((n) => !names.includes(n)));
-    const seen = new Set<string>();
-    for (let i = 0; i < names.length; i += 1) {
-      const cont = COUNTRIES[names[i]]?.continent || "";
-      if (!seen.has(cont)) {
-        seen.add(cont);
-        continue;
-      }
-      const swapAt = spare.findIndex(
-        (n) => !seen.has(COUNTRIES[n]?.continent || ""),
-      );
-      if (swapAt >= 0) {
-        const [s] = spare.splice(swapAt, 1);
-        names[i] = s;
-        seen.add(COUNTRIES[s]?.continent || "");
-      }
-      if (continents().size >= Math.min(3, count)) break;
-    }
-  }
-  if (count >= 10) {
-    const add = shuffle(pool.filter((n) => LATAM.has(n) && !names.includes(n)));
-    for (let i = names.length - 1; i >= 0 && add.length; i -= 1) {
-      if (names.filter((n) => LATAM.has(n)).length >= 2) break;
-      if (LATAM.has(names[i])) continue;
-      names[i] = add.shift()!;
-    }
-  }
-  return names;
-}
 
 // Move Crimea from Russia to Ukraine at the TopoJSON level and dissolve the shared
 // border, so Ukraine renders as one seamless shape (incl. Crimea) everywhere.
@@ -597,13 +458,12 @@ export default function TrueSizeGame() {
         const map = new Map(data.map((c) => [c.properties.name, c]));
         setCountries(data);
         // A fresh, varied set of countries on every reload.
-        const pool = CURATED_COUNTRIES.filter((n) => {
+        const pool = ROUND_POOL.filter((n) => {
           const c = map.get(n);
           return c && COUNTRIES[n]?.target && areaKm2(c) >= 40000;
         });
-        const chosen = chooseNames(pool, previousRound.current, 5);
-        // Every fresh page load starts with the iconic Greenland comparison.
-        const names = ["Greenland", ...chosen.filter((name) => name !== "Greenland")].slice(0, 5);
+        // Include Greenland without breaking the diversity or repetition rules.
+        const names = drawRound(pool, previousRound.current, 5, Math.random, ["Greenland"]);
         previousRound.current = names;
         const colors = chooseColors(names.length);
         const initial: GamePiece[] = names.map((name, i) => ({
@@ -909,11 +769,11 @@ export default function TrueSizeGame() {
     setProjectionId("mercator");
     setProjectionTouched(true);
     setProjectionText("");
-    const pool = CURATED_COUNTRIES.filter((name) => {
+    const pool = ROUND_POOL.filter((name) => {
       const country = byName.get(name);
       return country && COUNTRIES[name]?.target && areaKm2(country) >= 40000;
     });
-    const names = chooseNames(pool, previousRound.current, count);
+    const names = drawRound(pool, previousRound.current, count);
     previousRound.current = names;
     const colors = chooseColors(names.length);
     const additions: GamePiece[] = names.map((name, i) => ({

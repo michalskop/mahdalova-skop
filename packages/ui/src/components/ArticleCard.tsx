@@ -92,10 +92,7 @@ export function ArticleCard({
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
-        {/* Náhled 5:4. Podle `fit`: buď se obrázek ořízne (cover), nebo se ukáže
-            celý a okolo se doplní pruh barvy coverBgColor (contain).
-            Vlastní odkaz nad překryvem titulku zachová nativní nabídku obrázku.
-            Klávesnice používá odkaz titulku, aby karta neměla dva tabulátorové kroky. */}
+        {/* Keep the whole cover when cropping would hide important content. The image link preserves the native image menu; keyboard navigation uses the title link. */}
         <a
           {...linkProps}
           className={classes.imageLink}
@@ -138,13 +135,7 @@ export function ArticleCard({
         </a>
       </Card.Section>
 
-      {instagramImage && (
-        <a href={instagramImage} target="_blank" rel="noopener noreferrer"
-          className={classes.instagramLink}
-          aria-label={`Instagram: ${title} – otevřít obrázek v nové kartě`}>
-          Instagram ↗
-        </a>
-      )}
+
 
 
       <Text
@@ -174,11 +165,17 @@ export function ArticleCard({
           </div>
         </Center>
 
-        {/* Autor(ka): avatar(y) + jméno (sdílená AuthorByline). U dvojice se
-            jméno zkrátí na příjmení, ať se vejde na jeden řádek i v úzké kartě.
-            Není to odkaz – celá karta je natažený odkaz na článek. */}
+        {/* Keep the optional social export inside the footer so horizontal cards
+            retain their three-row layout. It sits above the stretched article link. */}
         <Group gap={8} mr={0} style={{ justifyContent: 'flex-end' }}>
           <AuthorByline author={author} full={bylineFull} />
+          {instagramImage && (
+            <a href={instagramImage} target="_blank" rel="noopener noreferrer"
+              className={classes.instagramLink}
+              aria-label={`Instagram: ${title} – otevřít obrázek v nové kartě`}>
+              Instagram ↗
+            </a>
+          )}
         </Group>
       </Group>
     </Card>

@@ -51,8 +51,10 @@ function editorialLayout(T) {
       halo: false,
     };
   };
-  T.kicker = text("kicker", top, 26 * scale, og ? 35 : 70 * scale, 0.06);
-  const headingTop = top + (og ? 40 : 82 * scale),
+  T.tag = { ...text("tag", top, og ? 14 : 20 * scale, og ? 22 : 35 * scale, 0.06), color: T.kicker.color };
+  const kickerTop = top + (state.content.tag.trim() ? (og ? 26 : 45 * scale) : 0);
+  T.kicker = text("kicker", kickerTop, 26 * scale, og ? 35 : 70 * scale, 0.06);
+  const headingTop = kickerTop + (og ? 40 : 82 * scale),
     headingHeight = og ? 103 : F.h * 0.21;
   T.headline = text(
     "headline",
