@@ -3,8 +3,9 @@ title: "Paul Steiger: Jsi fakt dobrá! Spoj se s těmi nejlepšími"
 date: "2026-08-02"
 author: "Kateřina Mahdalová"
 excerpt: "V nočním Lisabonu jsem pomohla staršímu pánovi s holí po schodech – a ukázalo se, že šestnáct let vedl The Wall Street Journal a založil ProPublica. Vzpomínka na Paula Steigera a na to, proč objektivita neznamená stát uprostřed."
-coverImage: "images/paul-steiger-pro-publica-datatimes.webp"
-coverFit: cover
+coverImage: "images/cover-paul-steiger-datatimes.webp"
+coverFit: contain
+coverBg: "brandTeal.5"
 filter: ["kontext"]
 tags: ["Profil: novinářské principy", "profil", "žurnalistika", "média", "ProPublica", "The Wall Street Journal", "objektivita", "Daniel Pearl", "USA"]
 promoted: 0
