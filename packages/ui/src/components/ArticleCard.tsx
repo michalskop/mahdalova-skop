@@ -112,11 +112,12 @@ export function ArticleCard({
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
-        {/* Náhled 5:4. Podle `fit`: buď se obrázek ořízne (cover), nebo se ukáže
-            celý a okolo se doplní pruh barvy coverBgColor (contain).
-            Obrázek NENÍ samostatný odkaz – proklik zajišťuje natažený odkaz
-            z titulku (.title::after), takže je klikatelná celá karta. */}
-        <div
+        {/* Keep the whole cover when cropping would hide important content. The image link preserves the native image menu; keyboard navigation uses the title link. */}
+        <a
+          {...linkProps}
+          className={classes.imageLink}
+          tabIndex={-1}
+          aria-hidden="true"
           style={{
             display: 'block',
             aspectRatio: '5 / 4',
@@ -137,7 +138,7 @@ export function ArticleCard({
             }}
             style={{ width: '100%', height: '100%', objectFit: fit, display: 'block' }}
           />
-        </div>
+        </a>
       </Card.Section>
 
       {tags.length > 0 && (
