@@ -15,7 +15,7 @@ Interactive tools to help voters compare their views with political parties.
 ### Election Predictions
 Real-time predictions and forecasts for Czech parliamentary elections.
 - Prediction evolution: https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb
-- 40 days to elections: https://www.mahdalova-skop.cz/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem
+- 40 days to elections: https://www.mahdalova-skop.cz/clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem
 
 ### Seat Projections
 Analysis of coalition possibilities and parliamentary seat distributions.

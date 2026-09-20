@@ -1,7 +1,7 @@
 # Vlákno na X — Švédské volby 2026
 
 Vygenerováno podle `tools/social-cards/prompts/x-thread.md` k článku
-`kontext-2026-09-13-svedske-volby-tesny-souboj-bloku`. Zdroje obrázků:
+`volby-svedsko-2026-09-13-tesny-souboj-bloku`. Zdroje obrázků:
 
 - Mapa (`images/main.png`) — hotový branded obrázek z jiného nástroje, mimo
   pipeline `generate.mjs`.
@@ -21,7 +21,7 @@ Vygenerováno podle `tools/social-cards/prompts/x-thread.md` k článku
 
 1a/ (reply na 1/) Víc v článku – srovnání pěti posledních průzkumů,
    historie SD ve vládě i to, co se změnilo od voleb 2022:
-   LINK: https://www.mahdalova-skop.cz/clanek/kontext-2026-09-13-svedske-volby-tesny-souboj-bloku
+   LINK: https://www.mahdalova-skop.cz/clanek/volby-svedsko-2026-09-13-tesny-souboj-bloku
 
 2/ Dnešní volby jsou v mnohém odvetou duelu z roku 2022: znovu proti sobě
    stojí premiér Ulf Kristersson (blok Tidö) a Magdalena Andersson

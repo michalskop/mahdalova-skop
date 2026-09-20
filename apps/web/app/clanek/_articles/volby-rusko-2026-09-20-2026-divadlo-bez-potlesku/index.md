@@ -7,7 +7,7 @@ coverImage: "images/rusko-volby-2026-divadlo-bez-potlesku-datatimes.webp"
 coverFit: contain
 coverBg: "brandChocolate.9"
 filter: ["analýza"]
-tags: ["Rusko", "ruské volby 2026", "Vladimir Putin", "Jednotné Rusko", "Duma", "Kreml", "válka na Ukrajině", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "autoritářství"]
+tags: ["Rusko", "ruské volby 2026", "Vladimir Putin", "Jednotné Rusko", "Duma", "Kreml", "válka na Ukrajině", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "autoritářství", "volby"]
 promoted: 76
 ---
 
@@ -31,7 +31,7 @@ Pro Kreml představovaly volby ideální prověrku toho, jak spolehlivě funguj�
 
 ## Parlamentní volby Rusko 2026 v datech
 
-<RelatedArticles preset="sidebar" slugs={["analyza-2026-09-20-rusko-volby-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="Napsali jsme" />
 
 Jak přesně režim předepsané výsledky vyrábí – od vyřazení protiválečného Jabloka přes centrálně nařízené kvóty 47–53 procent až po neprůhledné elektronické hlasování –, jsme podrobně rozebrali v samostatném textu. Následující přehled shrnuje, jak se zářijové hlasování liší od posledních voleb do Státní dumy v roce 2021 – od předepsaných výsledků přes rozšíření elektronického hlasování až po rostoucí rozpočet celé operace.
 

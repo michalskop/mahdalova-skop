@@ -1,11 +1,11 @@
 ---
 title: Vývoj predikce výsledku voleb
-date: "3025-12-12"
+date: "2025-10-07"
 author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Predikce výsledků voleb ukazovala velmi přesně výsledky do hodiny po konci voleb."
 coverImage: "images/vyvoj_ano.webp"
 filter: ["analýza"]
-tags: ["volby 2025", "predikce", "sněmovna", "mandáty", "data"]
+tags: ["volby 2025", "predikce", "sněmovna", "mandáty", "data", "volby"]
 promoted: 60
 ---
 

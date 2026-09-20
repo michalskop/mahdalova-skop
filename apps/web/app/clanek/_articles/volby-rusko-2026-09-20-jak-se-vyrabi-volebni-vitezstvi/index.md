@@ -7,11 +7,11 @@ coverImage: "images/rusko-volby-jak-se-vyrabi-vitezstvi-datatimes.jpg"
 coverFit: contain
 coverBg: "brandChocolate.9"
 filter: ["analýza"]
-tags: ["Rusko", "ruské volby 2026", "Jednotné Rusko", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "Kreml", "Duma", "válka na Ukrajině"]
+tags: ["Rusko", "ruské volby 2026", "Jednotné Rusko", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "Kreml", "Duma", "válka na Ukrajině", "volby"]
 promoted: 75
 ---
 
-<RelatedArticles preset="sidebar" slugs={["analyza-2026-09-20-rusko-volby-2026-divadlo-bez-potlesku"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku"]} position="right" heading="Napsali jsme" />
 
 Trauma z prosince 2011, kdy pokles vládní podpory a neohrabané volební machinace vyhnaly na moskevské [Bolotné náměstí](https://en.wikipedia.org/wiki/Bolotnaya_Square_case) statisíce protestujících, zůstává pro Kreml trvalým varováním. Právě od té doby ruské úřady systematicky budovaly mašinérii přísných kvót, administrativního inženýrství a pečlivé filtrace protikandidátů. Letošní hlasování je vyvrcholením této dlouholeté praxe, navíc umocněné válečnou cenzurou.
 
@@ -37,4 +37,4 @@ Tam, kde dříve režimu stačilo svážet zaměstnance k urnám podnikovými au
 
 Spolu s digitální kontrolou přišel bezprecedentní nátlak na pracovištích; například učitelé v Jakutsku dostali přímý příkaz nejen sami odvolit, ale každé dvě hodiny hlásit vedení škol jmenný seznam rodičů svých žáků, kteří již odevzdali hlas. Aby systém nikdo nenarušoval, úřady z volebních místností pod vykonstruovanými záminkami provokací či údajného podplácení vykázaly téměř 1 300 nezávislých pozorovatelů KPRF i vyřazeného Jabloka.
 
-<RelatedArticles slugs={["analyza-2026-09-20-rusko-volby-2026-divadlo-bez-potlesku", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou"]} heading="Doporučujeme" />

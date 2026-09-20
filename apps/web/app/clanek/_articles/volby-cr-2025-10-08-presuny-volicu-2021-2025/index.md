@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Podrobná analýza přesunů voličů."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
 filter: ["analýza"]
-tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference"]
+tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference", "volby"]
 promoted: 50
 ---
 

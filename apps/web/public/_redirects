@@ -43,3 +43,23 @@
 
 # Skutečná velikost světa – změna slugu (2026-09-08)
 /clanek/skutecna-velikost-sveta   /clanek/kontext-2026-09-05-skutecna-velikost-sveta   301
+
+# Volební články – sjednocení URL (2026-09-20). Staré sdílené odkazy i social náhledy zůstávají funkční.
+/clanek/analyza-2026-09-20-rusko-volby-2026-divadlo-bez-potlesku /clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku 301
+/clanek/analyza-2026-09-20-rusko-volby-2026-divadlo-bez-potlesku/ /clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku 301
+/clanek/_articles/analyza-2026-09-20-rusko-volby-2026-divadlo-bez-potlesku/* /clanek/_articles/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku/:splat 301
+/clanek/analyza-2026-09-20-rusko-volby-jak-se-vyrabi-volebni-vitezstvi /clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi 301
+/clanek/analyza-2026-09-20-rusko-volby-jak-se-vyrabi-volebni-vitezstvi/ /clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi 301
+/clanek/_articles/analyza-2026-09-20-rusko-volby-jak-se-vyrabi-volebni-vitezstvi/* /clanek/_articles/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi/:splat 301
+/clanek/kontext-2026-09-13-svedske-volby-tesny-souboj-bloku /clanek/volby-svedsko-2026-09-13-tesny-souboj-bloku 301
+/clanek/kontext-2026-09-13-svedske-volby-tesny-souboj-bloku/ /clanek/volby-svedsko-2026-09-13-tesny-souboj-bloku 301
+/clanek/_articles/kontext-2026-09-13-svedske-volby-tesny-souboj-bloku/* /clanek/_articles/volby-svedsko-2026-09-13-tesny-souboj-bloku/:splat 301
+/clanek/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu /clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu 301
+/clanek/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu/ /clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu 301
+/clanek/_articles/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu/* /clanek/_articles/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu/:splat 301
+/clanek/kontext-2025-08-29-volby-2025-skryte-koalice-podcast /clanek/volby-cr-2025-08-29-skryte-koalice-podcast 301
+/clanek/kontext-2025-08-29-volby-2025-skryte-koalice-podcast/ /clanek/volby-cr-2025-08-29-skryte-koalice-podcast 301
+/clanek/_articles/kontext-2025-08-29-volby-2025-skryte-koalice-podcast/* /clanek/_articles/volby-cr-2025-08-29-skryte-koalice-podcast/:splat 301
+/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem /clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem 301
+/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/ /clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem 301
+/clanek/_articles/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/* /clanek/_articles/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/:splat 301

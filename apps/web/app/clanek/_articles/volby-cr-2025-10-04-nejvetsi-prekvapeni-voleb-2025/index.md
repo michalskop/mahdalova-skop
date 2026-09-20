@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Mapa posunů mezi volbami ukazuje téměř plošný pohyb k opozici. Výjimkou je Brno, kde vládní koalice výrazně posílila – a kde sídlí předseda vlády."
 coverImage: "images/volby-2025-mapa-vysledky-orp-mahdalova-skop.svg"
 filter: ["analýza"]
-tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ORP", "Petr Fiala"]
+tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ORP", "Petr Fiala", "volby"]
 promoted: 50
 ---
 

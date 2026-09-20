@@ -9,7 +9,7 @@ jsou z Wikimedia Commons (CC BY), kredit je u nich v článku.
 1/ Švédsko dnes od 8:00 do 20:00 volí nový Riksdag – 349 mandátů na čtyři
    roky. Nejtěsnější z posledních průzkumů (Ipsos, 7.–10. 9.) dává rozdíl
    mezi opozicí a vládou jediný mandát: 175 ku 174.
-   https://www.mahdalova-skop.cz/clanek/kontext-2026-09-13-svedske-volby-tesny-souboj-bloku
+   https://www.mahdalova-skop.cz/clanek/volby-svedsko-2026-09-13-tesny-souboj-bloku
    IMAGE: images/main.png
    ALT: Reliéfní mapa Švédska se Stockholmem, Uppsalou, Göteborgem a
    Malmö, titulek „Sweden – Elections 13.09.2026", branding DataTimes.cz.

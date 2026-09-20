@@ -25,7 +25,7 @@ node tools/social-cards/generate.mjs <slug-clanku> [formát ...]
 Příklad (skutečný, používaný článek):
 
 ```bash
-node tools/social-cards/generate.mjs analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu
+node tools/social-cards/generate.mjs volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu
 ```
 
 Pokud Chromium není na obvyklé cestě, nastav
@@ -81,7 +81,7 @@ generované za běhu.
   `docs/redakcni-styl/DISTRIBUCNI_FORMATY.md` a tabulka formátů níže).
 
 Živý příklad se třemi kartami je přímo u tohoto článku:
-`apps/web/app/clanek/_articles/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu/social/social.json`.
+`apps/web/app/clanek/_articles/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu/social/social.json`.
 
 ## Formáty (`presets.mjs`)
 

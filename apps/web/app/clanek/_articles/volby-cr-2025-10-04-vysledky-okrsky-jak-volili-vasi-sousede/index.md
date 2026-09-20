@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová, Michal Škop"
 excerpt: "Interaktivní mapa ukazuje výsledky hlasování v každém volebním okrsku v Česku. Sledujte, jak se postupně sčítají hlasy a které strany vedou v jednotlivých regionech."
 coverImage: "images/volby-2025-mapa-vysledky-okrsky-mahdalova-skop-lupa.svg"
 filter: ["analýza"]
-tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "okrsky"]
+tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "okrsky", "volby"]
 promoted: 55
 ---
 
