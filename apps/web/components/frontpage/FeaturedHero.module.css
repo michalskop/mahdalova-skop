@@ -60,10 +60,14 @@
 
 /* „Více" → výpis rubriky. Stejný styl jako původní boční nadpis rubriky
    („Výběr"): velký sans nadpis + vlnovková šipka, zarovnané doleva. */
+.moreRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--mantine-spacing-md);
+}
+
 .more {
-  align-self: flex-start;
   display: inline-flex;
-  margin-top: 2px;
   text-decoration: none;
 }
 

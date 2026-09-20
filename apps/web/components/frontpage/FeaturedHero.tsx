@@ -49,16 +49,20 @@ export function FeaturedHero({
               <ArticleCard {...article} articleBasePath={articleBasePath} locale={locale} bylineFull />
             </div>
           ))}
-
-          {/* „Více" jako původní nadpis rubriky: velký sans nadpis + vlnovková
-              šipka, zarovnané doleva, odkaz na výpis rubriky. */}
-          <a className={classes.more} href={moreLink}>
-            <Title order={2} c={light} className={classes.moreTitle}>
-              {moreLabel}
-              <Arrow size={80} color={light} />
-            </Title>
-          </a>
         </div>
+      </div>
+
+      {/* „Více" jako původní nadpis rubriky „Výběr": velký sans nadpis +
+          vlnovková šipka, u levého okraje celého bloku, odkaz na výpis rubriky.
+          Obal s justify-content:flex-start drží odkaz vlevo bez ohledu na
+          zděděný text-align rodiče. */}
+      <div className={classes.moreRow}>
+        <a className={classes.more} href={moreLink}>
+          <Title order={2} c={light} className={classes.moreTitle}>
+            {moreLabel}
+            <Arrow size={80} color={light} />
+          </Title>
+        </a>
       </div>
     </Paper>
   );
