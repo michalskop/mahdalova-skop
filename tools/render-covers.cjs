@@ -73,6 +73,7 @@ async function main() {
     const page = await browser.newPage();
     await page.goto(
       `http://127.0.0.1:${server.address().port}/poster-editor.html`,
+      { waitUntil: "domcontentloaded", timeout: 60000 },
     );
     await page.waitForFunction(() => !!window.CoverProject);
     await page.evaluate((p) => CoverProject.load(p), project);
