@@ -7,7 +7,7 @@ coverImage: "images/cover-kdo-smi-datatimes.jpg"
 coverFit: "contain"
 coverBg: "brandYellow.9"
 filter: ["analýza"]
-tags: ["Svoboda tisku", "Přístup k novinářům", "Petr Macinka", "Motoristé", "svoboda médií", "akreditace novinářů", "Deník N", "Zdislava Pokorná", "Ministerstvo zahraničí", "Detektivní parta", "Thomas Paukner", "infožádost", "Ochranná služba", "bezpečnost"]
+tags: ["Svoboda médií", "Přístup k novinářům", "Petr Macinka", "Motoristé", "akreditace novinářů", "Deník N", "Zdislava Pokorná", "Ministerstvo zahraničí", "Detektivní parta", "Thomas Paukner", "infožádost", "Ochranná služba", "bezpečnost"]
 promoted: 70
 ---
 
