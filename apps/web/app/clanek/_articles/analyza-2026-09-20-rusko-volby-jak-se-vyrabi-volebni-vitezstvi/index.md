@@ -4,7 +4,8 @@ date: "2026-09-20"
 author: "Kateřina Mahdalová"
 excerpt: "Výsledek ruských parlamentních voleb 2026 není předmětem odhadů, ale centrálních směrnic. Kreml předepsal Jednotnému Rusku zisk mezi 47 a 53 procenty, na okupovaných územích 70 procent, soud vyřadil poslední protiválečnou stranu Jabloko a elektronické hlasování se rozšířilo na 33 regionů. Jak se v moderním Rusku vyrábí volební vítězství."
 coverImage: "images/rusko-volby-jak-se-vyrabi-vitezstvi-datatimes.jpg"
-coverFit: cover
+coverFit: contain
+coverBg: "brandNavy.9"
 filter: ["analýza"]
 tags: ["Rusko", "ruské volby 2026", "Jednotné Rusko", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "Kreml", "Duma", "válka na Ukrajině"]
 promoted: 75
