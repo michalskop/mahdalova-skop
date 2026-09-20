@@ -1,5 +1,5 @@
 ---
-title: "Grónsko není větší než Afrika. Na většině map ale ano"
+title: "Skutečná velikost světa: vyzkoušejte si, jak nás mapy klamou"
 date: "2026-09-05"
 author: "Kateřina Mahdalová"
 excerpt: "Grónsko se do Afriky vejde čtrnáctkrát. Na školní mapě přesto vypadají stejně velké. Žádná mapa světa neříká celou pravdu – každá projekce si vybírá, co zkreslí, a za pět století jich kartografové vytvořili desítky."
