@@ -266,10 +266,19 @@ function MiniCard({
       </Badge>
     ) : null;
 
-  // Overlay placed inside the (position: relative) image container.
-  const overlayBadge = formatBadge && (
-    <Box className={styles.relatedBadgeOverlay}>{formatBadge}</Box>
-  );
+  // Same rubric badge, but positioned in the top-right corner of the cover
+  // (like the homepage ArticleCard). Applied directly to the Badge — no wrapper —
+  // so the offsets match `.rating` exactly.
+  const overlayBadge =
+    showFormatBadge && filterLabel ? (
+      <Badge
+        size="xs"
+        className={`${styles.relatedBadge} ${styles.relatedBadgeOverlay}`}
+        style={{ backgroundColor: filterColor, color: '#fff' }}
+      >
+        {filterLabel}
+      </Badge>
+    ) : null;
 
   // In-text badges: topic always; the rubric badge only as a fallback when there
   // is no cover image to overlay it on.
