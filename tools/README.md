@@ -1,8 +1,14 @@
 # tools/ – redakční generátory
 
+Praktický průvodce: [Michale, od grafu k pěknému coveru](NAVOD-PRO-MICHALA.md).
+
 Dvě kategorie nástrojů, které nejsou součástí webu.
 
-**HTML nástroje** – spouští se **dvojklikem** (otevřou se v prohlížeči),
+**Cover editor** má společný ruční i automatický postup popsaný v
+[COVER-EDITOR.md](COVER-EDITOR.md). Spouští se přes lokální web; ukládá projekt
+a exportuje homepage, OG, čtverec i Instagram 4:5.
+
+**Ostatní HTML nástroje** – spouští se **dvojklikem** (otevřou se v prohlížeči),
 žádný server, build ani instalace, jen připojení k internetu (Google Fonts;
 PNG export je do obrázku zapéká). Poslat kolegovi = poslat ten jeden
 `.html` soubor.
@@ -14,7 +20,7 @@ CI ani produkční kód webu.
 
 ## Jak spustit
 
-**HTML nástroje** (`poster-editor.html`, `logo-dpbp-editor.html`,
+**Ostatní HTML nástroje** (`logo-dpbp-editor.html`,
 `chart-simplifier.html`):
 1. Otevři soubor **dvojklikem** – spustí se v prohlížeči, nic se
    neinstaluje ani nespouští na pozadí.
@@ -23,9 +29,9 @@ CI ani produkční kód webu.
 3. Export (SVG/PNG) je tlačítko v nástroji – stáhne soubor rovnou do
    Stažených.
 
-Pár `chart-simplifier.html` → `poster-editor.html`: nejdřív v
-chart-simplifier vlož Vega-Lite spec grafu a zkopíruj vygenerovaný motiv
-(SVG), pak ho vlož do poster-editoru.
+`chart-simplifier.html` nyní generuje úryvky kódu pro `motifSvg()` a `MOTIFS`,
+nikoli samostatný SVG soubor pro Upload image. Převod motivu a redakční postup
+popisuje [návod pro Michala](NAVOD-PRO-MICHALA.md).
 
 **`social-cards/`** (vyžaduje terminál, ne dvojklik):
 1. Předpoklad: Node a Chromium na stroji (repo počítá s
@@ -43,10 +49,10 @@ chart-simplifier vlož Vega-Lite spec grafu a zkopíruj vygenerovaný motiv
 
 ## HTML nástroje
 
-> **`poster-editor.html` je náš jediný generátor cover / náhledových obrázků.**
-> Všechny náhledy k článkům (na web i na sociální sítě) děláme tady – žádný jiný
-> nástroj na to není. (Dřívější `cover-bg-picker.html` byl **zrušen**, ať v tom
-> není zmatek; barvu si vybíráš přímo v poster-editoru.)
+> **Nové covery tvoří `poster-editor.html` ručně nebo přes `npm run covers`.**
+> Obě cesty používají společný projekt i vykreslování. Starší `photo-cover.py`
+> zůstává pro reprodukci původních fotografických coverů. Podrobnosti a aktuální
+> formáty viz [COVER-EDITOR.md](COVER-EDITOR.md).
 
 | Soubor | Co dělá |
 |--------|---------|

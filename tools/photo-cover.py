@@ -3,6 +3,9 @@
 """
 photo-cover.py — generátor fotografického cover / og:image pro článek DataTimes.
 
+LEGACY: Tento Pillow generátor nevytváří editovatelný projekt. Pro nový společný
+automatický a ruční postup použij tools/render-covers.py (viz COVER-EDITOR.md).
+
 Vyrobí 1200×630 JPEG z fotky: ztmavený snímek + navy scrim + kicker (sekce),
 eyebrow (místo/subjekt), serifový headline a odznak „DataTimes.cz" vpravo dole.
 Typografie IBM Plex (Serif headline, Sans kicker/odznak), barvy z palety

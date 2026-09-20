@@ -11,6 +11,7 @@ import { Box, Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import ArticleRating from '@/components/common/ArticleRating';
 import { ArticleJsonLd } from '@/components/seo/ArticleJsonLd';
+import { resolveArticleOgImage } from '@/lib/coverMetadata';
 import { getAuthorKeys } from '@/lib/schema';
 
 
@@ -28,17 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz'
     const articleUrl = `${baseUrl}/clanek/${params.slug}`
 
-    const isAbsoluteUrl = (value: unknown): value is string => {
-      if (typeof value !== 'string') return false;
-      return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
-    };
-    
-    // Construct the full image URL
-    const imageUrl = article.coverImage 
-      ? (isAbsoluteUrl(article.coverImage)
-          ? article.coverImage
-          : `${baseUrl}/clanek/_articles/${params.slug}/${article.coverImage}`)
-      : `${baseUrl}/default-og-image.jpg` // Fallback image
+    const image = resolveArticleOgImage(article.ogImage || article.coverImage, params.slug, baseUrl);
 
     return {
       title: article.title,
@@ -54,9 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         authors: [article.author],
         images: [
           {
-            url: imageUrl,
-            width: 1200,
-            height: 630,
+            ...image,
             alt: article.title,
           },
         ],
@@ -66,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         card: 'summary_large_image',
         title: article.title,
         description: article.excerpt,
-        images: [imageUrl],
+        images: [{ ...image, alt: article.title }],
       },
     }
   } catch (error) {
@@ -107,17 +96,8 @@ export default async function ArticlePage({ params }: PageProps) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
     const articleUrl = `${baseUrl}/clanek/${params.slug}`;
     
-    const isAbsoluteUrl = (value: unknown): value is string => {
-      if (typeof value !== 'string') return false;
-      return value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//');
-    };
-    
-    const imageUrl = article.coverImage 
-      ? (isAbsoluteUrl(article.coverImage)
-          ? article.coverImage
-          : `${baseUrl}/clanek/_articles/${params.slug}/${article.coverImage}`)
-      : `${baseUrl}/default-og-image.jpg`;
-    
+    const imageUrl = resolveArticleOgImage(article.ogImage || article.coverImage, params.slug, baseUrl).url;
+
     return (
       <div>
         <ArticleJsonLd

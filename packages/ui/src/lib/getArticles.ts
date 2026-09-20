@@ -10,6 +10,7 @@ export interface Article {
   author: string;
   slug: string;
   coverImage: string | null;
+  instagramImage?: string | null;
   /** Barva pruhů kolem náhledu (poměr 5:4), když obrázek není 5:4. Token palety
    * "scale.index" (např. "brandNavy.9") nebo hex. Viz ArticleCard. */
   coverBg?: string;
@@ -92,7 +93,8 @@ export async function getArticles({
       try {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data } = matter(fileContents);
-        const coverImage = resolveCoverImage(data.coverImage, folder);
+        const homepageImage = resolveCoverImage(data.homepageImage, folder);
+        const coverImage = homepageImage || resolveCoverImage(data.coverImage, folder);
 
         return {
           title: data.title || 'Untitled',
@@ -101,8 +103,9 @@ export async function getArticles({
           author: data.author || 'Anonymous',
           slug: folder,
           coverImage,
+          instagramImage: resolveCoverImage(data.instagramImage, folder),
           coverBg: data.coverBg ?? undefined,
-          coverFit: data.coverFit ?? undefined,
+          coverFit: homepageImage ? 'cover' : data.coverFit ?? undefined,
           filter: data.filter || [],
           tags: data.tags || [],
           promoted: data.promoted || 0,

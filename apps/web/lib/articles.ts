@@ -269,5 +269,6 @@ export async function getArticleBySlug(directorySlug: string) {
     translator: data.translator || '',
     excerpt: data.excerpt || '',
     coverImage: data.coverImage || null,
+    ogImage: data.ogImage || null,
   };
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Poster editor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,6 +135,30 @@
     #panel{border-left:none;border-top:1px solid var(--border);overflow:visible;}
     #actions{position:static;}
   }
+
+  html,body{height:auto;min-height:100%;}
+  body{overflow:auto;display:block;}
+  #content{min-height:0;}
+  #app{height:auto;min-height:760px;}
+  #stage{align-self:start;min-width:0;}
+  #frame.tall{max-width:100%;}
+  #frame.tall svg{width:100%;height:auto;max-width:100%;}
+  .hdl{touch-action:none;}
+  .hdl::after{content:'';position:absolute;inset:-12px;}
+  .align-controls{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+  #context-previews{padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+  #context-previews article{min-width:0;}
+  #context-previews img{width:100%;display:block;}
+  #context-previews iframe{width:100%;height:580px;border:1px solid var(--border);}
+  .preview-square{width:160px;height:160px;overflow:hidden;}
+  .preview-square img{height:100%;object-fit:cover;}
+  .preview-wide{aspect-ratio:2/1;overflow:hidden;}
+  .preview-wide img{height:100%;object-fit:cover;}
+  #safe-overlay{position:absolute;inset:0;pointer-events:none;display:none;}
+  #safe-overlay::before{content:'';position:absolute;left:23.75%;right:23.75%;top:0;bottom:0;border:1px dashed #00d9c0;}
+  #safe-overlay::after{content:'';position:absolute;left:27.75%;right:27.75%;top:7.619%;bottom:7.619%;border:2px dashed #de1743;}
+  #preview-status{padding:0 24px;}
+  @media(max-width:900px){#app{min-height:0;}#context-previews{padding:12px;}}
 </style>
 
 <div id="modebar">
@@ -158,7 +183,7 @@
       <span class="hint" id="hint">1200 × 630 px · click an object to edit it</span>
       <button class="ghost" id="undo">↶ undo</button>
       <button class="ghost" id="bgToggle">dark background</button>
-      <button class="ghost" id="autolayout">auto-layout</button>
+      <button class="ghost" id="autolayout">Reset this variant</button><label class="note"><input type="checkbox" id="safe-toggle" checked> OG safe area</label>
     </div>
   </div>
 
@@ -171,11 +196,12 @@
     <!-- CONTENT -->
     <div class="ps">
       <div class="plbl">Content</div>
+      <div class="fld"><label for="f-tag">Horní tag (rubrika + téma)</label><input type="text" id="f-tag" maxlength="100" placeholder="KONTEXT VIZUÁLNÍ INVESTIGACE"></div><div class="note">První slovo je standardně červené, zbytek světlý na tmavém pozadí. Část textu lze přebarvit označením na ploše.</div>
       <div class="fld"><label>Kicker</label><input type="text" id="f-kicker" maxlength="70"></div>
-      <div class="fld"><label>Headline</label><input type="text" id="f-headline" maxlength="20" placeholder="1.28"></div>
+      <div class="fld"><label>Headline</label><input type="text" id="f-headline" maxlength="160" placeholder="1.28"></div>
       <div class="fld"><label>Subtitle</label><input type="text" id="f-subtitle" maxlength="48" placeholder="subtitle / unit"></div>
       <div class="fld"><label>Claim</label><textarea id="f-claim" rows="2" placeholder="Line 1&#10;Line 2"></textarea>
-        <div class="charhint">Enter = line break</div></div>
+        <div class="charhint">Enter = nový řádek, i po změně šířky textového rámu.</div></div>
     </div>
 
     <!-- CANVAS -->
@@ -196,9 +222,10 @@
 
     <!-- IMAGE / MOTIF (always visible) -->
     <div class="ps">
-      <div class="plbl">Image / motif</div>
+      <div class="plbl">Image / motif</div><label class="note"><input type="checkbox" id="finished-design"> Hotový cover — pouze obrázek</label>
       <button class="btn btn-ghost" id="pick" type="button">Upload image</button>
       <button class="minichip" id="rmimg" type="button" hidden style="width:100%;margin-top:7px">Remove image</button>
+      <div class="note">Vlož původní fotografii nebo ilustraci bez titulku a loga. Texty a značky doplní editor; export obsahuje celou kompozici. Zdrojový obrázek a uložený projekt si ponech pro další úpravy.</div>
       <div class="note">Or drop a file here / paste (Ctrl+V). After inserting, click the image in the preview → zoom, pan, stretch, border.</div>
       <div class="note" style="margin-top:7px">No image → a pictogram is used:</div>
       <div class="chips" id="motifs" style="grid-template-columns:repeat(4,1fr);margin-top:5px"></div>
@@ -208,7 +235,12 @@
     <div class="ps" id="ctx"></div>
 
     <div class="ps">
-      <div class="plbl">Export</div>
+      <div class="plbl">Projekt a export</div>
+      <button class="btn btn-ghost" id="save-project">Uložit editovatelný projekt</button>
+      <button class="btn btn-ghost" id="load-project">Otevřít projekt</button>
+      <input type="file" id="project-file" accept=".json,application/json" hidden>
+      <button class="btn btn-primary" id="export-bundle">Stáhnout všechny varianty (ZIP)</button>
+      <button class="btn btn-ghost" id="open-portrait">Otevřít Instagram 4:5</button>
       <div class="note" style="margin-top:0">
         <b>OG image</b> – the preview used when the article link is shared (FB, WhatsApp, X, LinkedIn…).
         The site declares it in <code>og:image</code> and the network fetches it itself. Auto picks
@@ -217,13 +249,13 @@
       </div>
     </div>
 
+    <div class="ps"><div class="plbl">Cover quality</div><div class="note" id="cover-quality" role="status" aria-live="polite"></div></div>
     <div id="actions">
       <div class="segrow" id="ogfmt"></div>
       <button class="btn btn-primary" id="dlog">⬇ Download OG image</button>
       <div class="note" id="ogfmt-note" style="margin:0 0 2px"></div>
       <div class="btn-row">
         <button class="btn btn-ghost" id="dlsvg">SVG (web)</button>
-        <button class="btn btn-ghost" id="dltool">Download tool</button>
       </div>
     </div>
   </div>
@@ -231,6 +263,14 @@
 </div>
 <div class="toast" id="toast"></div>
 
+<p class="note" id="preview-status">Preparing exported preview…</p>
+<section id="context-previews">
+ <article id="home-preview"><h1>Homepage — skutečná karta 5:4</h1><iframe id="card-preview" src="/tools/cover-preview" title="Skutečná homepage karta"></iframe></article>
+ <article><h1>Výstup aktuální varianty</h1><img id="output-preview" alt="Export aktuální varianty"></article>
+ <article id="og-preview"><h1>OG: možné ořezy</h1><p class="note">Landscape 2:1 · čtverec 1:1. Simulace, nikoli garance platformy.</p><div class="preview-wide"><img id="landscape-preview" alt="Možný landscape ořez"></div><div class="preview-square"><img id="square-preview" alt="Možný čtvercový ořez"></div></article>
+</section>
+<script src="cover-geometry.js"></script>
+<script src="cover-text.js"></script>
 <script>
 const C = { bg:'#f8f6f0', ink:'#101432', crimson:'#de1743', orange:'#f76800',
             yellow:'#ffcf02', muted:'#555555', line:'#e8e3d2' };
@@ -264,7 +304,8 @@ const chapterOf = id => CHAPTERS.find(c=>c[0]===id);
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 const FORMATS = {
-  link:     { w:1200, h:630,  label:'www·FB·X' },
+  homepage: { w:1500, h:1200, label:'Homepage — 5:4' },
+  link:     { w:1200, h:630,  label:'OG · shared link' },
   square:   { w:1080, h:1080, label:'Square' },
   portrait: { w:1080, h:1350, label:'Portrait' },
   igstory:  { w:1080, h:1920, label:'Story/Reel' },
@@ -275,20 +316,26 @@ const FF = {
 };
 
 // ------- state -------
+const COVER_FONTS = Object.freeze({ tag:'sans', kicker:'sans', headline:'serif', subtitle:'serif', claim:'serif' });
 const state = {
-  format:'link', dark:false, chapter:'01', accent:'#de1743',
-  topLogo:'special', motif:'fall', image:null, ogFormat:'auto', boxMode:'auto',
+  format:'homepage', mode:'compose', dark:false, chapter:'01', accent:'#de1743',
+  topLogo:'datatimes', motif:'none', image:null, sourceMeta:null, ogFormat:'auto', boxMode:'auto',
+  textColors:{},
   content:{
+    tag:'',
     kicker:'DATA PRO BUDOUCÍ PREMIÉRKU · DEMOGRAFIE',
     headline:'1,28', subtitle:'dítěte na ženu',
     claim:'Babiš slibuje 2,1. Rekord\nbohatého světa je +0,47.'
   },
-  font:{ kicker:'sans', headline:'serif', subtitle:'sans', claim:'serif' },
-  color:{ bg:null, kicker:null, headline:null, subtitle:null, claim:null, claimBox:null, logo:null, brand:null, brand2:null },
+  font:{ ...COVER_FONTS },
+  color:{ tag:null, tagAccent:'#de1743', bg:null, kicker:null, headline:null, subtitle:null, claim:null, claimBox:null, logo:null, brand:null, brand2:null },
   border:{ on:false, color:'#101432', width:8, radius:8 },
-  img:{ zoom:1, panX:0, panY:0 },
+  img:{ zoom:1, panX:0, panY:0 }, // master defaults; never mutated by a variant
+  imageViews:{},
   ov:{}    // ov[format][objName] = {dx,dy,sc,w}  (image: {dx,dy,dw,dh})
 };
+function imgView(){ return {...state.img,...(state.imageViews[state.format]||{})}; }
+function setImgView(patch){ state.imageViews[state.format]={...imgView(),...patch}; }
 function ovFmt(){ return state.ov[state.format] || (state.ov[state.format]={}); }
 function ovGet(name){ const f=state.ov[state.format]; return (f&&f[name])||{}; }
 function ovSet(name, patch){ const f=ovFmt(); f[name]=Object.assign({}, f[name], patch); }
@@ -319,6 +366,7 @@ function wrapWidth(text, fam, size, maxW, ls){
 
 // ---- MOTIF ----
 function motifSvg(kind, accent, x0, y0, w, h, th){
+  if(kind==='none')return '';
   th = th || { line:C.line, sec:C.ink };
   const kw=w/360, kh=h/270, k=Math.min(kw,kh);
   const sw=(8*k).toFixed(1), swThin=(7*k).toFixed(1), swBase=(3*k).toFixed(1), swGrid=(2*k).toFixed(1);
@@ -452,6 +500,27 @@ function autoLayout(){
     T.brand={x:RE-wmWidth('mahdalova-skop',44),y:footY-30,size:44};
     T.brand2={x:M,y:footY-30,size:44};
   }
+  if(state.format==='link'){
+    // Central 534 x 534 area survives the illustrative square crop with 48px inset.
+    const x=333,cw=534,headlineSize=(state.content.headline||'').length>9?40:72;
+    T.kicker={...T.kicker,x,y:75,size:16,w:440,lsFactor:0.10};
+    T.headline={...T.headline,x,y:160,size:headlineSize,w:cw};
+    T.subtitle={...T.subtitle,x,y:197,size:24,w:cw};
+    T.image={x,y:220,w:cw,h:210};
+    T.claim={...T.claim,x,y:476,size:25,w:cw,lhFactor:1.18};
+    T.logo={kind:state.topLogo,size:20,x:state.topLogo==='datatimes'?867-wmWidth('DataTimes',20):819,y:50};
+    T.brand={x:867-wmWidth('mahdalova-skop',24),y:550,size:24};
+    T.brand2={x,y:550,size:24};
+  }
+  if(state.format==='homepage'){
+    T.kicker={...T.kicker,x:M,y:120,size:30,w:W-2*M-250};
+    T.headline={...T.headline,x:M,y:250,size:90,w:W-2*M};
+    T.subtitle={...T.subtitle,x:M,y:325,size:36,w:W-2*M};
+    T.claim={...T.claim,x:M,y:925,size:48,w:W-2*M};
+    T.image={x:M,y:380,w:W-2*M,h:450};
+  }
+  if(typeof editorialLayout==='function') editorialLayout(T);
+  if(state.mode==='finished')T.image={x:0,y:0,w:W,h:H};
   T._M=M; T._RE=RE; T._W=W; T._H=H; T._cBg=cBg; T._cInk=cInk;
   T._cBox=(dark?'#20255a':C.bg);
   T._show={ headline:has('headline'), subtitle:has('subtitle') };
@@ -462,45 +531,53 @@ function autoLayout(){
 function emitText(id, d){
   if(!state.content[id] || !state.content[id].trim()) return '';
   const o=ovGet(id);
-  const fam=FF[state.font[id]]||FF.sans;
-  const size=Math.max(6, d.size*(o.sc||1));
+  const fam=FF[COVER_FONTS[id]];
+  const sc=o.sc||1;
+  const size=d.size;
   const ls=d.lsFactor?size*d.lsFactor:0;
-  // s ruční šířkou boxu se text přelévá přirozeně (tvrdé \n se berou jako mezera,
-  // slova skáčou mezi řádky); bez override se drží ručně zadané řádky.
-  const src=(o.w!=null)?state.content[id].replace(/\s*\n\s*/g,' '):state.content[id];
-  const lines=(o.w!=null)?wrapWidth(src,fam,size,Math.max(30,o.w),ls):(d.lines||state.content[id].split('\n'));
+  // Explicit line breaks survive both automatic wrapping and manual resizing.
+  const src=state.content[id];
+  const textW=Math.max(1,(o.w??d.w*sc)/sc);
+  const lines=wrapWidth(src,fam,size,textW,ls);
   const lh=Math.round(size*(d.lhFactor||1.2));
   const color=state.color[id]||d.color;
   const anchor=d.anchor||'start';
   const halo=d.halo?` paint-order="stroke" stroke="${d._cBg}" stroke-width="${Math.max(2,Math.round(size*0.2))}" stroke-linejoin="round"`:'';
   const lsAttr=ls?` letter-spacing="${ls.toFixed(2)}"`:'';
   const box=d._box?d._box(lines,size,lh):'';
-  const tsp=lines.map((l,i)=>`<tspan x="${d.x}" dy="${i===0?0:lh}">${esc(l)}</tspan>`).join('');
-  const body=box+`<text x="${d.x}" y="${d.y}" font-family="${fam}" font-size="${size.toFixed(1)}" font-weight="700" fill="${color}" text-anchor="${anchor}"${lsAttr}${halo}>${tsp}</text>`;
-  return `<g class="dobj" data-obj="${id}" transform="translate(${(o.dx||0).toFixed(1)},${(o.dy||0).toFixed(1)})">${body}</g>`;
+  let cursor=0;
+  const ranges=[...(id==='tag'?[{start:0,end:(src.match(/^\S+/)||[''])[0].length,color:state.color.tagAccent||'#de1743'}]:[]),...(state.textColors?.[id]||[])];
+  const tsp=lines.map((line,i)=>{
+    const offset=line?src.indexOf(line,cursor):cursor;
+    cursor=Math.max(cursor,offset)+line.length;
+    const runs=CoverText.runs(line,ranges,color,Math.max(0,offset));
+    const body=runs.map(run=>`<tspan fill="${run.color}">${esc(run.text)}</tspan>`).join('');
+    return `<tspan x="${d.x}" dy="${i===0?0:lh}">${body}</tspan>`;
+  }).join('');
+  const textH=Math.max((o.h||0)/sc,(lines.length-1)*lh+size*1.6);
+  // A short kicker gets a content-sized selection box; an explicit width wins.
+  const boxW=['tag','kicker'].includes(id) && o.w==null
+    ? Math.max(24,...lines.map(line=>measure(line,size,fam,700)+Math.max(0,line.length-1)*ls))
+    : textW;
+  const body=`<rect class="object-box" x="${d.x}" y="${d.y-size*1.2}" width="${boxW}" height="${textH}" fill="transparent"/>`+box+`<text x="${d.x}" y="${d.y}" font-family="${fam}" font-size="${size.toFixed(1)}" font-weight="700" fill="${color}" text-anchor="${anchor}"${lsAttr}${halo}>${tsp}</text>`;
+  return `<g class="dobj" data-obj="${id}" transform="translate(${o.dx||0},${o.dy||0}) translate(${d.x},${d.y}) scale(${sc}) translate(${-d.x},${-d.y})">${body}</g>`;
 }
 
 function emitImage(d){
-  const o=ovGet('image');
-  let iw=Math.max(40,d.w+(o.dw||0)), ih=Math.max(40,d.h+(o.dh||0));
-  const dx=o.dx||0, dy=o.dy||0, ix=d.x, iy=d.y;
-  const rad=state.border.on?state.border.radius:8;
+  const o=ovGet('image'),w=Math.max(24,d.w+(o.dw||0)),h=Math.max(24,d.h+(o.dh||0));
+  const box={x:d.x,y:d.y,w,h},dx=o.dx||0,dy=o.dy||0;
   if(state.image){
-    const cid='vc'+(''+Math.random()).slice(2,8);
-    const par='xMidYMid slice';
-    const cx=ix+iw/2, cy=iy+ih/2, z=state.img.zoom||1, px=(state.img.panX||0)*iw/2, py=(state.img.panY||0)*ih/2;
-    const itf=`translate(${(cx+px).toFixed(1)},${(cy+py).toFixed(1)}) scale(${z}) translate(${(-cx).toFixed(1)},${(-cy).toFixed(1)})`;
-    const border=state.border.on?`<rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="${rad}" fill="none" stroke="${state.color.border||state.border.color}" stroke-width="${state.border.width}"/>`:'';
-    const body=`<clipPath id="${cid}"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="${rad}"/></clipPath>`
-      + `<g clip-path="url(#${cid})"><g transform="${itf}"><image href="${state.image}" x="${ix}" y="${iy}" width="${iw}" height="${ih}" preserveAspectRatio="${par}"/></g></g>`+border;
-    return `<g class="dobj" data-obj="image" transform="translate(${dx.toFixed(1)},${dy.toFixed(1)})">${body}</g>`;
+    const meta=state.sourceMeta||{width:w,height:h},r=CoverGeometry.imageRect(box,meta,imgView());
+    const rad=state.border.on?state.border.radius:0;
+    const border=state.border.on?`<rect x="${d.x}" y="${d.y}" width="${w}" height="${h}" rx="${rad}" fill="none" stroke="${state.color.border||state.border.color}" stroke-width="${state.border.width}"/>`:'';
+    return `<g class="dobj" data-obj="image" transform="translate(${dx},${dy})"><clipPath id="imageClip"><rect x="${d.x}" y="${d.y}" width="${w}" height="${h}" rx="${rad}"/></clipPath><svg x="${d.x}" y="${d.y}" width="${w}" height="${h}" viewBox="${d.x} ${d.y} ${w} ${h}" overflow="hidden"><image href="${state.image}" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" preserveAspectRatio="none" clip-path="url(#imageClip)"/></svg>${border}</g>`;
   }
-  const mth={ line:state.dark?'rgba(255,255,255,.16)':C.line, sec:state.dark?'rgba(244,242,236,.72)':C.ink };
-  return `<g class="dobj" data-obj="image" transform="translate(${dx.toFixed(1)},${dy.toFixed(1)})">${motifSvg(state.motif,state.accent,ix,iy,iw,ih,mth)}</g>`;
+  const th={line:state.dark?'rgba(255,255,255,.16)':C.line,sec:state.dark?'rgba(244,242,236,.72)':C.ink};
+  return `<g class="dobj" data-obj="image" transform="translate(${dx},${dy})">${motifSvg(state.motif,state.accent,d.x,d.y,w,h,th)}</g>`;
 }
 
 function emitLogo(id, d){
-  const o=ovGet(id), sc=o.sc||1, size=d.size*sc;
+  const o=ovGet(id), sc=o.sc||1, size=d.size;
   // pozice (d.x,d.y) je v souřadnicích obsahu; transform nese JEN ruční posun,
   // stejně jako u textu – jinak by tažení přepsalo základ a objekt „odskočil".
   let body;
@@ -511,7 +588,7 @@ function emitLogo(id, d){
     const ink=state.color[id]||(state.dark?C.bg:C.ink);
     body=wordmark(name,d.x,d.y,size,ink).svg;
   }
-  return `<g class="dobj" data-obj="${id}" transform="translate(${(o.dx||0).toFixed(1)},${(o.dy||0).toFixed(1)})">${body}</g>`;
+  return `<g class="dobj" data-obj="${id}" transform="translate(${o.dx||0},${o.dy||0}) translate(${d.x},${d.y}) scale(${sc}) translate(${-d.x},${-d.y})">${body}</g>`;
 }
 
 function buildSVG(s, standalone){
@@ -523,21 +600,21 @@ function buildSVG(s, standalone){
   T.claim._box=(lines,size,lh)=>{
     if(state.boxMode==='none') return '';
     if(!state.image && !state.color.claimBox) return '';   // auto: jen s obrázkem; s vlastní barvou vždy
-    const fam=FF[state.font.claim]||FF.serif;
+    const fam=FF.serif;
     const wmax=Math.max(...lines.map(l=>measure(l,size,fam,700))), padX=18,padY=12;
     const boxW=wmax+padX*2, boxH=(lines.length-1)*lh+size+padY*2;
     return `<rect x="${(T.claim.x-padX).toFixed(1)}" y="${(T.claim.y-size*0.78-padY).toFixed(1)}" width="${boxW.toFixed(1)}" height="${boxH.toFixed(1)}" rx="6" fill="${state.color.claimBox||T._cBox}"/>`;
   };
-  T.kicker._cBg=T._cBg; T.headline._cBg=T._cBg; T.subtitle._cBg=T._cBg; T.claim._cBg=T._cBg;
+  if(T.tag)T.tag._cBg=T._cBg; T.kicker._cBg=T._cBg; T.headline._cBg=T._cBg; T.subtitle._cBg=T._cBg; T.claim._cBg=T._cBg;
 
   let inner=emitImage(T.image)
-    + emitText('kicker',T.kicker)
+    + (state.mode==='finished'?'':(T.tag?emitText('tag',T.tag):'')+emitText('kicker',T.kicker)
     + (T._show.headline?emitText('headline',T.headline):'')
     + (T._show.subtitle?emitText('subtitle',T.subtitle):'')
     + emitText('claim',T.claim)
     + emitLogo('logo',T.logo)
     + (state.topLogo==='special'?emitLogo('brand2',T.brand2):'')
-    + emitLogo('brand',T.brand);
+    + (state.topLogo==='special'?emitLogo('brand',T.brand):''));
 
   // Veškerý obsah se ořízne na plochu plátna → zvětšený obrázek nebo objekt posunutý
   // za hranici se čistě uřízne u okraje. Horní barevná lišta je navrch (přetékající
@@ -547,7 +624,7 @@ function buildSVG(s, standalone){
   <clipPath id="canvasClip"><rect x="0" y="0" width="${W}" height="${H}"/></clipPath>
   <rect width="${W}" height="${H}" fill="${T._cBg}"/>
   <g clip-path="url(#canvasClip)">${inner}</g>
-  <rect x="0" y="0" width="${W}" height="${barH}" fill="${state.accent}"/>
+  ${state.mode==='finished'?'':`<rect x="0" y="0" width="${W}" height="${barH}" fill="${state.accent}"/>`}
 </svg>`;
 }
 
@@ -555,35 +632,39 @@ function buildSVG(s, standalone){
 const frame=document.getElementById('frame');
 const hintEl=document.getElementById('hint');
 function render(){
+  const F=FORMATS[state.format];
+  frame.style.width=`min(100%, ${Math.min(860,innerHeight*0.64*F.w/F.h)}px)`;
   frame.innerHTML=buildSVG(state,false);
   addHitAreas();
   refreshSel();
   if(typeof updateOgNote==='function') updateOgNote();
   if(typeof updateImgSection==='function') updateImgSection();
+  updateCoverQuality();schedulePreview();
 }
+function imageBox(){const d=autoLayout().image,o=ovGet('image');return {x:d.x,y:d.y,width:Math.max(24,d.w+(o.dw||0)),height:Math.max(24,d.h+(o.dh||0))};}
 function addHitAreas(){
   const svg=frame.querySelector('svg'); if(!svg) return;
   svg.querySelectorAll('.dobj').forEach(g=>{
-    let bb; try{ bb=g.getBBox(); }catch(e){ return; }
+    let bb; try{ bb=g.dataset.obj==='image'?imageBox():(g.querySelector('.object-box')||g).getBBox(); }catch(e){ return; }
     if(!bb||!bb.width||!bb.height) return;
     const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
     r.setAttribute('x',bb.x);r.setAttribute('y',bb.y);r.setAttribute('width',bb.width);r.setAttribute('height',bb.height);
     r.setAttribute('fill','transparent');r.style.pointerEvents='all';
-    g.insertBefore(r,g.firstChild);
+    r.classList.add('hit-area');g.appendChild(r);
   });
 }
 
 // ------- OBSAH inputs -------
 const bindC=(id,key)=>{const el=document.getElementById(id);el.value=state.content[key];
   el.addEventListener('focus',()=>{ if(typeof pushHistory==='function') pushHistory(); });
-  el.addEventListener('input',()=>{state.content[key]=el.value;render();});};
-bindC('f-kicker','kicker'); bindC('f-headline','headline'); bindC('f-subtitle','subtitle'); bindC('f-claim','claim');
+  el.addEventListener('input',()=>{updateContent(key,el.value);render();});};
+bindC('f-tag','tag'); bindC('f-kicker','kicker'); bindC('f-headline','headline'); bindC('f-subtitle','subtitle'); bindC('f-claim','claim');
 
 // formáty
 const fWrap=document.getElementById('formats');
 Object.entries(FORMATS).forEach(([key,f])=>{const b=document.createElement('button');
   b.className='chip'+(key===state.format?' on':'');b.dataset.f=key;b.textContent=f.label;
-  b.onclick=()=>{pushHistory();state.format=key;[...fWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.f===key));
+  b.onclick=()=>{finishGesture();closeEditor();pushHistory();state.format=key;[...fWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.f===key));
     frame.classList.toggle('tall', f.h/f.w>1.1);
     hintEl.textContent=`${f.w} × ${f.h} px · click an object to edit it`;
     selectObj(null); render();};
@@ -623,7 +704,7 @@ function syncAcc(){
 document.getElementById('usechapter').onclick=()=>{
   pushHistory(); const ch=chapterOf(state.chapter);
   // poster content stays Czech (mahdalova-skop.cz); only the tool UI is English
-  state.content.kicker=('DATA PRO BUDOUCÍ PREMIÉRKU · '+ch[2]).toUpperCase();
+  updateContent('kicker',('DATA PRO BUDOUCÍ PREMIÉRKU · '+ch[2]).toUpperCase());
   document.getElementById('f-kicker').value=state.content.kicker; render();
 };
 
@@ -631,13 +712,13 @@ document.getElementById('usechapter').onclick=()=>{
 const tlWrap=document.getElementById('toplogo');
 [['special','Special head'],['datatimes','DataTimes.cz']].forEach(([v,label])=>{
   const b=document.createElement('button');b.className='minichip'+(v===state.topLogo?' on':'');b.dataset.v=v;b.textContent=label;
-  b.onclick=()=>{pushHistory();state.topLogo=v;[...tlWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));selectObj(null);render();};
+  b.onclick=()=>{pushHistory();state.topLogo=v;for(const variant of Object.values(state.ov))delete variant.logo;[...tlWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));selectObj(null);render();};
   tlWrap.appendChild(b);});
 
 // ------- KONTEXTOVÝ PANEL -------
-const OBJ_LABEL={background:'Background',kicker:'Kicker',headline:'Headline',subtitle:'Subtitle',claim:'Claim',
-  image:'Image / motif',logo:'Logo (top)',brand:'mahdalova-skop.cz',brand2:'DataTimes.cz (bottom)'};
-const TEXTIDS=['kicker','headline','subtitle','claim'];
+const OBJ_LABEL={background:'Background',tag:'Horní tag',kicker:'Kicker',headline:'Headline',subtitle:'Subtitle',claim:'Claim',
+  image:'Image / motif',logo:'Logo',brand:'mahdalova-skop.cz',brand2:'DataTimes.cz (bottom)'};
+const TEXTIDS=['tag','kicker','headline','subtitle','claim'];
 function palHTML(){
   return '<div id="ctxpal">'+PALETTE_EXT.map(([fam,hx])=>'<div class="extrow">'+hx.map(h=>`<button class="extsw" data-hex="${h}" style="background:${h}" title="${fam} ${h}"></button>`).join('')+'</div>').join('')+'</div>';
 }
@@ -649,11 +730,11 @@ function showCtx(){
   if(selected==='image'){
     h+='<div class="segrow" style="margin-bottom:8px"><button class="minichip" id="c-pick">Upload image</button>'
       +(state.image?'<button class="minichip" id="c-rm">Remove</button>':'')+'</div>';
-    h+='<div class="ctxhint" style="margin-bottom:8px">Drag = move · corners = resize both sides · side handles = width/height only (stretch) · mouse wheel = zoom.</div>';
+    h+='<div class="ctxhint" style="margin-bottom:8px">Drag = move · corners = proportional resize · side handles = width/height only · mouse wheel = zoom.</div>';
     if(state.image){
-      h+='<div class="slrow"><label>Zoom</label><input type="range" id="c-zoom" min="0.3" max="3" step="0.02" value="'+state.img.zoom+'"><span class="val" id="c-zoom-v">'+state.img.zoom.toFixed(2)+'×</span></div>';
-      h+='<div class="slrow"><label>Pan ↔</label><input type="range" id="c-px" min="-1" max="1" step="0.01" value="'+state.img.panX+'"><span class="val">'+Math.round(state.img.panX*100)+'</span></div>';
-      h+='<div class="slrow"><label>Pan ↕</label><input type="range" id="c-py" min="-1" max="1" step="0.01" value="'+state.img.panY+'"><span class="val">'+Math.round(state.img.panY*100)+'</span></div>';
+      h+='<div class="slrow"><label>Zoom</label><input type="range" id="c-zoom" min="1" max="3" step="0.02" value="'+imgView().zoom+'"><span class="val" id="c-zoom-v">'+imgView().zoom.toFixed(2)+'×</span></div>';
+      h+='<div class="slrow"><label>Pan ↔</label><input type="range" id="c-px" min="-1" max="1" step="0.01" value="'+imgView().panX+'"><span class="val">'+Math.round(imgView().panX*100)+'</span></div>';
+      h+='<div class="slrow"><label>Pan ↕</label><input type="range" id="c-py" min="-1" max="1" step="0.01" value="'+imgView().panY+'"><span class="val">'+Math.round(imgView().panY*100)+'</span></div>';
     }
     h+='<div class="sub">Border</div>';
     h+='<label style="display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:6px"><input type="checkbox" id="c-bd"'+(state.border.on?' checked':'')+'> show border</label>';
@@ -661,16 +742,21 @@ function showCtx(){
     h+='<div class="slrow"><label>Radius</label><input type="range" id="c-br" min="0" max="80" step="1" value="'+state.border.radius+'"><span class="val">'+state.border.radius+'</span></div>';
     h+='<div class="sub">Border colour (from palette)</div>'+palHTML();
   } else if(TEXTIDS.includes(selected)){
+    h+='<div class="note" id="range-status"></div><button class="minichip" id="whole-text">Barvit celý text</button><button class="minichip" id="clear-range-color">Zrušit barvu výběru</button>';
+    h+='<div class="note">Dvojklikem otevři text na ploše, označ slova a vyber barvu v paletě. Barva pozadí claimu se nastavuje zvlášť.</div>';
+    h+='<div class="fld"><label for="c-text-width">Šířka textového rámu (px)</label><input id="c-text-width" type="number" min="24" max="20000" step="1" value="'+Math.round(objectBox(selected)?.w||24)+'"></div>';
+    h+='<button class="minichip" id="c-text-width-auto">'+(selected==='kicker'?'Rám podle délky textu':'Automatická šířka')+'</button>';
+    h+='<div class="note">Boční úchyt mění šířku a zalomení, rohový úchyt velikost. Enter v claimu vždy zachová nový řádek.</div>';
     if(selected==='claim'){
       h+='<div class="sub">Palette changes</div><div class="segrow" id="c-affects"><button class="minichip'+(claimAffects==='text'?' on':'')+'" data-v="text">Text colour</button><button class="minichip'+(claimAffects==='bg'?' on':'')+'" data-v="bg">Background</button></div>';
     }
     h+='<div class="sub">'+(selected==='claim'&&claimAffects==='bg'?'Background colour':'Text colour')+' (from palette)</div>'+palHTML();
     h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto colour</button>';
-    h+='<div class="sub">Font</div><div class="segrow" id="c-font"><button class="minichip'+(state.font[selected]==='serif'?' on':'')+'" data-v="serif">Serif</button><button class="minichip'+(state.font[selected]==='sans'?' on':'')+'" data-v="sans">Sans</button></div>';
+    h+='<div class="sub">Písmo podle redakčního stylu</div><div class="note">'+(COVER_FONTS[selected]==='sans'?'IBM Plex Sans — bezpatkové (kicker / tag)':'IBM Plex Serif — patkové (titulek, podtitulek, claim)')+'</div>';
     if(selected==='claim'){
       h+='<div class="sub">Claim background</div><div class="segrow" id="c-box"><button class="minichip'+(state.boxMode==='auto'?' on':'')+'" data-v="auto">Auto</button><button class="minichip'+(state.boxMode==='none'?' on':'')+'" data-v="none">None</button></div>';
     }
-    h+='<div class="ctxhint" style="margin-top:8px"><b>Double-click</b> to edit the text on the canvas. Drag = move · <b>side handle</b> = box width (text reflows to more/fewer lines) · <b>corner</b> = font size. Arrow keys nudge.</div>';
+    h+='<div class="ctxhint" style="margin-top:8px"><b>Double-click</b> to edit the text on the canvas. Drag = move · <b>side handle</b> = box width (text reflows to more/fewer lines) · <b>corner</b> = proportional scale with anchored opposite corner. Arrow keys nudge.</div>';
   } else if(selected==='background'){
     h+='<div class="sub">Background colour (from palette)</div>'+palHTML();
     h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto (light / dark)</button>';
@@ -680,11 +766,24 @@ function showCtx(){
     h+='<button class="minichip" id="c-auto" style="margin-top:7px;width:100%">← auto colour</button>';
     h+='<div class="ctxhint" style="margin-top:8px">Drag the logo to move it, corners to resize. Colour changes the wordmark / silhouette.</div>';
   }
+  if(selected!=='background')h+='<div class="sub">Align to canvas</div><div class="align-controls">'+[['center-x','Center horizontally'],['center-y','Center vertically'],['left','Align left'],['right','Align right'],['top','Align top'],['bottom','Align bottom']].map(([v,t])=>`<button class="minichip" data-align="${v}">${t}</button>`).join('')+'</div>';
   ctx.innerHTML='<div class="plbl">Selected object</div>'+h;
-  wireCtx();
+  wireCtx();updateRangeStatus();
 }
 function wireCtx(){
   const ctx=document.getElementById('ctx');
+  const whole=ctx.querySelector('#whole-text');if(whole)whole.onclick=()=>{textSelection=null;updateRangeStatus();};
+  const clear=ctx.querySelector('#clear-range-color');if(clear)clear.onclick=()=>{if(textSelection?.id===selected){pushHistory();const r=textSelection;state.textColors[selected]=CoverText.paint(state.textColors[selected]||[],r.start,r.end,null);render();}};
+  const textWidth=ctx.querySelector('#c-text-width');
+  if(textWidth)textWidth.onchange=()=>{
+    const width=textWidth.valueAsNumber;
+    if(!Number.isFinite(width)||width<24||width>20000){showCtx();return;}
+    pushHistory();ovSet(selected,{w:width});render();showCtx();
+  };
+  const autoWidth=ctx.querySelector('#c-text-width-auto');
+  if(autoWidth)autoWidth.onclick=()=>{pushHistory();delete ovGet(selected).w;render();showCtx();};
+  ctx.querySelectorAll('[data-align]').forEach(b=>b.onclick=()=>alignObject(b.dataset.align));
+  ctx.querySelectorAll('input[type=range]').forEach(el=>el.addEventListener('pointerdown',pushHistory));
   const curColor = selected==='image' ? (state.color.border||state.border.color)
     : selected==='background' ? state.color.bg
     : (selected==='claim'&&claimAffects==='bg') ? state.color.claimBox
@@ -696,27 +795,30 @@ function wireCtx(){
   const aff=ctx.querySelector('#c-affects'); if(aff) aff.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
     claimAffects=b.dataset.v; showCtx();});
   const pick=ctx.querySelector('#c-pick'); if(pick) pick.onclick=()=>fileInput.click();
-  const rm=ctx.querySelector('#c-rm'); if(rm) rm.onclick=clearImage;
+  const rm=ctx.querySelector('#c-rm'); if(rm) rm.onclick=()=>{pushHistory();clearImage();};
   const auto=ctx.querySelector('#c-auto'); if(auto) auto.onclick=()=>{
     pushHistory();
     if(selected==='claim'&&claimAffects==='bg') state.color.claimBox=null;
     else if(selected==='background') state.color.bg=null;
-    else state.color[selected]=null;
+    else {state.color[selected]=null;if(TEXTIDS.includes(selected))delete state.textColors[selected];}
     render(); showCtx();
   };
-  const z=ctx.querySelector('#c-zoom'); if(z) z.oninput=()=>{state.img.zoom=parseFloat(z.value);ctx.querySelector('#c-zoom-v').textContent=state.img.zoom.toFixed(2)+'×';render();};
-  const px=ctx.querySelector('#c-px'); if(px) px.oninput=()=>{state.img.panX=parseFloat(px.value);render();};
-  const py=ctx.querySelector('#c-py'); if(py) py.oninput=()=>{state.img.panY=parseFloat(py.value);render();};
+  const z=ctx.querySelector('#c-zoom'); if(z) z.oninput=()=>{setImgView({zoom:parseFloat(z.value)});ctx.querySelector('#c-zoom-v').textContent=imgView().zoom.toFixed(2)+'×';render();};
+  const px=ctx.querySelector('#c-px'); if(px) px.oninput=()=>{setImgView({panX:parseFloat(px.value)});render();};
+  const py=ctx.querySelector('#c-py'); if(py) py.oninput=()=>{setImgView({panY:parseFloat(py.value)});render();};
   const bd=ctx.querySelector('#c-bd'); if(bd) bd.onchange=()=>{state.border.on=bd.checked;render();};
   const bw=ctx.querySelector('#c-bw'); if(bw) bw.oninput=()=>{state.border.width=parseInt(bw.value,10);bw.nextElementSibling.textContent=bw.value;if(state.border.on)render();};
   const br=ctx.querySelector('#c-br'); if(br) br.oninput=()=>{state.border.radius=parseInt(br.value,10);br.nextElementSibling.textContent=br.value;render();};
-  const fontSeg=ctx.querySelector('#c-font'); if(fontSeg) fontSeg.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
-    pushHistory();state.font[selected]=b.dataset.v;fontSeg.querySelectorAll('.minichip').forEach(c=>c.classList.toggle('on',c===b));render();});
   const boxSeg=ctx.querySelector('#c-box'); if(boxSeg) boxSeg.querySelectorAll('.minichip').forEach(b=>b.onclick=()=>{
     pushHistory();state.boxMode=b.dataset.v;boxSeg.querySelectorAll('.minichip').forEach(c=>c.classList.toggle('on',c===b));render();});
 }
 function applyColor(hex){
   pushHistory();
+  if(textSelection?.id===selected && !(selected==='claim'&&claimAffects==='bg')){
+    const r=textSelection;
+    state.textColors[selected]=CoverText.paint(state.textColors[selected]||[],r.start,r.end,hex);
+    render();showCtx();return;
+  }
   if(selected==='claim' && claimAffects==='bg'){ state.color.claimBox=hex; if(state.boxMode==='none') state.boxMode='auto'; }
   else if(selected==='background') state.color.bg=hex;
   else if(selected==='image'){ state.border.on=true; state.color.border=hex; }
@@ -726,12 +828,52 @@ function applyColor(hex){
 
 // ------- upload obrázku -------
 const fileInput=document.createElement('input'); fileInput.type='file'; fileInput.accept='image/*'; fileInput.hidden=true; document.body.appendChild(fileInput);
+let imageLoadVersion=0;
 function readImageFile(file){
   if(!file||!file.type.startsWith('image/')){toast('Not an image');return;}
-  const r=new FileReader(); r.onload=()=>{pushHistory();state.image=r.result;render();selectObj('image');toast('Image inserted');}; r.readAsDataURL(file);
+  const version=++imageLoadVersion;
+  const fail=()=>{if(version===imageLoadVersion)toast('Image could not be decoded; previous image kept.');};
+  const r=new FileReader(); r.onerror=fail;
+  r.onload=()=>{
+    const image=new Image(); image.onerror=fail;
+    image.onload=()=>{
+      if(version!==imageLoadVersion)return;
+      if(!image.naturalWidth||!image.naturalHeight){fail();return;}
+      pushHistory(); state.image=r.result;state.imageViews={};for(const f of Object.values(state.ov))delete f.image;
+      state.sourceMeta={width:image.naturalWidth,height:image.naturalHeight,bytes:file.size,mime:file.type};
+      render();selectObj('image');toast('Image inserted');
+    };
+    image.src=r.result;
+  };
+  r.readAsDataURL(file);
 }
+// Pure geometry: checks the actual image box, crop and zoom, not the whole canvas.
+function imageQualityMessages(meta, box, transform){
+  const messages=[];
+  if(!meta||!meta.width||!meta.height)return ['Source dimensions unavailable.'];
+  const {scale}=CoverGeometry.imageRect({x:0,y:0,...box},meta,transform);
+  if(meta.mime!=='image/svg+xml'&&scale>1.001)messages.push('Source resolution too low for this crop: '+scale.toFixed(2)+'× upscale.');
+  if(meta.mime==='image/gif')messages.push('GIF export is static; inspect the exported frame.');
+  return messages;
+}
+function updateCoverQuality(){
+  const el=document.getElementById('cover-quality');if(!el)return;
+  const lines=[];
+  if(state.image){
+    const m=state.sourceMeta,d=autoLayout().image,o=ovGet('image');
+    if(m)lines.push('Source: '+m.width+' × '+m.height+' px · '+Math.round(m.bytes/1024)+' kB');
+    lines.push(...imageQualityMessages(m,{w:Math.max(40,d.w+(o.dw||0)),h:Math.max(40,d.h+(o.dh||0))},imgView()).map(s=>'⚠ '+s));
+    const F=FORMATS[state.format],x=d.x+(o.dx||0),y=d.y+(o.dy||0),w=Math.max(24,d.w+(o.dw||0)),h=Math.max(24,d.h+(o.dh||0));
+    if(state.mode==='finished'&&(x>0||y>0||x+w<F.w||y+h<F.h))lines.push('⚠ Image object no longer fills the canvas.');
+    lines.push('Visual check: text, logo, crop and source transparency.');
+  }else lines.push('No source image; generated graphics only.');
+  if(!['homepage','link'].includes(state.format))lines.push('Dedicated social export; Universal OG is a separate publishing asset.');
+  lines.push(state.format==='homepage'?'Homepage asset: 1500 × 1200, fixed 5:4 cover.':'Inspect the landscape and possible square crop before publishing.');
+  el.textContent=lines.join('\n');el.style.whiteSpace='pre-line';
+}
+
 fileInput.onchange=()=>readImageFile(fileInput.files[0]);
-function clearImage(){ state.image=null; state.img={zoom:1,panX:0,panY:0}; Object.values(state.ov).forEach(f=>{if(f.image)delete f.image;}); render(); showCtx(); }
+function clearImage(){ imageLoadVersion++; state.image=null; state.sourceMeta=null; state.imageViews={}; Object.values(state.ov).forEach(f=>{if(f.image)delete f.image;}); render(); showCtx(); }
 function updateImgSection(){ const rm=document.getElementById('rmimg'); if(rm) rm.hidden=!state.image; }
 document.getElementById('pick').onclick=()=>fileInput.click();
 document.getElementById('rmimg').onclick=()=>{pushHistory();clearImage();};
@@ -744,133 +886,123 @@ const mWrap=document.getElementById('motifs');
 MOTIFS.forEach(([v,label])=>{const b=document.createElement('button');b.className='chip'+(v===state.motif?' on':'');b.textContent=label;b.dataset.v=v;
   b.onclick=()=>{pushHistory();state.motif=v;[...mWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));render();};mWrap.appendChild(b);});
 
-// ------- INTERAKCE: výběr, tažení + snap, úchyty -------
-let selected=null, claimAffects='text';
+// A gesture snapshots one inverse SVG screen matrix and logical object box.
+// Pointer capture belongs to the stable frame/handle, never to a replaced SVG.
+let selected=null,claimAffects='text',gesture=null;
 const selbox=document.getElementById('selbox');
-const guideV=document.getElementById('guideV'), guideH=document.getElementById('guideH');
-function svgEl(){ return frame.querySelector('svg'); }
-function svgScale(){ const svg=svgEl(); if(!svg) return 1; return FORMATS[state.format].w/svg.getBoundingClientRect().width; }
-function objType(id){ if(id==='image')return 'image'; if(id==='logo'||id==='brand'||id==='brand2')return 'logo'; if(id==='background')return 'bg'; return 'text'; }
-function refreshSel(){
-  const svg=svgEl();
-  if(!selected||selected==='background'||!svg){ selbox.style.display='none'; return; }
-  const g=svg.querySelector(`.dobj[data-obj="${selected}"]`);
-  if(!g){ selbox.style.display='none'; return; }
-  let bb; try{ bb=g.getBoundingClientRect(); }catch(e){ selbox.style.display='none'; return; }
-  const st=document.getElementById('stage').getBoundingClientRect();
-  selbox.style.display='block';
-  selbox.style.left=(bb.left-st.left)+'px'; selbox.style.top=(bb.top-st.top)+'px';
-  selbox.style.width=bb.width+'px'; selbox.style.height=bb.height+'px';
-  selbox.querySelector('.tag').textContent=OBJ_LABEL[selected]||selected;
-  const t=objType(selected);
-  const show={nw:1,ne:1,sw:1,se:1,n:0,s:0,e:0,w:0};
-  if(t==='image'){show.n=show.s=show.e=show.w=1;}
-  else if(t==='text'){show.e=show.w=1;show.n=show.s=1;}
-  else if(t==='logo'){/* jen rohy */}
-  selbox.querySelectorAll('.hdl').forEach(hd=>{hd.style.display=show[hd.dataset.h]?'block':'none';});
-}
-function selectObj(name){ if(name!=='claim') claimAffects='text'; selected=name; refreshSel(); showCtx(); }
-
-// snap cíle
-function localBoxes(){
-  const svg=svgEl(); const out={};
-  svg.querySelectorAll('.dobj').forEach(g=>{ try{const b=g.getBBox();out[g.dataset.obj]={x:b.x,y:b.y,w:b.width,h:b.height};}catch(e){} });
-  return out;
-}
-let drag=null;
-frame.addEventListener('pointerdown',e=>{
-  if(e.target.closest('.hdl')) return;
-  const svg=svgEl(); if(!svg) return;
-  const g=e.target.closest('.dobj');
-  if(!g){ selectObj('background'); return; }
-  const name=g.dataset.obj; selectObj(name);
-  if(objType(name)==='bg') return;
-  const k=svgScale(), cur=ovGet(name);
-  const boxes=localBoxes(); const me=boxes[name];
-  // canvas: levý/pravý okraj, střed, horní/dolní okraj, vertikální střed
-  const targetsX=[T_M(), T_W()/2, T_W()-T_M()], targetsY=[T_M(), T_H()/2, T_H()-T_M()];
-  // ostatní objekty: hrany + středy, VČETNĚ jejich ručního posunu (o.dx/o.dy)
-  for(const id in boxes){ if(id===name)continue; const b=boxes[id], oo=ovGet(id), ox=oo.dx||0, oy=oo.dy||0;
-    targetsX.push(b.x+ox, b.x+b.w/2+ox, b.x+b.w+ox);
-    targetsY.push(b.y+oy, b.y+b.h/2+oy, b.y+b.h+oy); }
-  drag={name,g,sx:e.clientX,sy:e.clientY,k,dx0:cur.dx||0,dy0:cur.dy||0,me,targetsX,targetsY};
-  g.classList.add('dragging'); g.setPointerCapture(e.pointerId); e.preventDefault();
-});
-function T_M(){return Math.round(FORMATS[state.format].w*0.0583);}
-function T_W(){return FORMATS[state.format].w;}
-function T_H(){return FORMATS[state.format].h;}
+const guideV=document.getElementById('guideV'),guideH=document.getElementById('guideH');
+function svgEl(){return frame.querySelector('svg');}
+function svgScale(){const m=svgEl()?.getScreenCTM();return m?1/Math.hypot(m.a,m.b):1;}
+function objType(id){return id==='image'?'image':['logo','brand','brand2'].includes(id)?'logo':id==='background'?'bg':'text';}
 function stageRect(){return document.getElementById('stage').getBoundingClientRect();}
-function svgOffset(){ const s=svgEl().getBoundingClientRect(), st=stageRect(); return {ox:s.left-st.left, oy:s.top-st.top, k:svgScale()}; }
-function showGuideX(vx){ const {ox,k}=svgOffset(); const s=svgEl().getBoundingClientRect(),st=stageRect();
-  guideV.style.display='block'; guideV.style.left=(ox+vx/k)+'px'; guideV.style.top=(s.top-st.top)+'px'; guideV.style.height=s.height+'px'; }
-function showGuideY(vy){ const {oy,k}=svgOffset(); const s=svgEl().getBoundingClientRect(),st=stageRect();
-  guideH.style.display='block'; guideH.style.top=(oy+vy/k)+'px'; guideH.style.left=(s.left-st.left)+'px'; guideH.style.width=s.width+'px'; }
-frame.addEventListener('pointermove',e=>{
-  if(!drag) return;
-  if(!drag.pushed){pushHistory();drag.pushed=true;}
-  let ndx=drag.dx0+(e.clientX-drag.sx)*drag.k, ndy=drag.dy0+(e.clientY-drag.sy)*drag.k;
-  const thr=7*drag.k;
-  guideV.style.display='none'; guideH.style.display='none';
-  const me=drag.me; if(me){
-    const edgesX=[me.x+ndx, me.x+me.w/2+ndx, me.x+me.w+ndx];
-    let bestX=null,bd=thr;
-    drag.targetsX.forEach(t=>edgesX.forEach((ex,i)=>{const d=Math.abs(ex-t);if(d<bd){bd=d;bestX={t,i};}}));
-    if(bestX){ ndx += bestX.t-edgesX[bestX.i]; showGuideX(bestX.t); }
-    const edgesY=[me.y+ndy, me.y+me.h/2+ndy, me.y+me.h+ndy];
-    let bestY=null,bdy=thr;
-    drag.targetsY.forEach(t=>edgesY.forEach((ey,i)=>{const d=Math.abs(ey-t);if(d<bdy){bdy=d;bestY={t,i};}}));
-    if(bestY){ ndy += bestY.t-edgesY[bestY.i]; showGuideY(bestY.t); }
-  }
-  drag._ndx=ndx; drag._ndy=ndy;
-  drag.g.setAttribute('transform',`translate(${ndx.toFixed(1)},${ndy.toFixed(1)})`);
-  refreshSel();
+function objectBox(id){
+  const g=svgEl()?.querySelector(`.dobj[data-obj="${id}"]`);if(!g)return null;
+  if(id==='image'){const b=imageBox(),o=ovGet(id);return {x:b.x+(o.dx||0),y:b.y+(o.dy||0),w:b.width,h:b.height};}
+  const r=(g.querySelector('.object-box')||g).getBoundingClientRect(),m=svgEl().getScreenCTM().inverse(),a=new DOMPoint(r.left,r.top).matrixTransform(m),b=new DOMPoint(r.right,r.bottom).matrixTransform(m);
+  return {x:a.x,y:a.y,w:b.x-a.x,h:b.y-a.y};
+}
+function refreshSel(){
+  if(!selected||selected==='background'||!svgEl()){selbox.style.display='none';return;}
+  const b=objectBox(selected);if(!b){selbox.style.display='none';return;}
+  const m=svgEl().getScreenCTM(),st=stageRect();
+  const p=new DOMPoint(b.x,b.y).matrixTransform(m),q=new DOMPoint(b.x+b.w,b.y+b.h).matrixTransform(m);
+  Object.assign(selbox.style,{display:'block',left:(p.x-st.left)+'px',top:(p.y-st.top)+'px',width:(q.x-p.x)+'px',height:(q.y-p.y)+'px'});
+  selbox.querySelector('.tag').textContent=OBJ_LABEL[selected]||selected;
+  selbox.querySelectorAll('.hdl').forEach(h=>h.style.display=objType(selected)==='logo'&&h.dataset.h.length===1?'none':'block');
+}
+function selectObj(name){if(name!==selected)textSelection=null;if(name!=='claim')claimAffects='text';selected=name;refreshSel();showCtx();}
+function hideGuides(){guideV.style.display=guideH.style.display='none';}
+function showGuideX(x){
+  const m=svgEl().getScreenCTM(),st=stageRect(),a=new DOMPoint(x,0).matrixTransform(m),b=new DOMPoint(x,FORMATS[state.format].h).matrixTransform(m);
+  Object.assign(guideV.style,{display:'block',left:(a.x-st.left)+'px',top:(a.y-st.top)+'px',height:(b.y-a.y)+'px'});
+}
+function showGuideY(y){
+  const m=svgEl().getScreenCTM(),st=stageRect(),a=new DOMPoint(0,y).matrixTransform(m),b=new DOMPoint(FORMATS[state.format].w,y).matrixTransform(m);
+  Object.assign(guideH.style,{display:'block',left:(a.x-st.left)+'px',top:(a.y-st.top)+'px',width:(b.x-a.x)+'px'});
+}
+function finishGesture(cancel=false){
+  if(!gesture)return;
+  const g=gesture;gesture=null;
+  if(cancel&&g.changed){state.ov[g.format]=g.before;history.pop();}
+  if(g.capture.hasPointerCapture(g.pointer))g.capture.releasePointerCapture(g.pointer);
+  hideGuides();render();showCtx();
+}
+function startGesture(e,id,handle,capture){
+  if(gesture||e.button!==0||!id||id==='background')return;
+  const b=objectBox(id);if(!b||!b.w||!b.h)return;
+  const inverse=svgEl().getScreenCTM().inverse(),p=new DOMPoint(e.clientX,e.clientY).matrixTransform(inverse);
+  const F=FORMATS[state.format],margin=Math.round(F.w*0.0583);
+  const tx=[0,margin,F.w/2,F.w-margin,F.w],ty=[0,margin,F.h/2,F.h-margin,F.h];
+  svgEl().querySelectorAll('.dobj').forEach(el=>{if(el.dataset.obj===id)return;const r=objectBox(el.dataset.obj);tx.push(r.x,r.x+r.w/2,r.x+r.w);ty.push(r.y,r.y+r.h/2,r.y+r.h);});
+  gesture={id,handle,capture,pointer:e.pointerId,inverse,p,b,tx,ty,scale:svgScale(),start:{...ovGet(id)},before:JSON.parse(JSON.stringify(ovFmt())),format:state.format};
+  capture.setPointerCapture(e.pointerId);e.preventDefault();e.stopPropagation();
+}
+frame.addEventListener('pointerdown',e=>{
+  if(e.button!==0||gesture)return;
+  const id=e.target.closest('.dobj')?.dataset.obj;selectObj(id||'background');
+  if(id)startGesture(e,id,null,frame);
 });
-frame.addEventListener('pointerup',e=>{
-  if(!drag) return;
-  ovSet(drag.name,{dx:drag._ndx!=null?drag._ndx:drag.dx0, dy:drag._ndy!=null?drag._ndy:drag.dy0});
-  drag.g.classList.remove('dragging'); guideV.style.display='none'; guideH.style.display='none';
-  drag=null; render();
+selbox.querySelectorAll('.hdl').forEach(h=>{
+  h.setAttribute('role','button');h.setAttribute('aria-label','Resize '+h.dataset.h);h.tabIndex=0;
+  h.addEventListener('pointerdown',e=>startGesture(e,selected,h.dataset.h,h));
 });
-
-// úchyty
-let hdrag=null;
-selbox.querySelectorAll('.hdl').forEach(hd=>hd.addEventListener('pointerdown',e=>{
-  if(!selected) return;
-  const svg=svgEl(), g=svg.querySelector(`.dobj[data-obj="${selected}"]`); let bb; try{bb=g.getBBox();}catch(err){return;}
-  const o=ovGet(selected);
-  hdrag={id:selected,corner:hd.dataset.h,k:svgScale(),sx:e.clientX,sy:e.clientY,bbh:bb.height,bbw:bb.width,
-    start:{dx:o.dx||0,dy:o.dy||0,sc:o.sc||1,w:o.w,dw:o.dw||0,dh:o.dh||0}};
-  hd.setPointerCapture(e.pointerId); e.preventDefault(); e.stopPropagation();
-}));
 window.addEventListener('pointermove',e=>{
-  if(!hdrag) return;
-  if(!hdrag.pushed){pushHistory();hdrag.pushed=true;}
-  const ddx=(e.clientX-hdrag.sx)*hdrag.k, ddy=(e.clientY-hdrag.sy)*hdrag.k;
-  const c=hdrag.corner, t=objType(hdrag.id), s=hdrag.start;
-  const right=/e/.test(c)&&!/w/.test(c)?1:0, left=/w/.test(c)?1:0, bottom=/s/.test(c)?1:0, top=/n/.test(c)?1:0;
-  if(t==='image'){
-    let dw=s.dw,dh=s.dh,dx=s.dx,dy=s.dy;
-    if(right)dw=s.dw+ddx; if(left){dw=s.dw-ddx;dx=s.dx+ddx;}
-    if(bottom)dh=s.dh+ddy; if(top){dh=s.dh-ddy;dy=s.dy+ddy;}
-    ovSet('image',{dw,dh,dx,dy}); render();
-  } else if(t==='logo'){
-    const f=Math.max(0.25,Math.min(5,(hdrag.bbw+(right?ddx:left?-ddx:ddx))/Math.max(20,hdrag.bbw)));
-    ovSet(hdrag.id,{sc:Math.max(0.25,Math.min(5,s.sc*f))}); render();
-  } else { // text
-    const isSideX=(c==='e'||c==='w'), isSideY=(c==='n'||c==='s');
-    if(isSideX){ // šířka boxu → zalomení
-      const curW=s.w!=null?s.w:hdrag.bbw;
-      let nw=curW+(right?ddx:-ddx); ovSet(hdrag.id,{w:Math.max(40,nw)}); render();
-    } else { // roh nebo n/s → velikost písma
-      const f=Math.max(0.3,Math.min(4,(hdrag.bbh+(bottom?ddy:top?-ddy:ddy))/Math.max(10,hdrag.bbh)));
-      ovSet(hdrag.id,{sc:Math.max(0.3,Math.min(4,s.sc*f))}); render();
-    }
+  const g=gesture;if(!g||e.pointerId!==g.pointer)return;
+  const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(g.inverse),dx=p.x-g.p.x,dy=p.y-g.p.y;
+  if(!g.changed&&Math.hypot(dx,dy)<0.01)return;
+  if(!g.changed){pushHistory();g.changed=true;}
+  hideGuides();
+  if(!g.handle){
+    const sx=e.altKey?{delta:dx,target:null}:CoverGeometry.snap([g.b.x,g.b.x+g.b.w/2,g.b.x+g.b.w],dx,g.tx,6*g.scale);
+    const sy=e.altKey?{delta:dy,target:null}:CoverGeometry.snap([g.b.y,g.b.y+g.b.h/2,g.b.y+g.b.h],dy,g.ty,6*g.scale);
+    ovSet(g.id,{dx:(g.start.dx||0)+sx.delta,dy:(g.start.dy||0)+sy.delta});render();
+    if(sx.target!==null)showGuideX(sx.target);if(sy.target!==null)showGuideY(sy.target);
+  }else{
+    const target=CoverGeometry.resizeBox(g.b,g.handle,dx,dy),type=objType(g.id),corner=g.handle.length===2;
+    if(type==='image'){
+      const d=autoLayout().image;ovSet(g.id,{dw:target.w-d.w,dh:target.h-d.h});
+    }else if(corner){
+      const factor=target.w/g.b.w;
+      ovSet(g.id,{sc:(g.start.sc||1)*factor,...(type==='text'?{w:(g.start.w??g.b.w)*factor,...(g.start.h?{h:g.start.h*factor}:{})}:{})});
+    }else if(g.handle==='e'||g.handle==='w')ovSet(g.id,{w:target.w});
+    else ovSet(g.id,{h:target.h});
+    // Reflow and font metrics can change the visual bounds. Anchor the actual
+    // rendered opposite corner, rather than the historical template origin.
+    ovSet(g.id,{dx:g.start.dx||0,dy:g.start.dy||0});render();
+    const actual=objectBox(g.id),west=g.handle.includes('w'),north=g.handle.includes('n');
+    const ax=west?g.b.x+g.b.w:g.b.x,ay=north?g.b.y+g.b.h:g.b.y;
+    const bx=west?actual.x+actual.w:actual.x,by=north?actual.y+actual.h:actual.y;
+    ovSet(g.id,{dx:(g.start.dx||0)+ax-bx,dy:(g.start.dy||0)+ay-by});render();
   }
-});
-window.addEventListener('pointerup',()=>{ if(hdrag) hdrag=null; });
+  e.preventDefault();
+},{passive:false});
+window.addEventListener('pointerup',e=>{if(gesture?.pointer===e.pointerId)finishGesture();});
+window.addEventListener('pointercancel',e=>{if(gesture?.pointer===e.pointerId)finishGesture(true);});
+window.addEventListener('lostpointercapture',e=>{if(gesture?.pointer===e.pointerId)finishGesture(true);});
+function alignObject(command){
+  const b=objectBox(selected);if(!b)return;
+  pushHistory();const F=FORMATS[state.format],m=Math.round(F.w*0.0583),o=ovGet(selected);let x=b.x,y=b.y;
+  if(command==='center-x')x=(F.w-b.w)/2;if(command==='center-y')y=(F.h-b.h)/2;
+  if(command==='left')x=m;if(command==='right')x=F.w-m-b.w;
+  if(command==='top')y=m;if(command==='bottom')y=F.h-m-b.h;
+  ovSet(selected,{dx:(o.dx||0)+x-b.x,dy:(o.dy||0)+y-b.y});render();
+}
 
-// editace textu přímo na plátně (dvojklik)
-let editEl=null;
+let editEl=null,textSelection=null;
+function updateContent(id,value){
+  state.textColors[id]=CoverText.edit(state.textColors[id]||[],state.content[id]||'',value);
+  state.content[id]=value;textSelection=null;updateRangeStatus();
+}
+function updateRangeStatus(){
+  const el=document.getElementById('range-status');if(!el)return;
+  const r=textSelection?.id===selected?textSelection:null;
+  el.textContent=r?'Barva výběru: „'+state.content[r.id].slice(r.start,r.end)+'“':'Barva celého textu';
+}
+function captureTextSelection(id){
+  if(!editEl)return;
+  const start=editEl.selectionStart,end=editEl.selectionEnd;
+  textSelection=end>start?{id,start,end}:null;updateRangeStatus();
+}
 function openEditor(id){
   if(!TEXTIDS.includes(id)) return;
   closeEditor(); pushHistory();
@@ -879,17 +1011,18 @@ function openEditor(id){
   editEl=document.createElement('textarea'); editEl.id='canvasEdit'; editEl.value=state.content[id];
   Object.assign(editEl.style,{position:'absolute',left:(bb.left-st.left)+'px',top:(bb.top-st.top)+'px',
     width:Math.max(140,bb.width)+'px',height:Math.max(32,bb.height+6)+'px',zIndex:12,
-    fontFamily:(state.font[id]==='serif'?"'IBM Plex Serif',serif":"'IBM Plex Sans',sans-serif"),
+    fontFamily:FF[COVER_FONTS[id]],
     fontSize:'15px',fontWeight:'600',lineHeight:'1.25',padding:'4px 6px',border:'2px solid var(--red)',
     borderRadius:'4px',background:'#fff',color:'#101432',resize:'none',boxShadow:'0 4px 16px rgba(16,20,50,.25)'});
   document.getElementById('stage').appendChild(editEl);
   editEl.focus(); editEl.select();
-  editEl.addEventListener('input',()=>{ state.content[id]=editEl.value;
+  editEl.addEventListener('input',()=>{ updateContent(id,editEl.value);
     const f=document.getElementById('f-'+id); if(f) f.value=editEl.value; render(); reposEditor(id); });
   editEl.addEventListener('keydown',ev=>{ ev.stopPropagation();
     if(ev.key==='Escape'){closeEditor();}
     else if(ev.key==='Enter'&&!ev.shiftKey&&id!=='claim'){ev.preventDefault();closeEditor();} });
-  editEl.addEventListener('blur',()=>closeEditor());
+  for(const event of ['select','keyup','pointerup'])editEl.addEventListener(event,()=>captureTextSelection(id));
+  editEl.addEventListener('blur',()=>{captureTextSelection(id);closeEditor();});
 }
 function reposEditor(id){ if(!editEl)return; const g=svgEl().querySelector(`.dobj[data-obj="${id}"]`); if(!g)return;
   const bb=g.getBoundingClientRect(), st=stageRect(); editEl.style.left=(bb.left-st.left)+'px'; editEl.style.top=(bb.top-st.top)+'px'; }
@@ -900,8 +1033,8 @@ frame.addEventListener('dblclick',e=>{ const g=e.target.closest('.dobj');
 // kolečko myši = zoom obrázku
 frame.addEventListener('wheel',e=>{
   const g=e.target.closest('.dobj[data-obj="image"]'); if(!g||!state.image) return;
-  e.preventDefault(); let z=(state.img.zoom||1)*(e.deltaY<0?1.08:0.926); z=Math.max(0.3,Math.min(3,z));
-  state.img.zoom=z; selectObj('image'); render();
+  e.preventDefault(); let z=(imgView().zoom||1)*(e.deltaY<0?1.08:0.926); z=Math.max(1,Math.min(3,z));
+  pushHistory();setImgView({zoom:z}); selectObj('image'); render();
 },{passive:false});
 
 // klávesy
@@ -916,22 +1049,22 @@ window.addEventListener('keydown',e=>{
 });
 window.addEventListener('resize',refreshSel);
 document.getElementById('panel').addEventListener('scroll',refreshSel,true);
-document.getElementById('autolayout').onclick=()=>{ pushHistory(); delete state.ov[state.format]; state.img={zoom:1,panX:0,panY:0}; selectObj(null); render(); toast('Auto-layout restored (this format)'); };
+document.getElementById('autolayout').onclick=()=>{ pushHistory(); delete state.ov[state.format]; delete state.imageViews[state.format]; selectObj(null); render(); toast('Auto-layout restored (this format)'); };
 // klik mimo objekt (kolem plátna) = odznačit; úchyty (#selbox) a plátno neruší
 document.getElementById('stage').addEventListener('pointerdown',e=>{
-  if(!e.target.closest('#frame') && !e.target.closest('#selbox') && !e.target.closest('#canvasEdit')) selectObj(null);
+  if(!e.target.closest('#frame') && !e.target.closest('#selbox') && !e.target.closest('#canvasEdit') && !e.target.closest('#stagebar')) selectObj(null);
 });
 
 // ------- UNDO (historie po krocích) -------
 let history=[];
 function snapshot(){ return JSON.stringify({format:state.format,dark:state.dark,chapter:state.chapter,accent:state.accent,
-  topLogo:state.topLogo,motif:state.motif,image:state.image,ogFormat:state.ogFormat,boxMode:state.boxMode,
-  content:state.content,font:state.font,color:state.color,border:state.border,img:state.img,ov:state.ov}); }
+  topLogo:state.topLogo,motif:state.motif,image:state.image,sourceMeta:state.sourceMeta,ogFormat:state.ogFormat,boxMode:state.boxMode,
+  content:state.content,textColors:state.textColors,font:state.font,color:state.color,border:state.border,img:state.img,imageViews:state.imageViews,mode:state.mode,ov:state.ov}); }
 function pushHistory(){ history.push(snapshot()); if(history.length>30) history.shift(); }
-function applySnap(js){ Object.assign(state, JSON.parse(js)); syncUI(); selectObj(null); render(); }
+function applySnap(js){ imageLoadVersion++; Object.assign(state, JSON.parse(js)); state.font={...COVER_FONTS};state.textColors=state.textColors||{};state.content.tag=state.content.tag||'';textSelection=null; syncUI(); selectObj(null); render(); }
 function undo(){ if(!history.length){ toast('Nothing to undo'); return; } applySnap(history.pop()); toast('Undone one step'); }
 document.getElementById('undo').onclick=undo;
-function syncUI(){
+function syncUI(){document.getElementById('f-tag').value=state.content.tag;document.getElementById('finished-design').checked=state.mode==='finished';
   document.getElementById('f-kicker').value=state.content.kicker;
   document.getElementById('f-headline').value=state.content.headline;
   document.getElementById('f-subtitle').value=state.content.subtitle;
@@ -964,7 +1097,7 @@ async function fontStyleTag(){
   })).filter(f=>f.range&&(f.range.includes('U+0000')||f.range.includes('U+0100')));
   const b64=buf=>{let s='';const a=new Uint8Array(buf),CH=0x8000;for(let i=0;i<a.length;i+=CH)s+=String.fromCharCode.apply(null,a.subarray(i,i+CH));return btoa(s);};
   const blocks=await Promise.all(faces.map(async f=>{const d=b64(await (await fetch(f.url)).arrayBuffer());
-    return `@font-face{font-family:'${f.fam}';font-style:normal;font-weight:${f.weight};src:url(data:font/woff2;base64,${d}) format('woff2');}`;}));
+    return `@font-face{font-family:'${f.fam}';font-style:normal;font-weight:${f.weight};src:url(data:font/woff2;base64,${d}) format('woff2');unicode-range:${f.range};}`;}));
   fontStyleCache=`<style>${blocks.join('')}</style>`; return fontStyleCache;
 }
 async function exportRaster(mime, quality){
@@ -981,17 +1114,50 @@ const ogWrap=document.getElementById('ogfmt');
 [['auto','Auto'],['jpeg','JPEG'],['png','PNG']].forEach(([v,label])=>{const b=document.createElement('button');
   b.className='minichip'+(state.ogFormat===v?' on':'');b.textContent=label;b.dataset.v=v;
   b.onclick=()=>{state.ogFormat=v;[...ogWrap.children].forEach(c=>c.classList.toggle('on',c.dataset.v===v));updateOgNote();};ogWrap.appendChild(b);});
-function updateOgNote(){const el=document.getElementById('ogfmt-note');if(!el)return;const F=FORMATS[state.format],f=pickOgFormat(),auto=state.ogFormat==='auto';
+function updateOgNote(){const button=document.getElementById('dlog');if(button)button.textContent=state.format==='link'?'⬇ Download OG image':state.format==='homepage'?'⬇ Download Homepage image':'⬇ Download social image';const el=document.getElementById('ogfmt-note');if(!el)return;const F=FORMATS[state.format],f=pickOgFormat(),auto=state.ogFormat==='auto';
   el.innerHTML=`${F.w}×${F.h} px · `+(auto?`auto → <b>${f.toUpperCase()}</b> (${f==='jpeg'?'photo / gradient':'graphics / text'})`:`manual <b>${f.toUpperCase()}</b>`);}
 document.getElementById('dlog').onclick=async()=>{const btn=document.getElementById('dlog');btn.disabled=true;
-  try{toast('Preparing fonts…');const f=pickOgFormat(),mime=f==='jpeg'?'image/jpeg':'image/png';
-    const blob=await exportRaster(mime,f==='jpeg'?0.92:undefined);saveBlob(blob,fileBase()+'-og.'+(f==='jpeg'?'jpg':'png'));
-    toast(`OG image · ${f.toUpperCase()} · ${(blob.size/1024).toFixed(0)} kB`);}
+  try{toast('Preparing fonts…');const exportKind=state.format==='link'?'og':state.format==='homepage'?'homepage':'social',exportBase=fileBase();const f=pickOgFormat(),mime=f==='jpeg'?'image/jpeg':'image/png';
+    const blob=await exportRaster(mime,f==='jpeg'?0.92:undefined);saveBlob(blob,exportBase+'-'+exportKind+'.'+(f==='jpeg'?'jpg':'png'));
+    toast(`${exportKind} image · ${f.toUpperCase()} · ${(blob.size/1024).toFixed(0)} kB`);}
   catch(e){toast('Export failed – are you offline? (fonts from Google Fonts)');}finally{btn.disabled=false;}};
 document.getElementById('dlsvg').onclick=()=>{const svg=buildSVG(state,true);saveBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}),fileBase()+'.svg');toast(`SVG · ${(new Blob([svg]).size/1024).toFixed(1)} kB`);};
-document.getElementById('dltool').onclick=()=>{selectObj(null);const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;saveBlob(new Blob([html],{type:'text/html'}),'poster-editor.html');toast('Tool downloaded – open by double-click');};
+
+let previewTimer,previewVersion=0,previewUrl=null;
+function schedulePreview(){
+  const version=++previewVersion;clearTimeout(previewTimer);
+  const og=state.format==='link';
+  document.getElementById('home-preview').hidden=state.format!=='homepage';
+  document.getElementById('og-preview').hidden=!og;
+  let overlay=document.getElementById('safe-overlay');
+  if(!overlay){overlay=document.createElement('div');overlay.id='safe-overlay';frame.appendChild(overlay);}
+  overlay.style.display=og&&document.getElementById('safe-toggle').checked?'block':'none';
+  hintEl.textContent=`${FORMATS[state.format].label} · ${FORMATS[state.format].w} × ${FORMATS[state.format].h} px`;
+  previewTimer=setTimeout(async()=>{
+    try{
+      await document.fonts.ready;
+      if(version!==previewVersion)return;
+      const blob=await exportRaster('image/png');
+      if(version!==previewVersion)return;
+      const old=previewUrl;previewUrl=URL.createObjectURL(blob);
+      for(const id of ['output-preview','landscape-preview','square-preview'])document.getElementById(id).src=previewUrl;
+      sendCardPreview();
+      if(old)setTimeout(()=>URL.revokeObjectURL(old),1000);
+      document.getElementById('preview-status').textContent='Preview uses the exported PNG. OG safe area is a practical guide, not a platform guarantee.';
+    }catch(e){document.getElementById('preview-status').textContent='Preview export failed. Check font/network availability before publishing.';}
+  },250);
+}
+function sendCardPreview(){
+  if(!previewUrl||state.format!=='homepage')return;
+  document.getElementById('card-preview').contentWindow?.postMessage({type:'datatimes-cover-preview',image:previewUrl,title:state.content.headline,excerpt:state.content.claim},location.origin);
+}
+window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===document.getElementById('card-preview').contentWindow&&e.data?.type==='datatimes-cover-preview-ready')sendCardPreview();});
+document.getElementById('safe-toggle').onchange=schedulePreview;
+document.getElementById('finished-design').onchange=e=>{finishGesture();pushHistory();state.mode=e.target.checked?'finished':'compose';selectObj(null);render();};
 
 syncAcc(); showCtx(); render();
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(render);
 </script>
+<script src="jszip.min.js"></script>
+<script src="cover-project.js"></script>
 </html>
