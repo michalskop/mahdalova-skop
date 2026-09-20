@@ -87,9 +87,8 @@
    below the card's stretched link, and never intercepts clicks. */
 .relatedBadgeOverlay {
   position: absolute;
-  /* Same offsets as the homepage ArticleCard badge (.rating): sits high in the
-     corner, not floating away from the top edge. */
-  top: var(--mantine-spacing-xs);
+  /* Sits tight in the top-right corner of the cover, hugging the top edge. */
+  top: rem(4px);
   right: rem(12px);
   z-index: 3;
   pointer-events: none;
