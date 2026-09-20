@@ -1,11 +1,12 @@
 ---
-title: "Paul Steiger: Co chtěli majitelé Amazonu a eBay od žurnalistiky"
+title: "Paul Steiger: Když padne nezávislá žurnalistika, ztratíme kontrolu nad realitou"
 date: "2026-08-01"
 author: "Janko Tietz & Marcel Rosenbach"
 translator: "Kateřina Mahdalová"
 excerpt: "Rozhovor se šéfredaktorem The Wall Street Journal a Pro Publica z roku 2013 o tom, jak miliardáři svým vstupem do médií začali měnit celý ekosystém zpravodajství. Redakce DataTimes.cz reflektuje, co se v médiích po jejich vstupu skutečně změnilo."
 coverImage: "images/paul-steiger-pro-publica-1-datatimes.webp"
-coverFit: cover
+coverFit: contain
+coverBg: "brandCoralRed.5"
 filter: ["kontext"]
 tags: ["Rozhovor: mediální byznys", "rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "USA"]
 promoted: 0
