@@ -130,7 +130,7 @@ def main():
 
     # Česká typografie: sváž jednopísmenné předložky/spojky s dalším slovem,
     # ať wrap() nikdy nezalomí za "k/s/v/z/o/u/a/i".
-    args.headline = fix_czech_typography(args.headline)
+    args.headline = fix_czech_typography(args.headline).replace("\\n", "\n")
     args.eyebrow = fix_czech_typography(args.eyebrow)
     args.section = fix_czech_typography(args.section)
 
@@ -188,18 +188,20 @@ def main():
 
     def wrap(text, fnt, max_w):
         d = ImageDraw.Draw(img)
-        lines, cur = [], ""
-        for w in text.split(" "):
-            t = (cur + " " + w).strip()
-            if d.textlength(t, font=fnt) <= max_w:
-                cur = t
-            else:
-                if cur:
-                    lines.append(cur)
-                cur = w
-        if cur:
-            lines.append(cur)
-        return lines
+        out = []
+        for para in text.split("\n"):  # explicitní zalomení přes \n
+            cur = ""
+            for w in para.split(" "):
+                t = (cur + " " + w).strip()
+                if d.textlength(t, font=fnt) <= max_w:
+                    cur = t
+                else:
+                    if cur:
+                        out.append(cur)
+                    cur = w
+            if cur:
+                out.append(cur)
+        return out
 
     MX, MAXW = 66, int(W * 0.633)
 
