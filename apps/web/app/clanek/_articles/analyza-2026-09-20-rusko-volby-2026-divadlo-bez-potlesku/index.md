@@ -3,8 +3,9 @@ title: "Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsled
 date: "2026-09-20"
 author: "Kateřina Mahdalová"
 excerpt: "První ruské parlamentní volby od plného vpádu na Ukrajinu nerozhodují o moci. Kreml předepsal Jednotnému Rusku výsledek mezi 47 a 53 procenty, soud vyřadil poslední protiválečnou stranu a učitelé v Jakutsku hlásí jména rodičů, kteří odvolili. Za hladkým průběhem se skrývá největší nervozita za deset let – a rozpočet 23 miliard rublů na rituál, jehož výsledek je znám předem."
-coverImage: "images/rusko-volby-2026-divadlo-bez-potlesku-datatimes.jpg"
-coverFit: cover
+coverImage: "images/rusko-volby-2026-divadlo-bez-potlesku-datatimes.webp"
+coverFit: contain
+coverBg: "brandChocolate.9"
 filter: ["analýza"]
 tags: ["Rusko", "ruské volby 2026", "Vladimir Putin", "Jednotné Rusko", "Duma", "Kreml", "válka na Ukrajině", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "autoritářství"]
 promoted: 76
