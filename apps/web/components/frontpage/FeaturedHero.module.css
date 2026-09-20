@@ -58,30 +58,26 @@
   align-self: flex-start;
 }
 
-/* Tlačítko „Více" → výpis rubriky. */
+/* „Více" → výpis rubriky. Stejný styl jako původní boční nadpis rubriky
+   („Výběr"): velký sans nadpis + vlnovková šipka, zarovnané doleva. */
 .more {
   align-self: flex-start;
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
   margin-top: 2px;
-  padding: 9px 20px;
-  border-radius: 999px;
-  background: var(--mantine-color-body, #fff);
-  color: var(--mantine-color-brandNavy-9, #101432);
-  font-family: var(--mantine-font-family-headings, inherit);
-  font-weight: 700;
   text-decoration: none;
-  transition: transform 0.15s ease;
 }
 
-.more:hover,
-.more:focus-visible {
-  transform: translateX(3px);
+.more:hover .moreTitle,
+.more:focus-visible .moreTitle {
+  text-decoration: underline;
 }
 
-.moreArrow {
-  font-weight: 700;
+.moreTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  max-width: 100%;
 }
 
 /* Mobil / užší tablet: lead nad sebou, pak tři karty, pak Více. */

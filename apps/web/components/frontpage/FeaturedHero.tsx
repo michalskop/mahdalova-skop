@@ -1,7 +1,8 @@
 'use client';
 
-import { Paper } from '@mantine/core';
+import { Paper, Title, useMantineTheme } from '@mantine/core';
 import { ArticleCard } from '@repo/ui/components/ArticleCard';
+import { Arrow } from '@repo/ui/components/Arrow';
 import type { Article } from '@repo/ui/lib/getArticles';
 import classes from './FeaturedHero.module.css';
 
@@ -27,6 +28,8 @@ export function FeaturedHero({
   moreLink = '/vyber',
   moreLabel = 'Více',
 }: FeaturedHeroProps) {
+  const theme = useMantineTheme();
+  const light = theme.colors.background[0];
   const lead = articles[0];
   const side = articles.slice(1, 4);
   if (!lead) return null;
@@ -47,9 +50,13 @@ export function FeaturedHero({
             </div>
           ))}
 
+          {/* „Více" jako původní nadpis rubriky: velký sans nadpis + vlnovková
+              šipka, zarovnané doleva, odkaz na výpis rubriky. */}
           <a className={classes.more} href={moreLink}>
-            {moreLabel}
-            <span className={classes.moreArrow} aria-hidden="true">→</span>
+            <Title order={2} c={light} className={classes.moreTitle}>
+              {moreLabel}
+              <Arrow size={80} color={light} />
+            </Title>
           </a>
         </div>
       </div>
