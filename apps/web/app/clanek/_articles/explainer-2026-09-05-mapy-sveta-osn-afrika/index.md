@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Valné shromáždění OSN podpořilo přesnější a pestřejší zobrazování světa na mapách. Pro hlasovalo 164 zemí včetně Česka, jedinou zemí proti byly Spojené státy. Spor o mapy přitom není technický – je to spor o to, kdo určuje, co ve světě vypadá velké a důležité."
 coverImage: "images/cover-mapy-sveta-datatimes.jpg"
 coverFit: "contain"
-coverBg: "brandAmethyst.10"
+coverBg: "brandAmethyst.9"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "OSN", "Afrika", "Mercator", "Equal Earth", "USA", "geopolitika"]
 promoted: 10
