@@ -17,20 +17,43 @@
 }
 
 /*
- * Kompaktní karty vpravo (Nerve styl): obrázek vlevo (~40 %), titulek + perex +
- * autor obtékají vpravo a přelévají se pod obrázek. Reuse ArticleCard přes float
- * – nezávisle na mobilním pravidle výpisů.
+ * Kompaktní karty vpravo (Nerve styl): náhled vlevo jako plný sloupec přes
+ * CELOU výšku karty (lícuje s horní, dolní i levou hranou – jako foto nahoře u
+ * svislých karet), vpravo titulek + perex + autor pod sebou. Řešeno CSS gridem
+ * (2 sloupce), aby obrázek držel výšku textu bez obtékání.
  */
 .sideItem :global(.mantine-Card-root) {
-  display: flow-root;
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  grid-template-rows: repeat(3, auto);
+  column-gap: var(--mantine-spacing-md);
+  align-items: start;
 }
 
+/* Náhled = levý sloupec přes celou výšku karty (grid-row 1/-1) a lícuje s
+   krajem karty: záporné marginy = padding karty (horní, dolní, levá hrana).
+   Obrázek uvnitř je absolutní (viz níže), takže výšku určuje textový sloupec.
+   Zaoblený vnější roh dělá samotná karta (overflow: hidden + radius). Štítek
+   rubriky sedí v pravém horním rohu náhledu (Badge je uvnitř odkazu). */
 .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
-  float: left;
-  width: 40%;
-  margin: 0 var(--mantine-spacing-md) var(--mantine-spacing-xs) 0;
-  border-radius: var(--mantine-radius-sm);
+  grid-column: 1;
+  grid-row: 1 / -1;
+  /* Sloupec s obrázkem musí vyplnit celou výšku (container má align-items:start
+     kvůli textu, jinak by se náhled smrskl na výšku svého absolutního obsahu). */
+  align-self: stretch;
+  position: relative;
+  margin: calc(var(--card-padding) * -1) 0 calc(var(--card-padding) * -1)
+    calc(var(--card-padding) * -1);
+  border-radius: 0;
   overflow: hidden;
+}
+
+/* Odkaz s obrázkem vyplní celý (na výšku protažený) sloupec – zruší pevný
+   poměr 5:4 a roztáhne se přes celou výšku i šířku náhledu. */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type > a {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto !important;
 }
 
 .sideItem :global(.mantine-Card-root) > a:global(.mantine-Text-root) {

@@ -146,19 +146,22 @@ export function ArticleCard({
             }}
             style={{ width: '100%', height: '100%', objectFit: fit, display: 'block' }}
           />
+
+          {/* Štítek rubriky sedí v pravém horním rohu náhledu (ne vedle titulku).
+              Je uvnitř odkazu na obrázek, takže se drží obrázku ve všech
+              rozloženích – i u vodorovné mobilní dlaždice, kde je náhled vlevo. */}
+          {tags.length > 0 && (
+            <Badge
+              key={tags[0]}
+              className={classes.rating}
+              variant="gradient"
+              gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[8] }}
+            >
+              {tags[0]}
+            </Badge>
+          )}
         </a>
       </Card.Section>
-
-      {tags.length > 0 && (
-        <Badge
-          key={tags[0]}
-          className={classes.rating}
-          variant="gradient"
-          gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[8] }}
-        >
-          {tags[0]}
-        </Badge>
-      )}
 
       <Text
         className={classes.title}
