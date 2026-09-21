@@ -75,6 +75,7 @@
 }
 
 .specialsItem {
+  position: relative;
   font-family: var(--mantine-font-family-headings) !important;
   color: rgba(255, 255, 255, 0.92) !important;
   font-size: 13.5px;
@@ -90,6 +91,27 @@
 .specialsItem[data-hovered] {
   background: rgba(255, 255, 255, 0.15) !important;
   color: #ffffff !important;
+}
+
+/* „Ukazovátko" – zkrácená vlnitá šipka (jen špička + první vlnka, viewBox v TSX)
+   na levém kraji položky, špičkou míří na text. Objeví se po najetí myší
+   jemným prolnutím + přisunutím zprava. */
+.specialsPointer {
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-4px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.specialsItem:hover .specialsPointer,
+.specialsItem[data-hovered] .specialsPointer {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 /* První položka „Volby" – jemné zvýraznění jen jasnější bílou, bez tučného. */

@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Menu } from '@mantine/core';
 import { IconSearch, IconChevronDown, IconStar } from '@tabler/icons-react';
 import LogoWithText from '@/components/common/LogoWithText';
+import { Arrow } from '@repo/ui/components/Arrow';
 import classes from './HeaderSimple.module.css';
 
 const navLinks = [
@@ -47,6 +48,20 @@ export function HeaderSimple() {
   const logoColor = scrolled ? theme.colors.brand[6] : theme.colors.background[9];
   const headerHeight = scrolled ? '60px' : '56px';
 
+  // Zkrácená vlnitá šipka jako „ukazovátko" v dropdownu speciálů: stejná šipka
+  // jako u rubrik, ale viewBox oříznutý jen na špičku + první vlnku (celá šipka
+  // je 0 0 400 200). Malá, bílá, umístěná CSS (.specialsPointer).
+  const specialsPointer = (
+    <Arrow
+      className={classes.specialsPointer}
+      viewBox="232 54 144 128"
+      width={16}
+      height={14}
+      color="#ffffff"
+      aria-hidden
+    />
+  );
+
   const desktopNavItems = (
     <>
       {/* Lupa ikona pro hledání – první v pořadí (hned za tlačítkem Podpořte nás). */}
@@ -78,42 +93,42 @@ export function HeaderSimple() {
             href="/tag/volby"
             className={`${classes.specialsItem} ${classes.specialsItemFeatured}`}
           >
-            Volby
+            {specialsPointer}Volby
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/data-pro-budouci-premierku"
             className={classes.specialsItem}
           >
-            Data pro budoucí premiérku
+            {specialsPointer}Data pro budoucí premiérku
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/kviff"
             className={classes.specialsItem}
           >
-            Festival Karlovy Vary v datech
+            {specialsPointer}Festival Karlovy Vary v datech
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/svobodna-media"
             className={classes.specialsItem}
           >
-            Svobodná média
+            {specialsPointer}Svobodná média
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/investigace"
             className={classes.specialsItem}
           >
-            M & Š investigace
+            {specialsPointer}M & Š investigace
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/klima"
             className={classes.specialsItem}
           >
-            Data o klimatu
+            {specialsPointer}Data o klimatu
           </Menu.Item>
           <Menu.Item
             component="a"
@@ -121,7 +136,7 @@ export function HeaderSimple() {
             target="_blank"
             className={classes.specialsItem}
           >
-            Sněmovna.DataTimes.cz ↗
+            {specialsPointer}Sněmovna.DataTimes.cz ↗
           </Menu.Item>
           <Menu.Item
             component="a"
@@ -129,7 +144,7 @@ export function HeaderSimple() {
             target="_blank"
             className={classes.specialsItem}
           >
-            Mandáty.cz ↗
+            {specialsPointer}Mandáty.cz ↗
           </Menu.Item>
           <Menu.Divider className={classes.specialsDivider} />
           <Menu.Item
