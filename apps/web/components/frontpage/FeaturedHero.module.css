@@ -114,3 +114,44 @@
     gap: var(--mantine-spacing-md);
   }
 }
+
+/* Úzký telefon: boční karty se zobrazí svisle jako lead „Al-Ahli" (obrázek
+   nahoře, text pod ním). Vodorovné rozvržení „náhled vlevo" drží čitelnou
+   podobu překvapivě dlouho (~550 px), pod ~480 px se ale text smrskne na pár
+   slov na řádek – proto teprve tady přepínáme na svislý tvar ArticleCard. */
+@media (max-width: 480px) {
+  .sideItem :global(.mantine-Card-root) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Náhled zpět nahoru přes celou šířku (5:4), lícuje s horní i bočními
+     hranami karty a má zaoblený horní roh jako lead. */
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
+    align-self: auto;
+    position: static;
+    margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) 0;
+    border-radius: var(--mantine-radius-md) var(--mantine-radius-md) 0 0;
+  }
+
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type > a {
+    position: static;
+    aspect-ratio: 5 / 4 !important;
+  }
+
+  /* Titulek a perex zpět do plné velikosti jako u leadu. */
+  .sideItem :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
+    font-size: var(--mantine-font-size-lg) !important;
+  }
+
+  .sideItem :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
+    -webkit-line-clamp: 4 !important;
+  }
+
+  /* Patička zpět na jeden řádek: datum vlevo, autor vpravo. */
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Group-root) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
