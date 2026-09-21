@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Title, Paper, useMantineTheme } from '@mantine/core';
+import { Box, Title, Paper, useMantineTheme } from '@mantine/core';
 import { useState } from 'react';
 import { ArticlesGrid, type ArticlesGridVariant } from './ArticlesGrid';
 import type { Article } from '../lib/getArticles';
@@ -73,10 +73,9 @@ export function ArticlesSection({
 
   return (
     <Paper py={16} bg={themeColor} radius={0}>
-      {/* Homepage varianty renderují mřížku přes celou šíři sekce (.grid), výpisy
-          ji obalují do <Container size="lg">. Nadpis proto sdílí stejný obal,
-          aby začínal přesně nad levým okrajem prvního sloupce karet. */}
-      {variant ? titleHeader : <Container size="lg" py={0}>{titleHeader}</Container>}
+      {/* Mřížka i nadpis mají stejný vodorovný okraj (px="md" = 16px = mezera
+          mezi kartami), takže nadpis lícuje s levým okrajem prvního sloupce. */}
+      {titleHeader}
 
       <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} variant={variant} />
     </Paper>

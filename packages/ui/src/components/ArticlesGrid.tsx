@@ -1,5 +1,5 @@
 'use client';
-import { Container, Space, Grid } from '@mantine/core';
+import { Box, Space, Grid } from '@mantine/core';
 import { useEffect, useRef, useState } from 'react';
 import { ArticleCard } from './ArticleCard';
 import type { Article } from '../lib/getArticles';
@@ -45,7 +45,7 @@ export function ArticlesGrid({ articles, articleBasePath, locale, adaptiveRows, 
 
   if (!adaptiveRows) {
     return (
-      <Container size="lg" py={0}>
+      <Box px="md">
         <Space h="md" />
         <Grid gutter="md">
           {articles.map((article) => (
@@ -59,7 +59,7 @@ export function ArticlesGrid({ articles, articleBasePath, locale, adaptiveRows, 
             </Grid.Col>
           ))}
         </Grid>
-      </Container>
+      </Box>
     );
   }
 
@@ -141,7 +141,7 @@ function AdaptiveGrid({
     </>
   );
 
-  // Homepage varianty využívají plnou šířku sekce; legacy adaptivní režim
-  // zůstává uvnitř Containeru jako dřív.
-  return variant ? grid : <Container size="lg" py={0}>{grid}</Container>;
+  // Všechny varianty využívají plnou šířku sekce; okraj mřížky = mezera mezi
+  // kartami (px="md" = 16px), aby okraje stránky lícovaly s mezerami v mřížce.
+  return variant ? grid : <Box px="md">{grid}</Box>;
 }

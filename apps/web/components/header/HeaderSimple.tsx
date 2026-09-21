@@ -49,6 +49,17 @@ export function HeaderSimple() {
 
   const desktopNavItems = (
     <>
+      {/* Lupa ikona pro hledání – první v pořadí (hned za tlačítkem Podpořte nás). */}
+      <Link
+        href="/search"
+        className={`${classes.link} ${pathname === '/search' ? classes.linkActive : ''}`}
+        aria-label="Hledat"
+        title="Hledat"
+        style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '8px' }}
+      >
+        <IconSearch size={18} stroke={1.8} />
+      </Link>
+
       {/* Speciály Dropdown */}
       <Menu trigger="hover" openDelay={40} closeDelay={140} shadow="lg" width={260}>
         <Menu.Target>
@@ -141,17 +152,6 @@ export function HeaderSimple() {
           {link.label}
         </Link>
       ))}
-
-      {/* Lupa ikona pro hledání */}
-      <Link
-        href="/search"
-        className={`${classes.link} ${pathname === '/search' ? classes.linkActive : ''}`}
-        aria-label="Hledat"
-        title="Hledat"
-        style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '8px' }}
-      >
-        <IconSearch size={18} stroke={1.8} />
-      </Link>
     </>
   );
 
