@@ -52,23 +52,23 @@ export default async function HomePage() {
 
       <SpecialsHero sectionLink="/specialy" />
 
-      {/* Hero blok (styl The Nerve): hlavní článek vlevo, 3 nejnovější vpravo
-          + „Více" → /vyber. Nahrazuje původní 2×2 sekci „Výběr", celá šířka. */}
-      <FeaturedHero
-        articles={articles}
-        themeColor="#5e66d5"
-        moreLink="/vyber" />
-
-      <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
-
-      {/* Volby (styl The Nerve, stejné rozvržení jako modrý pás výše): velký
-          hlavní článek vlevo, 3 nejnovější vpravo + vlnovková šipka „Více" →
-          /tag/volby. Červená („brand") zůstává po původní rubrice Analýzy;
-          rubrika Analýzy zůstává na /analyzy, na homepě ji nahrazují Volby. */}
+      {/* Volby = hlavní blok hned pod speciály (styl The Nerve): velký hlavní
+          článek vlevo, 3 nejnovější vpravo + vlnovková šipka „Více" → /tag/volby.
+          Červená („brand") zůstává po původní rubrice Analýzy; rubrika Analýzy
+          zůstává na /analyzy, na homepě ji nahrazují Volby. */}
       <FeaturedHero
         articles={articles_elections}
         themeColor="brand"
         moreLink="/tag/volby" />
+
+      <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
+
+      {/* Výběr (styl The Nerve): hlavní článek vlevo, 3 nejnovější vpravo +
+          „Více" → /vyber. Nedubluje články z rubriky Volby (viz filtr výše). */}
+      <FeaturedHero
+        articles={articles}
+        themeColor="#5e66d5"
+        moreLink="/vyber" />
 
       <ArticlesSection
         sectionTitle="Kontext"
