@@ -82,8 +82,8 @@
   font-weight: 400;
   border-radius: 8px;
   /* Levý žlábek 30px = prostor kolem malého ukazovátka (mezera vlevo od šipky
-     i mezi šipkou a textem). */
-  padding: 9px 14px 9px 30px;
+     i mezi šipkou a textem). !important přebíjí výchozí padding Mantine. */
+  padding: 9px 14px 9px 30px !important;
   transition:
     background-color 0.15s ease,
     color 0.15s ease;
@@ -133,7 +133,7 @@
   font-weight: 400;
   border-radius: 8px;
   /* Levý padding jako u položek, ať text lícuje (i bez ukazovátka). */
-  padding: 8px 14px 8px 30px;
+  padding: 8px 14px 8px 30px !important;
 }
 
 .specialsOverview:hover,
