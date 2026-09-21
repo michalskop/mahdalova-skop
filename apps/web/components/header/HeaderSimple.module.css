@@ -81,9 +81,9 @@
   font-size: 13.5px;
   font-weight: 400;
   border-radius: 8px;
-  /* Levý žlábek 30px = prostor kolem malého ukazovátka (mezera vlevo od šipky
-     i mezi šipkou a textem). !important přebíjí výchozí padding Mantine. */
-  padding: 9px 14px 9px 30px !important;
+  /* Levý žlábek 46px = prostor pro delší ukazovátko (šipka do druhé vlnky) i
+     mezera mezi šipkou a textem. !important přebíjí výchozí padding Mantine. */
+  padding: 9px 14px 9px 46px !important;
   transition:
     background-color 0.15s ease,
     color 0.15s ease;
@@ -100,7 +100,7 @@
    jemným prolnutím + přisunutím zprava. */
 .specialsPointer {
   position: absolute;
-  left: 8px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%) translateX(-5px);
   opacity: 0;
@@ -133,7 +133,7 @@
   font-weight: 400;
   border-radius: 8px;
   /* Levý padding jako u položek, ať text lícuje (i bez ukazovátka). */
-  padding: 8px 14px 8px 30px !important;
+  padding: 8px 14px 8px 46px !important;
 }
 
 .specialsOverview:hover,

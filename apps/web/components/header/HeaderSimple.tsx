@@ -54,8 +54,8 @@ export function HeaderSimple() {
   const specialsPointer = (
     <Arrow
       className={classes.specialsPointer}
-      viewBox="232 54 144 128"
-      width={15}
+      viewBox="165 54 210 128"
+      width={22}
       height={13}
       color="#ffffff"
       aria-hidden
@@ -76,7 +76,7 @@ export function HeaderSimple() {
       </Link>
 
       {/* Speciály Dropdown */}
-      <Menu trigger="hover" openDelay={40} closeDelay={140} shadow="lg" width={292}>
+      <Menu trigger="hover" openDelay={40} closeDelay={140} shadow="lg" width={310}>
         <Menu.Target>
           <Link
             href="/specialy"
