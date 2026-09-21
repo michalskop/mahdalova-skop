@@ -11,7 +11,7 @@ import LogoWithText from '@/components/common/LogoWithText';
 import classes from './HeaderSimple.module.css';
 
 const navLinks = [
-  { link: '/analyzy', label: 'Analýzy' },
+  { link: '/tag/volby', label: 'Volby' },
   { link: '/kontext', label: 'Kontext' },
   { link: '/podcasty', label: 'Podcasty' },
   { link: '/kdo-jsme', label: 'Kdo jsme' },
@@ -50,7 +50,7 @@ export function HeaderSimple() {
   const desktopNavItems = (
     <>
       {/* Speciály Dropdown */}
-      <Menu trigger="hover" openDelay={40} closeDelay={140} shadow="lg" width={240}>
+      <Menu trigger="hover" openDelay={40} closeDelay={140} shadow="lg" width={260}>
         <Menu.Target>
           <Link
             href="/specialy"
@@ -61,48 +61,70 @@ export function HeaderSimple() {
             <IconChevronDown size={14} stroke={1.8} />
           </Link>
         </Menu.Target>
-        <Menu.Dropdown style={{ background: '#ffffff', borderColor: '#e2e8f0', borderRadius: '10px', padding: '6px', zIndex: 1100 }}>
+        <Menu.Dropdown className={classes.specialsDropdown} style={{ zIndex: 1100 }}>
+          <Menu.Item
+            component={Link}
+            href="/tag/volby"
+            className={`${classes.specialsItem} ${classes.specialsItemFeatured}`}
+          >
+            Volby
+          </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/data-pro-budouci-premierku"
-            style={{ color: '#101432', fontSize: '13.5px', fontWeight: 600 }}
+            className={classes.specialsItem}
           >
             Data pro budoucí premiérku
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/kviff"
-            style={{ color: '#101432', fontSize: '13.5px' }}
+            className={classes.specialsItem}
           >
-            Festival KVIFF v datech
+            Festival Karlovy Vary v datech
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/svobodna-media"
-            style={{ color: '#101432', fontSize: '13.5px' }}
+            className={classes.specialsItem}
           >
             Svobodná média
           </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/investigace"
-            style={{ color: '#101432', fontSize: '13.5px' }}
+            className={classes.specialsItem}
           >
             M & Š investigace
+          </Menu.Item>
+          <Menu.Item
+            component={Link}
+            href="/specialy/klima"
+            className={classes.specialsItem}
+          >
+            Data o klimatu
           </Menu.Item>
           <Menu.Item
             component="a"
             href="https://snemovna.datatimes.cz"
             target="_blank"
-            style={{ color: '#101432', fontSize: '13.5px' }}
+            className={classes.specialsItem}
           >
-            Sněmovna DataTimes.cz ↗
+            Sněmovna.DataTimes.cz ↗
           </Menu.Item>
-          <Menu.Divider style={{ borderColor: '#e2e8f0', margin: '4px 0' }} />
+          <Menu.Item
+            component="a"
+            href="https://mandaty.cz"
+            target="_blank"
+            className={classes.specialsItem}
+          >
+            Mandáty.cz ↗
+          </Menu.Item>
+          <Menu.Divider className={classes.specialsDivider} />
           <Menu.Item
             component={Link}
             href="/specialy"
-            style={{ color: '#64748b', fontSize: '12px', fontWeight: 600 }}
+            className={classes.specialsOverview}
           >
             Přehled všech speciálů
           </Menu.Item>
