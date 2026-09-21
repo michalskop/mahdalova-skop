@@ -55,8 +55,8 @@ export function HeaderSimple() {
     <Arrow
       className={classes.specialsPointer}
       viewBox="232 54 144 128"
-      width={16}
-      height={14}
+      width={18}
+      height={16}
       color="#ffffff"
       aria-hidden
     />

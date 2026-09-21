@@ -98,7 +98,7 @@
    jemným prolnutím + přisunutím zprava. */
 .specialsPointer {
   position: absolute;
-  left: -4px;
+  left: -6px;
   top: 50%;
   transform: translateY(-50%) translateX(-4px);
   opacity: 0;
