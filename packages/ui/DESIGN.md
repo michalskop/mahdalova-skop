@@ -60,6 +60,20 @@ body font — on `apps/web` a serif badge looks wrong at pill size. Mantine's
 `.rating` in `ArticleCard.module.css`, `.relatedBadge` in `box.module.css`).
 This is a site-wide rule for any new badge.
 
+**Oval tag/badge — vertical centering (`text-box-trim`).** Verzálky (rubriky
+"MAPY", "RUSKO", "GAZA", "ŠVÉDSKO"…) nemají dolní dotažnice, takže defaultní
+řádkový box je posadí opticky moc vysoko (empiricky −4 px u čistých verzálek,
+až −8 px u slov s diakritikou). Řádkový box proto seřízni na skutečné okraje
+písma přes `text-box-trim: trim-both` na `.mantine-Badge-label`, s edge podle
+diakritiky:
+- **bez diakritiky** → `text-box-edge: cap alphabetic` (výška samotných verzálek),
+- **s diakritikou** (háčky/čárky) → `text-box-edge: text alphabetic` (nech nahoře
+  prostor pro diakritiku, ať se centruje celá výška i s háčky/čárkami).
+
+Rozliš to v komponentě (regex `HAS_ACCENT` na první tag v `ArticleCard.tsx`) a
+přepni třídu `.ratingPlain` / `.ratingAccent`. Prohlížeč bez podpory
+`text-box-trim` spadne zpět na původní chování. Platí pro každý nový oválný tag.
+
 ---
 
 ### Bleed / vyčuhující prvky (`apps/web`)

@@ -13,6 +13,13 @@ import classes from './ArticleCard.module.css';
 import { AuthorByline } from './AuthorByline';
 import { fitFor, resolvePaletteColor } from '../lib/coverFit';
 
+/**
+ * Má tag (verzálky rubriky) českou diakritiku s háčkem/čárkou nad písmenem?
+ * Podle toho se svisle centruje jinak – viz `.ratingAccent` / `.ratingPlain`
+ * v ArticleCard.module.css a pravidlo „Oválné tagy: svislé centrování" v DESIGN.md.
+ */
+const HAS_ACCENT = /[áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]/;
+
 interface ArticleCardProps {
   title: string;
   excerpt: string;
@@ -125,7 +132,9 @@ export function ArticleCard({
           {tags.length > 0 && (
             <Badge
               key={tags[0]}
-              className={classes.rating}
+              className={`${classes.rating} ${
+                HAS_ACCENT.test(tags[0]) ? classes.ratingAccent : classes.ratingPlain
+              }`}
               variant="gradient"
               gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[8] }}
             >

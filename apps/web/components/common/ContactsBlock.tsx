@@ -4,10 +4,13 @@
 import { Grid, Paper, Text, Title, Group, Stack, Anchor, Box, rem,useMantineTheme }from '@mantine/core';
 import {
   IconMail,
-  IconPhone, 
-  IconBrandX, 
+  IconPhone,
+  IconBrandX,
   IconBrandThreads,
-  IconBrandBluesky 
+  IconBrandBluesky,
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandLinkedin
 } from '@tabler/icons-react';
 import { useState } from 'react';
 
@@ -21,6 +24,9 @@ interface ContactPerson {
     bluesky: string;
     threads: string;
     twitter: string;
+    facebook?: string;   // cesta za facebook.com/
+    instagram?: string;  // handle bez @
+    linkedin?: string;   // cesta za linkedin.com/in/
   };
 }
 
@@ -34,7 +40,10 @@ const contacts: ContactPerson[] = [
     social: {
       bluesky: "katemahdalova.bsky.social",
       threads: "@katemahdalova",
-      twitter: "@data_zurnalist"
+      twitter: "@data_zurnalist",
+      facebook: "readerwriterKate",
+      instagram: "katemahdalova",
+      linkedin: "katerina-mahdalova-89050a70"
     }
   },
   {
@@ -175,14 +184,15 @@ export function ContactsBlock() {
                     </Group> */}
                   </Box>
 
-                  {/* Social Media */}
+                  {/* Social Media — pevné pořadí shodné s AuthorProfileCard:
+                      Bluesky → Facebook → Instagram → Twitter → Threads → LinkedIn */}
                   <Stack gap="xs">
                     <Group gap="xs">
-                      <IconBrandBluesky 
+                      <IconBrandBluesky
                         style={{ width: rem(20), height: rem(20) }}
                         stroke={1.5}
                       />
-                      <Anchor 
+                      <Anchor
                         href={`https://${person.social.bluesky}`}
                         underline="hover"
                         target="_blank"
@@ -192,12 +202,61 @@ export function ContactsBlock() {
                       </Anchor>
                     </Group>
 
+                    {person.social.facebook && (
+                      <Group gap="xs">
+                        <IconBrandFacebook
+                          style={{ width: rem(20), height: rem(20) }}
+                          stroke={1.5}
+                        />
+                        <Anchor
+                          href={`https://www.facebook.com/${person.social.facebook}`}
+                          underline="hover"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {person.social.facebook}
+                        </Anchor>
+                      </Group>
+                    )}
+
+                    {person.social.instagram && (
+                      <Group gap="xs">
+                        <IconBrandInstagram
+                          style={{ width: rem(20), height: rem(20) }}
+                          stroke={1.5}
+                        />
+                        <Anchor
+                          href={`https://www.instagram.com/${person.social.instagram.replace('@', '')}/`}
+                          underline="hover"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          @{person.social.instagram.replace('@', '')}
+                        </Anchor>
+                      </Group>
+                    )}
+
                     <Group gap="xs">
-                      <IconBrandThreads 
+                      <IconBrandX
                         style={{ width: rem(20), height: rem(20) }}
                         stroke={1.5}
                       />
-                      <Anchor 
+                      <Anchor
+                        href={`https://x.com/${person.social.twitter.replace('@', '')}`}
+                        underline="hover"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {person.social.twitter}
+                      </Anchor>
+                    </Group>
+
+                    <Group gap="xs">
+                      <IconBrandThreads
+                        style={{ width: rem(20), height: rem(20) }}
+                        stroke={1.5}
+                      />
+                      <Anchor
                         href={`https://threads.net/${person.social.threads.replace('@', '')}`}
                         underline="hover"
                         target="_blank"
@@ -207,20 +266,22 @@ export function ContactsBlock() {
                       </Anchor>
                     </Group>
 
-                    <Group gap="xs">
-                      <IconBrandX 
-                        style={{ width: rem(20), height: rem(20) }}
-                        stroke={1.5}
-                      />
-                      <Anchor 
-                        href={`https://x.com/${person.social.twitter.replace('@', '')}`}
-                        underline="hover"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {person.social.twitter}
-                      </Anchor>
-                    </Group>
+                    {person.social.linkedin && (
+                      <Group gap="xs">
+                        <IconBrandLinkedin
+                          style={{ width: rem(20), height: rem(20) }}
+                          stroke={1.5}
+                        />
+                        <Anchor
+                          href={`https://www.linkedin.com/in/${person.social.linkedin}/`}
+                          underline="hover"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          in/{person.social.linkedin}
+                        </Anchor>
+                      </Group>
+                    )}
                   </Stack>
                 </Stack>
               </Paper>

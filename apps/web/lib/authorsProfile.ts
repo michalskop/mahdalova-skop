@@ -7,6 +7,9 @@ export interface AuthorSocial {
   bluesky?: string; // handle bez protokolu, např. "katemahdalova.bsky.social"
   threads?: string; // handle s @, např. "@katemahdalova"
   twitter?: string; // handle s @, např. "@data_zurnalist"
+  facebook?: string; // cesta za facebook.com/, např. "readerwriterKate"
+  instagram?: string; // handle bez @, např. "katemahdalova"
+  linkedin?: string; // cesta za linkedin.com/in/, např. "katerina-mahdalova-89050a70"
 }
 
 export interface AuthorProfile {
@@ -27,6 +30,9 @@ const PROFILES: AuthorProfile[] = [
       bluesky: 'katemahdalova.bsky.social',
       threads: '@katemahdalova',
       twitter: '@data_zurnalist',
+      facebook: 'readerwriterKate',
+      instagram: 'katemahdalova',
+      linkedin: 'katerina-mahdalova-89050a70',
     },
   },
   {

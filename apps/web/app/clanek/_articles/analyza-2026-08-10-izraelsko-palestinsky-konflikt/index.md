@@ -163,7 +163,7 @@ Napětí mezi Izraelem a Íránem přerostlo v červnu 2025 v přímý dvanácti
 
 Původně lokální spor dvou národů o jedno území se tak stále těsněji propojuje se soupeřením Izraele, Íránu, arabských států a Spojených států o budoucí uspořádání celého Blízkého východu.
 
-## Rozhoduje se o roce 2027
+## Mezinárodní správa v roce 2027 a co dál?
 
 Návrh rezoluce OSN, o kterém jednají zprostředkovatelé, počítá s tím, že Gazu bude přechodně spravovat mezinárodní správa opřená o bezpečnostní sílu. Po vypršení jejího mandátu v roce 2027 má území převzít reformovaná Palestinská samospráva.
 

@@ -18,6 +18,22 @@
   font-family: var(--mantine-font-family-headings);
 }
 
+/* Svislé centrování textu v oválu. Verzálky nemají dolní dotažnice, takže by
+   defaultní řádkový box (s prostorem pro dotažnice i diakritiku) posadil text
+   moc vysoko. `text-box-trim` seřízne řádkový box na skutečné okraje písma:
+   - bez diakritiky → na výšku samotných verzálek (cap → baseline),
+   - s diakritikou  → nech nahoře prostor pro háčky/čárky (text → baseline).
+   Když prohlížeč `text-box-trim` neumí, zůstane původní chování (fallback). */
+.rating :global(.mantine-Badge-label) {
+  text-box-trim: trim-both;
+}
+.ratingPlain :global(.mantine-Badge-label) {
+  text-box-edge: cap alphabetic;
+}
+.ratingAccent :global(.mantine-Badge-label) {
+  text-box-edge: text alphabetic;
+}
+
 .imageLink {
   position: relative;
   z-index: 2;

@@ -7,6 +7,9 @@ import {
   IconBrandBluesky,
   IconBrandThreads,
   IconBrandX,
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandLinkedin,
 } from '@tabler/icons-react';
 import { getAuthorProfile } from '@/lib/authorsProfile';
 import styles from './AuthorProfileCard.module.css';
@@ -28,17 +31,28 @@ interface AuthorProfileCardProps {
 export default function AuthorProfileCard({ name }: AuthorProfileCardProps) {
   const profile = getAuthorProfile(name);
 
+  // Pořadí ikon je pevné a shodné napříč profily i kontakty (ContactsBlock):
+  // Bluesky → Facebook → Instagram → Twitter → Threads → LinkedIn → e-mail.
   const socials: { label: string; href: string; icon: ReactNode }[] = [];
   const s = profile?.social;
   if (s?.bluesky) {
     socials.push({ label: 'Bluesky', href: `https://${s.bluesky}`, icon: <IconBrandBluesky size={19} stroke={1.8} /> });
   }
+  if (s?.facebook) {
+    socials.push({ label: 'Facebook', href: `https://www.facebook.com/${s.facebook}`, icon: <IconBrandFacebook size={19} stroke={1.8} /> });
+  }
+  if (s?.instagram) {
+    socials.push({ label: 'Instagram', href: `https://www.instagram.com/${s.instagram.replace(/^@/, '')}/`, icon: <IconBrandInstagram size={19} stroke={1.8} /> });
+  }
+  if (s?.twitter) {
+    socials.push({ label: 'X', href: `https://twitter.com/${s.twitter.replace(/^@/, '')}`, icon: <IconBrandX size={19} stroke={1.8} /> });
+  }
   if (s?.threads) {
     const handle = s.threads.startsWith('@') ? s.threads : `@${s.threads}`;
     socials.push({ label: 'Threads', href: `https://www.threads.net/${handle}`, icon: <IconBrandThreads size={19} stroke={1.8} /> });
   }
-  if (s?.twitter) {
-    socials.push({ label: 'X', href: `https://twitter.com/${s.twitter.replace(/^@/, '')}`, icon: <IconBrandX size={19} stroke={1.8} /> });
+  if (s?.linkedin) {
+    socials.push({ label: 'LinkedIn', href: `https://www.linkedin.com/in/${s.linkedin}/`, icon: <IconBrandLinkedin size={19} stroke={1.8} /> });
   }
   if (profile?.email) {
     socials.push({ label: 'E-mail', href: `mailto:${profile.email}`, icon: <IconMail size={19} stroke={1.8} /> });
