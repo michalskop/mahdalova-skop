@@ -100,7 +100,7 @@
    jemným prolnutím + přisunutím zprava. */
 .specialsPointer {
   position: absolute;
-  left: 6px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%) translateX(-5px);
   opacity: 0;
