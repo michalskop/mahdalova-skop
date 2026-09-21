@@ -24,8 +24,13 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   // Zásobník článků na sekci – adaptivní mřížka z nich zobrazí tolik,
   // aby vyplnily celé řádky podle šířky displeje (3 na běžném desktopu, více na širokém).
-  const articles = await getArticles(8, undefined, true);
-  const articles_analyses = await getArticles(8, "analýza");
+  // Volby: červený pás na homepage (styl The Nerve) – vše s tagem „volby".
+  const articles_elections = await getArticles(8, undefined, false, "volby");
+  // Horní modrý „Výběr" pás nesmí dublovat to, co patří do rubriky Volby:
+  // vyřadíme z něj všechny články s tagem „volby" a teprve pak vybereme 8.
+  const articles = (await getArticles(20, undefined, true))
+    .filter((a) => !a.tags?.includes("volby"))
+    .slice(0, 8);
   const articles_contexts = await getArticles(8, "kontext");
   const articles_podcasts = await getArticles(8, "podcast");
 
@@ -56,11 +61,14 @@ export default async function HomePage() {
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
 
-      <ArticlesSection
-        sectionTitle="Analýzy"
-        sectionLink="/analyzy"
-        articles={articles_analyses}
-        themeColor="brand" variant="standard" />
+      {/* Volby (styl The Nerve, stejné rozvržení jako modrý pás výše): velký
+          hlavní článek vlevo, 3 nejnovější vpravo + vlnovková šipka „Více" →
+          /tag/volby. Červená („brand") zůstává po původní rubrice Analýzy;
+          rubrika Analýzy zůstává na /analyzy, na homepě ji nahrazují Volby. */}
+      <FeaturedHero
+        articles={articles_elections}
+        themeColor="brand"
+        moreLink="/tag/volby" />
 
       <ArticlesSection
         sectionTitle="Kontext"
