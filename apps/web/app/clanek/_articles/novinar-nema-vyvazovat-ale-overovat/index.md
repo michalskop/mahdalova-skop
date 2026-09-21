@@ -11,17 +11,21 @@ tags: ["Profil: novinářské principy", "profil", "žurnalistika", "média", "P
 promoted: 0
 ---
 
-Paula Steigera jsem v prvních minutách vůbec nepoznala. Z klubu v samém centru Lisabonu vycházel postarší muž s holí a šlo mu to do schodů docela těžko. Nabídla jsem mu pomoc, on ji přijal, sedli jsme si ke stolku venku před klubem a povídali si.
+Paula Steigera jsem v prvních minutách vůbec nepoznala. Z klubu v samém centru Lisabonu vycházel postarší muž o holi a šlo mu to do schodů docela těžko. Nabídla jsem mu pomoc, on ji přijal, sedli jsme si ke stolku venku před klubem a povídali si.
 
-Byl červen 2018, oba jsme tu byli na velké novinářské akci (konkrétně šlo o GEN – Global Editors Network – summit) a natrefili na sebe po jedné z ceremonií ve zmíněném klubu. Znala jsem jeho jméno i tvář z fotografií, dokonce jsem ho viděla i během programu předávat jednu z cen. Jen jsem si toho slavného muže z pódia nespojila s pánem, kterému jsem před chvílí pomáhala do schodů.
+Byl červen 2018, oba jsme tu byli na velké novinářské akci (konkrétně šlo o GEN – Global Editors Network – summit) a natrefili jsme na sebe po jedné z ceremonií.
 
-Zjistila jsem, že sedím s člověkem, který šestnáct let vedl The Wall Street Journal a později ve chvíli, kdy se chystal odejít do důchodu, se rozhodl zcela změnit plány a spoluzaložil ProPublica, projekt, který výrazně ovlivnil můj start samostatné datové novinářky. A tohle osobní noční setkání ovlivnilo i moji další cestu.
+<RelatedArticles preset="sidebar" slugs={["kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} position="right" heading="Napsali jsme" />
+
+Znala jsem jeho tvář z fotografií, dokonce jsem ho viděla i během programu předávat jednu z cen. Jen jsem si toho slavného muže z pódia nespojila s pánem, kterému jsem před chvílí pomáhala do schodů.
+
+Zjistila jsem, že sedím s člověkem, který šestnáct let vedl The Wall Street Journal a později, ve chvíli, kdy se chystal odejít do důchodu, se rozhodl zcela změnit plány a spoluzaložil projekt ProPublica, který výrazně ovlivnil můj start samostatné datové novinářky. A tohle naše osobní noční setkání ovlivnilo i moji další profesní cestu.
 
 ## „Spoj se s nejlepšími"
 
 Mluvili jsme dlouho. O stavu žurnalistiky, o penězích v médiích, o nových způsobech financování i o datové žurnalistice.
 
-Tehdy jsem vedla datové projekty v České tiskové kanceláři. Ukazovala jsem mu svoji práci – vizualizace, na kterých jsem pár let budovala svůj nový obor. Paul Steiger si je zájmem prohlížel, zkoušel s nimi interagovat a řekl mi, že to dělám skvěle.
+Tehdy jsem vedla datové projekty v České tiskové kanceláři. Ukazovala jsem mu svoji práci – vizualizace, na kterých jsem pár let budovala svůj nový obor. Paul Steiger si je se zájmem prohlížel, zkoušel s nimi interagovat a řekl mi, že to dělám skvěle.
 
 Samozřejmě se se mnou tehdy vůbec bavit nemusel. Bylo pozdě, mohl se omluvit a jít spát. Byla jsem novinářka z malé středoevropské země, která mu ukazovala svoje grafy. On měl za sebou vedení jedné z nejslavnějších redakcí světa, šestnáct Pulitzerových cen udělených jeho lidem.
 
@@ -29,23 +33,19 @@ Přesto se na moji práci díval, zajímal se a doptával se. Vyslechl si moje p
 
 Spoj se s nejlepšími, řekl mi – a já to udělala. Dal mi kuráž, abych neostýchala spolupracovat s největšími světovými redakcemi. Dal mi mail na svou kolegyni z Wall Street Journal… a už to jelo. Zahraničních redakcí, s nimiž jsem později spolupracovala a spolupracuji, jsou zhruba dvě desítky.
 
----
-
+```infobox right
 Global Editors Network tehdy spojovala redaktory, editory, vývojáře a lidi, kteří dost zaměřovali na budoucnost žurnalistiky. Její Data Journalism Awards patřily k nejvýznamnějším mezinárodním soutěžím oboru. V roce 2016 jsem se mezi jejich finalistky dostala i já a na summit pak jezdila opakovaně.
 
 Paul Steiger byl se soutěží spojený dlouhodobě a v roce 2018 předsedal její mezinárodní porotě. Vybírala z 630 projektů z 58 zemí, do finále postoupilo 86 z nich. Zasedal také ve vedení Global Editors Network
 
 V červnu 2018 jsme se na summitu jako obvykle bavili se s kolegy, „networkingovali“, vyměňovali si zkušenosti nebo jen dávali vědět o své existenci. Náhodou to vyšlo, že jsem se zde potkala i s Martinem Štverákem, který byl i mého setkání s Paulem Steigerem, a ještě jsem netušila, že se za pár let stane mým kolegou v Seznamu.
-
----
+```
 
 Paul Steiger patří k nejvýraznějším americkým novinářům své generace. Žurnalistice se věnuje přes půl století. Prošel Los Angeles Times i The Wall Street Journal, který v letech 1991 až 2007 vedl jako managing editor. Za jeho éry získala redakce šestnáct Pulitzerových cen. Potom založil neziskovou investigativní redakci ProPublica a stal se jejím prvním šéfredaktorem. Vedl také Výbor na obranu novinářů a zasedal ve výboru Pulitzerovy ceny.
 
 ProPublica vznikla z přesvědčení, že nákladná investigativní práce je pro demokracii příliš důležitá, než aby zmizela spolu s rozpadajícím se obchodním modelem novin. Steiger chtěl redakci, která odhaluje zneužívání moci a selhání těch, komu byla svěřena, a své rozsáhlé investigace poskytuje dalším médiím – aby měly co největší dopad.
 
 Jeho tehdejší úvahy o financování médií znějí dnes překvapivě aktuálně. V rozhovoru pro německý Der Spiegel v roce 2013 mluvil o investigativní žurnalistice jako o veřejném statku. O neziskových redakcích, filantropii, spolupráci mezi médii i o vznikajícím novém „ekosystému zpráv“.
-
-<RelatedArticles preset="sidebar" slugs={["kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} position="right" heading="Napsali jsme" />
 
 ## Daniel Pearl a jeho únos
 
