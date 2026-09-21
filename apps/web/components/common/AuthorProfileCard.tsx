@@ -7,7 +7,7 @@ import {
   IconBrandBluesky,
   IconBrandThreads,
   IconBrandX,
-  IconBrandFacebook,
+  IconBrandMeta,
   IconBrandInstagram,
   IconBrandLinkedin,
 } from '@tabler/icons-react';
@@ -39,7 +39,7 @@ export default function AuthorProfileCard({ name }: AuthorProfileCardProps) {
     socials.push({ label: 'Bluesky', href: `https://${s.bluesky}`, icon: <IconBrandBluesky size={19} stroke={1.8} /> });
   }
   if (s?.facebook) {
-    socials.push({ label: 'Facebook', href: `https://www.facebook.com/${s.facebook}`, icon: <IconBrandFacebook size={19} stroke={1.8} /> });
+    socials.push({ label: 'Facebook', href: `https://www.facebook.com/${s.facebook}`, icon: <IconBrandMeta size={19} stroke={1.8} /> });
   }
   if (s?.instagram) {
     socials.push({ label: 'Instagram', href: `https://www.instagram.com/${s.instagram.replace(/^@/, '')}/`, icon: <IconBrandInstagram size={19} stroke={1.8} /> });

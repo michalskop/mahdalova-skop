@@ -20,18 +20,15 @@
 
 /* Svislé centrování textu v oválu. Verzálky nemají dolní dotažnice, takže by
    defaultní řádkový box (s prostorem pro dotažnice i diakritiku) posadil text
-   moc vysoko. `text-box-trim` seřízne řádkový box na skutečné okraje písma:
-   - bez diakritiky → na výšku samotných verzálek (cap → baseline),
-   - s diakritikou  → nech nahoře prostor pro háčky/čárky (text → baseline).
-   Když prohlížeč `text-box-trim` neumí, zůstane původní chování (fallback). */
+   opticky moc vysoko. `text-box-trim` seřízne řádkový box na výšku samotných
+   verzálek (cap → baseline), takže se verzálky vycentrují. `overflow: visible`
+   je nutné, aby se háčky/čárky (Š, É, Í…), které přesahují nad verzálky, jen
+   přirozeně ukázaly nad vycentrovaným textem a neořízly se. Prohlížeč bez
+   podpory `text-box-trim` spadne zpět na původní chování (fallback). */
 .rating :global(.mantine-Badge-label) {
   text-box-trim: trim-both;
-}
-.ratingPlain :global(.mantine-Badge-label) {
   text-box-edge: cap alphabetic;
-}
-.ratingAccent :global(.mantine-Badge-label) {
-  text-box-edge: text alphabetic;
+  overflow: visible;
 }
 
 .imageLink {

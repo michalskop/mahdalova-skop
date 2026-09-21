@@ -8,7 +8,7 @@ import {
   IconBrandX,
   IconBrandThreads,
   IconBrandBluesky,
-  IconBrandFacebook,
+  IconBrandMeta,
   IconBrandInstagram,
   IconBrandLinkedin
 } from '@tabler/icons-react';
@@ -204,7 +204,7 @@ export function ContactsBlock() {
 
                     {person.social.facebook && (
                       <Group gap="xs">
-                        <IconBrandFacebook
+                        <IconBrandMeta
                           style={{ width: rem(20), height: rem(20) }}
                           stroke={1.5}
                         />
