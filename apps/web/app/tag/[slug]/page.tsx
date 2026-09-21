@@ -60,10 +60,12 @@ export default async function Page({ params }: PageProps) {
       m="0 auto"
     >
       <>
+        {/* Rubrika Volby má stejný červený pás jako na homepage; ostatní tagy
+            zůstávají v modré. Titulek s velkým počátečním písmenem (Volby). */}
         <ArticlesSection
-          sectionTitle={`${originalTag}`}
+          sectionTitle={originalTag.charAt(0).toUpperCase() + originalTag.slice(1)}
           articles={articles}
-          themeColor="brandRoyalBlue.3"
+          themeColor={slug === 'volby' ? 'brand' : 'brandRoyalBlue.3'}
         />
         <SubscribeNewsletter 
           actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'
