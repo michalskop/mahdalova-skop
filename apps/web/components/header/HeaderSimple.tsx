@@ -15,7 +15,7 @@ const navLinks = [
   { link: '/tag/volby', label: 'Volby' },
   { link: '/kontext', label: 'Kontext' },
   { link: '/podcasty', label: 'Podcasty' },
-  { link: '/kdo-jsme', label: 'Kdo jsme' },
+  { link: '/o-nas', label: 'O nás' },
 ];
 
 export function HeaderSimple() {

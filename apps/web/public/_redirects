@@ -68,3 +68,7 @@
 /clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra /clanek/novinar-nema-vyvazovat-ale-overovat 301
 /clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/ /clanek/novinar-nema-vyvazovat-ale-overovat 301
 /clanek/_articles/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/* /clanek/_articles/novinar-nema-vyvazovat-ale-overovat/:splat 301
+
+# Stránka „Kdo jsme" nahrazena novým intrem /o-nas (2026-09-22).
+/kdo-jsme    /o-nas    301
+/kdo-jsme/   /o-nas    301

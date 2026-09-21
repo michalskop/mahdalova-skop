@@ -73,7 +73,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Kontext](${baseUrl}/kontext): Kontextové články vysvětlující složitá témata a souvislosti.
 - [Podcasty](${baseUrl}/podcasty): Audio rozhovory a diskuse k aktuálním tématům.
 - [Speciály](${baseUrl}/specialy): Tematické datové projekty, investigace a dlouhodobé série.
-- [O autorech](${baseUrl}/kdo-jsme): Redakční profily, kontakty a informace o projektu.
+- [O nás](${baseUrl}/o-nas): Kdo jsme, proč děláme datovou žurnalistiku, kontakty a informace o projektu.
 
 ## Vybrané články
 
@@ -109,7 +109,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
   content += `## Kontakt
 
-- [O autorech a kontakt](${baseUrl}/kdo-jsme)
+- [O nás a kontakt](${baseUrl}/o-nas)
 - [Kateřina Mahdalová](${baseUrl}/autor/katerina-mahdalova)
 - [Michal Škop](${baseUrl}/autor/michal-skop)
 `;
