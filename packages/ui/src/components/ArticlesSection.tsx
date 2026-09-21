@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Title, Paper, useMantineTheme } from '@mantine/core';
+import { Box, Container, Title, Paper, useMantineTheme } from '@mantine/core';
 import { useState } from 'react';
 import { ArticlesGrid, type ArticlesGridVariant } from './ArticlesGrid';
 import type { Article } from '../lib/getArticles';
@@ -41,38 +41,43 @@ export function ArticlesSection({
   const [isTitleHovered, setIsTitleHovered] = useState(false);
   const shouldShowArrow = sectionTitle.length <= 14;
 
+  {/* Nadpis rubriky (Volby, Analýzy, Kontext, Výběr…) je nově NAD kartami přes
+      celou šířku – dřívější boční 200px pás zmizel, takže trojice karet pod ním
+      využijí plnou šíři stránky. px="md" lícuje s vnitřním paddingem mřížky. */}
+  const titleHeader = (
+    <Box px="md" pb={8}>
+      <a
+        href={sectionLink}
+        rel="noopener noreferrer"
+        onMouseEnter={() => setIsTitleHovered(true)}
+        onMouseLeave={() => setIsTitleHovered(false)}
+        style={{
+          textDecoration: isTitleHovered ? 'underline' : 'none',
+          display: 'inline-flex',
+          maxWidth: '100%',
+          color: theme.colors.background[0]
+        }}
+      >
+        <Title
+          order={2}
+          ta="left"
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '5px', maxWidth: '100%' }}
+          c={theme.colors.background[0]}
+        >
+          {sectionTitle}
+          {shouldShowArrow ? <Arrow size={80} color={theme.colors.background[0]} /> : null}
+        </Title>
+      </a>
+    </Box>
+  );
+
   return (
     <Paper py={16} bg={themeColor} radius={0}>
-      {/* Nadpis rubriky (Volby, Analýzy, Kontext, Výběr…) je nově NAD kartami
-          přes celou šířku – dřívější boční 200px pás zmizel, takže trojice
-          karet pod ním využijí plnou šíři stránky. px="md" lícuje s vnitřním
-          paddingem mřížky, aby nadpis začínal nad prvním sloupcem. */}
-      <Box px="md" pb={8}>
-        <a
-          href={sectionLink}
-          rel="noopener noreferrer"
-          onMouseEnter={() => setIsTitleHovered(true)}
-          onMouseLeave={() => setIsTitleHovered(false)}
-          style={{
-            textDecoration: isTitleHovered ? 'underline' : 'none',
-            display: 'inline-flex',
-            maxWidth: '100%',
-            color: theme.colors.background[0]
-          }}
-        >
-          <Title
-            order={2}
-            ta="left"
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '5px', maxWidth: '100%' }}
-            c={theme.colors.background[0]}
-          >
-            {sectionTitle}
-            {shouldShowArrow ? <Arrow size={80} color={theme.colors.background[0]} /> : null}
-          </Title>
-        </a>
-      </Box>
+      {/* Homepage varianty renderují mřížku přes celou šíři sekce (.grid), výpisy
+          ji obalují do <Container size="lg">. Nadpis proto sdílí stejný obal,
+          aby začínal přesně nad levým okrajem prvního sloupce karet. */}
+      {variant ? titleHeader : <Container size="lg" py={0}>{titleHeader}</Container>}
 
-      {/* Mřížka přes celou šíři (vlastní vnitřní padding 16px má .grid). */}
       <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} variant={variant} />
     </Paper>
   );
