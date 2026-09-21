@@ -25,4 +25,4 @@ A jaká jsou naše přání?
 
 Nepřejeme si nic menšího než uchránit demokracii doma i ve světě. Sobě i vám přejeme nezávislá média, ověřené informace a svobodu projevu. A také míň algoritmů, co nás a hlavně naše děti drží u displejů. Přejeme si etickou AI, která slouží všem lidem. Přejeme si rovné příležitosti pro všechny, dostupné bydlení i vymahatelnost práva. A normální život v bezpečí pro lidi v Izraeli i Palestině a také spravedlivý mír pro Ukrajinu. A co si přejete vy?
 
-<RelatedArticles slugs={["kontext-2026-01-03-ceska-a-slovenska-media-2025", "kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie", "kontext-2026-08-02-paul-steiger-jsi-fakt-dobra"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2026-01-03-ceska-a-slovenska-media-2025", "kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie", "novinar-nema-vyvazovat-ale-overovat"]} heading="Doporučujeme" />

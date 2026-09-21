@@ -21,9 +21,9 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 ## Vybrané články
 
 ### Volební analýzy a modely
-- [Vývoj predikce výsledku voleb](https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb)
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Do obecních zastupitelstev i Senátu 2026 kandiduje nejméně lidí za víc než dvacet let](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu)
+- [Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
+- [Ruské volby: Jak se vyrábí volební vítězství](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi)
 
 ### Ekonomika a ceny
 - [Data: Zastropování marží benzínek v peněžence moc nepoznáte](https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu)
@@ -31,24 +31,24 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Esej: Ekonomie pozornosti, dopaminové pasti a život s ADHD v digitální době](https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti)
 
 ### Mezinárodní politika
-- [Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně](https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika)
-- [Soud nařídil státu omluvu za výrok ministra o Palestincích. Hlavní česká média o rozsudku mlčela](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-nenavist-k-palestincum-u-soudu-evropa)
-- [Paul Steiger: Jsi fakt dobrá! Spoj se s těmi nejlepšími](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra)
+- [Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
+- [Ruské volby: Jak se vyrábí volební vítězství](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi)
+- [Nemocnice Al-Ahli: dost záběrů na desítky analýz, málo na jediný verdikt](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace)
 
 ### Dezinformace a média
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Soud nařídil státu omluvu za výrok ministra o Palestincích. Hlavní česká média o rozsudku mlčela](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-nenavist-k-palestincum-u-soudu-evropa)
+- [Nemocnice Al-Ahli: dost záběrů na desítky analýz, málo na jediný verdikt](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace)
 - [Příčovy: „nepolitické“ vlastenecké setkání, kam osm let jezdí předsedové stran](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-23-pricovy-politicka-setkani)
 
 ### Vzdělávání a společnost
+- [Dolly Parton: Vyrostla s otcem, který neuměl číst. Dětem pak poslala přes 300 milionů knih](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-dolly-parton)
 - [Boj o udržení pozornosti](https://www.mahdalova-skop.cz/clanek/podcast-2025-12-21-boj-o-pozornost)
 - [Volba rektora VŠE: co říkají data o Ševčíkově fakultě](https://www.mahdalova-skop.cz/clanek/explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak)
-- [Změny klimatu: 75 % úmrtí způsobených horkem v Mexiku připadá na lidi mladší 35 let](https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi)
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
 - [Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně](https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika)
-- [Kdo koupí CNN. Průvodce pro každého](https://www.mahdalova-skop.cz/clanek/explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho)
+- [Rukojmí se vrátili, Hamás zůstal ozbrojený. Proč příměří v Gaze neukončilo izraelsko-palestinský konflikt](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-10-izraelsko-palestinsky-konflikt)
 
 ## Kontakt
 

@@ -63,3 +63,8 @@
 /clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem /clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem 301
 /clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/ /clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem 301
 /clanek/_articles/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/* /clanek/_articles/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/:splat 301
+
+# Preserve shared article and image URLs after the Steiger article update.
+/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra /clanek/novinar-nema-vyvazovat-ale-overovat 301
+/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/ /clanek/novinar-nema-vyvazovat-ale-overovat 301
+/clanek/_articles/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/* /clanek/_articles/novinar-nema-vyvazovat-ale-overovat/:splat 301

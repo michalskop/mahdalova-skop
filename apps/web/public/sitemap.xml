@@ -62,12 +62,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem</loc>
-    <lastmod>2025-08-24T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami</loc>
     <lastmod>2026-03-18T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -118,12 +112,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci</loc>
     <lastmod>2026-08-25T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-08-27-obecni-i-senatni-volby-2026-nejmene-kandidatu</loc>
-    <lastmod>2026-08-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -326,12 +314,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2025-08-29-volby-2025-skryte-koalice-podcast</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2025-10-15-turek-a-jeho-nevysvetlene-prijmy</loc>
     <lastmod>2025-10-15T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -386,20 +368,26 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra</loc>
-    <lastmod>2026-08-02T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich</loc>
     <lastmod>2026-06-16T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-dolly-parton</loc>
+    <lastmod>2026-08-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-05-skutecna-velikost-sveta</loc>
     <lastmod>2026-09-05T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace</loc>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -418,6 +406,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/mandaty-unikatni-volebni-model</loc>
     <lastmod>2025-02-18T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/novinar-nema-vyvazovat-ale-overovat</loc>
+    <lastmod>2026-08-02T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -448,6 +442,18 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost</loc>
     <lastmod>2027-03-26T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem</loc>
+    <lastmod>2025-08-24T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2025-08-29-skryte-koalice-podcast</loc>
+    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -483,7 +489,7 @@
   </url>
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-07-vyvoj-predikce-vysledku-voleb</loc>
-    <lastmod>3025-12-12T00:00:00.000Z</lastmod>
+    <lastmod>2025-10-07T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -496,6 +502,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2025-10-13-kam-kracis-cesko</loc>
     <lastmod>2025-10-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu</loc>
+    <lastmod>2026-08-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -538,6 +550,24 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-rumunsko-2024-12-20-rumunsko-volby-eu</loc>
     <lastmod>2024-12-20T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku</loc>
+    <lastmod>2026-09-20T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi</loc>
+    <lastmod>2026-09-20T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-svedsko-2026-09-13-tesny-souboj-bloku</loc>
+    <lastmod>2026-09-13T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
