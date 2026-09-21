@@ -16,6 +16,23 @@
   --dt-bleed-gap: 1.75rem;  /* gap between the element and the wrapping text */
 }
 
+/* Oválné tagy/badge (rubriky „ANALÝZA"/„KONTEXT", tag pill v kartách…): svislé
+   centrování verzálek PLOŠNĚ na celém webu (jeden zdroj pravdy). Verzálky nemají
+   dolní dotažnice, takže defaultní řádkový box je posadí opticky moc vysoko;
+   `text-box-trim` seřízne řádkový box na výšku samotných verzálek (cap →
+   baseline), takže se vycentrují. `overflow: visible` nechá háčky/čárky
+   (Š, É, Í…) přesahující nad verzálky přirozeně vykreslit (Mantine label má
+   jinak overflow: hidden a ořízl by je). Standardní CSS (CSS Inline Layout 3),
+   ne hack; prohlížeč bez podpory `text-box-trim` spadne na původní chování.
+   Viz packages/ui/DESIGN.md → „Oval tag/badge — vertical centering".
+   Dvoutřídní selektor drží přednost nad Mantine defaultem (overflow: hidden)
+   bez ohledu na pořadí importů CSS, bez !important. */
+.mantine-Badge-root .mantine-Badge-label {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  overflow: visible;
+}
+
 /* Contain the article's floats within the body so a bleeding element near the
    end never overlaps the byline above or the "Doporučujeme"/SupportBanner
    below. overflow stays visible, so the -12% bleed still paints outside. */

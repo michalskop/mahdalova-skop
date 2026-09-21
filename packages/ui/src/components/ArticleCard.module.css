@@ -2,6 +2,12 @@
   position: relative;
   background-color: var(--mantine-color-body);
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Karta se na hover zvětšuje (scale). Bez promoce na vlastní kompozitní
+     vrstvu prohlížeč překresluje text (včetně tagu v oválu) mezi klidem a
+     hoverem jinak, takže tag opticky „poskočí". `will-change: transform` je
+     standardní hint, který kartu drží na vrstvě a vykreslení textu je v obou
+     stavech konzistentní. */
+  will-change: transform;
 }
 
 .card:hover {
@@ -18,18 +24,9 @@
   font-family: var(--mantine-font-family-headings);
 }
 
-/* Svislé centrování textu v oválu. Verzálky nemají dolní dotažnice, takže by
-   defaultní řádkový box (s prostorem pro dotažnice i diakritiku) posadil text
-   opticky moc vysoko. `text-box-trim` seřízne řádkový box na výšku samotných
-   verzálek (cap → baseline), takže se verzálky vycentrují. `overflow: visible`
-   je nutné, aby se háčky/čárky (Š, É, Í…), které přesahují nad verzálky, jen
-   přirozeně ukázaly nad vycentrovaným textem a neořízly se. Prohlížeč bez
-   podpory `text-box-trim` spadne zpět na původní chování (fallback). */
-.rating :global(.mantine-Badge-label) {
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
-  overflow: visible;
-}
+/* Svislé centrování textu v oválu řeší jedno plošné pravidlo pro celý web
+   (`.mantine-Badge-label` v apps/web/app/globals.css), ať je zdroj pravdy
+   jediný. Viz packages/ui/DESIGN.md → „Oval tag/badge — vertical centering". */
 
 .imageLink {
   position: relative;

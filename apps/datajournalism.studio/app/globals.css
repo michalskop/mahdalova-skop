@@ -2,6 +2,16 @@
    @mantine/styles (v6) package. Colour values reference Mantine v7 CSS
    variables so they stay in sync with the theme in ThemeProvider. */
 
+/* Oválné tagy/badge: svislé centrování verzálek plošně (shodné s apps/web).
+   `text-box-trim` seřízne řádkový box na výšku verzálek (cap → baseline);
+   `overflow: visible` nechá diakritiku nad verzálkami přirozeně vykreslit.
+   Viz packages/ui/DESIGN.md → „Oval tag/badge — vertical centering". */
+.mantine-Badge-root .mantine-Badge-label {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  overflow: visible;
+}
+
 /* Article body links (ArticleRenderer with withContainer=true).
    --article-link-color is set by ArticleRenderer when an article defines a
    custom text colour. */

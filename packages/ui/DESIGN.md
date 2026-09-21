@@ -63,16 +63,30 @@ This is a site-wide rule for any new badge.
 **Oval tag/badge — vertical centering (`text-box-trim`).** Verzálky (rubriky
 "MAPY", "RUSKO", "GAZA", "ŠVÉDSKO"…) nemají dolní dotažnice, takže defaultní
 řádkový box je posadí opticky moc vysoko (empiricky −4 px u čistých verzálek,
-až −8 px u slov s diakritikou). Řádkový box proto seřízni na výšku samotných
-verzálek přes `text-box-trim: trim-both; text-box-edge: cap alphabetic` na
-`.mantine-Badge-label`, aby se verzálky vycentrovaly. K tomu **`overflow:
-visible`** na labelu, aby se háčky/čárky (Š, É, Í…), které přesahují nad
-verzálky, jen přirozeně ukázaly nad vycentrovaným textem a neořízly se
-(Mantine label má jinak `overflow: hidden`). Pozn.: `text-box-edge: text
-alphabetic` (plná accentová výška) posadí slova s diakritikou naopak opticky
-moc nízko — nepoužívej. Prohlížeč bez podpory `text-box-trim` spadne zpět na
-původní chování. Platí pro každý nový oválný tag (`.rating` v ArticleCard,
-stejný princip pro další badge).
+až −8 px u slov s diakritikou). Řešeno **jedním plošným pravidlem pro celý web**
+na `.mantine-Badge-label` (v `apps/web/app/globals.css`, stejné v DJS) — ne
+per-komponentu, ať je zdroj pravdy jediný a centrování platí u všech badge:
+
+```css
+.mantine-Badge-label {
+  text-box-trim: trim-both;          /* seřízne řádkový box… */
+  text-box-edge: cap alphabetic;     /* …na výšku samotných verzálek → vycentruje */
+  overflow: visible;                 /* háčky/čárky nad verzálkami se ukážou, neořežou */
+}
+```
+
+Je to **standardní CSS** (CSS Inline Layout 3), ne hack. `overflow: visible` je
+nutné, protože Mantine label má `overflow: hidden` a diakritiku přesahující nad
+verzálky by jinak ořízl. Pozn.: `text-box-edge: text alphabetic` (plná
+accentová výška) posadí slova s diakritikou naopak opticky moc nízko —
+nepoužívej. Prohlížeč bez podpory `text-box-trim` spadne zpět na původní
+chování.
+
+**Hover-stabilita:** karty (`ArticleCard .card`) se na hover zvětšují
+(`transform: scale`). Bez promoce na kompozitní vrstvu prohlížeč překresluje
+text mezi klidem a hoverem jinak, takže tag opticky „poskočí". Proto má `.card`
+`will-change: transform` (standardní hint), aby bylo vykreslení v obou stavech
+konzistentní.
 
 ---
 
