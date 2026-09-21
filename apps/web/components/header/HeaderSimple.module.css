@@ -81,9 +81,9 @@
   font-size: 13.5px;
   font-weight: 400;
   border-radius: 8px;
-  /* Levý žlábek 50px = prostor pro celé ukazovátko (celá vlnitá šipka). Vpravo
-     jen malý padding, ať okno není zbytečně široké. !important přebíjí Mantine. */
-  padding: 9px 10px 9px 50px !important;
+  /* Levý žlábek 56px = prostor pro celé (mírně zmenšené) ukazovátko + odsazení
+     titulků doprava. Vpravo jen malý padding, ať okno není zbytečně široké. */
+  padding: 9px 10px 9px 56px !important;
   transition:
     background-color 0.15s ease,
     color 0.15s ease;
@@ -116,11 +116,6 @@
   transform: translateY(-50%) translateX(0);
 }
 
-/* První položka „Volby" – jemné zvýraznění jen jasnější bílou, bez tučného. */
-.specialsItemFeatured {
-  color: #ffffff !important;
-}
-
 .specialsDivider {
   border-color: rgba(255, 255, 255, 0.18) !important;
   margin: 6px 4px !important;
@@ -133,7 +128,7 @@
   font-weight: 400;
   border-radius: 8px;
   /* Levý padding jako u položek, ať text lícuje (i bez ukazovátka). */
-  padding: 8px 10px 8px 50px !important;
+  padding: 8px 10px 8px 56px !important;
 }
 
 .specialsOverview:hover,

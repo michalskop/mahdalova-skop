@@ -55,8 +55,8 @@ export function HeaderSimple() {
     <Arrow
       className={classes.specialsPointer}
       viewBox="0 54 380 128"
-      width={40}
-      height={14}
+      width={36}
+      height={12}
       color="#ffffff"
       aria-hidden
     />
@@ -88,13 +88,6 @@ export function HeaderSimple() {
           </Link>
         </Menu.Target>
         <Menu.Dropdown className={classes.specialsDropdown} style={{ zIndex: 1100 }}>
-          <Menu.Item
-            component={Link}
-            href="/tag/volby"
-            className={`${classes.specialsItem} ${classes.specialsItemFeatured}`}
-          >
-            {specialsPointer}Volby
-          </Menu.Item>
           <Menu.Item
             component={Link}
             href="/specialy/data-pro-budouci-premierku"
