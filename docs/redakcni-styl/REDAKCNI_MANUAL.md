@@ -69,6 +69,7 @@ Nekopírujeme jednoho autora. Z různých linií bereme funkční nástroje a sp
 - **Carole Cadwalladr** — tah textu a jasně pojmenované sázky: o co jde, koho se to týká, kdo má moc to změnit.
 - **Petr Třešňák a Tomáš Němeček** — lidské ukotvení, pozorovaný detail, čistá civilní čeština. Detail musí být reportovaný nebo transparentně odvozený z dat. (Podrobná metoda: [NAVOD_STYL_TRESNAK.md](NAVOD_STYL_TRESNAK.md).)
 - **Daniel Prokop** — systémová diagnóza bez moralizování: příčiny, distribuce dopadů, realistický směr řešení.
+- **Lenka Bobíková (Právo / Novinky.cz)** — poutavé vyprávění pevně ukotvené v konkrétu. Text otevírá přímým tvrzením nebo úderným detailem, ne rozjezdovou atmosférou, a každou myšlenku drží u země jménem, datem, místem a číslem (Dorota Kučerčina před nymburským soudem roku 1586; provoz nalezince začal 30. července 1789). Případ nebo jednotlivý osud nese širší dějinný argument — mikro a makro se střídají. Rytmus staví na proměnlivé délce vět: krátká oznamovací věta nese informaci a tempo příběhu, ne mechanický důraz (drž se pravidla „Rytmus vychází z myšlenky" níže — ne staccato šablona). Zdroje a doklady vplétá přímo do vyprávění, důvěryhodnost tvoří přesností detailu. Přístupné, neakademické, i když je látka odborná. **Doplňuje, nenahrazuje** Třešňáka a Prokopa — je to další hlas, z něhož čerpáme, ne náhrada.
 
 Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis musí být rozpoznatelně náš: **přesný, civilní, analytický a férový.**
 
