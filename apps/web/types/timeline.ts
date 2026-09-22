@@ -36,6 +36,8 @@ export interface TimelineEvent {
   persons?: TimelinePerson[];
   link?: string;
   linkText?: string;
+  barValue?: number;
+  barLabel?: string;
 }
 
 export interface TimelineContent {
@@ -44,5 +46,10 @@ export interface TimelineContent {
   lastUpdated?: string;
   collapsedYears?: number[];
   facetGroups?: TimelineFacetGroup[];
+  layout?: 'vertical' | 'horizontal';
+  hideLegend?: boolean;
+  barMax?: number;
+  barReferenceValue?: number;
+  barReferenceLabel?: string;
   events: TimelineEvent[];
 }

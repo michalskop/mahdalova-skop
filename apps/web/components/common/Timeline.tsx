@@ -226,6 +226,105 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
   const borderColor = theme.colors.background?.[5] || theme.colors.gray[2];
   const lineColor = theme.colors.background?.[9] || theme.colors.gray[4];
 
+  if (content.layout === 'horizontal') {
+    const horizontalEvents = events.filter((e) => eventMatchesFacets(e, activeFacets));
+    const barMax = content.barMax || 6;
+    const referenceValue = content.barReferenceValue;
+    const referencePercent =
+      typeof referenceValue === 'number' ? Math.max(0, Math.min(100, (referenceValue / barMax) * 100)) : undefined;
+    const barColor = theme.colors.brandRoyalBlue?.[6] || theme.colors.brandNavy?.[6] || theme.colors.blue[6];
+
+    return (
+      <Box className={className} style={{ position: 'relative' }}>
+        <Card withBorder radius={0} p="xl" style={{ background: theme.white, borderColor }}>
+          <Stack gap={4} align="center">
+            <Title order={2} style={{ color: theme.colors.brandNavy?.[9] || theme.colors.dark[9] }}>
+              {fixCzechTypography(content.title || '')}
+            </Title>
+            {content.subtitle ? (
+              <Text c="dimmed" size="sm" ta="center">
+                {fixCzechTypography(content.subtitle)}
+              </Text>
+            ) : null}
+            {content.lastUpdated ? (
+              <Text size="xs" style={{ color: theme.colors.brandRoyalBlue?.[3] || theme.colors.gray[6] }}>
+                {content.lastUpdated}
+              </Text>
+            ) : null}
+          </Stack>
+        </Card>
+
+        <Box
+          maw={900}
+          mx="auto"
+          style={{ overflowX: 'auto', padding: '1.5rem 1rem 1rem', background: theme.white }}
+        >
+          <Box style={{ minWidth: Math.max(760, horizontalEvents.length * 132), position: 'relative' }}>
+            {typeof referencePercent === 'number' ? (
+              <Box
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  right: 0,
+                  top: `${24 + (100 - referencePercent) * 1.2}px`,
+                  borderTop: `1px dashed ${theme.colors.brandDeepRed?.[5] || theme.colors.red[5]}`,
+                  zIndex: 0,
+                }}
+              >
+                {content.barReferenceLabel ? (
+                  <Text size="xs" style={{ position: 'absolute', right: 0, top: -18, color: theme.colors.gray[6] }}>
+                    {content.barReferenceLabel}
+                  </Text>
+                ) : null}
+              </Box>
+            ) : null}
+
+            <Box style={{ display: 'flex', alignItems: 'flex-end', gap: 12, position: 'relative', zIndex: 1 }}>
+              {horizontalEvents.map((event) => {
+                const value = typeof event.barValue === 'number' ? event.barValue : 0;
+                const height = Math.max(0, Math.min(100, (value / barMax) * 100));
+                return (
+                  <Box key={event.id || event.title} style={{ flex: '1 1 0', minWidth: 112, textAlign: 'center' }}>
+                    <Text size="xs" fw={700} style={{ color: theme.colors.brandNavy?.[9], marginBottom: 6 }}>
+                      {fixCzechTypography(event.date)}
+                    </Text>
+                    <Box style={{ height: 120, position: 'relative', borderBottom: `1px solid ${lineColor}` }}>
+                      <Box
+                        style={{
+                          position: 'absolute',
+                          left: '50%',
+                          bottom: 0,
+                          transform: 'translateX(-50%)',
+                          width: 'min(52px, 70%)',
+                          height: `${height}%`,
+                          minHeight: value > 0 ? 4 : 0,
+                          borderRadius: '5px 5px 0 0',
+                          background: barColor,
+                        }}
+                      >
+                        <Text size="xs" fw={700} style={{ position: 'absolute', top: -20, left: 0, right: 0, color: barColor }}>
+                          {event.barLabel || `${value.toLocaleString('cs-CZ')} %`}
+                        </Text>
+                      </Box>
+                    </Box>
+                    <Text fw={600} size="sm" mt={8} style={{ lineHeight: 1.25 }}>
+                      {fixCzechTypography(event.title)}
+                    </Text>
+                    {event.summary ? (
+                      <Text size="xs" mt={4} style={{ color: theme.colors.gray[6], lineHeight: 1.35 }}>
+                        {fixCzechTypography(event.summary)}
+                      </Text>
+                    ) : null}
+                  </Box>
+                );
+              })}
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    );
+  }
+
   const renderLegendDot = (key: string, active: boolean, hasFilter: boolean, flag?: string) => {
     if (flag) {
       return (

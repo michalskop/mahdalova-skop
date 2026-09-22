@@ -12,7 +12,7 @@ promoted: 0
 Meklenbursko‑Přední Pomořansko zvolilo nový zemský sněm. Vyhrála AfD, SPD vedená Manuelou Schwesig ubránila druhé místo – a CDU (Křesťanskodemokratická unie) se poprvé v dějinách Spolkové republiky nedostala do žádného zemského parlamentu. Že strana skončí pod pěti procenty, ukazovala datová predikce od dvojice novinářů Mahdalová & Škop už od chvíle, kdy volební noc sotva začala. Veřejnoprávní projekce přitom držely CDU nad čarou ještě po desáté večer.
 
 ```infobox
-Co se týče lidovecké CDU, dosud byl jejím nejhorším výsledkem devítiprocentní zisk v Brémách roku 1951. Těsně pod hranicí zůstalo i Spojenectví Sahry Wagenknechtové (4,8 %), liberálové z FDP se propadli z 5,8 na jedno procento. Volební účast stoupla na 78,1 procenta, o víc než sedm bodů.
+Co se týče lidovecké CDU, dosud byl jejím nejhorším výsledkem devítiprocentní zisk v Brémách roku 1951. Těsně pod hranicí zůstalo i Spojenectví Sahry Wagenknecht (4,8 %), liberálové z FDP se propadli z 5,8 na jedno procento. Volební účast stoupla na 78,1 procenta, o víc než sedm bodů.
 ```
 
 Je to výsledek, který se zapíše do učebnic politologie: křesťanští demokraté skončili na 4,9 procenta – a poprvé od vzniku Spolkové republiky vypadla některá z tradičních „lidových stran“ ze zemského parlamentu.
@@ -26,7 +26,7 @@ Přesně před rokem předala premiérka Schwesig ve Stralsundu Angele Merkel ř
 ```infobox info
 **Výsledek jsme znali od začátku sčítání**
 
-Když se v šest večer zavřely volební místnosti, exit polly veřejnoprávních stanic postavily CDU přesně na hranu: [ZDF](https://wahltool.zdf.de/wahlergebnisse/2026-09-20-LT-DE-MV.html) jí přisoudilo rovných 5,0 procenta, [ARD](https://www.infratest-dimap.de/umfragen-analysen/bundeslaender/mecklenburg-vorpommern/) 5,5. O půl hodiny později, v 18:27, přišla první projekce [Forschungsgruppe Wahlen](https://wahltool.zdf.de/wahlergebnisse/2026-09-20-LT-DE-MV.html) postavená už na skutečně sečtených hlasech – a CDU v ní stála na 5,1 procenta, „pouhou desetinu bodu nad pětiprocentní hranicí“, jak psala německá média. Ještě dlouho do večera tak veřejnoprávní ARD i ZDF držely křesťanské demokraty na hranici nebo těsně nad ní; titulky se ptaly, zda straně hrozí „super‑GAU“, a stejně tak se o postup „třáslo“ i Spojenectví Sahry Wagenknechtové. Teprve ve 22:13 u ARD a ve 22:20 u ZDF spadla CDU v projekcích poprvé pod pět procent, na 4,9.
+Když se v šest večer zavřely volební místnosti, exit polly veřejnoprávních stanic postavily CDU přesně na hranu: [ZDF](https://wahltool.zdf.de/wahlergebnisse/2026-09-20-LT-DE-MV.html) jí přisoudilo rovných 5,0 procenta, [ARD](https://www.infratest-dimap.de/umfragen-analysen/bundeslaender/mecklenburg-vorpommern/) 5,5. O půl hodiny později, v 18:27, přišla první projekce [Forschungsgruppe Wahlen](https://wahltool.zdf.de/wahlergebnisse/2026-09-20-LT-DE-MV.html) postavená už na skutečně sečtených hlasech – a CDU v ní stála na 5,1 procenta, „pouhou desetinu bodu nad pětiprocentní hranicí“, jak psala německá média. Ještě dlouho do večera tak veřejnoprávní ARD i ZDF držely křesťanské demokraty na hranici nebo těsně nad ní; titulky se ptaly, zda straně hrozí „super‑GAU“, a stejně tak se o postup „třáslo“ i Spojenectví Sahry Wagenknecht. Teprve ve 22:13 u ARD a ve 22:20 u ZDF spadla CDU v projekcích poprvé pod pět procent, na 4,9.
 
 První záznam v archivu mahdalova-skop.cz (DataTimes.cz) má čas 19:15:32 a obsahuje oficiálně sečtená data zhruba ze čtvrtiny evidovaných okrsků. CDU v jejich průběžném součtu získávala 3,8 procenta a predikční model DataTimes.cz odhadoval konečný zisk sice o necelé procento vyšší, ale zároveň z něj bylo patrné, že se CDU do zemského sněmu nedostane. O tři čtvrtě hodiny později, v osm večer, vyskočil průběžně sečtený zisk CDU na 4,2 procenta a volební predikce DataTimes.cz se posunula na 4,78. Lidovci tedy hlasy sbírali a zisk strany průběžně rostl – model však spočítal, že CDU nepřekročí nutnou pětiprocentní hranici pro zvolení do sněmu; ani jednou se v průběhu sčítání nevychýlil nad pět procent a nejvyšší predikovaná hodnota byla 4,9 procenta, což se nakonec i naplnilo. Oficiální první úplný součet nese v datech zemského volebního úřadu (Landeswahlleitung M‑V) čas 00:06:50 druhý den ráno a hodnotu 4,888 procenta.
 ```
@@ -41,13 +41,7 @@ Právě v tom je rozdíl mezi datovou predikcí a tím, co v tu chvíli viděli 
 
 Proč nestačilo dívat se prostě na průběžné číslo? Protože okrsky odevzdávají výsledky postupně. Když jsou mezi prvními místa, kde má některá strana silnější podporu, vypadá v průběžném součtu úspěšněji, než jaká nakonec bude po celé zemi – u jiné strany to může být naopak. Model využívá výsledky spolkových voleb 2025 k hledání podobných jednotek a podle právě sečtených výsledků průběžně upravuje odhad stranického posunu; z nahlášené části tak dopočítává i tu dosud nesečtenou.
 
-> **📊 Dvě čísla téhož večera: kdy padlo „pod pět procent“**
->
-> **Veřejnoprávní odhady (ARD / ZDF)** – 18:00 **exit poll: CDU 5,0 % (ZDF) / 5,5 % (ARD)** – 18:27 první projekce: CDU **5,1 %** („desetina bodu nad hranicí“) – 22:13 / 22:20: CDU poprvé pod pěti procenty: **4,9 %**
->
-> **Model DataTimes (Mahdalová & Škop)** – 19:15:32: bodový odhad **4,46 %** (průběžně 3,79 %) – 19:59:59: bodový odhad **4,78 %** (průběžně 4,22 %) – žádný odhad po 19:15 nad 5 %; maximum **4,90 %** – 00:06:50 první úplný součet **4,888 %**
->
-> **Oficiální výsledek: 4,9 %** – veřejnoprávní projekce držely CDU na hranici nebo nad ní víc než tři hodiny; model měl výsledek pod pěti procenty už od prvního čtení po 19. hodině.
+<Timeline yamlFile="timeline.yaml" />
 
 ## Dvě salvy jásotu a chlebíčky v Berlíně
 
@@ -72,6 +66,8 @@ Kritika přišla obratem. Politolog Karl‑Rudolf Korte mluvil v ZDF o „ruiná
 Vraťme se na začátek, do Stralsundu. Když tam loni v září Manuela Schwesig předávala Angele Merkel řád země, připomněla zemská vláda její podíl na stavbě dálnice A20, mostu na Rujánu i na podpoře stralsundských muzeí. Byla to pocta konkrétní političce – a mimoděk i připomínka doby, kdy CDU tenhle kraj spoluutvářela. V roce 1990 byla s 38,3 procenta nejsilnější stranou zemského sněmu. V roce 2021 měla 13,3 procenta a dvanáct mandátů. Podle předběžných výsledků letošních voleb nemá ani jeden.
 
 Volební večer se přitom pro CDU průběžně zlepšoval; číslo pomalu rostlo. Podstatné bylo odhadnout, zda zbývající hlasy budou stačit na pět procent. Právě na tuto otázku odpovídala datová predikce dřív, než se dopočítal poslední okrsek – a odpověď zněla ne.
+
+
 
 
 
