@@ -22,6 +22,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Poprvé od roku 1949 vypadla CDU ze zemského sněmu. Náš model to ukázal od prvního sčítání](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2026-09-20-cdu-meklenbursko)
 - [Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
 - [Ruské volby: Jak se vyrábí volební vítězství](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi)
 

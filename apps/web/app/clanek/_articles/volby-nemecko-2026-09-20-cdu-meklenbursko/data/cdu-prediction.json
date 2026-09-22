@@ -1,0 +1,1901 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Predikce CDU zůstávala pod pětiprocentní hranicí",
+    "subtitle": "Podíl druhých hlasů (%) • 20.–21. září 2026 • místní čas CEST"
+  },
+  "_source": "Mahdalová & Škop: archiv predikcí; Landeswahlleitung M-V: průběžné výsledky",
+  "_toggle_legend": true,
+  "width": 640,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "minute": 15.533333333333333,
+        "time": "19:15:32",
+        "series": "Predikce CDU",
+        "value": 4.460032179,
+        "coverage": 24.98693152
+      },
+      {
+        "minute": 15.533333333333333,
+        "time": "19:15:32",
+        "series": "Průběžné sčítání",
+        "value": 3.792481408,
+        "coverage": 24.98693152
+      },
+      {
+        "minute": 18.166666666666668,
+        "time": "19:18:10",
+        "series": "Predikce CDU",
+        "value": 4.460032179,
+        "coverage": 24.98693152
+      },
+      {
+        "minute": 18.166666666666668,
+        "time": "19:18:10",
+        "series": "Průběžné sčítání",
+        "value": 3.792481408,
+        "coverage": 24.98693152
+      },
+      {
+        "minute": 20.483333333333334,
+        "time": "19:20:29",
+        "series": "Predikce CDU",
+        "value": 4.406019851,
+        "coverage": 30.31887088
+      },
+      {
+        "minute": 20.483333333333334,
+        "time": "19:20:29",
+        "series": "Průběžné sčítání",
+        "value": 3.82895673,
+        "coverage": 30.31887088
+      },
+      {
+        "minute": 22.783333333333335,
+        "time": "19:22:47",
+        "series": "Predikce CDU",
+        "value": 4.406019851,
+        "coverage": 30.31887088
+      },
+      {
+        "minute": 22.783333333333335,
+        "time": "19:22:47",
+        "series": "Průběžné sčítání",
+        "value": 3.82895673,
+        "coverage": 30.31887088
+      },
+      {
+        "minute": 25.1,
+        "time": "19:25:06",
+        "series": "Predikce CDU",
+        "value": 4.432024014,
+        "coverage": 35.07579718
+      },
+      {
+        "minute": 25.1,
+        "time": "19:25:06",
+        "series": "Průběžné sčítání",
+        "value": 3.879353582,
+        "coverage": 35.07579718
+      },
+      {
+        "minute": 27.4,
+        "time": "19:27:24",
+        "series": "Predikce CDU",
+        "value": 4.432024014,
+        "coverage": 35.07579718
+      },
+      {
+        "minute": 27.4,
+        "time": "19:27:24",
+        "series": "Průběžné sčítání",
+        "value": 3.879353582,
+        "coverage": 35.07579718
+      },
+      {
+        "minute": 29.716666666666665,
+        "time": "19:29:43",
+        "series": "Predikce CDU",
+        "value": 4.392224734,
+        "coverage": 38.73497125
+      },
+      {
+        "minute": 29.716666666666665,
+        "time": "19:29:43",
+        "series": "Průběžné sčítání",
+        "value": 3.888165461,
+        "coverage": 38.73497125
+      },
+      {
+        "minute": 32.016666666666666,
+        "time": "19:32:01",
+        "series": "Predikce CDU",
+        "value": 4.392224734,
+        "coverage": 38.73497125
+      },
+      {
+        "minute": 32.016666666666666,
+        "time": "19:32:01",
+        "series": "Průběžné sčítání",
+        "value": 3.888165461,
+        "coverage": 38.73497125
+      },
+      {
+        "minute": 34.3,
+        "time": "19:34:18",
+        "series": "Predikce CDU",
+        "value": 4.368096878,
+        "coverage": 42.96915839
+      },
+      {
+        "minute": 34.3,
+        "time": "19:34:18",
+        "series": "Průběžné sčítání",
+        "value": 3.859378048,
+        "coverage": 42.96915839
+      },
+      {
+        "minute": 36.63333333333333,
+        "time": "19:36:38",
+        "series": "Predikce CDU",
+        "value": 4.368096878,
+        "coverage": 42.96915839
+      },
+      {
+        "minute": 36.63333333333333,
+        "time": "19:36:38",
+        "series": "Průběžné sčítání",
+        "value": 3.859378048,
+        "coverage": 42.96915839
+      },
+      {
+        "minute": 38.916666666666664,
+        "time": "19:38:55",
+        "series": "Predikce CDU",
+        "value": 4.352451219,
+        "coverage": 46.78515421
+      },
+      {
+        "minute": 38.916666666666664,
+        "time": "19:38:55",
+        "series": "Průběžné sčítání",
+        "value": 3.860041497,
+        "coverage": 46.78515421
+      },
+      {
+        "minute": 41.21666666666667,
+        "time": "19:41:13",
+        "series": "Predikce CDU",
+        "value": 4.352451219,
+        "coverage": 46.78515421
+      },
+      {
+        "minute": 41.21666666666667,
+        "time": "19:41:13",
+        "series": "Průběžné sčítání",
+        "value": 3.860041497,
+        "coverage": 46.78515421
+      },
+      {
+        "minute": 43.516666666666666,
+        "time": "19:43:31",
+        "series": "Predikce CDU",
+        "value": 4.386851443,
+        "coverage": 50.91479352
+      },
+      {
+        "minute": 43.516666666666666,
+        "time": "19:43:31",
+        "series": "Průběžné sčítání",
+        "value": 3.878099063,
+        "coverage": 50.91479352
+      },
+      {
+        "minute": 45.8,
+        "time": "19:45:48",
+        "series": "Predikce CDU",
+        "value": 4.386851443,
+        "coverage": 50.91479352
+      },
+      {
+        "minute": 45.8,
+        "time": "19:45:48",
+        "series": "Průběžné sčítání",
+        "value": 3.878099063,
+        "coverage": 50.91479352
+      },
+      {
+        "minute": 48.083333333333336,
+        "time": "19:48:05",
+        "series": "Predikce CDU",
+        "value": 4.386851443,
+        "coverage": 50.91479352
+      },
+      {
+        "minute": 48.083333333333336,
+        "time": "19:48:05",
+        "series": "Průběžné sčítání",
+        "value": 3.878099063,
+        "coverage": 50.91479352
+      },
+      {
+        "minute": 50.71666666666667,
+        "time": "19:50:43",
+        "series": "Predikce CDU",
+        "value": 4.364534967,
+        "coverage": 54.67851542
+      },
+      {
+        "minute": 50.71666666666667,
+        "time": "19:50:43",
+        "series": "Průběžné sčítání",
+        "value": 3.860910699,
+        "coverage": 54.67851542
+      },
+      {
+        "minute": 53.03333333333333,
+        "time": "19:53:02",
+        "series": "Predikce CDU",
+        "value": 4.364534967,
+        "coverage": 54.67851542
+      },
+      {
+        "minute": 53.03333333333333,
+        "time": "19:53:02",
+        "series": "Průběžné sčítání",
+        "value": 3.860910699,
+        "coverage": 54.67851542
+      },
+      {
+        "minute": 55.35,
+        "time": "19:55:21",
+        "series": "Predikce CDU",
+        "value": 4.412507782,
+        "coverage": 58.15047022
+      },
+      {
+        "minute": 55.35,
+        "time": "19:55:21",
+        "series": "Průběžné sčítání",
+        "value": 3.856609641,
+        "coverage": 58.15047022
+      },
+      {
+        "minute": 57.68333333333333,
+        "time": "19:57:41",
+        "series": "Predikce CDU",
+        "value": 4.699198151,
+        "coverage": 60.98958333
+      },
+      {
+        "minute": 57.68333333333333,
+        "time": "19:57:41",
+        "series": "Průběžné sčítání",
+        "value": 4.13489481,
+        "coverage": 60.98958333
+      },
+      {
+        "minute": 59.983333333333334,
+        "time": "19:59:59",
+        "series": "Predikce CDU",
+        "value": 4.77870712,
+        "coverage": 65.0702759
+      },
+      {
+        "minute": 59.983333333333334,
+        "time": "19:59:59",
+        "series": "Průběžné sčítání",
+        "value": 4.219703329,
+        "coverage": 65.0702759
+      },
+      {
+        "minute": 62.333333333333336,
+        "time": "20:02:20",
+        "series": "Predikce CDU",
+        "value": 4.77870712,
+        "coverage": 65.0702759
+      },
+      {
+        "minute": 62.333333333333336,
+        "time": "20:02:20",
+        "series": "Průběžné sčítání",
+        "value": 4.219703329,
+        "coverage": 65.0702759
+      },
+      {
+        "minute": 64.66666666666667,
+        "time": "20:04:40",
+        "series": "Predikce CDU",
+        "value": 4.828209144,
+        "coverage": 68.81832379
+      },
+      {
+        "minute": 64.66666666666667,
+        "time": "20:04:40",
+        "series": "Průběžné sčítání",
+        "value": 4.262292065,
+        "coverage": 68.81832379
+      },
+      {
+        "minute": 67.33333333333333,
+        "time": "20:07:20",
+        "series": "Predikce CDU",
+        "value": 4.828209144,
+        "coverage": 68.81832379
+      },
+      {
+        "minute": 67.33333333333333,
+        "time": "20:07:20",
+        "series": "Průběžné sčítání",
+        "value": 4.262292065,
+        "coverage": 68.81832379
+      },
+      {
+        "minute": 72.26666666666667,
+        "time": "20:12:16",
+        "series": "Predikce CDU",
+        "value": 4.878725384,
+        "coverage": 72.41020302
+      },
+      {
+        "minute": 72.26666666666667,
+        "time": "20:12:16",
+        "series": "Průběžné sčítání",
+        "value": 4.408927751,
+        "coverage": 72.41020302
+      },
+      {
+        "minute": 75.1,
+        "time": "20:15:06",
+        "series": "Predikce CDU",
+        "value": 4.898263043,
+        "coverage": 75.63636364
+      },
+      {
+        "minute": 75.1,
+        "time": "20:15:06",
+        "series": "Průběžné sčítání",
+        "value": 4.478611844,
+        "coverage": 75.63636364
+      },
+      {
+        "minute": 77.43333333333334,
+        "time": "20:17:26",
+        "series": "Predikce CDU",
+        "value": 4.898263043,
+        "coverage": 75.63636364
+      },
+      {
+        "minute": 77.43333333333334,
+        "time": "20:17:26",
+        "series": "Průběžné sčítání",
+        "value": 4.478611844,
+        "coverage": 75.63636364
+      },
+      {
+        "minute": 79.76666666666667,
+        "time": "20:19:46",
+        "series": "Predikce CDU",
+        "value": 4.899196664,
+        "coverage": 78.7012987
+      },
+      {
+        "minute": 79.76666666666667,
+        "time": "20:19:46",
+        "series": "Průběžné sčítání",
+        "value": 4.505382062,
+        "coverage": 78.7012987
+      },
+      {
+        "minute": 82.3,
+        "time": "20:22:18",
+        "series": "Predikce CDU",
+        "value": 4.899196664,
+        "coverage": 78.7012987
+      },
+      {
+        "minute": 82.3,
+        "time": "20:22:18",
+        "series": "Průběžné sčítání",
+        "value": 4.505382062,
+        "coverage": 78.7012987
+      },
+      {
+        "minute": 84.63333333333334,
+        "time": "20:24:38",
+        "series": "Predikce CDU",
+        "value": 4.872509703,
+        "coverage": 78.25413223
+      },
+      {
+        "minute": 84.63333333333334,
+        "time": "20:24:38",
+        "series": "Průběžné sčítání",
+        "value": 4.505382062,
+        "coverage": 78.25413223
+      },
+      {
+        "minute": 86.96666666666667,
+        "time": "20:26:58",
+        "series": "Predikce CDU",
+        "value": 4.872509703,
+        "coverage": 78.25413223
+      },
+      {
+        "minute": 86.96666666666667,
+        "time": "20:26:58",
+        "series": "Průběžné sčítání",
+        "value": 4.505382062,
+        "coverage": 78.25413223
+      },
+      {
+        "minute": 89.3,
+        "time": "20:29:18",
+        "series": "Predikce CDU",
+        "value": 4.870757646,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 89.3,
+        "time": "20:29:18",
+        "series": "Průběžné sčítání",
+        "value": 4.599947858,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 91.63333333333334,
+        "time": "20:31:38",
+        "series": "Predikce CDU",
+        "value": 4.870757646,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 91.63333333333334,
+        "time": "20:31:38",
+        "series": "Průběžné sčítání",
+        "value": 4.599947858,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 94.03333333333333,
+        "time": "20:34:02",
+        "series": "Predikce CDU",
+        "value": 4.870757646,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 94.03333333333333,
+        "time": "20:34:02",
+        "series": "Průběžné sčítání",
+        "value": 4.599947858,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 96.35,
+        "time": "20:36:21",
+        "series": "Predikce CDU",
+        "value": 4.870757646,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 96.35,
+        "time": "20:36:21",
+        "series": "Průběžné sčítání",
+        "value": 4.599947858,
+        "coverage": 83.3161157
+      },
+      {
+        "minute": 99.05,
+        "time": "20:39:03",
+        "series": "Predikce CDU",
+        "value": 4.87886974,
+        "coverage": 83.72933884
+      },
+      {
+        "minute": 99.05,
+        "time": "20:39:03",
+        "series": "Průběžné sčítání",
+        "value": 4.650073269,
+        "coverage": 83.72933884
+      },
+      {
+        "minute": 101.55,
+        "time": "20:41:33",
+        "series": "Predikce CDU",
+        "value": 4.856767382,
+        "coverage": 87.03512397
+      },
+      {
+        "minute": 101.55,
+        "time": "20:41:33",
+        "series": "Průběžné sčítání",
+        "value": 4.660041802,
+        "coverage": 87.03512397
+      },
+      {
+        "minute": 103.91666666666667,
+        "time": "20:43:55",
+        "series": "Predikce CDU",
+        "value": 4.856821713,
+        "coverage": 87.96487603
+      },
+      {
+        "minute": 103.91666666666667,
+        "time": "20:43:55",
+        "series": "Průběžné sčítání",
+        "value": 4.676131355,
+        "coverage": 87.96487603
+      },
+      {
+        "minute": 106.26666666666667,
+        "time": "20:46:16",
+        "series": "Predikce CDU",
+        "value": 4.862247178,
+        "coverage": 88.06818182
+      },
+      {
+        "minute": 106.26666666666667,
+        "time": "20:46:16",
+        "series": "Průběžné sčítání",
+        "value": 4.688098137,
+        "coverage": 88.06818182
+      },
+      {
+        "minute": 108.61666666666666,
+        "time": "20:48:37",
+        "series": "Predikce CDU",
+        "value": 4.863437062,
+        "coverage": 88.11983471
+      },
+      {
+        "minute": 108.61666666666666,
+        "time": "20:48:37",
+        "series": "Průběžné sčítání",
+        "value": 4.693655369,
+        "coverage": 88.11983471
+      },
+      {
+        "minute": 110.91666666666667,
+        "time": "20:50:55",
+        "series": "Predikce CDU",
+        "value": 4.862931341,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 110.91666666666667,
+        "time": "20:50:55",
+        "series": "Průběžné sčítání",
+        "value": 4.70302527,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 113.23333333333333,
+        "time": "20:53:14",
+        "series": "Predikce CDU",
+        "value": 4.862931341,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 113.23333333333333,
+        "time": "20:53:14",
+        "series": "Průběžné sčítání",
+        "value": 4.70302527,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 115.55,
+        "time": "20:55:33",
+        "series": "Predikce CDU",
+        "value": 4.862931341,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 115.55,
+        "time": "20:55:33",
+        "series": "Průběžné sčítání",
+        "value": 4.70302527,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 117.86666666666666,
+        "time": "20:57:52",
+        "series": "Predikce CDU",
+        "value": 4.862931341,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 117.86666666666666,
+        "time": "20:57:52",
+        "series": "Průběžné sčítání",
+        "value": 4.70302527,
+        "coverage": 89.30785124
+      },
+      {
+        "minute": 120.16666666666667,
+        "time": "21:00:10",
+        "series": "Predikce CDU",
+        "value": 4.851432208,
+        "coverage": 91.83884298
+      },
+      {
+        "minute": 120.16666666666667,
+        "time": "21:00:10",
+        "series": "Průběžné sčítání",
+        "value": 4.750377902,
+        "coverage": 91.83884298
+      },
+      {
+        "minute": 122.48333333333333,
+        "time": "21:02:29",
+        "series": "Predikce CDU",
+        "value": 4.851432208,
+        "coverage": 91.83884298
+      },
+      {
+        "minute": 122.48333333333333,
+        "time": "21:02:29",
+        "series": "Průběžné sčítání",
+        "value": 4.750377902,
+        "coverage": 91.83884298
+      },
+      {
+        "minute": 124.81666666666666,
+        "time": "21:04:49",
+        "series": "Predikce CDU",
+        "value": 4.837737655,
+        "coverage": 92.92355372
+      },
+      {
+        "minute": 124.81666666666666,
+        "time": "21:04:49",
+        "series": "Průběžné sčítání",
+        "value": 4.768916929,
+        "coverage": 92.92355372
+      },
+      {
+        "minute": 127.16666666666667,
+        "time": "21:07:10",
+        "series": "Predikce CDU",
+        "value": 4.837737655,
+        "coverage": 92.92355372
+      },
+      {
+        "minute": 127.16666666666667,
+        "time": "21:07:10",
+        "series": "Průběžné sčítání",
+        "value": 4.768916929,
+        "coverage": 92.92355372
+      },
+      {
+        "minute": 132.05,
+        "time": "21:12:03",
+        "series": "Predikce CDU",
+        "value": 4.831302795,
+        "coverage": 94.11157025
+      },
+      {
+        "minute": 132.05,
+        "time": "21:12:03",
+        "series": "Průběžné sčítání",
+        "value": 4.768098292,
+        "coverage": 94.11157025
+      },
+      {
+        "minute": 136.9,
+        "time": "21:16:54",
+        "series": "Predikce CDU",
+        "value": 4.85064686,
+        "coverage": 94.78305785
+      },
+      {
+        "minute": 136.9,
+        "time": "21:16:54",
+        "series": "Průběžné sčítání",
+        "value": 4.788486984,
+        "coverage": 94.78305785
+      },
+      {
+        "minute": 139.2,
+        "time": "21:19:12",
+        "series": "Predikce CDU",
+        "value": 4.851362524,
+        "coverage": 95.09297521
+      },
+      {
+        "minute": 139.2,
+        "time": "21:19:12",
+        "series": "Průběžné sčítání",
+        "value": 4.797202767,
+        "coverage": 95.09297521
+      },
+      {
+        "minute": 141.48333333333332,
+        "time": "21:21:29",
+        "series": "Predikce CDU",
+        "value": 4.851362524,
+        "coverage": 95.09297521
+      },
+      {
+        "minute": 141.48333333333332,
+        "time": "21:21:29",
+        "series": "Průběžné sčítání",
+        "value": 4.797202767,
+        "coverage": 95.09297521
+      },
+      {
+        "minute": 143.78333333333333,
+        "time": "21:23:47",
+        "series": "Predikce CDU",
+        "value": 4.851362524,
+        "coverage": 95.09297521
+      },
+      {
+        "minute": 143.78333333333333,
+        "time": "21:23:47",
+        "series": "Průběžné sčítání",
+        "value": 4.797202767,
+        "coverage": 95.09297521
+      },
+      {
+        "minute": 149.5,
+        "time": "21:29:30",
+        "series": "Predikce CDU",
+        "value": 4.846458239,
+        "coverage": 95.91942149
+      },
+      {
+        "minute": 149.5,
+        "time": "21:29:30",
+        "series": "Průběžné sčítání",
+        "value": 4.819682823,
+        "coverage": 95.91942149
+      },
+      {
+        "minute": 151.8,
+        "time": "21:31:48",
+        "series": "Predikce CDU",
+        "value": 4.846458239,
+        "coverage": 95.91942149
+      },
+      {
+        "minute": 151.8,
+        "time": "21:31:48",
+        "series": "Průběžné sčítání",
+        "value": 4.819682823,
+        "coverage": 95.91942149
+      },
+      {
+        "minute": 154.11666666666667,
+        "time": "21:34:07",
+        "series": "Predikce CDU",
+        "value": 4.846458239,
+        "coverage": 95.91942149
+      },
+      {
+        "minute": 154.11666666666667,
+        "time": "21:34:07",
+        "series": "Průběžné sčítání",
+        "value": 4.819682823,
+        "coverage": 95.91942149
+      },
+      {
+        "minute": 156.41666666666666,
+        "time": "21:36:25",
+        "series": "Predikce CDU",
+        "value": 4.852767774,
+        "coverage": 96.48760331
+      },
+      {
+        "minute": 156.41666666666666,
+        "time": "21:36:25",
+        "series": "Průběžné sčítání",
+        "value": 4.837508624,
+        "coverage": 96.48760331
+      },
+      {
+        "minute": 158.73333333333332,
+        "time": "21:38:44",
+        "series": "Predikce CDU",
+        "value": 4.852767774,
+        "coverage": 96.48760331
+      },
+      {
+        "minute": 158.73333333333332,
+        "time": "21:38:44",
+        "series": "Průběžné sčítání",
+        "value": 4.837508624,
+        "coverage": 96.48760331
+      },
+      {
+        "minute": 161.03333333333333,
+        "time": "21:41:02",
+        "series": "Predikce CDU",
+        "value": 4.85459235,
+        "coverage": 97.00413223
+      },
+      {
+        "minute": 161.03333333333333,
+        "time": "21:41:02",
+        "series": "Průběžné sčítání",
+        "value": 4.832150363,
+        "coverage": 97.00413223
+      },
+      {
+        "minute": 163.36666666666667,
+        "time": "21:43:22",
+        "series": "Predikce CDU",
+        "value": 4.85459235,
+        "coverage": 97.00413223
+      },
+      {
+        "minute": 163.36666666666667,
+        "time": "21:43:22",
+        "series": "Průběžné sčítání",
+        "value": 4.832150363,
+        "coverage": 97.00413223
+      },
+      {
+        "minute": 165.71666666666667,
+        "time": "21:45:43",
+        "series": "Predikce CDU",
+        "value": 4.854733222,
+        "coverage": 97.62396694
+      },
+      {
+        "minute": 165.71666666666667,
+        "time": "21:45:43",
+        "series": "Průběžné sčítání",
+        "value": 4.830531477,
+        "coverage": 97.62396694
+      },
+      {
+        "minute": 168.35,
+        "time": "21:48:21",
+        "series": "Predikce CDU",
+        "value": 4.854733222,
+        "coverage": 97.62396694
+      },
+      {
+        "minute": 168.35,
+        "time": "21:48:21",
+        "series": "Průběžné sčítání",
+        "value": 4.830531477,
+        "coverage": 97.62396694
+      },
+      {
+        "minute": 170.65,
+        "time": "21:50:39",
+        "series": "Predikce CDU",
+        "value": 4.862111024,
+        "coverage": 97.72727273
+      },
+      {
+        "minute": 170.65,
+        "time": "21:50:39",
+        "series": "Průběžné sčítání",
+        "value": 4.840699451,
+        "coverage": 97.72727273
+      },
+      {
+        "minute": 172.95,
+        "time": "21:52:57",
+        "series": "Predikce CDU",
+        "value": 4.861114744,
+        "coverage": 98.08884298
+      },
+      {
+        "minute": 172.95,
+        "time": "21:52:57",
+        "series": "Průběžné sčítání",
+        "value": 4.839390339,
+        "coverage": 98.08884298
+      },
+      {
+        "minute": 175.26666666666668,
+        "time": "21:55:16",
+        "series": "Predikce CDU",
+        "value": 4.861966261,
+        "coverage": 98.39876033
+      },
+      {
+        "minute": 175.26666666666668,
+        "time": "21:55:16",
+        "series": "Průběžné sčítání",
+        "value": 4.841934249,
+        "coverage": 98.39876033
+      },
+      {
+        "minute": 177.58333333333334,
+        "time": "21:57:35",
+        "series": "Predikce CDU",
+        "value": 4.861966261,
+        "coverage": 98.39876033
+      },
+      {
+        "minute": 177.58333333333334,
+        "time": "21:57:35",
+        "series": "Průběžné sčítání",
+        "value": 4.841934249,
+        "coverage": 98.39876033
+      },
+      {
+        "minute": 179.88333333333333,
+        "time": "21:59:53",
+        "series": "Predikce CDU",
+        "value": 4.869696937,
+        "coverage": 98.39876033
+      },
+      {
+        "minute": 179.88333333333333,
+        "time": "21:59:53",
+        "series": "Průběžné sčítání",
+        "value": 4.849983083,
+        "coverage": 98.39876033
+      },
+      {
+        "minute": 182.53333333333333,
+        "time": "22:02:32",
+        "series": "Predikce CDU",
+        "value": 4.868458329,
+        "coverage": 98.6053719
+      },
+      {
+        "minute": 182.53333333333333,
+        "time": "22:02:32",
+        "series": "Průběžné sčítání",
+        "value": 4.853036986,
+        "coverage": 98.6053719
+      },
+      {
+        "minute": 184.86666666666667,
+        "time": "22:04:52",
+        "series": "Predikce CDU",
+        "value": 4.867919249,
+        "coverage": 99.01859504
+      },
+      {
+        "minute": 184.86666666666667,
+        "time": "22:04:52",
+        "series": "Průběžné sčítání",
+        "value": 4.857877036,
+        "coverage": 99.01859504
+      },
+      {
+        "minute": 187.18333333333334,
+        "time": "22:07:11",
+        "series": "Predikce CDU",
+        "value": 4.867919249,
+        "coverage": 99.01859504
+      },
+      {
+        "minute": 187.18333333333334,
+        "time": "22:07:11",
+        "series": "Průběžné sčítání",
+        "value": 4.857877036,
+        "coverage": 99.01859504
+      },
+      {
+        "minute": 189.68333333333334,
+        "time": "22:09:41",
+        "series": "Predikce CDU",
+        "value": 4.876180806,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 189.68333333333334,
+        "time": "22:09:41",
+        "series": "Průběžné sčítání",
+        "value": 4.865600442,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 192.03333333333333,
+        "time": "22:12:02",
+        "series": "Predikce CDU",
+        "value": 4.876180806,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 192.03333333333333,
+        "time": "22:12:02",
+        "series": "Průběžné sčítání",
+        "value": 4.865600442,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 194.35,
+        "time": "22:14:21",
+        "series": "Predikce CDU",
+        "value": 4.876180806,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 194.35,
+        "time": "22:14:21",
+        "series": "Průběžné sčítání",
+        "value": 4.865600442,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 196.66666666666666,
+        "time": "22:16:40",
+        "series": "Predikce CDU",
+        "value": 4.876180806,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 196.66666666666666,
+        "time": "22:16:40",
+        "series": "Průběžné sčítání",
+        "value": 4.865600442,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 199.31666666666666,
+        "time": "22:19:19",
+        "series": "Predikce CDU",
+        "value": 4.876180806,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 199.31666666666666,
+        "time": "22:19:19",
+        "series": "Průběžné sčítání",
+        "value": 4.865600442,
+        "coverage": 99.07024793
+      },
+      {
+        "minute": 204.05,
+        "time": "22:24:03",
+        "series": "Predikce CDU",
+        "value": 4.874628112,
+        "coverage": 99.22520661
+      },
+      {
+        "minute": 204.05,
+        "time": "22:24:03",
+        "series": "Průběžné sčítání",
+        "value": 4.863764629,
+        "coverage": 99.22520661
+      },
+      {
+        "minute": 206.36666666666667,
+        "time": "22:26:22",
+        "series": "Predikce CDU",
+        "value": 4.874628112,
+        "coverage": 99.22520661
+      },
+      {
+        "minute": 206.36666666666667,
+        "time": "22:26:22",
+        "series": "Průběžné sčítání",
+        "value": 4.863764629,
+        "coverage": 99.22520661
+      },
+      {
+        "minute": 208.65,
+        "time": "22:28:39",
+        "series": "Predikce CDU",
+        "value": 4.874628112,
+        "coverage": 99.22520661
+      },
+      {
+        "minute": 208.65,
+        "time": "22:28:39",
+        "series": "Průběžné sčítání",
+        "value": 4.863764629,
+        "coverage": 99.22520661
+      },
+      {
+        "minute": 210.96666666666667,
+        "time": "22:30:58",
+        "series": "Predikce CDU",
+        "value": 4.876012734,
+        "coverage": 99.2768595
+      },
+      {
+        "minute": 210.96666666666667,
+        "time": "22:30:58",
+        "series": "Průběžné sčítání",
+        "value": 4.866105967,
+        "coverage": 99.2768595
+      },
+      {
+        "minute": 213.3,
+        "time": "22:33:18",
+        "series": "Predikce CDU",
+        "value": 4.876012734,
+        "coverage": 99.2768595
+      },
+      {
+        "minute": 213.3,
+        "time": "22:33:18",
+        "series": "Průběžné sčítání",
+        "value": 4.866105967,
+        "coverage": 99.2768595
+      },
+      {
+        "minute": 215.65,
+        "time": "22:35:39",
+        "series": "Predikce CDU",
+        "value": 4.875435393,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 215.65,
+        "time": "22:35:39",
+        "series": "Průběžné sčítání",
+        "value": 4.868224754,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 217.95,
+        "time": "22:37:57",
+        "series": "Predikce CDU",
+        "value": 4.875435393,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 217.95,
+        "time": "22:37:57",
+        "series": "Průběžné sčítání",
+        "value": 4.868224754,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 220.6,
+        "time": "22:40:36",
+        "series": "Predikce CDU",
+        "value": 4.875873868,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 220.6,
+        "time": "22:40:36",
+        "series": "Průběžné sčítání",
+        "value": 4.869473359,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 222.91666666666666,
+        "time": "22:42:55",
+        "series": "Predikce CDU",
+        "value": 4.875873868,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 222.91666666666666,
+        "time": "22:42:55",
+        "series": "Průběžné sčítání",
+        "value": 4.869473359,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 225.23333333333332,
+        "time": "22:45:14",
+        "series": "Predikce CDU",
+        "value": 4.875873868,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 225.23333333333332,
+        "time": "22:45:14",
+        "series": "Průběžné sčítání",
+        "value": 4.869473359,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 227.55,
+        "time": "22:47:33",
+        "series": "Predikce CDU",
+        "value": 4.875873868,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 227.55,
+        "time": "22:47:33",
+        "series": "Průběžné sčítání",
+        "value": 4.869473359,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 229.9,
+        "time": "22:49:54",
+        "series": "Predikce CDU",
+        "value": 4.875873868,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 229.9,
+        "time": "22:49:54",
+        "series": "Průběžné sčítání",
+        "value": 4.869473359,
+        "coverage": 99.3285124
+      },
+      {
+        "minute": 232.2,
+        "time": "22:52:12",
+        "series": "Predikce CDU",
+        "value": 4.880930843,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 232.2,
+        "time": "22:52:12",
+        "series": "Průběžné sčítání",
+        "value": 4.876811493,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 234.85,
+        "time": "22:54:51",
+        "series": "Predikce CDU",
+        "value": 4.880930843,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 234.85,
+        "time": "22:54:51",
+        "series": "Průběžné sčítání",
+        "value": 4.876811493,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 237.18333333333334,
+        "time": "22:57:11",
+        "series": "Predikce CDU",
+        "value": 4.880930843,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 237.18333333333334,
+        "time": "22:57:11",
+        "series": "Průběžné sčítání",
+        "value": 4.876811493,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 239.81666666666666,
+        "time": "22:59:49",
+        "series": "Predikce CDU",
+        "value": 4.880930843,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 239.81666666666666,
+        "time": "22:59:49",
+        "series": "Průběžné sčítání",
+        "value": 4.876811493,
+        "coverage": 99.53512397
+      },
+      {
+        "minute": 242.13333333333333,
+        "time": "23:02:08",
+        "series": "Predikce CDU",
+        "value": 4.88063962,
+        "coverage": 99.58677686
+      },
+      {
+        "minute": 242.13333333333333,
+        "time": "23:02:08",
+        "series": "Průběžné sčítání",
+        "value": 4.875452078,
+        "coverage": 99.58677686
+      },
+      {
+        "minute": 247.0,
+        "time": "23:07:00",
+        "series": "Predikce CDU",
+        "value": 4.880610301,
+        "coverage": 99.69008264
+      },
+      {
+        "minute": 247.0,
+        "time": "23:07:00",
+        "series": "Průběžné sčítání",
+        "value": 4.873219393,
+        "coverage": 99.69008264
+      },
+      {
+        "minute": 249.31666666666666,
+        "time": "23:09:19",
+        "series": "Predikce CDU",
+        "value": 4.880610301,
+        "coverage": 99.69008264
+      },
+      {
+        "minute": 249.31666666666666,
+        "time": "23:09:19",
+        "series": "Průběžné sčítání",
+        "value": 4.873219393,
+        "coverage": 99.69008264
+      },
+      {
+        "minute": 251.6,
+        "time": "23:11:36",
+        "series": "Predikce CDU",
+        "value": 4.884564626,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 251.6,
+        "time": "23:11:36",
+        "series": "Průběžné sčítání",
+        "value": 4.875381601,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 253.9,
+        "time": "23:13:54",
+        "series": "Predikce CDU",
+        "value": 4.884564626,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 253.9,
+        "time": "23:13:54",
+        "series": "Průběžné sčítání",
+        "value": 4.875381601,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 256.2,
+        "time": "23:16:12",
+        "series": "Predikce CDU",
+        "value": 4.884564626,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 256.2,
+        "time": "23:16:12",
+        "series": "Průběžné sčítání",
+        "value": 4.875381601,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 258.53333333333336,
+        "time": "23:18:32",
+        "series": "Predikce CDU",
+        "value": 4.884564626,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 258.53333333333336,
+        "time": "23:18:32",
+        "series": "Průběžné sčítání",
+        "value": 4.875381601,
+        "coverage": 99.74173554
+      },
+      {
+        "minute": 260.8666666666667,
+        "time": "23:20:52",
+        "series": "Predikce CDU",
+        "value": 4.88720645,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 260.8666666666667,
+        "time": "23:20:52",
+        "series": "Průběžné sčítání",
+        "value": 4.88603366,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 263.51666666666665,
+        "time": "23:23:31",
+        "series": "Predikce CDU",
+        "value": 4.88720645,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 263.51666666666665,
+        "time": "23:23:31",
+        "series": "Průběžné sčítání",
+        "value": 4.88603366,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 265.85,
+        "time": "23:25:51",
+        "series": "Predikce CDU",
+        "value": 4.88720645,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 265.85,
+        "time": "23:25:51",
+        "series": "Průběžné sčítání",
+        "value": 4.88603366,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 268.1666666666667,
+        "time": "23:28:10",
+        "series": "Predikce CDU",
+        "value": 4.88720645,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 268.1666666666667,
+        "time": "23:28:10",
+        "series": "Průběžné sčítání",
+        "value": 4.88603366,
+        "coverage": 99.84504132
+      },
+      {
+        "minute": 270.48333333333335,
+        "time": "23:30:29",
+        "series": "Predikce CDU",
+        "value": 4.886918371,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 270.48333333333335,
+        "time": "23:30:29",
+        "series": "Průběžné sčítání",
+        "value": 4.884444769,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 273.15,
+        "time": "23:33:09",
+        "series": "Predikce CDU",
+        "value": 4.886918371,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 273.15,
+        "time": "23:33:09",
+        "series": "Průběžné sčítání",
+        "value": 4.884444769,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 275.5,
+        "time": "23:35:30",
+        "series": "Predikce CDU",
+        "value": 4.886918371,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 275.5,
+        "time": "23:35:30",
+        "series": "Průběžné sčítání",
+        "value": 4.884444769,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 277.81666666666666,
+        "time": "23:37:49",
+        "series": "Predikce CDU",
+        "value": 4.886918371,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 277.81666666666666,
+        "time": "23:37:49",
+        "series": "Průběžné sčítání",
+        "value": 4.884444769,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 280.43333333333334,
+        "time": "23:40:26",
+        "series": "Predikce CDU",
+        "value": 4.886918371,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 280.43333333333334,
+        "time": "23:40:26",
+        "series": "Průběžné sčítání",
+        "value": 4.884444769,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 282.7,
+        "time": "23:42:42",
+        "series": "Predikce CDU",
+        "value": 4.886918371,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 282.7,
+        "time": "23:42:42",
+        "series": "Průběžné sčítání",
+        "value": 4.884444769,
+        "coverage": 99.89669421
+      },
+      {
+        "minute": 284.98333333333335,
+        "time": "23:44:59",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 284.98333333333335,
+        "time": "23:44:59",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 287.3,
+        "time": "23:47:18",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 287.3,
+        "time": "23:47:18",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 289.81666666666666,
+        "time": "23:49:49",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 289.81666666666666,
+        "time": "23:49:49",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 292.1,
+        "time": "23:52:06",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 292.1,
+        "time": "23:52:06",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 294.4,
+        "time": "23:54:24",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 294.4,
+        "time": "23:54:24",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 299.5833333333333,
+        "time": "23:59:35",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 299.5833333333333,
+        "time": "23:59:35",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 302.25,
+        "time": "00:02:15",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 302.25,
+        "time": "00:02:15",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 304.55,
+        "time": "00:04:33",
+        "series": "Predikce CDU",
+        "value": 4.887310628,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 304.55,
+        "time": "00:04:33",
+        "series": "Průběžné sčítání",
+        "value": 4.885373842,
+        "coverage": 99.94834711
+      },
+      {
+        "minute": 306.8333333333333,
+        "time": "00:06:50",
+        "series": "Predikce CDU",
+        "value": 4.888001158,
+        "coverage": 100.0
+      },
+      {
+        "minute": 306.8333333333333,
+        "time": "00:06:50",
+        "series": "Průběžné sčítání",
+        "value": 4.888001158,
+        "coverage": 100.0
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Predikce CDU",
+          "Průběžné sčítání"
+        ],
+        "range": [
+          "#de1743",
+          "#6267a3"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "interpolate": "step-after"
+      },
+      "encoding": {
+        "x": {
+          "field": "minute",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              15,
+              310
+            ]
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              30,
+              60,
+              120,
+              180,
+              240,
+              300
+            ],
+            "labelExpr": "((19 + floor(datum.value / 60)) % 24 < 10 ? '0' : '') + ((19 + floor(datum.value / 60)) % 24) + ':' + (datum.value % 60 == 0 ? '00' : '30')"
+          }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              3.5,
+              5.35
+            ],
+            "zero": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              3.5,
+              4,
+              4.5,
+              5
+            ],
+            "labelExpr": "replace(format(datum.value, '.1f'), '.', ',') + ' %'"
+          }
+        },
+        "strokeDash": {
+          "field": "series",
+          "scale": {
+            "domain": [
+              "Predikce CDU",
+              "Průběžné sčítání"
+            ],
+            "range": [
+              [
+                1,
+                0
+              ],
+              [
+                5,
+                3
+              ]
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "time",
+            "title": "Čas (CEST)"
+          },
+          {
+            "field": "series",
+            "title": "Řada"
+          },
+          {
+            "field": "value",
+            "title": "Podíl (%)",
+            "format": ".2f"
+          },
+          {
+            "field": "coverage",
+            "title": "Sečtené jednotky (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "value": 5
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#272a59",
+        "strokeDash": [
+          6,
+          4
+        ]
+      },
+      "encoding": {
+        "color": {
+          "value": "#272a59"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "minute": 305,
+            "value": 5,
+            "label": "Hranice 5 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": -10,
+        "fontSize": 12
+      },
+      "encoding": {
+        "color": {
+          "value": "#272a59"
+        },
+        "x": {
+          "field": "minute",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "minute": 20.483333333333334,
+            "label": "25 % okrsků"
+          },
+          {
+            "minute": 43.516666666666666,
+            "label": "50 % okrsků"
+          },
+          {
+            "minute": 75.1,
+            "label": "75 % okrsků"
+          },
+          {
+            "minute": 139.2,
+            "label": "95 % okrsků"
+          },
+          {
+            "minute": 184.86666666666667,
+            "label": "99 % okrsků"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          2,
+          3
+        ],
+        "opacity": 0.35
+      },
+      "encoding": {
+        "color": {
+          "value": "#272a59"
+        },
+        "x": {
+          "field": "minute",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "minute": 20.483333333333334,
+            "label": "25 % okrsků"
+          },
+          {
+            "minute": 43.516666666666666,
+            "label": "50 % okrsků"
+          },
+          {
+            "minute": 75.1,
+            "label": "75 % okrsků"
+          },
+          {
+            "minute": 139.2,
+            "label": "95 % okrsků"
+          },
+          {
+            "minute": 184.86666666666667,
+            "label": "99 % okrsků"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "angle": 270,
+        "align": "left",
+        "dx": 8,
+        "dy": -5,
+        "fontSize": 10
+      },
+      "encoding": {
+        "color": {
+          "value": "#333333"
+        },
+        "x": {
+          "field": "minute",
+          "type": "quantitative"
+        },
+        "y": {
+          "datum": 3.55
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}
