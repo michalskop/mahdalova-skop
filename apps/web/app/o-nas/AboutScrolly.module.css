@@ -192,6 +192,14 @@
   margin-bottom: 0;
 }
 
+.bubbleChips {
+  color: var(--route-red) !important;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  margin: 14px 0 0 !important;
+}
+
 .bubble a {
   color: var(--route-red);
   text-decoration-color: color-mix(in srgb, var(--route-red) 45%, transparent);

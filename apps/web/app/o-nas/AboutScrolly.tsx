@@ -8,6 +8,7 @@ type Step = {
   eyebrow: string;
   title: string;
   paragraphs: string[];
+  chips?: string[];
   x: number;
   y: number;
   side: 'left' | 'right';
@@ -21,12 +22,14 @@ type Step = {
 const steps: Step[] = [
   {
     index: '01',
-    eyebrow: 'DataTimes · Mahdalová & Škop',
-    title: 'Datová žurnalistika, které se dá věřit',
+    eyebrow: 'DataTimes.cz • mahdalova-skop.cz',
+    title: 'Kateřina Mahdalová & Michal Škop',
     paragraphs: [
-      'Jsme datoví novináři a analytici. Z dat tvoříme ověřitelné a srozumitelné příběhy — analýzy, vizualizace, mapy, dashboardy a interaktivní nástroje — o tématech, která mají dopad na společnost, politiku i ekonomiku.',
-      'Z jednoho výzkumu děláme víc výstupů najednou. Tak, aby fungovaly pro čtenáře i pro stroj: ověřitelně, s metodikou, trvanlivě.',
+      'Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus odvahy (nás to stálo práci).',
+      'Hodně nám záleží na tom, aby naše práce odrážela realitu co nejvěrněji. Naše výhoda je, umíme pracovat s&nbsp;daty, hledat je, číst, vizualizovat, interpretovat.',
+      'Hledáme a&nbsp;poctivě zachycujeme. Nepřibarvujeme. Nepracujeme pro zájmové skupiny. A&nbsp;rozhodně se nebojíme.',
     ],
+    chips: ['Data', 'Kontext', 'Srozumitelnost', 'Odvaha'],
     x: 700,
     y: 350,
     side: 'left',
@@ -209,7 +212,7 @@ export default function AboutScrolly() {
           key={step.index}
           data-step={index}
           className={`${styles.milestone} ${styles[step.side]} ${
-            index <= active ? styles.milestoneReached : ''
+            index === 0 || index <= active ? styles.milestoneReached : ''
           } ${index === active ? styles.milestoneActive : ''}`}
           style={{ '--milestone-y': `${(step.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
         >
@@ -240,6 +243,9 @@ export default function AboutScrolly() {
             {step.paragraphs.map((paragraph) => (
               <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
             ))}
+            {step.chips ? (
+              <p className={styles.bubbleChips}>{step.chips.join(' • ')}</p>
+            ) : null}
           </div>
         </article>
       ))}

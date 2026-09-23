@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import type { Metadata } from 'next';
 import { Anchor, Box, Container, Group, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { ContactsBlock } from '@/components/common/ContactsBlock';
@@ -49,77 +48,8 @@ const measures = [
 export default function AboutPage() {
   return (
     <Container size="lg" bg="background.1" maw={1200} w="100%" p={0} m="0 auto">
-      {/* Hero */}
-      <Box
-        component="header"
-        bg="brand.9"
-        c="background.0"
-        px={{ base: 20, md: 56 }}
-        py={{ base: 28, md: 44 }}
-        style={{ fontFamily: 'var(--mantine-font-family)' }}
-      >
-        <Stack gap="sm" maw={820}>
-          <Text tt="uppercase" size="xs" fw={500} c="brandYellow.5" style={{ letterSpacing: '0.12em' }}>
-            DataTimes.cz • mahdalova-skop.cz
-          </Text>
-          <Title
-            order={1}
-            fw={500}
-            style={{
-              fontFamily: 'var(--mantine-font-family)',
-              fontSize: 'clamp(1.7rem, 3.6vw, 2.7rem)',
-              lineHeight: 1.12,
-            }}
-          >
-            Kateřina Mahdalová &amp; Michal Škop
-          </Title>
-          <Text size="md" c="background.2" lh={1.55} maw={720}>
-            Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži
-            jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus
-            odvahy (nás to stálo práci).
-          </Text>
-          <Text size="md" c="background.2" lh={1.55} maw={720}>
-            Hodně nám záleží na tom, aby naše práce odrážela realitu co nejvěrněji. Naše výhoda
-            je, umíme pracovat s&nbsp;daty, hledat je, číst, vizualizovat, interpretovat.
-          </Text>
-          <Text size="md" c="background.0" lh={1.55} maw={720}>
-            Hledáme a&nbsp;poctivě zachycujeme. Nepřibarvujeme. Nepracujeme pro zájmové skupiny.
-            A&nbsp;rozhodně se nebojíme.
-          </Text>
-          <Group gap="xs" mt={4} align="center">
-            {['Data', 'Kontext', 'Srozumitelnost', 'Odvaha'].map((word, index) => (
-              <Fragment key={word}>
-                {index > 0 && (
-                  <Text
-                    aria-hidden
-                    span
-                    c="brandYellow.5"
-                    style={{ fontSize: 'clamp(0.8rem, 1.3vw, 0.95rem)', opacity: 0.6, lineHeight: 1 }}
-                  >
-                    •
-                  </Text>
-                )}
-                <Text span c="brandYellow.5" style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)' }}>
-                  {word}
-                </Text>
-              </Fragment>
-            ))}
-          </Group>
-        </Stack>
-      </Box>
-
-      {/* Flowing wave – who we are */}
-      <Box px={{ base: 12, md: 40 }} pt={{ base: 40, md: 72 }}>
-        <Stack gap="md" maw={820} m="0 auto" mb={{ base: 0, md: 8 }}>
-          <Kicker>Kdo jsme</Kicker>
-          <Title order={2} style={{ fontSize: 'clamp(1.7rem, 4vw, 2.8rem)', lineHeight: 1.1 }}>
-            Dva lidé, dvě desetiletí práce s daty a jedna kombinace, která tu chyběla
-          </Title>
-          <Text size="lg" c="dimmed" lh={1.6}>
-            Projděte se křivkou dolů — postupně se rozsvítí, kdo jsme, co za sebou máme a proč to
-            děláme.
-          </Text>
-        </Stack>
+      {/* Timeline – starts the page; the first card carries the intro */}
+      <Box px={{ base: 12, md: 40 }} pt={{ base: 24, md: 44 }}>
         <AboutScrolly />
       </Box>
 
