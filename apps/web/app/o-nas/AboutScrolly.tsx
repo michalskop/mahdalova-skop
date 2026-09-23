@@ -45,8 +45,8 @@ const steps: Step[] = [
       alt: 'Portrét Kateřiny Mahdalové',
     },
     paragraphs: [
-      'Novinářka, analytička, zakladatelka webu DataTimes.cz a&nbsp;DatovaZurnalistika.cz. Autorka tisíců vizualizací a&nbsp;analýz. V&nbsp;letech 2016–19 vedla datové projekty v&nbsp;ČTK a&nbsp;dlouhodobě spolupracuje s&nbsp;předními médii u&nbsp;nás i&nbsp;ve světě.',
-      'Dvojnásobná vítězka Novinářské ceny a&nbsp;držitelka sedmi finálových nominací, včetně Data Journalism Award. Absolvovala Literární akademii Josefa Škvoreckého a&nbsp;informační vědy na Masarykově univerzitě. Studovala na UC San Diego a&nbsp;Bangor University a&nbsp;nyní mj. učí datovou žurnalistiku na Univerzitě Jana Evangelisty Purkyně.',
+      'Novinářka, analytička, autorka tisíců vizualizací a&nbsp;analýz. V&nbsp;letech 2016–19 vedla datové projekty v&nbsp;ČTK; dlouhodobě spolupracuje s&nbsp;předními médii u&nbsp;nás i&nbsp;ve světě. Vizualizuje data, vyhledává kontext, zaměřuje se na lidská práva a&nbsp;na kontrolu mocných.',
+      'Dvojnásobná vítězka Novinářské ceny a&nbsp;držitelka osmi finálových nominací, včetně Data Journalism Award. Absolvovala Literární akademii Josefa Škvoreckého a&nbsp;informační vědy na Masarykově univerzitě. Studovala na Kalifornské univerzitě v&nbsp;San Diegu a&nbsp;Bangor University ve Walesu. Nyní mj. učí datovou žurnalistiku na Univerzitě Jana Evangelisty Purkyně.',
     ],
     x: 300,
     y: 910,
@@ -54,16 +54,15 @@ const steps: Step[] = [
   },
   {
     index: '03',
-    eyebrow: 'Spoluzakladatel',
+    eyebrow: 'Šéfredaktor & majitel',
     title: 'Michal Škop',
     portrait: {
       src: '/authors/ms_circle.png',
       alt: 'Portrét Michala Škopa',
-      lead: 'Statistik, demograf a vývojář',
     },
     paragraphs: [
-      'Zakladatel a ředitel neziskových <a href="https://volebnikalkulacka.cz/" target="_blank" rel="noreferrer">Volebních kalkulaček</a>, které v sedmi zemích pomohly milionům voličů k lepšímu rozhodování ve volbách.',
-      'Vítěz Novinářské ceny (2025) a tři finálové nominace. Působil v Max Planck Institute v Rostocku, na Universidad de Salamanca a Karlově univerzitě. Specializuje se na volební analýzy a predikce.',
+      'Statistik, demograf a&nbsp;programátor, zakladatel a&nbsp;ředitel neziskových <a href="https://volebnikalkulacka.cz/" target="_blank" rel="noreferrer">Volebních kalkulaček</a>, které od roku 2006 pomáhají v&nbsp;mnoha zemích milionům voličů k&nbsp;lepšímu rozhodování ve volbách.',
+      'Vítěz Novinářské ceny (2025) a&nbsp;držitel tří finálových nominací. Působil v&nbsp;Institutu Maxe Plancka v&nbsp;německém Rostocku, na Universidad de Salamanca ve Španělsku a&nbsp;na Karlově univerzitě. Specializuje se na volební analýzy a&nbsp;predikce. Nyní mj. vyučuje na Západočeské univerzitě v&nbsp;Plzni.',
     ],
     x: 700,
     y: 1430,
@@ -114,7 +113,7 @@ export default function AboutScrolly() {
       const viewportMarker = window.innerHeight * 0.52;
       const routeY = Math.min(
         ROUTE_HEIGHT,
-        Math.max(0, ((viewportMarker - rect.top) / rect.height) * ROUTE_HEIGHT),
+        Math.max(0, ((viewportMarker - rect.top) / rect.height) * ROUTE_HEIGHT * 1.08),
       );
       const path = window.innerWidth <= 820 ? mobilePathRef.current : desktopPathRef.current;
 
