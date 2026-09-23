@@ -14,12 +14,11 @@ promoted: 76
 
 V pátek ráno se na Kamčatce a Čukotce otevřely volební místnosti pro první ruské parlamentní volby od plnohodnotného vpádu na Ukrajinu. Záběry <Person id="putin">Vladimira Putina</Person>, jak sedí před monitorem ve své pracovně, kliká na distanční elektronické hlasování a stroze děkuje počítači, zveřejnila [tisková služba Kremlu](http://kremlin.ru/events/president/news/80786), převzala je i [agentura TASS](https://tass.com/politics/2189653).
 
-<Figure src="images/putin-voting-2026.webp" side="right" alt="Vladimir Putin hlasuje u počítače ve své pracovně v Kremlu" caption="Putin hlasuje elektronicky ze své pracovny v Kremlu, 18. září 2026. Foto: tisková služba Kremlu" />
+<Figure src="images/putin-voting-2026.webp" side="right" alt="Vladimir Putin hlasuje u počítače ve své pracovně v Kremlu" caption="«Не ошибешься» je trochu hříčka: buď je celý proces elektronického hlasování tak jednoduchý, že se těžko dá udělat chyba, nebo volič/ka neudělá chybu, když bude hlasovat pro Jednotné Rusko – vyberte si. Foto: tisková služba Kremlu" />
 
 Přepis záběrů podle [Nové gazety](https://novayagazeta.ru/articles/2026/09/18/putin-i-chinovniki-progolosovali-distantsionno-na-vyborakh-v-gosdumu-tsik-otchitalsia-o-iavke-v-bolee-chem-20-news) a [URA.ru](https://ura.news/articles/1053129058):
 
-**Putin** _(sedí u počítače a hledí do monitoru)_: „Není co splést.“ (rusky «Не ошибешься»; je to trochu hříčka: buď je celý proces elektronického hlasování tak jednoduchý, že se těžko dá udělat chyba, nebo volič/ka neudělá chybu, když bude hlasovat pro Jednotné Rusko – vyberte si)
-
+**Putin** _(sedí u počítače a hledí do monitoru)_: „Není co splést.“
 _(Několikrát klikne myší, hlas je odeslán.)_
 
 **Putin** _(komusi mimo záběr)_: „Děkuji.“
