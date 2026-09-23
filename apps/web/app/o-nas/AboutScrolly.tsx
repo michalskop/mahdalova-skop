@@ -158,10 +158,8 @@ export default function AboutScrolly() {
     const isReached = index <= active;
     const isActive = index === active;
     return (
-      <img
+      <span
         key={step.index}
-        src={LOGO_SRC}
-        alt=""
         aria-hidden="true"
         className={`${styles.logoMark} ${isReached ? styles.logoMarkOn : ''} ${
           isActive ? styles.logoMarkActive : ''
@@ -173,7 +171,9 @@ export default function AboutScrolly() {
             '--logo-left-m': `${(MOBILE_X[index] / 760) * 100}%`,
           } as React.CSSProperties
         }
-      />
+      >
+        <img src={LOGO_SRC} alt="" className={styles.logoImg} />
+      </span>
     );
   });
 
