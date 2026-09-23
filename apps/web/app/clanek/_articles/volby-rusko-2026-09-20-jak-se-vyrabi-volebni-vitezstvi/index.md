@@ -4,6 +4,7 @@ date: "2026-09-20"
 author: "Kateřina Mahdalová"
 excerpt: "Svobodné volby? Ruský „svátek demokracie“ se odehrává ve znamení přísných kvót a selekce."
 coverImage: "images/rusko-volby-jak-se-vyrabi-vitezstvi-datatimes.jpg"
+ogImage: "images/cover-og.jpg"
 coverFit: contain
 coverBg: "brandChocolate.9"
 filter: ["analýza"]
