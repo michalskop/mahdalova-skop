@@ -14,7 +14,7 @@ promoted: 76
 
 V pátek ráno se na Kamčatce a Čukotce otevřely volební místnosti pro první ruské parlamentní volby od plnohodnotného vpádu na Ukrajinu. Záběry <Person id="putin">Vladimira Putina</Person>, jak sedí před monitorem ve své pracovně, kliká na distanční elektronické hlasování a stroze děkuje počítači, přinesla [tisková agentura TASS](https://tass.com/politics/2189653).
 
-<SupportBanner float="left" /> Zatímco státní aparát rozjel třídenní mašinérii s rozpočtem přesahujícím 23 miliard rublů a oficiálním sloganem „Tvůj hlas je síla Ruska“, kulisy v ulicích velkých měst svědčí o pravém opaku: volby provází ticho, apatie a prázdné nástěnky.
+Zatímco státní aparát rozjel třídenní mašinérii s rozpočtem přesahujícím 23 miliard rublů a oficiálním sloganem „Tvůj hlas je síla Ruska“, kulisy v ulicích velkých měst svědčí o pravém opaku: volby provází ticho, apatie a prázdné nástěnky.
 
 Přesto za zdmi Kremlu panuje podle zahraničních korespondentů i nezávislých ruských novinářů největší nervozita za poslední dekádu. Válka se protáhla do pátého roku, ruské rafinerie a logistické uzly čelí úderům dronů, v regionech narůstá inflace i výpadky pohonných hmot a bezpečnostní aparát podle uniklých informací zvažoval, zda volby raději zcela nezrušit vyhlášením stanného práva.
 
@@ -22,9 +22,9 @@ Nakonec se jde k urnám. Nikoli však soutěžit, ale splnit administrativní pl
 
 ## Tlak na odklad a odmítnutí v Kremlu
 
-Důvody pro uskutečnění voleb nakonec převážily hned na několika frontách. V prvé řadě šlo o kalkulovaný kontrast s Kyjevem. Moskva nutně potřebovala propagandistický argument vůči Ukrajině, která v souladu se svou ústavou během válečného stavu prezidentské ani parlamentní volby nepořádá. Vladimir Putin tak mohl doma i směrem do zahraničí rozehrát rétoriku, že zatímco sousední země své demokratické mechanismy pozastavila, Rusko funguje bez jediného zádrhelu jako stabilní a sebevědomý právní stát. <RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="🔻🔻🔻" />
+Důvody pro uskutečnění voleb nakonec převážily hned na několika frontách. V prvé řadě šlo o kalkulovaný kontrast s Kyjevem. Moskva nutně potřebovala propagandistický argument vůči Ukrajině, která v souladu se svou ústavou během válečného stavu prezidentské ani parlamentní volby nepořádá. <SupportBanner float="left" />Vladimir Putin tak mohl doma i směrem do zahraničí rozehrát rétoriku, že zatímco sousední země své demokratické mechanismy pozastavila, Rusko funguje bez jediného zádrhelu jako stabilní a sebevědomý právní stát. 
 
-Neméně podstatnou roli hrála potřeba zpečetit válečný kurz iluzí celonárodního konsensu. Režim neusiloval o skutečnou debatu, ale o vytvoření dojmu kolektivního souhlasu s vleklým konfliktem. Z volební účasti se stal nekompromisní test loajality, v němž pasivita nebo ignorování uren znamenaly nebezpečné vystoupení ze stáda. Odevzdání hlasu tak nepředstavovalo volbu politického programu, nýbrž podpis pod pokračováním války.
+Neméně podstatnou roli hrála potřeba zpečetit válečný kurz iluzí celonárodního konsensu. Režim neusiloval o skutečnou debatu, ale o vytvoření dojmu kolektivního souhlasu s vleklým konfliktem. Z volební účasti se stal nekompromisní test loajality, v němž pasivita nebo ignorování uren znamenaly nebezpečné vystoupení ze stáda. Odevzdání hlasu tak nepředstavovalo volbu politického programu, nýbrž podpis pod pokračováním války.<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="🔻🔻🔻" />
 
 Pro Kreml představovaly volby ideální prověrku toho, jak spolehlivě fungují regionální gubernátoři a jejich aparáty. Vedení státu si potřebovalo ověřit, zda místní elity dokáží i pod tlakem sankcí, výpadků zásobování a skryté společenské únavy dodat do Moskvy přesně nařízená čísla, aniž by tím v regionech vyvolaly viditelné nepokoje.
 
