@@ -265,10 +265,15 @@ above); `size="lg"` for article grids.
 
 ## RelatedArticles („Doporučujeme" / „Napsali jsme")
 
+**Heading is always `🔻🔻🔻`** (since 2026-09-23 – replaces the old „Doporučujeme"
+and „Napsali jsme" labels, which are kept below only as role names). It is the
+default Czech heading, so `heading` can be omitted; when written explicitly, use
+`heading="🔻🔻🔻"`, never the old texts.
+
 Two roles from one component:
-- **Bottom cards block = „Doporučujeme"** (default heading; the `cards` preset).
-  Every article ends with `<RelatedArticles slugs={[…]} heading="Doporučujeme" />`.
-- **Floating side box = „Napsali jsme"** (`preset="sidebar" position="right"`).
+- **Bottom cards block = „Doporučujeme"** (the `cards` preset).
+  Every article ends with `<RelatedArticles slugs={[…]} heading="🔻🔻🔻" />`.
+- **Floating side box = „Napsali jsme"** (`preset="sidebar" position="right" heading="🔻🔻🔻"`).
   Placed mid-article; it **bleeds** out of the column like `<Figure>` (see
   *Bleed / vyčuhující prvky*).
 
@@ -741,7 +746,7 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 
 ### New-article checklist (`/clanek`)
 Every real article (not a special landing page) should have:
-1. **„Doporučujeme"** at the end — `<RelatedArticles slugs={[…]} heading="Doporučujeme" />` with 2–4 thematically related articles (group by tags/topic).
+1. **Related-articles block („Doporučujeme") at the end** — `<RelatedArticles slugs={[…]} heading="🔻🔻🔻" />` with 2–4 thematically related articles (group by tags/topic).
 2. **A mid-article `<SupportBanner float="right" />`** placed in a text-heavy paragraph (not next to an infographic/chart/table). The full-width end banner is automatic — don't add it by hand.
 3. Any side asides (`infobox … right`, „Napsali jsme" `position="right"`, `<Figure side="right">`) use the shared bleed — nothing else to set.
 
