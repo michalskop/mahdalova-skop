@@ -3,7 +3,7 @@ title: "Se zdravotním postižením žije v Česku 1,3 milionu lidí. Nejvíc ji
 date: "2026-08-04"
 author: "Kateřina Mahdalová"
 excerpt: "Kolik lidí s postižením v Česku žije, kdo jsou, jak se jim žije a co nejčastěji potřebují k důstojnému a samostatnému životu – hlavní zjištění nového šetření Českého statistického úřadu."
-coverImage: "images/main.png"
+coverImage: "images/cover-homepage.jpg"
 filter: ["analýza", "společnost"]
 tags: ["zdravotní postižení", "ČSÚ", "sociální politika", "demografie", "inkluze"]
 promoted: 1
