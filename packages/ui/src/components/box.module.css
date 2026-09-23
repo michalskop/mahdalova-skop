@@ -21,7 +21,7 @@
   width: var(--dt-bleed-width, 48%);
   margin-top: 0.3rem;
   margin-bottom: 1.1rem;
-  margin-left: var(--dt-bleed-gap, 1.75rem);
+  margin-left: var(--dt-bleed-gap, 1.25rem);
   margin-right: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the right margin */
 }
 
@@ -30,7 +30,7 @@
   width: var(--dt-bleed-width, 48%);
   margin-top: 0.3rem;
   margin-bottom: 1.1rem;
-  margin-right: var(--dt-bleed-gap, 1.75rem);
+  margin-right: var(--dt-bleed-gap, 1.25rem);
   margin-left: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the left margin */
 }
 

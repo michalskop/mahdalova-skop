@@ -12,13 +12,13 @@
 
 .right {
   float: right;
-  margin-left: var(--dt-bleed-gap, 1.75rem);
+  margin-left: var(--dt-bleed-gap, 1.25rem);
   margin-right: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the right-hand margin */
 }
 
 .left {
   float: left;
-  margin-right: var(--dt-bleed-gap, 1.75rem);
+  margin-right: var(--dt-bleed-gap, 1.25rem);
   margin-left: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the left-hand margin */
 }
 

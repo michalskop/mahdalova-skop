@@ -101,7 +101,7 @@ every bleeding element matches — the tokens live in `:root` in
 |-------|-------|---------|
 | `--dt-bleed-width` | `48%` | width of the floated element |
 | `--dt-bleed-out` | `12%` | how far the outer edge bleeds into the page margin |
-| `--dt-bleed-gap` | `1.75rem` | gap between the element and the wrapping text |
+| `--dt-bleed-gap` | `1.25rem` | gap between the element and the wrapping text |
 
 **Which elements bleed (side / floated):**
 - `<Figure side="right|left">` — floated photo (`figure.module.css`)
