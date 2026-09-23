@@ -15,7 +15,7 @@ Paula Steigera jsem v prvních minutách vůbec nepoznala. Z klubu v samém cent
 
 Byl červen 2018, oba jsme tu byli na velké novinářské akci (konkrétně šlo o GEN – Global Editors Network – summit) a natrefili jsme na sebe po jedné z ceremonií.
 
-<RelatedArticles preset="sidebar" slugs={["kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} position="right" heading="🔻🔻🔻" />
 
 Znala jsem jeho tvář z fotografií, dokonce jsem ho viděla i během programu předávat jednu z cen. Jen jsem si toho slavného muže z pódia nespojila s pánem, kterému jsem před chvílí pomáhala do schodů.
 

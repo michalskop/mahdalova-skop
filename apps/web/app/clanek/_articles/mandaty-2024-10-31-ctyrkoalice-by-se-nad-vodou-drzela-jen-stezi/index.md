@@ -82,4 +82,4 @@ Volební model odráží aktuální rozložení voličské přízně a zahrnuje 
 Důležitou roli hrají voliči, kteří ještě nejsou rozhodnuti nebo váhají mezi stranami. Jejich rozhodnutí má zásadní vliv na přesnost průzkumů – strany, které dokážou aktivizovat tyto nerozhodnuté voliče či nevoliče, mohou nakonec dosáhnout lepšího volebního výsledku.
 ```
 
-<RelatedArticles slugs={["mandaty-unikatni-volebni-model", "volby-cr-2025-10-04-predikce", "volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["mandaty-unikatni-volebni-model", "volby-cr-2025-10-04-predikce", "volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem"]} heading="🔻🔻🔻" />

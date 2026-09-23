@@ -91,4 +91,4 @@ V roce 2022 nebyl dohledán žádný pravomocný soudní příkaz k omluvě.
 
 *Zdroj: Mediální databáze Infobae Colombia, El Tiempo, Semana, El Colombiano, La FM, Consejo de Estado (2023–2026). Tabulka sestavena na základě dohledatelných mediálních zpráv – skutečný počet příkazů může být vyšší.*
 
-<RelatedArticles slugs={["analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="🔻🔻🔻" />

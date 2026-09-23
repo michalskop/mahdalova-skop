@@ -12,7 +12,7 @@ promoted: 74
 ---
 Výbuch v areálu nemocnice v Gaze zachytilo několik kamer. Záznamů bylo dost na vznik desítek analýz, ale málo na jednoznačný verdikt. Případ Al-Ahli ukázal možnosti i slabiny vizuální investigace – a předznamenal svět, v němž bude stále obtížnější dokázat, že obraz zachycuje skutečnost.
 
-<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2026-02-18-jak-zmanipulovane-video-rozhybalo-pet-evropskych-vlad"]} position="right" heading="🔻🔻🔻" />
 
 Večer 17. října 2023 zasáhla areál nemocnice Al-Ahli Arab v Gaze prudká exploze. Výbuch nastal na parkovišti ve dvoře nemocničního komplexu, kde se před izraelským bombardováním ukrývali civilisté. Následoval požár, záběry ohořelých automobilů, zraněných lidí a těl odnášených na přikrývkách.
 
@@ -92,4 +92,4 @@ Výsledek takové práce nemusí mít podobu jednoznačného verdiktu. Někdy bu
 
 Al-Ahli ukázala, že přiznaná nejistota důvěru neoslabuje. Mnohem více ji poškozuje jistota, kterou důkazy neunesou.
 
-<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "komentar-2025-01-22-dezinformace-jako-nikdy", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "komentar-2025-01-22-dezinformace-jako-nikdy", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze"]} heading="🔻🔻🔻" />

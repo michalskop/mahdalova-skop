@@ -68,4 +68,4 @@ Vietnam? Tam je „Trumpův poměr“ skoro 90 %. Ne kvůli clům. Ale protož
 
 ```
 
-<RelatedArticles slugs={["analyza-2025-03-04-trumpova-obchodni-valka", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "volby-usa-2024-11-06-volby-vyhraje-trump-a-nebude-to-tesne"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2025-03-04-trumpova-obchodni-valka", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "volby-usa-2024-11-06-volby-vyhraje-trump-a-nebude-to-tesne"]} heading="🔻🔻🔻" />

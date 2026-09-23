@@ -128,4 +128,4 @@ Setkání bývá lidmi spojenými s jeho pořádáním [označováno za nepoliti
 - gallery-19.jpg | Ladislav Větvička, publicista a někdejší populární bloger z iDnes.
 ```
 
-<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="🔻🔻🔻" />

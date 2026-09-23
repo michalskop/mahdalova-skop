@@ -37,4 +37,4 @@ Otázka je nakonec stejná jako u vln veder obecně: kdo je odpovědný za to, a
 
 *Zdroj: [anketa a přehled odpovědí krajů od Odborového svazu dopravy](https://www.odborovysvazdopravy.cz/klimatizace-pro-cestujici-nestaci-osd-zverejnuje-jak-kraje-chrani-ridice-autobusu-v-horku/) (30. 7. 2026). Odpovědi krajů a doporučení OSD jsou reportované tiskovou zprávou svazu; před delším zpracováním doporučujeme oslovit kraje i dopravce přímo.*
 
-<RelatedArticles slugs={["analyza-2026-07-30-smrtelna-vlna-veder", "cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi", "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-07-30-smrtelna-vlna-veder", "cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi", "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku"]} heading="🔻🔻🔻" />

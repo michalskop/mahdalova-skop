@@ -502,7 +502,7 @@ export function RelatedArticles({
   const effectiveShowEmbed        = showEmbed        ?? defaults.showEmbed;
   const effectiveShowTopicBadge   = showTopicBadge   ?? defaults.showTopicBadge;
 
-  const defaultHeading = locale.startsWith('cs') ? 'Doporučujeme' : 'Recommended';
+  const defaultHeading = locale.startsWith('cs') ? '🔻🔻🔻' : 'Recommended';
   const effectiveHeading = heading === false ? null : (heading ?? defaultHeading);
 
   // Build display list

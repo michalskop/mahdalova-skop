@@ -90,4 +90,4 @@ Středověký Londýn měl míru vražd zhruba 15–20× vyšší než moderní 
 
 Pokles vražd v moderní době tak nesouvisí jen s proměnou individuálního chování, jak naznačuje teorie civilizačního procesu sociologa Norberta Eliase. Svou roli sehrála i regulace veřejného prostoru – od licencování hospod přes zákazy nošení zbraní po vytvoření profesionální policie a záchranných služeb.
 
-<RelatedArticles slugs={["kontext-2026-09-05-skutecna-velikost-sveta", "explainer-2026-09-05-mapy-sveta-osn-afrika", "explainer-2025-12-01-historie-emoji"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2026-09-05-skutecna-velikost-sveta", "explainer-2026-09-05-mapy-sveta-osn-afrika", "explainer-2025-12-01-historie-emoji"]} heading="🔻🔻🔻" />

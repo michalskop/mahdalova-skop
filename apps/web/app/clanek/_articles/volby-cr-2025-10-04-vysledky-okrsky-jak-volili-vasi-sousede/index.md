@@ -32,4 +32,4 @@ Volební účast je u každého okrsku uvedena samostatně, takže lze porovnáv
 
 Petr 
 
-<RelatedArticles slugs={["volby-cr-2025-10-04-nejvetsi-prekvapeni-voleb-2025", "volby-cr-2025-10-08-presuny-volicu-2021-2025", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-cr-2025-10-04-nejvetsi-prekvapeni-voleb-2025", "volby-cr-2025-10-08-presuny-volicu-2021-2025", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="🔻🔻🔻" />

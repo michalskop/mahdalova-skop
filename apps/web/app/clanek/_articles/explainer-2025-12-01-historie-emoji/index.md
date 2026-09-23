@@ -29,4 +29,4 @@ Podle Unicode 17.0 (2025) máme k dispozici **3 953 emoji**. Pro srovnání – 
 | 2015 | 😂 je Oxford Word of the Year |
 | 2025 | Existuje 3 953 emoji |
 
-<RelatedArticles slugs={["kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii", "kontext-2025-12-21-ekonomie-pozornosti"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii", "kontext-2025-12-21-ekonomie-pozornosti"]} heading="🔻🔻🔻" />

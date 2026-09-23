@@ -97,4 +97,4 @@ Tím se vracíme na začátek. Nejde o to postavit tiskovou konferenci a soukrom
 
 Jedněmi dveřmi se snaží vstoupit akreditovaná novinářka a stát je před ní zavře. Druhými vejde anonym v kukle – a ministr je otevře sám. Že už nás to skoro nepřekvapuje, není zásluha Petra Macinky. Je to jen míra, na jakou jsme si zvykli.
 
-<RelatedArticles slugs={["explainer-2026-02-24-uniky-z-policejnich-spisu", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["explainer-2026-02-24-uniky-z-policejnich-spisu", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami"]} heading="🔻🔻🔻" />

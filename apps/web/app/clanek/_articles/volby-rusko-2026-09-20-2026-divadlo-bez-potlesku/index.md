@@ -31,7 +31,7 @@ Pro Kreml představovaly volby ideální prověrku toho, jak spolehlivě funguj�
 
 ## Parlamentní volby Rusko 2026 v datech
 
-<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="🔻🔻🔻" />
 
 Jak přesně režim předepsané výsledky vyrábí – od vyřazení protiválečného Jabloka přes centrálně nařízené kvóty 47–53 procent až po neprůhledné elektronické hlasování –, jsme podrobně rozebrali v samostatném textu. Následující přehled shrnuje, jak se zářijové hlasování liší od posledních voleb do Státní dumy v roce 2021 – od předepsaných výsledků přes rozšíření elektronického hlasování až po rostoucí rozpočet celé operace.
 
@@ -56,4 +56,4 @@ Volební lístek vhozený do urny nebo odeslaný přes státní portál Gosuslug
 
 _Stav informací k 20. září 2026, poslednímu ze tří dnů hlasování._
 
-<RelatedArticles slugs={["europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="🔻🔻🔻" />

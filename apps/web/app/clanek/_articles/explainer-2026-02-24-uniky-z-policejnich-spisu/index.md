@@ -27,4 +27,4 @@ A dopad na vyšetřování bývá obrovský. Úniky mohou prozradit vyšetřovac
 
 Parlamentní komise to v roce 2016 pojmenovala přesně: úniky informací z trestního řízení a jejich účelová interpretace jsou „fatálním ohrožením ústavnosti". Od té doby přibylo zákonné zakotvení povinné mlčenlivosti. Neznáme jediný případ, kdy by vedlo k trestnímu postihu.
 
-<RelatedArticles slugs={["analyza-2026-09-04-kdo-smi-k-ministrovi", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-09-04-kdo-smi-k-ministrovi", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="🔻🔻🔻" />

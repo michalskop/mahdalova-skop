@@ -126,4 +126,4 @@ Ke konci loňského roku přijala svou nejnovější roli: stala se ambasadorkou
 
 ✤
 
-<RelatedArticles slugs={["volby-rakousko-2024-11-27-kartogramy", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "volby-rumunsko-2024-12-20-rumunsko-volby-eu"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-rakousko-2024-11-27-kartogramy", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "volby-rumunsko-2024-12-20-rumunsko-volby-eu"]} heading="🔻🔻🔻" />

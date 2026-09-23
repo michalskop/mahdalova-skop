@@ -10,7 +10,7 @@ promoted: 65
 ---
 Organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví Francesca Albanese, zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na základě tohoto videa požaduje její rezignaci. Když se ukázalo, že video je účelově sestříhané, žádná z vlád se neomluvila, jen Rakousko stáhlo svůj twitterový status.
 
-<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["kontext-2024-11-14-amsterdam-video", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} position="right" heading="🔻🔻🔻" />
 
 ### Odkud se video vzalo
 
@@ -124,4 +124,4 @@ Případ Francescy Albanese je v podstatě tentýž model:
 Rozdíl je v síle dopadů. V Amsterdamu šlo o pokřivení mediálního obrazu jednoho incidentu, v případě Francesky Albanese jde o pokus odstranit nezávislou představitelku OSN na základě prokazatelně nepravdivého tvrzení – a pět evropských vlád se na tomto pokusu aktivně podílí.
 
 
-<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "analyza-2026-08-10-izraelsko-palestinsky-konflikt"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["komentar-2025-01-22-dezinformace-jako-nikdy", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "analyza-2026-08-10-izraelsko-palestinsky-konflikt"]} heading="🔻🔻🔻" />

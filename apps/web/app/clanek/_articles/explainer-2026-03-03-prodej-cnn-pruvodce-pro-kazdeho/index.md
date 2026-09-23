@@ -12,7 +12,7 @@ Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění maj
 
 Ve čtvrtek 26. února ráno se v redakci CNN rozezněly telefony. Netflix vzdal boj o Warner Bros. Discovery – a tím i o CNN. „Jsme v háji," řekl jeden ze členů redakce [listu Status](https://www.status.news/p/scott-jennings-cnn-iran-tweet-claim). „Všichni jsou v šoku kvůli *těm věcem*," dodal jiný.
 
-<RelatedArticles preset="sidebar" filter={["explainer", "analýza", "kontext"]} tag="BBC" count={2} sort="newest" position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" filter={["explainer", "analýza", "kontext"]} tag="BBC" count={2} sort="newest" position="right" heading="🔻🔻🔻" />
 
 *Ty věci* mají jméno: David Ellison. Čtyřiačtyřicetiletý hollywoodský producent, syn jednoho z nejbohatších lidí světa, přítel Donalda Trumpa. Člověk, který před pár měsíci koupil televizi CBS a dosadil do jejího čela novinářku bez jediné zkušenosti s vedením televizní redakce. A tenhle člověk chce nyní vstoupit do CNN.
 
@@ -90,4 +90,4 @@ CNN ještě prodána nebyla. Redakce se nezměnila. Novináři tam dál pracují
 Obchod musí ještě schválit antimonopolní regulátoři v USA i v Evropě. Uzavření je plánováno mezi zářím a prosincem 2026. Do té doby může přijít nový zájemce nebo regulátoři obchod zablokují.
 ```
 
-<RelatedArticles slugs={["explainer-2025-11-15-skutecna-hrozba-pro-nezavislost-bbc", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["explainer-2025-11-15-skutecna-hrozba-pro-nezavislost-bbc", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "kontext-2026-08-01-paul-steiger-der-spiegel-potrebujeme-utopie"]} heading="🔻🔻🔻" />

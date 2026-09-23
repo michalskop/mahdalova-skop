@@ -200,4 +200,4 @@ Výsledky [FIA CEZ 2017](https://fia-cez.com/wp-content/uploads/2017/10/F4.pdf),
 
 _Turkovy citace jsou z knihy Filip Turek: Hranatá legenda, z článku [Formule je životní droga stejně jako svlékání holek, to nelze ničím vynahradit](https://redbull.biggboss.cz/articles/5592/formule-je-zivotni-droga-stejne-jako-svlekani-holek-to-nelze-nicim-vynahradit) a z webu Turkovy firmy [Art of Performance](https://artofperformance.cz/servis-renovace-a-prodej-klasickych-aut/nas-tym/)._
 
-<RelatedArticles slugs={["analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku", "kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku", "kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane"]} heading="🔻🔻🔻" />

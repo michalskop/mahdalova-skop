@@ -41,4 +41,4 @@ Je na tom kus pravdy – Trump skutečně slíbil masivní daňové škrty pro m
 
 Právě tato ideologie činí z hnutí MAGA dar z nebes pro broligarchy, mezi které patří nejen Musk, Zuckerberg a Bezos, ale také venture kapitalisté Peter Thiel a Marc Andreessen. Hnutí MAGA totiž představuje udělení neomezené moci těm, kteří už moc drží pevně ve svých rukou.
 
-<RelatedArticles slugs={["komentar-2025-01-09-hitler-nebyl-komunista", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "analyza-2026-08-23-pricovy-politicka-setkani"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["komentar-2025-01-09-hitler-nebyl-komunista", "volby-rumunsko-2024-12-20-rumunsko-volby-eu", "analyza-2026-08-23-pricovy-politicka-setkani"]} heading="🔻🔻🔻" />

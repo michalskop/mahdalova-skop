@@ -29,7 +29,7 @@ Současné zákony jasně říkají, že každá nezisková organizace (spolek, 
 ## <PartyFace party="Motoristé" size={24} text="MOTO" /> Motoristé: čistá nula
 Nejhůř jsou na tom poslanci a poslankyně za **Motoristy sobě**. Celkem stojí v čele osmi spolků - a **ani jeden z nich zákonnou povinnost neplní**. (Výjimkou je zde pouze jeden nový spolek, kterému zatím nevznikla zákonná povinnost účetní dokumenty zveřejnit.)
 
-<RelatedArticles preset="sidebar" slugs={["kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku","analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane", "analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli"]} position="right" heading="Napsali jsme"/>
+<RelatedArticles preset="sidebar" slugs={["kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku","analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane", "analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli"]} position="right" heading="🔻🔻🔻"/>
 
 Ministr zahraničních věcí a předseda strany [Petr Macinka](https://snemovna.datatimes.cz/member/7022) předsedá **Klubu motoristů** a je tajemníkem rady **Centra pro výzkum terorismu**. Oba spolky porušují zákon – do Sbírky listin neodevzdaly účetní dokumenty nikdy. 
 
@@ -90,7 +90,7 @@ Spolek [Pluralis](https://www.pluralis.cz), kde je místopředsedkyní [Gabriela
 
 ## <PartyFace party="SPD" size={24} text="SPD" /> Poslanci SPD ve vedení neziskovek
 
-<RelatedArticles preset="sidebar" position="right" slugs={["explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak", "analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium"]} heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" position="right" slugs={["explainer-2025-11-15-boj-o-rektora-vse-data-ukazuji-sevcikuv-propadak", "analyza-2024-10-17-za-sevcika-se-rekordne-propadl-zajem-uchazecu-o-studium"]} heading="🔻🔻🔻" />
 
 Z SPD si zaslouží pozornost poslanec [Miroslav Ševčík](https://snemovna.datatimes.cz/member/6064), předseda spolku Memoriál J. Odložila. Tato neziskovka spolu s Ševčíkovo firmou stejného jména organizuje jeden z největších atletických mítinků v Česku a získala za posledních roky [dotace skoro 10 milionů korun](https://www.hlidacstatu.cz/dotace/hledat?Q=ico%3A+70100438) od Ministerstva školství, mládeže a tělovýchovy a ze státní Národní sportovní agentury. Firma stejného jména získala [na dotacích 20 milionů](https://www.hlidacstatu.cz/dotace/hledat?Q=ico%3A+62906674).
 
@@ -127,4 +127,4 @@ U organizací, které vyvíjejí politickou činnost a jsou financované ze zahr
 Zamezíme tomu, aby se veřejné peníze využívaly pro politický aktivismus. Neziskové organizace mohou prosazovat své politické názory, ale nikoli z peněz daňových poplatníků.
 ```
 
-<RelatedArticles slugs={["analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-09-04-kdo-smi-k-ministrovi", "analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-09-04-kdo-smi-k-ministrovi", "analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu"]} heading="🔻🔻🔻" />

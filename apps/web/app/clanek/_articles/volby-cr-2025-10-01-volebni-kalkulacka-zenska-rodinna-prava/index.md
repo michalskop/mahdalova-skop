@@ -63,4 +63,4 @@ Otázky jsme formulovali tak, aby byly jednoznačné, férové a srovnatelné.
 Testovali jsme také přístupnost – na mobilu je zobrazení zjednodušené a čitelné.
 ```
 
-<RelatedArticles slugs={["volby-cr-2025-10-01-volebni-kalkulacka-klasik", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-cr-2025-10-01-volebni-kalkulacka-klasik", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="🔻🔻🔻" />

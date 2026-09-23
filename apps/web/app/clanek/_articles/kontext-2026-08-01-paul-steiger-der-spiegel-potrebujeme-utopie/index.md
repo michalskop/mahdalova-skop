@@ -155,4 +155,4 @@ Omidyarův vstup do médií vypadal jinak, ale také rozporuplně: z jeho First 
 
 Steigerova věta „potřebujeme utopie“ tak dnes zní hořce. Ukázalo se, že majitel je pořád majitel – a že „nezávislost“, kterou Steiger popisoval u ProPublica financované ze širokého okruhu dárců, se u miliardářského vlastnictví jednoho zavedeného titulu sama od sebe nezaručí.
 
-<RelatedArticles slugs={["novinar-nema-vyvazovat-ale-overovat", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["novinar-nema-vyvazovat-ale-overovat", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="🔻🔻🔻" />

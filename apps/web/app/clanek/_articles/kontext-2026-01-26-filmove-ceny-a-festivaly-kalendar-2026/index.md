@@ -97,4 +97,4 @@ Označení „A-festival" uděluje Mezinárodní federace filmových producentů
 
 *Tento přehled průběžně aktualizujeme o výsledky jednotlivých cen a festivalů.*
 
-<RelatedArticles slugs={["kontext-2026-08-27-dolly-parton", "explainer-2025-12-01-historie-emoji", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2026-08-27-dolly-parton", "explainer-2025-12-01-historie-emoji", "kontext-2025-06-06-mapa-vrazd-ve-stredoveku-v-anglii"]} heading="🔻🔻🔻" />

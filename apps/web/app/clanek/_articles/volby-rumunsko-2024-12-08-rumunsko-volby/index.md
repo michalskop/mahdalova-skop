@@ -68,4 +68,4 @@ Více informací:
 - Rumunsko je podle [Eurostatu](https://ec.europa.eu/eurostat) nejlevnější zemí EU.  
 - Silné menšiny: Maďarská a romská populace tvoří 10 % obyvatel. 
 
-<RelatedArticles slugs={["volby-rumunsko-2024-12-20-rumunsko-volby-eu", "volby-rakousko-2024-11-27-kartogramy", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-rumunsko-2024-12-20-rumunsko-volby-eu", "volby-rakousko-2024-11-27-kartogramy", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="🔻🔻🔻" />

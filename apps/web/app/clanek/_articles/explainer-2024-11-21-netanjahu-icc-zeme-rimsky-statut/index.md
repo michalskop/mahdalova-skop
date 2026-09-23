@@ -19,4 +19,4 @@ Izrael, stejně jako USA haagský tribunál neuznávají a nespolupracují s ní
 
 ![Signatáři tzv. Římskýho statutu - země, které by politiky měly vydat na základě zatykače Mezinárodního trestního soudu](images/Rimsky-statut-zeme-s-pozadim.png)
 
-<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze"]} heading="🔻🔻🔻" />

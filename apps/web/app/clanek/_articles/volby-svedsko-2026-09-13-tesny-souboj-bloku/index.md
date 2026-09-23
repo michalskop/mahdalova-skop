@@ -67,4 +67,4 @@ Volby jsou v mnohém odvetou souboje z roku 2022: znovu proti sobě stojí Krist
 
 Oficiální ani průběžné výsledky v čase publikace tohoto textu ještě nejsou k dispozici – volební místnosti se zavírají ve 20:00 SELČ. Číslo v titulku je odhad z posledního předvolebního průzkumu, ne výsledek; až budou k dispozici skutečná data, doplníme je.
 
-<RelatedArticles slugs={["volby-rakousko-2024-11-27-kartogramy", "volby-rumunsko-2024-12-08-rumunsko-volby", "volby-nemecko-2025-02-21-jak-se-voli"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-rakousko-2024-11-27-kartogramy", "volby-rumunsko-2024-12-08-rumunsko-volby", "volby-nemecko-2025-02-21-jak-se-voli"]} heading="🔻🔻🔻" />

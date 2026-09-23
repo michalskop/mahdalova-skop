@@ -73,4 +73,4 @@ Regulace marží čerpacích stanic se jich jako rafinérií netýká. Jako prov
 
 <HtmlEmbed file="support.html" />
 
-<RelatedArticles slugs={["volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem", "analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem", "analyza-2026-06-29-ucast-na-snemovnich-vyborech", "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami"]} heading="🔻🔻🔻" />

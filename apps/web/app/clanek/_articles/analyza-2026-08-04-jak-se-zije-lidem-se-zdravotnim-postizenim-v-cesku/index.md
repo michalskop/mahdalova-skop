@@ -125,4 +125,4 @@ Hlavní čísla se týkají lidí starších 15 let žijících v domácnostech.
 
 Šetření vzniklo v souladu s Národním plánem podpory rovných příležitostí pro osoby se zdravotním postižením na období 2021–2025. Právě proto, že nejčastější bariérou zůstávají peníze a dostupná péče, míří další kroky – od nastavení dávek přes dostupnost pomůcek po podporu pečujících příbuzných – ke stejnému cíli: k důstojnému a samostatnému životu bez zbytečných překážek.
 
-<RelatedArticles slugs={["data-pro-budouci-premierku-02-demografie", "cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi", "analyza-2026-07-30-smrtelna-vlna-veder"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["data-pro-budouci-premierku-02-demografie", "cislo-dne-2025-02-15-tri-ctvrtiny-umrti-z-horka-pripadaji-na-mlade-lidi", "analyza-2026-07-30-smrtelna-vlna-veder"]} heading="🔻🔻🔻" />

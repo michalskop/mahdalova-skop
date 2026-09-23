@@ -10,4 +10,4 @@ promoted: 1
 htmlInclude: "demografie-hub.html"
 ---
 
-<RelatedArticles slugs={["analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu"]} heading="🔻🔻🔻" />

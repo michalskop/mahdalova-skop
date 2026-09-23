@@ -61,7 +61,7 @@ Celkem 56,2 procenta násilných obětí tvoří ženy, děti a starší lidé. 
     "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut",
     "kontext-2024-11-14-amsterdam-video",
   ]}
-  heading="Doporučujeme"
+  heading="🔻🔻🔻"
 />
 
 A co novináři konkrétně? Výbor na ochranu novinářů (CPJ) vede podrobnou databázi s jmény. K 6. lednu 2026 eviduje minimálně 252 zabitých novinářů a mediálních pracovníků od začátku války. Izraelské úřady opakovaně označovaly zabité novináře za teroristy – ale jak CPJ dokumentuje, v žádném z těchto případů nepředložily věrohodné důkazy. V srpnu 2025 deník *+972 Magazine* odhalil, že izraelská armáda vytvořila speciální jednotku nazvanou „Legitimization Cell", jejíž úkolem bylo propojovat palestinské novináře s Hamásem – právě proto, aby bylo jejich zabití ospravedlnitelné.

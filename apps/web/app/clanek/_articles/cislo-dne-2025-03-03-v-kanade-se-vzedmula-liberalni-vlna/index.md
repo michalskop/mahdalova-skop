@@ -20,4 +20,4 @@ Trumpovy výroky zásadně změnily vnímání politické scény. Poilievre, kte
 ![Kanada - volební model](images/kanada-volebni-model-brezen-2025.png)
 [zdroj dat: celostátní průzkumy veřejného mínění provedené od kanadských federálních voleb v roce 2021 do voleb 2025](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2025_Canadian_federal_election)
 
-<RelatedArticles slugs={["volby-kanada-2025-04-29-jak-trump-vzkrisil-liberaly", "volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-kanada-2025-04-29-jak-trump-vzkrisil-liberaly", "volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit", "cislo-dne-2025-04-02-soudkyne-porazila-muska"]} heading="🔻🔻🔻" />

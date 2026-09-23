@@ -59,4 +59,4 @@ Z celkových 206 obcí s rozšířenou působností (ORP) vláda zvítězila pou
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují, jak volí celé Česko.**</div>
 
-<RelatedArticles slugs={["volby-cr-2025-10-04-vysledky-okrsky-jak-volili-vasi-sousede", "volby-cr-2025-10-08-presuny-volicu-2021-2025", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-cr-2025-10-04-vysledky-okrsky-jak-volili-vasi-sousede", "volby-cr-2025-10-08-presuny-volicu-2021-2025", "volby-cr-2025-10-13-kam-kracis-cesko"]} heading="🔻🔻🔻" />

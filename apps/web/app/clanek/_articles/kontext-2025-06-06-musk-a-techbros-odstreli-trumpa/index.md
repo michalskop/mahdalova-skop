@@ -67,4 +67,4 @@ JD Vance (senátor z Ohia, bývalý venture kapitalista, spojenec Petera Thiela)
 ---
 Kateřina Mahdalová
 
-<RelatedArticles slugs={["kontext-2025-07-07-byl-zelenskyj-v-obleku-nebo-ne-otazka-za-3-miliardy", "komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2025-07-07-byl-zelenskyj-v-obleku-nebo-ne-otazka-za-3-miliardy", "komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc", "kontext-2025-10-25-todd-hitlerismus-trumpismus-netanjahuismus"]} heading="🔻🔻🔻" />

@@ -33,7 +33,7 @@ Finanční odškodné soud nepřiznal. Uložil státu, aby se žalobcům omluvil
 
 Rozsudek je prvoinstanční.
 
-<RelatedArticles slugs={["kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "analyza-2026-08-10-izraelsko-palestinsky-konflikt", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost", "analyza-2026-08-10-izraelsko-palestinsky-konflikt", "explainer-2025-08-16-proc-jsme-se-pripojili-k-vyzve-na-ochranu-novinaru-v-gaze", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} heading="🔻🔻🔻" />
 
 ## Čtyři pojmy, které soudy nezaměňují
 

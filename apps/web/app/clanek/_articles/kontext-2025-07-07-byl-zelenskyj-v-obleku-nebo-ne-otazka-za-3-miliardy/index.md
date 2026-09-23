@@ -62,4 +62,4 @@ Hlasovací lhůta uplyne krátce po půlnoci. Tehdy bychom se měli dozvědět, 
 
 ![Vývoj kurzů na variantu „Ano, Zelenskyj bude v obleku do konce června“](images/chart.webp)
 
-<RelatedArticles slugs={["komentar-2025-03-01-jsme-s-ukrajinou", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["komentar-2025-03-01-jsme-s-ukrajinou", "kontext-2025-06-06-musk-a-techbros-odstreli-trumpa", "komentar-2025-02-05-snyder-samozrejme-ze-je-to-puc"]} heading="🔻🔻🔻" />

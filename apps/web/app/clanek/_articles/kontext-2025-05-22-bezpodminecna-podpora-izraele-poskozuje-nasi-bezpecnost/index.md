@@ -58,4 +58,4 @@ Jak varuje [sociolog Daniel Prokop](https://www.seznamzpravy.cz/clanek/komentare
 
 Kateřina Mahdalová
 
-<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "explainer-2024-11-21-netanjahu-icc-zeme-rimsky-statut"]} heading="🔻🔻🔻" />

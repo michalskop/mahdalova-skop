@@ -44,4 +44,4 @@ Výsledky studie byly publikovány v recenzovaném vědeckém časopise Science 
 ```
 Jaká je serióznost výzkumu? Studie je založena na rozsáhlé analýze dat z let 1998–2019 a její výsledky prošly recenzním řízením. Kolumbijská univerzita patří mezi prestižní světové vědecké instituce, což zvyšuje důvěryhodnost závěrů výzkumu.
 
-<RelatedArticles slugs={["analyza-2026-07-30-smrtelna-vlna-veder", "analyza-2026-07-31-horko-v-kabine-ridicu-autobusu", "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-07-30-smrtelna-vlna-veder", "analyza-2026-07-31-horko-v-kabine-ridicu-autobusu", "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku"]} heading="🔻🔻🔻" />

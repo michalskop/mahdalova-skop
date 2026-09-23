@@ -105,4 +105,4 @@ Pokud může z této chmurné epizody vzejít něco dobrého, přinejmenším za
 
 Kdyby měl alespoň trochu sebereflexe, nyní by rezignoval.
 
-<RelatedArticles slugs={["explainer-2025-11-18-bbc-musi-uhajit-svou-nezavislost", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho", "kontext-2026-01-03-ceska-a-slovenska-media-2025"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["explainer-2025-11-18-bbc-musi-uhajit-svou-nezavislost", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho", "kontext-2026-01-03-ceska-a-slovenska-media-2025"]} heading="🔻🔻🔻" />

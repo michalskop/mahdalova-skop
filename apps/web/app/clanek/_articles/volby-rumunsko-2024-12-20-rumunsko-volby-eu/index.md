@@ -69,4 +69,4 @@ Rumunské volby ukázaly, jak snadno lze destabilizovat demokratické procesy ne
 Příběh Georgescovy kampaně nabízí komplexní pohled na budoucnost politického marketingu. Kdo bude další „tiktokový kandidát či kandidátka“? A co to znamená pro demokracii? Pojďte s námi hledat odpovědi.
 ```
 
-<RelatedArticles slugs={["volby-rumunsko-2024-12-08-rumunsko-volby", "komentar-2025-01-22-dezinformace-jako-nikdy", "volby-nemecko-2025-02-28-tiktokova-generace"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-rumunsko-2024-12-08-rumunsko-volby", "komentar-2025-01-22-dezinformace-jako-nikdy", "volby-nemecko-2025-02-28-tiktokova-generace"]} heading="🔻🔻🔻" />

@@ -151,4 +151,4 @@ Filip Turek se mezitím přesunul do Poslanecké sněmovny, ale to nic nemění 
 <div style={{ textAlign: 'center', marginTop: '2em' }}>┃┃┃</div>
 <div style={{ textAlign: 'center' }}>**Mahdalová & Škop – Data, která ukazují, odkud (ne)přicházejí Turkovy peníze.**</div>
 
-<RelatedArticles slugs={["kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane", "analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["kontext-2025-10-27-turek-a-jeho-nevysvetlene-prijmy-a-dane", "analyza-2025-05-16-penize-odnikud-zahadne-miliony-europoslance-turka", "kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku"]} heading="🔻🔻🔻" />

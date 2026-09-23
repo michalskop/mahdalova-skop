@@ -175,4 +175,4 @@ Historie tohoto konfliktu zná řadu příměří, která zastavila boje, ale ne
 
 _Text redakčně vychází z hesla **Israeli-Palestinian Conflict** z [Globálního přehledu konfliktů](https://www.cfr.org/global-conflict-tracker/conflict/israeli-palestinian-conflict) think tanku Council on Foreign Relations, doplněného o zpravodajství světových agentur. Upraveno a doplněno pro české čtenáře; stav informací k 10. srpnu 2026._
 
-<RelatedArticles slugs={["analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci", "kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich", "kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost"]} heading="🔻🔻🔻" />

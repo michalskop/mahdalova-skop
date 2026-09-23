@@ -48,4 +48,4 @@ Poslanci často namítají, že samotná docházka o kvalitě práce mnoho neř�
 
 Shrnutí každého zasedání výborů najdete vždy večer po jednání v našem projektu [Digest](https://snemovna.datatimes.cz/digest).
 
-<RelatedArticles slugs={["analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami", "analyza-2026-09-04-kdo-smi-k-ministrovi", "analyza-2024-10-10-digitalizace-stavebniho-rizeni-analyza-prvnich-dostupnych-dat"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami", "analyza-2026-09-04-kdo-smi-k-ministrovi", "analyza-2024-10-10-digitalizace-stavebniho-rizeni-analyza-prvnich-dostupnych-dat"]} heading="🔻🔻🔻" />
