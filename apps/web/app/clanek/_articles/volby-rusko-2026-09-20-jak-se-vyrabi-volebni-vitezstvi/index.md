@@ -11,18 +11,18 @@ tags: ["Rusko", "ruské volby 2026", "Jednotné Rusko", "Jabloko", "elektronick�
 promoted: 75
 ---
 
-<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku"]} position="right" heading="Napsali jsme" />
+<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku"]} position="right" heading="🔻🔻🔻" />
 
 Trauma z prosince 2011, kdy pokles vládní podpory a neohrabané volební machinace vyhnaly na moskevské [Bolotné náměstí](https://en.wikipedia.org/wiki/Bolotnaya_Square_case) statisíce protestujících, zůstává pro Kreml trvalým varováním. Právě od té doby ruské úřady systematicky budovaly mašinérii přísných kvót, administrativních zásahů všeho druhu a pečlivé filtrace protikandidátů. 
 
 Letošní - opět nikoli svobodné - volby jsou vyvrcholením této dlouholeté praxe, navíc umocněné válečnou cenzurou.
-Úřady nejprve utnuly poslední legální ventil reálného nesouhlasu s invazí na Ukrajinu. Tímto směrem se vydala tradiční liberální strana Jabloko. Léta byla marginální politickou silou na okraji zájmu, její otevřený požadavek na okamžité příměří na Ukrajině začal během léta 2026 nečekaně silně rezonovat ve společnosti, zejména mezi mladšími ročníky. Podle [politoložky Iriny Busyginové](https://www.cnn.com/2026/09/18/europe/russia-parliamentary-elections-2026-ukraine-intl) právě tento nárůst online zájmu přiměl Kreml stranu "neutralizovat".
+Úřady nejprve utnuly poslední legální ventil reálného nesouhlasu s invazí na Ukrajinu. Tímto směrem se vydala tradiční liberální strana Jabloko. Léta byla marginální politickou silou na okraji zájmu, její otevřený požadavek na okamžité příměří na Ukrajině začal během léta 2026 nečekaně silně rezonovat ve společnosti, zejména mezi mladšími ročníky. Podle [politoložky Iriny Busyginové](https://www.cnn.com/2026/09/18/europe/russia-parliamentary-elections-2026-ukraine-intl) právě tento nárůst online zájmu přiměl Kreml stranu „neutralizovat“.
 
-V srpnu proto zasáhl Nejvyšší soud Ruské federace a straně zrušil federální kandidátní listinu; prvoinstanční rozhodnutí padlo 10. srpna, [o týden později soud zamítl i odvolání](https://www.euronews.com/2026/08/17/russia-upholds-yabloko-partys-election-ban-and-jails-its-deputy-chair). To vyvolalo protesty jejích příznivců přímo před budovou soudu, [jak informovala agentura AFP](https://tvpworld.com/94789190/yabloko-russias-only-anti-war-party-banned-from-duma-elections). Diskvalifikace stranu z klání nevyřadila úplně – Jabloko mělo dál 135 kandidátů v jednomandátových obvodech, které však soudy začaly po regionech postupně vyškrtávat. Záměr byl nicméně průhledný: na stranické části lístku, o kterou se hraje nejvíc mandátů, neměla zůstat ani jediná alternativa, která by zpochybnila pokračování bojů.
+V srpnu proto zasáhl Nejvyšší soud Ruské federace a straně zrušil federální kandidátní listinu; prvoinstanční rozhodnutí padlo 10. srpna, [o týden později soud zamítl i odvolání](https://www.euronews.com/2026/08/17/russia-upholds-yabloko-partys-election-ban-and-jails-its-deputy-chair). To vyvolalo protesty jejích příznivců přímo před budovou soudu, [jak informovala agentura AFP](https://tvpworld.com/94789190/yabloko-russias-only-anti-war-party-banned-from-duma-elections). Diskvalifikace stranu z klání nevyřadila úplně – Jabloko mělo dál 135 kandidátů v jednomandátových obvodech, které však soudy začaly po regionech postupně vyškrtávat. Záměr byl nicméně průhledný: na stranické části lístku, kde se hraje o nejvíc mandátů, neměla zůstat ani jediná alternativa, která by zpochybnila pokračování bojů.
 
 <SupportBanner float="left" />
 
-Samotný volební výsledek pak v moderním Rusku není předmětem odhadů ani sociologických průzkumů, ale centrálních směrnic. Prezidentská kancelář rozesílala regionům cílová čísla už v průběhu léta a dolaďovala je až do začátku září. Celostátní zisk Jednotného Ruska musí podle nich překročit 50 procent, přičemž jednotlivým typům regionů byly stanoveny odstupňované cíle – od 47 procent tam, kde je podpora režimu průměrná, po 52 až 53 procenta v regionech s vyšší mírou mobilizace.
+Samotný volební výsledek pak v moderním Rusku není předmětem odhadů ani sociologických průzkumů, ale centrálních směrnic. Prezidentská kancelář rozesílala regionům cílová čísla už v průběhu léta a dolaďovala je až do začátku září. Celostátní zisk Jednotného Ruska musí překročit 50 procent, přičemž jednotlivým typům regionů byly stanoveny odstupňované cíle – od 47 procent tam, kde je podpora režimu průměrná, po 52 až 53 procenta v regionech s vyšší mírou mobilizace.
 
 ## Režim pro okupovaná území
 
@@ -35,6 +35,12 @@ Evropská unie i Kyjev označily tento proces za nelegální frašku a hrubé po
 ## Hlas po 38 sekundách
 
 Tam, kde dříve režimu stačilo svážet zaměstnance k urnám podnikovými autobusy, navíc plně převzala otěže digitalizace. Distanční elektronické hlasování se stalo neprůhlednou černou skříňkou, která je letos nasazena ve 33 regionech a pokrývá přes 48 milionů oprávněných voličů. [Server Meduza](https://meduza.io/en/feature/2026/09/18/russia-s-state-duma-elections-begin-with-record-online-turnout-a-million-votes-in-occupied-donetsk-and-attempts-to-bribe-observers) zmapoval do očí bijící anomálie hned od prvních minut hlasování – v Moskevské oblasti systém zaznamenal první odevzdaný online hlas pouhých 38 sekund po pátečním spuštění.
+
+```infobox default
+Záznam o prvním online hlasu odevzdaném pouhých 38 sekund po pátečním otevření systému v Moskevské oblasti představuje fyzikální i technickou anomálii, která spolehlivě vylučuje přirozené chování běžného voliče. Aby občan mohl přes ruský systém elektronického hlasování (DEG) legitimně odvolit, musí se v přesný čas přihlásit do státního portálu Gosuslugi, projít dvoufázovým ověřením identity přes SMS či push notifikaci, vyčkat na načtení volebního rozhraní, zorientovat se v dlouhých hlasovacích lístcích pro stranické kandidátky i jednomandátové obvody, potvrdit své volby a počkat na kryptografické zašifrování a zápis hlasu do databáze.
+
+Absolvovat celý tento řetězec úkonů za 38 sekund je pro člověka manuálně neproveditelné, zvlášť při typickém náporovém přetížení serverů v prvních minutách provozu. Z pohledu IT analytiků i nezávislých volebních pozorovatelů takto extrémní rychlost jednoznačně ukazuje na předem připravené automatizované skripty, boty obcházející uživatelské rozhraní nebo přímé nasazení předvyplněných hlasů z databáze ještě před oficiálním startem.
+```
 
 Spolu s digitální kontrolou přišel bezprecedentní nátlak na pracovištích; například učitelé v Jakutsku dostali přímý příkaz nejen sami odvolit, ale každé dvě hodiny hlásit vedení škol jmenný seznam rodičů svých žáků, kteří již odevzdali hlas. Aby systém nikdo nenarušoval, úřady pod vykonstruovanými záminkami nevpustily do volebních místností téměř 1 300 nezávislých pozorovatelů KPRF i vyřazeného Jabloka; důvody sahaly od „nefunkčního USB disku“ po to, že se pozorovatel po místnosti „příliš pohyboval“.
 
