@@ -84,7 +84,17 @@ export function Figure({ src = '', alt = '', caption, side = 'right', slug = '' 
             aria-label="Zavřít"
             onClick={() => setOpen(false)}
           >
-            ×
+            {/* SVG instead of the "×" glyph: font metrics push the glyph off
+                the circle's optical centre, a drawn cross sits dead centre. */}
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path
+                d="M6 6 L18 18 M18 6 L6 18"
+                stroke="currentColor"
+                strokeWidth="2.25"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
           </button>
         </div>
       ) : null}
