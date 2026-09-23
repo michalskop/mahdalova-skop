@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './AboutScrolly.module.css';
 
 type Step = {
@@ -82,39 +82,74 @@ const steps: Step[] = [
   },
 ];
 
-const DESKTOP_PATH =
-  'M 700 330 C 760 523, 240 717, 300 910 C 360 1083, 760 1257, 700 1430 C 640 1588, 240 1747, 300 1905 C 314 2000, 340 2100, 360 2180';
-const MOBILE_PATH =
-  'M 650 330 C 700 523, 60 717, 110 910 C 160 1083, 700 1257, 650 1430 C 600 1588, 60 1747, 110 1905 C 124 2000, 150 2100, 170 2180';
-const MOBILE_X = [650, 110, 650, 110];
-const ROUTE_HEIGHT = 2260;
+const MOBILE_X = [710, 50, 710, 50];
+const ROUTE_TAIL = 275;
+
+function buildRoute(centers: number[], mobile = false) {
+  const xs = mobile ? MOBILE_X : steps.map((step) => step.x);
+  const route = centers.map((y, index) => {
+    if (index === 0) return `M ${xs[index]} ${y}`;
+    const previousY = centers[index - 1];
+    const bend = (y - previousY) / 3;
+    const sway = xs[index - 1] > xs[index] ? 1 : -1;
+    const amplitude = mobile ? 40 : 60;
+    return `C ${xs[index - 1] + sway * amplitude} ${previousY + bend}, ${xs[index] - sway * amplitude} ${y - bend}, ${xs[index]} ${y}`;
+  }).join(' ');
+  const lastX = xs[xs.length - 1];
+  const lastY = centers[centers.length - 1];
+  return `${route} C ${lastX + 14} ${lastY + 95}, ${lastX + 40} ${lastY + 195}, ${lastX + 60} ${lastY + ROUTE_TAIL}`;
+}
 const LOGO_SRC = '/images/datatimes-donut.svg';
 
 export default function AboutScrolly() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const desktopPathRef = useRef<SVGPathElement>(null);
   const mobilePathRef = useRef<SVGPathElement>(null);
-  const [active, setActive] = useState(-1);
+  const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [pathLengths, setPathLengths] = useState({ desktop: 1, mobile: 1 });
+  const [layout, setLayout] = useState({ centers: steps.map((step) => step.y), height: 2260 });
+  const desktopPath = buildRoute(layout.centers);
+  const mobilePath = buildRoute(layout.centers, true);
+
+  useLayoutEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const cards = Array.from(section.querySelectorAll<HTMLElement>('[data-step]'));
+    const measure = () => {
+      let top = 24;
+      const centers = cards.map((card) => {
+        const height = card.getBoundingClientRect().height;
+        const center = top + height / 2;
+        top += height + 48;
+        return center;
+      });
+      top = Math.max(top, centers[centers.length - 1] + ROUTE_TAIL + 24);
+      setLayout((previous) => previous.height === top &&
+        previous.centers.every((center, index) => center === centers[index])
+        ? previous : { centers, height: top });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    setPathLengths({
-      desktop: desktopPathRef.current?.getTotalLength() ?? 1,
-      mobile: mobilePathRef.current?.getTotalLength() ?? 1,
-    });
-
     let frame = 0;
     const updateProgress = () => {
       frame = 0;
       const section = sectionRef.current;
       if (!section) return;
       const rect = section.getBoundingClientRect();
-      const viewportMarker = window.innerHeight * 0.52;
-      const routeY = Math.min(
-        ROUTE_HEIGHT,
-        Math.max(0, ((viewportMarker - rect.top) / rect.height) * ROUTE_HEIGHT),
-      );
+      const firstY = layout.centers[0];
+      const lastY = layout.centers[layout.centers.length - 1] + ROUTE_TAIL;
+      // Keep the original one-to-one scroll movement, anchored to the first node.
+      // The viewport midpoint must not create an initial head start or delay.
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolledY = Math.max(0, window.scrollY) * layout.height / rect.height;
+      const routeY = window.scrollY > 0 && window.scrollY >= maxScroll - 1
+        ? lastY : Math.min(lastY, firstY + scrolledY);
+      const scrollProgress = (routeY - firstY) / (lastY - firstY);
       const path = window.innerWidth <= 820 ? mobilePathRef.current : desktopPathRef.current;
 
       if (path) {
@@ -126,12 +161,12 @@ export default function AboutScrolly() {
           if (path.getPointAtLength(middle).y < routeY) low = middle;
           else high = middle;
         }
-        setProgress(Math.min(1, Math.max(0, ((low + high) / 2) / totalLength)));
+        setProgress(scrollProgress === 0 ? 0 : scrollProgress === 1 ? 1 : ((low + high) / 2) / totalLength);
       }
 
       let reachedIndex = -1;
-      steps.forEach((step, index) => {
-        if (routeY >= step.y) reachedIndex = index;
+      steps.forEach((_, index) => {
+        if (routeY >= layout.centers[index]) reachedIndex = index;
       });
       setActive(reachedIndex);
     };
@@ -149,7 +184,7 @@ export default function AboutScrolly() {
       if (frame) window.cancelAnimationFrame(frame);
       window.clearTimeout(settleTimer);
     };
-  }, []);
+  }, [layout]);
 
   // Donut logo markers sit on the line (as HTML, so they are never deformed by
   // the stretched SVG). They stay greyed until the red line reaches them.
@@ -165,7 +200,7 @@ export default function AboutScrolly() {
         }`}
         style={
           {
-            top: `${(step.y / ROUTE_HEIGHT) * 100}%`,
+            top: `${(layout.centers[index] / layout.height) * 100}%`,
             '--logo-left-d': `${(step.x / 1000) * 100}%`,
             '--logo-left-m': `${(MOBILE_X[index] / 760) * 100}%`,
           } as React.CSSProperties
@@ -177,36 +212,42 @@ export default function AboutScrolly() {
   });
 
   return (
-    <div ref={sectionRef} className={styles.scrolly}>
+    <div ref={sectionRef} className={styles.scrolly} style={{
+      height: layout.height,
+      '--route-fade-start': `${layout.centers[layout.centers.length - 1] + 24}px`,
+      '--route-fade-end': `${layout.centers[layout.centers.length - 1] + ROUTE_TAIL}px`,
+    } as React.CSSProperties}>
       <svg
         className={`${styles.route} ${styles.routeDesktop}`}
-        viewBox={`0 0 1000 ${ROUTE_HEIGHT}`}
+        viewBox={`0 0 1000 ${layout.height}`}
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <path className={styles.routeShadow} d={DESKTOP_PATH} />
         <path
           ref={desktopPathRef}
           className={styles.routeProgress}
-          d={DESKTOP_PATH}
-          strokeDasharray={pathLengths.desktop}
-          strokeDashoffset={pathLengths.desktop * (1 - progress)}
+          d={desktopPath}
+          pathLength={1}
+          strokeDasharray={1}
+          strokeDashoffset={1 - progress}
+          visibility={progress > 0 ? 'visible' : 'hidden'}
         />
       </svg>
 
       <svg
         className={`${styles.route} ${styles.routeMobile}`}
-        viewBox={`0 0 760 ${ROUTE_HEIGHT}`}
+        viewBox={`0 0 760 ${layout.height}`}
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <path className={styles.routeShadow} d={MOBILE_PATH} />
         <path
           ref={mobilePathRef}
           className={styles.routeProgress}
-          d={MOBILE_PATH}
-          strokeDasharray={pathLengths.mobile}
-          strokeDashoffset={pathLengths.mobile * (1 - progress)}
+          d={mobilePath}
+          pathLength={1}
+          strokeDasharray={1}
+          strokeDashoffset={1 - progress}
+          visibility={progress > 0 ? 'visible' : 'hidden'}
         />
       </svg>
 
@@ -219,7 +260,7 @@ export default function AboutScrolly() {
           className={`${styles.milestone} ${styles[step.side]} ${
             index <= active ? styles.milestoneReached : ''
           } ${index === active ? styles.milestoneActive : ''}`}
-          style={{ '--milestone-y': `${(step.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
+          style={{ '--milestone-y': `${(layout.centers[index] / layout.height) * 100}%` } as React.CSSProperties}
         >
           <div className={styles.bubble}>
             <svg className={styles.bubbleTrace} aria-hidden="true" preserveAspectRatio="none">
