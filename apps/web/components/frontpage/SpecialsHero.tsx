@@ -86,12 +86,12 @@ const KlimaIcon = () => (
 // Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
 const TILES = [
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
-  { href: '/specialy/kviff', title: 'Festival Karlovy Vary v datech', bg: '#121212', external: false, logoType: 'kviff', coverImage: '/images/specials/karlovy-vary.svg' },
+  { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
   { href: '/specialy/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
   { href: '/specialy/investigace', title: 'M & Š investigace', bg: '#351040', external: false, logoType: 'lupa', coverImage: '/images/specials/investigace.svg' },
   { href: 'https://snemovna.datatimes.cz', title: 'Sněmovna.DataTimes.cz', bg: '#2f325c', external: true, logoType: 'flag', coverImage: '/images/specials/snemovna.svg' },
   { href: 'https://mandaty.cz', title: 'Mandáty.cz', bg: 'linear-gradient(90deg, #f71b4b, #101432)', external: true, logoType: 'mandaty', coverImage: '/images/specials/mandaty.svg' },
-  { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
+  { href: '/specialy/kviff', title: 'Festival Karlovy Vary v datech', bg: '#121212', external: false, logoType: 'kviff', coverImage: '/images/specials/karlovy-vary.svg' },
 ];
 
 // Nekonečná smyčka: klonujeme VISIBLE dlaždic na začátek a konec tracku.
