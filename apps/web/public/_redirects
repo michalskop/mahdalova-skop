@@ -65,10 +65,17 @@
 /clanek/_articles/analyza-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/* /clanek/_articles/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem/:splat 301
 
 # Preserve shared article and image URLs after the Steiger article update.
-/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra /clanek/novinar-nema-vyvazovat-ale-overovat 301
-/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/ /clanek/novinar-nema-vyvazovat-ale-overovat 301
-/clanek/_articles/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/* /clanek/_articles/novinar-nema-vyvazovat-ale-overovat/:splat 301
+/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra /clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat 301
+/clanek/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/ /clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat 301
+/clanek/_articles/kontext-2026-08-02-paul-steiger-jsi-fakt-dobra/* /clanek/_articles/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat/:splat 301
 
 # Stránka „Kdo jsme" nahrazena novým intrem /o-nas (2026-09-22).
 /kdo-jsme    /o-nas    301
 /kdo-jsme/   /o-nas    301
+
+# Steiger profil dostal 2026-09-21 slug bez rubriky a data (chyba). Opraveno
+# 2026-09-23 na kontext-2026-08-02-…; stará URL už je sdílená na sítích,
+# proto zatím jen přesměrovává (zrušit později).
+/clanek/novinar-nema-vyvazovat-ale-overovat /clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat 301
+/clanek/novinar-nema-vyvazovat-ale-overovat/ /clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat 301
+/clanek/_articles/novinar-nema-vyvazovat-ale-overovat/* /clanek/_articles/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat/:splat 301

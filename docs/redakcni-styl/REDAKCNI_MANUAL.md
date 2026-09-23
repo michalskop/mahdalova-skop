@@ -258,6 +258,18 @@ Titulek je tvrzení, ne téma · osa, jednotka, období, populace a zdroj jsou v
 ## Povinný začátek každého zadání
 Urči projekt a žánr → načti tento manuál → načti projektovou kapitolu → vypiš hlavní tvrzení a potřebné důkazy → založ zdrojový záznam → teprve pak piš.
 
+## Před založením článku: URL a rubrika (povinný dotaz)
+**Žádný článek nevznikne, dokud redakce výslovně neurčí jeho URL (slug) a rubriku.** Platí pro lidi i pro AI (Claude, Codex): nejdřív se zeptat, pak zakládat složku. Totéž platí pro každé přejmenování existujícího článku. Slug nevymýšlet, nezkracovat a „nevylepšovat" podle titulku.
+
+Ptáme se vždy na tři věci:
+1. **URL / slug** – tvar `<rubrika>-<RRRR-MM-DD>-<popis>`, datum = `date` ve frontmatteru. Příklad: `/clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat`. Používané prefixy: `kontext`, `analyza`, `explainer`, `komentar`, `cislo-dne`, `podcast`, `europarlament`, `volby-<země>` (`volby-cr`, `volby-nemecko`…), `mandaty`. Slug bez prefixu a data (např. `/clanek/novinar-nema-vyvazovat-ale-overovat`) je chyba.
+2. **Rubrika** – hodnota `filter` (`kontext`, `analýza`, `explainer`…) a případně speciál (`svobodná-média`, `klima`, `investigace`…), do kterého článek patří.
+3. **Hlavní tagy** – pojítka rubriky/speciálu (např. u Svobodných médií vždy `média`, `svobodná média`, `nezávislá média`, `nezávislost médií`); první tag se zobrazuje v oválku na kartě.
+
+**Změna URL publikovaného článku** = vždy 301 přesměrování ze staré URL v `apps/web/public/_redirects` (i s variantou se `/` a s `/clanek/_articles/<slug>/*` pro obrázky), oprava všech interních odkazů a `RelatedArticles`, přegenerování `sitemap.xml` a `llms.txt`. Starou URL, která už byla sdílená, nerušíme – jen přesměrováváme.
+
+*Pravidlo platí od 2026-09-23 (po chybném přejmenování Steigerova profilu na slug bez rubriky a data). Vlastník: Kateřina Mahdalová.*
+
 ## Minimální brief
 Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní otázka a pracovní odpověď · žánr a rozsah · primární zdroje a datová omezení · projekt, accent a komponenty · editor, termín, stav (research / draft / ready).
 

@@ -774,6 +774,8 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 - Keep `ArticlesSection` titles short (≤ 14 chars) if you want the Arrow decoration
 
 ### New-article checklist (`/clanek`)
+**0. Before creating the folder: ASK for the URL slug and the rubric.** Never pick them yourself. The slug is `<rubrika>-<YYYY-MM-DD>-<popis>` (e.g. `kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat`), the rubric is the `filter` value (+ special, e.g. `svobodná-média`). Renaming a published article = 301 in `apps/web/public/_redirects` + fix internal links + regenerate sitemap/llms. Canonical rule: `docs/redakcni-styl/REDAKCNI_MANUAL.md` → *Před založením článku: URL a rubrika*.
+
 Every real article (not a special landing page) should have:
 1. **Related-articles block („Doporučujeme") at the end** — `<RelatedArticles slugs={[…]} heading="🔻🔻🔻" />` with 2–4 thematically related articles (group by tags/topic).
 2. **A mid-article `<SupportBanner float="left" />`** placed in a text-heavy paragraph (not next to an infographic/chart/table). The full-width end banner is automatic — don't add it by hand.
@@ -841,7 +843,7 @@ filter: ["kontext", "klima"]
 | `"kontext"` | `/kontext` |
 | `"explainer"` | – |
 | `"investigace"` | `/special/investigace` |
-| `"svobodná-média"` | `/special/svobodna-media` |
+| `"svobodná-média"` | `/specialy/svobodna-media` (core tags: `média`, `svobodná média`, `nezávislá média`, `nezávislost médií`) |
 | `"klima"` | `/special/klima` |
 
 The value must exactly match what the page passes to `getArticles(100, 'klima')`.

@@ -6,8 +6,8 @@ excerpt: "V nočním Lisabonu jsem pomohla staršímu pánovi s holí po schodec
 coverImage: "images/cover-paul-steiger-datatimes.webp"
 coverFit: contain
 coverBg: "brandTeal.5"
-filter: ["kontext"]
-tags: ["Profil: novinářské principy", "profil", "žurnalistika", "média", "ProPublica", "The Wall Street Journal", "objektivita", "Daniel Pearl", "USA"]
+filter: ["kontext", "svobodná-média"]
+tags: ["Profil: novinářské principy", "média", "svobodná média", "nezávislá média", "nezávislost médií", "profil", "žurnalistika", "objektivita", "ProPublica", "The Wall Street Journal", "Daniel Pearl", "USA"]
 promoted: 0
 ---
 

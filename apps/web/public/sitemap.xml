@@ -21,7 +21,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/kdo-jsme</loc>
+    <loc>https://www.mahdalova-skop.cz/o-nas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -368,6 +368,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat</loc>
+    <lastmod>2026-08-02T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich</loc>
     <lastmod>2026-06-16T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -406,12 +412,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/mandaty-unikatni-volebni-model</loc>
     <lastmod>2025-02-18T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/novinar-nema-vyvazovat-ale-overovat</loc>
-    <lastmod>2026-08-02T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

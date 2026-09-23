@@ -68,6 +68,8 @@ apps/web/app/clanek/_articles/
 
 DJS uses the same structure at `apps/datajournalism.studio/app/a/_articles/`.
 
+**HARD RULE – ask before creating an article:** before creating (or renaming) any article folder, ASK the user for (1) the URL slug and (2) the rubric (`filter` + special). Never choose them yourself. Slug = `<rubrika>-<YYYY-MM-DD>-<popis>` (prefixes: `kontext`, `analyza`, `explainer`, `komentar`, `cislo-dne`, `podcast`, `europarlament`, `volby-<země>`, `mandaty`); date = frontmatter `date`. Changing a published URL requires a 301 in `apps/web/public/_redirects` (plain, trailing `/`, and `/clanek/_articles/<slug>/*`), fixing internal links/`RelatedArticles`, and regenerating sitemap + llms.txt; never delete a shared old URL. Canonical: `docs/redakcni-styl/REDAKCNI_MANUAL.md` → *Před založením článku: URL a rubrika*.
+
 **Frontmatter fields:** `title`, `date`, `author`, `translator` (optional), `excerpt`, `coverImage`, `tags` (array), `filter` (string or array – used by `getArticles` to categorise), `promoted` (number – controls ordering), `htmlInclude` (filename of raw HTML embed).
 
 **Remark plugins** run in `lib/articles.ts` during serialisation:

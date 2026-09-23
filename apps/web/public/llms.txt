@@ -16,15 +16,14 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Kontext](https://www.mahdalova-skop.cz/kontext): Kontextové články vysvětlující složitá témata a souvislosti.
 - [Podcasty](https://www.mahdalova-skop.cz/podcasty): Audio rozhovory a diskuse k aktuálním tématům.
 - [Speciály](https://www.mahdalova-skop.cz/specialy): Tematické datové projekty, investigace a dlouhodobé série.
-- [O autorech](https://www.mahdalova-skop.cz/kdo-jsme): Redakční profily, kontakty a informace o projektu.
+- [O nás](https://www.mahdalova-skop.cz/o-nas): Kdo jsme, proč děláme datovou žurnalistiku, kontakty a informace o projektu.
 
 ## Vybrané články
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
 - [Poprvé od roku 1949 vypadla CDU ze zemského sněmu. Náš model to ukázal od prvního sčítání](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2026-09-20-cdu-meklenbursko)
-- [Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
-- [Ruské volby: Jak se vyrábí volební vítězství](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi)
+- [Rituál za 23 miliard rublů. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
 
 ### Ekonomika a ceny
 - [Data: Zastropování marží benzínek v peněžence moc nepoznáte](https://www.mahdalova-skop.cz/clanek/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu)
@@ -32,7 +31,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Esej: Ekonomie pozornosti, dopaminové pasti a život s ADHD v digitální době](https://www.mahdalova-skop.cz/clanek/kontext-2025-12-21-ekonomie-pozornosti)
 
 ### Mezinárodní politika
-- [Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
+- [Rituál za 23 miliard rublů. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
 - [Ruské volby: Jak se vyrábí volební vítězství](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi)
 - [Nemocnice Al-Ahli: dost záběrů na desítky analýz, málo na jediný verdikt](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace)
 
@@ -53,6 +52,6 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ## Kontakt
 
-- [O autorech a kontakt](https://www.mahdalova-skop.cz/kdo-jsme)
+- [O nás a kontakt](https://www.mahdalova-skop.cz/o-nas)
 - [Kateřina Mahdalová](https://www.mahdalova-skop.cz/autor/katerina-mahdalova)
 - [Michal Škop](https://www.mahdalova-skop.cz/autor/michal-skop)

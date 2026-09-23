@@ -7,12 +7,12 @@ excerpt: "Rozhovor se šéfredaktorem The Wall Street Journal a Pro Publica z ro
 coverImage: "images/paul-steiger-pro-publica-1-datatimes.webp"
 coverFit: contain
 coverBg: "brandNavy.9"
-filter: ["kontext"]
-tags: ["svobodná média" , "nezávislá média" , "mediální byznys", "rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "nezávislosti médií" , "USA"]
+filter: ["kontext", "svobodná-média"]
+tags: ["svobodná média", "nezávislá média", "nezávislost médií", "média", "mediální byznys", "rozhovor", "žurnalistika", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "USA"]
 promoted: 0
 ---
 ```infobox
-**Rozhovor z roku 2013.** Vyšel v německém týdeníku Der Spiegel (44/2013), přinášíme jej v našem překladu. Volně navazuje na [profesní medailonek Paula Steigera](/clanek/novinar-nema-vyvazovat-ale-overovat), ve kterém se zaměřujeme na novinářské principy, jimiž se sami řídíme. Reflexi redakce DataTimes.cz – co se od té doby v médiích skutečně změnilo – najdete na konci rozhovoru.
+**Rozhovor z roku 2013.** Vyšel v německém týdeníku Der Spiegel (44/2013), přinášíme jej v našem překladu. Volně navazuje na [profesní medailonek Paula Steigera](/clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat), ve kterém se zaměřujeme na novinářské principy, jimiž se sami řídíme. Reflexi redakce DataTimes.cz – co se od té doby v médiích skutečně změnilo – najdete na konci rozhovoru.
 ```
 
 Paul Steiger, tehdy jednasedmdesátiletý, patřil k veteránům americké žurnalistiky. V roce 1966 začínal jako reportér Wall Street Journal v San Francisku. Poté přešel do Los Angeles Times a v roce 1983 se vrátil do Wall Street Journal, který v letech 1991 až 2007 vedl jako šéfredaktor v New Yorku.
@@ -155,4 +155,4 @@ Omidyarův vstup do médií vypadal jinak, ale také rozporuplně: z jeho First 
 
 Steigerova věta „potřebujeme utopie“ tak dnes zní hořce. Ukázalo se, že majitel je pořád majitel – a že „nezávislost“, kterou Steiger popisoval u ProPublica financované ze širokého okruhu dárců, se u miliardářského vlastnictví jednoho zavedeného titulu sama od sebe nezaručí.
 
-<RelatedArticles slugs={["novinar-nema-vyvazovat-ale-overovat", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="🔻🔻🔻" />
+<RelatedArticles slugs={["kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat", "kontext-2026-01-03-ceska-a-slovenska-media-2025", "explainer-2026-03-03-prodej-cnn-pruvodce-pro-kazdeho"]} heading="🔻🔻🔻" />

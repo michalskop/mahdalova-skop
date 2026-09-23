@@ -11,6 +11,12 @@ Monorepo datové žurnalistiky dvojice Kateřina Mahdalová & Michal Škop. Obsa
 zdroj pravidel.** Etika a styl platí pro všechny formáty, obě značky i všechny
 speciály.
 
+> ⚠️ **Před založením každého článku se nejdřív zeptej na URL (slug) a rubriku.**
+> Tvar `/clanek/<rubrika>-<RRRR-MM-DD>-<popis>`, např.
+> `/clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat`. Změna URL
+> publikovaného článku = 301 přesměrování, stará URL se neruší. Podrobně viz
+> [manuál → Před založením článku](docs/redakcni-styl/REDAKCNI_MANUAL.md#před-založením-článku-url-a-rubrika-povinný-dotaz).
+
 Podřízené a doplňkové dokumenty:
 - [Dokumentace repozitáře](docs/README.md) — úplný rozcestník
 - [Redakční styl](docs/redakcni-styl/README.md) — psaní, ověřování a inspirace

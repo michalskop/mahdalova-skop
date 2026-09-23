@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči v tomhle byznysu, co chtějí a proč na tom záleží i nám."
 coverImage: "images/cnn-2026-explainer-mahdalova-skop-media.webp"
 filter: ["explainer", "svobodná-média"]
-tags: ["nezávislost CNN", "CNN", "Warner Bros.", "Paramount", "Trump", "média", "svoboda tisku", "USA", "svobodná média", "nezávislost médií"]
+tags: ["nezávislost CNN", "média", "svobodná média", "nezávislá média", "nezávislost médií", "svoboda tisku", "CNN", "Warner Bros.", "Paramount", "Trump", "USA"]
 promoted: 62
 ---
 Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči v tomhle byznysu, co chtějí a proč na tom záleží i nám.
