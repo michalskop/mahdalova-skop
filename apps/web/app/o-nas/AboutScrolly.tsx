@@ -150,29 +150,21 @@ export default function AboutScrolly() {
   const renderNodes = (mobile = false) =>
     steps.map((step, index) => {
       const cx = mobile ? MOBILE_X[index] : step.x;
-      const nodeIsLeft = cx < (mobile ? 380 : 500);
-      const labelOffset = mobile ? 46 : 34;
       const isActive = index === active;
       const isPast = index <= active;
       const size = isActive ? 30 : 22;
       return (
         <g key={step.index} className={styles.marker}>
           <rect
-            className={`${styles.markerNode} ${isActive ? styles.markerNodeActive : ''}`}
+            className={`${styles.markerNode} ${isPast ? styles.markerNodePast : ''} ${
+              isActive ? styles.markerNodeActive : ''
+            }`}
             x={cx - size / 2}
             y={step.y - size / 2}
             width={size}
             height={size}
             rx={5}
           />
-          <text
-            className={`${styles.markerIndex} ${isPast ? styles.markerIndexPast : ''}`}
-            x={cx + (nodeIsLeft ? -labelOffset : labelOffset)}
-            y={step.y + 10}
-            textAnchor={nodeIsLeft ? 'end' : 'start'}
-          >
-            {step.index}
-          </text>
         </g>
       );
     });
@@ -218,8 +210,8 @@ export default function AboutScrolly() {
           key={step.index}
           data-step={index}
           className={`${styles.milestone} ${styles[step.side]} ${
-            index === active ? styles.milestoneActive : ''
-          }`}
+            index <= active ? styles.milestoneReached : ''
+          } ${index === active ? styles.milestoneActive : ''}`}
           style={{ '--milestone-y': `${(step.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
         >
           <div className={styles.bubble}>
@@ -235,7 +227,6 @@ export default function AboutScrolly() {
               />
             </svg>
             <div className={styles.bubbleMeta}>
-              <span className={styles.bubbleIndex}>{step.index}</span>
               <span className={styles.bubbleEyebrow}>{step.eyebrow}</span>
             </div>
             {step.portrait ? (

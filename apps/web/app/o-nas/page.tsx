@@ -50,27 +50,43 @@ export default function AboutPage() {
   return (
     <Container size="lg" bg="background.1" maw={1200} w="100%" p={0} m="0 auto">
       {/* Hero */}
-      <Box component="header" bg="brand.9" c="background.0" px={{ base: 24, md: 64 }} py={{ base: 48, md: 88 }}>
-        <Stack gap="lg" maw={860}>
-          <Kicker color="brandYellow.5">DataTimes · Mahdalová &amp; Škop</Kicker>
-          <Title order={1} style={{ fontSize: 'clamp(2.6rem, 7vw, 5.4rem)', lineHeight: 0.98 }}>
-            O nás
+      <Box
+        component="header"
+        bg="brand.9"
+        c="background.0"
+        px={{ base: 20, md: 56 }}
+        py={{ base: 28, md: 44 }}
+        style={{ fontFamily: 'var(--mantine-font-family)' }}
+      >
+        <Stack gap="sm" maw={820}>
+          <Text tt="uppercase" size="xs" fw={500} c="brandYellow.5" style={{ letterSpacing: '0.12em' }}>
+            DataTimes.cz • mahdalova-skop.cz
+          </Text>
+          <Title
+            order={1}
+            fw={500}
+            style={{
+              fontFamily: 'var(--mantine-font-family)',
+              fontSize: 'clamp(1.7rem, 3.6vw, 2.7rem)',
+              lineHeight: 1.12,
+            }}
+          >
+            Kateřina Mahdalová &amp; Michal Škop
           </Title>
-          <Text size="xl" c="background.2" lh={1.55} maw={740}>
-            Jsme dvojice novinářů a&nbsp;analytiků: Kateřina Mahdalová &amp; Michal Škop.
+          <Text size="md" c="background.2" lh={1.55} maw={720}>
             Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži
             jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus
             odvahy (nás to stálo práci).
           </Text>
-          <Text size="lg" c="background.2" lh={1.6} maw={740}>
-            Hodně nám záleží na tom, aby naše práce odrážela realitu co nejvěrněji. Víme
-            samozřejmě, že skutečnost je leckdy nepříjemná, ale to nás neodrazuje.
+          <Text size="md" c="background.2" lh={1.55} maw={720}>
+            Hodně nám záleží na tom, aby naše práce odrážela realitu co nejvěrněji. Naše výhoda
+            je, umíme pracovat s&nbsp;daty, hledat je, číst, vizualizovat, interpretovat.
           </Text>
-          <Text size="lg" fw={700} c="background.0" lh={1.6} maw={740}>
+          <Text size="md" c="background.0" lh={1.55} maw={720}>
             Hledáme a&nbsp;poctivě zachycujeme. Nepřibarvujeme. Nepracujeme pro zájmové skupiny.
             A&nbsp;rozhodně se nebojíme.
           </Text>
-          <Group gap="sm" mt="xs" align="center">
+          <Group gap="xs" mt={4} align="center">
             {['Data', 'Kontext', 'Srozumitelnost', 'Odvaha'].map((word, index) => (
               <Fragment key={word}>
                 {index > 0 && (
@@ -78,17 +94,12 @@ export default function AboutPage() {
                     aria-hidden
                     span
                     c="brandYellow.5"
-                    style={{ fontSize: 'clamp(0.8rem, 1.4vw, 1rem)', opacity: 0.65, lineHeight: 1 }}
+                    style={{ fontSize: 'clamp(0.8rem, 1.3vw, 0.95rem)', opacity: 0.6, lineHeight: 1 }}
                   >
                     •
                   </Text>
                 )}
-                <Text
-                  span
-                  fw={900}
-                  c="brandYellow.5"
-                  style={{ fontSize: 'clamp(1rem, 2vw, 1.4rem)' }}
-                >
+                <Text span c="brandYellow.5" style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)' }}>
                   {word}
                 </Text>
               </Fragment>

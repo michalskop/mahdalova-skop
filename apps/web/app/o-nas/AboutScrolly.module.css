@@ -51,11 +51,15 @@
 
 /* Square markers ("čtverečky") – larger than the KVIFF dots */
 .markerNode {
-  fill: var(--route-red);
+  fill: var(--mantine-color-background-6);
   stroke: var(--mantine-color-background-0);
   stroke-width: 3;
-  transition: fill 220ms ease, x 220ms ease, y 220ms ease, width 220ms ease, height 220ms ease;
+  transition: fill 260ms ease, x 220ms ease, y 220ms ease, width 220ms ease, height 220ms ease;
   vector-effect: non-scaling-stroke;
+}
+
+.markerNodePast {
+  fill: var(--route-red);
 }
 
 .markerNodeActive,
@@ -66,18 +70,6 @@
 
 .marker {
   pointer-events: auto;
-}
-
-.markerIndex {
-  fill: var(--route-red-dark);
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
-  font-size: 30px;
-  font-weight: 800;
-  transition: fill 180ms ease;
-}
-
-.markerIndexPast {
-  fill: var(--route-red);
 }
 
 .milestone {
@@ -101,17 +93,22 @@
   border: 1px solid var(--mantine-color-background-6);
   border-radius: 6px;
   box-shadow: 0 12px 40px rgba(36, 16, 22, 0.08);
-  opacity: 1;
+  opacity: 0.5;
   padding: clamp(24px, 3.2vw, 40px);
   position: relative;
-  transform: translateY(10px);
-  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  transform: translateY(18px);
+  transition: border-color 260ms ease, box-shadow 260ms ease,
+    transform 560ms cubic-bezier(0.22, 1, 0.36, 1), opacity 560ms ease;
+}
+
+.milestoneReached .bubble {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .milestoneActive .bubble {
   border-color: color-mix(in srgb, var(--route-red) 34%, var(--mantine-color-background-6));
   box-shadow: 0 18px 52px rgba(36, 16, 22, 0.14);
-  transform: translateY(0);
 }
 
 .bubbleTrace {
@@ -146,14 +143,6 @@
   flex-wrap: wrap;
   gap: 6px 16px;
   margin-bottom: 16px;
-}
-
-.bubbleIndex {
-  color: var(--route-red);
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
-  font-size: clamp(2rem, 3.4vw, 2.9rem);
-  font-weight: 900;
-  line-height: 1;
 }
 
 .bubbleEyebrow {
@@ -224,13 +213,6 @@
     display: block;
   }
 
-  .routeMobile .markerIndex {
-    font-size: 22px;
-    transform: scaleX(1.7);
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
   .routeMobile .markerNode {
     transform: scaleX(1.7);
     transform-box: fill-box;
@@ -259,8 +241,8 @@
     transform: translateX(-10px);
   }
 
-  .milestoneActive.right .bubble,
-  .milestoneActive.left .bubble {
+  .milestoneReached.right .bubble,
+  .milestoneReached.left .bubble {
     transform: translateX(0);
   }
 
@@ -272,9 +254,13 @@
 @media (prefers-reduced-motion: reduce) {
   .routeProgress,
   .markerNode,
-  .markerIndex,
   .bubble,
   .bubbleTraceLine {
     transition: none;
+  }
+
+  .bubble {
+    opacity: 1;
+    transform: none;
   }
 }
