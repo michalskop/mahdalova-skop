@@ -1,5 +1,5 @@
 ---
-title: "Rituál za 23 miliard. Proč si nervózní Kreml píše volební výsledky sám"
+title: "Rituál za 23 miliard rublů. Proč si nervózní Kreml píše volební výsledky sám"
 date: "2026-09-20"
 author: "Kateřina Mahdalová"
 excerpt: "První ruské parlamentní volby od plného vpádu na Ukrajinu nerozhodují o moci. Kreml předepsal Jednotnému Rusku výsledek mezi 47 a 53 procenty, soud vyřadil poslední protiválečnou stranu a učitelé v Jakutsku hlásí jména rodičů, kteří odvolili. Za hladkým průběhem se skrývá největší nervozita za deset let – a rozpočet 23 miliard rublů na rituál, jehož výsledek je znám předem."
@@ -24,15 +24,15 @@ _(Několikrát klikne myší, hlas je odeslán.)_
 
 **Putin** _(komusi mimo záběr)_: „Děkuji.“
 
-Zatímco státní aparát rozjel třídenní mašinérii s rozpočtem přesahujícím 23 miliard rublů a oficiálním sloganem „Tvůj hlas je síla Ruska“, kulisy v ulicích velkých měst svědčí o pravém opaku: volby provází ticho, apatie a prázdné nástěnky.
+Zatímco státní aparát rozjel třídenní mašinérii s rozpočtem přesahujícím 23 miliard rublů a oficiálním sloganem „Tvůj hlas je síla Ruska“, kulisy v ulicích jsou úplně jiné: volby provází ticho, apatie a prázdné nástěnky.
 
-Přesto za zdmi Kremlu panuje podle zahraničních korespondentů i nezávislých ruských novinářů největší nervozita za poslední dekádu. Válka se protáhla do pátého roku, ruské rafinerie a logistické uzly čelí úderům dronů, v regionech narůstá inflace i výpadky pohonných hmot a bezpečnostní aparát podle uniklých informací zvažoval, zda volby raději zcela nezrušit vyhlášením stanného práva.
+Přesto za zdmi Kremlu panuje podle zahraničních korespondentů i nezávislých ruských novinářů největší nervozita za poslední dekádu. Válka, kterou putinovské Rusko rozpoutalo na Ukrajině, se protáhla do pátého roku, ruské rafinerie a logistické uzly čelí úderům dronů, v regionech narůstá inflace i výpadky pohonných hmot a bezpečnostní aparát podle uniklých informací zvažoval, zda volby raději zcela nezrušit vyhlášením stanného práva.
 
-Nakonec se jde k urnám. Nikoli však soutěžit, ale splnit administrativní plán.
+Nakonec se ale k urnám přece jen jde. Pochopitelně nejde o politickou soutěž, ale o to, aby se splnil administrativní plán stávajícího Putinova establishmentu.
 
 ## Tlak na odklad a odmítnutí v Kremlu
 
-Důvody pro uskutečnění voleb nakonec převážily hned na několika frontách. V prvé řadě šlo o kalkulovaný kontrast s Kyjevem. Moskva nutně potřebovala propagandistický argument vůči Ukrajině, která v souladu se svou ústavou během válečného stavu prezidentské ani parlamentní volby nepořádá. <SupportBanner float="left" />Vladimir Putin tak mohl doma i směrem do zahraničí rozehrát rétoriku, že zatímco sousední země své demokratické mechanismy pozastavila, Rusko funguje bez jediného zádrhelu jako stabilní a sebevědomý právní stát. 
+Důvody pro to, že se volby nakonec uskutečnily, jsou velice pragmatické. V první řadě šlo o politický kalkul ukázat kontrast s Kyjevem. Moskva nutně potřebovala propagandistický argument vůči Ukrajině, která v souladu se svou ústavou během válečného stavu prezidentské ani parlamentní volby nepořádá. <SupportBanner float="left" />Vladimir Putin tak mohl doma i směrem do zahraničí rozehrát rétoriku, že zatímco sousední země své demokratické mechanismy pozastavila, Rusko funguje bez jediného zádrhelu jako stabilní a sebevědomý právní stát. 
 
 Neméně podstatnou roli hrála potřeba zpečetit válečný kurz iluzí celonárodního konsensu. Režim neusiloval o skutečnou debatu, ale o vytvoření dojmu kolektivního souhlasu s vleklým konfliktem. Z volební účasti se stal nekompromisní test loajality, v němž pasivita nebo ignorování uren znamenaly nebezpečné vystoupení ze stáda. Odevzdání hlasu tak nepředstavovalo volbu politického programu, nýbrž podpis pod pokračováním války.<RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi"]} position="right" heading="🔻🔻🔻" />
 
@@ -40,7 +40,7 @@ Pro Kreml představovaly volby ideální prověrku toho, jak spolehlivě funguj�
 
 ## Parlamentní volby Rusko 2026 v datech
 
-Jak přesně režim předepsané výsledky vyrábí – od vyřazení protiválečného Jabloka přes centrálně nařízené kvóty 47–53 procent až po neprůhledné elektronické hlasování –, jsme podrobně rozebrali v samostatném textu. Následující přehled shrnuje, jak se zářijové hlasování liší od posledních voleb do Státní dumy v roce 2021 – od předepsaných výsledků přes rozšíření elektronického hlasování až po rostoucí rozpočet celé operace.
+Jak přesně režim předepsané výsledky vyrábí – od vyřazení protiválečného Jabloka přes centrálně nařízené kvóty 47–53 procent až po neprůhledné elektronické hlasování –, [jsme podrobně rozebrali v samostatném textu](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi). Následující přehled shrnuje, jak se zářijové hlasování liší od posledních voleb do Státní dumy v roce 2021 – od předepsaných výsledků přes rozšíření elektronického hlasování až po rostoucí rozpočet celé operace.
 
 | Parametr | Zářijové volby 2026 | Volby 2021 (výchozí stav) | Změna a kontext |
 |---|---|---|---|
