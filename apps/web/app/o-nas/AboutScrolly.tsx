@@ -33,7 +33,7 @@ const steps: Step[] = [
     ],
     chips: ['Data', 'Kontext', 'Srozumitelnost', 'Odvaha'],
     x: 700,
-    y: 340,
+    y: 330,
     side: 'left',
   },
   {
@@ -49,7 +49,7 @@ const steps: Step[] = [
       'Dvojnásobná vítězka Novinářské ceny a&nbsp;držitelka sedmi finálových nominací, včetně Data Journalism Award. Absolvovala Literární akademii Josefa Škvoreckého a&nbsp;informační vědy na Masarykově univerzitě. Studovala na UC San Diego a&nbsp;Bangor University a&nbsp;nyní mj. učí datovou žurnalistiku na Univerzitě Jana Evangelisty Purkyně.',
     ],
     x: 300,
-    y: 1000,
+    y: 910,
     side: 'right',
   },
   {
@@ -66,7 +66,7 @@ const steps: Step[] = [
       'Vítěz Novinářské ceny (2025) a tři finálové nominace. Působil v Max Planck Institute v Rostocku, na Universidad de Salamanca a Karlově univerzitě. Specializuje se na volební analýzy a predikce.',
     ],
     x: 700,
-    y: 1660,
+    y: 1430,
     side: 'left',
   },
   {
@@ -78,17 +78,17 @@ const steps: Step[] = [
       'Děláme datovou investigativu a analýzy, z nichž vzniká víc výstupů najednou: pro čtenáře, novináře, školy, instituce i AI nástroje, které stále víc formují veřejnou debatu.',
     ],
     x: 300,
-    y: 2320,
+    y: 1905,
     side: 'right',
   },
 ];
 
 const DESKTOP_PATH =
-  'M 700 340 C 760 560, 240 800, 300 1000 C 360 1200, 760 1460, 700 1660 C 640 1860, 240 2120, 300 2320 C 314 2420, 340 2520, 360 2600';
+  'M 700 330 C 760 523, 240 717, 300 910 C 360 1083, 760 1257, 700 1430 C 640 1588, 240 1747, 300 1905 C 314 2000, 340 2100, 360 2180';
 const MOBILE_PATH =
-  'M 650 340 C 700 560, 60 800, 110 1000 C 160 1200, 700 1460, 650 1660 C 600 1860, 60 2120, 110 2320 C 124 2420, 150 2520, 170 2600';
+  'M 650 330 C 700 523, 60 717, 110 910 C 160 1083, 700 1257, 650 1430 C 600 1588, 60 1747, 110 1905 C 124 2000, 150 2100, 170 2180';
 const MOBILE_X = [650, 110, 650, 110];
-const ROUTE_HEIGHT = 2650;
+const ROUTE_HEIGHT = 2260;
 const LOGO_SRC = '/images/datatimes-donut.svg';
 
 export default function AboutScrolly() {
