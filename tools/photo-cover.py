@@ -127,6 +127,8 @@ def main():
     ap.add_argument("--quality", type=int, default=86)
     ap.add_argument("--badge-lift", type=int, default=70,
                     help="posun odznaku DataTimes.cz nahoru (px) kvůli titulku, který X/Twitter vykreslí přes spodní okraj náhledu")
+    ap.add_argument("--text-top", type=int, default=70,
+                    help="svislá pozice kickeru (px); zbytek bloku (linka, eyebrow, headline) se posune s ním – např. aby text nezakrýval obličej")
     ap.add_argument("--logo", default=os.path.join(REPO_ROOT, "logo.png"),
                     help="prstenec DataTimes.cz (default: logo.png v rootu repa)")
     args = ap.parse_args()
@@ -210,33 +212,35 @@ def main():
 
     # 3) kicker + linka
     kf = sans_sb(23)
-    shadow_text((MX, 70), args.kicker, kf, (*accent, 255), ls=6, sh_alpha=120)
+    T = args.text_top
+    shadow_text((MX, T), args.kicker, kf, (*accent, 255), ls=6, sh_alpha=120)
     if args.section:
         kw = sum(ImageDraw.Draw(img).textlength(c, font=kf) + 6 for c in args.kicker)
-        shadow_text((MX + kw + 8, 70), args.section, kf, (*PAPER, 235), ls=5, sh_alpha=120)
-    ImageDraw.Draw(img).rectangle([MX, 112, MX + 54, 116], fill=(*accent, 255))
+        shadow_text((MX + kw + 8, T), args.section, kf, (*PAPER, 235), ls=5, sh_alpha=120)
+    ImageDraw.Draw(img).rectangle([MX, T + 42, MX + 54, T + 46], fill=(*accent, 255))
 
     # 4) eyebrow + headline
-    y = 138
+    y = T + 68
     if args.eyebrow:
         shadow_text((MX, y), args.eyebrow, serif_sb(40), (*PAPER, 255))
-        y = 202
+        y = T + 132
     hf = serif_sb(58)
     for ln in wrap(args.headline, hf, MAXW):
         shadow_text((MX, y), ln, hf, (*PAPER, 255))
         y += int(58 * 1.18)
 
-    # 5) odznak DataTimes.cz vpravo dole
+    # 5) odznak DataTimes.cz vpravo dole – VŽDY zleva kolečko, pak nápis
+    #    (blok zarovnaný k pravému okraji)
     if os.path.exists(args.logo):
         RH = 74
         ring = Image.open(args.logo).convert("RGBA").resize((RH, RH), Image.LANCZOS)
-        rx, ry = W - 40 - RH, H - 40 - RH - args.badge_lift
-        img.alpha_composite(ring, (rx, ry))
         bf = sans_sb(34)
         btxt = "DataTimes.cz"
         bw = ImageDraw.Draw(img).textlength(btxt, font=bf)
         asc, desc = bf.getmetrics()
-        shadow_text((rx - 14 - bw, ry + (RH - (asc + desc)) // 2), btxt, bf, (*PAPER, 255))
+        rx, ry = int(W - 40 - bw - 14 - RH), H - 40 - RH - args.badge_lift
+        img.alpha_composite(ring, (rx, ry))
+        shadow_text((rx + RH + 14, ry + (RH - (asc + desc)) // 2), btxt, bf, (*PAPER, 255))
 
     # 6) export
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
