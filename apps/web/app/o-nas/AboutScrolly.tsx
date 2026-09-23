@@ -6,6 +6,7 @@ import styles from './AboutScrolly.module.css';
 type Step = {
   index: string;
   eyebrow: string;
+  eyebrowPlain?: boolean;
   title: string;
   paragraphs: string[];
   chips?: string[];
@@ -23,6 +24,7 @@ const steps: Step[] = [
   {
     index: '01',
     eyebrow: 'DataTimes.cz • mahdalova-skop.cz',
+    eyebrowPlain: true,
     title: 'Kateřina Mahdalová & Michal Škop',
     paragraphs: [
       'Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus odvahy (nás to stálo práci).',
@@ -87,6 +89,7 @@ const MOBILE_PATH =
   'M 650 350 C 690 780, 70 1230, 110 1650 C 150 2080, 690 2520, 650 2950 C 610 3380, 70 3830, 110 4250 C 122 4420, 160 4520, 210 4600';
 const MOBILE_X = [650, 110, 650, 110];
 const ROUTE_HEIGHT = 4700;
+const LOGO_SRC = '/favicon.svg';
 
 export default function AboutScrolly() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -149,27 +152,30 @@ export default function AboutScrolly() {
     };
   }, []);
 
-  const renderNodes = (mobile = false) =>
-    steps.map((step, index) => {
-      const cx = mobile ? MOBILE_X[index] : step.x;
-      const isActive = index === active;
-      const isPast = index <= active;
-      const size = isActive ? 30 : 22;
-      return (
-        <g key={step.index} className={styles.marker}>
-          <rect
-            className={`${styles.markerNode} ${isPast ? styles.markerNodePast : ''} ${
-              isActive ? styles.markerNodeActive : ''
-            }`}
-            x={cx - size / 2}
-            y={step.y - size / 2}
-            width={size}
-            height={size}
-            rx={5}
-          />
-        </g>
-      );
-    });
+  // Donut logo markers sit on the line (as HTML, so they are never deformed by
+  // the stretched SVG). They stay greyed until the red line reaches them.
+  const markers = steps.map((step, index) => {
+    const isReached = index <= active;
+    const isActive = index === active;
+    return (
+      <img
+        key={step.index}
+        src={LOGO_SRC}
+        alt=""
+        aria-hidden="true"
+        className={`${styles.logoMark} ${isReached ? styles.logoMarkOn : ''} ${
+          isActive ? styles.logoMarkActive : ''
+        }`}
+        style={
+          {
+            top: `${(step.y / ROUTE_HEIGHT) * 100}%`,
+            '--logo-left-d': `${(step.x / 1000) * 100}%`,
+            '--logo-left-m': `${(MOBILE_X[index] / 760) * 100}%`,
+          } as React.CSSProperties
+        }
+      />
+    );
+  });
 
   return (
     <div ref={sectionRef} className={styles.scrolly}>
@@ -187,7 +193,6 @@ export default function AboutScrolly() {
           strokeDasharray={pathLengths.desktop}
           strokeDashoffset={pathLengths.desktop * (1 - progress)}
         />
-        {renderNodes()}
       </svg>
 
       <svg
@@ -204,16 +209,17 @@ export default function AboutScrolly() {
           strokeDasharray={pathLengths.mobile}
           strokeDashoffset={pathLengths.mobile * (1 - progress)}
         />
-        {renderNodes(true)}
       </svg>
+
+      {markers}
 
       {steps.map((step, index) => (
         <article
           key={step.index}
           data-step={index}
           className={`${styles.milestone} ${styles[step.side]} ${
-            index === 0 || index <= active ? styles.milestoneReached : ''
-          } ${index === active ? styles.milestoneActive : ''}`}
+            index === active ? styles.milestoneActive : ''
+          }`}
           style={{ '--milestone-y': `${(step.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
         >
           <div className={styles.bubble}>
@@ -229,7 +235,13 @@ export default function AboutScrolly() {
               />
             </svg>
             <div className={styles.bubbleMeta}>
-              <span className={styles.bubbleEyebrow}>{step.eyebrow}</span>
+              <span
+                className={`${styles.bubbleEyebrow} ${
+                  step.eyebrowPlain ? styles.bubbleEyebrowPlain : ''
+                }`}
+              >
+                {step.eyebrow}
+              </span>
             </div>
             {step.portrait ? (
               <div className={styles.bubblePortrait}>

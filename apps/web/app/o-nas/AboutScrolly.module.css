@@ -49,27 +49,25 @@
   transition: stroke-dashoffset 90ms linear;
 }
 
-/* Square markers ("čtverečky") – larger than the KVIFF dots */
-.markerNode {
-  fill: var(--mantine-color-background-6);
-  stroke: var(--mantine-color-background-0);
-  stroke-width: 3;
-  transition: fill 260ms ease, x 220ms ease, y 220ms ease, width 220ms ease, height 220ms ease;
-  vector-effect: non-scaling-stroke;
+/* Donut logo markers sit on the line; greyed until the red line reaches them */
+.logoMark {
+  filter: grayscale(1) opacity(0.4);
+  height: 40px;
+  left: var(--logo-left-d);
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: filter 320ms ease, transform 260ms ease;
+  width: 40px;
+  z-index: 3;
 }
 
-.markerNodePast {
-  fill: var(--route-red);
+.logoMarkOn {
+  filter: grayscale(0) opacity(1);
 }
 
-.markerNodeActive,
-.marker:hover .markerNode {
-  fill: var(--route-gold);
-  stroke: var(--route-red-dark);
-}
-
-.marker {
-  pointer-events: auto;
+.logoMarkActive {
+  transform: translate(-50%, -50%) scale(1.14);
 }
 
 .milestone {
@@ -93,17 +91,10 @@
   border: 1px solid var(--mantine-color-background-6);
   border-radius: 6px;
   box-shadow: 0 12px 40px rgba(36, 16, 22, 0.08);
-  opacity: 0.5;
+  opacity: 1;
   padding: clamp(24px, 3.2vw, 40px);
   position: relative;
-  transform: translateY(18px);
-  transition: border-color 260ms ease, box-shadow 260ms ease,
-    transform 560ms cubic-bezier(0.22, 1, 0.36, 1), opacity 560ms ease;
-}
-
-.milestoneReached .bubble {
-  opacity: 1;
-  transform: translateY(0);
+  transition: border-color 260ms ease, box-shadow 260ms ease;
 }
 
 .milestoneActive .bubble {
@@ -151,6 +142,11 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.bubbleEyebrowPlain {
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .bubblePortrait {
@@ -221,12 +217,6 @@
     display: block;
   }
 
-  .routeMobile .markerNode {
-    transform: scaleX(1.7);
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
   .milestone {
     width: auto;
   }
@@ -241,17 +231,9 @@
     right: 74px;
   }
 
-  .milestone.right .bubble {
-    transform: translateX(10px);
-  }
-
-  .milestone.left .bubble {
-    transform: translateX(-10px);
-  }
-
-  .milestoneReached.right .bubble,
-  .milestoneReached.left .bubble {
-    transform: translateX(0);
+  .logoMark {
+    height: 34px;
+    width: 34px;
   }
 
   .bubble {
@@ -261,14 +243,9 @@
 
 @media (prefers-reduced-motion: reduce) {
   .routeProgress,
-  .markerNode,
+  .logoMark,
   .bubble,
   .bubbleTraceLine {
     transition: none;
-  }
-
-  .bubble {
-    opacity: 1;
-    transform: none;
   }
 }
