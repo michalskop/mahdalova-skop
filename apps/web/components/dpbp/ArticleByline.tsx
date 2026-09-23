@@ -1,3 +1,4 @@
+import PreferredSource from '../clanek/PreferredSource';
 import Link from 'next/link';
 import {
   IconMail,
@@ -119,6 +120,8 @@ export default function ArticleByline({ author, date, shareUrl, shareTitle, tran
           <CopyLinkButton url={shareUrl} />
         </div>
       </div>
+
+      <PreferredSource />
 
       {audio && (
         <div className={styles.audio}>

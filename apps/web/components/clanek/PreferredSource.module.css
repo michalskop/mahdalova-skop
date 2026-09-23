@@ -1,0 +1,82 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid #101432;
+  border-radius: 6px;
+  background: #101432;
+  color: #fff;
+  font-family: var(--mantine-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  transform-origin: right center;
+  transition: transform 420ms ease-in-out;
+}
+
+.button:visited {
+  color: #fff;
+}
+
+.button:hover {
+  background: #101432;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.015);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+}
+
+.button:focus-visible {
+  outline: 3px solid #4285f4;
+  outline-offset: 4px;
+}
+
+.button svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.brand {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  padding-left: 22px;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.brand img {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 1px);
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+.button > span {
+  position: relative;
+  top: -1px;
+}

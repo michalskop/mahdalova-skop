@@ -8,7 +8,7 @@ filter: ["kontext"]
 tags: ["volby", "Německo", "Meklenbursko-Přední Pomořansko", "CDU", "AfD", "SPD", "volební predikce"]
 promoted: 0
 ---
-Meklenbursko‑Přední Pomořansko zvolilo nový zemský sněm. Vyhrála AfD, SPD vedená Manuelou Schwesig ubránila druhé místo – a CDU (Křesťanskodemokratická unie) se poprvé v dějinách Spolkové republiky nedostala do žádného zemského parlamentu. Že strana skončí pod pěti procenty, ukazovala datová predikce od dvojice novinářů Mahdalová & Škop už od chvíle, kdy volební noc sotva začala. Veřejnoprávní projekce přitom držely CDU nad čarou ještě po desáté večer.
+Meklenbursko‑Přední Pomořansko zvolilo nový zemský sněm. Vyhrála AfD (Alternativa pro Německo), zatímco Sociálnědemokratická strana Německa (SPD) vedená Manuelou Schwesig ubránila druhé místo – a CDU (Křesťanskodemokratická unie) se poprvé v dějinách Spolkové republiky nedostala do žádného zemského parlamentu. Že strana skončí pod pěti procenty, ukazovala datová predikce od dvojice novinářů Mahdalová & Škop už od chvíle, kdy volební noc sotva začala. Veřejnoprávní projekce přitom držely CDU nad čarou ještě po desáté večer.
 
 ```infobox
 Co se týče lidovecké CDU, dosud byl jejím nejhorším výsledkem devítiprocentní zisk v Brémách roku 1951. Těsně pod hranicí zůstalo i Spojenectví Sahry Wagenknecht (4,8 %), liberálové z FDP se propadli z 5,8 na jedno procento. Volební účast stoupla na 78,1 procenta, o víc než sedm bodů.
