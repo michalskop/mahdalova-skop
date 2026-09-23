@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "ANO: 0 → 7 602"
+    "text": "ANO\n0 → 7 602"
   },
   "width": 600,
   "height": 200,

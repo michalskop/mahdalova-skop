@@ -647,7 +647,14 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
           minHeight: 34,
           marginBottom: 8,
         }}>
-          {meta.title && renderTitle(meta.title)}
+          {/* A "\n" in a panel title splits it into a bold name line and a
+              regular-weight, non-wrapping detail line (e.g. "ANO\n0 → 7 602"),
+              so every panel of the row reads the same way. */}
+          {meta.title && meta.title.split('\n').map((line, i) => (
+            <div key={i} style={i === 0 ? undefined : { fontWeight: 400, color: '#333333', whiteSpace: 'nowrap' }}>
+              {renderTitle(line)}
+            </div>
+          ))}
         </div>
         {chartCanvas(160)}
       </div>

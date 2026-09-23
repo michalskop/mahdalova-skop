@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "STAN: 0 → 5 402"
+    "text": "STAN\n0 → 5 402"
   },
   "width": 600,
   "height": 200,

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "SOCDEM (ČSSD): 19 375 → 1 351"
+    "text": "SOCDEM (ČSSD)\n19 375 → 1 351"
   },
   "width": 600,
   "height": 200,

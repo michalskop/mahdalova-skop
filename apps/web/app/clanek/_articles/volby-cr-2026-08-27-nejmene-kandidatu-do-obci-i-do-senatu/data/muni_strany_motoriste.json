@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Motoristé: 0 → 1 116"
+    "text": "Motoristé\n0 → 1 116"
   },
   "width": 600,
   "height": 200,

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Piráti: 0 → 2 018"
+    "text": "Piráti\n0 → 2 018"
   },
   "width": 600,
   "height": 200,
