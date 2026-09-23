@@ -1,8 +1,11 @@
+/* Icons are centred on the cap height (IBM Plex cap height = 0.698em),
+   i.e. their middle sits at 0.349em above the baseline – not on the line.
+   vertical-align on an inline SVG/img moves its bottom edge relative to the
+   baseline, so bottom = 0.349em − half the icon height. */
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  --ps-icon: 18px;
+  --ps-icon-shift: calc(0.349em - var(--ps-icon) / 2);
+  display: inline-block;
   box-sizing: border-box;
   max-width: 100%;
   min-height: 36px;
@@ -15,7 +18,8 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 1.35;
-  text-align: left;
+  text-align: center;
+  text-wrap: balance;
   text-decoration: none;
   transform-origin: right center;
   transition: transform 420ms ease-in-out;
@@ -47,36 +51,29 @@
   outline-offset: 4px;
 }
 
-.button svg {
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+.star,
+.logo {
+  display: inline-block;
+  width: var(--ps-icon);
+  height: var(--ps-icon);
+  vertical-align: var(--ps-icon-shift);
+}
+
+/* Outline = logo yellow (brandYellow[4], same as datatimes-donut.svg) */
+.star {
+  margin-right: 8px;
+  stroke: #ffdc33;
+}
+
+.logo {
+  margin-right: 5px;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .wrapper {
   display: flex;
   justify-content: flex-end;
-}
-
-.brand {
-  position: relative;
-  display: inline-block;
-  margin-left: 4px;
-  padding-left: 22px;
-  white-space: nowrap;
-  vertical-align: baseline;
-}
-
-.brand img {
-  position: absolute;
-  left: 0;
-  top: calc(50% + 1px);
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-}
-
-.button > span {
-  position: relative;
-  top: -1px;
 }
