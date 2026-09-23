@@ -10,8 +10,8 @@
   --route-red-dark: var(--mantine-color-brand-9);
   --route-gold: var(--mantine-color-brandYellow-6);
   --route-ink: #241016;
-  height: clamp(3000px, 330vw, 3600px);
-  margin: 24px auto 150px;
+  height: clamp(2400px, 235vw, 2700px);
+  margin: 24px auto 120px;
   max-width: 1120px;
   position: relative;
   width: 100%;
@@ -83,7 +83,7 @@
   position: absolute;
   top: var(--milestone-y);
   transform: translateY(-50%);
-  width: min(46%, 500px);
+  width: min(50%, 540px);
   z-index: 2;
 }
 
@@ -106,8 +106,7 @@
   transition: border-color 260ms ease, box-shadow 260ms ease;
 }
 
-.milestoneActive .bubble {
-  border-color: color-mix(in srgb, var(--route-red) 34%, var(--mantine-color-background-6));
+.milestoneReached .bubble {
   box-shadow: 0 18px 52px rgba(36, 16, 22, 0.14);
 }
 
@@ -123,18 +122,15 @@
 
 .bubbleTraceLine {
   fill: none;
+  opacity: 0;
   stroke: var(--route-gold);
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  stroke-linecap: square;
-  stroke-linejoin: round;
   stroke-width: 2.5px;
-  transition: stroke-dashoffset 760ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 550ms ease;
   vector-effect: non-scaling-stroke;
 }
 
-.milestoneActive .bubbleTraceLine {
-  stroke-dashoffset: 0;
+.milestoneReached .bubbleTraceLine {
+  opacity: 1;
 }
 
 .bubbleMeta {
@@ -154,6 +150,7 @@
 }
 
 .bubbleEyebrowPlain {
+  font-size: 0.9rem;
   letter-spacing: 0.01em;
   text-transform: none;
 }
@@ -186,6 +183,39 @@
   margin: 0 0 14px;
 }
 
+/* Compact person header: portrait left, name + role beside it */
+.bubbleHeader {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bubbleHeaderImg {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: clamp(78px, 10vw, 100px);
+  object-fit: cover;
+  width: clamp(78px, 10vw, 100px);
+}
+
+.bubbleHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bubbleHeaderText h3 {
+  margin: 0;
+}
+
+.bubbleHeaderLead {
+  color: var(--route-red-dark);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .bubble p {
   color: #2c2226;
   font-size: clamp(1.02rem, 1.4vw, 1.15rem);
@@ -199,7 +229,7 @@
 
 .bubbleChips {
   color: var(--route-red) !important;
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem) !important;
+  font-size: 0.9rem !important;
   font-weight: 600 !important;
   letter-spacing: 0.01em;
   margin: 14px 0 0 !important;
@@ -213,8 +243,8 @@
 
 @media (max-width: 820px) {
   .scrolly {
-    height: 4000px;
-    margin: 12px 0 120px;
+    height: 3400px;
+    margin: 12px 0 100px;
     margin-left: -4px;
   }
 

@@ -33,7 +33,7 @@ const steps: Step[] = [
     ],
     chips: ['Data', 'Kontext', 'Srozumitelnost', 'Odvaha'],
     x: 700,
-    y: 350,
+    y: 340,
     side: 'left',
   },
   {
@@ -49,7 +49,7 @@ const steps: Step[] = [
       'Dvojnásobná vítězka Novinářské ceny a&nbsp;držitelka sedmi finálových nominací, včetně Data Journalism Award. Absolvovala Literární akademii Josefa Škvoreckého a&nbsp;informační vědy na Masarykově univerzitě. Studovala na UC San Diego a&nbsp;Bangor University a&nbsp;nyní mj. učí datovou žurnalistiku na Univerzitě Jana Evangelisty Purkyně.',
     ],
     x: 300,
-    y: 1650,
+    y: 1000,
     side: 'right',
   },
   {
@@ -66,7 +66,7 @@ const steps: Step[] = [
       'Vítěz Novinářské ceny (2025) a tři finálové nominace. Působil v Max Planck Institute v Rostocku, na Universidad de Salamanca a Karlově univerzitě. Specializuje se na volební analýzy a predikce.',
     ],
     x: 700,
-    y: 2950,
+    y: 1660,
     side: 'left',
   },
   {
@@ -78,18 +78,18 @@ const steps: Step[] = [
       'Děláme datovou investigativu a analýzy, z nichž vzniká víc výstupů najednou: pro čtenáře, novináře, školy, instituce i AI nástroje, které stále víc formují veřejnou debatu.',
     ],
     x: 300,
-    y: 4250,
+    y: 2320,
     side: 'right',
   },
 ];
 
 const DESKTOP_PATH =
-  'M 700 350 C 730 780, 270 1230, 300 1650 C 330 2080, 730 2520, 700 2950 C 670 3380, 270 3830, 300 4250 C 312 4420, 350 4520, 400 4600';
+  'M 700 340 C 760 560, 240 800, 300 1000 C 360 1200, 760 1460, 700 1660 C 640 1860, 240 2120, 300 2320 C 314 2420, 340 2520, 360 2600';
 const MOBILE_PATH =
-  'M 650 350 C 690 780, 70 1230, 110 1650 C 150 2080, 690 2520, 650 2950 C 610 3380, 70 3830, 110 4250 C 122 4420, 160 4520, 210 4600';
+  'M 650 340 C 700 560, 60 800, 110 1000 C 160 1200, 700 1460, 650 1660 C 600 1860, 60 2120, 110 2320 C 124 2420, 150 2520, 170 2600';
 const MOBILE_X = [650, 110, 650, 110];
-const ROUTE_HEIGHT = 4700;
-const LOGO_SRC = '/favicon.svg';
+const ROUTE_HEIGHT = 2650;
+const LOGO_SRC = '/images/datatimes-donut.svg';
 
 export default function AboutScrolly() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -218,8 +218,8 @@ export default function AboutScrolly() {
           key={step.index}
           data-step={index}
           className={`${styles.milestone} ${styles[step.side]} ${
-            index === active ? styles.milestoneActive : ''
-          }`}
+            index <= active ? styles.milestoneReached : ''
+          } ${index === active ? styles.milestoneActive : ''}`}
           style={{ '--milestone-y': `${(step.y / ROUTE_HEIGHT) * 100}%` } as React.CSSProperties}
         >
           <div className={styles.bubble}>
@@ -234,24 +234,36 @@ export default function AboutScrolly() {
                 pathLength="1"
               />
             </svg>
-            <div className={styles.bubbleMeta}>
-              <span
-                className={`${styles.bubbleEyebrow} ${
-                  step.eyebrowPlain ? styles.bubbleEyebrowPlain : ''
-                }`}
-              >
-                {step.eyebrow}
-              </span>
-            </div>
             {step.portrait ? (
-              <div className={styles.bubblePortrait}>
-                <img src={step.portrait.src} alt={step.portrait.alt} loading="lazy" />
-                {step.portrait.lead ? (
-                  <span className={styles.bubblePortraitLead}>{step.portrait.lead}</span>
-                ) : null}
+              <div className={styles.bubbleHeader}>
+                <img
+                  className={styles.bubbleHeaderImg}
+                  src={step.portrait.src}
+                  alt={step.portrait.alt}
+                  loading="lazy"
+                />
+                <div className={styles.bubbleHeaderText}>
+                  <h3>{step.title}</h3>
+                  <span className={styles.bubbleEyebrow}>{step.eyebrow}</span>
+                  {step.portrait.lead ? (
+                    <span className={styles.bubbleHeaderLead}>{step.portrait.lead}</span>
+                  ) : null}
+                </div>
               </div>
-            ) : null}
-            <h3>{step.title}</h3>
+            ) : (
+              <>
+                <div className={styles.bubbleMeta}>
+                  <span
+                    className={`${styles.bubbleEyebrow} ${
+                      step.eyebrowPlain ? styles.bubbleEyebrowPlain : ''
+                    }`}
+                  >
+                    {step.eyebrow}
+                  </span>
+                </div>
+                <h3>{step.title}</h3>
+              </>
+            )}
             {step.paragraphs.map((paragraph) => (
               <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
             ))}
