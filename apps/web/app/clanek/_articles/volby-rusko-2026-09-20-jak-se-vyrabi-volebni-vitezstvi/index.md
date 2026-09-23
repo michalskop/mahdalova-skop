@@ -44,4 +44,4 @@ Absolvovat celý tento řetězec úkonů za 38 sekund je pro člověka manuáln�
 
 Spolu s digitální kontrolou přišel bezprecedentní nátlak na pracovištích; například učitelé v Jakutsku dostali přímý příkaz nejen sami odvolit, ale každé dvě hodiny hlásit vedení škol jmenný seznam rodičů svých žáků, kteří již odevzdali hlas. Aby systém nikdo nenarušoval, úřady pod vykonstruovanými záminkami nevpustily do volebních místností téměř 1 300 nezávislých pozorovatelů KPRF i vyřazeného Jabloka; důvody sahaly od „nefunkčního USB disku“ po to, že se pozorovatel po místnosti „příliš pohyboval“.
 
-<RelatedArticles slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou"]} heading="Doporučujeme" />
+<RelatedArticles slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku", "europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou"]} heading="🔻🔻🔻" />
