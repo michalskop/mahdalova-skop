@@ -18,7 +18,7 @@ V pátek ráno se na Kamčatce a Čukotce otevřely volební místnosti pro prvn
 
 Přepis záběrů podle [Nové gazety](https://novayagazeta.ru/articles/2026/09/18/putin-i-chinovniki-progolosovali-distantsionno-na-vyborakh-v-gosdumu-tsik-otchitalsia-o-iavke-v-bolee-chem-20-news) a [URA.ru](https://ura.news/articles/1053129058):
 
-**Putin** _(sedí u počítače a hledí do monitoru)_: „Nespleteš se.“ (rusky «Не ошибешься»)
+**Putin** _(sedí u počítače a hledí do monitoru)_: „Není co splést.“ (rusky «Не ошибешься»)
 
 _(Několikrát klikne myší, hlas je odeslán.)_
 
