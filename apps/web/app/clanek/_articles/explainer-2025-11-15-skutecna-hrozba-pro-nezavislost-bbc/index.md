@@ -3,7 +3,7 @@ title: "Skutečná hrozba pro nezávislost BBC"
 date: "2025-11-15"
 author: "Alan Rusbridger"
 excerpt: "BBC zažila týden chyb, rezignace šéfů a hrozí jí žaloba za miliardu dolarů. Největší ohrožení nezávislosti je ve vedení, nikoli v samotné redakci."
-coverImage: "images/bbc-2025-explainer-mahdalova-skop-lide.webp"
+coverImage: "images/bbc-2025-explainer-mahdalova-skop-lide-5x4.webp"
 filter: ["explainer", "svobodná-média"]
 tags: ["nezávislost BBC", "média", "svobodná média", "nezávislá média", "nezávislost médií", "veřejnoprávní", "BBC", "Robbie Gibb", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost"]
 promoted: 49

@@ -3,7 +3,7 @@ title: "Politický boj zabíjí nejslavnější veřejnoprávní médium světa.
 date: "2025-11-18"
 author: "Kateřina Mahdalová"
 excerpt: "Když 9. listopadu 2025 oznámil generální ředitel BBC Tim Davie svůj odchod, vypadalo to jako rutinní rezignace kvůli závažné mediální chybě. Ve skutečnosti šlo o vyvrcholení několikaletého politického tažení, které chce měnit pravidla hry. Tak jako v Česku."
-coverImage: "images/bbc-2025-explainer-mahdalova-skop-all.webp"
+coverImage: "images/bbc-2025-explainer-mahdalova-skop-all-5x4.webp"
 filter: ["explainer", "svobodná-média"]
 tags: ["nezávislost BBC", "média", "svobodná média", "nezávislá média", "nezávislost médií", "veřejnoprávní", "BBC", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost", "Česká televize"]
 promoted: 50

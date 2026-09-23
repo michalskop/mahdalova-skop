@@ -3,7 +3,7 @@ title: "Kdo koupí CNN. Průvodce pro každého"
 date: "2026-03-03"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči v tomhle byznysu, co chtějí a proč na tom záleží i nám."
-coverImage: "images/cnn-2026-explainer-mahdalova-skop-media.webp"
+coverImage: "images/cnn-2026-explainer-mahdalova-skop-media-5x4.webp"
 filter: ["explainer", "svobodná-média"]
 tags: ["nezávislost CNN", "média", "svobodná média", "nezávislá média", "nezávislost médií", "svoboda tisku", "CNN", "Warner Bros.", "Paramount", "Trump", "USA"]
 promoted: 62
