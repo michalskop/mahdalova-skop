@@ -10,12 +10,23 @@ import { IconSearch, IconChevronDown, IconStar } from '@tabler/icons-react';
 import LogoWithText from '@/components/common/LogoWithText';
 import { Arrow } from '@repo/ui/components/Arrow';
 import classes from './HeaderSimple.module.css';
+import { useGlidingPointer } from './useGlidingPointer';
 
 const navLinks = [
   { link: '/tag/volby', label: 'Volby' },
   { link: '/kontext', label: 'Kontext' },
   { link: '/podcasty', label: 'Podcasty' },
   { link: '/o-nas', label: 'O nás' },
+];
+
+const specialsLinks = [
+  { href: '/specialy/data-pro-budouci-premierku', label: 'Data pro budoucí premiérku' },
+  { href: '/specialy/kviff', label: 'Festival Karlovy Vary v datech' },
+  { href: '/specialy/svobodna-media', label: 'Svobodná média' },
+  { href: '/specialy/investigace', label: 'M & Š investigace' },
+  { href: '/specialy/klima', label: 'Data o klimatu' },
+  { href: 'https://snemovna.datatimes.cz', label: 'Sněmovna.DataTimes.cz ↗', external: true },
+  { href: 'https://mandaty.cz', label: 'Mandáty.cz ↗', external: true },
 ];
 
 export function HeaderSimple() {
@@ -50,16 +61,13 @@ export function HeaderSimple() {
 
   // Zkrácená vlnitá šipka jako „ukazovátko" v dropdownu speciálů: stejná šipka
   // jako u rubrik, ale viewBox oříznutý jen na špičku + první vlnku (celá šipka
-  // je 0 0 400 200). Malá, bílá, umístěná CSS (.specialsPointer).
+  // je 0 0 400 200). Jedna sdílená pro celé menu – klouže za myší mezi
+  // položkami (useGlidingPointer), styl v CSS (.specialsPointer).
+  const { containerProps: pointerContainerProps, pointerRef } = useGlidingPointer();
   const specialsPointer = (
-    <Arrow
-      className={classes.specialsPointer}
-      viewBox="0 54 380 128"
-      width={36}
-      height={12}
-      color="#ffffff"
-      aria-hidden
-    />
+    <div ref={pointerRef} className={classes.specialsPointer} data-visible="false" aria-hidden>
+      <Arrow viewBox="0 54 380 128" width={36} height={12} color="#ffffff" />
+    </div>
   );
 
   const desktopNavItems = (
@@ -87,58 +95,32 @@ export function HeaderSimple() {
             <IconChevronDown size={14} stroke={1.8} />
           </Link>
         </Menu.Target>
-        <Menu.Dropdown className={classes.specialsDropdown} style={{ zIndex: 1100 }}>
-          <Menu.Item
-            component={Link}
-            href="/specialy/data-pro-budouci-premierku"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}Data pro budoucí premiérku
-          </Menu.Item>
-          <Menu.Item
-            component={Link}
-            href="/specialy/kviff"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}Festival Karlovy Vary v datech
-          </Menu.Item>
-          <Menu.Item
-            component={Link}
-            href="/specialy/svobodna-media"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}Svobodná média
-          </Menu.Item>
-          <Menu.Item
-            component={Link}
-            href="/specialy/investigace"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}M & Š investigace
-          </Menu.Item>
-          <Menu.Item
-            component={Link}
-            href="/specialy/klima"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}Data o klimatu
-          </Menu.Item>
-          <Menu.Item
-            component="a"
-            href="https://snemovna.datatimes.cz"
-            target="_blank"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}Sněmovna.DataTimes.cz ↗
-          </Menu.Item>
-          <Menu.Item
-            component="a"
-            href="https://mandaty.cz"
-            target="_blank"
-            className={classes.specialsItem}
-          >
-            {specialsPointer}Mandáty.cz ↗
-          </Menu.Item>
+        <Menu.Dropdown className={classes.specialsDropdown} style={{ zIndex: 1100 }} {...pointerContainerProps}>
+          {specialsPointer}
+          {specialsLinks.map(item =>
+            item.external ? (
+              <Menu.Item
+                key={item.href}
+                component="a"
+                href={item.href}
+                target="_blank"
+                className={classes.specialsItem}
+                data-pointer-item
+              >
+                {item.label}
+              </Menu.Item>
+            ) : (
+              <Menu.Item
+                key={item.href}
+                component={Link}
+                href={item.href}
+                className={classes.specialsItem}
+                data-pointer-item
+              >
+                {item.label}
+              </Menu.Item>
+            ),
+          )}
           <Menu.Divider className={classes.specialsDivider} />
           <Menu.Item
             component={Link}

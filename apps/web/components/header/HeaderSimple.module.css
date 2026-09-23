@@ -96,24 +96,34 @@
 }
 
 /* „Ukazovátko" – zkrácená vlnitá šipka (jen špička + první vlnka, viewBox v TSX)
-   na levém kraji položky, špičkou míří na text. Objeví se po najetí myší
-   jemným prolnutím + přisunutím zprava. */
+   v levém žlábku, špičkou míří na text. Jedna pro celé menu: svislou polohu,
+   natočení a rozvlnění nastavuje JS (useGlidingPointer) přes transform,
+   CSS řeší jen prolnutí + přisunutí zleva při objevení. */
 .specialsPointer {
   position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%) translateX(-5px);
+  left: 18px;
+  top: 0;
+  z-index: 1;
+  line-height: 0;
   opacity: 0;
   pointer-events: none;
-  transition:
-    opacity 0.15s ease,
-    transform 0.15s ease;
+  transform-origin: 100% 50%;
+  transition: opacity 0.18s ease;
+  will-change: transform;
 }
 
-.specialsItem:hover .specialsPointer,
-.specialsItem[data-hovered] .specialsPointer {
+.specialsPointer svg {
+  display: block;
+  transform: translateX(-6px);
+  transition: transform 0.18s ease;
+}
+
+.specialsPointer[data-visible='true'] {
   opacity: 1;
-  transform: translateY(-50%) translateX(0);
+}
+
+.specialsPointer[data-visible='true'] svg {
+  transform: translateX(0);
 }
 
 .specialsDivider {
