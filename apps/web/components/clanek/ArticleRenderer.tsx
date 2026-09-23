@@ -19,6 +19,7 @@ import { PartyFace } from '@/components/politics/PartyFace';
 import { Person } from '@/components/politics/Person';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import ArticleByline from '@/components/dpbp/ArticleByline';
+import PreferredSource from '@/components/clanek/PreferredSource';
 import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import SupportBanner from '@/components/common/SupportBanner';
 import HtmlEmbed from '@/components/clanek/HtmlEmbed';
@@ -464,9 +465,12 @@ export function ArticleRenderer({
             shareTitle={title ?? ''}
           />
         ) : date ? (
-          <Text size="sm" c={textColor || 'dimmed'}>
-            {new Date(date).toLocaleDateString('cs-CZ')}
-          </Text>
+          <>
+            <Text size="sm" c={textColor || 'dimmed'}>
+              {new Date(date).toLocaleDateString('cs-CZ')}
+            </Text>
+            <PreferredSource />
+          </>
         ) : null}
 
         <div className="article-content">

@@ -689,6 +689,35 @@ infographic, chart, table or another float), so the text has room to wrap.
 
 ---
 
+### `PreferredSource` (`apps/web`)
+
+Navy button **„☆ Chci víc [logo] DataTimes.cz ve zprávách Googlu"** linking to
+Google's „preferované zdroje" setting
+(`https://www.google.com/preferences/source?q=mahdalova-skop.cz`).
+File: `apps/web/components/clanek/PreferredSource.tsx` (+ `.module.css`).
+
+- **Placement: automatic, in every article** — rendered by `ArticleByline`
+  (right under author/date + share icons, right-aligned) and by the date-only
+  fallback in `ArticleRenderer`. Covers `/clanek/*`, `/specialy/[slug]` and the
+  DPBP chapters/articles. **Never add it to article markdown by hand.**
+- **Wording is fixed:** „Chci víc DataTimes.cz ve zprávách Googlu" (chosen
+  2026-09-23 as short + reader-voiced; longer variants like „Přidejte si …
+  jako oblíbený zdroj informací na Googlu" were rejected as too long).
+- **Look:** `brandNavy.9` (`#101432`) background, white IBM Plex text 15px,
+  centred (`text-align: center` + `text-wrap: balance`), radius 6px.
+- **Star:** outline only, stroke = logo yellow `brandYellow.4` (`#ffdc33`,
+  same as `datatimes-donut.svg`).
+- **Icons are centred on cap height, not sitting on the baseline:** star and
+  logo (18px) use `vertical-align: calc(0.349em − 9px)` (IBM Plex cap height
+  = 0.698em). Keep this if you change icon size or font.
+- **Spacing:** star → text 8px; „víc" → logo = word space + 3px; logo → „DataTimes.cz" 5px.
+- **No orphaned icons:** star + „Chci víc" and logo + „DataTimes.cz" are each
+  `white-space: nowrap`, so an icon never wraps away from its word on mobile.
+- Hover: subtle `scale(1.015)`; disabled under `prefers-reduced-motion`.
+  Marked `data-pagefind-ignore` so it doesn't pollute search.
+
+---
+
 ## Utility: `getArticles`
 
 Server-side function (Node.js only – use in `page.tsx`, never in client components).
@@ -747,8 +776,9 @@ import { remarkFlourishPlugin } from '@repo/ui/lib/remark-flourish-plugin';
 ### New-article checklist (`/clanek`)
 Every real article (not a special landing page) should have:
 1. **Related-articles block („Doporučujeme") at the end** — `<RelatedArticles slugs={[…]} heading="🔻🔻🔻" />` with 2–4 thematically related articles (group by tags/topic).
-2. **A mid-article `<SupportBanner float="right" />`** placed in a text-heavy paragraph (not next to an infographic/chart/table). The full-width end banner is automatic — don't add it by hand.
+2. **A mid-article `<SupportBanner float="left" />`** placed in a text-heavy paragraph (not next to an infographic/chart/table). The full-width end banner is automatic — don't add it by hand.
 3. Any side asides (`infobox … right`, „Napsali jsme" `position="right"`, `<Figure side="right">`) use the shared bleed — nothing else to set.
+4. The Google „Chci víc DataTimes.cz ve zprávách Googlu" button (`PreferredSource`) is automatic in the byline — nothing to add.
 
 ### Don't
 - Don't hardcode hex colours in new components – always use theme tokens
