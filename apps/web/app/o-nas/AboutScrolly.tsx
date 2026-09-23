@@ -42,7 +42,7 @@ const steps: Step[] = [
     },
     paragraphs: [
       'Zakladatelka webu <a href="https://www.datovazurnalistika.cz/" target="_blank" rel="noreferrer">datovazurnalistika.cz</a>. Vytvořila stovky vizualizací a analýz, vedla datové projekty v ČTK a spolupracuje s předními médii u nás i ve světě.',
-      'Dvojnásobná vítězka Novinářské ceny a šest finálových nominací. Studovala na UC San Diego, Bangor University a nyní dokončuje informační vědy na Masarykově univerzitě.',
+      'Dvojnásobná vítězka Novinářské ceny (2021 a 2025) a sedm finálových nominací. Studovala na UC San Diego, Bangor University a nyní dokončuje informační vědy na Masarykově univerzitě.',
     ],
     x: 300,
     y: 1650,
@@ -59,7 +59,7 @@ const steps: Step[] = [
     },
     paragraphs: [
       'Zakladatel a ředitel neziskových <a href="https://volebnikalkulacka.cz/" target="_blank" rel="noreferrer">Volebních kalkulaček</a>, které v sedmi zemích pomohly milionům voličů k lepšímu rozhodování ve volbách.',
-      'Vítěz Novinářské ceny. Působil v Max Planck Institute v Rostocku, na Universidad de Salamanca a Karlově univerzitě. Specializuje se na volební analýzy a predikce.',
+      'Vítěz Novinářské ceny (2025) a tři finálové nominace. Působil v Max Planck Institute v Rostocku, na Universidad de Salamanca a Karlově univerzitě. Specializuje se na volební analýzy a predikce.',
     ],
     x: 700,
     y: 2950,
