@@ -8,7 +8,7 @@ coverImage: "images/paul-steiger-pro-publica-1-datatimes.webp"
 coverFit: contain
 coverBg: "brandNavy.9"
 filter: ["kontext"]
-tags: ["Rozhovor: mediální byznys", "rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "USA"]
+tags: ["svobodná média" , "nezávislá média" , "mediální byznys", "rozhovor", "žurnalistika", "média", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "svoboda médií", "nezávislosti médií" , "USA"]
 promoted: 0
 ---
 ```infobox
