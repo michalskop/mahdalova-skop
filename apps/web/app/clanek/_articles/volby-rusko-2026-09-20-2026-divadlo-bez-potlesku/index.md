@@ -56,4 +56,4 @@ Volební lístek vhozený do urny nebo odeslaný přes státní portál Gosuslug
 
 _Stav informací k 20. září 2026, poslednímu ze tří dnů hlasování._
 
-<RelatedArticles slugs={["europarlament-2024-12-23-kdo-hlasuje-pro-rusky", "komentar-2025-03-01-jsme-s-ukrajinou", "komentar-2025-01-22-dezinformace-jako-nikdy"]} heading="🔻🔻🔻" />
+<RelatedArticles slugs={["volby-rusko-2026-09-20-jak-se-vyrabi-volebni-vitezstvi", "komentar-2025-03-01-jsme-s-ukrajinou" , "europarlament-2024-12-23-kdo-hlasuje-pro-rusky"]} heading="🔻🔻🔻" />
