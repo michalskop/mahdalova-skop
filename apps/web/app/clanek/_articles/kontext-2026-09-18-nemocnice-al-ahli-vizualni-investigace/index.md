@@ -3,7 +3,7 @@ title: "Nemocnice Al-Ahli: dost záběrů na desítky analýz, málo na jediný 
 date: "2026-09-18"
 author: "Kateřina Mahdalová"
 excerpt: "Výbuch v areálu nemocnice v Gaze zachytilo několik kamer. Záznamů bylo dost na vznik desítek analýz, ale málo na jednoznačný verdikt. Případ Al-Ahli ukázal možnosti i slabiny vizuální investigace – a předznamenal svět, v němž bude stále obtížnější dokázat, že obraz zachycuje skutečnost."
-coverImage: "images/cover-al-ahli-datatimes.jpg"
+coverImage: "images/cover-al-ahli-vinik-datatimes.jpg"
 coverFit: "contain"
 coverBg: "brandNavy.9"
 filter: ["kontext"]
