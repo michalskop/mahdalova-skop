@@ -14,7 +14,7 @@ type Step = {
   portrait?: {
     src: string;
     alt: string;
-    lead: string;
+    lead?: string;
   };
 };
 
@@ -33,16 +33,15 @@ const steps: Step[] = [
   },
   {
     index: '02',
-    eyebrow: 'Spoluzakladatelka',
+    eyebrow: 'Šéfredaktorka & majitelka',
     title: 'Kateřina Mahdalová',
     portrait: {
       src: '/authors/km_circle.png',
       alt: 'Portrét Kateřiny Mahdalové',
-      lead: 'Průkopnice datové žurnalistiky v Česku',
     },
     paragraphs: [
-      'Zakladatelka webu <a href="https://www.datovazurnalistika.cz/" target="_blank" rel="noreferrer">datovazurnalistika.cz</a>. Vytvořila stovky vizualizací a analýz, vedla datové projekty v ČTK a spolupracuje s předními médii u nás i ve světě.',
-      'Dvojnásobná vítězka Novinářské ceny (2021 a 2025) a sedm finálových nominací. Studovala na UC San Diego, Bangor University a nyní dokončuje informační vědy na Masarykově univerzitě.',
+      'Novinářka, analytička, zakladatelka webu DataTimes.cz a&nbsp;DatovaZurnalistika.cz. Autorka tisíců vizualizací a&nbsp;analýz. V&nbsp;letech 2016–19 vedla datové projekty v&nbsp;ČTK a&nbsp;dlouhodobě spolupracuje s&nbsp;předními médii u&nbsp;nás i&nbsp;ve světě.',
+      'Dvojnásobná vítězka Novinářské ceny a&nbsp;držitelka sedmi finálových nominací, včetně Data Journalism Award. Absolvovala Literární akademii Josefa Škvoreckého a&nbsp;informační vědy na Masarykově univerzitě. Studovala na UC San Diego a&nbsp;Bangor University a&nbsp;nyní mj. učí datovou žurnalistiku na Univerzitě Jana Evangelisty Purkyně.',
     ],
     x: 300,
     y: 1650,
@@ -232,7 +231,9 @@ export default function AboutScrolly() {
             {step.portrait ? (
               <div className={styles.bubblePortrait}>
                 <img src={step.portrait.src} alt={step.portrait.alt} loading="lazy" />
-                <span className={styles.bubblePortraitLead}>{step.portrait.lead}</span>
+                {step.portrait.lead ? (
+                  <span className={styles.bubblePortraitLead}>{step.portrait.lead}</span>
+                ) : null}
               </div>
             ) : null}
             <h3>{step.title}</h3>
