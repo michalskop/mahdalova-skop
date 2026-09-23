@@ -13,7 +13,10 @@ promoted: 75
 
 <RelatedArticles preset="sidebar" slugs={["volby-rusko-2026-09-20-2026-divadlo-bez-potlesku"]} position="right" heading="Napsali jsme" />
 
-Trauma z prosince 2011, kdy pokles vládní podpory a neohrabané volební machinace vyhnaly na moskevské [Bolotné náměstí](https://en.wikipedia.org/wiki/Bolotnaya_Square_case) statisíce protestujících, zůstává pro Kreml trvalým varováním. Právě od té doby ruské úřady systematicky budovaly mašinérii přísných kvót, administrativního inženýrství a pečlivé filtrace protikandidátů. Letošní hlasování je vyvrcholením této dlouholeté praxe, navíc umocněné válečnou cenzurou.
+Trauma z prosince 2011, kdy pokles vládní podpory a neohrabané volební machinace vyhnaly na moskevské [Bolotné náměstí](https://en.wikipedia.org/wiki/Bolotnaya_Square_case) statisíce protestujících, zůstává pro Kreml trvalým varováním. Právě od té doby ruské úřady systematicky budovaly mašinérii přísných kvót, administrativních zásahů všeho druhu a pečlivé filtrace protikandidátů. 
+
+Letošní - opět nikoli svobodné - volby jsou vyvrcholením této dlouholeté praxe, navíc umocněné válečnou cenzurou.
+Úřady nejprve utnuly poslední legální ventil reálného nesouhlasu s invazí na Ukrajinu. Tímto směrem se vydala tradiční liberální strana Jabloko. Léta byla marginální politickou silou na okraji zájmu, její otevřený požadavek na okamžité příměří na Ukrajině začal během léta 2026 nečekaně silně rezonovat ve společnosti, zejména mezi mladšími ročníky. Podle politoložky Iriny Busyginové právě tento nárůst online zájmu přiměl Kreml stranu "neutralizovat".
 
 Úřady nejprve nemilosrdně utnuly poslední legální ventil reálného nesouhlasu, kterým byla tradiční liberální strana [Jabloko](https://eng.yabloko.ru). Přestože byla léta marginální silou na okraji zájmu, její otevřený požadavek na okamžité příměří na Ukrajině začal během léta 2026 nečekaně silně rezonovat mezi vyčerpanou společností, zejména mezi mladšími ročníky. Podle [politoložky Iriny Busyginové](https://www.cnn.com/2026/09/18/europe/russia-parliamentary-elections-2026-ukraine-intl) právě tento nárůst online zájmu přiměl Kreml stranu neutralizovat.
 
