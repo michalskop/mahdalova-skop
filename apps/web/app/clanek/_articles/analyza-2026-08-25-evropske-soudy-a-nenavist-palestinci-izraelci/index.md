@@ -1,5 +1,5 @@
 ---
-title: "Nenávist k Palestincům i k Izraelcům skončí u soudu. Rozhoduje, zda míří na stát, nebo na lidi"
+title: "Nenávistné výroky vůči Palestincům i vůči Izraelcům končívají u soudu. Je zásadní, zda jsou adresované státu, nebo lidem"
 date: "2026-08-25"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Po 7. říjnu 2023 rozhodly evropské soudy desítky sporů o hranici mezi svobodou projevu a nenávistí. Trestají kolektivní nenávist k Palestincům i k Izraelcům – a hranici vedou podle jediného kritéria: zda výrok míří na stát a jeho politiku, nebo na lidi podle původu. Srovnání Rakouska, Německa, Švédska a Polska ukazuje, čím je český případ ministra Dvořáka výjimečný."
