@@ -113,7 +113,7 @@ export default function AboutScrolly() {
       const viewportMarker = window.innerHeight * 0.52;
       const routeY = Math.min(
         ROUTE_HEIGHT,
-        Math.max(0, ((viewportMarker - rect.top) / rect.height) * ROUTE_HEIGHT * 1.08),
+        Math.max(0, ((viewportMarker - rect.top) / rect.height) * ROUTE_HEIGHT),
       );
       const path = window.innerWidth <= 820 ? mobilePathRef.current : desktopPathRef.current;
 
