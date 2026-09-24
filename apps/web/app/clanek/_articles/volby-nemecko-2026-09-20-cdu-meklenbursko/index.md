@@ -52,9 +52,7 @@ Sama Schwesig na volební party nešetřila úlevou. „To byla stíhací jízda
 
 Ve Schwerinu zatím zemský šéf CDU Daniel Peters do poslední chvíle bojoval o holé přežití. „Tahle země CDU potřebuje,“ řekl svým příznivcům podle portálu web.de, mluvil o „mizerných podmínkách“ a „boji o existenci“ a vítězům Schwesig i Holmovi pogratuloval.
 
-![Friedrich Merz na tiskové konferenci CDU po volebním večeru](images/merz-election-day-sad.jpg)
-
-*Friedrich Merz na tiskové konferenci CDU po volebním večeru. Foto: Reuters.*
+<Figure src="images/merz-election-day-sad.jpg" side="right" alt="Friedrich Merz na tiskové konferenci CDU po volebním večeru" caption="Friedrich Merz na tiskové konferenci CDU po volebním večeru. Foto: Reuters" />
 
 Skutečné rozhodování se ale odehrávalo o pár set kilometrů dál, v berlínské centrále CDU. Třináct minut po prvních číslech vyšel Friedrich Merz v Helmut‑Kohl‑Saalu před kamery. Na snímcích Reuters z toho večera působí skleslým dojmem – hlava mírně skloněná, pohled k zemi, koutky úst stažené dolů. Muž, který právě prohrál, i když to slovy nepřipustí. Nedalo se prý nic přikrášlovat, „je to debakl“, řekl, když CDU visela mezi pěti a pěti a půl procenty; a my v naší predikci už věděli, že za pár hodin to bude pro CDU ještě horší. A přišel dvojí zásah – k porážce v Meklenbursku se přidal propad v Berlíně, kde CDU skončila až za vítěznou Levicí. Merz na večer záměrně svolal celé předsednictvo do Domu Konrada Adenauera, aby se situace nevymkla kontrole; podle webu T‑online se podávaly lasagne a chlebíčky a většina účastníků odešla už kolem osmé, „většinou beze slova“. Rychlým vystoupením chtěl podle deníku předběhnout vlnu – udržet výklad výsledku ve svých rukou a předejít debatě o odstoupení. Oznámil, že zůstává kancléřem i předsedou strany a že reformní kurz vlády musí pokračovat. Slova mluvila o boji, tvář o porážce.
 
