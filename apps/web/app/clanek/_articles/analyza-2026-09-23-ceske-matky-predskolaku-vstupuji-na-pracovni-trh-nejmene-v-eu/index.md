@@ -6,6 +6,7 @@ excerpt: "Otcové dětí do šesti let mají v Česku placenou práci nejčastě
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza", "společnost"]
+promoted: 75
 tags: ["slaďování práce a rodiny", "rodinná politika", "demografie", "porodnost", "rodičovský příspěvek", "jesle", "zkrácené úvazky", "otcovská", "Poslanecká sněmovna", "Eurostat", "MPSV"]
 ---
 
