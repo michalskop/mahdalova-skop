@@ -22,8 +22,7 @@ _**Životní Turkův úspěch v závodech formulí** byl závod v květnu 2017, 
 |                                                      | 🔹 Turek jako jediný odjel celý seriál (vyhrál díky samotné účastí)                   |
 | 🔚 Nejčastější umístění v mezinárodním žebříčku      | poslední z těch, co dojeli                                                             |
 
-![Turek ve svých formulových začátcích v roce 2015 na autodromu v Mostě v helmě se znakem nacistické stíhací letky Jagdgeschwader 27 “Afrika”. Zdroj: Filip Turek  - Formule Autodrom Most](images/helma.webp)
-_Turek ve svých formulových začátcích v roce 2015 na autodromu v Mostě v helmě se znakem [nacistické stíhací letky Jagdgeschwader 27 “Afrika”](https://en.wikipedia.org/wiki/Jagdgeschwader_27). Zdroj: Filip Turek  - Formule Autodrom Most_
+<Figure src="images/helma.webp" side="right" alt="Filip Turek v roce 2015 na autodromu v Mostě v helmě se znakem stíhací letky Jagdgeschwader 27" caption="Turek ve svých formulových začátcích v roce 2015 na autodromu v Mostě v helmě se znakem [nacistické stíhací letky Jagdgeschwader 27 “Afrika”](https://en.wikipedia.org/wiki/Jagdgeschwader_27). Zdroj: Filip Turek  - Formule Autodrom Most" />
 
 Filip Turek, současný europoslanec, se ve veřejném prostoru **prezentuje jako bývalý formulový závodník s působivými úspěchy**. Podrobná analýza jeho závodní kariéry v letech 2015–2017 však ukazuje, že realita za deklarovaným titulem **vypadá výrazně skromněji**. V amatérském Carbonia Cupu absolvoval 16 závodů, většinou proti dvěma soupeřům, přičemž **nejčastějším výsledkem bylo poslední místo**. Přesto si z těchto závodů odnesl **pět vítězství** – vždy nad jediným pravidelným konkurentem ve slabším voze. V roce 2017 se přesunul do oficiální středoevropské série ESET V4 Cup, kde odjel deset závodů v nejnižší podkategorii Formula 4 Trophy. **Čtyřikrát zvítězil jako jediný jezdec ve své kategorii**. Celkově byli v této sérii hodnoceni jen čtyři závodníci a hlavní soupeř, patnáctiletý junior, se zúčastnil pouhých dvou podniků.
 
@@ -33,14 +32,13 @@ Formule 4, ve které závodil, je juniorská vstupní kategorie, určená zejmé
 
 _→ “Nejhezčí závod, který se mi povedl, byl na Red Bull Ringu v roce 2017, kde jsem byl rychlejší než několik Formulí 3, což je auto o level výš.”  Filip Turek_
 
+<Figure src="images/redbullring.webp" side="left" alt="Filip Turek na stupních vítězů na Red Bull Ringu v roce 2017" caption="Foto: Turek - životní úspěch v Rakousku 2017. **Jediné jeho vítězství, kdy byli v kategorii alespoň 3 závodníci** - Turek, 15 letý junior Santos z Dominikánské republiky a německý obvodní lékař Braun. Při ostatních Turkových vítězstvích byli v kategorii jen dva, nebo byl v kategorii dokonce zcela sám. Zdroj: [Drexler formel cup](https://www.drexler-formel-cup.com/en/gallery.html#2017)." />
+
 V tomto „legendárním” druhém závodě dne 20. 5. 2017 [Turek skončíl 23. z 26 závodníků](https://fia-cez.com/wp-content/uploads/2017/05/formula2.pdf), předjel jednoho závodníka ve Formuli Renault (nikoliv F3) a poté již dříve zmíněné dva jezdce z vlastní kategorie. V prvním závodě toho dne skončil sice o jedno místo lépe, ale 2 závodníci nebyli vůbec hodnoceni. 
 
 Jinými slovy: Turkův „životní úspěch“, jak jej sám popisuje – závod na Red Bull Ringu v květnu 2017, kde měl být „rychlejší než několik Formulí 3“ – ve skutečnosti znamenal 23. místo z 26 účastníků, kdy předjel i jednu Formuli Renault. Ve své kategorii zvítězil nad dvěma závodníky: juniorem z Dominikánské republiky a německým obvodním lékařem. V mezinárodních klasifikacích (FIA CEZ, Mistrovství ČR) pravidelně končil na posledních místech z těch, kteří závody dokončili.
 
 Šlo o **jediné závody v jeho kariéře** formulového závodníka, které **ve své kategorii vyhrál** a zároveň v ní **jeli více než 2 jezdci**.
-
-![Foto: Turek - životní úspěch v Rakousku 2017. Jediné jeho vítězství, kdy byli v kategorii alespoň 3 závodníci - Turek, 15 letý junior Santos z Dominikánské republiky a německý obvodní lékař Braun. Při ostatních Turkových vítězstvích byli v kategorii jen dva, nebo byl v kategorii dokonce zcela sám. Zdroj: Drexler formel cup.](images/redbullring.webp)
-_Foto: Turek - životní úspěch v Rakousku 2017. **Jediné jeho vítězství, kdy byli v kategorii alespoň 3 závodníci** - Turek, 15 letý junior Santos z Dominikánské republiky a německý obvodní lékař Braun. Při ostatních Turkových vítězstvích byli v kategorii jen dva, nebo byl v kategorii dokonce zcela sám. Zdroj: [Drexler formel cup](https://www.drexler-formel-cup.com/en/gallery.html#2017)._
 
 ```box
 ### Není formule jako formule
@@ -103,7 +101,6 @@ _Celkové výsledky Mezinárodního mistrovství ČR v divizi 2, 2017. Zdroj: [A
 ```box
 ### Ani Formule 4 není všude stejná
 
-
 Formule 4 je nyní oficiální juniorská kategorie pod záštitou FIA, určená k tomu, aby pomohla mladým talentům přejít z motokár do vyšších kategorií jako F3 nebo F2. Např. vyhrát v 15 letech italskou, britskou nebo německou F4 znamená, že se o vás začne mluvit.
 
  Ale ve středoevropských poměrech to byla levnější a volnější kategorie, např. Turek jezdil ve formulích s motory z motorek. Vítězství ve středoevropské F4 mohlo znamenat i jen to, že jste vůbec byli ochotni na závody přijet. 
@@ -115,17 +112,15 @@ Proto také v takovýchto závodech závodilo při jedné jízdě dohromady něk
 
 _→ „Zároveň jsem vyhrál Masaryk Racing Days, což je největší sláva v Brně. Je to obrovský víkend, hodně diváků. V tom Brně jsem poprvé cítil, že i na tom našem území můžeš mít tribuny plné lidí, a zároveň to byl den, který se mi to nejvíc povedlo.”  Filip Turek_
 
-![Foto: Start spojeného závodu všech kategorií formulí v Brně 2017 s „tribunami plnými lidí”. Zdroj: ČT](images/brno_start.webp)
-_Foto: Start spojeného závodu všech kategorií formulí v Brně 2017 s „tribunami plnými lidí”. Zdroj: [ČT](https://www.ceskatelevize.cz/porady/10207469169-svet-motoru/317297371269007/)_
+<Figure src="images/brno_start.webp" side="right" alt="Start spojeného závodu formulí v Brně v roce 2017" caption="Foto: Start spojeného závodu všech kategorií formulí v Brně 2017 s „tribunami plnými lidí”. Zdroj: [ČT](https://www.ceskatelevize.cz/porady/10207469169-svet-motoru/317297371269007/)" />
 
 Turek na Masaryk Racing Days 2017 [v prvním závodě skončil poslední, 27. z 27 hodnocených](https://fia-cez.com/wp-content/uploads/2017/10/d2_1.pdf), předjel ho i jeho největší a často jediný občasný soupeř sezóny z jeho kategorie, 15 letý dominikánský junior Santos. [V druhém závodě dojel Turek 23. z 27 hodnocených](https://fia-cez.com/wp-content/uploads/2017/10/d2_2.pdf) a zvítězil ve své kategorii, neboť předjel Santose. Byl to jeho poslední závod formulové kariéry.
-
-![Foto: Santos a Turek v Brně 2017 - jediní dva závodníci v kategorii. V prvním závodě vyhrál Santos, v druhém Turek. Zdroj: ČT](images/brno2.webp)
-_Foto: Santos a Turek v Brně 2017 - jediní dva závodníci v kategorii. V prvním závodě vyhrál Santos, v druhém Turek. Zdroj: [ČT](https://www.ceskatelevize.cz/porady/10207469169-svet-motoru/317297371269007/)_
 
 ## Jak to začalo - Sezóna 2015 a 2016 v amatérské soutěži Carbonia Cup
 
 _→ [První závod] „Bylo to v Mostě a dojel jsem třetí!” Filip Turek_
+
+<Figure src="images/brno2.webp" side="left" alt="Santos a Turek na stupních vítězů v Brně v roce 2017" caption="Foto: Santos a Turek v Brně 2017 - jediní dva závodníci v kategorii. V prvním závodě vyhrál Santos, v druhém Turek. Zdroj: [ČT](https://www.ceskatelevize.cz/porady/10207469169-svet-motoru/317297371269007/)" />
 
 Bylo to 12. 4. 2015 a závod byl na pouhých 10 minut. Ve své kategorii dojel Turek [opravdu 3., a to ze 3 závodníků, tedy poslední](https://www.carboniacup.cz/files/File/zavod_D_vysledky_skupin_140415-212024.pdf). Celkově za všechny kategorie skončil 5. z 8 těch, kteří dojeli všechna kola závodu.
 
@@ -155,7 +150,6 @@ Nejúspěšnějším okruhem pro Turka potom byla slovenská Orechová Potôň, 
 
 ![Turkův vlastní popis na volebním lístku do Evropského parlamentu: „bývalý formulový pilot…” zdroj: MVČR](images/hlasovaci-listek.webp)
 _Turkův popis na volebním lístku do Evropského parlamentu: „bývalý formulový pilot…” zdroj: MVČR_
-
 
 ## Turek výsledky: Carbonia Cup 2015 a 2016
 

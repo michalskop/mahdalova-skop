@@ -118,6 +118,11 @@ Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci
 - **Žádné zavádějící ořezy** ani úpravy měnící vyznění; ilustrační a montážní obraz označíme.
 - **Licence** ověřená před publikací.
 - **Alternativní text** shrnuje obsah, ne vzhled.
+- **Fotka v textu = vždy komponenta `<Figure>`**, nikdy holé `![](…)` s kurzívou pod ním. Fotka je zmenšená po straně (48 % šíře, vyčuhuje do okraje), text ji obtéká, po kliknutí se zvětší a popisek se zobrazí i na zvětšené fotce (světlé písmo `#f8f6f0` na průsvitném ink-blue pruhu `#101432`). Zápis:
+  `<Figure src="images/soubor.jpg" side="right" alt="Co je na snímku" caption="Popisek. Foto: [Autor](url)" />`
+  - Popisek smí obsahovat odkazy `[text](url)`, **tučné** `**…**` a kurzívu `_…_`; rovné uvozovky `"` v něm nepoužívat (jen „české").
+  - **Umístění:** na začátek textově bohatého odstavce, ke kterému fotka patří (ne před box, tabulku nebo graf) – obtékat ji musí aspoň 3–4 odstavce. Fotky se **střídají** vpravo/vlevo podle toku textu; SupportBanner je vlevo, boční InfoBox a „Napsali jsme" vpravo. Levou a pravou fotku nedávat do stejného krátkého úseku. Na výšku orientované portréty potřebují delší text vedle sebe; velmi vysoké vizuály lze dát `side="center"`.
+  - **Výjimky (zůstávají přes celou šíři jako `![](…)`):** grafy, mapy, tabulky, screenshoty dokumentů a sociálních sítí, grafické karty s textem a úvodní ilustrační bannery – zmenšené by nebyly čitelné. Ucelenou sadu fotek dáváme jako fotogalerii (```` ```fotogalerie ````), ne jako řadu `<Figure>`.
 - **Vlajky zemí vždy jako SVG, nikdy jako emoji.** Windows a Chrome (na Windows) emoji vlajek nevykreslují — místo vlajky se čtenáři ukáže jen kód země (např. „DE" místo 🇩🇪). Vlaječky proto sázíme sdílenou komponentou `Flag` (`@repo/ui`) ze sad *square-flags* / *circle-flags*; technické detaily a galerie viz [design systém](../../packages/ui/DESIGN.md#flag). Sdíleno napříč mahdalova-skop.cz i datajournalism.studio.
 
 ---

@@ -1,13 +1,45 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
+import { fixCzechTypography } from '@/lib/remark-czech-typography';
 import styles from './figure.module.css';
+
+/* Captions arrive as a plain JSX attribute string, so markdown inside them is not
+   parsed by MDX. Support the inline subset captions actually use: [text](url),
+   **bold** and _italic_ / *italic*. Czech typography (nbsp) is applied to text. */
+const INLINE_MD = /\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)|\*\*([^*]+)\*\*|_([^_]+)_|\*([^*]+)\*/g;
+
+function renderCaption(text: string): ReactNode[] {
+  const out: ReactNode[] = [];
+  let last = 0;
+  let m: RegExpExecArray | null;
+  INLINE_MD.lastIndex = 0;
+  while ((m = INLINE_MD.exec(text))) {
+    if (m.index > last) out.push(fixCzechTypography(text.slice(last, m.index)));
+    const key = m.index;
+    if (m[1] !== undefined) {
+      out.push(
+        <a key={key} href={m[2]} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+          {fixCzechTypography(m[1])}
+        </a>,
+      );
+    } else if (m[3] !== undefined) {
+      out.push(<strong key={key}>{fixCzechTypography(m[3])}</strong>);
+    } else {
+      out.push(<em key={key}>{fixCzechTypography(m[4] ?? m[5])}</em>);
+    }
+    last = INLINE_MD.lastIndex;
+  }
+  if (last < text.length) out.push(fixCzechTypography(text.slice(last)));
+  return out;
+}
 
 interface FigureProps {
   /** Image source. A relative `images/…` path is resolved against the article folder. */
   src?: string;
   alt?: string;
-  /** Optional italic caption shown under the image. */
+  /** Optional italic caption shown under the image and over the enlarged photo.
+   *  Supports inline markdown: [odkaz](url), **tučně**, _kurzíva_. */
   caption?: string;
   /** Placement: float left/right and bleed out of the column, or a centered
    *  non-floated block (good for tall/portrait visuals). Defaults to right. */
@@ -66,7 +98,7 @@ export function Figure({ src = '', alt = '', caption, side = 'right', slug = '' 
           }
         }}
       />
-      {caption ? <figcaption className={styles.caption}>{caption}</figcaption> : null}
+      {caption ? <figcaption className={styles.caption}>{renderCaption(caption)}</figcaption> : null}
 
       {open ? (
         <div
@@ -79,7 +111,7 @@ export function Figure({ src = '', alt = '', caption, side = 'right', slug = '' 
           <div className={styles.lightboxFrame}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={resolvedSrc} alt={alt} className={styles.lightboxImg} />
-            {caption ? <div className={styles.lightboxCaption}>{caption}</div> : null}
+            {caption ? <div className={styles.lightboxCaption}>{renderCaption(caption)}</div> : null}
           </div>
           <button
             type="button"

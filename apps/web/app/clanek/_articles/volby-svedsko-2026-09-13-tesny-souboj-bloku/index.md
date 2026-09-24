@@ -35,27 +35,21 @@ Ve všech pěti průzkumech má červeno-zelený blok mírný náskok, ale rozp�
 
 Švédští demokraté (SD), dnes nacionalistická a protiimigrační strana, vznikli v roce 1988 jako nástupce Švédské strany. Podle výzkumu protirasistického serveru Expo mělo kolem 60 procent zakladatelů a raných členů strany vazby na švédská i zahraniční neofašistická a bělošsky nacionalistická hnutí – mezi nimi i první předseda SD, dřív spojený s neonacistickým hnutím, a první auditor strany, veterán jednotek Waffen-SS. Od poloviny devadesátých let strana pod novým vedením zakázala uniformy a fašistickou symboliku a začala z vlastních řad vylučovat otevřené extremisty; obrat vedený reformní frakcí kolem budoucího předsedy Jimmieho Åkessona vyvrcholil po roce 2005 změnou loga i rétoriky ([Sweden Democrats, Wikipedia](https://en.wikipedia.org/wiki/Sweden_Democrats)).
 
+<Figure src="images/kristersson.jpg" side="right" alt="Ulf Kristersson na akci v červnu 2025" caption="Ulf Kristersson (M), úřadující premiér, dnes usiluje o druhé funkční období v čele bloku Tidö. Foto: [Lowe Lilliehorn, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ulf_Kristersson_June_2025_(cropped2).jpg) (CC BY 4.0)." />
+
 Kvůli tomuto původu na SD zbytek politického spektra od jejich vstupu do Riksdagu v roce 2010 uplatňoval takzvaný cordon sanitaire – politiku odmítání jakékoli spolupráce. Ten se začal drolit až koncem desetiletí: po volbách 2018 oznámili ochotu vyjednávat Křesťanští demokraté, o rok později se s vedením SD poprvé oficiálně sešel i tehdejší předseda Umírněných Ulf Kristersson. Liberálové jako poslední ze čtyř stran bloku Tidö oznámili, že vůči SD nemají už žádné „červené linie", až letos ([Sweden Democrats, Wikipedia](https://en.wikipedia.org/wiki/Sweden_Democrats)).
 
 Po volbách 2022, kdy SD skončili druzí se ziskem 20,54 procenta (73 mandátů) před samotnými Umírněnými (19,10 procenta, 68 mandátů), se dohoda z hradu Tidö postarala jen o jejich podporu vládě zvenčí: kabinet Ulfa Kristerssona tvořily formálně jen Umírnění, Křesťanští demokraté a Liberálové, SD zůstali bez ministerstev ([2022 Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/2022_Swedish_general_election)).
 
-![Ulf Kristersson na akci v červnu 2025](images/kristersson.jpg)
-
-_Ulf Kristersson (M), úřadující premiér, dnes usiluje o druhé funkční období v čele bloku Tidö. Foto: [Lowe Lilliehorn, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ulf_Kristersson_June_2025_(cropped2).jpg) (CC BY 4.0)._
+<Figure src="images/akesson.jpg" side="left" alt="Jimmie Åkesson na akci Frihamnsdagarna 2022" caption="Jimmie Åkesson, předseda nacionalistických Švédských demokratů (SD) od roku 2005 – letošní dohoda s Liberály by jeho straně poprvé v historii mohla přinést vládní křesla. Foto: [Tommy Winterskiöld Vestlie, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Frihamnsdagarna_2022_Foto_Tommy_Winterski%C3%B6ld_Vestlie_(52361661771)_(cropped).jpg) (CC BY 2.0)." />
 
 Letos se to může poprvé změnit. Liberálové a Švédští demokraté 13. března 2026 podepsali dohodu nazvanou „The Sweden Promise": pokud blok Tidö získá většinu, SD dostanou vládní křesla poprvé v historii strany. Součástí dohody je i závazek uspořádat referendum o přijetí eura, a to souběžně s volbami 2030 ([Next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Next_Swedish_general_election)).
 
 Dohoda ale zatěžuje právě Liberály, kteří se v žádném z pěti posledních průzkumů nedostali nad 5,5 procenta a nejtěsněji nad čtyřprocentním prahem skončili u agentury Infostat – jen 0,5 procentního bodu nad hranicí. Ve všech pěti průzkumech ji tedy zatím překračují, ale s rezervou tak malou, že by ji samotná statistická odchylka průzkumu mohla smazat. Pokud by ji Liberálové v reálném hlasování nepřekonali, jejich hlasy by v přepočtu na mandáty propadly a blok Tidö by o ně fakticky přišel. Předseda SD Jimmie Åkesson k tomu voličům vzkázal, ať Liberálům svůj hlas nepůjčují, pokud se v průzkumech k 3. září nedostanou aspoň na 3,5 procenta.
 
-![Jimmie Åkesson na akci Frihamnsdagarna 2022](images/akesson.jpg)
-
-_Jimmie Åkesson, předseda nacionalistických Švédských demokratů (SD) od roku 2005 – letošní dohoda s Liberály by jeho straně poprvé v historii mohla přinést vládní křesla. Foto: [Tommy Winterskiöld Vestlie, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Frihamnsdagarna_2022_Foto_Tommy_Winterski%C3%B6ld_Vestlie_(52361661771)_(cropped).jpg) (CC BY 2.0)._
-
 ## Červeno-zelení mají kandidátku na premiérku, ne dohodu o vládě
 
-![Magdalena Anderssonová v Göteborgu v dubnu 2026](images/andersson.jpg)
-
-_Magdalena Andersson (S), kandidátka červeno-zeleného bloku na premiérku – úřad krátce vedla už v letech 2021–2022. Foto: [Axadem, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Magdalena_Andersson_Gothenburg_2026-04-10_02_(cropped).jpg) (CC BY 4.0)._
+<Figure src="images/andersson.jpg" side="right" alt="Magdalena Anderssonová v Göteborgu v dubnu 2026" caption="Magdalena Andersson (S), kandidátka červeno-zeleného bloku na premiérku – úřad krátce vedla už v letech 2021–2022. Foto: [Axadem, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Magdalena_Andersson_Gothenburg_2026-04-10_02_(cropped).jpg) (CC BY 4.0)." />
 
 Na druhé straně má červeno-zelený blok jasnou kandidátku na premiérku, ale žádnou shodu na tom, jak by koalice měla vypadat. Strana Levice prohlásila, že bude hlasovat proti jakékoli vládě, ve které nedostane vlastní ministerstva – to je oproti minulým volbám posun, kdy socialdemokratickou menšinovou vládu podporovala zvenčí bez nároku na křesla. Centristé naopak chtějí vládu s S, Zelenými a Křesťanskými demokraty, ale odmítají v ní sedět společně s Levicí. Podle Wikipedie by k sestavení vlády byly potřeba hlasy všech čtyř opozičních stran, jejich požadavky se ale přímo vylučují ([Next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Next_Swedish_general_election)).
 

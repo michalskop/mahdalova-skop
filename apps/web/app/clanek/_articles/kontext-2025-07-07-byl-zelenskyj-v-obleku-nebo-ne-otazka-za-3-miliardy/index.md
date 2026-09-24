@@ -11,7 +11,7 @@ promoted: 20
 
 _Na první pohled banální otázka: měl ukrajinský prezident Volodymyr Zelenskyj na summitu NATO ve dnech 24.–25. června 2025 na sobě oblek, nebo neměl? Ve skutečnosti se kolem této otázky roztočila sázková spirála, na jejímž konci leží v přepočtu **více než tři miliardy korun**._
 
-![Volodymyr Zelenskyj na summitu NATO 25. 6. 2025, zdroj: NATO](images/main.webp)
+<Figure src="images/main.webp" side="right" alt="Volodymyr Zelenskyj s dalšími státníky na summitu NATO 25. 6. 2025" caption="Volodymyr Zelenskyj (třetí zleva) na summitu NATO 25. 6. 2025. Foto: NATO" />
 
 Konkrétně jde [o více než 150 milionů dolarů](https://polymarket.com/event/will-zelenskyy-wear-a-suit-before-july/will-zelenskyy-wear-a-suit-before-july?tid=1751881104407), které lidé po celém světě vsadili na tzv. predikčním trhu Polymarket. Tento web se profiluje jako nástroj pro odhadování pravděpodobnosti různých událostí – od sportovních výsledků přes ekonomické ukazatele až po vývoj politických kauz – a nikoli jako běžná sázková kancelář, přestože z pohledu většiny uživatelů plní velmi podobnou funkci. V našem případě Polymarket slouží jako jeden z podpůrných ukazatelů při odhadech aktuální [volební podpory politických stran](https://polymarket.com/event/czech-republic-parliamentary-election-winner?tid=1751880308639) pro projekt [Mandáty.cz](https://mandaty.cz/). A díky tomu jsme narazili i na tuto “Suitgate”.
 

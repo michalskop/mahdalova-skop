@@ -17,14 +17,18 @@
   margin-top: var(--dt-bleed-gap-y, 0.95rem);
 }
 
+/* `clear` on the same side: two photos on one side stack under each other
+   instead of squeezing the text between them. */
 .right {
   float: right;
+  clear: right;
   margin-left: var(--dt-bleed-gap, 1.25rem);
   margin-right: var(--dt-bleed-pull, -12%); /* bleed into the right-hand margin */
 }
 
 .left {
   float: left;
+  clear: left;
   margin-right: var(--dt-bleed-gap, 1.25rem);
   margin-left: var(--dt-bleed-pull, -12%); /* bleed into the left-hand margin */
 }
@@ -93,6 +97,11 @@
   line-height: 1.45;
   font-style: italic;
 }
+.lightboxCaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .lightboxClose {
   position: fixed;
   top: 1rem;
@@ -128,6 +137,11 @@
   line-height: 1.4;
   font-style: italic;
   color: var(--mantine-color-dimmed);
+}
+.caption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 768px) {

@@ -58,7 +58,7 @@ Více než 90 % obětí i pachatelů tvořili muži. Nejčastějšími zbraněmi
 
 Fascinující je případ kněze Johna Forda, zavražděného v roce 1337 na Westcheapu. Podle [nově objevených dokumentů](https://www.cam.ac.uk/stories/medieval-murder-maps-noblewoman-priest) šlo o pomstu naplánovanou šlechtičnou Elou Fitzpayne – a tento případ otevírá okno do světa, kde i ženy mohly být „expertkami na násilí".
 
-![Ela Fitzpayne](images/ela_top-1280x673.jpg)
+<Figure src="images/ela_top-1280x673.jpg" side="right" alt="Ela Fitzpayne na středověké iluminaci" />
 
 Ela Fitzpayne nebyla typická středověká dáma. V roce 1321 se spolu se svým manželem Robertem a knězem Johnem Fordem účastnila násilného přepadu benediktinského kláštera – vyrazili brány, poničili budovy a ukradli na 18 volů, 30 prasat a 200 ovcí. Ford byl zároveň jejím milencem a farářem ve vesnici na panství Fitzpaynů.
 
