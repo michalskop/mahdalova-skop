@@ -61,7 +61,17 @@ Sama o sobě by nízká zaměstnanost matek mohla znamenat, že Češky o zaměs
 
 Česká propast se tedy otevírá na přesně vymezené období: od porodu do nástupu dítěte do školy, nejostřeji do jeho třetích narozenin. Paloncyová označila za kritické hlavně roky mezi druhými a třetími narozeninami dítěte. Kdo by se tehdy chtěl vrátit do práce, naráží na dvě překážky zároveň: málo zkrácených úvazků a málo míst pro děti mladší tří let.
 
-## Rodičák platí do tří let, jesle skoro neexistují
+```infobox info
+### Jak se tomu říká – a co to neznamená
+
+**Mateřská penalizace.** Tak ekonomové nazývají to, o co žena po narození dítěte přijde v práci: zaměstnání, výdělek, kariérní postup. Trestem tu není dítě. Penalizace je cena, kterou za péči o dítě na trhu práce platí jen jeden z rodičů – otec se stejným dítětem obvykle nepřijde o nic. Radost z dětí a ztráta v práci se navzájem nevylučují, statistika měří jen tu druhou. Ekonomové Henrik Kleven, Camille Landais a Gabriel Leite-Mariante ji v [Atlasu mateřské penalizace](https://www.nber.org/papers/w31649) změřili ve 134 zemích. Ze zemí Evropy, které v textu porovnávají, vyšla nejvyšší v Česku: po prvním dítěti klesne zaměstnanost žen oproti mužům v průměru o 50 procent, v Dánsku o 14 procent. V prvních letech péče je propad v Česku téměř úplný, po deseti letech zbývá zhruba pětina.
+
+**Familialismus.** Rodinná politika, která péči o malé děti svěřuje rodině – v praxi skoro vždy matce. Stát platí dlouhou rodičovskou, jesle a zkrácené úvazky ale nerozvíjí. Socioložka Sigrid Leitner tento typ v roce 2003 nazvala [explicitním familialismem](https://doi.org/10.1080/1461669032000127642). Česko k němu zamířilo po roce 1989, kdy jeslí rychle ubývalo a rodičovská se prodlužovala. Sociologové Steven Saxonberg a Tomáš Sirovátka tomu říkají [refamilializace](https://doi.org/10.1080/03906700701357307).
+
+**Dopadá to i na důchod.** Kratší a hůř placená kariéra znamená nižší důchod. Český důchodový vzorec nízké příjmy zvýhodňuje, takže rozdíl je menší než jinde: ženy ve věku 65–74 let mají [podle Eurostatu](https://ec.europa.eu/eurostat/databrowser/view/ilc_pnp13/default/table?lang=en) důchod v průměru o 8 procent nižší než muži, v EU o 23 procent. Často slýchaný argument, že ženy to dohánějí delším životem, platí obráceně. Pětašedesátiletá Češka má před sebou v průměru [20,6 roku života, muž 16,9](https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en). Nižší důchod tedy musí vystačit na víc let, po ovdovění často jako jediný příjem domácnosti. Pod hranicí chudoby proto [žije 11,1 procenta Češek](https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table?lang=en) nad 65 let a 4,6 procenta mužů.
+```
+
+## Stát platí péči doma, jesle skoro neexistují
 
 Rodičovský příspěvek je nastavený tak, aby ho rodiče čerpali nejdéle do tří let věku dítěte. Nárok na místo v mateřské škole vzniká také ve třech letech – obce ho musí zajistit, [připomněla na jednání](https://videoarchiv.psp.cz/video2/K48/2026/09/23/_20260923112002.mp4#t=0) zástupkyně ministerstva práce a sociálních věcí. Pro mladší děti žádná taková povinnost neplatí.
 
