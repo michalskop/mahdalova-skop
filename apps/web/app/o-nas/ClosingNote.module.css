@@ -3,7 +3,7 @@
 
 .section {
   background: var(--mantine-color-background-2);
-  padding: 73px 0 88px;
+  padding: 56px 0 88px;
 }
 
 .text {
@@ -59,7 +59,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 37px 0 52px;
+    padding: 28px 0 52px;
   }
 
   .text {
