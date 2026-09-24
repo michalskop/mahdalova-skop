@@ -344,7 +344,7 @@ When adding a 16th chapter, either free up a colour by re-theming one of the abo
 
 Every chapter landing page (`/specialy/data-pro-budouci-premierku/{chapter}`, rendered by `[chapter]/page.tsx`) follows the same fixed structure top to bottom. This applies uniformly across all chapters – when adding a new chapter, replicate this exact order rather than improvising a new layout.
 
-1. **Header (banner)** – full-bleed navy (`#101432`) box. Breadcrumb "Data pro budoucí premiérku · Kapitola {id}" (crimson `#de1743` link, inverts to navy-on-crimson on hover/focus), chapter title in `#f8f6f0` (`Roboto Slab`, `2rem`, `800`), and a 48×3px accent rule in the chapter's brand color.
+1. **Header (banner)** – full-bleed navy (`#101432`) box. Breadcrumb "Data pro budoucí premiérku · Kapitola {id}" (crimson `#de1743` link, inverts to navy-on-crimson on hover/focus), chapter title in `#f8f6f0` (IBM Plex Sans, `2rem`, `800`), and a 48×3px accent rule in the chapter's brand color.
 2. **Titulek** – `intro.title` in `_meta.json`. A hook specific to the chapter's central tension – not the chapter name again. See [`data-pro-budouci-premierku/PSANI.md`](data-pro-budouci-premierku/PSANI.md) for title patterns and why not to force the same formula every time.
 3. **Text (problem framing)** – `intro.textBefore`. One paragraph, narrative, grounded in a real quote/promise/common assumption. A flowing scene or argument, not a bullet list, that sets up what people *think* is going on.
 4. **Číslo v boxu (number box)** – the chapter's first `ImpactCard` (`cardOrder[0]`), reused as-is – no separate component needed; its big-number layout already matches this slot.

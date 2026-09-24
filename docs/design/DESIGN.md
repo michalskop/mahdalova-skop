@@ -4,13 +4,13 @@
 
 DataTimes is investigative data journalism designed to be read, not scanned. The interface channels the feel of a serious newspaper – authoritative, warm, and unhurried – while remaining entirely at home on a screen. The entire experience is built on a cream-tinted canvas (`#fdfbf7`) that deliberately suggests high-quality newsprint rather than a digital surface. Where most news sites default to stark white-and-black, DataTimes wraps every article in warmth, as if the editors care as much about the reading environment as the reporting itself.
 
-The signature typographic move is **Roboto Slab** – a slab serif with confident proportions that lends every headline the authority of a broadsheet front page. Body text breathes at relaxed line-heights, creating a reading cadence closer to a magazine essay than a social-media feed. For technical and data-analysis outputs where the analytic structure should come forward over the editorial voice, **Work Sans** serves as a clean, functional alternative.
+The signature typographic pairing is **IBM Plex Sans** for headings and **IBM Plex Serif** for body text. Together they give headlines a clear editorial voice while body text breathes at relaxed line-heights, creating a reading cadence closer to a magazine essay than a social-media feed. This pairing is the default for both journalistic and technical/data-analysis outputs.
 
 The brand accent is a bold, urgent crimson (`#de1743`) – the red of editorial importance, correction notices, and category badges. It is not the aggressive red of warnings or the cheerful red of consumer brands; it is the red of a newspaper's masthead. All neutral tones carry a warm, creamy undertone – there are no cold blue-grays anywhere in the system. Even the darkest text feels closer to ink on paper than pixels on glass.
 
 **Key Characteristics:**
 - Warm cream canvas (`#fdfbf7`) – newsprint feel, not digital white
-- Roboto Slab (serif) as primary font for all journalistic outputs; Work Sans (sans) as alternative for technical/data-analysis contexts
+- IBM Plex Sans for headings and IBM Plex Serif for body text across journalistic and technical/data-analysis outputs
 - Crimson brand accent (`#de1743`) – the red of editorial authority, not urgency
 - Exclusively warm-toned neutrals throughout – cream borders, warm grays, ink-dark text
 - Semantic InfoBox system for journalistic callouts (key facts, caveats, corrections, findings)
@@ -77,17 +77,17 @@ The brand accent is a bold, urgent crimson (`#de1743`) – the red of editorial 
 
 | Role | Font | Style | Weights | Source |
 |------|------|-------|---------|--------|
-| **Primary** – all journalistic outputs | **Roboto Slab** | Serif | 400 · 500 · 600 · 700 | Google Fonts |
-| **Alternative** – technical / data-analysis outputs | **Work Sans** | Sans-serif | 400 · 500 · 600 · 700 | Google Fonts |
+| **Headings** – all outputs | **IBM Plex Sans** | Sans-serif | 400 · 500 · 600 · 700 | Google Fonts |
+| **Body text** – all outputs | **IBM Plex Serif** | Serif | 400 · 500 · 600 · 700 | Google Fonts |
 
 ```css
-/* Primary (journalistic) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
-font-family: 'Roboto Slab', Georgia, serif;
+/* Headings */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+font-family: 'IBM Plex Sans', system-ui, sans-serif;
 
-/* Alternative (technical/data) */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
-font-family: 'Work Sans', system-ui, sans-serif;
+/* Body text */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&display=swap');
+font-family: 'IBM Plex Serif', Georgia, serif;
 ```
 
 *Font should be set globally (body/root level) – avoid overriding it on individual components.*
@@ -96,7 +96,7 @@ font-family: 'Work Sans', system-ui, sans-serif;
 
 | Role | Size | Weight | Line Height | Notes |
 |------|------|--------|-------------|-------|
-| Article title (h1) | 2rem+ | 700 | 1.2 | Slab serif broadsheet authority |
+| Article title (h1) | 2rem+ | 700 | 1.2 | IBM Plex Sans heading |
 | Section heading (h2) | 1.5rem | 600–700 | 1.25 | Category anchors, section breaks |
 | Sub-heading (h3) | 1.25rem | 600 | 1.30 | Card titles, feature names |
 | Body editorial | 1rem (16px) | 400 | 1.6–1.7 | Article body – generous, readable |
@@ -106,7 +106,7 @@ font-family: 'Work Sans', system-ui, sans-serif;
 
 ### Principles
 
-- **Slab serif for editorial authority**: Roboto Slab is the default for all journalistic outputs – articles, reports, editorial pages. Work Sans is the deliberate exception for outputs where data structure and technical clarity take precedence over editorial warmth.
+- **Paired editorial typography**: IBM Plex Sans is used for headings and IBM Plex Serif for body text across articles, reports, editorial pages, and technical/data-analysis outputs.
 - **Relaxed article line-height**: Article body text uses 1.6–1.7 line-height – significantly more open than typical web text. The goal is reading comfort over scan-ability.
 - **Crimson for structural emphasis**: Crimson Brand (`#de1743`) is the typographic accent – applied to links, active headings, and category labels. Avoid bold + crimson simultaneously; the color alone carries weight.
 - **Set font globally**: Font should be declared at the root/body level and inherited everywhere. Per-component font overrides break typographic consistency.
@@ -156,7 +156,7 @@ InfoBoxes follow the same type split as articles: the **title is sans-serif, the
 
 - **Title** – a leading bold (`**Titulek.**` at the start of the box) or a Markdown heading (`### Titulek`) – renders in the headings font (`apps/web`: IBM Plex Sans), exactly like article headings.
 - **Body** – everything else – renders in the body font (`apps/web`: IBM Plex Serif).
-- Implemented once on the shared component, so it applies to **every InfoBox on the site** with no per-article markup: `packages/ui/src/components/InfoBox.tsx` puts a `styles.infoBox` class on the box, and `box.module.css` switches headings and the box's leading `<strong>` to `var(--mantine-font-family-headings)` while the box body keeps `var(--mantine-font-family)`. It uses Mantine's font variables, so it adapts per app (`datajournalism.studio` → Work Sans) rather than hard-coding a font.
+- Implemented once on the shared component, so it applies to **every InfoBox on the site** with no per-article markup: `packages/ui/src/components/InfoBox.tsx` puts a `styles.infoBox` class on the box, and `box.module.css` switches headings and the box's leading `<strong>` to `var(--mantine-font-family-headings)` while the box body keeps `var(--mantine-font-family)`. It uses Mantine's font variables so the shared component follows each app's IBM Plex Sans heading and IBM Plex Serif body defaults.
 - **Authoring convention:** start the box with a bold title sentence (`**Rozhovor z roku 2013.** …`) or a heading; the sans-serif switch is automatic. Don't wrap the whole box in bold.
 
 ### Buttons
@@ -308,14 +308,14 @@ The InfoBox left-border system is the most distinctive depth signal: a 4px solid
 - "Build an InfoBox warning with a 4px solid left border in Orange (`#f76800`), background Orange Tint (`#fff3e8`), no border-radius, and standard body text inside."
 - "Create a testimonial card on Midnight (`#272a59`) with Pure White serif headline and warm silver body text, ~8px border-radius."
 - "Design a subscribe button using Teal (`#0e839e`) background and Pure White text, 8px border-radius."
-- "Create an article body section on Newsprint (`#fdfbf7`) with a single centered column (~720px max), Roboto Slab serif body text at 16px, line-height 1.65. Links in Crimson Brand (`#de1743`). Blockquote uses Ink Wash (`#f8f6f0`) background with a left rule."
+- "Create an article body section on Newsprint (`#fdfbf7`) with a single centered column (~720px max), IBM Plex Serif body text at 16px and line-height 1.65, with IBM Plex Sans headings. Links in Crimson Brand (`#de1743`). Blockquote uses Ink Wash (`#f8f6f0`) background with a left rule."
 
 ### Iteration Guide
 1. Always specify which InfoBox type – "InfoBox warning" not "a colored box"
 2. Reference color names – "Crimson Brand (`#de1743`)" not "the red"
 3. Background is always Newsprint unless it's a dark testimonial surface (Midnight)
 4. For text on any coloured background, specify "Pure White (`#ffffff`)" explicitly
-5. Primary font is Roboto Slab (journalistic outputs); use Work Sans only when the output is explicitly technical or data-analysis oriented
+5. Use IBM Plex Sans for headings and IBM Plex Serif for body text across all outputs
 6. For the Arrow decoration: "show Arrow SVG in Pure White, only if section title is ≤ 14 characters"
 7. Dark mode is not yet designed – implement light-mode only for now
 
@@ -364,7 +364,7 @@ The Flourish template (see the charts "Presidential Pardons," "Presidents' Forei
 
 Two variants, **never both at once** on a single visualization:
 
-1. **Horizontal** – the text "DataTimes.cz" (Roboto Slab, bold) and a dot side by side, vertically centered. Ratio: font size ≈ 0.52× the dot's diameter (30px dot → ~15.5px type). Standard for chart headers, top right (the `ChartSignature` component).
+1. **Horizontal** – the text "DataTimes.cz" (IBM Plex Sans, bold) and a dot side by side, vertically centered. Ratio: font size ≈ 0.52× the dot's diameter (30px dot → ~15.5px type). Standard for chart headers, top right (the `ChartSignature` component).
 2. **Vertical** – dot above the text, horizontally centered. For narrow/tall layouts (e.g. AttendanceSwarm).
 
 Placement: top right of the chart card (or on the header seam), no frame, no background fill, linked to datatimes.cz.

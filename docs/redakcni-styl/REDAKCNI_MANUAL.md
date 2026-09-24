@@ -105,7 +105,7 @@ Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis mus�
 - **Měna a velké částky**: přepočet nebo lidské měřítko, kde to pomáhá pochopení.
 
 ## Jazyk a lokalizace
-Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci:** datajournalism.studio je anglická, sází Work Sans, používá en-US formát data a čísel a nepřechyluje. Formát data v češtině cs-CZ, v angličtině en-US; nemíchat v rámci jednoho výstupu.
+Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci:** datajournalism.studio je anglická, používá IBM Plex Sans pro nadpisy a IBM Plex Serif pro text, en-US formát data a čísel a nepřechyluje. Formát data v češtině cs-CZ, v angličtině en-US; nemíchat v rámci jednoho výstupu.
 
 ## Lidé, jména a citace
 - **První zmínka**: celé jméno a role (Terezie Štyglerová, vedoucí oddělení demografické statistiky ČSÚ), dál příjmení.
