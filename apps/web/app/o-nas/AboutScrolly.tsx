@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { SupportMenuButton } from '@/components/common/SupportMenuButton';
 import styles from './AboutScrolly.module.css';
+import NewsSourcesBars from './NewsSourcesBars';
+import { ROUTE_END_EVENT } from './RouteEndLogo';
 
 type Step = {
   index: string;
@@ -12,6 +15,11 @@ type Step = {
   masthead?: boolean;
   // Title in the dark ink blue of the route line.
   titleInk?: boolean;
+  // Closes the card with the centred „Podpořte nás" button (same as the header).
+  cta?: boolean;
+  // Paragraphs rendered below the button, then optionally the animated bars.
+  afterCta?: string[];
+  bars?: boolean;
   paragraphs: string[];
   chips?: string[];
   x: number;
@@ -74,21 +82,54 @@ const steps: Step[] = [
   },
   {
     index: '04',
-    eyebrow: 'Proč to děláme',
-    title: 'Hledáme pravdu',
+    eyebrow: 'Hledáme pravdu',
+    title: 'Proč to děláme',
     masthead: true,
     titleInk: true,
     paragraphs: [
-      'Vyrábět lži je dnes velmi levné. Kvalitní žurnalistika naproti tomu stojí čas i&nbsp;peníze. Věříme, že dobře informovaná veřejnost je podmínkou fungující demokracie. Kdo přestane chtít znát pravdu, přijde nakonec o&nbsp;to nejcennější – o&nbsp;svobodu.',
-      'Věnujeme se coby novináři samozřejmě také investigativě, náš typ práce je v&nbsp;podstatě nekonečné pátrání. A&nbsp;hledání pravdy. Sbíráme informace kousek po kousku a&nbsp;dáváme jim kontext. Skládáme příběhy, které by jinak zůstaly skryté v&nbsp;nánosech lží, manipulací, ideologií nebo obyčejné hlouposti.',
+      'Věříme, že dobře informovaná veřejnost je podmínkou fungující demokracie. Kdo přestane chtít znát pravdu, přijde nakonec o&nbsp;to nejcennější – o&nbsp;svobodu.',
+      'Věnujeme se coby novináři dlouhodobě investigativě, náš typ práce je v&nbsp;podstatě nekonečné pátrání. <strong>A&nbsp;hledání pravdy.</strong> Sbíráme informace kousek po kousku a&nbsp;dáváme jim kontext. Skládáme příběhy, které by jinak zůstaly skryté v&nbsp;nánosech lží, manipulací, ideologií nebo obyčejné hlouposti.',
     ],
     x: 300,
     y: 1905,
     side: 'right',
   },
+  {
+    index: '05',
+    eyebrow: '',
+    title: 'Jdete do toho s námi?',
+    masthead: true,
+    titleInk: true,
+    cta: true,
+    paragraphs: [
+      'Vyrábět a&nbsp;šířit neověřené informace, polopravdy a&nbsp;účelová PR sdělení je stonásobně levnější než dělat kvalitní žurnalistiku. Veřejný prostor válcují dezinformace, influenceři parazitující na novinařině a&nbsp;marketingové projekty – nesené algoritmy sociálních sítí a&nbsp;partikulárními zájmy.',
+    ],
+    afterCta: [
+      'Pokud jste dočetli až sem, stejně jako my víte, že vymyslet chytlavý nesmysl, šířit polopravdu nebo zaplatit kampaň se skrytým zájmem je nyní snazší a&nbsp;levnější než kdy dřív. Důkladná, nezávislá novinařina mezitím čelí brutální přesile: algoritmy přejí zkratkám, emoce porážejí fakta a&nbsp;pozornost lidí se tříští.',
+    ],
+    bars: true,
+    x: 700,
+    y: 2400,
+    side: 'left',
+  },
+  {
+    index: '06',
+    eyebrow: '',
+    title: 'Co za to',
+    masthead: true,
+    titleInk: true,
+    paragraphs: [
+      'Místo velkých gest raději pojmenováváme výsek reality, na který naše práce dosáhne – a&nbsp;u&nbsp;kterého mnohdy dokážeme změřit, jestli jsme s&nbsp;ním skutečně pohnuli. Takže nebudeme slibovat, že sami zachráníme demokracii nebo vymýtíme lži z&nbsp;internetu. Ale rozhodně svobodu a&nbsp;demokracii podporujeme a&nbsp;nehodláme v&nbsp;tom přestat.',
+      '<strong>Vždy budeme na straně slabších, přehlížených, utlačovaných a&nbsp;leckdy i&nbsp;právem naštvaných.</strong>',
+      '<a href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer"><strong>Buďte u&nbsp;toho s&nbsp;námi.</strong></a>',
+    ],
+    x: 300,
+    y: 2900,
+    side: 'right',
+  },
 ];
 
-const MOBILE_X = [710, 50, 710, 50];
+const MOBILE_X = [710, 50, 710, 50, 710, 50];
 // Where the line ends (it spills below the section into the next block and
 // fades out there), measured from the centre of the last card.
 const ROUTE_END = 360;
@@ -110,8 +151,11 @@ function buildRoute(nodes: number[], endY: number, mobile = false) {
   }).join(' ');
   const lastX = xs[xs.length - 1];
   const lastY = nodes[nodes.length - 1];
+  // The tail swings towards the centred heading of the next block, so the
+  // line leads the reader on instead of away from the page.
   const tail = endY - lastY;
-  return `${route} C ${lastX} ${lastY + tail * 0.4}, ${lastX + 30} ${lastY + tail * 0.75}, ${lastX + 100} ${endY}`;
+  const endX = mobile ? 380 : 500;
+  return `${route} C ${lastX} ${lastY + tail * 0.45}, ${endX + (lastX - endX) * 0.3} ${lastY + tail * 0.8}, ${endX} ${endY}`;
 }
 
 const smoothstep = (t: number) => {
@@ -132,7 +176,11 @@ export default function AboutScrolly() {
     height: 2260,
   });
   const lastCenter = layout.centers[layout.centers.length - 1];
-  const endY = lastCenter + ROUTE_END;
+  // The line ends just above the donut logo of the closing note (measured);
+  // until it is measured, fall back to a fixed distance below the last card.
+  const [logoEndY, setLogoEndY] = useState<number | null>(null);
+  const endY = logoEndY ?? lastCenter + ROUTE_END;
+  const endReachedRef = useRef(false);
   const desktopPath = buildRoute(layout.nodes, endY);
   const mobilePath = buildRoute(layout.nodes, endY, true);
   // The route canvas is taller than the section: its tail runs into the next block.
@@ -166,6 +214,19 @@ export default function AboutScrolly() {
     cards.forEach((card) => observer.observe(card));
     return () => observer.disconnect();
   }, []);
+
+  useLayoutEffect(() => {
+    const section = sectionRef.current;
+    const logo = document.querySelector<HTMLElement>('[data-route-end]');
+    if (!section || !logo) return;
+    const measureEnd = () => {
+      const offset = logo.getBoundingClientRect().top - section.getBoundingClientRect().top - 8;
+      setLogoEndY((previous) => (previous === offset ? previous : offset));
+    };
+    measureEnd();
+    window.addEventListener('resize', measureEnd);
+    return () => window.removeEventListener('resize', measureEnd);
+  }, [layout]);
 
   useEffect(() => {
     let frame = 0;
@@ -207,6 +268,10 @@ export default function AboutScrolly() {
           else high = middle;
         }
         setProgress(routeY >= endY ? 1 : ((low + high) / 2) / totalLength);
+        if (routeY >= endY && !endReachedRef.current) {
+          endReachedRef.current = true;
+          window.dispatchEvent(new Event(ROUTE_END_EVENT));
+        }
       } else {
         setProgress(0);
       }
@@ -345,7 +410,7 @@ export default function AboutScrolly() {
             ) : step.masthead ? (
               <div className={styles.bubbleMasthead}>
                 <h3 className={step.titleInk ? styles.titleInk : undefined}>{step.title}</h3>
-                <span className={styles.bubbleEyebrow}>{step.eyebrow}</span>
+                {step.eyebrow ? <span className={styles.bubbleEyebrow}>{step.eyebrow}</span> : null}
               </div>
             ) : (
               <>
@@ -368,6 +433,19 @@ export default function AboutScrolly() {
             ))}
             {step.chips ? (
               <p className={styles.bubbleChips}>{step.chips.join(' • ')}</p>
+            ) : null}
+            {step.cta ? (
+              <div className={styles.bubbleCta}>
+                <SupportMenuButton />
+              </div>
+            ) : null}
+            {step.afterCta?.map((paragraph) => (
+              <p key={paragraph} className={styles.afterCta} dangerouslySetInnerHTML={{ __html: paragraph }} />
+            ))}
+            {step.bars ? (
+              <div className={styles.bubbleBars}>
+                <NewsSourcesBars />
+              </div>
             ) : null}
           </div>
         </article>

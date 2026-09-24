@@ -262,6 +262,20 @@
   text-align: center;
 }
 
+.bubbleCta {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0 24px;
+}
+
+.bubble p.afterCta {
+  margin-bottom: 24px;
+}
+
+.bubbleBars {
+  margin-top: 4px;
+}
+
 .bubble a {
   color: var(--route-red);
   text-decoration-color: color-mix(in srgb, var(--route-red) 45%, transparent);
