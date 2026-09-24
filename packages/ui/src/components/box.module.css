@@ -15,23 +15,31 @@
    position="right"/"left") bleed past the reading column exactly like <Figure>,
    using the shared bleed tokens from apps/web globals (with fallbacks so DJS
    and any app without the tokens still get the same look). See
-   packages/ui/DESIGN.md → "Bleed / vyčuhující prvky". */
+   packages/ui/DESIGN.md → "Bleed / vyčuhující prvky".
+   Spacing: equal visual gap above, beside and below (tokens explained in
+   apps/web globals.css :root); top aligns with the next paragraph's first line. */
 .floatRight {
   float: right;
   width: var(--dt-bleed-width, 48%);
-  margin-top: 0.3rem;
-  margin-bottom: 1.1rem;
+  margin-top: 0;
+  margin-bottom: var(--dt-bleed-gap-y, 0.95rem);
   margin-left: var(--dt-bleed-gap, 1.25rem);
-  margin-right: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the right margin */
+  margin-right: var(--dt-bleed-pull, -12%); /* bleed into the right margin */
 }
 
 .floatLeft {
   float: left;
   width: var(--dt-bleed-width, 48%);
-  margin-top: 0.3rem;
-  margin-bottom: 1.1rem;
+  margin-top: 0;
+  margin-bottom: var(--dt-bleed-gap-y, 0.95rem);
   margin-right: var(--dt-bleed-gap, 1.25rem);
-  margin-left: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the left margin */
+  margin-left: var(--dt-bleed-pull, -12%); /* bleed into the left margin */
+}
+
+/* Placed mid-paragraph: keep the same gap to the text line above. */
+:global(.mantine-Text-root) > .floatRight,
+:global(.mantine-Text-root) > .floatLeft {
+  margin-top: var(--dt-bleed-gap-y, 0.95rem);
 }
 
 @media (max-width: 768px) {

@@ -538,7 +538,9 @@ export function RelatedArticles({
 
   return (
     <Box
-      my="xl"
+      // Floating variant takes its margins from the shared bleed standard
+      // (box.module.css); Mantine's inline `my` would override them.
+      my={floatClass ? undefined : 'xl'}
       className={floatClass}
       bg={framed ? 'background.2' : undefined}
       p={framed ? 'lg' : undefined}

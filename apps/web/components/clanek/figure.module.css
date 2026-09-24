@@ -3,23 +3,30 @@
    around it; the outer edge extends into the page margin (negative margin).
    On mobile it becomes a normal full-width block. */
 
+/* Spacing = shared bleed standard (apps/web globals.css :root): equal visual gap
+   above, beside and below; top aligns with the next paragraph's first line. */
 .right,
 .left {
   width: var(--dt-bleed-width, 48%);
-  margin-top: 0.3rem;
-  margin-bottom: 1.1rem;
+  margin-top: 0;
+  margin-bottom: var(--dt-bleed-gap-y, 0.95rem);
+}
+/* Placed mid-paragraph: keep the same gap to the text line above. */
+:global(.mantine-Text-root) > .right,
+:global(.mantine-Text-root) > .left {
+  margin-top: var(--dt-bleed-gap-y, 0.95rem);
 }
 
 .right {
   float: right;
   margin-left: var(--dt-bleed-gap, 1.25rem);
-  margin-right: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the right-hand margin */
+  margin-right: var(--dt-bleed-pull, -12%); /* bleed into the right-hand margin */
 }
 
 .left {
   float: left;
   margin-right: var(--dt-bleed-gap, 1.25rem);
-  margin-left: calc(-1 * var(--dt-bleed-out, 12%)); /* bleed into the left-hand margin */
+  margin-left: var(--dt-bleed-pull, -12%); /* bleed into the left-hand margin */
 }
 
 /* Centered, non-floated variant – good for tall/portrait visuals that would

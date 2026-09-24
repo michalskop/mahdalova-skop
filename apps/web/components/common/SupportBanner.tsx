@@ -54,21 +54,10 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
           </p>
         </div>
 
-        {/* Text. The bleeding (float) variant uses fixed line breaks for a tidy
-            three-line block; the full-width variant wraps naturally. */}
+        {/* Text wraps naturally; the bleeding (float) variant sets it as a
+            justified block with hyphenation (see .dt-support-banner--compact). */}
         <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 13.5, fontWeight: 400, lineHeight: 1.35 }}>
-          {float ? (
-            <>
-              Veřejný prostor i&nbsp;politiku<br />
-              zaplavují hlouposti,<br />
-              fake news a&nbsp;propaganda.<br />
-              Pomozte nám šířit ověřená<br />
-              fakta a&nbsp;hledat kontext.<br />
-              Za cenu jednoho oběda.
-            </>
-          ) : (
-            <>Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.</>
-          )}
+          Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.
         </p>
 
         {/* CTA */}

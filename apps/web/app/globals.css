@@ -9,11 +9,28 @@
    position="right"), and the bleeding SupportBanner (float). Change it here and
    every bleeding element updates together. On mobile these collapse to
    full-width blocks (see the per-component `@media (max-width: 768px)` rules).
-   See packages/ui/DESIGN.md → "Bleed / vyčuhující prvky". */
+   See packages/ui/DESIGN.md → "Bleed / vyčuhující prvky".
+
+   Spacing: ONE visual gap on every text-facing side. Horizontally it is exactly
+   --dt-bleed-gap; vertically the text line already brings ~0.3rem of half-leading
+   (17px / 1.6 body), so the vertical margin is the gap minus that → the eye sees
+   the same ~20px above, beside and below the element.
+   - float placed as its own block (between paragraphs): margin-top 0, so its top
+     lines up with the next paragraph's first line; the previous paragraph's own
+     16px margin gives the gap above.
+   - float placed INSIDE a paragraph (mid-text): margin-top = --dt-bleed-gap-y,
+     otherwise the line above would touch it.
+   Outer bleed: --dt-bleed-pull hangs the outer edge into the page margin, but
+   only as far as the viewport has room (never closer than --dt-bleed-gutter to
+   the screen edge), so it scales smoothly from wide screens down to 769px.
+   (100% in a margin = the reading column width; the column is centred.) */
 :root {
   --dt-bleed-width: 48%;    /* width of the floated element */
-  --dt-bleed-out: 12%;      /* how far the outer edge bleeds into the page margin */
+  --dt-bleed-out: 12%;      /* max. how far the outer edge bleeds into the page margin */
   --dt-bleed-gap: 1.25rem;  /* gap between the element and the wrapping text */
+  --dt-bleed-gap-y: calc(var(--dt-bleed-gap) - 0.3rem); /* vertical, minus half-leading */
+  --dt-bleed-gutter: 1.5rem; /* min. distance of the outer edge from the viewport edge */
+  --dt-bleed-pull: calc(-1 * clamp(0px, (100vw - 100%) / 2 - var(--dt-bleed-gutter), var(--dt-bleed-out)));
 }
 
 /* Oválné tagy/badge (rubriky „ANALÝZA"/„KONTEXT", tag pill v kartách…): svislé
@@ -94,24 +111,29 @@
 }
 
 /* Bleeding (float) variant. --dt-support-w drives BOTH the width and the bleed:
-   only half the width reaches into the text, the outer half hangs in the margin,
-   capped by max()/50vw so the outer edge never crosses the viewport on narrower
-   desktops (383px is approx the reading column's left offset + an 8px gutter). */
+   at most half the width hangs in the page margin, and only as far as the
+   viewport has room (same rule as --dt-bleed-pull). Vertical spacing follows the
+   shared bleed standard (see :root above). */
 .dt-support-float {
   --dt-support-w: 13rem;
+  --dt-support-pull: calc(-1 * clamp(0px, (100vw - 100%) / 2 - var(--dt-bleed-gutter), 0.5 * var(--dt-support-w)));
   width: var(--dt-support-w);
   margin-top: 0; /* top aligns with the adjacent paragraph's first line */
-  margin-bottom: 1.1rem;
+  margin-bottom: var(--dt-bleed-gap-y);
+}
+/* Placed mid-paragraph: keep the same gap to the text line above. */
+.mantine-Text-root > .dt-support-float {
+  margin-top: var(--dt-bleed-gap-y);
 }
 .dt-support-float--right {
   float: right;
-  margin-left: var(--dt-bleed-gap, 1.25rem);
-  margin-right: max(calc(-0.5 * var(--dt-support-w)), calc(383px - 50vw));
+  margin-left: var(--dt-bleed-gap);
+  margin-right: var(--dt-support-pull);
 }
 .dt-support-float--left {
   float: left;
-  margin-right: var(--dt-bleed-gap, 1.25rem);
-  margin-left: max(calc(-0.5 * var(--dt-support-w)), calc(383px - 50vw));
+  margin-right: var(--dt-bleed-gap);
+  margin-left: var(--dt-support-pull);
 }
 /* Compact = brand/text/CTA stacked; logo + name side by side to keep it short. */
 .dt-support-banner--compact {
@@ -125,10 +147,15 @@
   gap: 8px;
   min-width: 0;
 }
+/* Text set as a justified block; Czech hyphenation (html lang="cs") keeps the
+   narrow 176px measure from opening wide word gaps. */
 .dt-support-banner--compact .dt-support-text {
   flex: 1 1 auto;
   width: 100%;
   font-size: 14px;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 .dt-support-banner--compact .dt-support-cta {
   width: 100%;
@@ -219,8 +246,8 @@
 .article-sidebar {
   float: right;
   width: 48%;
-  /* Keep the 12% bleed only where the viewport has room for it. */
-  margin: 0 calc(-1 * clamp(0px, (100vw - 800px) / 2, 12%)) 1.1rem var(--dt-bleed-gap, 1.25rem);
+  /* Shared bleed standard: 12% bleed only where the viewport has room for it. */
+  margin: 0 var(--dt-bleed-pull) var(--dt-bleed-gap-y) var(--dt-bleed-gap);
 }
 .article-sidebar > div {
   display: flow-root;
