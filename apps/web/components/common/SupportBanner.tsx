@@ -55,9 +55,12 @@ export default function SupportBanner({ float }: { float?: 'left' | 'right' } = 
         </div>
 
         {/* Text wraps naturally; the bleeding (float) variant sets it as a
-            justified block with hyphenation (see .dt-support-banner--compact). */}
+            justified block (see .dt-support-banner--compact). Soft hyphens
+            (&shy;) give every browser the same break points – Chrome has no
+            Czech hyphenation dictionary, and without them the narrow block
+            opens wide word gaps. */}
         <p className="dt-support-text" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 13.5, fontWeight: 400, lineHeight: 1.35 }}>
-          Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za cenu jednoho oběda.
+          Ve&shy;řej&shy;ný pro&shy;stor i&nbsp;po&shy;li&shy;ti&shy;ku za&shy;pla&shy;vu&shy;jí hlou&shy;pos&shy;ti, fake news a&nbsp;pro&shy;pa&shy;gan&shy;da. Po&shy;moz&shy;te nám ší&shy;řit ově&shy;ře&shy;ná fak&shy;ta a&nbsp;hle&shy;dat kon&shy;text. Za ce&shy;nu jed&shy;no&shy;ho obě&shy;da.
         </p>
 
         {/* CTA */}

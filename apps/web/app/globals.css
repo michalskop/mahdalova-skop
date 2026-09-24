@@ -147,15 +147,14 @@
   gap: 8px;
   min-width: 0;
 }
-/* Text set as a justified block; Czech hyphenation (html lang="cs") keeps the
+/* Text set as a justified block; the soft hyphens in SupportBanner.tsx keep the
    narrow 176px measure from opening wide word gaps. */
 .dt-support-banner--compact .dt-support-text {
   flex: 1 1 auto;
   width: 100%;
   font-size: 14px;
   text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: manual;
 }
 .dt-support-banner--compact .dt-support-cta {
   width: 100%;
