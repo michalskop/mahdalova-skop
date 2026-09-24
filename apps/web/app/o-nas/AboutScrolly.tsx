@@ -134,6 +134,8 @@ const MOBILE_X = [710, 50, 710, 50, 710, 50];
 // fades out there), measured from the centre of the last card.
 const ROUTE_END = 360;
 const ROUTE_FADE = 300;
+// How far before its (fully faded) end the line counts as having arrived.
+const ROUTE_ARRIVAL = 60;
 // Where the head of the red line settles in the viewport (fraction of height)
 // and over how many scrolled px it glides there from the first logo.
 const HEAD_ANCHOR = 0.55;
@@ -141,8 +143,11 @@ const HEAD_RAMP = 360;
 
 // Every segment leaves and enters its logo vertically, so the tangents match
 // and the logos sit on one continuous curve like beads (no kinks at nodes).
-function buildRoute(nodes: number[], endY: number, mobile = false) {
-  const xs = mobile ? MOBILE_X : steps.map((step) => step.x);
+// Built in real px of the section width: the SVG is never stretched, so the
+// drawn length always matches the computed head position.
+function buildRoute(nodes: number[], endY: number, width: number, mobile = false) {
+  const xs = (mobile ? MOBILE_X.map((x) => x / 760) : steps.map((step) => step.x / 1000))
+    .map((fraction) => fraction * width);
   const route = nodes.map((y, index) => {
     if (index === 0) return `M ${xs[index]} ${y}`;
     const previousY = nodes[index - 1];
@@ -154,7 +159,7 @@ function buildRoute(nodes: number[], endY: number, mobile = false) {
   // The tail swings towards the centred heading of the next block, so the
   // line leads the reader on instead of away from the page.
   const tail = endY - lastY;
-  const endX = mobile ? 380 : 500;
+  const endX = width / 2;
   return `${route} C ${lastX} ${lastY + tail * 0.45}, ${endX + (lastX - endX) * 0.3} ${lastY + tail * 0.8}, ${endX} ${endY}`;
 }
 
@@ -175,6 +180,7 @@ export default function AboutScrolly() {
     centers: steps.map((step) => step.y),
     nodes: steps.map((step) => step.y),
     height: 2260,
+    width: 1000,
   });
   const lastCenter = layout.centers[layout.centers.length - 1];
   // The line ends just above the donut logo of the closing note (measured);
@@ -182,8 +188,8 @@ export default function AboutScrolly() {
   const [logoEndY, setLogoEndY] = useState<number | null>(null);
   const endY = logoEndY ?? lastCenter + ROUTE_END;
   const endReachedRef = useRef(false);
-  const desktopPath = buildRoute(layout.nodes, endY);
-  const mobilePath = buildRoute(layout.nodes, endY, true);
+  const desktopPath = buildRoute(layout.nodes, endY, layout.width);
+  const mobilePath = buildRoute(layout.nodes, endY, layout.width, true);
   // The route canvas is taller than the section: its tail runs into the next block.
   const routeHeight = endY + 16;
 
@@ -205,13 +211,15 @@ export default function AboutScrolly() {
         top += cardRect.height + 48;
         return node;
       });
-      setLayout((previous) => previous.height === top &&
+      const width = section.getBoundingClientRect().width;
+      setLayout((previous) => previous.height === top && previous.width === width &&
         previous.centers.every((center, index) => center === centers[index]) &&
         previous.nodes.every((node, index) => node === nodes[index])
-        ? previous : { centers, nodes, height: top });
+        ? previous : { centers, nodes, height: top, width });
     };
     measure();
     const observer = new ResizeObserver(measure);
+    observer.observe(section);
     cards.forEach((card) => observer.observe(card));
     return () => observer.disconnect();
   }, []);
@@ -279,14 +287,18 @@ export default function AboutScrolly() {
           else high = middle;
         }
         progress = routeY >= endY ? 1 : ((low + high) / 2) / totalLength;
+        // Dashes in real px of the unstretched path: drawn length == head.
+        path.setAttribute('stroke-dasharray', `${totalLength} ${totalLength}`);
+        path.setAttribute('stroke-dashoffset', String(totalLength * (1 - progress)));
       }
       [desktopPathRef.current, mobilePathRef.current].forEach((line) => {
         if (!line) return;
-        line.setAttribute('stroke-dashoffset', String(1 - progress));
-        line.setAttribute('visibility', progress > 0 ? 'visible' : 'hidden');
+        line.setAttribute('visibility', line === path && progress > 0 ? 'visible' : 'hidden');
       });
 
-      if (routeY >= endY && !endReachedRef.current) {
+      // The tail is practically faded out a little before endY: that is when
+      // the reader sees the line arrive, so the closing logo spins right then.
+      if (routeY >= endY - ROUTE_ARRIVAL && !endReachedRef.current) {
         endReachedRef.current = true;
         window.dispatchEvent(new Event(ROUTE_END_EVENT));
       }
@@ -331,8 +343,8 @@ export default function AboutScrolly() {
     };
   }, [layout, endY]);
 
-  // Donut logo markers sit on the line (as HTML, so they are never deformed by
-  // the stretched SVG). They stay greyed until the red line reaches them.
+  // Donut logo markers sit on the line (as HTML, positioned by the same
+  // fractions as the route). They stay greyed until the line reaches them.
   const markers = steps.map((step, index) => {
     const isReached = index <= active;
     const isActive = index === active;
@@ -365,27 +377,22 @@ export default function AboutScrolly() {
     } as React.CSSProperties}>
       <svg
         className={`${styles.route} ${styles.routeDesktop}`}
-        viewBox={`0 0 1000 ${routeHeight}`}
-        preserveAspectRatio="none"
+        viewBox={`0 0 ${layout.width} ${routeHeight}`}
         aria-hidden="true"
       >
         <path className={styles.routeTrack} d={desktopPath} />
-        {/* stroke-dashoffset / visibility are driven per frame by render() */}
+        {/* stroke-dasharray / -dashoffset / visibility are driven per frame by render() */}
         <path
           ref={desktopPathRef}
           className={styles.routeProgress}
           d={desktopPath}
-          pathLength={1}
-          strokeDasharray={1}
-          strokeDashoffset={1}
           visibility="hidden"
         />
       </svg>
 
       <svg
         className={`${styles.route} ${styles.routeMobile}`}
-        viewBox={`0 0 760 ${routeHeight}`}
-        preserveAspectRatio="none"
+        viewBox={`0 0 ${layout.width} ${routeHeight}`}
         aria-hidden="true"
       >
         <path className={styles.routeTrack} d={mobilePath} />
@@ -393,9 +400,6 @@ export default function AboutScrolly() {
           ref={mobilePathRef}
           className={styles.routeProgress}
           d={mobilePath}
-          pathLength={1}
-          strokeDasharray={1}
-          strokeDashoffset={1}
           visibility="hidden"
         />
       </svg>
