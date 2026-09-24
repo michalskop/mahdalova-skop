@@ -4,21 +4,25 @@
   --route-red: var(--mantine-color-brand-6);
   --route-red-dark: var(--mantine-color-brand-9);
   --route-gold: var(--mantine-color-brandYellow-6);
+  --route-ink-blue: var(--mantine-color-brandNavy-9);
   --route-ink: #241016;
   margin: 24px auto 120px;
   max-width: 1120px;
   position: relative;
   width: 100%;
+  /* Own stacking layer so the fading tail paints over the next block. */
+  z-index: 1;
 }
 
 .route {
   -webkit-mask-image: linear-gradient(to bottom, #000 var(--route-fade-start), transparent var(--route-fade-end));
   mask-image: linear-gradient(to bottom, #000 var(--route-fade-start), transparent var(--route-fade-end));
-  height: 100%;
-  inset: 0;
+  height: var(--route-height);
+  left: 0;
   overflow: visible;
   pointer-events: none;
   position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -26,6 +30,7 @@
   display: none;
 }
 
+.routeTrack,
 .routeProgress {
   fill: none;
   stroke-linecap: round;
@@ -33,10 +38,15 @@
   vector-effect: non-scaling-stroke;
 }
 
+/* Grey wavy track connecting the logos; the red line fills over it. */
+.routeTrack {
+  stroke: var(--mantine-color-background-7);
+  stroke-width: 5;
+}
+
 .routeProgress {
-  stroke: var(--route-red);
+  stroke: var(--route-ink-blue);
   stroke-width: 7;
-  transition: stroke-dashoffset 90ms linear;
 }
 
 /* Donut logo markers sit on the line; greyed until the red line reaches them */
@@ -114,13 +124,16 @@
   fill: none;
   opacity: 0;
   stroke: var(--route-gold);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
   stroke-width: 2.5px;
-  transition: opacity 550ms ease;
+  transition: opacity 200ms ease, stroke-dashoffset 900ms cubic-bezier(0.4, 0, 0.2, 1);
   vector-effect: non-scaling-stroke;
 }
 
 .milestoneReached .bubbleTraceLine {
   opacity: 1;
+  stroke-dashoffset: 0;
 }
 
 .bubbleMeta {
@@ -219,10 +232,34 @@
 
 .bubbleChips {
   color: var(--route-red) !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.01em;
-  margin: 14px 0 0 !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em;
+  margin: 18px 0 0 !important;
+  text-transform: uppercase;
+}
+
+/* Intro card: centred masthead (title + red caps domain) and closing chips */
+.bubbleMasthead {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.bubbleMasthead h3 {
+  margin: 0;
+}
+
+.bubbleMasthead h3.titleInk {
+  color: var(--route-ink-blue);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.bubbleCentered .bubbleChips {
+  text-align: center;
 }
 
 .bubble a {

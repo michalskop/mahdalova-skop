@@ -8,6 +8,10 @@ type Step = {
   eyebrow: string;
   eyebrowPlain?: boolean;
   title: string;
+  // Centred title with the eyebrow below it (intro card, mirrors the person cards).
+  masthead?: boolean;
+  // Title in the dark ink blue of the route line.
+  titleInk?: boolean;
   paragraphs: string[];
   chips?: string[];
   x: number;
@@ -23,15 +27,15 @@ type Step = {
 const steps: Step[] = [
   {
     index: '01',
-    eyebrow: 'DataTimes.cz • mahdalova-skop.cz',
-    eyebrowPlain: true,
-    title: 'Kateřina Mahdalová & Michal Škop',
+    eyebrow: 'mahdalova-skop.cz',
+    title: 'DataTimes.cz',
+    masthead: true,
     paragraphs: [
       'Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus odvahy (nás to stálo práci).',
       'Hodně nám záleží na tom, aby naše práce odrážela realitu co nejvěrněji. Naše výhoda je, umíme pracovat s&nbsp;daty, hledat je, číst, vizualizovat, interpretovat.',
       'Hledáme a&nbsp;poctivě zachycujeme. Nepřibarvujeme. Nepracujeme pro zájmové skupiny. A&nbsp;rozhodně se nebojíme.',
     ],
-    chips: ['Data', 'Kontext', 'Srozumitelnost', 'Odvaha'],
+    chips: ['Data', 'Kontext', 'Odvaha', 'Srozumitelnost'],
     x: 700,
     y: 330,
     side: 'left',
@@ -71,10 +75,12 @@ const steps: Step[] = [
   {
     index: '04',
     eyebrow: 'Proč to děláme',
-    title: 'Fakta musí existovat dřív, než je začne hledat AI',
+    title: 'Hledáme pravdu',
+    masthead: true,
+    titleInk: true,
     paragraphs: [
-      'Vyrábět lži je levné. Kvalitní datová žurnalistika ne. Věříme, že dobře informovaná veřejnost je podmínkou fungující demokracie — a proto pravda bez aktivní podpory nutně prohrává.',
-      'Děláme datovou investigativu a analýzy, z nichž vzniká víc výstupů najednou: pro čtenáře, novináře, školy, instituce i AI nástroje, které stále víc formují veřejnou debatu.',
+      'Vyrábět lži je dnes velmi levné. Kvalitní žurnalistika naproti tomu stojí čas i&nbsp;peníze. Věříme, že dobře informovaná veřejnost je podmínkou fungující demokracie. Kdo přestane chtít znát pravdu, přijde nakonec o&nbsp;to nejcennější – o&nbsp;svobodu.',
+      'Věnujeme se coby novináři samozřejmě také investigativě, náš typ práce je v&nbsp;podstatě nekonečné pátrání. A&nbsp;hledání pravdy. Sbíráme informace kousek po kousku a&nbsp;dáváme jim kontext. Skládáme příběhy, které by jinak zůstaly skryté v&nbsp;nánosech lží, manipulací, ideologií nebo obyčejné hlouposti.',
     ],
     x: 300,
     y: 1905,
@@ -83,33 +89,54 @@ const steps: Step[] = [
 ];
 
 const MOBILE_X = [710, 50, 710, 50];
-const ROUTE_TAIL = 275;
+// Where the line ends (it spills below the section into the next block and
+// fades out there), measured from the centre of the last card.
+const ROUTE_END = 360;
+const ROUTE_FADE = 300;
+// Where the head of the red line settles in the viewport (fraction of height)
+// and over how many scrolled px it glides there from the first logo.
+const HEAD_ANCHOR = 0.55;
+const HEAD_RAMP = 360;
 
-function buildRoute(centers: number[], mobile = false) {
+// Every segment leaves and enters its logo vertically, so the tangents match
+// and the logos sit on one continuous curve like beads (no kinks at nodes).
+function buildRoute(nodes: number[], endY: number, mobile = false) {
   const xs = mobile ? MOBILE_X : steps.map((step) => step.x);
-  const route = centers.map((y, index) => {
+  const route = nodes.map((y, index) => {
     if (index === 0) return `M ${xs[index]} ${y}`;
-    const previousY = centers[index - 1];
-    const bend = (y - previousY) / 3;
-    const sway = xs[index - 1] > xs[index] ? 1 : -1;
-    const amplitude = mobile ? 40 : 60;
-    return `C ${xs[index - 1] + sway * amplitude} ${previousY + bend}, ${xs[index] - sway * amplitude} ${y - bend}, ${xs[index]} ${y}`;
+    const previousY = nodes[index - 1];
+    const bend = (y - previousY) / 2;
+    return `C ${xs[index - 1]} ${previousY + bend}, ${xs[index]} ${y - bend}, ${xs[index]} ${y}`;
   }).join(' ');
   const lastX = xs[xs.length - 1];
-  const lastY = centers[centers.length - 1];
-  return `${route} C ${lastX + 14} ${lastY + 95}, ${lastX + 40} ${lastY + 195}, ${lastX + 60} ${lastY + ROUTE_TAIL}`;
+  const lastY = nodes[nodes.length - 1];
+  const tail = endY - lastY;
+  return `${route} C ${lastX} ${lastY + tail * 0.4}, ${lastX + 30} ${lastY + tail * 0.75}, ${lastX + 100} ${endY}`;
 }
+
+const smoothstep = (t: number) => {
+  const x = Math.min(1, Math.max(0, t));
+  return x * x * (3 - 2 * x);
+};
 const LOGO_SRC = '/images/datatimes-donut.svg';
 
 export default function AboutScrolly() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const desktopPathRef = useRef<SVGPathElement>(null);
   const mobilePathRef = useRef<SVGPathElement>(null);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
   const [progress, setProgress] = useState(0);
-  const [layout, setLayout] = useState({ centers: steps.map((step) => step.y), height: 2260 });
-  const desktopPath = buildRoute(layout.centers);
-  const mobilePath = buildRoute(layout.centers, true);
+  const [layout, setLayout] = useState({
+    centers: steps.map((step) => step.y),
+    nodes: steps.map((step) => step.y),
+    height: 2260,
+  });
+  const lastCenter = layout.centers[layout.centers.length - 1];
+  const endY = lastCenter + ROUTE_END;
+  const desktopPath = buildRoute(layout.nodes, endY);
+  const mobilePath = buildRoute(layout.nodes, endY, true);
+  // The route canvas is taller than the section: its tail runs into the next block.
+  const routeHeight = endY + 16;
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -117,16 +144,22 @@ export default function AboutScrolly() {
     const cards = Array.from(section.querySelectorAll<HTMLElement>('[data-step]'));
     const measure = () => {
       let top = 24;
-      const centers = cards.map((card) => {
-        const height = card.getBoundingClientRect().height;
-        const center = top + height / 2;
-        top += height + 48;
-        return center;
+      const centers: number[] = [];
+      // Each logo sits level with its card's title, not the card's middle.
+      const nodes = cards.map((card) => {
+        const cardRect = card.getBoundingClientRect();
+        const title = card.querySelector('h3')?.getBoundingClientRect();
+        const titleOffset = title
+          ? title.top + title.height / 2 - cardRect.top : cardRect.height / 2;
+        centers.push(top + cardRect.height / 2);
+        const node = top + titleOffset;
+        top += cardRect.height + 48;
+        return node;
       });
-      top = Math.max(top, centers[centers.length - 1] + ROUTE_TAIL + 24);
       setLayout((previous) => previous.height === top &&
-        previous.centers.every((center, index) => center === centers[index])
-        ? previous : { centers, height: top });
+        previous.centers.every((center, index) => center === centers[index]) &&
+        previous.nodes.every((node, index) => node === nodes[index])
+        ? previous : { centers, nodes, height: top });
     };
     measure();
     const observer = new ResizeObserver(measure);
@@ -140,33 +173,49 @@ export default function AboutScrolly() {
       frame = 0;
       const section = sectionRef.current;
       if (!section) return;
-      const rect = section.getBoundingClientRect();
-      const firstY = layout.centers[0];
-      const lastY = layout.centers[layout.centers.length - 1] + ROUTE_TAIL;
-      // Keep the original one-to-one scroll movement, anchored to the first node.
-      // The viewport midpoint must not create an initial head start or delay.
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolledY = Math.max(0, window.scrollY) * layout.height / rect.height;
-      const routeY = window.scrollY > 0 && window.scrollY >= maxScroll - 1
-        ? lastY : Math.min(lastY, firstY + scrolledY);
-      const scrollProgress = (routeY - firstY) / (lastY - firstY);
-      const path = window.innerWidth <= 820 ? mobilePathRef.current : desktopPathRef.current;
+      const scrollY = Math.max(0, window.scrollY);
+      const viewport = window.innerHeight;
+      const sectionTop = section.getBoundingClientRect().top + scrollY;
+      const firstY = layout.nodes[0];
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - viewport);
 
-      if (path) {
+      // The head of the line starts exactly under the first logo (so nothing
+      // shows before the first scroll), then glides to a fixed spot in the
+      // viewport and travels with the reader from there.
+      const logoScreenY = sectionTop + firstY;
+      const rawRouteY = (y: number) => {
+        const headScreenY = logoScreenY + (viewport * HEAD_ANCHOR - logoScreenY) * smoothstep(y / HEAD_RAMP);
+        return y + headScreenY - sectionTop;
+      };
+      // If the page ends too early for the head to reach the tail, stretch the
+      // whole run evenly instead of snapping at the bottom.
+      const routeAtBottom = rawRouteY(maxScroll);
+      const stretch = routeAtBottom < endY && routeAtBottom > firstY
+        ? (endY - firstY) / (routeAtBottom - firstY) : 1;
+      const routeY = scrollY <= 0
+        ? firstY
+        : Math.min(endY, firstY + (rawRouteY(scrollY) - firstY) * stretch);
+
+      const path = window.innerWidth <= 820 ? mobilePathRef.current : desktopPathRef.current;
+      if (path && routeY > firstY) {
         const totalLength = path.getTotalLength();
         let low = 0;
         let high = totalLength;
-        for (let iteration = 0; iteration < 16; iteration += 1) {
+        for (let iteration = 0; iteration < 18; iteration += 1) {
           const middle = (low + high) / 2;
           if (path.getPointAtLength(middle).y < routeY) low = middle;
           else high = middle;
         }
-        setProgress(scrollProgress === 0 ? 0 : scrollProgress === 1 ? 1 : ((low + high) / 2) / totalLength);
+        setProgress(routeY >= endY ? 1 : ((low + high) / 2) / totalLength);
+      } else {
+        setProgress(0);
       }
 
-      let reachedIndex = -1;
+      // The first logo + card are lit from page load (the starting point);
+      // every further one lights up once the red line reaches its logo.
+      let reachedIndex = 0;
       steps.forEach((_, index) => {
-        if (routeY >= layout.centers[index]) reachedIndex = index;
+        if (routeY >= layout.nodes[index]) reachedIndex = index;
       });
       setActive(reachedIndex);
     };
@@ -184,7 +233,7 @@ export default function AboutScrolly() {
       if (frame) window.cancelAnimationFrame(frame);
       window.clearTimeout(settleTimer);
     };
-  }, [layout]);
+  }, [layout, endY]);
 
   // Donut logo markers sit on the line (as HTML, so they are never deformed by
   // the stretched SVG). They stay greyed until the red line reaches them.
@@ -200,7 +249,7 @@ export default function AboutScrolly() {
         }`}
         style={
           {
-            top: `${(layout.centers[index] / layout.height) * 100}%`,
+            top: layout.nodes[index],
             '--logo-left-d': `${(step.x / 1000) * 100}%`,
             '--logo-left-m': `${(MOBILE_X[index] / 760) * 100}%`,
           } as React.CSSProperties
@@ -214,15 +263,17 @@ export default function AboutScrolly() {
   return (
     <div ref={sectionRef} className={styles.scrolly} style={{
       height: layout.height,
-      '--route-fade-start': `${layout.centers[layout.centers.length - 1] + 24}px`,
-      '--route-fade-end': `${layout.centers[layout.centers.length - 1] + ROUTE_TAIL}px`,
+      '--route-height': `${routeHeight}px`,
+      '--route-fade-start': `${endY - ROUTE_FADE}px`,
+      '--route-fade-end': `${endY}px`,
     } as React.CSSProperties}>
       <svg
         className={`${styles.route} ${styles.routeDesktop}`}
-        viewBox={`0 0 1000 ${layout.height}`}
+        viewBox={`0 0 1000 ${routeHeight}`}
         preserveAspectRatio="none"
         aria-hidden="true"
       >
+        <path className={styles.routeTrack} d={desktopPath} />
         <path
           ref={desktopPathRef}
           className={styles.routeProgress}
@@ -236,10 +287,11 @@ export default function AboutScrolly() {
 
       <svg
         className={`${styles.route} ${styles.routeMobile}`}
-        viewBox={`0 0 760 ${layout.height}`}
+        viewBox={`0 0 760 ${routeHeight}`}
         preserveAspectRatio="none"
         aria-hidden="true"
       >
+        <path className={styles.routeTrack} d={mobilePath} />
         <path
           ref={mobilePathRef}
           className={styles.routeProgress}
@@ -260,9 +312,9 @@ export default function AboutScrolly() {
           className={`${styles.milestone} ${styles[step.side]} ${
             index <= active ? styles.milestoneReached : ''
           } ${index === active ? styles.milestoneActive : ''}`}
-          style={{ '--milestone-y': `${(layout.centers[index] / layout.height) * 100}%` } as React.CSSProperties}
+          style={{ '--milestone-y': `${layout.centers[index]}px` } as React.CSSProperties}
         >
-          <div className={styles.bubble}>
+          <div className={`${styles.bubble} ${step.masthead ? styles.bubbleCentered : ''}`}>
             <svg className={styles.bubbleTrace} aria-hidden="true" preserveAspectRatio="none">
               <rect
                 className={styles.bubbleTraceLine}
@@ -290,17 +342,24 @@ export default function AboutScrolly() {
                   ) : null}
                 </div>
               </div>
+            ) : step.masthead ? (
+              <div className={styles.bubbleMasthead}>
+                <h3 className={step.titleInk ? styles.titleInk : undefined}>{step.title}</h3>
+                <span className={styles.bubbleEyebrow}>{step.eyebrow}</span>
+              </div>
             ) : (
               <>
-                <div className={styles.bubbleMeta}>
-                  <span
-                    className={`${styles.bubbleEyebrow} ${
-                      step.eyebrowPlain ? styles.bubbleEyebrowPlain : ''
-                    }`}
-                  >
-                    {step.eyebrow}
-                  </span>
-                </div>
+                {step.eyebrow ? (
+                  <div className={styles.bubbleMeta}>
+                    <span
+                      className={`${styles.bubbleEyebrow} ${
+                        step.eyebrowPlain ? styles.bubbleEyebrowPlain : ''
+                      }`}
+                    >
+                      {step.eyebrow}
+                    </span>
+                  </div>
+                ) : null}
                 <h3>{step.title}</h3>
               </>
             )}
