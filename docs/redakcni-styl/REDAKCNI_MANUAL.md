@@ -123,6 +123,16 @@ Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci
   - Popisek smí obsahovat odkazy `[text](url)`, **tučné** `**…**` a kurzívu `_…_`; rovné uvozovky `"` v něm nepoužívat (jen „české").
   - **Umístění:** na začátek textově bohatého odstavce, ke kterému fotka patří (ne před box, tabulku nebo graf) – obtékat ji musí aspoň 3–4 odstavce. Fotky se **střídají** vpravo/vlevo podle toku textu; SupportBanner je vlevo, boční InfoBox a „Napsali jsme" vpravo. Levou a pravou fotku nedávat do stejného krátkého úseku. Na výšku orientované portréty potřebují delší text vedle sebe; velmi vysoké vizuály lze dát `side="center"`.
   - **Výjimky (zůstávají přes celou šíři jako `![](…)`):** grafy, mapy, tabulky, screenshoty dokumentů a sociálních sítí, grafické karty s textem a úvodní ilustrační bannery – zmenšené by nebyly čitelné. Ucelenou sadu fotek dáváme jako fotogalerii (```` ```fotogalerie ````), ne jako řadu `<Figure>`.
+- **Povinné vložené prvky v každém článku.** Každý článek má tyto tři prvky. Nejsou volitelné a nikdo je nemusí zvlášť zadávat. Kdo článek sází (redaktor i AI), vloží je sám:
+  1. **Inline related** (boční „Napsali jsme": `<RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" … />`): **v první čtvrtině článku**, vpravo.
+  2. **Inline SupportBanner** (`<SupportBanner float="left" />`): **v horní polovině článku**, vlevo, níž než inline related a v jiném úseku textu.
+  3. **Read-more box** pod článkem (`<RelatedArticles heading="🔻🔻🔻" />`, přes celou šíři) jako poslední prvek markdownu. **Pod ním** web sám přidá SupportBanner přes celou šíři. Ten se ručně nevkládá.
+  - **Kam boční prvky patří:** jen tam, kde je obteče dost souvislého textu, aby sazba působila celistvě, ne „rozbitě" nebo „děravě". Prvek dáme na začátek textově bohatého odstavce (nebo do jeho první věty) a vedle něj musí následovat aspoň 3–4 běžné odstavce bez mezititulku, boxu, grafu, tabulky, fotky přes celou šíři, citace nebo seznamu. Text musí prvek obtéct celý a pokračovat i pod ním.
+  - **Kam ne:** do úvodního odstavce (perexu) ani hned pod něj, těsně před mezititulek nebo za něj, vedle krátkých odstavců, do stejného úseku jako jiný boční prvek (fotka, InfoBox) a nikdy tak, aby se levý a pravý prvek potkaly vedle sebe.
+  - **Když místo není:** krátký text (zprávička, číslo dne) nebo text složený hlavně z grafů a boxů nemusí mít vhodný úsek. Pak boční prvek nevnucujeme: inline related vynecháme a SupportBanner dáme bez `float` přes celou šíři mezi dva odstavce v horní polovině. Read-more box dole je povinný vždy.
+  - Na mobilu (≤ 768 px) se boční prvky samy roztáhnou přes celou šíři a text pokračuje pod nimi. Jejich okraje a přesah řeší sdílené CSS (`--dt-bleed-*` v `apps/web/app/globals.css`), v článku se neupravují.
+
+  *Pravidlo platí od 2026-09-24. Nahrazuje dřívější „má obsahovat" (SupportBanner uprostřed článku jen doporučený) a platí pro všechny žánry na mahdalova-skop.cz. Vlastník: Kateřina Mahdalová.*
 - **Vlajky zemí vždy jako SVG, nikdy jako emoji.** Windows a Chrome (na Windows) emoji vlajek nevykreslují — místo vlajky se čtenáři ukáže jen kód země (např. „DE" místo 🇩🇪). Vlaječky proto sázíme sdílenou komponentou `Flag` (`@repo/ui`) ze sad *square-flags* / *circle-flags*; technické detaily a galerie viz [design systém](../../packages/ui/DESIGN.md#flag). Sdíleno napříč mahdalova-skop.cz i datajournalism.studio.
 
 ---
@@ -292,6 +302,7 @@ Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní ot�
 - [ ] Metadata, datum a autor sedí; zdroje jsou u konkrétních tvrzení, citací a grafů
 - [ ] Text přečten nahlas (u audia/videa i test podání)
 - [ ] Konec dokončuje myšlenku, ne rekapituluje
+- [ ] Inline related v první čtvrtině, inline SupportBanner v horní polovině, oba obtečené dostatkem textu; read-more box `🔻🔻🔻` na konci (viz Část II → Fotografie a obraz → Povinné vložené prvky)
 
 ## Správa a verzování pravidel
 Kanonická verze je tento soubor v repozitáři **mahdalova-skop**. Ostatní návody na něj odkazují a obsahují jen projektové dodatky nebo hloubkové rozbory. **Nesmí vzniknout** druhý „obecný" manuál, projektový návod tiše měnící společné standardy, pravidlo uložené jen v chatu, neoznačená kopie v jiném repu ani pokyn pro AI bez odkazu na platnou verzi.
