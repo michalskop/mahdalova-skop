@@ -11,6 +11,7 @@ import { InfoBox } from './InfoBox'; // Import the InfoBox component
 import { Figure } from './Figure'; // Floated photo that bleeds out of the reading column
 import { AccreditationScale } from './AccreditationScale'; // One-off outlier-scale viz
 import TrueSizeGame from './TrueSizeGame/TrueSizeGame'; // "Skutečná velikost" map guessing game
+import DpbpPromo from './DpbpPromo'; // inline pointer into the DPBP special (dotted head + title)
 import { TestComponent } from '@/components/mdx/TestComponent';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
@@ -206,6 +207,7 @@ export function ArticleRenderer({
     SupportBanner: (props: any) => <SupportBanner {...props} />,
     AccreditationScale: () => <AccreditationScale />,
     TrueSizeGame: () => <TrueSizeGame />,
+    DpbpPromo: (props: any) => <DpbpPromo {...props} />,
     KeyNumbers: ({ yamlFile, ...props }) => {
       // If yamlFile is provided, use pre-loaded data from server
       if (yamlFile) {

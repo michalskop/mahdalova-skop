@@ -1,0 +1,338 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Do jeslí či školky chodí v {Česku|#de1743} 8 % dětí mladších tří let, v {EU|#6267a3} 41 %",
+    "subtitle": "Podíl dětí do 3 let v institucionální péči nebo vzdělávání – jesle, dětské skupiny, mateřské školy (%, 2025)"
+  },
+  "width": "container",
+  "height": 620,
+  "data": {
+    "values": [
+      {
+        "zeme": "Průměr EU",
+        "podil": 40.5,
+        "cz": false,
+        "eu": true
+      },
+      {
+        "zeme": "Belgie",
+        "podil": 48.0,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Bulharsko",
+        "podil": 22.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Česko",
+        "podil": 7.9,
+        "cz": true,
+        "eu": false
+      },
+      {
+        "zeme": "Dánsko",
+        "podil": 67.2,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Německo",
+        "podil": 26.2,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Estonsko",
+        "podil": 34.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Irsko",
+        "podil": 27.0,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Řecko",
+        "podil": 23.7,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Španělsko",
+        "podil": 56.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Francie",
+        "podil": 59.7,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Chorvatsko",
+        "podil": 32.5,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Itálie",
+        "podil": 35.5,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Kypr",
+        "podil": 42.4,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Lotyšsko",
+        "podil": 45.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Litva",
+        "podil": 43.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Lucembursko",
+        "podil": 56.4,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Maďarsko",
+        "podil": 21.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Malta",
+        "podil": 55.9,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Nizozemsko",
+        "podil": 66.5,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Rakousko",
+        "podil": 30.9,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Polsko",
+        "podil": 21.0,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Portugalsko",
+        "podil": 57.9,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Rumunsko",
+        "podil": 11.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Slovinsko",
+        "podil": 60.3,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Slovensko",
+        "podil": 1.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Finsko",
+        "podil": 43.2,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Švédsko",
+        "podil": 59.6,
+        "cz": false,
+        "eu": false
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Dánsko",
+        "Nizozemsko",
+        "Slovinsko",
+        "Francie",
+        "Švédsko",
+        "Portugalsko",
+        "Španělsko",
+        "Lucembursko",
+        "Malta",
+        "Belgie",
+        "Lotyšsko",
+        "Litva",
+        "Finsko",
+        "Kypr",
+        "Průměr EU",
+        "Itálie",
+        "Estonsko",
+        "Chorvatsko",
+        "Rakousko",
+        "Irsko",
+        "Německo",
+        "Řecko",
+        "Bulharsko",
+        "Maďarsko",
+        "Polsko",
+        "Rumunsko",
+        "Česko",
+        "Slovensko"
+      ],
+      "scale": {
+        "paddingInner": 0.25
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 140
+      }
+    },
+    "x": {
+      "field": "podil",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          75
+        ]
+      },
+      "axis": {
+        "title": "% dětí do 3 let",
+        "grid": false,
+        "values": [
+          0,
+          15,
+          30,
+          45,
+          60,
+          75
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "condition": [
+            {
+              "test": "datum.cz",
+              "value": "#de1743"
+            },
+            {
+              "test": "datum.eu",
+              "value": "#6267a3"
+            }
+          ],
+          "value": "#bcbcb0"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "podil",
+            "title": "Děti do 3 let v péči (%)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!(datum.cz || datum.eu)"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "podil",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.cz || datum.eu"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "podil",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "datum": 45
+        }
+      }
+    }
+  ],
+  "_source": "[Děti v institucionální péči podle věku a délky docházky (ilc_caindformal), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/ilc_caindformal/default/table?lang=en); čárkovaně cíl EU pro rok 2030 (45 %) z [doporučení Rady EU o předškolním vzdělávání a péči](https://eur-lex.europa.eu/legal-content/CS/TXT/?uri=CELEX:32022H1220(01))"
+}

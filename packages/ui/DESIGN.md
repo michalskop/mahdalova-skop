@@ -244,6 +244,26 @@ c="background.0"    // white text on coloured section header
 | `brandCoralRed` | `#e8412c` | Warm coral red |
 | `brandChocolate` | `#6e4a2c` | Brown |
 
+### Gender colors in charts (ženy × muži)
+
+Binding rule since 2026-09-24. **Never use pink/red + blue for women × men.** That pairing carries the
+"fragile girl / strong boy" stereotype. Newsrooms also assign it inconsistently, so readers can misread a
+chart, especially one about inequality (see Lisa Charlotte Muth,
+[An alternative to pink & blue](https://www.datawrapper.de/blog/gendercolor), Datawrapper 2018).
+
+| Role | Token | Hex | On dark backgrounds (labels) |
+|------|-------|-----|------------------------------|
+| Women / mothers | `brandOrange.6` | `#f76800` | `brandOrange.4` `#ff934d` |
+| Men / fathers | `brandTeal.7` | `#06677d` | `brandTeal.4` `#33b9d9` (bars may use `.6` `#0e839e`) |
+
+- Warm × cool, distinguishable with colour-vision deficiencies, no stereotype.
+- Don't use `brand` (crimson), `brandDeepRed`, `brandCoralRed`, `brandRoyalBlue` or `brandNavy` for either gender.
+  Crimson stays the **highlight accent** (Česko, key number). In a gender chart, emphasise the highlighted row
+  with neutral dark `#333333` (a line, bold labels), not crimson.
+- Name the colours in the chart title with pills (`{matkami|#f76800} a {otci|#06677d}`) instead of a legend.
+- Non-gender comparisons (Česko × EU) are unaffected: Česko = crimson, the comparison = neutral grey `background.9` `#bcbcb0`.
+- First used in `analyza-2026-09-23-sladovani-prace-a-rodiny` (matky × otcové chart and cover).
+
 ---
 
 ## Spacing & Sizing

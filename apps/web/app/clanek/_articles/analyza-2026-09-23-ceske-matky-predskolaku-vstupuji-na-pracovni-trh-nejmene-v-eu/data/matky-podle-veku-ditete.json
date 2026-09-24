@@ -1,0 +1,154 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Se školákem pracují {české matky|#de1743} častěji než {evropské|#bcbcb0}, s předškolákem o 19 bodů méně",
+    "subtitle": "Podíl zaměstnaných žen ve věku 25–49 let podle věku nejmladšího dítěte (%, 2025)"
+  },
+  "width": "container",
+  "height": 280,
+  "data": {
+    "values": [
+      {
+        "skupina": "Nejmladší dítě do 6 let",
+        "oblast": "Průměr EU",
+        "hodnota": 70.1
+      },
+      {
+        "skupina": "Nejmladší dítě do 6 let",
+        "oblast": "Česko",
+        "hodnota": 51.5
+      },
+      {
+        "skupina": "Nejmladší dítě 6–11 let",
+        "oblast": "Průměr EU",
+        "hodnota": 78.4
+      },
+      {
+        "skupina": "Nejmladší dítě 6–11 let",
+        "oblast": "Česko",
+        "hodnota": 93.3
+      },
+      {
+        "skupina": "Nejmladší dítě 12+ let",
+        "oblast": "Průměr EU",
+        "hodnota": 81.5
+      },
+      {
+        "skupina": "Nejmladší dítě 12+ let",
+        "oblast": "Česko",
+        "hodnota": 93.9
+      },
+      {
+        "skupina": "Bez dětí",
+        "oblast": "Průměr EU",
+        "hodnota": 81.2
+      },
+      {
+        "skupina": "Bez dětí",
+        "oblast": "Česko",
+        "hodnota": 90.8
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "skupina",
+      "type": "nominal",
+      "sort": [
+        "Bez dětí",
+        "Nejmladší dítě do 6 let",
+        "Nejmladší dítě 6–11 let",
+        "Nejmladší dítě 12+ let"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 200
+      }
+    },
+    "yOffset": {
+      "field": "oblast",
+      "sort": [
+        "Česko",
+        "Průměr EU"
+      ]
+    },
+    "x": {
+      "field": "hodnota",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": "% zaměstnaných",
+        "grid": false,
+        "values": [
+          0,
+          20,
+          40,
+          60,
+          80,
+          100
+        ]
+      }
+    },
+    "color": {
+      "field": "oblast",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Česko",
+          "Průměr EU"
+        ],
+        "range": [
+          "#de1743",
+          "#bcbcb0"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "skupina",
+            "title": "Skupina"
+          },
+          {
+            "field": "oblast",
+            "title": "Oblast"
+          },
+          {
+            "field": "hodnota",
+            "title": "Zaměstnané (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontWeight": 700,
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "hodnota",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "_source": "[Míra zaměstnanosti podle počtu a věku dětí (lfst_hheredch), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en)"
+}

@@ -1,0 +1,1329 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Mezi {matkami|#f76800} a {otci|#06677d} malých dětí je v Česku největší rozdíl v EU",
+    "subtitle": "Podíl zaměstnaných rodičů ve věku 25–49 let, jejichž nejmladší dítě je mladší 6 let (%, 2025). Seřazeno podle rozdílu mezi otci a matkami. Najeďte myší na zemi."
+  },
+  "width": "container",
+  "height": 640,
+  "data": {
+    "values": [
+      {
+        "kod": "CZ",
+        "zeme": "Česko",
+        "matky": 51.5,
+        "otcove": 97.6,
+        "rozdil": 46.1,
+        "cz": true,
+        "eu": false,
+        "t_matky": "51,5 %",
+        "t_otcove": "97,6 %",
+        "t_rozdil": "46,1 procentního bodu",
+        "t_sto": "98 otců, 52 matek",
+        "t_poradi": "1. největší rozdíl z 27 zemí",
+        "t_eu": "2,1× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 51.5
+      },
+      {
+        "kod": "CZ",
+        "zeme": "Česko",
+        "matky": 51.5,
+        "otcove": 97.6,
+        "rozdil": 46.1,
+        "cz": true,
+        "eu": false,
+        "t_matky": "51,5 %",
+        "t_otcove": "97,6 %",
+        "t_rozdil": "46,1 procentního bodu",
+        "t_sto": "98 otců, 52 matek",
+        "t_poradi": "1. největší rozdíl z 27 zemí",
+        "t_eu": "2,1× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 97.6
+      },
+      {
+        "kod": "IT",
+        "zeme": "Itálie",
+        "matky": 57.8,
+        "otcove": 92.7,
+        "rozdil": 34.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "57,8 %",
+        "t_otcove": "92,7 %",
+        "t_rozdil": "34,9 procentního bodu",
+        "t_sto": "93 otců, 58 matek",
+        "t_poradi": "2. největší rozdíl z 27 zemí",
+        "t_eu": "1,6× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 57.8
+      },
+      {
+        "kod": "IT",
+        "zeme": "Itálie",
+        "matky": 57.8,
+        "otcove": 92.7,
+        "rozdil": 34.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "57,8 %",
+        "t_otcove": "92,7 %",
+        "t_rozdil": "34,9 procentního bodu",
+        "t_sto": "93 otců, 58 matek",
+        "t_poradi": "2. největší rozdíl z 27 zemí",
+        "t_eu": "1,6× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.7
+      },
+      {
+        "kod": "RO",
+        "zeme": "Rumunsko",
+        "matky": 51.5,
+        "otcove": 84.7,
+        "rozdil": 33.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "51,5 %",
+        "t_otcove": "84,7 %",
+        "t_rozdil": "33,2 procentního bodu",
+        "t_sto": "85 otců, 52 matek",
+        "t_poradi": "3. největší rozdíl z 27 zemí",
+        "t_eu": "1,5× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 51.5
+      },
+      {
+        "kod": "RO",
+        "zeme": "Rumunsko",
+        "matky": 51.5,
+        "otcove": 84.7,
+        "rozdil": 33.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "51,5 %",
+        "t_otcove": "84,7 %",
+        "t_rozdil": "33,2 procentního bodu",
+        "t_sto": "85 otců, 52 matek",
+        "t_poradi": "3. největší rozdíl z 27 zemí",
+        "t_eu": "1,5× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 84.7
+      },
+      {
+        "kod": "EL",
+        "zeme": "Řecko",
+        "matky": 62.2,
+        "otcove": 94.4,
+        "rozdil": 32.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "62,2 %",
+        "t_otcove": "94,4 %",
+        "t_rozdil": "32,2 procentního bodu",
+        "t_sto": "94 otců, 62 matek",
+        "t_poradi": "4. největší rozdíl z 27 zemí",
+        "t_eu": "1,5× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 62.2
+      },
+      {
+        "kod": "EL",
+        "zeme": "Řecko",
+        "matky": 62.2,
+        "otcove": 94.4,
+        "rozdil": 32.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "62,2 %",
+        "t_otcove": "94,4 %",
+        "t_rozdil": "32,2 procentního bodu",
+        "t_sto": "94 otců, 62 matek",
+        "t_poradi": "4. největší rozdíl z 27 zemí",
+        "t_eu": "1,5× větší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 94.4
+      },
+      {
+        "kod": "BG",
+        "zeme": "Bulharsko",
+        "matky": 69.5,
+        "otcove": 92.5,
+        "rozdil": 23.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69,5 %",
+        "t_otcove": "92,5 %",
+        "t_rozdil": "23,0 procentního bodu",
+        "t_sto": "92 otců, 70 matek",
+        "t_poradi": "5. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 69.5
+      },
+      {
+        "kod": "BG",
+        "zeme": "Bulharsko",
+        "matky": 69.5,
+        "otcove": 92.5,
+        "rozdil": 23.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69,5 %",
+        "t_otcove": "92,5 %",
+        "t_rozdil": "23,0 procentního bodu",
+        "t_sto": "92 otců, 70 matek",
+        "t_poradi": "5. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.5
+      },
+      {
+        "kod": "PL",
+        "zeme": "Polsko",
+        "matky": 73.9,
+        "otcove": 96.5,
+        "rozdil": 22.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73,9 %",
+        "t_otcove": "96,5 %",
+        "t_rozdil": "22,6 procentního bodu",
+        "t_sto": "96 otců, 74 matek",
+        "t_poradi": "6. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 73.9
+      },
+      {
+        "kod": "PL",
+        "zeme": "Polsko",
+        "matky": 73.9,
+        "otcove": 96.5,
+        "rozdil": 22.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73,9 %",
+        "t_otcove": "96,5 %",
+        "t_rozdil": "22,6 procentního bodu",
+        "t_sto": "96 otců, 74 matek",
+        "t_poradi": "6. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 96.5
+      },
+      {
+        "kod": "SK",
+        "zeme": "Slovensko",
+        "matky": 70.3,
+        "otcove": 92.7,
+        "rozdil": 22.4,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70,3 %",
+        "t_otcove": "92,7 %",
+        "t_rozdil": "22,4 procentního bodu",
+        "t_sto": "93 otců, 70 matek",
+        "t_poradi": "7. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 70.3
+      },
+      {
+        "kod": "SK",
+        "zeme": "Slovensko",
+        "matky": 70.3,
+        "otcove": 92.7,
+        "rozdil": 22.4,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70,3 %",
+        "t_otcove": "92,7 %",
+        "t_rozdil": "22,4 procentního bodu",
+        "t_sto": "93 otců, 70 matek",
+        "t_poradi": "7. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.7
+      },
+      {
+        "kod": "DE",
+        "zeme": "Německo",
+        "matky": 69.8,
+        "otcove": 92.1,
+        "rozdil": 22.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69,8 %",
+        "t_otcove": "92,1 %",
+        "t_rozdil": "22,3 procentního bodu",
+        "t_sto": "92 otců, 70 matek",
+        "t_poradi": "8. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 69.8
+      },
+      {
+        "kod": "DE",
+        "zeme": "Německo",
+        "matky": 69.8,
+        "otcove": 92.1,
+        "rozdil": 22.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69,8 %",
+        "t_otcove": "92,1 %",
+        "t_rozdil": "22,3 procentního bodu",
+        "t_sto": "92 otců, 70 matek",
+        "t_poradi": "8. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.1
+      },
+      {
+        "kod": "EU27_2020",
+        "zeme": "Průměr EU",
+        "matky": 70.1,
+        "otcove": 92.1,
+        "rozdil": 22.0,
+        "cz": false,
+        "eu": true,
+        "t_matky": "70,1 %",
+        "t_otcove": "92,1 %",
+        "t_rozdil": "22,0 procentního bodu",
+        "t_sto": "92 otců, 70 matek",
+        "t_poradi": "průměr 27 zemí",
+        "t_eu": "–",
+        "rodic": "Matky",
+        "hodnota": 70.1
+      },
+      {
+        "kod": "EU27_2020",
+        "zeme": "Průměr EU",
+        "matky": 70.1,
+        "otcove": 92.1,
+        "rozdil": 22.0,
+        "cz": false,
+        "eu": true,
+        "t_matky": "70,1 %",
+        "t_otcove": "92,1 %",
+        "t_rozdil": "22,0 procentního bodu",
+        "t_sto": "92 otců, 70 matek",
+        "t_poradi": "průměr 27 zemí",
+        "t_eu": "–",
+        "rodic": "Otcové",
+        "hodnota": 92.1
+      },
+      {
+        "kod": "ES",
+        "zeme": "Španělsko",
+        "matky": 68.2,
+        "otcove": 90.1,
+        "rozdil": 21.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "68,2 %",
+        "t_otcove": "90,1 %",
+        "t_rozdil": "21,9 procentního bodu",
+        "t_sto": "90 otců, 68 matek",
+        "t_poradi": "9. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 68.2
+      },
+      {
+        "kod": "ES",
+        "zeme": "Španělsko",
+        "matky": 68.2,
+        "otcove": 90.1,
+        "rozdil": 21.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "68,2 %",
+        "t_otcove": "90,1 %",
+        "t_rozdil": "21,9 procentního bodu",
+        "t_sto": "90 otců, 68 matek",
+        "t_poradi": "9. největší rozdíl z 27 zemí",
+        "t_eu": "zhruba jako průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 90.1
+      },
+      {
+        "kod": "CY",
+        "zeme": "Kypr",
+        "matky": 76.1,
+        "otcove": 95.3,
+        "rozdil": 19.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "76,1 %",
+        "t_otcove": "95,3 %",
+        "t_rozdil": "19,2 procentního bodu",
+        "t_sto": "95 otců, 76 matek",
+        "t_poradi": "10. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 76.1
+      },
+      {
+        "kod": "CY",
+        "zeme": "Kypr",
+        "matky": 76.1,
+        "otcove": 95.3,
+        "rozdil": 19.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "76,1 %",
+        "t_otcove": "95,3 %",
+        "t_rozdil": "19,2 procentního bodu",
+        "t_sto": "95 otců, 76 matek",
+        "t_poradi": "10. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 95.3
+      },
+      {
+        "kod": "IE",
+        "zeme": "Irsko",
+        "matky": 74.5,
+        "otcove": 92.4,
+        "rozdil": 17.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74,5 %",
+        "t_otcove": "92,4 %",
+        "t_rozdil": "17,9 procentního bodu",
+        "t_sto": "92 otců, 74 matek",
+        "t_poradi": "11. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 74.5
+      },
+      {
+        "kod": "IE",
+        "zeme": "Irsko",
+        "matky": 74.5,
+        "otcove": 92.4,
+        "rozdil": 17.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74,5 %",
+        "t_otcove": "92,4 %",
+        "t_rozdil": "17,9 procentního bodu",
+        "t_sto": "92 otců, 74 matek",
+        "t_poradi": "11. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.4
+      },
+      {
+        "kod": "LV",
+        "zeme": "Lotyšsko",
+        "matky": 73.1,
+        "otcove": 90.8,
+        "rozdil": 17.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73,1 %",
+        "t_otcove": "90,8 %",
+        "t_rozdil": "17,7 procentního bodu",
+        "t_sto": "91 otců, 73 matek",
+        "t_poradi": "12. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 73.1
+      },
+      {
+        "kod": "LV",
+        "zeme": "Lotyšsko",
+        "matky": 73.1,
+        "otcove": 90.8,
+        "rozdil": 17.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73,1 %",
+        "t_otcove": "90,8 %",
+        "t_rozdil": "17,7 procentního bodu",
+        "t_sto": "91 otců, 73 matek",
+        "t_poradi": "12. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 90.8
+      },
+      {
+        "kod": "BE",
+        "zeme": "Belgie",
+        "matky": 72.8,
+        "otcove": 90.3,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "72,8 %",
+        "t_otcove": "90,3 %",
+        "t_rozdil": "17,5 procentního bodu",
+        "t_sto": "90 otců, 73 matek",
+        "t_poradi": "13. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 72.8
+      },
+      {
+        "kod": "BE",
+        "zeme": "Belgie",
+        "matky": 72.8,
+        "otcove": 90.3,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "72,8 %",
+        "t_otcove": "90,3 %",
+        "t_rozdil": "17,5 procentního bodu",
+        "t_sto": "90 otců, 73 matek",
+        "t_poradi": "13. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 90.3
+      },
+      {
+        "kod": "FI",
+        "zeme": "Finsko",
+        "matky": 70.5,
+        "otcove": 88.0,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70,5 %",
+        "t_otcove": "88,0 %",
+        "t_rozdil": "17,5 procentního bodu",
+        "t_sto": "88 otců, 70 matek",
+        "t_poradi": "14. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 70.5
+      },
+      {
+        "kod": "FI",
+        "zeme": "Finsko",
+        "matky": 70.5,
+        "otcove": 88.0,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70,5 %",
+        "t_otcove": "88,0 %",
+        "t_rozdil": "17,5 procentního bodu",
+        "t_sto": "88 otců, 70 matek",
+        "t_poradi": "14. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 88.0
+      },
+      {
+        "kod": "EE",
+        "zeme": "Estonsko",
+        "matky": 74.7,
+        "otcove": 91.9,
+        "rozdil": 17.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74,7 %",
+        "t_otcove": "91,9 %",
+        "t_rozdil": "17,2 procentního bodu",
+        "t_sto": "92 otců, 75 matek",
+        "t_poradi": "15. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 74.7
+      },
+      {
+        "kod": "EE",
+        "zeme": "Estonsko",
+        "matky": 74.7,
+        "otcove": 91.9,
+        "rozdil": 17.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74,7 %",
+        "t_otcove": "91,9 %",
+        "t_rozdil": "17,2 procentního bodu",
+        "t_sto": "92 otců, 75 matek",
+        "t_poradi": "15. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 91.9
+      },
+      {
+        "kod": "AT",
+        "zeme": "Rakousko",
+        "matky": 74.9,
+        "otcove": 91.8,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74,9 %",
+        "t_otcove": "91,8 %",
+        "t_rozdil": "16,9 procentního bodu",
+        "t_sto": "92 otců, 75 matek",
+        "t_poradi": "16. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 74.9
+      },
+      {
+        "kod": "AT",
+        "zeme": "Rakousko",
+        "matky": 74.9,
+        "otcove": 91.8,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74,9 %",
+        "t_otcove": "91,8 %",
+        "t_rozdil": "16,9 procentního bodu",
+        "t_sto": "92 otců, 75 matek",
+        "t_poradi": "16. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 91.8
+      },
+      {
+        "kod": "HU",
+        "zeme": "Maďarsko",
+        "matky": 77.5,
+        "otcove": 94.4,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "77,5 %",
+        "t_otcove": "94,4 %",
+        "t_rozdil": "16,9 procentního bodu",
+        "t_sto": "94 otců, 78 matek",
+        "t_poradi": "17. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 77.5
+      },
+      {
+        "kod": "HU",
+        "zeme": "Maďarsko",
+        "matky": 77.5,
+        "otcove": 94.4,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "77,5 %",
+        "t_otcove": "94,4 %",
+        "t_rozdil": "16,9 procentního bodu",
+        "t_sto": "94 otců, 78 matek",
+        "t_poradi": "17. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 94.4
+      },
+      {
+        "kod": "FR",
+        "zeme": "Francie",
+        "matky": 73.6,
+        "otcove": 89.7,
+        "rozdil": 16.1,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73,6 %",
+        "t_otcove": "89,7 %",
+        "t_rozdil": "16,1 procentního bodu",
+        "t_sto": "90 otců, 74 matek",
+        "t_poradi": "18. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 73.6
+      },
+      {
+        "kod": "FR",
+        "zeme": "Francie",
+        "matky": 73.6,
+        "otcove": 89.7,
+        "rozdil": 16.1,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73,6 %",
+        "t_otcove": "89,7 %",
+        "t_rozdil": "16,1 procentního bodu",
+        "t_sto": "90 otců, 74 matek",
+        "t_poradi": "18. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 89.7
+      },
+      {
+        "kod": "MT",
+        "zeme": "Malta",
+        "matky": 81.2,
+        "otcove": 96.8,
+        "rozdil": 15.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81,2 %",
+        "t_otcove": "96,8 %",
+        "t_rozdil": "15,6 procentního bodu",
+        "t_sto": "97 otců, 81 matek",
+        "t_poradi": "19. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 81.2
+      },
+      {
+        "kod": "MT",
+        "zeme": "Malta",
+        "matky": 81.2,
+        "otcove": 96.8,
+        "rozdil": 15.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81,2 %",
+        "t_otcove": "96,8 %",
+        "t_rozdil": "15,6 procentního bodu",
+        "t_sto": "97 otců, 81 matek",
+        "t_poradi": "19. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 96.8
+      },
+      {
+        "kod": "LT",
+        "zeme": "Litva",
+        "matky": 79.0,
+        "otcove": 92.7,
+        "rozdil": 13.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79,0 %",
+        "t_otcove": "92,7 %",
+        "t_rozdil": "13,7 procentního bodu",
+        "t_sto": "93 otců, 79 matek",
+        "t_poradi": "20. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 79.0
+      },
+      {
+        "kod": "LT",
+        "zeme": "Litva",
+        "matky": 79.0,
+        "otcove": 92.7,
+        "rozdil": 13.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79,0 %",
+        "t_otcove": "92,7 %",
+        "t_rozdil": "13,7 procentního bodu",
+        "t_sto": "93 otců, 79 matek",
+        "t_poradi": "20. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.7
+      },
+      {
+        "kod": "NL",
+        "zeme": "Nizozemsko",
+        "matky": 82.9,
+        "otcove": 95.9,
+        "rozdil": 13.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "82,9 %",
+        "t_otcove": "95,9 %",
+        "t_rozdil": "13,0 procentního bodu",
+        "t_sto": "96 otců, 83 matek",
+        "t_poradi": "21. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 82.9
+      },
+      {
+        "kod": "NL",
+        "zeme": "Nizozemsko",
+        "matky": 82.9,
+        "otcove": 95.9,
+        "rozdil": 13.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "82,9 %",
+        "t_otcove": "95,9 %",
+        "t_rozdil": "13,0 procentního bodu",
+        "t_sto": "96 otců, 83 matek",
+        "t_poradi": "21. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 95.9
+      },
+      {
+        "kod": "LU",
+        "zeme": "Lucembursko",
+        "matky": 79.4,
+        "otcove": 92.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79,4 %",
+        "t_otcove": "92,3 %",
+        "t_rozdil": "12,9 procentního bodu",
+        "t_sto": "92 otců, 79 matek",
+        "t_poradi": "22. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 79.4
+      },
+      {
+        "kod": "LU",
+        "zeme": "Lucembursko",
+        "matky": 79.4,
+        "otcove": 92.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79,4 %",
+        "t_otcove": "92,3 %",
+        "t_rozdil": "12,9 procentního bodu",
+        "t_sto": "92 otců, 79 matek",
+        "t_poradi": "22. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 92.3
+      },
+      {
+        "kod": "SI",
+        "zeme": "Slovinsko",
+        "matky": 84.4,
+        "otcove": 97.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84,4 %",
+        "t_otcove": "97,3 %",
+        "t_rozdil": "12,9 procentního bodu",
+        "t_sto": "97 otců, 84 matek",
+        "t_poradi": "23. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 84.4
+      },
+      {
+        "kod": "SI",
+        "zeme": "Slovinsko",
+        "matky": 84.4,
+        "otcove": 97.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84,4 %",
+        "t_otcove": "97,3 %",
+        "t_rozdil": "12,9 procentního bodu",
+        "t_sto": "97 otců, 84 matek",
+        "t_poradi": "23. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 97.3
+      },
+      {
+        "kod": "DK",
+        "zeme": "Dánsko",
+        "matky": 81.4,
+        "otcove": 94.1,
+        "rozdil": 12.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81,4 %",
+        "t_otcove": "94,1 %",
+        "t_rozdil": "12,7 procentního bodu",
+        "t_sto": "94 otců, 81 matek",
+        "t_poradi": "24. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 81.4
+      },
+      {
+        "kod": "DK",
+        "zeme": "Dánsko",
+        "matky": 81.4,
+        "otcove": 94.1,
+        "rozdil": 12.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81,4 %",
+        "t_otcove": "94,1 %",
+        "t_rozdil": "12,7 procentního bodu",
+        "t_sto": "94 otců, 81 matek",
+        "t_poradi": "24. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 94.1
+      },
+      {
+        "kod": "SE",
+        "zeme": "Švédsko",
+        "matky": 80.4,
+        "otcove": 91.3,
+        "rozdil": 10.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "80,4 %",
+        "t_otcove": "91,3 %",
+        "t_rozdil": "10,9 procentního bodu",
+        "t_sto": "91 otců, 80 matek",
+        "t_poradi": "25. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 80.4
+      },
+      {
+        "kod": "SE",
+        "zeme": "Švédsko",
+        "matky": 80.4,
+        "otcove": 91.3,
+        "rozdil": 10.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "80,4 %",
+        "t_otcove": "91,3 %",
+        "t_rozdil": "10,9 procentního bodu",
+        "t_sto": "91 otců, 80 matek",
+        "t_poradi": "25. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 91.3
+      },
+      {
+        "kod": "HR",
+        "zeme": "Chorvatsko",
+        "matky": 85.8,
+        "otcove": 96.1,
+        "rozdil": 10.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "85,8 %",
+        "t_otcove": "96,1 %",
+        "t_rozdil": "10,3 procentního bodu",
+        "t_sto": "96 otců, 86 matek",
+        "t_poradi": "26. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 85.8
+      },
+      {
+        "kod": "HR",
+        "zeme": "Chorvatsko",
+        "matky": 85.8,
+        "otcove": 96.1,
+        "rozdil": 10.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "85,8 %",
+        "t_otcove": "96,1 %",
+        "t_rozdil": "10,3 procentního bodu",
+        "t_sto": "96 otců, 86 matek",
+        "t_poradi": "26. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 96.1
+      },
+      {
+        "kod": "PT",
+        "zeme": "Portugalsko",
+        "matky": 84.7,
+        "otcove": 94.3,
+        "rozdil": 9.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84,7 %",
+        "t_otcove": "94,3 %",
+        "t_rozdil": "9,6 procentního bodu",
+        "t_sto": "94 otců, 85 matek",
+        "t_poradi": "27. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Matky",
+        "hodnota": 84.7
+      },
+      {
+        "kod": "PT",
+        "zeme": "Portugalsko",
+        "matky": 84.7,
+        "otcove": 94.3,
+        "rozdil": 9.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84,7 %",
+        "t_otcove": "94,3 %",
+        "t_rozdil": "9,6 procentního bodu",
+        "t_sto": "94 otců, 85 matek",
+        "t_poradi": "27. největší rozdíl z 27 zemí",
+        "t_eu": "menší než průměr EU (22,0 p. b.)",
+        "rodic": "Otcové",
+        "hodnota": 94.3
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Česko",
+        "Itálie",
+        "Rumunsko",
+        "Řecko",
+        "Bulharsko",
+        "Polsko",
+        "Slovensko",
+        "Německo",
+        "Průměr EU",
+        "Španělsko",
+        "Kypr",
+        "Irsko",
+        "Lotyšsko",
+        "Belgie",
+        "Finsko",
+        "Estonsko",
+        "Rakousko",
+        "Maďarsko",
+        "Francie",
+        "Malta",
+        "Litva",
+        "Nizozemsko",
+        "Lucembursko",
+        "Slovinsko",
+        "Dánsko",
+        "Švédsko",
+        "Chorvatsko",
+        "Portugalsko"
+      ],
+      "scale": {
+        "paddingInner": 0,
+        "paddingOuter": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 140,
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Matky'"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": "#eeeae2"
+      },
+      "encoding": {
+        "x": {
+          "datum": 45,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "datum": 100
+        },
+        "opacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Matky'"
+        }
+      ],
+      "mark": {
+        "type": "rule"
+      },
+      "encoding": {
+        "x": {
+          "field": "matky",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          },
+          "axis": {
+            "title": "% zaměstnaných",
+            "grid": true,
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "field": "otcove"
+        },
+        "color": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": "#333333"
+            },
+            {
+              "test": "datum.cz",
+              "value": "#333333"
+            }
+          ],
+          "value": "#d4d4c8"
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 3
+            },
+            {
+              "test": "datum.cz",
+              "value": 2.5
+            }
+          ],
+          "value": 2
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "hodnota",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "color": {
+          "field": "rodic",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Matky",
+              "Otcové"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          },
+          "legend": null
+        },
+        "size": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 170
+          },
+          "value": 90
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "datum.cz || datum.eu",
+              "value": 1
+            }
+          ],
+          "value": 0.5
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Matky'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "matky",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "text": {
+          "field": "matky",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "datum.cz || datum.eu",
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Matky'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "otcove",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "text": {
+          "field": "otcove",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "datum.cz || datum.eu",
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Matky'"
+        }
+      ],
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "zeme"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": "#333333",
+        "fillOpacity": 0.001,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "datum": 45,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "datum": 100
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_matky",
+            "title": "Pracující matky"
+          },
+          {
+            "field": "t_otcove",
+            "title": "Pracující otcové"
+          },
+          {
+            "field": "t_sto",
+            "title": "Ze 100 rodičů pracuje"
+          },
+          {
+            "field": "t_rozdil",
+            "title": "Rozdíl"
+          },
+          {
+            "field": "t_eu",
+            "title": "Oproti EU"
+          },
+          {
+            "field": "t_poradi",
+            "title": "Pořadí"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Míra zaměstnanosti podle počtu a věku dětí (lfst_hheredch), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en)"
+}

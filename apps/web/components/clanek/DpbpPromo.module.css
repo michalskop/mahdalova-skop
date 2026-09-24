@@ -1,0 +1,91 @@
+/* DpbpPromo – inline pointer into the DPBP special. Navy card, dotted profile
+   head (ProfileHead) + "Vymíráme?" headline. Colours from the binding palette:
+   brandNavy.9 #101432, background.2 #f8f6f0, brandNavy.2 #bcc4df, brand.4 #ff1a4a. */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  background: #101432;
+  border-radius: 6px;
+  color: #f8f6f0;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card:hover .cta {
+  text-decoration: underline;
+}
+
+.head {
+  flex: 0 0 34%;
+  max-width: 8.5rem;
+  display: block;
+}
+.head svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.kicker {
+  font-family: var(--mantine-font-family-headings);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bcc4df;
+  line-height: 1.3;
+}
+.title {
+  font-family: var(--mantine-font-family);
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #f8f6f0;
+}
+.text {
+  font-family: var(--mantine-font-family-headings);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #f8f6f0;
+}
+.cta {
+  font-family: var(--mantine-font-family-headings);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ff1a4a;
+}
+
+/* Same floating/bleed standard as RelatedArticles / InfoBox side asides. */
+.floatRight {
+  float: right;
+  width: var(--dt-bleed-width, 48%);
+  margin: 0 var(--dt-bleed-pull, -12%) var(--dt-bleed-gap-y, 0.95rem) var(--dt-bleed-gap, 1.25rem);
+}
+.floatLeft {
+  float: left;
+  width: var(--dt-bleed-width, 48%);
+  margin: 0 var(--dt-bleed-gap, 1.25rem) var(--dt-bleed-gap-y, 0.95rem) var(--dt-bleed-pull, -12%);
+}
+:global(.mantine-Text-root) > .floatRight,
+:global(.mantine-Text-root) > .floatLeft {
+  margin-top: var(--dt-bleed-gap-y, 0.95rem);
+}
+
+@media (max-width: 768px) {
+  .floatRight,
+  .floatLeft {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
