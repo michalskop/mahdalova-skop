@@ -1,0 +1,43 @@
+/* ScrollRoute – grey track + ink line drawn by scroll. Colours can be
+   overridden from the consumer via --scroll-route-track / --scroll-route-ink. */
+
+.route {
+  left: 0;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Keep in sync with MOBILE_BREAKPOINT in ScrollRoute.tsx. */
+@media (max-width: 820px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+.track,
+.progress {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.track {
+  stroke: var(--scroll-route-track, var(--mantine-color-background-7));
+  stroke-width: 5;
+}
+
+.progress {
+  stroke: var(--scroll-route-ink, var(--mantine-color-brandNavy-9));
+  stroke-width: 7;
+}

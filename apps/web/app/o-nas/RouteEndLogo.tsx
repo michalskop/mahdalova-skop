@@ -7,16 +7,22 @@ import styles from './ClosingNote.module.css';
 export const ROUTE_END_EVENT = 'o-nas:route-end';
 
 /**
- * Donut logo waiting under the end of the route line. It makes one full turn
- * when the line arrives, and another one on every mouse hover.
+ * Donut logo at the end of the route line. Grey like the other stops until
+ * the line touches it; then it lights up for good and makes one full turn.
+ * Every mouse hover spins it once more.
  */
 export default function RouteEndLogo() {
+  const [lit, setLit] = useState(false);
   const [turns, setTurns] = useState(0);
   const spin = () => setTurns((count) => count + 1);
 
   useEffect(() => {
-    window.addEventListener(ROUTE_END_EVENT, spin);
-    return () => window.removeEventListener(ROUTE_END_EVENT, spin);
+    const onArrive = () => {
+      setLit(true);
+      spin();
+    };
+    window.addEventListener(ROUTE_END_EVENT, onArrive);
+    return () => window.removeEventListener(ROUTE_END_EVENT, onArrive);
   }, []);
 
   return (
@@ -25,7 +31,7 @@ export default function RouteEndLogo() {
       alt=""
       aria-hidden="true"
       data-route-end
-      className={styles.endLogo}
+      className={`${styles.endLogo} ${lit ? styles.endLogoLit : ''}`}
       style={{ transform: `rotate(${turns * 360}deg)` }}
       onMouseEnter={spin}
     />

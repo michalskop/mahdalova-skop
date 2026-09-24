@@ -14,41 +14,9 @@
   z-index: 1;
 }
 
-.route {
-  -webkit-mask-image: linear-gradient(to bottom, #000 var(--route-fade-start), transparent var(--route-fade-end));
-  mask-image: linear-gradient(to bottom, #000 var(--route-fade-start), transparent var(--route-fade-end));
-  height: var(--route-height);
-  left: 0;
-  overflow: visible;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
+/* The route line itself is the shared ScrollRoute component. */
 
-.routeMobile {
-  display: none;
-}
-
-.routeTrack,
-.routeProgress {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* Grey wavy track connecting the logos; the red line fills over it. */
-.routeTrack {
-  stroke: var(--mantine-color-background-7);
-  stroke-width: 5;
-}
-
-.routeProgress {
-  stroke: var(--route-ink-blue);
-  stroke-width: 7;
-}
-
-/* Donut logo markers sit on the line; greyed until the red line reaches them */
+/* Donut logo markers sit on the line; greyed until the line reaches them */
 .logoMark {
   background: var(--mantine-color-background-1);
   border-radius: 50%;
@@ -286,14 +254,6 @@
     margin: 12px 0 100px;
   }
 
-  .routeDesktop {
-    display: none;
-  }
-
-  .routeMobile {
-    display: block;
-  }
-
   .milestone {
     width: auto;
   }
@@ -324,7 +284,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .routeProgress,
   .logoMark,
   .logoImg,
   .bubble,
