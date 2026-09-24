@@ -253,17 +253,7 @@ export default function AboutScrolly() {
           style={{ '--milestone-y': `${layout.centers[index]}px` } as React.CSSProperties}
         >
           <div className={`${styles.bubble} ${step.masthead ? styles.bubbleCentered : ''}`}>
-            <svg className={styles.bubbleTrace} aria-hidden="true" preserveAspectRatio="none">
-              <rect
-                className={styles.bubbleTraceLine}
-                x="1"
-                y="1"
-                width="calc(100% - 2px)"
-                height="calc(100% - 2px)"
-                rx="4"
-                pathLength="1"
-              />
-            </svg>
+            <span className={styles.bubbleFrame} aria-hidden="true" />
             {step.portrait ? (
               <div className={styles.bubbleHeader}>
                 <img

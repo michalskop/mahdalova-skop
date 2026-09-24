@@ -19,6 +19,9 @@ export function SupportMenuButton({ compactOnMobile = false }: { compactOnMobile
           color={theme.colors.brandYellow[6]}
           radius="md"
           style={{ flexShrink: 0 }}
+          // Optical centring: the middle of the capitals sits 0.08em below the
+          // label's middle in IBM Plex Serif, so lift the label by that much.
+          styles={{ label: { position: 'relative', top: '-0.08em' } }}
         >
           {compactOnMobile ? (
             <>
