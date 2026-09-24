@@ -24,16 +24,30 @@
 /* Donut under the end of the route line; one full turn when the line arrives
    and on every hover (rotation set inline by RouteEndLogo). */
 .endLogo {
+  background: var(--mantine-color-background-2);
+  border-radius: 50%;
   display: block;
-  filter: grayscale(1) opacity(0.45);
   height: 64px;
   margin: 0 auto 28px;
-  /* Starts turning at once, then settles softly. */
-  transition: transform 1100ms cubic-bezier(0.2, 0.7, 0.3, 1), filter 320ms ease;
+  /* Above the route line (the timeline sits at z-index 1), so the line's tip
+     hides under the logo. */
+  position: relative;
+  /* Calm, even turn: gentle start and gentle stop. */
+  transition: transform 2400ms cubic-bezier(0.37, 0, 0.63, 1);
   width: 64px;
+  z-index: 2;
 }
 
-.endLogoLit {
+.endLogoImg {
+  display: block;
+  /* Grey like the other stops until the line touches it. */
+  filter: grayscale(1) opacity(0.45);
+  height: 100%;
+  transition: filter 600ms ease;
+  width: 100%;
+}
+
+.endLogoLit .endLogoImg {
   filter: grayscale(0) opacity(1);
 }
 

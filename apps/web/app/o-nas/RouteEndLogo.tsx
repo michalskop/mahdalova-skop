@@ -25,15 +25,17 @@ export default function RouteEndLogo() {
     return () => window.removeEventListener(ROUTE_END_EVENT, onArrive);
   }, []);
 
+  // The wrapper is an opaque disc in the section's colour (invisible), so the
+  // tip of the line tucked under the logo never shows through the grey logo.
   return (
-    <img
-      src="/images/datatimes-donut.svg"
-      alt=""
+    <span
       aria-hidden="true"
       data-route-end
       className={`${styles.endLogo} ${lit ? styles.endLogoLit : ''}`}
       style={{ transform: `rotate(${turns * 360}deg)` }}
       onMouseEnter={spin}
-    />
+    >
+      <img src="/images/datatimes-donut.svg" alt="" className={styles.endLogoImg} />
+    </span>
   );
 }

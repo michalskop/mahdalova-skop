@@ -133,6 +133,8 @@ const steps: Step[] = [
 const MOBILE_X = [710, 50, 710, 50, 710, 50];
 // Fallback end of the line (below the last card) until the closing logo is measured.
 const ROUTE_END = 360;
+// The line's tip tucks this far under the closing logo (which sits above it).
+const END_TUCK = 10;
 const LOGO_SRC = '/images/datatimes-donut.svg';
 
 export default function AboutScrolly() {
@@ -232,8 +234,9 @@ export default function AboutScrolly() {
         containerRef={sectionRef}
         width={layout.width}
         stops={routeStops}
-        end={{ y: endY, x: 0.5 }}
+        end={{ y: endY + END_TUCK, x: 0.5 }}
         tail="node"
+        arriveBefore={END_TUCK}
         onReach={(index) => setActive(Math.max(0, index))}
         onArrive={() => window.dispatchEvent(new Event(ROUTE_END_EVENT))}
       />

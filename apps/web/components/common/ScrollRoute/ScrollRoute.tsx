@@ -53,6 +53,12 @@ type ScrollRouteProps = {
   onReach?: (index: number) => void;
   /** Called once when the line arrives at its end. */
   onArrive?: () => void;
+  /**
+   * tail="node": the line counts as arrived this many px before `end.y`.
+   * Lets the tip tuck under an end marker (end.y inside it) while the
+   * arrival still fires the moment the line touches the marker's rim.
+   */
+  arriveBefore?: number;
 };
 
 // Keep in sync with the media query in ScrollRoute.module.css.
@@ -96,6 +102,7 @@ export default function ScrollRoute({
   headRamp = 360,
   onReach,
   onArrive,
+  arriveBefore = 1,
 }: ScrollRouteProps) {
   const desktopRef = useRef<SVGPathElement>(null);
   const mobileRef = useRef<SVGPathElement>(null);
@@ -115,7 +122,7 @@ export default function ScrollRoute({
     let frame = 0;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const firstY = stops[0].y;
-    const arrivalY = tail === 'fade' ? end.y - FADE_ARRIVAL : end.y - 1;
+    const arrivalY = tail === 'fade' ? end.y - FADE_ARRIVAL : end.y - arriveBefore;
 
     // Where the head should be for the current scroll position.
     const targetY = () => {
@@ -203,7 +210,7 @@ export default function ScrollRoute({
     };
     // stopKey stands in for `stops` (a new array every render would restart
     // the loop and reset the eased head on each lit stop).
-  }, [containerRef, width, stopKey, end.y, end.x, tail, headAnchor, headRamp, stopRadius.desktop, stopRadius.mobile]);
+  }, [containerRef, width, stopKey, end.y, end.x, tail, headAnchor, headRamp, stopRadius.desktop, stopRadius.mobile, arriveBefore]);
 
   const fadeStyle = tail === 'fade'
     ? {
