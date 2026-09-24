@@ -71,7 +71,14 @@ const SubscribeNewsletter = React.forwardRef<HTMLDivElement, FormProps>(
                   styles={(theme) => ({
                     input: {
                       backgroundColor: theme.colors.brandDeepRed[7],
-                    },
+                      // Světlé písmo (#f8f6f0) na tmavě červeném poli – jinak
+                      // vepisovaná adresa zaniká. Text-fill pokryje i autofill.
+                      '--input-color': theme.colors.background[2],
+                      '--input-placeholder-color': 'rgba(248, 246, 240, 0.6)',
+                      color: theme.colors.background[2],
+                      WebkitTextFillColor: theme.colors.background[2],
+                      caretColor: theme.colors.background[2],
+                    } as React.CSSProperties,
                   })}
                 />
               </Grid.Col>

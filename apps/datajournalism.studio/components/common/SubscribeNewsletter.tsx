@@ -103,7 +103,13 @@ const SubscribeNewsletter = React.forwardRef<HTMLDivElement, FormProps>(
                     styles={(theme) => ({
                       input: {
                         backgroundColor: theme.colors.brandDeepRed[7], // Set your desired background color here
-                      },
+                        // Light text (#f8f6f0) so the typed address is readable; text-fill covers autofill.
+                        '--input-color': '#f8f6f0',
+                        '--input-placeholder-color': 'rgba(248, 246, 240, 0.6)',
+                        color: '#f8f6f0',
+                        WebkitTextFillColor: '#f8f6f0',
+                        caretColor: '#f8f6f0',
+                      } as React.CSSProperties,
                     })}
                   />
 
