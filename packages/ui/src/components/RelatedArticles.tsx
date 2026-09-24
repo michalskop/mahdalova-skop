@@ -491,7 +491,9 @@ export function RelatedArticles({
   // Explicit props override preset defaults
   const effectiveColumns    = columns        ?? defaults.columns;
   const effectiveImgPos     = imagePosition  ?? defaults.imagePosition;
-  const effectiveBg         = cardBackground ?? defaults.cardBackground;
+  // Floating side box is framed like the 'cards' block (cream container), so
+  // its cards turn white to stand out from the frame.
+  const effectiveBg         = cardBackground ?? (floatClass ? 'white' : defaults.cardBackground);
   const effectiveTitleSize  = titleSize      ?? defaults.titleSize;
   const effectiveShowExcerpt      = showExcerpt      ?? defaults.showExcerpt;
   const effectiveShowImage        = showImage        ?? defaults.showImage;
@@ -532,9 +534,10 @@ export function RelatedArticles({
 
   if (displayed.length === 0) return null;
 
-  // 'cards' renders as a framed section: a cream (#f8f6f0) container that
-  // underlays the lighter (white) cards. Other presets stay frameless.
-  const framed = preset === 'cards';
+  // 'cards' and the floating side box ("Napsali jsme") render as a framed
+  // section: a cream (#f8f6f0) container that underlays the lighter (white)
+  // cards. Other presets stay frameless.
+  const framed = preset === 'cards' || !!floatClass;
 
   return (
     <Box
@@ -543,7 +546,7 @@ export function RelatedArticles({
       my={floatClass ? undefined : 'xl'}
       className={floatClass}
       bg={framed ? 'background.2' : undefined}
-      p={framed ? 'lg' : undefined}
+      p={framed ? (floatClass ? 'md' : 'lg') : undefined}
       style={framed ? { borderRadius: 10 } : undefined}
     >
       {effectiveHeading && (
