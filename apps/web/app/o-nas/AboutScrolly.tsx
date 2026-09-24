@@ -40,7 +40,7 @@ const steps: Step[] = [
     title: 'DataTimes.cz',
     masthead: true,
     paragraphs: [
-      'Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus odvahy (nás to stálo práci).',
+      'Vyprávíme příběhy, které tvoříme z&nbsp;dat, hledáme kontext a&nbsp;na vlastní kůži jsme si už vyzkoušeli, že věrně popisovat skutečnost si leckdy žádá i&nbsp;kus odvahy (my jsme kvůli tomu ze dne na den přišli o&nbsp;práci a&nbsp;příjmy a&nbsp;museli začít znovu).',
       'Hodně nám záleží na tom, aby naše práce odrážela realitu co nejvěrněji. Naše výhoda je, umíme pracovat s&nbsp;daty, hledat je, číst, vizualizovat, interpretovat.',
       'Hledáme a&nbsp;poctivě zachycujeme. Nepřibarvujeme. Nepracujeme pro zájmové skupiny. A&nbsp;rozhodně se nebojíme.',
     ],
@@ -75,7 +75,7 @@ const steps: Step[] = [
     },
     paragraphs: [
       'Statistik, demograf a&nbsp;programátor, zakladatel a&nbsp;ředitel neziskových <a href="https://volebnikalkulacka.cz/" target="_blank" rel="noreferrer">Volebních kalkulaček</a>, které od roku 2006 pomáhají v&nbsp;mnoha zemích milionům voličů k&nbsp;lepšímu rozhodování ve volbách.',
-      'Vítěz Novinářské ceny (2025) a&nbsp;držitel tří finálových nominací. Působil v&nbsp;Institutu Maxe Plancka v&nbsp;německém Rostocku, na Universidad de Salamanca ve Španělsku a&nbsp;na Karlově univerzitě. Specializuje se na volební analýzy a&nbsp;predikce. Nyní mj. vyučuje na Západočeské univerzitě v&nbsp;Plzni.',
+      'Vítěz Novinářské ceny (2025) a&nbsp;držitel tří finálových nominací. Působil v&nbsp;Institutu Maxe Plancka v&nbsp;německém Rostocku, na Universidad de Salamanca ve Španělsku a&nbsp;na Karlově univerzitě. Specializuje se na volební analýzy a&nbsp;predikce. Nyní mj. působí na Západočeské univerzitě v&nbsp;Plzni.',
     ],
     x: 700,
     y: 1430,
@@ -106,7 +106,7 @@ const steps: Step[] = [
       'Vyrábět a&nbsp;šířit neověřené informace, polopravdy a&nbsp;účelová PR sdělení je stonásobně levnější než dělat kvalitní žurnalistiku. Veřejný prostor válcují dezinformace, influenceři parazitující na novinařině a&nbsp;marketingové projekty – nesené algoritmy sociálních sítí a&nbsp;partikulárními zájmy.',
     ],
     afterCta: [
-      'Pokud jste dočetli až sem, stejně jako my víte, že vymyslet chytlavý nesmysl, šířit polopravdu nebo zaplatit kampaň se skrytým zájmem je nyní snazší a&nbsp;levnější než kdy dřív. Důkladná, nezávislá novinařina mezitím čelí brutální přesile: algoritmy přejí zkratkám, emoce porážejí fakta a&nbsp;pozornost lidí se tříští.',
+      'Pokud jste dočetli až sem, stejně jako my víte, že vymyslet chytlavý nesmysl, šířit polopravdu nebo rovnou spustit účelovou kampaň je nyní snazší než kdy dřív a&nbsp;prakticky zadarmo. Důkladná, nezávislá novinařina mezitím čelí brutální přesile: algoritmy přejí zkratkám, emoce porážejí fakta a&nbsp;pozornost lidí se tříští.',
     ],
     bars: true,
     x: 700,
