@@ -169,7 +169,8 @@ export default function AboutScrolly() {
   const desktopPathRef = useRef<SVGPathElement>(null);
   const mobilePathRef = useRef<SVGPathElement>(null);
   const [active, setActive] = useState(-1);
-  const [progress, setProgress] = useState(0);
+  // Current (eased) position of the line's head, in section px.
+  const headRef = useRef<number | null>(null);
   const [layout, setLayout] = useState({
     centers: steps.map((step) => step.y),
     nodes: steps.map((step) => step.y),
@@ -230,10 +231,12 @@ export default function AboutScrolly() {
 
   useEffect(() => {
     let frame = 0;
-    const updateProgress = () => {
-      frame = 0;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Where the head of the line should be for the current scroll position.
+    const targetRouteY = () => {
       const section = sectionRef.current;
-      if (!section) return;
+      if (!section) return layout.nodes[0];
       const scrollY = Math.max(0, window.scrollY);
       const viewport = window.innerHeight;
       const sectionTop = section.getBoundingClientRect().top + scrollY;
@@ -253,43 +256,71 @@ export default function AboutScrolly() {
       const routeAtBottom = rawRouteY(maxScroll);
       const stretch = routeAtBottom < endY && routeAtBottom > firstY
         ? (endY - firstY) / (routeAtBottom - firstY) : 1;
-      const routeY = scrollY <= 0
+      return scrollY <= 0
         ? firstY
         : Math.min(endY, firstY + (rawRouteY(scrollY) - firstY) * stretch);
+    };
 
-      const path = window.innerWidth <= 820 ? mobilePathRef.current : desktopPathRef.current;
+    // Draws the line up to `routeY` straight in the DOM (no React re-render
+    // per frame) and lights the logos from that very same head position, so
+    // the drawing and the lighting can never drift apart.
+    const render = (routeY: number) => {
+      const firstY = layout.nodes[0];
+      const mobile = window.innerWidth <= 820;
+      const path = mobile ? mobilePathRef.current : desktopPathRef.current;
+      let progress = 0;
       if (path && routeY > firstY) {
         const totalLength = path.getTotalLength();
         let low = 0;
         let high = totalLength;
-        for (let iteration = 0; iteration < 18; iteration += 1) {
+        for (let iteration = 0; iteration < 22; iteration += 1) {
           const middle = (low + high) / 2;
           if (path.getPointAtLength(middle).y < routeY) low = middle;
           else high = middle;
         }
-        setProgress(routeY >= endY ? 1 : ((low + high) / 2) / totalLength);
-        if (routeY >= endY && !endReachedRef.current) {
-          endReachedRef.current = true;
-          window.dispatchEvent(new Event(ROUTE_END_EVENT));
-        }
-      } else {
-        setProgress(0);
+        progress = routeY >= endY ? 1 : ((low + high) / 2) / totalLength;
+      }
+      [desktopPathRef.current, mobilePathRef.current].forEach((line) => {
+        if (!line) return;
+        line.setAttribute('stroke-dashoffset', String(1 - progress));
+        line.setAttribute('visibility', progress > 0 ? 'visible' : 'hidden');
+      });
+
+      if (routeY >= endY && !endReachedRef.current) {
+        endReachedRef.current = true;
+        window.dispatchEvent(new Event(ROUTE_END_EVENT));
       }
 
       // The first logo + card are lit from page load (the starting point);
-      // every further one lights up once the red line reaches its logo.
+      // every further one lights up the moment the head touches its rim.
+      const logoRadius = mobile ? 17 : 20;
       let reachedIndex = 0;
-      steps.forEach((_, index) => {
-        if (routeY >= layout.nodes[index]) reachedIndex = index;
+      layout.nodes.forEach((node, index) => {
+        if (routeY >= node - logoRadius) reachedIndex = index;
       });
       setActive(reachedIndex);
     };
+
+    // The head eases towards its target every frame: wheel steps turn into
+    // one continuous stroke instead of jumps.
+    const tick = () => {
+      frame = 0;
+      const target = targetRouteY();
+      const current = headRef.current ?? target;
+      const next = reducedMotion || Math.abs(target - current) < 0.5
+        ? target : current + (target - current) * 0.2;
+      headRef.current = next;
+      render(next);
+      if (next !== target) frame = window.requestAnimationFrame(tick);
+    };
     const onScroll = () => {
-      if (!frame) frame = window.requestAnimationFrame(updateProgress);
+      if (!frame) frame = window.requestAnimationFrame(tick);
     };
 
-    frame = window.requestAnimationFrame(updateProgress);
-    const settleTimer = window.setTimeout(updateProgress, 120);
+    // On load (or relayout) jump straight to the right place, no glide.
+    headRef.current = targetRouteY();
+    render(headRef.current);
+    const settleTimer = window.setTimeout(onScroll, 120);
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
     return () => {
@@ -339,14 +370,15 @@ export default function AboutScrolly() {
         aria-hidden="true"
       >
         <path className={styles.routeTrack} d={desktopPath} />
+        {/* stroke-dashoffset / visibility are driven per frame by render() */}
         <path
           ref={desktopPathRef}
           className={styles.routeProgress}
           d={desktopPath}
           pathLength={1}
           strokeDasharray={1}
-          strokeDashoffset={1 - progress}
-          visibility={progress > 0 ? 'visible' : 'hidden'}
+          strokeDashoffset={1}
+          visibility="hidden"
         />
       </svg>
 
@@ -363,8 +395,8 @@ export default function AboutScrolly() {
           d={mobilePath}
           pathLength={1}
           strokeDasharray={1}
-          strokeDashoffset={1 - progress}
-          visibility={progress > 0 ? 'visible' : 'hidden'}
+          strokeDashoffset={1}
+          visibility="hidden"
         />
       </svg>
 
