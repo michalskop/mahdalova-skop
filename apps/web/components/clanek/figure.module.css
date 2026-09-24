@@ -54,14 +54,37 @@
   background: rgba(0, 0, 0, 0.88);
   cursor: zoom-out;
 }
+/* Shrink-wraps the photo so the caption strip spans exactly the image width. */
+.lightboxFrame {
+  position: relative;
+  display: inline-block;
+  max-width: 96vw;
+  max-height: 96vh;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
 .lightboxImg {
+  display: block;
   max-width: 96vw;
   max-height: 96vh;
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+/* Caption laid over the bottom of the photo: background.2 (#f8f6f0) text on a
+   translucent ink-blue strip (brandNavy.9 #101432) so the photo shows through. */
+.lightboxCaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.7rem 1.1rem 0.8rem;
+  background: rgba(16, 20, 50, 0.72);
+  color: #f8f6f0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-style: italic;
 }
 .lightboxClose {
   position: fixed;

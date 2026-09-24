@@ -76,8 +76,11 @@ export function Figure({ src = '', alt = '', caption, side = 'right', slug = '' 
           aria-label={alt || 'Fotografie'}
           onClick={() => setOpen(false)}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={resolvedSrc} alt={alt} className={styles.lightboxImg} />
+          <div className={styles.lightboxFrame}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={resolvedSrc} alt={alt} className={styles.lightboxImg} />
+            {caption ? <div className={styles.lightboxCaption}>{caption}</div> : null}
+          </div>
           <button
             type="button"
             className={styles.lightboxClose}
