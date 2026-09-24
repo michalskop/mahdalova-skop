@@ -1,15 +1,15 @@
 ---
-title: "Matky předškoláků pracují v Česku nejméně v EU. Vláda na to odpovídá vyšším rodičákem"
+title: "Česko pouští matky předškoláků do zaměstnání nejméně v EU. Vláda na to odpovídá vyšším rodičákem"
 date: "2026-09-23"
 author: "Kateřina Mahdalová"
-excerpt: "Otcové dětí do šesti let mají v Česku nejvyšší zaměstnanost v Evropské unii, matky spolu s Rumunkami nejnižší. Rozdíl 46 procentních bodů nemá v EU obdobu. Na kulatém stole ve Sněmovně se odborníci shodli, že chybí jesle, zkrácené úvazky a otcové na rodičovské. Vláda od ledna 2027 zvyšuje rodičovský příspěvek na 400 tisíc korun."
+excerpt: "Otcové dětí do šesti let mají v Česku placenou práci nejčastěji v Evropské unii, matky spolu s Rumunkami nejméně často. Rozdíl 46 procentních bodů nemá v EU obdobu. Zájem matky mají: jakmile jde dítě do školy, jsou Češky zaměstnané častěji než jinde v Evropě. Na kulatém stole ve Sněmovně se odborníci shodli, že je na trh práce nepouštějí chybějící jesle, zkrácené úvazky a otcové na rodičovské. Vláda od ledna 2027 zvyšuje rodičovský příspěvek na 400 tisíc korun."
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza", "společnost"]
 tags: ["slaďování práce a rodiny", "rodinná politika", "demografie", "porodnost", "rodičovský příspěvek", "jesle", "zkrácené úvazky", "otcovská", "Poslanecká sněmovna", "Eurostat", "MPSV"]
 ---
 
-Otec, jehož nejmladšímu dítěti ještě nebylo šest let, pracuje v Česku s pravděpodobností 97,6 procenta. Nikde v Evropské unii to není víc. Matka ve stejné situaci pracuje s pravděpodobností 51,5 procenta. Stejně málo je to jen v Rumunsku. Rozdíl 46 procentních bodů je [podle dat Eurostatu za rok 2025](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en) největší v celé unii. Druhá Itálie má 35 bodů, průměr EU je 22.
+Otec, jehož nejmladšímu dítěti ještě nebylo šest let, je v Česku zaměstnaný s pravděpodobností 97,6 procenta. Nikde v Evropské unii to není víc. Matka ve stejné situaci má placenou práci s pravděpodobností 51,5 procenta. Stejně málo je to jen v Rumunsku. Rozdíl 46 procentních bodů je [podle dat Eurostatu za rok 2025](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en) největší v celé unii. Druhá Itálie má 35 bodů, průměr EU je 22. Méně přitom matky malých dětí nepracují – doma odvádějí péči, kterou statistika zaměstnanosti nezachytí. Do placeného zaměstnání je ale česká společnost pouští nejhůř z celé unie.
 
 <RelatedArticles preset="sidebar" slugs={["analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen"]} position="right" heading="🔻🔻🔻" />Tohle číslo stálo v pozadí jednání, které se ve středu 23. září 2026 konalo v Konírně Poslanecké sněmovny. Kulatý stůl [Slaďování práce a rodiny v aktuální ekonomické situaci](https://www.kdu.cz/aktualne/ruzne/pozvanka-kulaty-stul-sladovani-prace-a-rodiny-v-ak?feed=c19871af-4fb0-4d09-9738-238dc4e80155) svolal poslanec Václav Pláteník (KDU-ČSL) v rámci série Systémová podpora rodin jako investice do budoucnosti. U stolu seděly demografky a socioložky, neziskové organizace, zástupkyně ministerstva práce, personální ředitelka velké pojišťovny i úřednice ostravského magistrátu. Na tom, co rodičům malých dětí v Česku chybí, se shodly rychle: jesle, zkrácené úvazky a otcové, kteří zůstanou s dítětem doma.
 
@@ -24,7 +24,7 @@ Z čeho vycházíme: průběh kulatého stolu známe ze [záznamu Poslanecké sn
   numbers={[
     {
       value: "51,5 %",
-      title: "matek předškoláků pracuje",
+      title: "matek předškoláků je zaměstnaných",
       description: "Nejméně v EU spolu s Rumunskem. Průměr unie je 70,1 procenta.",
       color: "brand"
     },
@@ -36,7 +36,7 @@ Z čeho vycházíme: průběh kulatého stolu známe ze [záznamu Poslanecké sn
     },
     {
       value: "13,1 %",
-      title: "pracujících žen má zkrácený úvazek",
+      title: "zaměstnaných žen má zkrácený úvazek",
       description: "Průměr EU je 28,2 procenta, v Německu a Rakousku skoro polovina.",
       color: "brand"
     }
@@ -45,17 +45,17 @@ Z čeho vycházíme: průběh kulatého stolu známe ze [záznamu Poslanecké sn
 
 ## Česko má v Evropě největší propast mezi matkami a otci malých dětí
 
-Jana Paloncyová z Nadace Sirius to na kulatém stole [shrnula jednou větou](https://videoarchiv.psp.cz/video2/K48/2026/09/23/_20260923101002.mp4#t=241): Česko je premiantem v zaměstnanosti mužů a outsiderem v zaměstnanosti žen ve věku 30 až 34 let. Data jí dávají za pravdu. Muži v tomto věku pracují v Česku v 95,6 procenta případů, nejčastěji v EU. Ženy v 66,5 procenta, méně je to jen v Rumunsku a Itálii. Právě kolem třicítky přitom české ženy nejčastěji rodí.
+Jana Paloncyová z Nadace Sirius to na kulatém stole [shrnula jednou větou](https://videoarchiv.psp.cz/video2/K48/2026/09/23/_20260923101002.mp4#t=241): Česko je premiantem v zaměstnanosti mužů a outsiderem v zaměstnanosti žen ve věku 30 až 34 let. Data jí dávají za pravdu. Muži v tomto věku jsou v Česku zaměstnaní v 95,6 procenta případů, nejčastěji v EU. Ženy v 66,5 procenta, méně je to jen v Rumunsku a Itálii. Právě kolem třicítky přitom české ženy nejčastěji rodí.
 
 Graf ukazuje, jak daleko od sebe jsou v jednotlivých zemích matky a otcové dětí mladších šesti let.
 
 <VegaChart dataFile="data/matky-otcove-zamestnanost.json" />
 
-Zaměstnanost otců se v celé unii drží zhruba mezi 85 a 98 procenty, rozdíly mezi zeměmi jsou malé. O pořadí rozhodují matky. Ve Slovinsku, Portugalsku nebo Chorvatsku pracuje přes 84 procent matek předškoláků, ve Švédsku a Dánsku přes 80 procent. Z postkomunistických zemí je na tom podobně jako Česko jen Rumunsko. Slovensko, Bulharsko i Polsko mají o 18 až 22 bodů víc.
+Zaměstnanost otců se v celé unii drží zhruba mezi 85 a 98 procenty, rozdíly mezi zeměmi jsou malé. O pořadí rozhodují matky. Ve Slovinsku, Portugalsku nebo Chorvatsku má placenou práci přes 84 procent matek předškoláků, ve Švédsku a Dánsku přes 80 procent. Z postkomunistických zemí je na tom podobně jako Česko jen Rumunsko. Slovensko, Bulharsko i Polsko mají o 18 až 22 bodů víc.
 
 ## Když jde dítě do školy, české matky Evropu předběhnou
 
-Sama o sobě by nízká zaměstnanost matek mohla znamenat, že Češky pracovat nechtějí. Druhý graf tu interpretaci vyvrací. Jakmile je nejmladšímu dítěti šest let, pracuje 93,3 procenta českých matek – o patnáct bodů víc, než je evropský průměr. Podobně vysoko jsou Češky bez dětí.
+Sama o sobě by nízká zaměstnanost matek mohla znamenat, že Češky o zaměstnání nestojí. Druhý graf tu interpretaci vyvrací. Jakmile je nejmladšímu dítěti šest let, je zaměstnaných 93,3 procenta českých matek – o patnáct bodů víc, než je evropský průměr. Podobně vysoko jsou Češky bez dětí.
 
 <VegaChart dataFile="data/matky-podle-veku-ditete.json" />
 

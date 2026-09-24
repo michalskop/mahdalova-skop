@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Se školákem pracují {české matky|#de1743} častěji než {evropské|#bcbcb0}, s předškolákem o 19 bodů méně",
+    "text": "Se školákem jsou {české matky|#de1743} zaměstnané častěji než {evropské|#bcbcb0}, s předškolákem o 19 bodů méně",
     "subtitle": "Podíl zaměstnaných žen ve věku 25–49 let podle věku nejmladšího dítěte (%, 2025)"
   },
   "width": "container",

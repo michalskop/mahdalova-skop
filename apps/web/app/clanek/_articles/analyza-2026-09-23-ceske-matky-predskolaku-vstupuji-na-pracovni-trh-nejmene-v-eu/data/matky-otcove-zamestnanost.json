@@ -1299,15 +1299,15 @@
           },
           {
             "field": "t_matky",
-            "title": "Pracující matky"
+            "title": "Zaměstnané matky"
           },
           {
             "field": "t_otcove",
-            "title": "Pracující otcové"
+            "title": "Zaměstnaní otcové"
           },
           {
             "field": "t_sto",
-            "title": "Ze 100 rodičů pracuje"
+            "title": "Ze 100 rodičů je zaměstnáno"
           },
           {
             "field": "t_rozdil",
