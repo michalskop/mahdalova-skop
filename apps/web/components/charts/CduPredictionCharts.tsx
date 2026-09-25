@@ -136,12 +136,41 @@ export function CduPredictionTimeline() {
   const [hidden, setHidden] = useState<Set<SeriesKey>>(new Set());
   const toggle = (k: SeriesKey) => setHidden((h) => { const n = new Set(h); if (n.has(k)) n.delete(k); else n.add(k); return n; });
   const show = (k: SeriesKey) => !hidden.has(k);
+  // Přiblížení časové osy uvnitř grafu (Ctrl + kolečko, tažení, dvojklik = zpět)
+  const [dom, setDom] = useState<[number, number]>([0, 375]);
+  const geo = useRef({ l: 0, w: 1 });
+  const drag = useRef<{ x0: number; dom: [number, number] } | null>(null);
+  const [finePointer, setFinePointer] = useState(false);
+  useEffect(() => { setFinePointer(window.matchMedia('(pointer: fine)').matches); }, []);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;          // bez Ctrl stránka normálně scrolluje
+      e.preventDefault();
+      const { l, w } = geo.current;
+      const f = Math.min(1, Math.max(0, (e.clientX - el.getBoundingClientRect().left - l) / w));
+      setDom(([a, b]) => {
+        const span = Math.min(375, Math.max(20, (b - a) * Math.exp(e.deltaY * 0.0025)));
+        const at = a + f * (b - a);
+        let na = at - f * span;
+        na = Math.min(Math.max(0, na), 375 - span);
+        return [na, na + span];
+      });
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, [ref, W]);
+  const zoomed = dom[0] > 0.01 || dom[1] < 374.99;
 
   const narrow = W < 700;
   const H = narrow ? 460 : 470;
   const M = { l: narrow ? 30 : 44, r: narrow ? 8 : 46, t: 18, b: 34 };
   const X1 = 375, Y0 = narrow ? 3.25 : 3.4, Y1 = 5.75;
-  const x = (m: number) => M.l + (m / X1) * (W - M.l - M.r);
+  const plotW = W - M.l - M.r;
+  geo.current = { l: M.l, w: plotW };
+  const x = (m: number) => M.l + ((m - dom[0]) / (dom[1] - dom[0])) * plotW;
+  const L0 = M.l, R0 = W - M.r;   // pevné okraje plochy grafu
   const y = (v: number) => M.t + ((Y1 - v) / (Y1 - Y0)) * (H - M.t - M.b);
   const step = (pts: number[][]) =>
     pts.map((p, i) => (i ? `H${x(p[0]).toFixed(1)}V${y(p[1]).toFixed(1)}` : `M${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`)).join('');
@@ -149,11 +178,14 @@ export function CduPredictionTimeline() {
   const lab: React.CSSProperties = { fontSize: narrow ? 11.5 : 12.5, fill: C.ink, fontFamily: FONT };
   const labB: React.CSSProperties = { ...lab, fontWeight: 600 };
   const labM: React.CSSProperties = { ...lab, fontSize: narrow ? 11 : 12 };
-  const tick: React.CSSProperties = { fontSize: 11.5, fill: C.muted, fontFamily: FONT };
+  const tick: React.CSSProperties = { fontSize: 11.5, fill: C.ink, fontFamily: FONT };
   const aX = 132.27, aV = 4.879, aC = 4.409;   // 20:12 – predikce a průběžné sčítání
   const fX = 75.53, fV = 4.46, fC = 3.792;     // 19:15 – první záznam
   const yTicks = (W < 400 ? [4.2, 4.6, 5.0, 5.4] : narrow ? [3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6] : [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6]);
-  const xTicks = narrow ? [0, 60, 120, 180, 240, 300, 360] : [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360];
+  const span = dom[1] - dom[0];
+  const tStep = span > 240 ? (narrow ? 60 : 30) : span > 120 ? (narrow ? 30 : 15) : span > 50 ? (narrow ? 15 : 10) : 5;
+  const xTicks: number[] = [];
+  for (let m = Math.ceil(dom[0] / tStep - 1e-9) * tStep; m <= dom[1] + 1e-9; m += tStep) xTicks.push(m);
   const lh = narrow ? 14 : 15;
 
   function onMove(e: React.PointerEvent<SVGRectElement>) {
@@ -168,7 +200,7 @@ export function CduPredictionTimeline() {
       });
       return;
     }
-    const m = ((sx - M.l) / (W - M.l - M.r)) * X1;
+    const m = dom[0] + ((sx - M.l) / plotW) * (dom[1] - dom[0]);
     if ((!show('model') && !show('count')) || m < PRED[0][0] - 3) { setTip(null); setHover(null); return; }
     let i = 0;
     while (i < PRED.length - 1 && PRED[i + 1][0] <= m) i++;
@@ -185,7 +217,22 @@ export function CduPredictionTimeline() {
       </>,
     });
   }
-  const leave = () => { setTip(null); setHover(null); };
+  const leave = () => { setTip(null); setHover(null); drag.current = null; };
+  function onDown(e: React.PointerEvent<SVGRectElement>) {
+    if (e.pointerType === 'mouse' && zoomed) {
+      drag.current = { x0: e.clientX, dom };
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } else onMove(e);
+  }
+  function onDragMove(e: React.PointerEvent<SVGRectElement>) {
+    const d = drag.current;
+    if (!d) { onMove(e); return; }
+    const sp = d.dom[1] - d.dom[0];
+    let a = d.dom[0] - ((e.clientX - d.x0) / plotW) * sp;
+    a = Math.min(Math.max(0, a), 375 - sp);
+    setDom([a, a + sp]);
+    setTip(null); setHover(null);
+  }
 
   // Poloha popisků
   // svislé linky přesně na pixel (jinak je prohlížeč rozmaže přes dva pixely)
@@ -215,16 +262,19 @@ export function CduPredictionTimeline() {
             aria-label="Predikce CDU během volební noci: od 19:15 stále pod hranicí 5 %, od 20:12 do 0,01 bodu od konečného výsledku 4,888 %. ARD a ZDF ukázaly CDU pod 5 % až ve 22:13 a 22:20.">
             <defs>
               {/* podklad pod popisky exit pollů, aby je linka 5 % nepřeškrtla */}
+              <clipPath id="cduPlotClip">
+                <rect x={L0 - 8} y={0} width={R0 - L0 + (narrow ? 16 : 10)} height={H - M.b} />
+              </clipPath>
               <filter id="cduTextBg" x="-0.04" y="-0.15" width="1.08" height="1.3">
                 <feFlood floodColor={C.surface} />
                 <feComposite in="SourceGraphic" operator="over" />
               </filter>
             </defs>
-            <rect x={x(0)} y={y(Y1)} width={x(X1) - x(0)} height={y(5) - y(Y1)} fill={C.bandIn} />
-            <rect x={x(0)} y={y(5)} width={x(X1) - x(0)} height={y(Y0) - y(5)} fill={C.bandOut} />
+            <rect x={L0} y={y(Y1)} width={R0 - L0} height={y(5) - y(Y1)} fill={C.bandIn} />
+            <rect x={L0} y={y(5)} width={R0 - L0} height={y(Y0) - y(5)} fill={C.bandOut} />
             {yTicks.map((v) => (
               <g key={v}>
-                {v !== 5 && <line x1={x(0)} x2={x(X1)} y1={y(v)} y2={y(v)} stroke={C.grid} />}
+                {v !== 5 && <line x1={L0} x2={R0} y1={y(v)} y2={y(v)} stroke={C.grid} />}
                 <text x={M.l - 7} y={y(v) + 4} textAnchor="end" style={tick}>{fmt(v, 1)}</text>
               </g>
             ))}
@@ -235,27 +285,28 @@ export function CduPredictionTimeline() {
               </g>
             ))}
 
-            <line x1={x(0)} x2={x(X1)} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
+            <line x1={L0} x2={R0} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
             {narrow ? (
               <>
-                <text x={x(X1) - 2} y={y(5) - 6} textAnchor="end" style={labB}>5 %</text>
+                <text x={R0 - 2} y={y(5) - 6} textAnchor="end" style={labB}>5 %</text>
               </>
             ) : (
               <>
-                <text x={x(X1) + 6} y={y(5) + 4} style={labB}>5 %</text>
+                <text x={R0 + 6} y={y(5) + 4} style={labB}>5 %</text>
                 {/* popisky ploch svisle, oba stejně daleko (bandGap) od čáry 5 % */}
                 {([[y(5) - bandGap, 'start', C.inText, 'CDU ve sněmu'], [y(5) + bandGap, 'end', C.outText, 'CDU mimo sněm']] as const).map(([cy, anchor, fill, t]) => (
-                  <text key={t} x={x(X1) + 36} y={cy} textAnchor={anchor} transform={`rotate(-90 ${x(X1) + 36} ${cy})`} style={{ ...labB, fill }}>{t}</text>
+                  <text key={t} x={R0 + 36} y={cy} textAnchor={anchor} transform={`rotate(-90 ${R0 + 36} ${cy})`} style={{ ...labB, fill }}>{t}</text>
                 ))}
               </>
             )}
 
+            <g clipPath="url(#cduPlotClip)">
             {show('count') && <path d={step(COUNT)} fill="none" stroke={C.count} strokeWidth={2} strokeLinejoin="round" />}
             {show('model') && <path d={step(PRED)} fill="none" stroke={C.model} strokeWidth={2.5} strokeLinejoin="round" />}
 
             {/* 19:15 – první záznam: svislá přerušovaná linka až k dolnímu okraji */}
             {(show('model') || show('count')) && (
-              <line x1={px(x(fX))} x2={px(x(fX))} y1={y(show('model') ? fV : fC) + 5} y2={y(Y0)} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
+              <line x1={px(x(fX))} x2={px(x(fX))} y1={y(show('model') ? fV : fC) + 5} y2={y(Y0)} stroke={C.beige} strokeWidth={1} strokeDasharray="2 3" />
             )}
             <Lines x={x(fX) - 6} y={bottomY} anchor="end" lh={lh} styles={[{ ...labM, fontStyle: 'italic' }]}
               lines={narrow ? ['čeká se', 'na sčítání'] : ['čeká se na první', 'sečtené okrsky']} />
@@ -325,12 +376,26 @@ export function CduPredictionTimeline() {
                 <circle cx={hover.x} cy={hover.y} r={4.5} fill={show('model') ? C.model : C.count} stroke="#fff" strokeWidth={2} />
               </>
             )}
-            <rect x={x(0) - 8} y={M.t} width={x(X1) - x(0) + 8} height={H - M.t - M.b} fill="transparent"
-              onPointerMove={onMove} onPointerLeave={leave} onPointerDown={onMove} />
+            </g>
+            <rect x={L0 - 8} y={M.t} width={R0 - L0 + 8} height={H - M.t - M.b} fill="transparent"
+              style={{ cursor: zoomed ? (drag.current ? 'grabbing' : 'grab') : 'default', touchAction: 'pan-y' }}
+              onPointerMove={onDragMove} onPointerLeave={leave} onPointerDown={onDown}
+              onPointerUp={() => { drag.current = null; }} onDoubleClick={() => setDom([0, 375])} />
           </svg>
         )}
         <Tooltip tip={tip} width={W} />
       </div>
+      {finePointer && !narrow && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '6px 0 14px', fontFamily: FONT, fontSize: 12.5, color: C.ink }}>
+          <span>Ctrl + kolečko myši graf přiblíží, tažením ho posunete, dvojklikem vrátíte.</span>
+          {zoomed && (
+            <button type="button" onClick={() => setDom([0, 375])}
+              style={{ border: `1px solid ${C.ink}`, background: 'transparent', borderRadius: 4, padding: '2px 8px', fontFamily: FONT, fontSize: 12.5, color: C.ink, cursor: 'pointer' }}>
+              Zobrazit celý večer
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -372,7 +437,7 @@ export function CduThresholdDots() {
           {ticks.map((v) => (
             <g key={v}>
               {v !== 5 && <line x1={x(v)} x2={x(v)} y1={T - 10} y2={bottom} stroke={C.grid} />}
-              <text x={x(v)} y={bottom + 18} textAnchor="middle" style={{ fontSize: 11.5, fill: C.muted, fontFamily: FONT }}>{fmt(v, 1)} %</text>
+              <text x={x(v)} y={bottom + 18} textAnchor="middle" style={{ fontSize: 11.5, fill: C.ink, fontFamily: FONT }}>{fmt(v, 1)} %</text>
             </g>
           ))}
           <line x1={x(5)} x2={x(5)} y1={T - 10} y2={bottom} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
