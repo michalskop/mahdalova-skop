@@ -27,6 +27,7 @@ import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
 import VegaChart from '@/components/charts/VegaChart';
 import ChartRow from '@/components/charts/ChartRow';
+import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import { Gauge } from '@repo/ui/components/Gauge';
@@ -421,6 +422,8 @@ export function ArticleRenderer({
     },
 
     ChartRow,
+    CduPredictionTimeline,
+    CduThresholdDots,
 
   };
 

@@ -30,17 +30,21 @@ Když se v šest večer zavřely volební místnosti, exit polly veřejnoprávn�
 První záznam v archivu mahdalova-skop.cz (DataTimes.cz) má čas 19:15:32 a obsahuje oficiálně sečtená data zhruba ze čtvrtiny evidovaných okrsků. CDU v jejich průběžném součtu získávala 3,8 procenta a predikční model DataTimes.cz odhadoval konečný zisk sice o necelé procento vyšší, ale zároveň z něj bylo patrné, že se CDU do zemského sněmu nedostane. O tři čtvrtě hodiny později, v osm večer, vyskočil průběžně sečtený zisk CDU na 4,2 procenta a volební predikce DataTimes.cz se posunula na 4,78. Lidovci tedy hlasy sbírali a zisk strany průběžně rostl – model však spočítal, že CDU nepřekročí nutnou pětiprocentní hranici pro zvolení do sněmu; ani jednou se v průběhu sčítání nevychýlil nad pět procent a nejvyšší predikovaná hodnota byla 4,9 procenta, což se nakonec i naplnilo. Oficiální první úplný součet nese v datech zemského volebního úřadu (Landeswahlleitung M‑V) čas 00:06:50 druhý den ráno a hodnotu 4,888 procenta.
 ```
 
-<VegaChart dataFile="data/cdu-prediction.json" />
+<CduPredictionTimeline />
 
-**Predikce CDU zůstávala pod pětiprocentní hranicí** – podíl druhých hlasů (%) • 20.–21. září 2026 • CEST • autoři: Kateřina Mahdalová & Michal Škop • data: archiv Mahdalová & Škop; Landeswahlleitung M‑V
+**Model DataTimes ukázal výsledek CDU o dvě hodiny dřív než televize** – podíl druhých hlasů (%) • 20.–21. září 2026 • CEST • autoři: Kateřina Mahdalová & Michal Škop • data: archiv predikcí Mahdalová & Škop; Landeswahlleitung M‑V; ARD; ZDF
 
-*Graf porovnává bodovou predikci s podílem CDU v dosud sečtených platných druhých hlasech. Svislé značky zachycují postup sčítání jednotek, nikoli podíl sečtených hlasů. Archiv neobsahuje průběžné intervaly nejistoty, proto z něj nelze zpětně určit pravděpodobnost nepostoupení v jednotlivých minutách.*
+*Graf porovnává bodovou predikci s podílem CDU v dosud sečtených platných druhých hlasech. Archiv neobsahuje průběžné intervaly nejistoty, proto z něj nelze zpětně určit pravděpodobnost nepostoupení v jednotlivých minutách.*
 
 Právě v tom je rozdíl mezi datovou predikcí a tím, co v tu chvíli viděli diváci a divačky. Prognóza i projekce veřejnoprávních stanic dlouho nechávaly otázku otevřenou – a agenturní titulek „Sečteno: CDU vypadla“ přišel až ve chvíli, kdy oficiální sčítání doběhlo. Model DataTimes odpovídal na otázku „postoupí, nebo ne?“ už krátce po sedmé, a to jednoznačně: CDU nepostoupí.
 
 Proč nestačilo dívat se prostě na průběžné číslo? Protože okrsky odevzdávají výsledky postupně. Když jsou mezi prvními místa, kde má některá strana silnější podporu, vypadá v průběžném součtu úspěšněji, než jaká nakonec bude po celé zemi – u jiné strany to může být naopak. Model využívá výsledky spolkových voleb 2025 k hledání podobných jednotek a podle právě sečtených výsledků průběžně upravuje odhad stranického posunu; z nahlášené části tak dopočítává i tu dosud nesečtenou.
 
-<Timeline yamlFile="timeline.yaml" />
+<CduThresholdDots />
+
+**Rozhodovala strana hranice, ne desetinka** – odhady podílu CDU (%) a jejich odchylka od konečného výsledku 4,888 % • 20.–21. září 2026 • autoři: Kateřina Mahdalová & Michal Škop • data: archiv predikcí Mahdalová & Škop; Landeswahlleitung M‑V; ARD; ZDF
+
+*První predikce se od výsledku lišila víc než exit poll ZDF. Stála ale na správné straně hranice – a do hodiny se k výsledku přiblížila na setiny.*
 
 ## Dvě salvy jásotu a chlebíčky v Berlíně
 
