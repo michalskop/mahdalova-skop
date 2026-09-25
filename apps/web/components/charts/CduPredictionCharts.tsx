@@ -26,7 +26,6 @@ const C = {
   count: '#bcbcb0',      // background.9
   tv: '#101432',         // brandNavy.9 – exit polly a projekce ARD/ZDF (vše, co neměřil DataTimes.cz)
   tvText: '#101432',     // brandNavy.9 – jejich popisky
-  final: '#0e926a',      // brandEmeraldMint.6
   surface: '#f8f6f0',    // background.2 – pozadí karty grafu (ChartCard, viz DESIGN.md)
 };
 const FINAL = 4.888;
@@ -412,7 +411,7 @@ export function CduThresholdDots() {
             </g>
           ))}
           <line x1={x(5)} x2={x(5)} y1={T - 10} y2={bottom} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
-          <line x1={x(FINAL)} x2={x(FINAL)} y1={T - 10} y2={bottom} stroke={C.final} strokeWidth={1.5} strokeDasharray="5 4" />
+          <line x1={Math.round(x(FINAL)) + 0.5} x2={Math.round(x(FINAL)) + 0.5} y1={T - 10} y2={bottom} stroke={C.beige} strokeWidth={0.75} strokeDasharray="2 3" />
           {ROWS.map((d, i) => {
             const cy = T + i * rowH + rowH / 2 + (narrow ? 4 : -6);
             const col = d.m ? C.model : C.tv;
