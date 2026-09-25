@@ -141,6 +141,7 @@ function Grid({ numYears, counter, showZeman, showPavel, containerRef, onHover, 
 }
 
 export default function MandateCalendar() {
+  const chartTitleRef = useRef<HTMLDivElement>(null);
   const [counter, setCounter] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [showZeman, setShowZeman] = useState(true);
@@ -179,17 +180,17 @@ export default function MandateCalendar() {
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'minmax(0, 1fr) auto',
-        alignItems: 'center',
+        alignItems: 'start',
         columnGap: 18,
         marginBottom: 8,
       }}>
-        <div style={{
+        <div ref={chartTitleRef} style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
           color: '#101432', lineHeight: 1.2,
         }}>
           Cesty prezidentů: kostička za každou cestu
         </div>
-        <ChartSignature size={30} layout="inline" textWeight={400} style={{ lineHeight: 1, alignSelf: 'center' }} />
+        <ChartSignature titleRef={chartTitleRef} size={30} layout="inline" textWeight={400} style={{ lineHeight: 1 }} />
       </div>
       <div style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 14, flexWrap: 'wrap',

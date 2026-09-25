@@ -167,6 +167,7 @@ function HalfMap({ president, label, years, countries, path, height, width, visi
 }
 
 export default function PresidentialTripsMap() {
+  const chartTitleRef = useRef<HTMLDivElement>(null);
   const [value, setValue] = useState(ZEMAN_MAX_DI);
   const [playing, setPlaying] = useState(false);
   const [world, setWorld] = useState<{ objects: { countries: unknown } } | null>(null);
@@ -223,12 +224,12 @@ export default function PresidentialTripsMap() {
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'minmax(0, 1fr) auto',
-        alignItems: 'center',
+        alignItems: 'start',
         columnGap: 18,
         marginBottom: 14,
       }}>
         <div style={{ minWidth: 0 }}>
-          <div
+          <div ref={chartTitleRef}
             style={{
               fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700,
               color: '#101432', lineHeight: 1.16, marginBottom: 8,
@@ -244,7 +245,7 @@ export default function PresidentialTripsMap() {
             Podle délky mandátu ● Přehrajte stisknutím play
           </div>
         </div>
-        <ChartSignature size={30} layout="stacked" textWeight={400} style={{ lineHeight: 1, alignSelf: 'center' }} />
+        <ChartSignature titleRef={chartTitleRef} size={30} layout="stacked" textWeight={400} style={{ lineHeight: 1 }} />
       </div>
 
       <div ref={containerRef} style={{ position: 'relative' }}>

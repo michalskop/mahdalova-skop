@@ -38,6 +38,7 @@ const LEGEND_ITEMS: ReadonlyArray<{ category: AgeCategory; label: string }> = [
 ];
 
 export default function AgeingScrolly({ inactiveCategoryMode = 'hidden' }: AgeingScrollyProps) {
+  const chartTitleRef = useRef<HTMLHeadingElement>(null);
   const [active, setActive] = useState(0);
   const [visibleCategories, setVisibleCategories] = useState<Record<AgeCategory, boolean>>({
     young: true,
@@ -79,10 +80,10 @@ export default function AgeingScrolly({ inactiveCategoryMode = 'hidden' }: Agein
         <div className={styles.graphic}>
           <header className={styles.header}>
           <div>
-            <h2>Česko nezmizí, ale výrazně zestárne</h2>
+            <h2 ref={chartTitleRef}>Česko nezmizí, ale výrazně zestárne</h2>
             <p>Věková skladba obyvatel v %, střední varianta projekce ČSÚ</p>
           </div>
-          <ChartSignature
+          <ChartSignature titleRef={chartTitleRef}
             size="clamp(36px, 4.5vw, 44px)"
             textSize="clamp(14px, 1.8vw, 18px)"
             layout="stacked"

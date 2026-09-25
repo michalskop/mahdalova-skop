@@ -73,6 +73,7 @@ function outcomeText(v: Veto): string {
 }
 
 export default function VetoChart() {
+  const chartTitleRef = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState<Record<Veto['p'], boolean>>({ Havel: true, Klaus: true, Zeman: true, Pavel: true });
   const [hover, setHover] = useState<PointInfo>(null);
   const [detail, setDetail] = useState<PointInfo>(null);
@@ -127,17 +128,17 @@ export default function VetoChart() {
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'minmax(0, 1fr) auto',
-        alignItems: 'center',
+        alignItems: 'start',
         columnGap: 18,
         marginBottom: 8,
       }}>
-        <div style={{
+        <div ref={chartTitleRef} style={{
           fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 20, fontWeight: 700,
           color: '#101432', lineHeight: 1.2,
         }}>
           93 vet a jedna hranice: 101 hlasů
         </div>
-        <ChartSignature size={30} layout="inline" textWeight={400} style={{ lineHeight: 1, alignSelf: 'center' }} />
+        <ChartSignature titleRef={chartTitleRef} size={30} layout="inline" textWeight={400} style={{ lineHeight: 1 }} />
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 4, flexWrap: 'wrap' }}>

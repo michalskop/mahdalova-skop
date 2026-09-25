@@ -1,4 +1,23 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react';
+
+const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
+// Horní hrana nejvyššího písmena titulku (px od horního okraje jeho řádku),
+// spočtená z metriky skutečně použitého písma přes canvas.measureText.
+function glyphTopOffset(el: HTMLElement) {
+  const cs = getComputedStyle(el);
+  const ctx = document.createElement('canvas').getContext('2d');
+  if (!ctx) return 0;
+  ctx.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const m = ctx.measureText(el.textContent || 'Á');
+  const content = m.fontBoundingBoxAscent + m.fontBoundingBoxDescent;
+  const lh = parseFloat(cs.lineHeight);
+  const halfLeading = Number.isFinite(lh) ? (lh - content) / 2 : 0;
+  return halfLeading + m.fontBoundingBoxAscent - m.actualBoundingBoxAscent;
+}
 
 interface ChartSignatureProps {
   size?: number | string;
@@ -7,6 +26,8 @@ interface ChartSignatureProps {
   textSize?: number | string;
   textWeight?: number;
   style?: React.CSSProperties;
+  /** Titulek grafu: horní okraj kolečka se zarovná s horní hranou jeho nejvyššího písmena. */
+  titleRef?: RefObject<HTMLElement | null>;
 }
 
 export default function ChartSignature({
@@ -16,7 +37,29 @@ export default function ChartSignature({
   textSize,
   textWeight = 400,
   style,
+  titleRef,
 }: ChartSignatureProps) {
+  const selfRef = useRef<HTMLAnchorElement>(null);
+  const [alignTop, setAlignTop] = useState<number | null>(null);
+  useIsoLayoutEffect(() => {
+    const title = titleRef?.current, self = selfRef.current;
+    if (!title || !self) return;
+    const measure = () => {
+      const parent = self.parentElement;
+      const svg = self.querySelector('svg');
+      if (!parent || !svg) return;
+      // bez vlastního posunu: kde by kolečko bylo, a kde je horní hrana písmen
+      const selfTop = self.getBoundingClientRect().top - (parseFloat(self.style.marginTop) || 0);
+      const svgInSelf = svg.getBoundingClientRect().top - self.getBoundingClientRect().top;
+      const target = title.getBoundingClientRect().top + glyphTopOffset(title);
+      setAlignTop(Math.max(0, Math.round((target - selfTop - svgInSelf) * 2) / 2));
+    };
+    measure();
+    document.fonts?.ready.then(measure);
+    const ro = new ResizeObserver(measure);
+    ro.observe(title);
+    return () => ro.disconnect();
+  }, [titleRef]);
   const stacked = layout === 'stacked';
   const fontSize = textSize ?? (
     typeof size === 'number' ? size * (stacked ? 0.47 : 0.52) : 14
@@ -27,6 +70,7 @@ export default function ChartSignature({
       href="https://datatimes.cz"
       target="_blank"
       rel="noopener noreferrer"
+      ref={selfRef}
       className="dpbp-chart-signature"
       style={{
         display: 'inline-flex',
@@ -40,6 +84,7 @@ export default function ChartSignature({
         fontSize,
         fontWeight: textWeight,
         color, lineHeight: 1, ...style,
+        ...(titleRef ? { alignSelf: 'flex-start', marginTop: alignTop ?? 0 } : null),
       }}
     >
       <svg width={size} height={size} viewBox="112 112 276 276" style={{ flex: '0 0 auto', display: 'block' }}>

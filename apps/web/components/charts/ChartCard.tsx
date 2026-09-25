@@ -1,5 +1,7 @@
 'use client';
 
+import { useRef } from 'react';
+
 import { robotoCondensed } from '@/app/fonts';
 import ChartSignature from './ChartSignature';
 import { renderTitle, renderSubtitle, renderSource, shouldUseStackedBrand } from './chartText';
@@ -14,6 +16,7 @@ export interface ChartCardProps {
 }
 
 export default function ChartCard({ title, subtitle, source, children }: ChartCardProps) {
+  const chartTitleRef = useRef<HTMLDivElement>(null);
   const stackedBrand = shouldUseStackedBrand(title, subtitle);
   const hasHeader = Boolean(title || subtitle);
 
@@ -28,13 +31,13 @@ export default function ChartCard({ title, subtitle, source, children }: ChartCa
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'minmax(0, 1fr) auto',
-          alignItems: 'center',
+          alignItems: 'start',
           columnGap: 18,
           marginBottom: 8,
         }}>
           <div style={{ minWidth: 0 }}>
             {title && (
-              <div className="dpbp-chart-title" style={{
+              <div ref={chartTitleRef} className="dpbp-chart-title" style={{
                 fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
                 fontWeight: 700,
                 lineHeight: 1.2,
@@ -58,7 +61,8 @@ export default function ChartCard({ title, subtitle, source, children }: ChartCa
             size={30}
             layout={stackedBrand ? 'stacked' : 'inline'}
             textWeight={400}
-            style={{ lineHeight: 1, alignSelf: 'center' }}
+            style={{ lineHeight: 1 }}
+            titleRef={chartTitleRef}
           />
         </div>
       )}

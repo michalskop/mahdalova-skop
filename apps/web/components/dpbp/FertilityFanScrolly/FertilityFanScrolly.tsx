@@ -147,6 +147,7 @@ function formatPeriod(startYear: number, endYear: number) {
 }
 
 export default function FertilityFanScrolly() {
+  const chartTitleRef = useRef<HTMLHeadingElement>(null);
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState<{ row: WindowRow; x: number; y: number } | null>(null);
   const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -214,10 +215,10 @@ export default function FertilityFanScrolly() {
         <div className={styles.graphic}>
           <header className={styles.header}>
             <div>
-              <h2>Jak velký obrat dokázaly bohaté země</h2>
+              <h2 ref={chartTitleRef}>Jak velký obrat dokázaly bohaté země</h2>
               <p>Hledáme největší nárůst, jaký se kdy podařil</p>
             </div>
-            <ChartSignature size={28} layout="stacked" textWeight={400} />
+            <ChartSignature titleRef={chartTitleRef} size={28} layout="stacked" textWeight={400} />
           </header>
 
           <svg

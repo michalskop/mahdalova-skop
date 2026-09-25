@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useRef, useMemo, useState } from 'react';
 import tripsData from './data.json';
 import ChartSignature from '@/components/charts/ChartSignature';
 
@@ -52,6 +52,7 @@ const TRIPS: Record<PresidentKey, Trip[]> = {
 type Hover = { president: PresidentKey; trip: Trip; left: number; top: number } | null;
 
 export default function HistoricalPresidentialTrips() {
+  const chartTitleRef = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState<Hover>(null);
 
   const years = useMemo(() => Array.from({ length: 10 }, (_, year) => ({
@@ -73,16 +74,16 @@ export default function HistoricalPresidentialTrips() {
 
   return (
     <div style={{ margin: '24px 0', background: '#F8F6F0', padding: '18px 16px 14px', borderRadius: 4 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'center', columnGap: 18, marginBottom: 8 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'start', columnGap: 18, marginBottom: 8 }}>
         <div>
-          <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700, color: '#101432', lineHeight: 1.16 }}>
+          <div ref={chartTitleRef} style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 22, fontWeight: 700, color: '#101432', lineHeight: 1.16 }}>
             Zahraniční cesty Havla a Klause po letech mandátu
           </div>
           <div style={{ fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 16, color: '#333333', marginTop: 6 }}>
             Počet cest podle unikátního data zahájení · celé české prezidentské mandáty
           </div>
         </div>
-        <ChartSignature size={30} layout="stacked" textWeight={400} style={{ lineHeight: 1 }} />
+        <ChartSignature titleRef={chartTitleRef} size={30} layout="stacked" textWeight={400} style={{ lineHeight: 1 }} />
       </div>
 
       <div style={{ display: 'flex', gap: 18, margin: '12px 0 4px', fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif', fontSize: 13 }}>
