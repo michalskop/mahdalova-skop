@@ -139,7 +139,7 @@ export function CduPredictionTimeline() {
 
   const narrow = W < 700;
   const H = narrow ? 460 : 470;
-  const M = { l: narrow ? 30 : 44, r: narrow ? 8 : 150, t: 18, b: 34 };
+  const M = { l: narrow ? 30 : 44, r: narrow ? 8 : 46, t: 18, b: 34 };
   const X1 = 375, Y0 = narrow ? 3.25 : 3.4, Y1 = 5.75;
   const x = (m: number) => M.l + (m / X1) * (W - M.l - M.r);
   const y = (v: number) => M.t + ((Y1 - v) / (Y1 - Y0)) * (H - M.t - M.b);
@@ -235,13 +235,15 @@ export function CduPredictionTimeline() {
             <line x1={x(0)} x2={x(X1)} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} />
             {narrow ? (
               <>
-                <text x={x(X1) - 2} y={y(5) - 6} textAnchor="end" style={labB}>hranice 5 %</text>
+                <text x={x(X1) - 2} y={y(5) - 6} textAnchor="end" style={labB}>5 %</text>
               </>
             ) : (
               <>
-                <text x={x(X1) + 10} y={y(5) + 4} style={labB}>hranice 5 %</text>
-                <text x={x(X1) + 10} y={y(5) - 44} style={{ ...labB, fill: C.inText }}>↑ CDU ve sněmu</text>
-                <text x={x(X1) + 10} y={y(5) + 84} style={{ ...labB, fill: C.outText }}>↓ CDU mimo sněm</text>
+                <text x={x(X1) + 6} y={y(5) + 4} style={labB}>5 %</text>
+                {/* popisky ploch svisle, ať nezabírají místo na boku */}
+                {([[(y(Y1) + y(5)) / 2, C.inText, 'CDU ve sněmu'], [(y(5) + y(Y0)) / 2, C.outText, 'CDU mimo sněm']] as const).map(([cy, fill, t]) => (
+                  <text key={t} x={x(X1) + 36} y={cy} textAnchor="middle" transform={`rotate(-90 ${x(X1) + 36} ${cy})`} style={{ ...labB, fill }}>{t}</text>
+                ))}
               </>
             )}
 
