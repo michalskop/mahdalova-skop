@@ -13,6 +13,8 @@ promoted: 10
 
 Valné shromáždění OSN v pátek 4. září přijalo rezoluci, která vyzývá k přesnějšímu a vyváženějšímu zobrazování světa na mapách. Návrh s názvem „Correct the Map“ (dokument A/80/L.104) předložilo Togo jménem africké skupiny; navazuje na kampaň podporovanou Africkou unií. Pro hlasovalo 164 zemí, šest se zdrželo a jedinou zemí, která byla proti, byly Spojené státy.
 
+<RelatedArticles preset="sidebar" position="right" slugs={["kontext-2026-09-05-skutecna-velikost-sveta"]} heading="🔻🔻🔻" />
+
 Česko hlasovalo pro. Zdržely se Estonsko, Gruzie, Litva, Moldavsko, Srbsko a Ukrajina – a jak uvidíte níže, ne vždy z důvodu, který by se dal čekat.
 
 Na první pohled to může vypadat jako okrajová debata pro kartografy. Jenže mapa není nikdy jen technický obrázek zemského povrchu. Určuje, co považujeme za velké a malé, důležité a okrajové. A právě o to ve sporu jde.
