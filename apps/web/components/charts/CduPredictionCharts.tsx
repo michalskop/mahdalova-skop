@@ -103,7 +103,7 @@ function Legend({ hidden, toggle, narrow }: { hidden: Set<SeriesKey>; toggle: (k
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 6, padding: '3px 8px', borderRadius: 4,
               border: 'none', background: 'transparent', cursor: 'pointer',
-              fontFamily: FONT, fontSize: 13, color: C.ink2, opacity: off ? 0.4 : 1,
+              fontFamily: FONT, fontSize: 13, color: C.ink, opacity: off ? 0.4 : 1,
               textDecoration: off ? 'line-through' : 'none',
             }}
           >
@@ -148,7 +148,7 @@ export function CduPredictionTimeline() {
 
   const lab: React.CSSProperties = { fontSize: narrow ? 11.5 : 12.5, fill: C.ink, fontFamily: FONT };
   const labB: React.CSSProperties = { ...lab, fontWeight: 600 };
-  const labM: React.CSSProperties = { ...lab, fontSize: narrow ? 11 : 12, fill: C.ink2 };
+  const labM: React.CSSProperties = { ...lab, fontSize: narrow ? 11 : 12 };
   const tick: React.CSSProperties = { fontSize: 11.5, fill: C.muted, fontFamily: FONT };
   const aX = 132.27, aV = 4.879, aC = 4.409;   // 20:12 – predikce a průběžné sčítání
   const fX = 75.53, fV = 4.46, fC = 3.792;     // 19:15 – první záznam
@@ -189,13 +189,14 @@ export function CduPredictionTimeline() {
 
   // Poloha popisků
   const bracketY = y(5.64);
+  const tvY = narrow ? 4.5 : 4.6;
+  const countDy = narrow ? 58 : 30;  // odsazení bloku „průběžné sčítání“ pod bodem 20:12   // konec vodicích linek ARD/ZDF 22:13 a 22:20
   const predLines = narrow
     ? ['20:12 predikce', 'CDU 4,88 %', 'CDU mimo sněm']
     : ['20:12 predikce DataTimes.cz', 'CDU 4,88 %', 'výsledek už se nezmění,', 'CDU se do sněmu nedostane'];
   const countLines = narrow
     ? ['průběžně sečteno', 'CDU 4,4 %', 'ještě poroste']
     : ['průběžné sčítání:', 'CDU 4,4 %', 'hodnota ještě poroste, do výsledku zasáhnou větší sídla'];
-  const tvLines = narrow ? ['ARD, ZDF:', 'pod 5 %', 'až ve 22:13'] : ['22:13 ARD, 22:20 ZDF:', 'poprvé pod 5 % (4,9 %)'];
   const bottomY = y(Y0) - (2 * lh + 4);
 
   return (
@@ -257,7 +258,7 @@ export function CduPredictionTimeline() {
               </>
             )}
             {show('model') && (
-              <Lines x={x(fX) - 8} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model }]}
+              <Lines x={x(fX) - (narrow ? 4 : 8)} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model, fontSize: narrow ? 10.5 : labB.fontSize }]}
                 lines={['predikce', 'DataTimes.cz']} />
             )}
 
@@ -283,9 +284,9 @@ export function CduPredictionTimeline() {
             {/* 20:12 – průběžné sčítání */}
             {show('count') && (
               <>
-                <line x1={x(aX)} x2={x(aX)} y1={y(aC) + 5} y2={y(aC) + 26} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
+                <line x1={x(aX)} x2={x(aX)} y1={y(aC) + 5} y2={y(aC) + countDy - 4} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
                 <circle cx={x(aX)} cy={y(aC)} r={4} fill={C.count} stroke={C.surface} strokeWidth={1.5} />
-                <Lines x={x(aX) + 8} y={y(aC) + 30} lh={lh} styles={[{ ...labB, fill: C.beige }, { ...labB, fill: C.beige }, { ...labM, fill: C.beige }]} lines={countLines} />
+                <Lines x={x(aX) + 8} y={y(aC) + countDy} lh={lh} styles={[{ ...labB, fill: C.beige }, { ...labB, fill: C.beige }, { ...labM, fill: C.beige }]} lines={countLines} />
               </>
             )}
 
@@ -297,8 +298,14 @@ export function CduPredictionTimeline() {
                 {TV.filter((d) => d.lab).map((d) => (
                   <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} style={{ ...lab, fill: C.tvText }}>{narrow ? d.short : d.lab}</text>
                 ))}
-                <line x1={x(256.5)} x2={x(256.5)} y1={y(4.9) + 8} y2={y(4.66)} stroke={C.tv} />
-                <Lines x={x(256.5) + 6} y={y(4.66) + 10} lh={lh} styles={[{ ...lab, fill: C.tvText }, { ...labM, fill: C.tvText }]} lines={tvLines} />
+                {/* 22:13 ARD a 22:20 ZDF – každý bod vlastní linka a popisek, „poprvé pod 5 %“ mezi nimi */}
+                <line x1={x(253)} x2={x(253) - 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} />
+                <line x1={x(260)} x2={x(260) + 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} />
+                <Lines x={x(253) - 6} y={y(tvY) + 12} anchor="end" lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
+                  lines={narrow ? ['22:13 ARD', '4,9 %'] : ['22:13 ARD 4,9 %']} />
+                <Lines x={x(260) + 6} y={y(tvY) + 12} lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
+                  lines={narrow ? ['22:20 ZDF', '4,9 %'] : ['22:20 ZDF 4,9 %']} />
+                <text x={(x(253) + x(260)) / 2} y={y(tvY) + 12 + (narrow ? 2 : 1) * lh + 2} textAnchor="middle" style={{ ...lab, fill: C.tvText }}>poprvé pod 5 %</text>
               </>
             )}
 
@@ -340,7 +347,7 @@ export function CduThresholdDots() {
   const H = T + ROWS.length * rowH + 30;
   const bottom = T + ROWS.length * rowH - 4;
   const lab = { fontSize: narrow ? 12 : 12.5, fill: C.ink, fontFamily: FONT };
-  const labM = { ...lab, fontSize: 12, fill: C.ink2 };
+  const labM = { ...lab, fontSize: 12 };
   const ticks = narrow ? [4.4, 4.8, 5.2, 5.6] : [4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6];
 
   return (
