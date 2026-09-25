@@ -16,14 +16,14 @@ const C = {
   muted: '#6267a3',      // brandNavy.6
   grid: '#eeeae2',       // background.4
   beige: '#bcbcb0',      // background.9 – tmavá béžová
-  bandIn: '#fff7d9',     // brandYellow.1 – CDU ve sněmu
+  bandIn: '#fffdf0',     // brandYellow.0 – CDU ve sněmu
   bandOut: '#fff0ed',    // brandCoralRed.0 – CDU mimo sněm
   inText: '#a47d03',     // brandYellow.9 – popisek „CDU ve sněmu“
   outText: '#c93020',    // brandCoralRed.7 – popisek „CDU mimo sněm“
   model: '#de1743',      // brand.6
   count: '#bcbcb0',      // background.9
-  tv: '#f76800',         // brandOrange.6 – exit polly a projekce ARD/ZDF
-  tvText: '#cc5f00',     // brandOrange.7 – jejich popisky (čitelnější na světlých plochách)
+  tv: '#101432',         // brandNavy.9 – exit polly a projekce ARD/ZDF (vše, co neměřil DataTimes.cz)
+  tvText: '#101432',     // brandNavy.9 – jejich popisky
   final: '#0e926a',      // brandEmeraldMint.6
   surface: '#fdfbf7',    // background.1 (pozadí článku)
 };
@@ -70,7 +70,7 @@ function Tooltip({ tip, width }: { tip: Tip; width: number }) {
 
 // Víceřádkový popisek v SVG
 function Lines({ x, y, lines, anchor = 'start', lh = 15, styles }: {
-  x: number; y: number; lines: string[]; anchor?: 'start' | 'end'; lh?: number; styles: React.CSSProperties[];
+  x: number; y: number; lines: string[]; anchor?: 'start' | 'end' | 'middle'; lh?: number; styles: React.CSSProperties[];
 }) {
   return (
     <text x={x} y={y} textAnchor={anchor}>
@@ -117,15 +117,15 @@ function Legend({ hidden, toggle, narrow }: { hidden: Set<SeriesKey>; toggle: (k
 
 const TV = [
   { m: 0, v: 5.5, n: 'ARD exit poll', t: '18:00', lab: 'ARD exit poll 5,5 %', short: 'ARD 5,5 %', dy: 4 },
-  { m: 0, v: 5.0, n: 'ZDF exit poll', t: '18:00', lab: 'ZDF exit poll 5,0 %', short: 'ZDF 5,0 %', dy: -6 },
-  { m: 27, v: 5.1, n: 'Forschungsgruppe Wahlen (ZDF)', t: '18:27', lab: 'FGW projekce 5,1 %', short: 'FGW 5,1 %', dy: -6 },
+  { m: 0, v: 5.0, n: 'ZDF exit poll', t: '18:00', lab: 'ZDF exit poll 5,0 %', short: 'ZDF 5,0 %', dy: 4 },
+  { m: 27, v: 5.1, n: 'Forschungsgruppe Wahlen (ZDF)', t: '18:27', lab: 'FGW projekce 5,1 %', short: 'FGW 5,1 %', dy: 4 },
   { m: 253, v: 4.9, n: 'ARD projekce', t: '22:13' },
   { m: 260, v: 4.9, n: 'ZDF projekce', t: '22:20' },
 ];
 
 const PULSE_CSS = `
 @keyframes cduPulse { 0% { transform: scale(1); opacity: .55 } 70% { transform: scale(2.6); opacity: 0 } 100% { transform: scale(2.6); opacity: 0 } }
-.cdu-pulse { transform-box: fill-box; transform-origin: center; animation: cduPulse 3.6s ease-out infinite; }
+.cdu-pulse { transform-box: fill-box; transform-origin: center; animation: cduPulse 2.2s ease-out infinite; }
 @media (prefers-reduced-motion: reduce) { .cdu-pulse { animation: none; opacity: 0 } }
 `;
 
@@ -137,7 +137,7 @@ export function CduPredictionTimeline() {
   const toggle = (k: SeriesKey) => setHidden((h) => { const n = new Set(h); if (n.has(k)) n.delete(k); else n.add(k); return n; });
   const show = (k: SeriesKey) => !hidden.has(k);
 
-  const narrow = W < 600;
+  const narrow = W < 700;
   const H = narrow ? 460 : 470;
   const M = { l: narrow ? 30 : 44, r: narrow ? 8 : 150, t: 18, b: 34 };
   const X1 = 375, Y0 = narrow ? 3.25 : 3.4, Y1 = 5.75;
@@ -152,7 +152,7 @@ export function CduPredictionTimeline() {
   const tick: React.CSSProperties = { fontSize: 11.5, fill: C.muted, fontFamily: FONT };
   const aX = 132.27, aV = 4.879, aC = 4.409;   // 20:12 – predikce a průběžné sčítání
   const fX = 75.53, fV = 4.46, fC = 3.792;     // 19:15 – první záznam
-  const yTicks = (narrow ? [3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6] : [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6]);
+  const yTicks = (W < 400 ? [4.2, 4.6, 5.0, 5.4] : narrow ? [3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6] : [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6]);
   const xTicks = narrow ? [0, 60, 120, 180, 240, 300, 360] : [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360];
   const lh = narrow ? 14 : 15;
 
@@ -190,7 +190,7 @@ export function CduPredictionTimeline() {
   // Poloha popisků
   const bracketY = y(5.64);
   const tvY = narrow ? 4.5 : 4.6;
-  const countDy = narrow ? 58 : 30;  // odsazení bloku „průběžné sčítání“ pod bodem 20:12   // konec vodicích linek ARD/ZDF 22:13 a 22:20
+  const countDy = narrow ? 92 : 30;  // odsazení bloku „průběžné sčítání“ pod bodem 20:12   // konec vodicích linek ARD/ZDF 22:13 a 22:20
   const predLines = narrow
     ? ['20:12 predikce', 'CDU 4,88 %', 'CDU mimo sněm']
     : ['20:12 predikce DataTimes.cz', 'CDU 4,88 %', 'výsledek už se nezmění,', 'CDU se do sněmu nedostane'];
@@ -210,6 +210,13 @@ export function CduPredictionTimeline() {
         {W > 0 && (
           <svg width={W} height={H} style={{ display: 'block', overflow: 'visible' }} role="img"
             aria-label="Predikce CDU během volební noci: od 19:15 stále pod hranicí 5 %, od 20:12 do 0,01 bodu od konečného výsledku 4,888 %. ARD a ZDF ukázaly CDU pod 5 % až ve 22:13 a 22:20.">
+            <defs>
+              {/* podklad pod popisky exit pollů, aby je linka 5 % nepřeškrtla */}
+              <filter id="cduTextBg" x="-0.04" y="-0.15" width="1.08" height="1.3">
+                <feFlood floodColor={C.surface} />
+                <feComposite in="SourceGraphic" operator="over" />
+              </filter>
+            </defs>
             <rect x={x(0)} y={y(Y1)} width={x(X1) - x(0)} height={y(5) - y(Y1)} fill={C.bandIn} />
             <rect x={x(0)} y={y(5)} width={x(X1) - x(0)} height={y(Y0) - y(5)} fill={C.bandOut} />
             {yTicks.map((v) => (
@@ -229,8 +236,6 @@ export function CduPredictionTimeline() {
             {narrow ? (
               <>
                 <text x={x(X1) - 2} y={y(5) - 6} textAnchor="end" style={labB}>hranice 5 %</text>
-                <text x={x(X1) - 4} y={y(Y1) + 14} textAnchor="end" style={{ ...labB, fill: C.inText }}>CDU ve sněmu</text>
-                <text x={x(X1) - 4} y={y(Y0) - 8} textAnchor="end" style={{ ...labB, fill: C.outText }}>CDU mimo sněm</text>
               </>
             ) : (
               <>
@@ -258,7 +263,7 @@ export function CduPredictionTimeline() {
               </>
             )}
             {show('model') && (
-              <Lines x={x(fX) - (narrow ? 4 : 8)} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model, fontSize: narrow ? 10.5 : labB.fontSize }]}
+              <Lines x={x(fX) - (W < 400 ? 3 : narrow ? 4 : 8)} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model, fontSize: W < 400 ? 9.5 : narrow ? 10.5 : labB.fontSize }]}
                 lines={['predikce', 'DataTimes.cz']} />
             )}
 
@@ -277,7 +282,7 @@ export function CduPredictionTimeline() {
                 <line x1={x(aX)} x2={x(aX)} y1={y(aV) - 7} y2={bracketY + 6} stroke={C.model} strokeWidth={1} strokeDasharray="3 3" />
                 <circle className="cdu-pulse" cx={x(aX)} cy={y(aV)} r={6} fill={C.model} />
                 <circle cx={x(aX)} cy={y(aV)} r={5} fill={C.model} stroke={C.surface} strokeWidth={2} />
-                <Lines x={x(aX) + 8} y={y(5.64) + 22} lh={lh + 1} styles={[labB, { ...labB, fill: C.model }, labM]} lines={predLines} />
+                <Lines x={x(aX) + 8} y={y(5.64) + 22} lh={lh + 1} styles={[{ ...labB, fill: C.model }, { ...labB, fill: C.model }, { ...labM, fill: C.model }]} lines={predLines} />
               </>
             )}
 
@@ -296,16 +301,17 @@ export function CduPredictionTimeline() {
                   <circle key={d.n} cx={x(d.m)} cy={y(d.v)} r={5.5} fill={C.tv} stroke={C.surface} strokeWidth={2} />
                 ))}
                 {TV.filter((d) => d.lab).map((d) => (
-                  <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} style={{ ...lab, fill: C.tvText }}>{narrow ? d.short : d.lab}</text>
+                  <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} filter="url(#cduTextBg)" style={{ ...lab, fill: C.tvText }}>{narrow ? d.short : d.lab}</text>
                 ))}
-                {/* 22:13 ARD a 22:20 ZDF – každý bod vlastní linka a popisek, „poprvé pod 5 %“ mezi nimi */}
-                <line x1={x(253)} x2={x(253) - 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} />
-                <line x1={x(260)} x2={x(260) + 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} />
+                {/* 22:13 ARD a 22:20 ZDF – každý bod vlastní linka a popisek, pod nimi co odhadují média */}
+                <line x1={x(253)} x2={x(253) - 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
+                <line x1={x(260)} x2={x(260) + 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
                 <Lines x={x(253) - 6} y={y(tvY) + 12} anchor="end" lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
                   lines={narrow ? ['22:13 ARD', '4,9 %'] : ['22:13 ARD 4,9 %']} />
                 <Lines x={x(260) + 6} y={y(tvY) + 12} lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
                   lines={narrow ? ['22:20 ZDF', '4,9 %'] : ['22:20 ZDF 4,9 %']} />
-                <text x={(x(253) + x(260)) / 2} y={y(tvY) + 12 + (narrow ? 2 : 1) * lh + 2} textAnchor="middle" style={{ ...lab, fill: C.tvText }}>poprvé pod 5 %</text>
+                <Lines x={(x(253) + x(260)) / 2} y={y(tvY) + 12 + (narrow ? 2 : 1) * lh + 4} anchor="middle" lh={lh} styles={[{ ...labM, fill: C.tvText }]}
+                  lines={narrow ? ['německá média poprvé', 'odhadují, že CDU', 'nedosáhne na 5 %'] : ['německá média poprvé odhadují,', 'že CDU nedosáhne na 5 %']} />
               </>
             )}
 
@@ -380,7 +386,7 @@ export function CduThresholdDots() {
             });
             return (
               <g key={i}>
-                <text x={narrow ? L : 0} y={narrow ? cy - 12 : cy + 4} style={{ ...lab, fontWeight: d.m ? 600 : 400, fill: d.m ? C.ink : C.tvText }}>{d.t}  {d.n}</text>
+                <text x={narrow ? L : 0} y={narrow ? cy - 12 : cy + 4} style={{ ...lab, fontWeight: d.m ? 600 : 400, fill: d.m ? C.model : C.tvText }}>{d.t}  {d.n}</text>
                 <line x1={x(FINAL)} x2={x(d.v)} y1={cy} y2={cy} stroke={col} strokeWidth={2} opacity={0.5} />
                 <circle cx={x(d.v)} cy={cy} r={6} fill={col} stroke={C.surface} strokeWidth={2} />
                 <rect x={0} y={cy - rowH / 2 - (narrow ? 8 : 0)} width={W} height={rowH} fill="transparent"
