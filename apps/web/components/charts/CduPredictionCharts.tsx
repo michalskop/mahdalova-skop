@@ -188,6 +188,8 @@ export function CduPredictionTimeline() {
   const leave = () => { setTip(null); setHover(null); };
 
   // Poloha popisků
+  // svislé linky přesně na pixel (jinak je prohlížeč rozmaže přes dva pixely)
+  const px = (v: number) => Math.round(v) + 0.5;
   const bracketY = y(5.64);
   const bandGap = 22;   // odstup svislých popisků ploch od čáry 5 %
   const tvY = narrow ? 4.5 : 4.6;
@@ -253,7 +255,7 @@ export function CduPredictionTimeline() {
 
             {/* 19:15 – první záznam: svislá přerušovaná linka až k dolnímu okraji */}
             {(show('model') || show('count')) && (
-              <line x1={x(fX)} x2={x(fX)} y1={y(show('model') ? fV : fC) + 5} y2={y(Y0)} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
+              <line x1={px(x(fX))} x2={px(x(fX))} y1={y(show('model') ? fV : fC) + 5} y2={y(Y0)} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
             )}
             <Lines x={x(fX) - 6} y={bottomY} anchor="end" lh={lh} styles={[{ ...labM, fontStyle: 'italic' }]}
               lines={narrow ? ['čeká se', 'na sčítání'] : ['čeká se na první', 'sečtené okrsky']} />
@@ -273,8 +275,8 @@ export function CduPredictionTimeline() {
             {/* náskok před ARD – tmavá béžová závorka */}
             {show('model') && show('tv') && (
               <>
-                <path d={`M${x(aX)},${bracketY + 6}V${bracketY}H${x(253)}V${bracketY + 6}`} fill="none" stroke={C.beige} strokeWidth={1.25} />
-                <line x1={x(253)} x2={x(253)} y1={bracketY + 6} y2={y(4.9) - 8} stroke={C.beige} strokeWidth={1.25} strokeDasharray="2 3" />
+                <path d={`M${px(x(aX))},${bracketY + 6}V${bracketY}H${px(x(253))}V${bracketY + 6}`} fill="none" stroke={C.beige} strokeWidth={1.25} />
+                <line x1={px(x(253))} x2={px(x(253))} y1={bracketY + 6} y2={y(4.9) - 8} stroke={C.beige} strokeWidth={1.25} strokeDasharray="2 3" />
                 <text x={(x(aX) + x(253)) / 2} y={bracketY - 7} textAnchor="middle" style={{ ...labB, fill: C.beige }}>{narrow ? 'náskok 2 h' : 'náskok 2 h 01 min'}</text>
               </>
             )}
@@ -282,9 +284,9 @@ export function CduPredictionTimeline() {
             {/* 20:12 – predikce: pulzující kolečko, přerušovaná linka nahoru */}
             {show('model') && (
               <>
-                <line x1={x(aX)} x2={x(aX)} y1={y(aV) - 7} y2={bracketY + 6} stroke={C.model} strokeWidth={1} strokeDasharray="3 3" />
-                <circle className="cdu-pulse" cx={x(aX)} cy={y(aV)} r={6} fill={C.model} />
-                <circle cx={x(aX)} cy={y(aV)} r={5} fill={C.model} stroke={C.surface} strokeWidth={2} />
+                <line x1={px(x(aX))} x2={px(x(aX))} y1={y(aV) - 7} y2={bracketY + 6} stroke={C.model} strokeWidth={1} strokeDasharray="3 3" />
+                <circle className="cdu-pulse" cx={px(x(aX))} cy={y(aV)} r={6} fill={C.model} />
+                <circle cx={px(x(aX))} cy={y(aV)} r={5} fill={C.model} stroke={C.surface} strokeWidth={2} />
                 <Lines x={x(aX) + 8} y={y(5.64) + 22} lh={lh + 1} styles={[{ ...labB, fill: C.model }, { ...labB, fill: C.model }, { ...labM, fill: C.model }]} lines={predLines} />
               </>
             )}
@@ -292,8 +294,7 @@ export function CduPredictionTimeline() {
             {/* 20:12 – průběžné sčítání */}
             {show('count') && (
               <>
-                <line x1={x(aX)} x2={x(aX)} y1={y(aC) + 5} y2={y(aC) + countDy - 4} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
-                <circle cx={x(aX)} cy={y(aC)} r={4} fill={C.count} stroke={C.surface} strokeWidth={1.5} />
+                <circle cx={px(x(aX))} cy={y(aC)} r={4} fill={C.count} stroke={C.surface} strokeWidth={1.5} />
                 <Lines x={x(aX) + 8} y={y(aC) + countDy} lh={lh} styles={[{ ...labB, fill: C.beige }, { ...labB, fill: C.beige }, { ...labM, fill: C.beige }]} lines={countLines} />
               </>
             )}
@@ -307,8 +308,8 @@ export function CduPredictionTimeline() {
                   <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} filter="url(#cduTextBg)" style={{ ...lab, fill: C.tvText }}>{narrow ? d.short : d.lab}</text>
                 ))}
                 {/* 22:13 ARD a 22:20 ZDF – každý bod vlastní linka a popisek, pod nimi co odhadují média */}
-                <line x1={x(253)} x2={x(253) - 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
-                <line x1={x(260)} x2={x(260) + 4} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
+                <line x1={px(x(253))} x2={px(x(253))} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
+                <line x1={px(x(260))} x2={px(x(260))} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
                 <Lines x={x(253) - 6} y={y(tvY) + 12} anchor="end" lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
                   lines={narrow ? ['22:13 ARD', '4,9 %'] : ['22:13 ARD 4,9 %']} />
                 <Lines x={x(260) + 6} y={y(tvY) + 12} lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
