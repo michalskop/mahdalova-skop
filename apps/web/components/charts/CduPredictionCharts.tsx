@@ -233,7 +233,7 @@ export function CduPredictionTimeline() {
               </g>
             ))}
 
-            <line x1={x(0)} x2={x(X1)} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} />
+            <line x1={x(0)} x2={x(X1)} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
             {narrow ? (
               <>
                 <text x={x(X1) - 2} y={y(5) - 6} textAnchor="end" style={labB}>5 %</text>
@@ -374,7 +374,7 @@ export function CduThresholdDots() {
               <text x={x(v)} y={bottom + 18} textAnchor="middle" style={{ fontSize: 11.5, fill: C.muted, fontFamily: FONT }}>{fmt(v, 1)} %</text>
             </g>
           ))}
-          <line x1={x(5)} x2={x(5)} y1={T - 10} y2={bottom} stroke={C.ink} strokeWidth={1.5} />
+          <line x1={x(5)} x2={x(5)} y1={T - 10} y2={bottom} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
           <line x1={x(FINAL)} x2={x(FINAL)} y1={T - 10} y2={bottom} stroke={C.final} strokeWidth={1.5} strokeDasharray="5 4" />
           {ROWS.map((d, i) => {
             const cy = T + i * rowH + rowH / 2 + (narrow ? 4 : -6);
