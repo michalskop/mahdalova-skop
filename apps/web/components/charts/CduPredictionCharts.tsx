@@ -249,12 +249,16 @@ export function CduPredictionTimeline() {
             <Lines x={x(fX) - 6} y={bottomY} anchor="end" lh={lh} styles={[{ ...labM, fontStyle: 'italic' }]}
               lines={narrow ? ['čeká se', 'na sčítání'] : ['čeká se na první', 'sečtené okrsky']} />
             {show('count') && (
-              <Lines x={x(fX) + 6} y={bottomY} lh={lh} styles={[labM]}
-                lines={narrow ? ['3,8 %', '25 % okrsků'] : ['průběžně sečteno 3,8 %', '(25 % okrsků)']} />
+              <>
+                <Lines x={x(fX) + 6} y={bottomY} lh={lh} styles={[{ ...labM, fill: C.beige }]}
+                  lines={narrow ? ['3,8 %', '25 % okrsků'] : ['průběžně sečteno 3,8 %', '(25 % okrsků)']} />
+                <Lines x={x(fX) - 8} y={y(fC) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.beige }]}
+                  lines={['průběžné', 'sčítání']} />
+              </>
             )}
             {show('model') && (
               <Lines x={x(fX) - 8} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model }]}
-                lines={narrow ? ['predikce', 'DataTimes.cz'] : ['predikce', 'DataTimes.cz']} />
+                lines={['predikce', 'DataTimes.cz']} />
             )}
 
             {/* náskok před ARD – tmavá béžová závorka */}
@@ -281,7 +285,7 @@ export function CduPredictionTimeline() {
               <>
                 <line x1={x(aX)} x2={x(aX)} y1={y(aC) + 5} y2={y(aC) + 26} stroke={C.ink2} strokeWidth={0.75} strokeDasharray="2 3" />
                 <circle cx={x(aX)} cy={y(aC)} r={4} fill={C.count} stroke={C.surface} strokeWidth={1.5} />
-                <Lines x={x(aX) + 8} y={y(aC) + 30} lh={lh} styles={[labB, labB, labM]} lines={countLines} />
+                <Lines x={x(aX) + 8} y={y(aC) + 30} lh={lh} styles={[{ ...labB, fill: C.beige }, { ...labB, fill: C.beige }, { ...labM, fill: C.beige }]} lines={countLines} />
               </>
             )}
 
