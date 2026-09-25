@@ -189,6 +189,7 @@ export function CduPredictionTimeline() {
 
   // Poloha popisků
   const bracketY = y(5.64);
+  const bandGap = 22;   // odstup svislých popisků ploch od čáry 5 %
   const tvY = narrow ? 4.5 : 4.6;
   const countDy = narrow ? 92 : 30;  // odsazení bloku „průběžné sčítání“ pod bodem 20:12   // konec vodicích linek ARD/ZDF 22:13 a 22:20
   const predLines = narrow
@@ -240,9 +241,9 @@ export function CduPredictionTimeline() {
             ) : (
               <>
                 <text x={x(X1) + 6} y={y(5) + 4} style={labB}>5 %</text>
-                {/* popisky ploch svisle, ať nezabírají místo na boku */}
-                {([[(y(Y1) + y(5)) / 2, C.inText, 'CDU ve sněmu'], [(y(5) + y(Y0)) / 2, C.outText, 'CDU mimo sněm']] as const).map(([cy, fill, t]) => (
-                  <text key={t} x={x(X1) + 36} y={cy} textAnchor="middle" transform={`rotate(-90 ${x(X1) + 36} ${cy})`} style={{ ...labB, fill }}>{t}</text>
+                {/* popisky ploch svisle, oba stejně daleko (bandGap) od čáry 5 % */}
+                {([[y(5) - bandGap, 'start', C.inText, 'CDU ve sněmu'], [y(5) + bandGap, 'end', C.outText, 'CDU mimo sněm']] as const).map(([cy, anchor, fill, t]) => (
+                  <text key={t} x={x(X1) + 36} y={cy} textAnchor={anchor} transform={`rotate(-90 ${x(X1) + 36} ${cy})`} style={{ ...labB, fill }}>{t}</text>
                 ))}
               </>
             )}
