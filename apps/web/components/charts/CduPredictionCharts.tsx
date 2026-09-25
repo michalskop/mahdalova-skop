@@ -22,7 +22,8 @@ const C = {
   outText: '#c93020',    // brandCoralRed.7 – popisek „CDU mimo sněm“
   model: '#de1743',      // brand.6
   count: '#bcbcb0',      // background.9
-  tv: '#4a51ab',         // brandRoyalBlue.6
+  tv: '#f76800',         // brandOrange.6 – exit polly a projekce ARD/ZDF
+  tvText: '#cc5f00',     // brandOrange.7 – jejich popisky (čitelnější na světlých plochách)
   final: '#0e926a',      // brandEmeraldMint.6
   surface: '#fdfbf7',    // background.1 (pozadí článku)
 };
@@ -80,12 +81,11 @@ function Lines({ x, y, lines, anchor = 'start', lh = 15, styles }: {
   );
 }
 
-type SeriesKey = 'model' | 'count' | 'tv' | 'final';
+type SeriesKey = 'model' | 'count' | 'tv';
 const SERIES: { key: SeriesKey; label: string; short: string; swatch: ReactNode }[] = [
   { key: 'model', label: 'Predikce DataTimes', short: 'Predikce', swatch: <i style={{ width: 20, height: 3, borderRadius: 2, background: C.model }} /> },
   { key: 'count', label: 'Průběžně sečteno', short: 'Sečteno', swatch: <i style={{ width: 20, height: 3, borderRadius: 2, background: C.count }} /> },
   { key: 'tv', label: 'Exit poll / projekce ARD, ZDF', short: 'ARD, ZDF', swatch: <i style={{ width: 10, height: 10, borderRadius: '50%', background: C.tv }} /> },
-  { key: 'final', label: 'Konečný výsledek 4,888 %', short: 'Výsledek', swatch: <i style={{ width: 20, borderTop: `2px dashed ${C.final}` }} /> },
 ];
 
 function Legend({ hidden, toggle, narrow }: { hidden: Set<SeriesKey>; toggle: (k: SeriesKey) => void; narrow: boolean }) {
@@ -225,18 +225,15 @@ export function CduPredictionTimeline() {
             ))}
 
             <line x1={x(0)} x2={x(X1)} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} />
-            {show('final') && <line x1={x(0)} x2={x(X1)} y1={y(FINAL)} y2={y(FINAL)} stroke={C.final} strokeWidth={1.5} strokeDasharray="5 4" />}
             {narrow ? (
               <>
                 <text x={x(X1) - 2} y={y(5) - 6} textAnchor="end" style={labB}>hranice 5 %</text>
-                {show('final') && <text x={x(X1) - 2} y={y(FINAL) + 15} textAnchor="end" style={{ ...lab, fill: C.final }}>výsledek 4,89 %</text>}
                 <text x={x(X1) - 4} y={y(Y1) + 14} textAnchor="end" style={{ ...labB, fill: C.inText }}>CDU ve sněmu</text>
                 <text x={x(X1) - 4} y={y(Y0) - 8} textAnchor="end" style={{ ...labB, fill: C.outText }}>CDU mimo sněm</text>
               </>
             ) : (
               <>
                 <text x={x(X1) + 10} y={y(5) + 4} style={labB}>hranice 5 %</text>
-                {show('final') && <text x={x(X1) + 10} y={y(FINAL) + 16} style={{ ...lab, fill: C.final }}>výsledek 4,888 %</text>}
                 <text x={x(X1) + 10} y={y(5) - 44} style={{ ...labB, fill: C.inText }}>↑ CDU ve sněmu</text>
                 <text x={x(X1) + 10} y={y(5) + 84} style={{ ...labB, fill: C.outText }}>↓ CDU mimo sněm</text>
               </>
@@ -257,7 +254,7 @@ export function CduPredictionTimeline() {
             )}
             {show('model') && (
               <Lines x={x(fX) - 8} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model }]}
-                lines={narrow ? ['první', 'predikce', '4,46 %'] : ['první predikce', '19:15: 4,46 %']} />
+                lines={narrow ? ['predikce', 'DataTimes.cz'] : ['predikce', 'DataTimes.cz']} />
             )}
 
             {/* náskok před ARD – tmavá béžová závorka */}
@@ -294,10 +291,10 @@ export function CduPredictionTimeline() {
                   <circle key={d.n} cx={x(d.m)} cy={y(d.v)} r={5.5} fill={C.tv} stroke={C.surface} strokeWidth={2} />
                 ))}
                 {TV.filter((d) => d.lab).map((d) => (
-                  <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} style={lab}>{narrow ? d.short : d.lab}</text>
+                  <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} style={{ ...lab, fill: C.tvText }}>{narrow ? d.short : d.lab}</text>
                 ))}
                 <line x1={x(256.5)} x2={x(256.5)} y1={y(4.9) + 8} y2={y(4.66)} stroke={C.tv} />
-                <Lines x={x(256.5) + 6} y={y(4.66) + 10} lh={lh} styles={[lab, labM]} lines={tvLines} />
+                <Lines x={x(256.5) + 6} y={y(4.66) + 10} lh={lh} styles={[{ ...lab, fill: C.tvText }, { ...labM, fill: C.tvText }]} lines={tvLines} />
               </>
             )}
 
@@ -372,7 +369,7 @@ export function CduThresholdDots() {
             });
             return (
               <g key={i}>
-                <text x={narrow ? L : 0} y={narrow ? cy - 12 : cy + 4} style={{ ...lab, fontWeight: d.m ? 600 : 400 }}>{d.t}  {d.n}</text>
+                <text x={narrow ? L : 0} y={narrow ? cy - 12 : cy + 4} style={{ ...lab, fontWeight: d.m ? 600 : 400, fill: d.m ? C.ink : C.tvText }}>{d.t}  {d.n}</text>
                 <line x1={x(FINAL)} x2={x(d.v)} y1={cy} y2={cy} stroke={col} strokeWidth={2} opacity={0.5} />
                 <circle cx={x(d.v)} cy={cy} r={6} fill={col} stroke={C.surface} strokeWidth={2} />
                 <rect x={0} y={cy - rowH / 2 - (narrow ? 8 : 0)} width={W} height={rowH} fill="transparent"
