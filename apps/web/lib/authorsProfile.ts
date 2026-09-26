@@ -23,7 +23,7 @@ export interface AuthorProfile {
 const PROFILES: AuthorProfile[] = [
   {
     name: 'Kateřina Mahdalová',
-    photo: '/authors/km_circle.png',
+    photo: '/authors/katerina-mahdalova.webp',
     email: 'datovazurnalistika@gmail.com',
     // bio: '…', // TODO doplnit krátký medailonek (1–2 věty)
     social: {
@@ -37,7 +37,7 @@ const PROFILES: AuthorProfile[] = [
   },
   {
     name: 'Michal Škop',
-    photo: '/authors/ms_circle.png',
+    photo: '/authors/michal-skop.webp',
     email: 'michal@datajurnalism.studio',
     // bio: '…', // TODO doplnit krátký medailonek (1–2 věty)
     social: {

@@ -18,8 +18,8 @@ import styles from './ArticleHeader.module.css';
 // a volitelně audio stopa. Používá ji hlavička článku i otvírák kapitoly.
 
 const AUTHOR_PHOTOS: Record<string, string> = {
-  'Kateřina Mahdalová': '/authors/km_circle.png',
-  'Michal Škop': '/authors/ms_circle.png',
+  'Kateřina Mahdalová': '/authors/katerina-mahdalova.webp',
+  'Michal Škop': '/authors/michal-skop.webp',
 };
 
 function initials(name: string): string {

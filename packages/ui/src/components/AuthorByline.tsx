@@ -5,8 +5,8 @@ import classes from './AuthorByline.module.css';
 // jméno zkrátí na příjmení („Mahdalová & Škop“), aby se vešlo na jeden řádek
 // i v úzké kartě (celé jméno je v tooltipu). Fotky jsou v /public/authors.
 const AUTHOR_PHOTOS: Record<string, string> = {
-  'Kateřina Mahdalová': '/authors/km_circle.png',
-  'Michal Škop': '/authors/ms_circle.png',
+  'Kateřina Mahdalová': '/authors/katerina-mahdalova.webp',
+  'Michal Škop': '/authors/michal-skop.webp',
 };
 
 function splitNames(author?: string): string[] {
