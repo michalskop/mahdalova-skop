@@ -20,10 +20,10 @@
   flex: 0 0 auto;
 }
 
-/* Šedotónová fotka jako v byline u článků. */
+/* Barevný portrét v ink blue kolečku se svítivým karmínovým prstencem
+   (obličej je už vycentrovaný přímo v souboru). */
 .avatars img {
-  filter: grayscale(1) contrast(1.03) brightness(0.99);
-  object-position: 50% 42%;
+  object-position: 50% 50%;
 }
 
 /* Víc autorů: avatary se lehce překrývají. */

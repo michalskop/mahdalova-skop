@@ -79,13 +79,8 @@
   object-fit: cover;
   flex: 0 0 auto;
 }
-.avatars img:first-child {
-  object-position: 50% 48%;
-  filter: grayscale(1) contrast(1.08) brightness(0.98);
-}
-.avatars img:nth-child(2) {
-  object-position: 50% 48%;
-  filter: grayscale(1) contrast(0.96) brightness(1.02);
+.avatars img {
+  object-position: 50% 50%;
 }
 .avatars .mono {
   /* Autoři bez fotky: iniciály v kroužku. Nejtmavší (šedo)béžová z palety
