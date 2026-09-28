@@ -7,7 +7,7 @@ coverImage: "images/cover-novinarske-remeslo-datatimes.jpg"
 coverFit: contain
 coverBg: "brandCoralRed.8"
 filter: ["kontext"]
-tags: ["média", "úniky z policejních spisů", "novinářská etika", "policejní spisy", "presumpce neviny", "trestní řízení", "komunální volby 2026", "volby", "Praha", "billboardy"]
+tags: ["média", "svoboda médií", "moc médií", "vliv médií"]
 promoted: 1
 ---
 
