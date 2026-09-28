@@ -1,5 +1,5 @@
 ---
-title: "Novinářské řemeslo není kopírovat policejní spisy"
+title: "Novinářské řemeslo není opisovat policejní spisy"
 date: "2026-09-28"
 author: "Kateřina Mahdalová"
 excerpt: "Kandidát Zelených Zdeněk Jahn není obviněný ani vyšetřovaný. Policie potvrdila jediné: že se věcí zabývá. Z anonymních „zjištění“ o obratu na jeho účtech přesto vznikly titulky celostátních médií. Jak se ven dostává policejní práce, která je teprve ve fázi prověřování."

@@ -79,3 +79,9 @@
 /clanek/novinar-nema-vyvazovat-ale-overovat /clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat 301
 /clanek/novinar-nema-vyvazovat-ale-overovat/ /clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat 301
 /clanek/_articles/novinar-nema-vyvazovat-ale-overovat/* /clanek/_articles/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat/:splat 301
+
+# Kauza Jahn: 2026-09-28 přejmenováno z „…kopirovat…“ na „…opisovat…“ (titulek
+# „Novinářské řemeslo není opisovat policejní spisy“). Stará URL už je sdílená.
+/clanek/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy /clanek/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy 301
+/clanek/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy/ /clanek/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy 301
+/clanek/_articles/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy/* /clanek/_articles/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy/:splat 301
