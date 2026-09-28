@@ -7,7 +7,7 @@ coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza", "společnost"]
 promoted: 1
-tags: ["slaďování práce a rodiny", "rodinná politika", "demografie", "porodnost", "rodičovský příspěvek", "jesle", "zkrácené úvazky", "otcovská", "Poslanecká sněmovna", "Eurostat", "MPSV"]
+tags: ["práce a rodina", "rodinná politika", "demografie", "porodnost", "rodičovský příspěvek", "jesle", "zkrácené úvazky", "otcovská", "Poslanecká sněmovna", "Eurostat", "MPSV"]
 ---
 
 Otec, jehož nejmladšímu dítěti ještě nebylo šest let, je v Česku zaměstnaný s pravděpodobností 97,6 procenta. Nikde v Evropské unii to není víc. Matka ve stejné situaci má placenou práci s pravděpodobností 51,5 procenta. Stejně málo je to jen v Rumunsku. Rozdíl 46 procentních bodů je [podle dat Eurostatu za rok 2025](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en) největší v celé unii. Druhá Itálie má 35 bodů, průměr EU je 22. Méně přitom matky malých dětí nepracují – doma odvádějí práci, kterou statistika zaměstnanosti nezachytí. Do placeného zaměstnání je ale česká společnost pouští nejhůř z celé unie.
