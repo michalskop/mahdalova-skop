@@ -7,6 +7,7 @@ tags:
   - test
   - htmlInclude
 htmlInclude: "calendar.html"
+promoted: 1
 ---
 
 Toto je testovací článek pro `htmlInclude`.

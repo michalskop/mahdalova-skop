@@ -5,6 +5,7 @@ author: "Tech Team"
 excerpt: "Test article for Mantine timeline embed with YAML-driven data."
 coverImage: "images/main.png"
 tags: ["guide", "timeline", "test"]
+promoted: 1
 ---
 
 # Timeline embed test

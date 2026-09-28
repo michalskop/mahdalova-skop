@@ -6,7 +6,7 @@ excerpt: "CDU se poprvé v dějinách Spolkové republiky nedostala do zemského
 coverImage: "images/cover-homepage.jpg"
 filter: ["analýza"]
 tags: ["volby", "Německo", "Meklenbursko-Přední Pomořansko", "CDU", "AfD", "SPD", "volební predikce"]
-promoted: 0
+promoted: 1
 ---
 Meklenbursko‑Přední Pomořansko zvolilo nový zemský sněm. Vyhrála AfD (Alternativa pro Německo), zatímco Sociálnědemokratická strana Německa (SPD) vedená Manuelou Schwesig ubránila druhé místo – a CDU (Křesťanskodemokratická unie) se poprvé v dějinách Spolkové republiky nedostala do žádného zemského parlamentu. Že strana skončí pod pěti procenty, ukazovala datová predikce od dvojice novinářů Mahdalová & Škop už od chvíle, kdy volební noc sotva začala. Veřejnoprávní projekce přitom držely CDU nad čarou ještě po desáté večer.
 

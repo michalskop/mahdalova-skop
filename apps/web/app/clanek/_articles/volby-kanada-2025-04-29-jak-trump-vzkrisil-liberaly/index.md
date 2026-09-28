@@ -6,7 +6,7 @@ excerpt: "Ještě na začátku roku 2025 to vypadalo jasně. Justin Trudeau byl 
 coverImage: "images/kanada-volby-2025.jpg"
 filter: ["kontext"]
 tags: ["volby", "číslo dne", "mandáty", "průzkumy", "poll of polls", "volební model", "Parlament", "Kanada", "liberálové", "politika"]
-promoted: 10
+promoted: 1
 ---
 
 Americký prezident se pustil do sousední Kanady: hrozil cly, anexí a mluvil o zemi jako o „51. státě USA“. To, co mělo být jen show pro domácí publikum, spustilo v Kanadě politické zemětřesení. Naštvaní voliči se mobilizovali – a právě liberálové jim nabídli srozumitelnou obranu.

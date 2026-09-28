@@ -6,7 +6,7 @@ excerpt: "Lobbistická organizace UN Watch rozšířila úmyslně zmanipulované
 coverImage: "images/francesca-albanese-twitter-dementi-fake.webp"
 filter: ["explainer"]
 tags: ["dezinformace", "OSN", "Francesca Albanese", "Palestina", "Izrael", "AI", "fake video", "fact-check"]
-promoted: 65
+promoted: 1
 ---
 Organizace UN Watch rozšířila úmyslně zmanipulované video, ve kterém mluví Francesca Albanese, zvláštní zpravodajka OSN pro lidská práva v okupovaných palestinských územích. Pět evropských ministrů zahraničí na základě tohoto videa požaduje její rezignaci. Když se ukázalo, že video je účelově sestříhané, žádná z vlád se neomluvila, jen Rakousko stáhlo svůj twitterový status.
 

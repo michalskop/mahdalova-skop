@@ -4,7 +4,7 @@ date: "9999-12-31"
 author: "Tech Team"
 excerpt: "Visual reference for the design system: colour palette, component variants, typography, and conventions. Complements packages/ui/DESIGN.md."
 tags: ["guide", "design", "reference"]
-promoted: 0
+promoted: 1
 htmlInclude: "swatches.html"
 ---
 

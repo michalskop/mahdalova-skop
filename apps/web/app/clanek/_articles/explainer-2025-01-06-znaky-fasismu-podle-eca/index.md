@@ -6,6 +6,7 @@ excerpt: "Proč by nás mělo zajímat, když někdo označí stát za fašistic
 coverImage: "images/Indikatory_fasismu_podle_Eca.png"
 filter: ["explainer"]
 tags: ["zahraničí", "Rusko", "Ukrajina", "politika", "Umberto Eco", "fašismus", "demokracie"]
+promoted: 1
 ---
 
 Pojem _fašismus_ slýcháme ve veřejném prostoru běžně. Ale co vlastně znamená, když někdo v současné době označí stát nebo režim za fašistický? Není to jen prázdná nálepka, která se používá ve vyhrocených debatách a která jen vytěsňuje věcnou kritiku?

@@ -6,7 +6,7 @@ excerpt: "Dvě generace, dva pohledy. A jedno překvapivé zjištění: v péči
 coverImage: "https://www.datovazurnalistika.cz/wp-content/uploads/2026/01/mahdalky-1-dusevni-zdravi-datatimes-podcast.gif"
 filter: ["podcast"]
 tags: ["podcast", "Mahdalky", "duševní", "zdraví", "psychoterapie", "psychické zdraví", "mental health", "gender", "muži", "ženy", "stigma", "generace", "terapie", "psychiatrie", "wellbeing"]
-promoted: 68
+promoted: 1
 ---
 
 Dvě generace, dva pohledy. A jedno překvapivé zjištění: v péči o duševní zdraví více záleží na tom, jestli jste muž nebo žena, než kdy jste se narodili.

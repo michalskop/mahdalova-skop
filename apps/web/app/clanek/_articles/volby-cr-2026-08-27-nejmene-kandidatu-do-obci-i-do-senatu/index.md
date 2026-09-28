@@ -7,7 +7,7 @@ coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
 tags: ["Volby 2026", "volby", "komunální volby", "Senát", "kandidáti", "ženy", "muži", "politika", "data"]
-promoted: 0
+promoted: 1
 ---
 
 Na kandidátky obecních zastupitelstev se letos zapsalo 190 174 lidí, nejméně od roku 2002. Do Senátu kandiduje 154 lidí, nejméně od roku 2000. Obě volby se navíc konají ve stejný víkend, 9. a 10. října ([Přehled termínů a lhůt pro volby do Senátu 2026](https://mv.gov.cz/volby/soubor/prehled-terminu-a-lhut-pro-volby-do-senatu-2026.aspx)). Prošli jsme registry kandidátů z otevřených dat [volby.gov.cz](https://volby.gov.cz) od začátku obou typů voleb a podívali se, jak se v čase mění, kdo kandiduje.

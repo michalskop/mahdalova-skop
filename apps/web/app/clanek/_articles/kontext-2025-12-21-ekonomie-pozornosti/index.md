@@ -6,7 +6,7 @@ excerpt: "Internet jako prostředí, které pomocí behaviorálních principů c
 coverImage: "images/pozornost-brain-rot.webp"
 filter: ["kontext"]
 tags: ["digitální závislost", "ADHD", "pozornost", "sociální sítě", "TikTok", "dopamin", "dark patterns", "neurověda", "esej", "ekonomie pozornosti"]
-promoted: 65
+promoted: 1
 ---
 
 V digitálním věku se z pozornosti stala vysoce ceněná komodita. Hovoří se dokonce o *ekonomii pozornosti*. Již v roce 1971 upozornil Herbert A. Simon, že v informačně přesyceném světě vede „bohatství informací k nedostatku pozornosti". Dnešní internetové prostředí tuto prognózu naplňuje: naše pozornost je měnou, o niž soupeří technologické firmy, média i běžné aplikace. Každý se nás snaží přilákat na svou platformu (od sociálních sítí přes nákupní aplikace po digitální služby). Uživatelé však mají omezenou kapacitu soustředění, a tak probíhá nelítostný boj o každou vteřinu naší pozornosti. Firmy financované reklamou se snaží maximalizovat čas, který u nich strávíme. Koneckonců pokud je služba zdarma, platíme za ni svým časem a pozorností.

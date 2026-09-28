@@ -6,6 +6,7 @@ excerpt: "Čekáte těsné vítězství Trumpa či Harris? Vůbec to tak být ne
 coverImage: "images/USA_volby_predikce.png"
 filter: ["analýza"]
 tags: ["zahraničí", "USA", "volby", "predikce"]
+promoted: 1
 ---
 I když to vypadá na velice těsné vítězství ať už Harris, či Trumpa, ono to tak vůbec být nemusí. Veřejnost a mnohá média se pak rozčilují, jak to agentury špatně naměřily a spočítaly. 
 

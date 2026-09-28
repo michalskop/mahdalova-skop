@@ -6,6 +6,7 @@ excerpt: "Naše predikce ukazuje s 80% jistotou, že příštím americkým prez
 coverImage: "images/USA-volby-2024-predikce.png"
 filter: ["analýza"]
 tags: ["zahraničí", "USA", "volby", "predikce"]
+promoted: 1
 ---
 Jak jsme říkali: výsledek rozhodně nemusí být tak těsný, jak se všeobecně podle průzkumů mohlo zdát. Klíč je v interpretaci: agentury to naměřily dobře a naplnilo se vše, co šlo z průzkumů vyčíst. 
 

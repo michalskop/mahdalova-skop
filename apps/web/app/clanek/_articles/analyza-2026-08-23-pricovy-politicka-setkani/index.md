@@ -7,7 +7,7 @@ coverImage: "images/main.jpg"
 coverFit: cover
 filter: ["analýza"]
 tags: ["Reportáž", "Příčovy", "vlastenectví", "nacionalismus", "SPD", "dezinformace", "Svatopluk", "dezinfoscéna"]
-promoted: 60
+promoted: 1
 ---
 
 _Lidé spojení s vlasteneckým setkáním na zámku v Příčovech zdůrazňují, že jde o nepolitickou akci, alespoň ve stranickém smyslu. Za osm ročníků se ale na jejím pódiu vystřídali předsedové stran, poslanci, europoslanci, bývalí ministři i prezidentský kandidát – a letos ji zaštítil předseda Poslanecké sněmovny._

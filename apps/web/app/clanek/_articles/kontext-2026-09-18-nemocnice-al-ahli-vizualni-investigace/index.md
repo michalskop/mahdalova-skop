@@ -8,7 +8,7 @@ coverFit: "contain"
 coverBg: "brandNavy.9"
 filter: ["kontext"]
 tags: ["Gaza", "Izrael", "Palestina", "OSINT", "vizuální investigace", "dezinformace", "fact-check", "média"]
-promoted: 74
+promoted: 1
 ---
 Výbuch v areálu nemocnice v Gaze zachytilo několik kamer. Záznamů bylo dost na vznik desítek analýz, ale málo na jednoznačný verdikt. Případ Al-Ahli ukázal možnosti i slabiny vizuální investigace – a předznamenal svět, v němž bude stále obtížnější dokázat, že obraz zachycuje skutečnost.
 

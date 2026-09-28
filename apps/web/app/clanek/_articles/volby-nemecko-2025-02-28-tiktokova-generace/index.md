@@ -6,7 +6,7 @@ excerpt: "Nejmladší “tiktoková” generace v německých volbách volila - 
 coverImage: "images/main.webp"
 filter: ["analýza"]
 tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita", "tiktok", 'ženy', 'muži', 'politika']
-promoted: 70
+promoted: 1
 ---
 
 ![Německé volby tiktokové generage](images/head.webp)

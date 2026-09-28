@@ -6,7 +6,7 @@ excerpt: "Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní 
 coverImage: "images/cnn-2026-explainer-mahdalova-skop-media-5x4.webp"
 filter: ["explainer", "svobodná-média"]
 tags: ["nezávislost CNN", "média", "svobodná média", "nezávislá média", "nezávislost médií", "svoboda tisku", "CNN", "Warner Bros.", "Paramount", "Trump", "USA"]
-promoted: 62
+promoted: 1
 ---
 Televize, která vysílá zprávy od roku 1980 bez přestávky, nyní mění majitele. Vysvětlujeme, kdo jsou hráči v tomhle byznysu, co chtějí a proč na tom záleží i nám.
 

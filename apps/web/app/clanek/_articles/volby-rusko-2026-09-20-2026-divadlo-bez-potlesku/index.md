@@ -9,7 +9,7 @@ coverFit: contain
 coverBg: "brandChocolate.9"
 filter: ["analýza"]
 tags: ["Rusko", "ruské volby 2026", "Vladimir Putin", "Jednotné Rusko", "Duma", "Kreml", "válka na Ukrajině", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "autoritářství", "volby"]
-promoted: 76
+promoted: 1
 ---
 
 V pátek ráno se na Kamčatce a Čukotce otevřely volební místnosti pro první ruské parlamentní volby od plnohodnotného vpádu na Ukrajinu. Záběry <Person id="putin">Vladimira Putina</Person>, jak sedí před monitorem ve své pracovně, kliká na distanční elektronické hlasování a stroze děkuje počítači, zveřejnila [tisková služba Kremlu](http://kremlin.ru/events/president/news/80786), převzala je i [agentura TASS](https://tass.com/politics/2189653).

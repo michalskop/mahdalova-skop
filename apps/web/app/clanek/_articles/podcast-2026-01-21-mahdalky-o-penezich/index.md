@@ -6,7 +6,7 @@ excerpt: "Peníze - nějak s nimi vyjít musíme. I když někdy to jde hodně z
 coverImage: "https://www.datovazurnalistika.cz/wp-content/uploads/2026/01/mahdalky-3-o-penezich-datatimes-podcast.gif"
 filter: ["podcast"]
 tags: ["podcast", "Mahdalky", "peníze", "chudoba", "exekuce", "matky samoživitelky", "cash flow", "dluhy", "finanční gramotnost"]
-promoted: 71
+promoted: 1
 ---
 
 Peníze - nějak s nimi vyjít musíme. I když někdy to jde hodně ztuha. Ovšem jedna věc je šetřit, uskromnit se, druhá věc je výpadek příjmů. Věděli jste, že matky samoživitelky jsou mistryně v hlídání cash flow?

@@ -11,7 +11,7 @@ tags:
   - bezpečnost
   - software
   - jazykové modely
-promoted: 48
+promoted: 1
 ---
 ## Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř
 

@@ -4,7 +4,7 @@ date: "9999-12-31"
 author: "Editorial Team"
 excerpt: "Everything you can use when writing an article: text formatting, boxes, charts, timelines, and more. Copy-paste syntax with live examples."
 tags: ["guide", "reference"]
-promoted: 0
+promoted: 1
 ---
 
 > This article is hidden from listings (future date). It is a reference for article authors – you can link to it but it won't appear on the front page or in section lists.

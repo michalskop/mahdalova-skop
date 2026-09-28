@@ -6,7 +6,7 @@ excerpt: "Zdá se být rozhodnuto. Soudní spory o 'skryté koalice' by ale mohl
 coverImage: "images/main.webp"
 filter: ["analýza"]
 tags: ["volby", "Babiš", "Piráti", "Stačilo!", "Motoristé sobě", "Přísaha"]
-promoted: 2
+promoted: 1
 ---
 ## Šance stran na vstup do Sněmovny
 

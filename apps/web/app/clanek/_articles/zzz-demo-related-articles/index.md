@@ -4,7 +4,7 @@ date: "9999-12-31"
 author: "Editorial Team"
 excerpt: "Full reference for the RelatedArticles component: presets, sorting, image position, author and date visibility, filtering by category or tag, and hard-coded slug lists."
 tags: ["guide", "reference", "demo"]
-promoted: 0
+promoted: 1
 ---
 
 > This article is hidden from listings (future date). It is a full reference for the **RelatedArticles** component. For a quick introduction see the [article writing guide](/clanek/zzz-demo-article-features).

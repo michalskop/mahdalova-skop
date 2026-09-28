@@ -7,7 +7,7 @@ coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
 coverFit: cover
 filter: ["analýza"]
 tags: ["pohonné hmoty", "vysoké ceny", "benzín", "nafta", "vláda", "Babiš", "ceny", "Schillerová"]
-promoted: 72
+promoted: 1
 ---
 
 Přijedete na svou obvyklou pumpu natankovat Natural 95 a čekáte, že po vládním zásahu ušetříte? Ve většině případů skoro ne.

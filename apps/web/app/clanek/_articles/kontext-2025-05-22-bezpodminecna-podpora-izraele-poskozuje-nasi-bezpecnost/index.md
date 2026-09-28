@@ -6,7 +6,7 @@ excerpt: "V době, kdy spojenci Česka vyzývají k zastavení humanitární kat
 coverImage: "images/palestine-gaza-israel-news.jpg"
 filter: ["kontext"]
 tags: ["Izrael", "Gaza", "Česká politika", "Humanitární právo", "Mezinárodní vztahy"]
-promoted: 50
+promoted: 1
 ---
 V době, kdy spojenci Česka vyzývají k zastavení humanitární katastrofy v Gaze, česká vláda zůstává loajální izraelské politice – i za cenu mezinárodní izolace. Podporuje tím nejen okupaci, ale i oslabení právního řádu, na kterém sama staví svoji obranu proti ruské agresi.
 

@@ -6,7 +6,7 @@ excerpt: "Švédsko dnes od 8:00 do 20:00 volí nový Riksdag. Poslední průzku
 coverImage: "images/main.png"
 filter: ["kontext"]
 tags: ["Švédsko", "volby", "Riksdag", "Sweden Democrats", "Ulf Kristersson", "Magdalena Andersson", "Evropa", "krajní pravice"]
-promoted: 0
+promoted: 1
 ---
 
 Švédsko dnes volí nový Riksdag – od 8:00 do 20:00 místního času, který je shodný se středoevropským. Volí se všech 349 poslaneckých mandátů na čtyři roky dopředu ([Next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Next_Swedish_general_election)). Poslední průzkumy z týdne před volbami se shodují jen v jednom: je to nerozhodnuto. Nejtěsnější z nich, agentura Ipsos (sběr 7.–10. 9.), odhaduje 175 mandátů pro opoziční červeno-zelený blok proti 174 pro vládní blok Tidö – rozdíl jediného křesla ([Opinion polling for the next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Swedish_general_election)).

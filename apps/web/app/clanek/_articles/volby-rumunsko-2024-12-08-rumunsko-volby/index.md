@@ -7,6 +7,7 @@ coverImage: "images/Rumunsko-volby-zruseno-2024.png
 "
 filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "demokracie", "volby", "hybridní válka", "kybernetická bezpečnost"]  
+promoted: 1
 ---
 
 ## Politické zemětřesení v Rumunsku  

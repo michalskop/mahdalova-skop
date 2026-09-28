@@ -6,6 +6,7 @@ excerpt: "Každý den jich odešleme miliardy. Ale kde se emoji vlastně vzaly? 
 coverImage: "images/emoji-cover-1.webp"
 filter: ["explainer"]
 tags: ["explainer", "emoji", "historie", "technologie", "komunikace", "design", "Japonsko", "Unicode"]
+promoted: 1
 ---
 
 Každý den jich odešleme miliardy. Ale kde se emoji vlastně vzaly? Příběh začíná v roce 1982 emotikony :-) a pokračuje japonským designérem s mřížkou 12×12 pixelů.

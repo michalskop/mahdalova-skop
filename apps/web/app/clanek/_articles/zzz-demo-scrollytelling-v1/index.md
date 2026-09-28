@@ -5,6 +5,7 @@ author: "Tech Team"
 excerpt: "A guide to creating articles with scrollytelling features"
 coverImage: "images/0.png"
 tags: ["guide", "scrollytelling", "tutorial", "test"]
+promoted: 1
 ---
 
 # Creating Articles with Scrollytelling

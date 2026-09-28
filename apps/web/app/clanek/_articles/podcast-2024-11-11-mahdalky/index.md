@@ -6,7 +6,7 @@ excerpt: "Matka a dcera. Dvě generace, dva pohledy. Minimálně :-) Data místo
 coverImage: "images/mahdalky-podcast-datatimes.webp"
 filter: ["podcast"]
 tags: ["podcast", "Mahdalky", "generace", "matka", "dcera", "data", "kontext", "analýzy"]
-promoted: 50
+promoted: 1
 ---
 
 Máma a dcera. Dvě generace, které se na něčem shodnou, na něčem neshodnou – a právě proto spolu mluví.

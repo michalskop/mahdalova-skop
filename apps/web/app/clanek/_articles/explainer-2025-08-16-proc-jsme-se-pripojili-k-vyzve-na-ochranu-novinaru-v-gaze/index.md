@@ -6,7 +6,7 @@ excerpt: "Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dok
 coverImage: "images/killing-journalist-gaza-2025.webp"
 filter: ["explainer"]
 tags: ["podpora novinářů v Gaze", "Gaza", "novináři", "svoboda tisku", "Izrael", "média", "dezinformace", "zabíjení", "podpora", "svoboda", "informace"]
-promoted: 64
+promoted: 1
 ---
 Novináři a novinářky v Gaze jsou záměrně zabíjeni. Data to dokládají, mezinárodní organizace to potvrzují. Myslíme si, že projevit solidaritu kolegům a kolegyním by měl být základní profesní reflex.
 

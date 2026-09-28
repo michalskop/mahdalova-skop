@@ -7,7 +7,7 @@ coverImage: "images/kolumbie-gustavo-petro-nekonecne-omluvy-datatimes-00.webp"
 coverFit: cover
 filter: ["kontext"]
 tags: ["politika", "soudy", "Kolumbie"]
-promoted: 33
+promoted: 1
 ---
 Gustavo Petro, prezident a šéf vlády Kolumbie, se musel již 19× (slovy devatenáctkrát) omluvit z rozhodnutí soudu. Za čtyři roky dostal 19 soudních příkazů k omluvě - víc než kterýkoli jiný demokraticky zvolený vůdce.
 

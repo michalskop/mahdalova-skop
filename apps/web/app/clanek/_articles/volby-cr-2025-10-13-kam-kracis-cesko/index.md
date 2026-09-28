@@ -6,7 +6,7 @@ excerpt: "Odpovědi politických stran na 100 klíčových otázek ukazují, kam
 coverImage: "images/kam-kracis-cesko.webp"
 filter: ["analýza"]
 tags: ["volby 2025", "sněmovna", "mandáty", "volební kalkulačka", "data", "vláda", "volby"]
-promoted: 75
+promoted: 1
 ---
 
 Odpovědi politických stran na 100 klíčových otázek ukazují, kam se bude Česká republika ubírat. Na základě **100 otázek [Volební kalkulačky](https://www.volebnikalkulacka.cz/) přinášíme unikátní přehled**, v čem se strany plánované koalice shodují, kde se rozcházejí a na jakých tématech budou muset hledat kompromisy či podporu napříč Sněmovnou.

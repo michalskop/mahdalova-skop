@@ -9,7 +9,7 @@ coverFit: contain
 coverBg: "background.2"
 filter: ["kontext"]
 tags: ["esej", "Emmanuel Todd", "demokracie", "krajní pravice", "populismus", "Trump", "Netanjahu", "Le Penová", "Macron", "Evropská unie", "nacismus", "Rusko", "Ukrajina", "antisemitismus"]
-promoted: 0
+promoted: 1
 ---
 
 ```infobox

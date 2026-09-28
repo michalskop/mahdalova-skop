@@ -8,7 +8,7 @@ coverFit: "contain"
 coverBg: "brandNavy.9"
 filter: ["analýza"]
 tags: ["Izrael-Palestina", "Izrael", "Palestina", "Gaza", "Hamás", "Benjamin Netanjahu", "Donald Trump", "Blízký východ", "Západní břeh", "příměří", "OSN", "Palestinská samospráva", "Fatah", "dějiny konfliktu", "explainer"]
-promoted: 60
+promoted: 1
 ---
 
 V říjnu 2025 se z Pásma Gazy vrátili poslední živí izraelští rukojmí. Hamás rozpustil svou vládu, do zničeného území začaly znovu proudit kamiony s humanitární pomocí a zbraně z velké části utichly.

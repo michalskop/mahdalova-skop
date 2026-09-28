@@ -8,7 +8,7 @@ coverFit: "contain"
 coverBg: "brandDeepRed.7"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "Mercator", "Equal Earth", "kartografie"]
-promoted: 0
+promoted: 1
 ---
 
 Vezměme si Grónsko a Afriku. Na mapě, kterou zná skoro každý ze školy, vypadají obě zhruba stejně velké. Ve skutečnosti se Grónsko vejde do Afriky asi čtrnáctkrát. Není to omyl kreslíře ani chyba tisku. Je to důsledek rozhodnutí, které vlámský kartograf udělal před více než čtyřmi sty lety.

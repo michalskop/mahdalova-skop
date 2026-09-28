@@ -6,7 +6,7 @@ excerpt: "Kdo vynese kus živého policejního spisu do médií, v Česku se té
 coverImage: "images/investigace-leak.webp"
 filter: ["explainer"]
 tags: ["úniky z policejních spisů", "explainer", "investigace", "právo", "trestní řízení", "média", "novinářská etika", "policejní spisy", "únik informací"]
-promoted: 53
+promoted: 1
 ---
 
 „Seznámil jsem se s některými policejními dokumenty k tomu případu,“ řekl 24. února 2026 [serveru eXtra.cz bývalý investigativní reportér zpravodajství ČT Jiří Hynek](https://www.extra.cz/nove-detaily-obvineni-karlose-vemoly-investigativni-hvezda-varuje-8b197). Z dokumentů podle něj plyne, že proti zápasníkovi Karlosi Vémolovi nejsou svědectví ani listinné důkazy a že hlavním organizátorem je někdo jiný. Na závěr přidal hodnocení práce policie: „Celé to působí tak, že si policie myslela, že když ho zavřou, tak z něj něco dostanou.“

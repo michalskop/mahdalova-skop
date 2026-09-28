@@ -6,7 +6,7 @@ excerpt: "Více než třetina poslanců koalice vede některou z neziskových or
 coverImage: "images/datatimes-poslanci-neziskovky-2026.webp"
 filter: ["analýza", "investigace"]
 tags: ["sněmovna", "vláda", "neziskovky"]
-promoted: 55
+promoted: 1
 ---
 Vládní koalice připravuje přísnější pravidla pro hospodaření neziskových organizací. Jenže poslanci, kteří zákon prosazují, už jaksi neříkají, že podobná pravidla již existují. A že je sami nedodržují.
 

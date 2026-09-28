@@ -6,7 +6,7 @@ excerpt: "Poslanecká sněmovna zvolená v říjnu 2025 má 18 výborů. Zmapova
 coverImage: "images/turek.webp"
 filter: ["analýza"]
 tags: ["sněmovna", "výbory", "poslanci", "účast", "parlament"]
-promoted: 0
+promoted: 1
 ---
 
 Večerní zprávy ukazují řečnický pult a hlasovací tabuli. Většina skutečné parlamentní práce se ale odehrává jinde: ve výborech, kde se projednávají zákony a kontroluje vláda – bez kamer a bez potlesku. Skoro každý poslanec pracuje v jednom nebo dvou výborech; výjimkou jsou členové vlády a vedení Sněmovny, kteří ve výborech obvykle nezasedají.

@@ -7,7 +7,7 @@ excerpt: "Karin Kneissl se dostala na titulní stránky po celém světě, když
 coverImage: "images/kneissl-putin-tanec-profil-datatimes-guardian-rakousko-rusko.webp"
 filter: ["kontext"]
 tags: ["profil", "Rakousko-Rusko", "Rakousko", "Rusko", "Karin Kneissl", "Vladimir Putin", "FPÖ", "Svobodní", "zahraniční politika", "ruský vliv", "Sebastian Kurz", "Ibiza-gate", "aféra"]
-promoted: 49
+promoted: 1
 ---
 
 *| přeloženo z původního textu Amandy Coakley [v deníku The Guardian](https://www.theguardian.com/world/2025/jul/01/vladimir-putin-foreign-minister-karin-kneissl-russian-president-st-petersburg-vienna-moscow) ze dne 1. 7. 2025*

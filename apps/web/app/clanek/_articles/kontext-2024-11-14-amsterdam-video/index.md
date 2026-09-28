@@ -6,7 +6,7 @@ excerpt: "Jedno video, špatný kontext a příběh, který ilustruje, jak snadn
 coverImage: "images/amsterdam-udalosti.png"
 filter: ["explainer"]
 tags: ["zahraničí", "Amsterdam", "Izrael", "fotbal", "násilí"]
-promoted: 10
+promoted: 1
 ---
 
 ## Co vidíte na obrázku z videa?  

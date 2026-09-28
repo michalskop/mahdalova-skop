@@ -6,7 +6,7 @@ excerpt: "Neoprávněné podnikání, zkrácení nebo neodvedení daně či nere
 coverImage: "images/turek-zapujcky.webp"
 filter: ["kontext", "investigace"]
 tags: ["Filip Turek", "podnikání", "politika", "daně", "Turek"]
-promoted: 49
+promoted: 1
 ---
 
 ## Turkovy (ne)přiznané konzultace

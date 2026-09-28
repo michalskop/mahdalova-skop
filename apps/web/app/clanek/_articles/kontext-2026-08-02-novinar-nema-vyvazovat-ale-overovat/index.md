@@ -8,7 +8,7 @@ coverFit: contain
 coverBg: "brandTeal.5"
 filter: ["kontext", "svobodná-média"]
 tags: ["Profil: novinářské principy", "média", "svobodná média", "nezávislá média", "nezávislost médií", "profil", "žurnalistika", "objektivita", "ProPublica", "The Wall Street Journal", "Daniel Pearl", "USA"]
-promoted: 0
+promoted: 1
 ---
 
 Paula Steigera jsem v prvních minutách vůbec nepoznala. Z klubu v samém centru Lisabonu vycházel postarší muž o holi a šlo mu to do schodů docela těžko. Nabídla jsem mu pomoc, on ji přijal, sedli jsme si ke stolku venku před klubem a povídali si.

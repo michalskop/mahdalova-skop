@@ -6,7 +6,7 @@ excerpt: "Ve finančních prohlášeních europoslance Turka jsme odhalili velk�
 coverImage: "images/main.webp"
 filter: ["analýza", "investigace"]
 tags: ["Europarlament", "Turek", "Firmy", "Motoristé sobě", "Přísaha", "Patrioti", "Filip Turek"]
-promoted: 2
+promoted: 1
 ---
 V naší sérii o europoslanci Filipu Turkovi (Motoristé/Patrioti) jsme již odhalili jeho [“legendární“ závodní kariéru](/clanek/analyza-2025-05-13-jak-europoslanec-turek-doopravdy-zavodil-ve-formuli) i jeho [“prezidentování“ ve spolcích s pouhými třemi členy](/clanek/kontext-2025-05-14-europoslanec-turek-prezident-dvou-spolku). Nyní přinášíme podrobnou analýzu jeho finančních záležitostí v oblasti podnikání.
 

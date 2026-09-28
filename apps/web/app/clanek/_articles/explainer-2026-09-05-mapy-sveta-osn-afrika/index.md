@@ -8,7 +8,7 @@ coverFit: "contain"
 coverBg: "brandAmethyst.8"
 filter: ["kontext"]
 tags: ["mapy", "projekce", "OSN", "Afrika", "Mercator", "Equal Earth", "USA", "geopolitika"]
-promoted: 10
+promoted: 1
 ---
 
 Valné shromáždění OSN v pátek 4. září přijalo rezoluci, která vyzývá k přesnějšímu a vyváženějšímu zobrazování světa na mapách. Návrh s názvem „Correct the Map“ (dokument A/80/L.104) předložilo Togo jménem africké skupiny; navazuje na kampaň podporovanou Africkou unií. Pro hlasovalo 164 zemí, šest se zdrželo a jedinou zemí, která byla proti, byly Spojené státy.

@@ -7,7 +7,7 @@ coverImage: "images/murder-of-cain.webp"
 coverFit: cover
 filter: ["kontext"]
 tags: ["historická data", "mapy", "historie", "kriminalita", "středověk", "výzkum"]
-promoted: 72
+promoted: 1
 ---
 
 ![Mapa horkých míst středověké kriminality](images/hotspotmapthis-1445x900.jpg)

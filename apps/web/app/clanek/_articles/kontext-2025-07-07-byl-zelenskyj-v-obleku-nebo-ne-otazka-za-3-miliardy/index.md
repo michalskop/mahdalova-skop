@@ -6,7 +6,7 @@ excerpt: "Na první pohled banální otázka: měl ukrajinský prezident Volodym
 coverImage: "images/main.webp"
 filter: ["kontext"]
 tags: ["Zelenskyj", "Polymarket", "Techbros", "Demokracie",]
-promoted: 20
+promoted: 1
 ---
 
 _Na první pohled banální otázka: měl ukrajinský prezident Volodymyr Zelenskyj na summitu NATO ve dnech 24.–25. června 2025 na sobě oblek, nebo neměl? Ve skutečnosti se kolem této otázky roztočila sázková spirála, na jejímž konci leží v přepočtu **více než tři miliardy korun**._

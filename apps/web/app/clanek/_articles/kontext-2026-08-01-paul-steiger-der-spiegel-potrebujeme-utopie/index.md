@@ -9,7 +9,7 @@ coverFit: contain
 coverBg: "brandNavy.9"
 filter: ["kontext", "svobodná-média"]
 tags: ["svobodná média", "nezávislá média", "nezávislost médií", "média", "mediální byznys", "rozhovor", "žurnalistika", "ProPublica", "Jeff Bezos", "Washington Post", "Der Spiegel", "USA"]
-promoted: 0
+promoted: 1
 ---
 ```infobox
 **Rozhovor z roku 2013.** Vyšel v německém týdeníku Der Spiegel (44/2013), přinášíme jej v našem překladu. Volně navazuje na [profesní medailonek Paula Steigera](/clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat), ve kterém se zaměřujeme na novinářské principy, jimiž se sami řídíme. Reflexi redakce DataTimes.cz – co se od té doby v médiích skutečně změnilo – najdete na konci rozhovoru.

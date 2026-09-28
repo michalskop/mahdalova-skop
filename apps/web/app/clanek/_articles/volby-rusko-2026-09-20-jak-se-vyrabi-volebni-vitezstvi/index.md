@@ -9,7 +9,7 @@ coverFit: contain
 coverBg: "brandChocolate.9"
 filter: ["analýza"]
 tags: ["Rusko", "ruské volby 2026", "Jednotné Rusko", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "Kreml", "Duma", "válka na Ukrajině", "volby"]
-promoted: 75
+promoted: 1
 ---
 
 Trauma z prosince 2011, kdy pokles vládní podpory a neohrabané volební machinace vyhnaly na moskevské [Bolotné náměstí](https://en.wikipedia.org/wiki/Bolotnaya_Square_case) statisíce protestujících, zůstává pro Kreml trvalým varováním. Právě od té doby ruské úřady systematicky budovaly mašinérii přísných kvót, administrativních zásahů všeho druhu a pečlivé filtrace protikandidátů. 

@@ -4,7 +4,7 @@ date: "9999-12-29"
 author: "Dev Team"
 excerpt: "Testovací článek pro komponentu Fotogalerie – náhledová mřížka, která se po kliknutí rozbalí do svislého sloupce velkých fotek."
 tags: ["test", "components"]
-promoted: 0
+promoted: 1
 ---
 
 > Testovací článek pro komponentu **Fotogalerie**. Skrytý z výpisů (datum v budoucnu).

@@ -6,7 +6,7 @@ excerpt: "Hlavní vinu za válku na Ukrajině dává Rusku 85 procent Poláků, 
 coverImage: "images/cover-homepage.webp"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
-promoted: 0
+promoted: 1
 tags: ["Rusko", "dezinformace", "propaganda", "Slovensko", "Robert Fico", "Ukrajina", "EU", "NATO", "GLOBSEC", "Eurobarometr", "Bulharsko", "Maďarsko"]
 ---
 

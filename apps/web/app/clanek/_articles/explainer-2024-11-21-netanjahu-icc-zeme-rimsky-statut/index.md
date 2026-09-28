@@ -6,6 +6,7 @@ excerpt: "Politici jsou oficiálně obviněni z válečných zločinů a zločin
 coverImage: "images/Rimsky-statut-zeme-s-pozadim.png"
 filter: ["explainer"]
 tags: ["zahraničí", "Izrael", "Netanjahu", "zatykač", "ICC", "kontext"]
+promoted: 1
 ---
 Zatykač na Benjamina Netanjahua a Yoava Gallanta (ministra obrany) vydaný Mezinárodním trestním soudem (ICC) - odkaz na tiskovou zprávu je zde: [icc-cpi.int/…/situation-state…](https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-state-israels-challenges)
 

@@ -6,7 +6,7 @@ excerpt: "Podrobná analýza přesunů voličů."
 coverImage: "images/volby-2025-presuny-volicu-sankey-mahdalova-skop.svg"
 filter: ["analýza"]
 tags: ["volby 2025", "výsledky", "sněmovna", "mandáty", "ČSÚ", "data", "ekologická inference", "volby"]
-promoted: 50
+promoted: 1
 ---
 
 Nyní můžete detailně prozkoumat, **odkud se vzali ti, kdo rozhodli**.

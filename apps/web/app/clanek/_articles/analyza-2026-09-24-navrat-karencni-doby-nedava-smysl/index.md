@@ -7,6 +7,7 @@ coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
 tags: ["karenční doba", "nemocenské pojištění", "pracovní neschopnost", "sociální politika", "ČSSZ", "ČSÚ", "ČMKOS", "státní rozpočet", "zaměstnanci"]
+promoted: 1
 ---
 
 V roce 2025 vystavili lékaři v Česku 2,5 milionu neschopenek. To je o 30 procent víc než v roce 2019, kdy se rušila karenční doba. Prostonaných dnů bylo ve stejném srovnání o 4 procenta méně: 78 milionů místo 81 milionů. Průměrná neschopenka se zkrátila ze 42 na 31 dní. Ukazují to [data Českého statistického úřadu](https://statistikaamy.csu.gov.cz/78-milionu-dnu-pracovni-neschopnosti-za-rok).

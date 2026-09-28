@@ -8,7 +8,7 @@ coverFit: "contain"
 coverBg: "brandNavy.9"
 filter: ["analýza"]
 tags: ["Justice", "Palestinci", "Izrael", "hate speech", "svoboda projevu", "Volksverhetzung", "Martin Dvořák", "soudy", "lidská práva", "Evropa"]
-promoted: 69
+promoted: 1
 ---
 Sedm měsíců podmíněně za větu „sionisté jsou nacisté“ v Rakousku. Tři roky vězení za nájezd autem do propalestinského průvodu ve Švédsku. Zrušené odsouzení za nadávky „sionistům“ v Bavorsku. Evropské soudy po 7. říjnu 2023 rozhodly desítky sporů o hranici mezi svobodou projevu a nenávistí a jedno mají společné: kolektivní nenávist trestají bez ohledu na to, kterou stranu konfliktu míří.
 

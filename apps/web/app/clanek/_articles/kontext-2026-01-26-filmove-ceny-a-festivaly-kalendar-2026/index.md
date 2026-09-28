@@ -7,7 +7,7 @@ coverImage: "images/datatimes-kalendar-filmovych-udalosti-2026.webp"
 coverFit: cover
 filter: ["kontext"]
 tags: ["filmový kalendář", "film", "kultura", "festivaly", "ceny"]
-promoted: 48
+promoted: 1
 htmlInclude: "kalendar.html"
 ---
 

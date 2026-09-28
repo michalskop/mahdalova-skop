@@ -7,7 +7,7 @@ coverImage: "images/gaza-nenavist-soudy-datatimes.jpg"
 coverFit: cover
 filter: ["kontext"]
 tags: ["Justice", "Palestinci", "Izrael", "Gaza", "hate speech", "Martin Dvořák", "svobodná média", "Česká televize", "soudy", "lidská práva", "Evropa"]
-promoted: 70
+promoted: 1
 ---
 Pražský soud 8. června 2026 rozhodl, že se český stát musí veřejně omluvit za výroky bývalého ministra Martina Dvořáka na adresu Palestinců. Soud tyto výroky označil za protiprávní, nepravdivé a zcela nepřiměřené.
 

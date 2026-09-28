@@ -7,7 +7,7 @@ coverImage: "images/pf-2026-datatimes.webp"
 coverFit: cover
 filter: ["kontext"]
 tags: ["video", "žurnalistika", "objektivita", "novináři", "demokracie"]
-promoted: 60
+promoted: 1
 ---
 **Je fér říct nahlas, z jakých pozic píšeme**
 

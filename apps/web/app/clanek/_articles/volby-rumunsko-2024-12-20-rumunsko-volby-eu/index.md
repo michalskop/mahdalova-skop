@@ -7,6 +7,7 @@ excerpt: "Hybridní kampaně, manipulace algoritmů a vlivové operace ukazují,
 coverImage: "images/main.webp"  
 filter: ["kontext"]  
 tags: ["zahraničí", "Rumunsko", "TikTok", "volby", "dezinformace", "demokracie", "hybridní válka", "kybernetická bezpečnost"]
+promoted: 1
 ---
 Když se Călin Georgescu objevil na politické scéně Rumunska, málokdo tušil, kdo vlastně je. Bývalý diplomat a nacionalista, známý svými proruskými a antizápadními postoji, byl dlouho outsiderem. Jeho názory na odchod Rumunska z EU a NATO nebo glorifikace kontroverzních historických postav ho stavěly na okraj veřejného zájmu. Jenže pak přišla TikToková kampaň – a během několika týdnů se z neznámého kandidáta stal vítěz prvního kola prezidentských voleb.
 

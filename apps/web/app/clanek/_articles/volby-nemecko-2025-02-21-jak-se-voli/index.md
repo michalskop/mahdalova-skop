@@ -6,6 +6,7 @@ excerpt: "V neděli proběhnou německé parlamentní volby. Proč klasické vol
 coverImage: "images/step_13.svg"
 filter: ["analýza"]
 tags: ["Německo", "zahraničí", "volby", "mapy", "kartogramy", "realita"]
+promoted: 1
 ---
 
 <ScrollyTelling yamlFile="scrollytelling.yaml" />

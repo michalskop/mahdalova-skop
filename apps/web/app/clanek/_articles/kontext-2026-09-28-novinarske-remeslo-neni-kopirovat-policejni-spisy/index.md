@@ -8,7 +8,7 @@ coverFit: contain
 coverBg: "brandCoralRed.8"
 filter: ["kontext"]
 tags: ["úniky z policejních spisů", "média", "novinářská etika", "policejní spisy", "presumpce neviny", "trestní řízení", "komunální volby 2026", "Praha", "billboardy"]
-promoted: 0
+promoted: 1
 ---
 
 ## Kauza „Miliony billboardového aktivisty“ aneb Jak média vstoupila do předvolební kampaně

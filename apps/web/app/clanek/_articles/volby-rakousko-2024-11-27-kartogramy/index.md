@@ -6,6 +6,7 @@ excerpt: "Pochval a uznání není nikdy dost 😊⁣ Naše kartogramy si jako u
 coverImage: "images/Rakousko-kartogramy.png"
 filter: ["kontext"]
 tags: ["zahraničí", "Rakousko", "mapy", "kartogramy", "realita", "kontext", "volby"]
+promoted: 1
 ---
 V tomto konkrétním kartogramu jsou zpracované výsledky podzimních rakouských voleb a mapa je nyní umístěna [v rakouském národním katalogu (klikněte na odkaz)](https://www.data.gv.at/katalog/application/6897edfa-2c70-4d7f-9d5a-b7f61b7e87f1#views)
 Obecně je kartogram typ mapy, ve které jsou zeměpisné oblasti upraveny tak, aby znázorňovaly určitou veličinu, nikoliv jejich skutečnou rozlohu.

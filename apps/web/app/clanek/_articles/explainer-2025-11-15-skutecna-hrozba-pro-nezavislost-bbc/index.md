@@ -6,7 +6,7 @@ excerpt: "BBC zažila týden chyb, rezignace šéfů a hrozí jí žaloba za mil
 coverImage: "images/bbc-2025-explainer-mahdalova-skop-lide-5x4.webp"
 filter: ["explainer", "svobodná-média"]
 tags: ["nezávislost BBC", "média", "svobodná média", "nezávislá média", "nezávislost médií", "veřejnoprávní", "BBC", "Robbie Gibb", "Tim Davie", "Trump", "Gaza", "mediální krize", "nestrannost"]
-promoted: 49
+promoted: 1
 ---
 
 BBC zažila týden chyb, rezignace šéfů a hrozí jí žaloba za miliardu dolarů. Největší ohrožení nezávislosti je ve vedení, nikoli v samotné redakci.

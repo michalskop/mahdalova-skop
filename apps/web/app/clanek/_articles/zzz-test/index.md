@@ -4,7 +4,7 @@ date: "9999-12-30"
 author: "Dev Team"
 excerpt: "Testing the new KeyNumbers component with various configurations: inline data, JSON loading, palette colors, and custom HTML/RGBA colors."
 tags: ["test", "components"]
-promoted: 0
+promoted: 1
 ---
 
 > This is a test article for the KeyNumbers component. Hidden from listings (future date).

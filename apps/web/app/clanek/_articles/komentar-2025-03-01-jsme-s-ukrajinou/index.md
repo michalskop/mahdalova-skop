@@ -6,7 +6,7 @@ excerpt: "Role Spojených států coby garanta stability se změnila. Trumpova d
 coverImage: "images/ukrajina-zelensky.jpg"
 filter: ["kontext"]
 tags: ["komentář", "diplmacie", "USA", "Ukrajina", "Evropa", "politika", "mír", "demokracie", "Zelensky", "Trump"]
-promoted: 2
+promoted: 1
 ---
 
 Role Spojených států coby garanta stability se změnila. Trumpova diplomacie nyní obviňuje oběť, oslabuje spojence a posiluje agresora.

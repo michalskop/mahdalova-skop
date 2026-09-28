@@ -6,7 +6,7 @@ excerpt: "Musk: Dezinformace jako nikdy"
 coverImage: "images/Weidel_and_Musk.webp"
 filter: ["kontext"]
 tags: ["glosa", "zahraničí", "Německo", "volby", "politika", "fašismus", "demokracie", "Elon Musk"]
-promoted: 4
+promoted: 1
 ---
 
 Tady bude článek o Muskovi
