@@ -43,9 +43,13 @@ export interface PublishedAt {
 }
 
 export function parsePublishedAt(date: unknown, time?: unknown): PublishedAt {
-  const d = typeof date === 'string' ? date.trim().match(/^(\d{4})-(\d{2})-(\d{2})/) : null;
+  // gray-matter převádí nequotované `date: 2026-09-28` na Date (UTC půlnoc).
+  const dateStr = date instanceof Date && !Number.isNaN(date.getTime())
+    ? date.toISOString().slice(0, 10)
+    : typeof date === 'string' ? date.trim() : '';
+  const d = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (!d) {
-    const ms = date instanceof Date ? date.getTime() : new Date(String(date ?? '')).getTime();
+    const ms = new Date(dateStr).getTime();
     return { ms: Number.isNaN(ms) ? 0 : ms, hasTime: false };
   }
   const t = typeof time === 'string' ? time.trim().match(/^(\d{1,2}):(\d{2})$/) : null;
@@ -129,6 +133,9 @@ export async function getArticles({
     return null;
   }
 
+  // Skrytý čas publikace – drží se mimo objekty Article (viz parsePublishedAt).
+  const publishedAtBySlug = new Map<string, number>();
+
   const folderArticles = articleFolders
     .map((folder) => {
       const fullPath = path.join(articlesDir, folder, 'index.md');
@@ -137,6 +144,7 @@ export async function getArticles({
       try {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data } = matter(fileContents);
+        publishedAtBySlug.set(folder, parsePublishedAt(data.date, data.time).ms);
         const homepageImage = resolveCoverImage(data.homepageImage, folder);
         const coverImage = homepageImage || resolveCoverImage(data.coverImage, folder);
 
@@ -191,7 +199,7 @@ export async function getArticles({
     return {
       ...article,
       promotedScore: explicitPromotionScore + timeScore,
-      publishedAt: readPublishedAt(articlesDir, article.slug, article.date).ms,
+      publishedAt: publishedAtBySlug.get(article.slug) ?? parsePublishedAt(article.date).ms,
     } as ArticleWithScore;
   });
 
