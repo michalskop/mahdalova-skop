@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Kandidát Zelených Zdeněk Jahn není obviněný ani vyšetřovaný. Policie potvrdila jediné: že se věcí zabývá. Z anonymních „zjištění“ o obratu na jeho účtech přesto vznikly titulky celostátních médií. Jak se ven dostává policejní práce, která je teprve ve fázi prověřování."
 coverImage: "images/cover-novinarske-remeslo-datatimes.jpg"
 coverFit: contain
-coverBg: "brandCoralRed.8"
+coverBg: "brandDeepRed.5"
 filter: ["kontext"]
 tags: ["média", "svoboda médií", "moc médií", "vliv médií"]
 promoted: 1
