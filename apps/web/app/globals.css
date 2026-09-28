@@ -298,3 +298,20 @@
 #kontakty a:visited {
   color: var(--mantine-color-brand-6);
 }
+
+/* Opt-in wide side box: <div className="dt-wide-left"> around an ```infobox left```.
+   The box takes ~3/4 of the reading column and bleeds up to 1/4 into the left
+   margin (only as far as the viewport has room, like --dt-bleed-pull). */
+.dt-wide-left > .dt-infobox {
+  width: 75%;
+  max-width: none;
+  margin-left: calc(-1 * clamp(0px, (100vw - 100%) / 2 - var(--dt-bleed-gutter), 25%));
+  margin-right: var(--dt-bleed-gap);
+}
+@media (max-width: 768px) {
+  .dt-wide-left > .dt-infobox {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
