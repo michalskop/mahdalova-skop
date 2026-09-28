@@ -10,6 +10,13 @@
   align-items: start;
 }
 
+/* Lead lícuje s pravým sloupcem (výšku dorovnává useEqualColumns): patička
+   s datem a autorem se drží u spodní hrany karty. */
+.lead :global(.mantine-Card-root) > :global(.mantine-Group-root) {
+  margin-top: auto;
+  padding-top: var(--mantine-spacing-md);
+}
+
 .side {
   display: flex;
   flex-direction: column;
