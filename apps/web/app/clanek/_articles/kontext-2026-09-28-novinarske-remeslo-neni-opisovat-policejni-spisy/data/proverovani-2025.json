@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Téměř {polovina|#639e0a} prověřování skončí odložením, u každého osmého nejde vůbec o trestný čin",
+  "text": "Téměř polovina prověřování skončí {odložením|#639e0a}, u každého osmého nejde vůbec o trestný čin",
   "subtitle": "Věci vyřízené ve fázi prověřování v roce 2025 (186 588 = 100 %). K objasněným patří i menší část věcí odložených z jiných důvodů, například pro promlčení."
  },
  "width": "container",
