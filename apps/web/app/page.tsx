@@ -2,7 +2,7 @@
 // 'use client';
 
 import { Container } from '@mantine/core';
-import { getArticles } from '@/components/common/getArticles';
+import { getArticles, getPublishedAt, comparePublishedAt } from '@/components/common/getArticles';
 // import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import Testimonials from '@/components/common/Testimonials';
 import HeroTitle from '@/components/frontpage/HeroTitle';
@@ -36,6 +36,31 @@ export default async function HomePage() {
   const articles_contexts = await getArticles(8, "kontext");
   const articles_podcasts = await getArticles(8, "podcast");
 
+  // Volby 🔴 × Výběr 🔵 se automaticky prohazují: pás s aktuálnějším nejnovějším
+  // článkem jde hned pod Speciály, druhý pod newsletter. Rozhoduje den, při
+  // stejném dni skrytá hodina (frontmatter `time`), když ji mají oba články;
+  // při remíze zůstávají nahoře Volby. Statický export → pořadí se přepočítá
+  // při každém buildu (= každém deployi nového článku).
+  const electionsHero = (
+    <FeaturedHero
+      articles={articles_elections}
+      themeColor="brand"
+      moreLink="/tag/volby" />
+  );
+  const selectionHero = (
+    <FeaturedHero
+      articles={articles}
+      themeColor="#5e66d5"
+      moreLink="/vyber" />
+  );
+  const selectionFirst =
+    articles.length > 0 &&
+    (articles_elections.length === 0 ||
+      comparePublishedAt(getPublishedAt(articles[0]), getPublishedAt(articles_elections[0])) > 0);
+  const [upperHero, lowerHero] = selectionFirst
+    ? [selectionHero, electionsHero]
+    : [electionsHero, selectionHero];
+
   return (
     <Container 
       size="lg" 
@@ -54,23 +79,14 @@ export default async function HomePage() {
 
       <SpecialsHero sectionLink="/specialy" />
 
-      {/* Volby = hlavní blok hned pod speciály (styl The Nerve): velký hlavní
-          článek vlevo, 3 nejnovější vpravo + vlnovková šipka „Více" → /tag/volby.
-          Červená („brand") zůstává po původní rubrice Analýzy; rubrika Analýzy
-          zůstává na /analyzy, na homepě ji nahrazují Volby. */}
-      <FeaturedHero
-        articles={articles_elections}
-        themeColor="brand"
-        moreLink="/tag/volby" />
+      {/* Volby (červená „brand", → /tag/volby) a Výběr (modrá, → /vyber; nedubluje
+          Volby) – styl The Nerve: velký hlavní článek vlevo, 3 nejnovější vpravo.
+          Pořadí obou pásů je automatické, viz selectionFirst výše. */}
+      {upperHero}
 
       <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/>
 
-      {/* Výběr (styl The Nerve): hlavní článek vlevo, 3 nejnovější vpravo +
-          „Více" → /vyber. Nedubluje články z rubriky Volby (viz filtr výše). */}
-      <FeaturedHero
-        articles={articles}
-        themeColor="#5e66d5"
-        moreLink="/vyber" />
+      {lowerHero}
 
       {/* Kontext: oranžový pás bez nadpisu (jako Volby / Výběr), 3+3 karty ve
           dvou řadách a dole „Více" → /kontext. */}

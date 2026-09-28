@@ -285,6 +285,11 @@ Ptáme se vždy na tři věci:
 
 *Pravidlo platí od 2026-09-23 (po chybném přejmenování Steigerova profilu na slug bez rubriky a data). Vlastník: Kateřina Mahdalová.*
 
+## Skrytý čas publikace (`time`)
+Vedle `date` nese frontmatter nepovinné pole `time: "HH:MM"` (pražský čas). **Nikde se nezobrazuje** – ani v článku, ani v JSON-LD, RSS, sitemapě či llms.txt; slouží jen k řazení článků ze stejného dne a k automatickému pořadí pásů na homepage: z červených **Voleb** a modrého **Výběru** jde hned pod Speciály ten, jehož nejnovější článek je aktuálnější, druhý pod newsletter (při stejném dni rozhoduje `time`, pokud ho mají oba; remíza = Volby nahoře).
+
+Čas **doplňuje automaticky git hook** při prvním commitu nového `index.md` (`scripts/git-hooks/`); ručně ho píšeme jen u článku commitnutého dopředu a zveřejněného později. Existující `time` hook nepřepisuje, články s budoucím datem přeskakuje. Instalace na novém počítači (jednou): `git config core.hooksPath scripts/git-hooks`.
+
 ## Minimální brief
 Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní otázka a pracovní odpověď · žánr a rozsah · primární zdroje a datová omezení · projekt, accent a komponenty · editor, termín, stav (research / draft / ready).
 
