@@ -4,7 +4,7 @@ date: "2026-09-23"
 author: "Kateřina Mahdalová"
 excerpt: "Otcové dětí do šesti let mají v Česku placenou práci nejčastěji v Evropské unii, matky spolu s Rumunkami nejméně často. Rozdíl 46 procentních bodů nemá v EU obdobu. Zájem matky mají: jakmile jde dítě do školy, jsou Češky zaměstnané častěji než jinde v Evropě. Na kulatém stole ve Sněmovně se odborníci shodli, že je na trh práce nepouštějí chybějící jesle, zkrácené úvazky a otcové na rodičovské. Vláda od ledna 2027 zvyšuje rodičovský příspěvek na 400 tisíc korun."
 coverImage: "images/cover-homepage.jpg"
-ogImage: "images/cover-og.jpg"
+ogImage: "images/og-matky-prace-rodina-datatimes.jpg"
 filter: ["analýza", "společnost"]
 promoted: 1
 tags: ["práce a rodina", "rodinná politika", "demografie", "porodnost", "rodičovský příspěvek", "jesle", "zkrácené úvazky", "otcovská", "Poslanecká sněmovna", "Eurostat", "MPSV"]
