@@ -15,9 +15,11 @@ promoted: 0
 
 Web Odkryto.cz zveřejnil 21. září 2026 v osm ráno článek [„Miliony na účtech. O billboardového aktivistu se zajímá policie“](https://www.odkryto.cz/miliony-na-desitkach-uctu-o-billboardoveho-aktivistu-se-zajima-policie/). Podepsala ho „Redakce“. Text tvrdí, že přes účty Zdeňka Jahna, dnes kandidáta Zelených do zastupitelstva Prahy 3, protekl obrat „téměř 200 milionů korun“ a že se policie zajímá o původ peněz. Titulek z něj dělá „billboardového aktivistu“, Jahn je přitom ekonom, který pracoval jako úředník na ministerstvu dopravy a v pražské Technické správě komunikací (TSK). Web k obratu uvádí pouze „podle informací Odkryto.cz“ a žádné jiné podklady pro toto tvrzení redakce nepřináší.
 
-<div className="dt-wide-left">
+V 13:40 měly zprávu [Novinky.cz](https://www.novinky.cz/clanek/domaci-o-kandidata-zelenych-v-praze-3-se-zajima-policie-kvuli-milionum-na-jeho-uctech-40598752) s titulkem „O kandidáta Zelených v Praze 3 se zajímá policie kvůli milionům na jeho účtech“. Vlastní ověření u policie v textu nemají, stejně jako [Info.cz](https://www.info.cz/zpravodajstvi-a-komentare/zdenek-jahn-zeleni-praha-3-policie-tsk), které zprávu převzalo týž den.
 
-```infobox left
+Policie se zeptal až [Pražský deník](https://prazsky.denik.cz/komunalni-volby/policie-se-zabyva-kandidatem-zelenych-na-praze-3-na-uctech-ma-miliony/) o den později. Mluvčí pražské policie Eva Kropáčová odpověděla: „V dané věci vám pouze mohu potvrdit, že se věcí zabýváme.“ Víc policie nesdělila. Komunální volby se konají 9. a 10. října.
+
+```infobox
 #### Prověřování je fáze, ve které se teprve zjišťuje, zda jde o trestný čin
 
 Věta „policie se věcí zabývá“ popisuje nejranější stadium, jaké český trestní řád zná. Policie podle [§ 158 trestního řádu](https://www.zakonyprolidi.cz/cs/1961-141) prověřuje podněty a trestní oznámení: vyžaduje vysvětlení od lidí, firem a úřadů, obstarává podklady, zadává odborná vyjádření. Obviněný v této fázi neexistuje. Tím se člověk stane až usnesením o zahájení trestního stíhání podle § 160, a to jen tehdy, když je „dostatečně odůvodněn závěr“, že čin spáchal. Vyšetřování začíná teprve potom. Jahn není obviněný ani vyšetřovaný, [řekl sám pro E15](https://www.e15.cz/domaci/pres-sedm-uctu-protekly-desitky-milionu-kandidat-zelenych-vysvetluje-sve-finance-1436036) – a ani policie nic takového netvrdí.
@@ -29,12 +31,6 @@ Konec prověřování se do titulků dostává méně často než jeho začátek
 Prověřování tedy samo o sobě neříká nic o vině. Policie musí prověřit i anonymní udání a podněty, které vzniknou z osobní msty, obchodního sporu nebo politického boje. Informace, že policie někoho prověřuje, proto zpravodajskou hodnotu má jen s kontextem: kdo podnět podal, co je jeho předmětem a jak silné jsou podklady. Právě ten Odkryto.cz ani Novinky čtenářům nedaly.
 ```
 
-</div>
-
-V 13:40 měly zprávu [Novinky.cz](https://www.novinky.cz/clanek/domaci-o-kandidata-zelenych-v-praze-3-se-zajima-policie-kvuli-milionum-na-jeho-uctech-40598752) s titulkem „O kandidáta Zelených v Praze 3 se zajímá policie kvůli milionům na jeho účtech“. Vlastní ověření u policie v textu nemají, stejně jako [Info.cz](https://www.info.cz/zpravodajstvi-a-komentare/zdenek-jahn-zeleni-praha-3-policie-tsk), které zprávu převzalo týž den.
-
-Policie se zeptal až [Pražský deník](https://prazsky.denik.cz/komunalni-volby/policie-se-zabyva-kandidatem-zelenych-na-praze-3-na-uctech-ma-miliony/) o den později. Mluvčí pražské policie Eva Kropáčová odpověděla: „V dané věci vám pouze mohu potvrdit, že se věcí zabýváme.“ Víc policie nesdělila. Komunální volby se konají 9. a 10. října.
-
 ## Obrat na účtech se v titulku změnil na miliony
 
 Obrat a majetek jsou dvě různá čísla. Když člověk převádí stejné peníze mezi bankami kvůli úrokům, obrat roste s každým převodem, zatímco majetek zůstává stejný. Tak vysoké obraty vysvětluje Jahn. Na účtech má podle svých slov včetně investic asi 7,5 milionu korun. Za poslední tři roky na ně vložil v hotovosti 549 tisíc, převážně důchod svého otce, který neumí internetové bankovnictví, a příspěvky partnera. Podle Jahna měl podobnou částku už při odchodu ze soukromé sféry a od té doby se nezměnila.
@@ -42,8 +38,6 @@ Obrat a majetek jsou dvě různá čísla. Když člověk převádí stejné pen
 Odkryto.cz 26. září článek upravilo. Místo „desítek účtů“, které zůstaly v jeho webové adrese, uvádí sedm podle Jahnova vyjádření. Zároveň smazalo odstavec o kauze bývalého náměstka TSK Josefa Richtra, která s Jahnem nesouvisí. Titulek o „milionech na účtech“ zůstal.
 
 Také pasáž o TSK stojí na nepotvrzené informaci. Podle Odkryto.cz se vyšetřovatelé v TSK, kde Jahn dříve pracoval, doptávali, zda měl na starosti veřejné zakázky. Mluvčí TSK Barbora Lišková odpověděla: „I kdyby se tak stalo, tak tyto informace nesdělujeme.“ TSK tedy dotaz policie nepotvrdila ani nevyvrátila.
-
-<div style={{clear: "both"}} />
 
 ```infobox
 #### Co o zdroji řekl Jiří Hynek
