@@ -1,0 +1,189 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Téměř {polovina|#639e0a} prověřování skončí odložením, u každého osmého nejde vůbec o trestný čin",
+  "subtitle": "Věci vyřízené ve fázi prověřování v roce 2025 (186 588 = 100 %). K objasněným patří i menší část věcí odložených z jiných důvodů, například pro promlčení."
+ },
+ "width": "container",
+ "height": 56,
+ "data": {
+  "values": [
+   {
+    "kategorie": "Odloženo – nejde o trestný čin",
+    "pocet": 22585,
+    "podil": 12.1,
+    "poradi": 0,
+    "barva": "#6ec53f",
+    "popisek": "12,1 % (22 585)",
+    "pocet_txt": "22 585",
+    "legenda": "Odloženo – nejde o trestný čin: 12,1 % (22 585)",
+    "uvnitr": "12,1 %",
+    "svetly": true,
+    "od": 0,
+    "do": 12.1,
+    "stred": 6.05,
+    "tip": "22 585 věcí (12,1 %): odloženo, protože nejde o trestný čin"
+   },
+   {
+    "kategorie": "Odloženo – nezjištěny skutečnosti pro stíhání",
+    "pocet": 62348,
+    "podil": 33.4,
+    "poradi": 1,
+    "barva": "#acde8b",
+    "popisek": "33,4 % (62 348)",
+    "pocet_txt": "62 348",
+    "legenda": "Odloženo – nezjištěny skutečnosti pro stíhání: 33,4 % (62 348)",
+    "uvnitr": "33,4 %",
+    "svetly": true,
+    "od": 12.1,
+    "do": 45.5,
+    "stred": 28.8,
+    "tip": "62 348 věcí (33,4 %): odloženo, protože se nezjistilo nic pro stíhání"
+   },
+   {
+    "kategorie": "Objasněno – pokračuje stíháním či zkráceným řízením",
+    "pocet": 71761,
+    "podil": 38.5,
+    "poradi": 2,
+    "barva": "#ff3f30",
+    "popisek": "38,5 % (71 761)",
+    "pocet_txt": "71 761",
+    "legenda": "Objasněno – pokračuje stíháním či zkráceným řízením: 38,5 % (71 761)",
+    "uvnitr": "38,5 %",
+    "svetly": false,
+    "od": 45.5,
+    "do": 84.0,
+    "stred": 64.75,
+    "tip": "71 761 věcí (38,5 %): objasněno, pokračuje stíháním či zkráceným řízením"
+   },
+   {
+    "kategorie": "Předáno jako přestupek či kárné provinění",
+    "pocet": 8478,
+    "podil": 4.5,
+    "poradi": 3,
+    "barva": "#f76800",
+    "popisek": "4,5 % (8 478)",
+    "pocet_txt": "8 478",
+    "legenda": "Předáno jako přestupek či kárné provinění: 4,5 % (8 478)",
+    "uvnitr": "",
+    "svetly": false,
+    "od": 84.0,
+    "do": 88.5,
+    "stred": 86.25,
+    "tip": "8 478 věcí (4,5 %): předáno k řízení o přestupku či kárném provinění"
+   },
+   {
+    "kategorie": "Ostatní způsoby vyřízení",
+    "pocet": 21416,
+    "podil": 11.5,
+    "poradi": 4,
+    "barva": "#bcbcb0",
+    "popisek": "11,5 % (21 416)",
+    "pocet_txt": "21 416",
+    "legenda": "Ostatní způsoby vyřízení: 11,5 % (21 416)",
+    "uvnitr": "11,5 %",
+    "svetly": true,
+    "od": 88.5,
+    "do": 100.0,
+    "stred": 94.25,
+    "tip": "21 416 věcí (11,5 %): vyřízeno jiným způsobem"
+   }
+  ]
+ },
+ "encoding": {},
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": 46,
+    "stroke": "#ffffff",
+    "strokeWidth": 1.5
+   },
+   "encoding": {
+    "color": {
+     "field": "legenda",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Odloženo – nejde o trestný čin: 12,1 % (22 585)",
+       "Odloženo – nezjištěny skutečnosti pro stíhání: 33,4 % (62 348)",
+       "Objasněno – pokračuje stíháním či zkráceným řízením: 38,5 % (71 761)",
+       "Předáno jako přestupek či kárné provinění: 4,5 % (8 478)",
+       "Ostatní způsoby vyřízení: 11,5 % (21 416)"
+      ],
+      "range": [
+       "#6ec53f",
+       "#acde8b",
+       "#ff3f30",
+       "#f76800",
+       "#bcbcb0"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom",
+      "direction": "vertical",
+      "labelLimit": 520,
+      "labelFontSize": 12,
+      "symbolType": "square",
+      "symbolSize": 140
+     }
+    },
+    "tooltip": {
+     "field": "tip",
+     "type": "nominal"
+    },
+    "x": {
+     "field": "od",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": null
+    },
+    "x2": {
+     "field": "do"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "fontSize": 13,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "field": "stred",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "uvnitr"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.svetly",
+      "value": "#1a1a2e"
+     },
+     "value": "#ffffff"
+    },
+    "tooltip": {
+     "field": "tip",
+     "type": "nominal"
+    }
+   }
+  }
+ ],
+ "_source": "[Zpráva o činnosti státního zastupitelství za rok 2025, tabulková část (NSZ), tab. II/1a–c](https://verejnazaloba.cz/wp-content/uploads/2026/06/ZPR%C3%81VA-O-%C4%8CINNOSTI-SZ-ZA-ROK-2025-tabulkov%C3%A1-%C4%8D%C3%A1st.pdf); součet okresních, krajských a vrchních státních zastupitelství, výpočet DataTimes"
+}

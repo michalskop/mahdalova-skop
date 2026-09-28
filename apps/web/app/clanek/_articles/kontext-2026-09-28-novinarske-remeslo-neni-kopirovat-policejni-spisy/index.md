@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Kandidát Zelených Zdeněk Jahn není obviněný ani vyšetřovaný. Policie potvrdila jediné: že se věcí zabývá. Z anonymních „zjištění“ o obratu na jeho účtech přesto vznikly titulky celostátních médií. Jak se ven dostává policejní práce, která je teprve ve fázi prověřování."
 coverImage: "images/cover-novinarske-remeslo-datatimes.jpg"
 coverFit: contain
-coverBg: "brandNavy.9"
+coverBg: "brandCoralRed.8"
 filter: ["kontext"]
 tags: ["úniky z policejních spisů", "média", "novinářská etika", "policejní spisy", "presumpce neviny", "trestní řízení", "komunální volby 2026", "Praha", "billboardy"]
 promoted: 0
@@ -19,17 +19,21 @@ V 13:40 měly zprávu [Novinky.cz](https://www.novinky.cz/clanek/domaci-o-kandid
 
 Policie se zeptal až [Pražský deník](https://prazsky.denik.cz/komunalni-volby/policie-se-zabyva-kandidatem-zelenych-na-praze-3-na-uctech-ma-miliony/) o den později. Mluvčí pražské policie Eva Kropáčová odpověděla: „V dané věci vám pouze mohu potvrdit, že se věcí zabýváme.“ Víc policie nesdělila. Komunální volby se konají 9. a 10. října.
 
-```infobox
+<InfoBox>
+
 #### Prověřování je fáze, ve které se teprve zjišťuje, zda jde o trestný čin
 
 Věta „policie se věcí zabývá“ popisuje nejranější stadium, jaké český trestní řád zná. Policie podle [§ 158 trestního řádu](https://www.zakonyprolidi.cz/cs/1961-141) prověřuje podněty a trestní oznámení: vyžaduje vysvětlení od lidí, firem a úřadů, obstarává podklady, zadává odborná vyjádření. Obviněný v této fázi neexistuje. Tím se člověk stane až usnesením o zahájení trestního stíhání podle § 160, a to jen tehdy, když je „dostatečně odůvodněn závěr“, že čin spáchal. Vyšetřování začíná teprve potom. Jahn není obviněný ani vyšetřovaný, [řekl sám pro E15](https://www.e15.cz/domaci/pres-sedm-uctu-protekly-desitky-milionu-kandidat-zelenych-vysvetluje-sve-finance-1436036) – a ani policie nic takového netvrdí.
 
 Kolik prověřování dojde dál, ukazuje [Zpráva o činnosti státního zastupitelství za rok 2025](https://verejnazaloba.cz/wp-content/uploads/2026/06/ZPR%C3%81VA-O-%C4%8CINNOSTI-SZ-ZA-ROK-2025-tabulkov%C3%A1-%C4%8D%C3%A1st.pdf). Z 186 588 věcí vyřízených ve fázi prověřování skončilo 84 933 odložením, tedy 45,5 %. U 22 585 z nich policie a žalobci dospěli k závěru, že vůbec nejde o podezření z trestného činu. U věcí pod dozorem krajských státních zastupitelství, kam patří závažnější hospodářská kriminalita, skončilo závěrem, že nejde o trestný čin, 30,5 % prověřování. Rok předtím byl podíl odložených věcí podobný, 47,3 %.
 
+<VegaChart dataFile="data/proverovani-2025.json" />
+
 Konec prověřování se do titulků dostává méně často než jeho začátek. Národní centrála proti organizované kriminalitě 4. října 2021, čtyři dny před sněmovními volbami, [oznámila](https://www.denik.cz/z_domova/pandora-paper-babis-penize-ncoz-20211004.html), že prověří zjištění Pandora Papers o nákupu zámků Andreje Babiše ve Francii. V únoru 2022 věc [odložila](https://ct24.ceskatelevize.cz/clanek/domaci/babis-se-v-cesku-v-kauze-pandora-papers-trestneho-cinu-nedopustil-kriminaliste-pripad-predali-do-zah-23974), protože v Česku nešlo o podezření z trestného činu; poznatky předala do zahraničí.
 
 Prověřování tedy samo o sobě neříká nic o vině. Policie musí prověřit i anonymní udání a podněty, které vzniknou z osobní msty, obchodního sporu nebo politického boje. Informace, že policie někoho prověřuje, proto zpravodajskou hodnotu má jen s kontextem: kdo podnět podal, co je jeho předmětem a jak silné jsou podklady. Právě ten Odkryto.cz ani Novinky čtenářům nedaly.
-```
+
+</InfoBox>
 
 ## Obrat na účtech se v titulku změnil na miliony
 
