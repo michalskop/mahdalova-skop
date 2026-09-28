@@ -114,9 +114,9 @@ function parseDateInput(value: string): Date | null {
     return new Date(Date.UTC(y, mo - 1, d));
   }
 
-  const dt = new Date(value);
-  if (Number.isNaN(dt.getTime())) return null;
-  return dt;
+  // Volný text („Červen 2006", „1987", „2014–2016") se nepřevádí – Chrome by
+  // z něj lenientně udělal 1. 1. daného roku.
+  return null;
 }
 
 function formatEventDate(value: string, locale: string): string {
@@ -745,12 +745,16 @@ export default function Timeline({ content, className, slug }: TimelineProps) {
                       borderRadius: 999,
                       background: 'rgba(255,255,255,0.2)',
                       color: theme.white,
-                      fontSize: 22,
-                      lineHeight: '32px',
-                      textAlign: 'center',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                     }}
+                    aria-label="Zavřít"
                   >
-                    ×
+                    {/* SVG místo znaku „ד – glyf by podle metriky písma seděl mimo střed kolečka */}
+                    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                      <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    </svg>
                   </UnstyledButton>
 
                   <Text style={{ fontSize: 32, marginBottom: 6 }}>{selected.emoji || '📌'}</Text>

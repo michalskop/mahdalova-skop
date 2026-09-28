@@ -1,6 +1,6 @@
-title: "Živé spisy v médiích: česká tradice"
-subtitle: "Vybrané případy, kdy úniky z trestních řízení ovlivnily veřejný prostor"
-lastUpdated: "Aktualizováno: únor 2026"
+title: "Kdo vynese spis do médií, zůstane neznámý. Kdo ho prodá, jde k soudu"
+subtitle: "Vybrané české případy úniků z trestních řízení 2006–2026, ověřené podle dobových zdrojů"
+lastUpdated: "Stav k 24. únoru 2026"
 collapsedYears: []
 
 facetGroups:
@@ -8,13 +8,16 @@ facetGroups:
     label: "Typ"
     values:
       - key: media
-        label: "Médium jako nástroj"
+        label: "Únik do médií"
         color: "brandDeepRed.4"
-      - key: politics
-        label: "Politické zneužití"
+      - key: trade
+        label: "Obchod s informacemi"
         color: "brandRoyalBlue.4"
-      - key: systemic
-        label: "Systémový problém"
+      - key: politics
+        label: "Spis v politice"
+        color: "brandAmethyst.4"
+      - key: rules
+        label: "Pravidla a tresty"
         color: "brandTeal.3"
 
 events:
@@ -22,100 +25,144 @@ events:
     year: 2006
     month: 6
     facets:
-      topic: politics
-    date: "Červen 2006"
-    title: "Spis Krakatice: 1 600 stran zmizelo"
-    emoji: "🦑"
-    summary: "Odposlechy z utajovaného policejního spisu unikly do médií těsně před volbami. Viníka se nepodařilo najít nikdy."
-    description: "Jedenáctitisícistránkový utajovaný spis mapující vazby podsvětí a politiky. Části odposlechů se objevily v médiích před volbami 2006. Z celého spisu beze stopy zmizelo 1 600 stran. Policie viníka úniku nikdy nezjistila. Nikdo obviněn nebyl."
-
-  - id: necas-nagyova-2013
-    year: 2013
-    month: 6
-    facets:
       topic: media
-    date: "Červen 2013"
-    title: "Razie na Úřadu vlády: pád Nečasovy vlády"
-    emoji: "💥"
-    summary: "Masivní úniky ze spisu vytvořily mediální atmosféru bezprecedentní korupce. Slibovaná odhalení se nekonala. Kabinet padl."
-    description: "Razie na Úřadu vlády v červnu 2013 provázely obrovské průsaky z živých vyšetřovacích spisů do médií. Zprávy o zadrženém zlatě a 150 milionech korun vytvořily obraz bezprecedentní korupce. Inkriminované zlato a peníze se vrátily původním vlastníkům a avizovaná korupční odhalení se nekonala. Vláda Petra Nečase mezitím padla. Do médií pronikly i odposlechy soukromých hovorů mezi Nečasem a Janou Nagyovou, které s trestnou činností nesouvisely."
+    date: "Červen 2006 – březen 2008"
+    title: "Krakatice: odposlechy v médiích, 1 600 stran mimo policii"
+    emoji: "🦑"
+    summary: "Po volbách 2006 vyšly odposlechy ze spisu o vazbách Františka Mrázka na politiky. Kdo je vynesl, se nezjistilo."
+    description: "Protikorupční detektivové zakládali spis Krakatice o vazbách podnikatele Františka Mrázka na politiky a státní správu; měl přes 10 000 stran. Krátce po sněmovních volbách v červnu 2006 se v médiích objevily odposlechy mimo jiné s exministrem Vlastimilem Tlustým. V březnu 2008 vyšlo najevo, že mimo policii koluje zhruba 1 600 stran odposlechů. Inspekce ministerstva vnitra našla pochybení tří bývalých policistů, čin byl ale promlčen. Kdo informace vynesl do médií, se nezjistilo."
+    link: "https://ct24.ceskatelevize.cz/domaci/1459871-z-mrazkova-policejniho-spisu-zmizely-stovky-stran-nikdo-potrestan-nebude"
+    linkText: "ČT24: Z Mrázkova spisu zmizely stovky stran (2008)"
 
-  - id: bereta-2014
-    year: 2014
-    month: 1
-    facets:
-      topic: politics
-    date: "2014–2016"
-    title: "Kauza Bereta: úniky jako zbraň v boji o policii"
-    emoji: "⚔️"
-    summary: "Útvar vedený Robertem Šlachtou využil úniky ze spisů jako mediální munici v boji o policejní reorganizaci. Málem padla další vláda."
-    description: "Šlachtův ÚOOZ rozjel operaci Bereta krátce poté, co se dozvěděl o chystané policejní reorganizaci. Lidové noviny zveřejnily obsáhlé fragmenty z policejního spisu. Novinář Mladé fronty DNES Marek Přibil nabízel protokoly výslechů svědků přímo Babišovi. Válku o policejní strukturu provázely opakované úniky z odposlechů. Robert Šlachta nakonec opustil policii. Vládní krize málem vyústila v pád vlády."
-
-  - id: okd-2014
-    year: 2014
+  - id: nahubkovy-zakon-2009
+    year: 2009
     month: 4
     facets:
-      topic: media
-    date: "Duben 2014"
-    title: "OKD: úniky jako koaliční zbraň"
-    emoji: "⛏️"
-    summary: "Babiš jako ministr financí válčil s premiérem Sobotkou. MfD zveřejnila úniky ze spisu OKD. Kauza skončila zproštěním všech obžalovaných."
-    description: "Ministr financí Babiš se střetával s premiérem Sobotkou, Mladá fronta DNES zveřejnila první úniky ze spisu kolem privatizace OKD v dubnu 2014. Sobotka Babiše obvinil, že využívá svá média ke zvyšování tlaku na koaličního partnera. Lidové noviny označily soud za kauzu roku. Skončila zproštěním viny všech obžalovaných."
+      topic: rules
+    date: "Duben 2009 / srpen 2011"
+    title: "Náhubkový zákon: odposlechy se zveřejňovat nesmějí, pokud nepřeváží veřejný zájem"
+    emoji: "⚖️"
+    summary: "Od dubna 2009 zakazuje trestní řád zveřejňovat odposlechy a údaje identifikující účastníky řízení. Od srpna 2011 platí výjimka pro převažující veřejný zájem."
+    description: "Zákon č. 52/2009 Sb. doplnil do trestního řádu paragrafy 8b a 8c: bez souhlasu dotčených se nesmějí zveřejnit informace z odposlechů, které umožňují identifikaci a nebyly použity jako důkaz před soudem. Od 3. srpna 2011 je zveřejnění přípustné, pokud veřejný zájem převáží ochranu soukromí. Porušení je dnes přestupek s pokutou až 5 milionů korun pro média; trestné je zveřejnění jen při vážné újmě."
+    link: "https://www.zakonyprolidi.cz/cs/1961-141"
+    linkText: "Trestní řád, § 8a–8d"
 
-  - id: parlamentni-komise-2016
-    year: 2016
-    month: 9
+  - id: necas-nagyova-odposlechy-2014
+    year: 2014
+    month: 5
     facets:
-      topic: systemic
-    date: "Září 2016"
-    title: "Parlamentní komise: úniky jsou fatální ohrožení ústavnosti"
-    emoji: "🏛️"
-    summary: "Vyšetřovací komise Parlamentu ČR shrnula rozsah problému a pojmenovala ho jako systémové riziko pro demokratický stát."
-    description: "Parlamentní vyšetřovací komise k únikům z trestních spisů (kauzy Nagyová, Nečas, Bereta, VIDKUN, OKD) vydala závěrečnou zprávu. Závěr komise: úniky informací z trestního řízení, jejich účelová interpretace a cílená tvorba veřejného mínění jsou fatálním ohrožením ústavnosti. Zákonné zakotvení povinné mlčenlivosti, které po komisi následovalo, nevedlo k žádnému trestnímu postihu."
+      topic: media
+    date: "Květen 2014"
+    title: "MF DNES otiskla intimní odposlechy Nečase a Nagyové"
+    emoji: "💥"
+    summary: "Rok po razii na Úřadu vlády zveřejnil deník přepisy odposlechů včetně soukromých pasáží. Vydavatelství MAFRA za to dostalo pokutu 140 000 korun."
+    description: "Po zásahu 13. června 2013 padla vláda Petra Nečase; částky zajištěné hotovosti a zlata přitom oznámili na tiskové konferenci sami žalobci a policie, nešlo o únik. V květnu 2014 otiskly MF DNES a iDNES.cz přepisy odposlechů Nečase a Jany Nagyové včetně důvěrných pasáží. Úřad pro ochranu osobních údajů vydavatelství MAFRA potrestal; po zásahu Nejvyššího správního soudu činila pokuta v roce 2019 140 000 korun. Prošetřování neprokázalo, že by odposlechy vynesli policisté nebo žalobci."
+    link: "https://www.denik.cz/z_domova/mafra-musi-zaplatit-140-tisic-za-zverejneni-odposlechu-necase-a-nagyove-20190522.html"
+    linkText: "Deník: Mafra musí zaplatit 140 tisíc (2019)"
 
-  - id: vidkun-2017
+  - id: vidkun-2015
+    year: 2015
+    month: 10
+    facets:
+      topic: trade
+    date: "Říjen 2015 – leden 2026"
+    title: "Vidkun: policejní náměstek vynášel podnikateli informace z devíti spisů"
+    emoji: "🔗"
+    summary: "Náměstek olomouckého krajského ředitele policie Karel Kadlec podle soudů prozrazoval podnikateli Ivanu Kyselému informace z rozpracovaných kauz."
+    description: "Zásah přišel v říjnu 2015. Soudy uznaly, že Karel Kadlec vynášel Ivanu Kyselému informace z devíti trestních řízení. Vrchní soud v Olomouci poslal Kadlece v říjnu 2024 na tři a půl roku do vězení. Nejvyšší soud v lednu 2026 vinu potvrdil, tresty ale zmírnil na podmíněné: nebylo podle něj prokázáno, že únik vážně narušil činnost policie."
+    link: "https://ct24.ceskatelevize.cz/clanek/domaci/nejvyssi-soud-v-kauze-vidkun-zmirnil-tresty-kyselemu-a-kadlecovi-369737"
+    linkText: "ČT24: Nejvyšší soud zmírnil tresty v kauze Vidkun"
+
+  - id: bereta-2016
+    year: 2016
+    month: 5
+    facets:
+      topic: trade
+    date: "Květen 2016 – květen 2025"
+    title: "Bereta: policisté a žalobkyně prodávali informace soukromému detektivovi"
+    emoji: "🕵️"
+    summary: "Informace z živých spisů šly za úplatu k expolicistovi Igoru Gáboríkovi a jeho klientům. Pravomocně odsouzeno bylo pět lidí, do vězení šel jen Gáborík."
+    description: "Policie v květnu 2016 obvinila detektiva, celníka a expolicistu Igora Gáboríka, později i pražskou státní zástupkyni Dagmar Máchovou. Podle obžaloby vynášeli informace z vyšetřování (mimo jiné k Homolce či pražskému dopravnímu podniku) soukromé detektivní agentuře. Kauza stála v pozadí sporné reorganizace policie a odchodu Roberta Šlachty v červnu 2016. Krajský soud v Praze v květnu 2025 tresty pravomocně snížil; do vězení šel jen Gáborík, na dva roky."
+    link: "https://ct24.ceskatelevize.cz/clanek/domaci/padly-nizsi-tresty-v-kauze-bereta-do-vezeni-jde-pouze-expolicista-gaborik-361346"
+    linkText: "ČT24: Nižší tresty v kauze Bereta (2025)"
+
+  - id: pribil-babis-2017
     year: 2017
     month: 5
     facets:
-      topic: systemic
-    date: "2017–2020"
-    title: "Kauza úniky ze spisů: 29 obžalovaných"
-    emoji: "🔗"
-    summary: "Rozsáhlá kauza odhalila infrastrukturu vynášení informací z policejních evidencí. Obžalováno 29 lidí včetně elitních detektivů."
-    description: "Vrchní státní zastupitelství v Olomouci vyšetřovalo rozsáhlou síť neoprávněných přístupů do policejních evidencí a vynášení informací z trestních řízení. Policie navrhla obžalobu pro 29 lidí včetně bývalých elitních detektivů, podnikatelů a policistů. Spis měl přes 19 000 stran rozdělených do 73 svazků. Kauza se místy prolínala s brněnskou kauzou Stoka."
+      topic: politics
+    date: "Květen 2017"
+    title: "Nahrávka: redaktor MF DNES nabízí Babišovi protokol ze spisu Bereta"
+    emoji: "🎙️"
+    summary: "Anonymní účet zveřejnil rozhovor, v němž Marek Přibil nabízí tehdejšímu ministru financí výpověď svědka z živého spisu a Babiš řeší, kdy ji zveřejnit."
+    description: "Nahrávky zveřejňoval od 1. května 2017 anonymní účet „Julius Šuman“. Ve třetí z nich (8. května) nabízí redaktor MF DNES Marek Přibil Andreji Babišovi, tehdy ministru financí a zakladateli holdingu Agrofert, pod který vydavatelství MAFRA patřilo, výpověď bývalého náměstka GIBS ze spisu Bereta. Babiš v ní uvažuje, že by zveřejnění načasoval před sjezd ČSSD. Přibil v redakci skončil, obviněn nebyl. Rozhovor vedl ke vzniku sněmovní vyšetřovací komise k únikům."
+    link: "https://www.novinky.cz/clanek/domaci-babis-chtel-podle-dalsi-nahravky-zverejnit-casti-zive-kauzy-beretta-40032940"
+    linkText: "Novinky: Babiš chtěl zveřejnit části živé kauzy (2017)"
 
-  - id: berbr-odposlechy-2021
+  - id: snemovni-komise-2017
+    year: 2017
+    month: 9
+    facets:
+      topic: rules
+    date: "Září 2017"
+    title: "Sněmovní komise: úniky jsou „fatálním ohrožením ústavnosti“"
+    emoji: "🏛️"
+    summary: "Vyšetřovací komise k únikům z trestních spisů napočítala desítky podezření ročně a konstatovala, že zdroje se prakticky nedají vystopovat."
+    description: "Komise pod vedením Martina Plíška (TOP 09) vznikla po nahrávkách Přibil–Babiš. Sněmovna její zprávu projednala 12. září 2017. Podle ní jsou „úniky informací z trestního řízení, jejich účelová interpretace a následná cílená tvorba veřejného mínění fatálním ohrožením ústavnosti“. Inspekce GIBS evidovala 37 podezření z úniku v roce 2014, 52 v roce 2016 a 21 v prvním pololetí 2017. Komise mimo jiné navrhla evidovat každý kontakt policistů a žalobců s novináři."
+    link: "https://www.psp.cz/eknih/2013ps/stenprot/060schuz/bqbs/b14008901.htm"
+    linkText: "Stenoprotokol Sněmovny, 12. 9. 2017"
+
+  - id: berbr-2020
+    year: 2020
+    month: 11
+    facets:
+      topic: media
+    date: "Listopad – prosinec 2020"
+    title: "Berbr: přepisy odposlechů šest týdnů po zásahu"
+    emoji: "📞"
+    summary: "Stíhání místopředsedy fotbalového svazu bylo v přípravném řízení, média už citovala jeho hovory se sudími."
+    description: "Policie zasáhla na Fotbalové asociaci 16. října 2020 a obvinila místopředsedu Romana Berbra a další lidi. Od konce listopadu 2020 citovaly ČT, iROZHLAS, eFotbal.cz a další média odposlechy ze spisu, například hovor se sudím Pavlem Královcem před pohárovým finále. Zdroj úniku veřejně známý není."
+    link: "https://www.irozhlas.cz/sport/fotbal/roman-berbr-pavel-kralovec-odposlechy-korupce-pohar-finale-sparta_2012082243_tzr"
+    linkText: "iROZHLAS: Berbr a Královec v odposleších (2020)"
+
+  - id: vork-2021
     year: 2021
     month: 10
     facets:
-      topic: media
-    date: "Říjen 2021"
-    title: "Berbr: odposlechy jako obsah, ne jako důkaz"
-    emoji: "📞"
-    summary: "Policejní odposlechy z případu fotbalového funkcionáře Romana Berbra publikovala média bez obav. Natáčely se o nich pořady."
-    description: "Policejní odposlechy z případu Romana Berbra, předsedy rozhodčích Fotbalové asociace ČR, se dostaly do médií ještě před soudem. Odposlechy se staly obsahem mediálních formátů, přestože zákon jejich zveřejňování bez souhlasu omezuje. Účinek zákonné povinné mlčenlivosti byl opět nulový."
+      topic: trade
+    date: "Říjen 2021 – říjen 2024"
+    title: "Vork: 28 obžalovaných za prodej informací z policejních systémů"
+    emoji: "🗄️"
+    summary: "Bývalí detektivové, celník i příslušník GIBS podle obžaloby lustrovali v policejních databázích a informace prodávali podnikatelům."
+    description: "Vrchní státní zastupitelství v Olomouci obžalovalo v říjnu 2021 28 lidí; spis měl 73 svazků a přes 19 000 stran, obžaloba 91 bodů. Informace si podle Hospodářských novin objednával i Jiří Švachula z brněnské kauzy Stoka. Krajský soud v Brně v říjnu 2024 uznal vinnými deset lidí. K únoru 2026 rozhodoval o odvoláních vrchní soud."
+    link: "https://www.irozhlas.cz/zpravy-domov/uniky-policejni-spis-obzaloba_2110251042_ako"
+    linkText: "iROZHLAS: Obžaloba 28 lidí za úniky (2021)"
 
   - id: dozimetr-2022
     year: 2022
-    month: 5
+    month: 6
     facets:
       topic: media
-    date: "Květen 2022"
-    title: "Dozimetr: úniky souběžně s razií"
+    date: "Červen – prosinec 2022"
+    title: "Dozimetr: policie a žalobci jako zdroj vyloučeni, jiný zdroj nenalezen"
     emoji: "☢️"
-    summary: "V médiích se souběžně s policejní razií NCOZ objevily rozsáhlé úniky odposlechů i detailů životního stylu podezřelých."
-    description: "Kauza Dozimetr provázely plošné úniky z odposlechů a vyšetřovacích dokumentů. V médiích se okamžitě objevily detaily životního stylu a soukromých způsobů podezřelých. Politici, kteří udržovali vazby s Michalem Redlem, platili vysokou politickou cenu v době, kdy jejich vina nebyla soudem nijak prověřena."
+    summary: "Přepisy odposlechů vycházely pár dní po zásahu na pražském magistrátu. Žalobci pak oznámili, že od nich ani od policie neunikly."
+    description: "NCOZ zasáhla 15. června 2022; primátorský náměstek Petr Hlubuček rezignoval týž den. Média během několika dní citovala odposlechy i usnesení. Únik prověřovalo vrchní státní zastupitelství s GIBS. V prosinci 2022 oznámilo, že policisty a státní zástupce jako zdroj „spolehlivě vyloučilo“. Kdo materiály médiím dal, se nezjistilo, novináři se odvolali na ochranu zdroje. Spis přitom mají k dispozici i obvinění a jejich obhájci."
+    link: "https://ct24.ceskatelevize.cz/clanek/domaci/gibs-vyloucil-ze-by-media-ziskala-informace-ze-spisu-kauzy-dozimetr-od-policie-12187"
+    linkText: "ČT24: Úniky z Dozimetru nepocházely od policie (2022)"
 
   - id: blazek-spis-2023
     year: 2023
     month: 6
     facets:
       topic: politics
-    date: "2019–2023"
-    title: "Blažek a vynesený spis: únik, který zkomplikoval kauzu"
+    date: "2019, odhaleno v červnu 2023"
+    title: "Budoucí ministr spravedlnosti dostal výslechy klíčového svědka, zdroj neprozradil"
     emoji: "📁"
-    summary: "Ministr spravedlnosti získal v roce 2019 část utajeného policejního spisu brněnské bytové kauzy. Žalobkyně potvrdila: únik zásadně zkomplikoval objasňování případu."
-    description: "Pavel Blažek (ODS) získal v roce 2019 část utajeného spisu brněnské bytové kauzy přes okruh advokátů a stranických vazeb. Dozorující žalobkyně Petra Lastovecká potvrdila, že únik informací zásadním způsobem zkomplikoval objasňování a procesní vedení celé kauzy, neboť se neveřejné informace dostaly k osobám, kterých se týkaly. GIBS pachatele úniku bez Blažkovy spolupráce nezjistila."
+    summary: "Pavel Blažek získal v roce 2019 části spisu brněnské bytové kauzy. Dozorující žalobkyně řekla, že únik zásadně zkomplikoval objasňování."
+    description: "Seznam Zprávy v červnu 2023 popsaly, že Pavel Blažek (ODS) dostal v roce 2019 od stranického kolegy výslechy klíčového svědka Pavla Hubálka ze spisu brněnské bytové kauzy. Když ho v roce 2020 kontaktovala inspekce GIBS, zdroj odmítl uvést s odvoláním na poslaneckou mlčenlivost; jak se k němu části spisu dostaly, se nezjistilo. Dozorující státní zástupkyně Petra Lastovecká uvedla, že únik zásadním způsobem zkomplikoval objasňování celé kauzy."
+    link: "https://www.seznamzpravy.cz/clanek/domaci-kauzy-zalobkyne-unik-informaci-k-blazkovi-narusil-objasneni-korupcni-kauzy-232118"
+    linkText: "Seznam Zprávy: Únik k Blažkovi narušil objasnění kauzy"
 
   - id: motol-2025
     year: 2025
@@ -123,7 +170,9 @@ events:
     facets:
       topic: media
     date: "Únor 2025"
-    title: "Motol: úniky hned druhý den po razii"
+    title: "Motol: obvinění četli detaily svého stíhání souběžně s veřejností"
     emoji: "🏥"
-    summary: "Den po razii NCOZ ve FN Motol se v médiích objevily detailní informace ze spisu. Ministr Blažek novináře zkritizoval, NCOZ zahájila interní šetření."
-    description: "NCOZ zasáhla ve Fakultní nemocnici Motol kvůli podezření z úplatkářství. Už druhý den se v médiích objevily detailní informace z policejních dokumentů. Ministr spravedlnosti Pavel Blažek novináře zkritizoval: zveřejňování detailních informací z předsoudní fáze trestního řízení je nejen nezákonné, ale i škodlivé pro práva mnoha osob i samotné trestní řízení. NCOZ zahájila interní šetření, původce úniku nebyl zveřejněn."
+    summary: "V noci po zadržení ředitele nemocnice už média citovala z usnesení o zahájení stíhání. Podle Evropské prokuratury z ní ani z NCOZ informace neunikají."
+    description: "Policie 24. února 2025 zadržela ředitele FN Motol Miloslava Ludvíka a další lidi; případ dozoruje Evropská prokuratura, vyšetřuje NCOZ. V noci na 25. února, kdy se obvinění s usnesením teprve seznamovali, z něj už média citovala. Ministr spravedlnosti Pavel Blažek zveřejňování detailů z přípravného řízení označil za nezákonné a škodlivé a vyzval Evropskou prokuraturu, aby únik řešila."
+    link: "https://www.novinky.cz/clanek/krimi-blazkovi-vadi-uniky-v-kauze-motol-40510595"
+    linkText: "Novinky: Blažkovi vadí úniky v kauze Motol"
