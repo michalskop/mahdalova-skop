@@ -70,11 +70,14 @@ export default async function HomePage() {
         themeColor="#5e66d5"
         moreLink="/vyber" />
 
+      {/* Kontext: oranžový pás bez nadpisu (jako Volby / Výběr), 3+3 karty ve
+          dvou řadách a dole „Více" → /kontext. */}
       <ArticlesSection
         sectionTitle="Kontext"
         sectionLink="/kontext"
         articles={articles_contexts}
-        themeColor="brandOrange.4" variant="standard" />
+        themeColor="brandOrange.4" variant="standard"
+        adaptiveRows={2} moreBelow />
 
       <ArticlesSection
         sectionTitle="Podcasty"

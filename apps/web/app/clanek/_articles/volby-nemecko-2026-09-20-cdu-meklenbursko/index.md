@@ -4,7 +4,7 @@ date: "2026-09-20"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "CDU se poprvé v dějinách Spolkové republiky nedostala do zemského parlamentu. Naše datová predikce ukázala už krátce po začátku sčítání, že strana zůstane pod pětiprocentní hranicí."
 coverImage: "images/cover-homepage.jpg"
-filter: ["kontext"]
+filter: ["analýza"]
 tags: ["volby", "Německo", "Meklenbursko-Přední Pomořansko", "CDU", "AfD", "SPD", "volební predikce"]
 promoted: 0
 ---

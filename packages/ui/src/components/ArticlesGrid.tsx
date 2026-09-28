@@ -37,7 +37,7 @@ export function ArticlesGrid({ articles, articleBasePath, locale, adaptiveRows, 
         articles={articles}
         articleBasePath={articleBasePath}
         locale={locale}
-        rows={variant === 'featured' ? 2 : 1}
+        rows={adaptiveRows ?? (variant === 'featured' ? 2 : 1)}
         variant={variant}
       />
     );

@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Hlavní vinu za válku na Ukrajině dává Rusku 85 procent Poláků, 71 procent Čechů a 40 procent Slováků. Třetina Slováků i Bulharů ukazuje na Západ. Kde je podle Media Literacy Indexu společnost vůči dezinformacím nejméně odolná, tam mají lidé nejlepší mínění o Rusku. Z Evropské unie a NATO přitom chce odejít menšina Slováků – a to je prostor, o který se dá bojovat."
 coverImage: "images/cover-homepage.webp"
 ogImage: "images/cover-og.jpg"
-filter: ["kontext"]
+filter: ["analýza"]
 promoted: 0
 tags: ["Rusko", "dezinformace", "propaganda", "Slovensko", "Robert Fico", "Ukrajina", "EU", "NATO", "GLOBSEC", "Eurobarometr", "Bulharsko", "Maďarsko"]
 ---
