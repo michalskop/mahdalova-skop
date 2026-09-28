@@ -25,6 +25,12 @@ interface ArticlesSectionProps {
    * nikdy nepřesune nad karty – místo toho zmizí).
    */
   variant?: ArticlesGridVariant;
+  /**
+   * Homepage pás bez nadpisu rubriky (jako Volby / Výběr): karty lícují
+   * s horním okrajem pásu a místo nadpisu je dole „Více" + šipka → sectionLink.
+   */
+  moreBelow?: boolean;
+  moreLabel?: string;
 }
 
 export function ArticlesSection({
@@ -36,10 +42,47 @@ export function ArticlesSection({
   locale,
   adaptiveRows,
   variant,
+  moreBelow = false,
+  moreLabel = 'Více',
 }: ArticlesSectionProps) {
   const theme = useMantineTheme();
   const [isTitleHovered, setIsTitleHovered] = useState(false);
   const shouldShowArrow = sectionTitle.length <= 14;
+
+  if (moreBelow) {
+    const light = theme.colors.background[0];
+    // Stejný „Více" jako u FeaturedHero (Volby, Výběr): velký sans nadpis +
+    // vlnovková šipka u levého okraje pásu, odkaz na výpis rubriky.
+    return (
+      <Paper py={16} bg={themeColor} radius={0}>
+        <ArticlesGrid articles={articles} articleBasePath={articleBasePath} locale={locale} adaptiveRows={adaptiveRows} variant={variant} />
+        <Box px="md" mt="md" style={{ display: 'flex', justifyContent: 'flex-start' }}>
+          <a
+            href={sectionLink}
+            onMouseEnter={() => setIsTitleHovered(true)}
+            onMouseLeave={() => setIsTitleHovered(false)}
+            style={{ display: 'inline-flex', textDecoration: 'none' }}
+          >
+            <Title
+              order={2}
+              c={light}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                gap: '5px',
+                maxWidth: '100%',
+                textDecoration: isTitleHovered ? 'underline' : 'none',
+              }}
+            >
+              {moreLabel}
+              <Arrow size={80} color={light} />
+            </Title>
+          </a>
+        </Box>
+      </Paper>
+    );
+  }
 
   {/* Nadpis rubriky (Volby, Analýzy, Kontext, Výběr…) je nově NAD kartami přes
       celou šířku – dřívější boční 200px pás zmizel, takže trojice karet pod ním
