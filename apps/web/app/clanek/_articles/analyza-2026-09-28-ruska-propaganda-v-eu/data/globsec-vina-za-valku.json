@@ -1,0 +1,505 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Na Slovensku a v Bulharsku viní z války {Rusko|#f76800} méně než polovina lidí, třetina ukazuje na {Západ|#101432}",
+  "subtitle": "Kdo nese hlavní odpovědnost za válku na Ukrajině? Podíl odpovědí v zemích střední a východní Evropy (%, 2023). Najeďte myší na zemi."
+ },
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 330,
+ "data": {
+  "values": [
+   {
+    "zeme": "Polsko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 85,
+    "t_rusko": "85 %",
+    "t_zapad": "4 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "8 %",
+    "t_nerusko": "7 %"
+   },
+   {
+    "zeme": "Polsko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 4,
+    "t_rusko": "85 %",
+    "t_zapad": "4 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "8 %",
+    "t_nerusko": "7 %"
+   },
+   {
+    "zeme": "Polsko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 3,
+    "t_rusko": "85 %",
+    "t_zapad": "4 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "8 %",
+    "t_nerusko": "7 %"
+   },
+   {
+    "zeme": "Polsko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 8,
+    "t_rusko": "85 %",
+    "t_zapad": "4 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "8 %",
+    "t_nerusko": "7 %"
+   },
+   {
+    "zeme": "Litva",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 79,
+    "t_rusko": "79 %",
+    "t_zapad": "7 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "11 %",
+    "t_nerusko": "10 %"
+   },
+   {
+    "zeme": "Litva",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 7,
+    "t_rusko": "79 %",
+    "t_zapad": "7 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "11 %",
+    "t_nerusko": "10 %"
+   },
+   {
+    "zeme": "Litva",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 3,
+    "t_rusko": "79 %",
+    "t_zapad": "7 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "11 %",
+    "t_nerusko": "10 %"
+   },
+   {
+    "zeme": "Litva",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 11,
+    "t_rusko": "79 %",
+    "t_zapad": "7 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "11 %",
+    "t_nerusko": "10 %"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 74,
+    "t_rusko": "74 %",
+    "t_zapad": "13 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "10 %",
+    "t_nerusko": "16 %"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 13,
+    "t_rusko": "74 %",
+    "t_zapad": "13 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "10 %",
+    "t_nerusko": "16 %"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 3,
+    "t_rusko": "74 %",
+    "t_zapad": "13 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "10 %",
+    "t_nerusko": "16 %"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 10,
+    "t_rusko": "74 %",
+    "t_zapad": "13 %",
+    "t_ukrajina": "3 %",
+    "t_jine": "10 %",
+    "t_nerusko": "16 %"
+   },
+   {
+    "zeme": "Česko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 71,
+    "t_rusko": "71 %",
+    "t_zapad": "15 %",
+    "t_ukrajina": "8 %",
+    "t_jine": "6 %",
+    "t_nerusko": "23 %"
+   },
+   {
+    "zeme": "Česko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 15,
+    "t_rusko": "71 %",
+    "t_zapad": "15 %",
+    "t_ukrajina": "8 %",
+    "t_jine": "6 %",
+    "t_nerusko": "23 %"
+   },
+   {
+    "zeme": "Česko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 8,
+    "t_rusko": "71 %",
+    "t_zapad": "15 %",
+    "t_ukrajina": "8 %",
+    "t_jine": "6 %",
+    "t_nerusko": "23 %"
+   },
+   {
+    "zeme": "Česko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 6,
+    "t_rusko": "71 %",
+    "t_zapad": "15 %",
+    "t_ukrajina": "8 %",
+    "t_jine": "6 %",
+    "t_nerusko": "23 %"
+   },
+   {
+    "zeme": "Rumunsko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 65,
+    "t_rusko": "65 %",
+    "t_zapad": "21 %",
+    "t_ukrajina": "10 %",
+    "t_jine": "4 %",
+    "t_nerusko": "31 %"
+   },
+   {
+    "zeme": "Rumunsko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 21,
+    "t_rusko": "65 %",
+    "t_zapad": "21 %",
+    "t_ukrajina": "10 %",
+    "t_jine": "4 %",
+    "t_nerusko": "31 %"
+   },
+   {
+    "zeme": "Rumunsko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 10,
+    "t_rusko": "65 %",
+    "t_zapad": "21 %",
+    "t_ukrajina": "10 %",
+    "t_jine": "4 %",
+    "t_nerusko": "31 %"
+   },
+   {
+    "zeme": "Rumunsko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 4,
+    "t_rusko": "65 %",
+    "t_zapad": "21 %",
+    "t_ukrajina": "10 %",
+    "t_jine": "4 %",
+    "t_nerusko": "31 %"
+   },
+   {
+    "zeme": "Maďarsko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 54,
+    "t_rusko": "54 %",
+    "t_zapad": "19 %",
+    "t_ukrajina": "16 %",
+    "t_jine": "11 %",
+    "t_nerusko": "35 %"
+   },
+   {
+    "zeme": "Maďarsko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 19,
+    "t_rusko": "54 %",
+    "t_zapad": "19 %",
+    "t_ukrajina": "16 %",
+    "t_jine": "11 %",
+    "t_nerusko": "35 %"
+   },
+   {
+    "zeme": "Maďarsko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 16,
+    "t_rusko": "54 %",
+    "t_zapad": "19 %",
+    "t_ukrajina": "16 %",
+    "t_jine": "11 %",
+    "t_nerusko": "35 %"
+   },
+   {
+    "zeme": "Maďarsko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 11,
+    "t_rusko": "54 %",
+    "t_zapad": "19 %",
+    "t_ukrajina": "16 %",
+    "t_jine": "11 %",
+    "t_nerusko": "35 %"
+   },
+   {
+    "zeme": "Bulharsko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 44,
+    "t_rusko": "44 %",
+    "t_zapad": "32 %",
+    "t_ukrajina": "15 %",
+    "t_jine": "9 %",
+    "t_nerusko": "47 %"
+   },
+   {
+    "zeme": "Bulharsko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 32,
+    "t_rusko": "44 %",
+    "t_zapad": "32 %",
+    "t_ukrajina": "15 %",
+    "t_jine": "9 %",
+    "t_nerusko": "47 %"
+   },
+   {
+    "zeme": "Bulharsko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 15,
+    "t_rusko": "44 %",
+    "t_zapad": "32 %",
+    "t_ukrajina": "15 %",
+    "t_jine": "9 %",
+    "t_nerusko": "47 %"
+   },
+   {
+    "zeme": "Bulharsko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 9,
+    "t_rusko": "44 %",
+    "t_zapad": "32 %",
+    "t_ukrajina": "15 %",
+    "t_jine": "9 %",
+    "t_nerusko": "47 %"
+   },
+   {
+    "zeme": "Slovensko",
+    "kat": "Rusko",
+    "poradi": 0,
+    "hodnota": 40,
+    "t_rusko": "40 %",
+    "t_zapad": "34 %",
+    "t_ukrajina": "17 %",
+    "t_jine": "9 %",
+    "t_nerusko": "51 %"
+   },
+   {
+    "zeme": "Slovensko",
+    "kat": "Západ",
+    "poradi": 1,
+    "hodnota": 34,
+    "t_rusko": "40 %",
+    "t_zapad": "34 %",
+    "t_ukrajina": "17 %",
+    "t_jine": "9 %",
+    "t_nerusko": "51 %"
+   },
+   {
+    "zeme": "Slovensko",
+    "kat": "Ukrajina",
+    "poradi": 2,
+    "hodnota": 17,
+    "t_rusko": "40 %",
+    "t_zapad": "34 %",
+    "t_ukrajina": "17 %",
+    "t_jine": "9 %",
+    "t_nerusko": "51 %"
+   },
+   {
+    "zeme": "Slovensko",
+    "kat": "Jiná odpověď, neví",
+    "poradi": 3,
+    "hodnota": 9,
+    "t_rusko": "40 %",
+    "t_zapad": "34 %",
+    "t_ukrajina": "17 %",
+    "t_jine": "9 %",
+    "t_nerusko": "51 %"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "zeme",
+   "type": "nominal",
+   "sort": [
+    "Polsko",
+    "Litva",
+    "Lotyšsko",
+    "Česko",
+    "Rumunsko",
+    "Maďarsko",
+    "Bulharsko",
+    "Slovensko"
+   ],
+   "axis": {
+    "title": null,
+    "domain": false,
+    "ticks": false,
+    "labelLimit": 120
+   },
+   "scale": {
+    "paddingInner": 0.25
+   }
+  },
+  "x": {
+   "field": "hodnota",
+   "type": "quantitative",
+   "stack": "zero",
+   "scale": {
+    "domain": [
+     0,
+     100
+    ]
+   },
+   "axis": {
+    "title": null,
+    "values": [
+     0,
+     25,
+     50,
+     75,
+     100
+    ],
+    "grid": true,
+    "labelExpr": "datum.value + ' %'"
+   }
+  },
+  "order": {
+   "field": "poradi",
+   "type": "quantitative"
+  },
+  "color": {
+   "field": "kat",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Rusko",
+     "Západ",
+     "Ukrajina",
+     "Jiná odpověď, neví"
+    ],
+    "range": [
+     "#f76800",
+     "#101432",
+     "#ffcf02",
+     "#d4d4c8"
+    ]
+   },
+   "legend": null
+  },
+  "tooltip": [
+   {
+    "field": "zeme",
+    "title": "Země"
+   },
+   {
+    "field": "t_rusko",
+    "title": "Viní Rusko"
+   },
+   {
+    "field": "t_zapad",
+    "title": "Viní Západ"
+   },
+   {
+    "field": "t_ukrajina",
+    "title": "Viní Ukrajinu"
+   },
+   {
+    "field": "t_nerusko",
+    "title": "Západ + Ukrajina"
+   },
+   {
+    "field": "t_jine",
+    "title": "Jiná odpověď, neví"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "stroke": "#f8f6f0",
+    "strokeWidth": 1
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.hodnota >= 7"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "fontWeight": 700,
+    "align": "center",
+    "baseline": "middle"
+   },
+   "encoding": {
+    "x": {
+     "field": "hodnota",
+     "type": "quantitative",
+     "stack": "zero",
+     "bandPosition": 0.5
+    },
+    "text": {
+     "field": "hodnota",
+     "type": "quantitative"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.kat === 'Západ'",
+      "value": "#ffffff"
+     },
+     "value": "#1a1a1a"
+    }
+   }
+  }
+ ],
+ "_source": "[GLOBSEC Trends 2023](https://www.globsec.org/what-we-do/publications/globsec-trends-2023-united-we-still-stand), reprezentativní průzkum, 1 000 respondentů v každé zemi, březen 2023"
+}

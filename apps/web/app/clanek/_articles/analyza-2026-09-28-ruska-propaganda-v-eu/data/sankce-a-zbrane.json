@@ -1,0 +1,2124 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "{Sankce|#06677d} podporují dvě třetiny Čechů, {zbraně pro Ukrajinu|#9f319e} necelá třetina",
+  "subtitle": "Souhlas s opatřeními EU v reakci na ruskou invazi (%, jaro 2026). Seřazeno podle podpory financování zbraní. Najeďte myší na zemi."
+ },
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 700,
+ "data": {
+  "values": [
+   {
+    "zeme": "Švédsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 91,
+    "sankce": 91,
+    "zbrane": 93,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91 %",
+    "t_zbrane": "93 %"
+   },
+   {
+    "zeme": "Švédsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 93,
+    "sankce": 91,
+    "zbrane": 93,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91 %",
+    "t_zbrane": "93 %"
+   },
+   {
+    "zeme": "Dánsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 91,
+    "sankce": 91,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91 %",
+    "t_zbrane": "88 %"
+   },
+   {
+    "zeme": "Dánsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 88,
+    "sankce": 91,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91 %",
+    "t_zbrane": "88 %"
+   },
+   {
+    "zeme": "Finsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 88,
+    "sankce": 88,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "88 %",
+    "t_zbrane": "88 %"
+   },
+   {
+    "zeme": "Finsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 88,
+    "sankce": 88,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "88 %",
+    "t_zbrane": "88 %"
+   },
+   {
+    "zeme": "Nizozemsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 83,
+    "sankce": 83,
+    "zbrane": 78,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83 %",
+    "t_zbrane": "78 %"
+   },
+   {
+    "zeme": "Nizozemsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 78,
+    "sankce": 83,
+    "zbrane": 78,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83 %",
+    "t_zbrane": "78 %"
+   },
+   {
+    "zeme": "Litva",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 81,
+    "sankce": 81,
+    "zbrane": 75,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "81 %",
+    "t_zbrane": "75 %"
+   },
+   {
+    "zeme": "Litva",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 75,
+    "sankce": 81,
+    "zbrane": 75,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "81 %",
+    "t_zbrane": "75 %"
+   },
+   {
+    "zeme": "Polsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 83,
+    "sankce": 83,
+    "zbrane": 70,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83 %",
+    "t_zbrane": "70 %"
+   },
+   {
+    "zeme": "Polsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 70,
+    "sankce": 83,
+    "zbrane": 70,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83 %",
+    "t_zbrane": "70 %"
+   },
+   {
+    "zeme": "Portugalsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 89,
+    "sankce": 89,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "89 %",
+    "t_zbrane": "68 %"
+   },
+   {
+    "zeme": "Portugalsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 68,
+    "sankce": 89,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "89 %",
+    "t_zbrane": "68 %"
+   },
+   {
+    "zeme": "Irsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 85,
+    "sankce": 85,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "85 %",
+    "t_zbrane": "68 %"
+   },
+   {
+    "zeme": "Irsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 68,
+    "sankce": 85,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "85 %",
+    "t_zbrane": "68 %"
+   },
+   {
+    "zeme": "Chorvatsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 75,
+    "sankce": 75,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "75 %",
+    "t_zbrane": "66 %"
+   },
+   {
+    "zeme": "Chorvatsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 66,
+    "sankce": 75,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "75 %",
+    "t_zbrane": "66 %"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 68,
+    "sankce": 68,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "68 %",
+    "t_zbrane": "66 %"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 66,
+    "sankce": 68,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "68 %",
+    "t_zbrane": "66 %"
+   },
+   {
+    "zeme": "Estonsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 73,
+    "sankce": 73,
+    "zbrane": 64,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73 %",
+    "t_zbrane": "64 %"
+   },
+   {
+    "zeme": "Estonsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 64,
+    "sankce": 73,
+    "zbrane": 64,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73 %",
+    "t_zbrane": "64 %"
+   },
+   {
+    "zeme": "Německo",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 67,
+    "sankce": 67,
+    "zbrane": 59,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67 %",
+    "t_zbrane": "59 %"
+   },
+   {
+    "zeme": "Německo",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 59,
+    "sankce": 67,
+    "zbrane": 59,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67 %",
+    "t_zbrane": "59 %"
+   },
+   {
+    "zeme": "Lucembursko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 69,
+    "sankce": 69,
+    "zbrane": 58,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69 %",
+    "t_zbrane": "58 %"
+   },
+   {
+    "zeme": "Lucembursko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 58,
+    "sankce": 69,
+    "zbrane": 58,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69 %",
+    "t_zbrane": "58 %"
+   },
+   {
+    "zeme": "Belgie",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 73,
+    "sankce": 73,
+    "zbrane": 56,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73 %",
+    "t_zbrane": "56 %"
+   },
+   {
+    "zeme": "Belgie",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 56,
+    "sankce": 73,
+    "zbrane": 56,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73 %",
+    "t_zbrane": "56 %"
+   },
+   {
+    "zeme": "Průměr EU",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 70,
+    "sankce": 70,
+    "zbrane": 56,
+    "cz": false,
+    "eu": true,
+    "t_sankce": "70 %",
+    "t_zbrane": "56 %"
+   },
+   {
+    "zeme": "Průměr EU",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 56,
+    "sankce": 70,
+    "zbrane": 56,
+    "cz": false,
+    "eu": true,
+    "t_sankce": "70 %",
+    "t_zbrane": "56 %"
+   },
+   {
+    "zeme": "Španělsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 70,
+    "sankce": 70,
+    "zbrane": 55,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "70 %",
+    "t_zbrane": "55 %"
+   },
+   {
+    "zeme": "Španělsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 55,
+    "sankce": 70,
+    "zbrane": 55,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "70 %",
+    "t_zbrane": "55 %"
+   },
+   {
+    "zeme": "Francie",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 67,
+    "sankce": 67,
+    "zbrane": 52,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67 %",
+    "t_zbrane": "52 %"
+   },
+   {
+    "zeme": "Francie",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 52,
+    "sankce": 67,
+    "zbrane": 52,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67 %",
+    "t_zbrane": "52 %"
+   },
+   {
+    "zeme": "Itálie",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 66,
+    "sankce": 66,
+    "zbrane": 49,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66 %",
+    "t_zbrane": "49 %"
+   },
+   {
+    "zeme": "Itálie",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 49,
+    "sankce": 66,
+    "zbrane": 49,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66 %",
+    "t_zbrane": "49 %"
+   },
+   {
+    "zeme": "Rakousko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 66,
+    "sankce": 66,
+    "zbrane": 48,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66 %",
+    "t_zbrane": "48 %"
+   },
+   {
+    "zeme": "Rakousko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 48,
+    "sankce": 66,
+    "zbrane": 48,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66 %",
+    "t_zbrane": "48 %"
+   },
+   {
+    "zeme": "Rumunsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 64,
+    "sankce": 64,
+    "zbrane": 45,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "64 %",
+    "t_zbrane": "45 %"
+   },
+   {
+    "zeme": "Rumunsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 45,
+    "sankce": 64,
+    "zbrane": 45,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "64 %",
+    "t_zbrane": "45 %"
+   },
+   {
+    "zeme": "Malta",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 69,
+    "sankce": 69,
+    "zbrane": 42,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69 %",
+    "t_zbrane": "42 %"
+   },
+   {
+    "zeme": "Malta",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 42,
+    "sankce": 69,
+    "zbrane": 42,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69 %",
+    "t_zbrane": "42 %"
+   },
+   {
+    "zeme": "Slovinsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 54,
+    "sankce": 54,
+    "zbrane": 36,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "54 %",
+    "t_zbrane": "36 %"
+   },
+   {
+    "zeme": "Slovinsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 36,
+    "sankce": 54,
+    "zbrane": 36,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "54 %",
+    "t_zbrane": "36 %"
+   },
+   {
+    "zeme": "Slovensko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 58,
+    "sankce": 58,
+    "zbrane": 35,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "58 %",
+    "t_zbrane": "35 %"
+   },
+   {
+    "zeme": "Slovensko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 35,
+    "sankce": 58,
+    "zbrane": 35,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "58 %",
+    "t_zbrane": "35 %"
+   },
+   {
+    "zeme": "Maďarsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 49,
+    "sankce": 49,
+    "zbrane": 34,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "49 %",
+    "t_zbrane": "34 %"
+   },
+   {
+    "zeme": "Maďarsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 34,
+    "sankce": 49,
+    "zbrane": 34,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "49 %",
+    "t_zbrane": "34 %"
+   },
+   {
+    "zeme": "Česko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 65,
+    "sankce": 65,
+    "zbrane": 32,
+    "cz": true,
+    "eu": false,
+    "t_sankce": "65 %",
+    "t_zbrane": "32 %"
+   },
+   {
+    "zeme": "Česko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 32,
+    "sankce": 65,
+    "zbrane": 32,
+    "cz": true,
+    "eu": false,
+    "t_sankce": "65 %",
+    "t_zbrane": "32 %"
+   },
+   {
+    "zeme": "Bulharsko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 42,
+    "sankce": 42,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "42 %",
+    "t_zbrane": "27 %"
+   },
+   {
+    "zeme": "Bulharsko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 27,
+    "sankce": 42,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "42 %",
+    "t_zbrane": "27 %"
+   },
+   {
+    "zeme": "Řecko",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 40,
+    "sankce": 40,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "40 %",
+    "t_zbrane": "27 %"
+   },
+   {
+    "zeme": "Řecko",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 27,
+    "sankce": 40,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "40 %",
+    "t_zbrane": "27 %"
+   },
+   {
+    "zeme": "Kypr",
+    "opatreni": "Sankce proti Rusku",
+    "hodnota": 30,
+    "sankce": 30,
+    "zbrane": 18,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "30 %",
+    "t_zbrane": "18 %"
+   },
+   {
+    "zeme": "Kypr",
+    "opatreni": "Financování zbraní pro Ukrajinu",
+    "hodnota": 18,
+    "sankce": 30,
+    "zbrane": 18,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "30 %",
+    "t_zbrane": "18 %"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "zeme",
+   "type": "nominal",
+   "sort": [
+    "Švédsko",
+    "Dánsko",
+    "Finsko",
+    "Nizozemsko",
+    "Litva",
+    "Polsko",
+    "Portugalsko",
+    "Irsko",
+    "Chorvatsko",
+    "Lotyšsko",
+    "Estonsko",
+    "Německo",
+    "Lucembursko",
+    "Belgie",
+    "Průměr EU",
+    "Španělsko",
+    "Francie",
+    "Itálie",
+    "Rakousko",
+    "Rumunsko",
+    "Malta",
+    "Slovinsko",
+    "Slovensko",
+    "Maďarsko",
+    "Česko",
+    "Bulharsko",
+    "Řecko",
+    "Kypr"
+   ],
+   "scale": {
+    "paddingInner": 0,
+    "paddingOuter": 0.3
+   },
+   "axis": {
+    "title": null,
+    "domain": false,
+    "ticks": false,
+    "labelLimit": 140,
+    "labelFontWeight": {
+     "condition": {
+      "test": "datum.value === 'Česko' || datum.value === 'Průměr EU'",
+      "value": 700
+     },
+     "value": 400
+    },
+    "labelColor": {
+     "condition": {
+      "test": "datum.value === 'Česko'",
+      "value": "#de1743"
+     },
+     "value": "#333333"
+    }
+   }
+  },
+  "color": {
+   "field": "opatreni",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Sankce proti Rusku",
+     "Financování zbraní pro Ukrajinu"
+    ],
+    "range": [
+     "#06677d",
+     "#9f319e"
+    ]
+   },
+   "legend": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Švédsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "93 %"
+     },
+     {
+      "zeme": "Dánsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Finsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Nizozemsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "78 %"
+     },
+     {
+      "zeme": "Litva",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81 %",
+      "t_zbrane": "75 %"
+     },
+     {
+      "zeme": "Polsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "70 %"
+     },
+     {
+      "zeme": "Portugalsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Irsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Chorvatsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Lotyšsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Estonsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "64 %"
+     },
+     {
+      "zeme": "Německo",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "59 %"
+     },
+     {
+      "zeme": "Lucembursko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "58 %"
+     },
+     {
+      "zeme": "Belgie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Průměr EU",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Španělsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70 %",
+      "t_zbrane": "55 %"
+     },
+     {
+      "zeme": "Francie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "52 %"
+     },
+     {
+      "zeme": "Itálie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "49 %"
+     },
+     {
+      "zeme": "Rakousko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "48 %"
+     },
+     {
+      "zeme": "Rumunsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64 %",
+      "t_zbrane": "45 %"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "42 %"
+     },
+     {
+      "zeme": "Slovinsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54 %",
+      "t_zbrane": "36 %"
+     },
+     {
+      "zeme": "Slovensko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58 %",
+      "t_zbrane": "35 %"
+     },
+     {
+      "zeme": "Maďarsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49 %",
+      "t_zbrane": "34 %"
+     },
+     {
+      "zeme": "Česko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65 %",
+      "t_zbrane": "32 %"
+     },
+     {
+      "zeme": "Bulharsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Řecko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Kypr",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30 %",
+      "t_zbrane": "18 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 2
+   },
+   "encoding": {
+    "x": {
+     "field": "zbrane",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": "% souhlasí",
+      "grid": true,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     }
+    },
+    "x2": {
+     "field": "sankce"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.cz",
+      "value": "#333333"
+     },
+     "value": "#d4d4c8"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "hodnota",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "size": {
+     "condition": {
+      "test": "datum.cz || datum.eu",
+      "value": 150
+     },
+     "value": 85
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Švédsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "93 %"
+     },
+     {
+      "zeme": "Dánsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Finsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Nizozemsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "78 %"
+     },
+     {
+      "zeme": "Litva",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81 %",
+      "t_zbrane": "75 %"
+     },
+     {
+      "zeme": "Polsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "70 %"
+     },
+     {
+      "zeme": "Portugalsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Irsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Chorvatsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Lotyšsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Estonsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "64 %"
+     },
+     {
+      "zeme": "Německo",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "59 %"
+     },
+     {
+      "zeme": "Lucembursko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "58 %"
+     },
+     {
+      "zeme": "Belgie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Průměr EU",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Španělsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70 %",
+      "t_zbrane": "55 %"
+     },
+     {
+      "zeme": "Francie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "52 %"
+     },
+     {
+      "zeme": "Itálie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "49 %"
+     },
+     {
+      "zeme": "Rakousko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "48 %"
+     },
+     {
+      "zeme": "Rumunsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64 %",
+      "t_zbrane": "45 %"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "42 %"
+     },
+     {
+      "zeme": "Slovinsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54 %",
+      "t_zbrane": "36 %"
+     },
+     {
+      "zeme": "Slovensko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58 %",
+      "t_zbrane": "35 %"
+     },
+     {
+      "zeme": "Maďarsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49 %",
+      "t_zbrane": "34 %"
+     },
+     {
+      "zeme": "Česko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65 %",
+      "t_zbrane": "32 %"
+     },
+     {
+      "zeme": "Bulharsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Řecko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Kypr",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30 %",
+      "t_zbrane": "18 %"
+     }
+    ]
+   },
+   "transform": [
+    {
+     "filter": "datum.cz || datum.eu"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontWeight": 700,
+    "color": "#9f319e"
+   },
+   "encoding": {
+    "x": {
+     "field": "zbrane",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "text": {
+     "field": "zbrane"
+    },
+    "color": {
+     "value": "#9f319e"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Švédsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "93 %"
+     },
+     {
+      "zeme": "Dánsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Finsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Nizozemsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "78 %"
+     },
+     {
+      "zeme": "Litva",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81 %",
+      "t_zbrane": "75 %"
+     },
+     {
+      "zeme": "Polsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "70 %"
+     },
+     {
+      "zeme": "Portugalsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Irsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Chorvatsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Lotyšsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Estonsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "64 %"
+     },
+     {
+      "zeme": "Německo",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "59 %"
+     },
+     {
+      "zeme": "Lucembursko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "58 %"
+     },
+     {
+      "zeme": "Belgie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Průměr EU",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Španělsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70 %",
+      "t_zbrane": "55 %"
+     },
+     {
+      "zeme": "Francie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "52 %"
+     },
+     {
+      "zeme": "Itálie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "49 %"
+     },
+     {
+      "zeme": "Rakousko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "48 %"
+     },
+     {
+      "zeme": "Rumunsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64 %",
+      "t_zbrane": "45 %"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "42 %"
+     },
+     {
+      "zeme": "Slovinsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54 %",
+      "t_zbrane": "36 %"
+     },
+     {
+      "zeme": "Slovensko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58 %",
+      "t_zbrane": "35 %"
+     },
+     {
+      "zeme": "Maďarsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49 %",
+      "t_zbrane": "34 %"
+     },
+     {
+      "zeme": "Česko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65 %",
+      "t_zbrane": "32 %"
+     },
+     {
+      "zeme": "Bulharsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Řecko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Kypr",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30 %",
+      "t_zbrane": "18 %"
+     }
+    ]
+   },
+   "transform": [
+    {
+     "filter": "datum.cz || datum.eu"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "field": "sankce",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "text": {
+     "field": "sankce"
+    },
+    "color": {
+     "value": "#06677d"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Švédsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "93 %"
+     },
+     {
+      "zeme": "Dánsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Finsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88 %",
+      "t_zbrane": "88 %"
+     },
+     {
+      "zeme": "Nizozemsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "78 %"
+     },
+     {
+      "zeme": "Litva",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81 %",
+      "t_zbrane": "75 %"
+     },
+     {
+      "zeme": "Polsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83 %",
+      "t_zbrane": "70 %"
+     },
+     {
+      "zeme": "Portugalsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Irsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85 %",
+      "t_zbrane": "68 %"
+     },
+     {
+      "zeme": "Chorvatsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Lotyšsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68 %",
+      "t_zbrane": "66 %"
+     },
+     {
+      "zeme": "Estonsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "64 %"
+     },
+     {
+      "zeme": "Německo",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "59 %"
+     },
+     {
+      "zeme": "Lucembursko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "58 %"
+     },
+     {
+      "zeme": "Belgie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Průměr EU",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70 %",
+      "t_zbrane": "56 %"
+     },
+     {
+      "zeme": "Španělsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70 %",
+      "t_zbrane": "55 %"
+     },
+     {
+      "zeme": "Francie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67 %",
+      "t_zbrane": "52 %"
+     },
+     {
+      "zeme": "Itálie",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "49 %"
+     },
+     {
+      "zeme": "Rakousko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66 %",
+      "t_zbrane": "48 %"
+     },
+     {
+      "zeme": "Rumunsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64 %",
+      "t_zbrane": "45 %"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69 %",
+      "t_zbrane": "42 %"
+     },
+     {
+      "zeme": "Slovinsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54 %",
+      "t_zbrane": "36 %"
+     },
+     {
+      "zeme": "Slovensko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58 %",
+      "t_zbrane": "35 %"
+     },
+     {
+      "zeme": "Maďarsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49 %",
+      "t_zbrane": "34 %"
+     },
+     {
+      "zeme": "Česko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65 %",
+      "t_zbrane": "32 %"
+     },
+     {
+      "zeme": "Bulharsko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Řecko",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40 %",
+      "t_zbrane": "27 %"
+     },
+     {
+      "zeme": "Kypr",
+      "opatreni": "Sankce proti Rusku",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30 %",
+      "t_zbrane": "18 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rect",
+    "fill": "#333333",
+    "fillOpacity": 0.001,
+    "cursor": "pointer"
+   },
+   "encoding": {
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "x2": {
+     "datum": 100
+    },
+    "color": {
+     "value": "#333333"
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "t_sankce",
+      "title": "Souhlasí se sankcemi"
+     },
+     {
+      "field": "t_zbrane",
+      "title": "Souhlasí s financováním zbraní"
+     }
+    ]
+   }
+  }
+ ],
+ "_source": "[Standard Eurobarometr 105, jaro 2026, otázky QD2.1 a QD2.2](https://europa.eu/eurobarometer/surveys/detail/3613)"
+}

@@ -22,9 +22,11 @@ interface KeyNumbersProps {
   label?: string;
   numbers?: KeyNumberItem[];
   align?: 'left' | 'center' | 'right';
+  // Barva nadpisu sekce (paleta, "brandOrange[7]", hex) – výchozí je crimson z CSS.
+  labelColor?: KeyNumberPaletteColor | string;
 }
 
-export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'left' }: KeyNumbersProps) {
+export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'left', labelColor }: KeyNumbersProps) {
   const theme = useMantineTheme();
 
   const getPaletteColor = (colorName: KeyNumberPaletteColor): string => {
@@ -102,7 +104,7 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'lef
     <section className={classes.numbersSection}>
       <Container size="md">
         <div className={alignClass}>
-          <div className={classes.sectionLabel}>{label}</div>
+          <div className={classes.sectionLabel} style={labelColor ? { color: getColorStyles(labelColor).valueColor } : undefined}>{label}</div>
           <div className={classes.numbersGrid}>
           {numbers.map((item, index) => {
             const colorStyles = getColorStyles(item.color);
