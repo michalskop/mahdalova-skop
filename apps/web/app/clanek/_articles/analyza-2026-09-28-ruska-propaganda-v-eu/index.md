@@ -1,7 +1,7 @@
 ---
 title: "Na Slovensku viní z války Rusko 40 procent lidí, v Polsku 85. Kremlu se v EU daří tam, kde se lidé nejhůř brání dezinformacím"
 date: "2026-09-28"
-author: "Kateřina Mahdalová & Michal Škop"
+author: "Kateřina Mahdalová"
 excerpt: "Hlavní vinu za válku na Ukrajině dává Rusku 85 procent Poláků, 71 procent Čechů a 40 procent Slováků. Třetina Slováků i Bulharů ukazuje na Západ. Kde je podle Media Literacy Indexu společnost vůči dezinformacím nejméně odolná, tam mají lidé nejlepší mínění o Rusku. Z Evropské unie a NATO přitom chce odejít menšina Slováků – a to je prostor, o který se dá bojovat."
 coverImage: "images/cover-homepage.webp"
 ogImage: "images/cover-og.jpg"
