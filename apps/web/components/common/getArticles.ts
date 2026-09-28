@@ -1,9 +1,23 @@
 // components/common/getArticles.ts
 import path from 'path';
-import { getArticles as _getArticles } from '@repo/ui/lib/getArticles';
+import {
+  getArticles as _getArticles,
+  readPublishedAt,
+  type Article,
+  type PublishedAt,
+} from '@repo/ui/lib/getArticles';
 import { getDpbpArticles } from './getDpbpArticles';
 
-export type { Article } from '@repo/ui/lib/getArticles';
+export type { Article, PublishedAt } from '@repo/ui/lib/getArticles';
+export { comparePublishedAt } from '@repo/ui/lib/getArticles';
+
+const ARTICLES_DIR = path.join(process.cwd(), 'app/clanek/_articles');
+
+/** Skrytý okamžik publikace (date + frontmatter `time`) – jen pro řazení na
+ * serveru, nikdy ho neposílat do komponent ani metadat. */
+export function getPublishedAt(article: Pick<Article, 'slug' | 'date'>): PublishedAt {
+  return readPublishedAt(ARTICLES_DIR, article.slug, article.date);
+}
 
 // These _articles/ folders are kept only as content sources (read via
 // getArticleBySlug for their real page) – their /clanek/[slug] route is
@@ -25,7 +39,7 @@ export async function getArticles(
   tag?: string
 ) {
   const articles = await _getArticles({
-    articlesDir: path.join(process.cwd(), 'app/clanek/_articles'),
+    articlesDir: ARTICLES_DIR,
     coverImageBase: '/clanek/_articles',
     publicDir: path.join(process.cwd(), 'public'),
     limit,
