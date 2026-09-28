@@ -1,0 +1,295 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Krátkých neschopenek|#de1743} je víc, {delších než tři týdny|#101432} ubylo",
+    "subtitle": "Ukončené případy pracovní neschopnosti podle délky trvání (% ze všech ukončených v daném roce)"
+  },
+  "width": "container",
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "rok": "2015",
+        "delka": "do 14 dnů",
+        "podil": 47.3,
+        "poradi": 0
+      },
+      {
+        "rok": "2015",
+        "delka": "15–21 dnů",
+        "podil": 13.7,
+        "poradi": 1
+      },
+      {
+        "rok": "2015",
+        "delka": "déle než 3 týdny",
+        "podil": 39.0,
+        "poradi": 2
+      },
+      {
+        "rok": "2016",
+        "delka": "do 14 dnů",
+        "podil": 46.8,
+        "poradi": 0
+      },
+      {
+        "rok": "2016",
+        "delka": "15–21 dnů",
+        "podil": 13.3,
+        "poradi": 1
+      },
+      {
+        "rok": "2016",
+        "delka": "déle než 3 týdny",
+        "podil": 39.9,
+        "poradi": 2
+      },
+      {
+        "rok": "2017",
+        "delka": "do 14 dnů",
+        "podil": 47.1,
+        "poradi": 0
+      },
+      {
+        "rok": "2017",
+        "delka": "15–21 dnů",
+        "podil": 13.8,
+        "poradi": 1
+      },
+      {
+        "rok": "2017",
+        "delka": "déle než 3 týdny",
+        "podil": 39.1,
+        "poradi": 2
+      },
+      {
+        "rok": "2018",
+        "delka": "do 14 dnů",
+        "podil": 48.3,
+        "poradi": 0
+      },
+      {
+        "rok": "2018",
+        "delka": "15–21 dnů",
+        "podil": 14.3,
+        "poradi": 1
+      },
+      {
+        "rok": "2018",
+        "delka": "déle než 3 týdny",
+        "podil": 37.3,
+        "poradi": 2
+      },
+      {
+        "rok": "2019",
+        "delka": "do 14 dnů",
+        "podil": 48.5,
+        "poradi": 0
+      },
+      {
+        "rok": "2019",
+        "delka": "15–21 dnů",
+        "podil": 13.7,
+        "poradi": 1
+      },
+      {
+        "rok": "2019",
+        "delka": "déle než 3 týdny",
+        "podil": 37.8,
+        "poradi": 2
+      },
+      {
+        "rok": "2020",
+        "delka": "do 14 dnů",
+        "podil": 50.4,
+        "poradi": 0
+      },
+      {
+        "rok": "2020",
+        "delka": "15–21 dnů",
+        "podil": 15.7,
+        "poradi": 1
+      },
+      {
+        "rok": "2020",
+        "delka": "déle než 3 týdny",
+        "podil": 33.9,
+        "poradi": 2
+      },
+      {
+        "rok": "2021",
+        "delka": "do 14 dnů",
+        "podil": 49.5,
+        "poradi": 0
+      },
+      {
+        "rok": "2021",
+        "delka": "15–21 dnů",
+        "podil": 20.7,
+        "poradi": 1
+      },
+      {
+        "rok": "2021",
+        "delka": "déle než 3 týdny",
+        "podil": 29.8,
+        "poradi": 2
+      },
+      {
+        "rok": "2022",
+        "delka": "do 14 dnů",
+        "podil": 69.0,
+        "poradi": 0
+      },
+      {
+        "rok": "2022",
+        "delka": "15–21 dnů",
+        "podil": 10.0,
+        "poradi": 1
+      },
+      {
+        "rok": "2022",
+        "delka": "déle než 3 týdny",
+        "podil": 21.0,
+        "poradi": 2
+      },
+      {
+        "rok": "2023",
+        "delka": "do 14 dnů",
+        "podil": 63.1,
+        "poradi": 0
+      },
+      {
+        "rok": "2023",
+        "delka": "15–21 dnů",
+        "podil": 10.8,
+        "poradi": 1
+      },
+      {
+        "rok": "2023",
+        "delka": "déle než 3 týdny",
+        "podil": 26.1,
+        "poradi": 2
+      },
+      {
+        "rok": "2024",
+        "delka": "do 14 dnů",
+        "podil": 62.3,
+        "poradi": 0
+      },
+      {
+        "rok": "2024",
+        "delka": "15–21 dnů",
+        "podil": 11.0,
+        "poradi": 1
+      },
+      {
+        "rok": "2024",
+        "delka": "déle než 3 týdny",
+        "podil": 26.7,
+        "poradi": 2
+      },
+      {
+        "rok": "2025",
+        "delka": "do 14 dnů",
+        "podil": 63.8,
+        "poradi": 0
+      },
+      {
+        "rok": "2025",
+        "delka": "15–21 dnů",
+        "podil": 10.5,
+        "poradi": 1
+      },
+      {
+        "rok": "2025",
+        "delka": "déle než 3 týdny",
+        "podil": 25.8,
+        "poradi": 2
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "ordinal",
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "podil",
+      "type": "quantitative",
+      "stack": "zero",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": "% ukončených neschopenek",
+        "values": [
+          0,
+          25,
+          50,
+          75,
+          100
+        ],
+        "grid": false
+      }
+    },
+    "color": {
+      "field": "delka",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "do 14 dnů",
+          "15–21 dnů",
+          "déle než 3 týdny"
+        ],
+        "range": [
+          "#de1743",
+          "#bcbcb0",
+          "#101432"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    },
+    "order": {
+      "field": "poradi",
+      "type": "quantitative",
+      "sort": "ascending"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.72
+        }
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "delka",
+            "title": "Délka"
+          },
+          {
+            "field": "podil",
+            "title": "Podíl (%)"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Ukazatel pracovní neschopnosti podle délky trvání, otevřená data ČSSZ](https://data.cssz.cz/documentation/ukazatel-pracovni-neschopnosti-podle-delky-trvani-dpn-v-cr); rok 2022 ovlivnily karantény"
+}

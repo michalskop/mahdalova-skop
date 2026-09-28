@@ -1,0 +1,259 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Po {covidových schodcích|#de1743} vybralo nemocenské pojištění za dva roky o 23,6 miliardy {víc|#06677d}, než vyplatilo",
+    "subtitle": "Rozdíl příjmů a výdajů nemocenského pojištění (mld. Kč). Od roku 2024 platí zaměstnanci znovu pojistné 0,6 %."
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "rok": "2010",
+        "saldo": 1.3,
+        "prijmy": "24,1",
+        "vydaje": "22,8",
+        "saldo_txt": "+1,3",
+        "plus": true
+      },
+      {
+        "rok": "2011",
+        "saldo": 3.2,
+        "prijmy": "24,7",
+        "vydaje": "21,5",
+        "saldo_txt": "+3,2",
+        "plus": true
+      },
+      {
+        "rok": "2012",
+        "saldo": 5.5,
+        "prijmy": "24,9",
+        "vydaje": "19,4",
+        "saldo_txt": "+5,5",
+        "plus": true
+      },
+      {
+        "rok": "2013",
+        "saldo": 5.0,
+        "prijmy": "25,1",
+        "vydaje": "20,1",
+        "saldo_txt": "+5,0",
+        "plus": true
+      },
+      {
+        "rok": "2014",
+        "saldo": 3.9,
+        "prijmy": "26,0",
+        "vydaje": "22,1",
+        "saldo_txt": "+3,9",
+        "plus": true
+      },
+      {
+        "rok": "2015",
+        "saldo": 3.3,
+        "prijmy": "27,4",
+        "vydaje": "24,1",
+        "saldo_txt": "+3,3",
+        "plus": true
+      },
+      {
+        "rok": "2016",
+        "saldo": 2.2,
+        "prijmy": "28,5",
+        "vydaje": "26,3",
+        "saldo_txt": "+2,2",
+        "plus": true
+      },
+      {
+        "rok": "2017",
+        "saldo": 3.2,
+        "prijmy": "31,5",
+        "vydaje": "28,3",
+        "saldo_txt": "+3,2",
+        "plus": true
+      },
+      {
+        "rok": "2018",
+        "saldo": 0.6,
+        "prijmy": "34,6",
+        "vydaje": "34,0",
+        "saldo_txt": "+0,6",
+        "plus": true
+      },
+      {
+        "rok": "2019",
+        "saldo": -3.0,
+        "prijmy": "35,9",
+        "vydaje": "38,9",
+        "saldo_txt": "−3,0",
+        "plus": false
+      },
+      {
+        "rok": "2020",
+        "saldo": -21.3,
+        "prijmy": "33,9",
+        "vydaje": "55,2",
+        "saldo_txt": "−21,3",
+        "plus": false
+      },
+      {
+        "rok": "2021",
+        "saldo": -14.4,
+        "prijmy": "37,1",
+        "vydaje": "51,5",
+        "saldo_txt": "−14,4",
+        "plus": false
+      },
+      {
+        "rok": "2022",
+        "saldo": -8.0,
+        "prijmy": "39,6",
+        "vydaje": "47,6",
+        "saldo_txt": "−8,0",
+        "plus": false
+      },
+      {
+        "rok": "2023",
+        "saldo": -2.7,
+        "prijmy": "42,8",
+        "vydaje": "45,5",
+        "saldo_txt": "−2,7",
+        "plus": false
+      },
+      {
+        "rok": "2024",
+        "saldo": 10.2,
+        "prijmy": "57,7",
+        "vydaje": "47,5",
+        "saldo_txt": "+10,2",
+        "plus": true
+      },
+      {
+        "rok": "2025",
+        "saldo": 13.4,
+        "prijmy": "62,3",
+        "vydaje": "48,8",
+        "saldo_txt": "+13,4",
+        "plus": true
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "ordinal",
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "saldo",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          -24,
+          16
+        ]
+      },
+      "axis": {
+        "title": "mld. Kč",
+        "values": [
+          -20,
+          -10,
+          0,
+          10
+        ],
+        "grid": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.plus",
+            "value": "#06677d"
+          },
+          "value": "#de1743"
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "prijmy",
+            "title": "Příjmy (mld. Kč)"
+          },
+          {
+            "field": "vydaje",
+            "title": "Výdaje (mld. Kč)"
+          },
+          {
+            "field": "saldo_txt",
+            "title": "Rozdíl (mld. Kč)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.plus"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "color": "#333333",
+        "dy": -7
+      },
+      "encoding": {
+        "text": {
+          "field": "saldo_txt"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.plus"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "color": "#333333",
+        "dy": 8
+      },
+      "encoding": {
+        "text": {
+          "field": "saldo_txt"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#666666"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0,
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "[Příjmy a výdaje na sociální zabezpečení, otevřená data ČSSZ](https://data.cssz.cz/documentation/prijmy-a-vydaje-na-socialni-zabezpeceni); roky 2024 a 2025 v přesnějším členění podle ČMKOS"
+}

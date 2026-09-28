@@ -1,0 +1,483 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Od roku 2019 přibylo {neschopenek|#de1743} o 30 %, {prostonaných dnů|#101432} o 4 % ubylo",
+    "subtitle": "Index, rok 2019 = 100. Šedý pás = karenční doba (2009 – červen 2019). Rok 2022 ovlivnily plošné karantény."
+  },
+  "width": "container",
+  "height": 340,
+  "data": {
+    "values": [
+      {
+        "rok": 2006,
+        "ukazatel": "Nové neschopenky",
+        "index": 141.4,
+        "abs": "2,71 mil."
+      },
+      {
+        "rok": 2006,
+        "ukazatel": "Prostonané dny",
+        "index": 117.5,
+        "abs": "95,4 mil."
+      },
+      {
+        "rok": 2007,
+        "ukazatel": "Nové neschopenky",
+        "index": 142.4,
+        "abs": "2,73 mil."
+      },
+      {
+        "rok": 2007,
+        "ukazatel": "Prostonané dny",
+        "index": 116.1,
+        "abs": "94,3 mil."
+      },
+      {
+        "rok": 2008,
+        "ukazatel": "Nové neschopenky",
+        "index": 116.0,
+        "abs": "2,22 mil."
+      },
+      {
+        "rok": 2008,
+        "ukazatel": "Prostonané dny",
+        "index": 106.8,
+        "abs": "86,8 mil."
+      },
+      {
+        "rok": 2009,
+        "ukazatel": "Nové neschopenky",
+        "index": 75.3,
+        "abs": "1,44 mil."
+      },
+      {
+        "rok": 2009,
+        "ukazatel": "Prostonané dny",
+        "index": 80.0,
+        "abs": "65,0 mil."
+      },
+      {
+        "rok": 2010,
+        "ukazatel": "Nové neschopenky",
+        "index": 69.2,
+        "abs": "1,32 mil."
+      },
+      {
+        "rok": 2010,
+        "ukazatel": "Prostonané dny",
+        "index": 72.9,
+        "abs": "59,2 mil."
+      },
+      {
+        "rok": 2011,
+        "ukazatel": "Nové neschopenky",
+        "index": 66.3,
+        "abs": "1,27 mil."
+      },
+      {
+        "rok": 2011,
+        "ukazatel": "Prostonané dny",
+        "index": 68.9,
+        "abs": "55,9 mil."
+      },
+      {
+        "rok": 2012,
+        "ukazatel": "Nové neschopenky",
+        "index": 64.1,
+        "abs": "1,23 mil."
+      },
+      {
+        "rok": 2012,
+        "ukazatel": "Prostonané dny",
+        "index": 69.6,
+        "abs": "56,5 mil."
+      },
+      {
+        "rok": 2013,
+        "ukazatel": "Nové neschopenky",
+        "index": 69.5,
+        "abs": "1,33 mil."
+      },
+      {
+        "rok": 2013,
+        "ukazatel": "Prostonané dny",
+        "index": 72.1,
+        "abs": "58,6 mil."
+      },
+      {
+        "rok": 2014,
+        "ukazatel": "Nové neschopenky",
+        "index": 68.7,
+        "abs": "1,31 mil."
+      },
+      {
+        "rok": 2014,
+        "ukazatel": "Prostonané dny",
+        "index": 74.2,
+        "abs": "60,2 mil."
+      },
+      {
+        "rok": 2015,
+        "ukazatel": "Nové neschopenky",
+        "index": 81.7,
+        "abs": "1,56 mil."
+      },
+      {
+        "rok": 2015,
+        "ukazatel": "Prostonané dny",
+        "index": 82.3,
+        "abs": "66,8 mil."
+      },
+      {
+        "rok": 2016,
+        "ukazatel": "Nové neschopenky",
+        "index": 85.3,
+        "abs": "1,63 mil."
+      },
+      {
+        "rok": 2016,
+        "ukazatel": "Prostonané dny",
+        "index": 86.5,
+        "abs": "70,3 mil."
+      },
+      {
+        "rok": 2017,
+        "ukazatel": "Nové neschopenky",
+        "index": 89.2,
+        "abs": "1,71 mil."
+      },
+      {
+        "rok": 2017,
+        "ukazatel": "Prostonané dny",
+        "index": 89.5,
+        "abs": "72,7 mil."
+      },
+      {
+        "rok": 2018,
+        "ukazatel": "Nové neschopenky",
+        "index": 96.6,
+        "abs": "1,85 mil."
+      },
+      {
+        "rok": 2018,
+        "ukazatel": "Prostonané dny",
+        "index": 95.0,
+        "abs": "77,2 mil."
+      },
+      {
+        "rok": 2019,
+        "ukazatel": "Nové neschopenky",
+        "index": 100.0,
+        "abs": "1,91 mil."
+      },
+      {
+        "rok": 2019,
+        "ukazatel": "Prostonané dny",
+        "index": 100.0,
+        "abs": "81,2 mil."
+      },
+      {
+        "rok": 2020,
+        "ukazatel": "Nové neschopenky",
+        "index": 124.9,
+        "abs": "2,39 mil."
+      },
+      {
+        "rok": 2020,
+        "ukazatel": "Prostonané dny",
+        "index": 116.1,
+        "abs": "94,2 mil."
+      },
+      {
+        "rok": 2021,
+        "ukazatel": "Nové neschopenky",
+        "index": 143.9,
+        "abs": "2,75 mil."
+      },
+      {
+        "rok": 2021,
+        "ukazatel": "Prostonané dny",
+        "index": 116.9,
+        "abs": "94,9 mil."
+      },
+      {
+        "rok": 2022,
+        "ukazatel": "Nové neschopenky",
+        "index": 180.6,
+        "abs": "3,46 mil."
+      },
+      {
+        "rok": 2022,
+        "ukazatel": "Prostonané dny",
+        "index": 112.1,
+        "abs": "91,1 mil."
+      },
+      {
+        "rok": 2023,
+        "ukazatel": "Nové neschopenky",
+        "index": 132.4,
+        "abs": "2,54 mil."
+      },
+      {
+        "rok": 2023,
+        "ukazatel": "Prostonané dny",
+        "index": 98.0,
+        "abs": "79,6 mil."
+      },
+      {
+        "rok": 2024,
+        "ukazatel": "Nové neschopenky",
+        "index": 129.3,
+        "abs": "2,48 mil."
+      },
+      {
+        "rok": 2024,
+        "ukazatel": "Prostonané dny",
+        "index": 96.6,
+        "abs": "78,5 mil."
+      },
+      {
+        "rok": 2025,
+        "ukazatel": "Nové neschopenky",
+        "index": 130.5,
+        "abs": "2,50 mil."
+      },
+      {
+        "rok": 2025,
+        "ukazatel": "Prostonané dny",
+        "index": 96.1,
+        "abs": "78,0 mil."
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "color": "#e8e8dc",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": 2009,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2006,
+              2025.5
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "values": [
+              2006,
+              2009,
+              2012,
+              2015,
+              2019,
+              2022,
+              2025
+            ]
+          }
+        },
+        "x2": {
+          "datum": 2019.5
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "y": 12,
+        "fontSize": 11,
+        "color": "#666666",
+        "fontStyle": "italic",
+        "text": "karenční doba"
+      },
+      "encoding": {
+        "x": {
+          "datum": 2014.25,
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "color": "#999999"
+      },
+      "encoding": {
+        "y": {
+          "datum": 100,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              190
+            ]
+          },
+          "axis": {
+            "title": "index (2019 = 100)",
+            "values": [
+              0,
+              50,
+              100,
+              150
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2006,
+              2025.5
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "values": [
+              2006,
+              2009,
+              2012,
+              2015,
+              2019,
+              2022,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              190
+            ]
+          },
+          "axis": {
+            "title": "index (2019 = 100)",
+            "values": [
+              0,
+              50,
+              100,
+              150
+            ]
+          }
+        },
+        "color": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Nové neschopenky",
+              "Prostonané dny"
+            ],
+            "range": [
+              "#de1743",
+              "#101432"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 30
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2006,
+              2025.5
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "values": [
+              2006,
+              2009,
+              2012,
+              2015,
+              2019,
+              2022,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              190
+            ]
+          },
+          "axis": {
+            "title": "index (2019 = 100)",
+            "values": [
+              0,
+              50,
+              100,
+              150
+            ]
+          }
+        },
+        "color": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "ukazatel",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "abs",
+            "title": "Počet"
+          },
+          {
+            "field": "index",
+            "title": "Index (2019 = 100)"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Pracovní neschopnost pro nemoc a úraz – časová řada 2006–2025, ČSÚ](https://csu.gov.cz/produkty/pracovni-neschopnost-pro-nemoc-a-uraz)"
+}
