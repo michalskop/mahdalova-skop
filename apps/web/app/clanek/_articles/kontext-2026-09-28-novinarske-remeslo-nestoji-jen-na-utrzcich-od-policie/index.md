@@ -1,5 +1,5 @@
 ---
-title: "„Miliony billboardového aktivisty“ aneb Novinářské řemeslo nestojí na útržcích od policie"
+title: "„Miliony billboardového aktivisty“ aneb Novinářské řemeslo nestojí jen na útržcích od policie"
 date: "2026-09-28"
 author: "Kateřina Mahdalová"
 excerpt: "Kandidát Zelených Zdeněk Jahn není obviněný ani vyšetřovaný. Policie potvrdila jediné: že se věcí zabývá. Z anonymních „zjištění“ o obratu na jeho účtech přesto vznikly titulky celostátních médií. Jak se ven dostává policejní práce, která je teprve ve fázi prověřování."
