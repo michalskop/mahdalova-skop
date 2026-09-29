@@ -15,6 +15,8 @@ Web Odkryto.cz zveřejnil 21. září 2026 článek s titulkem [„Miliony na ú
 
 Ještě týž den ve 13:40 vydaly [Novinky.cz](https://www.novinky.cz/clanek/domaci-o-kandidata-zelenych-v-praze-3-se-zajima-policie-kvuli-milionum-na-jeho-uctech-40598752) zprávu s titulkem „O kandidáta Zelených v Praze 3 se zajímá policie kvůli milionům na jeho účtech“. Ani tento text neobsahoval vlastní vyjádření policie. Zprávu následně převzalo také [Info.cz](https://www.info.cz/zpravodajstvi-a-komentare/zdenek-jahn-zeleni-praha-3-policie-tsk).
 
+<Figure src="images/kolaz-titulku-medii.jpg" side="left" alt="Koláž titulků Odkryto.cz, Info.cz, Novinek, iDNES, Pražského deníku, TN.cz a CNN Prima News o policejním zájmu o účty Zdeňka Jahna" caption="Z původního tvrzení jednoho média bez zveřejněného podkladu se během několika hodin stala zpráva několika dalších médií o tom, že „se policie zajímá“ o kandidáta a miliony na jeho účtech. Koláž: DataTimes.cz" />
+
 Policie se na případ prokazatelně zeptal až o den později [Pražský deník](https://prazsky.denik.cz/komunalni-volby/policie-se-zabyva-kandidatem-zelenych-na-praze-3-na-uctech-ma-miliony/). Mluvčí pražské policie Eva Kropáčová mu odpověděla pouze: „V dané věci vám pouze mohu potvrdit, že se věcí zabýváme.“ Co přesně policie prověřuje, koho se prověřování týká ani zda se vztahuje právě k tvrzení o téměř dvousetmilionovém obratu, policie nesdělila.
 
 Z původního tvrzení jednoho média bez zveřejněného podkladu se tak během několika hodin stala zpráva několika dalších médií o tom, že „se policie zajímá“ o kandidáta a miliony na jeho účtech.
