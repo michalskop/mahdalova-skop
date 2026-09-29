@@ -44,6 +44,13 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
 }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(-1);
   const [isMobile, setIsMobile] = useState(false);
+  // Highest step index whose image has been mounted. Image layers are only
+  // ever added (never unmounted) and keep step order, so a layer is never
+  // re-created or moved while scrolling back and forth.
+  const [mountedUpTo, setMountedUpTo] = useState<number>(2);
+  useEffect(() => {
+    setMountedUpTo((prev) => Math.max(prev, currentStepIndex + 4));
+  }, [currentStepIndex]);
 
   const normalizedWidth = typeof width === 'string' ? width.replace(/\s+/g, '') : undefined;
   const mediaColumnWidth = normalizedWidth || '65%';
@@ -78,8 +85,8 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
 
   // Image steps are stacked in one grid cell and cross-faded, so consecutive
   // images of identical size (e.g. before/after satellite pairs) overlay
-  // pixel-exactly. Only the steps near the current one are mounted, which
-  // also preloads the next image before it is needed.
+  // pixel-exactly. Layers are mounted progressively a few steps ahead of the
+  // reader, which preloads the next images before they are needed.
   const renderImageStack = (imageFit: 'contain' | 'cover' = 'contain') => {
     const layers: { key: string; src: string; alt: string; width: string; active: boolean }[] = [];
     const seen = new Set<string>();
@@ -98,9 +105,9 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
       });
     };
     const currentContent = currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content;
-    for (let idx = currentStepIndex - 1; idx <= currentStepIndex + 2; idx++) {
-      if (idx >= -1 && idx < steps.length) addLayer(idx);
-    }
+    // Preload a few steps ahead so the next image is ready before it shows.
+    const lastIdx = Math.min(steps.length - 1, Math.max(mountedUpTo, currentStepIndex + 4));
+    for (let idx = -1; idx <= lastIdx; idx++) addLayer(idx);
     const activeSrc = currentContent ? getImagePath(currentContent.src) : undefined;
     layers.forEach((layer) => { layer.active = layer.src === activeSrc; });
 
@@ -207,7 +214,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
         </div>
 
         <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh' }}>
-          <Scrollama offset={0.6} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
+          <Scrollama offset={0.5} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
             {steps.map((step, idx) => (
               <Step data={idx} key={idx}>
                 <div style={{
