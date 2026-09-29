@@ -1,5 +1,5 @@
 ---
-title: "Novinářské řemeslo není opisovat policejní spisy"
+title: "„Miliony billboardového aktivisty“ aneb Novinářské řemeslo nestojí na útržcích od policie"
 date: "2026-09-28"
 author: "Kateřina Mahdalová"
 excerpt: "Kandidát Zelených Zdeněk Jahn není obviněný ani vyšetřovaný. Policie potvrdila jediné: že se věcí zabývá. Z anonymních „zjištění“ o obratu na jeho účtech přesto vznikly titulky celostátních médií. Jak se ven dostává policejní práce, která je teprve ve fázi prověřování."
@@ -10,8 +10,6 @@ filter: ["kontext"]
 tags: ["média", "svoboda médií", "moc médií", "vliv médií"]
 promoted: 1
 ---
-
-## Kauza „Miliony billboardového aktivisty“ aneb Jak média vstoupila do předvolební kampaně
 
 Web Odkryto.cz zveřejnil 21. září 2026 článek s titulkem [„Miliony na účtech. O billboardového aktivistu se zajímá policie“](https://www.odkryto.cz/miliony-na-desitkach-uctu-o-billboardoveho-aktivistu-se-zajima-policie/). Text podepsaný pouze „Redakce“ tvrdil, že přes účty ekonoma Zdeňka Jahna, bývalého zaměstnance pražské Technické správy komunikací (TSK) a nynějšího kandidáta Zelených do zastupitelstva Prahy 3, protekl obrat „téměř 200 milionů korun“ a že se policie zajímá o původ těchto peněz. Pro údaj o obratu však článek uváděl pouze formulaci „podle informací Odkryto.cz“; žádný dokument ani jiný podklad, z něhož by bylo možné tvrzení ověřit, redakce nezveřejnila.
 

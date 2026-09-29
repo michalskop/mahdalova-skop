@@ -82,6 +82,11 @@
 
 # Kauza Jahn: 2026-09-28 přejmenováno z „…kopirovat…“ na „…opisovat…“ (titulek
 # „Novinářské řemeslo není opisovat policejní spisy“). Stará URL už je sdílená.
-/clanek/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy /clanek/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy 301
-/clanek/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy/ /clanek/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy 301
-/clanek/_articles/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy/* /clanek/_articles/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy/:splat 301
+/clanek/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy /clanek/kontext-2026-09-28-novinarske-remeslo-nestoji-na-utrzcich-od-policie 301
+/clanek/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy/ /clanek/kontext-2026-09-28-novinarske-remeslo-nestoji-na-utrzcich-od-policie 301
+/clanek/_articles/kontext-2026-09-28-novinarske-remeslo-neni-kopirovat-policejni-spisy/* /clanek/_articles/kontext-2026-09-28-novinarske-remeslo-nestoji-na-utrzcich-od-policie/:splat 301
+
+# 2026-09-29 znovu přejmenováno na „…nestoji-na-utrzcich-od-policie“ (titulek „Miliony billboardového aktivisty“ aneb Novinářské řemeslo nestojí na útržcích od policie).
+/clanek/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy /clanek/kontext-2026-09-28-novinarske-remeslo-nestoji-na-utrzcich-od-policie 301
+/clanek/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy/ /clanek/kontext-2026-09-28-novinarske-remeslo-nestoji-na-utrzcich-od-policie 301
+/clanek/_articles/kontext-2026-09-28-novinarske-remeslo-neni-opisovat-policejni-spisy/* /clanek/_articles/kontext-2026-09-28-novinarske-remeslo-nestoji-na-utrzcich-od-policie/:splat 301
