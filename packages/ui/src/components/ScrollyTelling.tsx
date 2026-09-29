@@ -23,6 +23,12 @@ interface ScrollyTellingProps {
   slug?: string;
   articleBasePath?: string;
   width?: string;
+  // 'side' (default): text column next to a sticky media column.
+  // 'overlay': media full-bleed across the viewport, text boxes scroll over it.
+  layout?: 'side' | 'overlay';
+  // Image fit in the overlay layout: 'contain' keeps the whole image,
+  // 'cover' fills the full viewport and crops the edges.
+  fit?: 'contain' | 'cover';
 }
 
 const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
@@ -33,6 +39,8 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   slug,
   articleBasePath = '/clanek/_articles',
   width,
+  layout = 'side',
+  fit = 'contain',
 }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(-1);
   const [isMobile, setIsMobile] = useState(false);
@@ -72,7 +80,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   // images of identical size (e.g. before/after satellite pairs) overlay
   // pixel-exactly. Only the steps near the current one are mounted, which
   // also preloads the next image before it is needed.
-  const renderImageStack = () => {
+  const renderImageStack = (imageFit: 'contain' | 'cover' = 'contain') => {
     const layers: { key: string; src: string; alt: string; width: string; active: boolean }[] = [];
     const seen = new Set<string>();
     const addLayer = (idx: number) => {
@@ -106,11 +114,11 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
             aria-hidden={layer.active ? undefined : true}
             style={{
               gridArea: '1 / 1',
-              width: layer.width,
+              width: imageFit === 'cover' ? '100%' : layer.width,
               maxWidth: '100%',
               maxHeight: '100%',
-              height: 'auto',
-              objectFit: 'contain',
+              height: imageFit === 'cover' ? '100%' : 'auto',
+              objectFit: imageFit,
               opacity: layer.active ? 1 : 0,
               transition: 'opacity 0.6s ease-in-out',
             }}
@@ -162,6 +170,57 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     }
     return steps[currentStepIndex]?.bgColor || 'transparent';
   };
+
+  if (layout === 'overlay') {
+    return (
+      <div
+        className={`relative ${className}`}
+        style={{
+          // Break out of the reading column to the full viewport width.
+          width: 'calc(100vw - 16px)',
+          marginLeft: '50%',
+          transform: 'translateX(-50%)',
+        }}
+      >
+        <div style={{
+          position: 'sticky',
+          top: 0,
+          height: '100vh',
+          // Keep the top of the image clear of the fixed site header.
+          padding: fit === 'cover' ? 0 : '64px 0 16px',
+          backgroundColor: getBackgroundColor(),
+          transition: 'background-color 0.3s ease-in-out',
+          zIndex: 0,
+        }}>
+          {(currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content)?.type === 'image'
+            ? renderImageStack(fit)
+            : getCurrentContent()}
+        </div>
+
+        <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh' }}>
+          <Scrollama offset={0.6} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
+            {steps.map((step, idx) => (
+              <Step data={idx} key={idx}>
+                <div style={{
+                  margin: idx === 0 ? '60vh 0 90vh' : idx === steps.length - 1 ? '90vh 0 60vh' : '90vh 0',
+                  padding: '1rem 1.25rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  borderRadius: '4px',
+                  boxShadow: '0 4px 24px rgba(16, 20, 50, 0.35)',
+                  width: isMobile ? 'calc(100% - 32px)' : '420px',
+                  marginLeft: isMobile ? 'auto' : textAlignment === 'left' ? '6vw' : 'auto',
+                  marginRight: isMobile ? 'auto' : textAlignment === 'right' ? '6vw' : 'auto',
+                  position: 'relative',
+                }}>
+                  <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
+                </div>
+              </Step>
+            ))}
+          </Scrollama>
+        </div>
+      </div>
+    );
+  }
 
   if (isMobile) {
     return (
