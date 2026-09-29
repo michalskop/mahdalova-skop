@@ -54,7 +54,7 @@ const steps: Step[] = [
     eyebrow: 'Šéfredaktorka & majitelka',
     title: 'Kateřina Mahdalová',
     portrait: {
-      src: '/authors/katerina-mahdalova-portret.webp',
+      src: '/authors/katerina-mahdalova-portret-v2.webp',
       alt: 'Portrét Kateřiny Mahdalové',
     },
     paragraphs: [
