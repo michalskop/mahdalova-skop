@@ -27,7 +27,9 @@ Válka po příměří neskončila ani na mapě. Podle [srpnové zprávy OSN](ht
 
 Srovnání vychází z interaktivní reportáže El País, která postavila vedle sebe starší a nejnovější snímky z Google Maps. Snímky jsme pro scrollování přesně zarovnali, aby se starší a novější záběr kryly. Popisky jsme přeložili do češtiny.
 
-Pořízení snímků se u jednotlivých míst liší. Některé starší záběry jsou z léta 2023, jiné z doby, kdy už válka běžela. Datum je vždy v rohu snímku. Rozdíly v barvách a stínech jdou za jiným družicovým přeletem, jiným ročním obdobím a hodinou.
+Pořízení snímků se u jednotlivých míst liší. Některé starší záběry jsou z léta 2023, jiné z doby, kdy už válka běžela.
+
+Datum je vždy v rohu snímku. Rozdíly v barvách a stínech jdou za jiným družicovým přeletem, jiným ročním obdobím a hodinou.
 
 ## Devět míst, před a po
 
