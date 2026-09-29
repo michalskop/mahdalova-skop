@@ -3,6 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import type { ScrollyStep, ScrollyContent } from '../types/scrolly';
 import { replaceFlagEmojiInHtml } from '../lib/flag-emoji';
+import { fixCzechTypography } from '../lib/remark-czech-typography';
+
+// Step text is raw HTML, so apply the Czech typography fixes only to the text
+// between tags – never inside attributes such as href or class.
+const formatStepHtml = (html: string) =>
+  replaceFlagEmojiInHtml(
+    html
+      .split(/(<[^>]*>)/)
+      .map((part) => (part.startsWith('<') ? part : fixCzechTypography(part)))
+      .join('')
+  );
 
 interface ScrollyTellingProps {
   steps: ScrollyStep[];
@@ -57,6 +68,58 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     return slug ? `${articleBasePath}/${slug}/${src}` : src;
   };
 
+  // Image steps are stacked in one grid cell and cross-faded, so consecutive
+  // images of identical size (e.g. before/after satellite pairs) overlay
+  // pixel-exactly. Only the steps near the current one are mounted, which
+  // also preloads the next image before it is needed.
+  const renderImageStack = () => {
+    const layers: { key: string; src: string; alt: string; width: string; active: boolean }[] = [];
+    const seen = new Set<string>();
+    const addLayer = (idx: number) => {
+      const content = idx === -1 ? defaultContent : steps[idx]?.content;
+      if (!content || content.type !== 'image') return;
+      const src = getImagePath(content.src);
+      if (seen.has(src)) return;
+      seen.add(src);
+      layers.push({
+        key: src,
+        src,
+        alt: content.alt || '',
+        width: content.width || '100%',
+        active: false,
+      });
+    };
+    const currentContent = currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content;
+    for (let idx = currentStepIndex - 1; idx <= currentStepIndex + 2; idx++) {
+      if (idx >= -1 && idx < steps.length) addLayer(idx);
+    }
+    const activeSrc = currentContent ? getImagePath(currentContent.src) : undefined;
+    layers.forEach((layer) => { layer.active = layer.src === activeSrc; });
+
+    return (
+      <div style={{ display: 'grid', gridTemplate: '100% / 100%', width: '100%', height: '100%', placeItems: 'center' }}>
+        {layers.map((layer) => (
+          <img
+            key={layer.key}
+            src={layer.src}
+            alt={layer.active ? layer.alt : ''}
+            aria-hidden={layer.active ? undefined : true}
+            style={{
+              gridArea: '1 / 1',
+              width: layer.width,
+              maxWidth: '100%',
+              maxHeight: '100%',
+              height: 'auto',
+              objectFit: 'contain',
+              opacity: layer.active ? 1 : 0,
+              transition: 'opacity 0.6s ease-in-out',
+            }}
+          />
+        ))}
+      </div>
+    );
+  };
+
   const getCurrentContent = () => {
     const step = currentStepIndex >= 0 ? steps[currentStepIndex] : undefined;
     const content = currentStepIndex === -1 ? defaultContent : step?.content;
@@ -66,19 +129,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     const finalWidth = content.width || '100%';
 
     if (content.type === 'image') {
-      return (
-        <div style={{ width: finalWidth, height: 'auto' }}>
-          <img
-            src={getImagePath(content.src)}
-            alt={`Visualization step ${currentStepIndex + 1}`}
-            style={{
-              width: finalWidth,
-              height: 'auto',
-              transition: 'opacity 0.3s ease-in-out'
-            }}
-          />
-        </div>
-      );
+      return renderImageStack();
     } else if (content.type === 'iframe') {
       return (
         <div style={{
@@ -171,7 +222,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   marginRight: 'auto',
                   position: 'relative'
                 }}>
-                  <div dangerouslySetInnerHTML={{ __html: replaceFlagEmojiInHtml(step.text) }} />
+                  <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
                 </div>
               </Step>
             ))}
@@ -204,7 +255,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   borderRadius: '4px',
                   position: 'relative'
                 }}>
-                  <div dangerouslySetInnerHTML={{ __html: replaceFlagEmojiInHtml(step.text) }} />
+                  <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
                 </div>
               </Step>
             ))}

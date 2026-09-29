@@ -1,0 +1,211 @@
+textAlignment: left
+
+defaultContent:
+  type: image
+  src: images/gaza-01-tel-al-sultan-pred.webp
+  alt: Satelitní snímek čtvrti Tall as-Sultán v Rafáhu z května 2024 – hustá zástavba v pravidelných ulicích.
+  bgColor: '#101432'
+
+steps:
+  # 1 – Tall as-Sultán, Rafáh
+  - text: >-
+      <p><strong>Tall as-Sultán, Rafáh – květen 2024.</strong> Uprchlický tábor
+      na jihu Pásma Gazy, pár kilometrů od hranice s Egyptem. Ulice
+      se sbíhají do půlkruhu, domy stojí jeden vedle druhého. Takhle čtvrť vypadala
+      na předchozím snímku, který Google pro toto místo měl.</p>
+    content:
+      type: image
+      src: images/gaza-01-tel-al-sultan-pred.webp
+      alt: Tall as-Sultán v květnu 2024 – hustá zástavba v pravidelných ulicích.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Únor 2026.</strong> Půdorys ulic zůstal, domy zmizely. Podle
+      <a href="https://english.elpais.com/international/2026-09-29/gaza-before-and-after-new-google-maps-imagery-shows-destruction-of-the-strip.html" target="_blank" rel="noopener">analýzy deníku El País</a>
+      tu stojí sotva deset budov. Zbytek je suť, do které
+      z okrajů prorůstá zeleň.</p>
+      <p><a href="https://maps.app.goo.gl/85eteSiBXgBxsAfT8" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-01-tel-al-sultan-po.webp
+      alt: Tall as-Sultán v únoru 2026 – na místě domů zůstaly trosky, stojí jen několik budov.
+    bgColor: '#101432'
+
+  # 2 – Švédská vesnice
+  - text: >-
+      <p><strong>Švédská vesnice – srpen 2023.</strong> Malá rybářská osada
+      Al-Karja as-Suwajdíja na pobřeží u egyptské hranice. Pár desítek domů
+      mezi dunami a mořem, dva měsíce před 7. říjnem.</p>
+    content:
+      type: image
+      src: images/gaza-02-svedska-vesnice-pred.webp
+      alt: Švédská vesnice v srpnu 2023 – shluk domů mezi pobřežím a písečnými dunami.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Únor 2026.</strong> Vesnice na snímku už není. Z domů zbylo
+      několik skeletů, písek rozrývají stopy těžké techniky a nové cesty.</p>
+      <p><a href="https://maps.app.goo.gl/ogpBguMKyE7LhCHU9" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-02-svedska-vesnice-po.webp
+      alt: Místo Švédské vesnice v únoru 2026 – rozrytý písek, cesty a zbytky několika budov.
+    bgColor: '#101432'
+
+  # 3 – Ulice Umara Muchtára, Gaza
+  - text: >-
+      <p><strong>Centrum Gazy – srpen 2023.</strong> Ulice Umara Muchtára je
+      hlavní třída metropole, kde před válkou žilo asi 650 000 lidí. Vede
+      od Palestinského stadionu k nemocnici aš-Šifá a dál k moři.</p>
+    content:
+      type: image
+      src: images/gaza-03-omar-muchtar-pred.webp
+      alt: Centrum Gazy kolem ulice Umara Muchtára v srpnu 2023 – hustá městská zástavba.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Červenec 2025.</strong> Mezi domy, které ještě stojí, se
+      otevřely plochy trosek. Na volných místech vyrostly stany.
+      Podle <a href="https://www.timesofisrael.com/liveblog_entry/83-of-all-buildings-in-gaza-city-destroyed-in-israeli-operations-un-analysis-finds/" target="_blank" rel="noopener">předběžné analýzy satelitního centra OSN (UNOSAT)</a>
+      bylo do konce září 2025 poškozeno <strong>83 procent</strong> budov
+      ve městě Gaza.</p>
+      <p><a href="https://maps.app.goo.gl/G4cGUxGsnmBMD2wi7" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-03-omar-muchtar-po.webp
+      alt: Centrum Gazy v červenci 2025 – mnoho budov zničeno, mezi troskami stany.
+    bgColor: '#101432'
+
+  # 4 – Nemocnice aš-Šifá
+  - text: >-
+      <p><strong>Nemocnice aš-Šifá – říjen 2023.</strong> Největší nemocniční
+      komplex v Gaze. Na nádvoří stojí stany a auta lidí, kteří se sem
+      v prvních týdnech války uchýlili.</p>
+    content:
+      type: image
+      src: images/gaza-04-as-sifa-pred.webp
+      alt: Nemocnice aš-Šifá v říjnu 2023 – budovy komplexu a nádvoří plné lidí, aut a stanů.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Červenec 2025.</strong> Izraelská armáda nemocnici dvakrát
+      obléhala – v listopadu 2023 a v březnu 2024. Tvrdila, že pod ní má
+      Hamás velitelské centrum. Útoky si vyžádaly stovky mrtvých. Z komplexu
+      zbyly vyhořelé budovy a prázdné, rozrušené nádvoří.</p>
+      <p><a href="https://maps.app.goo.gl/CH8fxQ3cN9gMHW9L7" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-04-as-sifa-po.webp
+      alt: Nemocnice aš-Šifá v červenci 2025 – poškozené budovy a prázdné rozryté nádvoří.
+    bgColor: '#101432'
+
+  # 5 – Rimál
+  - text: >-
+      <p><strong>Rimál – prosinec 2024.</strong> Čtvrť podél pobřeží platila
+      za nejbohatší část Gazy. Sídlily tu úřady a banky, stály tu nejvyšší
+      domy. Už na snímku z konce roku 2024 jsou vidět první velké škody.</p>
+    content:
+      type: image
+      src: images/gaza-05-rimal-pred.webp
+      alt: Čtvrť Rimál a přístav Gaza v prosinci 2024 – hustá zástavba s prvními poškozenými místy.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Červenec 2025.</strong> Velká část severního i jižního Rimálu
+      leží v troskách. Věž Muštaha, se čtrnácti patry nejvyšší budova v Gaze,
+      ještě na snímku stojí. Izraelská armáda ji
+      <a href="https://www.aljazeera.com/news/2025/9/6/israel-bombs-more-gaza-city-high-rises-after-forced-evacuation-orders" target="_blank" rel="noopener">srovnala se zemí 5. září 2025</a>
+      – podle ní ji využíval Hamás.</p>
+      <p><a href="https://maps.app.goo.gl/ySKr5qnzWYbQ2TUCA" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-05-rimal-po.webp
+      alt: Čtvrť Rimál v červenci 2025 – většina zástavby zničená, světlé plochy trosek.
+    bgColor: '#101432'
+
+  # 6 – Přístav Gaza
+  - text: >-
+      <p><strong>Přístav Gaza – prosinec 2024.</strong> Molo, rozježděná pláž
+      a několik rozbitých budov. Místo, kam lidé chodili rybařit
+      a na procházky.</p>
+    content:
+      type: image
+      src: images/gaza-06-pristav-pred.webp
+      alt: Přístav Gaza v prosinci 2024 – molo, pláž a několik poškozených budov.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Červenec 2025.</strong> Každý volný metr pokrývají stany.
+      Vyhnané rodiny se tlačí na pláži a kolem zbytků budov,
+      protože jinde místo není.</p>
+      <p><a href="https://maps.app.goo.gl/qfPLKC3YHPc3FncH6" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-06-pristav-po.webp
+      alt: Přístav Gaza v červenci 2025 – pláž a okolí mola zcela pokryté stany.
+    bgColor: '#101432'
+
+  # 7 – Velká Omarova mešita
+  - text: >-
+      <p><strong>Velká Omarova mešita – listopad 2023.</strong> Nejstarší
+      a největší mešita v Gaze, v historickém jádru města. Na místě
+      stál ve středověku křižácký kostel, ještě dřív byzantský chrám.</p>
+    content:
+      type: image
+      src: images/gaza-07-velka-mesita-pred.webp
+      alt: Velká Omarova mešita v listopadu 2023 – rozlehlá střecha a minaret v husté zástavbě starého města.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Prosinec 2024.</strong> Ze střechy mešity zbyly obvodové zdi,
+      uvnitř je suť. Poškozené jsou i domy kolem.</p>
+      <p><a href="https://maps.app.goo.gl/cDPucaJcBEK2nnLV8" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-07-velka-mesita-po.webp
+      alt: Velká Omarova mešita v prosinci 2024 – zničená střecha, zbyly obvodové zdi a trosky.
+    bgColor: '#101432'
+
+  # 8 – Bajt Hánún
+  - text: >-
+      <p><strong>Bajt Hánún – srpen 2023.</strong> Město na severu Pásma,
+      hned u izraelské hranice. Domy obklopují sady a zahrady –
+      Bajt Hánún byl díky úrodné půdě zemědělským centrem.</p>
+    content:
+      type: image
+      src: images/gaza-08-bajt-hanun-pred.webp
+      alt: Bajt Hánún v srpnu 2023 – zástavba prostoupená zelenými sady a poli.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Leden 2024.</strong> Tři měsíce po začátku pozemní operace.
+      Zeleň zmizela, celé bloky domů jsou zničené a krajinou
+      se táhnou nové široké cesty pro armádní techniku.</p>
+      <p><a href="https://maps.app.goo.gl/x2bj8QqLjwxRueL88" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-08-bajt-hanun-po.webp
+      alt: Bajt Hánún v lednu 2024 – zničené bloky domů, zmizelá zeleň, nové cesty.
+    bgColor: '#101432'
+
+  # 9 – Džabálijá
+  - text: >-
+      <p><strong>Uprchlický tábor Džabálijá – listopad 2023.</strong>
+      Největší z osmi táborů v Pásmu Gazy. Na zhruba jednom a půl kilometru
+      čtverečním tu žilo přes sto tisíc lidí.</p>
+    content:
+      type: image
+      src: images/gaza-09-dzabalija-pred.webp
+      alt: Uprchlický tábor Džabálijá v listopadu 2023 – extrémně hustá zástavba úzkých uliček.
+    bgColor: '#101432'
+
+  - text: >-
+      <p><strong>Prosinec 2024.</strong> Celé čtvrti jsou v troskách.
+      Přes tábor vedou světlé pruhy – průseky, které armáda vyhrnula,
+      aby oblast rozdělila, zpřístupnila, nebo prostě srovnala.</p>
+      <p><a href="https://maps.app.goo.gl/aWjthgGpWxPvtjQ96" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+    content:
+      type: image
+      src: images/gaza-09-dzabalija-po.webp
+      alt: Tábor Džabálijá v prosinci 2024 – rozsáhlé trosky a vyhrnuté průseky.
+    bgColor: '#101432'

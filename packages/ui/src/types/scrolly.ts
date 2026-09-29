@@ -4,6 +4,7 @@ export interface ScrollyStep {
   content: {
     type: 'image' | 'iframe';
     src: string;
+    alt?: string;
     width?: string;
     height?: string;
     allowFullScreen?: boolean;
@@ -16,6 +17,7 @@ export interface ScrollyContent {
   defaultContent?: {
     type: 'image' | 'iframe';
     src: string;
+    alt?: string;
     width?: string;
     height?: string;
     allowFullScreen?: boolean;
