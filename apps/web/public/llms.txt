@@ -31,8 +31,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Filmový kalendář 2026](https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026)
 
 ### Mezinárodní politika
+- [Mapy ukazují, jak se proměnila Gaza: celé čtvrti zmizely, na jejich místě stojí stany](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-29-mapy-ukazuji-jak-se-promenila-gaza)
 - [Na Slovensku viní z války Rusko 40 procent lidí, v Polsku 85. Kremlu se v EU daří tam, kde se lidé nejhůř brání dezinformacím](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-28-ruska-propaganda-v-eu)
-- [Urputná AI utekla z laboratoře. Teď se rozhoduje, k jakým datům ji pustíme](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-27-ai-agenti-a-nase-data)
 - [Česko pouští matky předškoláků do zaměstnání nejméně v EU. Vláda na to odpovídá vyšším rodičákem](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu)
 
 ### Dezinformace a média
@@ -47,8 +47,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
-- [Urputná AI utekla z laboratoře. Teď se rozhoduje, k jakým datům ji pustíme](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-27-ai-agenti-a-nase-data)
 - [Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně](https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika)
+- [Rukojmí se vrátili, Hamás zůstal ozbrojený. Proč příměří v Gaze neukončilo izraelsko-palestinský konflikt](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-10-izraelsko-palestinsky-konflikt)
 
 ## Kontakt
 

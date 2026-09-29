@@ -140,6 +140,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-09-29-mapy-ukazuji-jak-se-promenila-gaza</loc>
+    <lastmod>2026-09-29T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy</loc>
     <lastmod>2025-02-14T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -412,12 +418,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace</loc>
     <lastmod>2026-09-18T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-27-ai-agenti-a-nase-data</loc>
-    <lastmod>2026-09-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
