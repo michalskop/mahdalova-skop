@@ -19,7 +19,7 @@ Ještě týž den ve 13:40 vydaly [Novinky.cz](https://www.novinky.cz/clanek/dom
 
 Policie se na případ prokazatelně zeptal až o den později [Pražský deník](https://prazsky.denik.cz/komunalni-volby/policie-se-zabyva-kandidatem-zelenych-na-praze-3-na-uctech-ma-miliony/). Mluvčí pražské policie Eva Kropáčová mu odpověděla pouze: „V dané věci vám pouze mohu potvrdit, že se věcí zabýváme.“ Co přesně policie prověřuje, koho se prověřování týká ani zda se vztahuje právě k tvrzení o téměř dvousetmilionovém obratu, policie nesdělila.
 
-Z původního tvrzení jednoho média bez zveřejněného podkladu se tak během několika hodin stala zpráva několika dalších médií o tom, že „se policie zajímá“ o kandidáta a miliony na jeho účtech. To vše necelé tři týdny před komunálními volbami, které se konají 9. a 10. října.
+Z původního tvrzení jednoho média bez zveřejněného podkladu se tak během několika hodin stala zpráva několika dalších médií o tom, že „se policie zajímá“ o kandidáta a miliony na jeho účtech.
 
 <InfoBox>
 
