@@ -33,7 +33,7 @@ Jak často věci skončí ještě před zahájením trestního stíhání, ukazu
 
 <VegaChart dataFile="data/proverovani-2025.json" />
 
-Dlužno dodat, že konec prověřování se přitom do novinových titulků dostává podstatně méně často než jeho začátek. Samotné prověřování proto není důkaz viny ani toho, že vůbec došlo k trestnému činu. Policie se musí zabývat i podněty, které se později ukáží jako nedůvodné. Pro posouzení významu zprávy je proto zásadní vědět, co je předmětem prověřování, z čeho podezření vychází a jaké podklady je podporují. Právě tyto informace v původním článku i v těch následujících chyběly.
+Dlužno dodat, že konec prověřování se přitom do novinových titulků dostává podstatně méně často než jeho začátek. Přitom samotné prověřování není důkaz viny ani toho, že vůbec došlo k trestnému činu. Policie se musí zabývat i podněty, které se později ukáží jako nedůvodné. Pro posouzení významu zprávy je proto zásadní vědět, co je předmětem prověřování, z čeho podezření vychází a jaké podklady je podporují. Právě tyto informace v původním článku i v těch následujících chyběly.
 
 </InfoBox>
 
@@ -77,13 +77,9 @@ Další souvislost se týká samotného povolování reklamních zařízení. V 
 
 ## Titulek spojuje dvě tvrzení, která policie nepotvrdila
 
-[Etický kodex Syndikátu novinářů](https://www.syndikat-novinaru.cz/o-nas/etika/eticky-kodex/) ukládá novinářům mimo jiné „nepřipustit, aby domněnka byla vydávána za fakt“, opatřovat informace neznámého původu nezbytnými výhradami a respektovat presumpci neviny.
-
-Titulek Novinek „O kandidáta Zelených v Praze 3 se zajímá policie kvůli milionům na jeho účtech“ přitom čtenáři předkládá jako jeden celek dvě informace, jejichž spojení policie veřejně nepotvrdila: že předmětem policejního zájmu jsou právě Jahnovy bankovní účty a že důvodem jsou milionové částky na nich.
+Titulek Novinek „O kandidáta Zelených v Praze 3 se zajímá policie kvůli milionům na jeho účtech“ čtenářům předkládá jako jeden celek dvě informace, jejichž spojení policie veřejně nepotvrdila: že předmětem policejního zájmu jsou právě Jahnovy bankovní účty a že důvodem jsou milionové částky na nich.
 
 Policie potvrdila pouze to, že se „věcí zabývá“.
-
-Právě tento rozdíl je podstatný. Silné tvrzení nemusí být nepravdivé proto, že pro ně médium nezveřejnilo důkaz. Z pohledu čtenáře je ale v takové chvíli **neověřitelné**. A čím závažnější důsledky informace pro konkrétního člověka má, tím důležitější je ukázat, co redakce skutečně ví, odkud to ví a co zůstává pouze tvrzením jejího případného zdroje.
 
 Už v [únorovém textu o únicích z policejních spisů](/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu) jsme ukazovali jeden z problémů podobných situací: veřejnost zpravidla neví, kdo informaci z probíhajícího řízení poskytl, jaký měl motiv ani jak velkou část celého obrazu novinář dostal. A v Jahnově případě policie sama nesdělila ani to, co přesně prověřuje.
 
