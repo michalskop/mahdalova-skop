@@ -5,7 +5,7 @@ import classes from './AuthorByline.module.css';
 // jméno zkrátí na příjmení („Mahdalová & Škop“), aby se vešlo na jeden řádek
 // i v úzké kartě (celé jméno je v tooltipu). Fotky jsou v /public/authors.
 const AUTHOR_PHOTOS: Record<string, string> = {
-  'Kateřina Mahdalová': '/authors/katerina-mahdalova-portret-v3.webp',
+  'Kateřina Mahdalová': '/authors/katerina-mahdalova-portret-v4.webp',
   'Michal Škop': '/authors/michal-skop-portret.webp',
 };
 

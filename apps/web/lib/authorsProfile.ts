@@ -23,7 +23,7 @@ export interface AuthorProfile {
 const PROFILES: AuthorProfile[] = [
   {
     name: 'Kateřina Mahdalová',
-    photo: '/authors/katerina-mahdalova-portret-v3.webp',
+    photo: '/authors/katerina-mahdalova-portret-v4.webp',
     email: 'datovazurnalistika@gmail.com',
     // bio: '…', // TODO doplnit krátký medailonek (1–2 věty)
     social: {

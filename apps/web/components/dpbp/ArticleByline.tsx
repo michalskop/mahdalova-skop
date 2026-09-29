@@ -18,7 +18,7 @@ import styles from './ArticleHeader.module.css';
 // a volitelně audio stopa. Používá ji hlavička článku i otvírák kapitoly.
 
 const AUTHOR_PHOTOS: Record<string, string> = {
-  'Kateřina Mahdalová': '/authors/katerina-mahdalova-portret-v3.webp',
+  'Kateřina Mahdalová': '/authors/katerina-mahdalova-portret-v4.webp',
   'Michal Škop': '/authors/michal-skop-portret.webp',
 };
 
