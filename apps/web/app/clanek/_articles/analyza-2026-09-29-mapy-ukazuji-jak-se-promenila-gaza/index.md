@@ -33,7 +33,7 @@ Datum je vždy v rohu snímku. Rozdíly v barvách a stínech jdou za jiným dru
 
 ## Devět míst, před a po
 
-<ScrollyTelling yamlFile="scrollytelling.yaml" layout="overlay" />
+<ScrollyTelling yamlFile="scrollytelling.yaml" layout="overlay" width="720px" />
 
 ## Vývoj vrácený o 77 let
 

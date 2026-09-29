@@ -172,6 +172,13 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   };
 
   if (layout === 'overlay') {
+    // In the overlay layout `width` caps the image width (e.g. "720px");
+    // the dark band behind it still spans the full viewport.
+    const mediaMaxWidth = normalizedWidth || '100%';
+    const boxWidth = 420;
+    const boxInset = normalizedWidth
+      ? `max(16px, calc(50% - ${normalizedWidth} / 2 - ${boxWidth / 3}px))`
+      : '6vw';
     return (
       <div
         className={`relative ${className}`}
@@ -192,9 +199,11 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
           transition: 'background-color 0.3s ease-in-out',
           zIndex: 0,
         }}>
-          {(currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content)?.type === 'image'
-            ? renderImageStack(fit)
-            : getCurrentContent()}
+          <div style={{ maxWidth: mediaMaxWidth, height: '100%', margin: '0 auto' }}>
+            {(currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content)?.type === 'image'
+              ? renderImageStack(fit)
+              : getCurrentContent()}
+          </div>
         </div>
 
         <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh' }}>
@@ -207,9 +216,9 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   backgroundColor: 'rgba(255, 255, 255, 0.95)',
                   borderRadius: '4px',
                   boxShadow: '0 4px 24px rgba(16, 20, 50, 0.35)',
-                  width: isMobile ? 'calc(100% - 32px)' : '420px',
-                  marginLeft: isMobile ? 'auto' : textAlignment === 'left' ? '6vw' : 'auto',
-                  marginRight: isMobile ? 'auto' : textAlignment === 'right' ? '6vw' : 'auto',
+                  width: isMobile ? 'calc(100% - 32px)' : `${boxWidth}px`,
+                  marginLeft: isMobile ? 'auto' : textAlignment === 'left' ? boxInset : 'auto',
+                  marginRight: isMobile ? 'auto' : textAlignment === 'right' ? boxInset : 'auto',
                   position: 'relative',
                 }}>
                   <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
