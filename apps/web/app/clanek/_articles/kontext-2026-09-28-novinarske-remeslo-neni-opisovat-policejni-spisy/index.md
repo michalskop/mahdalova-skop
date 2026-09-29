@@ -23,56 +23,70 @@ Z původního tvrzení jednoho média bez zveřejněného podkladu se tak během
 
 <InfoBox>
 
-#### Prověřování je fáze, ve které se teprve zjišťuje, zda jde o trestný čin
+#### „Policie se věcí zabývá“ neznamená, že je někdo obviněný
 
-Věta „policie se věcí zabývá“ popisuje nejranější stadium, jaké český trestní řád zná. Policie podle [§ 158 trestního řádu](https://www.zakonyprolidi.cz/cs/1961-141) prověřuje podněty a trestní oznámení: vyžaduje vysvětlení od lidí, firem a úřadů, obstarává podklady, zadává odborná vyjádření. Obviněný v této fázi neexistuje. Tím se člověk stane až usnesením o zahájení trestního stíhání podle § 160, a to jen tehdy, když je „dostatečně odůvodněn závěr“, že čin spáchal. Vyšetřování začíná teprve potom. Jahn není obviněný ani vyšetřovaný, [řekl sám pro E15](https://www.e15.cz/domaci/pres-sedm-uctu-protekly-desitky-milionu-kandidat-zelenych-vysvetluje-sve-finance-1436036) – a ani policie nic takového netvrdí.
+Formulace „policie se věcí zabývá“ sama o sobě neříká, v jaké fázi případ je ani co přesně policie zjišťuje. [Trestní řád](https://www.zakonyprolidi.cz/cs/1961-141) rozlišuje postup před zahájením trestního stíhání, kdy policie prověřuje podněty a trestní oznámení, od samotného trestního stíhání. Při prověřování může požadovat vysvětlení, obstarávat podklady nebo odborná vyjádření. Obviněným se člověk stává až usnesením o zahájení trestního stíhání podle § 160 trestního řádu, pokud zjištěné skutečnosti dostatečně odůvodňují závěr, že byl spáchán trestný čin a že jej spáchala určitá osoba.
 
-Kolik prověřování dojde dál, ukazuje [Zpráva o činnosti státního zastupitelství za rok 2025](https://verejnazaloba.cz/wp-content/uploads/2026/06/ZPR%C3%81VA-O-%C4%8CINNOSTI-SZ-ZA-ROK-2025-tabulkov%C3%A1-%C4%8D%C3%A1st.pdf). Z 186 588 věcí vyřízených ve fázi prověřování skončilo 84 933 odložením, tedy 45,5 %. U 22 585 z nich policie a žalobci dospěli k závěru, že vůbec nejde o podezření z trestného činu. U věcí pod dozorem krajských státních zastupitelství, kam patří závažnější hospodářská kriminalita, skončilo závěrem, že nejde o trestný čin, 30,5 % prověřování. Rok předtím byl podíl odložených věcí podobný, 47,3 %.
+V Jahnově případě policie veřejně potvrdila pouze to, že se „věcí zabývá“. Nepotvrdila, že proti němu zahájila trestní stíhání, ani nesdělila, co přesně prověřuje. Jahn sám [pro E15](https://www.e15.cz/domaci/pres-sedm-uctu-protekly-desitky-milionu-kandidat-zelenych-vysvetluje-sve-finance-1436036) uvedl, že není obviněný.
+
+Jak často věci skončí ještě před zahájením trestního stíhání, ukazuje [Zpráva o činnosti státního zastupitelství za rok 2025](https://verejnazaloba.cz/wp-content/uploads/2026/06/ZPR%C3%81VA-O-%C4%8CINNOSTI-SZ-ZA-ROK-2025-tabulkov%C3%A1-%C4%8D%C3%A1st.pdf). Ze 186 588 věcí vyřízených ve fázi prověřování jich 84 933 skončilo odložením, tedy 45,5 procenta. Ve 22 585 případech policie a státní zástupci dospěli k závěru, že nejde o podezření z trestného činu. U věcí pod dozorem krajských státních zastupitelství, kam spadá také závažnější hospodářská kriminalita, takto skončilo 30,5 procenta prověřování. Rok předtím byl celkový podíl odložených věcí podobný – 47,3 procenta.
 
 <VegaChart dataFile="data/proverovani-2025.json" />
 
-Konec prověřování se do titulků dostává méně často než jeho začátek. Národní centrála proti organizované kriminalitě 4. října 2021, čtyři dny před sněmovními volbami, [oznámila](https://www.denik.cz/z_domova/pandora-paper-babis-penize-ncoz-20211004.html), že prověří zjištění Pandora Papers o nákupu zámků Andreje Babiše ve Francii. V únoru 2022 věc [odložila](https://ct24.ceskatelevize.cz/clanek/domaci/babis-se-v-cesku-v-kauze-pandora-papers-trestneho-cinu-nedopustil-kriminaliste-pripad-predali-do-zah-23974), protože v Česku nešlo o podezření z trestného činu; poznatky předala do zahraničí.
-
-Prověřování tedy samo o sobě neříká nic o vině. Policie musí prověřit i anonymní udání a podněty, které vzniknou z osobní msty, obchodního sporu nebo politického boje. Informace, že policie někoho prověřuje, proto zpravodajskou hodnotu má jen s kontextem: kdo podnět podal, co je jeho předmětem a jak silné jsou podklady. Právě ten Odkryto.cz ani Novinky čtenářům nedaly.
+Dlužno dodat, že konec prověřování se přitom do novinových titulků dostává podstatně méně často než jeho začátek. Samotné prověřování proto není důkaz viny ani toho, že vůbec došlo k trestnému činu. Policie se musí zabývat i podněty, které se později ukáží jako nedůvodné. Pro posouzení významu zprávy je proto zásadní vědět, co je předmětem prověřování, z čeho podezření vychází a jaké podklady je podporují. Právě tyto informace v původním článku i v těch následujících chyběly.
 
 </InfoBox>
 
-## Obrat na účtech se v titulku změnil na miliony
+## Obrat na účtech není totéž co majetek
 
-Obrat a majetek jsou dvě různá čísla. Když člověk převádí stejné peníze mezi bankami kvůli úrokům, obrat roste s každým převodem, zatímco majetek zůstává stejný. Tak vysoké obraty vysvětluje Jahn. Na účtech má podle svých slov včetně investic asi 7,5 milionu korun. Za poslední tři roky na ně vložil v hotovosti 549 tisíc, převážně důchod svého otce, který neumí internetové bankovnictví, a příspěvky partnera. Podle Jahna měl podobnou částku už při odchodu ze soukromé sféry a od té doby se nezměnila.
+Další problém vznikl už samotným titulkem. Obrat na bankovních účtech a množství peněz, které člověk vlastní, jsou dvě úplně odlišné veličiny. Když například stejný milion korun několikrát převedete mezi vlastními účty, každý převod zvýší součet pohybů na účtech, ale váš majetek se nezmění.
 
-Odkryto.cz 26. září článek upravilo. Místo „desítek účtů“, které zůstaly v jeho webové adrese, uvádí sedm podle Jahnova vyjádření. Zároveň smazalo odstavec o kauze bývalého náměstka TSK Josefa Richtra, která s Jahnem nesouvisí. Titulek o „milionech na účtech“ zůstal.
+Právě tak vysoký obrat vysvětluje Jahn. Podle svého vyjádření má na účtech a v investicích přibližně 7,5 milionu korun. Za poslední tři roky měl na účty vložit v hotovosti 549 tisíc korun, převážně důchod svého otce, který nepoužívá internetové bankovnictví, a příspěvky partnera. Jahn zároveň tvrdí, že obdobný majetek měl už při odchodu ze soukromé sféry a jeho výše se od té doby zásadně nezměnila.
 
-Také pasáž o TSK stojí na nepotvrzené informaci. Podle Odkryto.cz se vyšetřovatelé v TSK, kde Jahn dříve pracoval, doptávali, zda měl na starosti veřejné zakázky. Mluvčí TSK Barbora Lišková odpověděla: „I kdyby se tak stalo, tak tyto informace nesdělujeme.“ TSK tedy dotaz policie nepotvrdila ani nevyvrátila.
+Odkryto.cz svůj článek 26. září upravilo. Původní údaj o „desítkách účtů“, který dodnes zůstal v internetové adrese článku, nahradilo údajem o sedmi účtech podle Jahnova vyjádření. Z textu zároveň zmizel odstavec o kauze někdejšího náměstka TSK Josefa Richtra, která s Jahnem nesouvisí. Titulek „Miliony na účtech“ však zůstal.
+
+Nepotvrzená zůstává také informace, co měla policie zjišťovat v Technické správě komunikací, kde Jahn dříve pracoval. Odkryto.cz tvrdí, že se vyšetřovatelé v TSK ptali, zda měl na starosti veřejné zakázky. Mluvčí TSK Barbora Lišková ale redakci odpověděla pouze: „I kdyby se tak stalo, tak tyto informace nesdělujeme.“ TSK tedy samotný dotaz policie nepotvrdila ani nevyvrátila.
 
 ```infobox
-#### Co o zdroji řekl Jiří Hynek
+#### Co o zdroji informací řekl Jiří Hynek
 
-Redakce DataTimes má k dispozici záznam rozhovoru, v němž se Jahn na původ informací ptal přímo spolumajitele Odkryto.cz Jiřího Hynka. Hynek v něm uvádí, že policie oslovila TSK a další instituce a že „něco prověřuje“. O zajímavostech ve věci mu podle jeho slov řekli kolegové. Tvrzení, že Jahn používá služební vůz TSK, má podle Hynka od někoho z TSK. Jahn to popírá. Hlavní sdělení, které z rozhovoru zaznívá, zní: policie něco prověřuje.
+Redakce DataTimes má k dispozici záznam rozhovoru, v němž se Jahn na původ informací ptal přímo spolumajitele Odkryto.cz Jiřího Hynka. Hynek v něm říká, že policie oslovila TSK a další instituce a že „něco prověřuje“. O dalších informacích v této věci mu podle jeho slov měli říct kolegové, část informací má podle vlastních slov od člověka z TSK.
+
+Ani z tohoto rozhovoru ale nevychází odpověď na základní otázku: co přesně tedy policie prověřuje a z jakých podkladů pochází tvrzení o téměř dvousetmilionovém obratu na Jahnových účtech.
 
 <div class="flourish-embed flourish-audio" data-src="visualisation/30383420"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30383420/thumbnail" width="100%" alt="Záznam rozhovoru Zdeňka Jahna s Jiřím Hynkem" /></noscript></div>
 ```
 
 <RelatedArticles preset="sidebar" position="right" slugs={["explainer-2026-02-24-uniky-z-policejnich-spisu", "kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat"]} heading="🔻🔻🔻" />
 
-Deník [E15](https://www.e15.cz/domaci/pres-sedm-uctu-protekly-desitky-milionu-kandidat-zelenych-vysvetluje-sve-finance-1436036) k tomu napsal, že „Zelení tvrzení o veřejných zakázkách odmítají“, a postavil tak jedno tvrzení vedle druhého. Otázka, co měl Jahn v TSK na starosti, se ale dá z velké části ověřit. [Registr smluv](https://smlouvy.gov.cz/smlouva/14855690) obsahuje smlouvu TSK z prosince 2020 na odstraňování nelegálně umístěných reklam za 605 000 korun s DPH, v níž je Jahn uveden jako osoba oprávněná jednat za TSK ve věcech realizace smlouvy. Podepsal ji člen představenstva. Jahn tedy u nejméně jedné zakázky vystupoval jako kontaktní osoba objednatele v oboru, kterým se zabýval. Zda zakázky připravoval, zadával nebo hodnotil, z veřejných záznamů neplyne; náplň jeho práce a jeho pravomoci lze od TSK získat žádostí podle zákona o svobodném přístupu k informacím. [Novinář nemá vyvažovat, ale ověřovat](/clanek/kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat).
+Deník [E15](https://www.e15.cz/domaci/pres-sedm-uctu-protekly-desitky-milionu-kandidat-zelenych-vysvetluje-sve-finance-1436036) k otázce Jahnovy práce v TSK napsal, že „Zelení tvrzení o veřejných zakázkách odmítají“, a postavil tak proti sobě dvě tvrzení, ačkoli je možné ověřovat jejich pravdivost z veřejných dokumentů.
 
-## O billboardech rozhodovala pražská Rada dva týdny předtím
+[Registr smluv](https://smlouvy.gov.cz/smlouva/14855690) obsahuje smlouvu TSK z prosince 2020 na odstraňování nelegálně umístěných reklam za 605 tisíc korun s DPH. Jahn je v ní uveden jako osoba oprávněná jednat za TSK ve věcech realizace smlouvy; samotnou smlouvu podepsal člen představenstva. Veřejný dokument tedy dokládá, že Jahn u nejméně jedné zakázky vystupoval jako kontaktní osoba objednatele v oblasti, kterou měl pracovně na starosti. Neříká ale, že zakázku připravoval, zadával nebo hodnotil.
+
+## O billboardech rozhodovala pražská rada dva týdny předtím
 
 <SupportBanner float="left" />
 
-Jahn od roku 2019 upozorňuje na billboardy postavené bez povolení. Založil iniciativu Přidej se a strhni to a spolek Nelegální reklama. Rada hlavního města 7. září 2026 [odmítla návrh](https://www.novinykraje.cz/2026/09/08/praha-zatim-ponecha-na-svych-pozemcich-zhruba-200-billboardu-s-nedolozenymi-povolenimi) radního pro majetek Adama Zábranského (Piráti) vypovědět 11 nájemních smluv na pozemky města, na nichž stojí zhruba 200 billboardů čtyř firem. Provozovatelé u nich nedoložili všechna potřebná povolení. Město z nájmu dostává asi 13,7 milionu korun ročně. U části ploch ale úřady o povolení teprve rozhodují, takže nelze říct, že jsou všechny nelegální. Piráti v [tiskové zprávě](https://praha.pirati.cz/aktuality/ods-a-stan-odmitly-vypovedet-zhruba-200-nelegalnich-billboardu-na-pozemcich-mesta-pirati-trvaji-na-dodrzovani-zakonu-a-ferovych-podminkach/) uvádějí, že výpovědi odmítly ODS a STAN. Rada jmenovité hlasování nezveřejňuje.
+Jahn se tématu nelegální reklamy věnuje od roku 2019. Založil iniciativu Přidej se a strhni to a spolek Nelegální reklama a později se odstraňováním nepovolené reklamy zabýval také v TSK.
 
-V srpnu 2026 navíc ředitel pražského magistrátu Tomáš Havel [přiznal](https://www.irozhlas.cz/zpravy-domov/sef-prazskeho-magistratu-odbor-obvineneho-urednika-krejci-porusoval-zakon-pri_2608150500_nel), že odbor magistrátu při povolování reklamních zařízení porušoval zákon. Předcházel tomu podnět Jahnova spolku veřejné ochránkyni práv.
+Pražská rada 7. září 2026 [odmítla návrh](https://www.novinykraje.cz/2026/09/08/praha-zatim-ponecha-na-svych-pozemcich-zhruba-200-billboardu-s-nedolozenymi-povolenimi) radního pro majetek Adama Zábranského (Piráti) vypovědět jedenáct nájemních smluv na městské pozemky, na nichž stojí zhruba dvě stě billboardů čtyř společností. Provozovatelé podle zveřejněných informací nedoložili u všech ploch potřebná povolení. Město z pronájmu získává přibližně 13,7 milionu korun ročně. U části reklamních zařízení správní řízení ještě pokračují.
 
-Článek o Jahnových účtech vyšel dva týdny po hlasování Rady a necelé tři týdny před volbami. Zelení mluví o pomlouvačné kampani. Kdo podnět k prověřování podal a kdo informace o něm poslal dál, veřejnost neví, a proto z časové souslednosti nejde vyvodit, že článek někdo objednal. Čtenář Odkryto.cz a Novinek ale nedostal ani informaci, že nějaký takový kontext existuje.
+Piráti ve své [tiskové zprávě](https://praha.pirati.cz/aktuality/ods-a-stan-odmitly-vypovedet-zhruba-200-nelegalnich-billboardu-na-pozemcich-mesta-pirati-trvaji-na-dodrzovani-zakonu-a-ferovych-podminkach/) uvedli, že ukončení smluv odmítli zástupci ODS a STAN. Jmenovité výsledky hlasování pražská rada nezveřejňuje.
 
-## Titulek vydává dvě nepotvrzená tvrzení za fakt
+Další souvislost se týká samotného povolování reklamních zařízení. V srpnu 2026 ředitel pražského magistrátu Tomáš Havel [uvedl](https://www.irozhlas.cz/zpravy-domov/sef-prazskeho-magistratu-odbor-obvineneho-urednika-krejci-porusoval-zakon-pri_2608150500_nel), že příslušný odbor magistrátu při jejich povolování porušoval zákon. Předcházel tomu mimo jiné podnět Jahnova spolku Nelegální reklama veřejné ochránkyni práv. Eva Kostolanská ve zprávě o šetření z 6. srpna 2026 (sp. zn. 7581/2025/VOP/MČ) shledala, že magistrát při povolování billboardů v silničních ochranných pásmech nevychází z aktuálního stanoviska policie a spokojí se s jejím mnoho let starým vyjádřením k předchozí žádosti. Postupuje tak podle ní v rozporu se správním řádem, a to navzdory výzvám ministerstva dopravy i výtkám jejího předchůdce.
 
-[Etický kodex Syndikátu novinářů](https://www.syndikat-novinaru.cz/o-nas/etika/eticky-kodex/) ukládá novinářům „nepřipustit, aby domněnka byla vydávána za fakt“, informace neznámého původu doprovodit „nezbytnými výhradami“ a „dodržovat přísně zásadu presumpce neviny“. Věta „se zajímá policie kvůli milionům na jeho účtech“ v titulku zní jako hotový fakt. Obsahuje přitom dvě nepotvrzená tvrzení: že policie zkoumá právě peníze na účtech a že jde o miliony, které by měly být podezřelé.
+## Titulek spojuje dvě tvrzení, která policie nepotvrdila
 
-Jak to dopadá, když se prověřování dostane do médií, jsme popsali v [únorovém textu o únicích z policejních spisů](/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu): kdo informace vynesl, se téměř nikdy nezjistí a čtenář neví, komu výsek posloužil. U Jahna jde navíc o fázi, kdy policie sama ještě neví, zda je co vyšetřovat.
+[Etický kodex Syndikátu novinářů](https://www.syndikat-novinaru.cz/o-nas/etika/eticky-kodex/) ukládá novinářům mimo jiné „nepřipustit, aby domněnka byla vydávána za fakt“, opatřovat informace neznámého původu nezbytnými výhradami a respektovat presumpci neviny.
 
-Zbývá otázka, odkud pocházejí přesná čísla o obratu na konkrétních účtech. Policie je od banky sama vyžádat nemůže: údaje chráněné bankovním tajemstvím smí v trestním řízení podle [§ 8 odst. 2 trestního řádu](https://www.zakonyprolidi.cz/cs/1961-141) požadovat jen státní zástupce. Další cestou je Finanční analytický úřad, kterému banky hlásí podezřelé obchody. Loni jich podle jeho [výroční zprávy](https://mf.gov.cz/assets/attachments/2025-12-31_Vyrocni-zprava-Financniho-analytickeho-uradu.pdf) přijal 7 497 a policii předal informace ve 1 955 případech. Bankovní tajemství i mlčenlivost úřadu chrání právě takové údaje. Ani Odkryto.cz, ani média, která od něj zprávu převzala, čtenářům neřekla, z které z těchto cest čísla přišla, nebo zda přišla odjinud.
+Titulek Novinek „O kandidáta Zelených v Praze 3 se zajímá policie kvůli milionům na jeho účtech“ přitom čtenáři předkládá jako jeden celek dvě informace, jejichž spojení policie veřejně nepotvrdila: že předmětem policejního zájmu jsou právě Jahnovy bankovní účty a že důvodem jsou milionové částky na nich.
+
+Policie potvrdila pouze to, že se „věcí zabývá“.
+
+Právě tento rozdíl je podstatný. Silné tvrzení nemusí být nepravdivé proto, že pro ně médium nezveřejnilo důkaz. Z pohledu čtenáře je ale v takové chvíli **neověřitelné**. A čím závažnější důsledky informace pro konkrétního člověka má, tím důležitější je ukázat, co redakce skutečně ví, odkud to ví a co zůstává pouze tvrzením jejího případného zdroje.
+
+Už v [únorovém textu o únicích z policejních spisů](/clanek/explainer-2026-02-24-uniky-z-policejnich-spisu) jsme ukazovali jeden z problémů podobných situací: veřejnost zpravidla neví, kdo informaci z probíhajícího řízení poskytl, jaký měl motiv ani jak velkou část celého obrazu novinář dostal. A v Jahnově případě policie sama nesdělila ani to, co přesně prověřuje.
+
+Odkryto.cz ani média, která jeho zprávu převzala, dosud nic dalšího veřejně nedoložila a otázka, kolem které se to celé začalo točit, zůstává nezodpovězená: **čím je doložený onen „dvousetmilionový obrat“?**
 
 <RelatedArticles slugs={["explainer-2026-02-24-uniky-z-policejnich-spisu", "kontext-2026-08-02-novinar-nema-vyvazovat-ale-overovat", "analyza-2026-09-04-kdo-smi-k-ministrovi"]} heading="🔻🔻🔻" />
