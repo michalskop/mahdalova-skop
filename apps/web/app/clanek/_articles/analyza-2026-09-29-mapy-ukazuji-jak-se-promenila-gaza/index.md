@@ -11,9 +11,9 @@ tags: ["Gaza", "Izrael", "Palestina", "satelitní snímky", "vizuální analýza
 promoted: 1
 ---
 
-Google Maps po více než roce aktualizovaly satelitní snímky velké části Pásma Gazy. Každý si tak může prohlédnout, jak se území za téměř tři roky války proměnilo. Devět míst, před a po: od uprchlického tábora v Rafáhu po historické centrum města Gaza.
+Google Maps po více než roce aktualizovaly satelitní snímky velké části Pásma Gazy. Každý si tak může prohlédnout, jak se území za téměř tři roky války proměnilo. Níže najdete devět míst, před a po: od uprchlického tábora v Rafáhu po historické centrum města Gaza.
 
-Nové snímky pocházejí převážně z února 2026. Zachycují tedy Gazu zhruba čtyři měsíce po příměří, které vstoupilo v platnost 10. října 2025. Google tak snímky Gazy během války obnovil už potřetí, po aktualizacích v letech 2024 a 2025. Konkurenční Apple Maps podle [deníku El País](https://english.elpais.com/international/2026-09-29/gaza-before-and-after-new-google-maps-imagery-shows-destruction-of-the-strip.html) takový krok neudělaly.
+Nové snímky pocházejí převážně z února 2026 a zachycují tedy Gazu zhruba čtyři měsíce po příměří, které vstoupilo v platnost 10. října 2025. Google tak snímky Gazy během války obnovil už potřetí, po aktualizacích v letech 2024 a 2025.
 
 <RelatedArticles preset="sidebar" slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace"]} position="right" heading="🔻🔻🔻" />
 
