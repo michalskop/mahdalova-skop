@@ -29,9 +29,9 @@ Srovnání vychází z interaktivní reportáže El País, která postavila vedl
 
 Pořízení snímků se u jednotlivých míst liší. Některé starší záběry jsou z léta 2023, jiné z doby, kdy už válka běžela.
 
-Datum je vždy v rohu snímku. Rozdíly v barvách a stínech jdou za jiným družicovým přeletem, jiným ročním obdobím a hodinou.
+Datum je vždy v rohu snímku. Rozdíly v barvách a stínech jsou způsobené jiným ročním obdobím nebo tím, že snímky pořizují různé družice. 
 
-## Devět míst, před a po
+## Gaza: devět míst, před a po
 
 <ScrollyTelling yamlFile="scrollytelling.yaml" layout="overlay" width="720px" />
 
