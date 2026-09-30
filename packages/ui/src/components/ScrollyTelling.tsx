@@ -44,6 +44,11 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
 }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(-1);
   const [isMobile, setIsMobile] = useState(false);
+  // react-scrollama derives its IntersectionObserver thresholds from
+  // window.innerHeight; with a zero-height viewport (background tab, hidden
+  // pane, some crawlers) it builds NaN thresholds and crashes the whole page.
+  // Until the viewport has a height, the steps render without Scrollama.
+  const [viewportReady, setViewportReady] = useState(false);
   // Highest step index whose image has been mounted. Image layers are only
   // ever added (never unmounted) and keep step order, so a layer is never
   // re-created or moved while scrolling back and forth.
@@ -59,6 +64,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024);
+      setViewportReady(window.innerHeight > 0);
     };
 
     checkMobile();
@@ -134,6 +140,25 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
       </div>
     );
   };
+
+  const renderSteps = (
+    offset: number,
+    renderBox: (step: ScrollyStep, idx: number) => React.ReactElement,
+  ) => (viewportReady ? (
+    <Scrollama offset={offset} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
+      {steps.map((step, idx) => (
+        <Step data={idx} key={idx}>
+          {renderBox(step, idx)}
+        </Step>
+      ))}
+    </Scrollama>
+  ) : (
+    <>
+      {steps.map((step, idx) => (
+        <React.Fragment key={idx}>{renderBox(step, idx)}</React.Fragment>
+      ))}
+    </>
+  ));
 
   const getCurrentContent = () => {
     const step = currentStepIndex >= 0 ? steps[currentStepIndex] : undefined;
@@ -214,9 +239,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
         </div>
 
         <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh' }}>
-          <Scrollama offset={0.5} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
-            {steps.map((step, idx) => (
-              <Step data={idx} key={idx}>
+          {renderSteps(0.5, (step, idx) => (
                 <div style={{
                   margin: idx === 0 ? '60vh 0 90vh' : idx === steps.length - 1 ? '90vh 0 60vh' : '90vh 0',
                   padding: '1rem 1.25rem',
@@ -230,9 +253,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                 }}>
                   <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
                 </div>
-              </Step>
             ))}
-          </Scrollama>
         </div>
       </div>
     );
@@ -281,9 +302,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
           zIndex: 1,
           marginTop: '-100vh'
         }}>
-          <Scrollama offset={0.7} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
-            {steps.map((step, idx) => (
-              <Step data={idx} key={idx}>
+          {renderSteps(0.7, (step, idx) => (
                 <div style={{
                   margin: idx === 0 ? '40vh 0 80vh 0' :
                          idx === steps.length - 1 ? '80vh 0 0 0' :
@@ -299,9 +318,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                 }}>
                   <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
                 </div>
-              </Step>
             ))}
-          </Scrollama>
         </div>
       </div>
     );
@@ -317,9 +334,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
           width: textColumnWidth,
           padding: '0 2rem',
         }}>
-          <Scrollama offset={0.5} onStepEnter={onStepEnter} onStepProgress={onStepProgress}>
-            {steps.map((step, idx) => (
-              <Step data={idx} key={idx}>
+          {renderSteps(0.5, (step, idx) => (
                 <div style={{
                   margin: idx === 0 ? '40vh 0 80vh 0' :
                          idx === steps.length - 1 ? '80vh 0 0 0' :
@@ -332,9 +347,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                 }}>
                   <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
                 </div>
-              </Step>
             ))}
-          </Scrollama>
         </div>
 
         <div style={{

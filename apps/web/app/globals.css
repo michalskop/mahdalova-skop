@@ -298,3 +298,13 @@
 #kontakty a:visited {
   color: var(--mantine-color-brand-6);
 }
+
+/* Never let the page pan sideways on phones. Any element that sticks out past
+   the viewport by even a pixel (a hidden tooltip, a bleed, a 100vw breakout)
+   otherwise makes the whole article wobble left–right under the finger.
+   `clip` (not `hidden`) creates no scroll container, so position: sticky
+   (scrollytelling, sticky headers) keeps working. */
+html,
+body {
+  overflow-x: clip;
+}
