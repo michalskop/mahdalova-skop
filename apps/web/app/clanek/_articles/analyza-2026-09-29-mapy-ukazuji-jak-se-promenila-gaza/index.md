@@ -19,9 +19,11 @@ Nové snímky pocházejí převážně z února 2026 a zachycují tedy Gazu zhru
 
 Stačí otevřít mapu a přiblížit. Někde zmizely celé bloky domů. Přes bývalou zástavbu i pole vedou nové široké prašné cesty. Na pobřeží, volných plochách i mezi troskami stojí rozsáhlé skupiny stanů.
 
-Rozsah škod od začátku války vyhodnocuje Satelitní centrum OSN (UNOSAT). Jeho [zatím poslední souhrnná analýza](https://news.un.org/en/story/2026/08/1168138) ze snímků pořízených 16. června 2026 odhaduje, že poškozeno je asi **82 procent** všech staveb v Pásmu Gazy. Z **201 290** zasažených staveb jich UNOSAT **134 422** klasifikoval jako zničené.
+Rozsah škod od začátku války vyhodnocuje Satelitní centrum OSN (UNOSAT). Podle jeho [zatím poslední souhrnné analýzy](https://news.un.org/en/story/2026/08/1168138) ze snímků pořízených 16. června 2026 je poškozeno asi **82 procent** všech staveb v Pásmu Gazy. Dvě třetiny zasažených staveb jsou zničené.
 
 Ničení pokračovalo i po příměří. Mezi 11. říjnem 2025 a 16. červnem 2026 vzrostl celkový počet zasažených staveb o 1,5 procenta, počet zničených ale o **devět procent**. Agentura OSN pro palestinské uprchlíky UNRWA hlásí demolice škol a dalších zařízení OSN v oblastech pod kontrolou izraelské armády. Kvůli omezenému přístupu je ale nemohla nezávisle ověřit.
+
+<AnimatedBars title="Dvě třetiny zasažených staveb v Gaze jsou zničené" subtitle="Stavby v Pásmu Gazy podle stupně poškození, satelitní snímky z 16. června 2026" source="[UNOSAT, zpráva OSN ze srpna 2026](https://news.un.org/en/story/2026/08/1168138)" bars={[{ label: "Zasažené stavby celkem", value: 201290, color: "brandNavy.9" }, { label: "zničené", value: 134422, color: "brand.6" }, { label: "těžce poškozené", value: 13848, color: "brand.3" }, { label: "středně poškozené", value: 28096, color: "brand.2" }, { label: "pravděpodobně poškozené", value: 24924, color: "brand.1" }]} />
 
 <SupportBanner float="left" />
 
