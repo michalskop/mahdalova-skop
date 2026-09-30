@@ -30,8 +30,8 @@ export interface AnimatedBarsProps {
   max?: number;
 }
 
-const BAR_MS = 1400;
-const STAGGER_MS = 300;
+const BAR_MS = 3000;
+const STAGGER_MS = 700;
 
 const resolveColor = (color?: string) => {
   if (!color) return 'var(--mantine-color-brandNavy-9)';
