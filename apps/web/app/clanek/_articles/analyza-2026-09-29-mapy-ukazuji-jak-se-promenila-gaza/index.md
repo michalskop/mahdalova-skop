@@ -13,11 +13,13 @@ promoted: 1
 
 Google Maps po více než roce aktualizovaly satelitní snímky velké části Pásma Gazy. Každý si tak může prohlédnout, jak se území za téměř tři roky války proměnilo. Níže najdete devět míst, před a po: od uprchlického tábora v Rafáhu po historické centrum města Gaza.
 
-Nové snímky pocházejí převážně z února 2026 a zachycují tedy Gazu zhruba čtyři měsíce po příměří, které vstoupilo v platnost 10. října 2025. Google tak snímky Gazy během války obnovil už potřetí, po aktualizacích v letech 2024 a 2025.
+Nové snímky zachycují Gazu několik měsíců po příměří, které vstoupilo v platnost 10. října 2025. U míst, která srovnal španělský deník El País, pocházejí z února 2026, britský [The Guardian](https://www.theguardian.com/world/2026/oct/01/new-google-maps-images-reveal-massive-scale-of-devastation-in-gaza) uvádí snímky z června 2026. Google tak snímky Gazy během války obnovil už potřetí, po aktualizacích v letech 2024 a 2025.
 
 <RelatedArticles preset="sidebar" slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace"]} position="right" heading="🔻🔻🔻" />
 
 Stačí otevřít mapu a přiblížit. Někde zmizely celé bloky domů. Přes bývalou zástavbu i pole vedou nové široké prašné cesty. Na pobřeží, volných plochách i mezi troskami stojí rozsáhlé skupiny stanů.
+
+Guardian na snímcích popisuje obří stanové tábory, které lemují velkou část pobřeží, často jen pár metrů od moře. Rafáh je podle něj téměř celý v troskách a podél hranice s Egyptem izraelská armáda zřejmě vyčistila široký pás země. Těžce poškozená jsou i severní města Bajt Lahíja a Bajt Hánún. Čtvrti Džabálijá a Šudžáíja ve městě Gaza, na které Izrael opakovaně útočil, jsou podle listu neobyvatelné. Zničené jsou i modlitebny, například mešita Istiklál v Chán Júnisu.
 
 Rozsah škod od začátku války vyhodnocuje Satelitní centrum OSN (UNOSAT). Podle jeho [zatím poslední souhrnné analýzy](https://news.un.org/en/story/2026/08/1168138) ze snímků pořízených 16. června 2026 je poškozeno asi **82 procent** všech staveb v Pásmu Gazy. Dvě třetiny zasažených staveb jsou zničené.
 
@@ -41,9 +43,13 @@ Datum je vždy v rohu snímku. Rozdíly v barvách a stínech jsou způsobené j
 
 Satelitní snímky zachycují fyzickou proměnu území. Další rozměry škod vyčísluje [závěrečné hodnocení OSN, Evropské unie a Světové banky](https://news.un.org/en/story/2026/04/1167336) zveřejněné v dubnu 2026.
 
-Podle něj válka vyhnala z domovů **1,9 milionu lidí**, mnohé opakovaně. Zničeno nebo poškozeno je **371 888 bytových jednotek** a přes 60 procent obyvatel přišlo o domov. Víc než polovina nemocnic nefunguje. Téměř všechny školy jsou poškozené nebo zničené.
+Podle něj válka vyhnala z domovů **1,9 milionu lidí**, mnohé opakovaně. Zničeno nebo poškozeno je **371 888 bytových jednotek** a přes 60 procent obyvatel přišlo o domov. Víc než polovina nemocnic nefunguje. Téměř všechny školy jsou poškozené nebo zničené. Podle novějších údajů, které cituje [Guardian](https://www.theguardian.com/world/2026/oct/01/new-google-maps-images-reveal-massive-scale-of-devastation-in-gaza), žije ve stanech a provizorních přístřešcích přes **2,1 milionu** z 2,3 milionu obyvatel Gazy.
 
 Ekonomika Gazy se proti předválečnému stavu propadla o **84 procent**. Obnovu autoři odhadují na **71,4 miliardy dolarů** během příštích deseti let, z toho 26,3 miliardy by bylo potřeba v prvních osmnácti měsících. Ukazatele lidského rozvoje v Gaze válka podle nich posunula zpět zhruba o 77 let.
+
+Obnovu bude roky brzdit suť. V Gaze jí leží odhadem **61 milionů tun**, zhruba dvacetkrát víc, než za posledních 18 let vyprodukovaly všechny války na světě dohromady. [Guardianu to řekl](https://www.theguardian.com/world/2026/oct/01/new-google-maps-images-reveal-massive-scale-of-devastation-in-gaza) Jaco Cilliers, zvláštní zástupce Rozvojového programu OSN (UNDP) pro Palestinu. Pod troskami stále leží i ostatky lidí.
+
+Válku rozpoutal útok Hamásu na Izrael 7. října 2023. Ozbrojenci při něm zabili asi 1 200 lidí, převážně civilistů, a 251 dalších unesli. Od té doby bylo v Gaze podle Guardianu zabito přes **74 000** Palestinců, většinou civilistů.
 
 Kde stály souvislé čtvrti, leží dnes z velké části trosky. Na pobřeží a volných plochách vyrostly stanové tábory a bývalou zástavbou vedou nové cesty. Mapa v telefonu to teď ukazuje každému, kdo se podívá.
 
