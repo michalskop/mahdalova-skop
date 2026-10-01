@@ -21,9 +21,10 @@ const navLinks = [
 ];
 
 const specialsLinks = [
+  { href: 'https://www.volebnikalkulacka.cz', label: 'Komunální a senátní volby 2026 ↗', external: true },
   { href: '/specialy/data-pro-budouci-premierku', label: 'Data pro budoucí premiérku' },
-  { href: '/specialy/kviff', label: 'Festival Karlovy Vary v datech' },
   { href: '/specialy/svobodna-media', label: 'Svobodná média' },
+  { href: '/specialy/kviff', label: 'Festival Karlovy Vary v datech' },
   { href: '/specialy/investigace', label: 'M & Š investigace' },
   { href: '/specialy/klima', label: 'Data o klimatu' },
   { href: 'https://snemovna.datatimes.cz', label: 'Sněmovna.DataTimes.cz ↗', external: true },
