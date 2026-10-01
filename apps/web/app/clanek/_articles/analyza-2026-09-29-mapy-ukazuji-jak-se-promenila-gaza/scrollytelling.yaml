@@ -9,7 +9,7 @@ defaultContent:
 steps:
   # 1 – Tall as-Sultán, Rafáh
   - text: >-
-      <p><strong>Tall as-Sultán, Rafáh – květen 2024.</strong> Hustě zastavěná
+      <p class="dt-step-kicker">1 / 9</p><p class="dt-step-title">Tall as-Sultán, Rafáh</p><p><strong>Květen 2024.</strong> Hustě zastavěná
       čtvrť a uprchlický tábor na jihu Pásma Gazy, pár kilometrů od hranice
       s Egyptem. Ulice se sbíhají do půlkruhu, domy stojí jeden vedle druhého.</p>
     content:
@@ -23,6 +23,7 @@ steps:
       <a href="https://english.elpais.com/international/2026-09-29/gaza-before-and-after-new-google-maps-imagery-shows-destruction-of-the-strip.html" target="_blank" rel="noopener">Deník El País</a>
       při porovnání snímků napočítal ve čtvrti sotva deset stojících budov.</p>
       <p><a href="https://maps.app.goo.gl/85eteSiBXgBxsAfT8" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Švédská vesnice ↓</p>
     content:
       type: image
       src: images/gaza-01-tel-al-sultan-po.webp
@@ -31,7 +32,7 @@ steps:
 
   # 2 – Švédská vesnice
   - text: >-
-      <p><strong>Švédská vesnice – srpen 2023.</strong> Malá pobřežní osada
+      <p class="dt-step-kicker">2 / 9</p><p class="dt-step-title">Švédská vesnice</p><p><strong>Srpen 2023.</strong> Malá pobřežní osada
       Al-Karja as-Suwajdíja u egyptské hranice. Pár desítek domů mezi dunami
       a mořem, dva měsíce před útokem Hamásu 7. října 2023.</p>
     content:
@@ -44,6 +45,7 @@ steps:
       <p><strong>Únor 2026.</strong> Souvislá zástavba zmizela. Zůstalo několik
       konstrukcí, suť a písek rozrytý stopami vozidel a novými cestami.</p>
       <p><a href="https://maps.app.goo.gl/ogpBguMKyE7LhCHU9" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Centrum města Gaza ↓</p>
     content:
       type: image
       src: images/gaza-02-svedska-vesnice-po.webp
@@ -52,7 +54,7 @@ steps:
 
   # 3 – Ulice Umara Muchtára, Gaza
   - text: >-
-      <p><strong>Centrum Gazy – srpen 2023.</strong> Ulice Umara Muchtára je
+      <p class="dt-step-kicker">3 / 9</p><p class="dt-step-title">Centrum města Gaza</p><p><strong>Srpen 2023.</strong> Ulice Umara Muchtára je
       hlavní třída města Gaza, kde před válkou žilo asi 650 000 lidí. Táhne
       se napříč městem až k moři.</p>
     content:
@@ -68,6 +70,7 @@ steps:
       ze snímků z 22. a 23. září 2025 vyhodnotila jako poškozených asi
       <strong>83 procent</strong> staveb ve městě Gaza.</p>
       <p><a href="https://maps.app.goo.gl/G4cGUxGsnmBMD2wi7" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Nemocnice aš-Šifá ↓</p>
     content:
       type: image
       src: images/gaza-03-omar-muchtar-po.webp
@@ -76,7 +79,7 @@ steps:
 
   # 4 – Nemocnice aš-Šifá
   - text: >-
-      <p><strong>Nemocnice aš-Šifá – říjen 2023.</strong> Největší nemocniční
+      <p class="dt-step-kicker">4 / 9</p><p class="dt-step-title">Nemocnice aš-Šifá</p><p><strong>Říjen 2023.</strong> Největší nemocniční
       komplex v Gaze. Na nádvoří jsou vidět auta a provizorní přístřešky
       lidí, kteří se sem v prvních týdnech války uchýlili.</p>
     content:
@@ -91,6 +94,7 @@ steps:
       komplex využívá Hamás k vojenským účelům. Velká část budov je zničená
       nebo těžce poškozená, nádvoří je prázdné a rozryté.</p>
       <p><a href="https://maps.app.goo.gl/CH8fxQ3cN9gMHW9L7" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Čtvrť Rimál ↓</p>
     content:
       type: image
       src: images/gaza-04-as-sifa-po.webp
@@ -99,7 +103,7 @@ steps:
 
   # 5 – Rimál
   - text: >-
-      <p><strong>Rimál – prosinec 2024.</strong> Čtvrť podél pobřeží platila
+      <p class="dt-step-kicker">5 / 9</p><p class="dt-step-title">Čtvrť Rimál</p><p><strong>Prosinec 2024.</strong> Čtvrť podél pobřeží platila
       za nejbohatší část Gazy. Sídlily tu úřady a banky, stály tu nejvyšší
       domy. Už na snímku z konce roku 2024 jsou vidět rozsáhlé škody.</p>
     content:
@@ -115,6 +119,7 @@ steps:
       <a href="https://www.aljazeera.com/news/2025/9/6/israel-bombs-more-gaza-city-high-rises-after-forced-evacuation-orders" target="_blank" rel="noopener">srovnala se zemí 5. září 2025</a>
       – podle ní ji využíval Hamás.</p>
       <p><a href="https://maps.app.goo.gl/ySKr5qnzWYbQ2TUCA" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Přístav Gaza ↓</p>
     content:
       type: image
       src: images/gaza-05-rimal-po.webp
@@ -123,7 +128,7 @@ steps:
 
   # 6 – Přístav Gaza
   - text: >-
-      <p><strong>Přístav Gaza – prosinec 2024.</strong> Molo, rozježděná pláž
+      <p class="dt-step-kicker">6 / 9</p><p class="dt-step-title">Přístav Gaza</p><p><strong>Prosinec 2024.</strong> Molo, rozježděná pláž
       a několik poškozených budov.</p>
     content:
       type: image
@@ -135,6 +140,7 @@ steps:
       <p><strong>Červenec 2025.</strong> Pláž i volné plochy kolem mola
       zabírají stany a provizorní přístřešky vysídlených lidí.</p>
       <p><a href="https://maps.app.goo.gl/qfPLKC3YHPc3FncH6" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Velká Omarova mešita ↓</p>
     content:
       type: image
       src: images/gaza-06-pristav-po.webp
@@ -143,7 +149,7 @@ steps:
 
   # 7 – Velká Omarova mešita
   - text: >-
-      <p><strong>Velká Omarova mešita – listopad 2023.</strong>
+      <p class="dt-step-kicker">7 / 9</p><p class="dt-step-title">Velká Omarova mešita</p><p><strong>Listopad 2023.</strong>
       <a href="https://www.npr.org/2024/02/04/1226295081/gaza-iconic-sites-destroyed-in-war" target="_blank" rel="noopener">Největší a nejstarší mešita v Gaze</a>,
       v historickém jádru města. Vznikla z byzantského kostela, za křižáků
       z ní byla katedrála svatého Jana Křtitele.</p>
@@ -158,6 +164,7 @@ steps:
       z mešity nechal stát jen část minaretu a obvodové zdi. Armáda uvedla,
       že cílila na ozbrojence a vstup do tunelu. Uvnitř i kolem je suť.</p>
       <p><a href="https://maps.app.goo.gl/cDPucaJcBEK2nnLV8" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Bajt Hánún ↓</p>
     content:
       type: image
       src: images/gaza-07-velka-mesita-po.webp
@@ -166,7 +173,7 @@ steps:
 
   # 8 – Bajt Hánún
   - text: >-
-      <p><strong>Bajt Hánún – srpen 2023.</strong> Město na severovýchodě
+      <p class="dt-step-kicker">8 / 9</p><p class="dt-step-title">Bajt Hánún</p><p><strong>Srpen 2023.</strong> Město na severovýchodě
       Pásma, hned u izraelské hranice. Domy obklopují sady a zahrady –
       Bajt Hánún byl díky úrodné půdě zemědělským centrem.</p>
     content:
@@ -180,6 +187,7 @@ steps:
       zeleně zmizela, celé bloky domů jsou zničené a krajinou se táhnou
       nové široké cesty.</p>
       <p><a href="https://maps.app.goo.gl/x2bj8QqLjwxRueL88" target="_blank" rel="noopener">Místo v Google Maps →</a></p>
+      <p class="dt-step-next">Dál: Uprchlický tábor Džabálijá ↓</p>
     content:
       type: image
       src: images/gaza-08-bajt-hanun-po.webp
@@ -188,7 +196,7 @@ steps:
 
   # 9 – Džabálijá
   - text: >-
-      <p><strong>Uprchlický tábor Džabálijá – listopad 2023.</strong>
+      <p class="dt-step-kicker">9 / 9</p><p class="dt-step-title">Uprchlický tábor Džabálijá</p><p><strong>Listopad 2023.</strong>
       Největší z osmi uprchlických táborů v Pásmu Gazy. Na ploše 1,4 km²
       v něm <a href="https://www.unrwa.org/where-we-work/gaza-strip/jabalia-camp" target="_blank" rel="noopener">UNRWA</a>
       evidovala téměř 120 000 registrovaných uprchlíků.</p>
