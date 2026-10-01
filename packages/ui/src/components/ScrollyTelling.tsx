@@ -15,10 +15,9 @@ const formatStepHtml = (html: string) =>
       .join('')
   );
 
-// Mobile overlay geometry: site header height and the share of the viewport
-// the pinned image takes below it.
+// Mobile overlay: site header height and the common width of image and text cards.
 const MOBILE_HEADER_PX = 56;
-const MOBILE_MEDIA_VH = 58;
+const MOBILE_COLUMN = 'min(calc(100% - 16px), 500px)';
 
 interface ScrollyTellingProps {
   steps: ScrollyStep[];
@@ -58,43 +57,10 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   // ever added (never unmounted) and keep step order, so a layer is never
   // re-created or moved while scrolling back and forth.
   const [mountedUpTo, setMountedUpTo] = useState<number>(2);
-  const overlayRef = React.useRef<HTMLDivElement>(null);
   useEffect(() => {
     setMountedUpTo((prev) => Math.max(prev, currentStepIndex + 4));
   }, [currentStepIndex]);
 
-  // Mobile overlay: the image is pinned at the top and text cards scroll up
-  // through the band below it. Fade each card out just before it reaches the
-  // image edge, so it dissolves instead of being swallowed by the photo.
-  useEffect(() => {
-    const root = overlayRef.current;
-    if (layout !== 'overlay' || !root) return;
-    const boxes = () => Array.from(root.querySelectorAll<HTMLElement>('.dt-scrolly-box'));
-    if (!isMobile) {
-      boxes().forEach((box) => { box.style.opacity = ''; });
-      return;
-    }
-    const FADE_PX = 90;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const imageBottom = MOBILE_HEADER_PX + window.innerHeight * MOBILE_MEDIA_VH / 100;
-      boxes().forEach((box) => {
-        const top = box.getBoundingClientRect().top;
-        const opacity = Math.min(1, Math.max(0, (top - imageBottom) / FADE_PX));
-        box.style.opacity = String(opacity);
-      });
-    };
-    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
-    update();
-    window.addEventListener('scroll', schedule, { passive: true });
-    window.addEventListener('resize', schedule);
-    return () => {
-      window.removeEventListener('scroll', schedule);
-      window.removeEventListener('resize', schedule);
-      if (frame) cancelAnimationFrame(frame);
-    };
-  }, [layout, isMobile, viewportReady]);
 
   const normalizedWidth = typeof width === 'string' ? width.replace(/\s+/g, '') : undefined;
   const mediaColumnWidth = normalizedWidth || '65%';
@@ -132,7 +98,7 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   // images of identical size (e.g. before/after satellite pairs) overlay
   // pixel-exactly. Layers are mounted progressively a few steps ahead of the
   // reader, which preloads the next images before they are needed.
-  const renderImageStack = (imageFit: 'contain' | 'cover' = 'contain') => {
+  const renderImageStack = (imageFit: 'contain' | 'cover' = 'contain', sameWidth = false) => {
     const layers: { key: string; src: string; alt: string; width: string; active: boolean }[] = [];
     const seen = new Set<string>();
     const addLayer = (idx: number) => {
@@ -157,7 +123,11 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     layers.forEach((layer) => { layer.active = layer.src === activeSrc; });
 
     return (
-      <div style={{ display: 'grid', gridTemplate: '100% / 100%', width: '100%', height: '100%', placeItems: 'center' }}>
+      <div style={sameWidth
+        // Every image takes the full column width, so images of different
+        // aspect ratios line up with each other and with the text cards.
+        ? { display: 'grid', gridTemplate: 'auto / 100%', width: '100%', placeItems: 'start center' }
+        : { display: 'grid', gridTemplate: '100% / 100%', width: '100%', height: '100%', placeItems: 'center' }}>
         {layers.map((layer) => (
           <img
             key={layer.key}
@@ -166,9 +136,9 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
             aria-hidden={layer.active ? undefined : true}
             style={{
               gridArea: '1 / 1',
-              width: imageFit === 'cover' ? '100%' : layer.width,
+              width: imageFit === 'cover' || sameWidth ? '100%' : layer.width,
               maxWidth: '100%',
-              maxHeight: '100%',
+              maxHeight: sameWidth ? `calc(100vh - ${MOBILE_HEADER_PX + 16}px)` : '100%',
               height: imageFit === 'cover' ? '100%' : 'auto',
               objectFit: imageFit,
               opacity: layer.active ? 1 : 0,
@@ -247,8 +217,9 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     // scroll past it, laid out so the two barely overlap:
     // - desktop: text column on the left, image on the right (`width` caps
     //   the image width, e.g. "720px");
-    // - mobile/tablet: image pinned under the site header, text cards pass
-    //   through the free band below it and slide *under* the image.
+    // - mobile/tablet: the original mobile look – image centred in the sticky
+    //   viewport, white bordered cards scrolling over it – with image and card
+    //   sharing one column width so every image lines up with the text.
     // Step spacing follows the usual scrollama pattern (steps spaced in vh,
     // trigger at `offset`); `display: flow-root` keeps the first/last step
     // margins inside the section so no empty gap leaks out after the last step.
@@ -256,13 +227,11 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
     const gutter = 'max(16px, 4vw)';
     const boxWidth = 380;
     const mediaMaxWidth = normalizedWidth || '720px';
-    const mobileMediaHeight = `${MOBILE_MEDIA_VH}vh`;
     const activeContent = currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content;
     const bg = getBackgroundColor();
 
     return (
       <div
-        ref={overlayRef}
         className={`relative dt-scrolly-overlay ${className}`}
         style={{
           // Break out of the reading column to the full viewport width.
@@ -282,23 +251,22 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
           .dt-scrolly-overlay .dt-scrolly-box .dt-step-next { margin: 0.8em 0 0; padding-top: 0.6em; border-top: 1px solid #e8e8dc; font-family: var(--font-roboto-condensed), Arial, sans-serif; font-size: 0.85em; color: #4c4f8e; }
         `}</style>
 
-        {/* Sticky graphic layer – above the text on mobile so cards slide under it. */}
+        {/* Sticky graphic layer; the text cards scroll over it. */}
         <div style={{
           position: 'sticky',
           top: 0,
           height: '100vh',
-          zIndex: 2,
-          pointerEvents: 'none',
+          zIndex: 0,
         }}>
           <div style={isMobile ? {
             position: 'absolute',
-            top: 0,
+            top: headerOffset,
+            bottom: 0,
             left: 0,
             right: 0,
-            height: `calc(${headerOffset}px + ${mobileMediaHeight})`,
-            padding: `${headerOffset + 8}px 8px 8px`,
-            backgroundColor: bg,
-            transition: 'background-color 0.3s ease-in-out',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           } : {
             position: 'absolute',
             top: headerOffset,
@@ -306,16 +274,22 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
             right: gutter,
             width: `min(${mediaMaxWidth}, calc(100% - ${boxWidth}px - 3 * ${gutter}))`,
           }}>
-            {activeContent?.type === 'image' ? renderImageStack(fit) : getCurrentContent()}
+            {isMobile ? (
+              <div style={{ width: MOBILE_COLUMN }}>
+                {activeContent?.type === 'image' ? renderImageStack(fit, true) : getCurrentContent()}
+              </div>
+            ) : (
+              activeContent?.type === 'image' ? renderImageStack(fit) : getCurrentContent()
+            )}
           </div>
         </div>
 
         <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh', display: 'flow-root' }}>
-          {renderSteps(isMobile ? 0.8 : 0.5, (step, idx) => {
+          {renderSteps(isMobile ? 0.7 : 0.5, (step, idx) => {
             const isFirst = idx === 0;
             const isLast = idx === steps.length - 1;
             const margin = isMobile
-              ? `${isFirst ? 75 : 0}vh 0 ${isLast ? 25 : 70}vh`
+              ? `${isFirst ? 40 : 0}vh 0 ${isLast ? 40 : 80}vh`
               : `${isFirst ? 55 : 0}vh 0 ${isLast ? 50 : 80}vh`;
             return (
               <div
@@ -324,15 +298,15 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   margin,
                   marginLeft: isMobile ? 'auto' : textAlignment === 'right' ? 'auto' : gutter,
                   marginRight: isMobile ? 'auto' : textAlignment === 'right' ? gutter : 'auto',
-                  // Keep lines readable: never wider than ~60 characters.
-                  width: isMobile ? 'calc(100% - 24px)' : `${boxWidth}px`,
-                  maxWidth: isMobile ? '520px' : '100%',
-                  padding: isMobile ? '0.75rem 0.9rem' : '1rem 1.25rem',
-                  fontSize: isMobile ? '15px' : '17px',
+                  // On mobile the card is exactly as wide as the image column.
+                  width: isMobile ? MOBILE_COLUMN : `${boxWidth}px`,
+                  maxWidth: '100%',
+                  padding: '1rem',
+                  fontSize: isMobile ? '16px' : '17px',
                   lineHeight: 1.45,
-                  backgroundColor: 'rgba(255, 255, 255, 0.96)',
+                  backgroundColor: 'white',
+                  border: '1px solid #ccc',
                   borderRadius: '4px',
-                  boxShadow: '0 4px 24px rgba(16, 20, 50, 0.35)',
                   position: 'relative',
                 }}
               >
