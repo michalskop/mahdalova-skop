@@ -21,6 +21,16 @@ const WHITE = '#ffffff';
 
 const TILES = [
   {
+    href: 'https://www.volebnikalkulacka.cz',
+    title: 'Komunální a senátní volby 2026',
+    // description: popis pro OG / meta – na kartě se nezobrazuje.
+    description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce',
+    bg: '#101432',
+    external: true,
+    logo: 'vk',
+    coverImage: '/images/specials/volebni-kalkulacka.svg',
+  },
+  {
     href: '/specialy/data-pro-budouci-premierku',
     title: 'Data pro budoucí premiérku',
     bg: '#ff3f30',
@@ -29,20 +39,20 @@ const TILES = [
     coverImage: '/images/specials/data-pro-budouci-premierku.svg',
   },
   {
-    href: '/specialy/kviff',
-    title: 'Festival Karlovy Vary v datech',
-    bg: '#121212',
-    external: false,
-    logo: 'kviff',
-    coverImage: '/images/specials/karlovy-vary.svg',
-  },
-  {
     href: '/specialy/svobodna-media',
     title: 'Svobodná média',
     bg: '#812840',
     external: false,
     logo: 'tv',
     coverImage: '/images/specials/svobodna-media.svg',
+  },
+  {
+    href: '/specialy/kviff',
+    title: 'Festival Karlovy Vary v datech',
+    bg: '#121212',
+    external: false,
+    logo: 'kviff',
+    coverImage: '/images/specials/karlovy-vary.svg',
   },
   {
     href: '/specialy/investigace',

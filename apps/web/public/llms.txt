@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Volební kalkulačka míří do obcí: pro komunální volby 2026 ji připravujeme pro desítky měst](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026)
 - [Poprvé od roku 1949 vypadla CDU ze zemského sněmu. Náš model to ukázal od prvního sčítání](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2026-09-20-cdu-meklenbursko)
-- [Rituál za 23 miliard rublů. Proč si nervózní Kreml píše volební výsledky sám](https://www.mahdalova-skop.cz/clanek/volby-rusko-2026-09-20-2026-divadlo-bez-potlesku)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -31,9 +31,9 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Filmový kalendář 2026](https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026)
 
 ### Mezinárodní politika
+- [Volební kalkulačka míří do obcí: pro komunální volby 2026 ji připravujeme pro desítky měst](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026)
 - [Mapy ukazují, jak se proměnila Gaza: celé čtvrti zmizely, na jejich místě stojí stany](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-29-mapy-ukazuji-jak-se-promenila-gaza)
 - [Na Slovensku viní z války Rusko 40 procent lidí, v Polsku 85. Kremlu se v EU daří tam, kde se lidé nejhůř brání dezinformacím](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-28-ruska-propaganda-v-eu)
-- [Česko pouští matky předškoláků do zaměstnání nejméně v EU. Vláda na to odpovídá vyšším rodičákem](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu)
 
 ### Dezinformace a média
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
