@@ -20,12 +20,12 @@
 
   <!-- Jemná záře v barvách loga -->
   <g filter="url(#vk-glow)" opacity="0.55">
-    <circle cx="330" cy="325" r="230" fill="#0070F4"/>
-    <circle cx="760" cy="645" r="230" fill="#D04646"/>
+    <circle cx="330" cy="365" r="230" fill="#0070F4"/>
+    <circle cx="760" cy="685" r="230" fill="#D04646"/>
   </g>
 
-  <!-- Logo: 128×128 → 520×520, vycentrované v části karty nad nadpisem (střed ~41 % výšky) -->
-  <g transform="translate(280 185) scale(4.0625)">
+  <!-- Logo: 128×128 → 520×520, vycentrované v části karty nad nadpisem (střed ~45 % výšky) -->
+  <g transform="translate(280 225) scale(4.0625)">
     <g filter="url(#vk-shadow)">
       <rect width="128" height="128" rx="32" fill="url(#vk-base)"/>
     </g>
