@@ -6,7 +6,7 @@ excerpt: "Komunální volby 2026 mají nejméně kandidátů od roku 2002, sená
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
-tags: ["Volby 2026", "volby", "komunální volby", "Senát", "kandidáti", "ženy", "muži", "politika", "data"]
+tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "Senát", "kandidáti", "ženy", "muži", "politika", "data"]
 promoted: 1
 ---
 

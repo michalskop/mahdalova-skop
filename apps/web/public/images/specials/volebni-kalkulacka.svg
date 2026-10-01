@@ -8,7 +8,7 @@
       <feGaussianBlur stdDeviation="9"/>
     </filter>
     <filter id="vk-shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.45"/>
     </filter>
     <clipPath id="vk-tile">
       <rect width="128" height="128" rx="32"/>
@@ -19,12 +19,12 @@
 
   <!-- Jemná záře v barvách loga -->
   <g filter="url(#vk-glow)" opacity="0.55">
-    <circle cx="350" cy="240" r="230" fill="#0070F4"/>
-    <circle cx="740" cy="480" r="230" fill="#D04646"/>
+    <circle cx="330" cy="280" r="230" fill="#0070F4"/>
+    <circle cx="760" cy="600" r="230" fill="#D04646"/>
   </g>
 
-  <!-- Logo: 128×128 → 384×384, horní polovina karty (dole je nadpis) -->
-  <g transform="translate(348 130) scale(3)">
+  <!-- Logo: 128×128 → 520×520, vycentrované v části karty nad nadpisem (střed ~37 % výšky) -->
+  <g transform="translate(280 140) scale(4.0625)">
     <g filter="url(#vk-shadow)">
       <rect width="128" height="128" rx="32" fill="#ffffff"/>
     </g>
