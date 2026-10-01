@@ -5,8 +5,9 @@ time: "17:55"
 author: "Dario Amodei"
 translator: "Kateřina Mahdalová"
 excerpt: "Šéf Anthropicu, firmy za modely Claude, píše, že od léta se AI zlepšuje drasticky rychleji – hlavně proto, že už sama pomáhá stavět svou další generaci. Navrhuje tříkrokový plán, jak vývoj nejvýkonnějších modelů zpomalit, a první krok jeho firma podle něj přijímá sama, bez čekání na ostatní."
-coverImage: "images/cover-dario-amodei-datatimes.jpg"
-coverFit: contain
+coverImage: "images/cover-dario-amodei-5x4-datatimes.jpg"
+ogImage: "images/cover-dario-amodei-datatimes.jpg"
+coverFit: cover
 coverBg: "brandNavy.9"
 filter: ["kontext"]
 tags: ["AI", "Dario Amodei", "Anthropic", "OpenAI", "bezpečnost AI", "alignment", "regulace AI", "Čína", "USA", "esej"]
