@@ -32,10 +32,12 @@ Klíčové je, že model nepracuje s jednou teorií vědomí, ale se třinácti.
 
 ## Výsledek, který závisí na startovní čáře
 
-Model počítá tzv. bayesovsky: začne s nějakou výchozí pravděpodobností a podle důkazů ji posouvá nahoru nebo dolů. Autoři dali všem systémům stejnou startovní čáru – jednu šestinu, tedy 16,7 procenta. Sami přiznávají, že je zvolená účelově, protože na ní jsou dobře vidět rozdíly mezi systémy.
+Nejdřív je třeba říct, co výsledná procenta znamenají. Neříkají, *kolik* vědomí systém má. Říkají, jak moc si je model jistý, že daný systém vědomí vůbec má. Model vědomí nepozoruje přímo, jen ho odhaduje ze znaků, které s ním podle různých teorií souvisejí.
+
+Počítá přitom tzv. bayesovsky: začne s nějakou výchozí pravděpodobností a podle znaků ji posouvá nahoru nebo dolů. Autoři dali všem systémům stejnou startovní čáru – jednu šestinu, tedy 16,7 procenta – a sami přiznávají, že ji zvolili účelově, protože na ní jsou dobře vidět rozdíly mezi systémy. Proto ani člověk nevychází na 100 procentech, ale na 85. Model se ke stoprocentní jistotě z jedné šestiny nedopracuje a některé teorie navíc dávají člověku překvapivě nízké skóre. Autoři to sami berou jako doklad, že jejich nástroj má limity. Člověk tu slouží hlavně jako kontrola: když i u něj je model jistý jen na 85 procent, je vidět, jak hrubé to měřítko je.
 
 <KeyNumbers
-  label="Pravděpodobnost vědomí podle DCM (start 16,7 %)"
+  label="Jak jistý si je model, že systém má vědomí"
   labelColor="brandNavy[7]"
   numbers={[
     {
@@ -65,7 +67,7 @@ Model počítá tzv. bayesovsky: začne s nějakou výchozí pravděpodobností 
   ]}
 />
 
-Čísla pocházejí z [publikované studie](https://arxiv.org/abs/2601.17060v3). Jazykové modely z roku 2024 v ní vycházejí s 8 procenty, tedy pod startovní čárou: dostupné důkazy podle modelu svědčí spíš proti jejich vědomí. Autoři to formulují opatrně: důkazy jsou proti tomu, že by modely z roku 2024 byly vědomé, nejsou ale rozhodující.
+Čísla pocházejí z [publikované studie](https://arxiv.org/abs/2601.17060v3). Jazykové modely z roku 2024 v ní vycházejí s 8 procenty, tedy pod startovní čárou. Neznamená to, že by měly „trochu vědomí“. Znamená to, že znaky podle modelu svědčí spíš proti tomu, že by vědomí měly. Autoři to formulují opatrně: důkazy jsou proti tomu, že by modely z roku 2024 byly vědomé, nejsou ale rozhodující.
 
 <SupportBanner float="left" />Rozptyl mezi teoriemi je přitom obrovský. Podle teorie, která vědomí spojuje s biologií, mají jazykové modely 2 procenta. Podle teorie, která klade důraz na složitost zpracování informací, 57 procent. Průměr tedy schovává zásadní neshodu: nikdo neví, která teorie platí.
 
