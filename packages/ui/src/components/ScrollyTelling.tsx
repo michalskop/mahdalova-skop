@@ -281,8 +281,9 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
                   margin,
                   marginLeft: isMobile ? 'auto' : textAlignment === 'right' ? 'auto' : gutter,
                   marginRight: isMobile ? 'auto' : textAlignment === 'right' ? gutter : 'auto',
+                  // Keep lines readable: never wider than ~60 characters.
                   width: isMobile ? 'calc(100% - 24px)' : `${boxWidth}px`,
-                  maxWidth: '100%',
+                  maxWidth: isMobile ? '520px' : '100%',
                   padding: isMobile ? '0.75rem 0.9rem' : '1rem 1.25rem',
                   fontSize: isMobile ? '15px' : '17px',
                   lineHeight: 1.45,
