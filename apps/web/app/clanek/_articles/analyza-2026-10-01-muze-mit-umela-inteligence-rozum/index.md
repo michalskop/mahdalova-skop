@@ -4,8 +4,8 @@ date: "2026-10-01"
 time: "17:55"
 author: "Kateřina Mahdalová"
 excerpt: "The Economist ukazuje graf, podle kterého pravděpodobnost vědomí jazykových modelů stoupla z 17 na 20 procent. Studie, ze které vychází, ale u modelů z roku 2024 publikovala 8 procent – a sami autoři varují, ať se procento nebere doslova. Otázka přesto přestala být akademická: firmy kvůli ní mění své modely a americké státy píšou zákony."
-coverImage: "images/cover-vedomi-ai-5x4-vpravo-datatimes.jpg"
-ogImage: "images/cover-vedomi-ai-og-vpravo-datatimes.jpg"
+coverImage: "images/cover-vedomi-ai-5x4-v3-datatimes.jpg"
+ogImage: "images/cover-vedomi-ai-og-v3-datatimes.jpg"
 coverFit: cover
 coverBg: "brandDeepRed.9"
 filter: ["analýza"]
