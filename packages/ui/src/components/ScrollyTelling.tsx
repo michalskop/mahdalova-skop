@@ -204,56 +204,98 @@ const ScrollyTelling: React.FC<ScrollyTellingProps> = ({
   };
 
   if (layout === 'overlay') {
-    // In the overlay layout `width` caps the image width (e.g. "720px");
-    // the dark band behind it still spans the full viewport.
-    const mediaMaxWidth = normalizedWidth || '100%';
-    const boxWidth = 420;
-    const boxInset = normalizedWidth
-      ? `max(16px, calc(50% - ${normalizedWidth} / 2 - ${boxWidth / 3}px))`
-      : '6vw';
+    // Full-bleed scrollytelling with a sticky graphic and text steps that
+    // scroll past it, laid out so the two barely overlap:
+    // - desktop: text column on the left, image on the right (`width` caps
+    //   the image width, e.g. "720px");
+    // - mobile/tablet: image pinned under the site header, text cards pass
+    //   through the free band below it and slide *under* the image.
+    // Step spacing follows the usual scrollama pattern (steps spaced in vh,
+    // trigger at `offset`); `display: flow-root` keeps the first/last step
+    // margins inside the section so no empty gap leaks out after the last step.
+    const headerOffset = isMobile ? 56 : 64;
+    const gutter = 'max(16px, 4vw)';
+    const boxWidth = 380;
+    const mediaMaxWidth = normalizedWidth || '720px';
+    const mobileMediaHeight = '58vh';
+    const activeContent = currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content;
+    const bg = getBackgroundColor();
+
     return (
       <div
-        className={`relative ${className}`}
+        className={`relative dt-scrolly-overlay ${className}`}
         style={{
           // Break out of the reading column to the full viewport width.
           width: 'calc(100vw - 16px)',
           marginLeft: '50%',
           transform: 'translateX(-50%)',
+          backgroundColor: bg,
+          transition: 'background-color 0.3s ease-in-out',
+          display: 'flow-root',
         }}
       >
+        <style>{`
+          .dt-scrolly-overlay .dt-scrolly-box p { margin: 0 0 0.6em; font-size: inherit; line-height: inherit; }
+          .dt-scrolly-overlay .dt-scrolly-box p:last-child { margin-bottom: 0; }
+        `}</style>
+
+        {/* Sticky graphic layer – above the text on mobile so cards slide under it. */}
         <div style={{
           position: 'sticky',
           top: 0,
           height: '100vh',
-          // Keep the top of the image clear of the fixed site header.
-          padding: fit === 'cover' ? 0 : '64px 0 16px',
-          backgroundColor: getBackgroundColor(),
-          transition: 'background-color 0.3s ease-in-out',
-          zIndex: 0,
+          zIndex: 2,
+          pointerEvents: 'none',
         }}>
-          <div style={{ maxWidth: mediaMaxWidth, height: '100%', margin: '0 auto' }}>
-            {(currentStepIndex === -1 ? defaultContent : steps[currentStepIndex]?.content)?.type === 'image'
-              ? renderImageStack(fit)
-              : getCurrentContent()}
+          <div style={isMobile ? {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: `calc(${headerOffset}px + ${mobileMediaHeight})`,
+            padding: `${headerOffset + 8}px 8px 8px`,
+            backgroundColor: bg,
+            transition: 'background-color 0.3s ease-in-out',
+          } : {
+            position: 'absolute',
+            top: headerOffset,
+            bottom: 16,
+            right: gutter,
+            width: `min(${mediaMaxWidth}, calc(100% - ${boxWidth}px - 3 * ${gutter}))`,
+          }}>
+            {activeContent?.type === 'image' ? renderImageStack(fit) : getCurrentContent()}
           </div>
         </div>
 
-        <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh' }}>
-          {renderSteps(0.5, (step, idx) => (
-                <div style={{
-                  margin: idx === 0 ? '60vh 0 90vh' : idx === steps.length - 1 ? '90vh 0 60vh' : '90vh 0',
-                  padding: '1rem 1.25rem',
-                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh', display: 'flow-root' }}>
+          {renderSteps(isMobile ? 0.8 : 0.5, (step, idx) => {
+            const isFirst = idx === 0;
+            const isLast = idx === steps.length - 1;
+            const margin = isMobile
+              ? `${isFirst ? 75 : 0}vh 0 ${isLast ? 25 : 70}vh`
+              : `${isFirst ? 55 : 0}vh 0 ${isLast ? 50 : 80}vh`;
+            return (
+              <div
+                className="dt-scrolly-box"
+                style={{
+                  margin,
+                  marginLeft: isMobile ? 'auto' : textAlignment === 'right' ? 'auto' : gutter,
+                  marginRight: isMobile ? 'auto' : textAlignment === 'right' ? gutter : 'auto',
+                  width: isMobile ? 'calc(100% - 24px)' : `${boxWidth}px`,
+                  maxWidth: '100%',
+                  padding: isMobile ? '0.75rem 0.9rem' : '1rem 1.25rem',
+                  fontSize: isMobile ? '15px' : '17px',
+                  lineHeight: 1.45,
+                  backgroundColor: 'rgba(255, 255, 255, 0.96)',
                   borderRadius: '4px',
                   boxShadow: '0 4px 24px rgba(16, 20, 50, 0.35)',
-                  width: isMobile ? 'calc(100% - 32px)' : `${boxWidth}px`,
-                  marginLeft: isMobile ? 'auto' : textAlignment === 'left' ? boxInset : 'auto',
-                  marginRight: isMobile ? 'auto' : textAlignment === 'right' ? boxInset : 'auto',
                   position: 'relative',
-                }}>
-                  <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
-                </div>
-            ))}
+                }}
+              >
+                <div dangerouslySetInnerHTML={{ __html: formatStepHtml(step.text) }} />
+              </div>
+            );
+          })}
         </div>
       </div>
     );
