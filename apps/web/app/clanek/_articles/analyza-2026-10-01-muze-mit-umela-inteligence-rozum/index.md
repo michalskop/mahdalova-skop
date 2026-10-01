@@ -7,7 +7,7 @@ excerpt: "The Economist ukazuje graf, podle kterého pravděpodobnost vědomí j
 coverImage: "images/cover-vedomi-ai-5x4-datatimes.jpg"
 ogImage: "images/cover-vedomi-ai-datatimes.jpg"
 coverFit: cover
-coverBg: "brandNavy.9"
+coverBg: "brandDeepRed.9"
 filter: ["analýza"]
 tags: ["AI", "vědomí", "Anthropic", "Claude", "The Economist", "Rethink Priorities", "David Chalmers", "Anil Seth", "Mustafa Suleyman", "filozofie mysli", "bezpečnost AI"]
 promoted: 1
