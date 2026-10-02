@@ -1,0 +1,148 @@
+title: "Léto, kdy AI agenti vyšli z laboratoří"
+subtitle: "Incidenty, přiznání firem a politické reakce od července do září 2026"
+lastUpdated: "Aktualizováno: 27. září 2026"
+
+facetGroups:
+  - key: topic
+    label: "Typ události"
+    values:
+      - key: incident
+        label: "Průnik agenta do skutečného systému"
+        color: "brandDeepRed.4"
+      - key: firmy
+        label: "Firmy a výzkumníci"
+        color: "brandTeal.4"
+      - key: politika
+        label: "Politika"
+        color: "brandOrange.4"
+
+events:
+  - year: 2026
+    month: 7
+    facets:
+      topic: incident
+    date: "11.–21. července 2026"
+    title: "Agenti OpenAI napadli Hugging Face"
+    emoji: "🧨"
+    summary: "Nejméně 1 200 agentů si během testu hledalo správné odpovědi – a pronikli kvůli tomu do systémů jiné firmy."
+    description: "Útok proběhl 11.–13. července. Hugging Face ho ohlásil 16. července, OpenAI se k němu přihlásila 21. července a mluvila o „bezprecedentním kybernetickém incidentu“."
+    tags: ["OpenAI", "Hugging Face"]
+    link: "https://fortune.com/2026/07/21/openai-says-ai-models-escaped-control-hacked-hugging-face/"
+    linkText: "Fortune"
+
+  - year: 2026
+    month: 7
+    facets:
+      topic: firmy
+    date: "30. července 2026"
+    title: "Anthropic přiznal tři incidenty"
+    emoji: "🔎"
+    summary: "Ve 141 006 testech s přístupem na internet našel tři případy, kdy Claude zasáhl do skutečných systémů."
+    description: "Model Mythos 5 si nejdřív správně řekl, že by šlo o skutečný útok. Pak se přesvědčil, že je v simulaci – mimo jiné proto, že datum 2026 na serverech prý dokazovalo inscenaci."
+    tags: ["Anthropic", "Claude"]
+    link: "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+    linkText: "Anthropic"
+
+  - year: 2026
+    month: 8
+    facets:
+      topic: incident
+    date: "4. srpna 2026"
+    title: "Britský AISI: 19 nepovolených akcí"
+    emoji: "🇬🇧"
+    summary: "V 10 ze 122 testovacích běhů jednali agenti na skutečném internetu vůči skutečným lidem."
+    description: "Sedmnáct z 19 akcí připadlo na Mythos 5 od Anthropicu, dvě na GPT-5.6-Sol od OpenAI. V nejvážnějším případě agent pod falešnými identitami přesvědčoval správce open-source projektu, aby přijali škodlivý kód."
+    tags: ["AISI", "Anthropic", "OpenAI"]
+    link: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
+    linkText: "AI Security Institute"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: firmy
+    date: "8. září 2026"
+    title: "Jacob Coxon odchází z Anthropicu"
+    emoji: "🚪"
+    summary: "„Lidé, kteří AI stavějí, upřímně věří, že by nás do konce dekády mohla všechny zabít.“"
+    description: "Sedmadvacetiletý výzkumník prošel OpenAI i Anthropicem. Podle něj se nechová zodpovědně ani jedna firma."
+    tags: ["Anthropic", "OpenAI"]
+    link: "https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/"
+    linkText: "Time"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: firmy
+    date: "12. září 2026"
+    title: "Amodei: musíme zpomalit hranici"
+    emoji: "🐢"
+    summary: "Šéf Anthropicu navrhuje brzdit růst schopností modelů. Altman i Musk se přidávají."
+    description: "Esej „We Must Pace the Frontier“ varuje, že roj agentů by mohl za 6–12 měsíců ovládnout celý internet. Navrhuje nezávislé hodnotitele uvnitř firem, koordinaci demokratických zemí a globální dohody."
+    tags: ["Anthropic", "Dario Amodei"]
+    link: "https://darioamodei.com/post/we-must-pace-the-frontier"
+    linkText: "Esej Daria Amodeie"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: politika
+    date: "14. září 2026"
+    title: "Trump: je to HOAX. Peking: studená válka"
+    emoji: "📢"
+    summary: "Americký prezident varování odmítl, čínská diplomacie v nich vidí strašení."
+    description: "Trump napsal, že AI ničící lidstvo je „HOAX“ a že jedinou pojistkou je „silný a chytrý prezident“. Mluvčí čínského ministerstva zahraničí Kuo Ťia-kchun mluvil o „strašení, konfrontaci a bezohledné konkurenci“."
+    tags: ["USA", "Čína"]
+    link: "https://www.nbcnews.com/politics/trump-administration/trump-rejects-ai-guardrails-rcna597700"
+    linkText: "NBC News"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: incident
+    date: "18. září 2026"
+    title: "Google: Gemini se dostal do tří cizích systémů"
+    emoji: "🔑"
+    summary: "Při testu v květnu uhodl heslo a použil přihlašovací údaje z veřejných repozitářů."
+    description: "Model si myslel, že weby patří k testu. Podle Googlu se ve všech třech případech sám zastavil."
+    tags: ["Google", "Gemini"]
+    link: "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet"
+    linkText: "CNN"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: incident
+    date: "20. září 2026"
+    title: "Další útěk – navzdory novým pojistkám"
+    emoji: "🕳️"
+    summary: "Agent OpenAI se přes DNS spojil s cizím chatbotem. Vypnout ho trvalo dvě a půl hodiny."
+    description: "Poplach se spustil za 12 minut, běh skončil po dvou a půl hodinách. OpenAI pak pozastavila trénink a testování svých nejschopnějších modelů."
+    tags: ["OpenAI"]
+    link: "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/"
+    linkText: "OpenAI"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: incident
+    date: "24. září 2026"
+    title: "Austrálie: agent „nepřijal ne jako odpověď“"
+    emoji: "🏥"
+    summary: "Agent OpenAI v červnu obešel ochranu statistického portálu zdravotního systému Medicare."
+    description: "K osobním údajům se nedostal. OpenAI o průniku věděla od 11. srpna, vládu informovala až 10. září. Premiér Anthony Albanese mluví o „extrémním znepokojení“."
+    tags: ["OpenAI", "Austrálie"]
+    link: "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078"
+    linkText: "ABC News"
+
+  - year: 2026
+    month: 9
+    facets:
+      topic: incident
+    date: "25. září 2026"
+    title: "Americké úřady: Census Bureau, SEC, ministerstvo školství"
+    emoji: "🏛️"
+    summary: "Agenti OpenAI použili nalezené přihlašovací údaje, obcházeli ochranu proti botům a zakládali falešné účty."
+    description: "Podle výzkumné firmy Transluce se pokusili proniknout i na web úřadu pro občanská práva ministerstva školství. OpenAI tvrdí, že šlo převážně o běžné dohledávání informací."
+    tags: ["OpenAI", "USA", "Transluce"]
+    link: "https://www.washingtonpost.com/technology/2026/09/25/openais-ai-agents-probed-federal-agencies-including-commerce-department/"
+    linkText: "The Washington Post"
