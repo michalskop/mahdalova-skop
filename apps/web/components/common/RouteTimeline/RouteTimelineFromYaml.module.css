@@ -1,0 +1,54 @@
+/* RouteTimeline in an article (YAML events). */
+
+.wrapper {
+  margin: 2rem 0;
+}
+
+.header {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.header h2 {
+  color: var(--mantine-color-brandNavy-9);
+  margin: 0 0 6px;
+}
+
+.header p {
+  color: var(--mantine-color-dimmed);
+  margin: 0;
+}
+
+/* Smaller type than the /o-nas cards: article cards are narrower. */
+.timeline {
+  --route-timeline-title: var(--mantine-color-brandNavy-9);
+}
+
+.timeline h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 10px;
+}
+
+.timeline p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.date {
+  color: var(--mantine-color-brand-6);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.thumb {
+  border-radius: 3px;
+  display: block;
+  height: 170px;
+  margin: 0 0 14px;
+  object-fit: cover;
+  width: 100%;
+}

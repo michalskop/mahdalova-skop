@@ -25,3 +25,9 @@ You can include the component multiple times in one article (each instance can p
 toto je timeline k historii zavádění a rušení trestů smrti
 
 <Timeline yamlFile="timeline-tresty-smrti.yaml" /> 
+
+## RouteTimeline (vlnovka)
+
+Alternativa ke klasické Timeline ze stejného YAML: vlnitá linka kreslená scrollem, otočná kolečka.
+
+<RouteTimeline yamlFile="timeline-2.yaml" />

@@ -16,6 +16,7 @@ import { TestComponent } from '@/components/mdx/TestComponent';
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
 import ScrollyTelling from '@/components/common/ScrollyTelling';
 import Timeline from '@/components/common/Timeline';
+import RouteTimelineFromYaml from '@/components/common/RouteTimeline/RouteTimelineFromYaml';
 import { PartyFace } from '@/components/politics/PartyFace';
 import { Person } from '@/components/politics/Person';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
@@ -387,6 +388,18 @@ export function ArticleRenderer({
       }
 
       return <Timeline content={content} slug={slug} className="my-8" />;
+    },
+
+    // Wavy alternative to Timeline (same YAML): <RouteTimeline yamlFile="…" />
+    RouteTimeline: ({ yamlFile }) => {
+      const timelineData = (mdxSource.scope as any)?.timelineData as Record<string, any> | undefined;
+      const content = yamlFile ? timelineData?.[yamlFile] : undefined;
+
+      if (!content) {
+        return <div className="text-red-500">RouteTimeline content not found</div>;
+      }
+
+      return <RouteTimelineFromYaml content={content} slug={slug} />;
     },
 
     RelatedArticles: (props) => {

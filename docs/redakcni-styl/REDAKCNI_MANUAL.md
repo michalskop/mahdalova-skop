@@ -241,7 +241,9 @@ Explainer má u nás **dvě měřítka** a je důležité je nezaměnit:
 **Dlouhý explainer / průvodce (long-read, ~1000–2600 slov)** — pro složité, vyvíjející se kauzy, kde čtenář potřebuje provést celou věcí (naše články o CNN, BBC, ČT v sekci Svobodná média jsou právě tohle, ne krátké explainery). Osvědčená kostra, kterou lze skládat podle potřeby:
 1. **Otvírák** — kde věc právě teď stojí a proč to má číst.
 2. **Kdo je kdo** — aktéři a jejich zájmy, přehledně.
-3. **Časová osa** — jak jsme se sem dostali (klidně komponenta Timeline).
+3. **Časová osa** — jak jsme se sem dostali (komponenta Timeline, nebo její vlnitá varianta RouteTimeline – viz níže).
+
+**Časová osa „vlnovka" (RouteTimeline).** Pro příběhové časové osy (do ~12 zastávek, každá s vlastním odstavcem) je výchozí volbou vlnovka: karty střídavě vlevo a vpravo, mezi nimi se scrollem kreslí plynulá vlnitá linka, na ní kolečka s logem DataTimes. Kolečko se rozsvítí, když k němu linka dorazí; **každé kolečko se po najetí myší otočí o 360°**; linka končí v závěrečném kolečku, které se po příjezdu linky rozsvítí a samo otočí. V článku: `<RouteTimeline yamlFile="timeline.yaml" />` (stejný YAML jako Timeline). Klasickou Timeline necháváme pro husté přehledy s filtry a sbalováním let (kalendáře, desítky událostí). Linku nikdy nekreslíme ručně ani roztaženým SVG – vždy přes sdílenou komponentu (technicky: `packages/ui/DESIGN.md` → *RouteTimeline*).
 4. **Co to fakticky znamená** — jádro výkladu, mechanismus a sázky.
 5. **Co se (za)tím nestalo / co je otevřené** — poctivé hranice: co ještě nevíme.
 

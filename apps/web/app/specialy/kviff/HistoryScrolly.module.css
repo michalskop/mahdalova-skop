@@ -1,134 +1,16 @@
-.scrolly {
+/* KVIFF history: theme + card content for the shared RouteTimeline
+   (layout, wavy line, donut stops and the card itself come from there). */
+
+.timeline {
   --route-purple: #522a7a;
   --route-purple-dark: #1f102e;
   --route-gold: var(--mantine-color-brandYellow-8);
-  height: clamp(4700px, 500vw, 5400px);
-  margin: 12px auto 300px;
-  max-width: 1080px;
-  position: relative;
-  width: 100%;
-}
-
-.route {
-  height: 100%;
-  inset: 0;
-  overflow: visible;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-}
-
-.routeMobile {
-  display: none;
-}
-
-.routeShadow,
-.routeProgress {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.routeShadow {
-  stroke: var(--mantine-color-background-6);
-  stroke-width: 5;
-}
-
-.routeProgress {
-  stroke: var(--route-purple);
-  stroke-width: 6;
-  transition: stroke-dashoffset 90ms linear;
-}
-
-.markerNode {
-  fill: var(--route-purple);
-  stroke: none;
-  transition: fill 220ms ease, r 220ms ease;
-  vector-effect: non-scaling-stroke;
-}
-
-.markerNodeActive,
-.marker:hover .markerNode {
-  fill: var(--route-gold);
-}
-
-.marker {
-  pointer-events: auto;
-}
-
-.markerYear {
-  fill: var(--route-purple-dark);
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
-  font-size: 25px;
-  font-weight: 800;
-  opacity: 1;
-  transition: opacity 180ms ease;
-}
-
-.markerYearPast {
-  opacity: 1;
-}
-
-.milestone {
-  position: absolute;
-  top: var(--milestone-y);
-  transform: translateY(-50%);
-  width: min(42%, 430px);
-  z-index: 2;
-}
-
-.left {
-  left: 4%;
-}
-
-.right {
-  right: 3%;
-}
-
-.bubble {
-  background: color-mix(in srgb, var(--mantine-color-background-0) 96%, transparent);
-  border: 1px solid var(--mantine-color-background-6);
-  border-radius: 4px;
-  box-shadow: 0 10px 34px rgba(31, 16, 46, 0.08);
-  opacity: 1;
-  padding: clamp(20px, 3vw, 30px);
-  position: relative;
-  transform: translateY(8px);
-  transition: border-color 220ms ease, box-shadow 220ms ease, opacity 220ms ease, transform 220ms ease;
-}
-
-.milestoneActive .bubble {
-  border-color: color-mix(in srgb, var(--route-purple) 26%, var(--mantine-color-background-6));
-  box-shadow: 0 14px 42px rgba(31, 16, 46, 0.13);
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.bubbleTrace {
-  height: 100%;
-  inset: 0;
-  overflow: visible;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-
-.bubbleTraceLine {
-  fill: none;
-  stroke: var(--route-gold);
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  stroke-linecap: square;
-  stroke-linejoin: round;
-  stroke-width: 2px;
-  transition: stroke-dashoffset 720ms cubic-bezier(0.22, 1, 0.36, 1);
-  vector-effect: non-scaling-stroke;
-}
-
-.milestoneActive .bubbleTraceLine {
-  stroke-dashoffset: 0;
+  --scroll-route-ink: var(--route-purple);
+  --scroll-route-track: var(--mantine-color-background-6);
+  --route-timeline-frame: var(--route-gold);
+  --route-timeline-title: var(--route-purple-dark);
+  --route-timeline-accent: var(--route-purple);
+  --route-timeline-card-width: min(46%, 470px);
 }
 
 .bubbleMeta {
@@ -169,7 +51,6 @@
   height: 178px;
   object-fit: cover;
   object-position: var(--image-position);
-  transition: filter 360ms ease, transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
   width: 100%;
 }
 
@@ -192,96 +73,20 @@
   text-underline-offset: 2px;
 }
 
-.milestoneActive .bubbleMedia img {
-  filter: saturate(1.04) contrast(1.02);
-  transform: scale(1.018);
-}
-
-.bubble h3 {
-  color: var(--route-purple-dark);
+.timeline h3 {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   line-height: 1.25;
   margin: 0 0 10px;
 }
 
-.bubble p {
+.timeline p {
   color: #333;
   font-size: 1rem;
   line-height: 1.62;
-  margin: 0;
 }
 
-@media (max-width: 760px) {
-  .scrolly {
-    height: 5200px;
-    margin-left: -4px;
-  }
-
-  .routeDesktop {
-    display: none;
-  }
-
-  .routeMobile {
-    display: block;
-  }
-
-  .routeMobile .markerYear {
-    font-size: 18px;
-    transform: scaleX(1.85);
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
-  .routeMobile .markerNode {
-    transform: scaleX(1.85);
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
-  .milestone {
-    width: auto;
-  }
-
-  .milestone.right {
-    left: 68px;
-    right: 0;
-  }
-
-  .milestone.left {
-    left: 0;
-    right: 68px;
-  }
-
-  .milestone.right .bubble {
-    transform: translateX(10px);
-  }
-
-  .milestone.left .bubble {
-    transform: translateX(-10px);
-  }
-
-  .milestoneActive.right .bubble,
-  .milestoneActive.left .bubble {
-    transform: translateX(0);
-  }
-
-  .bubble {
-    opacity: 1;
-    padding: 18px;
-  }
-
+@media (max-width: 820px) {
   .bubbleMedia img {
     height: 154px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .routeProgress,
-  .markerNode,
-  .markerYear,
-  .bubble,
-  .bubbleTraceLine,
-  .bubbleMedia img {
-    transition: none;
   }
 }

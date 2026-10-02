@@ -104,9 +104,10 @@ export async function getArticleBySlug(directorySlug: string) {
     scrollyContent = yaml.load(scrollyFile) as ScrollyContent;
   }
 
-  // Find and load data for Timeline components (supports multiple instances)
+  // Find and load data for Timeline / RouteTimeline components (same YAML
+  // format, supports multiple instances)
   const timelineData: Record<string, TimelineContent> = {};
-  const timelineRegex = /<Timeline[^>]*yamlFile="([^"]+)"[^>]*\/>/g;
+  const timelineRegex = /<(?:Route)?Timeline\b[^>]*yamlFile="([^"]+)"[^>]*\/>/g;
   let timelineMatch: RegExpExecArray | null;
   while ((timelineMatch = timelineRegex.exec(content)) !== null) {
     const yamlFile = timelineMatch[1];

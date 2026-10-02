@@ -581,6 +581,39 @@ Data comes from a `scrollytelling.yaml` file next to the article's `index.md`. L
 
 ---
 
+### `RouteTimeline` – vlnovka (`apps/web`)
+The wavy alternative to `Timeline` and the base for its modernisation. Cards alternate left / right; a scroll-drawn ink line (`ScrollRoute`) waves between them through a donut-logo stop beside each card's title. Live on `/o-nas` and `/specialy/kviff` (historie).
+
+Files: `apps/web/components/common/RouteTimeline/` – `RouteTimeline.tsx` (layout + line + stops), `SpinningLogo.tsx` (donut stop), `RouteTimelineFromYaml.tsx` (article adapter); the line itself is `components/common/ScrollRoute/`.
+
+```md
+<!-- In an article – same YAML as <Timeline> (date, title, summary/description, thumb, link/linkText) -->
+<RouteTimeline yamlFile="timeline.yaml" />
+```
+
+```tsx
+// In a page – any card content (put the title in an <h3>: the stop sits level with it)
+import RouteTimeline from '@/components/common/RouteTimeline/RouteTimeline';
+
+<RouteTimeline
+  items={[{ id: '1994', side: 'left', content: <><h3>…</h3><p>…</p></> }, …]}
+  className={styles.timeline}   // theme via custom properties, see below
+  endSelector="[data-route-end]" // optional: run into a logo elsewhere on the page (/o-nas)
+  tail="node"                    // own end donut (default) | "fade"
+/>
+```
+
+Behaviour (keep it when extending):
+- **Every stop turns 360° on mouse hover** (turns add up, never spin back); the end donut lights up and turns once when the line arrives, and on hover again. Use `SpinningLogo` (`lit`, `spinSignal`) for any other spinning donut.
+- Stops are grey until the line reaches their rim; a reached card gets the gold frame.
+- The line is built in real px from measured cards (never a stretched SVG / `preserveAspectRatio="none"` – that desynchronises the drawn length), every segment enters a stop vertically, the head eases towards its target each frame.
+- Stop x defaults: left card → 0.7, right card → 0.3 of the width (mobile: to the card's edge); override per item with `x` / `xMobile` when the cards are narrower.
+- Theming (set on `className`, read with fallbacks): `--route-timeline-bg` (must equal the background under the timeline – the stop discs hide the line), `--route-timeline-frame`, `--route-timeline-title`, `--route-timeline-accent`, `--route-timeline-card-width`, `--scroll-route-ink`, `--scroll-route-track`. Card typography uses `:where()` so consumer classes always win.
+
+When to use: narrative timelines up to ~12 stops with a paragraph each. Dense, filterable overviews (calendars, dozens of events) stay on the classic `Timeline` until it is modernised on top of this component.
+
+---
+
 ### `TagList`
 Renders article tags as clickable badge links to `/tag/[normalizedTag]`.
 

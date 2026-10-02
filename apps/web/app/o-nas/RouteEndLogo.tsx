@@ -1,26 +1,23 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import SpinningLogo from '@/components/common/RouteTimeline/SpinningLogo';
 import styles from './ClosingNote.module.css';
 
-// Fired by AboutScrolly once the fading tail of the route line reaches its end.
+// Fired by AboutScrolly once the route line reaches the logo.
 export const ROUTE_END_EVENT = 'o-nas:route-end';
 
 /**
- * Donut logo at the end of the route line. Grey like the other stops until
- * the line touches it; then it lights up for good and makes one full turn.
- * Every mouse hover spins it once more.
+ * Donut logo at the end of the /o-nas route line (in the closing note, the
+ * line runs into it via RouteTimeline's `endSelector`). Grey like the other
+ * stops until the line touches it; then it lights up for good and makes one
+ * full turn. Every mouse hover spins it once more (SpinningLogo).
  */
 export default function RouteEndLogo() {
-  const [lit, setLit] = useState(false);
-  const [turns, setTurns] = useState(0);
-  const spin = () => setTurns((count) => count + 1);
+  const [arrived, setArrived] = useState(0);
 
   useEffect(() => {
-    const onArrive = () => {
-      setLit(true);
-      spin();
-    };
+    const onArrive = () => setArrived((count) => count + 1);
     window.addEventListener(ROUTE_END_EVENT, onArrive);
     return () => window.removeEventListener(ROUTE_END_EVENT, onArrive);
   }, []);
@@ -28,14 +25,12 @@ export default function RouteEndLogo() {
   // The wrapper is an opaque disc in the section's colour (invisible), so the
   // tip of the line tucked under the logo never shows through the grey logo.
   return (
-    <span
-      aria-hidden="true"
+    <SpinningLogo
       data-route-end
-      className={`${styles.endLogo} ${lit ? styles.endLogoLit : ''}`}
-      style={{ transform: `rotate(${turns * 360}deg)` }}
-      onMouseEnter={spin}
-    >
-      <img src="/images/datatimes-donut.svg" alt="" className={styles.endLogoImg} />
-    </span>
+      lit={arrived > 0}
+      spinSignal={arrived}
+      size={64}
+      className={styles.endLogo}
+    />
   );
 }
