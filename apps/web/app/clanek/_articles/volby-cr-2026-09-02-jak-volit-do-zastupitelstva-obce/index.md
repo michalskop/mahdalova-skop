@@ -4,8 +4,8 @@ date: "2026-09-02"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "V komunálních volbách má každý volič tolik hlasů, kolik má obec zastupitelů – v Praze 65. Vysvětlujeme, jak upravit lístek, kdy je hlas neplatný, proč pár křížků u jednotlivců váží méně než jeden u strany a jak se z hlasů stanou mandáty."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "jak volit", "volební systém", "obce"]
 promoted: 1
