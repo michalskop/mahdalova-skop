@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Zvolených žen je o čtyři až pět bodů méně než kandidátek, a tak to zůstává od roku 1994",
+    "subtitle": "Podíl žen mezi kandidáty a zvolenými členy zastupitelstev obcí (%), komunální volby 1994–2026"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {"year": 1994, "serie": "kandidátky", "v": 21.6},
+      {"year": 2002, "serie": "kandidátky", "v": 27.1},
+      {"year": 2010, "serie": "kandidátky", "v": 31.2},
+      {"year": 2014, "serie": "kandidátky", "v": 32.2},
+      {"year": 2018, "serie": "kandidátky", "v": 32.8},
+      {"year": 2022, "serie": "kandidátky", "v": 33.3},
+      {"year": 2026, "serie": "kandidátky", "v": 35.0},
+      {"year": 1994, "serie": "zvolené zastupitelky", "v": 17.7},
+      {"year": 2002, "serie": "zvolené zastupitelky", "v": 22.6},
+      {"year": 2010, "serie": "zvolené zastupitelky", "v": 26.3},
+      {"year": 2014, "serie": "zvolené zastupitelky", "v": 27.1},
+      {"year": 2018, "serie": "zvolené zastupitelky", "v": 28.0},
+      {"year": 2022, "serie": "zvolené zastupitelky", "v": 29.0}
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "scale": {"domain": [1994, 2026]},
+      "axis": {"title": null, "format": "d", "values": [1994, 2002, 2010, 2014, 2018, 2022, 2026]}
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {"domain": [0, 40]},
+      "axis": {"title": null}
+    },
+    "color": {
+      "field": "serie",
+      "type": "nominal",
+      "scale": {"domain": ["kandidátky", "zvolené zastupitelky"], "range": ["#272a59", "#de1743"]},
+      "legend": {"title": null, "orient": "top"}
+    }
+  },
+  "layer": [
+    {"mark": {"type": "line", "strokeWidth": 2.5}},
+    {
+      "mark": {"type": "point", "filled": true, "size": 55},
+      "encoding": {
+        "tooltip": [
+          {"field": "year", "type": "ordinal", "title": "Rok"},
+          {"field": "serie", "type": "nominal", "title": "Řada"},
+          {"field": "v", "type": "quantitative", "title": "Podíl žen (%)", "format": ",.1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "dy": -12, "fontSize": 12, "fontWeight": "bold"},
+      "transform": [{"filter": "datum.year == 2022 || (datum.year == 2026) || datum.year == 1994"}],
+      "encoding": {"text": {"field": "v", "type": "quantitative", "format": ",.1f"}}
+    }
+  ],
+  "_source": "Fórum 50 % podle dat ČSÚ (padesatprocent.cz – Zastoupení žen a mužů v komunálních zastupitelstvech); zvolené za rok 2026 zatím nejsou známé"
+}
