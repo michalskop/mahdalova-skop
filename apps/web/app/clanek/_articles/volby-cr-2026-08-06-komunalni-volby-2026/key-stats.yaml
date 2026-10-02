@@ -1,0 +1,18 @@
+label: Komunální volby 2026 v číslech
+numbers:
+  - value: "9.–10. 10."
+    title: Termín voleb
+    description: Pátek 14–22 h, sobota 8–14 h. Ve stejný víkend se volí i třetina Senátu.
+    color: brand
+  - value: "190 174"
+    title: Kandidátů do obcí
+    description: Nejméně od roku 2002. Vrchol byl v roce 2014, 233 877 kandidátů.
+    color: brandNavy
+  - value: "1 842"
+    title: Obcí s jedinou kandidátkou
+    description: Z 6 258 obcí. Ve třech obcích se volby nekonají vůbec.
+    color: brandOrange
+  - value: "46 %"
+    title: Účast v roce 2022
+    description: K obecním volbám chodí zhruba každý druhý volič, ke sněmovním přes 60 %.
+    color: brandNavy

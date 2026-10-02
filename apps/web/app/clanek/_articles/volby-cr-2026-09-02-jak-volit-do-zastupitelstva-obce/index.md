@@ -13,7 +13,7 @@ promoted: 1
 
 V komunálních volbách 9. a 10. října nemá volič jeden hlas, ale tolik hlasů, kolik má jeho obec zastupitelů. V Praze je to 65, v Brně a Ostravě 55, v nejmenších obcích pět. Počet je vytištěný v záhlaví hlasovacího lístku a je to nejdůležitější číslo, které na něm najdete: kdo dá víc křížků, odevzdá neplatný hlas, kdo jich dá výrazně méně, část svých hlasů nevyužije (§ 34 [zákona o volbách do zastupitelstev obcí](https://www.zakonyprolidi.cz/cs/2001-491)).
 
-Systém voleb do obecních zastupitelstev patří k nejsložitějším, jaké u nás máme. Místo kroužků jako ve sněmovních volbách se tu dělají křížky a dají se kombinovat napříč stranami. Vysvětlujeme, jak lístek upravit, kdy je hlas neplatný a jak se z křížků nakonec stanou mandáty.
+Systém voleb do obecních zastupitelstev patří k nejsložitějším, jaké u nás máme. Místo kroužků jako ve sněmovních volbách se tu dělají křížky a dají se kombinovat napříč stranami. Vysvětlujeme, jak lístek upravit, kdy je hlas neplatný a jak se z křížků nakonec stanou mandáty. Stručný přehled všech pravidel v tabulkách najdete na stránce [Komunální volby 2026](/clanek/volby-cr-2026-08-06-komunalni-volby-2026).
 
 ## Tři způsoby, jak upravit lístek
 

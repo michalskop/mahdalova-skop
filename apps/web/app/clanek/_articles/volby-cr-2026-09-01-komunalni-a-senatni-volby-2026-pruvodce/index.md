@@ -13,7 +13,7 @@ promoted: 1
 
 K posledním komunálním volbám v roce 2022 přišlo 46,07 % voličů ([výsledky KV 2022, volby.gov.cz](https://volby.gov.cz/pls/kv2022/kv1211?xjazyk=CZ&xid=1&xv=1&xdz=7&xnumnuts=0&xstat=1&xvyber=1)). Podobně to bylo ve všech komunálních volbách od roku 2002: účast se drží mezi 44 a 49 %, zatímco ke sněmovním volbám chodí přes 60 % lidí. Přitom zastupitelstva obcí, která se volí letos 9. a 10. října, rozhodují o rozpočtech, které v roce 2025 dosáhly 519 miliard korun výdajů, jak [vysvětlujeme v samostatném textu](/clanek/volby-cr-2026-08-31-co-rozhoduji-radnice).
 
-Ve stejný víkend se volí i třetina Senátu, ve 27 z 81 obvodů. Tento průvodce shrnuje, co je potřeba vědět, a odkazuje na podrobnější texty naší předvolební série.
+Ve stejný víkend se volí i třetina Senátu, ve 27 z 81 obvodů. Tento průvodce shrnuje, co je potřeba vědět, a odkazuje na podrobnější texty naší předvolební série. Všechna pravidla a čísla v přehledných tabulkách najdete na stránce [Komunální volby 2026](/clanek/volby-cr-2026-08-06-komunalni-volby-2026).
 
 ## Kdy, kde a s čím
 
