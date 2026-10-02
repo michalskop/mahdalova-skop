@@ -1,0 +1,319 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Česko má na počet obyvatel nejvíc obcí v Evropě",
+    "subtitle": "Počet obcí na 100 000 obyvatel, 2025. Obec = základní jednotka místní samosprávy."
+  },
+  "width": 600,
+  "height": 532,
+  "data": {
+    "values": [
+      {
+        "zeme": "Česko",
+        "v": 57.4,
+        "obci": 6258,
+        "obyv_na_obec": 1743,
+        "barva": "#de1743"
+      },
+      {
+        "zeme": "Slovensko",
+        "v": 54.0,
+        "obci": 2927,
+        "obyv_na_obec": 1852,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Francie",
+        "v": 50.6,
+        "obci": 34875,
+        "obyv_na_obec": 1975,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Maďarsko",
+        "v": 33.1,
+        "obci": 3155,
+        "obyv_na_obec": 3024,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Švýcarsko",
+        "v": 23.3,
+        "obci": 2110,
+        "obyv_na_obec": 4290,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Rakousko",
+        "v": 22.7,
+        "obci": 2092,
+        "obyv_na_obec": 4396,
+        "barva": "#06677d"
+      },
+      {
+        "zeme": "Rumunsko",
+        "v": 16.7,
+        "obci": 3181,
+        "obyv_na_obec": 5987,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Španělsko",
+        "v": 16.6,
+        "obci": 8132,
+        "obyv_na_obec": 6041,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Lucembursko",
+        "v": 14.7,
+        "obci": 100,
+        "obyv_na_obec": 6820,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Chorvatsko",
+        "v": 14.4,
+        "obci": 556,
+        "obyv_na_obec": 6968,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Itálie",
+        "v": 13.4,
+        "obci": 7894,
+        "obyv_na_obec": 7467,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Německo",
+        "v": 12.9,
+        "obci": 10749,
+        "obyv_na_obec": 7775,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Malta",
+        "v": 11.8,
+        "obci": 68,
+        "obyv_na_obec": 8445,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Slovinsko",
+        "v": 9.9,
+        "obci": 212,
+        "obyv_na_obec": 10051,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Polsko",
+        "v": 6.8,
+        "obci": 2479,
+        "obyv_na_obec": 14723,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Norsko",
+        "v": 6.4,
+        "obci": 357,
+        "obyv_na_obec": 15670,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Estonsko",
+        "v": 5.7,
+        "obci": 78,
+        "obyv_na_obec": 17564,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Finsko",
+        "v": 5.5,
+        "obci": 308,
+        "obyv_na_obec": 18299,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Belgie",
+        "v": 4.8,
+        "obci": 565,
+        "obyv_na_obec": 21033,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Bulharsko",
+        "v": 4.1,
+        "obci": 265,
+        "obyv_na_obec": 24292,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Řecko",
+        "v": 3.2,
+        "obci": 332,
+        "obyv_na_obec": 31242,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Švédsko",
+        "v": 2.7,
+        "obci": 290,
+        "obyv_na_obec": 36509,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Portugalsko",
+        "v": 2.7,
+        "obci": 308,
+        "obyv_na_obec": 36972,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Lotyšsko",
+        "v": 2.3,
+        "obci": 42,
+        "obyv_na_obec": 44299,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Litva",
+        "v": 2.1,
+        "obci": 60,
+        "obyv_na_obec": 48178,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Nizozemsko",
+        "v": 1.9,
+        "obci": 342,
+        "obyv_na_obec": 52760,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Dánsko",
+        "v": 1.6,
+        "obci": 98,
+        "obyv_na_obec": 61150,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Irsko",
+        "v": 0.6,
+        "obci": 31,
+        "obyv_na_obec": 175493,
+        "barva": "#c8c8bc"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Česko",
+        "Slovensko",
+        "Francie",
+        "Maďarsko",
+        "Švýcarsko",
+        "Rakousko",
+        "Rumunsko",
+        "Španělsko",
+        "Lucembursko",
+        "Chorvatsko",
+        "Itálie",
+        "Německo",
+        "Malta",
+        "Slovinsko",
+        "Polsko",
+        "Norsko",
+        "Estonsko",
+        "Finsko",
+        "Belgie",
+        "Bulharsko",
+        "Řecko",
+        "Švédsko",
+        "Portugalsko",
+        "Lotyšsko",
+        "Litva",
+        "Nizozemsko",
+        "Dánsko",
+        "Irsko"
+      ],
+      "axis": {
+        "title": null,
+        "labelFontSize": 12,
+        "ticks": false,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "height": 13
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "v",
+            "title": "Obcí na 100 tis. obyv.",
+            "format": ",.1f"
+          },
+          {
+            "field": "obci",
+            "title": "Obcí",
+            "format": ",.0f"
+          },
+          {
+            "field": "obyv_na_obec",
+            "title": "Průměrně obyvatel na obec",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ",.1f"
+        }
+      }
+    }
+  ],
+  "_source": "OECD – Subnational government structure and finance 2025 (počty obcí), Eurostat LAU 2025 (Bulharsko, Chorvatsko, Malta, Rumunsko), Eurostat – obyvatelé k 1. 1. 2025. Česko včetně 4 vojenských újezdů. Kypr bez srovnatelného údaje."
+}

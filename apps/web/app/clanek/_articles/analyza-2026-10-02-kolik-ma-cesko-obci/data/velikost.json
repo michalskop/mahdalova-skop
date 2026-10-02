@@ -1,0 +1,230 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Polovina českých obcí má méně než 500 obyvatel, rakouských jen každá dvacátá",
+    "subtitle": "Podíl obcí podle počtu obyvatel (v %), k 1. 1. 2026"
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "sk": "do 199",
+        "i": 0,
+        "zeme": "Česko",
+        "v": 21.43,
+        "n": 1340
+      },
+      {
+        "sk": "do 199",
+        "i": 0,
+        "zeme": "Rakousko",
+        "v": 0.67,
+        "n": 14
+      },
+      {
+        "sk": "200–499",
+        "i": 1,
+        "zeme": "Česko",
+        "v": 31.85,
+        "n": 1992
+      },
+      {
+        "sk": "200–499",
+        "i": 1,
+        "zeme": "Rakousko",
+        "v": 4.59,
+        "n": 96
+      },
+      {
+        "sk": "500–999",
+        "i": 2,
+        "zeme": "Česko",
+        "v": 22.11,
+        "n": 1383
+      },
+      {
+        "sk": "500–999",
+        "i": 2,
+        "zeme": "Rakousko",
+        "v": 14.2,
+        "n": 297
+      },
+      {
+        "sk": "1 000–1 999",
+        "i": 3,
+        "zeme": "Česko",
+        "v": 12.92,
+        "n": 808
+      },
+      {
+        "sk": "1 000–1 999",
+        "i": 3,
+        "zeme": "Rakousko",
+        "v": 34.56,
+        "n": 723
+      },
+      {
+        "sk": "2 000–4 999",
+        "i": 4,
+        "zeme": "Česko",
+        "v": 7.29,
+        "n": 456
+      },
+      {
+        "sk": "2 000–4 999",
+        "i": 4,
+        "zeme": "Rakousko",
+        "v": 32.7,
+        "n": 684
+      },
+      {
+        "sk": "5 000–9 999",
+        "i": 5,
+        "zeme": "Česko",
+        "v": 2.29,
+        "n": 143
+      },
+      {
+        "sk": "5 000–9 999",
+        "i": 5,
+        "zeme": "Rakousko",
+        "v": 9.08,
+        "n": 190
+      },
+      {
+        "sk": "10 000–49 999",
+        "i": 6,
+        "zeme": "Česko",
+        "v": 1.82,
+        "n": 114
+      },
+      {
+        "sk": "10 000–49 999",
+        "i": 6,
+        "zeme": "Rakousko",
+        "v": 3.68,
+        "n": 77
+      },
+      {
+        "sk": "50 000+",
+        "i": 7,
+        "zeme": "Česko",
+        "v": 0.29,
+        "n": 18
+      },
+      {
+        "sk": "50 000+",
+        "i": 7,
+        "zeme": "Rakousko",
+        "v": 0.53,
+        "n": 11
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "sk",
+      "type": "nominal",
+      "sort": [
+        "do 199",
+        "200–499",
+        "500–999",
+        "1 000–1 999",
+        "2 000–4 999",
+        "5 000–9 999",
+        "10 000–49 999",
+        "50 000+"
+      ],
+      "axis": {
+        "title": "počet obyvatel obce",
+        "labelAngle": 0,
+        "labelFontSize": 10.5
+      }
+    },
+    "xOffset": {
+      "field": "zeme",
+      "sort": [
+        "Česko",
+        "Rakousko"
+      ]
+    },
+    "color": {
+      "field": "zeme",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Česko",
+          "Rakousko"
+        ],
+        "range": [
+          "#de1743",
+          "#06677d"
+        ]
+      },
+      "legend": {
+        "title": null
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "labelExpr": "datum.label + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "sk",
+            "title": "Obyvatel"
+          },
+          {
+            "field": "v",
+            "title": "Podíl obcí (%)",
+            "format": ",.1f"
+          },
+          {
+            "field": "n",
+            "title": "Počet obcí",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -7,
+        "fontSize": 10.5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ".0f"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ – počet obyvatel v obcích k 1. 1. 2026 (datová sada OBY02A, bez vojenských újezdů); Statistik Austria – Gemeindeverzeichnis 2026"
+}

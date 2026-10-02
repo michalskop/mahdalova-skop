@@ -1,0 +1,211 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Nejmenší obce stojí na obyvatele skoro dvakrát víc než obce s tisícovkou lidí",
+    "subtitle": "Výdaje obcí na zastupitelstvo a obecní úřad v Kč na obyvatele, 2025. Obce bez rozšířené působnosti, bez Prahy."
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "sk": "do 199",
+        "slozka": "obecní úřad (§ 6171)",
+        "v": 6612.0,
+        "celkem": 10713.0,
+        "n": 1343
+      },
+      {
+        "sk": "do 199",
+        "slozka": "zastupitelstvo (§ 6112)",
+        "v": 4101.0,
+        "celkem": 10713.0,
+        "n": 1343
+      },
+      {
+        "sk": "200–499",
+        "slozka": "obecní úřad (§ 6171)",
+        "v": 5194.0,
+        "celkem": 8171.0,
+        "n": 1998
+      },
+      {
+        "sk": "200–499",
+        "slozka": "zastupitelstvo (§ 6112)",
+        "v": 2978.0,
+        "celkem": 8171.0,
+        "n": 1998
+      },
+      {
+        "sk": "500–999",
+        "slozka": "obecní úřad (§ 6171)",
+        "v": 4416.0,
+        "celkem": 6555.0,
+        "n": 1378
+      },
+      {
+        "sk": "500–999",
+        "slozka": "zastupitelstvo (§ 6112)",
+        "v": 2139.0,
+        "celkem": 6555.0,
+        "n": 1378
+      },
+      {
+        "sk": "1 000–1 999",
+        "slozka": "obecní úřad (§ 6171)",
+        "v": 3966.0,
+        "celkem": 5537.0,
+        "n": 804
+      },
+      {
+        "sk": "1 000–1 999",
+        "slozka": "zastupitelstvo (§ 6112)",
+        "v": 1571.0,
+        "celkem": 5537.0,
+        "n": 804
+      },
+      {
+        "sk": "2 000–4 999",
+        "slozka": "obecní úřad (§ 6171)",
+        "v": 4360.0,
+        "celkem": 5351.0,
+        "n": 442
+      },
+      {
+        "sk": "2 000–4 999",
+        "slozka": "zastupitelstvo (§ 6112)",
+        "v": 990.0,
+        "celkem": 5351.0,
+        "n": 442
+      },
+      {
+        "sk": "5 000–9 999",
+        "slozka": "obecní úřad (§ 6171)",
+        "v": 5050.0,
+        "celkem": 5689.0,
+        "n": 75
+      },
+      {
+        "sk": "5 000–9 999",
+        "slozka": "zastupitelstvo (§ 6112)",
+        "v": 639.0,
+        "celkem": 5689.0,
+        "n": 75
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "sk",
+      "type": "nominal",
+      "sort": [
+        "do 199",
+        "200–499",
+        "500–999",
+        "1 000–1 999",
+        "2 000–4 999",
+        "5 000–9 999"
+      ],
+      "axis": {
+        "title": "počet obyvatel obce",
+        "labelAngle": 0,
+        "labelFontSize": 10.5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "stack": "zero",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "format": ",.0f"
+          }
+        },
+        "color": {
+          "field": "slozka",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "zastupitelstvo (§ 6112)",
+              "obecní úřad (§ 6171)"
+            ],
+            "range": [
+              "#de1743",
+              "#8f9dc9"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        },
+        "order": {
+          "field": "slozka",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Obyvatel"
+          },
+          {
+            "field": "slozka",
+            "title": "Položka"
+          },
+          {
+            "field": "v",
+            "title": "Kč na obyvatele",
+            "format": ",.0f"
+          },
+          {
+            "field": "celkem",
+            "title": "Celkem Kč na obyvatele",
+            "format": ",.0f"
+          },
+          {
+            "field": "n",
+            "title": "Počet obcí",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.slozka == 'zastupitelstvo (§ 6112)'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1a1a1a"
+      },
+      "encoding": {
+        "y": {
+          "field": "celkem",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "celkem",
+          "type": "quantitative",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+  "_source": "Monitor státní pokladny (MF) – výkaz FIN 2-12 M za 12/2025, paragrafy 6112 a 6171, třídy 5 a 6; ČSÚ – obyvatelé k 1. 1. 2025. Vážený průměr (součet výdajů / součet obyvatel). Obce nad 10 000 obyvatel jsou téměř všechny obce s rozšířenou působností, jejichž úřady vykonávají i státní správu – proto v grafu nejsou."
+}
