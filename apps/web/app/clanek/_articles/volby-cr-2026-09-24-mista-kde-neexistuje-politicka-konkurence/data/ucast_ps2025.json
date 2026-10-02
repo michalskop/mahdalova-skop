@@ -1,0 +1,182 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Sněmovní volby 2025"
+ },
+ "width": 300,
+ "height": 280,
+ "data": {
+  "values": [
+   {
+    "vel": "do 199 obyvatel",
+    "skup": "Jediná kandidátka s náhradníky",
+    "volby": "Sněmovní 2025",
+    "obci": 383,
+    "ucast": 74.2
+   },
+   {
+    "vel": "do 199 obyvatel",
+    "skup": "Jediná kandidátka, zvoleni všichni",
+    "volby": "Sněmovní 2025",
+    "obci": 259,
+    "ucast": 75.1
+   },
+   {
+    "vel": "do 199 obyvatel",
+    "skup": "Soutěž víc kandidátek",
+    "volby": "Sněmovní 2025",
+    "obci": 660,
+    "ucast": 75.3
+   },
+   {
+    "vel": "200–499",
+    "skup": "Jediná kandidátka s náhradníky",
+    "volby": "Sněmovní 2025",
+    "obci": 424,
+    "ucast": 73.1
+   },
+   {
+    "vel": "200–499",
+    "skup": "Jediná kandidátka, zvoleni všichni",
+    "volby": "Sněmovní 2025",
+    "obci": 293,
+    "ucast": 72.2
+   },
+   {
+    "vel": "200–499",
+    "skup": "Soutěž víc kandidátek",
+    "volby": "Sněmovní 2025",
+    "obci": 1244,
+    "ucast": 72.4
+   },
+   {
+    "vel": "500–999",
+    "skup": "Jediná kandidátka s náhradníky",
+    "volby": "Sněmovní 2025",
+    "obci": 75,
+    "ucast": 72.4
+   },
+   {
+    "vel": "500–999",
+    "skup": "Jediná kandidátka, zvoleni všichni",
+    "volby": "Sněmovní 2025",
+    "obci": 214,
+    "ucast": 72.3
+   },
+   {
+    "vel": "500–999",
+    "skup": "Soutěž víc kandidátek",
+    "volby": "Sněmovní 2025",
+    "obci": 1081,
+    "ucast": 72.3
+   },
+   {
+    "vel": "1 000–1 999",
+    "skup": "Jediná kandidátka, zvoleni všichni",
+    "volby": "Sněmovní 2025",
+    "obci": 90,
+    "ucast": 72.7
+   },
+   {
+    "vel": "1 000–1 999",
+    "skup": "Soutěž víc kandidátek",
+    "volby": "Sněmovní 2025",
+    "obci": 681,
+    "ucast": 71.3
+   },
+   {
+    "vel": "2 000 a víc",
+    "skup": "Jediná kandidátka, zvoleni všichni",
+    "volby": "Sněmovní 2025",
+    "obci": 21,
+    "ucast": 71.0
+   },
+   {
+    "vel": "2 000 a víc",
+    "skup": "Soutěž víc kandidátek",
+    "volby": "Sněmovní 2025",
+    "obci": 686,
+    "ucast": 67.2
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar"
+ },
+ "encoding": {
+  "x": {
+   "field": "vel",
+   "type": "ordinal",
+   "sort": [
+    "do 199 obyvatel",
+    "200–499",
+    "500–999",
+    "1 000–1 999",
+    "2 000 a víc"
+   ],
+   "axis": {
+    "title": null,
+    "labelAngle": -30
+   }
+  },
+  "xOffset": {
+   "field": "skup",
+   "sort": [
+    "Jediná kandidátka, zvoleni všichni",
+    "Jediná kandidátka s náhradníky",
+    "Soutěž víc kandidátek"
+   ]
+  },
+  "y": {
+   "field": "ucast",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     0,
+     85
+    ]
+   },
+   "axis": {
+    "title": null,
+    "labelExpr": "datum.label + ' %'"
+   }
+  },
+  "color": {
+   "field": "skup",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Jediná kandidátka, zvoleni všichni",
+     "Jediná kandidátka s náhradníky",
+     "Soutěž víc kandidátek"
+    ],
+    "range": [
+     "#6e227d",
+     "#c49ad8",
+     "#bcbcb0"
+    ]
+   },
+   "legend": null
+  },
+  "tooltip": [
+   {
+    "field": "vel",
+    "title": "Velikost obce"
+   },
+   {
+    "field": "skup",
+    "title": "Typ obce v KV 2022"
+   },
+   {
+    "field": "obci",
+    "title": "Obcí",
+    "format": ",.0f"
+   },
+   {
+    "field": "ucast",
+    "title": "Účast %",
+    "format": ".1f"
+   }
+  ]
+ }
+}

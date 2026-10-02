@@ -29,6 +29,7 @@ import VegaChart from '@/components/charts/VegaChart';
 import ChartRow from '@/components/charts/ChartRow';
 import AnimatedBars from '@/components/charts/AnimatedBars';
 import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
+import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import { Gauge } from '@repo/ui/components/Gauge';
@@ -426,6 +427,7 @@ export function ArticleRenderer({
     AnimatedBars,
     CduPredictionTimeline,
     CduThresholdDots,
+    ObceKandidatkyMap,
 
   };
 
