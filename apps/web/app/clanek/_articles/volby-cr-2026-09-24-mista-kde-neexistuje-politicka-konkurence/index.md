@@ -15,7 +15,7 @@ V komunálních volbách 9. a 10. října bude mít 1 830 z 6 254 obcí jedinou 
   geoUrl="/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-geo.json"
   dataUrl="/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-data.json"
   title="Kde o zastupitelstvu nerozhodují voliči, ale nabídka kandidátů"
-  subtitle="Všech 6 254 obcí podle toho, z čeho mohou voliči vybírat. Přepínejte mezi volbami, najeďte na obec nebo ji vyhledejte."
+  subtitle="Všech 6 254 obcí podle toho, z čeho mohou voliči vybírat. Přepínejte mezi volbami, kliknutím na legendu skupiny skryjte, najeďte na obec nebo ji vyhledejte."
   source="volby.gov.cz – registry kandidátů a výsledky komunálních voleb 1994–2026, řádný termín; hranice obcí: ČSÚ, volební okrsky 2022"
 />
 

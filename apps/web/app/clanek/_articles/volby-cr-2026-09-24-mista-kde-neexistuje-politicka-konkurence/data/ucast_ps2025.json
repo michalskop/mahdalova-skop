@@ -178,5 +178,7 @@
     "format": ".1f"
    }
   ]
- }
+ },
+ "_toggle_legend": true,
+ "_legend_hide_mode": "filter"
 }

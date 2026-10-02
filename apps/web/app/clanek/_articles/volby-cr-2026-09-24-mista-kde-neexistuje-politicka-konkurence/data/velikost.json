@@ -291,12 +291,7 @@
      "#c49ad8"
     ]
    },
-   "legend": {
-    "title": "Velikost obce",
-    "orient": "top",
-    "direction": "horizontal",
-    "labelLimit": 400
-   }
+   "legend": null
   }
  },
  "layer": [
@@ -341,5 +336,6 @@
    }
   }
  ],
- "_source": "volby.gov.cz – otevřená data komunálních voleb 2002–2026 (počet obyvatel uvádí ČSÚ k danému roku), řádný termín"
+ "_source": "volby.gov.cz – otevřená data komunálních voleb 2002–2026 (počet obyvatel uvádí ČSÚ k danému roku), řádný termín",
+ "_toggle_legend": true
 }

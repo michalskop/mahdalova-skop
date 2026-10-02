@@ -23,6 +23,7 @@ const COL: Record<number, string> = {
   4: '#de1743', // brand.6 – nikdo nekandidoval
 };
 const NODATA = '#f8f6f0';   // background.2 – obec tehdy nebyla samostatná
+const HIDDEN = '#f3f1e9';   // background.3 – kategorie vypnutá v legendě
 const INK = '#101432';      // brandNavy.9
 const MUTED = '#4c4f8e';    // brandNavy.7
 const GRID = '#eeeae2';     // background.4
@@ -101,6 +102,15 @@ export default function ObceKandidatkyMap({ geoUrl, dataUrl, title, subtitle, so
   const [hover, setHover] = useState<{ id: string; x: number; y: number } | null>(null);
   const [query, setQuery] = useState('');
   const [picked, setPicked] = useState<string | null>(null);
+  // klikací legenda: vypnuté kategorie se v mapě vybarví neutrálně
+  const [off, setOff] = useState<Set<number>>(() => new Set());
+  const toggleCat = (c: number) => setOff((prev) => {
+    const next = new Set(prev);
+    if (next.has(c)) next.delete(c);
+    else next.add(c);
+    return next;
+  });
+  const fillFor = (r: YearRec | undefined) => (!r ? NODATA : off.has(r[0]) ? HIDDEN : COL[r[0]]);
 
   useEffect(() => {
     let alive = true;
@@ -187,15 +197,29 @@ export default function ObceKandidatkyMap({ geoUrl, dataUrl, title, subtitle, so
 
         {/* Legenda s počty pro zvolený rok */}
         <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: '3px 18px', fontSize: 14, marginBottom: 8 }}>
-          {LEGEND_ORDER.map((c) => (
-            <div key={c} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span style={{ width: 13, height: 13, borderRadius: 2, background: COL[c], flex: '0 0 auto', border: c === 0 ? '1px solid #d4d4c8' : 'none' }} />
-              <span>
-                {LABEL[c]}: <strong>{nf(counts[c])}</strong>
-                {total > 0 && c !== 0 && <span style={{ color: MUTED }}> ({(counts[c] / total * 100).toFixed(1).replace('.', ',')} %)</span>}
-              </span>
-            </div>
-          ))}
+          {LEGEND_ORDER.map((c) => {
+            const on = !off.has(c);
+            return (
+              <button
+                key={c}
+                type="button"
+                onClick={() => toggleCat(c)}
+                aria-pressed={on}
+                title={on ? 'Kliknutím skryjete v mapě' : 'Kliknutím zobrazíte v mapě'}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 8, textAlign: 'left', padding: 0, border: 'none',
+                  background: 'none', cursor: 'pointer', fontFamily: FONT, fontSize: 14, color: INK,
+                  opacity: on ? 1 : 0.45, transition: 'opacity 0.15s',
+                }}
+              >
+                <span style={{ width: 13, height: 13, borderRadius: 2, background: on ? COL[c] : 'transparent', flex: '0 0 auto', border: on && c !== 0 ? 'none' : `1.5px solid ${c === 0 ? '#bcbcb0' : COL[c]}`, boxSizing: 'border-box' }} />
+                <span>
+                  {LABEL[c]}: <strong>{nf(counts[c])}</strong>
+                  {total > 0 && c !== 0 && <span style={{ color: MUTED }}> ({(counts[c] / total * 100).toFixed(1).replace('.', ',')} %)</span>}
+                </span>
+              </button>
+            );
+          })}
           {missing > 0 && (
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span style={{ width: 13, height: 13, borderRadius: 2, background: NODATA, flex: '0 0 auto', border: '1px solid #d4d4c8' }} />
@@ -246,8 +270,8 @@ export default function ObceKandidatkyMap({ geoUrl, dataUrl, title, subtitle, so
                     <path
                       key={id}
                       d={d}
-                      fill={r ? COL[r[0]] : NODATA}
-                      stroke={r && r[0] !== 0 ? 'none' : '#fff'}
+                      fill={fillFor(r)}
+                      stroke={r && r[0] !== 0 && !off.has(r[0]) ? 'none' : '#fff'}
                       strokeWidth={0.25}
                       onMouseMove={(e) => {
                         const box = wrapRef.current?.getBoundingClientRect();
@@ -274,11 +298,12 @@ export default function ObceKandidatkyMap({ geoUrl, dataUrl, title, subtitle, so
           {focus && (
             <div
               style={{
-                // najetí myší / ťuknutí = plovoucí tooltip; vyhledaná obec = detail pod mapou
-                position: hover ? 'absolute' : 'static', pointerEvents: 'none',
-                marginTop: hover ? undefined : 8,
+                // najetí myší / ťuknutí = tooltip u kurzoru; vyhledaná obec = detail v levém dolním rohu
+                // mapy (prázdné místo pod Šumavou). Vždy absolutně, aby se rozvržení stránky nehýbalo.
+                position: 'absolute', pointerEvents: 'none',
                 top: hover ? Math.min(Math.max(0, hover.y - 70), height - 90) : undefined,
-                left: hover ? (hover.x > width - 260 ? undefined : hover.x + 14) : undefined,
+                bottom: hover ? undefined : 0,
+                left: hover ? (hover.x > width - 260 ? undefined : hover.x + 14) : 0,
                 right: hover && hover.x > width - 260 ? width - hover.x + 14 : undefined,
                 background: '#fff', border: `1px solid ${GRID}`, borderRadius: 6, padding: '8px 10px',
                 fontSize: 13, lineHeight: 1.45, boxShadow: '0 4px 14px rgba(16,20,50,.10)', maxWidth: 260, zIndex: 2,

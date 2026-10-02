@@ -340,13 +340,7 @@
      "#de1743"
     ]
    },
-   "legend": {
-    "title": null,
-    "orient": "top",
-    "direction": "vertical",
-    "columns": 2,
-    "labelLimit": 400
-   }
+   "legend": null
   },
   "order": {
    "field": "ord",
@@ -373,5 +367,7 @@
    }
   ]
  },
- "_source": "volby.gov.cz – otevřená data a výsledky komunálních voleb 1994–2026, řádný termín, zastupitelstva obcí (bez městských částí)"
+ "_source": "volby.gov.cz – otevřená data a výsledky komunálních voleb 1994–2026, řádný termín, zastupitelstva obcí (bez městských částí)",
+ "_toggle_legend": true,
+ "_legend_hide_mode": "filter"
 }

@@ -160,12 +160,7 @@
      "#bcbcb0"
     ]
    },
-   "legend": {
-    "title": null,
-    "orient": "top",
-    "direction": "vertical",
-    "labelLimit": 400
-   }
+   "legend": null
   }
  },
  "layer": [
@@ -210,5 +205,6 @@
    }
   }
  ],
- "_source": "volby.gov.cz – registry kandidátů KV2002–KV2026; shoda jména a příjmení v téže obci (změnu příjmení, např. po sňatku, nezachytí)"
+ "_source": "volby.gov.cz – registry kandidátů KV2002–KV2026; shoda jména a příjmení v téže obci (změnu příjmení, např. po sňatku, nezachytí)",
+ "_toggle_legend": true
 }

@@ -19,7 +19,12 @@ LBL = {2: 'Jediná kandidátka, zvoleni všichni', 1: 'Jediná kandidátka s ná
        3: 'Víc kandidátek, ale zvoleni všichni', 4: 'Nikdo nekandidoval'}
 
 
-def save(name, spec):
+def save(name, spec, hide_mode=None):
+    # klikací (vypínací) legenda = sdílený ChartLegend; nativní legendu Vegy vypínáme
+    spec['encoding']['color']['legend'] = None
+    spec['_toggle_legend'] = True
+    if hide_mode:
+        spec['_legend_hide_mode'] = hide_mode
     json.dump(spec, open(f'{OUT}/{name}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
@@ -49,7 +54,7 @@ save('vyvoj', {
                     {'field': 'n', 'title': 'Obcí', 'format': ',.0f'}, {'field': 'pct', 'title': '% všech obcí', 'format': '.1f'}],
     },
     '_source': SRC,
-})
+}, hide_mode='filter')
 
 # ---------- 2) podle velikosti obce ----------
 bins = [0, 200, 500, 1000, 2000, 10**9]
@@ -129,10 +134,9 @@ def ucast_spec(volby, title):
     }
 
 
-save('ucast_kv2022', ucast_spec('Komunální 2022', 'Komunální volby 2022'))
+save('ucast_kv2022', ucast_spec('Komunální 2022', 'Komunální volby 2022'), hide_mode='filter')
 sp = ucast_spec('Sněmovní 2025', 'Sněmovní volby 2025')
-sp['encoding']['color']['legend'] = None  # legenda jen u prvního grafu v řadě
-save('ucast_ps2025', sp)
+save('ucast_ps2025', sp, hide_mode='filter')
 
 # ---------- 4) stejní lidé: podíl zvolených, kteří seděli v zastupitelstvu už předchozí období ----------
 C, E = {}, {}

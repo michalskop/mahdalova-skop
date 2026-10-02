@@ -156,12 +156,7 @@
      "#bcbcb0"
     ]
    },
-   "legend": {
-    "title": null,
-    "orient": "top",
-    "direction": "vertical",
-    "labelLimit": 400
-   }
+   "legend": null
   },
   "tooltip": [
    {
@@ -183,5 +178,7 @@
     "format": ".1f"
    }
   ]
- }
+ },
+ "_toggle_legend": true,
+ "_legend_hide_mode": "filter"
 }
