@@ -20,9 +20,9 @@ Hustotou obcí se Česku blíží jen Slovensko (54 obcí na 100 000 obyvatel) a
 
 ## Polovina českých obcí má méně než 500 obyvatel
 
-<RelatedArticles preset="sidebar" slugs={["volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu", "volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026"]} position="right" heading="🔻🔻🔻" />Podle [počtu obyvatel v obcích k 1. lednu 2026 od ČSÚ](https://data.csu.gov.cz/opendata/sady/OBY02A/distribuce/csv) má méně než 500 obyvatel 3 332 českých obcí, 53 procent všech. Žije v nich 828 tisíc lidí, 7,6 procenta obyvatel země. V Rakousku je takových obcí podle [obecního rejstříku Statistik Austria](https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods) 110, tedy 5 procent.
+Podle [počtu obyvatel v obcích k 1. lednu 2026 od ČSÚ](https://data.csu.gov.cz/opendata/sady/OBY02A/distribuce/csv) má méně než 500 obyvatel 3 332 českých obcí, 53 procent všech. Žije v nich 828 tisíc lidí, 7,6 procenta obyvatel země. V Rakousku je takových obcí podle [obecního rejstříku Statistik Austria](https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods) 110, tedy 5 procent.
 
-Pod tisícovkou obyvatel jsou v Česku tři čtvrtiny obcí (4 715), přitom v nich bydlí šestina lidí. Rakouských obcí s méně než tisícem obyvatel je 407, pětina. Nejmenší českou obcí je Vysoká Lhota na Pelhřimovsku se 16 obyvateli, nejmenší rakouskou tyrolský Gramais se 49.
+<RelatedArticles preset="sidebar" slugs={["volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu", "volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026"]} position="right" heading="🔻🔻🔻" />Pod tisícovkou obyvatel jsou v Česku tři čtvrtiny obcí (4 715), přitom v nich bydlí šestina lidí. Rakouských obcí s méně než tisícem obyvatel je 407, pětina. Nejmenší českou obcí je Vysoká Lhota na Pelhřimovsku se 16 obyvateli, nejmenší rakouskou tyrolský Gramais se 49.
 
 Statistický úřad přitom vykazuje obcí 6 258. Čtyři z nich jsou vojenské újezdy Boletice, Březina, Hradiště a Libavá, které nemají žádné obyvatele a nevolí se v nich. Skutečných obcí se zastupitelstvem je 6 254 a letos se volí v 6 251 z nich. Ve Slavníči nikdo nepodal kandidátní listinu, v Krchlebech a Rokytovci se nesešlo dost kandidátů.
 
