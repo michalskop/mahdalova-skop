@@ -101,6 +101,10 @@ Data for `ScrollyTelling`, `Timeline`, `MotionsStancesTable`, and `RelatedArticl
 | Matomo siteId | `4` | `5` |
 | Base URL env | `NEXT_PUBLIC_BASE_URL` defaults to `https://www.mahdalova-skop.cz` | defaults to `https://www.datajournalism.studio` |
 
+### Publishing (git)
+
+**HARD RULE – push to `main` = publication.** The repo is public and the site has no draft state: every article folder that reaches `main` goes live after the Cloudflare Pages deploy. Commit freely in a working branch/worktree, but push `main` only on an explicit instruction in the current chat („publikuj", „pushni", „nasaď"); before pushing, list the outgoing commits and affected articles/URLs, and make sure `npm run build` passes. Never force-push, reset or rebase published `main` history – fix with a new commit. Unfinished articles stay unpushed in their working branch. "Ukliď po sobě" never means archiving/deleting chats. Canonical: `docs/redakcni-styl/REDAKCNI_MANUAL.md` → *Od úpravy po publikaci: bezpečný postup (git)*.
+
 ### `gh` CLI
 
 Run `gh` commands with `GIT_CONFIG_NOSYSTEM=1` prefix (installed via snap):

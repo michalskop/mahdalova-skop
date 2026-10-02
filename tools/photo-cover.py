@@ -120,6 +120,14 @@ def main():
     ap.add_argument("--accent", default="crimson", choices=sorted(PALETTE), help="barva kickeru/linky")
     ap.add_argument("--scrim", default="navy", choices=sorted(SCRIMS),
                     help="barva scrimu/pozadí (tmavý [9] odstín); do frontmatteru dej odpovídající coverBg")
+    ap.add_argument("--veil", type=float, default=0.14,
+                    help="síla celoplošného závoje barvou scrimu přes fotku (0–1); pestré fotky ~0.3–0.4")
+    ap.add_argument("--scale", type=float, default=1.0,
+                    help="násobek velikostí písma/okrajů/odznaku (1.0 = OG 1200×630; pro 1500×1200 ~1.6)")
+    ap.add_argument("--text-width", type=float, default=0.633,
+                    help="max. šířka textového bloku jako podíl šířky plátna")
+    ap.add_argument("--headline-center", action="store_true",
+                    help="headline svisle vycentrovat mezi spodní hranu kickeru a horní hranu odznaku DataTimes.cz")
     ap.add_argument("--crop-bias", type=float, default=0.42,
                     help="0=drž horní okraj, 1=spodní; kolik ubrat shora při cover-crop")
     ap.add_argument("--width", type=int, default=1200)
@@ -159,7 +167,7 @@ def main():
         top = int((sh - new_h) * args.crop_bias)
         img = img.crop((0, top, sw, top + new_h))
     img = img.resize((W, H), Image.LANCZOS)
-    img = Image.blend(img, Image.new("RGB", (W, H), scrim_col), 0.14)
+    img = Image.blend(img, Image.new("RGB", (W, H), scrim_col), args.veil)
 
     # 2) navy scrim: gradient zleva + odspodu
     scrim = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -208,39 +216,54 @@ def main():
                 out.append(cur)
         return out
 
-    MX, MAXW = 66, int(W * 0.633)
+    S = args.scale
+    MX, MAXW = int(66 * S), int(W * args.text_width)
+    d0 = ImageDraw.Draw(img)
+
+    # odznak DataTimes.cz – pozice potřebná už pro centrování headlinu
+    RH = int(74 * S)
+    bf = sans_sb(int(34 * S))
+    btxt = "DataTimes.cz"
+    bw = d0.textlength(btxt, font=bf)
+    rx = int(W - 40 * S - bw - 14 * S - RH)
+    ry = int(H - 40 * S - RH - args.badge_lift * S)
 
     # 3) kicker + linka
-    kf = sans_sb(23)
-    T = args.text_top
-    shadow_text((MX, T), args.kicker, kf, (*accent, 255), ls=6, sh_alpha=120)
+    kf = sans_sb(int(23 * S))
+    T = int(args.text_top * S)
+    ls_k = int(6 * S)
+    shadow_text((MX, T), args.kicker, kf, (*accent, 255), ls=ls_k, sh_alpha=120)
     if args.section:
-        kw = sum(ImageDraw.Draw(img).textlength(c, font=kf) + 6 for c in args.kicker)
-        shadow_text((MX + kw + 8, T), args.section, kf, (*PAPER, 235), ls=5, sh_alpha=120)
-    ImageDraw.Draw(img).rectangle([MX, T + 42, MX + 54, T + 46], fill=(*accent, 255))
+        kw = sum(d0.textlength(c, font=kf) + ls_k for c in args.kicker)
+        shadow_text((MX + kw + 8 * S, T), args.section, kf, (*PAPER, 235), ls=int(5 * S), sh_alpha=120)
+    d0.rectangle([MX, T + int(42 * S), MX + int(54 * S), T + int(46 * S)], fill=(*accent, 255))
+    kicker_bottom = T + kf.getbbox(args.kicker)[3]
 
     # 4) eyebrow + headline
-    y = T + 68
+    y = T + int(68 * S)
     if args.eyebrow:
-        shadow_text((MX, y), args.eyebrow, serif_sb(40), (*PAPER, 255))
-        y = T + 132
-    hf = serif_sb(58)
-    for ln in wrap(args.headline, hf, MAXW):
+        shadow_text((MX, y), args.eyebrow, serif_sb(int(40 * S)), (*PAPER, 255))
+        y = T + int(132 * S)
+    HS = int(58 * S)
+    hf = serif_sb(HS)
+    LH = int(HS * 1.18)
+    lines = wrap(args.headline, hf, MAXW)
+    if args.headline_center and lines:
+        # inkoustové hranice bloku: vrch 1. řádku … spodek posledního
+        top_ink = hf.getbbox(lines[0])[1]
+        bot_ink = (len(lines) - 1) * LH + hf.getbbox(lines[-1])[3]
+        y = int((kicker_bottom + ry) / 2 - (top_ink + bot_ink) / 2)
+    for ln in lines:
         shadow_text((MX, y), ln, hf, (*PAPER, 255))
-        y += int(58 * 1.18)
+        y += LH
 
     # 5) odznak DataTimes.cz vpravo dole – VŽDY zleva kolečko, pak nápis
     #    (blok zarovnaný k pravému okraji)
     if os.path.exists(args.logo):
-        RH = 74
         ring = Image.open(args.logo).convert("RGBA").resize((RH, RH), Image.LANCZOS)
-        bf = sans_sb(34)
-        btxt = "DataTimes.cz"
-        bw = ImageDraw.Draw(img).textlength(btxt, font=bf)
         asc, desc = bf.getmetrics()
-        rx, ry = int(W - 40 - bw - 14 - RH), H - 40 - RH - args.badge_lift
         img.alpha_composite(ring, (rx, ry))
-        shadow_text((rx + RH + 14, ry + (RH - (asc + desc)) // 2), btxt, bf, (*PAPER, 255))
+        shadow_text((rx + RH + int(14 * S), ry + (RH - (asc + desc)) // 2), btxt, bf, (*PAPER, 255))
 
     # 6) export
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)

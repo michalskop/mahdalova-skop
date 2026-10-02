@@ -311,6 +311,39 @@ Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní ot�
 - [ ] Konec dokončuje myšlenku, ne rekapituluje
 - [ ] Inline related v první čtvrtině, inline SupportBanner v horní polovině, oba obtečené dostatkem textu; read-more box `🔻🔻🔻` na konci (viz Část II → Fotografie a obraz → Povinné vložené prvky)
 
+## Od úpravy po publikaci: bezpečný postup (git)
+Platí pro lidi i pro AI (Claude, Codex) při každé změně webu – článek, komponenta, oprava.
+
+**Dvě věci, které je třeba vědět předem**
+- **Repozitář `michalskop/mahdalova-skop` je na GitHubu veřejný.** Cokoli, co se na GitHub pushne (i do pracovní větve), si může kdokoli přečíst. Rozpracovaný článek pod embargem proto nepushujeme nikam, dokud nemá jít ven.
+- **Web nemá stav „koncept".** Každý článek ve složce `_articles/`, který se dostane do `main`, se po nasazení objeví na webu. Nehotový článek do `main` nesmí.
+
+**Fáze a co v nich je veřejné**
+
+| # | Fáze | Kde změna je | Veřejné? |
+|---|------|--------------|----------|
+| 1 | Úprava souborů v pracovní kopii (worktree, větev `claude/…`) | jen disk | ne |
+| 2 | Commit do pracovní větve | jen disk | ne |
+| 3 | Kontrola: náhled na `localhost:3001` + `npm run build` projde | jen disk | ne |
+| 4 | Sloučení do `main` (nejdřív `git fetch` a srovnání s aktuálním `main`) | jen disk | ne |
+| 5 | **Push `main` na GitHub** | GitHub | **ano – bod, kdy se publikuje** |
+| 6 | Cloudflare Pages sestaví a nasadí web (pár minut) | web | ano |
+| 7 | Kontrola živé URL | web | – |
+| 8 | Úklid | – | – |
+
+**Závazná pravidla**
+1. **Push do `main` = publikace.** AI ho provede jen na výslovný pokyn v daném chatu („publikuj", „pushni", „nasaď"). Před pushem vypíše, co odchází: seznam commitů a dotčené články/URL.
+2. **Před pushem vždy projde `npm run build`.** Rozbitý build zastaví nasazení celého webu, ne jen jednoho článku.
+3. **Historie `main` se nepřepisuje.** Žádný `git push --force`, `reset` ani `rebase` publikovaných commitů. Chyba na webu se opravuje novým commitem (`git revert` nebo oprava) a dalším pushem.
+4. **Paralelní chaty:** víc chatů může pracovat současně. Před sloučením vždy stáhnout aktuální `main` (`git fetch`) a konflikty vyřešit, ne přepsat cizí práci.
+5. **URL a rubrika** se určují před založením článku (viz výše); změna URL po publikaci = 301 přesměrování.
+
+**„Ukliď po sobě" znamená jen tohle:** vše commitnuté a sloučené do `main` (pokud se má publikovat), smazaná pracovní větev lokálně i na GitHubu, odstraněný worktree, vypnuté dev servery, které AI sama spustila. **Nikdy to neznamená archivovat, mazat ani přesouvat chat (session)** – správa chatů je jen na výslovný pokyn.
+
+**Rozpracovaný článek, který zatím nemá jít ven:** zůstává jen v pracovní větvi na disku, bez pushe. Úklid se u něj nedělá, dokud se nepublikuje nebo výslovně nezruší.
+
+*Pravidlo platí od 2026-09-26 (po nechtěné archivaci chatu s volební kalkulačkou při „úklidu"). Typ: univerzální, provozní. Doplňuje dosavadní praxi „commit + push rovnou do main" o povinný pokyn k publikaci a o build před pushem. Vlastník: Kateřina Mahdalová.*
+
 ## Správa a verzování pravidel
 Kanonická verze je tento soubor v repozitáři **mahdalova-skop**. Ostatní návody na něj odkazují a obsahují jen projektové dodatky nebo hloubkové rozbory. **Nesmí vzniknout** druhý „obecný" manuál, projektový návod tiše měnící společné standardy, pravidlo uložené jen v chatu, neoznačená kopie v jiném repu ani pokyn pro AI bez odkazu na platnou verzi.
 

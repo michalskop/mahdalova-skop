@@ -82,3 +82,6 @@
 # Speciál Komunální a senátní volby 2026 – krátká adresa (2026-10-01)
 /komunalni-a-senatni-volby-2026 /specialy/komunalni-a-senatni-volby-2026 301
 /komunalni-a-senatni-volby-2026/ /specialy/komunalni-a-senatni-volby-2026 301
+/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen /clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen 301
+/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen/ /clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen 301
+/clanek/_articles/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen/* /clanek/_articles/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen/:splat 301
