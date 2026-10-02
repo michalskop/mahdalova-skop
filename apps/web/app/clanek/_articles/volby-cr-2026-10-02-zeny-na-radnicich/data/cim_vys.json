@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Čím výš a čím větší město, tím méně žen",
+    "subtitle": "Podíl žen (%) po komunálních volbách 2022 a krajských volbách 2024"
+  },
+  "width": 600,
+  "height": 280,
+  "data": {
+    "values": [
+      {"k": "Kandidátky do obcí (2022)", "v": 33.3, "o": 1},
+      {"k": "Zastupitelky obcí (2022)", "v": 29.0, "o": 2},
+      {"k": "Starostky (únor 2023)", "v": 27.0, "o": 3},
+      {"k": "Zastupitelky statutárních měst a Prahy (2022)", "v": 23.7, "o": 4},
+      {"k": "Krajské zastupitelky (2024)", "v": 21.2, "o": 5},
+      {"k": "Hejtmanky (2 ze 14, 2024)", "v": 14.3, "o": 6}
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "k",
+      "type": "nominal",
+      "sort": {"field": "o"},
+      "axis": {"title": null, "labelLimit": 320}
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {"domain": [0, 50]},
+      "axis": {"title": null}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "#de1743", "height": 22},
+      "encoding": {
+        "tooltip": [
+          {"field": "k", "type": "nominal", "title": "Ukazatel"},
+          {"field": "v", "type": "quantitative", "title": "Podíl žen (%)", "format": ",.1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 12, "fontWeight": "bold", "color": "#272a59"},
+      "encoding": {"text": {"field": "v", "type": "quantitative", "format": ",.1f"}}
+    }
+  ],
+  "_source": "Fórum 50 % podle ČSÚ (obce 2022, statutární města 2022); Úřad vlády, Zpráva o rovnosti žen a mužů 2022 (starostky podle MV k 13. 2. 2023); ČSÚ (kraje 2024)"
+}
