@@ -1,11 +1,11 @@
 ---
 title: "Praha a Brno budou mít nového primátora v každém případě, v Ostravě a Plzni vedou kandidátky ti současní"
-date: "2026-10-02"
+date: "2026-08-20"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "Ve čtyřech největších městech kandiduje 66 listin a přes tři tisíce lidí. Bohuslav Svoboda ani Markéta Vaňková na kandidátkách nejsou, Jan Dohnal v Ostravě a Roman Zarzycký v Plzni své strany vedou. Kdo kandiduje, jak dopadly volby 2022 a o čem se ve městech vede kampaň."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["kontext"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "Praha", "Brno", "Ostrava", "Plzeň", "města"]
 promoted: 1

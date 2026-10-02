@@ -548,6 +548,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen</loc>
+    <lastmod>2026-08-20T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu</loc>
     <lastmod>2026-08-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -580,12 +586,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen</loc>
-    <lastmod>2026-10-02T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

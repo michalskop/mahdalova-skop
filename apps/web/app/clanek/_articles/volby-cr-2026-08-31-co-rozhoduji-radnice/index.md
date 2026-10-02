@@ -4,8 +4,8 @@ date: "2026-08-31"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "Česko má 6 258 obcí a jejich rozpočty dohromady odpovídají zhruba pětině výdajů státního rozpočtu. V komunálních volbách se ale nevolí starosta ani rada, jen zastupitelstvo. Vysvětlujeme, co radnice rozhodují samy, co za stát a kdo z vedení obce o čem rozhoduje."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "obce", "samospráva", "rozpočty"]
 promoted: 1
@@ -39,7 +39,7 @@ Většina debat v komunálních kampaních se proto točí kolem samostatné pů
 
 Starostové a další zastupitelé jsou buď uvolnění, tedy svou funkci dělají na plný úvazek, nebo neuvolnění, kteří ji vykonávají vedle zaměstnání. Odměny stanoví nařízení vlády č. 318/2017 Sb. jako násobek základní částky, která pro rok 2026 činí 48 147 korun. Uvolněný starosta obce s 1 001 až 3 000 obyvateli tak letos dostává 84 306 korun měsíčně ([Finance.cz](https://www.finance.cz/553474-o-kolik-se-zvysi-odmeny-zastupitelu-v-roce-2026/), [AK KVB](https://www.akkvb.cz/novinky/odmeny-zastupitelu-pro-rok-2026)).
 
-Protože vedení obce volí zastupitelstvo, nemusí ve vedení skončit ten, kdo volby vyhrál. V Plzni v roce 2022 získala koalice Spolu nejvíc hlasů (27,7 %), město ale nakonec vede koalice ANO, Pirátů a STAN a ODS se poprvé od roku 1990 do vedení města nedostala ([iROZHLAS](https://www.irozhlas.cz/volby/komunalni-senatni-volby-2022-online-vyjednavani-koalice-vysledky_2209251442_ban)). V Praze v roce 2018 vyhrála ODS a skončila v opozici, primátorem se stal Zdeněk Hřib (Piráti). Kdo letos o vedení velkých měst usiluje, shrnujeme v [přehledu Prahy, Brna, Ostravy a Plzně](/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen).
+Protože vedení obce volí zastupitelstvo, nemusí ve vedení skončit ten, kdo volby vyhrál. V Plzni v roce 2022 získala koalice Spolu nejvíc hlasů (27,7 %), město ale nakonec vede koalice ANO, Pirátů a STAN a ODS se poprvé od roku 1990 do vedení města nedostala ([iROZHLAS](https://www.irozhlas.cz/volby/komunalni-senatni-volby-2022-online-vyjednavani-koalice-vysledky_2209251442_ban)). V Praze v roce 2018 vyhrála ODS a skončila v opozici, primátorem se stal Zdeněk Hřib (Piráti). Kdo letos o vedení velkých měst usiluje, shrnujeme v [přehledu Prahy, Brna, Ostravy a Plzně](/clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen).
 
 Pro voliče z toho plyne, že vedle programu strany se vyplatí sledovat i to, s kým je ochotná a s kým odmítá po volbách vládnout.
 

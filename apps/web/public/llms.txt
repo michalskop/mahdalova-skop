@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Praha a Brno budou mít nového primátora v každém případě, v Ostravě a Plzni vedou kandidátky ti současní](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen)
 - [Ženy tvoří třetinu kandidátů do obcí, ale jen čtvrtinu starostů. Ve velkých městech ještě méně](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-zeny-na-radnicich)
+- [Volební kalkulačka míří do obcí: pro komunální volby 2026 ji připravujeme pro desítky měst](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)

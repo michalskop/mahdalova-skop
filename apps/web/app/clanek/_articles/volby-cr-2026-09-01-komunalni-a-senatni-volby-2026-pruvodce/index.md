@@ -4,8 +4,8 @@ date: "2026-09-01"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "V pátek 9. a v sobotu 10. října se volí zastupitelstva všech obcí a třetina Senátu. Průvodce: kdy a kde volit, co s sebou, proč se do obcí nedá volit na voličský průkaz a proč na komunálních volbách záleží víc, než naznačuje volební účast."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "jak volit", "obce", "Senát"]
 promoted: 1
@@ -37,7 +37,7 @@ Na kandidátky obecních zastupitelstev se letos zapsalo 190 174 lidí, nejmén�
 
 Ženy tvoří 35 % kandidátů, nejvíc v historii komunálních voleb. Mezi zvolenými zastupiteli jich bývá méně a mezi starosty ještě méně. Zastoupení žen na radnicích se věnujeme v [samostatné analýze](/clanek/volby-cr-2026-10-02-zeny-na-radnicich).
 
-Starostu ani radu voliči nevybírají. Volí je nově zvolené zastupitelstvo na ustavujícím zasedání, které se koná nejpozději zhruba měsíc po volbách. Kdo volby vyhraje, proto ještě nemusí obec vést. Jak to vypadá v Praze, Brně, Ostravě a Plzni, kdo tam kandiduje a jak dopadly minulé volby, shrnujeme v [přehledu velkých měst](/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen). Jak se ke konkrétním místním tématům staví strany ve vašem městě, ukáže [Volební kalkulačka pro komunální volby 2026](/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026).
+Starostu ani radu voliči nevybírají. Volí je nově zvolené zastupitelstvo na ustavujícím zasedání, které se koná nejpozději zhruba měsíc po volbách. Kdo volby vyhraje, proto ještě nemusí obec vést. Jak to vypadá v Praze, Brně, Ostravě a Plzni, kdo tam kandiduje a jak dopadly minulé volby, shrnujeme v [přehledu velkých měst](/clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen). Jak se ke konkrétním místním tématům staví strany ve vašem městě, ukáže [Volební kalkulačka pro komunální volby 2026](/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026).
 
 ## Senát: 27 obvodů, jeden vítěz v každém
 
