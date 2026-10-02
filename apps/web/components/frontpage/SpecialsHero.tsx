@@ -86,7 +86,7 @@ const KlimaIcon = () => (
 // Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
 // description: popis speciálu pro OG / meta (na kartě se nezobrazuje).
 const TILES = [
-  { href: 'https://www.volebnikalkulacka.cz', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: true, logoType: 'vk', coverImage: '/images/specials/volebni-kalkulacka.svg' },
+  { href: '/specialy/komunalni-a-senatni-volby-2026', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: false, logoType: 'vk', coverImage: '/images/specials/volebni-kalkulacka.svg' },
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
   { href: '/specialy/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
   { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },

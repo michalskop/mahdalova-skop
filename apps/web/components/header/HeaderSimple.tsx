@@ -21,7 +21,7 @@ const navLinks = [
 ];
 
 const specialsLinks = [
-  { href: 'https://www.volebnikalkulacka.cz', label: 'Komunální a senátní volby 2026 ↗', external: true },
+  { href: '/specialy/komunalni-a-senatni-volby-2026', label: 'Komunální a senátní volby 2026' },
   { href: '/specialy/data-pro-budouci-premierku', label: 'Data pro budoucí premiérku' },
   { href: '/specialy/svobodna-media', label: 'Svobodná média' },
   { href: '/specialy/kviff', label: 'Festival Karlovy Vary v datech' },

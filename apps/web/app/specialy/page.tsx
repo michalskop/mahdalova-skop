@@ -21,12 +21,12 @@ const WHITE = '#ffffff';
 
 const TILES = [
   {
-    href: 'https://www.volebnikalkulacka.cz',
+    href: '/specialy/komunalni-a-senatni-volby-2026',
     title: 'Komunální a senátní volby 2026',
-    // description: popis pro OG / meta – na kartě se nezobrazuje.
+    // description: popis pro OG / meta (stránka speciálu) – na kartě se nezobrazuje.
     description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce',
     bg: '#101432',
-    external: true,
+    external: false,
     logo: 'vk',
     coverImage: '/images/specials/volebni-kalkulacka.svg',
   },
