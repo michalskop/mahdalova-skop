@@ -48,7 +48,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
 - [Šance, že AI má vědomí, prý roste. Číslo ale víc vypovídá o výchozím předpokladu než o strojích](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-01-muze-mit-umela-inteligence-rozum)
-- [Dario Amodei: Musíme zpomalit tempo, jakým se posouvá hranice umělé inteligence](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-12-dario-amodei-musime-zpomalit-vyvoj-ai)
+- [Urputná AI utekla z laboratoře. Teď se rozhoduje, k jakým datům ji pustíme](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-27-ai-agenti-a-nase-data)
 
 ## Kontakt
 
