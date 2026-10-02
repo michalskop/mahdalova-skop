@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Volební kalkulačka míří do obcí: pro komunální volby 2026 ji připravujeme pro desítky měst](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026)
-- [Poprvé od roku 1949 vypadla CDU ze zemského sněmu. Náš model to ukázal od prvního sčítání](https://www.mahdalova-skop.cz/clanek/volby-nemecko-2026-09-20-cdu-meklenbursko)
+- [Praha a Brno budou mít nového primátora v každém případě, v Ostravě a Plzni vedou kandidátky ti současní](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen)
+- [Ženy tvoří třetinu kandidátů do obcí, ale jen čtvrtinu starostů. Ve velkých městech ještě méně](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-zeny-na-radnicich)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -47,8 +47,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
-- [Afrika je čtrnáctkrát větší než Grónsko. Podle běžných map byste to nepoznali – a OSN teď vyzvala ke změně](https://www.mahdalova-skop.cz/clanek/explainer-2026-09-05-mapy-sveta-osn-afrika)
-- [Rukojmí se vrátili, Hamás zůstal ozbrojený. Proč příměří v Gaze neukončilo izraelsko-palestinský konflikt](https://www.mahdalova-skop.cz/clanek/analyza-2026-08-10-izraelsko-palestinsky-konflikt)
+- [Šance, že AI má vědomí, prý roste. Číslo ale víc vypovídá o výchozím předpokladu než o strojích](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-01-muze-mit-umela-inteligence-rozum)
+- [Dario Amodei: Musíme zpomalit tempo, jakým se posouvá hranice umělé inteligence](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-12-dario-amodei-musime-zpomalit-vyvoj-ai)
 
 ## Kontakt
 

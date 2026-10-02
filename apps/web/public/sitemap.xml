@@ -146,6 +146,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-10-01-muze-mit-umela-inteligence-rozum</loc>
+    <lastmod>2026-10-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy</loc>
     <lastmod>2025-02-14T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -416,6 +422,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-12-dario-amodei-musime-zpomalit-vyvoj-ai</loc>
+    <lastmod>2026-09-12T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace</loc>
     <lastmod>2026-09-18T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -542,8 +554,44 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-08-31-co-rozhoduji-radnice</loc>
+    <lastmod>2026-08-31T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-09-01-komunalni-a-senatni-volby-2026-pruvodce</loc>
+    <lastmod>2026-09-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-09-02-jak-volit-do-zastupitelstva-obce</loc>
+    <lastmod>2026-09-02T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-09-02-senatni-volby-2026-27-obvodu</loc>
+    <lastmod>2026-09-02T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen</loc>
+    <lastmod>2026-10-02T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-zeny-na-radnicich</loc>
+    <lastmod>2026-10-02T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
