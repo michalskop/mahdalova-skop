@@ -10,7 +10,7 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "obce", "samospráva", "
 
 V pátek 9. a v sobotu 10. října se volí obecní zastupitelstva v 6 251 obcích, voliči rozdělí 59 173 mandátů. Rakousko, které je rozlohou o něco větší a má 9,2 milionu obyvatel, má obcí 2 092. Na 100 000 obyvatel připadá v Česku 57 obcí – víc než v kterékoli jiné z 28 evropských zemí, pro které jsou k dispozici srovnatelná data.
 
-Pirátský politik Mikuláš Peksa nedávno v diskusi o platech politiků na Facebooku napsal, že Česko má čtyřikrát víc obcí než stejně velké Rakousko, a tedy i čtyřikrát víc starostů. Prošli jsme data Českého statistického úřadu, rakouského Statistik Austria, Monitoru státní pokladny a registrů kandidátů. Obcí je třikrát víc. Čtyřnásobný je rozdíl v jejich velikosti: polovina českých obcí má méně než 456 obyvatel, polovina rakouských víc než 1 838. Z toho plynou dvě věci, které se dají spočítat: dražší správa na obyvatele a volby, ve kterých často není z čeho vybírat.
+Prošli jsme data Českého statistického úřadu, rakouského Statistik Austria, Monitoru státní pokladny a registrů kandidátů. Obcí má Česko třikrát víc než Rakousko, rozdíl v jejich velikosti je čtyřnásobný: polovina českých obcí má méně než 456 obyvatel, polovina rakouských víc než 1 838. Z toho plynou dvě věci, které se dají spočítat: dražší správa na obyvatele a volby, ve kterých často není z čeho vybírat.
 
 <KeyNumbers yamlFile="key-stats.yaml" />
 
@@ -26,7 +26,7 @@ Pod tisícovkou obyvatel jsou v Česku tři čtvrtiny obcí (4 715), přitom v n
 
 Statistický úřad přitom vykazuje obcí 6 258. Čtyři z nich jsou vojenské újezdy Boletice, Březina, Hradiště a Libavá, které nemají žádné obyvatele a nevolí se v nich. Skutečných obcí se zastupitelstvem je 6 254 a letos se volí v 6 251 z nich. Ve Slavníči nikdo nepodal kandidátní listinu, v Krchlebech a Rokytovci se nesešlo dost kandidátů.
 
-Peksova „čtyřikrát víc starostů“ tak platí v trojnásobné podobě: starostů je 6 254 proti 2 092. Na zastupitele se ale rozdíl stírá, protože rakouská obecní zastupitelstva jsou větší – v průměru mají zhruba 19 členů, česká 9. Česko volí 5,4 zastupitele na tisíc obyvatel, Rakousko podle [rakouského svazu obcí Gemeindebund](https://www.ots.at/presseaussendung/OTS_20260306_OTS0015/gemeindebund-zum-weltfrauentag-mehr-frauen-in-die-kommunalpolitik) zhruba 4,3. Zastupitelů je u nás na obyvatele asi o čtvrtinu víc, ne trojnásobně.
+Starostů má tedy Česko třikrát víc: 6 254 proti 2 092. Na zastupitele se ale rozdíl stírá, protože rakouská obecní zastupitelstva jsou větší – v průměru mají zhruba 19 členů, česká 9. Česko volí 5,4 zastupitele na tisíc obyvatel, Rakousko podle [rakouského svazu obcí Gemeindebund](https://www.ots.at/presseaussendung/OTS_20260306_OTS0015/gemeindebund-zum-weltfrauentag-mehr-frauen-in-die-kommunalpolitik) zhruba 4,3. Zastupitelů je u nás na obyvatele asi o čtvrtinu víc, ne trojnásobně.
 
 <VegaChart dataFile="data/velikost.json" />
 
@@ -54,7 +54,7 @@ Graf ukazuje obce bez rozšířené působnosti. Ve 205 obcích s rozšířenou 
 
 Tvar křivky je v Rakousku podobný. Podle [dat Statistik Austria o hospodaření obcí za rok 2019](https://data.statistik.gv.at/web/meta.jsp?dataset=OGD_gem_unterabschn_GHD_UA_10), posledních dostupných po jednotlivých obcích, stály volené orgány a obecní správa v obcích do 200 obyvatel 1 063 eur na obyvatele a v obcích s 1 000 až 2 000 obyvateli 371 eur. Rakouských obcí do 200 obyvatel je ale 14, českých 1 340.
 
-Kolik by se ušetřilo, kdyby malé obce byly větší, se dá odhadnout jen hrubě. Kdyby obce do 500 obyvatel stály na hlavu tolik co obce s 1 000 až 2 000 obyvateli, vydaly by o 2,6 miliardy korun ročně méně. To jsou 3 procenta nákladů na obecní samosprávu a půl procenta všech výdajů obcí. Sloučení navíc k takové úspoře automaticky nevede, jak ukazuje rakouská zkušenost níže. Sám Peksa ve stejné diskusi napsal, že to „není oblast, kde bych na sílu hledal úspory“.
+Kolik by se ušetřilo, kdyby malé obce byly větší, se dá odhadnout jen hrubě. Kdyby obce do 500 obyvatel stály na hlavu tolik co obce s 1 000 až 2 000 obyvateli, vydaly by o 2,6 miliardy korun ročně méně. To jsou 3 procenta nákladů na obecní samosprávu a půl procenta všech výdajů obcí. Sloučení navíc k takové úspoře automaticky nevede, jak ukazuje rakouská zkušenost níže.
 
 Odměny se od roku 2024 neřídí nařízením vlády, které [Ústavní soud zrušil](https://www.zakonyprolidi.cz/cs/2023-160), ale přímo zákonem o obcích. Uvolněný starosta obce do 300 obyvatel má letos podle [metodického doporučení ministerstva vnitra](https://mv.gov.cz/odk2/soubor/doplnek-metodickeho-doporucen-c-5-6-pro-rok-2026.aspx) 58 307 korun hrubého měsíčně, neuvolněný starosta nejvýš 34 955 korun. Řadový zastupitel takové obce smí dostat nejvýš 1 734 korun.
 
