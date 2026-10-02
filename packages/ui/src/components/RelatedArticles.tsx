@@ -347,7 +347,7 @@ function MiniCard({
   );
 
   const textBlock = (
-    <Stack gap={4} style={{ flex: 1 }}>
+    <Stack gap={4} style={{ flex: 1 }} className={styles.relatedSideText}>
       {textBadges}
       {titleEl}
       {excerpt}
@@ -409,6 +409,7 @@ function MiniCard({
   // crop that would cut text out of the image).
   const imgEl = (
     <Box
+      className={imagePosition === 'right' ? styles.relatedSideImgRight : styles.relatedSideImg}
       style={{
         position: 'relative',
         flexShrink: 0,
@@ -444,7 +445,7 @@ function MiniCard({
       p={cardBackground !== 'transparent' ? 'sm' : 0}
       style={{ borderRadius: 6 }}
     >
-      <Group gap="sm" align="flex-start" wrap="nowrap">
+      <Group gap="sm" align="flex-start" wrap="nowrap" className={styles.relatedSideRow}>
         {imagePosition === 'left' && imgEl}
         {textBlock}
         {imagePosition === 'right' && imgEl}

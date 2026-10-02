@@ -72,7 +72,7 @@ dump('evropa.json', {
         {
             'mark': {'type': 'bar', 'cornerRadiusEnd': 2, 'height': 13},
             'encoding': {
-                'x': {'field': 'v', 'type': 'quantitative', 'axis': {'title': None, 'grid': True, 'gridColor': '#e8e3d2'}},
+                'x': {'field': 'v', 'type': 'quantitative', 'scale': {'domain': [0, 72]}, 'axis': {'title': None, 'grid': True, 'gridColor': '#e8e3d2'}},
                 'color': {'field': 'barva', 'type': 'nominal', 'scale': None},
                 'tooltip': [
                     {'field': 'zeme', 'title': 'Země'},
@@ -362,3 +362,59 @@ print(f'Kdyby stály jako 1 000–1 999 ({fmt(ref)} Kč/obyv.): rozdíl {fmt(dif
 print('Samospráva celkem:', fmt(float(cr['sprava_kc'])/1e9, 2), 'mld.; 6112:', fmt(float(cr['v6112_kc'])/1e9, 2), 'mld.')
 print('Mandáty na 1000 obyv. CZ:', round(59173 / 10915839 * 1000, 2), '| s MČ:', round(61751 / 10915839 * 1000, 2), '| AT:', round(39500 / 9215956 * 1000, 2))
 print('CZ/AT obcí:', round(6254 / 2092, 2), '| na 100k:', round(57.4 / 22.7, 2))
+
+
+# ── Souhrnný tooltip za celou kategorii ───────────────────────────────
+# U seskupených a skládaných sloupců má každá kategorie (skupina sloupců) jeden
+# tooltip s minitabulkou za všechny série. Řeší to neviditelný pás přes celou
+# výšku kategorie, položený nad sloupce; řádky tooltipu se jmenují podle sérií,
+# takže je VegaChartImpl obarví barvou série. Při najetí se pás jemně zvýrazní.
+def add_category_band(name, rows, ymax, cat_title='Obyvatel obce'):
+    path = OUT / name
+    spec = json.loads(path.read_text(encoding='utf-8'))
+    enc = spec['encoding']
+    moved = {k: enc.pop(k) for k in ('xOffset', 'color') if k in enc}
+    for layer in spec['layer']:
+        layer.setdefault('encoding', {})
+        for k, v in moved.items():
+            layer['encoding'].setdefault(k, v)
+        layer['encoding'].pop('tooltip', None)
+        y = layer['encoding'].get('y')
+        if y and 'axis' in y:
+            y['scale'] = {**y.get('scale', {}), 'domain': [0, ymax]}
+    keys = [k for k in rows[0] if k != 'sk']
+    spec['layer'].append({
+        'data': {'values': rows},
+        'params': [{'name': 'hov', 'select': {'type': 'point', 'fields': ['sk'], 'on': 'mouseover', 'clear': 'mouseout'}}],
+        'mark': {'type': 'bar', 'fill': '#101432', 'cursor': 'default'},
+        'encoding': {
+            'y': {'datum': 0},
+            'y2': {'datum': ymax},
+            'fillOpacity': {'condition': {'param': 'hov', 'empty': False, 'value': 0.06}, 'value': 0},
+            'tooltip': [{'field': 'sk', 'title': cat_title}] + [{'field': k, 'title': k} for k in keys],
+        },
+    })
+    path.write_text(json.dumps(spec, ensure_ascii=False, indent=2), encoding='utf-8')
+
+
+pct = lambda v: fmt(v, 1) + ' %'
+add_category_band('velikost.json', [
+    {'sk': g,
+     'Česko': f"{pct(float(cz_g[g]['podil_obci_pct']))} ({fmt(int(cz_g[g]['pocet_obci']))} obcí)",
+     'Rakousko': f"{pct(float(at_g[g]['podil_obci_pct']))} ({fmt(int(at_g[g]['pocet_obci']))} obcí)"}
+    for g in GROUPS], 40)
+
+add_category_band('naklady.json', [
+    {'sk': g,
+     'zastupitelstvo (§ 6112)': fmt(float(bez_orp[g]['vazeny_6112_na_obyv'])) + ' Kč',
+     'obecní úřad (§ 6171)': fmt(float(bez_orp[g]['vazeny_6171_na_obyv'])) + ' Kč',
+     'Celkem na obyvatele': fmt(float(bez_orp[g]['vazeny_sprava_na_obyv'])) + ' Kč',
+     'Podíl na výdajích obcí': pct(float(bez_orp[g]['podil_sprava_na_vydajich_souhrn_pct'])),
+     'Obcí ve skupině': fmt(int(bez_orp[g]['pocet_obci']))}
+    for g in cost_groups], 12000)
+
+add_category_band('kandidati.json', [
+    {'sk': g,
+     'jediná kandidátka': f"{pct(agg[g]['jedna'] / agg[g]['n'] * 100)} ({fmt(agg[g]['jedna'])} z {fmt(agg[g]['n'])} obcí)",
+     'zvolen bude každý kandidát': f"{pct(agg[g]['malo'] / agg[g]['n'] * 100)} ({fmt(agg[g]['malo'])} z {fmt(agg[g]['n'])} obcí)"}
+    for g in GROUPS], 55)

@@ -350,6 +350,11 @@ The Flourish template (see the charts "Presidential Pardons," "Presidents' Forei
 | Absolute minimum (only exceptionally, for small notes) | 8 px | regular | `#333333` |
 
 - **The value axis of horizontal bars must carry headroom in the domain** (`scale.domain` ~25–30% above the max data value), so that neither the longest bar nor its label touches the card's right edge – otherwise they "pop out" on mobile and labels get clipped.
+- **Tooltip follows what the chart compares (added 2026-10-02).** Decide per chart type what one hover should answer:
+  - *Time-series lines/areas* → the shared pointer tooltip (all series for the nearest date) – automatic.
+  - *Grouped or stacked columns/bars* → **one tooltip per category** (the whole group/stack), a mini-table with every series in it (e.g. „200–499 obyvatel: Česko 31,9 % (1 992 obcí) · Rakousko 4,6 % (96 obcí)“), never a separate tooltip per bar. Implement as an invisible full-height band layer per category placed above the bars (`fillOpacity` 0, highlighted to ~0.06 `#101432` on hover), with its own pre-formatted rows; name each row after its series – `VegaChartImpl` colors a row with its series color from the `color` scale. Reference: `analyza-2026-10-02-kolik-ma-cesko-obci/_data_pipeline/build_charts.py` → `add_category_band`.
+  - *Single-series ranking bars* → per-bar tooltip with value plus context (absolute count, denominator).
+  - Values in tooltips are pre-formatted in Czech (nbsp thousands, decimal comma, units, „z N“ denominators), not raw field names.
 - **Long labels belong in a click-open panel, not a hover tooltip** (Flourish "Popups & panels" pattern): hover shows only the title line plus a "Click for detail" prompt; a click opens a panel with the full content, a close (×) button, and a `rgba(248,246,240,0.95)` background.
 
 - **Background of the whole chart card:** Ink Wash `#f8f6f0` (never `#fdfbf7` – that's the page background).

@@ -80,8 +80,26 @@ const TOOLTIP_CSS = `
 }
 `;
 
-// Vlastní tooltip handler: hodnotu obarví barvou prvku (fill → stroke → fallback #1a1a1a).
-function makeDpbpTooltipHandler(): TooltipHandler {
+// Barvy sérií ze všech barevných škál specu (top-level i vrstvy): {Česko: '#de1743', …}.
+// Souhrnný tooltip za celou kategorii (např. skupina sloupců Česko × Rakousko) má
+// řádky pojmenované podle sérií – každý se pak obarví barvou své série.
+function seriesColorMap(spec: Record<string, unknown>): Record<string, string> {
+  const map: Record<string, string> = {};
+  const units = [spec, ...(Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [])];
+  for (const unit of units) {
+    const scale = ((unit.encoding as Record<string, unknown> | undefined)?.color as
+      { scale?: { domain?: unknown[]; range?: unknown[] } } | undefined)?.scale;
+    scale?.domain?.forEach((label, i) => {
+      const color = scale.range?.[i];
+      if (typeof color === 'string') map[String(label)] = color;
+    });
+  }
+  return map;
+}
+
+// Vlastní tooltip handler: hodnotu obarví barvou série (podle názvu řádku), jinak
+// barvou prvku (fill → stroke → fallback #1a1a1a).
+function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): TooltipHandler {
   let el: HTMLElement | null = null;
   function getEl() {
     if (!el) {
@@ -99,11 +117,12 @@ function makeDpbpTooltipHandler(): TooltipHandler {
     const tip = getEl();
     if (!value || value === '') { tip.classList.remove('visible'); return; }
     const sceneItem = item as unknown as Record<string, unknown> | null;
-    const markColor = (sceneItem?.fill as string) || (sceneItem?.stroke as string) || '#1a1a1a';
+    const fill = sceneItem?.fill as string | undefined;
+    const markColor = (fill && fill !== 'transparent' ? fill : '') || (sceneItem?.stroke as string) || '#1a1a1a';
     let html = '<table>';
     if (value && typeof value === 'object') {
       for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
-        html += `<tr><td class="key">${k}:</td><td class="value" style="color:${markColor}">${v}</td></tr>`;
+        html += `<tr><td class="key">${k}:</td><td class="value" style="color:${seriesColors[k] ?? markColor}">${v}</td></tr>`;
       }
     } else {
       html += `<tr><td class="value" style="color:${markColor}">${value}</td></tr>`;
@@ -492,7 +511,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         renderer: 'svg',
         formatLocale: CS_NUMBER_LOCALE,
         timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(),
+        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
         const pendingSeries = pendingRevealSeriesRef.current;

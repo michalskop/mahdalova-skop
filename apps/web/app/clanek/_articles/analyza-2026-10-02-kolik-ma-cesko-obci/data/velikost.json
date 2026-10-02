@@ -141,30 +141,6 @@
         "labelAngle": 0,
         "labelFontSize": 10.5
       }
-    },
-    "xOffset": {
-      "field": "zeme",
-      "sort": [
-        "Česko",
-        "Rakousko"
-      ]
-    },
-    "color": {
-      "field": "zeme",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Česko",
-          "Rakousko"
-        ],
-        "range": [
-          "#de1743",
-          "#06677d"
-        ]
-      },
-      "legend": {
-        "title": null
-      }
     }
   },
   "layer": [
@@ -182,28 +158,38 @@
             "grid": true,
             "gridColor": "#e8e3d2",
             "labelExpr": "datum.label + ' %'"
+          },
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
           }
         },
-        "tooltip": [
-          {
-            "field": "zeme",
-            "title": "Země"
+        "xOffset": {
+          "field": "zeme",
+          "sort": [
+            "Česko",
+            "Rakousko"
+          ]
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Česko",
+              "Rakousko"
+            ],
+            "range": [
+              "#de1743",
+              "#06677d"
+            ]
           },
-          {
-            "field": "sk",
-            "title": "Obyvatel"
-          },
-          {
-            "field": "v",
-            "title": "Podíl obcí (%)",
-            "format": ",.1f"
-          },
-          {
-            "field": "n",
-            "title": "Počet obcí",
-            "format": ",.0f"
+          "legend": {
+            "title": null
           }
-        ]
+        }
       }
     },
     {
@@ -222,7 +208,125 @@
           "field": "v",
           "type": "quantitative",
           "format": ".0f"
+        },
+        "xOffset": {
+          "field": "zeme",
+          "sort": [
+            "Česko",
+            "Rakousko"
+          ]
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Česko",
+              "Rakousko"
+            ],
+            "range": [
+              "#de1743",
+              "#06677d"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
         }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sk": "do 199",
+            "Česko": "21,4 % (1 340 obcí)",
+            "Rakousko": "0,7 % (14 obcí)"
+          },
+          {
+            "sk": "200–499",
+            "Česko": "31,9 % (1 992 obcí)",
+            "Rakousko": "4,6 % (96 obcí)"
+          },
+          {
+            "sk": "500–999",
+            "Česko": "22,1 % (1 383 obcí)",
+            "Rakousko": "14,2 % (297 obcí)"
+          },
+          {
+            "sk": "1 000–1 999",
+            "Česko": "12,9 % (808 obcí)",
+            "Rakousko": "34,6 % (723 obcí)"
+          },
+          {
+            "sk": "2 000–4 999",
+            "Česko": "7,3 % (456 obcí)",
+            "Rakousko": "32,7 % (684 obcí)"
+          },
+          {
+            "sk": "5 000–9 999",
+            "Česko": "2,3 % (143 obcí)",
+            "Rakousko": "9,1 % (190 obcí)"
+          },
+          {
+            "sk": "10 000–49 999",
+            "Česko": "1,8 % (114 obcí)",
+            "Rakousko": "3,7 % (77 obcí)"
+          },
+          {
+            "sk": "50 000+",
+            "Česko": "0,3 % (18 obcí)",
+            "Rakousko": "0,5 % (11 obcí)"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "sk"
+            ],
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fill": "#101432",
+        "cursor": "default"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 40
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Obyvatel obce"
+          },
+          {
+            "field": "Česko",
+            "title": "Česko"
+          },
+          {
+            "field": "Rakousko",
+            "title": "Rakousko"
+          }
+        ]
       }
     }
   ],

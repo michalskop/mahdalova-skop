@@ -101,3 +101,31 @@
   z-index: 3;
   pointer-events: none;
 }
+
+/* Nejužší displeje: v bočních kartách (obrázek vlevo/vpravo) by text vedle
+   120px náhledu zbyl ve sloupci o pár slovech na řádek. Pod 480 px proto
+   náhled plave a titulek s datem ho obtékají a pokračují pod ním. */
+@media (max-width: 480px) {
+  .relatedSideRow {
+    display: block !important;
+  }
+  .relatedSideRow::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .relatedSideImg {
+    float: left;
+    margin: 0 var(--mantine-spacing-sm) rem(4px) 0;
+  }
+  .relatedSideImgRight {
+    float: right;
+    margin: 0 0 rem(4px) var(--mantine-spacing-sm);
+  }
+  .relatedSideText {
+    display: block !important;
+  }
+  .relatedSideText > * + * {
+    margin-top: rem(4px);
+  }
+}

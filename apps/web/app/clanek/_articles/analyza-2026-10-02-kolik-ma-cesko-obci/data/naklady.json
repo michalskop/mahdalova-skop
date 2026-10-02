@@ -131,6 +131,12 @@
             "grid": true,
             "gridColor": "#e8e3d2",
             "format": ",.0f"
+          },
+          "scale": {
+            "domain": [
+              0,
+              12000
+            ]
           }
         },
         "color": {
@@ -153,32 +159,7 @@
         "order": {
           "field": "slozka",
           "sort": "descending"
-        },
-        "tooltip": [
-          {
-            "field": "sk",
-            "title": "Obyvatel"
-          },
-          {
-            "field": "slozka",
-            "title": "Položka"
-          },
-          {
-            "field": "v",
-            "title": "Kč na obyvatele",
-            "format": ",.0f"
-          },
-          {
-            "field": "celkem",
-            "title": "Celkem Kč na obyvatele",
-            "format": ",.0f"
-          },
-          {
-            "field": "n",
-            "title": "Počet obcí",
-            "format": ",.0f"
-          }
-        ]
+        }
       }
     },
     {
@@ -204,6 +185,120 @@
           "type": "quantitative",
           "format": ",.0f"
         }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sk": "do 199",
+            "zastupitelstvo (§ 6112)": "4 101 Kč",
+            "obecní úřad (§ 6171)": "6 612 Kč",
+            "Celkem na obyvatele": "10 713 Kč",
+            "Podíl na výdajích obcí": "27,0 %",
+            "Obcí ve skupině": "1 343"
+          },
+          {
+            "sk": "200–499",
+            "zastupitelstvo (§ 6112)": "2 978 Kč",
+            "obecní úřad (§ 6171)": "5 194 Kč",
+            "Celkem na obyvatele": "8 171 Kč",
+            "Podíl na výdajích obcí": "21,0 %",
+            "Obcí ve skupině": "1 998"
+          },
+          {
+            "sk": "500–999",
+            "zastupitelstvo (§ 6112)": "2 139 Kč",
+            "obecní úřad (§ 6171)": "4 416 Kč",
+            "Celkem na obyvatele": "6 555 Kč",
+            "Podíl na výdajích obcí": "17,5 %",
+            "Obcí ve skupině": "1 378"
+          },
+          {
+            "sk": "1 000–1 999",
+            "zastupitelstvo (§ 6112)": "1 571 Kč",
+            "obecní úřad (§ 6171)": "3 966 Kč",
+            "Celkem na obyvatele": "5 537 Kč",
+            "Podíl na výdajích obcí": "15,0 %",
+            "Obcí ve skupině": "804"
+          },
+          {
+            "sk": "2 000–4 999",
+            "zastupitelstvo (§ 6112)": "990 Kč",
+            "obecní úřad (§ 6171)": "4 360 Kč",
+            "Celkem na obyvatele": "5 351 Kč",
+            "Podíl na výdajích obcí": "14,0 %",
+            "Obcí ve skupině": "442"
+          },
+          {
+            "sk": "5 000–9 999",
+            "zastupitelstvo (§ 6112)": "639 Kč",
+            "obecní úřad (§ 6171)": "5 050 Kč",
+            "Celkem na obyvatele": "5 689 Kč",
+            "Podíl na výdajích obcí": "14,2 %",
+            "Obcí ve skupině": "75"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "sk"
+            ],
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fill": "#101432",
+        "cursor": "default"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 12000
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Obyvatel obce"
+          },
+          {
+            "field": "zastupitelstvo (§ 6112)",
+            "title": "zastupitelstvo (§ 6112)"
+          },
+          {
+            "field": "obecní úřad (§ 6171)",
+            "title": "obecní úřad (§ 6171)"
+          },
+          {
+            "field": "Celkem na obyvatele",
+            "title": "Celkem na obyvatele"
+          },
+          {
+            "field": "Podíl na výdajích obcí",
+            "title": "Podíl na výdajích obcí"
+          },
+          {
+            "field": "Obcí ve skupině",
+            "title": "Obcí ve skupině"
+          }
+        ]
       }
     }
   ],

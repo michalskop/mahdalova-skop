@@ -259,6 +259,12 @@
         "x": {
           "field": "v",
           "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              72
+            ]
+          },
           "axis": {
             "title": null,
             "grid": true,
