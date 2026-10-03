@@ -1,0 +1,375 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Trest smrti má 54 zemí. V roce 2025 popravovalo {17|#de1743}",
+  "subtitle": "Stav k 31. 12. 2025. Ostatních 145 zemí trest smrti zrušilo v zákoně, nebo ho přes deset let nevykonalo. Na mapě chybí malé státy, které trest smrti mají: Singapur (17 poprav v roce 2025), Bahrajn, Komory a šest karibských ostrovních států."
+ },
+ "width": "container",
+ "height": 330,
+ "projection": {
+  "type": "equalEarth"
+ },
+ "layer": [
+  {
+   "data": {
+    "url": "/specialy/dpbp/data/world-countries-110m.json",
+    "format": {
+     "type": "topojson",
+     "feature": "countries"
+    }
+   },
+   "transform": [
+    {
+     "filter": "datum.id != '010'"
+    }
+   ],
+   "mark": {
+    "type": "geoshape",
+    "fill": "#e9e9dd",
+    "stroke": "#f8f6f0",
+    "strokeWidth": 0.5
+   }
+  },
+  {
+   "data": {
+    "url": "/specialy/dpbp/data/world-countries-110m.json",
+    "format": {
+     "type": "topojson",
+     "feature": "countries"
+    }
+   },
+   "transform": [
+    {
+     "lookup": "id",
+     "from": {
+      "data": {
+       "values": [
+        {
+         "id": "004",
+         "zeme": "Afghánistán",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "6"
+        },
+        {
+         "id": "156",
+         "zeme": "Čína",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "tisíce (státní tajemství)"
+        },
+        {
+         "id": "818",
+         "zeme": "Egypt",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "23"
+        },
+        {
+         "id": "364",
+         "zeme": "Írán",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nejméně 2 159"
+        },
+        {
+         "id": "368",
+         "zeme": "Irák",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nezjištěno"
+        },
+        {
+         "id": "392",
+         "zeme": "Japonsko",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "1"
+        },
+        {
+         "id": "414",
+         "zeme": "Kuvajt",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "17"
+        },
+        {
+         "id": "408",
+         "zeme": "Severní Korea",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nezjištěno"
+        },
+        {
+         "id": "682",
+         "zeme": "Saúdská Arábie",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nejméně 356"
+        },
+        {
+         "id": "706",
+         "zeme": "Somálsko",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nejméně 17"
+        },
+        {
+         "id": "728",
+         "zeme": "Jižní Súdán",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "1"
+        },
+        {
+         "id": "158",
+         "zeme": "Tchaj-wan",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "1"
+        },
+        {
+         "id": "784",
+         "zeme": "Spojené arabské emiráty",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "3"
+        },
+        {
+         "id": "840",
+         "zeme": "USA",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "47"
+        },
+        {
+         "id": "704",
+         "zeme": "Vietnam",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nezjištěno"
+        },
+        {
+         "id": "887",
+         "zeme": "Jemen",
+         "stav": "Popravovaly v roce 2025",
+         "popravy": "nejméně 51"
+        },
+        {
+         "id": "044",
+         "zeme": "Bahamy",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "050",
+         "zeme": "Bangladéš",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "112",
+         "zeme": "Bělorusko",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "084",
+         "zeme": "Belize",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "072",
+         "zeme": "Botswana",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "192",
+         "zeme": "Kuba",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "180",
+         "zeme": "Demokratická republika Kongo",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "231",
+         "zeme": "Etiopie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "270",
+         "zeme": "Gambie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "328",
+         "zeme": "Guyana",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "356",
+         "zeme": "Indie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "360",
+         "zeme": "Indonésie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "388",
+         "zeme": "Jamajka",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "400",
+         "zeme": "Jordánsko",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "422",
+         "zeme": "Libanon",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "426",
+         "zeme": "Lesotho",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "434",
+         "zeme": "Libye",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "458",
+         "zeme": "Malajsie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "104",
+         "zeme": "Myanmar",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "566",
+         "zeme": "Nigérie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "512",
+         "zeme": "Omán",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "586",
+         "zeme": "Pákistán",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "275",
+         "zeme": "Palestina",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "634",
+         "zeme": "Katar",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "729",
+         "zeme": "Súdán",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "760",
+         "zeme": "Sýrie",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "764",
+         "zeme": "Thajsko",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "780",
+         "zeme": "Trinidad a Tobago",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        },
+        {
+         "id": "800",
+         "zeme": "Uganda",
+         "stav": "Trest smrti mají, v roce 2025 nepopravovaly",
+         "popravy": "0"
+        }
+       ]
+      },
+      "key": "id",
+      "fields": [
+       "zeme",
+       "stav",
+       "popravy"
+      ]
+     }
+    },
+    {
+     "filter": "isValid(datum.stav)"
+    }
+   ],
+   "mark": {
+    "type": "geoshape",
+    "stroke": "#f8f6f0",
+    "strokeWidth": 0.5
+   },
+   "encoding": {
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Popravovaly v roce 2025",
+       "Trest smrti mají, v roce 2025 nepopravovaly"
+      ],
+      "range": [
+       "#de1743",
+       "#fda668"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom",
+      "direction": "horizontal",
+      "labelLimit": 320
+     }
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "stav",
+      "title": "Stav"
+     },
+     {
+      "field": "popravy",
+      "title": "Popravy v roce 2025"
+     }
+    ]
+   }
+  }
+ ],
+ "_source": "[Amnesty International: Death Sentences and Executions 2025](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), příloha II"
+}
