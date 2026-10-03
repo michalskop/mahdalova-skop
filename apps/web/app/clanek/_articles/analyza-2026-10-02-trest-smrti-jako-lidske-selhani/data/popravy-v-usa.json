@@ -1,0 +1,331 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "USA loni popravily {47|#de1743} lidí, nejvíc od roku 2009",
+  "subtitle": "Popravy v USA od obnovení trestu smrti v roce 1976. Celkem 1 683, z toho 18 žen. Rok 2026 do 29. září."
+ },
+ "width": "container",
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": "1977",
+    "popravy": 1,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1978",
+    "popravy": 0,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1979",
+    "popravy": 2,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1980",
+    "popravy": 0,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1981",
+    "popravy": 1,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1982",
+    "popravy": 2,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1983",
+    "popravy": 5,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1984",
+    "popravy": 21,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1985",
+    "popravy": 18,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1986",
+    "popravy": 18,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1987",
+    "popravy": 25,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1988",
+    "popravy": 11,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1989",
+    "popravy": 16,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1990",
+    "popravy": 23,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1991",
+    "popravy": 14,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1992",
+    "popravy": 31,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1993",
+    "popravy": 38,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1994",
+    "popravy": 31,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1995",
+    "popravy": 56,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1996",
+    "popravy": 45,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1997",
+    "popravy": 74,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1998",
+    "popravy": 68,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "1999",
+    "popravy": 98,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2000",
+    "popravy": 85,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2001",
+    "popravy": 66,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2002",
+    "popravy": 71,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2003",
+    "popravy": 65,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2004",
+    "popravy": 59,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2005",
+    "popravy": 60,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2006",
+    "popravy": 53,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2007",
+    "popravy": 42,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2008",
+    "popravy": 37,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2009",
+    "popravy": 52,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2010",
+    "popravy": 46,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2011",
+    "popravy": 43,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2012",
+    "popravy": 43,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2013",
+    "popravy": 39,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2014",
+    "popravy": 35,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2015",
+    "popravy": 28,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2016",
+    "popravy": 20,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2017",
+    "popravy": 23,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2018",
+    "popravy": 25,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2019",
+    "popravy": 22,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2020",
+    "popravy": 17,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2021",
+    "popravy": 11,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2022",
+    "popravy": 18,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2023",
+    "popravy": 24,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2024",
+    "popravy": 25,
+    "typ": "ostatní"
+   },
+   {
+    "rok": "2025",
+    "popravy": 47,
+    "typ": "2025"
+   },
+   {
+    "rok": "2026",
+    "popravy": 29,
+    "typ": "2026 (do 29. 9.)"
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar",
+  "width": {
+   "band": 0.8
+  }
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "axis": {
+    "title": null,
+    "labelAngle": 0,
+    "values": [
+     "1977",
+     "1985",
+     "1995",
+     "1999",
+     "2005",
+     "2015",
+     "2025"
+    ]
+   }
+  },
+  "y": {
+   "field": "popravy",
+   "type": "quantitative",
+   "axis": {
+    "title": null,
+    "grid": false,
+    "values": [
+     0,
+     25,
+     50,
+     75,
+     100
+    ]
+   }
+  },
+  "color": {
+   "field": "typ",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "ostatní",
+     "2025",
+     "2026 (do 29. 9.)"
+    ],
+    "range": [
+     "#4c4f8e",
+     "#de1743",
+     "#ff8099"
+    ]
+   },
+   "legend": null
+  },
+  "tooltip": [
+   {
+    "field": "rok",
+    "title": "Rok"
+   },
+   {
+    "field": "popravy",
+    "title": "Popravy"
+   }
+  ]
+ },
+ "_source": "[Death Penalty Information Center, přehled k 29. 9. 2026](https://files.deathpenaltyinfo.org/documents/pdf/FactSheet.pdf)"
+}

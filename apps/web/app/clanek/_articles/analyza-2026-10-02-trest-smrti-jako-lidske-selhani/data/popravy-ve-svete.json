@@ -1,0 +1,176 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Popravy ve světě jsou nejvýš od roku 1981. Za {80 procenty|#de1743} stojí Írán",
+  "subtitle": "Zaznamenané popravy podle Amnesty International, bez Číny, kde jsou počty státním tajemstvím. Skutečné počty jsou vyšší."
+ },
+ "width": "container",
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": "2010",
+    "popravy": 527,
+    "txt": "527",
+    "hl": false
+   },
+   {
+    "rok": "2011",
+    "popravy": 676,
+    "txt": "676",
+    "hl": false
+   },
+   {
+    "rok": "2012",
+    "popravy": 682,
+    "txt": "682",
+    "hl": false
+   },
+   {
+    "rok": "2013",
+    "popravy": 778,
+    "txt": "778",
+    "hl": false
+   },
+   {
+    "rok": "2014",
+    "popravy": 607,
+    "txt": "607",
+    "hl": false
+   },
+   {
+    "rok": "2015",
+    "popravy": 1634,
+    "txt": "1 634",
+    "hl": false
+   },
+   {
+    "rok": "2016",
+    "popravy": 1032,
+    "txt": "1 032",
+    "hl": false
+   },
+   {
+    "rok": "2017",
+    "popravy": 993,
+    "txt": "993",
+    "hl": false
+   },
+   {
+    "rok": "2018",
+    "popravy": 690,
+    "txt": "690",
+    "hl": false
+   },
+   {
+    "rok": "2019",
+    "popravy": 657,
+    "txt": "657",
+    "hl": false
+   },
+   {
+    "rok": "2020",
+    "popravy": 483,
+    "txt": "483",
+    "hl": false
+   },
+   {
+    "rok": "2021",
+    "popravy": 579,
+    "txt": "579",
+    "hl": false
+   },
+   {
+    "rok": "2022",
+    "popravy": 883,
+    "txt": "883",
+    "hl": false
+   },
+   {
+    "rok": "2023",
+    "popravy": 1153,
+    "txt": "1 153",
+    "hl": false
+   },
+   {
+    "rok": "2024",
+    "popravy": 1518,
+    "txt": "1 518",
+    "hl": false
+   },
+   {
+    "rok": "2025",
+    "popravy": 2707,
+    "txt": "2 707",
+    "hl": true
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "axis": {
+    "title": null,
+    "labelAngle": 0
+   }
+  },
+  "y": {
+   "field": "popravy",
+   "type": "quantitative",
+   "axis": {
+    "title": null,
+    "grid": false,
+    "values": [
+     0,
+     1000,
+     2000
+    ]
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "width": {
+     "band": 0.7
+    }
+   },
+   "encoding": {
+    "color": {
+     "condition": {
+      "test": "datum.hl",
+      "value": "#de1743"
+     },
+     "value": "#4c4f8e"
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "txt",
+      "title": "Zaznamenané popravy"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "fontSize": 10,
+    "fontWeight": 700,
+    "color": "#333333",
+    "dy": -7
+   },
+   "encoding": {
+    "text": {
+     "field": "txt"
+    }
+   }
+  }
+ ],
+ "_source": "[Amnesty International](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), roky 2010–2023 podle [přehledu DPI](https://deathpenaltyinfo.org/policy-issues/policy/international/executions-around-the-world)"
+}
