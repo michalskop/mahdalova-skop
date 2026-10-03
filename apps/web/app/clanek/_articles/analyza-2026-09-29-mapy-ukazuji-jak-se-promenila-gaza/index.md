@@ -13,19 +13,19 @@ promoted: 1
 
 Google Maps po více než roce aktualizovaly satelitní snímky velké části Pásma Gazy. Každý si tak může prohlédnout, jak se území za téměř tři roky války proměnilo. Níže najdete devět míst, před a po: od uprchlického tábora v Rafáhu po historické centrum města Gaza.
 
-Nové snímky zachycují Gazu několik měsíců po příměří, které vstoupilo v platnost 10. října 2025. U míst, která srovnal španělský deník El País, pocházejí z února 2026, britský [The Guardian](https://www.theguardian.com/world/2026/oct/01/new-google-maps-images-reveal-massive-scale-of-devastation-in-gaza) uvádí snímky z června 2026. Google tak snímky Gazy během války obnovil už potřetí, po aktualizacích v letech 2024 a 2025.
+Nové snímky zachycují Gazu několik měsíců po příměří, které vstoupilo v platnost 10. října 2025.
 
 <RelatedArticles preset="sidebar" slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt", "kontext-2026-09-18-nemocnice-al-ahli-vizualni-investigace"]} position="right" heading="🔻🔻🔻" />
 
 Stačí otevřít mapu a přiblížit. Někde zmizely celé bloky domů. Přes bývalou zástavbu i pole vedou nové široké prašné cesty. Na pobřeží, volných plochách i mezi troskami stojí rozsáhlé skupiny stanů.
-
-Guardian na snímcích popisuje obří stanové tábory, které lemují velkou část pobřeží, často jen pár metrů od moře. Rafáh je podle něj téměř celý v troskách a podél hranice s Egyptem izraelská armáda zřejmě vyčistila široký pás země. Těžce poškozená jsou i severní města Bajt Lahíja a Bajt Hánún. Čtvrti Džabálijá a Šudžáíja ve městě Gaza, na které Izrael opakovaně útočil, jsou podle listu neobyvatelné. Zničené jsou i modlitebny, například mešita Istiklál v Chán Júnisu.
 
 Rozsah škod od začátku války vyhodnocuje Satelitní centrum OSN (UNOSAT). Podle jeho [zatím poslední souhrnné analýzy](https://news.un.org/en/story/2026/08/1168138) ze snímků pořízených 16. června 2026 je poškozeno asi **82 procent** všech staveb v Pásmu Gazy. Dvě třetiny zasažených staveb jsou zničené.
 
 Ničení pokračovalo i po příměří. Mezi 11. říjnem 2025 a 16. červnem 2026 vzrostl celkový počet zasažených staveb o 1,5 procenta, počet zničených ale o **devět procent**. Agentura OSN pro palestinské uprchlíky UNRWA hlásí demolice škol a dalších zařízení OSN v oblastech pod kontrolou izraelské armády. Kvůli omezenému přístupu je ale nemohla nezávisle ověřit.
 
 Za rok [od července 2025](https://unhabitat.org/sites/default/files/2025/08/ocha-opt-027_unosat_onepager_gaza_strip_building_cda_08july2025.pdf) se počet zasažených staveb téměř nezměnil, počet zničených ale vzrostl o třetinu. Zhruba třetina tohoto nárůstu, asi 11 000 staveb, připadá na dobu po příměří. Podle analýz satelitních snímků deníku [The New York Times](https://www.timesofisrael.com/liveblog_entry/idf-has-demolished-over-2500-buildings-in-gaza-since-start-of-ceasefire-nyt/) a stanice [Al Jazeera](https://www.aljazeera.com/news/2025/12/15/israel-demolishes-more-buildings-in-military-controlled-gaza-analysis) izraelská armáda od příměří bourá budovy hlavně v oblastech, které kontroluje. Armáda uvádí, že ničí tunely a budovy s nastraženými náložemi.
+
+[Guardian](https://www.theguardian.com/world/2026/oct/01/new-google-maps-images-reveal-massive-scale-of-devastation-in-gaza) na snímcích popisuje obří stanové tábory, které lemují velkou část pobřeží, často jen pár metrů od moře. Rafáh je podle něj téměř celý v troskách a podél hranice s Egyptem izraelská armáda zřejmě vyčistila široký pás země. Těžce poškozená jsou i severní města Bajt Lahíja a Bajt Hánún. Čtvrti Džabálijá a Šudžáíja ve městě Gaza, na které Izrael opakovaně útočil, jsou podle listu neobyvatelné. Zničené jsou i modlitebny, například mešita Istiklál v Chán Júnisu.
 
 <AnimatedBars title="Dvě třetiny zasažených staveb v Gaze jsou zničené" subtitle="Stavby v Pásmu Gazy podle stupně poškození, satelitní snímky z 16. června 2026" source="[UNOSAT, zpráva OSN ze srpna 2026](https://news.un.org/en/story/2026/08/1168138)" bars={[{ label: "Zasažené stavby celkem", value: 201290, color: "brandNavy.9" }, { label: "zničené", value: 134422, color: "brand.6" }, { label: "těžce poškozené", value: 13848, color: "brand.3" }, { label: "středně poškozené", value: 28096, color: "brand.2" }, { label: "pravděpodobně poškozené", value: 24924, color: "brand.1" }]} />
 
