@@ -1,9 +1,9 @@
 ---
-title: "Christu Pike stát jako dítě nechránil. Pak se ji pokusil popravit"
+title: "Trest smrti jako lidské selhání"
 date: "2026-10-02"
 time: "13:32"
 author: "Kateřina Mahdalová"
-excerpt: "Tennessee se 30. září pokusilo popravit Christu Pike, jedinou ženu ve svých celách smrti. Přežila obě dávky smrtící injekce a leží v nemocnici na ventilátoru. Jako dítě ji léta znásilňovali dospělí muži a úřady, které o tom věděly, nezasáhly. Trest smrti má 54 zemí světa a USA loni popravily nejvíc lidí od roku 2009."
+excerpt: "Americký stát Tennessee se 30. září pokusil popravit Christu Pike, jedinou ženu ve svých celách smrti. Přežila obě dávky smrtící injekce a leží v nemocnici na ventilátoru. Trest smrti má 54 zemí světa a USA loni popravily nejvíc lidí od roku 2009."
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
@@ -11,9 +11,9 @@ tags: ["trest smrti", "lidská práva", "USA", "Tennessee", "Christa Pike", "Amn
 promoted: 1
 ---
 
-Ve středu 30. září večer dostala Christa Pike ve věznici Riverbend v Nashvillu dvě dávky pentobarbitalu po 50 mililitrech. Tolik předepisuje popravčí protokol státu Tennessee. Srdce se jí nezastavilo. Svědci ji slyšeli hlasitě chrápat ještě ve 20.53, kdy je z místnosti vyvedli. Ve 21.28 ji z věznice [odvezla sanitka](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/).
+Ve středu 30. září večer dostala Christa Pike ve věznici Riverbend v Nashvillu dvě dávky pentobarbitalu po 50 mililitrech. Tolik předepisuje popravčí protokol státu Tennessee. Srdce se jí nezastavilo, svědci ji slyšeli hlasitě chroptět zhruba hodinu a půl po podání první dávky, kdy je z místnosti vyvedli. Dvě hodiny po podání první dávky smrtící injekce ji z věznice [odvezla sanitka](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/).
 
-Ve čtvrtek 2. října byla podle jejích obhájců [v bezvědomí na ventilátoru](https://abcnews.com/US/execution-lone-woman-tennessees-death-row-paused-federal/story?id=136893331) v nemocnici v okolí Nashvillu. Obě paže měla oteklé, popálené a pokryté puchýři. Popravčí podle obhájce, který byl svědkem, do jedné paže píchali nejméně sedmkrát, než zavedli kanylu. Jedna jehla byla po vytažení ohnutá do pravého úhlu.
+Ve čtvrtek 2. října byla podle jejích obhájců [v bezvědomí na ventilátoru](https://abcnews.com/US/execution-lone-woman-tennessees-death-row-paused-federal/story?id=136893331) v nemocnici v okolí Nashvillu. Obě paže měla oteklé, popálené a pokryté puchýři. Popravčí podle obhájce, který byl svědkem, do jedné paže píchli nejméně sedmkrát, než zavedli kanylu. Jedna jehla byla po vytažení ohnutá do pravého úhlu.
 
 Podle Death Penalty Information Center je Pike [první člověk v moderní historii USA](https://deathpenaltyinfo.org/news/tennessee-botches-another-execution-despite-earlier-warnings-from-attorneys-christa-pike-was-alive-hours-after-attempt-began), který přežil popravu smrtící injekcí poté, co se mu látka skutečně dostala do těla. Sedm dřívějších přeživších zachránilo, že popravu zastavili dřív, než popravčí cokoli vpíchli.
 
@@ -24,14 +24,14 @@ Christě Pike je 50 let. V cele smrti strávila 30 let, většinu z nich v samov
 Guvernér Bill Lee jí dva dny před popravou [milost neudělil](https://deathpenaltyinfo.org/governor-bill-lee-denies-clemency-for-christa-pike-refusing-to-stop-tennessees-first-execution-of-a-woman-in-more-than-200-years). Po nepovedené popravě ji označil za „tragédii“, odložil zbývající popravu letošního roku a nařídil nezávislé prověření. Vězeňská služba trvá na tom, že postupovala podle protokolu „krok za krokem“.
 
 ```infobox info
-Z čeho vycházíme: průběh popravy popsali svědci a obhájci deníku [Nashville Banner](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/) a stanici ABC News. Fakta o zločinu jsou z rozsudku [Nejvyššího soudu Tennessee z roku 1998](https://caselaw.findlaw.com/court/tn-supreme-court/1130311.html). Dětství Christy Pike popisuje [žádost o milost](https://abcnews4.com/resources/pdf/f250727a-5607-4cb8-a3ae-4c4c78b9d0f1-christapikeclemencypetition.pdf), kterou podali její obhájci, a [Cornellovo centrum pro trest smrti ve světě](https://dpw.lawschool.cornell.edu/advocacy/christa-pike/), které se o zmírnění jejího trestu zasazuje. Obojí jsou advokační dokumenty. Údaje z nich uvádíme jen tam, kde se opírají o soudní spisy nebo lékařské posudky. Světová data jsou z výroční zprávy [Amnesty International](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), americká od Death Penalty Information Center. Úvodní koláž: socha Iustitie od Emanuela Pendla ve vídeňském Justičním paláci, foto [Hubertl, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_50473_Justizpalast_Wien,_Iustitia_-_Emanuel_Pendl_4293-HDR.jpg), licence CC BY-SA 4.0; výstřižky z Knoxville News Sentinel (15. 1. 1995) a z kampaní a pořadů o případu.
+Z čeho vycházíme: průběh popravy [popsali](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/) svědci, zástupci médií i obhájci Christy Pike. Fakta o zločinu jsou z rozsudku [Nejvyššího soudu Tennessee z roku 1998](https://caselaw.findlaw.com/court/tn-supreme-court/1130311.html). Dětství Christy Pike je popsáno v [žádosti o milost](https://abcnews4.com/resources/pdf/f250727a-5607-4cb8-a3ae-4c4c78b9d0f1-christapikeclemencypetition.pdf), kterou podali její obhájci, a [Cornellovo centrum pro trest smrti ve světě](https://dpw.lawschool.cornell.edu/advocacy/christa-pike/), které se zasazuje o zmírnění jejího trestu. Údaje z nich uvádíme jen tam, kde se opírají o soudní spisy nebo lékařské posudky. Světová data jsou z výroční zprávy [Amnesty International](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), americká od Death Penalty Information Center. Úvodní koláž: socha Iustitie od Emanuela Pendla ve vídeňském Justičním paláci, foto [Hubertl, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_50473_Justizpalast_Wien,_Iustitia_-_Emanuel_Pendl_4293-HDR.jpg), licence CC BY-SA 4.0; výstřižky z Knoxville News Sentinel (15. 1. 1995) a z kampaní a pořadů o případu.
 ```
 
 ## Zločin: osmnáctiletá dívka a mučení spolužačky
 
-Dne 12. ledna 1995 vylákala osmnáctiletá Christa Pike devatenáctiletou Colleen Slemmer na odlehlé místo v areálu Univerzity Tennessee v Knoxvillu. Obě se učily v programu Job Corps, který dává mladým lidem z chudých rodin druhou šanci na vzdělání. S Pike šel její sedmnáctiletý přítel Tadaryl Shipp a kamarádka Shadolla Peterson.
+Dne 12. ledna 1995 vylákala osmnáctiletá Christa Pike devatenáctiletou Colleen Slemmer na odlehlé místo v areálu Univerzity Tennessee v Knoxvillu. Obě se účastnily programu Job Corps, který zprostředkovává vzdělání mladým lidem z chudých rodin. S Christou Pike šel její sedmnáctiletý přítel Tadaryl Shipp a kamarádka Shadolla Peterson.
 
-Následovalo mučení, které [rozsudek Nejvyššího soudu Tennessee](https://caselaw.findlaw.com/court/tn-supreme-court/1130311.html) popisuje do podrobností. Skončilo úderem kusem asfaltu do hlavy oběti. Pike se o dva dny později policii přiznala. Jako motiv uvedla, že se jí Slemmer „snažila přebrat přítele“ a všude o ní roznášela řeči.
+Colleen Slemmer se stala obětí mučení, které [rozsudek Nejvyššího soudu Tennessee](https://caselaw.findlaw.com/court/tn-supreme-court/1130311.html) popisuje do podrobností a které skončilo tím, byla usmrcena úderem kusem asfaltu do hlavy. Christa Pike se o dva dny později policii přiznala. Jako motiv uvedla, že se jí Slemmer „snažila přebrat přítele“ a všude o ní roznášela řeči.
 
 Trest smrti dostala 30. března 1996. Podle Cornellova centra byla nejmladší ženou odsouzenou k smrti v moderní historii USA. Stejný zločin ale skončil pro trojici obžalovaných velmi různě:
 
@@ -41,7 +41,7 @@ Trest smrti dostala 30. března 1996. Podle Cornellova centra byla nejmladší �
 | Tadaryl Shipp | 17 let | doživotí s možností podmínečného propuštění; to mu komise v říjnu 2025 [zamítla](https://www.wate.com/news/knox-county-news/parole-denied-for-man-convicted-in-1995-knoxville-murder/), další přezkum v roce 2031 |
 | Shadolla Peterson | 18 let | šest let podmínky; svědčila pro obžalobu |
 
-Shippa od trestu smrti chránil věk. Nezletilé pachatele americké státy popravovat [nesmějí](https://supreme.justia.com/cases/federal/us/543/551/). Pike bylo 18 let a 10 měsíců. Výzkum vývoje mozku přitom podle obhájců ukazuje, že důvody, kvůli kterým soud nezletilé chrání, platí i pro osmnáctileté a dvacetileté.
+V té době sedmnáctiletého Tadaryla Shippa od trestu smrti chránil věk. Nezletilé pachatele americké státy popravovat [nesmějí](https://supreme.justia.com/cases/federal/us/543/551/). Pike bylo 18 let a 10 měsíců. Výzkum vývoje mozku přitom podle obhájců ukazuje, že důvody, kvůli kterým soud nezletilé chrání, platí i pro osmnáctileté a dvacetileté.
 
 Porota, která rozhodovala o trestu, navíc věřila, že pentagram do hrudi oběti vyryla Pike. Shipp ale později pod přísahou vypověděl, že to byl on. Takto jeho výpověď zaznamenalo rozhodnutí odvolacího soudu z roku 2011, které cituje žádost o milost. Žádost uvádí ještě jednu věc: státní zástupce před procesem nabídl dohodu na doživotí bez možnosti propuštění. Hlavní obhájce William Talman, ustanovený soudem, ji podle žádosti s Pike nestihl pořádně probrat.
 
@@ -67,7 +67,7 @@ Bipolární poruchu, posttraumatickou stresovou poruchu (PTSD) a organické poš
 
 Nic z toho čin neomlouvá a Pike vinu nepopírá. Rodina Colleen Slemmer popravu podporovala. Její matka May Martinez byla pokusu o popravu přítomná. Podle ní se Pike na lehátku smála a stát jí [dluží omluvu](https://abcnews.com/US/mother-christa-pikes-victim-speaks-botched-execution-broke/story?id=136950906): „Chtěla jsem jen spravedlnost.“
 
-## Trest smrti má 54 zemí, popravovalo jich loni 17
+## Trest smrti má stále 54 zemí
 
 Trest smrti byl ve světě ještě před půl stoletím běžný. V roce 1977 ho úplně zrušilo 16 zemí. Ke konci roku 2025 to bylo podle [Amnesty International](https://www.amnesty.org/en/latest/news/2026/05/death-penalty-in-2025-facts-and-figures/) 113 zemí. Dalších devět ho ponechalo jen pro výjimečné zločiny, například válečné, a 23 zemí ho sice má v zákoně, ale přes deset let nikoho nepopravilo. Trest smrti tak používá 54 zemí.
 

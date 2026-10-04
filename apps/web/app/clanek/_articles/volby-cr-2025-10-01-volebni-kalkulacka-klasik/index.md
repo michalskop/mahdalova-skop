@@ -5,7 +5,7 @@ author: "Kateřina Mahdalová"
 excerpt: "Proč Volební kalkulačka není hračka, ale analytický nástroj, který může rozhodnout i o mandátech ve Sněmovně."
 coverImage: "images/volebni-kalkulacka-klasik-2025a.png"
 filter: ["kontext"]
-tags: ["volební kalkulačka", "VAA", "volby 2025", "demokracie", "volby", "sněmovna"]
+tags: ["volby", "volební kalkulačka", "VAA", "volby 2025", "demokracie", "sněmovna"]
 promoted: 1
 ---
 # Volební kalkulačka: nástroj, který skutečně rozhoduje
