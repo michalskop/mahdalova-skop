@@ -3,9 +3,10 @@ title: "Volební kalkulačka 2026: Senát a inventura hlasování v Praze a Brn�
 date: "2026-10-04"
 time: "00:15"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Senátní kalkulačka běží pro 25 z 27 obvodů, inventura ukazuje, jak doopravdy hlasovali zastupitelé Prahy a Brna, a brzy nasadíme i kalkulačku pro komunální volby. Všechny si můžete vyplnit přímo v tomto článku."
+excerpt: "Senátní kalkulačka běží pro 25 z 27 obvodů, inventura ukazuje, jak doopravdy hlasovali zastupitelé Prahy a Brna, a brzy nasadíme i kalkulačku pro komunální volby. Senátní kalkulačku i obě inventury si můžete vyplnit přímo v tomto článku."
 coverImage: "images/cover.jpg"
-ogImage: "images/cover-og.jpg"
+coverFit: "contain"
+coverBg: "brandRoyalBlue.7"
 filter: []
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "volební kalkulačka", "KohoVolit.eu"]
 promoted: 1
