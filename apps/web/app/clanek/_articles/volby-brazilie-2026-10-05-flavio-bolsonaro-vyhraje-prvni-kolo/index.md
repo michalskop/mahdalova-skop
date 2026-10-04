@@ -1,16 +1,16 @@
 ---
-title: "První kolo v Brazílii vyhraje Flávio Bolsonaro. Prezidentem ale zatím nebude, ukazuje naše predikce"
+title: "Prezidentské volby v Brazílii: První kolo vyhrává Bolsonaro, ukazuje predikce"
 date: "2026-10-05"
 time: "00:33"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Průběžné sčítání ukazovalo, že syn vězněného exprezidenta vyhraje rovnou v prvním kole. Predikce DataTimes.cz ale od prvního milionu sečtených hlasů říká: Flávio Bolsonaro skončí první se 47 procenty, Lula druhý s 45 procenty – a o prezidentovi rozhodne až druhé kolo 25. října."
+excerpt: "Do voleb šel jako mírný favorit prezident Lula, všechny velké průzkumy ho viděly v prvním kole v čele. Predikce DataTimes.cz ale od prvního milionu sečtených hlasů říká: Flávio Bolsonaro skončí první se 47 procenty, Lula druhý s 45 procenty – a o prezidentovi rozhodne až druhé kolo 25. října."
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
 tags: ["volby", "Brazílie", "Flávio Bolsonaro", "Lula", "Jair Bolsonaro", "Latinská Amerika", "volební predikce"]
 promoted: 1
 ---
-Brazílie v neděli 4. října volila prezidenta a první kolo vyhraje Flávio Bolsonaro, pětačtyřicetiletý senátor a nejstarší syn vězněného exprezidenta Jaira Bolsonara. Ukazuje to datová predikce dvojice novinářů Mahdalová & Škop, která ho drží v čele od chvíle, kdy byl sečtený necelý milion hlasů. Na vítězství už v prvním kole to ale stačit nebude: model mu po sečtení zhruba 72 procent hlasů přisuzuje 47,0 procenta platných hlasů, úřadujícímu prezidentovi Luizi Ináciu Lulovi da Silvovi 45,2 procenta. Oba se tak 25. října potkají ve druhém kole.
+Brazílie v neděli 4. října volila prezidenta a první kolo vyhrává Flávio Bolsonaro, pětačtyřicetiletý senátor a nejstarší syn vězněného exprezidenta Jaira Bolsonara. Do voleb přitom šel jako mírný favorit úřadující prezident Lula. Ukazuje to datová predikce dvojice novinářů Mahdalová & Škop, která ho drží v čele od chvíle, kdy byl sečtený necelý milion hlasů. Na vítězství už v prvním kole to ale stačit nebude: model mu po sečtení zhruba 72 procent hlasů přisuzuje 47,0 procenta platných hlasů, úřadujícímu prezidentovi Luizi Ináciu Lulovi da Silvovi 45,2 procenta. Oba se tak 25. října potkají ve druhém kole.
 
 <KeyNumbers yamlFile="key-stats.yaml" />
 
@@ -18,9 +18,19 @@ Brazílie v neděli 4. října volila prezidenta a první kolo vyhraje Flávio B
 Predikci jsme přepočítávali každou minutu od 22:21 do 00:19 SELČ (17:21–19:19 brasilijského času) z průběžných dat brazilského Nejvyššího volebního soudu (TSE). Interval nejistoty a srovnání s průběžným součtem uvádíme ze stavu ve 23:44 SELČ, kdy bylo podle TSE sečteno 47,26 procenta okrsků. Oficiální konečný výsledek v době vydání textu ještě není k dispozici.
 ```
 
-Průběžné číslo přitom v tu chvíli vyprávělo jiný příběh. Flávio Bolsonaro měl v sečtených hlasech 50,20 procenta, tedy víc, než kolik potřebuje k vítězství bez druhého kola, a Lula jen 41,63 procenta ([Wikipedia](https://en.wikipedia.org/wiki/2026_Brazilian_general_election), [Latin Times](https://www.latintimes.com/live-lula-vs-flavio-bolsonaro-what-tonights-first-round-results-brazil-could-mean-oct-25-599811)). Rozdíl téměř devíti bodů a 4,7 milionu hlasů. Kdo by se díval jen na průběžný součet, mohl by Flávia Bolsonara vyhlásit prezidentem už v neděli večer.
+## Favoritem prvního kola byl Lula
+
+Ještě v sobotu vedl Lula ve všech velkých průzkumech pro první kolo. Datafolha mu v posledním šetření dávala 45 procent platných hlasů proti 42 pro Flávia Bolsonara, Quaest 46 proti 45 ([The Rio Times](https://www.riotimesonline.com/brazil-final-polls-before-the-vote-lula-flavio-datafolha-quaest-2026/)), AtlasIntel 46,2 proti 43,1 procenta ([The Rio Times](https://www.riotimesonline.com/brazil-election-2026-atlasintel-poll-lula-leads-first-round-runoff-tie/)). Newsweek v den voleb shrnul, že Lula „vede ve všech velkých průzkumech pro první kolo“, k vítězství bez druhého kola má ale daleko ([Newsweek](https://www.newsweek.com/trump-ally-bolsonaro-vs-lula-final-polls-as-brazil-votes-for-president-12519169)).
 
 <RelatedArticles preset="sidebar" position="right" slugs={["volby-nemecko-2026-09-20-cdu-meklenbursko"]} heading="🔻🔻🔻" />
+
+Lulův náskok se ovšem celý rok zmenšoval. V březnu ho AtlasIntel měřil na 45,9 ku 40,1 procenta a Quaest na 39 ku 32, koncem srpna už měly všechny velké agentury druhé kolo v rámci statistické chyby ([The Rio Times](https://www.riotimesonline.com/brazil-election-poll-tracker-2026/)). Stejně to viděly sázkové trhy: na platformě Kalshi měl Lula 2. října 74procentní šanci, že skončí v prvním kole první, prezidentem se ale podle nich spíš stane Flávio Bolsonaro (57 ku 44 procentům) – díky voličům menších pravicových kandidátů ve druhém kole ([Kalshi](https://news.kalshi.com/p/brazil-election-odds-2026)).
+
+Opatrnost vůči průzkumům měla svůj důvod. Před čtyřmi lety Datafolha den před prvním kolem dávala Jairu Bolsonarovi 34 procent všech hlasů, dostal 41,3 procenta ([Wikipedia](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2022_Brazilian_presidential_election)). Na možné překvapení upozorňoval před hlasováním i Christopher Sabatini z londýnského think-tanku Chatham House ([Newsweek](https://www.newsweek.com/trump-ally-bolsonaro-vs-lula-final-polls-as-brazil-votes-for-president-12519169)).
+
+## Průběžné sčítání slibovalo víc, než bude
+
+Průběžné číslo přitom večer vyprávělo opačný příběh než průzkumy. Ve 23:44 SELČ měl Flávio Bolsonaro v sečtených hlasech 50,20 procenta, tedy víc, než kolik potřebuje k vítězství bez druhého kola, a Lula jen 41,63 procenta ([Wikipedia](https://en.wikipedia.org/wiki/2026_Brazilian_general_election), [Latin Times](https://www.latintimes.com/live-lula-vs-flavio-bolsonaro-what-tonights-first-round-results-brazil-could-mean-oct-25-599811)). Rozdíl téměř devíti bodů a 4,7 milionu hlasů. Kdo by se díval jen na průběžný součet, mohl by Flávia Bolsonara vyhlásit prezidentem už v neděli večer.
 
 Predikce DataTimes.cz ale počítá i s hlasy, které v tu chvíli ještě sečtené nebyly – a těch byla víc než polovina. Podle modelu Flávio Bolsonaro skončí na 47,01 procenta a ani na horní hraně intervalu nejistoty (47,32 procenta) se k padesáti procentům nepřiblíží. Lula naopak naroste o necelé čtyři body na 45,22 procenta. Pořadí se ale nezmění: i nejhorší odhad pro Flávia (46,70 procenta) je vyšší než nejlepší odhad pro Lulu (45,53 procenta).
 
@@ -42,9 +52,7 @@ Proto Flávio Bolsonaro v průběžném součtu od začátku večera klesal: př
 
 <SupportBanner float="left" />
 
-Predikce zároveň opravuje i opačný omyl – ten z předvolebních průzkumů. Všechny tři velké agentury, které zveřejnily průzkum na poslední chvíli, čekaly v prvním kole v čele Lulu. Datafolha mu dávala 45 procent proti 42 pro Flávia Bolsonara, Quaest 46 proti 45 ([The Rio Times](https://www.riotimesonline.com/brazil-final-polls-before-the-vote-lula-flavio-datafolha-quaest-2026/)), AtlasIntel dokonce 46,2 proti 43,1 procenta ([The Rio Times](https://www.riotimesonline.com/brazil-election-2026-atlasintel-poll-lula-leads-first-round-runoff-tie/)).
-
-Podle predikce průzkumy podcenily Flávia Bolsonara o dva až pět procentních bodů. U Luly se vešly do své statistické chyby.
+Predikce tak opravuje oba omyly najednou: průběžné sčítání Flávia Bolsonara přeceňuje, předvolební průzkumy ho podcenily. Podle predikce o dva až pět procentních bodů – podobně jako před čtyřmi lety jeho otce. U Luly se průzkumy vešly do své statistické chyby.
 
 <BrazilRunoffDots />
 
