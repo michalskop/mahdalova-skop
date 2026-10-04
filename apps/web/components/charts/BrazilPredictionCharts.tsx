@@ -1,6 +1,6 @@
 'use client';
 
-// One-off graf k článku volby-brazilie-2026-10-05-flavio-bolsonaro-vyhraje-prvni-kolo:
+// One-off graf k článku volby-brazilie-2026-10-04-flavio-bolsonaro-vyhraje-prvni-kolo:
 //  - <BrazilPredictionTimeline /> celá volební noc: predikce DataTimes × průběžné sčítání TSE
 //  - <BrazilRunoffDots />  průzkumy × průběžné sčítání × predikce DataTimes proti hranici 50 %
 // Stejná stavba jako CduThresholdDots (CduPredictionCharts.tsx): SVG v reálných pixelech,

@@ -1,7 +1,7 @@
 ---
 title: "Prezidentské volby v Brazílii: První kolo vyhrává Bolsonaro, ukazuje predikce"
-date: "2026-10-05"
-time: "00:33"
+date: "2026-10-04"
+time: "23:44"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Do voleb šel jako mírný favorit prezident Lula, všechny velké průzkumy ho viděly v prvním kole v čele. Predikce DataTimes.cz ale od prvního milionu sečtených hlasů říká: Flávio Bolsonaro skončí první se 47 procenty, Lula druhý s 45 procenty – a o prezidentovi rozhodne až druhé kolo 25. října."
 coverImage: "images/cover-homepage.jpg"
