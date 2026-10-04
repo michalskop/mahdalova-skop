@@ -6,7 +6,7 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Spolek KohoVolit.eu připravuje ve spolupráci s DataTimes.cz a s politickými geografy z Přírodovědecké fakulty Univerzity Karlovy Volební kalkulačku pro komunální volby 2026. Nebude jen jedna: vzniká zvlášť pro desítky měst, každá s otázkami, které řeší právě dané město."
 coverImage: "images/cover.png"
 ogImage: "images/cover-og.png"
-filter: ["kontext"]
+filter: []
 tags: ["volby", "volby 2026", "komunální volby 2026", "volební kalkulačka", "KohoVolit.eu"]
 promoted: 1
 ---
