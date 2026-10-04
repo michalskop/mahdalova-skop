@@ -11,7 +11,7 @@ tags: ["trest smrti", "lidská práva", "USA", "Tennessee", "Christa Pike", "Amn
 promoted: 1
 ---
 
-Ve středu 30. září večer dostala Christa Pike ve věznici Riverbend v Nashvillu dvě dávky pentobarbitalu po 50 mililitrech. Tolik předepisuje popravčí protokol státu Tennessee. Srdce se jí nezastavilo, svědci ji slyšeli hlasitě chroptět zhruba hodinu a půl po podání první dávky, kdy je z místnosti vyvedli. Dvě hodiny po podádní první dávky smrtící injekce ji z věznice [odvezla sanitka](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/), hodinu poté, její právníci požádali o zastavení popravy.
+Ve středu 30. září večer dostala Christa Pike ve věznici Riverbend v Nashvillu dvě dávky pentobarbitalu po 50 mililitrech. Tolik předepisuje popravčí protokol státu Tennessee. Srdce se jí nezastavilo, svědci ji slyšeli hlasitě chroptět zhruba hodinu a půl po podání první dávky, kdy je z místnosti vyvedli. Dvě hodiny po podání první dávky smrtící injekce ji z věznice [odvezla sanitka](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/).
 
 Ve čtvrtek 2. října byla podle jejích obhájců [v bezvědomí na ventilátoru](https://abcnews.com/US/execution-lone-woman-tennessees-death-row-paused-federal/story?id=136893331) v nemocnici v okolí Nashvillu. Obě paže měla oteklé, popálené a pokryté puchýři. Popravčí podle obhájce, který byl svědkem, do jedné paže píchli nejméně sedmkrát, než zavedli kanylu. Jedna jehla byla po vytažení ohnutá do pravého úhlu.
 
@@ -67,7 +67,7 @@ Bipolární poruchu, posttraumatickou stresovou poruchu (PTSD) a organické poš
 
 Nic z toho čin neomlouvá a Pike vinu nepopírá. Rodina Colleen Slemmer popravu podporovala. Její matka May Martinez byla pokusu o popravu přítomná. Podle ní se Pike na lehátku smála a stát jí [dluží omluvu](https://abcnews.com/US/mother-christa-pikes-victim-speaks-botched-execution-broke/story?id=136950906): „Chtěla jsem jen spravedlnost.“
 
-## Trest smrti má 54 zemí, popravovalo jich loni 17
+## Trest smrti má stále 54 zemí
 
 Trest smrti byl ve světě ještě před půl stoletím běžný. V roce 1977 ho úplně zrušilo 16 zemí. Ke konci roku 2025 to bylo podle [Amnesty International](https://www.amnesty.org/en/latest/news/2026/05/death-penalty-in-2025-facts-and-figures/) 113 zemí. Dalších devět ho ponechalo jen pro výjimečné zločiny, například válečné, a 23 zemí ho sice má v zákoně, ale přes deset let nikoho nepopravilo. Trest smrti tak používá 54 zemí.
 
