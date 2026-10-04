@@ -1,9 +1,9 @@
 ---
-title: "Christu Pike stát jako dítě nechránil. Pak se ji pokusil popravit"
+title: "Trest smrti jako lidské selhání"
 date: "2026-10-02"
 time: "13:32"
 author: "Kateřina Mahdalová"
-excerpt: "Tennessee se 30. září pokusilo popravit Christu Pike, jedinou ženu ve svých celách smrti. Přežila obě dávky smrtící injekce a leží v nemocnici na ventilátoru. Jako dítě ji léta znásilňovali dospělí muži a úřady, které o tom věděly, nezasáhly. Trest smrti má 54 zemí světa a USA loni popravily nejvíc lidí od roku 2009."
+excerpt: "Americký stát Tennessee se 30. září pokusil popravit Christu Pike, jedinou ženu ve svých celách smrti. Přežila obě dávky smrtící injekce a leží v nemocnici na ventilátoru. Trest smrti má 54 zemí světa a USA loni popravily nejvíc lidí od roku 2009."
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
@@ -11,7 +11,7 @@ tags: ["trest smrti", "lidská práva", "USA", "Tennessee", "Christa Pike", "Amn
 promoted: 1
 ---
 
-Ve středu 30. září večer dostala Christa Pike ve věznici Riverbend v Nashvillu dvě dávky pentobarbitalu po 50 mililitrech. Tolik předepisuje popravčí protokol státu Tennessee. Srdce se jí nezastavilo. Svědci ji slyšeli hlasitě chrápat ještě ve 20.53, kdy je z místnosti vyvedli. Ve 21.28 ji z věznice [odvezla sanitka](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/).
+Ve středu 30. září večer dostala Christa Pike ve věznici Riverbend v Nashvillu dvě dávky pentobarbitalu po 50 mililitrech. Tolik předepisuje popravčí protokol státu Tennessee. Srdce se jí nezastavilo, svědci ji slyšeli hlasitě chroptět zhruba hodinu a půl po podání první dávky, kdy je z místnosti vyvedli. Ve 21.28 ji z věznice [odvezla sanitka](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/), dvě hodiny po podádní první dávky smrtící injekce a hodinu poté, co o zastavení popravy žádali její právníci.
 
 Ve čtvrtek 2. října byla podle jejích obhájců [v bezvědomí na ventilátoru](https://abcnews.com/US/execution-lone-woman-tennessees-death-row-paused-federal/story?id=136893331) v nemocnici v okolí Nashvillu. Obě paže měla oteklé, popálené a pokryté puchýři. Popravčí podle obhájce, který byl svědkem, do jedné paže píchali nejméně sedmkrát, než zavedli kanylu. Jedna jehla byla po vytažení ohnutá do pravého úhlu.
 
