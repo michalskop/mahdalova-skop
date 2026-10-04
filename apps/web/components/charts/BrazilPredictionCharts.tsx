@@ -126,7 +126,7 @@ export function BrazilPredictionTimeline() {
 
   return (
     <div style={{ clear: 'both' }}>
-      <ChartCard title="Pořadí jsme znali po prvním milionu hlasů"
+      <ChartCard title="Vítězství Bolsonara jsme predikovali od 0,8 % sečtených hlasů"
         subtitle="Predikce konečného podílu na platných hlasech (%) • 4.–5. října 2026, čas SELČ" source={TL_SOURCE}>
         <ChartLegend items={TL_LEGEND} activeKeys={active} onChange={setActive} />
         <div ref={ref} style={{ position: 'relative', width: '100%' }}>
