@@ -1,9 +1,9 @@
 ---
-title: "Volební kalkulačka 2026: Senát, inventura Prahy a Brna a prvních 19 měst"
+title: "Volební kalkulačka 2026: Senát a inventura hlasování v Praze a Brně"
 date: "2026-10-04"
 time: "00:15"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Senátní kalkulačka běží pro 25 z 27 obvodů, inventura ukazuje, jak doopravdy hlasovali zastupitelé Prahy a Brna, a spouštíme kalkulačky pro prvních 19 měst. Všechny si můžete vyplnit přímo v tomto článku."
+excerpt: "Senátní kalkulačka běží pro 25 z 27 obvodů, inventura ukazuje, jak doopravdy hlasovali zastupitelé Prahy a Brna, a brzy nasadíme i kalkulačku pro komunální volby. Všechny si můžete vyplnit přímo v tomto článku."
 coverImage: "images/cover.jpg"
 ogImage: "images/cover-og.jpg"
 filter: []
@@ -11,7 +11,7 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", 
 promoted: 1
 ---
 
-Do voleb zbývá necelý týden. Komunální a senátní volby se konají v pátek 9. a v sobotu 10. října, případné druhé kolo senátních voleb o týden později, 16. a 17. října. Volební kalkulačka, kterou připravuje spolek KohoVolit.eu ve spolupráci s DataTimes.cz a s politickými geografy z Přírodovědecké fakulty Univerzity Karlovy, má letos tři podoby: senátní, komunální pro jednotlivá města a inventuru hlasování v zastupitelstvech Prahy a Brna.
+Do voleb zbývá necelý týden. Komunální a senátní volby se konají v pátek 9. a v sobotu 10. října, případné druhé kolo senátních voleb o týden později, 16. a 17. října. Volební kalkulačka, kterou připravuje spolek KohoVolit.eu ve spolupráci s DataTimes.cz a s politickými geografy z Přírodovědecké fakulty Univerzity Karlovy, má letos tři podoby: senátní, inventuru hlasování v zastupitelstvech Prahy a Brna a komunální pro jednotlivá města, kterou nasadíme v nejbližších dnech.
 
 Všechny si můžete vyplnit přímo tady v článku, nebo na webu [volebnikalkulacka.cz](https://www.volebnikalkulacka.cz).
 
@@ -23,11 +23,9 @@ Nejdřív vyberte svůj obvod:
 
 <iframe src="https://www.volebnikalkulacka.cz/volby/senatni-2026" title="Volební kalkulačka – senátní volby 2026" width="100%" height="820px" frameBorder="0"></iframe>
 
-## Komunální volby: prvních 19 měst
+## Komunální volby: kalkulačku brzy nasadíme
 
-Kalkulačky pro komunální volby vznikají zvlášť pro každé město. Kromě otázek společných pro všechna města má každé město i vlastní místní otázky – k bydlení, dopravě, parkování, městským bytům nebo plánovaným stavbám. Dotazníky dostaly kandidující strany a hnutí ve více než 70 městech, teď spouštíme prvních 19 z nich. Další města budeme přidávat, jakmile se sejdou odpovědi. Strany, které dotazník nevyplní, se v kalkulačce zobrazí bez odpovědí.
-
-<iframe src="https://www.volebnikalkulacka.cz/" title="Volební kalkulačka – komunální volby 2026" width="100%" height="820px" frameBorder="0"></iframe>
+Nasadíme i Volební kalkulačku pro komunální volby. Vzniká zvlášť pro každé město: kromě otázek společných pro všechna města má každé město i vlastní místní otázky – k bydlení, dopravě, parkování, městským bytům nebo plánovaným stavbám. Dotazníky dostaly kandidující strany a hnutí ve více než 70 městech. Strany, které dotazník nevyplní, se v kalkulačce zobrazí bez odpovědí. Jakmile kalkulačku spustíme, najdete ji na [volebnikalkulacka.cz](https://www.volebnikalkulacka.cz) i v tomto článku.
 
 <SupportBanner />
 
