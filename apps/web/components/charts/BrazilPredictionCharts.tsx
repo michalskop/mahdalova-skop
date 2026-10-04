@@ -21,8 +21,8 @@ const C = {
   bandRun: '#e9ecf4',    // brandNavy.0 – druhé kolo
   winText: '#a47d03',    // brandYellow.9
   runText: '#4c4f8e',    // brandNavy.7
-  flavio: '#507e08',     // brandForestGreen[6]
-  lula: '#c93020',       // brandCoralRed.7
+  flavio: '#0b6b4e',     // brandEmeraldMint[7] – s oranžovou čitelné i pro barvoslepé (deuteranopie/protanopie)
+  lula: '#f76800',       // brandOrange.6 – ne červená: červená × zelená barvoslepí nerozliší
   model: '#de1743',      // brand.6
   surface: '#f8f6f0',    // background.2 – pozadí ChartCard
 };
