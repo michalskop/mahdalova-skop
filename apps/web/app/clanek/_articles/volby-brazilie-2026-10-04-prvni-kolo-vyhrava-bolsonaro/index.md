@@ -26,7 +26,7 @@ Ještě v sobotu vedl Lula ve všech velkých průzkumech pro první kolo. Výzk
 
 Lulův náskok se ovšem celý rok zmenšoval. V březnu ho AtlasIntel měřil na 45,9 ku 40,1 procenta a Quaest na 39 ku 32, koncem srpna už měly všechny velké agentury druhé kolo v rámci statistické chyby ([The Rio Times](https://www.riotimesonline.com/brazil-election-poll-tracker-2026/)). Stejně to viděly sázkové trhy: na platformě Kalshi měl Lula 2. října 74procentní šanci, že skončí v prvním kole první, prezidentem se ale podle nich spíš stane Flávio Bolsonaro (57 ku 44 procentům) – díky voličům menších pravicových kandidátů ve druhém kole ([Kalshi](https://news.kalshi.com/p/brazil-election-odds-2026)).
 
-Opatrnost vůči průzkumům měla svůj důvod. Před čtyřmi lety Datafolha den před prvním kolem dávala Jairu Bolsonarovi 34 procent všech hlasů, dostal 41,3 procenta ([Wikipedia](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2022_Brazilian_presidential_election)). Na možné překvapení upozorňoval před hlasováním i Christopher Sabatini z londýnského think-tanku Chatham House ([Newsweek](https://www.newsweek.com/trump-ally-bolsonaro-vs-lula-final-polls-as-brazil-votes-for-president-12519169)).
+Opatrnost vůči průzkumům měla svůj důvod. Před čtyřmi lety Datafolha den před prvním kolem dávala Jairu Bolsonarovi 34 procent všech hlasů, dostal 41,3 procenta. Na možné překvapení upozorňoval před hlasováním i Christopher Sabatini z londýnského think-tanku Chatham House ([Newsweek](https://www.newsweek.com/trump-ally-bolsonaro-vs-lula-final-polls-as-brazil-votes-for-president-12519169)).
 
 ## Průběžné sčítání Bolsonara přeceňovalo
 
@@ -58,35 +58,25 @@ Predikce tak opravuje oba omyly najednou: průběžné sčítání Flávia Bolso
 
 ## Syn, kterému otec požehnal ve vězení
 
-Flávio Bolsonaro se narodil v roce 1981 v Resende ve státě Rio de Janeiro. Šestnáct let byl poslancem zákonodárného sboru státu Rio, od roku 2019 je senátorem za Liberální stranu (PL). Kandidaturu na prezidenta oznámil 5. prosince 2025 s tím, že mu ji otec svěřil při návštěvě ve vězení ([Wikipedia](https://en.wikipedia.org/wiki/Fl%C3%A1vio_Bolsonaro), [Al Jazeera](https://www.aljazeera.com/news/2025/12/6/flavio-bolsonaro-enters-brazils-2026-presidential-race-with-fathers-nod)). Finanční trhy tehdy reagovaly propadem: dolar vůči realu posílil o víc než dvě procenta, burza v São Paulu ztratila 4,11 procenta.
+Flávio Bolsonaro se narodil v roce 1981 v Resende ve státě Rio de Janeiro. Šestnáct let byl poslancem zákonodárného sboru státu Rio, od roku 2019 je senátorem za Liberální stranu (PL). Kandidaturu na prezidenta oznámil 5. prosince 2025 s tím, že mu ji otec svěřil při návštěvě ve vězení ([Al Jazeera](https://www.aljazeera.com/news/2025/12/6/flavio-bolsonaro-enters-brazils-2026-presidential-race-with-fathers-nod)). Finanční trhy tehdy reagovaly propadem: dolar vůči realu posílil o víc než dvě procenta, burza v São Paulu ztratila 4,11 procenta.
 
-Jair Bolsonaro sám kandidovat nemohl. Nejvyšší volební soud mu už v roce 2023 zakázal ucházet se o veřejné funkce až do roku 2030 kvůli zpochybňování volebního systému. V září 2025 ho Nejvyšší federální soud odsoudil k 27 letům a třem měsícům vězení za pokus o státní převrat a další čtyři trestné činy spojené s pokusem udržet se u moci po prohraných volbách 2022. Trest začal vykonávat v listopadu 2025 ([Wikipedia](https://en.wikipedia.org/wiki/Jair_Bolsonaro)).
+Jair Bolsonaro sám kandidovat nemohl. Nejvyšší volební soud mu už v roce 2023 zakázal ucházet se o veřejné funkce až do roku 2030 kvůli zpochybňování volebního systému. V září 2025 ho Nejvyšší federální soud odsoudil k 27 letům a třem měsícům vězení za pokus o státní převrat a další čtyři trestné činy spojené s pokusem udržet se u moci po prohraných volbách 2022. Trest začal vykonávat v listopadu 2025.
 
-Kandidatura syna je tak zároveň referendem o otci – a predikce ukazuje, že bolsonarismus bez Bolsonara na kandidátce neztratil, ale posílil. Jair Bolsonaro v prvním kole roku 2022 získal 43,20 procenta, jeho syn podle modelu letos dostane 47,0 procenta ([Wikipedia](https://en.wikipedia.org/wiki/2022_Brazilian_general_election)).
+Kandidatura syna je tak zároveň referendem o otci – a predikce ukazuje, že bolsonarismus bez Bolsonara na kandidátce neztratil, ale posílil. Jair Bolsonaro v prvním kole roku 2022 získal 43,20 procenta, jeho syn podle modelu letos dostane 47,0 procenta.
 
 ## Lula proti synovi svého soupeře
 
 V letech 2002, 2006 i 2022 Lula první kolo vyhrál; podle predikce v něm letos poprvé od roku 1998 skončí druhý. Osmdesátiletý prezident vedl Brazílii v letech 2003–2010 a znovu od roku 2023. Druhé kolo se odehraje dva dny předtím, než mu bude 81 let.
 
-Před čtyřmi lety porazil Jaira Bolsonara ve druhém kole poměrem 50,90 ku 49,10 procenta, o 2,14 milionu hlasů – nejtěsněji v brazilské historii ([Wikipedia](https://en.wikipedia.org/wiki/2022_Brazilian_general_election)). Letos podle predikce povede po prvním kole Flávio Bolsonaro o 2,14 milionu hlasů, tedy téměř přesně o tentýž rozdíl, jen na druhé straně.
+Před čtyřmi lety porazil Jaira Bolsonara ve druhém kole poměrem 50,90 ku 49,10 procenta, o 2,14 milionu hlasů – nejtěsněji v brazilské historii. Letos podle predikce povede po prvním kole Flávio Bolsonaro o 2,14 milionu hlasů, tedy téměř přesně o tentýž rozdíl, jen na druhé straně.
 
 ## Kdo rozhodne 25. října
 
 Do druhého kola se v Brazílii šlo ve všech prezidentských volbách od roku 2002 ([Latin Times](https://www.latintimes.com/brazil-presidential-elections-2026-five-numbers-that-will-decide-whether-lula-flavio-go-runoff-599805)). Letos rozhodnou hlavně voliči zbylých deseti kandidátů, dohromady podle predikce 7,8 procenta platných hlasů.
 
-| Kandidát | Strana | Průběžně (47 % okrsků) | Predikce DataTimes.cz | Interval |
-|---|---|---|---|---|
-| Flávio Bolsonaro | PL | 50,20 % | **47,01 %** | 46,70–47,32 % |
-| Lula da Silva | PT | 41,63 % | **45,22 %** | 44,91–45,53 % |
-| Augusto Cury | Avante | 2,96 % | **2,87 %** | 2,73–3,02 % |
-| Renan Santos | Missão | 2,32 % | **2,23 %** | 2,12–2,34 % |
-| Ronaldo Caiado | PSD | 2,38 % | **2,18 %** | 2,07–2,29 % |
-| Romeu Zema | Novo | 0,29 % | **0,28 %** | 0,26–0,29 % |
-| dalších šest kandidátů | | 0,22 % | **0,21 %** | |
+<BrazilCandidatesBars />
 
-Zdroj: predikce Mahdalová & Škop ze stavu sčítání 47,26 % okrsků; průběžné výsledky [TSE](https://resultados.tse.jus.br/). Podíly na platných hlasech.
-
-Tři z menších kandidátů stojí napravo od Luly: Renan Santos, spoluzakladatel Hnutí za svobodnou Brazílii (MBL), které v letech 2015–2016 organizovalo masové protesty za sesazení Lulovy nástupkyně Dilmy Rousseffové ([Wikipedia](https://en.wikipedia.org/wiki/Renan_Santos)), bývalý guvernér státu Goiás Ronaldo Caiado a bývalý guvernér Minas Gerais Romeu Zema ([The Rio Times](https://www.riotimesonline.com/brazil-elections-2026-complete-guide/)). Dohromady mají podle predikce 4,7 procenta. Kdyby se všichni jejich voliči ve druhém kole přidali k Fláviovi Bolsonarovi, měl by 51,7 procenta. Hlasy se ale mezi koly nikdy nepřelévají celé – část voličů zůstane doma, část přejde k soupeři.
+Tři z menších kandidátů stojí napravo od Luly: Renan Santos, spoluzakladatel Hnutí za svobodnou Brazílii (MBL), které v letech 2015–2016 organizovalo masové protesty za sesazení Lulovy nástupkyně Dilmy Rousseffové, bývalý guvernér státu Goiás Ronaldo Caiado a bývalý guvernér Minas Gerais Romeu Zema ([The Rio Times](https://www.riotimesonline.com/brazil-elections-2026-complete-guide/)). Dohromady mají podle predikce 4,7 procenta. Kdyby se všichni jejich voliči ve druhém kole přidali k Fláviovi Bolsonarovi, měl by 51,7 procenta. Hlasy se ale mezi koly nikdy nepřelévají celé – část voličů zůstane doma, část přejde k soupeři.
 
 Poslední průzkumy pro druhé kolo ukazují vyrovnaný souboj: AtlasIntel naměřil 50 na 50 procent platných hlasů, Datafolha 47 ku 46 pro Lulu, Quaest 44 ku 42 pro Flávia Bolsonara ([The Rio Times](https://www.riotimesonline.com/brazil-final-polls-before-the-vote-lula-flavio-datafolha-quaest-2026/)). Jenže stejné agentury v prvním kole Flávia Bolsonara podcenily.
 
@@ -100,7 +90,7 @@ Stejný obraz dávají i průměry průzkumů. Pět agregátorů, které shrnuj�
 | ABC Dados | 3. 10. | **46 %** | 45 % | 9 % | Lula +1 |
 | The Economist | 3. 10. | 44 % | **45 %** | 11 % | Flávio +1 |
 
-Zdroj: průměry průzkumů pro druhé kolo podle [Wikipedie](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Brazilian_presidential_election), podíly ze všech hlasů včetně neplatných a nerozhodnutých.
+Zdroj: průměry průzkumů pro druhé kolo podle agregátorů UOL, BBC/PollingData, Plano Político, ABC Dados a The Economist, podíly ze všech hlasů včetně neplatných a nerozhodnutých.
 
 Náš model počítá i základní odhad druhého kola, který převádí hlasy z prvního kola na souboj dvou kandidátů. Ten dává Fláviovi Bolsonarovi 51,7 procenta platných hlasů a Lulovi 48,3 procenta – tedy náskok zhruba tří a půl bodu. Na rozdíl od prvního kola ale nejde o dopočet už odevzdaných hlasů: do 25. října zbývají tři týdny kampaně a o výsledku rozhodne i to, kolik lidí ve druhém kole přijde.
 

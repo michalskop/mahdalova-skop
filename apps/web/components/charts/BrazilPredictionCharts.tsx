@@ -76,7 +76,7 @@ const TL_LEGEND = [
   { key: 'lula', label: 'Predikce: Lula', color: C.lula },
   { key: 'count', label: 'Průběžné sčítání TSE', color: C.beige },
 ];
-const TL_SOURCE = 'archiv predikcí Mahdalová & Škop; průběžné sčítání [TSE](https://resultados.tse.jus.br/) podle [The Rio Times](https://www.riotimesonline.com/brazil-election-first-round-results-lula-flavio-2026) a [Wikipedie](https://en.wikipedia.org/wiki/2026_Brazilian_general_election)';
+const TL_SOURCE = 'archiv predikcí Mahdalová & Škop; průběžné sčítání [TSE](https://resultados.tse.jus.br/) podle [The Rio Times](https://www.riotimesonline.com/brazil-election-first-round-results-lula-flavio-2026)';
 
 export function BrazilPredictionTimeline() {
   const [ref, W] = useWidth<HTMLDivElement>();
@@ -307,6 +307,104 @@ export function BrazilRunoffDots() {
         </div>
         <p style={{ fontFamily: FONT, fontSize: 15, lineHeight: 1.5, color: C.ink2, margin: '10px 0 0' }}>
           Průzkumy čekaly v čele Lulu, průběžné sčítání vítězství Flávia Bolsonara už v prvním kole. Predikce DataTimes.cz říká obojí jinak: Flávio skončí první, ale pod 50 % – i na hraně svého intervalu nejistoty (47,32 %).
+        </p>
+      </ChartCard>
+    </div>
+  );
+}
+
+const CANDS = [
+  { n: 'Flávio Bolsonaro', p: 'PL', c: 50.2, v: 47.01, lo: 46.7, hi: 47.32, col: C.flavio },
+  { n: 'Lula da Silva', p: 'PT', c: 41.63, v: 45.22, lo: 44.91, hi: 45.53, col: C.lula },
+  { n: 'Augusto Cury', p: 'Avante', c: 2.96, v: 2.87, lo: 2.73, hi: 3.02, col: C.ink2 },
+  { n: 'Renan Santos', p: 'Missão', c: 2.32, v: 2.23, lo: 2.12, hi: 2.34, col: C.ink2 },
+  { n: 'Ronaldo Caiado', p: 'PSD', c: 2.38, v: 2.18, lo: 2.07, hi: 2.29, col: C.ink2 },
+  { n: 'Romeu Zema', p: 'Novo', c: 0.29, v: 0.28, lo: 0.26, hi: 0.29, col: C.ink2 },
+  { n: 'dalších šest kandidátů', p: '', c: 0.22, v: 0.21, col: C.ink2 },
+];
+const CAND_LEGEND = [
+  { key: 'pred', label: 'Predikce DataTimes.cz (sloupec)', color: C.ink2 },
+  { key: 'count', label: 'Průběžně sečteno, 47 % okrsků (čárka)', color: C.ink },
+];
+const CAND_SOURCE = 'predikce Mahdalová & Škop ze stavu sčítání 47,26 % okrsků (23:44 SELČ); průběžné výsledky [TSE](https://resultados.tse.jus.br/)';
+
+export function BrazilCandidatesBars() {
+  const [ref, W] = useWidth<HTMLDivElement>();
+  const [tip, setTip] = useState<Tip>(null);
+  const [active, setActive] = useState<string[]>(['pred', 'count']);
+  const on = (k: string) => active.includes(k);
+  const narrow = W < 600;
+  const L = narrow ? 0 : 190, R = narrow ? 70 : 150, T = 26;
+  const rowH = narrow ? 52 : 40;
+  const B = 52;
+  const x = (v: number) => L + (v / B) * (W - L - R);
+  const H = T + CANDS.length * rowH + 28;
+  const bottom = T + CANDS.length * rowH - 6;
+  const lab = { fontSize: narrow ? 12 : 13, fill: C.ink, fontFamily: FONT };
+  const ticks = narrow ? [0, 25, 50] : [0, 10, 20, 30, 40, 50];
+
+  return (
+    <div style={{ clear: 'both' }}>
+      <ChartCard title="Průběžný součet Bolsonara nadsazoval, Lulu podceňoval"
+        subtitle="Podíl na platných hlasech v 1. kole (%) • průběžné sčítání a predikce DataTimes.cz, 4. října 2026" source={CAND_SOURCE}>
+        <ChartLegend items={CAND_LEGEND} activeKeys={active} onChange={setActive} />
+        <div ref={ref} style={{ position: 'relative', width: '100%' }}>
+          {W > 0 && (
+            <svg width={W} height={H} style={{ display: 'block', overflow: 'visible' }} role="img"
+              aria-label="Predikce proti průběžnému sčítání: Flávio Bolsonaro 47,01 % (průběžně 50,20 %), Lula 45,22 % (průběžně 41,63 %), Augusto Cury 2,87 %, Renan Santos 2,23 %, Ronaldo Caiado 2,18 %, Romeu Zema 0,28 %, ostatní 0,21 %.">
+              {ticks.map((v) => (
+                <g key={v}>
+                  {v !== 50 && <line x1={x(v)} x2={x(v)} y1={T - 8} y2={bottom} stroke={C.grid} />}
+                  <text x={x(v)} y={bottom + 18} textAnchor="middle" style={{ fontSize: 11.5, fill: C.ink, fontFamily: FONT }}>{v} %</text>
+                </g>
+              ))}
+              <line x1={x(50)} x2={x(50)} y1={T - 8} y2={bottom} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
+              <text x={x(50)} y={T - 12} textAnchor="middle" style={{ ...lab, fontSize: 11.5, fontWeight: 600, fill: C.winText }}>50 % = prezident v 1. kole</text>
+              {CANDS.map((d, i) => {
+                const cy = T + i * rowH + rowH / 2 + (narrow ? 8 : 0);
+                const big = i < 2;
+                const bh = big ? 16 : 10;
+                const showTip = () => setTip({
+                  x: x(Math.max(d.v, d.c)), y: cy,
+                  body: <><strong>{d.n}{d.p ? ` (${d.p})` : ''}</strong><br />
+                    predikce <strong>{fmt(d.v, 2)} %</strong>{d.lo !== undefined && <span style={{ color: C.ink2 }}> ({fmt(d.lo, 2)}–{fmt(d.hi!, 2)})</span>}<br />
+                    průběžně {fmt(d.c, 2)} %</>,
+                });
+                return (
+                  <g key={d.n}>
+                    <text x={narrow ? 0 : L - 10} y={narrow ? cy - bh / 2 - 6 : cy + 4} textAnchor={narrow ? 'start' : 'end'}
+                      style={{ ...lab, fontWeight: big ? 600 : 400, fill: big ? d.col : C.ink }}>
+                      {d.n}{d.p && !narrow ? ` · ${d.p}` : ''}
+                    </text>
+                    {on('pred') && <rect x={x(0)} y={cy - bh / 2} width={x(d.v) - x(0)} height={bh} fill={d.col} opacity={big ? 1 : 0.55} rx={2} />}
+                    {on('pred') && d.lo !== undefined && big && (
+                      <g stroke={C.ink} strokeWidth={1.5}>
+                        <line x1={x(d.lo)} x2={x(d.hi!)} y1={cy} y2={cy} />
+                        <line x1={x(d.lo)} x2={x(d.lo)} y1={cy - 4} y2={cy + 4} />
+                        <line x1={x(d.hi!)} x2={x(d.hi!)} y1={cy - 4} y2={cy + 4} />
+                      </g>
+                    )}
+                    {on('count') && (
+                      <>
+                        <line x1={x(d.c)} x2={x(d.c)} y1={cy - bh / 2 - 5} y2={cy + bh / 2 + 5} stroke={C.ink} strokeWidth={2} />
+                        {big && <line x1={x(d.v)} x2={x(d.c)} y1={cy + bh / 2 + 5} y2={cy + bh / 2 + 5} stroke={C.ink} strokeWidth={1} strokeDasharray="2 2" />}
+                      </>
+                    )}
+                    <text x={x(Math.max(on('pred') ? d.v : 0, on('count') ? d.c : 0)) + 8} y={cy + 4} style={{ ...lab, fontWeight: 600 }}>
+                      {on('pred') ? `${fmt(d.v, 2)} %` : `${fmt(d.c, 2)} %`}
+                      {on('pred') && on('count') && big && !narrow && <tspan style={{ fontWeight: 400, fill: C.ink2 }}>{`  průběžně ${fmt(d.c, 2)} %`}</tspan>}
+                    </text>
+                    <rect x={0} y={cy - rowH / 2} width={W} height={rowH} fill="transparent"
+                      onPointerMove={showTip} onPointerDown={showTip} onPointerLeave={() => setTip(null)} />
+                  </g>
+                );
+              })}
+            </svg>
+          )}
+          <Tooltip tip={tip} width={W} />
+        </div>
+        <p style={{ fontFamily: FONT, fontSize: 15, lineHeight: 1.5, color: C.ink2, margin: '10px 0 0' }}>
+          Svislá čárka ukazuje průběžně sečtený podíl, sloupec predikci konečného výsledku. U Flávia Bolsonara a Luly je ve sloupci vyznačen i interval nejistoty modelu. Menší kandidáti se mezi sčítáním a predikcí liší jen o desetiny bodu.
         </p>
       </ChartCard>
     </div>
