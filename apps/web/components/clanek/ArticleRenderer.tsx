@@ -30,7 +30,7 @@ import VegaChart from '@/components/charts/VegaChart';
 import ChartRow from '@/components/charts/ChartRow';
 import AnimatedBars from '@/components/charts/AnimatedBars';
 import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
-import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
+import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import { Gauge } from '@repo/ui/components/Gauge';
@@ -443,6 +443,7 @@ export function ArticleRenderer({
     BrazilPredictionTimeline,
     BrazilRunoffDots,
     BrazilCandidatesBars,
+    BrazilRunoffAggregators,
 
   };
 

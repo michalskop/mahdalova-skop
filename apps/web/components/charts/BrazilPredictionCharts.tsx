@@ -324,7 +324,7 @@ const CANDS = [
 ];
 const CAND_LEGEND = [
   { key: 'pred', label: 'Predikce DataTimes.cz (sloupec)', color: C.ink2 },
-  { key: 'count', label: 'Průběžně sečteno, 47 % okrsků (čárka)', color: C.ink },
+  { key: 'count', label: 'Průběžně sečteno, 47 % okrsků (kroužek)', color: C.ink },
 ];
 const CAND_SOURCE = 'predikce Mahdalová & Škop ze stavu sčítání 47,26 % okrsků (23:44 SELČ); průběžné výsledky [TSE](https://resultados.tse.jus.br/)';
 
@@ -334,7 +334,7 @@ export function BrazilCandidatesBars() {
   const [active, setActive] = useState<string[]>(['pred', 'count']);
   const on = (k: string) => active.includes(k);
   const narrow = W < 600;
-  const L = narrow ? 0 : 190, R = narrow ? 70 : 150, T = 26;
+  const L = narrow ? 0 : 190, R = narrow ? 70 : 170, T = 26;
   const rowH = narrow ? 52 : 40;
   const B = 52;
   const x = (v: number) => L + (v / B) * (W - L - R);
@@ -377,20 +377,12 @@ export function BrazilCandidatesBars() {
                       {d.n}{d.p && !narrow ? ` · ${d.p}` : ''}
                     </text>
                     {on('pred') && <rect x={x(0)} y={cy - bh / 2} width={x(d.v) - x(0)} height={bh} fill={d.col} opacity={big ? 1 : 0.55} rx={2} />}
-                    {on('pred') && d.lo !== undefined && big && (
-                      <g stroke={C.ink} strokeWidth={1.5}>
-                        <line x1={x(d.lo)} x2={x(d.hi!)} y1={cy} y2={cy} />
-                        <line x1={x(d.lo)} x2={x(d.lo)} y1={cy - 4} y2={cy + 4} />
-                        <line x1={x(d.hi!)} x2={x(d.hi!)} y1={cy - 4} y2={cy + 4} />
-                      </g>
-                    )}
                     {on('count') && (
                       <>
-                        <line x1={x(d.c)} x2={x(d.c)} y1={cy - bh / 2 - 5} y2={cy + bh / 2 + 5} stroke={C.ink} strokeWidth={2} />
-                        {big && <line x1={x(d.v)} x2={x(d.c)} y1={cy + bh / 2 + 5} y2={cy + bh / 2 + 5} stroke={C.ink} strokeWidth={1} strokeDasharray="2 2" />}
+                        <circle cx={x(d.c)} cy={cy} r={big ? 6 : 4.5} fill={C.surface} stroke={C.ink} strokeWidth={2} />
                       </>
                     )}
-                    <text x={x(Math.max(on('pred') ? d.v : 0, on('count') ? d.c : 0)) + 8} y={cy + 4} style={{ ...lab, fontWeight: 600 }}>
+                    <text x={big ? x(B) + 8 : x(Math.max(on('pred') ? d.v : 0, on('count') ? d.c : 0)) + 12} y={cy + 4} style={{ ...lab, fontWeight: 600 }}>
                       {on('pred') ? `${fmt(d.v, 2)} %` : `${fmt(d.c, 2)} %`}
                       {on('pred') && on('count') && big && !narrow && <tspan style={{ fontWeight: 400, fill: C.ink2 }}>{`  průběžně ${fmt(d.c, 2)} %`}</tspan>}
                     </text>
@@ -404,7 +396,85 @@ export function BrazilCandidatesBars() {
           <Tooltip tip={tip} width={W} />
         </div>
         <p style={{ fontFamily: FONT, fontSize: 15, lineHeight: 1.5, color: C.ink2, margin: '10px 0 0' }}>
-          Svislá čárka ukazuje průběžně sečtený podíl, sloupec predikci konečného výsledku. U Flávia Bolsonara a Luly je ve sloupci vyznačen i interval nejistoty modelu. Menší kandidáti se mezi sčítáním a predikcí liší jen o desetiny bodu.
+          Kroužek ukazuje průběžně sečtený podíl, sloupec predikci konečného výsledku; interval nejistoty modelu je u každého kandidáta v popisku po najetí myší. Menší kandidáti se mezi sčítáním a predikcí liší jen o desetiny bodu.
+        </p>
+      </ChartCard>
+    </div>
+  );
+}
+
+const AGG = [
+  { n: 'UOL', t: '4. 10.', l: 45.2, f: 44.8, u: 10 },
+  { n: 'BBC/PollingData', t: '4. 10.', l: 45.3, f: 46.1, u: 8.7 },
+  { n: 'Plano Político', t: '3. 10.', l: 45.4, f: 45.8, u: 8.8 },
+  { n: 'ABC Dados', t: '3. 10.', l: 46, f: 45, u: 9 },
+  { n: 'The Economist', t: '3. 10.', l: 44, f: 45, u: 11 },
+];
+const AGG_SOURCE = 'průměry průzkumů agregátorů UOL, BBC/PollingData, Plano Político, ABC Dados a The Economist, stav 3.–4. října 2026';
+
+export function BrazilRunoffAggregators() {
+  const [ref, W] = useWidth<HTMLDivElement>();
+  const [tip, setTip] = useState<Tip>(null);
+  const [active, setActive] = useState<string[]>(['flavio', 'lula']);
+  const on = (k: string) => active.includes(k);
+  const narrow = W < 600;
+  const L = narrow ? 8 : 170, R = narrow ? 16 : 120, T = 14;
+  const rowH = narrow ? 50 : 40;
+  const A = 43, B = 47;
+  const x = (v: number) => L + ((v - A) / (B - A)) * (W - L - R);
+  const H = T + AGG.length * rowH + 30;
+  const bottom = T + AGG.length * rowH - 4;
+  const lab = { fontSize: narrow ? 12 : 12.5, fill: C.ink, fontFamily: FONT };
+  const ticks = [43, 44, 45, 46, 47];
+
+  return (
+    <div style={{ clear: 'both' }}>
+      <ChartCard title="Druhé kolo: průměry průzkumů dávají 50 na 50"
+        subtitle="Odhad pro druhé kolo, podíl ze všech hlasů (%) • pět agregátorů průzkumů před 1. kolem" source={AGG_SOURCE}>
+        <ChartLegend items={LEGEND} activeKeys={active} onChange={setActive} />
+        <div ref={ref} style={{ position: 'relative', width: '100%' }}>
+          {W > 0 && (
+            <svg width={W} height={H} style={{ display: 'block', overflow: 'visible' }} role="img"
+              aria-label="Pět agregátorů průzkumů pro druhé kolo: náskok do jednoho bodu, třikrát pro Flávia Bolsonara, dvakrát pro Lulu.">
+              {ticks.map((v) => (
+                <g key={v}>
+                  <line x1={x(v)} x2={x(v)} y1={T - 4} y2={bottom} stroke={C.grid} />
+                  <text x={x(v)} y={bottom + 18} textAnchor="middle" style={{ fontSize: 11.5, fill: C.ink, fontFamily: FONT }}>{v} %</text>
+                </g>
+              ))}
+              {AGG.map((d, i) => {
+                const cy = T + i * rowH + rowH / 2 + (narrow ? 6 : -4);
+                const lead = d.f > d.l ? `Flávio +${fmt(d.f - d.l, 1)}` : `Lula +${fmt(d.l - d.f, 1)}`;
+                const leadCol = d.f > d.l ? C.flavio : C.lula;
+                const showTip = () => setTip({
+                  x: x(Math.max(d.f, d.l)), y: cy,
+                  body: <><strong>{d.n}</strong> · {d.t}<br />
+                    <span style={{ color: C.lula }}>●</span> Lula <strong>{fmt(d.l, 1)} %</strong><br />
+                    <span style={{ color: C.flavio }}>●</span> Flávio Bolsonaro <strong>{fmt(d.f, 1)} %</strong><br />
+                    <span style={{ color: C.ink2 }}>neplatné / nerozhodnutí {fmt(d.u, 1)} %</span></>,
+                });
+                return (
+                  <g key={d.n}>
+                    <text x={narrow ? L : 0} y={narrow ? cy - 14 : cy + 4} style={{ ...lab, fontWeight: 600 }}>
+                      {d.n} <tspan style={{ fontWeight: 400, fill: C.ink2 }}>{d.t}</tspan>
+                    </text>
+                    {on('flavio') && on('lula') && <line x1={x(d.l)} x2={x(d.f)} y1={cy} y2={cy} stroke={C.beige} strokeWidth={2} />}
+                    {on('lula') && <circle cx={x(d.l)} cy={cy} r={6} fill={C.lula} stroke={C.surface} strokeWidth={2} />}
+                    {on('flavio') && <circle cx={x(d.f)} cy={cy} r={6} fill={C.flavio} stroke={C.surface} strokeWidth={2} />}
+                    {!narrow && (
+                      <text x={W - R + 12} y={cy + 4} style={{ ...lab, fontWeight: 600, fill: leadCol }}>{lead}</text>
+                    )}
+                    <rect x={0} y={cy - rowH / 2} width={W} height={rowH} fill="transparent"
+                      onPointerMove={showTip} onPointerDown={showTip} onPointerLeave={() => setTip(null)} />
+                  </g>
+                );
+              })}
+            </svg>
+          )}
+          <Tooltip tip={tip} width={W} />
+        </div>
+        <p style={{ fontFamily: FONT, fontSize: 15, lineHeight: 1.5, color: C.ink2, margin: '10px 0 0' }}>
+          Rozdíl mezi kandidáty nepřesáhl u žádného agregátoru jeden procentní bod – třikrát vedl Flávio Bolsonaro, dvakrát Lula. Zbytek do 100 % tvoří neplatné hlasy a nerozhodnutí (8,7–11 %).
         </p>
       </ChartCard>
     </div>
