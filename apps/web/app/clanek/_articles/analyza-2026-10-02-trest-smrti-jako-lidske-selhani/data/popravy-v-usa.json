@@ -2,7 +2,7 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "USA loni popravily {47|#de1743} lidí, nejvíc od roku 2009",
-  "subtitle": "Popravy v USA od obnovení trestu smrti v roce 1976. Celkem 1 683, z toho 18 žen. Rok 2026 do 29. září."
+  "subtitle": "Popravy v USA od obnovení trestu smrti v roce 1976. Celkem 1 683, z toho 18 žen.\nRok 2026 je uveden do 29. září."
  },
  "width": "container",
  "height": 300,

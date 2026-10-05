@@ -1,8 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Popravy ve světě jsou nejvýš od roku 1981. Za {80 procenty|#de1743} stojí Írán",
-  "subtitle": "Zaznamenané popravy podle Amnesty International, bez Číny, kde jsou počty státním tajemstvím. Skutečné počty jsou vyšší."
+  "text": "Poprav bylo loni nejvíce od roku 1981. {80 %|#de1743} zaznamenaných poprav provedl Írán",
+  "subtitle": "Zaznamenané popravy podle Amnesty International bez Číny, kde jsou počty státním tajemstvím. Skutečné počty jsou tedy vyšší."
  },
  "width": "container",
  "height": 300,

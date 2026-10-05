@@ -52,6 +52,7 @@ export default function ChartCard({ title, subtitle, source, children }: ChartCa
                 fontFamily: 'var(--font-roboto-condensed), Arial, sans-serif',
                 lineHeight: 1.3,
                 color: '#333333',
+                whiteSpace: 'pre-line',
               }}>
                 {renderSubtitle(subtitle)}
               </div>
