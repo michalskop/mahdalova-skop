@@ -90,6 +90,18 @@ Tři z menších kandidátů stojí napravo od Luly: Renan Santos, spoluzakladat
 
 Poslední průzkumy pro druhé kolo ukazují vyrovnaný souboj: AtlasIntel naměřil 50 na 50 procent platných hlasů, Datafolha 47 ku 46 pro Lulu, Quaest 44 ku 42 pro Flávia Bolsonara ([The Rio Times](https://www.riotimesonline.com/brazil-final-polls-before-the-vote-lula-flavio-datafolha-quaest-2026/)). Jenže stejné agentury v prvním kole Flávia Bolsonara podcenily.
 
+Stejný obraz dávají i průměry průzkumů. Pět agregátorů, které shrnují všechna šetření, se před prvním kolem rozcházelo jen v tom, komu přisoudí náskok do jednoho procentního bodu – třikrát Fláviovi Bolsonarovi, dvakrát Lulovi. Druhé kolo tak podle nich vypadá na čistých 50 na 50.
+
+| Agregátor | Poslední aktualizace | Lula | Flávio Bolsonaro | Neplatné / nerozhodnutí | Náskok |
+|---|---|---|---|---|---|
+| UOL | 4. 10. | **45,2 %** | 44,8 % | 10 % | Lula +0,4 |
+| BBC/PollingData | 4. 10. | 45,3 % | **46,1 %** | 8,7 % | Flávio +0,8 |
+| Plano Político | 3. 10. | 45,4 % | **45,8 %** | 8,8 % | Flávio +0,4 |
+| ABC Dados | 3. 10. | **46 %** | 45 % | 9 % | Lula +1 |
+| The Economist | 3. 10. | 44 % | **45 %** | 11 % | Flávio +1 |
+
+Zdroj: průměry průzkumů pro druhé kolo podle [Wikipedie](https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Brazilian_presidential_election), podíly ze všech hlasů včetně neplatných a nerozhodnutých.
+
 Náš model počítá i základní odhad druhého kola, který převádí hlasy z prvního kola na souboj dvou kandidátů. Ten dává Fláviovi Bolsonarovi 51,7 procenta platných hlasů a Lulovi 48,3 procenta – tedy náskok zhruba tří a půl bodu. Na rozdíl od prvního kola ale nejde o dopočet už odevzdaných hlasů: do 25. října zbývají tři týdny kampaně a o výsledku rozhodne i to, kolik lidí ve druhém kole přijde.
 
 Druhé kolo prezidentských voleb proběhne v neděli 25. října. Až bude k dispozici konečný oficiální výsledek prvního kola, text doplníme.
