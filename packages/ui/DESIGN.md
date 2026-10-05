@@ -400,6 +400,18 @@ import { ArticleCard } from '@repo/ui/components/ArticleCard';
 />
 ```
 
+**Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
+left card in `FeaturedHero` (Volby / Výběr bands) must never show white space
+between the excerpt and the date/author footer. Its text = frontmatter `excerpt`
+**+ continuation from the article body** (`leadText`, built server-side by
+`withLeadText()` in `apps/web/components/common/getArticles.ts`: the first plain
+paragraphs of `index.md`, skipping headings, components, boxes, tables, lists and
+code fences, ~1600 chars). `useEqualColumns` in `FeaturedHero.tsx` then clamps that
+text to as many whole lines (max 40) as fit the height of the right column, ending
+with "…". Only the lead gets `leadText` (payload). Editorial consequence: the first
+paragraphs after the excerpt are visible on the homepage, so they must read well as
+a continuation of the excerpt.
+
 ---
 
 ### `ArticlesGrid`

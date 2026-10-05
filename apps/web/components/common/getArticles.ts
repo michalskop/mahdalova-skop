@@ -1,5 +1,7 @@
 // components/common/getArticles.ts
+import fs from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
 import {
   getArticles as _getArticles,
   readPublishedAt,
@@ -17,6 +19,52 @@ const ARTICLES_DIR = path.join(process.cwd(), 'app/clanek/_articles');
  * serveru, nikdy ho neposílat do komponent ani metadat. */
 export function getPublishedAt(article: Pick<Article, 'slug' | 'date'>): PublishedAt {
   return readPublishedAt(ARTICLES_DIR, article.slug, article.date);
+}
+
+const LEAD_TEXT_MAX_CHARS = 1600;
+
+/** Odstavec markdownu → čistý text (bez odkazů, zvýraznění a inline JSX). */
+function plainParagraph(block: string): string {
+  return block
+    .replace(/<[^>]*\/>/g, '')                 // samostatné komponenty <X ... />
+    .replace(/<\/?[A-Za-z][^>]*>/g, '')        // HTML/JSX tagy
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')      // obrázky
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')   // [text](url) → text
+    .replace(/(\*\*|__|\*|_|`)/g, '')          // zvýraznění, kód
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Navazující text pro velkou kartu na homepage: první souvislé odstavce těla
+ * článku jako čistý text (nadpisy, boxy, grafy, tabulky, seznamy a komponenty
+ * se přeskakují). FeaturedHero ho připojí za perex a zkrátí na volné místo,
+ * aby v kartě nevznikla díra. Jen pro lead (ne pro všechny karty – payload).
+ */
+export function withLeadText<T extends Article>(article: T): T & { leadText?: string } {
+  const file = path.join(ARTICLES_DIR, article.slug, 'index.md');
+  if (!fs.existsSync(file)) return article;
+  const { content } = matter(fs.readFileSync(file, 'utf8'));
+  const parts: string[] = [];
+  let len = 0;
+  let inFence = false;
+  for (const raw of content.split(/\n\s*\n/)) {
+    const block = raw.trim();
+    if (!block) continue;
+    const fences = (block.match(/^```/gm) || []).length;
+    if (inFence || block.startsWith('```')) {
+      if (fences % 2 === 1) inFence = !inFence;
+      continue;
+    }
+    // Nadpisy, komponenty, tabulky, seznamy, citace, obrázky a výrazy přeskoč.
+    if (/^(#|<|\||[-*+] |\d+\. |>|!\[|\{)/.test(block)) continue;
+    const text = plainParagraph(block);
+    if (text.length < 40) continue;
+    parts.push(text);
+    len += text.length;
+    if (len >= LEAD_TEXT_MAX_CHARS) break;
+  }
+  return parts.length ? { ...article, leadText: parts.join(' ') } : article;
 }
 
 // These _articles/ folders are kept only as content sources (read via

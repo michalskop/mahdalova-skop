@@ -2,7 +2,7 @@
 // 'use client';
 
 import { Container } from '@mantine/core';
-import { getArticles, getPublishedAt, comparePublishedAt } from '@/components/common/getArticles';
+import { getArticles, getPublishedAt, comparePublishedAt, withLeadText } from '@/components/common/getArticles';
 // import { ArticlesGrid } from '@/components/common/ArticlesGrid';
 import Testimonials from '@/components/common/Testimonials';
 import HeroTitle from '@/components/frontpage/HeroTitle';
@@ -41,15 +41,19 @@ export default async function HomePage() {
   // stejném dni skrytá hodina (frontmatter `time`), když ji mají oba články;
   // při remíze zůstávají nahoře Volby. Statický export → pořadí se přepočítá
   // při každém buildu (= každém deployi nového článku).
+  // Velká karta vlevo dostane navazující text z těla článku, aby perex
+  // vyplnil celou výšku karty a nevznikla díra (viz FeaturedHero).
+  const withLead = <T extends Parameters<typeof withLeadText>[0]>(list: T[]) =>
+    list.map((a, i) => (i === 0 ? withLeadText(a) : a));
   const electionsHero = (
     <FeaturedHero
-      articles={articles_elections}
+      articles={withLead(articles_elections)}
       themeColor="brand"
       moreLink="/tag/volby" />
   );
   const selectionHero = (
     <FeaturedHero
-      articles={articles}
+      articles={withLead(articles)}
       themeColor="#5e66d5"
       moreLink="/vyber" />
   );

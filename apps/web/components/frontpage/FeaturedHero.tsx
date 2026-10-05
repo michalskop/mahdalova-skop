@@ -7,12 +7,13 @@ import type { Article } from '@repo/ui/lib/getArticles';
 import { useEffect, useRef, type RefObject } from 'react';
 import classes from './FeaturedHero.module.css';
 
-const MAX_LEAD_LINES = 12;
+const MAX_LEAD_LINES = 40;
 
 /**
- * Lead vlevo a sloupec tří karet vpravo lícují dole: perex leadu dostane
- * tolik celých řádků, aby lead byl co nejblíž výšce pravého sloupce (a nikdy
- * vyšší). Když ani bez perexu nestačí, roztáhnou se mezery mezi kartami
+ * Lead vlevo a sloupec tří karet vpravo lícují dole: perex leadu (doplněný
+ * o navazující text z těla článku, `leadText`) dostane tolik celých řádků,
+ * aby lead byl co nejblíž výšce pravého sloupce (a nikdy vyšší) – v kartě
+ * tak nezůstává prázdné místo pod krátkým perexem. Když ani bez perexu nestačí, roztáhnou se mezery mezi kartami
  * vpravo. Na mobilu (jeden sloupec) se nic nevyrovnává.
  */
 function useEqualColumns(
@@ -86,7 +87,7 @@ function useEqualColumns(
 // titulek + perex + autor), vpravo tři nejnovější jako kompaktní vodorovné
 // karty a pod nimi tlačítko „Více". Celá šířka, žádný boční nadpis.
 interface FeaturedHeroProps {
-  articles: Article[];
+  articles: (Article & { leadText?: string })[];
   articleBasePath?: string;
   locale?: string;
   /** Barva pozadí bloku (token palety nebo hex). */
@@ -117,7 +118,12 @@ export function FeaturedHero({
     <Paper bg={themeColor} radius={0} py={16} className={classes.block}>
       <div className={classes.grid}>
         <div ref={leadRef} className={classes.lead}>
-          <ArticleCard {...lead} articleBasePath={articleBasePath} locale={locale} />
+          <ArticleCard
+            {...lead}
+            excerpt={lead.leadText ? `${lead.excerpt} ${lead.leadText}` : lead.excerpt}
+            articleBasePath={articleBasePath}
+            locale={locale}
+          />
         </div>
 
         <div ref={sideRef} className={classes.side}>
