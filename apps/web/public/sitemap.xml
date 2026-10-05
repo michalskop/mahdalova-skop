@@ -500,6 +500,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro</loc>
+    <lastmod>2026-10-04T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2025-08-25-40-dni-do-voleb-a-babis-na-95-premierem</loc>
     <lastmod>2025-08-24T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -604,6 +610,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-02-zeny-na-radnicich</loc>
     <lastmod>2026-10-02T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-04-volebni-kalkulacka-2026</loc>
+    <lastmod>2026-10-04T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

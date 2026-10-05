@@ -1,0 +1,14 @@
+label: Predikce DataTimes.cz
+numbers:
+  - value: "47,0 %"
+    title: Flávio Bolsonaro
+    description: Odhad konečného podílu na platných hlasech v 1. kole, interval 46,7–47,3 %. Na vítězství už v prvním kole (víc než 50 %) to nestačí.
+    color: "#0b6b4e"
+  - value: "45,2 %"
+    title: Lula da Silva
+    description: Odhad pro úřadujícího prezidenta, interval 44,9–45,5 %. V průběžném sčítání přitom měl jen 41,6 procenta.
+    color: "#f76800"
+  - value: "25. 10. 2026"
+    title: Druhé kolo
+    description: O prezidentovi rozhodne souboj Flávia Bolsonara s Lulou. Náskok Flávia Bolsonara v 1. kole predikce odhaduje na zhruba 2,1 milionu hlasů.
+    color: brandNavy
