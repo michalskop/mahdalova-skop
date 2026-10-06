@@ -21,6 +21,8 @@ V komunálních volbách 9. a 10. října bude mít 1 830 z 6 254 obcí jedinou 
 
 Fialové obce mají jedinou kandidátku. Tmavě fialová znamená, že na ní je nejvýš tolik jmen, kolik je míst, takže o složení zastupitelstva je rozhodnuto ještě před volbami. Světle fialová znamená, že kandidátů je o něco víc a voliči tak rozhodnou aspoň o tom, kdo z jedné kandidátky skončí jako náhradník. Oranžové jsou obce, kde sice stojí víc kandidátek, ale dohromady na nich není víc lidí než míst, typicky několik nezávislých kandidátů, každý na vlastní kandidátce. I tam budou zvoleni všichni. Dohromady je letos obcí s předem daným výsledkem 1 072, tedy 17 procent.
 
+Na chybějící konkurenci upozornil 17. září i prezident Petr Pavel na konferenci Sdružení místních samospráv v Karlových Varech, jak informovaly Novinky.cz. Podle něj se v přibližně třetině obcí „na kandidátce sejde právě tolik jmen, kolik je zastupitelstev“. Ta věta spojuje dvě různá čísla. Jedinou kandidátku má skutečně skoro třetina obcí, 29 procent. Výsledek daný předem, kdy projdou všichni kandidáti, je ale v 17 procentech obcí, zhruba v každé šesté.
+
 ## Co znamená „zvoleni budou všichni“
 
 <RelatedArticles preset="sidebar" position="right" slugs={["volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu", "volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026"]} heading="🔻🔻🔻" />
@@ -46,6 +48,8 @@ Za růstem stojí i to, že kandidátů celkově ubývá. V [srpnové analýze](
 Na skutečnou volbu přitom stačí málo: v obci se sedmi mandáty stačí osm lidí na dvou kandidátkách. Že se to v každé třetí obci neděje, neznamená automaticky nezájem. Jediná kandidátka může vzniknout i tak, že se lidé v obci dohodnou a sestaví společnou kandidátku místo dvou soupeřících. Z dat samotných nepoznáme, jestli jde o shodu, nebo o to, že se nikdo další nenašel.
 
 Pro voliče je ale výsledek stejný: o tom, kdo bude obec čtyři roky vést, rozhodli ti, kdo kandidátku sestavili. Volby jen potvrdí to, co je známé už měsíc předem.
+
+Málo kandidátů v malých obcích bývá argumentem pro jejich slučování. Česko má 6 254 obcí a 3 332 z nich, víc než polovina, má méně než 500 obyvatel. Prezident Pavel ale na zářijové konferenci direktivní slučování odmítl, protože podle něj naráží na silný odpor obyvatel. Místo toho chce, aby stát obcím usnadnil dobrovolně sdílet služby, třeba IT, odborníky na dotace nebo společné školy. Jestli by větší obce vrátily do voleb soutěž, data z kandidátek neřeknou. Ukazují jen, že bez soutěže zůstávají hlavně ty nejmenší.
 
 ## Už to nejsou jen vesnice
 
