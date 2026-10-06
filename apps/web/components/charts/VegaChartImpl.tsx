@@ -47,41 +47,99 @@ const CS_TIME_LOCALE = {
   months: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
   shortMonths: ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'],
 };
-// Tooltip: béžové pozadí, Roboto Slab, hodnota obarvena barvou příslušného prvku
-// (bar/bod/plocha) – barvu čte vlastní handler ze scenegraphu (item.fill/stroke).
+// Tooltip (závazně všude, DESIGN.md §10 → Tooltip): béžová karta, text ink blue
+// #101432. Nahoře lišta v barvě položky (sloupec/bod/série) s jejím názvem bílým
+// písmem – u světlých barev (šedá „ostatní“) ink blue písmem. Řádky pod ní
+// klíč + hodnota ink blue; řádek pojmenovaný podle série má na kraji čtvereček
+// v barvě série.
+const TOOLTIP_INK = '#101432';
 const TOOLTIP_CSS = `
 #vg-tooltip-element.dpbp-theme {
-  background: rgba(248, 246, 240, 0.95);
+  background: rgba(248, 246, 240, 0.97);
   border: 1px solid #e8e3d2;
   border-radius: 7px;
   box-shadow: 0 4px 10px rgba(16, 20, 50, 0.14);
-  color: #1a1a1a;
+  color: ${TOOLTIP_INK};
   font-family: var(--font-roboto-slab), Georgia, serif;
   font-size: 13px;
   line-height: 1.4;
-  padding: 8px 12px;
-  max-width: 300px;
+  padding: 0;
+  overflow: hidden;
+  max-width: 320px;
   pointer-events: none;
   position: fixed;
   z-index: 9999;
   display: none;
 }
 #vg-tooltip-element.dpbp-theme.visible { display: block; }
-#vg-tooltip-element.dpbp-theme table { border-collapse: collapse; }
+#vg-tooltip-element.dpbp-theme .dt-tt-head {
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+#vg-tooltip-element.dpbp-theme table { border-collapse: collapse; margin: 6px 12px 8px; }
 #vg-tooltip-element.dpbp-theme td.key {
-  color: #555;
+  color: ${TOOLTIP_INK};
   font-weight: 400;
-  padding-right: 10px;
+  padding-right: 12px;
   white-space: nowrap;
 }
 #vg-tooltip-element.dpbp-theme td.value {
+  color: ${TOOLTIP_INK};
   font-weight: 700;
   max-width: 200px;
 }
+#vg-tooltip-element.dpbp-theme .dt-tt-swatch {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: 0;
+}
 `;
 
-// Vlastní tooltip handler: hodnotu obarví barvou prvku (fill → stroke → fallback #1a1a1a).
-function makeDpbpTooltipHandler(): TooltipHandler {
+// Světlá barva (šedá „ostatní“, pastelové odstíny) → v liště ink blue písmo místo bílého.
+function isLightColor(color: string): boolean {
+  const probe = document.createElement('span');
+  probe.style.color = color;
+  document.body.appendChild(probe);
+  const rgb = getComputedStyle(probe).color.match(/\d+(\.\d+)?/g)?.map(Number) ?? [0, 0, 0];
+  probe.remove();
+  const [r, g, b] = rgb.map(c => {
+    const v = c / 255;
+    return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.45;
+}
+
+function escapeHtml(v: unknown): string {
+  return String(v).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]!));
+}
+
+// Barvy sérií ze všech barevných škál specu (top-level i vrstvy): {Česko: '#de1743', …}.
+// Souhrnný tooltip za celou kategorii (např. skupina sloupců Česko × Rakousko) má
+// řádky pojmenované podle sérií – každý se pak obarví barvou své série.
+function seriesColorMap(spec: Record<string, unknown>): Record<string, string> {
+  const map: Record<string, string> = {};
+  const units = [spec, ...(Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [])];
+  for (const unit of units) {
+    const scale = ((unit.encoding as Record<string, unknown> | undefined)?.color as
+      { scale?: { domain?: unknown[]; range?: unknown[] } } | undefined)?.scale;
+    scale?.domain?.forEach((label, i) => {
+      const color = scale.range?.[i];
+      if (typeof color === 'string') map[String(label)] = color;
+    });
+  }
+  return map;
+}
+
+// Vlastní tooltip handler: první položka tooltipu (název kategorie/prvku) je
+// barevná lišta nahoře, zbytek tabulka ink blue. Barva lišty = barva série, pokud
+// se název shoduje s doménou color škály, jinak barva prvku (fill → stroke).
+// Neviditelné pásy (souhrnný tooltip za kategorii) mají fill ink blue.
+function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): TooltipHandler {
   let el: HTMLElement | null = null;
   function getEl() {
     if (!el) {
@@ -99,16 +157,23 @@ function makeDpbpTooltipHandler(): TooltipHandler {
     const tip = getEl();
     if (!value || value === '') { tip.classList.remove('visible'); return; }
     const sceneItem = item as unknown as Record<string, unknown> | null;
-    const markColor = (sceneItem?.fill as string) || (sceneItem?.stroke as string) || '#1a1a1a';
-    let html = '<table>';
-    if (value && typeof value === 'object') {
-      for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
-        html += `<tr><td class="key">${k}:</td><td class="value" style="color:${markColor}">${v}</td></tr>`;
+    const fill = sceneItem?.fill as string | undefined;
+    const markColor = (fill && fill !== 'transparent' && fill !== 'none' ? fill : '') || (sceneItem?.stroke as string) || TOOLTIP_INK;
+    const entries = value && typeof value === 'object'
+      ? Object.entries(value as Record<string, unknown>)
+      : [['', value] as [string, unknown]];
+    const [, headValue] = entries[0];
+    const headColor = seriesColors[String(headValue)] ?? markColor;
+    const headText = isLightColor(headColor) ? TOOLTIP_INK : '#ffffff';
+    let html = `<div class="dt-tt-head" style="background:${headColor};color:${headText}">${escapeHtml(headValue)}</div>`;
+    if (entries.length > 1) {
+      html += '<table>';
+      for (const [k, v] of entries.slice(1)) {
+        const swatch = seriesColors[k] ? `<span class="dt-tt-swatch" style="background:${seriesColors[k]}"></span>` : '';
+        html += `<tr><td class="key">${swatch}${escapeHtml(k)}</td><td class="value">${escapeHtml(v)}</td></tr>`;
       }
-    } else {
-      html += `<tr><td class="value" style="color:${markColor}">${value}</td></tr>`;
+      html += '</table>';
     }
-    html += '</table>';
     tip.innerHTML = html;
     tip.classList.add('visible');
     const pad = 12;
@@ -492,7 +557,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         renderer: 'svg',
         formatLocale: CS_NUMBER_LOCALE,
         timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(),
+        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
         const pendingSeries = pendingRevealSeriesRef.current;
@@ -598,33 +663,42 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
                 }),
             zIndex: 4,
             minWidth: 132,
-            padding: '7px 10px 8px',
+            padding: 0,
+            overflow: 'hidden',
             border: '1px solid #e8e3d2',
             borderRadius: 7,
             background: 'rgba(248, 246, 240, 0.97)',
             boxShadow: '0 4px 10px rgba(16, 20, 50, 0.14)',
-            color: '#1a1a1a',
+            color: TOOLTIP_INK,
             fontFamily: 'var(--font-roboto-slab), Georgia, serif',
             fontSize: 13,
             lineHeight: 1.35,
             pointerEvents: 'none',
           }}
         >
+          {/* Lišta nahoře: datum/kategorie bílým písmem na ink blue (časová řada
+              nemá jednu barvu položky – barvy sérií nesou čtverečky v řádcích). */}
           <div style={{
             fontWeight: 700,
             fontSize: 13.5,
-            color: '#1a1a1a',
+            color: '#ffffff',
+            background: TOOLTIP_INK,
             whiteSpace: 'nowrap',
-            paddingBottom: 4,
-            marginBottom: 5,
-            borderBottom: '1px solid #e8e3d2',
+            padding: '5px 10px',
           }}>{tooltip.label}</div>
+          <div style={{ padding: '6px 10px 8px' }}>
           {tooltip.rows.map(row => (
             <div key={row.label} style={{ display: 'flex', justifyContent: 'space-between', gap: 14 }}>
-              <span style={{ color: '#555', whiteSpace: 'nowrap' }}>{row.label}</span>
-              <strong style={{ color: row.color ?? '#1a1a1a', whiteSpace: 'nowrap' }}>{row.value}</strong>
+              <span style={{ color: TOOLTIP_INK, whiteSpace: 'nowrap' }}>
+                {row.color && (
+                  <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 2, marginRight: 6, background: row.color }} />
+                )}
+                {row.label}
+              </span>
+              <strong style={{ color: TOOLTIP_INK, whiteSpace: 'nowrap' }}>{row.value}</strong>
             </div>
           ))}
+          </div>
         </div>
       )}
     </div>

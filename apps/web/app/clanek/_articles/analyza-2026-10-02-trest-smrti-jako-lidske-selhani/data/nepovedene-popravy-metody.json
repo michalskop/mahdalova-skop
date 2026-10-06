@@ -1,0 +1,139 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Smrtící injekce, zavedená jako humánnější, se kazila {nejčastěji|#de1743}",
+  "subtitle": "Podíl nepovedených poprav podle metody v USA v letech 1890–2010. Za nepovedenou považuje historik Austin Sarat popravu s nečekanými problémy nebo průtahy, které odsouzenému přinejmenším pravděpodobně způsobily zbytečné utrpení, nebo které svědčí o hrubé neschopnosti popravčích.\nNovější popravy soubor nezahrnuje."
+ },
+ "width": "container",
+ "height": 230,
+ "data": {
+  "values": [
+   {
+    "metoda": "Smrtící injekce",
+    "popravy": "1 054",
+    "nepovedene": "75",
+    "podil": 7.12,
+    "podil_txt": "7,1 %",
+    "hl": true
+   },
+   {
+    "metoda": "Plynová komora",
+    "popravy": "593",
+    "nepovedene": "32",
+    "podil": 5.4,
+    "podil_txt": "5,4 %",
+    "hl": false
+   },
+   {
+    "metoda": "Oběšení",
+    "popravy": "2 721",
+    "nepovedene": "85",
+    "podil": 3.12,
+    "podil_txt": "3,1 %",
+    "hl": false
+   },
+   {
+    "metoda": "Elektrické křeslo",
+    "popravy": "4 374",
+    "nepovedene": "84",
+    "podil": 1.92,
+    "podil_txt": "1,9 %",
+    "hl": false
+   },
+   {
+    "metoda": "Zastřelení",
+    "popravy": "34",
+    "nepovedene": "0",
+    "podil": 0.0,
+    "podil_txt": "0,0 %",
+    "hl": false
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "metoda",
+   "type": "nominal",
+   "sort": null,
+   "axis": {
+    "title": null,
+    "labelLimit": 200
+   }
+  },
+  "x": {
+   "field": "podil",
+   "type": "quantitative",
+   "axis": {
+    "title": null,
+    "grid": false,
+    "values": [
+     0,
+     2,
+     4,
+     6,
+     8
+    ],
+    "labelExpr": "datum.value + ' %'"
+   },
+   "scale": {
+    "domain": [
+     0,
+     8.5
+    ]
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": {
+     "band": 0.65
+    }
+   },
+   "encoding": {
+    "color": {
+     "condition": {
+      "test": "datum.hl",
+      "value": "#de1743"
+     },
+     "value": "#4c4f8e"
+    },
+    "tooltip": [
+     {
+      "field": "metoda",
+      "title": "Metoda"
+     },
+     {
+      "field": "popravy",
+      "title": "Poprav celkem"
+     },
+     {
+      "field": "nepovedene",
+      "title": "Nepovedených"
+     },
+     {
+      "field": "podil_txt",
+      "title": "Podíl"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#333333"
+   },
+   "encoding": {
+    "text": {
+     "field": "podil_txt"
+    }
+   }
+  }
+ ],
+ "_source": "Austin Sarat: Gruesome Spectacles (2014), podle [Death Penalty Information Center](https://deathpenaltyinfo.org/executions/botched-executions)"
+}
