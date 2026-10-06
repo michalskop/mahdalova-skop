@@ -26,8 +26,8 @@
     "range": [
      "#e9e9dd",
      "#bcc4df",
-     "#7889be",
-     "#fda668",
+     "#ffc89f",
+     "#ff934d",
      "#de1743"
     ]
    },
@@ -77,1211 +77,1384 @@
          "id": "242",
          "zeme": "Fidži",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1964",
          "pozn": ""
         },
         {
          "id": "834",
          "zeme": "Tanzanie",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1995",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
         },
         {
          "id": "732",
-         "zeme": "Západní Sahara (pod správou Maroka)",
+         "zeme": "Západní Sahara",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": "Pod správou Maroka."
         },
         {
          "id": "124",
          "zeme": "Kanada",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1962",
          "pozn": ""
         },
         {
          "id": "840",
          "zeme": "USA",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "47",
-         "pozn": "Federace: trest smrti má 27 států, federální vláda a armáda; 23 států a District of Columbia ho zrušily. V roce 2025 popravovalo 11 států."
+         "info": "Popravuje (v roce 2025: 47 poprav)",
+         "posledni": "2025",
+         "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
         },
         {
          "id": "398",
          "zeme": "Kazachstán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "2003",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
         },
         {
          "id": "860",
          "zeme": "Uzbekistán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "2005",
          "pozn": ""
         },
         {
          "id": "598",
          "zeme": "Papua-Nová Guinea",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1950s",
          "pozn": ""
         },
         {
          "id": "360",
          "zeme": "Indonésie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
          "pozn": ""
         },
         {
          "id": "032",
          "zeme": "Argentina",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "152",
          "zeme": "Chile",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2001 pro běžné trestné činy",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2008), Amnesty ne – zůstává pro válečné zločiny."
         },
         {
          "id": "180",
          "zeme": "Demokratická republika Kongo",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
          "pozn": ""
         },
         {
          "id": "706",
          "zeme": "Somálsko",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 17",
+         "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "404",
          "zeme": "Keňa",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
          "pozn": ""
         },
         {
          "id": "729",
          "zeme": "Súdán",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
         },
         {
          "id": "148",
          "zeme": "Čad",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2020",
+         "posledni": "2015",
          "pozn": ""
         },
         {
          "id": "332",
          "zeme": "Haiti",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1987",
+         "posledni": "1972 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "214",
          "zeme": "Dominikánská republika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1966",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "643",
          "zeme": "Rusko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": "Moratorium na popravy od roku 1996."
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1999",
+         "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
         },
         {
          "id": "044",
          "zeme": "Bahamy",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "238",
          "zeme": "Falklandské ostrovy",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
+         "pozn": "Britské zámořské území."
         },
         {
          "id": "578",
          "zeme": "Norsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1948",
          "pozn": ""
         },
         {
          "id": "304",
          "zeme": "Grónsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
+         "pozn": "Území Dánska."
         },
         {
          "id": "260",
          "zeme": "Francouzská jižní území",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Francouzské zámořské území."
         },
         {
          "id": "626",
          "zeme": "Východní Timor",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "710",
          "zeme": "Jihoafrická republika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1991",
          "pozn": ""
         },
         {
          "id": "426",
          "zeme": "Lesotho",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1995",
          "pozn": ""
         },
         {
          "id": "484",
          "zeme": "Mexiko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2005",
+         "posledni": "1961",
          "pozn": ""
         },
         {
          "id": "858",
          "zeme": "Uruguay",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1907",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "076",
          "zeme": "Brazílie",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1855",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1855 (Amnesty), jinde 1876."
         },
         {
          "id": "068",
          "zeme": "Bolívie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1974",
+         "pozn": "Údaje se rozcházejí: zrušení 2009 (Amnesty), 2013 (DPIC); poslední poprava 1974, jinde 1973."
         },
         {
          "id": "604",
          "zeme": "Peru",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1979",
          "pozn": ""
         },
         {
          "id": "170",
          "zeme": "Kolumbie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1910",
+         "posledni": "1909",
          "pozn": ""
         },
         {
          "id": "591",
          "zeme": "Panama",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1922",
+         "posledni": "1903 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "188",
          "zeme": "Kostarika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1877",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "558",
          "zeme": "Nikaragua",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1930",
          "pozn": ""
         },
         {
          "id": "340",
          "zeme": "Honduras",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1956",
+         "posledni": "1940",
          "pozn": ""
         },
         {
          "id": "222",
          "zeme": "Salvador",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1983 pro běžné trestné činy",
+         "posledni": "1973 (poslední známá)",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1973 (Amnesty), jinde 1971."
         },
         {
          "id": "320",
          "zeme": "Guatemala",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
+         "info": "Zrušila ho v roce 2017 pro běžné trestné činy",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "084",
          "zeme": "Belize",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1985",
          "pozn": ""
         },
         {
          "id": "862",
          "zeme": "Venezuela",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1863",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "328",
          "zeme": "Guyana",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "740",
          "zeme": "Surinam",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2021",
+         "posledni": "1982",
+         "pozn": "Údaje se rozcházejí: zrušení 2021 (Amnesty), 2015 (DPIC)."
         },
         {
          "id": "250",
          "zeme": "Francie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
          "pozn": ""
         },
         {
          "id": "218",
          "zeme": "Ekvádor",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1906",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "630",
          "zeme": "Portoriko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1929",
+         "posledni": "1927",
+         "pozn": "Území USA: místní právo trest smrti zrušilo v roce 1929, platí tu ale federální trest smrti."
         },
         {
          "id": "388",
          "zeme": "Jamajka",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1988",
          "pozn": ""
         },
         {
          "id": "192",
          "zeme": "Kuba",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
          "pozn": ""
         },
         {
          "id": "716",
          "zeme": "Zimbabwe",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
+         "info": "Zrušila ho v roce 2024 pro běžné trestné činy",
+         "posledni": "2005",
          "pozn": ""
         },
         {
          "id": "072",
          "zeme": "Botswana",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2021",
          "pozn": ""
         },
         {
          "id": "516",
          "zeme": "Namibie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "686",
          "zeme": "Senegal",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1967",
          "pozn": ""
         },
         {
          "id": "466",
          "zeme": "Mali",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1980",
          "pozn": ""
         },
         {
          "id": "478",
          "zeme": "Mauritánie",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
          "pozn": ""
         },
         {
          "id": "204",
          "zeme": "Benin",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2016",
+         "posledni": "1987",
+         "pozn": "Údaje se rozcházejí: zrušení 2016 (Amnesty), jinde 2012."
         },
         {
          "id": "562",
          "zeme": "Niger",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "566",
          "zeme": "Nigérie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
          "pozn": ""
         },
         {
          "id": "120",
          "zeme": "Kamerun",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "768",
          "zeme": "Togo",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1978",
          "pozn": ""
         },
         {
          "id": "288",
          "zeme": "Ghana",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "384",
          "zeme": "Pobřeží slonoviny",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2000",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "324",
          "zeme": "Guinea",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2001",
          "pozn": ""
         },
         {
          "id": "624",
          "zeme": "Guinea-Bissau",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1993",
+         "posledni": "1986 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "430",
          "zeme": "Libérie",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "694",
          "zeme": "Sierra Leone",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1998",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
         },
         {
          "id": "854",
          "zeme": "Burkina Faso",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2018 pro běžné trestné činy",
+         "posledni": "1988",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2018), Amnesty ne – vojenské právo trest smrti zachovává."
         },
         {
          "id": "140",
          "zeme": "Středoafrická republika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1981",
          "pozn": ""
         },
         {
          "id": "178",
          "zeme": "Kongo – Brazzaville",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1982",
          "pozn": ""
         },
         {
          "id": "266",
          "zeme": "Gabon",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2010",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1985 (Amnesty 2023), 1981 (Amnesty 2009)."
         },
         {
          "id": "226",
          "zeme": "Rovníková Guinea",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2022 pro běžné trestné činy",
+         "posledni": "2014",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2022), Amnesty ne – vojenské právo trest smrti zachovává."
         },
         {
          "id": "894",
          "zeme": "Zambie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2023",
+         "posledni": "1997",
+         "pozn": "Údaje se rozcházejí: zrušení 2023 (Amnesty), 2022 (DPIC)."
         },
         {
          "id": "454",
          "zeme": "Malawi",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1992",
          "pozn": ""
         },
         {
          "id": "508",
          "zeme": "Mosambik",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1986",
          "pozn": ""
         },
         {
          "id": "748",
          "zeme": "Eswatini",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1983",
          "pozn": ""
         },
         {
          "id": "024",
          "zeme": "Angola",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1985",
          "pozn": ""
         },
         {
          "id": "108",
          "zeme": "Burundi",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "2000",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2000 (Amnesty), jinde 1997."
         },
         {
          "id": "376",
          "zeme": "Izrael",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1954 pro běžné trestné činy",
+         "posledni": "1962",
+         "pozn": "V březnu 2026 schválil Kneset trest smrti za terorismus. Poslední poprava: Adolf Eichmann (1962)."
         },
         {
          "id": "422",
          "zeme": "Libanon",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2004",
+         "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
         },
         {
          "id": "450",
          "zeme": "Madagaskar",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1958",
+         "pozn": "Údaje se rozcházejí: zrušení 2015 (Amnesty), jinde 2014."
         },
         {
          "id": "275",
          "zeme": "Palestina",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
+         "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
         },
         {
          "id": "270",
          "zeme": "Gambie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2012",
          "pozn": ""
         },
         {
          "id": "788",
          "zeme": "Tunisko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1991",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
         },
         {
          "id": "012",
          "zeme": "Alžírsko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "400",
          "zeme": "Jordánsko",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2026",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
         },
         {
          "id": "784",
          "zeme": "Spojené arabské emiráty",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "3",
+         "info": "Popravuje (v roce 2025: 3 popravy)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "634",
          "zeme": "Katar",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
          "pozn": ""
         },
         {
          "id": "414",
          "zeme": "Kuvajt",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "17",
+         "info": "Popravuje (v roce 2025: 17 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "368",
          "zeme": "Irák",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nezjištěno",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "512",
          "zeme": "Omán",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
          "pozn": ""
         },
         {
          "id": "548",
          "zeme": "Vanuatu",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1980",
+         "posledni": "od nezávislosti žádná",
          "pozn": ""
         },
         {
          "id": "116",
          "zeme": "Kambodža",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "764",
          "zeme": "Thajsko",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2018",
          "pozn": ""
         },
         {
          "id": "418",
          "zeme": "Laos",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "104",
          "zeme": "Myanmar (Barma)",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
         },
         {
          "id": "704",
          "zeme": "Vietnam",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nezjištěno",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "408",
          "zeme": "Severní Korea",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nezjištěno",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "410",
          "zeme": "Jižní Korea",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "496",
          "zeme": "Mongolsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2008",
+         "pozn": "Údaje se rozcházejí: zákon přijat 2015, účinný od 2017 (Amnesty)."
         },
         {
          "id": "356",
          "zeme": "Indie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
          "pozn": ""
         },
         {
          "id": "050",
          "zeme": "Bangladéš",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
          "pozn": ""
         },
         {
          "id": "064",
          "zeme": "Bhútán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1964 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "524",
          "zeme": "Nepál",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1979",
          "pozn": ""
         },
         {
          "id": "586",
          "zeme": "Pákistán",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
          "pozn": ""
         },
         {
          "id": "004",
          "zeme": "Afghánistán",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "6",
+         "info": "Popravuje (v roce 2025: 6 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "762",
          "zeme": "Tádžikistán",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2004",
          "pozn": ""
         },
         {
          "id": "417",
          "zeme": "Kyrgyzstán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
          "pozn": ""
         },
         {
          "id": "795",
          "zeme": "Turkmenistán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "364",
          "zeme": "Írán",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 2 159",
+         "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "760",
          "zeme": "Sýrie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
          "pozn": ""
         },
         {
          "id": "051",
          "zeme": "Arménie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2003",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "752",
          "zeme": "Švédsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1910",
          "pozn": ""
         },
         {
          "id": "112",
          "zeme": "Bělorusko",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": "Jediná evropská země, která trest smrti zachovává. V roce 2025 nikoho nepopravila."
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Jediná evropská země, která trest smrti zachovává."
         },
         {
          "id": "804",
          "zeme": "Ukrajina",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "616",
          "zeme": "Polsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1988",
          "pozn": ""
         },
         {
          "id": "040",
          "zeme": "Rakousko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1968",
+         "posledni": "1950",
          "pozn": ""
         },
         {
          "id": "348",
          "zeme": "Maďarsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988",
          "pozn": ""
         },
         {
          "id": "498",
          "zeme": "Moldavsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "642",
          "zeme": "Rumunsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "440",
          "zeme": "Litva",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1995",
          "pozn": ""
         },
         {
          "id": "428",
          "zeme": "Lotyšsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2012",
+         "posledni": "1996",
          "pozn": ""
         },
         {
          "id": "233",
          "zeme": "Estonsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1991",
          "pozn": ""
         },
         {
          "id": "276",
          "zeme": "Německo",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1949",
+         "posledni": "1981",
+         "pozn": "Západní Německo ho zrušilo v roce 1949, NDR v roce 1987. Poslední poprava v NDR 1981, v západním Německu 1949."
         },
         {
          "id": "100",
          "zeme": "Bulharsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "300",
          "zeme": "Řecko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1972",
          "pozn": ""
         },
         {
          "id": "792",
          "zeme": "Turecko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1984",
          "pozn": ""
         },
         {
          "id": "008",
          "zeme": "Albánie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1995",
          "pozn": ""
         },
         {
          "id": "191",
          "zeme": "Chorvatsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1987",
          "pozn": ""
         },
         {
          "id": "756",
          "zeme": "Švýcarsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1944",
          "pozn": ""
         },
         {
          "id": "442",
          "zeme": "Lucembursko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1949",
          "pozn": ""
         },
         {
          "id": "056",
          "zeme": "Belgie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1996",
+         "posledni": "1950",
          "pozn": ""
         },
         {
          "id": "528",
          "zeme": "Nizozemsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1982",
+         "posledni": "1952",
          "pozn": ""
         },
         {
          "id": "620",
          "zeme": "Portugalsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1976",
+         "posledni": "1849 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "724",
          "zeme": "Španělsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "1975",
          "pozn": ""
         },
         {
          "id": "372",
          "zeme": "Irsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1954",
          "pozn": ""
         },
         {
          "id": "540",
          "zeme": "Nová Kaledonie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Území Francie."
         },
         {
          "id": "090",
          "zeme": "Šalamounovy ostrovy",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1966",
          "pozn": ""
         },
         {
          "id": "554",
          "zeme": "Nový Zéland",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1957",
          "pozn": ""
         },
         {
          "id": "036",
          "zeme": "Austrálie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1985",
+         "posledni": "1967",
          "pozn": ""
         },
         {
          "id": "144",
          "zeme": "Srí Lanka",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976",
          "pozn": ""
         },
         {
          "id": "156",
          "zeme": "Čína",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "tisíce (státní tajemství)",
+         "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
+         "posledni": "2025",
          "pozn": "Počty poprav jsou státním tajemstvím."
         },
         {
          "id": "158",
          "zeme": "Tchaj-wan",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "1",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "380",
          "zeme": "Itálie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1994",
+         "posledni": "1947",
          "pozn": ""
         },
         {
          "id": "208",
          "zeme": "Dánsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
          "pozn": ""
         },
         {
          "id": "826",
          "zeme": "Spojené království",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
          "pozn": ""
         },
         {
          "id": "352",
          "zeme": "Island",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1928",
+         "posledni": "1830",
          "pozn": ""
         },
         {
          "id": "031",
          "zeme": "Ázerbájdžán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "268",
          "zeme": "Gruzie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1994 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "608",
          "zeme": "Filipíny",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2006",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "458",
          "zeme": "Malajsie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2017",
          "pozn": ""
         },
         {
          "id": "096",
          "zeme": "Brunej",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1957 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "705",
          "zeme": "Slovinsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "246",
          "zeme": "Finsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1944",
          "pozn": ""
         },
         {
          "id": "703",
          "zeme": "Slovensko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "203",
          "zeme": "Česko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "232",
          "zeme": "Eritrea",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "392",
          "zeme": "Japonsko",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "1",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "600",
          "zeme": "Paraguay",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1928",
          "pozn": ""
         },
         {
          "id": "887",
          "zeme": "Jemen",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 51",
+         "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "682",
          "zeme": "Saúdská Arábie",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 356",
+         "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "196",
          "zeme": "Kypr",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1962",
          "pozn": ""
         },
         {
          "id": "504",
          "zeme": "Maroko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "818",
          "zeme": "Egypt",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "23",
+         "info": "Popravuje (v roce 2025: 23 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "434",
          "zeme": "Libye",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2010",
+         "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
         },
         {
          "id": "231",
          "zeme": "Etiopie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2007",
          "pozn": ""
         },
         {
          "id": "262",
          "zeme": "Džibutsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "od nezávislosti žádná",
          "pozn": ""
         },
         {
          "id": "800",
          "zeme": "Uganda",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2005",
+         "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
         },
         {
          "id": "646",
          "zeme": "Rwanda",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
          "pozn": ""
         },
         {
          "id": "070",
          "zeme": "Bosna a Hercegovina",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2001",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "807",
          "zeme": "Severní Makedonie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1991",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "688",
          "zeme": "Srbsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1992",
          "pozn": ""
         },
         {
          "id": "499",
          "zeme": "Černá Hora",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "780",
          "zeme": "Trinidad a Tobago",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1999",
          "pozn": ""
         },
         {
          "id": "728",
          "zeme": "Jižní Súdán",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "1",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
          "pozn": ""
         }
        ]
@@ -1290,13 +1463,14 @@
       "fields": [
        "zeme",
        "stav",
-       "popravy",
+       "info",
+       "posledni",
        "pozn"
       ]
      }
     },
     {
-     "filter": "isValid(datum.stav) && !datum.pozn"
+     "filter": "isValid(datum.stav) && datum.posledni && datum.pozn"
     }
    ],
    "mark": {
@@ -1311,12 +1485,16 @@
       "title": "Země"
      },
      {
-      "field": "stav",
+      "field": "info",
       "title": "Trest smrti"
      },
      {
-      "field": "popravy",
-      "title": "Popravy v roce 2025"
+      "field": "posledni",
+      "title": "Poslední poprava"
+     },
+     {
+      "field": "pozn",
+      "title": "Poznámka"
      }
     ]
    }
@@ -1339,1211 +1517,1384 @@
          "id": "242",
          "zeme": "Fidži",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1964",
          "pozn": ""
         },
         {
          "id": "834",
          "zeme": "Tanzanie",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1995",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
         },
         {
          "id": "732",
-         "zeme": "Západní Sahara (pod správou Maroka)",
+         "zeme": "Západní Sahara",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": "Pod správou Maroka."
         },
         {
          "id": "124",
          "zeme": "Kanada",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1962",
          "pozn": ""
         },
         {
          "id": "840",
          "zeme": "USA",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "47",
-         "pozn": "Federace: trest smrti má 27 států, federální vláda a armáda; 23 států a District of Columbia ho zrušily. V roce 2025 popravovalo 11 států."
+         "info": "Popravuje (v roce 2025: 47 poprav)",
+         "posledni": "2025",
+         "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
         },
         {
          "id": "398",
          "zeme": "Kazachstán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "2003",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
         },
         {
          "id": "860",
          "zeme": "Uzbekistán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "2005",
          "pozn": ""
         },
         {
          "id": "598",
          "zeme": "Papua-Nová Guinea",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1950s",
          "pozn": ""
         },
         {
          "id": "360",
          "zeme": "Indonésie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
          "pozn": ""
         },
         {
          "id": "032",
          "zeme": "Argentina",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "152",
          "zeme": "Chile",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2001 pro běžné trestné činy",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2008), Amnesty ne – zůstává pro válečné zločiny."
         },
         {
          "id": "180",
          "zeme": "Demokratická republika Kongo",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
          "pozn": ""
         },
         {
          "id": "706",
          "zeme": "Somálsko",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 17",
+         "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "404",
          "zeme": "Keňa",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
          "pozn": ""
         },
         {
          "id": "729",
          "zeme": "Súdán",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
         },
         {
          "id": "148",
          "zeme": "Čad",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2020",
+         "posledni": "2015",
          "pozn": ""
         },
         {
          "id": "332",
          "zeme": "Haiti",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1987",
+         "posledni": "1972 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "214",
          "zeme": "Dominikánská republika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1966",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "643",
          "zeme": "Rusko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": "Moratorium na popravy od roku 1996."
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1999",
+         "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
         },
         {
          "id": "044",
          "zeme": "Bahamy",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "238",
          "zeme": "Falklandské ostrovy",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
+         "pozn": "Britské zámořské území."
         },
         {
          "id": "578",
          "zeme": "Norsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1948",
          "pozn": ""
         },
         {
          "id": "304",
          "zeme": "Grónsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
+         "pozn": "Území Dánska."
         },
         {
          "id": "260",
          "zeme": "Francouzská jižní území",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Francouzské zámořské území."
         },
         {
          "id": "626",
          "zeme": "Východní Timor",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "710",
          "zeme": "Jihoafrická republika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1991",
          "pozn": ""
         },
         {
          "id": "426",
          "zeme": "Lesotho",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1995",
          "pozn": ""
         },
         {
          "id": "484",
          "zeme": "Mexiko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2005",
+         "posledni": "1961",
          "pozn": ""
         },
         {
          "id": "858",
          "zeme": "Uruguay",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1907",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "076",
          "zeme": "Brazílie",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1855",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1855 (Amnesty), jinde 1876."
         },
         {
          "id": "068",
          "zeme": "Bolívie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1974",
+         "pozn": "Údaje se rozcházejí: zrušení 2009 (Amnesty), 2013 (DPIC); poslední poprava 1974, jinde 1973."
         },
         {
          "id": "604",
          "zeme": "Peru",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1979",
          "pozn": ""
         },
         {
          "id": "170",
          "zeme": "Kolumbie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1910",
+         "posledni": "1909",
          "pozn": ""
         },
         {
          "id": "591",
          "zeme": "Panama",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1922",
+         "posledni": "1903 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "188",
          "zeme": "Kostarika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1877",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "558",
          "zeme": "Nikaragua",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1930",
          "pozn": ""
         },
         {
          "id": "340",
          "zeme": "Honduras",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1956",
+         "posledni": "1940",
          "pozn": ""
         },
         {
          "id": "222",
          "zeme": "Salvador",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1983 pro běžné trestné činy",
+         "posledni": "1973 (poslední známá)",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1973 (Amnesty), jinde 1971."
         },
         {
          "id": "320",
          "zeme": "Guatemala",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
+         "info": "Zrušila ho v roce 2017 pro běžné trestné činy",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "084",
          "zeme": "Belize",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1985",
          "pozn": ""
         },
         {
          "id": "862",
          "zeme": "Venezuela",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1863",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "328",
          "zeme": "Guyana",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "740",
          "zeme": "Surinam",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2021",
+         "posledni": "1982",
+         "pozn": "Údaje se rozcházejí: zrušení 2021 (Amnesty), 2015 (DPIC)."
         },
         {
          "id": "250",
          "zeme": "Francie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
          "pozn": ""
         },
         {
          "id": "218",
          "zeme": "Ekvádor",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1906",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "630",
          "zeme": "Portoriko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1929",
+         "posledni": "1927",
+         "pozn": "Území USA: místní právo trest smrti zrušilo v roce 1929, platí tu ale federální trest smrti."
         },
         {
          "id": "388",
          "zeme": "Jamajka",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1988",
          "pozn": ""
         },
         {
          "id": "192",
          "zeme": "Kuba",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
          "pozn": ""
         },
         {
          "id": "716",
          "zeme": "Zimbabwe",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
+         "info": "Zrušila ho v roce 2024 pro běžné trestné činy",
+         "posledni": "2005",
          "pozn": ""
         },
         {
          "id": "072",
          "zeme": "Botswana",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2021",
          "pozn": ""
         },
         {
          "id": "516",
          "zeme": "Namibie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "686",
          "zeme": "Senegal",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1967",
          "pozn": ""
         },
         {
          "id": "466",
          "zeme": "Mali",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1980",
          "pozn": ""
         },
         {
          "id": "478",
          "zeme": "Mauritánie",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
          "pozn": ""
         },
         {
          "id": "204",
          "zeme": "Benin",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2016",
+         "posledni": "1987",
+         "pozn": "Údaje se rozcházejí: zrušení 2016 (Amnesty), jinde 2012."
         },
         {
          "id": "562",
          "zeme": "Niger",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "566",
          "zeme": "Nigérie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
          "pozn": ""
         },
         {
          "id": "120",
          "zeme": "Kamerun",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "768",
          "zeme": "Togo",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1978",
          "pozn": ""
         },
         {
          "id": "288",
          "zeme": "Ghana",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "384",
          "zeme": "Pobřeží slonoviny",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2000",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "324",
          "zeme": "Guinea",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2001",
          "pozn": ""
         },
         {
          "id": "624",
          "zeme": "Guinea-Bissau",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1993",
+         "posledni": "1986 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "430",
          "zeme": "Libérie",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "694",
          "zeme": "Sierra Leone",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1998",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
         },
         {
          "id": "854",
          "zeme": "Burkina Faso",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2018 pro běžné trestné činy",
+         "posledni": "1988",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2018), Amnesty ne – vojenské právo trest smrti zachovává."
         },
         {
          "id": "140",
          "zeme": "Středoafrická republika",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1981",
          "pozn": ""
         },
         {
          "id": "178",
          "zeme": "Kongo – Brazzaville",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1982",
          "pozn": ""
         },
         {
          "id": "266",
          "zeme": "Gabon",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2010",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1985 (Amnesty 2023), 1981 (Amnesty 2009)."
         },
         {
          "id": "226",
          "zeme": "Rovníková Guinea",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2022 pro běžné trestné činy",
+         "posledni": "2014",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2022), Amnesty ne – vojenské právo trest smrti zachovává."
         },
         {
          "id": "894",
          "zeme": "Zambie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2023",
+         "posledni": "1997",
+         "pozn": "Údaje se rozcházejí: zrušení 2023 (Amnesty), 2022 (DPIC)."
         },
         {
          "id": "454",
          "zeme": "Malawi",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1992",
          "pozn": ""
         },
         {
          "id": "508",
          "zeme": "Mosambik",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1986",
          "pozn": ""
         },
         {
          "id": "748",
          "zeme": "Eswatini",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1983",
          "pozn": ""
         },
         {
          "id": "024",
          "zeme": "Angola",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1985",
          "pozn": ""
         },
         {
          "id": "108",
          "zeme": "Burundi",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "2000",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2000 (Amnesty), jinde 1997."
         },
         {
          "id": "376",
          "zeme": "Izrael",
          "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1954 pro běžné trestné činy",
+         "posledni": "1962",
+         "pozn": "V březnu 2026 schválil Kneset trest smrti za terorismus. Poslední poprava: Adolf Eichmann (1962)."
         },
         {
          "id": "422",
          "zeme": "Libanon",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2004",
+         "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
         },
         {
          "id": "450",
          "zeme": "Madagaskar",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1958",
+         "pozn": "Údaje se rozcházejí: zrušení 2015 (Amnesty), jinde 2014."
         },
         {
          "id": "275",
          "zeme": "Palestina",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
+         "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
         },
         {
          "id": "270",
          "zeme": "Gambie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2012",
          "pozn": ""
         },
         {
          "id": "788",
          "zeme": "Tunisko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1991",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
         },
         {
          "id": "012",
          "zeme": "Alžírsko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "400",
          "zeme": "Jordánsko",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2026",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
         },
         {
          "id": "784",
          "zeme": "Spojené arabské emiráty",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "3",
+         "info": "Popravuje (v roce 2025: 3 popravy)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "634",
          "zeme": "Katar",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
          "pozn": ""
         },
         {
          "id": "414",
          "zeme": "Kuvajt",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "17",
+         "info": "Popravuje (v roce 2025: 17 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "368",
          "zeme": "Irák",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nezjištěno",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "512",
          "zeme": "Omán",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
          "pozn": ""
         },
         {
          "id": "548",
          "zeme": "Vanuatu",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1980",
+         "posledni": "od nezávislosti žádná",
          "pozn": ""
         },
         {
          "id": "116",
          "zeme": "Kambodža",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "764",
          "zeme": "Thajsko",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2018",
          "pozn": ""
         },
         {
          "id": "418",
          "zeme": "Laos",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "104",
          "zeme": "Myanmar (Barma)",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
         },
         {
          "id": "704",
          "zeme": "Vietnam",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nezjištěno",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "408",
          "zeme": "Severní Korea",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nezjištěno",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "410",
          "zeme": "Jižní Korea",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "496",
          "zeme": "Mongolsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2008",
+         "pozn": "Údaje se rozcházejí: zákon přijat 2015, účinný od 2017 (Amnesty)."
         },
         {
          "id": "356",
          "zeme": "Indie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
          "pozn": ""
         },
         {
          "id": "050",
          "zeme": "Bangladéš",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
          "pozn": ""
         },
         {
          "id": "064",
          "zeme": "Bhútán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1964 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "524",
          "zeme": "Nepál",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1979",
          "pozn": ""
         },
         {
          "id": "586",
          "zeme": "Pákistán",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
          "pozn": ""
         },
         {
          "id": "004",
          "zeme": "Afghánistán",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "6",
+         "info": "Popravuje (v roce 2025: 6 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "762",
          "zeme": "Tádžikistán",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2004",
          "pozn": ""
         },
         {
          "id": "417",
          "zeme": "Kyrgyzstán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
          "pozn": ""
         },
         {
          "id": "795",
          "zeme": "Turkmenistán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "364",
          "zeme": "Írán",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 2 159",
+         "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "760",
          "zeme": "Sýrie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
          "pozn": ""
         },
         {
          "id": "051",
          "zeme": "Arménie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2003",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "752",
          "zeme": "Švédsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1910",
          "pozn": ""
         },
         {
          "id": "112",
          "zeme": "Bělorusko",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": "Jediná evropská země, která trest smrti zachovává. V roce 2025 nikoho nepopravila."
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Jediná evropská země, která trest smrti zachovává."
         },
         {
          "id": "804",
          "zeme": "Ukrajina",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
          "pozn": ""
         },
         {
          "id": "616",
          "zeme": "Polsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1988",
          "pozn": ""
         },
         {
          "id": "040",
          "zeme": "Rakousko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1968",
+         "posledni": "1950",
          "pozn": ""
         },
         {
          "id": "348",
          "zeme": "Maďarsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988",
          "pozn": ""
         },
         {
          "id": "498",
          "zeme": "Moldavsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "642",
          "zeme": "Rumunsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "440",
          "zeme": "Litva",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1995",
          "pozn": ""
         },
         {
          "id": "428",
          "zeme": "Lotyšsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2012",
+         "posledni": "1996",
          "pozn": ""
         },
         {
          "id": "233",
          "zeme": "Estonsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1991",
          "pozn": ""
         },
         {
          "id": "276",
          "zeme": "Německo",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1949",
+         "posledni": "1981",
+         "pozn": "Západní Německo ho zrušilo v roce 1949, NDR v roce 1987. Poslední poprava v NDR 1981, v západním Německu 1949."
         },
         {
          "id": "100",
          "zeme": "Bulharsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "300",
          "zeme": "Řecko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1972",
          "pozn": ""
         },
         {
          "id": "792",
          "zeme": "Turecko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1984",
          "pozn": ""
         },
         {
          "id": "008",
          "zeme": "Albánie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1995",
          "pozn": ""
         },
         {
          "id": "191",
          "zeme": "Chorvatsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1987",
          "pozn": ""
         },
         {
          "id": "756",
          "zeme": "Švýcarsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1944",
          "pozn": ""
         },
         {
          "id": "442",
          "zeme": "Lucembursko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1949",
          "pozn": ""
         },
         {
          "id": "056",
          "zeme": "Belgie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1996",
+         "posledni": "1950",
          "pozn": ""
         },
         {
          "id": "528",
          "zeme": "Nizozemsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1982",
+         "posledni": "1952",
          "pozn": ""
         },
         {
          "id": "620",
          "zeme": "Portugalsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1976",
+         "posledni": "1849 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "724",
          "zeme": "Španělsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "1975",
          "pozn": ""
         },
         {
          "id": "372",
          "zeme": "Irsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1954",
          "pozn": ""
         },
         {
          "id": "540",
          "zeme": "Nová Kaledonie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
-         "pozn": ""
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Území Francie."
         },
         {
          "id": "090",
          "zeme": "Šalamounovy ostrovy",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1966",
          "pozn": ""
         },
         {
          "id": "554",
          "zeme": "Nový Zéland",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1957",
          "pozn": ""
         },
         {
          "id": "036",
          "zeme": "Austrálie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1985",
+         "posledni": "1967",
          "pozn": ""
         },
         {
          "id": "144",
          "zeme": "Srí Lanka",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976",
          "pozn": ""
         },
         {
          "id": "156",
          "zeme": "Čína",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "tisíce (státní tajemství)",
+         "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
+         "posledni": "2025",
          "pozn": "Počty poprav jsou státním tajemstvím."
         },
         {
          "id": "158",
          "zeme": "Tchaj-wan",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "1",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "380",
          "zeme": "Itálie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1994",
+         "posledni": "1947",
          "pozn": ""
         },
         {
          "id": "208",
          "zeme": "Dánsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
          "pozn": ""
         },
         {
          "id": "826",
          "zeme": "Spojené království",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
          "pozn": ""
         },
         {
          "id": "352",
          "zeme": "Island",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1928",
+         "posledni": "1830",
          "pozn": ""
         },
         {
          "id": "031",
          "zeme": "Ázerbájdžán",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "268",
          "zeme": "Gruzie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1994 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "608",
          "zeme": "Filipíny",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2006",
+         "posledni": "2000",
          "pozn": ""
         },
         {
          "id": "458",
          "zeme": "Malajsie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2017",
          "pozn": ""
         },
         {
          "id": "096",
          "zeme": "Brunej",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1957 (poslední známá)",
          "pozn": ""
         },
         {
          "id": "705",
          "zeme": "Slovinsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "246",
          "zeme": "Finsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1944",
          "pozn": ""
         },
         {
          "id": "703",
          "zeme": "Slovensko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "203",
          "zeme": "Česko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "232",
          "zeme": "Eritrea",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
          "pozn": ""
         },
         {
          "id": "392",
          "zeme": "Japonsko",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "1",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "600",
          "zeme": "Paraguay",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1928",
          "pozn": ""
         },
         {
          "id": "887",
          "zeme": "Jemen",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 51",
+         "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "682",
          "zeme": "Saúdská Arábie",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "nejméně 356",
+         "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "196",
          "zeme": "Kypr",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1962",
          "pozn": ""
         },
         {
          "id": "504",
          "zeme": "Maroko",
          "stav": "Mají ho, ale přes 10 let nepopravují",
-         "popravy": "0",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
          "pozn": ""
         },
         {
          "id": "818",
          "zeme": "Egypt",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "23",
+         "info": "Popravuje (v roce 2025: 23 poprav)",
+         "posledni": "2025",
          "pozn": ""
         },
         {
          "id": "434",
          "zeme": "Libye",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2010",
+         "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
         },
         {
          "id": "231",
          "zeme": "Etiopie",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2007",
          "pozn": ""
         },
         {
          "id": "262",
          "zeme": "Džibutsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "od nezávislosti žádná",
          "pozn": ""
         },
         {
          "id": "800",
          "zeme": "Uganda",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
-         "pozn": ""
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2005",
+         "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
         },
         {
          "id": "646",
          "zeme": "Rwanda",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
          "pozn": ""
         },
         {
          "id": "070",
          "zeme": "Bosna a Hercegovina",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2001",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "807",
          "zeme": "Severní Makedonie",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 1991",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "688",
          "zeme": "Srbsko",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1992",
          "pozn": ""
         },
         {
          "id": "499",
          "zeme": "Černá Hora",
          "stav": "Zrušily ho pro všechny trestné činy",
-         "popravy": "–",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "780",
          "zeme": "Trinidad a Tobago",
          "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "popravy": "0",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1999",
          "pozn": ""
         },
         {
          "id": "728",
          "zeme": "Jižní Súdán",
          "stav": "V roce 2025 popravovaly",
-         "popravy": "1",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
          "pozn": ""
         }
        ]
@@ -2552,13 +2903,14 @@
       "fields": [
        "zeme",
        "stav",
-       "popravy",
+       "info",
+       "posledni",
        "pozn"
       ]
      }
     },
     {
-     "filter": "isValid(datum.stav) && datum.pozn"
+     "filter": "isValid(datum.stav) && datum.posledni && !datum.pozn"
     }
    ],
    "mark": {
@@ -2573,12 +2925,1444 @@
       "title": "Země"
      },
      {
-      "field": "stav",
+      "field": "info",
       "title": "Trest smrti"
      },
      {
-      "field": "popravy",
-      "title": "Popravy v roce 2025"
+      "field": "posledni",
+      "title": "Poslední poprava"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "url": "/specialy/dpbp/data/world-countries-110m.json",
+    "format": {
+     "type": "topojson",
+     "feature": "countries"
+    }
+   },
+   "transform": [
+    {
+     "lookup": "id",
+     "from": {
+      "data": {
+       "values": [
+        {
+         "id": "242",
+         "zeme": "Fidži",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1964",
+         "pozn": ""
+        },
+        {
+         "id": "834",
+         "zeme": "Tanzanie",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1995",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
+        },
+        {
+         "id": "732",
+         "zeme": "Západní Sahara",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": "Pod správou Maroka."
+        },
+        {
+         "id": "124",
+         "zeme": "Kanada",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1962",
+         "pozn": ""
+        },
+        {
+         "id": "840",
+         "zeme": "USA",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 47 poprav)",
+         "posledni": "2025",
+         "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
+        },
+        {
+         "id": "398",
+         "zeme": "Kazachstán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "2003",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
+        },
+        {
+         "id": "860",
+         "zeme": "Uzbekistán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "2005",
+         "pozn": ""
+        },
+        {
+         "id": "598",
+         "zeme": "Papua-Nová Guinea",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1950s",
+         "pozn": ""
+        },
+        {
+         "id": "360",
+         "zeme": "Indonésie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
+         "pozn": ""
+        },
+        {
+         "id": "032",
+         "zeme": "Argentina",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "152",
+         "zeme": "Chile",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2001 pro běžné trestné činy",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2008), Amnesty ne – zůstává pro válečné zločiny."
+        },
+        {
+         "id": "180",
+         "zeme": "Demokratická republika Kongo",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
+         "pozn": ""
+        },
+        {
+         "id": "706",
+         "zeme": "Somálsko",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "404",
+         "zeme": "Keňa",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
+         "pozn": ""
+        },
+        {
+         "id": "729",
+         "zeme": "Súdán",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
+        },
+        {
+         "id": "148",
+         "zeme": "Čad",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2020",
+         "posledni": "2015",
+         "pozn": ""
+        },
+        {
+         "id": "332",
+         "zeme": "Haiti",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1987",
+         "posledni": "1972 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "214",
+         "zeme": "Dominikánská republika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1966",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "643",
+         "zeme": "Rusko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1999",
+         "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
+        },
+        {
+         "id": "044",
+         "zeme": "Bahamy",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "238",
+         "zeme": "Falklandské ostrovy",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
+         "pozn": "Britské zámořské území."
+        },
+        {
+         "id": "578",
+         "zeme": "Norsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1948",
+         "pozn": ""
+        },
+        {
+         "id": "304",
+         "zeme": "Grónsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
+         "pozn": "Území Dánska."
+        },
+        {
+         "id": "260",
+         "zeme": "Francouzská jižní území",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Francouzské zámořské území."
+        },
+        {
+         "id": "626",
+         "zeme": "Východní Timor",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "710",
+         "zeme": "Jihoafrická republika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1991",
+         "pozn": ""
+        },
+        {
+         "id": "426",
+         "zeme": "Lesotho",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1995",
+         "pozn": ""
+        },
+        {
+         "id": "484",
+         "zeme": "Mexiko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2005",
+         "posledni": "1961",
+         "pozn": ""
+        },
+        {
+         "id": "858",
+         "zeme": "Uruguay",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1907",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "076",
+         "zeme": "Brazílie",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1855",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1855 (Amnesty), jinde 1876."
+        },
+        {
+         "id": "068",
+         "zeme": "Bolívie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1974",
+         "pozn": "Údaje se rozcházejí: zrušení 2009 (Amnesty), 2013 (DPIC); poslední poprava 1974, jinde 1973."
+        },
+        {
+         "id": "604",
+         "zeme": "Peru",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1979",
+         "pozn": ""
+        },
+        {
+         "id": "170",
+         "zeme": "Kolumbie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1910",
+         "posledni": "1909",
+         "pozn": ""
+        },
+        {
+         "id": "591",
+         "zeme": "Panama",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1922",
+         "posledni": "1903 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "188",
+         "zeme": "Kostarika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1877",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "558",
+         "zeme": "Nikaragua",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1930",
+         "pozn": ""
+        },
+        {
+         "id": "340",
+         "zeme": "Honduras",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1956",
+         "posledni": "1940",
+         "pozn": ""
+        },
+        {
+         "id": "222",
+         "zeme": "Salvador",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1983 pro běžné trestné činy",
+         "posledni": "1973 (poslední známá)",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1973 (Amnesty), jinde 1971."
+        },
+        {
+         "id": "320",
+         "zeme": "Guatemala",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2017 pro běžné trestné činy",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "084",
+         "zeme": "Belize",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1985",
+         "pozn": ""
+        },
+        {
+         "id": "862",
+         "zeme": "Venezuela",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1863",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "328",
+         "zeme": "Guyana",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "740",
+         "zeme": "Surinam",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2021",
+         "posledni": "1982",
+         "pozn": "Údaje se rozcházejí: zrušení 2021 (Amnesty), 2015 (DPIC)."
+        },
+        {
+         "id": "250",
+         "zeme": "Francie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": ""
+        },
+        {
+         "id": "218",
+         "zeme": "Ekvádor",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1906",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "630",
+         "zeme": "Portoriko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1929",
+         "posledni": "1927",
+         "pozn": "Území USA: místní právo trest smrti zrušilo v roce 1929, platí tu ale federální trest smrti."
+        },
+        {
+         "id": "388",
+         "zeme": "Jamajka",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1988",
+         "pozn": ""
+        },
+        {
+         "id": "192",
+         "zeme": "Kuba",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
+         "pozn": ""
+        },
+        {
+         "id": "716",
+         "zeme": "Zimbabwe",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2024 pro běžné trestné činy",
+         "posledni": "2005",
+         "pozn": ""
+        },
+        {
+         "id": "072",
+         "zeme": "Botswana",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2021",
+         "pozn": ""
+        },
+        {
+         "id": "516",
+         "zeme": "Namibie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "686",
+         "zeme": "Senegal",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1967",
+         "pozn": ""
+        },
+        {
+         "id": "466",
+         "zeme": "Mali",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1980",
+         "pozn": ""
+        },
+        {
+         "id": "478",
+         "zeme": "Mauritánie",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
+         "pozn": ""
+        },
+        {
+         "id": "204",
+         "zeme": "Benin",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2016",
+         "posledni": "1987",
+         "pozn": "Údaje se rozcházejí: zrušení 2016 (Amnesty), jinde 2012."
+        },
+        {
+         "id": "562",
+         "zeme": "Niger",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "566",
+         "zeme": "Nigérie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
+         "pozn": ""
+        },
+        {
+         "id": "120",
+         "zeme": "Kamerun",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "768",
+         "zeme": "Togo",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1978",
+         "pozn": ""
+        },
+        {
+         "id": "288",
+         "zeme": "Ghana",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "384",
+         "zeme": "Pobřeží slonoviny",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2000",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "324",
+         "zeme": "Guinea",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2001",
+         "pozn": ""
+        },
+        {
+         "id": "624",
+         "zeme": "Guinea-Bissau",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1993",
+         "posledni": "1986 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "430",
+         "zeme": "Libérie",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "694",
+         "zeme": "Sierra Leone",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1998",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
+        },
+        {
+         "id": "854",
+         "zeme": "Burkina Faso",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2018 pro běžné trestné činy",
+         "posledni": "1988",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2018), Amnesty ne – vojenské právo trest smrti zachovává."
+        },
+        {
+         "id": "140",
+         "zeme": "Středoafrická republika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1981",
+         "pozn": ""
+        },
+        {
+         "id": "178",
+         "zeme": "Kongo – Brazzaville",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1982",
+         "pozn": ""
+        },
+        {
+         "id": "266",
+         "zeme": "Gabon",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2010",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1985 (Amnesty 2023), 1981 (Amnesty 2009)."
+        },
+        {
+         "id": "226",
+         "zeme": "Rovníková Guinea",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2022 pro běžné trestné činy",
+         "posledni": "2014",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2022), Amnesty ne – vojenské právo trest smrti zachovává."
+        },
+        {
+         "id": "894",
+         "zeme": "Zambie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2023",
+         "posledni": "1997",
+         "pozn": "Údaje se rozcházejí: zrušení 2023 (Amnesty), 2022 (DPIC)."
+        },
+        {
+         "id": "454",
+         "zeme": "Malawi",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1992",
+         "pozn": ""
+        },
+        {
+         "id": "508",
+         "zeme": "Mosambik",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1986",
+         "pozn": ""
+        },
+        {
+         "id": "748",
+         "zeme": "Eswatini",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1983",
+         "pozn": ""
+        },
+        {
+         "id": "024",
+         "zeme": "Angola",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1985",
+         "pozn": ""
+        },
+        {
+         "id": "108",
+         "zeme": "Burundi",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "2000",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2000 (Amnesty), jinde 1997."
+        },
+        {
+         "id": "376",
+         "zeme": "Izrael",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1954 pro běžné trestné činy",
+         "posledni": "1962",
+         "pozn": "V březnu 2026 schválil Kneset trest smrti za terorismus. Poslední poprava: Adolf Eichmann (1962)."
+        },
+        {
+         "id": "422",
+         "zeme": "Libanon",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2004",
+         "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
+        },
+        {
+         "id": "450",
+         "zeme": "Madagaskar",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1958",
+         "pozn": "Údaje se rozcházejí: zrušení 2015 (Amnesty), jinde 2014."
+        },
+        {
+         "id": "275",
+         "zeme": "Palestina",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
+         "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
+        },
+        {
+         "id": "270",
+         "zeme": "Gambie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2012",
+         "pozn": ""
+        },
+        {
+         "id": "788",
+         "zeme": "Tunisko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1991",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
+        },
+        {
+         "id": "012",
+         "zeme": "Alžírsko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "400",
+         "zeme": "Jordánsko",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2026",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
+        },
+        {
+         "id": "784",
+         "zeme": "Spojené arabské emiráty",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 3 popravy)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "634",
+         "zeme": "Katar",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
+         "pozn": ""
+        },
+        {
+         "id": "414",
+         "zeme": "Kuvajt",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 17 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "368",
+         "zeme": "Irák",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "512",
+         "zeme": "Omán",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
+         "pozn": ""
+        },
+        {
+         "id": "548",
+         "zeme": "Vanuatu",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1980",
+         "posledni": "od nezávislosti žádná",
+         "pozn": ""
+        },
+        {
+         "id": "116",
+         "zeme": "Kambodža",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "764",
+         "zeme": "Thajsko",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2018",
+         "pozn": ""
+        },
+        {
+         "id": "418",
+         "zeme": "Laos",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "104",
+         "zeme": "Myanmar (Barma)",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
+        },
+        {
+         "id": "704",
+         "zeme": "Vietnam",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "408",
+         "zeme": "Severní Korea",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "410",
+         "zeme": "Jižní Korea",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "496",
+         "zeme": "Mongolsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2008",
+         "pozn": "Údaje se rozcházejí: zákon přijat 2015, účinný od 2017 (Amnesty)."
+        },
+        {
+         "id": "356",
+         "zeme": "Indie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
+         "pozn": ""
+        },
+        {
+         "id": "050",
+         "zeme": "Bangladéš",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
+         "pozn": ""
+        },
+        {
+         "id": "064",
+         "zeme": "Bhútán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1964 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "524",
+         "zeme": "Nepál",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1979",
+         "pozn": ""
+        },
+        {
+         "id": "586",
+         "zeme": "Pákistán",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
+         "pozn": ""
+        },
+        {
+         "id": "004",
+         "zeme": "Afghánistán",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 6 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "762",
+         "zeme": "Tádžikistán",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2004",
+         "pozn": ""
+        },
+        {
+         "id": "417",
+         "zeme": "Kyrgyzstán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
+         "pozn": ""
+        },
+        {
+         "id": "795",
+         "zeme": "Turkmenistán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "364",
+         "zeme": "Írán",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "760",
+         "zeme": "Sýrie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
+         "pozn": ""
+        },
+        {
+         "id": "051",
+         "zeme": "Arménie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2003",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "752",
+         "zeme": "Švédsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1910",
+         "pozn": ""
+        },
+        {
+         "id": "112",
+         "zeme": "Bělorusko",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Jediná evropská země, která trest smrti zachovává."
+        },
+        {
+         "id": "804",
+         "zeme": "Ukrajina",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "616",
+         "zeme": "Polsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1988",
+         "pozn": ""
+        },
+        {
+         "id": "040",
+         "zeme": "Rakousko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1968",
+         "posledni": "1950",
+         "pozn": ""
+        },
+        {
+         "id": "348",
+         "zeme": "Maďarsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988",
+         "pozn": ""
+        },
+        {
+         "id": "498",
+         "zeme": "Moldavsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "642",
+         "zeme": "Rumunsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "440",
+         "zeme": "Litva",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1995",
+         "pozn": ""
+        },
+        {
+         "id": "428",
+         "zeme": "Lotyšsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2012",
+         "posledni": "1996",
+         "pozn": ""
+        },
+        {
+         "id": "233",
+         "zeme": "Estonsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1991",
+         "pozn": ""
+        },
+        {
+         "id": "276",
+         "zeme": "Německo",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1949",
+         "posledni": "1981",
+         "pozn": "Západní Německo ho zrušilo v roce 1949, NDR v roce 1987. Poslední poprava v NDR 1981, v západním Německu 1949."
+        },
+        {
+         "id": "100",
+         "zeme": "Bulharsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "300",
+         "zeme": "Řecko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1972",
+         "pozn": ""
+        },
+        {
+         "id": "792",
+         "zeme": "Turecko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1984",
+         "pozn": ""
+        },
+        {
+         "id": "008",
+         "zeme": "Albánie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1995",
+         "pozn": ""
+        },
+        {
+         "id": "191",
+         "zeme": "Chorvatsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1987",
+         "pozn": ""
+        },
+        {
+         "id": "756",
+         "zeme": "Švýcarsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1944",
+         "pozn": ""
+        },
+        {
+         "id": "442",
+         "zeme": "Lucembursko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1949",
+         "pozn": ""
+        },
+        {
+         "id": "056",
+         "zeme": "Belgie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1996",
+         "posledni": "1950",
+         "pozn": ""
+        },
+        {
+         "id": "528",
+         "zeme": "Nizozemsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1982",
+         "posledni": "1952",
+         "pozn": ""
+        },
+        {
+         "id": "620",
+         "zeme": "Portugalsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1976",
+         "posledni": "1849 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "724",
+         "zeme": "Španělsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "1975",
+         "pozn": ""
+        },
+        {
+         "id": "372",
+         "zeme": "Irsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1954",
+         "pozn": ""
+        },
+        {
+         "id": "540",
+         "zeme": "Nová Kaledonie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Území Francie."
+        },
+        {
+         "id": "090",
+         "zeme": "Šalamounovy ostrovy",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1966",
+         "pozn": ""
+        },
+        {
+         "id": "554",
+         "zeme": "Nový Zéland",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1957",
+         "pozn": ""
+        },
+        {
+         "id": "036",
+         "zeme": "Austrálie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1985",
+         "posledni": "1967",
+         "pozn": ""
+        },
+        {
+         "id": "144",
+         "zeme": "Srí Lanka",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976",
+         "pozn": ""
+        },
+        {
+         "id": "156",
+         "zeme": "Čína",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
+         "posledni": "2025",
+         "pozn": "Počty poprav jsou státním tajemstvím."
+        },
+        {
+         "id": "158",
+         "zeme": "Tchaj-wan",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "380",
+         "zeme": "Itálie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1994",
+         "posledni": "1947",
+         "pozn": ""
+        },
+        {
+         "id": "208",
+         "zeme": "Dánsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
+         "pozn": ""
+        },
+        {
+         "id": "826",
+         "zeme": "Spojené království",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
+         "pozn": ""
+        },
+        {
+         "id": "352",
+         "zeme": "Island",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1928",
+         "posledni": "1830",
+         "pozn": ""
+        },
+        {
+         "id": "031",
+         "zeme": "Ázerbájdžán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "268",
+         "zeme": "Gruzie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1994 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "608",
+         "zeme": "Filipíny",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2006",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "458",
+         "zeme": "Malajsie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2017",
+         "pozn": ""
+        },
+        {
+         "id": "096",
+         "zeme": "Brunej",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1957 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "705",
+         "zeme": "Slovinsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "246",
+         "zeme": "Finsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1944",
+         "pozn": ""
+        },
+        {
+         "id": "703",
+         "zeme": "Slovensko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "203",
+         "zeme": "Česko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "232",
+         "zeme": "Eritrea",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "392",
+         "zeme": "Japonsko",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "600",
+         "zeme": "Paraguay",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1928",
+         "pozn": ""
+        },
+        {
+         "id": "887",
+         "zeme": "Jemen",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "682",
+         "zeme": "Saúdská Arábie",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "196",
+         "zeme": "Kypr",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1962",
+         "pozn": ""
+        },
+        {
+         "id": "504",
+         "zeme": "Maroko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "818",
+         "zeme": "Egypt",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 23 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "434",
+         "zeme": "Libye",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2010",
+         "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
+        },
+        {
+         "id": "231",
+         "zeme": "Etiopie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2007",
+         "pozn": ""
+        },
+        {
+         "id": "262",
+         "zeme": "Džibutsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "od nezávislosti žádná",
+         "pozn": ""
+        },
+        {
+         "id": "800",
+         "zeme": "Uganda",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2005",
+         "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
+        },
+        {
+         "id": "646",
+         "zeme": "Rwanda",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
+         "pozn": ""
+        },
+        {
+         "id": "070",
+         "zeme": "Bosna a Hercegovina",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2001",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "807",
+         "zeme": "Severní Makedonie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1991",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "688",
+         "zeme": "Srbsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1992",
+         "pozn": ""
+        },
+        {
+         "id": "499",
+         "zeme": "Černá Hora",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "780",
+         "zeme": "Trinidad a Tobago",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1999",
+         "pozn": ""
+        },
+        {
+         "id": "728",
+         "zeme": "Jižní Súdán",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
+         "pozn": ""
+        }
+       ]
+      },
+      "key": "id",
+      "fields": [
+       "zeme",
+       "stav",
+       "info",
+       "posledni",
+       "pozn"
+      ]
+     }
+    },
+    {
+     "filter": "isValid(datum.stav) && !datum.posledni && datum.pozn"
+    }
+   ],
+   "mark": {
+    "type": "geoshape",
+    "stroke": "#f8f6f0",
+    "strokeWidth": 0.5
+   },
+   "encoding": {
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "info",
+      "title": "Trest smrti"
      },
      {
       "field": "pozn",
@@ -2586,7 +4370,1439 @@
      }
     ]
    }
+  },
+  {
+   "data": {
+    "url": "/specialy/dpbp/data/world-countries-110m.json",
+    "format": {
+     "type": "topojson",
+     "feature": "countries"
+    }
+   },
+   "transform": [
+    {
+     "lookup": "id",
+     "from": {
+      "data": {
+       "values": [
+        {
+         "id": "242",
+         "zeme": "Fidži",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1964",
+         "pozn": ""
+        },
+        {
+         "id": "834",
+         "zeme": "Tanzanie",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1995",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
+        },
+        {
+         "id": "732",
+         "zeme": "Západní Sahara",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": "Pod správou Maroka."
+        },
+        {
+         "id": "124",
+         "zeme": "Kanada",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1962",
+         "pozn": ""
+        },
+        {
+         "id": "840",
+         "zeme": "USA",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 47 poprav)",
+         "posledni": "2025",
+         "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
+        },
+        {
+         "id": "398",
+         "zeme": "Kazachstán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "2003",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
+        },
+        {
+         "id": "860",
+         "zeme": "Uzbekistán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "2005",
+         "pozn": ""
+        },
+        {
+         "id": "598",
+         "zeme": "Papua-Nová Guinea",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1950s",
+         "pozn": ""
+        },
+        {
+         "id": "360",
+         "zeme": "Indonésie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
+         "pozn": ""
+        },
+        {
+         "id": "032",
+         "zeme": "Argentina",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2008",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "152",
+         "zeme": "Chile",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2001 pro běžné trestné činy",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2008), Amnesty ne – zůstává pro válečné zločiny."
+        },
+        {
+         "id": "180",
+         "zeme": "Demokratická republika Kongo",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
+         "pozn": ""
+        },
+        {
+         "id": "706",
+         "zeme": "Somálsko",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "404",
+         "zeme": "Keňa",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
+         "pozn": ""
+        },
+        {
+         "id": "729",
+         "zeme": "Súdán",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
+        },
+        {
+         "id": "148",
+         "zeme": "Čad",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2020",
+         "posledni": "2015",
+         "pozn": ""
+        },
+        {
+         "id": "332",
+         "zeme": "Haiti",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1987",
+         "posledni": "1972 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "214",
+         "zeme": "Dominikánská republika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1966",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "643",
+         "zeme": "Rusko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1999",
+         "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
+        },
+        {
+         "id": "044",
+         "zeme": "Bahamy",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "238",
+         "zeme": "Falklandské ostrovy",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
+         "pozn": "Britské zámořské území."
+        },
+        {
+         "id": "578",
+         "zeme": "Norsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1948",
+         "pozn": ""
+        },
+        {
+         "id": "304",
+         "zeme": "Grónsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
+         "pozn": "Území Dánska."
+        },
+        {
+         "id": "260",
+         "zeme": "Francouzská jižní území",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Francouzské zámořské území."
+        },
+        {
+         "id": "626",
+         "zeme": "Východní Timor",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "710",
+         "zeme": "Jihoafrická republika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1991",
+         "pozn": ""
+        },
+        {
+         "id": "426",
+         "zeme": "Lesotho",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1995",
+         "pozn": ""
+        },
+        {
+         "id": "484",
+         "zeme": "Mexiko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2005",
+         "posledni": "1961",
+         "pozn": ""
+        },
+        {
+         "id": "858",
+         "zeme": "Uruguay",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1907",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "076",
+         "zeme": "Brazílie",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1855",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1855 (Amnesty), jinde 1876."
+        },
+        {
+         "id": "068",
+         "zeme": "Bolívie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1974",
+         "pozn": "Údaje se rozcházejí: zrušení 2009 (Amnesty), 2013 (DPIC); poslední poprava 1974, jinde 1973."
+        },
+        {
+         "id": "604",
+         "zeme": "Peru",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1979 pro běžné trestné činy",
+         "posledni": "1979",
+         "pozn": ""
+        },
+        {
+         "id": "170",
+         "zeme": "Kolumbie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1910",
+         "posledni": "1909",
+         "pozn": ""
+        },
+        {
+         "id": "591",
+         "zeme": "Panama",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1922",
+         "posledni": "1903 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "188",
+         "zeme": "Kostarika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1877",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "558",
+         "zeme": "Nikaragua",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1930",
+         "pozn": ""
+        },
+        {
+         "id": "340",
+         "zeme": "Honduras",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1956",
+         "posledni": "1940",
+         "pozn": ""
+        },
+        {
+         "id": "222",
+         "zeme": "Salvador",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1983 pro běžné trestné činy",
+         "posledni": "1973 (poslední známá)",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1973 (Amnesty), jinde 1971."
+        },
+        {
+         "id": "320",
+         "zeme": "Guatemala",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2017 pro běžné trestné činy",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "084",
+         "zeme": "Belize",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1985",
+         "pozn": ""
+        },
+        {
+         "id": "862",
+         "zeme": "Venezuela",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1863",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "328",
+         "zeme": "Guyana",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "740",
+         "zeme": "Surinam",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2021",
+         "posledni": "1982",
+         "pozn": "Údaje se rozcházejí: zrušení 2021 (Amnesty), 2015 (DPIC)."
+        },
+        {
+         "id": "250",
+         "zeme": "Francie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": ""
+        },
+        {
+         "id": "218",
+         "zeme": "Ekvádor",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1906",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "630",
+         "zeme": "Portoriko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1929",
+         "posledni": "1927",
+         "pozn": "Území USA: místní právo trest smrti zrušilo v roce 1929, platí tu ale federální trest smrti."
+        },
+        {
+         "id": "388",
+         "zeme": "Jamajka",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1988",
+         "pozn": ""
+        },
+        {
+         "id": "192",
+         "zeme": "Kuba",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2003",
+         "pozn": ""
+        },
+        {
+         "id": "716",
+         "zeme": "Zimbabwe",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2024 pro běžné trestné činy",
+         "posledni": "2005",
+         "pozn": ""
+        },
+        {
+         "id": "072",
+         "zeme": "Botswana",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2021",
+         "pozn": ""
+        },
+        {
+         "id": "516",
+         "zeme": "Namibie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "686",
+         "zeme": "Senegal",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1967",
+         "pozn": ""
+        },
+        {
+         "id": "466",
+         "zeme": "Mali",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1980",
+         "pozn": ""
+        },
+        {
+         "id": "478",
+         "zeme": "Mauritánie",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1987",
+         "pozn": ""
+        },
+        {
+         "id": "204",
+         "zeme": "Benin",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2016",
+         "posledni": "1987",
+         "pozn": "Údaje se rozcházejí: zrušení 2016 (Amnesty), jinde 2012."
+        },
+        {
+         "id": "562",
+         "zeme": "Niger",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "566",
+         "zeme": "Nigérie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2016",
+         "pozn": ""
+        },
+        {
+         "id": "120",
+         "zeme": "Kamerun",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "768",
+         "zeme": "Togo",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "1978",
+         "pozn": ""
+        },
+        {
+         "id": "288",
+         "zeme": "Ghana",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "384",
+         "zeme": "Pobřeží slonoviny",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2000",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "324",
+         "zeme": "Guinea",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2001",
+         "pozn": ""
+        },
+        {
+         "id": "624",
+         "zeme": "Guinea-Bissau",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1993",
+         "posledni": "1986 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "430",
+         "zeme": "Libérie",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "694",
+         "zeme": "Sierra Leone",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1998",
+         "pozn": "Údaje se rozcházejí: zrušení 2022 (Amnesty), 2021 (DPIC)."
+        },
+        {
+         "id": "854",
+         "zeme": "Burkina Faso",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2018 pro běžné trestné činy",
+         "posledni": "1988",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2018), Amnesty ne – vojenské právo trest smrti zachovává."
+        },
+        {
+         "id": "140",
+         "zeme": "Středoafrická republika",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2022",
+         "posledni": "1981",
+         "pozn": ""
+        },
+        {
+         "id": "178",
+         "zeme": "Kongo – Brazzaville",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1982",
+         "pozn": ""
+        },
+        {
+         "id": "266",
+         "zeme": "Gabon",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2010",
+         "posledni": "1985",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1985 (Amnesty 2023), 1981 (Amnesty 2009)."
+        },
+        {
+         "id": "226",
+         "zeme": "Rovníková Guinea",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 2022 pro běžné trestné činy",
+         "posledni": "2014",
+         "pozn": "Údaje se rozcházejí: DPIC vede zrušení pro všechny činy (2022), Amnesty ne – vojenské právo trest smrti zachovává."
+        },
+        {
+         "id": "894",
+         "zeme": "Zambie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2023",
+         "posledni": "1997",
+         "pozn": "Údaje se rozcházejí: zrušení 2023 (Amnesty), 2022 (DPIC)."
+        },
+        {
+         "id": "454",
+         "zeme": "Malawi",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1992",
+         "pozn": ""
+        },
+        {
+         "id": "508",
+         "zeme": "Mosambik",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1986",
+         "pozn": ""
+        },
+        {
+         "id": "748",
+         "zeme": "Eswatini",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1983",
+         "pozn": ""
+        },
+        {
+         "id": "024",
+         "zeme": "Angola",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1985",
+         "pozn": ""
+        },
+        {
+         "id": "108",
+         "zeme": "Burundi",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2009",
+         "posledni": "2000",
+         "pozn": "Údaje se rozcházejí: poslední poprava 2000 (Amnesty), jinde 1997."
+        },
+        {
+         "id": "376",
+         "zeme": "Izrael",
+         "stav": "Zrušily ho kromě výjimečných činů (např. válečných)",
+         "info": "Zrušila ho v roce 1954 pro běžné trestné činy",
+         "posledni": "1962",
+         "pozn": "V březnu 2026 schválil Kneset trest smrti za terorismus. Poslední poprava: Adolf Eichmann (1962)."
+        },
+        {
+         "id": "422",
+         "zeme": "Libanon",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2004",
+         "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
+        },
+        {
+         "id": "450",
+         "zeme": "Madagaskar",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2015",
+         "posledni": "1958",
+         "pozn": "Údaje se rozcházejí: zrušení 2015 (Amnesty), jinde 2014."
+        },
+        {
+         "id": "275",
+         "zeme": "Palestina",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
+         "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
+        },
+        {
+         "id": "270",
+         "zeme": "Gambie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2012",
+         "pozn": ""
+        },
+        {
+         "id": "788",
+         "zeme": "Tunisko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1991",
+         "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
+        },
+        {
+         "id": "012",
+         "zeme": "Alžírsko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "400",
+         "zeme": "Jordánsko",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2026",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
+        },
+        {
+         "id": "784",
+         "zeme": "Spojené arabské emiráty",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 3 popravy)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "634",
+         "zeme": "Katar",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
+         "pozn": ""
+        },
+        {
+         "id": "414",
+         "zeme": "Kuvajt",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 17 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "368",
+         "zeme": "Irák",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "512",
+         "zeme": "Omán",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
+         "pozn": ""
+        },
+        {
+         "id": "548",
+         "zeme": "Vanuatu",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1980",
+         "posledni": "od nezávislosti žádná",
+         "pozn": ""
+        },
+        {
+         "id": "116",
+         "zeme": "Kambodža",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "764",
+         "zeme": "Thajsko",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2018",
+         "pozn": ""
+        },
+        {
+         "id": "418",
+         "zeme": "Laos",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "104",
+         "zeme": "Myanmar (Barma)",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
+        },
+        {
+         "id": "704",
+         "zeme": "Vietnam",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "408",
+         "zeme": "Severní Korea",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: počet nezjištěn)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "410",
+         "zeme": "Jižní Korea",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "496",
+         "zeme": "Mongolsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2017",
+         "posledni": "2008",
+         "pozn": "Údaje se rozcházejí: zákon přijat 2015, účinný od 2017 (Amnesty)."
+        },
+        {
+         "id": "356",
+         "zeme": "Indie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2020",
+         "pozn": ""
+        },
+        {
+         "id": "050",
+         "zeme": "Bangladéš",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2023",
+         "pozn": ""
+        },
+        {
+         "id": "064",
+         "zeme": "Bhútán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1964 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "524",
+         "zeme": "Nepál",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1979",
+         "pozn": ""
+        },
+        {
+         "id": "586",
+         "zeme": "Pákistán",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2019",
+         "pozn": ""
+        },
+        {
+         "id": "004",
+         "zeme": "Afghánistán",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 6 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "762",
+         "zeme": "Tádžikistán",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "2004",
+         "pozn": ""
+        },
+        {
+         "id": "417",
+         "zeme": "Kyrgyzstán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
+         "pozn": ""
+        },
+        {
+         "id": "795",
+         "zeme": "Turkmenistán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "364",
+         "zeme": "Írán",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "760",
+         "zeme": "Sýrie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2024",
+         "pozn": ""
+        },
+        {
+         "id": "051",
+         "zeme": "Arménie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2003",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "752",
+         "zeme": "Švédsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1910",
+         "pozn": ""
+        },
+        {
+         "id": "112",
+         "zeme": "Bělorusko",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2022",
+         "pozn": "Jediná evropská země, která trest smrti zachovává."
+        },
+        {
+         "id": "804",
+         "zeme": "Ukrajina",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1999",
+         "posledni": "1997",
+         "pozn": ""
+        },
+        {
+         "id": "616",
+         "zeme": "Polsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1988",
+         "pozn": ""
+        },
+        {
+         "id": "040",
+         "zeme": "Rakousko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1968",
+         "posledni": "1950",
+         "pozn": ""
+        },
+        {
+         "id": "348",
+         "zeme": "Maďarsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1988",
+         "pozn": ""
+        },
+        {
+         "id": "498",
+         "zeme": "Moldavsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "642",
+         "zeme": "Rumunsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "440",
+         "zeme": "Litva",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1995",
+         "pozn": ""
+        },
+        {
+         "id": "428",
+         "zeme": "Lotyšsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2012",
+         "posledni": "1996",
+         "pozn": ""
+        },
+        {
+         "id": "233",
+         "zeme": "Estonsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1991",
+         "pozn": ""
+        },
+        {
+         "id": "276",
+         "zeme": "Německo",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1949",
+         "posledni": "1981",
+         "pozn": "Západní Německo ho zrušilo v roce 1949, NDR v roce 1987. Poslední poprava v NDR 1981, v západním Německu 1949."
+        },
+        {
+         "id": "100",
+         "zeme": "Bulharsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "300",
+         "zeme": "Řecko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1972",
+         "pozn": ""
+        },
+        {
+         "id": "792",
+         "zeme": "Turecko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2004",
+         "posledni": "1984",
+         "pozn": ""
+        },
+        {
+         "id": "008",
+         "zeme": "Albánie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1995",
+         "pozn": ""
+        },
+        {
+         "id": "191",
+         "zeme": "Chorvatsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1987",
+         "pozn": ""
+        },
+        {
+         "id": "756",
+         "zeme": "Švýcarsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1944",
+         "pozn": ""
+        },
+        {
+         "id": "442",
+         "zeme": "Lucembursko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1979",
+         "posledni": "1949",
+         "pozn": ""
+        },
+        {
+         "id": "056",
+         "zeme": "Belgie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1996",
+         "posledni": "1950",
+         "pozn": ""
+        },
+        {
+         "id": "528",
+         "zeme": "Nizozemsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1982",
+         "posledni": "1952",
+         "pozn": ""
+        },
+        {
+         "id": "620",
+         "zeme": "Portugalsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1976",
+         "posledni": "1849 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "724",
+         "zeme": "Španělsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "1975",
+         "pozn": ""
+        },
+        {
+         "id": "372",
+         "zeme": "Irsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1954",
+         "pozn": ""
+        },
+        {
+         "id": "540",
+         "zeme": "Nová Kaledonie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1981",
+         "posledni": "1977",
+         "pozn": "Území Francie."
+        },
+        {
+         "id": "090",
+         "zeme": "Šalamounovy ostrovy",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1966",
+         "pozn": ""
+        },
+        {
+         "id": "554",
+         "zeme": "Nový Zéland",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "1957",
+         "pozn": ""
+        },
+        {
+         "id": "036",
+         "zeme": "Austrálie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1985",
+         "posledni": "1967",
+         "pozn": ""
+        },
+        {
+         "id": "144",
+         "zeme": "Srí Lanka",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1976",
+         "pozn": ""
+        },
+        {
+         "id": "156",
+         "zeme": "Čína",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
+         "posledni": "2025",
+         "pozn": "Počty poprav jsou státním tajemstvím."
+        },
+        {
+         "id": "158",
+         "zeme": "Tchaj-wan",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "380",
+         "zeme": "Itálie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1994",
+         "posledni": "1947",
+         "pozn": ""
+        },
+        {
+         "id": "208",
+         "zeme": "Dánsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1978",
+         "posledni": "1950",
+         "pozn": ""
+        },
+        {
+         "id": "826",
+         "zeme": "Spojené království",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1964",
+         "pozn": ""
+        },
+        {
+         "id": "352",
+         "zeme": "Island",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1928",
+         "posledni": "1830",
+         "pozn": ""
+        },
+        {
+         "id": "031",
+         "zeme": "Ázerbájdžán",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1998",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "268",
+         "zeme": "Gruzie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1997",
+         "posledni": "1994 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "608",
+         "zeme": "Filipíny",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2006",
+         "posledni": "2000",
+         "pozn": ""
+        },
+        {
+         "id": "458",
+         "zeme": "Malajsie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2017",
+         "pozn": ""
+        },
+        {
+         "id": "096",
+         "zeme": "Brunej",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1957 (poslední známá)",
+         "pozn": ""
+        },
+        {
+         "id": "705",
+         "zeme": "Slovinsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1989",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "246",
+         "zeme": "Finsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1972",
+         "posledni": "1944",
+         "pozn": ""
+        },
+        {
+         "id": "703",
+         "zeme": "Slovensko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "203",
+         "zeme": "Česko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1990",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "232",
+         "zeme": "Eritrea",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1989",
+         "pozn": ""
+        },
+        {
+         "id": "392",
+         "zeme": "Japonsko",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "600",
+         "zeme": "Paraguay",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1992",
+         "posledni": "1928",
+         "pozn": ""
+        },
+        {
+         "id": "887",
+         "zeme": "Jemen",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "682",
+         "zeme": "Saúdská Arábie",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "196",
+         "zeme": "Kypr",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1962",
+         "pozn": ""
+        },
+        {
+         "id": "504",
+         "zeme": "Maroko",
+         "stav": "Mají ho, ale přes 10 let nepopravují",
+         "info": "Má ho, ale přes 10 let nepopravuje",
+         "posledni": "1993",
+         "pozn": ""
+        },
+        {
+         "id": "818",
+         "zeme": "Egypt",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 23 poprav)",
+         "posledni": "2025",
+         "pozn": ""
+        },
+        {
+         "id": "434",
+         "zeme": "Libye",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2010",
+         "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
+        },
+        {
+         "id": "231",
+         "zeme": "Etiopie",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2007",
+         "pozn": ""
+        },
+        {
+         "id": "262",
+         "zeme": "Džibutsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1995",
+         "posledni": "od nezávislosti žádná",
+         "pozn": ""
+        },
+        {
+         "id": "800",
+         "zeme": "Uganda",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "2005",
+         "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
+        },
+        {
+         "id": "646",
+         "zeme": "Rwanda",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2007",
+         "posledni": "1998",
+         "pozn": ""
+        },
+        {
+         "id": "070",
+         "zeme": "Bosna a Hercegovina",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2001",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "807",
+         "zeme": "Severní Makedonie",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 1991",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "688",
+         "zeme": "Srbsko",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "1992",
+         "pozn": ""
+        },
+        {
+         "id": "499",
+         "zeme": "Černá Hora",
+         "stav": "Zrušily ho pro všechny trestné činy",
+         "info": "Zrušila ho v roce 2002",
+         "posledni": "",
+         "pozn": ""
+        },
+        {
+         "id": "780",
+         "zeme": "Trinidad a Tobago",
+         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
+         "info": "Má ho, v roce 2025 nepopravila",
+         "posledni": "1999",
+         "pozn": ""
+        },
+        {
+         "id": "728",
+         "zeme": "Jižní Súdán",
+         "stav": "V roce 2025 popravovaly",
+         "info": "Popravuje (v roce 2025: 1 poprava)",
+         "posledni": "2025",
+         "pozn": ""
+        }
+       ]
+      },
+      "key": "id",
+      "fields": [
+       "zeme",
+       "stav",
+       "info",
+       "posledni",
+       "pozn"
+      ]
+     }
+    },
+    {
+     "filter": "isValid(datum.stav) && !datum.posledni && !datum.pozn"
+    }
+   ],
+   "mark": {
+    "type": "geoshape",
+    "stroke": "#f8f6f0",
+    "strokeWidth": 0.5
+   },
+   "encoding": {
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "info",
+      "title": "Trest smrti"
+     }
+    ]
+   }
   }
  ],
- "_source": "[Amnesty International: Death Sentences and Executions 2025](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), příloha II"
+ "_source": "[Amnesty International: Death Sentences and Executions 2025](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), příloha II; roky zrušení a posledních poprav: [Amnesty International 2023](https://www.amnesty.org/en/wp-content/uploads/2023/05/ACT5065912023ENGLISH.pdf), [DPIC](https://deathpenaltyinfo.org/policy-issues/policy/international/countries-that-have-abolished-the-death-penalty-since-1976) a výroční zprávy Amnesty 2019–2025"
 }
