@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Trest smrti zachovává 54 zemí. A {17|#de1743} z nich popravuje ještě nyní (2025–26)",
+  "text": "Trest smrti {zachovává|#fda668} 54 zemí. A {17|#de1743} z nich popravuje ještě nyní (2025–26)",
   "subtitle": "Země, které trest smrti nezrušily, podle toho, jak dlouho ho už nevykonaly. Stav k 31. 12. 2025 podle Amnesty International. Kliknutím na legendu skupinu vypnete. Na mapě nejsou vidět malé ostrovní státy, mezi nimi Singapur (17 poprav v roce 2025)."
  },
  "_toggle_legend": true,
