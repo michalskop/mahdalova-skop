@@ -1,0 +1,334 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Čím menší obec, tím častěji volby bez výběru",
+    "subtitle": "Podíl obcí (v %) podle počtu obyvatel, komunální volby 9.–10. 10. 2026"
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "sk": "do 199",
+        "serie": "jediná kandidátka",
+        "v": 48.5,
+        "k": 650,
+        "n": 1340
+      },
+      {
+        "sk": "do 199",
+        "serie": "zvolen bude každý kandidát",
+        "v": 26.3,
+        "k": 352,
+        "n": 1340
+      },
+      {
+        "sk": "200–499",
+        "serie": "jediná kandidátka",
+        "v": 36.6,
+        "k": 730,
+        "n": 1992
+      },
+      {
+        "sk": "200–499",
+        "serie": "zvolen bude každý kandidát",
+        "v": 18.5,
+        "k": 368,
+        "n": 1992
+      },
+      {
+        "sk": "500–999",
+        "serie": "jediná kandidátka",
+        "v": 23.0,
+        "k": 318,
+        "n": 1383
+      },
+      {
+        "sk": "500–999",
+        "serie": "zvolen bude každý kandidát",
+        "v": 16.8,
+        "k": 232,
+        "n": 1383
+      },
+      {
+        "sk": "1 000–1 999",
+        "serie": "jediná kandidátka",
+        "v": 13.1,
+        "k": 106,
+        "n": 808
+      },
+      {
+        "sk": "1 000–1 999",
+        "serie": "zvolen bude každý kandidát",
+        "v": 11.8,
+        "k": 95,
+        "n": 808
+      },
+      {
+        "sk": "2 000–4 999",
+        "serie": "jediná kandidátka",
+        "v": 5.5,
+        "k": 25,
+        "n": 456
+      },
+      {
+        "sk": "2 000–4 999",
+        "serie": "zvolen bude každý kandidát",
+        "v": 5.5,
+        "k": 25,
+        "n": 456
+      },
+      {
+        "sk": "5 000–9 999",
+        "serie": "jediná kandidátka",
+        "v": 0.7,
+        "k": 1,
+        "n": 143
+      },
+      {
+        "sk": "5 000–9 999",
+        "serie": "zvolen bude každý kandidát",
+        "v": 0.7,
+        "k": 1,
+        "n": 143
+      },
+      {
+        "sk": "10 000–49 999",
+        "serie": "jediná kandidátka",
+        "v": 0.0,
+        "k": 0,
+        "n": 114
+      },
+      {
+        "sk": "10 000–49 999",
+        "serie": "zvolen bude každý kandidát",
+        "v": 0.0,
+        "k": 0,
+        "n": 114
+      },
+      {
+        "sk": "50 000+",
+        "serie": "jediná kandidátka",
+        "v": 0.0,
+        "k": 0,
+        "n": 18
+      },
+      {
+        "sk": "50 000+",
+        "serie": "zvolen bude každý kandidát",
+        "v": 0.0,
+        "k": 0,
+        "n": 18
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "sk",
+      "type": "nominal",
+      "sort": [
+        "do 199",
+        "200–499",
+        "500–999",
+        "1 000–1 999",
+        "2 000–4 999",
+        "5 000–9 999",
+        "10 000–49 999",
+        "50 000+"
+      ],
+      "axis": {
+        "title": "počet obyvatel obce",
+        "labelAngle": 0,
+        "labelFontSize": 10.5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              55
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "labelExpr": "datum.label + ' %'"
+          }
+        },
+        "xOffset": {
+          "field": "serie",
+          "sort": [
+            "jediná kandidátka",
+            "zvolen bude každý kandidát"
+          ]
+        },
+        "color": {
+          "field": "serie",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "jediná kandidátka",
+              "zvolen bude každý kandidát"
+            ],
+            "range": [
+              "#272a59",
+              "#de1743"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -7,
+        "fontSize": 10.5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "xOffset": {
+          "field": "serie",
+          "sort": [
+            "jediná kandidátka",
+            "zvolen bude každý kandidát"
+          ]
+        },
+        "color": {
+          "field": "serie",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "jediná kandidátka",
+              "zvolen bude každý kandidát"
+            ],
+            "range": [
+              "#272a59",
+              "#de1743"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sk": "do 199",
+            "jediná kandidátka": "48,5 % (650 z 1 340 obcí)",
+            "zvolen bude každý kandidát": "26,3 % (352 z 1 340 obcí)"
+          },
+          {
+            "sk": "200–499",
+            "jediná kandidátka": "36,6 % (730 z 1 992 obcí)",
+            "zvolen bude každý kandidát": "18,5 % (368 z 1 992 obcí)"
+          },
+          {
+            "sk": "500–999",
+            "jediná kandidátka": "23,0 % (318 z 1 383 obcí)",
+            "zvolen bude každý kandidát": "16,8 % (232 z 1 383 obcí)"
+          },
+          {
+            "sk": "1 000–1 999",
+            "jediná kandidátka": "13,1 % (106 z 808 obcí)",
+            "zvolen bude každý kandidát": "11,8 % (95 z 808 obcí)"
+          },
+          {
+            "sk": "2 000–4 999",
+            "jediná kandidátka": "5,5 % (25 z 456 obcí)",
+            "zvolen bude každý kandidát": "5,5 % (25 z 456 obcí)"
+          },
+          {
+            "sk": "5 000–9 999",
+            "jediná kandidátka": "0,7 % (1 z 143 obcí)",
+            "zvolen bude každý kandidát": "0,7 % (1 z 143 obcí)"
+          },
+          {
+            "sk": "10 000–49 999",
+            "jediná kandidátka": "0,0 % (0 z 114 obcí)",
+            "zvolen bude každý kandidát": "0,0 % (0 z 114 obcí)"
+          },
+          {
+            "sk": "50 000+",
+            "jediná kandidátka": "0,0 % (0 z 18 obcí)",
+            "zvolen bude každý kandidát": "0,0 % (0 z 18 obcí)"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "sk"
+            ],
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fill": "#101432",
+        "cursor": "default"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 55
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Obyvatel obce"
+          },
+          {
+            "field": "jediná kandidátka",
+            "title": "jediná kandidátka"
+          },
+          {
+            "field": "zvolen bude každý kandidát",
+            "title": "zvolen bude každý kandidát"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "volby.cz – otevřená data registrů kandidátů KV 2026 (stav 23. 9. 2026); ČSÚ – obyvatelé obcí. Bez zastupitelstev městských částí a obvodů."
+}

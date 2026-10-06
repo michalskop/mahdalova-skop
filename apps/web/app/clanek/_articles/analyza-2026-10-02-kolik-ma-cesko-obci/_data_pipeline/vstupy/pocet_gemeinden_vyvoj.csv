@@ -1,0 +1,47 @@
+﻿datum,uzemi,pocet_obci,typ_zdroje,zdroj_url,poznamka
+1945-01-01,Rakousko,4165,sekundární,https://lab.neos.eu/blog/2025/9/land-der-gemeinden,číslo bez uvedení primárního zdroje
+1961,Rakousko,3999,"primární studie (WIFO/KDZ pro BMF, tab. Übersicht 2.2; zdroj Statistik Austria)",https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,3 998 bez Vídně + Vídeň
+2002-01-01,Rakousko,2359,primární (výpočet),https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026,
+2005-01-01,Rakousko,2358,primární (výpočet),https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026,St. Ruprecht-Falkendorf (Stmk.)
+2007-01-01,Rakousko,2357,primární (výpočet),https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026,Weyer (OÖ)
+2009,Rakousko,2357,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,2 356 bez Vídně
+2013-01-01,Rakousko,2354,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,"Trofaiach, Buch-St. Magdalena (Stmk.)"
+2015-01-01,Rakousko,2102,primární (výpočet),https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026,štýrská reforma: 380 obcí → 128
+2015-05-01,Rakousko,2100,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,"Rohrbach-Berg, Aigen-Schlägl (OÖ)"
+2018-01-01,Rakousko,2098,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,OÖ
+2019-01-01,Rakousko,2096,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,OÖ
+2020-01-01,Rakousko,2095,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,Murfeld rozdělena (Stmk.)
+2022-01-01,Rakousko,2093,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,Matrei am Brenner (Tirol)
+2025-01-01,Rakousko,2092,primární (výpočet) + Gemeindebund,https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026 ; https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,Fürstenfeld + Söchau (Stmk.)
+2026-01-01,Rakousko,2092,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+1961,Burgenland,319,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Burgenland,171,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Kärnten,229,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Kärnten,132,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Niederösterreich,1652,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Niederösterreich,573,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Oberösterreich,445,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Oberösterreich,444,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Salzburg,119,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Salzburg,119,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Steiermark,851,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Steiermark,542,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Tirol,287,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Tirol,279,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+1961,Vorarlberg,96,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2008,Vorarlberg,96,primární studie,https://www.bmf.gv.at/dam/jcr:5acff3a5-345b-440b-8591-e921d81e00c4/Gemeindestruktur_und_Gemeindekooperation(1).pdf,
+2026-01-01,Burgenland,171,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Kärnten,132,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Niederösterreich,573,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Oberösterreich,438,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Salzburg,119,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Steiermark,285,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Tirol,277,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Vorarlberg,96,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2026-01-01,Wien,1,primární,https://www.statistik.at/fileadmin/pages/453/RegGemVz2026.ods,
+2010,Steiermark,542,primární (Land Steiermark),https://www.kommunikation.steiermark.at/cms/beitrag/12165076/29767960/,začátek volebního období 2010
+2013-01-01,Steiermark,539,primární (výpočet),https://www.statistik.at/fileadmin/pages/453/aenderungenVerwaltungsgliederung.zip (aenderungenGemeinden_ab2002.ods) – zpětný přepočet od 2 092 k 1. 1. 2026,po 2 dobrovolných fúzích 2013
+2015-01-01,Steiermark,287,primární (Land Steiermark),https://www.kommunikation.steiermark.at/cms/beitrag/12165076/29767960/,
+2020-01-01,Steiermark,286,Gemeindebund,https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,
+2025-01-01,Steiermark,285,Gemeindebund + Statistik Austria,https://gemeindebund.at/services/zahlen-und-fakten/struktur-der-gemeinden/,
+1971?,Niederösterreich,559,"sekundární (Wikipedia, rok nejasný)",https://de.wikipedia.org/wiki/N%C3%96._Kommunalstrukturverbesserung,

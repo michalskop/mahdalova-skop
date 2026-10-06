@@ -265,6 +265,14 @@ Primární data a dokumenty instituce → metodika, metadata a revize → odborn
 ## Povinný záznam ke každému číslu
 Přesný název zdroje, vydavatel, datum, odkaz nebo soubor · použitá tabulka, proměnná, filtr a období · výpočet nebo transformační krok · datum stažení a verze dat · známé limity, chybějící hodnoty a metodické zlomy. Nejisté číslo se nehádá: použije se doložený interval, nebo se tvrzení vypustí.
 
+## Ověřit každou osobu a každé tvrzení, i to „samozřejmé“
+Fact-checking je povinný krok u každého textu, ne doplněk. Platí pro lidi i pro AI.
+- **Osoby:** u každé jmenované osoby ověříme k datu publikace aktuální funkci, stranickou příslušnost a roli z primárního zdroje (web strany či instituce, rejstřík, aktuální zpravodajství). Nespoléháme na paměť ani na starší kontext – politici mění strany a funkce (Mikuláš Peksa už dávno není v Pirátech, je ve Voltu).
+- **Podnět není zdroj ani příběh:** výrok, komentář nebo „tip od stolu“, který nás k tématu přivedl, je jen inspirace. Ověříme ho daty a do textu ho dáváme, jen když je sám součástí příběhu (veřejný aktér, dohledatelný výrok, který text skutečně rozebírá). Jinak text stojí na zjištěních, ne na tom, kdo nás na téma navedl.
+- **Neověřené se nepíše:** co nejde ověřit, z textu vypustíme, nebo výslovně označíme jako tvrzení konkrétního zdroje.
+
+*Pravidlo platí od 2026-10-02 (po článku o počtu obcí, kde koncept uváděl neaktuální stranickou příslušnost a zbytečně stavěl na podnětu z diskuse). Vlastník: Kateřina Mahdalová.*
+
 ## Kontrola grafu a vizuálního tvrzení
 Titulek je tvrzení, ne téma · osa, jednotka, období, populace a zdroj jsou viditelné · barva nese stabilní význam (stejná barva neznamená dvě věci) · klíčové hodnoty nejsou jen v tooltipu · mapa nenahrazuje přesnější seřazený graf, pokud by zkreslovala malé země či historické hranice · graf ukazuje nejistotu a kategorii „unknown", pokud ovlivňují čtení · alt text shrnuje zjištění, ne vzhled.
 
@@ -300,6 +308,7 @@ Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní ot�
 - [ ] Klíčové číslo je ukotveno ve srovnání; podíl má absolutní počet a jmenovatel
 - [ ] Titulek je falsifikovatelná teze; mezititulky jsou teze, ne štítky
 - [ ] Žádná vymyšlená osoba, scéna, citace, detail
+- [ ] U každé jmenované osoby ověřena aktuální funkce a strana k datu publikace; podnět („tip od stolu“) v textu jen, je-li součástí příběhu
 - [ ] Protinázor podán férově, limity dat přiznané u tvrzení
 - [ ] Žádná klišé, anglické kalky, hodnotící přívlastky u čísel, protichůdné konstrukce
 - [ ] Čísla, jednotky a rozsahy podle Části II; pomlčky en-dash

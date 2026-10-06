@@ -1,0 +1,14 @@
+label: Klíčová čísla
+numbers:
+  - value: "6 254"
+    title: Obcí v Česku
+    description: Rakousko jich má 2 092, třikrát méně. Na 100 000 obyvatel připadá v Česku 57 obcí, v Rakousku 23. Typická česká obec má 456 obyvatel, rakouská 1 838.
+    color: brand
+  - value: "81,9 mld. Kč"
+    title: Stály v roce 2025 zastupitelstva a obecní úřady
+    description: Zhruba 7 500 Kč na obyvatele a 15,8 % všech výdajů obcí. V obcích do 200 obyvatel je to 10 713 Kč na hlavu.
+    color: brandOrange
+  - value: "1 830"
+    title: Obcí volí z jediné kandidátky
+    description: To je 29 % ze všech 6 254 obcí. V obcích do 200 obyvatel je to téměř každá druhá.
+    color: brandNavy

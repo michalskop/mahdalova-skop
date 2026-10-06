@@ -1,0 +1,315 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Česko obce za socialismu sloučilo a po roce 1990 zase rozdělilo. Rakousko u sloučení zůstalo",
+    "subtitle": "Počet obcí. Česko na dnešním území včetně vojenských újezdů. U Rakouska chybí údaje mezi lety 1961 a 2002 (čárkovaně)."
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "rok": 1961,
+        "zeme": "Rakousko",
+        "v": 3999
+      },
+      {
+        "rok": 2002,
+        "zeme": "Rakousko",
+        "v": 2359
+      },
+      {
+        "rok": 2013,
+        "zeme": "Rakousko",
+        "v": 2354
+      },
+      {
+        "rok": 2015,
+        "zeme": "Rakousko",
+        "v": 2100
+      },
+      {
+        "rok": 2026,
+        "zeme": "Rakousko",
+        "v": 2092
+      },
+      {
+        "rok": 1921,
+        "zeme": "Česko",
+        "v": 11417
+      },
+      {
+        "rok": 1930,
+        "zeme": "Česko",
+        "v": 11768
+      },
+      {
+        "rok": 1950,
+        "zeme": "Česko",
+        "v": 11459
+      },
+      {
+        "rok": 1961,
+        "zeme": "Česko",
+        "v": 8726
+      },
+      {
+        "rok": 1970,
+        "zeme": "Česko",
+        "v": 7511
+      },
+      {
+        "rok": 1980,
+        "zeme": "Česko",
+        "v": 4778
+      },
+      {
+        "rok": 1990,
+        "zeme": "Česko",
+        "v": 4100
+      },
+      {
+        "rok": 1991,
+        "zeme": "Česko",
+        "v": 5768
+      },
+      {
+        "rok": 2001,
+        "zeme": "Česko",
+        "v": 6258
+      },
+      {
+        "rok": 2011,
+        "zeme": "Česko",
+        "v": 6251
+      },
+      {
+        "rok": 2021,
+        "zeme": "Česko",
+        "v": 6258
+      },
+      {
+        "rok": 2026,
+        "zeme": "Česko",
+        "v": 6258
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          1920,
+          2027
+        ]
+      },
+      "axis": {
+        "title": null,
+        "format": "d",
+        "values": [
+          1921,
+          1950,
+          1961,
+          1970,
+          1980,
+          1990,
+          2001,
+          2011,
+          2026
+        ]
+      }
+    },
+    "color": {
+      "field": "zeme",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Česko",
+          "Rakousko"
+        ],
+        "range": [
+          "#de1743",
+          "#06677d"
+        ]
+      },
+      "legend": {
+        "title": null
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.zeme == 'Česko'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2"
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zeme == 'Rakousko' && datum.rok <= 2002"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2,
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zeme == 'Rakousko' && datum.rok >= 2002"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 40
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "rok",
+            "title": "Rok",
+            "format": "d"
+          },
+          {
+            "field": "v",
+            "title": "Obcí",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1972,
+            "v": 10600,
+            "t": "slučování obcí",
+            "t2": "1960–1985"
+          },
+          {
+            "rok": 2004,
+            "v": 8200,
+            "t": "po volbách 1990",
+            "t2": "vzniklo ~1 700 obcí"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#555555",
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        },
+        "color": {
+          "value": "#555555"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1972,
+            "v": 10600,
+            "t": "slučování obcí",
+            "t2": "1960–1985"
+          },
+          {
+            "rok": 2004,
+            "v": 8200,
+            "t": "po volbách 1990",
+            "t2": "vzniklo ~1 700 obcí"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#555555",
+        "align": "center",
+        "dy": 13
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t2"
+        },
+        "color": {
+          "value": "#555555"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ – Statistická ročenka ČR, tab. 1-13 (sčítání lidu) a Statistika&My (stav na začátku roku 1990, cca 4 100 obcí); Statistik Austria – změny územního členění od roku 2002 a Gemeindeverzeichnis 2026; WIFO/KDZ pro rakouské ministerstvo financí 2010 (rok 1961)"
+}
