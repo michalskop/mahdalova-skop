@@ -1,0 +1,52 @@
+title: "Brodec: od dvou kandidátek k devíti nevydařeným volbám"
+subtitle: "Obec na Lounsku s necelou stovkou obyvatel. Rozklikněte rok pro detail."
+collapsedYears: []
+
+events:
+  - year: 2002
+    month: 11
+    date: "2002 a 2006"
+    title: "Dvě kandidátky, devět kandidátů na sedm míst"
+    emoji: "🗳️"
+    summary: "Voliči v Brodci si vybírají ze dvou kandidátek. Dva kandidáti se do zastupitelstva nedostanou."
+    description: "V komunálních volbách 2002 i 2006 se o sedm míst v zastupitelstvu uchází devět lidí na dvou kandidátkách. V roce 1994 to bylo třináct kandidátů na devět míst, v roce 1998 patnáct. Podle [otevřených dat volby.gov.cz](https://volby.gov.cz/opendata/opendata.htm)."
+
+  - year: 2010
+    month: 10
+    date: "2010 a 2014"
+    title: "Zbývá jediná kandidátka"
+    emoji: "📋"
+    summary: "Kandiduje už jen jedna skupina, devět lidí na sedm míst. Dva skončí jako náhradníci."
+    description: "Voliči rozhodují jen o tom, kdo ze stejné kandidátky bude náhradník. Podle zákona může mít v obcích se sedmi a méně mandáty kandidátka o třetinu víc jmen, než je míst."
+
+  - year: 2018
+    month: 10
+    date: "2018"
+    title: "Sedm kandidátů na sedm míst"
+    emoji: "🪑"
+    summary: "Na kandidátce je přesně tolik lidí, kolik je křesel. Zvoleni jsou všichni a náhradníci nejsou žádní."
+    description: "Kdo by během volebního období odstoupil, po tom zůstane v zastupitelstvu prázdné místo (§ 56 zákona o volbách do zastupitelstev obcí). Jsou to poslední volby, ve kterých v Brodci někdo hlasuje."
+
+  - year: 2022
+    month: 9
+    date: "září 2022"
+    title: "Nekandiduje nikdo, obec přebírá správce"
+    emoji: "🏚️"
+    summary: "K řádným volbám nepodá kandidátku nikdo. Ministerstvo vnitra jmenuje správce obce."
+    description: "Správce obce jmenuje ministr vnitra ([§ 98 zákona o obcích](https://www.zakonyprolidi.cz/cs/2000-128)). Schvaluje rozpočet a hospodaří podle něj, majetek obce ale nesmí prodávat ani zastavovat a nemůže rozhodovat o jejím rozvoji. „Činnost správce obce není plnohodnotnou náhradou působnosti a pravomoci zastupitelstva obce ani starosty obce,“ píše [ministerstvo vnitra](https://archiv.mv.gov.cz/clanek/otazky-a-odpovedi-k-vykonu-funkce-spravce-obce.aspx). „Bohužel situace je taková, jaká je, nenašel se nikdo, kdo by naši obec vedl. Je mi to líto,“ řekla [Deníku](https://zatecky.denik.cz/zpravy_region/louny-brodec-obec-volby-nebudou-popate-neni-starosta-20240422.html) bývalá starostka Jana Hrušková."
+
+  - year: 2023
+    month: 1
+    date: "leden 2023 – březen 2026"
+    title: "Osm dodatečných voleb, ani jedny se nekonají"
+    emoji: "🔁"
+    summary: "Ministerstvo vyhlašuje dodatečné volby zhruba dvakrát ročně. Zákon jejich počet neomezuje."
+    description: "Termíny 7. 1. 2023, 17. 6. 2023, 9. 12. 2023, 22. 6. 2024, 7. 12. 2024, 14. 6. 2025, 6. 12. 2025 a 28. 3. 2026. V prosinci 2025 podala kandidátku skupina lidí zvenku, po protestech místních ji ale stáhla ([Deník](https://zatecky.denik.cz/zpravy_region/brodec-volby-komunalni-starosta-ministerstvo-vnitra-termin-20260107.html))."
+
+  - year: 2026
+    month: 10
+    date: "říjen 2026"
+    title: "Místní kandidátka Pro Brodec: sedm lidí na sedm míst"
+    emoji: "🏡"
+    summary: "Po čtyřech letech pod správcem kandidují místní. Zvoleni budou všichni."
+    description: "Kandidátem na starostu je jednačtyřicetiletý Petr Kotek. „Věříme, že od obyvatel máme podporu. Nasbírali jsme podpisy, zároveň jsme zaznamenali zájem o akce, na kterých jsme si s lidmi povídali o tom, co vidí jako priority pro obec a co je tíží,“ řekl Seznam Zprávám kandidát na místostarostu Michal Vinš ([citováno podle Deníku](https://zatecky.denik.cz/komunalni-volby/louny-okres-komunalni-volby-kandidati-vyber/))."
