@@ -1,0 +1,149 @@
+/* Card content of the /podporte-nas timeline. Layout, line, logos and the
+   card itself come from the shared RouteTimeline; the masthead classes are
+   shared with /o-nas (AboutScrolly.module.css). */
+
+/* Jump links (#newsletter, #google …) land below the sticky header. */
+.anchor {
+  scroll-margin-top: 110px;
+}
+
+/* Effort badge above the title: "Zdarma · 1 minuta" */
+.effort {
+  background: var(--mantine-color-brandYellow-1);
+  border-radius: 999px;
+  color: var(--mantine-color-brandNavy-9);
+  display: inline-block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding: 3px 11px;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: 0 0 16px;
+  padding-left: 1.2em;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+.list li::marker {
+  color: var(--mantine-color-brand-6);
+}
+
+.list a,
+.list a:visited {
+  color: var(--mantine-color-brand-7);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.action {
+  border: 2px solid var(--mantine-color-brandNavy-9);
+  border-radius: 8px;
+  color: var(--mantine-color-brandNavy-9) !important;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  text-decoration: none !important;
+  transition: background 0.15s, color 0.15s;
+}
+
+.action:hover {
+  background: var(--mantine-color-brandNavy-9);
+  color: #ffffff !important;
+}
+
+.actionPrimary {
+  background: var(--mantine-color-brandYellow-6);
+  border-color: var(--mantine-color-brandYellow-6);
+}
+
+.actionPrimary:hover {
+  background: var(--mantine-color-brandNavy-9);
+  border-color: var(--mantine-color-brandNavy-9);
+}
+
+.follow {
+  margin: 8px 0 0;
+}
+
+/* Money card: three tiers side by side, the middle one highlighted */
+.tiers {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 22px;
+}
+
+.tier {
+  align-items: center;
+  border: 2px solid var(--mantine-color-brandNavy-9);
+  border-radius: 12px;
+  color: var(--mantine-color-brandNavy-9) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 8px 12px;
+  text-decoration: none !important;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tier:hover {
+  box-shadow: 0 6px 16px rgba(16, 20, 50, 0.16);
+  transform: translateY(-2px);
+}
+
+.tierHighlight {
+  background: var(--mantine-color-brandYellow-6);
+  border-color: var(--mantine-color-brandYellow-6);
+}
+
+.tierLabel {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tierAmount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tierPeriod {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .tiers {
+    grid-template-columns: 1fr;
+  }
+
+  /* Compact rows on phones: TIER · amount · period */
+  .tier {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .tierLabel {
+    flex: 1;
+  }
+
+  .tierAmount {
+    font-size: 1.25rem;
+  }
+}

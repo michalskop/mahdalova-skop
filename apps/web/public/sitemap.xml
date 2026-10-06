@@ -26,6 +26,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/podporte-nas</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/analyza-2024-10-10-digitalizace-stavebniho-rizeni-analyza-prvnich-dostupnych-dat</loc>
     <lastmod>2024-10-10T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>

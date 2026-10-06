@@ -58,7 +58,7 @@ function generateSitemap() {
   xml += '  </url>\n';
   
   // Main sections
-  const sections = ['analyzy', 'kontext', 'podcasty', 'o-nas'];
+  const sections = ['analyzy', 'kontext', 'podcasty', 'o-nas', 'podporte-nas'];
   sections.forEach(section => {
     xml += '  <url>\n';
     xml += `    <loc>${baseUrl}/${section}</loc>\n`;
