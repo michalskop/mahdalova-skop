@@ -1,0 +1,91 @@
+/* "Podpořte nás" accordion at the very bottom of /o-nas. The step content
+   (lists, buttons, tiers) is styled by ../podporte-nas/SupportScrolly.module.css. */
+
+.section {
+  background: var(--mantine-color-background-1);
+  padding: 56px 0 72px;
+  scroll-margin-top: 80px;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 820px;
+  padding: 0 24px;
+}
+
+.title {
+  color: var(--mantine-color-brandNavy-9);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.lead {
+  color: var(--mantine-color-brandNavy-9);
+  margin: 0 auto 12px;
+  max-width: 680px;
+  text-align: center;
+}
+
+.item {
+  background: #ffffff;
+  border: 1px solid #e8e3d2;
+  margin-top: 10px;
+}
+
+.item[data-active] {
+  border-color: var(--mantine-color-brandYellow-6);
+  box-shadow: 0 4px 14px rgba(16, 20, 50, 0.08);
+}
+
+.control {
+  padding: 4px 18px;
+}
+
+.label {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.controlTitle {
+  color: var(--mantine-color-brandNavy-9);
+  font-family: var(--mantine-font-family-headings);
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+/* The badge sits beside the title here, not above it */
+.label > span:last-child {
+  margin-bottom: 0;
+}
+
+.panel p {
+  margin: 0 0 12px;
+}
+
+.more {
+  margin: 26px 0 0;
+  text-align: center;
+}
+
+.more a {
+  color: var(--mantine-color-brand-7);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 0 48px;
+  }
+
+  .inner {
+    padding: 0 12px;
+  }
+
+  .control {
+    padding: 4px 12px;
+  }
+}

@@ -20,7 +20,7 @@ export default function ClosingNote() {
         </p>
       </div>
 
-      <div className={styles.newsletter}>
+      <div id="newsletter" className={styles.newsletter}>
         <SubscribeNewsletter actionUrl={NEWSLETTER_URL} />
       </div>
     </section>

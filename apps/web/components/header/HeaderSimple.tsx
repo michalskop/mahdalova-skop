@@ -17,7 +17,12 @@ const navLinks = [
   { link: '/tag/volby', label: 'Volby' },
   { link: '/kontext', label: 'Kontext' },
   { link: '/podcasty', label: 'Podcasty' },
-  { link: '/o-nas', label: 'O nás' },
+];
+
+// „O nás" dropdown (desktop hover); on mobile both are plain drawer links.
+const aboutLinks = [
+  { href: '/o-nas', label: 'O nás' },
+  { href: '/podporte-nas', label: 'Podpořte nás' },
 ];
 
 const specialsLinks = [
@@ -68,6 +73,13 @@ export function HeaderSimple() {
   const { containerProps: pointerContainerProps, pointerRef } = useGlidingPointer();
   const specialsPointer = (
     <div ref={pointerRef} className={classes.specialsPointer} data-visible="false" aria-hidden>
+      <Arrow viewBox="0 54 380 128" width={36} height={12} color="#ffffff" />
+    </div>
+  );
+  // Same gliding pointer for the „O nás" dropdown (own instance, own menu).
+  const { containerProps: aboutPointerContainerProps, pointerRef: aboutPointerRef } = useGlidingPointer();
+  const aboutPointer = (
+    <div ref={aboutPointerRef} className={classes.specialsPointer} data-visible="false" aria-hidden>
       <Arrow viewBox="0 54 380 128" width={36} height={12} color="#ffffff" />
     </div>
   );
@@ -144,6 +156,28 @@ export function HeaderSimple() {
           {link.label}
         </Link>
       ))}
+
+      {/* O nás Dropdown */}
+      <Menu trigger="hover" openDelay={40} closeDelay={140} shadow="lg" width={200} position="bottom-end">
+        <Menu.Target>
+          <Link
+            href="/o-nas"
+            className={`${classes.link} ${aboutLinks.some(item => item.href === pathname) ? classes.linkActive : ''}`}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+          >
+            <span>O nás</span>
+            <IconChevronDown size={14} stroke={1.8} />
+          </Link>
+        </Menu.Target>
+        <Menu.Dropdown className={classes.specialsDropdown} style={{ zIndex: 1100 }} {...aboutPointerContainerProps}>
+          {aboutPointer}
+          {aboutLinks.map(item => (
+            <Menu.Item key={item.href} component={Link} href={item.href} className={classes.specialsItem} data-pointer-item>
+              {item.label}
+            </Menu.Item>
+          ))}
+        </Menu.Dropdown>
+      </Menu>
     </>
   );
 
@@ -164,6 +198,16 @@ export function HeaderSimple() {
           onClick={close}
         >
           {link.label}
+        </Link>
+      ))}
+      {aboutLinks.map(item => (
+        <Link
+          href={item.href}
+          key={item.href}
+          className={`${classes.mobileLink} ${pathname === item.href ? classes.mobileLinkActive : ''}`}
+          onClick={close}
+        >
+          {item.label}
         </Link>
       ))}
       <Link

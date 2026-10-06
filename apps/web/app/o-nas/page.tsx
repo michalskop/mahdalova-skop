@@ -3,6 +3,7 @@ import { Box, Container } from '@mantine/core';
 import { ContactsBlock } from '@/components/common/ContactsBlock';
 import AboutScrolly from './AboutScrolly';
 import ClosingNote from './ClosingNote';
+import SupportAccordion from './SupportAccordion';
 
 export const metadata: Metadata = {
   title: 'O nás',
@@ -30,6 +31,9 @@ export default function AboutPage() {
       <ClosingNote />
 
       <ContactsBlock />
+
+      {/* Ways to support us – same content as /podporte-nas, as an accordion */}
+      <SupportAccordion />
     </Container>
   );
 }
