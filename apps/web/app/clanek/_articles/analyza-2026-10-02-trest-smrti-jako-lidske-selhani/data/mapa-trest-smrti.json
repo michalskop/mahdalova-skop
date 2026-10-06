@@ -1,8 +1,8 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Trest smrti zachovává 54 zemí. V roce 2025 popravovalo {17|#de1743}",
-  "subtitle": "Kategorie Amnesty International, stav k 31. 12. 2025. Kliknutím na legendu kategorie vypnete. Na mapě nejsou vidět malé ostrovní státy, mezi nimi Singapur (17 poprav v roce 2025)."
+  "text": "Trest smrti zachovává 54 zemí. A {17|#de1743} z nich popravuje ještě nyní (2025–26)",
+  "subtitle": "Země, které trest smrti nezrušily, podle toho, jak dlouho ho už nevykonaly. Stav k 31. 12. 2025 podle Amnesty International. Kliknutím na legendu skupinu vypnete. Na mapě nejsou vidět malé ostrovní státy, mezi nimi Singapur (17 poprav v roce 2025)."
  },
  "_toggle_legend": true,
  "_legend_inactive_style": "muted",
@@ -19,15 +19,17 @@
     "domain": [
      "Zrušily ho pro všechny trestné činy",
      "Zrušily ho kromě výjimečných činů (např. válečných)",
-     "Mají ho, ale přes 10 let nepopravují",
-     "Zachovávají ho, v roce 2025 nepopravovaly",
+     "Naposledy popravovaly v roce 2000 nebo dřív",
+     "Naposledy popravovaly v letech 2001–2015",
+     "Naposledy popravovaly v letech 2016–2024",
      "V roce 2025 popravovaly"
     ],
     "range": [
      "#e9e9dd",
      "#bcc4df",
-     "#ffc89f",
-     "#ff934d",
+     "#ffe0c7",
+     "#fda668",
+     "#f76800",
      "#de1743"
     ]
    },
@@ -84,17 +86,17 @@
         {
          "id": "834",
          "zeme": "Tanzanie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
         },
         {
          "id": "732",
          "zeme": "Západní Sahara",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Pod správou Maroka."
         },
         {
@@ -110,7 +112,7 @@
          "zeme": "USA",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 47 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
         },
         {
@@ -140,9 +142,9 @@
         {
          "id": "360",
          "zeme": "Indonésie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -164,9 +166,9 @@
         {
          "id": "180",
          "zeme": "Demokratická republika Kongo",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -174,23 +176,23 @@
          "zeme": "Somálsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "404",
          "zeme": "Keňa",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "729",
          "zeme": "Súdán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
         },
         {
@@ -220,17 +222,17 @@
         {
          "id": "643",
          "zeme": "Rusko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
         },
         {
          "id": "044",
          "zeme": "Bahamy",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -284,9 +286,9 @@
         {
          "id": "426",
          "zeme": "Lesotho",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -388,9 +390,9 @@
         {
          "id": "084",
          "zeme": "Belize",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1985",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1985. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -404,9 +406,9 @@
         {
          "id": "328",
          "zeme": "Guyana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -444,17 +446,17 @@
         {
          "id": "388",
          "zeme": "Jamajka",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1988",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1988. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "192",
          "zeme": "Kuba",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -468,9 +470,9 @@
         {
          "id": "072",
          "zeme": "Botswana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2021",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2021. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -492,17 +494,17 @@
         {
          "id": "466",
          "zeme": "Mali",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1980",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1980. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "478",
          "zeme": "Mauritánie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -516,25 +518,25 @@
         {
          "id": "562",
          "zeme": "Niger",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "566",
          "zeme": "Nigérie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "120",
          "zeme": "Kamerun",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -548,9 +550,9 @@
         {
          "id": "288",
          "zeme": "Ghana",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -580,9 +582,9 @@
         {
          "id": "430",
          "zeme": "Libérie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -644,9 +646,9 @@
         {
          "id": "454",
          "zeme": "Malawi",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1992",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1992. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -660,9 +662,9 @@
         {
          "id": "748",
          "zeme": "Eswatini",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1983",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1983. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -692,9 +694,9 @@
         {
          "id": "422",
          "zeme": "Libanon",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
         },
         {
@@ -708,57 +710,57 @@
         {
          "id": "275",
          "zeme": "Palestina",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
         },
         {
          "id": "270",
          "zeme": "Gambie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2012",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2012. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "788",
          "zeme": "Tunisko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1991",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1991. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
         },
         {
          "id": "012",
          "zeme": "Alžírsko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "400",
          "zeme": "Jordánsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2026",
-         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2026, předtím 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených). Barva na mapě odpovídá stavu ke konci roku 2025."
         },
         {
          "id": "784",
          "zeme": "Spojené arabské emiráty",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 3 popravy)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "634",
          "zeme": "Katar",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -766,7 +768,7 @@
          "zeme": "Kuvajt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -774,15 +776,15 @@
          "zeme": "Irák",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "512",
          "zeme": "Omán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -804,25 +806,25 @@
         {
          "id": "764",
          "zeme": "Thajsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2018",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2018. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "418",
          "zeme": "Laos",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "104",
          "zeme": "Myanmar (Barma)",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
         },
         {
@@ -830,7 +832,7 @@
          "zeme": "Vietnam",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -838,15 +840,15 @@
          "zeme": "Severní Korea",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "410",
          "zeme": "Jižní Korea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -860,17 +862,17 @@
         {
          "id": "356",
          "zeme": "Indie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "050",
          "zeme": "Bangladéš",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -892,9 +894,9 @@
         {
          "id": "586",
          "zeme": "Pákistán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -902,15 +904,15 @@
          "zeme": "Afghánistán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 6 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "762",
          "zeme": "Tádžikistán",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -934,15 +936,15 @@
          "zeme": "Írán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "760",
          "zeme": "Sýrie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -964,9 +966,9 @@
         {
          "id": "112",
          "zeme": "Bělorusko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Jediná evropská země, která trest smrti zachovává."
         },
         {
@@ -1180,9 +1182,9 @@
         {
          "id": "144",
          "zeme": "Srí Lanka",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1190,7 +1192,7 @@
          "zeme": "Čína",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Počty poprav jsou státním tajemstvím."
         },
         {
@@ -1198,7 +1200,7 @@
          "zeme": "Tchaj-wan",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1260,17 +1262,17 @@
         {
          "id": "458",
          "zeme": "Malajsie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2017",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "096",
          "zeme": "Brunej",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1957 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1957 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1308,9 +1310,9 @@
         {
          "id": "232",
          "zeme": "Eritrea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1318,7 +1320,7 @@
          "zeme": "Japonsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1334,7 +1336,7 @@
          "zeme": "Jemen",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1342,7 +1344,7 @@
          "zeme": "Saúdská Arábie",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1356,9 +1358,9 @@
         {
          "id": "504",
          "zeme": "Maroko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1366,23 +1368,23 @@
          "zeme": "Egypt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 23 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "434",
          "zeme": "Libye",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2010",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2010. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
         },
         {
          "id": "231",
          "zeme": "Etiopie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2007",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2007. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1396,9 +1398,9 @@
         {
          "id": "800",
          "zeme": "Uganda",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2005",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2005. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
         },
         {
@@ -1444,9 +1446,9 @@
         {
          "id": "780",
          "zeme": "Trinidad a Tobago",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1454,7 +1456,7 @@
          "zeme": "Jižní Súdán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         }
        ]
@@ -1524,17 +1526,17 @@
         {
          "id": "834",
          "zeme": "Tanzanie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
         },
         {
          "id": "732",
          "zeme": "Západní Sahara",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Pod správou Maroka."
         },
         {
@@ -1550,7 +1552,7 @@
          "zeme": "USA",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 47 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
         },
         {
@@ -1580,9 +1582,9 @@
         {
          "id": "360",
          "zeme": "Indonésie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1604,9 +1606,9 @@
         {
          "id": "180",
          "zeme": "Demokratická republika Kongo",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1614,23 +1616,23 @@
          "zeme": "Somálsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "404",
          "zeme": "Keňa",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "729",
          "zeme": "Súdán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
         },
         {
@@ -1660,17 +1662,17 @@
         {
          "id": "643",
          "zeme": "Rusko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
         },
         {
          "id": "044",
          "zeme": "Bahamy",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1724,9 +1726,9 @@
         {
          "id": "426",
          "zeme": "Lesotho",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1828,9 +1830,9 @@
         {
          "id": "084",
          "zeme": "Belize",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1985",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1985. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1844,9 +1846,9 @@
         {
          "id": "328",
          "zeme": "Guyana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1884,17 +1886,17 @@
         {
          "id": "388",
          "zeme": "Jamajka",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1988",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1988. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "192",
          "zeme": "Kuba",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1908,9 +1910,9 @@
         {
          "id": "072",
          "zeme": "Botswana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2021",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2021. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1932,17 +1934,17 @@
         {
          "id": "466",
          "zeme": "Mali",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1980",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1980. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "478",
          "zeme": "Mauritánie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1956,25 +1958,25 @@
         {
          "id": "562",
          "zeme": "Niger",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "566",
          "zeme": "Nigérie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "120",
          "zeme": "Kamerun",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -1988,9 +1990,9 @@
         {
          "id": "288",
          "zeme": "Ghana",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2020,9 +2022,9 @@
         {
          "id": "430",
          "zeme": "Libérie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2084,9 +2086,9 @@
         {
          "id": "454",
          "zeme": "Malawi",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1992",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1992. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2100,9 +2102,9 @@
         {
          "id": "748",
          "zeme": "Eswatini",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1983",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1983. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2132,9 +2134,9 @@
         {
          "id": "422",
          "zeme": "Libanon",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
         },
         {
@@ -2148,57 +2150,57 @@
         {
          "id": "275",
          "zeme": "Palestina",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
         },
         {
          "id": "270",
          "zeme": "Gambie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2012",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2012. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "788",
          "zeme": "Tunisko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1991",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1991. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
         },
         {
          "id": "012",
          "zeme": "Alžírsko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "400",
          "zeme": "Jordánsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2026",
-         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2026, předtím 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených). Barva na mapě odpovídá stavu ke konci roku 2025."
         },
         {
          "id": "784",
          "zeme": "Spojené arabské emiráty",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 3 popravy)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "634",
          "zeme": "Katar",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2206,7 +2208,7 @@
          "zeme": "Kuvajt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2214,15 +2216,15 @@
          "zeme": "Irák",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "512",
          "zeme": "Omán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2244,25 +2246,25 @@
         {
          "id": "764",
          "zeme": "Thajsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2018",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2018. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "418",
          "zeme": "Laos",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "104",
          "zeme": "Myanmar (Barma)",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
         },
         {
@@ -2270,7 +2272,7 @@
          "zeme": "Vietnam",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2278,15 +2280,15 @@
          "zeme": "Severní Korea",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "410",
          "zeme": "Jižní Korea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2300,17 +2302,17 @@
         {
          "id": "356",
          "zeme": "Indie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "050",
          "zeme": "Bangladéš",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2332,9 +2334,9 @@
         {
          "id": "586",
          "zeme": "Pákistán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2342,15 +2344,15 @@
          "zeme": "Afghánistán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 6 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "762",
          "zeme": "Tádžikistán",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2374,15 +2376,15 @@
          "zeme": "Írán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "760",
          "zeme": "Sýrie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2404,9 +2406,9 @@
         {
          "id": "112",
          "zeme": "Bělorusko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Jediná evropská země, která trest smrti zachovává."
         },
         {
@@ -2620,9 +2622,9 @@
         {
          "id": "144",
          "zeme": "Srí Lanka",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2630,7 +2632,7 @@
          "zeme": "Čína",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Počty poprav jsou státním tajemstvím."
         },
         {
@@ -2638,7 +2640,7 @@
          "zeme": "Tchaj-wan",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2700,17 +2702,17 @@
         {
          "id": "458",
          "zeme": "Malajsie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2017",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "096",
          "zeme": "Brunej",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1957 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1957 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2748,9 +2750,9 @@
         {
          "id": "232",
          "zeme": "Eritrea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2758,7 +2760,7 @@
          "zeme": "Japonsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2774,7 +2776,7 @@
          "zeme": "Jemen",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2782,7 +2784,7 @@
          "zeme": "Saúdská Arábie",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2796,9 +2798,9 @@
         {
          "id": "504",
          "zeme": "Maroko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2806,23 +2808,23 @@
          "zeme": "Egypt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 23 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "434",
          "zeme": "Libye",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2010",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2010. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
         },
         {
          "id": "231",
          "zeme": "Etiopie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2007",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2007. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2836,9 +2838,9 @@
         {
          "id": "800",
          "zeme": "Uganda",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2005",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2005. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
         },
         {
@@ -2884,9 +2886,9 @@
         {
          "id": "780",
          "zeme": "Trinidad a Tobago",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -2894,7 +2896,7 @@
          "zeme": "Jižní Súdán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         }
        ]
@@ -2960,17 +2962,17 @@
         {
          "id": "834",
          "zeme": "Tanzanie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
         },
         {
          "id": "732",
          "zeme": "Západní Sahara",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Pod správou Maroka."
         },
         {
@@ -2986,7 +2988,7 @@
          "zeme": "USA",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 47 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
         },
         {
@@ -3016,9 +3018,9 @@
         {
          "id": "360",
          "zeme": "Indonésie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3040,9 +3042,9 @@
         {
          "id": "180",
          "zeme": "Demokratická republika Kongo",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3050,23 +3052,23 @@
          "zeme": "Somálsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "404",
          "zeme": "Keňa",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "729",
          "zeme": "Súdán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
         },
         {
@@ -3096,17 +3098,17 @@
         {
          "id": "643",
          "zeme": "Rusko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
         },
         {
          "id": "044",
          "zeme": "Bahamy",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3160,9 +3162,9 @@
         {
          "id": "426",
          "zeme": "Lesotho",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3264,9 +3266,9 @@
         {
          "id": "084",
          "zeme": "Belize",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1985",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1985. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3280,9 +3282,9 @@
         {
          "id": "328",
          "zeme": "Guyana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3320,17 +3322,17 @@
         {
          "id": "388",
          "zeme": "Jamajka",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1988",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1988. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "192",
          "zeme": "Kuba",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3344,9 +3346,9 @@
         {
          "id": "072",
          "zeme": "Botswana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2021",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2021. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3368,17 +3370,17 @@
         {
          "id": "466",
          "zeme": "Mali",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1980",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1980. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "478",
          "zeme": "Mauritánie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3392,25 +3394,25 @@
         {
          "id": "562",
          "zeme": "Niger",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "566",
          "zeme": "Nigérie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "120",
          "zeme": "Kamerun",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3424,9 +3426,9 @@
         {
          "id": "288",
          "zeme": "Ghana",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3456,9 +3458,9 @@
         {
          "id": "430",
          "zeme": "Libérie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3520,9 +3522,9 @@
         {
          "id": "454",
          "zeme": "Malawi",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1992",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1992. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3536,9 +3538,9 @@
         {
          "id": "748",
          "zeme": "Eswatini",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1983",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1983. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3568,9 +3570,9 @@
         {
          "id": "422",
          "zeme": "Libanon",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
         },
         {
@@ -3584,57 +3586,57 @@
         {
          "id": "275",
          "zeme": "Palestina",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
         },
         {
          "id": "270",
          "zeme": "Gambie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2012",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2012. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "788",
          "zeme": "Tunisko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1991",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1991. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
         },
         {
          "id": "012",
          "zeme": "Alžírsko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "400",
          "zeme": "Jordánsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2026",
-         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2026, předtím 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených). Barva na mapě odpovídá stavu ke konci roku 2025."
         },
         {
          "id": "784",
          "zeme": "Spojené arabské emiráty",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 3 popravy)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "634",
          "zeme": "Katar",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3642,7 +3644,7 @@
          "zeme": "Kuvajt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3650,15 +3652,15 @@
          "zeme": "Irák",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "512",
          "zeme": "Omán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3680,25 +3682,25 @@
         {
          "id": "764",
          "zeme": "Thajsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2018",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2018. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "418",
          "zeme": "Laos",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "104",
          "zeme": "Myanmar (Barma)",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
         },
         {
@@ -3706,7 +3708,7 @@
          "zeme": "Vietnam",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3714,15 +3716,15 @@
          "zeme": "Severní Korea",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "410",
          "zeme": "Jižní Korea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3736,17 +3738,17 @@
         {
          "id": "356",
          "zeme": "Indie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "050",
          "zeme": "Bangladéš",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3768,9 +3770,9 @@
         {
          "id": "586",
          "zeme": "Pákistán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3778,15 +3780,15 @@
          "zeme": "Afghánistán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 6 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "762",
          "zeme": "Tádžikistán",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3810,15 +3812,15 @@
          "zeme": "Írán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "760",
          "zeme": "Sýrie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -3840,9 +3842,9 @@
         {
          "id": "112",
          "zeme": "Bělorusko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Jediná evropská země, která trest smrti zachovává."
         },
         {
@@ -4056,9 +4058,9 @@
         {
          "id": "144",
          "zeme": "Srí Lanka",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4066,7 +4068,7 @@
          "zeme": "Čína",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Počty poprav jsou státním tajemstvím."
         },
         {
@@ -4074,7 +4076,7 @@
          "zeme": "Tchaj-wan",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4136,17 +4138,17 @@
         {
          "id": "458",
          "zeme": "Malajsie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2017",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "096",
          "zeme": "Brunej",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1957 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1957 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4184,9 +4186,9 @@
         {
          "id": "232",
          "zeme": "Eritrea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4194,7 +4196,7 @@
          "zeme": "Japonsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4210,7 +4212,7 @@
          "zeme": "Jemen",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4218,7 +4220,7 @@
          "zeme": "Saúdská Arábie",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4232,9 +4234,9 @@
         {
          "id": "504",
          "zeme": "Maroko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4242,23 +4244,23 @@
          "zeme": "Egypt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 23 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "434",
          "zeme": "Libye",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2010",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2010. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
         },
         {
          "id": "231",
          "zeme": "Etiopie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2007",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2007. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4272,9 +4274,9 @@
         {
          "id": "800",
          "zeme": "Uganda",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2005",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2005. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
         },
         {
@@ -4320,9 +4322,9 @@
         {
          "id": "780",
          "zeme": "Trinidad a Tobago",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4330,7 +4332,7 @@
          "zeme": "Jižní Súdán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         }
        ]
@@ -4396,17 +4398,17 @@
         {
          "id": "834",
          "zeme": "Tanzanie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1995 (Amnesty), jinde 1994."
         },
         {
          "id": "732",
          "zeme": "Západní Sahara",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Pod správou Maroka."
         },
         {
@@ -4422,7 +4424,7 @@
          "zeme": "USA",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 47 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Federace: trest smrti má 27 z 50 států, federální vláda a armáda. V roce 2025 popravovalo 11 států."
         },
         {
@@ -4452,9 +4454,9 @@
         {
          "id": "360",
          "zeme": "Indonésie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4476,9 +4478,9 @@
         {
          "id": "180",
          "zeme": "Demokratická republika Kongo",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4486,23 +4488,23 @@
          "zeme": "Somálsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "404",
          "zeme": "Keňa",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "729",
          "zeme": "Súdán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 2019 (Amnesty), jinde 2021."
         },
         {
@@ -4532,17 +4534,17 @@
         {
          "id": "643",
          "zeme": "Rusko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Federální moratorium od roku 1996, popravy v Čečensku do roku 1999."
         },
         {
          "id": "044",
          "zeme": "Bahamy",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4596,9 +4598,9 @@
         {
          "id": "426",
          "zeme": "Lesotho",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1995",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1995. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4700,9 +4702,9 @@
         {
          "id": "084",
          "zeme": "Belize",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1985",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1985. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4716,9 +4718,9 @@
         {
          "id": "328",
          "zeme": "Guyana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4756,17 +4758,17 @@
         {
          "id": "388",
          "zeme": "Jamajka",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1988",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1988. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "192",
          "zeme": "Kuba",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2003",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2003. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4780,9 +4782,9 @@
         {
          "id": "072",
          "zeme": "Botswana",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2021",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2021. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4804,17 +4806,17 @@
         {
          "id": "466",
          "zeme": "Mali",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1980",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1980. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "478",
          "zeme": "Mauritánie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1987",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1987. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4828,25 +4830,25 @@
         {
          "id": "562",
          "zeme": "Niger",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "566",
          "zeme": "Nigérie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2016",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2016. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "120",
          "zeme": "Kamerun",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4860,9 +4862,9 @@
         {
          "id": "288",
          "zeme": "Ghana",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4892,9 +4894,9 @@
         {
          "id": "430",
          "zeme": "Libérie",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2000",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 2000. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4956,9 +4958,9 @@
         {
          "id": "454",
          "zeme": "Malawi",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1992",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1992. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -4972,9 +4974,9 @@
         {
          "id": "748",
          "zeme": "Eswatini",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1983",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1983. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5004,9 +5006,9 @@
         {
          "id": "422",
          "zeme": "Libanon",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Parlament trest smrti v srpnu 2026 zrušil, zákon čeká na podpis prezidenta."
         },
         {
@@ -5020,57 +5022,57 @@
         {
          "id": "275",
          "zeme": "Palestina",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Popravy v Pásmu Gazy provádí Hamás; Palestinská samospráva naposledy popravovala v roce 2005."
         },
         {
          "id": "270",
          "zeme": "Gambie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2012",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2012. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "788",
          "zeme": "Tunisko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1991",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1991. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední poprava 1991 (Amnesty), jinde 1990."
         },
         {
          "id": "012",
          "zeme": "Alžírsko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "400",
          "zeme": "Jordánsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2026",
-         "pozn": "V červnu 2026 popravy obnovilo (6 popravených), předtím naposledy popravovalo v roce 2017."
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2026, předtím 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
+         "pozn": "V červnu 2026 popravy obnovilo (6 popravených). Barva na mapě odpovídá stavu ke konci roku 2025."
         },
         {
          "id": "784",
          "zeme": "Spojené arabské emiráty",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 3 popravy)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "634",
          "zeme": "Katar",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5078,7 +5080,7 @@
          "zeme": "Kuvajt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 17 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5086,15 +5088,15 @@
          "zeme": "Irák",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "512",
          "zeme": "Omán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5116,25 +5118,25 @@
         {
          "id": "764",
          "zeme": "Thajsko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2018",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2018. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "418",
          "zeme": "Laos",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "104",
          "zeme": "Myanmar (Barma)",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Zprávy o popravách v roce 2024 Amnesty nepotvrdila."
         },
         {
@@ -5142,7 +5144,7 @@
          "zeme": "Vietnam",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5150,15 +5152,15 @@
          "zeme": "Severní Korea",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: počet nezjištěn)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "410",
          "zeme": "Jižní Korea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1997",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1997. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5172,17 +5174,17 @@
         {
          "id": "356",
          "zeme": "Indie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2020",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2020. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "050",
          "zeme": "Bangladéš",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2023",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2023. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5204,9 +5206,9 @@
         {
          "id": "586",
          "zeme": "Pákistán",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2019",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2019. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5214,15 +5216,15 @@
          "zeme": "Afghánistán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 6 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "762",
          "zeme": "Tádžikistán",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "2004",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2004. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5246,15 +5248,15 @@
          "zeme": "Írán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 2 159 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "760",
          "zeme": "Sýrie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2024",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2024. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5276,9 +5278,9 @@
         {
          "id": "112",
          "zeme": "Bělorusko",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2022",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2022. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Jediná evropská země, která trest smrti zachovává."
         },
         {
@@ -5492,9 +5494,9 @@
         {
          "id": "144",
          "zeme": "Srí Lanka",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1976",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1976. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5502,7 +5504,7 @@
          "zeme": "Čína",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: tisíce, počty jsou státní tajemství)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": "Počty poprav jsou státním tajemstvím."
         },
         {
@@ -5510,7 +5512,7 @@
          "zeme": "Tchaj-wan",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5572,17 +5574,17 @@
         {
          "id": "458",
          "zeme": "Malajsie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2017",
+         "stav": "Naposledy popravovaly v letech 2016–2024",
+         "info": "Má ho, naposledy popravila v roce 2017. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "096",
          "zeme": "Brunej",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1957 (poslední známá)",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1957 (poslední známá). Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5620,9 +5622,9 @@
         {
          "id": "232",
          "zeme": "Eritrea",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1989",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1989. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5630,7 +5632,7 @@
          "zeme": "Japonsko",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5646,7 +5648,7 @@
          "zeme": "Jemen",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 51 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5654,7 +5656,7 @@
          "zeme": "Saúdská Arábie",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: nejméně 356 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5668,9 +5670,9 @@
         {
          "id": "504",
          "zeme": "Maroko",
-         "stav": "Mají ho, ale přes 10 let nepopravují",
-         "info": "Má ho, ale přes 10 let nepopravuje",
-         "posledni": "1993",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1993. Amnesty ji řadí mezi země, které ho v praxi nepoužívají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5678,23 +5680,23 @@
          "zeme": "Egypt",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 23 poprav)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         },
         {
          "id": "434",
          "zeme": "Libye",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2010",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2010. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Amnesty potvrdila poslední popravu v roce 2010. Ve východní Libyi oznámily úřady v srpnu 2026 popravu 10 lidí."
         },
         {
          "id": "231",
          "zeme": "Etiopie",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2007",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2007. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5708,9 +5710,9 @@
         {
          "id": "800",
          "zeme": "Uganda",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "2005",
+         "stav": "Naposledy popravovaly v letech 2001–2015",
+         "info": "Má ho, naposledy popravila v roce 2005. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": "Údaje se rozcházejí: poslední civilní popravy 1999, vojenské do roku 2005."
         },
         {
@@ -5756,9 +5758,9 @@
         {
          "id": "780",
          "zeme": "Trinidad a Tobago",
-         "stav": "Zachovávají ho, v roce 2025 nepopravovaly",
-         "info": "Má ho, v roce 2025 nepopravila",
-         "posledni": "1999",
+         "stav": "Naposledy popravovaly v roce 2000 nebo dřív",
+         "info": "Má ho, naposledy popravila v roce 1999. Amnesty ji řadí mezi země, které ho zachovávají",
+         "posledni": "",
          "pozn": ""
         },
         {
@@ -5766,7 +5768,7 @@
          "zeme": "Jižní Súdán",
          "stav": "V roce 2025 popravovaly",
          "info": "Popravuje (v roce 2025: 1 poprava)",
-         "posledni": "2025",
+         "posledni": "",
          "pozn": ""
         }
        ]
