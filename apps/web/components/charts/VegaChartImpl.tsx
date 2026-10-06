@@ -231,6 +231,7 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _total_width: _w,
     _toggle_legend: _l,
     _legend_inactive_style: _lis,
+    _legend_hide_mode: _lhm,
     ...rest
   } = spec as Record<string, unknown>;
   return { ...rest, title: null };
@@ -259,9 +260,16 @@ function applyHiddenSeriesOpacity(
   spec: Record<string, unknown>,
   field: string,
   hidden: Set<string>,
+  mode: 'opacity' | 'filter' = 'opacity',
 ): Record<string, unknown> {
   if (!hidden.size) return spec;
   const test = `indexof(${JSON.stringify(Array.from(hidden))}, datum[${JSON.stringify(field)}]) < 0`;
+  // `_legend_hide_mode: 'filter'` – vypnutá řada se z dat vyřadí (skládané sloupce se přeskládají
+  // bez „děr“); výchozí režim jen zprůhlední značky a nechá osy i stack beze změny.
+  if (mode === 'filter') {
+    const transform = Array.isArray(spec.transform) ? spec.transform : [];
+    return { ...spec, transform: [{ filter: test }, ...transform] };
+  }
   const withOpacity = (unit: Record<string, unknown>): Record<string, unknown> => {
     const mark = unit.mark;
     const markOpacity = mark && typeof mark === 'object' && typeof (mark as { opacity?: unknown }).opacity === 'number'
@@ -511,7 +519,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
 
     const hasPointerTooltip = Boolean(pointerTooltipAt(spec, 0));
     const stripped = hasPointerTooltip ? stripVegaTooltips(stripMeta(spec)) : stripMeta(spec);
-    const base = toggleLegend ? applyHiddenSeriesOpacity(stripped, toggleLegend.field, hiddenSeries) : stripped;
+    const hideMode = spec._legend_hide_mode === 'filter' ? 'filter' : 'opacity';
+    const base = toggleLegend ? applyHiddenSeriesOpacity(stripped, toggleLegend.field, hiddenSeries, hideMode) : stripped;
     let final: Record<string, unknown>;
 
     if (mini) {

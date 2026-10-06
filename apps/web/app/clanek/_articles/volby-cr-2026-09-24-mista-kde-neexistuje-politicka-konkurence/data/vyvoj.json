@@ -1,0 +1,373 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Obcí s jedinou kandidátkou je skoro třikrát víc než v roce 1994",
+  "subtitle": "Podíl obcí (%) s jedinou kandidátkou nebo s předem jistým výsledkem, komunální volby 1994–2026"
+ },
+ "width": 600,
+ "height": 340,
+ "data": {
+  "values": [
+   {
+    "rok": "1994",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 644,
+    "obci": 6130,
+    "pct": 10.5
+   },
+   {
+    "rok": "1994",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 1,
+    "obci": 6130,
+    "pct": 0.0
+   },
+   {
+    "rok": "1994",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 268,
+    "obci": 6130,
+    "pct": 4.4
+   },
+   {
+    "rok": "1994",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 0,
+    "obci": 6130,
+    "pct": 0.0
+   },
+   {
+    "rok": "1998",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 763,
+    "obci": 6245,
+    "pct": 12.2
+   },
+   {
+    "rok": "1998",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 0,
+    "obci": 6245,
+    "pct": 0.0
+   },
+   {
+    "rok": "1998",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 237,
+    "obci": 6245,
+    "pct": 3.8
+   },
+   {
+    "rok": "1998",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 40,
+    "obci": 6245,
+    "pct": 0.6
+   },
+   {
+    "rok": "2002",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 657,
+    "obci": 6248,
+    "pct": 10.5
+   },
+   {
+    "rok": "2002",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 445,
+    "obci": 6248,
+    "pct": 7.1
+   },
+   {
+    "rok": "2002",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 146,
+    "obci": 6248,
+    "pct": 2.3
+   },
+   {
+    "rok": "2002",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 35,
+    "obci": 6248,
+    "pct": 0.6
+   },
+   {
+    "rok": "2006",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 642,
+    "obci": 6244,
+    "pct": 10.3
+   },
+   {
+    "rok": "2006",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 529,
+    "obci": 6244,
+    "pct": 8.5
+   },
+   {
+    "rok": "2006",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 128,
+    "obci": 6244,
+    "pct": 2.0
+   },
+   {
+    "rok": "2006",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 14,
+    "obci": 6244,
+    "pct": 0.2
+   },
+   {
+    "rok": "2010",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 567,
+    "obci": 6245,
+    "pct": 9.1
+   },
+   {
+    "rok": "2010",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 591,
+    "obci": 6245,
+    "pct": 9.5
+   },
+   {
+    "rok": "2010",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 93,
+    "obci": 6245,
+    "pct": 1.5
+   },
+   {
+    "rok": "2010",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 16,
+    "obci": 6245,
+    "pct": 0.3
+   },
+   {
+    "rok": "2014",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 590,
+    "obci": 6248,
+    "pct": 9.4
+   },
+   {
+    "rok": "2014",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 704,
+    "obci": 6248,
+    "pct": 11.3
+   },
+   {
+    "rok": "2014",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 100,
+    "obci": 6248,
+    "pct": 1.6
+   },
+   {
+    "rok": "2014",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 7,
+    "obci": 6248,
+    "pct": 0.1
+   },
+   {
+    "rok": "2018",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 751,
+    "obci": 6254,
+    "pct": 12.0
+   },
+   {
+    "rok": "2018",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 859,
+    "obci": 6254,
+    "pct": 13.7
+   },
+   {
+    "rok": "2018",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 129,
+    "obci": 6254,
+    "pct": 2.1
+   },
+   {
+    "rok": "2018",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 8,
+    "obci": 6254,
+    "pct": 0.1
+   },
+   {
+    "rok": "2022",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 878,
+    "obci": 6254,
+    "pct": 14.0
+   },
+   {
+    "rok": "2022",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 890,
+    "obci": 6254,
+    "pct": 14.2
+   },
+   {
+    "rok": "2022",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 124,
+    "obci": 6254,
+    "pct": 2.0
+   },
+   {
+    "rok": "2022",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 7,
+    "obci": 6254,
+    "pct": 0.1
+   },
+   {
+    "rok": "2026",
+    "kat": "Jediná kandidátka, zvoleni všichni",
+    "ord": 0,
+    "n": 931,
+    "obci": 6254,
+    "pct": 14.9
+   },
+   {
+    "rok": "2026",
+    "kat": "Jediná kandidátka s náhradníky",
+    "ord": 1,
+    "n": 899,
+    "obci": 6254,
+    "pct": 14.4
+   },
+   {
+    "rok": "2026",
+    "kat": "Víc kandidátek, ale zvoleni všichni",
+    "ord": 2,
+    "n": 141,
+    "obci": 6254,
+    "pct": 2.3
+   },
+   {
+    "rok": "2026",
+    "kat": "Nikdo nekandidoval",
+    "ord": 3,
+    "n": 1,
+    "obci": 6254,
+    "pct": 0.0
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar",
+  "width": {
+   "band": 0.7
+  }
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "axis": {
+    "title": null,
+    "labelAngle": 0
+   }
+  },
+  "y": {
+   "field": "pct",
+   "type": "quantitative",
+   "stack": "zero",
+   "axis": {
+    "title": null,
+    "format": ".0f",
+    "labelExpr": "datum.label + ' %'"
+   }
+  },
+  "color": {
+   "field": "kat",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Jediná kandidátka, zvoleni všichni",
+     "Jediná kandidátka s náhradníky",
+     "Víc kandidátek, ale zvoleni všichni",
+     "Nikdo nekandidoval"
+    ],
+    "range": [
+     "#6e227d",
+     "#c49ad8",
+     "#ff934d",
+     "#de1743"
+    ]
+   },
+   "legend": null
+  },
+  "order": {
+   "field": "ord",
+   "type": "quantitative"
+  },
+  "tooltip": [
+   {
+    "field": "rok",
+    "title": "Volby"
+   },
+   {
+    "field": "kat",
+    "title": "Typ obce"
+   },
+   {
+    "field": "n",
+    "title": "Obcí",
+    "format": ",.0f"
+   },
+   {
+    "field": "pct",
+    "title": "% všech obcí",
+    "format": ".1f"
+   }
+  ]
+ },
+ "_source": "volby.gov.cz – otevřená data a výsledky komunálních voleb 1994–2026, řádný termín, zastupitelstva obcí (bez městských částí)",
+ "_toggle_legend": true,
+ "_legend_hide_mode": "filter"
+}
