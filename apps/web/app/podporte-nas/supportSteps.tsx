@@ -14,7 +14,7 @@ const GOOGLE_PREFERRED_SOURCE = 'https://www.google.com/preferences/source?q=mah
 
 // Stripe Payment Links – the same three tiers as the header's „Podpořte nás" menu.
 const TIERS = [
-  { label: 'Student', amount: '29 Kč', url: 'https://buy.stripe.com/dRm9AU8U6dlOaEa1x93ks0b' },
+  { label: 'Studující', amount: '29 Kč', url: 'https://buy.stripe.com/dRm9AU8U6dlOaEa1x93ks0b' },
   { label: 'Standard', amount: '199 Kč', url: 'https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a', highlight: true },
   { label: 'Patron', amount: '499 Kč', url: 'https://buy.stripe.com/eVq5kE9Ya3LebIea3F3ks0c' },
 ];

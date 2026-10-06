@@ -4,7 +4,7 @@ import { Box, Button, Menu, useMantineTheme } from '@mantine/core';
 import { IconStar } from '@tabler/icons-react';
 
 /**
- * Žluté tlačítko „Podpořte nás" s nabídkou předplatného (Student / Standard /
+ * Žluté tlačítko „Podpořte nás" s nabídkou předplatného (Studující / Standard /
  * Patron). Jedna komponenta pro hlavičku webu i pro výzvy v obsahu stránek.
  * `compactOnMobile` = na nejužších displejích jen „Podpořit" (hlavička).
  */
@@ -40,7 +40,7 @@ export function SupportMenuButton({ compactOnMobile = false }: { compactOnMobile
           target="_blank"
           style={{ color: '#101432', fontSize: '13.5px', fontWeight: 600, borderRadius: '6px' }}
         >
-          Student &nbsp;29 Kč / měs.
+          Studující &nbsp;29 Kč / měs.
         </Menu.Item>
         <Menu.Item
           component="a"
