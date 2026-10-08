@@ -11,7 +11,7 @@ const COVERS = {
   'kolik-ma-cesko-obci': {
     map: 'map-obce.png',
     headline: 'Země malých obcí',
-    sub: '<b class="red">Červeně</b> obce pod 500 obyvatel. Je jich víc než polovina z&nbsp;6&nbsp;254. Jejich správa stojí na obyvatele až dvakrát víc než v&nbsp;obcích s&nbsp;tisícovkou obyvatel.',
+    sub: '<b class="red">Červeně</b> obce pod 500 obyvatel. Je jich víc než polovina z&nbsp;6&nbsp;254. Ty&nbsp;nejmenší mají správu na obyvatele skoro dvakrát dražší než&nbsp;větší&nbsp;obce.',
   },
   'mista-bez-konkurence': {
     map: 'map-kandidatky.png',
