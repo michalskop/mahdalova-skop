@@ -601,6 +601,8 @@ Files: `apps/web/components/common/RouteTimeline/` – `RouteTimeline.tsx` (layo
 ```md
 <!-- In an article – same YAML as <Timeline> (date, title, summary/description, thumb, link/linkText) -->
 <RouteTimeline yamlFile="timeline.yaml" />
+<!-- Optional colour theme in the YAML root: `theme: trikolora` – Czech tricolour from the palette
+     (brandRoyalBlue.7 line, brand.6 frame, white cards); for statesman / state-history topics. -->
 ```
 
 ```tsx

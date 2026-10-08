@@ -1,0 +1,108 @@
+# Vlnovka <RouteTimeline yamlFile="timeline-havel.yaml" /> – Havel: solidarita a její meze.
+# Každé tvrzení ověřeno v plném zdroji (rešerše 2026-10-08); zdroj je odkaz přímo v textu.
+title: "Solidarita a její meze"
+subtitle: "Momenty, kdy Václav Havel stál na straně slabších – a kdy jeho humanismus selhal"
+theme: trikolora
+
+events:
+  - date: "1936-10-05"
+    title: "Narodil se do podnikatelské rodiny"
+    description: >-
+      Otec byl stavební podnikatel. Po únoru 1948 Havel z kádrových důvodů nesměl studovat.
+      V roce 1953 se vyučil chemickým laborantem a maturitu udělal o rok později na večerní škole
+      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/mladi" target="_blank" rel="noopener noreferrer">Knihovna Václava Havla</a>).
+
+  - date: "1977-01-06"
+    title: "Charta 77"
+    description: >-
+      Text Charty vyšel 6. ledna 1977. Havel ho spoluformuloval a byl jedním ze tří prvních mluvčích.
+      Ještě v lednu ho zatkli, ve vazbě zůstal do května
+      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/disident" target="_blank" rel="noopener noreferrer">Knihovna Václava Havla</a>).
+
+  - date: "Duben 1978"
+    title: "Výbor na obranu nespravedlivě stíhaných"
+    description: >-
+      Spoluzaložil VONS, který dokumentoval a zveřejňoval případy lidí stíhaných v rozporu se zákonem.
+      Za tuto činnost ho v říjnu 1979 odsoudili za podvracení republiky na 4,5 roku vězení.
+      Propuštěn byl v únoru 1983 ze zdravotních důvodů
+      (<a href="https://www.vons.cz/chronology" target="_blank" rel="noopener noreferrer">VONS</a>).
+
+  - date: "1990-01-01"
+    title: "Amnestie pro 23 tisíc vězňů"
+    description: >-
+      V prvním novoročním projevu řekl, že „žijeme ve zkaženém mravním prostředí“, a ohlásil širokou amnestii.
+      Z věznic odešlo přes 23 tisíc z 31 tisíc vězňů. Netýkala se vražd, znásilnění a zneužití pravomoci.
+      Amnestovaní se v roce 1990 podíleli na celkové kriminalitě 9 procenty
+      (<a href="https://ct24.ceskatelevize.cz/clanek/domaci/prvni-krok-vaclava-havla-v-uradu-rozsahla-amnestie-195358" target="_blank" rel="noopener noreferrer">ČT24</a>).
+
+  - date: "1990-03-15"
+    title: "Odsun Němců nazval mstou"
+    description: >-
+      Při návštěvě německého prezidenta Richarda von Weizsäckera řekl, že Němci byli po válce vyhnáni
+      ne na základě prokázané individuální viny, ale jako příslušníci národa – a že šlo o mstu, ne o trest
+      (<a href="https://www.nybooks.com/articles/1990/04/26/the-return-of-germany/" target="_blank" rel="noopener noreferrer">The New York Review of Books</a>).
+
+  - date: "1990-05-02"
+    title: "Konec trestu smrti"
+    description: >-
+      Podepsal zákon č. 175/1990 Sb., který trest smrti nahradil výjimečným trestem.
+      Už uložené tresty smrti se změnily na doživotí
+      (<a href="https://www.epravo.cz/top/zakony/sbirka-zakonu/sb/1990/175" target="_blank" rel="noopener noreferrer">Sbírka zákonů</a>).
+
+  - date: "1991"
+    title: "Nobelovka pro Su Ťij"
+    description: >-
+      Navrhl na Nobelovu cenu míru barmskou opoziční političku Aun Schan Su Ťij, která byla v domácím vězení.
+      Cenu za rok 1991 dostala – Havel sám patřil k favoritům
+      (<a href="https://peacemagazine.org/archive/v07n6p30.htm" target="_blank" rel="noopener noreferrer">Peace Magazine</a>).
+
+  - date: "1995-05-13"
+    title: "Památník romským obětem v Letech"
+    description: >-
+      Za jeho přítomnosti odhalili u Písku památník obětem tábora, kde za války věznili Romy.
+      Nápis zní „Ma bisteren – nezapomeňte“
+      (<a href="https://www.rommuz.cz/en/lety-u-pisku/present-days/the-cultural-heritage-monument-at-lety-u-pisku/" target="_blank" rel="noopener noreferrer">Muzeum romské kultury</a>).
+
+  - date: "1997-12-09"
+    title: "Rudolfinský projev"
+    description: >-
+      Před oběma komorami parlamentu kritizoval „liberalismus bez přívlastků“, v němž solidarita, morálka
+      a úcta k právu skončily v posmívané „nadstavbě“. Upozornil, že ceny rostou rychleji než důchody a sociální dávky
+      (<a href="https://static.novydenik.com/2026/05/2026-05-27-Projevy-Havel-II.pdf" target="_blank" rel="noopener noreferrer">plný text projevu</a>).
+
+  - date: "1999-04-29"
+    title: "Nálety „výlučně humanitární“"
+    description: >-
+      Během bombardování Jugoslávie vyšel pod jeho jménem text v La Repubblica a Le Monde.
+      O náletech NATO v něm stojí: „Jejich povaha je výlučně humanitární.“ Spojení „humanitární bombardování“
+      v textu není – Havel v roce 2004 odmítl, že by ho kdy použil
+      (<a href="https://informace.rozhlas.cz/geneze-slovniho-spojeni-humanitarni-bombardovani-7947097" target="_blank" rel="noopener noreferrer">Český rozhlas</a>).
+
+  - date: "2000-01-01"
+    title: "„Starat jen sami o sebe“"
+    description: >-
+      V novoročním projevu připomněl, že každý z nás je i obyvatelem Země a nese za její osud díl odpovědnosti:
+      „Vím, jak to zní nepopulárně, ale nemohu si pomoct: nejvíc ublížíme sami sobě, když se budeme starat jen sami o sebe.“
+      (<a href="https://cs.wikisource.org/wiki/Novoro%C4%8Dn%C3%AD_projev_prezidenta_republiky_V%C3%A1clava_Havla_(2000)" target="_blank" rel="noopener noreferrer">plný text projevu</a>)
+
+  - date: "2003-01-30"
+    title: "Dopis osmi: podpora války v Iráku"
+    description: >-
+      Tři dny před koncem mandátu podepsal s Blairem, Aznarem, Berlusconim a dalšími dopis na podporu postupu USA vůči Iráku –
+      jako jediná hlava státu a bez souhlasu vlády
+      (<a href="https://plus.rozhlas.cz/jak-cesi-nevalcili-v-iraku-slo-o-nas-diplomaticky-majstrstyk-7174064" target="_blank" rel="noopener noreferrer">Český rozhlas</a>).
+      V září 2003 řekl, že invaze „byla morálně ospravedlnitelná“, zbraně hromadného ničení přitom podle něj „mohou, ale nemusí existovat“
+      (<a href="https://www.novinky.cz/clanek/zahranicni-havel-valka-v-iraku-byla-moralne-ospravedlnitelna-40089691" target="_blank" rel="noopener noreferrer">Novinky.cz/DPA</a>).
+
+  - date: "2010-01-06"
+    title: "Dopis za Liou Siao-poa"
+    description: >-
+      S biskupem Václavem Malým a Pavlem Landovským přinesl na čínské velvyslanectví v Praze dopis
+      za propuštění autora Charty 08, odsouzeného na 11 let. Nikdo neotevřel, dopis vhodili do schránky
+      (<a href="https://english.radio.cz/node/8405946" target="_blank" rel="noopener noreferrer">Radio Prague International</a>).
+
+  - date: "2011-12-18"
+    title: "Zemřel na Hrádečku"
+    description: >-
+      Bylo mu 75 let
+      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/prezident" target="_blank" rel="noopener noreferrer">Knihovna Václava Havla</a>).

@@ -51,5 +51,7 @@ export interface TimelineContent {
   barMax?: number;
   barReferenceValue?: number;
   barReferenceLabel?: string;
+  /** RouteTimeline only: colour theme (e.g. 'trikolora' – Czech tricolour from the palette). */
+  theme?: 'trikolora';
   events: TimelineEvent[];
 }

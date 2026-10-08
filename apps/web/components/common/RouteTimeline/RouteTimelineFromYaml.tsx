@@ -71,7 +71,11 @@ export default function RouteTimelineFromYaml({ content, slug }: RouteTimelineFr
           {content.subtitle ? <p>{fixCzechTypography(content.subtitle)}</p> : null}
         </header>
       ) : null}
-      <RouteTimeline items={items} className={styles.timeline} style={{ marginBottom: 32 }} />
+      <RouteTimeline
+        items={items}
+        className={[styles.timeline, content.theme ? styles[content.theme] : ''].filter(Boolean).join(' ')}
+        style={{ marginBottom: 32 }}
+      />
     </section>
   );
 }

@@ -24,6 +24,14 @@
   --route-timeline-title: var(--mantine-color-brandNavy-9);
 }
 
+/* `theme: trikolora` in the YAML – Czech tricolour from the palette (statesman
+   topics): blue line, crimson frame (dates and article links are crimson
+   already), white cards. */
+.trikolora {
+  --scroll-route-ink: var(--mantine-color-brandRoyalBlue-7);
+  --route-timeline-frame: var(--mantine-color-brand-6);
+}
+
 .timeline h3 {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   margin-bottom: 10px;
