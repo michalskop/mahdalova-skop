@@ -38,7 +38,13 @@ function EventCard({ event, slug }: { event: TimelineEvent; slug?: string }) {
       <span className={styles.date}>{formatDate(event.date)}</span>
       {event.thumb ? (
         <figure className={styles.figure}>
-          <img className={styles.thumb} src={assetPath(event.thumb, slug)} alt={event.thumbAlt ?? ''} loading="lazy" />
+          <img
+            className={styles.thumb}
+            src={assetPath(event.thumb, slug)}
+            alt={event.thumbAlt ?? ''}
+            loading="lazy"
+            style={event.thumbPosition ? { objectPosition: event.thumbPosition } : undefined}
+          />
           {event.thumbCredit ? (
             <figcaption className={styles.credit} dangerouslySetInnerHTML={{ __html: event.thumbCredit }} />
           ) : null}

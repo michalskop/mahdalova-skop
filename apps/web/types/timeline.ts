@@ -34,6 +34,8 @@ export interface TimelineEvent {
   thumb?: string;
   /** RouteTimeline: alt text of the thumb. */
   thumbAlt?: string;
+  /** RouteTimeline: CSS object-position of the cropped thumb, e.g. "50% 20%" for portraits. */
+  thumbPosition?: string;
   /** RouteTimeline: photo credit under the thumb (HTML allowed – author, licence link). */
   thumbCredit?: string;
   tags?: string[];
