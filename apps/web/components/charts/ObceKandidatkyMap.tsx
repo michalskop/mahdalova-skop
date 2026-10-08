@@ -19,7 +19,7 @@ const COL: Record<number, string> = {
   0: '#e9e9dd', // background.5 – soutěž
   1: '#c49ad8', // brandAmethyst.3 – jediná kandidátka s náhradníky
   2: '#6e227d', // brandAmethyst.7 – jediná kandidátka, zvoleni všichni
-  3: '#ff934d', // brandOrange.4 – víc kandidátek, ale zvoleni všichni
+  3: '#1a9fbd', // brandTeal.5 – víc kandidátek, ale zvoleni všichni
   4: '#de1743', // brand.6 – nikdo nekandidoval
 };
 const NODATA = '#f8f6f0';   // background.2 – obec tehdy nebyla samostatná
@@ -227,12 +227,6 @@ export default function ObceKandidatkyMap({ geoUrl, dataUrl, title, subtitle, so
             </div>
           )}
         </div>
-        {missing > 0 && (
-          <div style={{ fontSize: 12.5, color: MUTED, marginBottom: 8 }}>
-            Mapa ukazuje obce v dnešních hranicích. Obce, které se od té doby rozdělily nebo sloučily, se ve starších volbách nedají přiřadit, proto se počty mírně liší od grafu níže.
-          </div>
-        )}
-
         {/* Hledání obce */}
         <div style={{ position: 'relative', marginBottom: 8, maxWidth: 320 }}>
           <input
@@ -318,6 +312,11 @@ export default function ObceKandidatkyMap({ geoUrl, dataUrl, title, subtitle, so
               <div>{year}: {describe(focusRec)}</div>
             </div>
           )}
+        </div>
+
+        {/* Poznámka natrvalo pod mapou – nezávisle na zvoleném roce, aby se rozvržení při přepínání nehýbalo */}
+        <div style={{ fontSize: 12.5, color: MUTED, marginTop: 8 }}>
+          Mapa ukazuje obce v dnešních hranicích. Obce, které se od té doby rozdělily nebo sloučily, se ve starších volbách nedají přiřadit, proto se počty mírně liší od grafu níže.
         </div>
       </div>
     </ChartCard>
