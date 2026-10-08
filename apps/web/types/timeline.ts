@@ -32,6 +32,10 @@ export interface TimelineEvent {
   description?: string;
   emoji?: string;
   thumb?: string;
+  /** RouteTimeline: alt text of the thumb. */
+  thumbAlt?: string;
+  /** RouteTimeline: photo credit under the thumb (HTML allowed – author, licence link). */
+  thumbCredit?: string;
   tags?: string[];
   persons?: TimelinePerson[];
   link?: string;

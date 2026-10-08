@@ -8,6 +8,7 @@
    --route-timeline-frame       frame of a reached card
    --route-timeline-title       card titles (h3)
    --route-timeline-card-width  card width on desktop
+   --route-timeline-card-bg / --route-timeline-card-border   card surface
    --scroll-route-ink / --scroll-route-track   the line itself (ScrollRoute) */
 
 .timeline {
@@ -59,8 +60,8 @@
 }
 
 .card {
-  background: var(--mantine-color-background-0);
-  border: 1px solid var(--mantine-color-background-6);
+  background: var(--route-timeline-card-bg, var(--mantine-color-background-0));
+  border: 1px solid var(--route-timeline-card-border, var(--mantine-color-background-6));
   border-radius: 6px;
   box-shadow: 0 12px 40px rgba(36, 16, 22, 0.08);
   padding: clamp(24px, 2.6vw, 32px);

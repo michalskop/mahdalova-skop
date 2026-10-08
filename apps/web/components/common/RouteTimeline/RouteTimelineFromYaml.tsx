@@ -37,7 +37,12 @@ function EventCard({ event, slug }: { event: TimelineEvent; slug?: string }) {
     <>
       <span className={styles.date}>{formatDate(event.date)}</span>
       {event.thumb ? (
-        <img className={styles.thumb} src={assetPath(event.thumb, slug)} alt="" loading="lazy" />
+        <figure className={styles.figure}>
+          <img className={styles.thumb} src={assetPath(event.thumb, slug)} alt={event.thumbAlt ?? ''} loading="lazy" />
+          {event.thumbCredit ? (
+            <figcaption className={styles.credit} dangerouslySetInnerHTML={{ __html: event.thumbCredit }} />
+          ) : null}
+        </figure>
       ) : null}
       <h3>{fixCzechTypography(event.title)}</h3>
       {event.description ? (
@@ -64,18 +69,14 @@ export default function RouteTimelineFromYaml({ content, slug }: RouteTimelineFr
   }));
 
   return (
-    <section className={styles.wrapper}>
+    <section className={[styles.wrapper, content.theme ? styles[content.theme] : ''].filter(Boolean).join(' ')}>
       {content.title ? (
         <header className={styles.header}>
           <h2>{fixCzechTypography(content.title)}</h2>
           {content.subtitle ? <p>{fixCzechTypography(content.subtitle)}</p> : null}
         </header>
       ) : null}
-      <RouteTimeline
-        items={items}
-        className={[styles.timeline, content.theme ? styles[content.theme] : ''].filter(Boolean).join(' ')}
-        style={{ marginBottom: 32 }}
-      />
+      <RouteTimeline items={items} className={styles.timeline} style={{ marginBottom: 32 }} />
     </section>
   );
 }

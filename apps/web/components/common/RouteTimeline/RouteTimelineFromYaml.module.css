@@ -24,14 +24,6 @@
   --route-timeline-title: var(--mantine-color-brandNavy-9);
 }
 
-/* `theme: trikolora` in the YAML – Czech tricolour from the palette (statesman
-   topics): blue line, crimson frame (dates and article links are crimson
-   already), white cards. */
-.trikolora {
-  --scroll-route-ink: var(--mantine-color-brandRoyalBlue-7);
-  --route-timeline-frame: var(--mantine-color-brand-6);
-}
-
 .timeline h3 {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   margin-bottom: 10px;
@@ -52,11 +44,74 @@
   text-transform: uppercase;
 }
 
+.figure {
+  margin: 0 0 14px;
+}
+
 .thumb {
   border-radius: 3px;
   display: block;
   height: 170px;
-  margin: 0 0 14px;
+  margin: 0;
   object-fit: cover;
   width: 100%;
+}
+
+/* Photo credit (author, licence) – required for CC BY / BY-SA photos. */
+.credit {
+  color: var(--mantine-color-dimmed);
+  font-family: var(--mantine-font-family-headings);
+  font-size: 0.7rem;
+  line-height: 1.35;
+  margin-top: 5px;
+}
+
+.credit a {
+  color: inherit;
+}
+
+/* `theme: trikolora` in the YAML – a dignified exception for statesman topics:
+   ink-blue panel set apart from the paper page, white line, crimson frames,
+   light beige text. Only the timeline gets the dark ground. */
+.trikolora {
+  background: var(--mantine-color-brandNavy-9);
+  border-radius: 6px;
+  padding: clamp(28px, 4vw, 48px) clamp(16px, 3vw, 40px) 8px;
+
+  --route-timeline-bg: var(--mantine-color-brandNavy-9);
+  --route-timeline-card-bg: var(--mantine-color-brandNavy-8);
+  --route-timeline-card-border: var(--mantine-color-brandNavy-7);
+  --route-timeline-frame: var(--mantine-color-brand-6);
+  --scroll-route-ink: var(--mantine-color-background-0);
+  --scroll-route-track: var(--mantine-color-brandNavy-6);
+  /* the article's own link rule reads this variable */
+  --article-link-color: var(--mantine-color-background-1);
+}
+
+/* .timeline sets its own (navy) title colour – override it on that element. */
+.trikolora .timeline {
+  --route-timeline-title: var(--mantine-color-background-1);
+}
+
+.trikolora .header h2 {
+  color: var(--mantine-color-background-1);
+}
+
+.trikolora .header p,
+.trikolora .timeline p {
+  color: var(--mantine-color-background-3);
+}
+
+.trikolora .timeline a {
+  border-bottom: 1px solid var(--mantine-color-brand-4);
+}
+
+.trikolora .timeline .credit,
+.trikolora .timeline .credit a {
+  border: 0;
+  color: var(--mantine-color-brandNavy-3);
+}
+
+.trikolora .date {
+  color: var(--mantine-color-brand-4);
 }

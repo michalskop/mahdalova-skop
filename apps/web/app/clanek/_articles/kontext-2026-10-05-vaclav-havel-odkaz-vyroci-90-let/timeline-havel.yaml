@@ -1,39 +1,66 @@
 # Vlnovka <RouteTimeline yamlFile="timeline-havel.yaml" /> – Havel: solidarita a její meze.
 # Každé tvrzení ověřeno v plném zdroji (rešerše 2026-10-08); zdroj je odkaz přímo v textu.
+# Věk: narozen 5. 10. 1936. Fotky: images/timeline/CREDITS.md.
 title: "Solidarita a její meze"
 subtitle: "Momenty, kdy Václav Havel stál na straně slabších – a kdy jeho humanismus selhal"
 theme: trikolora
 
 events:
-  - date: "1936-10-05"
-    title: "Narodil se do podnikatelské rodiny"
+  - date: "1963-12-03"
+    title: "Kulisák, který psal hry"
     description: >-
-      Otec byl stavební podnikatel. Po únoru 1948 Havel z kádrových důvodů nesměl studovat.
-      V roce 1953 se vyučil chemickým laborantem a maturitu udělal o rok později na večerní škole
-      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/mladi" target="_blank" rel="noopener noreferrer">Knihovna Václava Havla</a>).
+      Kvůli buržoaznímu původu nesměl po roce 1948 studovat. Vyučil se chemickým laborantem a maturitu složil o rok
+      později na večerní škole. Od roku 1960 pracoval v pražském Divadle Na zábradlí – nejdřív jako jevištní technik,
+      pak jako dramaturg a asistent režie. Ve 27 letech tam měla premiéru jeho Zahradní slavnost, satira na jazyk
+      a logiku byrokracie. Dálkově přitom vystudoval dramaturgii na DAMU
+      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/divadlo" target="_blank" rel="noopener noreferrer">vaclavhavel.cz</a>).
+
+  - date: "1974–1975"
+    title: "Sudy v trutnovském pivovaru"
+    description: >-
+      Po okupaci v roce 1968 se stal zakázaným autorem. Asi devět měsíců pracoval jako pomocný dělník v pivovaru
+      v Trutnově a kutálel sudy. Zkušenost proměnil v aktovku Audience (1975): poprvé v ní vystupuje Ferdinand Vaněk,
+      intelektuál, kterého sládek přemlouvá, aby na sebe donášel. Nejznámější je nahrávka, v níž Vaňka mluví Havel
+      a sládka Pavel Landovský – v roce 1979 ji vydalo exilové vydavatelství Šafrán
+      (<a href="https://www.seznamzpravy.cz/clanek/magazin-historie-audience-vaclava-havla-pribeh-vzniku-280889" target="_blank" rel="noopener noreferrer">Seznam Zprávy</a>).
 
   - date: "1977-01-06"
-    title: "Charta 77"
+    title: "Charta 77 a honička s StB"
     description: >-
-      Text Charty vyšel 6. ledna 1977. Havel ho spoluformuloval a byl jedním ze tří prvních mluvčích.
-      Ještě v lednu ho zatkli, ve vazbě zůstal do května
-      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/disident" target="_blank" rel="noopener noreferrer">Knihovna Václava Havla</a>).
+      Ve 40 letech spoluformuloval Chartu 77 a stal se jedním z jejích tří prvních mluvčích. Šestého ledna vezl
+      s Ludvíkem Vaculíkem a Pavlem Landovským, který řídil, přes 200 podepsaných obálek do Federálního shromáždění.
+      StB je v Dejvicích zastavila a všechny tři zatkla. „To nám ten boj za lidská práva pěkně začíná,“ řekl Havel
+      (<a href="https://ct24.ceskatelevize.cz/domaci/2004148-nam-ten-boj-za-lidska-prava-pekne-zacina-rekl-pred-40-lety-havel-po-honicce-s-stb" target="_blank" rel="noopener noreferrer">ČT24</a>).
+      Režim odpověděl Antichartou: 28. ledna ji v Národním divadle podepisovali herci a umělci, podle tehdejších
+      oficiálních údajů přes 7 000 lidí
+      (<a href="https://www.ustrcr.cz/uvod/antologie-ideologickych-textu/anticharta/" target="_blank" rel="noopener noreferrer">ÚSTR</a>),
+      mezi nimi i Jiřina Bohdalová
+      (<a href="https://www.denik.cz/divadlo/jirina-bohdalova-narozeniny-herectvi-20210502.html" target="_blank" rel="noopener noreferrer">Deník</a>).
+      Část signatářů později tvrdila, že nevěděla, co podepisuje.
 
-  - date: "Duben 1978"
-    title: "Výbor na obranu nespravedlivě stíhaných"
+  - date: "1979-10-23"
+    title: "Čtyři a půl roku za obranu stíhaných"
     description: >-
-      Spoluzaložil VONS, který dokumentoval a zveřejňoval případy lidí stíhaných v rozporu se zákonem.
-      Za tuto činnost ho v říjnu 1979 odsoudili za podvracení republiky na 4,5 roku vězení.
-      Propuštěn byl v únoru 1983 ze zdravotních důvodů
+      V dubnu 1978 spoluzaložil Výbor na obranu nespravedlivě stíhaných (VONS). Ten dokumentoval a zveřejňoval
+      případy lidí, které režim stíhal v rozporu s vlastními zákony.
+      Ve 43 letech za to Havla odsoudili za podvracení republiky na 4,5 roku vězení
       (<a href="https://www.vons.cz/chronology" target="_blank" rel="noopener noreferrer">VONS</a>).
+      Výkon trestu přerušili v únoru 1983, když onemocněl těžkým zápalem plic. Z vězení psal Dopisy Olze.
+      Naposledy seděl od ledna do května 1989, půl roku před sametovou revolucí
+      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/disident" target="_blank" rel="noopener noreferrer">vaclavhavel.cz</a>).
 
   - date: "1990-01-01"
     title: "Amnestie pro 23 tisíc vězňů"
     description: >-
-      V prvním novoročním projevu řekl, že „žijeme ve zkaženém mravním prostředí“, a ohlásil širokou amnestii.
-      Z věznic odešlo přes 23 tisíc z 31 tisíc vězňů. Netýkala se vražd, znásilnění a zneužití pravomoci.
-      Amnestovaní se v roce 1990 podíleli na celkové kriminalitě 9 procenty
+      Tři dny po zvolení prezidentem řekl v novoročním projevu, že „žijeme ve zkaženém mravním prostředí“,
+      a ohlásil širokou amnestii. Z věznic odešlo přes 23 tisíc z 31 tisíc vězňů. Netýkala se vražd, znásilnění
+      a zneužití pravomoci
       (<a href="https://ct24.ceskatelevize.cz/clanek/domaci/prvni-krok-vaclava-havla-v-uradu-rozsahla-amnestie-195358" target="_blank" rel="noopener noreferrer">ČT24</a>).
+      Odsouzení podle Havla prošli „pokleslou justicí, jež zkracovala jejich práva“
+      (<a href="https://cs.wikisource.org/wiki/Novoro%C4%8Dn%C3%AD_projev_prezidenta_%C4%8CSSR_V%C3%A1clava_Havla" target="_blank" rel="noopener noreferrer">projev</a>).
+      Média pak amnestii spojovala s prudkým růstem kriminality. Studie kriminologů z roku 1991 ale ukázala,
+      že amnestovaní se podíleli na 8 procentech objasněných trestných činů a amnestie rozhodujícím faktorem nebyla
+      (<a href="https://ct24.ceskatelevize.cz/clanek/domaci/nove-videoprehravace-malo-policistu-a-amnestie-pred-30-lety-vzkvetala-kriminalita-48956" target="_blank" rel="noopener noreferrer">ČT24</a>).
 
   - date: "1990-03-15"
     title: "Odsun Němců nazval mstou"
@@ -41,68 +68,132 @@ events:
       Při návštěvě německého prezidenta Richarda von Weizsäckera řekl, že Němci byli po válce vyhnáni
       ne na základě prokázané individuální viny, ale jako příslušníci národa – a že šlo o mstu, ne o trest
       (<a href="https://www.nybooks.com/articles/1990/04/26/the-return-of-germany/" target="_blank" rel="noopener noreferrer">The New York Review of Books</a>).
+      Omluvu napsal už v listopadu 1989, ještě jako soukromá osoba, v dopise Weizsäckerovi. Odsun v něm označil
+      za hluboce nemorální čin. Když dopis v lednu 1990 zveřejnilo komunistické Rudé právo, následovalo několik
+      veřejných protestů, Havlovu popularitu to ale výrazně nepoškodilo
+      (<a href="https://www.wilsoncenter.org/sites/default/files/media/documents/publication/OP%2030.pdf" target="_blank" rel="noopener noreferrer">Wilson Center</a>).
 
   - date: "1990-05-02"
     title: "Konec trestu smrti"
     description: >-
-      Podepsal zákon č. 175/1990 Sb., který trest smrti nahradil výjimečným trestem.
-      Už uložené tresty smrti se změnily na doživotí
+      Federální shromáždění zrušilo trest smrti a nahradilo ho výjimečným trestem. Zákon č. 175/1990 Sb. podepsal
+      i Havel a už uložené tresty smrti se změnily na doživotí
       (<a href="https://www.epravo.cz/top/zakony/sbirka-zakonu/sb/1990/175" target="_blank" rel="noopener noreferrer">Sbírka zákonů</a>).
+      Poslední poprava v Československu proběhla necelý rok předtím, 8. června 1989 v Bratislavě. Od roku 1918
+      bylo popraveno 1 207 lidí
+      (<a href="https://advokatnidenik.cz/2020/05/02/presne-pred-30-lety-zrusilo-federalni-shromazdeni-v-ceskoslovensku-trest-smrti/" target="_blank" rel="noopener noreferrer">Advokátní deník</a>).
 
   - date: "1991"
     title: "Nobelovka pro Su Ťij"
     description: >-
-      Navrhl na Nobelovu cenu míru barmskou opoziční političku Aun Schan Su Ťij, která byla v domácím vězení.
-      Cenu za rok 1991 dostala – Havel sám patřil k favoritům
-      (<a href="https://peacemagazine.org/archive/v07n6p30.htm" target="_blank" rel="noopener noreferrer">Peace Magazine</a>).
+      Navrhl na Nobelovu cenu míru barmskou opoziční političku Aun Schan Su Ťij, tehdy v domácím vězení.
+      Cenu za rok 1991 dostala „za nenásilný boj za demokracii a lidská práva“ – Havel sám patřil k favoritům
+      (<a href="https://peacemagazine.org/archive/v07n6p30.htm" target="_blank" rel="noopener noreferrer">Peace Magazine</a>,
+      <a href="https://www.nobelprize.org/prizes/peace/1991/press-release/" target="_blank" rel="noopener noreferrer">nobelprize.org</a>).
+      Později se stala kontroverzní: jako faktická šéfka vlády nezastavila ani neodsoudila vojenské tažení proti
+      Rohingům, po kterém od srpna 2017 uprchlo do Bangladéše přes 700 tisíc lidí, a v roce 2019 obhajovala Myanmar
+      před soudem v Haagu proti obvinění z genocidy
+      (<a href="https://www.icj-cij.org/node/105885" target="_blank" rel="noopener noreferrer">ICJ</a>).
+      Amnesty International jí odebrala své ocenění
+      (<a href="https://www.amnesty.org/en/latest/press-release/2018/11/amnesty-withdraws-award-from-aung-san-suu-kyi/" target="_blank" rel="noopener noreferrer">Amnesty</a>).
+      Havel se těchto událostí nedožil a nenese za ně odpovědnost.
 
   - date: "1995-05-13"
-    title: "Památník romským obětem v Letech"
+    title: "Lety: i Romové byli oběťmi holocaustu"
     description: >-
-      Za jeho přítomnosti odhalili u Písku památník obětem tábora, kde za války věznili Romy.
-      Nápis zní „Ma bisteren – nezapomeňte“
-      (<a href="https://www.rommuz.cz/en/lety-u-pisku/present-days/the-cultural-heritage-monument-at-lety-u-pisku/" target="_blank" rel="noopener noreferrer">Muzeum romské kultury</a>).
+      V 58 letech přijel do Let u Písku. V tamním táboře
+      v letech 1942–1943 věznili 1 308 Romů, 327 jich zemřelo a přes 500 skončilo v Osvětimi
+      (<a href="https://www.ceskenoviny.cz/zpravy/muzeum-romske-kultury-otevrelo-pamatnik-v-letech-podle-fialy-mel-stat-drive/2504877" target="_blank" rel="noopener noreferrer">ČTK</a>).
+      Za jeho přítomnosti odhalili kamenný památník s romsko-českým nápisem „Ma bisteren – nezapomeňte“.
+      V projevu řekl, že i Romové byli oběťmi holocaustu, a připomněl, že místo za komunismu zakryl vepřín
+      (<a href="https://romea.cz/en/czech-republic/vaclav-havel-s-1995-speech-at-the-unveiling-of-the-lety-memorial" target="_blank" rel="noopener noreferrer">Romea</a>).
+      Velkovýkrmna tam stála ještě dalších 22 let. Stát ji vykoupil až v letech 2017–2018 za zhruba 450 milionů korun
+      (<a href="https://ct24.ceskatelevize.cz/clanek/domaci/vlada-odtajnila-castku-kterou-stat-zaplati-za-veprin-v-letech-450-milionu-89087" target="_blank" rel="noopener noreferrer">ČT24</a>),
+      zbourala se v roce 2022 a na jaře 2024 se na místě otevřel památník holocaustu Romů a Sintů.
 
   - date: "1997-12-09"
-    title: "Rudolfinský projev"
+    title: "Morálka není zbytná"
     description: >-
-      Před oběma komorami parlamentu kritizoval „liberalismus bez přívlastků“, v němž solidarita, morálka
-      a úcta k právu skončily v posmívané „nadstavbě“. Upozornil, že ceny rostou rychleji než důchody a sociální dávky
+      Ve 61 letech, devět dní po demisi Klausovy vlády kvůli aféře s fiktivními sponzory ODS
+      (<a href="https://www.e15.cz/domaci/podvody-v-ods-vedly-v-1997-k-rozpadu-strany-a-nastupu-cssd-935218" target="_blank" rel="noopener noreferrer">E15</a>),
+      promluvil v Rudolfinu k oběma komorám parlamentu. Řekl, že pod hávem „liberalismu bez přívlastků“ byly
+      morálka, slušnost a solidarita odsunuty do „nadstavby“, jako by šlo o ozdobu, bez které se základna obejde –
+      „aby se posléze ukázalo, že už není co kořenit: základna je protunelována“. Varoval, že nejúspěšnějšími se
+      stávají ti nejnemravnější a největší zisk mají nepotrestatelní zloději. Upozornil také, že ceny rostou
+      rychleji než důchody a sociální dávky
       (<a href="https://static.novydenik.com/2026/05/2026-05-27-Projevy-Havel-II.pdf" target="_blank" rel="noopener noreferrer">plný text projevu</a>).
 
   - date: "1999-04-29"
     title: "Nálety „výlučně humanitární“"
     description: >-
-      Během bombardování Jugoslávie vyšel pod jeho jménem text v La Repubblica a Le Monde.
-      O náletech NATO v něm stojí: „Jejich povaha je výlučně humanitární.“ Spojení „humanitární bombardování“
-      v textu není – Havel v roce 2004 odmítl, že by ho kdy použil
-      (<a href="https://informace.rozhlas.cz/geneze-slovniho-spojeni-humanitarni-bombardovani-7947097" target="_blank" rel="noopener noreferrer">Český rozhlas</a>).
+      Ve 62 letech podpořil 78 dní trvající bombardování Jugoslávie, které NATO kvůli Kosovu vedlo bez mandátu
+      Rady bezpečnosti OSN. V textu, který pod jeho jménem otiskly La Repubblica a Le Monde, stojí, že nálety
+      nejsou vyvolány hmotným zájmem: „Jejich povaha je výlučně humanitární.“
+      (<a href="https://informace.rozhlas.cz/geneze-slovniho-spojeni-humanitarni-bombardovani-7947097" target="_blank" rel="noopener noreferrer">Český rozhlas</a>)
+      V kanadském parlamentu týž den zásah obhajoval tím, že lidská práva stojí nad právy států
+      (<a href="https://www.nybooks.com/articles/1999/06/10/kosovo-and-the-end-of-the-nation-state/" target="_blank" rel="noopener noreferrer">NYRB</a>).
+      Kritika míří na chybějící mandát OSN a na civilní oběti: podle Human Rights Watch nálety zabily zhruba
+      500 civilistů a NATO v některých případech porušilo mezinárodní humanitární právo
+      (<a href="https://www.hrw.org/reports/2000/nato/Natbm200.htm" target="_blank" rel="noopener noreferrer">HRW</a>).
+      Spojení „humanitární bombardování“, které se s ním dodnes pojí, ale nepoužil. V roce 2004 ho označil
+      za obskurní a odmítl, že by ho kdy vyslovil: „mám – troufám si tvrdit – vkus“. Samotné nálety hájil i později –
+      v roce 2003 v rozhovoru pro kosovskou agenturu KosovaLive řekl, že srbským divadelníkům odpověděl,
+      že bombardován je jejich režim, který zabíjí jejich krajany
+      (<a href="https://en.plisi.org/history/havel-talked-kosovo/" target="_blank" rel="noopener noreferrer">KosovaLive</a>).
 
   - date: "2000-01-01"
-    title: "„Starat jen sami o sebe“"
+    title: "Hleďme i na druhé"
     description: >-
-      V novoročním projevu připomněl, že každý z nás je i obyvatelem Země a nese za její osud díl odpovědnosti:
-      „Vím, jak to zní nepopulárně, ale nemohu si pomoct: nejvíc ublížíme sami sobě, když se budeme starat jen sami o sebe.“
-      (<a href="https://cs.wikisource.org/wiki/Novoro%C4%8Dn%C3%AD_projev_prezidenta_republiky_V%C3%A1clava_Havla_(2000)" target="_blank" rel="noopener noreferrer">plný text projevu</a>)
+      V 63 letech v novoročním projevu připomněl, že každý z nás je i obyvatelem Země a nese za její osud díl
+      odpovědnosti: „Vím, jak to zní nepopulárně, ale nemohu si pomoct: nejvíc ublížíme sami sobě, když se budeme
+      starat jen sami o sebe.“ Pokračoval, že nám nesmí být jedno, co se děje kolem nás
+      (<a href="https://cs.wikisource.org/wiki/Novoro%C4%8Dn%C3%AD_projev_prezidenta_republiky_V%C3%A1clava_Havla_(2000)" target="_blank" rel="noopener noreferrer">plný text projevu</a>).
 
   - date: "2003-01-30"
     title: "Dopis osmi: podpora války v Iráku"
     description: >-
-      Tři dny před koncem mandátu podepsal s Blairem, Aznarem, Berlusconim a dalšími dopis na podporu postupu USA vůči Iráku –
-      jako jediná hlava státu a bez souhlasu vlády
+      Tři dny před koncem mandátu, v 66 letech, podepsal Václav Havel a s ním španělský premiér José María Aznar,
+      portugalský premiér José Manuel Durão Barroso, italský premiér Silvio Berlusconi, britský premiér Tony Blair,
+      maďarský premiér Péter Medgyessy, polský premiér Leszek Miller a dánský premiér Anders Fogh Rasmussen
+      otevřený dopis „Evropa a Amerika musí stát pospolu“. Irácký režim a jeho zbraně hromadného ničení v něm
+      označili za zjevnou hrozbu pro světovou bezpečnost
+      (<a href="https://www.lalibre.be/debats/opinions/2003/01/30/la-lettre-pour-un-front-uni-face-a-lirak-F3JQGPVIPFDORFG6G5GMDMEIDQ/" target="_blank" rel="noopener noreferrer">znění dopisu</a>).
+      Havel byl mezi nimi jediný prezident a podepsal bez vědomí a souhlasu vlády
       (<a href="https://plus.rozhlas.cz/jak-cesi-nevalcili-v-iraku-slo-o-nas-diplomaticky-majstrstyk-7174064" target="_blank" rel="noopener noreferrer">Český rozhlas</a>).
-      V září 2003 řekl, že invaze „byla morálně ospravedlnitelná“, zbraně hromadného ničení přitom podle něj „mohou, ale nemusí existovat“
+      Dopis rozdělil Evropu, francouzský prezident Jacques Chirac vzkázal kandidátským zemím, že promeškaly dobrou
+      příležitost mlčet
+      (<a href="https://www.rferl.org/a/1102256.html" target="_blank" rel="noopener noreferrer">RFE/RL</a>).
+      Kritika se opírá hlavně o to, že zbraně hromadného ničení se nenašly: podle zprávy Iraq Survey Group z roku 2004
+      neměl Irák žádné zásoby chemických ani biologických zbraní
+      (<a href="https://www.spokesman.com/stories/2004/oct/06/saddam-destroyed-wmds-report-says/" target="_blank" rel="noopener noreferrer">AP</a>).
+      Havel přesto v září 2003 řekl, že invaze „byla morálně ospravedlnitelná“. Podpis vysvětloval časovým tlakem
+      a doporučením ministerstva zahraničí
       (<a href="https://www.novinky.cz/clanek/zahranicni-havel-valka-v-iraku-byla-moralne-ospravedlnitelna-40089691" target="_blank" rel="noopener noreferrer">Novinky.cz/DPA</a>).
 
   - date: "2010-01-06"
-    title: "Dopis za Liou Siao-poa"
+    title: "Za Liou Siao-poa a Chartu 08"
     description: >-
-      S biskupem Václavem Malým a Pavlem Landovským přinesl na čínské velvyslanectví v Praze dopis
-      za propuštění autora Charty 08, odsouzeného na 11 let. Nikdo neotevřel, dopis vhodili do schránky
-      (<a href="https://english.radio.cz/node/8405946" target="_blank" rel="noopener noreferrer">Radio Prague International</a>).
+      Čínská Charta 08 z prosince 2008 navazovala na Chartu 77 – podle Havla si ji
+      vzala za vzor
+      (<a href="https://www.forum2000.cz/a-chinese-champion-of-peace-and-freedom" target="_blank" rel="noopener noreferrer">Forum 2000</a>).
+      Jednoho z jejích autorů, Liou Siao-poa, odsoudili na Vánoce 2009 na 11 let. V 73 letech přinesl Havel s biskupem
+      Václavem Malým a Pavlem Landovským na čínské velvyslanectví v Praze dopis za jeho propuštění; nikdo neotevřel,
+      dopis vhodili do schránky
+      (<a href="https://english.radio.cz/node/8405946" target="_blank" rel="noopener noreferrer">Radio Prague</a>).
+      Spolu s Desmondem Tutuem Lioua nominoval na Nobelovu cenu míru, kterou v roce 2010 získal – předávala se
+      prázdné židli
+      (<a href="https://www.nobelprize.org/prizes/peace/2010/ceremony-speech/" target="_blank" rel="noopener noreferrer">nobelprize.org</a>).
+      Zemřel ve vazbě v roce 2017.
 
   - date: "2011-12-18"
-    title: "Zemřel na Hrádečku"
+    title: "Odkaz, který přežil spory"
     description: >-
-      Bylo mu 75 let
-      (<a href="https://www.vaclavhavel.cz/cs/vaclav-havel/prezident" target="_blank" rel="noopener noreferrer">Knihovna Václava Havla</a>).
+      Zemřel na Hrádečku v 75 letech. Jeho jméno nese pražské letiště, budova Evropského parlamentu ve Štrasburku
+      i cena Rady Evropy za lidská práva. Knihovna, která nesla jeho jméno, se v září 2026 po sporech
+      ve vedení přejmenovala na 1. prezidentská knihovna – Dagmar Havlová jí odvolala souhlas s užíváním jména
+      (<a href="https://prazsky.denik.cz/zpravy-region/knihovna-vaclava-havla-dostala-nove-jmeno-prezidentovo-uz-pouzivat-nesmi/" target="_blank" rel="noopener noreferrer">Pražský deník/ČTK</a>).
+      Licenci k jeho dílu předává Městské knihovně v Praze
+      (<a href="https://www.seznamzpravy.cz/clanek/315838" target="_blank" rel="noopener noreferrer">Seznam Zprávy/ČTK</a>).
+      Na samotném odkazu to nic nemění: v zářijovém průzkumu ho Češi znovu označili za nejlepšího prezidenta
+      po roce 1989
+      (<a href="https://stemmark.cz/vaclav-havel-neochvejne-nejlepsim-prezidentem-po-roce-1989-petr-pavel-si-od-minule-mirne-polepsil" target="_blank" rel="noopener noreferrer">STEM/MARK</a>).
