@@ -44,18 +44,20 @@ const scene = (W, H, people) => `
   <g fill="${NAVY}">${people.list.join('')}</g>
 </svg>`;
 
-// Pás s logem: šikmý obdélník + bílé písmo, nad „i“ místo tečky šipka
+// Pás s logem: oficiální písmena Die Linke (2023); jejich rovnoběžník je prodloužený
+// do stran (x −400 až 1400 v jednotkách loga) a obarvený karmínovou z palety.
+const LETTERS = require('./linke-logo.cjs');
+const band = (x) => `${x},${(176.3 - 0.1763 * x).toFixed(1)}`;
+const bandB = (x) => `${x},${(497.1 - 0.1763 * x).toFixed(1)}`;
 const wall = (W, H, L) => `
-  <g transform="translate(${L.wx},${L.wy}) rotate(${L.rot})">
-    <rect x="0" y="0" width="${L.ww}" height="${L.wh}" fill="url(#wall)"/>
-    <rect x="0" y="0" width="${L.ww}" height="${L.wh}" fill="url(#glow)"/>
-    <text x="${L.tx}" y="${L.ty}" font-family="Archivo Black, Archivo, sans-serif" font-size="${L.fs}" fill="#f4f2ec" letter-spacing="-${L.fs * 0.02}">
-      Die L<tspan>ı</tspan>nke</text>
-    <path d="M${L.ax},${L.ay} l${L.fs * 0.46},${-L.fs * 0.36} l${-L.fs * 0.17},${L.fs * 0.5} l${-L.fs * 0.06},${-L.fs * 0.19} Z" fill="#f4f2ec"/>
+  <g transform="translate(${L.x},${L.y}) scale(${L.k})">
+    <polygon points="${band(-400)} ${band(1400)} ${bandB(1400)} ${bandB(-400)}" fill="url(#wall)"/>
+    <polygon points="${band(-400)} ${band(1400)} ${bandB(1400)} ${bandB(-400)}" fill="url(#glow)"/>
+    <g fill="#f4f2ec">${LETTERS.map(d => `<path d="${d}"/>`).join('')}</g>
   </g>`;
 
 const page = (W, H, L, svg) => `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@500;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{width:${W}px;height:${H}px;background:${NAVY};overflow:hidden;position:relative;font-family:'IBM Plex Sans',sans-serif;color:#f4f2ec}
@@ -79,10 +81,10 @@ ${svg}
 // 5:4 homepage – pás nahoře, siluety přes střed, text vlevo dole
 const HP = {
   W: 1500, H: 1200,
-  wall: { wx: -120, wy: 150, rot: -8, ww: 1900, wh: 560, tx: 150, ty: 450, fs: 330, ax: 820, ay: 165 },
+  wall: { x: -40, y: -127, k: 1.5 },
   people: [
-    [330, 600, 62, 2], [560, 565, 58, 0, { cap: true }], [790, 540, 64, 2], [1040, 505, 56, 4],
-    [1330, 430, 135, 14], [90, 610, 150, 14], [1180, 560, 70, 2],
+    [330, 520, 62, 2], [560, 480, 58, 0, { cap: true }], [790, 440, 64, 2], [1040, 395, 56, 4],
+    [1330, 330, 135, 14], [90, 560, 150, 14], [1180, 390, 70, 2],
   ],
   fade: `linear-gradient(180deg,rgba(16,20,50,0) 46%,rgba(16,20,50,.8) 66%,${'#101432'} 80%)`,
   tx: 95, ty: 700, tag: 30, hx: 95, hy: 785, hw: 900, h: 84, gap: 18, s: 54, lr: 95, lb: 70, l: 40,
@@ -90,10 +92,10 @@ const HP = {
 // OG 1200×630 – text vlevo, pás a siluety vpravo; obsah v bezpečné zóně x 100–1100 / y 35–555
 const OG = {
   W: 1200, H: 630,
-  wall: { wx: 500, wy: 140, rot: -9, ww: 900, wh: 270, tx: 40, ty: 215, fs: 132, ax: 316, ay: 100 },
+  wall: { x: 520, y: 74, k: 0.7 },
   people: [
-    [690, 365, 44, 0, { cap: true }], [850, 340, 40, 2], [1000, 318, 46, 2],
-    [1150, 270, 90, 14], [600, 420, 95, 14],
+    [690, 355, 44, 0, { cap: true }], [850, 330, 40, 2], [1000, 300, 46, 2],
+    [1150, 260, 90, 14], [600, 400, 95, 14],
   ],
   fade: `linear-gradient(90deg,#101432 34%,rgba(16,20,50,.85) 48%,rgba(16,20,50,0) 62%),linear-gradient(180deg,rgba(16,20,50,0) 70%,rgba(16,20,50,.75) 100%)`,
   tx: 100, ty: 70, tag: 20, hx: 100, hy: 145, hw: 520, h: 54, gap: 16, s: 38, lr: 100, lb: 75, l: 30,
