@@ -15,6 +15,8 @@ const COVERS = {
   },
   'mista-bez-konkurence': {
     map: 'map-kandidatky.png',
+    // zrcadlově: text vlevo přes Čechy, Morava vpravo celá
+    og: { mx: -9, tx: 60, hx: 60, ll: 60, fade: 'linear-gradient(90deg,rgba(16,20,50,.82) 0%,rgba(16,20,50,.76) 46%,rgba(16,20,50,0) 62%)' },
     headline: 'Volby bez výběru',
     sub: '<b class="lila">1&nbsp;830 obcí</b> má jedinou kandidátku. Zhruba v&nbsp;polovině z&nbsp;nich budou zvoleni všichni.',
   },
@@ -34,7 +36,7 @@ body{width:${W}px;height:${H}px;background:#101432;overflow:hidden;position:rela
 .h{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:${L.h}px;line-height:1.08}
 .s{margin-top:${L.gap}px;font-weight:500;font-size:${L.s}px;line-height:1.35;color:#d9d7e6}
 .red{color:#ff4d6d}.lila{color:#d6a8ec}
-.logo{position:absolute;z-index:1;isolation:isolate;right:${L.lr}px;${L.lt!=null?`top:${L.lt}px`:`bottom:${L.lb}px`};display:flex;align-items:center;gap:${L.l*.4}px;font-weight:700;font-size:${L.l}px}
+.logo{position:absolute;z-index:1;isolation:isolate;${L.ll!=null?`left:${L.ll}px`:`right:${L.lr}px`};${L.lt!=null?`top:${L.lt}px`:`bottom:${L.lb}px`};display:flex;align-items:center;gap:${L.l*.4}px;font-weight:700;font-size:${L.l}px}
 .logo::before{content:${L.lt!=null?'none':"''"};position:absolute;inset:-${L.l*.6}px -${L.l*.8}px;z-index:-1;border-radius:${L.l*2}px;background:#101432;box-shadow:0 0 ${L.l*1.2}px ${L.l*.9}px #101432}
 .logo svg{width:${L.l*2.4}px;height:${L.l*2.4}px}
 </style></head><body>
@@ -56,7 +58,7 @@ const OG = { mx: -171, my: -143, mw: 1380, gap: 18, fade: 'linear-gradient(90deg
   const b = await chromium.launch({ headless: true, channel: 'msedge' });
   for (const [slug, c] of Object.entries(COVERS)) {
     c.mapUrl = 'data:image/png;base64,' + fs.readFileSync(path.join(dir, c.map)).toString('base64');
-    for (const [name, W, H, L] of [['cover.jpg', 1500, 1200, HP], ['cover-og.jpg', 1200, 630, OG]]) {
+    for (const [name, W, H, L] of [['cover.jpg', 1500, 1200, HP], ['cover-og.jpg', 1200, 630, { ...OG, ...(c.og || {}) }]]) {
       const pg = await b.newPage({ viewport: { width: W, height: H } });
       await pg.setContent(page(c, W, H, L), { waitUntil: 'networkidle' });
       await pg.evaluate(() => document.fonts.ready);
