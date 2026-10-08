@@ -15,8 +15,10 @@ const COVERS = {
   },
   'mista-bez-konkurence': {
     map: 'map-kandidatky.png',
+    // zrcadlově: text vlevo přes Čechy, Morava vpravo celá
+    og: { mx: -9, tx: 60, hx: 60, ll: 60, fade: 'linear-gradient(90deg,rgba(16,20,50,.82) 0%,rgba(16,20,50,.76) 46%,rgba(16,20,50,0) 62%)' },
     headline: 'Volby bez výběru',
-    sub: '<b class="lila">1&nbsp;830 obcí</b> má jedinou kandidátku. V&nbsp;931 z&nbsp;nich budou zvoleni všichni.',
+    sub: '<b class="lila">1&nbsp;830 obcí</b> má jedinou kandidátku. Zhruba v&nbsp;polovině z&nbsp;nich budou zvoleni všichni.',
   },
 };
 
@@ -30,11 +32,15 @@ body{width:${W}px;height:${H}px;background:#101432;overflow:hidden;position:rela
 .fade{position:absolute;inset:0;background:${L.fade}}
 .tag{position:absolute;left:${L.tx}px;top:${L.ty}px;font-weight:700;font-size:${L.tag}px;letter-spacing:.14em;white-space:nowrap}
 .tag span:first-child{color:#ff4d6d;border-bottom:${Math.round(L.tag/7)}px solid #de1743;padding-bottom:${Math.round(L.tag/3)}px;margin-right:${Math.round(L.tag*.6)}px}
-.txt{position:absolute;left:${L.hx}px;top:${L.hy}px;width:${L.hw}px}
+.txt{position:absolute;left:${L.hx}px;width:${L.hw}px;${L.vc
+  // svisle na střed mezi štítkem ANALÝZA a logem
+  ? `top:${L.ty+L.tag*2}px;height:${H-L.lb-L.l*2.4-(L.ty+L.tag*2)}px;display:flex;flex-direction:column;justify-content:center`
+  : `top:${L.hy}px`}}
 .h{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:${L.h}px;line-height:1.08}
 .s{margin-top:${L.gap}px;font-weight:500;font-size:${L.s}px;line-height:1.35;color:#d9d7e6}
 .red{color:#ff4d6d}.lila{color:#d6a8ec}
-.logo{position:absolute;right:${L.lr}px;bottom:${L.lb}px;display:flex;align-items:center;gap:${L.l*.4}px;font-weight:700;font-size:${L.l}px}
+.logo{position:absolute;z-index:1;isolation:isolate;${L.ll!=null?`left:${L.ll}px`:`right:${L.lr}px`};${L.lt!=null?`top:${L.lt}px`:`bottom:${L.lb}px`};display:flex;align-items:center;gap:${L.l*.4}px;font-weight:700;font-size:${L.l}px}
+.logo::before{content:${L.lt!=null?'none':"''"};position:absolute;inset:-${L.l*.6}px -${L.l*.8}px;z-index:-1;border-radius:${L.l*2}px;background:#101432;box-shadow:0 0 ${L.l*1.2}px ${L.l*.9}px #101432}
 .logo svg{width:${L.l*2.4}px;height:${L.l*2.4}px}
 </style></head><body>
 <img class="map" src="${c.mapUrl}">
@@ -45,17 +51,17 @@ body{width:${W}px;height:${H}px;background:#101432;overflow:hidden;position:rela
 </body></html>`;
 
 // homepage 1500×1200: text nahoře, mapa přes celou šířku dole
-const HP = { mx: 30, my: 350, mw: 1330, gap: 22, fade: 'linear-gradient(180deg,#101432 28%,rgba(16,20,50,0) 42%)',
-  tx: 80, ty: 62, tag: 34, hx: 80, hy: 150, hw: 1340, h: 118, sy: 300, s: 40, lr: 95, lb: 70, l: 42 };
+const HP = { mx: -10, my: 290, mw: 1520, gap: 22, fade: 'linear-gradient(180deg,#101432 28%,rgba(16,20,50,0) 42%)',
+  tx: 80, ty: 62, tag: 34, hx: 80, hy: 150, hw: 1340, h: 118, sy: 300, s: 40, lr: 80, lt: 52, l: 42 };
 // OG 1200×630: mapa vlevo, text vpravo
-const OG = { mx: -330, my: 10, mw: 1450, gap: 18, fade: 'linear-gradient(90deg,rgba(16,20,50,0) 38%,rgba(16,20,50,.85) 55%,#101432 62%)',
+const OG = { mx: -171, my: -143, mw: 1380, gap: 18, vc: true, fade: 'linear-gradient(90deg,rgba(16,20,50,0) 36%,rgba(16,20,50,.74) 50%,rgba(16,20,50,.8) 100%)',
   tx: 600, ty: 50, tag: 21, hx: 600, hy: 118, hw: 540, h: 66, sy: 290, s: 26, lr: 100, lb: 70, l: 30 };
 
 (async () => {
   const b = await chromium.launch({ headless: true, channel: 'msedge' });
   for (const [slug, c] of Object.entries(COVERS)) {
     c.mapUrl = 'data:image/png;base64,' + fs.readFileSync(path.join(dir, c.map)).toString('base64');
-    for (const [name, W, H, L] of [['cover.jpg', 1500, 1200, HP], ['cover-og.jpg', 1200, 630, OG]]) {
+    for (const [name, W, H, L] of [['cover.jpg', 1500, 1200, HP], ['cover-og.jpg', 1200, 630, { ...OG, ...(c.og || {}) }]]) {
       const pg = await b.newPage({ viewport: { width: W, height: H } });
       await pg.setContent(page(c, W, H, L), { waitUntil: 'networkidle' });
       await pg.evaluate(() => document.fonts.ready);

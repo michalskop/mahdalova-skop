@@ -290,10 +290,10 @@ for r in z:
     if listin == 1:
         agg[g]['jedna'] += 1
         tot['jedna'] += 1
-    if kand <= mand:
+    if r['stav'] == '0' and kand <= mand:  # stav 1 = volby se nekonají (méně než 5 kandidátů)
         agg[g]['malo'] += 1
         tot['malo'] += 1
-    if kand == mand:
+    if r['stav'] == '0' and kand == mand:
         tot['rovno'] += 1
 kv = []
 for g in GROUPS:

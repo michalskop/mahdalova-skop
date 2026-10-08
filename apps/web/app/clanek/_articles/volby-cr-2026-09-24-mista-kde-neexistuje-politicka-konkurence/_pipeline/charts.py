@@ -16,7 +16,7 @@ C_SOUT = '#bcbcb0'   # background.9 – soutěž
 NAVY = '#272a59'
 
 LBL = {2: 'Jediná kandidátka, zvoleni všichni', 1: 'Jediná kandidátka s náhradníky',
-       3: 'Víc kandidátek, ale zvoleni všichni', 4: 'Nikdo nekandidoval'}
+       3: 'Víc kandidátek, ale zvoleni všichni', 4: 'Volby se nekonají'}
 
 
 def save(name, spec, hide_mode=None):
