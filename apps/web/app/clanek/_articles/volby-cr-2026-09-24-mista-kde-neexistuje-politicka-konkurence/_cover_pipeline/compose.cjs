@@ -11,12 +11,12 @@ const COVERS = {
   'kolik-ma-cesko-obci': {
     map: 'map-obce.png',
     headline: 'Země malých obcí',
-    sub: '<b class="red">Červeně</b> obce pod 500 obyvatel. Je jich víc než polovina z 6 254.',
+    sub: '<b class="red">Červeně</b> obce pod 500 obyvatel. Je jich víc než polovina z&nbsp;6&nbsp;254.',
   },
   'mista-bez-konkurence': {
     map: 'map-kandidatky.png',
     headline: 'Volby bez výběru',
-    sub: '<b class="lila">1 830 obcí</b> má jedinou kandidátku. V 931 z nich budou zvoleni všichni.',
+    sub: '<b class="lila">1&nbsp;830 obcí</b> má jedinou kandidátku. V&nbsp;931 z&nbsp;nich budou zvoleni všichni.',
   },
 };
 

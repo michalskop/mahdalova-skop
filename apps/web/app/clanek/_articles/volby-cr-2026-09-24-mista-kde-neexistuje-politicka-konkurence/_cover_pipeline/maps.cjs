@@ -44,7 +44,7 @@ ${kraje ? `<path d="${p(kraje)}" fill="none" stroke="${BG}" stroke-width="3.2"/>
 </svg>`;
 }
 // mapa 1: jediná kandidátka 2026
-const COL = { 0: '#2a2f66', 1: '#9b5bb3', 2: '#d6a8ec', 3: '#ff934d', 4: '#de1743' };
+const COL = { 0: '#2a2f66', 1: '#9b5bb3', 2: '#d6a8ec', 3: '#1a9fbd', 4: '#de1743' };
 const svgKand = svg(x => (x && x.r ? COL[x.r[0]] : '#1b1f48'), BG, 0.6);
 // mapa 2: síť obcí, pod 500 obyvatel zvýrazněné
 const svgObce = svg(x => (x && x.p < 500 ? '#de1743' : '#2a2f66'), '#101432', 0.9);
