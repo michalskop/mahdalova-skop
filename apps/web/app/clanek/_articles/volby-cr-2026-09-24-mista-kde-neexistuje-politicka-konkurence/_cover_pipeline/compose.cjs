@@ -49,7 +49,7 @@ body{width:${W}px;height:${H}px;background:#101432;overflow:hidden;position:rela
 const HP = { mx: -10, my: 290, mw: 1520, gap: 22, fade: 'linear-gradient(180deg,#101432 28%,rgba(16,20,50,0) 42%)',
   tx: 80, ty: 62, tag: 34, hx: 80, hy: 150, hw: 1340, h: 118, sy: 300, s: 40, lr: 80, lt: 52, l: 42 };
 // OG 1200×630: mapa vlevo, text vpravo
-const OG = { mx: -150, my: -175, mw: 1700, gap: 18, fade: 'linear-gradient(90deg,rgba(16,20,50,0) 38%,rgba(16,20,50,.85) 55%,#101432 62%)',
+const OG = { mx: -205, my: -175, mw: 1700, gap: 18, fade: 'linear-gradient(90deg,rgba(16,20,50,0) 38%,rgba(16,20,50,.85) 55%,#101432 62%)',
   tx: 600, ty: 50, tag: 21, hx: 600, hy: 118, hw: 540, h: 66, sy: 290, s: 26, lr: 100, lb: 70, l: 30 };
 
 (async () => {
