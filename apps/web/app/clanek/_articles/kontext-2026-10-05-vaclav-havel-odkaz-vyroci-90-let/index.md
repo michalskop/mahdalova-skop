@@ -25,4 +25,8 @@ Výročí je příležitost podívat se na jeho odkaz konkrétně. Časová osa 
 
 <RouteTimeline yamlFile="timeline-havel.yaml" />
 
+Podle zářijového průzkumu agentury STEM/MARK zůstává Havel pro Čechy nejlepším prezidentem po roce 1989 ve všech věkových skupinách. Nejvíc ho oceňují lidé mezi 30 a 59 lety, nejmladší dospělí častěji než ostatní volí Petra Pavla.
+
+<VegaChart dataFile="data/stem-prezidenti-vek.json" />
+
 <RelatedArticles heading="🔻🔻🔻" />

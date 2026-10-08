@@ -1,0 +1,346 @@
+{
+    "$schema":  "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":  {
+                  "text":  "Za nejlepšího prezidenta po roce 1989 má {Havla|#de1743} téměř polovina Čechů, nejvíc lidé mezi 30 a 59 lety",
+                  "subtitle":  "Kterého prezidenta lidé postavili na 1. místo, podle věku (%, září 2026). Součty se kvůli zaokrouhlení mohou lišit od 100. Najeďte myší na řádek."
+              },
+    "_toggle_legend":  true,
+    "width":  "container",
+    "height":  230,
+    "data":  {
+                 "values":  [
+                                {
+                                    "skupina":  "Celkem",
+                                    "prezident":  "Václav Havel",
+                                    "poradi":  0,
+                                    "hodnota":  48,
+                                    "t_havel":  "48 %",
+                                    "t_klaus":  "12 %",
+                                    "t_zeman":  "18 %",
+                                    "t_pavel":  "23 %"
+                                },
+                                {
+                                    "skupina":  "Celkem",
+                                    "prezident":  "Václav Klaus",
+                                    "poradi":  1,
+                                    "hodnota":  12,
+                                    "t_havel":  "48 %",
+                                    "t_klaus":  "12 %",
+                                    "t_zeman":  "18 %",
+                                    "t_pavel":  "23 %"
+                                },
+                                {
+                                    "skupina":  "Celkem",
+                                    "prezident":  "Miloš Zeman",
+                                    "poradi":  2,
+                                    "hodnota":  18,
+                                    "t_havel":  "48 %",
+                                    "t_klaus":  "12 %",
+                                    "t_zeman":  "18 %",
+                                    "t_pavel":  "23 %"
+                                },
+                                {
+                                    "skupina":  "Celkem",
+                                    "prezident":  "Petr Pavel",
+                                    "poradi":  3,
+                                    "hodnota":  23,
+                                    "t_havel":  "48 %",
+                                    "t_klaus":  "12 %",
+                                    "t_zeman":  "18 %",
+                                    "t_pavel":  "23 %"
+                                },
+                                {
+                                    "skupina":  "18–29 let",
+                                    "prezident":  "Václav Havel",
+                                    "poradi":  0,
+                                    "hodnota":  43,
+                                    "t_havel":  "43 %",
+                                    "t_klaus":  "7 %",
+                                    "t_zeman":  "13 %",
+                                    "t_pavel":  "36 %"
+                                },
+                                {
+                                    "skupina":  "18–29 let",
+                                    "prezident":  "Václav Klaus",
+                                    "poradi":  1,
+                                    "hodnota":  7,
+                                    "t_havel":  "43 %",
+                                    "t_klaus":  "7 %",
+                                    "t_zeman":  "13 %",
+                                    "t_pavel":  "36 %"
+                                },
+                                {
+                                    "skupina":  "18–29 let",
+                                    "prezident":  "Miloš Zeman",
+                                    "poradi":  2,
+                                    "hodnota":  13,
+                                    "t_havel":  "43 %",
+                                    "t_klaus":  "7 %",
+                                    "t_zeman":  "13 %",
+                                    "t_pavel":  "36 %"
+                                },
+                                {
+                                    "skupina":  "18–29 let",
+                                    "prezident":  "Petr Pavel",
+                                    "poradi":  3,
+                                    "hodnota":  36,
+                                    "t_havel":  "43 %",
+                                    "t_klaus":  "7 %",
+                                    "t_zeman":  "13 %",
+                                    "t_pavel":  "36 %"
+                                },
+                                {
+                                    "skupina":  "30–44 let",
+                                    "prezident":  "Václav Havel",
+                                    "poradi":  0,
+                                    "hodnota":  56,
+                                    "t_havel":  "56 %",
+                                    "t_klaus":  "6 %",
+                                    "t_zeman":  "10 %",
+                                    "t_pavel":  "28 %"
+                                },
+                                {
+                                    "skupina":  "30–44 let",
+                                    "prezident":  "Václav Klaus",
+                                    "poradi":  1,
+                                    "hodnota":  6,
+                                    "t_havel":  "56 %",
+                                    "t_klaus":  "6 %",
+                                    "t_zeman":  "10 %",
+                                    "t_pavel":  "28 %"
+                                },
+                                {
+                                    "skupina":  "30–44 let",
+                                    "prezident":  "Miloš Zeman",
+                                    "poradi":  2,
+                                    "hodnota":  10,
+                                    "t_havel":  "56 %",
+                                    "t_klaus":  "6 %",
+                                    "t_zeman":  "10 %",
+                                    "t_pavel":  "28 %"
+                                },
+                                {
+                                    "skupina":  "30–44 let",
+                                    "prezident":  "Petr Pavel",
+                                    "poradi":  3,
+                                    "hodnota":  28,
+                                    "t_havel":  "56 %",
+                                    "t_klaus":  "6 %",
+                                    "t_zeman":  "10 %",
+                                    "t_pavel":  "28 %"
+                                },
+                                {
+                                    "skupina":  "45–59 let",
+                                    "prezident":  "Václav Havel",
+                                    "poradi":  0,
+                                    "hodnota":  55,
+                                    "t_havel":  "55 %",
+                                    "t_klaus":  "15 %",
+                                    "t_zeman":  "15 %",
+                                    "t_pavel":  "15 %"
+                                },
+                                {
+                                    "skupina":  "45–59 let",
+                                    "prezident":  "Václav Klaus",
+                                    "poradi":  1,
+                                    "hodnota":  15,
+                                    "t_havel":  "55 %",
+                                    "t_klaus":  "15 %",
+                                    "t_zeman":  "15 %",
+                                    "t_pavel":  "15 %"
+                                },
+                                {
+                                    "skupina":  "45–59 let",
+                                    "prezident":  "Miloš Zeman",
+                                    "poradi":  2,
+                                    "hodnota":  15,
+                                    "t_havel":  "55 %",
+                                    "t_klaus":  "15 %",
+                                    "t_zeman":  "15 %",
+                                    "t_pavel":  "15 %"
+                                },
+                                {
+                                    "skupina":  "45–59 let",
+                                    "prezident":  "Petr Pavel",
+                                    "poradi":  3,
+                                    "hodnota":  15,
+                                    "t_havel":  "55 %",
+                                    "t_klaus":  "15 %",
+                                    "t_zeman":  "15 %",
+                                    "t_pavel":  "15 %"
+                                },
+                                {
+                                    "skupina":  "60 a více let",
+                                    "prezident":  "Václav Havel",
+                                    "poradi":  0,
+                                    "hodnota":  38,
+                                    "t_havel":  "38 %",
+                                    "t_klaus":  "16 %",
+                                    "t_zeman":  "27 %",
+                                    "t_pavel":  "18 %"
+                                },
+                                {
+                                    "skupina":  "60 a více let",
+                                    "prezident":  "Václav Klaus",
+                                    "poradi":  1,
+                                    "hodnota":  16,
+                                    "t_havel":  "38 %",
+                                    "t_klaus":  "16 %",
+                                    "t_zeman":  "27 %",
+                                    "t_pavel":  "18 %"
+                                },
+                                {
+                                    "skupina":  "60 a více let",
+                                    "prezident":  "Miloš Zeman",
+                                    "poradi":  2,
+                                    "hodnota":  27,
+                                    "t_havel":  "38 %",
+                                    "t_klaus":  "16 %",
+                                    "t_zeman":  "27 %",
+                                    "t_pavel":  "18 %"
+                                },
+                                {
+                                    "skupina":  "60 a více let",
+                                    "prezident":  "Petr Pavel",
+                                    "poradi":  3,
+                                    "hodnota":  18,
+                                    "t_havel":  "38 %",
+                                    "t_klaus":  "16 %",
+                                    "t_zeman":  "27 %",
+                                    "t_pavel":  "18 %"
+                                }
+                            ]
+             },
+    "encoding":  {
+                     "y":  {
+                               "field":  "skupina",
+                               "type":  "nominal",
+                               "sort":  [
+                                            "Celkem",
+                                            "18–29 let",
+                                            "30–44 let",
+                                            "45–59 let",
+                                            "60 a více let"
+                                        ],
+                               "axis":  {
+                                            "title":  null,
+                                            "domain":  false,
+                                            "ticks":  false,
+                                            "labelLimit":  120
+                                        },
+                               "scale":  {
+                                             "paddingInner":  0.25
+                                         }
+                           },
+                     "x":  {
+                               "field":  "hodnota",
+                               "type":  "quantitative",
+                               "stack":  "zero",
+                               "scale":  {
+                                             "domain":  [
+                                                            0,
+                                                            100
+                                                        ]
+                                         },
+                               "axis":  {
+                                            "title":  null,
+                                            "values":  [
+                                                           0,
+                                                           25,
+                                                           50,
+                                                           75,
+                                                           100
+                                                       ],
+                                            "grid":  true,
+                                            "labelExpr":  "datum.value + \u0027 %\u0027"
+                                        }
+                           },
+                     "order":  {
+                                   "field":  "poradi",
+                                   "type":  "quantitative"
+                               },
+                     "color":  {
+                                   "field":  "prezident",
+                                   "type":  "nominal",
+                                   "scale":  {
+                                                 "domain":  [
+                                                                "Václav Havel",
+                                                                "Václav Klaus",
+                                                                "Miloš Zeman",
+                                                                "Petr Pavel"
+                                                            ],
+                                                 "range":  [
+                                                               "#de1743",
+                                                               "#4a51ab",
+                                                               "#f76800",
+                                                               "#1a9fbd"
+                                                           ]
+                                             },
+                                   "legend":  null
+                               },
+                     "tooltip":  [
+                                     {
+                                         "field":  "skupina",
+                                         "title":  "Skupina"
+                                     },
+                                     {
+                                         "field":  "t_havel",
+                                         "title":  "Václav Havel"
+                                     },
+                                     {
+                                         "field":  "t_klaus",
+                                         "title":  "Václav Klaus"
+                                     },
+                                     {
+                                         "field":  "t_zeman",
+                                         "title":  "Miloš Zeman"
+                                     },
+                                     {
+                                         "field":  "t_pavel",
+                                         "title":  "Petr Pavel"
+                                     }
+                                 ]
+                 },
+    "layer":  [
+                  {
+                      "mark":  {
+                                   "type":  "bar",
+                                   "stroke":  "#f8f6f0",
+                                   "strokeWidth":  1
+                               }
+                  },
+                  {
+                      "transform":  [
+                                        {
+                                            "filter":  "datum.hodnota \u003e= 7"
+                                        }
+                                    ],
+                      "mark":  {
+                                   "type":  "text",
+                                   "fontWeight":  700,
+                                   "align":  "center",
+                                   "baseline":  "middle"
+                               },
+                      "encoding":  {
+                                       "x":  {
+                                                 "field":  "hodnota",
+                                                 "type":  "quantitative",
+                                                 "stack":  "zero",
+                                                 "bandPosition":  0.5
+                                             },
+                                       "text":  {
+                                                    "field":  "hodnota",
+                                                    "type":  "quantitative"
+                                                },
+                                       "color":  {
+                                                     "condition":  {
+                                                                       "test":  "datum.prezident === \u0027Václav Havel\u0027 || datum.prezident === \u0027Václav Klaus\u0027",
+                                                                       "value":  "#ffffff"
+                                                                   },
+                                                     "value":  "#101432"
+                                                 }
+                                   }
+                  }
+              ],
+    "_source":  "[STEM/MARK](https://stemmark.cz/vaclav-havel-neochvejne-nejlepsim-prezidentem-po-roce-1989-petr-pavel-si-od-minule-mirne-polepsil), online průzkum, 1 008 lidí starších 18 let, 31. 8.–7. 9. 2026; graf zahrnuje 794 respondentů, kteří prezidenty seřadili"
+}
