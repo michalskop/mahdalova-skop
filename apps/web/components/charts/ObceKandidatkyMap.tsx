@@ -33,7 +33,7 @@ const LABEL: Record<number, string> = {
   2: 'Jediná kandidátka, zvoleni všichni',
   1: 'Jediná kandidátka s náhradníky',
   3: 'Víc kandidátek, ale zvoleni všichni',
-  4: 'Nikdo nekandidoval',
+  4: 'Volby se nekonají',
   0: 'Volby se soutěží',
 };
 const LEGEND_ORDER = [2, 1, 3, 4, 0];
@@ -79,7 +79,9 @@ function parse(raw: RawData) {
 function describe(r: YearRec | undefined) {
   if (!r) return 'Obec v těchto volbách nebyla samostatná.';
   const [c, mand, kand, listy] = r;
-  if (c === 4) return `Nikdo nepodal kandidátku (${mand} mandátů). Volby se nekonaly.`;
+  if (c === 4) return kand > 0
+    ? `${nf(kand)} ${plural(kand, 'kandidát', 'kandidáti', 'kandidátů')} na ${mand} ${plural(mand, 'mandát', 'mandáty', 'mandátů')}, méně než pět. Volby se nekonaly.`
+    : `Nikdo nepodal kandidátku (${mand} mandátů). Volby se nekonaly.`;
   const kStr = kand < 0 ? 'víc stran' : `${nf(kand)} ${plural(kand, 'kandidát', 'kandidáti', 'kandidátů')}`;
   const lStr = `${listy} ${plural(listy, 'kandidátka', 'kandidátky', 'kandidátek')}`;
   return `${lStr}, ${kStr} na ${mand} ${plural(mand, 'mandát', 'mandáty', 'mandátů')}`;

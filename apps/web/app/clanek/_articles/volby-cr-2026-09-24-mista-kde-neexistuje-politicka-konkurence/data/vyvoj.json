@@ -34,7 +34,7 @@
    },
    {
     "rok": "1994",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
     "n": 0,
     "obci": 6130,
@@ -66,7 +66,7 @@
    },
    {
     "rok": "1998",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
     "n": 40,
     "obci": 6245,
@@ -76,9 +76,9 @@
     "rok": "2002",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 657,
+    "n": 652,
     "obci": 6248,
-    "pct": 10.5
+    "pct": 10.4
    },
    {
     "rok": "2002",
@@ -92,25 +92,25 @@
     "rok": "2002",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 146,
+    "n": 145,
     "obci": 6248,
     "pct": 2.3
    },
    {
     "rok": "2002",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 35,
+    "n": 41,
     "obci": 6248,
-    "pct": 0.6
+    "pct": 0.7
    },
    {
     "rok": "2006",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 642,
+    "n": 639,
     "obci": 6244,
-    "pct": 10.3
+    "pct": 10.2
    },
    {
     "rok": "2006",
@@ -124,23 +124,23 @@
     "rok": "2006",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 128,
+    "n": 126,
     "obci": 6244,
     "pct": 2.0
    },
    {
     "rok": "2006",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 14,
+    "n": 19,
     "obci": 6244,
-    "pct": 0.2
+    "pct": 0.3
    },
    {
     "rok": "2010",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 567,
+    "n": 566,
     "obci": 6245,
     "pct": 9.1
    },
@@ -156,15 +156,15 @@
     "rok": "2010",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 93,
+    "n": 92,
     "obci": 6245,
     "pct": 1.5
    },
    {
     "rok": "2010",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 16,
+    "n": 18,
     "obci": 6245,
     "pct": 0.3
    },
@@ -172,7 +172,7 @@
     "rok": "2014",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 590,
+    "n": 587,
     "obci": 6248,
     "pct": 9.4
    },
@@ -188,25 +188,25 @@
     "rok": "2014",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 100,
+    "n": 97,
     "obci": 6248,
     "pct": 1.6
    },
    {
     "rok": "2014",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 7,
+    "n": 13,
     "obci": 6248,
-    "pct": 0.1
+    "pct": 0.2
    },
    {
     "rok": "2018",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 751,
+    "n": 747,
     "obci": 6254,
-    "pct": 12.0
+    "pct": 11.9
    },
    {
     "rok": "2018",
@@ -220,23 +220,23 @@
     "rok": "2018",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 129,
+    "n": 125,
     "obci": 6254,
-    "pct": 2.1
+    "pct": 2.0
    },
    {
     "rok": "2018",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 8,
+    "n": 16,
     "obci": 6254,
-    "pct": 0.1
+    "pct": 0.3
    },
    {
     "rok": "2022",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 878,
+    "n": 877,
     "obci": 6254,
     "pct": 14.0
    },
@@ -252,23 +252,23 @@
     "rok": "2022",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 124,
+    "n": 120,
     "obci": 6254,
-    "pct": 2.0
+    "pct": 1.9
    },
    {
     "rok": "2022",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 7,
+    "n": 12,
     "obci": 6254,
-    "pct": 0.1
+    "pct": 0.2
    },
    {
     "rok": "2026",
     "kat": "Jediná kandidátka, zvoleni všichni",
     "ord": 0,
-    "n": 931,
+    "n": 930,
     "obci": 6254,
     "pct": 14.9
    },
@@ -284,15 +284,15 @@
     "rok": "2026",
     "kat": "Víc kandidátek, ale zvoleni všichni",
     "ord": 2,
-    "n": 141,
+    "n": 140,
     "obci": 6254,
-    "pct": 2.3
+    "pct": 2.2
    },
    {
     "rok": "2026",
-    "kat": "Nikdo nekandidoval",
+    "kat": "Volby se nekonají",
     "ord": 3,
-    "n": 1,
+    "n": 3,
     "obci": 6254,
     "pct": 0.0
    }
@@ -331,7 +331,7 @@
      "Jediná kandidátka, zvoleni všichni",
      "Jediná kandidátka s náhradníky",
      "Víc kandidátek, ale zvoleni všichni",
-     "Nikdo nekandidoval"
+     "Volby se nekonají"
     ],
     "range": [
      "#6e227d",

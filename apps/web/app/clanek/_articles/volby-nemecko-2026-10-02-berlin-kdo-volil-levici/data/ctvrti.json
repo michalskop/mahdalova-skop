@@ -1,0 +1,876 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Čím víc mladých dospělých ve čtvrti, tím silnější Levice",
+  "subtitle": "Výsledek Levice (%) a podíl obyvatel ve věku 18–45 let (%) v 96 berlínských čtvrtích (Ortsteile)"
+ },
+ "width": 600,
+ "height": 380,
+ "data": {
+  "values": [
+   {
+    "o": "Hellersdorf",
+    "y": 20.7,
+    "x": 39.6,
+    "a": 41.1,
+    "s": "bývalý východní Berlín",
+    "l": "Hellersdorf"
+   },
+   {
+    "o": "Mahlsdorf",
+    "y": 16.1,
+    "x": 24.0,
+    "a": 26.1,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Kaulsdorf",
+    "y": 17.0,
+    "x": 25.2,
+    "a": 27.4,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Hansaviertel",
+    "y": 25.5,
+    "x": 48.8,
+    "a": 7.0,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Gesundbrunnen",
+    "y": 46.0,
+    "x": 47.3,
+    "a": 9.3,
+    "s": "bývalý západní Berlín",
+    "l": "Gesundbrunnen"
+   },
+   {
+    "o": "Wedding",
+    "y": 41.8,
+    "x": 50.5,
+    "a": 10.3,
+    "s": "bývalý západní Berlín",
+    "l": "Wedding"
+   },
+   {
+    "o": "Mitte",
+    "y": 28.4,
+    "x": 48.2,
+    "a": 9.1,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Moabit",
+    "y": 35.0,
+    "x": 51.0,
+    "a": 7.1,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Tiergarten",
+    "y": 25.0,
+    "x": 47.3,
+    "a": 8.9,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Kreuzberg",
+    "y": 46.5,
+    "x": 44.7,
+    "a": 4.1,
+    "s": "bývalý západní Berlín",
+    "l": "Kreuzberg"
+   },
+   {
+    "o": "Friedrichshain",
+    "y": 42.1,
+    "x": 53.7,
+    "a": 7.8,
+    "s": "bývalý východní Berlín",
+    "l": "Friedrichshain"
+   },
+   {
+    "o": "Französisch Buchholz",
+    "y": 16.9,
+    "x": 30.0,
+    "a": 27.5,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Wilhelmsruh",
+    "y": 20.6,
+    "x": 33.8,
+    "a": 20.4,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Rosenthal",
+    "y": 16.8,
+    "x": 28.3,
+    "a": 22.8,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Niederschönhausen",
+    "y": 24.0,
+    "x": 33.5,
+    "a": 16.4,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Blankenburg",
+    "y": 15.3,
+    "x": 23.2,
+    "a": 26.5,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Heinersdorf",
+    "y": 22.0,
+    "x": 37.3,
+    "a": 21.0,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Buch",
+    "y": 20.7,
+    "x": 35.9,
+    "a": 29.3,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Weißensee",
+    "y": 29.5,
+    "x": 41.1,
+    "a": 18.2,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Stadtrandsiedlung Malchow",
+    "y": 15.4,
+    "x": 17.7,
+    "a": 28.7,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Karow",
+    "y": 17.7,
+    "x": 30.2,
+    "a": 28.2,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Prenzlauer Berg",
+    "y": 33.5,
+    "x": 46.0,
+    "a": 8.2,
+    "s": "bývalý východní Berlín",
+    "l": "Prenzlauer Berg"
+   },
+   {
+    "o": "Blankenfelde",
+    "y": 13.9,
+    "x": 22.5,
+    "a": 36.2,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Pankow",
+    "y": 31.4,
+    "x": 40.0,
+    "a": 13.8,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Westend",
+    "y": 14.7,
+    "x": 34.9,
+    "a": 9.9,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Charlottenburg",
+    "y": 23.7,
+    "x": 42.0,
+    "a": 8.3,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Halensee",
+    "y": 17.7,
+    "x": 39.3,
+    "a": 10.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Wilmersdorf",
+    "y": 20.0,
+    "x": 37.2,
+    "a": 9.0,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Charlottenburg-Nord",
+    "y": 24.7,
+    "x": 37.3,
+    "a": 20.8,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Schmargendorf",
+    "y": 12.9,
+    "x": 33.7,
+    "a": 11.7,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Grunewald",
+    "y": 7.6,
+    "x": 28.3,
+    "a": 10.5,
+    "s": "bývalý západní Berlín",
+    "l": "Grunewald"
+   },
+   {
+    "o": "Staaken",
+    "y": 13.7,
+    "x": 32.8,
+    "a": 24.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Wilhelmstadt",
+    "y": 16.3,
+    "x": 35.7,
+    "a": 20.1,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Haselhorst",
+    "y": 21.9,
+    "x": 39.2,
+    "a": 22.1,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Siemensstadt",
+    "y": 23.7,
+    "x": 42.4,
+    "a": 16.3,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Hakenfelde",
+    "y": 17.1,
+    "x": 36.7,
+    "a": 19.6,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Kladow",
+    "y": 9.2,
+    "x": 23.5,
+    "a": 14.3,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Falkenhagener Feld",
+    "y": 17.0,
+    "x": 35.3,
+    "a": 27.3,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Gatow",
+    "y": 8.4,
+    "x": 22.6,
+    "a": 14.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Spandau",
+    "y": 18.8,
+    "x": 42.1,
+    "a": 22.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Schlachtensee",
+    "y": 9.3,
+    "x": 29.7,
+    "a": 8.0,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Lankwitz",
+    "y": 16.2,
+    "x": 34.0,
+    "a": 16.4,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Nikolassee",
+    "y": 12.0,
+    "x": 25.8,
+    "a": 9.4,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Lichterfelde",
+    "y": 14.1,
+    "x": 30.9,
+    "a": 10.5,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Wannsee",
+    "y": 9.1,
+    "x": 23.5,
+    "a": 10.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Steglitz",
+    "y": 20.9,
+    "x": 37.5,
+    "a": 10.6,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Dahlem",
+    "y": 11.2,
+    "x": 27.8,
+    "a": 8.1,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Zehlendorf",
+    "y": 13.2,
+    "x": 28.4,
+    "a": 10.5,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Marienfelde",
+    "y": 14.1,
+    "x": 32.4,
+    "a": 21.5,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Lichtenrade",
+    "y": 12.1,
+    "x": 29.3,
+    "a": 19.7,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Tempelhof",
+    "y": 28.1,
+    "x": 41.2,
+    "a": 11.3,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Mariendorf",
+    "y": 18.6,
+    "x": 35.8,
+    "a": 16.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Schöneberg",
+    "y": 30.2,
+    "x": 41.3,
+    "a": 6.7,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Friedenau",
+    "y": 22.4,
+    "x": 37.9,
+    "a": 5.7,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Rudow",
+    "y": 12.6,
+    "x": 29.0,
+    "a": 21.8,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Buckow",
+    "y": 16.4,
+    "x": 32.3,
+    "a": 20.9,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Britz",
+    "y": 23.2,
+    "x": 38.2,
+    "a": 18.0,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Neukölln",
+    "y": 50.8,
+    "x": 50.4,
+    "a": 6.1,
+    "s": "bývalý západní Berlín",
+    "l": "Neukölln"
+   },
+   {
+    "o": "Gropiusstadt",
+    "y": 23.5,
+    "x": 35.4,
+    "a": 22.0,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Grünau",
+    "y": 20.7,
+    "x": 35.5,
+    "a": 21.4,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Niederschöneweide",
+    "y": 30.8,
+    "x": 49.6,
+    "a": 22.8,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Rahnsdorf",
+    "y": 18.4,
+    "x": 28.1,
+    "a": 24.2,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Köpenick",
+    "y": 25.5,
+    "x": 36.3,
+    "a": 25.6,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Oberschöneweide",
+    "y": 36.4,
+    "x": 52.7,
+    "a": 20.8,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Friedrichshagen",
+    "y": 27.3,
+    "x": 27.6,
+    "a": 18.9,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Altglienicke",
+    "y": 18.0,
+    "x": 34.1,
+    "a": 32.6,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Müggelheim",
+    "y": 16.7,
+    "x": 23.7,
+    "a": 35.6,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Schmöckwitz",
+    "y": 18.6,
+    "x": 25.4,
+    "a": 23.3,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Baumschulenweg",
+    "y": 33.6,
+    "x": 41.6,
+    "a": 18.8,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Johannisthal",
+    "y": 25.7,
+    "x": 38.3,
+    "a": 23.7,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Adlershof",
+    "y": 25.6,
+    "x": 48.0,
+    "a": 23.5,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Alt-Treptow",
+    "y": 44.2,
+    "x": 44.5,
+    "a": 7.8,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Bohnsdorf",
+    "y": 18.2,
+    "x": 31.4,
+    "a": 30.1,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Plänterwald",
+    "y": 37.1,
+    "x": 43.7,
+    "a": 18.5,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Marzahn",
+    "y": 22.8,
+    "x": 37.1,
+    "a": 38.5,
+    "s": "bývalý východní Berlín",
+    "l": "Marzahn"
+   },
+   {
+    "o": "Biesdorf",
+    "y": 18.5,
+    "x": 30.2,
+    "a": 24.7,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Falkenberg",
+    "y": 18.3,
+    "x": 40.4,
+    "a": 31.7,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Alt-Hohenschönhausen",
+    "y": 25.1,
+    "x": 37.5,
+    "a": 26.5,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Lichtenberg",
+    "y": 35.6,
+    "x": 48.1,
+    "a": 18.2,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Fennpfuhl",
+    "y": 30.9,
+    "x": 42.2,
+    "a": 24.3,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Karlshorst",
+    "y": 27.2,
+    "x": 38.7,
+    "a": 15.0,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Rummelsburg",
+    "y": 38.4,
+    "x": 52.2,
+    "a": 11.9,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Neu-Hohenschönhausen",
+    "y": 21.4,
+    "x": 35.8,
+    "a": 37.4,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Wartenberg",
+    "y": 14.6,
+    "x": 25.2,
+    "a": 32.3,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Friedrichsfelde",
+    "y": 30.9,
+    "x": 42.2,
+    "a": 24.3,
+    "s": "bývalý východní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Hermsdorf",
+    "y": 9.9,
+    "x": 24.3,
+    "a": 11.6,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Heiligensee",
+    "y": 9.1,
+    "x": 23.5,
+    "a": 16.0,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Borsigwalde",
+    "y": 14.3,
+    "x": 39.2,
+    "a": 23.9,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Waidmannslust",
+    "y": 16.4,
+    "x": 33.5,
+    "a": 19.2,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Konradshöhe",
+    "y": 8.6,
+    "x": 22.4,
+    "a": 13.7,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Frohnau",
+    "y": 8.2,
+    "x": 21.7,
+    "a": 10.8,
+    "s": "bývalý západní Berlín",
+    "l": "Frohnau"
+   },
+   {
+    "o": "Märkisches Viertel",
+    "y": 21.2,
+    "x": 35.2,
+    "a": 27.3,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Wittenau",
+    "y": 13.7,
+    "x": 33.3,
+    "a": 19.1,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Lübars",
+    "y": 10.5,
+    "x": 24.7,
+    "a": 23.4,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Reinickendorf",
+    "y": 25.4,
+    "x": 42.3,
+    "a": 21.8,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   },
+   {
+    "o": "Tegel",
+    "y": 15.2,
+    "x": 34.2,
+    "a": 18.6,
+    "s": "bývalý západní Berlín",
+    "l": ""
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "x",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     15,
+     55
+    ]
+   },
+   "axis": {
+    "title": "Obyvatelé ve věku 18–45 let (% všech obyvatel)"
+   }
+  },
+  "y": {
+   "field": "y",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     0,
+     55
+    ]
+   },
+   "axis": {
+    "title": "Levice (% platných hlasů)"
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70,
+    "opacity": 0.85
+   },
+   "encoding": {
+    "color": {
+     "field": "s",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "bývalý západní Berlín",
+       "bývalý východní Berlín"
+      ],
+      "range": [
+       "#9f319e",
+       "#0e839e"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "top"
+     }
+    },
+    "tooltip": [
+     {
+      "field": "o",
+      "type": "nominal",
+      "title": "Čtvrť"
+     },
+     {
+      "field": "y",
+      "type": "quantitative",
+      "title": "Levice (%)"
+     },
+     {
+      "field": "a",
+      "type": "quantitative",
+      "title": "AfD (%)"
+     },
+     {
+      "field": "x",
+      "type": "quantitative",
+      "title": "Obyvatelé 18–45 let (%)"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "dx": 7,
+    "align": "left",
+    "fontSize": 11,
+    "color": "#272a59"
+   },
+   "encoding": {
+    "text": {
+     "field": "l"
+    }
+   }
+  }
+ ],
+ "_source": "Předběžné výsledky voleb 20. 9. 2026 po volebních okrscích (Landeswahlleiterin Berlin), přiřazené ke čtvrtím podle geometrie okrsků, korespondenční hlasy rozděleny podle voličských průkazů; obyvatelstvo k 31. 12. 2025 (Amt für Statistik Berlin-Brandenburg, Statistischer Bericht A I 5); výpočet DataTimes.cz. Korelace r = 0,82. Graf ukazuje čtvrti, ne jednotlivé voliče."
+}

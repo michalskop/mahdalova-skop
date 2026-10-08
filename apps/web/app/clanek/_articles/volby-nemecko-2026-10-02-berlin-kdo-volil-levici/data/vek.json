@@ -1,0 +1,405 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Levici volili hlavně mladí, CDU hlavně starší",
+    "subtitle": "Podíl hlasů stran ve věkových skupinách (%), volby do berlínského zemského sněmu 20. 9. 2026"
+  },
+  "width": 600,
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "g": "16–29 let",
+        "o": 1,
+        "p": "Levice",
+        "v": 47,
+        "dy": 0
+      },
+      {
+        "g": "30–44 let",
+        "o": 2,
+        "p": "Levice",
+        "v": 33,
+        "dy": 0
+      },
+      {
+        "g": "45–59 let",
+        "o": 3,
+        "p": "Levice",
+        "v": 18,
+        "dy": -6
+      },
+      {
+        "g": "60 a více let",
+        "o": 4,
+        "p": "Levice",
+        "v": 13,
+        "dy": 0
+      },
+      {
+        "g": "16–29 let",
+        "o": 1,
+        "p": "CDU",
+        "v": 8,
+        "dy": -6
+      },
+      {
+        "g": "30–44 let",
+        "o": 2,
+        "p": "CDU",
+        "v": 12,
+        "dy": 0
+      },
+      {
+        "g": "45–59 let",
+        "o": 3,
+        "p": "CDU",
+        "v": 21,
+        "dy": 0
+      },
+      {
+        "g": "60 a více let",
+        "o": 4,
+        "p": "CDU",
+        "v": 30,
+        "dy": 0
+      },
+      {
+        "g": "16–29 let",
+        "o": 1,
+        "p": "AfD",
+        "v": 10,
+        "dy": 0
+      },
+      {
+        "g": "30–44 let",
+        "o": 2,
+        "p": "AfD",
+        "v": 14,
+        "dy": 0
+      },
+      {
+        "g": "45–59 let",
+        "o": 3,
+        "p": "AfD",
+        "v": 19,
+        "dy": 0
+      },
+      {
+        "g": "60 a více let",
+        "o": 4,
+        "p": "AfD",
+        "v": 19,
+        "dy": 0
+      },
+      {
+        "g": "16–29 let",
+        "o": 1,
+        "p": "Zelení",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "30–44 let",
+        "o": 2,
+        "p": "Zelení",
+        "v": 17,
+        "dy": 0
+      },
+      {
+        "g": "45–59 let",
+        "o": 3,
+        "p": "Zelení",
+        "v": 18,
+        "dy": 6
+      },
+      {
+        "g": "60 a více let",
+        "o": 4,
+        "p": "Zelení",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "16–29 let",
+        "o": 1,
+        "p": "SPD",
+        "v": 8,
+        "dy": 6
+      },
+      {
+        "g": "30–44 let",
+        "o": 2,
+        "p": "SPD",
+        "v": 10,
+        "dy": 0
+      },
+      {
+        "g": "45–59 let",
+        "o": 3,
+        "p": "SPD",
+        "v": 12,
+        "dy": 0
+      },
+      {
+        "g": "60 a více let",
+        "o": 4,
+        "p": "SPD",
+        "v": 17,
+        "dy": 0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "g",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 200
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          50
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "p",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Levice",
+          "CDU",
+          "AfD",
+          "Zelení",
+          "SPD"
+        ],
+        "range": [
+          "#9f319e",
+          "#101432",
+          "#0e839e",
+          "#507e08",
+          "#e8412c"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#d4d4c8",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "value": "#d4d4c8"
+        },
+        "x": {
+          "aggregate": "min",
+          "field": "v"
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "v"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1,
+        "yOffset": -6
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Věk"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Strana"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl hlasů (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == -6"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Věk"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Strana"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl hlasů (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 0"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1,
+        "yOffset": 6
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Věk"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Strana"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl hlasů (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 6"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#9f319e",
+        "yOffset": -6
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Levice'"
+        },
+        {
+          "filter": "datum.dy == -6"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#9f319e"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#9f319e"
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Levice'"
+        },
+        {
+          "filter": "datum.dy == 0"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#9f319e"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#9f319e",
+        "yOffset": 6
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Levice'"
+        },
+        {
+          "filter": "datum.dy == 6"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#9f319e"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen pro ZDF, průzkum mezi 17 460 voliči v den voleb (grafiky „Wer wählte …? nach Alter“, 20. 9. 2026, 23:59); skupina „unter 30“ = 16–29 let"
+}

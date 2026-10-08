@@ -3,13 +3,15 @@ title: "Ve třetině obcí si voliči nevyberou z víc než jedné kandidátky. 
 date: "2026-09-24"
 time: "07:47"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "V komunálních volbách 9. a 10. října bude mít 1 830 obcí jedinou kandidátku, v roce 1994 jich bylo 645. V 931 z nich je kandidátů přesně tolik, kolik je míst, nebo méně: zvoleni budou všichni a zastupitelstvo nebude mít náhradníky. Lidé z těchto obcí přitom k velkým volbám chodí stejně jako ostatní, komunální volby ale vynechávají."
+excerpt: "V komunálních volbách 9. a 10. října bude mít 1 830 obcí jedinou kandidátku, v roce 1994 jich bylo 645. V 930 z nich je kandidátů přesně tolik, kolik je míst, nebo méně: zvoleni budou všichni a zastupitelstvo nebude mít náhradníky. Lidé z těchto obcí přitom k velkým volbám chodí stejně jako ostatní, komunální volby ale vynechávají."
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "komunální volby", "obce", "kandidáti", "politika", "data"]
 promoted: 1
 ---
 
-V komunálních volbách 9. a 10. října bude mít 1 830 z 6 254 obcí jedinou kandidátku, tedy 29 procent. V 931 z nich na ní stojí přesně tolik lidí, kolik je v zastupitelstvu míst, nebo méně. Zvoleni budou všichni, ať voliči zakroužkují kohokoli. Prošli jsme kandidátky všech komunálních voleb od roku 1994, prvních po vzniku samostatné České republiky, a podívali se, jak se počet takových obcí měnil, kde leží a co to dělá s lidmi, kteří v nich žijí.
+V komunálních volbách 9. a 10. října bude mít 1 830 z 6 254 obcí jedinou kandidátku, tedy 29 procent. V 930 z nich na ní stojí přesně tolik lidí, kolik je v zastupitelstvu míst, nebo méně. Zvoleni budou všichni, ať voliči zakroužkují kohokoli. Prošli jsme kandidátky všech komunálních voleb od roku 1994, prvních po vzniku samostatné České republiky, a podívali se, jak se počet takových obcí měnil, kde leží a co to dělá s lidmi, kteří v nich žijí.
 
 <ObceKandidatkyMap
   geoUrl="/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-geo.json"
@@ -19,7 +21,7 @@ V komunálních volbách 9. a 10. října bude mít 1 830 z 6 254 obcí jedinou 
   source="volby.gov.cz – registry kandidátů a výsledky komunálních voleb 1994–2026, řádný termín; hranice obcí: ČSÚ, volební okrsky 2022"
 />
 
-Fialové obce mají jedinou kandidátku. Tmavě fialová znamená, že na ní je nejvýš tolik jmen, kolik je míst, takže o složení zastupitelstva je rozhodnuto ještě před volbami. Světle fialová znamená, že kandidátů je o něco víc a voliči tak rozhodnou aspoň o tom, kdo z jedné kandidátky skončí jako náhradník. Tyrkysové jsou obce, kde sice stojí víc kandidátek, ale dohromady na nich není víc lidí než míst, typicky několik nezávislých kandidátů, každý na vlastní kandidátce. I tam budou zvoleni všichni. Dohromady je letos obcí s předem daným výsledkem 1 072, tedy 17 procent.
+Fialové obce mají jedinou kandidátku. Tmavě fialová znamená, že na ní je nejvýš tolik jmen, kolik je míst, takže o složení zastupitelstva je rozhodnuto ještě před volbami. Světle fialová znamená, že kandidátů je o něco víc a voliči tak rozhodnou aspoň o tom, kdo z jedné kandidátky skončí jako náhradník. Tyrkysové jsou obce, kde sice stojí víc kandidátek, ale dohromady na nich není víc lidí než míst, typicky několik nezávislých kandidátů, každý na vlastní kandidátce. I tam budou zvoleni všichni. Dohromady je letos obcí s předem daným výsledkem 1 070, tedy 17 procent.
 
 Na chybějící konkurenci upozornil 17. září i prezident Petr Pavel na konferenci Sdružení místních samospráv v Karlových Varech, jak informovaly Novinky.cz. Podle něj se v přibližně třetině obcí „na kandidátce sejde právě tolik jmen, kolik je zastupitelstev“. Ta věta spojuje dvě různá čísla. Jedinou kandidátku má skutečně skoro třetina obcí, 29 procent. Výsledek daný předem, kdy projdou všichni kandidáti, je ale v 17 procentech obcí, zhruba v každé šesté.
 
@@ -37,7 +39,7 @@ Ani tam, kde má jediná kandidátka pár jmen navíc, voliči složení zastupi
 
 <VegaChart dataFile="data/vyvoj.json" />
 
-V roce 1994 měla jedinou kandidátku každá desátá obec, 645 obcí. Letos jich je 1 830, skoro třikrát víc, a podíl roste od roku 2010 v každých volbách. Graf ale ukazuje i druhou věc: obcí, kde je výsledek dán předem, nebylo málo ani v devadesátých letech. V roce 1994 jich bylo 912, tedy 15 procent. Tehdy ale častěji kandidovali jednotliví nezávislí, každý na vlastní kandidátce. Takových obcí s víc kandidátkami, kde přesto prošli všichni, bylo 268, letos 141.
+V roce 1994 měla jedinou kandidátku každá desátá obec, 645 obcí. Letos jich je 1 830, skoro třikrát víc, a podíl roste od roku 2010 v každých volbách. Graf ale ukazuje i druhou věc: obcí, kde je výsledek dán předem, nebylo málo ani v devadesátých letech. V roce 1994 jich bylo 912, tedy 15 procent. Tehdy ale častěji kandidovali jednotliví nezávislí, každý na vlastní kandidátce. Takových obcí s víc kandidátkami, kde přesto prošli všichni, bylo 268, letos 140.
 
 Nejméně obcí s předem daným výsledkem bylo v letech 2010 a 2014, kolem 11 procent. Od té doby jejich podíl roste a letos je se 17 procenty nejvyšší za celé sledované období. V letech 1994 a 1998 navíc jediná kandidátka znamenala skoro vždy, že zvoleni budou všichni: víc jmen než míst měla jen v jediné obci. Možnost dát v nejmenších obcích na kandidátku jména navíc výslovně upravuje až současný zákon, podle kterého se volí od roku 2002. Proto se světle fialová část grafu objevuje až od toho roku.
 
@@ -92,7 +94,7 @@ Liší se jen to, co starosty čeká letos. Devět z deseti jich kandiduje znovu
 
 <Timeline yamlFile="brodec.yaml" />
 
-Blízko téhle hranice jsou letos Krchleby na Rychnovsku: na jediné kandidátce je jediné jméno na sedm míst. Kandidátů méně než pět mělo od roku 2010 dalších 21 obcí. Ve všech ministerstvo vnitra do několika měsíců vyhlásilo dodatečné volby, aby se zastupitelstvo doplnilo.
+Volby se letos podle registru kandidátů nekonají ani v Krchlebech na Rychnovsku a v Rokytovci na Mladoboleslavsku, kde se kandidáti sice našli, ale méně než pět. V Krchlebech je na jediné kandidátce jediné jméno na sedm míst, v Rokytovci kandidují čtyři lidé na pět míst. Kandidátů méně než pět mělo od roku 2010 dalších 21 obcí. Ve všech ministerstvo vnitra do několika měsíců vyhlásilo dodatečné volby, aby se zastupitelstvo doplnilo.
 
 ## Co data neukazují
 
