@@ -4,6 +4,8 @@ date: "2026-10-02"
 time: "08:30"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Příští pátek a sobotu se volí zastupitelstva v 6 251 obcích. Polovina z nich má méně než 500 obyvatel, v Rakousku je tak malá jen každá dvacátá obec. Správa nejmenších obcí stojí na obyvatele skoro dvakrát víc a téměř v každé druhé z nich kandiduje jediná listina. Proč máme tolik obcí a co se stalo, když je Rakousko slučovalo."
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "obce", "samospráva", "Rakousko", "veřejné finance", "data"]
 ---
