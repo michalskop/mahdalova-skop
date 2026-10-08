@@ -1,0 +1,393 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Nejvíc Levici volili lidé s maturitou, vysokoškoláci o něco méně",
+    "subtitle": "Podíl hlasů stran podle nejvyššího dosaženého vzdělání (%), Berlín 20. 9. 2026"
+  },
+  "width": 600,
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "g": "Základní škola (Hauptschule)",
+        "o": 1,
+        "p": "Levice",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "Střední bez maturity (mittlere Reife)",
+        "o": 2,
+        "p": "Levice",
+        "v": 18,
+        "dy": 0
+      },
+      {
+        "g": "Maturita (Abitur)",
+        "o": 3,
+        "p": "Levice",
+        "v": 32,
+        "dy": 0
+      },
+      {
+        "g": "Vysoká škola",
+        "o": 4,
+        "p": "Levice",
+        "v": 28,
+        "dy": 0
+      },
+      {
+        "g": "Základní škola (Hauptschule)",
+        "o": 1,
+        "p": "CDU",
+        "v": 27,
+        "dy": 0
+      },
+      {
+        "g": "Střední bez maturity (mittlere Reife)",
+        "o": 2,
+        "p": "CDU",
+        "v": 21,
+        "dy": 0
+      },
+      {
+        "g": "Maturita (Abitur)",
+        "o": 3,
+        "p": "CDU",
+        "v": 17,
+        "dy": 0
+      },
+      {
+        "g": "Vysoká škola",
+        "o": 4,
+        "p": "CDU",
+        "v": 20,
+        "dy": -6
+      },
+      {
+        "g": "Základní škola (Hauptschule)",
+        "o": 1,
+        "p": "AfD",
+        "v": 33,
+        "dy": 0
+      },
+      {
+        "g": "Střední bez maturity (mittlere Reife)",
+        "o": 2,
+        "p": "AfD",
+        "v": 29,
+        "dy": 0
+      },
+      {
+        "g": "Maturita (Abitur)",
+        "o": 3,
+        "p": "AfD",
+        "v": 13,
+        "dy": 0
+      },
+      {
+        "g": "Vysoká škola",
+        "o": 4,
+        "p": "AfD",
+        "v": 7,
+        "dy": 0
+      },
+      {
+        "g": "Základní škola (Hauptschule)",
+        "o": 1,
+        "p": "Zelení",
+        "v": 4,
+        "dy": 0
+      },
+      {
+        "g": "Střední bez maturity (mittlere Reife)",
+        "o": 2,
+        "p": "Zelení",
+        "v": 6,
+        "dy": 0
+      },
+      {
+        "g": "Maturita (Abitur)",
+        "o": 3,
+        "p": "Zelení",
+        "v": 14,
+        "dy": 0
+      },
+      {
+        "g": "Vysoká škola",
+        "o": 4,
+        "p": "Zelení",
+        "v": 20,
+        "dy": 6
+      },
+      {
+        "g": "Základní škola (Hauptschule)",
+        "o": 1,
+        "p": "SPD",
+        "v": 17,
+        "dy": 0
+      },
+      {
+        "g": "Střední bez maturity (mittlere Reife)",
+        "o": 2,
+        "p": "SPD",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "Maturita (Abitur)",
+        "o": 3,
+        "p": "SPD",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "Vysoká škola",
+        "o": 4,
+        "p": "SPD",
+        "v": 12,
+        "dy": 0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "g",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 260
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          50
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "p",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Levice",
+          "CDU",
+          "AfD",
+          "Zelení",
+          "SPD"
+        ],
+        "range": [
+          "#9f319e",
+          "#101432",
+          "#0e839e",
+          "#507e08",
+          "#e8412c"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#d4d4c8",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "value": "#d4d4c8"
+        },
+        "x": {
+          "aggregate": "min",
+          "field": "v"
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "v"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1,
+        "yOffset": -6
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Vzdělání"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Strana"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl hlasů (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == -6"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Vzdělání"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Strana"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl hlasů (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 0"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1,
+        "yOffset": 6
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Vzdělání"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Strana"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl hlasů (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 6"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "yOffset": -6
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Levice' || datum.p == 'AfD'"
+        },
+        {
+          "filter": "datum.dy == -6"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Levice' || datum.p == 'AfD'"
+        },
+        {
+          "filter": "datum.dy == 0"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "yOffset": 6
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Levice' || datum.p == 'AfD'"
+        },
+        {
+          "filter": "datum.dy == 6"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen pro ZDF, průzkum mezi 17 460 voliči v den voleb (grafiky „Wer wählte …? nach Bildung“, 20. 9. 2026, 23:59)"
+}
