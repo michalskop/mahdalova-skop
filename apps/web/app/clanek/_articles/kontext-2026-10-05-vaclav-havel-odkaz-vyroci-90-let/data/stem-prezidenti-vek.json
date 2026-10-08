@@ -2,7 +2,7 @@
     "$schema":  "https://vega.github.io/schema/vega-lite/v5.json",
     "title":  {
                   "text":  "Za nejlepšího prezidenta po roce 1989 má {Havla|#de1743} téměř polovina Čechů, nejvíc lidé mezi 30 a 59 lety",
-                  "subtitle":  "Kterého prezidenta lidé postavili na 1. místo, podle věku (%, září 2026). Součty se kvůli zaokrouhlení mohou lišit od 100. Najeďte myší na řádek."
+                  "subtitle":  "Kterého prezidenta lidé postavili na 1. místo, podle věku (%, září 2026). Pruhy jsou dopočtené do 100 %, čísla jsou zaokrouhlená podle agentury. Najeďte myší na řádek."
               },
     "_toggle_legend":  true,
     "width":  "container",
@@ -235,24 +235,24 @@
                      "x":  {
                                "field":  "hodnota",
                                "type":  "quantitative",
-                               "stack":  "zero",
+                               "stack":  "normalize",
                                "scale":  {
                                              "domain":  [
                                                             0,
-                                                            100
+                                                            1
                                                         ]
                                          },
                                "axis":  {
                                             "title":  null,
                                             "values":  [
                                                            0,
-                                                           25,
-                                                           50,
-                                                           75,
-                                                           100
+                                                           0.25,
+                                                           0.5,
+                                                           0.75,
+                                                           1
                                                        ],
                                             "grid":  true,
-                                            "labelExpr":  "datum.value + \u0027 %\u0027"
+                                            "labelExpr":  "round(datum.value * 100) + \u0027 %\u0027"
                                         }
                            },
                      "order":  {
@@ -325,7 +325,7 @@
                                        "x":  {
                                                  "field":  "hodnota",
                                                  "type":  "quantitative",
-                                                 "stack":  "zero",
+                                                 "stack":  "normalize",
                                                  "bandPosition":  0.5
                                              },
                                        "text":  {
