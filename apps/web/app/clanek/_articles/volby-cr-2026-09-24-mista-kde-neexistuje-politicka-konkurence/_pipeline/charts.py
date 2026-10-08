@@ -10,13 +10,13 @@ SRC = 'volby.gov.cz – otevřená data a výsledky komunálních voleb 1994–2
 
 C_ALL = '#6e227d'    # brandAmethyst.7 – jediná kandidátka, zvoleni všichni
 C_NAHR = '#c49ad8'   # brandAmethyst.3 – jediná kandidátka s náhradníky
-C_MULTI = '#ff934d'  # brandOrange.4 – víc kandidátek, ale zvoleni všichni
+C_MULTI = '#1a9fbd'  # brandTeal.5 – víc kandidátek, ale zvoleni všichni
 C_NONE = '#de1743'   # brand.6 – nikdo nekandidoval
 C_SOUT = '#bcbcb0'   # background.9 – soutěž
 NAVY = '#272a59'
 
 LBL = {2: 'Jediná kandidátka, zvoleni všichni', 1: 'Jediná kandidátka s náhradníky',
-       3: 'Víc kandidátek, ale zvoleni všichni', 4: 'Nikdo nekandidoval'}
+       3: 'Víc kandidátek, ale zvoleni všichni', 4: 'Volby se nekonají'}
 
 
 def save(name, spec, hide_mode=None):

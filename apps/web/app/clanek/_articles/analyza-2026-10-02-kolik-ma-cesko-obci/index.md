@@ -4,6 +4,8 @@ date: "2026-10-02"
 time: "08:30"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Příští pátek a sobotu se volí zastupitelstva v 6 251 obcích. Polovina z nich má méně než 500 obyvatel, v Rakousku je tak malá jen každá dvacátá obec. Správa nejmenších obcí stojí na obyvatele skoro dvakrát víc a téměř v každé druhé z nich kandiduje jediná listina. Proč máme tolik obcí a co se stalo, když je Rakousko slučovalo."
+coverImage: "images/cover.jpg"
+ogImage: "images/cover-og.jpg"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "obce", "samospráva", "Rakousko", "veřejné finance", "data"]
 ---
@@ -66,7 +68,7 @@ Druhý důsledek drobných obcí ukazují [otevřená data registrů kandidátů
 
 <VegaChart dataFile="data/kandidati.json" />
 
-Jediná listina ještě nemusí znamenat, že volič nemá na výběr – na kandidátce může být víc lidí, než je míst, a volič vybírá mezi nimi. V 1 056 obcích je ale kandidátů přesně tolik, kolik je mandátů, a v dalších 17 méně. Tam zvolí každého, kdo kandiduje. V obcích do 200 obyvatel to platí pro čtvrtinu z nich. Kandidátů celkově ubývá, jak jsme ukázali v [analýze letošních kandidátek](/clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu): od roku 2014 jich je o pětinu méně.
+Jediná listina ještě nemusí znamenat, že volič nemá na výběr – na kandidátce může být víc lidí, než je míst, a volič vybírá mezi nimi. V 930 obcích s jedinou listinou je ale kandidátů nejvýš tolik, kolik je mandátů, a dalších 140 obcí má víc listin, na kterých dohromady nestojí víc lidí, než je míst. Ve všech těchto 1 070 obcích zvolí každého, kdo kandiduje. V obcích do 200 obyvatel to platí pro čtvrtinu z nich. Kandidátů celkově ubývá, jak jsme ukázali v [analýze letošních kandidátek](/clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu): od roku 2014 jich je o pětinu méně.
 
 ## Rakousko obce slučovalo i zákonem. Ušetřilo na provozu, na lidech zatím ne
 

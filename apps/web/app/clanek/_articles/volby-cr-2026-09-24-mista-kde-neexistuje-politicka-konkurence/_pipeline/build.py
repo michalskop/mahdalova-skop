@@ -5,7 +5,7 @@ Kategorie obce v daném roce (řádný termín voleb, jen zastupitelstva obcí, 
   1 = jediná kandidátka, víc kandidátů než mandátů (jsou náhradníci)
   2 = jediná kandidátka, kandidátů nejvýš tolik jako mandátů (zvoleni všichni, bez náhradníků)
   3 = víc kandidátek, ale kandidátů dohromady nejvýš tolik jako mandátů (zvoleni všichni)
-  4 = žádná kandidátka (volby se nekonaly)
+  4 = volby se nekonaly: žádná kandidátka nebo méně než pět kandidátů (ČSÚ: stav „volby se nekonají“)
 """
 import json, os
 import pandas as pd
@@ -18,7 +18,7 @@ os.makedirs(OUT, exist_ok=True)
 def cat(listy, kand, mand):
     if kand < 0:  # 1994/98, obce s obvody: kandidáti neuvedeni, ale víc stran → soutěž
         return 0
-    if listy == 0:
+    if listy == 0 or kand < 5:
         return 4
     if listy == 1:
         return 2 if kand <= mand else 1
