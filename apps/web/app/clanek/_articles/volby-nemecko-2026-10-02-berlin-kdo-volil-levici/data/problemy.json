@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Bydlení označila za hlavní problém Berlína víc než polovina voličů",
+    "subtitle": "Nejdůležitější problémy města podle voličů (% dotázaných, bylo možné uvést víc problémů)"
+  },
+  "width": 600,
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "k": "Byty a nájmy",
+        "v": 53,
+        "o": 1
+      },
+      {
+        "k": "Doprava",
+        "v": 23,
+        "o": 2
+      },
+      {
+        "k": "Kriminalita",
+        "v": 19,
+        "o": 3
+      },
+      {
+        "k": "Odpadky a čistota",
+        "v": 16,
+        "o": 4
+      },
+      {
+        "k": "Ceny a mzdy",
+        "v": 12,
+        "o": 5
+      },
+      {
+        "k": "Škola a vzdělání",
+        "v": 11,
+        "o": 6
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "k",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          60
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 22
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.o == 1",
+            "value": "#9f319e"
+          },
+          "value": "#a6b0d4"
+        },
+        "tooltip": [
+          {
+            "field": "k",
+            "type": "nominal",
+            "title": "Problém"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl voličů (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#272a59"
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen pro ZDF, grafika „Die wichtigsten Probleme“, 21. 9. 2026, 00:37; součet přesahuje 100 %, protože respondenti mohli jmenovat víc problémů"
+}

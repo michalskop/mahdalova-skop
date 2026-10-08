@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Víc než třetina dnešních voličů Levice v roce 2023 k volbám nešla",
+    "subtitle": "Jak volili v berlínských volbách 2023 ti, kdo letos dali hlas Levici (%)"
+  },
+  "width": 600,
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "k": "Nevolili",
+        "v": 37,
+        "o": 1,
+        "c": "#6267a3"
+      },
+      {
+        "k": "Levice",
+        "v": 27,
+        "o": 2,
+        "c": "#9f319e"
+      },
+      {
+        "k": "Zelení",
+        "v": 14,
+        "o": 3,
+        "c": "#507e08"
+      },
+      {
+        "k": "SPD",
+        "v": 11,
+        "o": 4,
+        "c": "#e8412c"
+      },
+      {
+        "k": "Jiná strana",
+        "v": 6,
+        "o": 5,
+        "c": "#a6b0d4"
+      },
+      {
+        "k": "CDU",
+        "v": 5,
+        "o": 6,
+        "c": "#101432"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "k",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          45
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 22
+      },
+      "encoding": {
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "k",
+            "type": "nominal",
+            "title": "Volba v roce 2023"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Podíl dnešních voličů Levice (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#272a59"
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen pro ZDF, grafika „Woher kommen die Wähler der Linken?“, 20. 9. 2026, 23:59; zpětný dotaz na volbu v opakovaných volbách 2023"
+}
