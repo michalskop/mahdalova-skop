@@ -1,0 +1,14 @@
+label: Znásilnění v Česku v číslech
+numbers:
+  - value: "11 %"
+    title: Obětí násilí jde na policii
+    description: Podle evropského šetření EU-GBV oznámila policii fyzické nebo sexuální násilí jen asi desetina Češek, které ho zažily. Průzkum IKSP uvádí zhruba 15 procent.
+    color: brandNavy
+  - value: "52,9 %"
+    title: Objasněnost znásilnění v roce 2025
+    description: V roce 2010 policie objasnila tři čtvrtiny případů. Loni poprvé méně než prostých krádeží (53,4 %).
+    color: brand
+  - value: "161"
+    title: Pachatelů šlo v roce 2024 do vězení
+    description: Policie ten rok registrovala 1 067 znásilnění, soudy odsoudily 283 lidí.
+    color: brandOrange

@@ -1,0 +1,216 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Kde policie eviduje víc znásilnění, končí odsouzením menší část",
+    "subtitle": "Země EU, 2024. Vodorovně: policií zaznamenaná znásilnění na 100 000 obyvatel. Svisle: odsouzení na 100 zaznamenaných případů."
+  },
+  "width": 600,
+  "height": 380,
+  "data": {
+    "values": [
+      {
+        "z": "Rakousko",
+        "x": 26.29,
+        "y": 11.3,
+        "barva": "#101432"
+      },
+      {
+        "z": "Bulharsko",
+        "x": 1.72,
+        "y": 23.4,
+        "barva": "#101432"
+      },
+      {
+        "z": "Česko",
+        "x": 17.13,
+        "y": 32.8,
+        "barva": "#de1743"
+      },
+      {
+        "z": "Německo",
+        "x": 17.09,
+        "y": 8.7,
+        "barva": "#101432"
+      },
+      {
+        "z": "Dánsko",
+        "x": 38.83,
+        "y": 9.0,
+        "barva": "#101432"
+      },
+      {
+        "z": "Řecko",
+        "x": 3.39,
+        "y": 52.6,
+        "barva": "#101432"
+      },
+      {
+        "z": "Francie",
+        "x": 65.95,
+        "y": 4.1,
+        "barva": "#101432"
+      },
+      {
+        "z": "Chorvatsko",
+        "x": 12.4,
+        "y": 19.6,
+        "barva": "#101432"
+      },
+      {
+        "z": "Maďarsko",
+        "x": 5.1,
+        "y": 58.1,
+        "barva": "#101432"
+      },
+      {
+        "z": "Litva",
+        "x": 2.98,
+        "y": 47.7,
+        "barva": "#101432"
+      },
+      {
+        "z": "Lotyšsko",
+        "x": 15.33,
+        "y": 21.5,
+        "barva": "#101432"
+      },
+      {
+        "z": "Portugalsko",
+        "x": 5.1,
+        "y": 16.4,
+        "barva": "#101432"
+      },
+      {
+        "z": "Rumunsko",
+        "x": 13.53,
+        "y": 9.7,
+        "barva": "#101432"
+      },
+      {
+        "z": "Švédsko",
+        "x": 88.22,
+        "y": 6.8,
+        "barva": "#101432"
+      },
+      {
+        "z": "Slovensko",
+        "x": 2.41,
+        "y": 29.0,
+        "barva": "#101432"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative",
+      "scale": {
+        "type": "log",
+        "domain": [
+          1,
+          100
+        ]
+      },
+      "axis": {
+        "title": "Zaznamenaná znásilnění na 100 000 obyvatel (log. osa)",
+        "grid": true,
+        "gridColor": "#e8e3d2",
+        "values": [
+          1,
+          2,
+          5,
+          10,
+          20,
+          50,
+          100
+        ]
+      }
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          65
+        ]
+      },
+      "axis": {
+        "title": "Odsouzení na 100 případů",
+        "grid": true,
+        "gridColor": "#e8e3d2"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "size": 110,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "z",
+            "title": "Země"
+          },
+          {
+            "field": "x",
+            "title": "Zaznamenáno na 100 tis.",
+            "format": ".1f"
+          },
+          {
+            "field": "y",
+            "title": "Odsouzení na 100 případů",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.z != 'Rumunsko'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "z"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.z == 'Rumunsko'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "z"
+        }
+      }
+    }
+  ],
+  "_source": "[Eurostat crim_off_cat a crim_hom_soff](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_soff/default/table), vlastní výpočet DataTimes. Hrubý ukazatel: odsouzené osoby a zaznamenané činy z téhož roku. Bez zemí s neúplnými daty (Španělsko, Polsko, Belgie, Nizozemsko, Finsko, Irsko). Česko od roku 2021 vykazuje Eurostatu i pohlavní styk s dítětem mladším 15 let."
+}

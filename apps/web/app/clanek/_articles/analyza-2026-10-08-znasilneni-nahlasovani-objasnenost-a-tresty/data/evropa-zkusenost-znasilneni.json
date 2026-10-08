@@ -1,0 +1,216 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Ve srovnání s Evropou uvádí znásilnění méně Češek",
+    "subtitle": "Ženy 18–74 let, které v dospělosti zažily znásilnění (%). Vyšší čísla mohou znamenat i větší ochotu o násilí mluvit."
+  },
+  "width": 600,
+  "height": 470,
+  "data": {
+    "values": [
+      {
+        "z": "Švédsko",
+        "v": 21.9,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Finsko",
+        "v": 15.5,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Dánsko",
+        "v": 15.4,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Lucembursko",
+        "v": 15.3,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Maďarsko",
+        "v": 13.6,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Slovensko",
+        "v": 13.5,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Estonsko",
+        "v": 11.9,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Nizozemsko",
+        "v": 11.5,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Francie",
+        "v": 11.1,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Německo",
+        "v": 9.9,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "EU (průměr)",
+        "v": 9.2,
+        "barva": "#101432"
+      },
+      {
+        "z": "Rakousko",
+        "v": 8.7,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Španělsko",
+        "v": 7.3,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Česko",
+        "v": 7.1,
+        "barva": "#de1743"
+      },
+      {
+        "z": "Lotyšsko",
+        "v": 5.9,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Řecko",
+        "v": 5.9,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Chorvatsko",
+        "v": 5.0,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Slovinsko",
+        "v": 4.7,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Portugalsko",
+        "v": 3.6,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Polsko",
+        "v": 3.3,
+        "barva": "#c8c8bc"
+      },
+      {
+        "z": "Bulharsko",
+        "v": 2.3,
+        "barva": "#c8c8bc"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "z",
+      "type": "nominal",
+      "sort": [
+        "Švédsko",
+        "Finsko",
+        "Dánsko",
+        "Lucembursko",
+        "Maďarsko",
+        "Slovensko",
+        "Estonsko",
+        "Nizozemsko",
+        "Francie",
+        "Německo",
+        "EU (průměr)",
+        "Rakousko",
+        "Španělsko",
+        "Česko",
+        "Lotyšsko",
+        "Řecko",
+        "Chorvatsko",
+        "Slovinsko",
+        "Portugalsko",
+        "Polsko",
+        "Bulharsko"
+      ],
+      "axis": {
+        "title": null,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "height": 14
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "z",
+            "title": "Země"
+          },
+          {
+            "field": "v",
+            "title": "Zažilo znásilnění (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "_source": "[Eurostat – EU-GBV survey (gbv_any_type)](https://ec.europa.eu/eurostat/databrowser/view/gbv_any_type/default/table), sběr 2020–2024 (v Česku 2023–2024, FRA a EIGE). Vybrané země; Itálie bez údaje."
+}

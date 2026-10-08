@@ -1,0 +1,346 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Policie eviduje skoro dvakrát víc znásilnění než v roce 2010",
+    "subtitle": "Registrované případy znásilnění (§ 185) podle toho, zda je policie v témže roce objasnila"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "rok": 2010,
+        "typ": "Objasněno",
+        "v": 437,
+        "reg": 586,
+        "obj": 437,
+        "pct": 74.6
+      },
+      {
+        "rok": 2010,
+        "typ": "Neobjasněno",
+        "v": 149,
+        "reg": 586,
+        "obj": 437,
+        "pct": 74.6
+      },
+      {
+        "rok": 2011,
+        "typ": "Objasněno",
+        "v": 468,
+        "reg": 675,
+        "obj": 468,
+        "pct": 69.3
+      },
+      {
+        "rok": 2011,
+        "typ": "Neobjasněno",
+        "v": 207,
+        "reg": 675,
+        "obj": 468,
+        "pct": 69.3
+      },
+      {
+        "rok": 2012,
+        "typ": "Objasněno",
+        "v": 489,
+        "reg": 669,
+        "obj": 489,
+        "pct": 73.1
+      },
+      {
+        "rok": 2012,
+        "typ": "Neobjasněno",
+        "v": 180,
+        "reg": 669,
+        "obj": 489,
+        "pct": 73.1
+      },
+      {
+        "rok": 2013,
+        "typ": "Objasněno",
+        "v": 410,
+        "reg": 589,
+        "obj": 410,
+        "pct": 69.6
+      },
+      {
+        "rok": 2013,
+        "typ": "Neobjasněno",
+        "v": 179,
+        "reg": 589,
+        "obj": 410,
+        "pct": 69.6
+      },
+      {
+        "rok": 2014,
+        "typ": "Objasněno",
+        "v": 455,
+        "reg": 669,
+        "obj": 455,
+        "pct": 68.0
+      },
+      {
+        "rok": 2014,
+        "typ": "Neobjasněno",
+        "v": 214,
+        "reg": 669,
+        "obj": 455,
+        "pct": 68.0
+      },
+      {
+        "rok": 2015,
+        "typ": "Objasněno",
+        "v": 425,
+        "reg": 598,
+        "obj": 425,
+        "pct": 71.1
+      },
+      {
+        "rok": 2015,
+        "typ": "Neobjasněno",
+        "v": 173,
+        "reg": 598,
+        "obj": 425,
+        "pct": 71.1
+      },
+      {
+        "rok": 2016,
+        "typ": "Objasněno",
+        "v": 448,
+        "reg": 649,
+        "obj": 448,
+        "pct": 69.0
+      },
+      {
+        "rok": 2016,
+        "typ": "Neobjasněno",
+        "v": 201,
+        "reg": 649,
+        "obj": 448,
+        "pct": 69.0
+      },
+      {
+        "rok": 2017,
+        "typ": "Objasněno",
+        "v": 418,
+        "reg": 598,
+        "obj": 418,
+        "pct": 69.9
+      },
+      {
+        "rok": 2017,
+        "typ": "Neobjasněno",
+        "v": 180,
+        "reg": 598,
+        "obj": 418,
+        "pct": 69.9
+      },
+      {
+        "rok": 2018,
+        "typ": "Objasněno",
+        "v": 439,
+        "reg": 651,
+        "obj": 439,
+        "pct": 67.4
+      },
+      {
+        "rok": 2018,
+        "typ": "Neobjasněno",
+        "v": 212,
+        "reg": 651,
+        "obj": 439,
+        "pct": 67.4
+      },
+      {
+        "rok": 2019,
+        "typ": "Objasněno",
+        "v": 441,
+        "reg": 683,
+        "obj": 441,
+        "pct": 64.6
+      },
+      {
+        "rok": 2019,
+        "typ": "Neobjasněno",
+        "v": 242,
+        "reg": 683,
+        "obj": 441,
+        "pct": 64.6
+      },
+      {
+        "rok": 2020,
+        "typ": "Objasněno",
+        "v": 370,
+        "reg": 639,
+        "obj": 370,
+        "pct": 57.9
+      },
+      {
+        "rok": 2020,
+        "typ": "Neobjasněno",
+        "v": 269,
+        "reg": 639,
+        "obj": 370,
+        "pct": 57.9
+      },
+      {
+        "rok": 2021,
+        "typ": "Objasněno",
+        "v": 448,
+        "reg": 773,
+        "obj": 448,
+        "pct": 58.0
+      },
+      {
+        "rok": 2021,
+        "typ": "Neobjasněno",
+        "v": 325,
+        "reg": 773,
+        "obj": 448,
+        "pct": 58.0
+      },
+      {
+        "rok": 2022,
+        "typ": "Objasněno",
+        "v": 519,
+        "reg": 880,
+        "obj": 519,
+        "pct": 59.0
+      },
+      {
+        "rok": 2022,
+        "typ": "Neobjasněno",
+        "v": 361,
+        "reg": 880,
+        "obj": 519,
+        "pct": 59.0
+      },
+      {
+        "rok": 2023,
+        "typ": "Objasněno",
+        "v": 530,
+        "reg": 917,
+        "obj": 530,
+        "pct": 57.8
+      },
+      {
+        "rok": 2023,
+        "typ": "Neobjasněno",
+        "v": 387,
+        "reg": 917,
+        "obj": 530,
+        "pct": 57.8
+      },
+      {
+        "rok": 2024,
+        "typ": "Objasněno",
+        "v": 580,
+        "reg": 1067,
+        "obj": 580,
+        "pct": 54.4
+      },
+      {
+        "rok": 2024,
+        "typ": "Neobjasněno",
+        "v": 487,
+        "reg": 1067,
+        "obj": 580,
+        "pct": 54.4
+      },
+      {
+        "rok": 2025,
+        "typ": "Objasněno",
+        "v": 574,
+        "reg": 1086,
+        "obj": 574,
+        "pct": 52.9
+      },
+      {
+        "rok": 2025,
+        "typ": "Neobjasněno",
+        "v": 512,
+        "reg": 1086,
+        "obj": 574,
+        "pct": 52.9
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "ordinal",
+      "axis": {
+        "title": null,
+        "labelAngle": 0,
+        "values": [
+          2010,
+          2013,
+          2016,
+          2019,
+          2022,
+          2025
+        ]
+      }
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "stack": true,
+      "axis": {
+        "title": null,
+        "grid": true,
+        "gridColor": "#e8e3d2"
+      }
+    },
+    "color": {
+      "field": "typ",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Objasněno",
+          "Neobjasněno"
+        ],
+        "range": [
+          "#101432",
+          "#de1743"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top",
+        "symbolType": "square"
+      }
+    },
+    "order": {
+      "field": "typ",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {
+        "field": "rok",
+        "title": "Rok"
+      },
+      {
+        "field": "reg",
+        "title": "Registrováno",
+        "format": ",.0f"
+      },
+      {
+        "field": "obj",
+        "title": "Objasněno",
+        "format": ",.0f"
+      },
+      {
+        "field": "pct",
+        "title": "Objasněnost (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "_source": "[Policie ČR – statistické přehledy kriminality](https://policie.gov.cz/statisticke-prehledy-kriminality-za-roky-2016---2025) (TSK 201, prosincové sestavy) a archivní výkazy 2010–2015. Od 2025 platí užší definice (část činů spadá pod nový sexuální útok, § 185a – 328 případů v roce 2025)."
+}
