@@ -17,11 +17,9 @@ Pátého října 2026 by Václavu Havlovi bylo 90 let. Výročí připomněla pa
 
 Havel byl nejdřív dramatik. Jeho hry v 60. letech uvádělo pražské Divadlo Na zábradlí, po roce 1968 je režim zakázal. Spoluzaložil Chartu 77 a za obranu lidských práv strávil ve vězení přes čtyři roky. V prosinci 1989 ho Federální shromáždění zvolilo prezidentem. Byl posledním prezidentem Československa a v letech 1993–2003 prvním prezidentem České republiky ([vaclavhavel.cz](https://www.vaclavhavel.cz/cs/vaclav-havel/prezident)).
 
-Československu a později Česku dal ve světě tvář. V únoru 1990, necelé dva měsíce po zvolení, mluvil před oběma komorami amerického Kongresu. V březnu 1999 vstoupila Česká republika s Polskem a Maďarskem do NATO, o což Havel jako prezident usiloval ([vaclavhavel.cz](https://www.vaclavhavel.cz/cs/vaclav-havel/prezident)). Jeho jméno dnes nese pražské letiště ([Letiště Praha](https://www.prg.aero/en/history-vaclav-havel-airport-prague)), budova Evropského parlamentu ve Štrasburku ([Radio Prague](https://english.radio.cz/node/8188273)) i cena za lidská práva, kterou uděluje Parlamentní shromáždění Rady Evropy ([PACE](https://pace.coe.int/en/news/4647/premiere-edition-du-prix-vaclav-havel-annonce-du-laureat)).
+<SupportBanner float="left" />Československu a později Česku dal ve světě tvář. V únoru 1990, necelé dva měsíce po zvolení, mluvil před oběma komorami amerického Kongresu. V březnu 1999 vstoupila Česká republika s Polskem a Maďarskem do NATO, o což Havel jako prezident usiloval ([vaclavhavel.cz](https://www.vaclavhavel.cz/cs/vaclav-havel/prezident)). Jeho jméno dnes nese pražské letiště ([Letiště Praha](https://www.prg.aero/en/history-vaclav-havel-airport-prague)), budova Evropského parlamentu ve Štrasburku ([Radio Prague](https://english.radio.cz/node/8188273)) i cena za lidská práva, kterou uděluje Parlamentní shromáždění Rady Evropy ([PACE](https://pace.coe.int/en/news/4647/premiere-edition-du-prix-vaclav-havel-annonce-du-laureat)).
 
 Doma zůstává měřítkem. V průzkumu agentury STEM/MARK ze září 2026 ho Češi znovu označili za nejlepšího prezidenta po roce 1989, před Václavem Klausem, Petrem Pavlem a Milošem Zemanem ([STEM/MARK](https://stemmark.cz/vaclav-havel-neochvejne-nejlepsim-prezidentem-po-roce-1989-petr-pavel-si-od-minule-mirne-polepsil)).
-
-<SupportBanner />
 
 Výročí je příležitost podívat se na jeho odkaz konkrétně. Časová osa sleduje, kdy se Havel postavil za pronásledované, vězně, Romy nebo čínské disidenty – a kdy podpořil bombardování a válku, za které je dodnes kritizován.
 
