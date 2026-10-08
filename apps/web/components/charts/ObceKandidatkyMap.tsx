@@ -19,7 +19,7 @@ const COL: Record<number, string> = {
   0: '#e9e9dd', // background.5 – soutěž
   1: '#c49ad8', // brandAmethyst.3 – jediná kandidátka s náhradníky
   2: '#6e227d', // brandAmethyst.7 – jediná kandidátka, zvoleni všichni
-  3: '#ff934d', // brandOrange.4 – víc kandidátek, ale zvoleni všichni
+  3: '#1a9fbd', // brandTeal.5 – víc kandidátek, ale zvoleni všichni
   4: '#de1743', // brand.6 – nikdo nekandidoval
 };
 const NODATA = '#f8f6f0';   // background.2 – obec tehdy nebyla samostatná
