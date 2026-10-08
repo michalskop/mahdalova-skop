@@ -16,7 +16,7 @@ const COVERS = {
   'mista-bez-konkurence': {
     map: 'map-kandidatky.png',
     headline: 'Volby bez výběru',
-    sub: '<b class="lila">1&nbsp;830 obcí</b> má jedinou kandidátku. V&nbsp;931 z&nbsp;nich budou zvoleni všichni.',
+    sub: '<b class="lila">1&nbsp;830 obcí</b> má jedinou kandidátku. Zhruba v&nbsp;polovině z&nbsp;nich budou zvoleni všichni.',
   },
 };
 
@@ -34,7 +34,8 @@ body{width:${W}px;height:${H}px;background:#101432;overflow:hidden;position:rela
 .h{font-family:'IBM Plex Serif',serif;font-weight:700;font-size:${L.h}px;line-height:1.08}
 .s{margin-top:${L.gap}px;font-weight:500;font-size:${L.s}px;line-height:1.35;color:#d9d7e6}
 .red{color:#ff4d6d}.lila{color:#d6a8ec}
-.logo{position:absolute;right:${L.lr}px;bottom:${L.lb}px;display:flex;align-items:center;gap:${L.l*.4}px;font-weight:700;font-size:${L.l}px}
+.logo{position:absolute;z-index:1;isolation:isolate;right:${L.lr}px;bottom:${L.lb}px;display:flex;align-items:center;gap:${L.l*.4}px;font-weight:700;font-size:${L.l}px}
+.logo::before{content:'';position:absolute;inset:-${L.l*.6}px -${L.l*.8}px;z-index:-1;border-radius:${L.l*2}px;background:#101432;box-shadow:0 0 ${L.l*1.2}px ${L.l*.9}px #101432}
 .logo svg{width:${L.l*2.4}px;height:${L.l*2.4}px}
 </style></head><body>
 <img class="map" src="${c.mapUrl}">
@@ -45,10 +46,10 @@ body{width:${W}px;height:${H}px;background:#101432;overflow:hidden;position:rela
 </body></html>`;
 
 // homepage 1500×1200: text nahoře, mapa přes celou šířku dole
-const HP = { mx: 30, my: 350, mw: 1330, gap: 22, fade: 'linear-gradient(180deg,#101432 28%,rgba(16,20,50,0) 42%)',
+const HP = { mx: 130, my: 300, mw: 1520, gap: 22, fade: 'linear-gradient(180deg,#101432 28%,rgba(16,20,50,0) 42%)',
   tx: 80, ty: 62, tag: 34, hx: 80, hy: 150, hw: 1340, h: 118, sy: 300, s: 40, lr: 95, lb: 70, l: 42 };
 // OG 1200×630: mapa vlevo, text vpravo
-const OG = { mx: -330, my: 10, mw: 1450, gap: 18, fade: 'linear-gradient(90deg,rgba(16,20,50,0) 38%,rgba(16,20,50,.85) 55%,#101432 62%)',
+const OG = { mx: -280, my: -90, mw: 1700, gap: 18, fade: 'linear-gradient(90deg,rgba(16,20,50,0) 38%,rgba(16,20,50,.85) 55%,#101432 62%)',
   tx: 600, ty: 50, tag: 21, hx: 600, hy: 118, hw: 540, h: 66, sy: 290, s: 26, lr: 100, lb: 70, l: 30 };
 
 (async () => {
