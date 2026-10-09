@@ -1,0 +1,273 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Zhruba polovina odsouzených za znásilnění odchází s podmínkou",
+    "subtitle": "Pravomocně odsouzení podle § 185 a druh hlavního trestu"
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "rok": 2016,
+        "druh": "Nepodmíněně",
+        "v": 113,
+        "o": 227,
+        "pct": 49.8
+      },
+      {
+        "rok": 2016,
+        "druh": "Podmíněně",
+        "v": 109,
+        "o": 227,
+        "pct": 48.0
+      },
+      {
+        "rok": 2016,
+        "druh": "Jiný trest",
+        "v": 5,
+        "o": 227,
+        "pct": 2.2
+      },
+      {
+        "rok": 2017,
+        "druh": "Nepodmíněně",
+        "v": 97,
+        "o": 205,
+        "pct": 47.3
+      },
+      {
+        "rok": 2017,
+        "druh": "Podmíněně",
+        "v": 106,
+        "o": 205,
+        "pct": 51.7
+      },
+      {
+        "rok": 2017,
+        "druh": "Jiný trest",
+        "v": 2,
+        "o": 205,
+        "pct": 1.0
+      },
+      {
+        "rok": 2018,
+        "druh": "Nepodmíněně",
+        "v": 108,
+        "o": 204,
+        "pct": 52.9
+      },
+      {
+        "rok": 2018,
+        "druh": "Podmíněně",
+        "v": 94,
+        "o": 204,
+        "pct": 46.1
+      },
+      {
+        "rok": 2018,
+        "druh": "Jiný trest",
+        "v": 2,
+        "o": 204,
+        "pct": 1.0
+      },
+      {
+        "rok": 2019,
+        "druh": "Nepodmíněně",
+        "v": 106,
+        "o": 221,
+        "pct": 48.0
+      },
+      {
+        "rok": 2019,
+        "druh": "Podmíněně",
+        "v": 113,
+        "o": 221,
+        "pct": 51.1
+      },
+      {
+        "rok": 2019,
+        "druh": "Jiný trest",
+        "v": 2,
+        "o": 221,
+        "pct": 0.9
+      },
+      {
+        "rok": 2020,
+        "druh": "Nepodmíněně",
+        "v": 91,
+        "o": 185,
+        "pct": 49.2
+      },
+      {
+        "rok": 2020,
+        "druh": "Podmíněně",
+        "v": 90,
+        "o": 185,
+        "pct": 48.6
+      },
+      {
+        "rok": 2020,
+        "druh": "Jiný trest",
+        "v": 4,
+        "o": 185,
+        "pct": 2.2
+      },
+      {
+        "rok": 2021,
+        "druh": "Nepodmíněně",
+        "v": 123,
+        "o": 252,
+        "pct": 48.8
+      },
+      {
+        "rok": 2021,
+        "druh": "Podmíněně",
+        "v": 125,
+        "o": 252,
+        "pct": 49.6
+      },
+      {
+        "rok": 2021,
+        "druh": "Jiný trest",
+        "v": 4,
+        "o": 252,
+        "pct": 1.6
+      },
+      {
+        "rok": 2022,
+        "druh": "Nepodmíněně",
+        "v": 126,
+        "o": 247,
+        "pct": 51.0
+      },
+      {
+        "rok": 2022,
+        "druh": "Podmíněně",
+        "v": 115,
+        "o": 247,
+        "pct": 46.6
+      },
+      {
+        "rok": 2022,
+        "druh": "Jiný trest",
+        "v": 6,
+        "o": 247,
+        "pct": 2.4
+      },
+      {
+        "rok": 2023,
+        "druh": "Nepodmíněně",
+        "v": 152,
+        "o": 301,
+        "pct": 50.5
+      },
+      {
+        "rok": 2023,
+        "druh": "Podmíněně",
+        "v": 145,
+        "o": 301,
+        "pct": 48.2
+      },
+      {
+        "rok": 2023,
+        "druh": "Jiný trest",
+        "v": 4,
+        "o": 301,
+        "pct": 1.3
+      },
+      {
+        "rok": 2024,
+        "druh": "Nepodmíněně",
+        "v": 161,
+        "o": 283,
+        "pct": 56.9
+      },
+      {
+        "rok": 2024,
+        "druh": "Podmíněně",
+        "v": 119,
+        "o": 283,
+        "pct": 42.0
+      },
+      {
+        "rok": 2024,
+        "druh": "Jiný trest",
+        "v": 3,
+        "o": 283,
+        "pct": 1.1
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "ordinal",
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "stack": true,
+      "axis": {
+        "title": null,
+        "grid": true,
+        "gridColor": "#e8e3d2"
+      }
+    },
+    "color": {
+      "field": "druh",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Nepodmíněně",
+          "Podmíněně",
+          "Jiný trest"
+        ],
+        "range": [
+          "#de1743",
+          "#fda668",
+          "#c8c8bc"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    },
+    "order": {
+      "field": "druh",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {
+        "field": "rok",
+        "title": "Rok"
+      },
+      {
+        "field": "druh",
+        "title": "Trest"
+      },
+      {
+        "field": "v",
+        "title": "Osob"
+      },
+      {
+        "field": "pct",
+        "title": "Podíl (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "o",
+        "title": "Odsouzených celkem"
+      }
+    ]
+  },
+  "_source": "[Ministerstvo spravedlnosti – Přehled o pravomocně odsouzených osobách podle paragrafů](https://cslav.justice.cz/InfoData/prehledy-statistickych-listu.html). Včetně mladistvých. Data za rok 2025 zatím nevyšla."
+}

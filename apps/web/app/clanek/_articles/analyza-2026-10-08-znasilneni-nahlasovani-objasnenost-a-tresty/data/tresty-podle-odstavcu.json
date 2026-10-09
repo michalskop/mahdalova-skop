@@ -1,0 +1,148 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Za mříže jde jen každý čtvrtý odsouzený podle nejmírnějšího odstavce",
+    "subtitle": "Druh trestu podle odstavce § 185 ve znění do roku 2024, odsouzení 2016–2022 (%)"
+  },
+  "width": 600,
+  "height": 170,
+  "data": {
+    "values": [
+      {
+        "o": "Odst. 1 (6 měs.–5 let)",
+        "druh": "Nepodmíněně",
+        "v": 24.5,
+        "n": 184
+      },
+      {
+        "o": "Odst. 1 (6 měs.–5 let)",
+        "druh": "Podmíněně",
+        "v": 68.5,
+        "n": 184
+      },
+      {
+        "o": "Odst. 1 (6 měs.–5 let)",
+        "druh": "Jiný trest",
+        "v": 7.0,
+        "n": 184
+      },
+      {
+        "o": "Odst. 2 (2–10 let)",
+        "druh": "Nepodmíněně",
+        "v": 42.5,
+        "n": 790
+      },
+      {
+        "o": "Odst. 2 (2–10 let)",
+        "druh": "Podmíněně",
+        "v": 56.5,
+        "n": 790
+      },
+      {
+        "o": "Odst. 2 (2–10 let)",
+        "druh": "Jiný trest",
+        "v": 1.0,
+        "n": 790
+      },
+      {
+        "o": "Odst. 3 (5–12 let)",
+        "druh": "Nepodmíněně",
+        "v": 81.9,
+        "n": 421
+      },
+      {
+        "o": "Odst. 3 (5–12 let)",
+        "druh": "Podmíněně",
+        "v": 17.3,
+        "n": 421
+      },
+      {
+        "o": "Odst. 3 (5–12 let)",
+        "druh": "Jiný trest",
+        "v": 0.8,
+        "n": 421
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "height": 30
+  },
+  "encoding": {
+    "y": {
+      "field": "o",
+      "type": "nominal",
+      "sort": [
+        "Odst. 1 (6 měs.–5 let)",
+        "Odst. 2 (2–10 let)",
+        "Odst. 3 (5–12 let)"
+      ],
+      "axis": {
+        "title": null,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "stack": "zero",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": null,
+        "grid": true,
+        "gridColor": "#e8e3d2"
+      }
+    },
+    "color": {
+      "field": "druh",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Nepodmíněně",
+          "Podmíněně",
+          "Jiný trest"
+        ],
+        "range": [
+          "#de1743",
+          "#fda668",
+          "#c8c8bc"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    },
+    "order": {
+      "field": "druh",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {
+        "field": "o",
+        "title": "Odstavec"
+      },
+      {
+        "field": "druh",
+        "title": "Trest"
+      },
+      {
+        "field": "v",
+        "title": "Podíl (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "n",
+        "title": "Odsouzených"
+      }
+    ]
+  },
+  "_source": "[Jaktrestame.cz](https://jaktrestame.cz) (anonymizované statistické listy MSp, dospělí, vč. souběhu), vlastní výpočet DataTimes. Odst. 1 dříve zahrnoval i jiný pohlavní styk než soulož, odst. 2 soulož, oběť 15–18 let nebo čin se zbraní, odst. 3 oběť mladší 15 let nebo těžkou újmu."
+}

@@ -1,0 +1,255 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Objasněnost znásilnění klesla pod úroveň prostých krádeží",
+    "subtitle": "Podíl registrovaných případů, které policie objasnila v témže roce (%)"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "rok": 2010,
+        "cin": "Znásilnění",
+        "v": 74.6
+      },
+      {
+        "rok": 2011,
+        "cin": "Znásilnění",
+        "v": 69.3
+      },
+      {
+        "rok": 2012,
+        "cin": "Znásilnění",
+        "v": 73.1
+      },
+      {
+        "rok": 2013,
+        "cin": "Znásilnění",
+        "v": 69.6
+      },
+      {
+        "rok": 2014,
+        "cin": "Znásilnění",
+        "v": 68.0
+      },
+      {
+        "rok": 2015,
+        "cin": "Znásilnění",
+        "v": 71.1
+      },
+      {
+        "rok": 2016,
+        "cin": "Znásilnění",
+        "v": 69.0
+      },
+      {
+        "rok": 2017,
+        "cin": "Znásilnění",
+        "v": 69.9
+      },
+      {
+        "rok": 2018,
+        "cin": "Znásilnění",
+        "v": 67.4
+      },
+      {
+        "rok": 2019,
+        "cin": "Znásilnění",
+        "v": 64.6
+      },
+      {
+        "rok": 2020,
+        "cin": "Znásilnění",
+        "v": 57.9
+      },
+      {
+        "rok": 2021,
+        "cin": "Znásilnění",
+        "v": 58.0
+      },
+      {
+        "rok": 2022,
+        "cin": "Znásilnění",
+        "v": 59.0
+      },
+      {
+        "rok": 2023,
+        "cin": "Znásilnění",
+        "v": 57.8
+      },
+      {
+        "rok": 2024,
+        "cin": "Znásilnění",
+        "v": 54.4
+      },
+      {
+        "rok": 2025,
+        "cin": "Znásilnění",
+        "v": 52.9
+      },
+      {
+        "rok": 2010,
+        "cin": "Krádeže prosté",
+        "v": 16.6
+      },
+      {
+        "rok": 2010,
+        "cin": "Celková kriminalita",
+        "v": 37.6
+      },
+      {
+        "rok": 2015,
+        "cin": "Krádeže prosté",
+        "v": 22.6
+      },
+      {
+        "rok": 2015,
+        "cin": "Celková kriminalita",
+        "v": 45.3
+      },
+      {
+        "rok": 2016,
+        "cin": "Krádeže prosté",
+        "v": 24.6
+      },
+      {
+        "rok": 2016,
+        "cin": "Celková kriminalita",
+        "v": 46.6
+      },
+      {
+        "rok": 2019,
+        "cin": "Krádeže prosté",
+        "v": 28.8
+      },
+      {
+        "rok": 2019,
+        "cin": "Celková kriminalita",
+        "v": 46.8
+      },
+      {
+        "rok": 2022,
+        "cin": "Krádeže prosté",
+        "v": 42.3
+      },
+      {
+        "rok": 2022,
+        "cin": "Celková kriminalita",
+        "v": 44.8
+      },
+      {
+        "rok": 2024,
+        "cin": "Krádeže prosté",
+        "v": 48.0
+      },
+      {
+        "rok": 2024,
+        "cin": "Celková kriminalita",
+        "v": 45.1
+      },
+      {
+        "rok": 2025,
+        "cin": "Krádeže prosté",
+        "v": 53.4
+      },
+      {
+        "rok": 2025,
+        "cin": "Celková kriminalita",
+        "v": 45.2
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          2010,
+          2025
+        ]
+      },
+      "axis": {
+        "title": null,
+        "format": "d",
+        "values": [
+          2010,
+          2013,
+          2016,
+          2019,
+          2022,
+          2025
+        ]
+      }
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          80
+        ]
+      },
+      "axis": {
+        "title": null,
+        "grid": true,
+        "gridColor": "#e8e3d2"
+      }
+    },
+    "color": {
+      "field": "cin",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Znásilnění",
+          "Krádeže prosté",
+          "Celková kriminalita"
+        ],
+        "range": [
+          "#de1743",
+          "#06677d",
+          "#c8c8bc"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 40
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "cin",
+            "title": "Trestný čin"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "v",
+            "title": "Objasněnost (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Policie ČR – statistické přehledy kriminality](https://policie.gov.cz/statisticke-prehledy-kriminality-za-roky-2016---2025). U krádeží a celkové kriminality vybrané roky."
+}

@@ -1,0 +1,136 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Z tisíce oznámených znásilnění skončí ve vězení 161 pachatelů",
+    "subtitle": "Rok 2024. Policie počítá skutky, justice osoby a řízení se táhnou přes více let – jde o orientační srovnání, ne sledování týchž případů."
+  },
+  "width": 600,
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "krok": "Registrované případy",
+        "v": 1067,
+        "pozn": "skutky, policie",
+        "barva": "#101432"
+      },
+      {
+        "krok": "Objasněné případy",
+        "v": 580,
+        "pozn": "skutky, policie",
+        "barva": "#101432"
+      },
+      {
+        "krok": "Stíhané osoby",
+        "v": 474,
+        "pozn": "osoby, státní zastupitelství",
+        "barva": "#101432"
+      },
+      {
+        "krok": "Obžalované osoby",
+        "v": 449,
+        "pozn": "osoby, státní zastupitelství",
+        "barva": "#101432"
+      },
+      {
+        "krok": "Odsouzené osoby",
+        "v": 283,
+        "pozn": "osoby, soudy",
+        "barva": "#101432"
+      },
+      {
+        "krok": "Nepodmíněný trest",
+        "v": 161,
+        "pozn": "osoby, soudy",
+        "barva": "#de1743"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "krok",
+      "type": "nominal",
+      "sort": [
+        "Registrované případy",
+        "Objasněné případy",
+        "Stíhané osoby",
+        "Obžalované osoby",
+        "Odsouzené osoby",
+        "Nepodmíněný trest"
+      ],
+      "axis": {
+        "title": null,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "height": 22
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1200
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "krok",
+            "title": "Fáze"
+          },
+          {
+            "field": "v",
+            "title": "Počet",
+            "format": ",.0f"
+          },
+          {
+            "field": "pozn",
+            "title": "Jednotka a zdroj"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+  "_source": "[Policie ČR](https://policie.gov.cz/statisticke-prehledy-kriminality-za-roky-2016---2025) (TSK 201), [Ministerstvo spravedlnosti – statistické listy Z-SL-T a S-SL-T](https://cslav.justice.cz/InfoData/prehledy-statistickych-listu.html), § 185, rok 2024."
+}
