@@ -1,5 +1,5 @@
 ---
-title: "Senát 2026 – predikce"
+title: "Volby 2026 – predikce"
 date: "2026-10-10"
 time: "16:37"
 author: "Kateřina Mahdalová & Michal Škop"
