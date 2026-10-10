@@ -18,10 +18,8 @@ Senátní volby se letos konají ve 27 z 81 obvodů a po uzavření volebních m
   odhadUrl="/clanek/_articles/volby-cr-2026-10-10-senat-2026-predikce/odhad.json"
   title="Senát 2026: průběžný odhad po obvodech"
   subtitle="Klikněte nebo ťukněte na obvod"
-  source="volby.gov.cz – průběžné výsledky 2026; model: volby2026.datatimes.cz"
+  source="volby.gov.cz – průběžné výsledky 2026; model: DataTimes.cz"
 />
-
-Podrobný odhad pro každý obvod i pro komunální volby ve velkých městech najdete na [volby2026.datatimes.cz](https://volby2026.datatimes.cz).
 
 ## Online: jak se vyvíjí sčítání
 
