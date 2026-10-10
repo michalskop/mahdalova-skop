@@ -10,7 +10,8 @@ const { chromium } = require(process.env.PW_PATH || 'playwright');
   if (!ob || !name) throw new Error('použití: node snimek_obvodu.cjs <obvod> <nazev>');
   const browser = await chromium.launch({ channel: 'msedge' });
   const page = await browser.newPage({ viewport: { width: 1400, height: 2400 }, deviceScaleFactor: 2 });
-  await page.goto(`https://volby2026.datatimes.cz/#se:${ob}`);
+  // <obvod> = číslo senátního obvodu, nebo celý hash (např. kv:582786_1 pro zastupitelstvo Brna)
+  await page.goto(`https://volby2026.datatimes.cz/#${ob.includes(':') ? ob : `se:${ob}`}`);
   const detail = page.locator('section#detail');
   await detail.locator('h2').first().waitFor();
   // karta v šířce čtecího sloupce článku, bez prázdného místa pod obsahem
