@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Volební kalkulačka slaví 20 let. Letos pro 73 měst a senátní obvody](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-10-volebni-kalkulacka-73-mest-a-senat)
 - [Prezidentské volby v Brazílii: První kolo vyhrává Bolsonaro, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro)
-- [Volební kalkulačka 2026: Senát a inventura hlasování v Praze a Brně](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-04-volebni-kalkulacka-2026)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -31,9 +31,9 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Filmový kalendář 2026](https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026)
 
 ### Mezinárodní politika
+- [Volební kalkulačka slaví 20 let. Letos pro 73 měst a senátní obvody](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-10-volebni-kalkulacka-73-mest-a-senat)
 - [Policie objasní jen polovinu znásilnění. Většina obětí na ni ani nedojde](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-08-znasilneni-nahlasovani-objasnenost-a-tresty)
 - [Volební kalkulačka 2026: Senát a inventura hlasování v Praze a Brně](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-04-volebni-kalkulacka-2026)
-- [Trest smrti jako lidské selhání](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-02-trest-smrti-jako-lidske-selhani)
 
 ### Dezinformace a média
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)

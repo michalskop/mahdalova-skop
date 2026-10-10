@@ -274,7 +274,7 @@ export default function KalkulackaMapa({ dataUrl, mode, title, subtitle, source 
           >
             <option value="">{mode === 'senat' ? 'Vyberte obvod ze seznamu…' : 'Vyberte město ze seznamu…'}</option>
             {mode === 'senat'
-              ? senatOptions.map((p) => <option key={p.o} value={p.o} disabled={Boolean(p.prip)}>{p.o} – {p.n}{p.prip ? ' (připravujeme)' : ''}</option>)
+              ? senatOptions.map((p) => <option key={p.o} value={p.o} disabled={Boolean(p.prip)}>{p.o} – {p.n}{p.prip ? ' (bez kalkulačky)' : ''}</option>)
               : data?.mesta.map((m) => <option key={m.s} value={m.s}>{m.n}</option>)}
           </select>
         </div>
@@ -391,7 +391,7 @@ export default function KalkulackaMapa({ dataUrl, mode, title, subtitle, source 
                 </>
               )}
               <div style={{ marginTop: 3, color: mode === 'senat' ? RED : BLUE, fontWeight: 700 }}>
-                {hoverObvod?.prip ? 'Kalkulačku pro tento obvod připravujeme' : 'Otevřít kalkulačku →'}
+                {hoverObvod?.prip ? 'Kalkulačka pro tento obvod není' : 'Otevřít kalkulačku →'}
               </div>
             </div>
           )}
