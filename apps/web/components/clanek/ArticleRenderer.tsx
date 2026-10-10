@@ -32,6 +32,7 @@ import AnimatedBars from '@/components/charts/AnimatedBars';
 import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
 import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
+import KalkulackaMapa from '@/components/charts/KalkulackaMapa'; // mapa-rozcestník Volební kalkulačky 2026 (Senát / 73 měst)
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
 import { Gauge } from '@repo/ui/components/Gauge';
@@ -446,6 +447,7 @@ export function ArticleRenderer({
     BrazilCandidatesBars,
     BrazilRunoffAggregators,
     ObceKandidatkyMap,
+    KalkulackaMapa,
 
   };
 
