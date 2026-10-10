@@ -21,6 +21,19 @@ Senátní volby se letos konají ve 27 z 81 obvodů a po uzavření volebních m
   source="volby.gov.cz – průběžné výsledky 2026; model: DataTimes.cz"
 />
 
+## Komunální volby: odhad pro 184 zastupitelstev
+
+Stejný model počítá průběžný odhad i pro zastupitelstva 140 měst, včetně městských částí a obvodů. Barva bodu ukazuje, kdo ve městě vede, okraj jistotu odhadu. Po kliknutí, na mobilu po ťuknutí, se pod mapou ukáže odhad pro všechny kandidátky a nejpravděpodobnější počet mandátů.
+
+<ObceKvPredikceMapa
+  mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-2026-predikce/senat-mapa.json"
+  obceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-2026-predikce/obce-mapa.json"
+  odhadUrl="/clanek/_articles/volby-cr-2026-10-10-senat-2026-predikce/odhad_kv.json"
+  title="Komunální volby 2026: průběžný odhad ve 140 městech"
+  subtitle="Klikněte nebo ťukněte na město"
+  source="volby.gov.cz – průběžné výsledky 2026; model: DataTimes.cz"
+/>
+
 ## Online: jak se vyvíjí sčítání
 
 <ZivyPrenos dataUrl="/clanek/_articles/volby-cr-2026-10-10-senat-2026-predikce/zive.json" />
