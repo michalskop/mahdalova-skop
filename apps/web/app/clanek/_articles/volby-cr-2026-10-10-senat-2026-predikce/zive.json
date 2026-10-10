@@ -144,7 +144,193 @@
     },
     {
       "cas": "17:03",
-      "text": "**Průběžná rekapitulace Senátu (16:59)**\n\n**S jistotou víme (3)**\n\n– Strakonice: v 1. kole vyhrává Tomáš Fiala\n\n– Trutnov: v 1. kole vyhrává Jan Sobotka\n\n– Rychnov nad Kněžnou: v 1. kole vyhrává Jan Grulich\n\n**Téměř jisté (14)**\n\n– Cheb: do 2. kola Miroslav Plevný a Sandra Tsoukernik (sečteno 41 %)\n\n– Louny: do 2. kola Ivo Trešl a Jaroslav Mikoláš (sečteno 53 %)\n\n– Pelhřimov: do 2. kola Ladislav Med a Michal Kozár (sečteno 61 %)\n\n– Příbram: do 2. kola Petr Štěpánek a Barbora Daňhová (sečteno 51 %)\n\n– Kladno: do 2. kola Petr Paták a Adéla Sucharda Šípová (sečteno 39 %)\n\n– Děčín: Zbyněk Linhart nejspíš vyhrává už v 1. kole (sečteno 26 %)\n\n– Česká Lípa: do 2. kola Jitka Volfová a Martin Půta (sečteno 51 %)\n\n– Kolín: do 2. kola Michael Kašpar a Andrea Brzobohatá (sečteno 48 %)\n\n– Žďár nad Sázavou: do 2. kola Michal Šmarda a Josef Klement (sečteno 61 %)\n\n– Znojmo: do 2. kola Tomáš Třetina a Jiří Kyněra (sečteno 49 %)\n\n– Vyškov: Jan Grolich nejspíš vyhrává už v 1. kole (sečteno 25 %)\n\n– Přerov: do 2. kola Jakub Navařík a Petr Vrána (sečteno 45 %)\n\n– Frýdek-Místek: do 2. kola Helena Pešatová a Petr Korč (sečteno 18 %)\n\n– Zlín: do 2. kola Tomáš Goláň a Ivo Mitáček (sečteno 24 %)\n\n**Čekáme na sečtené hlasy (10)**\n\n– Plzeň-město (zatím bez sečtených okrsků)\n\n– Praha 5 (zatím bez sečtených okrsků)\n\n– Praha 9 (zatím bez sečtených okrsků)\n\n– Praha 1 (zatím bez sečtených okrsků)\n\n– Hradec Králové (sečteno 46 %, o postupu se ještě rozhoduje)\n\n– Brno-město (zatím bez sečtených okrsků)\n\n– Litovel (sečteno 51 %, o postupu se ještě rozhoduje)\n\n– Ostrava-město (sečteno 3 %, o postupu se ještě rozhoduje)\n\n– Karviná (sečteno 40 %, o postupu se ještě rozhoduje)\n\n– Uherské Hradiště (sečteno 15 %, o postupu se ještě rozhoduje)"
+      "text": "**Průběžná rekapitulace Senátu (16:59)** · jisté: 3 · téměř jisté: 14 · čekáme na sečtené hlasy: 10 (z 27 obvodů)",
+      "rekap": [
+        {
+          "stav": "temer",
+          "ob": 3,
+          "obvod": "Cheb",
+          "vysledek": "do 2. kola Miroslav Plevný (STAN) a Sandra Tsoukernik (ANO)",
+          "secteno": 41
+        },
+        {
+          "stav": "temer",
+          "ob": 6,
+          "obvod": "Louny",
+          "vysledek": "do 2. kola Ivo Trešl (STAN) a Jaroslav Mikoláš (ANO)",
+          "secteno": 53
+        },
+        {
+          "stav": "cekame",
+          "ob": 9,
+          "obvod": "Plzeň-město",
+          "vysledek": "zatím bez sečtených okrsků"
+        },
+        {
+          "stav": "jiste",
+          "ob": 12,
+          "obvod": "Strakonice",
+          "vysledek": "Tomáš Fiala (Naše Česko) vyhrává už v 1. kole",
+          "secteno": 65
+        },
+        {
+          "stav": "temer",
+          "ob": 15,
+          "obvod": "Pelhřimov",
+          "vysledek": "do 2. kola Ladislav Med (KDU-ČSL, ODS, STAN, TOP 09) a Michal Kozár (ANO)",
+          "secteno": 61
+        },
+        {
+          "stav": "temer",
+          "ob": 18,
+          "obvod": "Příbram",
+          "vysledek": "do 2. kola Petr Štěpánek (STAN) a Barbora Daňhová (ANO)",
+          "secteno": 51
+        },
+        {
+          "stav": "cekame",
+          "ob": 21,
+          "obvod": "Praha 5",
+          "vysledek": "zatím bez sečtených okrsků"
+        },
+        {
+          "stav": "cekame",
+          "ob": 24,
+          "obvod": "Praha 9",
+          "vysledek": "zatím bez sečtených okrsků"
+        },
+        {
+          "stav": "cekame",
+          "ob": 27,
+          "obvod": "Praha 1",
+          "vysledek": "zatím bez sečtených okrsků"
+        },
+        {
+          "stav": "temer",
+          "ob": 30,
+          "obvod": "Kladno",
+          "vysledek": "do 2. kola Petr Paták (ODS) a Adéla Sucharda Šípová (Zelení, STAN, Piráti, TOP 09, SEN 21)",
+          "secteno": 39
+        },
+        {
+          "stav": "temer",
+          "ob": 33,
+          "obvod": "Děčín",
+          "vysledek": "Zbyněk Linhart (STAN+SLK) nejspíš vyhrává už v 1. kole",
+          "secteno": 26
+        },
+        {
+          "stav": "temer",
+          "ob": 36,
+          "obvod": "Česká Lípa",
+          "vysledek": "do 2. kola Jitka Volfová (ANO) a Martin Půta (SLK)",
+          "secteno": 51
+        },
+        {
+          "stav": "jiste",
+          "ob": 39,
+          "obvod": "Trutnov",
+          "vysledek": "Jan Sobotka (STAN) vyhrává už v 1. kole",
+          "secteno": 38
+        },
+        {
+          "stav": "temer",
+          "ob": 42,
+          "obvod": "Kolín",
+          "vysledek": "do 2. kola Michael Kašpar (STAN) a Andrea Brzobohatá (ANO)",
+          "secteno": 48
+        },
+        {
+          "stav": "cekame",
+          "ob": 45,
+          "obvod": "Hradec Králové",
+          "vysledek": "vede Zuzana Ceralová Petrofová, o postupu se ještě rozhoduje",
+          "secteno": 46
+        },
+        {
+          "stav": "jiste",
+          "ob": 48,
+          "obvod": "Rychnov nad Kněžnou",
+          "vysledek": "Jan Grulich (KDU-ČSL, ODS a další) vyhrává už v 1. kole",
+          "secteno": 53
+        },
+        {
+          "stav": "temer",
+          "ob": 51,
+          "obvod": "Žďár nad Sázavou",
+          "vysledek": "do 2. kola Michal Šmarda (SOM+Volt+HR) a Josef Klement (KDU-ČSL)",
+          "secteno": 61
+        },
+        {
+          "stav": "temer",
+          "ob": 54,
+          "obvod": "Znojmo",
+          "vysledek": "do 2. kola Tomáš Třetina (KDU-ČSL, ODS, STAN, Piráti, TOP 09) a Jiří Kyněra (ANO)",
+          "secteno": 49
+        },
+        {
+          "stav": "temer",
+          "ob": 57,
+          "obvod": "Vyškov",
+          "vysledek": "Jan Grolich (KDU-ČSL) nejspíš vyhrává už v 1. kole",
+          "secteno": 25
+        },
+        {
+          "stav": "cekame",
+          "ob": 60,
+          "obvod": "Brno-město",
+          "vysledek": "zatím bez sečtených okrsků"
+        },
+        {
+          "stav": "temer",
+          "ob": 63,
+          "obvod": "Přerov",
+          "vysledek": "do 2. kola Jakub Navařík (KDU-ČSL, ODS, STAN, TOP 09) a Petr Vrána (ANO)",
+          "secteno": 45
+        },
+        {
+          "stav": "cekame",
+          "ob": 66,
+          "obvod": "Litovel",
+          "vysledek": "vede Marek Ošťádal, o postupu se ještě rozhoduje",
+          "secteno": 51
+        },
+        {
+          "stav": "temer",
+          "ob": 69,
+          "obvod": "Frýdek-Místek",
+          "vysledek": "do 2. kola Helena Pešatová (STAN+Piráti+TOP) a Petr Korč (NMFM)",
+          "secteno": 18
+        },
+        {
+          "stav": "cekame",
+          "ob": 72,
+          "obvod": "Ostrava-město",
+          "vysledek": "vede Ondřej Šimetka, o postupu se ještě rozhoduje",
+          "secteno": 3
+        },
+        {
+          "stav": "cekame",
+          "ob": 75,
+          "obvod": "Karviná",
+          "vysledek": "vede Lenka Brzyszkowská, o postupu se ještě rozhoduje",
+          "secteno": 40
+        },
+        {
+          "stav": "temer",
+          "ob": 78,
+          "obvod": "Zlín",
+          "vysledek": "do 2. kola Tomáš Goláň (KDU-ČSL, ODS, TOP 09) a Ivo Mitáček (STAN)",
+          "secteno": 24
+        },
+        {
+          "stav": "cekame",
+          "ob": 81,
+          "obvod": "Uherské Hradiště",
+          "vysledek": "vede Josef Bazala, o postupu se ještě rozhoduje",
+          "secteno": 15
+        }
+      ]
     }
   ]
 }
