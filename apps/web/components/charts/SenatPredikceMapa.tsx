@@ -67,7 +67,8 @@ function vyhodnot(od?: ObvodOdhad) {
   const kolo1 = p1 >= 0.5;
   const jistota = kolo1 ? (c[0].p_win_round1 ?? p1) : Math.max(0, (c[0].p_top2 ?? 0) + (c[1]?.p_top2 ?? 0) - 1);
   const frac = od.frac_counted ?? 0;
-  const level: Level = jistota >= 0.99 && frac >= 0.3 ? 'vysoka' : jistota >= 0.9 ? 'stredni' : 'nizka';
+  // stejná pravidla jako rekapitulace.py; při méně než 15 % sečtených okrsků nic netvrdíme
+  const level: Level = jistota >= 0.99 && frac >= 0.3 ? 'vysoka' : jistota >= 0.9 && frac >= 0.15 ? 'stredni' : 'nizka';
   return { c, p1, kolo1, jistota, frac, level, hotovo: frac >= 0.999 };
 }
 
