@@ -3,7 +3,7 @@
 // Online reportáž: příspěvky z JSON souboru článku, nejnovější nahoře.
 // <ZivyPrenos dataUrl="/clanek/_articles/<slug>/zive.json" slug="<slug>" />
 // Soubor obsahuje pole „zive“: [{ cas: "15:20", text: "…", obrazek?: "images/zive/x.png", alt?: "…", rekap?: Rekap }]
-// Text: odstavce oddělené prázdným řádkem, **tučně** a [odkaz](url).
+// Text: odstavce oddělené prázdným řádkem, **tučně**, *kurzívou* (upřesnění) a [odkaz](url).
 // rekap = tabulka průběžné rekapitulace (sestavuje rekapitulace.py v článku).
 
 import { Fragment, useEffect, useState } from 'react';
@@ -26,10 +26,12 @@ type Prispevek = { cas: string; text: string; obrazek?: string; alt?: string; re
 
 function inline(s: string) {
   // **tučně** a [text](url)
-  const parts = s.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  const parts = s.split(/(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((p, i) => {
     const b = /^\*\*([^*]+)\*\*$/.exec(p);
     if (b) return <strong key={i}>{b[1]}</strong>;
+    const em = /^\*([^*]+)\*$/.exec(p);
+    if (em) return <em key={i} style={{ color: '#4c4f8e' }}>{em[1]}</em>;
     const a = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(p);
     if (a) return <a key={i} href={a[2]} target="_blank" rel="noopener noreferrer">{a[1]}</a>;
     return <Fragment key={i}>{p}</Fragment>;
