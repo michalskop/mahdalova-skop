@@ -190,6 +190,19 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
                       onClick={() => pick(o)} />
                   );
                 })}
+                {/* logo v pravém horním rohu nad Moravskoslezským krajem (i pro screenshoty mapy) */}
+                {(() => {
+                  const s = narrow ? 18 : 26; const fs = narrow ? 12 : 16;
+                  // na mobilu by v horním rohu zakrylo Trutnovsko → pravý dolní roh (prázdné místo pod Zlínskem)
+                  const tw = fs * 6.4; const x = width - 6 - tw - s - 6; const y = narrow ? height - s - 2 : 6;
+                  return (
+                    <g pointerEvents="none">
+                      <image href="/images/datatimes-donut.svg" x={x} y={y} width={s} height={s} />
+                      <text x={x + s + 6} y={y + s / 2 + fs * 0.36} fontSize={fs} fontWeight={700} fill={INK}
+                        style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif' }}>DataTimes.cz</text>
+                    </g>
+                  );
+                })()}
                 <g pointerEvents="none">
                   {geo.dots.map((d, i) => {
                     const on = vol.includes(d.o);
