@@ -148,7 +148,7 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
     });
   };
 
-  const colorOf = (o: number, hl: boolean) => (hl ? INK : LEVELS[levelOf(o)].color);
+  const colorOf = (o: number) => LEVELS[levelOf(o)].color;
   const propsOf = (o: number) => data?.obvody.features.find((f) => f.properties.o === o)?.properties;
 
   const selP = sel !== null ? propsOf(sel) : undefined;
@@ -178,30 +178,33 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
             {!geo && <div style={{ height: Math.max(height, 240), display: 'flex', alignItems: 'center', justifyContent: 'center', color: MUTED }}>Načítám mapu…</div>}
             {geo && (
               <svg width={width} height={geo.inset.y + geo.inset.h + 2} role="img" aria-label="Mapa senátních obvodů s průběžným odhadem" style={{ display: 'block', touchAction: 'manipulation' }}>
-                <g pointerEvents="none">
-                  {geo.dots.map((d, i) => {
-                    const on = vol.includes(d.o);
-                    return <circle key={i} cx={d.x} cy={d.y} r={on ? geo.r * 1.15 : geo.r} fill={on ? colorOf(d.o, hover?.o === d.o || sel === d.o) : DOT} />;
-                  })}
-                </g>
+                {/* plochy obvodů pod tečkami: jen jemný podklad v barvě semaforu, bez obrysů.
+                    Výběr = sytější podklad a větší tečky, žádná čára. */}
                 {geo.feats.map((f) => {
-                  const o = f.properties.o; const hl = hover?.o === o || sel === o; const c = LEVELS[levelOf(o)].color;
+                  const o = f.properties.o; const c = LEVELS[levelOf(o)].color;
                   return (
-                    <path key={o} d={geo.path(f) ?? ''} fill={c} fillOpacity={hl ? 0.22 : 0.1}
-                      stroke={hl ? INK : c} strokeOpacity={hl ? 1 : 0.5} strokeWidth={hl ? 1.8 : 0.9}
-                      style={{ cursor: 'pointer' }}
+                    <path key={o} d={geo.path(f) ?? ''} fill={c} fillOpacity={sel === o ? 0.3 : hover?.o === o ? 0.2 : 0.08}
+                      stroke="none" style={{ cursor: 'pointer', transition: 'fill-opacity .15s' }}
                       onPointerMove={(e) => setHover({ o, ...local(e) })}
                       onPointerLeave={() => setHover(null)}
                       onClick={() => pick(o)} />
                   );
                 })}
+                <g pointerEvents="none">
+                  {geo.dots.map((d, i) => {
+                    const on = vol.includes(d.o);
+                    const big = sel === d.o ? 1.45 : hover?.o === d.o ? 1.3 : 1.12;
+                    return <circle key={i} cx={d.x} cy={d.y} r={on ? geo.r * big : geo.r} fill={on ? colorOf(d.o) : DOT} />;
+                  })}
+                </g>
                 <g>
                   <rect x={geo.inset.x} y={geo.inset.y} width={geo.inset.w} height={geo.inset.h} rx={6} fill="#fff" stroke="#e0ddd2" />
                   <text x={geo.inset.x + 8} y={geo.inset.y + 14} fontSize={12} fontWeight={700} fill={MUTED} style={{ fontFamily: FONT }}>Praha</text>
                   {geo.praha.map((f) => {
                     const o = f.properties.o; const on = vol.includes(o); const hl = hover?.o === o || sel === o;
                     return (
-                      <path key={o} d={geo.ipath(f) ?? ''} fill={on ? colorOf(o, hl) : '#ebe8de'} stroke="#fff" strokeWidth={1}
+                      <path key={o} d={geo.ipath(f) ?? ''} fill={on ? colorOf(o) : '#ebe8de'}
+                        fillOpacity={on && sel !== null && !hl ? 0.55 : 1} stroke="#fff" strokeWidth={hl ? 2.5 : 1}
                         style={{ cursor: on ? 'pointer' : 'default' }}
                         onPointerMove={on ? (e) => setHover({ o, ...local(e) }) : () => setHover(null)}
                         onClick={on ? () => pick(o) : undefined} />
