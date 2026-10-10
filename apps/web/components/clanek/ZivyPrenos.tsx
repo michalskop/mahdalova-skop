@@ -6,6 +6,7 @@
 // Text: odstavce oddělené prázdným řádkem, **tučně** a [odkaz](url).
 
 import { Fragment, useEffect, useState } from 'react';
+import { pollJson } from '@/lib/pollJson';
 
 const INK = '#101432';
 const MUTED = '#4c4f8e';
@@ -28,13 +29,8 @@ function inline(s: string) {
 export default function ZivyPrenos({ dataUrl, slug }: { dataUrl: string; slug: string }) {
   const [items, setItems] = useState<Prispevek[] | null>(null);
 
-  useEffect(() => {
-    let alive = true;
-    fetch(`${dataUrl}?t=${Date.now()}`, { cache: 'no-store' })
-      .then((r) => r.json())
-      .then((d) => { if (alive) setItems((d.zive ?? []) as Prispevek[]); });
-    return () => { alive = false; };
-  }, [dataUrl]);
+  // nové příspěvky se načtou samy (obnova každou minutu, jen na viditelné kartě)
+  useEffect(() => pollJson(dataUrl, (d) => setItems(((d as { zive?: Prispevek[] }).zive ?? []))), [dataUrl]);
 
   if (!items) return null;
   const sorted = [...items].sort((a, b) => b.cas.localeCompare(a.cas));
