@@ -32,6 +32,8 @@ import AnimatedBars from '@/components/charts/AnimatedBars';
 import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
 import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
+import SenatPredikceMapa from '@/components/charts/SenatPredikceMapa'; // Senát 2026 – průběžná predikce po obvodech
+import ZivyPrenos from '@/components/clanek/ZivyPrenos'; // online reportáž z JSON
 import KalkulackaMapa from '@/components/charts/KalkulackaMapa'; // mapa-rozcestník Volební kalkulačky 2026 (Senát / 73 měst)
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
@@ -448,6 +450,8 @@ export function ArticleRenderer({
     BrazilRunoffAggregators,
     ObceKandidatkyMap,
     KalkulackaMapa,
+    SenatPredikceMapa,
+    ZivyPrenos: (props: any) => <ZivyPrenos slug={slug} {...props} />,
 
   };
 
