@@ -23,13 +23,27 @@ const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';
 const EMBED = 'https://www.volebnikalkulacka.cz/embed/datatimes/volby';
 const WEB = 'https://www.volebnikalkulacka.cz/volby';
 
-// popisky velkých měst a jejich posun (px)
-const LABELS: Record<string, [number, number, 'start' | 'end']> = {
-  'Praha': [8, -6, 'start'], 'Brno': [8, -6, 'start'], 'Ostrava': [-8, -8, 'end'], 'Plzeň': [8, -6, 'start'],
-  'Liberec': [8, -6, 'start'], 'Olomouc': [8, -6, 'start'], 'České Budějovice': [8, 4, 'start'],
-  'Hradec Králové': [8, -6, 'start'], 'Pardubice': [8, 12, 'start'], 'Ústí nad Labem': [-8, -6, 'end'],
-  'Zlín': [8, 4, 'start'], 'Jihlava': [8, -6, 'start'], 'Karlovy Vary': [8, -6, 'start'],
+// popisky velkých měst: strana, na které popisek přiléhá k bodu (volí se tak, aby nezakrýval sousední města)
+type Side = 'r' | 'l' | 't' | 'b' | 'tl' | 'tr';
+const LABELS: Record<string, Side> = {
+  'Praha': 'r', 'Brno': 'r', 'Ostrava': 'l', 'Plzeň': 'r', 'Liberec': 't', 'Olomouc': 'r',
+  'České Budějovice': 'r', 'Hradec Králové': 't', 'Pardubice': 'r', 'Ústí nad Labem': 'tl',
+  'Zlín': 'r', 'Jihlava': 'r', 'Karlovy Vary': 'r',
 };
+// na mobilu jen největší města, jinak by se popisky překrývaly
+const NARROW_LABELS = new Set(['Praha', 'Brno', 'Ostrava', 'Plzeň']);
+// posun popisku od středu bodu o poloměru r (font 13 px: střed písma ≈ baseline − 4,5 px)
+function labelPos(side: Side, r: number): [number, number, 'start' | 'middle' | 'end'] {
+  const g = r + 3;
+  switch (side) {
+    case 'r': return [g, 4.5, 'start'];
+    case 'l': return [-g, 4.5, 'end'];
+    case 't': return [0, -g - 1, 'middle'];
+    case 'b': return [0, g + 10, 'middle'];
+    case 'tl': return [-r * 0.6, -r - 2, 'end'];
+    case 'tr': return [r * 0.6, -r - 2, 'start'];
+  }
+}
 
 type ObvodProps = { o: number; n: string; vol?: number; prip?: number; slug?: string; kand?: number; sen?: string; obh?: string };
 type Mesto = { n: string; s: string; lon: number; lat: number; kraj?: string; sub?: number };
@@ -331,11 +345,11 @@ export default function KalkulackaMapa({ dataUrl, mode, title, subtitle, source 
                     const hl = hoverMesto?.s === m.s;
                     return <circle key={m.s} cx={m.x} cy={m.y} r={hl ? cr * 1.45 : cr} fill={hl ? INK : BLUE} stroke="#fff" strokeWidth={1.6} />;
                   })}
-                  {!narrow && geo.mesta.filter((m) => LABELS[m.n]).map((m) => {
-                    const [dx, dy, anchor] = LABELS[m.n];
+                  {geo.mesta.filter((m) => LABELS[m.n] && (!narrow || NARROW_LABELS.has(m.n))).map((m) => {
+                    const [dx, dy, anchor] = labelPos(LABELS[m.n], hoverMesto?.s === m.s ? cr * 1.45 : cr);
                     return (
-                      <text key={m.s} x={m.x + dx} y={m.y + dy} textAnchor={anchor} fontSize={13} fontWeight={700} fill={INK}
-                        stroke="#f8f6f0" strokeWidth={3.5} paintOrder="stroke" style={{ fontFamily: FONT }}>
+                      <text key={m.s} x={m.x + dx} y={m.y + dy} textAnchor={anchor} fontSize={narrow ? 12 : 13} fontWeight={700} fill={INK}
+                        stroke="#f8f6f0" strokeWidth={3} strokeLinejoin="round" paintOrder="stroke" style={{ fontFamily: FONT }}>
                         {m.n}
                       </text>
                     );
