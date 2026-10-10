@@ -1,8 +1,34 @@
 {
   "zive": [
-    { "cas": "16:00", "text": "**Potvrzeno! Strakonice**, vítěz v 1. kole senátních voleb je Tomáš Fiala (Naše Česko).", "obrazek": "images/zive/12-strakonice-1600.jpg", "alt": "Odhad výsledku senátních voleb v obvodu 12 – Strakonice" },
-    { "cas": "16:01", "text": "**Děčín** – do 2. kola senátních voleb postupují Zbyněk Linhart (STAN) a Michal Hejcman (ANO).", "obrazek": "images/zive/33-decin-1601.jpg", "alt": "Odhad výsledku senátních voleb v obvodu 33 – Děčín" },
-    { "cas": "16:09", "text": "**Česká Lípa** – do 2. kola senátních voleb postupují Jitka Volfová (ANO) 34,3 % a Martin Půta (SLK) 29,1 %.", "obrazek": "images/zive/36-ceska-lipa-1609.jpg", "alt": "Odhad výsledku senátních voleb v obvodu 36 – Česká Lípa" },
-    { "cas": "16:11", "text": "**Hradec Králové** – do 2. kola senátních voleb postupují Zuzana Ceralová Petrofová (ODS) a Monika Nebeská (NK).", "obrazek": "images/zive/45-hradec-kralove-1611.jpg", "alt": "Odhad výsledku senátních voleb v obvodu 45 – Hradec Králové" }
+    {
+      "cas": "16:00",
+      "text": "**Potvrzeno! Strakonice**, vítěz v 1. kole senátních voleb je Tomáš Fiala (Naše Česko).",
+      "obrazek": "images/zive/12-strakonice-1600.jpg",
+      "alt": "Odhad výsledku senátních voleb v obvodu 12 – Strakonice"
+    },
+    {
+      "cas": "16:01",
+      "text": "**Děčín** – do 2. kola senátních voleb postupují Zbyněk Linhart (STAN) a Michal Hejcman (ANO).",
+      "obrazek": "images/zive/33-decin-1601.jpg",
+      "alt": "Odhad výsledku senátních voleb v obvodu 33 – Děčín"
+    },
+    {
+      "cas": "16:09",
+      "text": "**Česká Lípa** – do 2. kola senátních voleb postupují Jitka Volfová (ANO) 34,3 % a Martin Půta (SLK) 29,1 %.",
+      "obrazek": "images/zive/36-ceska-lipa-1609.jpg",
+      "alt": "Odhad výsledku senátních voleb v obvodu 36 – Česká Lípa"
+    },
+    {
+      "cas": "16:11",
+      "text": "**Hradec Králové** – do 2. kola senátních voleb postupují Zuzana Ceralová Petrofová (ODS) a Monika Nebeská (NK).",
+      "obrazek": "images/zive/45-hradec-kralove-1611.jpg",
+      "alt": "Odhad výsledku senátních voleb v obvodu 45 – Hradec Králové"
+    },
+    {
+      "cas": "16:21",
+      "text": "**Kladno!** Do 2. kola senátních voleb postupují Adéla Šípová (Piráti) a Petr Paták (ODS).",
+      "obrazek": "images/zive/30-kladno-1621.jpg",
+      "alt": "Odhad výsledku senátních voleb v obvodu 30 – Kladno"
+    }
   ]
 }
