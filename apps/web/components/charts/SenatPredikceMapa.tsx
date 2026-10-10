@@ -192,9 +192,9 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
                 })}
                 {/* logo v pravém horním rohu nad Moravskoslezským krajem (i pro screenshoty mapy) */}
                 {(() => {
-                  const s = narrow ? 18 : 26; const fs = narrow ? 12 : 16;
-                  // na mobilu by v horním rohu zakrylo Trutnovsko → pravý dolní roh (prázdné místo pod Zlínskem)
-                  const tw = fs * 6.4; const x = width - 6 - tw - s - 6; const y = narrow ? height - s - 2 : 6;
+                  // vždy vpravo nahoře nad Moravskoslezským krajem; na mobilu menší, aby nezakrylo Trutnovsko
+                  const s = narrow ? 13 : 26; const fs = narrow ? 9.5 : 16;
+                  const tw = fs * 6.4; const x = width - 4 - tw - s - 4; const y = 2;
                   return (
                     <g pointerEvents="none">
                       <image href="/images/datatimes-donut.svg" x={x} y={y} width={s} height={s} />
