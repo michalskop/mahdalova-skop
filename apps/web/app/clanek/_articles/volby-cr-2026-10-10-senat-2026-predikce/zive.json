@@ -331,6 +331,12 @@
           "secteno": 15
         }
       ]
+    },
+    {
+      "cas": "17:13",
+      "text": "**Nejnovější rozhodnuté souboje (17:07)** – v těchto obvodech už model DataTimes dává výsledek s jistotou zhruba 95 %: Kladno, Trutnov, Louny, Příbram, Cheb, Rychnov nad Kněžnou, Přerov, Česká Lípa a Strakonice. Nejde o oficiální výsledky.",
+      "obrazek": "images/zive/rozhodnute-souboje-1713.jpg",
+      "alt": "Nejnovější rozhodnuté souboje senátních voleb podle modelu DataTimes k 17:07"
     }
   ]
 }
