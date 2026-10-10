@@ -1,7 +1,7 @@
 ---
 title: "Senát 2026 – predikce"
 date: "2026-10-10"
-time: "16:05"
+time: "16:37"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Průběžná predikce výsledků senátních voleb 2026 ve všech 27 obvodech. Kdo vede, kdo postupuje do druhého kola a kdo vyhrál už v prvním, sledujte na mapě a v online reportáži."
 coverImage: "images/cover.png"
