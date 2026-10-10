@@ -59,13 +59,13 @@ function useWidth<T extends HTMLElement>() {
 }
 
 // Vyhodnocení obvodu: pořadí kandidátů, jistota (pravděpodobnost, že sedí vítěz 1. kola,
-// resp. postupová dvojice – dolní odhad p1 + p2 − 1) a úroveň semaforu.
+// resp. postupová dvojice – menší z P(top 2) obou postupujících) a úroveň semaforu.
 function vyhodnot(od?: ObvodOdhad) {
   if (!od || od.status !== 'ok' || !od.candidates?.length) return null;
   const c = [...od.candidates].sort((a, b) => b.est_share - a.est_share);
   const p1 = od.p_decided_round1 ?? 0;
   const kolo1 = p1 >= 0.5;
-  const jistota = kolo1 ? (c[0].p_win_round1 ?? p1) : Math.max(0, (c[0].p_top2 ?? 0) + (c[1]?.p_top2 ?? 0) - 1);
+  const jistota = kolo1 ? (c[0].p_win_round1 ?? p1) : Math.min(c[0].p_top2 ?? 0, c[1]?.p_top2 ?? 0);
   const frac = od.frac_counted ?? 0;
   // stejná pravidla jako rekapitulace.py; při méně než 15 % sečtených okrsků nic netvrdíme
   const level: Level = jistota >= 0.99 && frac >= 0.3 ? 'vysoka' : jistota >= 0.9 && frac >= 0.15 ? 'stredni' : 'nizka';

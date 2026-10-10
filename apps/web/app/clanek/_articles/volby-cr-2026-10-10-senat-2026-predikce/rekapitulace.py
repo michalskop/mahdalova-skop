@@ -29,7 +29,7 @@ for ob in sorted(NAZVY):
         rows.append({"stav": "cekame", "ob": ob, "obvod": NAZVY[ob], "vysledek": "zatím bez sečtených okrsků"}); continue
     frac = v.get("frac_counted", 0)
     kolo1 = v.get("p_decided_round1", 0) >= 0.5
-    conf = c[0]["p_win_round1"] if kolo1 else max(0, c[0]["p_top2"] + c[1]["p_top2"] - 1)
+    conf = c[0]["p_win_round1"] if kolo1 else min(c[0]["p_top2"], c[1]["p_top2"])
     if conf >= 0.99 and frac >= 0.3:
         stav = "jiste"
     elif conf >= 0.9 and frac >= 0.15:  # při pár sečtených okrscích ještě nic netvrdíme
