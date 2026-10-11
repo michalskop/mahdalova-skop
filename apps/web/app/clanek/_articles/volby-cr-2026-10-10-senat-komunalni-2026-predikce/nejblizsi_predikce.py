@@ -62,10 +62,14 @@ for o, z in fin.items():
 # Predikce, které jsme večer opravdu zveřejnili (screenshoty dashboardu), mají přednost před nejbližším snímkem.
 # klíč zastupitelstva → čas, podíl sečtených okrsků a odhady z obrázku (mandáty na screenshotu nejsou → None)
 ZVEREJNENO = {
-    "554782_1": {"t": "18:35", "frac": 56 / 1120, "zdroj": "screenshot dashboardu (stav 18:29) zveřejněný v 18:35", "e": {
+    "554782_1": [{"t": "23:23", "frac": 898 / 1120, "zdroj": "karta dashboardu na síti X od Michala Škopa ve 23:23", "e": {
+        "STAN": (0.233, 18), "ODS+TOP 09": (0.217, 16), "PRAHA SOBĚ+NK": (0.181, 13), "ANO": (0.142, 11), "Piráti": (0.095, 7),
+        "SPD+NK": (0.035, 0), "AUTO": (0.029, 0), "HPPSENMourekNK": (0.028, 0), "KSČM+KSČ+ČSSD": (0.009, 0), "TEAM+NK": (0.007, 0),
+        "Patrioti ČR+NK": (0.006, 0), "Svobodní": (0.005, 0), "GEN+NK": (0.004, 0)}},
+                 {"t": "18:35", "frac": 56 / 1120, "zdroj": "screenshot dashboardu (stav 18:29) zveřejněný v 18:35", "e": {
         "ODS+TOP 09": 0.221, "STAN": 0.219, "PRAHA SOBĚ+NK": 0.189, "ANO": 0.141, "Piráti": 0.088, "HPPSENMourekNK": 0.040,
         "SPD+NK": 0.038, "AUTO": 0.027, "KSČM+KSČ+ČSSD": 0.010, "Patrioti ČR+NK": 0.007, "TEAM+NK": 0.005, "Svobodní": 0.005,
-        "GEN+NK": 0.004, "Levice": 0.002}},
+        "GEN+NK": 0.004, "Levice": 0.002}}],
     # karta v reportáži 21:26 (tweet ve 22:00); mandáty z karty
     "563889_1": {"t": "21:26", "frac": 82 / 87, "zdroj": "karta dashboardu v reportáži 21:26", "e": {
         "SLK": (0.286, 14), "Lepší město+NK": (0.222, 11), "ANO": (0.176, 8), "Zelení+Piráti": (0.127, 6), "SPD": (0.046, 0),
@@ -77,7 +81,13 @@ ZVEREJNENO = {
         "Svobo+Triko+PRO": 0.011, "PŘÍSAHA": 0.010, "SOCDEM+NK": 0.008, "LANO+VRBa": 0.004, "DSZ+NK": 0.000}},
 }
 fin_kv = json.load(open(os.path.join(HERE, "odhad_kv.json"), encoding="utf-8"))["kv"]
+def _blizkost(k, z):
+    hl = [x for x in fin_kv[k]["l"] if x["e"] >= 0.05 and x["a"] in z["e"]]
+    val = lambda v: v[0] if isinstance(v, tuple) else v
+    return sum(abs(val(z["e"][x["a"]]) - x["e"]) for x in hl) / max(1, len(hl))
 for k, z in ZVEREJNENO.items():
+    if isinstance(z, list):  # víc zveřejněných predikcí → ta nejbližší konečnému výsledku
+        z = min(z, key=lambda v: _blizkost(k, v))
     l = {f"{x['a']}|{x['nm']}": list(z["e"][x["a"]]) if isinstance(z["e"][x["a"]], tuple) else [z["e"][x["a"]], None]
          for x in fin_kv[k]["l"] if x["a"] in z["e"]}
     out["kv"][k] = {"t": z["t"], "frac": round(z["frac"], 3), "zdroj": z["zdroj"], "l": l}
