@@ -89,7 +89,9 @@ export default function ZivyPrenos({ dataUrl, slug }: { dataUrl: string; slug: s
   useEffect(() => pollJson(dataUrl, (d) => setItems(((d as { zive?: Prispevek[] }).zive ?? []))), [dataUrl]);
 
   if (!items) return null;
-  const sorted = [...items].sort((a, b) => b.cas.localeCompare(a.cas));
+  // časy po půlnoci (do 12:00) patří k následujícímu dni volební noci
+  const klic = (cas: string) => (cas.padStart(5, '0') < '12:00' ? '1' : '0') + cas.padStart(5, '0');
+  const sorted = [...items].sort((a, b) => klic(b.cas).localeCompare(klic(a.cas)));
 
   return (
     <div style={{ clear: 'both', margin: '1.5em 0', borderLeft: `3px solid ${RED}`, paddingLeft: 18 }}>

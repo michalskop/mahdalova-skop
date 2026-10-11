@@ -351,6 +351,18 @@
       "alt": "Přehled všech 27 senátních obvodů s živým odhadem k 18:11"
     },
     {
+      "cas": "18:31",
+      "text": "**Praha** – STAN a Spolu (ODS + TOP 09) se střídají v čele. Mezi 18:18 a 18:31 se na prvním místě vyměnili třikrát, v 18:31 vedou Starostové s odhadem 22,2 % před Spolu s 21,8 %. Sečtena je necelá pětina okrsků, rozdíl je zatím v mezích nejistoty.\n\nSTAN už vedení nepustil a vyhrál s 23,2 % před Spolu s 22,1 %, obě kandidátky mají 17 mandátů.",
+      "obrazek": "images/zive/praha-1831.jpg",
+      "alt": "Odhady konečného podílu hlasů STAN a Spolu v Praze mezi 18:18 a 18:31"
+    },
+    {
+      "cas": "18:40",
+      "text": "**Karlovy Vary** – první krajské město, kde je rozdělení mandátů jisté. Ze 35 mandátů získá ANO 10, VARY+ 9, Karlovaráci 6, STAN 6, SPD 2 a ODS 2. Sečteno je přes 75 % okrsků.\n\nKonečný výsledek je shodný.",
+      "obrazek": "images/zive/karlovy-vary-1840.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Karlových Varů podle modelu v 18:40"
+    },
+    {
       "cas": "19:09",
       "text": "**Velký update (18:55): rozhodnuto je Zlínsko a první radnice**\n\n**Senát – Zlín:** do 2. kola postupují Tomáš Goláň (KDU-ČSL, ODS, TOP 09) a Ivo Mitáček (STAN).\n\n**Sečteno, mandáty v zastupitelstvech:**\n\n– **Teplice** (27): ODS 10, ANO 9, KDU-ČSL + Zelení + Piráti + NK 7, SPD + Trikolóra + NK 1\n\n– **Prostějov** (35): Zelení + STAN + TOP 09 13, ANO 11, ODS + NK 6, PV 3, SPD 2\n\n– **Most** (45): ProMOST 22, VIZE 11, ANO 8, SPD + AUTO 2, Zelení + STAN + Piráti 2\n\n**Rozdělení mandátů je jisté:**\n\n– **Karlovy Vary** (35): ANO 10, KDU-ČSL + KOA + Piráti + TOP 09 9, KVC 6, STAN 6, SPD 2\n\n– **Klatovy** (27): ODS 8, KDU-ČSL + Piráti + NK 7, ANO 5, STAN + NK 5, SPD + NK 2\n\n– **Česká Lípa** (25): SLK + NK 10, ANO 10, ODS 2, KDU-ČSL + TOP 09 + SPOLEH + NK 2, SPD 1\n\nV Mostě má ProMOST sám o sobě 22 ze 45 mandátů, k většině mu chybí jediný.",
       "obrazek": "images/zive/velky-update-1909.jpg",
@@ -552,10 +564,34 @@
       ]
     },
     {
+      "cas": "19:16",
+      "text": "**Jihlava** – rozdělení mandátů je jisté. Vyhrává koalice KDU-ČSL, ODS a TOP 09 se 16 ze 37 mandátů, ANO má 10, STAN 5, Zelení s Piráty 3 a SPD se Svobodnými, Trikolórou a PRO 3. Sečteno je přes 80 % okrsků.\n\nVe 20:01 jistota modelu krátce klesla na 97 %, konečný výsledek je ale shodný. Jihlava je jediné krajské město, kde vyhrála kandidátka s ODS.",
+      "obrazek": "images/zive/jihlava-1916.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Jihlavy podle modelu v 19:16"
+    },
+    {
       "cas": "19:22",
       "text": "**Brno!** ODS a Kamila Zlatušková volby nevyhrávají a nemají jisté ani druhé místo. Podle predikce vyhraje koalice KDU-ČSL a STAN v čele s Jakubem Hruškou: odhad 27,0 %, zhruba 18 z 55 mandátů.\n\nO druhé místo se přetahují ODS + TOP 09 (18,3 %) a ANO (17,4 %), jejich intervaly se překrývají. Dál Zelené Brno 9,2 %, Piráti a Fakt Brno TU! 7,3 % a Za Lužánky 5,1 %, které se drží těsně nad hranicí. Sečtena je čtvrtina okrsků.",
       "obrazek": "images/zive/brno-1921.jpg",
       "alt": "Odhad výsledku voleb do zastupitelstva Brna, sečteno 87 z 353 okrsků"
+    },
+    {
+      "cas": "20:38",
+      "text": "**Ústí nad Labem** – Jedno Ústí má absolutní většinu. Získá 22 ze 37 mandátů, k většině stačí 19. Dál ANO 6, Vaše Ústí 4, Spolu pro Ústí (KDU-ČSL, ODS) 3 a SPD s Motoristy 2. Sečteno je přes 90 % okrsků.\n\nKonečný výsledek je shodný. Je to jediná absolutní většina jedné kandidátky v krajských městech.",
+      "obrazek": "images/zive/usti-nad-labem-2038.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Ústí nad Labem podle modelu ve 20:38"
+    },
+    {
+      "cas": "20:51",
+      "text": "**České Budějovice** – vyhrává Naše Česko. Rozdělení mandátů je jisté: Naše Česko 15 ze 45, Občané pro Budějovice a Starostové 9, ANO 8, Piráti a Budějčáci se Zelenými 6, ODS 4 a Společně pro Budějovice (KDU-ČSL, TOP 09) 3. Sečteno je zhruba 90 % okrsků.\n\nKonečný výsledek je shodný, Naše Česko má 29,6 %.",
+      "obrazek": "images/zive/ceske-budejovice-2051.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Českých Budějovic podle modelu ve 20:51"
+    },
+    {
+      "cas": "20:55",
+      "text": "**Hradec Králové** – rozdělení mandátů je jisté. Hradecký demokratický klub s TOP 09 vyhrává s 11 ze 37 mandátů, těsně za ním je ANO s 10. Piráti a Starostové mají 6, ODS 4, Náš Hradec 3 a Změna pro Hradec se Zelenými a KDU-ČSL 3. Sečteny jsou přes tři čtvrtiny okrsků.\n\nKonečný výsledek je shodný.",
+      "obrazek": "images/zive/hradec-kralove-2055.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Hradce Králové podle modelu ve 20:55"
     },
     {
       "cas": "21:24",
@@ -578,10 +614,28 @@
       "alt": "Konečný výsledek senátních voleb v obvodu 45 – Hradec Králové"
     },
     {
+      "cas": "22:45",
+      "text": "**Plzeň** – ANO vyhrává a rozdělení mandátů je jisté: ANO 18 ze 47, STAN 10, ODS 8, KDU-ČSL s Pro Plzeň 6 a Zelení s TOP 09 5. Piráti s odhadem 4,9 % zůstávají těsně pod hranicí a do zastupitelstva se nedostanou. Sečteno je přes 96 % okrsků.\n\nKonečný výsledek je shodný.",
+      "obrazek": "images/zive/plzen-2245.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Plzně podle modelu ve 22:45"
+    },
+    {
       "cas": "22:55",
       "text": "Malá odbočka: **Krabčice** – o dva hlasy předběhla lídra kandidátky Společně za budoucnost obce Jiřího Šimáčka (174 hlasů) „čtyřka“ Sabina Slonková se 176 hlasy. Bude starostkou?",
       "obrazek": "images/zive/krabcice-2255.jpg",
       "alt": "Výsledky voleb do zastupitelstva obce Krabčice podle volby.cz – preferenční hlasy kandidátů"
+    },
+    {
+      "cas": "00:47",
+      "text": "**Zlín** – rozdělení mandátů je jisté. ANO 10 ze 41, STAN 9, Zlín 21 8, Společně pro Zlín (KDU-ČSL, TOP 09) 5, ODS 4, Zlín srdcem a Piráti 3, SPD 2. O první místo to byl celý večer těsný souboj ANO se Starostovými. Sečteno je přes 85 % okrsků.\n\nKonečný výsledek je shodný, ANO má 21,4 %, STAN 20,1 %.",
+      "obrazek": "images/zive/zlin-0047.jpg",
+      "alt": "Rozdělení mandátů v zastupitelstvu Zlína podle modelu v 0:47"
+    },
+    {
+      "cas": "01:55",
+      "text": "**Ostrava – sečteno, a oprava.** Ve 23:31 ukázal model rozdělení mandátů jako jisté: ANO 19, srdcOVA 13, Starostové pro Ostravu 11. Ve 23:45 to sám odvolal. Po sečtení všech okrsků je to jinak: ANO 18 z 55, srdcOVA (ODS, KDU-ČSL, TOP 09) 13, Starostové pro Ostravu 12, Ostravak 7 a Motoristé 5. Poslední mandát se přesunul od ANO ke Starostům. Piráti s 4,9 % zůstávají mimo.\n\nOstrava je jediné krajské město, kde model ohlásil jisté rozdělení mandátů, které se nepotvrdilo.",
+      "obrazek": "images/zive/ostrava-0155.jpg",
+      "alt": "Ostrava: rozdělení mandátů ohlášené modelem ve 23:31 a konečný výsledek"
     },
     {
       "cas": "06:45",
