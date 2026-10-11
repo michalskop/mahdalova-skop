@@ -23,7 +23,7 @@ Odhad počítáme pro zastupitelstva 140 měst, včetně městských částí a 
   mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/senat-mapa.json"
   obceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/obce-mapa.json"
   odhadUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/odhad_kv.json"
-  predikceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/predikce_nejblizsi.json"
+  predikceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/predikce_rana.json"
   title="Komunální volby 2026: průběžný odhad ve 140 městech a městských částech"
   subtitle="Klikněte nebo ťukněte na město"
   source="volby.gov.cz – průběžné výsledky 2026; model: DataTimes.cz"
@@ -36,7 +36,7 @@ Barva obvodu na mapě funguje jako semafor: zelená znamená, že odhad je už t
 <SenatPredikceMapa
   mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/senat-mapa.json"
   odhadUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/odhad.json"
-  predikceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/predikce_nejblizsi.json"
+  predikceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/predikce_rana.json"
   title="Senát 2026: průběžný odhad po obvodech"
   subtitle="Klikněte nebo ťukněte na obvod"
   source="volby.gov.cz – průběžné výsledky 2026; model: DataTimes.cz"

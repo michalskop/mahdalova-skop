@@ -4,8 +4,8 @@
 // mapaUrl  = senat-mapa.json (obrys ČR a tečkový podklad – sdílený s mapou Senátu)
 // obceUrl  = obce-mapa.json [{ n, lon, lat, keys }] – první klíč = hlavní zastupitelstvo obce
 // odhadUrl = odhad_kv.json – snímek /api/latest z volby2026.datatimes.cz (skript aktualizuj_odhad.py)
-// predikceUrl = predikce_nejblizsi.json – naše predikce z večera nejbližší konečnému výsledku (nejblizsi_predikce.py);
-//            v kartě se ukáže světlejší pruh pod výsledkem
+// predikceUrl = predikce_rana.json – nejranější zveřejněná predikce, jejíž součet odchylek od konečného výsledku
+//            byl nejvýš `prah` p. b. (predikce_rana.py); v kartě se ukáže světlejší pruh pod výsledkem
 // Bod: výplň = barva vedoucí kandidátky, okraj = jistota (semafor). Klik / ťuknutí → karta pod mapou.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -32,7 +32,8 @@ type Zast = { n: string; seats: number; st: string; frac: number; nc: number; nt
 type Odhad = { generated: string; kv: Record<string, Zast> };
 type Obec = { n: string; lon: number; lat: number; keys: string[] };
 type MapData = { outline: Geometry; dots: [number, number, number][] };
-type Predikce = { kv: Record<string, { t: string; frac: number; l: Record<string, [number, number | null]>; zdroj?: string }> };
+type PredZ = { t: string; frac: number; E?: number; l: Record<string, [number, number | null, (number | null)?, (number | null)?]>; zdroj?: string };
+type Predikce = { prah?: number; kv: Record<string, PredZ | { nesplneno: true; minE: number }> };
 
 const pct = (v: number, d = 1) => `${(v * 100).toFixed(d).replace('.', ',')} %`;
 const pl = (n: number, a: string, b: string, c: string) => (n === 1 ? a : n >= 2 && n <= 4 ? b : c);
@@ -152,9 +153,10 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, predikc
   const selZ = sel ? odhad?.kv[sel.key] : undefined;
   const selJ = jistota(selZ);
   const rows = (selZ?.l ?? []).filter((l) => l.e >= 0.01 || l.s > 0);
-  const selP = sel ? pred?.kv[sel.key] : undefined;
+  const selPz = sel ? pred?.kv[sel.key] : undefined;
+  const selP = selPz && !('nesplneno' in selPz) ? selPz : undefined;
   const pOf = (l: Lst) => selP?.l[`${l.a}|${l.nm}`];
-  const scaleMax = Math.max(0.3, ...rows.map((l) => Math.max(l.hi, pOf(l)?.[0] ?? 0)));
+  const scaleMax = Math.max(0.3, ...rows.map((l) => Math.max(l.hi, pOf(l)?.[0] ?? 0, pOf(l)?.[3] ?? 0)));
   const hovObec = hover && obce ? obce.find((o) => o.n === hover.n) : undefined;
   const hovZ = hovObec ? odhad?.kv[hovObec.keys[0]] : undefined;
 
@@ -265,7 +267,11 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, predikc
                 )}
                 <div style={{ color: MUTED, fontSize: 14, margin: '4px 0 12px' }}>
                   {selZ ? `${selZ.seats} ${pl(selZ.seats, 'mandát', 'mandáty', 'mandátů')} · stav k ${odhad?.generated.slice(11, 16)}, sečteno ${selZ.nc} z ${selZ.nt} okrsků (${pct(selZ.frac, 0)})` : ''}
-                  {selP && <div style={{ color: INK, marginTop: 2 }}>{selP.zdroj ? 'zveřejněná predikce' : 'predikce'} k <strong>{selP.t}</strong> (sečteno {pct(selP.frac, 0)} okrsků) – světlejší pruh</div>}
+                  {selP && (
+                    <div style={{ color: INK, marginTop: 2 }}>
+                      Naše predikce z <strong>{selP.t}</strong>, kdy bylo sečteno {pct(selP.frac, 0)} okrsků – světlejší pruh
+                    </div>
+                  )}
                 </div>
                 {!rows.length && <div style={{ color: MUTED, fontSize: 15 }}>Zatím bez sečtených okrsků.</div>}
                 <div style={{ display: 'grid', gap: 9 }}>
@@ -293,9 +299,14 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, predikc
                           <>
                             <div style={{ position: 'relative', height: 7, background: '#f1efe7', borderRadius: 3, marginTop: 3 }}>
                               <div style={{ position: 'absolute', left: 0, width: X(pOf(l)![0]), top: 0, bottom: 0, background: l.c ?? '#b8b4a6', opacity: 0.38, borderRadius: 3 }} />
+                              {pOf(l)![2] != null && pOf(l)![3] != null && (pOf(l)![3] as number) > (pOf(l)![2] as number) && (
+                                <div style={{ position: 'absolute', left: X(pOf(l)![2] as number), width: `calc(${X(pOf(l)![3] as number)} - ${X(pOf(l)![2] as number)})`, top: -2, bottom: -2, border: `1.5px solid ${INK}`, borderRadius: 3, opacity: 0.4 }} />
+                              )}
                             </div>
                             <div style={{ fontSize: 12.5, color: MUTED, textAlign: 'right', marginTop: 1 }}>
-                              predikce {pct(pOf(l)![0])}{pOf(l)![1] != null ? ` · ${pOf(l)![1]} ${pl(pOf(l)![1] as number, 'mandát', 'mandáty', 'mandátů')}` : ''}
+                              predikce {pct(pOf(l)![0])}
+                              {pOf(l)![2] != null && pOf(l)![3] != null ? ` (${pct(pOf(l)![2] as number)}–${pct(pOf(l)![3] as number)})` : ''}
+                              {pOf(l)![1] != null ? ` · ${pOf(l)![1]} ${pl(pOf(l)![1] as number, 'mandát', 'mandáty', 'mandátů')}` : ''}
                             </div>
                           </>
                         )}
@@ -306,7 +317,7 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, predikc
                 {rows.length > 0 && (
                   <div style={{ fontSize: 12.5, color: MUTED, marginTop: 10 }}>
                     {selP
-                      ? `Plný pruh = výsledek, světlejší pruh = naše predikce k ${selP.t}, rámeček = 90% interval.`
+                      ? `Plný pruh = konečný výsledek, světlejší pruh = naše predikce z ${selP.t}, rámeček kolem něj = její 90% interval.`
                       : 'Pruh = odhad konečného podílu hlasů, rámeček = 90% interval, mandáty = nejpravděpodobnější počet.'}
                   </div>
                 )}

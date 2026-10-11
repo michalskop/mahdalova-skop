@@ -3,7 +3,7 @@
 // Senát 2026 – průběžný odhad po obvodech (model volby2026.datatimes.cz).
 // mapaUrl  = senat-mapa.json (polygony obvodů a tečkový podklad)
 // odhadUrl = odhad.json – snímek /api/latest z volby2026.datatimes.cz (skript aktualizuj_odhad.py v článku)
-// predikceUrl = predikce_nejblizsi.json – naše predikce z večera nejbližší konečnému výsledku (nejblizsi_predikce.py)
+// predikceUrl = predikce_rana.json – nejranější zveřejněná predikce se součtem odchylek od výsledku nejvýš `prah` p. b. (predikce_rana.py)
 // Obvody se barví jako semafor podle jistoty odhadu; klik / ťuknutí ukáže pod mapou kartu obvodu.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
