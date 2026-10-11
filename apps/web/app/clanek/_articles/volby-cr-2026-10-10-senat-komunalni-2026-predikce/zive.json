@@ -576,6 +576,201 @@
       "text": "**Oprava: Hradec Králové.** V 16:11 jsme napsali, že do 2. kola postupují Zuzana Ceralová Petrofová a Monika Nebeská. Po sečtení 192 ze 193 okrsků (99 %) ale postupují **Martin Dvořák** (Zelení, STAN, Piráti, TOP 09, HDK) s 25,1 % a **Zuzana Ceralová Petrofová** (ODS) s 21,9 %. Monika Nebeská (NK) skončila čtvrtá s 15,0 %.\n\n**Co se stalo.** V 16:11 byla sečtena čtvrtina okrsků. Model z nich odhadoval, jak dopadnou ty zbývající, a dával Monice Nebeské postup s pravděpodobností 98 %, Martinu Dvořákovi jen 2 %. Jenže okrsky v Hradci nejsou stejné: Dvořák byl ve městě ještě silnější, než model podle dosavadních výsledků čekal. S každou další dávkou hlasů proto jeho odhad stoupal a Nebeské klesal. Zhruba v polovině sčítání se pořadí prohodilo a od 18:20 byl Dvořákův postup jistý.\n\n**Jak to číst.** Takové „ujíždění“ jedním směrem k průběžným odhadům patří. Model zatím neumí započítat všechny místní zvláštnosti, a dokud je sečtená jen malá část okrsků, může se celý odhad i s intervalem posouvat. Zkušenost ukazuje, že když se odhad jednou rozjede, většinou pokračuje stejným směrem, nebo se ustálí, a jen výjimečně se otočí. Proto rozhodnuté souboje vyhlašujeme až při jistotě aspoň 99 % a s aspoň 30 % sečtených okrsků a sledujeme, kam se čísla hýbou. Příspěvek z 16:11 tuhle laťku nesplňoval a byl napsaný příliš jistě. Hradec po volbách podrobně vyhodnotíme.",
       "obrazek": "images/zive/45-hradec-kralove-2231.jpg",
       "alt": "Konečný výsledek senátních voleb v obvodu 45 – Hradec Králové"
+    },
+    {
+      "cas": "06:45",
+      "text": "**Průběžná rekapitulace Senátu (06:44)** · jisté: 27 · téměř jisté: 0 · čekáme na sečtené hlasy: 0 (z 27 obvodů)",
+      "rekap": [
+        {
+          "stav": "jiste",
+          "ob": 3,
+          "obvod": "Cheb",
+          "vysledek": "do 2. kola Miroslav Plevný (STAN) a Sandra Tsoukernik (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 6,
+          "obvod": "Louny",
+          "vysledek": "do 2. kola Ivo Trešl (STAN) a Jaroslav Mikoláš (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 9,
+          "obvod": "Plzeň-město",
+          "vysledek": "do 2. kola Karel Řehka (STAN) a Lucie Kantorová (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 12,
+          "obvod": "Strakonice",
+          "vysledek": "Tomáš Fiala (Naše Česko) vyhrává už v 1. kole",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 15,
+          "obvod": "Pelhřimov",
+          "vysledek": "do 2. kola Ladislav Med (KDU-ČSL, ODS, STAN, TOP 09) a Michal Kozár (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 18,
+          "obvod": "Příbram",
+          "vysledek": "do 2. kola Petr Štěpánek (STAN) a Barbora Daňhová (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 21,
+          "obvod": "Praha 5",
+          "vysledek": "do 2. kola Václav Láska (SEN 21) a Radko Sáblík (KDUČSL+ODS+STAN)",
+          "secteno": 99
+        },
+        {
+          "stav": "jiste",
+          "ob": 24,
+          "obvod": "Praha 9",
+          "vysledek": "do 2. kola David Smoljak (KDUZelSTANPiTOP) a Dagmar Pecková (ODS)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 27,
+          "obvod": "Praha 1",
+          "vysledek": "do 2. kola Jiří Padevět (ODSSTANPirátTOP) a Jan Čižinský (KDU+Z+PRAHA+SEN)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 30,
+          "obvod": "Kladno",
+          "vysledek": "do 2. kola Adéla Sucharda Šípová (Zelení, STAN, Piráti, TOP 09, SEN 21) a Petr Paták (ODS)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 33,
+          "obvod": "Děčín",
+          "vysledek": "Zbyněk Linhart (STAN+SLK) vyhrává už v 1. kole",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 36,
+          "obvod": "Česká Lípa",
+          "vysledek": "do 2. kola Jitka Volfová (ANO) a Martin Půta (SLK)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 39,
+          "obvod": "Trutnov",
+          "vysledek": "Jan Sobotka (STAN) vyhrává už v 1. kole",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 42,
+          "obvod": "Kolín",
+          "vysledek": "do 2. kola Michael Kašpar (STAN) a Andrea Brzobohatá (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 45,
+          "obvod": "Hradec Králové",
+          "vysledek": "do 2. kola Martin Dvořák (Zelení, STAN, Piráti, TOP 09, HDK) a Zuzana Ceralová Petrofová (ODS)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 48,
+          "obvod": "Rychnov nad Kněžnou",
+          "vysledek": "Jan Grulich (KDU-ČSL, ODS a další) vyhrává už v 1. kole",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 51,
+          "obvod": "Žďár nad Sázavou",
+          "vysledek": "do 2. kola Michal Šmarda (SOM+Volt+HR) a Josef Klement (KDU-ČSL)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 54,
+          "obvod": "Znojmo",
+          "vysledek": "do 2. kola Tomáš Třetina (KDU-ČSL, ODS, STAN, Piráti, TOP 09) a Jiří Kyněra (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 57,
+          "obvod": "Vyškov",
+          "vysledek": "Jan Grolich (KDU-ČSL) vyhrává už v 1. kole",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 60,
+          "obvod": "Brno-město",
+          "vysledek": "do 2. kola Zdeněk Papoušek (KDUODSPirTOPFBr) a Karel Zitterbart (STAN)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 63,
+          "obvod": "Přerov",
+          "vysledek": "do 2. kola Jakub Navařík (KDU-ČSL, ODS, STAN, TOP 09) a Petr Vrána (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 66,
+          "obvod": "Litovel",
+          "vysledek": "do 2. kola Marek Ošťádal (24/7) a Martin Škurek (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 69,
+          "obvod": "Frýdek-Místek",
+          "vysledek": "do 2. kola Helena Pešatová (STAN+Piráti+TOP) a Petr Korč (NMFM)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 72,
+          "obvod": "Ostrava-město",
+          "vysledek": "do 2. kola Ondřej Šimetka (KDU-ČSL, ODS, STAN, Piráti, TOP 09) a Lucie Baránková Vilamová (ANO)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 75,
+          "obvod": "Karviná",
+          "vysledek": "do 2. kola Lenka Brzyszkowská (ANO) a Petr Kazík (OK)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 78,
+          "obvod": "Zlín",
+          "vysledek": "do 2. kola Tomáš Goláň (KDU-ČSL, ODS, TOP 09) a Ivo Mitáček (STAN)",
+          "secteno": 100
+        },
+        {
+          "stav": "jiste",
+          "ob": 81,
+          "obvod": "Uherské Hradiště",
+          "vysledek": "do 2. kola Josef Bazala (KDU-ČSL) a Jiří Vašica (ANO)",
+          "secteno": 100
+        }
+      ]
     }
   ]
 }
