@@ -4,6 +4,8 @@
 // mapaUrl  = senat-mapa.json (obrys ČR a tečkový podklad – sdílený s mapou Senátu)
 // obceUrl  = obce-mapa.json [{ n, lon, lat, keys }] – první klíč = hlavní zastupitelstvo obce
 // odhadUrl = odhad_kv.json – snímek /api/latest z volby2026.datatimes.cz (skript aktualizuj_odhad.py)
+// predikceUrl = predikce_nejblizsi.json – naše predikce z večera nejbližší konečnému výsledku (nejblizsi_predikce.py);
+//            v kartě se ukáže světlejší pruh pod výsledkem
 // Bod: výplň = barva vedoucí kandidátky, okraj = jistota (semafor). Klik / ťuknutí → karta pod mapou.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -30,6 +32,7 @@ type Zast = { n: string; seats: number; st: string; frac: number; nc: number; nt
 type Odhad = { generated: string; kv: Record<string, Zast> };
 type Obec = { n: string; lon: number; lat: number; keys: string[] };
 type MapData = { outline: Geometry; dots: [number, number, number][] };
+type Predikce = { kv: Record<string, { t: string; frac: number; l: Record<string, [number, number | null]>; zdroj?: string }> };
 
 const pct = (v: number, d = 1) => `${(v * 100).toFixed(d).replace('.', ',')} %`;
 const pl = (n: number, a: string, b: string, c: string) => (n === 1 ? a : n >= 2 && n <= 4 ? b : c);
@@ -60,16 +63,18 @@ export interface ObceKvPredikceMapaProps {
   mapaUrl: string;
   obceUrl: string;
   odhadUrl: string;
+  predikceUrl?: string;
   title?: string;
   subtitle?: string;
   source?: string;
 }
 
-export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, title, subtitle, source }: ObceKvPredikceMapaProps) {
+export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, predikceUrl, title, subtitle, source }: ObceKvPredikceMapaProps) {
   const [wrapRef, width] = useWidth<HTMLDivElement>();
   const [map, setMap] = useState<MapData | null>(null);
   const [obce, setObce] = useState<Obec[] | null>(null);
   const [odhad, setOdhad] = useState<Odhad | null>(null);
+  const [pred, setPred] = useState<Predikce | null>(null);
   const [hover, setHover] = useState<{ n: string; x: number; y: number } | null>(null);
   const [sel, setSel] = useState<{ obec: string; key: string } | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -83,6 +88,12 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, title, 
     });
     return () => { alive = false; };
   }, [mapaUrl, obceUrl]);
+  useEffect(() => {
+    if (!predikceUrl) return;
+    let alive = true;
+    fetch(predikceUrl).then((r) => r.json()).then((p) => { if (alive) setPred(p as Predikce); });
+    return () => { alive = false; };
+  }, [predikceUrl]);
   // odhad se během večera mění – obnova každou minutu (jen na viditelné kartě)
   useEffect(() => pollJson(odhadUrl, (o) => setOdhad(o as Odhad)), [odhadUrl]);
 
@@ -141,7 +152,9 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, title, 
   const selZ = sel ? odhad?.kv[sel.key] : undefined;
   const selJ = jistota(selZ);
   const rows = (selZ?.l ?? []).filter((l) => l.e >= 0.01 || l.s > 0);
-  const scaleMax = Math.max(0.3, ...rows.map((l) => l.hi));
+  const selP = sel ? pred?.kv[sel.key] : undefined;
+  const pOf = (l: Lst) => selP?.l[`${l.a}|${l.nm}`];
+  const scaleMax = Math.max(0.3, ...rows.map((l) => Math.max(l.hi, pOf(l)?.[0] ?? 0)));
   const hovObec = hover && obce ? obce.find((o) => o.n === hover.n) : undefined;
   const hovZ = hovObec ? odhad?.kv[hovObec.keys[0]] : undefined;
 
@@ -251,7 +264,8 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, title, 
                   </select>
                 )}
                 <div style={{ color: MUTED, fontSize: 14, margin: '4px 0 12px' }}>
-                  {selZ ? `${selZ.seats} ${pl(selZ.seats, 'mandát', 'mandáty', 'mandátů')} · sečteno ${selZ.nc} z ${selZ.nt} okrsků (${pct(selZ.frac, 0)})` : ''}
+                  {selZ ? `${selZ.seats} ${pl(selZ.seats, 'mandát', 'mandáty', 'mandátů')} · stav k ${odhad?.generated.slice(11, 16)}, sečteno ${selZ.nc} z ${selZ.nt} okrsků (${pct(selZ.frac, 0)})` : ''}
+                  {selP && <div style={{ color: INK, marginTop: 2 }}>{selP.zdroj ? 'zveřejněná predikce' : 'predikce'} k <strong>{selP.t}</strong> (sečteno {pct(selP.frac, 0)} okrsků) – světlejší pruh</div>}
                 </div>
                 {!rows.length && <div style={{ color: MUTED, fontSize: 15 }}>Zatím bez sečtených okrsků.</div>}
                 <div style={{ display: 'grid', gap: 9 }}>
@@ -275,13 +289,25 @@ export default function ObceKvPredikceMapa({ mapaUrl, obceUrl, odhadUrl, title, 
                             <div style={{ position: 'absolute', left: X(l.lo), width: `calc(${X(l.hi)} - ${X(l.lo)})`, top: -2, bottom: -2, border: `1.5px solid ${INK}`, borderRadius: 3, opacity: 0.45 }} />
                           )}
                         </div>
+                        {pOf(l) && (
+                          <>
+                            <div style={{ position: 'relative', height: 7, background: '#f1efe7', borderRadius: 3, marginTop: 3 }}>
+                              <div style={{ position: 'absolute', left: 0, width: X(pOf(l)![0]), top: 0, bottom: 0, background: l.c ?? '#b8b4a6', opacity: 0.38, borderRadius: 3 }} />
+                            </div>
+                            <div style={{ fontSize: 12.5, color: MUTED, textAlign: 'right', marginTop: 1 }}>
+                              predikce {pct(pOf(l)![0])}{pOf(l)![1] != null ? ` · ${pOf(l)![1]} ${pl(pOf(l)![1] as number, 'mandát', 'mandáty', 'mandátů')}` : ''}
+                            </div>
+                          </>
+                        )}
                       </div>
                     );
                   })}
                 </div>
                 {rows.length > 0 && (
                   <div style={{ fontSize: 12.5, color: MUTED, marginTop: 10 }}>
-                    Pruh = odhad konečného podílu hlasů, rámeček = 90% interval, mandáty = nejpravděpodobnější počet.
+                    {selP
+                      ? `Plný pruh = výsledek, světlejší pruh = naše predikce k ${selP.t}, rámeček = 90% interval.`
+                      : 'Pruh = odhad konečného podílu hlasů, rámeček = 90% interval, mandáty = nejpravděpodobnější počet.'}
                   </div>
                 )}
               </>

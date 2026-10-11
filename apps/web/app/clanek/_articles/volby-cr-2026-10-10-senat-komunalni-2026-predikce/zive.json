@@ -1,6 +1,10 @@
 {
   "zive": [
     {
+      "cas": "15:13",
+      "text": "**PREDIKCE!** Na 80 % bude mít Kubovo Naše Česko prvního zástupce v Senátu. Ve Strakonicích vede Tomáš Fiala (Naše Česko) s odhadem 53,1 %, model mu dává 83% šanci, že vyhraje už v 1. kole. Sečtena jsou zatím 3 % okrsků.\n\nS Michalem Škopem máme aktuální modely na stovku měst a městských částí a samozřejmě na všechny senátní obvody.\n\nPotvrdilo se: Tomáš Fiala vyhrál už v 1. kole s 55,4 %."
+    },
+    {
       "cas": "16:00",
       "text": "**Potvrzeno! Strakonice**, vítěz v 1. kole senátních voleb je Tomáš Fiala (Naše Česko).",
       "obrazek": "images/zive/12-strakonice-1600.jpg",
@@ -351,10 +355,10 @@
       "alt": "Přehled všech 27 senátních obvodů s živým odhadem k 18:11"
     },
     {
-      "cas": "18:31",
-      "text": "**Praha** – STAN a Spolu (ODS + TOP 09) se střídají v čele. Mezi 18:18 a 18:31 se na prvním místě vyměnili třikrát, v 18:31 vedou Starostové s odhadem 22,2 % před Spolu s 21,8 %. Sečtena je necelá pětina okrsků, rozdíl je zatím v mezích nejistoty.\n\nSTAN už vedení nepustil a vyhrál s 23,2 % před Spolu s 22,1 %, obě kandidátky mají 17 mandátů.",
-      "obrazek": "images/zive/praha-1831.jpg",
-      "alt": "Odhady konečného podílu hlasů STAN a Spolu v Praze mezi 18:18 a 18:31"
+      "cas": "18:35",
+      "text": "**Praha** – ODS + TOP 09 a STAN jsou podle predikce těsně vedle sebe: Spolu 22,1 %, Starostové 21,9 %. Dál Praha sobě 18,9 %, ANO 14,1 % a Piráti 8,8 %. Sečteno je zatím 5 % okrsků, jistota výsledku je nízká.\n\nSTAN se v 18:31 dostal do čela a už ho nepustil. Vyhrál s 23,2 % před Spolu s 22,1 %, obě kandidátky mají 17 mandátů.",
+      "obrazek": "images/zive/praha-1835.jpg",
+      "alt": "Predikce výsledku voleb do zastupitelstva hl. m. Prahy, sečteno 56 z 1120 okrsků"
     },
     {
       "cas": "18:40",
@@ -831,6 +835,10 @@
           "secteno": 100
         }
       ]
+    },
+    {
+      "cas": "07:05",
+      "text": "**Senát po 1. kole: sečteno je všech 27 obvodů.**\n\n**Už v 1. kole vyhráli:** Tomáš Fiala (Naše Česko) na Strakonicku, Zbyněk Linhart (STAN + SLK) na Děčínsku, Jan Sobotka (STAN) na Trutnovsku a Jan Grulich (KDU-ČSL, ODS a další) na Rychnovsku. Všichni čtyři mandát obhájili. Na Vyškovsku vyhrál Jan Grolich (KDU-ČSL) s 63 %. Dosavadní senátor Karel Zitterbart tu neobhajoval, kandiduje v Brně.\n\n**Dosavadní senátoři, kteří skončili už v 1. kole:** Lumír Aschenbrenner (ODS, KČ, TOP 09) v Plzni byl třetí, ODS tu o křeslo přichází. Do 2. kola jdou Karel Řehka (STAN) a Lucie Kantorová (ANO). Dál Jaroslav Chalupský na Pelhřimovsku, Jiří Vosecký na Českolipsku a Jan Holásek v Hradci Králové.\n\n**Do 2. kola postupuje 14 obhájců:** Miroslav Plevný (Cheb), Ivo Trešl (Louny), Petr Štěpánek (Příbram), Václav Láska (Praha 5), David Smoljak (Praha 9), Adéla Sucharda Šípová (Kladno), Josef Klement (Žďár nad Sázavou), Tomáš Třetina (Znojmo), Zdeněk Papoušek (Brno-město), Marek Ošťádal (Litovel), Helena Pešatová (Frýdek-Místek), Ondřej Šimetka (Ostrava-město), Tomáš Goláň (Zlín) a Josef Bazala (Uherské Hradiště). V Brně se ve 2. kole utkají dva senátoři: Papoušek (42,1 %) a Zitterbart (24,4 %). Na Žďársku postoupil Klement o vlásek, s Radkem Černým měli shodně 25,6 %.\n\n**Nová jména ve 2. kole tam, kde se neobhajovalo:** Praha 1 – Jiří Padevět (ODS, STAN, Piráti, TOP 09) a Jan Čižinský (KDU-ČSL, Zelení, Praha sobě, SEN 21). Kolín – Michael Kašpar (STAN) a Andrea Brzobohatá (ANO). Přerov – Jakub Navařík (KDU-ČSL, ODS, STAN, TOP 09) a Petr Vrána (ANO). Karviná – Lenka Brzyszkowská (ANO) a Petr Kazík (OK).\n\nANO má ve 2. kole 13 kandidátů, z prvního místa ale jen dva: Jitku Volfovou na Českolipsku a Lenku Brzyszkowskou na Karvinsku. Druhé kolo bude 16. a 17. října."
     }
   ]
 }

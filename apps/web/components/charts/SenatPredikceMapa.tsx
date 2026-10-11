@@ -3,6 +3,7 @@
 // Senát 2026 – průběžný odhad po obvodech (model volby2026.datatimes.cz).
 // mapaUrl  = senat-mapa.json (polygony obvodů a tečkový podklad)
 // odhadUrl = odhad.json – snímek /api/latest z volby2026.datatimes.cz (skript aktualizuj_odhad.py v článku)
+// predikceUrl = predikce_nejblizsi.json – naše predikce z večera nejbližší konečnému výsledku (nejblizsi_predikce.py)
 // Obvody se barví jako semafor podle jistoty odhadu; klik / ťuknutí ukáže pod mapou kartu obvodu.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -39,6 +40,7 @@ type ObvodOdhad = {
   p_decided_round1?: number; reliability?: string; candidates?: Kand[];
 };
 type Odhad = { generated: string; se: Record<string, ObvodOdhad> };
+type Predikce = { se: Record<string, { t: string; frac: number; c: Record<string, number>; zdroj?: string }> };
 
 const pct = (v: number, d = 1) => `${(v * 100).toFixed(d).replace('.', ',')} %`;
 const timeOf = (iso: string) => {
@@ -75,15 +77,17 @@ function vyhodnot(od?: ObvodOdhad) {
 export interface SenatPredikceMapaProps {
   mapaUrl: string;
   odhadUrl: string;
+  predikceUrl?: string;
   title?: string;
   subtitle?: string;
   source?: string;
 }
 
-export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, source }: SenatPredikceMapaProps) {
+export default function SenatPredikceMapa({ mapaUrl, odhadUrl, predikceUrl, title, subtitle, source }: SenatPredikceMapaProps) {
   const [wrapRef, width] = useWidth<HTMLDivElement>();
   const [data, setData] = useState<MapData | null>(null);
   const [odhad, setOdhad] = useState<Odhad | null>(null);
+  const [pred, setPred] = useState<Predikce | null>(null);
   const [hover, setHover] = useState<{ o: number; x: number; y: number } | null>(null);
   const [sel, setSel] = useState<number | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -93,6 +97,12 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
     fetch(mapaUrl).then((r) => r.json()).then((m) => { if (alive) setData(m as MapData); });
     return () => { alive = false; };
   }, [mapaUrl]);
+  useEffect(() => {
+    if (!predikceUrl) return;
+    let alive = true;
+    fetch(predikceUrl).then((r) => r.json()).then((p) => { if (alive) setPred(p as Predikce); });
+    return () => { alive = false; };
+  }, [predikceUrl]);
   // odhad se během večera mění – obnova každou minutu (jen na viditelné kartě)
   useEffect(() => pollJson(odhadUrl, (o) => setOdhad(o as Odhad)), [odhadUrl]);
 
@@ -154,7 +164,8 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
   const selP = sel !== null ? propsOf(sel) : undefined;
   const selO = sel !== null ? odhad?.se[String(sel)] : undefined;
   const selE = sel !== null ? ev[sel] : null;
-  const scaleMax = selE ? Math.max(0.5, ...selE.c.map((k) => k.est_share + 1.645 * k.sd, 0)) : 0.5;
+  const selPr = sel !== null ? pred?.se[String(sel)] : undefined;
+  const scaleMax = selE ? Math.max(0.5, ...selE.c.map((k) => Math.max(k.est_share + 1.645 * k.sd, selPr?.c[String(k.no)] ?? 0))) : 0.5;
   const hovP = hover ? propsOf(hover.o) : undefined;
   const hovE = hover ? ev[hover.o] : null;
 
@@ -263,6 +274,7 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
                 <div style={{ color: MUTED, fontSize: 14, margin: '4px 0 12px' }}>
                   {selO?.n_total ? `sečteno ${selO.n_counted ?? 0} z ${selO.n_total} okrsků (${pct(selE?.frac ?? 0, 0)})` : 'zatím bez sečtených okrsků'}
                   {selE && <> · rozhodnuto v 1. kole s pravděpodobností <strong style={{ color: INK }}>{pct(selE.p1, 0)}</strong></>}
+                  {selPr && <div style={{ color: INK, marginTop: 2 }}>{selPr.zdroj ? 'zveřejněná predikce' : 'predikce'} k <strong>{selPr.t}</strong> (sečteno {pct(selPr.frac, 0)} okrsků) – světlejší pruh</div>}
                 </div>
                 {selE && (
                   <div style={{ display: 'grid', gap: 10 }}>
@@ -289,6 +301,14 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
                             {/* sečteno */}
                             <div title="podíl ze sečtených okrsků" style={{ position: 'absolute', left: X(k.counted_share), top: 2, width: 8, height: 8, marginLeft: -4, background: '#f2a31b', transform: 'rotate(45deg)' }} />
                           </div>
+                          {selPr?.c[String(k.no)] != null && (
+                            <>
+                              <div style={{ position: 'relative', height: 7, background: '#f1efe7', borderRadius: 3, marginTop: 3 }}>
+                                <div style={{ position: 'absolute', left: 0, width: X(selPr.c[String(k.no)]), top: 0, bottom: 0, background: postup || vitez ? BLUE : MUTED, opacity: 0.3, borderRadius: 3 }} />
+                              </div>
+                              <div style={{ fontSize: 12.5, color: MUTED, textAlign: 'right', marginTop: 1 }}>predikce {pct(selPr.c[String(k.no)])}</div>
+                            </>
+                          )}
                         </div>
                       );
                     })}
@@ -297,6 +317,7 @@ export default function SenatPredikceMapa({ mapaUrl, odhadUrl, title, subtitle, 
                       <span><span style={{ display: 'inline-block', width: 3, height: 11, background: BLUE, verticalAlign: 'middle', marginRight: 5 }} />odhad konečného výsledku</span>
                       <span><span style={{ display: 'inline-block', width: 14, height: 9, background: 'rgba(0,112,244,.22)', verticalAlign: 'middle', marginRight: 5 }} />90% interval</span>
                       <span><span style={{ display: 'inline-block', width: 7, height: 7, background: '#f2a31b', transform: 'rotate(45deg)', verticalAlign: 'middle', marginRight: 6 }} />podíl ze sečtených okrsků</span>
+                      {selPr && <span><span style={{ display: 'inline-block', width: 14, height: 7, background: BLUE, opacity: 0.3, verticalAlign: 'middle', marginRight: 5 }} />naše predikce k {selPr.t}</span>}
                     </div>
                   </div>
                 )}
