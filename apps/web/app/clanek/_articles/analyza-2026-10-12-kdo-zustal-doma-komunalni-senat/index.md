@@ -2,10 +2,12 @@
 title: "Ke komunálním a senátním volbám nepřišla zhruba polovina loňských voličů ANO, ze SPOLU většinou nejvýš pětina"
 date: "2026-10-12"
 time: "16:17"
-author: "Michal Škop"
+author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Ve 14 městech a 8 senátních obvodech, kde jsou sečtené výsledky, nehlasovalo 38 až 76 % lidí, kteří loni volili ANO (medián 54 %). Z voličů SPOLU nehlasovalo ve 20 z 22 míst nejvýš 20 % (medián 7 %). Odhady vycházejí z okrskových výsledků a dvou nezávislých metod."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "volební účast", "ANO", "SPOLU", "data"]
 promoted: 1
@@ -27,9 +29,11 @@ Graf neříká, že voliči ANO se obecně nechají hůř mobilizovat. Sněmovn�
 
 Voliči SPD zůstávali doma podle regrese v mediánu 82 % případů a podle ekologické inference v 66 %, voliči Pirátů v 67 % a 50 %. Regrese a ekologická inference se u SPD shodly na 15 p. b. jen v 6 z 22 míst a u Pirátů v 9, kdežto u ANO ve 21 a u SPOLU v 16. Pro oba tábory proto uvádíme rozmezí, ne jedno číslo: u SPD zhruba dvě třetiny až čtyři pětiny, u Pirátů polovina až dvě třetiny. Strany, které mají v okrscích málo voličů nebo podobné rozložení jako jiné, se z okrskových dat oddělují špatně, a proto jsou odhady těchto dvou skupin nejméně přesné.
 
+<SupportBanner />
+
 ## Praha: kandidátku ANO volilo 50 000 až 57 000 ze 127 000 loňských voličů hnutí, u ostatních stran jsou rozmezí širší
 
-<SupportBanner float="left" />V Praze volilo loni ANO po přepočtu na letošní seznam voličů 127 000 lidí. Kandidátku ANO 2011, která získala 14,4 % hlasů, z nich letos volilo podle regrese 52 800 a podle ekologické inference 56 300, rozmezí obou metod je 49 800 až 57 300. Nepřišlo 60 700 až 76 600 z nich (regrese 71 000, ekologická inference 62 600), tedy asi polovina.
+V Praze volilo loni ANO po přepočtu na letošní seznam voličů 127 000 lidí. Kandidátku ANO 2011, která získala 14,4 % hlasů, z nich letos volilo podle regrese 52 800 a podle ekologické inference 56 300, rozmezí obou metod je 49 800 až 57 300. Nepřišlo 60 700 až 76 600 z nich (regrese 71 000, ekologická inference 62 600), tedy asi polovina.
 
 Tabulka ukazuje rozmezí pro největší toky. Tam, kde se obě metody rozcházejí, vede rozmezí od nejnižší dolní po nejvyšší horní mez jejich 90% intervalů. Je široké, ale skutečnost v něm pravděpodobně leží, pokud platí předpoklady z rámečku na konci. Nejužší je u ANO a STAN. Voliči SPOLU se dělí hlavně mezi koalici ODS a TOP 09 (22,1 % hlasů) a STAN (23,2 %, v Praze první), zbytek se rozptýlí. U Pirátů je rozdíl mezi metodami největší: pirátskou kandidátku volilo podle regrese 2 500 jejich loňských voličů, podle ekologické inference 24 500.
 

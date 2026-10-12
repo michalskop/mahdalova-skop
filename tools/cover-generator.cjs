@@ -46,7 +46,8 @@ function tecky(c, f) {
   const op = f.stred ? 0.35 : 1; // u OG je mapa jen pozadí za textem
   const vol = new Set(m.vol);
   const d = m.dots.map(([lo, la, o]) => { const [x, y] = P(lo, la); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${vol.has(o) ? m.barvaObvod : m.barvaTecka}" opacity="${op}"/>`; }).join('');
-  const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * 2.3).toFixed(1)}" fill="${m.barvaBod}" stroke="${m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op}"/>`; }).join('');
+  // bod může mít vlastní velikost (k = násobek poloměru tečky, výchozí 2,3), barvu a průhlednost – bublinová mapa
+  const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * (o.k ?? 2.3)).toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op * (o.op ?? 1)}"/>`; }).join('');
   return `<svg style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
 }
 
@@ -59,7 +60,8 @@ function obrazek(c, f, klic) {
 
 function html(c, klic) {
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
-  const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}) };
+  // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
+  const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}), ...(c.mapaPozice?.[klic] ? { mapa: c.mapaPozice[klic] } : {}) };
   const { w, h } = f;
   const [bx0, by0, bx1, by1] = f.box;
   const motiv = c.motiv.typ === 'tecky' ? tecky(c, f) : obrazek(c, f, klic);
