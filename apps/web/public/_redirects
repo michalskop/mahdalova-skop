@@ -85,3 +85,8 @@
 /clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen /clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen 301
 /clanek/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen/ /clanek/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen 301
 /clanek/_articles/volby-cr-2026-10-02-velka-mesta-praha-brno-ostrava-plzen/* /clanek/_articles/volby-cr-2026-08-20-velka-mesta-praha-brno-ostrava-plzen/:splat 301
+
+# Volby 2026 – predikce: nová adresa článku (2026-10-10), stará byla hodně sdílená
+/clanek/volby-cr-2026-10-10-senat-2026-predikce /clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce 301
+/clanek/volby-cr-2026-10-10-senat-2026-predikce/ /clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce 301
+/clanek/_articles/volby-cr-2026-10-10-senat-2026-predikce/* /clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/:splat 301
