@@ -1,0 +1,178 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Milešín|#de1743} proti {sousedům|#06677d}: jako by si Moos a Šmarda vyměnili voliče",
+    "subtitle": "Podíl hlasů v 1. kole senátních voleb 2026. Milešín měl 33 platných hlasů, šest sousedních obcí dohromady 378."
+  },
+  "width": 560,
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "kandidat": "Radek Koten",
+        "kde": "Milešín",
+        "hlasu": 3,
+        "v": 9.1,
+        "o": 0
+      },
+      {
+        "kandidat": "Radek Koten",
+        "kde": "šest sousedních obcí",
+        "hlasu": 72,
+        "v": 19.0,
+        "o": 0
+      },
+      {
+        "kandidat": "Josef Klement",
+        "kde": "Milešín",
+        "hlasu": 10,
+        "v": 30.3,
+        "o": 1
+      },
+      {
+        "kandidat": "Josef Klement",
+        "kde": "šest sousedních obcí",
+        "hlasu": 106,
+        "v": 28.0,
+        "o": 1
+      },
+      {
+        "kandidat": "Michal Šmarda",
+        "kde": "Milešín",
+        "hlasu": 3,
+        "v": 9.1,
+        "o": 2
+      },
+      {
+        "kandidat": "Michal Šmarda",
+        "kde": "šest sousedních obcí",
+        "hlasu": 133,
+        "v": 35.2,
+        "o": 2
+      },
+      {
+        "kandidat": "Radek Černý",
+        "kde": "Milešín",
+        "hlasu": 4,
+        "v": 12.1,
+        "o": 3
+      },
+      {
+        "kandidat": "Radek Černý",
+        "kde": "šest sousedních obcí",
+        "hlasu": 43,
+        "v": 11.4,
+        "o": 3
+      },
+      {
+        "kandidat": "David Moos",
+        "kde": "Milešín",
+        "hlasu": 13,
+        "v": 39.4,
+        "o": 4
+      },
+      {
+        "kandidat": "David Moos",
+        "kde": "šest sousedních obcí",
+        "hlasu": 24,
+        "v": 6.3,
+        "o": 4
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kandidat",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelFontSize": 13,
+        "ticks": false,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#d4d4c8",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "aggregate": "min",
+          "field": "v",
+          "type": "quantitative"
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "v"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 170,
+        "opacity": 1,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              45
+            ]
+          },
+          "axis": {
+            "title": "podíl hlasů (%)",
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "color": {
+          "field": "kde",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Milešín",
+              "šest sousedních obcí"
+            ],
+            "range": [
+              "#de1743",
+              "#06677d"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "kde",
+            "title": "Kde"
+          },
+          {
+            "field": "kandidat",
+            "title": "Kandidát"
+          },
+          {
+            "field": "v",
+            "title": "Podíl hlasů (%)",
+            "format": ",.1f"
+          },
+          {
+            "field": "hlasu",
+            "title": "Hlasů"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "ČSÚ – otevřená data voleb do Senátu 2026, 1. kolo (stav 11. 10. 2026)"
+}
