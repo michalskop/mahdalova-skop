@@ -13,6 +13,29 @@ Nové covery tvoří `poster-editor.html`. Automat používá tentýž editor p�
 | cover-square.jpg/png | 1080 × 1080 | squareImage |
 | cover-instagram.jpg/png | 1080 × 1350 (4:5) | instagramImage |
 
+## Sada pro web a sociální sítě (od 12. 10. 2026)
+
+Ke každému článku pět souborů. Důležitý text a logo vždy uvnitř bezpečné zóny,
+okraje smí přesahovat jen dekorace (mapa, fotka).
+
+| Soubor | Rozměry | Kde se použije | Bezpečná zóna (text, logo) |
+| --- | --- | --- | --- |
+| cover-homepage | 1500 × 1200 (5:4) | `homepageImage` + `coverImage`: všechny karty webu | x 180–1320, y 120–1080; **pravý horní roh volný** (štítek rubriky) |
+| cover-og (JPEG, **do 300 kB** – větší WhatsApp nenačte) | 1200 × 630 | `ogImage`: odkaz na Facebooku, X, LinkedInu, Bluesky, WhatsAppu | **střední čtverec** 630 × 630 (WhatsApp a messengery ořezávají na čtverec); velké písmo, náhled na WhatsAppu má ~100 px |
+| cover-square | 1080 × 1080 | `squareImage`: ruční sdílení obrázku (Bluesky, WhatsApp) | okraj 70 px |
+| cover-instagram | 1080 × 1350 (4:5) | Instagram feed (nahrává se ručně) | nic důležitého v horních a dolních 80 px (mřížka profilu ořízne na 3:4) |
+| cover-story | 1080 × 1920 (9:16) | Instagram stories (nahrává se ručně) | horních 250 px a dolních 340 px překrývá rozhraní aplikace |
+
+Proč postranní karty: homepage ukazuje `homepageImage` všude ve 5:4, jen tři postranní karty
+u hlavního článku ho oříznou na střed až na čtverec (a mezi 481–767 px na šířku). Proto
+zóna 180–1320 px. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
+(statický web na Cloudflare Pages), proto má OG text uprostřed.
+
+Vzor generátoru pro grafické (ne fotografické) covery a kontrolní list ořezů:
+`apps/web/app/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/_cover_pipeline/`
+(`cover.cjs`, `nahledy.cjs`). Hotový prompt pro zadání coveru AI: [PROMPT-COVER-PRO-MICHALA.md](PROMPT-COVER-PRO-MICHALA.md).
+Barvy coverů jen přesně ze závazné palety v `packages/ui/DESIGN.md`.
+
 ## Ruční a poloautomatická práce
 
 Písmo coverů je pevně dané: titulek, podtitulek a claim používají **IBM Plex

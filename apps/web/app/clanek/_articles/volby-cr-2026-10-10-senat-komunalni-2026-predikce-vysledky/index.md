@@ -4,14 +4,18 @@ date: "2026-10-12"
 time: "12:45"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Jak brzy naše predikce znala výsledky komunálních a senátních voleb 2026. Vítěze jsme ve 159 zastupitelstvech znali typicky 2 hodiny 40 minut před koncem sčítání a model se odchýlil jen dvakrát. V Senátu jsme postupující nebo vítěze správně určili ve 26 z 27 obvodů."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
 filter: []
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "predikce", "Senát"]
 promoted: 1
 ---
 
 Během volebního večera jsme z průběžně sečtených okrsků [online předpovídali výsledky](/clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce) komunálních voleb ve 184 zastupitelstvech a senátních voleb ve všech 27 obvodech. Teď je sečteno a můžeme predikci porovnat se skutečností.
+
+Chceme být transparentní, proto zveřejňujeme celý průběh predikce, ne jen její výsledek. U každého města i senátního obvodu si můžete projít, co model ukazoval v kterou chvíli večera, a porovnat to s průběžným sčítáním i s konečným výsledkem. Úspěšnost predikce byla velmi vysoká.
 
 **Komunální volby:** vítěze jsme před koncem sčítání znali ve 159 ze 184 zastupitelstev (ve 152 s jistotou 99 %, v 7 s jistotou 95 %), typicky 2 hodiny 40 minut před koncem, kdy byla sečtena zhruba polovina okrsků. Model se odchýlil jen dvakrát, v Havířově a v Aši. V Praze jsme vítězství Starostů znali ve 22:35, z průběžného sčítání to šlo potvrdit až ve 3:50 a definitivně sečteno bylo až ráno v 7:05.
 
