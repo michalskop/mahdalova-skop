@@ -23,11 +23,11 @@ const NAVY = '#101432'; // brandNavy.9
 // ne podle okraje souboru (ikony mají uvnitř různé okraje, štítky, stíny); kick = štítek coveru, volený tak, aby se
 // i nejdelší štítek série (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026) vešel na jeden řádek ve stejné velikosti; t/sub/kick/logo = velikosti písma; stred = vše na střed (OG)
 const FORMATY = {
-  homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [150, 620, 1350, 1000], ikona: [1280, 480, 150], t: 100, sub: 38, kick: 20, leg: 27, logo: 44 },
+  homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [60, 400, 1480, 1150], ikona: [1280, 480, 150], t: 100, sub: 38, kick: 20, leg: 27, logo: 44 },
   og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 40, 915, 590], mapa: [0, 0, 1200, 630], ikona: null, t: 60, sub: 26, kick: 16, logo: 30, stred: true },
-  square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [70, 540, 1010, 930], ikona: [970, 80, 125], t: 88, sub: 34, kick: 24, leg: 24, logo: 40 },
-  instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [70, 640, 1010, 1120], ikona: [970, 120, 125], t: 92, sub: 36, kick: 24, leg: 24, logo: 40 },
-  story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 980, 1080, 1520], ikona: [960, 280, 135], t: 104, sub: 40, kick: 24, leg: 26, logo: 44 },
+  square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [20, 470, 1070, 1050], ikona: [970, 80, 125], t: 88, sub: 34, kick: 24, leg: 24, logo: 40 },
+  instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [20, 560, 1070, 1260], ikona: [970, 120, 125], t: 92, sub: 36, kick: 24, leg: 24, logo: 40 },
+  story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 860, 1080, 1580], ikona: [960, 280, 135], t: 104, sub: 40, kick: 24, leg: 26, logo: 44 },
 };
 
 const MIME = { '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
@@ -71,7 +71,7 @@ function html(c, klic) {
   const k = typeof c.kicker === 'string' ? { dal: c.kicker } : c.kicker;
   const kicker = `<div class="kick">${k.cervene ? `<span class="cerv">${k.cervene}</span>` : ''}${k.cervene && k.dal ? `<span class="sep">${k.oddelovac ?? '•'}</span>` : ''}${k.dal ? `<span>${k.dal}</span>` : ''}${stitek}</div>`;
   const nad = c.nad ? `<div class="nad">${c.nad}</div>` : '';
-  const pod = c.pod ? `<div class="sub">${c.pod}</div>` : '';
+  const pod = c.pod ? `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>` : '';
   const logo = `<div class="logo">${DONUT}<span>DataTimes.cz</span></div>`;
   // SVG ikona se vkládá přímo (písmo v ní pak bere IBM Plex ze stránky), rastr jako <img>
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
@@ -94,7 +94,7 @@ function html(c, klic) {
       ikonaOg = `<div style="position:relative;width:${strana}px;height:${strana * 1.3}px;flex:none">${ikonaEl(umisti(strana, 0, strana))}</div>`;
     }
   }
-  const leg = c.legenda && !f.stred ? `<div class="leg" style="left:${bx0}px;bottom:${h - by1}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
+  const leg = c.legenda && !f.stred ? `<div class="leg halo" style="left:${bx0}px;bottom:${h - by1}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
   const logoPravy = Math.max(Math.round(w * 0.032), w - bx1);
   const text = f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
@@ -106,7 +106,7 @@ function html(c, klic) {
          ${pod ? `<div style="margin-top:${f.t * 0.3}px">${pod}</div>` : ''}
        </div>
        ${leg}
-       <div style="position:absolute;right:${logoPravy}px;bottom:${h - by1}px">${logo}</div>`;
+       <div class="halo" style="position:absolute;right:${logoPravy}px;bottom:${h - by1}px">${logo}</div>`;
   const b = c.barvy;
   return `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -124,7 +124,10 @@ function html(c, klic) {
   .nad{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.sub}px;line-height:1.3;color:#fff}
   h1{margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.t}px;line-height:1.06;text-shadow:0 2px 10px rgba(0,0,0,.35)}
   .sub{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.sub}px;line-height:1.3;color:${b.sub}}
-  .leg{position:absolute;font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
+  .leg{position:absolute;text-shadow:0 0 8px ${NAVY},0 0 3px ${NAVY},0 1px 2px ${NAVY};font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
+  /* Mapa smí běžet pod textem; drobné texty dostanou rozmazaný podklad v barvě pozadí, ať vždy vyhrají. */
+  .halo{isolation:isolate}
+  .halo::before{content:'';position:absolute;inset:-.45em -.7em;background:${NAVY};opacity:.9;filter:blur(16px);border-radius:1em;z-index:-1}
   .leg i{display:inline-block;width:${(f.leg ?? 26) * 0.6}px;height:${(f.leg ?? 26) * 0.6}px;border-radius:50%;margin-right:${(f.leg ?? 26) * 0.4}px}
   .logo{display:flex;align-items:center;gap:${f.logo * 0.3}px;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.logo}px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .logo svg{width:${f.logo * 1.5}px;height:${f.logo * 1.5}px}

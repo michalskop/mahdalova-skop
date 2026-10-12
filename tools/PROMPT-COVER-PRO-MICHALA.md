@@ -26,7 +26,9 @@ Než začneš, přečti a dodržuj:
 - vzor fotografického coveru s citátem: apps/web/app/clanek/_articles/kontext-2026-10-05-vaclav-havel-odkaz-vyroci-90-let
   (fotky dělej přes tools/poster-editor.html / npm run covers, ne vlastním generátorem)
 
-1. MOTIV – jeden vizuální nápad, ne koláž
+1. MOTIV – jeden vizuální nápad, ne koláž; a VELKÝ: motiv vyplní plochu coveru (mapu zvětši od pravého dolního
+   rohu doleva nahoru), text, legenda a logo smí ležet přes něj – čitelnost drží tmavý rozmazaný podklad pod textem.
+   Nebát se pěkných, odvážných kompozic; malá mapa uprostřed prázdné plochy je chyba.
    - Datový článek → motiv vytvoř ze skutečných dat článku, ne z ilustrace. Osvědčené:
      tečková mapa ČR (podklad senat-mapa.json / obce-mapa.json z článku volby-cr-2026-10-10-senat-komunalni-2026-predikce)
      s vrstvou bodů (města, obvody, okrsky); jednoduchý zvýrazněný graf; jedno velké číslo.
