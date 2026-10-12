@@ -32,27 +32,39 @@
 .sideItem :global(.mantine-Card-root) {
   display: grid;
   grid-template-columns: 42% 1fr;
-  grid-template-rows: repeat(3, auto);
+  /* Prostřední řádek (perex) bere jen zbylé místo – výšku karty určuje náhled. */
+  grid-template-rows: auto minmax(0, 1fr) auto;
   column-gap: var(--mantine-spacing-md);
   align-items: start;
 }
 
 /* Náhled = levý sloupec přes celou výšku karty (grid-row 1/-1) a lícuje s
    krajem karty: záporné marginy = padding karty (horní, dolní, levá hrana).
-   Obrázek uvnitř je absolutní (viz níže), takže výšku určuje textový sloupec.
-   Zaoblený vnější roh dělá samotná karta (overflow: hidden + radius). Štítek
-   rubriky sedí v pravém horním rohu náhledu (Badge je uvnitř odkazu). */
+   Náhled drží přesně 5:4 jako cover (cover-homepage 1500×1200), takže se
+   neořezává do stran a štítek rubriky sedí v rohu stejně u všech karet.
+   Delší titulek nezvětší kartu, jen zkrátí perex (viz useSideExcerptFit);
+   teprve když se nevejde ani titulek s patičkou, karta se protáhne a náhled
+   se ořízne na střed. Zaoblený vnější roh dělá samotná karta (overflow:
+   hidden + radius). Štítek rubriky sedí v pravém horním rohu náhledu. */
 .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
   grid-column: 1;
   grid-row: 1 / -1;
-  /* Sloupec s obrázkem musí vyplnit celou výšku (container má align-items:start
-     kvůli textu, jinak by se náhled smrskl na výšku svého absolutního obsahu). */
+  /* Šířka vždy = sloupec 42 %, výška aspoň 5:4 (::before níže). Ne aspect-ratio:
+     u protažené karty by z výšky dopočítal širší náhled. */
+  justify-self: stretch;
   align-self: stretch;
   position: relative;
   margin: calc(var(--card-padding) * -1) 0 calc(var(--card-padding) * -1)
     calc(var(--card-padding) * -1);
   border-radius: 0;
   overflow: hidden;
+}
+
+/* Výška náhledu 5:4 z šířky sloupce (padding v % se počítá ze šířky). */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before {
+  content: '';
+  display: block;
+  padding-top: 80%;
 }
 
 /* Odkaz s obrázkem vyplní celý (na výšku protažený) sloupec – zruší pevný
@@ -69,9 +81,12 @@
   line-height: 1.25 !important;
 }
 
-/* Kompaktní perex (3 řádky), ať tři karty + tlačítko drží výšku leadu. */
+/* Kompaktní perex: nezvětšuje kartu (contain: size), počet celých řádků
+   dopočítá useSideExcerptFit podle místa vedle náhledu (výchozí 3). */
 .sideItem :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
-  -webkit-line-clamp: 3 !important;
+  contain: size;
+  align-self: stretch;
+  -webkit-line-clamp: var(--side-lines, 3) !important;
 }
 
 /* Patička bočních karet na dva řádky: datum nahoře vlevo (posunuté o kousek
@@ -142,6 +157,10 @@
     border-radius: var(--mantine-radius-md) var(--mantine-radius-md) 0 0;
   }
 
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before {
+    display: none;
+  }
+
   .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type > a {
     position: static;
     aspect-ratio: 5 / 4 !important;
@@ -153,6 +172,7 @@
   }
 
   .sideItem :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
+    contain: none;
     -webkit-line-clamp: 4 !important;
   }
 

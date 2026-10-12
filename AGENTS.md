@@ -12,8 +12,13 @@
 
 ## Article images
 
-- Cover headlines, subtitles and claims use IBM Plex Serif; kickers/top tags use IBM Plex Sans. Preserve the existing wordmark typography.
-
-- For cover creation or editing, follow `tools/COVER-EDITOR.md` and reuse an existing `cover-project.json` when available.
-- Use the shared renderer (`tools/render-covers.py` or `npm run covers`) for homepage, OG, square and Instagram exports. Keep the original image and editable project; publish the complete raster exports.
+- Every new article gets the full cover set without being asked: `cover-homepage` 1500×1200 (`coverImage` + `homepageImage`), `cover-og.jpg` 1200×630 ≤ 300 kB (`ogImage`), `cover-square` 1080×1080 (`squareImage`), `cover-instagram` 1080×1350, `cover-story` 1080×1920. Show a crop contact sheet to the user before publishing.
+- Fonts (hard rule since 2026-10-12): IBM Plex Serif Bold ONLY for the headline and the „DataTimes.cz“ logo text; everything else (cover tag, pre-title, subtitle, legend, icon labels) IBM Plex Sans.
+- Cover tag: uppercase letter-spaced Plex Sans, first part crimson `#de1743` with an underline ending mid-last-letter, then „•“ and the rest white (e.g. `VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026`); mirrored when right-aligned.
+- Homepage cover anchors: text starts at x 180 / y 120, logo bottom-right of the safe zone (1320, 1080), the area x ≥ 950, y ≤ 280 stays EMPTY (the site overlays the rubric badge there). OG: headline and logo inside the central 630×630 square. Colours only exact values from the binding palette in `packages/ui/DESIGN.md`.
+- Composition: the motif (map, photo) fills the cover – scale maps up from the bottom-right towards the top-left; text, legend and logo may sit on top of it (readability via the navy blurred `halo` under small text). A small map floating in empty space is a mistake. Put the DataTimes.cz logo in whichever bottom corner is calmer so it never gets lost (Czech map: bottom-left under Šumava, legend bottom-right; generator option `logo: 'vlevo'`); default bottom-right.
+- Data/graphic covers: write `_cover_pipeline/cover.config.cjs` in the article and run `tools/cover-generator.cjs` (copy a model config: `volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky`, `…-predikce`, `…-volebni-kalkulacka-73-mest-a-senat`, `volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro`). Do not write a new renderer.
+- Photo covers: follow `tools/COVER-EDITOR.md` and reuse an existing `cover-project.json` when available; use the shared renderer (`tools/render-covers.py` or `npm run covers`). Keep the original image and editable project; publish the complete raster exports.
+- Standard = an eye-catching, playful cover that looks like a sibling of our existing covers (elections: dot map of Czechia with city/district points, series icons). A bare bar chart or a lone number on an empty background is NOT acceptable as the motif. Mandatory: DataTimes.cz logo, cover tag (eyebrow), Plex Serif headline, Plex Sans subtitle/legend. If `tools/cover-generator.cjs` is missing in the branch, merge `origin/main` first – never improvise a cover with PIL/matplotlib/default fonts.
+- Full brief with all rules: `tools/PROMPT-COVER.md`.
 - Review the generated variants for readability and cropping. Make targeted project edits instead of creating a new renderer or rebuilding every variant manually.

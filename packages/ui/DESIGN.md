@@ -848,6 +848,7 @@ Every real article (not a special landing page) should have:
 2. **A mid-article `<SupportBanner float="left" />`** placed in a text-heavy paragraph (not next to an infographic/chart/table). The full-width end banner is automatic — don't add it by hand.
 3. Any side asides (`infobox … right`, „Napsali jsme" `position="right"`, `<Figure side="right">`) use the shared bleed — nothing else to set.
 4. The Google „Chci víc DataTimes.cz ve zprávách Googlu" button (`PreferredSource`) is automatic in the byline — nothing to add.
+5. **The full cover set, always all five files** — `cover-homepage` 1500×1200 (`coverImage` + `homepageImage`), `cover-og.jpg` 1200×630 ≤ 300 kB with title + logo in the central 630×630 square (`ogImage`), `cover-square` 1080×1080 (`squareImage`), `cover-instagram` 1080×1350, `cover-story` 1080×1920; plus a crop contact sheet shown before publishing. Safe zones and the model generator: `tools/COVER-EDITOR.md` → *Sada pro web a sociální sítě*.
 
 ### Don't
 - Don't hardcode hex colours in new components – always use theme tokens

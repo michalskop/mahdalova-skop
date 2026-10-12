@@ -4,8 +4,10 @@ date: "2026-10-04"
 time: "23:44"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Do voleb šel jako mírný favorit prezident Lula, všechny velké průzkumy ho viděly v prvním kole v čele. Predikce DataTimes.cz ale už od 0,8 procenta sečtených hlasů říká: Flávio Bolsonaro skončí první se 47 procenty, Lula druhý s 45 procenty – a o prezidentovi rozhodne až druhé kolo 25. října."
-coverImage: "images/cover-homepage.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
 filter: ["analýza"]
 tags: ["volby", "Brazílie", "Flávio Bolsonaro", "Lula", "Jair Bolsonaro", "Latinská Amerika", "volební predikce"]
 promoted: 1

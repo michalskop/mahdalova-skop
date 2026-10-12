@@ -1,7 +1,21 @@
-# Cover obrázky: jeden projekt, čtyři výstupy
+# Covery a obrázky pro sociální sítě – jediné místo
 
-Pro práci s grafovým motivem a kontrolu vzhledu viz
-[návod pro Michala](NAVOD-PRO-MICHALA.md).
+**Tohle je jediný kanonický zdroj pravidel pro covery a obrázky na sítě – pro Kateřinu i Michala stejně.**
+Leží v repu na GitHubu (`tools/COVER-EDITOR.md`), Claude a Codex ho načítají přes `CLAUDE.md` / `AGENTS.md`
+automaticky; stačí mít stažený aktuální main (`git pull`).
+
+| Co | Kde |
+| --- | --- |
+| Pravidla: sada 5 souborů, písma, štítek coveru, bezpečné zóny, kompozice, logo | tento soubor (sekce níže) |
+| Zadání pro AI (vložit do Claude/Codexu, doplnit 3 řádky) | [PROMPT-COVER.md](PROMPT-COVER.md) |
+| Grafický / datový cover (mapa, graf, číslo) | `tools/cover-generator.cjs` + `_cover_pipeline/cover.config.cjs` u článku |
+| Fotografický cover | `poster-editor.html`, `npm run covers` (níže) |
+| Graf → motiv coveru | [NAVOD-PRO-MICHALA.md](NAVOD-PRO-MICHALA.md) (chart-simplifier) |
+| Doplňkové karty do vláken + texty vláken a captionů | [social-cards/](social-cards/README.md), `social-cards/prompts/` |
+| Formáty a zvyklosti jednotlivých sítí | `docs/redakcni-styl/DISTRIBUCNI_FORMATY.md` |
+| Hotové obrázky k článku | `apps/web/app/clanek/_articles/<slug>/images/` (`cover-og.jpg`, `cover-square.png`, `cover-instagram.png`, `cover-story.png`); na webu `https://www.mahdalova-skop.cz/clanek/_articles/<slug>/images/<soubor>` |
+
+Při rozporu platí tento soubor; ostatní dokumenty na něj odkazují.
 
 Nové covery tvoří `poster-editor.html`. Automat používá tentýž editor přes
 `render-covers.cjs`; nevytváří druhou implementaci grafiky.
@@ -12,6 +26,48 @@ Nové covery tvoří `poster-editor.html`. Automat používá tentýž editor p�
 | cover-og.jpg/png | 1200 × 630 | ogImage |
 | cover-square.jpg/png | 1080 × 1080 | squareImage |
 | cover-instagram.jpg/png | 1080 × 1350 (4:5) | instagramImage |
+
+## Sada pro web a sociální sítě (od 12. 10. 2026)
+
+Ke každému článku pět souborů. Důležitý text a logo vždy uvnitř bezpečné zóny,
+okraje smí přesahovat jen dekorace (mapa, fotka).
+
+| Soubor | Rozměry | Kde se použije | Bezpečná zóna (text, logo) |
+| --- | --- | --- | --- |
+| cover-homepage | 1500 × 1200 (5:4) | `homepageImage` + `coverImage`: všechny karty webu | x 180–1320, y 120–1080; **oblast x ≥ 950, y ≤ 280 prázdná** (štítek rubriky, delší až od x ≈ 760); text začíná na x 180 / y 120, logo pravý dolní roh zóny |
+| cover-og (JPEG, **do 300 kB** – větší WhatsApp nenačte) | 1200 × 630 | `ogImage`: odkaz na Facebooku, X, LinkedInu, Bluesky, WhatsAppu | **střední čtverec** 630 × 630 (WhatsApp a messengery ořezávají na čtverec); velké písmo, náhled na WhatsAppu má ~100 px |
+| cover-square | 1080 × 1080 | `squareImage`: ruční sdílení obrázku (Bluesky, WhatsApp) | okraj 70 px |
+| cover-instagram | 1080 × 1350 (4:5) | Instagram feed (nahrává se ručně) | nic důležitého v horních a dolních 80 px (mřížka profilu ořízne na 3:4) |
+| cover-story | 1080 × 1920 (9:16) | Instagram stories (nahrává se ručně) | horních 250 px a dolních 340 px překrývá rozhraní aplikace |
+
+Všechny karty webu včetně tří postranních u hlavního článku drží náhled přesně 5:4 (od 12. 10. 2026;
+dřív se postranní karty ořezávaly až na čtverec, proto mají starší covery text posunutý doprostřed –
+Bolsonaro). Na každou kartu web vkládá vpravo nahoře štítek rubriky: v malých kartách (boční 230 px,
+mobilní seznam) zakryje na coveru oblast x ≥ 950, y ≤ 280. Ikony a odznaky coveru patří pod ni.
+Stejné kotvy (text od x 180 / y 120, logo vpravo dole) drží covery v řadě vedle sebe zarovnané. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
+(statický web na Cloudflare Pages), proto má OG text uprostřed.
+
+**Písma (tvrdé pravidlo, od 12. 10. 2026):** patkový IBM Plex Serif Bold jen titulek a nápis loga „DataTimes.cz“;
+všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách) IBM Plex Sans.
+**Štítek coveru:** verzálky Plex Sans s prostrkáním, první část karmínově (#de1743) s podtržením končícím v půlce
+posledního písmene, pak „•“ a zbytek bíle (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026); vpravo zarovnaný zrcadlově.
+
+**Kompozice – využít plochu:** motiv (mapa, fotka, ilustrační obrázek) má vyplnit cover, ne plavat malý uprostřed.
+Mapu zvětšit od pravého dolního rohu směrem doleva nahoru; text, legenda i logo smí ležet přes ni (jako Brazílie).
+Čitelnost drží rozmazaný podklad v barvě pozadí pod drobnými texty (generátor: třída `halo`) a stín titulku.
+**Logo na volné ploše:** logo DataTimes.cz patří do toho dolního rohu, kde je motiv klidnější a logo nezanikne
+(u mapy ČR vlevo dole pod Šumavou, jihovýchod je rozbitý tečkami); legenda si vezme opačný roh.
+V generátoru `logo: 'vlevo'` v cover.config.cjs. Výchozí je vpravo dole.
+Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y ≤ 280) a kotvy textu/loga platí dál.
+
+**Generátor:** `tools/cover-generator.cjs` + `_cover_pipeline/cover.config.cjs` u článku vyrobí všech pět formátů
+(`PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <config>`). Vzory konfigurací: predikce,
+výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
+
+Původní vzor generátoru pro grafické (ne fotografické) covery a kontrolní list ořezů:
+`apps/web/app/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/_cover_pipeline/`
+(`cover.cjs`, `nahledy.cjs`). Hotový prompt pro zadání coveru AI: [PROMPT-COVER.md](PROMPT-COVER.md).
+Barvy coverů jen přesně ze závazné palety v `packages/ui/DESIGN.md`.
 
 ## Ruční a poloautomatická práce
 

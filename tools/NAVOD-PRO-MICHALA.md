@@ -1,4 +1,7 @@
-# Michale, od grafu k pěknému coveru
+# Od grafu k pěknému coveru
+
+> Pravidla coverů (písma, štítek, zóny, kompozice, logo) jsou na jednom místě: [COVER-EDITOR.md](COVER-EDITOR.md).
+> Tento návod řeší jen převod grafu na motiv coveru.
 
 Cílem je jeden srozumitelný vizuální nápad, který funguje i jako malý náhled.
 Chart-simplifier pomáhá vybrat tvar a hlavní sdělení grafu. Cover-editor přidává
@@ -51,7 +54,7 @@ začni jím a uprav jen potřebné části.
 - **Kicker:** krátká rubrika nebo téma, například „BYDLENÍ“. Bezpatkové písmo.
 - **Titulek:** hlavní sdělení, ideálně jeden až dva řádky. Patkové písmo.
 - **Claim:** pouze pokud dodává něco nového — třeba konkrétní číslo či období.
-  Neopakuj titulek jinými slovy. Patkové písmo; Enter vynucuje nový řádek.
+  Neopakuj titulek jinými slovy. Bezpatkové písmo (od 12. 10. 2026 je patkový jen titulek a logo); Enter vynucuje nový řádek.
 - **Motiv:** nahraj připravený SVG graf nebo původní fotografii bez přidaného
   titulku a loga. U grafu zkontroluj, že výřez neschoval začátek, konec nebo
   důležitý zlom. Editor obrázky ořezává, automatický výřez proto nemusí být
