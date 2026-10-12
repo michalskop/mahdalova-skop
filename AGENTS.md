@@ -16,4 +16,12 @@
 
 - For cover creation or editing, follow `tools/COVER-EDITOR.md` and reuse an existing `cover-project.json` when available.
 - Use the shared renderer (`tools/render-covers.py` or `npm run covers`) for homepage, OG, square and Instagram exports. Keep the original image and editable project; publish the complete raster exports.
+- Standard format specifications:
+  - Homepage: 1500 × 1200 (5:4, `homepageImage`)
+  - OG / Shared link: 1200 × 630 (`ogImage`)
+  - Square: 1080 × 1080 (1:1, `squareImage`)
+  - Instagram Portrait: 1080 × 1350 (4:5, `instagramImage`)
+  - Story / Reel (optional): 1080 × 1920 (9:16)
 - Review the generated variants for readability and cropping. Make targeted project edits instead of creating a new renderer or rebuilding every variant manually.
+- Delivery to WhatsApp: There is NO automated script, webhook, or bot for WhatsApp. The agent must never claim to send images directly via WhatsApp. Files are saved in `images/` or opened via `#open-portrait` for Michal to share manually.
+
