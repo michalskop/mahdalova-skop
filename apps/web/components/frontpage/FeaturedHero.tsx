@@ -83,6 +83,40 @@ function useEqualColumns(
   }, [leadRef, sideRef]);
 }
 
+/**
+ * Perex bočních karet vyplní jen místo, které vedle náhledu 5:4 zbude po
+ * titulku a patičce (CSS mu dá `contain: size`, takže kartu nezvětšuje):
+ * tady se dopočítá počet celých řádků, ať se poslední řádek neusekne v půlce.
+ * Na úzkém telefonu (svislá karta, bez `contain`) se nic nemění.
+ */
+function useSideExcerptFit(sideRef: RefObject<HTMLDivElement | null>) {
+  useEffect(() => {
+    const sideEl = sideRef.current;
+    if (!sideEl) return;
+    const excerpts = Array.from(sideEl.querySelectorAll<HTMLElement>('.mantine-Card-root > p'));
+    const fit = () => {
+      for (const p of excerpts) {
+        const cs = getComputedStyle(p);
+        if (!cs.contain.includes('size')) {
+          p.style.removeProperty('--side-lines');
+          p.style.visibility = '';
+          continue;
+        }
+        const lh = parseFloat(cs.lineHeight);
+        if (!lh) continue;
+        const n = Math.floor((p.clientHeight + 1) / lh);
+        p.style.setProperty('--side-lines', String(Math.max(n, 1)));
+        p.style.visibility = n === 0 ? 'hidden' : '';
+      }
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    excerpts.forEach((p) => ro.observe(p));
+    document.fonts?.ready.then(fit);
+    return () => ro.disconnect();
+  }, [sideRef]);
+}
+
 // Hero blok homepage (styl The Nerve): vlevo velký hlavní článek (cover +
 // titulek + perex + autor), vpravo tři nejnovější jako kompaktní vodorovné
 // karty a pod nimi tlačítko „Více". Celá šířka, žádný boční nadpis.
@@ -110,6 +144,7 @@ export function FeaturedHero({
   const leadRef = useRef<HTMLDivElement | null>(null);
   const sideRef = useRef<HTMLDivElement | null>(null);
   useEqualColumns(leadRef, sideRef);
+  useSideExcerptFit(sideRef);
   const lead = articles[0];
   const side = articles.slice(1, 4);
   if (!lead) return null;
