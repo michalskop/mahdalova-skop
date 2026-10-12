@@ -12,7 +12,7 @@ filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "data", "Ostrava", "Kladno", "Brno", "Praha", "Žďár nad Sázavou"]
 ---
 
-Jedenáct tisíc tři sta sedmdesát tři proti jedenácti tisícům tři sta sedmdesáti dvěma. Tak těsně skončil v sobotu souboj o druhé kolo senátních voleb na Žďársku. Dosavadní senátor Josef Klement (KDU-ČSL) postoupil, ortoped Radek Černý (ODS) ne. Rozhodl [jediný hlas](https://ct24.ceskatelevize.cz/clanek/domaci/na-zdarsku-se-o-senat-utkaji-smarda-za-volt-s-klementem-kdu-csl-ktery-postoupil-o-pouhy-hlas-377592). Černý podle [Žďárského deníku](https://zdarsky.denik.cz/prezidentske-volby/radek-cerny-michal-smarda-josef-klement-senatni-volby-zdar-obvod-51-jeden-hlas-rozdil/) zatím neví, jestli bude chtít hlasy přepočítat.
+Jedenáct tisíc tři sta sedmdesát tři proti jedenácti tisícům tři sta sedmdesáti dvěma. Tak těsně skončil v sobotu souboj o druhé kolo senátních voleb na Žďársku. Dosavadní senátor Josef Klement (KDU-ČSL) postoupil, ortoped Radek Černý (ODS) ne. Rozhodl [jediný hlas](https://ct24.ceskatelevize.cz/clanek/domaci/na-zdarsku-se-o-senat-utkaji-smarda-za-volt-s-klementem-kdu-csl-ktery-postoupil-o-pouhy-hlas-377592).
 
 <RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["volby-cr-2026-09-02-jak-volit-do-zastupitelstva-obce", "volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky"]} />Jeden hlas se může ztratit kdekoli. Při sčítání lístků, při dělání čárek, při přepisu čísel do zápisu. Okrskové komise přitom sčítají často až do noci.
 
