@@ -175,12 +175,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-12-kdo-zustal-doma</loc>
-    <lastmod>2026-10-12T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy</loc>
     <lastmod>2025-02-14T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -675,6 +669,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-10-volebni-kalkulacka-73-mest-a-senat</loc>
     <lastmod>2026-10-10T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-12-kdo-zustal-doma</loc>
+    <lastmod>2026-10-12T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
