@@ -4,8 +4,10 @@ date: "2026-10-10"
 time: "16:37"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Průběžná predikce výsledků komunálních voleb ve 140 městech a městských částech a senátních voleb ve všech 27 obvodech. Kdo vede, kdo postupuje do druhého kola a kde je už rozhodnuto, sledujte na mapách a v online reportáži."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
 filter: []
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "predikce", "Senát"]
 promoted: 1

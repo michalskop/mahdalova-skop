@@ -4,8 +4,10 @@ date: "2026-10-10"
 time: "14:05"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Volební kalkulačka byla u letošních voleb v historicky největším rozsahu: pro 73 měst a pro senátní obvody. Senátní kalkulačka se hodí i před druhým kolem 16. a 17. října, městské zůstávají jako přehled toho, s čím strany do voleb šly. Na mapě najděte své město nebo obvod a kalkulačku vyplňte přímo tady v článku."
-coverImage: "images/cover.png"
-ogImage: "images/cover-og.png"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
 filter: []
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "volební kalkulačka", "KohoVolit.eu"]
 promoted: 1

@@ -16,8 +16,13 @@ Než začneš, přečti a dodržuj:
 - tools/COVER-EDITOR.md – sada formátů, bezpečné zóny, písma, OG pravidla
 - packages/ui/DESIGN.md, sekce „Full palette“ – ZÁVAZNÁ paleta, jen přesné hodnoty, žádné vlastní odstíny
 - docs/design/NAVOD_LOGO_NA_COVER.md – logo DataTimes.cz (umístění, velikost)
-- vzor grafického coveru: apps/web/app/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/_cover_pipeline/
-  (cover.cjs = generátor všech formátů, nahledy.cjs = kontrolní list ořezů)
+- GENERÁTOR: tools/cover-generator.cjs – z jednoho cover.config.cjs v _cover_pipeline/ článku vyrobí všech pět formátů
+  se správnými kotvami, písmy a štítkem. Vzorové konfigurace: _cover_pipeline/cover.config.cjs u článků
+  volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky (tečková mapa + ikona), …-predikce, …-volebni-kalkulacka-73-mest-a-senat,
+  volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro (obrázek jako motiv). Spuštění:
+  PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <cesta ke cover.config.cjs>
+- ikony sérií (graf predikce, výsledky): stejný piktogram, oválek s nápisem vycentrovaný pod ním, přechod jen z palety;
+  na homepage coveru vždy stejné místo (pravý okraj 1320, horní hrana 470, šířka 230)
 - vzor fotografického coveru s citátem: apps/web/app/clanek/_articles/kontext-2026-10-05-vaclav-havel-odkaz-vyroci-90-let
   (fotky dělej přes tools/poster-editor.html / npm run covers, ne vlastním generátorem)
 
@@ -29,11 +34,15 @@ Než začneš, přečti a dodržuj:
    - ZAKÁZÁNO: AI generované obrázky a ilustrace, stockové ikony, 3D efekty, neonové záře, víc než 2–3 barvy motivu,
      text přes rušná místa fotky, emoji, vymyšlená čísla. Každé číslo nebo tvrzení na coveru musí být v článku.
 
-2. TEXT (wording)
-   - kicker (IBM Plex Sans, malý): téma/rubrika, např. „Komunální a senátní volby 2026“
-   - titulek (IBM Plex Serif Bold): max. ~6 slov, věcný, česky, bez clickbaitu; smí být stejný jako titulek článku
-   - podtitulek (IBM Plex Serif): jedna krátká věta s konkrétním zjištěním nebo otázkou článku
-   - volitelně štítek (IBM Plex Sans, verzálky): typ obsahu, např. ANALÝZA, VÝSLEDKY, PREDIKCE
+2. TEXT (wording) a PÍSMA – tvrdé pravidlo
+   - PATKOVÉ (IBM Plex Serif Bold) je jen titulek a nápis loga „DataTimes.cz“. Všechno ostatní je BEZPATKOVÉ (IBM Plex Sans):
+     štítek, nadtitulek, podtitulek, legenda, popisky, nápisy v ikonách.
+   - štítek coveru (vždy nahoře nad titulkem): VERZÁLKY Plex Sans s prostrkáním, první část karmínově (brand.6 #de1743)
+     s podtržením, které končí v půlce posledního písmene, pak „•“ a zbytek bíle,
+     např. VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026, ANALÝZA • …, KONTEXT • ESEJ.
+     Při zarovnání vpravo zrcadlově (podtržení od pravého kraje).
+   - titulek: max. ~6 slov, věcný, česky, bez clickbaitu; smí být stejný jako titulek článku
+   - podtitulek: jedna krátká věta s konkrétním zjištěním nebo otázkou článku
    - čeština: pomlčka –, české uvozovky „…“, mezera před %, nezlomitelné mezery po jednopísmenných předložkách
 
 3. BARVY – jen ze závazné palety (packages/ui/DESIGN.md)
