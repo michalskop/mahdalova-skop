@@ -16,6 +16,14 @@ Připrav cover k článku podle redakční metodiky DataTimes.
 O ČEM TO JE JEDNOU VĚTOU: <co má čtenář pochopit za 3 sekundy, např. „Při sčítání se nejčastěji chybovalo ve velkých městech“>
 PODKLAD: <fotka (cesta, autor, právo k použití) / data článku (soubor) / nic – navrhni motiv z dat>
 
+CO JE NÁŠ STANDARD: cover musí být POUTAVÝ a HRAVÝ – na první pohled náš, ne zjednodušený graf.
+Má navazovat na vizuály, které už máme (u voleb tečková mapa ČR s body měst a obvodů, ikony sérií,
+barvy série), ne vymýšlet nový styl. Nudný cover = špatný cover, i když je technicky správně.
+
+POJISTKA: pokud ve větvi chybí tools/cover-generator.cjs nebo tento soubor, je větev zastaralá –
+nejdřív ji aktualizuj z origin/main (git merge origin/main). NIKDY cover neimprovizuj vlastním skriptem
+(PIL, matplotlib, výchozí písma) – takový cover se nepoužije.
+
 Než začneš, přečti a dodržuj:
 - tools/COVER-EDITOR.md – sada formátů, bezpečné zóny, písma, OG pravidla
 - packages/ui/DESIGN.md, sekce „Full palette“ – ZÁVAZNÁ paleta, jen přesné hodnoty, žádné vlastní odstíny
@@ -37,7 +45,10 @@ Než začneš, přečti a dodržuj:
    legenda pak vpravo; v generátoru logo: 'vlevo'). Výchozí vpravo dole.
    - Datový článek → motiv vytvoř ze skutečných dat článku, ne z ilustrace. Osvědčené:
      tečková mapa ČR (podklad senat-mapa.json / obce-mapa.json z článku volby-cr-2026-10-10-senat-komunalni-2026-predikce)
-     s vrstvou bodů (města, obvody, okrsky); jednoduchý zvýrazněný graf; jedno velké číslo.
+     s vrstvou bodů (města, obvody, okrsky), body velké/barevné podle hodnoty z článku; mapa obcí; ikona série.
+     Číslo nebo krátký graf smí být jen DOPLNĚK přes velký motiv, nikdy motiv sám.
+   - ZAKÁZÁNO jako motiv: samotný sloupcový/pruhový graf, samotné číslo nebo text na prázdné ploše,
+     „infografika“ z pár pruhů. Pruhy navíc musí mít poctivé měřítko (54 % není skoro celá šíře).
    - Fotka → fotka je hlavní, text jen titulek, případně krátký citát v uvozovkách se jménem; nic dalšího.
    - ZAKÁZÁNO: AI generované obrázky a ilustrace, stockové ikony, 3D efekty, neonové záře, víc než 2–3 barvy motivu,
      text přes rušná místa fotky, emoji, vymyšlená čísla. Každé číslo nebo tvrzení na coveru musí být v článku.
@@ -76,6 +87,11 @@ Než začneš, přečti a dodržuj:
    - logo DataTimes.cz vpravo dole podle NAVOD_LOGO_NA_COVER.md, jen jednou
 
 5. KONTROLA – než mi to ukážeš
+   - POVINNÉ PRVKY – chybí-li kterýkoli, cover neodevzdávej: (1) logo DataTimes.cz (kolečko + nápis),
+     (2) štítek/eyebrow nad titulkem (např. ANALÝZA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026), (3) titulek v IBM Plex Serif Bold,
+     (4) podtitulek/legenda v IBM Plex Sans, (5) velký motiv přes plochu, (6) písma IBM Plex, ne systémová/výchozí
+   - test poutavosti: zaujal by mě ten cover v řadě karet na homepage vedle ostatních volebních coverů?
+     Vypadá jako jejich sourozenec? Pokud působí jako holý graf nebo prázdná plocha s textem, předělej ho.
    - vyrenderuj kontrolní list ořezů (jako nahledy.cjs): homepage velká karta, postranní karta (čtverec), mobil 45 %,
      související 120×96, OG + jeho čtvercový ořez, IG 3:4, stories se zónami
    - zkontroluj: čte se titulek i na náhledu 120×96? nic důležitého není oříznuté? nic nezasahuje pod štítek
