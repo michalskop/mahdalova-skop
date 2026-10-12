@@ -7,8 +7,9 @@ const path = require('path');
 const { chromium } = require(process.env.PW_PATH || 'playwright');
 
 const DIR = path.join(__dirname, '..');
-const mapa = JSON.parse(fs.readFileSync(path.join(DIR, 'senat-mapa.json'), 'utf8'));
-const obce = JSON.parse(fs.readFileSync(path.join(DIR, 'obce-mapa.json'), 'utf8'));
+const ZDROJ = path.join(DIR, '..', 'volby-cr-2026-10-10-senat-komunalni-2026-predikce');  // mapové podklady sdílené s původním článkem
+const mapa = JSON.parse(fs.readFileSync(path.join(ZDROJ, 'senat-mapa.json'), 'utf8'));
+const obce = JSON.parse(fs.readFileSync(path.join(ZDROJ, 'obce-mapa.json'), 'utf8'));
 const vol = new Set(mapa.vol);
 const donut = fs.readFileSync(path.join(DIR, '..', '..', '..', '..', 'public', 'images', 'datatimes-donut.svg'), 'utf8');
 

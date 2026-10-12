@@ -11,6 +11,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { geoMercator } from 'd3-geo';
 import type { Feature, Geometry } from 'geojson';
 import ChartCard from './ChartCard';
+import ChartSignature from './ChartSignature';
+import { renderTitle, renderSubtitle } from './chartText';
 import PrubehPredikceGraf, { PrubehPruhy, hhmm, stavV, MILNIKY, type MilnikKey, type PrubehZ } from './PrubehPredikceGraf';
 
 const INK = '#101432';
@@ -136,19 +138,26 @@ export default function ObceKvVysledkyMapa({ mapaUrl, obceUrl, odhadUrl, prubehU
 
   return (
     <div style={{ clear: 'both' }}>
-      <ChartCard title={title} subtitle={subtitle} source={source}>
+      <ChartCard source={source}>
         <div style={{ fontFamily: FONT, color: INK }}>
+          {/* vlastní hlavička: titulek a podtitulek, logo naležato v jedné lince se seznamem těsně nad mapou
+              (aby zůstalo i na výřezu/screenshotu mapy); v ChartCard proto bez titulku, jinak by se logo zdvojilo */}
+          {title && <div className="dpbp-chart-title" style={{ fontWeight: 700, lineHeight: 1.2, color: '#1a1a1a', marginBottom: subtitle ? 6 : 0 }}>{renderTitle(title)}</div>}
+          {subtitle && <div className="dpbp-chart-subtitle" style={{ lineHeight: 1.3, color: '#333333', marginBottom: 14 }}>{renderSubtitle(subtitle)}</div>}
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '6px 12px', marginBottom: 8 }}>
           {obce && (
             <select
               aria-label="Vyberte obec"
               value=""
               onChange={(e) => { const o = obce.find((x) => x.n === e.target.value); if (o) pick(o); }}
-              style={{ fontFamily: FONT, fontSize: 15, padding: '6px 8px', border: '1px solid #cfccc0', borderRadius: 4, background: '#fff', color: INK, marginBottom: 8, maxWidth: '100%' }}
+              style={{ fontFamily: FONT, fontSize: 15, padding: '6px 8px', border: '1px solid #cfccc0', borderRadius: 4, background: '#fff', color: INK, maxWidth: '100%' }}
             >
               <option value="">Vyberte obec ze seznamu…</option>
               {obce.map((o) => <option key={o.n} value={o.n}>{o.n}</option>)}
             </select>
           )}
+            <ChartSignature size={24} layout="inline" textWeight={400} style={{ marginLeft: 'auto', lineHeight: 1 }} />
+          </div>
 
           <div ref={wrapRef} style={{ position: 'relative', width: '100%' }} onMouseLeave={() => setHover(null)}>
             {!geo && <div style={{ height: Math.max(height, 240), display: 'flex', alignItems: 'center', justifyContent: 'center', color: MUTED }}>Načítám mapu…</div>}
@@ -162,18 +171,6 @@ export default function ObceKvVysledkyMapa({ mapaUrl, obceUrl, odhadUrl, prubehU
                 <g pointerEvents="none">
                   {geo.dots.map((d, i) => <circle key={i} cx={d[0]} cy={d[1]} r={geo.r} fill={DOT} />)}
                 </g>
-                {/* logo v pravém horním rohu nad Moravskoslezským krajem */}
-                {(() => {
-                  const s = narrow ? 13 : 26; const fs = narrow ? 9.5 : 16;
-                  const x = width - 4 - fs * 6.4 - s - 4;
-                  return (
-                    <g pointerEvents="none">
-                      <image href="/images/datatimes-donut.svg" x={x} y={2} width={s} height={s} />
-                      <text x={x + s + 6} y={2 + s / 2 + fs * 0.36} fontSize={fs} fontWeight={700} fill={INK}
-                        style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif' }}>DataTimes.cz</text>
-                    </g>
-                  );
-                })()}
                 <g pointerEvents="none">
                   {[...geo.pts].sort((a, b) => radius(b) - radius(a)).map((o) => {
                     const lead = odhad?.kv[o.keys[0]]?.l?.[0];

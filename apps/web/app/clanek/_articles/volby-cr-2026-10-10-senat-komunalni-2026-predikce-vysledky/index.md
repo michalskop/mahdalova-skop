@@ -22,9 +22,9 @@ Během volebního večera jsme z průběžně sečtených okrsků [online předp
 Po kliknutí na město, na mobilu po ťuknutí, se pod mapou ukáže, jak se během večera vyvíjela naše predikce a průběžné sčítání a kdy jsme znali vítěze, složení zastupitelstva, pořadí stran a počty mandátů. Svislou čárou v grafu se dá posouvat v čase.
 
 <ObceKvVysledkyMapa
-  mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/senat-mapa.json"
-  obceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/obce-mapa.json"
-  odhadUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/odhad_kv.json"
+  mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/senat-mapa.json"
+  obceUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/obce-mapa.json"
+  odhadUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/odhad_kv.json"
   prubehUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/prubeh_kv.json"
   title="Komunální volby 2026: výsledky a naše predikce ve 140 městech a městských částech"
   subtitle="Klikněte nebo ťukněte na město"
@@ -36,7 +36,7 @@ Po kliknutí na město, na mobilu po ťuknutí, se pod mapou ukáže, jak se bě
 Barva obvodu ukazuje, kdo skončil v 1. kole první. Po kliknutí, na mobilu po ťuknutí, se pod mapou ukáže stejný graf jako u měst: jak se vyvíjela naše predikce a průběžné sčítání a kdy jsme věděli, kdo postoupí do 2. kola, nebo kdo vyhrál už v prvním.
 
 <SenatVysledkyMapa
-  mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/senat-mapa.json"
+  mapaUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce/senat-mapa.json"
   prubehUrl="/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/prubeh_se.json"
   vychoziObvod={72}
   title="Senát 2026: výsledky 1. kola a naše predikce"

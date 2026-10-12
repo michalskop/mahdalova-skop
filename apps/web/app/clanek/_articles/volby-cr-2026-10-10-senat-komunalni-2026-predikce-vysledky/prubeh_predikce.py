@@ -27,7 +27,8 @@ r = r[r.kind == "kv"].merge(iv[iv.kind == "kv"][["unit_id", "batch", "subject_id
 r["pub_time"] = pd.to_datetime(r.pub_time)
 p0 = sd[sd.seats == 0].set_index(["unit_id", "batch", "subject_id"]).prob   # P(0 mandátů)
 fin = fin[fin.kind == "kv"]
-odhad = json.load(open(os.path.join(HERE, "odhad_kv.json"), encoding="utf-8"))["kv"]
+# konečný stav a názvy kandidátek – sdílené s původním článkem (jediná kopie dat)
+odhad = json.load(open(os.path.join(HERE, "..", "volby-cr-2026-10-10-senat-komunalni-2026-predikce", "odhad_kv.json"), encoding="utf-8"))["kv"]
 pb = lambda v: f"{v * 100:.1f}".replace(".", ",")  # podíl → „23,2“
 
 minuty = lambda t: (t.day - 10) * 1440 + t.hour * 60 + t.minute

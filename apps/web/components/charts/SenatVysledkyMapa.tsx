@@ -10,6 +10,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import type { Feature, FeatureCollection, Geometry } from 'geojson';
 import ChartCard from './ChartCard';
+import ChartSignature from './ChartSignature';
+import { renderTitle, renderSubtitle } from './chartText';
 import PrubehPredikceGraf, { PrubehPruhy, hhmm, stavV, MILNIKY, type MilnikKey, type PrubehZ } from './PrubehPredikceGraf';
 
 const INK = '#101432';
@@ -128,19 +130,26 @@ export default function SenatVysledkyMapa({ mapaUrl, prubehUrl, vychoziObvod, ti
 
   return (
     <div style={{ clear: 'both' }}>
-      <ChartCard title={title} subtitle={subtitle} source={source}>
+      <ChartCard source={source}>
         <div style={{ fontFamily: FONT, color: INK }}>
+          {/* vlastní hlavička: titulek a podtitulek, logo naležato v jedné lince se seznamem těsně nad mapou
+              (aby zůstalo i na výřezu/screenshotu mapy); v ChartCard proto bez titulku, jinak by se logo zdvojilo */}
+          {title && <div className="dpbp-chart-title" style={{ fontWeight: 700, lineHeight: 1.2, color: '#1a1a1a', marginBottom: subtitle ? 6 : 0 }}>{renderTitle(title)}</div>}
+          {subtitle && <div className="dpbp-chart-subtitle" style={{ lineHeight: 1.3, color: '#333333', marginBottom: 14 }}>{renderSubtitle(subtitle)}</div>}
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '6px 12px', marginBottom: 8 }}>
           {data && (
             <select
               aria-label="Vyberte obvod"
               value=""
               onChange={(e) => { if (e.target.value) pick(Number(e.target.value)); }}
-              style={{ fontFamily: FONT, fontSize: 15, padding: '6px 8px', border: '1px solid #cfccc0', borderRadius: 4, background: '#fff', color: INK, marginBottom: 8, maxWidth: '100%' }}
+              style={{ fontFamily: FONT, fontSize: 15, padding: '6px 8px', border: '1px solid #cfccc0', borderRadius: 4, background: '#fff', color: INK, maxWidth: '100%' }}
             >
               <option value="">Vyberte obvod ze seznamu…</option>
               {[...vol].sort((a, b) => a - b).map((o) => <option key={o} value={o}>{o} – {nazev(o)}</option>)}
             </select>
           )}
+            <ChartSignature size={24} layout="inline" textWeight={400} style={{ marginLeft: 'auto', lineHeight: 1 }} />
+          </div>
 
           <div ref={wrapRef} style={{ position: 'relative', width: '100%' }} onMouseLeave={() => setHover(null)}>
             {!geo && <div style={{ height: Math.max(height, 240), display: 'flex', alignItems: 'center', justifyContent: 'center', color: MUTED }}>Načítám mapu…</div>}
@@ -148,17 +157,6 @@ export default function SenatVysledkyMapa({ mapaUrl, prubehUrl, vychoziObvod, ti
               <svg width={width} height={geo.inset.y + geo.inset.h + 2} role="img" aria-label="Mapa senátních obvodů s výsledky 1. kola" style={{ display: 'block', touchAction: 'manipulation' }}>
                 <path d={geo.path({ type: 'Feature', properties: {}, geometry: data!.outline }) ?? ''} fill={MIMO} stroke="#d6d3c7" />
                 {geo.feats.map((f) => plocha(f, geo.path(f)))}
-                {(() => {
-                  const s = narrow ? 13 : 26; const fs = narrow ? 9.5 : 16;
-                  const x = width - 4 - fs * 6.4 - s - 4;
-                  return (
-                    <g pointerEvents="none">
-                      <image href="/images/datatimes-donut.svg" x={x} y={2} width={s} height={s} />
-                      <text x={x + s + 6} y={2 + s / 2 + fs * 0.36} fontSize={fs} fontWeight={700} fill={INK}
-                        style={{ fontFamily: 'var(--font-roboto-slab), Georgia, serif' }}>DataTimes.cz</text>
-                    </g>
-                  );
-                })()}
                 <rect x={geo.inset.x} y={geo.inset.y} width={geo.inset.w} height={geo.inset.h} rx={6} fill="#fff" stroke="#e0ddd2" />
                 <text x={geo.inset.x + 8} y={geo.inset.y + 14} fontSize={12} fontWeight={700} fill={MUTED} style={{ fontFamily: FONT }}>Praha</text>
                 {geo.praha.map((f) => plocha(f, geo.ipath(f)))}
