@@ -2,8 +2,8 @@
 // Barvy jen ze závazné palety (packages/ui/DESIGN.md): brandNavy.9 pozadí, brandEmeraldMint 7/4/2/1/5, brandTeal 7/5, brandYellow.6, brandNavy.8.
 // Písmo: titulek a podtitulek IBM Plex Serif, kicker a štítky IBM Plex Sans; logo vpravo dole (okraj ≈ 3,2 % šířky).
 // Bezpečné zóny (důležitý text a logo musí být uvnitř):
-//   homepage 1500×1200 – karta 5:4 na střed, postranní karty homepage ořežou boky až na čtverec a někdy i horní/dolní
-//                        okraj → vše uvnitř x 180–1320, y 120–1080; pravý horní roh volný (štítek rubriky)
+//   homepage 1500×1200 – všechny karty webu 5:4 → vše uvnitř x 180–1320, y 120–1080;
+//                        oblast x ≥ 950, y ≤ 280 prázdná (štítek rubriky v malých kartách)
 //   og       1200×630  – Facebook/X/LinkedIn; Bluesky a messengery ořezávají na čtverec → text a logo ve středním čtverci
 //   square   1080×1080 – přímé sdílení (Bluesky obrázek, WhatsApp)
 //   ig       1080×1350 – Instagram feed 4:5; mřížka profilu ořízne na 3:4 → nic důležitého v horních/dolních 80 px

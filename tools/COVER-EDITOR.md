@@ -20,15 +20,17 @@ okraje smí přesahovat jen dekorace (mapa, fotka).
 
 | Soubor | Rozměry | Kde se použije | Bezpečná zóna (text, logo) |
 | --- | --- | --- | --- |
-| cover-homepage | 1500 × 1200 (5:4) | `homepageImage` + `coverImage`: všechny karty webu | x 180–1320, y 120–1080; **pravý horní roh volný** (štítek rubriky) |
+| cover-homepage | 1500 × 1200 (5:4) | `homepageImage` + `coverImage`: všechny karty webu | x 180–1320, y 120–1080; **oblast x ≥ 950, y ≤ 280 prázdná** (štítek rubriky, delší až od x ≈ 760); text začíná na x 180 / y 120, logo pravý dolní roh zóny |
 | cover-og (JPEG, **do 300 kB** – větší WhatsApp nenačte) | 1200 × 630 | `ogImage`: odkaz na Facebooku, X, LinkedInu, Bluesky, WhatsAppu | **střední čtverec** 630 × 630 (WhatsApp a messengery ořezávají na čtverec); velké písmo, náhled na WhatsAppu má ~100 px |
 | cover-square | 1080 × 1080 | `squareImage`: ruční sdílení obrázku (Bluesky, WhatsApp) | okraj 70 px |
 | cover-instagram | 1080 × 1350 (4:5) | Instagram feed (nahrává se ručně) | nic důležitého v horních a dolních 80 px (mřížka profilu ořízne na 3:4) |
 | cover-story | 1080 × 1920 (9:16) | Instagram stories (nahrává se ručně) | horních 250 px a dolních 340 px překrývá rozhraní aplikace |
 
-Proč postranní karty: homepage ukazuje `homepageImage` všude ve 5:4, jen tři postranní karty
-u hlavního článku ho oříznou na střed až na čtverec (a mezi 481–767 px na šířku). Proto
-zóna 180–1320 px. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
+Všechny karty webu včetně tří postranních u hlavního článku drží náhled přesně 5:4 (od 12. 10. 2026;
+dřív se postranní karty ořezávaly až na čtverec, proto mají starší covery text posunutý doprostřed –
+Bolsonaro). Na každou kartu web vkládá vpravo nahoře štítek rubriky: v malých kartách (boční 230 px,
+mobilní seznam) zakryje na coveru oblast x ≥ 950, y ≤ 280. Ikony a odznaky coveru patří pod ni.
+Stejné kotvy (text od x 180 / y 120, logo vpravo dole) drží covery v řadě vedle sebe zarovnané. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
 (statický web na Cloudflare Pages), proto má OG text uprostřed.
 
 Vzor generátoru pro grafické (ne fotografické) covery a kontrolní list ořezů:

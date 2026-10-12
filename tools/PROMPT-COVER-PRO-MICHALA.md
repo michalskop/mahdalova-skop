@@ -44,7 +44,14 @@ Než začneš, přečti a dodržuj:
    - každá nová série článků (predikce × výsledky × analýza) má odlišnou převládající barvu, ať se covery neopakují
 
 4. FORMÁTY – vždy všech pět, z jedné šablony (viz tools/COVER-EDITOR.md, „Sada pro web a sociální sítě“)
-   - cover-homepage.png 1500×1200: text a logo uvnitř x 180–1320, y 120–1080; pravý horní roh volný (štítek rubriky)
+   - cover-homepage.png 1500×1200: text a logo uvnitř x 180–1320, y 120–1080
+     ŠTÍTEK RUBRIKY: web na každou kartu vkládá vpravo nahoře červený oválek s rubrikou (VOLBY, ANALÝZA…).
+     V malých kartách zabírá na coveru oblast x ≥ 950, y ≤ 280 (delší štítek až od x ≈ 760).
+     Tahle oblast musí být PRÁZDNÁ – žádná ikona, odznak, číslo, logo ani konec titulku.
+     Ikonky a odznaky (např. ikona kalkulačky, „PREDIKCE“, „20 let“) dej pod ni, nejdřív od y ≈ 320.
+   - KOTVY, aby covery lícovaly v řadě vedle sebe: text začíná vždy na x 180, y 120 (zrcadlově končí na x 1320,
+     když je motiv vlevo); logo DataTimes.cz vždy pravý dolní roh zóny (pravý okraj 1320, spodek 1080).
+     Žádné vlastní odsazení „pro jistotu“ – karty webu drží přesně 5:4, nic víc se neořezává.
    - cover-og.jpg 1200×630: titulek a logo ve STŘEDNÍM ČTVERCI 630×630 (WhatsApp, Bluesky, Messenger ho ořízne),
      motiv může vyplnit kraje; velké písmo (náhled na WhatsAppu má ~100 px); JPEG do 300 kB
    - cover-square.png 1080×1080, cover-instagram.png 1080×1350 (nic důležitého v horních/dolních 80 px),
@@ -54,7 +61,8 @@ Než začneš, přečti a dodržuj:
 5. KONTROLA – než mi to ukážeš
    - vyrenderuj kontrolní list ořezů (jako nahledy.cjs): homepage velká karta, postranní karta (čtverec), mobil 45 %,
      související 120×96, OG + jeho čtvercový ořez, IG 3:4, stories se zónami
-   - zkontroluj: čte se titulek i na náhledu 120×96? nic důležitého není oříznuté? barvy jsou přesně z palety?
+   - zkontroluj: čte se titulek i na náhledu 120×96? nic důležitého není oříznuté? nic nezasahuje pod štítek
+     rubriky (x ≥ 950, y ≤ 280)? začíná text a sedí logo na stejných kotvách jako u ostatních coverů? barvy jsou přesně z palety?
      sedí čísla s článkem? velikost OG ≤ 300 kB?
    - pošli mi kontrolní list a všech pět souborů; frontmatter:
      coverImage + homepageImage: images/cover-homepage.png, ogImage: images/cover-og.jpg, squareImage: images/cover-square.png
