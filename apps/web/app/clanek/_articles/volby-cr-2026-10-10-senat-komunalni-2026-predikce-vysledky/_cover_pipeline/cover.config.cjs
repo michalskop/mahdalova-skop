@@ -5,7 +5,7 @@ const mapa = require(path.join(ZDROJ, 'senat-mapa.json'));
 const obce = require(path.join(ZDROJ, 'obce-mapa.json'));
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Výsledky predikce', dal: 'Komunální a senátní volby 2026' },
+  kicker: { cervene: 'Výsledky', dal: 'Komunální a senátní volby 2026' },
   titulek: 'Volby 2026 –<br>výsledky predikce',
   pod: 'Jak brzy jsme věděli, jak to dopadne',
   ikona: path.join(__dirname, 'ikona-vysledky.svg'),

@@ -49,13 +49,22 @@
 .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
   grid-column: 1;
   grid-row: 1 / -1;
-  aspect-ratio: 5 / 4;
+  /* Šířka vždy = sloupec 42 %, výška aspoň 5:4 (::before níže). Ne aspect-ratio:
+     u protažené karty by z výšky dopočítal širší náhled. */
+  justify-self: stretch;
   align-self: stretch;
   position: relative;
   margin: calc(var(--card-padding) * -1) 0 calc(var(--card-padding) * -1)
     calc(var(--card-padding) * -1);
   border-radius: 0;
   overflow: hidden;
+}
+
+/* Výška náhledu 5:4 z šířky sloupce (padding v % se počítá ze šířky). */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before {
+  content: '';
+  display: block;
+  padding-top: 80%;
 }
 
 /* Odkaz s obrázkem vyplní celý (na výšku protažený) sloupec – zruší pevný
@@ -143,10 +152,13 @@
      hranami karty a má zaoblený horní roh jako lead. */
   .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
     align-self: auto;
-    aspect-ratio: auto;
     position: static;
     margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) 0;
     border-radius: var(--mantine-radius-md) var(--mantine-radius-md) 0 0;
+  }
+
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before {
+    display: none;
   }
 
   .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type > a {

@@ -19,13 +19,15 @@ const DONUT = fs.readFileSync(path.join(REPO, 'apps', 'web', 'public', 'images',
 const NAVY = '#101432'; // brandNavy.9
 
 // box = bezpečná zóna textu a loga [x0, y0, x1, y1]; mapa = kam se kreslí tečková mapa;
-// ikona = [pravý okraj, horní hrana, šířka]; t/sub/kick/logo = velikosti písma; stred = vše na střed (OG)
+// ikona = [pravý okraj ČTVERCE ikony, horní hrana čtverce, strana čtverce] – zarovnává se podle čtverce piktogramu,
+// ne podle okraje souboru (ikony mají uvnitř různé okraje, štítky, stíny); kick = štítek coveru, volený tak, aby se
+// i nejdelší štítek série (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026) vešel na jeden řádek ve stejné velikosti; t/sub/kick/logo = velikosti písma; stred = vše na střed (OG)
 const FORMATY = {
-  homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [150, 620, 1350, 1000], ikona: [1320, 470, 230], t: 100, sub: 38, kick: 30, logo: 44 },
-  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 40, 915, 590], mapa: [0, 0, 1200, 630], ikona: null, t: 60, sub: 26, kick: 22, logo: 30, stred: true },
-  square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [70, 540, 1010, 930], ikona: [1010, 70, 190], t: 88, sub: 34, kick: 26, logo: 40 },
-  instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [70, 640, 1010, 1120], ikona: [1010, 110, 190], t: 92, sub: 36, kick: 26, logo: 40 },
-  story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 980, 1080, 1520], ikona: [1000, 260, 210], t: 104, sub: 40, kick: 28, logo: 44 },
+  homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [150, 620, 1350, 1000], ikona: [1280, 480, 150], t: 100, sub: 38, kick: 20, leg: 27, logo: 44 },
+  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 40, 915, 590], mapa: [0, 0, 1200, 630], ikona: null, t: 60, sub: 26, kick: 16, logo: 30, stred: true },
+  square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [70, 540, 1010, 930], ikona: [970, 80, 125], t: 88, sub: 34, kick: 24, leg: 24, logo: 40 },
+  instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [70, 640, 1010, 1120], ikona: [970, 120, 125], t: 92, sub: 36, kick: 24, leg: 24, logo: 40 },
+  story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 980, 1080, 1520], ikona: [960, 280, 135], t: 104, sub: 40, kick: 24, leg: 26, logo: 44 },
 };
 
 const MIME = { '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
@@ -75,8 +77,23 @@ function html(c, klic) {
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
     ? `<div style="${style};line-height:0">${fs.readFileSync(c.ikona, 'utf8').replace('<svg ', '<svg style="width:100%;height:auto" ')}</div>`
     : `<img src="${dataUri(c.ikona)}" style="${style}">`;
-  const ikona = c.ikona && f.ikona ? ikonaEl(`position:absolute;left:${f.ikona[0] - f.ikona[2]}px;top:${f.ikona[1]}px;width:${f.ikona[2]}px`) : '';
-  const ikonaOg = c.ikona && f.stred ? ikonaEl(`width:${f.t * 1.5}px`) : '';
+  // Zarovnání podle čtverce piktogramu: c.ikonaCtverec = [x0, y0, x1] v pixelech zdroje (výchozí pro SVG ikony sérií).
+  let ikona = '', ikonaOg = '';
+  if (c.ikona) {
+    const zdroj = fs.readFileSync(c.ikona);
+    const srcW = c.ikona.endsWith('.svg') ? +zdroj.toString().match(/width="(\d+)"/)[1] : zdroj.readUInt32BE(16);
+    const [qx0, qy0, qx1] = c.ikonaCtverec ?? [60, 30, 310];
+    const umisti = (prava, horni, strana) => {
+      const s = strana / (qx1 - qx0);
+      return `position:absolute;left:${(prava - qx1 * s).toFixed(1)}px;top:${(horni - qy0 * s).toFixed(1)}px;width:${(srcW * s).toFixed(1)}px`;
+    };
+    if (f.ikona) ikona = ikonaEl(umisti(...f.ikona));
+    if (f.stred) {
+      // OG: čtverec ikony na středu nad štítkem
+      const strana = f.t * 0.95, s = strana / (qx1 - qx0);
+      ikonaOg = `<div style="position:relative;width:${strana}px;height:${strana * 1.3}px;flex:none">${ikonaEl(umisti(strana, 0, strana))}</div>`;
+    }
+  }
   const leg = c.legenda && !f.stred ? `<div class="leg" style="left:${bx0}px;bottom:${h - by1}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
   const logoPravy = Math.max(Math.round(w * 0.032), w - bx1);
   const text = f.stred
@@ -96,7 +113,7 @@ function html(c, klic) {
 <style>
   html,body{margin:0;width:${w}px;height:${h}px;overflow:hidden;color:#fff}
   body{position:relative;background:radial-gradient(ellipse at 0% 20%,${b.glowA} 0%,${b.glowA}00 55%),radial-gradient(ellipse at 100% 100%,${b.glowB} 0%,${b.glowB}00 55%),${NAVY}}
-  .kick{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.kick}px;letter-spacing:.16em;text-transform:uppercase;color:#f8f6f0;display:flex;align-items:center;gap:${f.kick * 0.5}px;white-space:nowrap;width:max-content;max-width:none;justify-content:${f.stred ? 'center' : 'flex-start'};${f.stred ? 'margin:0 auto;' : ''}padding-bottom:.5em}
+  .kick{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.kick}px;letter-spacing:.12em;text-transform:uppercase;color:#f8f6f0;display:flex;align-items:center;gap:${f.kick * 0.5}px;white-space:nowrap;width:max-content;max-width:none;justify-content:${f.stred ? 'center' : 'flex-start'};${f.stred ? 'margin:0 auto;' : ''}padding-bottom:.5em}
   .kick .cerv{color:#de1743;position:relative}
   .kick .cerv::after{content:'';position:absolute;left:0;bottom:-.42em;height:max(3px,.11em);width:calc(100% - .5em);background:#de1743}
   .kick .sep{color:#de1743}
@@ -107,8 +124,8 @@ function html(c, klic) {
   .nad{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.sub}px;line-height:1.3;color:#fff}
   h1{margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.t}px;line-height:1.06;text-shadow:0 2px 10px rgba(0,0,0,.35)}
   .sub{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.sub}px;line-height:1.3;color:${b.sub}}
-  .leg{position:absolute;font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.kick * 0.9}px;line-height:1.6}
-  .leg i{display:inline-block;width:${f.kick * 0.6}px;height:${f.kick * 0.6}px;border-radius:50%;margin-right:${f.kick * 0.4}px}
+  .leg{position:absolute;font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
+  .leg i{display:inline-block;width:${(f.leg ?? 26) * 0.6}px;height:${(f.leg ?? 26) * 0.6}px;border-radius:50%;margin-right:${(f.leg ?? 26) * 0.4}px}
   .logo{display:flex;align-items:center;gap:${f.logo * 0.3}px;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.logo}px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .logo svg{width:${f.logo * 1.5}px;height:${f.logo * 1.5}px}
 </style></head><body>
