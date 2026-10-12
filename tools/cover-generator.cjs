@@ -58,6 +58,46 @@ function obrazek(c, f, klic) {
   return `<img src="${dataUri(m.src)}" style="position:absolute;left:${x}px;top:${y}px;height:${h}px;mix-blend-mode:screen;opacity:${op};filter:brightness(${m.jas ?? 0.75})">`;
 }
 
+// Volitelný tečkovaný znak přes motiv (např. velký otazník): c.znak = { text, barva, opacity, opacityOg,
+// pozice: { homepage: [střed x, účaří y, velikost písma], … } }. Znak se skládá jen z celých koleček
+// na pravidelné mřížce (jako tečková mapa): glyf IBM Plex Serif Bold (ztučněný obrysem) se po načtení
+// písem vykreslí do skrytého canvasu a kolečko vznikne v každém bodě mřížky, jehož střed leží uvnitř.
+function znak(c, f, klic) {
+  const z = c.znak;
+  const p = z?.pozice?.[klic];
+  if (!p) return '';
+  const [cx, y, size] = p;
+  const op = f.stred ? z.opacityOg ?? 0.3 : z.opacity ?? 0.55;
+  const data = { text: z.text, cx, y, size, krok: Math.max(12, size * 0.03), barva: z.barva };
+  return `<svg id="znak" data-znak='${JSON.stringify(data)}' style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}" opacity="${op}"></svg>`;
+}
+
+// Běží ve stránce po document.fonts.ready – doplní kolečka do <svg id="znak">.
+function vykresliZnak() {
+  const svg = document.getElementById('znak');
+  if (!svg) return;
+  const d = JSON.parse(svg.dataset.znak);
+  const w = +svg.getAttribute('width'), h = +svg.getAttribute('height');
+  const cv = document.createElement('canvas');
+  cv.width = w; cv.height = h;
+  const ctx = cv.getContext('2d');
+  ctx.font = `700 ${d.size}px 'IBM Plex Serif'`;
+  ctx.textAlign = 'center';
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = d.size * 0.05;
+  ctx.fillText(d.text, d.cx, d.y);
+  ctx.strokeText(d.text, d.cx, d.y);
+  const px = ctx.getImageData(0, 0, w, h).data;
+  const r = d.krok * 0.36;
+  let out = '';
+  for (let y = d.krok / 2; y < h; y += d.krok) {
+    for (let x = d.krok / 2; x < w; x += d.krok) {
+      if (px[(Math.round(y) * w + Math.round(x)) * 4 + 3] > 127) out += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${d.barva}"/>`;
+    }
+  }
+  svg.innerHTML = out;
+}
+
 function html(c, klic) {
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
   // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
@@ -139,7 +179,7 @@ function html(c, klic) {
   .logo{display:flex;align-items:center;gap:${f.logo * 0.3}px;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.logo}px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .logo svg{width:${f.logo * 1.5}px;height:${f.logo * 1.5}px}
 </style></head><body>
-${motiv}${scrim}${ogScrim}${ikona}
+${motiv}${c.znak ? znak(c, f, klic) : ''}${scrim}${ogScrim}${ikona}
 ${text}
 </body></html>`;
 }
@@ -154,6 +194,7 @@ ${text}
     const page = await browser.newPage({ viewport: { width: f.w, height: f.h } });
     await page.setContent(html(c, klic), { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(vykresliZnak);
     // Štítek coveru se zmenší, dokud se nevejde: homepage končí před zónou štítku rubriky (x 950),
     // ostatní formáty v šířce bezpečné zóny.
     const maxW = klic === 'homepage' ? 950 - f.box[0] : f.box[2] - f.box[0];
