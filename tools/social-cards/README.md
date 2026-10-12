@@ -1,5 +1,10 @@
 # social-cards — generátor karet pro sociální sítě
 
+> **Kde co je:** cover článku a jeho čtyři varianty pro sítě (OG, čtverec, Instagram, stories) se dělají podle
+> [tools/COVER-EDITOR.md](../COVER-EDITOR.md) generátorem `tools/cover-generator.cjs` (nebo fotografický přes `npm run covers`).
+> social-cards slouží na **doplňkové karty do vláken** (víc karet s grafy k jednomu článku) a `prompts/` na **texty** vláken a captionů.
+> Písma sjednocena 12. 10. 2026 na IBM Plex (patkový jen titulek a logo).
+
 Vyrobí branded PNG karty (stejný vizuální jazyk jako `images/main.png`
 u článků) ve všech rozměrech, které dnešní distribuční formáty potřebují —
 z jedné datové konfigurace na článek, jedním příkazem, bez ručního

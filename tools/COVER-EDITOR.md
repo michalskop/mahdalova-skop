@@ -1,7 +1,21 @@
-# Cover obrázky: jeden projekt, čtyři výstupy
+# Covery a obrázky pro sociální sítě – jediné místo
 
-Pro práci s grafovým motivem a kontrolu vzhledu viz
-[návod pro Michala](NAVOD-PRO-MICHALA.md).
+**Tohle je jediný kanonický zdroj pravidel pro covery a obrázky na sítě – pro Kateřinu i Michala stejně.**
+Leží v repu na GitHubu (`tools/COVER-EDITOR.md`), Claude a Codex ho načítají přes `CLAUDE.md` / `AGENTS.md`
+automaticky; stačí mít stažený aktuální main (`git pull`).
+
+| Co | Kde |
+| --- | --- |
+| Pravidla: sada 5 souborů, písma, štítek coveru, bezpečné zóny, kompozice, logo | tento soubor (sekce níže) |
+| Zadání pro AI (vložit do Claude/Codexu, doplnit 3 řádky) | [PROMPT-COVER.md](PROMPT-COVER.md) |
+| Grafický / datový cover (mapa, graf, číslo) | `tools/cover-generator.cjs` + `_cover_pipeline/cover.config.cjs` u článku |
+| Fotografický cover | `poster-editor.html`, `npm run covers` (níže) |
+| Graf → motiv coveru | [NAVOD-PRO-MICHALA.md](NAVOD-PRO-MICHALA.md) (chart-simplifier) |
+| Doplňkové karty do vláken + texty vláken a captionů | [social-cards/](social-cards/README.md), `social-cards/prompts/` |
+| Formáty a zvyklosti jednotlivých sítí | `docs/redakcni-styl/DISTRIBUCNI_FORMATY.md` |
+| Hotové obrázky k článku | `apps/web/app/clanek/_articles/<slug>/images/` (`cover-og.jpg`, `cover-square.png`, `cover-instagram.png`, `cover-story.png`); na webu `https://www.mahdalova-skop.cz/clanek/_articles/<slug>/images/<soubor>` |
+
+Při rozporu platí tento soubor; ostatní dokumenty na něj odkazují.
 
 Nové covery tvoří `poster-editor.html`. Automat používá tentýž editor přes
 `render-covers.cjs`; nevytváří druhou implementaci grafiky.
@@ -52,7 +66,7 @@ výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obráze
 
 Původní vzor generátoru pro grafické (ne fotografické) covery a kontrolní list ořezů:
 `apps/web/app/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/_cover_pipeline/`
-(`cover.cjs`, `nahledy.cjs`). Hotový prompt pro zadání coveru AI: [PROMPT-COVER-PRO-MICHALA.md](PROMPT-COVER-PRO-MICHALA.md).
+(`cover.cjs`, `nahledy.cjs`). Hotový prompt pro zadání coveru AI: [PROMPT-COVER.md](PROMPT-COVER.md).
 Barvy coverů jen přesně ze závazné palety v `packages/ui/DESIGN.md`.
 
 ## Ruční a poloautomatická práce

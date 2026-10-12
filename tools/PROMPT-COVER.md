@@ -1,4 +1,8 @@
-# Prompt: cover k článku (pro Michala)
+# Prompt: cover k článku (společný pro Kateřinu i Michala)
+
+Jediná verze zadání – stejná pro oba. Pravidla, ze kterých vychází, jsou v [COVER-EDITOR.md](COVER-EDITOR.md).
+Většinou ho není třeba vkládat: Claude i Codex čtou pravidla z `CLAUDE.md` / `AGENTS.md` samy, stačí napsat
+„udělej k článku <slug> cover“. Prompt slouží pro ruční, podrobné zadání.
 
 Zkopíruj celý blok níže do Claude / Codexu v repozitáři `mahdalova-skop` a doplň tři řádky nahoře.
 Výsledkem je sada pěti coverů, kontrolní list ořezů a frontmatter. Nic se nepublikuje bez kontroly.

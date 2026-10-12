@@ -19,5 +19,5 @@
 - Composition: the motif (map, photo) fills the cover – scale maps up from the bottom-right towards the top-left; text, legend and logo may sit on top of it (readability via the navy blurred `halo` under small text). A small map floating in empty space is a mistake. Put the DataTimes.cz logo in whichever bottom corner is calmer so it never gets lost (Czech map: bottom-left under Šumava, legend bottom-right; generator option `logo: 'vlevo'`); default bottom-right.
 - Data/graphic covers: write `_cover_pipeline/cover.config.cjs` in the article and run `tools/cover-generator.cjs` (copy a model config: `volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky`, `…-predikce`, `…-volebni-kalkulacka-73-mest-a-senat`, `volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro`). Do not write a new renderer.
 - Photo covers: follow `tools/COVER-EDITOR.md` and reuse an existing `cover-project.json` when available; use the shared renderer (`tools/render-covers.py` or `npm run covers`). Keep the original image and editable project; publish the complete raster exports.
-- Full brief with all rules: `tools/PROMPT-COVER-PRO-MICHALA.md`.
+- Full brief with all rules: `tools/PROMPT-COVER.md`.
 - Review the generated variants for readability and cropping. Make targeted project edits instead of creating a new renderer or rebuilding every variant manually.
