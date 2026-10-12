@@ -11,9 +11,9 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", 
 promoted: 1
 ---
 
-Náš model z průběžně sečtených okrsků odhaduje konečný výsledek komunálních voleb ve 140 městech a městských částech a senátních voleb ve všech 27 obvodech. Nejnovější rozhodnuté souboje přibývají v přehledu níže.
+Náš model z průběžně sečtených okrsků odhadoval konečný výsledek komunálních voleb ve 140 městech a městských částech a senátních voleb ve všech 27 obvodech.
 
-<iframe src="https://volby2026.datatimes.cz/#latest" title="Volby 2026 – nejnovější rozhodnuté souboje (živý odhad DataTimes.cz)" width="100%" height="820px" frameBorder="0" loading="lazy"></iframe>
+**Sčítání skončilo.** Jak brzy predikce znala výsledky, ukazujeme v článku [Volby 2026 – výsledky predikce](/clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky).
 
 ## Komunální volby: odhad pro 184 zastupitelstev
 

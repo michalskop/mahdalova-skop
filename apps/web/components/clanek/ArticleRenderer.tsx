@@ -33,6 +33,8 @@ import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/Cdu
 import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
 import ObceKvPredikceMapa from '@/components/charts/ObceKvPredikceMapa'; // komunální volby 2026 – odhad pro 184 zastupitelstev
+import ObceKvVysledkyMapa from '@/components/charts/ObceKvVysledkyMapa'; // komunální volby 2026 – výsledky a průběh predikce
+import SenatVysledkyMapa from '@/components/charts/SenatVysledkyMapa'; // Senát 2026 – výsledky 1. kola a průběh predikce
 import SenatPredikceMapa from '@/components/charts/SenatPredikceMapa'; // Senát 2026 – průběžná predikce po obvodech
 import ZivyPrenos from '@/components/clanek/ZivyPrenos'; // online reportáž z JSON
 import KalkulackaMapa from '@/components/charts/KalkulackaMapa'; // mapa-rozcestník Volební kalkulačky 2026 (Senát / 73 měst)
@@ -453,6 +455,8 @@ export function ArticleRenderer({
     KalkulackaMapa,
     SenatPredikceMapa,
     ObceKvPredikceMapa,
+    ObceKvVysledkyMapa,
+    SenatVysledkyMapa,
     ZivyPrenos: (props: any) => <ZivyPrenos slug={slug} {...props} />,
 
   };
