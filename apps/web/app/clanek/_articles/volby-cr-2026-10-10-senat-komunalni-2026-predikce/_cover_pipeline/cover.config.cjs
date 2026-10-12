@@ -11,6 +11,7 @@ module.exports = {
   pod: 'Průběžný odhad: 140 měst a&nbsp;27 senátních obvodů',
   ikona: path.join(__dirname, 'ikona-predikce.svg'),
   legenda: [['#697fe6', '140 měst – komunální volby'], ['#de1743', '27 senátních obvodů']],
+  logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo
   barvy: BARVY,
   motiv: { typ: 'tecky', dots: mapa.dots, vol: mapa.vol, body: obce, ...NAVY_DOTS },
 };

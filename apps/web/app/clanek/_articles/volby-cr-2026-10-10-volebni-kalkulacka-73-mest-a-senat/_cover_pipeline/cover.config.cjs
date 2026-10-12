@@ -13,6 +13,7 @@ module.exports = {
   ikona: path.join(__dirname, 'ikona-kalkulacka-20-let.png'),
   ikonaCtverec: [59, 41, 307], // čtverec piktogramu ve vyříznutém PNG (bez odznaku 20 let a stínu)
   legenda: [['#697fe6', '73 měst – komunální volby'], ['#de1743', 'senátní obvody']],
+  logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo
   barvy: BARVY,
   motiv: { typ: 'tecky', dots: mapa.dots, vol: mapa.vol, body: mesta, ...NAVY_DOTS },
 };

@@ -94,8 +94,13 @@ function html(c, klic) {
       ikonaOg = `<div style="position:relative;width:${strana}px;height:${strana * 1.3}px;flex:none">${ikonaEl(umisti(strana, 0, strana))}</div>`;
     }
   }
-  const leg = c.legenda && !f.stred ? `<div class="leg halo" style="left:${bx0}px;bottom:${h - by1}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
-  const logoPravy = Math.max(Math.round(w * 0.032), w - bx1);
+  // Logo jde do toho dolního rohu, kde je motiv klidnější (c.logo = 'vlevo' | 'vpravo', výchozí vpravo);
+  // legenda si vezme opačný roh. U mapy ČR je volněji vlevo dole pod Šumavou.
+  const logoVlevo = c.logo === 'vlevo';
+  const okraj = Math.max(Math.round(w * 0.032), w - bx1);
+  const rohLogo = logoVlevo ? `left:${bx0}px` : `right:${okraj}px`;
+  const rohLeg = logoVlevo ? `right:${okraj}px;text-align:right` : `left:${bx0}px`;
+  const leg = c.legenda && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${h - by1}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
   const text = f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
@@ -106,7 +111,7 @@ function html(c, klic) {
          ${pod ? `<div style="margin-top:${f.t * 0.3}px">${pod}</div>` : ''}
        </div>
        ${leg}
-       <div class="halo" style="position:absolute;right:${logoPravy}px;bottom:${h - by1}px">${logo}</div>`;
+       <div class="halo" style="position:absolute;${rohLogo};bottom:${h - by1}px">${logo}</div>`;
   const b = c.barvy;
   return `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
