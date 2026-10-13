@@ -12,13 +12,15 @@ filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "data", "Ostrava", "Kladno", "Brno", "Praha", "Žďár nad Sázavou"]
 ---
 
-Jedenáct tisíc tři sta sedmdesát tři proti jedenácti tisícům tři sta sedmdesáti dvěma. Tak těsně skončil v sobotu souboj o druhé kolo senátních voleb na Žďársku. Dosavadní senátor Josef Klement (KDU-ČSL) postoupil, ortoped Radek Černý (ODS) ne. Rozhodl [jediný hlas](/clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky), o postupu tu rozhodly až poslední sečtené okrsky.
+Jedenáct tisíc tři sta sedmdesát tři proti jedenácti tisícům tři sta sedmdesáti dvěma. Neboli 11 373 : 11 372. Takhle těsně skončil v sobotu souboj o druhé kolo senátních voleb na Žďársku.
 
-<RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["volby-cr-2026-09-02-jak-volit-do-zastupitelstva-obce", "volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky"]} />Jeden hlas se může ztratit kdekoli. Při sčítání lístků, při dělání čárek, při přepisu čísel do zápisu. Okrskové komise přitom sčítají často až do noci.
+Rozhodl [jediný hlas](/clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce).
+
+<SupportBanner float="left" />A takový hlas se může ztratit kdekoli. Při sčítání lístků, při zapisování cifer s výsledky, při přepisu čísel do výkazu pro Český statistický úřad.
 
 Prošli jsme proto výsledky ze všech volebních okrsků, které Český statistický úřad zveřejnil v neděli 11. října. Hledali jsme místa, kde čísla nesedí sama se sebou. Nejvýraznější jsou v Ostravě, Kladně, Brně a Praze. V jednom okrsku v Ostravě-Jihu podle zápisu chybí zhruba dvanáct tisíc hlasů. V Brně má vítězná koalice v jednom okrsku nulu, přestože jí titíž voliči na vedlejším lístku dali skoro tři tisíce hlasů.
 
-Nejde o důkaz podvodu. Skoro jistě jde o chyby v zápisech. Na rozdělení mandátů v Ostravě, Brně a Praze by oprava podle našeho přepočtu nic nezměnila. V Kladně je to ale na hraně.
+<RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky", "volby-cr-2026-10-12-kdo-zustal-doma"]} />Pochopitelně to není nic, co by se lidem běžně nedělo: chybují. A chybují samozřejmě i členové a členky volebních komisí. Takže někdy se přepočítají jen drobně, někdy zapomenou jednu cifru na konci (čímž se výsledek změní o celý řád), někdy zapomenou otočit hlasovací lístek a nezapočtou hlasy… Zkrátka i letos jde o (nezáměrné) chyby v zápisech. Kupříkladu na rozdělení mandátů v Ostravě, Brně a Praze by oprava podle našeho přepočtu nic nezměnila. Ovšem v takovém Kladně už je to na hraně.
 
 ## Jak se pozná, že hlasy chybějí
 
@@ -38,7 +40,7 @@ Ve 2 035 z 2 091 takových okrsků se oba lístky liší nejvýš o deset procen
 
 V okrsku 11065 v Ostravě-Jihu bylo 309 platných lístků do zastupitelstva města. Každý volič měl 55 hlasů, dohromady jich tedy mohli rozdat 16 995. Podle zápisu rozdali 3 531. To je 21 procent.
 
-<SupportBanner float="left" />Na lístku do zastupitelstva Ostravy-Jihu přitom titíž lidé rozdali 94 procent svých hlasů. Kdyby lístek do města vyplnili jako ostatní Ostraváci, bylo by v zápisu zhruba o 12 tisíc hlasů víc.
+Na lístku do zastupitelstva Ostravy-Jihu přitom titíž lidé rozdali 94 procent svých hlasů. Kdyby lístek do města vyplnili jako ostatní Ostraváci, bylo by v zápisu zhruba o 12 tisíc hlasů víc.
 
 V okrsku 11049 je to naopak. Lístek do města sedí, využito je 99,5 procenta hlasů. Lístek do Ostravy-Jihu má jen 46 procent, chybí odhadem 6 500 hlasů.
 

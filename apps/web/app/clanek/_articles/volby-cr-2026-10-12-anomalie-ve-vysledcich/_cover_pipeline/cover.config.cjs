@@ -4,19 +4,20 @@
 const path = require('path');
 const ZDROJ = path.join(__dirname, '..', '..', 'volby-cr-2026-10-10-senat-komunalni-2026-predikce');
 const mapa = require(path.join(ZDROJ, 'senat-mapa.json'));
-// Body jsou ilustrační, rozházené náhodně (pevné semínko) po celé republice – nemají ukazovat konkrétní
-// místa ani senátní obvod, jen že chybějící hlasy mohou být kdekoli. Proto bez legendy.
-function nahodneBody(pocet, otazniku, seed) {
+// Otazníčky jsou ilustrační: náhodně vybrané (pevné semínko) tečky mapy po celé republice, přebarvené na
+// červeno, s dokresleným obloukem otazníku. Nemají ukazovat konkrétní místa ani senátní obvod – chybějící
+// hlasy mohou být kdekoli. Proto bez legendy a bez samostatných bodů.
+function nahodneTecky(pocet, seed) {
   let s = seed;
   const rnd = () => ((s = (s * 1103515245 + 12345) % 2147483648) / 2147483648);
   const vybrane = [];
   while (vybrane.length < pocet) {
     const [lon, lat] = mapa.dots[Math.floor(rnd() * mapa.dots.length)];
-    if (vybrane.every((b) => Math.hypot((b.lon - lon) * 0.64, b.lat - lat) > 0.42)) vybrane.push({ lon, lat });
+    if (vybrane.every(([a, b]) => Math.hypot((a - lon) * 0.64, b - lat) > 0.25)) vybrane.push([lon, lat]);
   }
-  return vybrane.map((b, i) => (i < otazniku ? { ...b, znak: '?', k: 3.3 } : b));
+  return vybrane;
 }
-const mista = nahodneBody(16, 6, 20261012);
+
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Komunální a senátní volby 2026' },
@@ -25,7 +26,7 @@ module.exports = {
   logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, vpravo velký otazník
   // brand.8 / brandNavy.8 záře, brand.1 / brandNavy.1 texty, brand.6 štítek
   barvy: { glowA: '#a81134', glowB: '#2f325c', kick: '#ffb3c0', sub: '#d2d8e9', stitek: '#de1743' },
-  // tečky mapy brandNavy.8, body a otazníčky brand.3 s obrysem brandNavy.9
+  // tečky mapy brandNavy.8, otazníčky brand.3 bez obrysu
   // velký tečkovaný otazník (brand.3) z celých koleček; pozice ručně podle kompozice každého formátu
   znak: {
     text: '?', barva: '#ff4970', opacity: 0.55, opacityOg: 0.5,
@@ -34,5 +35,5 @@ module.exports = {
       instagram: [830, 1235, 640], story: [800, 1560, 720],
     },
   },
-  motiv: { typ: 'tecky', dots: mapa.dots, vol: [], body: mista, barvaObvod: '#ffcf02', barvaTecka: '#2f325c', barvaBod: '#ff4970', obrysBod: '#101432' },
+  motiv: { typ: 'tecky', dots: mapa.dots, vol: [], body: [], otaznicky: nahodneTecky(40, 20261013), pocetOtazniku: 7, barvaObvod: '#ffcf02', barvaTecka: '#2f325c', barvaBod: '#ff4970', obrysBod: '#101432' },
 };

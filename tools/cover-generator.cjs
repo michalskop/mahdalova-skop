@@ -51,11 +51,15 @@ function tecky(c, f) {
   const r = Math.max(1.6, sc * 0.018);
   const op = f.stred ? 0.35 : 1; // u OG je mapa jen pozadí za textem
   const vol = new Set(m.vol);
-  const d = m.dots.map(([lo, la, o]) => { const [x, y] = P(lo, la); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${vol.has(o) ? m.barvaObvod : m.barvaTecka}" opacity="${op}"/>`; }).join('');
+  // m.otaznicky = [[lon, lat], …] – kandidátní tečky mapy (přesně ze seznamu dots, v pořadí priority). Po načtení
+  // písem vybere vykresliOtaznicky() prvních m.pocetOtazniku, jejichž otazníček nekoliduje s textem, logem ani
+  // velkým znakem, přebarví je na barvaBod a dokreslí nad ně horní oblouk „?“; tečkou otazníku je sama tečka mapy.
+  const oz = new Map((m.otaznicky ?? []).map(([lo, la], i) => [`${lo},${la}`, i]));
+  const d = m.dots.map(([lo, la, o]) => { const [x, y] = P(lo, la); const q = oz.has(`${lo},${la}`), qi = oz.get(`${lo},${la}`); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${vol.has(o) ? m.barvaObvod : m.barvaTecka}" opacity="${op}"${q ? ` data-otaznik="${m.barvaBod}" data-pocet="${m.pocetOtazniku ?? 8}" data-poradi="${qi}"` : ''}/>`; }).join('');
   // bod může mít vlastní velikost (k = násobek poloměru tečky, výchozí 2,3), barvu a průhlednost – bublinová mapa
   // bod se znakem (o.znak, např. '?') se kreslí jako malý glyf IBM Plex Serif Bold s obrysem v barvě pozadí
   const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); if (o.znak) { const fs = r * (o.k ?? 2.3) * 3.2; return `<text x="${x.toFixed(1)}" y="${(y + fs * 0.36).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${fs.toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" paint-order="stroke" opacity="${op * (o.op ?? 1)}">${o.znak}</text>`; } return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * (o.k ?? 2.3)).toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op * (o.op ?? 1)}"/>`; }).join('');
-  return `<svg style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
+  return `<svg id="mapa" style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
 }
 
 function obrazek(c, f, klic) {
@@ -89,6 +93,77 @@ function znak(c, f, klic) {
       sirka: Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)) * ((typeof z.meritkoTecky === 'object' ? z.meritkoTecky[klic] : z.meritkoTecky) ?? 1) };
   }
   return `<svg id="znak" data-znak='${JSON.stringify(data)}' style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}" opacity="${op}"></svg>`;
+}
+
+// Běží ve stránce po document.fonts.ready – nad každou tečku mapy s data-otaznik vykreslí horní oblouk „?“
+// (IBM Plex Serif Bold, bez obrysu) tak, aby vlastní tečka glyfu ležela přesně na tečce mapy a byla oříznutá.
+function vykresliOtaznicky() {
+  const mapa = document.getElementById('mapa');
+  const poradi = (c) => +c.dataset.poradi;
+  const tecky = mapa ? [...mapa.querySelectorAll('circle[data-otaznik]')].sort((a, b) => poradi(a) - poradi(b)) : [];
+  if (!tecky.length) return;
+  const REF = 400, W = 400, H = 500;
+  const cv = document.createElement('canvas');
+  cv.width = W; cv.height = H;
+  const ctx = cv.getContext('2d');
+  ctx.font = `700 ${REF}px 'IBM Plex Serif'`;
+  ctx.textAlign = 'center';
+  ctx.fillText('?', W / 2, H * 0.85);
+  const px = ctx.getImageData(0, 0, W, H).data;
+  const ink = (x, y) => px[(y * W + x) * 4 + 3] > 127;
+  // tečka glyfu = nejspodnější souvislý pás řádků s inkoustem
+  let y1 = -1, y0 = -1, x0 = W, x1 = -1;
+  for (let y = H - 1; y >= 0; y--) {
+    let radek = false;
+    for (let x = 0; x < W; x++) if (ink(x, y)) { radek = true; if (y1 >= 0 || true) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); } }
+    if (radek && y1 < 0) y1 = y;
+    if (!radek && y1 >= 0) { y0 = y + 1; break; }
+  }
+  const dotW = x1 - x0, dotCx = (x0 + x1) / 2 - W / 2, dotCy = (y0 + y1) / 2 - H * 0.85, dotTop = y0 - H * 0.85;
+  // překážky: texty, logo, legenda a obálka velkého znaku (s rezervou)
+  const prekazky = [...document.querySelectorAll('.kick, h1, .sub span, .logo, .leg, .nad')].map((e) => e.getBoundingClientRect());
+  const velky = document.getElementById('znak');
+  if (velky && velky.childElementCount) { const b = velky.getBBox(); prekazky.push({ left: b.x, top: b.y, right: b.x + b.width, bottom: b.y + b.height }); }
+  const vybrane = [];
+  const pocet = +(tecky[0].dataset.pocet);
+  const ns = 'http://www.w3.org/2000/svg';
+  for (const c of tecky) {
+    if (vybrane.length >= pocet) break;
+    const cx = +c.getAttribute('cx'), cy = +c.getAttribute('cy'), r = +c.getAttribute('r');
+    const k = (2 * r * 1.15) / dotW;
+    const vyska = REF * 0.75 * k, sirka = REF * 0.5 * k; // přibližná obálka celého „?“ (výška versálky, šířka glyfu)
+    const box = { left: cx - sirka / 2 - 12, right: cx + sirka / 2 + 12, top: cy - vyska - 12, bottom: cy + r + 12 };
+    const w = +mapa.getAttribute('width'), h = +mapa.getAttribute('height');
+    if (box.left < 0 || box.right > w || box.top < 0 || box.bottom > h) continue;
+    if (prekazky.some((p) => !(box.right < p.left || box.left > p.right || box.bottom < p.top || box.top > p.bottom))) continue;
+    if (vybrane.some((v) => Math.hypot(v[0] - cx, v[1] - cy) < vyska * 2.2)) continue;
+    vybrane.push([cx, cy, c]);
+  }
+  vybrane.forEach(([cx, cy, c], i) => {
+    const r = +c.getAttribute('r');
+    c.setAttribute('fill', c.dataset.otaznik);
+    const k = (2 * r * 1.15) / dotW;                // tečka glyfu ≈ tečka mapy
+    const bx = cx - dotCx * k, by = cy - dotCy * k;  // účaří tak, aby tečka glyfu seděla na tečce mapy
+    const clip = document.createElementNS(ns, 'clipPath');
+    clip.setAttribute('id', `oz${i}`);
+    const rect = document.createElementNS(ns, 'rect');
+    rect.setAttribute('x', 0); rect.setAttribute('y', 0);
+    rect.setAttribute('width', mapa.getAttribute('width'));
+    rect.setAttribute('height', (by + dotTop * k - r * 0.15).toFixed(1)); // vše nad tečkou glyfu
+    clip.appendChild(rect);
+    mapa.appendChild(clip);
+    const t = document.createElementNS(ns, 'text');
+    t.setAttribute('x', bx.toFixed(1)); t.setAttribute('y', by.toFixed(1));
+    t.setAttribute('text-anchor', 'middle');
+    t.setAttribute('font-family', 'IBM Plex Serif, Georgia, serif');
+    t.setAttribute('font-weight', '700');
+    t.setAttribute('font-size', (REF * k).toFixed(1));
+    t.setAttribute('fill', c.dataset.otaznik);
+    t.setAttribute('opacity', c.getAttribute('opacity'));
+    t.setAttribute('clip-path', `url(#oz${i})`);
+    t.textContent = '?';
+    mapa.appendChild(t);
+  });
 }
 
 // Běží ve stránce po document.fonts.ready – doplní kolečka do <svg id="znak">.
@@ -137,7 +212,10 @@ function vykresliZnak() {
   let out = '';
   for (let yy = krok / 2; yy < h; yy += krok) {
     for (let x = krok / 2; x < w; x += krok) {
-      if (!uvnitr(x, yy)) continue;
+      // kolečko i tam, kde do glyfu padne aspoň část buňky – oblouky se prokreslí, nezůstanou osamělé tečky
+      const q = krok * 0.3;
+      const zasah = [[0, 0], [q, 0], [-q, 0], [0, q], [0, -q]].filter(([a, b]) => uvnitr(x + a, yy + b)).length;
+      if (zasah < 2) continue;
       if (t && yy >= t.y0 - krok * 0.5) continue; // tečku tvoří obvod
       out += `<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${r.toFixed(1)}" fill="${d.barva}"/>`;
     }
@@ -242,6 +320,7 @@ ${text}
     await page.setContent(html(c, klic), { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(vykresliZnak);
+    await page.evaluate(vykresliOtaznicky);
     // Štítek coveru se zmenší, dokud se nevejde: homepage končí před zónou štítku rubriky (x 950),
     // ostatní formáty v šířce bezpečné zóny.
     const maxW = klic === 'homepage' ? 950 - f.box[0] : f.box[2] - f.box[0];
