@@ -159,7 +159,7 @@ function html(c, klic) {
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   html,body{margin:0;width:${w}px;height:${h}px;overflow:hidden;color:#fff}
-  body{position:relative;background:radial-gradient(ellipse at 0% 20%,${b.glowA} 0%,${b.glowA}00 55%),radial-gradient(ellipse at 100% 100%,${b.glowB} 0%,${b.glowB}00 55%),${NAVY}}
+  body{position:relative;background:radial-gradient(ellipse at ${b.glowPosA ?? '0% 20%'},${b.glowA} 0%,${b.glowA}00 ${b.glowDosah ?? 55}%),radial-gradient(ellipse at ${b.glowPosB ?? '100% 100%'},${b.glowB} 0%,${b.glowB}00 ${b.glowDosah ?? 55}%),${NAVY}}
   .kick{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.kick}px;letter-spacing:.12em;text-transform:uppercase;color:#f8f6f0;display:flex;align-items:center;gap:${f.kick * 0.5}px;white-space:nowrap;width:max-content;max-width:none;justify-content:${f.stred ? 'center' : 'flex-start'};${f.stred ? 'margin:0 auto;' : ''}padding-bottom:.5em}
   .kick .cerv{color:#de1743;position:relative}
   .kick .cerv::after{content:'';position:absolute;left:0;bottom:-.42em;height:max(3px,.11em);width:calc(100% - .5em);background:#de1743}

@@ -4,7 +4,8 @@ const ZDROJ = path.join(__dirname, '..', '..', 'volby-cr-2026-10-10-senat-komuna
 const mapa = require(path.join(ZDROJ, 'senat-mapa.json'));
 const { mesta } = require(path.join(__dirname, '..', 'kalkulacky-mapa.json'));
 const NAVY_DOTS = { barvaObvod: '#de1743' /* brand.6 */, barvaTecka: '#2f325c' /* brandNavy.8 */, barvaBod: '#697fe6' /* brandRoyalBlue.4 */, obrysBod: '#ffffff' };
-const BARVY = { glowA: '#4a51ab' /* brandRoyalBlue.6 */, glowB: '#812840' /* brandDeepRed.7 */, kick: '#d2d8e9' /* brandNavy.1 */, sub: '#a9b5f0' /* brandRoyalBlue.2 */, stitek: '#de1743' };
+// Odlišeno od sesterského coveru predikce: záře zrcadlově (petrolejová vpravo nahoře, ametystová vlevo dole), jiný tón podtitulku.
+const BARVY = { glowA: '#06677d' /* brandTeal.7 */, glowPosA: '100% 0%', glowB: '#6e227d' /* brandAmethyst.7 */, glowPosB: '0% 100%', glowDosah: 60, kick: '#d2d8e9' /* brandNavy.1 */, sub: '#8cdfef' /* brandTeal.2 */, stitek: '#de1743' };
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Volební kalkulačka', dal: 'Komunální a senátní volby 2026' },
