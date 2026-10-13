@@ -273,6 +273,18 @@ Fact-checking je povinný krok u každého textu, ne doplněk. Platí pro lidi i
 
 *Pravidlo platí od 2026-10-02 (po článku o počtu obcí, kde koncept uváděl neaktuální stranickou příslušnost a zbytečně stavěl na podnětu z diskuse). Vlastník: Kateřina Mahdalová.*
 
+## Vlastní výpočet, model a screening dat
+Když článek stojí na našem výpočtu (model, screening anomálií, přepočet mandátů), platí navíc:
+- **Každé číslo v textu, v tabulce i v grafu se počítá z primárních dat jedním skriptem**, který leží u článku (`_data_pipeline/`). Čísla neopisujeme z pracovních výstupů, screenshotů ani z AI shrnutí. Před publikací porovnáme text s výstupem skriptu – rozpětí, podíly i součty.
+- **Titulek a otvírák se opírají o nejsilnější vysvětlení, ne o nejatraktivnější.** Když data připouštějí víc hypotéz, uvedeme všechny a řekneme, kterou podporují nejvíc. Titulek nesmí stavět na hypotéze, kterou text sám označí za slabší.
+- **Alternativa „hodnoty jsou skutečné“ patří mezi hypotézy vždy** (malý vzorek, místní vazba kandidáta, zvláštní okrsek). Ověříme ji, než napíšeme „chyba“.
+- **Metodu vysvětlíme tak, aby ji pochopil laik** – jedním srozumitelným testem (např. „kolik hlasů voliči rozdali“), ne odkazem na „statistické modely“. Kde se dá, ukážeme kontrolu, která nepotřebuje model (dva lístky od týchž voličů).
+- **Dopad na výsledek (mandáty, postup) spočítáme, ne odhadneme**, a postup ověříme na oficiálních výsledcích, než ho použijeme.
+- **Dotčení dostanou možnost reagovat** (ČSÚ, obce, komise, kandidát), pokud text naznačuje jejich chybu.
+- **Pracovní nástroj není publikační výstup.** Screenshot vlastní pracovní mapy není cover ani obrázek do článku; interaktivní embed musí být v paletě, bez emoji a pracovních popisků („teaser“) a musí mít vysvětlení, jak ho číst.
+
+*Pravidlo platí od 2026-10-13 (po konceptu o volebních anomáliích, kde se strany kandidátů, rozpětí podpory i zápis opravy lišily od dat ČSÚ, titulek stavěl na slabší hypotéze a cover byl screenshot pracovní mapy). Typ: univerzální, datový modul. Vlastník: Kateřina Mahdalová.*
+
 ## Kontrola grafu a vizuálního tvrzení
 Titulek je tvrzení, ne téma · osa, jednotka, období, populace a zdroj jsou viditelné · barva nese stabilní význam (stejná barva neznamená dvě věci) · klíčové hodnoty nejsou jen v tooltipu · mapa nenahrazuje přesnější seřazený graf, pokud by zkreslovala malé země či historické hranice · graf ukazuje nejistotu a kategorii „unknown", pokud ovlivňují čtení · alt text shrnuje zjištění, ne vzhled.
 
@@ -282,6 +294,13 @@ Titulek je tvrzení, ne téma · osa, jednotka, období, populace a zdroj jsou v
 
 ## Povinný začátek každého zadání
 Urči projekt a žánr → načti tento manuál → načti projektovou kapitolu → vypiš hlavní tvrzení a potřebné důkazy → založ zdrojový záznam → teprve pak piš.
+
+Platí pro každého autora i každý AI nástroj (Claude, Codex, Gemini, Cursor…): manuál se načítá **celý** před prvním slovem článku, ne až při korektuře. Pokyny pro AI v repu (`CLAUDE.md`, `AGENTS.md`, `GEMINI.md`) na něj odkazují jako na tvrdé pravidlo.
+
+## Automatická kontrola článku (`check:articles`)
+Měřitelnou část manuálu hlídá skript `apps/web/scripts/checkArticles.js`. Běží při commitu (git hook) i v buildu, takže **článek, který neprojde, se nedostane na web** – Cloudflare build skončí chybou. Kontroluje články se slugem od 13. 10. 2026: tvar slugu a shodu s datem, povinná metadata, sadu pěti coverů (a že cover není kopie obrázku z textu), OG do 300 kB, povinné vložené prvky (🔻🔻🔻 na konci, SupportBanner, existující cíle RelatedArticles), zakázané fráze z Části II a III, em-dash, emoji v mezititulcích, souhrnné „Zdroje“ a pracovní slova. Ruční spuštění: `npm run check:articles --workspace=apps/web` (nebo s názvem složky článku jako argumentem).
+
+Skript nenahrazuje úsudek: tezi titulku, ověření osob, čtení dat před příběhem a férovost hlídá autor a editor podle tohoto manuálu.
 
 ## Před založením článku: URL a rubrika (povinný dotaz)
 **Žádný článek nevznikne, dokud redakce výslovně neurčí jeho URL (slug) a rubriku.** Platí pro lidi i pro AI (Claude, Codex): nejdřív se zeptat, pak zakládat složku. Totéž platí pro každé přejmenování existujícího článku. Slug nevymýšlet, nezkracovat a „nevylepšovat" podle titulku.
@@ -318,6 +337,8 @@ Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní ot�
 - [ ] Metadata, datum a autor sedí; zdroje jsou u konkrétních tvrzení, citací a grafů
 - [ ] Text přečten nahlas (u audia/videa i test podání)
 - [ ] Konec dokončuje myšlenku, ne rekapituluje
+- [ ] U vlastního výpočtu: každé číslo v textu, tabulce a grafu sedí s výstupem skriptu u článku; titulek stojí na nejsilnější hypotéze; dotčení dostali možnost reagovat
+- [ ] `npm run check:articles` prošel (běží i v buildu)
 - [ ] Inline related v první čtvrtině, inline SupportBanner v horní polovině, oba obtečené dostatkem textu; read-more box `🔻🔻🔻` na konci (viz Část II → Fotografie a obraz → Povinné vložené prvky)
 
 ## Od úpravy po publikaci: bezpečný postup (git)
