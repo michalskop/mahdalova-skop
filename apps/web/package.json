@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/copyImages.js && next dev -p 3001",
-    "prebuild": "node scripts/copyImages.js && node scripts/generateSitemap.js && node scripts/generateLlmsTxt.js",
+    "prebuild": "node scripts/checkArticles.js && node scripts/copyImages.js && node scripts/generateSitemap.js && node scripts/generateLlmsTxt.js",
     "build": "next build && node scripts/buildSearchIndex.js",
     "start": "next start",
     "lint": "next lint",
+    "check:articles": "node scripts/checkArticles.js",
     "qa:kviff": "node scripts/qa-kviff.mjs",
     "qa:true-size": "node scripts/qa-true-size.mjs",
     "sync:dpbp": "node scripts/sync-dpbp.mjs",
