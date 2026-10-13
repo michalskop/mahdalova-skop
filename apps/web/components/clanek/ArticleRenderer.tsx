@@ -34,6 +34,7 @@ import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
 import ObceKvPredikceMapa from '@/components/charts/ObceKvPredikceMapa'; // komunální volby 2026 – odhad pro 184 zastupitelstev
 import ObceKvVysledkyMapa from '@/components/charts/ObceKvVysledkyMapa'; // komunální volby 2026 – výsledky a průběh predikce
+import OkrskyKvMapa from '@/components/charts/OkrskyKvMapa'; // komunální volby 2026 – kdo vyhrál v okrscích (jak volili vaši sousedé)
 import SenatVysledkyMapa from '@/components/charts/SenatVysledkyMapa'; // Senát 2026 – výsledky 1. kola a průběh predikce
 import SenatPredikceMapa from '@/components/charts/SenatPredikceMapa'; // Senát 2026 – průběžná predikce po obvodech
 import ZivyPrenos from '@/components/clanek/ZivyPrenos'; // online reportáž z JSON
@@ -456,6 +457,7 @@ export function ArticleRenderer({
     SenatPredikceMapa,
     ObceKvPredikceMapa,
     ObceKvVysledkyMapa,
+    OkrskyKvMapa,
     SenatVysledkyMapa,
     ZivyPrenos: (props: any) => <ZivyPrenos slug={slug} {...props} />,
 
