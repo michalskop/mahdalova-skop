@@ -4,19 +4,15 @@
 const path = require('path');
 const ZDROJ = path.join(__dirname, '..', '..', 'volby-cr-2026-10-10-senat-komunalni-2026-predikce');
 const mapa = require(path.join(ZDROJ, 'senat-mapa.json'));
-// Otazníčky jsou ilustrační: náhodně vybrané (pevné semínko) tečky mapy po celé republice, přebarvené na
-// červeno, s dokresleným obloukem otazníku. Nemají ukazovat konkrétní místa ani senátní obvod – chybějící
-// hlasy mohou být kdekoli. Proto bez legendy a bez samostatných bodů.
-function nahodneTecky(pocet, seed) {
-  let s = seed;
-  const rnd = () => ((s = (s * 1103515245 + 12345) % 2147483648) / 2147483648);
-  const vybrane = [];
-  while (vybrane.length < pocet) {
-    const [lon, lat] = mapa.dots[Math.floor(rnd() * mapa.dots.length)];
-    if (vybrane.every(([a, b]) => Math.hypot((a - lon) * 0.64, b - lat) > 0.25)) vybrane.push([lon, lat]);
-  }
-  return vybrane;
-}
+// Otazníčky jsou ilustrační: vybrané tečky mapy rovnoměrně po republice, přebarvené na červeno, s dokresleným
+// obloukem otazníku. Nemají ukazovat konkrétní místa ani senátní obvod – chybějící hlasy mohou být kdekoli.
+// Pevný seznam (souřadnice přesně z mapy) pro všechny formáty; prvních 7 je hlavní kompozice (13. 10. 2026:
+// Aš → Kladno, sever → Klatovy), zbytek jsou náhradníci, když ve formátu otazníček koliduje s textem nebo logem.
+const otaznicky = [
+  [15.3906, 50.17], [16.2272, 48.8128], [14.461, 49.648], [14.6934, 48.9694], [15.9948, 49.8046],
+  [14.0892, 50.17], [13.299, 49.387],
+  [15.6694, 49.4392], [14.2751, 48.9172], [16.9708, 48.8128], [18.3187, 49.909], [13.7173, 49.648],
+];
 
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
@@ -35,5 +31,5 @@ module.exports = {
       instagram: [830, 1235, 640], story: [800, 1560, 720],
     },
   },
-  motiv: { typ: 'tecky', dots: mapa.dots, vol: [], body: [], otaznicky: nahodneTecky(40, 20261013), pocetOtazniku: 7, barvaObvod: '#ffcf02', barvaTecka: '#2f325c', barvaBod: '#ff4970', obrysBod: '#101432' },
+  motiv: { typ: 'tecky', dots: mapa.dots, vol: [], body: [], otaznicky, pocetOtazniku: 7, barvaObvod: '#ffcf02', barvaTecka: '#2f325c', barvaBod: '#ff4970', obrysBod: '#101432' },
 };
