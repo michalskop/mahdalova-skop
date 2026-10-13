@@ -53,7 +53,8 @@ function tecky(c, f) {
   const vol = new Set(m.vol);
   const d = m.dots.map(([lo, la, o]) => { const [x, y] = P(lo, la); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${vol.has(o) ? m.barvaObvod : m.barvaTecka}" opacity="${op}"/>`; }).join('');
   // bod může mít vlastní velikost (k = násobek poloměru tečky, výchozí 2,3), barvu a průhlednost – bublinová mapa
-  const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * (o.k ?? 2.3)).toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op * (o.op ?? 1)}"/>`; }).join('');
+  // bod se znakem (o.znak, např. '?') se kreslí jako malý glyf IBM Plex Serif Bold s obrysem v barvě pozadí
+  const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); if (o.znak) { const fs = r * (o.k ?? 2.3) * 3.2; return `<text x="${x.toFixed(1)}" y="${(y + fs * 0.36).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${fs.toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" paint-order="stroke" opacity="${op * (o.op ?? 1)}">${o.znak}</text>`; } return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * (o.k ?? 2.3)).toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op * (o.op ?? 1)}"/>`; }).join('');
   return `<svg style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
 }
 
