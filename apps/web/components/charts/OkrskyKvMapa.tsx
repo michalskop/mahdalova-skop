@@ -269,7 +269,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
           <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, fontSize: 11.5, color: MUTED, marginBottom: 2 }}><span>hlasy</span><span style={{ width: '2.4em', textAlign: 'right' }}>mand.</span></div>
           <Rows r={res.order.map((i) => [i, res.tot.get(i)!] as [number, number])} mand />
           <div style={{ color: MUTED, fontSize: 12, marginTop: 10 }}>
-            {side ? 'Najeďte myší na okrsek, kliknutím ho připnete.' : 'Ťukněte na okrsek a uvidíte jeho výsledek.'}
+            {side ? 'Najeďte myší na okrsek, kliknutím ho připnete.' : 'Klepněte na okrsek a uvidíte jeho výsledek.'}
           </div>
         </>
       ) : null}

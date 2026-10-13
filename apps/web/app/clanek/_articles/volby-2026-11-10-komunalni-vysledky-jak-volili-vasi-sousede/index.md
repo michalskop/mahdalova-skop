@@ -3,6 +3,11 @@ title: "Jak volili vaši sousedé: výsledky komunálních voleb 2026 v každém
 date: "2026-11-10"
 author: "Kateřina Mahdalová"
 excerpt: "Podrobná mapa všech 14 551 volebních okrsků. Podívejte se, kdo vyhrál komunální volby 2026 ve vaší ulici, a porovnejte to se sousedy."
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: []
 tags: ["volby", "volby 2026", "komunální volby 2026", "mapa"]
 promoted: 1
@@ -10,7 +15,7 @@ promoted: 1
 
 Komunální volby se rozhodují v obcích, ale rozdíly začínají už v jednotlivých ulicích. Mapa ukazuje výsledek ve všech 14 551 volebních okrscích. Barva okrsku patří kandidátce, která v něm dostala nejvíc hlasů.
 
-Do řádku napište název obce nebo městské části. Ve velkých městech se dá přepínat mezi zastupitelstvem celého města a zastupitelstvem městské části. Po najetí myší na okrsek, na mobilu po ťuknutí, se vedle mapy ukáže jeho výsledek a účast.
+Do řádku napište název obce nebo městské části. Ve velkých městech se dá přepínat mezi zastupitelstvem celého města a zastupitelstvem městské části. Když na okrsek najedete myší nebo na něj na mobilu klepnete, ukáže se vedle mapy jeho výsledek a účast.
 
 <OkrskyKvMapa
   title="Kdo vyhrál v okrscích: {obec}"
