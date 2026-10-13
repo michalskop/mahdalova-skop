@@ -9,6 +9,11 @@
     <filter id="vb-shadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.55"/>
     </filter>
+    <!-- jako dtDonutYellowFix v datatimes-donut.svg: modrá překryje červenou jen na svém začátku -->
+    <linearGradient id="vb-blue-fix" x1="1" x2="0.25" y1="0.5" y2="1">
+      <stop offset="50%" stop-color="#4a51ab" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a51ab" stop-opacity="1"/>
+    </linearGradient>
   </defs>
 
   <rect width="1080" height="1080" fill="#101432"/>
@@ -28,7 +33,7 @@
         <path stroke="#4a51ab" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
         <path stroke="#f8f6f0" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
         <path stroke="#de1743" d="M 250 150 A 100 100 0 0 0 250 350"/>
-        <path stroke="#4a51ab" d="M 250 350 A 100 100 0 0 0 300 336.60254037844385"/>
+        <path stroke="url(#vb-blue-fix)" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
       </g>
     </g>
   </g>
