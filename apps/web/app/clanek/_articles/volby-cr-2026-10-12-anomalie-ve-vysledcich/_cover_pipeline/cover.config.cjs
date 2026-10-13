@@ -23,13 +23,10 @@ module.exports = {
   // brand.8 / brandNavy.8 záře, brand.1 / brandNavy.1 texty, brand.6 štítek
   barvy: { glowA: '#a81134', glowB: '#2f325c', kick: '#ffb3c0', sub: '#d2d8e9', stitek: '#de1743' },
   // obvod brandYellow.6, ostatní tečky brandNavy.8, místa brand.3 s obrysem brandNavy.9
-  // velký tečkovaný otazník přes mapu (brand.3), čte se jako tvar, ne plocha
-  znak: {
-    text: '?', barva: '#ff4970', opacity: 0.5, opacityOg: 0.5,
-    pozice: {
-      homepage: [1130, 1010, 980], og: [600, 590, 700], square: [800, 960, 760],
-      instagram: [800, 1180, 820], story: [790, 1520, 900],
-    },
-  },
+  // velký tečkovaný otazník (brand.3): jeho tečkou je žlutý senátní obvod Žďár, kde rozhodl jediný hlas
+  znak: { text: '?', barva: '#ff4970', opacity: 0.55, opacityOg: 0.5, teckaNaObvodu: true, meritkoTecky: { homepage: 1.35, square: 1.3, instagram: 1.6, story: 1.6 },
+    pozice: { og: [1035, 540, 560] } }, // OG: vpravo vedle středního čtverce s textem
+  // mapa posunutá doprava dolů, aby otazník nad Žďárem nezasahoval do podtitulku (dekorace smí přesahovat okraj)
+  mapaPozice: { homepage: [200, 450, 1620, 1200], square: [90, 500, 1140, 1080] },
   motiv: { typ: 'tecky', dots: mapa.dots, vol: [51], body: mista, barvaObvod: '#ffcf02', barvaTecka: '#2f325c', barvaBod: '#ff4970', obrysBod: '#101432' },
 };

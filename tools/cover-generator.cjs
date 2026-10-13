@@ -33,7 +33,8 @@ const FORMATY = {
 const MIME = { '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
 const dataUri = (p) => `data:${MIME[path.extname(p)]};base64,${fs.readFileSync(p).toString('base64')}`;
 
-function tecky(c, f) {
+// Projekce tečkové mapy do formátu: P(lon, lat) → [x, y] v pixelech, sc = měřítko.
+function projekce(c, f) {
   const m = c.motiv;
   const [mx0, my0, mx1, my1] = f.mapa;
   const lon = m.dots.map((d) => d[0]), lat = m.dots.map((d) => d[1]);
@@ -41,7 +42,12 @@ function tecky(c, f) {
   const kx = Math.cos((49.8 * Math.PI) / 180);
   const sc = Math.min((mx1 - mx0) / ((x1 - x0) * kx), (my1 - my0) / (y1 - y0));
   const ox = mx0 + (mx1 - mx0 - (x1 - x0) * kx * sc) / 2, oy = my0 + (my1 - my0 - (y1 - y0) * sc) / 2;
-  const P = (lo, la) => [ox + (lo - x0) * kx * sc, oy + (y1 - la) * sc];
+  return { P: (lo, la) => [ox + (lo - x0) * kx * sc, oy + (y1 - la) * sc], sc };
+}
+
+function tecky(c, f) {
+  const m = c.motiv;
+  const { P, sc } = projekce(c, f);
   const r = Math.max(1.6, sc * 0.018);
   const op = f.stred ? 0.35 : 1; // u OG je mapa jen pozadí za textem
   const vol = new Set(m.vol);
@@ -59,16 +65,28 @@ function obrazek(c, f, klic) {
 }
 
 // Volitelný tečkovaný znak přes motiv (např. velký otazník): c.znak = { text, barva, opacity, opacityOg,
-// pozice: { homepage: [střed x, účaří y, velikost písma], … } }. Znak se skládá jen z celých koleček
-// na pravidelné mřížce (jako tečková mapa): glyf IBM Plex Serif Bold (ztučněný obrysem) se po načtení
+// pozice: { homepage: [střed x, účaří y, velikost písma], … }, teckaNaObvodu }. Znak se skládá jen z celých
+// koleček na pravidelné mřížce (jako tečková mapa): glyf IBM Plex Serif Bold (ztučněný obrysem) se po načtení
 // písem vykreslí do skrytého canvasu a kolečko vznikne v každém bodě mřížky, jehož střed leží uvnitř.
+// teckaNaObvodu: tečku otazníku tvoří zvýrazněný obvod mapy (motiv.vol) – znak se zvětší tak, aby jeho tečka
+// měla šířku obvodu, posune se tak, aby na obvod dosedla, a kolečka tečky se nekreslí (pozice pak nese jen
+// [velikost] jako výchozí odhad, nebo se vynechá). meritkoTecky > 1 = tečka větší než obvod (větší znak), číslo nebo { formát: číslo };
+// ruční pozice formátu má přednost před ukotvením (např. OG, kde text drží střed).
 function znak(c, f, klic) {
   const z = c.znak;
-  const p = z?.pozice?.[klic];
+  const rucne = z?.pozice?.[klic];
+  const p = rucne ?? (z?.teckaNaObvodu ? [] : null);
   if (!p) return '';
-  const [cx, y, size] = p;
   const op = f.stred ? z.opacityOg ?? 0.3 : z.opacity ?? 0.55;
-  const data = { text: z.text, cx, y, size, krok: Math.max(12, size * 0.03), barva: z.barva };
+  const data = { text: z.text, cx: p[0], y: p[1], size: p[2], barva: z.barva, krokPomer: z.krok ?? 0.03 };
+  if (z.teckaNaObvodu && !rucne) {
+    const { P } = projekce(c, f);
+    const vol = new Set(c.motiv.vol);
+    const body = c.motiv.dots.filter((d) => vol.has(d[2])).map(([lo, la]) => P(lo, la));
+    const xs = body.map((b) => b[0]), ys = body.map((b) => b[1]);
+    data.kotva = { x: (Math.min(...xs) + Math.max(...xs)) / 2, y: (Math.min(...ys) + Math.max(...ys)) / 2,
+      sirka: Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)) * ((typeof z.meritkoTecky === 'object' ? z.meritkoTecky[klic] : z.meritkoTecky) ?? 1) };
+  }
   return `<svg id="znak" data-znak='${JSON.stringify(data)}' style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}" opacity="${op}"></svg>`;
 }
 
@@ -78,21 +96,49 @@ function vykresliZnak() {
   if (!svg) return;
   const d = JSON.parse(svg.dataset.znak);
   const w = +svg.getAttribute('width'), h = +svg.getAttribute('height');
-  const cv = document.createElement('canvas');
-  cv.width = w; cv.height = h;
-  const ctx = cv.getContext('2d');
-  ctx.font = `700 ${d.size}px 'IBM Plex Serif'`;
-  ctx.textAlign = 'center';
-  ctx.lineJoin = 'round';
-  ctx.lineWidth = d.size * 0.05;
-  ctx.fillText(d.text, d.cx, d.y);
-  ctx.strokeText(d.text, d.cx, d.y);
-  const px = ctx.getImageData(0, 0, w, h).data;
-  const r = d.krok * 0.36;
+  const maska = (size, cx, y) => {
+    const cv = document.createElement('canvas');
+    cv.width = w; cv.height = h;
+    const ctx = cv.getContext('2d');
+    ctx.font = `700 ${size}px 'IBM Plex Serif'`;
+    ctx.textAlign = 'center';
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = size * 0.05;
+    ctx.fillText(d.text, cx, y);
+    ctx.strokeText(d.text, cx, y);
+    const px = ctx.getImageData(0, 0, w, h).data;
+    return (x, yy) => x >= 0 && yy >= 0 && x < w && yy < h && px[(Math.round(yy) * w + Math.round(x)) * 4 + 3] > 127;
+  };
+  // Tečka glyfu = nejspodnější souvislý pás řádků s inkoustem (u „?“ a „!“ oddělený mezerou).
+  const tecka = (uvnitr) => {
+    let y1 = -1, y0 = -1, x0 = w, x1 = -1;
+    for (let y = h - 1; y >= 0; y--) {
+      let radek = false;
+      for (let x = 0; x < w; x += 2) if (uvnitr(x, y)) { radek = true; x0 = Math.min(x0, x); x1 = Math.max(x1, x); }
+      if (radek && y1 < 0) y1 = y;
+      if (!radek && y1 >= 0) { y0 = y + 1; break; }
+    }
+    return { x: (x0 + x1) / 2, y: (y0 + y1) / 2, sirka: Math.max(x1 - x0, y1 - y0), y0, y1, x0, x1 };
+  };
+  let { size, cx, y } = d;
+  if (d.kotva) {
+    // velikost tak, aby tečka měla šířku obvodu; pak posun, aby na něj dosedla
+    const ref = 600;
+    const t0 = tecka(maska(ref, w / 2, h * 0.8));
+    size = ref * d.kotva.sirka / t0.sirka;
+    const t1 = tecka(maska(size, w / 2, h * 0.8));
+    cx = w / 2 + (d.kotva.x - t1.x);
+    y = h * 0.8 + (d.kotva.y - t1.y);
+  }
+  const uvnitr = maska(size, cx, y);
+  const t = d.kotva ? tecka(uvnitr) : null;
+  const krok = Math.max(12, size * d.krokPomer), r = krok * 0.36;
   let out = '';
-  for (let y = d.krok / 2; y < h; y += d.krok) {
-    for (let x = d.krok / 2; x < w; x += d.krok) {
-      if (px[(Math.round(y) * w + Math.round(x)) * 4 + 3] > 127) out += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${d.barva}"/>`;
+  for (let yy = krok / 2; yy < h; yy += krok) {
+    for (let x = krok / 2; x < w; x += krok) {
+      if (!uvnitr(x, yy)) continue;
+      if (t && yy >= t.y0 - krok * 0.5) continue; // tečku tvoří obvod
+      out += `<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${r.toFixed(1)}" fill="${d.barva}"/>`;
     }
   }
   svg.innerHTML = out;
