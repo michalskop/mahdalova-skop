@@ -28,7 +28,7 @@ const TILES = [
     bg: '#101432',
     external: false,
     logo: 'vk',
-    coverImage: '/images/specials/volebni-kalkulacka.svg',
+    coverImage: '/images/specials/volby-2026.svg',
   },
   {
     href: '/specialy/data-pro-budouci-premierku',

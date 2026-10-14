@@ -2,3 +2,5 @@
 # Doplní skrytý čas publikace (frontmatter `time`) do nově přidaných článků.
 # Instalace (jednou na počítač): git config core.hooksPath scripts/git-hooks
 node "$(git rev-parse --show-toplevel)/scripts/git-hooks/add-publish-time.mjs" || exit 1
+# Kontrola nových článků podle redakčního manuálu (apps/web/scripts/checkArticles.js).
+node "$(git rev-parse --show-toplevel)/apps/web/scripts/checkArticles.js" --staged || exit 1

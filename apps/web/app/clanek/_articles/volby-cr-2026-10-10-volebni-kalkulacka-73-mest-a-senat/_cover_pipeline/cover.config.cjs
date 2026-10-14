@@ -4,7 +4,8 @@ const ZDROJ = path.join(__dirname, '..', '..', 'volby-cr-2026-10-10-senat-komuna
 const mapa = require(path.join(ZDROJ, 'senat-mapa.json'));
 const { mesta } = require(path.join(__dirname, '..', 'kalkulacky-mapa.json'));
 const NAVY_DOTS = { barvaObvod: '#de1743' /* brand.6 */, barvaTecka: '#2f325c' /* brandNavy.8 */, barvaBod: '#697fe6' /* brandRoyalBlue.4 */, obrysBod: '#ffffff' };
-const BARVY = { glowA: '#4a51ab' /* brandRoyalBlue.6 */, glowB: '#812840' /* brandDeepRed.7 */, kick: '#d2d8e9' /* brandNavy.1 */, sub: '#a9b5f0' /* brandRoyalBlue.2 */, stitek: '#de1743' };
+// Záře jako karta speciálu (public/images/specials/volebni-kalkulacka.svg): barvy loga kalkulačky #0070F4 / #D04646 na 55 % přes navy, blíž ke středu – odlišné od coveru predikce.
+const BARVY = { glowA: '#07479d' /* #0070F4 @55 % na navy */, glowPosA: '22% 30%', glowB: '#7a303d' /* #D04646 @55 % na navy */, glowPosB: '80% 72%', glowDosah: 48, kick: '#d2d8e9' /* brandNavy.1 */, sub: '#a9b5f0' /* brandRoyalBlue.2 */, stitek: '#de1743' };
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Volební kalkulačka', dal: 'Komunální a senátní volby 2026' },

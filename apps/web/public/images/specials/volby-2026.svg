@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- Obálka speciálu Komunální a senátní volby 2026: ink blue podklad se září loga kalkulačky,
+       dlaždice čistá ink blue (brandNavy.9 #101432) a logo DataTimes.cz v trikolóře z palety:
+       brand.6 #de1743 · background.2 #f8f6f0 · brandRoyalBlue.6 #4a51ab -->
+  <defs>
+    <filter id="vb-glow" filterUnits="userSpaceOnUse" x="-300" y="-300" width="1680" height="1680">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+    <filter id="vb-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <!-- jako dtDonutYellowFix v datatimes-donut.svg: modrá překryje červenou jen na svém začátku -->
+    <linearGradient id="vb-blue-fix" x1="1" x2="0.25" y1="0.5" y2="1">
+      <stop offset="50%" stop-color="#4a51ab" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a51ab" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#101432"/>
+
+  <!-- Jemná záře (stejná jako na obálce Volební kalkulačky) -->
+  <g filter="url(#vb-glow)" opacity="0.55">
+    <circle cx="330" cy="365" r="230" fill="#0070F4"/>
+    <circle cx="760" cy="685" r="230" fill="#D04646"/>
+  </g>
+
+  <!-- Dlaždice 128×128 → 520×520, vycentrovaná v části karty nad nadpisem -->
+  <g transform="translate(280 225) scale(4.0625)">
+    <rect width="128" height="128" rx="32" fill="#101432" filter="url(#vb-shadow)"/>
+    <!-- logo DataTimes.cz (datatimes-donut.svg): červená půlka, světlá, modrá -->
+    <g transform="translate(64 64) scale(.27) translate(-250 -250)">
+      <g transform="rotate(-30 250 250)" fill="none" stroke-width="76" stroke-linecap="round">
+        <path stroke="#4a51ab" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+        <path stroke="#f8f6f0" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
+        <path stroke="#de1743" d="M 250 150 A 100 100 0 0 0 250 350"/>
+        <path stroke="url(#vb-blue-fix)" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
+      </g>
+    </g>
+  </g>
+</svg>

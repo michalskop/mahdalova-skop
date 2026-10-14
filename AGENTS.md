@@ -3,6 +3,15 @@
 - Write all new or edited code comments and documentation comments in English.
 - Keep user-facing content in its intended language; this rule does not require translating Czech website copy.
 
+## Writing articles (hard rule)
+
+- Before drafting or substantially editing any article text, READ `docs/redakcni-styl/REDAKCNI_MANUAL.md` in full (at minimum Parts II, III, VI and the Part VII checklist); for data articles also `docs/redakcni-styl/STYL_DATOVA_ZURNALISTIKA.md`. The manual is binding for every author and every AI tool.
+- Recompute every number in text, tables and charts from primary data with a script kept in the article's `_data_pipeline/`. Never copy numbers from screenshots, working tools or AI summaries.
+- Verify every named person's current party and function in the official registry (e.g. ČSÚ candidate lists) as of the publication date.
+- The headline rests on the strongest hypothesis the data support, not the most attractive one; always test "the values are real" before calling something an error; explain the method in plain Czech; give affected parties a chance to respond.
+- No screenshots of working tools as covers or in-text images; interactive embeds use the binding palette, no emoji, no working labels.
+- `npm run check:articles --workspace=apps/web` must pass. It also runs in the pre-commit hook and in `prebuild`, so a failing article blocks the Cloudflare deploy. Never weaken or bypass the checker; fix the article or ask Kateřina.
+
 ## New articles and URLs (hard rule)
 
 - Before creating or renaming any article folder, ASK the user for the URL slug and the rubric (`filter` + special). Never choose or "improve" a slug yourself.
@@ -19,5 +28,6 @@
 - Composition: the motif (map, photo) fills the cover – scale maps up from the bottom-right towards the top-left; text, legend and logo may sit on top of it (readability via the navy blurred `halo` under small text). A small map floating in empty space is a mistake. Put the DataTimes.cz logo in whichever bottom corner is calmer so it never gets lost (Czech map: bottom-left under Šumava, legend bottom-right; generator option `logo: 'vlevo'`); default bottom-right.
 - Data/graphic covers: write `_cover_pipeline/cover.config.cjs` in the article and run `tools/cover-generator.cjs` (copy a model config: `volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky`, `…-predikce`, `…-volebni-kalkulacka-73-mest-a-senat`, `volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro`). Do not write a new renderer.
 - Photo covers: follow `tools/COVER-EDITOR.md` and reuse an existing `cover-project.json` when available; use the shared renderer (`tools/render-covers.py` or `npm run covers`). Keep the original image and editable project; publish the complete raster exports.
+- Standard = an eye-catching, playful cover that looks like a sibling of our existing covers (elections: dot map of Czechia with city/district points, series icons). A bare bar chart or a lone number on an empty background is NOT acceptable as the motif. Mandatory: DataTimes.cz logo, cover tag (eyebrow), Plex Serif headline, Plex Sans subtitle/legend. If `tools/cover-generator.cjs` is missing in the branch, merge `origin/main` first – never improvise a cover with PIL/matplotlib/default fonts.
 - Full brief with all rules: `tools/PROMPT-COVER.md`.
 - Review the generated variants for readability and cropping. Make targeted project edits instead of creating a new renderer or rebuilding every variant manually.
