@@ -37,15 +37,18 @@ const num = (v: number) => v.toLocaleString('cs-CZ');
 const pl = (n: number, a: string, b: string, c: string) => (n === 1 ? a : n >= 2 && n <= 4 ? b : c);
 const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+// callback ref: observer se napojí na každý nový uzel (ChartCard může obsah po mountu přestavět,
+// a když se stránka načte ve skrytém panelu, první změřená šířka je 0)
 function useWidth<T extends HTMLElement>() {
-  const ref = useRef<T>(null);
+  const [el, ref] = useState<T | null>(null);
   const [w, setW] = useState(0);
   useEffect(() => {
-    if (!ref.current) return;
+    if (!el) return;
+    setW(Math.round(el.getBoundingClientRect().width));
     const ro = new ResizeObserver(([e]) => setW(Math.round(e.contentRect.width)));
-    ro.observe(ref.current);
+    ro.observe(el);
     return () => ro.disconnect();
-  }, []);
+  }, [el]);
   return [ref, w] as const;
 }
 
