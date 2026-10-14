@@ -15,6 +15,8 @@ promoted: 1
 
 Komunální volby se rozhodují v obcích, ale rozdíly začínají už v jednotlivých ulicích. Mapa ukazuje výsledek ve všech 14 551 volebních okrscích v Česku. Barva okrsku patří kandidátce, která v něm dostala nejvíc hlasů.
 
+<SupportBanner float="left" />
+
 **Najděte svou obec:** do řádku nad mapou napište název obce nebo městské části. Když na okrsek najedete myší nebo na něj na mobilu klepnete, ukáže se vedle mapy jeho výsledek, účast a u každé kandidátky i to, kdo ji podává – strana, koalice, nebo sdružení nezávislých kandidátů. Každá mapa v článku umí ukázat kteroukoli obec, stačí v ní vyhledat jiný název.
 
 ## Ústí nad Labem: Jedno Ústí s nadpoloviční většinou hlasů
@@ -26,7 +28,6 @@ V Ústí nad Labem získala kandidátka Jedno Ústí 51,3 % hlasů a 22 ze 37 ma
   source="[ČSÚ, volby.gov.cz](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) – konečné výsledky po okrscích, hranice okrsků [GIS ČSÚ](https://geodata.csu.gov.cz/server/rest/services/Hosted/Volební_okrsky_ZO2026/FeatureServer); zpracování DataTimes.cz."
 />
 
-<SupportBanner />
 
 ## ANO oslabilo ve 12 ze 13 krajských měst
 
