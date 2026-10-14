@@ -1,14 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
-  <!-- Obálka speciálu Komunální a senátní volby 2026: ink blue podklad se září loga kalkulačky
-       a samotné kolečko loga DataTimes.cz (bez dlaždice) v trikolóře z palety:
-       brand.6 #de1743 · background.2 #f8f6f0 · brandRoyalBlue.6 #4a51ab.
-       Jemný obrys a stín v ink blue (brandNavy.9 #101432). -->
+  <!-- Obálka speciálu Komunální a senátní volby 2026: ink blue podklad, tři světla v barvách
+       kolečka (červené za červenou částí, bílé za bílou, modré za modrou; Kateřina 14. 10. 2026)
+       a samotné kolečko loga DataTimes.cz (bez dlaždice, obrysu i stínu) v trikolóře z palety:
+       brand.6 #de1743 · background.2 #f8f6f0 · brandRoyalBlue.6 #4a51ab -->
   <defs>
     <filter id="vb-glow" filterUnits="userSpaceOnUse" x="-300" y="-300" width="1680" height="1680">
       <feGaussianBlur stdDeviation="90"/>
-    </filter>
-    <filter id="vb-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1080">
-      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#101432" flood-opacity="0.9"/>
     </filter>
     <!-- jako dtDonutYellowFix v datatimes-donut.svg: modrá překryje červenou jen na svém začátku -->
     <linearGradient id="vb-blue-fix" x1="1" x2="0.25" y1="0.5" y2="1">
@@ -19,23 +16,20 @@
 
   <rect width="1080" height="1080" fill="#101432"/>
 
-  <!-- Jemná záře (stejná jako na obálce Volební kalkulačky) -->
-  <g filter="url(#vb-glow)" opacity="0.55">
-    <circle cx="330" cy="365" r="230" fill="#0070F4"/>
-    <circle cx="760" cy="685" r="230" fill="#D04646"/>
+  <!-- Tři světla za kolečkem -->
+  <g filter="url(#vb-glow)">
+    <circle cx="350" cy="560" r="240" fill="#de1743" opacity="0.55"/>
+    <circle cx="730" cy="300" r="220" fill="#f8f6f0" opacity="0.22"/>
+    <circle cx="740" cy="690" r="230" fill="#4a51ab" opacity="0.6"/>
   </g>
 
   <!-- Kolečko loga (datatimes-donut.svg), vycentrované v části karty nad nadpisem -->
-  <g filter="url(#vb-shadow)">
-    <g transform="translate(540 485) scale(1.3) translate(-250 -250)">
-      <!-- obrys: ink blue prstenec o kousek širší než logo -->
-      <circle cx="250" cy="250" r="100" fill="none" stroke="#101432" stroke-width="86"/>
+  <g transform="translate(540 485) scale(1.3) translate(-250 -250)">
       <g transform="rotate(-30 250 250)" fill="none" stroke-width="76" stroke-linecap="round">
         <path stroke="#4a51ab" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
         <path stroke="#f8f6f0" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>
         <path stroke="#de1743" d="M 250 150 A 100 100 0 0 0 250 350"/>
         <path stroke="url(#vb-blue-fix)" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
-      </g>
     </g>
   </g>
 </svg>
