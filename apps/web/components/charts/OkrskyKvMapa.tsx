@@ -28,7 +28,7 @@ const PANEL_W = 300;
 type ObecRow = [number, string, number, number, [number, string, number][]];
 type Index = { okresy: Record<string, string>; obce: ObecRow[] };
 type ZRow = [number, number, number, number, [number, number][]];
-type Meta = { okrsky: Record<string, Record<string, ZRow>>; zast: Record<string, { n: string; l: { n: string; z: string; m: number; c: string; s?: string }[] }> };
+type Meta = { okrsky: Record<string, Record<string, ZRow>>; zast: Record<string, { n: string; l: { n: string; z: string; k?: string; m: number; c: string; s?: string }[] }> };
 type Entry = { kod: number; n: string; okres: number; v: number; mesto?: Entry; mc?: Entry[]; key: string };
 type Topo = { objects: Record<string, unknown> } & Record<string, unknown>;
 
@@ -239,6 +239,8 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
             <span style={{ width: 12, height: 12, background: L[i]?.c ?? NODATA, borderRadius: 2, border: '1px solid rgba(16,20,50,.25)' }} />
             <span style={{ minWidth: 0 }}>
               <span style={{ display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: k === 0 ? 700 : 400 }} title={label(i)}>{label(i)}</span>
+              {/* kdo kandidátku podává (koalice, sdružení, nezávislí) – podle registru ČSÚ */}
+              {L[i]?.k && <span style={{ display: 'block', fontSize: 11.5, lineHeight: 1.25, color: MUTED, marginTop: 1 }}>{L[i].k}</span>}
               <span style={{ display: 'block', height: 3, marginTop: 2, width: `${(v / top) * 100}%`, background: L[i]?.c ?? NODATA, opacity: 0.85 }} />
             </span>
             <span style={{ fontVariantNumeric: 'tabular-nums', fontWeight: k === 0 ? 700 : 400 }}>{pct(v / plh)}</span>

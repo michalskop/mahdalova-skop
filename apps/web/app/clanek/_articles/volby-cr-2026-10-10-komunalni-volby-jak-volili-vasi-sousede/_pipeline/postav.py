@@ -58,6 +58,42 @@ def party_of(vstrana, slozeni):
 
 
 # --- registr kandidátek ---
+# --- kdo kandidátku podává (pro čtenáře: „čí je to koalice“) z číselníku stran ČSÚ ---
+CVS = {r["VSTRANA"]: r for r in rows(os.path.join(RAW, "KV2026ciselniky20261011_csv", "csv_od", "cvs.csv"))}
+KRATKE = {c: z for c, z, _ in PARTY}  # zavedené zkratky celostátních stran
+
+
+def strana(kod):
+    kod = str(int(kod))
+    if kod == "80":
+        return "nezávislí kandidáti"
+    if int(kod) in KRATKE:
+        return KRATKE[int(kod)]
+    r = CVS.get(kod)
+    if not r:
+        return kod
+    return r["NAZEVCELK"] if len(r["NAZEVCELK"]) <= 48 else r["ZKRATKAV30"]
+
+
+def slozeni(L):
+    v = L["VSTRANA"]
+    typ = CVS.get(v, {}).get("TYPVS")
+    if v == "90":
+        return "" if "nezávislých kandidátů" in L["NAZEVCELK"].lower() else "sdružení nezávislých kandidátů"
+    if v == "80":
+        return "nezávislý kandidát"
+    cleny = [x for x in L["SLOZENI"].split(",") if x.strip()]
+    if typ == "K":
+        return "koalice " + ", ".join(strana(x) for x in cleny)
+    if typ == "D":
+        jm = [strana(x) for x in cleny if int(x) != 80]
+        if any(int(x) == 80 for x in cleny):
+            jm.append("nezávislí kandidáti")
+        return "sdružení " + (", ".join(jm[:-1]) + " a " + jm[-1] if len(jm) > 1 else jm[0])
+    nazev = CVS.get(v, {}).get("NAZEVCELK", "")
+    return "" if nazev.lower() == L["NAZEVCELK"].lower() else nazev  # strana pod vlastním jménem: nic navíc
+
+
 lists = {}  # (KODZASTUP, COBVODU, POR) -> kandidátka
 zast_name = {}
 for r in rows(os.path.join(REG, "kvros.csv")):
@@ -87,7 +123,7 @@ for oid, r in okr.items():
         key = (L["VSTRANA"], L["NAZEVCELK"])
         if key not in Z["key2i"]:
             Z["key2i"][key] = len(Z["lists"])
-            Z["lists"].append({"n": L["NAZEVCELK"], "z": L["ZKRATKAO8"], "p": party_of(L["VSTRANA"], L["SLOZENI"]), "m": 0, "_mand": set()})
+            Z["lists"].append({"n": L["NAZEVCELK"], "z": L["ZKRATKAO8"], "k": slozeni(L), "p": party_of(L["VSTRANA"], L["SLOZENI"]), "m": 0, "_mand": set()})
         i = Z["key2i"][key]
         if (ob, por) not in Z["lists"][i]["_mand"]:
             Z["lists"][i]["_mand"].add((ob, por))
