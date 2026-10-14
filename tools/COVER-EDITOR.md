@@ -82,6 +82,10 @@ výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obráze
   protažená kopie obrázku (působí zdvojeně a rušivě, Kateřina).
 - *14. 10. 2026 – karta speciálu Volby 2026.* Logo DataTimes.cz samotné jako kolečko, bez dlaždice, obrysu
   i stínu; za ním tři světla v barvách jeho částí (červené, bílé, modré).
+- *14. 10. 2026 – nový obrázek „není vidět“ ani po refreshi.* Web posílá obrázky s cache 4 hodiny
+  (`max-age=14400`), takže obrázek přepsaný pod **stejným jménem** prohlížeč dál bere z cache. Při výměně
+  obrázku karty/coveru buď nové jméno souboru, nebo verze v odkazu (`volby-2026.svg?v=2026-10-14`). Ověřit:
+  `curl -s <URL> | grep <něco z nové verze>` – když server vrací novou verzi, chyba je jen v cache.
 
 Původní vzor generátoru pro grafické (ne fotografické) covery a kontrolní list ořezů:
 `apps/web/app/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/_cover_pipeline/`

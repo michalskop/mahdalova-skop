@@ -28,7 +28,7 @@ const TILES = [
     bg: '#101432',
     external: false,
     logo: 'vk',
-    coverImage: '/images/specials/volby-2026.svg',
+    coverImage: '/images/specials/volby-2026.svg?v=2026-10-14',
   },
   {
     href: '/specialy/data-pro-budouci-premierku',
