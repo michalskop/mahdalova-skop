@@ -1,7 +1,7 @@
-// Sada coverů – node motiv.cjs && PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <tento soubor>
-// Motiv: ČR po okrscích + lupa nad Prahou (motiv.cjs, data z public/data/kv2026-okrsky).
+// Sada coverů – node motiv-mesta.cjs && PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <tento soubor>
+// Motiv: ČR po okrscích + okénka nad krajskými městy, Praha jako lupa (motiv-mesta.cjs, data z public/data/kv2026-okrsky).
 const path = require('path');
-const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
+const soubor = (k) => path.join(__dirname, `motiv-mesta-${k}.svg`);
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Mapa', dal: 'Komunální volby 2026' },
