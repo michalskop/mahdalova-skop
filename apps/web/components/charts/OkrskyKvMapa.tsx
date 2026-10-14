@@ -128,7 +128,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
       if (r[4].length) won.set(r[4][0][0], (won.get(r[4][0][0]) ?? 0) + 1);
     }
     const z = kz != null ? meta.zast[String(kz)] : undefined;
-    const order = [...tot.keys()].sort((a, b) => tot.get(b)! - tot.get(a)!);
+    const order = Array.from(tot.keys()).sort((a, b) => tot.get(b)! - tot.get(a)!);
     return { rows, z, tot, won, order, vol, obal, plhl };
   }, [feats, meta, typ]);
 
@@ -180,13 +180,13 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
   const onDown = (e: React.PointerEvent) => {
     ptrs.current.set(e.pointerId, loc(e));
     gest.current = { moved: false };
-    if (ptrs.current.size === 2) { const [a, b] = [...ptrs.current.values()]; gest.current.dist = Math.hypot(a.x - b.x, a.y - b.y); }
+    if (ptrs.current.size === 2) { const [a, b] = Array.from(ptrs.current.values()); gest.current.dist = Math.hypot(a.x - b.x, a.y - b.y); }
   };
   const onMove = (e: React.PointerEvent) => {
     const prev = ptrs.current.get(e.pointerId); if (!prev) return;
     const p = loc(e); ptrs.current.set(e.pointerId, p);
     if (ptrs.current.size === 2 && gest.current.dist) {
-      const [a, b] = [...ptrs.current.values()]; const d = Math.hypot(a.x - b.x, a.y - b.y);
+      const [a, b] = Array.from(ptrs.current.values()); const d = Math.hypot(a.x - b.x, a.y - b.y);
       zoomAt(d / gest.current.dist, (a.x + b.x) / 2, (a.y + b.y) / 2); gest.current.dist = d; gest.current.moved = true;
     } else if (tf.k > 1 && (e.buttons || e.pointerType !== 'mouse')) {
       const dx = p.x - prev.x, dy = p.y - prev.y;
