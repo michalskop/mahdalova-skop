@@ -15,7 +15,7 @@ const MESTA = [
   ['Ostrava', { 'srdcOVA - ODS, Lidovci, TOP 09 a nestraníci': 'srdcOVA', 'STAROSTOVÉ pro OSTRAVU': 'Starostové' }],
   ['Plzeň', {}], ['Liberec', {}], ['Olomouc', {}], ['České Budějovice', {}], ['Hradec Králové', {}],
   ['Ústí nad Labem', { 'Vaše Ústí s podporou Za lepší Střekov': 'Vaše Ústí', 'SPOLU PRO ÚSTÍ': 'SPOLU', 'JEDNO ÚSTÍ': 'Jedno Ústí' }],
-  ['Pardubice', {}], ['Zlín', {}], ['Karlovy Vary', {}], ['Jihlava', {}],
+  ['Pardubice', {}], ['Zlín', {}], ['Karlovy Vary', {}], ['Jihlava', {}], ['Kladno', { 'VOLBA PRO KLADNO': 'Volba pro Kladno', 'KLADEŇÁCI': 'Kladeňáci' }],
   ['Třebíč', {}], ['Tábor', {}],
 ];
 const slug = (s) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');

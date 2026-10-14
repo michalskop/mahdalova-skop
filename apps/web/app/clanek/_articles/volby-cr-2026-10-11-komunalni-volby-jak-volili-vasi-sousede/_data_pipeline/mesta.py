@@ -22,7 +22,7 @@ DATUM_2022 = "20220923"  # řádné komunální volby 23.–24. 9. 2022 (v soubo
 MESTA = {  # kód zastupitelstva (obec / hl. m.) → název
     "554782": "Praha", "582786": "Brno", "554821": "Ostrava", "554791": "Plzeň", "563889": "Liberec",
     "500496": "Olomouc", "544256": "České Budějovice", "569810": "Hradec Králové", "554804": "Ústí nad Labem",
-    "555134": "Pardubice", "585068": "Zlín", "554961": "Karlovy Vary", "586846": "Jihlava", "536385": "Jeseník",
+    "555134": "Pardubice", "585068": "Zlín", "554961": "Karlovy Vary", "586846": "Jihlava", "536385": "Jeseník", "532053": "Kladno",
 }
 
 
