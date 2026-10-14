@@ -1,6 +1,6 @@
 ---
 title: "SPD přišla v obcích o dvě třetiny zastupitelů, Motoristé z 1 116 kandidátů prosadili dvacet"
-date: "2026-10-16"
+date: "2026-10-14"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Před volbami mělo SPD v zastupitelstvech obcí a městských částí 490 lidí, teď 166. Motoristé postavili kandidáty v 58 zastupitelstvech a uspěli v jedenácti, z toho v pěti ostravských. ANO ve velkých městech ztrácí, v menších obcích přibírá. Mapa celé republiky ukazuje stav před volbami, letošní kandidáty i výsledek."
 coverImage: "images/cover-homepage.png"
@@ -30,7 +30,7 @@ Mapa níže ukazuje všechny strany najednou: můžete je porovnávat, přepína
 
 <ObceStranyMap
   geoUrl="/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-geo.json"
-  dataUrl="/clanek/_articles/volby-cr-2026-10-16-spd-ano-motoriste-v-obcich/obce-strany.json"
+  dataUrl="/clanek/_articles/volby-cr-2026-10-14-spd-ano-motoriste-v-obcich/obce-strany.json"
   title="SPD a KSČM zmizely ze stovek obecních zastupitelstev"
   subtitle="Všech 6 254 obcí: kde mají strany zastupitele po volbách 2022 a 2026, kde je udržely, ztratily nebo získaly, kde letos kandidovaly a odkud vypadly. Kliknutím na stranu v legendě ji vypnete, najeďte na obec nebo ji vyhledejte."
   source="volby.gov.cz – registry kandidátů a mandátů komunálních voleb 2022 (vč. pozdějších nových voleb) a 2026, stav 11. 10. 2026; hranice obcí: ČSÚ, volební okrsky 2022"
@@ -108,6 +108,6 @@ Počet zastupitelů, které strana navrhla, není totéž co počet členů stra
 
 Společné kandidátky přiřazujeme podle toho, kdo kandidáta navrhl. V Ústí nad Labem, Chomutově, Mostě nebo Hradci Králové kandidovaly SPD a Motoristé spolu, a mandáty z těchto kandidátek proto dostal ten, jehož kandidát prošel.
 
-Data jsou ze stavu po sečtení 11. 10. 2026. Kde soud volby zneplatní nebo se bude volit znovu, mohou se jednotlivá čísla ještě změnit. Postup výpočtu včetně skriptu je u článku v [repozitáři DataTimes](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-10-16-spd-ano-motoriste-v-obcich/_data_pipeline).
+Data jsou ze stavu po sečtení 11. 10. 2026. Kde soud volby zneplatní nebo se bude volit znovu, mohou se jednotlivá čísla ještě změnit. Postup výpočtu včetně skriptu je u článku v [repozitáři DataTimes](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-10-14-spd-ano-motoriste-v-obcich/_data_pipeline).
 
 <RelatedArticles heading="🔻🔻🔻" />

@@ -1,4 +1,4 @@
-"""Data k článku volby-cr-2026-10-16-spd-ano-motoriste-v-obcich.
+"""Data k článku volby-cr-2026-10-14-spd-ano-motoriste-v-obcich.
 
 Otázka: kolik zastupitelů měly SPD, ANO a Motoristé (a pro srovnání PRO, KSČM a Stačilo!) v obcích a městských částech
 před volbami 2026, kde letos postavily kandidáty (ambice) a kolik jich mají teď.
