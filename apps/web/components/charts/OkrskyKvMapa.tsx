@@ -1,7 +1,7 @@
 'use client';
 
 // Komunální volby 2026 – kdo vyhrál v jednotlivých volebních okrscích („Jak volili vaši sousedé“).
-// Data (public/data/kv2026-okrsky, pipeline v článku volby-cr-2026-10-10-komunalni-volby-jak-volili-vasi-sousede/_pipeline):
+// Data (public/data/kv2026-okrsky, pipeline v článku volby-cr-2026-10-11-komunalni-volby-jak-volili-vasi-sousede/_pipeline):
 //   obce.json      { okresy: {kód: název}, obce: [[kód, název, okres, voliči, [[kód MČ, název, voliči], …]], …] }
 //   okrsky.json    TopoJSON, jeden objekt na okres; feature.properties.id = "<kód obce nebo MČ>-<číslo okrsku>"
 //   meta/<okres>.json  { okrsky: {id: {"1"|"2": [kód zastupitelstva, voliči, obálky, platné hlasy, [[kandidátka, hlasy], …]]}},
