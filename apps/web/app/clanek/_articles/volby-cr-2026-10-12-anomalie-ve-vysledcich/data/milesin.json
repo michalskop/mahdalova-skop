@@ -2,81 +2,371 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "{Milešín|#de1743} proti {sousedům|#06677d}: jako by si Moos a Šmarda vyměnili voliče",
-    "subtitle": "Podíl hlasů v 1. kole senátních voleb 2026. Milešín měl 33 platných hlasů, šest sousedních obcí dohromady 378."
+    "subtitle": "Podíl hlasů v 1. kole senátních voleb 2026. Milešín: 33 platných hlasů; šest sousedních obcí: 378. Menší kosočtverce ukazují jednotlivé sousední obce, velký modrý bod jejich společný podíl. Pořadí kandidátů odpovídá jejich číslům v oficiálním zápisu."
   },
   "width": 560,
   "height": 230,
   "data": {
     "values": [
       {
-        "kandidat": "Radek Koten",
+        "kandidat": "1. Radek Koten",
         "kde": "Milešín",
         "hlasu": 3,
         "v": 9.1,
-        "o": 0
+        "o": 0,
+        "typ": "součet",
+        "platne": 33
       },
       {
-        "kandidat": "Radek Koten",
+        "kandidat": "1. Radek Koten",
         "kde": "šest sousedních obcí",
         "hlasu": 72,
         "v": 19.0,
-        "o": 0
+        "o": 0,
+        "typ": "součet",
+        "platne": 378
       },
       {
-        "kandidat": "Josef Klement",
+        "kandidat": "2. Josef Klement",
         "kde": "Milešín",
         "hlasu": 10,
         "v": 30.3,
-        "o": 1
+        "o": 1,
+        "typ": "součet",
+        "platne": 33
       },
       {
-        "kandidat": "Josef Klement",
+        "kandidat": "2. Josef Klement",
         "kde": "šest sousedních obcí",
         "hlasu": 106,
         "v": 28.0,
-        "o": 1
+        "o": 1,
+        "typ": "součet",
+        "platne": 378
       },
       {
-        "kandidat": "Michal Šmarda",
+        "kandidat": "3. Michal Šmarda",
         "kde": "Milešín",
         "hlasu": 3,
         "v": 9.1,
-        "o": 2
+        "o": 2,
+        "typ": "součet",
+        "platne": 33
       },
       {
-        "kandidat": "Michal Šmarda",
+        "kandidat": "3. Michal Šmarda",
         "kde": "šest sousedních obcí",
         "hlasu": 133,
         "v": 35.2,
-        "o": 2
+        "o": 2,
+        "typ": "součet",
+        "platne": 378
       },
       {
-        "kandidat": "Radek Černý",
+        "kandidat": "4. Radek Černý",
         "kde": "Milešín",
         "hlasu": 4,
         "v": 12.1,
-        "o": 3
+        "o": 3,
+        "typ": "součet",
+        "platne": 33
       },
       {
-        "kandidat": "Radek Černý",
+        "kandidat": "4. Radek Černý",
         "kde": "šest sousedních obcí",
         "hlasu": 43,
         "v": 11.4,
-        "o": 3
+        "o": 3,
+        "typ": "součet",
+        "platne": 378
       },
       {
-        "kandidat": "David Moos",
+        "kandidat": "5. David Moos",
         "kde": "Milešín",
         "hlasu": 13,
         "v": 39.4,
-        "o": 4
+        "o": 4,
+        "typ": "součet",
+        "platne": 33
       },
       {
-        "kandidat": "David Moos",
+        "kandidat": "5. David Moos",
         "kde": "šest sousedních obcí",
         "hlasu": 24,
         "v": 6.3,
-        "o": 4
+        "o": 4,
+        "typ": "součet",
+        "platne": 378
+      },
+      {
+        "kandidat": "1. Radek Koten",
+        "o": 0,
+        "kde": "Rozseč",
+        "typ": "obec",
+        "hlasu": 10,
+        "platne": 34,
+        "v": 29.41176470588235
+      },
+      {
+        "kandidat": "1. Radek Koten",
+        "o": 0,
+        "kde": "Skřinářov",
+        "typ": "obec",
+        "hlasu": 9,
+        "platne": 56,
+        "v": 16.071428571428573
+      },
+      {
+        "kandidat": "1. Radek Koten",
+        "o": 0,
+        "kde": "Radňoves",
+        "typ": "obec",
+        "hlasu": 1,
+        "platne": 46,
+        "v": 2.1739130434782608
+      },
+      {
+        "kandidat": "1. Radek Koten",
+        "o": 0,
+        "kde": "Březí",
+        "typ": "obec",
+        "hlasu": 20,
+        "platne": 88,
+        "v": 22.727272727272727
+      },
+      {
+        "kandidat": "1. Radek Koten",
+        "o": 0,
+        "kde": "Heřmanov",
+        "typ": "obec",
+        "hlasu": 9,
+        "platne": 76,
+        "v": 11.842105263157896
+      },
+      {
+        "kandidat": "1. Radek Koten",
+        "o": 0,
+        "kde": "Vidonín",
+        "typ": "obec",
+        "hlasu": 23,
+        "platne": 78,
+        "v": 29.487179487179485
+      },
+      {
+        "kandidat": "2. Josef Klement",
+        "o": 1,
+        "kde": "Rozseč",
+        "typ": "obec",
+        "hlasu": 17,
+        "platne": 34,
+        "v": 50.0
+      },
+      {
+        "kandidat": "2. Josef Klement",
+        "o": 1,
+        "kde": "Skřinářov",
+        "typ": "obec",
+        "hlasu": 11,
+        "platne": 56,
+        "v": 19.642857142857142
+      },
+      {
+        "kandidat": "2. Josef Klement",
+        "o": 1,
+        "kde": "Radňoves",
+        "typ": "obec",
+        "hlasu": 18,
+        "platne": 46,
+        "v": 39.130434782608695
+      },
+      {
+        "kandidat": "2. Josef Klement",
+        "o": 1,
+        "kde": "Březí",
+        "typ": "obec",
+        "hlasu": 17,
+        "platne": 88,
+        "v": 19.318181818181817
+      },
+      {
+        "kandidat": "2. Josef Klement",
+        "o": 1,
+        "kde": "Heřmanov",
+        "typ": "obec",
+        "hlasu": 28,
+        "platne": 76,
+        "v": 36.8421052631579
+      },
+      {
+        "kandidat": "2. Josef Klement",
+        "o": 1,
+        "kde": "Vidonín",
+        "typ": "obec",
+        "hlasu": 15,
+        "platne": 78,
+        "v": 19.23076923076923
+      },
+      {
+        "kandidat": "3. Michal Šmarda",
+        "o": 2,
+        "kde": "Rozseč",
+        "typ": "obec",
+        "hlasu": 5,
+        "platne": 34,
+        "v": 14.705882352941176
+      },
+      {
+        "kandidat": "3. Michal Šmarda",
+        "o": 2,
+        "kde": "Skřinářov",
+        "typ": "obec",
+        "hlasu": 19,
+        "platne": 56,
+        "v": 33.92857142857143
+      },
+      {
+        "kandidat": "3. Michal Šmarda",
+        "o": 2,
+        "kde": "Radňoves",
+        "typ": "obec",
+        "hlasu": 21,
+        "platne": 46,
+        "v": 45.65217391304348
+      },
+      {
+        "kandidat": "3. Michal Šmarda",
+        "o": 2,
+        "kde": "Březí",
+        "typ": "obec",
+        "hlasu": 32,
+        "platne": 88,
+        "v": 36.36363636363637
+      },
+      {
+        "kandidat": "3. Michal Šmarda",
+        "o": 2,
+        "kde": "Heřmanov",
+        "typ": "obec",
+        "hlasu": 26,
+        "platne": 76,
+        "v": 34.21052631578947
+      },
+      {
+        "kandidat": "3. Michal Šmarda",
+        "o": 2,
+        "kde": "Vidonín",
+        "typ": "obec",
+        "hlasu": 30,
+        "platne": 78,
+        "v": 38.46153846153846
+      },
+      {
+        "kandidat": "4. Radek Černý",
+        "o": 3,
+        "kde": "Rozseč",
+        "typ": "obec",
+        "hlasu": 1,
+        "platne": 34,
+        "v": 2.9411764705882355
+      },
+      {
+        "kandidat": "4. Radek Černý",
+        "o": 3,
+        "kde": "Skřinářov",
+        "typ": "obec",
+        "hlasu": 12,
+        "platne": 56,
+        "v": 21.428571428571427
+      },
+      {
+        "kandidat": "4. Radek Černý",
+        "o": 3,
+        "kde": "Radňoves",
+        "typ": "obec",
+        "hlasu": 4,
+        "platne": 46,
+        "v": 8.695652173913043
+      },
+      {
+        "kandidat": "4. Radek Černý",
+        "o": 3,
+        "kde": "Březí",
+        "typ": "obec",
+        "hlasu": 13,
+        "platne": 88,
+        "v": 14.772727272727273
+      },
+      {
+        "kandidat": "4. Radek Černý",
+        "o": 3,
+        "kde": "Heřmanov",
+        "typ": "obec",
+        "hlasu": 9,
+        "platne": 76,
+        "v": 11.842105263157896
+      },
+      {
+        "kandidat": "4. Radek Černý",
+        "o": 3,
+        "kde": "Vidonín",
+        "typ": "obec",
+        "hlasu": 4,
+        "platne": 78,
+        "v": 5.128205128205129
+      },
+      {
+        "kandidat": "5. David Moos",
+        "o": 4,
+        "kde": "Rozseč",
+        "typ": "obec",
+        "hlasu": 1,
+        "platne": 34,
+        "v": 2.9411764705882355
+      },
+      {
+        "kandidat": "5. David Moos",
+        "o": 4,
+        "kde": "Skřinářov",
+        "typ": "obec",
+        "hlasu": 5,
+        "platne": 56,
+        "v": 8.928571428571429
+      },
+      {
+        "kandidat": "5. David Moos",
+        "o": 4,
+        "kde": "Radňoves",
+        "typ": "obec",
+        "hlasu": 2,
+        "platne": 46,
+        "v": 4.3478260869565215
+      },
+      {
+        "kandidat": "5. David Moos",
+        "o": 4,
+        "kde": "Březí",
+        "typ": "obec",
+        "hlasu": 6,
+        "platne": 88,
+        "v": 6.818181818181818
+      },
+      {
+        "kandidat": "5. David Moos",
+        "o": 4,
+        "kde": "Heřmanov",
+        "typ": "obec",
+        "hlasu": 4,
+        "platne": 76,
+        "v": 5.2631578947368425
+      },
+      {
+        "kandidat": "5. David Moos",
+        "o": 4,
+        "kde": "Vidonín",
+        "typ": "obec",
+        "hlasu": 6,
+        "platne": 78,
+        "v": 7.6923076923076925
       }
     ]
   },
@@ -112,6 +402,66 @@
           "aggregate": "max",
           "field": "v"
         }
+      },
+      "transform": [
+        {
+          "filter": "datum.typ === 'součet'"
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.typ === 'obec'"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "diamond",
+        "filled": false,
+        "size": 65,
+        "color": "#06677d",
+        "opacity": 0.65,
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              52
+            ]
+          },
+          "axis": {
+            "title": "podíl hlasů (%)",
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "kde",
+            "title": "Obec / skupina"
+          },
+          {
+            "field": "kandidat",
+            "title": "Kandidát"
+          },
+          {
+            "field": "v",
+            "title": "Podíl hlasů (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "hlasu",
+            "title": "Hlasů"
+          },
+          {
+            "field": "platne",
+            "title": "Platných hlasů"
+          }
+        ]
       }
     },
     {
@@ -129,7 +479,7 @@
           "scale": {
             "domain": [
               0,
-              45
+              52
             ]
           },
           "axis": {
@@ -155,7 +505,7 @@
         "tooltip": [
           {
             "field": "kde",
-            "title": "Kde"
+            "title": "Obec / skupina"
           },
           {
             "field": "kandidat",
@@ -164,14 +514,30 @@
           {
             "field": "v",
             "title": "Podíl hlasů (%)",
-            "format": ",.1f"
+            "format": ".1f"
           },
           {
             "field": "hlasu",
             "title": "Hlasů"
+          },
+          {
+            "field": "platne",
+            "title": "Platných hlasů"
           }
-        ]
-      }
+        ],
+        "size": {
+          "condition": {
+            "test": "datum.kde === 'šest sousedních obcí'",
+            "value": 320
+          },
+          "value": 190
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.typ === 'součet'"
+        }
+      ]
     }
   ],
   "_source": "ČSÚ – otevřená data voleb do Senátu 2026, 1. kolo (stav 11. 10. 2026)"
