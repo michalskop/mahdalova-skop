@@ -7,6 +7,10 @@ import ProfileHead from '@/components/dpbp/ProfileHead';
 import { DPBP_CHAPTERS, chapterHref } from '@/components/dpbp/chapterNavigation';
 import { hexToRgbString } from '@/utils/colorUtils';
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
+// OG = obrázek karty speciálu na titulce (tools/specials-og.cjs).
+const COVER = `${BASE_URL}/images/specials/og/data-pro-budouci-premierku.jpg`;
+
 export const metadata: Metadata = {
   title: 'Data pro budoucí premiérku',
   description: 'Patnáct klíčových výzev pro budoucí vedení státu, opřených o data a fakta.',
@@ -16,6 +20,12 @@ export const metadata: Metadata = {
     description: 'Patnáct klíčových výzev pro budoucí vedení státu, opřených o data a fakta.',
     url: '/specialy/data-pro-budouci-premierku',
     type: 'website',
+    images: [{ url: COVER, width: 1200, height: 630, alt: 'Data pro budoucí premiérku' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Data pro budoucí premiérku',
+    images: [COVER],
   },
 };
 

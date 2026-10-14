@@ -24,7 +24,7 @@ import { partnerCapitalLabels, partnerCapitalTotals, partnerExchangeRows } from 
 import ChartFrame, { CHART_TRACK_BG, NUM_FONT } from './ChartFrame';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
-const COVER = `${BASE_URL}/images/specials/karlovy-vary.svg`;
+const COVER = `${BASE_URL}/images/specials/og/karlovy-vary.jpg`;
 const SOURCE_LINK = {
   color: 'var(--mantine-color-brandNavy-7)',
   fontWeight: 700,
@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     url: '/specialy/kviff',
     type: 'website',
     images: [{ url: COVER, width: 1200, height: 630, alt: 'Karlovy Vary v datech' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Karlovy Vary v datech',
+    images: [COVER],
   },
 };
 

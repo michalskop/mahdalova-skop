@@ -10,7 +10,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop
 const PATH = '/specialy/komunalni-a-senatni-volby-2026';
 const TITLE = 'Komunální a senátní volby 2026';
 const DESCRIPTION = 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce';
-const OG_IMAGE = `${BASE_URL}/images/specials/komunalni-a-senatni-volby-2026-og.png`;
+const OG_IMAGE = `${BASE_URL}/images/specials/og/volby-2026.jpg`;
 const INK = '#101432';
 
 // Do speciálu patří vše, co nese aspoň jeden z těchto tagů.

@@ -45,7 +45,9 @@
    Delší titulek nezvětší kartu, jen zkrátí perex (viz useSideExcerptFit);
    teprve když se nevejde ani titulek s patičkou, karta se protáhne a náhled
    se ořízne na střed. Zaoblený vnější roh dělá samotná karta (overflow:
-   hidden + radius). Štítek rubriky sedí v pravém horním rohu náhledu. */
+   hidden + radius). Štítek rubriky sedí v pravém horním rohu náhledu.
+   Výjimka: náhledy s `data-letterbox` (cover 5:4, viz useSideCoverLetterbox)
+   se neořezávají – níže. */
 .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
   grid-column: 1;
   grid-row: 1 / -1;
@@ -73,6 +75,23 @@
   position: absolute;
   inset: 0;
   aspect-ratio: auto !important;
+}
+
+/* Cover 5:4 v protažené kartě: celý obrázek (contain) na rozmazané kopii
+   sebe sama, ať se titulek coveru neusekne. U neprotažené karty je náhled
+   přesně 5:4, takže contain = cover a pozadí není vidět. */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section)[data-letterbox]::after {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  background: var(--cover-url) center / cover no-repeat;
+  filter: blur(16px) brightness(0.8);
+}
+
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section)[data-letterbox] img {
+  position: relative;
+  z-index: 1;
+  object-fit: contain !important;
 }
 
 .sideItem :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
@@ -157,7 +176,8 @@
     border-radius: var(--mantine-radius-md) var(--mantine-radius-md) 0 0;
   }
 
-  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before {
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before,
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section)[data-letterbox]::after {
     display: none;
   }
 

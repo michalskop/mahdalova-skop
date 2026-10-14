@@ -150,9 +150,14 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
         rel={external ? 'noopener noreferrer' : undefined}
         className="specials-tile"
         style={{ ...base, position: 'relative' }}>
-        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: `url(${coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px' }}>
+        {/* Obrázek jako <img> (ne CSS pozadí) a vrstvy nad ním bez pointer-events:
+            pravé tlačítko nad obrázkem nabídne „Otevřít obrázek v nové kartě“,
+            levé klepnutí vede dál na speciál (celá dlaždice je odkaz). */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={coverImage} alt={title} draggable={false}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px', pointerEvents: 'none' }}>
           <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
             {renderSpecialTitle(title)}
           </Title>

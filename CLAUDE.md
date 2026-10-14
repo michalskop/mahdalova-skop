@@ -88,6 +88,8 @@ DJS uses the same structure at `apps/datajournalism.studio/app/a/_articles/`.
 
 Data for `ScrollyTelling`, `Timeline`, `MotionsStancesTable`, and `RelatedArticles` is loaded server-side in `lib/articles.ts` and injected via `mdxSource.scope`.
 
+**Lessons learned go into the manuals:** whenever a bug or a repeated correction is fixed (covers, cards, typography, articles), write the lesson into the canonical manual for that area (`tools/COVER-EDITOR.md` → *Ponaučení z oprav*, `packages/ui/DESIGN.md`, `docs/redakcni-styl/REDAKCNI_MANUAL.md`) in the same commit, so it is not solved twice. Before fixing a reported visual bug, check those notes first.
+
 ### Component Pattern
 
 - `apps/*/components/clanek/ArticleRenderer.tsx` (or `a/` in DJS) – client component that renders the serialised MDX, defines all MDX component mappings and custom renderers for standard HTML elements
