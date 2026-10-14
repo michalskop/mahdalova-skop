@@ -17,24 +17,24 @@ const RING = '#b8eff6';      // brandTeal.1 – obruba
 const GRIP = '#8cdfef';      // brandTeal.2 – rukojeť
 
 // mapa = obdélník, do kterého se vejde celá ČR; r = poloměr okének (Praha × 1.45); mesta = která města v daném formátu
-const VSE = ['Praha', 'Brno', 'Ostrava', 'Plzeň', 'Ústí nad Labem', 'České Budějovice', 'Jihlava', 'Hradec Králové', 'Jeseník'];
+const VSE = ['Praha', 'Brno', 'Ostrava', 'Plzeň', 'Ústí nad Labem', 'České Budějovice', 'Jihlava', 'Hradec Králové', 'Jeseník', 'Liberec'];
 // posun = { město: [x, y] } – kde stojí okénko (absolutně v pixelech formátu), když by se na skutečné poloze překrývalo;
 // s městem ho spojí tenká čára z bodu skutečné polohy. nad = názvy, které jdou nad okénko (u spodního okraje).
 const FORMATY = {
   homepage: { w: 1500, h: 1200, mapa: [40, 500, 1490, 1190], r: 74, mesta: VSE, popisek: 23,
-    posun: { 'Ústí nad Labem': [470, 600], Praha: [640, 790], Plzeň: [355, 860], 'České Budějovice': [640, 1080], Jihlava: [845, 960], Brno: [1050, 1050], Ostrava: [1250, 840], 'Hradec Králové': [880, 690], Jeseník: [1110, 640] },
-    nad: ['České Budějovice', 'Brno'] },
+    posun: { 'Ústí nad Labem': [470, 600], Praha: [640, 790], Plzeň: [355, 860], 'České Budějovice': [640, 1080], Jihlava: [845, 960], Brno: [1050, 1050], Ostrava: [1250, 840], 'Hradec Králové': [880, 690], Jeseník: [1110, 640], Liberec: [690, 585] },
+    nad: ['České Budějovice', 'Brno', 'Liberec'] },
   og: { w: 1200, h: 630, mapa: [-110, 30, 1330, 600], r: 60, mesta: ['Brno', 'Ostrava', 'Plzeň', 'Ústí nad Labem', 'České Budějovice'], popisek: 16,
     posun: { 'Ústí nad Labem': [300, 110], Plzeň: [230, 330], 'České Budějovice': [380, 520], Brno: [830, 470], Ostrava: [1050, 300] }, nad: [] },
   square: { w: 1080, h: 1080, mapa: [10, 470, 1070, 1060], r: 60, mesta: VSE, popisek: 19,
-    posun: { 'Ústí nad Labem': [300, 560], Praha: [440, 720], Plzeň: [175, 770], 'České Budějovice': [440, 950], Jihlava: [640, 860], Brno: [810, 930], Ostrava: [960, 740], 'Hradec Králové': [640, 640], Jeseník: [835, 610] },
-    nad: ['České Budějovice', 'Brno'] },
+    posun: { 'Ústí nad Labem': [300, 560], Praha: [440, 720], Plzeň: [175, 770], 'České Budějovice': [505, 935], Jihlava: [640, 860], Brno: [810, 930], Ostrava: [960, 740], 'Hradec Králové': [640, 640], Jeseník: [835, 610], Liberec: [480, 545] },
+    nad: ['České Budějovice', 'Brno', 'Liberec'] },
   instagram: { w: 1080, h: 1350, mapa: [10, 600, 1070, 1260], r: 62, mesta: VSE, popisek: 20,
-    posun: { 'Ústí nad Labem': [300, 690], Praha: [440, 860], Plzeň: [175, 920], 'České Budějovice': [440, 1110], Jihlava: [640, 1010], Brno: [810, 1090], Ostrava: [960, 880], 'Hradec Králové': [640, 780], Jeseník: [835, 745] },
-    nad: ['České Budějovice', 'Brno'] },
+    posun: { 'Ústí nad Labem': [300, 690], Praha: [440, 860], Plzeň: [175, 920], 'České Budějovice': [440, 1110], Jihlava: [640, 1010], Brno: [810, 1090], Ostrava: [960, 880], 'Hradec Králové': [640, 780], Jeseník: [835, 745], Liberec: [480, 685] },
+    nad: ['České Budějovice', 'Brno', 'Liberec'] },
   story: { w: 1080, h: 1920, mapa: [10, 860, 1070, 1580], r: 66, mesta: VSE, popisek: 21,
-    posun: { 'Ústí nad Labem': [300, 950], Praha: [440, 1140], Plzeň: [170, 1210], 'České Budějovice': [440, 1410], Jihlava: [650, 1300], Brno: [820, 1390], Ostrava: [960, 1160], 'Hradec Králové': [650, 1060], Jeseník: [845, 1010] },
-    nad: [] },
+    posun: { 'Ústí nad Labem': [300, 950], Praha: [440, 1140], Plzeň: [170, 1210], 'České Budějovice': [440, 1410], Jihlava: [650, 1300], Brno: [820, 1390], Ostrava: [960, 1160], 'Hradec Králové': [650, 1060], Jeseník: [845, 1010], Liberec: [490, 955] },
+    nad: ['Liberec'] },
 };
 
 (async () => {
