@@ -17,6 +17,10 @@ Komunální volby se rozhodují v obcích, ale rozdíly začínají už v jednot
 
 **Najděte svou obec:** do řádku nad mapou napište název obce nebo městské části. Když na okrsek najedete myší nebo na něj na mobilu klepnete, ukáže se vedle mapy jeho výsledek, účast a u každé kandidátky i to, kdo ji podává – strana, koalice, nebo sdružení nezávislých kandidátů. Každá mapa v článku umí ukázat kteroukoli obec, stačí v ní vyhledat jiný název.
 
+## Ústí nad Labem: Jedno Ústí s nadpoloviční většinou hlasů
+
+V Ústí nad Labem získala kandidátka Jedno Ústí 51,3 % hlasů a 22 ze 37 mandátů. Podávají ji Zelení, STAN, Piráti, TOP 09, Ústecké fórum občanů a Naše Česko spolu s nezávislými kandidáty. Vyhrála v 89 z 97 okrsků. ANO kleslo z 28,5 na 16,0 % a ze 13 na 6 mandátů, první bylo v jediném okrsku.
+
 <OkrskyKvMapa
   title="Kdo vyhrál v okrscích: {obec}"
   source="[ČSÚ, volby.gov.cz](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) – konečné výsledky po okrscích, hranice okrsků [GIS ČSÚ](https://geodata.csu.gov.cz/server/rest/services/Hosted/Volební_okrsky_ZO2026/FeatureServer); zpracování DataTimes.cz."
@@ -60,21 +64,35 @@ V Ostravě ANO volby vyhrálo s 26,2 % hlasů a bylo první ve 175 z 246 okrsků
   source="[ČSÚ, volby.gov.cz](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) – konečné výsledky po okrscích, hranice okrsků [GIS ČSÚ](https://geodata.csu.gov.cz/server/rest/services/Hosted/Volební_okrsky_ZO2026/FeatureServer); zpracování DataTimes.cz."
 />
 
-## Ústí nad Labem: Jedno Ústí s nadpoloviční většinou hlasů
+## Plzeň: jediné krajské město, kde ANO posílilo
 
-V Ústí nad Labem získala kandidátka Jedno Ústí 51,3 % hlasů a 22 ze 37 mandátů. Podávají ji Zelení, STAN, Piráti, TOP 09, Ústecké fórum občanů a Naše Česko spolu s nezávislými kandidáty. Vyhrála v 89 z 97 okrsků. ANO kleslo z 28,5 na 16,0 % a ze 13 na 6 mandátů, první bylo v jediném okrsku.
+V Plzni kandidátka ANO a nezávislých posílila z 27,3 na 31,7 % a byla první ve 153 ze 174 okrsků. Starostové vyrostli ze 7,7 na 18,0 %. ODS, která v roce 2022 kandidovala v koalici SPOLU (27,7 %), letos samostatně dostala 15,4 %. ANO se [krátce po volbách dohodlo na koalici](https://m.echo24.cz/a/HK43W/domaci-zpravy-na-koalici-v-plzni-se-dohodlo-ano-s-uskupenim-pro-plzen-a-stan) se svými dosavadními partnery, uskupením Pro Plzeň a STAN. ODS v ní není.
+
+<OkrskyKvMapa
+  defaultObec={554791}
+  title="Kdo vyhrál v okrscích: {obec}"
+  source="[ČSÚ, volby.gov.cz](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) – konečné výsledky po okrscích, hranice okrsků [GIS ČSÚ](https://geodata.csu.gov.cz/server/rest/services/Hosted/Volební_okrsky_ZO2026/FeatureServer); zpracování DataTimes.cz."
+/>
 
 ## Liberec: ODS se nedostala do zastupitelstva
 
 V Liberci vyhráli Starostové pro Liberecký kraj s 28,4 % a byli první v 69 z 87 okrsků. Kandidátka ODS společně se sportovci dostala 4,3 % hlasů a nezískala žádný mandát. Před čtyřmi lety měla 9,8 % a čtyři zastupitele. ANO kleslo z 26,2 na 17,8 %.
 
+<OkrskyKvMapa
+  defaultObec={563889}
+  title="Kdo vyhrál v okrscích: {obec}"
+  source="[ČSÚ, volby.gov.cz](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) – konečné výsledky po okrscích, hranice okrsků [GIS ČSÚ](https://geodata.csu.gov.cz/server/rest/services/Hosted/Volební_okrsky_ZO2026/FeatureServer); zpracování DataTimes.cz."
+/>
+
 ## České Budějovice: vyhrálo Naše Česko, ODS spadla z 29,4 na 7,7 %
 
 V Českých Budějovicích vyhrálo Naše Česko s 29,6 % hlasů a 15 mandáty a bylo první v 80 z 90 okrsků. ODS, která volby v roce 2022 vyhrála s 29,4 %, dostala 7,7 % a čtyři mandáty místo šestnácti. ANO kleslo z 24,0 na 16,2 %.
 
-## Plzeň: jediné krajské město, kde ANO posílilo
-
-V Plzni kandidátka ANO a nezávislých posílila z 27,3 na 31,7 % a byla první ve 153 ze 174 okrsků. Starostové vyrostli ze 7,7 na 18,0 %. ODS, která v roce 2022 kandidovala v koalici SPOLU (27,7 %), letos samostatně dostala 15,4 %. ANO se [krátce po volbách dohodlo na koalici](https://m.echo24.cz/a/HK43W/domaci-zpravy-na-koalici-v-plzni-se-dohodlo-ano-s-uskupenim-pro-plzen-a-stan) se svými dosavadními partnery, uskupením Pro Plzeň a STAN. ODS v ní není.
+<OkrskyKvMapa
+  defaultObec={544256}
+  title="Kdo vyhrál v okrscích: {obec}"
+  source="[ČSÚ, volby.gov.cz](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) – konečné výsledky po okrscích, hranice okrsků [GIS ČSÚ](https://geodata.csu.gov.cz/server/rest/services/Hosted/Volební_okrsky_ZO2026/FeatureServer); zpracování DataTimes.cz."
+/>
 
 ## Olomouc, Hradec Králové a Jihlava: ANO první jen v Olomouci
 
