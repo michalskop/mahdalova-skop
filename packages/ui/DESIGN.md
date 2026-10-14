@@ -412,6 +412,15 @@ with "…". Only the lead gets `leadText` (payload). Editorial consequence: the 
 paragraphs after the excerpt are visible on the homepage, so they must read well as
 a continuation of the excerpt.
 
+**Hero side cards never crop a 5:4 cover (rule since 2026-10-14).** The three
+compact cards right of the lead keep the thumbnail at 5:4, but a long title (4–5
+lines) stretches the card and the thumbnail used to be center-cropped – the cover
+headline got cut ("…lo zůstal doma"). `useSideCoverLetterbox` in `FeaturedHero.tsx`
+marks native 5:4 covers (`data-letterbox`) and the CSS shows the whole image
+(`object-fit: contain`) on a blurred copy of itself. Don't "fix" such a case by
+redrawing the cover or shortening the title; images of other ratios still follow
+`coverFit` in `ArticleCard`.
+
 ---
 
 ### `ArticlesGrid`

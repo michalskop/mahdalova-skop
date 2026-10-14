@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
-  <!-- Obálka speciálu Komunální a senátní volby 2026: ink blue podklad se září loga kalkulačky,
-       dlaždice čistá ink blue (brandNavy.9 #101432) a logo DataTimes.cz v trikolóře z palety:
-       brand.6 #de1743 · background.2 #f8f6f0 · brandRoyalBlue.6 #4a51ab -->
+  <!-- Obálka speciálu Komunální a senátní volby 2026: ink blue podklad se září loga kalkulačky
+       a samotné kolečko loga DataTimes.cz (bez dlaždice) v trikolóře z palety:
+       brand.6 #de1743 · background.2 #f8f6f0 · brandRoyalBlue.6 #4a51ab.
+       Jemný obrys a stín v ink blue (brandNavy.9 #101432). -->
   <defs>
     <filter id="vb-glow" filterUnits="userSpaceOnUse" x="-300" y="-300" width="1680" height="1680">
       <feGaussianBlur stdDeviation="90"/>
     </filter>
-    <filter id="vb-shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.55"/>
+    <filter id="vb-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1080">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#101432" flood-opacity="0.9"/>
     </filter>
     <!-- jako dtDonutYellowFix v datatimes-donut.svg: modrá překryje červenou jen na svém začátku -->
     <linearGradient id="vb-blue-fix" x1="1" x2="0.25" y1="0.5" y2="1">
@@ -24,11 +25,11 @@
     <circle cx="760" cy="685" r="230" fill="#D04646"/>
   </g>
 
-  <!-- Dlaždice 128×128 → 520×520, vycentrovaná v části karty nad nadpisem -->
-  <g transform="translate(280 225) scale(4.0625)">
-    <rect width="128" height="128" rx="32" fill="#101432" filter="url(#vb-shadow)"/>
-    <!-- logo DataTimes.cz (datatimes-donut.svg): červená půlka, světlá, modrá -->
-    <g transform="translate(64 64) scale(.27) translate(-250 -250)">
+  <!-- Kolečko loga (datatimes-donut.svg), vycentrované v části karty nad nadpisem -->
+  <g filter="url(#vb-shadow)">
+    <g transform="translate(540 485) scale(1.3) translate(-250 -250)">
+      <!-- obrys: ink blue prstenec o kousek širší než logo -->
+      <circle cx="250" cy="250" r="100" fill="none" stroke="#101432" stroke-width="86"/>
       <g transform="rotate(-30 250 250)" fill="none" stroke-width="76" stroke-linecap="round">
         <path stroke="#4a51ab" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/>
         <path stroke="#f8f6f0" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/>

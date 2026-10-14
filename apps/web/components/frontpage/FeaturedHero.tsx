@@ -117,6 +117,37 @@ function useSideExcerptFit(sideRef: RefObject<HTMLDivElement | null>) {
   }, [sideRef]);
 }
 
+/**
+ * Cover 5:4 (cover-homepage 1500×1200) se v bočních kartách nikdy neořízne:
+ * když delší titulek kartu protáhne, náhled by se ořízl na střed a useknul
+ * titulek coveru. Takovým náhledům hook nastaví `data-letterbox` a
+ * `--cover-url` – CSS pak ukáže celý obrázek (contain) a místo nad a pod ním
+ * vyplní rozmazanou kopií téhož coveru. Obrázky jiného poměru (starší fotky)
+ * dál řídí coverFit v ArticleCard.
+ */
+function useSideCoverLetterbox(sideRef: RefObject<HTMLDivElement | null>) {
+  useEffect(() => {
+    const sideEl = sideRef.current;
+    if (!sideEl) return;
+    const imgs = Array.from(
+      sideEl.querySelectorAll<HTMLImageElement>('.mantine-Card-root > .mantine-Card-section img'),
+    );
+    const mark = (img: HTMLImageElement) => {
+      const section = img.closest<HTMLElement>('.mantine-Card-section');
+      if (!section || !img.naturalWidth || !img.naturalHeight) return;
+      if (Math.abs(img.naturalWidth / img.naturalHeight - 5 / 4) > 0.02) return;
+      section.dataset.letterbox = '';
+      section.style.setProperty('--cover-url', `url("${img.currentSrc || img.src}")`);
+    };
+    const onLoad = (e: Event) => mark(e.currentTarget as HTMLImageElement);
+    imgs.forEach((img) => {
+      if (img.complete) mark(img);
+      img.addEventListener('load', onLoad);
+    });
+    return () => imgs.forEach((img) => img.removeEventListener('load', onLoad));
+  }, [sideRef]);
+}
+
 // Hero blok homepage (styl The Nerve): vlevo velký hlavní článek (cover +
 // titulek + perex + autor), vpravo tři nejnovější jako kompaktní vodorovné
 // karty a pod nimi tlačítko „Více". Celá šířka, žádný boční nadpis.
@@ -145,6 +176,7 @@ export function FeaturedHero({
   const sideRef = useRef<HTMLDivElement | null>(null);
   useEqualColumns(leadRef, sideRef);
   useSideExcerptFit(sideRef);
+  useSideCoverLetterbox(sideRef);
   const lead = articles[0];
   const side = articles.slice(1, 4);
   if (!lead) return null;
