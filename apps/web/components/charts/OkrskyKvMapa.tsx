@@ -68,6 +68,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
   const [selKey, setSelKey] = useState<string | null>(null);
   const [hover, setHover] = useState<string | null>(null);
   const [pinned, setPinned] = useState<string | null>(null);
+  const [vse, setVse] = useState(false); // rozbalené kandidátky pod 2 % v panelu
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
@@ -156,7 +157,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
 
   // přibližování: Ctrl/⌘ + kolečko, dva prsty, tlačítka; posun tažením, když je přiblíženo
   const [tf, setTf] = useState({ k: 1, x: 0, y: 0 });
-  useEffect(() => { setTf({ k: 1, x: 0, y: 0 }); setPinned(null); setHover(null); }, [selKey, mapW]);
+  useEffect(() => { setTf({ k: 1, x: 0, y: 0 }); setPinned(null); setHover(null); setVse(false); }, [selKey, mapW]);
   const svgRef = useRef<SVGSVGElement>(null);
   const zoomAt = useCallback((factor: number, cx: number, cy: number) => {
     setTf((t) => {
@@ -229,12 +230,16 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
   const zastLabel = sel ? (sel.mesto ? 'zastupitelstvo městské části' : sel.mc ? (sel.kod === 554782 ? 'zastupitelstvo hlavního města' : 'zastupitelstvo města') : 'zastupitelstvo obce') : '';
   const nOkr = res?.rows.size ?? 0;
 
-  const Rows = ({ r, max = 99, mand = false }: { r: [number, number][]; max?: number; mand?: boolean }) => {
+  // Dlouhé seznamy (Praha, Brno…): víc než 8 kandidátek → ty pod 2 % až po kliknutí na „Zobrazit další“.
+  const Rows = ({ r, mand = false }: { r: [number, number][]; mand?: boolean }) => {
     const plh = r.reduce((s, [, v]) => s + v, 0) || 1;
     const top = r[0]?.[1] ?? 1;
+    const male = r.length > 8 ? r.filter(([, v]) => v / plh < 0.02).length : 0;
+    const vidim = vse || !male ? r : r.filter(([, v]) => v / plh >= 0.02);
     return (
+      <>
       <div style={{ display: 'grid', gridTemplateColumns: mand ? '12px 1fr auto 2.4em' : '12px 1fr auto', gap: '5px 8px', alignItems: 'center', fontSize: 13.5, lineHeight: 1.25 }}>
-        {r.slice(0, max).map(([i, v], k) => (
+        {vidim.map(([i, v], k) => (
           <div key={i} style={{ display: 'contents' }}>
             <span style={{ width: 12, height: 12, background: L[i]?.c ?? NODATA, borderRadius: 2, border: '1px solid rgba(16,20,50,.25)' }} />
             <span style={{ minWidth: 0 }}>
@@ -248,6 +253,13 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
           </div>
         ))}
       </div>
+      {male > 0 && (
+        <button type="button" onClick={() => setVse((x) => !x)}
+          style={{ marginTop: 8, padding: 0, border: 0, background: 'none', color: MUTED, fontFamily: FONT, fontSize: 13, textDecoration: 'underline', cursor: 'pointer' }}>
+          {vse ? 'Skrýt kandidátky pod 2 %' : `Zobrazit další (${male}) pod 2 %`}
+        </button>
+      )}
+      </>
     );
   };
 
