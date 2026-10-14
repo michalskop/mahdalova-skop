@@ -39,6 +39,8 @@ interface PhotoGalleryProps {
   images: GalleryImage[];
   /** Kolik náhledů ukázat ve sbaleném stavu, než se zbytek schová pod "+N". */
   previewCount?: number;
+  /** Galerie grafik / map (```fotogalerie 6 mapy): popisek jen „Klikněte pro zvětšení“. */
+  grafika?: boolean;
 }
 
 const CameraIcon = () => (
@@ -64,7 +66,7 @@ const CaptionIcon = () => (
   </svg>
 );
 
-export function PhotoGallery({ images, previewCount }: PhotoGalleryProps) {
+export function PhotoGallery({ images, previewCount, grafika = false }: PhotoGalleryProps) {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   const [expanded, setExpanded] = useState(false);
@@ -147,8 +149,8 @@ export function PhotoGallery({ images, previewCount }: PhotoGalleryProps) {
             }
           }}
         >
-          <CameraIcon />
-          <span>Galerie · {images.length} {plural(images.length)} — klikněte pro zvětšení</span>
+          {!grafika && <CameraIcon />}
+          <span>{grafika ? 'Klikněte pro zvětšení' : <>Galerie · {images.length} {plural(images.length)} — klikněte pro zvětšení</>}</span>
         </div>
       </div>
     );

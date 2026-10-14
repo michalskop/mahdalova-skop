@@ -42,6 +42,8 @@ export function remarkGalleryPlugin() {
       const meta = (node.meta || '').trim();
       const m = /(\d+)/.exec(meta);
       if (m) attributes.push(makeAttr('previewCount', m[1]));
+      // ```fotogalerie 6 mapy – galerie grafik/map: popisek jen „Klikněte pro zvětšení“, bez „Galerie · N fotek“
+      if (/(mapy|grafy|grafika)/.test(meta)) attributes.push(makeAttr('grafika', 'true'));
 
       parent.children[index] = {
         type: 'mdxJsxFlowElement',

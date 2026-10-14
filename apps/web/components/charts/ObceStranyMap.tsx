@@ -206,8 +206,18 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
       .slice(0, 8);
   }, [data, query]);
 
+  // obrys: obec pod myší, jinak vybraná obec; popisek jen u obce pod myší / po ťuknutí
   const focusId = hover?.id ?? picked;
-  const focus = focusId && data ? data.obce[focusId] : undefined;
+  const focus = hover && data ? data.obce[hover.id] : undefined;
+
+  // ťuknutí nebo kliknutí mimo mapu zavře popisek (na dotykových zařízeních nepřijde mouseleave)
+  useEffect(() => {
+    const close = (e: PointerEvent) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setHover(null);
+    };
+    document.addEventListener('pointerdown', close);
+    return () => document.removeEventListener('pointerdown', close);
+  }, [wrapRef]);
 
   const btn = (on: boolean): React.CSSProperties => ({
     fontFamily: FONT, fontSize: 14, padding: '4px 10px', borderRadius: 4, cursor: 'pointer',
@@ -227,6 +237,21 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
         <div role="group" aria-label="Co se stalo" style={{ marginBottom: 12 }}>
           {([1, 2] as const).map((row) => (
             <div key={row} style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: row === 1 ? 4 : 0 }}>
+              {row === 1 && (
+                // Domeček: zpět na výchozí stav – všechny strany, volby 2026, bez vybrané obce
+                <button
+                  type="button"
+                  title="Zpět na výchozí zobrazení"
+                  aria-label="Zpět na výchozí zobrazení"
+                  onClick={() => { setActive(PARTIES); setCat(DEFAULT_CAT); setPicked(null); setQuery(''); setHover(null); }}
+                  style={{ ...btn(false), padding: '4px 8px', display: 'inline-flex', alignItems: 'center' }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>
+                    <path d="M2 7.5 L8 2.2 L14 7.5" fill="none" stroke={INK} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M4 6.8 V13.5 H6.8 V9.8 H9.2 V13.5 H12 V6.8" fill="none" stroke={INK} strokeWidth="1.8" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              )}
               {CATS.filter((c) => c.row === row).map((c) => (
                 <button
                   key={c.id}
@@ -245,29 +270,12 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
         </div>
 
         {data && (
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-            <div style={{ flex: '1 1 auto' }}>
-              <ChartLegend
-                items={legendItems}
-                activeKeys={active}
-                onChange={(keys) => setActive(PARTIES.filter((p) => keys.includes(p)))}
-                marginBottom={8}
-              />
-            </div>
-            {/* Domeček: zpět na výchozí stav – všechny strany, volby 2026, bez vybrané obce */}
-            <button
-              type="button"
-              title="Zpět na výchozí zobrazení"
-              aria-label="Zpět na výchozí zobrazení"
-              onClick={() => { setActive(PARTIES); setCat(DEFAULT_CAT); setPicked(null); setQuery(''); setHover(null); }}
-              style={{ ...btn(false), padding: '4px 7px', display: 'inline-flex', alignItems: 'center', flex: '0 0 auto' }}
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>
-                <path d="M2 7.5 L8 2.2 L14 7.5" fill="none" stroke={INK} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4 6.8 V13.5 H6.8 V9.8 H9.2 V13.5 H12 V6.8" fill="none" stroke={INK} strokeWidth="1.8" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </div>
+          <ChartLegend
+            items={legendItems}
+            activeKeys={active}
+            onChange={(keys) => setActive(PARTIES.filter((p) => keys.includes(p)))}
+            marginBottom={8}
+          />
         )}
 
         {/* Hledání obce */}
@@ -366,7 +374,7 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
                 ))}
                 {focus.casti && (
                   <div style={{ marginTop: 4, color: MUTED }}>
-                    Součet města a {focus.casti.length} městských částí. {picked === focusId ? 'Rozpad je pod mapou.' : 'Kliknutím zobrazíte rozpad pod mapou.'}
+                    Součet města a {focus.casti.length} městských částí. {picked === hover?.id ? 'Rozpad je pod mapou.' : 'Kliknutím zobrazíte rozpad pod mapou.'}
                   </div>
                 )}
               </div>

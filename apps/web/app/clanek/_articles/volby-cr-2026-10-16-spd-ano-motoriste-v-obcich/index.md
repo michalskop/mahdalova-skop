@@ -13,13 +13,20 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "SPD", "Motoristé", "AN
 promoted: 1
 ---
 
-![Mapa Česka: obce, kde SPD po volbách 2022 měla zastupitele (ve 179 obcích, teď jen v 86), a obce, kde letos kandidovali Motoristé (36 obcí, uspěli v 6)](images/mapa-uvod.png)
-
-_Každá tečka je obec. Žlutě obce, kde měla SPD zastupitele po volbách 2022: plná tečka znamená, že je má i teď (86 obcí), prázdný kroužek, že je ztratila všechny (93 obcí). Tyrkysově obce, kde letos kandidovali Motoristé: plná tečka znamená zvolené zastupitele (6 obcí), prázdný kroužek, že nikdo neprošel (30 obcí). U měst se sčítá město i jeho městské části._
+```fotogalerie 6 mapy
+- mapa-spd.png | SPD: zastupitele má ve 102 obcích, z 93 vypadla. Před volbami 490 zastupitelů, po nich 166. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-ano.png | ANO: zastupitele má ve 317 obcích, z 28 vypadlo. Před volbami 1 748 zastupitelů, po nich 1 650. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-aut.png | Motoristé: zastupitele mají v 6 obcích, ve 30 dalších kandidovali bez úspěchu. Zvoleno 20 z 1 116 kandidátů. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-ksc.png | KSČM: zastupitele má v 64 obcích, z 238 vypadla. Před volbami 466 zastupitelů, po nich 94. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-sta.png | Stačilo!: zastupitele má ve 22 obcích, ve 36 dalších kandidovalo bez úspěchu. Zvoleno 29 z 759 kandidátů. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-pro.png | PRO: zastupitele má v 16 obcích, z 6 vypadlo. Před volbami 19 zastupitelů, po nich 28. | Data: volby.gov.cz, výpočet DataTimes.cz
+```
 
 Hnutí SPD mělo před letošními komunálními volbami v zastupitelstvech obcí, měst a městských částí 490 lidí, které samo navrhlo. Po volbách jich má 166, o dvě třetiny méně. Kandidátů přitom postavilo skoro stejně jako před čtyřmi lety: 4 135 proti 4 486. Motoristé sobě, kteří v roce 2022 kandidovali jen do zastupitelstva Prahy, letos navrhli 1 116 kandidátů a zvoleno jich bylo 20, z toho 12 v Ostravě. Třetí vládní strana, ANO, má o 98 zastupitelů méně (1 650 proti 1 748), ale zastupitele má ve víc obcích než dřív.
 
 Prošli jsme registry kandidátů a mandátů za všech 6 394 zastupitelstev obcí a městských částí v Česku. Za zastupitele strany počítáme každého zvoleného, kterého strana navrhla, ať stál na její vlastní kandidátce, na společné s jinými stranami, nebo jako nestraník. Výchozí stav jsou volby 2022, a kde se od té doby volilo znovu, platí novější volby.
+
+Mapa níže ukazuje všechny strany najednou: můžete je porovnávat, přepínat mezi stavem před volbami a po nich a hledat jednotlivé obce.
 
 <ObceStranyMap
   geoUrl="/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-geo.json"

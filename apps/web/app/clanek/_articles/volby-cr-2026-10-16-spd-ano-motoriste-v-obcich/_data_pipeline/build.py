@@ -226,7 +226,7 @@ print(f'\nMapa: {len(mapa)} obcí, {len(mc)} měst s městskými částmi')
 def radek(k):
     z = zast(k)
     return {'kod': k, 'nazev': z['NAZEVZAST'], 'typ': z['TYPZASTUP'], 'druh': z['DRUHZASTUP'],
-            'obec': nadr.get(k, k), 'kraj': nuts.get(z['KRAJ'], ''), 'mandaty': int(z['MANDATY']),
+            'obec': nadr.get(k) or k, 'kraj': nuts.get(z['KRAJ'], ''), 'mandaty': int(z['MANDATY']),
             'obyv': int(z['POCOBYV']), **{s: rec(k, s) for s in VSE}}
 
 

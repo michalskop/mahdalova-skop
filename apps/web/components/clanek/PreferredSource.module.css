@@ -1,11 +1,15 @@
-/* Icons are centred on the cap height (IBM Plex cap height = 0.698em),
-   i.e. their middle sits at 0.349em above the baseline – not on the line.
-   vertical-align on an inline SVG/img moves its bottom edge relative to the
-   baseline, so bottom = 0.349em − half the icon height. */
+/* Text, hvězdička i logo leží na jedné svislé ose: tlačítko je inline-flex
+   s align-items/align-content: center, každá část (i zalomená na dva řádky)
+   je vycentrovaná ve výšce tlačítka. Dřívější ruční posun ikon o výšku verzálek
+   (vertical-align) s patkovým písmem seděl o 1–2 px níž. */
 .button {
   --ps-icon: 18px;
-  --ps-icon-shift: calc(0.349em - var(--ps-icon) / 2);
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  column-gap: 0.3em;
   box-sizing: border-box;
   max-width: 100%;
   min-height: 36px;
@@ -17,7 +21,7 @@
   font-family: var(--mantine-font-family);
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.2;
   text-align: center;
   text-wrap: balance;
   text-decoration: none;
@@ -53,10 +57,10 @@
 
 .star,
 .logo {
-  display: inline-block;
+  display: block;
+  flex: 0 0 auto;
   width: var(--ps-icon);
   height: var(--ps-icon);
-  vertical-align: var(--ps-icon-shift);
 }
 
 /* Outline = logo yellow (brandYellow[4], same as datatimes-donut.svg) */
@@ -70,7 +74,18 @@
   margin-right: 5px;
 }
 
+/* Střed velkých písmen (C, D, T, G) na ose tlačítka: flex centruje řádek písma,
+   IBM Plex Serif má ale pod účařím víc místa než nad verzálkami, takže verzálky
+   by seděly o ~1 px (0,064 em) níž. Text proto zvedáme, ikony zůstávají na středu.
+   Změřeno v prohlížeči 14. 10. 2026 (střed verzálek = účaří − 0,349 em). */
+.text {
+  position: relative;
+  top: -0.064em;
+}
+
 .nowrap {
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
 }
 

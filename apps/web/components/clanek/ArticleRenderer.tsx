@@ -237,7 +237,7 @@ export function ArticleRenderer({
       return <KeyNumbers {...props} />;
     },
     Gauge: (props) => <Gauge {...(props as any)} />,
-    PhotoGallery: ({ images, previewCount }: any) => {
+    PhotoGallery: ({ images, previewCount, grafika }: any) => {
       const parsed: GalleryImage[] =
         typeof images === 'string' ? JSON.parse(images) : Array.isArray(images) ? images : [];
       const resolved = parsed.map((img) => ({
@@ -246,7 +246,7 @@ export function ArticleRenderer({
           ? img.src
           : `/clanek/_articles/${slug}/images/${img.src.replace('images/', '')}`,
       }));
-      return <PhotoGallery images={resolved} previewCount={previewCount ? Number(previewCount) : undefined} />;
+      return <PhotoGallery images={resolved} previewCount={previewCount ? Number(previewCount) : undefined} grafika={grafika === 'true' || grafika === true} />;
     },
     TestComponent,
     FlourishEmbed,
