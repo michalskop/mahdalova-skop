@@ -236,7 +236,15 @@ export async function getArticleBySlug(directorySlug: string) {
 
   // Pre-fetch article pool for RelatedArticles MDX component
   const relatedArticlesPool = await getArticles(9999, undefined, true);
-  const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
+  // Pořadí podle příbuznosti: nejvíc společných tagů s tímto článkem první, jinak původní pořadí (stabilní řazení).
+  // Z čela poolu bere RelatedArticles automatický výběr i doplnění dolního boxu na násobek tří.
+  const ownTags = new Set<string>((data.tags || []).map((t: string) => t.toLowerCase()));
+  const shared = (a: { tags?: string[] }) => (a.tags || []).filter((t) => ownTags.has(t.toLowerCase())).length;
+  const filteredPool = relatedArticlesPool
+    .filter(a => a.slug !== directorySlug)
+    .map((a, i) => ({ a, i, s: shared(a) }))
+    .sort((x, y) => y.s - x.s || x.i - y.i)
+    .map(x => x.a);
 
   const mdxSource = await serialize(content, {
     scope: {

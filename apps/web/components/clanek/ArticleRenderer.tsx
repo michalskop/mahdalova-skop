@@ -412,14 +412,27 @@ export function ArticleRenderer({
     },
 
     RelatedArticles: (props) => {
-      const pool = (mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined;
+      const pool = ((mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined) ?? [];
+      // Dolní box přes celou šíři (karty po třech): vždy celé řady bez děr – aspoň 6 karet, při delším ručním
+      // bez rucniho seznamu 6). Chybějící místa doplní nejpříbuznější články z poolu (seřazeného podle
+      // společných tagů v lib/articles.ts). Boční box (position/float) a jiné presety necháváme beze změny.
+      const plny = !props.position && !props.float && (!props.preset || props.preset === 'cards');
+      let extra: Record<string, unknown> = {};
+      if (plny && !props.filter && !props.tag) {
+        const known = new Set(pool.map((a) => a.slug));
+        const rucni: string[] = (props.slugs ?? []).filter((s: string) => known.has(s));
+        const cil = Math.max(6, Math.ceil(rucni.length / 3) * 3);
+        const doplnek = pool.map((a) => a.slug).filter((s) => !rucni.includes(s)).slice(0, cil - rucni.length);
+        extra = { slugs: [...rucni, ...doplnek], count: cil };
+      }
       return (
         <RelatedArticlesComponent
-          pool={pool ?? []}
+          pool={pool}
           articleBasePath="/clanek"
           authorBasePath="/autor"
           locale="cs-CZ"
           {...props}
+          {...extra}
         />
       );
     },

@@ -293,6 +293,12 @@ default Czech heading, so `heading` can be omitted; when written explicitly, use
 Two roles from one component:
 - **Bottom cards block = „Doporučujeme"** (the `cards` preset).
   Every article ends with `<RelatedArticles slugs={[…]} heading="🔻🔻🔻" />`.
+  **Always full rows, never a gap** (since 2026-10-14): the block shows at least
+  6 cards and always a multiple of three (3 columns on desktop, 1 on mobile).
+  The web app's `ArticleRenderer` pads any `slugs` list to that size with the
+  most related articles (most shared tags, then newest – pool ranked in
+  `apps/web/lib/articles.ts`); when nothing is closely related, a looser link by
+  topic, rubric or region is fine – an empty slot is not.
 - **Floating side box = „Napsali jsme"** (`preset="sidebar" position="right" heading="🔻🔻🔻"`).
   Placed mid-article; it **bleeds** out of the column like `<Figure>` (see
   *Bleed / vyčuhující prvky*).

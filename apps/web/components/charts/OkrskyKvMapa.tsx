@@ -230,11 +230,12 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
   const zastLabel = sel ? (sel.mesto ? 'zastupitelstvo městské části' : sel.mc ? (sel.kod === 554782 ? 'zastupitelstvo hlavního města' : 'zastupitelstvo města') : 'zastupitelstvo obce') : '';
   const nOkr = res?.rows.size ?? 0;
 
-  // Dlouhé seznamy (Praha, Brno…): víc než 8 kandidátek → ty pod 2 % až po kliknutí na „Zobrazit další“.
+  // Dlouhé seznamy (Praha, Brno…): víc než 8 kandidátek a aspoň 3 pod 2 % → ty pod 2 % až po kliknutí na „Zobrazit další“.
   const Rows = ({ r, mand = false }: { r: [number, number][]; mand?: boolean }) => {
     const plh = r.reduce((s, [, v]) => s + v, 0) || 1;
     const top = r[0]?.[1] ?? 1;
-    const male = r.length > 8 ? r.filter(([, v]) => v / plh < 0.02).length : 0;
+    const pod2 = r.length > 8 ? r.filter(([, v]) => v / plh < 0.02).length : 0;
+    const male = pod2 >= 3 ? pod2 : 0; // schovat má smysl až od tří kandidátek
     const vidim = vse || !male ? r : r.filter(([, v]) => v / plh >= 0.02);
     return (
       <>
@@ -308,7 +309,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 12px', marginBottom: 10 }}>
             <div style={{ position: 'relative', flex: '1 1 260px', maxWidth: 420 }}>
               <input
-                type="search" value={q} placeholder="Hledat obec nebo městskou část…" aria-label="Hledat obec nebo městskou část"
+                type="search" value={q} placeholder="Celá ČR: hledat obec nebo městskou část…" aria-label="Hledat obec nebo městskou část kdekoli v ČR"
                 role="combobox" aria-expanded={open && hits.length > 0} aria-autocomplete="list"
                 onChange={(e) => { setQ(e.target.value); setOpen(true); setAct(0); }}
                 onFocus={() => setOpen(true)}
