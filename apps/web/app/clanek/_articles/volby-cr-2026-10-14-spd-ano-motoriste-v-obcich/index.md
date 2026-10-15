@@ -2,7 +2,7 @@
 title: "SPD přišla v obcích o dvě třetiny zastupitelů, Motoristé z 1 116 kandidátů prosadili dvacet"
 date: "2026-10-14"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Před volbami mělo SPD v zastupitelstvech obcí a městských částí 490 lidí, teď 166. Motoristé postavili kandidáty v 58 zastupitelstvech a uspěli v jedenácti, z toho v pěti ostravských. ANO ve velkých městech ztrácí, v menších obcích přibírá. Mapa celé republiky ukazuje stav před volbami, letošní kandidáty i výsledek."
+excerpt: "Před volbami měla SPD v zastupitelstvech obcí a městských částí 490 lidí, teď 166. Motoristé postavili kandidáty v 58 zastupitelstvech a uspěli v jedenácti, z toho v pěti ostravských. ANO ve velkých městech ztrácí, v menších obcích přibírá. Mapa celé republiky ukazuje stav před volbami, letošní kandidáty i výsledek."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -22,7 +22,7 @@ promoted: 1
 - mapa-pro.png | PRO: zastupitele má v 16 obcích, z 6 vypadlo. Před volbami 19 zastupitelů, po nich 28. | Data: volby.gov.cz, výpočet DataTimes.cz
 ```
 
-Hnutí SPD mělo před letošními komunálními volbami v zastupitelstvech obcí, měst a městských částí 490 lidí, které samo navrhlo. Po volbách jich má 166, o dvě třetiny méně. Kandidátů přitom postavilo skoro stejně jako před čtyřmi lety: 4 135 proti 4 486. Motoristé sobě, kteří v roce 2022 kandidovali jen do zastupitelstva Prahy, letos navrhli 1 116 kandidátů a zvoleno jich bylo 20, z toho 12 v Ostravě. Třetí vládní strana, ANO, má o 98 zastupitelů méně (1 650 proti 1 748), ale zastupitele má ve víc obcích než dřív.
+SPD měla před letošními komunálními volbami v zastupitelstvech obcí, měst a městských částí 490 lidí, které sama navrhla. Po volbách jich má 166, o dvě třetiny méně. Kandidátů přitom postavila skoro stejně jako před čtyřmi lety: 4 135 proti 4 486. Motoristé sobě, kteří v roce 2022 kandidovali jen do zastupitelstva Prahy, letos navrhli 1 116 kandidátů a zvoleno jich bylo 20, z toho 12 v Ostravě. Třetí vládní strana, ANO, má o 98 zastupitelů méně (1 650 proti 1 748), ale zastupitele má ve víc obcích než dřív.
 
 Prošli jsme registry kandidátů a mandátů za všech 6 394 zastupitelstev obcí a městských částí v Česku. Za zastupitele strany počítáme každého zvoleného, kterého strana navrhla, ať stál na její vlastní kandidátce, na společné s jinými stranami, nebo jako nestraník. Výchozí stav jsou volby 2022, a kde se od té doby volilo znovu, platí novější volby.
 
