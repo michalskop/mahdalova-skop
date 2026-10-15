@@ -319,7 +319,7 @@ spec('graf_uspesnost.json', {
          'encoding': {
              'y': {'field': 'strana', 'type': 'nominal', 'sort': ['ANO', 'PRO', 'KSČM a Stačilo!', 'SPD', 'Motoristé'],
                    'axis': {'title': None, 'labelFontSize': 14, 'labelLimit': 200, 'domain': False, 'ticks': False}},
-             'x': {'field': 'pct', 'type': 'quantitative', 'scale': {'domain': [0, 30]},
+             'x': {'field': 'pct', 'type': 'quantitative', 'scale': {'domain': [0, 30], 'padding': 16, 'nice': False},
                    'axis': {'title': None, 'labelExpr': "datum.label + ' %'", 'tickCount': 6}},
              'color': {'field': 'rok', 'type': 'nominal', 'scale': {'domain': ['2022', '2026'], 'range': [SEDA, '#de1743']},
                        'legend': {'title': None, 'orient': 'top'}},
