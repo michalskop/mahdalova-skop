@@ -17,9 +17,11 @@ module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Komunální volby 2026' },
   titulek: 'Komu voliči<br>věří',
-  pod: 'Lékaři se z&nbsp;nevolitelných míst dostávají<br>do zastupitelstva třikrát častěji',
-  legenda: [[LEKAR, 'zvolen lékař či veterinář z nevolitelného místa'], [SKOLA, 'zvolena ředitelka školy či knihovnice']],
-  logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo
+  pod: 'Lékaři a&nbsp;lékařky se z&nbsp;nevolitelných míst dostávají<br>do zastupitelstva třikrát častěji než ostatní kandidáti',
+  legenda: [[LEKAR, 'z nevolitelného místa zvolen/a lékař/ka či veterinář/ka'], [SKOLA, 'z nevolitelného místa zvolen/a ředitel/ka školy či knihovník/ice']],
+  mapaPozice: { homepage: [230, 650, 1500, 1170], square: [60, 570, 1080, 1060] }, // homepage: mapa níž, ať legenda pod textem neleží na tečkách
+  legendaPodTextem: true, // dlouhá legenda vedle loga kolidovala (story) – patří pod podtitulek
+  logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou
   // brandTeal.9 / brandNavy.8 záře, brandTeal.2 podtitulek, brand.6 štítek
   barvy: { glowA: '#023440', glowB: '#2f325c', sub: '#b8eff6', stitek: '#de1743' },
   motiv: { typ: 'tecky', dots: mapa.dots, vol: [], body, barvaObvod: '#2f325c', barvaTecka: '#2f325c', barvaBod: LEKAR, obrysBod: '#101432' },
