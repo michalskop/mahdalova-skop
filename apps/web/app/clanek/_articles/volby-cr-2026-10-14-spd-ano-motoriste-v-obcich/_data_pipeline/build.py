@@ -342,22 +342,54 @@ for i, v in enumerate(velikost):
     for s in ('spd', 'ano'):
         rows.append({'pasmo': v['pasmo'], 'ord': i, 'strana': NAZVY[s], 'pred': v[s]['m22'], 'po': v[s]['m26'],
                      'zmena': v[s]['m26'] - v[s]['m22']})
+PORADI = [v['pasmo'] for v in velikost]
+# Jeden graf, který se přizpůsobí šířce: blok ANO nahoře, blok SPD pod ním, v každém řádek s názvem strany
+# a pět pásem velikosti obce. Vodorovné pruhy od nuly: doprava přibylo (plný pruh), doleva ubylo (světlý pruh
+# s čárkovaným obrysem – „prázdné místo“, jako kroužek na mapě). Zlom u ANO a plošný úbytek SPD jsou vidět hned.
+DOMENA = []
+for st in ('ANO', 'SPD'):
+    DOMENA += [f'h-{st}'] + [f'{st}|{p}' for p in PORADI] + ([f'mezera-{st}'] if st == 'ANO' else [])
+for r in rows:
+    r['klic'] = f"{r['strana']}|{r['pasmo']}"
+    r['popis'] = f"{r['zmena']:+d}".replace('-', '−')
+X_MIN, X_MAX = -132, 62
+JE_HLAVICKA = "indexof(datum.value, 'h-') == 0"
+OSA_Y = {'field': 'klic', 'type': 'ordinal', 'sort': DOMENA, 'scale': {'domain': DOMENA, 'paddingInner': 0.2, 'paddingOuter': 0.05},
+         'axis': {'title': None, 'domain': False, 'ticks': False, 'labelPadding': 10, 'labelFontSize': 13,
+                  'labelExpr': "indexof(datum.value, 'h-') == 0 ? replace(datum.value, 'h-', '') "
+                               ": indexof(datum.value, 'mezera') == 0 ? '' : split(datum.value, '|')[1] + ' obyv.'",
+                  'labelFontWeight': {'expr': f"{JE_HLAVICKA} ? 800 : 500"},
+                  'labelFontSize': {'expr': f"{JE_HLAVICKA} ? 15 : 13"},
+                  'labelColor': {'expr': f"datum.value == 'h-ANO' ? '{BARVA['ANO']}' : datum.value == 'h-SPD' ? '{BARVA['SPD']}' : '#101432'"}}}
+X = {'field': 'zmena', 'type': 'quantitative', 'scale': {'domain': [X_MIN, X_MAX], 'nice': False},
+     'axis': {'title': '← ubylo zastupitelů · přibylo →', 'titleFontWeight': 400, 'titlePadding': 8,
+              'values': [-120, -80, -40, 0, 40], 'grid': True, 'labelExpr': "datum.value > 0 ? '+' + datum.label : datum.label"}}
+BARVY = {'field': 'strana', 'type': 'nominal', 'scale': {'domain': ['ANO', 'SPD'], 'range': [BARVA['ANO'], BARVA['SPD']]}, 'legend': None}
+TOOLTIP = [{'field': 'pasmo', 'title': 'Obyvatel'}, {'field': 'strana', 'title': 'Strana'},
+           {'field': 'pred', 'title': 'Zastupitelé před volbami'}, {'field': 'po', 'title': 'Po volbách 2026'},
+           {'field': 'zmena', 'title': 'Změna'}]
 spec('graf_velikost.json', {
     'title': {'text': 'ANO ztrácí ve městech, v menších obcích přibírá. SPD ubývá všude',
-              'subtitle': 'Změna počtu zastupitelů 2022 → 2026 podle velikosti obce (počet obyvatel), bez městských částí'},
-    'width': 600, 'height': 260,
+              'subtitle': 'Změna počtu zastupitelů 2022 → 2026 podle velikosti obce, bez městských částí'},
+    'width': 600, 'height': 400,
     'data': {'values': rows},
-    'mark': {'type': 'bar'},
-    'encoding': {
-        'x': {'field': 'pasmo', 'type': 'ordinal', 'sort': [v['pasmo'] for v in velikost], 'axis': {'title': None, 'labelAngle': 0}},
-        'xOffset': {'field': 'strana', 'sort': ['ANO', 'SPD']},
-        'y': {'field': 'zmena', 'type': 'quantitative', 'axis': {'title': None}},
-        'color': {'field': 'strana', 'type': 'nominal', 'scale': {'domain': ['ANO', 'SPD'], 'range': [BARVA['ANO'], BARVA['SPD']]},
-                  'legend': {'title': None, 'orient': 'top'}},
-        'tooltip': [{'field': 'pasmo', 'title': 'Obyvatel'}, {'field': 'strana', 'title': 'Strana'},
-                    {'field': 'pred', 'title': 'Zastupitelé před volbami'}, {'field': 'po', 'title': 'Po volbách 2026'},
-                    {'field': 'zmena', 'title': 'Změna'}],
-    },
+    'layer': [
+        # přírůstek: plný pruh
+        {'transform': [{'filter': 'datum.zmena >= 0'}], 'mark': {'type': 'bar', 'cornerRadiusEnd': 3},
+         'encoding': {'y': OSA_Y, 'x': X, 'color': BARVY, 'tooltip': TOOLTIP}},
+        # úbytek: světlá výplň, čárkovaný obrys
+        {'transform': [{'filter': 'datum.zmena < 0'}],
+         'mark': {'type': 'bar', 'fillOpacity': 0.18, 'strokeWidth': 1.8, 'strokeDash': [5, 3]},
+         'encoding': {'y': OSA_Y, 'x': X, 'fill': BARVY, 'stroke': BARVY, 'tooltip': TOOLTIP}},
+        # hodnota na konci pruhu
+        *[{'transform': [{'filter': f'datum.zmena {op} 0'}],
+           'mark': {'type': 'text', 'align': al, 'dx': dx, 'fontSize': 14, 'fontWeight': 700},
+           'encoding': {'y': OSA_Y, 'x': {'field': 'zmena', 'type': 'quantitative'}, 'text': {'field': 'popis'}, 'color': BARVY}}
+          for op, al, dx in (('>=', 'left', 5), ('<', 'right', -5))],
+        # nula
+        {'mark': {'type': 'rule', 'strokeWidth': 1.6},
+         'encoding': {'x': {'datum': 0, 'type': 'quantitative'}, 'color': {'value': '#101432'}}},
+    ],
 })
 print('\nGrafy zapsány: graf_uspesnost.json, graf_velikost.json')
 

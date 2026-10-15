@@ -35,7 +35,7 @@ const KARTY = [
   { id: 'uspesnost', titulek: 'V roce 2022 prošel do zastupitelstva každý desátý kandidát SPD, letos každý pětadvacátý',
     pod: 'Podíl zvolených z kandidátů, které strana navrhla (%), komunální volby 2022 a 2026', obsah: (f) => `<img src="${img(f.uzky ? 'telo-uspesnost-uzky.png' : 'telo-uspesnost.png')}">` },
   { id: 'velikost', titulek: 'ANO ztrácí ve městech, v menších obcích přibírá. SPD ubývá všude',
-    pod: 'Změna počtu zastupitelů 2022 → 2026 podle velikosti obce (počet obyvatel)', obsah: (f) => `<img src="${img(f.uzky ? 'telo-velikost-uzky.png' : 'telo-velikost.png')}">` },
+    pod: 'Změna počtu zastupitelů 2022 → 2026 podle velikosti obce. Doprava přibylo, doleva ubylo', obsah: (f) => `<img src="${img(f.uzky ? 'telo-velikost-uzky.png' : 'telo-velikost.png')}">` },
   { id: 'mesta', titulek: 'SPD zmizela ze zastupitelstev Prahy a šesti krajských měst',
     pod: 'Zastupitelé v zastupitelstvech krajských měst před volbami a po nich, podle navrhující strany', obsah: (f) => tabulka(f.tab) },
 ];
@@ -47,9 +47,12 @@ const FORMATY = {
   siroky: { W: 1200, H: 675, t: 38, sub: 20, kick: 16, tab: 17, logo: 30, pad: 44, vedle: true, uzky: true },
 };
 
+// česká typografie: jednopísmenné předložky a spojky nikdy na konci řádku
+const nbsp = (t) => t.replace(/(^|\s)([vkszouaiVKSZOUAI])\s/g, '$1$2 ');
+
 function html(k, f) {
   const kicker = `<div class="kick"><span class="cerv">Analýza</span><span class="sep">•</span><span>Komunální volby 2026</span></div>`;
-  const text = `${kicker}<h1>${k.titulek}</h1><div class="sub">${k.pod}</div>`;
+  const text = `${kicker}<h1>${nbsp(k.titulek)}</h1><div class="sub">${nbsp(k.pod)}</div>`;
   const pata = `<div class="pata"><div class="logo">${DONUT.replace('<svg ', `<svg width="${f.logo * 1.15}" height="${f.logo * 1.15}" `)}<span>DataTimes.cz</span></div><div class="zdroj">${ZDROJ}</div></div>`;
   return `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
