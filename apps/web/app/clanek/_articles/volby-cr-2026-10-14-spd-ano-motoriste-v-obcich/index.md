@@ -14,10 +14,10 @@ promoted: 1
 ---
 
 ```fotogalerie 5 mapy
-- mapa-spd.png | SPD: zastupitele má ve 102 obcích, z 93 vypadla. Před volbami 490 zastupitelů, po nich 166. | Data: volby.gov.cz, výpočet DataTimes.cz
 - mapa-ano.png | ANO: zastupitele má ve 317 obcích, z 28 vypadlo. Před volbami 1 748 zastupitelů, po nich 1 650. | Data: volby.gov.cz, výpočet DataTimes.cz
-- mapa-aut.png | Motoristé: zastupitele mají v 6 obcích, ve 30 dalších kandidovali bez úspěchu. Zvoleno 20 z 1 116 kandidátů. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-spd.png | SPD: zastupitele má ve 102 obcích, z 93 vypadla. Před volbami 490 zastupitelů, po nich 166. | Data: volby.gov.cz, výpočet DataTimes.cz
 - mapa-kss.png | KSČM a Stačilo! (kandidáti navržení kteroukoli z nich): zastupitele mají v 86 obcích, z 219 vypadli. Před volbami 466 zastupitelů, po nich 123. | Data: volby.gov.cz, výpočet DataTimes.cz
+- mapa-aut.png | Motoristé: zastupitele mají v 6 obcích, ve 30 dalších kandidovali bez úspěchu. Zvoleno 20 z 1 116 kandidátů. | Data: volby.gov.cz, výpočet DataTimes.cz
 - mapa-pro.png | PRO: zastupitele má v 16 obcích, z 6 vypadlo. Před volbami 19 zastupitelů, po nich 28. | Data: volby.gov.cz, výpočet DataTimes.cz
 ```
 
