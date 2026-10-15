@@ -69,7 +69,7 @@ U ANO je obrázek pestřejší. Celkem má o 6 % zastupitelů méně, ale zastup
 
 Ztráty jsou soustředěné ve velkých městech. V obcích nad 10 000 obyvatel klesl počet zastupitelů ANO z 871 na 757, v Praze (město i městské části) ze 140 na 113. V Ústí nad Labem má ANO 6 zastupitelů místo 13, v Českých Budějovicích a v Chomutově 8 místo 13. Naopak v obcích do 10 000 obyvatel ANO přibralo, z 502 na 573. Nově má zastupitele například v Meziboří (8), Kraslicích, Jiříkově, Bělotíně, Kostelci na Hané a Dolním Němčí (po pěti).
 
-| Město | SPD před → po | ANO před → po | Motoristé (kandidáti → zvolení) |
+| Město | SPD<br />před → po | ANO<br />před → po | Motoristé<br />kandidáti → zvolení |
 |---|---|---|---|
 | Praha | 2 → 0 | 14 → 11 | 65 → 0 |
 | Brno | 5 → 0 | 13 → 11 | 55 → 0 |
