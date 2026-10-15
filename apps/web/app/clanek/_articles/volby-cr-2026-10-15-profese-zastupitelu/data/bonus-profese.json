@@ -1,0 +1,346 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Lékaři, veterináři a ředitelé škol dostávají víc hlasů než ostatní kandidáti na stejném místě kandidátky",
+    "subtitle": "O kolik procent víc, nebo méně hlasů dostal typický kandidát z dané profese než kandidáti, kteří stáli na stejném místě stejně dlouhé kandidátky ve stejně velkých obcích. Obecní volby 2026."
+  },
+  "width": 600,
+  "height": {
+    "step": 22
+  },
+  "data": {
+    "values": [
+      {
+        "profese": "veterináři a veterinářky",
+        "bonus": 15.9,
+        "popisek": "+16 %",
+        "kandidatu": 311,
+        "zvoleno": 125
+      },
+      {
+        "profese": "lékaři a lékařky",
+        "bonus": 13.2,
+        "popisek": "+13 %",
+        "kandidatu": 2074,
+        "zvoleno": 723
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "bonus": 11.2,
+        "popisek": "+11 %",
+        "kandidatu": 2276,
+        "zvoleno": 1152
+      },
+      {
+        "profese": "hasiči",
+        "bonus": 9.0,
+        "popisek": "+9 %",
+        "kandidatu": 1798,
+        "zvoleno": 840
+      },
+      {
+        "profese": "lékárníci a lékárnice",
+        "bonus": 8.6,
+        "popisek": "+9 %",
+        "kandidatu": 507,
+        "zvoleno": 170
+      },
+      {
+        "profese": "právníci a advokáti",
+        "bonus": 6.0,
+        "popisek": "+6 %",
+        "kandidatu": 2252,
+        "zvoleno": 877
+      },
+      {
+        "profese": "zubaři a zubařky",
+        "bonus": 5.3,
+        "popisek": "+5 %",
+        "kandidatu": 504,
+        "zvoleno": 158
+      },
+      {
+        "profese": "starostové a místostarostové",
+        "bonus": 4.6,
+        "popisek": "+5 %",
+        "kandidatu": 6345,
+        "zvoleno": 5640
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "bonus": 4.3,
+        "popisek": "+4 %",
+        "kandidatu": 13104,
+        "zvoleno": 4013
+      },
+      {
+        "profese": "zemědělci a lesníci",
+        "bonus": 3.4,
+        "popisek": "+3 %",
+        "kandidatu": 4110,
+        "zvoleno": 1827
+      },
+      {
+        "profese": "policisté, strážníci a vojáci",
+        "bonus": 3.3,
+        "popisek": "+3 %",
+        "kandidatu": 2274,
+        "zvoleno": 897
+      },
+      {
+        "profese": "faráři, kazatelé a církevní pracovníci",
+        "bonus": 3.1,
+        "popisek": "+3 %",
+        "kandidatu": 74,
+        "zvoleno": 18
+      },
+      {
+        "profese": "zdravotní sestry a záchranáři",
+        "bonus": 2.2,
+        "popisek": "+2 %",
+        "kandidatu": 4633,
+        "zvoleno": 1177
+      },
+      {
+        "profese": "manažeři a ředitelé firem",
+        "bonus": 1.9,
+        "popisek": "+2 %",
+        "kandidatu": 21642,
+        "zvoleno": 7921
+      },
+      {
+        "profese": "inženýři, technici a architekti",
+        "bonus": 1.9,
+        "popisek": "+2 %",
+        "kandidatu": 14400,
+        "zvoleno": 5186
+      },
+      {
+        "profese": "ajťáci a programátoři",
+        "bonus": 1.2,
+        "popisek": "+1 %",
+        "kandidatu": 4920,
+        "zvoleno": 1501
+      },
+      {
+        "profese": "ekonomové a účetní",
+        "bonus": 1.2,
+        "popisek": "+1 %",
+        "kandidatu": 7484,
+        "zvoleno": 2599
+      },
+      {
+        "profese": "úředníci a administrativa",
+        "bonus": -0.2,
+        "popisek": "−0 %",
+        "kandidatu": 10017,
+        "zvoleno": 3431
+      },
+      {
+        "profese": "podnikatelé a OSVČ",
+        "bonus": -0.3,
+        "popisek": "−0 %",
+        "kandidatu": 22322,
+        "zvoleno": 7138
+      },
+      {
+        "profese": "sociální pracovníci a pečovatelky",
+        "bonus": -0.5,
+        "popisek": "−0 %",
+        "kandidatu": 2150,
+        "zvoleno": 507
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "bonus": -2.9,
+        "popisek": "−3 %",
+        "kandidatu": 9784,
+        "zvoleno": 2951
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "bonus": -5.8,
+        "popisek": "−6 %",
+        "kandidatu": 4691,
+        "zvoleno": 817
+      },
+      {
+        "profese": "dělníci, řidiči a skladníci",
+        "bonus": -5.8,
+        "popisek": "−6 %",
+        "kandidatu": 13384,
+        "zvoleno": 3482
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "bonus": -7.1,
+        "popisek": "−7 %",
+        "kandidatu": 12324,
+        "zvoleno": 2343
+      },
+      {
+        "profese": "studenti a studentky",
+        "bonus": -7.1,
+        "popisek": "−7 %",
+        "kandidatu": 3968,
+        "zvoleno": 306
+      },
+      {
+        "profese": "rodiče na mateřské a v domácnosti",
+        "bonus": -11.8,
+        "popisek": "−12 %",
+        "kandidatu": 1317,
+        "zvoleno": 289
+      },
+      {
+        "profese": "ředitelky a vedoucí knihoven",
+        "bonus": 6.5,
+        "popisek": "+6 %",
+        "kandidatu": 75,
+        "zvoleno": 36
+      },
+      {
+        "profese": "ostatní knihovnice a knihovníci",
+        "bonus": 3.6,
+        "popisek": "+4 %",
+        "kandidatu": 288,
+        "zvoleno": 79
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "profese",
+      "type": "nominal",
+      "sort": {
+        "field": "bonus",
+        "order": "descending"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 320,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 15,
+        "cornerRadius": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -14,
+              16
+            ]
+          },
+          "axis": {
+            "title": "osobní hlasy navíc proti průměru (%)",
+            "grid": true,
+            "gridColor": "#e8e2d6",
+            "format": "+d"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.bonus > 0",
+            "value": "#0e839e"
+          },
+          "value": "#a03250"
+        },
+        "tooltip": [
+          {
+            "field": "profese",
+            "title": "Profese"
+          },
+          {
+            "field": "popisek",
+            "title": "Osobní hlasy navíc"
+          },
+          {
+            "field": "kandidatu",
+            "title": "Kandidátů",
+            "format": ","
+          },
+          {
+            "field": "zvoleno",
+            "title": "Zvoleno",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": 4,
+        "align": "left",
+        "color": "#333333"
+      },
+      "transform": [
+        {
+          "filter": "datum.bonus >= 0"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": -4,
+        "align": "right",
+        "color": "#333333"
+      },
+      "transform": [
+        {
+          "filter": "datum.bonus < 0"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registr kandidátů pro volby do zastupitelstev obcí 2026 (stav 11. 10. 2026); výpočet DataTimes.cz"
+}
