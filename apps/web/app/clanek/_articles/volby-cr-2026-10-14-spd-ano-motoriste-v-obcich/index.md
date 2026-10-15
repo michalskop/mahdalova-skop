@@ -61,7 +61,7 @@ Motoristé sobě v roce 2022 postavili jedinou kandidátku, do zastupitelstva hl
 
 Dvanáct z dvaceti zvolených je v Ostravě: do zastupitelstva Ostrava-město se dostalo pět kandidátů samostatné kandidátky Motoristů (7,71 % hlasů) a dalších sedm usedne v obvodech Moravská Ostrava a Přívoz, Ostrava-Jih, Vítkovice a Mariánské Hory a Hulváky.
 
-Mimo Ostravu mají Motoristé po dvou zastupitelích ve dvou malých obcích, v Loučné nad Desnou na Šumpersku a ve Věšíně na Příbramsku, a po jednom v Ústí nad Labem, v ústeckém obvodu Severní Terasa, v Chomutově a v Ostrově na Karlovarsku.
+Mimo Ostravu mají Motoristé po dvou zastupitelích ve dvou malých obcích, v Loučné nad Desnou na Šumpersku a ve Věšíně na Příbramsku, a po jednom v Ústí nad Labem, v ústeckém obvodu Severní Terasa, v Chomutově a v Ostrově na Karlovarsku. Dalších šest členů Motoristů se do zastupitelstev dostalo na kandidátkách místních sdružení nebo jiné strany, které je navrhly, například v Černoučku na Litoměřicku, ve Smečně na Kladensku nebo v Čeladné na Frýdecko-Místecku. Do dvaceti zastupitelů Motoristů je nepočítáme: stejně jako u ostatních stran počítáme jen ty, které strana sama navrhla.
 
 V Praze se Motoristé ucházeli o zastupitelstvo města s plnou kandidátkou 65 lidí a dostali 2,90 % hlasů. Proti roku 2022 si mírně polepšili, do zastupitelstva je to ale opět nedostalo. Ve [sněmovních volbách 2025](https://www.volby.cz/app/ps2025/cs/results) volilo Motoristy v Praze 5,15 % voličů. Kandidovali také v osmi pražských městských částech (Praha 1, 3, 4, 5, 6, 11, 12 a 18) se 171 lidmi a nezískali nikde ani jeden mandát, nejvíc měli v Praze 3 (3,78 %). V Brně dostali 2,68 %, v Plzni se Svobodnými 2,00 %, v Kladně 1,92 % a ve Frýdku-Místku 1,56 %.
 

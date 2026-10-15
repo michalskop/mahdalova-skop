@@ -286,11 +286,14 @@ Když článek stojí na našem výpočtu (model, screening anomálií, přepoč
 - **Metodu vysvětlíme tak, aby ji pochopil laik** – jedním srozumitelným testem (např. „kolik hlasů voliči rozdali“), ne odkazem na „statistické modely“. Kde se dá, ukážeme kontrolu, která nepotřebuje model (dva lístky od týchž voličů).
 - **Dopad na výsledek (mandáty, postup) spočítáme, ne odhadneme**, a postup ověříme na oficiálních výsledcích, než ho použijeme.
 - **Dotčení dostanou možnost reagovat** (ČSÚ, obce, komise, kandidát), pokud text naznačuje jejich chybu.
+- **Definice „zastupitel strany“ musí být v textu a pokrýt i výjimky.** Počítáme-li zastupitele podle navrhující strany, členové strany zvolení za místní sdružení nebo jinou stranu do čísla nespadají. Kde jich je dost na to, aby si jich čtenář všiml (článek o Motoristech: 20 navržených + 6 členů na kandidátkách sdružení, např. Černouček), uvedeme je v textu zvlášť a skript je vypíše (15. 10. 2026).
 - **Pracovní nástroj není publikační výstup.** Screenshot vlastní pracovní mapy není cover ani obrázek do článku; interaktivní embed musí být v paletě, bez emoji a pracovních popisků („teaser“) a musí mít vysvětlení, jak ho číst.
 
 *Pravidlo platí od 2026-10-13 (po konceptu o volebních anomáliích, kde se strany kandidátů, rozpětí podpory i zápis opravy lišily od dat ČSÚ, titulek stavěl na slabší hypotéze a cover byl screenshot pracovní mapy). Typ: univerzální, datový modul. Vlastník: Kateřina Mahdalová.*
 
 ## Kontrola grafu a vizuálního tvrzení
+**Srovnání skupin musí být čitelné na první pohled:** kategorie na ose (pásma, roky) viditelně oddělit (podbarvení, mezery), hodnoty psát přímo ke značkám a změnu kolem nuly kreslit od zvýrazněné nulové osy; když dvojice svislých sloupců nic nesdělí, zkusit vodorovné pruhy po stranách (blok za každou stranu, doprava přibylo, doleva ubylo). Popisky os nesmí překrývat body na krajích (graf úspěšnosti: tečka na 0 % přes „Motoristé“). *(15. 10. 2026, graf podle velikosti obce v článku o SPD a Motoristech.)*
+
 Titulek je tvrzení, ne téma · osa, jednotka, období, populace a zdroj jsou viditelné · barva nese stabilní význam (stejná barva neznamená dvě věci) · klíčové hodnoty nejsou jen v tooltipu · mapa nenahrazuje přesnější seřazený graf, pokud by zkreslovala malé země či historické hranice · graf ukazuje nejistotu a kategorii „unknown", pokud ovlivňují čtení · alt text shrnuje zjištění, ne vzhled.
 
 ---

@@ -426,3 +426,16 @@ for r in table('reg26', 'kvrk.csv'):
 print('\n══ Stačilo!: členství navržených (BEZPP = bez politické příslušnosti) ══')
 for p, n in sorted(kand.items(), key=lambda x: -x[1]):
     print(f'  {p:10} kandidátů {n:>4}, zvoleno {zvol[p]}')
+
+
+# ═══ Členové Motoristů zvolení za jiný subjekt (sdružení, jiná strana) ═══
+# Do počtu zastupitelů Motoristů je nepočítáme (metoda = navrhující strana), v textu je zmiňujeme zvlášť.
+zast_nazev = {k: z['NAZEVZAST'] for k, z in zast26.items()}
+okres_obce = {k: o.get('o', '') for k, o in info.items()}
+listiny26 = {(r['KODZASTUP'], r['POR_STR_HL']): r['NAZEVCELK'] for r in table('reg26', 'kvros.csv')}
+jinde = [r for r in table('reg26', 'kvrk.csv')
+         if r['PSTRANA'] == STRANY['aut'] and r['MANDAT'] == 'A' and r['NSTRANA'] != STRANY['aut']]
+print(f'\n══ Členové Motoristů zvolení za jiný subjekt: {len(jinde)} ══')
+for r in jinde:
+    print(f"  {zast_nazev[r['KODZASTUP']]} (okres {okres_obce.get(r['KODZASTUP'], '?')}): "
+          f"{r['JMENO']} {r['PRIJMENI']}, kandidátka {listiny26[(r['KODZASTUP'], r['POR_STR_HL'])]}")
