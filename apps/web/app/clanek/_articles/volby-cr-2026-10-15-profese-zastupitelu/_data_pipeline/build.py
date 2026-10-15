@@ -86,7 +86,7 @@ PROFESE = [
     ('sluzby', 'prodavačky, kuchařky, kadeřnice a pošťačky', r'prodavač|pokladní|vedoucí prodejny|prodejn|číšník|číšnice|servírk|hostinsk|kuchař|barman|kadeřn|kosmetič|pošt|doručovatel|recepční|obsluha čerpací|provozní restaurace|restauratér|vedoucí jídelny|kuchyn', ()),
     ('socialni', 'sociální pracovníci a pečovatelky', r'sociální|pečovatel|sociálních služ', ()),
     ('pravnik', 'právníci a advokáti', r'právn|advokát|notář|soudc|exekutor|státní zástup', ()),
-    ('it', 'ajťáci a programátoři', r'(^|\W)it(\W|$)|programátor|informatik|vývojář|software|správce sítě|ict|počítač', ()),
+    ('it', 'IT specialisté a programátoři', r'(^|\W)it(\W|$)|programátor|informatik|vývojář|software|správce sítě|ict|počítač', ()),
     ('inzenyr', 'inženýři, technici a architekti', r'technik|inženýr|projektant|konstruktér|technolog|stavbyvedoucí|architekt|geodet|energetik|statik|stavební', ()),
     ('ekonom', 'ekonomové a účetní', r'účetní|ekonom|finanční|daňov|bank|pojišť|auditor|fakturant|mzdov', ()),
     ('manazer', 'manažeři a ředitelé firem', r'manažer|manager|ředitel|jednatel|vedoucí|mistr|předseda|management', ()),
@@ -552,6 +552,20 @@ def kandidati_muz(z):
     return [' '.join(c) for c in product(*[muzske(w) for w in slova]) if ' '.join(c) != z]
 
 
+def kratce(m, z):
+    """„učitel“ + „učitelka“ → „učitel/ka“, „důchodce“ + „důchodkyně“ → „důchodce/kyně“ (slovo po slově)."""
+    out = []
+    for mw, fw in zip(m.split(' '), z.split(' ')):
+        if mw == fw:
+            out.append(mw)
+            continue
+        n = 0
+        while n < min(len(mw), len(fw)) and mw[n] == fw[n]:
+            n += 1
+        out.append(f'{mw}/{fw[n:]}' if n >= 3 else f'{mw}/{fw}')
+    return ' '.join(out)
+
+
 sloucit = {}
 for z in zneni:
     for m in kandidati_muz(z):
@@ -564,7 +578,7 @@ for z, rr in zneni.items():
     m = sloucit.get(z, z)
     skup[m].extend(rr)
     if z != m:
-        popis[m] = f'{m} / {z}'
+        popis[m] = kratce(m, z)
 lookup = []
 for m, rr in skup.items():
     if len(rr) < 15 or not m:
@@ -575,7 +589,7 @@ print('sloučených dvojic muž/žena:', len(sloucit), 'ukázka:', list(sloucit.
 lookup.sort(key=lambda x: -x['k'])
 print('\nDOHLEDÁVAČ: znění povolání s ≥ 15 kandidáty:', len(lookup))
 (TAB / 'povolani.json').write_text(json.dumps(lookup, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-for z in ['knihovník / knihovnice', 'lékař / lékařka', 'učitel / učitelka', 'novinář / novinářka', 'starosta / starostka', 'důchodce / důchodkyně', 'kadeřník / kadeřnice']:
+for z in ['knihovník/ice', 'lékař/ka', 'učitel/ka', 'novinář/ka', 'starosta/ka', 'důchodce/kyně', 'technik/čka', 'administrativní pracovník/ice', 'projektový/á manažer/ka']:
     print('  ', next((x for x in lookup if x['p'] == z), z))
 
 # 5) HTML dohledávač (iframe srcdoc jako ostatní embedy webu)
@@ -583,7 +597,7 @@ import html as _html
 DOC = """<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#f8f6f0;color:#101432;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:14px}
+html,body{overflow:hidden}body{margin:0;background:#f8f6f0;color:#101432;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:14px}
 .wrap{padding:16px}
 h3{margin:0 0 4px;font-size:17px}
 p.sub{margin:0 0 12px;color:#4a4d63;font-size:13px;line-height:1.4}
@@ -600,7 +614,7 @@ input{width:100%;box-sizing:border-box;padding:9px 12px;font:inherit;border:1px 
 @media (max-width:480px){.row{grid-template-columns:minmax(0,1fr) 46px 120px}.row .k{display:none}}
 </style></head><body><div class="wrap">
 <h3>Najděte svou profesi</h3>
-<p class="sub">Profese tak, jak je kandidáti uvedli na hlasovacím lístku (znění, které použilo aspoň 15 kandidátů). Mužský a ženský tvar jsou zvlášť: vyhledávání „učitel“ najde oba. Poslední sloupec: o kolik procent víc (tyrkysově), nebo méně (vínově) hlasů dostal typický kandidát s tímto povoláním než kandidát na stejném místě stejně dlouhé kandidátky.</p>
+<p class="sub">Profese tak, jak je kandidáti uvedli na hlasovacím lístku (znění, které použilo aspoň 15 kandidátů). Mužský a ženský tvar téže profese jsou sloučené (učitel/ka). Poslední sloupec: o kolik procent víc (tyrkysově), nebo méně (vínově) hlasů dostal typický kandidát s tímto povoláním než kandidát na stejném místě stejně dlouhé kandidátky.</p>
 <input id="q" type="search" placeholder="Napište profesi, např. knihovnice, lékař, novinářka…" aria-label="Hledat profesi">
 <div class="row head"><div>profese</div><div class="num k">kandidátů</div><div class="num">zvoleno</div><div>hlasy navíc</div></div>
 <div class="list" id="list"></div>
@@ -611,7 +625,7 @@ const L=document.getElementById('list'),Q=document.getElementById('q');
 const f=n=>n.toLocaleString('cs-CZ');
 function bar(b){const w=Math.min(Math.abs(b),25)/25*50;const c=b>0?'#0e839e':'#a03250';
 const pos=b>0?'left:50%;width:'+w+'%':'left:'+(50-w)+'%;width:'+w+'%';
-const t=(b>0?'+':b<0?'\u2212':'')+Math.abs(Math.round(b))+'\u00a0%';
+const rb=Math.round(b);const t=(rb>0?'+':rb<0?'−':'')+Math.abs(rb)+' %';
 const tp=b>0?'left:calc(50% + '+w+'% + 4px)':'right:calc(50% + '+w+'% + 4px)';
 return '<div class="bar"><div class="zero"></div><div class="b" style="background:'+c+';'+pos+'"></div><div class="t" style="'+tp+'">'+t+'</div></div>'}
 function draw(){const q=Q.value.trim().toLowerCase();const r=D.filter(d=>!q||d.p.includes(q)).slice(0,200);
@@ -620,7 +634,7 @@ Q.addEventListener('input',draw);draw();
 </script></body></html>"""
 doc = DOC.replace('__DATA__', json.dumps(lookup, ensure_ascii=False, separators=(',', ':')))
 frame = ('<iframe title="Najděte svou profesi" loading="lazy" sandbox="allow-scripts" srcdoc="' + _html.escape(doc, quote=True) +
-         '" style="display:block;width:100%;height:540px;border:1px solid #ddd;border-radius:6px;margin:1.5rem 0;"></iframe>\n')
+         '" style="display:block;width:100%;height:600px;border:1px solid #ddd;border-radius:6px;margin:1.5rem 0;"></iframe>\n')
 (HERE.parent / 'dohledavac-povolani.html').write_text(frame, encoding='utf-8')
 print('dohledávač zapsán, kB:', round(len(frame) / 1024))
 

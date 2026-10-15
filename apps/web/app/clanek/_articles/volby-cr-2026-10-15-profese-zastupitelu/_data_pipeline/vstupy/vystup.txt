@@ -17,7 +17,7 @@ faráři, kazatelé a církevní pracovníci       kand     74 zvol    18 (24.3 
 zdravotní sestry a záchranáři                kand   4633 zvol  1177 (25.4 %)  pod čarou  3005 přeskočilo  202 ( 6.7 %)  bonus  +2.2 %  násobek 1.25
 manažeři a ředitelé firem                    kand  21642 zvol  7921 (36.6 %)  pod čarou 11684 přeskočilo  708 ( 6.1 %)  bonus  +1.9 %  násobek 0.97
 inženýři, technici a architekti              kand  14400 zvol  5186 (36.0 %)  pod čarou  7818 přeskočilo  528 ( 6.8 %)  bonus  +1.9 %  násobek 1.07
-ajťáci a programátoři                        kand   4920 zvol  1501 (30.5 %)  pod čarou  2846 přeskočilo  120 ( 4.2 %)  bonus  +1.2 %  násobek 0.72
+IT specialisté a programátoři                kand   4920 zvol  1501 (30.5 %)  pod čarou  2846 přeskočilo  120 ( 4.2 %)  bonus  +1.2 %  násobek 0.72
 ekonomové a účetní                           kand   7484 zvol  2599 (34.7 %)  pod čarou  4061 přeskočilo  249 ( 6.1 %)  bonus  +1.2 %  násobek 1.01
 úředníci a administrativa                    kand  10017 zvol  3431 (34.2 %)  pod čarou  5509 přeskočilo  289 ( 5.2 %)  bonus  -0.2 %  násobek 0.84
 podnikatelé a OSVČ                           kand  22322 zvol  7138 (32.0 %)  pod čarou 12839 přeskočilo  770 ( 6.0 %)  bonus  -0.3 %  násobek 0.98
@@ -139,12 +139,14 @@ TREND
 sloučených dvojic muž/žena: 1833 ukázka: [('prodavačka', 'prodavač'), ('expedientka', 'expedient'), ('kadeřnice', 'kadeřník'), ('manažerka prodeje', 'manažer prodeje'), ('ošetřovatelka koní', 'ošetřovatel koní'), ('důchodkyně', 'důchodce'), ('fyzioterapeutka', 'fyzioterapeut'), ('sociální pracovnice', 'sociální pracovník'), ('podnikatelka', 'podnikatel'), ('personalistka', 'personalista'), ('studentka', 'student'), ('porodní asistentka', 'porodní asistent'), ('řidička', 'řidič'), ('inspektorka kvality', 'inspektor kvality'), ('učitelka v mš', 'učitel v mš'), ('veterinární lékařka', 'veterinární lékař'), ('rehabilitační pracovnice', 'rehabilitační pracovník'), ('sanitářka', 'sanitář'), ('odborná poradkyně', 'odborný poradce'), ('skladnice', 'skladník'), ('asistentka pedagoga', 'asistent pedagoga'), ('zapisovatelka', 'zapisovatel'), ('kuchařka', 'kuchař'), ('administrativní pracovnice', 'administrativní pracovník'), ('učitelka na základní škole', 'učitel na základní škole')]
 
 DOHLEDÁVAČ: znění povolání s ≥ 15 kandidáty: 814
-   {'p': 'knihovník / knihovnice', 'k': 192, 'z': 51, 'b': 4.1}
-   {'p': 'lékař / lékařka', 'k': 1137, 'z': 398, 'b': 13.1}
-   {'p': 'učitel / učitelka', 'k': 3184, 'z': 1149, 'b': 5.6}
-   {'p': 'novinář / novinářka', 'k': 48, 'z': 14, 'b': 6.1}
-   {'p': 'starosta / starostka', 'k': 1479, 'z': 1448, 'b': 2.2}
-   {'p': 'důchodce / důchodkyně', 'k': 10245, 'z': 1956, 'b': -7.4}
-   {'p': 'kadeřník / kadeřnice', 'k': 238, 'z': 38, 'b': -6.0}
-dohledávač zapsán, kB: 91
+   {'p': 'knihovník/ice', 'k': 192, 'z': 51, 'b': 4.1}
+   {'p': 'lékař/ka', 'k': 1137, 'z': 398, 'b': 13.1}
+   {'p': 'učitel/ka', 'k': 3184, 'z': 1149, 'b': 5.6}
+   {'p': 'novinář/ka', 'k': 48, 'z': 14, 'b': 6.1}
+   {'p': 'starosta/ka', 'k': 1479, 'z': 1448, 'b': 2.2}
+   {'p': 'důchodce/kyně', 'k': 10245, 'z': 1956, 'b': -7.4}
+   {'p': 'technik/čka', 'k': 2393, 'z': 908, 'b': 0.3}
+   {'p': 'administrativní pracovník/ice', 'k': 1832, 'z': 580, 'b': -2.4}
+   {'p': 'projektový/á manažer/ka', 'k': 1101, 'z': 424, 'b': 3.0}
+dohledávač zapsán, kB: 83
 skoky pro cover: Counter({'lekar': 216, 'reditel_skoly': 174, 'veterinar': 36, 'knihovnik': 22})
