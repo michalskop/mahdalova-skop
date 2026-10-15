@@ -13,7 +13,7 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "SPD", "Motoristé", "AN
 promoted: 1
 ---
 
-SPD má po letošních komunálních volbách v obcích a městských částech 166 zastupitelů, před nimi jich měla 490. Motoristé prosadili 20 z 1 116 kandidátů. Mapy ukazují, kde mají strany zastupitele teď (plná tečka) a odkud vypadly (prázdný kroužek).
+SPD dostala v komunálních volbách výprask. Před volbami měla své lidi ve 217 zastupitelstvech obcí a městských částí, teď ve 121 z nich nemá nikoho, tedy ve více než polovině. Podobný vzkaz od voličů a voliček dostali Motoristé: z 1 116 kandidátů se do zastupitelstev dostal zhruba každý padesátý šestý, celkem dvacet. Mapy ukazují, kde mají strany zastupitele teď (plná tečka) a odkud vypadly (prázdný kroužek).
 
 ```fotogalerie 5 mapy
 - mapa-ano.png | ANO: zastupitele má ve 317 obcích, z 28 vypadlo. Před volbami 1 748 zastupitelů, po nich 1 650. | Data: volby.gov.cz, výpočet DataTimes.cz
