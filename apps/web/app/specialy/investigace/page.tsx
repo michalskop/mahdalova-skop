@@ -7,7 +7,7 @@ import SupportBanner from '@/components/common/SupportBanner';
 import type { Metadata } from 'next';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
-const COVER = `${BASE_URL}/images/specials/investigace.jpg`;
+const COVER = `${BASE_URL}/images/specials/og/investigace.jpg`;
 
 export const metadata: Metadata = {
   title: 'Investigace',

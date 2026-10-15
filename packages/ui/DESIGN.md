@@ -293,6 +293,12 @@ default Czech heading, so `heading` can be omitted; when written explicitly, use
 Two roles from one component:
 - **Bottom cards block = „Doporučujeme"** (the `cards` preset).
   Every article ends with `<RelatedArticles slugs={[…]} heading="🔻🔻🔻" />`.
+  **Always full rows, never a gap** (since 2026-10-14): the block shows at least
+  6 cards and always a multiple of three (3 columns on desktop, 1 on mobile).
+  The web app's `ArticleRenderer` pads any `slugs` list to that size with the
+  most related articles (most shared tags, then newest – pool ranked in
+  `apps/web/lib/articles.ts`); when nothing is closely related, a looser link by
+  topic, rubric or region is fine – an empty slot is not.
 - **Floating side box = „Napsali jsme"** (`preset="sidebar" position="right" heading="🔻🔻🔻"`).
   Placed mid-article; it **bleeds** out of the column like `<Figure>` (see
   *Bleed / vyčuhující prvky*).
@@ -411,6 +417,15 @@ text to as many whole lines (max 40) as fit the height of the right column, endi
 with "…". Only the lead gets `leadText` (payload). Editorial consequence: the first
 paragraphs after the excerpt are visible on the homepage, so they must read well as
 a continuation of the excerpt.
+
+**Hero side cards never crop a 5:4 cover (rule since 2026-10-14).** The three
+compact cards right of the lead keep the thumbnail at 5:4, but a long title (4–5
+lines) stretches the card and the thumbnail used to be center-cropped – the cover
+headline got cut ("…lo zůstal doma"). `useSideCoverLetterbox` in `FeaturedHero.tsx`
+marks native 5:4 covers (`data-letterbox`) and the CSS shows the whole image
+(`object-fit: contain`) on a blurred copy of itself. Don't "fix" such a case by
+redrawing the cover or shortening the title; images of other ratios still follow
+`coverFit` in `ArticleCard`.
 
 ---
 

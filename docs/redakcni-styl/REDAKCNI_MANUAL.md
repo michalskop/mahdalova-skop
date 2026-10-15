@@ -127,6 +127,11 @@ Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci
   1. **Inline related** (boční „Napsali jsme": `<RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" … />`): **v první čtvrtině článku**, vpravo.
   2. **Inline SupportBanner** (`<SupportBanner float="left" />`): **v horní polovině článku**, vlevo, níž než inline related a v jiném úseku textu.
   3. **Read-more box** pod článkem (`<RelatedArticles heading="🔻🔻🔻" />`, přes celou šíři) jako poslední prvek markdownu. **Pod ním** web sám přidá SupportBanner přes celou šíři. Ten se ručně nevkládá.
+     - **Vždy plné řady, nikdy díra.** Karty jdou po třech vedle sebe (na mobilu pod sebou), proto box ukazuje **aspoň 6 článků** a vždy násobek tří (3 + 1 osamocená karta je chyba). Web to hlídá sám: ruční seznam `slugs` doplní na násobek tří, nejméně na šest (`apps/web/components/clanek/ArticleRenderer.tsx`).
+     - **Příbuznost se najde vždy.** Doplněné články jsou ty s nejvíc společnými tagy s aktuálním článkem (řazení poolu v `apps/web/lib/articles.ts`), při shodě novější dřív. Když přímo příbuzný článek není, stačí volnější vazba přes téma, rubriku nebo region („přes koleno") – prázdné místo nikdy.
+     - Do `slugs` dáváme na začátek ty nejbližší články ručně; zbytek do plné řady dopočítá web.
+
+     *Pravidlo platí od 2026-10-14 (čtyři karty = řada tří a jedna osamocená pod článkem o mapě okrsků; řešilo se už dřív). Vlastník: Kateřina Mahdalová.*
   - **Kam boční prvky patří:** jen tam, kde je obteče dost souvislého textu, aby sazba působila celistvě, ne „rozbitě" nebo „děravě". Prvek dáme na začátek textově bohatého odstavce (nebo do jeho první věty) a vedle něj musí následovat aspoň 3–4 běžné odstavce bez mezititulku, boxu, grafu, tabulky, fotky přes celou šíři, citace nebo seznamu. Text musí prvek obtéct celý a pokračovat i pod ním.
   - **Kam ne:** do úvodního odstavce (perexu) ani hned pod něj, těsně před mezititulek nebo za něj, vedle krátkých odstavců, do stejného úseku jako jiný boční prvek (fotka, InfoBox) a nikdy tak, aby se levý a pravý prvek potkaly vedle sebe.
   - **Když místo není:** krátký text (zprávička, číslo dne) nebo text složený hlavně z grafů a boxů nemusí mít vhodný úsek. Pak boční prvek nevnucujeme: inline related vynecháme a SupportBanner dáme bez `float` přes celou šíři mezi dva odstavce v horní polovině. Read-more box dole je povinný vždy.
@@ -339,7 +344,7 @@ Pro koho text je a co má po přečtení vědět nebo umět · jedna hlavní ot�
 - [ ] Konec dokončuje myšlenku, ne rekapituluje
 - [ ] U vlastního výpočtu: každé číslo v textu, tabulce a grafu sedí s výstupem skriptu u článku; titulek stojí na nejsilnější hypotéze; dotčení dostali možnost reagovat
 - [ ] `npm run check:articles` prošel (běží i v buildu)
-- [ ] Inline related v první čtvrtině, inline SupportBanner v horní polovině, oba obtečené dostatkem textu; read-more box `🔻🔻🔻` na konci (viz Část II → Fotografie a obraz → Povinné vložené prvky)
+- [ ] Inline related v první čtvrtině, inline SupportBanner v horní polovině, oba obtečené dostatkem textu; read-more box `🔻🔻🔻` na konci s plnými řadami – aspoň 6 karet, žádná díra (viz Část II → Fotografie a obraz → Povinné vložené prvky)
 
 ## Od úpravy po publikaci: bezpečný postup (git)
 Platí pro lidi i pro AI (Claude, Codex) při každé změně webu – článek, komponenta, oprava.

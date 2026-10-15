@@ -69,6 +69,14 @@ function obrazek(c, f, klic) {
   return `<img src="${dataUri(m.src)}" style="position:absolute;left:${x}px;top:${y}px;height:${h}px;mix-blend-mode:screen;opacity:${op};filter:brightness(${m.jas ?? 0.75})">`;
 }
 
+// motiv.typ 'svg': hotová vrstva motivu pro každý formát (soubory[klic] = SVG o rozměrech formátu, vkládá se inline,
+// takže texty v ní berou IBM Plex ze stránky); u OG volitelně ztlumená (opacityOg)
+function svgVrstva(c, f, klic) {
+  const m = c.motiv;
+  const op = f.stred ? m.opacityOg ?? 1 : 1;
+  return `<div style="position:absolute;left:0;top:0;width:${f.w}px;height:${f.h}px;opacity:${op}">${fs.readFileSync(m.soubory[klic], 'utf8')}</div>`;
+}
+
 // Volitelný tečkovaný znak přes motiv (např. velký otazník): c.znak = { text, barva, opacity, opacityOg,
 // pozice: { homepage: [střed x, účaří y, velikost písma], … }, teckaNaObvodu }. Znak se skládá jen z celých
 // koleček na pravidelné mřížce (jako tečková mapa): glyf IBM Plex Serif Bold (ztučněný obrysem) se po načtení
@@ -230,7 +238,7 @@ function html(c, klic) {
   const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}), ...(c.mapaPozice?.[klic] ? { mapa: c.mapaPozice[klic] } : {}) };
   const { w, h } = f;
   const [bx0, by0, bx1, by1] = f.box;
-  const motiv = c.motiv.typ === 'tecky' ? tecky(c, f) : obrazek(c, f, klic);
+  const motiv = c.motiv.typ === 'tecky' ? tecky(c, f) : c.motiv.typ === 'svg' ? svgVrstva(c, f, klic) : obrazek(c, f, klic);
   const scrim = !f.stred && c.motiv.scrim ? `<div style="position:absolute;inset:0;background:linear-gradient(90deg,${NAVY} 0%,${NAVY}e6 ${c.motiv.scrim[0]}%,${NAVY}00 ${c.motiv.scrim[1]}%)"></div>` : '';
   const ogScrim = f.stred ? `<div style="position:absolute;inset:0;background:radial-gradient(ellipse 34% 60% at 50% 50%,${NAVY}cc,${NAVY}00)"></div>` : '';
   const stitek = c.stitek ? `<span class="stitek">${c.stitek}</span>` : '';
@@ -268,7 +276,9 @@ function html(c, klic) {
   const okraj = Math.max(Math.round(w * 0.032), w - bx1);
   const rohLogo = logoVlevo ? `left:${bx0}px` : `right:${okraj}px`;
   const rohLeg = logoVlevo ? `right:${okraj}px;text-align:right` : `left:${bx0}px`;
-  const leg = c.legenda && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${h - by1}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
+  // c.legendaPodTextem: legenda v toku textu pod podtitulkem (karty, kde dolní roh zabírá motiv)
+  const legTok = c.legenda && c.legendaPodTextem && !f.stred ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
+  const leg = c.legenda && !c.legendaPodTextem && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${h - by1}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
   const text = f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
@@ -277,6 +287,7 @@ function html(c, klic) {
          ${nad ? `<div style="margin-top:${f.t * 0.45}px">${nad}</div>` : ''}
          <h1 style="margin-top:${f.t * (nad ? 0.15 : 0.3)}px">${c.titulek}</h1>
          ${pod ? `<div style="margin-top:${f.t * 0.3}px">${pod}</div>` : ''}
+         ${legTok}
        </div>
        ${leg}
        <div class="halo" style="position:absolute;${rohLogo};bottom:${h - by1}px">${logo}</div>`;

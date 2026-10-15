@@ -64,6 +64,29 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 (`PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <config>`). Vzory konfigurací: predikce,
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
+**Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *14. 10. 2026 – useknutý titulek v boční kartě titulky („Kdo zůstal doma“).* Cover byl v pořádku; chyba byla
+  v kartě, která se u dlouhého titulku protáhla a náhled ořízla na střed. Opraveno v komponentě (boční karty
+  cover 5:4 nikdy neořezávají, viz `packages/ui/DESIGN.md` → *Hero side cards*). Při podobné chybě nejdřív
+  porovnat soubor v repu s webem a změřit rámeček karty, teprve pak sahat na cover.
+- *14. 10. 2026 – ikona přes štítek a titulek (kalkulačka, čtverec/IG/story).* U dlouhého titulku generátor
+  nehlídá kolizi ikony s textem. V kontrolním listu projít **všech pět formátů**, nejen homepage, a kolizi
+  řešit přes `ikonaPozice` v cover.config.cjs. (Kalkulačka zatím neopravena – čeká na revizi coverů v UKOLY.md.)
+- *14. 10. 2026 – obrázek v kartě nejde otevřít v nové kartě.* Obrázek karty patří do `<img>`, ne do CSS
+  `background-image`, a vrstvy nad ním (gradient, titulek) mají `pointer-events: none`; karta zůstává odkazem.
+  Platí pro karty článků (`ArticleCard`) i speciálů (`SpecialsHero`).
+- *14. 10. 2026 – OG obrázky speciálů.* Sítě a messengery SVG neumějí (klima, KVIFF, Svobodná média měly SVG,
+  investigace odkaz na neexistující JPG, DPBP žádný). OG speciálu = obrázek jeho karty na titulce, vyrobený
+  `tools/specials-og.cjs` do `public/images/specials/og/<název>.jpg`; po změně obrázku karty skript spustit znovu.
+  Boky 1200×630 jsou **gradient od barvy kraje do nejtmavšího odstínu téže škály palety** – nikdy rozmazaná ani
+  protažená kopie obrázku (působí zdvojeně a rušivě, Kateřina).
+- *14. 10. 2026 – karta speciálu Volby 2026.* Logo DataTimes.cz samotné jako kolečko, bez dlaždice, obrysu
+  i stínu; za ním tři světla v barvách jeho částí (červené, bílé, modré).
+- *14. 10. 2026 – nový obrázek „není vidět“ ani po refreshi.* Web posílá obrázky s cache 4 hodiny
+  (`max-age=14400`), takže obrázek přepsaný pod **stejným jménem** prohlížeč dál bere z cache. Při výměně
+  obrázku karty/coveru buď nové jméno souboru, nebo verze v odkazu (`volby-2026.svg?v=2026-10-14`). Ověřit:
+  `curl -s <URL> | grep <něco z nové verze>` – když server vrací novou verzi, chyba je jen v cache.
+
 Původní vzor generátoru pro grafické (ne fotografické) covery a kontrolní list ořezů:
 `apps/web/app/clanek/_articles/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky/_cover_pipeline/`
 (`cover.cjs`, `nahledy.cjs`). Hotový prompt pro zadání coveru AI: [PROMPT-COVER.md](PROMPT-COVER.md).

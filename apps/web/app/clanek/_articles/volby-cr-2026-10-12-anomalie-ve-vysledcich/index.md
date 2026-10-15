@@ -3,7 +3,7 @@ title: "Jeden hlas rozhodl o Senátu. Ve volebních zápisech přitom zřejmě c
 date: "2026-10-12"
 time: "22:36"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Na Žďársku rozhodl o postupu do druhého kola senátních voleb jediný hlas. Prošli jsme výsledky všech volebních okrsků. V Ostravě, Kladně, Brně a Praze jsou zápisy, ve kterých zřejmě chybějí tisíce hlasů. V Kladně může oprava jediného okrsku rozhodnout o mandátu."
+excerpt: "Na Žďársku rozhodl o postupu do druhého kola jediný hlas. V Milešíně má David Moos podezřele vysokých 13 z 33 hlasů; Radek Černý je v oficiálním zápisu hned vedle něj. V Ostravě, Kladně, Brně a Praze zřejmě chybějí tisíce hlasů. V Kladně může oprava jediného okrsku rozhodnout o mandátu."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -15,6 +15,8 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", 
 Jedenáct tisíc tři sta sedmdesát tři proti jedenácti tisícům tři sta sedmdesáti dvěma. Neboli 11 373 : 11 372. Takhle těsně skončil v sobotu souboj o druhé kolo senátních voleb na Žďársku.
 
 Rozhodl [jediný hlas](/clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce).
+
+V Milešíně přitom [oficiální výsledek uvádí pro Davida Moose 13 z 33 platných hlasů](https://volby.gov.cz/app/senat/20261009/cs/results/%21_51_587770__1), podezřele vysoký počet proti okolním obcím. Radek Černý, kterému k postupu chyběl jediný hlas, je v zápisu s číslem 4 hned vedle Moose s číslem 5.
 
 <SupportBanner float="left" />A takový hlas se může ztratit kdekoli. Při sčítání lístků, při zapisování cifer s výsledky, při přepisu čísel do výkazu pro Český statistický úřad.
 
@@ -52,6 +54,10 @@ Okrsek 29 v Kladně měl 428 platných lístků, každý s 33 hlasy. Voliči pod
 
 A je jasné, komu hlasy chybějí. Koalice lidovců, zelených, Starostů a Pirátů KLADEŇÁCI měla v okrsku 287 hlasů, 2,8 procenta. Ve zbylých 56 okrscích 14 až 40 procent, obvykle kolem 28.
 
+<HtmlEmbed file="mapa-kladno.html" />
+
+*Barva ukazuje podíl hlasů pro KLADEŇÁKY v jednotlivých kladenských okrscích. Okrsek 29 má 2,84 %. Kliknutím na bublinu zobrazíte počty hlasů. Neobvyklý výsledek sám o sobě nedokládá chybu.*
+
 Kdyby voliči v okrsku 29 rozdali tolik hlasů jako v průměrném kladenském okrsku, přibylo by jich asi 3 230. Kdyby všechny patřily KLADEŇÁKŮM, dostali by se zhruba na průměr města. A tady začíná být napínavé.
 
 Kladenské zastupitelstvo má 33 členů. VOLBA PRO KLADNO získala 11 mandátů, KLADEŇÁCI 10, ANO a ODS po pěti, Unie pro sport a zdraví dva. Podle našeho přepočtu by KLADEŇÁCI získali jedenáctý mandát na úkor ODS, kdyby měli o 3 340 hlasů víc. To je jen o sto víc, než je odhad chybějících hlasů. Kdyby voliči v okrsku 29 rozdali hlasy tak důsledně jako v nejpečlivějším kladenském okrsku, chybělo by jich kolem 3 800 a mandát by se přesunul.
@@ -62,9 +68,23 @@ Rozhodnout to může jen přepočítání lístků.
 
 V Brně vyhrála koalice Lidovci a Starostové s 27,4 procenta a 18 mandáty z 55. V okrsku 23018 v Brně-středu má na lístku do zastupitelstva města nulu. Na lístku do zastupitelstva Brna-středu jí titíž voliči dali 2 857 hlasů, skoro pětinu. Lístek do města má navíc využito jen 76 procent hlasů, lístek do městské části 96 procent.
 
+<HtmlEmbed file="mapa-brno.html" />
+
+*Výsledky volby města Brna v okrscích Brna-středu. Koalice Lidovci a Starostové má v okrsku 23018 zapsáno 0 hlasů. Kliknutím na bublinu zobrazíte počty hlasů. Neobvyklý výsledek sám o sobě nedokládá chybu.*
+
+Nulu má také ZELENÉ BRNO v okrsku 8002 v Brně-jihu. Na městském lístku je zapsáno 0 hlasů, přestože v sousedních okrscích 8001 a 8003 získalo 4,8 a 5,6 procenta. Čtyři srovnávací modely pro okrsek 8002 očekávají zhruba 1 100–1 370 hlasů pro kandidáty. Z 391 odevzdaných obálek bylo 359 platných lístků do městského zastupitelstva. Celkové využití hlasů je 91,1 procenta proti brněnskému mediánu 95,2 procenta, takže původní kontrola velkého úbytku hlasů tento případ nezachytila. Kandidátka měla v celém Brně 8,9 procenta, pod původní desetiprocentní hranicí pro kontrolu nízkých výsledků stran. Samostatná kontrola nul ji proto zařazuje do přehledu. Neobvyklá nula ani modelový odhad neurčují správný počet; ten může doložit kontrola zápisu a lístků.
+
 V Praze 2 má v okrsku 2038 nulu hnutí ANO, které v celé Praze dostalo 14,4 procenta. Na lístku do zastupitelstva Prahy 2 mu titíž voliči dali 1 799 hlasů. Nulu nebo skoro nulu mají v okrsku i všechny strany s čísly 19 až 24, tedy celý konec kandidátky. Vypadá to, jako by zapisovatel spodní řádky archu vůbec nepřepsal.
 
+<HtmlEmbed file="mapa-praha_2.html" />
+
+*Výsledky volby hlavního města v okrscích Prahy 2. ANO má v okrsku 2038 zapsáno 0 hlasů. Kliknutím na bublinu zobrazíte počty hlasů. Neobvyklý výsledek sám o sobě nedokládá chybu.*
+
 V Praze 3 má v okrsku 3036 koalice SPOLU pro Prahu jen 662 hlasů, 2,5 procenta. V celé Praze dostala 22 procent. I tady je na lístku do města využito o 17 bodů méně hlasů než na lístku do Prahy 3.
+
+<HtmlEmbed file="mapa-praha_3.html" />
+
+*Výsledky volby hlavního města v okrscích Prahy 3. SPOLU pro Prahu má v okrsku 3036 zapsáno 2,47 % hlasů. Kliknutím na bublinu zobrazíte počty hlasů. Neobvyklý výsledek sám o sobě nedokládá chybu.*
 
 Na rozdělení mandátů v Brně ani v Praze by oprava nic nezměnila, ani kdyby všechny chybějící hlasy dostala strana s nulou. Pražské zastupitelstvo se dělí podle 24,6 milionu hlasů.
 
@@ -78,7 +98,105 @@ Na rozdělení mandátů v Brně ani v Praze by oprava nic nezměnila, ani kdyby
 | Praha 2, okrsek 2038 | ANO a strany č. 19–24 s nulou | 77 % / 95 % | beze změny |
 | Praha 3, okrsek 3036 | SPOLU 2,5 % místo zhruba 22 % | 79 % / 95 % | beze změny |
 
-Úplný seznam 65 okrsků, které náš test označil, je v [datech k článku](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-10-12-anomalie-ve-vysledcich/_data_pipeline/vstupy). V menších obcích jsou výkyvy častější a ne každý znamená chybu.
+Přehled níže obsahuje 78 okrskových výsledků doporučených ke kontrole. K původním 65 přidáváme samostatnou kontrolu nul: označila 17 výsledků kandidátek, z nichž čtyři už v seznamu byly. Přibývá tedy 13 okrskových výsledků.
+
+*Doplnění 14. října 2026: nulové výsledky jsme nově zařadili i tehdy, když kandidátka nedosáhla deseti procent v celém městě nebo okrsku nechybí výrazná část celkového součtu hlasů. Vycházíme ze stejného stavu dat k 11. říjnu 2026.*
+
+<details>
+<summary style={{cursor: 'pointer', fontWeight: 600, padding: '12px 0'}}>Zobrazit všech 78 označených okrskových výsledků</summary>
+
+Jde o výsledky doporučené ke kontrole, nikoli o potvrzené chyby. Jeden fyzický okrsek může být uveden dvakrát, pokud test označil volbu města i městské části. Využití hlasů je podíl skutečně rozdaných hlasů na jejich maximálním možném počtu. Odhad chybějících hlasů z původního seznamu vychází ze srovnání s mediánem města; není to zjištěný počet ani návrh opravy. U nově přidaných nul tento odhad neuvádíme: důvodem kontroly je konkrétní kandidátka, nikoli celkový úbytek hlasů. Očekávaný podíl v posledním sloupci je srovnávací odhad, nikoli údaj ze zápisu.
+
+<div style={{maxHeight: '34rem', overflowY: 'auto'}}>
+
+| Zastupitelstvo | Okrsek | Platné lístky | Využití hlasů | Medián města | Odhad chybějících hlasů | Kandidátka s nulovým či velmi nízkým výsledkem |
+| :--- | ---: | ---: | ---: | ---: | ---: | :--- |
+| Ostrava | 11065 | 309 | 20,8 % | 92,8 % | 12 236 | – |
+| Ostrava-Jih | 11049 | 305 | 45,6 % | 93,3 % | 6 544 | – |
+| Praha 15 | 15003 | 528 | 60,1 % | 97,0 % | 6 035 | – |
+| Dobrovice | 9 | 146 | 58,9 % | 84,6 % | 561 | – |
+| Ústí nad Labem-Střekov | 4017 | 310 | 66,9 % | 90,0 % | 1 073 | – |
+| Ostrava-Jih | 11037 | 289 | 70,3 % | 93,3 % | 2 991 | – |
+| Kladno | 29 | 428 | 71,5 % | 94,4 % | 3 234 | – |
+| Náchod | 24 | 60 | 65,6 % | 88,5 % | 372 | – |
+| Brno-sever | 20026 | 330 | 71,7 % | 94,6 % | 2 651 | – |
+| Štětí | 12 | 86 | 66,6 % | 88,9 % | 403 | – |
+| Praha (město) | 13050 | 316 | 73,1 % | 95,1 % | 4 525 | – |
+| Plzeň | 1005 | 52 | 71,6 % | 92,4 % | 507 | Česká pirátská strana (0 hlasů; průměr ostatních okrsků očekává 4,9 %) |
+| Praha (město) | 10014 | 93 | 74,8 % | 95,1 % | 1 226 | – |
+| Praha 8 | 8013 | 239 | 75,4 % | 95,5 % | 2 163 | – |
+| Praha (město) | 5019 | 254 | 75,4 % | 95,1 % | 3 253 | – |
+| Praha 6 | 6071 | 287 | 75,8 % | 95,0 % | 2 484 | – |
+| Uherské Hradiště | 13 | 290 | 71,7 % | 90,8 % | 1 500 | – |
+| Brno | 23018 | 351 | 76,3 % | 95,2 % | 3 634 | Lidovci a Starostové – Brno blíž lidem (0 hlasů; model očekává 18,3 %) |
+| Brno | 23006 | 188 | 76,9 % | 95,2 % | 1 887 | – |
+| Brno | 11003 | 591 | 77,0 % | 95,2 % | 5 888 | – |
+| Praha (město) | 2038 | 294 | 77,1 % | 95,1 % | 3 440 | ANO 2011 (0 hlasů; model očekává 14,6 %) |
+| Ústí nad Labem | 1005 | 298 | 74,2 % | 91,9 % | 1 943 | – |
+| Humpolec | 4 | 356 | 69,1 % | 86,6 % | 1 305 | – |
+| Chrudim | 15 | 199 | 73,5 % | 90,8 % | 932 | – |
+| Ostrava | 8004 | 120 | 75,5 % | 92,8 % | 1 141 | – |
+| Krnov | 9 | 209 | 71,1 % | 88,2 % | 966 | – |
+| Praha 3 | 3045 | 547 | 79,2 % | 96,2 % | 3 241 | – |
+| Praha (město) | 2034 | 380 | 78,2 % | 95,1 % | 4 179 | – |
+| Praha (město) | 4026 | 305 | 78,7 % | 95,1 % | 3 253 | – |
+| Plzeň 3 | 3006 | 89 | 77,4 % | 93,8 % | 482 | – |
+| Praha (město) | 3036 | 524 | 78,8 % | 95,1 % | 5 537 | – |
+| Praha (město) | 9002 | 194 | 78,8 % | 95,1 % | 2 060 | – |
+| Ostrava | 15023 | 268 | 76,8 % | 92,8 % | 2 360 | – |
+| Plzeň | 7001 | 536 | 76,8 % | 92,4 % | 3 921 | – |
+| Ostrava | 11037 | 285 | 77,3 % | 92,8 % | 2 432 | – |
+| Praha 4 | 4026 | 305 | 80,8 % | 96,0 % | 2 096 | – |
+| Brno | 27024 | 342 | 80,1 % | 95,2 % | 2 832 | – |
+| Brno | 1010 | 277 | 80,1 % | 95,2 % | 2 288 | – |
+| Frýdek-Místek | 40 | 429 | 77,1 % | 91,8 % | 2 727 | – |
+| Ústí nad Labem | 4017 | 310 | 77,3 % | 91,9 % | 1 665 | – |
+| Praha (město) | 4081 | 191 | 80,7 % | 95,1 % | 1 783 | – |
+| Praha 7 | 7012 | 364 | 82,1 % | 96,4 % | 1 502 | – |
+| Karviná | 18 | 156 | 75,8 % | 90,1 % | 915 | – |
+| Praha (město) | 4011 | 202 | 81,1 % | 95,1 % | 1 838 | – |
+| Most | 30 | 219 | 80,7 % | 94,7 % | 1 379 | – |
+| Praha (město) | 10028 | 293 | 81,3 % | 95,1 % | 2 631 | – |
+| Brno | 20016 | 264 | 81,5 % | 95,2 % | 1 984 | – |
+| Brno | 13009 | 506 | 81,6 % | 95,2 % | 3 776 | – |
+| Praha 13 | 13053 | 303 | 82,1 % | 95,6 % | 1 429 | – |
+| Praha (město) | 6057 | 636 | 81,7 % | 95,1 % | 5 530 | – |
+| Šumperk | 16 | 232 | 78,3 % | 91,4 % | 819 | – |
+| Praha (město) | 12049 | 317 | 82,1 % | 95,1 % | 2 671 | – |
+| Praha (město) | 14012 | 336 | 82,1 % | 95,1 % | 2 837 | SEN PRO PRAHU s Václavem Láskou, s podporou HPP 11 a strany Mourek (0 hlasů; model očekává 2,6 %) |
+| Trhové Sviny | 10 | 62 | 77,7 % | 90,5 % | 183 | – |
+| Jaroměř | 13 | 179 | 77,4 % | 90,2 % | 484 | – |
+| Poruba | 15023 | 268 | 81,8 % | 94,5 % | 1 258 | – |
+| Nové Město nad Metují | 1 | 114 | 77,5 % | 90,1 % | 301 | – |
+| Brno-Královo Pole | 13007 | 598 | 83,2 % | 95,6 % | 2 007 | – |
+| Praha 4 | 4124 | 224 | 83,7 % | 96,0 % | 1 241 | – |
+| Praha 13 | 13042 | 211 | 83,5 % | 95,6 % | 894 | – |
+| Poruba | 15010 | 213 | 90,1 % | 94,5 % | 344 | Porubská výzva |
+| Hlučín | 5 | 672 | 89,2 % | 91,7 % | 347 | SNK Evropští demokraté |
+| Hlučín | 3 | 499 | 91,7 % | 91,7 % | 3 | SNK Evropští demokraté |
+| Hlučín | 4 | 557 | 92,1 % | 91,7 % | 0 | SNK Evropští demokraté |
+| Beroun | 16 | 63 | 98,6 % | 94,1 % | 0 | Nezávislí Berouňáci; Společně pro Beroun |
+| Brno | 8002 | 359 | 91,1 % | 95,2 % | – | ZELENÉ BRNO (Zelení, Žít Brno, SEN 21, LES, Volt, Budoucnost, Kruh) (0 hlasů; model očekává 7,5 %) |
+| Brno | 23011 | 165 | 96,3 % | 95,2 % | – | Motoristé sobě (0 hlasů; model očekává 2,2 %) |
+| Ostrava | 19004 | 63 | 90,9 % | 92,8 % | – | Hnutí Stačilo! a nezávislí Ostraváci (0 hlasů; model očekává 5,7 %) |
+| Ostrava | 19023 | 80 | 90,4 % | 92,8 % | – | Svoboda a přímá demokracie (SPD) (0 hlasů; model očekává 4,4 %) |
+| Praha (město) | 5004 | 115 | 92,8 % | 95,1 % | – | SPD pro Prahu s podporou Trikolory, PRO, Přísahy a nezávislých kandidátů (0 hlasů; model očekává 2,4 %) |
+| Plzeň | 3041 | 147 | 92,7 % | 92,4 % | – | Motoristé sobě + Svobodní (0 hlasů; model očekává 2,1 %) |
+| Praha (město) | 54003 | 76 | 91,2 % | 95,1 % | – | Motoristé sobě (0 hlasů; model očekává 2,8 %) |
+| Praha 5 | 5004 | 115 | 93,7 % | 96,4 % | – | SPD pro Prahu 5 s podporou PRO a nezávislých kandidátů (0 hlasů; model očekává 2,6 %) |
+| Brno | 23012 | 76 | 97,3 % | 95,2 % | – | Brnoklidem (0 hlasů; model očekává 2,7 %) |
+| Brno | 23010 | 101 | 97,1 % | 95,2 % | – | Motoristé sobě (0 hlasů; model očekává 2,0 %) |
+| Ostrava | 19025 | 76 | 97,4 % | 92,8 % | – | Naše Česko (0 hlasů; model očekává 2,6 %) |
+| Ústí nad Labem | 1001 | 52 | 87,6 % | 91,9 % | – | Vaše Ústí s podporou Za lepší Střekov (0 hlasů; model očekává 5,9 %) |
+| Brno | 3003 | 399 | 91,2 % | 95,2 % | – | Za Lužánky (0 hlasů; průměr ostatních okrsků očekává 5,3 %) |
+
+</div>
+
+*Zdroj: otevřená okrsková data ČSÚ, stav k 11. říjnu 2026; výpočet DataTimes.cz. Původních 65 řádků zachovává své číselné hodnoty a pořadí. Nové nulové případy jsou připojeny na konci; vysvětlení nul doplňujeme i u čtyř již uvedených výsledků. U Brna-Bystrce 3003 a Plzně 1, okrsku 1005, vychází očekávání z průměru ostatních okrsků daného zastupitelstva; takové srovnání je slabší než model zohledňující místní rozdíly.*
+
+</details>
+
+Podobný přístup používá také [analýza Martina Suchana](https://volebnianalyza.suchan.cz/). V otevřených okrskových datech ČSÚ porovnává výsledky s okolím a se souběžnou volbou města a městské části, hledá možné chybějící hlasy či překlepy a vyhodnocuje jejich případný dopad na mandáty.
 
 ## Milešín: třináct hlasů pro outsidera
 
@@ -86,9 +204,15 @@ V senátních volbách tenhle test nefunguje, volič má jediný hlas. Zbývá s
 
 Třináct z nich dostal David Moos, IT specialista ze Senetářova na Blanensku, kterého navrhli Spojení demokraté – Sdružení nezávislých. V celém obvodu měl 4,65 procenta, v šesti sousedních obcích dohromady 6,3. V Milešíně 39,4 procenta. Nikde jinde v obvodu nepřesáhl 22 procent.
 
+<HtmlEmbed file="mapa-senate_51.html" />
+
+*David Moos získal v Milešíně 13 z 33 platných hlasů (39,4 %). V nabídce lze přepnout na Šmardu, Černého či Klementa a porovnat jejich výsledky ve stejných okrscích. Kliknutím na bublinu zobrazíte počty hlasů. Neobvyklý výsledek sám o sobě nedokládá chybu.*
+
 Michal Šmarda, starosta Nového Města na Moravě, kterého navrhl Volt a který celý obvod vyhrál s 27,6 procenta, dostal v Milešíně tři hlasy. V sousedních obcích měl dohromady 35 procent, jen v Rozseči také málo, 15 procent.
 
 <VegaChart dataFile="data/milesin.json" />
+
+*Menší modré kosočtverce: Březí, Heřmanov, Radňoves, Rozseč, Skřinářov a Vidonín. Velký modrý bod: jejich společný podíl (součet hlasů pro kandidáta dělený 378 platnými hlasy). Červený bod: Milešín. Kandidáti jsou v pořadí čísel 1–5 z oficiálního zápisu; hodnoty jednotlivých obcí zobrazíte po najetí na bod.*
 
 Nabízí se vysvětlení, že komise prohodila čísla 3 a 13 mezi Šmardou a Moosem. Po prohození by oba měli v Milešíně zhruba tolik jako v okolí. Na postupu do druhého kola by se nic nezměnilo, Šmarda je první tak jako tak.
 
@@ -104,6 +228,12 @@ Pro Černého je podstatnější něco jiného. Při rozdílu jednoho hlasu mů�
 Vycházíme z [otevřených dat Českého statistického úřadu](https://volby.gov.cz/opendata/opendata.htm) o výsledcích v okrscích, stav po zpracování v neděli 11. října. U žádného ze zmíněných okrsků data k tomu dni neevidují opravu zápisu. Originální zápisy ani lístky jsme neviděli.
 
 U obecních voleb jsme pro každý okrsek s nejméně 50 platnými lístky spočítali, kolik procent hlasů voliči skutečně rozdali, a porovnali to s mediánem města. Označili jsme okrsky, které jsou o 12 a více procentních bodů pod ním, a okrsky, kde strana s alespoň 10 procenty ve městě dostala nejvýš procento hlasů. Ve městech s městskými částmi jsme porovnali oba lístky z téhož okrsku.
+
+Nulové výsledky nyní kontrolujeme samostatně. Do doplněného přehledu zařazujeme kandidátku s výslovně zapsanou nulou a platnými kandidáty v okrsku s nejméně 50 platnými lístky. Očekávaný místní podíl musí dosahovat alespoň dvou procent a alespoň jeden ze dvou odhadů musí očekávat nejméně 100 hlasů pro kandidáty. První odhad násobí očekávaný podíl zveřejněným součtem hlasů v okrsku, druhý používá odhad celkového využití hlasů z ostatních okrsků. U Ústí nad Labem, okrsku 1001, a Plzně, okrsku 1005, překročil hranici 100 hlasů až druhý odhad.
+
+Podle očekávané místní podpory řadíme kandidátky do malých (pod dvěma procenty), středních (od dvou do méně než deseti procent) a velkých (od deseti procent). Velikost kandidátky v celém městě posuzujeme zvlášť: i celkově malá strana může mít silnější místní podporu. Hranice jsou pravidla výběru ke kontrole, nikoli vypočtená pravděpodobnost chyby. U kandidátek s malou očekávanou místní podporou může nula vzniknout běžným hlasováním; jejich nuly zůstávají v širším auditu. Očekávané podíly odhadujeme z ostatních okrsků. U Brna-Bystrce 3003 a Plzně, okrsku 1005, máme slabší srovnání s průměrem ostatních okrsků, které nezohledňuje místní rozdíly.
+
+Komunální hlasy pro kandidáty nejsou nezávislí voliči, proto z jejich počtu nepočítáme pravděpodobnost nuly jako z nezávislých pokusů. Ani u silnější kandidátky nula sama nedokazuje chybu. Doplněné případy automaticky nepřebírají závěry o mandátech z dříve popsaných okrsků.
 
 Mandáty jsme přepočítali d'Hondtovou metodou s pětiprocentní hranicí. Postup jsme ověřili na 1 277 zastupitelstvech s nejméně 15 členy, u 1 267 vyšlo přesně oficiální rozdělení. Chybějící hlasy jsme dělili mezi strany podle jejich výsledku ve městě, případně je celé přidali straně s podezřele nízkým výsledkem.
 

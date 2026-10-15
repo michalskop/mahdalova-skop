@@ -86,7 +86,7 @@ const KlimaIcon = () => (
 // Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
 // description: popis speciálu pro OG / meta (na kartě se nezobrazuje).
 const TILES = [
-  { href: '/specialy/komunalni-a-senatni-volby-2026', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: false, logoType: 'vk', coverImage: '/images/specials/volby-2026.svg' },
+  { href: '/specialy/komunalni-a-senatni-volby-2026', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: false, logoType: 'vk', coverImage: '/images/specials/volby-2026.svg?v=2026-10-14' },
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
   { href: '/specialy/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
   { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
@@ -150,9 +150,14 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
         rel={external ? 'noopener noreferrer' : undefined}
         className="specials-tile"
         style={{ ...base, position: 'relative' }}>
-        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: `url(${coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px' }}>
+        {/* Obrázek jako <img> (ne CSS pozadí) a vrstvy nad ním bez pointer-events:
+            pravé tlačítko nad obrázkem nabídne „Otevřít obrázek v nové kartě“,
+            levé klepnutí vede dál na speciál (celá dlaždice je odkaz). */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={coverImage} alt={title} draggable={false}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px', pointerEvents: 'none' }}>
           <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
             {renderSpecialTitle(title)}
           </Title>
