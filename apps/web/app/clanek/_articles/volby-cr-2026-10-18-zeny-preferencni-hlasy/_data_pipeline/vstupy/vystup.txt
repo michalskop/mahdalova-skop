@@ -1,0 +1,273 @@
+Jmen s určeným pohlavím: 339
+2026: kandidátů 189908  ženy 66277 (34.9 %)  muži 119594  nejisté 4037 (2.13 %)
+2022: kandidátů 197285  ženy 66827 (33.9 %)  muži 126455  nejisté 4003 (2.03 %)
+2018: kandidátů 220791  ženy 73635 (33.4 %)  muži 142495  nejisté 4661 (2.11 %)
+ukázka nejistých: [(('Boris', 'Moravec'), 4), (('Jozef', 'Sedláček'), 3), (('Jáchym', 'Novák'), 3), (('Jonáš', 'Felkel'), 2), (('Beno', 'Ge'), 2), (('Peter', 'Mikula'), 2), (('Slavomír', 'Primák'), 2), (('Hubert', 'Kvaček'), 2), (('Albert', 'Štěrba'), 2), (('Bara', 'Soukup'), 2), (('Mojmír', 'Mikuláš'), 2), (('Erik', 'Anger'), 2), (('Lia', 'Nova'), 2), (('Matej', 'Cíbik'), 2), (('Henryk Josef', 'Tietjen'), 2), (('Kristián', 'Jiřík'), 2), (('Adele', 'Feigl'), 2), (('Bruce', 'Bybee'), 2), (('Emma', 'Ditrich'), 2), (('Michelle', 'Kushnir'), 2), (('Alexander', 'Osipov'), 2), (('Sergej', 'Zacharov'), 2), (('Kestrina', 'Fila Peza'), 2), (('Mikuláš', 'Pobuda'), 2), (('Emil', 'Patta'), 2)]
+
+KONTROLA tvar povolání × odvozené pohlaví 2026: {('M', 'M'): 58175, ('Z', 'Z'): 27597, ('M', 'Z'): 7135, ('M', '?'): 2106, ('Z', '?'): 89, ('Z', 'M'): 15}
+ukázka nesouladu (ženský tvar, odvozen muž): [('Jakub', 'Labuda', 'zdravotní sestra'), ('Lukáš', 'Hradil', 'všeobecná zdravotní sestra'), ('Radek', 'Mana', 'zdravotní sestra'), ('Josef', 'Kotek', 'všeobecná zdravotní sestra'), ('Ondřej', 'Skrbek', 'všeobecná zdravotní sestra a zdravotnický záchranář'), ('Václav', 'Šulc', 'zdravotní sestra'), ('Pavel', 'Melechovský', 'zdravotní sestra'), ('Pavel', 'Boček', 'zdravotní sestra'), ('Jaroslav', 'Zemek', 'key account manager pro oblast zdravotnické techniky, zdravotní sestra'), ('Roman', 'Pešek', 'zdravotní sestra'), ('Dalibor', 'Valoušek', 'zdravotní sestra'), ('Libor', 'Pospěch', 'zdravotní sestra'), ('Jiří', 'Stuchlík', 'zdravotní sestra'), ('Vít', 'Tauvinkl', 'všeobecná zdravotní sestra'), ('Jan', 'Erben', 'otec na mateřské dovolené')]
+počet mužský tvar & odvozena žena: 7135 [('Jitka', 'Škrabalová', 'stavební technik'), ('Petra', 'Ušelová', 'obchodní referent'), ('Veronika', 'Vintrlíková', 'ekonom'), ('Pavlína', 'Pospíšilová', 'operátor výroby'), ('Lenka', 'Fabiánová', 'referent logistiky'), ('Tereza', 'Podhorová', 'referent OÚ, výstavba, rozvoj, dotace, kultura'), ('Martina', 'Polakovič', 'obchodní referent'), ('Lenka', 'Grégrová', 'operátor kvality'), ('Petruše', 'Stehlíková', 'důchodce'), ('Markéta', 'Hrnčírová', 'technik ve výzkumu'), ('Mária', 'Žádná', 'hutní inženýr'), ('Lucie', 'Vaverková', 'advokát'), ('Zuzana', 'Chlupáčová', 'právník'), ('Marie', 'Čtvrtníčková', 'asistent pedagoga'), ('Kateřina', 'Štursová', 'odborný referent')]
+
+(1) CELKEM ŽENY × MUŽI
+2018
+  ženy                                         kand   73635  zvol  24.0 %  bonus   -1.9 %  pod čarou  44831 přeskočilo  2178 ( 4.9 %) násobek 0.87
+  muži                                         kand  142495  zvol  31.0 %  bonus   +1.1 %  pod čarou  79945 přeskočilo  5183 ( 6.5 %) násobek 1.07
+  nejisté                                      kand    4661  zvol  23.9 %  bonus   -1.5 %  pod čarou   2700 přeskočilo   153 ( 5.7 %) násobek 1.04
+2022
+  ženy                                         kand   66827  zvol  27.3 %  bonus   -1.5 %  pod čarou  40216 přeskočilo  2015 ( 5.0 %) násobek 0.89
+  muži                                         kand  126455  zvol  34.3 %  bonus   +0.8 %  pod čarou  69225 přeskočilo  4460 ( 6.4 %) násobek 1.06
+  nejisté                                      kand    4003  zvol  25.6 %  bonus   -0.3 %  pod čarou   2339 přeskočilo   117 ( 5.0 %) násobek 0.97
+2026
+  ženy                                         kand   66277  zvol  28.1 %  bonus   -1.2 %  pod čarou  39413 přeskočilo  1959 ( 5.0 %) násobek 0.91
+  muži                                         kand  119594  zvol  35.2 %  bonus   +0.7 %  pod čarou  64706 přeskočilo  4081 ( 6.3 %) násobek 1.06
+  nejisté                                      kand    4037  zvol  22.5 %  bonus   -0.3 %  pod čarou   2436 přeskočilo   108 ( 4.4 %) násobek 0.87
+
+(4a) PODLE VELIKOSTI OBCE 2026
+do 1 000
+  ženy                                         kand   23418  zvol  47.6 %  bonus   -4.2 %  pod čarou  10803 přeskočilo   883 ( 8.2 %) násobek 0.88
+  muži                                         kand   46151  zvol  53.9 %  bonus   -1.4 %  pod čarou  18577 přeskočilo  1895 (10.2 %) násobek 1.07
+1 000–4 000
+  ženy                                         kand   18469  zvol  26.0 %  bonus   -0.6 %  pod čarou  12770 přeskočilo   711 ( 5.6 %) násobek 0.98
+  muži                                         kand   33462  zvol  32.1 %  bonus   +1.3 %  pod čarou  21178 přeskočilo  1318 ( 6.2 %) násobek 1.02
+4 000–20 000
+  ženy                                         kand   14048  zvol  12.9 %  bonus   +0.6 %  pod čarou  10059 přeskočilo   283 ( 2.8 %) násobek 0.83
+  muži                                         kand   23389  zvol  18.9 %  bonus   +2.3 %  pod čarou  15861 přeskočilo   684 ( 4.3 %) násobek 1.09
+20 000–100 000
+  ženy                                         kand    8287  zvol   9.0 %  bonus   +1.7 %  pod čarou   4921 přeskočilo    74 ( 1.5 %) násobek 0.88
+  muži                                         kand   13340  zvol  13.3 %  bonus   +2.4 %  pod čarou   7732 přeskočilo   174 ( 2.3 %) násobek 1.09
+nad 100 000
+  ženy                                         kand    2055  zvol   6.8 %  bonus   +2.2 %  pod čarou    860 přeskočilo     8 ( 0.9 %) násobek 1.37
+  muži                                         kand    3252  zvol  10.5 %  bonus   +2.2 %  pod čarou   1358 přeskočilo    10 ( 0.7 %) násobek 0.86
+
+(4b) PODLE VELIKOSTI A ROKU – bonus ženy / muži, násobek ženy / muži
+do 1 000         2018:  -3.6/ +0.4  0.90/1.05 | 2022:  -4.7/ -1.2  0.89/1.06 | 2026:  -4.2/ -1.4  0.88/1.07
+1 000–4 000      2018:  +0.4/ +3.6  0.88/1.06 | 2022:  -1.0/ +1.4  0.96/1.02 | 2026:  -0.6/ +1.3  0.98/1.02
+4 000–20 000     2018:  -0.1/ +2.5  0.82/1.08 | 2022:  +0.8/ +2.5  0.80/1.10 | 2026:  +0.6/ +2.3  0.83/1.09
+20 000–100 000   2018:  -6.9/ -5.9  0.63/1.18 | 2022:  +1.4/ +2.6  0.61/1.21 | 2026:  +1.7/ +2.4  0.88/1.09
+nad 100 000      2018:  +3.3/ +4.2  0.60/1.13 | 2022:  +2.2/ +2.2  0.73/1.15 | 2026:  +2.2/ +2.2  1.37/0.86
+
+(5) DOSAVADNÍ ZASTUPITELÉ
+2022 obhajující
+  ženy                                         kand   12121  zvol  82.3 %  bonus   +8.4 %  pod čarou   2053 přeskočilo   631 (30.7 %) násobek 2.91
+  muži                                         kand   34047  zvol  81.2 %  bonus   +8.6 %  pod čarou   5718 přeskočilo  1638 (28.6 %) násobek 2.80
+2022 noví
+  ženy                                         kand   54706  zvol  15.1 %  bonus   -3.4 %  pod čarou  38163 přeskočilo  1384 ( 3.6 %) násobek 0.68
+  muži                                         kand   92408  zvol  17.0 %  bonus   -1.7 %  pod čarou  63507 přeskočilo  2822 ( 4.4 %) násobek 0.78
+  podíl obhajujících: ženy 18.1 %, muži 26.9 %
+2026 obhajující
+  ženy                                         kand   12859  zvol  81.1 %  bonus   +7.0 %  pod čarou   2255 přeskočilo   583 (25.9 %) násobek 2.35
+  muži                                         kand   34440  zvol  81.1 %  bonus   +7.6 %  pod čarou   5674 přeskočilo  1507 (26.6 %) násobek 2.47
+2026 noví
+  ženy                                         kand   53418  zvol  15.4 %  bonus   -3.0 %  pod čarou  37158 přeskočilo  1376 ( 3.7 %) násobek 0.72
+  muži                                         kand   85154  zvol  16.7 %  bonus   -1.8 %  pod čarou  59032 přeskočilo  2574 ( 4.4 %) násobek 0.79
+  podíl obhajujících: ženy 19.4 %, muži 28.8 %
+
+(2) PROFESE × POHLAVÍ 2026 (bonus ženy / muži, rozdíl; násobek)
+starostové a místostarostové             ž   1756   +2.9 %  m   4483   +5.3 %  rozdíl  -2.4 b.  násobek ž 2.79 m 3.42
+zubaři a zubařky                         ž    327   +2.0 %  m    166  +11.9 %  rozdíl  -9.9 b.  násobek ž 1.36 m 3.35
+veterináři a veterinářky                 ž    131  +14.4 %  m    163  +17.1 %  rozdíl  -2.7 b.  násobek ž 1.72 m 4.84
+lékaři a lékařky                         ž   1034  +10.5 %  m   1170  +14.6 %  rozdíl  -4.1 b.  násobek ž 2.65 m 3.81
+lékárníci a lékárnice                    ž    385   +8.1 %  m    113   +9.7 %  rozdíl  -1.6 b.  násobek ž 2.15 m 2.41
+zdravotní sestry a záchranáři            ž   3679   +1.1 %  m    897   +6.7 %  rozdíl  -5.7 b.  násobek ž 1.11 m 1.73
+ředitelé škol a jejich zástupci          ž   1425   +9.4 %  m    822  +14.2 %  rozdíl  -4.8 b.  násobek ž 1.78 m 3.69
+učitelky a učitelé                       ž   8878   +2.7 %  m   4049   +7.8 %  rozdíl  -5.2 b.  násobek ž 1.14 m 1.87
+policisté, strážníci a vojáci            ž    219   +3.2 %  m   2007   +3.3 %  rozdíl  -0.0 b.  násobek ž 1.37 m 1.10
+zemědělci a lesníci                      ž    437   +2.2 %  m   3598   +3.6 %  rozdíl  -1.4 b.  násobek ž 1.37 m 1.50
+řemeslníci a opraváři                    ž    381   -7.0 %  m   9203   -2.8 %  rozdíl  -4.3 b.  násobek ž 0.65 m 0.77
+prodavačky, kuchařky, kadeřnice a pošťač ž   3527   -6.1 %  m   1118   -4.7 %  rozdíl  -1.5 b.  násobek ž 0.68 m 0.87
+sociální pracovníci a pečovatelky        ž   1799   -0.8 %  m    333   +1.6 %  rozdíl  -2.4 b.  násobek ž 0.70 m 1.37
+právníci a advokáti                      ž    946   +5.5 %  m   1220   +6.4 %  rozdíl  -1.0 b.  násobek ž 1.32 m 1.57
+IT specialisté a programátoři            ž    398   +0.6 %  m   4371   +1.4 %  rozdíl  -0.7 b.  násobek ž 0.51 m 0.75
+inženýři, technici a architekti          ž   1463   +1.7 %  m  12570   +2.0 %  rozdíl  -0.2 b.  násobek ž 1.01 m 1.08
+ekonomové a účetní                       ž   5191   +0.7 %  m   2207   +2.3 %  rozdíl  -1.6 b.  násobek ž 1.07 m 0.87
+manažeři a ředitelé firem                ž   5338   +0.8 %  m  15780   +2.3 %  rozdíl  -1.5 b.  násobek ž 0.94 m 0.97
+podnikatelé a OSVČ                       ž   4252   -2.9 %  m  17546   +0.4 %  rozdíl  -3.3 b.  násobek ž 0.70 m 1.04
+úředníci a administrativa                ž   6178   -1.3 %  m   3739   +1.7 %  rozdíl  -3.0 b.  násobek ž 0.73 m 1.04
+dělníci, řidiči a skladníci              ž   2427   -9.5 %  m  10684   -5.0 %  rozdíl  -4.4 b.  násobek ž 0.44 m 0.64
+studenti a studentky                     ž   1481   -7.7 %  m   2153   -7.1 %  rozdíl  -0.6 b.  násobek ž 0.17 m 0.37
+důchodci a důchodkyně                    ž   4811   -8.2 %  m   7175   -6.4 %  rozdíl  -1.9 b.  násobek ž 0.61 m 0.69
+ostatní a nezařazení                     ž   8116   -2.4 %  m  12219   +0.8 %  rozdíl  -3.2 b.  násobek ž 0.63 m 0.96
+
+(2b) KONKRÉTNÍ ZNĚNÍ (pohlaví odvozené ze jména, ne z tvaru slova)
+2026
+  učitel/ka (ZŠ/MŠ/SŠ, bez ředitelů)     ž   5839 bonus   +4.1  zvol  30.8  násobek 1.29 | m   2843 bonus   +8.7  zvol  39.6  násobek 1.84
+  starosta/ka (bez místo-)               ž   1193 bonus   +0.8  zvol  92.5  násobek 2.65 | m   2976 bonus   +3.5  zvol  90.4  násobek 3.59
+  místostarosta/ka                       ž    530 bonus   +7.2  zvol  88.1  násobek 2.80 | m   1383 bonus   +9.0  zvol  84.2  násobek 3.15
+  lékař/ka (vč. zubařů, bez veterinářů)  ž   1105 bonus  +10.2  zvol  29.6  násobek 2.53 | m   1155 bonus  +14.3  zvol  39.6  násobek 3.75
+  ředitel/ka školy                       ž   1436 bonus   +9.4  zvol  45.5  násobek 1.78 | m    844 bonus  +14.2  zvol  59.7  násobek 3.69
+  zdravotní sestra / ošetřovatel         ž   2572 bonus   +1.0  zvol  22.9  násobek 1.07 | m    137 bonus   +0.7  zvol  30.7  násobek 0.94
+  prodavač/ka                            ž   1084 bonus   -6.7  zvol  15.6  násobek 0.62 | m    147 bonus   -6.5  zvol  18.4  násobek 0.82
+  důchodce/kyně                          ž   5015 bonus   -7.9  zvol  16.3  násobek 0.64 | m   7615 bonus   -6.0  zvol  20.8  násobek 0.70
+  student/ka                             ž   1719 bonus   -6.9  zvol   8.1  násobek 0.26 | m   2568 bonus   -6.0  zvol   9.6  násobek 0.37
+  účetní                                 ž   2894 bonus   +0.7  zvol  39.4  násobek 1.09 | m    184 bonus   +2.1  zvol  31.5  násobek 0.92
+  podnikatel/ka, OSVČ                    ž   4368 bonus   -2.5  zvol  26.3  násobek 0.75 | m  17847 bonus   +0.6  zvol  35.1  násobek 1.03
+  dělník/ice                             ž    101 bonus  -12.4  zvol  19.8  násobek 0.24 | m   2009 bonus   -7.4  zvol  29.2  násobek 0.66
+2022
+  učitel/ka (ZŠ/MŠ/SŠ, bez ředitelů)     ž   5762 bonus   +4.7  zvol  30.6  násobek 1.29 | m   2788 bonus   +9.7  zvol  40.5  násobek 2.35
+  starosta/ka (bez místo-)               ž   1036 bonus   +2.4  zvol  94.6  násobek 5.42 | m   2683 bonus   +4.1  zvol  90.3  násobek 3.69
+  místostarosta/ka                       ž    422 bonus   +7.7  zvol  89.3  násobek 6.12 | m   1128 bonus   +9.6  zvol  84.9  násobek 3.32
+  lékař/ka (vč. zubařů, bez veterinářů)  ž   1038 bonus  +11.4  zvol  30.2  násobek 2.65 | m   1206 bonus  +16.1  zvol  41.8  násobek 4.14
+  ředitel/ka školy                       ž   1360 bonus  +10.0  zvol  47.4  násobek 2.16 | m    896 bonus  +15.3  zvol  55.8  násobek 3.46
+  zdravotní sestra / ošetřovatel         ž   2627 bonus   +1.6  zvol  22.4  násobek 0.98 | m    157 bonus   -5.0  zvol  28.7  násobek 0.41
+  prodavač/ka                            ž   1364 bonus   -7.3  zvol  15.5  násobek 0.67 | m    168 bonus   -6.9  zvol  24.4  násobek 1.04
+  důchodce/kyně                          ž   5954 bonus   -7.2  zvol  15.9  násobek 0.55 | m   9564 bonus   -4.1  zvol  21.2  násobek 0.77
+  student/ka                             ž   1296 bonus   -9.7  zvol   8.2  násobek 0.25 | m   2245 bonus   -7.6  zvol   8.4  násobek 0.29
+  účetní                                 ž   2996 bonus   +0.1  zvol  36.8  násobek 1.13 | m    176 bonus   -0.3  zvol  27.8  násobek 0.56
+  podnikatel/ka, OSVČ                    ž   4221 bonus   -2.8  zvol  27.4  násobek 0.66 | m  18199 bonus   +0.6  zvol  34.6  násobek 1.06
+  dělník/ice                             ž    148 bonus  -12.9  zvol  25.0  násobek 0.35 | m   2912 bonus   -7.4  zvol  28.5  násobek 0.60
+2018
+  učitel/ka (ZŠ/MŠ/SŠ, bez ředitelů)     ž   5969 bonus   +7.3  zvol  29.1  násobek 1.49 | m   3014 bonus  +10.8  zvol  38.4  násobek 2.31
+  starosta/ka (bez místo-)               ž    903 bonus   +5.0  zvol  92.7  násobek 3.68 | m   2486 bonus   +5.8  zvol  92.4  násobek 3.95
+  místostarosta/ka                       ž    324 bonus   +8.6  zvol  82.7  násobek 4.29 | m    880 bonus  +13.4  zvol  85.9  násobek 4.95
+  lékař/ka (vč. zubařů, bez veterinářů)  ž   1150 bonus  +15.4  zvol  27.7  násobek 2.77 | m   1396 bonus  +19.9  zvol  42.8  násobek 4.57
+  ředitel/ka školy                       ž   1363 bonus  +13.9  zvol  49.2  násobek 2.44 | m    901 bonus  +20.4  zvol  58.6  násobek 3.40
+  zdravotní sestra / ošetřovatel         ž   2753 bonus   +3.1  zvol  21.8  násobek 1.00 | m    152 bonus   -5.4  zvol  33.6  násobek 0.36
+  prodavač/ka                            ž   1709 bonus   -7.2  zvol  15.6  násobek 0.55 | m    206 bonus   +0.2  zvol  21.8  násobek 0.77
+  důchodce/kyně                          ž   7939 bonus   -7.0  zvol  14.7  násobek 0.63 | m  12999 bonus   -2.7  zvol  19.6  násobek 0.81
+  student/ka                             ž   1570 bonus  -10.4  zvol   6.0  násobek 0.11 | m   2672 bonus   -7.4  zvol   6.8  násobek 0.24
+  účetní                                 ž   3110 bonus   +0.8  zvol  32.8  násobek 0.92 | m    163 bonus   -2.3  zvol  27.0  násobek 0.82
+  podnikatel/ka, OSVČ                    ž   4587 bonus   -1.8  zvol  23.8  násobek 0.68 | m  19488 bonus   +2.0  zvol  32.7  násobek 1.08
+  dělník/ice                             ž    192 bonus  -13.5  zvol  25.0  násobek 0.37 | m   4548 bonus   -6.8  zvol  24.5  násobek 0.64
+
+(2c) TVAR SLOVA × POHLAVÍ (učitel vs učitelka; starosta vs starostka) 2026
+  „učitel“ (mužský tvar)   ženy                                         kand      60  zvol  35.0 %  bonus   +0.3 %  pod čarou     36 přes
+                           muži                                         kand    2891  zvol  39.6 %  bonus   +8.9 %  pod čarou   1594 přes
+  „učitelka“               ženy                                         kand    5816  zvol  30.8 %  bonus   +4.1 %  pod čarou   3729 přes
+                           muži                                         kand       0  zvol   0.0 %  bonus   +0.0 %  pod čarou      0 přes
+  „starosta“               ženy                                         kand      29  zvol  93.1 %  bonus   +6.3 %  pod čarou      2 přes
+                           muži                                         kand    2958  zvol  90.8 %  bonus   +3.4 %  pod čarou    264 přes
+  „starostka“              ženy                                         kand    1145  zvol  93.2 %  bonus   +0.6 %  pod čarou     65 přes
+                           muži                                         kand       3  zvol   0.0 %  bonus   +6.9 %  pod čarou      3 přes
+  „lékař“                  ženy                                         kand     112  zvol  33.9 %  bonus  +10.3 %  pod čarou     74 přes
+                           muži                                         kand    1199  zvol  41.3 %  bonus  +15.1 %  pod čarou    732 přes
+  „lékařka“                ženy                                         kand    1024  zvol  30.0 %  bonus  +11.0 %  pod čarou    727 přes
+                           muži                                         kand       0  zvol   0.0 %  bonus   +0.0 %  pod čarou      0 přes
+
+(3) RODIČE NA MATEŘSKÉ / RODIČOVSKÉ
+2018 Counter({'Z': 2838, 'M': 28, '?': 2})
+  ženy na mateřské/rodičovské/v domácnosti     kand    2838  zvol  22.6 %  bonus  -10.4 %  pod čarou   1684 přeskočilo    45 ( 2.7 %) násobek 0.42
+  muži na rodičovské/v domácnosti              kand      28  zvol  10.7 %  bonus   -4.0 %  pod čarou     13 přeskočilo     0 ( 0.0 %) násobek 0.00
+  ostatní ženy 25–44 let                       kand   29588  zvol  23.9 %  bonus   -2.6 %  pod čarou  18431 přeskočilo   820 ( 4.4 %) násobek 0.73
+  muži 25–44 let                               kand   61785  zvol  31.2 %  bonus   +0.2 %  pod čarou  35076 přeskočilo  2240 ( 6.4 %) násobek 0.99
+  věk na mateřské medián 33.0
+2022 Counter({'Z': 2385, 'M': 28, '?': 4})
+  ženy na mateřské/rodičovské/v domácnosti     kand    2385  zvol  23.3 %  bonus   -9.9 %  pod čarou   1437 přeskočilo    41 ( 2.9 %) násobek 0.45
+  muži na rodičovské/v domácnosti              kand      28  zvol  21.4 %  bonus  -10.3 %  pod čarou     18 přeskočilo     1 ( 5.6 %) násobek 0.78
+  ostatní ženy 25–44 let                       kand   24350  zvol  26.8 %  bonus   -1.8 %  pod čarou  15131 přeskočilo   689 ( 4.6 %) násobek 0.74
+  muži 25–44 let                               kand   48954  zvol  34.4 %  bonus   +0.4 %  pod čarou  27475 přeskočilo  1767 ( 6.4 %) násobek 0.98
+  věk na mateřské medián 34
+2026 Counter({'Z': 1556, 'M': 15, '?': 2})
+  ženy na mateřské/rodičovské/v domácnosti     kand    1556  zvol  22.9 %  bonus  -11.0 %  pod čarou    940 přeskočilo    23 ( 2.4 %) násobek 0.40
+  muži na rodičovské/v domácnosti              kand      15  zvol  13.3 %  bonus   -7.4 %  pod čarou     10 přeskočilo     0 ( 0.0 %) násobek 0.00
+  ostatní ženy 25–44 let                       kand   22823  zvol  28.2 %  bonus   -1.4 %  pod čarou  14106 přeskočilo   647 ( 4.6 %) násobek 0.77
+  muži 25–44 let                               kand   41743  zvol  35.7 %  bonus   +0.6 %  pod čarou  23259 přeskočilo  1502 ( 6.5 %) násobek 0.99
+  věk na mateřské medián 34.0
+  znění 2026: [('rodičovská dovolená', 448), ('mateřská dovolená', 428), ('v domácnosti', 115), ('žena v domácnosti', 75), ('na mateřské dovolené', 57), ('na rodičovské dovolené', 41), ('mateřská', 17), ('rodičovská', 10), ('md', 5), ('rodičovská dovolená, osvč', 4), ('maminka na mateřské dovolené', 3), ('pedagog, rodičovská dovolená', 3), ('administrativní pracovnice na rodičovské dovolené', 2), ('prodavačka, mateřská dovolená', 2), ('žena na mateřské dovolené', 2)]
+  muži 2026: [('Marek', 'v domácnosti', 'Srbsko', False), ('Vítězslav', 'muž v domácnosti', 'Čistá', False), ('David', 'mateřská dovolená', 'Hluboká nad Vltavou', False), ('Jan', 'kronikář, pečující v domácnosti', 'Zlatá Koruna', True), ('Miroslav', 'dopravní specialista na rodičovské dovolené', 'Plzeň 1', False), ('Lukáš', 'rodičovská dovolená', 'Šluknov', False), ('David', 'rodičovská dovolená', 'Heřmanův Městec', False), ('Štěpán', 'rodičovská dovolená', 'Úhlejov', False), ('Miloš', 'projektový manažer - otec na rodičovské dovolené', 'Přelouč', False), ('Miroslav', 'rodičovská dovolená', 'Sopřeč', True), ('Vojtěch', 'rodičovská dovolená, hodinový manžel', 'Trnov', False), ('Tomáš', 'rodičovská dovolená', 'Městečko Trnávka', False), ('Pavel', 'v domácnosti', 'Hartvíkovice', False), ('Vojtěch', 'otec v domácnosti', 'Znojmo', False), ('Jan', 'otec na mateřské dovolené', 'Železná', False)]
+  do 1 000         kand  812 bonus  -14.1
+  1 000–4 000      kand  376 bonus  -11.9
+  4 000–20 000     kand  220 bonus   -6.6
+  20 000–100 000   kand  116 bonus   +0.6
+  nad 100 000      kand   32 bonus   +1.9
+
+ALTERNATIVY
+(a) VĚK – bonus ženy / muži podle věku, 2026
+  18–29: ž   5011   -5.2 %  m   9008   -4.5 %  rozdíl  -0.6  násobek ž 0.54 m 0.63
+  30–39: ž  12253   -2.9 %  m  21125   +0.3 %  rozdíl  -3.2  násobek ž 0.65 m 0.98
+  40–49: ž  19457   +0.1 %  m  34517   +2.1 %  rozdíl  -2.0  násobek ž 0.94 m 1.11
+  50–59: ž  16655   +0.8 %  m  31908   +2.0 %  rozdíl  -1.2  násobek ž 1.12 m 1.17
+  60–69: ž   8831   -1.1 %  m  15661   +0.6 %  rozdíl  -1.7  násobek ž 1.19 m 1.22
+  70–120: ž   4070   -5.0 %  m   7375   -3.3 %  rozdíl  -1.8  násobek ž 0.62 m 0.78
+  medián věku ž 48 m 48.0
+(b) POŘADÍ NA KANDIDÁTCE 2026
+  ženy: na 1. místě  9.3 %, na 1.–3. 22.7 %, relativní pozice (medián) 0.50, pod čarou 59.5 %
+  muži: na 1. místě 13.4 %, na 1.–3. 29.5 %, relativní pozice (medián) 0.45, pod čarou 54.1 %
+  lídři (1. místo)   ž   +4.9  m   +6.2  rozdíl  -1.3
+  2.–5. místo        ž   +1.4  m   +3.0  rozdíl  -1.6
+  6. a níž           ž   -2.9  m   -1.4  rozdíl  -1.5
+  podíl žen mezi lídry kandidátek:  27.7 %
+  podíl žen mezi kandidáty: 35.7 %, mezi zvolenými: 30.7 %
+  2018: ženy mezi kandidáty 34.1 %, mezi zvolenými 28.6 %
+  2022: ženy mezi kandidáty 34.6 %, mezi zvolenými 29.6 %
+(c) TYP KANDIDÁTKY 2026 (zkratka ZKRATKAO8)
+  SNK                  ž  32412   -2.3  m  60264   -0.3  rozdíl  -2.0  podíl žen 35 %
+  NK                   ž   2272   +0.0  m   5716   +0.0  rozdíl  +0.0  podíl žen 28 %
+  KDU-ČSL              ž   2657   -4.9  m   4535   -0.1  rozdíl  -4.8  podíl žen 37 %
+  ANO                  ž   2631   +2.7  m   4287   +2.8  rozdíl  -0.1  podíl žen 38 %
+  STAN+NK              ž   2054   +0.1  m   3515   +2.0  rozdíl  -1.9  podíl žen 37 %
+  ODS                  ž   1461   -0.5  m   3402   +1.4  rozdíl  -1.9  podíl žen 30 %
+  KDU-ČSL+NK           ž   1730   -1.0  m   2669   +1.8  rozdíl  -2.8  podíl žen 39 %
+  ODS+NK               ž   1200   +0.6  m   2399   +2.0  rozdíl  -1.4  podíl žen 33 %
+  STAN                 ž    983   +2.2  m   1574   +0.8  rozdíl  +1.4  podíl žen 38 %
+  SPD                  ž    758   +1.1  m   1323   +2.9  rozdíl  -1.8  podíl žen 36 %
+  SOCDEM+NK            ž    755   -1.2  m   1320   +0.8  rozdíl  -2.0  podíl žen 36 %
+  SPD+NK               ž    643   +2.0  m   1037   +2.6  rozdíl  -0.6  podíl žen 38 %
+  TOP 09+NK            ž    588   -1.7  m   1001   +0.6  rozdíl  -2.3  podíl žen 37 %
+  KSČM                 ž    504   -4.7  m    982   -0.6  rozdíl  -4.0  podíl žen 34 %
+(d) UVNITŘ TÉŽE KANDIDÁTKY: průměr (bonus žen − bonus mužů) přes kandidátky, kde jsou obě pohlaví
+  2018: kandidátek 15166, vážený rozdíl -3.0 %  (ženy mají vyšší bonus na 44 % kandidátek)
+  2022: kandidátek 14014, vážený rozdíl -2.4 %  (ženy mají vyšší bonus na 45 % kandidátek)
+  2026: kandidátek 13732, vážený rozdíl -2.0 %  (ženy mají vyšší bonus na 46 % kandidátek)
+
+(e) REGRESE: log-bonus ~ žena + profese + věk + obhajuje, uvnitř kandidátky (fixní efekt kandidátky)
+2018
+   hrubý rozdíl (bez kontrol, bez FE)       ženy  -2.9 %  (95% interval -3.3 až -2.5)  n=206878
+   uvnitř kandidátky                        ženy  -3.0 %  (95% interval -3.3 až -2.6)  n=206878
+   + profese                                ženy  -4.1 %  (95% interval -4.5 až -3.7)  n=206878
+   + profese + věk                          ženy  -4.3 %  (95% interval -4.7 až -3.8)  n=206878
+   + profese + věk + obhajuje mandát        ženy  -4.3 %  (95% interval -4.7 až -3.8)  n=206878
+2022
+   hrubý rozdíl (bez kontrol, bez FE)       ženy  -2.3 %  (95% interval -2.5 až -2.1)  n=184824
+   uvnitř kandidátky                        ženy  -2.4 %  (95% interval -2.7 až -2.2)  n=184824
+   + profese                                ženy  -3.5 %  (95% interval -3.7 až -3.2)  n=184824
+   + profese + věk                          ženy  -3.6 %  (95% interval -3.8 až -3.3)  n=184824
+   + profese + věk + obhajuje mandát        ženy  -2.7 %  (95% interval -2.9 až -2.4)  n=184824
+2026
+   hrubý rozdíl (bez kontrol, bez FE)       ženy  -1.9 %  (95% interval -2.1 až -1.6)  n=177789
+   uvnitř kandidátky                        ženy  -2.0 %  (95% interval -2.3 až -1.8)  n=177789
+   + profese                                ženy  -2.9 %  (95% interval -3.1 až -2.6)  n=177789
+   + profese + věk                          ženy  -2.9 %  (95% interval -3.2 až -2.7)  n=177789
+   + profese + věk + obhajuje mandát        ženy  -2.1 %  (95% interval -2.3 až -1.8)  n=177789
+  2026 jen noví kandidáti: [-2.4, -2.7, -2.2]
+  2026 jen obhajující: [-0.4, -0.8, 0.1]
+  2026 do 1 000         [-2.9, -3.6, -2.3]
+  2026 1 000–4 000      [-2.7, -3.2, -2.2]
+  2026 4 000–20 000     [-2.4, -2.7, -2.1]
+  2026 20 000–100 000   [-1.0, -1.2, -0.7]
+  2026 nad 100 000      [-0.0, -0.3, 0.3]
+
+(f) UČITELÉ A LÉKAŘI PODROBNĚJI 2026 (stejné znění povolání)
+  učitel/ka základní školy     ž  1108   +6.9 obh 19.0 % | m   291  +12.4 obh 33.0 %
+  učitel/ka střední školy      ž   217   +4.7 obh 18.9 % | m   144   +8.5 obh 30.6 %
+  učitel/ka MŠ                 ž   294   +1.9 obh 13.3 % | m     1  +35.8 obh  0.0 %
+  učitel/ka (bez dalšího)      ž  2221   +4.1 obh 23.4 % | m   941   +9.4 obh 34.1 %
+  praktický lékař/ka           ž   107  +13.0 obh 26.2 % | m    74  +17.0 obh 44.6 %
+  lékař/ka (bez dalšího)       ž   528  +11.4 obh 21.4 % | m   559  +14.6 obh 33.3 %
+  ředitel/ka ZŠ                ž   347  +11.8 obh 45.2 % | m   297  +14.1 obh 53.9 %
+  ředitel/ka MŠ                ž   437   +8.1 obh 31.6 % | m     3  +39.1 obh 66.7 %
+  regrese uvnitř kandidátky – učitelé: [-3.7, -4.4, -3.0] n 13082
+     jen noví: ž 7247 +1.2  m 2898 +5.8
+  regrese uvnitř kandidátky – ředitelé škol: [-5.6, -7.5, -3.7] n 2276
+     jen noví: ž 908 +7.9  m 423 +10.3
+  regrese uvnitř kandidátky – lékaři: [-2.7, -4.2, -1.1] n 2297
+     jen noví: ž 818 +8.9  m 780 +11.5
+
+(g) KDYBY ROZHODOVALO JEN POŘADÍ: podíl žen mezi zvolenými (skutečnost) × mezi prvními N místy (N = mandáty strany)
+  2018: skutečně 28.6 % žen (17676), podle pořadí 28.7 % (18104); ženy: vypadlo z volitelného místa 2606, přeskočilo zpod čáry 2178, saldo -428; muži: vypadlo 6055, přeskočilo 5183, saldo -872
+      do 1 000         skutečně 29.6 %, podle pořadí 29.8 %
+      1 000–4 000      skutečně 27.9 %, podle pořadí 27.6 %
+      4 000–20 000     skutečně 25.9 %, podle pořadí 25.7 %
+      20 000–100 000   skutečně 23.6 %, podle pořadí 24.9 %
+      nad 100 000      skutečně 28.3 %, podle pořadí 29.9 %
+  2022: skutečně 29.6 % žen (18254), podle pořadí 29.5 % (18460); ženy: vypadlo z volitelného místa 2221, přeskočilo zpod čáry 2015, saldo -206; muži: vypadlo 5155, přeskočilo 4460, saldo -695
+      do 1 000         skutečně 30.5 %, podle pořadí 30.6 %
+      1 000–4 000      skutečně 29.4 %, podle pořadí 28.7 %
+      4 000–20 000     skutečně 26.7 %, podle pořadí 26.4 %
+      20 000–100 000   skutečně 26.3 %, podle pořadí 26.8 %
+      nad 100 000      skutečně 25.5 %, podle pořadí 25.5 %
+  2026: skutečně 30.7 % žen (18635), podle pořadí 30.6 % (18574); ženy: vypadlo z volitelného místa 1898, přeskočilo zpod čáry 1959, saldo +61; muži: vypadlo 4101, přeskočilo 4081, saldo -20
+      do 1 000         skutečně 31.0 %, podle pořadí 31.0 %
+      1 000–4 000      skutečně 30.9 %, podle pořadí 30.2 %
+      4 000–20 000     skutečně 29.1 %, podle pořadí 29.6 %
+      20 000–100 000   skutečně 29.5 %, podle pořadí 29.8 %
+      nad 100 000      skutečně 29.0 %, podle pořadí 29.0 %
