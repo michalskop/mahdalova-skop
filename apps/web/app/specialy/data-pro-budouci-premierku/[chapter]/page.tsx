@@ -18,6 +18,7 @@ import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import { readableAccent } from '@/utils/colorUtils';
 import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 import { chapterAccent } from '@/components/dpbp/chapterNavigation';
+import { loadWebArticleTile } from '@/components/dpbp/webArticleTile.server';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 const CHARTS_ROOT  = path.join(process.cwd(), 'public/specialy/dpbp/charts');
@@ -49,7 +50,9 @@ interface ChapterMeta {
 }
 
 interface ChapterTile {
-  slug: string;
+  slug?: string;
+  /** Slug of a web article (app/clanek/_articles) – the tile links to /clanek/<web>. */
+  web?: string;
   topic: string;
   fullWidth?: boolean;
   related?: Array<{ slug: string; label: string }>;
@@ -163,12 +166,25 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   const tiles = withRowSpan(
     [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
-      .filter(t => t.slug !== meta.openerArticle)
-      .map(t => ({
-        ...t,
-        fm: loadArticleFrontmatter(params.chapter, t.slug),
-        relatedArticles: loadRelatedArticles(params.chapter, t.related),
-      }))
+      .filter(t => t.web || t.slug !== meta.openerArticle)
+      .map(t => {
+        if (t.web) {
+          const web = loadWebArticleTile(t.web);
+          return {
+            ...t,
+            key: `web:${t.web}`,
+            href: web?.href ?? '',
+            fm: web ? { title: web.title, excerpt: web.excerpt, author: web.author, logo: web.image } : null,
+          };
+        }
+        return {
+          ...t,
+          key: t.slug!,
+          href: `/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`,
+          fm: loadArticleFrontmatter(params.chapter, t.slug!),
+          relatedArticles: loadRelatedArticles(params.chapter, t.related),
+        };
+      })
       .filter(t => t.fm != null)
   );
 
@@ -391,9 +407,9 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18 }}
               >
                 {tiles.map(t => (
-                  <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
+                  <div key={t.key} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
                     <DpbpArticleCard
-                      href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
+                      href={t.href}
                       title={t.fm!.title}
                       excerpt={t.fm!.excerpt}
                       author={t.fm!.author}

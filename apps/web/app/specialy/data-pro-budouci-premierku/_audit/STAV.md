@@ -83,6 +83,7 @@ Konkrétní vady:
 | **Audio** | Nahrávky zatím nejsou, jsou v pořadí. Placeholder „audio doplníme" **zůstává** — neskrývat. | `components/dpbp/ArticleByline.tsx:108` |
 | **Mapy** | Mapy **přijdou**, text zůstává beze změny. Čeká se na podklady. | `_content/01-demografie/articles/11-vylidnovani-obci.mdx:38` |
 | **Graf o milostech** | **Nasazen** do článku *Milosti*. Vyřešeno. | `15-efektivni-vladnuti/articles/09-milosti.mdx` |
+| **Články z webu ve speciálu** (15. 10. 2026) | Analýza vydaná na webu se do kapitoly zařazuje **dlaždicí s odkazem**, ne kopií: v `_meta.json` na konec `postSupportTiles` přidat `{ "web": "<slug>", "topic": "Analýza" }`. Článek zůstává na `/clanek/<slug>` (žádná změna URL ani 301, žádný duplicitní text); název, perex a obrázek se berou z jeho frontmatteru a článek se objeví i v menu kapitoly. Kontrolní skript hlídá, že článek existuje. Kopii (`.mdx` v kapitole) dělat jen jako adaptaci pro premiérku, protože renderer speciálu neumí webové komponenty (ChartCard, Figure, RelatedArticles). | `components/dpbp/webArticleTile.server.ts` |
 
 ---
 

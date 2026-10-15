@@ -28,5 +28,9 @@
     { "slug": "03-dph-mezera", "topic": "Analýza" },
     { "slug": "05-overili-nejvyssi-klin", "topic": "Investigace" },
     { "slug": "06-novy-zeland-gst", "topic": "Komparace" }
+  ],
+  "postSupportTiles": [
+    { "web": "volby-cr-2026-08-31-co-rozhoduji-radnice", "topic": "Explainer" },
+    { "web": "analyza-2026-09-24-navrat-karencni-doby-nedava-smysl", "topic": "Analýza" }
   ]
 }
