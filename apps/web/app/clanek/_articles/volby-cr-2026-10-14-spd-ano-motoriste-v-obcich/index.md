@@ -1,7 +1,6 @@
 ---
 title: "SPD přišla v obcích o dvě třetiny zastupitelů, Motoristé z 1 116 kandidátů prosadili dvacet"
 date: "2026-10-14"
-time: "14:58"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Před volbami měla SPD v zastupitelstvech obcí a městských částí 490 lidí, teď 166. Motoristé postavili kandidáty v 58 zastupitelstvech a uspěli v jedenácti, z toho v pěti ostravských. ANO ve velkých městech ztrácí, v menších obcích přibírá. Mapa celé republiky ukazuje stav před volbami, letošní kandidáty i výsledek."
 coverImage: "images/cover-homepage.png"
