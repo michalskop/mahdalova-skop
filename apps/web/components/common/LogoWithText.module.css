@@ -9,6 +9,14 @@
   display: inline;
 }
 
+/* Střed verzálek nápisu na ose lišty (stejně jako kolečko loga): IBM Plex Serif má pod
+   účařím víc místa, verzálky by seděly o ~0,3 px níž. */
+.wideName,
+.narrowName {
+  position: relative;
+  top: -0.016em;
+}
+
 .narrowName {
   display: none;
 }

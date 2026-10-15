@@ -7,7 +7,9 @@ import classes from './LogoWithText.module.css';
 
 const Logo = () => (
   // center of the svg: 250, 250; last point is slightly adjust manually to make the circle looked closed even in small sizes
-  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 60 330 330">
+  // viewBox je souměrný kolem středu kolečka (250 ± 165), aby kolečko leželo přesně uprostřed obrázku
+  // (dřív 60–390: střed kolečka byl na 58 % výšky a logo v hlavičce sedělo o 2 px výš než nápis)
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="85 85 330 330" style={{ display: 'block' }}>
     <defs>
       <linearGradient id="Gradient" x1="1" x2="0.25" y1="0.5" y2="1">
         <stop offset="0%" stopColor="#ffdc33" stopOpacity="0"  />
@@ -68,7 +70,8 @@ const LogoWithText: React.FC<LogoWithTextProps> = ({
 
   const content = (
     <Group gap={0} wrap="nowrap" style={{ flexShrink: 0 }}>
-      <div style={{ width: logoSize, height: logoSize, flexShrink: 0 }}>
+      {/* kolečko na ose lišty: blok loga sedí v 60px hlavičce o 1 px výš (změřeno 14. 10. 2026) */}
+      <div style={{ width: logoSize, height: logoSize, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', top: 1 }}>
         <Logo />
       </div>
       {/* Široký displej: nahoře „DataTimes.cz“ (hero ukazuje velký M&Š), po odscrollování M&Š */}
