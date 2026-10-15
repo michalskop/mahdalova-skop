@@ -433,8 +433,14 @@ for p, n in sorted(kand.items(), key=lambda x: -x[1]):
 zast_nazev = {k: z['NAZEVZAST'] for k, z in zast26.items()}
 okres_obce = {k: o.get('o', '') for k, o in info.items()}
 listiny26 = {(r['KODZASTUP'], r['POR_STR_HL']): r['NAZEVCELK'] for r in table('reg26', 'kvros.csv')}
-jinde = [r for r in table('reg26', 'kvrk.csv')
-         if r['PSTRANA'] == STRANY['aut'] and r['MANDAT'] == 'A' and r['NSTRANA'] != STRANY['aut']]
+cpp26 = {r['PSTRANA']: r['ZKRATKAP8'] for r in table('cis26', 'cpp.csv')}
+kandidati_jinde = [r for r in table('reg26', 'kvrk.csv') if r['PSTRANA'] == STRANY['aut'] and r['NSTRANA'] != STRANY['aut']]
+print(f'\n══ Členové Motoristů, které navrhl jiný subjekt (všichni kandidáti): {len(kandidati_jinde)} ══')
+for r in sorted(kandidati_jinde, key=lambda r: (zast_nazev[r['KODZASTUP']], r['PRIJMENI'])):
+    print(f"  {zast_nazev[r['KODZASTUP']]} (okres {okres_obce.get(r['KODZASTUP'], '?')}): {r['JMENO']} {r['PRIJMENI']}"
+          f" – navrhl {cpp26.get(r['NSTRANA'], r['NSTRANA'])}, kandidátka {listiny26[(r['KODZASTUP'], r['POR_STR_HL'])]}"
+          f"{' – ZVOLEN/A' if r['MANDAT'] == 'A' else ''}")
+jinde = [r for r in kandidati_jinde if r['MANDAT'] == 'A']
 print(f'\n══ Členové Motoristů zvolení za jiný subjekt: {len(jinde)} ══')
 for r in jinde:
     print(f"  {zast_nazev[r['KODZASTUP']]} (okres {okres_obce.get(r['KODZASTUP'], '?')}): "
