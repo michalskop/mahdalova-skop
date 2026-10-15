@@ -19,9 +19,9 @@ OBRAZKY = [
                 ('../images/cover-instagram.png', 'Instagram 1080×1350 – 1. snímek carouselu'),
                 ('../images/cover-story.png', 'stories 1080×1920')]),
     ('Mapy stran – Instagram 1080×1350', [(f'{k}-ig.png', n) for k, n in
-        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé')]]),
+        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé'), ('pro', 'PRO')]]),
     ('Mapy stran – stories 1080×1920', [(f'{k}-story.png', n) for k, n in
-        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé')]]),
+        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé'), ('pro', 'PRO')]]),
     ('Mapy stran – čtverec 1080×1080 (X, Bluesky, Facebook)', [(f'../images/mapa-{k}.png', n) for k, n in
         [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé'), ('pro', 'PRO')]]),
     ('Animované GIFy volby 2022 → 2026', [(f'{k}-2022-2026.gif', n) for k, n in
