@@ -16,7 +16,7 @@ const DONUT = fs.readFileSync(path.join(REPO, 'apps', 'web', 'public', 'images',
 const OUT = path.join(__dirname, '..', 'images');
 
 // barvy stran z predikce / mapy v článku (závazná paleta)
-const BARVA = { spd: '#ffcf02', ano: '#5e66d5', aut: '#33b9d9', ksc: '#de1743', sta: '#bb3a5d', pro: '#b262c0' };
+const BARVA = { spd: '#ffcf02', ano: '#5e66d5', aut: '#33b9d9', ksc: '#de1743', sta: '#bb3a5d', kss: '#de1743', pro: '#b262c0' };
 // pozn.: na tmavém pozadí bereme světlejší odstín téže škály (SPD brandYellow.6, ANO brandRoyalBlue.5,
 // Motoristé brandTeal.4, KSČM brand.6, Stačilo! brandDeepRed.5, PRO brandAmethyst.5), aby tečky vystoupily
 const NAVY = '#101432', TECKA = '#2f325c', SUB = '#d2d8e9';

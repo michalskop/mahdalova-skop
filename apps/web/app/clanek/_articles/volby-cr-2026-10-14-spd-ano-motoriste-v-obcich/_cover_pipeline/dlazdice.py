@@ -17,7 +17,8 @@ import body as B   # středy obcí v WGS84 (B.stred + B.to_wgs) – body.py při
 HERE = Path(__file__).parent
 CSV = HERE.parent / '_data_pipeline' / 'zastupitelstva.csv'
 
-STRANY = [('spd', 'SPD'), ('ano', 'ANO'), ('aut', 'Motoristé'), ('ksc', 'KSČM'), ('sta', 'Stačilo!'), ('pro', 'PRO')]
+# KSČM a Stačilo! jako jedna karta (kss = navržení kteroukoli z nich, viz build.py)
+STRANY = [('spd', 'SPD'), ('ano', 'ANO'), ('aut', 'Motoristé'), ('kss', 'KSČM a Stačilo!'), ('pro', 'PRO')]
 NOVE = {'aut', 'sta'}   # v roce 2022 nekandidovaly
 
 soucty = defaultdict(lambda: defaultdict(lambda: [0, 0, 0, 0]))   # obec -> strana -> [m22, k26, m26, k22]

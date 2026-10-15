@@ -19,13 +19,13 @@ OBRAZKY = [
                 ('../images/cover-instagram.png', 'Instagram 1080×1350 – 1. snímek carouselu'),
                 ('../images/cover-story.png', 'stories 1080×1920')]),
     ('Mapy stran – Instagram 1080×1350', [(f'{k}-ig.png', n) for k, n in
-        [('spd', 'SPD'), ('aut', 'Motoristé'), ('ano', 'ANO'), ('ksc', 'KSČM'), ('sta', 'Stačilo!')]]),
+        [('spd', 'SPD'), ('aut', 'Motoristé'), ('ano', 'ANO'), ('kss', 'KSČM a Stačilo!')]]),
     ('Mapy stran – stories 1080×1920', [(f'{k}-story.png', n) for k, n in
-        [('spd', 'SPD'), ('aut', 'Motoristé'), ('ano', 'ANO'), ('ksc', 'KSČM'), ('sta', 'Stačilo!')]]),
+        [('spd', 'SPD'), ('aut', 'Motoristé'), ('ano', 'ANO'), ('kss', 'KSČM a Stačilo!')]]),
     ('Mapy stran – čtverec 1080×1080 (X, Bluesky, Facebook)', [(f'../images/mapa-{k}.png', n) for k, n in
-        [('spd', 'SPD'), ('aut', 'Motoristé'), ('ano', 'ANO'), ('ksc', 'KSČM'), ('sta', 'Stačilo!'), ('pro', 'PRO')]]),
+        [('spd', 'SPD'), ('aut', 'Motoristé'), ('ano', 'ANO'), ('kss', 'KSČM a Stačilo!'), ('pro', 'PRO')]]),
     ('Animované GIFy volby 2022 → 2026', [(f'{k}-2022-2026.gif', n) for k, n in
-        [('spd', 'SPD'), ('ano', 'ANO'), ('ksc', 'KSČM')]]),
+        [('spd', 'SPD'), ('ano', 'ANO'), ('kss', 'KSČM a Stačilo!')]]),
     ('Grafy z článku', [('graf-uspesnost.png', 'Úspěšnost kandidátů 2022 a 2026'),
                         ('graf-velikost.png', 'Změna podle velikosti obce')]),
 ]
