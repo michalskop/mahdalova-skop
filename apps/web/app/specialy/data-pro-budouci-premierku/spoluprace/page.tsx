@@ -36,6 +36,7 @@ type Partner = {
   items: Item[];
   related?: Item[];
   status?: string;
+  period?: string; // collaboration span shown instead of per-item dates
 };
 
 const DEMO = '01-demografie';
@@ -45,6 +46,7 @@ const ch = (slug: string, article = '') => `${DPBP_HOME}/${slug}${article ? `/${
 const PARTNERS: Partner[] = [
   {
     name: 'Moravec.cz',
+    period: 'od července 2026 dosud',
     kind: 'Datový videopořad Populace',
     chapter: GOV,
     intro:
@@ -64,6 +66,7 @@ const PARTNERS: Partner[] = [
   },
   {
     name: 'PastVina',
+    period: 'leden – červen 2026',
     kind: 'Video-investigativní projekt Hlídače státu',
     chapter: DEMO,
     intro:
@@ -83,6 +86,7 @@ const PARTNERS: Partner[] = [
   },
   {
     name: 'Český rozhlas',
+    period: 'březen – květen 2025',
     kind: 'iRozhlas.cz',
     chapter: GOV,
     intro:
@@ -99,6 +103,7 @@ const PARTNERS: Partner[] = [
   },
   {
     name: 'Volební kalkulačka',
+    period: '2025 – 2026',
     kind: 'KohoVolit.eu',
     chapter: GOV,
     intro:
@@ -117,6 +122,7 @@ const PARTNERS: Partner[] = [
 
 PARTNERS.push({
   name: 'Univerzita Karlova',
+  period: 'listopad 2025 – říjen 2026',
   kind: 'Přírodovědecká fakulta, katedra sociální geografie a regionálního rozvoje',
   chapter: GOV,
   intro:
@@ -148,7 +154,7 @@ function PartnerCard({ p }: { p: Partner }) {
   const accent = chapterAccent(p.chapter);
   return (
     <section className="sp-card" style={{ borderTop: `3px solid ${accent}` }}>
-      <div className="sp-kind">{p.kind}</div>
+      <div className="sp-kind">{p.kind}{p.period && <> · {p.period}</>}</div>
       <h2 className="sp-name">{p.name}</h2>
       <p className="sp-intro">{p.intro}</p>
       <ul className="sp-list">
@@ -159,7 +165,6 @@ function PartnerCard({ p }: { p: Partner }) {
             ) : (
               it.label
             )}
-            {it.date && <span className="sp-date"> · {it.date}</span>}
           </li>
         ))}
       </ul>
