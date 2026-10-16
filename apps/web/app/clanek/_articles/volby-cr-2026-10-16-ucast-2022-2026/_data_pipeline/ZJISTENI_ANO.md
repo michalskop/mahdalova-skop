@@ -44,10 +44,21 @@ Ve 99 městech s více než 10 000 voliči klesala účast víc tam, kde loni si
 4. **Ekologický klam.** Data jsou po obcích, ne po lidech. I kdyby souvislost byla silná, neříká, že doma zůstali právě voliči ANO. ANO v komunálních volbách kandiduje jen v části obcí a mnoho jeho voličů volí místní sdružení.
 5. **Neověřitelné vysvětlení „spokojenost po vítězství“.** Demobilizaci voličů vítězné strany rok po volbách z těchto dat nelze odlišit od sociální struktury. Do textu bych ji dával nanejvýš jako otázku, ne jako zjištění.
 
+## Co je nové proti už napsaným článkům
+
+| Článek | Co měří | Překryv s touto analýzou |
+|---|---|---|
+| `volby-cr-2026-10-12-kdo-zustal-doma` (vydaný) | Kolik **loňských voličů ANO** (sněmovní volby 2025) nepřišlo k volbám 2026. Ekologická inference a regrese po okrscích ve 22 místech, medián 54 %. | Jiná otázka. Srovnává sněmovní volby 2025 s komunálními 2026, tedy volby různého druhu s rozdílem účasti zhruba 26 p. b., a jen ve 22 místech. Tady srovnávám **komunální s komunálními (2022 → 2026) ve všech 6 239 obcích**. Výsledky si neodporují: místa s nejvyšším podílem nehlasujících voličů ANO (Havířov 76 %, Most a Ústí 70 %) patří i tady k městům s poklesem účasti. |
+| `volby-cr-2026-10-14-spd-ano-motoriste-v-obcich` (vydaný), oddíl „ANO ve velkých městech ztrácí, v menších obcích přibírá“ | **Mandáty** ANO podle navrhující strany 2022 → 2026 podle velikosti obce. | Neměří účast. Shoda je jen v tom, že velká města se chovají jinak než malé obce. |
+| `volby-cr-2026-10-15-sila-stran-v-okrscich` (nevydaný, worktree party-strength-districts) | **Zastupitelé** stran po obcích (mapa), 2022 a 2026. | Neměří účast ani výsledky sněmovních voleb. Bez překryvu. |
+
+**Nové je tedy jen tohle:** (1) celostátní test, jestli se **změna účasti v komunálních volbách 2022 → 2026** liší podle síly ANO 2025, s kontrolou senátu, velikosti obce, kraje a účasti. (2) Zjištění, že **souvislost je celostátně slabá a ve velkých městech není specifická pro ANO**: stejně silně platí pro SPD a pro nízkou účast ve sněmovních volbách a mimo Ústecký, Moravskoslezský a Karlovarský kraj skoro mizí. (3) Bod 2 je zároveň užitečná výhrada ke čtení článku „Kdo zůstal doma“: vysoký podíl nehlasujících voličů ANO v Havířově nebo Mostě se dá vyložit i tím, že jde o města, kde lidé k volbám chodí málo celkově.
+
 ## Doporučení
 
-- **Samostatný text z toho nebude.** Nejsilnější hypotéza zní „účast padala ve městech s nízkou volební aktivitou, hlavně v Ústeckém, Moravskoslezském a Karlovarském kraji“, a tu už článek má. Titulek typu „Kde vládne ANO, lidé přestali volit“ by stál na slabší hypotéze (manuál, část VI).
-- **Hodí se jako krátký doplněk** (odstavec nebo infobox pod graf měst), formulovaný zhruba takto: *Ve městech, kde loni nejvíc vyhrálo ANO, účast klesala častěji: v pětině měst s nejsilnějším ANO klesla v 15 z 20, v pětině s nejslabším ve 4 z 19. Stejný vzorec ale platí i pro SPD a pro města, kde lidé méně chodí ke sněmovním volbám. Za celou republiku je souvislost slabá a mimo Ústecký, Moravskoslezský a Karlovarský kraj ve městech skoro mizí.* (Před vložením ověřit čísla proti `analyza_ano.txt`, přečíst manuál a projít checklist části VII.)
+- **Samostatný text z toho nebude.** Hlavní odpověď („voliči ANO zůstávají doma“) už čtenáři mají z článku „Kdo zůstal doma“, a to přesnější metodou. Nové zjištění je převážně negativní (žádný specifický efekt ANO). Samostatný titulek by buď dubloval 12. 10., nebo stál na slabé hypotéze.
+- Další důvod proti samostatnému textu: nejsilnější hypotéza zní „účast padala ve městech s nízkou volební aktivitou, hlavně v Ústeckém, Moravskoslezském a Karlovarském kraji“, a tu už článek má. Titulek typu „Kde vládne ANO, lidé přestali volit“ by stál na slabší hypotéze (manuál, část VI).
+- **Hodí se jako krátký doplněk** (odstavec nebo infobox pod graf měst), formulovaný zhruba takto: *Ve městech, kde loni nejvíc vyhrálo ANO, účast klesala častěji: v pětině měst s nejsilnějším ANO klesla v 15 z 20, v pětině s nejslabším ve 4 z 19. Stejný vzorec ale platí i pro SPD a pro města, kde lidé méně chodí ke sněmovním volbám. Za celou republiku je souvislost slabá a mimo Ústecký, Moravskoslezský a Karlovarský kraj ve městech skoro mizí.* Odstavec by navázal na už existující odkaz na „Kdo zůstal doma“ v článku a nic by neopakoval. (Před vložením ověřit čísla proti `analyza_ano.txt`, přečíst manuál a projít checklist části VII.)
 - Kdyby z toho měla být samostatná analýza, chybí sociální data za obce: podíl lidí v exekuci, nezaměstnanost, vzdělání (SLDB 2021) nebo vyloučené lokality. Teprve s nimi by šlo poctivě rozlišit „ANO“ od „chudších měst“.
 
 ## Kontroly výpočtu
