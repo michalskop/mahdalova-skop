@@ -832,8 +832,8 @@ export default function DpbpLandingPage() {
           {/* Partners strip – keeps the 15-tile grid intact but puts the
               collaborations page first in view, right under the hero */}
           <a className="dt-partners" href="/specialy/data-pro-budouci-premierku/spoluprace">
-            <span className="dt-partners-label">Spolupráce a dopady</span>
-            <span className="dt-partners-names">Český rozhlas · PastVina · Volební kalkulačka · Moravec.cz</span>
+            <span className="dt-partners-label">S kým spolupracujeme</span>
+            <span className="dt-partners-names">Český rozhlas · PastVina · Volební kalkulačka · Moravec.cz · Univerzita Karlova</span>
             <span className="dt-partners-arrow" aria-hidden>→</span>
           </a>
           <SimpleGrid cols={{ base: 2, sm: 3 }} spacing="md">

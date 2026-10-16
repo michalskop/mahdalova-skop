@@ -9,9 +9,9 @@ import { DPBP_HOME, chapterAccent } from '@/components/dpbp/chapterNavigation';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
 const COVER = `${BASE_URL}/images/specials/og/data-pro-budouci-premierku.jpg`;
 const PATH = `${DPBP_HOME}/spoluprace`;
-const TITLE = 'Spolupráce a dopady | Data pro budoucí premiérku';
+const TITLE = 'S kým spolupracujeme | Data pro budoucí premiérku';
 const DESCRIPTION =
-  'S kým jsme na speciálu Data pro budoucí premiérku spolupracovali a kam se jeho data dostala: Moravec.cz, PastVina, Český rozhlas, Volební kalkulačka.';
+  'S kým jsme na speciálu Data pro budoucí premiérku spojili síly: Český rozhlas, PastVina, Volební kalkulačka, Moravec.cz a Univerzita Karlova.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -115,8 +115,18 @@ const PARTNERS: Partner[] = [
   },
 ];
 
+PARTNERS.push({
+  name: 'Univerzita Karlova',
+  kind: 'Přírodovědecká fakulta, katedra sociální geografie a regionálního rozvoje',
+  chapter: GOV,
+  intro:
+    'S politickými geografy z Přírodovědecké fakulty Univerzity Karlovy jsme poprvé společně připravili Volební kalkulačku pro komunální volby ve více než 70 městech. Navazujeme společným projektem k tématu vládnutí, jehož výstupy teprve přijdou.',
+  items: [{ label: 'Komunální volby 2026: kalkulačka pro více než 70 měst', href: 'https://www.volebnikalkulacka.cz/volby/komunalni-2026' }],
+  related: [{ label: 'Kapitola Efektivní vládnutí', href: ch(GOV) }],
+});
+
 // Partners are shown in the order the collaborations started.
-const PARTNER_ORDER = ['Český rozhlas', 'PastVina', 'Volební kalkulačka', 'Moravec.cz'];
+const PARTNER_ORDER = ['Český rozhlas', 'PastVina', 'Volební kalkulačka', 'Moravec.cz', 'Univerzita Karlova'];
 const PARTNERS_SORTED = [...PARTNERS].sort(
   (a, b) => PARTNER_ORDER.indexOf(a.name) - PARTNER_ORDER.indexOf(b.name),
 );
@@ -232,11 +242,11 @@ export default function DpbpPartnersPage() {
           <div className="sp-tag">
             <a href={DPBP_HOME}>Speciál Data pro budoucí premiérku</a>
           </div>
-          <h1 className="sp-title">Spolupráce a dopady</h1>
+          <h1 className="sp-title">S kým spolupracujeme</h1>
           <p className="sp-lead">
-            Jsme otevření tomu propojovat v rámci novinářského řemesla síly s kolegy a kolegyněmi z dalších redakcí.
-            Data ze speciálu proto nežijí jen u nás: rozebírali jsme je ve videopořadech, v investigativních
-            reportážích i ve veřejnoprávním rozhlase.
+            Spojování sil si v novinářském řemesle velmi ceníme. Proto jsme otevření spolupráci s kolegy a kolegyněmi
+            z dalších redakcí i z akademické sféry. Data ze speciálu tak nežijí jen u nás: rozebírali jsme je ve
+            videopořadech, v investigativních reportážích, ve veřejnoprávním rozhlase i ve Volební kalkulačce.
           </p>
         </div>
 
