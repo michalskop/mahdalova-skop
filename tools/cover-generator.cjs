@@ -235,7 +235,9 @@ function vykresliZnak() {
 function html(c, klic) {
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
   // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
-  const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}), ...(c.mapaPozice?.[klic] ? { mapa: c.mapaPozice[klic] } : {}) };
+  // c.format = { story: { t: 90 } } – úprava velikostí jednoho formátu (např. menší titulek, aby zalomení řádků
+  // vyšlo ve všech formátech stejně)
+  const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}), ...(c.mapaPozice?.[klic] ? { mapa: c.mapaPozice[klic] } : {}), ...(c.format?.[klic] ?? {}) };
   const { w, h } = f;
   const [bx0, by0, bx1, by1] = f.box;
   const motiv = c.motiv.typ === 'tecky' ? tecky(c, f) : c.motiv.typ === 'svg' ? svgVrstva(c, f, klic) : obrazek(c, f, klic);

@@ -65,6 +65,11 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *16. 10. 2026 – titulek se v každém formátu lámal jinak (ODS a Piráti).* Titulek coveru má mít ve všech pěti
+  formátech stejné zalomení. Řádky určit ručně přes `<br>` a kde se řádek do užšího formátu nevejde (typicky
+  story), zmenšit jen jeho titulek přes `format: { story: { t: 88 } }` v `cover.config.cjs`. Na kontrolním listu
+  projít všechny formáty vedle sebe. Rivalské strany (ODS × Piráti) v titulku nesčítat do jedné věty, každá dostane
+  vlastní údaj („ODS ztratila / čtvrtinu zastupitelů, / Piráti rovněž“).
 - *15. 10. 2026 – „v“ na konci řádku v titulku karty na sítě.* Karty a dlaždice vykreslované mimo web (Playwright
   šablony v `_cover_pipeline/`, např. `karty.cjs`) nejdou přes `fixCzechTypography`. Titulky a podtitulky v nich
   proto prohnat vlastní funkcí, která za jednopísmenné předložky a spojky (v, k, s, z, o, u, a, i) dá nezlomitelnou
