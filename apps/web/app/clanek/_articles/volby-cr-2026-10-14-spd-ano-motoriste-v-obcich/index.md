@@ -59,7 +59,7 @@ Do zastupitelstev obcí se navíc volí jinak než do Sněmovny. Volič má toli
 
 Motoristé sobě v roce 2022 postavili jedinou kandidátku, do zastupitelstva hlavního města Prahy, a s 2,29 % hlasů neuspěli. Letos navrhli 1 116 kandidátů do 58 zastupitelstev a byli na 59 kandidátkách, samostatně, případně společně se Svobodnými, SPD, Trikolorou nebo místními sdruženími. Zvoleno bylo 20 z nich, tedy 1,8 %.
 
-Dvanáct z dvaceti zvolených je v Ostravě: do zastupitelstva Ostrava-město se dostalo pět kandidátů samostatné kandidátky Motoristů (7,71 % hlasů) a dalších sedm usedne v obvodech Moravská Ostrava a Přívoz, Ostrava-Jih, Vítkovice a Mariánské Hory a Hulváky.
+Dvanáct z dvaceti zvolených je v Ostravě: do zastupitelstva města Ostravy se dostalo pět kandidátů samostatné kandidátky Motoristů (7,71 % hlasů) a dalších sedm usedne v obvodech Moravská Ostrava a Přívoz, Ostrava-Jih, Vítkovice a Mariánské Hory a Hulváky.
 
 Mimo Ostravu mají Motoristé po dvou zastupitelích ve dvou malých obcích, v Loučné nad Desnou na Šumpersku a ve Věšíně na Příbramsku, a po jednom v Ústí nad Labem, v ústeckém obvodu Severní Terasa, v Chomutově a v Ostrově na Karlovarsku. Dalších šest členů Motoristů se do zastupitelstev dostalo na kandidátkách místních sdružení nebo jiné strany, které je navrhly, například v Černoučku na Litoměřicku, ve Smečně na Kladensku nebo v Čeladné na Frýdecko-Místecku. Do dvaceti zastupitelů Motoristů je nepočítáme: stejně jako u ostatních stran počítáme jen ty, které strana sama navrhla.
 
