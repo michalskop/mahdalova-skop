@@ -1,0 +1,2026 @@
+{
+ "kontrola": {
+  "ANO_cr_bez_zahranici": 34.67,
+  "ucast_ps_bez_zahranici": 68.9,
+  "obci_PS_nezarazeno": 5,
+  "volicu_PS_nezarazeno": 507,
+  "obci_v_analyze": 6239,
+  "obci_KV_bez_PS": 0
+ },
+ "celkem": {
+  "obci": 6239,
+  "volicu26": 8281063,
+  "u22": 46.07,
+  "u26": 47.99,
+  "zmena": 1.93,
+  "median_obce": 1.8,
+  "nizsi": 2456,
+  "ANO": 35.0
+ },
+ "korelace": {
+  "vsechny_obce_vazene_volici": -0.093,
+  "vsechny_obce_spearman": -0.029,
+  "obce_500plus_spearman": -0.047,
+  "obce_500plus_n": 2424
+ },
+ "petiny_ANO": [
+  {
+   "od": 3.6,
+   "do": 30.5,
+   "obci": 1247,
+   "volicu26": 2408130,
+   "u22": 46.61,
+   "u26": 49.16,
+   "zmena": 2.56,
+   "median_obce": 2.12,
+   "nizsi": 464,
+   "ANO": 23.7
+  },
+  {
+   "od": 30.5,
+   "do": 35.6,
+   "obci": 1248,
+   "volicu26": 1860597,
+   "u22": 46.59,
+   "u26": 48.76,
+   "zmena": 2.17,
+   "median_obce": 1.88,
+   "nizsi": 479,
+   "ANO": 32.8
+  },
+  {
+   "od": 35.6,
+   "do": 39.9,
+   "obci": 1248,
+   "volicu26": 1369467,
+   "u22": 48.09,
+   "u26": 50.23,
+   "zmena": 2.14,
+   "median_obce": 1.9,
+   "nizsi": 475,
+   "ANO": 37.6
+  },
+  {
+   "od": 39.9,
+   "do": 45.4,
+   "obci": 1248,
+   "volicu26": 1675396,
+   "u22": 43.98,
+   "u26": 45.3,
+   "zmena": 1.32,
+   "median_obce": 1.76,
+   "nizsi": 497,
+   "ANO": 42.5
+  },
+  {
+   "od": 45.4,
+   "do": 76.6,
+   "obci": 1248,
+   "volicu26": 967473,
+   "u22": 44.54,
+   "u26": 45.13,
+   "zmena": 0.59,
+   "median_obce": 1.15,
+   "nizsi": 541,
+   "ANO": 50.3
+  }
+ ],
+ "petiny_ANO_senat": {
+  "ani jednou": [
+   {
+    "od": 6.1,
+    "do": 30.7,
+    "obci": 389,
+    "volicu26": 1597820,
+    "u22": 44.7,
+    "u26": 47.03,
+    "zmena": 2.33,
+    "median_obce": 1.6,
+    "nizsi": 143,
+    "ANO": 22.5
+   },
+   {
+    "od": 30.7,
+    "do": 36.1,
+    "obci": 389,
+    "volicu26": 521770,
+    "u22": 47.25,
+    "u26": 49.09,
+    "zmena": 1.84,
+    "median_obce": 1.34,
+    "nizsi": 149,
+    "ANO": 33.6
+   },
+   {
+    "od": 36.1,
+    "do": 40.3,
+    "obci": 389,
+    "volicu26": 504487,
+    "u22": 46.59,
+    "u26": 48.82,
+    "zmena": 2.23,
+    "median_obce": 2.27,
+    "nizsi": 141,
+    "ANO": 38.3
+   },
+   {
+    "od": 40.3,
+    "do": 45.4,
+    "obci": 389,
+    "volicu26": 574353,
+    "u22": 42.58,
+    "u26": 43.2,
+    "zmena": 0.62,
+    "median_obce": 1.6,
+    "nizsi": 160,
+    "ANO": 43.0
+   },
+   {
+    "od": 45.4,
+    "do": 76.6,
+    "obci": 390,
+    "volicu26": 414330,
+    "u22": 42.14,
+    "u26": 42.45,
+    "zmena": 0.31,
+    "median_obce": 1.54,
+    "nizsi": 172,
+    "ANO": 49.4
+   }
+  ],
+  "jen 2022": [
+   {
+    "od": 6.1,
+    "do": 29.8,
+    "obci": 423,
+    "volicu26": 355848,
+    "u22": 52.72,
+    "u26": 53.93,
+    "zmena": 1.21,
+    "median_obce": 0.46,
+    "nizsi": 198,
+    "ANO": 24.8
+   },
+   {
+    "od": 29.8,
+    "do": 34.8,
+    "obci": 424,
+    "volicu26": 700821,
+    "u22": 46.43,
+    "u26": 47.02,
+    "zmena": 0.59,
+    "median_obce": 0.67,
+    "nizsi": 200,
+    "ANO": 31.9
+   },
+   {
+    "od": 34.8,
+    "do": 39.0,
+    "obci": 424,
+    "volicu26": 465598,
+    "u22": 48.97,
+    "u26": 50.08,
+    "zmena": 1.11,
+    "median_obce": 0.8,
+    "nizsi": 197,
+    "ANO": 36.9
+   },
+   {
+    "od": 39.0,
+    "do": 44.9,
+    "obci": 424,
+    "volicu26": 481825,
+    "u22": 46.42,
+    "u26": 47.62,
+    "zmena": 1.19,
+    "median_obce": 0.89,
+    "nizsi": 193,
+    "ANO": 42.0
+   },
+   {
+    "od": 45.0,
+    "do": 70.0,
+    "obci": 424,
+    "volicu26": 288310,
+    "u22": 46.41,
+    "u26": 46.76,
+    "zmena": 0.35,
+    "median_obce": 0.48,
+    "nizsi": 197,
+    "ANO": 49.4
+   }
+  ],
+  "jen 2026": [
+   {
+    "od": 3.6,
+    "do": 30.9,
+    "obci": 434,
+    "volicu26": 594637,
+    "u22": 47.0,
+    "u26": 51.59,
+    "zmena": 4.59,
+    "median_obce": 4.7,
+    "nizsi": 112,
+    "ANO": 28.1
+   },
+   {
+    "od": 30.9,
+    "do": 36.0,
+    "obci": 435,
+    "volicu26": 506439,
+    "u22": 47.53,
+    "u26": 51.11,
+    "zmena": 3.59,
+    "median_obce": 3.3,
+    "nizsi": 134,
+    "ANO": 33.8
+   },
+   {
+    "od": 36.0,
+    "do": 40.2,
+    "obci": 435,
+    "volicu26": 443081,
+    "u22": 47.52,
+    "u26": 50.7,
+    "zmena": 3.17,
+    "median_obce": 3.18,
+    "nizsi": 132,
+    "ANO": 38.0
+   },
+   {
+    "od": 40.2,
+    "do": 45.8,
+    "obci": 435,
+    "volicu26": 547148,
+    "u22": 44.14,
+    "u26": 46.44,
+    "zmena": 2.3,
+    "median_obce": 2.86,
+    "nizsi": 144,
+    "ANO": 42.6
+   },
+   {
+    "od": 45.8,
+    "do": 69.2,
+    "obci": 435,
+    "volicu26": 284596,
+    "u22": 45.85,
+    "u26": 46.85,
+    "zmena": 1.0,
+    "median_obce": 1.86,
+    "nizsi": 184,
+    "ANO": 52.2
+   }
+  ]
+ },
+ "petiny_ANO_velikost": {
+  "0–500": [
+   {
+    "od": 3.6,
+    "do": 30.5,
+    "obci": 763,
+    "volicu26": 165056,
+    "u22": 60.51,
+    "u26": 62.42,
+    "zmena": 1.91,
+    "median_obce": 1.33,
+    "nizsi": 336,
+    "ANO": 26.0
+   },
+   {
+    "od": 30.5,
+    "do": 36.0,
+    "obci": 763,
+    "volicu26": 184387,
+    "u22": 58.96,
+    "u26": 60.79,
+    "zmena": 1.83,
+    "median_obce": 1.25,
+    "nizsi": 338,
+    "ANO": 33.5
+   },
+   {
+    "od": 36.0,
+    "do": 40.7,
+    "obci": 763,
+    "volicu26": 188110,
+    "u22": 57.95,
+    "u26": 60.2,
+    "zmena": 2.25,
+    "median_obce": 1.73,
+    "nizsi": 323,
+    "ANO": 38.2
+   },
+   {
+    "od": 40.7,
+    "do": 46.7,
+    "obci": 763,
+    "volicu26": 183748,
+    "u22": 59.11,
+    "u26": 60.54,
+    "zmena": 1.43,
+    "median_obce": 0.82,
+    "nizsi": 344,
+    "ANO": 43.6
+   },
+   {
+    "od": 46.7,
+    "do": 76.6,
+    "obci": 763,
+    "volicu26": 160748,
+    "u22": 59.09,
+    "u26": 60.04,
+    "zmena": 0.95,
+    "median_obce": 0.65,
+    "nizsi": 358,
+    "ANO": 52.3
+   }
+  ],
+  "500–2000": [
+   {
+    "od": 13.2,
+    "do": 30.3,
+    "obci": 375,
+    "volicu26": 357277,
+    "u22": 53.9,
+    "u26": 57.51,
+    "zmena": 3.61,
+    "median_obce": 3.51,
+    "nizsi": 109,
+    "ANO": 25.3
+   },
+   {
+    "od": 30.3,
+    "do": 35.1,
+    "obci": 375,
+    "volicu26": 346938,
+    "u22": 53.83,
+    "u26": 56.43,
+    "zmena": 2.6,
+    "median_obce": 2.13,
+    "nizsi": 124,
+    "ANO": 32.8
+   },
+   {
+    "od": 35.1,
+    "do": 38.8,
+    "obci": 375,
+    "volicu26": 360414,
+    "u22": 53.27,
+    "u26": 56.06,
+    "zmena": 2.79,
+    "median_obce": 2.44,
+    "nizsi": 126,
+    "ANO": 36.9
+   },
+   {
+    "od": 38.8,
+    "do": 43.3,
+    "obci": 375,
+    "volicu26": 343174,
+    "u22": 52.75,
+    "u26": 55.59,
+    "zmena": 2.84,
+    "median_obce": 2.38,
+    "nizsi": 128,
+    "ANO": 41.0
+   },
+   {
+    "od": 43.4,
+    "do": 65.6,
+    "obci": 375,
+    "volicu26": 339423,
+    "u22": 51.2,
+    "u26": 53.61,
+    "zmena": 2.42,
+    "median_obce": 2.47,
+    "nizsi": 126,
+    "ANO": 48.1
+   }
+  ],
+  "2000–10000": [
+   {
+    "od": 13.8,
+    "do": 30.6,
+    "obci": 90,
+    "volicu26": 350075,
+    "u22": 48.4,
+    "u26": 52.33,
+    "zmena": 3.94,
+    "median_obce": 3.38,
+    "nizsi": 16,
+    "ANO": 25.3
+   },
+   {
+    "od": 30.6,
+    "do": 35.1,
+    "obci": 90,
+    "volicu26": 385136,
+    "u22": 46.76,
+    "u26": 50.44,
+    "zmena": 3.68,
+    "median_obce": 3.46,
+    "nizsi": 12,
+    "ANO": 33.2
+   },
+   {
+    "od": 35.3,
+    "do": 39.1,
+    "obci": 90,
+    "volicu26": 384321,
+    "u22": 46.05,
+    "u26": 48.15,
+    "zmena": 2.1,
+    "median_obce": 1.7,
+    "nizsi": 23,
+    "ANO": 37.3
+   },
+   {
+    "od": 39.1,
+    "do": 43.2,
+    "obci": 90,
+    "volicu26": 335840,
+    "u22": 44.53,
+    "u26": 47.66,
+    "zmena": 3.13,
+    "median_obce": 3.01,
+    "nizsi": 19,
+    "ANO": 41.2
+   },
+   {
+    "od": 43.2,
+    "do": 59.2,
+    "obci": 90,
+    "volicu26": 342467,
+    "u22": 41.92,
+    "u26": 43.85,
+    "zmena": 1.93,
+    "median_obce": 1.56,
+    "nizsi": 30,
+    "ANO": 47.3
+   }
+  ],
+  "10000–1000000000": [
+   {
+    "od": 19.7,
+    "do": 32.0,
+    "obci": 19,
+    "volicu26": 1920298,
+    "u22": 42.59,
+    "u26": 44.42,
+    "zmena": 1.83,
+    "median_obce": 1.52,
+    "nizsi": 4,
+    "ANO": 24.4
+   },
+   {
+    "od": 32.1,
+    "do": 34.6,
+    "obci": 20,
+    "volicu26": 384539,
+    "u22": 41.91,
+    "u26": 43.15,
+    "zmena": 1.24,
+    "median_obce": 1.11,
+    "nizsi": 5,
+    "ANO": 33.1
+   },
+   {
+    "od": 34.6,
+    "do": 38.6,
+    "obci": 20,
+    "volicu26": 405367,
+    "u22": 40.37,
+    "u26": 40.9,
+    "zmena": 0.53,
+    "median_obce": 1.08,
+    "nizsi": 8,
+    "ANO": 36.4
+   },
+   {
+    "od": 39.0,
+    "do": 43.6,
+    "obci": 20,
+    "volicu26": 726625,
+    "u22": 36.89,
+    "u26": 36.97,
+    "zmena": 0.09,
+    "median_obce": -0.17,
+    "nizsi": 12,
+    "ANO": 42.0
+   },
+   {
+    "od": 43.8,
+    "do": 59.5,
+    "obci": 20,
+    "volicu26": 417120,
+    "u22": 34.9,
+    "u26": 32.66,
+    "zmena": -2.24,
+    "median_obce": -2.65,
+    "nizsi": 15,
+    "ANO": 49.5
+   }
+  ]
+ },
+ "regrese": {
+  "obce 500+ voličů, nevážené": {
+   "jen ANO": {
+    "konst": {
+     "b": 4.2041,
+     "se": 0.9567
+    },
+    "ANO": {
+     "b": -0.0397,
+     "se": 0.0251
+    },
+    "R2": 0.001,
+    "n": 2424
+   },
+   "+ senát": {
+    "konst": {
+     "b": 4.5793,
+     "se": 0.9766
+    },
+    "ANO": {
+     "b": -0.0524,
+     "se": 0.0247
+    },
+    "senat_jen2022": {
+     "b": -1.5955,
+     "se": 0.4679
+    },
+    "senat_jen2026": {
+     "b": 1.7687,
+     "se": 0.4547
+    },
+    "R2": 0.023,
+    "n": 2424
+   },
+   "+ senát + velikost": {
+    "konst": {
+     "b": 6.0553,
+     "se": 1.5512
+    },
+    "ANO": {
+     "b": -0.0527,
+     "se": 0.0247
+    },
+    "senat_jen2022": {
+     "b": -1.6024,
+     "se": 0.4682
+    },
+    "senat_jen2026": {
+     "b": 1.7522,
+     "se": 0.4552
+    },
+    "ln_volicu": {
+     "b": -0.2037,
+     "se": 0.1489
+    },
+    "R2": 0.023,
+    "n": 2424
+   },
+   "+ senát + velikost + kraj": {
+    "konst": {
+     "b": 7.1006,
+     "se": 1.7171
+    },
+    "ANO": {
+     "b": -0.0523,
+     "se": 0.0293
+    },
+    "senat_jen2022": {
+     "b": -1.8507,
+     "se": 0.5032
+    },
+    "senat_jen2026": {
+     "b": 1.4792,
+     "se": 0.4724
+    },
+    "ln_volicu": {
+     "b": -0.1895,
+     "se": 0.1536
+    },
+    "R2": 0.03,
+    "n": 2424
+   },
+   "+ … + účast 2022": {
+    "konst": {
+     "b": 56.3317,
+     "se": 3.2708
+    },
+    "ANO": {
+     "b": -0.1678,
+     "se": 0.0266
+    },
+    "senat_jen2022": {
+     "b": -1.2553,
+     "se": 0.4534
+    },
+    "senat_jen2026": {
+     "b": 1.2876,
+     "se": 0.4007
+    },
+    "ln_volicu": {
+     "b": -2.6453,
+     "se": 0.2051
+    },
+    "u22": {
+     "b": -0.5176,
+     "se": 0.0273
+    },
+    "R2": 0.256,
+    "n": 2424
+   },
+   "+ … + účast PS 2025 místo účasti 2022": {
+    "konst": {
+     "b": 10.3518,
+     "se": 5.9001
+    },
+    "ANO": {
+     "b": -0.0644,
+     "se": 0.0369
+    },
+    "senat_jen2022": {
+     "b": -1.8544,
+     "se": 0.5036
+    },
+    "senat_jen2026": {
+     "b": 1.4779,
+     "se": 0.4725
+    },
+    "ln_volicu": {
+     "b": -0.2491,
+     "se": 0.1856
+    },
+    "ups25": {
+     "b": -0.033,
+     "se": 0.0562
+    },
+    "R2": 0.03,
+    "n": 2424
+   }
+  },
+  "všechny obce, vážené voliči (bez Prahy)": {
+   "jen ANO": {
+    "konst": {
+     "b": 5.1081,
+     "se": 0.6609
+    },
+    "ANO": {
+     "b": -0.0903,
+     "se": 0.018
+    },
+    "R2": 0.011,
+    "n": 6238
+   },
+   "+ senát": {
+    "konst": {
+     "b": 5.1069,
+     "se": 0.6181
+    },
+    "ANO": {
+     "b": -0.0972,
+     "se": 0.0173
+    },
+    "senat_jen2022": {
+     "b": -0.8055,
+     "se": 0.3118
+    },
+    "senat_jen2026": {
+     "b": 1.5637,
+     "se": 0.3195
+    },
+    "R2": 0.029,
+    "n": 6238
+   },
+   "+ senát + velikost": {
+    "konst": {
+     "b": 9.1823,
+     "se": 0.827
+    },
+    "ANO": {
+     "b": -0.1096,
+     "se": 0.0155
+    },
+    "senat_jen2022": {
+     "b": -1.1098,
+     "se": 0.2741
+    },
+    "senat_jen2026": {
+     "b": 1.2974,
+     "se": 0.2735
+    },
+    "ln_volicu": {
+     "b": -0.3976,
+     "se": 0.0552
+    },
+    "R2": 0.041,
+    "n": 6238
+   },
+   "+ senát + velikost + kraj": {
+    "konst": {
+     "b": 9.385,
+     "se": 1.0139
+    },
+    "ANO": {
+     "b": -0.094,
+     "se": 0.0187
+    },
+    "senat_jen2022": {
+     "b": -1.1152,
+     "se": 0.2749
+    },
+    "senat_jen2026": {
+     "b": 1.2776,
+     "se": 0.2676
+    },
+    "ln_volicu": {
+     "b": -0.4088,
+     "se": 0.0559
+    },
+    "R2": 0.047,
+    "n": 6238
+   },
+   "+ … + účast 2022": {
+    "konst": {
+     "b": 52.0334,
+     "se": 1.9872
+    },
+    "ANO": {
+     "b": -0.2315,
+     "se": 0.0207
+    },
+    "senat_jen2022": {
+     "b": -0.9611,
+     "se": 0.3387
+    },
+    "senat_jen2026": {
+     "b": 1.0502,
+     "se": 0.3246
+    },
+    "ln_volicu": {
+     "b": -2.1057,
+     "se": 0.1243
+    },
+    "u22": {
+     "b": -0.4632,
+     "se": 0.0186
+    },
+    "R2": 0.247,
+    "n": 6238
+   },
+   "+ … + účast PS 2025 místo účasti 2022": {
+    "konst": {
+     "b": 7.4812,
+     "se": 2.9892
+    },
+    "ANO": {
+     "b": -0.0864,
+     "se": 0.0208
+    },
+    "senat_jen2022": {
+     "b": -1.1177,
+     "se": 0.2755
+    },
+    "senat_jen2026": {
+     "b": 1.2698,
+     "se": 0.2683
+    },
+    "ln_volicu": {
+     "b": -0.3774,
+     "se": 0.0693
+    },
+    "ups25": {
+     "b": 0.0195,
+     "se": 0.0306
+    },
+    "R2": 0.047,
+    "n": 6238
+   }
+  }
+ },
+ "placebo": {
+  "ANO": {
+   "b": -0.0523,
+   "se": 0.0293
+  },
+  "SPD": {
+   "b": -0.22,
+   "se": 0.1084
+  },
+  "SPOLU": {
+   "b": 0.0417,
+   "se": 0.034
+  },
+  "STAN": {
+   "b": 0.0748,
+   "se": 0.0638
+  },
+  "Piráti": {
+   "b": 0.2791,
+   "se": 0.1054
+  },
+  "Motoristé": {
+   "b": -0.0831,
+   "se": 0.1325
+  },
+  "Stačilo": {
+   "b": -0.0029,
+   "se": 0.1477
+  }
+ },
+ "placebo_s_ucasti": {
+  "ANO": {
+   "b": -0.0644,
+   "se": 0.0369
+  },
+  "SPD": {
+   "b": -0.2272,
+   "se": 0.1164
+  },
+  "SPOLU": {
+   "b": 0.0458,
+   "se": 0.0409
+  },
+  "STAN": {
+   "b": 0.0722,
+   "se": 0.0709
+  },
+  "Piráti": {
+   "b": 0.2939,
+   "se": 0.113
+  },
+  "Motoristé": {
+   "b": -0.0833,
+   "se": 0.1325
+  },
+  "Stačilo": {
+   "b": 0.024,
+   "se": 0.1566
+  }
+ },
+ "placebo_ucast": {
+  "ups25": {
+   "b": 0.024,
+   "se": 0.0447
+  },
+  "u22": {
+   "b": -0.4951,
+   "se": 0.0267
+  }
+ },
+ "korelace_ANO_s": {
+  "u22": -0.134,
+  "ups25": -0.521,
+  "SPD": 0.354,
+  "SPOLU": -0.826,
+  "vol26": -0.016
+ },
+ "mesta": {
+  "n": 99,
+  "spearman_ANO_d": -0.477,
+  "spearman_u22_d": 0.327,
+  "spearman_ANO_u22": -0.648,
+  "regrese_ANO": {
+   "b": -0.1713,
+   "se": 0.024
+  },
+  "regrese_ANO_u22": {
+   "konst": {
+    "b": 7.5481,
+    "se": 3.2304
+   },
+   "ANO": {
+    "b": -0.1791,
+    "se": 0.0285
+   },
+   "senat_jen2022": {
+    "b": 0.0515,
+    "se": 0.5297
+   },
+   "senat_jen2026": {
+    "b": 1.219,
+    "se": 0.464
+   },
+   "u22": {
+    "b": -0.0198,
+    "se": 0.0621
+   },
+   "R2": 0.315,
+   "n": 99
+  },
+  "regrese_ANO_ups25": {
+   "konst": {
+    "b": -9.9073,
+    "se": 6.1786
+   },
+   "ANO": {
+    "b": -0.0698,
+    "se": 0.0434
+   },
+   "senat_jen2022": {
+    "b": 0.0272,
+    "se": 0.5374
+   },
+   "senat_jen2026": {
+    "b": 0.9685,
+    "se": 0.4441
+   },
+   "ups25": {
+    "b": 0.1928,
+    "se": 0.0741
+   },
+   "R2": 0.357,
+   "n": 99
+  },
+  "regrese_ups25": {
+   "b": 0.2851,
+   "se": 0.0436
+  },
+  "placebo": {
+   "ANO": {
+    "b": -0.1713,
+    "se": 0.024
+   },
+   "SPD": {
+    "b": -0.9068,
+    "se": 0.1517
+   },
+   "SPOLU": {
+    "b": 0.2407,
+    "se": 0.0339
+   },
+   "STAN": {
+    "b": 0.2529,
+    "se": 0.0705
+   },
+   "Piráti": {
+    "b": 0.5537,
+    "se": 0.1215
+   },
+   "Motoristé": {
+    "b": 0.3408,
+    "se": 0.4499
+   },
+   "Stačilo": {
+    "b": -0.5331,
+    "se": 0.2448
+   }
+  },
+  "spearman_ANO_ups25": -0.799,
+  "spearman_strany_d": {
+   "ANO": -0.477,
+   "SPD": -0.473,
+   "SPOLU": 0.495,
+   "STAN": 0.317,
+   "Piráti": 0.398,
+   "Motoristé": 0.102,
+   "Stačilo": -0.12,
+   "ups25": 0.523
+  },
+  "spearman_ups25_d": 0.523,
+  "petiny": [
+   {
+    "od": 19.7,
+    "do": 32.0,
+    "obci": 19,
+    "volicu26": 1920298,
+    "u22": 42.59,
+    "u26": 44.42,
+    "zmena": 1.83,
+    "median_obce": 1.52,
+    "nizsi": 4,
+    "ANO": 24.4
+   },
+   {
+    "od": 32.1,
+    "do": 34.6,
+    "obci": 20,
+    "volicu26": 384539,
+    "u22": 41.91,
+    "u26": 43.15,
+    "zmena": 1.24,
+    "median_obce": 1.11,
+    "nizsi": 5,
+    "ANO": 33.1
+   },
+   {
+    "od": 34.6,
+    "do": 38.6,
+    "obci": 20,
+    "volicu26": 405367,
+    "u22": 40.37,
+    "u26": 40.9,
+    "zmena": 0.53,
+    "median_obce": 1.08,
+    "nizsi": 8,
+    "ANO": 36.4
+   },
+   {
+    "od": 39.0,
+    "do": 43.6,
+    "obci": 20,
+    "volicu26": 726625,
+    "u22": 36.89,
+    "u26": 36.97,
+    "zmena": 0.09,
+    "median_obce": -0.17,
+    "nizsi": 12,
+    "ANO": 42.0
+   },
+   {
+    "od": 43.8,
+    "do": 59.5,
+    "obci": 20,
+    "volicu26": 417120,
+    "u22": 34.9,
+    "u26": 32.66,
+    "zmena": -2.24,
+    "median_obce": -2.65,
+    "nizsi": 15,
+    "ANO": 49.5
+   }
+  ],
+  "tabulka": [
+   {
+    "obec": "Karviná",
+    "kraj": "Moravskoslezský",
+    "ANO": 59.5,
+    "u22": 35.3,
+    "d": -2.72,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Orlová",
+    "kraj": "Moravskoslezský",
+    "ANO": 57.4,
+    "u22": 31.6,
+    "d": -3.86,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Bílina",
+    "kraj": "Ústecký",
+    "ANO": 54.9,
+    "u22": 34.8,
+    "d": -3.1,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Bohumín",
+    "kraj": "Moravskoslezský",
+    "ANO": 50.5,
+    "u22": 37.7,
+    "d": -3.48,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Havířov",
+    "kraj": "Moravskoslezský",
+    "ANO": 50.2,
+    "u22": 34.5,
+    "d": -3.6,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Most",
+    "kraj": "Ústecký",
+    "ANO": 49.7,
+    "u22": 32.1,
+    "d": -2.11,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Litvínov",
+    "kraj": "Ústecký",
+    "ANO": 49.1,
+    "u22": 34.2,
+    "d": 0.03,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Chodov",
+    "kraj": "Karlovarský",
+    "ANO": 48.2,
+    "u22": 30.2,
+    "d": 0.11,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Jirkov",
+    "kraj": "Ústecký",
+    "ANO": 48.2,
+    "u22": 30.1,
+    "d": -2.58,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Krupka",
+    "kraj": "Ústecký",
+    "ANO": 48.1,
+    "u22": 43.6,
+    "d": -2.91,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Klášterec nad Ohří",
+    "kraj": "Ústecký",
+    "ANO": 47.6,
+    "u22": 34.7,
+    "d": -1.3,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Bruntál",
+    "kraj": "Moravskoslezský",
+    "ANO": 47.3,
+    "u22": 36.3,
+    "d": -2.82,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Žatec",
+    "kraj": "Ústecký",
+    "ANO": 46.0,
+    "u22": 36.5,
+    "d": -0.28,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Chomutov",
+    "kraj": "Ústecký",
+    "ANO": 45.8,
+    "u22": 31.4,
+    "d": -2.96,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Kadaň",
+    "kraj": "Ústecký",
+    "ANO": 45.5,
+    "u22": 33.3,
+    "d": 1.71,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Krnov",
+    "kraj": "Moravskoslezský",
+    "ANO": 45.4,
+    "u22": 40.2,
+    "d": -2.41,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Sokolov",
+    "kraj": "Karlovarský",
+    "ANO": 45.3,
+    "u22": 34.3,
+    "d": -4.71,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Varnsdorf",
+    "kraj": "Ústecký",
+    "ANO": 44.7,
+    "u22": 37.8,
+    "d": -3.3,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Český Těšín",
+    "kraj": "Moravskoslezský",
+    "ANO": 44.3,
+    "u22": 39.2,
+    "d": 1.16,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Hlučín",
+    "kraj": "Moravskoslezský",
+    "ANO": 43.8,
+    "u22": 46.4,
+    "d": 0.92,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Ostrava",
+    "kraj": "Moravskoslezský",
+    "ANO": 43.6,
+    "u22": 35.5,
+    "d": -0.43,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Třinec",
+    "kraj": "Moravskoslezský",
+    "ANO": 43.4,
+    "u22": 34.9,
+    "d": 3.33,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Frýdek-Místek",
+    "kraj": "Moravskoslezský",
+    "ANO": 43.0,
+    "u22": 37.0,
+    "d": 3.0,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Česká Lípa",
+    "kraj": "Liberecký",
+    "ANO": 42.9,
+    "u22": 33.7,
+    "d": -0.28,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Louny",
+    "kraj": "Ústecký",
+    "ANO": 42.9,
+    "u22": 40.2,
+    "d": -3.02,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Hodonín",
+    "kraj": "Jihomoravský",
+    "ANO": 42.8,
+    "u22": 36.5,
+    "d": -2.41,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Děčín",
+    "kraj": "Ústecký",
+    "ANO": 42.1,
+    "u22": 36.3,
+    "d": -0.93,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Ostrov",
+    "kraj": "Karlovarský",
+    "ANO": 42.0,
+    "u22": 40.7,
+    "d": -2.71,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Teplice",
+    "kraj": "Ústecký",
+    "ANO": 42.0,
+    "u22": 34.1,
+    "d": -2.22,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Přerov",
+    "kraj": "Olomoucký",
+    "ANO": 41.7,
+    "u22": 39.5,
+    "d": -1.57,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Ústí nad Labem",
+    "kraj": "Ústecký",
+    "ANO": 41.2,
+    "u22": 35.0,
+    "d": -0.01,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Cheb",
+    "kraj": "Karlovarský",
+    "ANO": 40.7,
+    "u22": 35.2,
+    "d": -2.04,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Otrokovice",
+    "kraj": "Zlínský",
+    "ANO": 40.5,
+    "u22": 41.4,
+    "d": -2.72,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Svitavy",
+    "kraj": "Pardubický",
+    "ANO": 40.3,
+    "u22": 37.5,
+    "d": 1.47,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Zábřeh",
+    "kraj": "Olomoucký",
+    "ANO": 40.2,
+    "u22": 42.0,
+    "d": 3.99,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Znojmo",
+    "kraj": "Jihomoravský",
+    "ANO": 40.1,
+    "u22": 42.7,
+    "d": -0.07,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Rokycany",
+    "kraj": "Plzeňský",
+    "ANO": 39.9,
+    "u22": 40.5,
+    "d": 0.91,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Strakonice",
+    "kraj": "Jihočeský",
+    "ANO": 39.3,
+    "u22": 42.8,
+    "d": 3.54,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Šumperk",
+    "kraj": "Olomoucký",
+    "ANO": 39.2,
+    "u22": 38.2,
+    "d": 0.47,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Opava",
+    "kraj": "Moravskoslezský",
+    "ANO": 39.0,
+    "u22": 39.8,
+    "d": 4.1,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Břeclav",
+    "kraj": "Jihomoravský",
+    "ANO": 38.6,
+    "u22": 40.2,
+    "d": -0.06,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Kopřivnice",
+    "kraj": "Moravskoslezský",
+    "ANO": 38.3,
+    "u22": 40.0,
+    "d": 2.45,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Hranice",
+    "kraj": "Olomoucký",
+    "ANO": 38.1,
+    "u22": 38.1,
+    "d": 3.29,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Klatovy",
+    "kraj": "Plzeňský",
+    "ANO": 37.9,
+    "u22": 41.7,
+    "d": 2.35,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Nový Jičín",
+    "kraj": "Moravskoslezský",
+    "ANO": 37.6,
+    "u22": 41.4,
+    "d": 0.97,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Neratovice",
+    "kraj": "Středočeský",
+    "ANO": 37.5,
+    "u22": 34.9,
+    "d": 3.14,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Česká Třebová",
+    "kraj": "Pardubický",
+    "ANO": 37.1,
+    "u22": 42.5,
+    "d": -1.83,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Vyškov",
+    "kraj": "Jihomoravský",
+    "ANO": 37.1,
+    "u22": 41.7,
+    "d": 2.68,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Šternberk",
+    "kraj": "Olomoucký",
+    "ANO": 37.0,
+    "u22": 39.2,
+    "d": -2.27,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Prostějov",
+    "kraj": "Olomoucký",
+    "ANO": 37.0,
+    "u22": 39.5,
+    "d": -0.88,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Rakovník",
+    "kraj": "Středočeský",
+    "ANO": 36.6,
+    "u22": 37.8,
+    "d": 2.64,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Valašské Meziříčí",
+    "kraj": "Zlínský",
+    "ANO": 36.4,
+    "u22": 45.7,
+    "d": -0.39,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Příbram",
+    "kraj": "Středočeský",
+    "ANO": 36.3,
+    "u22": 38.4,
+    "d": 1.2,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Karlovy Vary",
+    "kraj": "Karlovarský",
+    "ANO": 36.3,
+    "u22": 37.7,
+    "d": -2.37,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Kroměříž",
+    "kraj": "Zlínský",
+    "ANO": 35.8,
+    "u22": 45.8,
+    "d": -3.11,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Jindřichův Hradec",
+    "kraj": "Jihočeský",
+    "ANO": 35.3,
+    "u22": 42.3,
+    "d": 1.98,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Kladno",
+    "kraj": "Středočeský",
+    "ANO": 34.9,
+    "u22": 37.1,
+    "d": 0.03,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Třebíč",
+    "kraj": "Vysočina",
+    "ANO": 34.9,
+    "u22": 42.2,
+    "d": 3.41,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Slaný",
+    "kraj": "Středočeský",
+    "ANO": 34.6,
+    "u22": 41.0,
+    "d": 1.07,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Náchod",
+    "kraj": "Královéhradecký",
+    "ANO": 34.6,
+    "u22": 46.3,
+    "d": -0.27,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Dvůr Králové nad Labem",
+    "kraj": "Královéhradecký",
+    "ANO": 34.6,
+    "u22": 41.7,
+    "d": 3.47,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Havlíčkův Brod",
+    "kraj": "Vysočina",
+    "ANO": 34.5,
+    "u22": 42.5,
+    "d": 4.2,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Jičín",
+    "kraj": "Královéhradecký",
+    "ANO": 34.3,
+    "u22": 46.7,
+    "d": 0.91,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Litoměřice",
+    "kraj": "Ústecký",
+    "ANO": 34.0,
+    "u22": 42.4,
+    "d": -0.3,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Kolín",
+    "kraj": "Středočeský",
+    "ANO": 33.9,
+    "u22": 38.5,
+    "d": 2.83,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Písek",
+    "kraj": "Jihočeský",
+    "ANO": 33.9,
+    "u22": 39.2,
+    "d": 1.6,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Benešov",
+    "kraj": "Středočeský",
+    "ANO": 33.7,
+    "u22": 43.1,
+    "d": 1.09,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Vsetín",
+    "kraj": "Zlínský",
+    "ANO": 33.5,
+    "u22": 42.9,
+    "d": 1.13,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Mladá Boleslav",
+    "kraj": "Středočeský",
+    "ANO": 33.2,
+    "u22": 38.9,
+    "d": -0.25,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Blansko",
+    "kraj": "Jihomoravský",
+    "ANO": 33.2,
+    "u22": 46.8,
+    "d": 2.39,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Pelhřimov",
+    "kraj": "Vysočina",
+    "ANO": 32.9,
+    "u22": 45.8,
+    "d": 4.27,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Tábor",
+    "kraj": "Jihočeský",
+    "ANO": 32.8,
+    "u22": 40.3,
+    "d": 3.52,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Ústí nad Orlicí",
+    "kraj": "Pardubický",
+    "ANO": 32.7,
+    "u22": 46.2,
+    "d": 0.15,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Uherský Brod",
+    "kraj": "Zlínský",
+    "ANO": 32.7,
+    "u22": 45.1,
+    "d": -2.37,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Žďár nad Sázavou",
+    "kraj": "Vysočina",
+    "ANO": 32.7,
+    "u22": 41.8,
+    "d": 5.86,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Jablonec nad Nisou",
+    "kraj": "Liberecký",
+    "ANO": 32.6,
+    "u22": 39.0,
+    "d": -0.44,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Nymburk",
+    "kraj": "Středočeský",
+    "ANO": 32.5,
+    "u22": 45.3,
+    "d": 5.19,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Jihlava",
+    "kraj": "Vysočina",
+    "ANO": 32.4,
+    "u22": 44.2,
+    "d": -2.95,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Trutnov",
+    "kraj": "Královéhradecký",
+    "ANO": 32.2,
+    "u22": 40.0,
+    "d": 0.96,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Mělník",
+    "kraj": "Středočeský",
+    "ANO": 32.1,
+    "u22": 40.5,
+    "d": 3.4,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Chrudim",
+    "kraj": "Pardubický",
+    "ANO": 32.0,
+    "u22": 43.8,
+    "d": 0.92,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Kutná Hora",
+    "kraj": "Středočeský",
+    "ANO": 31.5,
+    "u22": 40.7,
+    "d": 0.89,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Kralupy nad Vltavou",
+    "kraj": "Středočeský",
+    "ANO": 31.2,
+    "u22": 38.2,
+    "d": 3.16,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Plzeň",
+    "kraj": "Plzeňský",
+    "ANO": 30.9,
+    "u22": 39.2,
+    "d": 2.57,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Pardubice",
+    "kraj": "Pardubický",
+    "ANO": 30.9,
+    "u22": 40.9,
+    "d": -0.73,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Zlín",
+    "kraj": "Zlínský",
+    "ANO": 30.7,
+    "u22": 43.0,
+    "d": 2.62,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Rožnov pod Radhoštěm",
+    "kraj": "Zlínský",
+    "ANO": 30.6,
+    "u22": 42.5,
+    "d": 4.24,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Liberec",
+    "kraj": "Liberecký",
+    "ANO": 30.6,
+    "u22": 40.8,
+    "d": -0.21,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "České Budějovice",
+    "kraj": "Jihočeský",
+    "ANO": 30.3,
+    "u22": 39.2,
+    "d": 1.52,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Olomouc",
+    "kraj": "Olomoucký",
+    "ANO": 30.1,
+    "u22": 39.8,
+    "d": -1.19,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Uherské Hradiště",
+    "kraj": "Zlínský",
+    "ANO": 30.1,
+    "u22": 44.3,
+    "d": 2.6,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Hradec Králové",
+    "kraj": "Královéhradecký",
+    "ANO": 28.9,
+    "u22": 42.2,
+    "d": 2.9,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Beroun",
+    "kraj": "Středočeský",
+    "ANO": 27.4,
+    "u22": 40.9,
+    "d": 0.23,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Turnov",
+    "kraj": "Liberecký",
+    "ANO": 27.0,
+    "u22": 44.0,
+    "d": 1.38,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Poděbrady",
+    "kraj": "Středočeský",
+    "ANO": 26.2,
+    "u22": 50.1,
+    "d": 3.0,
+    "senat": "jen 2026"
+   },
+   {
+    "obec": "Brandýs nad Labem-Stará Boleslav",
+    "kraj": "Středočeský",
+    "ANO": 25.4,
+    "u22": 44.1,
+    "d": 0.55,
+    "senat": "jen 2022"
+   },
+   {
+    "obec": "Brno",
+    "kraj": "Jihomoravský",
+    "ANO": 25.2,
+    "u22": 41.9,
+    "d": 2.19,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Praha hl.m.",
+    "kraj": "Praha",
+    "ANO": 19.9,
+    "u22": 43.9,
+    "d": 2.13,
+    "senat": "ani jednou"
+   },
+   {
+    "obec": "Říčany",
+    "kraj": "Středočeský",
+    "ANO": 19.7,
+    "u22": 51.1,
+    "d": -0.64,
+    "senat": "ani jednou"
+   }
+  ]
+ },
+ "mesta_v_UK_MSK_KV": {
+  "n": 34,
+  "spearman_ANO_d": -0.488,
+  "ANO": {
+   "b": -0.1797,
+   "se": 0.0573
+  },
+  "ANO_ups25": {
+   "b": -0.0607,
+   "se": 0.066
+  },
+  "souhrn": {
+   "obci": 34,
+   "volicu26": 1040092,
+   "u22": 35.92,
+   "u26": 35.06,
+   "zmena": -0.87,
+   "median_obce": -2.08,
+   "nizsi": 24,
+   "ANO": 44.8
+  }
+ },
+ "mesta_mimo_UK_MSK_KV": {
+  "n": 65,
+  "spearman_ANO_d": -0.152,
+  "ANO": {
+   "b": -0.1068,
+   "se": 0.0483
+  },
+  "ANO_ups25": {
+   "b": -0.0518,
+   "se": 0.0611
+  },
+  "souhrn": {
+   "obci": 65,
+   "volicu26": 2813857,
+   "u22": 42.02,
+   "u26": 43.53,
+   "zmena": 1.51,
+   "median_obce": 1.13,
+   "nizsi": 20,
+   "ANO": 28.1
+  }
+ },
+ "mesta_5_10k": {
+  "n": 111,
+  "spearman_ANO_d": -0.305,
+  "ANO": {
+   "b": -0.1002,
+   "se": 0.0394
+  },
+  "ANO_ups25": {
+   "b": -0.0669,
+   "se": 0.0489
+  },
+  "petiny": [
+   {
+    "od": 13.8,
+    "do": 30.6,
+    "obci": 22,
+    "volicu26": 153347,
+    "u22": 46.47,
+    "u26": 50.01,
+    "zmena": 3.54,
+    "median_obce": 3.44,
+    "nizsi": 3,
+    "ANO": 26.0
+   },
+   {
+    "od": 30.7,
+    "do": 34.6,
+    "obci": 22,
+    "volicu26": 159315,
+    "u22": 45.36,
+    "u26": 49.32,
+    "zmena": 3.95,
+    "median_obce": 3.9,
+    "nizsi": 1,
+    "ANO": 33.1
+   },
+   {
+    "od": 34.7,
+    "do": 38.2,
+    "obci": 22,
+    "volicu26": 154969,
+    "u22": 44.93,
+    "u26": 47.41,
+    "zmena": 2.48,
+    "median_obce": 2.28,
+    "nizsi": 5,
+    "ANO": 36.7
+   },
+   {
+    "od": 38.4,
+    "do": 42.7,
+    "obci": 22,
+    "volicu26": 149323,
+    "u22": 41.74,
+    "u26": 44.49,
+    "zmena": 2.75,
+    "median_obce": 1.59,
+    "nizsi": 4,
+    "ANO": 40.2
+   },
+   {
+    "od": 42.7,
+    "do": 56.1,
+    "obci": 23,
+    "volicu26": 147613,
+    "u22": 40.15,
+    "u26": 41.77,
+    "zmena": 1.62,
+    "median_obce": 0.69,
+    "nizsi": 10,
+    "ANO": 45.5
+   }
+  ]
+ },
+ "kraje": {
+  "Jihomoravský": {
+   "n": 328,
+   "spearman": -0.126,
+   "ANO_median": 35.0
+  },
+  "Jihočeský": {
+   "n": 163,
+   "spearman": 0.115,
+   "ANO_median": 36.2
+  },
+  "Karlovarský": {
+   "n": 62,
+   "spearman": 0.208,
+   "ANO_median": 44.1
+  },
+  "Královéhradecký": {
+   "n": 140,
+   "spearman": 0.01,
+   "ANO_median": 34.7
+  },
+  "Liberecký": {
+   "n": 109,
+   "spearman": -0.063,
+   "ANO_median": 33.8
+  },
+  "Moravskoslezský": {
+   "n": 213,
+   "spearman": -0.078,
+   "ANO_median": 41.5
+  },
+  "Olomoucký": {
+   "n": 187,
+   "spearman": 0.093,
+   "ANO_median": 40.7
+  },
+  "Pardubický": {
+   "n": 150,
+   "spearman": -0.067,
+   "ANO_median": 35.2
+  },
+  "Plzeňský": {
+   "n": 152,
+   "spearman": 0.041,
+   "ANO_median": 39.9
+  },
+  "Středočeský": {
+   "n": 452,
+   "spearman": -0.014,
+   "ANO_median": 31.5
+  },
+  "Vysočina": {
+   "n": 132,
+   "spearman": -0.045,
+   "ANO_median": 37.1
+  },
+  "Zlínský": {
+   "n": 179,
+   "spearman": -0.162,
+   "ANO_median": 35.9
+  },
+  "Ústecký": {
+   "n": 156,
+   "spearman": -0.01,
+   "ANO_median": 46.1
+  }
+ }
+}
