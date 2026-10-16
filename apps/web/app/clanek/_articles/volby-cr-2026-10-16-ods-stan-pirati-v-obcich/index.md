@@ -1,9 +1,9 @@
 ---
-title: "ODS a Piráti ztratili v obcích čtvrtinu zastupitelů, STAN přibral ve městech a ubyl na vesnicích"
+title: "ODS přišla v obcích o 573 zastupitelů, Piráti o 74. STAN přibral ve městech a ubyl na vesnicích"
 date: "2026-10-16"
 time: "14:55"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "ODS měla před volbami v zastupitelstvech obcí a městských částí 2 294 lidí, teď 1 721. Piráti a TOP 09 také přišli zhruba o čtvrtinu zastupitelů, KDU-ČSL o šestinu. STAN a Zelení mají skoro stejně lidí jako dřív. STAN ve velkých městech přibral, na vesnicích ubyl, hlavně tam, kde jeho zastupitelé letos kandidovali za místní sdružení. Mapy ukazují stav před volbami i po nich."
+excerpt: "ODS měla před volbami v zastupitelstvech obcí a městských částí 2 294 lidí, teď 1 721, tedy o čtvrtinu méně. Piráti klesli z 273 na 199, TOP 09 ze 427 na 326, KDU-ČSL ztratila šestinu. STAN a Zelení mají skoro stejně lidí jako dřív. STAN ve velkých městech přibral, na vesnicích ubyl, hlavně tam, kde jeho zastupitelé letos kandidovali za místní sdružení. Mapy ukazují stav před volbami i po nich."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -14,7 +14,7 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "ODS", "STAN", "Piráti"
 promoted: 1
 ---
 
-ODS přišla v komunálních volbách o čtvrtinu svých zastupitelů v obcích a městských částech, Piráti a TOP 09 zhruba také, KDU-ČSL o šestinu. STAN a Zelení mají lidí skoro stejně jako před volbami. STAN je ale má jinde: ve velkých městech mu přibyli, na vesnicích ubyli. Mapy ukazují, kde mají strany zastupitele teď (plná tečka) a odkud vypadly (prázdný kroužek).
+ODS přišla v komunálních volbách o 573 zastupitelů v obcích a městských částech, tedy o čtvrtinu. Piráti ztratili 74 z 273 zastupitelů, TOP 09 101 ze 427 a KDU-ČSL šestinu. STAN a Zelení mají lidí skoro stejně jako před volbami. STAN je ale má jinde: ve velkých městech mu přibyli, na vesnicích ubyli. Mapy ukazují, kde mají strany zastupitele teď (plná tečka) a odkud vypadly (prázdný kroužek).
 
 ```fotogalerie 6 mapy
 - mapa-ods.png | ODS: zastupitele má ve 439 obcích, ze 199 vypadla. Před volbami 2 294 zastupitelů, po nich 1 721. | Data: volby.gov.cz, výpočet DataTimes.cz

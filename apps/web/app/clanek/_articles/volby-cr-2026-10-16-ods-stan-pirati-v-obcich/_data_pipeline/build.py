@@ -364,7 +364,7 @@ TOOLTIP = [{'field': 'strana', 'title': 'Strana'}, {'field': 'pred', 'title': 'Z
            {'field': 'pct', 'title': 'Změna (%)', 'format': '+.1f'}]
 nejhorsi = rows[-1]
 spec('graf_zmena.json', {
-    'title': {'text': 'STAN a Zelení počet zastupitelů udrželi, ODS, TOP 09 a Piráti přišli o čtvrtinu',
+    'title': {'text': 'STAN a Zelení počet zastupitelů udrželi, ostatní ztratili šestinu až čtvrtinu',
               'subtitle': 'Změna počtu zastupitelů obcí a městských částí, které strana navrhla: před volbami 2026 → po nich'},
     'width': 600, 'height': 300,
     'data': {'values': rows},

@@ -25,8 +25,8 @@ body.sort((a, b) => Number(a.barva !== NAVY) - Number(b.barva !== NAVY));
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Komunální volby 2026' },
-  titulek: 'ODS a Piráti přišli<br>o čtvrtinu zastupitelů',
-  pod: 'STAN přibral ve městech, na vesnicích ubyl.<br>Zelení drží počet, KDU-ČSL ztratila šestinu',
+  titulek: 'ODS přišla o 573<br>zastupitelů, Piráti o 74',  // pevné mezery: předložka ani číslo nezůstanou samy
+  pod: 'STAN přibral ve městech, na vesnicích ubyl.<br>KDU-ČSL ztratila šestinu, Zelení drží počet',
   legenda: [[BARVA.ods, 'ODS'], [BARVA.pir, 'Piráti']],
   logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo
   // brandRoyalBlue.6 / brandNavy.7 záře, brandRoyalBlue.1 / brandNavy.1 texty, brand.6 štítek
