@@ -1,0 +1,238 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Rozdíl mezi ženami a muži se zmenšuje. Ve velkých městech a u dosavadních zastupitelek mizí",
+    "subtitle": "O kolik procent méně hlasů dostala žena než muž na téže kandidátce při srovnatelném místě, povolání, věku a zkušenosti se zastupitelstvem (u voleb 2018 bez ní). Vodorovná čárka ukazuje 95% interval nejistoty."
+  },
+  "width": 600,
+  "height": {
+    "step": 26
+  },
+  "data": {
+    "values": [
+      {
+        "radek": "volby 2018",
+        "rozdil": -4.3,
+        "od": -4.7,
+        "do": -3.8,
+        "popisek": "−4,3 %",
+        "interval": "−4,7 % až −3,8 %",
+        "kandidatu": 206878
+      },
+      {
+        "radek": "volby 2022",
+        "rozdil": -2.7,
+        "od": -2.9,
+        "do": -2.4,
+        "popisek": "−2,7 %",
+        "interval": "−2,9 % až −2,4 %",
+        "kandidatu": 184824
+      },
+      {
+        "radek": "volby 2026",
+        "rozdil": -2.1,
+        "od": -2.3,
+        "do": -1.8,
+        "popisek": "−2,1 %",
+        "interval": "−2,3 % až −1,8 %",
+        "kandidatu": 177789
+      },
+      {
+        "radek": "2026: obce do 1 000 obyvatel",
+        "rozdil": -2.9,
+        "od": -3.6,
+        "do": -2.3,
+        "popisek": "−2,9 %",
+        "interval": "−3,6 % až −2,3 %",
+        "kandidatu": 61678
+      },
+      {
+        "radek": "2026: obce 1 000–4 000 obyvatel",
+        "rozdil": -2.7,
+        "od": -3.2,
+        "do": -2.2,
+        "popisek": "−2,7 %",
+        "interval": "−3,2 % až −2,2 %",
+        "kandidatu": 51768
+      },
+      {
+        "radek": "2026: obce 4 000–20 000 obyvatel",
+        "rozdil": -2.4,
+        "od": -2.7,
+        "do": -2.1,
+        "popisek": "−2,4 %",
+        "interval": "−2,7 % až −2,1 %",
+        "kandidatu": 37420
+      },
+      {
+        "radek": "2026: obce 20 000–100 000 obyvatel",
+        "rozdil": -1.0,
+        "od": -1.2,
+        "do": -0.7,
+        "popisek": "−1,0 %",
+        "interval": "−1,2 % až −0,7 %",
+        "kandidatu": 21619
+      },
+      {
+        "radek": "2026: obce nad 100 000 obyvatel",
+        "rozdil": -0.0,
+        "od": -0.3,
+        "do": 0.3,
+        "popisek": "0,0 %",
+        "interval": "−0,3 % až +0,3 %",
+        "kandidatu": 5304
+      },
+      {
+        "radek": "2026: dosavadní zastupitelé",
+        "rozdil": -0.4,
+        "od": -0.8,
+        "do": 0.1,
+        "popisek": "−0,4 %",
+        "interval": "−0,8 % až +0,1 %",
+        "kandidatu": 42951
+      },
+      {
+        "radek": "2026: noví kandidáti",
+        "rozdil": -2.4,
+        "od": -2.7,
+        "do": -2.2,
+        "popisek": "−2,4 %",
+        "interval": "−2,7 % až −2,2 %",
+        "kandidatu": 134838
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "radek",
+      "type": "nominal",
+      "sort": [
+        "volby 2018",
+        "volby 2022",
+        "volby 2026",
+        "2026: obce do 1 000 obyvatel",
+        "2026: obce 1 000–4 000 obyvatel",
+        "2026: obce 4 000–20 000 obyvatel",
+        "2026: obce 20 000–100 000 obyvatel",
+        "2026: obce nad 100 000 obyvatel",
+        "2026: dosavadní zastupitelé",
+        "2026: noví kandidáti"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 320,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeWidth": 1,
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#f76800",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "od",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "do"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 130,
+        "opacity": 1,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rozdil",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -6,
+              1
+            ]
+          },
+          "axis": {
+            "title": "ženy proti mužům (%)",
+            "grid": true,
+            "gridColor": "#e8e2d6",
+            "format": "+d"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "radek",
+            "title": "Skupina"
+          },
+          {
+            "field": "popisek",
+            "title": "Ženy proti mužům"
+          },
+          {
+            "field": "interval",
+            "title": "95% interval"
+          },
+          {
+            "field": "kandidatu",
+            "title": "Kandidátů",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": -8,
+        "align": "right",
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "od",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registry kandidátů pro volby do zastupitelstev obcí 2018, 2022 a 2026 (stav 11. 10. 2026); pohlaví odvozené z příjmení a jména; výpočet DataTimes.cz; srovnání uvnitř kandidátky (viz Jak jsme počítali)"
+}

@@ -271,3 +271,62 @@ ALTERNATIVY
       4 000–20 000     skutečně 29.1 %, podle pořadí 29.6 %
       20 000–100 000   skutečně 29.5 %, podle pořadí 29.8 %
       nad 100 000      skutečně 29.0 %, podle pořadí 29.0 %
+
+══ ČÍSLA PRO TEXT ══
+  ženy mezi: kandidáti        35.7 %  (66277 z 185871)
+  ženy mezi: lídři            27.7 %  (6151 z 22180)
+  ženy mezi: volitelná místa  30.6 %  (18574 z 60726)
+  ženy mezi: zvolení          30.7 %  (18635 z 60767)
+  kandidátů celkem 2026: 189908  zvolených celkem: 61677
+
+  PROFESE ženy × muži 2026 (hlasy navíc):
+    všichni kandidáti                    ženy  -1.2 (66277)  muži  +0.7 (119594)
+    lékaři a lékařky (vč. zubařů)        ženy +10.2 (1105)  muži +14.3 (1155)
+    ředitelé a ředitelky škol            ženy  +9.4 (1436)  muži +14.2 (844)
+    místostarostové a místostarostky     ženy  +7.2 (530)  muži  +9.0 (1383)
+    učitelé a učitelky                   ženy  +4.1 (5839)  muži  +8.7 (2843)
+    starostové a starostky               ženy  +0.8 (1193)  muži  +3.5 (2976)
+    zdravotní sestry a bratři            ženy  +1.0 (2572)  muži  +0.7 (137)
+    podnikatelé a podnikatelky           ženy  -2.5 (4368)  muži  +0.6 (17847)
+    studenti a studentky                 ženy  -6.9 (1719)  muži  -6.0 (2568)
+    důchodci a důchodkyně                ženy  -7.9 (5015)  muži  -6.0 (7615)
+
+  MATEŘSKÁ podle velikosti obce 2026:
+    do 1 000         mateřská -14.1 (812)  ostatní ženy 25–44  -3.9 (8864)
+    1 000–4 000      mateřská -11.9 (376)  ostatní ženy 25–44  -1.4 (6667)
+    4 000–20 000     mateřská  -6.6 (220)  ostatní ženy 25–44  +0.4 (4301)
+    20 000–100 000   mateřská  +0.6 (116)  ostatní ženy 25–44  +2.4 (2367)
+    nad 100 000      mateřská  +1.9 (32)  ostatní ženy 25–44  +2.6 (624)
+
+  ROZDÍL ŽEN PROTI MUŽŮM (regrese uvnitř kandidátky):
+    volby 2018                      -4.3 % (-4.7 až -3.8), n = 206878
+    volby 2022                      -2.7 % (-2.9 až -2.4), n = 184824
+    volby 2026                      -2.1 % (-2.3 až -1.8), n = 177789
+    2026: obce do 1 000 obyvatel    -2.9 % (-3.6 až -2.3), n = 61678
+    2026: obce 1 000–4 000 obyvatel  -2.7 % (-3.2 až -2.2), n = 51768
+    2026: obce 4 000–20 000 obyvatel  -2.4 % (-2.7 až -2.1), n = 37420
+    2026: obce 20 000–100 000 obyvatel  -1.0 % (-1.2 až -0.7), n = 21619
+    2026: obce nad 100 000 obyvatel  -0.0 % (-0.3 až +0.3), n = 5304
+    2026: dosavadní zastupitelé     -0.4 % (-0.8 až +0.1), n = 42951
+    2026: noví kandidáti            -2.4 % (-2.7 až -2.2), n = 134838
+
+  PÁRY PROFESÍ – kontrola obhajoby mandátu (stejné definice jako v grafu):
+    lékaři a lékařky (vč. zubařů)      obhajuje ž 19.9 % m 32.4 %  | jen noví: ž  +8.7 (885) m +11.3 (781)  | uvnitř kandidátky s věkem a obhajobou: ženy -3.8 % (-5.5 až -2.2)
+      přeskočení z nevolitelného místa: ž 2.53×  m 3.75×
+    ředitelé a ředitelky škol          obhajuje ž 36.4 % m 49.5 %  | jen noví: ž  +7.9 (914) m +10.2 (426)  | uvnitř kandidátky s věkem a obhajobou: ženy -5.4 % (-7.2 až -3.5)
+      přeskočení z nevolitelného místa: ž 1.78×  m 3.69×
+    místostarostové a místostarostky   obhajuje ž 89.8 % m 89.9 %  | jen noví: ž  +3.8 (54) m  +6.0 (139)  | uvnitř kandidátky s věkem a obhajobou: ženy -0.2 % (-2.2 až +1.9)
+      přeskočení z nevolitelného místa: ž 2.80×  m 3.15×
+    učitelé a učitelky                 obhajuje ž 20.0 % m 31.8 %  | jen noví: ž  +2.6 (4674) m  +6.6 (1939)  | uvnitř kandidátky s věkem a obhajobou: ženy -3.3 % (-4.3 až -2.4)
+      přeskočení z nevolitelného místa: ž 1.29×  m 1.84×
+    starostové a starostky             obhajuje ž 91.2 % m 90.2 %  | jen noví: ž  +3.3 (105) m  +7.7 (292)  | uvnitř kandidátky s věkem a obhajobou: ženy -3.1 % (-6.4 až +0.3)
+      přeskočení z nevolitelného místa: ž 2.65×  m 3.59×
+
+  ŽENY MEZI LÍDRY podle typu kandidátky 2026:
+    sdružení nezávislých (SNK)     kandidátky 35.0 %  lídři 30.2 % (2812 z 9325)  zvolení 31.7 %
+    strany, hnutí a koalice        kandidátky 37.1 %  lídři 21.9 % (1067 z 4869)  zvolení 29.1 %
+
+  PŘESKOČENÍ 2026: ženy zvoleny zpod čáry 1959  ženy vypadly z volitelného místa 1898  | muži zpod čáry 4081  vypadli 4101
+
+grafy zapsány: ['kde-zeny-ubyvaji.json', 'materska-velikost.json', 'profese-zeny-muzi.json', 'rozdil-zeny-muzi.json']
+skoky pro cover zapsány

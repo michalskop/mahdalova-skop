@@ -563,3 +563,252 @@ for y in (2018, 2022, 2026):
     for v in VELIKOSTI:
         re_ = [r for r in real if r['vel'] == v]; po = [r for r in poradi if r['vel'] == v]
         print(f'      {v:16} skutečně {100*sum(r["g"]=="Z" for r in re_)/len(re_):.1f} %, podle pořadí {100*sum(r["g"]=="Z" for r in po)/len(po):.1f} %')
+
+
+# ═══ GRAFY A ČÍSLA PRO TEXT ═══════════════════════════════════════════════
+import json
+OUT = HERE.parent / 'data'
+OUT.mkdir(exist_ok=True)
+ZENY, MUZI, INK, GRID = '#f76800', '#06677d', '#101432', '#e8e2d6'   # brandOrange.6, brandTeal.7, ink blue
+ZENY_SVETLE = '#ffc89f'                                             # brandOrange.2
+SOURCE = ('ČSÚ – registry kandidátů pro volby do zastupitelstev obcí 2018, 2022 a 2026 (stav 11. 10. 2026); '
+          'pohlaví odvozené z příjmení a jména; výpočet DataTimes.cz')
+
+
+def dump(name, spec):
+    (OUT / name).write_text(json.dumps(spec, ensure_ascii=False, indent=2), encoding='utf-8')
+
+
+def fmt(n, d=0):
+    return f'{n:,.{d}f}'.replace(',', ' ').replace('.', ',')
+
+
+def pct(v, d=0):
+    r = round(v, d)
+    return ('+' if r > 0 else '−' if r < 0 else '') + fmt(abs(r), d) + ' %'
+
+
+def podil_z(rr):
+    rr = [r for r in rr if r['g'] in 'ZM']
+    return 100 * sum(r['g'] == 'Z' for r in rr) / len(rr), sum(r['g'] == 'Z' for r in rr), len(rr)
+
+
+def je_materska(r):
+    p = r['POVOLANI'].lower()
+    return bool(MAT.search(p)) and not MAT_X.search(p)
+
+
+print('\n══ ČÍSLA PRO TEXT ══')
+kand = podil_z(k26)
+lidri = podil_z([r for r in k26 if r['por'] == 1])
+volit = podil_z([r for r in k26 if r['seats'] >= 1 and r['por'] <= r['seats']])
+zvol = podil_z([r for r in k26 if r['zvolen']])
+for lab, x in (('kandidáti', kand), ('lídři', lidri), ('volitelná místa', volit), ('zvolení', zvol)):
+    print(f'  ženy mezi: {lab:16} {x[0]:.1f} %  ({x[1]} z {x[2]})')
+print('  kandidátů celkem 2026:', len(k26), ' zvolených celkem:', sum(r['zvolen'] for r in k26))
+
+# 1) kde se ženy ztrácejí
+g1 = [{'krok': 'kandidáti', 'podil': round(kand[0], 1), 'n': f'{fmt(kand[1])} z {fmt(kand[2])}'},
+      {'krok': 'lídři kandidátek (1. místo)', 'podil': round(lidri[0], 1), 'n': f'{fmt(lidri[1])} z {fmt(lidri[2])}'},
+      {'krok': 'volitelná místa (zvolení podle pořadí)', 'podil': round(volit[0], 1), 'n': f'{fmt(volit[1])} z {fmt(volit[2])}'},
+      {'krok': 'skutečně zvolení (po křížcích voličů)', 'podil': round(zvol[0], 1), 'n': f'{fmt(zvol[1])} z {fmt(zvol[2])}'}]
+for d in g1:
+    d['popisek'] = fmt(d['podil'], 1) + ' %'
+ORDER1 = [d['krok'] for d in g1]
+dump('kde-zeny-ubyvaji.json', {
+    '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
+    'title': {'text': 'Žen ubývá už na kandidátkách. Křížky voličů jejich podíl v zastupitelstvech skoro nezměnily',
+              'subtitle': 'Podíl žen mezi kandidáty, lídry kandidátek, kandidáty na volitelných místech (zvolenými, kdyby rozhodovalo jen pořadí na kandidátce) a skutečně zvolenými zastupiteli. Obecní volby 2026.'},
+    'width': 600, 'height': {'step': 34},
+    'data': {'values': g1},
+    'encoding': {'y': {'field': 'krok', 'type': 'nominal', 'sort': ORDER1,
+                       'axis': {'title': None, 'labelLimit': 320, 'ticks': False, 'domain': False, 'labelFontSize': 12}}},
+    'layer': [
+        {'mark': {'type': 'bar', 'height': 20, 'cornerRadius': 1, 'color': ZENY},
+         'encoding': {'x': {'field': 'podil', 'type': 'quantitative', 'scale': {'domain': [0, 50]},
+                            'axis': {'title': 'podíl žen (%)', 'grid': True, 'gridColor': GRID, 'values': [0, 10, 20, 30, 40, 50]}},
+                      'tooltip': [{'field': 'krok', 'title': 'Skupina'}, {'field': 'popisek', 'title': 'Podíl žen'}, {'field': 'n', 'title': 'Žen'}]}},
+        {'mark': {'type': 'text', 'fontSize': 12, 'dx': 5, 'align': 'left', 'color': INK, 'fontWeight': 600},
+         'encoding': {'x': {'field': 'podil', 'type': 'quantitative'}, 'text': {'field': 'popisek'}}},
+    ],
+    'config': {'view': {'stroke': None}},
+    '_source': SOURCE + '; bez 2 % kandidátů s nejistým pohlavím',
+})
+
+# 2) stejná profese, ženy × muži (pohlaví ze jména, ne z tvaru slova)
+SPECD = dict(SPEC)
+PARY = [
+    ('všichni kandidáti', lambda p: True),
+    ('lékaři a lékařky (vč. zubařů)', SPECD['lékař/ka (vč. zubařů, bez veterinářů)']),
+    ('ředitelé a ředitelky škol', SPECD['ředitel/ka školy']),
+    ('místostarostové a místostarostky', SPECD['místostarosta/ka']),
+    ('učitelé a učitelky', SPECD['učitel/ka (ZŠ/MŠ/SŠ, bez ředitelů)']),
+    ('starostové a starostky', SPECD['starosta/ka (bez místo-)']),
+    ('zdravotní sestry a bratři', SPECD['zdravotní sestra / ošetřovatel']),
+    ('podnikatelé a podnikatelky', SPECD['podnikatel/ka, OSVČ']),
+    ('studenti a studentky', SPECD['student/ka']),
+    ('důchodci a důchodkyně', SPECD['důchodce/kyně']),
+]
+g2 = []
+print('\n  PROFESE ženy × muži 2026 (hlasy navíc):')
+for lab, f in PARY:
+    rr = [r for r in k26 if f(r['POVOLANI'].lower())]
+    for g, nazev in (('Z', 'ženy'), ('M', 'muži')):
+        s = summary([r for r in rr if r['g'] == g])
+        g2.append({'profese': lab, 'pohlavi': nazev, 'bonus': round(s['bonus'], 1), 'popisek': pct(s['bonus'], 1),
+                   'kandidatu': s['kandidatu'], 'zvoleno': s['zvoleno']})
+    print(f"    {lab:36} ženy {g2[-2]['bonus']:+5.1f} ({g2[-2]['kandidatu']})  muži {g2[-1]['bonus']:+5.1f} ({g2[-1]['kandidatu']})")
+BARVA2 = {'field': 'pohlavi', 'type': 'nominal', 'scale': {'domain': ['ženy', 'muži'], 'range': [ZENY, MUZI]}}
+dump('profese-zeny-muzi.json', {
+    '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
+    'title': {'text': 'Učitelky, ředitelky škol a lékařky dostávají méně hlasů navíc než jejich mužští kolegové',
+              'subtitle': 'O kolik procent víc, nebo méně hlasů dostala typická žena a typický muž s daným povoláním než kandidáti na stejném místě stejně dlouhé kandidátky ve stejně velkých obcích. Obecní volby 2026.'},
+    'width': 600, 'height': {'step': 30},
+    'data': {'values': g2},
+    'encoding': {'y': {'field': 'profese', 'type': 'nominal', 'sort': [p for p, _ in PARY],
+                       'axis': {'title': None, 'labelLimit': 320, 'ticks': False, 'domain': False, 'labelFontSize': 12}}},
+    'layer': [
+        {'mark': {'type': 'rule', 'color': INK, 'strokeWidth': 1, 'opacity': 0.5},
+         'encoding': {'x': {'datum': 0}, 'y': {'value': 0}, 'y2': {'value': {'expr': 'height'}}}},
+        {'transform': [{'pivot': 'pohlavi', 'value': 'bonus', 'groupby': ['profese']}],
+         'mark': {'type': 'rule', 'color': '#c8c8bc', 'strokeWidth': 3},
+         'encoding': {'x': {'field': 'ženy', 'type': 'quantitative'}, 'x2': {'field': 'muži'}}},
+        {'mark': {'type': 'circle', 'size': 160, 'opacity': 1},
+         'encoding': {'x': {'field': 'bonus', 'type': 'quantitative', 'scale': {'domain': [-10, 16]},
+                            'axis': {'title': 'hlasy navíc proti kandidátům na stejném místě (%)', 'grid': True, 'gridColor': GRID, 'format': '+d'}},
+                      'color': {**BARVA2, 'legend': {'title': None, 'orient': 'top', 'direction': 'horizontal', 'labelFontSize': 12}},
+                      'tooltip': [{'field': 'profese', 'title': 'Povolání'}, {'field': 'pohlavi', 'title': 'Pohlaví'},
+                                  {'field': 'popisek', 'title': 'Hlasy navíc'}, {'field': 'kandidatu', 'title': 'Kandidátů', 'format': ','},
+                                  {'field': 'zvoleno', 'title': 'Zvoleno', 'format': ','}]}},
+        # popisky: větší hodnota vpravo od kolečka, menší vlevo, ať se nepřekrývají
+        {'transform': [{'joinaggregate': [{'op': 'max', 'field': 'bonus', 'as': 'mx'}], 'groupby': ['profese']},
+                       {'filter': 'datum.bonus === datum.mx'}],
+         'mark': {'type': 'text', 'fontSize': 11, 'dx': 11, 'align': 'left'},
+         'encoding': {'x': {'field': 'bonus', 'type': 'quantitative'}, 'text': {'field': 'popisek'}, 'color': {**BARVA2, 'legend': None}}},
+        {'transform': [{'joinaggregate': [{'op': 'max', 'field': 'bonus', 'as': 'mx'}], 'groupby': ['profese']},
+                       {'filter': 'datum.bonus < datum.mx'}],
+         'mark': {'type': 'text', 'fontSize': 11, 'dx': -11, 'align': 'right'},
+         'encoding': {'x': {'field': 'bonus', 'type': 'quantitative'}, 'text': {'field': 'popisek'}, 'color': {**BARVA2, 'legend': None}}},
+    ],
+    'config': {'view': {'stroke': None}},
+    '_source': SOURCE + '; pohlaví podle jména, ne podle tvaru povolání (učitel/učitelka)',
+})
+
+# 3) mateřská podle velikosti obce
+g3 = []
+SK3 = ['ženy na mateřské, rodičovské a v domácnosti', 'ostatní ženy ve věku 25–44 let']
+print('\n  MATEŘSKÁ podle velikosti obce 2026:')
+for v in VELIKOSTI:
+    mat = [r for r in Z(k26) if r['vel'] == v and je_materska(r)]
+    ost = [r for r in Z(k26) if r['vel'] == v and 25 <= r['vek'] <= 44 and not je_materska(r)]
+    for lab, rr in zip(SK3, (mat, ost)):
+        s = summary(rr)
+        g3.append({'velikost': v, 'skupina': lab, 'bonus': round(s['bonus'], 1), 'popisek': pct(s['bonus']), 'kandidatu': s['kandidatu']})
+    print(f"    {v:16} mateřská {g3[-2]['bonus']:+5.1f} ({g3[-2]['kandidatu']})  ostatní ženy 25–44 {g3[-1]['bonus']:+5.1f} ({g3[-1]['kandidatu']})")
+dump('materska-velikost.json', {
+    '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
+    'title': {'text': 'Ženy na mateřské dostávají méně hlasů hlavně ve vesnicích a malých městech',
+              'subtitle': 'O kolik procent víc, nebo méně hlasů dostala typická kandidátka než kandidáti na stejném místě stejně dlouhé kandidátky ve stejně velkých obcích. Obce podle počtu obyvatel, v každé skupině žije zhruba pětina obyvatel Česka. Obecní volby 2026.'},
+    'width': 600, 'height': {'step': 30},
+    'data': {'values': g3},
+    'encoding': {
+        'y': {'field': 'velikost', 'type': 'nominal', 'sort': VELIKOSTI,
+              'axis': {'title': 'obyvatel obce', 'ticks': False, 'domain': False, 'labelFontSize': 12, 'labelPadding': 8}},
+        'yOffset': {'field': 'skupina', 'sort': SK3},
+    },
+    'layer': [
+        {'mark': {'type': 'bar', 'cornerRadius': 1},
+         'encoding': {'x': {'field': 'bonus', 'type': 'quantitative', 'scale': {'domain': [-16, 6]},
+                            'axis': {'title': 'hlasy navíc proti kandidátům na stejném místě (%)', 'grid': True, 'gridColor': GRID, 'format': '+d'}},
+                      'color': {'field': 'skupina', 'type': 'nominal', 'scale': {'domain': SK3, 'range': [ZENY, ZENY_SVETLE]},
+                                'legend': {'title': None, 'orient': 'top', 'direction': 'vertical', 'labelFontSize': 12, 'labelLimit': 400}},
+                      'tooltip': [{'field': 'skupina', 'title': 'Kandidátky'}, {'field': 'velikost', 'title': 'Obce'},
+                                  {'field': 'popisek', 'title': 'Hlasy navíc'}, {'field': 'kandidatu', 'title': 'Kandidátek', 'format': ','}]}},
+        {'transform': [{'filter': 'datum.bonus >= 0'}],
+         'mark': {'type': 'text', 'fontSize': 11, 'dx': 4, 'align': 'left', 'color': INK},
+         'encoding': {'x': {'field': 'bonus', 'type': 'quantitative'}, 'text': {'field': 'popisek'}}},
+        {'transform': [{'filter': 'datum.bonus < 0'}],
+         'mark': {'type': 'text', 'fontSize': 11, 'dx': -4, 'align': 'right', 'color': INK},
+         'encoding': {'x': {'field': 'bonus', 'type': 'quantitative'}, 'text': {'field': 'popisek'}}},
+        {'mark': {'type': 'rule', 'color': INK, 'strokeWidth': 1}, 'encoding': {'x': {'datum': 0}}},
+    ],
+    'config': {'view': {'stroke': None}},
+    '_source': SOURCE,
+})
+
+# 4) rozdíl žen proti mužům uvnitř kandidátky (s kontrolou profese, věku a obhajoby mandátu)
+g4 = []
+
+
+def pridej(lab, rr, **kw):
+    e, lo, hi, n = regrese(rr, **kw)
+    g4.append({'radek': lab, 'rozdil': round(e, 1), 'od': round(lo, 1), 'do': round(hi, 1),
+               'popisek': pct(e, 1), 'interval': f'{pct(lo, 1)} až {pct(hi, 1)}', 'kandidatu': n})
+    print(f'    {lab:30} {e:+5.1f} % ({lo:+.1f} až {hi:+.1f}), n = {n}')
+
+
+print('\n  ROZDÍL ŽEN PROTI MUŽŮM (regrese uvnitř kandidátky):')
+for y_ in (2018, 2022, 2026):
+    pridej(f'volby {y_}', DATA[y_], s_obh=y_ != 2018)
+for v in VELIKOSTI:
+    pridej(f'2026: obce {v} obyvatel', [r for r in k26 if r['vel'] == v])
+pridej('2026: dosavadní zastupitelé', [r for r in k26 if r['obh']], s_obh=False)
+pridej('2026: noví kandidáti', [r for r in k26 if not r['obh']], s_obh=False)
+dump('rozdil-zeny-muzi.json', {
+    '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
+    'title': {'text': 'Rozdíl mezi ženami a muži se zmenšuje. Ve velkých městech a u dosavadních zastupitelek mizí',
+              'subtitle': 'O kolik procent méně hlasů dostala žena než muž na téže kandidátce při srovnatelném místě, povolání, věku a zkušenosti se zastupitelstvem (u voleb 2018 bez ní). Vodorovná čárka ukazuje 95% interval nejistoty.'},
+    'width': 600, 'height': {'step': 26},
+    'data': {'values': g4},
+    'encoding': {'y': {'field': 'radek', 'type': 'nominal', 'sort': [d['radek'] for d in g4],
+                       'axis': {'title': None, 'labelLimit': 320, 'ticks': False, 'domain': False, 'labelFontSize': 12}}},
+    'layer': [
+        {'mark': {'type': 'rule', 'color': INK, 'strokeWidth': 1, 'opacity': 0.5},
+         'encoding': {'x': {'datum': 0}, 'y': {'value': 0}, 'y2': {'value': {'expr': 'height'}}}},
+        {'mark': {'type': 'rule', 'color': ZENY, 'strokeWidth': 2},
+         'encoding': {'x': {'field': 'od', 'type': 'quantitative'}, 'x2': {'field': 'do'}}},
+        {'mark': {'type': 'circle', 'size': 130, 'opacity': 1, 'color': ZENY},
+         'encoding': {'x': {'field': 'rozdil', 'type': 'quantitative', 'scale': {'domain': [-6, 1]},
+                            'axis': {'title': 'ženy proti mužům (%)', 'grid': True, 'gridColor': GRID, 'format': '+d'}},
+                      'tooltip': [{'field': 'radek', 'title': 'Skupina'}, {'field': 'popisek', 'title': 'Ženy proti mužům'},
+                                  {'field': 'interval', 'title': '95% interval'}, {'field': 'kandidatu', 'title': 'Kandidátů', 'format': ','}]}},
+        {'mark': {'type': 'text', 'fontSize': 11, 'dx': -8, 'align': 'right', 'color': INK},
+         'encoding': {'x': {'field': 'od', 'type': 'quantitative'}, 'text': {'field': 'popisek'}}},
+    ],
+    'config': {'view': {'stroke': None}},
+    '_source': SOURCE + '; srovnání uvnitř kandidátky (viz Jak jsme počítali)',
+})
+print('\n  PÁRY PROFESÍ – kontrola obhajoby mandátu (stejné definice jako v grafu):')
+for lab, f in PARY[1:6]:
+    rr = [r for r in k26 if f(r['POVOLANI'].lower())]
+    z, m = Z(rr), M(rr)
+    nz, nm = summary([r for r in z if not r['obh']]), summary([r for r in m if not r['obh']])
+    e, lo, hi, n = regrese(rr, s_profesi=False)
+    print(f"    {lab:34} obhajuje ž {100*sum(r['obh'] for r in z)/len(z):4.1f} % m {100*sum(r['obh'] for r in m)/len(m):4.1f} %"
+          f"  | jen noví: ž {nz['bonus']:+5.1f} ({nz['kandidatu']}) m {nm['bonus']:+5.1f} ({nm['kandidatu']})"
+          f"  | uvnitř kandidátky s věkem a obhajobou: ženy {e:+.1f} % ({lo:+.1f} až {hi:+.1f})")
+    print(f"      přeskočení z nevolitelného místa: ž {summary(z)['nasobek']:.2f}×  m {summary(m)['nasobek']:.2f}×")
+
+print('\n  ŽENY MEZI LÍDRY podle typu kandidátky 2026:')
+for lab, f in (('sdružení nezávislých (SNK)', lambda t: t == 'SNK'),
+               ('strany, hnutí a koalice', lambda t: t not in ('SNK', 'NK'))):
+    l1 = podil_z([r for r in k26 if r['por'] == 1 and f(r['typ'])])
+    kk_ = podil_z([r for r in k26 if f(r['typ'])])
+    zv_ = podil_z([r for r in k26 if r['zvolen'] and f(r['typ'])])
+    print(f'    {lab:30} kandidátky {kk_[0]:.1f} %  lídři {l1[0]:.1f} % ({l1[1]} z {l1[2]})  zvolení {zv_[0]:.1f} %')
+
+print('\n  PŘESKOČENÍ 2026: ženy zvoleny zpod čáry', sum(r['preskocil'] for r in Z(k26)),
+      ' ženy vypadly z volitelného místa', sum(1 for r in Z(k26) if r['seats'] >= 1 and r['por'] <= r['seats'] and not r['zvolen']),
+      ' | muži zpod čáry', sum(r['preskocil'] for r in M(k26)),
+      ' vypadli', sum(1 for r in M(k26) if r['seats'] >= 1 and r['por'] <= r['seats'] and not r['zvolen']))
+print('\ngrafy zapsány:', sorted(p.name for p in OUT.glob('*.json')))
+
+# podklad pro cover: obce, kde se z nevolitelného místa do zastupitelstva dostala žena / muž
+obec_kod = {r['KODZASTUP']: r['OBEC'] for r in table(2026, 'kvrzcoco.csv')}
+with open(TAB / 'skoky_cover.csv', 'w', encoding='utf-8', newline='') as f:
+    w = csv.writer(f)
+    w.writerow(['obec_kod', 'pohlavi'])
+    for r in k26:
+        if r['preskocil'] and r['g'] in 'ZM':
+            w.writerow([obec_kod.get(r['KODZASTUP'], ''), r['g']])
+print('skoky pro cover zapsány')
