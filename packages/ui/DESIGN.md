@@ -687,6 +687,18 @@ import RawHtmlEmbed from '@repo/ui/components/RawHtmlEmbed';
 <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} />
 ```
 
+**Velká samostatná interaktivní mapa v článku (iframe přes `<HtmlEmbed>`).** Hotovou stránku s vlastními styly
+a daty (např. mapa obcí, 1,5 MB) nevkládej inline – přepsala by styly webu a nafoukla HTML článku. Dej ji do
+`images/<název>.html` (copyImages ji zkopíruje do `public/`) a v článku `<HtmlEmbed file="mapa-embed.html" />`
+s malým obalem: `<iframe>` + posluchač `message`, který nastaví výšku. Vzor:
+`apps/web/app/clanek/_articles/volby-cr-2026-10-16-ucast-2022-2026/` (`mapa-embed.html`, `_data_pipeline/sablona.html`).
+*Ponaučení (16. 10. 2026):* (1) bez `loading="lazy"` – iframe vložený přes RawHtmlEmbed se líně nenačetl;
+(2) výšku měř z obalu obsahu (`.wrap.getBoundingClientRect().height`), ne z `documentElement.scrollHeight`
+(ten je vždy aspoň tak vysoký jako iframe, takže se nikdy nezmenší) a posílej ji i při `load`/`resize`/`toggle`,
+ne jen z ResizeObserveru; (3) web je jen světlý – v embedu žádný `prefers-color-scheme: dark`, pozadí průhledné;
+(4) zoom mapy jen Ctrl + kolečko / dva prsty (`d3.zoom().filter`, `touch-action: pan-y`), jinak mapa „ukradne“
+rolování stránky.
+
 ---
 
 ### `PhotoGallery`
