@@ -115,6 +115,12 @@ const PARTNERS: Partner[] = [
   },
 ];
 
+// Partners are shown in the order the collaborations started.
+const PARTNER_ORDER = ['Český rozhlas', 'PastVina', 'Volební kalkulačka', 'Moravec.cz'];
+const PARTNERS_SORTED = [...PARTNERS].sort(
+  (a, b) => PARTNER_ORDER.indexOf(a.name) - PARTNER_ORDER.indexOf(b.name),
+);
+
 const STATS = [
   { n: '15', label: 'kapitol' },
   { n: '157', label: 'článků' },
@@ -245,7 +251,7 @@ export default function DpbpPartnersPage() {
           </div>
 
           <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
-            {PARTNERS.map((p) => (
+            {PARTNERS_SORTED.map((p) => (
               <PartnerCard key={p.name} p={p} />
             ))}
           </SimpleGrid>
