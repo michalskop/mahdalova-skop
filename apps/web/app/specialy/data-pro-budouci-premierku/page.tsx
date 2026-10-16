@@ -829,6 +829,7 @@ export default function DpbpLandingPage() {
           Projekt vzniká s grantovou podporou{' '}
           <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer">Nadačního fondu nezávislé žurnalistiky</a>
           {' '}a stojí na originálních datových analýzách a vlastním zpracování velkého množství zdrojů.
+          {' '}<a href="/specialy/data-pro-budouci-premierku/spoluprace">S kým jsme spolupracovali a kam se data dostala</a>.
           </div>
         </Container>
 
