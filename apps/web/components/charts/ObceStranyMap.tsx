@@ -16,9 +16,10 @@ import ChartCard from './ChartCard';
 import ChartLegend from './ChartLegend';
 
 // Barvy stran z predikce (volby2026.datatimes.cz), ostatní ze závazné palety (ThemeProvider.tsx)
+// Strany a jejich pořadí určuje datový soubor (klíč `strany`), barvy jeho klíč `barvy`;
+// když v datech nejsou, platí výchozí barvy níže (článek o SPD, ANO a Motoristech).
 // kss = KSČM a Stačilo! dohromady (navržení oběma stranami, viz _data_pipeline/build.py)
-type Party = 'spd' | 'ano' | 'aut' | 'kss' | 'pro';
-const PARTIES: Party[] = ['spd', 'ano', 'aut', 'kss', 'pro'];
+type Party = string;
 const COLOR: Record<Party, string> = {
   spd: '#a47d03', // SPD – brandYellow.9
   ano: '#272a59', // ANO – brandRoyalBlue.8
@@ -77,9 +78,10 @@ function Pikto({ icon, on }: { icon: Icon; on: boolean }) {
 
 // [zastupitelé před volbami, kandidáti 2026, zastupitelé 2026, kandidáti 2022]
 type Rec = [m22: number, k26: number, m26: number, k22: number];
-type Cast = { n: string } & Partial<Record<Party, Rec>>;
-type Obec = { n: string; o: string; p: number; m: number; casti?: Cast[] } & Partial<Record<Party | `${Party}_mc`, Rec>>;
-type RawData = { strany: Record<Party, string>; obce: Record<string, Obec> };
+// klíče stran (a `<strana>_mc` = součet městských částí) nesou záznam Rec
+type Cast = { n: string; [party: string]: Rec | string };
+type Obec = { n: string; o: string; p: number; m: number; casti?: Cast[]; [party: string]: Rec | Cast[] | string | number | undefined };
+type RawData = { strany: Record<Party, string>; barvy?: Record<Party, string>; obce: Record<string, Obec> };
 
 const nf = (v: number) => v.toLocaleString('cs-CZ');
 function plural(n: number, one: string, few: string, many: string) {
@@ -135,7 +137,11 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
   const [topo, setTopo] = useState<Topology | null>(null);
   const [data, setData] = useState<RawData | null>(null);
   const [cat, setCat] = useState<Cat>(initialCat);
-  const [active, setActive] = useState<Party[]>(PARTIES);
+  const PARTIES = useMemo<Party[]>(() => (data ? Object.keys(data.strany) : []), [data]);
+  const colorOf = (p: Party) => data?.barvy?.[p] ?? COLOR[p] ?? INK;
+  // null = všechny strany zapnuté (výchozí stav)
+  const [activeSel, setActive] = useState<Party[] | null>(null);
+  const active = activeSel ?? PARTIES;
   const [hover, setHover] = useState<{ id: string; x: number; y: number } | null>(null);
   const [query, setQuery] = useState('');
   const [picked, setPicked] = useState<string | null>(null);
@@ -227,7 +233,7 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
 
   const legendItems = PARTIES.filter((p) => data?.strany[p]).map((p) => ({
     key: p,
-    color: COLOR[p],
+    color: colorOf(p),
     label: `${data!.strany[p]} (${nf(counts[p])} ${plural(counts[p], 'obec', 'obce', 'obcí')})`,
   }));
 
@@ -243,7 +249,7 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
                   type="button"
                   title="Zpět na výchozí zobrazení"
                   aria-label="Zpět na výchozí zobrazení"
-                  onClick={() => { setActive(PARTIES); setCat(DEFAULT_CAT); setPicked(null); setQuery(''); setHover(null); }}
+                  onClick={() => { setActive(null); setCat(DEFAULT_CAT); setPicked(null); setQuery(''); setHover(null); }}
                   style={{ ...btn(false), padding: '4px 8px', display: 'inline-flex', alignItems: 'center' }}
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>
@@ -315,7 +321,7 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
                     <path
                       key={id}
                       d={d}
-                      fill={p ? COLOR[p] : NONE}
+                      fill={p ? colorOf(p) : NONE}
                       stroke={p ? '#fff' : '#fff'}
                       strokeWidth={p ? 0.5 : 0.25}
                       onMouseMove={(e) => {
@@ -361,7 +367,7 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
                 {rows.length === 0 && <div>Žádná z těchto stran tu neměla zastupitele ani letos nekandidovala.</div>}
                 {rows.map(({ p, r }) => (
                   <div key={p} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-                    <span style={{ width: 9, height: 9, borderRadius: 2, background: COLOR[p], flex: '0 0 auto', transform: 'translateY(1px)' }} />
+                    <span style={{ width: 9, height: 9, borderRadius: 2, background: colorOf(p), flex: '0 0 auto', transform: 'translateY(1px)' }} />
                     <span>
                       <strong>{data!.strany[p]}</strong> {r[0]} → <strong>{r[2]}</strong>
                       <span style={{ color: MUTED }}>
@@ -386,14 +392,14 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
         {picked && data?.obce[picked]?.casti && (() => {
           const o = data.obce[picked];
           // strana se v řádku ukáže, jen když tu měla nebo má zastupitele, nebo letos kandidovala
-          const has = (r: Rec | undefined): r is Rec => Boolean(r && (r[0] || r[1] || r[2]));
+          const has = (r: unknown): r is Rec => Array.isArray(r) && Boolean(r[0] || r[1] || r[2]);
           const mesto: Cast = { n: `Zastupitelstvo města ${o.n}` };
           for (const p of PARTIES) if (o[p]) mesto[p] = o[p] as Rec;
           // sloupce jen pro zapnuté strany, které tu někde něco mají
           const shown = PARTIES.filter((p) => active.includes(p) && data.strany[p]
             && [mesto, ...(o.casti ?? [])].some((c) => has(c[p])));
           const radky = [mesto, ...(o.casti ?? [])].filter((c, i) => i === 0 || shown.some((p) => has(c[p])));
-          const cell = (r: Rec | undefined) => (!has(r) ? <span style={{ color: '#bcbcb0' }}>–</span> : (
+          const cell = (r: unknown) => (!has(r) ? <span style={{ color: '#bcbcb0' }}>–</span> : (
             <>
               {r[0]} → <strong>{r[2]}</strong>
               <span style={{ color: MUTED }}> ({nf(r[1])})</span>
@@ -413,7 +419,7 @@ export default function ObceStranyMap({ geoUrl, dataUrl, title, subtitle, source
                     <th style={{ textAlign: 'left', padding: '4px 8px 4px 0', borderBottom: `1px solid ${INK}` }} />
                     {shown.map((p) => (
                       <th key={p} style={{ textAlign: 'left', padding: '4px 8px', borderBottom: `1px solid ${INK}`, whiteSpace: 'nowrap' }}>
-                        <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 2, background: COLOR[p], marginRight: 5 }} />
+                        <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 2, background: colorOf(p), marginRight: 5 }} />
                         {data.strany[p]}
                       </th>
                     ))}
