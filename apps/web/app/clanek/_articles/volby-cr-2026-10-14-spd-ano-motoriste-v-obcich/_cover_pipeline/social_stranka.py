@@ -19,13 +19,23 @@ OBRAZKY = [
                 ('../images/cover-instagram.png', 'Instagram 1080×1350 – 1. snímek carouselu'),
                 ('../images/cover-story.png', 'stories 1080×1920')]),
     ('Mapy stran – Instagram 1080×1350', [(f'{k}-ig.png', n) for k, n in
-        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé')]]),
+        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé'), ('pro', 'PRO')]]),
     ('Mapy stran – stories 1080×1920', [(f'{k}-story.png', n) for k, n in
-        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé')]]),
+        [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé'), ('pro', 'PRO')]]),
     ('Mapy stran – čtverec 1080×1080 (X, Bluesky, Facebook)', [(f'../images/mapa-{k}.png', n) for k, n in
         [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!'), ('aut', 'Motoristé'), ('pro', 'PRO')]]),
     ('Animované GIFy volby 2022 → 2026', [(f'{k}-2022-2026.gif', n) for k, n in
         [('ano', 'ANO'), ('spd', 'SPD'), ('kss', 'KSČM a Stačilo!')]]),
+    ('Bonusové karty – Instagram 1080×1350 (můžou jít i do carouselu za mapy)', [
+        ('karta-mesta-ig.png', 'Krajská města: SPD zmizela z Prahy a šesti krajských měst'),
+        ('karta-uspesnost-ig.png', 'Úspěšnost kandidátů 2022 a 2026'),
+        ('karta-velikost-ig.png', 'ANO ve městech ztrácí, v menších obcích přibírá')]),
+    ('Bonusové karty – čtverec 1080×1080', [
+        ('karta-mesta-ctverec.png', 'Krajská města'), ('karta-uspesnost-ctverec.png', 'Úspěšnost kandidátů'),
+        ('karta-velikost-ctverec.png', 'Podle velikosti obce')]),
+    ('Bonusové karty – široké 1200×675 (X, Bluesky, Facebook, LinkedIn)', [
+        ('karta-mesta-siroky.png', 'Krajská města'), ('karta-uspesnost-siroky.png', 'Úspěšnost kandidátů'),
+        ('karta-velikost-siroky.png', 'Podle velikosti obce')]),
     ('Grafy z článku', [('graf-uspesnost.png', 'Úspěšnost kandidátů 2022 a 2026'),
                         ('graf-velikost.png', 'Změna podle velikosti obce')]),
 ]

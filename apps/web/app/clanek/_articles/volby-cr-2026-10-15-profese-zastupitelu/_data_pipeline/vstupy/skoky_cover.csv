@@ -1,0 +1,449 @@
+obec_kod,obec,klic,por,mandaty_strany
+500062,Krhová,reditel_skoly,6,5
+500062,Krhová,veterinar,7,4
+500496,Olomouc,lekar,8,4
+502235,Hněvotín,reditel_skoly,3,2
+504441,Náklo,reditel_skoly,9,7
+505013,Příkazy,reditel_skoly,9,3
+556700,Opava,lekar,3,2
+556700,Opava,lekar,8,5
+506451,Březová,reditel_skoly,10,4
+506702,Dolní Benešov,lekar,15,3
+506702,Dolní Benešov,lekar,3,2
+506737,Chvalčov,reditel_skoly,3,2
+506753,Háj ve Slezsku,lekar,7,6
+507270,Hradec nad Moravicí,lekar,10,5
+507377,Jakartovice,veterinar,15,3
+507504,Kobeřice,lekar,7,4
+507580,Kravaře,reditel_skoly,7,3
+509141,Dvory nad Lužnicí,reditel_skoly,9,7
+510289,Slavkov,lekar,6,3
+510491,Štítina,reditel_skoly,4,2
+510882,Velká Polom,lekar,11,4
+511382,Přerov,lekar,7,6
+512281,Beňov,reditel_skoly,4,3
+514055,Kojetín,veterinar,8,6
+514705,Lipník nad Bečvou,reditel_skoly,3,2
+514705,Lipník nad Bečvou,lekar,7,2
+516635,Paršovice,lekar,6,3
+517101,Potštát,lekar,8,4
+517909,Střítež nad Ludinou,lekar,6,2
+520420,Veselíčko,reditel_skoly,4,2
+529303,Benešov,lekar,7,6
+529303,Benešov,lekar,9,6
+529303,Benešov,lekar,11,7
+530051,Lešany,reditel_skoly,6,4
+530212,Načeradec,reditel_skoly,10,8
+530816,Trhový Štěpánov,lekar,3,2
+530883,Vlašim,reditel_skoly,4,3
+530883,Vlašim,lekar,6,1
+530883,Vlašim,lekar,8,3
+530905,Votice,lekar,16,3
+530905,Votice,reditel_skoly,7,2
+530956,Opatovice I,reditel_skoly,3,2
+531057,Beroun,lekar,5,4
+531243,Hýskov,lekar,7,3
+531502,Liblice,lekar,3,2
+531995,Zaječov,veterinar,9,2
+532053,Kladno,lekar,6,2
+532118,Brandýsek,knihovnik,2,1
+532860,Stochov,reditel_skoly,8,4
+533017,Unhošť,lekar,5,4
+533165,Kolín,lekar,7,3
+533271,Český Brod,reditel_skoly,5,2
+533670,Chrustenice,knihovnik,6,3
+533751,Třebovle,lekar,3,1
+533921,Zásmuky,reditel_skoly,13,9
+533955,Kutná Hora,reditel_skoly,7,2
+533955,Kutná Hora,lekar,6,1
+534005,Čáslav,reditel_skoly,10,9
+534498,Uhlířské Janovice,reditel_skoly,6,3
+534951,Kralupy nad Vltavou,reditel_skoly,7,5
+535087,Neratovice,lekar,3,2
+535117,Nová Ves,lekar,5,2
+535419,Mladá Boleslav,lekar,9,6
+535621,Čachovice,lekar,9,3
+536300,Věžovatá Pláně,reditel_skoly,4,2
+536351,Nepřevázka,lekar,6,3
+537004,Nymburk,lekar,7,6
+537004,Nymburk,lekar,8,3
+537683,Poděbrady,lekar,5,3
+537683,Poděbrady,lekar,2,1
+537772,Sány,veterinar,9,5
+538272,Jirny,lekar,7,3
+538434,Svatava,lekar,6,2
+538451,Louňovice,reditel_skoly,3,2
+538868,Pomezí nad Ohří,lekar,5,3
+538931,Praha 22,reditel_skoly,4,2
+538931,Praha 22,lekar,5,3
+539139,Černošice,lekar,13,6
+539198,Dobřichovice,reditel_skoly,8,7
+539252,Hradištko,knihovnik,4,3
+539333,Jílové u Prahy,lekar,7,5
+539627,Roztoky,lekar,8,5
+539864,Praha-Zbraslav,reditel_skoly,5,3
+539911,Příbram,reditel_skoly,4,2
+539961,Libina,reditel_skoly,3,2
+540030,Lipová-lázně,knihovnik,4,3
+540196,Loštice,reditel_skoly,10,6
+540226,Loučná nad Desnou,lekar,4,3
+540382,Mikulovice,reditel_skoly,3,1
+540765,Mníšek pod Brdy,lekar,8,6
+540773,Postřelmov,reditel_skoly,6,4
+540871,Rohle,reditel_skoly,7,3
+540901,Nový Knín,knihovnik,2,1
+541044,Petrovice,lekar,8,5
+541109,Sudkov,lekar,12,7
+541231,Rožmitál pod Třemšínem,lekar,7,4
+541281,Sedlčany,lekar,21,3
+541281,Sedlčany,lekar,14,10
+541303,Vidnava,reditel_skoly,15,2
+541656,Rakovník,lekar,8,3
+541656,Rakovník,lekar,13,1
+541656,Rakovník,reditel_skoly,8,2
+541770,Hředle,reditel_skoly,9,4
+542199,Olešná,reditel_skoly,2,1
+544256,České Budějovice,lekar,8,6
+544388,Dolní Bukovsko,lekar,15,6
+544841,Rožnov pod Radhoštěm,lekar,8,2
+544981,Rudolfov,lekar,8,5
+545121,Ševětín,lekar,8,6
+545341,Zliv,lekar,6,5
+545392,Český Krumlov,lekar,10,2
+545481,Frymburk,reditel_skoly,5,2
+545511,Horní Planá,lekar,5,2
+545881,Jindřichův Hradec,reditel_skoly,10,6
+545881,Jindřichův Hradec,lekar,12,4
+546071,Račetice,reditel_skoly,3,2
+546089,České Velenice,reditel_skoly,5,4
+546461,Chlum u Třeboně,lekar,12,7
+546577,Pulečný,lekar,4,2
+546593,Nová Ves,lekar,5,4
+547042,Praha-Kunratice,reditel_skoly,10,2
+547051,Praha-Libuš,lekar,4,1
+547107,Praha 12,reditel_skoly,6,3
+547115,Praha-Velká Chuchle,reditel_skoly,7,2
+547166,Slavonice,reditel_skoly,6,4
+547263,Studená,reditel_skoly,3,2
+547298,Praha-Ďáblice,reditel_skoly,3,2
+547492,Pelhřimov,reditel_skoly,7,5
+547646,Velké Poříčí,veterinar,3,2
+548235,Leskovice,reditel_skoly,5,3
+548511,Pacov,veterinar,12,4
+549142,Vyskytná,lekar,6,3
+549240,Písek,lekar,6,3
+549240,Písek,reditel_skoly,5,3
+549240,Písek,lekar,4,3
+549339,Čimelice,veterinar,7,1
+549347,Čížová,lekar,7,2
+549363,Dobev,reditel_skoly,4,3
+549380,Drhovle,lekar,7,2
+549533,Poteč,lekar,15,7
+549801,Putim,lekar,5,4
+550094,Prachatice,lekar,10,3
+550141,Medlovice,lekar,2,1
+550361,Lhenice,reditel_skoly,7,4
+550540,Strunkovice nad Blanicí,veterinar,9,3
+550621,Vacov,veterinar,5,4
+550621,Vacov,lekar,8,7
+550647,Vimperk,knihovnik,2,1
+550671,Volary,reditel_skoly,5,3
+550787,Strakonice,lekar,8,4
+550787,Strakonice,reditel_skoly,11,4
+550787,Strakonice,lekar,4,2
+550990,Brno-Žabovřesky,lekar,6,2
+551112,Brno-Nový Lískovec,reditel_skoly,7,4
+551228,Brno-Komín,reditel_skoly,7,3
+551228,Brno-Komín,lekar,7,3
+551252,Brno-Maloměřice a Obřany,reditel_skoly,2,1
+551287,Brno-Líšeň,lekar,12,4
+551724,Mezina,lekar,6,2
+552046,Tábor,reditel_skoly,6,5
+552046,Tábor,reditel_skoly,8,5
+552186,Červenka,reditel_skoly,8,3
+552186,Červenka,veterinar,3,1
+552992,Ratibořské Hory,lekar,9,7
+553069,Sezimovo Ústí,reditel_skoly,4,3
+553069,Sezimovo Ústí,lekar,5,3
+553131,Soběslav,reditel_skoly,5,4
+553425,Domažlice,reditel_skoly,8,6
+553981,Mrákov,reditel_skoly,9,4
+554014,Návsí,knihovnik,5,2
+554171,Šenov u Nového Jičína,lekar,10,6
+554456,Všeruby,reditel_skoly,10,7
+554642,Mariánské Lázně,lekar,10,2
+554723,Plesná,lekar,2,1
+554723,Plesná,lekar,3,2
+567892,Ústí nad Labem,lekar,5,4
+567892,Ústí nad Labem,reditel_skoly,5,3
+554863,Dolní Brusnice,reditel_skoly,4,2
+554898,Rostěnice-Zvonovice,lekar,7,4
+554928,Vendryně,lekar,5,2
+554979,Abertamy,reditel_skoly,4,2
+555771,Klatovy,lekar,7,5
+555771,Klatovy,reditel_skoly,9,5
+555771,Klatovy,reditel_skoly,11,5
+556254,Horažďovice,lekar,4,3
+556301,Hrádek,lekar,9,6
+557153,Sušice,reditel_skoly,6,4
+557218,Kobylá nad Vidnavkou,reditel_skoly,4,1
+557587,Blovice,lekar,12,4
+557650,Čížkov,reditel_skoly,9,4
+558427,Šťáhlavy,lekar,15,6
+558443,Ladná,reditel_skoly,4,3
+558885,Horní Bříza,reditel_skoly,5,4
+559075,Kralovice,knihovnik,8,7
+559148,Ledce,reditel_skoly,5,1
+559300,Nýřany,lekar,18,9
+559521,Třemošná,reditel_skoly,15,8
+559679,Zruč-Senec,lekar,6,3
+559822,Hrádek,lekar,12,5
+560286,Sokolov,lekar,10,6
+560812,Černošín,reditel_skoly,10,2
+560898,Hošťka,reditel_skoly,7,2
+561215,Stříbro,lekar,2,1
+561380,Česká Lípa,knihovnik,3,2
+561860,Nový Bor,knihovnik,8,5
+562025,Skalice u České Lípy,lekar,3,2
+562025,Skalice u České Lípy,reditel_skoly,10,4
+562025,Skalice u České Lípy,lekar,3,2
+562076,Sosnová,lekar,5,4
+562335,Děčín,veterinar,8,5
+562467,Dolní Pěna,reditel_skoly,5,4
+562777,Rumburk,lekar,18,2
+562858,Šluknov,reditel_skoly,2,1
+562971,Chomutov,lekar,16,4
+563099,Jirkov,lekar,4,3
+563099,Jirkov,lekar,8,3
+563099,Jirkov,knihovnik,10,3
+563102,Kadaň,lekar,11,3
+563102,Kadaň,lekar,16,3
+563510,Jablonec nad Nisou,lekar,5,4
+563510,Jablonec nad Nisou,lekar,10,7
+563731,Nová Ves nad Nisou,lekar,3,2
+563811,Smržovka,reditel_skoly,4,3
+563820,Tanvald,lekar,3,2
+563820,Tanvald,lekar,4,2
+563838,Velké Hamry,lekar,15,3
+563871,Železný Brod,reditel_skoly,7,4
+563935,Bulovka,veterinar,5,2
+563960,Český Dub,lekar,15,3
+564028,Frýdlant,lekar,4,3
+564265,Nové Město pod Smrkem,reditel_skoly,6,3
+564567,Litoměřice,lekar,3,2
+564567,Litoměřice,lekar,6,2
+564656,Budyně nad Ohří,lekar,7,5
+564877,Hoštka,veterinar,4,3
+565067,Krabčice,reditel_skoly,3,2
+565237,Lukavec,reditel_skoly,3,2
+565709,Štětí,reditel_skoly,14,5
+565709,Štětí,reditel_skoly,8,4
+565717,Terezín,knihovnik,3,2
+565971,Louny,reditel_skoly,4,2
+565971,Louny,lekar,13,7
+566403,Lipno,lekar,5,2
+566454,Měcholupy,reditel_skoly,6,5
+566616,Podbořany,reditel_skoly,6,5
+567027,Most,reditel_skoly,8,2
+567507,Dubí,reditel_skoly,3,1
+568392,Doloplazy,lekar,9,4
+568414,Havlíčkův Brod,lekar,9,6
+568759,Chotěboř,veterinar,8,7
+568945,Krucemburk,reditel_skoly,9,4
+569321,Přibyslav,veterinar,7,3
+569925,Černožice,lekar,3,2
+570001,Hlušice,reditel_skoly,5,3
+570109,Chlumec nad Cidlinou,lekar,9,4
+570451,Nechanice,lekar,5,4
+571164,Chrudim,lekar,6,2
+571164,Chrudim,reditel_skoly,8,4
+571164,Chrudim,lekar,13,1
+571202,Bojanov,veterinar,9,5
+571385,Heřmanův Městec,reditel_skoly,7,5
+571539,Chrast,lekar,11,5
+571776,Luže,lekar,4,2
+571784,Libiš,lekar,7,6
+571954,Sudovo Hlavno,lekar,4,3
+572152,Raná,reditel_skoly,5,3
+572179,Rosice,reditel_skoly,7,3
+572241,Skuteč,reditel_skoly,8,5
+572659,Jičín,reditel_skoly,10,2
+572659,Jičín,reditel_skoly,10,4
+572926,Hořice,reditel_skoly,11,4
+572926,Hořice,lekar,8,5
+573167,Markvartice,reditel_skoly,6,4
+573205,Mladějov,lekar,5,4
+573434,Lhota,reditel_skoly,6,2
+573868,Náchod,veterinar,8,7
+573922,Broumov,reditel_skoly,4,2
+574082,Hronov,lekar,11,3
+574121,Jaroměř,reditel_skoly,5,2
+574279,Nové Město nad Metují,reditel_skoly,6,4
+574287,Nový Hrádek,lekar,5,3
+574317,Otovice,reditel_skoly,4,2
+574341,Police nad Metují,lekar,2,1
+574899,Dašice,reditel_skoly,4,2
+574996,Horní Jelení,reditel_skoly,10,3
+574996,Horní Jelení,knihovnik,13,3
+574996,Horní Jelení,reditel_skoly,9,6
+576271,Dobruška,reditel_skoly,8,5
+576590,Opočno,reditel_skoly,11,4
+576786,Slatina nad Zdobnicí,reditel_skoly,3,2
+576964,Semily,reditel_skoly,9,6
+576999,Benešov u Semil,lekar,9,8
+577197,Jilemnice,lekar,13,4
+577308,Lomnice nad Popelkou,reditel_skoly,15,6
+577472,Rovensko pod Troskami,knihovnik,10,4
+577626,Turnov,lekar,4,3
+577626,Turnov,reditel_skoly,5,3
+577731,Svitavy,lekar,12,2
+577731,Svitavy,lekar,3,2
+577731,Svitavy,reditel_skoly,14,9
+577928,Bystré,lekar,10,9
+578347,Litomyšl,lekar,4,3
+578363,Makov,reditel_skoly,9,5
+578894,Trstěnice,lekar,8,2
+579025,Trutnov,lekar,15,14
+579122,Dolní Branná,lekar,5,4
+579203,Dvůr Králové nad Labem,lekar,13,4
+579351,Janské Lázně,lekar,9,2
+579351,Janské Lázně,reditel_skoly,7,6
+579513,Malé Svatoňovice,reditel_skoly,9,7
+579556,Mostek,veterinar,5,4
+579637,Rtyně v Podkrkonoší,knihovnik,4,1
+579777,Úpice,veterinar,3,2
+579858,Vrchlabí,lekar,9,5
+579874,Žacléř,reditel_skoly,5,3
+579891,Ústí nad Orlicí,lekar,18,7
+579891,Ústí nad Orlicí,reditel_skoly,9,3
+579891,Ústí nad Orlicí,lekar,6,2
+580031,Česká Třebová,reditel_skoly,5,4
+580121,Dolní Dobrouč,reditel_skoly,5,2
+580481,Králíky,reditel_skoly,5,4
+580481,Králíky,reditel_skoly,3,2
+580562,Libecina,veterinar,7,5
+581186,Vysoké Mýto,reditel_skoly,7,2
+581275,Žichlínek,veterinar,4,2
+581283,Blansko,lekar,6,3
+581372,Boskovice,lekar,15,3
+581542,Doubravice nad Svitavou,lekar,2,1
+583120,Ivančice,lekar,5,3
+583391,Modřice,veterinar,4,2
+583391,Modřice,veterinar,4,2
+583391,Modřice,veterinar,12,5
+583405,Mokrá-Horákov,knihovnik,7,2
+583995,Těšany,lekar,8,6
+584347,Bořetice,reditel_skoly,15,2
+584452,Hlohovec,veterinar,10,7
+584452,Hlohovec,lekar,4,3
+584487,Hrušky,lekar,6,4
+584649,Mikulov,lekar,5,3
+584797,Podivín,lekar,5,3
+584860,Rakvice,lekar,5,3
+584941,Tvrdonice,reditel_skoly,2,1
+584975,Valtice,lekar,3,2
+585009,Velké Němčice,reditel_skoly,2,1
+585033,Vranovice,lekar,12,4
+585068,Zlín,lekar,11,9
+585114,Brumov-Bylnice,lekar,3,2
+585211,Fryšták,veterinar,9,3
+585289,Hvozdná,lekar,10,7
+585599,Otrokovice,reditel_skoly,3,2
+585599,Otrokovice,lekar,6,2
+585751,Slavičín,reditel_skoly,4,3
+585955,Vlachovice,reditel_skoly,7,6
+586021,Hodonín,veterinar,4,3
+586188,Hroznová Lhota,reditel_skoly,4,2
+586323,Lipov,reditel_skoly,14,2
+586374,Mikulčice,reditel_skoly,7,4
+586510,Ratíškovice,reditel_skoly,6,2
+586587,Strážnice,lekar,4,3
+586722,Veselí nad Moravou,reditel_skoly,6,5
+586731,Věteřov,lekar,6,4
+586757,Vnorovy,reditel_skoly,8,6
+586811,Želetice,lekar,4,3
+586943,Brtnice,lekar,7,6
+587168,Horní Dubenky,lekar,5,4
+588172,Vyskytná nad Jihlavou,reditel_skoly,14,6
+588296,Kroměříž,knihovnik,4,3
+588385,Břest,lekar,4,3
+588393,Bystřice pod Hostýnem,reditel_skoly,11,4
+588491,Hulín,lekar,2,1
+588601,Koryčany,veterinar,3,2
+588601,Koryčany,veterinar,6,2
+588903,Prusinovice,reditel_skoly,4,2
+589250,Prostějov,reditel_skoly,8,3
+589268,Bedihošť,lekar,4,1
+589926,Protivanov,lekar,6,5
+590011,Slatinky,lekar,4,3
+590185,Vrbátky,knihovnik,9,8
+590185,Vrbátky,reditel_skoly,3,2
+590266,Třebíč,lekar,3,2
+590517,Dalešice,reditel_skoly,8,5
+590843,Kněžice,reditel_skoly,5,3
+591165,Mladoňovice,reditel_skoly,9,4
+591319,Opatov,lekar,4,2
+592005,Uherské Hradiště,veterinar,6,3
+592170,Hluk,lekar,13,9
+592285,Korytná,reditel_skoly,2,1
+592391,Modrá,lekar,8,2
+592447,Ořechov,lekar,5,4
+592510,Polešovice,lekar,7,5
+592633,Stupava,lekar,9,7
+592731,Uherský Brod,lekar,16,4
+592749,Uherský Ostroh,reditel_skoly,6,3
+592889,Vyškov,lekar,12,7
+592889,Vyškov,veterinar,15,7
+592889,Vyškov,lekar,9,3
+592897,Bohaté Málkovice,reditel_skoly,7,4
+593117,Ivanovice na Hané,veterinar,11,3
+593141,Kobeřice u Brna,lekar,4,2
+593478,Otnice,knihovnik,7,5
+593508,Pustiměř,lekar,4,2
+593559,Rousínov,lekar,5,2
+593711,Znojmo,lekar,12,8
+593737,Běhařovice,lekar,4,3
+594202,Jevišovice,lekar,3,2
+594393,Lukov,lekar,4,2
+594555,Olbramkostel,reditel_skoly,6,4
+594873,Šanov,reditel_skoly,6,4
+594962,Troskotovice,lekar,2,1
+595209,Žďár nad Sázavou,reditel_skoly,5,3
+595209,Žďár nad Sázavou,reditel_skoly,7,3
+595411,Bystřice nad Pernštejnem,veterinar,6,2
+595454,Dalečín,veterinar,6,2
+595489,Dobrá Voda,reditel_skoly,4,2
+595527,Dolní Loučky,reditel_skoly,6,4
+595527,Dolní Loučky,reditel_skoly,4,3
+595551,Doubravník,reditel_skoly,13,6
+595772,Jimramov,reditel_skoly,8,6
+596230,Nové Město na Moravě,lekar,11,7
+596566,Radostín,knihovnik,2,1
+596973,Velká Bíteš,lekar,11,6
+596973,Velká Bíteš,lekar,14,6
+597007,Velké Meziříčí,lekar,4,1
+597091,Vojnův Městec,lekar,11,9
+597091,Vojnův Městec,lekar,15,9
+597180,Bruntál,lekar,16,6
+597180,Bruntál,reditel_skoly,2,1
+597368,Horní Město,reditel_skoly,2,1
+597520,Krnov,reditel_skoly,16,7
+597783,Rýmařov,reditel_skoly,6,5
+597783,Rýmařov,lekar,11,4
+597961,Vrbno pod Pradědem,reditel_skoly,8,5
+597996,Zlaté Hory,lekar,8,5
+598003,Frýdek-Místek,lekar,5,3
+598160,Hnojník,lekar,8,3
+598445,Morávka,lekar,5,3
+598542,Ostravice,knihovnik,13,3
+598810,Třinec,knihovnik,5,4
+598810,Třinec,lekar,13,6
+598941,Dětmarovice,reditel_skoly,10,7
+598968,Dolní Lutyně,veterinar,4,2
+599051,Bohumín,lekar,6,5
+599069,Orlová,reditel_skoly,3,2
+599191,Nový Jičín,reditel_skoly,5,3
+599701,Odry,reditel_skoly,12,4
+599701,Odry,lekar,17,2
+599808,Příbor,reditel_skoly,3,2
+599921,Studénka,lekar,19,4

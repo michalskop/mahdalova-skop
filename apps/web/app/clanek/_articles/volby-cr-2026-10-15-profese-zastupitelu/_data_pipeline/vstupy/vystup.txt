@@ -1,0 +1,152 @@
+VŠICHNI 2026 {'kandidatu': 189908, 'zvoleno': 61677, 'podil_zvolenych': 32.5, 'pod_carou': 106555, 'preskocilo': 6148, 'sance_preskocit': 5.8, 'ocekavano': 6148.0, 'nasobek': 1.0, 'zvolenych_z_pod_cary': 10.0, 'bonus': 0.0}
+
+PROFESE 2026 (seřazeno podle osobního bonusu)
+veterináři a veterinářky                     kand    311 zvol   125 (40.2 %)  pod čarou   200 přeskočilo   36 (18.0 %)  bonus +15.9 %  násobek 3.28
+lékaři a lékařky                             kand   2074 zvol   723 (34.9 %)  pod čarou  1373 přeskočilo  216 (15.7 %)  bonus +13.2 %  násobek 3.34
+ředitelé škol a jejich zástupci              kand   2276 zvol  1152 (50.6 %)  pod čarou  1121 přeskočilo  174 (15.5 %)  bonus +11.2 %  násobek 2.39
+hasiči                                       kand   1798 zvol   840 (46.7 %)  pod čarou   943 přeskočilo  107 (11.3 %)  bonus  +9.0 %  násobek 1.68
+lékárníci a lékárnice                        kand    507 zvol   170 (33.5 %)  pod čarou   320 přeskočilo   38 (11.9 %)  bonus  +8.6 %  násobek 2.20
+právníci a advokáti                          kand   2252 zvol   877 (38.9 %)  pod čarou  1141 přeskočilo   90 ( 7.9 %)  bonus  +6.0 %  násobek 1.43
+zubaři a zubařky                             kand    504 zvol   158 (31.4 %)  pod čarou   328 přeskočilo   34 (10.4 %)  bonus  +5.3 %  násobek 2.06
+starostové a místostarostové                 kand   6345 zvol  5640 (88.9 %)  pod čarou   595 přeskočilo  124 (20.8 %)  bonus  +4.6 %  násobek 3.29
+učitelky a učitelé                           kand  13104 zvol  4013 (30.6 %)  pod čarou  8186 přeskočilo  625 ( 7.6 %)  bonus  +4.3 %  násobek 1.36
+knihovnice a knihovníci                      kand    363 zvol   115 (31.7 %)  pod čarou   240 přeskočilo   22 ( 9.2 %)  bonus  +4.2 %  násobek 1.66
+zemědělci a lesníci                          kand   4110 zvol  1827 (44.5 %)  pod čarou  2071 přeskočilo  225 (10.9 %)  bonus  +3.4 %  násobek 1.47
+policisté, strážníci a vojáci                kand   2274 zvol   897 (39.5 %)  pod čarou  1205 přeskočilo   98 ( 8.1 %)  bonus  +3.3 %  násobek 1.13
+faráři, kazatelé a církevní pracovníci       kand     74 zvol    18 (24.3 %)  pod čarou    53 přeskočilo    6 (11.3 %)  bonus  +3.1 %  násobek 2.41
+zdravotní sestry a záchranáři                kand   4633 zvol  1177 (25.4 %)  pod čarou  3005 přeskočilo  202 ( 6.7 %)  bonus  +2.2 %  násobek 1.25
+manažeři a ředitelé firem                    kand  21642 zvol  7921 (36.6 %)  pod čarou 11684 přeskočilo  708 ( 6.1 %)  bonus  +1.9 %  násobek 0.97
+inženýři, technici a architekti              kand  14400 zvol  5186 (36.0 %)  pod čarou  7818 přeskočilo  528 ( 6.8 %)  bonus  +1.9 %  násobek 1.07
+IT specialisté a programátoři                kand   4920 zvol  1501 (30.5 %)  pod čarou  2846 přeskočilo  120 ( 4.2 %)  bonus  +1.2 %  násobek 0.72
+ekonomové a účetní                           kand   7484 zvol  2599 (34.7 %)  pod čarou  4061 přeskočilo  249 ( 6.1 %)  bonus  +1.2 %  násobek 1.01
+úředníci a administrativa                    kand  10017 zvol  3431 (34.2 %)  pod čarou  5509 přeskočilo  289 ( 5.2 %)  bonus  -0.2 %  násobek 0.84
+podnikatelé a OSVČ                           kand  22322 zvol  7138 (32.0 %)  pod čarou 12839 přeskočilo  770 ( 6.0 %)  bonus  -0.3 %  násobek 0.98
+sociální pracovníci a pečovatelky            kand   2150 zvol   507 (23.6 %)  pod čarou  1309 přeskočilo   53 ( 4.0 %)  bonus  -0.5 %  násobek 0.78
+ostatní a nezařazení                         kand  20880 zvol  5474 (26.2 %)  pod čarou 12364 přeskočilo  539 ( 4.4 %)  bonus  -0.5 %  násobek 0.82
+řemeslníci a opraváři                        kand   9784 zvol  2951 (30.2 %)  pod čarou  5555 přeskočilo  252 ( 4.5 %)  bonus  -2.9 %  násobek 0.75
+prodavačky, kuchařky, kadeřnice a pošťačky   kand   4691 zvol   817 (17.4 %)  pod čarou  2874 přeskočilo  104 ( 3.6 %)  bonus  -5.8 %  násobek 0.72
+dělníci, řidiči a skladníci                  kand  13384 zvol  3482 (26.0 %)  pod čarou  7763 přeskočilo  275 ( 3.5 %)  bonus  -5.8 %  násobek 0.60
+důchodci a důchodkyně                        kand  12324 zvol  2343 (19.0 %)  pod čarou  7366 přeskočilo  215 ( 2.9 %)  bonus  -7.1 %  násobek 0.66
+studenti a studentky                         kand   3968 zvol   306 ( 7.7 %)  pod čarou  2987 přeskočilo   32 ( 1.1 %)  bonus  -7.1 %  násobek 0.27
+rodiče na mateřské a v domácnosti            kand   1317 zvol   289 (21.9 %)  pod čarou   799 přeskočilo   17 ( 2.1 %)  bonus -11.8 %  násobek 0.35
+
+DOSAVADNÍ ZASTUPITELÉ: podíl mezi kandidáty 25.3 %  bonus obhajujících 7.4  nových -2.2
+  lékaři a lékařky                     bonus +13.2 → bez obhajujících +10.8   násobek 3.34 → 2.74   obhajuje 27.8 %
+  veterináři a veterinářky             bonus +15.9 → bez obhajujících +14.7   násobek 3.28 → 2.60   obhajuje 32.8 %
+  ředitelé škol a jejich zástupci      bonus +11.2 → bez obhajujících  +8.6   násobek 2.39 → 1.96   obhajuje 40.9 %
+  hasiči                               bonus  +9.0 → bez obhajujících  +6.7   násobek 1.68 → 1.44   obhajuje 33.8 %
+  lékárníci a lékárnice                bonus  +8.6 → bez obhajujících  +4.9   násobek 2.20 → 1.60   obhajuje 21.9 %
+  zubaři a zubařky                     bonus  +5.3 → bez obhajujících  +3.4   násobek 2.06 → 2.03   obhajuje 18.8 %
+  knihovnice a knihovníci              bonus  +4.2 → bez obhajujících  +1.4   násobek 1.66 → 0.82   obhajuje 22.9 %
+  učitelky a učitelé                   bonus  +4.3 → bez obhajujících  +2.5   násobek 1.36 → 1.07   obhajuje 21.5 %
+  řemeslníci a opraváři                bonus  -2.9 → bez obhajujících  -5.6   násobek 0.75 → 0.58   obhajuje 24.0 %
+  prodavačky, kuchařky, kadeřnice a po bonus  -5.8 → bez obhajujících  -7.3   násobek 0.72 → 0.57   obhajuje 13.2 %
+  důchodci a důchodkyně                bonus  -7.1 → bez obhajujících  -9.2   násobek 0.66 → 0.43   obhajuje 22.5 %
+TITUL s titulem: bonus +4.4 %
+TITUL bez titulu: bonus -2.4 %
+  MUDr.  kandidátů   2387 bonus +12.4 %
+  Ing.   kandidátů  28842 bonus +4.1 %
+  Mgr.   kandidátů  18688 bonus +5.5 %
+  JUDr.  kandidátů    748 bonus +6.5 %
+  Bc.    kandidátů  11319 bonus +2.2 %
+POZICE (medián pořadí; podíl kandidátů na 1.–3. místě; podíl pod čarou)
+  lékaři a lékařky                     medián    8. místo   na 1.–3. místě 18.5 %   pod čarou 66.2 %
+  veterináři a veterinářky             medián    7. místo   na 1.–3. místě 25.4 %   pod čarou 64.3 %
+  ředitelé škol a jejich zástupci      medián    6. místo   na 1.–3. místě 32.8 %   pod čarou 49.3 %
+  knihovnice a knihovníci              medián    8. místo   na 1.–3. místě 20.4 %   pod čarou 66.1 %
+  učitelky a učitelé                   medián    7. místo   na 1.–3. místě 22.3 %   pod čarou 62.5 %
+  prodavačky, kuchařky, kadeřnice a po medián    8. místo   na 1.–3. místě 15.1 %   pod čarou 61.3 %
+  důchodci a důchodkyně                medián    9. místo   na 1.–3. místě 15.6 %   pod čarou 59.8 %
+  studenti a studentky                 medián   10. místo   na 1.–3. místě  9.8 %   pod čarou 75.3 %
+  všichni                              medián    7. místo   na 1.–3. místě 27.0 %   pod čarou 56.1 %
+KNIHOVNY ředitelky a vedoucí knihoven: kand 75 zvol 36 bonus +6.5 % násobek 3.11
+KNIHOVNY ostatní knihovnice a knihovníci: kand 288 zvol 79 bonus +3.6 % násobek 1.31
+
+BONUS PODLE VELIKOSTI OBCE
+lékaři a lékařky                 +13 ( 294)    +15 ( 518)    +16 ( 665)    +10 ( 513)     +4 (  84)
+zubaři a zubařky                  -2 (  97)     +7 ( 144)     +8 ( 160)     +5 (  90)     +1 (  13)
+veterináři a veterinářky         +12 (  83)    +19 ( 102)    +18 (  89)    +13 (  33)     +2 (   4)
+faráři, kazatelé a církevní pr    +7 (  10)     +1 (  17)     +5 (  30)     +1 (  17)     +0 (   0)
+ředitelé škol a jejich zástupc    +6 ( 454)    +15 ( 729)    +13 ( 719)     +8 ( 324)     +3 (  50)
+učitelky a učitelé                +2 (3527)     +6 (3814)     +5 (3513)     +4 (1870)     +3 ( 380)
+knihovnice a knihovníci          -11 (  67)     +9 ( 142)     +7 (  97)     +7 (  44)     +2 (  13)
+hasiči                           +10 ( 640)     +9 ( 643)    +10 ( 385)     +3 ( 116)     +5 (  14)
+řemeslníci a opraváři             -4 (5168)     -3 (2512)     -1 (1331)     +1 ( 652)     +2 ( 121)
+prodavačky, kuchařky, kadeřnic   -10 (1725)     -6 (1213)     -3 ( 964)     +0 ( 642)     +1 ( 147)
+zemědělci a lesníci               +2 (2346)     +5 (1149)     +5 ( 423)     +2 ( 164)     +2 (  28)
+podnikatelé a OSVČ                -2 (9359)     +0 (6510)     +1 (4081)     +1 (1958)     +1 ( 414)
+důchodci a důchodkyně            -12 (4606)     -7 (3164)     -4 (2603)     -0 (1589)     +0 ( 362)
+studenti a studentky             -16 ( 980)    -10 (1021)     -3 (1075)     +1 ( 715)     +2 ( 177)
+starostové a místostarostové      +6 (2683)     +3 (1977)     +4 ( 937)     +6 ( 473)     +4 ( 275)
+celkem podle velikosti: [('do 1 000', 9.5), ('1 000–4 000', 5.9), ('4 000–20 000', 3.7), ('20 000–100 000', 1.9), ('nad 100 000', 0.8)]
+
+KNIHOVNY 2026: kandidátů 363, zvoleno 115, přeskočilo 22
+  z toho ředitelky/vedoucí: 36
+   Horní Jelení                 knihovnice                               z 13. místa, strana 3 mand., pořadí mandátu 2, 54 let
+   Ostravice                    knihovnice                               z 13. místa, strana 3 mand., pořadí mandátu 2, 52 let
+   Jirkov                       ředitel knihovny, zastupitel města Jirko z 10. místa, strana 3 mand., pořadí mandátu 2, 57 let
+   Rovensko pod Troskami        učitelka, knihovnice                     z 10. místa, strana 4 mand., pořadí mandátu 1, 55 let
+   Mokrá-Horákov                vedoucí knihovny                         z  7. místa, strana 2 mand., pořadí mandátu 1, 55 let
+   Chrustenice                  knihovnice                               z  6. místa, strana 3 mand., pořadí mandátu 1, 43 let
+   Návsí                        knihovnice                               z  5. místa, strana 2 mand., pořadí mandátu 2, 60 let
+   Nový Bor                     vedoucí Knihovny Vladislava Jindry Nový  z  8. místa, strana 5 mand., pořadí mandátu 4, 46 let
+   Rtyně v Podkrkonoší          knihovnice                               z  4. místa, strana 1 mand., pořadí mandátu 1, 62 let
+   Otnice                       knihovnice                               z  7. místa, strana 5 mand., pořadí mandátu 2, 57 let
+   Brandýsek                    knihovnice                               z  2. místa, strana 1 mand., pořadí mandátu 1, 54 let
+   Hradištko                    knihovnice                               z  4. místa, strana 3 mand., pořadí mandátu 1, 43 let
+
+NEJVĚTŠÍ SKOKY (o kolik míst pod čarou) – lékaři
+   Sedlčany                     lékař                                    z 21. místa, strana 3 mand.
+   Rumburk                      lékař kardiolog                          z 18. místa, strana 2 mand.
+   Odry                         lékař, Nemocnice Odry                    z 17. místa, strana 2 mand.
+   Studénka                     lékař                                    z 19. místa, strana 4 mand.
+   Votice                       lékařka                                  z 16. místa, strana 3 mand.
+   Kadaň                        lékař - chirurg                          z 16. místa, strana 3 mand.
+   Dolní Benešov                lékař                                    z 15. místa, strana 3 mand.
+   Rakovník                     lékařka                                  z 13. místa, strana 1 mand.
+
+TREND
+{'rok': 2018, 'klic': 'knihovnik', 'profese': 'knihovnice a knihovníci', 'kandidatu': 337, 'zvoleno': 115, 'bonus': 7.4, 'sance_preskocit': 11.2}
+{'rok': 2018, 'klic': 'lekar', 'profese': 'lékaři a lékařky', 'kandidatu': 2426, 'zvoleno': 900, 'bonus': 19.0, 'sance_preskocit': 20.6}
+{'rok': 2018, 'klic': 'zubar', 'profese': 'zubaři a zubařky', 'kandidatu': 488, 'zvoleno': 123, 'bonus': 8.0, 'sance_preskocit': 8.5}
+{'rok': 2018, 'klic': 'ucitel', 'profese': 'učitelky a učitelé', 'kandidatu': 12498, 'zvoleno': 3742, 'bonus': 6.9, 'sance_preskocit': 9.6}
+{'rok': 2018, 'klic': 'farar', 'profese': 'faráři, kazatelé a církevní pracovníci', 'kandidatu': 93, 'zvoleno': 15, 'bonus': 7.9, 'sance_preskocit': 6.8}
+{'rok': 2018, 'klic': 'veterinar', 'profese': 'veterináři a veterinářky', 'kandidatu': 361, 'zvoleno': 156, 'bonus': 15.7, 'sance_preskocit': 18.8}
+{'rok': 2018, 'klic': 'hasic', 'profese': 'hasiči', 'kandidatu': 1463, 'zvoleno': 656, 'bonus': 13.0, 'sance_preskocit': 13.0}
+{'rok': 2018, 'klic': 'remeslnik', 'profese': 'řemeslníci a opraváři', 'kandidatu': 12657, 'zvoleno': 3490, 'bonus': -1.9, 'sance_preskocit': 4.7}
+{'rok': 2018, 'klic': 'sluzby', 'profese': 'prodavačky, kuchařky, kadeřnice a pošťačky', 'kandidatu': 6410, 'zvoleno': 1055, 'bonus': -5.5, 'sance_preskocit': 3.5}
+{'rok': 2018, 'klic': 'vsichni', 'profese': 'všichni kandidáti', 'kandidatu': 220791, 'zvoleno': 62964, 'bonus': 0.0, 'sance_preskocit': 5.9}
+{'rok': 2022, 'klic': 'knihovnik', 'profese': 'knihovnice a knihovníci', 'kandidatu': 325, 'zvoleno': 114, 'bonus': 9.2, 'sance_preskocit': 9.8}
+{'rok': 2022, 'klic': 'lekar', 'profese': 'lékaři a lékařky', 'kandidatu': 2089, 'zvoleno': 763, 'bonus': 14.9, 'sance_preskocit': 18.2}
+{'rok': 2022, 'klic': 'zubar', 'profese': 'zubaři a zubařky', 'kandidatu': 428, 'zvoleno': 124, 'bonus': 7.7, 'sance_preskocit': 7.0}
+{'rok': 2022, 'klic': 'ucitel', 'profese': 'učitelky a učitelé', 'kandidatu': 12578, 'zvoleno': 3884, 'bonus': 5.0, 'sance_preskocit': 8.4}
+{'rok': 2022, 'klic': 'farar', 'profese': 'faráři, kazatelé a církevní pracovníci', 'kandidatu': 71, 'zvoleno': 14, 'bonus': 2.8, 'sance_preskocit': 7.3}
+{'rok': 2022, 'klic': 'veterinar', 'profese': 'veterináři a veterinářky', 'kandidatu': 326, 'zvoleno': 148, 'bonus': 14.7, 'sance_preskocit': 22.1}
+{'rok': 2022, 'klic': 'hasic', 'profese': 'hasiči', 'kandidatu': 1757, 'zvoleno': 788, 'bonus': 8.2, 'sance_preskocit': 12.2}
+{'rok': 2022, 'klic': 'remeslnik', 'profese': 'řemeslníci a opraváři', 'kandidatu': 10633, 'zvoleno': 3211, 'bonus': -2.5, 'sance_preskocit': 5.1}
+{'rok': 2022, 'klic': 'sluzby', 'profese': 'prodavačky, kuchařky, kadeřnice a pošťačky', 'kandidatu': 5233, 'zvoleno': 945, 'bonus': -4.9, 'sance_preskocit': 3.8}
+{'rok': 2022, 'klic': 'vsichni', 'profese': 'všichni kandidáti', 'kandidatu': 197285, 'zvoleno': 62629, 'bonus': 0.0, 'sance_preskocit': 5.9}
+{'rok': 2026, 'klic': 'knihovnik', 'profese': 'knihovnice a knihovníci', 'kandidatu': 363, 'zvoleno': 115, 'bonus': 4.2, 'sance_preskocit': 9.2}
+{'rok': 2026, 'klic': 'lekar', 'profese': 'lékaři a lékařky', 'kandidatu': 2074, 'zvoleno': 723, 'bonus': 13.2, 'sance_preskocit': 15.7}
+{'rok': 2026, 'klic': 'zubar', 'profese': 'zubaři a zubařky', 'kandidatu': 504, 'zvoleno': 158, 'bonus': 5.3, 'sance_preskocit': 10.4}
+{'rok': 2026, 'klic': 'ucitel', 'profese': 'učitelky a učitelé', 'kandidatu': 13104, 'zvoleno': 4013, 'bonus': 4.3, 'sance_preskocit': 7.6}
+{'rok': 2026, 'klic': 'farar', 'profese': 'faráři, kazatelé a církevní pracovníci', 'kandidatu': 74, 'zvoleno': 18, 'bonus': 3.1, 'sance_preskocit': 11.3}
+{'rok': 2026, 'klic': 'veterinar', 'profese': 'veterináři a veterinářky', 'kandidatu': 311, 'zvoleno': 125, 'bonus': 15.9, 'sance_preskocit': 18.0}
+{'rok': 2026, 'klic': 'hasic', 'profese': 'hasiči', 'kandidatu': 1798, 'zvoleno': 840, 'bonus': 9.0, 'sance_preskocit': 11.3}
+{'rok': 2026, 'klic': 'remeslnik', 'profese': 'řemeslníci a opraváři', 'kandidatu': 9784, 'zvoleno': 2951, 'bonus': -2.9, 'sance_preskocit': 4.5}
+{'rok': 2026, 'klic': 'sluzby', 'profese': 'prodavačky, kuchařky, kadeřnice a pošťačky', 'kandidatu': 4691, 'zvoleno': 817, 'bonus': -5.8, 'sance_preskocit': 3.6}
+{'rok': 2026, 'klic': 'vsichni', 'profese': 'všichni kandidáti', 'kandidatu': 189908, 'zvoleno': 61677, 'bonus': 0.0, 'sance_preskocit': 5.8}
+sloučených dvojic muž/žena: 1833 ukázka: [('prodavačka', 'prodavač'), ('expedientka', 'expedient'), ('kadeřnice', 'kadeřník'), ('manažerka prodeje', 'manažer prodeje'), ('ošetřovatelka koní', 'ošetřovatel koní'), ('důchodkyně', 'důchodce'), ('fyzioterapeutka', 'fyzioterapeut'), ('sociální pracovnice', 'sociální pracovník'), ('podnikatelka', 'podnikatel'), ('personalistka', 'personalista'), ('studentka', 'student'), ('porodní asistentka', 'porodní asistent'), ('řidička', 'řidič'), ('inspektorka kvality', 'inspektor kvality'), ('učitelka v mš', 'učitel v mš'), ('veterinární lékařka', 'veterinární lékař'), ('rehabilitační pracovnice', 'rehabilitační pracovník'), ('sanitářka', 'sanitář'), ('odborná poradkyně', 'odborný poradce'), ('skladnice', 'skladník'), ('asistentka pedagoga', 'asistent pedagoga'), ('zapisovatelka', 'zapisovatel'), ('kuchařka', 'kuchař'), ('administrativní pracovnice', 'administrativní pracovník'), ('učitelka na základní škole', 'učitel na základní škole')]
+
+DOHLEDÁVAČ: znění povolání s ≥ 15 kandidáty: 814
+   {'p': 'knihovník/ice', 'k': 192, 'z': 51, 'b': 4.1}
+   {'p': 'lékař/ka', 'k': 1137, 'z': 398, 'b': 13.1}
+   {'p': 'učitel/ka', 'k': 3184, 'z': 1149, 'b': 5.6}
+   {'p': 'novinář/ka', 'k': 48, 'z': 14, 'b': 6.1}
+   {'p': 'starosta/ka', 'k': 1479, 'z': 1448, 'b': 2.2}
+   {'p': 'důchodce/kyně', 'k': 10245, 'z': 1956, 'b': -7.4}
+   {'p': 'technik/čka', 'k': 2393, 'z': 908, 'b': 0.3}
+   {'p': 'administrativní pracovník/ice', 'k': 1832, 'z': 580, 'b': -2.4}
+   {'p': 'projektový/á manažer/ka', 'k': 1101, 'z': 424, 'b': 3.0}
+dohledávač zapsán, kB: 83
+skoky pro cover: Counter({'lekar': 216, 'reditel_skoly': 174, 'veterinar': 36, 'knihovnik': 22})

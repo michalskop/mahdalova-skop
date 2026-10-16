@@ -769,6 +769,21 @@ export default function DpbpLandingPage() {
           height: clamp(75px, 15vw, 160px);
           display: block;
         }
+        .dt-partners {
+          display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px;
+          margin: 0 0 24px; padding: 14px 20px; border-radius: 12px;
+          background: #171c42; border: 1px solid rgba(255,255,255,0.12);
+          border-left: 4px solid #de1743; text-decoration: none;
+          font-family: 'Roboto', system-ui, sans-serif;
+          transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .dt-partners:hover { background: #1d2350; border-color: #de1743; }
+        .dt-partners-label {
+          font-family: var(--font-roboto-slab), Georgia, serif; font-weight: 700;
+          font-size: clamp(16px, 1.6vw, 19px); color: #f8f6f0;
+        }
+        .dt-partners-names { font-size: 14px; color: rgba(248,246,240,0.75); flex: 1 1 auto; }
+        .dt-partners-arrow { color: #ff4d70; font-size: 20px; font-weight: 700; }
         .dt-infobox {
           background: #8b0e2b;
           border-radius: 8px;
@@ -814,6 +829,13 @@ export default function DpbpLandingPage() {
 
         {/* Kapitoly + Infobox – stejný Container pro přesné zarovnání */}
         <Container size="lg" py={44} px="md">
+          {/* Partners strip – keeps the 15-tile grid intact but puts the
+              collaborations page first in view, right under the hero */}
+          <a className="dt-partners" href="/specialy/data-pro-budouci-premierku/spoluprace">
+            <span className="dt-partners-label">S kým spolupracujeme</span>
+            <span className="dt-partners-names">Český rozhlas · PastVina · Volební kalkulačka · Moravec.cz · Univerzita Karlova</span>
+            <span className="dt-partners-arrow" aria-hidden>→</span>
+          </a>
           <SimpleGrid cols={{ base: 2, sm: 3 }} spacing="md">
             {CHAPTERS.map(ch => (
               <ChapterTile key={ch.n} chapter={ch} />
@@ -829,6 +851,7 @@ export default function DpbpLandingPage() {
           Projekt vzniká s grantovou podporou{' '}
           <a href="https://www.nfnz.cz" target="_blank" rel="noopener noreferrer">Nadačního fondu nezávislé žurnalistiky</a>
           {' '}a stojí na originálních datových analýzách a vlastním zpracování velkého množství zdrojů.
+          {' '}<a href="/specialy/data-pro-budouci-premierku/spoluprace">S kým jsme spolupracovali a kam se data dostala</a>.
           </div>
         </Container>
 

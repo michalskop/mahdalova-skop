@@ -13,6 +13,8 @@ tags: ["volby", "volby 2026", "komunální volby 2026", "SPD", "Motoristé", "AN
 promoted: 1
 ---
 
+SPD dostala v komunálních volbách výprask. Před volbami měla své lidi ve 217 zastupitelstvech obcí a městských částí, teď ve 121 z nich nemá nikoho, tedy ve více než polovině. Podobný vzkaz od voličů a voliček dostali Motoristé: z 1 116 kandidátů se do zastupitelstev dostal zhruba každý padesátý šestý, celkem dvacet. Mapy ukazují, kde mají strany zastupitele teď (plná tečka) a odkud vypadly (prázdný kroužek).
+
 ```fotogalerie 5 mapy
 - mapa-ano.png | ANO: zastupitele má ve 317 obcích, z 28 vypadlo. Před volbami 1 748 zastupitelů, po nich 1 650. | Data: volby.gov.cz, výpočet DataTimes.cz
 - mapa-spd.png | SPD: zastupitele má ve 102 obcích, z 93 vypadla. Před volbami 490 zastupitelů, po nich 166. | Data: volby.gov.cz, výpočet DataTimes.cz
@@ -55,9 +57,11 @@ Do zastupitelstev obcí se navíc volí jinak než do Sněmovny. Volič má toli
 
 ## Motoristé kandidovali v Praze, Brně i Plzni a zastupitele mají hlavně v Ostravě
 
-Motoristé sobě v roce 2022 postavili jedinou kandidátku, do zastupitelstva hlavního města Prahy, a s 2,29 % hlasů neuspěli. Letos navrhli 1 116 kandidátů do 58 zastupitelstev a byli na 59 kandidátkách, samostatně i společně se Svobodnými, SPD, Trikolorou nebo místními sdruženími. Zvoleno bylo 20 z nich, tedy 1,8 %.
+Motoristé sobě v roce 2022 postavili jedinou kandidátku, do zastupitelstva hlavního města Prahy, a s 2,29 % hlasů neuspěli. Letos navrhli 1 116 kandidátů do 58 zastupitelstev a byli na 59 kandidátkách, samostatně, případně společně se Svobodnými, SPD, Trikolorou nebo místními sdruženími. Zvoleno bylo 20 z nich, tedy 1,8 %.
 
-Dvanáct z dvaceti je v Ostravě. Do zastupitelstva města prošlo pět kandidátů samostatné kandidátky Motoristů se 7,71 % hlasů, dalších sedm získali v obvodech Moravská Ostrava a Přívoz, Ostrava-Jih, Vítkovice a Mariánské Hory a Hulváky. Mimo Ostravu mají Motoristé po dvou zastupitelích ve dvou malých obcích, v Loučné nad Desnou na Šumpersku a ve Věšíně na Příbramsku, a po jednom v Ústí nad Labem, v ústeckém obvodu Severní Terasa, v Chomutově a v Ostrově na Karlovarsku.
+Dvanáct z dvaceti zvolených je v Ostravě: do zastupitelstva města Ostravy se dostalo pět kandidátů samostatné kandidátky Motoristů (7,71 % hlasů) a dalších sedm usedne v obvodech Moravská Ostrava a Přívoz, Ostrava-Jih, Vítkovice a Mariánské Hory a Hulváky.
+
+Mimo Ostravu mají Motoristé po dvou zastupitelích ve dvou malých obcích, v Loučné nad Desnou na Šumpersku a ve Věšíně na Příbramsku, a po jednom v Ústí nad Labem, v ústeckém obvodu Severní Terasa, v Chomutově a v Ostrově na Karlovarsku. Dalších šest členů Motoristů se do zastupitelstev dostalo na kandidátkách místních sdružení nebo jiné strany, které je navrhly, například v Černoučku na Litoměřicku, ve Smečně na Kladensku nebo v Čeladné na Frýdecko-Místecku. Do dvaceti zastupitelů Motoristů je nepočítáme: stejně jako u ostatních stran počítáme jen ty, které strana sama navrhla.
 
 V Praze se Motoristé ucházeli o zastupitelstvo města s plnou kandidátkou 65 lidí a dostali 2,90 % hlasů. Proti roku 2022 si mírně polepšili, do zastupitelstva je to ale opět nedostalo. Ve [sněmovních volbách 2025](https://www.volby.cz/app/ps2025/cs/results) volilo Motoristy v Praze 5,15 % voličů. Kandidovali také v osmi pražských městských částech (Praha 1, 3, 4, 5, 6, 11, 12 a 18) se 171 lidmi a nezískali nikde ani jeden mandát, nejvíc měli v Praze 3 (3,78 %). V Brně dostali 2,68 %, v Plzni se Svobodnými 2,00 %, v Kladně 1,92 % a ve Frýdku-Místku 1,56 %.
 
@@ -69,7 +73,7 @@ U ANO je obrázek pestřejší. Celkem má o 6 % zastupitelů méně, ale zastup
 
 Ztráty jsou soustředěné ve velkých městech. V obcích nad 10 000 obyvatel klesl počet zastupitelů ANO z 871 na 757, v Praze (město i městské části) ze 140 na 113. V Ústí nad Labem má ANO 6 zastupitelů místo 13, v Českých Budějovicích a v Chomutově 8 místo 13. Naopak v obcích do 10 000 obyvatel ANO přibralo, z 502 na 573. Nově má zastupitele například v Meziboří (8), Kraslicích, Jiříkově, Bělotíně, Kostelci na Hané a Dolním Němčí (po pěti).
 
-| Město | SPD před → po | ANO před → po | Motoristé (kandidáti → zvolení) |
+| Město | SPD<br />před → po | ANO<br />před → po | Motoristé<br />kandidáti → zvolení |
 |---|---|---|---|
 | Praha | 2 → 0 | 14 → 11 | 65 → 0 |
 | Brno | 5 → 0 | 13 → 11 | 55 → 0 |

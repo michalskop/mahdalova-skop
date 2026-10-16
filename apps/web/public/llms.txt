@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Lékařům, veterinářům a ředitelkám škol voliči věří. Do zastupitelstva je posunou i z konce kandidátky](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-15-profese-zastupitelu)
 - [SPD přišla v obcích o dvě třetiny zastupitelů, Motoristé z 1 116 kandidátů prosadili dvacet](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-14-spd-ano-motoriste-v-obcich)
-- [Volby 2026 – výsledky predikce](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -41,9 +41,9 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [„Miliony billboardového aktivisty“ aneb Novinářské řemeslo nestojí jen na útržcích od policie](https://www.mahdalova-skop.cz/clanek/kontext-2026-09-28-novinarske-remeslo-nestoji-jen-na-utrzcich-od-policie)
 
 ### Vzdělávání a společnost
+- [Lékařům, veterinářům a ředitelkám škol voliči věří. Do zastupitelstva je posunou i z konce kandidátky](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-15-profese-zastupitelu)
 - [Česko pouští matky předškoláků do zaměstnání nejméně v EU. Vláda na to odpovídá vyšším rodičákem](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu)
 - [Dolly Parton: Vyrostla s otcem, který neuměl číst. Dětem pak poslala přes 300 milionů knih](https://www.mahdalova-skop.cz/clanek/kontext-2026-08-27-dolly-parton)
-- [Boj o udržení pozornosti](https://www.mahdalova-skop.cz/clanek/podcast-2025-12-21-boj-o-pozornost)
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)

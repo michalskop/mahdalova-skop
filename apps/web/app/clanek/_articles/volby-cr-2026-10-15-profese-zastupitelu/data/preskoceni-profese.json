@@ -1,0 +1,295 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Lékaři se do zastupitelstva dostávají z nevolitelného místa třikrát častěji než ostatní",
+    "subtitle": "Nevolitelné místo: kandidát stál na kandidátce níž, než kolik mandátů jeho strana získala, a zvolen byl jen díky preferenčním hlasům. Kolikrát častěji se to podařilo než kandidátům ve stejně velkých obcích, kteří stáli stejně hluboko (1× = průměr)."
+  },
+  "width": 600,
+  "height": {
+    "step": 24
+  },
+  "data": {
+    "values": [
+      {
+        "profese": "starostové a místostarostové",
+        "nasobek": 3.29,
+        "popisek": "3,3×",
+        "pod_carou": 595,
+        "preskocilo": 124
+      },
+      {
+        "profese": "lékaři a lékařky",
+        "nasobek": 3.34,
+        "popisek": "3,3×",
+        "pod_carou": 1373,
+        "preskocilo": 216
+      },
+      {
+        "profese": "veterináři a veterinářky",
+        "nasobek": 3.28,
+        "popisek": "3,3×",
+        "pod_carou": 200,
+        "preskocilo": 36
+      },
+      {
+        "profese": "faráři, kazatelé a církevní pracovníci",
+        "nasobek": 2.41,
+        "popisek": "2,4×",
+        "pod_carou": 53,
+        "preskocilo": 6
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "nasobek": 2.39,
+        "popisek": "2,4×",
+        "pod_carou": 1121,
+        "preskocilo": 174
+      },
+      {
+        "profese": "lékárníci a lékárnice",
+        "nasobek": 2.2,
+        "popisek": "2,2×",
+        "pod_carou": 320,
+        "preskocilo": 38
+      },
+      {
+        "profese": "zubaři a zubařky",
+        "nasobek": 2.06,
+        "popisek": "2,1×",
+        "pod_carou": 328,
+        "preskocilo": 34
+      },
+      {
+        "profese": "hasiči",
+        "nasobek": 1.68,
+        "popisek": "1,7×",
+        "pod_carou": 943,
+        "preskocilo": 107
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "nasobek": 1.36,
+        "popisek": "1,4×",
+        "pod_carou": 8186,
+        "preskocilo": 625
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "nasobek": 0.75,
+        "popisek": "0,8×",
+        "pod_carou": 5555,
+        "preskocilo": 252
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "nasobek": 0.72,
+        "popisek": "0,7×",
+        "pod_carou": 2874,
+        "preskocilo": 104
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "nasobek": 0.66,
+        "popisek": "0,7×",
+        "pod_carou": 7366,
+        "preskocilo": 215
+      },
+      {
+        "profese": "studenti a studentky",
+        "nasobek": 0.27,
+        "popisek": "0,3×",
+        "pod_carou": 2987,
+        "preskocilo": 32
+      },
+      {
+        "profese": "rodiče na mateřské a v domácnosti",
+        "nasobek": 0.35,
+        "popisek": "0,3×",
+        "pod_carou": 799,
+        "preskocilo": 17
+      },
+      {
+        "profese": "ředitelky a vedoucí knihoven",
+        "nasobek": 3.11,
+        "popisek": "3,1×",
+        "pod_carou": 45,
+        "preskocilo": 8
+      },
+      {
+        "profese": "ostatní knihovnice a knihovníci",
+        "nasobek": 1.31,
+        "popisek": "1,3×",
+        "pod_carou": 195,
+        "preskocilo": 14
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "profese",
+      "type": "nominal",
+      "sort": {
+        "field": "nasobek",
+        "order": "descending"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 320,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeWidth": 1,
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "datum": 1
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#c8c8bc",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "nasobek",
+          "type": "quantitative"
+        },
+        "x2": {
+          "datum": 1
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "nasobek",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "domain": [
+              0.2,
+              4.5
+            ]
+          },
+          "axis": {
+            "title": "kolikrát častěji než průměr (logaritmická osa)",
+            "values": [
+              0.25,
+              0.5,
+              1,
+              2,
+              3,
+              4
+            ],
+            "labelExpr": "replace(format(datum.value, '.2~f'), '.', ',') + '×'",
+            "gridColor": "#e8e2d6"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.nasobek >= 1",
+            "value": "#0e839e"
+          },
+          "value": "#a03250"
+        },
+        "tooltip": [
+          {
+            "field": "profese",
+            "title": "Profese"
+          },
+          {
+            "field": "popisek",
+            "title": "Kolikrát častěji"
+          },
+          {
+            "field": "pod_carou",
+            "title": "Kandidátů na nevolitelném místě",
+            "format": ","
+          },
+          {
+            "field": "preskocilo",
+            "title": "Z nich zvoleno",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": 10,
+        "align": "left",
+        "color": "#333333"
+      },
+      "transform": [
+        {
+          "filter": "datum.nasobek >= 1"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "nasobek",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": -10,
+        "align": "right",
+        "color": "#333333"
+      },
+      "transform": [
+        {
+          "filter": "datum.nasobek < 1"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "nasobek",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registr kandidátů pro volby do zastupitelstev obcí 2026 (stav 11. 10. 2026); výpočet DataTimes.cz"
+}

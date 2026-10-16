@@ -18,7 +18,10 @@ const GRAFY = [
   // šířka sloupce článku ~ 540 px × 2 = obrázek ~1080 px na šířku
   const page = await browser.newPage({ viewport: { width: 600, height: 1200 }, deviceScaleFactor: 2 });
   await page.goto(URL, { waitUntil: 'networkidle' });
-  await page.waitForTimeout(2500);
+  // grafy se vykreslí až po načtení Vegy – projet stránku a počkat na titulky
+  await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 150)); } });
+  for (const [t] of GRAFY) await page.waitForFunction((x) => [...document.querySelectorAll('.dpbp-chart-title')].some((e) => e.textContent.includes(x)), t, { timeout: 60000 });
+  await page.waitForTimeout(1500);
   for (const [titulek, soubor] of GRAFY) {
     // karta grafu = nejbližší předek titulku s pozadím ChartCard (#f8f6f0)
     const karta = await page.evaluateHandle((t) => {
@@ -27,10 +30,11 @@ const GRAFY = [
       while (el && getComputedStyle(el).backgroundColor !== 'rgb(248, 246, 240)') el = el.parentElement;
       return el;
     }, titulek);
-    await karta.scrollIntoViewIfNeeded();
+    const el = karta.asElement();
+    await el.scrollIntoViewIfNeeded();
     await page.waitForTimeout(800);
     const out = path.join(OUT, `${soubor}.png`);
-    await karta.screenshot({ path: out });
+    await el.screenshot({ path: out });
     console.log(soubor, `${Math.round(fs.statSync(out).size / 1024)} kB`);
   }
   await browser.close();

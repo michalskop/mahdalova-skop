@@ -1,0 +1,76 @@
+klic,profese,velikost,kandidatu,bonus,sance_preskocit
+lekar,lékaři a lékařky,do 1 000,294,12.8,27.4
+lekar,lékaři a lékařky,1 000–4 000,518,15.3,18.3
+lekar,lékaři a lékařky,4 000–20 000,665,15.9,15.7
+lekar,lékaři a lékařky,20 000–100 000,513,9.7,10.1
+lekar,lékaři a lékařky,nad 100 000,84,3.8,2.1
+zubar,zubaři a zubařky,do 1 000,97,-1.8,9.5
+zubar,zubaři a zubařky,1 000–4 000,144,7.4,10.7
+zubar,zubaři a zubařky,4 000–20 000,160,7.6,13.6
+zubar,zubaři a zubařky,20 000–100 000,90,5.2,5.2
+zubar,zubaři a zubařky,nad 100 000,13,1.4,0.0
+veterinar,veterináři a veterinářky,do 1 000,83,11.9,14.0
+veterinar,veterináři a veterinářky,1 000–4 000,102,18.7,23.9
+veterinar,veterináři a veterinářky,4 000–20 000,89,18.1,15.4
+veterinar,veterináři a veterinářky,20 000–100 000,33,12.5,17.4
+veterinar,veterináři a veterinářky,nad 100 000,4,2.0,0.0
+farar,"faráři, kazatelé a církevní pracovníci",do 1 000,10,7.3,40.0
+farar,"faráři, kazatelé a církevní pracovníci",1 000–4 000,17,0.6,18.2
+farar,"faráři, kazatelé a církevní pracovníci",4 000–20 000,30,4.7,9.1
+farar,"faráři, kazatelé a církevní pracovníci",20 000–100 000,17,0.8,0.0
+farar,"faráři, kazatelé a církevní pracovníci",nad 100 000,0,0,0
+reditel_skoly,ředitelé škol a jejich zástupci,do 1 000,454,6.4,23.4
+reditel_skoly,ředitelé škol a jejich zástupci,1 000–4 000,729,15.0,19.1
+reditel_skoly,ředitelé škol a jejich zástupci,4 000–20 000,719,12.5,13.8
+reditel_skoly,ředitelé škol a jejich zástupci,20 000–100 000,324,7.6,9.6
+reditel_skoly,ředitelé škol a jejich zástupci,nad 100 000,50,3.1,0.0
+ucitel,učitelky a učitelé,do 1 000,3527,1.8,12.2
+ucitel,učitelky a učitelé,1 000–4 000,3814,5.7,9.3
+ucitel,učitelky a učitelé,4 000–20 000,3513,5.3,5.7
+ucitel,učitelky a učitelé,20 000–100 000,1870,4.0,3.3
+ucitel,učitelky a učitelé,nad 100 000,380,3.4,2.1
+knihovnik,knihovnice a knihovníci,do 1 000,67,-10.8,2.6
+knihovnik,knihovnice a knihovníci,1 000–4 000,142,9.2,15.8
+knihovnik,knihovnice a knihovníci,4 000–20 000,97,7.0,4.6
+knihovnik,knihovnice a knihovníci,20 000–100 000,44,6.6,8.3
+knihovnik,knihovnice a knihovníci,nad 100 000,13,1.5,0.0
+hasic,hasiči,do 1 000,640,9.5,21.1
+hasic,hasiči,1 000–4 000,643,9.3,9.2
+hasic,hasiči,4 000–20 000,385,9.8,9.8
+hasic,hasiči,20 000–100 000,116,3.1,2.4
+hasic,hasiči,nad 100 000,14,4.7,0.0
+remeslnik,řemeslníci a opraváři,do 1 000,5168,-4.4,7.4
+remeslnik,řemeslníci a opraváři,1 000–4 000,2512,-2.7,3.4
+remeslnik,řemeslníci a opraváři,4 000–20 000,1331,-0.6,1.1
+remeslnik,řemeslníci a opraváři,20 000–100 000,652,0.8,0.3
+remeslnik,řemeslníci a opraváři,nad 100 000,121,1.8,2.4
+sluzby,"prodavačky, kuchařky, kadeřnice a pošťačky",do 1 000,1725,-10.3,5.8
+sluzby,"prodavačky, kuchařky, kadeřnice a pošťačky",1 000–4 000,1213,-6.1,4.2
+sluzby,"prodavačky, kuchařky, kadeřnice a pošťačky",4 000–20 000,964,-2.6,1.2
+sluzby,"prodavačky, kuchařky, kadeřnice a pošťačky",20 000–100 000,642,0.1,0.4
+sluzby,"prodavačky, kuchařky, kadeřnice a pošťačky",nad 100 000,147,1.0,0.0
+zemedelec,zemědělci a lesníci,do 1 000,2346,2.0,14.5
+zemedelec,zemědělci a lesníci,1 000–4 000,1149,5.5,10.3
+zemedelec,zemědělci a lesníci,4 000–20 000,423,4.9,4.9
+zemedelec,zemědělci a lesníci,20 000–100 000,164,2.5,1.0
+zemedelec,zemědělci a lesníci,nad 100 000,28,1.5,0.0
+podnikatel,podnikatelé a OSVČ,do 1 000,9359,-1.8,10.7
+podnikatel,podnikatelé a OSVČ,1 000–4 000,6510,0.4,5.5
+podnikatel,podnikatelé a OSVČ,4 000–20 000,4081,1.1,3.0
+podnikatel,podnikatelé a OSVČ,20 000–100 000,1958,0.9,1.0
+podnikatel,podnikatelé a OSVČ,nad 100 000,414,1.1,0.0
+duchodce,důchodci a důchodkyně,do 1 000,4606,-12.0,5.5
+duchodce,důchodci a důchodkyně,1 000–4 000,3164,-7.1,2.6
+duchodce,důchodci a důchodkyně,4 000–20 000,2603,-3.9,1.3
+duchodce,důchodci a důchodkyně,20 000–100 000,1589,-0.3,0.3
+duchodce,důchodci a důchodkyně,nad 100 000,362,0.3,0.0
+student,studenti a studentky,do 1 000,980,-16.4,2.3
+student,studenti a studentky,1 000–4 000,1021,-10.3,1.0
+student,studenti a studentky,4 000–20 000,1075,-2.9,0.6
+student,studenti a studentky,20 000–100 000,715,1.4,0.6
+student,studenti a studentky,nad 100 000,177,2.4,0.0
+starosta,starostové a místostarostové,do 1 000,2683,5.7,35.7
+starosta,starostové a místostarostové,1 000–4 000,1977,3.1,32.3
+starosta,starostové a místostarostové,4 000–20 000,937,4.5,19.1
+starosta,starostové a místostarostové,20 000–100 000,473,5.9,18.9
+starosta,starostové a místostarostové,nad 100 000,275,3.5,1.6
