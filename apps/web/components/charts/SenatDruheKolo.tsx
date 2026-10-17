@@ -296,6 +296,13 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
             <span>{stav}</span>
           </div>
 
+          {/* nápověda se zakulacenou šipkou k vyklikávací legendě */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', gap: 4, fontSize: 13, color: MUTED, fontStyle: 'italic', margin: '2px 0 -2px', paddingLeft: '8%' }}>
+            <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" fill="none" stroke={MUTED} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M24 4 C 14 2, 6 6, 5 16" /><path d="M1.5 12.5 L5 16.5 L8.5 12.8" />
+            </svg>
+            <span style={{ paddingBottom: 8 }}>kliknutím vyberte</span>
+          </div>
           {/* legenda = počty klubů, vyklikávací */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 6 }}>
             {model.tally.filter((t) => t.stay + t.r1 + t.r2 > 0).map(({ k, stay, r1, r2 }) => {
@@ -361,7 +368,12 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
                     style={{ transition: 'fill .6s ease, cx .8s ease, cy .8s ease, r .2s ease', cursor: 'pointer' }} />
                 );
               })}
-              <text x={300} y={258} textAnchor="middle" fontSize={34} fontWeight={700} fill={INK}>{81 - model.pend.length - (vse ? 0 : model.tally.reduce((s, t) => s + t.stay, 0))}</text>            </svg>
+              {/* sčítačka: součet vybraných klubů (celý Senát = i trvající mandáty); spodní hrana lícuje se spodkem kuliček (292 + 14) */}
+              <text x={300} y={306} textAnchor="middle" fontSize={118} fontWeight={600} fill="#bcbcb0" /* background.9 */
+                style={{ fontFamily: 'var(--font-ibm-plex-serif), Georgia, serif', fontVariantNumeric: 'lining-nums tabular-nums' }}>
+                {model.tally.filter((t) => !off.has(t.k.id)).reduce((s, t) => s + (vse ? t.stay : 0) + t.r1 + t.r2, 0)}
+              </text>
+            </svg>
             {hoverSeat && (
               <div style={{ position: 'absolute', left: '50%', top: 0, transform: 'translateX(-50%)', background: '#fff', border: `1px solid ${LINE}`, borderRadius: 6, padding: '5px 9px', fontSize: 13, pointerEvents: 'none', whiteSpace: 'nowrap' }}>
                 {hoverSeat.title}
