@@ -6,7 +6,7 @@
 // <SenatDruheKolo apiUrl="https://volby2026-2.datatimes.cz/api/latest.json" klubyUrl="/clanek/_articles/<slug>/kluby.json" />
 // kluby.json: složení klubů bez 27 končících senátorů + předpokládaný klub každého kandidáta (viz soubor).
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { pollJson } from '@/lib/pollJson';
 import ChartCard from './ChartCard';
 import ChartSignature from './ChartSignature';
@@ -155,7 +155,7 @@ function KopirujVetu() {
 }
 
 // ---------- amfiteátr ----------
-type Seat = { klub: string | null; kind: 'new' | 'r1' | 'stay' | 'pend'; ob?: number; title: string };
+type Seat = { klub: string | null; kind: 'new' | 'r1' | 'stay' | 'pend'; ob?: number; title: string; jmeno?: string; obvod?: string };
 
 function hemicycle(n: number) {
   const rows = 5, r0 = 110, r1 = 280;
@@ -194,7 +194,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
     const feed: { ob: Ob; ev?: Ev; time: string; winner: Cand; aWin: boolean }[] = [];
     for (const d of obs) {
       if (d.status === 'decided_r1' && d.winner) {
-        r1.push({ klub: klubOf(d.ob, d.winner.name), kind: 'r1', ob: d.ob, title: `${d.ob} ${d.name}: ${d.winner.name} (zvolen${isZ(d.ob, d.winner.name) ? 'a' : ''} v 1. kole)` });
+        r1.push({ klub: klubOf(d.ob, d.winner.name), kind: 'r1', ob: d.ob, jmeno: d.winner.name, obvod: d.name, title: `${d.ob} ${d.name}: ${d.winner.name} (zvolen${isZ(d.ob, d.winner.name) ? 'a' : ''} v 1. kole)` });
         continue;
       }
       const e = ev[String(d.ob)];
@@ -202,7 +202,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
       if (dec && d.a && d.b) {
         const aWin = e && !e.revoked ? e.name === d.a.name : (d.p_a ?? 0) >= 0.5;
         const w = aWin ? d.a : d.b;
-        r2.push({ klub: klubOf(d.ob, w.name), kind: 'new', ob: d.ob, title: `${d.ob} ${d.name}: ${w.name}` });
+        r2.push({ klub: klubOf(d.ob, w.name), kind: 'new', ob: d.ob, jmeno: w.name, obvod: d.name, title: `${d.ob} ${d.name}: ${w.name}` });
         feed.push({ ob: d, ev: e, time: e?.first_seen ?? api.generated, winner: w, aWin });
       } else {
         pend.push({ klub: null, kind: 'pend', ob: d.ob, title: `${d.ob} ${d.name}: rozhoduje se` });
@@ -222,6 +222,39 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
   }, [api, kl]);
 
   const pts = useMemo(() => hemicycle(81), []);
+
+  // pod ~620 px šířky se popisky do grafu nevejdou čitelně → seznam pod grafem
+  const boxRef = useRef<HTMLDivElement>(null);
+  const [narrow, setNarrow] = useState(false);
+  useEffect(() => {
+    const el = boxRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setNarrow(el.clientWidth < 620));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [model !== null]);
+
+  // popisky: nově zvolení (1. i 2. kolo), levá/pravá polovina, svisle rozestoupené, aby se nepřekrývaly
+  const labels = useMemo(() => {
+    if (!model) return [];
+    const all = pts.map((p, i) => ({ p, i, s: model.seats[i] }))
+      .filter((x) => x.s && (x.s.kind === 'new' || x.s.kind === 'r1') && x.s.klub && !off.has(x.s.klub));
+    const place = (arr: typeof all, left: boolean) => {
+      const a = [...arr].sort((x, y) => x.p.y - y.p.y);
+      const gap = 24, top = -8, bot = 316;
+      const ys = a.map((x) => x.p.y);
+      for (let k = 0; k < ys.length; k++) ys[k] = Math.max(ys[k], k ? ys[k - 1] + gap : top);
+      if (ys.length && ys[ys.length - 1] > bot) {
+        ys[ys.length - 1] = bot;
+        for (let k = ys.length - 2; k >= 0; k--) ys[k] = Math.min(ys[k], ys[k + 1] - gap);
+      }
+      return a.map((x, k) => ({ ...x, s: x.s!, y: ys[k], left }));
+    };
+    // rovnoměrně na obě strany: levější polovina křesel (podle úhlu) vlevo, zbytek vpravo
+    const byAng = [...all].sort((x, y) => y.p.a - x.p.a);
+    const half = Math.ceil(byAng.length / 2);
+    return [...place(byAng.slice(0, half), true), ...place(byAng.slice(half), false)];
+  }, [model, pts, off]);
 
   if (!api || !kl || !model) return <div style={{ fontFamily: FONT, color: MUTED, padding: '1em 0' }}>Načítám data predikce…</div>;
 
@@ -283,8 +316,17 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
             </span>
           </div>
 
-          <div style={{ position: 'relative' }}>
-            <svg viewBox="0 -18 600 330" style={{ width: '100%', display: 'block' }} role="img" aria-label="Amfiteátr 81 křesel Senátu">
+          <div ref={boxRef} style={{ position: 'relative' }}>
+            <svg viewBox={narrow ? '0 -18 600 330' : '-262 -18 1124 348'} style={{ width: '100%', display: 'block' }} role="img" aria-label="Amfiteátr 81 křesel Senátu">
+              {/* popisky nově zvolených po stranách, vodicí čáry vedou pod křesly */}
+              {!narrow && labels.map((l) => (
+                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke={MUTED} strokeOpacity={0.45} strokeWidth={1.2} />
+              ))}
+              {!narrow && labels.map((l) => (
+                <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700} fill={INK}>
+                  {l.s.jmeno}
+                </text>
+              ))}
               {pts.map((p, i) => {
                 const s = model.seats[i];
                 if (!s) return null;
@@ -305,6 +347,32 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
               </div>
             )}
           </div>
+
+          {/* na úzkém displeji místo popisků v grafu seznam jmen po klubech */}
+          {narrow && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 210px), 1fr))', gap: '10px 18px', margin: '6px 0 12px' }}>
+            {kl.kluby.map((k) => {
+              const list = model.seats.filter((s) => s.klub === k.id && (s.kind === 'new' || s.kind === 'r1')).sort((x, y) => (x.ob ?? 0) - (y.ob ?? 0));
+              if (!list.length) return null;
+              return (
+                <div key={k.id} style={{ borderTop: `4px solid ${k.barva}`, paddingTop: 5, opacity: off.has(k.id) ? 0.35 : 1 }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 3 }}>{k.kratce} <span style={{ color: OK }}>+{list.length}</span></div>
+                  {list.map((s) => (
+                    <div key={s.ob} style={{ fontSize: 13.5, lineHeight: 1.35 }}>
+                      <strong>{s.jmeno}</strong> <span style={{ color: MUTED }}>· {s.obvod}{s.kind === 'r1' ? ' (1. kolo)' : ''}</span>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
+            {model.pend.length > 0 && (
+              <div style={{ borderTop: `4px dashed ${PEND}`, paddingTop: 5 }}>
+                <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 3 }}>rozhoduje se {model.pend.length}</div>
+                {[...model.pend].sort((x, y) => x.ob - y.ob).map((d) => (
+                  <div key={d.ob} style={{ fontSize: 13.5, lineHeight: 1.35, color: MUTED }}>{d.name}</div>
+                ))}
+              </div>
+            )}
+          </div>}
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', justifyContent: 'space-between', marginTop: 4 }}>
             <button type="button" onClick={() => setVse((v) => !v)} aria-pressed={vse}
