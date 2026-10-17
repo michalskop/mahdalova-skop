@@ -1,0 +1,21 @@
+{
+  "id" : "20261009/vysled/obvod/3.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":3},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Cheb",
+  "prehled" : [
+  [1,172,172,100,95790,35206,36.75,14,34884,34073,97.68]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Plevný Miroslav prof. Dr. Ing.","STAN","STAN","BEZPP",13659,40.08,null,null,false,false,166,166,99],
+  [2,"Keblúšek Vladimír","NČ","NČ","BEZPP",3617,10.61,null,null,false,false,1722,1722,99],
+  [3,"Hojda Pavel Ing.","KSČM","KSČM","KSČM",1190,3.49,null,null,false,false,47,47,47],
+  [4,"Tsoukernik Sandra Mgr.","ANO","ANO","BEZPP",9227,27.08,null,null,false,false,768,768,99],
+  [5,"Černá Štěpánka Mgr. MBA","VOK","VOK","VOK",4194,12.3,null,null,false,false,1118,1118,1118],
+  [6,"Reis Ivan","SPD","SPD","SPD",2186,6.41,null,null,false,false,1114,1114,1114]
+],
+  "postupuje" : [1,4],
+  "zvoleny" : null
+}

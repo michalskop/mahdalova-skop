@@ -1,0 +1,20 @@
+{
+  "id" : "20261009/vysled/obvod/39.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":39},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Trutnov",
+  "prehled" : [
+  [1,175,175,100,97161,41295,42.5,31,40651,39662,97.57]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 86,
+  "vysledky" : [
+  [1,"Mráz Radek","SPD","SPD","SPD",2903,7.31,null,null,false,false,1114,1114,1114],
+  [2,"Sobotka Jan Ing.","STAN","STAN","BEZPP",23174,58.42,null,null,false,false,166,166,99],
+  [3,"Chovancová Zuzana MUDr.","ANO","ANO","BEZPP",11350,28.61,null,null,false,false,768,768,99],
+  [4,"Beran Hynek Ing.","PRO","PRO","BEZPP",2235,5.63,null,null,false,false,1265,1265,99]
+],
+  "postupuje" : [],
+  "zvoleny" : 2
+}

@@ -1,6 +1,6 @@
 'use client';
 
-// Senát 2026 – 2. kolo: živý amfiteátr 81 křesel, rafičky z predikce Michala Škopa
+// Senát 2026 – 2. kolo: živý amfiteátr 81 křesel, rafičky z predikce Kateřiny Mahdalové & Michala Škopa
 // (volby2026-2.datatimes.cz) a online přehled „už víme“, nejnovější nahoře.
 // Data si stránka bere sama z API predikce (CORS *), obnova každých 30 s na viditelné kartě.
 // <SenatDruheKolo apiUrl="https://volby2026-2.datatimes.cz/api/latest.json" klubyUrl="/clanek/_articles/<slug>/kluby.json" />
@@ -131,7 +131,7 @@ function ObvodKarta({ d: d0, ev, kand, kluby }: { d: Ob; ev?: Ev; kand?: Record<
         <i style={{ display: 'block', height: '100%', width: `${pct}%`, background: MUTED, borderRadius: 3 }} />
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 8, fontSize: 11, color: MUTED }}>
-        <span>Predikce: Michal Škop · data ČSÚ</span>
+        <span>Predikce: Kateřina Mahdalová & Michal Škop · data ČSÚ</span>
         <ChartSignature size={16} textSize={12} />
       </div>
     </div>
@@ -283,7 +283,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
       <ChartCard
         title="Kdo usedne v Senátu"
         subtitle={`27 křesel, o kterých se letos rozhodlo nebo rozhoduje. Data z ${hhmm(api.generated)}, obnova sama každých 30 s.`}
-        source="ČSÚ, senat.cz; predikce: Michal Škop, DataTimes.cz"
+        source="ČSÚ, senat.cz; predikce: Kateřina Mahdalová & Michal Škop, DataTimes.cz"
       >
         <div style={{ fontFamily: FONT, color: INK }}>
           <div style={{ fontSize: 15, lineHeight: 1.4, marginBottom: 10, display: 'flex', gap: 8, alignItems: 'baseline' }}>
@@ -314,6 +314,11 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
               <span style={{ width: 11, height: 11, borderRadius: 6, border: `2px solid ${PEND}`, boxSizing: 'border-box' }} />
               rozhoduje se <b>{model.pend.length}</b>
             </span>
+            {/* nenápadný přepínač vpravo */}
+            <button type="button" onClick={() => setVse((v) => !v)} aria-pressed={vse}
+              style={{ marginLeft: 'auto', alignSelf: 'center', fontFamily: FONT, fontSize: 12.5, padding: '2px 0', border: 0, background: 'none', color: MUTED, textDecoration: 'underline', textUnderlineOffset: 3, cursor: 'pointer' }}>
+              {vse ? 'jen 27 volených' : 'celý Senát'}
+            </button>
           </div>
 
           <div ref={boxRef} style={{ position: 'relative' }}>
@@ -375,10 +380,6 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
           </div>}
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', justifyContent: 'space-between', marginTop: 4 }}>
-            <button type="button" onClick={() => setVse((v) => !v)} aria-pressed={vse}
-              style={{ fontFamily: FONT, fontSize: 14, padding: '8px 14px', borderRadius: 8, cursor: 'pointer', border: `1px solid ${INK}`, background: vse ? INK : '#fff', color: vse ? '#fff' : INK }}>
-              {vse ? 'Jen 27 volených křesel' : 'Celý Senát (81)'}
-            </button>
             <span style={{ fontSize: 12.5, color: MUTED }}>Kliknutím na klub ho vypnete. Většina = 41 hlasů.</span>
           </div>
           {kl.poznamka && <div style={{ fontSize: 12.5, color: MUTED, marginTop: 8, lineHeight: 1.4 }}>{kl.poznamka}</div>}

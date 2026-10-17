@@ -15,7 +15,15 @@ promoted: 1
 
 Ve 22 z 27 senátních obvodů se dnes rozhoduje ve druhém kole. Pět senátorů zvolili voliči už minulý víkend: Tomáše Fialu (Naše Česko) na Strakonicku, Zbyňka Linharta (STAN) na Děčínsku, Jana Sobotku (STAN) na Trutnovsku, Jana Grulicha (TOP 09) na Rychnovsku a Jana Grolicha (KDU-ČSL) na Vyškovsku.
 
-**Sčítá se.** Volební místnosti se zavřely ve 14:00 a Český statistický úřad zveřejňuje první sečtené okrsky. Graf i přehled pod ním se od té chvíle doplňují samy, stránku není potřeba obnovovat.
+**Sčítání končí.** V 15:20 bylo sečteno 89 % okrsků a predikce už ve všech 22 obvodech druhého kola určila vítěze s jistotou aspoň 99 %. Graf i přehled pod ním se doplňují samy, stránku není potřeba obnovovat.
+
+## STAN vyhrálo nejvíc obvodů, ANO ani jeden
+
+Nejlépe z voleb vychází hnutí STAN. Obhajovalo 11 křesel a jeho kandidáti získali devět mandátů, nejvíc ze všech stran. Hnutí navrhlo 13 kandidátů: Zbyněk Linhart na Děčínsku a Jan Sobotka na Trutnovsku vyhráli už v prvním kole, dalších sedm uspělo v jedenácti soubojích druhého kola. ODS navrhla 14 kandidátů a vyhrála sedm z devíti soubojů, ve kterých stála. KDU-ČSL má tři senátory z pěti nominací, TOP 09 dva ze tří.
+
+Hnutí ANO postavilo 24 kandidátů, nejvíc ze všech stran. Do druhého kola jich postoupilo 13 a podle predikce nevyhrál ani jeden. ANO tak přijde i o karvinské křeslo po Ondřeji Feberovi: tam vyhrál Petr Kazík (Osobnosti pro kraj) nad Lenkou Brzyszkowskou. SPD měla 17 kandidátů a do druhého kola nepostoupil žádný.
+
+Nejtěsnější souboj je na Kladensku. Senátorka Adéla Sucharda Šípová, kterou v koalici navrhli Piráti, tam podle predikce prohrává s Petrem Patákem (ODS) zhruba 49 : 51. Piráti tak ze tří vlastních nominací nezískají žádného senátora. Václav Láska (SEN 21) mandát na Praze 5 obhájil. Ze 27 senátorů, kterým letos mandát končil, kandidovalo znovu 23 a uspělo 16. Ve druhém kole neuspěli tři senátoři: kromě Šípové Helena Pešatová (STAN) na Frýdecko-Místecku, kde vyhrál Petr Korč z místního hnutí Naše Město F-M, a Karel Zitterbart (STAN), který v Brně prohrál souboj dvou senátorů se Zdeňkem Papouškem (ODS).
 
 <SenatDruheKolo
   apiUrl="https://volby2026-2.datatimes.cz/api/latest.json"
@@ -25,7 +33,7 @@ Ve 22 z 27 senátních obvodů se dnes rozhoduje ve druhém kole. Pět senátor�
 
 ## Obvod je rozhodnutý, až když si je model jistý na 99 %
 
-Predikce Michala Škopa vychází z výsledků prvního kola v každém okrsku a z toho, jak se hlasy přelévaly mezi koly ve všech dosavadních druhých kolech senátních voleb (1996–2024, 453 obvodů). Jakmile Český statistický úřad zveřejní první sečtené okrsky, model je porovná se svým odhadem a podle odchylky upraví odhad pro zbytek obvodu.
+Predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop vychází z výsledků prvního kola v každém okrsku a z toho, jak se hlasy přelévaly mezi koly ve všech dosavadních druhých kolech senátních voleb (1996–2024, 453 obvodů). Jakmile Český statistický úřad zveřejní první sečtené okrsky, model je porovná se svým odhadem a podle odchylky upraví odhad pro zbytek obvodu.
 
 Za rozhodnutý obvod označíme až ten, kde má vítěz šanci aspoň 99 % ve dvou po sobě jdoucích dávkách dat a kde je sečtena aspoň pětina okrsků. Při zpětném testu na druhých kolech 2020, 2022 a 2024 takové označení neselhalo ani jednou, šlo ale jen o 72 obvodů. Obvody, kde kandidáty dělí do dvou až tří procentních bodů, berte jako otevřené, dokud se nedosčítá.
 

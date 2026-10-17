@@ -1,0 +1,18 @@
+{
+  "id" : "20261009/vysled/obvod/48.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":48},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Rychnov nad Kněžnou",
+  "prehled" : [
+  [1,242,242,100,105264,48010,45.61,21,47314,45813,96.83]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 87,
+  "vysledky" : [
+  [1,"Sadovský Petr PhDr. MBA","ANO","ANO","ANO",17321,37.8,null,null,false,false,768,768,768],
+  [2,"Grulich Jan Mgr.","KDUODSSTPTOPLES","TOP 09","TOP 09",28492,62.19,null,null,false,false,1857,721,721]
+],
+  "postupuje" : [],
+  "zvoleny" : 2
+}
