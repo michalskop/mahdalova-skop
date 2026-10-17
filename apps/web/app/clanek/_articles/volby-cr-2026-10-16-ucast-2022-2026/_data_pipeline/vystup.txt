@@ -1,0 +1,64 @@
+obcí 2022 6243, 2026 6249, v obou 6239
+účast všech obcí: 2022 46.07 %, 2026 48.0 %
+účast (obce v obou): 46.07 → 47.99 (+1.93 p. b.), vyšší 3777, nižší 2456
+  senát ani jednou    : obcí  1946, voličů26 3,612,760, 44.7 → 46.44 (+1.75), medián obcí +1.65, vyšší 1176 nižší 765
+  senát jen 2022      : obcí  2119, voličů26 2,292,402, 47.89 → 48.81 (+0.92), medián obcí +0.62, vyšší 1133 nižší 985
+  senát jen 2026      : obcí  2174, voličů26 2,375,901, 46.41 → 49.57 (+3.16), medián obcí +3.09, vyšší 1468 nižší 706
+velikost (voliči 2026):
+       0–200        obcí  1772 63.85 → 64.66 (+0.81)  jen22 -1.2  jen26 2.61  ani 1.14
+     200–500        obcí  2043 57.54 → 59.53 (+1.99)  jen22 0.49  jen26 3.37  ani 2.08
+     500–1000       obcí  1228 54.92 → 57.65 (+2.73)  jen22 0.9  jen26 4.64  ani 2.35
+    1000–5000       obcí   986 48.88 → 51.89 (+3.02)  jen22 1.75  jen26 4.14  ani 3.18
+    5000–20000      obcí   170 42.13 → 43.82 (+1.69)  jen22 1.42  jen26 3.38  ani 0.67
+   20000–1000000000 obcí    40 40.27 → 41.25 (+0.98)  jen22 -0.68  jen26 1.02  ani 1.4
+kraje:
+  Karlovarský      40.85 → 40.39 (-0.46)  obcí 133 vyšší 69 nižší 63
+  Ústecký          40.6 → 40.45 (-0.15)  obcí 353 vyšší 187 nižší 166
+  Moravskoslezský  42.08 → 43.07 (+0.99)  obcí 300 vyšší 200 nižší 100
+  Pardubický       48.59 → 50.38 (+1.78)  obcí 450 vyšší 266 nižší 183
+  Plzeňský         46.36 → 48.46 (+2.11)  obcí 498 vyšší 280 nižší 217
+  Liberecký        43.87 → 46.0 (+2.13)  obcí 215 vyšší 134 nižší 81
+  Praha            43.91 → 46.04 (+2.13)  obcí 1 vyšší 1 nižší 0
+  Zlínský          49.94 → 52.07 (+2.14)  obcí 307 vyšší 189 nižší 118
+  Olomoucký        46.09 → 48.28 (+2.19)  obcí 400 vyšší 274 nižší 126
+  Vysočina         52.75 → 55.05 (+2.3)  obcí 702 vyšší 416 nižší 286
+  Jihočeský        48.7 → 51.15 (+2.45)  obcí 622 vyšší 373 nižší 249
+  Jihomoravský     48.33 → 50.82 (+2.48)  obcí 671 vyšší 422 nižší 248
+  Středočeský      47.68 → 50.28 (+2.6)  obcí 1141 vyšší 684 nižší 455
+  Královéhradecký  47.09 → 50.1 (+3.01)  obcí 446 vyšší 282 nižší 164
+města 10 000+: 99, s nižší účastí 44; z toho podle krajů [('Ústecký', 13), ('Moravskoslezský', 7), ('Karlovarský', 4), ('Zlínský', 4), ('Olomoucký', 4), ('Jihomoravský', 3), ('Liberecký', 3), ('Pardubický', 2), ('Středočeský', 2), ('Vysočina', 1), ('Královéhradecký', 1)]
+  … a podle senátu [('ani jednou', 20), ('jen 2022', 13), ('jen 2026', 11)]
+okresy – nejnižší / nejvyšší:
+  Karviná                37.07 → 35.05 (-2.02)  senát22 0.11 senát26 0.43
+  Most                   36.53 → 34.91 (-1.62)  senát22 1.0 senát26 0.0
+  Jihlava                51.99 → 50.59 (-1.4)  senát22 1.0 senát26 0.0
+  Karlovy Vary           43.66 → 42.31 (-1.35)  senát22 0.96 senát26 0.0
+  Cheb                   40.59 → 39.71 (-0.88)  senát22 0.0 senát26 0.81
+  Beroun                 48.46 → 47.92 (-0.53)  senát22 0.87 senát26 0.0
+  Chomutov               36.72 → 36.19 (-0.53)  senát22 0.0 senát26 0.0
+  Kroměříž               51.9 → 51.58 (-0.32)  senát22 1.0 senát26 0.0
+  ...
+  Příbram                48.17 → 52.57 (+4.4)  senát22 0.0 senát26 1.0
+  Vyškov                 50.3 → 54.84 (+4.54)  senát22 0.1 senát26 0.9
+  Žďár nad Sázavou       53.89 → 58.45 (+4.56)  senát22 0.0 senát26 1.0
+  Tachov                 46.09 → 51.1 (+5.01)  senát22 0.0 senát26 1.0
+  Praha-západ            50.94 → 56.33 (+5.39)  senát22 0.53 senát26 0.4
+  Rychnov nad Kněžnou    47.87 → 53.72 (+5.85)  senát22 0.0 senát26 1.0
+města 10 000+ – nejnižší / nejvyšší:
+  Sokolov                Sokolov          34.27 → 29.56 (-4.71)  ani jednou
+  Orlová                 Karviná          31.58 → 27.71 (-3.86)  jen 2026
+  Havířov                Karviná          34.55 → 30.94 (-3.6)  ani jednou
+  Bohumín                Karviná          37.75 → 34.27 (-3.48)  ani jednou
+  Varnsdorf              Děčín            37.84 → 34.54 (-3.3)  jen 2026
+  Kroměříž               Kroměříž         45.76 → 42.65 (-3.11)  jen 2022
+  Bílina                 Teplice          34.77 → 31.68 (-3.1)  ani jednou
+  Louny                  Louny            40.22 → 37.21 (-3.02)  jen 2026
+  Chomutov               Chomutov         31.43 → 28.46 (-2.96)  ani jednou
+  Jihlava                Jihlava          44.19 → 41.23 (-2.95)  jen 2022
+  ...
+  Opava                  Opava            39.83 → 43.93 (+4.1)  ani jednou
+  Havlíčkův Brod         Havlíčkův Brod   42.46 → 46.66 (+4.2)  ani jednou
+  Rožnov pod Radhoštěm   Vsetín           42.51 → 46.75 (+4.24)  ani jednou
+  Pelhřimov              Pelhřimov        45.83 → 50.1 (+4.27)  jen 2026
+  Nymburk                Nymburk          45.3 → 50.49 (+5.19)  jen 2022
+  Žďár nad Sázavou       Žďár nad Sázavou 41.78 → 47.63 (+5.86)  jen 2026
