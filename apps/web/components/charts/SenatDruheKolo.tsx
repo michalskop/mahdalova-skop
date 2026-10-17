@@ -282,7 +282,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
 
   return (
     <div style={{ clear: 'both' }}>
-      {cast !== 'reportaz' && (
+      {(!cast || cast === 'graf') && (
       // amfiteátr přes celou šířku stránky (max. 1120 px), ne jen sloupec textu
       <div style={{ width: 'min(1120px, calc(100vw - 32px))', marginLeft: 'calc(50% - min(560px, 50vw - 16px))' }}>
       <ChartCard
