@@ -1,6 +1,6 @@
 {
-  "stav": "Kluby podle senat.cz k 17. 10. 2026 (54 senátorů s trvajícím mandátem; klub SEN 21 a Piráti po 10. 10. zanikl, Krsek a Rabas jsou nezařazení). Kandidáti podle volby.gov.cz (appdata/senat/20261009). Podklady: _data_pipeline/senat-data.json.",
-  "pravidlo": "Barva vítěze: obhájce (dosavadní senátor) = jeho klub podle senat.cz k 1. 10. 2026 (ověřeno skriptem _data_pipeline/kluby_kontrola.py); nový senátor = klub zatím neznámý, barva podle strany, která ho navrhla (u koalic strana, která ho v koalici navrhla; Půta/SLK = STAN). Strany bez klubu = nezařazení.",
+  "stav": "Kluby podle senat.cz k 17. 10. 2026 (54 senátorů s trvajícím mandátem; klub SEN 21 a Piráti po 10. 10. zanikl, Krsek a Rabas jsou nezařazení). Kandidáti podle volby.gov.cz (appdata/senat/20261009). Podklady: _data_pipeline/senat-data.json. Nezařazení k 17. 10. 2026: Daniela Kovářová, Jan Krsek, Ondřej Rabas (trvající mandát).",
+  "pravidlo": "Barva vítěze: obhájce (dosavadní senátor) = jeho klub podle senat.cz k 1. 10. 2026 (ověřeno skriptem _data_pipeline/kluby_kontrola.py); nový senátor = klub zatím neznámý, barva podle strany, která ho navrhla (u koalic strana, která ho v koalici navrhla; Půta/SLK = STAN). Strany bez klubu = nezařazení. Klub SEN 21 a Piráti zanikl (Kateřina 17. 10. 2026), proto SEN 21 = nezařazení, šedě.",
   "poznamka": "Číslo u klubu = senátoři s trvajícím mandátem a zvolení v 1. kole, zelené plus = zvolení ve 2. kole. Kluby se ustavují až po volbách, u nově zvolených jde o předpokládaný klub.",
   "kluby": [
     {
@@ -114,7 +114,7 @@
     },
     "21": {
       "Václav Láska": {
-        "klub": "sen21",
+        "klub": "nez",
         "navrh": "SEN 21",
         "obhajce": true
       },
@@ -147,7 +147,7 @@
     },
     "30": {
       "Adéla Sucharda Šípová": {
-        "klub": "sen21",
+        "klub": "nez",
         "z": true,
         "navrh": "Zelení, STAN, Piráti, TOP 09, SEN 21",
         "obhajce": true

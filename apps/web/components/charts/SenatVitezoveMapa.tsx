@@ -216,7 +216,7 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
                 {hv && (kolo === 2 || hv.kolo === 1) && (
                   <div style={{ marginTop: 4, fontSize: 13 }}>
                     {obhajce(hover.o, hv.win)
-                      ? <>Obhájil{hv.z ? 'a' : ''} mandát · klub <strong>{hv.klub?.nazev ?? 'nezařazení'}</strong></>
+                      ? <>Obhájil{hv.z ? 'a' : ''} mandát · {!hv.klub || hv.klub.id === 'nez' ? <strong>nezařazen{hv.z ? 'á' : 'ý'}</strong> : <>klub <strong>{hv.klub.nazev}</strong></>}</>
                       : <>Nov{hv.z ? 'á senátorka' : 'ý senátor'} · klub zatím neznámý{hv.klub && hv.klub.id !== 'nez' ? ', barva podle kandidátky' : ''}</>}
                   </div>
                 )}

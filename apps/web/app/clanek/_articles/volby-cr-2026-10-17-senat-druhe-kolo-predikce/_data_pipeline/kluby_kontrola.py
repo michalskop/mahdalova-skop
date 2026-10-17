@@ -7,7 +7,7 @@ H = os.path.dirname(os.path.abspath(__file__))
 sd = json.load(open(os.path.join(H, 'senat-data.json'), encoding='utf-8'))
 kl = json.load(open(os.path.join(H, '..', 'kluby.json'), encoding='utf-8'))
 L = json.load(open(os.path.join(H, 'zdroj', 'latest.json'), encoding='utf-8'))
-MAP = {'ods-top09': 'ods', 'stan': 'stan', 'kdu': 'kdu', 'sen21-pirati': 'sen21', 'ano': 'ano', 'nezarazeni': 'nez'}
+MAP = {'ods-top09': 'ods', 'stan': 'stan', 'kdu': 'kdu', 'sen21-pirati': 'nez', 'ano': 'ano', 'nezarazeni': 'nez'}  # klub SEN 21 a Piráti zanikl → nezařazení
 inc = {k['jmeno']: MAP[k['senator_ted']] for k in sd['kandidati'] if k['senator_ted']}
 chyby = 0
 for o, v in sorted(L['se2'].items(), key=lambda x: int(x[0])):
