@@ -31,7 +31,7 @@ Pět senátorů zvolených už v prvním kole, Tomáš Fiala na Strakonicku, Lin
 
 Nejtěsnější souboj je na Kladensku. Senátorka Adéla Sucharda Šípová, kterou v koalici navrhli Piráti, tam podle predikce prohrává s Petrem Patákem (ODS) zhruba 49 : 51. Piráti tak ze tří vlastních nominací nezískají žádného senátora. Václav Láska (SEN 21) mandát na Praze 5 obhájil. Ze 27 senátorů, kterým letos mandát končil, kandidovalo znovu 23 a uspělo 16. Ve druhém kole neuspěli tři senátoři: kromě Šípové Helena Pešatová (STAN) na Frýdecko-Místecku, kde vyhrál Petr Korč z místního hnutí Naše Město F-M, a Karel Zitterbart (STAN), který v Brně prohrál souboj dvou senátorů se Zdeňkem Papouškem (ODS).
 
-**Sčítání končí.** V 15:20 bylo sečteno 89 % okrsků a predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop už ve všech 22 obvodech druhého kola určila vítěze s jistotou aspoň 99 %. Online reportáž i amfiteátr pod ní se doplňují samy, stránku není potřeba obnovovat.
+**Sčítání končí.** V 15:20 bylo sečteno 89 % okrsků a predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop už ve všech 22 obvodech druhého kola určila vítěze s jistotou aspoň 99 %. Online reportáž i celkový přehled horní komory pod ní se doplňují samy, stránku není potřeba obnovovat.
 
 <SenatDruheKolo
   apiUrl="https://volby2026-2.datatimes.cz/api/latest.json"
