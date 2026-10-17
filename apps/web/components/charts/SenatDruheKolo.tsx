@@ -174,7 +174,8 @@ function hemicycle(n: number) {
   return pts.sort((p, q) => q.a - p.a || p.r - q.r);
 }
 
-export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: string; klubyUrl: string; feedUrl?: string }) {
+// cast="graf" = jen amfiteátr, cast="reportaz" = jen online reportáž a rafičky (v článku lze mezi ně vložit text)
+export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { apiUrl: string; klubyUrl: string; feedUrl?: string; cast?: 'graf' | 'reportaz' }) {
   const [api, setApi] = useState<Api | null>(null);
   const [kl, setKl] = useState<Kluby | null>(null);
   const [vse, setVse] = useState(false); // ukázat i senátory, kterým mandát trvá
@@ -280,6 +281,9 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
 
   return (
     <div style={{ clear: 'both' }}>
+      {cast !== 'reportaz' && (
+      // amfiteátr přes celou šířku stránky (max. 1120 px), ne jen sloupec textu
+      <div style={{ width: 'min(1120px, calc(100vw - 32px))', marginLeft: 'calc(50% - min(560px, 50vw - 16px))' }}>
       <ChartCard
         title="Kdo usedne v Senátu"
         subtitle={`27 křesel, o kterých se letos rozhodlo nebo rozhoduje. Data z ${hhmm(api.generated)}, obnova sama každých 30 s.`}
@@ -325,7 +329,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
             <svg viewBox={narrow ? '0 -18 600 330' : '-262 -18 1124 348'} style={{ width: '100%', display: 'block' }} role="img" aria-label="Amfiteátr 81 křesel Senátu">
               {/* popisky nově zvolených po stranách, vodicí čáry vedou pod křesly */}
               {!narrow && labels.map((l) => (
-                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke={MUTED} strokeOpacity={0.7} strokeWidth={2.4} />
+                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke="#bcbcb0" /* background.9 – nejtmavší béžová */ strokeWidth={0.8} />
               ))}
               {!narrow && labels.map((l) => (
                 <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700} fill={INK}>
@@ -385,7 +389,10 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
           {kl.poznamka && <div style={{ fontSize: 12.5, color: MUTED, marginTop: 8, lineHeight: 1.4 }}>{kl.poznamka}</div>}
         </div>
       </ChartCard>
+      </div>
+      )}
 
+      {cast !== 'graf' && (<>
       {/* online reportáž: embed feedu predikce (feedUrl), jinak vlastní přehled; nejnovější nahoře */}
       {feedUrl ? (
         <iframe src={feedUrl} title="Online reportáž: 2. kolo senátních voleb" width="100%" height={600} loading="lazy"
@@ -437,6 +444,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
           </p>
         </>
       )}
+      </>)}
     </div>
   );
 }
