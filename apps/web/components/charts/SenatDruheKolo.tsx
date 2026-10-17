@@ -329,23 +329,30 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
           <div ref={boxRef} style={{ position: 'relative' }}>
             <svg viewBox={narrow ? '0 -18 600 330' : '-262 -18 1124 348'} style={{ width: '100%', display: 'block' }} role="img" aria-label="Amfiteátr 81 křesel Senátu">
               {/* popisky nově zvolených po stranách, vodicí čáry vedou pod křesly */}
-              {!narrow && labels.map((l) => (
-                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke="#bcbcb0" /* background.9 – nejtmavší béžová */ strokeWidth={0.8} />
-              ))}
-              {!narrow && labels.map((l) => (
-                <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700} fill={INK}>
-                  {l.s.jmeno}
-                </text>
-              ))}
+              {/* popisky bez vodicích čar: puntík v barvě klubu na nezarovnané straně (vlevo před jménem, vpravo za příjmením);
+                  najetí na jméno zvětší jeho křeslo, odjetí ho vrátí */}
+              {!narrow && labels.map((l) => {
+                const barva = kl.kluby.find((k) => k.id === l.s.klub)?.barva ?? MUTED;
+                const on = hover === l.i;
+                return (
+                  <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700}
+                    fill={INK} opacity={hover !== null && !on ? 0.55 : 1} style={{ cursor: 'pointer', transition: 'opacity .2s' }}
+                    onMouseEnter={() => setHover(l.i)} onMouseLeave={() => setHover(null)} onClick={() => setHover(l.i)}>
+                    {l.left && <tspan fill={barva} fontSize={20}>● </tspan>}
+                    {l.s.jmeno}
+                    {!l.left && <tspan fill={barva} fontSize={20}> ●</tspan>}
+                  </text>
+                );
+              })}
               {pts.map((p, i) => {
                 const s = model.seats[i];
                 if (!s) return null;
                 return (
-                  <circle key={i} cx={p.x} cy={p.y} r={14} fill={color(s)}
-                    stroke={s.kind === 'pend' ? PEND : 'none'} strokeWidth={s.kind === 'pend' ? 2 : 1.5}
+                  <circle key={i} cx={p.x} cy={p.y} r={hover === i ? 18 : 14} fill={color(s)}
+                    stroke={s.kind === 'pend' ? PEND : hover === i ? INK : 'none'} strokeWidth={s.kind === 'pend' ? 2 : 1.5}
                     strokeDasharray={s.kind === 'pend' ? '3 2.5' : undefined}
                     onMouseEnter={() => setHover(i)} onMouseLeave={() => setHover(null)} onClick={() => setHover(i)}
-                    style={{ transition: 'fill .6s ease, cx .8s ease, cy .8s ease', cursor: 'pointer' }} />
+                    style={{ transition: 'fill .6s ease, cx .8s ease, cy .8s ease, r .2s ease', cursor: 'pointer' }} />
                 );
               })}
               <text x={300} y={258} textAnchor="middle" fontSize={34} fontWeight={700} fill={INK}>{81 - model.pend.length - (vse ? 0 : model.tally.reduce((s, t) => s + t.stay, 0))}</text>

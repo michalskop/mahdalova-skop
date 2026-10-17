@@ -9,7 +9,7 @@ module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Predikce', dal: 'Senátní volby 2026, 2. kolo' },
   titulek: 'Senátní volby<br>2. kolo',
-  pod: 'Kdo vyhrál ve 22&nbsp;obvodech a&nbsp;jak silné jsou kluby',
+  pod: 'Kdo obsadí zbývajících 22&nbsp;křesel',
   ikona: path.join(__dirname, 'ikona-predikce.svg'),
   legenda: [['#de1743', '22 obvodů ve 2. kole']],
   format: { story: { t: 88 }, instagram: { t: 86 } }, // titulek nesmí narazit na ikonu PREDIKCE
