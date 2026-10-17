@@ -20,6 +20,7 @@ Ve 22 z 27 senátních obvodů se dnes rozhoduje ve druhém kole. Pět senátor�
 <SenatDruheKolo
   apiUrl="https://volby2026-2.datatimes.cz/api/latest.json"
   klubyUrl="/clanek/_articles/volby-cr-2026-10-17-senat-druhe-kolo-predikce/kluby.json"
+  feedUrl="https://volby2026-2.datatimes.cz/?feed"
 />
 
 ## Obvod je rozhodnutý, až když si je model jistý na 99 %

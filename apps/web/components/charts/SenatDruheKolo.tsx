@@ -174,7 +174,7 @@ function hemicycle(n: number) {
   return pts.sort((p, q) => q.a - p.a || p.r - q.r);
 }
 
-export default function SenatDruheKolo({ apiUrl, klubyUrl }: { apiUrl: string; klubyUrl: string }) {
+export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: string; klubyUrl: string; feedUrl?: string }) {
   const [api, setApi] = useState<Api | null>(null);
   const [kl, setKl] = useState<Kluby | null>(null);
   const [vse, setVse] = useState(false); // ukázat i senátory, kterým mandát trvá
@@ -317,7 +317,11 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl }: { apiUrl: string; k
         </div>
       </ChartCard>
 
-      {/* online přehled: nejnovější nahoře */}
+      {/* online reportáž: embed feedu predikce (feedUrl), jinak vlastní přehled; nejnovější nahoře */}
+      {feedUrl ? (
+        <iframe src={feedUrl} title="Online reportáž: 2. kolo senátních voleb" width="100%" height={600} loading="lazy"
+          style={{ border: 0, display: 'block', margin: '1.5em 0', background: '#fff' }} />
+      ) : (
       <div style={{ borderLeft: `3px solid ${RED}`, paddingLeft: 18, margin: '1.5em 0' }}>
         {model.feed.length === 0 && (
           <p style={{ fontFamily: FONT, color: MUTED, margin: 0 }}>Jakmile predikce v některém obvodu ukáže vítěze s jistotou nad 99 %, objeví se tady nahoře.</p>
@@ -348,6 +352,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl }: { apiUrl: string; k
           );
         })}
       </div>
+      )}
 
       {model.pend.length > 0 && (
         <>
