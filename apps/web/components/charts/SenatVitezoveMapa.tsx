@@ -97,7 +97,7 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
     const a = proj([15, 49.8])!; const b = proj([15, 49.86])!;
     const r = Math.max(1.4, Math.abs(a[1] - b[1]) * 0.87 * 0.3);
     const dots = data.dots.map(([lon, lat, o]) => { const p = proj([lon, lat])!; return { x: p[0], y: p[1], o }; });
-    const feats = data.obvody.features.filter((f) => vol.includes(f.properties.o));
+    const feats = data.obvody.features; // všech 81 obvodů (Praha i ve výřezu)
     const praha = data.obvody.features.filter((f) => f.properties.n.startsWith('Praha'));
     const iw = narrow ? Math.round(width * 0.7) : Math.round(width * 0.42);
     const ih = Math.round(iw * 0.6);
@@ -156,20 +156,22 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
             {!geo && <div style={{ height: Math.max(height, 240), display: 'flex', alignItems: 'center', justifyContent: 'center', color: MUTED }}>Načítám mapu…</div>}
             {geo && (
               <svg width={width} height={geo.inset.y + geo.inset.h + 2} role="img" aria-label="Mapa senátních obvodů: vítězové voleb 2026" style={{ display: 'block', touchAction: 'manipulation' }}>
+                {/* podklad: celá republika béžově (obvody, kde se letos nevolilo) */}
+                <path d={geo.path({ type: 'Feature', properties: {}, geometry: data!.outline } as Feature) ?? ''} fill="#ebe8de" stroke="#d4d4c8" strokeWidth={0.8} />
+                {/* plochy obvodů v barvě vítěze, bílé hranice (jako výřez Prahy) */}
                 {geo.feats.map((f) => {
-                  const o = f.properties.o;
+                  const o = f.properties.o; const on = vol.includes(o);
                   return (
-                    <path key={o} d={geo.path(f) ?? ''} fill={colorOf(o)} fillOpacity={hover?.o === o ? 0.28 : 0.1} stroke="none"
-                      style={{ cursor: 'pointer', transition: 'fill-opacity .15s, fill .4s' }}
-                      onPointerMove={(e) => setHover({ o, ...local(e) })} onPointerLeave={() => setHover(null)}
-                      onClick={(e) => setHover({ o, ...local(e as unknown as React.PointerEvent) })} />
+                    <path key={o} d={geo.path(f) ?? ''} fill={on ? colorOf(o) : '#ebe8de'} fillOpacity={on && hover?.o === o ? 1 : on ? 0.9 : 1}
+                      stroke="#fff" strokeWidth={hover?.o === o ? 2.5 : 1.2} strokeLinejoin="round"
+                      style={{ cursor: on ? 'pointer' : 'default', transition: 'fill .4s' }}
+                      onPointerMove={on ? (e) => setHover({ o, ...local(e) }) : () => setHover(null)} onPointerLeave={() => setHover(null)}
+                      onClick={on ? (e) => setHover({ o, ...local(e as unknown as React.PointerEvent) }) : undefined} />
                   );
                 })}
-                <g pointerEvents="none">
-                  {geo.dots.map((d, i) => {
-                    const on = vol.includes(d.o);
-                    return <circle key={i} cx={d.x} cy={d.y} r={on ? geo.r * (hover?.o === d.o ? 1.35 : 1.12) : geo.r} fill={colorOf(d.o)} style={{ transition: 'fill .4s' }} />;
-                  })}
+                {/* tečky jen jako jemný podkres přes plochy */}
+                <g pointerEvents="none" opacity={0.22}>
+                  {geo.dots.map((d, i) => <circle key={i} cx={d.x} cy={d.y} r={geo.r * 0.7} fill="#fff" />)}
                 </g>
                 <g>
                   <rect x={geo.inset.x} y={geo.inset.y} width={geo.inset.w} height={geo.inset.h} rx={6} fill="#fff" stroke="#e0ddd2" />
