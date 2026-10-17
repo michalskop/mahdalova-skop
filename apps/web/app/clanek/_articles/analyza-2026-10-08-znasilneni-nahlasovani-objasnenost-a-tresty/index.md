@@ -8,7 +8,7 @@ coverImage: "images/cover-znasilneni-datatimes.jpg"
 ogImage: "images/cover-og.jpg"
 coverBg: "brandNavy.9"
 filter: ["analýza"]
-tags: ["znásilnění", "sexuální násilí", "justice", "policie", "tresty", "Evropa", "USA", "Cornell"]
+tags: ["spravedlnost", "znásilnění", "sexuální násilí", "justice", "policie", "tresty", "Evropa", "USA", "Cornell"]
 ---
 
 Bývalá studentka Cornellovy univerzity, která vystupuje pod pseudonymem Jane Doe, v září podala civilní žalobu na sedm mužů z univerzitního bratrstva Chi Phi, na univerzitu a další instituce. Tvrdí, že ji muži v říjnu 2024 omámili ketaminem a několik hodin znásilňovali. Obvinění popírají. Okresní prokurátor případ v roce 2024 odložil, [po zveřejnění žaloby ho 28. září znovu otevřel](https://www.tompkinscountyny.gov/News-articles/District-Attorney-statement-regarding-Jane-Doe-v.-Cornell-University-et-al) a guvernérka státu New York Kathy Hochul ho o tři dny později [předala generální prokurátorce Letitii James](https://www.nbcnews.com/news/us-news/hochul-replaces-da-ag-letitia-james-special-prosecutor-cornell-rcna601054).

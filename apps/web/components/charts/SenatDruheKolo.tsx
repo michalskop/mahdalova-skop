@@ -138,6 +138,22 @@ function ObvodKarta({ d: d0, ev, kand, kluby }: { d: Ob; ev?: Ev; kand?: Record<
   );
 }
 
+// Zkopíruje větu nad sebou (+ odkaz na článek) – rovnou na sociální sítě.
+function KopirujVetu() {
+  const [ok, setOk] = useState(false);
+  return (
+    <button type="button"
+      onClick={(e) => {
+        const p = (e.currentTarget.closest('article')?.querySelector('[data-veta]') as HTMLElement | null)?.innerText.trim() ?? '';
+        const url = window.location.origin + window.location.pathname;
+        navigator.clipboard?.writeText(`${p} Živě: ${url}`).then(() => { setOk(true); setTimeout(() => setOk(false), 1800); });
+      }}
+      style={{ fontFamily: FONT, fontSize: 13, padding: '4px 10px', marginBottom: 10, borderRadius: 6, cursor: 'pointer', border: `1px solid ${LINE}`, background: ok ? OK : '#fff', color: ok ? '#fff' : MUTED }}>
+      {ok ? 'Zkopírováno' : 'Kopírovat větu'}
+    </button>
+  );
+}
+
 // ---------- amfiteátr ----------
 type Seat = { klub: string | null; kind: 'new' | 'r1' | 'stay' | 'pend'; ob?: number; title: string };
 
@@ -220,6 +236,8 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl }: { apiUrl: string; k
   };
   const toggle = (id: string) => setOff((o) => { const n = new Set(o); if (n.has(id)) n.delete(id); else n.add(id); return n; });
   const hoverSeat = hover !== null ? model.seats[hover] : null;
+  // navrhující strany jako „KDU-ČSL + ODS + STAN“
+  const navrhOf = (ob: number, w: Cand) => (kl.kandidati[String(ob)]?.[w.name]?.navrh ?? w.party).split(', ').join(' + ');
 
   const stav = rep === 0
     ? `Zatím nemáme data. Volební místnosti se ${Date.now() < Date.parse('2026-10-17T14:00:00+02:00') ? 'zavírají' : 'zavřely'} ve 14:00, čekáme na první sečtené okrsky z Českého statistického úřadu.`
@@ -314,13 +332,17 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl }: { apiUrl: string; k
               <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 15, color: i === 0 ? RED : MUTED, marginBottom: 6 }}>
                 {hhmm(time)}{i === 0 ? ' · nejnovější' : ''}
               </div>
-              <p style={{ margin: '0 0 0.8em', color: INK, fontSize: '1.0625rem', lineHeight: 1.6 }}>
-                {d.final ? (
-                  <>V obvodu č. {d.ob} {d.name} byl{z ? 'a' : ''} ve 2. kole zvolen{z ? 'a' : ''} <strong>{winner.name}</strong>{klub && klub.id !== 'nez' ? ` (klub ${klub.nazev})` : ''}. Získal{z ? 'a' : ''} {F1(share * 100)} % hlasů.</>
-                ) : (
-                  <>V obvodu č. {d.ob} {d.name} bude podle predikce zvolen{z ? 'a' : ''} <strong>{winner.name}</strong>{klub && klub.id !== 'nez' ? ` (předpokládaný klub ${klub.nazev})` : ''}. Predikce odhaduje {z ? 'její' : 'jeho'} zisk na {F1(share * 100)} % hlasů, sečteno je {d.n_total ? F1(((d.n_counted ?? 0) / d.n_total) * 100) : 0} % okrsků.</>
-                )}
+              <p data-veta style={{ margin: '0 0 0.4em', color: INK, fontSize: '1.0625rem', lineHeight: 1.6 }}>
+                Ve druhém kole senátních voleb v{' '}obvodu {d.ob} ({d.name}) {d.final ? `vyhrál${z ? 'a' : ''}` : 'vyhrává'}{' '}
+                <strong>{winner.name}</strong> ({navrhOf(d.ob, winner)}) s{' '}{F1(share * 100)}{' '}%.
               </p>
+              <div style={{ fontFamily: FONT, fontSize: 13, color: MUTED, marginBottom: 6 }}>
+                {d.final
+                  ? 'Sečteny všechny okrsky.'
+                  : `Podle predikce, sečteno ${d.n_total ? F1(((d.n_counted ?? 0) / d.n_total) * 100) : 0} % okrsků.`}
+                {klub && klub.id !== 'nez' ? ` Předpokládaný klub: ${klub.nazev}.` : ''}
+              </div>
+              <KopirujVetu />
               <ObvodKarta d={d} ev={ev} kand={kl.kandidati[String(d.ob)]} kluby={kl.kluby} />
             </article>
           );

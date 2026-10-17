@@ -15,7 +15,7 @@ promoted: 1
 
 Ve 22 z 27 senátních obvodů se dnes rozhoduje ve druhém kole. Pět senátorů zvolili voliči už minulý víkend: Tomáše Fialu (Naše Česko) na Strakonicku, Zbyňka Linharta (STAN) na Děčínsku, Jana Sobotku (STAN) na Trutnovsku, Jana Grulicha (TOP 09) na Rychnovsku a Jana Grolicha (KDU-ČSL) na Vyškovsku.
 
-**Zatím nemáme data.** Volební místnosti se zavřely ve 14:00, teď čekáme na první sečtené okrsky z Českého statistického úřadu. Graf i přehled pod ním se od té chvíle doplňují samy, stránku není potřeba obnovovat.
+**Sčítá se.** Volební místnosti se zavřely ve 14:00 a Český statistický úřad zveřejňuje první sečtené okrsky. Graf i přehled pod ním se od té chvíle doplňují samy, stránku není potřeba obnovovat.
 
 <SenatDruheKolo
   apiUrl="https://volby2026-2.datatimes.cz/api/latest.json"
