@@ -25,7 +25,7 @@ type Cand = { name: string; party: string; r1?: number; share?: number };
 type Ob = { ob: number; name: string; status: string; final?: boolean; a?: Cand; b?: Cand; winner?: Cand; a_share?: number; p_a?: number };
 type Api = { generated: string; se2: Record<string, Ob>; decided?: Record<string, { name: string; revoked?: boolean }> };
 type Klub = { id: string; nazev: string; kratce: string; barva: string };
-type Kluby = { kluby: Klub[]; kandidati: Record<string, Record<string, { klub: string; z?: boolean; navrh?: string }>> };
+type Kluby = { kluby: Klub[]; kandidati: Record<string, Record<string, { klub: string; z?: boolean; navrh?: string; obhajce?: boolean }>> };
 
 const pct = (v: number) => `${(v * 100).toFixed(1).replace('.', ',')} %`;
 // „Zelení, STAN, Piráti, TOP 09, SEN 21“ → „Zelení, STAN, Piráti, TOP 09 a SEN 21“
@@ -112,6 +112,7 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
   };
   const nazev = (o: number) => data?.obvody.features.find((f) => f.properties.o === o)?.properties.n ?? '';
   const navrh = (o: number, c: Cand) => hezky(kl?.kandidati[String(o)]?.[c.name]?.navrh ?? c.party);
+  const obhajce = (o: number, c: Cand) => !!kl?.kandidati[String(o)]?.[c.name]?.obhajce;
 
   // legenda: kluby, které v mapě skutečně jsou (v daném kole)
   const legenda = useMemo(() => {
@@ -129,7 +130,7 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
     <div style={{ clear: 'both' }}>
       <ChartCard
         title="Kdo vyhrál v 27 senátních obvodech"
-        subtitle="Barva obvodu = předpokládaný senátorský klub vítěze. Najeďte nebo ťukněte na obvod."
+        subtitle="Barva = klub vítěze: u obhájců jejich dosavadní klub podle senat.cz, u nových senátorů strana, která je navrhla. Najeďte nebo ťukněte na obvod."
         source="ČSÚ – výsledky voleb do Senátu 2026 a senátní obvody; predikce Kateřina Mahdalová & Michal Škop"
       >
         <div style={{ fontFamily: FONT, color: INK }}>
@@ -163,7 +164,7 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
                   const o = f.properties.o; const on = vol.includes(o);
                   return (
                     <path key={o} d={geo.path(f) ?? ''} fill={on ? colorOf(o) : '#ebe8de'} fillOpacity={on && hover?.o === o ? 1 : on ? 0.9 : 1}
-                      stroke="#fff" strokeWidth={hover?.o === o ? 2.5 : 1.2} strokeLinejoin="round"
+                      stroke="#fff" strokeWidth={hover?.o === o ? 3.5 : 2.2} strokeLinejoin="round"
                       style={{ cursor: on ? 'pointer' : 'default', transition: 'fill .4s' }}
                       onPointerMove={on ? (e) => setHover({ o, ...local(e) }) : () => setHover(null)} onPointerLeave={() => setHover(null)}
                       onClick={on ? (e) => setHover({ o, ...local(e as unknown as React.PointerEvent) }) : undefined} />
@@ -200,18 +201,28 @@ export default function SenatVitezoveMapa({ mapaUrl, apiUrl, klubyUrl }: { mapaU
                 </div>
                 {!hv && <div style={{ color: MUTED }}>Zatím nerozhodnuto.</div>}
                 {hv && hv.kolo === 1 && (
-                  <div><strong>{hv.win.name}</strong> ({navrh(hover.o, hv.win)}) zvolen{hv.z ? 'a' : ''} už v 1. kole s {pct(hv.winShare)}.</div>
+                  <div><strong>{hv.win.name}</strong> zvolen{hv.z ? 'a' : ''} už v 1. kole s {pct(hv.winShare)}.</div>
                 )}
                 {hv && hv.kolo === 2 && kolo === 1 && hv.o.a && hv.o.b && (
-                  <div>Do 2. kola postoupili <strong>{hv.o.a.name}</strong> ({navrh(hover.o, hv.o.a)}, {pct(hv.o.a.r1 ?? 0)}) a <strong>{hv.o.b.name}</strong> ({navrh(hover.o, hv.o.b)}, {pct(hv.o.b.r1 ?? 0)}).</div>
+                  <div>Do 2. kola postoupili <strong>{hv.o.a.name}</strong> ({pct(hv.o.a.r1 ?? 0)}) a <strong>{hv.o.b.name}</strong> ({pct(hv.o.b.r1 ?? 0)}).</div>
                 )}
                 {hv && hv.kolo === 2 && kolo === 2 && (
                   <>
-                    <div>Vyhrál{hv.z ? 'a' : ''} <strong>{hv.win.name}</strong> ({navrh(hover.o, hv.win)}) s {pct(hv.winShare)}.</div>
-                    {hv.los && <div style={{ color: MUTED }}>Proti: {hv.los.name} ({navrh(hover.o, hv.los)}), {pct(hv.losShare ?? 0)}.</div>}
+                    <div>Vyhrál{hv.z ? 'a' : ''} <strong>{hv.win.name}</strong> s {pct(hv.winShare)}.</div>
+                    {hv.los && <div style={{ color: MUTED }}>Proti: {hv.los.name}, {pct(hv.losShare ?? 0)}.</div>}
                   </>
                 )}
-                {hv?.klub && (kolo === 2 || hv.kolo === 1) && <div style={{ color: MUTED, fontSize: 12.5, marginTop: 3 }}>Předpokládaný klub: {hv.klub.nazev}</div>}
+                {/* klub: obhájce = dosavadní klub (senat.cz), nový = zatím neznámý, barva podle navrhující strany */}
+                {hv && (kolo === 2 || hv.kolo === 1) && (
+                  <div style={{ marginTop: 4, fontSize: 13 }}>
+                    {obhajce(hover.o, hv.win)
+                      ? <>Obhájil{hv.z ? 'a' : ''} mandát · klub <strong>{hv.klub?.nazev ?? 'nezařazení'}</strong></>
+                      : <>Nov{hv.z ? 'á senátorka' : 'ý senátor'} · klub zatím neznámý{hv.klub && hv.klub.id !== 'nez' ? ', barva podle kandidátky' : ''}</>}
+                  </div>
+                )}
+                {hv && (kolo === 2 || hv.kolo === 1) && (
+                  <div style={{ color: MUTED, fontSize: 12, marginTop: 2 }}>Kandidátka: {navrh(hover.o, hv.win)}</div>
+                )}
               </div>
             )}
           </div>
