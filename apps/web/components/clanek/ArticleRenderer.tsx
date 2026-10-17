@@ -38,6 +38,7 @@ import ObceKvVysledkyMapa from '@/components/charts/ObceKvVysledkyMapa'; // komu
 import OkrskyKvMapa from '@/components/charts/OkrskyKvMapa'; // komunální volby 2026 – kdo vyhrál v okrscích (jak volili vaši sousedé)
 import SenatVysledkyMapa from '@/components/charts/SenatVysledkyMapa'; // Senát 2026 – výsledky 1. kola a průběh predikce
 import SenatPredikceMapa from '@/components/charts/SenatPredikceMapa'; // Senát 2026 – průběžná predikce po obvodech
+import SenatDruheKolo from '@/components/charts/SenatDruheKolo'; // Senát 2026 – 2. kolo: amfiteátr, rafičky, „už víme“
 import ZivyPrenos from '@/components/clanek/ZivyPrenos'; // online reportáž z JSON
 import KalkulackaMapa from '@/components/charts/KalkulackaMapa'; // mapa-rozcestník Volební kalkulačky 2026 (Senát / 73 měst)
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
@@ -470,6 +471,7 @@ export function ArticleRenderer({
     ObceStranyMap,
     KalkulackaMapa,
     SenatPredikceMapa,
+    SenatDruheKolo,
     ObceKvPredikceMapa,
     ObceKvVysledkyMapa,
     OkrskyKvMapa,

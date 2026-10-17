@@ -1,0 +1,43 @@
+{
+  "stav": "Kluby podle senat.cz k 17. 10. 2026 (54 senátorů s trvajícím mandátem; klub SEN 21 a Piráti po 10. 10. zanikl, Krsek a Rabas jsou nezařazení). Kandidáti podle volby.gov.cz (appdata/senat/20261009). Podklady: _data_pipeline/senat-data.json.",
+  "pravidlo": "Předpokládaný klub: dosavadní senátor zůstává ve svém klubu (stav k 1. 10. 2026); jinak klub strany, jejímž je členem; bez členství klub navrhující strany; strany bez klubu (PRAHA SOBĚ, Volt, místní sdružení) = nezařazení. Půta (SLK) = STAN jako dosud senátoři SLK.",
+  "poznamka": "Číslo u klubu = senátoři s trvajícím mandátem a zvolení v 1. kole, zelené plus = zvolení ve 2. kole. Kluby se ustavují až po volbách, u nově zvolených jde o předpokládaný klub.",
+  "kluby": [
+    { "id": "sen21", "nazev": "SEN 21 a Piráti", "kratce": "SEN 21 a Piráti", "barva": "#111111" },
+    { "id": "stan", "nazev": "Starostové a nezávislí", "kratce": "STAN", "barva": "#ff1a4a" },
+    { "id": "kdu", "nazev": "KDU-ČSL a nezávislí", "kratce": "KDU-ČSL", "barva": "#ffcf02" },
+    { "id": "ods", "nazev": "ODS a TOP 09", "kratce": "ODS a TOP 09", "barva": "#5e66d5" },
+    { "id": "nez", "nazev": "nezařazení", "kratce": "nezařazení", "barva": "#9a9a92" },
+    { "id": "ano", "nazev": "ANO", "kratce": "ANO", "barva": "#272a59" }
+  ],
+  "trvajici": { "sen21": 0, "stan": 7, "kdu": 9, "ods": 21, "nez": 3, "ano": 14 },
+  "kandidati": {
+    "3": { "Miroslav Plevný": { "klub": "stan", "navrh": "STAN" }, "Sandra Tsoukernik": { "klub": "ano", "z": true, "navrh": "ANO" } },
+    "6": { "Ivo Trešl": { "klub": "stan", "navrh": "STAN" }, "Jaroslav Mikoláš": { "klub": "ano", "navrh": "ANO" } },
+    "9": { "Karel Řehka": { "klub": "stan", "navrh": "STAN" }, "Lucie Kantorová": { "klub": "ano", "z": true, "navrh": "ANO" } },
+    "12": { "Tomáš Fiala": { "klub": "ods", "navrh": "Naše Česko" } },
+    "15": { "Ladislav Med": { "klub": "ods", "navrh": "KDU-ČSL, ODS, STAN, TOP 09, STO" }, "Michal Kozár": { "klub": "ano", "navrh": "ANO" } },
+    "18": { "Petr Štěpánek": { "klub": "stan", "navrh": "STAN" }, "Barbora Daňhová": { "klub": "ano", "z": true, "navrh": "ANO" } },
+    "21": { "Václav Láska": { "klub": "sen21", "navrh": "SEN 21" }, "Radko Sáblík": { "klub": "ods", "navrh": "KDU-ČSL, ODS, STAN" } },
+    "24": { "David Smoljak": { "klub": "stan", "navrh": "KDU-ČSL, Zelení, STAN, Piráti, TOP 09" }, "Dagmar Pecková": { "klub": "ods", "z": true, "navrh": "ODS" } },
+    "27": { "Jiří Padevět": { "klub": "stan", "navrh": "ODS, STAN, Piráti, TOP 09" }, "Jan Čižinský": { "klub": "nez", "navrh": "KDU-ČSL, Zelení, PRAHA SOBĚ" } },
+    "30": { "Adéla Sucharda Šípová": { "klub": "sen21", "z": true, "navrh": "Zelení, STAN, Piráti, TOP 09, SEN 21" }, "Petr Paták": { "klub": "ods", "navrh": "ODS" } },
+    "33": { "Zbyněk Linhart": { "klub": "stan", "navrh": "STAN, SLK" } },
+    "36": { "Martin Půta": { "klub": "stan", "navrh": "Starostové pro Liberecký kraj" }, "Jitka Volfová": { "klub": "ano", "z": true, "navrh": "ANO" } },
+    "39": { "Jan Sobotka": { "klub": "stan", "navrh": "STAN" } },
+    "42": { "Michael Kašpar": { "klub": "stan", "navrh": "STAN" }, "Andrea Brzobohatá": { "klub": "ano", "z": true, "navrh": "ANO" } },
+    "45": { "Martin Dvořák": { "klub": "stan", "navrh": "Zelení, STAN, Piráti, TOP 09, HDK" }, "Zuzana Ceralová Petrofová": { "klub": "ods", "z": true, "navrh": "ODS" } },
+    "48": { "Jan Grulich": { "klub": "ods", "navrh": "KDU-ČSL, ODS, STAN, Piráti, TOP 09, LES" } },
+    "51": { "Josef Klement": { "klub": "kdu", "navrh": "KDU-ČSL" }, "Michal Šmarda": { "klub": "nez", "navrh": "SOM, Volt, HR" } },
+    "54": { "Tomáš Třetina": { "klub": "ods", "navrh": "KDU-ČSL, ODS, STAN, Piráti, TOP 09" }, "Jiří Kyněra": { "klub": "ano", "navrh": "ANO" } },
+    "57": { "Jan Grolich": { "klub": "kdu", "navrh": "KDU-ČSL" } },
+    "60": { "Zdeněk Papoušek": { "klub": "ods", "navrh": "KDU-ČSL, ODS, Piráti, TOP 09, Fakt Brno" }, "Karel Zitterbart": { "klub": "stan", "navrh": "STAN" } },
+    "63": { "Jakub Navařík": { "klub": "ods", "navrh": "KDU-ČSL, ODS, STAN, TOP 09" }, "Petr Vrána": { "klub": "ano", "navrh": "ANO" } },
+    "66": { "Marek Ošťádal": { "klub": "stan", "navrh": "24/7" }, "Martin Škurek": { "klub": "ano", "navrh": "ANO" } },
+    "69": { "Helena Pešatová": { "klub": "stan", "z": true, "navrh": "STAN, Piráti, TOP 09" }, "Petr Korč": { "klub": "nez", "navrh": "Naše Město F-M" } },
+    "72": { "Ondřej Šimetka": { "klub": "ods", "navrh": "KDU-ČSL, ODS, STAN, Piráti, TOP 09" }, "Lucie Baránková Vilamová": { "klub": "ano", "z": true, "navrh": "ANO" } },
+    "75": { "Lenka Brzyszkowská": { "klub": "ano", "z": true, "navrh": "ANO" }, "Petr Kazík": { "klub": "nez", "navrh": "Osobnosti pro kraj" } },
+    "78": { "Tomáš Goláň": { "klub": "ods", "navrh": "KDU-ČSL, ODS, TOP 09" }, "Ivo Mitáček": { "klub": "stan", "navrh": "STAN" } },
+    "81": { "Josef Bazala": { "klub": "kdu", "navrh": "KDU-ČSL" }, "Jiří Vašica": { "klub": "ano", "navrh": "ANO" } }
+  }
+}
