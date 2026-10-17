@@ -320,7 +320,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
             <svg viewBox={narrow ? '0 -18 600 330' : '-262 -18 1124 348'} style={{ width: '100%', display: 'block' }} role="img" aria-label="Amfiteátr 81 křesel Senátu">
               {/* popisky nově zvolených po stranách, vodicí čáry vedou pod křesly */}
               {!narrow && labels.map((l) => (
-                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke={MUTED} strokeOpacity={0.45} strokeWidth={1.2} />
+                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke={MUTED} strokeOpacity={0.7} strokeWidth={2.4} />
               ))}
               {!narrow && labels.map((l) => (
                 <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700} fill={INK}>
