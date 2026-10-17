@@ -358,13 +358,13 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl }: { apiUrl: 
         <>
           <h3 style={{ fontFamily: FONT, color: INK, margin: '1.2em 0 0.6em' }}>Kde se ještě rozhoduje</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 330px), 1fr))', gap: 10 }}>
-            {[...model.pend].sort((x, y) => Math.abs((x.p_a ?? 0.5) - 0.5) - Math.abs((y.p_a ?? 0.5) - 0.5) || x.ob - y.ob).map((d) => (
+            {[...model.pend].sort((x, y) => Math.abs((y.p_a ?? 0.5) - 0.5) - Math.abs((x.p_a ?? 0.5) - 0.5) || x.ob - y.ob).map((d) => (
               <ObvodKarta key={d.ob} d={d} ev={api.decided?.[String(d.ob)]} kand={kl.kandidati[String(d.ob)]} kluby={kl.kluby} />
             ))}
           </div>
           <p style={{ fontFamily: FONT, fontSize: 12.5, color: MUTED, lineHeight: 1.45, marginTop: 10 }}>
             Rafička ukazuje predikci: nahoře 50 : 50, na koncích stupnice šance na vítězství nad 99 %. Vpravo je kandidát s lepším výsledkem 1. kola.
-            Tmavý oblouk uvnitř je 90% interval, šedá tečka dosud sečtený podíl. Seřazeno od nejtěsnějších.
+            Tmavý oblouk uvnitř je 90% interval, šedá tečka dosud sečtený podíl. Seřazeno od nejjasnějších.
           </p>
         </>
       )}
