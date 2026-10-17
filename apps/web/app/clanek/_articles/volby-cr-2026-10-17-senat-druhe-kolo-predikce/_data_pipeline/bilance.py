@@ -56,3 +56,15 @@ zvoleni = set(n for v in vyhra_jmena.values() for n in [x.split(' (')[0] for x i
 obhajci = [n for n in koncici if n in kand_vse]
 print(f'\nObhajoby: kandidovalo {len(obhajci)} z {len(koncici)} senátorů s končícím mandátem, zvoleno {sum(n in zvoleni for n in obhajci)}')
 print('  neuspěli:', sorted(n for n in obhajci if n not in zvoleni))
+
+# Bloky: vládní koalice (ANO, SPD, Motoristé) × opoziční strany (ODS, STAN, KDU-ČSL, TOP 09, Piráti, SEN 21, Zelení) × ostatní
+VLADA = {'ANO', 'SPD', 'Motoristé'}; OPOZICE = {'ODS', 'STAN', 'KDU-ČSL', 'TOP 09', 'Piráti', 'SEN 21', 'Zelení'}
+blok = collections.Counter(); ostatni = []
+for st, jm in vyhra_jmena.items():
+    b = 'vláda' if st in VLADA else 'opozice' if st in OPOZICE else 'ostatní'
+    blok[b] += len(jm)
+    if b == 'ostatní': ostatni += [f'{x} [{st}]' for x in jm]
+print('\nBLOKY podle navrhující strany:', dict(blok)); print('  ostatní:', ostatni)
+# Zvolení v 1. kole v historii (ČSÚ opendata, viz zdroj/prvni-kolo-historie.json)
+h = json.load(open(os.path.join(H, 'zdroj', 'prvni-kolo-historie.json'), encoding='utf-8'))
+print('\nzdroj historie:', list(h.keys()))

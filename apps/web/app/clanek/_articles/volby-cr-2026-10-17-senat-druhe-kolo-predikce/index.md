@@ -13,15 +13,13 @@ tags: ["volby", "volby 2026", "senátní volby 2026", "predikce", "Senát"]
 promoted: 1
 ---
 
-Ve 22 z 27 senátních obvodů se dnes rozhoduje ve druhém kole. Pět senátorů zvolili voliči už minulý víkend: Tomáše Fialu (Naše Česko) na Strakonicku, Zbyňka Linharta (STAN) na Děčínsku, Jana Sobotku (STAN) na Trutnovsku, Jana Grulicha (TOP 09) na Rychnovsku a Jana Grolicha (KDU-ČSL) na Vyškovsku.
+Vládní strany v letošních senátních volbách nezískaly ani jedno z 27 křesel. Hnutí ANO postavilo 24 kandidátů, nejvíc ze všech stran, do druhého kola jich postoupilo 13 a podle predikce neuspěl ani jeden. SPD měla 17 kandidátů a do druhého kola nepostoupil žádný, Motoristé nikoho nenavrhli. ANO tak přijde i o karvinské křeslo po Ondřeji Feberovi: tam vyhrál Petr Kazík (Osobnosti pro kraj) nad Lenkou Brzyszkowskou.
 
-**Sčítání končí.** V 15:20 bylo sečteno 89 % okrsků a predikce už ve všech 22 obvodech druhého kola určila vítěze s jistotou aspoň 99 %. Graf i přehled pod ním se doplňují samy, stránku není potřeba obnovovat.
+**Sčítání končí.** V 15:20 bylo sečteno 89 % okrsků a predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop už ve všech 22 obvodech druhého kola určila vítěze s jistotou aspoň 99 %. Graf i online reportáž pod ním se doplňují samy, stránku není potřeba obnovovat.
 
-## STAN vyhrálo nejvíc obvodů, ANO ani jeden
+Nejvíc mandátů získalo hnutí STAN. Obhajovalo 11 křesel a jeho kandidáti vyhráli devět: Zbyněk Linhart na Děčínsku a Jan Sobotka na Trutnovsku už v prvním kole, dalších sedm v jedenácti soubojích druhého kola. Klub ODS a TOP 09 obhajoval devět křesel a kandidáti obou stran jich získali také devět: ODS sedm z devíti soubojů, TOP 09 dvě. KDU-ČSL má tři senátory z pěti nominací. Celkem 22 nových senátorů navrhly opoziční strany. Další dva k nim mají blízko: Martin Půta za Starostové pro Liberecký kraj, se kterými STAN spolupracuje (Linhart kandidoval za jejich společnou koalici), a Marek Ošťádal (24/7), dosavadní člen klubu STAN. Tomáš Fiala byl dosud v klubu ODS a TOP 09, letos ale kandidoval za Naše Česko. Za místní hnutí vyhráli Petr Korč, který porazil senátorku Helenu Pešatovou (STAN), a Petr Kazík, který porazil kandidátku ANO. Do kterého klubu kdo vstoupí, se ukáže až po volbách.
 
-Nejlépe z voleb vychází hnutí STAN. Obhajovalo 11 křesel a jeho kandidáti získali devět mandátů, nejvíc ze všech stran. Hnutí navrhlo 13 kandidátů: Zbyněk Linhart na Děčínsku a Jan Sobotka na Trutnovsku vyhráli už v prvním kole, dalších sedm uspělo v jedenácti soubojích druhého kola. ODS navrhla 14 kandidátů a vyhrála sedm z devíti soubojů, ve kterých stála. KDU-ČSL má tři senátory z pěti nominací, TOP 09 dva ze tří.
-
-Hnutí ANO postavilo 24 kandidátů, nejvíc ze všech stran. Do druhého kola jich postoupilo 13 a podle predikce nevyhrál ani jeden. ANO tak přijde i o karvinské křeslo po Ondřeji Feberovi: tam vyhrál Petr Kazík (Osobnosti pro kraj) nad Lenkou Brzyszkowskou. SPD měla 17 kandidátů a do druhého kola nepostoupil žádný.
+Pět senátorů zvolili voliči už v prvním kole: Tomáše Fialu na Strakonicku, Linharta, Sobotku, Jana Grulicha (TOP 09) na Rychnovsku a Jana Grolicha (KDU-ČSL) na Vyškovsku. Stejně jich v prvním kole uspělo jen v roce 2024, víc nikdy od vzniku Senátu ([registr kandidátů 1996–2026, otevřená data ČSÚ](https://www.volby.cz/opendata/senat_vse/senat_vse_opendata.htm)).
 
 Nejtěsnější souboj je na Kladensku. Senátorka Adéla Sucharda Šípová, kterou v koalici navrhli Piráti, tam podle predikce prohrává s Petrem Patákem (ODS) zhruba 49 : 51. Piráti tak ze tří vlastních nominací nezískají žádného senátora. Václav Láska (SEN 21) mandát na Praze 5 obhájil. Ze 27 senátorů, kterým letos mandát končil, kandidovalo znovu 23 a uspělo 16. Ve druhém kole neuspěli tři senátoři: kromě Šípové Helena Pešatová (STAN) na Frýdecko-Místecku, kde vyhrál Petr Korč z místního hnutí Naše Město F-M, a Karel Zitterbart (STAN), který v Brně prohrál souboj dvou senátorů se Zdeňkem Papouškem (ODS).
 
