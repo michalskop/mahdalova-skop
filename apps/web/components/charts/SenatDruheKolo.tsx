@@ -321,8 +321,13 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
             </span>
             {/* nenápadný přepínač vpravo */}
             <button type="button" onClick={() => setVse((v) => !v)} aria-pressed={vse}
-              style={{ marginLeft: 'auto', alignSelf: 'center', fontFamily: FONT, fontSize: 12.5, padding: '2px 0', border: 0, background: 'none', color: MUTED, textDecoration: 'underline', textUnderlineOffset: 3, cursor: 'pointer' }}>
-              {vse ? 'jen 27 volených' : 'celý Senát'}
+              title={vse ? 'Přepnout na 27 zvolených' : 'Přepnout na celý Senát'}
+              style={{ marginLeft: 'auto', alignSelf: 'center', display: 'inline-flex', alignItems: 'center', gap: 5, fontFamily: FONT, fontSize: 12.5, padding: '2px 0', border: 0, background: 'none', color: MUTED, cursor: 'pointer' }}>
+              {/* ikonka přepnutí ⇄ */}
+              <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 5h11M10 2l3 3-3 3" /><path d="M14 11H3M6 8l-3 3 3 3" />
+              </svg>
+              <span style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>{vse ? '27 zvolených' : 'celý Senát'}</span>
             </button>
           </div>
 
@@ -335,8 +340,9 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
                 const barva = kl.kluby.find((k) => k.id === l.s.klub)?.barva ?? MUTED;
                 const on = hover === l.i;
                 return (
-                  <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700}
-                    fill={INK} opacity={hover !== null && !on ? 0.55 : 1} style={{ cursor: 'pointer', transition: 'opacity .2s' }}
+                  <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={400}
+                    fill={INK} opacity={hover !== null && !on ? 0.55 : 1}
+                    style={{ cursor: 'pointer', transition: 'opacity .2s', fontFamily: 'var(--font-ibm-plex-serif), Georgia, serif' }}
                     onMouseEnter={() => setHover(l.i)} onMouseLeave={() => setHover(null)} onClick={() => setHover(l.i)}>
                     {l.left && <tspan fill={barva} fontSize={20}>● </tspan>}
                     {l.s.jmeno}
@@ -355,9 +361,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
                     style={{ transition: 'fill .6s ease, cx .8s ease, cy .8s ease, r .2s ease', cursor: 'pointer' }} />
                 );
               })}
-              <text x={300} y={258} textAnchor="middle" fontSize={34} fontWeight={700} fill={INK}>{81 - model.pend.length - (vse ? 0 : model.tally.reduce((s, t) => s + t.stay, 0))}</text>
-              <text x={300} y={282} textAnchor="middle" fontSize={14} fill={MUTED}>{vse ? 'senátorů známe' : 'z 27 křesel známe'}</text>
-            </svg>
+              <text x={300} y={258} textAnchor="middle" fontSize={34} fontWeight={700} fill={INK}>{81 - model.pend.length - (vse ? 0 : model.tally.reduce((s, t) => s + t.stay, 0))}</text>            </svg>
             {hoverSeat && (
               <div style={{ position: 'absolute', left: '50%', top: 0, transform: 'translateX(-50%)', background: '#fff', border: `1px solid ${LINE}`, borderRadius: 6, padding: '5px 9px', fontSize: 13, pointerEvents: 'none', whiteSpace: 'nowrap' }}>
                 {hoverSeat.title}
@@ -390,11 +394,6 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
               </div>
             )}
           </div>}
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', justifyContent: 'space-between', marginTop: 4 }}>
-            <span style={{ fontSize: 12.5, color: MUTED }}>Kliknutím na klub ho vypnete. Většina = 41 hlasů.</span>
-          </div>
-          {kl.poznamka && <div style={{ fontSize: 12.5, color: MUTED, marginTop: 8, lineHeight: 1.4 }}>{kl.poznamka}</div>}
         </div>
       </ChartCard>
       </div>
