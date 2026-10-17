@@ -174,8 +174,8 @@ function hemicycle(n: number) {
   return pts.sort((p, q) => q.a - p.a || p.r - q.r);
 }
 
-// cast="graf" = jen amfiteátr, cast="reportaz" = jen online reportáž a rafičky (v článku lze mezi ně vložit text)
-export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { apiUrl: string; klubyUrl: string; feedUrl?: string; cast?: 'graf' | 'reportaz' }) {
+// cast="graf" = jen amfiteátr, "reportaz" = jen online reportáž, "raficky" = jen rafičky obvodů (v článku lze mezi ně vložit text)
+export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { apiUrl: string; klubyUrl: string; feedUrl?: string; cast?: 'graf' | 'reportaz' | 'raficky' }) {
   const [api, setApi] = useState<Api | null>(null);
   const [kl, setKl] = useState<Kluby | null>(null);
   const [vse, setVse] = useState(false); // ukázat i senátory, kterým mandát trvá
@@ -219,7 +219,8 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
       return { k, stay, r1: nw.filter((s) => s.kind === 'r1').length, r2: nw.filter((s) => s.kind === 'new').length };
     });
     seats.push(...pend);
-    return { seats, tally, feed, pend: obs.filter((d) => pend.some((p) => p.ob === d.ob)), isZ, nR2: obs.filter((d) => d.status !== 'decided_r1').length };
+    const obs2 = obs.filter((d) => d.status !== 'decided_r1' && d.a && d.b);
+    return { seats, tally, feed, pend: obs.filter((d) => pend.some((p) => p.ob === d.ob)), obs2, isZ, nR2: obs2.length };
   }, [api, kl]);
 
   const pts = useMemo(() => hemicycle(81), []);
@@ -392,7 +393,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
       </div>
       )}
 
-      {cast !== 'graf' && (<>
+      {(!cast || cast === 'reportaz') && (<>
       {/* online reportáž: embed feedu predikce (feedUrl), jinak vlastní přehled; nejnovější nahoře */}
       {feedUrl ? (
         <iframe src={feedUrl} title="Online reportáž: 2. kolo senátních voleb" width="100%" height={600} loading="lazy"
@@ -430,11 +431,15 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
       </div>
       )}
 
-      {model.pend.length > 0 && (
+      </>)}
+
+      {(!cast || cast === 'raficky') && model.obs2.length > 0 && (
         <>
-          <h3 style={{ fontFamily: FONT, color: INK, margin: '1.2em 0 0.6em' }}>Kde se ještě rozhoduje</h3>
+          <h3 style={{ fontFamily: FONT, color: INK, margin: '1.2em 0 0.6em' }}>
+            {model.pend.length ? `Rafičky ve ${model.obs2.length} obvodech, rozhoduje se ještě v ${model.pend.length}` : `Rafičky ve všech ${model.obs2.length} obvodech 2. kola`}
+          </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 330px), 1fr))', gap: 10 }}>
-            {[...model.pend].sort((x, y) => Math.abs((y.p_a ?? 0.5) - 0.5) - Math.abs((x.p_a ?? 0.5) - 0.5) || x.ob - y.ob).map((d) => (
+            {[...model.obs2].sort((x, y) => Math.abs((y.p_a ?? 0.5) - 0.5) - Math.abs((x.p_a ?? 0.5) - 0.5) || x.ob - y.ob).map((d) => (
               <ObvodKarta key={d.ob} d={d} ev={api.decided?.[String(d.ob)]} kand={kl.kandidati[String(d.ob)]} kluby={kl.kluby} />
             ))}
           </div>
@@ -444,7 +449,6 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
           </p>
         </>
       )}
-      </>)}
     </div>
   );
 }

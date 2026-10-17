@@ -50,4 +50,10 @@ Za rozhodnutý obvod označíme až ten, kde má vítěz šanci aspoň 99 % ve d
 
 Senátorské kluby se ustavují až po volbách. U nově zvolených proto uvádíme předpokládaný klub: kdo už senátorem je, počítáme do jeho dosavadního klubu, ostatní podle strany, jejímiž jsou členy, nebo která je navrhla. Číslo u klubu ukazuje senátory, kterým mandát trvá, spolu se zvolenými v prvním kole ([senátorské kluby, senat.cz](https://www.senat.cz/organy/index.php?par_1=K)). Klub SEN 21 a Piráti po skončení mandátů 10. října zanikl, jeho zbylí dva členové jsou zatím nezařazení. Zelené plus jsou ti, kdo podle predikce vyhrají dnes. Oficiální výsledky zveřejňuje [ČSÚ na volby.gov.cz](https://volby.gov.cz/app/senat/20261009/cs/results).
 
+<SenatDruheKolo
+  apiUrl="https://volby2026-2.datatimes.cz/api/latest.json"
+  klubyUrl="/clanek/_articles/volby-cr-2026-10-17-senat-druhe-kolo-predikce/kluby.json"
+  cast="raficky"
+/>
+
 <RelatedArticles slugs={["volby-cr-2026-10-10-senat-komunalni-2026-predikce", "volby-cr-2026-10-10-senat-komunalni-2026-predikce-vysledky", "volby-cr-2026-09-02-senatni-volby-2026-27-obvodu", "volby-cr-2026-10-10-volebni-kalkulacka-73-mest-a-senat", "volby-cr-2026-10-16-ucast-2022-2026", "volby-cr-2026-10-12-kdo-zustal-doma"]} heading="🔻🔻🔻" />
