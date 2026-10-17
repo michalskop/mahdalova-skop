@@ -277,7 +277,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
   const stav = rep === 0
     ? `Zatím nemáme data. Volební místnosti se ${Date.now() < Date.parse('2026-10-17T14:00:00+02:00') ? 'zavírají' : 'zavřely'} ve 14:00, čekáme na první sečtené okrsky z Českého statistického úřadu.`
     : model.feed.length === model.nR2 && model.pend.length === 0
-      ? `Ve všech ${model.nR2} obvodech 2. kola je rozhodnuto.`
+      ? `Ve všech ${model.nR2} obvodech 2. kola je rozhodnuto (v ${(['', 'jednom', 'dvou', 'třech', 'čtyřech', 'pěti', 'šesti', 'sedmi'][27 - model.nR2]) || 27 - model.nR2} ${27 - model.nR2 === 1 ? 'obvodu' : 'obvodech'} se rozhodlo již v 1. kole).`
       : `Sčítá se: sečteno ${rep.toLocaleString('cs')} z ${total.toLocaleString('cs')} okrsků, rozhodnuto ${model.feed.length} z ${model.nR2} obvodů.`;
 
   return (
@@ -287,7 +287,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
       <div style={{ width: 'min(1120px, calc(100vw - 32px))', marginLeft: 'calc(50% - min(560px, 50vw - 16px))' }}>
       <ChartCard
         title="Kdo usedne v Senátu"
-        subtitle={`27 křesel, o kterých se letos rozhodlo nebo rozhoduje. Data z ${hhmm(api.generated)}, obnova sama každých 30 s.`}
+        subtitle="27 křesel, o kterých se letos rozhodovalo."
         source="ČSÚ, senat.cz; predikce: Kateřina Mahdalová & Michal Škop, DataTimes.cz"
       >
         <div style={{ fontFamily: FONT, color: INK }}>
@@ -343,7 +343,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
               {/* popisky nově zvolených po stranách, vodicí čáry vedou pod křesly */}
               {/* popisky bez vodicích čar: puntík v barvě klubu na nezarovnané straně (vlevo před jménem, vpravo za příjmením);
                   najetí na jméno zvětší jeho křeslo, odjetí ho vrátí */}
-              {!narrow && labels.map((l) => {
+              {!narrow && !vse && labels.map((l) => {
                 const barva = kl.kluby.find((k) => k.id === l.s.klub)?.barva ?? MUTED;
                 const on = hover === l.i;
                 return (
@@ -382,7 +382,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
           </div>
 
           {/* na úzkém displeji místo popisků v grafu seznam jmen po klubech */}
-          {narrow && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 210px), 1fr))', gap: '10px 18px', margin: '6px 0 12px' }}>
+          {narrow && !vse && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 210px), 1fr))', gap: '10px 18px', margin: '6px 0 12px' }}>
             {kl.kluby.map((k) => {
               const list = model.seats.filter((s) => s.klub === k.id && (s.kind === 'new' || s.kind === 'r1')).sort((x, y) => (x.ob ?? 0) - (y.ob ?? 0));
               if (!list.length) return null;
