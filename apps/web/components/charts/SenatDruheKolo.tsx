@@ -369,7 +369,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
                 );
               })}
               {/* sčítačka: součet vybraných klubů (celý Senát = i trvající mandáty); spodní hrana lícuje se spodkem kuliček (292 + 14) */}
-              <text x={300} y={306} textAnchor="middle" fontSize={118} fontWeight={600} fill="#bcbcb0" /* background.9 */
+              <text x={300} y={306} textAnchor="middle" fontSize={96} fontWeight={600} fill="#bcbcb0" /* background.9 */
                 style={{ fontFamily: 'var(--font-ibm-plex-serif), Georgia, serif', fontVariantNumeric: 'lining-nums tabular-nums' }}>
                 {model.tally.filter((t) => !off.has(t.k.id)).reduce((s, t) => s + (vse ? t.stay : 0) + t.r1 + t.r2, 0)}
               </text>
