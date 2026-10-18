@@ -1016,6 +1016,17 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 
 ---
 
+## Mapy volebních obvodů (Senát, kraje, obce)
+
+- **Barva je dominantní, hranice musí být vidět.** Obvody plnou barvou (opacity ~0,9) s bílou hranicí ~2 px, aby sousední obvody stejné barvy (Děčín × Česká Lípa, Hradec Králové × Rychnov) nevypadaly jako jeden. Vzor: výřez Prahy v `SenatVitezoveMapa`.
+- **Tečkový motiv jen jako podkres** (bílé tečky, opacity ~0,2) – nikdy ne tečky v barvě strany místo ploch. Tečková mapa je styl coverů, ne čitelné mapy obvodů.
+- **Barva podle senátorského klubu se musí dát doložit:** obhájce = jeho klub podle senat.cz (ověřit skriptem, např. `_data_pipeline/kluby_kontrola.py`), nový senátor = „klub zatím neznámý“ a barva podle kandidátky. V tooltipu klub a kandidátku vždy odděleně, koaliční zkratky ČSÚ („KDUODSSTANPiTOP“) nikdy, jen vypsané strany.
+- Jedno logo na graf (ChartCard), žádné druhé logo uvnitř mapy.
+
+*Ponaučení (17. 10. 2026, Senát 2. kolo):* první verze mapy vítězů měla dominantní tečky a obvody se slévaly; tooltip míchal klub s kandidátkou, takže nebylo poznat, proč má obhájce (Grulich, kandidátka KDU-ČSL, ODS, STAN, Piráti, TOP 09 a LES) barvu klubu ODS a TOP 09.
+
+---
+
 ## Standard pro mapu světa: `WorldMapViewport`
 
 Sdílený SVG viewport pro mapy světa. Výchozí profil je závazný pro nové celosvětové mapy v obou aplikacích, pokud konkrétní datový příběh nevyžaduje jiný geografický důraz.

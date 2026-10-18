@@ -277,7 +277,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
   const stav = rep === 0
     ? `Zatím nemáme data. Volební místnosti se ${Date.now() < Date.parse('2026-10-17T14:00:00+02:00') ? 'zavírají' : 'zavřely'} ve 14:00, čekáme na první sečtené okrsky z Českého statistického úřadu.`
     : model.feed.length === model.nR2 && model.pend.length === 0
-      ? `Ve všech ${model.nR2} obvodech 2. kola je rozhodnuto.`
+      ? `Ve všech ${model.nR2} obvodech 2. kola je rozhodnuto (v ${(['', 'jednom', 'dvou', 'třech', 'čtyřech', 'pěti', 'šesti', 'sedmi'][27 - model.nR2]) || 27 - model.nR2} ${27 - model.nR2 === 1 ? 'obvodu' : 'obvodech'} se rozhodlo již v 1. kole).`
       : `Sčítá se: sečteno ${rep.toLocaleString('cs')} z ${total.toLocaleString('cs')} okrsků, rozhodnuto ${model.feed.length} z ${model.nR2} obvodů.`;
 
   return (
@@ -287,7 +287,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
       <div style={{ width: 'min(1120px, calc(100vw - 32px))', marginLeft: 'calc(50% - min(560px, 50vw - 16px))' }}>
       <ChartCard
         title="Kdo usedne v Senátu"
-        subtitle={`27 křesel, o kterých se letos rozhodlo nebo rozhoduje. Data z ${hhmm(api.generated)}, obnova sama každých 30 s.`}
+        subtitle="27 křesel, o kterých se letos rozhodovalo."
         source="ČSÚ, senat.cz; predikce: Kateřina Mahdalová & Michal Škop, DataTimes.cz"
       >
         <div style={{ fontFamily: FONT, color: INK }}>
@@ -296,6 +296,13 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
             <span>{stav}</span>
           </div>
 
+          {/* nápověda se zakulacenou šipkou k vyklikávací legendě */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', gap: 4, fontSize: 13, color: MUTED, fontStyle: 'italic', margin: '2px 0 -2px', paddingLeft: '8%' }}>
+            <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" fill="none" stroke={MUTED} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M24 4 C 14 2, 6 6, 5 16" /><path d="M1.5 12.5 L5 16.5 L8.5 12.8" />
+            </svg>
+            <span style={{ paddingBottom: 8 }}>kliknutím vyberte</span>
+          </div>
           {/* legenda = počty klubů, vyklikávací */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 6 }}>
             {model.tally.filter((t) => t.stay + t.r1 + t.r2 > 0).map(({ k, stay, r1, r2 }) => {
@@ -321,35 +328,51 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
             </span>
             {/* nenápadný přepínač vpravo */}
             <button type="button" onClick={() => setVse((v) => !v)} aria-pressed={vse}
-              style={{ marginLeft: 'auto', alignSelf: 'center', fontFamily: FONT, fontSize: 12.5, padding: '2px 0', border: 0, background: 'none', color: MUTED, textDecoration: 'underline', textUnderlineOffset: 3, cursor: 'pointer' }}>
-              {vse ? 'jen 27 volených' : 'celý Senát'}
+              title={vse ? 'Přepnout na 27 zvolených' : 'Přepnout na celý Senát'}
+              style={{ marginLeft: 'auto', alignSelf: 'center', display: 'inline-flex', alignItems: 'center', gap: 5, fontFamily: FONT, fontSize: 12.5, padding: '2px 0', border: 0, background: 'none', color: MUTED, cursor: 'pointer' }}>
+              {/* ikonka přepnutí ⇄ */}
+              <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 5h11M10 2l3 3-3 3" /><path d="M14 11H3M6 8l-3 3 3 3" />
+              </svg>
+              <span style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>{vse ? '27 zvolených' : 'celý Senát'}</span>
             </button>
           </div>
 
           <div ref={boxRef} style={{ position: 'relative' }}>
             <svg viewBox={narrow ? '0 -18 600 330' : '-262 -18 1124 348'} style={{ width: '100%', display: 'block' }} role="img" aria-label="Amfiteátr 81 křesel Senátu">
               {/* popisky nově zvolených po stranách, vodicí čáry vedou pod křesly */}
-              {!narrow && labels.map((l) => (
-                <line key={`l${l.i}`} x1={l.p.x} y1={l.p.y} x2={l.left ? -4 : 604} y2={l.y} stroke="#bcbcb0" /* background.9 – nejtmavší béžová */ strokeWidth={0.8} />
-              ))}
-              {!narrow && labels.map((l) => (
-                <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={700} fill={INK}>
-                  {l.s.jmeno}
-                </text>
-              ))}
+              {/* popisky bez vodicích čar: puntík v barvě klubu na nezarovnané straně (vlevo před jménem, vpravo za příjmením);
+                  najetí na jméno zvětší jeho křeslo, odjetí ho vrátí */}
+              {!narrow && !vse && labels.map((l) => {
+                const barva = kl.kluby.find((k) => k.id === l.s.klub)?.barva ?? MUTED;
+                const on = hover === l.i;
+                return (
+                  <text key={`t${l.i}`} x={l.left ? -10 : 610} y={l.y + 6} textAnchor={l.left ? 'end' : 'start'} fontSize={17} fontWeight={400}
+                    fill={INK} opacity={hover !== null && !on ? 0.55 : 1}
+                    style={{ cursor: 'pointer', transition: 'opacity .2s', fontFamily: 'var(--font-ibm-plex-serif), Georgia, serif' }}
+                    onMouseEnter={() => setHover(l.i)} onMouseLeave={() => setHover(null)} onClick={() => setHover(l.i)}>
+                    {l.left && <tspan fill={barva} fontSize={20}>● </tspan>}
+                    {l.s.jmeno}
+                    {!l.left && <tspan fill={barva} fontSize={20}> ●</tspan>}
+                  </text>
+                );
+              })}
               {pts.map((p, i) => {
                 const s = model.seats[i];
                 if (!s) return null;
                 return (
-                  <circle key={i} cx={p.x} cy={p.y} r={14} fill={color(s)}
-                    stroke={s.kind === 'pend' ? PEND : 'none'} strokeWidth={s.kind === 'pend' ? 2 : 1.5}
+                  <circle key={i} cx={p.x} cy={p.y} r={hover === i ? 18 : 14} fill={color(s)}
+                    stroke={s.kind === 'pend' ? PEND : hover === i ? INK : 'none'} strokeWidth={s.kind === 'pend' ? 2 : 1.5}
                     strokeDasharray={s.kind === 'pend' ? '3 2.5' : undefined}
                     onMouseEnter={() => setHover(i)} onMouseLeave={() => setHover(null)} onClick={() => setHover(i)}
-                    style={{ transition: 'fill .6s ease, cx .8s ease, cy .8s ease', cursor: 'pointer' }} />
+                    style={{ transition: 'fill .6s ease, cx .8s ease, cy .8s ease, r .2s ease', cursor: 'pointer' }} />
                 );
               })}
-              <text x={300} y={258} textAnchor="middle" fontSize={34} fontWeight={700} fill={INK}>{81 - model.pend.length - (vse ? 0 : model.tally.reduce((s, t) => s + t.stay, 0))}</text>
-              <text x={300} y={282} textAnchor="middle" fontSize={14} fill={MUTED}>{vse ? 'senátorů známe' : 'z 27 křesel známe'}</text>
+              {/* sčítačka: součet vybraných klubů (celý Senát = i trvající mandáty); spodní hrana lícuje se spodkem kuliček (292 + 14) */}
+              <text x={300} y={306} textAnchor="middle" fontSize={96} fontWeight={600} fill="#bcbcb0" /* background.9 */
+                style={{ fontFamily: 'var(--font-ibm-plex-serif), Georgia, serif', fontVariantNumeric: 'lining-nums tabular-nums' }}>
+                {model.tally.filter((t) => !off.has(t.k.id)).reduce((s, t) => s + (vse ? t.stay : 0) + t.r1 + t.r2, 0)}
+              </text>
             </svg>
             {hoverSeat && (
               <div style={{ position: 'absolute', left: '50%', top: 0, transform: 'translateX(-50%)', background: '#fff', border: `1px solid ${LINE}`, borderRadius: 6, padding: '5px 9px', fontSize: 13, pointerEvents: 'none', whiteSpace: 'nowrap' }}>
@@ -359,7 +382,7 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
           </div>
 
           {/* na úzkém displeji místo popisků v grafu seznam jmen po klubech */}
-          {narrow && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 210px), 1fr))', gap: '10px 18px', margin: '6px 0 12px' }}>
+          {narrow && !vse && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 210px), 1fr))', gap: '10px 18px', margin: '6px 0 12px' }}>
             {kl.kluby.map((k) => {
               const list = model.seats.filter((s) => s.klub === k.id && (s.kind === 'new' || s.kind === 'r1')).sort((x, y) => (x.ob ?? 0) - (y.ob ?? 0));
               if (!list.length) return null;
@@ -383,11 +406,6 @@ export default function SenatDruheKolo({ apiUrl, klubyUrl, feedUrl, cast }: { ap
               </div>
             )}
           </div>}
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', justifyContent: 'space-between', marginTop: 4 }}>
-            <span style={{ fontSize: 12.5, color: MUTED }}>Kliknutím na klub ho vypnete. Většina = 41 hlasů.</span>
-          </div>
-          {kl.poznamka && <div style={{ fontSize: 12.5, color: MUTED, marginTop: 8, lineHeight: 1.4 }}>{kl.poznamka}</div>}
         </div>
       </ChartCard>
       </div>
