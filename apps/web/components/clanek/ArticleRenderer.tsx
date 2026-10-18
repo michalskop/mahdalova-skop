@@ -28,6 +28,7 @@ import HtmlEmbed from '@/components/clanek/HtmlEmbed';
 import AttendanceSwarm from '@/components/mdx/AttendanceSwarm';
 import VegaChart from '@/components/charts/VegaChart';
 import ChartRow from '@/components/charts/ChartRow';
+import ChartCard from '@/components/charts/ChartCard';
 import AnimatedBars from '@/components/charts/AnimatedBars';
 import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
 import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
@@ -38,6 +39,8 @@ import ObceKvVysledkyMapa from '@/components/charts/ObceKvVysledkyMapa'; // komu
 import OkrskyKvMapa from '@/components/charts/OkrskyKvMapa'; // komunální volby 2026 – kdo vyhrál v okrscích (jak volili vaši sousedé)
 import SenatVysledkyMapa from '@/components/charts/SenatVysledkyMapa'; // Senát 2026 – výsledky 1. kola a průběh predikce
 import SenatPredikceMapa from '@/components/charts/SenatPredikceMapa'; // Senát 2026 – průběžná predikce po obvodech
+import SenatTecky from '@/components/charts/SenatTecky'; // tečkové pruhy: postoje 27 nových senátorů z Volební kalkulačky (tečka = senátor)
+import SenatSlozeni from '@/components/charts/SenatSlozeni'; // Senát 2026 – nové složení (statický amfiteátr 81 křesel)
 import SenatDruheKolo from '@/components/charts/SenatDruheKolo'; // Senát 2026 – 2. kolo: amfiteátr, rafičky, „už víme“
 import SenatVitezoveMapa from '@/components/charts/SenatVitezoveMapa'; // Senát 2026 – mapa vítězů 27 obvodů (1./2. kolo)
 import ZivyPrenos from '@/components/clanek/ZivyPrenos'; // online reportáž z JSON
@@ -440,10 +443,13 @@ export function ArticleRenderer({
       );
     },
 
-    HtmlEmbed: ({ file, ...rest }) => {
+    // S titulkem (title/subtitle/source) se vložené HTML – typicky statický SVG graf – zabalí do ChartCard
+    // (stejný rámeček, logo a zdroj jako ostatní grafy); bez titulku zůstává holý embed (mapy, iframy).
+    HtmlEmbed: ({ file, title, subtitle, source, ...rest }) => {
       const htmlEmbedData = (mdxSource.scope as any)?.htmlEmbedData as Record<string, string> | undefined;
       const htmlContent = file ? htmlEmbedData?.[file] : undefined;
-      return <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+      const embed = <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+      return title || subtitle || source ? <ChartCard title={title} subtitle={subtitle} source={source}>{embed}</ChartCard> : embed;
     },
 
     AttendanceSwarm: ({ dataFile, title, subtitle, source }: { dataFile?: string; title?: string; subtitle?: string; source?: string }) => {
@@ -473,6 +479,8 @@ export function ArticleRenderer({
     KalkulackaMapa,
     SenatPredikceMapa,
     SenatDruheKolo,
+    SenatSlozeni,
+    SenatTecky,
     SenatVitezoveMapa,
     ObceKvPredikceMapa,
     ObceKvVysledkyMapa,

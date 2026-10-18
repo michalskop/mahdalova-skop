@@ -1,0 +1,8 @@
+# senat.cz, 21. schůze, 24. hlasování, 24.01.2024, tisk 122/14 (Istanbulská úmluva), https://www.senat.cz/xqw/xervlet/pssenat/hlasy?G=22128&O=14
+# legenda senat.cz: A = ano, N = ne, 0 = nepřítomen, X = zdržel se; přítomno 71, třeba 36, ANO 34, NE 28 -> zamítnuto
+N Lumír Aschenbrenner|A Tomáš Czernin|X Martin Červíček|N Jiří Dušek|N Ladislav Faktor|A Tomáš Fiala|0 Tomáš Goláň|A Jan Grulich|N Hynek Hanza|N Zdeněk Hraba|N Jitka Chalánková|N Jaroslav Chalupský|X Ladislav Chlupáč|N Tomáš Jirsa|N Pavel Karpíšek|A Hana Kordová Marvanová|X Michal Kortyš|N Rostislav Koštial|X Roman Kraus|0 Miroslava Němcová|N Raduan Nwelati|X Zdeněk Nytra|N Jiří Oberfalzer|X Jan Paparega|A Herbert Pavera|A Jan Pirk|A Jiří Růžička|A Marek Slabý|X Jarmila Smotlachová|A Ondřej Šimetka|N Jan Tecl|N Tomáš Töpfer|A Tomáš Třetina|0 Vladislav Vilímec|A Miloš Vystrčil|N Jaroslav Zeman
+A Miroslav Balatka|A Mikuláš Bek|N Michael Canov|A Jiří Drahoš|A Marek Hilšer|A Pavel Kárník|0 Zbyněk Linhart|A Marek Ošťádal|A Helena Pešatová|A Miroslav Plevný|A David Smoljak|A Jan Sobotka|0 Leopold Sulovský|0 Petr Štěpánek|A Ivo Trešl|0 Jiří Vosecký|A Karel Zitterbart|A Hana Žáková
+N Josef Bazala|N Jiří Čunek|X Petr Fiala|A Miluše Horská|A Lumír Kantor|N Josef Klement|N Patrik Kunčar|X Bohuslav Procházka|N Eva Rajchmanová|0 Jitka Seitlová|0 Ivana Váňová|N Jaromíra Vítková
+A Miroslav Adámek|0 Ondřej Feber|N Zdeněk Matušek|A Věra Procházková|N Ladislav Václavec|N Petr Vícha
+A Jan Holásek|A Martin Krsek|A Václav Láska|A Přemysl Rabas|A Adéla Sucharda Šípová|A Lukáš Wagenknecht
+N Pavel Fischer|N Daniela Kovářová|N Jana Zwyrtek Hamplová

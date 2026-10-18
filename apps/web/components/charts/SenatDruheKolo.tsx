@@ -157,7 +157,7 @@ function KopirujVetu() {
 // ---------- amfiteátr ----------
 type Seat = { klub: string | null; kind: 'new' | 'r1' | 'stay' | 'pend'; ob?: number; title: string; jmeno?: string; obvod?: string };
 
-function hemicycle(n: number) {
+export function hemicycle(n: number) {
   const rows = 5, r0 = 110, r1 = 280;
   const radii = Array.from({ length: rows }, (_, i) => r0 + ((r1 - r0) * i) / (rows - 1));
   const sum = radii.reduce((s, x) => s + x, 0);
