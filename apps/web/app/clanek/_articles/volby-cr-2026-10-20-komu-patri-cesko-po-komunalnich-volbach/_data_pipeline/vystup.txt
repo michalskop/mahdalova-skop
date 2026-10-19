@@ -1,0 +1,60 @@
+2022: zastupitelstev obcí 6255, se zvolenými 6244, obyvatel 10 521 215, zvolených 59228
+2026: zastupitelstev obcí 6255, se zvolenými 6250, obyvatel 10 920 509, zvolených 59099
+stejná zastupitelstva v obou letech: 6240; bez zvolených 2022: ['Líšná', 'Třebsko', 'Buková', 'Brodec', 'Ohařice', 'Nevězice', 'Cebiv', 'Rokytovec', 'Všeradov', 'Trokavec', 'Břežany']; 2026: ['Kobylnice', 'Slavníč', 'Píšť', 'Krchleby', 'Rokytovec']
+obyvatel ve srovnání: 2022 10 518 234, 2026 10 917 443; mandátů 2022 59 204, 2026 59 027
+
+PODÍL OBYVATEL (stejná zastupitelstva)  2022 %  2026 %  změna p. b.  2022 obyv.  2026 obyv.  změna  | mandáty 2022 → 2026, podíl mandátů 2026
+  nezávislí                      31,9   35,2     3,3    3 352 974   3 843 365   490 390  | 43529 → 45700, 77,4 % mandátů
+  místní a ostatní               13,0   16,5     3,5    1 364 554   1 798 789   434 235  | 2999 → 3368, 5,7 % mandátů
+  ANO                            15,2   13,0    -2,2    1 600 328   1 419 647  -180 681  | 1543 → 1462, 2,5 % mandátů
+  STAN                            6,8   10,7     3,8      719 737   1 162 953   443 215  | 2713 → 2465, 4,2 % mandátů
+  ODS                             9,9    9,1    -0,8    1 044 817     998 316   -46 502  | 2067 → 1594, 2,7 % mandátů
+  KDU-ČSL                         6,0    5,7    -0,3      627 839     622 839    -5 000  | 3291 → 2931, 5,0 % mandátů
+  TOP 09                          3,1    2,9    -0,2      327 665     316 830   -10 835  | 472 → 387, 0,7 % mandátů
+  Piráti                          4,3    2,8    -1,5      449 984     304 830  -145 154  | 193 → 163, 0,3 % mandátů
+  Zelení                          0,9    1,0     0,1       99 556     114 038    14 481  | 131 → 107, 0,2 % mandátů
+  SOCDEM                          2,9    1,0    -1,8      300 205     113 246  -186 960  | 1046 → 361, 0,6 % mandátů
+  SPD                             4,0    1,0    -3,0      420 130     104 203  -315 927  | 436 → 158, 0,3 % mandátů
+  Svobodní                        0,4    0,3    -0,1       38 381      34 115    -4 265  | 109 → 92, 0,2 % mandátů
+  Motoristé                       0,0    0,3     0,3            0      30 854    30 854  | 0 → 13, 0,0 % mandátů
+  KSČM                            1,2    0,2    -1,0      125 008      22 428  -102 580  | 554 → 113, 0,2 % mandátů
+  PRO                             0,1    0,1     0,1        7 697      14 361     6 664  | 20 → 39, 0,1 % mandátů
+  Stačilo!                        0,0    0,1     0,1            0       9 887     9 887  | 0 → 35, 0,1 % mandátů
+  Přísaha                         0,1    0,0    -0,0        8 948       4 560    -4 388  | 53 → 33, 0,1 % mandátů
+  Trikolora                       0,3    0,0    -0,3       30 411       2 184   -28 227  | 48 → 6, 0,0 % mandátů
+
+VÁHA MANDÁTU 2026 (obyvatel na jednoho zastupitele)
+  nejmenší: [('Vysoká Lhota', '3,2', 16, 5), ('Minice', '3,9', 27, 7), ('Čilá', '4,0', 20, 5)]
+  největší: [('Praha hl.m.', '21 647', '1 407 084', 65), ('Brno', '7 351', '404 296', 55), ('Ostrava', '5 106', '280 853', 55)]
+  medián zastupitelstva: 57,3 (Bukovka)
+
+PODLE VELIKOSTI OBCE 2026 (podíl obyvatel)
+  0–500: 3318 obcí, 826 146 obyv., nezávislí 94,3 %, ANO 0,1 %, STAN 1,5 %, ODS 0,2 %, místní a ostatní 1,1 %
+  500–2000: 2190 obcí, 2 105 902 obyv., nezávislí 80,8 %, ANO 0,6 %, STAN 4,8 %, ODS 1,7 %, místní a ostatní 4,2 %
+  2000–10000: 600 obcí, 2 358 650 obyv., nezávislí 45,5 %, ANO 6,7 %, STAN 8,8 %, ODS 8,5 %, místní a ostatní 16,0 %
+  10000–50000: 114 obcí, 2 271 338 obyv., nezávislí 10,7 %, ANO 22,2 %, STAN 10,9 %, ODS 11,8 %, místní a ostatní 24,4 %
+  50000–1000000000: 18 obcí, 3 355 407 obyv., nezávislí 1,4 %, ANO 22,1 %, STAN 17,7 %, ODS 14,7 %, místní a ostatní 22,8 %
+
+NEJVĚTŠÍ ZMĚNY PO ZASTUPITELSTVECH (obyvatelé)
+  STAN: ztráty Třinec -13 481 (13 → 0 mand.); Říčany -4 623 (6 → 0 mand.); Kuřim -4 466 (7 → 0 mand.); Třebíč -2 536 (8 → 6 mand.); Luštěnice -2 210 (15 → 0 mand.)
+  STAN: zisky Praha hl.m. 269 898 (5 → 17 mand.); Plzeň 25 611 (4 → 10 mand.); Brno 24 310 (5 → 8 mand.); Olomouc 16 637 (2 → 9 mand.); Ostrava 15 396 (4 → 7 mand.)
+  ANO: ztráty Praha hl.m. -36 581 (14 → 11 mand.); Ústí nad Labem -17 154 (13 → 6 mand.); Ostrava -14 914 (21 → 18 mand.); České Budějovice -9 723 (13 → 8 mand.); Brno -8 833 (13 → 11 mand.)
+  ANO: zisky Plzeň 18 097 (15 → 18 mand.); Boskovice 3 791 (0 → 7 mand.); Krupka 3 725 (5 → 11 mand.); Žatec 2 870 (8 → 11 mand.); Tachov 2 725 (0 → 4 mand.)
+  SPD: ztráty Praha hl.m. -39 243 (2 → 0 mand.); Ostrava -35 610 (7 → 0 mand.); Brno -34 497 (5 → 0 mand.); Plzeň -14 360 (4 → 0 mand.); Liberec -10 559 (4 → 0 mand.)
+  SPD: zisky Kutná Hora 807 (0 → 1 mand.); Moravská Třebová 448 (0 → 1 mand.); Příbor 396 (0 → 1 mand.); Řevničov 293 (1 → 3 mand.); Měnín 254 (0 → 2 mand.)
+  Piráti: ztráty Praha hl.m. -103 549 (13 → 7 mand.); Ostrava -15 261 (3 → 0 mand.); Plzeň -14 360 (4 → 0 mand.); Hradec Králové -7 266 (4 → 1 mand.); Olomouc -6 633 (3 → 0 mand.)
+  Piráti: zisky České Budějovice 6 722 (3 → 6 mand.); Český Těšín 5 929 (0 → 7 mand.); Uherský Brod 3 015 (0 → 5 mand.); Břeclav 2 731 (0 → 3 mand.); Ústí nad Labem 2 406 (3 → 4 mand.)
+  ODS: ztráty České Budějovice -24 585 (16 → 4 mand.); Brno -16 635 (12 → 9 mand.); Liberec -10 559 (4 → 0 mand.); Zlín -5 150 (7 → 4 mand.); Ústí nad Labem -4 904 (4 → 2 mand.)
+  ODS: zisky Praha hl.m. 41 906 (10 → 11 mand.); Ostrava 20 522 (5 → 9 mand.); Teplice 7 999 (6 → 10 mand.); Blansko 4 024 (6 → 11 mand.); Jihlava 3 579 (7 → 9 mand.)
+  nezávislí: ztráty Praha hl.m. -19 622 (1 → 0 mand.); Boskovice -6 046 (14 → 0 mand.); Česká Třebová -6 043 (12 → 1 mand.); Vrchlabí -5 693 (12 → 2 mand.); Písek -4 417 (4 → 0 mand.)
+  nezávislí: zisky Bohumín 14 076 (0 → 16 mand.); Beroun 12 425 (0 → 12 mand.); Plzeň 11 991 (0 → 3 mand.); Ústí nad Labem 9 706 (3 → 7 mand.); Vsetín 9 490 (2 → 10 mand.)
+
+KONTROLA – PODLE STRANICKÉ PŘÍSLUŠNOSTI ZVOLENÉHO (2022 → 2026 % obyvatel)
+  bez stranické příslušnosti: 60,8 → 59,5
+  ANO: 11,0 → 10,0
+  ODS: 7,3 → 7,2
+  místní a ostatní: 3,4 → 6,1
+  STAN: 1,5 → 6,0
+  KDU-ČSL: 3,2 → 3,5
+  TOP 09: 2,5 → 2,5
+  Piráti: 3,7 → 2,4
