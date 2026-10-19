@@ -15,7 +15,7 @@ module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Explainer', dal: 'Komunální volby 2026' },
   titulek: 'Nepoměr<br>na radnicích', // Kateřina 19. 10.; dva řádky ve všech formátech
-  pod: 'Valnou většinu křesel obsadili nezávislí,<br>fakticky ale zastupují jen třetinu lidí', // jedno souvětí (Kateřina 19. 10.), zalomené za čárkou, jinak zůstává „lidí“ samo
+  pod: 'Valnou většinu křesel obsadili nezávislí,<br>fakticky ale zastupují jen třetinu voličů', // jedno souvětí (Kateřina 19. 10.), zalomené za čárkou, jinak zůstává „lidí“ samo
   legenda: [[NK, 'nezávislí'], [STRANY, 'strany a hnutí'], ['transparent;display:none', velikost]], // Kateřina 19. 10.
   logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo
   // brandYellow.8 / brandNavy.7 záře, brandYellow.2 / brandNavy.1 texty, brand.6 štítek

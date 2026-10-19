@@ -85,7 +85,7 @@ body = []
 for kod, o in obce.items():
     if kod in stred:
         lon, lat = conv(*stred[kod])
-        body.append({'lon': round(lon, 4), 'lat': round(lat, 4), 'p': o['p'], 'nk': o['nk'] * 2 > o['m'], 'n': o['n']})
+        body.append({'kod': kod, 'lon': round(lon, 4), 'lat': round(lat, 4), 'p': o['p'], 'nk': o['nk'] * 2 > o['m'], 'n': o['n']})
 (HERE / 'body.json').write_text(json.dumps(body, ensure_ascii=False), encoding='utf-8')
 print('obcí:', len(body), 'z', len(obce), '| většina nezávislých:', sum(b['nk'] for b in body),
       '| obyvatel tam:', sum(b['p'] for b in body if b['nk']), 'z', sum(b['p'] for b in body))

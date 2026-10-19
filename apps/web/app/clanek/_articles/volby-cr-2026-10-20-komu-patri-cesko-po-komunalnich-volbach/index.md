@@ -1,8 +1,8 @@
 ---
-title: "Nezávislí mají na radnicích tři čtvrtiny křesel, zastupují ale jenom třetinu lidí"
+title: "Nezávislí mají na radnicích tři čtvrtiny křesel, zastupují ale jenom třetinu voličů"
 date: "2026-10-20"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Po komunálních volbách sedí na radnicích hlavně nezávislí, většinou ale v malých obcích. Když se spočítá, kolik lidí za každým zastupitelem stojí, připadá na nezávislé třetina Česka. Zbylé dvě třetiny zastupují strany a městská hnutí. Nejvíc si polepšil STAN, nejvíc ztratila SPD."
+excerpt: "Po komunálních volbách sedí na radnicích hlavně nezávislí, většinou ale v malých obcích. Když se spočítá, kolik voličů za každým zastupitelem stojí, připadá na nezávislé zhruba třetina voličů v Česku. Zbytek zastupují strany a městská hnutí. Nejvíc si polepšil STAN, nejvíc ztratila SPD."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -15,46 +15,62 @@ promoted: 1
 
 Po letošních komunálních volbách sedí na většině českých radnic nezávislí. Obsadili tři ze čtyř křesel v obecních zastupitelstvech. Většina z nich ale zasedá v malých obcích, kde žije málo lidí.
 
-Proto má smysl počítat i jinak: nejen kolik má kdo křesel, ale kolik lidí za těmi křesly stojí. Pak vychází, že nezávislí zastupují asi třetinu lidí v Česku. Zbylé dvě třetiny zastupují strany a městská hnutí, protože jejich zastupitelé sedí hlavně ve městech nad 10 000 obyvatel, kde žije víc než polovina lidí. Spočítali jsme to z [konečných výsledků voleb do zastupitelstev obcí](https://volby.gov.cz/app/kv2026/cs/20261009/home), které zveřejnil Český statistický úřad.
+Proto má smysl počítat i jinak: nejen kolik má kdo křesel, ale kolik voličů za těmi křesly stojí. Pak vychází, že nezávislí zastupují zhruba třetinu voličů v Česku (36 %). Zbytek zastupují strany a městská hnutí, protože jejich zastupitelé sedí hlavně ve městech nad 10 000 obyvatel, kde žije polovina voličů. Spočítali jsme to z [konečných výsledků voleb do zastupitelstev obcí](https://volby.gov.cz/app/kv2026/cs/20261009/home), které zveřejnil Český statistický úřad.
 
-Nejlíp je to vidět na Praze. Na jednoho pražského zastupitele připadá přes 21 tisíc obyvatel, v typické české obci kolem 57. Jeden pražský zastupitel tak zastupuje víc lidí než 300 zastupitelů z typických obcí dohromady. Proto ANO, které má na radnicích ani ne tři křesla ze sta, zastupuje 13 lidí ze sta: jeho zastupitelé sedí hlavně ve velkých městech.
+Nejlépe je to vidět na Praze. Na jednoho pražského zastupitele připadá přes 14 tisíc voličů, v typické české obci kolem 46. Jeden pražský zastupitel tak zastupuje tolik voličů jako přes 300 zastupitelů z typických obcí dohromady. Proto ANO, které má na radnicích ani ne tři křesla ze sta, zastupuje skoro 13 voličů ze sta: jeho zastupitelé sedí hlavně ve velkých městech.
 
-## Zastupitel v Praze zastupuje přes 21 tisíc lidí, ve Vysoké Lhotě tři
+## Zastupitel/ka v Praze reprezentuje přes 14 tisíc voličů, ve Vysoké Lhotě zhruba tři
 
-<RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["volby-cr-2026-10-16-ods-stan-pirati-v-obcich", "volby-cr-2026-10-14-spd-ano-motoriste-v-obcich"]} />Výsledky komunálních voleb se dají sčítat třemi způsoby a každý ukáže jiný obrázek. Součet mandátů zvýhodňuje malé obce: Vysoká Lhota na Pelhřimovsku má 16 obyvatel a pět zastupitelů, Praha 1,4 milionu obyvatel a 65 zastupitelů, a přesto má v součtu mandátů každý vesnický zastupitel stejnou váhu jako pražský. Polovina zastupitelstev v Česku má na jeden mandát méně než 58 obyvatel.
+Když chceme výsledky komunálních voleb shrnout za celou republiku, máme tři základní možnosti. Žádná z nich není chybná, každá ale odpovídá na jinou otázku.
 
-Součet hlasů naopak zvýhodňuje velká města. V komunálních volbách má každý volič tolik hlasů, kolik má jeho zastupitelstvo členů, takže Pražan rozdává až 65 křížků a volič ve Vysoké Lhotě pět.
+**Počet křesel.** Sečteme zvolené zastupitele. Počítat je můžeme podle strany, která je navrhla, podle kandidátky, za kterou kandidovali, nebo podle toho, jestli jsou členy strany. Výsledek ukazuje, kolik lidí má strana v zastupitelstvech, tedy jak širokou má základnu. I dva zastupitelé v malé obci pro stranu znamenají, že tam má své lidi. O podpoře mezi voliči ale počet křesel mnoho neřekne: ve Vysoké Lhotě na Pelhřimovsku je 16 voličů a pět křesel, v Praze 918 tisíc voličů a 65 křesel.
 
-Třetí cesta přepočítá každý mandát na obyvatele: počet obyvatel obce vydělíme počtem zastupitelů. Mandát ve Vysoké Lhotě pak váží 3,2 obyvatele, v Brně 7 351 a v Praze 21 647. Když váhy mandátů jedné strany sečteme po celé republice, vyjde, kolik lidí žije v obcích pod správou jejích zastupitelů. Součet za všechny strany dá počet obyvatel Česka.
+<RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["volby-cr-2026-10-16-ods-stan-pirati-v-obcich", "volby-cr-2026-10-14-spd-ano-motoriste-v-obcich"]} />**Součet hlasů.** U sněmovních nebo krajských voleb stačí sečíst hlasy. U komunálních to nedává smysl. Každý volič má tolik hlasů, kolik má jeho zastupitelstvo členů, ve Vysoké Lhotě pět, v Praze až 65. Hlasy by se proto musely přepočítat na voliče, a i pak by zůstal druhý problém: strany nekandidují všude. Motoristé postavili kandidátky ve 37 ze 6 254 obcí. V celostátním součtu by vyšli velmi nízko, i kdyby tam, kde kandidovali, uspěli. Celostátní procento z komunálních voleb tak ukazuje spíš to, kde strana kandidovala, než jakou má podporu.
 
-Mandát přiřazujeme kandidátce, za kterou byl zastupitel zvolen. Sdružení nezávislých kandidátů počítáme jako nezávislé, stranu kandidující samostatně nebo s nezávislými jako tu stranu. U koalic a sdružení několika celostátních stran, jako je ústecké Jedno Ústí (Zelení, STAN, Piráti, TOP 09 a místní hnutí), patří mandát straně, která zvoleného navrhla. Stejnou metodou jsme spočítali i volby 2022.
+**Přepočet křesel na voliče.** Tuhle cestu jsme zvolili my. Každé křeslo převedeme na počet voličů, které zastupuje: počet voličů v obci vydělíme počtem zastupitelů. Pražský zastupitel tak zastupuje 14 128 voličů, brněnský 5 574 a zastupitel ve Vysoké Lhotě 3,2 voliče. Když to sečteme za každou stranu po celé republice, vyjde, kolik voličů zastupují její zastupitelé. Má-li strana v Praze 15 % křesel, zastupuje 15 % pražských voličů.
+
+Křeslo přiřazujeme kandidátce, za kterou byl zastupitel zvolen. Sdružení nezávislých kandidátů počítáme jako nezávislé, stranu kandidující samostatně nebo s nezávislými jako tu stranu. Společné kandidátky několika stran, třeba koalici ODS a TOP 09 nebo ústecké Jedno Ústí (Zelení, STAN, Piráti, TOP 09 a místní hnutí), rozdělujeme podle preferenčních hlasů: když kandidáti navržení ODS dostali 6 000 hlasů a kandidáti TOP 09 4 000, připadne ODS šest desetin křesel kandidátky a TOP 09 čtyři desetiny. Stejnou metodou jsme spočítali i volby 2022.
 
 <VegaChart dataFile="data/graf_mandaty.json" />
 
-Graf ukazuje pro deset největších skupin dvě čísla z letošních voleb: podíl mandátů (světlý pruh) a podíl obyvatel, které tyto mandáty zastupují (plný pruh). Nezávislí mají 77,4 % mandátů a 35,2 % obyvatel. Místní hnutí a menší strany 5,7 % mandátů a 16,5 % obyvatel, protože k nim patří i silná městská uskupení jako Praha Sobě. U celostátních stran je to obráceně: ANO, STAN, ODS, Piráti i TOP 09 mají podíl obyvatel dva a půl až devětkrát vyšší než podíl mandátů. Výjimkou je KDU-ČSL s 5,0 % mandátů a 5,7 % obyvatel, protože je silná i na vesnicích.
+Graf ukazuje pro deset největších skupin dvě čísla z letošních voleb: podíl křesel (světlý pruh) a podíl voličů, které tato křesla zastupují (plný pruh). Nezávislí mají 77,5 % křesel a zastupují 36,4 % voličů. Místní hnutí a menší strany mají 5,7 % křesel a 16,4 % voličů, protože k nim patří i silná městská uskupení jako Praha Sobě. U celostátních stran je to obráceně: ANO, STAN, ODS, Piráti i TOP 09 zastupují dvakrát až devětkrát větší podíl voličů, než jaký mají podíl křesel. Výjimkou je KDU-ČSL s 5,0 % křesel a 5,8 % voličů, protože je silná i na vesnicích.
 
-Graf neříká, kdo v obci vládne. Zastupitelé strany, která skončila v opozici, se do jejího podílu počítají stejně jako ti v koalici. Ukazuje, kolik lidí žije tam, kde strana má v zastupitelstvu hlas, a jak velký ten hlas je.
+Graf neříká, kdo v obci vládne. Zastupitelé strany, která skončila v opozici, se do jejího podílu počítají stejně jako ti v koalici. Neříká ani, že ANO komunální volby „vyhrálo“. Z celostátních stran sice zastupuje nejvíc voličů, 12,8 %, ale pořadí ovlivňuje i to, kde strany vůbec kandidovaly.
+
+ANO přitom kandidovalo méně plošně než ODS. Hnutí postavilo kandidátky ve 344 obcích, kde žije 57,5 % voličů, ODS v 538 obcích s 62,4 % voličů. Tam, kde kandidovalo, je ale ANO silnější: zastupuje 22,3 % tamních voličů, ODS 14,4 %. Piráti a SOCDEM naopak kandidovali v mnohem menší části Česka, v obcích se 43,1 % a 22,7 % voličů, a i proto jsou jejich celostátní čísla nízká.
 
 ## Nejvíc si polepšil STAN, nejvíc ztratila SPD
 
-<SupportBanner float="left" />Ve srovnání s volbami 2022 si nejvíc polepšil STAN. Jeho zastupitelé zastupují 10,7 % obyvatel místo 6,8 %, tedy 1,16 milionu lidí místo 720 tisíc. Víc než polovinu nárůstu přinesla Praha, kde STAN kandidoval samostatně a místo pěti zastupitelů jich má sedmnáct: to odpovídá 270 tisícům obyvatel. Další přibyli v Plzni, Brně, Olomouci a Ostravě.
+Ve srovnání s volbami 2022 si nejvíc polepšil STAN. Jeho zastupitelé zastupují 10,2 % voličů místo 6,7 %, tedy 843 tisíc voličů místo 549 tisíc. Víc než polovinu nárůstu přinesla Praha, kde STAN kandidoval samostatně a místo pěti zastupitelů jich má sedmnáct: to odpovídá 170 tisícům voličů. Další přibyli v Brně, Ostravě, Plzni a Olomouci.
 
-ANO kleslo z 15,2 na 13,0 %, z 1,60 na 1,42 milionu obyvatel. Nejvíc ztratilo v Praze (ze 14 na 11 zastupitelů), v Ústí nad Labem (ze 13 na 6), v Ostravě (z 21 na 18), v Českých Budějovicích a v Brně. Posílilo v Plzni, kde má 18 zastupitelů místo 15. Kde ANO ztratilo zastupitele, ukazuje podrobně článek o [vládních stranách v obcích](/clanek/volby-cr-2026-10-14-spd-ano-motoriste-v-obcich).
+<SupportBanner float="left" />ANO kleslo z 15,2 na 12,8 %, z 1,25 na 1,06 milionu voličů. Nejvíc ztratilo v Praze (ze 14 na 11 zastupitelů), v Ostravě (z 21 na 18), v Ústí nad Labem (ze 13 na 6), v Brně a v Českých Budějovicích. Posílilo v Plzni, kde má 18 zastupitelů místo 15. Kde ANO ztratilo zastupitele, ukazuje podrobně článek o [vládních stranách v obcích](/clanek/volby-cr-2026-10-14-spd-ano-motoriste-v-obcich).
 
-SPD zastupovala po volbách 2022 obyvatele odpovídající 4,0 % Česka, 420 tisíc lidí. Letos 1,0 %, 104 tisíc. Vypadla ze zastupitelstev Prahy, Brna, Ostravy, Plzně i Liberce. Podobně klesla SOCDEM ze 2,9 na 1,0 % a Piráti ze 4,3 na 2,8 %, z toho o 104 tisíc obyvatel v Praze, kde mají místo 13 zastupitelů sedm.
+Zastupitelé SPD zastupovali po volbách 2022 3,9 % voličů, 322 tisíc. Letos 1,0 %, 81 tisíc. SPD vypadla ze zastupitelstev Prahy, Brna, Ostravy, Plzně i Liberce. Podobně klesla SOCDEM ze 2,9 na 1,1 % a Piráti ze 4,1 na 2,6 %, z toho o 83 tisíc voličů v Praze, kde mají místo 13 zastupitelů sedm.
 
-ODS zůstala skoro na místě, z 9,9 na 9,1 %. V Českých Budějovicích ztratila 12 ze 16 zastupitelů, v Praze a Ostravě naopak přidala. Nezávislí si polepšili z 31,9 na 35,2 % a místní hnutí z 13,0 na 16,5 %.
+ODS klesla z 9,9 na 9,0 %. V Českých Budějovicích ztratila 12 ze 16 zastupitelů, v Brně zhruba tři, v Ostravě a Praze naopak přidala. Nezávislí si polepšili ze 32,2 na 36,4 % a místní hnutí ze 13,1 na 16,4 %.
 
 <VegaChart dataFile="data/graf_podil.json" />
 
-Obyvatel podle údajů, ze kterých ČSÚ počítá velikost zastupitelstev, přibylo mezi oběma volbami 400 tisíc, z 10,52 na 10,92 milionu. Absolutní počty proto rostou i straně, která drží stejný podíl, a pro srovnání jsou spolehlivější procenta.
+Voličů v seznamech bylo v obou volbách skoro stejně, 8,25 milionu v roce 2022 a 8,28 milionu letos. Procenta i počty voličů proto vypovídají o změně stejně.
+
+## Na mapě patří každé straně vlastní vrstva
+
+Výsledky komunálních voleb se na jednu mapu vejdou špatně. Když obce obarvíme podle toho, kdo v nich má nejvíc křesel, vyjde skoro celé Česko jako jedna barva nezávislých, a to čtenáři nic neřekne. Když nezávislé vynecháme a barvíme podle nejsilnější strany, mapa může ukázat jako vítěze i stranu, která v obci získala dvě křesla z patnácti.
+
+Proto ukazujeme každou stranu zvlášť. Puntík je obec, kde strana kandidovala, a jeho velikost odpovídá tomu, kolik voličů tam zastupují její zastupitelé. Prázdný kroužek znamená, že strana kandidovala, ale křeslo nezískala. Kde puntík chybí, strana nekandidovala. Mapa tak ukazuje dvě věci najednou: jakou má strana sílu a kde vůbec dokáže postavit kandidátku.
+
+<HtmlEmbed file="mapa-embed.html" />
+
+U nezávislých je vidět husté pokrytí celé republiky s mezerami na místě velkých měst. ANO, STAN i ODS mají největší puntíky v Praze a krajských městech, KDU-ČSL hustou síť menších obcí na jižní a střední Moravě. Motoristé kandidovali ve 37 obcích.
 
 ## Co čísla neříkají
 
-Podíl obyvatel počítá s tím, za koho zastupitel kandidoval. Stranická příslušnost je jiná věc: většina zastupitelů zvolených za strany nejsou jejich členové a mnoho členů stran kandiduje za místní sdružení. Podle členství by zastupitelé bez stranické příslušnosti zastupovali 59,5 % obyvatel a členové ANO 10,0 %. Pro otázku, koho voliči zvolili, je ale rozhodující kandidátka.
+Počítáme s voliči zapsanými v seznamech, ne jen s těmi, kdo k volbám přišli: zastupitel zastupuje všechny voliče obce. Kdybychom počítali jen s odevzdanými obálkami, vyšel by nezávislým vyšší podíl, protože v malých obcích chodí k volbám víc lidí.
+
+Podíl voličů počítá s tím, za koho zastupitel kandidoval. Stranická příslušnost je jiná věc: většina zastupitelů zvolených za strany nejsou jejich členové a mnoho členů stran kandiduje za místní sdružení. Podle členství by zastupitelé bez stranické příslušnosti zastupovali 61,0 % voličů a členové ANO 9,8 %. Pro otázku, koho voliči zvolili, je ale rozhodující kandidátka.
 
 Srovnání zahrnuje 6 240 zastupitelstev obcí, ve kterých se zvolilo v obou letech. Praha a statutární města jsou počítaná jako celek, bez městských částí a obvodů, aby se nikdo nezapočítal dvakrát. Pro rok 2022 počítáme jen řádné volby z 23. a 24. září 2022.
 
-Data jsme vzali z [otevřených dat komunálních voleb 2026](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) a 2022, která zveřejňuje Český statistický úřad: počty obyvatel a mandátů zastupitelstev, kandidátky a zvolené zastupitele.
+Data jsme vzali z [otevřených dat komunálních voleb 2026](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) a 2022, která zveřejňuje Český statistický úřad: počty voličů v okrscích, počty mandátů, kandidátky, zvolené zastupitele a jejich preferenční hlasy.
 
 <RelatedArticles heading="🔻🔻🔻" slugs={["volby-cr-2026-10-16-ods-stan-pirati-v-obcich", "volby-cr-2026-10-14-spd-ano-motoriste-v-obcich", "volby-cr-2026-10-11-komunalni-volby-jak-volili-vasi-sousede", "volby-cr-2026-10-16-ucast-2022-2026", "volby-cr-2026-10-12-kdo-zustal-doma", "volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence"]} />

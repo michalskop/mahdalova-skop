@@ -1,0 +1,19 @@
+<!-- Interaktivní mapa síly stran v obcích (images/mapa-stran.html, generuje _data_pipeline/mapa.py) v iframu.
+     Iframe drží styly mapy odděleně od webu; výšku si mapa hlásí sama přes postMessage. -->
+<div style="margin:24px 0 32px">
+  <iframe
+    id="dt-mapa-stran-2026"
+    src="/clanek/_articles/volby-cr-2026-10-20-komu-patri-cesko-po-komunalnich-volbach/images/mapa-stran.html"
+    title="Interaktivní mapa: kde strany v komunálních volbách 2026 kandidovaly a kolik voličů zastupují jejich zastupitelé"
+    style="display:block;width:100%;height:760px;border:0;background:transparent"
+  ></iframe>
+</div>
+<script>
+  (function () {
+    var f = document.getElementById('dt-mapa-stran-2026');
+    window.addEventListener('message', function (e) {
+      if (!f || e.source !== f.contentWindow || !e.data || e.data.type !== 'dt-embed-height') return;
+      f.style.height = e.data.h + 'px';
+    });
+  })();
+</script>

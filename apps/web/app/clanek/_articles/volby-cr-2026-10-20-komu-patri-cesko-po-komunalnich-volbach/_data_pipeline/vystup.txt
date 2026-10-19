@@ -1,60 +1,76 @@
-2022: zastupitelstev obcí 6255, se zvolenými 6244, obyvatel 10 521 215, zvolených 59228
-2026: zastupitelstev obcí 6255, se zvolenými 6250, obyvatel 10 920 509, zvolených 59099
+2022: zastupitelstev obcí 6255, se zvolenými 6244, obyvatel 10 521 215, voličů v seznamu 8 255 204, zvolených 59228
+2026: zastupitelstev obcí 6255, se zvolenými 6250, obyvatel 10 920 509, voličů v seznamu 8 283 058, zvolených 59099
 stejná zastupitelstva v obou letech: 6240; bez zvolených 2022: ['Líšná', 'Třebsko', 'Buková', 'Brodec', 'Ohařice', 'Nevězice', 'Cebiv', 'Rokytovec', 'Všeradov', 'Trokavec', 'Břežany']; 2026: ['Kobylnice', 'Slavníč', 'Píšť', 'Krchleby', 'Rokytovec']
-obyvatel ve srovnání: 2022 10 518 234, 2026 10 917 443; mandátů 2022 59 204, 2026 59 027
+voličů ve srovnání: 2022 8 254 839, 2026 8 281 063; mandátů 2022 59 204, 2026 59 027
 
-PODÍL OBYVATEL (stejná zastupitelstva)  2022 %  2026 %  změna p. b.  2022 obyv.  2026 obyv.  změna  | mandáty 2022 → 2026, podíl mandátů 2026
-  nezávislí                      31,9   35,2     3,3    3 352 974   3 843 365   490 390  | 43529 → 45700, 77,4 % mandátů
-  místní a ostatní               13,0   16,5     3,5    1 364 554   1 798 789   434 235  | 2999 → 3368, 5,7 % mandátů
-  ANO                            15,2   13,0    -2,2    1 600 328   1 419 647  -180 681  | 1543 → 1462, 2,5 % mandátů
-  STAN                            6,8   10,7     3,8      719 737   1 162 953   443 215  | 2713 → 2465, 4,2 % mandátů
-  ODS                             9,9    9,1    -0,8    1 044 817     998 316   -46 502  | 2067 → 1594, 2,7 % mandátů
-  KDU-ČSL                         6,0    5,7    -0,3      627 839     622 839    -5 000  | 3291 → 2931, 5,0 % mandátů
-  TOP 09                          3,1    2,9    -0,2      327 665     316 830   -10 835  | 472 → 387, 0,7 % mandátů
-  Piráti                          4,3    2,8    -1,5      449 984     304 830  -145 154  | 193 → 163, 0,3 % mandátů
-  Zelení                          0,9    1,0     0,1       99 556     114 038    14 481  | 131 → 107, 0,2 % mandátů
-  SOCDEM                          2,9    1,0    -1,8      300 205     113 246  -186 960  | 1046 → 361, 0,6 % mandátů
-  SPD                             4,0    1,0    -3,0      420 130     104 203  -315 927  | 436 → 158, 0,3 % mandátů
-  Svobodní                        0,4    0,3    -0,1       38 381      34 115    -4 265  | 109 → 92, 0,2 % mandátů
-  Motoristé                       0,0    0,3     0,3            0      30 854    30 854  | 0 → 13, 0,0 % mandátů
-  KSČM                            1,2    0,2    -1,0      125 008      22 428  -102 580  | 554 → 113, 0,2 % mandátů
-  PRO                             0,1    0,1     0,1        7 697      14 361     6 664  | 20 → 39, 0,1 % mandátů
-  Stačilo!                        0,0    0,1     0,1            0       9 887     9 887  | 0 → 35, 0,1 % mandátů
-  Přísaha                         0,1    0,0    -0,0        8 948       4 560    -4 388  | 53 → 33, 0,1 % mandátů
-  Trikolora                       0,3    0,0    -0,3       30 411       2 184   -28 227  | 48 → 6, 0,0 % mandátů
+PODÍL VOLIČŮ (stejná zastupitelstva)  2022 %  2026 %  změna p. b.  2022 voličů  2026 voličů  změna  | mandáty 2022 → 2026, podíl mandátů 2026
+  nezávislí                      32,2   36,4     4,2    2 660 770   3 016 845   356 076  | 43 546 → 45 730, 77,5 % mandátů
+  místní a ostatní               13,1   16,4     3,3    1 083 243   1 359 133   275 891  | 3 006 → 3 368, 5,7 % mandátů
+  ANO                            15,2   12,8    -2,4    1 252 614   1 061 958  -190 655  | 1 539 → 1 460, 2,5 % mandátů
+  STAN                            6,7   10,2     3,5      549 082     842 982   293 899  | 2 706 → 2 460, 4,2 % mandátů
+  ODS                             9,9    9,0    -0,9      815 251     741 785   -73 466  | 2 053 → 1 596, 2,7 % mandátů
+  KDU-ČSL                         6,0    5,8    -0,3      497 425     478 161   -19 264  | 3 289 → 2 923, 5,0 % mandátů
+  TOP 09                          3,1    2,7    -0,4      253 284     222 156   -31 128  | 485 → 380, 0,6 % mandátů
+  Piráti                          4,1    2,6    -1,5      337 317     211 804  -125 513  | 196 → 162, 0,3 % mandátů
+  SOCDEM                          2,9    1,1    -1,8      237 884      90 605  -147 279  | 1 041 → 361, 0,6 % mandátů
+  Zelení                          0,9    1,0     0,1       71 018      82 648    11 630  | 125 → 101, 0,2 % mandátů
+  SPD                             3,9    1,0    -2,9      322 292      80 770  -241 522  | 436 → 156, 0,3 % mandátů
+  Svobodní                        0,4    0,3    -0,1       31 342      26 354    -4 989  | 110 → 92, 0,2 % mandátů
+  Motoristé                       0,0    0,3     0,3            0      23 183    23 183  | 0 → 13, 0,0 % mandátů
+  KSČM                            1,2    0,2    -1,0       99 765      16 791   -82 973  | 551 → 112, 0,2 % mandátů
+  PRO                             0,1    0,1     0,1        6 550      10 958     4 408  | 20 → 38, 0,1 % mandátů
+  Stačilo!                        0,0    0,1     0,1            0       7 922     7 922  | 0 → 35, 0,1 % mandátů
+  Přísaha                         0,1    0,0    -0,0        7 350       3 583    -3 767  | 53 → 33, 0,1 % mandátů
+  Trikolora                       0,4    0,0    -0,3       29 653       3 426   -26 227  | 46 → 8, 0,0 % mandátů
 
-VÁHA MANDÁTU 2026 (obyvatel na jednoho zastupitele)
-  nejmenší: [('Vysoká Lhota', '3,2', 16, 5), ('Minice', '3,9', 27, 7), ('Čilá', '4,0', 20, 5)]
-  největší: [('Praha hl.m.', '21 647', '1 407 084', 65), ('Brno', '7 351', '404 296', 55), ('Ostrava', '5 106', '280 853', 55)]
-  medián zastupitelstva: 57,3 (Bukovka)
+VÁHA MANDÁTU 2026 (voličů v seznamu na jednoho zastupitele)
+  nejmenší: [('Vysoká Lhota', '3,2', 16, 5), ('Minice', '3,7', 26, 7), ('Hradiště', '3,9', 27, 7)]
+  největší: [('Praha hl.m.', '14 128', '918 294', 65), ('Brno', '5 574', '306 588', 55), ('Ostrava', '4 071', '223 911', 55)]
+  Vysoká Lhota: [('Vysoká Lhota', '3,2', 16, 5)]
+  medián zastupitelstva: 45,7 (Lešany); kolik zastupitelů s mediánovou váhou dá jednoho pražského: 309,0
 
-PODLE VELIKOSTI OBCE 2026 (podíl obyvatel)
-  0–500: 3318 obcí, 826 146 obyv., nezávislí 94,3 %, ANO 0,1 %, STAN 1,5 %, ODS 0,2 %, místní a ostatní 1,1 %
-  500–2000: 2190 obcí, 2 105 902 obyv., nezávislí 80,8 %, ANO 0,6 %, STAN 4,8 %, ODS 1,7 %, místní a ostatní 4,2 %
-  2000–10000: 600 obcí, 2 358 650 obyv., nezávislí 45,5 %, ANO 6,7 %, STAN 8,8 %, ODS 8,5 %, místní a ostatní 16,0 %
-  10000–50000: 114 obcí, 2 271 338 obyv., nezávislí 10,7 %, ANO 22,2 %, STAN 10,9 %, ODS 11,8 %, místní a ostatní 24,4 %
-  50000–1000000000: 18 obcí, 3 355 407 obyv., nezávislí 1,4 %, ANO 22,1 %, STAN 17,7 %, ODS 14,7 %, místní a ostatní 22,8 %
+PODLE VELIKOSTI OBCE 2026 (obyvatelé obce; podíl voličů)
+  0–500: 3318 obcí, 660 775 voličů (8,0 % všech), nezávislí 94,2 %, ANO 0,1 %, STAN 1,5 %, ODS 0,2 %, místní a ostatní 1,2 %
+  500–2000: 2190 obcí, 1 652 849 voličů (20,0 % všech), nezávislí 80,7 %, ANO 0,6 %, STAN 4,7 %, ODS 1,7 %, místní a ostatní 4,3 %
+  2000–10000: 600 obcí, 1 827 540 voličů (22,1 % všech), nezávislí 45,3 %, ANO 6,8 %, STAN 8,6 %, ODS 8,4 %, místní a ostatní 16,3 %
+  10000–50000: 114 obcí, 1 747 540 voličů (21,1 % všech), nezávislí 11,3 %, ANO 22,3 %, STAN 10,4 %, ODS 11,6 %, místní a ostatní 24,4 %
+  50000–1000000000: 18 obcí, 2 392 359 voličů (28,9 % všech), nezávislí 1,5 %, ANO 22,4 %, STAN 17,4 %, ODS 14,9 %, místní a ostatní 23,3 %
 
-NEJVĚTŠÍ ZMĚNY PO ZASTUPITELSTVECH (obyvatelé)
-  STAN: ztráty Třinec -13 481 (13 → 0 mand.); Říčany -4 623 (6 → 0 mand.); Kuřim -4 466 (7 → 0 mand.); Třebíč -2 536 (8 → 6 mand.); Luštěnice -2 210 (15 → 0 mand.)
-  STAN: zisky Praha hl.m. 269 898 (5 → 17 mand.); Plzeň 25 611 (4 → 10 mand.); Brno 24 310 (5 → 8 mand.); Olomouc 16 637 (2 → 9 mand.); Ostrava 15 396 (4 → 7 mand.)
-  ANO: ztráty Praha hl.m. -36 581 (14 → 11 mand.); Ústí nad Labem -17 154 (13 → 6 mand.); Ostrava -14 914 (21 → 18 mand.); České Budějovice -9 723 (13 → 8 mand.); Brno -8 833 (13 → 11 mand.)
-  ANO: zisky Plzeň 18 097 (15 → 18 mand.); Boskovice 3 791 (0 → 7 mand.); Krupka 3 725 (5 → 11 mand.); Žatec 2 870 (8 → 11 mand.); Tachov 2 725 (0 → 4 mand.)
-  SPD: ztráty Praha hl.m. -39 243 (2 → 0 mand.); Ostrava -35 610 (7 → 0 mand.); Brno -34 497 (5 → 0 mand.); Plzeň -14 360 (4 → 0 mand.); Liberec -10 559 (4 → 0 mand.)
-  SPD: zisky Kutná Hora 807 (0 → 1 mand.); Moravská Třebová 448 (0 → 1 mand.); Příbor 396 (0 → 1 mand.); Řevničov 293 (1 → 3 mand.); Měnín 254 (0 → 2 mand.)
-  Piráti: ztráty Praha hl.m. -103 549 (13 → 7 mand.); Ostrava -15 261 (3 → 0 mand.); Plzeň -14 360 (4 → 0 mand.); Hradec Králové -7 266 (4 → 1 mand.); Olomouc -6 633 (3 → 0 mand.)
-  Piráti: zisky České Budějovice 6 722 (3 → 6 mand.); Český Těšín 5 929 (0 → 7 mand.); Uherský Brod 3 015 (0 → 5 mand.); Břeclav 2 731 (0 → 3 mand.); Ústí nad Labem 2 406 (3 → 4 mand.)
-  ODS: ztráty České Budějovice -24 585 (16 → 4 mand.); Brno -16 635 (12 → 9 mand.); Liberec -10 559 (4 → 0 mand.); Zlín -5 150 (7 → 4 mand.); Ústí nad Labem -4 904 (4 → 2 mand.)
-  ODS: zisky Praha hl.m. 41 906 (10 → 11 mand.); Ostrava 20 522 (5 → 9 mand.); Teplice 7 999 (6 → 10 mand.); Blansko 4 024 (6 → 11 mand.); Jihlava 3 579 (7 → 9 mand.)
-  nezávislí: ztráty Praha hl.m. -19 622 (1 → 0 mand.); Boskovice -6 046 (14 → 0 mand.); Česká Třebová -6 043 (12 → 1 mand.); Vrchlabí -5 693 (12 → 2 mand.); Písek -4 417 (4 → 0 mand.)
-  nezávislí: zisky Bohumín 14 076 (0 → 16 mand.); Beroun 12 425 (0 → 12 mand.); Plzeň 11 991 (0 → 3 mand.); Ústí nad Labem 9 706 (3 → 7 mand.); Vsetín 9 490 (2 → 10 mand.)
+NEJVĚTŠÍ ZMĚNY PO ZASTUPITELSTVECH (voliči)
+  STAN: celkem 293 899; ztráty Třinec -11 065 (13 → 0 mand.); Kuřim -3 391 (7 → 0 mand.); Říčany -3 344 (6 → 0 mand.); Třebíč -2 207 (8 → 6 mand.); Břeclav -1 905 (5 → 2.41 mand.)
+  STAN: zisky Praha hl.m. 170 032 (5 → 17 mand.); Brno 23 821 (3.99 → 8.19 mand.); Ostrava 18 673 (4 → 8.67 mand.); Plzeň 15 741 (4 → 10 mand.); Olomouc 13 467 (1.47 → 9 mand.)
+  ANO: celkem -190 655; ztráty Praha hl.m. -40 982 (14 → 11 mand.); Ostrava -14 098 (21 → 18 mand.); Ústí nad Labem -13 749 (13 → 6 mand.); Brno -9 794 (13 → 11 mand.); České Budějovice -8 198 (13 → 8 mand.)
+  ANO: zisky Plzeň 7 396 (15 → 18 mand.); Krupka 2 978 (5 → 11 mand.); Boskovice 2 873 (0 → 7 mand.); Meziboří 2 041 (0 → 8 mand.); Žatec 1 997 (8 → 11 mand.)
+  SPD: celkem -241 522; ztráty Ostrava -29 126 (7 → 0 mand.); Praha hl.m. -22 735 (1.62 → 0 mand.); Brno -21 495 (3.93 → 0 mand.); Plzeň -10 737 (4 → 0 mand.); Liberec -8 021 (4 → 0 mand.)
+  SPD: zisky Tábor 627 (0.473 → 1.13 mand.); Moravská Třebová 601 (0 → 1.61 mand.); Příbor 321 (0 → 1 mand.); Řevničov 227 (1 → 3 mand.); Klášterec nad Ohří 208 (1 → 1.42 mand.)
+  Piráti: celkem -125 513; ztráty Praha hl.m. -83 464 (13 → 7 mand.); Ostrava -12 483 (3 → 0 mand.); Brno -10 806 (4 → 1.99 mand.); Plzeň -10 737 (4 → 0 mand.); Olomouc -2 929 (3.15 → 1.45 mand.)
+  Piráti: zisky Český Těšín 4 843 (0 → 7 mand.); České Budějovice 2 911 (3 → 4.83 mand.); Uherský Brod 2 408 (0 → 5 mand.); Třebíč 1 953 (0 → 1.92 mand.); Břeclav 1 544 (0 → 2.14 mand.)
+  ODS: celkem -73 466; ztráty České Budějovice -19 512 (16 → 4 mand.); Brno -14 974 (12.8 → 9.87 mand.); Liberec -8 021 (4 → 0 mand.); Zlín -4 351 (7 → 4 mand.); Plzeň -3 636 (9.25 → 8 mand.)
+  ODS: zisky Ostrava 13 041 (5.38 → 8.71 mand.); Praha hl.m. 10 835 (10.5 → 11.2 mand.); Teplice 5 626 (5.98 → 10 mand.); Blansko 3 619 (6 → 11.9 mand.); Děčín 2 742 (2 → 4 mand.)
+  nezávislí: celkem 356 076; ztráty Praha hl.m. -8 372 (0.597 → 0 mand.); Česká Třebová -5 029 (12 → 0.833 mand.); Boskovice -4 887 (14.3 → 0 mand.); Vrchlabí -4 018 (11.6 → 2.75 mand.); Písek -2 905 (3.43 → 0 mand.)
+  nezávislí: zisky Bohumín 11 830 (0 → 16 mand.); Beroun 8 732 (0 → 12 mand.); Vsetín 6 389 (3.26 → 10 mand.); Ústí nad Labem 6 300 (4.94 → 8.36 mand.); Nový Jičín 6 057 (0 → 9.65 mand.)
 
-KONTROLA – PODLE STRANICKÉ PŘÍSLUŠNOSTI ZVOLENÉHO (2022 → 2026 % obyvatel)
-  bez stranické příslušnosti: 60,8 → 59,5
-  ANO: 11,0 → 10,0
-  ODS: 7,3 → 7,2
-  místní a ostatní: 3,4 → 6,1
-  STAN: 1,5 → 6,0
-  KDU-ČSL: 3,2 → 3,5
-  TOP 09: 2,5 → 2,5
-  Piráti: 3,7 → 2,4
+KONTROLA – PODLE STRANICKÉ PŘÍSLUŠNOSTI ZVOLENÉHO (2022 → 2026 % voličů)
+  bez stranické příslušnosti: 61,1 → 61,0
+  ANO: 11,0 → 9,8
+  ODS: 7,2 → 6,9
+  místní a ostatní: 3,4 → 5,9
+  STAN: 1,5 → 5,5
+  KDU-ČSL: 3,3 → 3,5
+  TOP 09: 2,4 → 2,3
+  Piráti: 3,5 → 2,2
+
+MOTORISTÉ 2026: kandidátka (sami nebo ve složení) ve 37 z 6254 obcí
+
+POKRYTÍ 2026 (všech 6 255 zastupitelstev obcí): kde strana kandidovala → podíl voličů, obcí; podíl voličů, které zastupuje, z voličů tam, kde kandidovala
+  ANO                        57,5 % voličů,   344 obcí; tam zastupuje 22,3 %, ze všech voličů 12,8 %
+  STAN                       53,1 % voličů,   564 obcí; tam zastupuje 19,2 %, ze všech voličů 10,2 %
+  ODS                        62,4 % voličů,   538 obcí; tam zastupuje 14,4 %, ze všech voličů 9,0 %
+  KDU-ČSL                    51,1 % voličů,   943 obcí; tam zastupuje 11,3 %, ze všech voličů 5,8 %
+  Piráti                     43,1 % voličů,   123 obcí; tam zastupuje 5,9 %, ze všech voličů 2,6 %
+  TOP 09                     43,7 % voličů,   199 obcí; tam zastupuje 6,1 %, ze všech voličů 2,7 %
+  SPD                        48,1 % voličů,   189 obcí; tam zastupuje 2,0 %, ze všech voličů 1,0 %
+  SOCDEM                     22,7 % voličů,   155 obcí; tam zastupuje 4,8 %, ze všech voličů 1,1 %
+  Motoristé                  28,9 % voličů,    37 obcí; tam zastupuje 1,0 %, ze všech voličů 0,3 %
+  nezávislí                  98,7 % voličů,  6147 obcí; tam zastupuje 36,9 %, ze všech voličů 36,4 %
+  místní a ostatní           74,3 % voličů,  1253 obcí; tam zastupuje 22,1 %, ze všech voličů 16,4 %
