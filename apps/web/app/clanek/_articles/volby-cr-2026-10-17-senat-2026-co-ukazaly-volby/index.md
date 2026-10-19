@@ -1,21 +1,21 @@
 ---
-title: "Soupeři ANO přetáhli voliče vyřazených kandidátů. Kandidáti hnutí ztratili třetinu hlasů a nevyhráli nikde"
+title: "Voliče přetáhli soupeři ANO. Kandidáti hnutí ztratili ve druhém kole třetinu hlasů a nevyhráli nikde"
 date: "2026-10-17"
 time: "13:45"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Kandidáti ANO měli ve druhém kole senátních voleb 67 % hlasů z prvního kola, jejich soupeři 90 %. Účast přitom klesla ve všech okrscích stejně. Vládní strany nezískaly žádné z 27 křesel, protivládní blok má v Senátu 65 z 81 hlasů a zvolena byla jediná žena."
-coverImage: "images/cover-homepage-v2.png"
-homepageImage: "images/cover-homepage-v2.png"
-ogImage: "images/cover-og-v2.jpg"
+excerpt: "Kandidáti ANO přišli mezi prvním a druhým kolem senátních voleb o třetinu hlasů, jejich soupeři jen o desetinu. Voliče kandidátů, kteří do druhého kola nepostoupili, získali hlavně soupeři ANO. Vládní strany nezískaly žádné z 27 křesel a zvolena byla jediná žena."
+coverImage: "images/cover-homepage-v3.png"
+homepageImage: "images/cover-homepage-v3.png"
+ogImage: "images/cover-og-v3.jpg"
 squareImage: "images/cover-square.png"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "senátní volby 2026", "Senát", "ANO", "ženy v politice", "data"]
 promoted: 1
 ---
 
-Třináct kandidátů hnutí ANO, kteří postoupili do druhého kola senátních voleb, dostalo ve druhém kole dohromady 102 148 hlasů. V prvním kole jich měli 152 545, ve druhém jim tedy zbyly dvě třetiny (67 %). Jejich soupeři si udrželi 90 % hlasů z prvního kola a vyhráli všech třináct soubojů. Tak málo hlasů si kandidáti ANO mezi koly neudrželi od roku 2014, kdy se poprvé dostali do druhého kola. Nejblíž byl rok 2020 (68 %).
+Kandidáti hnutí ANO prohráli ve druhém kole senátních voleb všech třináct soubojů. Mezi prvním a druhým kolem přišli zhruba o třetinu hlasů, jejich soupeři jen o desetinu.
 
-Rozdíl nevznikl tím, že by voliči ANO zůstali doma víc než ostatní. Prošli jsme 2 594 okrsků ve třinácti obvodech, kde ANO bylo ve druhém kole (bez nejmenších s méně než 50 voliči). Účast ve druhém kole byla zhruba poloviční proti prvnímu kolu, a to v okrscích, kde měl kandidát ANO v prvním kole 18 %, stejně jako tam, kde měl 42 %. Při stejném poklesu účasti to znamená, že voliči kandidátů vyřazených v prvním kole šli ve druhém kole hlavně k soupeřům ANO. Jednotlivé voliče data nesledují, ukazují jen součty hlasů v okrscích.
+Ve druhém kole volí méně lidí a oba finalisté se dělí o voliče kandidátů, kteří nepostoupili. Ty letos získali hlavně soupeři ANO. Druhé možné vysvětlení, že by ve druhém kole zůstali doma hlavně voliči ANO, data nepotvrzují. Účast klesla zhruba na polovinu všude stejně: v místech, kde ANO v prvním kole uspělo, i tam, kde dostalo málo hlasů. Data přitom ukazují jen součty hlasů v okrscích, ne rozhodování jednotlivých voličů.
 
 Vládní strany ANO, SPD a Motoristé tak nezískaly ani jedno z 27 křesel, poprvé od vzniku Senátu v roce 1996. Dosud nejhůř dopadla menšinová vláda ČSSD v roce 2000 a vláda ANO a ČSSD v roce 2020, obě s jediným křeslem. Prošli jsme [registr všech kandidátů do Senátu 1996–2025 v otevřených datech ČSÚ](https://www.volby.cz/opendata/senat_vse/senat_vse_opendata.htm), letošní [výsledky po obvodech](https://volby.gov.cz/app/senat/20261009/cs/results) i [okrsková data](https://volby.gov.cz/opendata/se2026/se2026_opendata.htm) a porovnali letošek se všemi dosavadními řádnými volbami do Senátu.
 
@@ -35,9 +35,9 @@ Ještě v roce 2024, kdy bylo v opozici, získalo ANO v Senátu osm křesel, nej
 
 Žádná strana dosud neprohrála tolik druhých kol, aniž by aspoň jedno vyhrála. Dosud nejvíc takových proher měla KSČM v roce 2000, nulu z osmi soubojů. SPD od roku 2016, kdy začala do Senátu kandidovat, nezískala ani jedno křeslo a do druhého kola se dostala jen dvakrát.
 
-Ve druhém kole přichází k urnám méně lidí, oba finalisté ale přebírají voliče kandidátů, kteří neprošli. Proto mívají víc než polovinu svých hlasů z prvního kola. Soupeři ANO jich ve druhém kole přebírají víc než kandidáti ANO a v letech 2016, 2020 a 2024 měli ve druhém kole dokonce víc hlasů než v prvním. Vyrovnaný byl jen rok 2014.
+Soupeři ANO získávají voliče vyřazených kandidátů snáz než kandidáti ANO i v jiných letech. Letos ale kandidátům ANO zbylo ve druhém kole nejméně hlasů z prvního kola za dobu, kdy hnutí do Senátu kandiduje.
 
-<HtmlEmbed file="grafy/hlasy-ano.html" title="Kandidátům ANO zbyly ve druhém kole dvě třetiny hlasů, nejméně od roku 2014" subtitle="Hlasy finalistů ve 2. kole jako podíl jejich hlasů v 1. kole (%), obvody, kde bylo ANO ve 2. kole, řádné volby 2014–2026" source="ČSÚ – registr kandidátů do Senátu 1996–2025, výsledky 2026; výpočet DataTimes.cz" />
+<HtmlEmbed file="grafy/hlasy-ano.html" title="Kandidátům ANO zbyly ve druhém kole dvě třetiny hlasů z prvního kola" subtitle="Hlasy finalistů ve 2. kole jako podíl jejich hlasů v 1. kole (%), obvody, kde bylo ANO ve 2. kole, řádné volby 2014–2026" source="ČSÚ – registr kandidátů do Senátu 1996–2025, výsledky 2026; výpočet DataTimes.cz" />
 
 <HtmlEmbed file="grafy/ano-druha-kola.html" title="ANO se letos dostalo do druhého kola ve 13 obvodech a neuspělo ani jednou" subtitle="Kandidáti navržení ANO ve druhém kole a kolik z nich vyhrálo, řádné volby 2014–2026 (bez zvolených v 1. kole)" source="ČSÚ – registr kandidátů do Senátu 1996–2025 a výsledky 2026; výpočet DataTimes.cz" />
 
@@ -73,15 +73,13 @@ Nejpravděpodobnější vysvětlení je složení obhájců. Všech 21 letošní
 
 <HtmlEmbed file="grafy/obhajoby.html" title="Ve svém obvodu letos obhájilo mandát 15 z 21 senátorů" subtitle="Senátoři a senátorky, kterým v daném roce končil mandát: kdo obhájil, kdo prohrál a kdo ve svém obvodu nekandidoval, 1998–2026" source="ČSÚ – registr kandidátů do Senátu 1996–2025 a výsledky 2026; výpočet DataTimes.cz" />
 
-## Ve druhém kole volilo nejvíc lidí od roku 2010, přišla zhruba polovina voličů z prvního kola
+## Ve druhém kole volilo nejvíc lidí od roku 2010
 
-K druhému kolu přišlo 21,12 % voličů ve 22 obvodech, nejvíc od roku 2010 (24,64 %). Mezi lety 2014 a 2024 se účast ve druhém kole držela mezi 15,38 a 19,44 %. První kolo mělo účast 43,31 %, víc měly jen volby 2010. Letošní čísla jsme sečetli z výsledků po obvodech a sedí s celostátním výsledkem ČSÚ.
+K druhému kolu přišlo 21 % voličů, nejvíc od roku 2010. V letech 2014 až 2024 to bylo vždy méně než 20 %.
 
-Vyšší účast ve druhém kole je zčásti dědictvím prvního. To se letos konalo spolu s komunálními volbami, které přivedly k urnám víc lidí, druhé kolo už bylo samostatné. Účast ve druhém kole dosáhla 49 % účasti z prvního kola. Z voleb, kdy se první kolo konalo spolu s komunálními, je to nejvíc od roku 2010 (55 %). V letech 2014, 2018 a 2022 to bylo 43, 39 a 46 %.
+Proti prvnímu kolu přišla zhruba polovina lidí. První kolo se konalo spolu s komunálními volbami, které přivádějí k urnám víc voličů, druhé už samostatně. Tak velký pokles je proto obvyklý. Letos byl ale menší než v letech 2014, 2018 a 2022, kdy se první kolo také konalo s komunálními volbami.
 
-Pokles účasti byl rovnoměrný. Rozdělili jsme 3 917 okrsků s druhým kolem (bez nejmenších) na pětiny podle toho, kolik hlasů v prvním kole dostali kandidáti vládních stran. Tam, kde jich volilo nejméně (14 %), dosáhla účast ve druhém kole 50 % účasti z prvního kola, tam, kde nejvíc (47 %), 49 %. Okrsky s vládními voliči ale volily méně už v prvním kole: 38 % proti 48 % v okrscích, kde vládní strany neměly podporu. Okrsky, kde se volí vládní strany, tak mají menší váhu v obou kolech, nejen ve druhém.
-
-Podle [studie Karla Kouby](https://sreview.soc.cas.cz/artkey/csr-201502-0002_why-does-the-number-of-voters-and-invalid-ballots-decrease-in-the-second-rounds-of-czech-senate-elections.php) mezi koly ubývá voličů hlavně kvůli souběhu prvního kola s jinými volbami a kvůli tomu, že duely ve druhém kole bývají málo vyhrocené. Letos účast mezi koly klesla méně než v ostatních letech se souběhem od roku 2014 a klesla všude podobně, v okrscích vládních i opozičních voličů.
+V místech, kde silně volí vládní strany, chodí k volbám méně lidí už v prvním kole. Ve druhém kole se pak účast snížila všude podobně. Podle [studie Karla Kouby](https://sreview.soc.cas.cz/artkey/csr-201502-0002_why-does-the-number-of-voters-and-invalid-ballots-decrease-in-the-second-rounds-of-czech-senate-elections.php) ubývá voličů mezi koly hlavně kvůli souběhu prvního kola s jinými volbami a kvůli tomu, že souboje ve druhém kole bývají málo vyhrocené.
 
 <HtmlEmbed file="grafy/ucast.html" title="Účast ve druhém kole byla nejvyšší od roku 2010" subtitle="Účast ve druhém kole senátních voleb (vydané obálky / voliči v seznamu), řádné volby 1998–2026" source="ČSÚ – okrsková data senátních voleb 1996–2025 a výsledky 2026; výpočet DataTimes.cz" />
 
