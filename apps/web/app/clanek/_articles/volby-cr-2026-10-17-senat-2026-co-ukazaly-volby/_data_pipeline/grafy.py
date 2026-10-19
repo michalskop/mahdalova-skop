@@ -124,6 +124,27 @@ def ano():
                f"<rect x='{x0 + 110}' y='6' width='14' height='14' fill='{NAVY}'/><text x='{x0 + 130}' y='18' {FONT} font-size='13' fill='{MUTED}'>vyhráli</text>")
     return svg(''.join(out))
 
+def hlasy_ano():
+    """Kolik hlasů z 1. kola měli finalisté ve 2. kole (%): kandidáti ANO × jejich soupeři, 2014–2026.
+    Čísla z ucast_okrsky.py (registr ČSÚ HLASY_K1/K2, 2026 výsledky po obvodech)."""
+    d = [(2014, 84, 83), (2016, 96, 108), (2018, 75, 86), (2020, 68, 124), (2022, 78, 96), (2024, 83, 108), (2026, 67, 90)]
+    SOUP = '#f76800'  # brandOrange.6 – s navy ANO rozliší i barvoslepí
+    x0, x1, y0, y1, vmax = 30, 580, 210, 40, 130
+    krok = (x1 - x0) / len(d); w = krok * 0.34
+    Y = lambda v: y0 - (y0 - y1) * v / vmax
+    out = [f"<line x1='{x0}' y1='{Y(100):.1f}' x2='{x1}' y2='{Y(100):.1f}' stroke='#c9c2ad' stroke-width='1.5' stroke-dasharray='6 5'/>",
+           f"<line x1='{x0}' y1='{y0}' x2='{x1}' y2='{y0}' stroke='{INK}' stroke-width='2'/>"]
+    for i, (r, a, b) in enumerate(d):
+        hl = r == 2026; cx = x0 + krok * (i + .5)
+        for dx, v, c in ((-w / 2 - 2, a, NAVY), (w / 2 + 2, b, SOUP)):
+            out.append(f"<rect x='{cx + dx - w/2:.1f}' y='{Y(v):.1f}' width='{w:.1f}' height='{y0 - Y(v):.1f}' fill='{c}' rx='2'/>")
+            out.append(f"<text x='{cx + dx:.1f}' y='{Y(v) - 6:.1f}' text-anchor='middle' {FONT} font-size='{15 if hl else 12}' font-weight='700' fill='{CRIMSON if hl and c == NAVY else INK}'>{v}</text>")
+        out.append(f"<text x='{cx:.1f}' y='{y0 + 20}' text-anchor='middle' {FONT} font-size='{13 if hl else 12}' font-weight='{700 if hl else 400}' fill='{CRIMSON if hl else MUTED}'>{r}</text>")
+    out.append(f"<rect x='{x0}' y='{y0 + 34}' width='13' height='13' fill='{NAVY}'/><text x='{x0 + 19}' y='{y0 + 45}' {FONT} font-size='13' fill='{INK}'>kandidáti ANO ve 2. kole</text>"
+               f"<rect x='{x0 + 190}' y='{y0 + 34}' width='13' height='13' fill='{SOUP}'/><text x='{x0 + 209}' y='{y0 + 45}' {FONT} font-size='13' fill='{INK}'>jejich soupeři</text>"
+               f"<line x1='{x0 + 320}' y1='{y0 + 40}' x2='{x0 + 344}' y2='{y0 + 40}' stroke='#c9c2ad' stroke-width='2' stroke-dasharray='6 4'/><text x='{x0 + 350}' y='{y0 + 45}' {FONT} font-size='13' fill='{INK}'>100 % = stejně hlasů jako v 1. kole</text>")
+    return f"<svg viewBox='0 0 600 262' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'>{''.join(out)}</svg>"
+
 def kluby():
     """Amfiteátr 81 křesel (stejná geometrie jako SenatDruheKolo.tsx: 5 řad).
     Bloky podle Kateřiny a Michala (17. 10. 2026): JISTÝ protivládní blok = kluby ODS a TOP 09, KDU-ČSL, STAN
@@ -190,7 +211,7 @@ def kluby():
     # nezařazení šedě bez jmen (Láska, Rabas, Krsek, Kazík vlevo, Kovářová vpravo), Korč prázdným kolečkem
     jednotlivci = [('nezařazení', None, '#9a9a92', True), ('Korč', None, '#9a9a92', False)]
     out += leg(velke, 292, 26) + leg(jednotlivci, 320, 26)
-    return f"<svg viewBox='0 0 600 340' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'>{''.join(out)}</svg>"
+    return f"<svg viewBox='0 -30 600 370' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'>{''.join(out)}</svg>"
 
 cards = [
     dict(id='vlada-nula', eyebrow='Senát 2026 • vláda',
@@ -198,6 +219,10 @@ cards = [
          caption='ANO, SPD a Motoristé: <b>0 z 27</b> křesel. Dosud nejhůř dopadly vlády ČSSD (2000) a ANO + ČSSD (2020), shodně s jedním křeslem.',
          chartSvg=vlada(),
          formats=['og', 'x-square', 'bluesky-landscape', 'bluesky-square', 'ig-portrait']),
+    dict(id='hlasy-ano', eyebrow='Senát 2026 • 2. kolo',
+         headline='Soupeři ANO přetáhli<br>voliče vyřazených kandidátů',
+         caption='Kandidáti ANO měli ve 2. kole <b>67 %</b> hlasů z 1. kola, jejich soupeři 90 %. Účast přitom klesla ve všech okrscích stejně.',
+         chartSvg=hlasy_ano(), formats=['og', 'x-square', 'bluesky-square', 'ig-portrait']),
     dict(id='ano-druha-kola', eyebrow='Senát 2026 • ANO',
          headline='ANO prohrálo<br>všech 13 druhých kol',
          caption='Ještě v roce 2024 vyhrálo 6 z 19 soubojů. Letos <b>0 z 13</b>, žádná strana dosud neprohrála tolik druhých kol bez jediné výhry.',
