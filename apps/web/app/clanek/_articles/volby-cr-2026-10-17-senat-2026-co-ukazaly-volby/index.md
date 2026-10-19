@@ -1,5 +1,5 @@
 ---
-title: "Voliče přetáhli soupeři ANO. Kandidáti hnutí ztratili ve druhém kole třetinu hlasů a nevyhráli nikde"
+title: "Voliče ANO přetáhli soupeři. Kandidáti hnutí ztratili ve druhém kole třetinu hlasů a nevyhráli nikde"
 date: "2026-10-17"
 time: "13:45"
 author: "Kateřina Mahdalová & Michal Škop"

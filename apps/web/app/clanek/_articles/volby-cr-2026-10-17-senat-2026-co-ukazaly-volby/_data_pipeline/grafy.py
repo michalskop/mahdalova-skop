@@ -220,7 +220,7 @@ cards = [
          chartSvg=vlada(),
          formats=['og', 'x-square', 'bluesky-landscape', 'bluesky-square', 'ig-portrait']),
     dict(id='hlasy-ano', eyebrow='Senát 2026 • 2. kolo',
-         headline='Voliče přetáhli<br>soupeři ANO',
+         headline='Voliče ANO<br>přetáhli soupeři',
          caption='Kandidáti ANO přišli mezi koly o <b>třetinu hlasů</b>, jejich soupeři jen o desetinu. Voliče vyřazených kandidátů získali hlavně soupeři ANO.',
          chartSvg=hlasy_ano(), formats=['og', 'x-square', 'bluesky-square', 'ig-portrait']),
     dict(id='ano-druha-kola', eyebrow='Senát 2026 • ANO',
