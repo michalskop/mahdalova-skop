@@ -1,6 +1,7 @@
 ---
 title: "Nezávislí mají na radnicích tři čtvrtiny křesel, zastupují ale jenom třetinu voličů"
-date: "2026-10-20"
+date: "2026-10-19"
+time: "19:52"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Po komunálních volbách sedí na radnicích hlavně nezávislí, většinou ale v malých obcích. Když se spočítá, kolik voličů za každým zastupitelem stojí, připadá na nezávislé zhruba třetina voličů v Česku. Zbytek zastupují strany a městská hnutí. Nejvíc si polepšil STAN, nejvíc ztratila SPD."
 coverImage: "images/cover-homepage.png"
