@@ -22,7 +22,7 @@ def nb(t):
     return t.replace(' %', '\u00a0%')
 
 
-STRANY = [('nez', 'Nezávislí'), ('ano', 'ANO'), ('stan', 'STAN'), ('spd', 'SPD')]
+STRANY = [('nez', 'Nezávislí'), ('ano', 'ANO'), ('stan', 'STAN'), ('spd', 'SPD'), ('zel', 'Zelení')]
 OBRAZKY = [
     ('Covery', [('../images/cover-og.jpg', 'OG 1200×630 – náhled odkazu (FB, X, Bluesky, Lidé.cz)'),
                 ('../images/cover-square.png', 'čtverec 1080×1080'),

@@ -31,6 +31,9 @@ const STRANY = {
     radek: 'zastupuje 10,2 % voličů', pod: 'v roce 2022 to bylo 6,7 %' },
   spd: { klic: 'SPD', nazev: 'SPD', barva: '#ffcf02',
     radek: 'zastupuje 1,0 % voličů', pod: 'v roce 2022 to bylo 3,9 %' },
+  // Zelení: brandForestGreen #8dd265 (světlejší odstín než #639e0a v mapě článku, ten by na ink blue zanikl)
+  zel: { klic: 'Zelení', nazev: 'Zelení', barva: '#8dd265',
+    radek: 'zastupují 1,0 % voličů', pod: 'v roce 2022 to bylo 0,9 %' },
 };
 // formáty a bezpečné zóny podle tools/COVER-EDITOR.md: IG 4:5 nic důležitého v horních/dolních 80 px,
 // stories horních 250 a dolních 340 px překrývá rozhraní; mapa = [x0, y0, x1, y1] plochy pro republiku

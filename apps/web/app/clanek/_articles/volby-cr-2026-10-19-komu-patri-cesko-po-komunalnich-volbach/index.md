@@ -34,11 +34,11 @@ Křeslo přiřazujeme kandidátce, za kterou byl zastupitel zvolen. Sdružení n
 
 <VegaChart dataFile="data/graf_mandaty.json" />
 
-Graf ukazuje pro deset největších skupin dvě čísla z letošních voleb: podíl křesel (světlý pruh) a podíl voličů, které tato křesla zastupují (plný pruh). Nezávislí mají 77,5 % křesel a zastupují 36,4 % voličů. Místní hnutí a menší strany mají 5,7 % křesel a 16,4 % voličů, protože k nim patří i silná městská uskupení jako Praha Sobě. U celostátních stran je to obráceně: ANO, STAN, ODS, Piráti i TOP 09 zastupují dvakrát až devětkrát větší podíl voličů, než jaký mají podíl křesel. Výjimkou je KDU-ČSL s 5,0 % křesel a 5,8 % voličů, protože je silná i na vesnicích.
+Graf ukazuje pro jedenáct největších skupin dvě čísla z letošních voleb: podíl křesel (světlý pruh) a podíl voličů, které tato křesla zastupují (plný pruh). Nezávislí mají 77,5 % křesel a zastupují 36,4 % voličů. Místní hnutí a menší strany mají 5,7 % křesel a 16,4 % voličů, protože k nim patří i silná městská uskupení jako Praha Sobě. U celostátních stran je to obráceně: ANO, STAN, ODS, Piráti, TOP 09 i Zelení zastupují dvakrát až devětkrát větší podíl voličů, než jaký mají podíl křesel. Výjimkou je KDU-ČSL s 5,0 % křesel a 5,8 % voličů, protože je silná i na vesnicích.
 
 Graf neříká, kdo v obci vládne. Zastupitelé strany, která skončila v opozici, se do jejího podílu počítají stejně jako ti v koalici. Neříká ani, že ANO komunální volby „vyhrálo“. Z celostátních stran sice zastupuje nejvíc voličů, 12,8 %, ale pořadí ovlivňuje i to, kde strany vůbec kandidovaly.
 
-ANO přitom kandidovalo méně plošně než ODS. Hnutí postavilo kandidátky ve 344 obcích, kde žije 57,5 % voličů, ODS v 538 obcích s 62,4 % voličů. Tam, kde kandidovalo, je ale ANO silnější: zastupuje 22,3 % tamních voličů, ODS 14,4 %. Piráti a SOCDEM naopak kandidovali v mnohem menší části Česka, v obcích se 43,1 % a 22,7 % voličů, a i proto jsou jejich celostátní čísla nízká.
+ANO přitom kandidovalo méně plošně než ODS. Hnutí postavilo kandidátky ve 344 obcích, kde žije 57,5 % voličů, ODS v 538 obcích s 62,4 % voličů. Tam, kde kandidovalo, je ale ANO silnější: zastupuje 22,3 % tamních voličů, ODS 14,4 %. Piráti, SOCDEM a Zelení naopak kandidovali v mnohem menší části Česka, v obcích se 43,1 %, 22,7 % a 20,1 % voličů, a i proto jsou jejich celostátní čísla nízká.
 
 ## Nejvíc si polepšil STAN, nejvíc ztratila SPD
 
@@ -46,7 +46,7 @@ Ve srovnání s volbami 2022 si nejvíc polepšil STAN. Jeho zastupitelé zastup
 
 <SupportBanner float="left" />ANO kleslo z 15,2 na 12,8 %, z 1,25 na 1,06 milionu voličů. Nejvíc ztratilo v Praze (ze 14 na 11 zastupitelů), v Ostravě (z 21 na 18), v Ústí nad Labem (ze 13 na 6), v Brně a v Českých Budějovicích. Posílilo v Plzni, kde má 18 zastupitelů místo 15. Kde ANO ztratilo zastupitele, ukazuje podrobně článek o [vládních stranách v obcích](/clanek/volby-cr-2026-10-14-spd-ano-motoriste-v-obcich).
 
-Zastupitelé SPD zastupovali po volbách 2022 3,9 % voličů, 322 tisíc. Letos 1,0 %, 81 tisíc. SPD vypadla ze zastupitelstev Prahy, Brna, Ostravy, Plzně i Liberce. Podobně klesla SOCDEM ze 2,9 na 1,1 % a Piráti ze 4,1 na 2,6 %, z toho o 83 tisíc voličů v Praze, kde mají místo 13 zastupitelů sedm.
+Zastupitelé SPD zastupovali po volbách 2022 3,9 % voličů, 322 tisíc. Letos 1,0 %, 81 tisíc. SPD vypadla ze zastupitelstev Prahy, Brna, Ostravy, Plzně i Liberce. Podobně klesla SOCDEM ze 2,9 na 1,1 % a Piráti ze 4,1 na 2,6 %, z toho o 83 tisíc voličů v Praze, kde mají místo 13 zastupitelů sedm. Zelení si naopak mírně polepšili, z 0,9 na 1,0 %, tedy ze 71 na 83 tisíc voličů, přestože mají méně zastupitelů než před čtyřmi lety: 101 místo 125. SOCDEM, SPD a Zelení tak letos zastupují zhruba stejný podíl voličů.
 
 ODS klesla z 9,9 na 9,0 %. V Českých Budějovicích ztratila 12 ze 16 zastupitelů, v Brně zhruba tři, v Ostravě a Praze naopak přidala. Nezávislí si polepšili ze 32,2 na 36,4 % a místní hnutí ze 13,1 na 16,4 %.
 
@@ -62,7 +62,7 @@ Proto ukazujeme každou stranu zvlášť. Puntík je obec, kde strana kandidoval
 
 <HtmlEmbed file="mapa-embed.html" />
 
-U nezávislých je vidět husté pokrytí celé republiky s mezerami na místě velkých měst. ANO, STAN i ODS mají největší puntíky v Praze a krajských městech, KDU-ČSL hustou síť menších obcí na jižní a střední Moravě. Motoristé kandidovali ve 37 obcích.
+U nezávislých je vidět husté pokrytí celé republiky s mezerami na místě velkých měst. ANO, STAN i ODS mají největší puntíky v Praze a krajských městech, KDU-ČSL hustou síť menších obcí na jižní a střední Moravě. Zelení kandidovali v 68 obcích, Motoristé ve 37.
 
 ## Co čísla neříkají
 

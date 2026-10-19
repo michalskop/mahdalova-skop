@@ -67,8 +67,8 @@ svg.appendChild(land);
 const layer = el("g", {}); svg.appendChild(layer);
 
 let cur = "ANO";
-// shoda přísudku: hnutí ANO (s.), STAN (m.), Piráti, Motoristé a skupiny (mn. č.), ostatní strany (ž.)
-const ROD = { ANO: "o", STAN: "", Piráti: "i", Motoristé: "i", "nezávislí": "i", "místní a ostatní": "i" };
+// shoda přísudku: hnutí ANO (s.), STAN (m.), Piráti, Zelení, Motoristé a skupiny (mn. č.), ostatní strany (ž.)
+const ROD = { ANO: "o", STAN: "", Piráti: "i", Zelení: "i", Motoristé: "i", "nezávislí": "i", "místní a ostatní": "i" };
 function draw() {
   layer.textContent = "";
   const c = D.barvy[cur], items = [];

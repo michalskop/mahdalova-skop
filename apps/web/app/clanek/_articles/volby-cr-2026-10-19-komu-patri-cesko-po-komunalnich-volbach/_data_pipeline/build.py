@@ -211,7 +211,7 @@ mot = {r["KODZASTUP"] for r in rows(os.path.join(RAW, YEARS[2026]["reg"], "csv_o
 say(f"\nMOTORISTÉ 2026: kandidátka (sami nebo ve složení) ve {len(mot)} z {sum(1 for v in typ.values() if v == '1')} obcí")
 
 # pokrytí: kolik voličů žije v obcích, kde strana kandidovala (sama, v koalici nebo ve sdružení)
-MAPA_STRANY = ["ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SPD", "SOCDEM", "Motoristé", NK, OST]
+MAPA_STRANY = ["ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SPD", "SOCDEM", "Zelení", "Motoristé", NK, OST]
 zast26, el26 = data[2026]
 VOL26 = sum(z["vol"] for z in zast26.values())
 say("\nPOKRYTÍ 2026 (všech 6 255 zastupitelstev obcí): kde strana kandidovala → podíl voličů, obcí; podíl voličů, které zastupuje, z voličů tam, kde kandidovala")
@@ -255,7 +255,7 @@ json.dump(obce, open(os.path.join(HERE, "obce_2026.json"), "w", encoding="utf-8"
 print("\n".join(out))
 
 # ---------- grafy (Vega-Lite pro <VegaChart>) ----------
-SHOW = [NK, OST, "ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SOCDEM", "SPD"]
+SHOW = [NK, OST, "ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SOCDEM", "Zelení", "SPD"]
 SRC = ("volby.gov.cz – otevřená data komunálních voleb 2022 (řádné volby) a 2026; zastupitelstva obcí, Praha a statutární města "
        "jako celek; voliči v seznamu podle zápisů okrskových komisí; výpočet DataTimes.cz")
 AX_Y = {"title": None, "domain": False, "ticks": False, "labelFontSize": 14, "labelFontWeight": 700, "labelPadding": 10, "labelLimit": 200}
@@ -314,7 +314,7 @@ for l in SHOW:
                  "t_2022": f"{pct(a)} % voličů ({mil(va)})", "t_2026": f"{pct(b)} % voličů ({mil(vb)})"})
 g1 = bars(vals, "STAN posílil hlavně díky Praze, SPD vypadla z velkých měst",
           "Kolik procent voličů zastupují zastupitelé zvolení za danou stranu – světle 2022, plně 2026",
-          ["2022", "2026"], ["v2022", "v2026"], 42, 520, [("t_2022", "Po volbách 2022"), ("t_2026", "Po volbách 2026")])
+          ["2022", "2026"], ["v2022", "v2026"], 42, 570, [("t_2022", "Po volbách 2022"), ("t_2026", "Po volbách 2026")])
 json.dump(g1, open(os.path.join(ART, "data", "graf_podil.json"), "w", encoding="utf-8"), ensure_ascii=False)
 
 # graf 2: křesla × voliči 2026
@@ -326,5 +326,5 @@ for l in SHOW:
                  "t_vol": f"{pct(share[l][1])} % ({mil(vb)} z {mil(T[2026])})"})
 g2 = bars(vals, "Nezávislí mají tři čtvrtiny křesel, ale zastupují zhruba třetinu voličů",
           "Komunální volby 2026: podíl křesel v zastupitelstvech obcí (světle) a podíl voličů, které tito zastupitelé zastupují (plně)",
-          ["podíl křesel", "podíl voličů"], ["mand", "vol"], 86, 520, [("t_mand", "Křesla v zastupitelstvech"), ("t_vol", "Zastupují voličů")])
+          ["podíl křesel", "podíl voličů"], ["mand", "vol"], 86, 570, [("t_mand", "Křesla v zastupitelstvech"), ("t_vol", "Zastupují voličů")])
 json.dump(g2, open(os.path.join(ART, "data", "graf_mandaty.json"), "w", encoding="utf-8"), ensure_ascii=False)
