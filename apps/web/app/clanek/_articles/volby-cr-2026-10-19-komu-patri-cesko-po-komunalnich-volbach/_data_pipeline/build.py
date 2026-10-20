@@ -255,7 +255,8 @@ json.dump(obce, open(os.path.join(HERE, "obce_2026.json"), "w", encoding="utf-8"
 print("\n".join(out))
 
 # ---------- grafy (Vega-Lite pro <VegaChart>) ----------
-SHOW = [NK, OST, "ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SOCDEM", "Zelení", "SPD"]
+# pořadí v obou grafech = podíl voličů 2026 sestupně (nezaokrouhlený, takže shody jako Zelení × SPD 1,0 % rozhodne přesná hodnota)
+SHOW = sorted([NK, OST, "ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SOCDEM", "Zelení", "SPD"], key=lambda l: -share[l][1])
 SRC = ("volby.gov.cz – otevřená data komunálních voleb 2022 (řádné volby) a 2026; zastupitelstva obcí, Praha a statutární města "
        "jako celek; voliči v seznamu podle zápisů okrskových komisí; výpočet DataTimes.cz")
 AX_Y = {"title": None, "domain": False, "ticks": False, "labelFontSize": 14, "labelFontWeight": 700, "labelPadding": 10, "labelLimit": 200}
