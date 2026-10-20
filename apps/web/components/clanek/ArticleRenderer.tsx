@@ -34,6 +34,7 @@ import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/Cdu
 import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
 import ObceStranyMap from '@/components/charts/ObceStranyMap'; // mapa obcí: zastupitelé SPD, ANO, Motoristů 2022 → 2026
+import ObceVoliciMap from '@/components/charts/ObceVoliciMap'; // mapa obcí: kolik voličů zastupují zastupitelé strany (KV 2026)
 import ObceKvPredikceMapa from '@/components/charts/ObceKvPredikceMapa'; // komunální volby 2026 – odhad pro 184 zastupitelstev
 import ObceKvVysledkyMapa from '@/components/charts/ObceKvVysledkyMapa'; // komunální volby 2026 – výsledky a průběh predikce
 import OkrskyKvMapa from '@/components/charts/OkrskyKvMapa'; // komunální volby 2026 – kdo vyhrál v okrscích (jak volili vaši sousedé)
@@ -476,6 +477,7 @@ export function ArticleRenderer({
     BrazilRunoffAggregators,
     ObceKandidatkyMap,
     ObceStranyMap,
+    ObceVoliciMap,
     KalkulackaMapa,
     SenatPredikceMapa,
     SenatDruheKolo,

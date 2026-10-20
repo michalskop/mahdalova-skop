@@ -261,8 +261,9 @@ SRC = ("volby.gov.cz – otevřená data komunálních voleb 2022 (řádné volb
 AX_Y = {"title": None, "domain": False, "ticks": False, "labelFontSize": 14, "labelFontWeight": 700, "labelPadding": 10, "labelLimit": 200}
 
 
-def bars(values, title, subtitle, series, fields, domain_max, height, tooltip_fields):
+def bars(values, title, subtitle, series, fields, domain_max, height, tooltip_fields, grid_values):
     """Vodorovné dvojice pruhů: první řada světlá s obrysem, druhá plná; hodnoty přímo u pruhů.
+    Bez rámečku plochy a bez osových čar: jen svislé linky s popisky v grid_values (přání Kateřiny 20. 10.).
     Tooltip ukazuje obě hodnoty strany slovy (tooltip_fields = [(pole, popisek)]), ne technické názvy řad."""
     long = []
     for v in values:
@@ -272,7 +273,8 @@ def bars(values, title, subtitle, series, fields, domain_max, height, tooltip_fi
     enc_y = {"field": "strana", "type": "nominal", "sort": [v["strana"] for v in values], "axis": AX_Y}
     enc_off = {"field": "rada", "type": "nominal", "sort": series}
     enc_x = {"field": "hodnota", "type": "quantitative", "scale": {"domain": [0, domain_max], "nice": False},
-             "axis": {"title": None, "grid": True, "tickCount": 5, "labelExpr": "datum.label + ' %'", "domain": False}}
+             "axis": {"title": None, "grid": True, "values": grid_values, "ticks": False, "labelExpr": "datum.label + ' %'",
+                      "domain": False, "gridColor": "#d4d4c8"}}
     tooltip = [{"field": "strana", "title": "Strana"}] + [{"field": k, "title": t} for k, t in tooltip_fields]
     return {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -296,9 +298,8 @@ def bars(values, title, subtitle, series, fields, domain_max, height, tooltip_fi
              "encoding": {"x": {"field": "hodnota", "type": "quantitative"},
                           "text": {"condition": {"test": f"datum.rada == '{series[0]}'", "field": "popis"},
                                    "value": ""}}},
-            {"mark": {"type": "rule", "strokeWidth": 1.6}, "encoding": {"x": {"datum": 0, "type": "quantitative"}, "color": {"value": "#101432"}}},
         ],
-        "config": {"legend": {"disable": True}},
+        "config": {"legend": {"disable": True}, "view": {"stroke": None}},
         "_source": SRC,
     }
 
@@ -314,7 +315,8 @@ for l in SHOW:
                  "t_2022": f"{pct(a)} % voličů ({mil(va)})", "t_2026": f"{pct(b)} % voličů ({mil(vb)})"})
 g1 = bars(vals, "STAN posílil hlavně díky Praze, SPD vypadla z velkých měst",
           "Kolik procent voličů zastupují zastupitelé zvolení za danou stranu – světle 2022, plně 2026",
-          ["2022", "2026"], ["v2022", "v2026"], 42, 570, [("t_2022", "Po volbách 2022"), ("t_2026", "Po volbách 2026")])
+          ["2022", "2026"], ["v2022", "v2026"], 42, 570, [("t_2022", "Po volbách 2022"), ("t_2026", "Po volbách 2026")],
+          [0, 10, 20, 30, 40])
 json.dump(g1, open(os.path.join(ART, "data", "graf_podil.json"), "w", encoding="utf-8"), ensure_ascii=False)
 
 # graf 2: křesla × voliči 2026
@@ -326,5 +328,6 @@ for l in SHOW:
                  "t_vol": f"{pct(share[l][1])} % ({mil(vb)} z {mil(T[2026])})"})
 g2 = bars(vals, "Nezávislí mají tři čtvrtiny křesel, ale zastupují zhruba třetinu voličů",
           "Komunální volby 2026: podíl křesel v zastupitelstvech obcí (světle) a podíl voličů, které tito zastupitelé zastupují (plně)",
-          ["podíl křesel", "podíl voličů"], ["mand", "vol"], 86, 570, [("t_mand", "Křesla v zastupitelstvech"), ("t_vol", "Zastupují voličů")])
+          ["podíl křesel", "podíl voličů"], ["mand", "vol"], 86, 570, [("t_mand", "Křesla v zastupitelstvech"), ("t_vol", "Zastupují voličů")],
+          [0, 20, 40, 60, 80])
 json.dump(g2, open(os.path.join(ART, "data", "graf_mandaty.json"), "w", encoding="utf-8"), ensure_ascii=False)

@@ -60,7 +60,13 @@ Výsledky komunálních voleb se na jednu mapu vejdou špatně. Když obce obarv
 
 Proto ukazujeme každou stranu zvlášť. Puntík je obec, kde strana kandidovala, a jeho velikost odpovídá tomu, kolik voličů tam zastupují její zastupitelé. Prázdný kroužek znamená, že strana kandidovala, ale křeslo nezískala. Kde puntík chybí, strana nekandidovala. Mapa tak ukazuje dvě věci najednou: jakou má strana sílu a kde vůbec dokáže postavit kandidátku.
 
-<HtmlEmbed file="mapa-embed.html" />
+<ObceVoliciMap
+  geoUrl="/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-geo.json"
+  dataUrl="/clanek/_articles/volby-cr-2026-10-19-komu-patri-cesko-po-komunalnich-volbach/mapa-stran.json"
+  title="Strany mají největší puntíky ve městech, nezávislí pokrývají venkov"
+  subtitle="Komunální volby 2026, všech 6 249 obcí se zvolenými zastupiteli. Vyberte stranu: puntík je obec, kde kandidovala, a čím je větší, tím víc voličů tam zastupují její zastupitelé. Najeďte na obec pro podrobnosti."
+  source="volby.gov.cz – otevřená data komunálních voleb 2026: voliči v seznamu, kandidátky, zvolení zastupitelé a jejich preferenční hlasy; hranice obcí: ČSÚ, volební okrsky 2022; výpočet DataTimes.cz"
+/>
 
 U nezávislých je vidět husté pokrytí celé republiky s mezerami na místě velkých měst. ANO, STAN i ODS mají největší puntíky v Praze a krajských městech, KDU-ČSL hustou síť menších obcí na jižní a střední Moravě. Zelení kandidovali v 68 obcích, Motoristé ve 37.
 

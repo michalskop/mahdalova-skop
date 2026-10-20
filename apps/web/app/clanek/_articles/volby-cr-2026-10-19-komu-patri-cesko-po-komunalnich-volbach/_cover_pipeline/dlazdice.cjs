@@ -1,4 +1,4 @@
-// Dlaždice na sítě z mapy síly stran (images/mapa-stran.html): jedna strana = jedna tečková mapa ČR,
+// Dlaždice na sítě z mapy síly stran (<ObceVoliciMap> v článku): jedna strana = jedna tečková mapa ČR,
 // puntík = obec, kde strana kandidovala, plocha ∝ kolik voličů tam zastupují její zastupitelé,
 // prázdný kroužek = kandidovala, křeslo nezískala. Stejná data i měřítko plochy jako mapa v článku.
 // Data: ../_data_pipeline/mapa_data.json (build.py), poloha obcí body.json (body.py), podklad senat-mapa.json.
