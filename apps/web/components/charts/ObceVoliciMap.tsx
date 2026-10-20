@@ -19,6 +19,13 @@ const LAND = '#e9e9dd';     // background.5
 const GRID = '#eeeae2';     // background.4
 const ACTIVE = '#d4d4c8';   // background.7 – aktivní strana (tmavá béžová, ne ink: ANO a Piráti jsou samy tmavé)
 const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';
+// Světlé strany by na béžovém podkladu zanikly: puntík i kroužek dostanou obrys v tmavším odstínu
+// téže škály (ThemeProvider.tsx). Ostatní strany mají bílý obrys.
+const EDGE: Record<string, string> = {
+  'KDU-ČSL': '#a47d03',          // brandYellow.9 k #ffcf02
+  'místní a ostatní': '#6267a3', // brandNavy.6 k #c3c6d8
+  nezávislí: '#4c4f8e',          // brandNavy.7 k #8a8fb0
+};
 
 // strana v obci: [křesla (u společných kandidátek zlomek podle preferenčních hlasů), zastoupení voliči]
 type Rec = [number, number];
@@ -117,12 +124,15 @@ export default function ObceVoliciMap({ geoUrl, dataUrl, title, subtitle, source
     return () => document.removeEventListener('pointerdown', close);
   }, [wrapRef]);
 
+  // popisek a obrys jen u obcí, kde vybraná strana kandidovala; jinde mapa jen podkreslí hranice
   const point = (id: string) => (e: React.MouseEvent) => {
     const box = wrapRef.current?.getBoundingClientRect();
+    if (!data?.obce[id]?.s[cur]) { setHover(null); return; }
     if (box) setHover({ id, x: e.clientX - box.left, y: e.clientY - box.top });
   };
 
   const color = data?.barvy[cur] ?? INK;
+  const edge = EDGE[cur];
   const s = data?.souhrn[cur];
   const r = ROD[cur] ?? 'a';
   const focus = hover && data ? data.obce[hover.id] : undefined;
@@ -163,13 +173,13 @@ export default function ObceVoliciMap({ geoUrl, dataUrl, title, subtitle, source
             const rr = rad(v), d = Math.ceil(2 * rr + 2);
             return (
               <span key={v} style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-                <svg width={d} height={d} aria-hidden><circle cx={d / 2} cy={d / 2} r={rr} fill={color} fillOpacity={0.85} stroke="#fff" strokeWidth={0.8} /></svg>
+                <svg width={d} height={d} aria-hidden><circle cx={d / 2} cy={d / 2} r={rr} fill={color} fillOpacity={0.85} stroke={edge ?? '#fff'} strokeWidth={edge ? 1 : 0.8} /></svg>
                 {nf(v)}
               </span>
             );
           })}
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-            <svg width="14" height="14" aria-hidden><circle cx="7" cy="7" r="4" fill="none" stroke={color} strokeWidth="1.6" /></svg>
+            <svg width="14" height="14" aria-hidden><circle cx="7" cy="7" r="4" fill="none" stroke={edge ?? color} strokeWidth="1.6" /></svg>
             kandidovali, ale bez křesla
           </span>
         </div>
@@ -190,8 +200,8 @@ export default function ObceVoliciMap({ geoUrl, dataUrl, title, subtitle, source
                   const c = centroid[id];
                   if (!c || Number.isNaN(c[0])) return null;
                   return k > 0
-                    ? <circle key={id} cx={c[0]} cy={c[1]} r={rad(v)} fill={color} fillOpacity={0.85} stroke="#fff" strokeWidth={rad(v) > 4 ? 0.9 : 0.4} onMouseMove={point(id)} onClick={point(id)} />
-                    : <circle key={id} cx={c[0]} cy={c[1]} r={2} fill="none" stroke={color} strokeWidth={1} strokeOpacity={0.9} pointerEvents="none" />;
+                    ? <circle key={id} cx={c[0]} cy={c[1]} r={rad(v)} fill={color} fillOpacity={0.85} stroke={edge ?? '#fff'} strokeWidth={edge ? 0.8 : rad(v) > 4 ? 0.9 : 0.4} onMouseMove={point(id)} onClick={point(id)} />
+                    : <circle key={id} cx={c[0]} cy={c[1]} r={2} fill="none" stroke={edge ?? color} strokeWidth={1} strokeOpacity={0.9} onMouseMove={point(id)} onClick={point(id)} />;
                 })}
               </g>
               {hover && (() => {
@@ -218,8 +228,7 @@ export default function ObceVoliciMap({ geoUrl, dataUrl, title, subtitle, source
                 <span style={{ width: 9, height: 9, borderRadius: 2, background: color, flex: '0 0 auto', transform: 'translateY(1px)' }} />
                 <span>
                   <strong>{cur}</strong>{' '}
-                  {!focusRec ? 'tu nekandidoval' + (r === 'i' ? 'i' : r)
-                    : focusRec[0] > 0 ? <>– {kresla(focusRec[0])} z {focus.m} křesel, {r === 'i' ? 'zastupují' : 'zastupuje'} <strong>{nf(focusRec[1])}</strong> voličů</>
+                  {focusRec && focusRec[0] > 0 ? <>– {kresla(focusRec[0])} z {focus.m} křesel, {r === 'i' ? 'zastupují' : 'zastupuje'} <strong>{nf(focusRec[1])}</strong> voličů</>
                     : 'kandidoval' + (r === 'i' ? 'i' : r) + ', křeslo nezískal' + (r === 'i' ? 'i' : r)}
                 </span>
               </div>
