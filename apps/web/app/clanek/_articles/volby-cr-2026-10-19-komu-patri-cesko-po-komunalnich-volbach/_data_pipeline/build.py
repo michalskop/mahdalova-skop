@@ -34,7 +34,7 @@ PARTY = [  # (kód, zkratka, barva) – barvy jako v ostatních volebních člá
     (768, "ANO", "#272a59"), (1114, "SPD", "#a47d03"), (166, "STAN", "#ff1a4a"), (53, "ODS", "#5e66d5"),
     (720, "Piráti", "#111111"), (1, "KDU-ČSL", "#ffcf02"), (721, "TOP 09", "#812840"), (1178, "Motoristé", "#1a9fbd"),
     (7, "SOCDEM", "#f76800"), (47, "KSČM", "#c5143c"), (5, "Zelení", "#639e0a"), (714, "Svobodní", "#0e926a"),
-    (1265, "PRO", "#8cdfef"), (1245, "Přísaha", "#a9b5f0"), (1227, "Trikolora", "#ffb3c0"), (1298, "Stačilo!", "#c5143c"),
+    (1265, "PRO", "#9f319e"), (1245, "Přísaha", "#a9b5f0"), (1227, "Trikolora", "#ffb3c0"), (1298, "Stačilo!", "#c5143c"),
 ]
 NAME = {c: z for c, z, _ in PARTY}
 COLOR = {z: col for _, z, col in PARTY}
@@ -211,7 +211,7 @@ mot = {r["KODZASTUP"] for r in rows(os.path.join(RAW, YEARS[2026]["reg"], "csv_o
 say(f"\nMOTORISTÉ 2026: kandidátka (sami nebo ve složení) ve {len(mot)} z {sum(1 for v in typ.values() if v == '1')} obcí")
 
 # pokrytí: kolik voličů žije v obcích, kde strana kandidovala (sama, v koalici nebo ve sdružení)
-MAPA_STRANY = ["ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SPD", "SOCDEM", "Zelení", "Motoristé", NK, OST]
+MAPA_STRANY = ["ANO", "STAN", "ODS", "KDU-ČSL", "Piráti", "TOP 09", "SPD", "SOCDEM", "Zelení", "KSČM", "PRO", "Motoristé", NK, OST]
 zast26, el26 = data[2026]
 VOL26 = sum(z["vol"] for z in zast26.values())
 say("\nPOKRYTÍ 2026 (všech 6 255 zastupitelstev obcí): kde strana kandidovala → podíl voličů, obcí; podíl voličů, které zastupuje, z voličů tam, kde kandidovala")
