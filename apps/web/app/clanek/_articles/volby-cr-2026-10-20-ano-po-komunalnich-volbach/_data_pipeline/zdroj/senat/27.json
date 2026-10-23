@@ -1,0 +1,26 @@
+{
+  "id" : "20261009/vysled/obvod/27.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":27},
+  "generovano" : "2026-10-17T16:37:12",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Praha 1",
+  "prehled" : [
+  [1,92,92,100,78672,36568,46.48,28,36189,35406,97.84],
+  [2,92,92,100,78611,19995,25.44,20,19971,19815,99.22]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 81,
+  "vysledky" : [
+  [1,"Morštadt Jiří Dipl. Ing.","Generace","Generace","BEZPP",597,1.68,0,0,false,false,1291,1291,99],
+  [2,"Čižinský Pavel Mgr.","Levice","Levice","Levice",1028,2.9,0,0,false,false,74,74,74],
+  [3,"Štern Jan Ing.","TEAM","TEAM","TEAM",347,0.98,0,0,false,false,1194,1194,1194],
+  [4,"Ryvola Vojtěch Ing.","GEN","GEN","GEN",490,1.38,0,0,false,false,1297,1297,1297],
+  [5,"Dudra Ján doc. MUDr. Ph.D.,MPH","ANO","ANO","BEZPP",4329,12.22,0,0,false,false,768,768,99],
+  [6,"Pešek Jiří Pavel Ing.","Švýcarská dem.","Švýcarská dem.","BEZPP",929,2.62,0,0,false,false,752,752,99],
+  [7,"Padevět Jiří PhDr.","ODSSTANPirátTOP","STAN","BEZPP",17576,49.64,13207,66.65,false,false,1912,166,99],
+  [8,"Čižinský Jan","KDU+Zel+PHASOBĚ","PRAHA SOBĚ","PRAHA SOBĚ",9824,27.74,6608,33.34,false,false,1938,1180,1180],
+  [9,"Kolman Vladimír Ing. Ph.D., MBA","SOCDEM","SOCDEM","SOCDEM",286,0.8,0,0,false,false,7,7,7]
+],
+  "postupuje" : [7,8],
+  "zvoleny" : 7
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "20261009/vysled/obvod/24.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":24},
+  "generovano" : "2026-10-17T18:17:27",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Praha 9",
+  "prehled" : [
+  [1,101,101,100,98465,44078,44.77,22,43147,41353,95.84],
+  [2,101,101,100,98360,18903,19.22,23,18883,18720,99.14]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 82,
+  "vysledky" : [
+  [1,"Batyiová Darina","Kruh","Kruh","BEZPP",2156,5.21,0,0,false,false,1707,1707,99],
+  [2,"Smoljak David","KDUZelSTANPiTOP","STAN","BEZPP",20232,48.92,14739,78.73,false,false,1955,166,99],
+  [3,"Laube Bedřich Bc.","Svo+SPD+Tri+PRO","Svobodní","Svobodní",3346,8.09,0,0,false,false,1647,714,714],
+  [4,"Žalud Radek  DiS.","ANO","ANO","BEZPP",6080,14.7,0,0,false,false,768,768,99],
+  [5,"Pecková Dagmar","ODS","ODS","BEZPP",9539,23.06,3981,21.26,false,false,53,53,99]
+],
+  "postupuje" : [2,5],
+  "zvoleny" : 2
+}

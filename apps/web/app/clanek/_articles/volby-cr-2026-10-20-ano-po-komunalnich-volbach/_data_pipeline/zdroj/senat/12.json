@@ -1,0 +1,19 @@
+{
+  "id" : "20261009/vysled/obvod/12.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":12},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Strakonice",
+  "prehled" : [
+  [1,324,324,100,108547,46147,42.51,40,45738,44467,97.22]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 85,
+  "vysledky" : [
+  [1,"Hrdinová Jana","KDU-ČSL","KDU-ČSL","KDU-ČSL",9195,20.67,null,null,false,false,1,1,1],
+  [2,"Fiala Tomáš MUDr. Bc. MBA","NČ","NČ","NČ",24643,55.41,null,null,false,false,1722,1722,1722],
+  [3,"Ušatý Miroslav Ing.","Svob+SPD+Trikol","Svobodní","BEZPP",10629,23.9,null,null,false,false,1486,714,99]
+],
+  "postupuje" : [],
+  "zvoleny" : 2
+}
