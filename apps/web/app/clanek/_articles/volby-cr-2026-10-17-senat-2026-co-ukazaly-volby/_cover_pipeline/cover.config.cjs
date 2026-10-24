@@ -8,8 +8,8 @@ const BARVY = { glowA: '#4a51ab' /* brandRoyalBlue.6 */, glowB: '#812840' /* bra
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Senátní volby 2026' },
-  titulek: 'Soupeři ANO<br>přetáhli voliče',
-  pod: 'Voliče vyřazených kandidátů. Kandidátům ANO zbylo ve 2.&nbsp;kole 67&nbsp;% hlasů z&nbsp;1.&nbsp;kola, jejich soupeřům 90&nbsp;%',
+  titulek: 'Voliče ANO<br>přetáhli soupeři',
+  pod: 'Kandidáti ANO přišli mezi koly senátních voleb o&nbsp;třetinu hlasů, jejich soupeři jen o&nbsp;desetinu',
   legenda: [['#de1743', '13 obvodů s ANO ve 2. kole']],
   logo: 'vlevo',
   barvy: BARVY,

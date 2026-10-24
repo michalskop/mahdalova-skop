@@ -1,0 +1,25 @@
+{
+  "id" : "20261009/vysled/obvod/9.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":9},
+  "generovano" : "2026-10-17T17:01:02",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Plzeň-město",
+  "prehled" : [
+  [1,140,140,100,99229,40435,40.75,34,39570,38375,96.98],
+  [2,140,140,100,99219,27028,27.24,53,27020,26942,99.71]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Novák Jaroslav","JaSaN","JaSaN","JaSaN",412,1.07,0,0,false,false,1282,1282,1282],
+  [2,"Aschenbrenner Lumír Ing.","ODS+KoruČes+TOP","ODS","ODS",7714,20.1,0,0,false,false,1948,53,53],
+  [3,"Pousková Daniela MUDr.","PRO PLZEŇ","PRO PLZEŇ","BEZPP",3043,7.92,0,0,false,false,1014,1014,99],
+  [4,"Janský Bohumír prof. RNDr. CSc.","SEN 21","SEN 21","BEZPP",1106,2.88,0,0,false,false,1187,1187,99],
+  [5,"Řehka Karel","STAN","STAN","BEZPP",12611,32.86,15998,59.37,false,false,166,166,99],
+  [6,"Valenta Jiří PhDr. Ing. DBA","KSČM","KSČM","KSČM",1181,3.07,0,0,false,false,47,47,47],
+  [7,"Kantorová Lucie Mgr. et Mgr.","ANO","ANO","ANO",10463,27.26,10944,40.62,false,false,768,768,768],
+  [8,"Líška Július Ing.","SPD","SPD","SPD",1845,4.8,0,0,false,false,1114,1114,1114]
+],
+  "postupuje" : [5,7],
+  "zvoleny" : 5
+}

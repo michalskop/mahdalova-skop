@@ -1,0 +1,23 @@
+{
+  "id" : "20261009/vysled/obvod/18.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":18},
+  "generovano" : "2026-10-17T16:49:52",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Příbram",
+  "prehled" : [
+  [1,268,268,100,120745,55590,46.04,31,54871,53320,97.17],
+  [2,268,268,100,120619,25702,21.31,38,25689,25613,99.7]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Štěpánek Petr","STAN","STAN","STAN",23305,43.7,19020,74.25,false,false,166,166,166],
+  [2,"Daňhová Barbora MUDr. MHA","ANO","ANO","ANO",13446,25.21,6593,25.74,false,false,768,768,768],
+  [3,"Vermach Pavel Ing. Ph.D.","SMS","SMS","SMS",2014,3.77,0,0,false,false,1202,1202,1202],
+  [4,"Šorna Josef MUDr.","SPD+PRO","PRO","PRO",5013,9.4,0,0,false,false,1535,1265,1265],
+  [5,"Luftová Simona Mgr.","Zelení+Piráti","Piráti","Piráti",6436,12.07,0,0,false,false,1066,720,720],
+  [6,"Podstatzky-Lichtenstein Frank Thomas","ČZS","ČZS","BEZPP",3106,5.82,0,0,false,false,1295,1295,99]
+],
+  "postupuje" : [1,2],
+  "zvoleny" : 1
+}
