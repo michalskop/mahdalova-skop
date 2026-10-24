@@ -1,0 +1,205 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Po započtení inflace stojí volby na voliče tolik co v roce 2018",
+  "subtitle": "Výdaje státního rozpočtu na volby do obcí a třetiny Senátu na jednoho voliče v seznamu – světle v tehdejších cenách, plně v cenách září 2026"
+ },
+ "width": 600,
+ "height": 260,
+ "data": {
+  "values": [
+   {
+    "rok": "2014",
+    "rada": "v tehdejších cenách",
+    "v": 66,
+    "popis": "66",
+    "t_celkem": "552,6 mil. Kč",
+    "t_volici": "8 406 047"
+   },
+   {
+    "rok": "2014",
+    "rada": "v cenách roku 2026",
+    "v": 105,
+    "popis": "105",
+    "t_celkem": "883,3 mil. Kč v cenách 2026",
+    "t_volici": "8 406 047"
+   },
+   {
+    "rok": "2018",
+    "rada": "v tehdejších cenách",
+    "v": 85,
+    "popis": "85",
+    "t_celkem": "705,7 mil. Kč",
+    "t_volici": "8 345 081"
+   },
+   {
+    "rok": "2018",
+    "rada": "v cenách roku 2026",
+    "v": 127,
+    "popis": "127",
+    "t_celkem": "1 063,9 mil. Kč v cenách 2026",
+    "t_volici": "8 345 081"
+   },
+   {
+    "rok": "2022",
+    "rada": "v tehdejších cenách",
+    "v": 97,
+    "popis": "97",
+    "t_celkem": "798,4 mil. Kč",
+    "t_volici": "8 255 204"
+   },
+   {
+    "rok": "2022",
+    "rada": "v cenách roku 2026",
+    "v": 111,
+    "popis": "111",
+    "t_celkem": "917,7 mil. Kč v cenách 2026",
+    "t_volici": "8 255 204"
+   },
+   {
+    "rok": "2026 (rozpočet)",
+    "rada": "v tehdejších cenách",
+    "v": 127,
+    "popis": "127",
+    "t_celkem": "1 050,2 mil. Kč",
+    "t_volici": "8 283 058"
+   },
+   {
+    "rok": "2026 (rozpočet)",
+    "rada": "v cenách roku 2026",
+    "v": 127,
+    "popis": "127",
+    "t_celkem": "1 050,2 mil. Kč v cenách 2026",
+    "t_volici": "8 283 058"
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "nominal",
+   "sort": null,
+   "axis": {
+    "title": null,
+    "domain": false,
+    "ticks": false,
+    "labelFontSize": 13,
+    "labelPadding": 8,
+    "labelAngle": 0,
+    "labelFontWeight": 700
+   }
+  },
+  "xOffset": {
+   "field": "rada",
+   "type": "nominal",
+   "sort": [
+    "v tehdejších cenách",
+    "v cenách roku 2026"
+   ]
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "width": {
+     "band": 0.9
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       140
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       50,
+       100
+      ],
+      "labelExpr": "datum.label + ' Kč'",
+      "gridColor": "#d4d4c8"
+     }
+    },
+    "color": {
+     "field": "rada",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "v tehdejších cenách",
+       "v cenách roku 2026"
+      ],
+      "range": [
+       "#bcc4df",
+       "#4c4f8e"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Volby"
+     },
+     {
+      "field": "rada",
+      "title": "Ceny"
+     },
+     {
+      "field": "popis",
+      "title": "Na voliče (Kč)"
+     },
+     {
+      "field": "t_celkem",
+      "title": "Celkem"
+     },
+     {
+      "field": "t_volici",
+      "title": "Voličů v seznamu"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "dy": -8,
+    "fontSize": 12,
+    "color": "#101432"
+   },
+   "encoding": {
+    "y": {
+     "field": "v",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "popis"
+    },
+    "fontWeight": {
+     "condition": {
+      "test": "datum.rada == 'v cenách roku 2026'",
+      "value": 700
+     },
+     "value": 400
+    }
+   }
+  }
+ ],
+ "_source": "MF – závěrečné účty kapitoly 398 Všeobecná pokladní správa (uvolněné prostředky na volby do obcí a 1/3 Senátu 2014, 2018, 2022), Zpráva o plnění SR za 1. pololetí 2026 (rozpočet 2026); voliči v seznamu podle volby.gov.cz; ceny ČSÚ (index spotřebitelských cen, září); výpočet DataTimes.cz",
+ "config": {
+  "legend": {
+   "disable": true
+  },
+  "view": {
+   "stroke": null
+  }
+ }
+}
