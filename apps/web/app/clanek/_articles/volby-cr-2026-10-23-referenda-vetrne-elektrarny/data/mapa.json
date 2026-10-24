@@ -1,0 +1,473 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Referenda o větrnících se konala hlavně na venkově od Plzeňska po Bruntálsko",
+  "subtitle": "Obce, kde se 9.–10. 10. 2026 spolu s komunálními volbami hlasovalo o větrných elektrárnách. Velikost puntíku odpovídá počtu hlasujících. Najeďte na obec pro podrobnosti."
+ },
+ "_source": "Zápisy místních komisí o výsledku referenda; MV ČR, Místní referenda – tabulka hlášení (16. 10. 2026); hranice: ČSÚ; výpočet DataTimes.cz",
+ "width": "container",
+ "height": 380,
+ "projection": {
+  "type": "identity",
+  "reflectY": true
+ },
+ "layer": [
+  {
+   "data": {
+    "url": "/clanek/_articles/volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence/obce-geo.json",
+    "format": {
+     "type": "topojson",
+     "feature": "kraje"
+    }
+   },
+   "mark": {
+    "type": "geoshape",
+    "fill": "#f3f1e9",
+    "stroke": "#ffffff",
+    "strokeWidth": 1.2
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "obec": "Dětřichov",
+      "okres": "Svitavy",
+      "x": -595581,
+      "y": -1093542,
+      "výsledek": "pro výstavbu",
+      "hlasujících": 206,
+      "účast": 74.4,
+      "proti": 96,
+      "pro": 104,
+      "podíl proti": 48.0
+     },
+     {
+      "obec": "Mikuleč",
+      "okres": "Svitavy",
+      "x": -603199,
+      "y": -1091515,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 157,
+      "účast": 78.5,
+      "proti": 113,
+      "pro": 38,
+      "podíl proti": 74.8
+     },
+     {
+      "obec": "Kamenná Horka",
+      "okres": "Svitavy",
+      "x": -596643,
+      "y": -1100304,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 223,
+      "účast": 75.9,
+      "proti": 200,
+      "pro": 23,
+      "podíl proti": 89.7
+     },
+     {
+      "obec": "Sklené",
+      "okres": "Svitavy",
+      "x": -597486,
+      "y": -1103710,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 101,
+      "účast": 53.7,
+      "proti": 81,
+      "pro": 6,
+      "podíl proti": 93.1
+     },
+     {
+      "obec": "Kačice",
+      "okres": "Kladno",
+      "x": -771778,
+      "y": -1030359,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 661,
+      "účast": 65.6,
+      "proti": 377,
+      "pro": 262,
+      "podíl proti": 59.0
+     },
+     {
+      "obec": "Petrovice",
+      "okres": "Rakovník",
+      "x": -798485,
+      "y": -1037465,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 204,
+      "účast": 82.9,
+      "proti": 109,
+      "pro": 91,
+      "podíl proti": 54.5
+     },
+     {
+      "obec": "Petroupim",
+      "okres": "Benešov",
+      "x": -722896,
+      "y": -1076422,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 164,
+      "účast": 64.8,
+      "proti": 140,
+      "pro": 17,
+      "podíl proti": 89.2
+     },
+     {
+      "obec": "Soběhrdy",
+      "okres": "Benešov",
+      "x": -724934,
+      "y": -1074685,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 265,
+      "účast": 74.2,
+      "proti": 207,
+      "pro": 46,
+      "podíl proti": 81.8
+     },
+     {
+      "obec": "Teplýšovice",
+      "okres": "Benešov",
+      "x": -720087,
+      "y": -1078442,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 283,
+      "účast": 69.2,
+      "proti": 258,
+      "pro": 19,
+      "podíl proti": 93.1
+     },
+     {
+      "obec": "Kralovice",
+      "okres": "Plzeň-sever",
+      "x": -813423,
+      "y": -1043876,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 1411,
+      "účast": 51.4,
+      "proti": 980,
+      "pro": 408,
+      "podíl proti": 70.6
+     },
+     {
+      "obec": "Kožlany",
+      "okres": "Plzeň-sever",
+      "x": -807181,
+      "y": -1045720,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 485,
+      "účast": 42.2,
+      "proti": 297,
+      "pro": 172,
+      "podíl proti": 63.3
+     },
+     {
+      "obec": "Žihle",
+      "okres": "Plzeň-sever",
+      "x": -819899,
+      "y": -1036811,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 573,
+      "účast": 53.0,
+      "proti": 355,
+      "pro": 201,
+      "podíl proti": 63.8
+     },
+     {
+      "obec": "Měčín",
+      "okres": "Klatovy",
+      "x": -824622,
+      "y": -1100557,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 513,
+      "účast": 54.9,
+      "proti": 441,
+      "pro": 61,
+      "podíl proti": 87.8
+     },
+     {
+      "obec": "Horní Benešov",
+      "okres": "Bruntál",
+      "x": -518281,
+      "y": -1082817,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 754,
+      "účast": 41.7,
+      "proti": 507,
+      "pro": 230,
+      "podíl proti": 68.8
+     },
+     {
+      "obec": "Staré Heřminovy",
+      "okres": "Bruntál",
+      "x": -516605,
+      "y": -1087046,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 133,
+      "účast": 77.8,
+      "proti": 71,
+      "pro": 60,
+      "podíl proti": 54.2
+     },
+     {
+      "obec": "Zátor",
+      "okres": "Bruntál",
+      "x": -518529,
+      "y": -1074654,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 648,
+      "účast": 68.4,
+      "proti": 496,
+      "pro": 136,
+      "podíl proti": 78.5
+     },
+     {
+      "obec": "Radenín",
+      "okres": "Tábor",
+      "x": -723804,
+      "y": -1125457,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 235,
+      "účast": 56.6,
+      "proti": 132,
+      "pro": 95,
+      "podíl proti": 58.1
+     },
+     {
+      "obec": "Šebířov",
+      "okres": "Tábor",
+      "x": -723567,
+      "y": -1101961,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 183,
+      "účast": 61.8,
+      "proti": 154,
+      "pro": 27,
+      "podíl proti": 85.1
+     },
+     {
+      "obec": "Cítoliby",
+      "okres": "Louny",
+      "x": -782585,
+      "y": -1009650,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 516,
+      "účast": 59.3,
+      "proti": 368,
+      "pro": 142,
+      "podíl proti": 72.2
+     },
+     {
+      "obec": "Bystrá nad Jizerou",
+      "okres": "Semily",
+      "x": -666045,
+      "y": -995490,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 94,
+      "účast": 84.7,
+      "proti": 50,
+      "pro": 43,
+      "podíl proti": 53.8
+     },
+     {
+      "obec": "Maršov u Úpice",
+      "okres": "Trutnov",
+      "x": -627622,
+      "y": -1013081,
+      "výsledek": "proti výstavbě",
+      "hlasujících": 116,
+      "účast": 75.3,
+      "proti": 77,
+      "pro": 29,
+      "podíl proti": 72.6
+     }
+    ]
+   },
+   "mark": {
+    "type": "circle",
+    "opacity": 0.85,
+    "stroke": "#ffffff",
+    "strokeWidth": 1
+   },
+   "encoding": {
+    "longitude": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "latitude": {
+     "field": "y",
+     "type": "quantitative"
+    },
+    "size": {
+     "field": "hlasujících",
+     "type": "quantitative",
+     "scale": {
+      "range": [
+       40,
+       520
+      ]
+     },
+     "legend": null
+    },
+    "color": {
+     "field": "výsledek",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "proti výstavbě",
+       "pro výstavbu"
+      ],
+      "range": [
+       "#f76800",
+       "#06677d"
+      ]
+     },
+     "legend": {
+      "orient": "top",
+      "title": null
+     }
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Obec"
+     },
+     {
+      "field": "okres",
+      "title": "Okres"
+     },
+     {
+      "field": "výsledek",
+      "title": "Výsledek"
+     },
+     {
+      "field": "proti",
+      "title": "Hlasů proti výstavbě",
+      "format": ",.0f"
+     },
+     {
+      "field": "pro",
+      "title": "Hlasů pro výstavbu",
+      "format": ",.0f"
+     },
+     {
+      "field": "účast",
+      "title": "Účast, %",
+      "format": ".1f"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "popisek": "Svitavsko",
+      "x": -598227,
+      "y": -1091515
+     },
+     {
+      "popisek": "Kačice",
+      "x": -771778,
+      "y": -1030359
+     },
+     {
+      "popisek": "Benešovsko",
+      "x": -722639,
+      "y": -1074685
+     },
+     {
+      "popisek": "Plzeňsko",
+      "x": -813501,
+      "y": -1036811
+     },
+     {
+      "popisek": "Měčín",
+      "x": -824622,
+      "y": -1100557
+     },
+     {
+      "popisek": "Bruntálsko",
+      "x": -517805,
+      "y": -1074654
+     },
+     {
+      "popisek": "Táborsko",
+      "x": -723686,
+      "y": -1101961
+     },
+     {
+      "popisek": "Cítoliby",
+      "x": -782585,
+      "y": -1009650
+     },
+     {
+      "popisek": "Bystrá nad Jizerou",
+      "x": -666045,
+      "y": -995490
+     },
+     {
+      "popisek": "Maršov u Úpice",
+      "x": -627622,
+      "y": -1013081
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": -16,
+    "fontSize": 12,
+    "color": "#101432"
+   },
+   "encoding": {
+    "longitude": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "latitude": {
+     "field": "y",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "popisek"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "popisek": "Petrovice",
+      "x": -798485,
+      "y": -1037465
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": 18,
+    "fontSize": 12,
+    "color": "#101432"
+   },
+   "encoding": {
+    "longitude": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "latitude": {
+     "field": "y",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "popisek"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

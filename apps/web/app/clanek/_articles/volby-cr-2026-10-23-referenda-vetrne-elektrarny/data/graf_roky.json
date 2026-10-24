@@ -1,0 +1,304 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Referend o větrnících přibývá a letos skoro všechna {odmítla|#f76800} výstavbu",
+  "subtitle": "Místní referenda o větrných elektrárnách podle roku konání a podle toho, která odpověď získala většinu hlasujících. Šedě referenda neplatná kvůli nízké účasti. Rok 2026 do 10. října."
+ },
+ "_source": "MV ČR, Místní referenda – tabulka hlášení (16. 10. 2026); referenda 9.–10. 10. 2026 ze zápisů místních komisí; ruční kódování otázek a výpočet DataTimes.cz",
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": "2006",
+    "výsledek": "pro",
+    "počet": 1,
+    "pořadí": 1
+   },
+   {
+    "rok": "2007",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2007",
+    "výsledek": "pro",
+    "počet": 2,
+    "pořadí": 1
+   },
+   {
+    "rok": "2007",
+    "výsledek": "neplatné",
+    "počet": 2,
+    "pořadí": 2
+   },
+   {
+    "rok": "2008",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2008",
+    "výsledek": "pro",
+    "počet": 1,
+    "pořadí": 1
+   },
+   {
+    "rok": "2009",
+    "výsledek": "proti",
+    "počet": 4,
+    "pořadí": 0
+   },
+   {
+    "rok": "2009",
+    "výsledek": "neplatné",
+    "počet": 1,
+    "pořadí": 2
+   },
+   {
+    "rok": "2010",
+    "výsledek": "proti",
+    "počet": 3,
+    "pořadí": 0
+   },
+   {
+    "rok": "2012",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2013",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2014",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2016",
+    "výsledek": "pro",
+    "počet": 1,
+    "pořadí": 1
+   },
+   {
+    "rok": "2019",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2021",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2022",
+    "výsledek": "proti",
+    "počet": 1,
+    "pořadí": 0
+   },
+   {
+    "rok": "2022",
+    "výsledek": "pro",
+    "počet": 1,
+    "pořadí": 1
+   },
+   {
+    "rok": "2023",
+    "výsledek": "proti",
+    "počet": 4,
+    "pořadí": 0
+   },
+   {
+    "rok": "2023",
+    "výsledek": "pro",
+    "počet": 5,
+    "pořadí": 1
+   },
+   {
+    "rok": "2023",
+    "výsledek": "neplatné",
+    "počet": 1,
+    "pořadí": 2
+   },
+   {
+    "rok": "2024",
+    "výsledek": "proti",
+    "počet": 10,
+    "pořadí": 0
+   },
+   {
+    "rok": "2024",
+    "výsledek": "pro",
+    "počet": 2,
+    "pořadí": 1
+   },
+   {
+    "rok": "2024",
+    "výsledek": "neplatné",
+    "počet": 1,
+    "pořadí": 2
+   },
+   {
+    "rok": "2025",
+    "výsledek": "proti",
+    "počet": 13,
+    "pořadí": 0
+   },
+   {
+    "rok": "2025",
+    "výsledek": "pro",
+    "počet": 12,
+    "pořadí": 1
+   },
+   {
+    "rok": "2026",
+    "výsledek": "proti",
+    "počet": 30,
+    "pořadí": 0
+   },
+   {
+    "rok": "2026",
+    "výsledek": "pro",
+    "počet": 2,
+    "pořadí": 1
+   },
+   {
+    "rok": "2026",
+    "výsledek": "neplatné",
+    "počet": 1,
+    "pořadí": 2
+   }
+  ]
+ },
+ "transform": [
+  {
+   "calculate": "{'proti': 'většina proti výstavbě', 'pro': 'většina pro výstavbu', 'neplatné': 'neplatné'}[datum['výsledek']]",
+   "as": "odpověď"
+  }
+ ],
+ "mark": {
+  "type": "bar",
+  "width": {
+   "band": 0.75
+  }
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "title": null,
+   "sort": [
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "scale": {
+    "domain": [
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012",
+     "2013",
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026"
+    ]
+   },
+   "axis": {
+    "labelAngle": 0,
+    "labelExpr": "(+datum.value) % 2 == 0 || datum.value == '2025' ? datum.value : ''",
+    "ticks": false
+   }
+  },
+  "y": {
+   "field": "počet",
+   "type": "quantitative",
+   "stack": "zero",
+   "title": null,
+   "axis": {
+    "tickMinStep": 5,
+    "gridColor": "#e8e3d2"
+   }
+  },
+  "color": {
+   "field": "odpověď",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "většina proti výstavbě",
+     "většina pro výstavbu",
+     "neplatné"
+    ],
+    "range": [
+     "#f76800",
+     "#06677d",
+     "#bcc4df"
+    ]
+   },
+   "legend": null
+  },
+  "order": {
+   "field": "pořadí"
+  },
+  "tooltip": [
+   {
+    "field": "rok",
+    "title": "Rok"
+   },
+   {
+    "field": "odpověď",
+    "title": "Výsledek"
+   },
+   {
+    "field": "počet",
+    "title": "Referend"
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}
