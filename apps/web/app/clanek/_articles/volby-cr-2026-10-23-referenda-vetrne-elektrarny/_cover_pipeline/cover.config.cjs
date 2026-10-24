@@ -16,5 +16,5 @@ module.exports = {
   logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo
   // brandOrange.9 / brandTeal.9 záře, brandOrange.1 podtitulek
   barvy: { glowA: '#663200', glowB: '#023440', sub: '#ffe0c7', stitek: '#de1743' },
-  motiv: { typ: 'svg', opacityOg: 0.45, soubory: Object.fromEntries(['homepage', 'og', 'square', 'instagram', 'story'].map((k) => [k, soubor(k)])) },
+  motiv: { typ: 'svg', opacityOg: 1, soubory: Object.fromEntries(['homepage', 'og', 'square', 'instagram', 'story'].map((k) => [k, soubor(k)])) },
 };

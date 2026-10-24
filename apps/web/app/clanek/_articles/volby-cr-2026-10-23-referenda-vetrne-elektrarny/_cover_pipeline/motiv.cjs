@@ -15,7 +15,7 @@ const NAVY = '#101432'; // brandNavy.9
 
 // Stejné plochy mapy jako tools/cover-generator.cjs (FORMATY[].mapa, homepage podle mapaPozice v cover.config.cjs).
 const MAPA = {
-  homepage: [1500, 1200, [140, 470, 1500, 1170]], og: [1200, 630, [0, 0, 1200, 630]],
+  homepage: [1500, 1200, [140, 470, 1500, 1170]], og: [1200, 630, [40, 30, 1160, 610]],
   square: [1080, 1080, [20, 470, 1070, 1050]], instagram: [1080, 1350, [20, 560, 1070, 1260]],
   story: [1080, 1920, [0, 860, 1080, 1580]],
 };
@@ -32,7 +32,7 @@ for (const [klic, [W, H, [mx0, my0, mx1, my1]]] of Object.entries(MAPA)) {
   const ox = mx0 + (mx1 - mx0 - (x1 - x0) * kx * sc) / 2, oy = my0 + (my1 - my0 - (y1 - y0) * sc) / 2;
   const P = (lo, la) => [ox + (lo - x0) * kx * sc, oy + (y1 - la) * sc];
   const r = Math.max(1.6, sc * 0.018);
-  const op = klic === 'og' ? 0.35 : 1;
+  const op = 1; // i u OG plná mapa, jinak turbíny visí ve vzduchu (Kateřina 24. 10.)
   const t = dots.map(([lo, la]) => { const [x, y] = P(lo, la); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${TECKA}" opacity="${op}"/>`; }).join('');
   const f = (v) => v.toFixed(1);
   const turbiny = poradi.map((o, i) => {
@@ -47,7 +47,7 @@ for (const [klic, [W, H, [mx0, my0, mx1, my1]]] of Object.entries(MAPA)) {
       const mxp = x + Math.cos(a) * L * 0.3, myp = hy + Math.sin(a) * L * 0.3;
       return `<path d="M${f(x)},${f(hy)} L${f(mxp + nx * w)},${f(myp + ny * w)} L${f(tx)},${f(ty)} L${f(mxp - nx * w * 0.35)},${f(myp - ny * w * 0.35)} Z" fill="${c}" stroke="${NAVY}" stroke-width="${f(sw * 0.45)}" stroke-linejoin="round"/>`;
     }).join('');
-    return `<g opacity="${klic === 'og' ? 0.9 : 1}"><line x1="${f(x)}" y1="${f(y)}" x2="${f(x)}" y2="${f(hy)}" stroke="${NAVY}" stroke-width="${f(sw * 2.2)}" stroke-linecap="round"/><line x1="${f(x)}" y1="${f(y)}" x2="${f(x)}" y2="${f(hy)}" stroke="${c}" stroke-width="${f(sw)}" stroke-linecap="round"/>${listy}<circle cx="${f(x)}" cy="${f(hy)}" r="${f(sw * 1.3)}" fill="${c}" stroke="${NAVY}" stroke-width="${f(sw * 0.45)}"/><circle cx="${f(x)}" cy="${f(y)}" r="${f(sw * 1.5)}" fill="${c}"/></g>`;
+    return `<g opacity="1"><line x1="${f(x)}" y1="${f(y)}" x2="${f(x)}" y2="${f(hy)}" stroke="${NAVY}" stroke-width="${f(sw * 2.2)}" stroke-linecap="round"/><line x1="${f(x)}" y1="${f(y)}" x2="${f(x)}" y2="${f(hy)}" stroke="${c}" stroke-width="${f(sw)}" stroke-linecap="round"/>${listy}<circle cx="${f(x)}" cy="${f(hy)}" r="${f(sw * 1.3)}" fill="${c}" stroke="${NAVY}" stroke-width="${f(sw * 0.45)}"/><circle cx="${f(x)}" cy="${f(y)}" r="${f(sw * 1.5)}" fill="${c}"/></g>`;
   }).join('');
   fs.writeFileSync(path.join(__dirname, `motiv-${klic}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${t}${turbiny}</svg>`);
 }
