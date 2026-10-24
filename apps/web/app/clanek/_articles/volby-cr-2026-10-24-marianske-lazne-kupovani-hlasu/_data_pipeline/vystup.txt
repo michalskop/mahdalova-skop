@@ -1,0 +1,77 @@
+Listin: 10 | kandidátů: 210 | platných hlasů: 68 721
+Kandidátů na listinu: [21]
+Okrsků: 17 | voličů v seznamu: 9 576 | vydané obálky: 3 707 | platné lístky: 3 659 | platné hlasy: 68 721
+Kontrola okrsky × registr: součty hlasů listin sedí.
+Kontrola XML ČSÚ: hlasy i mandáty listin sedí.
+Kontrola: d'Hondt + přednostní hlasy reprodukují oficiální mandáty i jména všech 21 zastupitelů.
+
+Naše Česko: 5 086 hlasů, 7,40 %, 2 mandáty
+Zvolení: Samuel Zabolotný (č. 1, 420 hl.), Tomáš Foustka (č. 10, 274 hl.)
+Lístků (přepočet na celé lístky): 242,2
+
+21. mandát: Naše Česko podíl 2 543,00 | 22. v pořadí: ANO 2011 a Nezávislí podíl 2 473,44
+
+Odečtení celých lístků (21 hlasů pro Naše Česko, voliči by jinak nepřišli):
+  bez   0 lístků: 5 086 z 68 721 = 7,40 % → mandátů 2
+  bez   6 lístků: 4 960 z 68 595 = 7,23 % → mandátů 2
+  bez   7 lístků: 4 939 z 68 574 = 7,20 % → mandátů 1
+  bez  82 lístků: 3 364 z 66 999 = 5,02 % → mandátů 1
+  bez  83 lístků: 3 343 z 66 978 = 4,99 % → mandátů 0
+
+Bez 7 lístků mandát navíc: ANO 2011 a Nezávislí +1: Zdeňka Pinkasová (č. 9, náhradník 1)
+Bez 83 lístků mandáty navíc: ANO 2011 a Nezávislí +1: Zdeňka Pinkasová (č. 9, náhradník 1) Za lepší Mariánské Lázně +1: Martin Kalina (č. 8, náhradník 1)
+  1. náhradník Změna pro Mariánské Lázně s podporou VOK - Volba pro kraj: Alena Hálová (č. 5)
+  1. náhradník STAROSTOVÉ A NEZÁVISLÍ: Daniel Hlavatý (č. 7)
+  1. náhradník Naše Česko: Daniela Oravcová (č. 2)
+  1. náhradník ANO 2011 a Nezávislí: Zdeňka Pinkasová (č. 9)
+  1. náhradník ODS + KDU-ČSL: Radek Šnajdr (č. 2)
+  1. náhradník Za lepší Mariánské Lázně: Martin Kalina (č. 8)
+
+Varianta – voliči by jinak volili celou listinu ANO 2011 a Nezávislí: druhý mandát padá od 6 lístků, žádný mandát od 79 lístků
+
+Po jednotlivých hlasech: o druhý mandát by přišlo po ztrátě 140 hlasů (bez dopadu na ostatní listiny).
+
+Přednostní hranice (průměr 242,19 × 1,1): 266,41 hlasů
+  č.  1 Samuel Zabolotný              420 hl. ZVOLEN
+  č.  2 Daniela Oravcová              270 hl.  náhr. 1
+  č.  3 Adam Kandráč                  256 hl.  náhr. 4
+  č.  4 Adéla Stonawská               264 hl.  náhr. 5
+  č.  5 Albert Hulena                 269 hl.  náhr. 2
+  č.  6 Michal Ptáček                 231 hl.  náhr. 6
+  č.  7 Milan Myslivec                221 hl.  náhr. 7
+  č.  8 Jaroslav Paroubek             227 hl.  náhr. 8
+  č.  9 Monika Škorničková            226 hl.  náhr. 9
+  č. 10 Tomáš Foustka                 274 hl. ZVOLEN
+  č. 11 Daniel Zadranský              216 hl.  náhr. 10
+  č. 12 Marek Pátek                   253 hl.  náhr. 11
+  č. 13 Martin Hráský                 223 hl.  náhr. 12
+  č. 14 Jaroslav Bílek                269 hl.  náhr. 3
+  č. 15 Martin Galas                  263 hl.  náhr. 13
+  č. 16 David Tomi                    208 hl.  náhr. 14
+  č. 17 Marek Čech                    210 hl.  náhr. 15
+  č. 18 Martin Kodýtek                204 hl.  náhr. 16
+  č. 19 Pavel Molnár                  197 hl.  náhr. 17
+  č. 20 Michal Gezo                   205 hl.  náhr. 18
+  č. 21 Richard Kavina                180 hl.  náhr. 19
+
+Okrsky – Naše Česko:
+  okrsek 1: voličů  612, obálek  287, platných hlasů   5606, NČ  643 = 11.47 %
+  okrsek 2: voličů  626, obálek  300, platných hlasů   5693, NČ  377 =  6.62 %
+  okrsek 3: voličů   32, obálek   20, platných hlasů    381, NČ   22 =  5.77 %
+  okrsek 4: voličů  345, obálek  105, platných hlasů   1993, NČ  175 =  8.78 %
+  okrsek 5: voličů  793, obálek   96, platných hlasů   1780, NČ  347 = 19.49 %
+  okrsek 6: voličů  463, obálek  165, platných hlasů   3094, NČ  313 = 10.12 %
+  okrsek 7: voličů  568, obálek  213, platných hlasů   4046, NČ  182 =  4.50 %
+  okrsek 8: voličů  493, obálek  202, platných hlasů   3782, NČ  371 =  9.81 %
+  okrsek 9: voličů  647, obálek  296, platných hlasů   5417, NČ  458 =  8.45 %
+  okrsek 10: voličů  741, obálek  282, platných hlasů   5018, NČ  452 =  9.01 %
+  okrsek 11: voličů  606, obálek  272, platných hlasů   5025, NČ  241 =  4.80 %
+  okrsek 12: voličů  466, obálek  206, platných hlasů   3934, NČ  257 =  6.53 %
+  okrsek 13: voličů  670, obálek  267, platných hlasů   4852, NČ  215 =  4.43 %
+  okrsek 14: voličů  559, obálek  248, platných hlasů   4831, NČ  325 =  6.73 %
+  okrsek 15: voličů  778, obálek  326, platných hlasů   5453, NČ  240 =  4.40 %
+  okrsek 16: voličů  638, obálek  230, platných hlasů   4259, NČ  318 =  7.47 %
+  okrsek 17: voličů  539, obálek  192, platných hlasů   3557, NČ  150 =  4.22 %
+
+„Asi 25 lidí“ z nahrávky (celé lístky, jinak by nepřišli): 1 mandát(y), 6,69 %
+Podíl 7 voličů z vydaných obálek: 1,89 ‰
