@@ -1,0 +1,137 @@
+[
+{
+"nazev": "Olomouc",
+"obyv": 105297,
+"role": "bez"
+},
+{
+"nazev": "Opava",
+"obyv": 54881,
+"role": "bez"
+},
+{
+"nazev": "Přerov",
+"obyv": 40492,
+"role": "ano"
+},
+{
+"nazev": "Kladno",
+"obyv": 69728,
+"role": "ano"
+},
+{
+"nazev": "Mladá Boleslav",
+"obyv": 47874,
+"role": "ano"
+},
+{
+"nazev": "České Budějovice",
+"obyv": 97128,
+"role": "jedna"
+},
+{
+"nazev": "Praha hl.m.",
+"obyv": 1407084,
+"role": "jedna"
+},
+{
+"nazev": "Plzeň",
+"obyv": 187863,
+"role": "ano"
+},
+{
+"nazev": "Ústí nad Labem",
+"obyv": 90035,
+"role": "bez"
+},
+{
+"nazev": "Ostrava",
+"obyv": 280853,
+"role": "ano"
+},
+{
+"nazev": "Karlovy Vary",
+"obyv": 48788,
+"role": "ano"
+},
+{
+"nazev": "Havířov",
+"obyv": 67998,
+"role": "ano"
+},
+{
+"nazev": "Pardubice",
+"obyv": 92713,
+"role": "bez"
+},
+{
+"nazev": "Děčín",
+"obyv": 46003,
+"role": "bez"
+},
+{
+"nazev": "Chomutov",
+"obyv": 46560,
+"role": "jedna"
+},
+{
+"nazev": "Jablonec nad Nisou",
+"obyv": 46206,
+"role": "bez"
+},
+{
+"nazev": "Liberec",
+"obyv": 108214,
+"role": "bez"
+},
+{
+"nazev": "Most",
+"obyv": 63160,
+"role": "ano"
+},
+{
+"nazev": "Teplice",
+"obyv": 50856,
+"role": "ano"
+},
+{
+"nazev": "Hradec Králové",
+"obyv": 93534,
+"role": "bez"
+},
+{
+"nazev": "Brno",
+"obyv": 404296,
+"role": "bez"
+},
+{
+"nazev": "Zlín",
+"obyv": 74917,
+"role": "jedna"
+},
+{
+"nazev": "Jihlava",
+"obyv": 53686,
+"role": "bez"
+},
+{
+"nazev": "Prostějov",
+"obyv": 43236,
+"role": "jedna"
+},
+{
+"nazev": "Frýdek-Místek",
+"obyv": 53164,
+"role": "bez"
+},
+{
+"nazev": "Třinec",
+"obyv": 33523,
+"role": "bez"
+},
+{
+"nazev": "Karviná",
+"obyv": 48684,
+"role": "jedna"
+}
+]
