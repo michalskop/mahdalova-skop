@@ -66,6 +66,14 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *25. 10. 2026 – fotka jako motiv pod navy závojem (bingo, STOP s dlaní místo „O“).* Podkladová fotka nesmí mít
+  viditelný rámeček: okraje maskovat obdélníkem s Gaussovým rozmazáním (`motiv.typ: 'svg'`, vzor
+  `analyza-2026-10-21-bingo-domaci-a-sexualni-nasili/_cover_pipeline/motiv.cjs`) a pod světlé partie u okraje
+  (tričko, čelo) dát navy přechod. Kontrolovat výřezem se zesíleným kontrastem ve všech formátech. Ruční obrys
+  (lasso) ruky ve fotce nesedí podél prstů ani po přichycení na hrany. Pozadí za rukou tlumit jen měkkým přechodem
+  bez obrysu. Zvýšený kontrast a teplý tón fotky se neosvědčily, ruka zůstává v přirozené barvě. Písmena motivu
+  v karmínové #de1743. Písmena motivu (bez dlaně) centrovat svisle na střed mezi spodní okraj podtitulku a horní okraj
+  kolečka loga (měří `zmer.cjs`), dlaň zůstává na svém místě. Konečky prstů nesmí zasahovat pod podtitulek, jeho halo je usekne.
 - *24. 10. 2026 – jméno místa patří přímo na mapu (Mariánské Lázně, kupování hlasů).* Když cover stojí na jednom
   zvýrazněném místě, Kateřina chce jeho název u tečky, ne jen ve štítku nebo v legendě v rohu. Generátor umí
   `popisek` u bodu (`motiv.body: [{ lon, lat, k, popisek: 'Mariánské Lázně' }]`): Plex Sans s obrysem v barvě pozadí,
