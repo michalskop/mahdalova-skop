@@ -53,7 +53,8 @@ Než začneš, přečti a dodržuj:
      Graf (třeba spojnicový) je v pořádku, když má dobrý podkres (fotka, mapa, záře) a kompozici přes celou plochu –
      styl není striktně předepsaný (COVER-VIZUALNI-IDENTITA.md, kap. 4). Měřítko vždy poctivé (54 % není skoro celá šíře).
    - Podkresová fotka: nejdřív Kateřininy vlastní fotky (Desktop\Mahdalova & Skop\Ilustrační obrázky\, Desktop\Z mobilu*\),
-     ne agenturní ilustračky; převzaté obrázky z ilustrační složky ne (COVER-VIZUALNI-IDENTITA.md, kap. 5.1).
+     ne agenturní ilustračky; převzaté obrázky z ilustrační složky ne. Fotka musí ILUSTROVAT sdělení článku –
+     žádný náhodný podkres ani zvětšení na nic neříkající detail; když vhodná není, cover bez fotky (kap. 5.1).
    - Fotka → fotka je hlavní, text jen titulek, případně krátký citát v uvozovkách se jménem; nic dalšího.
    - ZAKÁZÁNO: AI generované obrázky a ilustrace, stockové ikony, 3D efekty, neonové záře, víc než 2–3 barvy motivu,
      text přes rušná místa fotky, emoji, vymyšlená čísla. Každé číslo nebo tvrzení na coveru musí být v článku.

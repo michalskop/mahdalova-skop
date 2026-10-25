@@ -80,6 +80,14 @@ Kateřina má velký archiv vlastních autorských fotek, často ve velmi dobré
 
 Pozor: v ilustrační složce leží i převzaté obrázky (portréty známých lidí, umělecká díla, screenshoty). Jako podkres se používají jen **Kateřininy vlastní fotky**. U nejistého původu se zeptej. Kredit: „Foto: Kateřina Mahdalová“. Fotku vyber, ukaž ji Kateřině spolu s návrhem coveru a originál nech ve složce, do článku jde jen hotová kompozice.
 
+**Fotka musí ilustrovat, ne vyplňovat.** Podkres nikdy nevybírat náhodně ani jen proto, že je hezký nebo po ruce. Cover nese sdělení článku a fotka ho má podpořit:
+
+- **Nejdřív se podívej, co na fotce opravdu je** (místo, lidé, předmět, situace), a napiš si jednou větou, jak to souvisí s větou coveru (kapitola 2). Když vazbu nejde napsat bez natahování, fotka se nehodí.
+- **Ořez a zvětšení musí mít důvod:** ukázat to, co ilustruje téma (budovu, o které článek je, prázdnou třídu, ulici z reportáže). Nezvětšovat fotku na náhodný detail, texturu nebo rozmazanou plochu, ze které nikdo nepozná, co na ní je.
+- **Motiv a fotka se doplňují:** datová vrstva (graf, tečky, mapa) leží tam, kde fotka nechává klidné místo, a nezakrývá to, kvůli čemu byla fotka vybraná.
+- **Když vhodná fotka není, žádná se nepoužije.** Datový motiv na tmavém pozadí (kapitola 4) je vždy lepší než podkres, který nic neilustruje.
+- Návrh vždy ukaž Kateřině i s tím, proč je vybraná právě tahle fotka.
+
 Vlastní fotka může být hlavním motivem (kapitola 5) i tlumeným podkresem pod datovým motivem (graf, tečky, mapa přes ztmavenou fotku). Pro podkres platí totéž co pro závoj: silnější tmavá vrstva z palety, aby motiv i text zůstaly čitelné.
 
 ### 5.2 Pravidla pro fotografický cover
@@ -119,5 +127,6 @@ U zdraví, duševních nemocí, násilí, dětí a obětí:
 ## Ponaučení
 
 - *25. 10. 2026 – „covery jsou hotové“, ale Kateřina je neviděla.* Hotový cover se vždy hned pošle jako náhled (kontaktní arch + homepage + OG), ne jen popíše v textu. Platí i pro covery od pomocného agenta.
+- *25. 10. 2026 – náhodný podkres (první návrhy coverů pro Data pro budoucí premiérku).* Povolení čerpat z Kateřininých fotek se vyložilo jako „vezmi jakoukoli fotku a dej ji pod text“: fotky byly vybrané nahodile a přiblížené na detaily, které nic neilustrovaly. Fotka musí ilustrovat sdělení článku, ořez musí mít důvod a bez vhodné fotky se jde cestou datového motivu (kapitola 5.1).
 - *25. 10. 2026 – vlastní fotky a volnost stylu.* Kateřinin archiv vlastních fotek se smí používat jako podkres (kapitola 5.1). Styl není striktně předepsaný, i spojnicový graf je dobrý cover, když má podkres a kompozici (kapitola 4).
 - *25. 10. 2026 – slunečnice z teček (poruchy příjmu potravy).* Abstraktní tečková jednotka s plochou úměrnou počtu a s tlumeným „před“ a zářivým „přibylo“ unese citlivé téma i hlavní číslo zároveň. Kateřina ji chce jako vzor pro covery bez fotky.
