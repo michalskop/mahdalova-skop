@@ -1,0 +1,56 @@
+Kandidáti Motoristů: 0
+Obvodů se 2. kolem: 22
+
+Změna hlasů finalistů mezi koly
+  vítězové               n=22  ztratilo hlasy 15  341254 -> 296412 (-13.1 %)
+  poražení               n=22  ztratilo hlasy 21  259580 -> 176833 (-31.9 %)
+  kandidáti ANO          n=13  ztratilo hlasy 12  152545 -> 102148 (-33.0 %)
+  ostatní finalisté      n=31  ztratilo hlasy 24  448289 -> 371097 (-17.2 %)
+  vydané obálky ve 22 obvodech: 972613 -> 475714 (2. kolo = 49 % prvního)
+
+Souboje s kandidátem ANO: kolik hlasů chybělo a kolik měla SPD v 1. kole
+   3 Cheb              Sandra Tsoukernik          9227->  5558 (-40 %)  chybělo   8288  SPD  2186  potřeba 379 % voličů SPD  | účast 36.8 -> 20.4 %, 2. kolo přišlo 55 % voličů 1. kola | soupeř Miroslav Plevný 13659->13846 (+187, +1 %)
+   6 Louny             Jaroslav Mikoláš          11675->  7670 (-34 %)  chybělo   7363  SPD  4992  potřeba 147 % voličů SPD  | účast 41.5 -> 19.4 %, 2. kolo přišlo 47 % voličů 1. kola | soupeř Ivo Trešl 19872->15033 (-4839, -24 %)
+   9 Plzeň-město       Lucie Kantorová           10463-> 10944 (+5 %)  chybělo   5054  SPD  1845  potřeba 274 % voličů SPD  | účast 40.8 -> 27.2 %, 2. kolo přišlo 67 % voličů 1. kola | soupeř Karel Řehka 12611->15998 (+3387, +27 %)
+  15 Pelhřimov         Michal Kozár              12758->  9490 (-26 %)  chybělo   5893  SPD  2676  potřeba 220 % voličů SPD  | účast 45.9 -> 23.4 %, 2. kolo přišlo 51 % voličů 1. kola | soupeř Ladislav Med 14321->15383 (+1062, +7 %)
+  18 Příbram           Barbora Daňhová           13446->  6593 (-51 %)  chybělo  12427  SPD  5013  potřeba 248 % voličů SPD  | účast 46.0 -> 21.3 %, 2. kolo přišlo 46 % voličů 1. kola | soupeř Petr Štěpánek 23305->19020 (-4285, -18 %)
+  36 Česká Lípa        Jitka Volfová             15078-> 11339 (-25 %)  chybělo   2948  SPD     0  SPD nekandidovala  | účast 38.4 -> 22.1 %, 2. kolo přišlo 58 % voličů 1. kola | soupeř Martin Půta 14052->14287 (+235, +2 %)
+  42 Kolín             Andrea Brzobohatá         12988->  6905 (-47 %)  chybělo  11994  SPD  2135  potřeba 562 % voličů SPD  | účast 44.0 -> 21.5 %, 2. kolo přišlo 49 % voličů 1. kola | soupeř Michael Kašpar 23018->18899 (-4119, -18 %)
+  54 Znojmo            Jiří Kyněra                8980->  7086 (-21 %)  chybělo   5336  SPD     0  SPD nekandidovala  | účast 45.0 -> 20.9 %, 2. kolo přišlo 46 % voličů 1. kola | soupeř Tomáš Třetina 14328->12422 (-1906, -13 %)
+  63 Přerov            Petr Vrána                15192-> 10181 (-33 %)  chybělo   3270  SPD  3548  potřeba 92 % voličů SPD  | účast 41.6 -> 23.0 %, 2. kolo přišlo 55 % voličů 1. kola | soupeř Jakub Navařík 15561->13451 (-2110, -14 %)
+  66 Litovel           Martin Škurek             12118->  6975 (-42 %)  chybělo   6226  SPD  3948  potřeba 158 % voličů SPD  | účast 40.0 -> 18.5 %, 2. kolo přišlo 46 % voličů 1. kola | soupeř Marek Ošťádal 13544->13201 (-343, -3 %)
+  72 Ostrava-město     Vilamová Lucie Baránková  10177->  6479 (-36 %)  chybělo   6045  SPD  4239  potřeba 143 % voličů SPD  | účast 39.5 -> 21.6 %, 2. kolo přišlo 55 % voličů 1. kola | soupeř Ondřej Šimetka 15542->12524 (-3018, -19 %)
+  75 Karviná           Lenka Brzyszkowská         8009->  5188 (-35 %)  chybělo    648  SPD  2961  potřeba 22 % voličů SPD  | účast 29.5 -> 13.2 %, 2. kolo přišlo 45 % voličů 1. kola | soupeř Petr Kazík 3411->5836 (+2425, +71 %)
+  81 Uherské Hradiště  Jiří Vašica               12434->  7740 (-38 %)  chybělo   6929  SPD  1793  potřeba 386 % voličů SPD  | účast 46.8 -> 23.1 %, 2. kolo přišlo 50 % voličů 1. kola | soupeř Josef Bazala 20975->14669 (-6306, -30 %)
+  ANO vyhrálo: 0 z 13;  ani všichni voliči SPD by nestačili v 11 z 13
+  ANO ztratilo celkem 50397 hlasů, SPD měla v těchto obvodech v 1. kole 35336
+
+Součet hlasů 1. kola ANO + SPD proti nejsilnějšímu jinému kandidátovi (společná kandidátka, horní odhad)
+  15 Pelhřimov         ANO+SPD 15434 > Ladislav Med (ODS) 14321
+  36 Česká Lípa        ANO+SPD 15078 > Martin Půta (SLK) 14052
+  63 Přerov            ANO+SPD 18740 > Jakub Navařík (ODS) 15561
+  66 Litovel           ANO+SPD 16066 > Marek Ošťádal (24/7) 13544
+  75 Karviná           ANO+SPD 10970 > Petr Kazík (OK) 3411
+Ústí nad Labem 2026, první tři: [('JEDNO ÚSTÍ', 51.25, 22), ('ANO 2011', 15.96, 6), ('Vaše Ústí s podporou Za lepší Střekov', 9.61, 4)] mandátů celkem 37
+
+ANO v krajských městech: podíl hlasů (pořadí, mandáty)
+  Praha              22.1 % (1., 17)  15.4 % (5., 12)  19.3 % (2., 14)  14.4 % (4., 11)   2022→2026 -5.0 p. b.
+  Brno               19.9 % (1., 13)  23.0 % (1., 18)  20.5 % (2., 13)  17.1 % (3., 11)   2022→2026 -3.3 p. b.
+  Ostrava            21.3 % (1., 15)  32.7 % (1., 21)  34.0 % (1., 21)  26.2 % (1., 18)   2022→2026 -7.7 p. b.
+  Plzeň              17.9 % (1., 10)  22.2 % (1., 13)  27.3 % (2., 15)  31.7 % (1., 18)   2022→2026 +4.4 p. b.
+  Liberec            18.1 % (2.,  9)  21.4 % (2., 11)  26.2 % (2., 11)  17.8 % (3.,  8)   2022→2026 -8.5 p. b.
+  Olomouc            23.4 % (1., 12)  26.7 % (1., 14)  31.8 % (1., 16)  25.9 % (1., 13)   2022→2026 -5.9 p. b.
+  České Budějovice   20.7 % (1., 12)  21.2 % (1., 12)  24.0 % (2., 13)  16.2 % (3.,  8)   2022→2026 -7.9 p. b.
+  Hradec Králové     14.2 % (2.,  6)  23.8 % (1., 11)  24.5 % (1., 13)  22.2 % (2., 10)   2022→2026 -2.3 p. b.
+  Pardubice          21.4 % (1., 11)  26.7 % (1., 13)  28.8 % (1., 12)  22.9 % (1., 10)   2022→2026 -6.0 p. b.
+  Ústí nad Labem     26.1 % (1., 12)  20.6 % (1.,  9)  28.5 % (1., 13)  16.0 % (2.,  6)   2022→2026 -12.6 p. b.
+  Zlín               14.6 % (2.,  8)  18.8 % (1.,  9)  32.0 % (1., 14)  21.4 % (1., 10)   2022→2026 -10.6 p. b.
+  Karlovy Vary       15.4 % (2.,  6)  23.9 % (1., 12)  34.4 % (1., 14)  26.4 % (1., 10)   2022→2026 -8.0 p. b.
+  Jihlava            18.3 % (1.,  8)  22.6 % (1., 10)  28.5 % (1., 14)  23.2 % (2., 10)   2022→2026 -5.3 p. b.
+  2014: průměr 19.5 %, mandátů 139, první místo v 9 městech
+  2018: průměr 23.0 %, mandátů 165, první místo v 11 městech
+  2022: průměr 27.7 %, mandátů 183, první místo v 8 městech
+  2026: průměr 21.6 %, mandátů 143, první místo v 6 městech
+  změna průměru 2014→18 +3.5, 2018→22 +4.7, 2022→26 -6.0 p. b.
+  ztráta 2022→2026 ve 12 z 13; pod rokem 2018 ve 9 z 13
+  kandidátky s jiným názvem: [('Plzeň', 2022, 'ANO 2011 a nezávislí'), ('Plzeň', 2026, 'ANO 2011 a nezávislí')]

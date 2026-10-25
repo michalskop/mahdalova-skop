@@ -1,0 +1,149 @@
+[
+ {
+  "obec": "Dětřichov",
+  "lon": 16.5432,
+  "lat": 49.7982,
+  "vysledek": "pro výstavbu",
+  "hlasujicich": 206
+ },
+ {
+  "obec": "Mikuleč",
+  "lon": 16.4349,
+  "lat": 49.8088,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 157
+ },
+ {
+  "obec": "Kamenná Horka",
+  "lon": 16.5387,
+  "lat": 49.7364,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 223
+ },
+ {
+  "obec": "Sklené",
+  "lon": 16.5322,
+  "lat": 49.705,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 101
+ },
+ {
+  "obec": "Kačice",
+  "lon": 13.995,
+  "lat": 50.1637,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 661
+ },
+ {
+  "obec": "Petrovice",
+  "lon": 13.6388,
+  "lat": 50.0663,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 204
+ },
+ {
+  "obec": "Petroupim",
+  "lon": 14.7569,
+  "lat": 49.8133,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 164
+ },
+ {
+  "obec": "Soběhrdy",
+  "lon": 14.7257,
+  "lat": 49.8264,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 265
+ },
+ {
+  "obec": "Teplýšovice",
+  "lon": 14.7993,
+  "lat": 49.7986,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 283
+ },
+ {
+  "obec": "Kralovice",
+  "lon": 13.4451,
+  "lat": 49.9898,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 1411
+ },
+ {
+  "obec": "Kožlany",
+  "lon": 13.535,
+  "lat": 49.9816,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 485
+ },
+ {
+  "obec": "Žihle",
+  "lon": 13.3412,
+  "lat": 50.0439,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 573
+ },
+ {
+  "obec": "Měčín",
+  "lon": 13.4065,
+  "lat": 49.4727,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 513
+ },
+ {
+  "obec": "Horní Benešov",
+  "lon": 17.5995,
+  "lat": 49.9673,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 754
+ },
+ {
+  "obec": "Staré Heřminovy",
+  "lon": 17.6283,
+  "lat": 49.9307,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 133
+ },
+ {
+  "obec": "Zátor",
+  "lon": 17.5853,
+  "lat": 50.0407,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 648
+ },
+ {
+  "obec": "Radenín",
+  "lon": 14.8332,
+  "lat": 49.3753,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 235
+ },
+ {
+  "obec": "Šebířov",
+  "lon": 14.7939,
+  "lat": 49.5849,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 183
+ },
+ {
+  "obec": "Cítoliby",
+  "lon": 13.8049,
+  "lat": 50.334,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 516
+ },
+ {
+  "obec": "Bystrá nad Jizerou",
+  "lon": 15.4071,
+  "lat": 50.602,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 94
+ },
+ {
+  "obec": "Maršov u Úpice",
+  "lon": 15.9737,
+  "lat": 50.4869,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 116
+ }
+]

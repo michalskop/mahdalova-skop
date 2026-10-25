@@ -65,6 +65,17 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *24. 10. 2026 – jméno místa patří přímo na mapu (Mariánské Lázně, kupování hlasů).* Když cover stojí na jednom
+  zvýrazněném místě, Kateřina chce jeho název u tečky, ne jen ve štítku nebo v legendě v rohu. Generátor umí
+  `popisek` u bodu (`motiv.body: [{ lon, lat, k, popisek: 'Mariánské Lázně' }]`): Plex Sans s obrysem v barvě pozadí,
+  vpravo od tečky, v OG pod ní (jinak naráží do titulku uprostřed). Téma kauzy (např. „Podezření na kupování hlasů“)
+  patří do štítku coveru.
+- *24. 10. 2026 – v OG coveru zmizela mapa ČR (referenda o větrnících).* Generátor i vzorové `motiv.cjs` u OG
+  tečkovou mapu tlumí (tečky 0,35, `opacityOg` 0,45), takže zůstaly jen značky obcí a obrázek nedával smysl.
+  Když motiv stojí na tvaru republiky (body obcí, ikony v místech), musí být mapa čitelná i v OG: tečky plně,
+  `opacityOg: 1` a plocha mapy v `motiv.cjs` s okrajem (např. `[40, 30, 1160, 610]`), aby obrys nenarážel
+  na kraje. Čitelnost textu drží halo generátoru. OG kontrolovat vedle homepage, ne jen samotný.
+- *23. 10. 2026 – cover kapitoly Demografie (speciál Data pro budoucí premiérku).* U karet speciálu je štítek rubriky na dlaždici vpravo na úrovni titulku (`DpbpArticleCard`), ne jako červený oválek přes obrázek, takže zóna x ≥ 950, y ≤ 280 zde odpadá. Cover kapitoly: nahoře zleva logo speciálu (hlava s tečkami, otočená doprava) a „Data pro budoucí premiérku“ v jednom řádku, pod tím „Kapitola 1 • Demografie“, pak velký titulek; krémové pozadí jako na webu. Dětský graf plodnosti (děti na bodech grafu) je zdroj `plodnost-3.webp` z karty článku, ne SVG náhled (ten se v prohlížeči nenačte). Dlaždice kapitoly umí vlastní `image` + `imageAspect` a `showOpener` v `_meta.json` (úvodní článek jako první dlaždice).
 - *16. 10. 2026 – titulek se v každém formátu lámal jinak (ODS a Piráti).* Titulek coveru má mít ve všech pěti
   formátech stejné zalomení. Řádky určit ručně přes `<br>` a kde se řádek do užšího formátu nevejde (typicky
   story), zmenšit jen jeho titulek přes `format: { story: { t: 88 } }` v `cover.config.cjs`. Na kontrolním listu
