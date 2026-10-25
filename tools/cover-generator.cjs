@@ -74,11 +74,13 @@ function obrazek(c, f, klic) {
 }
 
 // motiv.typ 'svg': hotová vrstva motivu pro každý formát (soubory[klic] = SVG o rozměrech formátu, vkládá se inline,
-// takže texty v ní berou IBM Plex ze stránky); u OG volitelně ztlumená (opacityOg)
+// takže texty v ní berou IBM Plex ze stránky); u OG volitelně ztlumená (opacityOg).
+// m.svg[klic] = SVG jako řetězec místo souboru (animation-generator.cjs mění obsah vrstvy #motiv snímek po snímku)
 function svgVrstva(c, f, klic) {
   const m = c.motiv;
   const op = f.stred ? m.opacityOg ?? 1 : 1;
-  return `<div style="position:absolute;left:0;top:0;width:${f.w}px;height:${f.h}px;opacity:${op}">${fs.readFileSync(m.soubory[klic], 'utf8')}</div>`;
+  const svg = m.svg?.[klic] ?? fs.readFileSync(m.soubory[klic], 'utf8');
+  return `<div id="motiv" style="position:absolute;left:0;top:0;width:${f.w}px;height:${f.h}px;opacity:${op}">${svg}</div>`;
 }
 
 // Volitelný tečkovaný znak přes motiv (např. velký otazník): c.znak = { text, barva, opacity, opacityOg,
@@ -278,6 +280,9 @@ function html(c, klic) {
   }
   // Logo jde do toho dolního rohu, kde je motiv klidnější (c.logo = 'vlevo' | 'vpravo', výchozí vpravo);
   // legenda si vezme opačný roh. U mapy ČR je volněji vlevo dole pod Šumavou.
+  // c.logo = 'nahore': logo vpravo na řádku štítku (animace a karty pro sítě – dole ho překrývá ovládání
+  // Instagramu a Reels); legenda pak zůstává v levém dolním rohu
+  const logoNahore = c.logo === 'nahore';
   const logoVlevo = c.logo === 'vlevo';
   const okraj = Math.max(Math.round(w * 0.032), w - bx1);
   const rohLogo = logoVlevo ? `left:${bx0}px` : `right:${okraj}px`;
@@ -296,7 +301,7 @@ function html(c, klic) {
          ${legTok}
        </div>
        ${leg}
-       <div class="halo" style="position:absolute;${rohLogo};bottom:${h - by1}px">${logo}</div>`;
+       <div class="halo${logoNahore ? ' logo-nahore' : ''}" style="position:absolute;${logoNahore ? `right:${w - bx1}px;top:${(by0 - (f.logo * 1.5 - f.kick * 1.3) / 2).toFixed(1)}px` : `${rohLogo};bottom:${h - by1}px`}">${logo}</div>`;
   const b = c.barvy;
   return `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -327,7 +332,33 @@ ${text}
 </body></html>`;
 }
 
-(async () => {
+// Štítek coveru se zmenší, dokud se nevejde: homepage končí před zónou štítku rubriky (x 950),
+// ostatní formáty v šířce bezpečné zóny. Zmenšuje se nejvýš na 70 %; když se ani tak nevejde, zlomí se
+// za karmínovou částí na dva řádky (bez „•“) v plné velikosti.
+async function upravStitek(page, klic, f) {
+  const maxW = klic === 'homepage' ? 950 - f.box[0] : f.box[2] - f.box[0];
+  await page.evaluate((maxW) => {
+    // logo na řádku štítku: štítek musí skončit aspoň 1,5 em před ním
+    const lg = document.querySelector('.logo-nahore');
+    if (lg) maxW -= lg.getBoundingClientRect().width + 36;
+    const el = document.querySelector('.kick');
+    const s0 = parseFloat(getComputedStyle(el).fontSize);
+    let s = s0;
+    while (el.scrollWidth > maxW && s > s0 * 0.7) { s -= 1; el.style.fontSize = `${s}px`; }
+    if (el.scrollWidth > maxW) {
+      el.style.fontSize = `${s0}px`;
+      el.classList.add('dva');
+      const zlom = document.createElement('span');
+      zlom.className = 'zlom';
+      el.querySelector('.sep')?.after(zlom);
+    }
+  }, maxW);
+}
+
+// Sdílené s tools/animation-generator.cjs (stejné pozadí, písma, štítek a logo i v animacích).
+module.exports = { FORMATY, html, upravStitek, vykresliZnak };
+
+if (require.main === module) (async () => {
   const cfgPath = path.resolve(process.argv[2]);
   const c = require(cfgPath);
   const jen = process.argv.slice(3);
@@ -340,24 +371,7 @@ ${text}
     await page.evaluate(vykresliZnak);
     const otaznicky = await page.evaluate(vykresliOtaznicky);
     if (otaznicky?.length) console.log(`  otazníčky (${klic}):`, otaznicky.join(' | '));
-    // Štítek coveru se zmenší, dokud se nevejde: homepage končí před zónou štítku rubriky (x 950),
-    // ostatní formáty v šířce bezpečné zóny.
-    const maxW = klic === 'homepage' ? 950 - f.box[0] : f.box[2] - f.box[0];
-    // Zmenšuje se nejvýš na 70 %; když se ani tak nevejde, zlomí se za karmínovou částí na dva řádky
-    // (bez „•“) v plné velikosti.
-    await page.evaluate((maxW) => {
-      const el = document.querySelector('.kick');
-      const s0 = parseFloat(getComputedStyle(el).fontSize);
-      let s = s0;
-      while (el.scrollWidth > maxW && s > s0 * 0.7) { s -= 1; el.style.fontSize = `${s}px`; }
-      if (el.scrollWidth > maxW) {
-        el.style.fontSize = `${s0}px`;
-        el.classList.add('dva');
-        const zlom = document.createElement('span');
-        zlom.className = 'zlom';
-        el.querySelector('.sep')?.after(zlom);
-      }
-    }, maxW);
+    await upravStitek(page, klic, f);
     const out = path.join(c.vystup, f.soubor);
     await page.screenshot(f.soubor.endsWith('.jpg') ? { path: out, type: 'jpeg', quality: 88 } : { path: out });
     await page.close();

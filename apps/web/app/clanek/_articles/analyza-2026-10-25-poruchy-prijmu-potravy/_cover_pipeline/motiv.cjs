@@ -41,7 +41,10 @@ function disk(cx, cy, c, n, rot) {
   return out;
 }
 
-for (const [klic, F] of Object.entries(FORMATY)) {
+// Sdílené s animace.config.cjs (slunečnice rostoucí 2010 → 2025): stejné rozložení disků a barvy.
+module.exports = { FORMATY, ZLATY, N0, N1, barvy: { ORANZ, TLUM, ZARE, POPIS, NAVY } };
+
+if (require.main === module) for (const [klic, F] of Object.entries(FORMATY)) {
   // společná rozteč c ze zadaného poloměru disku 2025 (u OG i pro menší disk 2010, ať je měřítko stejné)
   const R25 = F.disky.find((d) => d[3] === N1)[2];
   const c = R25 / Math.sqrt(N1 + 0.5);
@@ -61,4 +64,4 @@ for (const [klic, F] of Object.entries(FORMATY)) {
   }
   fs.writeFileSync(path.join(__dirname, `motiv-${klic}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" width="${F.W}" height="${F.H}" viewBox="0 0 ${F.W} ${F.H}">${svg}</svg>`);
 }
-console.log(`motiv hotový: ${N0} teček (2010) → ${N1} teček (2025), přibylo ${N1 - N0}`);
+if (require.main === module) console.log(`motiv hotový: ${N0} teček (2010) → ${N1} teček (2025), přibylo ${N1 - N0}`);
