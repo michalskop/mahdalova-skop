@@ -1,6 +1,6 @@
-# Vizuál coverů: jak najít motiv a udržet naši identitu
+# Vizuál coverů a balík výstupů: jak najít motiv a udržet naši identitu
 
-Doplňkový manuál k [COVER-EDITOR.md](COVER-EDITOR.md). Ten určuje **technická pravidla** (pět formátů, bezpečné zóny, písma, štítek, logo, generátor) a při rozporu platí on. Tady je **tvůrčí část**: jak k článku vymyslet motiv, ať je cover na první pohled náš, a jak pracovat s fotkou i bez ní. Vychází z coverů, které Kateřina schválila nebo opravila (říjen 2026).
+Doplňkový manuál k [COVER-EDITOR.md](COVER-EDITOR.md). Ten určuje **technická pravidla** (pět formátů, bezpečné zóny, písma, štítek, logo, generátor) a při rozporu platí on. Tady je **tvůrčí část**: jak k článku vymyslet motiv, ať je cover na první pohled náš, jak pracovat s fotkou i bez ní a jaký **balík výstupů** (covery, carousel, animace) patří ke každé publikaci. Vychází z coverů, které Kateřina schválila nebo opravila (říjen 2026), a platí od 25. 10. 2026.
 
 Zadání pro AI je v [PROMPT-COVER.md](PROMPT-COVER.md), paleta v `packages/ui/DESIGN.md`.
 
@@ -55,6 +55,19 @@ Vzor: `analyza-2026-10-25-poruchy-prijmu-potravy` (Kateřina: „sdělení je v 
 - **OG (1200×630):** v kraji vlevo malý disk výchozího roku, vpravo velký disk cílového roku, oba ve **stejném měřítku** s popiskem roku. Titulek zůstává ve středním čtverci.
 - Kód: `_cover_pipeline/motiv.cjs` u článku (konstanty z dat, `FORMATY` s polohou disku pro každý formát). Přepoužitelné na každé „X lidí → Y lidí“: počty pacientů, kandidátů, obcí, žádostí.
 
+**Animace slunečnice** (Kateřina 25. 10. 2026: „úplně luxusní v těch třech odstínech“): disk roste rok po roku, **tři odstíny**: výchozí rok tlumeně (brandOrange.8), přírůstek zářivě (brandOrange.6) a tečky přibylé v právě ukazovaném roce světle (brandOrange.3), dokud nezačne další rok.
+
+**Ponaučení z animace (25. 10. 2026), platí i pro statické covery:**
+- **Jedno sdělení, žádné zbytečně přesné detaily.** Cover ani animace nejsou místo pro přesná čísla (1 199 → 3 858, počty za jednotlivé roky, popisek zlomového roku). Stačí titulek s hlavním sdělením a krátký dovětek („je dnes třikrát víc“ + „než v roce 2010“). Přesná čísla patří do článku a carouselu.
+- **„Dnes“, ne rok dat.** Nejčerstvější data komunikujeme jako „dnes“: titulek „je dnes třikrát víc“, počítadlo animace na konci ukáže „dnes“ místo letopočtu. Nekomunikovat čísla z jiného roku, než je výchozí a dnešní.
+- **Počítadlo jen s rokem**, bez počtu lidí, ať čtenář neřeší, proč se mluví zrovna o tom roce.
+- **Legenda pod motivem**, ne v bloku textu: titulek nahoře, motiv o kus výš, pod ním legenda na střed motivu.
+- **Jednotka („1 tečka = 10 dívek“) může stát svisle** u pravého okraje, otočená o −90°, nenápadně ztlumená. Je to informace „z boku“, nesoutěží s titulkem.
+- **Animace začíná i končí stavem „dnes“.** První snímek je náhled videa a GIFu (a jediné, co ukáže poštovní program bez animací), proto na něm musí být hlavní sdělení: plný dnešní stav. Pak se motiv stáhne na výchozí rok, doroste zpátky do dneška a smyčka navazuje bez skoku.
+- **Logo v animacích a kartách pro sítě nahoře** na řádku štítku (`logo: 'nahore'` v konfiguraci coveru): dole ho překrývá ovládání Instagramu, Reels a stories. Štítek se mu automaticky uhne, případně zmenší nebo zalomí.
+- **Letopočet a „dnes“ lícují vlevo s titulkem** (stejná svislice jako „Dívek…“, „příjmu…“, „je…“). Zkoušeli jsme ho zarovnat těsně k okraji slunečnice; Kateřina chce jednu levou linku textu. Mezi letopočtem a motivem musí zůstat volné místo i u plného disku.
+- **Logo nahoře zůstává** i v animacích a carouselu (Kateřina 25. 10.: „je to pěkné, necháme nahoře“). **Jen ve výstupech pro sítě** (`social/`): homepage cover pro web má logo vždy dole a pravý horní roh (x ≥ 950, y ≤ 280) prázdný, protože tam karty webu kreslí karmínový štítek rubriky. Při přenosu stylu animace na statické covery logo nahoru nedávat.
+
 Varianty téže myšlenky: mřížka teček, tečky seskupené podle kategorií, víc disků vedle sebe pro srovnání skupin (vždy ve stejném měřítku).
 
 ### 4.3 Ikona série
@@ -64,6 +77,8 @@ Opakující se seriály (predikce, výsledky, kalkulačka) mají vlastní piktog
 ### 4.4 Koláž výstřižků
 
 U mediálních kauz: 6–8 výstřižků titulků (jen hlavička a titulek, bez fotek lidí a bez prvků rozhraní), natočených a překrývajících se, přes závoj v barvě z palety. Vzor: `kontext-2026-09-28-novinarske-remeslo-nestoji-jen-na-utrzcich-od-policie`. Na červeném podkladu je štítek žlutý, karmínová by zanikla. Když Kateřina chce koláž „natáhnout“, myslí zvětšit, ne posunout.
+
+**Výstřižky v malém rozlišení → jen jejich text.** Když jsou výstřižky menší než asi 800 px (screenshoty z webu, náhledy videí), na coveru 1500 px se rozmazávají a rozbíjejí kompozici. Pak se z nich vezme jen text: tři až čtyři krátké citace titulků v původním znění, vysázené jednotně jako papírové proužky (IBM Plex Sans Bold, navy na papírové bílé, tenký karmínový okraj vlevo, pod citací drobně zdroj a datum), v jednom sloupci s mírným střídavým natočením ±1–2°. Pořadí podle časové osy případu. Proužky nesmějí zakrýt obličej podkresové fotky ani zónu štítku rubriky. Vzor: `analyza-2026-10-02-trest-smrti-jako-lidske-selhani` (Kateřina 25. 10.: socha Spravedlnosti jako podkres, výstřižky učesat, „případně jenom použít text z nich a dát tomu jednotnější kompozici“).
 
 ### 4.5 Obrázek jako motiv
 
@@ -86,6 +101,7 @@ Pozor: v ilustrační složce leží i převzaté obrázky (portréty známých 
 - **Ořez a zvětšení musí mít důvod:** ukázat to, co ilustruje téma (budovu, o které článek je, prázdnou třídu, ulici z reportáže). Nezvětšovat fotku na náhodný detail, texturu nebo rozmazanou plochu, ze které nikdo nepozná, co na ní je.
 - **Motiv a fotka se doplňují:** datová vrstva (graf, tečky, mapa) leží tam, kde fotka nechává klidné místo, a nezakrývá to, kvůli čemu byla fotka vybraná.
 - **Když vhodná fotka není, žádná se nepoužije.** Datový motiv na tmavém pozadí (kapitola 4) je vždy lepší než podkres, který nic neilustruje.
+- Odstrašující příklad: první návrhy coverů pro Data pro budoucí premiérku (říjen 2026) vzaly fotky z archivu nahodile a přiblížily je na detaily, ze kterých nebylo poznat nic. Takový cover nenese sdělení článku.
 - Návrh vždy ukaž Kateřině i s tím, proč je vybraná právě tahle fotka.
 
 Vlastní fotka může být hlavním motivem (kapitola 5) i tlumeným podkresem pod datovým motivem (graf, tečky, mapa přes ztmavenou fotku). Pro podkres platí totéž co pro závoj: silnější tmavá vrstva z palety, aby motiv i text zůstaly čitelné.
@@ -97,7 +113,9 @@ Vlastní fotka může být hlavním motivem (kapitola 5) i tlumeným podkresem p
 - **Čitelnost:** závoj a scrim v tmavé barvě palety (navy, případně brandDeepRed.9 a další tmavé odstíny), silnější pod textem. Text nikdy přes rušné místo (obličej, nápisy na fotce).
 - **Barva:** závoj drží dominantní barvu série nebo karty. Do frontmatteru dej `coverBg` stejnou barvou, ať případné pruhy na kartě splynou.
 - **Ořez:** každý formát se ořízne zvlášť a hlavní motiv (obličej, budova) musí zůstat ve všech pěti formátech. Kontrolovat na kontaktním archu.
-- **Nástroj:** `tools/poster-editor.html` / `npm run covers` (viz COVER-EDITOR.md). Vzor s citátem: `kontext-2026-10-05-vaclav-havel-odkaz-vyroci-90-let`.
+- **Okraje fotky nikdy tvrdě:** podkres musí plynule mizet do pozadí (v `cover-generator.cjs` SVG vrstva s radiální maskou), žádný viditelný obdélník fotky ani pruh pozadí nad ní. Obličej nebo hlavní motiv drží mimo zónu štítku rubriky (homepage x ≥ 950, y ≤ 280).
+- **Formát souborů:** fotografické covery ukládat jako JPEG (PNG z generátoru má u fotky 1–2 MB, JPEG kolem 200 kB); `tools/kontaktni-arch.cjs` bere PNG i JPEG.
+- **Nástroj:** `tools/poster-editor.html` / `npm run covers` (viz COVER-EDITOR.md), nebo `cover-generator.cjs` s fotkou vloženou do SVG vrstvy motivu (vzor trest smrti). Vzor s citátem: `kontext-2026-10-05-vaclav-havel-odkaz-vyroci-90-let`.
 - **Fotka je zdroj, ne cover:** publikuje se vždy hotová kompozice. Fotky uvnitř článku jsou bez titulků a log (komponenta `<Figure>`).
 
 ## 6. Citlivá témata
@@ -116,17 +134,54 @@ U zdraví, duševních nemocí, násilí, dětí a obětí:
 - Dvě srovnávané skupiny nikdy červená × zelená (barvoslepí).
 - Hexy jen přesně z palety, žádné vlastní mezistupně.
 
-## 8. Postup krok za krokem
+## 8. Balík výstupů ke každé publikaci
+
+Platí pro všechno, co jde ven na web nebo na sociální sítě (článek, speciál, číslo dne, podcast). Nikdo to nemusí zvlášť zadávat: kdo připravuje publikaci, připraví i tento balík a ukáže ho Kateřině.
+
+| Výstup | Kdy | Formát | Kam se ukládá |
+|---|---|---|---|
+| **Pět coverů** (homepage, OG, čtverec, Instagram, story) | vždy | podle COVER-EDITOR.md | `images/` článku |
+| **Instagram carousel** | vždy, když článek má aspoň dvě samostatná zjištění (graf, mapa, číslo) | 1080×1350 PNG, 5–10 slidů | `social/carousel/` článku |
+| **Animace** (mapa nebo graf, který se proměňuje, překlikávání stavů, růst „slunečnice“) | když článek ukazuje změnu v čase nebo srovnání míst a stavů | MP4 (hlavní) + GIF (odvozený), viz níže | `social/animace/` článku |
+| **Reels / stories video** | u silných témat, poskládané z carouselu a animací | MP4 1080×1920 | `social/animace/` článku |
+
+**Carousel se skládá z obsahu článku**, nic se nevymýšlí znovu:
+
+1. Slide 1 = cover-instagram (hák: hlavní zjištění).
+2. Slidy 2 až n−2 = po jednom zjištění na slide: graf nebo mapa z článku překreslené na výšku 4:5, velké popisky, titulek slidu je tvrzení (stejné jako titulek grafu v článku).
+3. Předposlední slide = jak jsme to počítali a co data neříkají (jednou dvěma větami).
+4. Poslední slide = „Celý článek na DataTimes.cz“ a odkaz v biu; u citlivých témat kontakt na pomoc (např. Linka Anabell).
+
+Generátor: `tools/carousel-generator.cjs` + `_cover_pipeline/carousel.config.cjs` u článku:
+
+```bash
+PW_PATH=<repo>/node_modules/playwright node tools/carousel-generator.cjs <článek>/_cover_pipeline/carousel.config.cjs [čísla slidů]
+```
+
+Každý slide kreslí `cover-generator.cjs` (stejné pozadí, štítek, Plex, logo nahoře), obsah je SVG vrstva (graf překreslený na výšku, tečkový disk) nebo HTML blok (body, text, kontakt). Dole vlevo zdroj, vpravo „2 / 8“. Generátor sám hlídá, aby obsah nevjel do titulku ani patičky, a dává nezlomitelné mezery za jednopísmenná slova. Výstup `social/carousel/01.png …` a kontaktní arch `social/carousel-arch.png`; text pod carousel do `_cover_pipeline/carousel-caption.txt` (složka `social/` je mimo git, výstupy se vyrábějí znovu). Slide 1 je první snímek animace (stav „dnes“), pokud článek animaci má, jinak cover-instagram. Grafy: osa začíná nulou, popsat jen výchozí, zlomové a poslední hodnoty, blízké koncové popisky rozestoupit. Vzor: `analyza-2026-10-25-poruchy-prijmu-potravy`.
+
+**Animace na homepage webu:** animaci lze dát přímo do karty článku jako GIF ve formátu homepage 1500×1200 (formát `homepage` v `animace.config.cjs` s `coverPro.homepage.logo = 'vlevo'`, GIF šířka 1000 do `images/cover-homepage-animace.gif`, ve frontmatteru `homepageImage`). Karta ho vykreslí jako obyčejný obrázek. Platí pravidla homepage coveru: logo dole, pravý horní roh volný pro štítek rubriky, první snímek = hlavní sdělení. Čtvercový GIF ze sítí s logem nahoře na homepage nepatří.
+
+Všechna čísla jsou totožná s článkem (DISTRIBUCNI_FORMATY.md). Identita je stejná jako u coverů: tmavé pozadí, IBM Plex, paleta, logo, žádný barevný proužek nahoře. Text pod carouselem podle `tools/social-cards/prompts/instagram-caption.md`.
+
+**MP4, nebo GIF?**
+
+- **MP4 je hlavní formát.** Video H.264, 30 snímků za sekundu, bez zvuku (hudbu lze přidat až v aplikaci Instagramu). Instagram (Reels, stories, feed), Facebook, LinkedIn, X i Bluesky berou MP4. Instagram GIF nahrát neumí. Rozměry: 1080×1920 pro Reels a stories, 1080×1350 pro feed, 1200×675 nebo 1080×1080 pro X a Bluesky. Délka jedné animace 5–15 sekund, Reels poskládané z carouselu a animací 20–40 sekund.
+- **GIF je odvozený formát** ze stejných snímků: pro newsletter a e-maily (poštovní programy video nepřehrají), messengery, Slack a prezentace. Šířka nejvýš 800 px, délka do 8 sekund, velikost do 5 MB. Naše ploché barvy z palety se do GIFu vejdou bez ztráty kvality.
+- **Na webu v článku** je lepší krátké MP4 ve smyčce bez zvuku než GIF: je několikanásobně menší a ostřejší.
+- Animace vzniká stejně jako cover: snímky se vykreslí z dat přes Playwright (stejné SVG a písma) a teprve pak se zakódují do MP4 a GIF. Kódování dělá ffmpeg z `tools/media/` (balíček `ffmpeg-static` 5.3.0, ffmpeg 6.1.1, H.264 i GIF paleta). Je záměrně mimo npm workspaces, aby ho Cloudflare při deployi neinstaloval a výpadek stahování nemohl shodit nasazení webu. V nové kopii repa (i v každém worktree) jednou spusť `npm install` ve složce `tools/media`; instalace sama ověří otisk SHA256 binárky proti GitHub releasu a při neshodě ji smaže. Cesta k programu v Node: `require('./tools/media/node_modules/ffmpeg-static')`. Společný generátor animací je `tools/animation-generator.cjs`:
+
+```bash
+PW_PATH=<repo>/node_modules/playwright node tools/animation-generator.cjs <článek>/_cover_pipeline/animace.config.cjs [formát…] [--nahledy <složka>]
+```
+
+Konfigurace článku (`_cover_pipeline/animace.config.cjs`) převezme štítek, barvy a logo z `cover.config.cjs` (texty smí zkrátit) a barvy a geometrii motivu z `motiv.cjs`; sama dodává jen funkci `snimek(t, formát)`, která vrátí SVG motivu v čase `t`. Pozadí, štítek, titulek a logo kreslí `cover-generator.cjs`, takže animace vypadá přesně jako cover. Výstup: `social/animace/<nazev>-{story,instagram,square}.mp4` a `<nazev>.gif` (ze čtverce, šířka 800). Složka `social/` se na web nekopíruje. Render trvá asi 3 minuty na formát; `--nahledy` uloží kontrolní snímky v časech `nahledy` z konfigurace. Čísla čte konfigurace přímo z `_data_pipeline/vystup.txt`, nikdy je nepřepisuje ručně. Vzor: slunečnice u `analyza-2026-10-25-poruchy-prijmu-potravy` (disk roste rok po roku, vlevo jen letopočet a na konci „dnes“, legenda pod diskem, jednotka svisle vpravo; viz 4.2).
+
+## 9. Postup krok za krokem
 
 1. Věta, kterou má cover ukázat (kapitola 2), a cesta podle rozcestí (kapitola 3).
 2. Čísla z `_data_pipeline/` článku: zapsat je do `motiv.cjs` jako konstanty s odkazem na zdroj.
 3. `_cover_pipeline/motiv.cjs` vyrobí `motiv-<formát>.svg`, `cover.config.cjs` nastaví text, legendu, barvy a logo, `tools/cover-generator.cjs` vyrenderuje všech pět formátů.
 4. Kontaktní arch: všech pět formátů, karty 5:4 se štítkem rubriky, mobilní seznam, náhled 120×96, OG a jeho čtvercový ořez, mřížka Instagramu, zóny stories.
-5. **Ukázat Kateřině:** kontaktní arch, homepage a OG poslat jako náhled (soubory, ne jen zmínka „hotovo“). Na web až po jejím souhlasu nebo pokynu.
-
-## Ponaučení
-
-- *25. 10. 2026 – „covery jsou hotové“, ale Kateřina je neviděla.* Hotový cover se vždy hned pošle jako náhled (kontaktní arch + homepage + OG), ne jen popíše v textu. Platí i pro covery od pomocného agenta.
-- *25. 10. 2026 – náhodný podkres (první návrhy coverů pro Data pro budoucí premiérku).* Povolení čerpat z Kateřininých fotek se vyložilo jako „vezmi jakoukoli fotku a dej ji pod text“: fotky byly vybrané nahodile a přiblížené na detaily, které nic neilustrovaly. Fotka musí ilustrovat sdělení článku, ořez musí mít důvod a bez vhodné fotky se jde cestou datového motivu (kapitola 5.1).
-- *25. 10. 2026 – vlastní fotky a volnost stylu.* Kateřinin archiv vlastních fotek se smí používat jako podkres (kapitola 5.1). Styl není striktně předepsaný, i spojnicový graf je dobrý cover, když má podkres a kompozici (kapitola 4).
-- *25. 10. 2026 – slunečnice z teček (poruchy příjmu potravy).* Abstraktní tečková jednotka s plochou úměrnou počtu a s tlumeným „před“ a zářivým „přibylo“ unese citlivé téma i hlavní číslo zároveň. Kateřina ji chce jako vzor pro covery bez fotky.
+5. Carousel a případné animace podle kapitoly 8.
+6. **Ukázat Kateřině:** kontaktní arch, homepage, OG, carousel a animace poslat jako náhled, tedy soubory přímo do chatu, ne jen zmínku „hotovo“. Platí i pro výstupy od pomocného agenta. Na web a sítě až po jejím souhlasu nebo pokynu.
