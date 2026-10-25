@@ -175,6 +175,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-10-23-referenda-vetrne-elektrarny</loc>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-10-25-poruchy-prijmu-potravy</loc>
     <lastmod>2026-10-25T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -751,8 +757,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-23-referenda-vetrne-elektrarny</loc>
-    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-21-kolik-stoji-volby</loc>
+    <lastmod>2026-10-21T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
