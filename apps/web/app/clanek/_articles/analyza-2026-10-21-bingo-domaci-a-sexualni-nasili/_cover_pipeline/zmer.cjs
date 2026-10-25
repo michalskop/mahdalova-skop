@@ -40,7 +40,7 @@ const F = {
         if (hit) { subBot = Y; prazdno = 0; } else if (subBot > 0 && ++prazdno > 40) break;
       }
       return og ? { kruhTop: kTop, kruhBot: kBot, osa: Math.round((kBot + 590) / 2) } : { subBot, kruhTop: kTop, osa: Math.round((subBot + kTop) / 2) };
-    }, { src, x: o.x, og: k === 'og' });
+    }, { src, x: o.x, og: false });
   }
   await b.close();
   fs.writeFileSync(path.join(__dirname, 'osa.json'), JSON.stringify(out, null, 1));

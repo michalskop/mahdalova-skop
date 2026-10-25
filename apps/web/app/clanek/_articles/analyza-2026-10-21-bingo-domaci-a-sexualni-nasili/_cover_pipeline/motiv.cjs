@@ -9,6 +9,7 @@ const SRC = path.join(__dirname, 'src.webp'); // 612×408
 // Dlaň ve zdroji (px): dlaň bez prstů, špička palce, vrchol prstů
 const DLAN = { x0: 85, x1: 250, y0: 175, y1: 345, palec: 338, prsty: 50 };
 const CAP = 0.698;
+let POSUN = 0; // homepage: (účaří dlaně − účaří písmen) / velikost písma
 const OSA = fs.existsSync(path.join(__dirname, 'osa.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'osa.json'), 'utf8')) : {};                // výška verzálky IBM Plex Serif Bold (em)
 // formát: šířka slova, střed slova x, účaří y, rozměry plátna
 const F = {
@@ -30,15 +31,18 @@ const F = {
     // s = měřítko fotky tak, aby výška dlaně = výška verzálky a celé slovo mělo šířku f.sirka
     const mezera = 0.05; // mezera mezi písmenem a dlaní (em)
     const s = f.sirka / ((DLAN.y1 - DLAN.y0) / CAP * (m.st + m.p + mezera - 0.16) + (DLAN.palec - DLAN.x0));
-    // Osa (Kateřina 25. 10.): jen písmena S, T, P se centrují svisle na střed mezi spodní okraj podtitulku
-    // a horní okraj kolečka loga (osa.json z zmer.cjs). Dlaň zůstává na místě podle f.base. OG beze změny.
+    // Osa (Kateřina 25. 10.): písmena S, T, P se centrují svisle na střed mezi spodní okraj podtitulku a horní
+    // okraj kolečka loga (osa.json z zmer.cjs). Na homepage zůstává dlaň na místě (f.base); ostatní formáty
+    // přebírají z homepage stejný poměr: o kolik výš než dlaň leží písmena (v násobcích velikosti písma).
     const O = OSA[k];
     const fs_ = (DLAN.y1 - DLAN.y0) * s / CAP;
     const x0 = f.cx - f.sirka / 2;
     const dlanX = x0 + (m.st + mezera) * fs_;            // levý okraj dlaně
+    const basePismen = O && O.subBot ? Math.round(O.osa + CAP * fs_ / 2) : f.base;
+    if (k === 'homepage') POSUN = (f.base - basePismen) / fs_;
+    else if (O && O.subBot) { f.base = Math.round(basePismen + POSUN * fs_); }
     const ix = dlanX - DLAN.x0 * s, iy = f.base - DLAN.y1 * s;
     const pX = ix + DLAN.palec * s - 0.16 * fs_;
-    const basePismen = O && O.subBot ? Math.round(O.osa + CAP * fs_ / 2) : f.base;
     const W = 612 * s, H = 408 * s, cx = ix + (DLAN.x0 + DLAN.x1) / 2 * s, cy = iy + (DLAN.y0 + DLAN.y1) / 2 * s;
     // Vše, co patří k fotce, se kreslí v souřadnicích zdroje (612×408) uvnitř skupiny s posunem a měřítkem.
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${f.w}" height="${f.h}" viewBox="0 0 ${f.w} ${f.h}">

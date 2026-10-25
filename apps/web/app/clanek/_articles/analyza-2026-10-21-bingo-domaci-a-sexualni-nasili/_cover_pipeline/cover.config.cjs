@@ -9,5 +9,5 @@ module.exports = {
   pod: 'Zažité názory jsme porovnali se skutečnými daty',
   barvy: { glowA: '#101432', glowB: '#101432', sub: '#d2d8e9' /* brandNavy.1 */, stitek: '#de1743' },
   motiv: { typ: 'svg', opacityOg: 1, soubory: { homepage: m('homepage'), og: m('og'), square: m('square'), instagram: m('instagram'), story: m('story') } },
-  format: { og: { box: [285, 26, 915, 330], t: 37, sub: 19 }, homepage: { t: 70 }, square: { t: 57 }, instagram: { t: 57 }, story: { t: 55 } },
+  format: { og: { stred: false, box: [285, 34, 915, 596], t: 34, sub: 17, kick: 13, logo: 24 }, homepage: { t: 70 }, square: { t: 57 }, instagram: { t: 57 }, story: { t: 55 } },
 };
