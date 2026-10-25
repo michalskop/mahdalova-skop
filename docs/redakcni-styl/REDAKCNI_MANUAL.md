@@ -328,6 +328,8 @@ Vedle `date` nese frontmatter nepovinné pole `time: "HH:MM"` (pražský čas). 
 
 Čas **doplňuje automaticky git hook** při prvním commitu nového `index.md` (`scripts/git-hooks/`); ručně ho píšeme jen u článku commitnutého dopředu a zveřejněného později. Existující `time` hook nepřepisuje, články s budoucím datem přeskakuje. Instalace na novém počítači (jednou): `git config core.hooksPath scripts/git-hooks`.
 
+**Budoucí datum = článek mimo homepage až do dalšího buildu.** `getArticles` vyřazuje články s `date` v budoucnosti z homepage a výpisů podle data sestavení webu. Stránka na URL po pushi funguje hned, do výpisů se ale dostane až s prvním buildem v den data (tedy až někdo ten den pushne). Když má článek vyjít hned, dát mu dnešní datum; když budoucí, pushnout ho až v ten den. *(25. 10. 2026, článek o poruchách příjmu potravy.)*
+
 **Pozor při merge `main` do pracovní větve:** hook bere články, které merge přinesl, jako nové a doplní jim aktuální čas (15. 10. 2026 tak dostal včerejší článek o SPD čas 14:58 ze dne merge). Po každém merge zkontroluj `git diff origin/main HEAD -- '*/index.md'` a cizí `time` vrať (`git checkout origin/main -- <soubor>`).
 
 ## Minimální brief

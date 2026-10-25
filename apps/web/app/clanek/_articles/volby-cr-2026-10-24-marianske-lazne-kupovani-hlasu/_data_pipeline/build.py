@@ -4,8 +4,11 @@
 #   https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm
 #   - registry  KV2026reg20261011_csv.zip  (kvros.csv = listiny, kvrk.csv = kandidáti vč. pořadí náhradníků)
 #   - data      KV2026_data_20261011_csv.zip (kvt3.csv = okrsky, kvhl.csv = hlasy kandidátům v okrscích)
-#   - kontrola  https://volby.gov.cz/appdata/kv2026/20261009/odata/zastup/vysledky_obec_554642.xml
-# Staženo 24. 10. 2026 do zdroj/ (rozbaleno csv_od/* do zdroj/reg a zdroj/data).
+#   - kontrola  https://volby.gov.cz/appdata/kv2026/20261009/odata/zastup/vysledky_obec_554642.xml (v zdroj/)
+# Staženo 24. 10. 2026. Velké balíky leží v archivu ČSÚ dat mimo git: csu-data/volby/kv2026/20261011/
+# (rozbalené csv_od/* v reg/ a data/; viz csu-data/README.md). Skript archiv najde v nadřazených
+# složkách repa, nebo vezme cestu z proměnné CSU_DATA; bez archivu stačí balíky stáhnout a rozbalit
+# do zdroj/reg a zdroj/data.
 #
 # Postup podle zákona 491/2001 Sb., § 45: listiny pod 5 % platných hlasů nedostanou mandát,
 # zbytek se dělí d'Hondtovou metodou (dělitelé 1, 2, 3, …); při shodě podílů rozhoduje vyšší
@@ -15,12 +18,19 @@
 # Kontrola: shoda se sloupcem PRESKOCENI v kvrk.csv.
 #
 # Spuštění: python build.py  → vystup.txt + marianske-lazne-vysledky.csv + ../grafy/odecet.html
-import csv, sys, xml.etree.ElementTree as ET
+import csv, os, sys, xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 H = Path(__file__).resolve().parent
-Z = H / 'zdroj'
+STAV = Path('volby', 'kv2026', '20261011')
+def archiv():
+    if os.environ.get('CSU_DATA'): return Path(os.environ['CSU_DATA']) / STAV
+    for d in H.parents:
+        if (d / 'csu-data' / STAV).is_dir(): return d / 'csu-data' / STAV
+    return H / 'zdroj'
+Z = archiv()
+print('Data ČSÚ:', Z)
 KOD = '554642'          # Mariánské Lázně
 MANDATU = 21
 NC = 'Naše Česko'
@@ -64,7 +74,7 @@ p('Kontrola okrsky × registr: součty hlasů listin sedí.')
 
 # kontrola proti XML ČSÚ
 ns = {'k': 'http://www.volby.cz/kv/'}
-xr = ET.parse(Z / 'vysledky_obec_554642.xml').getroot()
+xr = ET.parse(H / 'zdroj' / 'vysledky_obec_554642.xml').getroot()
 for vs in xr.iterfind('.//k:VOLEBNI_STRANA', ns):
     x = L[vs.get('POR_STR_HLAS_LIST')]
     assert int(vs.get('HLASY')) == x['hlasy'] and int(vs.get('ZASTUPITELE_POCET')) == x['mand']

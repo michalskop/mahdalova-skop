@@ -8,6 +8,7 @@ automaticky; stačí mít stažený aktuální main (`git pull`).
 | --- | --- |
 | Pravidla: sada 5 souborů, písma, štítek coveru, bezpečné zóny, kompozice, logo | tento soubor (sekce níže) |
 | Zadání pro AI (vložit do Claude/Codexu, doplnit 3 řádky) | [PROMPT-COVER.md](PROMPT-COVER.md) |
+| Jak vymyslet motiv a držet identitu (bez fotky, s fotkou, citlivá témata, vzory) | [COVER-VIZUALNI-IDENTITA.md](COVER-VIZUALNI-IDENTITA.md) |
 | Grafický / datový cover (mapa, graf, číslo) | `tools/cover-generator.cjs` + `_cover_pipeline/cover.config.cjs` u článku |
 | Fotografický cover | `poster-editor.html`, `npm run covers` (níže) |
 | Graf → motiv coveru | [NAVOD-PRO-MICHALA.md](NAVOD-PRO-MICHALA.md) (chart-simplifier) |
