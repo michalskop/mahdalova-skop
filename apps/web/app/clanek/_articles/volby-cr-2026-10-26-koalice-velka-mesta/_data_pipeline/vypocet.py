@@ -251,7 +251,7 @@ NAZ = {'Praha hl.m.': 'Praha', 'Jablonec nad Nisou': 'Jablonec n. N.', 'Ústí n
 for r in rows2:
     r['mesto'] = NAZ.get(r['mesto'], r['mesto'])
 PORADI2 = [r['mesto'] for r in sorted(rows2, key=lambda r: (-r['podil'], r['mesto']))]
-ROLE = {'vítěz v koalici': '#0b6b4e', 'vítěz mimo koalici': '#9f319e', 'jedná se': '#bcbcb0'}   # brandEmeraldMint.7, brandAmethyst.6, background.9 (zelená × fialová, ne oranžová – Kateřina 25. 10.)
+ROLE = {'vítěz v koalici': '#75dfc4', 'vítěz mimo koalici': '#522a7a', 'jedná se': '#bcbcb0'}   # brandEmeraldMint.3, brandAmethyst.8, background.9 – tlumená dvojice (Kateřina 25. 10.: ne oranžová, ne jedovatá)
 spec2 = {
     '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
     'title': {'text': 'Nadpoloviční většinu získala jedna kandidátka jen v Karviné a v Ústí nad Labem',
