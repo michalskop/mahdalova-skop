@@ -406,6 +406,11 @@ import { ArticleCard } from '@repo/ui/components/ArticleCard';
 />
 ```
 
+**No social links in the card (2026-10-25).** The card shows only the cover, rubric badge,
+title, excerpt, date and author. Frontmatter `instagramImage` / `squareImage` are part of the
+cover set (record of the 5 formats), never rendered in the card – an „Instagram ↗“ link that
+appeared once every article got the full cover set was removed on Kateřina's request.
+
 **Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
 left card in `FeaturedHero` (Volby / Výběr bands) must never show white space
 between the excerpt and the date/author footer. Its text = frontmatter `excerpt`
