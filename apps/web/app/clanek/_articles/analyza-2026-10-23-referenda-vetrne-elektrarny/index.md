@@ -10,7 +10,7 @@ ogImage: "images/cover-og.jpg"
 squareImage: "images/cover-square.png"
 instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
-tags: ["volby", "komunální volby 2026", "referendum", "větrné elektrárny", "energetika", "obce", "data"]
+tags: ["referendum", "větrné elektrárny", "energetika", "obce", "data"]
 promoted: 1
 ---
 
