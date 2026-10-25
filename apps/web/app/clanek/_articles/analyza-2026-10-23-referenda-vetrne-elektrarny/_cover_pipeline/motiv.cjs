@@ -8,7 +8,7 @@ const ZDROJ = path.join(__dirname, '..', '..', 'volby-cr-2026-10-10-senat-komuna
 const dots = require(path.join(ZDROJ, 'senat-mapa.json')).dots;
 const obce = require(path.join(__dirname, 'obce.json'));
 
-const PROTI = '#f76800'; // brandOrange.6
+const PROTI = '#ffcf02'; // brandYellow.6 (oranžová se tloukla se sousední kartou na homepage, Kateřina 25. 10.)
 const PRO = '#33b9d9'; // brandTeal.4 (světlá varianta brandTeal.7 na tmavém pozadí)
 const TECKA = '#2f325c'; // brandNavy.8
 const NAVY = '#101432'; // brandNavy.9
