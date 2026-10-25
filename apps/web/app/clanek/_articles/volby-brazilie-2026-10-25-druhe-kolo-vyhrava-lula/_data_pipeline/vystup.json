@@ -1,0 +1,188 @@
+{
+ "stav": "00:39 SEČ",
+ "stav_brt": "20:39",
+ "secteno_pct_registrovanych": 50.59,
+ "lula": 51.74,
+ "lula_lo": 51.53,
+ "lula_hi": 51.95,
+ "flavio": 48.26,
+ "flavio_lo": 48.05,
+ "flavio_hi": 48.47,
+ "p_lula": 0.9999,
+ "naskok_hlasu": 4320419,
+ "prubezne_lula": 50.2,
+ "ucast": 80.95,
+ "ucast_lo": 80.67,
+ "ucast_hi": 81.1,
+ "kontrolni_zona_lula": 51.81,
+ "kontrolni_zona_lo": 51.24,
+ "kontrolni_zona_hi": 52.38,
+ "prvni_odhad": {
+  "cas": "21:12",
+  "secteno": 0.369,
+  "lula": 51.543
+ },
+ "od_1pct": {
+  "cas": "23:18",
+  "lula_min": 51.547,
+  "lula_max": 51.741
+ },
+ "predikce_lula_min_cela_noc": 51.543,
+ "interval_nad_50": {
+  "cas": "23:45",
+  "secteno": 10.167
+ },
+ "prubezne_flavio_v_cele": {
+  "od": "23:55",
+  "od_secteno": 15.625,
+  "do": "00:32",
+  "do_secteno": 43.589,
+  "flavio_max": 50.44
+ },
+ "prubezne_lula_max_po_1pct": 52.6,
+ "prubezne_lula_min_po_1pct": 49.56,
+ "kolo1_lula_ze_dvou": 48.99,
+ "posun_lula_pb": 2.75,
+ "kolo1_ucast": 78.92,
+ "ucast_rozdil_pb": 2.03,
+ "ucast_rozdil_volicu": 3228884,
+ "naskok_2022": 2139645,
+ "platne_hlasy": 124091359,
+ "lula_hlasy": 64206110,
+ "flavio_hlasy": 59885249,
+ "staty_lula": 13,
+ "staty_flavio": 14,
+ "preklopene_k_lulovi": [
+  "Minas Gerais"
+ ],
+ "preklopene_k_flaviovi": [],
+ "MG": {
+  "k": "MG",
+  "n": "Minas Gerais",
+  "l": 50.48,
+  "lo": 50.23,
+  "hi": 50.72,
+  "c": 44.7,
+  "lead": 120417,
+  "k1": "F"
+ },
+ "nejvic_hlasu_lula": [
+  {
+   "k": "BA",
+   "n": "Bahia",
+   "l": 71.42,
+   "lo": 71.04,
+   "hi": 71.8,
+   "c": 30.2,
+   "lead": 3885469,
+   "k1": "L"
+  },
+  {
+   "k": "PE",
+   "n": "Pernambuco",
+   "l": 69.24,
+   "lo": 68.96,
+   "hi": 69.53,
+   "c": 47.5,
+   "lead": 2286590,
+   "k1": "L"
+  },
+  {
+   "k": "CE",
+   "n": "Ceará",
+   "l": 68.91,
+   "lo": 68.66,
+   "hi": 69.17,
+   "c": 52.9,
+   "lead": 2211179,
+   "k1": "L"
+  }
+ ],
+ "nejvic_hlasu_flavio": [
+  {
+   "k": "SP",
+   "n": "São Paulo",
+   "l": 46.12,
+   "lo": 45.82,
+   "hi": 46.42,
+   "c": 27.2,
+   "lead": -2035830,
+   "k1": "F"
+  },
+  {
+   "k": "SC",
+   "n": "Santa Catarina",
+   "l": 30.52,
+   "lo": 30.33,
+   "hi": 30.72,
+   "c": 65.0,
+   "lead": -1806349,
+   "k1": "F"
+  },
+  {
+   "k": "PR",
+   "n": "Paraná",
+   "l": 37.43,
+   "lo": 37.38,
+   "hi": 37.47,
+   "c": 93.5,
+   "lead": -1724783,
+   "k1": "F"
+  }
+ ],
+ "ZZ": {
+  "k": "ZZ",
+  "n": "Voliči v zahraničí",
+  "l": 53.92,
+  "lo": 51.95,
+  "hi": 55.89,
+  "c": 62.7,
+  "lead": 28801,
+  "k1": null
+ },
+ "secteno_staty": {
+  "AC": 87.0,
+  "AL": 74.1,
+  "AM": 86.5,
+  "AP": 90.9,
+  "BA": 30.2,
+  "CE": 52.9,
+  "DF": 96.7,
+  "ES": 93.6,
+  "GO": 56.2,
+  "MA": 77.2,
+  "MG": 44.7,
+  "MS": 95.5,
+  "MT": 78.2,
+  "PA": 80.9,
+  "PB": 89.7,
+  "PE": 47.5,
+  "PI": 27.3,
+  "PR": 93.5,
+  "RJ": 7.3,
+  "RN": 70.3,
+  "RO": 74.7,
+  "RR": 55.6,
+  "RS": 66.3,
+  "SC": 65.0,
+  "SE": 11.9,
+  "SP": 27.2,
+  "TO": 95.2
+ },
+ "flavio_staty": {
+  "AC": 66.5,
+  "DF": 54.3,
+  "ES": 56.3,
+  "GO": 59.6,
+  "MS": 59.6,
+  "MT": 66.1,
+  "PR": 62.6,
+  "RJ": 53.6,
+  "RO": 69.6,
+  "RR": 72.5,
+  "RS": 57.8,
+  "SC": 69.5,
+  "SP": 53.9,
+  "TO": 51.4
+ }
+}
