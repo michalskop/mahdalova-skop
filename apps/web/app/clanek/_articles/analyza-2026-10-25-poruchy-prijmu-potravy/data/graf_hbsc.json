@@ -1,0 +1,189 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Dívek s normální váhou, které se cítí {tlusté|#f76800}, je dnes méně než před dvaceti lety",
+  "subtitle": "Podíl dívek, které mají podle vlastní výšky a váhy normální nebo nižší váhu, a přesto o sobě říkají, že jsou trochu nebo hodně tlusté. Výzkum zdraví školáků HBSC."
+ },
+ "_source": "HBSC ČR, Univerzita Palackého v Olomouci – report Zdravá generace: Obezita; výpočet DataTimes.cz",
+ "width": "container",
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": "2002",
+    "věk": "11 let",
+    "podíl": 18.3
+   },
+   {
+    "rok": "2006",
+    "věk": "11 let",
+    "podíl": 17.9
+   },
+   {
+    "rok": "2010",
+    "věk": "11 let",
+    "podíl": 17.2
+   },
+   {
+    "rok": "2014",
+    "věk": "11 let",
+    "podíl": 16.0
+   },
+   {
+    "rok": "2018",
+    "věk": "11 let",
+    "podíl": 11.9
+   },
+   {
+    "rok": "2022",
+    "věk": "11 let",
+    "podíl": 12.7
+   },
+   {
+    "rok": "2002",
+    "věk": "13 let",
+    "podíl": 28.4
+   },
+   {
+    "rok": "2006",
+    "věk": "13 let",
+    "podíl": 20.8
+   },
+   {
+    "rok": "2010",
+    "věk": "13 let",
+    "podíl": 23.8
+   },
+   {
+    "rok": "2014",
+    "věk": "13 let",
+    "podíl": 22.6
+   },
+   {
+    "rok": "2018",
+    "věk": "13 let",
+    "podíl": 17.3
+   },
+   {
+    "rok": "2022",
+    "věk": "13 let",
+    "podíl": 16.6
+   },
+   {
+    "rok": "2002",
+    "věk": "15 let",
+    "podíl": 33.0
+   },
+   {
+    "rok": "2006",
+    "věk": "15 let",
+    "podíl": 27.9
+   },
+   {
+    "rok": "2010",
+    "věk": "15 let",
+    "podíl": 27.4
+   },
+   {
+    "rok": "2014",
+    "věk": "15 let",
+    "podíl": 25.6
+   },
+   {
+    "rok": "2018",
+    "věk": "15 let",
+    "podíl": 18.7
+   },
+   {
+    "rok": "2022",
+    "věk": "15 let",
+    "podíl": 15.4
+   }
+  ]
+ },
+ "mark": {
+  "type": "line",
+  "point": {
+   "size": 60,
+   "filled": true
+  },
+  "strokeWidth": 3
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "title": null,
+   "axis": {
+    "labelAngle": 0,
+    "ticks": false
+   }
+  },
+  "y": {
+   "field": "podíl",
+   "type": "quantitative",
+   "title": null,
+   "scale": {
+    "domain": [
+     0,
+     35
+    ]
+   },
+   "axis": {
+    "gridColor": "#e8e3d2",
+    "labelExpr": "datum.value + ' %'",
+    "tickCount": 4
+   }
+  },
+  "color": {
+   "field": "věk",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "11 let",
+     "13 let",
+     "15 let"
+    ],
+    "range": [
+     "#fda668",
+     "#f76800",
+     "#994800"
+    ]
+   },
+   "legend": {
+    "orient": "top-right",
+    "title": null,
+    "direction": "horizontal"
+   }
+  },
+  "tooltip": [
+   {
+    "field": "rok",
+    "title": "Rok"
+   },
+   {
+    "field": "věk",
+    "title": "Věk"
+   },
+   {
+    "field": "podíl",
+    "title": "Podíl dívek (%)",
+    "format": ".1f"
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": null
+  },
+  "locale": {
+   "number": {
+    "decimal": ",",
+    "thousands": " ",
+    "grouping": [
+     3
+    ]
+   }
+  }
+ }
+}
