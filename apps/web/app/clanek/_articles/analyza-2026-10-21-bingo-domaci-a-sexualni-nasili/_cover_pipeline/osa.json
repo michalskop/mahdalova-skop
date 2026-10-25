@@ -1,0 +1,27 @@
+{
+ "homepage": {
+  "subBot": 393,
+  "kruhTop": 1014,
+  "osa": 704
+ },
+ "square": {
+  "subBot": 310,
+  "kruhTop": 950,
+  "osa": 630
+ },
+ "instagram": {
+  "subBot": 351,
+  "kruhTop": 1180,
+  "osa": 766
+ },
+ "story": {
+  "subBot": 502,
+  "kruhTop": 1504,
+  "osa": 1003
+ },
+ "og": {
+  "kruhTop": 238,
+  "kruhBot": 281,
+  "osa": 436
+ }
+}
