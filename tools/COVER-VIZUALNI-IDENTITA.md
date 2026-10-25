@@ -30,12 +30,15 @@ Test: zakryj titulek. Pozná čtenář z motivu aspoň směr zjištění (víc �
 |---|---|---|
 | Článek stojí na datech, fotka není nebo by nic nepřidala | datový motiv z čísel článku | 4 |
 | Článek stojí na člověku, místě nebo události a máme fotku s právy | fotografický cover | 5 |
+| Téma má dobrou vlastní fotku Kateřiny (ilustrační složka, série z mobilu) | vlastní fotka jako podkres pod datový motiv nebo titulek | 5.1 |
 | Mediální kauza, spor o to, co kdo napsal | koláž výstřižků | 4.4 |
 | Citlivé téma (zdraví, násilí, děti) | vždy abstraktní motiv, i když fotka existuje | 6 |
 
 ## 4. Bez fotky: motiv z dat
 
-Motiv se kreslí ze **skutečných čísel článku**, ideálně ze stejného výstupu `_data_pipeline/`, ze kterého vychází text. Každé číslo na coveru musí být v článku. Zakázané motivy: holý sloupcový graf, samotné číslo na prázdné ploše, infografika z pár pruhů.
+Motiv se kreslí ze **skutečných čísel článku**, ideálně ze stejného výstupu `_data_pipeline/`, ze kterého vychází text. Každé číslo na coveru musí být v článku.
+
+**Styl není striktně předepsaný.** Vzory níže jsou osvědčené cesty, ne povinný katalog. I obyčejný graf, třeba spojnicový, může být velmi funkční cover, když má dobrý podkres (fotku, mapu, záři v barvě palety) a dobrou kompozici: velký přes plochu, s jasně zvýrazněnou změnou a s titulkem, který ji pojmenuje. Špatně je jen holý graf nebo samotné číslo na prázdné ploše, infografika z pár pruhů bez nápadu a cokoli, co by v řadě karet vedle ostatních coverů působilo jako pracovní výstup.
 
 ### 4.1 Tečková mapa ČR: když jde o místo
 
@@ -68,7 +71,20 @@ Hotový ilustrační obrázek (mapa, schéma) jako velká plocha přes cover. Vz
 
 ## 5. S fotkou: fotka je hlavní
 
-- **Fotka nese cover.** Text je jen štítek, titulek a případně krátký citát v uvozovkách se jménem. Nic dalšího: žádná čísla, legendy ani ikony.
+### 5.1 Vlastní fotky Kateřiny jako podkres
+
+Kateřina má velký archiv vlastních autorských fotek, často ve velmi dobré kvalitě. Smějí se používat jako podkres coveru podle stejných pravidel jako jakákoli jiná fotka, takže **není potřeba hledat agenturní ilustrační snímky**, když vhodná vlastní fotka existuje. Kde hledat:
+
+- `Desktop\Mahdalova & Skop\Ilustrační obrázky\`
+- série z mobilu na ploše: `Desktop\Z mobilu\`, `Desktop\Z mobilu 2025\`, `Desktop\Z mobilu 26-09-2024\`
+
+Pozor: v ilustrační složce leží i převzaté obrázky (portréty známých lidí, umělecká díla, screenshoty). Jako podkres se používají jen **Kateřininy vlastní fotky**. U nejistého původu se zeptej. Kredit: „Foto: Kateřina Mahdalová“. Fotku vyber, ukaž ji Kateřině spolu s návrhem coveru a originál nech ve složce, do článku jde jen hotová kompozice.
+
+Vlastní fotka může být hlavním motivem (kapitola 5) i tlumeným podkresem pod datovým motivem (graf, tečky, mapa přes ztmavenou fotku). Pro podkres platí totéž co pro závoj: silnější tmavá vrstva z palety, aby motiv i text zůstaly čitelné.
+
+### 5.2 Pravidla pro fotografický cover
+
+- **Když je fotka hlavním motivem, nese cover sama.** Text je jen štítek, titulek a případně krátký citát v uvozovkách se jménem, bez čísel, legend a ikon. (Fotka jako tlumený podkres pod datovým motivem viz 5.1.)
 - **Výběr:** originál v nejvyšším rozlišení (ideálně 2400 px a víc), jasný hlavní motiv, klidná plocha pro text. Vždy autor a právo k použití.
 - **Čitelnost:** závoj a scrim v tmavé barvě palety (navy, případně brandDeepRed.9 a další tmavé odstíny), silnější pod textem. Text nikdy přes rušné místo (obličej, nápisy na fotce).
 - **Barva:** závoj drží dominantní barvu série nebo karty. Do frontmatteru dej `coverBg` stejnou barvou, ať případné pruhy na kartě splynou.
@@ -103,4 +119,5 @@ U zdraví, duševních nemocí, násilí, dětí a obětí:
 ## Ponaučení
 
 - *25. 10. 2026 – „covery jsou hotové“, ale Kateřina je neviděla.* Hotový cover se vždy hned pošle jako náhled (kontaktní arch + homepage + OG), ne jen popíše v textu. Platí i pro covery od pomocného agenta.
+- *25. 10. 2026 – vlastní fotky a volnost stylu.* Kateřinin archiv vlastních fotek se smí používat jako podkres (kapitola 5.1). Styl není striktně předepsaný, i spojnicový graf je dobrý cover, když má podkres a kompozici (kapitola 4).
 - *25. 10. 2026 – slunečnice z teček (poruchy příjmu potravy).* Abstraktní tečková jednotka s plochou úměrnou počtu a s tlumeným „před“ a zářivým „přibylo“ unese citlivé téma i hlavní číslo zároveň. Kateřina ji chce jako vzor pro covery bez fotky.

@@ -49,8 +49,11 @@ Než začneš, přečti a dodržuj:
      tečková mapa ČR (podklad senat-mapa.json / obce-mapa.json z článku volby-cr-2026-10-10-senat-komunalni-2026-predikce)
      s vrstvou bodů (města, obvody, okrsky), body velké/barevné podle hodnoty z článku; mapa obcí; ikona série.
      Číslo nebo krátký graf smí být jen DOPLNĚK přes velký motiv, nikdy motiv sám.
-   - ZAKÁZÁNO jako motiv: samotný sloupcový/pruhový graf, samotné číslo nebo text na prázdné ploše,
-     „infografika“ z pár pruhů. Pruhy navíc musí mít poctivé měřítko (54 % není skoro celá šíře).
+   - ZAKÁZÁNO jako motiv: holý graf nebo samotné číslo či text na prázdné ploše, „infografika“ z pár pruhů.
+     Graf (třeba spojnicový) je v pořádku, když má dobrý podkres (fotka, mapa, záře) a kompozici přes celou plochu –
+     styl není striktně předepsaný (COVER-VIZUALNI-IDENTITA.md, kap. 4). Měřítko vždy poctivé (54 % není skoro celá šíře).
+   - Podkresová fotka: nejdřív Kateřininy vlastní fotky (Desktop\Mahdalova & Skop\Ilustrační obrázky\, Desktop\Z mobilu*\),
+     ne agenturní ilustračky; převzaté obrázky z ilustrační složky ne (COVER-VIZUALNI-IDENTITA.md, kap. 5.1).
    - Fotka → fotka je hlavní, text jen titulek, případně krátký citát v uvozovkách se jménem; nic dalšího.
    - ZAKÁZÁNO: AI generované obrázky a ilustrace, stockové ikony, 3D efekty, neonové záře, víc než 2–3 barvy motivu,
      text přes rušná místa fotky, emoji, vymyšlená čísla. Každé číslo nebo tvrzení na coveru musí být v článku.
