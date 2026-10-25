@@ -41,8 +41,10 @@ const F = {
     const basePismen = O && O.subBot ? Math.round(O.osa + CAP * fs_ / 2) : f.base;
     if (k === 'homepage') POSUN = (f.base - basePismen) / fs_;
     else if (O && O.subBot) { f.base = Math.round(basePismen + POSUN * fs_); }
-    const ix = dlanX - DLAN.x0 * s, iy = f.base - DLAN.y1 * s;
-    const pX = ix + DLAN.palec * s - 0.16 * fs_;
+    const pX = dlanX - DLAN.x0 * s + DLAN.palec * s - 0.16 * fs_;     // P zůstává, kde bylo
+    // Dlaň samotná posunutá doleva (Kateřina 25. 10.), aby ukazováček nezasahoval do P; poměrově ve všech formátech
+    const POSUN_DLANE = 0.24 * fs_;
+    const ix = dlanX - DLAN.x0 * s - POSUN_DLANE, iy = f.base - DLAN.y1 * s;
     const W = 612 * s, H = 408 * s, cx = ix + (DLAN.x0 + DLAN.x1) / 2 * s, cy = iy + (DLAN.y0 + DLAN.y1) / 2 * s;
     // Vše, co patří k fotce, se kreslí v souřadnicích zdroje (612×408) uvnitř skupiny s posunem a měřítkem.
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${f.w}" height="${f.h}" viewBox="0 0 ${f.w} ${f.h}">
