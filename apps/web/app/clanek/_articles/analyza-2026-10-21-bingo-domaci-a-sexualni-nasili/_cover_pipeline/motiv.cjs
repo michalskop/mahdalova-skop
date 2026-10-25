@@ -29,22 +29,16 @@ const F = {
   for (const [k, f] of Object.entries(F)) {
     // s = měřítko fotky tak, aby výška dlaně = výška verzálky a celé slovo mělo šířku f.sirka
     const mezera = 0.05; // mezera mezi písmenem a dlaní (em)
-    let s = f.sirka / ((DLAN.y1 - DLAN.y0) / CAP * (m.st + m.p + mezera - 0.16) + (DLAN.palec - DLAN.x0));
-    // Osa (Kateřina 25. 10.): slovo STOP i s dlaní se centruje svisle na střed mezi spodní okraj podtitulku
-    // a horní okraj kolečka loga (osa.json z zmer.cjs). Kdyby konečky prstů narazily do podtitulku (rezerva 30 px),
-    // slovo se zmenší. OG zůstává podle f.base (logo je tam nad slovem).
+    const s = f.sirka / ((DLAN.y1 - DLAN.y0) / CAP * (m.st + m.p + mezera - 0.16) + (DLAN.palec - DLAN.x0));
+    // Osa (Kateřina 25. 10.): jen písmena S, T, P se centrují svisle na střed mezi spodní okraj podtitulku
+    // a horní okraj kolečka loga (osa.json z zmer.cjs). Dlaň zůstává na místě podle f.base. OG beze změny.
     const O = OSA[k];
-    if (O && O.subBot) {
-      const vyskaDlane = DLAN.y1 - DLAN.y0, prsty = DLAN.y1 - DLAN.prsty;
-      s = Math.min(s, (O.osa - (O.subBot + 30)) / (prsty - vyskaDlane / 2));
-      f.base = Math.round(O.osa + vyskaDlane * s / 2);
-      f.sirka = s * ((DLAN.y1 - DLAN.y0) / CAP * (m.st + m.p + mezera - 0.16) + (DLAN.palec - DLAN.x0));
-    }
     const fs_ = (DLAN.y1 - DLAN.y0) * s / CAP;
     const x0 = f.cx - f.sirka / 2;
     const dlanX = x0 + (m.st + mezera) * fs_;            // levý okraj dlaně
     const ix = dlanX - DLAN.x0 * s, iy = f.base - DLAN.y1 * s;
     const pX = ix + DLAN.palec * s - 0.16 * fs_;
+    const basePismen = O && O.subBot ? Math.round(O.osa + CAP * fs_ / 2) : f.base;
     const W = 612 * s, H = 408 * s, cx = ix + (DLAN.x0 + DLAN.x1) / 2 * s, cy = iy + (DLAN.y0 + DLAN.y1) / 2 * s;
     // Vše, co patří k fotce, se kreslí v souřadnicích zdroje (612×408) uvnitř skupiny s posunem a měřítkem.
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${f.w}" height="${f.h}" viewBox="0 0 ${f.w} ${f.h}">
@@ -77,8 +71,8 @@ const F = {
 </g>
 <rect width="${f.w}" height="${f.h}" fill="url(#zavoj-${k})"/>
 <g font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${fs_.toFixed(1)}" fill="${CRIMSON}" style="text-shadow:0 4px 24px rgba(16,20,50,.55)">
- <text x="${dlanX - mezera * fs_}" y="${f.base}" text-anchor="end">ST</text>
- <text x="${pX}" y="${f.base}">P</text>
+ <text x="${dlanX - mezera * fs_}" y="${basePismen}" text-anchor="end">ST</text>
+ <text x="${pX}" y="${basePismen}">P</text>
 </g></svg>`;
     fs.writeFileSync(path.join(__dirname, 'motiv', `${k}.svg`), svg);
     console.log(k, 's=', s.toFixed(2), 'písmo', fs_.toFixed(0), 'prsty nahoře y=', Math.round(iy + DLAN.prsty * s));

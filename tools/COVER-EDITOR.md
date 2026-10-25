@@ -72,8 +72,8 @@ výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obráze
   (tričko, čelo) dát navy přechod. Kontrolovat výřezem se zesíleným kontrastem ve všech formátech. Ruční obrys
   (lasso) ruky ve fotce nesedí podél prstů ani po přichycení na hrany. Pozadí za rukou tlumit jen měkkým přechodem
   bez obrysu. Zvýšený kontrast a teplý tón fotky se neosvědčily, ruka zůstává v přirozené barvě. Písmena motivu
-  v karmínové #de1743. Slovo motivu centrovat svisle na střed mezi spodní okraj podtitulku a horní okraj kolečka
-  loga (měří `zmer.cjs`). Konečky prstů nesmí zasahovat pod podtitulek, jeho halo je usekne.
+  v karmínové #de1743. Písmena motivu (bez dlaně) centrovat svisle na střed mezi spodní okraj podtitulku a horní okraj
+  kolečka loga (měří `zmer.cjs`), dlaň zůstává na svém místě. Konečky prstů nesmí zasahovat pod podtitulek, jeho halo je usekne.
 - *24. 10. 2026 – jméno místa patří přímo na mapu (Mariánské Lázně, kupování hlasů).* Když cover stojí na jednom
   zvýrazněném místě, Kateřina chce jeho název u tečky, ne jen ve štítku nebo v legendě v rohu. Generátor umí
   `popisek` u bodu (`motiv.body: [{ lon, lat, k, popisek: 'Mariánské Lázně' }]`): Plex Sans s obrysem v barvě pozadí,
