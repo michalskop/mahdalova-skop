@@ -1,0 +1,6 @@
+#!/bin/sh
+# Git LFS: animace webu (GIF, MP4, animované WebP v images/ článků) jsou v Git LFS. Tenhle hook je před pushem
+# nahraje na LFS úložiště GitHubu – bez nich by Cloudflare nasadil jen textový odkaz místo obrázku.
+# Instalace (jednou na počítač): git config core.hooksPath scripts/git-hooks + nainstalovaný git-lfs.
+command -v git-lfs >/dev/null 2>&1 || { echo >&2 "Chybí git-lfs (animace webu jsou v Git LFS). Nainstaluj ho: https://git-lfs.com"; exit 2; }
+git lfs pre-push "$@"
