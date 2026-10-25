@@ -26,6 +26,8 @@ nejdřív ji aktualizuj z origin/main (git merge origin/main). NIKDY cover neimp
 
 Než začneš, přečti a dodržuj:
 - tools/COVER-EDITOR.md – sada formátů, bezpečné zóny, písma, OG pravidla
+- tools/COVER-VIZUALNI-IDENTITA.md – jak najít motiv (věta → obraz), cesta s fotkou i bez ní, citlivá témata,
+  vzory (tečková mapa, „slunečnice“ z teček, ikona série, koláž výstřižků)
 - packages/ui/DESIGN.md, sekce „Full palette“ – ZÁVAZNÁ paleta, jen přesné hodnoty, žádné vlastní odstíny
 - docs/design/NAVOD_LOGO_NA_COVER.md – logo DataTimes.cz (umístění, velikost)
 - GENERÁTOR: tools/cover-generator.cjs – z jednoho cover.config.cjs v _cover_pipeline/ článku vyrobí všech pět formátů
@@ -97,7 +99,7 @@ Než začneš, přečti a dodržuj:
    - zkontroluj: čte se titulek i na náhledu 120×96? nic důležitého není oříznuté? nic nezasahuje pod štítek
      rubriky (x ≥ 950, y ≤ 280)? začíná text a sedí logo na stejných kotvách jako u ostatních coverů? barvy jsou přesně z palety?
      sedí čísla s článkem? velikost OG ≤ 300 kB?
-   - pošli mi kontrolní list a všech pět souborů; frontmatter:
+   - pošli mi kontrolní list a všech pět souborů jako náhled (soubory, ne jen zmínku „hotovo“); frontmatter:
      coverImage + homepageImage: images/cover-homepage.png, ogImage: images/cover-og.jpg, squareImage: images/cover-square.png
    - nic necommituj ani nepushuj bez mého souhlasu.
 ```
