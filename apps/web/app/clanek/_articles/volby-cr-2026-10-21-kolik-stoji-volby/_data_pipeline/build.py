@@ -1,11 +1,19 @@
 # Kolik stojí volby: náklady voleb do obcí a Senátu 2014–2026 a odměny okrskových komisí podle velikosti okrsku.
 #
-# Vstupy (raw/ – stažené 23.–24. 10. 2026, v gitu nejsou, viz .gitignore):
-#   raw/volby_cz_kv2026/KV2026_data_20261011_csv.zip, KV2026reg20261011_csv.zip  – volby.gov.cz/opendata/kv2026
-#   raw/volby_cz_kv2022/KV2022_data_20260328_csv.zip                              – volby.gov.cz/opendata/kv2022 (jen DATUMVOLEB 20220923)
-#   raw/volby_cz_senat2026/vysledky_20261009.xml, obvody/vysledky_obce_obvod_N.xml, SE2026reg20261017_csv.zip
-#                                                                                 – volby.gov.cz/opendata/se2026
-#   raw/csu_cpi_CEN0101E/CEN0101E_uhrn_domacnosti_celkem_CZ.csv                   – ČSÚ, index spotřebitelských cen (úhrn, domácnosti celkem)
+# Vstupy leží v archivu ČSÚ dat mimo git (csu-data, viz csu-data/README.md); skript archiv najde v nadřazených
+# složkách repa, nebo vezme cestu z proměnné CSU_DATA. Bez archivu stačí soubory stáhnout z uvedených adres
+# do raw/ ve stejné struktuře (raw/volby/kv2026/20261011/…). Staženo 23.–24. 10. 2026:
+#   volby/kv2026/20261011/KV2026_data_20261011_csv.zip, KV2026reg20261011_csv.zip
+#       – https://volby.gov.cz/opendata/kv2026/KV2026_data_20261011_csv.zip, …/KV2026reg20261011_csv.zip
+#   volby/kv2022/20260328/KV2022_data_20260328_csv.zip (jen DATUMVOLEB 20220923)
+#       – https://volby.gov.cz/opendata/kv2022/KV2022_data_20260328_csv.zip
+#   volby/kv2014/20261024/vysledky_20141010.xml, volby/kv2018/20261024/vysledky_20181005.xml
+#       – https://volby.gov.cz/pls/kv2014/vysledky?datumvoleb=20141010, …/pls/kv2018/vysledky?datumvoleb=20181005
+#   volby/se2026/20261017/SE2026reg20261017_csv.zip, obvody/vysledky_obce_obvod_N.xml
+#       – https://volby.gov.cz/opendata/se2026/SE2026reg20261017_csv.zip,
+#         https://volby.gov.cz/appdata/senat/20261009/odata/obvody/vysledky_obce_obvod_N.xml
+#   ceny/CEN0101E/20261024/CEN0101E_uhrn_domacnosti_celkem_CZ.csv – výřez (úhrn, domácnosti celkem, Česko) z
+#       https://data.csu.gov.cz/opendata/sady/CEN0101E/distribuce/csv (index spotřebitelských cen)
 #   vstupy/naklady_mf.csv – ručně opsané částky ze závěrečných účtů kapitoly 398 VPS (MF) a ze Zprávy o plnění SR
 #                           za 1. pololetí 2026; odkazy a čísla tabulek jsou v souboru.
 #
@@ -22,7 +30,26 @@ import csv, io, json, os, re, statistics, sys, zipfile, collections
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
-RAW = os.path.join(HERE, "raw")
+
+
+def archiv():
+    """Kořen archivu csu-data: proměnná CSU_DATA, jinak složka csu-data v nadřazených složkách, jinak raw/."""
+    if os.environ.get("CSU_DATA"):
+        return os.environ["CSU_DATA"]
+    d = HERE
+    while os.path.dirname(d) != d:
+        d = os.path.dirname(d)
+        if os.path.isdir(os.path.join(d, "csu-data", "volby")):
+            return os.path.join(d, "csu-data")
+    return os.path.join(HERE, "raw")
+
+
+RAW = archiv()
+KV26 = os.path.join(RAW, "volby", "kv2026", "20261011")
+KV22 = os.path.join(RAW, "volby", "kv2022", "20260328")
+SE26 = os.path.join(RAW, "volby", "se2026", "20261017")
+CPI = os.path.join(RAW, "ceny", "CEN0101E", "20261024", "CEN0101E_uhrn_domacnosti_celkem_CZ.csv")
+print("Data ČSÚ:", RAW)
 DATA = os.path.join(os.path.dirname(HERE), "data")
 os.makedirs(DATA, exist_ok=True)
 OUT = []
@@ -49,7 +76,7 @@ def zcsv(zpath, name):
 # ---------------------------------------------------------------- ceny (ČSÚ)
 # bazický index 2015 = 100 (řada začíná lednem 2015); září 2014 = září 2015 / meziroční index září 2015
 cpi, mezirocni = {}, {}
-for r in csv.DictReader(open(os.path.join(RAW, "csu_cpi_CEN0101E", "CEN0101E_uhrn_domacnosti_celkem_CZ.csv"), encoding="utf-8")):
+for r in csv.DictReader(open(CPI, encoding="utf-8")):
     if re.fullmatch(r"\d{4}-\d{2}", r["CASMKMQRM12"]):
         if r["TYPUDAJE4A"] == "IZ2015":
             cpi[r["CASMKMQRM12"]] = float(r["Hodnota"])
@@ -65,17 +92,17 @@ say(f"  růst cen září 2022 → září 2026: {cz(100 * (cpi[CPI_REF] / cpi['
 naklady = list(csv.DictReader(open(os.path.join(HERE, "vstupy", "naklady_mf.csv"), encoding="utf-8")))
 voliči = {}  # 2014 a 2018 ze souhrnných výsledků (první UCAST = zastupitelstva obcí celkem), 2022 a 2026 z okrsků níže
 for y, f in ((2014, "vysledky_20141010.xml"), (2018, "vysledky_20181005.xml")):
-    txt = open(os.path.join(RAW, f"volby_cz_kv{y}", f), encoding="utf-8").read()
+    txt = open(os.path.join(RAW, "volby", f"kv{y}", "20261024", f), encoding="utf-8").read()
     voliči[y] = int(re.search(r'<UCAST [^>]*ZAPSANI_VOLICI="(\d+)"', txt).group(1))
 
 
 # ---------------------------------------------------------------- okrsky KV
 def okrsky_kv(year):
     if year == 2026:
-        rows = zcsv(os.path.join(RAW, "volby_cz_kv2026", "KV2026_data_20261011_csv.zip"), "csv_od/kvt3.csv")
+        rows = zcsv(os.path.join(KV26, "KV2026_data_20261011_csv.zip"), "csv_od/kvt3.csv")
         ok = lambda r: r["TYP_FORM"] == "1"
     else:
-        rows = zcsv(os.path.join(RAW, "volby_cz_kv2022", "KV2022_data_20260328_csv.zip"), "csv_od/kvt3.csv")
+        rows = zcsv(os.path.join(KV22, "KV2022_data_20260328_csv.zip"), "csv_od/kvt3.csv")
         ok = lambda r: r["DATUMVOLEB"] == "20220923"
     d = {}
     for r in rows:
@@ -95,12 +122,12 @@ def okrsky_kv(year):
 
 # senátní obvody 2026: obce (u Prahy městské části) a počet kandidátů
 sen_obce, sen_kand = {}, collections.Counter()
-for r in zcsv(os.path.join(RAW, "volby_cz_senat2026", "SE2026reg20261017_csv.zip"), "csv_od/serk.csv"):
+for r in zcsv(os.path.join(SE26, "SE2026reg20261017_csv.zip"), "csv_od/serk.csv"):
     if r["PLATNOST"] == "A":
         sen_kand[r["OBVOD"]] += 1
-for fn in os.listdir(os.path.join(RAW, "volby_cz_senat2026", "obvody")):
+for fn in os.listdir(os.path.join(SE26, "obvody")):
     ob = re.search(r"_(\d+)\.xml$", fn).group(1)
-    txt = open(os.path.join(RAW, "volby_cz_senat2026", "obvody", fn), encoding="utf-8-sig").read()
+    txt = open(os.path.join(SE26, "obvody", fn), encoding="utf-8-sig").read()
     for c in re.findall(r'CIS_OBEC="(\d+)"', txt):
         sen_obce[c] = ob
 say(f"Senát 2026: {len(sen_kand)} obvodů, {sum(sen_kand.values())} kandidátů, {len(sen_obce)} obcí/MČ v obvodech")
@@ -177,7 +204,7 @@ say(f"  Novinky: o člena méně v každé komisi = {cz(N * 2500 / 1e6, 1)} mil.
 say(f"  okrsky do 400 voličů: {cz(sum(1 for o in ok26.values() if o['vol'] <= 400))}; do 100: {cz(sum(1 for o in ok26.values() if o['vol'] <= 100))}")
 nejmensi.sort()
 nazvy = {r["OBEC"]: r["NAZEVOBCE"] for r in
-         zcsv(os.path.join(RAW, "volby_cz_kv2026", "KV2026reg20261011_csv.zip"), "csv_od/kvrzcoco.csv")}
+         zcsv(os.path.join(KV26, "KV2026reg20261011_csv.zip"), "csv_od/kvrzcoco.csv")}
 say("  nejmenší okrsky (voliči, obec, okrsek, kandidátek):",
     [(v, nazvy.get(ob, ob), okr, vs) for v, ob, okr, vs in nejmensi[:6]])
 
