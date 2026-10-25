@@ -416,6 +416,13 @@ element whose height is not stretched by the grid (the `height: 100%` then resol
 to auto). Mobile tiles (`flow-root`) and hero side cards (CSS grid) ignore
 `flex-grow`, so they are unaffected.
 
+**No social links in the card (2026-10-25).** The card shows only the cover, rubric badge,
+title, excerpt, date and author. Frontmatter `instagramImage` / `squareImage` are part of the
+cover set (record of the 5 formats), never rendered in the card – an „Instagram ↗“ link that
+appeared once every article got the full cover set was removed on Kateřina's request. The
+first removal sat unmerged in a side branch for a day while readers still saw the link –
+a fix is done only once it is in `main` and deployed.
+
 **Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
 left card in `FeaturedHero` (Volby / Výběr bands) must never show white space
 between the excerpt and the date/author footer. Its text = frontmatter `excerpt`
