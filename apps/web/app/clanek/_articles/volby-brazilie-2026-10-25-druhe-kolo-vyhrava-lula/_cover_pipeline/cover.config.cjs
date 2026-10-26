@@ -6,7 +6,7 @@ module.exports = {
   kicker: { cervene: 'Volby', dal: 'v&nbsp;Brazílii', oddelovac: '' },
   nad: 'Druhé kolo prezidentských voleb, predikce DataTimes.cz',
   titulek: 'Druhé kolo vyhrává<br>Lula',
-  pod: 'Lula 51,7&nbsp;%, Flávio Bolsonaro 48,3&nbsp;%<br>Vítěz prvního kola prohrává o&nbsp;4,3 milionu hlasů',
+  pod: 'Lula 51,8&nbsp;%, Flávio Bolsonaro 48,2&nbsp;%<br>Vítěz prvního kola prohrává o&nbsp;4,4 milionu hlasů',
   barvy: { glowA: '#101432', glowB: '#101432', kick: '#f8f6f0' /* background.2 */, sub: '#d2d8e9' /* brandNavy.1 */, stitek: '#de1743' },
   motiv: {
     typ: 'obrazek', src: path.join(__dirname, 'brazil-flag-contour.webp'), jas: 0.8, opacityOg: 0.4, scrim: [30, 62],

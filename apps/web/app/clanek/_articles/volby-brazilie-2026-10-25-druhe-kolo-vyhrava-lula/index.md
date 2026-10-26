@@ -3,7 +3,7 @@ title: "Prezidentské volby v Brazílii: Druhé kolo vyhrává Lula, ukazuje pre
 date: "2026-10-25"
 time: "00:55"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Průzkumy před druhým kolem viděly mírně v čele Flávia Bolsonara a průběžné sčítání ho v noci na chvíli postavilo před Lulu. Predikce DataTimes.cz ale od prvních minut sčítání ukazuje vítězství úřadujícího prezidenta: Lula skončí na 51,7 procenta a porazí syna svého předchůdce o víc než čtyři miliony hlasů."
+excerpt: "Průzkumy před druhým kolem viděly mírně v čele Flávia Bolsonara a průběžné sčítání ho v noci na chvíli postavilo před Lulu. Predikce DataTimes.cz ale od prvních minut sčítání ukazuje vítězství úřadujícího prezidenta: Lula skončí na 51,8 procenta a porazí syna svého předchůdce o víc než čtyři miliony hlasů."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -12,12 +12,12 @@ filter: ["analýza"]
 tags: ["volby", "Brazílie", "Lula", "Flávio Bolsonaro", "Jair Bolsonaro", "Latinská Amerika", "volební predikce"]
 promoted: 1
 ---
-Brazílie v neděli 25. října ve druhém kole volila prezidenta a podle predikce vyhrává úřadující prezident Luiz Inácio Lula da Silva. Datový model dvojice novinářů Mahdalová & Škop mu po sečtení okrsků, v nichž je zapsána polovina voličů, přisuzuje 51,7 procenta platných hlasů. Senátor Flávio Bolsonaro, syn vězněného exprezidenta Jaira Bolsonara, dostane 48,3 procenta. Lula tak porazí vítěze prvního kola o 4,3 milionu hlasů, dvakrát víc než před čtyřmi lety jeho otce. Jako první kandidát od obnovení přímé volby v roce 1989 se stane prezidentem, přestože v prvním kole skončil druhý.
+Brazílie v neděli 25. října ve druhém kole volila prezidenta a podle predikce vyhrává úřadující prezident Luiz Inácio Lula da Silva. Datový model dvojice novinářů Mahdalová & Škop mu po sečtení okrsků, v nichž jsou zapsány dvě třetiny voličů, přisuzuje 51,8 procenta platných hlasů. Senátor Flávio Bolsonaro, syn vězněného exprezidenta Jaira Bolsonara, dostane 48,2 procenta. Lula tak porazí vítěze prvního kola o 4,4 milionu hlasů, dvakrát víc než před čtyřmi lety jeho otce. Jako první kandidát od obnovení přímé volby v roce 1989 se stane prezidentem, přestože v prvním kole skončil druhý.
 
 <KeyNumbers yamlFile="key-stats.yaml" />
 
 ```infobox info
-Predikci jsme přepočítávali každou minutu od 21:12 SEČ (17:12 brazilského času) z průběžných dat brazilského Nejvyššího volebního soudu (TSE). Čísla v textu uvádíme ze stavu v 00:39 SEČ, kdy byly sečteny okrsky s 50,6 procenta zapsaných voličů. Podíly počítáme z platných hlasů, tedy z hlasů pro jednoho ze dvou kandidátů, stejně jako TSE. Oficiální konečný výsledek v době vydání textu ještě není k dispozici.
+Predikci jsme přepočítávali každou minutu od 21:12 SEČ (17:12 brazilského času) z průběžných dat brazilského Nejvyššího volebního soudu (TSE). Čísla v textu uvádíme ze stavu v 00:58 SEČ, kdy byly sečteny okrsky s 68,2 procenta zapsaných voličů. Podíly počítáme z platných hlasů, tedy z hlasů pro jednoho ze dvou kandidátů, stejně jako TSE. Oficiální konečný výsledek v době vydání textu ještě není k dispozici.
 ```
 
 ## Průzkumy viděly v čele Flávia Bolsonara
@@ -38,9 +38,9 @@ Volební noc měla opět dvě tváře. Průběžný součet TSE se během večer
 
 <SupportBanner float="left" />
 
-Predikce DataTimes.cz přitom celou noc ukazovala totéž. Lulu viděla v čele od první aktualizace ve 21:12 SEČ a od chvíle, kdy bylo sečteno jedno procento voličů, mu dávala mezi 51,55 a 51,74 procenta. Odhad se tedy během noci pohnul o necelé dvě desetiny procentního bodu, zatímco průběžný součet se ve stejné době pohyboval mezi 49,56 a 52,60 procenta pro Lulu.
+Predikce DataTimes.cz přitom celou noc ukazovala totéž. Lulu viděla v čele od první aktualizace ve 21:12 SEČ a od chvíle, kdy bylo sečteno jedno procento voličů, mu dávala mezi 51,55 a 51,77 procenta. Odhad se tedy během noci pohnul zhruba o dvě desetiny procentního bodu, zatímco průběžný součet se ve stejné době pohyboval mezi 49,56 a 52,60 procenta pro Lulu.
 
-Od 23:45, při deseti procentech sečtených voličů, ležel nad hranicí 50 procent celý 90procentní interval nejistoty predikce. Ve 00:39 sahá od 51,53 do 51,95 procenta. Kontrolní model, který místo jednotlivých okrsků počítá s většími volebními zónami, došel k téměř stejnému číslu: 51,8 procenta pro Lulu.
+Od 23:45, při deseti procentech sečtených voličů, ležel nad hranicí 50 procent celý 90procentní interval nejistoty predikce. Ve 00:58 sahá od 51,65 do 51,89 procenta. Kontrolní model, který místo jednotlivých okrsků počítá s většími volebními zónami, došel k téměř stejnému číslu: 51,8 procenta pro Lulu.
 
 <BrazilRunoffTimeline />
 
@@ -50,17 +50,17 @@ Od 23:45, při deseti procentech sečtených voličů, ležel nad hranicí 50 pr
 Okrsky odevzdávají výsledky postupně a ne náhodně. Když jsou mezi prvními místa, kde má některý kandidát silnější podporu, vypadá v průběžném součtu úspěšněji, než jaký nakonec bude po celé zemi. Model hledá podobné okrsky podle dřívějších voleb, podle právě sečtených výsledků průběžně upravuje odhad posunu a z nahlášené části tak dopočítává i tu dosud nesečtenou.
 ```
 
-O tom, kdo průběžně vede, rozhoduje hlavně pořadí, v jakém státy výsledky dodávají. Ve 00:39 SEČ měly za sebou přes 93 procent voličů Distrito Federal, Paraná, Mato Grosso do Sul a Espírito Santo, kde vede Flávio Bolsonaro. V Bahii, nejlidnatějším státě Lulova severovýchodu, bylo sečteno 30 procent voličů, v Pernambuku necelá polovina a v Piauí 27 procent.
+O tom, kdo průběžně vede, rozhoduje hlavně pořadí, v jakém státy výsledky dodávají. Ve 00:58 SEČ měly za sebou přes 96 procent voličů Distrito Federal, Paraná, Mato Grosso do Sul a Espírito Santo, kde vede Flávio Bolsonaro. V Bahii, nejlidnatějším státě Lulova severovýchodu, bylo sečteno 56 procent voličů, v Piauí 68 procent a v Sergipe 23 procent.
 
-Opačným směrem táhnou dva největší státy. V São Paulu, kde vede Flávio Bolsonaro, bylo sečteno 27 procent voličů, ve státě Rio de Janeiro sedm procent. Průběžný součet tak v té chvíli Flávia Bolsonara nadsazoval kvůli jihu a středozápadu a zároveň podceňoval kvůli São Paulu a Riu.
+Opačným směrem táhnou dva největší státy. V São Paulu, kde vede Flávio Bolsonaro, byla sečtena zhruba polovina voličů, ve státě Rio de Janeiro 18 procent. Průběžný součet tak v té chvíli Flávia Bolsonara nadsazoval kvůli jihu a středozápadu a zároveň podceňoval kvůli São Paulu a Riu.
 
 Model se průběžným součtem neřídí. Pro každý stát zvlášť odhaduje, jak budou volit dosud nesečtené okrsky, a teprve z těchto odhadů skládá celostátní výsledek. Proto mu stačí malá, ale po zemi rozptýlená část sečtených okrsků.
 
 ## Minas Gerais se přiklonil k Lulovi
 
-Podle predikce vyhraje Lula ve 13 z 27 spolkových jednotek, Flávio Bolsonaro ve 14. Proti prvnímu kolu se mění jediný stát: Minas Gerais, druhý nejlidnatější stát Brazílie se více než 16 miliony voličů. Před třemi týdny v něm vedl Flávio Bolsonaro, ve druhém kole mu predikce dává 49,5 procenta a Lulovi 50,5 procenta (interval 50,2–50,7).
+Podle predikce vyhraje Lula ve 13 z 27 spolkových jednotek, Flávio Bolsonaro ve 14. Proti prvnímu kolu se mění jediný stát: Minas Gerais, druhý nejlidnatější stát Brazílie se více než 16 miliony voličů. Před třemi týdny v něm vedl Flávio Bolsonaro, ve druhém kole mu predikce dává 49,5 procenta a Lulovi 50,5 procenta (interval 50,3–50,6).
 
-Na Minas Gerais se v Brazílii dívají jako na zmenšeninu celé země. Od roku 1989 se nikdo nestal prezidentem, aniž by v tomto státě vyhrál ([Metrópoles](https://metropoles.com/sao-paulo/por-que-mg-define-corrida-presidencial)). Letos se z něj ale vítěz čte těžko: Lulův odhadovaný náskok v něm činí 120 tisíc hlasů z celostátních 4,3 milionu.
+Na Minas Gerais se v Brazílii dívají jako na zmenšeninu celé země. Od roku 1989 se nikdo nestal prezidentem, aniž by v tomto státě vyhrál ([Metrópoles](https://metropoles.com/sao-paulo/por-que-mg-define-corrida-presidencial)). Letos se z něj ale vítěz čte těžko: Lulův odhadovaný náskok v něm činí zhruba 120 tisíc hlasů z celostátních 4,4 milionu.
 
 <BrazilRunoffStates />
 
@@ -68,7 +68,7 @@ Rozhodující hlasy přináší Lulovi severovýchod. Samotná Bahia mu podle pr
 
 ## Lula přidal necelé tři body, k volbám přišly tři miliony lidí navíc
 
-V prvním kole měl Lula z hlasů pro dva nejsilnější kandidáty 49,0 procenta. Ve druhém kole mu predikce dává 51,7 procenta, tedy o 2,75 procentního bodu víc. Zároveň stoupla účast: model ji odhaduje na 81,0 procenta (interval 80,7–81,1), v prvním kole přišlo 78,92 procenta voličů. Rozdíl dvou procentních bodů odpovídá zhruba 3,2 milionu lidí, kteří ve druhém kole volili a v prvním ne.
+V prvním kole měl Lula z hlasů pro dva nejsilnější kandidáty 49,0 procenta. Ve druhém kole mu predikce dává 51,8 procenta, tedy o 2,78 procentního bodu víc. Zároveň stoupla účast: model ji odhaduje na 80,9 procenta (interval 80,7–81,0), v prvním kole přišlo 78,92 procenta voličů. Rozdíl dvou procentních bodů odpovídá zhruba 3,2 milionu lidí, kteří ve druhém kole volili a v prvním ne.
 
 Z dat zatím nejde říct, jakou roli hrálo každé z obojího. Lula mohl získat víc voličů vyřazených kandidátů, než se čekalo, k urnám mohli přijít jeho dosavadní nevoliči, nebo část voličů Flávia Bolsonara zůstala doma. Odpověď dá až rozbor jednotlivých okrsků po oficiálním výsledku.
 
