@@ -1,7 +1,7 @@
 ---
 title: "Prezidentské volby v Brazílii: Druhé kolo vyhrává Lula, ukazuje predikce"
 date: "2026-10-25"
-time: "00:55"
+time: "23:45"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Průzkumy před druhým kolem viděly mírně v čele Flávia Bolsonara a průběžné sčítání ho v noci na chvíli postavilo před Lulu. Predikce DataTimes.cz ale od prvních minut sčítání ukazuje vítězství úřadujícího prezidenta: Lula skončí na 51,8 procenta a porazí syna svého předchůdce o víc než čtyři miliony hlasů."
 coverImage: "images/cover-homepage.png"
