@@ -71,6 +71,9 @@ výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obráze
   285–915 px**, jinak messengery ořežou nejdůležitější body (velká města na východním pobřeží). V configu
   `format: { og: { stred: false, box: [285, 50, 915, 580] } }` a mapa přes `mapaPozice.og` (vzor
   `volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/`).
+  Když motiv vpravo dole zakrývá logo (jih Brazílie), `logoPodLegendou: true` dá logo vlevo dolů a legendu o dva
+  řádky výš nad něj (ve všech formátech). Barvy bodů na mapě cizí země mohou nést její vlajku (Brazílie: žlutá
+  brandYellow.6 × zelená brandEmeraldMint.6 na modrém podkladu).
 - *25. 10. 2026 – fotka jako motiv pod navy závojem (bingo, STOP s dlaní místo „O“).* Podkladová fotka nesmí mít
   viditelný rámeček: okraje maskovat obdélníkem s Gaussovým rozmazáním (`motiv.typ: 'svg'`, vzor
   `analyza-2026-10-21-bingo-domaci-a-sexualni-nasili/_cover_pipeline/motiv.cjs`) a pod světlé partie u okraje

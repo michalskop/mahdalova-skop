@@ -7,7 +7,7 @@ const path = require('path');
 const ART = path.join(__dirname, '..');
 const MAPA = require('./mapa-pozice.json');
 const FORMATY = { homepage: [1500, 1200], og: [1200, 630], square: [1080, 1080], instagram: [1080, 1350], story: [1080, 1920] };
-const LULA = '#f76800', FLAVIO = '#12b886', STIN = '#383d82'; // brandOrange.6, brandEmeraldMint.6, brandRoyalBlue.7
+const LULA = '#ffcf02', FLAVIO = '#12b886', STIN = '#383d82'; // brandYellow.6 (barvy brazilské vlajky, Kateřina 26. 10.), brandEmeraldMint.6, brandRoyalBlue.7
 
 (async () => {
   const { geoMercator, geoPath, geoCentroid } = await import('d3-geo');

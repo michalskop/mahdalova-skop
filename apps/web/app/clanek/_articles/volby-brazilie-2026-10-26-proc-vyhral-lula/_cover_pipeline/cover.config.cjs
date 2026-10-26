@@ -9,11 +9,13 @@ module.exports = {
   kicker: { cervene: 'Analýza', dal: 'Volby v&nbsp;Brazílii' },
   titulek: 'Proč vyhrál<br>Lula',
   pod: 'K&nbsp;volbám přišly tři miliony lidí navíc<br>a rozhodly druhé kolo',
-  legenda: [['#f76800', 'obec vyhrál Lula'], ['#12b886', 'obec vyhrál Flávio Bolsonaro']],
-  // brandOrange.8 / brandEmeraldMint.8 záře, background.2 a brandNavy.1 texty, brand.6 štítek
-  barvy: { glowA: '#994800', glowB: '#084533', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
+  legenda: [['#ffcf02', 'obec vyhrál Lula'], ['#12b886', 'obec vyhrál Flávio Bolsonaro']],
+  // brandYellow.8 / brandEmeraldMint.8 záře (zelená, žlutá, modrá = vlajka), background.2 a brandNavy.1 texty, brand.6 štítek
+  barvy: { glowA: '#bd9103', glowB: '#084533', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
   mapaPozice: Object.fromEntries(Object.entries(MAPA).map(([k, [x0, y0, x1, y1]]) => [k, [x0, y0, x1, y1]])),
   // OG: text vlevo (ale uvnitř středního čtverce 630 px kvůli ořezu v messengerech), mapa vpravo – Kateřina 26. 10.
   format: { og: { stred: false, box: [285, 50, 915, 580] } },
+  // logo vlevo dole, legenda o dva řádky výš nad ním – vpravo dole by logo zakrývalo jih mapy (Kateřina 26. 10.)
+  logoPodLegendou: true,
   motiv: { typ: 'svg', opacityOg: 0.4, soubory: Object.fromEntries(['homepage', 'og', 'square', 'instagram', 'story'].map((k) => [k, soubor(k)])) },
 };

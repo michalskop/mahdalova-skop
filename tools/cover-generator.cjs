@@ -285,11 +285,14 @@ function html(c, klic) {
   const logoNahore = c.logo === 'nahore';
   const logoVlevo = c.logo === 'vlevo';
   const okraj = Math.max(Math.round(w * 0.032), w - bx1);
-  const rohLogo = logoVlevo ? `left:${bx0}px` : `right:${okraj}px`;
+  // c.logoPodLegendou: logo vlevo dole a legenda nad ním o dva řádky výš (motiv vpravo dole, např. jih Brazílie)
+  const logoPod = c.logoPodLegendou && !logoVlevo;
+  const rohLogo = logoVlevo || logoPod ? `left:${bx0}px` : `right:${okraj}px`;
   const rohLeg = logoVlevo ? `right:${okraj}px;text-align:right` : `left:${bx0}px`;
+  const legDole = logoPod ? h - by1 + 2 * (f.leg ?? 26) * 1.6 : h - by1;
   // c.legendaPodTextem: legenda v toku textu pod podtitulkem (karty, kde dolní roh zabírá motiv)
   const legTok = c.legenda && c.legendaPodTextem && !f.stred ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
-  const leg = c.legenda && !c.legendaPodTextem && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${h - by1}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
+  const leg = c.legenda && !c.legendaPodTextem && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
   const text = f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
