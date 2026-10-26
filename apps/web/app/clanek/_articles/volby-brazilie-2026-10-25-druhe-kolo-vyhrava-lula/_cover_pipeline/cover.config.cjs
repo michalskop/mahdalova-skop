@@ -3,7 +3,7 @@
 const path = require('path');
 const MOTIV = {
   typ: 'obrazek', src: path.join(__dirname, 'brazil-flag-contour.webp'), jas: 0.8, opacityOg: 0.4, scrim: [30, 62],
-  pozice: { homepage: [600, 150, 1000], og: [470, -40, 720], square: [360, 400, 680], instagram: [340, 560, 780], story: [150, 900, 900] },
+  pozice: { homepage: [600, 150, 1000], og: [330, -80, 800], square: [360, 400, 680], instagram: [340, 560, 780], story: [150, 900, 900] },
 };
 // texty pro OG (titulek na dva řádky vedle mapy)
 const SLOUPEC = { logo: 'vlevo', nad: 'Druhé kolo prezidentských voleb,<br>predikce DataTimes.cz', titulek: 'Druhé kolo<br>vyhrává Lula', pod: 'Lula 51,8&nbsp;%, Flávio Bolsonaro 48,2&nbsp;%<br>Vítěz prvního kola prohrává<br>o&nbsp;4,4 milionu hlasů' };
