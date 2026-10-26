@@ -3,7 +3,11 @@ title: "Poprvé od roku 1949 vypadla CDU ze zemského sněmu. Náš model to uk�
 date: "2026-09-20"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "CDU se poprvé v dějinách Spolkové republiky nedostala do zemského parlamentu. Naše datová predikce ukázala už krátce po začátku sčítání, že strana zůstane pod pětiprocentní hranicí."
-coverImage: "images/cover-homepage.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["volby", "Německo", "Meklenbursko-Přední Pomořansko", "CDU", "AfD", "SPD", "volební predikce"]
 promoted: 1

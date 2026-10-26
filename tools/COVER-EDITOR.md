@@ -66,6 +66,22 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *26. 10. 2026 – fotky politiků (Merz, Putin, billboard): kompozice ve všech formátech.* Každý formát kontroluj
+  zvlášť ve velkém náhledu (homepage, čtverec, 4:5, story vedle sebe ve výšce 960 px), ne na malém archu.
+  - Fotku ukotvi na obličej: `podkres(…, { bod: { fx, fy, X, Y, sirka, pomer } })` posadí bod obličeje na (X, Y).
+    Hlava nikdy pod textem, logem ani přechodem. Titulek s pruhem patří na úroveň hrudníku, ne přes hlavu.
+    Logo nikdy přes tváře nebo krky („šála“): pás fotky pod titulkem a logo pod ním.
+  - Ve story dej text nad fotku, nebo fotku nad text. Nikdy přes sebe.
+  - Titulek raději na méně řádků menším písmem (`pro.story.titulek` + `format.story.t`) než tři řádky přes motiv.
+  - Barvu nese pruh titulku → pozadí čisté ink blue bez záře (záře zhoršila čitelnost karmínového štítku).
+  - Široké OG (`og: 'siroky'`, `ogScrim: false`): text ve středním čtverci, postava zasahuje do čtverce zprava.
+    Text smí na rameno, nikdy na obličej. Stejné mezery mezi štítkem, nadtitulkem, pruhem a podtitulkem:
+    `mezery: { og: [a, b, c] }` (px). Logo na úrovni spodního okraje fotky.
+  - Zdrojová fotka může mít hlavu uříznutou už sama (Merz: temeno v horní řadě pixelů). Pak pomůže jen
+    neořezaná fotka; nedomalovávat.
+  - Štítek na světlé fotce: `kickPodklad: '#101432e6'`.
+  - Když se Kateřině líbí původní cover (Die Linke, kalkulačka „míří do obcí“), nepřepracovávat. Jen ho převést
+    do chybějících formátů stejným skriptem (`_cover_pipeline/cover.cjs`, `puvodni.cjs`).
 - *26. 10. 2026 – dva sousední články se stejným motivem (STOP s dlaní × STOP s rukama).* Než motiv navrhneš,
   podívej se na covery článků se stejnými tagy (zvlášť ty, které se ukážou v related boxu vedle sebe). Stejný
   nápad dvakrát v řadě karet působí jako duplikát. Starší článek o znásilnění dostal tečkovou slunečnici

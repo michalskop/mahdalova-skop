@@ -1,3 +1,5 @@
+// POZOR (26. 10. 2026): publikovaná sada coverů NEpochází z tohoto configu, ale z puvodni.cjs (původní obálka s logem
+// kalkulačky, Kateřina ji chce zachovat). Tento config (mapa měst) zůstává jen jako alternativa – nespouštět do images/.
 // Sada coverů – PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <tento soubor>
 // Přepracováno 26. 10. 2026 podle tools/COVER-VIZUALNI-IDENTITA.md (dávka 1 volby 2026).
 // Série Volební kalkulačka: stejná ikona, záře a tečková mapa jako volby-cr-2026-10-10-volebni-kalkulacka-73-mest-a-senat;

@@ -249,6 +249,10 @@ function html(c0, klic, { ucha = false } = {}) {
   const c = { ...c0, ...(c0.pro?.[klic] ?? {}) };
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
   // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
+  // c.rozestup = { homepage: 2 } – násobek mezer mezi nadtitulkem, titulkem a podtitulkem (rozvolnit text do výšky)
+  // c.kickPodklad = '#101432e6' – štítek na podkladovém obdélníku (čitelnost na světlé fotce)
+  // c.mezery = { og: [štítek→nad, nad→titulek, titulek→pod] } – přesné mezery v px místo násobků (rozestup)
+  const mez = (i, vychozi) => c.mezery?.[klic]?.[i] ?? vychozi * (c.rozestup?.[klic] ?? 1);
   // c.format = { story: { t: 90 } } – úprava velikostí jednoho formátu (např. menší titulek, aby zalomení řádků
   // vyšlo ve všech formátech stejně)
   const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}), ...(c.mapaPozice?.[klic] ? { mapa: c.mapaPozice[klic] } : {}), ...(c.format?.[klic] ?? {}) };
@@ -256,15 +260,18 @@ function html(c0, klic, { ucha = false } = {}) {
   const [bx0, by0, bx1, by1] = f.box;
   const motiv = c.motiv.typ === 'tecky' ? tecky(c, f) : c.motiv.typ === 'svg' ? svgVrstva(c, f, klic) : obrazek(c, f, klic);
   const scrim = !f.stred && c.motiv.scrim ? `<div style="position:absolute;inset:0;background:linear-gradient(90deg,${NAVY} 0%,${NAVY}e6 ${c.motiv.scrim[0]}%,${NAVY}00 ${c.motiv.scrim[1]}%)"></div>` : '';
+  // c.ogScrim = false: široké OG bez ztmavení levé strany (záře zůstane, motiv text nepodbarvuje)
   const ogScrim = f.stred ? `<div style="position:absolute;inset:0;background:radial-gradient(ellipse 34% 60% at 50% 50%,${NAVY}cc,${NAVY}00)"></div>`
-    : f.og ? `<div style="position:absolute;inset:0;background:linear-gradient(90deg,${NAVY}cc 0%,${NAVY}99 48%,${NAVY}00 72%)"></div>` : '';
+    : f.og && c.ogScrim !== false ? `<div style="position:absolute;inset:0;background:linear-gradient(90deg,${NAVY}cc 0%,${NAVY}99 48%,${NAVY}00 72%)"></div>` : '';
   const stitek = c.stitek ? `<span class="stitek">${c.stitek}</span>` : '';
   // Štítek coveru (redakční standard): verzálky Plex Sans, první část karmínově s podtržením končícím
   // v půlce posledního písmene, pak „•“ a zbytek bíle. c.kicker = { cervene, dal } (nebo prostý text).
   const k = typeof c.kicker === 'string' ? { dal: c.kicker } : c.kicker;
   const kicker = `<div class="kick">${k.cervene ? `<span class="cerv">${k.cervene}</span>` : ''}${k.cervene && k.dal ? `<span class="sep">${k.oddelovac ?? '•'}</span>` : ''}${k.dal ? `<span>${k.dal}</span>` : ''}${stitek}</div>`;
   const nad = c.nad ? `<div class="nad">${c.nad}</div>` : '';
-  const pod = c.pod ? `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>` : '';
+  const pod = !c.pod ? '' : c.podPruh
+    ? `<div class="sub" style="line-height:1.45"><span class="pruh" style="background:${c.podPruh};color:${c.podBarva ?? '#fff'};font-weight:600">${c.pod}</span></div>`
+    : `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>`;
   const logo = `<div class="logo">${DONUT}<span>DataTimes.cz</span></div>`;
   // SVG ikona se vkládá přímo (písmo v ní pak bere IBM Plex ze stránky), rastr jako <img>
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
@@ -304,9 +311,9 @@ function html(c0, klic, { ucha = false } = {}) {
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
     : `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px">
          ${kicker}
-         ${nad ? `<div style="margin-top:${f.t * 0.45}px">${nad}</div>` : ''}
-         <h1 style="margin-top:${f.t * (nad ? 0.15 : 0.3)}px">${c.titulek}</h1>
-         ${pod ? `<div style="margin-top:${f.t * 0.3}px">${pod}</div>` : ''}
+         ${nad ? `<div style="margin-top:${mez(0, f.t * 0.45)}px">${nad}</div>` : ''}
+         <h1 style="margin-top:${mez(1, f.t * (nad ? 0.15 : 0.3))}px">${c.titulekPruh ? `<span class="pruh" style="background:${c.titulekPruh}">${c.titulek}</span>` : c.titulek}</h1>
+         ${pod ? `<div style="margin-top:${mez(2, f.t * 0.3)}px">${pod}</div>` : ''}
          ${legTok}
        </div>
        ${leg}
@@ -321,6 +328,7 @@ function html(c0, klic, { ucha = false } = {}) {
   .ctverec{position:absolute;left:285px;top:0;width:${w}px;height:${h}px;transform:scale(${(630 / 1080).toFixed(5)});transform-origin:0 0}
   .ctverec svg{overflow:visible}
   .kick{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.kick}px;letter-spacing:.12em;text-transform:uppercase;color:#f8f6f0;display:flex;align-items:center;gap:${f.kick * 0.5}px;white-space:nowrap;width:max-content;max-width:none;justify-content:${f.stred ? 'center' : 'flex-start'};${f.stred ? 'margin:0 auto;' : ''}padding-bottom:.5em}
+  ${c.kickPodklad ? `.kick{background:${c.kickPodklad};padding:.6em .8em .85em;margin-left:-.8em}` : ''}
   .kick .cerv{color:${b.kickCervena ?? '#de1743'};position:relative}
   .kick .cerv::after{content:'';position:absolute;left:0;bottom:-.42em;height:max(3px,.11em);width:calc(100% - .5em);background:${b.kickCervena ?? '#de1743'}}
   .kick .sep{color:#de1743}
@@ -329,7 +337,11 @@ function html(c0, klic, { ucha = false } = {}) {
   .kick.dva .zlom{flex-basis:100%;height:0}
   .stitek{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:700;letter-spacing:.08em;font-size:${f.kick}px;padding:${f.kick * 0.25}px ${f.kick * 0.6}px;border-radius:${f.kick}px;background:${b.stitek};color:#fff}
   .nad{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.sub}px;line-height:1.3;color:#fff}
-  h1{margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.t}px;line-height:1.06;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+  h1{margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.t}px;line-height:1.06;text-shadow:0 2px 10px rgba(0,0,0,.35);color:${b.titulek ?? '#fff'}}
+  /* barevný pruh pod titulkem / podtitulkem (c.titulekPruh, c.podPruh), řádek po řádku jako zvýrazňovač */
+  .pruh{box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.04em .28em;text-shadow:none}
+  h1:has(.pruh){line-height:1.34} /* pruh dalšího řádku nesmí překrýt dolní tahy písmen (y, p) */
+  h1 .pruh{padding:0 .22em}
   .sub{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.sub}px;line-height:1.3;color:${b.sub}}
   .leg{position:absolute;text-shadow:0 0 8px ${NAVY},0 0 3px ${NAVY},0 1px 2px ${NAVY};font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
   /* Mapa smí běžet pod textem; drobné texty dostanou rozmazaný podklad v barvě pozadí, ať vždy vyhrají. */

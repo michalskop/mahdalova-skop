@@ -101,15 +101,37 @@ const OG = {
   tx: 100, ty: 70, tag: 20, hx: 100, hy: 145, hw: 520, h: 54, gap: 16, s: 38, lr: 100, lb: 75, l: 30,
 };
 
+// Čtverec, Instagram 4:5 a story 9:16 (26. 10. 2026): stejná scéna jako homepage zmenšená na šířku 1080,
+// pás s logem nahoře, siluety pod ním, text vlevo dole, logo vpravo dole (story nad ovládáním Instagramu)
+const zmensi = (dy) => HP.people.map(([x, y, s, b, o]) => [Math.round(x * 0.72), Math.round(y * 0.72 + dy), Math.round(s * 0.72), b, o]);
+const SQ = {
+  W: 1080, H: 1080, wall: { x: -29, y: -51, k: 1.08 }, people: zmensi(40),
+  fade: `linear-gradient(180deg,rgba(16,20,50,0) 44%,rgba(16,20,50,.8) 60%,#101432 74%)`,
+  tx: 70, ty: 650, tag: 24, hx: 70, hy: 720, hw: 800, h: 66, gap: 14, s: 42, lr: 70, lb: 60, l: 30,
+};
+const IG = {
+  W: 1080, H: 1350, wall: { x: -29, y: 9, k: 1.08 }, people: zmensi(100),
+  fade: `linear-gradient(180deg,rgba(16,20,50,0) 46%,rgba(16,20,50,.8) 60%,#101432 72%)`,
+  tx: 70, ty: 860, tag: 24, hx: 70, hy: 930, hw: 800, h: 70, gap: 16, s: 44, lr: 70, lb: 90, l: 30,
+};
+const ST = {
+  W: 1080, H: 1920, wall: { x: -29, y: 239, k: 1.08 }, people: zmensi(330),
+  fade: `linear-gradient(180deg,rgba(16,20,50,0) 42%,rgba(16,20,50,.8) 54%,#101432 64%)`,
+  tx: 80, ty: 1180, tag: 26, hx: 80, hy: 1260, hw: 900, h: 80, gap: 18, s: 50, lr: 80, lb: 220, l: 34,
+};
+const VSE = [['cover.jpg', HP], ['cover-og.jpg', OG], ['cover-square.png', SQ], ['cover-instagram.png', IG], ['cover-story.png', ST]];
+const jen = process.argv.slice(4);
+
 (async () => {
   fs.mkdirSync(out, { recursive: true });
   const b = await chromium.launch({ headless: true, channel: 'msedge' });
-  for (const [name, L] of [['cover.jpg', HP], ['cover-og.jpg', OG]]) {
+  // node cover.cjs <repo> <outDir> [soubor…] – jen vybrané formáty
+  for (const [name, L] of VSE.filter(([n]) => !jen.length || jen.includes(n))) {
     const svg = scene(L.W, L.H, { wall: wall(L.W, L.H, L.wall), list: L.people.map(p => person(...p)) });
     const pg = await b.newPage({ viewport: { width: L.W, height: L.H } });
     await pg.setContent(page(L.W, L.H, L, svg), { waitUntil: 'networkidle' });
     await pg.evaluate(() => document.fonts.ready);
-    await pg.screenshot({ path: path.join(out, name), type: 'jpeg', quality: 88 });
+    await pg.screenshot(name.endsWith('.jpg') ? { path: path.join(out, name), type: 'jpeg', quality: 88 } : { path: path.join(out, name) });
     await pg.close();
   }
   await b.close();

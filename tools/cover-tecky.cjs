@@ -6,10 +6,12 @@
 //   slunecnice({ cx, cy, R, n, styl, rozsah? })  Vogelova spirála – počet a jeho změna (X lidí → Y lidí)
 //   prstenec({ cx, cy, R, n, styl })            tečkový donut jako logo DataTimes – podíl (účast, procenta)
 //   plastev({ cx, cy, R, n, styl })             šestiúhelníková plástev – počet, „úl“ lidí nebo obcí
+//   parlament({ cx, cy, R, n, styl })           půlkruh křesel – rozložení mandátů, bloky (cy = spodní hrana)
 //   sloupce({ x, y, w, h, hodnoty, jednotka, styl, popisky? })  tečkové sloupce – vývoj v čase
 //   mrizka({ x, y, sloupcu, n, krok, styl })    řádky teček (waffle) – procenta, srovnání skupin
 //   listek({ x, y, sloupcu, n, krok, krizku, barva, ramecek })  hlasovací lístek: čtverečky, v prvních `krizku` křížek
 //   zare(cx, cy, R, barva)                      měkká záře za motivem
+//   podkres(soubor, [x, y, w, h], { sytost, jas })  fotka jako tlumený podkres vpravo, k textu plynule mizí
 //   vrstva(kresli, plochy?)  kresli(klic, [cx, cy, R]) → SVG obsah; plochy = { formát: [cx, cy, R] } (výchozí PLOCHY)
 // styl(i) → { fill } plná tečka, { ring } prázdný kroužek s obrysem, s `ikona` místo tečky piktogram (IKONY níže).
 const NAVY = '#101432'; // brandNavy.9
@@ -82,6 +84,25 @@ function prstenec({ cx, cy, R, n, styl, vnitrni = 0.5 }) {
   return body.map((b, i) => tecka(cx + b.rr * Math.sin(b.a), cy - b.rr * Math.cos(b.a), s * 0.4, styl(i))).join('');
 }
 
+// Parlament (půlkruh): n křesel v řadách mezi 0,4 R a R, počty v řadě ∝ poloměru; pořadí zleva doprava podle úhlu –
+// prvních m křesel = levý blok. Střed (cx, cy) = střed spodní hrany půlkruhu.
+function parlament({ cx, cy, R, n, styl, rad }) {
+  const r0 = R * 0.4;
+  rad = rad ?? Math.max(4, Math.round(Math.sqrt(n / 6)));
+  const polomery = Array.from({ length: rad }, (_, j) => r0 + ((R - r0) * (j + 0.5)) / rad);
+  const soucet = polomery.reduce((a, b) => a + b, 0);
+  let zbyva = n;
+  const body = [];
+  polomery.forEach((rr, j) => {
+    const m = j === rad - 1 ? zbyva : Math.round((n * rr) / soucet);
+    zbyva -= m;
+    for (let i = 0; i < m; i++) body.push({ rr, a: Math.PI - (m === 1 ? Math.PI / 2 : (i / (m - 1)) * Math.PI) });
+  });
+  body.sort((p, q) => q.a - p.a || p.rr - q.rr);
+  const r = ((R - r0) / rad) * 0.38;
+  return body.map((b, i) => tecka(cx + b.rr * Math.cos(b.a), cy - b.rr * Math.sin(b.a), r, styl(i))).join('');
+}
+
 // Plástev: n teček na šestiúhelníkové mřížce, nejbližší ke středu; pořadí od středu ven (prvních m = jádro).
 function plastev({ cx, cy, R, n, styl }) {
   const s = Math.sqrt((2 * Math.PI * R * R) / (Math.sqrt(3) * n)), h = (s * Math.sqrt(3)) / 2;
@@ -134,6 +155,25 @@ function listek({ x, y, sloupcu, n, krok, krizku, barva, ramecek }) {
   return s;
 }
 
+// Fotka jako tlumený podkres pod tečkovým motivem (COVER-VIZUALNI-IDENTITA.md → 5.1): soubor vložený jako data URI,
+// odbarvený (sytost), ztmavený (jas) a k levému okraji plynule mizí do pozadí, ať nepřekáží textu vlevo.
+// [x, y, w, h] = obdélník, do kterého se fotka vepíše a ořízne (slice), ostrost = poloha výřezu ('xMidYMin' apod.).
+function podkres(soubor, [x, y, w, h], { sytost = 0.35, jas = 0.55, zarovnani = 'xMidYMid', id = 'pk', vlevo = 0.5, vpravo = 0, nahore = 0, dole = 0.3, bod } = {}) {
+  // bod = { fx, fy, X, Y, sirka, pomer }: místo ořezu „slice“ umístí fotku tak, aby její bod (fx, fy v podílech šířky
+  // a výšky, např. obličej) ležel na plátně v (X, Y); sirka = šířka fotky v px, pomer = výška / šířka originálu.
+  // [x, y, w, h] pak jen ořezává (maska).
+  // vlevo/vpravo/nahore/dole = jak velká část fotky (0–1) u daného okraje plynule mizí do pozadí
+  const fs = require('fs');
+  const typ = soubor.endsWith('.png') ? 'png' : soubor.endsWith('.webp') ? 'webp' : 'jpeg';
+  const uri = `data:image/${typ};base64,${fs.readFileSync(soubor).toString('base64')}`;
+  const g = (smer, a, b) => `<linearGradient id="${id}${smer}" ${smer === 'h' ? 'x1="0" x2="1"' : 'x1="0" x2="0" y1="0" y2="1"'}><stop offset="0" stop-color="${a ? '#000' : '#fff'}"/><stop offset="${a}" stop-color="#fff"/><stop offset="${1 - b}" stop-color="#fff"/><stop offset="1" stop-color="${b ? '#000' : '#fff'}"/></linearGradient>`;
+  return `<defs><filter id="${id}f"><feColorMatrix type="saturate" values="${sytost}"/><feComponentTransfer><feFuncR type="linear" slope="${jas}"/><feFuncG type="linear" slope="${jas}"/><feFuncB type="linear" slope="${jas}"/></feComponentTransfer></filter>
+    ${g('h', vlevo, vpravo)}${g('v', nahore, dole)}
+    <mask id="${id}m" maskUnits="userSpaceOnUse" x="${x}" y="${y}" width="${w}" height="${h}"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#${id}h)"/></mask>
+    <mask id="${id}m2" maskUnits="userSpaceOnUse" x="${x}" y="${y}" width="${w}" height="${h}"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#${id}v)"/></mask></defs>
+    <g mask="url(#${id}m2)"><g mask="url(#${id}m)">${bod ? `<image href="${uri}" x="${(bod.X - bod.fx * bod.sirka).toFixed(1)}" y="${(bod.Y - bod.fy * bod.sirka * bod.pomer).toFixed(1)}" width="${bod.sirka}" height="${(bod.sirka * bod.pomer).toFixed(1)}" preserveAspectRatio="none" filter="url(#${id}f)"/>` : `<image href="${uri}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="${zarovnani} slice" filter="url(#${id}f)"/>`}</g></g>`;
+}
+
 const zare = (cx, cy, R, barva) => `<defs><radialGradient id="zare"><stop offset="0" stop-color="${barva}" stop-opacity=".5"/><stop offset="1" stop-color="${barva}" stop-opacity="0"/></radialGradient></defs><circle cx="${cx}" cy="${cy}" r="${f1(R * 1.45)}" fill="url(#zare)"/>`;
 
 function vrstva(kresli, plochy = PLOCHY) {
@@ -141,4 +181,4 @@ function vrstva(kresli, plochy = PLOCHY) {
     [k, `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${kresli(k, plochy[k])}</svg>`]));
 }
 
-module.exports = { IKONY, vrstva, slunecnice, prstenec, plastev, sloupce, mrizka, listek, zare, PLOCHY, ROZMERY };
+module.exports = { IKONY, podkres, vrstva, slunecnice, prstenec, parlament, plastev, sloupce, mrizka, listek, zare, PLOCHY, ROZMERY };
