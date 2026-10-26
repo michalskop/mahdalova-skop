@@ -1,0 +1,14 @@
+label: Oficiální výsledek TSE, 2. kolo
+numbers:
+  - value: "51,79 %"
+    title: Lula da Silva
+    description: 64 256 232 platných hlasů. V prvním kole měl 45,16 procenta a skončil druhý.
+    color: "#f76800"
+  - value: "+10,4 mil."
+    title: Hlasů přidal Lula mezi koly
+    description: Flávio Bolsonaro přidal 3,7 milionu. Deset vyřazených kandidátů mělo v prvním kole dohromady 9,3 milionu hlasů.
+    color: "#0b6b4e"
+  - value: "+3,0 mil."
+    title: Voličů přišlo navíc
+    description: Účast stoupla ze 78,92 na 80,78 procenta. Prázdných a neplatných lístků ubylo o 1,8 milionu.
+    color: brandNavy
