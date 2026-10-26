@@ -289,7 +289,8 @@ function html(c, klic) {
   const logoPod = c.logoPodLegendou && !logoVlevo;
   const rohLogo = logoVlevo || logoPod ? `left:${bx0}px` : `right:${okraj}px`;
   const rohLeg = logoVlevo ? `right:${okraj}px;text-align:right` : `left:${bx0}px`;
-  const legDole = logoPod ? h - by1 + 2 * (f.leg ?? 26) * 1.6 : h - by1;
+  // c.format[klic].legNahoru / podDolu: jemné posuny o řádky v jednom formátu (legenda výš, podtitulek níž)
+  const legDole = (logoPod ? h - by1 + 2 * (f.leg ?? 26) * 1.6 : h - by1) + (f.legNahoru ?? 0) * (f.leg ?? 26) * 1.6;
   // c.legendaPodTextem: legenda v toku textu pod podtitulkem (karty, kde dolní roh zabírá motiv)
   const legTok = c.legenda && c.legendaPodTextem && !f.stred ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
   const leg = c.legenda && !c.legendaPodTextem && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
@@ -300,7 +301,7 @@ function html(c, klic) {
          ${kicker}
          ${nad ? `<div style="margin-top:${f.t * 0.45}px">${nad}</div>` : ''}
          <h1 style="margin-top:${f.t * (nad ? 0.15 : 0.3)}px">${c.titulek}</h1>
-         ${pod ? `<div style="margin-top:${f.t * 0.3}px">${pod}</div>` : ''}
+         ${pod ? `<div style="margin-top:${f.t * 0.3 + (f.podDolu ?? 0) * f.sub * 1.35}px">${pod}</div>` : ''}
          ${legTok}
        </div>
        ${leg}
