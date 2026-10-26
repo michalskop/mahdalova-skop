@@ -148,7 +148,7 @@ export function ArticleCard({
         {title}
       </Text>
 
-      <Text fz="sm" c="brandNavy.9" lineClamp={4}>
+      <Text className={classes.excerpt} fz="sm" c="brandNavy.9" lineClamp={4}>
         {excerpt}
       </Text>
 

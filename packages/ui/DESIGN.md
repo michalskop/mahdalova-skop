@@ -406,6 +406,16 @@ import { ArticleCard } from '@repo/ui/components/ArticleCard';
 />
 ```
 
+**Cards in a row share one bottom edge (rule since 2026-10-26, reader feedback).**
+In a grid row (homepage trios, listings) cards with a shorter title/excerpt used to
+end higher, so the bottom borders and the date/author footers zig-zagged. `.card`
+has `height: 100%` (fills its grid cell) and the excerpt (`.excerpt`) has
+`flex-grow: 1`, so the spare space sits under the excerpt and the footer stays on
+the bottom edge. Don't remove either, and don't wrap `ArticleCard` in an extra
+element whose height is not stretched by the grid (the `height: 100%` then resolves
+to auto). Mobile tiles (`flow-root`) and hero side cards (CSS grid) ignore
+`flex-grow`, so they are unaffected.
+
 **Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
 left card in `FeaturedHero` (Volby / Výběr bands) must never show white space
 between the excerpt and the date/author footer. Its text = frontmatter `excerpt`

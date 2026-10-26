@@ -8,6 +8,17 @@
      standardní hint, který kartu drží na vrstvě a vykreslení textu je v obou
      stavech konzistentní. */
   will-change: transform;
+  /* Karta vyplní celou buňku mřížky, takže spodní okraje všech karet v řadě
+     lícují i při různě dlouhém titulku/perexu (podnět čtenáře, 10/2026). */
+  height: 100%;
+}
+
+/* Volné místo v protažené kartě bere perex, takže patička (datum + autor)
+   sedí u spodní hrany a lícuje napříč řadou. Platí jen pro svislou kartu
+   (Mantine Card = flex column); mobilní dlaždice (flow-root) a boční karty
+   leadu (grid) flex-grow ignorují. */
+.excerpt {
+  flex-grow: 1;
 }
 
 .card:hover {
