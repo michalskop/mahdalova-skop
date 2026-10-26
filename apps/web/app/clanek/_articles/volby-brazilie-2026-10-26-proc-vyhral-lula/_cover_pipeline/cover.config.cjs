@@ -13,5 +13,7 @@ module.exports = {
   // brandOrange.8 / brandEmeraldMint.8 záře, background.2 a brandNavy.1 texty, brand.6 štítek
   barvy: { glowA: '#994800', glowB: '#084533', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
   mapaPozice: Object.fromEntries(Object.entries(MAPA).map(([k, [x0, y0, x1, y1]]) => [k, [x0, y0, x1, y1]])),
+  // OG: text vlevo (ale uvnitř středního čtverce 630 px kvůli ořezu v messengerech), mapa vpravo – Kateřina 26. 10.
+  format: { og: { stred: false, box: [285, 50, 915, 580] } },
   motiv: { typ: 'svg', opacityOg: 0.4, soubory: Object.fromEntries(['homepage', 'og', 'square', 'instagram', 'story'].map((k) => [k, soubor(k)])) },
 };
