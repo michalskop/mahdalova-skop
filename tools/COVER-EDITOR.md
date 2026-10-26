@@ -66,6 +66,12 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *26. 10. 2026 – článek speciálu Data pro budoucí premiérku bez obrázku v rubrice Volby.* Články speciálu
+  (`_content/*/articles/*.mdx`) mají jako `coverImage` jen poutač speciálu 1200×630; do homepage a rubrik je
+  `components/common/getDpbpArticles.ts` dřív posílal bez obrázku. Teď bere `homepageImage` (absolutní cesta).
+  Sada pěti formátů se generuje do `_articles/data-pro-budouci-premierku-02-demografie/images/cover-<slug>/`
+  (vzor `_cover_pipeline/15-volicska-zakladna.config.cjs`) a do mdx se doplní `homepageImage`,
+  `squareImage`, `instagramImage`.
 - *26. 10. 2026 – fotky politiků (Merz, Putin, billboard): kompozice ve všech formátech.* Každý formát kontroluj
   zvlášť ve velkém náhledu (homepage, čtverec, 4:5, story vedle sebe ve výšce 960 px), ne na malém archu.
   - Fotku ukotvi na obličej: `podkres(…, { bod: { fx, fy, X, Y, sirka, pomer } })` posadí bod obličeje na (X, Y).

@@ -80,7 +80,12 @@ export function getDpbpArticles(): Article[] {
         date: data.date || '',
         author: data.author || 'Kateřina Mahdalová & Michal Škop',
         slug: `${chapter}-${slug}`,
-        coverImage: null,
+        // `homepageImage` (5:4 cover in DataTimes style, absolute path) puts the article
+        // card with a picture into the homepage feed and the Volby rubric; the speciál
+        // itself keeps its `coverImage` banner. Articles without it stay text-only.
+        coverImage: typeof data.homepageImage === 'string' ? data.homepageImage : null,
+        coverFit: typeof data.homepageImage === 'string' ? 'cover' : undefined,
+        instagramImage: typeof data.instagramImage === 'string' ? data.instagramImage : null,
         filter: [],
         // Articles migrated from the older _articles/ system carry their own
         // `tags`/`promoted` in frontmatter – preserve those instead of the
