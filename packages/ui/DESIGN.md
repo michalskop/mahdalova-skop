@@ -406,10 +406,22 @@ import { ArticleCard } from '@repo/ui/components/ArticleCard';
 />
 ```
 
+**Cards in a row share one bottom edge (rule since 2026-10-26, reader feedback).**
+In a grid row (homepage trios, listings) cards with a shorter title/excerpt used to
+end higher, so the bottom borders and the date/author footers zig-zagged. `.card`
+has `height: 100%` (fills its grid cell) and the excerpt (`.excerpt`) has
+`flex-grow: 1`, so the spare space sits under the excerpt and the footer stays on
+the bottom edge. Don't remove either, and don't wrap `ArticleCard` in an extra
+element whose height is not stretched by the grid (the `height: 100%` then resolves
+to auto). Mobile tiles (`flow-root`) and hero side cards (CSS grid) ignore
+`flex-grow`, so they are unaffected.
+
 **No social links in the card (2026-10-25).** The card shows only the cover, rubric badge,
 title, excerpt, date and author. Frontmatter `instagramImage` / `squareImage` are part of the
 cover set (record of the 5 formats), never rendered in the card – an „Instagram ↗“ link that
-appeared once every article got the full cover set was removed on Kateřina's request.
+appeared once every article got the full cover set was removed on Kateřina's request. The
+first removal sat unmerged in a side branch for a day while readers still saw the link –
+a fix is done only once it is in `main` and deployed.
 
 **Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
 left card in `FeaturedHero` (Volby / Výběr bands) must never show white space

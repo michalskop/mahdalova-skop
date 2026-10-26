@@ -32,6 +32,7 @@ import ChartCard from '@/components/charts/ChartCard';
 import AnimatedBars from '@/components/charts/AnimatedBars';
 import { CduPredictionTimeline, CduThresholdDots } from '@/components/charts/CduPredictionCharts'; // one-off: CDU M-V 2026
 import { BrazilCandidatesBars, BrazilPredictionTimeline, BrazilRunoffAggregators, BrazilRunoffDots } from '@/components/charts/BrazilPredictionCharts'; // one-off: Brazílie 2026
+import { BrazilRunoffStates, BrazilRunoffTimeline } from '@/components/charts/BrazilRunoffCharts'; // one-off: Brazílie 2026, 2. kolo
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
 import ObceStranyMap from '@/components/charts/ObceStranyMap'; // mapa obcí: zastupitelé SPD, ANO, Motoristů 2022 → 2026
 import ObceVoliciMap from '@/components/charts/ObceVoliciMap'; // mapa obcí: kolik voličů zastupují zastupitelé strany (KV 2026)
@@ -475,6 +476,8 @@ export function ArticleRenderer({
     BrazilRunoffDots,
     BrazilCandidatesBars,
     BrazilRunoffAggregators,
+    BrazilRunoffTimeline,
+    BrazilRunoffStates,
     ObceKandidatkyMap,
     ObceStranyMap,
     ObceVoliciMap,
