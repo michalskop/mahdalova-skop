@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [Proč vyhrál Lula: ve druhém kole přišly k volbám tři miliony lidí navíc](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-26-proc-vyhral-lula)
 - [Prezidentské volby v Brazílii: Druhé kolo vyhrává Lula, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula)
-- [Druhý mandát Našeho Česka v Mariánských Lázních visel na sedmi voličích](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -47,8 +47,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
+- [Proč vyhrál Lula: ve druhém kole přišly k volbám tři miliony lidí navíc](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-26-proc-vyhral-lula)
 - [Prezidentské volby v Brazílii: Druhé kolo vyhrává Lula, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula)
-- [Prezidentské volby v Brazílii: První kolo vyhrává Bolsonaro, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-04-prvni-kolo-vyhrava-bolsonaro)
 
 ## Kontakt
 
