@@ -3,8 +3,11 @@ title: "Do obecních zastupitelstev i Senátu 2026 kandiduje nejméně lidí za 
 date: "2026-08-27"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Komunální volby 2026 mají nejméně kandidátů od roku 2002, senátní od roku 2000. Za poklesem na obou úrovních stojí to samé: SOCDEM (ČSSD), KSČM a další zavedené strany přišly o dvě třetiny kandidátů, v obcích i v Senátu zároveň. Žen naopak přibývá, hlavně na radnicích – v Senátu jejich podíl zůstává stejně nestálý jako dřív."
-coverImage: "images/cover-homepage.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "Senát", "kandidáti", "ženy", "muži", "politika", "data"]
 promoted: 1

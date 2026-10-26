@@ -46,7 +46,7 @@ dřív se postranní karty ořezávaly až na čtverec, proto mají starší cov
 Bolsonaro). Na každou kartu web vkládá vpravo nahoře štítek rubriky: v malých kartách (boční 230 px,
 mobilní seznam) zakryje na coveru oblast x ≥ 950, y ≤ 280. Ikony a odznaky coveru patří pod ni.
 Stejné kotvy (text od x 180 / y 120, logo vpravo dole) drží covery v řadě vedle sebe zarovnané. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
-(statický web na Cloudflare Pages), proto drží OG titulek a logo ve středním čtverci 630. Uvnitř něj ale text nemusí být na střed: kde to jde, je motiv vpravo a text vlevo bez překryvu (COVER-VIZUALNI-IDENTITA.md → *1.1 Kompozice*).
+(statický web na Cloudflare Pages), proto drží OG titulek a logo ve středním čtverci 630. Od 26. 10. 2026 je výchozí OG „čtverec s ušima“: střed = čtvercový cover zmenšený na 630, boky = stejné pozadí se září (COVER-VIZUALNI-IDENTITA.md → *1.1 Kompozice*); vlastní široké rozvržení jen výjimečně přes `format.og`.
 
 **Písma (tvrdé pravidlo, od 12. 10. 2026):** patkový IBM Plex Serif Bold jen titulek a nápis loga „DataTimes.cz“;
 všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách) IBM Plex Sans.

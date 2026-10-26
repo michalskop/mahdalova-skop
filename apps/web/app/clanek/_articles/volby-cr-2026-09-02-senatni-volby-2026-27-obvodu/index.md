@@ -4,8 +4,11 @@ date: "2026-09-02"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "Ve 27 z 81 obvodů se 9. a 10. října volí třetina Senátu. Ze tří vládních stran má v horní komoře senátory jen ANO, a to 15. I kdyby jeho kandidáti vyhráli ve všech 24 obvodech, kde kandidují, na 41 hlasů nedosáhne. Opozici k udržení většiny stačí dvě vítězství."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "senátní volby 2026", "Senát", "kandidáti", "politika"]
 promoted: 1
