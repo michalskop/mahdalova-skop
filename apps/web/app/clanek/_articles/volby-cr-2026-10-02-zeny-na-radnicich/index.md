@@ -4,8 +4,11 @@ date: "2026-10-02"
 time: "10:18"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Podíl žen na kandidátkách do obecních zastupitelstev roste od roku 1994 a letos dosáhl 35 %. Mezi zvolenými jich je ale pravidelně o čtyři až pět procentních bodů méně a mezi starosty ještě méně. Čím větší obec a čím vyšší funkce, tím méně žen."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "ženy", "ženy v politice", "obce", "starostky", "data"]
 promoted: 1

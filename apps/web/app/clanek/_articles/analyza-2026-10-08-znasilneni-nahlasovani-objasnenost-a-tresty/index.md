@@ -4,8 +4,11 @@ date: "2026-10-08"
 time: "17:08"
 author: "Kateřina Mahdalová"
 excerpt: "Americký případ Jane Doe z Cornellovy univerzity ukazuje, kolik se toho může ztratit mezi oznámením a soudem. V Česku jde na policii zhruba desetina obětí, objasněnost znásilnění za patnáct let klesla ze 75 na 53 procent a polovina odsouzených odchází s podmínkou."
-coverImage: "images/cover-znasilneni-datatimes.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 coverBg: "brandNavy.9"
 filter: ["analýza"]
 tags: ["spravedlnost", "znásilnění", "sexuální násilí", "justice", "policie", "tresty", "Evropa", "USA", "Cornell"]

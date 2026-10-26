@@ -68,6 +68,9 @@ const SubscribeNewsletter = React.forwardRef<HTMLDivElement, FormProps>(
                   name="email"
                   type="email"
                   aria-label="Váš email"
+                  // Autofill podklad (prohlížeč ho jinak přebarví na světle
+                  // modro) řeší .dt-newsletter-input v app/globals.css.
+                  classNames={{ input: 'dt-newsletter-input' }}
                   styles={(theme) => ({
                     input: {
                       backgroundColor: theme.colors.brandDeepRed[7],

@@ -4,8 +4,11 @@ date: "2026-08-06"
 time: "16:37"
 author: "Kateřina Mahdalová"
 excerpt: "Všechno podstatné o komunálních volbách 9. a 10. října 2026 na jednom místě: kdy a kde volit, kdo může volit a kandidovat, jak upravit lístek, jak se z křížků stanou mandáty a kdo nakonec usedne v zastupitelstvu."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "jak volit", "volební systém", "obce"]
 promoted: 1
