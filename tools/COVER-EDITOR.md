@@ -66,6 +66,11 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *26. 10. 2026 – OG s mapou (Brazílie, proč vyhrál Lula).* Vycentrovaný OG s mapou jako slabým pozadím nestačil:
+  text zarovnat doleva od levého okraje středního čtverce a mapu dát do jeho pravé části, **celou uvnitř čtverce
+  285–915 px**, jinak messengery ořežou nejdůležitější body (velká města na východním pobřeží). V configu
+  `format: { og: { stred: false, box: [285, 50, 915, 580] } }` a mapa přes `mapaPozice.og` (vzor
+  `volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/`).
 - *25. 10. 2026 – fotka jako motiv pod navy závojem (bingo, STOP s dlaní místo „O“).* Podkladová fotka nesmí mít
   viditelný rámeček: okraje maskovat obdélníkem s Gaussovým rozmazáním (`motiv.typ: 'svg'`, vzor
   `analyza-2026-10-21-bingo-domaci-a-sexualni-nasili/_cover_pipeline/motiv.cjs`) a pod světlé partie u okraje
