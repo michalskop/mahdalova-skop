@@ -20,7 +20,8 @@ module.exports = {
     square: { podDolu: 2, legNahoru: 2 },
     homepage: { podDolu: 2, legNahoru: 1 },
     instagram: { podDolu: 2, legNahoru: 2 },
-    story: { podDolu: 2, legNahoru: 2, box: [80, 150, 1000, 1570] }, // text o 2 řádky výš, podtitulek na severu mapy (Kateřina 26. 10.)
+    // story: text o 3 řádky výš (podtitulek na severu mapy), spodek loga = jižní cíp Brazílie (y 1668), legenda na původním místě (legNahoru vyrovnává posun spodku boxu o 98 px)
+    story: { podDolu: 2, legNahoru: 2 + 98 / (26 * 1.6), box: [80, 95, 1000, 1668] },
   },
   // logo vlevo dole, legenda o dva řádky výš nad ním – vpravo dole by logo zakrývalo jih mapy (Kateřina 26. 10.)
   logoPodLegendou: true,
