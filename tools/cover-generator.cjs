@@ -238,7 +238,10 @@ function vykresliZnak() {
   svg.innerHTML = out;
 }
 
-function html(c, klic) {
+function html(c0, klic) {
+  // c.pro = { og: { titulek, nad, pod, logo, … } } – úprava textů a polohy loga jen pro jeden formát
+  // (např. OG rozvržené do dvou sloupců: text vlevo, motiv vpravo, viz COVER-VIZUALNI-IDENTITA.md → Kompozice)
+  const c = { ...c0, ...(c0.pro?.[klic] ?? {}) };
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
   // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
   // c.format = { story: { t: 90 } } – úprava velikostí jednoho formátu (např. menší titulek, aby zalomení řádků

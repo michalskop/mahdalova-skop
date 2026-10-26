@@ -46,7 +46,7 @@ dřív se postranní karty ořezávaly až na čtverec, proto mají starší cov
 Bolsonaro). Na každou kartu web vkládá vpravo nahoře štítek rubriky: v malých kartách (boční 230 px,
 mobilní seznam) zakryje na coveru oblast x ≥ 950, y ≤ 280. Ikony a odznaky coveru patří pod ni.
 Stejné kotvy (text od x 180 / y 120, logo vpravo dole) drží covery v řadě vedle sebe zarovnané. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
-(statický web na Cloudflare Pages), proto má OG text uprostřed.
+(statický web na Cloudflare Pages), proto drží OG titulek a logo ve středním čtverci 630. Uvnitř něj ale text nemusí být na střed: kde to jde, je motiv vpravo a text vlevo bez překryvu (COVER-VIZUALNI-IDENTITA.md → *1.1 Kompozice*).
 
 **Písma (tvrdé pravidlo, od 12. 10. 2026):** patkový IBM Plex Serif Bold jen titulek a nápis loga „DataTimes.cz“;
 všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách) IBM Plex Sans.
@@ -216,7 +216,7 @@ JPEG, čistou grafiku do PNG; ruční volba v projektu má přednost.
 Obrázky patří do `images/` u článku. Přenes pole z `frontmatter.yaml` do
 `index.md`. `homepageImage` určuje náhled karty. `ogImage` určuje Open Graph,
 Twitter a obrázek JSON-LD; rozměry a MIME se čtou ze skutečného souboru.
-`instagramImage` přidá na kartu samostatný odkaz Instagram do nové karty.
+`instagramImage` je jen záznam sady coverů; v kartě se nezobrazuje (odkaz „Instagram ↗“ zrušen 25. 10. 2026, viz `packages/ui/DESIGN.md`).
 Kliknutí na hlavní obrázek nadále vede na článek a jeho nativní nabídka
 „Otevřít obrázek“ nadále otevírá zobrazený webový obrázek.
 

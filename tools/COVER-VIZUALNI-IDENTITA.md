@@ -14,9 +14,20 @@ Pevné prvky, které drží řadu coverů pohromadě, ať je motiv jakýkoli:
 - **Písma IBM Plex:** Serif Bold jen titulek a nápis loga, všechno ostatní Sans.
 - **Štítek nad titulkem:** `ANALÝZA • TÉMA`, první část karmínová s podtržením.
 - **Logo DataTimes.cz:** kolečko vlevo, nápis vpravo, volně a bez podkladu (žádná „pilulka“ ani kruh), v klidnějším dolním rohu.
-- **Velký motiv**, který vyplní plochu. Text, legenda a logo smějí ležet přes něj, čitelnost drží halo v barvě pozadí.
+- **Velký motiv**, který vyplní plochu. Kde to jde, má ale **vlastní plochu vedle textu** (kapitola 1.1); text přes motiv jen tam, kde motiv musí zabrat celý formát (tečková mapa ČR, fotka jako podkres), a pak s halo v barvě pozadí.
 - **Barvy jen z palety.** Motiv má 1–2 výrazné barvy, vedlejší vrstvy jsou tlumené odstíny téže škály.
 - **Hravost:** v řadě karet na homepage má cover zaujmout a vypadat jako sourozenec ostatních. Technicky správný, ale nudný cover je špatný cover.
+
+### 1.1 Kompozice: text a obraz vedle sebe, ne přes sebe
+
+Pravidlo od 26. 10. 2026 (Kateřina u OG coveru Brazílie, 2. kolo: „vycentrování na tomhle formátu není odůvodněné, mapa mohla být na straně a texty na druhé straně“).
+
+- **Kde je to vhodné, text a obrázek se nepřekrývají.** Na širokých formátech (OG 1200×630, homepage 1500×1200) dej motiv (mapu, vlajku, ikonu, fotku) na jednu stranu a text na druhou, **mapa vpravo, text vlevo**. Středové vrstvení textu přes ztlumený motiv je výjimka, ne výchozí volba.
+- **Výjimky, kdy překryv dává smysl:** motiv, který musí zabrat celou plochu (tečková mapa ČR přes celý cover, fotka jako podkres, tečková „slunečnice“ u citlivých témat), nebo formát na výšku, kde motiv leží pod textem.
+- **OG a ořez WhatsAppu:** titulek a logo dál drží ve středním čtverci 630 (x 285–915), takže text začíná u x 285 a motiv zabírá pravou část a klidně dobíhá k okraji. Logo pod textem vlevo, ne přes motiv.
+- **Homepage:** text vlevo od x 180, motiv vpravo, pravý horní roh (x ≥ 950, y ≤ 280) volný pro štítek rubriky. Když se titulek nevejde vedle motivu, zalom ho jinak (přes `pro.homepage.titulek`) nebo motiv zmenši, nikdy ho nepouštěj přes text.
+- **Technicky:** v `cover.config.cjs` `format.og = { stred: false, box: [285, …] }` vypne středové rozvržení OG; `pro: { og: { titulek, nad, pod, logo: 'vlevo' } }` upraví texty a polohu loga jen pro jeden formát; `motiv.pozice` posune motiv. Vzor: `volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula`.
+- **Kontrola:** na kontaktním archu (`tools/kontaktni-arch.cjs`) se nesmí žádný text dotýkat motivu v žádném z pěti formátů.
 
 ## 2. Nejdřív věta, pak obraz
 
