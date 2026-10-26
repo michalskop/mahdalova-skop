@@ -13,8 +13,8 @@ import type { Topology, GeometryCollection } from 'topojson-specification';
 import type { Feature, Geometry } from 'geojson';
 import ChartCard from './ChartCard';
 
-// Barvy výhradně ze závazné palety (ThemeProvider.tsx): Lula brandOrange, Flávio brandEmeraldMint
-// (oranžová × zelená je čitelná i pro barvoslepé), účast brandNavy
+// Barvy výhradně ze závazné palety (ThemeProvider.tsx): Lula brandYellow, Flávio brandEmeraldMint
+// (žlutá × zelená = barvy brazilské vlajky, shodně s covery článku; Kateřina 26. 10.), účast brandNavy
 const INK = '#101432';      // brandNavy.9
 const MUTED = '#4c4f8e';    // brandNavy.7
 const GRID = '#eeeae2';     // background.4
@@ -32,18 +32,18 @@ const BINS: Record<Mode, Bin[]> = {
     { min: 30, max: 40, color: '#0e926a', label: 'Flávio 60–70 %' },
     { min: 40, max: 45, color: '#4fd6b4', label: 'Flávio 55–60 %' },
     { min: 45, max: 50, color: '#c2f0e4', label: 'Flávio 50–55 %' },
-    { min: 50, max: 55, color: '#ffe0c7', label: 'Lula 50–55 %' },
-    { min: 55, max: 60, color: '#fda668', label: 'Lula 55–60 %' },
-    { min: 60, max: 70, color: '#f76800', label: 'Lula 60–70 %' },
-    { min: 70, max: Infinity, color: '#994800', label: 'Lula 70 % a víc' },
+    { min: 50, max: 55, color: '#fff0b3', label: 'Lula 50–55 %' },
+    { min: 55, max: 60, color: '#ffdc33', label: 'Lula 55–60 %' },
+    { min: 60, max: 70, color: '#efb704', label: 'Lula 60–70 %' },
+    { min: 70, max: Infinity, color: '#a47d03', label: 'Lula 70 % a víc' },
   ],
   shift: [
     { min: -Infinity, max: 0, color: '#4fd6b4', label: 'Lula ztratil' },
-    { min: 0, max: 1, color: '#fff3e8', label: '+0 až 1 bod' },
-    { min: 1, max: 2, color: '#ffe0c7', label: '+1 až 2 body' },
-    { min: 2, max: 3, color: '#fda668', label: '+2 až 3 body' },
-    { min: 3, max: 5, color: '#ff7f2a', label: '+3 až 5 bodů' },
-    { min: 5, max: Infinity, color: '#cc5f00', label: '+5 bodů a víc' },
+    { min: 0, max: 1, color: '#fff7d9', label: '+0 až 1 bod' },
+    { min: 1, max: 2, color: '#fff0b3', label: '+1 až 2 body' },
+    { min: 2, max: 3, color: '#ffdc33', label: '+2 až 3 body' },
+    { min: 3, max: 5, color: '#efb704', label: '+3 až 5 bodů' },
+    { min: 5, max: Infinity, color: '#a47d03', label: '+5 bodů a víc' },
   ],
   turnout: [
     { min: -Infinity, max: -1, color: '#bcbcb0', label: 'klesla o víc než 1 bod' },
@@ -237,7 +237,7 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
               <div style={{ fontWeight: 700, fontSize: 14 }}>{focus[1]} <span style={{ fontWeight: 400, color: MUTED }}>· {focus[0]}</span></div>
               <div style={{ color: MUTED }}>{nf(focus[2])} voličů</div>
               <div style={{ marginTop: 4 }}>
-                <span style={{ color: '#f76800' }}>●</span> Lula <strong>{pf(focus[3])} %</strong> ({nf(focus[7])})<br />
+                <span style={{ color: '#efb704' }}>●</span> Lula <strong>{pf(focus[3])} %</strong> ({nf(focus[7])})<br />
                 <span style={{ color: '#0b6b4e' }}>●</span> Flávio Bolsonaro <strong>{pf(100 - focus[3])} %</strong> ({nf(focus[8])})
               </div>
               <div style={{ color: MUTED, marginTop: 2 }}>

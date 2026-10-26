@@ -12,8 +12,14 @@ import { GAINS, REGIONS } from './brazil2026ProcData';
 
 const SOURCE = 'oficiální výsledky [TSE](https://resultados.tse.jus.br/) po obcích, výpočet DataTimes.cz';
 const mil = (v: number, d = 1) => fmt(v / 1e6, d);
-const LULA_LIGHT = '#fda668';   // brandOrange.3
-const FLAVIO_LIGHT = '#4fd6b4'; // brandEmeraldMint.4
+// Barvy brazilské vlajky shodně s covery článku (Kateřina 26. 10.): Lula brandYellow, Flávio brandEmeraldMint.
+// Žlutá je na světlém pozadí málo kontrastní, proto plochy brandYellow.6 a texty tmavší brandYellow.9.
+const LULA = '#ffcf02';        // brandYellow.6
+const LULA_TEXT = '#a47d03';   // brandYellow.9
+const LULA_LIGHT = '#fff0b3';  // brandYellow.2
+const FLAVIO = '#12b886';      // brandEmeraldMint.6
+const FLAVIO_TEXT = '#0b6b4e'; // brandEmeraldMint.7
+const FLAVIO_LIGHT = '#9be8d4'; // brandEmeraldMint.2
 
 export function BrazilGainsChart() {
   const [ref, W] = useWidth<HTMLDivElement>();
@@ -23,8 +29,8 @@ export function BrazilGainsChart() {
   const MAX = 66e6;
   const x = (v: number) => L + (v / MAX) * (W - L - R);
   const rows = [
-    { n: 'Lula', r1: GAINS.lula_r1, r2: GAINS.lula_r2, col: C.lula, light: LULA_LIGHT },
-    { n: 'Flávio Bolsonaro', r1: GAINS.flavio_r1, r2: GAINS.flavio_r2, col: C.flavio, light: FLAVIO_LIGHT },
+    { n: 'Lula', r1: GAINS.lula_r1, r2: GAINS.lula_r2, col: LULA, text: LULA_TEXT, inner: C.ink, light: LULA_LIGHT },
+    { n: 'Flávio Bolsonaro', r1: GAINS.flavio_r1, r2: GAINS.flavio_r2, col: FLAVIO, text: FLAVIO_TEXT, inner: '#fff', light: FLAVIO_LIGHT },
   ];
   const H = T + rows.length * rowH + 26;
   const lab: React.CSSProperties = { fontSize: narrow ? 12 : 13, fill: C.ink, fontFamily: FONT };
@@ -51,10 +57,10 @@ export function BrazilGainsChart() {
                   přírůstek +{(d.r2 - d.r1).toLocaleString('cs-CZ')}</> });
                 return (
                   <g key={d.n}>
-                    <text x={narrow ? 0 : L - 10} y={narrow ? cy - 16 : cy + 4} textAnchor={narrow ? 'start' : 'end'} style={{ ...lab, fontWeight: 600, fill: d.col }}>{d.n}</text>
+                    <text x={narrow ? 0 : L - 10} y={narrow ? cy - 16 : cy + 4} textAnchor={narrow ? 'start' : 'end'} style={{ ...lab, fontWeight: 600, fill: d.text }}>{d.n}</text>
                     <rect x={x(0)} y={cy - 10} width={x(d.r1) - x(0)} height={20} fill={d.col} rx={2} />
                     <rect x={x(d.r1)} y={cy - 10} width={x(d.r2) - x(d.r1)} height={20} fill={d.light} rx={2} />
-                    <text x={x(d.r1) - 6} y={cy + 4} textAnchor="end" style={{ ...lab, fill: '#fff', fontWeight: 600 }}>{mil(d.r1)}</text>
+                    <text x={x(d.r1) - 6} y={cy + 4} textAnchor="end" style={{ ...lab, fill: d.inner, fontWeight: 600 }}>{mil(d.r1)}</text>
                     <text x={x(d.r2) + 6} y={cy + 4} style={{ ...lab, fontWeight: 600 }}>
                       {narrow ? `+${mil(d.r2 - d.r1)}` : `+${mil(d.r2 - d.r1)} → ${mil(d.r2)} mil.`}
                     </text>
@@ -99,8 +105,8 @@ export function BrazilRegionsChart() {
                   <path d="M0,0 L10,5 L0,10 z" fill={C.ink} />
                 </marker>
               </defs>
-              <text x={x(0) + 6} y={T - 12} style={{ ...lab, fontSize: 12, fontWeight: 600, fill: C.lula }}>náskok Luly →</text>
-              <text x={x(0) - 6} y={T - 12} textAnchor="end" style={{ ...lab, fontSize: 12, fontWeight: 600, fill: C.flavio }}>← náskok Flávia</text>
+              <text x={x(0) + 6} y={T - 12} style={{ ...lab, fontSize: 12, fontWeight: 600, fill: LULA_TEXT }}>náskok Luly →</text>
+              <text x={x(0) - 6} y={T - 12} textAnchor="end" style={{ ...lab, fontSize: 12, fontWeight: 600, fill: FLAVIO_TEXT }}>← náskok Flávia</text>
               {ticks.map((v) => (
                 <g key={v}>
                   <line x1={x(v)} x2={x(v)} y1={T - 4} y2={bottom} stroke={v === 0 ? C.ink : C.grid} strokeWidth={v === 0 ? 1.5 : 1} />
@@ -113,7 +119,7 @@ export function BrazilRegionsChart() {
                   Lula ze dvou kandidátů: {fmt(d.l1, 1)} % → <strong>{fmt(d.l2, 1)} %</strong><br />
                   rozdíl hlasů: {d.r1.toLocaleString('cs-CZ')} → <strong>{d.r2.toLocaleString('cs-CZ')}</strong><br />
                   účast {d.u > 0 ? '+' : '−'}{fmt(Math.abs(d.u), 1)} bodu</> });
-                const col = d.r2 >= 0 ? C.lula : C.flavio;
+                const col = d.r2 >= 0 ? LULA_TEXT : FLAVIO_TEXT;
                 return (
                   <g key={d.n}>
                     <text x={narrow ? 0 : L - 10} y={narrow ? cy - 16 : cy + 4} textAnchor={narrow ? 'start' : 'end'} style={{ ...lab, fontWeight: 600 }}>{d.n}</text>
