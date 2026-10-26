@@ -3,7 +3,11 @@ title: "V nejtěsnějším odhadu švédských voleb dělí bloky jediný mandá
 date: "2026-09-13"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Švédsko dnes od 8:00 do 20:00 volí nový Riksdag. Poslední průzkumy z 4.–11. září dávají červeno-zelenému bloku Magdaleny Anderssonové náskok 45,9–51,5 % proti 47,8–49,0 % vládní koalice Ulfa Kristerssona – v nejtěsnějším odhadu jde o rozdíl jediného mandátu, 175 ku 174. Poprvé v historii by přitom mohli vládní křesla získat nacionalističtí Švédští demokraté, pokud pravice zvítězí: v březnu na tom uzavřeli dohodu s Liberály, kteří sami jsou nad čtyřprocentním prahem jen s malou rezervou."
-coverImage: "images/main.png"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: []
 tags: ["Švédsko", "volby", "Riksdag", "Sweden Democrats", "Ulf Kristersson", "Magdalena Andersson", "Evropa", "krajní pravice"]
 promoted: 1

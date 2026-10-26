@@ -80,8 +80,9 @@ výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obráze
   - Zdrojová fotka může mít hlavu uříznutou už sama (Merz: temeno v horní řadě pixelů). Pak pomůže jen
     neořezaná fotka; nedomalovávat.
   - Štítek na světlé fotce: `kickPodklad: '#101432e6'`.
-  - Když se Kateřině líbí původní cover (Die Linke, kalkulačka „míří do obcí“), nepřepracovávat. Jen ho převést
-    do chybějících formátů stejným skriptem (`_cover_pipeline/cover.cjs`, `puvodni.cjs`).
+  - Když se Kateřině líbí původní cover (Die Linke), nepřepracovávat. Jen ho převést do chybějících formátů
+    stejným skriptem (`_cover_pipeline/cover.cjs`). Před převodem ověř, který cover myslí: u kalkulačky „míří
+    do obcí“ chtěla už hotovou verzi s mapou, ne původní logo.
 - *26. 10. 2026 – dva sousední články se stejným motivem (STOP s dlaní × STOP s rukama).* Než motiv navrhneš,
   podívej se na covery článků se stejnými tagy (zvlášť ty, které se ukážou v related boxu vedle sebe). Stejný
   nápad dvakrát v řadě karet působí jako duplikát. Starší článek o znásilnění dostal tečkovou slunečnici
