@@ -1,5 +1,23 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "_click_detail": {
+  "field": "jména",
+  "title": [
+   "prezident",
+   "obor"
+  ],
+  "rows": [
+   {
+    "field": "podíl",
+    "label": "Podíl (celé působení)",
+    "format": "pct"
+   },
+   {
+    "field": "počet",
+    "label": "Vyznamenání"
+   }
+  ]
+ },
  "title": {
   "text": "Klaus vyznamenával disidenty, Zeman podnikatele",
   "subtitle": "Podíl oblastí, za které lidé vyznamenání dostali, ze všech vyznamenání daného prezidenta, 1995–2025. Oblast určila redakce podle životopisu vyznamenaného."
@@ -14,7 +32,8 @@
     "podíl": 0.0971,
     "celkem": 515,
     "jména": "Alexander Hurný\tJohn M. D. Shalikashvili\tPavel Talla\nDavid Adámek\tJosef Chudoba\tPavel Špilka\nEugéne V. Faucher\tJosef Sedlák\tPetr Kozánek †\nFrantišek Stárek\tKamil Soldán\tPetr Křivka †\nGeorge A. Joulwan\tKarel Hůla\tPetr Pavel\nGuido Venturoni\tKarl Majcen\tPetr Valeš †\nHorst Pleiner\tKlaus Naumann\tPetr Voznica\nJan Princ\tLadislav Uher †\tPetr Zeman\nJaroslav Procházka\tLadislav Varga\tRadek Andrle\nJaroslav Šelong\tLuděk Zeman †\tRadek Interholc\nJean-Philippe Douin\tMilan Mučka\tRoman Čelanský\nJiří Hubáček\tMilan Nechvátal\tThomas Ray Wilson\nJiří Janda\tMiloslav Chejn\tVladimír Kubíček\nJiří Kolář\tMiroslav Karlec\tVladimír Sova\nJiří Lang\tMiroslav Štěpán\tVáclav Richter\nJiří Suda\tOldřich Židlík\tZdeněk Forejt\nJiří Tršo\tOndrej Páleník\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -23,7 +42,8 @@
     "podíl": 0.1903,
     "celkem": 515,
     "jména": "Adolf Řepa\tJan Paroulek\tLubomír Dvořák\nAlexander Gjurič †\tJan Roman Irving\tMarcel Ludikar\nAlois Eliáš †\tJan Wiener\tMichal Dluhy\nAlois Olšan\tJan Zelenka \"Hajský\" †\tMichal Kodriš †\nAnežka Schlattauerová\tJaroslav Kašpar-Pátý †\tMilan Píka\nAntonín Hampl †\tJaroslav Klemeš\tMilena Jesenská †\nAntonín Hasal †\tJaroslav Krátký †\tMiroslav Kolenatý\nAntonín Husník\tJaroslav Muzika\tMiroslav Kácha\nAntonín Mikuláš Číla †\tJaroslav Sochora\tMiroslav Liškutín\nAntonín Raiskub\tJaroslav Zelinka\tOldřich Skácel\nAntonín Vendl\tJindřich Macháček\tPetr Uruba\nBedřich Homola †\tJiří Flak\tPravomil L. Raichl\nBedřich Neumann †\tJiří Hartman\tRadomír Luža\nBohumil Borecký\tJiří Krbec\tRadovan Procházka\nBohumil Vazač\tJosef Bartík †\tRaimund Půda\nEliška Pilařová\tJosef Chundela\tRichard Glazar\nEmanuel Viktor Voska †\tJosef Duda †\tRobert Pavlík\nFelix Peřka\tJosef Fischer †\tRudolf Husa\nFilip Kazík\tJosef Fišera\tRudolf Macek\nFrancis James Auton\tJosef Hyhlík †\tSergej Vojcechovský †\nFrank Marlow †\tJosef Koukal\tVeleslav Wahl †\nFrantišek Gšventner\tJosef Palička\tViktor Trnavský\nFrantišek Král\tJosef Pohl †\tVilém Stanovský †\nFrantišek Peřina\tJosef Robotka †\tVladimír Garncarz\nFrantišek Skokan †\tJosef Slavík †\tVladimír Nedvěd\nFrantišek Slunečko †\tJosef Vychodil\tVladimír Soukup\nFrantišek Žák\tJozef Muránsky\tVojtěch Eichler\nGeorge S. Patton †\tJulián Slepecký\tVáclav Kratochvíl\nIrena Bernášková †\tKarel Jindřich Procházka\tZdeněk Škarvada\nJan Bret\tKarel Kuttelwascher †\tZdeněk Štich\nJan Doležal\tKarel Pavlík †\tČestmír Šikola\nJan Novák\tLadislav Rašín †\tŠtěpán Dohodil\nJan Opletal †\tLadislav Svoboda †\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -32,7 +52,8 @@
     "podíl": 0.0369,
     "celkem": 515,
     "jména": "Antonín Hřebík † (1996)\tMilton Cerny (2002)\nBettina Fehr (1995)\tNicholas G. Winton (1998)\nBruno Leuthold (2000)\tOlga Fierzová † (2000)\nBěla Gran Jensenová von Styber (1996)\tOlga Havlová † (1997)\nChanan Rozen (1998)\tPetr Bísek (1998)\nJeri Laber (2000)\tRadslav Kinský (2002)\nJosef Jelínek (1998)\tRobert Badinter (2001)\nJoseph Lane Kirkland † (2002)\tSimon Wiesenthal (1999)\nKarel Holomek (2002)\tŠimon Pánek (2002)\nMarie Christine Wolff Metternich (1995)\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -41,7 +62,8 @@
     "podíl": 0.0951,
     "celkem": 515,
     "jména": "Angelo Maria Ripellino †\tJan Peřina\tMiroslav Brdička\nAntonín Holý\tJaroslav Krejčí\tMiroslav Verner\nAntonín Měšťan\tJaroslav Kurzweil\tPeter Demetz\nAntonín Svoboda †\tJaroslav Mezník\tPetr Vopěnka\nDobroslav Líbal\tJaroslav Opat\tRadim Palouš\nDušan Holý\tJindřich Nečas\tRené Wellek\nEiichi Chino\tJosef Kratochvil †\tRoger Scruton\nErazim Kohák\tKarel Pichlík\tRudolf Vierhaus\nEric Stein\tKlaus Schaller\tRudolf Zahradník\nFerdinand Seibt\tMarie Brůčková\tViktor M. Fic\nFrantišek Šmahel\tMarkéta Goetz-Stankiewiczová\tVilém Prečan\nHans Dieter Zimmermann\tMichael Novak\tVlastimila Kladivová\nHans Lemberg\tMikuláš Lobkowicz\tVáclav Chytil †\nJacek Baluch\tMilada Blekastadová\tZdeněk Hruban\nJacques Rupnik\tMilan Machovec\tZdeněk Matějček\nJan Francis Tříska\tMilena Hübschmannová\t\nJan Křen\tMiloš Tomčík\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -50,7 +72,8 @@
     "podíl": 0.0544,
     "celkem": 515,
     "jména": "Braine z Wheatley (1995)\tKarel Jan Schwarzenberg (2002)\nCharles A. Vanik (1995)\tLadislav Feierabend † (1995)\nDagmar Burešová (2002)\tLuboš Dobrovský (2002)\nFrantišek Hála † (1995)\tMojmír Povolný (1995)\nHerman Huber (1995)\tOldřich Černý (1999)\nJan Viktor Mládek † (1995)\tPaul Hatry (1998)\nJaroslav Drábek † (1997)\tPeter W. Rodman (1998)\nJaroslav Musial (2000)\tPřemysl Janýr † (1999)\nJeremy D. Rosner (1998)\tRichard Belcredi (1998)\nJiří Dienstbier (2002)\tRichard C. Holbrooke (1998)\nJiří Horák (2000)\tVilém Brzorád † (1995)\nJosef Lux † (2000)\tVladimír Kabeš (1999)\nJosef Vavroušek † (2002)\tWolfgang Scheur (1995)\nJulian M. Niemczyk (1998)\tZdeněk Kessler (2002)",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -59,7 +82,8 @@
     "podíl": 0.1961,
     "celkem": 515,
     "jména": "Adolf Müller\tJan Špáta\tMarta Kubišová\nAdriena Šimotová\tJaroslav Ježek †\tMeda Mládková\nAnna Fárová\tJaroslav Kvapil †\tMikuláš Medek †\nArnošt Lustig\tJaroslava Adamová\tMilan Kundera\nBohumil Hrabal\tJiřina Hauková\tMilan Uhde\nCarmen Hegerová (Hana Hegerová)\tJiří Bělohlávek\tMiloš Forman\nCharles Mackerras\tJiří Hanzelka\tMiroslav Horníček\nClara Janés\tJiří Kovtun\tMiroslav Zikmund\nDagmar Hochová - Reinhardtová\tJiří Krejčík\tOlbram Zoubek\nEmil Filla †\tJiří Kuběna\tOtomar Krejča\nEwald Osers\tJiří Kylián\tPavel Juráček †\nFrantišek Halas †\tJiří Louda\tPavel Landovský\nFrantišek Langer †\tJiří Menzel\tPavel Šmok\nFrantišek Listopad\tJiří Stránský\tPetr Eben\nFrantišek Pavlíček\tJiří Suchý\tRadovan Lukavský\nFrantišek Tichý †\tJiří Voskovec †\tRainer Kreissl\nGyörgy Varga\tJosef Hiršal\tRio Preisner\nHana Ponická\tJosef Istler †\tRudolf Jílovský †\nIvan Blatný †\tJosef Koudelka\tRudolf Karel †\nIvan Diviš\tJosef Suk\tStella Zázvorková\nIvan Klíma\tJosef Topol\tTheodor Pištěk\nIvan M. Jelínek\tKarel Hubáček\tTomáš Kosta\nIvan Moravec\tKarel Husa\tViktor Fischl\nIvan Wernisch\tKarel Kryl †\tVlasta Chramostová\nJan Grossman †\tKarel Nepraš †\tVlastimil Brodský\nJan Hanuš\tKarel Poláček †\tVlastimil Koutecký\nJan Kačer\tKarel Čapek †\tVolfgang Jankovec †\nJan Koblasa\tKlaus Juncker\tVáclav Holub\nJan Lopatka †\tLadislav Smoljak\tVáclav Renč †\nJan Novák †\tLadislav Sutnar †\tVěra Chytilová\nJan Němec\tLenka Reinerová\tVěra Linhartová\nJan Procházka †\tLibor Pešek\tZdeněk Rotrekl\nJan Tříska\tLibuše Moníková\tZdeněk Svěrák\nJan Werich †\tLudvík Vaculík\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -68,7 +92,8 @@
     "podíl": 0.0214,
     "celkem": 515,
     "jména": "Barbara Coudenhove - Kalergi (2001)\tJosef Josten † (1995)\nBedřich Utitz (1998)\tLubor J. Zink (1995)\nJaromír Štětina (2000)\tPavel Tigrid (1995)\nJiří Loewy (2002)\tPetra Procházková (2000)\nJiří Pelikán (1998)\tVladimír Sís † (1998)\nJiří Ruml (2001)\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -77,7 +102,8 @@
     "podíl": 0.0641,
     "celkem": 515,
     "jména": "Alfréd Kocáb (1997)\tKarel Otčenášek (1995)\nAnton Otte (1996)\tKarel Pilík (2002)\nAntonín Alois Weber † (1995)\tKarel Vrána (2001)\nAntonín Huvar (1998)\tKarel-Albrecht Waldstein (1995)\nBernardin kardinál Gantin (1996)\tKarol Efraim Sidon (2002)\nBohumil Vít Tajovský (1996)\tMarie Akvinela Loskotová de Notre Dame (2000)\nDominik Jaroslav Duka (2001)\tMilan Balabán (2002)\nDominik Pecka † (1996)\tMiloslav kardinál Vlk (2002)\nFrantišek Lízna (2001)\tMiloš Bič (1997)\nGorazd † (1997)\tOtto Mádr (1997)\nJakub S. Trojan (1998)\tPavel Kučera (2000)\nJan Milíč Lochman (1998)\tPavel Smetana (2002)\nJoachim kardinál Meisner (1998)\tRichard Feder † (2002)\nJosef B. Souček † (2000)\tTomáš Špidlík (1998)\nJosef Cukr (1999)\tVáclav Dvořák (2002)\nJosef Jílek † (1995)\tVáclav Malý (1998)\nJosef Karel Matocha † (1999)\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -86,7 +112,8 @@
     "podíl": 0.0718,
     "celkem": 515,
     "jména": "Albína Wiesenbergerová (2001)\tKlement Lukeš (2000)\nAnna Šabatová (2002)\tLadislav Hejdánek (1995)\nBlahoslav Hrubý † (1996)\tLadislav Lis † (2002)\nBoris Kovaříček † (2000)\tLibuše Šilhánová (2001)\nDagmar Skálová (1997)\tLuboš Hruška (1997)\nDana Němcová (1998)\tMiloš Hájek (2001)\nFrantišek Janouch (2001)\tMiloš Rejchrt (2001)\nJan Litomiský (2002)\tOtakar Rambousek (1999)\nJaromír Šavrda † (1998)\tOtta Bednářová (1997)\nJiřina Šiklová (1999)\tPetr Uhl (1998)\nJiří Gruntorád (2002)\tRudolf Battěk (1997)\nJiří Němec † (2002)\tRyszard Siwiec † (2001)\nJosef Adámek (1999)\tStanislav Stránský (2000)\nJosef Hasil (2001)\tVladimír Struska † (2001)\nJosef Pejskar (1995)\tVlasta Mařáková - Charvátová (2000)\nJosef Schwarz Červinka (2002)\tVáclav Benda (1998)\nKarel Hrubý (1995)\tVáclav Vaško (1998)\nKarel Kukal (2002)\tZdena Mašínová † (1998)\nKarel Pecka † (1997)\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -95,7 +122,8 @@
     "podíl": 0.0155,
     "celkem": 515,
     "jména": "Augustin Bubník (2002)\tJan Železný (2001)\nDominik Hašek (1998)\tJana Novotná (1998)\nEmil Zátopek (1998)\tMartina Navrátilová (1998)\nIvan Hlinka (1999)\tVěra Čáslavská (1995)",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -104,7 +132,8 @@
     "podíl": 0.0485,
     "celkem": 515,
     "jména": "Alžběta II. (1996)\tJuscelino Kubitschek de Oliveira † (1996)\nBruno Kreisky † (2000)\tLech Walesa (1999)\nCarlo Azeglio Ciampi (2001)\tMadeleine K. Albrightová (1997)\nEzer Weizman (1996)\tMargaret Thatcherová (1999)\nFrancois Mitterrand † (1999)\tMax van der Stoel (1996)\nGeorge Bush (1999)\tMichail Sergejevič Gorbačov (1999)\nHelmut Kohl (1999)\tOlof Joachim Palme † (2000)\nHenry A. Kissinger (1998)\tRonald Reagan (1999)\nJacques Chirac (1997)\tRudolf Kirchschläger (1996)\nJavier Solana (1998)\tWilliam Jefferson Clinton (1998)\nJeanne J. Kirkpatrick (1998)\tWilly Brandt † (2000)\nJohannes Rau (2000)\tZbigniew Brzezinski (1998)\nJuan Carlos I. (1995)\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -113,7 +142,8 @@
     "podíl": 0.0194,
     "celkem": 515,
     "jména": "Branislav Geryk (1998)\tJosef Koutecký (1996)\nJaroslav Blahoš (2001)\tJosef Švejcar † (1997)\nJaroslav Skála (2002)\tMadelaine Cuendet (1998)\nJiří Malý † (2002)\tMarie Svatošová (2002)\nJiří Syllaba † (1998)\tVáclav Vojta † (2000)",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -122,7 +152,8 @@
     "podíl": 0.0718,
     "celkem": 515,
     "jména": "Albert Černý (2002)\tJosef Lukeš † (1997)\nAmbér Bousoglou (2001)\tJürgen Braunschweiger (1999)\nAntonín Remeš † (1996)\tLuboš Ogoun (2002)\nBohuslav Horáček † (2002)\tMarie Dubinová (1998)\nEduarda Ottová (2002)\tMilena Novotná (1997)\nEric Spiess (2001)\tMiroslav Ciboch (2001)\nEva Borková (1999)\tOldřich Holubář (2001)\nFrantišek Antonín Váňa † (1997)\tOto Stehlík (2002)\nFrantišek Meloun † (1997)\tPeter Charles Schultz (2002)\nJakub Čermín (1996)\tSlavomír Klaban (1996)\nJan Waldauf (2001)\tSoňa Čechová (2002)\nJarmila Bělíková (2001)\tStanislav Drobný (1998)\nJaromír Vrba † (1997)\tVojtěch Dundr † (2001)\nJaroslav Němec † (1998)\tVojtěch Vít (1999)\nJaroslav Strnad (1998)\tVáclav Hyvnar (1998)\nJaroslava Havlová-Boni † (1999)\tZdeněk Mastník (1998)\nJindřich Popelka † (1997)\tZdeňka Pokorná (2001)\nJindřich Vaško † (2001)\tZora Frkáňová (1998)\nJiří G. Corn † (1996)\t",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -131,7 +162,8 @@
     "podíl": 0.0155,
     "celkem": 515,
     "jména": "Jakub Materne (2001)\tRudolph Giuliani (2002)\nJan Mervart (2002)\tTomáš Bayer (2000)\nJaroslav Český (2002)\tVincenc Koutník (2002)\nMilan Vítek (2002)\tVlastimil Hrbek (2000)",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Havel",
@@ -140,7 +172,8 @@
     "podíl": 0.0019,
     "celkem": 515,
     "jména": "Jindřich Waldes † (2000)",
-    "p": "Havel"
+    "p": "Havel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -149,7 +182,8 @@
     "podíl": 0.0266,
     "celkem": 263,
     "jména": "Boleslav Staněk † (2009)\tJaroslav Novák (2003)\nDavid Sukač † (2011)\tMichal Velíšek † (2005)\nDominique Magnant (2003)\tRudolf Zvolánek (2012)\nGeorges Vergoni † (2003)\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -158,7 +192,8 @@
     "podíl": 0.0266,
     "celkem": 263,
     "jména": "Marek Král (2007)\tRoman Macharáček (2003)\nMarián Šovčík (2007)\tTomáš Krampla (2008)\nPetr Králík (2008)\tZdeněk Lhota (2008)\nRoman Hlinovský (2010)\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -167,7 +202,8 @@
     "podíl": 0.2433,
     "celkem": 263,
     "jména": "Adolf Born\tJiří Anderle\tMartin Huba\nAlena Šrámková\tJiří Horčička †\tMilan Knížák\nBoris Rösner †\tJiří Kodet\tMilan Lasica\nBřetislav Pojar\tJiří Kout\tMiroslav Ondříček\nEmil Ludvík\tJiří Srnec\tOta Filip\nEmil Viklický\tJiří Stivín\tOtakar Vávra\nEmília Vášáryová\tJiří Šlitr †\tPavel Brázda\nEva Pilarová\tJosef Henke\tPeter Dvorský\nEva Zaoralová\tJosef Jíra\tStanislav Kolíbal\nGabriela Beňačková\tJosef Liesler\tVladimír Jiránek\nHana Maciuchová\tJosef Somr\tVladimír Renčín\nHelga Hošková – Weissová\tJúlius Satinský †\tVladimír Suchánek\nIlja Hurník\tKarel Adolf Branald †\tVladimír Válek\nIva Janžurová\tKarel Gott\tVlasta Hammerová Průchová\nIvan Ruller\tKarel Kachyňa †\tVáclav Boštík\nIvan Steiger\tKarel Šiktanc\tVáclav Hudeček\nJan Klusák\tLadislav Chudík\tVáclav Snítil\nJana Brejchová\tLadislav Sitenský\tZdeněk Miler\nJaroslav Šerých\tLudvík Kundera\tZdeněk Mácal\nJaroslava Brychtová\tLászlo Szigeti\tZuzana Kalabisová - Růžičková\nJindřich Štreit\tMarek Kopelent\t\nJiřina Jirásková\tMartin Hilský\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -176,7 +212,8 @@
     "podíl": 0.0494,
     "celkem": 263,
     "jména": "Alena Steindlerová-Vrzáňová (2004)\tJosef Masopust (2006)\nAntonín Panenka (2008)\tJosef Musil (2009)\nBarbora Špotáková (2012)\tJosef Váňa (2009)\nDana Zátopková (2003)\tKarel Havelka (2008)\nIvo Viktor (2012)\tKateřina Neumannová (2006)\nJaromír Jágr (2010)\tRoman Šebrle (2004)\nJiří Raška (2011)\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -185,7 +222,8 @@
     "podíl": 0.038,
     "celkem": 263,
     "jména": "Aleksander Kwasniewsky (2004)\tMary Robinsonová (2003)\nAntje Vollmerová (2003)\tRamiro Cibrian Uzal (2003)\nErhard Busek (2003)\tRichard von Weizsäcker (2003)\nHeinz Fischer (2009)\tWilly Spühler † (2003)\nLech Aleksander Kaczyński † (2010)\tÁrpád Göncz (2003)",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -194,7 +232,8 @@
     "podíl": 0.1407,
     "celkem": 263,
     "jména": "Blanka Wichterlová (2010)\tMiroslav Fiedler (2007)\nDagmar Čapková (2007)\tMiroslav Kutílek (2010)\nFrantišek Daneš (2010)\tMiroslav Smotlacha (2005)\nFrantišek Vencovský (2003)\tMiroslav Šťastný (2012)\nGabriela Basařová (2012)\tMojmír Petráň (2005)\nHelena Illnerová (2005)\tOldřich Jirsák (2008)\nIvan Šetlík (2003)\tPetr Hájek (2006)\nJaroslav Koutecký † (2005)\tPetr Mandl (2009)\nJaroslav Nešetřil (2010)\tPetr Pokorný (2005)\nJiří Drahoš (2012)\tPetr Wittlich (2012)\nJiří Krupička (2009)\tTimothy Garton Ash (2003)\nJiří Kukla (2011)\tVilém Kraus (2004)\nJosef Petráň (2008)\tVladimír Veselý (2006)\nKarel Kaplan (2008)\tVáclav Havlíček (2012)\nKarel Raška (2010)\tVáclav Hořejší (2004)\nKvětuše Hyršlová (2009)\tVáclav Pačes (2008)\nLadislav Tondl (2004)\tZdeněk Ceplecha (2009)\nLumír Sommer (2012)\tĽubomír Lipták (2003)\nMilan Sobotka (2004)\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -203,7 +242,8 @@
     "podíl": 0.057,
     "celkem": 263,
     "jména": "Dagmar Lieblová (2011)\tLuisa Abrahams (2003)\nFranz Olbert (2005)\tMarta Kottová (2008)\nHerbert Werner (2003)\tMilan Horvát (2006)\nJan Kruliš-Randa (2011)\tMilan Kantor (2007)\nJohanna von Herzogenbergová (2003)\tPaul Millar (2005)\nJosefína Napravilová (2009)\tVladimír Bystrov (2007)\nKarel Brožík (2003)\tZdeněk Sternberg (2005)\nLena May Jegerová (2003)\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -211,8 +251,9 @@
     "počet": 38,
     "podíl": 0.1445,
     "celkem": 263,
-    "jména": "Adam Michnik (2003)\tJosef Lesák (2008)\nAnna Honová (2007)\tJosef Vlček (2010)\nAnna Magdalena Schwarzová (2011)\tJosef Zlámal (2004)\nAntonín Sum (2003)\tJulie Hrušková (2010)\nArnošt Kubík (2004)\tKarel Páral (2011)\nDrahomíra Strouhalová (2012)\tLadislav Suchomel (2011)\nElena Bonnerová (2003)\tLeopold Färber (2012)\nFrantišek Suchý (2011)\tMarie Škarecká (2011)\nFrantišek Wiendl (2008)\tMatylda Čiháková (2006)\nFrantišek Zahrádka (2007)\tMiroslav Kusý (2003)\nFrantišek Šedivý (2009)\tNaděžda Kavalírová (2006)\nJUDr. Josef Plocek (2012)\tOtakar Vinklář (2004)\nJacek Kuroň (2003)\tPavel Žák (2009)\nJakub Blacký (2008)\tRNDr. Hubert Procházka, CSc. (2012)\nJan Haluza (2010)\tSergej Adamovič Kovaljov (2003)\nJan Janků (2010)\tTomáš Sedláček (2004)\nJan Šrámek (2007)\tVladimír Lopaťuk (2011)\nJaroslav Grosman (2008)\tZdena Tominová (2003)\nJiří Formánek (2007)\tpplk. v. v. Jaromír Jarmara (2012)",
-    "p": "Klaus"
+    "jména": "Adam Michnik (2003)\tJiří Formánek (2007)\nAnna Honová (2007)\tJosef Lesák (2008)\nAnna Magdalena Schwarzová (2011)\tJosef Plocek (2012)\nAntonín Sum (2003)\tJosef Vlček (2010)\nArnošt Kubík (2004)\tJosef Zlámal (2004)\nDrahomíra Strouhalová (2012)\tJulie Hrušková (2010)\nElena Bonnerová (2003)\tKarel Páral (2011)\nFrantišek Suchý (2011)\tLadislav Suchomel (2011)\nFrantišek Wiendl (2008)\tLeopold Färber (2012)\nFrantišek Zahrádka (2007)\tMarie Škarecká (2011)\nFrantišek Šedivý (2009)\tMatylda Čiháková (2006)\nHubert Procházka (2012)\tMiroslav Kusý (2003)\nJacek Kuroň (2003)\tNaděžda Kavalírová (2006)\nJakub Blacký (2008)\tOtakar Vinklář (2004)\nJan Haluza (2010)\tPavel Žák (2009)\nJan Janků (2010)\tSergej Adamovič Kovaljov (2003)\nJan Šrámek (2007)\tTomáš Sedláček (2004)\nJaromír Jarmara (2012)\tVladimír Lopaťuk (2011)\nJaroslav Grosman (2008)\tZdena Tominová (2003)",
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -221,7 +262,8 @@
     "podíl": 0.019,
     "celkem": 263,
     "jména": "Blažena a Lubomír Rosnerovi (2005)\nLenka Janotová (2003)\nMiloslav Nerad (2009)\nWolfgang Bandion (2003)\nZdeněk Kovařík (2009)",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -230,7 +272,8 @@
     "podíl": 0.0684,
     "celkem": 263,
     "jména": "Ivo Hána (2008)\tPavel Kolář (2007)\nJan Černý (2011)\tPetr Zvolský (2005)\nJindřiška Pavlicová (2008)\tRadana Königová (2004)\nJiří Raboch (2012)\tTomáš Klíma (2007)\nJiří Vorlíček (2007)\tVladimír Bartoš (2009)\nLadislav Bařinka (2012)\tVladimír Koza † (2012)\nMichael Aschermann (2009)\tVladimír Vonka (2005)\nMilan Šamánek (2010)\tVratislav Schreiber (2003)\nPavel Klener (2003)\tVáclav Smetana (2009)",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -239,7 +282,8 @@
     "podíl": 0.0228,
     "celkem": 263,
     "jména": "Alexander Dubček † (2003)\nJaroslav Šedivý (2005)\nJosef Kocourek † (2004)\nLubomír Voleník † (2003)\nVáclav Havel (2003)\nVáclav Havel (2003)",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -248,7 +292,8 @@
     "podíl": 0.1027,
     "celkem": 263,
     "jména": "Alexander Beer (2012)\tJosef Hercz (2005)\nAlois Šiška † (2003)\tMarie Ljalková-Lastovecká (2010)\nAnděla Dvořáková (2009)\tMikuláš Končický (2011)\nAnton Petrák (2003)\tMiroslav Štandera (2006)\nAntonín Špaček (2006)\tOtakar Černý † (2009)\nBohuslav Bubník (2008)\tRudolf Hrubec † (2007)\nEmil Boček (2010)\tRudolf Pernický (2005)\nFrantišek Fajtl (2004)\tRudolf Severin Krzák † (2004)\nImrich Gablech (2009)\tStanislav Hlučka (2005)\nJan Plovajko (2010)\tStanislav Hnělička (2007)\nJan Velík (2011)\tVasil Korol (2012)\nJiří Zenáhlík (2008)\tVáclav Djačuk (2011)\nJosef Bryks † (2006)\tVáclav Kojzar † (2006)\nJosef Buršík † (2005)\t",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -256,8 +301,9 @@
     "počet": 12,
     "podíl": 0.0456,
     "celkem": 263,
-    "jména": "František Fráňa (2010)\tLudvík Armbruster (2008)\nJan Graubner (2008)\tMarie Goretti Boltnarová (2007)\nJan Zemánek (2007)\tMartin František Vích (2005)\nJaroslav Škarvada (2003)\tMichael Josef Pojezdný (2006)\nJosef Veselý (2009)\tMons. Karel Jaroslav Fořt (2012)\nKarel Skalický (2006)\tPetr Piťha (2011)",
-    "p": "Klaus"
+    "jména": "František Fráňa (2010)\tKarel Skalický (2006)\nJan Graubner (2008)\tLudvík Armbruster (2008)\nJan Zemánek (2007)\tMarie Goretti Boltnarová (2007)\nJaroslav Škarvada (2003)\tMartin František Vích (2005)\nJosef Veselý (2009)\tMichael Josef Pojezdný (2006)\nKarel Jaroslav Fořt (2012)\tPetr Piťha (2011)",
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Václav Klaus",
@@ -266,7 +312,8 @@
     "podíl": 0.0152,
     "celkem": 263,
     "jména": "Jan Petrof (2008)\nJiří Michal (2010)\nJosef Podzimek (2008)\nZbyněk Frolík (2011)",
-    "p": "Klaus"
+    "p": "Klaus",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -275,7 +322,8 @@
     "podíl": 0.1881,
     "celkem": 420,
     "jména": "Alena Štěpánková Veselá\tJiřina Bohdalová\tMartin Hrbáč\nAntonín Slováček Felix Slováček\tJiří Krampol\tMichal David\nDaniel Hůlka\tJiří Suchý\tMichal Lukeš\nEmir Kusturica\tJiří Žáček\tMilan Fiľo\nEva Urbanová\tJosef Dvořák\tMiloš Štědroň\nFilip Renč\tJosef Zíma\tMiroslav Zikmund\nFrantišek Filip †\tJosef Černý\tMiroslav Žbirka †\nFrantišek Janula †\tJosef Šmukař\tOndřej Hejma\nFrantišek Čech\tJože Plečnik †\tPavel Trávníček\nGustav Oplustil †\tJuraj Jakubisko\tPavel Šporcl\nHana Hegerová\tJuraj Kukura\tPavel Žák\nHana Zagorová †\tKamil Lhoták †\tPetr Hrdlička\nHana Zaňáková Lucie Bílá\tKarel Fiala †\tRobert Sedláček\nHelena Vondráčková\tKarel Gott †\tSoňa Červená\nIvan Sedláček\tKarel Kryl\tVadim Petrov\nIvan Vyskočil\tKarel Srp\tVladimír Komárek †\nJan Kačer\tKarel Sýs\tVlastimil Vondruška\nJan Saudek\tKarel Vágner\tVáclav Fanta\nJan Skopeček\tKarel Čáslavský †\tVáclav Neckář\nJan Slabák\tLadislav Mňačko †\tXu Weizhu\nJarmila Schmidtová Šuláková\tLadislav Štaidl\tYvetta Simonová\nJaromír Nohavica\tLenka Procházková\tZdeněk Mahler\nJaroslav Foglar †\tLibuše Šafránková\tZdeněk Souček\nJehuda Bacon\tLubomír Brabec\tZdeněk Troška\nJindřich Goetz †\tLubomír Lipský\tŠtefan Margita\nJitka Frantová Pelikánová\tLuděk Sobota\t\nJiřina Bohdalová\tMarie Uchytilová-Kučová †\t",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -284,7 +332,8 @@
     "podíl": 0.1048,
     "celkem": 420,
     "jména": "Armin Delong\tJiří Jelínek\tPetr Robejšek\nDana Drábová\tJiří Kotyk\tPetr Čornej\nEduard Stehlík\tJiří Mareček\tRobert Kvaček\nErazim Kohák\tJiří Rajlich\tStanislav Štýs\nEva Syková\tJudita Štouračová\tTomáš Cihlář\nFrank Joseph Malina †\tKarel Kolomazník\tVladimír Mařík\nHelena Haškovcová\tKarel Kosík †\tVojtěch Šustek\nIvanka Kohoutová\tMichal Burian\tVáclav Bělohradský\nJan Keller\tMichal Macháček\tVáclav Pavlíček\nJan Kříž\tMichal Majtán\tVáclav Petříček\nJan Mašát\tMichal Mejstřík †\tVáclav Větvička\nJan Procházka\tMilan Zelený\tVěra Olivová\nJaroslav Pollert\tMiloš Michlovský\tZdeněk Klanica †\nJaroslav Čvančara\tPavel Budinský\tZdeněk Zbořil\nJaroslav Šesták\tPetr Moos\t",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -293,7 +342,8 @@
     "podíl": 0.0786,
     "celkem": 420,
     "jména": "Carl Horst Hahn (2014)\tLeticie Vránová - Dytrychová (2014)\nDalibor Dědek (2015)\tLubomír Stoklásek (2017)\nFrantišek Hezoučký (2020)\tLudvík Kalma † (2014)\nFrantišek Piškanin (2016)\tLudvík Karl (2015)\nFrantišek Čuba (2013)\tMilan Teplý (2015)\nGevorg Avetisjan (2021)\tMiroslav Toman (2015)\nIvana Trumpová † (2022)\tOldřich Lichtenberg (2022)\nJan Antonín Baťa † (2019)\tPavel Smutný (2019)\nJan Rýdl (2020)\tPavol Krúpa (2018)\nJan Struž (2019)\tPetr Chmela (2016)\nJan Světlík (2013)\tPetr Kellner † (2021)\nJaroslav Strnad (2018)\tRudolf Ovčaří (2019)\nJaroslav Třešňák (2022)\tViliam Sivek (2016)\nJiří Boček (2016)\tVladimír Dohnal (2020)\nJiří Hlavatý (2015)\tVladimír Plašil (2019)\nJosef Mandík † (2016)\tŠtěpán Popovič (2016)\nJúlius Binder (2015)\t",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -302,7 +352,8 @@
     "podíl": 0.0667,
     "celkem": 420,
     "jména": "Eliška Junková - Khásová † (2019)\tKarel Loprais (2017)\nEster Ledecká (2018)\tLibor Podmol (2019)\nFrantišek Šťastný † (2013)\tLukáš Krpálek (2021)\nHana Moučková (2019)\tMartina Sáblíková (2017)\nHelena Fibingerová (2015)\tMiroslav Jansta (2022)\nHelena Suková (2018)\tMiroslav Černošek (2021)\nIvan Lendl (2022)\tPavel Nedvěd (2015)\nJan Kůrka (2013)\tPavel Vršecký (2022)\nJarmila Kratochvílová (2013)\tPetr Čech (2018)\nJaromír Jágr (2019)\tPetra Kvitová (2018)\nJaroslav Falta (2020)\tRadek Štěpánek (2018)\nJiří Holík (2022)\tRichard Konkolski (2013)\nJiří Vícha † (2013)\tVáclav Nedomanský (2020)\nKarel Brückner (2020)\tVěra Růžičková (2016)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -311,7 +362,8 @@
     "podíl": 0.0762,
     "celkem": 420,
     "jména": "Antonín Doležal (2019)\tLuboš Petruželka (2019)\nBohdan Pomahač (2015)\tMarie Svatošová (2015)\nBoris Šťastný (2017)\tMartin Filipec (2018)\nBoris Šťastný (2022)\tMiloslav Kalaš (2022)\nDanuše Táborská (2015)\tMiloš Pešek (2018)\nEva Kubala Havrdová (2022)\tMiloš Velemínský (2018)\nJan Betka (2022)\tMiroslav Zavoral (2022)\nJan Dvořáček (2013)\tPavel Dungl (2014)\nJana Březinová (2020)\tPavel Pafko (2013)\nJaroslav Feyereisl (2016)\tPavel Stodůlka (2022)\nJaroslav Madunický (2019)\tPavel Šlampa (2022)\nJaroslav Malý (2022)\tRadim Uzel (2020)\nJaroslav Matýs (2020)\tRajko Doleček † (2018)\nJaroslav Rybka (2015)\tRoman Prymula (2020)\nJosef Podstata (2019)\tSoňa Nevšímalová (2017)\nKarel Raška † (2021)\tVladislav Třeška (2022)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -319,8 +371,9 @@
     "počet": 27,
     "podíl": 0.0643,
     "celkem": 420,
-    "jména": "Antonín Kalina † (2014)\tMarie Vodičková (2014)\nCharles Craine † (2017)\tMichaela Vidláková (2022)\nEduard Harant (2014)\tMilan Pernica (2019)\nEliška Hašková - Coolidge (2017)\tMilena Černá † (2022)\nEva Erbenová (2020)\tMiroslav Wajsar (2017)\nFrantišek Pošta † (2022)\tNicholas Winton (2014)\nGeorge Alois Novak (2014)\tPetr Marek (2022)\nHanuš Holzer † (2016)\tSvětlana Alexejevna Gannuškina (2017)\nJaromír Šlápota (2016)\tTan Trinh (2020)\nJaroslav Povšík (2016)\tVáclav Krása (2021)\nJaroslav Vodička (2013)\tVěra Doušová (2022)\nJuliána Ludmila Zatloukalová-Coufalová † (2022)\tZdeněk Duběnka (2014)\nKarel Hanzl (2021)\tpplk. Jan Jelínek † (2019)\nLudvík Hess (2015)\t",
-    "p": "Zeman"
+    "jména": "Antonín Kalina † (2014)\tLudvík Hess (2015)\nCharles Craine † (2017)\tMarie Vodičková (2014)\nEduard Harant (2014)\tMichaela Vidláková (2022)\nEliška Hašková - Coolidge (2017)\tMilan Pernica (2019)\nEva Erbenová (2020)\tMilena Černá † (2022)\nFrantišek Pošta † (2022)\tMiroslav Wajsar (2017)\nGeorge Alois Novak (2014)\tNicholas Winton (2014)\nHanuš Holzer † (2016)\tPetr Marek (2022)\nJan Jelínek † (2019)\tSvětlana Alexejevna Gannuškina (2017)\nJaromír Šlápota (2016)\tTan Trinh (2020)\nJaroslav Povšík (2016)\tVáclav Krása (2021)\nJaroslav Vodička (2013)\tVěra Doušová (2022)\nJuliána Ludmila Zatloukalová-Coufalová † (2022)\tZdeněk Duběnka (2014)\nKarel Hanzl (2021)\t",
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -329,7 +382,8 @@
     "podíl": 0.0286,
     "celkem": 420,
     "jména": "Antonín Jaroslav Liehm (2015)\tKarel Weirich † (2015)\nErik Best (2018)\tMilan Syruček (2018)\nJan Petránek (2015)\tPavel Foltán (2021)\nJan Schneider (2019)\tPetr Martan (2019)\nKamila Moučková (2013)\tPetr Nováček (2020)\nKarel Lánský (2018)\tPetr Žantovský (2017)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -338,7 +392,8 @@
     "podíl": 0.0595,
     "celkem": 420,
     "jména": "Alena Vitásková (2018)\tJosef Kalbáč (2019)\nAntonín Švehla † (2018)\tLuděk Pik † (2016)\nBožena Fuková (2014)\tMiloslav Kala (2019)\nEduard Janota † (2015)\tMiroslav Grégr (2013)\nEmil Dračka (2022)\tPavel Dostál † (2015)\nEva Filipi (2016)\tPetr Mlsna (2022)\nFrantišek Kriegel † (2015)\tRobert Klein † (2021)\nJan Fencl (2018)\tTomáš Jirsa (2022)\nJana Lorencová (2018)\tValtr Komárek † (2016)\nJiří Baloun (2021)\tVladimír Bílek (2022)\nJiří Běhounek (2020)\tVáclav Klaus (2019)\nJiří Mánek (2015)\tZdeněk Jičínský (2014)\nJiří Ošecký † (2020)\t",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -347,7 +402,8 @@
     "podíl": 0.1357,
     "celkem": 420,
     "jména": "Alexander Hess †\tJan Černý †\tKarel Janoušek †\nAlois Dubec\tJarmila Halbrštatová\tKarel Kněz †\nAnděla Haida (roz. Beníčková)\tJaroslav Klemeš\tKarel Kutlvašr †\nAntonín Šubrt †\tJaroslav Klíma †\tKarel Kuttelwascher †\nArnošt Polák\tJaroslav Selner †\tKarel Lukas †\nBedřich Koula †\tJohn Pemberton\tKurt Taussig †\nBohuslav Ečer †\tJosef Adamec †\tMarek Frauwirth †\nBoris Ivanovič Zvegincev\tJosef Balabán †\tMarie Michajlovna Rochlina\nBožena Ivanová\tJosef Bílý †\tMiloslav Masopust\nEmil Boček\tJosef František †\tPaul Rausnitz\nEmil Šneberg\tJosef Hubáček †\tPavel Vranský\nFrantišek Chábera †\tJosef Koukal †\tPetr Beck\nFrantišek Skorkovský †\tJosef Matoušek †\tRudolf Čapek\nHeliodor Píka †\tJosef Ocelka †\tStanislav Čeček †\nIvan Oto Schwarz\tJosef Serinek †\tTomáš Houška †\nJan Gajdoš †\tJosef Sousedík †\tVladimir Ivanovič Dymkov\nJan Horal †\tJosef Stehlík †\tVojtěch Boris Luža †\nJan Přikryl †\tJosef Vladimír Mašín st. †\tVáclav Morávek †\nJan Weinert †\tKarel Husárek †\tVáclav Šaffránek †",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -356,7 +412,8 @@
     "podíl": 0.0048,
     "celkem": 420,
     "jména": "Natalja Jevgenjevna Gorbaněvská † (2014)\nPavel Wonka † (2013)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -365,7 +422,8 @@
     "podíl": 0.0643,
     "celkem": 420,
     "jména": "Abdullah II. bin Al Hussein (2015)\tHelmut Zilk † (2019)\nAdam Kwiatkowský (2016)\tIvan Gašparovič (2013)\nAleksandar Vučić (2021)\tJoachim Gauck (2014)\nAlfred Duff Cooper † (2021)\tKatarzyna Kacperczyková (2016)\nAndrzej Dera (2016)\tKrzysztof Szczerski (2016)\nAndrzej Duda (2016)\tMaria Böhmer (2014)\nBorut Pahor (2017)\tMichael Häupl (2017)\nDavid Gill (2014)\tMichaela Küchler (2014)\nDetlef Lingemann (2014)\tPeter Weiss (2020)\nFerdinand Trauttmansdorff (2016)\tRobert Fico (2014)\nFranz Vranitzký (2014)\tRudolf Schuster (2019)\nGerhard Fritz Kurt Schröder (2017)\tVolodymyr Oleksandrovyč Zelenskyj (2022)\nGrażyna Bernatowicz (2016)\tWinston Churchill † (2014)\nGünter Verheugen (2016)\t",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -374,7 +432,8 @@
     "podíl": 0.069,
     "celkem": 420,
     "jména": "Aleš Knížek (2015)\tMartin Marcin † (2018)\nAleš Weiter (2017)\tMartin Vondrášek (2020)\nDaniel Miklós (2020)\tMichaela Tichá † (2021)\nDavid Beneš † (2014)\tMilan Maxim (2021)\nIvo Klusák † (2014)\tPatrik Štěpánek † (2018)\nJan Kaše (2022)\tPetr Matouš (2022)\nJan Odermatt † (2017)\tPetr Šnajdárek (2020)\nJan Šenkýř † (2014)\tTomáš Procházka † (2019)\nJaroslav Lieskovan † (2014)\tTomáš Vlasák (2022)\nJaroslav Mevald (2014)\tVladimír Vlček (2022)\nKamil Beneš † (2018)\tVladimír Šupa (2020)\nKarel Blahna (2021)\tVáclav Haase † (2017)\nKarel Pezl (2017)\tVáclav Klemák (2022)\nLibor Ligač † (2014)\tZdeňek Poul (2021)\nLudvík Krejčí † (2017)\t",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -383,7 +442,8 @@
     "podíl": 0.019,
     "celkem": 420,
     "jména": "Angelika Ivana Pintířová (2022)\tJosef Toufar † (2014)\nDominik kardinál Duka OP (2016)\tJosef Štemberka † (2014)\nFrantišek Radkovský (2015)\tJustin Jan Berka (2022)\nGiuseppe Leanza (2018)\tMiloslav Fiala (2022)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -392,7 +452,8 @@
     "podíl": 0.0333,
     "celkem": 420,
     "jména": "Darina Nešporová (2018)\tMarek Klimus (2022)\nDavid Michajlak (2019)\tMarek Vrba † (2022)\nJan Dvořák † (2023)\tMartin Semecký (2022)\nJan Košík (2022)\tMiroslav Fenik † (2022)\nJaroslav Bolfík (2022)\tPetr Lang † (2020)\nJaroslav Fila † (2022)\tPetr Vejvoda † (2015)\nJiří Nesázal (2016)\tTomáš Neškodný (2022)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Miloš Zeman",
@@ -401,7 +462,8 @@
     "podíl": 0.0071,
     "celkem": 420,
     "jména": "Jakub Vágner (2022)\nValerie Fjodorovna Vasiljevová (2017)\nVladimír Remek (2021)",
-    "p": "Zeman"
+    "p": "Zeman",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -410,7 +472,8 @@
     "podíl": 0.092,
     "celkem": 174,
     "jména": "Anna Malinová † (2025)\tJosef Keprt † (2024)\nArnošt Valenta † (2025)\tJosef Svatoň † (2025)\nFrantišek Moravec † (2024)\tKarel Mareš † (2023)\nFrantišek Pecháček † (2023)\tMilan Rastislav Štefánik † (2023)\nHugo Vojta † (2025)\tOldřich Doležal † (2023)\nJaromír Nechanský † (2025)\tOldřich Pechal † (2024)\nJiří Pavel Kafka (2023)\tSergěj Jan Ingr † (2024)\nJosef Bernat † (2023)\tStanislav Zimprich † (2023)",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -419,7 +482,8 @@
     "podíl": 0.0747,
     "celkem": 174,
     "jména": "David Hurák (2025)\tKarel Řehka (2025)\nJaroslav Jíra (2023)\tLibor Lochman (2025)\nJaroslav Vild (2024)\tLukáš Hirka (2024)\nJiří Štěpánek (2023)\tMartin Salay (2023)\nJosef Pešek (2023)\tPavel Farka (2023)\nKarel Klinovský (2025)\tPetr Ošlejšek (2025)\nKarel Kučera † (2024)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -428,7 +492,8 @@
     "podíl": 0.0402,
     "celkem": 174,
     "jména": "Jakub Černý (2025)\tPetr Jirout (2023)\nKateřina Laluhová (2024)\tRoman Juřena (2024)\nLukáš Dudík (2024)\tŠimon Malý (2025)\nMartin Černý (2025)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -437,7 +502,8 @@
     "podíl": 0.1207,
     "celkem": 174,
     "jména": "Bedřich Moldan (2023)\tJan Vítek (2025)\nDana Drábová † (2025)\tJan Švejnar (2024)\nDana Krejčířová (2025)\tJiří Grygar (2023)\nDavid Lukáš (2023)\tJosef Fanta (2023)\nEva Opravilová (2023)\tJosef Jařab (2023)\nHana Dvořáková (2023)\tJosef Vágner † (2025)\nHana Librová (2023)\tLadislav Krištoufek (2024)\nHelena Tlaskalová – Hogenová (2023)\tMark Rieder (2024)\nJan Dvořák (2025)\tTomáš Jungwirth (2025)\nJan Gruntorád (2024)\tŠárka Pospíšilová (2025)\nJan Sokol † (2023)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -446,7 +512,8 @@
     "podíl": 0.0747,
     "celkem": 174,
     "jména": "Božena Jirků (2023)\tVěra Fina (2025)\nDanuše Steinová (2025)\tYvonna Gaillyová (2024)\nDita Horochovská (2024)\tZdenka Wasserbauerová (2025)\nIlja Hradecký (2023)\tZdeňka Prokopová (2024)\nLucie Hyblerová (2024)\tZuzana Baudyšová (2025)\nMustafa Džemilev (2024)\tŠimon Pánek (2025)\nRadka Vernerová (2024)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -455,7 +522,8 @@
     "podíl": 0.0805,
     "celkem": 174,
     "jména": "David Kratochvíl (2025)\tMartin Doktor (2024)\nDina Štěrbová (2023)\tMartin Fuksa (2025)\nEva Graham (2023)\tMartina Navrátilová (2025)\nGerhardt Bubník (2025)\tRadek Jaroš (2023)\nJosef Dostál (2025)\tRoman Červenka (2024)\nJosef Neček (2023)\tZdeněk Štybar (2024)\nKvětoslav Mašita (2023)\tŠtěpánka Hilgertová (2024)",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -464,7 +532,8 @@
     "podíl": 0.2586,
     "celkem": 174,
     "jména": "Agnieszka Holland\tJaroslav Němeček\tMiloň Čepelka\nAlois Švehlík †\tJaroslav Rudiš\tMiloš Zapletal †\nAnna Geislerová\tJaroslav Vostrý\tMiroslav Masák\nDagmar Pecková\tJiří Bartoška\tOlga Sommerová\nDaniela Kolářová\tJiří Chvála\tOndřej Vetchý\nEva Jiřičná\tJiří Kylián\tPavel Kosatík\nEva Kantůrková\tJiří Sozanský\tPetr Janda\nFrantišek Mertl\tJiří Tichota\tPetr Kostka\nHelena Třeštíková\tKarin Lednická\tPetr Oslzlý\nIda Kelarová\tKvěta Pacovská †\tPetr Sís\nIvan Klánský\tLuděk Munzar †\tRadka Denemarková\nIvan Trojan\tMagdaléna Kožená\tViktor Preiss\nJakub Hrůša\tMarie Rottrová\tVladimír Mišík\nJan Kaplický\tMilan Uhde\tVladimír Smutný\nJana Hlaváčová †\tMiloslav Nevrlý\tZdeněk Svěrák",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -473,7 +542,8 @@
     "podíl": 0.0287,
     "celkem": 174,
     "jména": "Günter Geyer (2023)\nJiří Netík (2024)\nJosef Průša (2025)\nMiroslav Kopřiva (2023)\nPetr Sýkora (2024)",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -482,7 +552,8 @@
     "podíl": 0.0575,
     "celkem": 174,
     "jména": "Emilie Vallová (2024)\tMarek Svoboda (2023)\nFrantišek Kopřiva (2025)\tOndřej Hes † (2025)\nJan Starý (2025)\tVladimír Beneš (2023)\nJiřina Bartůňková (2025)\tVladimír Staněk (2023)\nKateřina Šédová (2024)\tVěra Vávrová (2023)",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -491,7 +562,8 @@
     "podíl": 0.0517,
     "celkem": 174,
     "jména": "Jan Šolc (2023)\tOtakar Motejl † (2025)\nKarel Kovanda (2024)\tPavel Rychetský (2023)\nKarel Schwarzenberg (2023)\tPetr Pithart (2023)\nMartin Povejšil † (2023)\tTomáš Pojar (2025)\nOndřej Felix (2025)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -500,7 +572,8 @@
     "podíl": 0.0402,
     "celkem": 174,
     "jména": "Alexander Van der Bellen (2023)\tVilém-Alexandr (2025)\nFilip (2025)\tWilliam Jefferson Clinton (2024)\nJens Stoltenberg (2024)\tZuzana Čaputová (2024)\nMáxima (2025)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -509,7 +582,8 @@
     "podíl": 0.0402,
     "celkem": 174,
     "jména": "Alexander Wiegand (2024)\tJarmila Stibicová (2023)\nAnna Šabatová (2024)\tMarta Kubišová (2023)\nDaniel Kroupa (2024)\tZdeňka Mašínová (2023)\nDanuška Němcová † (2025)\t",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -518,7 +592,8 @@
     "podíl": 0.0172,
     "celkem": 174,
     "jména": "Jan Pavel II. † (2024)\nJosef Suchár (2024)\nTomáš Halík (2023)",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    },
    {
     "prezident": "Petr Pavel",
@@ -527,7 +602,8 @@
     "podíl": 0.023,
     "celkem": 174,
     "jména": "Daniel Anýž † (2024)\nMartin Dorazín (2025)\nPavel Pecháček † (2024)\nPetr Dvořák (2024)",
-    "p": "Pavel"
+    "p": "Pavel",
+    "nápověda": "klikněte na pruh"
    }
   ]
  },
@@ -627,8 +703,8 @@
        "title": "Vyznamenání"
       },
       {
-       "field": "jména",
-       "title": "Vyznamenaní († in memoriam)"
+       "field": "nápověda",
+       "title": "Seznam jmen"
       }
      ]
     }
@@ -686,8 +762,8 @@
        "title": "Vyznamenání"
       },
       {
-       "field": "jména",
-       "title": "Vyznamenaní († in memoriam)"
+       "field": "nápověda",
+       "title": "Seznam jmen"
       }
      ]
     }

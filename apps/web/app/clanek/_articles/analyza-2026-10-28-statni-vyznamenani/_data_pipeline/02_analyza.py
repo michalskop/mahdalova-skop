@@ -14,7 +14,7 @@ Zeman 2013–2022, Pavel 2023–. Rok 2020 v seznamech není (ceremonie se kvůl
 nekonala). Roky 1993–1994 také ne: zákon o státních vyznamenáních platí od 1994
 a první vyznamenání udělil Havel 28. 10. 1995.
 """
-import csv, json, sys
+import csv, json, re, sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -134,13 +134,19 @@ say('Ročníky:', ceremonie)
 def pct(a, b):
     return f'{100 * a / b:.0f} %' if b else '–'
 
+TITULY = re.compile(r'^((prof|doc|Ing|MUDr|JUDr|PhDr|RNDr|Mgr|MgA|PaedDr|ThDr|Bc|pplk|plk|gen|genmjr|brig|v\.\s?v|i\.\s?m|arm|Mons|R\.P)\.?\s*)+')
+
+def cisty(jmeno):
+    jm = TITULY.sub('', jmeno).strip()
+    return re.sub(r',?\s*(CSc|DrSc|Ph\.D|MBA|PhD|Th\.D)\.?\s*$', '', jm).strip(' ,')
+
 def jmena(lide):
     """Seznam jmen do tooltipu: do 6 jmen pod sebou, do 40 ve dvou sloupcích s rokem, víc ve třech bez roku."""
     if len(lide) > 40:
-        j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''}" for r in lide)
+        j = sorted(f"{cisty(r['jmeno'])}{' †' if r['in_memoriam'] == '1' else ''}" for r in lide)
         k = 3
     else:
-        j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
+        j = sorted(f"{cisty(r['jmeno'])}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
         k = 1 if len(j) <= 6 else 2
     n = (len(j) + k - 1) // k
     sl = [j[i * n:(i + 1) * n] for i in range(k)]
@@ -294,21 +300,32 @@ X = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale
      'axis': {'labelAngle': 0, 'ticks': False, 'domain': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}}
 save('graf_zeny.json', {
     'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
-              'subtitle': 'Podíl žen mezi vyznamenanými v daném ročníku. Jedna postava = 5 % vyznamenaných, tyrkysově ženy, fialově muži.'},
+              'subtitle': 'Podíl žen mezi vyznamenanými v daném ročníku. Jedna kostička = 5 % vyznamenaných, tyrkysově ženy, fialově muži.'},
     '_source': SRC,
     'width': 'container', 'height': 380,
     'layer': [
+        # kostička v barvě pohlaví …
         {'data': {'values': ikony},
-         'mark': {'type': 'point', 'filled': True, 'opacity': 1},
+         'mark': {'type': 'square', 'opacity': 1, 'size': 230, 'cornerRadius': 2},
+         'encoding': {
+             'x': X,
+             'y': {'field': 'i', 'type': 'ordinal', 'title': None, 'sort': 'descending', 'axis': None,
+                   'scale': {'paddingInner': 0.12}},
+             'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
+                       'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
+             'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'ženy', 'title': 'Žen'},
+                         {'field': 'celkem', 'title': 'Vyznamenaných osob'},
+                         {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'}]}},
+        # … a v ní vyříznutá silueta (barva pozadí grafu)
+        {'data': {'values': ikony},
+         'mark': {'type': 'point', 'filled': True, 'opacity': 1, 'color': '#f8f6f0'},
          'encoding': {
              'x': X,
              'y': {'field': 'i', 'type': 'ordinal', 'title': None, 'sort': 'descending', 'axis': None,
                    'scale': {'paddingInner': 0.12}},
              'shape': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
                        'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_SHAPE, MUZ_SHAPE]}},
-             'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
-                       'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
-             'size': {'value': 150},
+             'size': {'value': 110},
              'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'ženy', 'title': 'Žen'},
                          {'field': 'celkem', 'title': 'Vyznamenaných osob'},
                          {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'}]}},
@@ -331,9 +348,16 @@ def dlazdice(rows, order, title, subtitle, pocet_title):
     tooltip = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
                {'field': 'podíl', 'title': 'Podíl (celé působení)', 'format': '.0%'},
                {'field': 'počet', 'title': pocet_title}]
+    detail = None
     if any('jména' in r for r in rows):
-        tooltip.append({'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'})
+        for r in rows:
+            r['nápověda'] = 'klikněte na pruh'
+        tooltip.append({'field': 'nápověda', 'title': 'Seznam jmen'})
+        detail = {'field': 'jména', 'title': ['prezident', 'obor'],
+                  'rows': [{'field': 'podíl', 'label': 'Podíl (celé působení)', 'format': 'pct'},
+                           {'field': 'počet', 'label': pocet_title}]}
     return {
+        **({'_click_detail': detail} if detail else {}),
         'title': {'text': title, 'subtitle': subtitle},
         '_source': SRC,
         'data': {'values': rows},
@@ -417,7 +441,11 @@ ob_rows = []
 for v in slouceno.values():
     v['jména'] = jmena(v.pop('_lide'))
     ob_rows.append(v)
+for r in ob_rows:
+    r['nápověda'] = 'klikněte na sloupec'
 save('graf_rady_obdobi.json', {
+    '_click_detail': {'field': 'jména', 'title': ['prezident', 'období', 'obor'],
+                      'rows': [{'field': 'počet', 'label': 'Řádů'}]},
     'title': {'text': 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
               'subtitle': 'Počet řádů Bílého lva a T. G. Masaryka podle oblasti a funkčního období, 1995–2025. '
                           'Plná barva = první funkční období, světlejší = druhé. Pavlovi běží první období.'},
@@ -437,7 +465,7 @@ save('graf_rady_obdobi.json', {
         'order': {'field': 'období'},
         'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'období', 'title': 'Funkční období'},
                     {'field': 'obor', 'title': 'Oblast'}, {'field': 'počet', 'title': 'Řádů'},
-                    {'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'}],
+                    {'field': 'nápověda', 'title': 'Seznam jmen'}],
     },
 })
 print('grafy uloženy do', DATA)

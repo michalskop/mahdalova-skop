@@ -249,6 +249,7 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _toggle_legend: _l,
     _legend_inactive_style: _lis,
     _legend_hide_mode: _lhm,
+    _click_detail: _cd,
     ...rest
   } = spec as Record<string, unknown>;
   return { ...rest, title: null };
@@ -415,6 +416,56 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number, hiddenSe
   } : null;
 }
 
+// `_click_detail` ve specu: kliknutí na značku otevře pod grafem panel s křížkem (vzor Flourish
+// „popup panel“). `field` = text s položkami oddělenými \n (případně \t), `title` = pole do
+// nadpisu panelu, `rows` = řádky s hodnotami (format 'pct' = procenta).
+type ClickDetailConfig = {
+  field: string;
+  title?: string[];
+  rows?: { field: string; label: string; format?: 'pct' }[];
+};
+
+function clickDetailConfig(spec: Record<string, unknown> | null): ClickDetailConfig | null {
+  const cfg = spec?._click_detail as ClickDetailConfig | undefined;
+  return cfg?.field ? cfg : null;
+}
+
+function ClickDetailPanel({ cfg, datum, onClose }: { cfg: ClickDetailConfig; datum: Record<string, unknown>; onClose: () => void }) {
+  const items = String(datum[cfg.field] ?? '').split(/[\n\t]/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.localeCompare(b, 'cs'));
+  const title = (cfg.title ?? []).map(f => datum[f]).filter(Boolean).join(' · ');
+  return (
+    <div style={{
+      position: 'relative', marginTop: 10, padding: '10px 14px 12px', border: '1px solid #e8e3d2', borderRadius: 7,
+      background: '#fdfbf7', color: TOOLTIP_INK, fontFamily: CHART_FONT, fontSize: 13.5, lineHeight: 1.4,
+    }}>
+      <button
+        type="button"
+        aria-label="Zavřít"
+        onClick={onClose}
+        style={{
+          position: 'absolute', top: 6, right: 8, border: 'none', background: 'transparent', cursor: 'pointer',
+          fontSize: 22, lineHeight: 1, color: TOOLTIP_INK, padding: 4,
+        }}
+      >×</button>
+      {title && <div style={{ fontWeight: 700, fontSize: 15, paddingRight: 28 }}>{title}</div>}
+      {cfg.rows?.length ? (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px 16px', margin: '2px 0 8px' }}>
+          {cfg.rows.map(r => {
+            const v = datum[r.field];
+            const text = r.format === 'pct' && typeof v === 'number'
+              ? `${Math.round(v * 100)} %`
+              : String(v ?? '');
+            return <span key={r.field}>{r.label}: <strong>{text}</strong></span>;
+          })}
+        </div>
+      ) : null}
+      <div style={{ columnWidth: 190, columnGap: 18 }}>
+        {items.map(item => <div key={item} style={{ breakInside: 'avoid' }}>{item}</div>)}
+      </div>
+    </div>
+  );
+}
+
 export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
   const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio, hoverY: sharedHoverY, setHoverY: setSharedHoverY } = useChartGroup();
   const bare = bareProp || bareFromGroup;
@@ -430,6 +481,8 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const initialRevealDoneRef = useRef(false);
   const pendingRevealSeriesRef = useRef<string[]>([]);
   const toggleLegend = useMemo(() => toggleLegendConfig(spec), [spec]);
+  const clickDetail = useMemo(() => clickDetailConfig(spec), [spec]);
+  const [detail, setDetail] = useState<Record<string, unknown> | null>(null);
 
   const animateDataMarks = useCallback((direction: 'show' | 'hide', series?: string[]) => {
     const container = containerRef.current;
@@ -481,6 +534,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
 
   useEffect(() => {
     setHiddenSeries(new Set());
+    setDetail(null);
     initialRevealDoneRef.current = false;
     pendingRevealSeriesRef.current = [];
   }, [spec]);
@@ -586,6 +640,13 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
       }).then(result => {
         viewRef.current = result.view as unknown as { finalize: () => void };
+        const cd = clickDetailConfig(spec);
+        if (cd) {
+          result.view.addEventListener('click', (_event, item) => {
+            const datum = (item as { datum?: Record<string, unknown> } | null | undefined)?.datum;
+            if (datum && datum[cd.field]) setDetail(datum);
+          });
+        }
         const pendingSeries = pendingRevealSeriesRef.current;
         if (pendingSeries.length) {
           pendingRevealSeriesRef.current = [];
@@ -787,9 +848,10 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
           }}
         />
       )}
-      <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
+      <div style={{ overflowX: isConcat ? 'auto' : 'hidden', cursor: clickDetail ? 'pointer' : undefined }}>
         {chartCanvas(200, isConcat && totalWidth ? `${totalWidth}px` : '100%')}
       </div>
+      {clickDetail && detail && <ClickDetailPanel cfg={clickDetail} datum={detail} onClose={() => setDetail(null)} />}
     </ChartCard>
   );
 }
