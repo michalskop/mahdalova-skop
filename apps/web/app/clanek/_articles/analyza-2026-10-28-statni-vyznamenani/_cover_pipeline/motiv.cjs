@@ -7,12 +7,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const PREZ = [
-  ['Havel', 'Václav Havel', '#33b9d9', 2002], // brandTeal.4
-  ['Klaus', 'Václav Klaus', '#899aeb', 2012], // brandRoyalBlue.3
-  ['Zeman', 'Miloš Zeman', '#ff934d', 2022], // brandOrange.4
-  ['Pavel', 'Petr Pavel', '#c49ad8', 2025], // brandAmethyst.3
+const PREZ = [ // barvy prezidentů na tmavém pozadí (světlejší odstíny týchž škál jako v grafech)
+  ['Havel', 'Václav Havel', '#697fe6', 2002], // brandRoyalBlue.4
+  ['Klaus', 'Václav Klaus', '#ff4970', 2012], // brand.3
+  ['Zeman', 'Miloš Zeman', '#bd9103', 2022], // brandYellow.8
+  ['Pavel', 'Petr Pavel', '#1a9fbd', 2025], // brandTeal.5
 ];
+// VARIANTA=prezidenti obarví tečky podle prezidenta místo podle pohlaví
+const PODLE_PREZIDENTU = process.env.VARIANTA === 'prezidenti';
 const STUHA = ['#f8f6f0', '#de1743', '#4a51ab']; // bílá (background.2), karmínová (brand.6), modrá (brandRoyalBlue.6)
 const ZLATY = Math.PI * (3 - Math.sqrt(5));
 
@@ -59,9 +61,9 @@ if (require.main === module) {
     svg += `<circle cx="${cx}" cy="${cy}" r="${f1(R * 1.03)}" fill="#101432"/>`;
     for (let i = 0; i < N; i++) {
       const rr = c * Math.sqrt(i + 0.5), a = i * ZLATY - Math.PI / 2;
-      svg += `<circle cx="${f1(cx + rr * Math.cos(a))}" cy="${f1(cy + rr * Math.sin(a))}" r="${f1(r)}" fill="${zaznamy[i][1] === "Z" ? ZENY : MUZI}"/>`;
+      svg += `<circle cx="${f1(cx + rr * Math.cos(a))}" cy="${f1(cy + rr * Math.sin(a))}" r="${f1(r)}" fill="${PODLE_PREZIDENTU ? PREZ.find((p) => +zaznamy[i][0] <= p[3])[2] : zaznamy[i][1] === "Z" ? ZENY : MUZI}"/>`;
     }
-    fs.writeFileSync(path.join(__dirname, `motiv-${klic}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" width="${F.W}" height="${F.H}" viewBox="0 0 ${F.W} ${F.H}">${svg}</svg>`);
+    fs.writeFileSync(path.join(__dirname, PODLE_PREZIDENTU ? `motiv-prezidenti-${klic}.svg` : `motiv-${klic}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" width="${F.W}" height="${F.H}" viewBox="0 0 ${F.W} ${F.H}">${svg}</svg>`);
   }
   console.log(`motiv hotový: ${N} teček`);
 }

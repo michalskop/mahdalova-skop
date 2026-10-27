@@ -29,7 +29,8 @@ def say(*a):
 
 PREZ = ['Havel', 'Klaus', 'Zeman', 'Pavel']
 PREZ_LABEL = {'Havel': 'Václav Havel', 'Klaus': 'Václav Klaus', 'Zeman': 'Miloš Zeman', 'Pavel': 'Petr Pavel'}
-PREZ_COLOR = {'Havel': '#06677d', 'Klaus': '#6267a3', 'Zeman': '#f76800', 'Pavel': '#9f319e'}
+# barvy podle Kateřiny (27. 10. 2026): Havel modrá, Klaus červená (trikolóra), Zeman nejtmavší zlatá, Pavel tyrkysová
+PREZ_COLOR = {'Havel': '#4a51ab', 'Klaus': '#de1743', 'Zeman': '#a47d03', 'Pavel': '#0e839e'}
 DRUHY = ['Řád Bílého lva', 'Řád T. G. Masaryka', 'Medaile Za hrdinství', 'Medaile Za zásluhy']
 ZENY, MUZI = '#f76800', '#06677d'
 
@@ -238,7 +239,7 @@ save('graf_druhy.json', {
         'x': {'field': 'podíl', 'type': 'quantitative', 'stack': 'normalize', 'title': None,
               'axis': {'format': '.0%', 'gridColor': '#e8e3d2'}},
         'color': {'field': 'druh', 'type': 'nominal', 'title': None,
-                  'scale': {'domain': DRUHY, 'range': ['#de1743', '#6267a3', '#ffcf02', '#bcc4df']},
+                  'scale': {'domain': DRUHY, 'range': ['#9f319e', '#6267a3', '#ff934d', '#bcc4df']},
                   'legend': {'orient': 'top', 'direction': 'horizontal', 'columns': 2, 'symbolType': 'square'}},
         'order': {'field': 'pořadí'},
         'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'druh', 'title': 'Vyznamenání'},
