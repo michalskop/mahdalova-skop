@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 190,
+  "data": {
+    "values": [
+      {
+        "kat": "Muži",
+        "n": 784,
+        "t": "784",
+        "barva": "#bcbcb0"
+      },
+      {
+        "kat": "Chlapci",
+        "n": 237,
+        "t": "237",
+        "barva": "#de1743"
+      },
+      {
+        "kat": "Ženy",
+        "n": 22,
+        "t": "22",
+        "barva": "#bcbcb0"
+      },
+      {
+        "kat": "Dívky",
+        "n": 7,
+        "t": "7",
+        "barva": "#de1743"
+      },
+      {
+        "kat": "Bez určení pohlaví a věku",
+        "n": 30,
+        "t": "30",
+        "barva": "#dcdcd2"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          880
+        ]
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Skupina"
+          },
+          {
+            "field": "t",
+            "title": "Počet"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Víc než pětinu z 1 080 Palestinců, které izraelské síly zabily na Západním břehu, tvořily {děti|#de1743}",
+    "subtitle": "Palestinci zabití izraelskými silami na Západním břehu včetně východního Jeruzaléma, 7. 10. 2023 – 30. 9. 2026 (počet lidí). Zpráva uvádí „nejméně“, zbytek do celku jsme dopočítali jako bez určení."
+  },
+  "_source": "[Zpráva Nezávislé mezinárodní vyšetřovací komise OSN, A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 17, podle dat OCHA; bez obětí osadníků"
+}
