@@ -426,6 +426,8 @@ type ClickDetailConfig = {
   items?: Record<string, string>;
   title?: string[];
   rows?: { field: string; label: string; format?: 'pct' }[];
+  // volitelně: vodorovný pruh rozdělený na části (např. ženy × muži) s počty
+  split?: { field: string; label: string; color: string }[];
 };
 
 function clickDetailConfig(spec: Record<string, unknown> | null): ClickDetailConfig | null {
@@ -470,6 +472,30 @@ function ClickDetailPanel({ cfg, datum, onClose }: { cfg: ClickDetailConfig; dat
           })}
         </div>
       ) : null}
+      {cfg.split?.length ? (() => {
+        const parts = cfg.split.map(p => ({ ...p, n: Number(datum[p.field] ?? 0) }));
+        const total = parts.reduce((a, p) => a + p.n, 0) || 1;
+        return (
+          <div style={{ margin: '0 0 10px' }}>
+            <div style={{ display: 'flex', height: 22, borderRadius: 3, overflow: 'hidden' }}>
+              {parts.filter(p => p.n > 0).map(p => (
+                <div key={p.field} style={{
+                  width: `${(p.n / total) * 100}%`, background: p.color, color: '#ffffff', fontSize: 12, fontWeight: 700,
+                  display: 'flex', alignItems: 'center', paddingLeft: 6, whiteSpace: 'nowrap', overflow: 'hidden',
+                }}>{p.n}</div>
+              ))}
+            </div>
+            <div style={{ display: 'flex', gap: 14, fontSize: 12.5, marginTop: 3 }}>
+              {parts.map(p => (
+                <span key={p.field}>
+                  <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 2, background: p.color, marginRight: 5 }} />
+                  {p.label}: <strong>{p.n}</strong> ({Math.round((p.n / total) * 100)} %)
+                </span>
+              ))}
+            </div>
+          </div>
+        );
+      })() : null}
       {sections.map((sec, i) => (
         <div key={sec.head ?? i} style={{ marginTop: i ? 8 : 0 }}>
           {sec.head && <div style={{ fontWeight: 700, borderBottom: '1px solid #e8e3d2', marginBottom: 3 }}>{sec.head}</div>}

@@ -2,7 +2,7 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "Za Pavla jsou ženy {víc než čtvrtinou|#33b9d9} vyznamenaných, dřív bývaly sedminou",
-  "subtitle": "Počet vyznamenaných v daném ročníku: fialově muži nad osou, tyrkysově ženy pod osou, u nich podíl žen. Kliknutím na sloupec zobrazíte jména."
+  "subtitle": "Počet vyznamenaných v daném ročníku: fialově muži nad osou, tyrkysově ženy pod osou. Kliknutím na sloupec zobrazíte jména."
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
  "_click_detail": {
@@ -46,17 +46,20 @@
   },
   "rows": [
    {
-    "field": "podíl",
-    "label": "Podíl žen",
-    "format": "pct"
-   },
+    "field": "celkem",
+    "label": "Vyznamenáno celkem"
+   }
+  ],
+  "split": [
    {
     "field": "ženy",
-    "label": "Žen"
+    "label": "Ženy",
+    "color": "#33b9d9"
    },
    {
-    "field": "celkem",
-    "label": "Vyznamenaných"
+    "field": "muži",
+    "label": "Muži",
+    "color": "#522a7a"
    }
   ]
  },
@@ -929,270 +932,6 @@
        95
       ]
      }
-    }
-   }
-  },
-  {
-   "data": {
-    "values": [
-     {
-      "rok": "1995",
-      "y": -4,
-      "popisek": "7 %"
-     },
-     {
-      "rok": "1996",
-      "y": -4,
-      "popisek": "6 %"
-     },
-     {
-      "rok": "1997",
-      "y": -9,
-      "popisek": "13 %"
-     },
-     {
-      "rok": "1998",
-      "y": -15,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "1999",
-      "y": -5,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2000",
-      "y": -7,
-      "popisek": "17 %"
-     },
-     {
-      "rok": "2001",
-      "y": -9,
-      "popisek": "19 %"
-     },
-     {
-      "rok": "2002",
-      "y": -9,
-      "popisek": "10 %"
-     },
-     {
-      "rok": "2003",
-      "y": -12,
-      "popisek": "23 %"
-     },
-     {
-      "rok": "2004",
-      "y": -3,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2005",
-      "y": -2,
-      "popisek": "9 %"
-     },
-     {
-      "rok": "2006",
-      "y": -5,
-      "popisek": "23 %"
-     },
-     {
-      "rok": "2007",
-      "y": -3,
-      "popisek": "12 %"
-     },
-     {
-      "rok": "2008",
-      "y": -4,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2009",
-      "y": -5,
-      "popisek": "21 %"
-     },
-     {
-      "rok": "2010",
-      "y": -5,
-      "popisek": "22 %"
-     },
-     {
-      "rok": "2011",
-      "y": -3,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2012",
-      "y": -3,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2013",
-      "y": -6,
-      "popisek": "20 %"
-     },
-     {
-      "rok": "2014",
-      "y": -10,
-      "popisek": "26 %"
-     },
-     {
-      "rok": "2015",
-      "y": -5,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2016",
-      "y": -5,
-      "popisek": "13 %"
-     },
-     {
-      "rok": "2017",
-      "y": -11,
-      "popisek": "22 %"
-     },
-     {
-      "rok": "2018",
-      "y": -8,
-      "popisek": "19 %"
-     },
-     {
-      "rok": "2019",
-      "y": -6,
-      "popisek": "14 %"
-     },
-     {
-      "rok": "2020",
-      "y": -3,
-      "popisek": "8 %"
-     },
-     {
-      "rok": "2021",
-      "y": -2,
-      "popisek": "7 %"
-     },
-     {
-      "rok": "2022",
-      "y": -8,
-      "popisek": "10 %"
-     },
-     {
-      "rok": "2023",
-      "y": -16,
-      "popisek": "25 %"
-     },
-     {
-      "rok": "2024",
-      "y": -20,
-      "popisek": "34 %"
-     },
-     {
-      "rok": "2025",
-      "y": -13,
-      "popisek": "26 %"
-     }
-    ]
-   },
-   "mark": {
-    "type": "text",
-    "fontSize": 9.5,
-    "baseline": "top",
-    "dy": 3,
-    "color": "#06677d",
-    "fontWeight": "bold"
-   },
-   "encoding": {
-    "x": {
-     "field": "rok",
-     "type": "ordinal",
-     "title": null,
-     "sort": [
-      "1995",
-      "1996",
-      "1997",
-      "1998",
-      "1999",
-      "2000",
-      "2001",
-      "2002",
-      "2003",
-      "2004",
-      "2005",
-      "2006",
-      "2007",
-      "2008",
-      "2009",
-      "2010",
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2016",
-      "2017",
-      "2018",
-      "2019",
-      "2020",
-      "2021",
-      "2022",
-      "2023",
-      "2024",
-      "2025"
-     ],
-     "scale": {
-      "domain": [
-       "1995",
-       "1996",
-       "1997",
-       "1998",
-       "1999",
-       "2000",
-       "2001",
-       "2002",
-       "2003",
-       "2004",
-       "2005",
-       "2006",
-       "2007",
-       "2008",
-       "2009",
-       "2010",
-       "2011",
-       "2012",
-       "2013",
-       "2014",
-       "2015",
-       "2016",
-       "2017",
-       "2018",
-       "2019",
-       "2020",
-       "2021",
-       "2022",
-       "2023",
-       "2024",
-       "2025"
-      ],
-      "paddingInner": 0.08
-     },
-     "axis": {
-      "labelAngle": 0,
-      "ticks": false,
-      "domain": false,
-      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
-     }
-    },
-    "y": {
-     "field": "y",
-     "type": "quantitative",
-     "scale": {
-      "domain": [
-       -29,
-       95
-      ]
-     }
-    },
-    "text": {
-     "field": "popisek"
     }
    }
   },

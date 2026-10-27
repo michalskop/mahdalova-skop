@@ -329,13 +329,13 @@ Yd = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOM},
 H_Z = 400
 save('graf_zeny.json', {
     'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
-              'subtitle': 'Počet vyznamenaných v daném ročníku: fialově muži nad osou, tyrkysově ženy pod osou, '
-                          'u nich podíl žen. Kliknutím na sloupec zobrazíte jména.'},
+              'subtitle': 'Počet vyznamenaných v daném ročníku: fialově muži nad osou, tyrkysově ženy pod osou. '
+                          'Kliknutím na sloupec zobrazíte jména.'},
     '_source': SRC,
     '_click_detail': {'field': 'jména', 'key': 'rok', 'title': ['rok'],
                       'items': {y: jmena_mz([r for r in R if r['rok'] == y and r['pohlavi'] in 'ZM'], rok=False) for y in sorted(roky)},
-                      'rows': [{'field': 'podíl', 'label': 'Podíl žen', 'format': 'pct'},
-                               {'field': 'ženy', 'label': 'Žen'}, {'field': 'celkem', 'label': 'Vyznamenaných'}]},
+                      'rows': [{'field': 'celkem', 'label': 'Vyznamenáno celkem'}],
+                      'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL}, {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
     'width': 'container', 'height': H_Z,
     'layer': [
         {'data': {'values': sloupce},
@@ -351,11 +351,6 @@ save('graf_zeny.json', {
         {'data': {'values': [{'y': 0}]},
          'mark': {'type': 'rule', 'color': '#101432', 'strokeWidth': 1.5},
          'encoding': {'y': {'field': 'y', 'type': 'quantitative', 'scale': {'domain': DOM}}}},
-        # podíl žen přímo pod tyrkysovým sloupcem
-        {'data': {'values': stitky_zen},
-         'mark': {'type': 'text', 'fontSize': 9.5, 'baseline': 'top', 'dy': 3, 'color': ZENA_DARK, 'fontWeight': 'bold'},
-         'encoding': {'x': X, 'y': {'field': 'y', 'type': 'quantitative', 'scale': {'domain': DOM}},
-                      'text': {'field': 'popisek'}}},
         {'data': {'values': hranice},
          'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
          'encoding': {'x': {**X, 'bandPosition': 0}, 'y': {'value': -24}, 'y2': {'value': H_Z}}},
@@ -431,7 +426,8 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
                 items[key] = jmena_mz(lide)
             podil = len(lide) / len(vse)
             spol = {'key': key, 'p': p, 'prezident': PREZ_LABEL[p], 'obor': o, 'podíl': round(podil, 4),
-                    'počet': len(lide), 'ženy': zen, 'nápověda': 'klikněte na sloupec',
+                    'počet': len(lide), 'ženy': zen, 'muži': len(lide) - zen,
+                    'podíl_žen': round(zen / len(lide), 4) if lide else 0, 'nápověda': 'klikněte na sloupec',
                     'popisek': f'{round(podil * 100)} %' if podil >= 0.005 or not lide else 'pod 1 %'}
             data.append({**spol, 'typ': 'sloupec', 'pohlaví': 'žena', 'část': round(zen / len(vse), 4), 'pořadí': 0})
             data.append({**spol, 'typ': 'sloupec', 'pohlaví': 'muž', 'část': round((len(lide) - zen) / len(vse), 4), 'pořadí': 1})
@@ -442,15 +438,16 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
           'axis': {'ticks': False, 'domain': True, 'domainColor': '#101432', 'labelAngle': 0, 'labelFontSize': 10,
                    'labelPadding': 4}}
     tooltip = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
-               {'field': 'podíl', 'title': 'Podíl (celé působení)', 'format': '.0%'},
-               {'field': 'počet', 'title': pocet_title}, {'field': 'ženy', 'title': 'Z toho žen'},
+               {'field': 'počet', 'title': 'Uděleno celkem'}, {'field': 'ženy', 'title': 'Z toho žen'},
+               {'field': 'podíl_žen', 'title': 'Podíl žen v kategorii', 'format': '.0%'},
                {'field': 'nápověda', 'title': 'Seznam jmen'}]
     return {
         'title': {'text': title, 'subtitle': subtitle},
         '_source': SRC,
         '_click_detail': {'field': 'jména', 'key': 'key', 'items': items, 'title': ['prezident', 'obor'],
-                          'rows': [{'field': 'podíl', 'label': 'Podíl (celé působení)', 'format': 'pct'},
-                                   {'field': 'počet', 'label': pocet_title}, {'field': 'ženy', 'label': 'Z toho žen'}]},
+                          'rows': [{'field': 'počet', 'label': 'Uděleno celkem'}, {'field': 'ženy', 'label': 'Z toho žen'},
+                                   {'field': 'podíl_žen', 'label': 'Podíl žen v kategorii', 'format': 'pct'}],
+                          'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL}, {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
         'data': {'values': data},
         'facet': {'field': 'obor', 'type': 'nominal', 'title': None, 'sort': order,
                   'header': {'labelFontSize': 12.5, 'labelFontWeight': 'bold', 'labelAnchor': 'start', 'labelPadding': 2,
