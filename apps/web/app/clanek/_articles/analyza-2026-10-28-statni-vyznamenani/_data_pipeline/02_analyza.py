@@ -197,7 +197,7 @@ for rok in sorted(roky):
     s = [r for r in R if r['rok'] == rok and r['pohlavi'] in 'ZM']
     z = sum(r['pohlavi'] == 'Z' for r in s)
     zr_rok.append({'rok': rok, 'prezident': PREZ_LABEL[prezident(rok)], 'ženy': z, 'celkem': len(s),
-                   'podíl': round(z / len(s), 3) if s else 0})
+                   'podíl': round(z / len(s), 4) if s else 0})
 say('Ženy po letech:', ', '.join(f"{x['rok']}: {x['ženy']}/{x['celkem']}" for x in zr_rok))
 
 # --- 3. obory -------------------------------------------------------------------
