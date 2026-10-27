@@ -426,9 +426,9 @@ def dlazdice(rows, order, title, subtitle, pocet_title):
 
 
 def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
-    """Mřížka dlaždic po oblastech; v každé skládané sloupce čtyř prezidentů: výška = podíl oblasti na všech
-    vyznamenáních (řádech) daného prezidenta, dole ženy, nahoře muži. Podíl v řadě pod osou.
-    Klik na sloupec otevře panel se jmény zvlášť žen a mužů."""
+    """Mřížka malých pyramid, jedna na oblast: řádky = prezidenti (nahoře Pavel), ženy vlevo, muži vpravo
+    od společné nulové osy. Délka = podíl ze všech vyznamenání (řádů) daného prezidenta, aby šli srovnat
+    prezidenti s různě dlouhým působením. Klik na řádek otevře panel se jmény zvlášť žen a mužů."""
     if dlazdic:  # menší oblasti do jedné dlaždice „ostatní“
         hlavni = order[:dlazdic - 1]
         nazev = lambda r: OBORY[r['obor']] if OBORY[r['obor']] in hlavni else 'ostatní'
@@ -444,19 +444,19 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
             key = f'{p}|{o}'
             if lide:
                 items[key] = jmena_mz(lide)
-            podil = len(lide) / len(vse)
-            spol = {'key': key, 'p': p, 'prezident': PREZ_LABEL[p], 'obor': o, 'podíl': round(podil, 4),
-                    'počet': len(lide), 'ženy': zen, 'muži': len(lide) - zen,
-                    'podíl_žen': round(zen / len(lide), 4) if lide else 0, 'nápověda': 'klikněte na sloupec',
-                    'popisek': f'{round(podil * 100)} %' if podil >= 0.005 or not lide else 'pod 1 %'}
-            data.append({**spol, 'typ': 'sloupec', 'pohlaví': 'žena', 'část': round(zen / len(vse), 4), 'pořadí': 0})
-            data.append({**spol, 'typ': 'sloupec', 'pohlaví': 'muž', 'část': round((len(lide) - zen) / len(vse), 4), 'pořadí': 1})
-            data.append({**spol, 'typ': 'popisek'})
-    vyska_dom = max(d['podíl'] for d in data) * 1.15
-    H = 110
-    Xp = {'field': 'p', 'type': 'nominal', 'title': None, 'sort': PREZ, 'scale': {'paddingInner': 0.25},
-          'axis': {'ticks': False, 'domain': True, 'domainColor': '#101432', 'labelAngle': 0, 'labelFontSize': 10,
-                   'labelPadding': 4}}
+            spol = {'key': key, 'p': p, 'prezident': PREZ_LABEL[p], 'obor': o, 'počet': len(lide), 'ženy': zen,
+                    'muži': len(lide) - zen, 'podíl_žen': round(zen / len(lide), 4) if lide else 0,
+                    'nápověda': 'klikněte na řádek'}
+            data.append({**spol, 'pohlaví': 'žena', 'x0': -zen / len(vse), 'x1': 0})
+            data.append({**spol, 'pohlaví': 'muž', 'x0': 0, 'x1': (len(lide) - zen) / len(vse)})
+    lo = min(d['x0'] for d in data) * 1.12
+    hi = max(d['x1'] for d in data) * 1.05
+    DOMt = [lo, hi]
+    Yt = {'field': 'p', 'type': 'nominal', 'title': None, 'sort': PREZ[::-1], 'scale': {'paddingInner': 0.22},
+          'axis': {'ticks': False, 'domain': False, 'labelFontSize': 10, 'labelPadding': 3}}
+    Xt = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOMt},
+          'axis': {'format': '.0%', 'labelExpr': "replace(format(abs(datum.value), '.0%'), '%', ' %')",
+                   'tickCount': 4, 'gridColor': '#e8e3d2', 'domain': False, 'ticks': False, 'labelFontSize': 9}}
     tooltip = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
                {'field': 'počet', 'title': 'Uděleno celkem'}, {'field': 'ženy', 'title': 'Z toho žen'},
                {'field': 'podíl_žen', 'title': 'Podíl žen v kategorii', 'format': '.0%'},
@@ -467,30 +467,25 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
         '_click_detail': {'field': 'jména', 'key': 'key', 'items': items, 'title': ['prezident', 'obor'],
                           'rows': [{'field': 'počet', 'label': 'Uděleno celkem'}, {'field': 'ženy', 'label': 'Z toho žen'},
                                    {'field': 'podíl_žen', 'label': 'Podíl žen v kategorii', 'format': 'pct'}],
-                          'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL}, {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
+                          'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL},
+                                    {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
         'data': {'values': data},
         'facet': {'field': 'obor', 'type': 'nominal', 'title': None, 'sort': order,
-                  'header': {'labelFontSize': 12.5, 'labelFontWeight': 'bold', 'labelAnchor': 'start', 'labelPadding': 2,
-                             'labelLimit': 150, 'labelColor': '#101432'}},
+                  'header': {'labelFontSize': 12.5, 'labelFontWeight': 'bold', 'labelAnchor': 'start', 'labelPadding': 4,
+                             'labelLimit': 190, 'labelColor': '#101432'}},
         'columns': 3,
-        'spacing': {'row': 34, 'column': 14},
-        'resolve': {'axis': {'x': 'independent'}},
+        'spacing': {'row': 22, 'column': 16},
+        'resolve': {'axis': {'y': 'independent', 'x': 'independent'}},
         'spec': {
-            'width': 120, 'height': H,
+            'width': 182, 'height': 84,
             'layer': [
-                {'transform': [{'filter': "datum.typ == 'sloupec'"}],
-                 'mark': {'type': 'bar', 'width': {'band': 0.75}},
-                 'encoding': {'x': Xp,
-                              'y': {'field': 'část', 'type': 'quantitative', 'title': None, 'stack': 'zero', 'axis': None,
-                                    'scale': {'domain': [0, vyska_dom]}},
+                {'mark': {'type': 'bar'},
+                 'encoding': {'y': Yt, 'x': {**Xt, 'field': 'x0'}, 'x2': {'field': 'x1'},
                               'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
                                         'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
-                              'order': {'field': 'pořadí'},
                               'tooltip': tooltip}},
-                {'transform': [{'filter': "datum.typ == 'popisek'"}],
-                 'mark': {'type': 'text', 'fontSize': 10, 'baseline': 'bottom', 'dy': -2, 'color': '#101432', 'fontWeight': 'bold'},
-                 'encoding': {'x': Xp, 'y': {'field': 'podíl', 'type': 'quantitative', 'scale': {'domain': [0, vyska_dom]}},
-                              'text': {'field': 'popisek'}, 'tooltip': tooltip}},
+                {'mark': {'type': 'rule', 'color': '#101432', 'strokeWidth': 1.2},
+                 'encoding': {'x': {'datum': 0, 'type': 'quantitative', 'scale': {'domain': DOMt}}}},
             ],
         },
     }
@@ -501,8 +496,8 @@ for r in obor_rows:
     r['jména'] = jmena(r.pop('_lide'))
 save('graf_obory.json', piktogramy(
     R, obor_order, 'Klaus vyznamenával disidenty, Zeman podnikatele',
-    'Za co prezident vyznamenával: výška sloupce = podíl oblasti na všech jeho vyznamenáních 1995–2025 (číslo nad sloupcem), tyrkysově ženy, fialově muži. '
-    'Oblast určila redakce podle životopisu vyznamenaného. Kliknutím na sloupec zobrazíte jména.', 'Vyznamenání'))
+    'Za co prezident vyznamenával: podíl oblasti na všech jeho vyznamenáních 1995–2025, tyrkysově ženy vlevo, fialově muži vpravo. '
+    'Oblast určila redakce podle životopisu vyznamenaného. Kliknutím na řádek zobrazíte jména.', 'Vyznamenání'))
 # řády podle oborů – s jmény v tooltipu (dva sloupce, † = in memoriam)
 def obdobi(r):
     """Funkční období, ve kterém prezident vyznamenání udělil (podle roku 28. října)."""
@@ -524,8 +519,8 @@ rad_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in RADY).most_common()
 PREZ_SCALE = {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]}
 save('graf_rady.json', piktogramy(
     RADY, rad_order, 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
-    'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka: výška sloupce = podíl ze všech jeho řádů 1995–2025 (číslo nad sloupcem), '
-    'tyrkysově ženy, fialově muži. Kliknutím na sloupec zobrazíte jména.', 'Řádů', dlazdic=8))
+    'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka: podíl ze všech jeho řádů 1995–2025, '
+    'tyrkysově ženy vlevo, fialově muži vpravo. Kliknutím na řádek zobrazíte jména.', 'Řádů', dlazdic=8))
 
 # varianta: počty řádů podle funkčních období (sloupce, 1. a 2. období přes sebe)
 say(chr(10) + '## Řády podle funkčních období')
