@@ -134,6 +134,18 @@ say('Ročníky:', ceremonie)
 def pct(a, b):
     return f'{100 * a / b:.0f} %' if b else '–'
 
+def jmena(lide):
+    """Seznam jmen do tooltipu: do 6 jmen pod sebou, do 40 ve dvou sloupcích s rokem, víc ve třech bez roku."""
+    if len(lide) > 40:
+        j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''}" for r in lide)
+        k = 3
+    else:
+        j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
+        k = 1 if len(j) <= 6 else 2
+    n = (len(j) + k - 1) // k
+    sl = [j[i * n:(i + 1) * n] for i in range(k)]
+    return chr(10).join(chr(9).join(c[i] if i < len(c) else '' for c in sl) for i in range(n))
+
 # --- 1. počty podle prezidentů ------------------------------------------------
 say('\n## Počty podle prezidentů')
 for p in PREZ:
@@ -175,7 +187,8 @@ for p in PREZ:
     say(f'{p}: ' + '; '.join(f'{OBORY[o]} {n} ({pct(n, len(s))})' for o, n in c.most_common()))
     for o, n in c.items():
         obor_rows.append({'prezident': PREZ_LABEL[p], 'obor': OBORY[o], 'počet': n,
-                          'podíl': round(n / len(s), 4), 'celkem': len(s)})
+                          'podíl': round(n / len(s), 4), 'celkem': len(s),
+                          '_lide': [r for r in s if r['obor'] == o]})
 say('\n## Řády (Bílý lev + TGM) podle oborů')
 for p in PREZ:
     s = [r for r in R if r['prezident'] == p and r['druh'].startswith('Řád')]
@@ -316,7 +329,8 @@ def dlazdice(rows, order, title, subtitle, pocet_title):
     enc_y = {'field': 'p', 'type': 'nominal', 'title': None, 'sort': PREZ,
              'axis': {'ticks': False, 'domain': False, 'labelFontSize': 12, 'labelPadding': 4}}
     tooltip = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
-               {'field': 'počet', 'title': pocet_title}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'}]
+               {'field': 'podíl', 'title': 'Podíl (celé působení)', 'format': '.0%'},
+               {'field': 'počet', 'title': pocet_title}]
     if any('jména' in r for r in rows):
         tooltip.append({'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'})
     return {
@@ -346,18 +360,13 @@ def dlazdice(rows, order, title, subtitle, pocet_title):
 
 # obory podle prezidentů – malé násobky (vodorovné pruhy)
 obor_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in R).most_common()]
+for r in obor_rows:
+    r['jména'] = jmena(r.pop('_lide'))
 save('graf_obory.json', dlazdice(
     obor_rows, obor_order, 'Klaus vyznamenával disidenty, Zeman podnikatele',
     'Podíl oblastí, za které lidé vyznamenání dostali, ze všech vyznamenání daného prezidenta, 1995–2025. '
     'Oblast určila redakce podle životopisu vyznamenaného.', 'Vyznamenání'))
 # řády podle oborů – s jmény v tooltipu (dva sloupce, † = in memoriam)
-def jmena(lide):
-    j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
-    if len(j) <= 6:
-        return chr(10).join(j)
-    half = (len(j) + 1) // 2
-    return chr(10).join(f"{a}{chr(9)}{j[half + i] if half + i < len(j) else ''}" for i, a in enumerate(j[:half]))
-
 def obdobi(r):
     """Funkční období, ve kterém prezident vyznamenání udělil (podle roku 28. října)."""
     y = int(r['rok'])

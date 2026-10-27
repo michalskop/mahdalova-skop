@@ -455,13 +455,13 @@
        "title": "Oblast"
       },
       {
-       "field": "počet",
-       "title": "Řádů"
+       "field": "podíl",
+       "title": "Podíl (celé působení)",
+       "format": ".0%"
       },
       {
-       "field": "podíl",
-       "title": "Podíl",
-       "format": ".0%"
+       "field": "počet",
+       "title": "Řádů"
       },
       {
        "field": "jména",
@@ -514,13 +514,13 @@
        "title": "Oblast"
       },
       {
-       "field": "počet",
-       "title": "Řádů"
+       "field": "podíl",
+       "title": "Podíl (celé působení)",
+       "format": ".0%"
       },
       {
-       "field": "podíl",
-       "title": "Podíl",
-       "format": ".0%"
+       "field": "počet",
+       "title": "Řádů"
       },
       {
        "field": "jména",

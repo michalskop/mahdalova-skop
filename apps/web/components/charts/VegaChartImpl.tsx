@@ -81,6 +81,10 @@ const TOOLTIP_CSS = `
 #vg-tooltip-element.dpbp-theme table { border-collapse: collapse; margin: 6px 12px 8px; }
 #vg-tooltip-element.dpbp-theme table.dt-tt-list { margin: 2px 0 0; font-size: 12px; line-height: 1.3; }
 #vg-tooltip-element.dpbp-theme table.dt-tt-list td { padding: 0 14px 0 0; white-space: nowrap; vertical-align: top; }
+@media (max-width: 600px) {
+  #vg-tooltip-element.dpbp-theme table.dt-tt-list { font-size: 10px; }
+  #vg-tooltip-element.dpbp-theme table.dt-tt-list td { white-space: normal; padding-right: 8px; }
+}
 #vg-tooltip-element.dpbp-theme td.key {
   color: ${TOOLTIP_INK};
   font-weight: 400;
@@ -184,7 +188,8 @@ function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): Tool
       }
       html += '</table>';
     }
-    tip.style.maxWidth = html.includes('dt-tt-list') ? '560px' : '';
+    // seznam jmen smí být širší, ale nikdy přes okraj obrazovky (mobil)
+    tip.style.maxWidth = html.includes('dt-tt-list') ? 'min(600px, calc(100vw - 16px))' : '';
     tip.innerHTML = html;
     tip.classList.add('visible');
     const pad = 12;
