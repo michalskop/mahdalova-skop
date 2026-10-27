@@ -293,6 +293,11 @@ save('graf_roky.json', {
                    'axis': {'gridColor': '#e8e3d2', 'tickMinStep': 20, 'domain': False, 'ticks': False}},
              'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'prezident', 'title': 'Prezident'},
                          {'field': 'počet', 'title': 'Vyznamenání'}]}},
+        {'data': {'values': rok_vals},
+         'transform': [{'filter': 'datum.počet > 0'}],
+         'mark': {'type': 'text', 'baseline': 'bottom', 'dy': -2, 'fontSize': 9, 'color': '#101432'},
+         'encoding': {'x': Xr, 'y': {'field': 'počet', 'type': 'quantitative', 'scale': {'domain': [0, 120]}},
+                      'text': {'field': 'počet'}}},
         {'data': {'values': hranice_roky},
          'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
          'encoding': {'x': {**Xr, 'bandPosition': 0}, 'y': {'value': -22}, 'y2': {'value': 300}}},
@@ -619,6 +624,60 @@ save('graf_rady_obdobi.json', {
                     {'field': 'nápověda', 'title': 'Seznam jmen'}],
     },
 })
+# druhy vyznamenání: ženy × muži, mřížka pyramid (počty, každá dlaždice vlastní měřítko)
+druhy_data, druhy_items = [], {}
+for p in PREZ:
+    for d in DRUHY:
+        lide = [r for r in R if r['prezident'] == p and r['druh'] == d and r['pohlavi'] in 'ZM']
+        zen = sum(r['pohlavi'] == 'Z' for r in lide)
+        key = f'{p}|{d}'
+        if lide:
+            druhy_items[key] = jmena_mz(lide)
+        spol = {'key': key, 'p': p, 'prezident': PREZ_LABEL[p], 'druh': d, 'počet': len(lide), 'ženy': zen,
+                'muži': len(lide) - zen, 'podíl_žen': round(zen / len(lide), 4) if lide else 0,
+                'nápověda': 'klikněte na řádek'}
+        druhy_data.append({**spol, 'pohlaví': 'žena', 'x0': -zen, 'x1': 0})
+        druhy_data.append({**spol, 'pohlaví': 'muž', 'x0': 0, 'x1': len(lide) - zen})
+Yd2 = {'field': 'p', 'type': 'nominal', 'title': None, 'sort': PREZ[::-1], 'scale': {'paddingInner': 0.22},
+       'axis': {'ticks': False, 'domain': False, 'labelFontSize': 11, 'labelPadding': 3}}
+Xd2 = {'type': 'quantitative', 'title': None,
+       'axis': {'labelExpr': 'abs(datum.value)', 'tickCount': 5, 'gridColor': '#e8e3d2', 'domain': False, 'ticks': False,
+                'labelFontSize': 9.5}}
+tt_druhy = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'druh', 'title': 'Vyznamenání'},
+            {'field': 'počet', 'title': 'Uděleno celkem'}, {'field': 'ženy', 'title': 'Z toho žen'},
+            {'field': 'podíl_žen', 'title': 'Podíl žen', 'format': '.0%'}, {'field': 'nápověda', 'title': 'Seznam jmen'}]
+save('graf_druhy_zm.json', {
+    'title': {'text': f'Nejvyšší vyznamenání dostávají skoro jen {{muži|{MUZ_AMETYST}}}, {{ženy|{ZENA_TEAL}}} hlavně medaili Za zásluhy',
+              'subtitle': 'Počet vyznamenaných podle druhu vyznamenání a prezidenta, 1995–2025: tyrkysově ženy vlevo, fialově muži vpravo. '
+                          'Každá dlaždice má vlastní měřítko. Kliknutím na řádek zobrazíte jména.'},
+    '_source': SRC,
+    '_click_detail': {'field': 'jména', 'key': 'key', 'items': druhy_items, 'title': ['prezident', 'druh'],
+                      'rows': [{'field': 'počet', 'label': 'Uděleno celkem'}, {'field': 'ženy', 'label': 'Z toho žen'},
+                               {'field': 'podíl_žen', 'label': 'Podíl žen', 'format': 'pct'}],
+                      'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL},
+                                {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
+    'data': {'values': druhy_data},
+    'facet': {'field': 'druh', 'type': 'nominal', 'title': None, 'sort': DRUHY,
+              'header': {'labelFontSize': 13, 'labelFontWeight': 'bold', 'labelAnchor': 'start', 'labelPadding': 4,
+                         'labelLimit': 260, 'labelColor': '#101432'}},
+    'columns': 2,
+    '_facet_fill': {'label': 40, 'narrowColumns': 1},
+    'spacing': {'row': 24, 'column': 22},
+    'resolve': {'scale': {'x': 'independent'}, 'axis': {'x': 'independent', 'y': 'independent'}},
+    'spec': {
+        'width': 280, 'height': 96,
+        'layer': [
+            {'mark': {'type': 'bar'},
+             'encoding': {'y': Yd2, 'x': {**Xd2, 'field': 'x0'}, 'x2': {'field': 'x1'},
+                          'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
+                                    'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
+                          'tooltip': tt_druhy}},
+            {'mark': {'type': 'rule', 'color': '#101432', 'strokeWidth': 1.2},
+             'encoding': {'x': {'datum': 0, 'type': 'quantitative'}}},
+        ],
+    },
+})
+
 print('grafy uloženy do', DATA)
 
 # body pro motiv coveru (medaile z teček, ženy oranžově)

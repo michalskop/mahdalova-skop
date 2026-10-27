@@ -15,15 +15,7 @@ promoted: 1
 
 Petr Pavel ve středu večer ve Vladislavském sále počtvrté předá státní vyznamenání. Za první tři ročníky jich udělil 174 a 49 dostaly ženy, tedy 28 %. Jeho předchůdci Václav Havel, Václav Klaus a Miloš Zeman dohromady vyznamenali 1 195 osob se známým pohlavím, z toho 171 žen, tedy 14 %. Pavel tak vyznamenává ženy skoro dvakrát častěji. Totéž platí pro dva nejvyšší řády: z 40 řádů Bílého lva a Tomáše Garrigua Masaryka, které Pavel udělil, jich 11 dostaly ženy. Za Zemana to bylo osm z 86.
 
-Jak se ženy a muži dělí podle druhu vyznamenání, ukazuje tabulka. V každé buňce je počet žen / počet mužů.
-
-| Prezident | Řád Bílého lva | Řád T. G. Masaryka | Medaile Za hrdinství | Medaile Za zásluhy | Celkem | Podíl žen |
-|---|---:|---:|---:|---:|---:|---:|
-| Václav Havel | 3 / 57 | 10 / 99 | 5 / 89 | 44 / 207 | 62 / 452 | 12 % |
-| Václav Klaus | 1 / 27 | 13 / 44 | 0 / 12 | 31 / 133 | 45 / 216 | 17 % |
-| Miloš Zeman | 2 / 55 | 6 / 23 | 7 / 52 | 49 / 226 | 64 / 356 | 15 % |
-| Petr Pavel | 5 / 15 | 6 / 14 | 2 / 21 | 36 / 75 | 49 / 125 | 28 % |
-| **Celkem 1995–2025** | 11 / 154 | 35 / 180 | 14 / 174 | 160 / 641 | 220 / 1 149 | 16 % |
+<VegaChart dataFile="data/graf_druhy_zm.json" />
 
 Vycházíme z oficiálních seznamů vyznamenaných, které Kancelář prezidenta republiky zveřejňuje zvlášť pro [Řád Bílého lva](https://www.hrad.cz/cs/ceska-republika/statni-vyznamenani/rad-bileho-lva/seznam-vyznamenanych), [Řád T. G. Masaryka](https://www.hrad.cz/cs/ceska-republika/statni-vyznamenani/rad-t.-g.-masaryka/seznam-vyznamenanych), [medaili Za hrdinství](https://www.hrad.cz/cs/ceska-republika/statni-vyznamenani/medaile-za-hrdinstvi/seznam-vyznamenanych) a [medaili Za zásluhy](https://www.hrad.cz/cs/ceska-republika/statni-vyznamenani/medaile-za-zasluhy/seznam-vyznamenanych). Od prvního předávání v roce 1995 do loňska obsahují 1 372 vyznamenání. Ke každému jsme dohledali, kdo dotyčný je, za jakou oblast ocenění dostal a zda jde o muže, nebo ženu. Seznamy nerozlišují, jestli prezident vyznamenání předal 28. října, nebo třeba při státní návštěvě, proto v číslech jsou i zahraniční hlavy států.
 
