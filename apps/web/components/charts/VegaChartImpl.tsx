@@ -231,7 +231,8 @@ export interface VegaChartProps {
 }
 
 function isConcatSpec(spec: Record<string, unknown>) {
-  return 'vconcat' in spec || 'hconcat' in spec || 'concat' in spec;
+  // facet (mřížka dlaždic) má stejně jako concat pevné šířky dílčích grafů, width:'container' neumí
+  return 'vconcat' in spec || 'hconcat' in spec || 'concat' in spec || 'facet' in spec;
 }
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {

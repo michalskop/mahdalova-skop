@@ -266,7 +266,7 @@ save('graf_druhy.json', {
 
 # ženy po letech
 # ženy po letech – piktogramy: 20 postav na ročník, 1 postava = 5 % vyznamenaných, ženy dole
-ZENA_TEAL, MUZ_AMETYST = '#33b9d9', '#9f319e'  # brandTeal.4, brandAmethyst.6 (Kateřina 27. 10. 2026: světlejší)
+ZENA_TEAL, MUZ_AMETYST = '#33b9d9', '#522a7a'  # brandTeal.4, brandAmethyst.8 (Kateřina 27. 10. 2026)
 MUZ_SHAPE = 'M0,-1 A0.3,0.3 0 1 1 0,-0.4 A0.3,0.3 0 1 1 0,-1 Z M-0.8,1 L-0.8,0 Q-0.8,-0.32 -0.45,-0.32 L0.45,-0.32 Q0.8,-0.32 0.8,0 L0.8,1 Z'
 ZENA_SHAPE = 'M0,-1 A0.3,0.3 0 1 1 0,-0.4 A0.3,0.3 0 1 1 0,-1 Z M-0.35,-0.32 L0.35,-0.32 L0.95,0.7 L0.3,0.7 L0.3,1 L-0.3,1 L-0.3,0.7 L-0.95,0.7 Z'
 ikony = []
@@ -308,29 +308,48 @@ save('graf_zeny.json', {
     ],
 })
 
+
+def dlazdice(rows, order, title, subtitle, pocet_title):
+    """Mřížka dlaždic: jedna dlaždice = jedna oblast, v ní čtyři prezidenti jednou barvou, hodnota u pruhu."""
+    for r in rows:
+        r['p'] = r['prezident'].split()[-1]
+    enc_y = {'field': 'p', 'type': 'nominal', 'title': None, 'sort': PREZ,
+             'axis': {'ticks': False, 'domain': False, 'labelFontSize': 12, 'labelPadding': 4}}
+    tooltip = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
+               {'field': 'počet', 'title': pocet_title}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'}]
+    if any('jména' in r for r in rows):
+        tooltip.append({'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'})
+    return {
+        'title': {'text': title, 'subtitle': subtitle},
+        '_source': SRC,
+        'data': {'values': rows},
+        'facet': {'field': 'obor', 'type': 'nominal', 'title': None, 'sort': order,
+                  'header': {'labelFontSize': 13, 'labelFontWeight': 'bold', 'labelAnchor': 'start',
+                             'labelLimit': 220, 'labelColor': '#101432'}},
+        'columns': 2,
+        'spacing': {'row': 12, 'column': 16},
+        'spec': {
+            'width': 150, 'height': 72,
+            'layer': [
+                {'mark': {'type': 'bar', 'color': '#4c4f8e', 'height': {'band': 0.72}, 'cornerRadiusEnd': 2},
+                 'encoding': {'y': enc_y,
+                              'x': {'field': 'podíl', 'type': 'quantitative', 'title': None, 'axis': None,
+                                    'scale': {'domain': [0, max(r['podíl'] for r in rows)]}},
+                              'tooltip': tooltip}},
+                {'mark': {'type': 'text', 'align': 'left', 'dx': 3, 'fontSize': 11, 'color': '#101432'},
+                 'encoding': {'y': enc_y, 'x': {'field': 'podíl', 'type': 'quantitative'},
+                              'text': {'field': 'podíl', 'format': '.0%'}, 'tooltip': tooltip}},
+            ],
+        },
+        'resolve': {'axis': {'y': 'independent'}},
+    }
+
 # obory podle prezidentů – malé násobky (vodorovné pruhy)
 obor_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in R).most_common()]
-save('graf_obory.json', {
-    'title': {'text': 'Klaus vyznamenával disidenty, Zeman podnikatele',
-              'subtitle': 'Podíl oblastí, za které lidé vyznamenání dostali, ze všech vyznamenání daného prezidenta, 1995–2025. Oblast určila redakce podle životopisu vyznamenaného.'},
-    '_source': SRC,
-    '_toggle_legend': True,
-    'width': 'container', 'height': 46 * len(obor_order),
-    'data': {'values': obor_rows},
-    'mark': {'type': 'bar', 'height': {'band': 0.85}},
-    'encoding': {
-        'y': {'field': 'obor', 'type': 'nominal', 'title': None, 'sort': obor_order,
-              'axis': {'ticks': False, 'domain': False, 'labelLimit': 230}},
-        'yOffset': {'field': 'prezident', 'sort': [PREZ_LABEL[p] for p in PREZ]},
-        'x': {'field': 'podíl', 'type': 'quantitative', 'title': None,
-              'axis': {'format': '.0%', 'gridColor': '#e8e3d2'}},
-        'color': {'field': 'prezident', 'type': 'nominal', 'title': None,
-                  'scale': {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]},
-                  'legend': None},
-        'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
-                    {'field': 'počet', 'title': 'Vyznamenání'}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'}],
-    },
-})
+save('graf_obory.json', dlazdice(
+    obor_rows, obor_order, 'Klaus vyznamenával disidenty, Zeman podnikatele',
+    'Podíl oblastí, za které lidé vyznamenání dostali, ze všech vyznamenání daného prezidenta, 1995–2025. '
+    'Oblast určila redakce podle životopisu vyznamenaného.', 'Vyznamenání'))
 # řády podle oborů – s jmény v tooltipu (dva sloupce, † = in memoriam)
 def jmena(lide):
     j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
@@ -357,24 +376,10 @@ for p in PREZ:
                          'podíl': round(len(lide) / len(s_), 4), 'celkem': len(s_), 'jména': jmena(lide)})
 rad_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in RADY).most_common()]
 PREZ_SCALE = {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]}
-save('graf_rady.json', {
-    'title': {'text': 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
-              'subtitle': 'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka, podíl ze všech jeho řádů, 1995–2025. Oblast určila redakce podle životopisu vyznamenaného. Po najetí na pruh se ukážou jména.'},
-    '_source': SRC, '_toggle_legend': True,
-    'width': 'container', 'height': 46 * len(rad_order),
-    'data': {'values': rad_rows},
-    'mark': {'type': 'bar', 'height': {'band': 0.85}},
-    'encoding': {
-        'y': {'field': 'obor', 'type': 'nominal', 'title': None, 'sort': rad_order,
-              'axis': {'ticks': False, 'domain': False, 'labelLimit': 230}},
-        'yOffset': {'field': 'prezident', 'sort': [PREZ_LABEL[p] for p in PREZ]},
-        'x': {'field': 'podíl', 'type': 'quantitative', 'title': None, 'axis': {'format': '.0%', 'gridColor': '#e8e3d2'}},
-        'color': {'field': 'prezident', 'type': 'nominal', 'title': None, 'legend': None, 'scale': PREZ_SCALE},
-        'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
-                    {'field': 'počet', 'title': 'Řádů'}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'},
-                    {'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'}],
-    },
-})
+save('graf_rady.json', dlazdice(
+    rad_rows, rad_order, 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
+    'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka, podíl ze všech jeho řádů, 1995–2025. '
+    'Po najetí na pruh se ukážou jména.', 'Řádů'))
 
 # varianta: počty řádů podle funkčních období (sloupce, 1. a 2. období přes sebe)
 say(chr(10) + '## Řády podle funkčních období')

@@ -5,9 +5,6 @@
   "subtitle": "Podíl oblastí, za které lidé vyznamenání dostali, ze všech vyznamenání daného prezidenta, 1995–2025. Oblast určila redakce podle životopisu vyznamenaného."
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
- "_toggle_legend": true,
- "width": "container",
- "height": 690,
  "data": {
   "values": [
    {
@@ -15,500 +12,626 @@
     "obor": "armáda, policie, záchranáři",
     "počet": 50,
     "podíl": 0.0971,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "válka a protinacistický odboj",
     "počet": 98,
     "podíl": 0.1903,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "občanská společnost a krajané",
     "počet": 19,
     "podíl": 0.0369,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "věda a vzdělávání",
     "počet": 49,
     "podíl": 0.0951,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "politika, stát a justice",
     "počet": 28,
     "podíl": 0.0544,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "kultura a umění",
     "počet": 101,
     "podíl": 0.1961,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "žurnalistika",
     "počet": 11,
     "podíl": 0.0214,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "církev",
     "počet": 33,
     "podíl": 0.0641,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "protikomunistický odboj a disent",
     "počet": 37,
     "podíl": 0.0718,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "sport",
     "počet": 8,
     "podíl": 0.0155,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "zahraniční státníci",
     "počet": 25,
     "podíl": 0.0485,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "medicína",
     "počet": 10,
     "podíl": 0.0194,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "nezjištěno",
     "počet": 37,
     "podíl": 0.0718,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "statečný čin civilisty",
     "počet": 8,
     "podíl": 0.0155,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Havel",
     "obor": "podnikání",
     "počet": 1,
     "podíl": 0.0019,
-    "celkem": 515
+    "celkem": 515,
+    "p": "Havel"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "statečný čin civilisty",
     "počet": 7,
     "podíl": 0.0266,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "armáda, policie, záchranáři",
     "počet": 7,
     "podíl": 0.0266,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "kultura a umění",
     "počet": 64,
     "podíl": 0.2433,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "sport",
     "počet": 13,
     "podíl": 0.0494,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "zahraniční státníci",
     "počet": 10,
     "podíl": 0.038,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "věda a vzdělávání",
     "počet": 37,
     "podíl": 0.1407,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "občanská společnost a krajané",
     "počet": 15,
     "podíl": 0.057,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "protikomunistický odboj a disent",
     "počet": 38,
     "podíl": 0.1445,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "nezjištěno",
     "počet": 5,
     "podíl": 0.019,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "medicína",
     "počet": 18,
     "podíl": 0.0684,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "politika, stát a justice",
     "počet": 6,
     "podíl": 0.0228,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "válka a protinacistický odboj",
     "počet": 27,
     "podíl": 0.1027,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "církev",
     "počet": 12,
     "podíl": 0.0456,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Václav Klaus",
     "obor": "podnikání",
     "počet": 4,
     "podíl": 0.0152,
-    "celkem": 263
+    "celkem": 263,
+    "p": "Klaus"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "kultura a umění",
     "počet": 79,
     "podíl": 0.1881,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "věda a vzdělávání",
     "počet": 44,
     "podíl": 0.1048,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "podnikání",
     "počet": 33,
     "podíl": 0.0786,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "sport",
     "počet": 28,
     "podíl": 0.0667,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "medicína",
     "počet": 32,
     "podíl": 0.0762,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "občanská společnost a krajané",
     "počet": 27,
     "podíl": 0.0643,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "žurnalistika",
     "počet": 12,
     "podíl": 0.0286,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "politika, stát a justice",
     "počet": 25,
     "podíl": 0.0595,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "válka a protinacistický odboj",
     "počet": 57,
     "podíl": 0.1357,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "protikomunistický odboj a disent",
     "počet": 2,
     "podíl": 0.0048,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "zahraniční státníci",
     "počet": 27,
     "podíl": 0.0643,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "armáda, policie, záchranáři",
     "počet": 29,
     "podíl": 0.069,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "církev",
     "počet": 8,
     "podíl": 0.019,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "statečný čin civilisty",
     "počet": 14,
     "podíl": 0.0333,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Miloš Zeman",
     "obor": "nezjištěno",
     "počet": 3,
     "podíl": 0.0071,
-    "celkem": 420
+    "celkem": 420,
+    "p": "Zeman"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "válka a protinacistický odboj",
     "počet": 16,
     "podíl": 0.092,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "armáda, policie, záchranáři",
     "počet": 13,
     "podíl": 0.0747,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "statečný čin civilisty",
     "počet": 7,
     "podíl": 0.0402,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "věda a vzdělávání",
     "počet": 21,
     "podíl": 0.1207,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "občanská společnost a krajané",
     "počet": 13,
     "podíl": 0.0747,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "sport",
     "počet": 14,
     "podíl": 0.0805,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "kultura a umění",
     "počet": 45,
     "podíl": 0.2586,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "podnikání",
     "počet": 5,
     "podíl": 0.0287,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "medicína",
     "počet": 10,
     "podíl": 0.0575,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "politika, stát a justice",
     "počet": 9,
     "podíl": 0.0517,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "zahraniční státníci",
     "počet": 7,
     "podíl": 0.0402,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "protikomunistický odboj a disent",
     "počet": 7,
     "podíl": 0.0402,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "církev",
     "počet": 3,
     "podíl": 0.0172,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    },
    {
     "prezident": "Petr Pavel",
     "obor": "žurnalistika",
     "počet": 4,
     "podíl": 0.023,
-    "celkem": 174
+    "celkem": 174,
+    "p": "Pavel"
    }
   ]
  },
- "mark": {
-  "type": "bar",
-  "height": {
-   "band": 0.85
+ "facet": {
+  "field": "obor",
+  "type": "nominal",
+  "title": null,
+  "sort": [
+   "kultura a umění",
+   "válka a protinacistický odboj",
+   "věda a vzdělávání",
+   "armáda, policie, záchranáři",
+   "protikomunistický odboj a disent",
+   "občanská společnost a krajané",
+   "medicína",
+   "zahraniční státníci",
+   "politika, stát a justice",
+   "sport",
+   "církev",
+   "nezjištěno",
+   "podnikání",
+   "statečný čin civilisty",
+   "žurnalistika"
+  ],
+  "header": {
+   "labelFontSize": 13,
+   "labelFontWeight": "bold",
+   "labelAnchor": "start",
+   "labelLimit": 220,
+   "labelColor": "#101432"
   }
  },
- "encoding": {
-  "y": {
-   "field": "obor",
-   "type": "nominal",
-   "title": null,
-   "sort": [
-    "kultura a umění",
-    "válka a protinacistický odboj",
-    "věda a vzdělávání",
-    "armáda, policie, záchranáři",
-    "protikomunistický odboj a disent",
-    "občanská společnost a krajané",
-    "medicína",
-    "zahraniční státníci",
-    "politika, stát a justice",
-    "sport",
-    "církev",
-    "nezjištěno",
-    "podnikání",
-    "statečný čin civilisty",
-    "žurnalistika"
-   ],
-   "axis": {
-    "ticks": false,
-    "domain": false,
-    "labelLimit": 230
-   }
-  },
-  "yOffset": {
-   "field": "prezident",
-   "sort": [
-    "Václav Havel",
-    "Václav Klaus",
-    "Miloš Zeman",
-    "Petr Pavel"
-   ]
-  },
-  "x": {
-   "field": "podíl",
-   "type": "quantitative",
-   "title": null,
-   "axis": {
-    "format": ".0%",
-    "gridColor": "#e8e3d2"
-   }
-  },
-  "color": {
-   "field": "prezident",
-   "type": "nominal",
-   "title": null,
-   "scale": {
-    "domain": [
-     "Václav Havel",
-     "Václav Klaus",
-     "Miloš Zeman",
-     "Petr Pavel"
-    ],
-    "range": [
-     "#4a51ab",
-     "#de1743",
-     "#a47d03",
-     "#0e839e"
-    ]
-   },
-   "legend": null
-  },
-  "tooltip": [
+ "columns": 2,
+ "spacing": {
+  "row": 12,
+  "column": 16
+ },
+ "spec": {
+  "width": 150,
+  "height": 72,
+  "layer": [
    {
-    "field": "prezident",
-    "title": "Prezident"
+    "mark": {
+     "type": "bar",
+     "color": "#4c4f8e",
+     "height": {
+      "band": 0.72
+     },
+     "cornerRadiusEnd": 2
+    },
+    "encoding": {
+     "y": {
+      "field": "p",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+       "Havel",
+       "Klaus",
+       "Zeman",
+       "Pavel"
+      ],
+      "axis": {
+       "ticks": false,
+       "domain": false,
+       "labelFontSize": 12,
+       "labelPadding": 4
+      }
+     },
+     "x": {
+      "field": "podíl",
+      "type": "quantitative",
+      "title": null,
+      "axis": null,
+      "scale": {
+       "domain": [
+        0,
+        0.2586
+       ]
+      }
+     },
+     "tooltip": [
+      {
+       "field": "prezident",
+       "title": "Prezident"
+      },
+      {
+       "field": "obor",
+       "title": "Oblast"
+      },
+      {
+       "field": "počet",
+       "title": "Vyznamenání"
+      },
+      {
+       "field": "podíl",
+       "title": "Podíl",
+       "format": ".0%"
+      }
+     ]
+    }
    },
    {
-    "field": "obor",
-    "title": "Oblast"
-   },
-   {
-    "field": "počet",
-    "title": "Vyznamenání"
-   },
-   {
-    "field": "podíl",
-    "title": "Podíl",
-    "format": ".0%"
+    "mark": {
+     "type": "text",
+     "align": "left",
+     "dx": 3,
+     "fontSize": 11,
+     "color": "#101432"
+    },
+    "encoding": {
+     "y": {
+      "field": "p",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+       "Havel",
+       "Klaus",
+       "Zeman",
+       "Pavel"
+      ],
+      "axis": {
+       "ticks": false,
+       "domain": false,
+       "labelFontSize": 12,
+       "labelPadding": 4
+      }
+     },
+     "x": {
+      "field": "podíl",
+      "type": "quantitative"
+     },
+     "text": {
+      "field": "podíl",
+      "format": ".0%"
+     },
+     "tooltip": [
+      {
+       "field": "prezident",
+       "title": "Prezident"
+      },
+      {
+       "field": "obor",
+       "title": "Oblast"
+      },
+      {
+       "field": "počet",
+       "title": "Vyznamenání"
+      },
+      {
+       "field": "podíl",
+       "title": "Podíl",
+       "format": ".0%"
+      }
+     ]
+    }
    }
   ]
+ },
+ "resolve": {
+  "axis": {
+   "y": "independent"
+  }
  },
  "config": {
   "view": {
