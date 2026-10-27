@@ -11,24 +11,21 @@ tags: ["média", "svobodná média", "nezávislá média", "nezávislost médií
 promoted: 1
 ---
 
-Česká televize a Český rozhlas mají podle vládního návrhu přijít o poplatky a dostávat peníze přímo ze státního rozpočtu. Sněmovna návrh [v sobotu 24. října ve 4.36 ráno](https://www.irozhlas.cz/zpravy-domov/otazky-a-odpovedi-co-znamena-schvaleni-navrhu-o-koncesionarskych-poplatcich-a-co_2610241447_pik) po celonočním jednání schválila v prvním čtení a poslala do výboru pro média. Chceme k tomu jasně říct, kde stojíme.
+Česká televize a Český rozhlas mají podle vládního návrhu přijít o poplatky a dostávat peníze přímo ze státního rozpočtu. Sněmovna návrh [v sobotu 24. října ve 4.36 ráno](https://www.irozhlas.cz/zpravy-domov/otazky-a-odpovedi-co-znamena-schvaleni-navrhu-o-koncesionarskych-poplatcich-a-co_2610241447_pik) po celonočním jednání schválila v prvním čtení a poslala do výboru pro média. Chceme k tomu jasně říct, že jednoznačně stojíme za médii veřejné služby.
 
-Stojíme za médii veřejné služby. K České televizi i Českému rozhlasu jsme byli opakovaně kritičtí a budeme dál, protože víme, jakou roli hrají, a víme, že se umějí zlepšovat. Kritika od novinářů, diváků a posluchačů patří k jejich běžnému provozu a média veřejné služby ji unesou. Rozpočet, o jehož výši každý podzim rozhoduje vláda, je jiná věc: páka, kterou může použít kterákoli vláda, současná, příští i každá další.
+Žijeme v době, kdy se zpochybňuje i to, co je pravda, důvěra slábne a veřejný prostor čím dál víc ovládají politické a ekonomické zájmy. Silná, nezávislá a důvěryhodná média proto potřebujeme víc než kdy dřív.
 
-Naše výhrada se proto týká mechanismu a platila by stejně pro jakoukoli vládu. Médium, které si musí každý rok vyjednávat peníze s politiky, na něž má dohlížet, je v horší pozici než médium s financováním stanoveným zákonem na roky dopředu. Proto [evropské nařízení o svobodě médií (EMFA)](https://eur-lex.europa.eu/legal-content/CS/TXT/?uri=CELEX:32024R1083) v článku 5 žádá, aby členské státy zajistily médiím veřejné služby přiměřené, udržitelné a předvídatelné financování. Maďarsko, Polsko po roce 2015 i [Slovensko po přeměně RTVS na STVR](/clanek/kontext-2026-01-03-ceska-a-slovenska-media-2025) ukázaly, jak rychle se veřejná služba může změnit ve vládní hlásnou troubu.
+Vládní návrh sice [zapisuje částky přímo do zákona](https://vlada.gov.cz/cz/media-centrum/aktualne/vlada-andreje-babise-schvalila-navrh-na-zmenu-financovani-ceske-televize-a-ceskeho-rozhlasu-227533/): České televizi 5,74 miliardy korun a Českému rozhlasu 2,065 miliardy, [zhruba o miliardu, respektive o 400 milionů méně](https://www.echo24.cz/a/HgSyY/zpravy-domov-snemovna-v-noci-schvalila-v-prvnim-cteni-zruseni-poplatku-pro-ct-a-ccro), než letos vyberou na poplatcích. Navýšení o inflaci přijde až ve chvíli, kdy ceny od poslední úpravy vzrostou o více než deset procentních bodů. Peníze ale půjdou ze státního rozpočtu a zákon může kterákoli vládní většina kdykoli změnit, třeba spolu s rozpočtem na další rok. Médium, jehož peníze závisejí na politicích, na které má přitom zároveň dohlížet, je ve výrazně horší pozici než médium s financováním, na které vláda jen tak nedosáhne.
+
+K České televizi i Českému rozhlasu jsme byli opakovaně kritičtí a budeme dál. Víme ale, že zdravá média kritiku unesou a že se umějí zlepšovat.
+
+Kdyby byla média veřejné služby odkázaná na to, kolik jim vládní většina zrovna nechá v rozpočtu, dostala by se do závislosti na vládě, současné, příští i každé další. Právě to nám vadí: chceme, aby média veřejné služby na vládách ani na politickém establishmentu závislá nebyla. Mnohokrát jsme zaznamenali, že ČT nebo ČRo zakolísaly, a řadu věcí je potřeba zlepšit. Řešením ale není dostat je do područí vládnoucích politiků. Znamenalo by to konec nezávislého zpravodajství v takovém rozsahu.
 
 <SupportBanner />
 
-Za čím stojíme:
+Naše výhrada se proto týká mechanismu a platila by stejně pro jakoukoli vládu. I proto [evropské nařízení o svobodě médií (EMFA)](https://eur-lex.europa.eu/legal-content/CS/TXT/?uri=CELEX:32024R1083) v článku 5 žádá, aby členské státy zajistily médiím veřejné služby přiměřené, udržitelné a předvídatelné financování. Maďarsko, Polsko po roce 2015 i [Slovensko po přeměně RTVS na STVR](/clanek/kontext-2026-01-03-ceska-a-slovenska-media-2025) ukázaly, jak rychle se veřejná služba může změnit ve vládní hlásnou troubu.
 
-- **Financování mimo každoroční rozhodování vlády**, s valorizací, která drží krok s cenami a mzdami.
-- **Žádné škrty, které by ČT a ČRo donutily rušit pořady, redakce a zahraniční zpravodajství.**
-- **Rady a vedení, které politici nemohou po každých volbách přestavět.**
-- **Otevřená kritika obsahu,** včetně té naší.
-
-Každou korunu, kterou ČT a ČRo dostávají, považujeme za investici do budoucnosti našich dětí. Brzy zveřejníme vlastní propočet, kolik by jim podle návrhu reálně chybělo, a srovnání, jak financují média veřejné služby jinde v Evropě.
-
-**Kateřina Mahdalová & Michal Škop, DataTimes.cz**
+Stojíme proto za financováním, o kterém nerozhoduje každá nová vládní většina a které drží krok s cenami i mzdami. Za radami a vedením, které politici nemohou po každých volbách přestavět. A za otevřenou kritikou obsahu, včetně té naší, protože právě ta pomáhá médiím veřejné služby zlepšovat se.
 
 ![Kateřina Mahdalová a Michal Škop: Stojíme za médii veřejné služby](images/stojime-za-medii-verejne-sluzby-datatimes.webp)
 
