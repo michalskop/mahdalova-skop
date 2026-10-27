@@ -43,7 +43,7 @@ OBORY = {
     'veda': 'věda a vzdělávání',
     'medicina': 'medicína',
     'sport': 'sport',
-    'media': 'novinářství',
+    'media': 'žurnalistika',
     'politika': 'politika, stát a justice',
     'zahranicni_statnik': 'zahraniční státníci',
     'odboj_valka': 'válka a protinacistický odboj',
@@ -88,6 +88,24 @@ for r in rows:
     if r['jmeno'].startswith('Jan Dvořák') and r['rok'] == '2023' and r['druh'] == 'Medaile Za hrdinství':
         r['prezident'] = 'Zeman'
 
+# Ročník 2020: Zeman ho ohlásil 28. 10. 2020, kvůli covidu se nepředával a Hrad ho vede pod rokem 2021
+# (předáno spolu s ročníkem 2021 dne 7. 3. 2022). Rozdělujeme podle seznamu ohlášeného 28. 10. 2020
+# (e15: https://www.e15.cz/domaci/prezident-zeman-vyznamenal-romana-prymulu-nebo-karla-gotta-1374611);
+# Pavlu Rychetskému Zeman ohlášený Řád T. G. Masaryka neudělil, v seznamu Hradu není.
+ROCNIK_2020 = ['Karel Gott', 'Miloslav Masopust', 'František Chábera', 'Josef Koukal', 'Heliodor Píka',
+               'Roman Prymula', 'Jana Březinová', 'Petr Láng', 'Petr Lang', 'Vladimír Šupa', 'Petr Šnajdárek',
+               'Daniel Miklós', 'Martin Vondrášek', 'Jiří Běhounek', 'Peter Weiss', 'Karel Brückner', 'Jaroslav Falta',
+               'Václav Nedomanský', 'Karel Fiala', 'Josef Dvořák', 'Pavel Trávníček', 'Jožka Černý', 'Josef Černý', 'Jožka Šmukař', 'Josef Šmukař',
+               'Alena Štěpánková Veselá', 'Eva Erbenová', 'Václav Fanta', 'Eduard Stehlík', 'Petr Čornej',
+               'Petr Nováček', 'František Hezoučký', 'Jan Rýdl', 'Vladimír Dohnal', 'Radim Uzel', 'Jiří Jelínek',
+               'Jaroslav Matýs', 'Tan Trinh', 'Jiří Ošecký', 'Tomáš Cihlář']
+presunuto = []
+for r in rows:
+    if r['rok'] == '2021' and r['jmeno'].strip(' ,') in ROCNIK_2020:
+        r['rok'] = '2020'; presunuto.append(r['jmeno'].strip(' ,'))
+say(f'Ročník 2020 vrácen z roku 2021: {len(presunuto)} vyznamenání; nenalezeno:',
+    sorted(set(ROCNIK_2020) - set(presunuto)))
+
 # Čištění až po spojení s klasifikací (id musí sedět s dávkami): koncové čárky ve jménech,
 # zdvojený záznam v seznamu Hradu (Ilja Hradecký, ŘTGM 2023 je tam dvakrát).
 seen = set(); clean = []
@@ -109,8 +127,7 @@ with open(BASE / 'vstupy' / 'vyznamenani_1995_2026.csv', 'w', encoding='utf-8', 
 R = [r for r in rows if r['rok'] <= '2025']
 say(f'Analyzováno 1995–2025: {len(R)} vyznamenání')
 say('Rok 2026 v seznamu:', '; '.join(r['zaznam'] for r in rows if r['rok'] == '2026'))
-# Ročníky = roky, za které prezident vyznamenání oznámil. Za Zemana 10 (2013–2022): ročník 2020
-# se kvůli covidu nepředával a Hrad ho vede pod rokem 2021 (předáno spolu s 2021 dne 7. 3. 2022).
+# Ročníky = roky, za které prezident vyznamenání oznámil. Za Zemana 10 (2013–2022), včetně ročníku 2020.
 ceremonie = {'Havel': 8, 'Klaus': 10, 'Zeman': 10, 'Pavel': 3}
 say('Ročníky:', ceremonie)
 
@@ -201,7 +218,7 @@ pcolor = {'field': 'prezident', 'type': 'nominal', 'title': None,
 save('graf_roky.json', {
     'title': {'text': 'Klaus vyznamenával nejméně, Havel a Pavel nejvíc',
               'subtitle': 'Počet státních vyznamenání v daném roce (všechny čtyři druhy, včetně in memoriam a zahraničních státníků). '
-                          'Ročník 2020 se kvůli covidu nepředával, Hrad ho vede pod rokem 2021.'},
+                          'Ročník 2020 Zeman ohlásil, kvůli covidu ho ale předal až v březnu 2022 spolu s ročníkem 2021.'},
     '_source': SRC, '_toggle_legend': True,
     'width': 'container', 'height': 300,
     'data': {'values': rok_vals},
@@ -248,24 +265,47 @@ save('graf_druhy.json', {
 })
 
 # ženy po letech
+# ženy po letech – piktogramy: 20 postav na ročník, 1 postava = 5 % vyznamenaných, ženy dole
+ZENA_TEAL, MUZ_AMETYST = '#33b9d9', '#9f319e'  # brandTeal.4, brandAmethyst.6 (Kateřina 27. 10. 2026: světlejší)
+MUZ_SHAPE = 'M0,-1 A0.3,0.3 0 1 1 0,-0.4 A0.3,0.3 0 1 1 0,-1 Z M-0.8,1 L-0.8,0 Q-0.8,-0.32 -0.45,-0.32 L0.45,-0.32 Q0.8,-0.32 0.8,0 L0.8,1 Z'
+ZENA_SHAPE = 'M0,-1 A0.3,0.3 0 1 1 0,-0.4 A0.3,0.3 0 1 1 0,-1 Z M-0.35,-0.32 L0.35,-0.32 L0.95,0.7 L0.3,0.7 L0.3,1 L-0.3,1 L-0.3,0.7 L-0.95,0.7 Z'
+ikony = []
+for x in zr_rok:
+    zen = round(x['podíl'] * 20)
+    for i in range(20):
+        ikony.append({'rok': x['rok'], 'i': i, 'pohlaví': 'žena' if i < zen else 'muž',
+                      'ženy': x['ženy'], 'celkem': x['celkem'], 'podíl': x['podíl'], 'prezident': x['prezident']})
+hranice = [{'rok': '2003'}, {'rok': '2013'}, {'rok': '2023'}]
+jmena_prez = [{'rok': '1998', 'p': 'Havel'}, {'rok': '2007', 'p': 'Klaus'}, {'rok': '2017', 'p': 'Zeman'}, {'rok': '2024', 'p': 'Pavel'}]
+X = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS, 'paddingInner': 0.08},
+     'axis': {'labelAngle': 0, 'ticks': False, 'domain': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}}
 save('graf_zeny.json', {
-    'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENY}}} vyznamenaných, dřív bývaly sedminou',
-              'subtitle': 'Podíl žen mezi vyznamenanými osobami v daném roce. Ročník 2020 je kvůli covidu sloučený s rokem 2021.'},
-    '_source': SRC, '_toggle_legend': True,
-    'width': 'container', 'height': 260,
-    'data': {'values': zr_rok},
-    'mark': {'type': 'bar', 'width': {'band': 0.78}},
-    'encoding': {
-        'x': {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS,
-              'scale': {'domain': ALL_YEARS},
-              'axis': {'labelAngle': 0, 'ticks': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}},
-        'y': {'field': 'podíl', 'type': 'quantitative', 'title': None,
-              'axis': {'format': '.0%', 'gridColor': '#e8e3d2'}, 'scale': {'domain': [0, 0.4]}},
-        'color': {**pcolor, 'legend': None},
-        'tooltip': [{'field': 'rok', 'title': 'Rok'}, {'field': 'ženy', 'title': 'Žen'},
-                    {'field': 'celkem', 'title': 'Vyznamenaných osob'},
-                    {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'}],
-    },
+    'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
+              'subtitle': 'Podíl žen mezi vyznamenanými v daném ročníku. Jedna postava = 5 % vyznamenaných, tyrkysově ženy, fialově muži.'},
+    '_source': SRC,
+    'width': 'container', 'height': 380,
+    'layer': [
+        {'data': {'values': ikony},
+         'mark': {'type': 'point', 'filled': True, 'opacity': 1},
+         'encoding': {
+             'x': X,
+             'y': {'field': 'i', 'type': 'ordinal', 'title': None, 'sort': 'descending', 'axis': None,
+                   'scale': {'paddingInner': 0.12}},
+             'shape': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
+                       'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_SHAPE, MUZ_SHAPE]}},
+             'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
+                       'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
+             'size': {'value': 150},
+             'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'ženy', 'title': 'Žen'},
+                         {'field': 'celkem', 'title': 'Vyznamenaných osob'},
+                         {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'}]}},
+        {'data': {'values': hranice},
+         'mark': {'type': 'rule', 'color': '#101432', 'strokeDash': [3, 3], 'strokeWidth': 1},
+         'encoding': {'x': {**X, 'bandPosition': 0}}},
+        {'data': {'values': jmena_prez},
+         'mark': {'type': 'text', 'dy': -202, 'fontSize': 13, 'fontWeight': 'bold', 'color': '#101432'},
+         'encoding': {'x': {**X, 'bandPosition': 0.5}, 'text': {'field': 'p'}}},
+    ],
 })
 
 # obory podle prezidentů – malé násobky (vodorovné pruhy)
@@ -291,18 +331,35 @@ save('graf_obory.json', {
                     {'field': 'počet', 'title': 'Vyznamenání'}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'}],
     },
 })
-# řády podle oborů
+# řády podle oborů – s jmény v tooltipu (dva sloupce, † = in memoriam)
+def jmena(lide):
+    j = sorted(f"{r['jmeno']}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
+    if len(j) <= 6:
+        return chr(10).join(j)
+    half = (len(j) + 1) // 2
+    return chr(10).join(f"{a}{chr(9)}{j[half + i] if half + i < len(j) else ''}" for i, a in enumerate(j[:half]))
+
+def obdobi(r):
+    """Funkční období, ve kterém prezident vyznamenání udělil (podle roku 28. října)."""
+    y = int(r['rok'])
+    return {'Havel': '1. období' if y <= 1997 else '2. období',
+            'Klaus': '1. období' if y <= 2007 else '2. období',
+            'Zeman': '1. období' if y <= 2017 else '2. období',
+            'Pavel': '1. období'}[r['prezident']]
+
+RADY = [r for r in R if r['druh'].startswith('Řád')]
 rad_rows = []
 for p in PREZ:
-    s_ = [r for r in R if r['prezident'] == p and r['druh'].startswith('Řád')]
-    c = Counter(r['obor'] for r in s_)
-    for o, n in c.items():
-        rad_rows.append({'prezident': PREZ_LABEL[p], 'obor': OBORY[o], 'počet': n,
-                         'podíl': round(n / len(s_), 4), 'celkem': len(s_)})
-rad_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in R if r['druh'].startswith('Řád')).most_common()]
+    s_ = [r for r in RADY if r['prezident'] == p]
+    for o in sorted({r['obor'] for r in s_}):
+        lide = [r for r in s_ if r['obor'] == o]
+        rad_rows.append({'prezident': PREZ_LABEL[p], 'obor': OBORY[o], 'počet': len(lide),
+                         'podíl': round(len(lide) / len(s_), 4), 'celkem': len(s_), 'jména': jmena(lide)})
+rad_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in RADY).most_common()]
+PREZ_SCALE = {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]}
 save('graf_rady.json', {
     'title': {'text': 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
-              'subtitle': 'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka, podíl ze všech jeho řádů, 1995–2025. Oblast určila redakce podle životopisu vyznamenaného.'},
+              'subtitle': 'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka, podíl ze všech jeho řádů, 1995–2025. Oblast určila redakce podle životopisu vyznamenaného. Po najetí na pruh se ukážou jména.'},
     '_source': SRC, '_toggle_legend': True,
     'width': 'container', 'height': 46 * len(rad_order),
     'data': {'values': rad_rows},
@@ -312,10 +369,61 @@ save('graf_rady.json', {
               'axis': {'ticks': False, 'domain': False, 'labelLimit': 230}},
         'yOffset': {'field': 'prezident', 'sort': [PREZ_LABEL[p] for p in PREZ]},
         'x': {'field': 'podíl', 'type': 'quantitative', 'title': None, 'axis': {'format': '.0%', 'gridColor': '#e8e3d2'}},
-        'color': {'field': 'prezident', 'type': 'nominal', 'title': None, 'legend': None,
-                  'scale': {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]}},
+        'color': {'field': 'prezident', 'type': 'nominal', 'title': None, 'legend': None, 'scale': PREZ_SCALE},
         'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'obor', 'title': 'Oblast'},
-                    {'field': 'počet', 'title': 'Řádů'}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'}],
+                    {'field': 'počet', 'title': 'Řádů'}, {'field': 'podíl', 'title': 'Podíl', 'format': '.0%'},
+                    {'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'}],
+    },
+})
+
+# varianta: počty řádů podle funkčních období (sloupce, 1. a 2. období přes sebe)
+say(chr(10) + '## Řády podle funkčních období')
+ob_rows = []
+for p in PREZ:
+    for ob in ['1. období', '2. období']:
+        s_ = [r for r in RADY if r['prezident'] == p and obdobi(r) == ob]
+        if not s_:
+            continue
+        say(f"{p} {ob}: {len(s_)} řádů; " + '; '.join(f'{OBORY[o]} {n}' for o, n in Counter(r['obor'] for r in s_).most_common()))
+        for o in sorted({r['obor'] for r in s_}):
+            lide = [r for r in s_ if r['obor'] == o]
+            ob_rows.append({'prezident': PREZ_LABEL[p], 'období': ob, 'obor': OBORY[o], 'počet': len(lide),
+                            '_lide': lide})
+top_obory = rad_order[:6]
+slouceno = {}
+for r in ob_rows:
+    o = r['obor'] if r['obor'] in top_obory else 'ostatní'
+    k = (r['prezident'], r['období'], o)
+    if k in slouceno:
+        slouceno[k]['počet'] += r['počet']
+        slouceno[k]['_lide'] += r['_lide']
+    else:
+        slouceno[k] = {**r, 'obor': o}
+ob_rows = []
+for v in slouceno.values():
+    v['jména'] = jmena(v.pop('_lide'))
+    ob_rows.append(v)
+save('graf_rady_obdobi.json', {
+    'title': {'text': 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
+              'subtitle': 'Počet řádů Bílého lva a T. G. Masaryka podle oblasti a funkčního období, 1995–2025. '
+                          'Plná barva = první funkční období, světlejší = druhé. Pavlovi běží první období.'},
+    '_source': SRC, '_toggle_legend': True,
+    'width': 'container', 'height': 300,
+    'data': {'values': ob_rows},
+    'mark': {'type': 'bar', 'width': {'band': 0.9}, 'stroke': '#f8f6f0', 'strokeWidth': 0.5},
+    'encoding': {
+        'x': {'field': 'obor', 'type': 'nominal', 'title': None, 'sort': top_obory + ['ostatní'],
+              'axis': {'labelAngle': 0, 'ticks': False, 'labelLimit': 110, 'labelExpr': "split(datum.label, ' ')"}},
+        'xOffset': {'field': 'prezident', 'sort': [PREZ_LABEL[p] for p in PREZ]},
+        'y': {'field': 'počet', 'type': 'quantitative', 'title': None, 'stack': 'zero',
+              'axis': {'gridColor': '#e8e3d2', 'tickMinStep': 5}},
+        'color': {'field': 'prezident', 'type': 'nominal', 'title': None, 'legend': None, 'scale': PREZ_SCALE},
+        'opacity': {'field': 'období', 'type': 'nominal', 'legend': None,
+                    'scale': {'domain': ['1. období', '2. období'], 'range': [1, 0.45]}},
+        'order': {'field': 'období'},
+        'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'období', 'title': 'Funkční období'},
+                    {'field': 'obor', 'title': 'Oblast'}, {'field': 'počet', 'title': 'Řádů'},
+                    {'field': 'jména', 'title': 'Vyznamenaní († in memoriam)'}],
     },
 })
 print('grafy uloženy do', DATA)

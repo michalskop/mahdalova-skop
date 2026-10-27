@@ -54,7 +54,7 @@
    },
    {
     "prezident": "Václav Havel",
-    "obor": "novinářství",
+    "obor": "žurnalistika",
     "počet": 11,
     "podíl": 0.0214,
     "celkem": 515
@@ -257,7 +257,7 @@
    },
    {
     "prezident": "Miloš Zeman",
-    "obor": "novinářství",
+    "obor": "žurnalistika",
     "počet": 12,
     "podíl": 0.0286,
     "celkem": 420
@@ -411,7 +411,7 @@
    },
    {
     "prezident": "Petr Pavel",
-    "obor": "novinářství",
+    "obor": "žurnalistika",
     "počet": 4,
     "podíl": 0.023,
     "celkem": 174
@@ -444,7 +444,7 @@
     "nezjištěno",
     "podnikání",
     "statečný čin civilisty",
-    "novinářství"
+    "žurnalistika"
    ],
    "axis": {
     "ticks": false,

@@ -21,13 +21,13 @@ Vycházíme z oficiálních seznamů vyznamenaných, které Kancelář prezident
 
 <RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["kontext-2026-10-05-vaclav-havel-odkaz-vyroci-90-let", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen"]} />Nejštědřejší byl Václav Havel. Za osm ročníků vyznamenal 515 lidí, v průměru 64 ročně, a v roce 1998 jich bylo v seznamu Hradu 106, nejvíc za celé období. Václav Klaus, který tehdy jako předseda Sněmovny Havlovy počty [kritizoval](https://ct24.ceskatelevize.cz/clanek/domaci/statni-vyznamenani-obdrzi-bohdalova-remek-ci-in-memoriam-petr-kellner-27862), pak jako prezident uděloval 21 až 28 vyznamenání ročně, výjimkou byl jen první rok s 54. Za deset let jich rozdal 263.
 
-Miloš Zeman začínal na 30 vyznamenaných a skončil na 78, nejvíc od Havlova roku 2002. Za deset ročníků jich udělil 420. Ročník 2020 se kvůli covidu nepředával, v roce 2021 ležel Zeman v nemocnici a obě skupiny dostaly vyznamenání [až 7. března 2022](https://cnn.iprima.cz/zeman-po-dvou-letech-predal-statni-vyznamenani-zastal-se-bohdalove-oceni-zelenskeho-83929). Hrad je proto vede společně pod rokem 2021. Petr Pavel vyznamenává v průměru 58 lidí ročně, nejvíc od Havla.
+Miloš Zeman začínal na 30 vyznamenaných a skončil na 78, nejvíc od Havlova roku 2002. Za deset ročníků jich udělil 420. Ročník 2020 Zeman [ohlásil 28. října 2020](https://www.e15.cz/domaci/prezident-zeman-vyznamenal-romana-prymulu-nebo-karla-gotta-1374611), ceremonii ale kvůli covidu zrušil. V roce 2021 ležel v den svátku v nemocnici a obě skupiny dostaly vyznamenání [až 7. března 2022](https://cnn.iprima.cz/zeman-po-dvou-letech-predal-statni-vyznamenani-zastal-se-bohdalove-oceni-zelenskeho-83929). Hrad je proto vede společně pod rokem 2021, my je v grafech rozdělujeme podle roku ohlášení. Petr Pavel vyznamenává v průměru 58 lidí ročně, nejvíc od Havla.
 
 Počet sám o sobě nic neříká o kvalitě výběru. [Zákon o státních vyznamenáních](https://www.zakonyprolidi.cz/cs/1994-157) u každého řádu a medaile jen obecně popisuje, za jaké zásluhy se uděluje. Prezident vybírá z návrhů vlády, Sněmovny, Senátu i veřejnosti a [na doporučení nemusí brát ohled](https://www.novinky.cz/clanek/domaci-kaplickeho-ani-masiny-poslanci-klausovi-nedoporucili-29630). O tom, koho chtěl prezident ocenit, proto víc řekne složení vyznamenaných než jejich počet.
 
 ## Ženy byly mezi vyznamenanými sedminou, za Pavla čtvrtinou
 
-Podíl žen se za třicet let skoro neměnil. Za Havla byl 12 %, za Klause 17 %, za Zemana 15 %. Výkyvy mezi jednotlivými roky jsou velké, protože v malém ročníku stačí dvě tři ženy navíc. V roce 2005 dostaly vyznamenání dvě ženy z 22 oceněných, v roce 2021 pět z 66. Až od roku 2023 nespadl podíl žen pod čtvrtinu: 16 z 65, 20 z 59 a 13 z 51.
+Podíl žen se za třicet let skoro neměnil. Za Havla byl 12 %, za Klause 17 %, za Zemana 15 %. Výkyvy mezi jednotlivými roky jsou velké, protože v malém ročníku stačí dvě tři ženy navíc. V roce 2005 dostaly vyznamenání dvě ženy z 22 oceněných, v roce 2021 dvě z 29. Až od roku 2023 nespadl podíl žen pod čtvrtinu: 16 z 65, 20 z 59 a 13 z 51.
 
 <VegaChart dataFile="data/graf_zeny.json" />
 
@@ -56,6 +56,8 @@ Zeman také vyznamenával častěji než ostatní posmrtně. In memoriam dostalo
 Řád Bílého lva a Řád T. G. Masaryka tvoří zhruba čtvrtinu všech vyznamenání. U nich jsou rozdíly mezi prezidenty nejostřejší.
 
 <VegaChart dataFile="data/graf_rady.json" />
+
+<VegaChart dataFile="data/graf_rady_obdobi.json" />
 
 Klaus udělil 34 ze svých 85 řádů lidem, kteří odporovali komunistickému režimu, tedy 40 %. Dalších 27 řádů dostali účastníci odboje proti nacistům a vojáci z druhé světové války. Zeman dal skoro třetinu řádů, 26 z 86, zahraničním státníkům a diplomatům. Vedle hlav států jako Joachim Gauck nebo Andrzej Duda je dostali bývalý rakouský kancléř Franz Vranitzky, slovenský premiér Robert Fico, bývalý německý kancléř Gerhard Schröder nebo srbský prezident Aleksandar Vučić. U Pavla připadá na zahraniční státníky sedm ze 40 řádů, většinou panovníkům a prezidentům při státních návštěvách.
 

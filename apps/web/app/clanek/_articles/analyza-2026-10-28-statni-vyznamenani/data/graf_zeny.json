@@ -1,367 +1,5971 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Za Pavla jsou ženy {víc než čtvrtinou|#f76800} vyznamenaných, dřív bývaly sedminou",
-  "subtitle": "Podíl žen mezi vyznamenanými osobami v daném roce. Ročník 2020 je kvůli covidu sloučený s rokem 2021."
+  "text": "Za Pavla jsou ženy {víc než čtvrtinou|#33b9d9} vyznamenaných, dřív bývaly sedminou",
+  "subtitle": "Podíl žen mezi vyznamenanými v daném ročníku. Jedna postava = 5 % vyznamenaných, tyrkysově ženy, fialově muži."
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
- "_toggle_legend": true,
  "width": "container",
- "height": 260,
- "data": {
-  "values": [
-   {
-    "rok": "1995",
-    "prezident": "Václav Havel",
-    "ženy": 4,
-    "celkem": 55,
-    "podíl": 0.073
-   },
-   {
-    "rok": "1996",
-    "prezident": "Václav Havel",
-    "ženy": 4,
-    "celkem": 66,
-    "podíl": 0.061
-   },
-   {
-    "rok": "1997",
-    "prezident": "Václav Havel",
-    "ženy": 9,
-    "celkem": 70,
-    "podíl": 0.129
-   },
-   {
-    "rok": "1998",
-    "prezident": "Václav Havel",
-    "ženy": 15,
-    "celkem": 106,
-    "podíl": 0.142
-   },
-   {
-    "rok": "1999",
-    "prezident": "Václav Havel",
-    "ženy": 5,
-    "celkem": 36,
-    "podíl": 0.139
-   },
-   {
-    "rok": "2000",
-    "prezident": "Václav Havel",
-    "ženy": 7,
-    "celkem": 42,
-    "podíl": 0.167
-   },
-   {
-    "rok": "2001",
-    "prezident": "Václav Havel",
-    "ženy": 9,
-    "celkem": 48,
-    "podíl": 0.188
-   },
-   {
-    "rok": "2002",
-    "prezident": "Václav Havel",
-    "ženy": 9,
-    "celkem": 91,
-    "podíl": 0.099
-   },
-   {
-    "rok": "2003",
-    "prezident": "Václav Klaus",
-    "ženy": 12,
-    "celkem": 53,
-    "podíl": 0.226
-   },
-   {
-    "rok": "2004",
-    "prezident": "Václav Klaus",
-    "ženy": 3,
-    "celkem": 22,
-    "podíl": 0.136
-   },
-   {
-    "rok": "2005",
-    "prezident": "Václav Klaus",
-    "ženy": 2,
-    "celkem": 22,
-    "podíl": 0.091
-   },
-   {
-    "rok": "2006",
-    "prezident": "Václav Klaus",
-    "ženy": 5,
-    "celkem": 22,
-    "podíl": 0.227
-   },
-   {
-    "rok": "2007",
-    "prezident": "Václav Klaus",
-    "ženy": 3,
-    "celkem": 24,
-    "podíl": 0.125
-   },
-   {
-    "rok": "2008",
-    "prezident": "Václav Klaus",
-    "ženy": 4,
-    "celkem": 28,
-    "podíl": 0.143
-   },
-   {
-    "rok": "2009",
-    "prezident": "Václav Klaus",
-    "ženy": 5,
-    "celkem": 24,
-    "podíl": 0.208
-   },
-   {
-    "rok": "2010",
-    "prezident": "Václav Klaus",
-    "ženy": 5,
-    "celkem": 23,
-    "podíl": 0.217
-   },
-   {
-    "rok": "2011",
-    "prezident": "Václav Klaus",
-    "ženy": 3,
-    "celkem": 21,
-    "podíl": 0.143
-   },
-   {
-    "rok": "2012",
-    "prezident": "Václav Klaus",
-    "ženy": 3,
-    "celkem": 22,
-    "podíl": 0.136
-   },
-   {
-    "rok": "2013",
-    "prezident": "Miloš Zeman",
-    "ženy": 6,
-    "celkem": 30,
-    "podíl": 0.2
-   },
-   {
-    "rok": "2014",
-    "prezident": "Miloš Zeman",
-    "ženy": 10,
-    "celkem": 38,
-    "podíl": 0.263
-   },
-   {
-    "rok": "2015",
-    "prezident": "Miloš Zeman",
-    "ženy": 5,
-    "celkem": 36,
-    "podíl": 0.139
-   },
-   {
-    "rok": "2016",
-    "prezident": "Miloš Zeman",
-    "ženy": 5,
-    "celkem": 38,
-    "podíl": 0.132
-   },
-   {
-    "rok": "2017",
-    "prezident": "Miloš Zeman",
-    "ženy": 11,
-    "celkem": 49,
-    "podíl": 0.224
-   },
-   {
-    "rok": "2018",
-    "prezident": "Miloš Zeman",
-    "ženy": 8,
-    "celkem": 42,
-    "podíl": 0.19
-   },
-   {
-    "rok": "2019",
-    "prezident": "Miloš Zeman",
-    "ženy": 6,
-    "celkem": 42,
-    "podíl": 0.143
-   },
-   {
-    "rok": "2021",
-    "prezident": "Miloš Zeman",
-    "ženy": 5,
-    "celkem": 66,
-    "podíl": 0.076
-   },
-   {
-    "rok": "2022",
-    "prezident": "Miloš Zeman",
-    "ženy": 8,
-    "celkem": 78,
-    "podíl": 0.103
-   },
-   {
-    "rok": "2023",
-    "prezident": "Petr Pavel",
-    "ženy": 16,
-    "celkem": 65,
-    "podíl": 0.246
-   },
-   {
-    "rok": "2024",
-    "prezident": "Petr Pavel",
-    "ženy": 20,
-    "celkem": 59,
-    "podíl": 0.339
-   },
-   {
-    "rok": "2025",
-    "prezident": "Petr Pavel",
-    "ženy": 13,
-    "celkem": 51,
-    "podíl": 0.255
-   }
-  ]
- },
- "mark": {
-  "type": "bar",
-  "width": {
-   "band": 0.78
-  }
- },
- "encoding": {
-  "x": {
-   "field": "rok",
-   "type": "ordinal",
-   "title": null,
-   "sort": [
-    "1995",
-    "1996",
-    "1997",
-    "1998",
-    "1999",
-    "2000",
-    "2001",
-    "2002",
-    "2003",
-    "2004",
-    "2005",
-    "2006",
-    "2007",
-    "2008",
-    "2009",
-    "2010",
-    "2011",
-    "2012",
-    "2013",
-    "2014",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020",
-    "2021",
-    "2022",
-    "2023",
-    "2024",
-    "2025"
-   ],
-   "scale": {
-    "domain": [
-     "1995",
-     "1996",
-     "1997",
-     "1998",
-     "1999",
-     "2000",
-     "2001",
-     "2002",
-     "2003",
-     "2004",
-     "2005",
-     "2006",
-     "2007",
-     "2008",
-     "2009",
-     "2010",
-     "2011",
-     "2012",
-     "2013",
-     "2014",
-     "2015",
-     "2016",
-     "2017",
-     "2018",
-     "2019",
-     "2020",
-     "2021",
-     "2022",
-     "2023",
-     "2024",
-     "2025"
+ "height": 380,
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "1995",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 1,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1995",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 55,
+      "podíl": 0.073,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 1,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 66,
+      "podíl": 0.061,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 70,
+      "podíl": 0.129,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 15,
+      "celkem": 106,
+      "podíl": 0.142,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 7,
+      "celkem": 42,
+      "podíl": 0.167,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 48,
+      "podíl": 0.188,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 9,
+      "celkem": 91,
+      "podíl": 0.099,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2003",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 4,
+      "pohlaví": "žena",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2003",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 12,
+      "celkem": 53,
+      "podíl": 0.226,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2004",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 22,
+      "podíl": 0.091,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 4,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 22,
+      "podíl": 0.227,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 24,
+      "podíl": 0.125,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 4,
+      "celkem": 28,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 24,
+      "podíl": 0.208,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 23,
+      "podíl": 0.217,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 21,
+      "podíl": 0.143,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 22,
+      "podíl": 0.136,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2013",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2013",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 30,
+      "podíl": 0.2,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 4,
+      "pohlaví": "žena",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 10,
+      "celkem": 38,
+      "podíl": 0.263,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 36,
+      "podíl": 0.139,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 5,
+      "celkem": 38,
+      "podíl": 0.132,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 11,
+      "celkem": 49,
+      "podíl": 0.224,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 42,
+      "podíl": 0.19,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 6,
+      "celkem": 42,
+      "podíl": 0.143,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 3,
+      "celkem": 37,
+      "podíl": 0.081,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 1,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 2,
+      "celkem": 29,
+      "podíl": 0.069,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 2,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 3,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 4,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 8,
+      "celkem": 78,
+      "podíl": 0.103,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2023",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 4,
+      "pohlaví": "žena",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2023",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 16,
+      "celkem": 65,
+      "podíl": 0.246,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 4,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 5,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 6,
+      "pohlaví": "žena",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2024",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 20,
+      "celkem": 59,
+      "podíl": 0.339,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 0,
+      "pohlaví": "žena",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 1,
+      "pohlaví": "žena",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 2,
+      "pohlaví": "žena",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 3,
+      "pohlaví": "žena",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 4,
+      "pohlaví": "žena",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 5,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 6,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 7,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 8,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 9,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 10,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 11,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 12,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 13,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 14,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 15,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 16,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 17,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 18,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "i": 19,
+      "pohlaví": "muž",
+      "ženy": 13,
+      "celkem": 51,
+      "podíl": 0.255,
+      "prezident": "Petr Pavel"
+     }
     ]
    },
-   "axis": {
-    "labelAngle": 0,
-    "ticks": false,
-    "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
-   }
-  },
-  "y": {
-   "field": "podíl",
-   "type": "quantitative",
-   "title": null,
-   "axis": {
-    "format": ".0%",
-    "gridColor": "#e8e3d2"
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 1
    },
-   "scale": {
-    "domain": [
-     0,
-     0.4
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ],
+      "paddingInner": 0.08
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "domain": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     }
+    },
+    "y": {
+     "field": "i",
+     "type": "ordinal",
+     "title": null,
+     "sort": "descending",
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.12
+     }
+    },
+    "shape": {
+     "field": "pohlaví",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "žena",
+       "muž"
+      ],
+      "range": [
+       "M0,-1 A0.3,0.3 0 1 1 0,-0.4 A0.3,0.3 0 1 1 0,-1 Z M-0.35,-0.32 L0.35,-0.32 L0.95,0.7 L0.3,0.7 L0.3,1 L-0.3,1 L-0.3,0.7 L-0.95,0.7 Z",
+       "M0,-1 A0.3,0.3 0 1 1 0,-0.4 A0.3,0.3 0 1 1 0,-1 Z M-0.8,1 L-0.8,0 Q-0.8,-0.32 -0.45,-0.32 L0.45,-0.32 Q0.8,-0.32 0.8,0 L0.8,1 Z"
+      ]
+     }
+    },
+    "color": {
+     "field": "pohlaví",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "žena",
+       "muž"
+      ],
+      "range": [
+       "#33b9d9",
+       "#9f319e"
+      ]
+     }
+    },
+    "size": {
+     "value": 150
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Ročník"
+     },
+     {
+      "field": "ženy",
+      "title": "Žen"
+     },
+     {
+      "field": "celkem",
+      "title": "Vyznamenaných osob"
+     },
+     {
+      "field": "podíl",
+      "title": "Podíl žen",
+      "format": ".0%"
+     }
     ]
    }
   },
-  "color": {
-   "field": "prezident",
-   "type": "nominal",
-   "title": null,
-   "scale": {
-    "domain": [
-     "Václav Havel",
-     "Václav Klaus",
-     "Miloš Zeman",
-     "Petr Pavel"
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "2003"
+     },
+     {
+      "rok": "2013"
+     },
+     {
+      "rok": "2023"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#101432",
+    "strokeDash": [
+     3,
+     3
     ],
-    "range": [
-     "#4a51ab",
-     "#de1743",
-     "#a47d03",
-     "#0e839e"
+    "strokeWidth": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ],
+      "paddingInner": 0.08
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "domain": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     },
+     "bandPosition": 0
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "1998",
+      "p": "Havel"
+     },
+     {
+      "rok": "2007",
+      "p": "Klaus"
+     },
+     {
+      "rok": "2017",
+      "p": "Zeman"
+     },
+     {
+      "rok": "2024",
+      "p": "Pavel"
+     }
     ]
    },
-   "legend": null
-  },
-  "tooltip": [
-   {
-    "field": "rok",
-    "title": "Rok"
+   "mark": {
+    "type": "text",
+    "dy": -202,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#101432"
    },
-   {
-    "field": "ženy",
-    "title": "Žen"
-   },
-   {
-    "field": "celkem",
-    "title": "Vyznamenaných osob"
-   },
-   {
-    "field": "podíl",
-    "title": "Podíl žen",
-    "format": ".0%"
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ],
+      "paddingInner": 0.08
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "domain": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     },
+     "bandPosition": 0.5
+    },
+    "text": {
+     "field": "p"
+    }
    }
-  ]
- },
+  }
+ ],
  "config": {
   "view": {
    "stroke": null

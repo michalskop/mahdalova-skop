@@ -79,6 +79,8 @@ const TOOLTIP_CSS = `
   white-space: nowrap;
 }
 #vg-tooltip-element.dpbp-theme table { border-collapse: collapse; margin: 6px 12px 8px; }
+#vg-tooltip-element.dpbp-theme table.dt-tt-list { margin: 2px 0 0; font-size: 12px; line-height: 1.3; }
+#vg-tooltip-element.dpbp-theme table.dt-tt-list td { padding: 0 14px 0 0; white-space: nowrap; vertical-align: top; }
 #vg-tooltip-element.dpbp-theme td.key {
   color: ${TOOLTIP_INK};
   font-weight: 400;
@@ -170,10 +172,19 @@ function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): Tool
       html += '<table>';
       for (const [k, v] of entries.slice(1)) {
         const swatch = seriesColors[k] ? `<span class="dt-tt-swatch" style="background:${seriesColors[k]}"></span>` : '';
+        // Víceřádková hodnota (seznam jmen) jde pod klíč přes celou šíři; řádky s tabulátorem
+        // se rozdělí do sloupců (např. 2 × 17 jmen v grafu řádů u článku o státních vyznamenáních).
+        if (typeof v === 'string' && v.includes('\n')) {
+          const rows = v.split('\n').map(l => `<tr>${l.split('\t').map(c => `<td>${escapeHtml(c)}</td>`).join('')}</tr>`).join('');
+          html += `<tr><td class="key" colspan="2">${swatch}${escapeHtml(k)}</td></tr>`
+            + `<tr><td colspan="2"><table class="dt-tt-list">${rows}</table></td></tr>`;
+          continue;
+        }
         html += `<tr><td class="key">${swatch}${escapeHtml(k)}</td><td class="value">${escapeHtml(v)}</td></tr>`;
       }
       html += '</table>';
     }
+    tip.style.maxWidth = html.includes('dt-tt-list') ? '560px' : '';
     tip.innerHTML = html;
     tip.classList.add('visible');
     const pad = 12;
