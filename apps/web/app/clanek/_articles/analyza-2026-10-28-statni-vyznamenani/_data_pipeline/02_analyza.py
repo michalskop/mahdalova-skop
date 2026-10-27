@@ -14,7 +14,7 @@ Zeman 2013–2022, Pavel 2023–. Rok 2020 v seznamech není (ceremonie se kvůl
 nekonala). Roky 1993–1994 také ne: zákon o státních vyznamenáních platí od 1994
 a první vyznamenání udělil Havel 28. 10. 1995.
 """
-import csv, json, re, sys
+import locale, csv, json, re, sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -324,7 +324,7 @@ for x in zr_rok:
                         'muži': muzi, 'celkem': x['celkem'], 'podíl': x['podíl']})
 max_m = max(x['celkem'] - x['ženy'] for x in zr_rok)
 max_z = max(x['ženy'] for x in zr_rok)
-DOM = [-(max_z + 6), max_m + 2]
+DOM = [-(max_z + 6), max_m + 30]  # vpravo volný pruh pro jména prezidentů
 Ypy = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS[::-1], 'scale': {'domain': ALL_YEARS[::-1], 'paddingInner': 0.18},
        'axis': {'ticks': False, 'domain': False, 'labelFontSize': 10.5, 'labelPadding': 4}}
 Xpy = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOM},
@@ -363,9 +363,9 @@ save('graf_zeny.json', {
          'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
          'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 0}, 'x2': {'value': 'width'}}},
         {'data': {'values': prez_zacatky},
-         'mark': {'type': 'text', 'align': 'left', 'baseline': 'top', 'dx': 2, 'dy': 3, 'fontSize': 13,
+         'mark': {'type': 'text', 'align': 'right', 'baseline': 'top', 'dx': -2, 'dy': 3, 'fontSize': 13,
                   'fontWeight': 'bold', 'color': '#101432'},
-         'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 0}, 'text': {'field': 'p'}}},
+         'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 'width'}, 'text': {'field': 'p'}}},
         # popisky od nulové osy: ženy doleva, muži doprava
         {'data': {'values': [{'x': 0, 't': '← ženy'}]},
          'mark': {'type': 'text', 'baseline': 'bottom', 'align': 'right', 'dx': -6, 'dy': -22, 'fontSize': 12,
@@ -435,6 +435,16 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
         order = hlavni + ['ostatní']
     else:
         nazev = lambda r: OBORY[r['obor']]
+    # dlaždice podle abecedy (české řazení), „nezjištěno“ a „ostatní“ na konec
+    try:
+        locale.setlocale(locale.LC_COLLATE, 'cs_CZ.UTF-8')
+    except locale.Error:
+        try:
+            locale.setlocale(locale.LC_COLLATE, 'Czech_Czechia.1250')
+        except locale.Error:
+            pass
+    konec = [o for o in ('nezjištěno', 'ostatní') if o in order]
+    order = sorted([o for o in order if o not in konec], key=locale.strxfrm) + konec
     data, items = [], {}
     for p in PREZ:
         vse = [r for r in rows_src if r['prezident'] == p]
@@ -474,6 +484,7 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
                   'header': {'labelFontSize': 12.5, 'labelFontWeight': 'bold', 'labelAnchor': 'start', 'labelPadding': 4,
                              'labelLimit': 190, 'labelColor': '#101432'}},
         'columns': 3,
+        '_facet_fill': {'label': 37, 'narrowColumns': 2},
         'spacing': {'row': 22, 'column': 16},
         'resolve': {'axis': {'y': 'independent', 'x': 'independent'}},
         'spec': {

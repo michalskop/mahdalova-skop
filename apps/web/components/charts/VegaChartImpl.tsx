@@ -250,6 +250,7 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _legend_inactive_style: _lis,
     _legend_hide_mode: _lhm,
     _click_detail: _cd,
+    _facet_fill: _ff,
     ...rest
   } = spec as Record<string, unknown>;
   return { ...rest, title: null };
@@ -635,6 +636,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     const hideMode = spec._legend_hide_mode === 'filter' ? 'filter' : 'opacity';
     const base = toggleLegend ? applyHiddenSeriesOpacity(stripped, toggleLegend.field, hiddenSeries, hideMode) : stripped;
     let final: Record<string, unknown>;
+    let facetFit: { w: number; cols: number; tile: number } | null = null;
 
     if (mini) {
       final = {
@@ -654,6 +656,20 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     } else if (isConcatSpec(base)) {
       // width:'container' is unsupported on concat specs in Vega-Lite v5 – leave widths alone
       final = { ...base, background: '#f8f6f0', config: mergeFontConfig(base.config) };
+      // `_facet_fill`: mřížka (facet) vyplní celou šíři karty – šířku dlaždice dopočítáme z kontejneru,
+      // na úzkém displeji ubereme sloupec. { label: šířka popisků osy Y v px, minColumns }
+      const fill = spec._facet_fill as { label?: number; narrowColumns?: number } | undefined;
+      const inner = (final.spec ?? null) as Record<string, unknown> | null;
+      if (fill && inner && 'facet' in final && containerRef.current) {
+        const w = containerRef.current.getBoundingClientRect().width;
+        const baseCols = Number(final.columns ?? 3);
+        const cols = w < 420 ? 1 : w < 560 ? Math.min(baseCols, fill.narrowColumns ?? 2) : baseCols;
+        const spacing = final.spacing as { column?: number } | number | undefined;
+        const gap = typeof spacing === 'number' ? spacing : spacing?.column ?? 16;
+        const tile = Math.max(80, Math.floor((w - cols * (fill.label ?? 40) - (cols - 1) * gap - 4) / cols));
+        final = { ...final, columns: cols, spec: { ...inner, width: tile } };
+        facetFit = { w, cols, tile };
+      }
     } else {
       final = {
         ...base,
@@ -669,35 +685,50 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     }
 
     import('vega-embed').then(({ default: embed }) => {
-      if (!containerRef.current) return;
-      viewRef.current?.finalize();
-      // Vega Embed appends its wrapper. During hot reload or a spec update the
-      // finalized SVG otherwise remains in the container and doubles its height.
-      containerRef.current.replaceChildren();
-      embed(containerRef.current, final as never, {
-        actions: false,
-        renderer: 'svg',
-        formatLocale: CS_NUMBER_LOCALE,
-        timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
-      }).then(result => {
-        viewRef.current = result.view as unknown as { finalize: () => void };
-        const cd = clickDetailConfig(spec);
-        if (cd) {
-          result.view.addEventListener('click', (_event, item) => {
-            const datum = (item as { datum?: Record<string, unknown> } | null | undefined)?.datum;
-            if (datum && (datum[cd.field] || (cd.key && cd.items?.[String(datum[cd.key])]))) setDetail(datum);
-          });
-        }
-        const pendingSeries = pendingRevealSeriesRef.current;
-        if (pendingSeries.length) {
-          pendingRevealSeriesRef.current = [];
-          void animateDataMarks('show', pendingSeries);
-        } else if (hasEnteredViewRef.current && !initialRevealDoneRef.current) {
-          initialRevealDoneRef.current = true;
-          void animateDataMarks('show');
-        }
-      }).catch(e => setError(String(e)));
+      const render = (finalSpec: Record<string, unknown>, attempt: number): void => {
+        if (!containerRef.current) return;
+        viewRef.current?.finalize();
+        // Vega Embed appends its wrapper. During hot reload or a spec update the
+        // finalized SVG otherwise remains in the container and doubles its height.
+        containerRef.current.replaceChildren();
+        embed(containerRef.current, finalSpec as never, {
+          actions: false,
+          renderer: 'svg',
+          formatLocale: CS_NUMBER_LOCALE,
+          timeFormatLocale: CS_TIME_LOCALE,
+          tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
+        }).then(result => {
+          viewRef.current = result.view as unknown as { finalize: () => void };
+          // _facet_fill: popisky os mají jinou šířku, než jsme odhadli – jednou změříme skutečnou
+          // šířku mřížky a dlaždice o rozdíl rozšíříme/zúžíme, aby graf sahal přesně od kraje do kraje.
+          if (facetFit && attempt === 0) {
+            const svg = containerRef.current?.querySelector('svg');
+            const diff = facetFit.w - (svg?.getBoundingClientRect().width ?? facetFit.w);
+            if (Math.abs(diff) > 2) {
+              const inner = finalSpec.spec as Record<string, unknown>;
+              const tile = facetFit.tile + Math.floor(diff / facetFit.cols);
+              render({ ...finalSpec, spec: { ...inner, width: tile } }, 1);
+              return;
+            }
+          }
+          const cd = clickDetailConfig(spec);
+          if (cd) {
+            result.view.addEventListener('click', (_event, item) => {
+              const datum = (item as { datum?: Record<string, unknown> } | null | undefined)?.datum;
+              if (datum && (datum[cd.field] || (cd.key && cd.items?.[String(datum[cd.key])]))) setDetail(datum);
+            });
+          }
+          const pendingSeries = pendingRevealSeriesRef.current;
+          if (pendingSeries.length) {
+            pendingRevealSeriesRef.current = [];
+            void animateDataMarks('show', pendingSeries);
+          } else if (hasEnteredViewRef.current && !initialRevealDoneRef.current) {
+            initialRevealDoneRef.current = true;
+            void animateDataMarks('show');
+          }
+        }).catch(e => setError(String(e)));
+      };
+      render(final, 0);
     });
 
     return () => {

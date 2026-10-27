@@ -843,7 +843,7 @@
      "scale": {
       "domain": [
        -26,
-       93
+       121
       ]
      },
      "axis": {
@@ -926,7 +926,7 @@
      "scale": {
       "domain": [
        -26,
-       93
+       121
       ]
      }
     }
@@ -1068,9 +1068,9 @@
    },
    "mark": {
     "type": "text",
-    "align": "left",
+    "align": "right",
     "baseline": "top",
-    "dx": 2,
+    "dx": -2,
     "dy": 3,
     "fontSize": 13,
     "fontWeight": "bold",
@@ -1159,7 +1159,7 @@
      "bandPosition": 0
     },
     "x": {
-     "value": 0
+     "value": "width"
     },
     "text": {
      "field": "p"
@@ -1192,7 +1192,7 @@
      "scale": {
       "domain": [
        -26,
-       93
+       121
       ]
      }
     },
@@ -1230,7 +1230,7 @@
      "scale": {
       "domain": [
        -26,
-       93
+       121
       ]
      }
     },
