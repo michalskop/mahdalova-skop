@@ -34,6 +34,10 @@ PREZ_COLOR = {'Havel': '#4a51ab', 'Klaus': '#de1743', 'Zeman': '#a47d03', 'Pavel
 DRUHY = ['Řád Bílého lva', 'Řád T. G. Masaryka', 'Medaile Za hrdinství', 'Medaile Za zásluhy']
 ZENY, MUZI = '#f76800', '#06677d'
 
+def prezident_label(rok):
+    """Popisek prezidenta k ročníku; 2003 sdílí Havel (leden) a Klaus (říjen)."""
+    return 'Václav Havel (leden), Václav Klaus (říjen)' if str(rok) == '2003' else PREZ_LABEL[prezident(rok)]
+
 def prezident(rok):
     r = int(rok)
     return 'Havel' if r <= 2002 else 'Klaus' if r <= 2012 else 'Zeman' if r <= 2022 else 'Pavel'
@@ -87,6 +91,37 @@ for r in rows:
 for r in rows:
     if r['jmeno'].startswith('Jan Dvořák') and r['rok'] == '2023' and r['druh'] == 'Medaile Za hrdinství':
         r['prezident'] = 'Zeman'
+
+# Rok 2003: Havel byl prezidentem do 2. 2. 2003 a ještě 29. 1. 2003 vyznamenával. Hrad vede jen rok,
+# takže rozdělujeme podle seznamů vyznamenaných na webu Havlovy kanceláře (old.hrad.cz, stav 2004,
+# staženo přes Internet Archive: web.archive.org/web/2004/http://old.hrad.cz/president/Havel/rady/*_lide.html).
+# Kdo je tam s rokem 2003, udělil Havel (32 vyznamenání); Klausovi zbývá 20 z 28. 10. 2003 (shoda s ČTK).
+# Řády Václava Havla z roku 2003 mu propůjčil parlament po odchodu z úřadu, ne prezident – vynecháváme je.
+import unicodedata
+def ascii_jm(s):
+    return unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+HAVEL_SOUBORY = {'rbl_lide': 'Řád Bílého lva', 'rtgm_lide': 'Řád T. G. Masaryka',
+                 'mzh_lide': 'Medaile Za hrdinství', 'mzz_lide': 'Medaile Za zásluhy'}
+havel_2003 = set()
+for f, druh in HAVEL_SOUBORY.items():
+    t = (BASE / 'vstupy' / 'havel_archiv' / f'{f}.html').read_bytes().decode('cp1250', 'replace')
+    casti = [c.strip() for c in re.sub(r'\s+', ' ', re.sub('<[^>]+>', '|', t)).split('|') if c.strip()]
+    for i, c in enumerate(casti):
+        if '2003' in c:
+            jm = next(x for x in reversed(casti[max(0, i - 3):i]) if not x.startswith(',') and not x.endswith('.') and 'trida' not in x and 'stupen' not in x)
+            havel_2003.add((druh, ascii_jm(jm).split()[-1]))
+havel_presun, havel_rady = [], []
+for r in rows:
+    if r['rok'] != '2003':
+        continue
+    if r['jmeno'].strip(' ,') == 'Václav Havel':
+        havel_rady.append(r); continue
+    if (r['druh'], ascii_jm(r['jmeno'].strip(' ,')).split()[-1]) in havel_2003:
+        r['prezident'] = 'Havel'; havel_presun.append(r['jmeno'])
+rows = [r for r in rows if r not in havel_rady]
+say(f'Rok 2003: v seznamu Havlovy kanceláře {len(havel_2003)}, přiřazeno Havlovi {len(havel_presun)}, '
+    f'Klausovi zbývá {sum(r["rok"] == "2003" and r["prezident"] == "Klaus" for r in rows)}; '
+    f'vynechány řády Václava Havla: {len(havel_rady)}')
 
 # Ročník 2020: Zeman ho ohlásil 28. 10. 2020, kvůli covidu se nepředával a Hrad ho vede pod rokem 2021
 # (předáno spolu s ročníkem 2021 dne 7. 3. 2022). Rozdělujeme podle seznamu ohlášeného 28. 10. 2020
@@ -199,7 +234,7 @@ zr_rok = []
 for rok in sorted(roky):
     s = [r for r in R if r['rok'] == rok and r['pohlavi'] in 'ZM']
     z = sum(r['pohlavi'] == 'Z' for r in s)
-    zr_rok.append({'rok': rok, 'prezident': PREZ_LABEL[prezident(rok)], 'ženy': z, 'celkem': len(s),
+    zr_rok.append({'rok': rok, 'prezident': prezident_label(rok), 'ženy': z, 'celkem': len(s),
                    'podíl': round(z / len(s), 4) if s else 0})
 say('Ženy po letech:', ', '.join(f"{x['rok']}: {x['ženy']}/{x['celkem']}" for x in zr_rok))
 
@@ -270,7 +305,7 @@ def save(name, spec):
     (DATA / name).write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding='utf-8')
 
 ALL_YEARS = [str(y) for y in range(1995, 2026)]
-rok_vals = [{'rok': y, 'počet': roky.get(y, 0), 'prezident': PREZ_LABEL[prezident(y)]} for y in ALL_YEARS]
+rok_vals = [{'rok': y, 'počet': roky.get(y, 0), 'prezident': prezident_label(y)} for y in ALL_YEARS]
 pcolor = {'field': 'prezident', 'type': 'nominal', 'title': None,
           'scale': {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]},
           'legend': {'orient': 'top', 'direction': 'horizontal', 'symbolType': 'square'}}

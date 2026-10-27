@@ -1,5 +1,5 @@
 // Sada coverů – node motiv.cjs, pak PW_PATH=<repo>/node_modules/playwright node ../../../../../../tools/cover-generator.cjs cover.config.cjs
-// Motiv: medaile z 1 372 teček = všechna státní vyznamenání 1995–2025 od středu ven, ženy oranžově (viz motiv.cjs).
+// Motiv: medaile z 1 370 teček = všechna státní vyznamenání 1995–2025 od středu ven, ženy oranžově (viz motiv.cjs).
 const path = require('path');
 const { ZENY, MUZI } = require('./motiv.cjs');
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
