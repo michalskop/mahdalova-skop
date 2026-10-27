@@ -526,6 +526,20 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const toggleLegend = useMemo(() => toggleLegendConfig(spec), [spec]);
   const clickDetail = useMemo(() => clickDetailConfig(spec), [spec]);
   const [detail, setDetail] = useState<Record<string, unknown> | null>(null);
+  // `_facet_fill`: šířka karty zaokrouhlená na 10 px; při změně (otočení mobilu, skrytý panel,
+  // změna okna) se mřížka překreslí s novým počtem sloupců a šířkou dlaždic.
+  const [fillWidth, setFillWidth] = useState(0);
+  const hasFacetFill = Boolean(spec?._facet_fill);
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!hasFacetFill || !el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(([entry]) => {
+      const w = Math.round(entry.contentRect.width / 10) * 10;
+      if (w > 0) setFillWidth(w);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [hasFacetFill]);
 
   const animateDataMarks = useCallback((direction: 'show' | 'hide', series?: string[]) => {
     const container = containerRef.current;
@@ -734,7 +748,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     return () => {
       viewRef.current?.finalize();
     };
-  }, [spec, mini, bare, hiddenSeries]);
+  }, [spec, mini, bare, hiddenSeries, fillWidth]);
 
   if (error) return (
     <div style={{ padding: '8px', color: '#de1743', fontSize: '12px', fontFamily: 'monospace' }}>
