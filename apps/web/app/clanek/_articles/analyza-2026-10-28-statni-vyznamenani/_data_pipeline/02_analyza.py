@@ -315,26 +315,27 @@ hranice = [{'rok': '2003'}, {'rok': '2013'}, {'rok': '2023'}]
 jmena_prez = [{'rok': '1998', 'p': 'Havel'}, {'rok': '2007', 'p': 'Klaus'}, {'rok': '2017', 'p': 'Zeman'}, {'rok': '2024', 'p': 'Pavel'}]
 X = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS, 'paddingInner': 0.08},
      'axis': {'labelAngle': 0, 'ticks': False, 'domain': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}}
-# pyramida: roky shora dolů (Havel → Pavel), muži doleva, ženy doprava od posunuté osy
+# pyramida: nahoře nejnovější ročník (Pavel), dole Havel; ženy vlevo, muži vpravo (jako pruh v panelu)
 sloupce = []
 for x in zr_rok:
     muzi = x['celkem'] - x['ženy']
-    for poh, v0, v1, n in (('muž', -muzi, 0, muzi), ('žena', 0, x['ženy'], x['ženy'])):
+    for poh, v0, v1, n in (('žena', -x['ženy'], 0, x['ženy']), ('muž', 0, muzi, muzi)):
         sloupce.append({'rok': x['rok'], 'pohlaví': poh, 'x0': v0, 'x1': v1, 'počet': n, 'ženy': x['ženy'],
                         'muži': muzi, 'celkem': x['celkem'], 'podíl': x['podíl']})
 max_m = max(x['celkem'] - x['ženy'] for x in zr_rok)
 max_z = max(x['ženy'] for x in zr_rok)
-DOM = [-(max_m + 2), max_z + 6]
-Ypy = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS, 'paddingInner': 0.18},
+DOM = [-(max_z + 6), max_m + 2]
+Ypy = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS[::-1], 'scale': {'domain': ALL_YEARS[::-1], 'paddingInner': 0.18},
        'axis': {'ticks': False, 'domain': False, 'labelFontSize': 10.5, 'labelPadding': 4}}
 Xpy = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOM},
-       'axis': {'gridColor': '#e8e3d2', 'values': [-80, -60, -40, -20, 0, 20], 'labelExpr': 'abs(datum.value)',
+       'axis': {'gridColor': '#e8e3d2', 'values': [-20, 0, 20, 40, 60, 80], 'labelExpr': 'abs(datum.value)',
                 'domain': False, 'ticks': False, 'orient': 'top'}}
 H_Z = 31 * 17
-prez_zacatky = [{'rok': '1995', 'p': 'Havel'}, {'rok': '2003', 'p': 'Klaus'}, {'rok': '2013', 'p': 'Zeman'}, {'rok': '2023', 'p': 'Pavel'}]
+prez_zacatky = [{'rok': '2002', 'p': 'Havel'}, {'rok': '2012', 'p': 'Klaus'}, {'rok': '2022', 'p': 'Zeman'}, {'rok': '2025', 'p': 'Pavel'}]
+hranice_py = [{'rok': '2002'}, {'rok': '2012'}, {'rok': '2022'}]
 save('graf_zeny.json', {
     'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
-              'subtitle': 'Počet vyznamenaných v daném ročníku: fialově muži vlevo, tyrkysově ženy vpravo. '
+              'subtitle': 'Počet vyznamenaných v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. '
                           'Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
     '_click_detail': {'field': 'jména', 'key': 'rok', 'title': ['rok'],
@@ -358,19 +359,19 @@ save('graf_zeny.json', {
          'mark': {'type': 'rule', 'color': '#101432', 'strokeWidth': 1.5},
          'encoding': {'x': {'field': 'x', 'type': 'quantitative', 'scale': {'domain': DOM}}}},
         # předěly prezidentů
-        {'data': {'values': hranice},
+        {'data': {'values': hranice_py},
          'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
          'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 0}, 'x2': {'value': 'width'}}},
         {'data': {'values': prez_zacatky},
-         'mark': {'type': 'text', 'align': 'right', 'baseline': 'top', 'dx': -2, 'dy': 3, 'fontSize': 13,
+         'mark': {'type': 'text', 'align': 'left', 'baseline': 'top', 'dx': 2, 'dy': 3, 'fontSize': 13,
                   'fontWeight': 'bold', 'color': '#101432'},
-         'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 'width'}, 'text': {'field': 'p'}}},
-        {'data': {'values': [{'x': -(max_m + 2), 't': '← muži'}, {'x': max_z + 6, 't': 'ženy →'}]},
+         'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 0}, 'text': {'field': 'p'}}},
+        {'data': {'values': [{'x': -(max_z + 6), 't': '← ženy'}, {'x': max_m + 2, 't': 'muži →'}]},
          'mark': {'type': 'text', 'baseline': 'bottom', 'dy': -22, 'fontSize': 12, 'fontWeight': 'bold'},
          'encoding': {'x': {'field': 'x', 'type': 'quantitative', 'scale': {'domain': DOM}}, 'y': {'value': 0},
                       'text': {'field': 't'},
                       'align': {'condition': {'test': 'datum.x < 0', 'value': 'left'}, 'value': 'right'},
-                      'color': {'condition': {'test': 'datum.x < 0', 'value': MUZ_AMETYST}, 'value': ZENA_DARK}}},
+                      'color': {'condition': {'test': 'datum.x < 0', 'value': ZENA_DARK}, 'value': MUZ_AMETYST}}},
     ],
 })
 
