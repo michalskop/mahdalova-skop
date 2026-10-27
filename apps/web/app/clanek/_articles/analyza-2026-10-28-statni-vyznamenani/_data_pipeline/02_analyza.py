@@ -146,10 +146,10 @@ def cisty(jmeno):
 def jmena(lide):
     """Seznam jmen do tooltipu: do 6 jmen pod sebou, do 40 ve dvou sloupcích s rokem, víc ve třech bez roku."""
     if len(lide) > 40:
-        j = sorted(f"{cisty(r['jmeno'])}{' †' if r['in_memoriam'] == '1' else ''}" for r in lide)
+        j = sorted(f"{cisty(r['jmeno'])}{' (in memoriam)' if r['in_memoriam'] == '1' else ''}" for r in lide)
         k = 3
     else:
-        j = sorted(f"{cisty(r['jmeno'])}{' †' if r['in_memoriam'] == '1' else ''} ({r['rok']})" for r in lide)
+        j = sorted(f"{cisty(r['jmeno'])} ({r['rok']}{', in memoriam' if r['in_memoriam'] == '1' else ''})" for r in lide)
         k = 1 if len(j) <= 6 else 2
     n = (len(j) + k - 1) // k
     sl = [j[i * n:(i + 1) * n] for i in range(k)]
@@ -158,7 +158,10 @@ def jmena(lide):
 def jmena_mz(lide, rok=True):
     """Jména pro panel po kliknutí: oddíl Ženy a oddíl Muži (řádek „## …“ = nadpis oddílu)."""
     def fmt(r):
-        return f"{cisty(r['jmeno'])}{' †' if r['in_memoriam'] == '1' else ''}" + (f" ({r['rok']})" if rok else '')
+        im = r['in_memoriam'] == '1'
+        if rok:
+            return f"{cisty(r['jmeno'])} ({r['rok']}{', in memoriam' if im else ''})"
+        return f"{cisty(r['jmeno'])}{' (in memoriam)' if im else ''}"
     z = [fmt(r) for r in lide if r['pohlavi'] == 'Z']
     m = [fmt(r) for r in lide if r['pohlavi'] != 'Z']
     out = []
@@ -509,7 +512,7 @@ save('graf_obory.json', piktogramy(
     R, obor_order, 'Klaus vyznamenával disidenty, Zeman podnikatele',
     'Za co prezident vyznamenával: podíl oblasti na všech jeho vyznamenáních 1995–2025, tyrkysově ženy vlevo, fialově muži vpravo. '
     'Oblast určila redakce podle životopisu vyznamenaného. Kliknutím na řádek zobrazíte jména.', 'Vyznamenání'))
-# řády podle oborů – s jmény v tooltipu (dva sloupce, † = in memoriam)
+# řády podle oborů – jména v panelu po kliknutí
 def obdobi(r):
     """Funkční období, ve kterém prezident vyznamenání udělil (podle roku 28. října)."""
     y = int(r['rok'])
