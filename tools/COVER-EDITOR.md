@@ -65,7 +65,39 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 (`PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <config>`). Vzory konfigurací: predikce,
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
+**Kompozice a mezery – povinná kontrola před odesláním náhledů (od 27. 10. 2026, Kateřina: „málo se pracuje
+s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, grafický i fotografický, a pro každý z pěti formátů:
+1. **Motiv je celý.** Hlava, obličej ani postava nesmí být useknutá okrajem formátu, okrajem výřezu ani přechodem
+   do navy. Výřez fotky začíná nad hlavou s rezervou (aspoň půl výšky hlavy). Přechod smí ztmavit jen pozadí
+   (nebe, klenbu, prázdný kraj), nikdy hlavy, text v koláži ani podstatnou část motivu. Když už zdroj hlavu ořezává
+   (screenshot, koláž), ořez ani přechod to nezhorší a Kateřina se to dozví.
+2. **Výškové formáty využijí výšku.** Na 4:5 a story má motiv zabrat většinu plochy mezi textem a logem, ne úzký
+   pás uprostřed prázdné navy. Když se motiv nevejde, zmenši titulek (`format.story.t`), ne motiv.
+3. **Na výšku pořadí text → motiv → logo.** Logo stojí na volné navy ploše pod motivem, nikdy přes něj (halo loga
+   přes nohy sochy působilo jako „záclona“).
+4. **Story:** nic důležitého v horních 250 a dolních 340 px, obsah vycentrovaný mezi těmito pásy, pozadí čisté
+   ink blue `#101432` bez záře.
+5. **Mezera mezi textem a motivem** aspoň ~40 px (u šířky 1080) i tam, kde motiv nemá pravidelný tvar (výběžek mapy,
+   meč sochy). Text se motivu nedotýká; kontrolovat na největším náhledu, ne na zmenšenině.
+6. **Zapečené prvky zdroje** (logo, datum „únor 2026“, popisky screenshotu) se odříznou výřezem, nepřetírají se.
+7. **Kontaktní arch je pomůcka:** zóny jsou jen čárkované obrysy a v obrázku nejsou. Kateřině posílat i samotné
+   soubory homepage, OG a story, ať nemusí rozlišovat kontrolní značky od obsahu.
+8. **Převod hotového coveru** (Kateřina: „nech fotku i wording“) mění jen sazbu do formátů. Motiv, barvy a texty
+   zůstávají, každý formát se ale kontroluje podle bodů 1–7 stejně jako nový cover.
+
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *27. 10. 2026 – převod pěti starších coverů k Izraeli/Gaze do formátů a cover článku o komisi OSN.* Opakované
+  chyby, ze kterých vznikla kontrola výše: titulek přes obrys mapy ve čtverci a OG (komise OSN, opraveno menším
+  titulkem a posunem mapy); story se sochou Spravedlnosti, kde socha končila u dolního okraje a logo leželo přes
+  nohy; pás satelitního snímku Gazy s viditelným zapečeným štítkem „únor 2026“; koláž s přechodem nahoře, který
+  ztmavil hlavy dětí, a výřezem, který usekl tweet; story s malým pásem fotky a prázdnou navy plochou. Kateřina navíc
+  četla vínové výplně zón v kontaktním archu jako součást obrázku, proto `tools/kontaktni-arch.cjs` kreslí zóny jen
+  čárkovaně. Koláž ze screenshotů: prvky zapečené v jedné fotce (výstřížek Guardianu ve fotce BBC) přesunout nejde,
+  pod nimi nejsou pixely. Zachovat původní rozložení koláže a vzít ji celou (i s přečnívajícím tweetem), mimopaletový
+  podklad zdroje zakrýt ink blue; zvětšený výřez tweetu přes roh zakryl titulek BBC „warning“ (vzor `maska()` v
+  `kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost/_cover_pipeline/cover.config.cjs`).
+  Vzor fotky v pásu s přechody: `_cover_pipeline/foto.cjs` u článku
+  `analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci` (story: výřez nad závojem, socha nad logem).
 - *26. 10. 2026 – článek speciálu Data pro budoucí premiérku bez obrázku v rubrice Volby.* Články speciálu
   (`_content/*/articles/*.mdx`) mají jako `coverImage` jen poutač speciálu 1200×630; do homepage a rubrik je
   `components/common/getDpbpArticles.ts` dřív posílal bez obrázku. Teď bere `homepageImage` (absolutní cesta).
