@@ -92,7 +92,11 @@ s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, graf
   nohy; pás satelitního snímku Gazy s viditelným zapečeným štítkem „únor 2026“; koláž s přechodem nahoře, který
   ztmavil hlavy dětí, a výřezem, který usekl tweet; story s malým pásem fotky a prázdnou navy plochou. Kateřina navíc
   četla vínové výplně zón v kontaktním archu jako součást obrázku, proto `tools/kontaktni-arch.cjs` kreslí zóny jen
-  čárkovaně. Vzor fotky v pásu s přechody: `_cover_pipeline/foto.cjs` u článku
+  čárkovaně. Koláž ze screenshotů: prvky zapečené v jedné fotce (výstřížek Guardianu ve fotce BBC) přesunout nejde,
+  pod nimi nejsou pixely. Zachovat původní rozložení koláže a vzít ji celou (i s přečnívajícím tweetem), mimopaletový
+  podklad zdroje zakrýt ink blue; zvětšený výřez tweetu přes roh zakryl titulek BBC „warning“ (vzor `maska()` v
+  `kontext-2025-05-22-bezpodminecna-podpora-izraele-poskozuje-nasi-bezpecnost/_cover_pipeline/cover.config.cjs`).
+  Vzor fotky v pásu s přechody: `_cover_pipeline/foto.cjs` u článku
   `analyza-2026-08-25-evropske-soudy-a-nenavist-palestinci-izraelci` (story: výřez nad závojem, socha nad logem).
 - *26. 10. 2026 – článek speciálu Data pro budoucí premiérku bez obrázku v rubrice Volby.* Články speciálu
   (`_content/*/articles/*.mdx`) mají jako `coverImage` jen poutač speciálu 1200×630; do homepage a rubrik je
