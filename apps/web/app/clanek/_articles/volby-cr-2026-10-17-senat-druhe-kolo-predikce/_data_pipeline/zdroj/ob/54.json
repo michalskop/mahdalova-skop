@@ -1,0 +1,21 @@
+{
+  "id" : "20261009/vysled/obvod/54.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":54},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Znojmo",
+  "prehled" : [
+  [1,203,203,100,93925,42298,45.03,52,41533,40301,97.03]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Růžička Jindřich","NK","NK","BEZPP",7528,18.67,null,null,false,false,80,80,99],
+  [2,"Třetina Tomáš Mgr.","KDUODSSTANPiTOP","TOP 09","TOP 09",14328,35.55,null,null,false,false,1655,721,721],
+  [3,"Kyněra Jiří","ANO","ANO","BEZPP",8980,22.28,null,null,false,false,768,768,99],
+  [4,"Rédová Fajmonová Petra","Stačilo!","Stačilo!","BEZPP",4749,11.78,null,null,false,false,1298,1298,99],
+  [5,"Beranová Bohumila","HR","HR","BEZPP",2683,6.65,null,null,false,false,1715,1715,99],
+  [6,"Černý Pavel","PŘÍSAHA","PŘÍSAHA","PŘÍSAHA",2033,5.04,null,null,false,false,1245,1245,1245]
+],
+  "postupuje" : [2,3],
+  "zvoleny" : null
+}

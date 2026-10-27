@@ -55,6 +55,11 @@ interface ChapterTile {
   web?: string;
   topic: string;
   fullWidth?: boolean;
+  /** Obrázek dlaždice (jinak logo z frontmatteru článku). */
+  image?: string;
+  imageAspect?: string;
+  /** Dlaždice smí být i úvodní článek kapitoly (jinak se mezi dlaždicemi vynechává). */
+  showOpener?: boolean;
   related?: Array<{ slug: string; label: string }>;
 }
 
@@ -166,7 +171,7 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   const tiles = withRowSpan(
     [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
-      .filter(t => t.web || t.slug !== meta.openerArticle)
+      .filter(t => t.web || t.showOpener || t.slug !== meta.openerArticle)
       .map(t => {
         if (t.web) {
           const web = loadWebArticleTile(t.web);
@@ -414,7 +419,8 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                       excerpt={t.fm!.excerpt}
                       author={t.fm!.author}
                       primaryChartSpec={null}
-                      image={t.fm!.logo}
+                      image={t.image ?? t.fm!.logo}
+                      imageAspect={t.imageAspect}
                       accent={meta.accent}
                       type={t.topic}
                       stacked={!t.fullWidth}

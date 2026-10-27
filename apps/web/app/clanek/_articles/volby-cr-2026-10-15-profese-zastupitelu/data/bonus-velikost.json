@@ -1,0 +1,565 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Profese rozhoduje hlavně v menších obcích, ve velkých městech se rozdíly stírají",
+    "subtitle": "O kolik procent víc (tyrkysově), nebo méně (vínově) hlasů dostal typický kandidát z dané profese než kandidáti na stejném místě kandidátky ve stejně velkých obcích. Každý sloupec je jedna skupina obcí podle počtu obyvatel; v každé žije zhruba pětina obyvatel Česka."
+  },
+  "width": 600,
+  "height": {
+    "step": 30
+  },
+  "data": {
+    "values": [
+      {
+        "profese": "lékaři a lékařky",
+        "velikost": "do 1 000",
+        "bonus": 12.8,
+        "popisek": "+13 %",
+        "kandidatu": 294
+      },
+      {
+        "profese": "lékaři a lékařky",
+        "velikost": "1 000–4 000",
+        "bonus": 15.3,
+        "popisek": "+15 %",
+        "kandidatu": 518
+      },
+      {
+        "profese": "lékaři a lékařky",
+        "velikost": "4 000–20 000",
+        "bonus": 15.9,
+        "popisek": "+16 %",
+        "kandidatu": 665
+      },
+      {
+        "profese": "lékaři a lékařky",
+        "velikost": "20 000–100 000",
+        "bonus": 9.7,
+        "popisek": "+10 %",
+        "kandidatu": 513
+      },
+      {
+        "profese": "lékaři a lékařky",
+        "velikost": "nad 100 000",
+        "bonus": 3.8,
+        "popisek": "+4 %",
+        "kandidatu": 84
+      },
+      {
+        "profese": "veterináři a veterinářky",
+        "velikost": "do 1 000",
+        "bonus": 11.9,
+        "popisek": "+12 %",
+        "kandidatu": 83
+      },
+      {
+        "profese": "veterináři a veterinářky",
+        "velikost": "1 000–4 000",
+        "bonus": 18.7,
+        "popisek": "+19 %",
+        "kandidatu": 102
+      },
+      {
+        "profese": "veterináři a veterinářky",
+        "velikost": "4 000–20 000",
+        "bonus": 18.1,
+        "popisek": "+18 %",
+        "kandidatu": 89
+      },
+      {
+        "profese": "veterináři a veterinářky",
+        "velikost": "20 000–100 000",
+        "bonus": 12.5,
+        "popisek": "+13 %",
+        "kandidatu": 33
+      },
+      {
+        "profese": "veterináři a veterinářky",
+        "velikost": "nad 100 000",
+        "bonus": null,
+        "popisek": "málo",
+        "kandidatu": 4
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "velikost": "do 1 000",
+        "bonus": 6.4,
+        "popisek": "+6 %",
+        "kandidatu": 454
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "velikost": "1 000–4 000",
+        "bonus": 15.0,
+        "popisek": "+15 %",
+        "kandidatu": 729
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "velikost": "4 000–20 000",
+        "bonus": 12.5,
+        "popisek": "+13 %",
+        "kandidatu": 719
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "velikost": "20 000–100 000",
+        "bonus": 7.6,
+        "popisek": "+8 %",
+        "kandidatu": 324
+      },
+      {
+        "profese": "ředitelé škol a jejich zástupci",
+        "velikost": "nad 100 000",
+        "bonus": 3.1,
+        "popisek": "+3 %",
+        "kandidatu": 50
+      },
+      {
+        "profese": "hasiči",
+        "velikost": "do 1 000",
+        "bonus": 9.5,
+        "popisek": "+10 %",
+        "kandidatu": 640
+      },
+      {
+        "profese": "hasiči",
+        "velikost": "1 000–4 000",
+        "bonus": 9.3,
+        "popisek": "+9 %",
+        "kandidatu": 643
+      },
+      {
+        "profese": "hasiči",
+        "velikost": "4 000–20 000",
+        "bonus": 9.8,
+        "popisek": "+10 %",
+        "kandidatu": 385
+      },
+      {
+        "profese": "hasiči",
+        "velikost": "20 000–100 000",
+        "bonus": 3.1,
+        "popisek": "+3 %",
+        "kandidatu": 116
+      },
+      {
+        "profese": "hasiči",
+        "velikost": "nad 100 000",
+        "bonus": null,
+        "popisek": "málo",
+        "kandidatu": 14
+      },
+      {
+        "profese": "knihovnice a knihovníci",
+        "velikost": "do 1 000",
+        "bonus": -10.8,
+        "popisek": "−11 %",
+        "kandidatu": 67
+      },
+      {
+        "profese": "knihovnice a knihovníci",
+        "velikost": "1 000–4 000",
+        "bonus": 9.2,
+        "popisek": "+9 %",
+        "kandidatu": 142
+      },
+      {
+        "profese": "knihovnice a knihovníci",
+        "velikost": "4 000–20 000",
+        "bonus": 7.0,
+        "popisek": "+7 %",
+        "kandidatu": 97
+      },
+      {
+        "profese": "knihovnice a knihovníci",
+        "velikost": "20 000–100 000",
+        "bonus": 6.6,
+        "popisek": "+7 %",
+        "kandidatu": 44
+      },
+      {
+        "profese": "knihovnice a knihovníci",
+        "velikost": "nad 100 000",
+        "bonus": null,
+        "popisek": "málo",
+        "kandidatu": 13
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "velikost": "do 1 000",
+        "bonus": 1.8,
+        "popisek": "+2 %",
+        "kandidatu": 3527
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "velikost": "1 000–4 000",
+        "bonus": 5.7,
+        "popisek": "+6 %",
+        "kandidatu": 3814
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "velikost": "4 000–20 000",
+        "bonus": 5.3,
+        "popisek": "+5 %",
+        "kandidatu": 3513
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "velikost": "20 000–100 000",
+        "bonus": 4.0,
+        "popisek": "+4 %",
+        "kandidatu": 1870
+      },
+      {
+        "profese": "učitelky a učitelé",
+        "velikost": "nad 100 000",
+        "bonus": 3.4,
+        "popisek": "+3 %",
+        "kandidatu": 380
+      },
+      {
+        "profese": "zemědělci a lesníci",
+        "velikost": "do 1 000",
+        "bonus": 2.0,
+        "popisek": "+2 %",
+        "kandidatu": 2346
+      },
+      {
+        "profese": "zemědělci a lesníci",
+        "velikost": "1 000–4 000",
+        "bonus": 5.5,
+        "popisek": "+5 %",
+        "kandidatu": 1149
+      },
+      {
+        "profese": "zemědělci a lesníci",
+        "velikost": "4 000–20 000",
+        "bonus": 4.9,
+        "popisek": "+5 %",
+        "kandidatu": 423
+      },
+      {
+        "profese": "zemědělci a lesníci",
+        "velikost": "20 000–100 000",
+        "bonus": 2.5,
+        "popisek": "+2 %",
+        "kandidatu": 164
+      },
+      {
+        "profese": "zemědělci a lesníci",
+        "velikost": "nad 100 000",
+        "bonus": null,
+        "popisek": "málo",
+        "kandidatu": 28
+      },
+      {
+        "profese": "podnikatelé a OSVČ",
+        "velikost": "do 1 000",
+        "bonus": -1.8,
+        "popisek": "−2 %",
+        "kandidatu": 9359
+      },
+      {
+        "profese": "podnikatelé a OSVČ",
+        "velikost": "1 000–4 000",
+        "bonus": 0.4,
+        "popisek": "+0 %",
+        "kandidatu": 6510
+      },
+      {
+        "profese": "podnikatelé a OSVČ",
+        "velikost": "4 000–20 000",
+        "bonus": 1.1,
+        "popisek": "+1 %",
+        "kandidatu": 4081
+      },
+      {
+        "profese": "podnikatelé a OSVČ",
+        "velikost": "20 000–100 000",
+        "bonus": 0.9,
+        "popisek": "+1 %",
+        "kandidatu": 1958
+      },
+      {
+        "profese": "podnikatelé a OSVČ",
+        "velikost": "nad 100 000",
+        "bonus": 1.1,
+        "popisek": "+1 %",
+        "kandidatu": 414
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "velikost": "do 1 000",
+        "bonus": -4.4,
+        "popisek": "−4 %",
+        "kandidatu": 5168
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "velikost": "1 000–4 000",
+        "bonus": -2.7,
+        "popisek": "−3 %",
+        "kandidatu": 2512
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "velikost": "4 000–20 000",
+        "bonus": -0.6,
+        "popisek": "−1 %",
+        "kandidatu": 1331
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "velikost": "20 000–100 000",
+        "bonus": 0.8,
+        "popisek": "+1 %",
+        "kandidatu": 652
+      },
+      {
+        "profese": "řemeslníci a opraváři",
+        "velikost": "nad 100 000",
+        "bonus": 1.8,
+        "popisek": "+2 %",
+        "kandidatu": 121
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "velikost": "do 1 000",
+        "bonus": -10.3,
+        "popisek": "−10 %",
+        "kandidatu": 1725
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "velikost": "1 000–4 000",
+        "bonus": -6.1,
+        "popisek": "−6 %",
+        "kandidatu": 1213
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "velikost": "4 000–20 000",
+        "bonus": -2.6,
+        "popisek": "−3 %",
+        "kandidatu": 964
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "velikost": "20 000–100 000",
+        "bonus": 0.1,
+        "popisek": "+0 %",
+        "kandidatu": 642
+      },
+      {
+        "profese": "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "velikost": "nad 100 000",
+        "bonus": 1.0,
+        "popisek": "+1 %",
+        "kandidatu": 147
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "velikost": "do 1 000",
+        "bonus": -12.0,
+        "popisek": "−12 %",
+        "kandidatu": 4606
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "velikost": "1 000–4 000",
+        "bonus": -7.1,
+        "popisek": "−7 %",
+        "kandidatu": 3164
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "velikost": "4 000–20 000",
+        "bonus": -3.9,
+        "popisek": "−4 %",
+        "kandidatu": 2603
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "velikost": "20 000–100 000",
+        "bonus": -0.3,
+        "popisek": "−0 %",
+        "kandidatu": 1589
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "velikost": "nad 100 000",
+        "bonus": 0.3,
+        "popisek": "+0 %",
+        "kandidatu": 362
+      },
+      {
+        "profese": "studenti a studentky",
+        "velikost": "do 1 000",
+        "bonus": -16.4,
+        "popisek": "−16 %",
+        "kandidatu": 980
+      },
+      {
+        "profese": "studenti a studentky",
+        "velikost": "1 000–4 000",
+        "bonus": -10.3,
+        "popisek": "−10 %",
+        "kandidatu": 1021
+      },
+      {
+        "profese": "studenti a studentky",
+        "velikost": "4 000–20 000",
+        "bonus": -2.9,
+        "popisek": "−3 %",
+        "kandidatu": 1075
+      },
+      {
+        "profese": "studenti a studentky",
+        "velikost": "20 000–100 000",
+        "bonus": 1.4,
+        "popisek": "+1 %",
+        "kandidatu": 715
+      },
+      {
+        "profese": "studenti a studentky",
+        "velikost": "nad 100 000",
+        "bonus": 2.4,
+        "popisek": "+2 %",
+        "kandidatu": 177
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "velikost",
+      "type": "ordinal",
+      "sort": [
+        "do 1 000",
+        "1 000–4 000",
+        "4 000–20 000",
+        "20 000–100 000",
+        "nad 100 000"
+      ],
+      "axis": {
+        "title": "počet obyvatel obce",
+        "orient": "top",
+        "labelAngle": 0,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "profese",
+      "type": "nominal",
+      "sort": [
+        "lékaři a lékařky",
+        "veterináři a veterinářky",
+        "ředitelé škol a jejich zástupci",
+        "hasiči",
+        "knihovnice a knihovníci",
+        "učitelky a učitelé",
+        "zemědělci a lesníci",
+        "podnikatelé a OSVČ",
+        "řemeslníci a opraváři",
+        "prodavačky, kuchařky, kadeřnice a pošťačky",
+        "důchodci a důchodkyně",
+        "studenti a studentky"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 300,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#f8f6f0",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.bonus === null",
+            "value": "#f8f6f0"
+          },
+          "field": "bonus",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              -10,
+              -5,
+              -2,
+              2,
+              5,
+              10
+            ],
+            "range": [
+              "#812840",
+              "#bb3a5d",
+              "#f5c4c9",
+              "#efe9dc",
+              "#b8eff6",
+              "#1a9fbd",
+              "#06677d"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "profese",
+            "title": "Profese"
+          },
+          {
+            "field": "velikost",
+            "title": "Obce"
+          },
+          {
+            "field": "popisek",
+            "title": "Hlasy navíc"
+          },
+          {
+            "field": "kandidatu",
+            "title": "Kandidátů",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "popisek"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.bonus !== null && (datum.bonus >= 5 || datum.bonus <= -5)",
+            "value": "#ffffff"
+          },
+          "value": "#101432"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registr kandidátů pro volby do zastupitelstev obcí 2026 (stav 11. 10. 2026); výpočet DataTimes.cz; „málo“ = méně než 30 kandidátů"
+}

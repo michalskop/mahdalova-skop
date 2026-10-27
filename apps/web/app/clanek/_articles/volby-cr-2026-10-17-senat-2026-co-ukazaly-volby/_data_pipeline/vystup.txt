@@ -1,0 +1,286 @@
+   obvod 24 zvoleny=None, vítěz podle hlasů: 2
+Strany v registru (zkratky NSTRANA vítězů): ['24/7', '4KOALICE', 'ANO', 'CZ', 'DEU', 'HDK', 'HPP 11', 'KDU-ČSL', 'KSČM', 'LIB', 'MHS', 'MÍSTNÍ HNHRM', 'NEZ', 'NK', 'NMFM', 'Nestran.', 'NČ', 'ODA', 'ODS', 'OK', 'OPAT', 'Ostravak', 'Piráti', 'ProMOST', 'PŘÍSAHA', 'S.cz', 'SD-SN', 'SEN 21', 'SLK', 'SNK ED', 'SOCDEM', 'SOS', 'SPOZ', 'STAN', 'Soukromníci', 'Svobodní', 'T2020', 'TOP 09', 'US-DEU', 'Zelení', '„OSN“']
+
+=== 1) ŘÁDNÉ VOLBY: kandidáti, ženy, vítězové, vládní strany ===
+rok  kand  žen%  zvol  žen_zvol  1.kolo  vláda_kand vláda_2k vláda_zvol  průměr_věk_zvol
+1996   568  10.4    81      9       4       175      104       52   53.1
+1998   137   8.8    27      3       0        27       15        3   52.4
+2000   160  16.2    27      4       1        27        5        1   49.7
+2002   168  14.9    27      3       1        50       19        9   50.9
+2004   197  18.8    27      3       1        56       12        4   53.2
+2006   204  19.1    27      6       0        27       26       14   52.9
+2008   200  17.0    27      5       1        44       23        3   53.7
+2010   227  16.3    27      4       0        69       24        9   54.2
+2012   233  18.0    27      5       0        43       10        4   57.0
+2014   242  15.3    27      5       0        70       37       19   56.8
+2016   233  18.5    27      6       0        63       32       11   57.0
+2018   236  17.8    27      2       2        45       15        2   54.4
+2020   235  16.2    27      4       1        38       11        1   54.7
+2022   178  24.2    27      9       3        52       21       18   59.0
+2024   169  17.2    27      4       5        48       20       14   53.7
+2026   154  21.4    27      1       5        41       13        0   –
+
+=== 2) VÍTĚZOVÉ podle navrhující strany ===
+1996 {'ODS': 32, 'SOCDEM': 25, 'KDU-ČSL': 13, 'ODA': 7, 'KSČM': 2, 'NK': 1, 'DEU': 1}
+1998 {'4KOALICE': 13, 'ODS': 9, 'SOCDEM': 3, 'KSČM': 2}
+2000 {'US-DEU': 8, 'ODS': 8, 'KDU-ČSL': 8, 'SOCDEM': 1, 'ODA': 1, 'NK': 1}
+2002 {'ODS': 9, 'SOCDEM': 7, 'SNK ED': 2, 'NEZ': 2, 'US-DEU': 1, 'CZ': 1, 'MÍSTNÍ HNHRM': 1, 'NK': 1, 'LIB': 1, 'KSČM': 1, 'KDU-ČSL': 1}
+2004 {'ODS': 18, 'KDU-ČSL': 3, 'SD-SN': 1, 'KSČM': 1, 'Zelení': 1, 'US-DEU': 1, 'NEZ': 1, 'SNK ED': 1}
+2006 {'ODS': 14, 'SOCDEM': 6, 'KDU-ČSL': 4, 'NK': 1, 'SOS': 1, 'STAN': 1}
+2008 {'SOCDEM': 23, 'ODS': 3, 'KSČM': 1}
+2010 {'SOCDEM': 12, 'ODS': 8, 'S.cz': 2, 'KDU-ČSL': 2, 'STAN': 1, 'TOP 09': 1, 'Nestran.': 1}
+2012 {'SOCDEM': 13, 'ODS': 4, 'STAN': 2, 'NK': 2, 'KDU-ČSL': 2, 'KSČM': 1, 'Piráti': 1, 'Zelení': 1, 'Ostravak': 1}
+2014 {'SOCDEM': 10, 'KDU-ČSL': 5, 'ANO': 4, 'ODS': 2, 'Zelení': 2, 'STAN': 1, 'SLK': 1, 'SPOZ': 1, 'Soukromníci': 1}
+2016 {'KDU-ČSL': 6, 'ODS': 3, 'ANO': 3, 'STAN': 2, 'S.cz': 2, 'TOP 09': 2, 'SOCDEM': 2, 'OPAT': 1, 'HPP 11': 1, 'SLK': 1, 'Nestran.': 1, 'Zelení': 1, 'NK': 1, '„OSN“': 1}
+2018 {'ODS': 10, 'STAN': 5, 'NK': 3, 'KDU-ČSL': 2, 'SEN 21': 1, 'Piráti': 1, 'MHS': 1, 'ANO': 1, 'TOP 09': 1, 'Ostravak': 1, 'SOCDEM': 1}
+2020 {'STAN': 10, 'ODS': 5, 'KDU-ČSL': 3, 'SEN 21': 2, 'TOP 09': 2, 'Svobodní': 1, 'Piráti': 1, 'SLK': 1, 'HDK': 1, 'ANO': 1}
+2022 {'ODS': 8, 'KDU-ČSL': 7, 'ANO': 3, 'TOP 09': 3, 'ProMOST': 1, 'NK': 1, 'T2020': 1, 'SEN 21': 1, 'SLK': 1, 'NEZ': 1}
+2024 {'ANO': 8, 'STAN': 5, 'ODS': 5, 'TOP 09': 2, 'KDU-ČSL': 2, 'SEN 21': 1, 'SLK': 1, 'PŘÍSAHA': 1, 'NK': 1, 'SOCDEM': 1}
+2026 {'STAN': 9, 'ODS': 7, 'KDU-ČSL': 3, 'TOP 09': 2, 'NČ': 1, 'SEN 21': 1, 'SLK': 1, '24/7': 1, 'NMFM': 1, 'OK': 1}
+
+=== 3) CELÝ SENÁT po volbách (podle strany, která senátora navrhla; ženy) ===
+1996: žen 9/81 (11.1 %) | vládní strany 52 | ODS 32, SOCDEM 25, KDU-ČSL 13, ODA 7, KSČM 2, NK 1, DEU 1
+1998: žen 9/81 (11.1 %) | vládní strany 23 | ODS 28, SOCDEM 23, 4KOALICE 13, KDU-ČSL 9, KSČM 4, ODA 3, DEU 1
+2000: žen 10/81 (12.3 %) | vládní strany 15 | ODS 22, SOCDEM 15, KDU-ČSL 14, 4KOALICE 13, US-DEU 8, ODA 4, KSČM 3, NK 2
+2002: žen 10/81 (12.3 %) | vládní strany 29 | ODS 26, 4KOALICE 13, SOCDEM 11, US-DEU 9, KDU-ČSL 9, KSČM 3, NK 2, SNK ED 2, NEZ 2, CZ 1, MÍSTNÍ HNHRM 1, LIB 1, ODA 1
+2004: žen 10/81 (12.3 %) | vládní strany 30 | ODS 36, KDU-ČSL 14, US-DEU 9, SOCDEM 7, SNK ED 3, KSČM 2, NK 2, NEZ 2, SD-SN 1, Zelení 1, CZ 1, MÍSTNÍ HNHRM 1, LIB 1, ODA 1
+2006: žen 12/81 (14.8 %) | vládní strany 41 | ODS 41, SOCDEM 12, KDU-ČSL 10, SNK ED 3, KSČM 2, NK 2, US-DEU 2, NEZ 2, SD-SN 1, Zelení 1, CZ 1, MÍSTNÍ HNHRM 1, SOS 1, LIB 1, STAN 1
+2008: žen 14/81 (17.3 %) | vládní strany 42 | ODS 35, SOCDEM 29, KDU-ČSL 7, KSČM 3, SD-SN 1, Zelení 1, US-DEU 1, SOS 1, NEZ 1, SNK ED 1, STAN 1
+2010: žen 15/81 (18.5 %) | vládní strany 26 | SOCDEM 41, ODS 25, KDU-ČSL 6, STAN 2, S.cz 2, KSČM 2, TOP 09 1, SOS 1, Nestran. 1
+2012: žen 14/81 (17.3 %) | vládní strany 16 | SOCDEM 48, ODS 15, KDU-ČSL 4, STAN 3, S.cz 2, KSČM 2, NK 2, TOP 09 1, Piráti 1, Nestran. 1, Zelení 1, Ostravak 1
+2014: žen 15/81 (18.5 %) | vládní strany 49 | SOCDEM 35, ODS 14, KDU-ČSL 10, STAN 4, ANO 4, Zelení 4, S.cz 2, KSČM 1, Piráti 1, SLK 1, Nestran. 1, NK 1, Ostravak 1, SPOZ 1, Soukromníci 1
+2016: žen 16/81 (19.8 %) | vládní strany 46 | SOCDEM 25, KDU-ČSL 14, ODS 9, ANO 7, STAN 5, Zelení 4, S.cz 2, TOP 09 2, SLK 2, NK 2, KSČM 1, OPAT 1, HPP 11 1, Piráti 1, Nestran. 1, Ostravak 1, „OSN“ 1, SPOZ 1, Soukromníci 1
+2018: žen 13/81 (16.0 %) | vládní strany 20 | ODS 15, SOCDEM 13, KDU-ČSL 13, STAN 9, ANO 7, NK 4, Zelení 3, TOP 09 3, SEN 21 2, SLK 2, SD-SN 1, OPAT 1, HPP 11 1, Piráti 1, MHS 1, S.cz 1, Nestran. 1, Ostravak 1, „OSN“ 1, Soukromníci 1
+2020: žen 12/81 (14.8 %) | vládní strany 8 | ODS 18, STAN 17, KDU-ČSL 11, ANO 5, TOP 09 5, NK 4, SEN 21 3, SOCDEM 3, Piráti 2, SLK 2, SD-SN 1, OPAT 1, Svobodní 1, HPP 11 1, MHS 1, S.cz 1, Nestran. 1, HDK 1, Zelení 1, Ostravak 1, „OSN“ 1
+2022: žen 15/81 (18.5 %) | vládní strany 58 | ODS 23, STAN 15, KDU-ČSL 12, TOP 09 6, ANO 5, SEN 21 4, NK 4, Piráti 2, SLK 2, ProMOST 1, T2020 1, Svobodní 1, MHS 1, HDK 1, Ostravak 1, SOCDEM 1, NEZ 1
+2024: žen 17/81 (21.0 %) | vládní strany 53 | ODS 18, STAN 15, ANO 12, KDU-ČSL 12, TOP 09 7, SEN 21 4, SLK 3, NK 2, ProMOST 1, T2020 1, Svobodní 1, Piráti 1, HDK 1, PŘÍSAHA 1, SOCDEM 1, NEZ 1
+2026: žen 14/81 (17.3 %) | vládní strany 11 | ODS 20, STAN 14, KDU-ČSL 12, ANO 11, TOP 09 7, SEN 21 3, SLK 3, NK 2, ProMOST 1, NČ 1, T2020 1, PŘÍSAHA 1, 24/7 1, NMFM 1, SOCDEM 1, OK 1, NEZ 1
+
+=== 4) OBHAJOBY (senátor obvodu před volbami kandidoval ve stejném obvodu) ===
+1998: obvodů 27, obhajovalo 18, uspělo 11 (61 %)
+2000: obvodů 27, obhajovalo 20, uspělo 6 (30 %)
+2002: obvodů 27, obhajovalo 17, uspělo 6 (35 %)
+2004: obvodů 27, obhajovalo 13, uspělo 5 (38 %)
+2006: obvodů 27, obhajovalo 16, uspělo 8 (50 %)
+2008: obvodů 27, obhajovalo 19, uspělo 4 (21 %)
+2010: obvodů 27, obhajovalo 20, uspělo 6 (30 %)
+2012: obvodů 27, obhajovalo 19, uspělo 8 (42 %)
+2014: obvodů 27, obhajovalo 22, uspělo 5 (23 %)
+2016: obvodů 27, obhajovalo 19, uspělo 10 (53 %)
+2018: obvodů 27, obhajovalo 14, uspělo 6 (43 %)
+2020: obvodů 27, obhajovalo 21, uspělo 7 (33 %)
+2022: obvodů 27, obhajovalo 22, uspělo 12 (55 %)
+2024: obvodů 27, obhajovalo 23, uspělo 9 (39 %)
+2026: obvodů 27, obhajovalo 21, uspělo 15 (71 %)
+
+=== 5) DRUHÁ KOLA: kolikrát vyhrál ten, kdo v 1. kole skončil druhý ===
+1996: 2. kol 77, obrat 44 (57 %); nejtěsnější: (0.29999999999999716, 67, 'František Konečný', 50.15, 'Astrid Poučová', 49.85)
+1998: 2. kol 27, obrat 4 (15 %); nejtěsnější: (1.3599999999999994, 58, 'Dagmar Lastovecká', 50.68, 'Václav Božek', 49.32)
+2000: 2. kol 26, obrat 9 (35 %); nejtěsnější: (0.4299999999999997, 38, 'Jiří Dienstbier', 49.78, 'Jaroslav Mitlener', 50.21)
+2002: 2. kol 26, obrat 8 (31 %); nejtěsnější: (0.5300000000000011, 66, 'Vítězslav Vavroušek', 50.26, 'Karel Korytář', 49.73)
+2004: 2. kol 26, obrat 6 (23 %); nejtěsnější: (0.30999999999999517, 46, 'Jiří Čepelka', 49.84, 'Ludmila Müllerová', 50.15)
+2006: 2. kol 27, obrat 7 (26 %); nejtěsnější: (0.0899999999999963, 44, 'Jana Fischerová', 49.95, 'Petr Pithart', 50.04)
+2008: 2. kol 26, obrat 3 (12 %); nejtěsnější: (1.990000000000002, 81, 'Hana Doupovcová', 50.99, 'Josef Vaculík', 49.0)
+2010: 2. kol 27, obrat 6 (22 %); nejtěsnější: (0.3299999999999983, 25, 'Petr Bratský', 50.16, 'Bedřich Moldan', 49.83)
+2012: 2. kol 27, obrat 5 (19 %); nejtěsnější: (3.1300000000000026, 11, 'Jan Látka', 51.56, 'Rudolf Salvetr', 48.43)
+2014: 2. kol 27, obrat 5 (19 %); nejtěsnější: (2.509999999999998, 12, 'Martin Gregora', 48.74, 'Karel Kratochvíle', 51.25)
+2016: 2. kol 27, obrat 4 (15 %); nejtěsnější: (3.6300000000000026, 70, 'Liana Janáčková', 48.18, 'Zdeněk Nytra', 51.81)
+2018: 2. kol 25, obrat 2 (8 %); nejtěsnější: (5.190000000000005, 11, 'Vladislav Vilímec', 52.59, 'Jan Látka', 47.4)
+2020: 2. kol 26, obrat 8 (31 %); nejtěsnější: (0.1700000000000017, 57, 'Jaroslav Klaška', 49.91, 'Karel Zitterbart', 50.08)
+2022: 2. kol 24, obrat 6 (25 %); nejtěsnější: (1.25, 40, 'Jaromír Strnad', 49.37, 'Bohuslav Procházka', 50.62)
+2024: 2. kol 22, obrat 5 (23 %); nejtěsnější: (4.009999999999998, 44, 'Jan Tecl', 52.0, 'Vladimír Slávka', 47.99)
+2026: 2. kol 22, obrat 6 (27 %); nejtěsnější: (3.3299999999999983, 30, 'Adéla Sucharda Šípová', 48.33, 'Petr Paták', 51.66)
+
+=== 6) ÚSPĚŠNOST STRAN VE 2. KOLE (postoupil → vyhrál) pro hlavní strany ===
+ANO 2012:7/0/0  2014:26/9/4  2016:25/14/3  2018:22/10/1  2020:18/8/1  2022:22/17/2  2024:23/19/6  2026:24/13/0
+ODS 1996:80/76/29  1998:27/22/9  2000:27/18/8  2002:26/19/9  2004:27/25/17  2006:27/26/14  2008:27/20/3  2010:27/19/8  2012:27/10/4  2014:24/7/2  2016:22/5/3  2018:18/11/10  2020:17/10/5  2022:13/9/8  2024:16/9/5  2026:14/9/7
+SOCDEM 1996:79/48/25  1998:27/15/3  2000:27/5/1  2002:26/14/7  2004:27/3/0  2006:27/11/6  2008:27/25/22  2010:27/22/12  2012:27/23/13  2014:27/19/10  2016:26/9/2  2018:23/5/1  2020:20/3/0  2022:9/1/0  2024:11/0/0  2026:2/0/0
+STAN 2006:1/1/1  2008:2/0/0  2010:3/1/1  2012:7/2/2  2014:3/1/1  2016:8/3/2  2018:7/5/4  2020:15/9/9  2022:13/1/0  2024:15/5/5  2026:13/11/7
+KDU-ČSL 1996:45/17/12  2000:11/10/8  2002:12/3/1  2004:23/7/3  2006:21/6/4  2008:17/3/0  2010:19/3/2  2012:15/2/2  2014:17/9/5  2016:12/9/6  2018:12/4/1  2020:12/7/3  2022:11/6/6  2024:7/2/1  2026:5/2/2
+TOP 09 2010:23/4/1  2012:16/0/0  2014:18/4/0  2016:14/3/2  2018:8/2/1  2020:6/3/2  2022:7/3/2  2024:5/2/1  2026:3/1/1
+Piráti 2010:1/0/0  2012:3/1/1  2014:4/0/0  2016:4/0/0  2018:13/3/1  2020:13/2/1  2022:8/0/0  2024:5/0/0  2026:3/1/0
+SPD 2016:3/0/0  2018:27/0/0  2020:26/0/0  2022:19/1/0  2024:18/1/0  2026:17/0/0
+KSČM 1996:81/4/2  1998:27/3/2  2000:27/8/0  2002:27/5/1  2004:27/9/1  2006:27/3/0  2008:27/1/1  2010:27/0/0  2012:27/12/1  2014:27/0/0  2016:27/1/0  2018:27/1/0  2020:21/0/0  2022:8/0/0  2024:5/1/0  2026:8/0/0
+
+=== 7) ÚČAST (řádné volby, součet okrsků) ===
+1996 1 35.03 %
+1996 2 30.63 %
+1998 1 42.37 %
+1998 2 20.36 %
+2000 1 33.72 %
+2000 2 21.56 %
+2002 1 24.10 %
+2002 2 32.55 %
+2004 1 28.97 %
+2004 2 18.41 %
+2006 1 42.09 %
+2006 2 20.73 %
+2008 1 39.52 %
+2008 2 29.85 %
+2010 1 44.59 %
+2010 2 24.64 %
+2012 1 34.90 %
+2012 2 18.60 %
+2014 1 38.62 %
+2014 2 16.69 %
+2016 1 33.54 %
+2016 2 15.38 %
+2018 1 42.26 %
+2018 2 16.49 %
+2020 1 36.74 %
+2020 2 16.74 %
+2022 1 42.65 %
+2022 2 19.44 %
+2024 1 30.47 %
+2024 2 17.54 %
+2026 1 43.31 % (zapsaní 2781935, obálky 1204983)
+2026 2 21.12 % (zapsaní 2252325, obálky 475714)
+
+=== SPORNÉ pohlaví (jméno × příjmení nesouhlasí) – zkontrolovat ručně ===
+   Alžběta Samková Klára -> Ž
+   Astrid Poučová -> Ž
+   Eva Svoboda -> Ž
+   Hana Dolejší -> Ž
+   Helena Leisztner -> Ž
+   Jana ŠRÁMKOVÁ -> Ž
+   Karen Pumrová -> Ž
+   Lenka Helena Koenigsmark -> Ž
+   Lenka KOHOUTOVÁ -> Ž
+   Lucie Frederika Groene Odkolek -> Ž
+   Lucie Groene -> Ž
+   Ludmila Nedělkova -> Ž
+   Martina Motshagen -> Ž
+   Michaela VOJTOVÁ -> Ž
+   Pynelopi Cimprichová -> Ž
+   Pynelopi Valsamisová -> Ž
+   Renata Sabongui -> Ž
+   Sandra Tsoukernik -> Ž
+   Vladimíra Hoření -> Ž
+   Zdenka Němečková Crkvenjaš -> Ž
+   Zita Calabri -> Ž
+
+=== ZVOLENÉ ŽENY podle roku ===
+1996 Alena Palečková (ODS, 23); Jarmila Filipová (ODS, 38); Libuše Benešová (ODS, 41); Jaroslava Moserová (ODA, 43); Vlasta Svobodová (ODS, 55); Jitka Seitlová (ODA, 63); Věra Vašínková (SOCDEM, 69); Eva Nováková (KDU-ČSL, 76); Irena Ondrová (ODS, 78)
+1998 Zuzana Roithová (4KOALICE, 22); Jaroslava Moserová (4KOALICE, 43); Dagmar Lastovecká (ODS, 58)
+2000 Alena Palečková (ODS, 23); Daniela Filipiová (ODS, 26); Soňa Paukrtová (US-DEU, 35); Helena Rögnerová (KDU-ČSL, 41)
+2002 Václava Domšová (SNK ED, 48); Jitka Seitlová (NEZ, 63); Alena Gajdůšková (SOCDEM, 78)
+2004 Ludmila Müllerová (KDU-ČSL, 46); Liana Janáčková (NEZ, 70); Alena Venhodová (ODS, 79)
+2006 Jiřina Rippelová (SOCDEM, 11); Alena Palečková (ODS, 23); Daniela Filipiová (ODS, 26); Soňa Paukrtová (SOS, 35); Božena Sekaninová (SOCDEM, 62); Jana Juřenčáková (STAN, 80)
+2008 Dagmar Zvěřinová (SOCDEM, 51); Marta Bayerová (KSČM, 54); Eva Richtrová (SOCDEM, 69); Alena Gajdůšková (SOCDEM, 78); Hana Doupovcová (SOCDEM, 81)
+2010 Alena Dernerová (S.cz, 4); Dagmar Terelmešová (SOCDEM, 7); Veronika Vrecionová (ODS, 28); Miluše Horská (Nestran., 43)
+2012 Milada Emmerová (SOCDEM, 8); Eva Syková (SOCDEM, 20); Daniela Filipiová (ODS, 23); Eliška Wagnerová (Zelení, 59); Božena Sekaninová (SOCDEM, 62)
+2014 Zdeňka Hamousová (ANO, 6); Zuzana Baudyšová (ANO, 24); Emilie Třísková (SOCDEM, 42); Jitka Seitlová (Zelení, 63); Alena Šromová (KDU-ČSL, 66)
+2016 Alena Dernerová (S.cz, 4); Renata Chmelová (KDU-ČSL, 22); Miluše Horská (Nestran., 43); Jaromíra Vítková (KDU-ČSL, 49); Šárka Jelínková (KDU-ČSL, 76); Anna Hubáčková (KDU-ČSL, 79)
+2018 Hana Žáková (STAN, 53); Jitka Chalánková (NK, 62)
+2020 Miroslava Němcová (ODS, 27); Adéla Šípová (Piráti, 30); Jitka Seitlová (KDU-ČSL, 63); Helena Pešatová (STAN, 69)
+2022 Věra Procházková (ANO, 1); Daniela Kovářová (NK, 7); Hana Kordová Marvanová (ODS, 19); Jarmila Smotlachová (ODS, 28); Miluše Horská (KDU-ČSL, 43); Jaromíra Vítková (KDU-ČSL, 49); Ivana Váňová (KDU-ČSL, 67); Jana Zwyrtek Hamplová (NEZ, 76); Eva Rajchmanová (KDU-ČSL, 79)
+2024 Jana Mračková Vildumetzová (ANO, 2); Vladimíra Ludková (ODS, 23); Lena Mlejnková (SLK, 35); Hana Žáková (STAN, 53)
+2026 Zuzana Ceralová Petrofová (ODS, 45)
+2026 senátorky celkem: ['Věra Procházková', 'Jana Mračková Vildumetzová', 'Daniela Kovářová', 'Hana Kordová Marvanová', 'Vladimíra Ludková', 'Jarmila Smotlachová', 'Lena Mlejnková', 'Miluše Horská', 'Zuzana Ceralová Petrofová', 'Jaromíra Vítková', 'Hana Žáková', 'Ivana Váňová', 'Jana Zwyrtek Hamplová', 'Eva Rajchmanová']
+
+=== ŽENY ve 2. kole / zvolené v 1. kole a jejich úspěšnost ===
+1996 ženy postoupily/zvoleny v 1.k.: 16, zvoleno 9; muži: 142
+1998 ženy postoupily/zvoleny v 1.k.: 4, zvoleno 3; muži: 50
+2000 ženy postoupily/zvoleny v 1.k.: 11, zvoleno 4; muži: 42
+2002 ženy postoupily/zvoleny v 1.k.: 6, zvoleno 3; muži: 47
+2004 ženy postoupily/zvoleny v 1.k.: 10, zvoleno 3; muži: 43
+2006 ženy postoupily/zvoleny v 1.k.: 13, zvoleno 6; muži: 41
+2008 ženy postoupily/zvoleny v 1.k.: 7, zvoleno 5; muži: 46
+2010 ženy postoupily/zvoleny v 1.k.: 7, zvoleno 4; muži: 47
+2012 ženy postoupily/zvoleny v 1.k.: 10, zvoleno 5; muži: 44
+2014 ženy postoupily/zvoleny v 1.k.: 8, zvoleno 5; muži: 46
+2016 ženy postoupily/zvoleny v 1.k.: 11, zvoleno 6; muži: 43
+2018 ženy postoupily/zvoleny v 1.k.: 10, zvoleno 2; muži: 42
+2020 ženy postoupily/zvoleny v 1.k.: 6, zvoleno 4; muži: 47
+2022 ženy postoupily/zvoleny v 1.k.: 17, zvoleno 9; muži: 34
+2024 ženy postoupily/zvoleny v 1.k.: 6, zvoleno 4; muži: 43
+2026 ženy postoupily/zvoleny v 1.k.: 11, zvoleno 1; muži: 38
+
+=== 2026: vedoucí z 1. kola, kteří prohráli ===
+30 Adéla Sucharda Šípová (Piráti) 30.8 % -> 48.33 %  vs  Petr Paták (ODS) 29.44 % -> 51.66 %
+36 Jitka Volfová (ANO) 35.05 % -> 44.24 %  vs  Martin Půta (SLK) 32.66 % -> 55.75 %
+45 Martin Dvořák (STAN) 25.13 % -> 39.84 %  vs  Zuzana Ceralová Petrofová (ODS) 21.94 % -> 60.15 %
+51 Michal Šmarda (Volt) 27.6 % -> 45.91 %  vs  Josef Klement (KDU-ČSL) 25.62 % -> 54.08 %
+69 Helena Pešatová (STAN) 34.75 % -> 47.9 %  vs  Petr Korč (NMFM) 32.47 % -> 52.09 %
+75 Lenka Brzyszkowská (ANO) 33.62 % -> 47.06 %  vs  Petr Kazík (OK) 14.31 % -> 52.93 %
+
+=== ANO: první místa v 1. kole a výhry ===
+2014 ANO 1. místo v 1. kole: 5 | z toho zvoleno: 3
+2016 ANO 1. místo v 1. kole: 6 | z toho zvoleno: 3
+2018 ANO 1. místo v 1. kole: 1 | z toho zvoleno: 1
+2020 ANO 1. místo v 1. kole: 3 | z toho zvoleno: 1
+2022 ANO 1. místo v 1. kole: 7 | z toho zvoleno: 3
+2024 ANO 1. místo v 1. kole: 11 | z toho zvoleno: 8
+2026 ANO 1. místo v 1. kole: 2 | z toho zvoleno: 0
+
+=== Vítězné % ve 2. kole (medián) a nejvyšší ===
+1996 medián 55.7 %, max 72.91 %
+1998 medián 57.0 %, max 69.97 %
+2000 medián 57.8 %, max 74.5 %
+2002 medián 56.9 %, max 74.02 %
+2004 medián 56.5 %, max 72.54 %
+2006 medián 58.2 %, max 73.38 %
+2008 medián 60.1 %, max 69.24 %
+2010 medián 54.8 %, max 71.75 %
+2012 medián 60.1 %, max 74.39 %
+2014 medián 55.4 %, max 71.43 %
+2016 medián 59.8 %, max 80.18 %
+2018 medián 61.9 %, max 79.75 %
+2020 medián 59.1 %, max 79.48 %
+2022 medián 58.0 %, max 67.97 %
+2024 medián 59.9 %, max 74.26 %
+2026 medián 62.9 %, max 78.73 %
+
+=== Souboje 2. kola podle pohlaví ===
+1996 {'MM': 62, 'MŽ': 14, 'ŽŽ': 1} | žena vyhrála smíšený souboj: 8/14
+1998 {'MM': 23, 'MŽ': 4} | žena vyhrála smíšený souboj: 3/4
+2000 {'MM': 17, 'MŽ': 7, 'ŽŽ': 2} | žena vyhrála smíšený souboj: 2/7
+2002 {'MM': 21, 'MŽ': 4, 'ŽŽ': 1} | žena vyhrála smíšený souboj: 2/4
+2004 {'MM': 17, 'MŽ': 8, 'ŽŽ': 1} | žena vyhrála smíšený souboj: 2/8
+2006 {'MM': 17, 'MŽ': 7, 'ŽŽ': 3} | žena vyhrála smíšený souboj: 3/7
+2008 {'MM': 19, 'MŽ': 7} | žena vyhrála smíšený souboj: 5/7
+2010 {'MM': 20, 'MŽ': 7} | žena vyhrála smíšený souboj: 4/7
+2012 {'MM': 18, 'MŽ': 8, 'ŽŽ': 1} | žena vyhrála smíšený souboj: 4/8
+2014 {'MM': 19, 'MŽ': 8} | žena vyhrála smíšený souboj: 5/8
+2016 {'MM': 16, 'MŽ': 11} | žena vyhrála smíšený souboj: 6/11
+2018 {'MŽ': 8, 'MM': 16, 'ŽŽ': 1} | žena vyhrála smíšený souboj: 1/8
+2020 {'MŽ': 6, 'MM': 20} | žena vyhrála smíšený souboj: 4/6
+2022 {'ŽŽ': 4, 'MŽ': 9, 'MM': 11} | žena vyhrála smíšený souboj: 5/9
+2024 {'MM': 17, 'MŽ': 5} | žena vyhrála smíšený souboj: 3/5
+2026 {'MŽ': 11, 'MM': 11} | žena vyhrála smíšený souboj: 1/11
+
+=== Senátorky s mandátem končícím 2026 a co udělaly ===
+27 Miroslava Němcová ODS -> nekandidovala
+30 Adéla Šípová Piráti -> [('Adéla Sucharda Šípová', 30, False)]
+63 Jitka Seitlová KDU-ČSL -> nekandidovala
+69 Helena Pešatová STAN -> [('Helena Pešatová', 69, False)]
+
+=== 2026: ženy ve 2. kole a jejich soupeři ===
+3 Sandra Tsoukernik ANO 27.08 -> 28.64 | proti Miroslav Plevný STAN 71.35
+9 Lucie Kantorová ANO 27.26 -> 40.62 | proti Karel Řehka STAN 59.37
+18 Barbora Daňhová ANO 25.21 -> 25.74 | proti Petr Štěpánek STAN 74.25
+24 Dagmar Pecková ODS 23.06 -> 21.26 | proti David Smoljak STAN 78.73
+30 Adéla Sucharda Šípová Piráti 30.8 -> 48.33 | proti Petr Paták ODS 51.66
+36 Jitka Volfová ANO 35.05 -> 44.24 | proti Martin Půta SLK 55.75
+42 Andrea Brzobohatá ANO 25.54 -> 26.75 | proti Michael Kašpar STAN 73.24
+45 Zuzana Ceralová Petrofová ODS 21.94 -> 60.15 | proti Martin Dvořák STAN 39.84
+69 Helena Pešatová STAN 34.75 -> 47.9 | proti Petr Korč NMFM 52.09
+72 Lucie Baránková Vilamová ANO 30.61 -> 34.09 | proti Ondřej Šimetka ODS 65.9
+75 Lenka Brzyszkowská ANO 33.62 -> 47.06 | proti Petr Kazík OK 52.93
+
+=== OBHAJOBY podle toho, zda obhájce navrhla strana tehdejší vlády (vláda v den voleb) ===
+1998: obhájci z vládních stran 0/2, ostatní 11/16
+2000: obhájci z vládních stran 1/7, ostatní 5/13
+2002: obhájci z vládních stran 3/12, ostatní 3/5
+2004: obhájci z vládních stran 0/0, ostatní 5/13
+2006: obhájci z vládních stran 5/7, ostatní 3/9
+2008: obhájci z vládních stran 1/8, ostatní 3/11
+2010: obhájci z vládních stran 4/14, ostatní 2/6
+2012: obhájci z vládních stran 2/10, ostatní 6/9
+2014: obhájci z vládních stran 5/19, ostatní 0/3
+2016: obhájci z vládních stran 3/10, ostatní 7/9
+2018: obhájci z vládních stran 1/5, ostatní 5/9
+2020: obhájci z vládních stran 0/10, ostatní 7/11
+2022: obhájci z vládních stran 7/11, ostatní 5/11
+2024: obhájci z vládních stran 6/17, ostatní 3/6
+2026: obhájci z vládních stran 0/0, ostatní 15/21

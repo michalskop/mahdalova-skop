@@ -26,6 +26,8 @@ nejdřív ji aktualizuj z origin/main (git merge origin/main). NIKDY cover neimp
 
 Než začneš, přečti a dodržuj:
 - tools/COVER-EDITOR.md – sada formátů, bezpečné zóny, písma, OG pravidla
+- tools/COVER-VIZUALNI-IDENTITA.md – jak najít motiv (věta → obraz), cesta s fotkou i bez ní, citlivá témata,
+  vzory (tečková mapa, „slunečnice“ z teček, ikona série, koláž výstřižků)
 - packages/ui/DESIGN.md, sekce „Full palette“ – ZÁVAZNÁ paleta, jen přesné hodnoty, žádné vlastní odstíny
 - docs/design/NAVOD_LOGO_NA_COVER.md – logo DataTimes.cz (umístění, velikost)
 - GENERÁTOR: tools/cover-generator.cjs – z jednoho cover.config.cjs v _cover_pipeline/ článku vyrobí všech pět formátů
@@ -47,8 +49,12 @@ Než začneš, přečti a dodržuj:
      tečková mapa ČR (podklad senat-mapa.json / obce-mapa.json z článku volby-cr-2026-10-10-senat-komunalni-2026-predikce)
      s vrstvou bodů (města, obvody, okrsky), body velké/barevné podle hodnoty z článku; mapa obcí; ikona série.
      Číslo nebo krátký graf smí být jen DOPLNĚK přes velký motiv, nikdy motiv sám.
-   - ZAKÁZÁNO jako motiv: samotný sloupcový/pruhový graf, samotné číslo nebo text na prázdné ploše,
-     „infografika“ z pár pruhů. Pruhy navíc musí mít poctivé měřítko (54 % není skoro celá šíře).
+   - ZAKÁZÁNO jako motiv: holý graf nebo samotné číslo či text na prázdné ploše, „infografika“ z pár pruhů.
+     Graf (třeba spojnicový) je v pořádku, když má dobrý podkres (fotka, mapa, záře) a kompozici přes celou plochu –
+     styl není striktně předepsaný (COVER-VIZUALNI-IDENTITA.md, kap. 4). Měřítko vždy poctivé (54 % není skoro celá šíře).
+   - Podkresová fotka: nejdřív Kateřininy vlastní fotky (Desktop\Mahdalova & Skop\Ilustrační obrázky\, Desktop\Z mobilu*\),
+     ne agenturní ilustračky; převzaté obrázky z ilustrační složky ne. Fotka musí ILUSTROVAT sdělení článku –
+     žádný náhodný podkres ani zvětšení na nic neříkající detail; když vhodná není, cover bez fotky (kap. 5.1).
    - Fotka → fotka je hlavní, text jen titulek, případně krátký citát v uvozovkách se jménem; nic dalšího.
    - ZAKÁZÁNO: AI generované obrázky a ilustrace, stockové ikony, 3D efekty, neonové záře, víc než 2–3 barvy motivu,
      text přes rušná místa fotky, emoji, vymyšlená čísla. Každé číslo nebo tvrzení na coveru musí být v článku.
@@ -97,7 +103,7 @@ Než začneš, přečti a dodržuj:
    - zkontroluj: čte se titulek i na náhledu 120×96? nic důležitého není oříznuté? nic nezasahuje pod štítek
      rubriky (x ≥ 950, y ≤ 280)? začíná text a sedí logo na stejných kotvách jako u ostatních coverů? barvy jsou přesně z palety?
      sedí čísla s článkem? velikost OG ≤ 300 kB?
-   - pošli mi kontrolní list a všech pět souborů; frontmatter:
+   - pošli mi kontrolní list a všech pět souborů jako náhled (soubory, ne jen zmínku „hotovo“); frontmatter:
      coverImage + homepageImage: images/cover-homepage.png, ogImage: images/cover-og.jpg, squareImage: images/cover-square.png
    - nic necommituj ani nepushuj bez mého souhlasu.
 ```

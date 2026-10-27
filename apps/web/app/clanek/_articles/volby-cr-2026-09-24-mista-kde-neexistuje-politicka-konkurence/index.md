@@ -4,8 +4,11 @@ date: "2026-09-24"
 time: "07:47"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "V komunálních volbách 9. a 10. října bude mít 1 830 obcí jedinou kandidátku, v roce 1994 jich bylo 645. V 930 z nich je kandidátů přesně tolik, kolik je míst, nebo méně: zvoleni budou všichni a zastupitelstvo nebude mít náhradníky. Lidé z těchto obcí přitom k velkým volbám chodí stejně jako ostatní, komunální volby ale vynechávají."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "komunální volby", "obce", "kandidáti", "politika", "data"]
 promoted: 1

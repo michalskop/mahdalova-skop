@@ -50,6 +50,27 @@
   overflow: visible;
 }
 
+/* Newsletter (SubscribeNewsletter): po výběru uložené adresy prohlížeč
+   přebarví pole na světle modro a světlé písmo pak zmizí (podnět čtenáře,
+   10/2026). Podklad se přebarvit nedá, tak ho překryje vnitřní stín v barvě
+   pole (brandDeepRed.7) a písmo zůstane světlé (background.2). */
+.dt-newsletter-input:-webkit-autofill,
+.dt-newsletter-input:-webkit-autofill:hover,
+.dt-newsletter-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--mantine-color-brandDeepRed-7) inset;
+  box-shadow: 0 0 0 1000px var(--mantine-color-brandDeepRed-7) inset;
+  -webkit-text-fill-color: var(--mantine-color-background-2);
+  caret-color: var(--mantine-color-background-2);
+}
+
+/* Standardní :autofill zvlášť – neznámý pseudo-selektor v seznamu by
+   prohlížeči bez podpory zneplatnil celé pravidlo výše. */
+.dt-newsletter-input:autofill {
+  box-shadow: 0 0 0 1000px var(--mantine-color-brandDeepRed-7) inset;
+  -webkit-text-fill-color: var(--mantine-color-background-2);
+  caret-color: var(--mantine-color-background-2);
+}
+
 /* Contain the article's floats within the body so a bleeding element near the
    end never overlaps the byline above or the "Doporučujeme"/SupportBanner
    below. overflow stays visible, so the -12% bleed still paints outside. */

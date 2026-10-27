@@ -1,0 +1,254 @@
+<meta charset="utf-8">
+<title>Účast v komunálních volbách 2022 → 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Serif:wght@400&display=swap">
+<style>
+/* Vložená mapa do článku volby-cr-2026-10-16-ucast-2022-2026 (iframe; výšku posílá rodiči přes postMessage).
+   Layout: čísla nahoře, mapa s ovládáním, dva žebříčky měst, rozbalovací tabulka okresů.
+   Barvy výhradně z palety webu (apps/web/app/providers/ThemeProvider.tsx), v komentáři řada[index]. */
+:root{
+  --bg:#fdfbf7;      /* background[1] */  --panel:#ffffff;   /* background[0] */
+  --fg:#101432;      /* brandNavy[9] */   --muted:#4c4f8e;   /* brandNavy[7] */
+  --line:#e8e8dc;    /* background[6] */  --land:#f3f1e9;    /* background[3] */
+  --mid:#d4d4c8;     /* background[7] */  --empty:#bcbcb0;   /* background[9] */
+  --border:#ffffff;  /* background[0] */  --kraj:#6267a3;    /* brandNavy[6] */
+  --up:#6ec53f;      /* brandForestGreen[4] */  --up-text:#507e08;
+  --down:#ff1a4a;    /* brand[4] */             --down-text:#c5143c; /* brand[7] */
+  --shadow:#101432;  /* brandNavy[9] */
+  --display:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif; --body:"IBM Plex Serif",Georgia,serif;
+}
+.controls,.legend,table,#tip,.nums,.lab{font-family:var(--display)}
+html{color-scheme:light}
+body{margin:0;background:transparent;color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{margin:0;padding:2px;display:grid;gap:20px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-family:var(--display);font-weight:700;font-size:1.1rem;margin:0 0 8px}
+.lede{max-width:68ch;color:var(--muted);margin:8px 0 0}
+.nums{display:flex;flex-wrap:wrap;gap:28px 40px;font-variant-numeric:tabular-nums}
+.num b{display:block;font-family:var(--display);font-size:1.9rem;font-weight:700;line-height:1.1}
+.num span{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.up{color:var(--up-text)} .down{color:var(--down-text)}
+.controls{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.seg button{font:inherit;font-size:.9rem;background:var(--panel);color:var(--fg);border:0;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.seg button:focus-visible{outline:2px solid var(--up);outline-offset:-2px}
+.lab{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-right:6px}
+.mapbox{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+canvas{display:block;width:100%;touch-action:pan-y;cursor:grab}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;font-size:.85rem;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line)}
+.legend svg{vertical-align:middle}
+.hint{margin-left:auto}
+#tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:.88rem;box-shadow:0 4px 14px color-mix(in srgb, var(--shadow) 14%, transparent);min-width:190px;font-variant-numeric:tabular-nums}
+#tip b{font-family:var(--display)} #tip .r{display:flex;justify-content:space-between;gap:16px}
+#tip .s{color:var(--muted);font-size:.8rem}
+.lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.lists>div{min-width:0}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.92rem}
+th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}
+td:not(:first-child){white-space:nowrap}
+th{font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td small{color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted);max-width:90ch}
+details summary{font-family:var(--display);font-weight:700;font-size:1.05rem;cursor:pointer;padding:6px 0}
+details[open] summary{margin-bottom:8px}
+@media (max-width:560px){.num b{font-size:1.5rem}.nums{gap:16px 28px}.hint{margin-left:0}.seg button{padding:6px 7px;font-size:.8rem}.controls>div{display:flex;flex-direction:column;gap:4px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>/*DATA*/</script>
+
+<div class="wrap">
+  <section class="nums" id="nums"></section>
+  <section>
+    <div class="controls">
+      <div><span class="lab">Zobrazení</span><span class="seg" id="mode">
+        <button id="m-arr" data-v="arr" aria-pressed="true">Šipky – obce</button><button id="m-okr" data-v="okr" aria-pressed="false">Šipky – okresy</button><button id="m-fill" data-v="fill" aria-pressed="false">Stínování</button></span></div>
+      <div><span class="lab">Velikost obce</span><span class="seg" id="min">
+        <button id="n-0" data-v="0" aria-pressed="false">Všechny</button><button id="n-1000" data-v="1000" aria-pressed="true">1 000+ voličů</button><button id="n-5000" data-v="5000" aria-pressed="false">5 000+</button><button id="n-20000" data-v="20000" aria-pressed="false">20 000+</button></span></div>
+    </div>
+  </section>
+  <section class="mapbox" id="mapbox">
+    <canvas id="map" aria-label="Mapa změny volební účasti po obcích"></canvas>
+    <div id="tip" hidden></div>
+    <div class="legend" id="legend"></div>
+  </section>
+  <section class="lists">
+    <div><h2>Největší nárůst účasti <small class="s">(obce s 10 000+ voliči)</small></h2><table id="t-up"></table></div>
+    <div><h2>Největší pokles účasti <small class="s">(obce s 10 000+ voliči)</small></h2><table id="t-down"></table></div>
+  </section>
+  <section class="lists">
+    <details><summary>Všech 77 okresů podle změny účasti</summary><div style="overflow-x:auto"><table id="t-okr"></table></div></details>
+  </section>
+  <p class="note">Zdroj: ČSÚ, volby.gov.cz – otevřená data komunálních voleb 2022 a 2026 (zápisy okrskových komisí) a senátních voleb 2022 a 2026; zpracování DataTimes.cz. Účast = vydané úřední obálky / voliči v seznamu, za zastupitelstvo obce (Praha a statutární města s městskými částmi za celé město). Rok 2022 jen řádné volby 23.–24. 9. 2022; obce, kde se v jednom z roků nevolilo (žádná kandidátka) nebo se volilo až v opakovaných volbách, jsou šedé a do srovnání nevstupují. Data 2026: konečné výsledky, export ČSÚ z 11. 10. 2026. Senát = obec, kde se většina voličů týž den hlasovala i v 1. kole senátních voleb.</p>
+</div>
+
+<script>
+const fmt1 = v => (v).toLocaleString("cs-CZ",{minimumFractionDigits:1,maximumFractionDigits:1});
+const pp = v => (v>0?"+":v<0?"−":"±")+fmt1(Math.abs(v))+" p. b.";
+const pct = v => fmt1(v)+" %";
+const int = v => v.toLocaleString("cs-CZ");
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+// --- data ---
+const D = window.DATA.obce;           // id → [název, okres, voliči22, obálky22, voliči26, obálky26]
+const obce = topojson.feature(TOPO, TOPO.objects.obce).features;
+const kraje = topojson.mesh(TOPO, TOPO.objects.kraje, (a,b)=>a!==b);
+const obrys = topojson.mesh(TOPO, TOPO.objects.kraje, (a,b)=>a===b);
+const rows = [];
+for (const f of obce){
+  const r = D[f.properties.id]; f.r = null;
+  if (!r || !r[2] || !r[4]) continue;
+  const t22 = r[3]/r[2]*100, t26 = r[5]/r[4]*100;
+  f.r = {id:f.properties.id, n:r[0], o:r[1], s22:r[2], v22:r[3], s26:r[4], v26:r[5], sen:r[6], t22, t26, d:t26-t22};
+  rows.push(f.r);
+}
+const sum = (a,k)=>a.reduce((s,x)=>s+x[k],0);
+const T22 = sum(rows,"v22")/sum(rows,"s22")*100, T26 = sum(rows,"v26")/sum(rows,"s26")*100;
+const nUp = rows.filter(r=>r.d>0).length, nDown = rows.filter(r=>r.d<0).length;
+document.getElementById("nums").innerHTML = `
+  <div class="num"><b>${pct(T22)}</b><span>účast 2022</span></div>
+  <div class="num"><b>${pct(T26)}</b><span>účast 2026</span></div>
+  <div class="num"><b class="${T26>=T22?"up":"down"}">${pp(T26-T22)}</b><span>změna</span></div>
+  <div class="num"><b class="up">${int(nUp)}</b><span>obcí s vyšší účastí</span></div>
+  <div class="num"><b class="down">${int(nDown)}</b><span>obcí s nižší účastí</span></div>`;
+
+// okresy
+const okr = d3.rollups(rows, a=>{const s22=sum(a,"s22"),v22=sum(a,"v22"),s26=sum(a,"s26"),v26=sum(a,"v26");
+  return {n:a[0].o, s22,v22,s26,v26,t22:v22/s22*100,t26:v26/s26*100,d:v26/s26*100-v22/s22*100,cnt:a.length,
+    up:a.filter(r=>r.d>0).length, members:a};}, r=>r.o).map(x=>x[1]).filter(o=>o.n);
+
+// tabulky
+const big = rows.filter(r=>r.s26>=10000).sort((a,b)=>b.d-a.d);
+const trow = r=>`<tr><td>${r.n} <small>${r.o&&r.o!==r.n?r.o:""}</small></td><td>${pct(r.t22)}</td><td>${pct(r.t26)}</td><td class="${r.d>0?"up":"down"}"><b>${pp(r.d)}</b></td></tr>`;
+const head = `<tr><th>Obec</th><th>2022</th><th>2026</th><th>Změna</th></tr>`;
+document.getElementById("t-up").innerHTML = head + big.slice(0,15).map(trow).join("");
+document.getElementById("t-down").innerHTML = head + big.slice(-15).reverse().map(trow).join("");
+document.getElementById("t-okr").innerHTML = `<tr><th>Okres</th><th>Obcí</th><th>z toho vyšší účast</th><th>2022</th><th>2026</th><th>Změna</th></tr>` +
+  okr.slice().sort((a,b)=>b.d-a.d).map(o=>`<tr><td>${o.n}</td><td>${o.cnt}</td><td>${o.up}</td><td>${pct(o.t22)}</td><td>${pct(o.t26)}</td><td class="${o.d>0?"up":"down"}"><b>${pp(o.d)}</b></td></tr>`).join("");
+
+// --- mapa ---
+const cv = document.getElementById("map"), ctx = cv.getContext("2d"), box = document.getElementById("mapbox"), tip = document.getElementById("tip");
+let W=0,H=0,dpr=1, proj, path, P_kraje, P_obrys, tr=d3.zoomIdentity, mode="arr", minV=1000, hover=null;
+const fc = {type:"FeatureCollection",features:obce};
+function size(){
+  W = cv.clientWidth; H = Math.round(W*0.6); dpr = window.devicePixelRatio||1;
+  cv.style.height = H+"px"; cv.width = W*dpr; cv.height = H*dpr;
+  proj = d3.geoIdentity().reflectY(true).fitExtent([[12,12],[W-12,H-12]], fc);
+  path = d3.geoPath(proj);
+  for (const f of obce){ f.c = path.centroid(f); f.p2 = new Path2D(path(f)); }
+  P_kraje = new Path2D(path(kraje)); P_obrys = new Path2D(path(obrys));
+  for (const o of okr){ const w = sum(o.members,"s26"); o.c = [d3.sum(o.members,m=>m.f.c[0]*m.s26)/w, d3.sum(o.members,m=>m.f.c[1]*m.s26)/w]; }
+  draw();
+}
+for (const f of obce) if (f.r) f.r.f = f;
+
+const CAP = 25; // p. b.
+// stupně stínování – jen odstíny z palety: brand[7], brand[4], brand[2], --mid, brandForestGreen[2], [4], [6]
+const BINS = [{lo:-Infinity,hi:-10,c:"#c5143c",t:"pod −10"},{lo:-10,hi:-5,c:"#ff1a4a",t:"−10 až −5"},{lo:-5,hi:-2,c:"#ff8099",t:"−5 až −2"},
+  {lo:-2,hi:2,c:null,t:"±2"},{lo:2,hi:5,c:"#acde8b",t:"+2 až +5"},{lo:5,hi:10,c:"#6ec53f",t:"+5 až +10"},{lo:10,hi:Infinity,c:"#507e08",t:"nad +10"}];
+const fill = v => { const b = BINS.find(b=>v>=b.lo && v<b.hi) || BINS[BINS.length-1]; return b.c || css("--mid"); };
+
+function arrow(x,y,d,unit,lw,col){
+  if (!d) return;
+  const h = Math.max(2,lw*2.2);                                     // velikost hrotu
+  const L = Math.max(Math.min(Math.abs(d),CAP)*unit, h*3.2);        // i malá změna má viditelnou čárku za hrotem
+  const a = (d>0?-1:1)*Math.PI*0.36, dx = Math.cos(a)*L, dy = Math.sin(a)*L; // 65° od vodorovné: vzhůru doprava = nárůst, dolů doprava = pokles
+  const x2=x+dx,y2=y+dy, ang=Math.atan2(dy,dx);
+  ctx.strokeStyle=col; ctx.fillStyle=col; ctx.lineWidth=lw;
+  ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x2-Math.cos(ang)*h*0.6,y2-Math.sin(ang)*h*0.6); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x2,y2); ctx.lineTo(x2-Math.cos(ang-0.45)*h*1.4,y2-Math.sin(ang-0.45)*h*1.4);
+  ctx.lineTo(x2-Math.cos(ang+0.45)*h*1.4,y2-Math.sin(ang+0.45)*h*1.4); ctx.closePath(); ctx.fill();
+}
+
+function draw(){
+  const cUp=css("--up"), cDown=css("--down"), land=css("--land"), empty=css("--empty");
+  ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
+  ctx.save(); ctx.translate(tr.x,tr.y); ctx.scale(tr.k,tr.k);
+  const bord = css("--border");
+  ctx.lineWidth = 0.25/tr.k; ctx.strokeStyle = bord;
+  for (const f of obce){
+    const ok = f.r && f.r.s26>=minV;
+    ctx.fillStyle = mode==="fill" ? (ok ? fill(f.r.d) : empty) : (f.r ? land : empty);
+    ctx.fill(f.p2); if (mode==="fill") ctx.stroke(f.p2);
+  }
+  ctx.strokeStyle=css("--kraj"); ctx.lineWidth=0.9/tr.k; ctx.stroke(P_kraje);
+  ctx.lineWidth=1.2/tr.k; ctx.stroke(P_obrys);
+  if (hover && hover.f){ ctx.strokeStyle=css("--fg"); ctx.lineWidth=2/tr.k; ctx.stroke(hover.f.p2); }
+  ctx.restore();
+  // šipky v obrazovkových souřadnicích (délka nezávislá na přiblížení jen částečně)
+  const z = Math.sqrt(tr.k), base = W/1000;
+  if (mode==="arr"){
+    const list = rows.filter(r=>r.s26>=minV).sort((a,b)=>a.s26-b.s26);
+    for (const r of list){ const [x,y]=tr.apply(r.f.c), lg=Math.log10(r.s26);
+      ctx.globalAlpha = Math.min(1, 0.6+0.1*lg);                        // malé obce o něco slaběji, velká města plně
+      const lw = (0.7+0.35*lg)*Math.min(z,2.2)*Math.max(.8,base);
+      arrow(x,y,r.d,1.2*base*z,lw,r.d>0?cUp:cDown); }
+    ctx.globalAlpha = 1;
+  } else if (mode==="okr"){
+    for (const o of okr){ const [x,y]=tr.apply(o.c); arrow(x,y,o.d,21*base*z,3.6*Math.max(.7,base),o.d>0?cUp:cDown); }
+  }
+}
+
+function legend(){
+  const el = document.getElementById("legend"), u=css("--up"), d=css("--down");
+  const ar = (dir,c)=>`<svg width="22" height="22" viewBox="0 0 22 22"><g transform="translate(6 ${dir>0?18:4})"><line x1="0" y1="0" x2="${Math.cos(.36*Math.PI)*16}" y2="${-dir*Math.sin(.36*Math.PI)*16}" stroke="${c}" stroke-width="2"/></g></svg>`;
+  if (mode==="fill"){
+    el.innerHTML = `<span>změna účasti (p. b.)</span>`+BINS.map(b=>`<span style="display:inline-flex;flex-direction:column;align-items:center;font-size:.75rem"><i style="width:44px;height:12px;background:${b.c||css("--mid")};display:block"></i>${b.t}</span>`).join("")+`<span class="hint">Přiblížení: Ctrl + kolečko, na mobilu dvěma prsty</span>`;
+  } else {
+    el.innerHTML = `<span>${ar(1,u)} účast vzrostla</span><span>${ar(-1,d)} účast klesla</span><span>délka = rozdíl v p. b. (${mode==="arr"?"strop 25 p. b.":"okres"})</span><span>šedé = nevolilo se / bez srovnání</span><span class="hint">Přiblížení: Ctrl + kolečko, na mobilu dvěma prsty</span>`;
+  }
+}
+
+// hover
+let pts=[], del=null;
+function index(){
+  const list = mode==="okr" ? okr.map(o=>({o, c:o.c})) : rows.filter(r=>r.s26>=minV).map(r=>({r, c:r.f.c}));
+  pts = list; del = d3.Delaunay.from(list, d=>d.c[0], d=>d.c[1]);
+}
+cv.addEventListener("pointermove", e=>{
+  const rc = cv.getBoundingClientRect(), mx=e.clientX-rc.left, my=e.clientY-rc.top;
+  const [gx,gy] = tr.invert([mx,my]);
+  let it=null;
+  if (mode!=="okr"){ // přesně podle polygonu, když jsme nad obcí
+    ctx.setTransform(1,0,0,1,0,0);
+    const hit = obce.find(f=>f.r && f.r.s26>=minV && Math.abs(f.c[0]-gx)<40 && Math.abs(f.c[1]-gy)<40 && ctx.isPointInPath(f.p2, gx, gy));
+    if (hit) it={r:hit.r};
+  }
+  if (!it && del){ const i = del.find(gx,gy); const c = pts[i]; if (c){ const [sx,sy]=tr.apply(c.c); if (Math.hypot(sx-mx,sy-my)<28) it=c; } }
+  const x = it ? (it.r||it.o) : null;
+  hover = it && it.r ? {f:it.r.f} : null; draw();
+  if (!x){ tip.hidden=true; return; }
+  tip.innerHTML = `<b>${x.n}</b>${it.r && x.o && x.o!==x.n?` <span class="s">okres ${x.o}</span>`:it.o?` <span class="s">okres, ${x.cnt} obcí</span>`:""}
+    <div class="r"><span>Účast 2022</span><span>${pct(x.t22)}</span></div>
+    <div class="r"><span>Účast 2026</span><span>${pct(x.t26)}</span></div>
+    <div class="r"><span>Změna</span><b class="${x.d>0?"up":"down"}">${pp(x.d)}</b></div>
+    <div class="s">voličů 2022 / 2026: ${int(x.s22)} / ${int(x.s26)}</div>${it.r?`<div class="s">${["senátní volby ani v jednom roce","senátní volby souběžně jen v roce 2022","senátní volby souběžně jen letos","senátní volby souběžně v obou letech"][x.sen]}</div>`:""}`;
+  tip.hidden=false;
+  const tw=tip.offsetWidth, th=tip.offsetHeight;
+  tip.style.left = Math.min(mx+14, W-tw-6)+"px"; tip.style.top = Math.max(6, Math.min(my+14, H-th-6))+"px";
+});
+cv.addEventListener("pointerleave", ()=>{ tip.hidden=true; hover=null; draw(); });
+
+// v článku: kolečko bez Ctrl a tah jedním prstem patří rolování stránky, ne mapě
+d3.select(cv).call(d3.zoom().scaleExtent([1,14])
+  .filter(e => e.type==="wheel" ? (e.ctrlKey||e.metaKey) : e.type.startsWith("touch") ? e.touches.length>1 : !e.button)
+  .on("zoom", e=>{ tr=e.transform; tip.hidden=true; draw(); })).style("touch-action","pan-y");
+
+function seg(id, cb){ const g=document.getElementById(id); g.addEventListener("click", e=>{ const b=e.target.closest("button"); if(!b) return;
+  g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", x===b)); cb(b.dataset.v); index(); legend(); draw(); }); }
+seg("mode", v=>mode=v); seg("min", v=>minV=+v);
+if (innerWidth < 560){ minV = 5000; document.querySelectorAll("#min button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.v==="5000")); }
+// výška pro rodičovskou stránku (mapa-embed.html)
+// (měří se obsah .wrap, ne dokument – ten je vždy aspoň tak vysoký jako sám iframe)
+const WRAP = document.querySelector(".wrap");
+const postH = ()=>parent.postMessage({type:"dt-embed-height", id:"ucast-2022-2026", h:Math.ceil(WRAP.getBoundingClientRect().height)+8},"*");
+new ResizeObserver(postH).observe(WRAP);
+addEventListener("load", postH); addEventListener("resize", postH); document.addEventListener("toggle", postH, true);
+setTimeout(postH, 300); setTimeout(postH, 1500);
+new ResizeObserver(()=>{ size(); index(); }).observe(cv);
+size(); index(); legend();
+</script>

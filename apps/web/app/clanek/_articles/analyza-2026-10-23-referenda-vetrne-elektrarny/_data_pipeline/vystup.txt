@@ -1,0 +1,86 @@
+Obcí: 21; proti výstavbě: 20; pro: 1
+Oprávněných 13 912, hlasujících 7 925, účast 57,0 %
+Hlasy pro variantu proti větrníkům 5 509, pro výstavbu 2 210; proti = 71,4 % hlasů pro jednu z odpovědí
+Účast: min 41,75 %, medián 65,58 %, max 84,68 %
+Obyvatel 1. 1. 2026 celkem 17 371; nejmenší Bystrá nad Jizerou 117, největší Kralovice 3450
+Obcí pod 500 obyvatel: 11, pod 1000: 13
+
+konkrétní projekt s investorem: 12 obcí, proti 11, pro 1; hlasy proti 68,4 %; účast 57,9 %
+   Dětřichov, Mikuleč, Kamenná Horka, Sklené, Kačice, Petrovice, Kralovice, Kožlany, Žihle, Zátor, Cítoliby, Bystrá nad Jizerou
+bez konkrétního projektu: 9 obcí, proti 9, pro 0; hlasy proti 77,3 %; účast 55,2 %
+   Petroupim, Soběhrdy, Teplýšovice, Měčín, Horní Benešov, Staré Heřminovy, Radenín, Šebířov, Maršov u Úpice
+
+Investor ČEZ: Dětřichov, Sklené, Žihle, Zátor
+Investor S&M: Mikuleč, Kamenná Horka
+Investor NOHO Energy: Kačice, Bystrá nad Jizerou
+Investor nezjištěn: Petrovice
+Investor SmartTech: Kralovice
+Investor meridian Nová Energie: Kožlany, Cítoliby
+
+Po obcích (seřazeno podle podílu proti z hlasů ANO+NE):
+  Teplýšovice          Benešov      obyv   554  účast  69,19 %  proti  258  pro   19  proti 93,1 % platných / 91,2 % hlasujících  vítěz 63,1 % opráv.  typ bez  ANO=proti výstavbě
+  Sklené               Svitavy      obyv   235  účast  53,72 %  proti   81  pro    6  proti 93,1 % platných / 80,2 % hlasujících  vítěz 43,1 % opráv.  typ projekt  ANO=proti výstavbě
+  Kamenná Horka        Svitavy      obyv   371  účast  75,85 %  proti  200  pro   23  proti 89,7 % platných / 89,7 % hlasujících  vítěz 68,0 % opráv.  typ projekt  ANO=pro výstavbu
+  Petroupim            Benešov      obyv   374  účast  64,82 %  proti  140  pro   17  proti 89,2 % platných / 85,4 % hlasujících  vítěz 55,3 % opráv.  typ bez  ANO=proti výstavbě
+  Měčín                Klatovy      obyv  1120  účast  54,93 %  proti  441  pro   61  proti 87,8 % platných / 86,0 % hlasujících  vítěz 47,2 % opráv.  typ bez  ANO=pro výstavbu
+  Šebířov              Tábor        obyv   368  účast  61,82 %  proti  154  pro   27  proti 85,1 % platných / 84,2 % hlasujících  vítěz 52,0 % opráv.  typ bez  ANO=pro výstavbu
+  Soběhrdy             Benešov      obyv   469  účast  74,23 %  proti  207  pro   46  proti 81,8 % platných / 78,1 % hlasujících  vítěz 58,0 % opráv.  typ bez  ANO=proti výstavbě
+  Zátor                Bruntál      obyv  1141  účast  68,35 %  proti  496  pro  136  proti 78,5 % platných / 76,5 % hlasujících  vítěz 52,3 % opráv.  typ projekt  ANO=proti výstavbě
+  Mikuleč              Svitavy      obyv   261  účast  78,50 %  proti  113  pro   38  proti 74,8 % platných / 72,0 % hlasujících  vítěz 56,5 % opráv.  typ projekt  ANO=pro výstavbu
+  Maršov u Úpice       Trutnov      obyv   188  účast  75,32 %  proti   77  pro   29  proti 72,6 % platných / 66,4 % hlasujících  vítěz 50,0 % opráv.  typ bez  ANO=proti výstavbě
+  Cítoliby             Louny        obyv  1093  účast  59,31 %  proti  368  pro  142  proti 72,2 % platných / 71,3 % hlasujících  vítěz 42,3 % opráv.  typ projekt  ANO=pro výstavbu
+  Kralovice            Plzeň-sever  obyv  3450  účast  51,42 %  proti  980  pro  408  proti 70,6 % platných / 69,5 % hlasujících  vítěz 35,7 % opráv.  typ projekt  ANO=proti výstavbě
+  Horní Benešov        Bruntál      obyv  2214  účast  41,75 %  proti  507  pro  230  proti 68,8 % platných / 67,2 % hlasujících  vítěz 28,1 % opráv.  typ bez  ANO=pro výstavbu
+  Žihle                Plzeň-sever  obyv  1275  účast  52,96 %  proti  355  pro  201  proti 63,8 % platných / 62,0 % hlasujících  vítěz 32,8 % opráv.  typ projekt  ANO=pro výstavbu
+  Kožlany              Plzeň-sever  obyv  1520  účast  42,21 %  proti  297  pro  172  proti 63,3 % platných / 61,2 % hlasujících  vítěz 25,8 % opráv.  typ projekt  ANO=proti výstavbě
+  Kačice               Kladno       obyv  1236  účast  65,58 %  proti  377  pro  262  proti 59,0 % platných / 57,0 % hlasujících  vítěz 37,4 % opráv.  typ projekt  ANO=pro výstavbu
+  Radenín              Tábor        obyv   500  účast  56,63 %  proti  132  pro   95  proti 58,1 % platných / 56,2 % hlasujících  vítěz 31,8 % opráv.  typ bez  ANO=proti výstavbě
+  Petrovice            Rakovník     obyv   277  účast  82,93 %  proti  109  pro   91  proti 54,5 % platných / 53,4 % hlasujících  vítěz 44,3 % opráv.  typ projekt  ANO=pro výstavbu
+  Staré Heřminovy      Bruntál      obyv   217  účast  77,78 %  proti   71  pro   60  proti 54,2 % platných / 53,4 % hlasujících  vítěz 41,5 % opráv.  typ bez  ANO=proti výstavbě
+  Bystrá nad Jizerou   Semily       obyv   117  účast  84,68 %  proti   50  pro   43  proti 53,8 % platných / 53,2 % hlasujících  vítěz 45,0 % opráv.  typ projekt  ANO=proti výstavbě
+  Dětřichov            Svitavy      obyv   391  účast  74,37 %  proti   96  pro  104  proti 48,0 % platných / 46,6 % hlasujících  vítěz 37,5 % opráv.  typ projekt  ANO=pro výstavbu
+
+Otázek, kde ANO znamená proti výstavbě: 11
+Nejtěsnější: Bystrá nad Jizerou rozdíl 7, Dětřichov rozdíl 8, Staré Heřminovy rozdíl 11, Petrovice rozdíl 18, Radenín rozdíl 37
+
+Předchozí ankety (jen tam, kde jsou):
+  Dětřichov: obecní anketa nenalezena; průzkum ÚGN AV ČR 2023 (26 respondentů): 77 % souhlas s projektem na katastru obce
+  Kamenná Horka: obecní nenalezena; průzkum ÚGN AV ČR 2023 (20 resp.): 45 % souhlas s projektem na vlastním katastru
+  Sklené: obecní nenalezena; průzkum ÚGN AV ČR 2023: 85 % souhlas s VTE v sousedních obcích
+  Kačice: červen 2024: 377 odevzdaných lístků z 986, 209 pro (55,4 %), 168 proti
+  Kralovice: 27. 5.–10. 6. 2025: účast 21,04 %, 52,07 % pro, 47,93 % proti (podmínka „zásadnosti“ 66 % účasti nesplněna)
+  Kožlany: před cca 3 lety průzkum, „šest ku jedné pro“ (jen média)
+  Žihle: před 2 lety cca 150 lidí, půl na půl (jen média)
+  Měčín: schválena (usn. 280), poté zrušena ve prospěch referenda
+  Staré Heřminovy: 2025, většina pro (média; počty nezjištěny)
+  Bystrá nad Jizerou: 11/2023: 55 hlasujících, 44 pro (jen média)
+
+Kačice anketa 2024: odevzdáno 377 z 986 (38,2 %), pro 209 (55,4 %), proti 168
+Kačice referendum 2026: hlasovalo 661 z 1008, pro 262, proti 377; pro +53, proti +209 (2,24×)
+
+MV 2006–2026: konaných referend o VTE 105 (bez zrušeného soudem), obcí 101
+  2006: celkem 1, proti 0, pro 1, neplatné/nejasné 0
+  2007: celkem 5, proti 1, pro 2, neplatné/nejasné 2
+  2008: celkem 2, proti 1, pro 1, neplatné/nejasné 0
+  2009: celkem 5, proti 4, pro 0, neplatné/nejasné 1
+  2010: celkem 3, proti 3, pro 0, neplatné/nejasné 0
+  2012: celkem 1, proti 1, pro 0, neplatné/nejasné 0
+  2013: celkem 1, proti 1, pro 0, neplatné/nejasné 0
+  2014: celkem 1, proti 1, pro 0, neplatné/nejasné 0
+  2016: celkem 1, proti 0, pro 1, neplatné/nejasné 0
+  2019: celkem 1, proti 1, pro 0, neplatné/nejasné 0
+  2021: celkem 1, proti 1, pro 0, neplatné/nejasné 0
+  2022: celkem 2, proti 1, pro 1, neplatné/nejasné 0
+  2023: celkem 10, proti 4, pro 5, neplatné/nejasné 1
+  2024: celkem 13, proti 10, pro 2, neplatné/nejasné 1
+  2025: celkem 25, proti 13, pro 12, neplatné/nejasné 0
+  2026: celkem 33, proti 30, pro 2, neplatné/nejasné 1
+  2006–2023: konaných 34, platných 30, proti 19 (63,3 % platných)
+  2024–2026: konaných 71, platných 69, proti 53 (76,8 % platných)
+  2025–2026: konaných 58, platných 57, proti 43 (75,4 % platných)
+  2006–2026: konaných 105, platných 99, proti 72 (72,7 % platných)
+  2019–2025: konaných 52, platných 50, proti 30 (60,0 % platných)
+  2026–2026: konaných 33, platných 32, proti 30 (93,8 % platných)
+  2026 mimo volby: platných 11, proti 10; pro: Životice (Plzeň-jih, 2026-04-11, 24:16)
+Říjen 2026: návrh na referendum podal přípravný výbor občanů v 10 obcích: Kamenná Horka, Sklené, Kačice, Petrovice, Teplýšovice, Kralovice, Kožlany, Žihle, Zátor, Radenín
+Převod S-JTSK → lon/lat: 140 měst, max. odchylka 0.0334°

@@ -49,3 +49,12 @@ tools/social-cards/.tmp/
 
 # Generated editor assets (source is tools/)
 /apps/web/public/tools/
+
+# Výstupy pro sociální sítě (carousel, animace MP4/GIF, Reels): na web se nekopírují a jdou kdykoli
+# znovu vyrobit z _cover_pipeline/*.config.cjs článku, proto nejdou do gitu (šetří místo na GitHubu).
+apps/web/app/clanek/_articles/*/social/
+
+# Pomocné hooky, které si Git LFS sám vytváří na každém počítači (pre-push je v gitu záměrně)
+scripts/git-hooks/post-checkout
+scripts/git-hooks/post-commit
+scripts/git-hooks/post-merge

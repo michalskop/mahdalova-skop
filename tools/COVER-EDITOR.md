@@ -8,6 +8,7 @@ automaticky; stačí mít stažený aktuální main (`git pull`).
 | --- | --- |
 | Pravidla: sada 5 souborů, písma, štítek coveru, bezpečné zóny, kompozice, logo | tento soubor (sekce níže) |
 | Zadání pro AI (vložit do Claude/Codexu, doplnit 3 řádky) | [PROMPT-COVER.md](PROMPT-COVER.md) |
+| Jak vymyslet motiv a držet identitu (bez fotky, s fotkou, citlivá témata, vzory) | [COVER-VIZUALNI-IDENTITA.md](COVER-VIZUALNI-IDENTITA.md) |
 | Grafický / datový cover (mapa, graf, číslo) | `tools/cover-generator.cjs` + `_cover_pipeline/cover.config.cjs` u článku |
 | Fotografický cover | `poster-editor.html`, `npm run covers` (níže) |
 | Graf → motiv coveru | [NAVOD-PRO-MICHALA.md](NAVOD-PRO-MICHALA.md) (chart-simplifier) |
@@ -45,7 +46,7 @@ dřív se postranní karty ořezávaly až na čtverec, proto mají starší cov
 Bolsonaro). Na každou kartu web vkládá vpravo nahoře štítek rubriky: v malých kartách (boční 230 px,
 mobilní seznam) zakryje na coveru oblast x ≥ 950, y ≤ 280. Ikony a odznaky coveru patří pod ni.
 Stejné kotvy (text od x 180 / y 120, logo vpravo dole) drží covery v řadě vedle sebe zarovnané. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
-(statický web na Cloudflare Pages), proto má OG text uprostřed.
+(statický web na Cloudflare Pages), proto drží OG titulek a logo ve středním čtverci 630. Od 26. 10. 2026 je výchozí OG „čtverec s ušima“: střed = čtvercový cover zmenšený na 630, boky = stejné pozadí se září (COVER-VIZUALNI-IDENTITA.md → *1.1 Kompozice*); vlastní široké rozvržení jen výjimečně přes `format.og`.
 
 **Písma (tvrdé pravidlo, od 12. 10. 2026):** patkový IBM Plex Serif Bold jen titulek a nápis loga „DataTimes.cz“;
 všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách) IBM Plex Sans.
@@ -65,6 +66,73 @@ Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *26. 10. 2026 – článek speciálu Data pro budoucí premiérku bez obrázku v rubrice Volby.* Články speciálu
+  (`_content/*/articles/*.mdx`) mají jako `coverImage` jen poutač speciálu 1200×630; do homepage a rubrik je
+  `components/common/getDpbpArticles.ts` dřív posílal bez obrázku. Teď bere `homepageImage` (absolutní cesta).
+  Sada pěti formátů se generuje do `_articles/data-pro-budouci-premierku-02-demografie/images/cover-<slug>/`
+  (vzor `_cover_pipeline/15-volicska-zakladna.config.cjs`) a do mdx se doplní `homepageImage`,
+  `squareImage`, `instagramImage`.
+- *26. 10. 2026 – fotky politiků (Merz, Putin, billboard): kompozice ve všech formátech.* Každý formát kontroluj
+  zvlášť ve velkém náhledu (homepage, čtverec, 4:5, story vedle sebe ve výšce 960 px), ne na malém archu.
+  - Fotku ukotvi na obličej: `podkres(…, { bod: { fx, fy, X, Y, sirka, pomer } })` posadí bod obličeje na (X, Y).
+    Hlava nikdy pod textem, logem ani přechodem. Titulek s pruhem patří na úroveň hrudníku, ne přes hlavu.
+    Logo nikdy přes tváře nebo krky („šála“): pás fotky pod titulkem a logo pod ním.
+  - Ve story dej text nad fotku, nebo fotku nad text. Nikdy přes sebe.
+  - Titulek raději na méně řádků menším písmem (`pro.story.titulek` + `format.story.t`) než tři řádky přes motiv.
+  - Barvu nese pruh titulku → pozadí čisté ink blue bez záře (záře zhoršila čitelnost karmínového štítku).
+  - Široké OG (`og: 'siroky'`, `ogScrim: false`): text ve středním čtverci, postava zasahuje do čtverce zprava.
+    Text smí na rameno, nikdy na obličej. Stejné mezery mezi štítkem, nadtitulkem, pruhem a podtitulkem:
+    `mezery: { og: [a, b, c] }` (px). Logo na úrovni spodního okraje fotky.
+  - Zdrojová fotka může mít hlavu uříznutou už sama (Merz: temeno v horní řadě pixelů). Pak pomůže jen
+    neořezaná fotka; nedomalovávat.
+  - Štítek na světlé fotce: `kickPodklad: '#101432e6'`.
+  - Když se Kateřině líbí původní cover (Die Linke), nepřepracovávat. Jen ho převést do chybějících formátů
+    stejným skriptem (`_cover_pipeline/cover.cjs`). Před převodem ověř, který cover myslí: u kalkulačky „míří
+    do obcí“ chtěla už hotovou verzi s mapou, ne původní logo.
+- *26. 10. 2026 – dva sousední články se stejným motivem (STOP s dlaní × STOP s rukama).* Než motiv navrhneš,
+  podívej se na covery článků se stejnými tagy (zvlášť ty, které se ukážou v related boxu vedle sebe). Stejný
+  nápad dvakrát v řadě karet působí jako duplikát. Starší článek o znásilnění dostal tečkovou slunečnici
+  (100 teček, 11 karmínových = oběti, které šly na policii), vzor
+  `analyza-2026-10-08-znasilneni-nahlasovani-objasnenost-a-tresty/_cover_pipeline/motiv.cjs`.
+- *26. 10. 2026 – OG s mapou (Brazílie, proč vyhrál Lula).* Vycentrovaný OG s mapou jako slabým pozadím nestačil:
+  text zarovnat doleva od levého okraje středního čtverce a mapu dát do jeho pravé části, **celou uvnitř čtverce
+  285–915 px**, jinak messengery ořežou nejdůležitější body (velká města na východním pobřeží). V configu
+  `format: { og: { stred: false, box: [285, 50, 915, 580] } }` a mapa přes `mapaPozice.og` (vzor
+  `volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/`).
+  Když motiv vpravo dole zakrývá logo (jih Brazílie), `logoPodLegendou: true` dá logo vlevo dolů a legendu o dva
+  řádky výš nad něj (ve všech formátech). Barvy bodů na mapě cizí země mohou nést její vlajku (Brazílie: žlutá
+  brandYellow.6 × zelená brandEmeraldMint.6 na modrém podkladu).
+  Jemné posuny v jednom formátu: `format: { square: { podDolu: 2, legNahoru: 2 } }` posune podtitulek o 2 řádky
+  níž a legendu o 2 řádky výš (vyplní volnou plochu vlevo). Mapu jako podkres zvětšovat tahem za roh proti
+  nejdůležitějším bodům (u Brazílie levý horní roh, pravý okraj drží města na pobřeží), klidně až k titulku.
+- *25. 10. 2026 – fotka jako motiv pod navy závojem (bingo, STOP s dlaní místo „O“).* Podkladová fotka nesmí mít
+  viditelný rámeček: okraje maskovat obdélníkem s Gaussovým rozmazáním (`motiv.typ: 'svg'`, vzor
+  `analyza-2026-10-21-bingo-domaci-a-sexualni-nasili/_cover_pipeline/motiv.cjs`) a pod světlé partie u okraje
+  (tričko, čelo) dát navy přechod. Kontrolovat výřezem se zesíleným kontrastem ve všech formátech. Ruční obrys
+  (lasso) ruky ve fotce nesedí podél prstů ani po přichycení na hrany. Pozadí za rukou tlumit jen měkkým přechodem
+  bez obrysu. Zvýšený kontrast a teplý tón fotky se neosvědčily, ruka zůstává v přirozené barvě. Písmena motivu
+  v karmínové #de1743. Písmena motivu (bez dlaně) centrovat svisle na střed mezi spodní okraj podtitulku a horní okraj
+  kolečka loga (měří `zmer.cjs`), dlaň zůstává na svém místě. Konečky prstů nesmí zasahovat pod podtitulek, jeho halo je usekne.
+- *24. 10. 2026 – jméno místa patří přímo na mapu (Mariánské Lázně, kupování hlasů).* Když cover stojí na jednom
+  zvýrazněném místě, Kateřina chce jeho název u tečky, ne jen ve štítku nebo v legendě v rohu. Generátor umí
+  `popisek` u bodu (`motiv.body: [{ lon, lat, k, popisek: 'Mariánské Lázně' }]`): Plex Sans s obrysem v barvě pozadí,
+  vpravo od tečky, v OG pod ní (jinak naráží do titulku uprostřed). Téma kauzy (např. „Podezření na kupování hlasů“)
+  patří do štítku coveru.
+- *24. 10. 2026 – v OG coveru zmizela mapa ČR (referenda o větrnících).* Generátor i vzorové `motiv.cjs` u OG
+  tečkovou mapu tlumí (tečky 0,35, `opacityOg` 0,45), takže zůstaly jen značky obcí a obrázek nedával smysl.
+  Když motiv stojí na tvaru republiky (body obcí, ikony v místech), musí být mapa čitelná i v OG: tečky plně,
+  `opacityOg: 1` a plocha mapy v `motiv.cjs` s okrajem (např. `[40, 30, 1160, 610]`), aby obrys nenarážel
+  na kraje. Čitelnost textu drží halo generátoru. OG kontrolovat vedle homepage, ne jen samotný.
+- *23. 10. 2026 – cover kapitoly Demografie (speciál Data pro budoucí premiérku).* U karet speciálu je štítek rubriky na dlaždici vpravo na úrovni titulku (`DpbpArticleCard`), ne jako červený oválek přes obrázek, takže zóna x ≥ 950, y ≤ 280 zde odpadá. Cover kapitoly: nahoře zleva logo speciálu (hlava s tečkami, otočená doprava) a „Data pro budoucí premiérku“ v jednom řádku, pod tím „Kapitola 1 • Demografie“, pak velký titulek; krémové pozadí jako na webu. Dětský graf plodnosti (děti na bodech grafu) je zdroj `plodnost-3.webp` z karty článku, ne SVG náhled (ten se v prohlížeči nenačte). Dlaždice kapitoly umí vlastní `image` + `imageAspect` a `showOpener` v `_meta.json` (úvodní článek jako první dlaždice).
+- *16. 10. 2026 – titulek se v každém formátu lámal jinak (ODS a Piráti).* Titulek coveru má mít ve všech pěti
+  formátech stejné zalomení. Řádky určit ručně přes `<br>` a kde se řádek do užšího formátu nevejde (typicky
+  story), zmenšit jen jeho titulek přes `format: { story: { t: 88 } }` v `cover.config.cjs`. Na kontrolním listu
+  projít všechny formáty vedle sebe. Rivalské strany (ODS × Piráti) v titulku nesčítat do jedné věty, každá dostane
+  vlastní údaj („ODS ztratila / čtvrtinu zastupitelů, / Piráti rovněž“).
+- *15. 10. 2026 – „v“ na konci řádku v titulku karty na sítě.* Karty a dlaždice vykreslované mimo web (Playwright
+  šablony v `_cover_pipeline/`, např. `karty.cjs`) nejdou přes `fixCzechTypography`. Titulky a podtitulky v nich
+  proto prohnat vlastní funkcí, která za jednopísmenné předložky a spojky (v, k, s, z, o, u, a, i) dá nezlomitelnou
+  mezeru, a v kontrolním listu projít zlomy řádků ve všech formátech.
 - *14. 10. 2026 – useknutý titulek v boční kartě titulky („Kdo zůstal doma“).* Cover byl v pořádku; chyba byla
   v kartě, která se u dlouhého titulku protáhla a náhled ořízla na střed. Opraveno v komponentě (boční karty
   cover 5:4 nikdy neořezávají, viz `packages/ui/DESIGN.md` → *Hero side cards*). Při podobné chybě nejdřív
@@ -182,7 +250,7 @@ JPEG, čistou grafiku do PNG; ruční volba v projektu má přednost.
 Obrázky patří do `images/` u článku. Přenes pole z `frontmatter.yaml` do
 `index.md`. `homepageImage` určuje náhled karty. `ogImage` určuje Open Graph,
 Twitter a obrázek JSON-LD; rozměry a MIME se čtou ze skutečného souboru.
-`instagramImage` přidá na kartu samostatný odkaz Instagram do nové karty.
+`instagramImage` je jen záznam sady coverů; v kartě se nezobrazuje (odkaz „Instagram ↗“ zrušen 25. 10. 2026, viz `packages/ui/DESIGN.md`).
 Kliknutí na hlavní obrázek nadále vede na článek a jeho nativní nabídka
 „Otevřít obrázek“ nadále otevírá zobrazený webový obrázek.
 

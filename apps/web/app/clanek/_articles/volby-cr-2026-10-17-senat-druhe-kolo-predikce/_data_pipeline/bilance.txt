@@ -1,0 +1,38 @@
+stav predikce: 2026-10-17T15:26:42 sečteno okrsků 3753
+
+NAVRHUJÍCÍ STRANA (v koalici strana, která kandidáta navrhla): navrženo / ve 2. kole nebo zvolen v 1. / zvoleno
+  ANO                   24  13   0  
+  SPD                   17   0   0  
+  ODS                   14   9   7  Ladislav Med (15 Pelhřimov, predikce ≥ 99 %); Petr Paták (30 Kladno, predikce ≥ 99 %); Zuzana Ceralová Petrofová (45 Hradec Králové, predikce ≥ 99 %); Zdeněk Papoušek (60 Brno-město, predikce ≥ 99 %); Jakub Navařík (63 Přerov, predikce ≥ 99 %); Ondřej Šimetka (72 Ostrava-město, predikce ≥ 99 %); Tomáš Goláň (78 Zlín, predikce ≥ 99 %)
+  STAN                  13  11   9  Miroslav Plevný (3 Cheb, predikce ≥ 99 %); Ivo Trešl (6 Louny, sečteno); Karel Řehka (9 Plzeň-město, predikce ≥ 99 %); Petr Štěpánek (18 Příbram, predikce ≥ 99 %); David Smoljak (24 Praha 9, predikce ≥ 99 %); Jiří Padevět (27 Praha 1, predikce ≥ 99 %); Zbyněk Linhart (33 Děčín, 1. kolo); Jan Sobotka (39 Trutnov, 1. kolo); Michael Kašpar (42 Kolín, predikce ≥ 99 %)
+  KSČM                   8   0   0  
+  KDU-ČSL                5   2   3  Josef Klement (51 Žďár nad Sázavou, sečteno); Jan Grolich (57 Vyškov, 1. kolo); Josef Bazala (81 Uherské Hradiště, predikce ≥ 99 %)
+  NČ                     3   0   1  Tomáš Fiala (12 Strakonice, 1. kolo)
+  SEN 21                 3   1   1  Václav Láska (21 Praha 5, predikce ≥ 99 %)
+  Piráti                 3   1   0  
+  TOP 09                 3   1   2  Jan Grulich (48 Rychnov nad Kněžnou, 1. kolo); Tomáš Třetina (54 Znojmo, predikce ≥ 99 %)
+  PRAHA SOBĚ             1   1   0  
+  SLK                    1   1   1  Martin Půta (36 Česká Lípa, predikce ≥ 99 %)
+  Volt                   1   1   0  
+  24/7                   1   1   1  Marek Ošťádal (66 Litovel, sečteno)
+  NMFM                   1   1   1  Petr Korč (69 Frýdek-Místek, predikce ≥ 99 %)
+  OK                     1   1   1  Petr Kazík (75 Karviná, predikce ≥ 99 %)
+
+PŘEDPOKLÁDANÝ KLUB: obhajoval křesel / získal
+  stan    11  11
+  ods      9  10
+  kdu      3   3
+  sen21    3   1
+  ano      1   0
+  nez      0   2
+nerozhodnuté obvody: []
+
+Kladno: Adéla Sucharda Šípová 48.33 % vs Petr Paták 51.67 %, sečteno 146 / 150 final False
+
+Obhajoby: kandidovalo 23 z 27 senátorů s končícím mandátem, zvoleno 16
+  neuspěli: ['Adéla Sucharda Šípová', 'Helena Pešatová', 'Jan Holásek', 'Jaroslav Chalupský', 'Jiří Vosecký', 'Karel Zitterbart', 'Lumír Aschenbrenner']
+
+BLOKY podle navrhující strany: {'opozice': 22, 'ostatní': 5, 'vláda': 0}
+  ostatní: ['Tomáš Fiala (12 Strakonice, 1. kolo) [NČ]', 'Martin Půta (36 Česká Lípa, predikce ≥ 99 %) [SLK]', 'Marek Ošťádal (66 Litovel, sečteno) [24/7]', 'Petr Korč (69 Frýdek-Místek, predikce ≥ 99 %) [NMFM]', 'Petr Kazík (75 Karviná, predikce ≥ 99 %) [OK]']
+
+zdroj historie: ['tema', 'vytvoreno', 'metoda', 'verdikt', 'volby', 'zdroje', 'poznamka']

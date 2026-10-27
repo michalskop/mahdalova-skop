@@ -406,6 +406,23 @@ import { ArticleCard } from '@repo/ui/components/ArticleCard';
 />
 ```
 
+**Cards in a row share one bottom edge (rule since 2026-10-26, reader feedback).**
+In a grid row (homepage trios, listings) cards with a shorter title/excerpt used to
+end higher, so the bottom borders and the date/author footers zig-zagged. `.card`
+has `height: 100%` (fills its grid cell) and the excerpt (`.excerpt`) has
+`flex-grow: 1`, so the spare space sits under the excerpt and the footer stays on
+the bottom edge. Don't remove either, and don't wrap `ArticleCard` in an extra
+element whose height is not stretched by the grid (the `height: 100%` then resolves
+to auto). Mobile tiles (`flow-root`) and hero side cards (CSS grid) ignore
+`flex-grow`, so they are unaffected.
+
+**No social links in the card (2026-10-25).** The card shows only the cover, rubric badge,
+title, excerpt, date and author. Frontmatter `instagramImage` / `squareImage` are part of the
+cover set (record of the 5 formats), never rendered in the card – an „Instagram ↗“ link that
+appeared once every article got the full cover set was removed on Kateřina's request. The
+first removal sat unmerged in a side branch for a day while readers still saw the link –
+a fix is done only once it is in `main` and deployed.
+
 **Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
 left card in `FeaturedHero` (Volby / Výběr bands) must never show white space
 between the excerpt and the date/author footer. Its text = frontmatter `excerpt`
@@ -686,6 +703,18 @@ Renders a raw HTML string (from `htmlInclude` frontmatter field) with scripts re
 import RawHtmlEmbed from '@repo/ui/components/RawHtmlEmbed';
 <RawHtmlEmbed html={htmlContent} assetBasePath={`/clanek/_articles/${slug}`} />
 ```
+
+**Velká samostatná interaktivní mapa v článku (iframe přes `<HtmlEmbed>`).** Hotovou stránku s vlastními styly
+a daty (např. mapa obcí, 1,5 MB) nevkládej inline – přepsala by styly webu a nafoukla HTML článku. Dej ji do
+`images/<název>.html` (copyImages ji zkopíruje do `public/`) a v článku `<HtmlEmbed file="mapa-embed.html" />`
+s malým obalem: `<iframe>` + posluchač `message`, který nastaví výšku. Vzor:
+`apps/web/app/clanek/_articles/volby-cr-2026-10-16-ucast-2022-2026/` (`mapa-embed.html`, `_data_pipeline/sablona.html`).
+*Ponaučení (16. 10. 2026):* (1) bez `loading="lazy"` – iframe vložený přes RawHtmlEmbed se líně nenačetl;
+(2) výšku měř z obalu obsahu (`.wrap.getBoundingClientRect().height`), ne z `documentElement.scrollHeight`
+(ten je vždy aspoň tak vysoký jako iframe, takže se nikdy nezmenší) a posílej ji i při `load`/`resize`/`toggle`,
+ne jen z ResizeObserveru; (3) web je jen světlý – v embedu žádný `prefers-color-scheme: dark`, pozadí průhledné;
+(4) zoom mapy jen Ctrl + kolečko / dva prsty (`d3.zoom().filter`, `touch-action: pan-y`), jinak mapa „ukradne“
+rolování stránky.
 
 ---
 
@@ -1001,6 +1030,17 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 | Matomo siteId | `4` | `5` |
 | Date locale | `cs-CZ` | `en-US` |
 | ScrollyTelling base | `/clanek/_articles` | `/a/_articles` |
+
+---
+
+## Mapy volebních obvodů (Senát, kraje, obce)
+
+- **Barva je dominantní, hranice musí být vidět.** Obvody plnou barvou (opacity ~0,9) s bílou hranicí ~2 px, aby sousední obvody stejné barvy (Děčín × Česká Lípa, Hradec Králové × Rychnov) nevypadaly jako jeden. Vzor: výřez Prahy v `SenatVitezoveMapa`.
+- **Tečkový motiv jen jako podkres** (bílé tečky, opacity ~0,2) – nikdy ne tečky v barvě strany místo ploch. Tečková mapa je styl coverů, ne čitelné mapy obvodů.
+- **Barva podle senátorského klubu se musí dát doložit:** obhájce = jeho klub podle senat.cz (ověřit skriptem, např. `_data_pipeline/kluby_kontrola.py`), nový senátor = „klub zatím neznámý“ a barva podle kandidátky. V tooltipu klub a kandidátku vždy odděleně, koaliční zkratky ČSÚ („KDUODSSTANPiTOP“) nikdy, jen vypsané strany.
+- Jedno logo na graf (ChartCard), žádné druhé logo uvnitř mapy.
+
+*Ponaučení (17. 10. 2026, Senát 2. kolo):* první verze mapy vítězů měla dominantní tečky a obvody se slévaly; tooltip míchal klub s kandidátkou, takže nebylo poznat, proč má obhájce (Grulich, kandidátka KDU-ČSL, ODS, STAN, Piráti, TOP 09 a LES) barvu klubu ODS a TOP 09.
 
 ---
 

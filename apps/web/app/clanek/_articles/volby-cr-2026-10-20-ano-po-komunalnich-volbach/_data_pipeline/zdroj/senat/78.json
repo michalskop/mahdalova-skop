@@ -1,0 +1,23 @@
+{
+  "id" : "20261009/vysled/obvod/78.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":78},
+  "generovano" : "2026-10-17T16:30:52",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Zlín",
+  "prehled" : [
+  [1,147,147,100,105319,47914,45.49,21,47455,46581,98.16],
+  [2,147,147,100,105405,16932,16.06,21,16925,16794,99.23]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 82,
+  "vysledky" : [
+  [1,"Nečas Lubomír MUDr.","SPD","SPD","SPD",4987,10.7,0,0,false,false,1114,1114,1114],
+  [2,"Goláň Tomáš Ing.","KDU+ODS+TOP 09","ODS","ODS",15627,33.54,10438,62.15,false,false,1327,53,53],
+  [3,"Doleček Jan","KSČM","KSČM","KSČM",868,1.86,0,0,false,false,47,47,47],
+  [4,"Sedlařík Vladimír prof. Ing. Ph.D.","ANO","ANO","BEZPP",8794,18.87,0,0,false,false,768,768,99],
+  [5,"Mitáček Ivo PhDr. Mgr.","STAN","STAN","BEZPP",10638,22.83,6356,37.84,false,false,166,166,99],
+  [6,"Dlouhý Pavel Mgr. MBA","SEN 21","SEN 21","BEZPP",5667,12.16,0,0,false,false,1187,1187,99]
+],
+  "postupuje" : [2,5],
+  "zvoleny" : 2
+}
