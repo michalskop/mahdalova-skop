@@ -334,7 +334,7 @@ H_Z = 31 * 17
 prez_zacatky = [{'rok': '2002', 'p': 'Havel'}, {'rok': '2012', 'p': 'Klaus'}, {'rok': '2022', 'p': 'Zeman'}, {'rok': '2025', 'p': 'Pavel'}]
 hranice_py = [{'rok': '2002'}, {'rok': '2012'}, {'rok': '2022'}]
 save('graf_zeny.json', {
-    'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
+    'title': {'text': f'Vyznamenání dostávají hlavně {{muži|{MUZ_AMETYST}}}. Za Pavla je {{žen|{ZENA_TEAL}}} víc, zhruba čtvrtina',
               'subtitle': 'Počet vyznamenaných v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. '
                           'Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
@@ -366,12 +366,17 @@ save('graf_zeny.json', {
          'mark': {'type': 'text', 'align': 'left', 'baseline': 'top', 'dx': 2, 'dy': 3, 'fontSize': 13,
                   'fontWeight': 'bold', 'color': '#101432'},
          'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 0}, 'text': {'field': 'p'}}},
-        {'data': {'values': [{'x': -(max_z + 6), 't': '← ženy'}, {'x': max_m + 2, 't': 'muži →'}]},
-         'mark': {'type': 'text', 'baseline': 'bottom', 'dy': -22, 'fontSize': 12, 'fontWeight': 'bold'},
+        # popisky od nulové osy: ženy doleva, muži doprava
+        {'data': {'values': [{'x': 0, 't': '← ženy'}]},
+         'mark': {'type': 'text', 'baseline': 'bottom', 'align': 'right', 'dx': -6, 'dy': -22, 'fontSize': 12,
+                  'fontWeight': 'bold', 'color': ZENA_DARK},
          'encoding': {'x': {'field': 'x', 'type': 'quantitative', 'scale': {'domain': DOM}}, 'y': {'value': 0},
-                      'text': {'field': 't'},
-                      'align': {'condition': {'test': 'datum.x < 0', 'value': 'left'}, 'value': 'right'},
-                      'color': {'condition': {'test': 'datum.x < 0', 'value': ZENA_DARK}, 'value': MUZ_AMETYST}}},
+                      'text': {'field': 't'}}},
+        {'data': {'values': [{'x': 0, 't': 'muži →'}]},
+         'mark': {'type': 'text', 'baseline': 'bottom', 'align': 'left', 'dx': 6, 'dy': -22, 'fontSize': 12,
+                  'fontWeight': 'bold', 'color': MUZ_AMETYST},
+         'encoding': {'x': {'field': 'x', 'type': 'quantitative', 'scale': {'domain': DOM}}, 'y': {'value': 0},
+                      'text': {'field': 't'}}},
     ],
 })
 

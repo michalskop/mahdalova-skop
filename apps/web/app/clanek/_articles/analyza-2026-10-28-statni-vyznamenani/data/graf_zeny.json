@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Za Pavla jsou ženy {víc než čtvrtinou|#33b9d9} vyznamenaných, dřív bývaly sedminou",
+  "text": "Vyznamenání dostávají hlavně {muži|#522a7a}. Za Pavla je {žen|#33b9d9} víc, zhruba čtvrtina",
   "subtitle": "Počet vyznamenaných v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. Kliknutím na řádek zobrazíte jména."
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
@@ -1170,21 +1170,20 @@
    "data": {
     "values": [
      {
-      "x": -26,
+      "x": 0,
       "t": "← ženy"
-     },
-     {
-      "x": 93,
-      "t": "muži →"
      }
     ]
    },
    "mark": {
     "type": "text",
     "baseline": "bottom",
+    "align": "right",
+    "dx": -6,
     "dy": -22,
     "fontSize": 12,
-    "fontWeight": "bold"
+    "fontWeight": "bold",
+    "color": "#06677d"
    },
    "encoding": {
     "x": {
@@ -1202,20 +1201,44 @@
     },
     "text": {
      "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0,
+      "t": "muži →"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "align": "left",
+    "dx": 6,
+    "dy": -22,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#522a7a"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -26,
+       93
+      ]
+     }
     },
-    "align": {
-     "condition": {
-      "test": "datum.x < 0",
-      "value": "left"
-     },
-     "value": "right"
+    "y": {
+     "value": 0
     },
-    "color": {
-     "condition": {
-      "test": "datum.x < 0",
-      "value": "#06677d"
-     },
-     "value": "#522a7a"
+    "text": {
+     "field": "t"
     }
    }
   }
