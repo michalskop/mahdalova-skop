@@ -298,42 +298,39 @@ hranice = [{'rok': '2003'}, {'rok': '2013'}, {'rok': '2023'}]
 jmena_prez = [{'rok': '1998', 'p': 'Havel'}, {'rok': '2007', 'p': 'Klaus'}, {'rok': '2017', 'p': 'Zeman'}, {'rok': '2024', 'p': 'Pavel'}]
 X = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS, 'paddingInner': 0.08},
      'axis': {'labelAngle': 0, 'ticks': False, 'domain': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}}
+sloupce = []
+for x in zr_rok:
+    for poh, n in (('žena', x['ženy']), ('muž', x['celkem'] - x['ženy'])):
+        sloupce.append({'rok': x['rok'], 'pohlaví': poh, 'počet': n, 'ženy': x['ženy'], 'celkem': x['celkem'],
+                        'podíl': x['podíl'], 'pořadí': 0 if poh == 'žena' else 1})
+stitky_zen = [{'rok': x['rok'], 'celkem': x['celkem'], 'popisek': f"{round(x['podíl'] * 100)} %"} for x in zr_rok]
+max_cel = max(x['celkem'] for x in zr_rok)
+Yc = {'field': 'počet', 'type': 'quantitative', 'title': None, 'stack': 'zero',
+      'scale': {'domain': [0, max_cel + 14]}, 'axis': {'gridColor': '#e8e3d2', 'tickMinStep': 20, 'domain': False, 'ticks': False}}
 save('graf_zeny.json', {
     'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
-              'subtitle': 'Podíl žen mezi vyznamenanými v daném ročníku. Jedna kostička = 5 % vyznamenaných, tyrkysově ženy, fialově muži.'},
+              'subtitle': 'Počet vyznamenaných v daném ročníku, tyrkysově ženy, fialově muži. Nad sloupcem podíl žen.'},
     '_source': SRC,
-    'width': 'container', 'height': 380,
+    'width': 'container', 'height': 360,
     'layer': [
-        # kostička v barvě pohlaví …
-        {'data': {'values': ikony},
-         'mark': {'type': 'square', 'opacity': 1, 'size': 230, 'cornerRadius': 2},
+        {'data': {'values': sloupce},
+         'mark': {'type': 'bar', 'width': {'band': 0.8}},
          'encoding': {
-             'x': X,
-             'y': {'field': 'i', 'type': 'ordinal', 'title': None, 'sort': 'descending', 'axis': None,
-                   'scale': {'paddingInner': 0.12}},
+             'x': X, 'y': Yc,
              'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
                        'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
-             'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'ženy', 'title': 'Žen'},
-                         {'field': 'celkem', 'title': 'Vyznamenaných osob'},
-                         {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'}]}},
-        # … a v ní vyříznutá silueta (barva pozadí grafu)
-        {'data': {'values': ikony},
-         'mark': {'type': 'point', 'filled': True, 'opacity': 1, 'color': '#f8f6f0'},
-         'encoding': {
-             'x': X,
-             'y': {'field': 'i', 'type': 'ordinal', 'title': None, 'sort': 'descending', 'axis': None,
-                   'scale': {'paddingInner': 0.12}},
-             'shape': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
-                       'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_SHAPE, MUZ_SHAPE]}},
-             'size': {'value': 70},
-             'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'ženy', 'title': 'Žen'},
-                         {'field': 'celkem', 'title': 'Vyznamenaných osob'},
-                         {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'}]}},
+             'order': {'field': 'pořadí'},
+             'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'},
+                         {'field': 'ženy', 'title': 'Žen'}, {'field': 'celkem', 'title': 'Vyznamenaných osob'}]}},
+        {'data': {'values': stitky_zen},
+         'mark': {'type': 'text', 'fontSize': 9.5, 'dy': -4, 'baseline': 'bottom', 'color': '#101432'},
+         'encoding': {'x': X, 'y': {'field': 'celkem', 'type': 'quantitative', 'scale': {'domain': [0, max_cel + 14]}},
+                      'text': {'field': 'popisek'}}},
         {'data': {'values': hranice},
          'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
-         'encoding': {'x': {**X, 'bandPosition': 0}, 'y': {'value': -24}, 'y2': {'value': 392}}},
+         'encoding': {'x': {**X, 'bandPosition': 0}, 'y': {'value': -24}, 'y2': {'value': 360}}},
         {'data': {'values': jmena_prez},
-         'mark': {'type': 'text', 'dy': -206, 'fontSize': 13, 'fontWeight': 'bold', 'color': '#101432'},
+         'mark': {'type': 'text', 'dy': -196, 'fontSize': 13, 'fontWeight': 'bold', 'color': '#101432'},
          'encoding': {'x': {**X, 'bandPosition': 0.5}, 'text': {'field': 'p'}}},
     ],
 })
