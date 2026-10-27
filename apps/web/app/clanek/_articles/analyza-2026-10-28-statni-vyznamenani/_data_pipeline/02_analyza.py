@@ -163,7 +163,7 @@ def jmena_mz(lide, rok=True):
             return f"{cisty(r['jmeno'])} ({r['rok']}{', in memoriam' if im else ''})"
         return f"{cisty(r['jmeno'])}{' (in memoriam)' if im else ''}"
     z = [fmt(r) for r in lide if r['pohlavi'] == 'Z']
-    m = [fmt(r) for r in lide if r['pohlavi'] != 'Z']
+    m = [fmt(r) for r in lide if r['pohlavi'] == 'M']
     out = []
     if z:
         out += [f'## Ženy ({len(z)})'] + z
@@ -484,7 +484,8 @@ def piktogramy(rows_src, order, title, subtitle, pocet_title, dlazdic=None):
     order = sorted([o for o in order if o not in konec], key=locale.strxfrm) + konec
     data, items = [], {}
     for p in PREZ:
-        vse = [r for r in rows_src if r['prezident'] == p]
+        # jen osoby se známým pohlavím (3 záznamy bez určeného pohlaví nevykazujeme, stejně jako jinde)
+        vse = [r for r in rows_src if r['prezident'] == p and r['pohlavi'] in 'ZM']
         for o in order:
             lide = [r for r in vse if nazev(r) == o]
             zen = sum(r['pohlavi'] == 'Z' for r in lide)
