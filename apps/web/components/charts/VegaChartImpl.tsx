@@ -435,7 +435,14 @@ function clickDetailConfig(spec: Record<string, unknown> | null): ClickDetailCon
 
 function ClickDetailPanel({ cfg, datum, onClose }: { cfg: ClickDetailConfig; datum: Record<string, unknown>; onClose: () => void }) {
   const raw = datum[cfg.field] ?? (cfg.key && cfg.items ? cfg.items[String(datum[cfg.key])] : '');
-  const items = String(raw ?? '').split(/[\n\t]/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.localeCompare(b, 'cs'));
+  // Řádek začínající „## “ otevírá oddíl (např. „## Ženy (13)“); bez oddílů jeden seřazený seznam.
+  const sections: { head?: string; items: string[] }[] = [];
+  for (const line of String(raw ?? '').split('\n')) {
+    if (line.startsWith('## ')) { sections.push({ head: line.slice(3), items: [] }); continue; }
+    if (!sections.length) sections.push({ items: [] });
+    sections[sections.length - 1].items.push(...line.split('\t').map(s => s.trim()).filter(Boolean));
+  }
+  sections.forEach(s => s.items.sort((a, b) => a.localeCompare(b, 'cs')));
   const title = (cfg.title ?? []).map(f => datum[f]).filter(Boolean).join(' · ');
   return (
     <div style={{
@@ -463,9 +470,14 @@ function ClickDetailPanel({ cfg, datum, onClose }: { cfg: ClickDetailConfig; dat
           })}
         </div>
       ) : null}
-      <div style={{ columnWidth: 190, columnGap: 18 }}>
-        {items.map(item => <div key={item} style={{ breakInside: 'avoid' }}>{item}</div>)}
-      </div>
+      {sections.map((sec, i) => (
+        <div key={sec.head ?? i} style={{ marginTop: i ? 8 : 0 }}>
+          {sec.head && <div style={{ fontWeight: 700, borderBottom: '1px solid #e8e3d2', marginBottom: 3 }}>{sec.head}</div>}
+          <div style={{ columnWidth: 190, columnGap: 18 }}>
+            {sec.items.map(item => <div key={item} style={{ breakInside: 'avoid' }}>{item}</div>)}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
