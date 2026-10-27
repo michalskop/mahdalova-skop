@@ -1,0 +1,273 @@
+id,pohlavi,cizinec,obor,popis,jistota
+299,M,0,odboj_valka,"neověřeno; patrně odboj, in memoriam",nizka
+300,M,0,odboj_valka,"velitel obrany Místku 1939, popraven",stredni
+301,M,0,kultura,"exilový nakladatel (Index, Kolín n. R.)",nizka
+302,M,0,veda,"průkopník počítačů, in memoriam",vysoka
+303,Z,0,jine,neověřeno,nizka
+304,M,0,sport,"hokejový trenér, olympijské zlato Nagano",vysoka
+305,M,0,kultura,hudební skladatel,stredni
+306,M,0,kultura,"spisovatel a scenárista, in memoriam",stredni
+307,Z,0,jine,"neověřeno, in memoriam",nizka
+308,Z,0,protikomunisticky_odboj,"socioložka, disidentka, pašování samizdatu",stredni
+309,M,0,kultura,cestovatel a spisovatel,vysoka
+310,M,0,protikomunisticky_odboj,katolický disident z Brna,stredni
+311,M,0,cirkev,"jezuita, vězeň nacistů i komunistů",stredni
+312,M,0,kultura,houslista,vysoka
+313,M,1,jine,"neověřeno, patrně Němec",nizka
+314,M,0,kultura,dramatik a režisér,vysoka
+315,Z,0,kultura,"sběratelka umění, Museum Kampa",vysoka
+316,M,0,veda,"fyzik, profesor",vysoka
+317,M,0,kultura,cestovatel a spisovatel,vysoka
+318,M,0,protikomunisticky_odboj,"agent-chodec, spisovatel",vysoka
+319,M,0,politika,právník; neověřeno,nizka
+320,M,0,jine,neověřeno,nizka
+321,M,0,kultura,"herec, scenárista a dramatik",vysoka
+322,M,1,zahranicni_statnik,"francouzský prezident, in memoriam",vysoka
+323,M,1,zahranicni_statnik,bývalý prezident USA,vysoka
+324,M,1,zahranicni_statnik,bývalý německý kancléř,vysoka
+325,M,1,armada_bezpecnost,"rakouský generál, náčelník štábu",stredni
+326,M,1,armada_bezpecnost,"německý generál, předseda vojenského výboru NATO",vysoka
+327,M,1,zahranicni_statnik,"vůdce Solidarity, bývalý polský prezident",vysoka
+328,Z,1,zahranicni_statnik,bývalá britská premiérka,vysoka
+329,M,1,zahranicni_statnik,bývalý sovětský vůdce,vysoka
+330,M,1,zahranicni_statnik,bývalý prezident USA,vysoka
+331,M,1,obcanska_spolecnost,hledač nacistických zločinců,vysoka
+332,M,0,cirkev,"arcibiskup olomoucký, in memoriam",vysoka
+333,M,0,politika,"neověřeno, právník",nizka
+334,M,0,politika,"exilový sociální demokrat, in memoriam",stredni
+335,M,0,protikomunisticky_odboj,"student práv popravený 1949, in memoriam",vysoka
+336,M,0,hrdinsky_cin,zachránil ženu z hořícího bytu,vysoka
+337,Z,0,protikomunisticky_odboj,"překladatelka, politická vězeňkyně",vysoka
+338,M,0,hrdinsky_cin,zachránil chlapce z rozvodněné řeky,vysoka
+339,M,0,kultura,"spisovatel, přeživší holokaustu",vysoka
+340,M,1,obcanska_spolecnost,"švýcarský politik, pomoc disentu",vysoka
+341,Z,1,kultura,"španělská básnířka, překladatelka české literatury",vysoka
+342,M,1,veda,"japonský bohemista, profesor",vysoka
+343,M,0,kultura,klavírista,vysoka
+344,M,0,media,"novinář, válečný zpravodaj, Epicentrum",vysoka
+345,Z,1,obcanska_spolecnost,"americká lidskoprávní aktivistka, Helsinki Watch",vysoka
+346,M,0,podnikani,"průmyslník a mecenáš, in memoriam",vysoka
+347,M,0,kultura,"heraldik, autor státního znaku",vysoka
+348,M,0,cirkev,"evangelický teolog, biblista, in memoriam",vysoka
+349,M,0,protikomunisticky_odboj,"nevidomý disident, signatář Charty 77",vysoka
+350,Z,0,cirkev,řeholnice a zdravotní sestra,vysoka
+351,Z,0,veda,"germanistka ve Vancouveru, propagace české kultury",vysoka
+352,M,0,kultura,"spisovatel, dramatik, ministr kultury",vysoka
+353,M,0,kultura,herec a spisovatel,vysoka
+354,Z,1,obcanska_spolecnost,"švýcarská pedagožka, zachraňovala Židy, in memoriam",vysoka
+355,M,0,cirkev,kněz pro krajany v exilu,vysoka
+356,M,0,veda,"germanista na Yale, rodák z Prahy",vysoka
+357,Z,0,media,"novinářka, válečná zpravodajka",vysoka
+358,M,0,kultura,herec Národního divadla,vysoka
+359,M,0,kultura,překladatel a exilový literární vědec,vysoka
+360,M,0,protikomunisticky_odboj,"politický vězeň, zakladatel spolků vězňů",vysoka
+361,M,0,kultura,"výtvarník a kostýmní návrhář, Oscar",vysoka
+362,M,0,medicina,"neurolog, Vojtova metoda, in memoriam",vysoka
+363,M,1,zahranicni_statnik,"rakouský kancléř, in memoriam",vysoka
+364,M,1,zahranicni_statnik,prezident Německa,vysoka
+365,M,1,zahranicni_statnik,"švédský premiér, in memoriam",vysoka
+366,M,0,odboj_valka,"voják 2. odboje, politický vězeň",vysoka
+367,M,0,odboj_valka,"generál letectva, odbojář, in memoriam",vysoka
+368,M,1,zahranicni_statnik,"německý kancléř, in memoriam",vysoka
+369,M,1,veda,"německý literární vědec, propagace české literatury",vysoka
+370,M,0,politika,"senátor ČSSD, bývalý politický vězeň",vysoka
+371,M,0,politika,"politolog, exilový předseda ČSSD",vysoka
+372,M,0,politika,"předseda KDU-ČSL, ministr, in memoriam",vysoka
+373,M,0,veda,americký filozof a teolog,vysoka
+374,M,0,veda,"filozof, signatář Charty 77",vysoka
+375,M,0,veda,slovenský literární historik,vysoka
+376,M,0,kultura,"kabaretiér, nakladatel, exil, in memoriam",vysoka
+377,Z,0,protikomunisticky_odboj,"novinářka, politická vězeňkyně",stredni
+378,M,0,hrdinsky_cin,neověřeno,nizka
+379,M,0,armada_bezpecnost,podpraporčík; neověřeno,nizka
+380,M,0,protikomunisticky_odboj,"agent-chodec, převaděč přes hranice",stredni
+381,M,0,odboj_valka,"plukovník v. v., účastník 2. odboje",nizka
+382,M,0,armada_bezpecnost,kapitán; neověřeno,nizka
+383,M,0,protikomunisticky_odboj,"neověřeno, in memoriam",nizka
+384,M,0,odboj_valka,plukovník v. v.; neověřeno,nizka
+385,?,?,jine,neověřeno,nizka
+386,Z,0,kultura,fotografka,vysoka
+387,M,0,cirkev,"dominikán, biskup královéhradecký",vysoka
+388,M,1,jine,neověřeno,nizka
+389,M,0,veda,"právník, odborník na evropské právo, USA",stredni
+390,M,0,protikomunisticky_odboj,"fyzik, Nadace Charty 77 ve Stockholmu",stredni
+391,M,0,kultura,básník a režisér v Portugalsku,vysoka
+392,M,0,jine,neověřeno,nizka
+393,M,0,odboj_valka,"bojovník RAF, politický vězeň",vysoka
+394,M,0,sport,"oštěpař, olympijský vítěz",vysoka
+395,Z,0,jine,neověřeno,nizka
+396,M,0,medicina,"endokrinolog, profesor",vysoka
+397,Z,0,kultura,herečka,vysoka
+398,M,0,kultura,dirigent,vysoka
+399,M,0,kultura,filmový režisér,vysoka
+400,M,0,media,"novinář, disident, Lidové noviny",stredni
+401,M,0,kultura,spisovatel a scenárista,vysoka
+402,M,0,kultura,básník a překladatel,vysoka
+403,M,0,kultura,"malíř, in memoriam",vysoka
+404,M,0,veda,"vysokoškolský profesor, in memoriam; neověřeno",nizka
+405,M,0,kultura,"architekt, Ještěd",vysoka
+406,M,0,kultura,"grafický designér, in memoriam",vysoka
+407,Z,0,kultura,německy píšící pražská spisovatelka,vysoka
+408,Z,0,protikomunisticky_odboj,"socioložka, mluvčí Charty 77",stredni
+409,Z,0,veda,vědkyně (RNDr.); neověřeno,nizka
+410,M,0,protikomunisticky_odboj,"historik, mluvčí Charty 77",stredni
+411,M,0,protikomunisticky_odboj,"evangelický farář, mluvčí Charty 77",stredni
+412,M,0,jine,neověřeno,nizka
+413,M,0,jine,neověřeno,nizka
+414,M,0,kultura,"sběratel a mecenáš, sudetský rodák",nizka
+415,M,0,kultura,herec,vysoka
+416,Z,0,jine,neověřeno,nizka
+417,M,1,zahranicni_statnik,prezident Itálie,vysoka
+418,Z,0,media,"rakouská novinářka, rodačka z Prahy",stredni
+419,M,0,cirkev,"jezuita, vězeň komunismu",stredni
+420,M,0,jine,"neověřeno, in memoriam",nizka
+421,M,0,cirkev,"kněz, teolog, exil v Římě",stredni
+422,M,1,obcanska_spolecnost,"francouzský ministr spravedlnosti, zrušení trestu smrti",stredni
+423,M,1,protikomunisticky_odboj,"Polák, upálil se proti okupaci 1968",vysoka
+424,M,0,jine,"neověřeno, in memoriam",nizka
+425,M,0,veda,"právník, profesor, in memoriam; neověřeno",nizka
+426,M,0,odboj_valka,"plukovník v. v., válečný veterán",nizka
+427,M,0,hrdinsky_cin,neověřeno,nizka
+428,M,0,odboj_valka,"plukovník v. v., válečný veterán",nizka
+429,M,0,hrdinsky_cin,neověřeno,nizka
+430,M,0,armada_bezpecnost,podpraporčík; neověřeno,nizka
+431,M,0,armada_bezpecnost,kapitán; neověřeno,nizka
+432,M,0,protikomunisticky_odboj,"politický vězeň, útěk z Jáchymova",vysoka
+433,M,0,hrdinsky_cin,neověřeno,nizka
+434,M,0,armada_bezpecnost,kapitán; neověřeno,nizka
+435,M,0,odboj_valka,"plukovník v. v., válečný veterán",nizka
+436,M,0,armada_bezpecnost,kapitán; neověřeno,nizka
+437,M,0,armada_bezpecnost,praporčík; neověřeno,nizka
+438,M,1,hrdinsky_cin,"starosta New Yorku, 11. září",vysoka
+439,M,0,hrdinsky_cin,neověřeno,nizka
+440,M,0,armada_bezpecnost,praporčík; neověřeno,nizka
+441,M,0,armada_bezpecnost,podporučík; neověřeno,nizka
+442,M,0,jine,neověřeno,nizka
+443,Z,0,kultura,historička fotografie,vysoka
+444,Z,0,protikomunisticky_odboj,"signatářka Charty 77, VONS",stredni
+445,M,0,veda,"chemik, antivirotika",vysoka
+446,M,0,veda,"literární historik, exil",vysoka
+447,M,0,sport,"hokejista, politický vězeň",stredni
+448,M,0,jine,"neověřeno, in memoriam",nizka
+449,Z,0,kultura,šansoniérka,vysoka
+450,M,0,veda,etnomuzikolog,stredni
+451,Z,0,jine,neověřeno,nizka
+452,M,0,odboj_valka,"podplukovník, in memoriam; neověřeno",nizka
+453,M,0,kultura,scenárista a dramaturg,vysoka
+454,M,0,armada_bezpecnost,"bývalý disident, důstojník BIS",stredni
+455,M,0,veda,historik středověku,vysoka
+456,M,1,veda,německý historik českých zemí,stredni
+457,M,0,kultura,spisovatel,vysoka
+458,M,0,kultura,básník,vysoka
+459,M,0,veda,"politolog na Stanfordu, rodák z ČR",stredni
+460,M,0,kultura,sochař,vysoka
+461,M,0,veda,historik,vysoka
+462,M,0,protikomunisticky_odboj,politický vězeň,stredni
+463,M,0,kultura,filmový režisér,vysoka
+464,M,0,veda,"fyzik, kvantová optika",vysoka
+465,M,0,armada_bezpecnost,důstojník BIS,nizka
+466,M,0,kultura,herec,vysoka
+467,M,0,kultura,dokumentarista,vysoka
+468,M,0,medicina,"psychiatr, léčba závislostí",vysoka
+469,M,0,politika,"ministr zahraničí, disident",vysoka
+470,M,0,protikomunisticky_odboj,"samizdatový vydavatel, Libri prohibiti",vysoka
+471,M,0,armada_bezpecnost,policejní prezident,vysoka
+472,M,0,armada_bezpecnost,důstojník BIS,stredni
+473,M,0,media,sportovní novinář v exilu,stredni
+474,M,0,medicina,"lékař, profesor, in memoriam",nizka
+475,M,0,protikomunisticky_odboj,"psycholog, signatář Charty 77, in memoriam",stredni
+476,M,0,kultura,fotograf,vysoka
+477,M,0,protikomunisticky_odboj,neověřeno,nizka
+478,M,0,politika,"ekolog, federální ministr ŽP, in memoriam",vysoka
+479,M,1,obcanska_spolecnost,"předseda odborů AFL-CIO, in memoriam",vysoka
+480,M,0,obcanska_spolecnost,romský aktivista,vysoka
+481,M,0,kultura,"sochař, in memoriam",vysoka
+482,M,0,cirkev,kněz,stredni
+483,M,0,jine,neověřeno,nizka
+484,Z,0,medicina,"lékařka, zakladatelka hospiců",vysoka
+485,M,0,cirkev,"evangelický teolog, signatář Charty 77",stredni
+486,M,0,odboj_valka,plukovník v. v.; neověřeno,nizka
+487,Z,0,veda,romistka,vysoka
+488,M,0,obcanska_spolecnost,americký právník českého původu,vysoka
+489,M,0,kultura,"filmový režisér, in memoriam",vysoka
+490,M,0,kultura,herec a dramatik,vysoka
+491,M,0,kultura,choreograf,vysoka
+492,M,1,jine,"neověřeno, patrně Američan",nizka
+493,M,0,kultura,hudební skladatel,vysoka
+494,M,0,armada_bezpecnost,zpravodajec; neověřeno,nizka
+495,Z,0,jine,neověřeno,nizka
+496,Z,0,kultura,herečka,vysoka
+497,M,0,kultura,"nakladatel v Německu, přeživší holokaustu",stredni
+498,M,0,armada_bezpecnost,generálmajor; neověřeno,nizka
+499,M,0,cirkev,"kněz, politický vězeň",stredni
+500,M,0,obcanska_spolecnost,ředitel Člověka v tísni,vysoka
+501,M,1,armada_bezpecnost,"italský admirál, NATO",vysoka
+502,M,1,armada_bezpecnost,rakouský generál,stredni
+503,M,0,odboj_valka,"generál, odbojář, in memoriam",stredni
+504,M,0,jine,neověřeno,nizka
+505,M,1,armada_bezpecnost,americký viceadmirál,stredni
+506,Z,0,politika,"ministryně spravedlnosti, předsedkyně ČNR",vysoka
+507,M,0,veda,francouzský politolog českého původu,vysoka
+508,M,0,politika,"kancléř prezidenta, senátor",vysoka
+509,M,0,cirkev,vrchní zemský rabín,vysoka
+510,M,0,protikomunisticky_odboj,"mluvčí Charty 77, in memoriam",stredni
+511,M,0,politika,"ministr obrany, kancléř prezidenta",vysoka
+512,M,0,cirkev,"kardinál, arcibiskup pražský",vysoka
+513,M,0,cirkev,synodní senior ČCE,vysoka
+514,M,0,obcanska_spolecnost,"veterinář, šlechtic; neověřeno",nizka
+515,M,0,cirkev,"rabín, in memoriam",vysoka
+516,M,0,politika,právník; neověřeno,nizka
+517,?,1,hrdinsky_cin,"neověřeno, patrně Francouz",nizka
+518,M,1,hrdinsky_cin,"neověřeno, patrně Francouz, in memoriam",nizka
+519,M,0,hrdinsky_cin,neověřeno,nizka
+520,M,0,armada_bezpecnost,podpraporčík; neověřeno,nizka
+521,M,0,kultura,výtvarník a ilustrátor,vysoka
+522,Z,0,sport,"oštěpařka, olympijská vítězka",vysoka
+523,Z,0,kultura,slovenská herečka,vysoka
+524,M,1,zahranicni_statnik,rakouský vicekancléř,vysoka
+525,M,0,veda,"ekonom a právník, profesor",nizka
+526,M,0,obcanska_spolecnost,"předseda Ackermann-Gemeinde, odsunutý",vysoka
+527,M,0,kultura,architekt,vysoka
+528,M,0,veda,biolog,stredni
+529,M,1,protikomunisticky_odboj,polský disident,vysoka
+530,M,0,kultura,herec,vysoka
+531,Z,0,obcanska_spolecnost,"Stifterverein, rodačka ze Sychrova",vysoka
+532,M,0,kultura,malíř,vysoka
+533,M,0,kultura,"slovenský herec, in memoriam",vysoka
+534,M,0,obcanska_spolecnost,"emigrant, Jewish Claims Conference",vysoka
+535,M,0,kultura,slovenský herec,vysoka
+536,Z,1,obcanska_spolecnost,britská labouristická politička,nizka
+537,Z,0,jine,neověřeno,nizka
+538,M,0,kultura,"slovenský nakladatel, Kalligram",stredni
+539,M,0,kultura,slovenský herec,vysoka
+540,M,0,kultura,slovenský herec,vysoka
+541,M,0,medicina,hematoonkolog,vysoka
+542,M,0,kultura,slovenský operní pěvec,vysoka
+543,M,1,zahranicni_statnik,šéf delegace Evropské komise v Praze,stredni
+544,M,1,veda,britský historik,vysoka
+545,Z,0,kultura,jazzová zpěvačka,stredni
+546,M,0,medicina,endokrinolog,vysoka
+547,M,0,kultura,houslista a pedagog,vysoka
+548,M,1,jine,"neověřeno, patrně Rakušan",nizka
+549,Z,0,protikomunisticky_odboj,mluvčí Charty 77,vysoka
+550,Z,0,kultura,cembalistka,vysoka
+551,M,0,veda,slovenský historik,vysoka
+552,M,0,politika,"politik pražského jara, in memoriam",vysoka
+553,M,0,odboj_valka,"pilot RAF, in memoriam",vysoka
+554,M,0,odboj_valka,slovenský válečný letec,stredni
+555,M,1,zahranicni_statnik,bývalý prezident Německa,vysoka
+556,M,0,politika,bývalý prezident republiky,vysoka
+557,M,1,zahranicni_statnik,bývalý maďarský prezident,vysoka
+558,M,1,protikomunisticky_odboj,polský disident a novinář,vysoka
+559,Z,1,zahranicni_statnik,místopředsedkyně Bundestagu,stredni
+560,M,0,protikomunisticky_odboj,"tajemník Jana Masaryka, politický vězeň",nizka
+561,Z,1,protikomunisticky_odboj,"ruská disidentka, lidská práva",vysoka
+562,M,0,kultura,jazzový hudebník a skladatel,stredni
+563,M,0,cirkev,pomocný biskup pražský,vysoka
+564,M,0,politika,"právník a politik, in memoriam",nizka
+565,Z,0,obcanska_spolecnost,krajanka v Británii,nizka
+566,Z,1,zahranicni_statnik,bývalá irská prezidentka,vysoka
+567,M,0,protikomunisticky_odboj,"slovenský filozof, signatář Charty 77",vysoka
+568,M,1,protikomunisticky_odboj,ruský disident a ombudsman,vysoka
+569,M,0,politika,bývalý prezident republiky,vysoka
+570,M,1,zahranicni_statnik,"švýcarský ministr zahraničí 1968, in memoriam",stredni

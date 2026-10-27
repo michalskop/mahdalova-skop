@@ -1,0 +1,370 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Za Pavla jsou ženy {víc než čtvrtinou|#f76800} vyznamenaných, dřív bývaly sedminou",
+  "subtitle": "Podíl žen mezi vyznamenanými osobami v daném roce. Ročník 2020 je kvůli covidu sloučený s rokem 2021."
+ },
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 260,
+ "data": {
+  "values": [
+   {
+    "rok": "1995",
+    "prezident": "Václav Havel",
+    "ženy": 4,
+    "celkem": 55,
+    "podíl": 0.073
+   },
+   {
+    "rok": "1996",
+    "prezident": "Václav Havel",
+    "ženy": 4,
+    "celkem": 66,
+    "podíl": 0.061
+   },
+   {
+    "rok": "1997",
+    "prezident": "Václav Havel",
+    "ženy": 9,
+    "celkem": 70,
+    "podíl": 0.129
+   },
+   {
+    "rok": "1998",
+    "prezident": "Václav Havel",
+    "ženy": 15,
+    "celkem": 106,
+    "podíl": 0.142
+   },
+   {
+    "rok": "1999",
+    "prezident": "Václav Havel",
+    "ženy": 5,
+    "celkem": 36,
+    "podíl": 0.139
+   },
+   {
+    "rok": "2000",
+    "prezident": "Václav Havel",
+    "ženy": 7,
+    "celkem": 42,
+    "podíl": 0.167
+   },
+   {
+    "rok": "2001",
+    "prezident": "Václav Havel",
+    "ženy": 9,
+    "celkem": 48,
+    "podíl": 0.188
+   },
+   {
+    "rok": "2002",
+    "prezident": "Václav Havel",
+    "ženy": 9,
+    "celkem": 91,
+    "podíl": 0.099
+   },
+   {
+    "rok": "2003",
+    "prezident": "Václav Klaus",
+    "ženy": 12,
+    "celkem": 53,
+    "podíl": 0.226
+   },
+   {
+    "rok": "2004",
+    "prezident": "Václav Klaus",
+    "ženy": 3,
+    "celkem": 22,
+    "podíl": 0.136
+   },
+   {
+    "rok": "2005",
+    "prezident": "Václav Klaus",
+    "ženy": 2,
+    "celkem": 22,
+    "podíl": 0.091
+   },
+   {
+    "rok": "2006",
+    "prezident": "Václav Klaus",
+    "ženy": 5,
+    "celkem": 22,
+    "podíl": 0.227
+   },
+   {
+    "rok": "2007",
+    "prezident": "Václav Klaus",
+    "ženy": 3,
+    "celkem": 24,
+    "podíl": 0.125
+   },
+   {
+    "rok": "2008",
+    "prezident": "Václav Klaus",
+    "ženy": 4,
+    "celkem": 28,
+    "podíl": 0.143
+   },
+   {
+    "rok": "2009",
+    "prezident": "Václav Klaus",
+    "ženy": 5,
+    "celkem": 24,
+    "podíl": 0.208
+   },
+   {
+    "rok": "2010",
+    "prezident": "Václav Klaus",
+    "ženy": 5,
+    "celkem": 23,
+    "podíl": 0.217
+   },
+   {
+    "rok": "2011",
+    "prezident": "Václav Klaus",
+    "ženy": 3,
+    "celkem": 21,
+    "podíl": 0.143
+   },
+   {
+    "rok": "2012",
+    "prezident": "Václav Klaus",
+    "ženy": 3,
+    "celkem": 22,
+    "podíl": 0.136
+   },
+   {
+    "rok": "2013",
+    "prezident": "Miloš Zeman",
+    "ženy": 6,
+    "celkem": 30,
+    "podíl": 0.2
+   },
+   {
+    "rok": "2014",
+    "prezident": "Miloš Zeman",
+    "ženy": 10,
+    "celkem": 38,
+    "podíl": 0.263
+   },
+   {
+    "rok": "2015",
+    "prezident": "Miloš Zeman",
+    "ženy": 5,
+    "celkem": 36,
+    "podíl": 0.139
+   },
+   {
+    "rok": "2016",
+    "prezident": "Miloš Zeman",
+    "ženy": 5,
+    "celkem": 38,
+    "podíl": 0.132
+   },
+   {
+    "rok": "2017",
+    "prezident": "Miloš Zeman",
+    "ženy": 11,
+    "celkem": 49,
+    "podíl": 0.224
+   },
+   {
+    "rok": "2018",
+    "prezident": "Miloš Zeman",
+    "ženy": 8,
+    "celkem": 42,
+    "podíl": 0.19
+   },
+   {
+    "rok": "2019",
+    "prezident": "Miloš Zeman",
+    "ženy": 6,
+    "celkem": 42,
+    "podíl": 0.143
+   },
+   {
+    "rok": "2021",
+    "prezident": "Miloš Zeman",
+    "ženy": 5,
+    "celkem": 66,
+    "podíl": 0.076
+   },
+   {
+    "rok": "2022",
+    "prezident": "Miloš Zeman",
+    "ženy": 8,
+    "celkem": 78,
+    "podíl": 0.103
+   },
+   {
+    "rok": "2023",
+    "prezident": "Petr Pavel",
+    "ženy": 16,
+    "celkem": 65,
+    "podíl": 0.246
+   },
+   {
+    "rok": "2024",
+    "prezident": "Petr Pavel",
+    "ženy": 20,
+    "celkem": 59,
+    "podíl": 0.339
+   },
+   {
+    "rok": "2025",
+    "prezident": "Petr Pavel",
+    "ženy": 13,
+    "celkem": 51,
+    "podíl": 0.255
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar",
+  "width": {
+   "band": 0.78
+  }
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "title": null,
+   "sort": [
+    "1995",
+    "1996",
+    "1997",
+    "1998",
+    "1999",
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "scale": {
+    "domain": [
+     "1995",
+     "1996",
+     "1997",
+     "1998",
+     "1999",
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012",
+     "2013",
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ]
+   },
+   "axis": {
+    "labelAngle": 0,
+    "ticks": false,
+    "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+   }
+  },
+  "y": {
+   "field": "podíl",
+   "type": "quantitative",
+   "title": null,
+   "axis": {
+    "format": ".0%",
+    "gridColor": "#e8e3d2"
+   },
+   "scale": {
+    "domain": [
+     0,
+     0.4
+    ]
+   }
+  },
+  "color": {
+   "field": "prezident",
+   "type": "nominal",
+   "title": null,
+   "scale": {
+    "domain": [
+     "Václav Havel",
+     "Václav Klaus",
+     "Miloš Zeman",
+     "Petr Pavel"
+    ],
+    "range": [
+     "#06677d",
+     "#6267a3",
+     "#f76800",
+     "#9f319e"
+    ]
+   },
+   "legend": null
+  },
+  "tooltip": [
+   {
+    "field": "rok",
+    "title": "Rok"
+   },
+   {
+    "field": "ženy",
+    "title": "Žen"
+   },
+   {
+    "field": "celkem",
+    "title": "Vyznamenaných osob"
+   },
+   {
+    "field": "podíl",
+    "title": "Podíl žen",
+    "format": ".0%"
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

@@ -1,0 +1,212 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Zeman dával Řád T. G. Masaryka třikrát méně často než Havel a Klaus",
+  "subtitle": "Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2025"
+ },
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 200,
+ "data": {
+  "values": [
+   {
+    "prezident": "Václav Havel",
+    "druh": "Řád Bílého lva",
+    "počet": 60,
+    "podíl": 0.1165,
+    "pořadí": 0
+   },
+   {
+    "prezident": "Václav Havel",
+    "druh": "Řád T. G. Masaryka",
+    "počet": 109,
+    "podíl": 0.2117,
+    "pořadí": 1
+   },
+   {
+    "prezident": "Václav Havel",
+    "druh": "Medaile Za hrdinství",
+    "počet": 94,
+    "podíl": 0.1825,
+    "pořadí": 2
+   },
+   {
+    "prezident": "Václav Havel",
+    "druh": "Medaile Za zásluhy",
+    "počet": 252,
+    "podíl": 0.4893,
+    "pořadí": 3
+   },
+   {
+    "prezident": "Václav Klaus",
+    "druh": "Řád Bílého lva",
+    "počet": 28,
+    "podíl": 0.1065,
+    "pořadí": 0
+   },
+   {
+    "prezident": "Václav Klaus",
+    "druh": "Řád T. G. Masaryka",
+    "počet": 57,
+    "podíl": 0.2167,
+    "pořadí": 1
+   },
+   {
+    "prezident": "Václav Klaus",
+    "druh": "Medaile Za hrdinství",
+    "počet": 13,
+    "podíl": 0.0494,
+    "pořadí": 2
+   },
+   {
+    "prezident": "Václav Klaus",
+    "druh": "Medaile Za zásluhy",
+    "počet": 165,
+    "podíl": 0.6274,
+    "pořadí": 3
+   },
+   {
+    "prezident": "Miloš Zeman",
+    "druh": "Řád Bílého lva",
+    "počet": 57,
+    "podíl": 0.1357,
+    "pořadí": 0
+   },
+   {
+    "prezident": "Miloš Zeman",
+    "druh": "Řád T. G. Masaryka",
+    "počet": 29,
+    "podíl": 0.069,
+    "pořadí": 1
+   },
+   {
+    "prezident": "Miloš Zeman",
+    "druh": "Medaile Za hrdinství",
+    "počet": 59,
+    "podíl": 0.1405,
+    "pořadí": 2
+   },
+   {
+    "prezident": "Miloš Zeman",
+    "druh": "Medaile Za zásluhy",
+    "počet": 275,
+    "podíl": 0.6548,
+    "pořadí": 3
+   },
+   {
+    "prezident": "Petr Pavel",
+    "druh": "Řád Bílého lva",
+    "počet": 20,
+    "podíl": 0.1149,
+    "pořadí": 0
+   },
+   {
+    "prezident": "Petr Pavel",
+    "druh": "Řád T. G. Masaryka",
+    "počet": 20,
+    "podíl": 0.1149,
+    "pořadí": 1
+   },
+   {
+    "prezident": "Petr Pavel",
+    "druh": "Medaile Za hrdinství",
+    "počet": 23,
+    "podíl": 0.1322,
+    "pořadí": 2
+   },
+   {
+    "prezident": "Petr Pavel",
+    "druh": "Medaile Za zásluhy",
+    "počet": 111,
+    "podíl": 0.6379,
+    "pořadí": 3
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar",
+  "height": {
+   "band": 0.7
+  }
+ },
+ "encoding": {
+  "y": {
+   "field": "prezident",
+   "type": "nominal",
+   "title": null,
+   "sort": [
+    "Václav Havel",
+    "Václav Klaus",
+    "Miloš Zeman",
+    "Petr Pavel"
+   ],
+   "axis": {
+    "ticks": false,
+    "domain": false
+   }
+  },
+  "x": {
+   "field": "podíl",
+   "type": "quantitative",
+   "stack": "normalize",
+   "title": null,
+   "axis": {
+    "format": ".0%",
+    "gridColor": "#e8e3d2"
+   }
+  },
+  "color": {
+   "field": "druh",
+   "type": "nominal",
+   "title": null,
+   "scale": {
+    "domain": [
+     "Řád Bílého lva",
+     "Řád T. G. Masaryka",
+     "Medaile Za hrdinství",
+     "Medaile Za zásluhy"
+    ],
+    "range": [
+     "#de1743",
+     "#6267a3",
+     "#ffcf02",
+     "#bcc4df"
+    ]
+   },
+   "legend": {
+    "orient": "top",
+    "direction": "horizontal",
+    "columns": 2,
+    "symbolType": "square"
+   }
+  },
+  "order": {
+   "field": "pořadí"
+  },
+  "tooltip": [
+   {
+    "field": "prezident",
+    "title": "Prezident"
+   },
+   {
+    "field": "druh",
+    "title": "Vyznamenání"
+   },
+   {
+    "field": "počet",
+    "title": "Počet"
+   },
+   {
+    "field": "podíl",
+    "title": "Podíl",
+    "format": ".0%"
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

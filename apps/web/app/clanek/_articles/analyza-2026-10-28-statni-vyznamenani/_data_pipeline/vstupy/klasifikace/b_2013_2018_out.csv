@@ -1,0 +1,234 @@
+id,pohlavi,cizinec,obor,popis,jistota
+780,M,0,kultura,klarinetista a saxofonista,vysoka
+781,Z,0,veda,"neurovědkyně, výzkum kmenových buněk",vysoka
+782,M,0,podnikani,předseda JZD Slušovice,vysoka
+783,M,0,sport,"motocyklový závodník, in memoriam",vysoka
+784,M,0,medicina,"urolog, chirurg",vysoka
+785,M,0,veda,sociolog,vysoka
+786,M,0,veda,"právník, autorské právo",stredni
+787,M,0,sport,"sportovní střelec, olympijský vítěz",vysoka
+788,M,0,podnikani,"podnikatel, majitel Vítkovic",vysoka
+789,Z,0,sport,"atletka, světová rekordmanka",vysoka
+790,M,0,obcanska_spolecnost,předseda Českého svazu bojovníků za svobodu,stredni
+791,Z,0,kultura,herečka,vysoka
+792,M,0,sport,"házenkář, in memoriam",vysoka
+793,Z,0,media,"televizní hlasatelka, 1968",vysoka
+794,M,0,kultura,předseda Jazzové sekce,vysoka
+795,M,0,kultura,kytarista,vysoka
+796,M,0,kultura,herec,vysoka
+797,Z,0,kultura,"sochařka, pomník lidických dětí, in memoriam",vysoka
+798,M,0,politika,bývalý ministr průmyslu,vysoka
+799,M,0,odboj_valka,"válečný veterán, čs. armáda v zahraničí",stredni
+800,M,0,medicina,hrudní chirurg,vysoka
+801,M,0,odboj_valka,navigátor RAF,vysoka
+802,M,0,protikomunisticky_odboj,"disident zemřelý ve vězení, in memoriam",vysoka
+803,M,0,sport,"jachtař, mořeplavec",vysoka
+804,Z,0,kultura,operní pěvkyně,vysoka
+805,M,0,veda,filozof,vysoka
+806,M,0,kultura,spisovatel a scenárista,vysoka
+807,M,1,zahranicni_statnik,prezident Slovenska,vysoka
+808,M,0,veda,"filozof, exilový myslitel",vysoka
+809,M,0,kultura,"divadelník, Semafor",vysoka
+810,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+811,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+812,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+813,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+814,M,0,armada_bezpecnost,desátník zraněný v Afghánistánu,vysoka
+815,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+816,M,0,obcanska_spolecnost,zachránce židovských dětí v Buchenwaldu,vysoka
+817,Z,0,politika,poslankyně proti okupaci 1968,vysoka
+818,M,1,podnikani,"šéf Volkswagenu, privatizace Škody",vysoka
+819,Z,0,veda,"jaderná fyzička, předsedkyně SÚJB",vysoka
+820,M,0,kultura,filmový režisér,vysoka
+821,M,0,obcanska_spolecnost,honorární konzul ČR v Atlantě,stredni
+822,Z,0,kultura,zpěvačka,vysoka
+823,M,0,cirkev,"kněz, oběť komunismu, in memoriam",vysoka
+824,M,0,cirkev,"lidický farář, in memoriam",vysoka
+825,Z,0,podnikani,"podnikatelka, zvonařka",vysoka
+826,M,0,podnikani,"manažer Škoda Auto, in memoriam",stredni
+827,Z,0,obcanska_spolecnost,předsedkyně Fondu ohrožených dětí,vysoka
+828,Z,1,protikomunisticky_odboj,"ruská disidentka, protest 1968, in memoriam",vysoka
+829,M,0,medicina,ortoped,vysoka
+830,M,0,kultura,filmový režisér,vysoka
+831,Z,0,veda,historička,vysoka
+832,M,0,obcanska_spolecnost,dárce krve,stredni
+833,M,0,politika,ústavní právník a politik,vysoka
+834,M,0,veda,"archeolog, in memoriam",vysoka
+835,M,1,zahranicni_statnik,bývalý rakouský kancléř,vysoka
+836,M,1,zahranicni_statnik,prezident Německa,vysoka
+837,M,1,obcanska_spolecnost,zachránce židovských dětí 1939,vysoka
+838,M,1,zahranicni_statnik,slovenský premiér,vysoka
+839,M,1,zahranicni_statnik,"britský premiér, in memoriam",vysoka
+840,M,1,zahranicni_statnik,"německý úředník, doprovod státní návštěvy",nizka
+841,M,1,zahranicni_statnik,"německý diplomat, doprovod státní návštěvy",nizka
+842,M,1,obcanska_spolecnost,spoluzakladatel Rakousko-české společnosti,stredni
+843,Z,0,kultura,zpěvačka,vysoka
+844,M,0,kultura,"písničkář, in memoriam",vysoka
+845,Z,1,zahranicni_statnik,"německá politička, státní ministryně",stredni
+846,Z,1,zahranicni_statnik,německá diplomatka,nizka
+847,M,0,kultura,cestovatel a spisovatel,vysoka
+848,M,0,hrdinsky_cin,"student, bránil spolužáka, in memoriam",vysoka
+849,M,0,armada_bezpecnost,policejní důstojník,stredni
+850,M,0,media,publicista a filmový teoretik,vysoka
+851,M,0,veda,"fyzik, elektronová mikroskopie",vysoka
+852,M,0,medicina,"plastický chirurg, transplantace obličeje",vysoka
+853,M,0,podnikani,spoluzakladatel Jablotronu,vysoka
+854,Z,0,medicina,"lékařka, profesorka",stredni
+855,M,0,politika,"bývalý ministr financí, in memoriam",vysoka
+856,M,0,cirkev,plzeňský biskup,vysoka
+857,M,0,kultura,zpěvák a herec Ringo Čech,vysoka
+858,Z,0,sport,koulařka,vysoka
+859,M,0,media,rozhlasový a televizní novinář,vysoka
+860,M,0,medicina,"lékař, profesor",stredni
+861,Z,0,kultura,herečka,vysoka
+862,M,0,podnikani,majitel textilní firmy Juta,vysoka
+863,M,0,politika,ředitel NP Šumava,vysoka
+864,M,0,kultura,básník,vysoka
+865,M,0,podnikani,"vodohospodář, projektant Gabčíkova",stredni
+866,M,0,media,"novinář, in memoriam",vysoka
+867,M,0,kultura,hudební skladatel a aranžér,vysoka
+868,Z,0,kultura,herečka,vysoka
+869,M,0,obcanska_spolecnost,zakladatel babyboxů,vysoka
+870,M,0,podnikani,majitel Preciosy,vysoka
+871,Z,0,medicina,"lékařka, zakladatelka hospiců",vysoka
+872,M,0,podnikani,generální ředitel Madety,vysoka
+873,M,0,podnikani,předseda Agrární komory,vysoka
+874,M,0,politika,"ministr kultury, in memoriam",vysoka
+875,M,0,sport,fotbalista,vysoka
+876,M,0,kultura,houslista,vysoka
+877,M,0,veda,"profesor dopravy, rektor ČVUT",vysoka
+878,M,0,kultura,zpěvák a herec,vysoka
+879,M,0,veda,ústavní právník,vysoka
+880,M,0,veda,"ekonom, vysokoškolský pedagog",stredni
+881,M,1,zahranicni_statnik,jordánský král,vysoka
+882,M,0,odboj_valka,"stíhací pilot RAF, in memoriam",vysoka
+883,M,0,politika,"politik, odmítl moskevský protokol, in memoriam",vysoka
+884,M,0,hrdinsky_cin,záchrana lidských životů,stredni
+885,M,0,odboj_valka,"vynálezce, zastřelen gestapem, in memoriam",stredni
+886,M,0,kultura,muzikálový zpěvák,vysoka
+887,Z,0,politika,"diplomatka, velvyslankyně",vysoka
+888,M,0,podnikani,podnikatel,nizka
+889,M,0,obcanska_spolecnost,předseda Československého ústavu zahraničního,stredni
+890,M,0,medicina,gynekolog,vysoka
+891,M,0,obcanska_spolecnost,odborový předák Škoda Auto,vysoka
+892,M,0,kultura,"architekt, in memoriam",stredni
+893,M,0,podnikani,podnikatel,nizka
+894,M,0,podnikani,"podnikatel, in memoriam",stredni
+895,Z,0,veda,"ekonomka, vysokoškolská pedagožka",vysoka
+896,M,0,kultura,filmový režisér,vysoka
+897,M,0,veda,"filozof, in memoriam",vysoka
+898,M,0,politika,"prvorepublikový starosta Plzně, in memoriam",vysoka
+899,M,0,veda,"lékař, vysokoškolský pedagog",nizka
+900,M,0,podnikani,podnikatel,nizka
+901,M,0,veda,politolog,vysoka
+902,M,0,podnikani,"ekonomická oblast, bližší neznámo",nizka
+903,Z,0,sport,"gymnastka, olympijská vítězka",vysoka
+904,M,0,podnikani,manažer sklárny Glavunion,vysoka
+905,M,0,odboj_valka,válečný veterán,nizka
+906,M,1,zahranicni_statnik,prezident Polska,vysoka
+907,M,0,cirkev,"pražský arcibiskup, kardinál",vysoka
+908,M,1,zahranicni_statnik,rakouský diplomat,nizka
+909,Z,1,zahranicni_statnik,polská velvyslankyně v ČR,vysoka
+910,M,1,zahranicni_statnik,eurokomisař pro rozšíření,vysoka
+911,M,0,odboj_valka,parašutista z Anglie,stredni
+912,M,0,odboj_valka,"velitel čs. letectva v RAF, in memoriam",vysoka
+913,M,0,odboj_valka,"generál, Pražské povstání, in memoriam",vysoka
+914,M,0,odboj_valka,"stíhací pilot RAF, in memoriam",vysoka
+915,M,1,zahranicni_statnik,"polský úředník, kancelář prezidenta",stredni
+916,M,1,zahranicni_statnik,polský státní tajemník,stredni
+917,M,0,obcanska_spolecnost,"honorární konzul ve Švýcarsku, in memoriam",stredni
+918,M,0,kultura,herec a režisér,vysoka
+919,Z,1,zahranicni_statnik,"polská úřednice, státní návštěva",nizka
+920,M,1,zahranicni_statnik,polský státní tajemník,stredni
+921,M,0,politika,"ekonom a politik, in memoriam",vysoka
+922,Z,0,odboj_valka,válečná veteránka WAAF,vysoka
+923,M,0,odboj_valka,"důstojník, Dunkerque, in memoriam",vysoka
+924,M,0,odboj_valka,"válečný veterán, čs. armáda v zahraničí",stredni
+925,M,1,odboj_valka,ruský veterán osvobození ČSR,stredni
+926,M,0,odboj_valka,válečný veterán,stredni
+927,M,0,armada_bezpecnost,"hasič zemřelý při požáru, in memoriam",vysoka
+928,M,0,odboj_valka,"partyzán, in memoriam",vysoka
+929,M,0,odboj_valka,válečný veterán RAF,stredni
+930,Z,1,odboj_valka,ruská veteránka osvobození ČSR,stredni
+931,M,0,odboj_valka,válečný veterán,nizka
+932,M,1,odboj_valka,ruský veterán osvobození ČSR,stredni
+933,M,0,armada_bezpecnost,"policista zemřelý ve službě, in memoriam",vysoka
+934,M,0,armada_bezpecnost,"důstojník, bližší neznámo",nizka
+935,M,0,medicina,"lékař, pneumolog",vysoka
+936,Z,0,obcanska_spolecnost,"krajanka, protokol Bílého domu",stredni
+937,Z,0,kultura,operní pěvkyně,vysoka
+938,Z,0,kultura,zpěvačka,vysoka
+939,M,0,veda,"vědec a vynálezce, baterie",stredni
+940,M,0,kultura,herec a dramatik,vysoka
+941,Z,0,kultura,folková zpěvačka,vysoka
+942,M,0,kultura,písničkář,vysoka
+943,M,0,kultura,"spisovatel, in memoriam",vysoka
+944,M,0,veda,"vědec, hydrodynamika",vysoka
+945,M,0,veda,"fyzik, termická analýza",vysoka
+946,M,0,kultura,herec,vysoka
+947,M,0,sport,"automobilový závodník, Dakar",vysoka
+948,M,0,podnikani,majitel Agrostroje,vysoka
+949,M,0,kultura,herec a bavič,vysoka
+950,Z,0,sport,rychlobruslařka,vysoka
+951,M,0,veda,ekonom,vysoka
+952,M,0,obcanska_spolecnost,zakladatel hospicu,stredni
+953,M,0,media,"publicista, mediální teoretik",vysoka
+954,Z,0,medicina,neuroložka,vysoka
+955,M,0,veda,odborník na rekultivace,vysoka
+956,Z,1,obcanska_spolecnost,ruská obránkyně lidských práv,stredni
+957,Z,1,jine,"ruská občanka, bližší neznámo",nizka
+958,M,0,veda,"kybernetik, umělá inteligence",vysoka
+959,M,0,kultura,spisovatel,vysoka
+960,Z,0,kultura,zpěvačka,vysoka
+961,M,0,kultura,filmový režisér,vysoka
+962,M,0,kultura,operní tenor,vysoka
+963,M,1,zahranicni_statnik,prezident Slovinska,vysoka
+964,M,1,zahranicni_statnik,bývalý německý kancléř,vysoka
+965,M,0,armada_bezpecnost,bývalý náčelník generálního štábu,vysoka
+966,M,0,armada_bezpecnost,"náčelník gen. štábu 1933–1938, in memoriam",vysoka
+967,M,1,zahranicni_statnik,starosta Vídně,vysoka
+968,M,1,obcanska_spolecnost,"americký podnikatel, podporovatel Masaryka, in memoriam",stredni
+969,M,1,kultura,"slovinský architekt Hradu, in memoriam",vysoka
+970,M,0,odboj_valka,"přeživší holokaustu, bojoval s Rudou armádou",stredni
+971,Z,0,hrdinsky_cin,"učitelka, zachránila tři děti",vysoka
+972,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+973,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+974,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+975,Z,0,politika,bývalá předsedkyně ERÚ,vysoka
+976,M,1,media,americký novinář v Praze,vysoka
+977,Z,0,sport,lyžařka a snowboardistka,vysoka
+978,Z,0,sport,tenistka,vysoka
+979,M,0,kultura,herec a divadelník,vysoka
+980,Z,0,veda,ředitelka zdravotnické školy,vysoka
+981,M,0,politika,bývalý ministr zemědělství,vysoka
+982,Z,0,politika,bývalá novinářka a poslankyně ANO,vysoka
+983,M,0,podnikani,"zbrojař, Czechoslovak Group",vysoka
+984,M,0,kultura,herec a moderátor,vysoka
+985,M,0,veda,"chemik, vysokoškolský pedagog",vysoka
+986,M,0,kultura,básník a publicista,vysoka
+987,Z,0,kultura,spisovatelka,vysoka
+988,M,0,kultura,zpěvák,vysoka
+989,M,0,veda,historik,vysoka
+990,M,0,veda,prognostik a ekonom,stredni
+991,M,0,kultura,mecenáš umění,stredni
+992,M,0,media,novinář a spisovatel,vysoka
+993,M,0,medicina,onkolog,vysoka
+994,M,0,medicina,pediatr a gynekolog,vysoka
+995,M,0,kultura,zpěvák Žlutého psa,vysoka
+996,M,0,podnikani,slovenský podnikatel,vysoka
+997,M,0,sport,fotbalový brankář,vysoka
+998,Z,0,sport,tenistka,vysoka
+999,M,0,sport,tenista,vysoka
+1000,M,0,kultura,hudební skladatel,vysoka
+1001,M,0,veda,botanik,vysoka
+1002,M,0,kultura,právník a spisovatel,nizka
+1003,M,0,veda,"politolog, pedagog",vysoka
+1004,M,0,politika,"prvorepublikový premiér, in memoriam",vysoka
+1005,M,0,odboj_valka,"gymnasta, odbojář, in memoriam",stredni
+1006,M,0,odboj_valka,"generál, Obrana národa, in memoriam",vysoka
+1007,M,0,odboj_valka,"generál, legionář, in memoriam",stredni
+1008,M,0,media,"rozhlasák, vysílání v srpnu 1968",stredni
+1009,M,0,odboj_valka,"velitel legionářů v Rusku, in memoriam",vysoka
+1010,M,1,cirkev,apoštolský nuncius,vysoka
+1011,M,0,medicina,oční lékař,vysoka
+1012,M,0,medicina,"endokrinolog, in memoriam",vysoka

@@ -1,0 +1,210 @@
+id,pohlavi,cizinec,obor,popis,jistota
+571,Z,0,sport,"krasobruslařka, mistryně světa 1949–50",vysoka
+572,Z,0,kultura,filmová herečka,vysoka
+573,M,0,kultura,"rozhlasový režisér, dramatik a scenárista",vysoka
+574,M,0,kultura,malíř a grafik,vysoka
+575,M,0,politika,"parlamentní stenograf, válečný veterán, in memoriam",stredni
+576,M,0,kultura,"filmový režisér, in memoriam",vysoka
+577,M,0,veda,filozof a sociolog vědy,vysoka
+578,M,0,veda,"filozof, historik filozofie",vysoka
+579,M,0,kultura,filmový režisér,vysoka
+580,Z,0,medicina,"lékařka, specialistka na popáleniny",vysoka
+581,M,0,sport,"desetibojař, olympijský vítěz",vysoka
+582,M,0,veda,"vinař a šlechtitel révy, profesor",stredni
+583,M,0,kultura,malíř,vysoka
+584,M,0,veda,imunolog a molekulární biolog,vysoka
+585,M,0,kultura,"dirigent, šéf České filharmonie",vysoka
+586,M,1,zahranicni_statnik,prezident Polska,vysoka
+587,M,0,odboj_valka,"stíhací pilot RAF, generál",vysoka
+588,M,0,odboj_valka,"generál čs. zahraniční armády, in memoriam",stredni
+589,M,0,protikomunisticky_odboj,"plukovník, politický vězeň (uranové doly)",stredni
+590,M,0,protikomunisticky_odboj,"kněz, politický vězeň, převor maltézských rytířů",stredni
+591,M,0,protikomunisticky_odboj,"plukovník, politický vězeň od 1953",stredni
+592,M,0,protikomunisticky_odboj,"generál, veterán 2. sv. války, politický vězeň",vysoka
+593,M,0,hrdinsky_cin,"televizní střihač, zabit při obraně ženy",vysoka
+594,?,0,jine,"manželský pár, důvod nezjištěn",nizka
+595,M,1,obcanska_spolecnost,"Ackermann-Gemeinde, česko-německé usmíření",stredni
+596,Z,0,veda,"fyzioložka, předsedkyně Akademie věd",vysoka
+597,M,0,veda,"kvantový chemik, in memoriam",vysoka
+598,M,0,politika,"diplomat, bývalý ministr zahraničí",vysoka
+599,Z,0,kultura,sklářská výtvarnice,vysoka
+600,M,0,kultura,"skladatel, divadlo Semafor, in memoriam",vysoka
+601,M,0,kultura,herec,vysoka
+602,M,0,veda,"mykolog, předseda Mykologické společnosti",stredni
+603,M,0,veda,"fyziolog, vynálezce konfokálního mikroskopu",vysoka
+604,M,0,obcanska_spolecnost,"krajan, vědec, honorární konzul v Edinburghu",stredni
+605,M,0,veda,evangelický teolog a biblista,vysoka
+606,M,0,medicina,psychiatr,vysoka
+607,M,0,kultura,sochař a výtvarník,vysoka
+608,M,0,kultura,kreslíř a karikaturista,vysoka
+609,M,0,medicina,"virolog, výzkum vakcín",vysoka
+610,M,0,obcanska_spolecnost,"šlechtic, obnova hradu Český Šternberk",stredni
+611,M,0,odboj_valka,"veterán východní fronty (Sokolovo), in memoriam",vysoka
+612,M,0,odboj_valka,"parašutista z Anglie, generál",vysoka
+613,M,0,odboj_valka,"lékař čs. armády v SSSR, generál",vysoka
+614,M,0,cirkev,"kněz, politický vězeň komunismu",stredni
+615,M,0,odboj_valka,"letec RAF, generál",vysoka
+616,M,0,kultura,"herec, in memoriam",vysoka
+617,Z,0,kultura,herečka,vysoka
+618,M,0,kultura,hudební skladatel,vysoka
+619,M,0,kultura,fotograf,vysoka
+620,Z,0,kultura,herečka,vysoka
+621,M,0,kultura,grafik a malíř,vysoka
+622,M,0,sport,"fotbalista, Zlatý míč 1962",vysoka
+623,Z,0,sport,"běžkyně na lyžích, olympijská vítězka",vysoka
+624,M,0,obcanska_spolecnost,občanský aktivista,nizka
+625,M,0,kultura,filmový kameraman,vysoka
+626,M,0,veda,matematik a logik,vysoka
+627,M,0,kultura,grafik a malíř,vysoka
+628,M,0,veda,odborník na včelařství,stredni
+629,M,0,kultura,"výtvarník, autor Krtečka",vysoka
+630,M,0,odboj_valka,"generál, veterán 2. světové války",stredni
+631,M,0,odboj_valka,"pilot RAF, politický vězeň, in memoriam",vysoka
+632,M,0,cirkev,katolický teolog v Římě,vysoka
+633,Z,0,protikomunisticky_odboj,"protinacistická odbojářka, vězněná komunisty",stredni
+634,M,0,cirkev,"opat Strahovského kláštera, bývalý politický vězeň",vysoka
+635,M,0,odboj_valka,"letec RAF, později politický vězeň",stredni
+636,Z,0,protikomunisticky_odboj,předsedkyně Konfederace politických vězňů,vysoka
+637,M,0,odboj_valka,"veterán 2. světové války, in memoriam",stredni
+638,M,0,armada_bezpecnost,"policista URNA, obrana ambasády v Afghánistánu",vysoka
+639,M,0,armada_bezpecnost,"policista URNA, obrana ambasády v Afghánistánu",vysoka
+640,Z,0,protikomunisticky_odboj,"politická vězeňkyně, spoluzakladatelka K 231",vysoka
+641,Z,0,veda,"komenioložka, historička pedagogiky",vysoka
+642,M,0,kultura,hudební skladatel a klavírista,vysoka
+643,M,0,cirkev,"redemptorista, kněz vězněný komunisty",vysoka
+644,M,0,protikomunisticky_odboj,"odbojář, politický vězeň v uranových dolech",vysoka
+645,M,0,kultura,"rozhlasový režisér, in memoriam",vysoka
+646,M,0,kultura,dirigent,vysoka
+647,M,0,kultura,flétnista a skladatel,vysoka
+648,M,0,medicina,onkolog,vysoka
+649,M,0,kultura,"fotograf, veterán RAF",vysoka
+650,M,0,kultura,básník a překladatel,vysoka
+651,Z,0,cirkev,"řeholní sestra boromejka, péče o nemocné",vysoka
+652,M,0,obcanska_spolecnost,"krajan, honorární generální konzul v Austrálii",vysoka
+653,M,0,veda,matematik,vysoka
+654,M,0,medicina,fyzioterapeut,vysoka
+655,M,0,medicina,"krajanský lékař v USA, výměnný program",vysoka
+656,M,0,kultura,houslista,vysoka
+657,M,0,odboj_valka,"velitel výcviku parašutistů, in memoriam",vysoka
+658,M,0,odboj_valka,"veterán zahraniční armády (Tobruk, Dunkerque)",vysoka
+659,M,0,protikomunisticky_odboj,"politický vězeň, 13 let v uranových dolech",vysoka
+660,M,0,protikomunisticky_odboj,"exilový zpravodajec, politický vězeň",vysoka
+661,M,0,obcanska_spolecnost,"publicista, rehabilitace ruských emigrantů",stredni
+662,M,0,armada_bezpecnost,"voják, záchrana raněných v Afghánistánu",vysoka
+663,M,0,armada_bezpecnost,"velitel jednotky v Afghánistánu, raněn",vysoka
+664,M,0,armada_bezpecnost,"voják, záchrana posádky v Afghánistánu",vysoka
+665,Z,0,kultura,architektka,vysoka
+666,M,0,sport,"fotbalista, mistr Evropy 1976",vysoka
+667,M,0,kultura,režisér animovaných filmů,vysoka
+668,Z,0,kultura,"operní pěvkyně, sopranistka",vysoka
+669,M,0,medicina,"imunolog, expert WHO",vysoka
+670,M,0,podnikani,majitel firmy Petrof (klavíry),vysoka
+671,M,0,kultura,malíř a ilustrátor,vysoka
+672,Z,0,medicina,"zdravotní sestra, hlavní sestra ministerstva",vysoka
+673,M,0,veda,"historik, prorektor Univerzity Karlovy",vysoka
+674,M,0,podnikani,stavební podnikatel z Třeště,vysoka
+675,M,0,kultura,"spisovatel Adolf Branald, in memoriam",vysoka
+676,M,0,sport,žokej,vysoka
+677,M,0,veda,historik komunistického období,vysoka
+678,M,0,cirkev,"jezuita, teolog a filozof",vysoka
+679,Z,0,obcanska_spolecnost,"přeživší holokaust, vzdělávání mládeže",vysoka
+680,M,0,veda,"vědec, nanovlákna (TU Liberec)",vysoka
+681,M,0,kultura,malíř,vysoka
+682,M,0,veda,"molekulární genetik, předseda Akademie věd",vysoka
+683,M,0,odboj_valka,"veterán západní fronty, politický vězeň",vysoka
+684,M,0,odboj_valka,"sokolský odbojář, pomoc výsadku Anthropoid",vysoka
+685,M,0,protikomunisticky_odboj,"vůdce odbojové skupiny, politický vězeň",vysoka
+686,M,0,protikomunisticky_odboj,"odbojář, politický vězeň",vysoka
+687,M,0,cirkev,arcibiskup olomoucký,vysoka
+688,M,0,protikomunisticky_odboj,"veterán od Dukly, politický vězeň",vysoka
+689,M,0,protikomunisticky_odboj,"studentský vůdce 1948, politický vězeň",vysoka
+690,M,0,hrdinsky_cin,"in memoriam, čin nezjištěn",nizka
+691,Z,0,kultura,zpěvačka,vysoka
+692,Z,0,kultura,"malířka, přeživší holokaust",vysoka
+693,M,0,kultura,kreslíř a karikaturista,vysoka
+694,M,0,veda,"geolog a filozof, exil",stredni
+695,M,0,sport,volejbalista,stredni
+696,M,0,sport,"žokej, vítěz Velké pardubické",vysoka
+697,M,0,kultura,zpěvák,vysoka
+698,Z,0,veda,"literární vědkyně, slavistka",vysoka
+699,M,0,medicina,kardiolog,vysoka
+700,M,0,jine,osoba nezjištěna,nizka
+701,M,0,veda,matematik,vysoka
+702,M,0,medicina,"lékař, profesor medicíny",stredni
+703,M,0,medicina,"lékař, docent",nizka
+704,M,0,veda,"astronom, výzkum meteorů",vysoka
+705,M,0,jine,osoba nezjištěna,nizka
+706,M,1,zahranicni_statnik,prezident Rakouska,vysoka
+707,M,0,odboj_valka,letec RAF,vysoka
+708,M,0,odboj_valka,"letec RAF, politický vězeň, in memoriam",vysoka
+709,Z,0,odboj_valka,organizátorka protinacistického odboje,stredni
+710,M,0,protikomunisticky_odboj,"politický vězeň, spisovatel",vysoka
+711,M,0,cirkev,katolický kněz,nizka
+712,Z,0,obcanska_spolecnost,pátrala po dětech unesených nacisty,vysoka
+713,M,0,protikomunisticky_odboj,"politický vězeň (Jáchymov, Leopoldov)",stredni
+714,Z,0,veda,"fyzikální chemička, katalýza",vysoka
+715,Z,0,kultura,"filmová kritička, MFF Karlovy Vary",vysoka
+716,M,0,veda,lingvista,vysoka
+717,M,0,cirkev,"kněz, katolické školství, Radio Proglas",vysoka
+718,Z,0,kultura,herečka,vysoka
+719,M,0,sport,hokejista,vysoka
+720,M,0,veda,matematik,vysoka
+721,M,0,podnikani,generální ředitel Léčiva/Zentiva,vysoka
+722,M,0,veda,virolog a imunolog v USA,vysoka
+723,M,0,kultura,básník,vysoka
+724,M,0,kultura,"výtvarník, rektor AVU",vysoka
+725,M,0,medicina,dětský kardiolog,vysoka
+726,M,0,veda,"pedolog, fyzika půdy",vysoka
+727,M,0,armada_bezpecnost,"hasič, velitel zásahu při povodních",vysoka
+728,M,0,kultura,dirigent,vysoka
+729,M,0,odboj_valka,stíhací pilot RAF,vysoka
+730,M,0,odboj_valka,veterán východní fronty,vysoka
+731,M,1,zahranicni_statnik,"prezident Polska, in memoriam",vysoka
+732,Z,0,odboj_valka,odstřelovačka východní fronty,vysoka
+733,M,0,protikomunisticky_odboj,"politický vězeň, atletický trenér",vysoka
+734,M,0,protikomunisticky_odboj,"skautský odbojář, politický vězeň",vysoka
+735,M,0,protikomunisticky_odboj,"šíření církevní literatury, politický vězeň",vysoka
+736,Z,0,protikomunisticky_odboj,"převaděčka, politická vězeňkyně",vysoka
+737,M,0,hrdinsky_cin,"šestnáctiletý zachránce tonoucího, in memoriam",vysoka
+738,M,0,kultura,jazzový klavírista a skladatel,vysoka
+739,M,0,obcanska_spolecnost,exilový aktivista a manažer,stredni
+740,M,0,medicina,kardiochirurg a transplantační chirurg,vysoka
+741,M,0,veda,"klimatolog v USA, českého původu",vysoka
+742,M,0,sport,skokan na lyžích,vysoka
+743,M,0,kultura,zakladatel Černého divadla,vysoka
+744,M,0,kultura,"překladatel Shakespeara, anglista",vysoka
+745,M,0,cirkev,"kněz, bohemista, bývalý ministr školství",stredni
+746,M,0,kultura,kreslíř a karikaturista,vysoka
+747,M,0,podnikani,zakladatel firmy Linet,vysoka
+748,M,0,odboj_valka,veterán východní fronty,vysoka
+749,M,0,odboj_valka,"tankista východní fronty, generál",vysoka
+750,M,0,odboj_valka,veterán východní fronty,vysoka
+751,Z,0,protikomunisticky_odboj,"řeholní sestra, politická vězeňkyně",stredni
+752,Z,0,obcanska_spolecnost,"přeživší holokaust, Terezínská iniciativa",vysoka
+753,M,0,protikomunisticky_odboj,politický vězeň,vysoka
+754,M,0,protikomunisticky_odboj,politický vězeň,vysoka
+755,M,0,protikomunisticky_odboj,politický vězeň,vysoka
+756,Z,0,protikomunisticky_odboj,politická vězeňkyně,vysoka
+757,M,0,protikomunisticky_odboj,politický vězeň,vysoka
+758,M,0,hrdinsky_cin,"lékař záchranář, záchrana života",vysoka
+759,Z,0,sport,"oštěpařka, olympijská vítězka",vysoka
+760,Z,0,veda,pivovarská chemička,vysoka
+761,M,0,sport,fotbalový brankář,vysoka
+762,M,0,veda,"chemik, předseda Akademie věd",vysoka
+763,M,0,medicina,psychiatr,vysoka
+764,M,0,medicina,"lékař, profesor medicíny",stredni
+765,M,0,veda,analytický chemik,vysoka
+766,M,0,kultura,hudební skladatel,vysoka
+767,M,0,veda,"strojní inženýr, energetika",stredni
+768,M,0,kultura,spisovatel,vysoka
+769,M,0,veda,historik umění,vysoka
+770,M,0,medicina,"hematolog, transplantace kostní dřeně, in memoriam",vysoka
+771,M,0,veda,"elektrotechnik, rektor ČVUT",vysoka
+772,M,0,odboj_valka,"veterán 2. světové války, generál",stredni
+773,M,0,odboj_valka,veterán východní fronty,stredni
+774,Z,0,protikomunisticky_odboj,"pravděpodobně oběť komunismu, řád za demokracii",nizka
+775,M,0,protikomunisticky_odboj,"pravděpodobně politický vězeň, řád za demokracii",nizka
+776,M,0,protikomunisticky_odboj,"pravděpodobně oběť komunismu, řád za demokracii",nizka
+777,M,0,cirkev,exilový kněz,stredni
+778,M,0,protikomunisticky_odboj,"pravděpodobně politický vězeň, řád za demokracii",nizka
+779,M,0,protikomunisticky_odboj,"pravděpodobně politický vězeň, řád za demokracii",nizka
