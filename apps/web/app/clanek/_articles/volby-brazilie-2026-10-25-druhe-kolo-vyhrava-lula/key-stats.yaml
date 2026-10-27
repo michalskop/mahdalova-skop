@@ -1,0 +1,14 @@
+label: Predikce DataTimes.cz
+numbers:
+  - value: "51,8 %"
+    title: Lula da Silva
+    description: Odhad konečného podílu na platných hlasech ve 2. kole, interval 51,6–51,9 %. Po prvním kole přitom skončil druhý.
+    color: "#f76800"
+  - value: "48,2 %"
+    title: Flávio Bolsonaro
+    description: Odhad pro vítěze prvního kola, interval 48,1–48,4 %. Průzkumy před druhým kolem ho viděly mírně v čele.
+    color: "#0b6b4e"
+  - value: "4,4 mil."
+    title: Náskok Luly
+    description: Odhadovaný rozdíl hlasů po sečtení všech okrsků. Před čtyřmi lety porazil Lula Jaira Bolsonara o 2,1 milionu hlasů.
+    color: brandNavy

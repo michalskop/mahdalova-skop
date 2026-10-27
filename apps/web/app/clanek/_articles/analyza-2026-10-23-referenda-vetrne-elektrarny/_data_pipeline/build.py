@@ -382,8 +382,15 @@ for b in body:
     r = [1, x, y, x * x, x * y, y * y]
     poloha.append({"obec": b["obec"], "lon": round(pred(clon, r), 4), "lat": round(pred(clat, r), 4),
                    "vysledek": b["výsledek"], "hlasujicich": b["hlasujících"]})
+for pl in poloha:  # hlasy a účast pro carousel a animace (social)
+    o = next(o for o in obce if o["obec"] == pl["obec"])
+    pl.update({"proti": o["proti"], "pro": o["pro"], "ucast": round(o["ucast"], 1), "okres": o["okres"]})
 (ART / "_cover_pipeline").mkdir(exist_ok=True)
 (ART / "_cover_pipeline" / "obce.json").write_text(json.dumps(poloha, ensure_ascii=False, indent=1), encoding="utf-8")
+(ART / "_cover_pipeline" / "roky.json").write_text(json.dumps(
+    {"roky": {str(y): roky.get(y, {"proti": 0, "pro": 0, "neplatné": 0}) for y in range(2006, 2027)},
+     "kacice": {"anketa": {"pro": 209, "proti": 168}, "referendum": {kl: next(o for o in obce if o["obec"] == "Kačice")[kl] for kl in ("pro", "proti")}}},
+    ensure_ascii=False, indent=1), encoding="utf-8")
 
 (HERE / "vystup.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
 print("\n".join(out))

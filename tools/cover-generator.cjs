@@ -5,7 +5,9 @@
 //   logo DataTimes.cz  donut + IBM Plex Serif Bold, vpravo dole v bezpečné zóně
 // Kotvy homepage 1500×1200: text od x 180 / y 120, logo pravý dolní roh zóny (1320, 1080),
 // oblast x ≥ 950, y ≤ 280 prázdná (štítek rubriky v malých kartách webu); ikona coveru až pod ní.
-// OG 1200×630: titulek a logo ve středním čtverci 630×630 (WhatsApp, Bluesky a Messenger ořezávají).
+// OG 1200×630: titulek a logo ve středním čtverci 630×630 (WhatsApp, Bluesky a Messenger ořezávají). Od 26. 10. 2026
+// (Kateřina) je výchozí OG „čtverec s ušima“ (html(…, { ucha: true }) níže); FORMATY.og platí jen pro vlastní široké rozvržení
+// (c.format.og nebo c.og = 'siroky'): text vlevo od x 285, logo pod ním, motiv vpravo; c.format.og.stred = true vystředí.
 // Barvy jen přesně ze závazné palety (packages/ui/DESIGN.md → Full palette).
 //
 // node tools/cover-generator.cjs <cesta ke cover.config.cjs> [formát…]
@@ -24,7 +26,7 @@ const NAVY = '#101432'; // brandNavy.9
 // i nejdelší štítek série (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026) vešel na jeden řádek ve stejné velikosti; t/sub/kick/logo = velikosti písma; stred = vše na střed (OG)
 const FORMATY = {
   homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [60, 400, 1480, 1150], ikona: [1280, 480, 150], t: 100, sub: 38, kick: 20, leg: 27, logo: 44 },
-  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 40, 915, 590], mapa: [0, 0, 1200, 630], ikona: null, t: 60, sub: 26, kick: 16, logo: 30, stred: true },
+  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 48, 880, 584], mapa: [0, 0, 1200, 630], ikona: [1150, 48, 80], t: 58, sub: 23, kick: 15, logo: 28, og: true },
   square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [20, 470, 1070, 1050], ikona: [970, 80, 125], t: 88, sub: 34, kick: 24, leg: 24, logo: 40 },
   instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [20, 560, 1070, 1260], ikona: [970, 120, 125], t: 92, sub: 36, kick: 24, leg: 24, logo: 40 },
   story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 860, 1080, 1580], ikona: [960, 280, 135], t: 104, sub: 40, kick: 24, leg: 26, logo: 44 },
@@ -49,7 +51,7 @@ function tecky(c, f) {
   const m = c.motiv;
   const { P, sc } = projekce(c, f);
   const r = Math.max(1.6, sc * 0.018);
-  const op = f.stred ? 0.35 : 1; // u OG je mapa jen pozadí za textem
+  const op = f.stred || f.og ? 0.35 : 1; // u OG je mapa jen pozadí za textem
   const vol = new Set(m.vol);
   // m.otaznicky = [[lon, lat], …] – kandidátní tečky mapy (přesně ze seznamu dots, v pořadí priority). Po načtení
   // písem vybere vykresliOtaznicky() prvních m.pocetOtazniku, jejichž otazníček nekoliduje s textem, logem ani
@@ -60,7 +62,7 @@ function tecky(c, f) {
   // bod se znakem (o.znak, např. '?') se kreslí jako malý glyf IBM Plex Serif Bold s obrysem v barvě pozadí
   // o.popisek = nápis vedle bodu (Plex Sans, obrys v barvě pozadí; vždy plně, i v OG – místo musí být čitelné)
   // (u OG pod bodem na střed, ať nenaráží do titulku uprostřed)
-  const popisek = (o, x, y) => { if (!o.popisek) return ''; const fs = (f.leg ?? 22) * 1.3, R = r * (o.k ?? 2.3); const pod = f.stred; return `<text x="${(pod ? x : x + R + fs * 0.45).toFixed(1)}" y="${(pod ? y + R + fs * 1.1 : y + fs * 0.35).toFixed(1)}"${pod ? ' text-anchor="middle"' : ''} font-family="IBM Plex Sans, Arial, sans-serif" font-weight="600" font-size="${fs}" fill="#f8f6f0" stroke="${NAVY}" stroke-width="${(fs * 0.28).toFixed(1)}" stroke-linejoin="round" paint-order="stroke">${o.popisek}</text>`; };
+  const popisek = (o, x, y) => { if (!o.popisek) return ''; const fs = (f.leg ?? 22) * 1.3, R = r * (o.k ?? 2.3); const pod = f.stred || f.og; return `<text x="${(pod ? x : x + R + fs * 0.45).toFixed(1)}" y="${(pod ? y + R + fs * 1.1 : y + fs * 0.35).toFixed(1)}"${pod ? ' text-anchor="middle"' : ''} font-family="IBM Plex Sans, Arial, sans-serif" font-weight="600" font-size="${fs}" fill="#f8f6f0" stroke="${NAVY}" stroke-width="${(fs * 0.28).toFixed(1)}" stroke-linejoin="round" paint-order="stroke">${o.popisek}</text>`; };
   const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); return bod(o, x, y) + popisek(o, x, y); }).join('');
   function bod(o, x, y) { if (o.znak) { const fs = r * (o.k ?? 2.3) * 3.2; return `<text x="${x.toFixed(1)}" y="${(y + fs * 0.36).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${fs.toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" paint-order="stroke" opacity="${op * (o.op ?? 1)}">${o.znak}</text>`; } return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * (o.k ?? 2.3)).toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op * (o.op ?? 1)}"/>`; }
   return `<svg id="mapa" style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
@@ -69,7 +71,7 @@ function tecky(c, f) {
 function obrazek(c, f, klic) {
   const m = c.motiv;
   const [x, y, h] = m.pozice[klic];
-  const op = f.stred ? m.opacityOg ?? 0.45 : 1;
+  const op = f.stred || f.og ? m.opacityOg ?? 0.45 : 1;
   return `<img src="${dataUri(m.src)}" style="position:absolute;left:${x}px;top:${y}px;height:${h}px;mix-blend-mode:screen;opacity:${op};filter:brightness(${m.jas ?? 0.75})">`;
 }
 
@@ -78,7 +80,7 @@ function obrazek(c, f, klic) {
 // m.svg[klic] = SVG jako řetězec místo souboru (animation-generator.cjs mění obsah vrstvy #motiv snímek po snímku)
 function svgVrstva(c, f, klic) {
   const m = c.motiv;
-  const op = f.stred ? m.opacityOg ?? 1 : 1;
+  const op = f.stred || f.og ? m.opacityOg ?? 1 : 1;
   const svg = m.svg?.[klic] ?? fs.readFileSync(m.soubory[klic], 'utf8');
   return `<div id="motiv" style="position:absolute;left:0;top:0;width:${f.w}px;height:${f.h}px;opacity:${op}">${svg}</div>`;
 }
@@ -96,7 +98,7 @@ function znak(c, f, klic) {
   const rucne = z?.pozice?.[klic];
   const p = rucne ?? (z?.teckaNaObvodu ? [] : null);
   if (!p) return '';
-  const op = f.stred ? z.opacityOg ?? 0.3 : z.opacity ?? 0.55;
+  const op = f.stred || f.og ? z.opacityOg ?? 0.3 : z.opacity ?? 0.55;
   const data = { text: z.text, cx: p[0], y: p[1], size: p[2], barva: z.barva, krokPomer: z.krok ?? 0.03 };
   if (z.teckaNaObvodu && !rucne) {
     const { P } = projekce(c, f);
@@ -238,9 +240,19 @@ function vykresliZnak() {
   svg.innerHTML = out;
 }
 
-function html(c, klic) {
+// CSS pozadí coveru: navy + záře z c.barvy (glowA, glowB, volitelně glowC) – sdílí cover i boky OG „čtverce s ušima“
+const pozadi = (b) => `${b.glowC ? `radial-gradient(ellipse at ${b.glowPosC ?? '50% 0%'},${b.glowC} 0%,${b.glowC}00 ${b.glowDosah ?? 55}%),` : ''}radial-gradient(ellipse at ${b.glowPosA ?? '0% 20%'},${b.glowA} 0%,${b.glowA}00 ${b.glowDosah ?? 55}%),radial-gradient(ellipse at ${b.glowPosB ?? '100% 100%'},${b.glowB} 0%,${b.glowB}00 ${b.glowDosah ?? 55}%),${NAVY}`;
+
+function html(c0, klic, { ucha = false } = {}) {
+  // c.pro = { og: { titulek, nad, pod, logo, … } } – úprava textů a polohy loga jen pro jeden formát
+  // (např. OG rozvržené do dvou sloupců: text vlevo, motiv vpravo, viz COVER-VIZUALNI-IDENTITA.md → Kompozice)
+  const c = { ...c0, ...(c0.pro?.[klic] ?? {}) };
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
   // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
+  // c.rozestup = { homepage: 2 } – násobek mezer mezi nadtitulkem, titulkem a podtitulkem (rozvolnit text do výšky)
+  // c.kickPodklad = '#101432e6' – štítek na podkladovém obdélníku (čitelnost na světlé fotce)
+  // c.mezery = { og: [štítek→nad, nad→titulek, titulek→pod] } – přesné mezery v px místo násobků (rozestup)
+  const mez = (i, vychozi) => c.mezery?.[klic]?.[i] ?? vychozi * (c.rozestup?.[klic] ?? 1);
   // c.format = { story: { t: 90 } } – úprava velikostí jednoho formátu (např. menší titulek, aby zalomení řádků
   // vyšlo ve všech formátech stejně)
   const f = { ...FORMATY[klic], ...(c.ikonaPozice?.[klic] ? { ikona: c.ikonaPozice[klic] } : {}), ...(c.mapaPozice?.[klic] ? { mapa: c.mapaPozice[klic] } : {}), ...(c.format?.[klic] ?? {}) };
@@ -248,14 +260,18 @@ function html(c, klic) {
   const [bx0, by0, bx1, by1] = f.box;
   const motiv = c.motiv.typ === 'tecky' ? tecky(c, f) : c.motiv.typ === 'svg' ? svgVrstva(c, f, klic) : obrazek(c, f, klic);
   const scrim = !f.stred && c.motiv.scrim ? `<div style="position:absolute;inset:0;background:linear-gradient(90deg,${NAVY} 0%,${NAVY}e6 ${c.motiv.scrim[0]}%,${NAVY}00 ${c.motiv.scrim[1]}%)"></div>` : '';
-  const ogScrim = f.stred ? `<div style="position:absolute;inset:0;background:radial-gradient(ellipse 34% 60% at 50% 50%,${NAVY}cc,${NAVY}00)"></div>` : '';
+  // c.ogScrim = false: široké OG bez ztmavení levé strany (záře zůstane, motiv text nepodbarvuje)
+  const ogScrim = f.stred ? `<div style="position:absolute;inset:0;background:radial-gradient(ellipse 34% 60% at 50% 50%,${NAVY}cc,${NAVY}00)"></div>`
+    : f.og && c.ogScrim !== false ? `<div style="position:absolute;inset:0;background:linear-gradient(90deg,${NAVY}cc 0%,${NAVY}99 48%,${NAVY}00 72%)"></div>` : '';
   const stitek = c.stitek ? `<span class="stitek">${c.stitek}</span>` : '';
   // Štítek coveru (redakční standard): verzálky Plex Sans, první část karmínově s podtržením končícím
   // v půlce posledního písmene, pak „•“ a zbytek bíle. c.kicker = { cervene, dal } (nebo prostý text).
   const k = typeof c.kicker === 'string' ? { dal: c.kicker } : c.kicker;
   const kicker = `<div class="kick">${k.cervene ? `<span class="cerv">${k.cervene}</span>` : ''}${k.cervene && k.dal ? `<span class="sep">${k.oddelovac ?? '•'}</span>` : ''}${k.dal ? `<span>${k.dal}</span>` : ''}${stitek}</div>`;
   const nad = c.nad ? `<div class="nad">${c.nad}</div>` : '';
-  const pod = c.pod ? `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>` : '';
+  const pod = !c.pod ? '' : c.podPruh
+    ? `<div class="sub" style="line-height:1.45"><span class="pruh" style="background:${c.podPruh};color:${c.podBarva ?? '#fff'};font-weight:600">${c.pod}</span></div>`
+    : `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>`;
   const logo = `<div class="logo">${DONUT}<span>DataTimes.cz</span></div>`;
   // SVG ikona se vkládá přímo (písmo v ní pak bere IBM Plex ze stránky), rastr jako <img>
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
@@ -283,21 +299,25 @@ function html(c, klic) {
   // c.logo = 'nahore': logo vpravo na řádku štítku (animace a karty pro sítě – dole ho překrývá ovládání
   // Instagramu a Reels); legenda pak zůstává v levém dolním rohu
   const logoNahore = c.logo === 'nahore';
-  const logoVlevo = c.logo === 'vlevo';
+  const logoVlevo = c.logo === 'vlevo' || (f.og && !f.stred); // OG: logo vždy pod textem vlevo, vpravo je motiv
   const okraj = Math.max(Math.round(w * 0.032), w - bx1);
-  const rohLogo = logoVlevo ? `left:${bx0}px` : `right:${okraj}px`;
+  // c.logoPodLegendou: logo vlevo dole a legenda nad ním o dva řádky výš (motiv vpravo dole, např. jih Brazílie)
+  const logoPod = c.logoPodLegendou && !logoVlevo;
+  const rohLogo = logoVlevo || logoPod ? `left:${bx0}px` : `right:${okraj}px`;
   const rohLeg = logoVlevo ? `right:${okraj}px;text-align:right` : `left:${bx0}px`;
+  // c.format[klic].legNahoru / podDolu: jemné posuny o řádky v jednom formátu (legenda výš, podtitulek níž)
+  const legDole = (logoPod ? h - by1 + 2 * (f.leg ?? 26) * 1.6 : h - by1) + (f.legNahoru ?? 0) * (f.leg ?? 26) * 1.6;
   // c.legendaPodTextem: legenda v toku textu pod podtitulkem (karty, kde dolní roh zabírá motiv)
-  const legTok = c.legenda && c.legendaPodTextem && !f.stred ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
-  const leg = c.legenda && !c.legendaPodTextem && !f.stred ? `<div class="leg halo" style="${rohLeg};bottom:${h - by1}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
+  const legTok = c.legenda && c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
+  const leg = c.legenda && !c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
   const text = f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
     : `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px">
          ${kicker}
-         ${nad ? `<div style="margin-top:${f.t * 0.45}px">${nad}</div>` : ''}
-         <h1 style="margin-top:${f.t * (nad ? 0.15 : 0.3)}px">${c.titulek}</h1>
-         ${pod ? `<div style="margin-top:${f.t * 0.3}px">${pod}</div>` : ''}
+         ${nad ? `<div style="margin-top:${mez(0, f.t * 0.45)}px">${nad}</div>` : ''}
+         <h1 style="margin-top:${mez(1, f.t * (nad ? 0.15 : 0.3))}px">${c.titulekPruh ? `<span class="pruh" style="background:${c.titulekPruh}">${c.titulek}</span>` : c.titulek}</h1>
+         ${pod ? `<div style="margin-top:${mez(2, f.t * 0.3) + (f.podDolu ?? 0) * f.sub * 1.35}px">${pod}</div>` : ''}
          ${legTok}
        </div>
        ${leg}
@@ -306,18 +326,26 @@ function html(c, klic) {
   return `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  html,body{margin:0;width:${w}px;height:${h}px;overflow:hidden;color:#fff}
-  body{position:relative;background:radial-gradient(ellipse at ${b.glowPosA ?? '0% 20%'},${b.glowA} 0%,${b.glowA}00 ${b.glowDosah ?? 55}%),radial-gradient(ellipse at ${b.glowPosB ?? '100% 100%'},${b.glowB} 0%,${b.glowB}00 ${b.glowDosah ?? 55}%),${NAVY}}
+  html,body{margin:0;width:${ucha ? 1200 : w}px;height:${ucha ? 630 : h}px;overflow:hidden;color:#fff}
+  body{position:relative;background:${pozadi(b)}}
+  /* OG „čtverec s ušima“: obsah čtverce bez vlastního pozadí zmenšený doprostřed, pozadí souvislé přes celou šířku */
+  .ctverec{position:absolute;left:285px;top:0;width:${w}px;height:${h}px;transform:scale(${(630 / 1080).toFixed(5)});transform-origin:0 0}
+  .ctverec svg{overflow:visible}
   .kick{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.kick}px;letter-spacing:.12em;text-transform:uppercase;color:#f8f6f0;display:flex;align-items:center;gap:${f.kick * 0.5}px;white-space:nowrap;width:max-content;max-width:none;justify-content:${f.stred ? 'center' : 'flex-start'};${f.stred ? 'margin:0 auto;' : ''}padding-bottom:.5em}
-  .kick .cerv{color:#de1743;position:relative}
-  .kick .cerv::after{content:'';position:absolute;left:0;bottom:-.42em;height:max(3px,.11em);width:calc(100% - .5em);background:#de1743}
+  ${c.kickPodklad ? `.kick{background:${c.kickPodklad};padding:.6em .8em .85em;margin-left:-.8em}` : ''}
+  .kick .cerv{color:${b.kickCervena ?? '#de1743'};position:relative}
+  .kick .cerv::after{content:'';position:absolute;left:0;bottom:-.42em;height:max(3px,.11em);width:calc(100% - .5em);background:${b.kickCervena ?? '#de1743'}}
   .kick .sep{color:#de1743}
   .kick.dva{flex-wrap:wrap;row-gap:.75em;width:auto}
   .kick.dva .sep{display:none}
   .kick.dva .zlom{flex-basis:100%;height:0}
   .stitek{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:700;letter-spacing:.08em;font-size:${f.kick}px;padding:${f.kick * 0.25}px ${f.kick * 0.6}px;border-radius:${f.kick}px;background:${b.stitek};color:#fff}
   .nad{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;font-size:${f.sub}px;line-height:1.3;color:#fff}
-  h1{margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.t}px;line-height:1.06;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+  h1{margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.t}px;line-height:1.06;text-shadow:0 2px 10px rgba(0,0,0,.35);color:${b.titulek ?? '#fff'}}
+  /* barevný pruh pod titulkem / podtitulkem (c.titulekPruh, c.podPruh), řádek po řádku jako zvýrazňovač */
+  .pruh{box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.04em .28em;text-shadow:none}
+  h1:has(.pruh){line-height:1.34} /* pruh dalšího řádku nesmí překrýt dolní tahy písmen (y, p) */
+  h1 .pruh{padding:0 .22em}
   .sub{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.sub}px;line-height:1.3;color:${b.sub}}
   .leg{position:absolute;text-shadow:0 0 8px ${NAVY},0 0 3px ${NAVY},0 1px 2px ${NAVY};font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
   /* Mapa smí běžet pod textem; drobné texty dostanou rozmazaný podklad v barvě pozadí, ať vždy vyhrají. */
@@ -327,8 +355,8 @@ function html(c, klic) {
   .logo{display:flex;align-items:center;gap:${f.logo * 0.3}px;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.logo}px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .logo svg{width:${f.logo * 1.5}px;height:${f.logo * 1.5}px}
 </style></head><body>
-${motiv}${c.znak ? znak(c, f, klic) : ''}${scrim}${ogScrim}${ikona}
-${text}
+${ucha ? '<div class="ctverec">' : ''}${motiv}${c.znak ? znak(c, f, klic) : ''}${scrim}${ogScrim}${ikona}
+${text}${ucha ? '</div>' : ''}
 </body></html>`;
 }
 
@@ -358,6 +386,23 @@ async function upravStitek(page, klic, f) {
 // Sdílené s tools/animation-generator.cjs (stejné pozadí, písma, štítek a logo i v animacích).
 module.exports = { FORMATY, html, upravStitek, vykresliZnak };
 
+// OG „čtverec s ušima“ (výchozí od 26. 10. 2026, Kateřina): střed = hotový čtvercový cover zmenšený na 630 × 630
+// (bezpečná zóna, kterou WhatsApp a Messenger ořezávají); pozadí se zářemi je jedno souvislé přes celou šířku 1200,
+// obsah čtverce leží na něm bez vlastního pozadí (html(…, { ucha: true })). Nic se nenatahuje ani nerozmazává – dřívější
+// pokusy (boky ze září vedle hotového obrázku, rozmazaná kopie, natažený krajní pruh) dělaly švy a skvrny.
+// Vlastní široké rozvržení (c.format.og nebo c.og = 'siroky') zůstává, např. fotografické covery.
+async function vykresli(browser, c, klic, { ucha = false } = {}) {
+  const f = FORMATY[klic];
+  const page = await browser.newPage({ viewport: ucha ? { width: 1200, height: 630 } : { width: f.w, height: f.h } });
+  await page.setContent(html(c, klic, { ucha }), { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(vykresliZnak);
+  const otaznicky = await page.evaluate(vykresliOtaznicky);
+  if (otaznicky?.length) console.log(`  otazníčky (${klic}):`, otaznicky.join(' | '));
+  await upravStitek(page, klic, f);
+  return page;
+}
+
 if (require.main === module) (async () => {
   const cfgPath = path.resolve(process.argv[2]);
   const c = require(cfgPath);
@@ -365,13 +410,10 @@ if (require.main === module) (async () => {
   const browser = await chromium.launch({ channel: 'msedge' });
   for (const klic of Object.keys(FORMATY).filter((k) => !jen.length || jen.includes(k))) {
     const f = FORMATY[klic];
-    const page = await browser.newPage({ viewport: { width: f.w, height: f.h } });
-    await page.setContent(html(c, klic), { waitUntil: 'networkidle' });
-    await page.evaluate(() => document.fonts.ready);
-    await page.evaluate(vykresliZnak);
-    const otaznicky = await page.evaluate(vykresliOtaznicky);
-    if (otaznicky?.length) console.log(`  otazníčky (${klic}):`, otaznicky.join(' | '));
-    await upravStitek(page, klic, f);
+    let page;
+    if (klic === 'og' && !c.format?.og && c.og !== 'siroky') {
+      page = await vykresli(browser, c, 'square', { ucha: true });
+    } else page = await vykresli(browser, c, klic);
     const out = path.join(c.vystup, f.soubor);
     await page.screenshot(f.soubor.endsWith('.jpg') ? { path: out, type: 'jpeg', quality: 88 } : { path: out });
     await page.close();

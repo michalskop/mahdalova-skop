@@ -4,8 +4,11 @@ date: "2026-09-01"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "V pátek 9. a v sobotu 10. října se volí zastupitelstva všech obcí a třetina Senátu. Průvodce: kdy a kde volit, co s sebou, proč se do obcí nedá volit na voličský průkaz a proč na komunálních volbách záleží víc, než naznačuje volební účast."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "senátní volby 2026", "jak volit", "obce", "Senát"]
 promoted: 1
