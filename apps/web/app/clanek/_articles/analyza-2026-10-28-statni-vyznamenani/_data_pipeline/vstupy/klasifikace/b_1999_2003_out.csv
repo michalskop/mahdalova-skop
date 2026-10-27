@@ -85,7 +85,7 @@ id,pohlavi,cizinec,obor,popis,jistota
 382,M,0,armada_bezpecnost,kapitán; neověřeno,nizka
 383,M,0,protikomunisticky_odboj,"neověřeno, in memoriam",nizka
 384,M,0,odboj_valka,plukovník v. v.; neověřeno,nizka
-385,?,?,jine,neověřeno,nizka
+385,Z,1,media,"novinářka, zpravodajka Le Monde v ČSSR, vyhoštěna 1950 a 1968 (iDNES 2001)",vysoka
 386,Z,0,kultura,fotografka,vysoka
 387,M,0,cirkev,"dominikán, biskup královéhradecký",vysoka
 388,M,1,jine,neověřeno,nizka
