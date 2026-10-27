@@ -236,7 +236,28 @@ say('Nezjištěná oblast:', sum(r['obor'] == 'nezjisteno' for r in R),
     dict(Counter(r['prezident'] for r in R if r['obor'] == 'nezjisteno')))
 say('\n## Nízká jistota klasifikace:',sum(r['jistota'] == 'nizka' for r in R))
 
-(BASE / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
+# --- tabulka do článku: ženy / muži podle druhu vyznamenání ---
+def cislo(v):
+    return f'{v:,}'.replace(',', ' ')
+
+def zm(rows_):
+    return sum(r['pohlavi'] == 'Z' for r in rows_), sum(r['pohlavi'] == 'M' for r in rows_)
+
+tab = ['| Prezident | Řád Bílého lva | Řád T. G. Masaryka | Medaile Za hrdinství | Medaile Za zásluhy | Celkem | Podíl žen |',
+       '|---|---:|---:|---:|---:|---:|---:|']
+for p in PREZ + ['celkem']:
+    sel = [r for r in R if p == 'celkem' or r['prezident'] == p]
+    bunky = []
+    for d in DRUHY:
+        z, m = zm([r for r in sel if r['druh'] == d])
+        bunky.append(f'{cislo(z)} / {cislo(m)}')
+    z, m = zm(sel)
+    nazev = 'Celkem 1995–2025' if p == 'celkem' else PREZ_LABEL[p]
+    radek = f"| {nazev} | " + ' | '.join(bunky) + f" | {cislo(z)} / {cislo(m)} | {round(100 * z / (z + m))} % |"
+    tab.append(radek.replace('| Celkem', '| **Celkem').replace('2025 |', '2025** |') if p == 'celkem' else radek)
+say('\n## Tabulka do článku (ženy / muži)')
+for t in tab:
+    say(t)
 
 # --- grafy ------------------------------------------------------------------------
 SRC = ('Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); '
@@ -253,24 +274,32 @@ rok_vals = [{'rok': y, 'počet': roky.get(y, 0), 'prezident': PREZ_LABEL[prezide
 pcolor = {'field': 'prezident', 'type': 'nominal', 'title': None,
           'scale': {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]},
           'legend': {'orient': 'top', 'direction': 'horizontal', 'symbolType': 'square'}}
+hranice_roky = [{'rok': '2003'}, {'rok': '2013'}, {'rok': '2023'}]
+jmena_roky = [{'rok': '1998', 'p': 'Havel'}, {'rok': '2007', 'p': 'Klaus'}, {'rok': '2017', 'p': 'Zeman'}, {'rok': '2024', 'p': 'Pavel'}]
+Xr = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS},
+      'axis': {'labelAngle': 0, 'ticks': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}}
 save('graf_roky.json', {
     'title': {'text': 'Klaus vyznamenával nejméně, Havel a Pavel nejvíc',
-              'subtitle': 'Počet státních vyznamenání v daném roce (všechny čtyři druhy, včetně in memoriam a zahraničních státníků). '
+              'subtitle': 'Počet státních vyznamenání v daném ročníku (všechny čtyři druhy, včetně in memoriam a zahraničních státníků). '
                           'Ročník 2020 Zeman ohlásil, kvůli covidu ho ale předal až v březnu 2022 spolu s ročníkem 2021.'},
-    '_source': SRC, '_toggle_legend': True,
+    '_source': SRC,
     'width': 'container', 'height': 300,
-    'data': {'values': rok_vals},
-    'mark': {'type': 'bar', 'width': {'band': 0.78}},
-    'encoding': {
-        'x': {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS,
-              'axis': {'labelAngle': 0, 'ticks': False,
-                       'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}},
-        'y': {'field': 'počet', 'type': 'quantitative', 'title': None,
-              'axis': {'gridColor': '#e8e3d2', 'tickMinStep': 20}},
-        'color': {**pcolor, 'legend': None},
-        'tooltip': [{'field': 'rok', 'title': 'Rok'}, {'field': 'prezident', 'title': 'Prezident'},
-                    {'field': 'počet', 'title': 'Vyznamenání'}],
-    },
+    'layer': [
+        {'data': {'values': rok_vals},
+         'mark': {'type': 'bar', 'width': {'band': 0.78}, 'color': '#4c4f8e'},
+         'encoding': {
+             'x': Xr,
+             'y': {'field': 'počet', 'type': 'quantitative', 'title': None, 'scale': {'domain': [0, 120]},
+                   'axis': {'gridColor': '#e8e3d2', 'tickMinStep': 20, 'domain': False, 'ticks': False}},
+             'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'prezident', 'title': 'Prezident'},
+                         {'field': 'počet', 'title': 'Vyznamenání'}]}},
+        {'data': {'values': hranice_roky},
+         'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
+         'encoding': {'x': {**Xr, 'bandPosition': 0}, 'y': {'value': -22}, 'y2': {'value': 300}}},
+        {'data': {'values': jmena_roky},
+         'mark': {'type': 'text', 'baseline': 'bottom', 'dy': -6, 'fontSize': 13, 'fontWeight': 'bold', 'color': '#101432'},
+         'encoding': {'x': {**Xr, 'bandPosition': 0.5}, 'y': {'value': 0}, 'text': {'field': 'p'}}},
+    ],
 })
 
 # druhy vyznamenání podle prezidentů (100% pruhy)
@@ -595,3 +624,6 @@ print('grafy uloženy do', DATA)
 # body pro motiv coveru (medaile z teček, ženy oranžově)
 (BASE.parent / '_cover_pipeline' / 'tecky.json').write_text(
     json.dumps([[r['rok'], r['pohlavi']] for r in R], ensure_ascii=False), encoding='utf-8')
+
+# všechna čísla citovaná v textu (zapisuje se až na konci, aby obsahoval i tabulku do článku)
+(BASE / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')

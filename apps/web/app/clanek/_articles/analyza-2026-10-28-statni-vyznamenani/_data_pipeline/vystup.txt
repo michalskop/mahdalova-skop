@@ -62,3 +62,21 @@ Válka, odboj, armáda dohromady: 297 z 1372 (22 %)
 Nezjištěná oblast: 45 {'Havel': 37, 'Klaus': 5, 'Zeman': 3}
 
 ## Nízká jistota klasifikace: 170
+
+## Tabulka do článku (ženy / muži)
+| Prezident | Řád Bílého lva | Řád T. G. Masaryka | Medaile Za hrdinství | Medaile Za zásluhy | Celkem | Podíl žen |
+|---|---:|---:|---:|---:|---:|---:|
+| Václav Havel | 3 / 57 | 10 / 99 | 5 / 89 | 44 / 207 | 62 / 452 | 12 % |
+| Václav Klaus | 1 / 27 | 13 / 44 | 0 / 12 | 31 / 133 | 45 / 216 | 17 % |
+| Miloš Zeman | 2 / 55 | 6 / 23 | 7 / 52 | 49 / 226 | 64 / 356 | 15 % |
+| Petr Pavel | 5 / 15 | 6 / 14 | 2 / 21 | 36 / 75 | 49 / 125 | 28 % |
+| **Celkem 1995–2025** | 11 / 154 | 35 / 180 | 14 / 174 | 160 / 641 | 220 / 1 149 | 16 % |
+
+## Řády podle funkčních období
+Havel 1. období: 74 řádů; válka a protinacistický odboj 24; zahraniční státníci 8; církev 8; protikomunistický odboj a disent 8; politika, stát a justice 7; kultura a umění 7; nezjištěno 4; armáda, policie, záchranáři 3; věda a vzdělávání 2; občanská společnost a krajané 2; žurnalistika 1
+Havel 2. období: 95 řádů; zahraniční státníci 17; církev 13; válka a protinacistický odboj 12; politika, stát a justice 11; věda a vzdělávání 11; kultura a umění 7; armáda, policie, záchranáři 6; nezjištěno 6; občanská společnost a krajané 5; protikomunistický odboj a disent 4; žurnalistika 3
+Klaus 1. období: 44 řádů; válka a protinacistický odboj 14; protikomunistický odboj a disent 13; zahraniční státníci 6; politika, stát a justice 4; církev 4; občanská společnost a krajané 2; kultura a umění 1
+Klaus 2. období: 41 řádů; protikomunistický odboj a disent 21; válka a protinacistický odboj 13; církev 3; zahraniční státníci 2; občanská společnost a krajané 2
+Zeman 1. období: 44 řádů; zahraniční státníci 21; válka a protinacistický odboj 7; kultura a umění 6; občanská společnost a krajané 4; politika, stát a justice 2; armáda, policie, záchranáři 2; věda a vzdělávání 1; církev 1
+Zeman 2. období: 42 řádů; válka a protinacistický odboj 20; zahraniční státníci 5; medicína 4; občanská společnost a krajané 3; kultura a umění 3; politika, stát a justice 2; podnikání 2; žurnalistika 1; církev 1; nezjištěno 1
+Pavel 1. období: 40 řádů; zahraniční státníci 7; válka a protinacistický odboj 7; politika, stát a justice 6; protikomunistický odboj a disent 6; kultura a umění 4; věda a vzdělávání 3; církev 3; občanská společnost a krajané 2; žurnalistika 1; sport 1
