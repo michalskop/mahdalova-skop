@@ -421,6 +421,9 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number, hiddenSe
 // nadpisu panelu, `rows` = řádky s hodnotami (format 'pct' = procenta).
 type ClickDetailConfig = {
   field: string;
+  // volitelně: seznamy podle klíče (aby se dlouhý text neopakoval u každé značky)
+  key?: string;
+  items?: Record<string, string>;
   title?: string[];
   rows?: { field: string; label: string; format?: 'pct' }[];
 };
@@ -431,7 +434,8 @@ function clickDetailConfig(spec: Record<string, unknown> | null): ClickDetailCon
 }
 
 function ClickDetailPanel({ cfg, datum, onClose }: { cfg: ClickDetailConfig; datum: Record<string, unknown>; onClose: () => void }) {
-  const items = String(datum[cfg.field] ?? '').split(/[\n\t]/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.localeCompare(b, 'cs'));
+  const raw = datum[cfg.field] ?? (cfg.key && cfg.items ? cfg.items[String(datum[cfg.key])] : '');
+  const items = String(raw ?? '').split(/[\n\t]/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.localeCompare(b, 'cs'));
   const title = (cfg.title ?? []).map(f => datum[f]).filter(Boolean).join(' · ');
   return (
     <div style={{
@@ -644,7 +648,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         if (cd) {
           result.view.addEventListener('click', (_event, item) => {
             const datum = (item as { datum?: Record<string, unknown> } | null | undefined)?.datum;
-            if (datum && datum[cd.field]) setDetail(datum);
+            if (datum && (datum[cd.field] || (cd.key && cd.items?.[String(datum[cd.key])]))) setDetail(datum);
           });
         }
         const pendingSeries = pendingRevealSeriesRef.current;

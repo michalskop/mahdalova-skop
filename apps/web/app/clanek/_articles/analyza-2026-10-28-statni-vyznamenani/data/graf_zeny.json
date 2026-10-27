@@ -11424,7 +11424,7 @@
      }
     },
     "size": {
-     "value": 110
+     "value": 70
     },
     "tooltip": [
      {
@@ -11463,12 +11463,12 @@
    },
    "mark": {
     "type": "rule",
-    "color": "#101432",
+    "color": "#de1743",
     "strokeDash": [
-     3,
+     5,
      3
     ],
-    "strokeWidth": 1
+    "strokeWidth": 2
    },
    "encoding": {
     "x": {
@@ -11551,6 +11551,12 @@
       "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
      },
      "bandPosition": 0
+    },
+    "y": {
+     "value": -24
+    },
+    "y2": {
+     "value": 392
     }
    }
   },
@@ -11577,7 +11583,7 @@
    },
    "mark": {
     "type": "text",
-    "dy": -202,
+    "dy": -206,
     "fontSize": 13,
     "fontWeight": "bold",
     "color": "#101432"

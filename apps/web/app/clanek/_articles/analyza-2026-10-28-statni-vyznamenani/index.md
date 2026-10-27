@@ -57,8 +57,6 @@ Zeman také vyznamenával častěji než ostatní posmrtně. In memoriam dostalo
 
 <VegaChart dataFile="data/graf_rady.json" />
 
-<VegaChart dataFile="data/graf_rady_obdobi.json" />
-
 Klaus udělil 34 ze svých 85 řádů lidem, kteří odporovali komunistickému režimu, tedy 40 %. Dalších 27 řádů dostali účastníci odboje proti nacistům a vojáci z druhé světové války. Zeman dal skoro třetinu řádů, 26 z 86, zahraničním státníkům a diplomatům. Vedle hlav států jako Joachim Gauck nebo Andrzej Duda je dostali bývalý rakouský kancléř Franz Vranitzky, slovenský premiér Robert Fico, bývalý německý kancléř Gerhard Schröder nebo srbský prezident Aleksandar Vučić. U Pavla připadá na zahraniční státníky sedm ze 40 řádů, většinou panovníkům a prezidentům při státních návštěvách.
 
 Zeman zároveň skoro přestal udělovat Řád T. G. Masaryka, který zákon určuje lidem s vynikajícími zásluhami o demokracii, humanitu a lidská práva. Tvořil 7 % jeho vyznamenání, u Havla a Klause přes pětinu, u Pavla 11 %.
