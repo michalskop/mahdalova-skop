@@ -136,8 +136,11 @@ def pct(a, b):
 
 TITULY = re.compile(r'^((prof|doc|Ing|MUDr|JUDr|PhDr|RNDr|Mgr|MgA|PaedDr|ThDr|Bc|pplk|plk|gen|genmjr|brig|v\.\s?v|i\.\s?m|arm|Mons|R\.P)\.?\s*)+')
 
+OPRAVY_JMEN = {'Danuška Němcová': 'Dana Němcová'}  # překlepy v seznamu Hradu
+
 def cisty(jmeno):
     jm = TITULY.sub('', jmeno).strip()
+    jm = OPRAVY_JMEN.get(jm, jm)
     return re.sub(r',?\s*(CSc|DrSc|Ph\.D|MBA|PhD|Th\.D)\.?\s*$', '', jm).strip(' ,')
 
 def jmena(lide):
@@ -312,51 +315,62 @@ hranice = [{'rok': '2003'}, {'rok': '2013'}, {'rok': '2023'}]
 jmena_prez = [{'rok': '1998', 'p': 'Havel'}, {'rok': '2007', 'p': 'Klaus'}, {'rok': '2017', 'p': 'Zeman'}, {'rok': '2024', 'p': 'Pavel'}]
 X = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS, 'paddingInner': 0.08},
      'axis': {'labelAngle': 0, 'ticks': False, 'domain': False, 'labelExpr': "(+datum.value) % 5 == 0 ? datum.value : ''"}}
+# pyramida: roky shora dolů (Havel → Pavel), muži doleva, ženy doprava od posunuté osy
 sloupce = []
 for x in zr_rok:
     muzi = x['celkem'] - x['ženy']
-    sloupce.append({'rok': x['rok'], 'pohlaví': 'muž', 'y0': 0, 'y1': muzi, 'počet': muzi, 'ženy': x['ženy'],
-                    'muži': muzi, 'celkem': x['celkem'], 'podíl': x['podíl']})
-    sloupce.append({'rok': x['rok'], 'pohlaví': 'žena', 'y0': -x['ženy'], 'y1': 0, 'počet': x['ženy'], 'ženy': x['ženy'],
-                    'muži': muzi, 'celkem': x['celkem'], 'podíl': x['podíl']})
-stitky_zen = [{'rok': x['rok'], 'y': -x['ženy'], 'popisek': f"{round(x['podíl'] * 100)} %"} for x in zr_rok]
+    for poh, v0, v1, n in (('muž', -muzi, 0, muzi), ('žena', 0, x['ženy'], x['ženy'])):
+        sloupce.append({'rok': x['rok'], 'pohlaví': poh, 'x0': v0, 'x1': v1, 'počet': n, 'ženy': x['ženy'],
+                        'muži': muzi, 'celkem': x['celkem'], 'podíl': x['podíl']})
 max_m = max(x['celkem'] - x['ženy'] for x in zr_rok)
 max_z = max(x['ženy'] for x in zr_rok)
-DOM = [-(max_z + 9), max_m + 4]
-Yd = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOM},
-      'axis': {'gridColor': '#e8e3d2', 'values': [-20, 0, 20, 40, 60, 80, 100], 'labelExpr': 'abs(datum.value)',
-               'domain': False, 'ticks': False}}
-H_Z = 400
+DOM = [-(max_m + 2), max_z + 6]
+Ypy = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS, 'scale': {'domain': ALL_YEARS, 'paddingInner': 0.18},
+       'axis': {'ticks': False, 'domain': False, 'labelFontSize': 10.5, 'labelPadding': 4}}
+Xpy = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOM},
+       'axis': {'gridColor': '#e8e3d2', 'values': [-80, -60, -40, -20, 0, 20], 'labelExpr': 'abs(datum.value)',
+                'domain': False, 'ticks': False, 'orient': 'top'}}
+H_Z = 31 * 17
+prez_zacatky = [{'rok': '1995', 'p': 'Havel'}, {'rok': '2003', 'p': 'Klaus'}, {'rok': '2013', 'p': 'Zeman'}, {'rok': '2023', 'p': 'Pavel'}]
 save('graf_zeny.json', {
     'title': {'text': f'Za Pavla jsou ženy {{víc než čtvrtinou|{ZENA_TEAL}}} vyznamenaných, dřív bývaly sedminou',
-              'subtitle': 'Počet vyznamenaných v daném ročníku: fialově muži nad osou, tyrkysově ženy pod osou. '
-                          'Kliknutím na sloupec zobrazíte jména.'},
+              'subtitle': 'Počet vyznamenaných v daném ročníku: fialově muži vlevo, tyrkysově ženy vpravo. '
+                          'Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
     '_click_detail': {'field': 'jména', 'key': 'rok', 'title': ['rok'],
                       'items': {y: jmena_mz([r for r in R if r['rok'] == y and r['pohlavi'] in 'ZM'], rok=False) for y in sorted(roky)},
                       'rows': [{'field': 'celkem', 'label': 'Vyznamenáno celkem'}],
-                      'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL}, {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
+                      'split': [{'field': 'ženy', 'label': 'Ženy', 'color': ZENA_TEAL},
+                                {'field': 'muži', 'label': 'Muži', 'color': MUZ_AMETYST}]},
     'width': 'container', 'height': H_Z,
     'layer': [
         {'data': {'values': sloupce},
-         'mark': {'type': 'bar', 'width': {'band': 0.8}},
+         'mark': {'type': 'bar'},
          'encoding': {
-             'x': X, 'y': {**Yd, 'field': 'y0'}, 'y2': {'field': 'y1'},
+             'y': Ypy, 'x': {**Xpy, 'field': 'x0'}, 'x2': {'field': 'x1'},
              'color': {'field': 'pohlaví', 'type': 'nominal', 'legend': None,
                        'scale': {'domain': ['žena', 'muž'], 'range': [ZENA_TEAL, MUZ_AMETYST]}},
              'tooltip': [{'field': 'rok', 'title': 'Ročník'}, {'field': 'podíl', 'title': 'Podíl žen', 'format': '.0%'},
                          {'field': 'ženy', 'title': 'Žen'}, {'field': 'muži', 'title': 'Mužů'},
                          {'field': 'celkem', 'title': 'Vyznamenaných osob'}]}},
-        # zvýrazněná nulová osa
-        {'data': {'values': [{'y': 0}]},
+        # osa uprostřed pyramidy (posunutá podle počtů)
+        {'data': {'values': [{'x': 0}]},
          'mark': {'type': 'rule', 'color': '#101432', 'strokeWidth': 1.5},
-         'encoding': {'y': {'field': 'y', 'type': 'quantitative', 'scale': {'domain': DOM}}}},
+         'encoding': {'x': {'field': 'x', 'type': 'quantitative', 'scale': {'domain': DOM}}}},
+        # předěly prezidentů
         {'data': {'values': hranice},
          'mark': {'type': 'rule', 'color': '#de1743', 'strokeDash': [5, 3], 'strokeWidth': 2},
-         'encoding': {'x': {**X, 'bandPosition': 0}, 'y': {'value': -24}, 'y2': {'value': H_Z}}},
-        {'data': {'values': jmena_prez},
-         'mark': {'type': 'text', 'dy': -(H_Z / 2 + 16), 'fontSize': 13, 'fontWeight': 'bold', 'color': '#101432'},
-         'encoding': {'x': {**X, 'bandPosition': 0.5}, 'text': {'field': 'p'}}},
+         'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 0}, 'x2': {'value': 'width'}}},
+        {'data': {'values': prez_zacatky},
+         'mark': {'type': 'text', 'align': 'right', 'baseline': 'top', 'dx': -2, 'dy': 3, 'fontSize': 13,
+                  'fontWeight': 'bold', 'color': '#101432'},
+         'encoding': {'y': {**Ypy, 'bandPosition': 0}, 'x': {'value': 'width'}, 'text': {'field': 'p'}}},
+        {'data': {'values': [{'x': -(max_m + 2), 't': '← muži'}, {'x': max_z + 6, 't': 'ženy →'}]},
+         'mark': {'type': 'text', 'baseline': 'bottom', 'dy': -22, 'fontSize': 12, 'fontWeight': 'bold'},
+         'encoding': {'x': {'field': 'x', 'type': 'quantitative', 'scale': {'domain': DOM}}, 'y': {'value': 0},
+                      'text': {'field': 't'},
+                      'align': {'condition': {'test': 'datum.x < 0', 'value': 'left'}, 'value': 'right'},
+                      'color': {'condition': {'test': 'datum.x < 0', 'value': MUZ_AMETYST}, 'value': ZENA_DARK}}},
     ],
 })
 

@@ -2,7 +2,7 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "Za Pavla jsou ženy {víc než čtvrtinou|#33b9d9} vyznamenaných, dřív bývaly sedminou",
-  "subtitle": "Počet vyznamenaných v daném ročníku: fialově muži nad osou, tyrkysově ženy pod osou. Kliknutím na sloupec zobrazíte jména."
+  "subtitle": "Počet vyznamenaných v daném ročníku: fialově muži vlevo, tyrkysově ženy vpravo. Kliknutím na řádek zobrazíte jména."
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
  "_click_detail": {
@@ -42,7 +42,7 @@
    "2022": "## Ženy (8)\nAngelika Ivana Pintířová\nEva Kubala Havrdová\nHana Zagorová †\nIvana Trumpová †\nJuliána Ludmila Zatloukalová-Coufalová †\nMichaela Vidláková\nMilena Černá †\nVěra Doušová\n## Muži (70)\nBedřich Koula †\nFrantišek Skorkovský †\nJan Košík\nJan Weinert †\nJan Černý †\nJaroslav Bolfík\nJaroslav Fila †\nJaroslav Klíma †\nJosef Adamec †\nJosef Matoušek †\nJosef Serinek †\nMarek Frauwirth †\nMarek Klimus\nMarek Vrba †\nMartin Semecký\nMiroslav Fenik †\nPetr Matouš\nTomáš Houška †\nTomáš Neškodný\nTomáš Vlasák\nVáclav Šaffránek †\nBoris Šťastný\nEmil Dračka\nFrank Joseph Malina †\nFrantišek Janula †\nFrantišek Pošta †\nGustav Oplustil †\nIvan Lendl\nIvan Sedláček\nJakub Vágner\nJan Betka\nJan Kaše\nJan Slabák\nJaroslav Malý\nJaroslav Třešňák\nJaroslav Čvančara\nJehuda Bacon\nJiří Holík\nJiří Kotyk\nJiří Mareček\nJustin Jan Berka\nKarel Čáslavský †\nMartin Hrbáč\nMichal Burian\nMiloslav Fiala\nMiloslav Kalaš\nMiloš Štědroň\nMiroslav Jansta\nMiroslav Zavoral\nMiroslav Žbirka †\nOldřich Lichtenberg\nPavel Stodůlka\nPavel Vršecký\nPavel Šlampa\nPetr Marek\nPetr Mlsna\nTomáš Jirsa\nVladimír Bílek\nVladimír Vlček\nVladislav Třeška\nVáclav Klemák\nJosef Balabán †\nJosef Hubáček †\nJosef Stehlík †\nJosef Vladimír Mašín st. †\nKarel Lukas †\nVojtěch Boris Luža †\nVolodymyr Oleksandrovyč Zelenskyj\nVáclav Morávek †\nLadislav Mňačko †",
    "2023": "## Ženy (16)\nBožena Jirků\nDina Štěrbová\nEva Graham\nEva Kantůrková\nEva Opravilová\nHana Dvořáková\nHelena Tlaskalová – Hogenová\nIda Kelarová\nKvěta Pacovská †\nMagdaléna Kožená\nOlga Sommerová\nVěra Vávrová\nHana Librová\nJarmila Stibicová\nMarta Kubišová\nZdeňka Mašínová\n## Muži (49)\nJan Dvořák †\nJiří Pavel Kafka\nJiří Štěpánek\nJosef Bernat †\nMartin Salay\nOldřich Doležal †\nPavel Farka\nPetr Jirout\nStanislav Zimprich †\nBedřich Moldan\nDavid Lukáš\nFrantišek Mertl\nGünter Geyer\nIvan Klánský\nJaroslav Jíra\nJaroslav Němeček\nJiří Bartoška\nJiří Chvála\nJiří Grygar\nJosef Fanta\nJosef Jařab\nJosef Neček\nJosef Pešek\nKvětoslav Mašita\nMarek Svoboda\nMartin Povejšil †\nMiloslav Nevrlý\nMiloň Čepelka\nMiroslav Kopřiva\nMiroslav Masák\nPetr Kostka\nPetr Sís\nRadek Jaroš\nViktor Preiss\nVladimír Beneš\nVladimír Mišík\nVladimír Staněk\nAlexander Van der Bellen\nFrantišek Pecháček †\nKarel Mareš †\nKarel Schwarzenberg\nMilan Rastislav Štefánik †\nPavel Rychetský\nPetr Pithart\nIlja Hradecký\nJan Sokol †\nJan Šolc\nMilan Uhde\nTomáš Halík",
    "2024": "## Ženy (20)\nKateřina Laluhová\nAgnieszka Holland\nDagmar Pecková\nDaniela Kolářová\nDita Horochovská\nEmilie Vallová\nHelena Třeštíková\nJana Hlaváčová †\nKarin Lednická\nKateřina Šédová\nLucie Hyblerová\nMarie Rottrová\nRadka Denemarková\nRadka Vernerová\nYvonna Gaillyová\nZdeňka Prokopová\nŠtěpánka Hilgertová\nEva Jiřičná\nZuzana Čaputová\nAnna Šabatová\n## Muži (39)\nJosef Keprt †\nKarel Kučera †\nLukáš Dudík\nLukáš Hirka\nOldřich Pechal †\nRoman Juřena\nAlexander Wiegand\nDaniel Anýž †\nIvan Trojan\nJan Gruntorád\nJan Švejnar\nJaroslav Rudiš\nJaroslav Vild\nJaroslav Vostrý\nJiří Netík\nJiří Sozanský\nLadislav Krištoufek\nLuděk Munzar †\nMark Rieder\nMartin Doktor\nMustafa Džemilev\nOndřej Vetchý\nPavel Kosatík\nPetr Dvořák\nPetr Janda\nPetr Sýkora\nRoman Červenka\nVladimír Smutný\nZdeněk Štybar\nFrantišek Moravec †\nJiří Kylián\nSergěj Jan Ingr †\nDaniel Kroupa\nJan Pavel II. †\nJens Stoltenberg\nJosef Suchár\nKarel Kovanda\nPavel Pecháček †\nWilliam Jefferson Clinton",
-   "2025": "## Ženy (13)\nAnna Malinová †\nAnna Geislerová\nDana Krejčířová\nDanuše Steinová\nJiřina Bartůňková\nVěra Fina\nZdenka Wasserbauerová\nZuzana Baudyšová\nŠárka Pospíšilová\nDana Drábová †\nMartina Navrátilová\nMáxima\nDanuška Němcová †\n## Muži (38)\nArnošt Valenta †\nDavid Hurák\nJakub Černý\nJosef Svatoň †\nKarel Klinovský\nMartin Černý\nŠimon Malý\nAlois Švehlík †\nDavid Kratochvíl\nFrantišek Kopřiva\nGerhardt Bubník\nJakub Hrůša\nJan Dvořák\nJan Kaplický\nJan Starý\nJan Vítek\nJiří Tichota\nJosef Dostál\nJosef Průša\nJosef Vágner †\nKarel Řehka\nLibor Lochman\nMartin Dorazín\nMartin Fuksa\nMiloš Zapletal †\nOndřej Felix\nOndřej Hes †\nPetr Oslzlý\nPetr Ošlejšek\nTomáš Jungwirth\nTomáš Pojar\nFilip\nHugo Vojta †\nJaromír Nechanský †\nVilém-Alexandr\nZdeněk Svěrák\nOtakar Motejl †\nŠimon Pánek"
+   "2025": "## Ženy (13)\nAnna Malinová †\nAnna Geislerová\nDana Krejčířová\nDanuše Steinová\nJiřina Bartůňková\nVěra Fina\nZdenka Wasserbauerová\nZuzana Baudyšová\nŠárka Pospíšilová\nDana Drábová †\nMartina Navrátilová\nMáxima\nDana Němcová †\n## Muži (38)\nArnošt Valenta †\nDavid Hurák\nJakub Černý\nJosef Svatoň †\nKarel Klinovský\nMartin Černý\nŠimon Malý\nAlois Švehlík †\nDavid Kratochvíl\nFrantišek Kopřiva\nGerhardt Bubník\nJakub Hrůša\nJan Dvořák\nJan Kaplický\nJan Starý\nJan Vítek\nJiří Tichota\nJosef Dostál\nJosef Průša\nJosef Vágner †\nKarel Řehka\nLibor Lochman\nMartin Dorazín\nMartin Fuksa\nMiloš Zapletal †\nOndřej Felix\nOndřej Hes †\nPetr Oslzlý\nPetr Ošlejšek\nTomáš Jungwirth\nTomáš Pojar\nFilip\nHugo Vojta †\nJaromír Nechanský †\nVilém-Alexandr\nZdeněk Svěrák\nOtakar Motejl †\nŠimon Pánek"
   },
   "rows": [
    {
@@ -64,7 +64,7 @@
   ]
  },
  "width": "container",
- "height": 400,
+ "height": 527,
  "layer": [
   {
    "data": {
@@ -72,8 +72,8 @@
      {
       "rok": "1995",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 51,
+      "x0": -51,
+      "x1": 0,
       "počet": 51,
       "ženy": 4,
       "muži": 51,
@@ -83,8 +83,8 @@
      {
       "rok": "1995",
       "pohlaví": "žena",
-      "y0": -4,
-      "y1": 0,
+      "x0": 0,
+      "x1": 4,
       "počet": 4,
       "ženy": 4,
       "muži": 51,
@@ -94,8 +94,8 @@
      {
       "rok": "1996",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 62,
+      "x0": -62,
+      "x1": 0,
       "počet": 62,
       "ženy": 4,
       "muži": 62,
@@ -105,8 +105,8 @@
      {
       "rok": "1996",
       "pohlaví": "žena",
-      "y0": -4,
-      "y1": 0,
+      "x0": 0,
+      "x1": 4,
       "počet": 4,
       "ženy": 4,
       "muži": 62,
@@ -116,8 +116,8 @@
      {
       "rok": "1997",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 61,
+      "x0": -61,
+      "x1": 0,
       "počet": 61,
       "ženy": 9,
       "muži": 61,
@@ -127,8 +127,8 @@
      {
       "rok": "1997",
       "pohlaví": "žena",
-      "y0": -9,
-      "y1": 0,
+      "x0": 0,
+      "x1": 9,
       "počet": 9,
       "ženy": 9,
       "muži": 61,
@@ -138,8 +138,8 @@
      {
       "rok": "1998",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 91,
+      "x0": -91,
+      "x1": 0,
       "počet": 91,
       "ženy": 15,
       "muži": 91,
@@ -149,8 +149,8 @@
      {
       "rok": "1998",
       "pohlaví": "žena",
-      "y0": -15,
-      "y1": 0,
+      "x0": 0,
+      "x1": 15,
       "počet": 15,
       "ženy": 15,
       "muži": 91,
@@ -160,8 +160,8 @@
      {
       "rok": "1999",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 31,
+      "x0": -31,
+      "x1": 0,
       "počet": 31,
       "ženy": 5,
       "muži": 31,
@@ -171,8 +171,8 @@
      {
       "rok": "1999",
       "pohlaví": "žena",
-      "y0": -5,
-      "y1": 0,
+      "x0": 0,
+      "x1": 5,
       "počet": 5,
       "ženy": 5,
       "muži": 31,
@@ -182,8 +182,8 @@
      {
       "rok": "2000",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 35,
+      "x0": -35,
+      "x1": 0,
       "počet": 35,
       "ženy": 7,
       "muži": 35,
@@ -193,8 +193,8 @@
      {
       "rok": "2000",
       "pohlaví": "žena",
-      "y0": -7,
-      "y1": 0,
+      "x0": 0,
+      "x1": 7,
       "počet": 7,
       "ženy": 7,
       "muži": 35,
@@ -204,8 +204,8 @@
      {
       "rok": "2001",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 39,
+      "x0": -39,
+      "x1": 0,
       "počet": 39,
       "ženy": 9,
       "muži": 39,
@@ -215,8 +215,8 @@
      {
       "rok": "2001",
       "pohlaví": "žena",
-      "y0": -9,
-      "y1": 0,
+      "x0": 0,
+      "x1": 9,
       "počet": 9,
       "ženy": 9,
       "muži": 39,
@@ -226,8 +226,8 @@
      {
       "rok": "2002",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 82,
+      "x0": -82,
+      "x1": 0,
       "počet": 82,
       "ženy": 9,
       "muži": 82,
@@ -237,8 +237,8 @@
      {
       "rok": "2002",
       "pohlaví": "žena",
-      "y0": -9,
-      "y1": 0,
+      "x0": 0,
+      "x1": 9,
       "počet": 9,
       "ženy": 9,
       "muži": 82,
@@ -248,8 +248,8 @@
      {
       "rok": "2003",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 41,
+      "x0": -41,
+      "x1": 0,
       "počet": 41,
       "ženy": 12,
       "muži": 41,
@@ -259,8 +259,8 @@
      {
       "rok": "2003",
       "pohlaví": "žena",
-      "y0": -12,
-      "y1": 0,
+      "x0": 0,
+      "x1": 12,
       "počet": 12,
       "ženy": 12,
       "muži": 41,
@@ -270,8 +270,8 @@
      {
       "rok": "2004",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 19,
+      "x0": -19,
+      "x1": 0,
       "počet": 19,
       "ženy": 3,
       "muži": 19,
@@ -281,8 +281,8 @@
      {
       "rok": "2004",
       "pohlaví": "žena",
-      "y0": -3,
-      "y1": 0,
+      "x0": 0,
+      "x1": 3,
       "počet": 3,
       "ženy": 3,
       "muži": 19,
@@ -292,8 +292,8 @@
      {
       "rok": "2005",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 20,
+      "x0": -20,
+      "x1": 0,
       "počet": 20,
       "ženy": 2,
       "muži": 20,
@@ -303,8 +303,8 @@
      {
       "rok": "2005",
       "pohlaví": "žena",
-      "y0": -2,
-      "y1": 0,
+      "x0": 0,
+      "x1": 2,
       "počet": 2,
       "ženy": 2,
       "muži": 20,
@@ -314,8 +314,8 @@
      {
       "rok": "2006",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 17,
+      "x0": -17,
+      "x1": 0,
       "počet": 17,
       "ženy": 5,
       "muži": 17,
@@ -325,8 +325,8 @@
      {
       "rok": "2006",
       "pohlaví": "žena",
-      "y0": -5,
-      "y1": 0,
+      "x0": 0,
+      "x1": 5,
       "počet": 5,
       "ženy": 5,
       "muži": 17,
@@ -336,8 +336,8 @@
      {
       "rok": "2007",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 21,
+      "x0": -21,
+      "x1": 0,
       "počet": 21,
       "ženy": 3,
       "muži": 21,
@@ -347,8 +347,8 @@
      {
       "rok": "2007",
       "pohlaví": "žena",
-      "y0": -3,
-      "y1": 0,
+      "x0": 0,
+      "x1": 3,
       "počet": 3,
       "ženy": 3,
       "muži": 21,
@@ -358,8 +358,8 @@
      {
       "rok": "2008",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 24,
+      "x0": -24,
+      "x1": 0,
       "počet": 24,
       "ženy": 4,
       "muži": 24,
@@ -369,8 +369,8 @@
      {
       "rok": "2008",
       "pohlaví": "žena",
-      "y0": -4,
-      "y1": 0,
+      "x0": 0,
+      "x1": 4,
       "počet": 4,
       "ženy": 4,
       "muži": 24,
@@ -380,8 +380,8 @@
      {
       "rok": "2009",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 19,
+      "x0": -19,
+      "x1": 0,
       "počet": 19,
       "ženy": 5,
       "muži": 19,
@@ -391,8 +391,8 @@
      {
       "rok": "2009",
       "pohlaví": "žena",
-      "y0": -5,
-      "y1": 0,
+      "x0": 0,
+      "x1": 5,
       "počet": 5,
       "ženy": 5,
       "muži": 19,
@@ -402,8 +402,8 @@
      {
       "rok": "2010",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 18,
+      "x0": -18,
+      "x1": 0,
       "počet": 18,
       "ženy": 5,
       "muži": 18,
@@ -413,8 +413,8 @@
      {
       "rok": "2010",
       "pohlaví": "žena",
-      "y0": -5,
-      "y1": 0,
+      "x0": 0,
+      "x1": 5,
       "počet": 5,
       "ženy": 5,
       "muži": 18,
@@ -424,8 +424,8 @@
      {
       "rok": "2011",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 18,
+      "x0": -18,
+      "x1": 0,
       "počet": 18,
       "ženy": 3,
       "muži": 18,
@@ -435,8 +435,8 @@
      {
       "rok": "2011",
       "pohlaví": "žena",
-      "y0": -3,
-      "y1": 0,
+      "x0": 0,
+      "x1": 3,
       "počet": 3,
       "ženy": 3,
       "muži": 18,
@@ -446,8 +446,8 @@
      {
       "rok": "2012",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 19,
+      "x0": -19,
+      "x1": 0,
       "počet": 19,
       "ženy": 3,
       "muži": 19,
@@ -457,8 +457,8 @@
      {
       "rok": "2012",
       "pohlaví": "žena",
-      "y0": -3,
-      "y1": 0,
+      "x0": 0,
+      "x1": 3,
       "počet": 3,
       "ženy": 3,
       "muži": 19,
@@ -468,8 +468,8 @@
      {
       "rok": "2013",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 24,
+      "x0": -24,
+      "x1": 0,
       "počet": 24,
       "ženy": 6,
       "muži": 24,
@@ -479,8 +479,8 @@
      {
       "rok": "2013",
       "pohlaví": "žena",
-      "y0": -6,
-      "y1": 0,
+      "x0": 0,
+      "x1": 6,
       "počet": 6,
       "ženy": 6,
       "muži": 24,
@@ -490,8 +490,8 @@
      {
       "rok": "2014",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 28,
+      "x0": -28,
+      "x1": 0,
       "počet": 28,
       "ženy": 10,
       "muži": 28,
@@ -501,8 +501,8 @@
      {
       "rok": "2014",
       "pohlaví": "žena",
-      "y0": -10,
-      "y1": 0,
+      "x0": 0,
+      "x1": 10,
       "počet": 10,
       "ženy": 10,
       "muži": 28,
@@ -512,8 +512,8 @@
      {
       "rok": "2015",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 31,
+      "x0": -31,
+      "x1": 0,
       "počet": 31,
       "ženy": 5,
       "muži": 31,
@@ -523,8 +523,8 @@
      {
       "rok": "2015",
       "pohlaví": "žena",
-      "y0": -5,
-      "y1": 0,
+      "x0": 0,
+      "x1": 5,
       "počet": 5,
       "ženy": 5,
       "muži": 31,
@@ -534,8 +534,8 @@
      {
       "rok": "2016",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 33,
+      "x0": -33,
+      "x1": 0,
       "počet": 33,
       "ženy": 5,
       "muži": 33,
@@ -545,8 +545,8 @@
      {
       "rok": "2016",
       "pohlaví": "žena",
-      "y0": -5,
-      "y1": 0,
+      "x0": 0,
+      "x1": 5,
       "počet": 5,
       "ženy": 5,
       "muži": 33,
@@ -556,8 +556,8 @@
      {
       "rok": "2017",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 38,
+      "x0": -38,
+      "x1": 0,
       "počet": 38,
       "ženy": 11,
       "muži": 38,
@@ -567,8 +567,8 @@
      {
       "rok": "2017",
       "pohlaví": "žena",
-      "y0": -11,
-      "y1": 0,
+      "x0": 0,
+      "x1": 11,
       "počet": 11,
       "ženy": 11,
       "muži": 38,
@@ -578,8 +578,8 @@
      {
       "rok": "2018",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 34,
+      "x0": -34,
+      "x1": 0,
       "počet": 34,
       "ženy": 8,
       "muži": 34,
@@ -589,8 +589,8 @@
      {
       "rok": "2018",
       "pohlaví": "žena",
-      "y0": -8,
-      "y1": 0,
+      "x0": 0,
+      "x1": 8,
       "počet": 8,
       "ženy": 8,
       "muži": 34,
@@ -600,8 +600,8 @@
      {
       "rok": "2019",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 36,
+      "x0": -36,
+      "x1": 0,
       "počet": 36,
       "ženy": 6,
       "muži": 36,
@@ -611,8 +611,8 @@
      {
       "rok": "2019",
       "pohlaví": "žena",
-      "y0": -6,
-      "y1": 0,
+      "x0": 0,
+      "x1": 6,
       "počet": 6,
       "ženy": 6,
       "muži": 36,
@@ -622,8 +622,8 @@
      {
       "rok": "2020",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 34,
+      "x0": -34,
+      "x1": 0,
       "počet": 34,
       "ženy": 3,
       "muži": 34,
@@ -633,8 +633,8 @@
      {
       "rok": "2020",
       "pohlaví": "žena",
-      "y0": -3,
-      "y1": 0,
+      "x0": 0,
+      "x1": 3,
       "počet": 3,
       "ženy": 3,
       "muži": 34,
@@ -644,8 +644,8 @@
      {
       "rok": "2021",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 27,
+      "x0": -27,
+      "x1": 0,
       "počet": 27,
       "ženy": 2,
       "muži": 27,
@@ -655,8 +655,8 @@
      {
       "rok": "2021",
       "pohlaví": "žena",
-      "y0": -2,
-      "y1": 0,
+      "x0": 0,
+      "x1": 2,
       "počet": 2,
       "ženy": 2,
       "muži": 27,
@@ -666,8 +666,8 @@
      {
       "rok": "2022",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 70,
+      "x0": -70,
+      "x1": 0,
       "počet": 70,
       "ženy": 8,
       "muži": 70,
@@ -677,8 +677,8 @@
      {
       "rok": "2022",
       "pohlaví": "žena",
-      "y0": -8,
-      "y1": 0,
+      "x0": 0,
+      "x1": 8,
       "počet": 8,
       "ženy": 8,
       "muži": 70,
@@ -688,8 +688,8 @@
      {
       "rok": "2023",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 49,
+      "x0": -49,
+      "x1": 0,
       "počet": 49,
       "ženy": 16,
       "muži": 49,
@@ -699,8 +699,8 @@
      {
       "rok": "2023",
       "pohlaví": "žena",
-      "y0": -16,
-      "y1": 0,
+      "x0": 0,
+      "x1": 16,
       "počet": 16,
       "ženy": 16,
       "muži": 49,
@@ -710,8 +710,8 @@
      {
       "rok": "2024",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 39,
+      "x0": -39,
+      "x1": 0,
       "počet": 39,
       "ženy": 20,
       "muži": 39,
@@ -721,8 +721,8 @@
      {
       "rok": "2024",
       "pohlaví": "žena",
-      "y0": -20,
-      "y1": 0,
+      "x0": 0,
+      "x1": 20,
       "počet": 20,
       "ženy": 20,
       "muži": 39,
@@ -732,8 +732,8 @@
      {
       "rok": "2025",
       "pohlaví": "muž",
-      "y0": 0,
-      "y1": 38,
+      "x0": -38,
+      "x1": 0,
       "počet": 38,
       "ženy": 13,
       "muži": 38,
@@ -743,8 +743,8 @@
      {
       "rok": "2025",
       "pohlaví": "žena",
-      "y0": -13,
-      "y1": 0,
+      "x0": 0,
+      "x1": 13,
       "počet": 13,
       "ženy": 13,
       "muži": 38,
@@ -754,13 +754,10 @@
     ]
    },
    "mark": {
-    "type": "bar",
-    "width": {
-     "band": 0.8
-    }
+    "type": "bar"
    },
    "encoding": {
-    "x": {
+    "y": {
      "field": "rok",
      "type": "ordinal",
      "title": null,
@@ -831,43 +828,43 @@
        "2024",
        "2025"
       ],
-      "paddingInner": 0.08
+      "paddingInner": 0.18
      },
      "axis": {
-      "labelAngle": 0,
       "ticks": false,
       "domain": false,
-      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+      "labelFontSize": 10.5,
+      "labelPadding": 4
      }
     },
-    "y": {
+    "x": {
      "type": "quantitative",
      "title": null,
      "scale": {
       "domain": [
-       -29,
-       95
+       -93,
+       26
       ]
      },
      "axis": {
       "gridColor": "#e8e3d2",
       "values": [
+       -80,
+       -60,
+       -40,
        -20,
        0,
-       20,
-       40,
-       60,
-       80,
-       100
+       20
       ],
       "labelExpr": "abs(datum.value)",
       "domain": false,
-      "ticks": false
+      "ticks": false,
+      "orient": "top"
      },
-     "field": "y0"
+     "field": "x0"
     },
-    "y2": {
-     "field": "y1"
+    "x2": {
+     "field": "x1"
     },
     "color": {
      "field": "pohlaví",
@@ -913,7 +910,7 @@
    "data": {
     "values": [
      {
-      "y": 0
+      "x": 0
      }
     ]
    },
@@ -923,13 +920,13 @@
     "strokeWidth": 1.5
    },
    "encoding": {
-    "y": {
-     "field": "y",
+    "x": {
+     "field": "x",
      "type": "quantitative",
      "scale": {
       "domain": [
-       -29,
-       95
+       -93,
+       26
       ]
      }
     }
@@ -959,7 +956,7 @@
     "strokeWidth": 2
    },
    "encoding": {
-    "x": {
+    "y": {
      "field": "rok",
      "type": "ordinal",
      "title": null,
@@ -1030,21 +1027,21 @@
        "2024",
        "2025"
       ],
-      "paddingInner": 0.08
+      "paddingInner": 0.18
      },
      "axis": {
-      "labelAngle": 0,
       "ticks": false,
       "domain": false,
-      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+      "labelFontSize": 10.5,
+      "labelPadding": 4
      },
      "bandPosition": 0
     },
-    "y": {
-     "value": -24
+    "x": {
+     "value": 0
     },
-    "y2": {
-     "value": 400
+    "x2": {
+     "value": "width"
     }
    }
   },
@@ -1052,32 +1049,35 @@
    "data": {
     "values": [
      {
-      "rok": "1998",
+      "rok": "1995",
       "p": "Havel"
      },
      {
-      "rok": "2007",
+      "rok": "2003",
       "p": "Klaus"
      },
      {
-      "rok": "2017",
+      "rok": "2013",
       "p": "Zeman"
      },
      {
-      "rok": "2024",
+      "rok": "2023",
       "p": "Pavel"
      }
     ]
    },
    "mark": {
     "type": "text",
-    "dy": -216.0,
+    "align": "right",
+    "baseline": "top",
+    "dx": -2,
+    "dy": 3,
     "fontSize": 13,
     "fontWeight": "bold",
     "color": "#101432"
    },
    "encoding": {
-    "x": {
+    "y": {
      "field": "rok",
      "type": "ordinal",
      "title": null,
@@ -1148,18 +1148,74 @@
        "2024",
        "2025"
       ],
-      "paddingInner": 0.08
+      "paddingInner": 0.18
      },
      "axis": {
-      "labelAngle": 0,
       "ticks": false,
       "domain": false,
-      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+      "labelFontSize": 10.5,
+      "labelPadding": 4
      },
-     "bandPosition": 0.5
+     "bandPosition": 0
+    },
+    "x": {
+     "value": "width"
     },
     "text": {
      "field": "p"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": -93,
+      "t": "← muži"
+     },
+     {
+      "x": 26,
+      "t": "ženy →"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "dy": -22,
+    "fontSize": 12,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -93,
+       26
+      ]
+     }
+    },
+    "y": {
+     "value": 0
+    },
+    "text": {
+     "field": "t"
+    },
+    "align": {
+     "condition": {
+      "test": "datum.x < 0",
+      "value": "left"
+     },
+     "value": "right"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.x < 0",
+      "value": "#522a7a"
+     },
+     "value": "#06677d"
     }
    }
   }
