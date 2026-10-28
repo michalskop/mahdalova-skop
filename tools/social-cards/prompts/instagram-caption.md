@@ -23,7 +23,7 @@
 - **Výzva k interakci je povinná** (od 28. 10. 2026, podle spolupráce
   s Moravec.cz): otázka k tipování nebo na názor čtenáře + „napište nám do
   komentářů“. Otázka musí jít z dat zodpovědět a nesmí podsouvat odpověď.
-  Podrobně  → kapitola 8.1.
+  Podrobně tools/COVER-VIZUALNI-IDENTITA.md, kapitola 8.1.
 - Hashtagy věcné a málo (téma, ne generické „#news #czech"), pokud vůbec.
 
 ## Vstupy
