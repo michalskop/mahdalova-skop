@@ -105,7 +105,7 @@ id,pohlavi,cizinec,obor,popis,jistota
 1116,M,0,odboj_valka,veterán východní fronty 2. sv. války,vysoka
 1117,M,0,podnikani,"podnikatel, PPF, in memoriam",vysoka
 1118,M,0,medicina,"epidemiolog, exministr zdravotnictví, covid",vysoka
-1119,M,0,jine,"kosmonaut, bývalý vojenský pilot",vysoka
+1119,M,0,veda,"kosmonaut, Řád Bílého lva za proslavení vlasti v zahraničí (ČT24 2021)",stredni
 1120,M,0,medicina,"epidemiolog, vymýcení pravých neštovic, in memoriam",vysoka
 1121,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
 1122,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
@@ -140,7 +140,7 @@ id,pohlavi,cizinec,obor,popis,jistota
 1151,M,0,sport,tenista,vysoka
 1152,M,0,kultura,sbormistr,stredni
 1153,Z,0,podnikani,"podnikatelka a modelka, in memoriam",vysoka
-1154,M,0,jine,rybář a televizní dobrodruh,vysoka
+1154,M,0,sport,"sportovní rybář a televizní dobrodruh (ČTK 2022)",vysoka
 1155,M,0,medicina,"ORL chirurg, profesor",vysoka
 1156,M,0,armada_bezpecnost,přednosta Vojenské kanceláře prezidenta,vysoka
 1157,M,0,kultura,"trumpetista, zakladatel Moravanky",vysoka

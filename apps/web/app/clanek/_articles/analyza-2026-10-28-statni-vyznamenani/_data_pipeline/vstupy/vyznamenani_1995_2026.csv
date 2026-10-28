@@ -839,7 +839,7 @@ id,rok,prezident,druh,trida,skupina,in_memoriam,jmeno,pohlavi,cizinec,obor,popis
 841,2014,Zeman,Řád T. G. Masaryka,II. třída,,0,Detlef Lingemann,M,1,zahranicni_statnik,"německý diplomat, doprovod státní návštěvy",nizka,"Detlef Lingemann | II. třída, 2014"
 842,2014,Zeman,Řád T. G. Masaryka,I. třída,,0,Eduard Harant,M,1,obcanska_spolecnost,spoluzakladatel Rakousko-české společnosti,stredni,"Eduard Harant | I. třída, 2014"
 843,2014,Zeman,Řád T. G. Masaryka,I. třída,,0,Hana Hegerová,Z,0,kultura,zpěvačka,vysoka,"Hana Hegerová | I. třída, 2014"
-844,2014,Zeman,Řád T. G. Masaryka,I. třída,,0,Karel Kryl,M,0,kultura,"písničkář, in memoriam",vysoka,"Karel Kryl | I. třída, 2014"
+844,2014,Zeman,Řád T. G. Masaryka,I. třída,,1,Karel Kryl,M,0,kultura,"písničkář, in memoriam",vysoka,"Karel Kryl | I. třída, 2014"
 845,2014,Zeman,Řád T. G. Masaryka,II. třída,,0,Maria Böhmer,Z,1,zahranicni_statnik,"německá politička, státní ministryně",stredni,"Maria Böhmer | II. třída, 2014"
 846,2014,Zeman,Řád T. G. Masaryka,III. třída,,0,Michaela Küchler,Z,1,zahranicni_statnik,německá diplomatka,nizka,"Michaela Küchler | III. třída, 2014"
 847,2014,Zeman,Řád T. G. Masaryka,I. třída,,0,Miroslav Zikmund,M,0,kultura,cestovatel a spisovatel,vysoka,"Miroslav Zikmund | I. třída, 2014"
@@ -1114,7 +1114,7 @@ id,rok,prezident,druh,trida,skupina,in_memoriam,jmeno,pohlavi,cizinec,obor,popis
 1116,2020,Zeman,Řád Bílého lva,I. třída,vojenská,0,Miloslav Masopust,M,0,odboj_valka,veterán východní fronty 2. sv. války,vysoka,"genmjr. Ing. Miloslav Masopust | vojenská skupina, I. třída, 2021 |"
 1117,2021,Zeman,Řád Bílého lva,I. třída,občanská,1,Petr Kellner,M,0,podnikani,"podnikatel, PPF, in memoriam",vysoka,"Petr Kellner, in memoriam | občanská skupina, I. třída, 2021"
 1118,2020,Zeman,Řád Bílého lva,I. třída,občanská,0,Roman Prymula,M,0,medicina,"epidemiolog, exministr zdravotnictví, covid",vysoka,"plk. v zál. prof. MUDr. Roman Prymula, CSc., Ph.D. | občanská skupina, I. třída, 2021"
-1119,2021,Zeman,Řád Bílého lva,I. třída,občanská,0,Vladimír Remek,M,0,nezjisteno,"kosmonaut, bývalý vojenský pilot",vysoka,"Vladimír Remek | občanská skupina, I. třída, 2021"
+1119,2021,Zeman,Řád Bílého lva,I. třída,občanská,0,Vladimír Remek,M,0,veda,"kosmonaut, Řád Bílého lva za proslavení vlasti v zahraničí (ČT24 2021)",stredni,"Vladimír Remek | občanská skupina, I. třída, 2021"
 1120,2021,Zeman,Řád T. G. Masaryka,I. třída,,1,Karel Raška,M,0,medicina,"epidemiolog, vymýcení pravých neštovic, in memoriam",vysoka,"prof. MUDr. Karel Raška, DrSc., in memoriam | I. třída, 2021"
 1121,2022,Zeman,Medaile Za hrdinství,,,1,Bedřich Koula,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka,"JUDr. i. m. Bedřich Koula, in memoriam | 2022"
 1122,2022,Zeman,Medaile Za hrdinství,,,1,František Skorkovský,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka,"JUDr. František Skorkovský, in memoriam | 2022"
@@ -1149,7 +1149,7 @@ id,rok,prezident,druh,trida,skupina,in_memoriam,jmeno,pohlavi,cizinec,obor,popis
 1151,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Ivan Lendl,M,0,sport,tenista,vysoka,"Ivan Lendl | I. stupeň, 2022"
 1152,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Ivan Sedláček,M,0,kultura,sbormistr,stredni,"Mgr. Ivan Sedláček | I. stupeň, 2022"
 1153,2022,Zeman,Medaile Za zásluhy,I. stupeň,,1,Ivana Trumpová,Z,0,podnikani,"podnikatelka a modelka, in memoriam",vysoka,"Ivana Trumpová, in memoriam | I. stupeň, 2022"
-1154,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Jakub Vágner,M,0,nezjisteno,rybář a televizní dobrodruh,vysoka,"Jakub Vágner | I. stupeň, 2022"
+1154,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Jakub Vágner,M,0,sport,sportovní rybář a televizní dobrodruh (ČTK 2022),vysoka,"Jakub Vágner | I. stupeň, 2022"
 1155,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Jan Betka,M,0,medicina,"ORL chirurg, profesor",vysoka,"prof. MUDr. Jan Betka, DrSc. | I. stupeň, 2022"
 1156,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Jan Kaše,M,0,armada_bezpecnost,přednosta Vojenské kanceláře prezidenta,vysoka,"genpor. Ing. Jan Kaše, MSc. | I. stupeň, 2022"
 1157,2022,Zeman,Medaile Za zásluhy,I. stupeň,,0,Jan Slabák,M,0,kultura,"trumpetista, zakladatel Moravanky",vysoka,"Mgr. Jan Slabák | I. stupeň, 2022"
@@ -1335,7 +1335,7 @@ id,rok,prezident,druh,trida,skupina,in_memoriam,jmeno,pohlavi,cizinec,obor,popis
 1338,2025,Pavel,Medaile Za zásluhy,,,0,Gerhardt Bubník,M,0,sport,"právník, krasobruslař a sportovní funkcionář",vysoka,"JUDr. Gerhardt Bubník, LL.M. | 2025"
 1339,2025,Pavel,Medaile Za zásluhy,,,0,Jakub Hrůša,M,0,kultura,dirigent,vysoka,MgA. Jakub Hrůša | 2025
 1340,2025,Pavel,Medaile Za zásluhy,,,0,Jan Dvořák,M,0,veda,učitel ZŠ Jeseník a skautský vůdce,vysoka,Mgr. Jan Dvořák | 2025
-1341,2025,Pavel,Medaile Za zásluhy,,,0,Jan Kaplický,M,0,kultura,"architekt a designér, in memoriam",vysoka,akad. arch. Jan Kaplický | 2025
+1341,2025,Pavel,Medaile Za zásluhy,,,1,Jan Kaplický,M,0,kultura,"architekt a designér, in memoriam",vysoka,akad. arch. Jan Kaplický | 2025
 1342,2025,Pavel,Medaile Za zásluhy,,,0,Jan Starý,M,0,medicina,dětský hematoonkolog,vysoka,"prof. MUDr. Jan Starý, DrSc. | 2025"
 1343,2025,Pavel,Medaile Za zásluhy,,,0,Jan Vítek,M,0,veda,"stavební inženýr, autor Nuselského mostu",vysoka,"Ing. Jan Vítek, DrSc | 2025"
 1344,2025,Pavel,Medaile Za zásluhy,,,0,Jiřina Bartůňková,Z,0,medicina,"imunoložka, Motol",vysoka,"prof. MUDr. Jiřina Bartůňková, DrSc. | 2025"

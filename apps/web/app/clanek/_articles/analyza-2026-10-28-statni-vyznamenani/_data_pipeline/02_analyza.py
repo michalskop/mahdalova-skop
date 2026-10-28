@@ -36,7 +36,11 @@ ZENY, MUZI = '#f76800', '#06677d'
 
 def prezident_label(rok):
     """Popisek prezidenta k ročníku; 2003 sdílí Havel (leden) a Klaus (říjen)."""
-    return 'Václav Havel (leden), Václav Klaus (říjen)' if str(rok) == '2003' else PREZ_LABEL[prezident(rok)]
+    if str(rok) == '2003':
+        return 'Václav Havel (leden), Václav Klaus (říjen)'
+    if str(rok) == '2023':
+        return 'Petr Pavel (jedno vyznamenání k 1. 1. 2023 ještě Miloš Zeman)'
+    return PREZ_LABEL[prezident(rok)]
 
 def prezident(rok):
     r = int(rok)
@@ -123,6 +127,12 @@ say(f'Rok 2003: v seznamu Havlovy kanceláře {len(havel_2003)}, přiřazeno Hav
     f'Klausovi zbývá {sum(r["rok"] == "2003" and r["prezident"] == "Klaus" for r in rows)}; '
     f'vynechány řády Václava Havla: {len(havel_rady)}')
 
+# In memoriam, které seznam Hradu u záznamu neuvádí: Karel Kryl (zemřel 1994, ŘTGM 2014),
+# Jan Kaplický (zemřel 2009, medaile Za zásluhy 2025).
+for r in rows:
+    if (r['jmeno'].endswith('Karel Kryl') and r['rok'] == '2014') or (r['jmeno'].endswith('Jan Kaplický') and r['rok'] == '2025'):
+        r['in_memoriam'] = '1'
+
 # Ročník 2020: Zeman ho ohlásil 28. 10. 2020, kvůli covidu se nepředával a Hrad ho vede pod rokem 2021
 # (předáno spolu s ročníkem 2021 dne 7. 3. 2022). Rozdělujeme podle seznamu ohlášeného 28. 10. 2020
 # (e15: https://www.e15.cz/domaci/prezident-zeman-vyznamenal-romana-prymulu-nebo-karla-gotta-1374611);
@@ -138,8 +148,12 @@ presunuto = []
 for r in rows:
     if r['rok'] == '2021' and r['jmeno'].strip(' ,') in ROCNIK_2020:
         r['rok'] = '2020'; presunuto.append(r['jmeno'].strip(' ,'))
-say(f'Ročník 2020 vrácen z roku 2021: {len(presunuto)} vyznamenání; nenalezeno:',
-    sorted(set(ROCNIK_2020) - set(presunuto)))
+# v seznamu jsou varianty jmen (Jožka/Josef Černý, Jožka/Josef Šmukař, Petr Láng/Lang) – stačí najít jednu
+VARIANTY = [{'Jožka Černý', 'Josef Černý'}, {'Jožka Šmukař', 'Josef Šmukař'}, {'Petr Láng', 'Petr Lang'}]
+nenalezeno = [j for j in ROCNIK_2020 if j not in presunuto
+              and not any(j in v and v & set(presunuto) for v in VARIANTY)]
+say(f'Ročník 2020 vrácen z roku 2021: {len(presunuto)} vyznamenání (ohlášeno 38, Pavlu Rychetskému Zeman řád neudělil); '
+    f'nenalezeno: {nenalezeno}')
 
 # Čištění až po spojení s klasifikací (id musí sedět s dávkami): koncové čárky ve jménech,
 # zdvojený záznam v seznamu Hradu (Ilja Hradecký, ŘTGM 2023 je tam dvakrát).
@@ -171,7 +185,11 @@ def pct(a, b):
 
 TITULY = re.compile(r'^((prof|doc|Ing|MUDr|JUDr|PhDr|RNDr|Mgr|MgA|PaedDr|ThDr|Bc|pplk|plk|gen|genmjr|brig|v\.\s?v|i\.\s?m|arm|Mons|R\.P)\.?\s*)+')
 
-OPRAVY_JMEN = {'Danuška Němcová': 'Dana Němcová'}  # překlepy v seznamu Hradu
+OPRAVY_JMEN = {'Danuška Němcová': 'Dana Němcová',  # překlepy a přepisy v seznamu Hradu
+               'Elena Bonnerová': 'Jelena Bonnerová', 'Franz Vranitzký': 'Franz Vranitzky',
+               'Hana Zaňáková Lucie Bílá': 'Lucie Bílá', 'Antonín Slováček Felix Slováček': 'Felix Slováček',
+               'Aleksander Kwasniewsky': 'Aleksander Kwaśniewski', 'Lech Walesa': 'Lech Wałęsa',
+               'Francois Mitterrand': 'François Mitterrand', 'Adam Kwiatkowský': 'Adam Kwiatkowski'}
 
 def cisty(jmeno):
     jm = TITULY.sub('', jmeno).strip()
@@ -579,7 +597,7 @@ obor_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in R).most_common()]
 for r in obor_rows:
     r['jména'] = jmena(r.pop('_lide'))
 save('graf_obory.json', piktogramy(
-    R, obor_order, 'Klaus vyznamenával disidenty, Zeman podnikatele',
+    R, obor_order, 'Klaus vyznamenával politické vězně, Zeman podnikatele',
     'Za co prezident vyznamenával: podíl oblasti na všech jeho vyznamenáních 1995–2025, tyrkysově ženy vlevo, fialově muži vpravo. '
     'Oblast určila redakce podle životopisu vyznamenaného. Kliknutím na řádek zobrazíte jména.', 'Vyznamenání'))
 # řády podle oborů – jména v panelu po kliknutí
