@@ -9,6 +9,7 @@ Revize 28. 10. 2026. Čísla v textu vznikají skripty v této složce z oficiá
 | `vypocet.py <sldb2021_zeny_stav_vzdelani_vek_deti.csv>` | Průměrný počet dětí a podíl bezdětných žen podle věku a vzdělání (ČR, všechny rodinné stavy); velikost ročníků žen; změna počtu žen 26–33 a 23–37 let 2025 → 2030. | `data/vzdelani_deti_sldb2021.csv`, `data/kohorty_zen.csv`, `data/vypis.txt` |
 
 | `vysokoskolacky_1991_2021.py <tab12.xls> <sldb2021_zeny_stav_vzdelani_vek_deti.csv>` | Podíl žen s vysokoškolským vzděláním ve sčítání 1991 a 2021 (25–34, 25–59, 15+; jmenovatel včetně nezjištěného vzdělání). 25–34 let: 11,2 % → 39,0 % (3,5×); 25–59 let: 8,0 % → 26,3 % (3,3×); 15+: 5,1 % → 18,2 %. | `data/vysokoskolacky_1991_2021.csv`, `data/vysokoskolacky_vypis.txt` |
+| `otcove_vek_vzdelani.py <300002161116.xlsx> <300002161117.xlsx>` | Muži: průměrný věk otce při narození dítěte (32,1 v 2007, 32,9 v 2010, 33,6 v 2015; podíl otců 35+ 27,1 → 34,0 → 41,8 %) a vzdělání otců novorozených dětí 1993–2015 (nespolehlivé: vzdělání otce chybí u 13–37 % dětí). Počet dětí mužů podle vzdělání z oficiálních dat zjistit nelze (sčítání 2021 se ptalo jen žen). | `data/otcove_vek.csv`, `data/otcove_vzdelani.csv`, `data/otcove_vypis.txt` |
 
 Zdrojové soubory (včetně sčítání 1991, tab. 12, `ac75ab82…af82f`) jsou v archivu `Zdrojová data\CSU\` (viz `ZDROJE.md` tam); znovu se nestahují.
 
