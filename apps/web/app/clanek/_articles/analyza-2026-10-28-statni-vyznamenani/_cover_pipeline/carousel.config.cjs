@@ -1,9 +1,9 @@
-// Instagram carousel k článku o ženách (kapitola 8 v tools/COVER-VIZUALNI-IDENTITA.md): 8 slidů 1080×1350.
-// Slide 1 = tip (medaile z coveru), pak po jednom zjištění v pořadí článku, metoda a výzva do komentářů.
+// Instagram carousel k článku o ženách (kapitola 8 v tools/COVER-VIZUALNI-IDENTITA.md): 7 slidů 1080×1350.
+// Slide 1 = tip (medaile z coveru), pak po jednom zjištění v pořadí článku a výzva do komentářů (Kateřina 28. 10.: bez metody).
 // Počty žen a vyznamenání počítá z tecky.json (02_analyza.py) a kontroluje proti číslům v textu článku;
 // řády a oblasti jsou z _data_pipeline/vystup.txt, stejně jako v článku.
 // PW_PATH=<repo>/node_modules/playwright node tools/carousel-generator.cjs <tento soubor> [čísla slidů]
-// → social/carousel/01.png … 08.png, text pod carousel v carousel-caption.txt
+// → social/carousel/01.png … 07.png, text pod carousel v carousel-caption.txt
 const path = require('path');
 const { medaile, ZENY: TECKA_ZENY, MUZI: TECKA_MUZI } = require('./motiv.cjs'); // barvy teček medaile (cover), ne grafů
 const cover = require('./cover.config.cjs');
@@ -127,19 +127,11 @@ module.exports = {
       zdroj: 'Oblast určila redakce podle životopisu vyznamenaného. ' + ZDROJ.replace('Zdroj: s', 'S'),
     },
     {
-      titulek: 'Jak jsme to počítali',
-      obsahOd: 330,
-      html: `<p class="velke">Prošli jsme všechny čtyři oficiální seznamy vyznamenaných na hrad.cz: 1&#160;370 vyznamenání z let 1995–2025. U každého jsme dohledali, kdo ho dostal a za co.</p>
-        <p class="velke">Počítáme vyznamenání, ne lidi. Jeden člověk mohl dostat víc vyznamenání.</p>
-        <p class="velke">Počítáme všechna vyznamenání roku, i ta udělená při státních návštěvách, ne jen 28. října.</p>
-        <p class="velke">Prezident vybírá z návrhů vlády, poslanců, senátorů a veřejnosti. Kolik žen v návrzích bylo, nikdo souhrnně nezveřejňuje.</p>`,
-    },
-    {
       titulek: 'Koho byste na státní vyznamenání navrhli vy?',
       obsahOd: 420,
-      html: `<p class="velke">Za Havla, Klause a Zemana dostaly ženy zhruba sedminu vyznamenání, za Petra Pavla 28&#160;%. Napište nám do komentářů, kterou ženu by podle vás měl prezident ocenit.</p>
-        <p class="velke">Dnes večer Petr Pavel předá vyznamenání počtvrté. Sledujte naše sítě.</p>
-        <p class="velke" style="color:${POPIS}">Celý článek najdete na DataTimes.cz, odkaz je v biu.</p>`,
+      html: `<p class="velke">Napište nám do komentářů, kterou ženu by podle vás měl prezident ocenit.</p>
+        <p class="velke">Letos Petr Pavel předal vyznamenání počtvrté.</p>
+        <p class="velke" style="color:${POPIS}">Celý článek najdete na DataTimes.cz</p>`,
     },
   ],
 };
