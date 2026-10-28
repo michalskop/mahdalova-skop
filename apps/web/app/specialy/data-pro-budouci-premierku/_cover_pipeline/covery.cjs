@@ -150,14 +150,28 @@ const MOTIVY = {
     s += sip(kx_, ky_, true, CORAL, 'Karviná', '−20 %', true) + sip(rx, ry, false, ZLU, 'Říčany', '+47 %', true);
     return svgWrap(w, h, s);
   },
-  // 10: bezdětné vysokoškolačky podle věku (SLDB 2021): 30–34 let 42,2 %, 45–49 let 11,1 %; 1 tečka = 1 %
+  // 10: děti na ženu podle vzdělání (SLDB 2021, tabulka v článku): 45–49 let maturita 1,77 / vysoká škola 1,75; 30–34 let 1,10 / 0,89; 1 kolečko = 1 dítě
   dvewaffle(w, h, spec) {
-    const f = fsOf(w), k = Math.min((w * 0.44) / 10, (h - f * 4.2) / 10), gap = w * 0.08, gw = k * 10, x0 = (w - 2 * gw - gap) / 2;
-    let s = '';
-    spec.mrizky.forEach(({ nazev, n }, j) => {
-      const gx = x0 + j * (gw + gap);
-      for (let i = 0; i < 100; i++) { const cx = gx + (i % 10 + 0.5) * k, cy = k * 10 - (Math.floor(i / 10) + 0.5) * k; s += i < n ? C(cx, cy, k * 0.4, CRIMSON) : C(cx, cy, k * 0.3, SED, ' opacity=".55"'); }
-      s += T(gx + gw / 2, k * 10 + f * 1.5, nazev, 'middle', BILA, f, 600) + T(gx + gw / 2, k * 10 + f * 3.1, n + ' %', 'middle', CORAL, f * 1.6, 700);
+    const f = fsOf(w), nPan = spec.panely.length, vedle = w / h > 3, cw = vedle ? (w - f * 2) / nPan : w, Lm = f * 7.6;
+    const d = Math.min((cw - Lm - f * 4.2) / 2, vedle ? (h - f * 2.6) / 2 : (h - nPan * f * 2.6) / (nPan * 2 + 0.4));
+    const rh = Math.max(d, f * 2.0);
+    let s = '', id = 0;
+    spec.panely.forEach((p, j) => {
+      const x0 = vedle ? j * (cw + f * 2) : 0;
+      let y = vedle ? 0 : j * (2 * rh + f * 2.6);
+      s += T(x0, y + f * 1.2, p.nazev, 'start', ZLU, f * 1.1, 700);
+      y += f * 2.1;
+      p.rady.forEach((r) => {
+        const cy = y + rh * 0.5;
+        s += T(x0, cy + f * 0.4, r.n, 'start', BILA, f * 1.05, 600);
+        for (let k = 0; k < 2; k++) {
+          const cx = x0 + Lm + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
+          s += C(cx, cy, d * 0.4, 'none', ` stroke="${SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity=".6"`);
+          if (podil > 0) { const cid = 'kl' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.4}" y="${cy - d * 0.4}" width="${d * 0.8 * podil}" height="${d * 0.8}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.4, r.barva)}</g>`; }
+        }
+        s += T(x0 + Lm + 2 * d + f * 0.9, cy + f * 0.5, r.v.toFixed(2).replace('.', ','), 'start', BILA, f * 1.5, 700);
+        y += rh;
+      });
     });
     return svgWrap(w, h, s);
   },
@@ -196,8 +210,10 @@ const DEF = {
   '05-cas-rodicovstvi': { motiv: 'vek', titulek: 'Prvorodičky jsou o 6,7 roku starší než v roce 1990', pod: 'Průměrný věk matky při prvním dítěti vzrostl z 22,5 na 29,2 roku' },
   '16-starnuti-populace': { motiv: 'rady', logoVpravo: true, titulek: 'Na jednoho seniora dnes tři lidé v produktivním věku, v roce 2050 dva', pod: 'Poměr lidí ve věku 15–64 let k seniorům 65+: 3,1 v roce 2023, 2,5 v roce 2040, 2,0 v roce 2050' },
   '11-vylidnovani-obci': { motiv: 'mapa', bok: true, titulek: 'Od roku 2000 přibylo lidí ve 72 % obcí', pod: 'Karviná ztratila pětinu obyvatel,<br>Říčany o 47 % vyrostly' },
-  '10-data-porody': { motiv: 'dvewaffle', titulek: 'Ve 30–34 letech je bezdětných 42 % vysokoškolaček', pod: 'Ve 45–49 letech jen 11 %: vzdělání mateřství hlavně odkládá',
-    spec: { mrizky: [{ nazev: '30–34 let', n: 42 }, { nazev: '45–49 let', n: 11 }] } },
+  '10-data-porody': { motiv: 'dvewaffle', titulek: 'Vzdělání mění, kdy se rodí první dítě, ne kolik dětí ženy mají', pod: 'Ve 45–49 letech mají ženy s maturitou 1,77 dítěte a s vysokou školou 1,75',
+    spec: { panely: [
+      { nazev: '45–49 let: skoro stejně', rady: [{ n: 'maturita', v: 1.77, barva: '#899aeb' }, { n: 'vysoká škola', v: 1.75, barva: CRIMSON }] },
+      { nazev: '30–34 let: zatím méně', rady: [{ n: 'maturita', v: 1.1, barva: '#899aeb' }, { n: 'vysoká škola', v: 0.89, barva: CRIMSON }] }] } },
   '12-mezinarodni-srovnani': { motiv: 'hantle', titulek: 'Čtyři různé politiky, podobný pokles plodnosti', pod: 'Švédsko, Francie, Maďarsko i Kanada ztratily v letech 2021–2024 asi 0,2 dítěte na ženu, Česko 0,47',
     spec: { min: 1.1, max: 2.0, hlavicka: ['rok 2021', 'rok 2024'], rady: [{ n: 'Švédsko', a: 1.67, b: 1.43 }, { n: 'Francie', a: 1.83, b: 1.61, barva: '#899aeb' }, { n: 'Maďarsko', a: 1.63, b: 1.41, barva: '#ffcf02' }, { n: 'Kanada', a: 1.44, b: 1.25, barva: '#4fd6b4' }] } },
   '08-politicke-sliby': { motiv: 'bloky', titulek: 'Jesle a školky má v Česku 8 % dětí do tří let', pod: 'V Evropské unii je to 40,6 %, dostupná péče o děti patří k nejúčinnějším opatřením' },
