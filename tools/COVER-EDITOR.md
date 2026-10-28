@@ -77,8 +77,12 @@ s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, graf
    přes nohy sochy působilo jako „záclona“).
 4. **Story:** nic důležitého v horních 250 a dolních 340 px, obsah vycentrovaný mezi těmito pásy, pozadí čisté
    ink blue `#101432` bez záře.
-5. **Mezera mezi textem a motivem** aspoň ~40 px (u šířky 1080) i tam, kde motiv nemá pravidelný tvar (výběžek mapy,
-   meč sochy). Text se motivu nedotýká; kontrolovat na největším náhledu, ne na zmenšenině.
+5. **Text a motiv: rozhoduje čitelnost, ne dotyk** (upraveno 28. 10. 2026, Kateřina: „není potřeba ucukávat před
+   každou čárkou v podkladu“). Text smí do motivu zasahovat, i celý, když leží na klidné tmavé části nebo na
+   ztmaveném okraji motivu. Vadí jen světlé nebo rušné místo pod bílým textem. Pak pomůže měkký podklad pod drobným
+   textem, stín kolem písmen titulku, užší zalomení nebo posun motivu. Nikdy ne tmavý blok pod velkým titulkem
+   (viz Ponaučení 28. 10.). Zalomení je běžný nástroj: jednopísmenné předložky a spojky nikdy na konci řádku.
+   Kontrolovat na největším náhledu, ne na zmenšenině.
 6. **Zapečené prvky zdroje** (logo, datum „únor 2026“, popisky screenshotu) se odříznou výřezem, nepřetírají se.
 7. **Kontaktní arch je pomůcka:** zóny jsou jen čárkované obrysy a v obrázku nejsou. Kateřině posílat i samotné
    soubory homepage, OG a story, ať nemusí rozlišovat kontrolní značky od obsahu.
@@ -93,7 +97,36 @@ s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, graf
    šmouhy. Vybrat snímek bez nich, nebo popisek v rohu odříznout výřezem. Vzor:
    `kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs`.
 
+**Automatické pojistky (od 28. 10. 2026).** Body výše hlídá z velké části `tools/cover-generator.cjs` sám, takže
+na oko zbývá motiv, sdělení a celkový dojem:
+- **Text coveru z článku.** Schválený text coveru patří do frontmatteru článku: `coverTitulek` (zalomení přes `<br>`)
+  a případně `coverPodtitulek`. Generátor ho vezme odtud; když konfigurace obsahuje jiný text, nevyrenderuje nic a
+  ohlásí rozpor. Bez `coverTitulek` aspoň vypíše titulek článku vedle titulku coveru. Proč: cover k vyznamenáním
+  zůstal se starým „dvakrát častěji“, i když se titulek článku změnil, protože text coveru byl ruční kopie.
+- **Rozvrh a kontrola kompozice v každém formátu.** Generátor vyfotí motiv zvlášť bez textu a změří, jak světlé je
+  místo pod každým textem. Na světlé části motivu dá drobnému textu (podtitulek, legenda) měkký podklad a titulku se
+  štítkem stín kolem písmen. Když text leží na světlé ploše z velké části, zalomí ho užeji, aby skončil před motivem.
+  Logo na světlém motivu zkusí přesunout do druhého dolního rohu. Za jednopísmenná slova dává nezlomitelnou mezeru.
+  **Chybou** je jen to, co takhle opravit nejde, text mimo bezpečnou zónu (story: horních 250 a dolních 340 px) a
+  OG nad 300 kB. **Upozorněním** je text nebo motiv v rohu štítku rubriky (homepage x ≥ 950, y ≤ 280) a prázdný pás
+  přes výšku story a 4:5. Co generátor upravil, vypíše (↻), chyby a upozornění vyznačí do
+  `_cover_pipeline/_kontrola-<formát>.png` (mimo git). Vědomou výjimku zapiš do konfigurace:
+  `kontrola: { prekryv: true | ['legenda'] | { story: ['legenda'] }, duvod: '…' }`.
+- **Razítko.** Generátor zapíše vedle konfigurace `<config>.razitko.json` (texty, titulek článku, otisky vstupů a
+  obrázků, výsledek kontroly). Razítko patří do gitu. `apps/web/scripts/checkArticles.js` (před commitem i při buildu)
+  podle něj zastaví cover, když se od renderu změnil titulek článku nebo `coverTitulek`, konfigurace či motiv bez
+  nového renderu, obrázek mimo generátor, nebo když cover neprošel kontrolou. Covery bez razítka (starší, editor)
+  se zatím nekontrolují.
+- Zkušební render jinam, bez razítka: `node tools/cover-generator.cjs <config> --vystup <složka>`.
+
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+- *28. 10. 2026 – automatické pojistky (vyznamenání, Brazílie).* Story k vyznamenáním: legenda přes bílý pruh stuhy,
+  logo přes spodek medaile, starý text titulku. Kateřina: mírný přesah textu přes motiv je v pořádku, jen musí být
+  čitelný (podklad, stín, lehký fading). Proto kontrola měří světlé místo pod textem, ne dotyk. Záře pozadí se
+  nepočítá: **bílý titulek na zlaté záři u Brazílie svítí a funguje**, kdežto pokus dát pod titulek „Proč vyhrál
+  Lula“ tmavý ink blue blok vypadal ošklivě a nefungoval. Pod velký titulek nikdy tmavý obdélník, nanejvýš stín
+  kolem písmen. U Brazílie lze příště vyzkoušet slabší podbarvení podtitulku uprostřed mapy (podklad je tam
+  tmavý přechod ze žluté do modré).
 - *28. 10. 2026 – covery kapitoly Demografie (speciál Data pro budoucí premiérku), systém bez fotek.* Generátor je `apps/web/app/specialy/data-pro-budouci-premierku/_cover_pipeline/covery.cjs` (zadání deseti coverů v `DEF`, motivy v `MOTIVY`): nahoře velké logo speciálu (hlava s tečkami) + „Data pro budoucí premiérku“, vpravo nahoře štítek „Analýza • Kapitola 1 Demografie“, pak velký titulek (hlavní sdělení), podtitulek **bez tečky** (je to statement, ne věta), jeden motiv z čísla článku, dole logo DataTimes.cz. Barva dat = barva kapitoly z `dpbpChapters.json` (kapitola 1 vivid red `#de1743`), pozadí ink blue se zářemi. Popisky motivů musí být srozumitelné bez čtení článku („dnes: 128 dětí na 100 žen“, ne „chybí do 210“), titulek ukazuje souvislost s Českem. Dlaždice kapitoly berou obrázek z `image` v `_meta.json` (má přednost před `coverImage` ve frontmatteru, který je OG ke sdílení); staré `pout-*` covery se už pro dlaždice nepoužívají. Starší pokusy (fotky z mobilu pod oponou, kontura hlavy přes celou výšku, tečkové postavičky) Kateřina zamítla: přeplácané, bez jasného sdělení.
 - *27. 10. 2026 – převod pěti starších coverů k Izraeli/Gaze do formátů a cover článku o komisi OSN.* Opakované
   chyby, ze kterých vznikla kontrola výše: titulek přes obrys mapy ve čtverci a OG (komise OSN, opraveno menším
