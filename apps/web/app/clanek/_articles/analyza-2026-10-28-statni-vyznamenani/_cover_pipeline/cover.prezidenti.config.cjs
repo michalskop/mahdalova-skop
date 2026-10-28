@@ -8,7 +8,7 @@ module.exports = {
   ...zaklad,
   vystup: path.join(__dirname, '..', '..', 'analyza-2026-10-28-statni-vyznamenani-komu', 'images'),
   titulek: 'Komu prezidenti<br>dávají medaile',
-  pod: '1&nbsp;370 vyznamenání od Havla po Pavla',
-  legenda: [...PREZ.map((p) => [p[2], p[1]]), ['transparent', '1 tečka = 1 vyznamenání']],
+  pod: '1&nbsp;370 vyznamenání<br>od Havla po Pavla',
+  legenda: [...PREZ.map((p) => [p[2], p[1]]), ['transparent', '1 tečka = 1 vyznamenání 1995–2025'], ['transparent', 'uprostřed Havel, na okraji Pavel']],
   motiv: { ...zaklad.motiv, soubory: Object.fromEntries(['homepage', 'og', 'square', 'instagram', 'story'].map((k) => [k, path.join(__dirname, `motiv-prezidenti-${k}.svg`)])) },
 };
