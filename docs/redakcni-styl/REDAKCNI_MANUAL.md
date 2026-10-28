@@ -295,6 +295,8 @@ Když článek stojí na našem výpočtu (model, screening anomálií, přepoč
 ## Kontrola grafu a vizuálního tvrzení
 **Srovnání skupin musí být čitelné na první pohled:** kategorie na ose (pásma, roky) viditelně oddělit (podbarvení, mezery), hodnoty psát přímo ke značkám a změnu kolem nuly kreslit od zvýrazněné nulové osy; když dvojice svislých sloupců nic nesdělí, zkusit vodorovné pruhy po stranách (blok za každou stranu, doprava přibylo, doleva ubylo). Popisky os nesmí překrývat body na krajích (graf úspěšnosti: tečka na 0 % přes „Motoristé“). *(15. 10. 2026, graf podle velikosti obce v článku o SPD a Motoristech.)*
 
+**Graf nikdy v rámečku a vždy zkontrolovaný na mobilu:** žádný obdélník kolem plochy grafu ani osové čáry, hodnoty přímo u pruhů (uvnitř, když se vejdou, jinak za pruhem), nic se nezalamuje ani neusekává (pevné mezery v číslech a datech, patička se zdrojem na jeden řádek). Závazný postup: `docs/design/DESIGN.md` §10 → *Before you send a chart*. *(28. 10. 2026, grafy v článku o zprávě komise OSN.)*
+
 Titulek je tvrzení, ne téma · osa, jednotka, období, populace a zdroj jsou viditelné · barva nese stabilní význam (stejná barva neznamená dvě věci) · klíčové hodnoty nejsou jen v tooltipu · mapa nenahrazuje přesnější seřazený graf, pokud by zkreslovala malé země či historické hranice · graf ukazuje nejistotu a kategorii „unknown", pokud ovlivňují čtení · alt text shrnuje zjištění, ne vzhled.
 
 ---

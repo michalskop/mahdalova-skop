@@ -5,22 +5,28 @@
   "data": {
     "values": [
       {
-        "kat": "Dohoda o příměří, říjen 2025",
+        "kat": "Příměří, říjen 2025",
         "n": 53,
         "t": "53 %",
-        "barva": "#bcbcb0"
+        "barva": "#bcbcb0",
+        "tbarva": "#101432",
+        "minpx": 46.8
       },
       {
-        "kat": "Skutečnost, 2. 9. 2026",
+        "kat": "Září 2026",
         "n": 60,
         "t": "nejméně 60 %",
-        "barva": "#de1743"
+        "barva": "#de1743",
+        "tbarva": "#ffffff",
+        "minpx": 104.4
       },
       {
-        "kat": "Netanjahuův pokyn, květen 2026",
+        "kat": "Pokyn Netanjahua",
         "n": 70,
         "t": "70 %",
-        "barva": "#efa0af"
+        "barva": "#ff8099",
+        "tbarva": "#101432",
+        "minpx": 46.8
       }
     ]
   },
@@ -34,10 +40,11 @@
       },
       "axis": {
         "title": null,
-        "labelLimit": 220,
+        "labelLimit": 240,
         "domain": false,
         "ticks": false,
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "labelPadding": 8
       }
     },
     "x": {
@@ -47,7 +54,8 @@
         "domain": [
           0,
           100
-        ]
+        ],
+        "nice": false
       },
       "axis": null
     }
@@ -71,7 +79,7 @@
           },
           {
             "field": "t",
-            "title": "Počet"
+            "title": "Hodnota"
           }
         ]
       }
@@ -79,22 +87,50 @@
     {
       "mark": {
         "type": "text",
-        "align": "left",
-        "dx": 6,
-        "fontSize": 13,
-        "fontWeight": 700,
-        "color": "#333333"
+        "align": "right",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontWeight": 700
       },
       "encoding": {
         "text": {
-          "field": "t"
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? datum.t : ''"
+          }
+        },
+        "color": {
+          "field": "tbarva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? '' : datum.t"
+          }
         }
       }
     }
   ],
   "title": {
-    "text": "Izrael podle komise kontroluje {nejméně 60 %|#de1743} Gazy, příměří počítalo s 53 %",
-    "subtitle": "Podíl území Pásma Gazy pod kontrolou izraelské armády (%). Světlý pruh: premiér Netanjahu v květnu 2026 řekl, že nařídil obsadit 70 %."
+    "text": "Izrael podle komise kontroluje {nejméně 60 %|#de1743} Gazy, příměří počítalo s 53 %",
+    "subtitle": "Podíl území Pásma Gazy pod kontrolou izraelské armády (%): podle dohody o příměří z října 2025, skutečnost k 2. 9. 2026 a 70 %, která podle premiéra Netanjahua v květnu 2026 nařídil obsadit."
   },
-  "_source": "[Zpráva Nezávislé mezinárodní vyšetřovací komise OSN, A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 37"
+  "_source": "[Zpráva komise OSN A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 37",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
 }

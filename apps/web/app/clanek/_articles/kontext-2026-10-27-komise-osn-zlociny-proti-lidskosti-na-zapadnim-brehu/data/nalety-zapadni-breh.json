@@ -5,16 +5,20 @@
   "data": {
     "values": [
       {
-        "kat": "2008 – 6. 10. 2023 (téměř 16 let)",
+        "kat": "Předchozích 16 let",
         "n": 6,
         "t": "6",
-        "barva": "#bcbcb0"
+        "barva": "#bcbcb0",
+        "tbarva": "#101432",
+        "minpx": 25.2
       },
       {
-        "kat": "7. 10. 2023 – 30. 9. 2026 (necelé 3 roky)",
+        "kat": "Od 7. 10. 2023",
         "n": 254,
         "t": "254",
-        "barva": "#de1743"
+        "barva": "#de1743",
+        "tbarva": "#ffffff",
+        "minpx": 39.6
       }
     ]
   },
@@ -28,10 +32,11 @@
       },
       "axis": {
         "title": null,
-        "labelLimit": 220,
+        "labelLimit": 240,
         "domain": false,
         "ticks": false,
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "labelPadding": 8
       }
     },
     "x": {
@@ -40,8 +45,9 @@
       "scale": {
         "domain": [
           0,
-          290
-        ]
+          300
+        ],
+        "nice": false
       },
       "axis": null
     }
@@ -65,7 +71,7 @@
           },
           {
             "field": "t",
-            "title": "Počet"
+            "title": "Hodnota"
           }
         ]
       }
@@ -73,22 +79,50 @@
     {
       "mark": {
         "type": "text",
-        "align": "left",
-        "dx": 6,
-        "fontSize": 13,
-        "fontWeight": 700,
-        "color": "#333333"
+        "align": "right",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontWeight": 700
       },
       "encoding": {
         "text": {
-          "field": "t"
+          "value": {
+            "expr": "datum.n / 300 * width > datum.minpx ? datum.t : ''"
+          }
+        },
+        "color": {
+          "field": "tbarva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 300 * width > datum.minpx ? '' : datum.t"
+          }
         }
       }
     }
   ],
   "title": {
-    "text": "Při náletech na Západním břehu zemřelo za necelé tři roky {254|#de1743} Palestinců, za předchozích téměř 16 let šest",
-    "subtitle": "Palestinci zabití izraelskými leteckými údery na Západním břehu (počet lidí)"
+    "text": "Při náletech na Západním břehu zemřelo za necelé tři roky {254|#de1743} Palestinců, za předchozích téměř 16 let šest",
+    "subtitle": "Palestinci zabití izraelskými leteckými údery na Západním břehu (počet lidí, data OCHA): 2008 – 6. 10. 2023 a 7. 10. 2023 – 30. 9. 2026"
   },
-  "_source": "[Zpráva Nezávislé mezinárodní vyšetřovací komise OSN, A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 27, podle dat OCHA"
+  "_source": "[Zpráva komise OSN A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 27",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
 }

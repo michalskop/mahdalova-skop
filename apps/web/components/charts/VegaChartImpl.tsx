@@ -201,6 +201,9 @@ function mergeFontConfig(config: unknown): Record<string, unknown> {
   return {
     ...base,
     ...CHART_FONT_CONFIG,
+    // Žádný rámeček kolem plochy grafu (docs/design/DESIGN.md §10, Kateřina 28. 10. 2026): výchozí Vega view.stroke
+    // kreslí šedý obdélník; graf ho dostane jen výslovně přes config.view.stroke ve specifikaci.
+    view: { stroke: null, ...(base.view as object ?? {}) },
     axis: { ...(base.axis as object ?? {}), ...CHART_FONT_CONFIG.axis },
     legend: { ...(base.legend as object ?? {}), ...CHART_FONT_CONFIG.legend },
     text: { ...(base.text as object ?? {}), ...CHART_FONT_CONFIG.text },
@@ -771,7 +774,12 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
         />
       )}
       <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
-        {chartCanvas(200, isConcat && totalWidth ? `${totalWidth}px` : '100%')}
+        {/* Rezerva proti poskočení stránky před vykreslením: 200 px, u nízkých grafů jen jejich výška ze
+            specifikace – jinak pod grafem zůstával prázdný pruh nad patičkou (Kateřina 28. 10. 2026). */}
+        {chartCanvas(
+          typeof spec?.height === 'number' ? Math.min(200, spec.height + 20) : 200,
+          isConcat && totalWidth ? `${totalWidth}px` : '100%',
+        )}
       </div>
     </ChartCard>
   );
