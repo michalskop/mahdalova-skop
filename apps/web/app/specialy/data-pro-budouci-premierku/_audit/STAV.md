@@ -132,7 +132,7 @@ plynou dvě pravidla, která se osvědčila:
 2. **Co se předává dál, musí být commitnuté.** Nezapsané soubory v jedné pracovní
    kopii jsou pro ostatní neviditelné a zdrží navazující práci.
 3. **Revize kapitoly není jen fact-checking** (pravidlo Kateřiny z 29. 10. 2026, platí pro všech 15 kapitol).
-   Jde o **jednotlivé články** kapitoly, ne o kapitoly jako celek. U každé kapitoly navíc: (a) když je kapitola
+   Jde o **jednotlivé články** uvnitř kapitoly, ne o kapitoly jako celek (kapitol zůstává 15). U každé kapitoly navíc: (a) když je kapitola
    vychýlená k jednomu tématu a mohla by být komplexnější, navrhneme **další články** (chybějící témata, nové výpočty,
    texty z webu jako dlaždice), (b) navrhneme **vyškrtnutí nebo sloučení článků**, které k tématu kapitoly nepatří,
    opakují se nebo jsou slabé, (c) návrh stavby zapíšeme do `_audit/REVIZE-<číslo>-<kapitola>.md` (vzor `REVIZE-01-DEMOGRAFIE.md`: oddíly,
