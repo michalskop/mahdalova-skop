@@ -153,7 +153,7 @@ const MOTIVY = {
   // 10: děti na ženu podle vzdělání (SLDB 2021, tabulka v článku): 45–49 let maturita 1,77 / vysoká škola 1,75; 30–34 let 1,10 / 0,89; 1 kolečko = 1 dítě
   dvewaffle(w, h, spec) {
     // tabulka o čtyřech sloupcích: věk (barva kapitoly) | vzdělání | dvě kolečka (1 kolečko = 1 dítě) | hodnota; jedna velikost písma, jedna barva dat
-    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, nPan = spec.panely.length, nR = nPan * 2, mez = f * 1.1;
+    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, nPan = spec.panely.length, nR = nPan * 2, mez = f * 2.4;
     const rh = Math.min((h - (nPan - 1) * mez) / nR, f * 3.8), d = rh * 0.86;
     const ageW = f * 5.2, eduW = f * 9.2, valW = f * 3.8, g = Math.min((w - ageW - eduW - 2 * d - valW) / 3, f * 5);
     const xE = ageW + g, xD = xE + eduW + g, xV = xD + 2 * d + g * 0.6;
