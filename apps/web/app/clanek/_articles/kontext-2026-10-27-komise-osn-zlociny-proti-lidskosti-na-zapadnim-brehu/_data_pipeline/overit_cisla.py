@@ -27,7 +27,7 @@ VE_ZPRAVE = [
     ("254 obětí náletů do 30. 9. 2026", "254 Palestinians were killed"),
     ("34 176 vysídlených", "34,176 Palestinians remaining displaced as of August 2026"),
     ("~95 % zabití izraelskými silami", "approximately 95 percent of killings"),
-    ("200 metrů, Eygiová", "approximately 200-metre range"),
+    ("200 metrů, Eygi", "approximately 200-metre range"),
     ("5. 6. 2026 miminko", "on 5 June 2026, a seven-month-old baby was killed"),
     ("Gaza po příměří 1 431 mrtvých", "over 1,431 people being killed, including at least 300 children and 130 women"),
     ("5 026 zraněných", "5,026 injured as of 30 September 2026"),
