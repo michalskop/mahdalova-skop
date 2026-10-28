@@ -122,6 +122,11 @@
    "cena_na_dite_navic_mil": 5.0
   }
  ],
+ "navrat_2021": {
+  "deti_navic": 10443,
+  "pct": 0.3147,
+  "cena_na_dite_mil": 3.2
+ },
  "tfr_druhe": {
   "1990": 0.715,
   "2010": 0.561,

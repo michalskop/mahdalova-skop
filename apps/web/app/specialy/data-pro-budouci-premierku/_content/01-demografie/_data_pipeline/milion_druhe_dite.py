@@ -61,6 +61,12 @@ for navic_pct in (1, 5, 10, 20):
     })
     print(f"  +{navic_pct} % druhých dětí = {round(narozeno_navic):,} dětí navíc → {cena24 / narozeno_navic / 1e6:.1f} mil. Kč na dítě navíc")
 
+# kdyby odměna vrátila druhé děti na počet z roku 2021 (nejvyšší po roce 2010 v řadě)
+navrat = rows[2021]["druhe"] - d24["druhe"]
+navrat_pct = navrat / d24["druhe"]
+cena_navrat = cena24 / navrat / 1e6
+print(f"návrat na úroveň 2021: +{navrat:,} druhých dětí (+{navrat_pct:.1%}) → {cena_navrat:.1f} mil. Kč na dítě navíc")
+
 # --- druhé dítě na 100 žen (tab. 6.12) a co by znamenalo +x % ---
 ws = sheet("csu_demograficka_prirucka_2024_tab_6_12.xlsx")
 tfr2 = {}
@@ -88,6 +94,7 @@ print(f"2021 → 2024: celkem −{pokles_celkem:,}, z toho druhé děti −{pokl
         "podil_druhych_2024": round(podil24, 4),
         "odhad_2025": {"druhe": odhad_druhe25, "cena_mld": round(odhad_druhe25 * ODMENA / 1e9, 1), "pozn": "odhad při stejném podílu jako 2024; pořadí za 2025 ČSÚ zatím nezveřejnil"},
         "scenare": scenare,
+        "navrat_2021": {"deti_navic": navrat, "pct": round(navrat_pct, 4), "cena_na_dite_mil": round(cena_navrat, 1)},
         "tfr_druhe": tfr2,
         "pokles_2021_2024": {"celkem": pokles_celkem, "druhe": pokles_druhe},
     }, ensure_ascii=False, indent=1),
