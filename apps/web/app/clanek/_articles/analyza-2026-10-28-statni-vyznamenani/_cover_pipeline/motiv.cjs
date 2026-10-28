@@ -33,7 +33,7 @@ const FORMATY = { // medaile co nejblíž k textu a co největší, ale stuha po
   homepage: { W: 1500, H: 1200, disk: [1020, 830, 285], stuha: 0.55 },
   square: { W: 1080, H: 1080, disk: [720, 760, 250], stuha: 0.5 },
   instagram: { W: 1080, H: 1350, disk: [660, 930, 285], stuha: 0.55 },
-  story: { W: 1080, H: 1920, disk: [540, 1240, 250], stuha: 0.4 }, // pod legendou, nad logem
+  story: { W: 1080, H: 1920, disk: [540, 1270, 235], stuha: 0.4 }, // pod legendou, nad logem
   og: { W: 1200, H: 630, disk: [770, 375, 168], stuha: 0.5 },
 };
 // článek o ženách má třířádkový titulek: na homepage medaile níž a menší, aby stuha nevjela do titulku

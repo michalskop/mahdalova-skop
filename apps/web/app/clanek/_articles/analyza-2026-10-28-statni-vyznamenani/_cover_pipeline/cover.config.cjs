@@ -9,7 +9,7 @@ module.exports = {
   kicker: { cervene: 'Analýza', dal: 'Státní vyznamenání' },
   titulek: 'Za Pavla jsou<br>zásluhy žen<br>méně přehlížené',
   pod: 'Za Petra Pavla 28&nbsp;%,<br>za předchůdců 14&nbsp;%',
-  legenda: [[ZENY, 'žena'], [MUZI, 'muž'], ['transparent', '1 tečka = 1 vyznamenání 1995–2025'], ['transparent', 'uprostřed Havel, na okraji Pavel']],
+  legenda: [[ZENY, 'žena'], [MUZI, 'muž'], ['transparent', '1 tečka = 1 vyznamenání 1995–2025']],
   legendaPodTextem: true,
   logo: 'vlevo',
   format: { homepage: { t: 92 }, square: { t: 74 }, instagram: { t: 80 }, story: { t: 88 } },
