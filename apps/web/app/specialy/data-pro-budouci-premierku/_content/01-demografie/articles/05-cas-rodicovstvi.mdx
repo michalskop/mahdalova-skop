@@ -1,6 +1,6 @@
 ---
-title: "Věk 30 je nový věk 22. Co to udělalo s českou demografií za třicet let."
-excerpt: "Průměrný věk matky při prvním porodu se v Česku posunul za třicet let o osm let. Jde o největší posun mezi bohatými zeměmi. Tato změna má přímé strukturální důsledky pro demografický vývoj – a žádná jednorázová dávka je neobrátí."
+title: "Prvorodičky jsou o 6,7 roku starší než v roce 1990, ale dnešní pokles plodnosti odklad nevysvětluje"
+excerpt: "Průměrný věk matky při prvním dítěti vzrostl z 22,5 roku v roce 1990 na 29,2 roku v roce 2025, v Evropě druhý největší posun od roku 1995. Po odečtení odkladu by plodnost v roce 1999 činila asi 1,6 místo 1,13, v roce 2023 asi 1,5 místo 1,45."
 author: "Kateřina Mahdalová & Michal Škop"
 date: "2026-06-19"
 promoted: 36
@@ -8,60 +8,42 @@ tags: ["demografie", "speciál", "data-pro-budouci-premierku", "plodnost", "mate
 coverImage: "/clanek/_articles/data-pro-budouci-premierku-02-demografie/images/pout-05.png"
 ---
 
-<MothersAgeShiftChart />
+<VegaChart chartId="GRAF_05_VEK_PRVNI" />
 
-Kolem roku 1990 rodily české ženy první dítě průměrně ve věku necelých 22 let. Dnes je průměrný věk matky při prvním porodu přes 30 let. Posun o více než osm let za tři dekády je jedním z největších zaznamenaných v zemích OECD.
+Ženy, které v roce 1990 rodily první dítě, měly v průměru 22,5 roku. V roce 2025 to bylo 29,2 roku, tedy o 6,7 roku víc ([ČSÚ, roční časové řady](https://csu.gov.cz/produkty/obyvatelstvo_hu); [Statistika&My](https://statistikaamy.csu.gov.cz/nejmene-narozenych-deti-v-historii)). Mezi 19 evropskými zeměmi, za které [Eurostat](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table?lang=en) uvádí věk prvorodiček pro roky 1995 i 2024, se víc než Češky (z 23,3 na 29,0 roku) posunuly jen Estonky (z 23,0 na 28,9). Srovnání zemí mimo Evropu jsme nedělali.
 
-Toto číslo není jen demografická statistika. Je to jeden z nejzásadnějších posunů v chování domácností za posledních třicet let – a má konkrétní důsledky pro počet narozených dětí, strukturu rodin i výsledky pronatalitní politiky.
+Číslo „přes třicet let“, které se v debatě objevuje, patří všem matkám bez ohledu na pořadí dítěte: v roce 2025 jim bylo v průměru 30,6 roku, v roce 1990 24,8. Při prvním dítěti je to 29,2 roku.
 
-## Kohortní plodnost: jiný pohled než TFR
+Křivka stoupala do roku 2008 o 0,3 roku ročně (z 22,5 na 27,3 roku), pak o 0,1 roku ročně. Posun je vidět i na tom, komu se děti rodí. V roce 1990 připadalo 59 % úhrnné plodnosti na ženy do 24 let a 14 % na ženy od 30 let, v roce 2024 15 % a 53 % (vlastní přepočet věkových měr plodnosti z [Demografické příručky ČSÚ](https://csu.gov.cz/produkty/demograficka-prirucka-2024), tabulka 6.11).
 
-Standardní číslo 1,28 (úhrnná plodnost za rok 2025) je snapshot. Říká, kolik dětí by průměrná žena měla za celý život, kdyby se v každém věku chovala přesně jako dnešní ženy daného věku. Tato metoda je rychlá a srozumitelná – ale citlivě reaguje na posun načasování.
+## Odklad stlačil plodnost roku 1999 zhruba o půl dítěte
 
-Kohortní plodnost (CCF) měří jinak: sleduje, kolik dětí skutečně porodila každá konkrétní generace žen za celý svůj život. Pro starší generace je číslo uzavřené. Pro ženy narozené v 80. a 90. letech vidíme kumulovanou plodnost k dnešnímu věku.
+Úhrnná plodnost, tedy 1,28 za rok 2025, říká, kolik dětí by žena měla, kdyby se v každém věku chovala jako dnešní ženy téhož věku. Když ženy rodí později, narodí se v daném roce méně dětí i tehdy, kdy jich nakonec mají stejně. Demografové tomu říkají tempo efekt (u švédského příkladu ho popisujeme v [prvním článku kapitoly](/specialy/data-pro-budouci-premierku/01-demografie/01-proc-klesa-plodnost) a v [článku o kohortní plodnosti](/specialy/data-pro-budouci-premierku/01-demografie/07-kohortni-plodnost)).
 
-Data z Human Fertility Database a ČSÚ ukazují tuto trajektorii u české kohortní plodnosti:
+Kolik z propadu jde na vrub odkladu, jsme spočítali metodou, kterou v roce 1998 popsali John Bongaarts a Griffith Feeney v [Population and Development Review](https://doi.org/10.2307/2807974). Pro každý rok vezmeme plodnost zvlášť pro první, druhé, třetí a další dítě a podíváme se, o kolik se ten rok zvýšil průměrný věk matek při porodu daného pořadí. Roste-li věk o 0,3 roku za rok, rodí se asi o 30 % méně dětí, než odpovídá počtu, který ženy za život skutečně mají, a plodnost proto vydělíme číslem 0,7. Je to odhad z [tabulek ČSÚ](https://csu.gov.cz/produkty/demograficka-prirucka-2024) (6.12 a 6.13), ne naměřená hodnota; ČSÚ ani Eurostat takto upravenou plodnost nezveřejňují.
 
-| Generace (rok narození) | Dokončená/kumulovaná plodnost |
-|---|---|
-| 1940 | ~2,1 |
-| 1950 | ~2,1 |
-| 1960 | ~2,0 |
-| 1970 | ~1,9 |
-| 1980 | ~1,7 (věk 45, téměř dokončeno) |
-| 1990 | ~1,2 (věk 35, přibližně 30 % reprodukčního okna zbývá) |
+<VegaChart chartId="GRAF_05_TEMPO" />
+
+V roce 1999, kdy úhrnná plodnost klesla na 1,13 (nejnižší hodnota řady ČSÚ, v roce 2000 byla 1,14), by bez odkladu vyšla 1,63. Od roku 2000 do roku 2019 se upravená plodnost drží mezi 1,59 a 1,84, v průměru na 1,72. Růst úhrnné plodnosti z 1,14 v roce 2000 na 1,71 v roce 2020 tak odpovídá hlavně zpomalení odkladu: počet dětí na ženu za život se v odhadu změnil mnohem méně než roční statistika. Odhad nevylučuje, že k růstu přispěly i změny rodinné politiky; ukazuje, že velkou část vysvětluje načasování.
+
+Dnešní situace je jiná. V letech 2022 a 2023 se upravená plodnost od skutečné liší o 0,00 a 0,06: úhrnná plodnost 1,45 z roku 2023 odkladu skoro nic nedluží. Pro roky 2024 a 2025 nemáme tabulky podle pořadí dítěte, věk prvorodiček ale v roce 2025 vzrostl o 0,16 roku, zatímco v roce 2000 o 0,35, takže tempo odkladu je malé i teď. V letech 2020 a 2021 (upravená plodnost vyšla 1,94 a 2,04) epidemie rozkolísala věk matek, odhad je proto v těchto dvou letech nespolehlivý.
+
+## Pokles po roce 2021 se děje v každém věku
+
+Kdyby ženy jen odkládaly, rodily by víc ve vyšším věku. Mezi lety 2021 a 2024 ale klesly věkové míry plodnosti v pětiletých skupinách od 20 do 39 let o 25 až 27 % (u 35–39letých o 25 %), podle [ČSÚ](https://statistikaamy.csu.gov.cz/nejmene-narozenych-deti-v-historii) mezi lety 2021 a 2025 přibližně o 30 % ve skupinách 25–29 a 30–34 let. Rok 2021 byl vrchol (1,83); proti roku 2019 jsou míry ve skupinách 25–39 let nižší o 17 až 19 %.
+
+ČSÚ dále uvádí, že pravděpodobnost narození prvního dítěte klesla mezi lety 2021 a 2025 z 88 % na 62 %, kdežto pravděpodobnost druhého dítěte u ženy, která už jedno má, zůstala na 78–79 %. Ukazatel vychází z dat jednoho roku, ne ze sledování stejných žen, a odklad ho zkresluje. ČSÚ z něj usuzuje, že část žen děti mít nebude; je to jeho předpoklad, ne měření.
+
+Odstup mezi prvním a druhým dítětem se přitom zkracuje: rozdíl mezi průměrným věkem matek při druhém a při prvním dítěti klesl z 3,1 roku v roce 1990 na 2,4 roku v roce 2024 (jde o rozdíl průměrů v daném roce, ne o odstup u téže ženy). Že pozdější začátek zkracuje čas na druhé dítě, se v datech zatím neprojevuje nižší pravděpodobností druhého dítěte.
+
+## Odklad se dohání jen zčásti: ročník 1980 má 1,7 dítěte, ročník 1950 2,1
 
 <VegaChart chartId="GRAF_05_KOHORTY" />
 
-Číslo 1,28, které dnes čteme jako úhrnnou plodnost roku 2025, je i kumulovaná kohortní plodnost žen narozených okolo roku 1990 ve věku kolem 35 let. Ale tato generace ještě není uzavřena.
+Při pohledu na celé generace žen (kohortní plodnost, kterou měříme jinak než roční číslo, vysvětlujeme [v samostatném článku](/specialy/data-pro-budouci-premierku/01-demografie/07-kohortni-plodnost)) vychází, že ženy narozené v roce 1950 měly do 44 let v průměru 2,09 dítěte, ročník 1970 1,87 a ročník 1980 1,69 (vlastní přepočet věkových měr plodnosti ČSÚ; odpovídá číslům, která ČSÚ uvádí pro ročníky 1970 a 1980: 1,9 a 1,7). Ročník 1950 měl v 29 letech 1,83 dítěte, ročník 1980 0,88. Po třicítce ročník 1980 přidal 0,81 dítěte, ročník 1970 0,42. Odklad se tedy dohání, ale nedohání se celý: každá další generace je v každém věku pod předchozí a dokončená plodnost klesla z 2,1 u ročníku 1950 na 1,7 u ročníku 1980.
 
-## Jak velký je posun ve skutečnosti
+## Co z věku prvorodičky plyne pro politiku
 
-Historicky přidávaly české ženy mezi 30. a 40. rokem věku přibližně 0,4–0,55 dítěte ke své kumulované plodnosti (data z HFD pro generace narozené v 70. letech). Pokud by generace narozená v roce 1990 zachovala podobný vzorec, její dokončená plodnost by mohla dosáhnout 1,6–1,75.
+Z dat o věku prvorodiček nevyplývá, že by politika zaměřená na dřívější první dítě zvýšila porodnost víc než dávky. Přehled 35 studií, který rozebíráme v [článku o slibech stran](/specialy/data-pro-budouci-premierku/01-demografie/08-politicke-sliby), nejspolehlivěji dokládá účinek dostupné péče o děti na dokončenou plodnost, kdežto peněžní dávky podle něj zvyšují porodnost jen dočasně. Opatření, která mění načasování, mohou podle švédského příkladu (viz [Skandinávská past](/specialy/data-pro-budouci-premierku/01-demografie/04-skandinavska-past)) po čase zmizet z ročních čísel, aniž přidají děti.
 
-Jenže data z posledních let naznačují pomalejší přírůstek než u předchozích generací: ekonomická nejistota, hodnotové změny a strukturální bariéry zpomalují i pozdní mateřství.
-
-Demografové odhadují, že realistická dokončená plodnost generace narozené v roce 1990 bude kolem 1,5–1,65. To je níže než jejich matky, ale výrazně výše než číslo 1,28 v titulcích.
-
-## Proč posun v načasování mění čísla i bez změny preferencí
-
-Úhrnná plodnost reaguje na načasování silně. Pokud celá generace odloží první porod ze 22 na 30 let, v letech, kdy jsou tyto ženy ve věku 22–29, je méně porodů – a TFR klesá. Demografové tomu říkají tempo efekt (rozdílu mezi roční momentkou a daty za celé generace se věnujeme [v článku o kohortní plodnosti](/specialy/data-pro-budouci-premierku/01-demografie/07-kohortni-plodnost)).
-
-Jakmile se posun načasování zastaví a generace „dožene" odložené děti, TFR se zotaví. Přesně to se stalo v Česku po roce 2000: TFR postupně stoupalo z minima 1,14 (2000) na 1,71 (2020) – nikoli primárně proto, že vláda přijala správná opatření, ale proto, že posun načasování se zpomaloval.
-
-Od roku 2021 TFR znovu klesá. Tentokrát s menší pravděpodobností přechodného charakteru – generace narozené v 90. letech jsou ve věku plného reprodukčního potenciálu a jejich plodnost je strukturálně nižší.
-
-## Druhé dítě: biologická mez a bariéry
-
-Posun mateřství na pozdější věk má jeden konkrétní demografický důsledek, který se statistikou přechodné změny nedá vysvětlit: snižuje biologickou dostupnost druhého dítěte.
-
-Průměrný věk při prvním porodu přes 30 let znamená, že pro druhé dítě zbývá méně biologicky příznivých let. Věkově podmíněný pokles fertility ženy je reálný a strmý po 35. roce věku. Pokud je první dítě ve 31 a druhé přijde o čtyři roky později, žena je 35 – stále v biologicky přijatelném pásmu, ale s vyšším rizikem komplikací a nižší pravděpodobností úspěchu.
-
-Tato matematika neplyne z hodnotového posunu. Plyne z biologie. A přímo omezuje realizovatelnost dvoudětného ideálu – který průzkumy opakovaně identifikují jako nejčastější přání českých žen a mužů.
-
-## Co může politika
-
-Opatření, která snižují překážky pro dřívější první porod – dostupné bydlení pro mladé rodiny, kapacity jeslí pro děti do tří let, flexibilní pracovní úvazky – načasování ovlivnit umějí. Pokud se první dítě posune z 31 na 28 let, biologické okno pro druhé dítě se úměrně rozšíří.
-
-Politika zaměřená na snižování věku prvního porodu tak může mít větší demografický účinek než stejné peníze rozdané v dávkách, které na načasování nemíří (co o jednotlivých opatřeních říkají mezinárodní data, srovnáváme [v článku o slibech stran](/specialy/data-pro-budouci-premierku/01-demografie/08-politicke-sliby)).
-
+Jestli by žena, která začne rodit o dva roky dřív, měla za život víc dětí, tyto tabulky nepovědí: ukazují jen průměry. Ročník 1980 dohnal po třicítce víc než ročník 1970, což by dřívější začátek umožňovat mohlo, ale je to hypotéza, kterou data nepotvrzují ani nevyvracejí. Pevnější je zjištění ČSÚ: kdyby zůstala situace roku 2025, zůstalo by bez dětí až 38 % žen. Co čekat od ročníku 1990, kterému je dnes 36 let, ukazujeme v [článku o kohortní plodnosti](/specialy/data-pro-budouci-premierku/01-demografie/07-kohortni-plodnost).
