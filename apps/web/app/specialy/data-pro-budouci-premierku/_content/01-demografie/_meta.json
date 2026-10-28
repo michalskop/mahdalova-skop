@@ -27,16 +27,18 @@
     {
       "slug": "02-co-znamena-plodnost",
       "topic": "Explainer",
+      "image": "/specialy/dpbp/og/01-demografie/02-co-znamena-plodnost/cover-og.jpg", "imageAspect": "1200 / 630",
       "related": [
         { "slug": "07-kohortni-plodnost", "label": "Explainer" },
         { "slug": "13-generace-z", "label": "Analýza" }
       ]
     },
-    { "slug": "03-svet-populace", "topic": "Svět" },
-    { "slug": "04-skandinavska-past", "topic": "Evropa" },
+    { "slug": "03-svet-populace", "topic": "Svět", "image": "/specialy/dpbp/og/01-demografie/03-svet-populace/cover-og.jpg", "imageAspect": "1200 / 630" },
+    { "slug": "04-skandinavska-past", "topic": "Evropa", "image": "/specialy/dpbp/og/01-demografie/04-skandinavska-past/cover-og.jpg", "imageAspect": "1200 / 630" },
     {
       "slug": "05-cas-rodicovstvi",
       "topic": "Analýza",
+      "image": "/specialy/dpbp/og/01-demografie/05-cas-rodicovstvi/cover-og.jpg", "imageAspect": "1200 / 630",
       "related": [
         { "slug": "09-pary-a-partnerstvi", "label": "Analýza" },
         { "slug": "14-vzdelanostni-propast", "label": "Analýza" },
@@ -46,17 +48,19 @@
     {
       "slug": "16-starnuti-populace",
       "topic": "Analýza",
+      "image": "/specialy/dpbp/og/01-demografie/16-starnuti-populace/cover-og.jpg", "imageAspect": "1200 / 630",
       "related": [
         { "slug": "17-migrace-demografie", "label": "Explainer" },
         { "slug": "15-volicska-zakladna", "label": "Analýza" }
       ]
     },
-    { "slug": "11-vylidnovani-obci", "topic": "Analýza" },
-    { "slug": "10-data-porody", "topic": "Investigace" },
-    { "slug": "12-mezinarodni-srovnani", "topic": "Komparace" },
+    { "slug": "11-vylidnovani-obci", "topic": "Analýza", "image": "/specialy/dpbp/og/01-demografie/11-vylidnovani-obci/cover-og.jpg", "imageAspect": "1200 / 630" },
+    { "slug": "10-data-porody", "topic": "Investigace", "image": "/specialy/dpbp/og/01-demografie/10-data-porody/cover-og.jpg", "imageAspect": "1200 / 630" },
+    { "slug": "12-mezinarodni-srovnani", "topic": "Komparace", "image": "/specialy/dpbp/og/01-demografie/12-mezinarodni-srovnani/cover-og.jpg", "imageAspect": "1200 / 630" },
     {
       "slug": "08-politicke-sliby",
-      "topic": "Analýza"
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/01-demografie/08-politicke-sliby/cover-og.jpg", "imageAspect": "1200 / 630"
     }
   ]
 }
