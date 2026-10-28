@@ -37,6 +37,16 @@ const FORMATY = { // medaile co nejblíž k textu a co největší, ale stuha po
   og: { W: 1200, H: 630, disk: [770, 375, 168], stuha: 0.5 },
 };
 // článek o ženách má třířádkový titulek: na homepage medaile níž a menší, aby stuha nevjela do titulku
+// článek …-komu: legenda kratší (jen prezidenti), medaile větší a výš; poznámka „1 tečka = …“ vpravo dole na úrovni loga
+// POZNAMKA[klic] = [pravý okraj x, účaří y, velikost písma] – pravý okraj bezpečné zóny, účaří loga DataTimes.cz
+const POZNAMKA = { homepage: [1320, 1066, 27], square: [1010, 999, 24], instagram: [1010, 1229, 24], story: [1000, 1556, 26], og: [880, 576, 15] };
+if (PODLE_PREZIDENTU) Object.assign(FORMATY, {
+  homepage: { ...FORMATY.homepage, disk: [1090, 730, 295], stuha: 0.4 },
+  square: { ...FORMATY.square, disk: [790, 685, 262], stuha: 0.4 },
+  instagram: { ...FORMATY.instagram, disk: [680, 840, 330], stuha: 0.4 },
+  story: { ...FORMATY.story, disk: [540, 1180, 300], stuha: 0.4 },
+  og: { ...FORMATY.og, disk: [770, 360, 185], stuha: 0.4 },
+});
 if (!PODLE_PREZIDENTU) FORMATY.homepage = { ...FORMATY.homepage, disk: [1050, 880, 270], stuha: 0.5 };
 if (!PODLE_PREZIDENTU) FORMATY.story = { ...FORMATY.story, disk: [540, 1258, 235], stuha: 0.4 };
 const f1 = (v) => v.toFixed(1);
@@ -73,6 +83,10 @@ function medaile(klic, barva = barvaPodleDat, navic = null) {
     const x = cx + rr * Math.cos(a), y = cy + rr * Math.sin(a);
     svg += `<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(r)}" fill="${barva(i)}"/>`;
     if (navic) nad += navic(i, x, y, r);
+  }
+  if (PODLE_PREZIDENTU && POZNAMKA[klic]) {
+    const [px, py, ps] = POZNAMKA[klic];
+    nad += `<text x="${px}" y="${py}" text-anchor="end" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="500" font-size="${ps}" fill="#f8f6f0">1 tečka = 1 vyznamenání 1995–2025</text>`;
   }
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${F.W}" height="${F.H}" viewBox="0 0 ${F.W} ${F.H}">${svg}${nad}</svg>`;
 }
