@@ -82,7 +82,23 @@ function kartaGrafu(soubor, top, spodek = 1215) {
     + `<image x="${f1(x)}" y="${top + pad}" width="${f1(iw)}" height="${f1(ih)}" href="data:image/png;base64,${png.toString('base64')}"/>`;
 }
 
-// Sloupce ročníků jednoho prezidenta (podle karuselu Moravec.cz): hodnota nad sloupcem, rekord zakroužkovaný s poznámkou
+// Zakulacená šipka od poznámky k hodnotě (Kateřina 28. 10.: místo kroužku kolem čísla): text vedle a nad hodnotou,
+// oblouk (kubická Bézierova křivka) končí nad číslem, hrot ze dvou čar s kulatými konci. strana 1 = text vpravo.
+function sipka(cx, cy, poznamka, strana = 1, barva = '#ffcf02') {
+  const tx = cx + strana * 110, ty = cy - 95; // účaří poznámky
+  const [sx, sy] = [tx - strana * 14, ty - 10]; // začátek u textu
+  const [ex, ey] = [cx + strana * 10, cy - 8]; // konec nad hodnotou
+  const c1 = [sx - strana * 75, sy - 6], c2 = [ex + strana * 12, ey - 70];
+  const d = Math.hypot(ex - c2[0], ey - c2[1]), ux = (ex - c2[0]) / d, uy = (ey - c2[1]) / d;
+  const hrot = (uhel) => { const c = Math.cos(uhel), sn = Math.sin(uhel); return [ex - 20 * (ux * c - uy * sn), ey - 20 * (ux * sn + uy * c)]; };
+  const [h1, h2] = [hrot(0.55), hrot(-0.55)];
+  const tah = `stroke="${barva}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"`;
+  return `<path d="M${f1(sx)},${f1(sy)} C${f1(c1[0])},${f1(c1[1])} ${f1(c2[0])},${f1(c2[1])} ${f1(ex)},${f1(ey)}" ${tah}/>`
+    + `<path d="M${f1(h1[0])},${f1(h1[1])} L${f1(ex)},${f1(ey)} L${f1(h2[0])},${f1(h2[1])}" ${tah}/>`
+    + text(tx, ty, poznamka, { size: 30, w: 600, fill: barva, anchor: strana > 0 ? 'start' : 'end' });
+}
+
+// Sloupce ročníků jednoho prezidenta (podle karuselu Moravec.cz): hodnota nad sloupcem, u rekordu poznámka se šipkou
 function sloupcePrezidenta(roky, barva, { y0 = 640, y1 = 1130, max = 110, kruh, poznamka } = {}) {
   const x0 = 90, x1 = 990, krok = (x1 - x0) / roky.length, sirka = Math.min(90, krok * 0.72);
   const y = (v) => y1 - (v / max) * (y1 - y0);
@@ -93,10 +109,7 @@ function sloupcePrezidenta(roky, barva, { y0 = 640, y1 = 1130, max = 110, kruh, 
     s += text(cx, y(n) - 16, n, { size: 34, w: 700, fill: KREM, anchor: 'middle' });
     const radky = String(popis).split('|');
     radky.forEach((r, j) => { s += text(cx, y1 + 40 + j * 28, r, { size: j ? 22 : 26, w: j ? 500 : 600, fill: j ? POPIS : KREM, anchor: 'middle' }); });
-    if (kruh === i) {
-      s += `<circle cx="${f1(cx)}" cy="${f1(y(n) - 27)}" r="44" fill="none" stroke="#ffcf02" stroke-width="4"/>`;
-      if (poznamka) s += text(cx > 600 ? cx - 60 : cx + 60, y(n) - 50, poznamka, { size: 28, w: 600, fill: '#ffcf02', anchor: cx > 600 ? 'end' : 'start' });
-    }
+    if (kruh === i && poznamka) s += sipka(cx, y(n) - 52, poznamka, cx > 600 ? -1 : 1);
   });
   s += `<line x1="${x0}" x2="${x1}" y1="${y1}" y2="${y1}" stroke="${KREM}" stroke-opacity=".5"/>`;
   return s;
