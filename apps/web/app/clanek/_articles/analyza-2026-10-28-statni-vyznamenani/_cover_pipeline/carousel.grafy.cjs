@@ -70,4 +70,36 @@ function legenda(polozky, x, y, size = 26) {
   return s;
 }
 
-module.exports = { W, H, KREM, POPIS, ZENY, MUZI, PREZ_BARVY, PREZ_JMENA, PORADI, f1, cislo, svg, text, zaznamy, pruhy, sloupceRoky, legenda };
+// Graf z článku (PNG z grafy-z-clanku.cjs) na béžové kartě jako v článku; vejde se do [70, top]–[1010, spodek]
+function kartaGrafu(soubor, top, spodek = 1215) {
+  if (!fs.existsSync(soubor)) throw new Error(`chybí ${soubor} – spusť nejdřív grafy-z-clanku.cjs`);
+  const png = fs.readFileSync(soubor);
+  const w = png.readUInt32BE(16), h = png.readUInt32BE(20);
+  const pad = 22, maxW = 940 - 2 * pad, maxH = spodek - top - 2 * pad;
+  const k = Math.min(maxW / w, maxH / h), iw = w * k, ih = h * k;
+  const x = (W - iw) / 2;
+  return `<rect x="${f1(x - pad)}" y="${top}" width="${f1(iw + 2 * pad)}" height="${f1(ih + 2 * pad)}" rx="16" fill="#f8f6f0"/>`
+    + `<image x="${f1(x)}" y="${top + pad}" width="${f1(iw)}" height="${f1(ih)}" href="data:image/png;base64,${png.toString('base64')}"/>`;
+}
+
+// Sloupce ročníků jednoho prezidenta (podle karuselu Moravec.cz): hodnota nad sloupcem, rekord zakroužkovaný s poznámkou
+function sloupcePrezidenta(roky, barva, { y0 = 640, y1 = 1130, max = 110, kruh, poznamka } = {}) {
+  const x0 = 90, x1 = 990, krok = (x1 - x0) / roky.length, sirka = Math.min(90, krok * 0.72);
+  const y = (v) => y1 - (v / max) * (y1 - y0);
+  let s = '';
+  roky.forEach(({ popis, n, tlumene }, i) => {
+    const cx = x0 + i * krok + krok / 2;
+    s += `<rect x="${f1(cx - sirka / 2)}" y="${f1(y(n))}" width="${f1(sirka)}" height="${f1(Math.max(2, y1 - y(n)))}" rx="3" fill="${barva}"${tlumene ? ' opacity=".45"' : ''}/>`;
+    s += text(cx, y(n) - 16, n, { size: 34, w: 700, fill: KREM, anchor: 'middle' });
+    const radky = String(popis).split('|');
+    radky.forEach((r, j) => { s += text(cx, y1 + 40 + j * 28, r, { size: j ? 22 : 26, w: j ? 500 : 600, fill: j ? POPIS : KREM, anchor: 'middle' }); });
+    if (kruh === i) {
+      s += `<circle cx="${f1(cx)}" cy="${f1(y(n) - 27)}" r="44" fill="none" stroke="#ffcf02" stroke-width="4"/>`;
+      if (poznamka) s += text(cx > 600 ? cx - 60 : cx + 60, y(n) - 50, poznamka, { size: 28, w: 600, fill: '#ffcf02', anchor: cx > 600 ? 'end' : 'start' });
+    }
+  });
+  s += `<line x1="${x0}" x2="${x1}" y1="${y1}" y2="${y1}" stroke="${KREM}" stroke-opacity=".5"/>`;
+  return s;
+}
+
+module.exports = { W, H, KREM, POPIS, ZENY, MUZI, PREZ_BARVY, PREZ_JMENA, PORADI, f1, cislo, svg, text, zaznamy, pruhy, sloupceRoky, legenda, kartaGrafu, sloupcePrezidenta };
