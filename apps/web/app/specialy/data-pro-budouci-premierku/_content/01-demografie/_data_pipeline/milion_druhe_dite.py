@@ -50,22 +50,30 @@ odhad_druhe25 = round(celkem25 * podil24)
 print(f"ODHAD 2025: {odhad_druhe25:,} druhých dětí → {odhad_druhe25 * ODMENA / 1e9:.1f} mld. Kč (stejný podíl jako 2024)")
 
 # --- scénáře: kolik by stálo jedno dítě, které by se bez odměny nenarodilo ---
-# Dítě „navíc“ = druhé dítě, které by se bez odměny nenarodilo. Ostatní dostanou milion, i když by se narodily tak jako tak.
+# Dítě „navíc“ = druhé dítě, které by se bez odměny nenarodilo. Milion dostane každé druhé dítě, tedy i ti navíc:
+# výplata celkem = (druhé děti dnes + děti navíc) × 1 mil.; cena dítěte navíc = výplata celkem / děti navíc.
+def scenar(deti_navic):
+    celkem = (d24["druhe"] + deti_navic) * ODMENA
+    return {
+        "deti_navic": round(deti_navic),
+        "navic_pct": round(deti_navic / d24["druhe"] * 100, 1),
+        "vyplata_mld": round(celkem / 1e9, 1),
+        "cena_na_dite_navic_mil": round(celkem / deti_navic / 1e6, 1),
+        # z každých 100 vyplacených milionů míří k dětem navíc:
+        "z_100_navic": round(deti_navic / (d24["druhe"] + deti_navic) * 100),
+    }
+
 scenare = []
 for navic_pct in (1, 5, 10, 20):
-    narozeno_navic = d24["druhe"] * navic_pct / 100
-    scenare.append({
-        "navic_pct": navic_pct,
-        "deti_navic": round(narozeno_navic),
-        "cena_na_dite_navic_mil": round(cena24 / narozeno_navic / 1e6, 1),
-    })
-    print(f"  +{navic_pct} % druhých dětí = {round(narozeno_navic):,} dětí navíc → {cena24 / narozeno_navic / 1e6:.1f} mil. Kč na dítě navíc")
+    sc = scenar(d24["druhe"] * navic_pct / 100)
+    scenare.append(sc)
+    print(f"  +{navic_pct} % druhých dětí = {sc['deti_navic']:,} dětí navíc → výplata {sc['vyplata_mld']} mld., {sc['cena_na_dite_navic_mil']} mil. Kč na dítě navíc, ze 100 milionů {sc['z_100_navic']} k dětem navíc")
 
-# kdyby odměna vrátila druhé děti na počet z roku 2021 (nejvyšší po roce 2010 v řadě)
+# kdyby odměna vrátila druhé děti na počet z roku 2021 (rok s nejvyšší plodností od 1991)
 navrat = rows[2021]["druhe"] - d24["druhe"]
-navrat_pct = navrat / d24["druhe"]
-cena_navrat = cena24 / navrat / 1e6
-print(f"návrat na úroveň 2021: +{navrat:,} druhých dětí (+{navrat_pct:.1%}) → {cena_navrat:.1f} mil. Kč na dítě navíc")
+sc = scenar(navrat)
+print(f"návrat na úroveň 2021: +{navrat:,} druhých dětí (+{sc['navic_pct']} %) → výplata {sc['vyplata_mld']} mld., {sc['cena_na_dite_navic_mil']} mil. Kč na dítě navíc")
+navrat_2021 = sc
 
 # --- druhé dítě na 100 žen (tab. 6.12) a co by znamenalo +x % ---
 ws = sheet("csu_demograficka_prirucka_2024_tab_6_12.xlsx")
@@ -94,7 +102,7 @@ print(f"2021 → 2024: celkem −{pokles_celkem:,}, z toho druhé děti −{pokl
         "podil_druhych_2024": round(podil24, 4),
         "odhad_2025": {"druhe": odhad_druhe25, "cena_mld": round(odhad_druhe25 * ODMENA / 1e9, 1), "pozn": "odhad při stejném podílu jako 2024; pořadí za 2025 ČSÚ zatím nezveřejnil"},
         "scenare": scenare,
-        "navrat_2021": {"deti_navic": navrat, "pct": round(navrat_pct, 4), "cena_na_dite_mil": round(cena_navrat, 1)},
+        "navrat_2021": navrat_2021,
         "tfr_druhe": tfr2,
         "pokles_2021_2024": {"celkem": pokles_celkem, "druhe": pokles_druhe},
     }, ensure_ascii=False, indent=1),

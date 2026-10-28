@@ -27,6 +27,8 @@ import FertilityComparisonChart from '@/components/dpbp/FertilityComparisonChart
 import MothersAgeShiftChart from '@/components/dpbp/MothersAgeShiftChart/MothersAgeShiftChart';
 import BirthOrderPictogram from '@/components/dpbp/BirthOrderPictogram/BirthOrderPictogram';
 import PolicyEvidenceCards from '@/components/dpbp/PolicyEvidenceCards/PolicyEvidenceCards';
+import MilionVsRodicak from '@/components/dpbp/MilionZaDruheDite/MilionVsRodicak';
+import MilionKamJdou from '@/components/dpbp/MilionZaDruheDite/MilionKamJdou';
 import {
   CareJourneyScrolly,
   CareAccessMap,
@@ -133,6 +135,8 @@ const mdxComponents = {
   MothersAgeShiftChart,
   BirthOrderPictogram,
   PolicyEvidenceCards,
+  MilionVsRodicak,
+  MilionKamJdou,
   CareJourneyScrolly,
   CareAccessMap,
   EuropeHealthSystems,

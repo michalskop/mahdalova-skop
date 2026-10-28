@@ -102,30 +102,40 @@
  },
  "scenare": [
   {
-   "navic_pct": 1,
    "deti_navic": 332,
-   "cena_na_dite_navic_mil": 100.0
+   "navic_pct": 1.0,
+   "vyplata_mld": 33.5,
+   "cena_na_dite_navic_mil": 101.0,
+   "z_100_navic": 1
   },
   {
-   "navic_pct": 5,
    "deti_navic": 1659,
-   "cena_na_dite_navic_mil": 20.0
+   "navic_pct": 5.0,
+   "vyplata_mld": 34.8,
+   "cena_na_dite_navic_mil": 21.0,
+   "z_100_navic": 5
   },
   {
-   "navic_pct": 10,
    "deti_navic": 3318,
-   "cena_na_dite_navic_mil": 10.0
+   "navic_pct": 10.0,
+   "vyplata_mld": 36.5,
+   "cena_na_dite_navic_mil": 11.0,
+   "z_100_navic": 9
   },
   {
-   "navic_pct": 20,
    "deti_navic": 6636,
-   "cena_na_dite_navic_mil": 5.0
+   "navic_pct": 20.0,
+   "vyplata_mld": 39.8,
+   "cena_na_dite_navic_mil": 6.0,
+   "z_100_navic": 17
   }
  ],
  "navrat_2021": {
   "deti_navic": 10443,
-  "pct": 0.3147,
-  "cena_na_dite_mil": 3.2
+  "navic_pct": 31.5,
+  "vyplata_mld": 43.6,
+  "cena_na_dite_navic_mil": 4.2,
+  "z_100_navic": 24
  },
  "tfr_druhe": {
   "1990": 0.715,
