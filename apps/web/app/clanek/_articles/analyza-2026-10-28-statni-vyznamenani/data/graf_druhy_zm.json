@@ -2,7 +2,7 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "Nejvyšší vyznamenání dostávají skoro jen {muži|#522a7a}, {ženy|#33b9d9} hlavně medaili Za zásluhy",
-  "subtitle": "Počet vyznamenaných podle druhu vyznamenání a prezidenta, 1995–2025: tyrkysově ženy vlevo, fialově muži vpravo. Každá dlaždice má vlastní měřítko. Kliknutím na řádek zobrazíte jména."
+  "subtitle": "Počet vyznamenání podle druhu a prezidenta, 1995–2025: tyrkysově ženy vlevo, fialově muži vpravo. Každá dlaždice má vlastní měřítko. Kliknutím na řádek zobrazíte jména."
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
  "_click_detail": {

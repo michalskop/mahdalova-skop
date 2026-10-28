@@ -202,9 +202,9 @@ id,pohlavi,cizinec,obor,popis,jistota
 771,M,0,veda,"elektrotechnik, rektor ČVUT",vysoka
 772,M,0,odboj_valka,"veterán 2. světové války, generál",stredni
 773,M,0,odboj_valka,veterán východní fronty,stredni
-774,Z,0,protikomunisticky_odboj,"pravděpodobně oběť komunismu, řád za demokracii",nizka
+774,Z,0,protikomunisticky_odboj,"politická vězenkyně, odboj proti komunismu (Wikipedie, iRozhlas 2012)",vysoka
 775,M,0,protikomunisticky_odboj,"pravděpodobně politický vězeň, řád za demokracii",nizka
-776,M,0,protikomunisticky_odboj,"pravděpodobně oběť komunismu, řád za demokracii",nizka
+776,M,0,protikomunisticky_odboj,"skaut, odbojář, vězněn v komunistických táborech, KPV",vysoka
 777,M,0,cirkev,exilový kněz,stredni
-778,M,0,protikomunisticky_odboj,"pravděpodobně politický vězeň, řád za demokracii",nizka
-779,M,0,protikomunisticky_odboj,"pravděpodobně politický vězeň, řád za demokracii",nizka
+778,M,0,protikomunisticky_odboj,"politický vězeň (uranové doly), místopředseda KPV",vysoka
+779,M,0,protikomunisticky_odboj,"odbojová skupina Praha–Žatec, politický vězeň",vysoka

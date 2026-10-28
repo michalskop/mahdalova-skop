@@ -351,7 +351,7 @@ for p in PREZ:
         druh_vals.append({'prezident': PREZ_LABEL[p], 'druh': d, 'počet': c[d],
                           'podíl': round(c[d] / len(s), 4), 'pořadí': i})
 save('graf_druhy.json', {
-    'title': {'text': 'Zeman dával Řád T. G. Masaryka třikrát méně často než Havel a Klaus',
+    'title': {'text': 'Řád T. G. Masaryka tvořil u Zemana třikrát menší podíl vyznamenání než u Havla a Klause',
               'subtitle': 'Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2025'},
     '_source': SRC, '_toggle_legend': True,
     'width': 'container', 'height': 200,
@@ -407,7 +407,7 @@ prez_zacatky = [{'rok': '2002', 'p': 'Havel'}, {'rok': '2012', 'p': 'Klaus'}, {'
 hranice_py = [{'rok': '2002'}, {'rok': '2012'}, {'rok': '2022'}]
 save('graf_zeny.json', {
     'title': {'text': f'Vyznamenání dostávají hlavně {{muži|{MUZ_AMETYST}}}. Za Pavla je {{žen|{ZENA_TEAL}}} víc, zhruba čtvrtina',
-              'subtitle': 'Počet vyznamenaných v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. '
+              'subtitle': 'Počet vyznamenání v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. '
                           'Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
     '_click_detail': {'field': 'jména', 'key': 'rok', 'title': ['rok'],
@@ -684,7 +684,7 @@ tt_druhy = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'druh', 'tit
             {'field': 'podíl_žen', 'title': 'Podíl žen', 'format': '.0%'}, {'field': 'nápověda', 'title': 'Seznam jmen'}]
 save('graf_druhy_zm.json', {
     'title': {'text': f'Nejvyšší vyznamenání dostávají skoro jen {{muži|{MUZ_AMETYST}}}, {{ženy|{ZENA_TEAL}}} hlavně medaili Za zásluhy',
-              'subtitle': 'Počet vyznamenaných podle druhu vyznamenání a prezidenta, 1995–2025: tyrkysově ženy vlevo, fialově muži vpravo. '
+              'subtitle': 'Počet vyznamenání podle druhu a prezidenta, 1995–2025: tyrkysově ženy vlevo, fialově muži vpravo. '
                           'Každá dlaždice má vlastní měřítko. Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
     '_click_detail': {'field': 'jména', 'key': 'key', 'items': druhy_items, 'title': ['prezident', 'druh'],

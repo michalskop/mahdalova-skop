@@ -62,7 +62,7 @@ nezjištěno: žen 11 z 43 (26 %)
 Válka, odboj, armáda dohromady: 297 z 1370 (22 %)
 Nezjištěná oblast: 44 {'Havel': 38, 'Klaus': 3, 'Zeman': 3}
 
-## Nízká jistota klasifikace: 169
+## Nízká jistota klasifikace: 162
 
 ## Tabulka do článku (ženy / muži)
 | Prezident | Řád Bílého lva | Řád T. G. Masaryka | Medaile Za hrdinství | Medaile Za zásluhy | Celkem | Podíl žen |

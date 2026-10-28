@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Zeman dával Řád T. G. Masaryka třikrát méně často než Havel a Klaus",
+  "text": "Řád T. G. Masaryka tvořil u Zemana třikrát menší podíl vyznamenání než u Havla a Klause",
   "subtitle": "Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2025"
  },
  "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
