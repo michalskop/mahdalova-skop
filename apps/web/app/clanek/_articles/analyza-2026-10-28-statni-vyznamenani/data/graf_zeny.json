@@ -1,0 +1,1251 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Vyznamenání dostávají hlavně {muži|#522a7a}. Za Pavla je {žen|#33b9d9} víc, zhruba čtvrtina",
+  "subtitle": "Počet vyznamenání v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. Kliknutím na řádek zobrazíte jména."
+ },
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "_click_detail": {
+  "field": "jména",
+  "key": "rok",
+  "title": [
+   "rok"
+  ],
+  "items": {
+   "1995": "## Ženy (4)\nBettina Fehr\nMarie Christine Wolff Metternich\nMarta Kubišová\nVěra Čáslavská\n## Muži (51)\nLuděk Zeman (in memoriam)\nPetr Pavel\nPetr Valeš (in memoriam)\nAntonín Hampl (in memoriam)\nFerdinand Seibt\nFrantišek Hála (in memoriam)\nHerman Huber\nJan Grossman (in memoriam)\nJan Viktor Mládek (in memoriam)\nJan Werich (in memoriam)\nJaroslav Ježek (in memoriam)\nJiří Suchý\nJiří Voskovec (in memoriam)\nJosef Josten (in memoriam)\nJosef Jílek (in memoriam)\nJosef Pejskar\nKarel Husa\nKarel Kryl (in memoriam)\nKarel-Albrecht Waldstein\nKlaus Juncker\nLubor J. Zink\nMilan Kundera\nMiloš Forman\nVolfgang Jankovec (in memoriam)\nAntonín Hasal (in memoriam)\nFelix Peřka\nJan Bret\nJuan Carlos I.\nLubomír Dvořák\nMiroslav Kácha\nOldřich Skácel\nVeleslav Wahl (in memoriam)\nVladimír Garncarz\nAntonín Alois Weber (in memoriam)\nBraine z Wheatley\nCharles A. Vanik\nFrantišek Langer (in memoriam)\nJosef Fischer (in memoriam)\nKarel Hrubý\nKarel Otčenášek\nKarel Poláček (in memoriam)\nKarel Čapek (in memoriam)\nLadislav Feierabend (in memoriam)\nLadislav Hejdánek\nLadislav Rašín (in memoriam)\nMojmír Povolný\nPavel Tigrid\nRené Wellek\nVilém Brzorád (in memoriam)\nWolfgang Scheur\nZdeněk Rotrekl",
+   "1996": "## Ženy (4)\nBěla Gran Jensenová von Styber\nHana Ponická\nAlžběta II.\nMilena Jesenská (in memoriam)\n## Muži (62)\nAdolf Řepa\nBohumil Borecký\nFilip Kazík\nFrantišek Gšventner\nJan Doležal\nJan Novák\nJaroslav Muzika\nJaroslav Zelinka\nJiří Hartman\nJiří Hubáček\nJiří Suda\nJosef Chudoba\nJosef Chundela\nJosef Koukal\nJosef Palička\nJosef Vychodil\nJozef Muránsky\nMichal Dluhy\nMiroslav Liškutín\nOldřich Židlík\nPetr Kozánek (in memoriam)\nPetr Křivka (in memoriam)\nRoman Čelanský\nRudolf Husa\nVojtěch Eichler\nVáclav Kratochvíl\nŠtěpán Dohodil\nBohumil Hrabal\nCharles Mackerras\nFrancis James Auton\nFrantišek Tichý (in memoriam)\nJan Novák (in memoriam)\nJiří Menzel\nJosef Koutecký\nJosef Sedlák\nMikuláš Medek (in memoriam)\nMilan Mučka\nMilan Nechvátal\nOlbram Zoubek\nVladimír Soukup\nZdeněk Matějček\nAlois Eliáš (in memoriam)\nBernardin kardinál Gantin\nEzer Weizman\nVladimír Nedvěd\nAnton Otte\nAntonín Hřebík (in memoriam)\nAntonín Remeš (in memoriam)\nBlahoslav Hrubý (in memoriam)\nBohumil Vít Tajovský\nDominik Pecka (in memoriam)\nEugéne V. Faucher\nJakub Čermín\nJan Opletal (in memoriam)\nJiří G. Corn (in memoriam)\nJuscelino Kubitschek de Oliveira (in memoriam)\nLudvík Vaculík\nMax van der Stoel\nRadomír Luža\nRudolf Kirchschläger\nSlavomír Klaban\nViktor Fischl",
+   "1997": "## Ženy (9)\nAdriena Šimotová\nJiřina Hauková\nLibuše Moníková\nMilada Blekastadová\nMilena Novotná\nMadeleine K. Albrightová\nDagmar Skálová\nOlga Havlová (in memoriam)\nOtta Bednářová\n## Muži (61)\nAlois Olšan\nDavid Adámek\nFrantišek Žák\nJan Roman Irving\nJaromír Vrba (in memoriam)\nJaroslav Klemeš\nJaroslav Sochora\nJindřich Popelka (in memoriam)\nJiří Flak\nJiří Tršo\nKamil Soldán\nLadislav Uher (in memoriam)\nMichal Kodriš (in memoriam)\nMiroslav Karlec\nPavel Talla\nPavel Špilka\nPetr Uruba\nRaimund Půda\nZdeněk Škarvada\nČestmír Šikola\nAlfréd Kocáb\nAntonín Husník\nDobroslav Líbal\nEwald Osers\nFrantišek Antonín Váňa (in memoriam)\nFrantišek Meloun (in memoriam)\nGyörgy Varga\nIvan Blatný (in memoriam)\nIvan Diviš\nJacek Baluch\nJaroslav Kurzweil\nJiří Kylián\nJosef Lukeš (in memoriam)\nJosef Švejcar (in memoriam)\nKlaus Schaller\nLadislav Varga\nLibor Pešek\nMiloš Bič\nMiroslav Štěpán\nPetr Voznica\nRudolf Macek\nBedřich Neumann (in memoriam)\nFrantišek Peřina\nGeorge A. Joulwan\nJacques Chirac\nJean-Philippe Douin\nJindřich Macháček\nJosef Robotka (in memoriam)\nKarel Jindřich Procházka\nRadovan Procházka\nSergej Vojcechovský (in memoriam)\nFrantišek Halas (in memoriam)\nGorazd (in memoriam)\nJaroslav Drábek (in memoriam)\nJosef Fišera\nKarel Pecka (in memoriam)\nLuboš Hruška\nOtto Mádr\nRadim Palouš\nRichard Glazar\nRudolf Battěk",
+   "1998": "## Ženy (15)\nAnežka Schlattauerová\nEliška Pilařová\nIrena Bernášková (in memoriam)\nDana Němcová\nJana Novotná\nMadelaine Cuendet\nMartina Navrátilová\nVlastimila Kladivová\nVěra Chytilová\nVěra Linhartová\nZora Frkáňová\nJeanne J. Kirkpatrick\nMarie Dubinová\nVlasta Chramostová\nZdena Mašínová (in memoriam)\n## Muži (91)\nAlexander Gjurič (in memoriam)\nAntonín Vendl\nBohumil Vazač\nFrantišek Skokan (in memoriam)\nJan Zelenka \"Hajský\" (in memoriam)\nJiří Krbec\nJosef Pohl (in memoriam)\nKarel Kuttelwascher (in memoriam)\nLadislav Svoboda (in memoriam)\nMarcel Ludikar\nRobert Pavlík\nAlexander Hurný\nAngelo Maria Ripellino (in memoriam)\nBranislav Geryk\nDominik Hašek\nEmil Zátopek\nErazim Kohák\nFrantišek Král\nIvan M. Jelínek\nJan Kačer\nJan Lopatka (in memoriam)\nJaroslav Krejčí\nJaroslav Němec (in memoriam)\nJaroslav Procházka\nJaroslav Strnad\nJeremy D. Rosner\nJindřich Nečas\nJiří Kuběna\nJiří Pelikán\nJiří Syllaba (in memoriam)\nJosef Jelínek\nJosef Topol\nJulian M. Niemczyk\nKarel Pichlík\nMiroslav Verner\nOndrej Páleník\nOtomar Krejča\nPeter W. Rodman\nPetr Bísek\nPetr Uhl\nPetr Vopěnka\nRichard C. Holbrooke\nRoger Scruton\nRudolf Vierhaus\nRudolf Zahradník\nViktor Trnavský\nVlastimil Koutecký\nVáclav Benda\nVáclav Holub\nVáclav Vaško\nZdeněk Hruban\nZdeněk Mastník\nAntonín Mikuláš Číla (in memoriam)\nBedřich Homola (in memoriam)\nChanan Rozen\nFrantišek Slunečko (in memoriam)\nGeorge S. Patton (in memoriam)\nJaroslav Krátký (in memoriam)\nJavier Solana\nJoachim kardinál Meisner\nJohn M. D. Shalikashvili\nJosef Bartík (in memoriam)\nJosef Hyhlík (in memoriam)\nPaul Hatry\nWilliam Jefferson Clinton\nAntonín Huvar\nBedřich Utitz\nEmanuel Viktor Voska (in memoriam)\nEmil Filla (in memoriam)\nHenry A. Kissinger\nJakub S. Trojan\nJan Milíč Lochman\nJaromír Šavrda (in memoriam)\nJaroslav Kašpar-Pátý (in memoriam)\nJaroslav Kvapil (in memoriam)\nJaroslav Mezník\nJaroslav Opat\nJiří Kovtun\nMikuláš Lobkowicz\nNicholas G. Winton\nRichard Belcredi\nRudolf Karel (in memoriam)\nStanislav Drobný\nTomáš Špidlík\nViktor M. Fic\nVilém Prečan\nVladimír Sís (in memoriam)\nVáclav Hyvnar\nVáclav Malý\nVáclav Renč (in memoriam)\nZbigniew Brzezinski",
+   "1999": "## Ženy (5)\nEva Borková\nJaroslava Havlová-Boni (in memoriam)\nJiřina Šiklová\nMeda Mládková\nMargaret Thatcherová\n## Muži (31)\nJosef Slavík (in memoriam)\nKarel Pavlík (in memoriam)\nAdolf Müller\nAntonín Svoboda (in memoriam)\nIvan Hlinka\nJan Hanuš\nJan Procházka (in memoriam)\nJiří Hanzelka\nJosef Adámek\nJosef Cukr\nJosef Suk\nJürgen Braunschweiger\nLadislav Smoljak\nMiroslav Brdička\nMiroslav Zikmund\nOtakar Rambousek\nVladimír Kabeš\nVojtěch Vít\nZdeněk Svěrák\nFrançois Mitterrand (in memoriam)\nGeorge Bush\nHelmut Kohl\nKarl Majcen\nKlaus Naumann\nLech Wałęsa\nMichail Sergejevič Gorbačov\nRonald Reagan\nSimon Wiesenthal\nJosef Karel Matocha (in memoriam)\nOldřich Černý\nPřemysl Janýr (in memoriam)",
+   "2000": "## Ženy (7)\nVlasta Mařáková - Charvátová\nClara Janés\nJeri Laber\nMarie Akvinela Loskotová de Notre Dame\nMarkéta Goetz-Stankiewiczová\nOlga Fierzová (in memoriam)\nPetra Procházková\n## Muži (35)\nBoris Kovaříček (in memoriam)\nTomáš Bayer\nVlastimil Hrbek\nArnošt Lustig\nBruno Leuthold\nEiichi Chino\nIvan Moravec\nJaromír Štětina\nJindřich Waldes (in memoriam)\nJiří Louda\nJosef B. Souček (in memoriam)\nKlement Lukeš\nMilan Uhde\nMiroslav Horníček\nPavel Kučera\nPeter Demetz\nRadovan Lukavský\nRio Preisner\nStanislav Stránský\nTheodor Pištěk\nVáclav Vojta (in memoriam)\nBruno Kreisky (in memoriam)\nJohannes Rau\nOlof Joachim Palme (in memoriam)\nPravomil L. Raichl\nVilém Stanovský (in memoriam)\nWilly Brandt (in memoriam)\nHans Dieter Zimmermann\nJaroslav Musial\nJiří Horák\nJosef Lux (in memoriam)\nMichael Novak\nMilan Machovec\nMiloš Tomčík\nRudolf Jílovský (in memoriam)",
+   "2001": "## Ženy (10)\nAlbína Wiesenbergerová\nAmbér Bousoglou\nDagmar Hochová - Reinhardtová\nJarmila Bělíková\nJaroslava Adamová\nLenka Reinerová\nLibuše Šilhánová\nMarie Brůčková\nZdeňka Pokorná\nBarbara Coudenhove - Kalergi\n## Muži (39)\nJakub Materne\nJaroslav Šelong\nJosef Hasil\nJulián Slepecký\nVladimír Kubíček\nVladimír Struska (in memoriam)\nZdeněk Štich\nDominik Jaroslav Duka\nEric Spiess\nEric Stein\nFrantišek Janouch\nFrantišek Listopad\nJan Waldauf\nJan Wiener\nJan Železný\nJaroslav Blahoš\nJiří Bělohlávek\nJiří Krejčík\nJiří Ruml\nJiří Stránský\nJosef Hiršal\nJosef Istler (in memoriam)\nJosef Kratochvil (in memoriam)\nKarel Hubáček\nLadislav Sutnar (in memoriam)\nMiloš Hájek\nMiloš Rejchrt\nMiroslav Ciboch\nOldřich Holubář\nRainer Kreissl\nVlastimil Brodský\nCarlo Azeglio Ciampi\nFrantišek Lízna\nJindřich Vaško (in memoriam)\nKarel Vrána\nRobert Badinter\nRyszard Siwiec (in memoriam)\nVojtěch Dundr (in memoriam)\nVáclav Chytil (in memoriam)",
+   "2002": "## Ženy (9)\nAnna Fárová\nAnna Šabatová\nCarmen Hegerová (Hana Hegerová)\nEduarda Ottová\nMarie Svatošová\nMilena Hübschmannová\nSoňa Čechová\nStella Zázvorková\nDagmar Burešová\n## Muži (82)\nAntonín Raiskub\nJan Mervart\nJan Paroulek\nJaroslav Český\nJiří Janda\nKarel Hůla\nKarel Kukal\nMilan Vítek\nMiloslav Chejn\nMiroslav Kolenatý\nRadek Andrle\nRadek Interholc\nRudolph Giuliani\nVincenc Koutník\nVáclav Richter\nZdeněk Forejt\nAlbert Černý\nAntonín Holý\nAntonín Měšťan\nAugustin Bubník\nBohuslav Horáček (in memoriam)\nDušan Holý\nFrank Marlow (in memoriam)\nFrantišek Pavlíček\nFrantišek Stárek\nFrantišek Šmahel\nHans Lemberg\nIvan Klíma\nIvan Wernisch\nJan Francis Tříska\nJan Koblasa\nJan Křen\nJan Litomiský\nJan Němec\nJan Peřina\nJan Princ\nJan Tříska\nJan Špáta\nJaroslav Skála\nJiří Dienstbier\nJiří Gruntorád\nJiří Kolář\nJiří Lang\nJiří Loewy\nJiří Malý (in memoriam)\nJiří Němec (in memoriam)\nJosef Koudelka\nJosef Schwarz Červinka\nJosef Vavroušek (in memoriam)\nJoseph Lane Kirkland (in memoriam)\nKarel Holomek\nKarel Nepraš (in memoriam)\nKarel Pilík\nLuboš Ogoun\nMilan Balabán\nMilan Píka\nMilton Cerny\nPavel Juráček (in memoriam)\nPavel Landovský\nPavel Šmok\nPeter Charles Schultz\nPetr Eben\nPetr Zeman\nTomáš Kosta\nVladimír Sova\nVáclav Dvořák\nŠimon Pánek\nGuido Venturoni\nHorst Pleiner\nJosef Duda (in memoriam)\nOto Stehlík\nThomas Ray Wilson\nJacques Rupnik\nKarel Jan Schwarzenberg\nKarol Efraim Sidon\nLadislav Lis (in memoriam)\nLuboš Dobrovský\nMiloslav kardinál Vlk\nPavel Smetana\nRadslav Kinský\nRichard Feder (in memoriam)\nZdeněk Kessler",
+   "2003": "## Ženy (12)\nDana Zátopková\nEmília Vášáryová\nJohanna von Herzogenbergová\nLena May Jegerová\nLenka Janotová\nVlasta Hammerová Průchová\nZdena Tominová\nZuzana Kalabisová - Růžičková\nAntje Vollmerová\nJelena Bonnerová\nLuisa Abrahams\nMary Robinsonová\n## Muži (39)\nGeorges Vergoni (in memoriam)\nJaroslav Novák\nRoman Macharáček\nAdolf Born\nErhard Busek\nFrantišek Vencovský\nHerbert Werner\nIvan Ruller\nIvan Šetlík\nJacek Kuroň\nJiří Kodet\nJosef Liesler\nJúlius Satinský (in memoriam)\nKarel Brožík\nLadislav Chudík\nLászlo Szigeti\nMartin Huba\nMilan Lasica\nPavel Klener\nPeter Dvorský\nRamiro Cibrian Uzal\nTimothy Garton Ash\nVratislav Schreiber\nVáclav Snítil\nWolfgang Bandion\nĽubomír Lipták\nAlexander Dubček (in memoriam)\nAlois Šiška (in memoriam)\nAnton Petrák\nRichard von Weizsäcker\nÁrpád Göncz\nAdam Michnik\nAntonín Sum\nEmil Ludvík\nJaroslav Škarvada\nLubomír Voleník (in memoriam)\nMiroslav Kusý\nSergej Adamovič Kovaljov\nWilly Spühler (in memoriam)",
+   "2004": "## Ženy (3)\nAlena Steindlerová-Vrzáňová\nJana Brejchová\nRadana Königová\n## Muži (19)\nJosef Henke\nJosef Jíra\nJosef Kocourek (in memoriam)\nKarel Kachyňa (in memoriam)\nLadislav Tondl\nMilan Sobotka\nOtakar Vávra\nRoman Šebrle\nVilém Kraus\nVáclav Boštík\nVáclav Hořejší\nZdeněk Mácal\nAleksander Kwaśniewski\nFrantišek Fajtl\nRudolf Severin Krzák (in memoriam)\nArnošt Kubík\nJosef Zlámal\nOtakar Vinklář\nTomáš Sedláček",
+   "2005": "## Ženy (2)\nHelena Illnerová\nJaroslava Brychtová\n## Muži (20)\nMichal Velíšek (in memoriam)\nFranz Olbert\nJaroslav Koutecký (in memoriam)\nJaroslav Šedivý\nJiří Šlitr (in memoriam)\nJosef Somr\nMiroslav Smotlacha\nMojmír Petráň\nPaul Millar\nPetr Pokorný\nPetr Zvolský\nStanislav Kolíbal\nVladimír Jiránek\nVladimír Vonka\nZdeněk Sternberg\nJosef Buršík (in memoriam)\nRudolf Pernický\nJosef Hercz\nMartin František Vích\nStanislav Hlučka",
+   "2006": "## Ženy (5)\nIva Janžurová\nJiřina Jirásková\nKateřina Neumannová\nMatylda Čiháková\nNaděžda Kavalírová\n## Muži (17)\nBoris Rösner (in memoriam)\nJan Klusák\nJindřich Štreit\nJiří Anderle\nJosef Masopust\nMilan Horvát\nMiroslav Ondříček\nPetr Hájek\nVladimír Suchánek\nVladimír Veselý\nZdeněk Miler\nAntonín Špaček\nJosef Bryks (in memoriam)\nKarel Skalický\nMichael Josef Pojezdný\nMiroslav Štandera\nVáclav Kojzar (in memoriam)",
+   "2007": "## Ženy (3)\nAnna Honová\nDagmar Čapková\nMarie Goretti Boltnarová\n## Muži (21)\nMarek Král\nMarián Šovčík\nIlja Hurník\nJan Zemánek\nJan Šrámek\nJiří Horčička (in memoriam)\nJiří Kout\nJiří Stivín\nJiří Vorlíček\nLadislav Sitenský\nLudvík Kundera\nMilan Kantor\nMiroslav Fiedler\nPavel Kolář\nTomáš Klíma\nVáclav Hudeček\nRudolf Hrubec (in memoriam)\nStanislav Hnělička\nFrantišek Zahrádka\nJiří Formánek\nVladimír Bystrov",
+   "2008": "## Ženy (4)\nAlena Šrámková\nGabriela Beňačková\nJindřiška Pavlicová\nMarta Kottová\n## Muži (24)\nPetr Králík\nTomáš Krampla\nZdeněk Lhota\nAntonín Panenka\nBřetislav Pojar\nIvo Hána\nJan Petrof\nJaroslav Šerých\nJosef Petráň\nJosef Podzimek\nKarel Adolf Branald (in memoriam)\nKarel Havelka\nKarel Kaplan\nLudvík Armbruster\nOldřich Jirsák\nPavel Brázda\nVáclav Pačes\nJiří Zenáhlík\nBohuslav Bubník\nFrantišek Wiendl\nJakub Blacký\nJan Graubner\nJaroslav Grosman\nJosef Lesák",
+   "2009": "## Ženy (5)\nEva Pilarová\nHelga Hošková – Weissová\nKvětuše Hyršlová\nAnděla Dvořáková\nJosefína Napravilová\n## Muži (19)\nBoleslav Staněk (in memoriam)\nIvan Steiger\nJiří Krupička\nJosef Musil\nJosef Váňa\nKarel Gott\nMichael Aschermann\nMiloslav Nerad\nPetr Mandl\nVladimír Bartoš\nVáclav Smetana\nZdeněk Ceplecha\nZdeněk Kovařík\nHeinz Fischer\nImrich Gablech\nOtakar Černý (in memoriam)\nFrantišek Šedivý\nJosef Veselý\nPavel Žák",
+   "2010": "## Ženy (5)\nBlanka Wichterlová\nEva Zaoralová\nHana Maciuchová\nMarie Ljalková-Lastovecká\nJulie Hrušková\n## Muži (18)\nFrantišek Daneš\nFrantišek Fráňa\nJaromír Jágr\nJaroslav Nešetřil\nJiří Michal\nKarel Raška\nKarel Šiktanc\nMilan Knížák\nMilan Šamánek\nMiroslav Kutílek\nRoman Hlinovský\nVladimír Válek\nEmil Boček\nJan Plovajko\nLech Aleksander Kaczyński (in memoriam)\nJan Haluza\nJan Janků\nJosef Vlček",
+   "2011": "## Ženy (3)\nAnna Magdalena Schwarzová\nDagmar Lieblová\nMarie Škarecká\n## Muži (18)\nDavid Sukač (in memoriam)\nEmil Viklický\nJan Kruliš-Randa\nJan Černý\nJiří Kukla\nJiří Raška\nJiří Srnec\nMartin Hilský\nPetr Piťha\nVladimír Renčín\nZbyněk Frolík\nJan Velík\nMikuláš Končický\nVáclav Djačuk\nFrantišek Suchý\nKarel Páral\nLadislav Suchomel\nVladimír Lopaťuk",
+   "2012": "## Ženy (3)\nBarbora Špotáková\nGabriela Basařová\nDrahomíra Strouhalová\n## Muži (19)\nRudolf Zvolánek\nIvo Viktor\nJiří Drahoš\nJiří Raboch\nLadislav Bařinka\nLumír Sommer\nMarek Kopelent\nMiroslav Šťastný\nOta Filip\nPetr Wittlich\nVladimír Koza (in memoriam)\nVáclav Havlíček\nAlexander Beer\nVasil Korol\nJosef Plocek\nLeopold Färber\nKarel Jaroslav Fořt\nHubert Procházka\nJaromír Jarmara",
+   "2013": "## Ženy (6)\nEva Syková\nJarmila Kratochvílová\nJiřina Bohdalová\nKamila Moučková\nMarie Uchytilová-Kučová (in memoriam)\nSoňa Červená\n## Muži (24)\nFelix Slováček\nFrantišek Čuba\nFrantišek Šťastný (in memoriam)\nJan Dvořáček\nJan Keller\nJan Kříž\nJan Kůrka\nJan Světlík\nJaroslav Vodička\nJiří Vícha (in memoriam)\nKarel Srp\nLubomír Brabec\nLubomír Lipský\nMiroslav Grégr\nPaul Rausnitz\nPavel Pafko\nPavel Vranský\nPavel Wonka (in memoriam)\nRichard Konkolski\nVáclav Bělohradský\nZdeněk Mahler\nIvan Gašparovič\nErazim Kohák\nJiří Suchý",
+   "2014": "## Ženy (10)\nBožena Fuková\nDana Drábová\nLucie Bílá\nLeticie Vránová - Dytrychová\nMarie Vodičková\nNatalja Jevgenjevna Gorbaněvská (in memoriam)\nVěra Olivová\nHana Hegerová\nMaria Böhmer\nMichaela Küchler\n## Muži (28)\nDavid Beneš (in memoriam)\nIvo Klusák (in memoriam)\nJan Šenkýř (in memoriam)\nJaroslav Lieskovan (in memoriam)\nJaroslav Mevald\nLibor Ligač (in memoriam)\nAntonín Kalina (in memoriam)\nCarl Horst Hahn\nFilip Renč\nGeorge Alois Novak\nJosef Toufar (in memoriam)\nJosef Štemberka (in memoriam)\nLudvík Kalma (in memoriam)\nPavel Dungl\nRobert Sedláček\nZdeněk Duběnka\nZdeněk Jičínský\nZdeněk Klanica (in memoriam)\nFranz Vranitzky\nJoachim Gauck\nNicholas Winton\nRobert Fico\nWinston Churchill (in memoriam)\nDavid Gill\nDetlef Lingemann\nEduard Harant\nKarel Kryl (in memoriam)\nMiroslav Zikmund",
+   "2015": "## Ženy (5)\nDanuše Táborská\nHelena Fibingerová\nJitka Frantová Pelikánová\nLibuše Šafránková\nMarie Svatošová\n## Muži (31)\nPetr Vejvoda (in memoriam)\nAleš Knížek\nAntonín Jaroslav Liehm\nArmin Delong\nBohdan Pomahač\nDalibor Dědek\nEduard Janota (in memoriam)\nFrantišek Radkovský\nFrantišek Čech\nJan Petránek\nJaroslav Rybka\nJiří Hlavatý\nJiří Mánek\nJiří Žáček\nJúlius Binder\nKarel Weirich (in memoriam)\nLadislav Štaidl\nLudvík Hess\nLudvík Karl\nMilan Teplý\nMiroslav Toman\nPavel Dostál (in memoriam)\nPavel Nedvěd\nPavel Šporcl\nPetr Moos\nVáclav Neckář\nVáclav Pavlíček\nVáclav Petříček\nAbdullah II. bin Al Hussein\nJosef František (in memoriam)\nFrantišek Kriegel (in memoriam)",
+   "2016": "## Ženy (5)\nEva Filipi\nJudita Štouračová\nVěra Růžičková\nGrażyna Bernatowicz\nKatarzyna Kacperczyková\n## Muži (33)\nJiří Nesázal\nJosef Sousedík (in memoriam)\nDaniel Hůlka\nFrantišek Piškanin\nJaromír Šlápota\nJaroslav Feyereisl\nJaroslav Povšík\nJindřich Goetz (in memoriam)\nJiří Boček\nJosef Mandík (in memoriam)\nJuraj Jakubisko\nKarel Kosík (in memoriam)\nLuděk Pik (in memoriam)\nPavel Budinský\nPetr Chmela\nPetr Robejšek\nViliam Sivek\nŠtěpán Popovič\nAlois Dubec\nAndrzej Duda\nDominik kardinál Duka OP\nFerdinand Trauttmansdorff\nGünter Verheugen\nJaroslav Klemeš\nKarel Janoušek (in memoriam)\nKarel Kutlvašr (in memoriam)\nKarel Kuttelwascher (in memoriam)\nAdam Kwiatkowski\nAndrzej Dera\nHanuš Holzer (in memoriam)\nJan Kačer\nKrzysztof Szczerski\nValtr Komárek (in memoriam)",
+   "2017": "## Ženy (11)\nAnděla Haida (roz. Beníčková)\nMarie Michajlovna Rochlina\nEliška Hašková - Coolidge\nEva Urbanová\nHelena Vondráčková\nJarmila Schmidtová Šuláková\nMartina Sáblíková\nSoňa Nevšímalová\nSvětlana Alexejevna Gannuškina\nValerie Fjodorovna Vasiljevová\nYvetta Simonová\n## Muži (38)\nAntonín Šubrt (in memoriam)\nArnošt Polák\nBoris Ivanovič Zvegincev\nIvan Oto Schwarz\nJan Odermatt (in memoriam)\nJan Přikryl (in memoriam)\nJohn Pemberton\nRudolf Čapek\nVladimir Ivanovič Dymkov\nVáclav Haase (in memoriam)\nAleš Weiter\nBoris Šťastný\nJan Procházka\nJan Skopeček\nJaromír Nohavica\nJaroslav Foglar (in memoriam)\nJaroslav Pollert\nJaroslav Šesták\nJuraj Kukura\nKarel Loprais\nLubomír Stoklásek\nLuděk Sobota\nMilan Zelený\nMiroslav Wajsar\nPetr Žantovský\nStanislav Štýs\nVladimír Mařík\nVlastimil Vondruška\nZdeněk Troška\nŠtefan Margita\nBorut Pahor\nGerhard Fritz Kurt Schröder\nKarel Pezl\nLudvík Krejčí (in memoriam)\nMichael Häupl\nCharles Craine (in memoriam)\nJože Plečnik (in memoriam)\nPetr Beck",
+   "2018": "## Ženy (8)\nDarina Nešporová\nAlena Vitásková\nEster Ledecká\nHelena Suková\nIvanka Kohoutová\nJana Lorencová\nLenka Procházková\nPetra Kvitová\n## Muži (34)\nKamil Beneš (in memoriam)\nMartin Marcin (in memoriam)\nPatrik Štěpánek (in memoriam)\nErik Best\nIvan Vyskočil\nJan Fencl\nJaroslav Strnad\nJiří Krampol\nKarel Kolomazník\nKarel Sýs\nMichal David\nMichal Macháček\nMichal Majtán\nMilan Fiľo\nMilan Syruček\nMiloš Pešek\nMiloš Velemínský\nOndřej Hejma\nPavol Krúpa\nPetr Čech\nRadek Štěpánek\nVadim Petrov\nVáclav Větvička\nZdeněk Souček\nZdeněk Zbořil\nAntonín Švehla (in memoriam)\nJan Gajdoš (in memoriam)\nJosef Bílý (in memoriam)\nKarel Husárek (in memoriam)\nKarel Lánský\nStanislav Čeček (in memoriam)\nGiuseppe Leanza\nMartin Filipec\nRajko Doleček (in memoriam)",
+   "2019": "## Ženy (6)\nBožena Ivanová\nJarmila Halbrštatová\nEliška Junková - Khásová (in memoriam)\nHana Moučková\nHelena Haškovcová\nXu Weizhu\n## Muži (36)\nDavid Michajlak\nKarel Kněz (in memoriam)\nKurt Taussig (in memoriam)\nTomáš Procházka (in memoriam)\nAntonín Doležal\nEmir Kusturica\nJan Mašát\nJan Saudek\nJan Schneider\nJan Struž\nJaromír Jágr\nJaroslav Madunický\nJiří Rajlich\nJosef Kalbáč\nJosef Podstata\nJosef Zíma\nKamil Lhoták (in memoriam)\nLibor Podmol\nLuboš Petruželka\nMichal Lukeš\nMilan Pernica\nMiloslav Kala\nPavel Smutný\nPetr Hrdlička\nPetr Martan\nRudolf Ovčaří\nVladimír Plašil\nBohuslav Ečer (in memoriam)\nEmil Boček\nHelmut Zilk (in memoriam)\nJan Antonín Baťa (in memoriam)\nJaroslav Selner (in memoriam)\nJosef Ocelka (in memoriam)\nRudolf Schuster\nVáclav Klaus\nJan Jelínek (in memoriam)",
+   "2020": "## Ženy (3)\nJana Březinová\nAlena Štěpánková Veselá\nEva Erbenová\n## Muži (34)\nPetr Lang (in memoriam)\nVladimír Šupa\nDaniel Miklós\nEduard Stehlík\nFrantišek Hezoučký\nJan Rýdl\nJaroslav Falta\nJaroslav Matýs\nJiří Běhounek\nJiří Jelínek\nJiří Ošecký (in memoriam)\nJosef Dvořák\nJosef Černý\nJosef Šmukař\nKarel Brückner\nKarel Fiala (in memoriam)\nMartin Vondrášek\nPavel Trávníček\nPeter Weiss\nPetr Nováček\nPetr Čornej\nPetr Šnajdárek\nRadim Uzel\nTan Trinh\nTomáš Cihlář\nVladimír Dohnal\nVáclav Fanta\nVáclav Nedomanský\nFrantišek Chábera (in memoriam)\nHeliodor Píka (in memoriam)\nJosef Koukal (in memoriam)\nKarel Gott (in memoriam)\nMiloslav Masopust\nRoman Prymula",
+   "2021": "## Ženy (2)\nMichaela Tichá (in memoriam)\nJiřina Bohdalová\n## Muži (27)\nJiří Baloun\nZdeňek Poul\nEmil Šneberg\nFrantišek Filip (in memoriam)\nGevorg Avetisjan\nJan Horal (in memoriam)\nKarel Blahna\nKarel Hanzl\nKarel Vágner\nLukáš Krpálek\nMichal Mejstřík (in memoriam)\nMilan Maxim\nMiloš Michlovský\nMiroslav Černošek\nPavel Foltán\nPavel Žák\nRobert Klein (in memoriam)\nRobert Kvaček\nVladimír Komárek (in memoriam)\nVojtěch Šustek\nVáclav Krása\nAleksandar Vučić\nAlexander Hess (in memoriam)\nAlfred Duff Cooper (in memoriam)\nPetr Kellner (in memoriam)\nVladimír Remek\nKarel Raška (in memoriam)",
+   "2022": "## Ženy (8)\nAngelika Ivana Pintířová\nEva Kubala Havrdová\nHana Zagorová (in memoriam)\nIvana Trumpová (in memoriam)\nJuliána Ludmila Zatloukalová-Coufalová (in memoriam)\nMichaela Vidláková\nMilena Černá (in memoriam)\nVěra Doušová\n## Muži (70)\nBedřich Koula (in memoriam)\nFrantišek Skorkovský (in memoriam)\nJan Košík\nJan Weinert (in memoriam)\nJan Černý (in memoriam)\nJaroslav Bolfík\nJaroslav Fila (in memoriam)\nJaroslav Klíma (in memoriam)\nJosef Adamec (in memoriam)\nJosef Matoušek (in memoriam)\nJosef Serinek (in memoriam)\nMarek Frauwirth (in memoriam)\nMarek Klimus\nMarek Vrba (in memoriam)\nMartin Semecký\nMiroslav Fenik (in memoriam)\nPetr Matouš\nTomáš Houška (in memoriam)\nTomáš Neškodný\nTomáš Vlasák\nVáclav Šaffránek (in memoriam)\nBoris Šťastný\nEmil Dračka\nFrank Joseph Malina (in memoriam)\nFrantišek Janula (in memoriam)\nFrantišek Pošta (in memoriam)\nGustav Oplustil (in memoriam)\nIvan Lendl\nIvan Sedláček\nJakub Vágner\nJan Betka\nJan Kaše\nJan Slabák\nJaroslav Malý\nJaroslav Třešňák\nJaroslav Čvančara\nJehuda Bacon\nJiří Holík\nJiří Kotyk\nJiří Mareček\nJustin Jan Berka\nKarel Čáslavský (in memoriam)\nMartin Hrbáč\nMichal Burian\nMiloslav Fiala\nMiloslav Kalaš\nMiloš Štědroň\nMiroslav Jansta\nMiroslav Zavoral\nMiroslav Žbirka (in memoriam)\nOldřich Lichtenberg\nPavel Stodůlka\nPavel Vršecký\nPavel Šlampa\nPetr Marek\nPetr Mlsna\nTomáš Jirsa\nVladimír Bílek\nVladimír Vlček\nVladislav Třeška\nVáclav Klemák\nJosef Balabán (in memoriam)\nJosef Hubáček (in memoriam)\nJosef Stehlík (in memoriam)\nJosef Vladimír Mašín st. (in memoriam)\nKarel Lukas (in memoriam)\nVojtěch Boris Luža (in memoriam)\nVolodymyr Oleksandrovyč Zelenskyj\nVáclav Morávek (in memoriam)\nLadislav Mňačko (in memoriam)",
+   "2023": "## Ženy (16)\nBožena Jirků\nDina Štěrbová\nEva Graham\nEva Kantůrková\nEva Opravilová\nHana Dvořáková\nHelena Tlaskalová – Hogenová\nIda Kelarová\nKvěta Pacovská (in memoriam)\nMagdaléna Kožená\nOlga Sommerová\nVěra Vávrová\nHana Librová\nJarmila Stibicová\nMarta Kubišová\nZdeňka Mašínová\n## Muži (49)\nJan Dvořák (in memoriam)\nJiří Pavel Kafka\nJiří Štěpánek\nJosef Bernat (in memoriam)\nMartin Salay\nOldřich Doležal (in memoriam)\nPavel Farka\nPetr Jirout\nStanislav Zimprich (in memoriam)\nBedřich Moldan\nDavid Lukáš\nFrantišek Mertl\nGünter Geyer\nIvan Klánský\nJaroslav Jíra\nJaroslav Němeček\nJiří Bartoška\nJiří Chvála\nJiří Grygar\nJosef Fanta\nJosef Jařab\nJosef Neček\nJosef Pešek\nKvětoslav Mašita\nMarek Svoboda\nMartin Povejšil (in memoriam)\nMiloslav Nevrlý\nMiloň Čepelka\nMiroslav Kopřiva\nMiroslav Masák\nPetr Kostka\nPetr Sís\nRadek Jaroš\nViktor Preiss\nVladimír Beneš\nVladimír Mišík\nVladimír Staněk\nAlexander Van der Bellen\nFrantišek Pecháček (in memoriam)\nKarel Mareš (in memoriam)\nKarel Schwarzenberg\nMilan Rastislav Štefánik (in memoriam)\nPavel Rychetský\nPetr Pithart\nIlja Hradecký\nJan Sokol (in memoriam)\nJan Šolc\nMilan Uhde\nTomáš Halík",
+   "2024": "## Ženy (20)\nKateřina Laluhová\nAgnieszka Holland\nDagmar Pecková\nDaniela Kolářová\nDita Horochovská\nEmilie Vallová\nHelena Třeštíková\nJana Hlaváčová (in memoriam)\nKarin Lednická\nKateřina Šédová\nLucie Hyblerová\nMarie Rottrová\nRadka Denemarková\nRadka Vernerová\nYvonna Gaillyová\nZdeňka Prokopová\nŠtěpánka Hilgertová\nEva Jiřičná\nZuzana Čaputová\nAnna Šabatová\n## Muži (39)\nJosef Keprt (in memoriam)\nKarel Kučera (in memoriam)\nLukáš Dudík\nLukáš Hirka\nOldřich Pechal (in memoriam)\nRoman Juřena\nAlexander Wiegand\nDaniel Anýž (in memoriam)\nIvan Trojan\nJan Gruntorád\nJan Švejnar\nJaroslav Rudiš\nJaroslav Vild\nJaroslav Vostrý\nJiří Netík\nJiří Sozanský\nLadislav Krištoufek\nLuděk Munzar (in memoriam)\nMark Rieder\nMartin Doktor\nMustafa Džemilev\nOndřej Vetchý\nPavel Kosatík\nPetr Dvořák\nPetr Janda\nPetr Sýkora\nRoman Červenka\nVladimír Smutný\nZdeněk Štybar\nFrantišek Moravec (in memoriam)\nJiří Kylián\nSergěj Jan Ingr (in memoriam)\nDaniel Kroupa\nJan Pavel II. (in memoriam)\nJens Stoltenberg\nJosef Suchár\nKarel Kovanda\nPavel Pecháček (in memoriam)\nWilliam Jefferson Clinton",
+   "2025": "## Ženy (13)\nAnna Malinová (in memoriam)\nAnna Geislerová\nDana Krejčířová\nDanuše Steinová\nJiřina Bartůňková\nVěra Fina\nZdenka Wasserbauerová\nZuzana Baudyšová\nŠárka Pospíšilová\nDana Drábová (in memoriam)\nMartina Navrátilová\nMáxima\nDana Němcová (in memoriam)\n## Muži (38)\nArnošt Valenta (in memoriam)\nDavid Hurák\nJakub Černý\nJosef Svatoň (in memoriam)\nKarel Klinovský\nMartin Černý\nŠimon Malý\nAlois Švehlík (in memoriam)\nDavid Kratochvíl\nFrantišek Kopřiva\nGerhardt Bubník\nJakub Hrůša\nJan Dvořák\nJan Kaplický (in memoriam)\nJan Starý\nJan Vítek\nJiří Tichota\nJosef Dostál\nJosef Průša\nJosef Vágner (in memoriam)\nKarel Řehka\nLibor Lochman\nMartin Dorazín\nMartin Fuksa\nMiloš Zapletal (in memoriam)\nOndřej Felix\nOndřej Hes (in memoriam)\nPetr Oslzlý\nPetr Ošlejšek\nTomáš Jungwirth\nTomáš Pojar\nFilip\nHugo Vojta (in memoriam)\nJaromír Nechanský (in memoriam)\nVilém-Alexandr\nZdeněk Svěrák\nOtakar Motejl (in memoriam)\nŠimon Pánek"
+  },
+  "rows": [
+   {
+    "field": "celkem",
+    "label": "Vyznamenáno celkem"
+   }
+  ],
+  "split": [
+   {
+    "field": "ženy",
+    "label": "Ženy",
+    "color": "#33b9d9"
+   },
+   {
+    "field": "muži",
+    "label": "Muži",
+    "color": "#522a7a"
+   }
+  ]
+ },
+ "width": "container",
+ "height": 527,
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "1995",
+      "pohlaví": "žena",
+      "x0": -4,
+      "x1": 0,
+      "počet": 4,
+      "ženy": 4,
+      "muži": 51,
+      "celkem": 55,
+      "podíl": 0.0727
+     },
+     {
+      "rok": "1995",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 51,
+      "počet": 51,
+      "ženy": 4,
+      "muži": 51,
+      "celkem": 55,
+      "podíl": 0.0727
+     },
+     {
+      "rok": "1996",
+      "pohlaví": "žena",
+      "x0": -4,
+      "x1": 0,
+      "počet": 4,
+      "ženy": 4,
+      "muži": 62,
+      "celkem": 66,
+      "podíl": 0.0606
+     },
+     {
+      "rok": "1996",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 62,
+      "počet": 62,
+      "ženy": 4,
+      "muži": 62,
+      "celkem": 66,
+      "podíl": 0.0606
+     },
+     {
+      "rok": "1997",
+      "pohlaví": "žena",
+      "x0": -9,
+      "x1": 0,
+      "počet": 9,
+      "ženy": 9,
+      "muži": 61,
+      "celkem": 70,
+      "podíl": 0.1286
+     },
+     {
+      "rok": "1997",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 61,
+      "počet": 61,
+      "ženy": 9,
+      "muži": 61,
+      "celkem": 70,
+      "podíl": 0.1286
+     },
+     {
+      "rok": "1998",
+      "pohlaví": "žena",
+      "x0": -15,
+      "x1": 0,
+      "počet": 15,
+      "ženy": 15,
+      "muži": 91,
+      "celkem": 106,
+      "podíl": 0.1415
+     },
+     {
+      "rok": "1998",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 91,
+      "počet": 91,
+      "ženy": 15,
+      "muži": 91,
+      "celkem": 106,
+      "podíl": 0.1415
+     },
+     {
+      "rok": "1999",
+      "pohlaví": "žena",
+      "x0": -5,
+      "x1": 0,
+      "počet": 5,
+      "ženy": 5,
+      "muži": 31,
+      "celkem": 36,
+      "podíl": 0.1389
+     },
+     {
+      "rok": "1999",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 31,
+      "počet": 31,
+      "ženy": 5,
+      "muži": 31,
+      "celkem": 36,
+      "podíl": 0.1389
+     },
+     {
+      "rok": "2000",
+      "pohlaví": "žena",
+      "x0": -7,
+      "x1": 0,
+      "počet": 7,
+      "ženy": 7,
+      "muži": 35,
+      "celkem": 42,
+      "podíl": 0.1667
+     },
+     {
+      "rok": "2000",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 35,
+      "počet": 35,
+      "ženy": 7,
+      "muži": 35,
+      "celkem": 42,
+      "podíl": 0.1667
+     },
+     {
+      "rok": "2001",
+      "pohlaví": "žena",
+      "x0": -10,
+      "x1": 0,
+      "počet": 10,
+      "ženy": 10,
+      "muži": 39,
+      "celkem": 49,
+      "podíl": 0.2041
+     },
+     {
+      "rok": "2001",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 39,
+      "počet": 39,
+      "ženy": 10,
+      "muži": 39,
+      "celkem": 49,
+      "podíl": 0.2041
+     },
+     {
+      "rok": "2002",
+      "pohlaví": "žena",
+      "x0": -9,
+      "x1": 0,
+      "počet": 9,
+      "ženy": 9,
+      "muži": 82,
+      "celkem": 91,
+      "podíl": 0.0989
+     },
+     {
+      "rok": "2002",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 82,
+      "počet": 82,
+      "ženy": 9,
+      "muži": 82,
+      "celkem": 91,
+      "podíl": 0.0989
+     },
+     {
+      "rok": "2003",
+      "pohlaví": "žena",
+      "x0": -12,
+      "x1": 0,
+      "počet": 12,
+      "ženy": 12,
+      "muži": 39,
+      "celkem": 51,
+      "podíl": 0.2353
+     },
+     {
+      "rok": "2003",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 39,
+      "počet": 39,
+      "ženy": 12,
+      "muži": 39,
+      "celkem": 51,
+      "podíl": 0.2353
+     },
+     {
+      "rok": "2004",
+      "pohlaví": "žena",
+      "x0": -3,
+      "x1": 0,
+      "počet": 3,
+      "ženy": 3,
+      "muži": 19,
+      "celkem": 22,
+      "podíl": 0.1364
+     },
+     {
+      "rok": "2004",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 19,
+      "počet": 19,
+      "ženy": 3,
+      "muži": 19,
+      "celkem": 22,
+      "podíl": 0.1364
+     },
+     {
+      "rok": "2005",
+      "pohlaví": "žena",
+      "x0": -2,
+      "x1": 0,
+      "počet": 2,
+      "ženy": 2,
+      "muži": 20,
+      "celkem": 22,
+      "podíl": 0.0909
+     },
+     {
+      "rok": "2005",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 20,
+      "počet": 20,
+      "ženy": 2,
+      "muži": 20,
+      "celkem": 22,
+      "podíl": 0.0909
+     },
+     {
+      "rok": "2006",
+      "pohlaví": "žena",
+      "x0": -5,
+      "x1": 0,
+      "počet": 5,
+      "ženy": 5,
+      "muži": 17,
+      "celkem": 22,
+      "podíl": 0.2273
+     },
+     {
+      "rok": "2006",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 17,
+      "počet": 17,
+      "ženy": 5,
+      "muži": 17,
+      "celkem": 22,
+      "podíl": 0.2273
+     },
+     {
+      "rok": "2007",
+      "pohlaví": "žena",
+      "x0": -3,
+      "x1": 0,
+      "počet": 3,
+      "ženy": 3,
+      "muži": 21,
+      "celkem": 24,
+      "podíl": 0.125
+     },
+     {
+      "rok": "2007",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 21,
+      "počet": 21,
+      "ženy": 3,
+      "muži": 21,
+      "celkem": 24,
+      "podíl": 0.125
+     },
+     {
+      "rok": "2008",
+      "pohlaví": "žena",
+      "x0": -4,
+      "x1": 0,
+      "počet": 4,
+      "ženy": 4,
+      "muži": 24,
+      "celkem": 28,
+      "podíl": 0.1429
+     },
+     {
+      "rok": "2008",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 24,
+      "počet": 24,
+      "ženy": 4,
+      "muži": 24,
+      "celkem": 28,
+      "podíl": 0.1429
+     },
+     {
+      "rok": "2009",
+      "pohlaví": "žena",
+      "x0": -5,
+      "x1": 0,
+      "počet": 5,
+      "ženy": 5,
+      "muži": 19,
+      "celkem": 24,
+      "podíl": 0.2083
+     },
+     {
+      "rok": "2009",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 19,
+      "počet": 19,
+      "ženy": 5,
+      "muži": 19,
+      "celkem": 24,
+      "podíl": 0.2083
+     },
+     {
+      "rok": "2010",
+      "pohlaví": "žena",
+      "x0": -5,
+      "x1": 0,
+      "počet": 5,
+      "ženy": 5,
+      "muži": 18,
+      "celkem": 23,
+      "podíl": 0.2174
+     },
+     {
+      "rok": "2010",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 18,
+      "počet": 18,
+      "ženy": 5,
+      "muži": 18,
+      "celkem": 23,
+      "podíl": 0.2174
+     },
+     {
+      "rok": "2011",
+      "pohlaví": "žena",
+      "x0": -3,
+      "x1": 0,
+      "počet": 3,
+      "ženy": 3,
+      "muži": 18,
+      "celkem": 21,
+      "podíl": 0.1429
+     },
+     {
+      "rok": "2011",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 18,
+      "počet": 18,
+      "ženy": 3,
+      "muži": 18,
+      "celkem": 21,
+      "podíl": 0.1429
+     },
+     {
+      "rok": "2012",
+      "pohlaví": "žena",
+      "x0": -3,
+      "x1": 0,
+      "počet": 3,
+      "ženy": 3,
+      "muži": 19,
+      "celkem": 22,
+      "podíl": 0.1364
+     },
+     {
+      "rok": "2012",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 19,
+      "počet": 19,
+      "ženy": 3,
+      "muži": 19,
+      "celkem": 22,
+      "podíl": 0.1364
+     },
+     {
+      "rok": "2013",
+      "pohlaví": "žena",
+      "x0": -6,
+      "x1": 0,
+      "počet": 6,
+      "ženy": 6,
+      "muži": 24,
+      "celkem": 30,
+      "podíl": 0.2
+     },
+     {
+      "rok": "2013",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 24,
+      "počet": 24,
+      "ženy": 6,
+      "muži": 24,
+      "celkem": 30,
+      "podíl": 0.2
+     },
+     {
+      "rok": "2014",
+      "pohlaví": "žena",
+      "x0": -10,
+      "x1": 0,
+      "počet": 10,
+      "ženy": 10,
+      "muži": 28,
+      "celkem": 38,
+      "podíl": 0.2632
+     },
+     {
+      "rok": "2014",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 28,
+      "počet": 28,
+      "ženy": 10,
+      "muži": 28,
+      "celkem": 38,
+      "podíl": 0.2632
+     },
+     {
+      "rok": "2015",
+      "pohlaví": "žena",
+      "x0": -5,
+      "x1": 0,
+      "počet": 5,
+      "ženy": 5,
+      "muži": 31,
+      "celkem": 36,
+      "podíl": 0.1389
+     },
+     {
+      "rok": "2015",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 31,
+      "počet": 31,
+      "ženy": 5,
+      "muži": 31,
+      "celkem": 36,
+      "podíl": 0.1389
+     },
+     {
+      "rok": "2016",
+      "pohlaví": "žena",
+      "x0": -5,
+      "x1": 0,
+      "počet": 5,
+      "ženy": 5,
+      "muži": 33,
+      "celkem": 38,
+      "podíl": 0.1316
+     },
+     {
+      "rok": "2016",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 33,
+      "počet": 33,
+      "ženy": 5,
+      "muži": 33,
+      "celkem": 38,
+      "podíl": 0.1316
+     },
+     {
+      "rok": "2017",
+      "pohlaví": "žena",
+      "x0": -11,
+      "x1": 0,
+      "počet": 11,
+      "ženy": 11,
+      "muži": 38,
+      "celkem": 49,
+      "podíl": 0.2245
+     },
+     {
+      "rok": "2017",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 38,
+      "počet": 38,
+      "ženy": 11,
+      "muži": 38,
+      "celkem": 49,
+      "podíl": 0.2245
+     },
+     {
+      "rok": "2018",
+      "pohlaví": "žena",
+      "x0": -8,
+      "x1": 0,
+      "počet": 8,
+      "ženy": 8,
+      "muži": 34,
+      "celkem": 42,
+      "podíl": 0.1905
+     },
+     {
+      "rok": "2018",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 34,
+      "počet": 34,
+      "ženy": 8,
+      "muži": 34,
+      "celkem": 42,
+      "podíl": 0.1905
+     },
+     {
+      "rok": "2019",
+      "pohlaví": "žena",
+      "x0": -6,
+      "x1": 0,
+      "počet": 6,
+      "ženy": 6,
+      "muži": 36,
+      "celkem": 42,
+      "podíl": 0.1429
+     },
+     {
+      "rok": "2019",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 36,
+      "počet": 36,
+      "ženy": 6,
+      "muži": 36,
+      "celkem": 42,
+      "podíl": 0.1429
+     },
+     {
+      "rok": "2020",
+      "pohlaví": "žena",
+      "x0": -3,
+      "x1": 0,
+      "počet": 3,
+      "ženy": 3,
+      "muži": 34,
+      "celkem": 37,
+      "podíl": 0.0811
+     },
+     {
+      "rok": "2020",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 34,
+      "počet": 34,
+      "ženy": 3,
+      "muži": 34,
+      "celkem": 37,
+      "podíl": 0.0811
+     },
+     {
+      "rok": "2021",
+      "pohlaví": "žena",
+      "x0": -2,
+      "x1": 0,
+      "počet": 2,
+      "ženy": 2,
+      "muži": 27,
+      "celkem": 29,
+      "podíl": 0.069
+     },
+     {
+      "rok": "2021",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 27,
+      "počet": 27,
+      "ženy": 2,
+      "muži": 27,
+      "celkem": 29,
+      "podíl": 0.069
+     },
+     {
+      "rok": "2022",
+      "pohlaví": "žena",
+      "x0": -8,
+      "x1": 0,
+      "počet": 8,
+      "ženy": 8,
+      "muži": 70,
+      "celkem": 78,
+      "podíl": 0.1026
+     },
+     {
+      "rok": "2022",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 70,
+      "počet": 70,
+      "ženy": 8,
+      "muži": 70,
+      "celkem": 78,
+      "podíl": 0.1026
+     },
+     {
+      "rok": "2023",
+      "pohlaví": "žena",
+      "x0": -16,
+      "x1": 0,
+      "počet": 16,
+      "ženy": 16,
+      "muži": 49,
+      "celkem": 65,
+      "podíl": 0.2462
+     },
+     {
+      "rok": "2023",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 49,
+      "počet": 49,
+      "ženy": 16,
+      "muži": 49,
+      "celkem": 65,
+      "podíl": 0.2462
+     },
+     {
+      "rok": "2024",
+      "pohlaví": "žena",
+      "x0": -20,
+      "x1": 0,
+      "počet": 20,
+      "ženy": 20,
+      "muži": 39,
+      "celkem": 59,
+      "podíl": 0.339
+     },
+     {
+      "rok": "2024",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 39,
+      "počet": 39,
+      "ženy": 20,
+      "muži": 39,
+      "celkem": 59,
+      "podíl": 0.339
+     },
+     {
+      "rok": "2025",
+      "pohlaví": "žena",
+      "x0": -13,
+      "x1": 0,
+      "počet": 13,
+      "ženy": 13,
+      "muži": 38,
+      "celkem": 51,
+      "podíl": 0.2549
+     },
+     {
+      "rok": "2025",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 38,
+      "počet": 38,
+      "ženy": 13,
+      "muži": 38,
+      "celkem": 51,
+      "podíl": 0.2549
+     }
+    ]
+   },
+   "mark": {
+    "type": "bar"
+   },
+   "encoding": {
+    "y": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2020",
+      "2019",
+      "2018",
+      "2017",
+      "2016",
+      "2015",
+      "2014",
+      "2013",
+      "2012",
+      "2011",
+      "2010",
+      "2009",
+      "2008",
+      "2007",
+      "2006",
+      "2005",
+      "2004",
+      "2003",
+      "2002",
+      "2001",
+      "2000",
+      "1999",
+      "1998",
+      "1997",
+      "1996",
+      "1995"
+     ],
+     "scale": {
+      "domain": [
+       "2025",
+       "2024",
+       "2023",
+       "2022",
+       "2021",
+       "2020",
+       "2019",
+       "2018",
+       "2017",
+       "2016",
+       "2015",
+       "2014",
+       "2013",
+       "2012",
+       "2011",
+       "2010",
+       "2009",
+       "2008",
+       "2007",
+       "2006",
+       "2005",
+       "2004",
+       "2003",
+       "2002",
+       "2001",
+       "2000",
+       "1999",
+       "1998",
+       "1997",
+       "1996",
+       "1995"
+      ],
+      "paddingInner": 0.18
+     },
+     "axis": {
+      "ticks": false,
+      "domain": false,
+      "labelFontSize": 10.5,
+      "labelPadding": 4
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       -26,
+       121
+      ]
+     },
+     "axis": {
+      "gridColor": "#e8e3d2",
+      "values": [
+       -20,
+       0,
+       20,
+       40,
+       60,
+       80
+      ],
+      "labelExpr": "abs(datum.value)",
+      "domain": false,
+      "ticks": false,
+      "orient": "top"
+     },
+     "field": "x0"
+    },
+    "x2": {
+     "field": "x1"
+    },
+    "color": {
+     "field": "pohlaví",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "žena",
+       "muž"
+      ],
+      "range": [
+       "#33b9d9",
+       "#522a7a"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Ročník"
+     },
+     {
+      "field": "podíl",
+      "title": "Podíl žen",
+      "format": ".0%"
+     },
+     {
+      "field": "ženy",
+      "title": "Žen"
+     },
+     {
+      "field": "muži",
+      "title": "Mužů"
+     },
+     {
+      "field": "celkem",
+      "title": "Vyznamenaných osob"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#101432",
+    "strokeWidth": 1.5
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -26,
+       121
+      ]
+     }
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "2002"
+     },
+     {
+      "rok": "2012"
+     },
+     {
+      "rok": "2022"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#de1743",
+    "strokeDash": [
+     5,
+     3
+    ],
+    "strokeWidth": 2
+   },
+   "encoding": {
+    "y": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2020",
+      "2019",
+      "2018",
+      "2017",
+      "2016",
+      "2015",
+      "2014",
+      "2013",
+      "2012",
+      "2011",
+      "2010",
+      "2009",
+      "2008",
+      "2007",
+      "2006",
+      "2005",
+      "2004",
+      "2003",
+      "2002",
+      "2001",
+      "2000",
+      "1999",
+      "1998",
+      "1997",
+      "1996",
+      "1995"
+     ],
+     "scale": {
+      "domain": [
+       "2025",
+       "2024",
+       "2023",
+       "2022",
+       "2021",
+       "2020",
+       "2019",
+       "2018",
+       "2017",
+       "2016",
+       "2015",
+       "2014",
+       "2013",
+       "2012",
+       "2011",
+       "2010",
+       "2009",
+       "2008",
+       "2007",
+       "2006",
+       "2005",
+       "2004",
+       "2003",
+       "2002",
+       "2001",
+       "2000",
+       "1999",
+       "1998",
+       "1997",
+       "1996",
+       "1995"
+      ],
+      "paddingInner": 0.18
+     },
+     "axis": {
+      "ticks": false,
+      "domain": false,
+      "labelFontSize": 10.5,
+      "labelPadding": 4
+     },
+     "bandPosition": 0
+    },
+    "x": {
+     "value": 0
+    },
+    "x2": {
+     "value": "width"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "2002",
+      "p": "Havel"
+     },
+     {
+      "rok": "2012",
+      "p": "Klaus"
+     },
+     {
+      "rok": "2022",
+      "p": "Zeman"
+     },
+     {
+      "rok": "2025",
+      "p": "Pavel"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "top",
+    "dx": -2,
+    "dy": 3,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#101432"
+   },
+   "encoding": {
+    "y": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2020",
+      "2019",
+      "2018",
+      "2017",
+      "2016",
+      "2015",
+      "2014",
+      "2013",
+      "2012",
+      "2011",
+      "2010",
+      "2009",
+      "2008",
+      "2007",
+      "2006",
+      "2005",
+      "2004",
+      "2003",
+      "2002",
+      "2001",
+      "2000",
+      "1999",
+      "1998",
+      "1997",
+      "1996",
+      "1995"
+     ],
+     "scale": {
+      "domain": [
+       "2025",
+       "2024",
+       "2023",
+       "2022",
+       "2021",
+       "2020",
+       "2019",
+       "2018",
+       "2017",
+       "2016",
+       "2015",
+       "2014",
+       "2013",
+       "2012",
+       "2011",
+       "2010",
+       "2009",
+       "2008",
+       "2007",
+       "2006",
+       "2005",
+       "2004",
+       "2003",
+       "2002",
+       "2001",
+       "2000",
+       "1999",
+       "1998",
+       "1997",
+       "1996",
+       "1995"
+      ],
+      "paddingInner": 0.18
+     },
+     "axis": {
+      "ticks": false,
+      "domain": false,
+      "labelFontSize": 10.5,
+      "labelPadding": 4
+     },
+     "bandPosition": 0
+    },
+    "x": {
+     "value": "width"
+    },
+    "text": {
+     "field": "p"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0,
+      "t": "← ženy"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "align": "right",
+    "dx": -6,
+    "dy": -22,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#06677d"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -26,
+       121
+      ]
+     }
+    },
+    "y": {
+     "value": 0
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0,
+      "t": "muži →"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "align": "left",
+    "dx": 6,
+    "dy": -22,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#522a7a"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -26,
+       121
+      ]
+     }
+    },
+    "y": {
+     "value": 0
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}
