@@ -25,6 +25,8 @@ import { InfoBox } from '@/components/clanek/InfoBox';
 import TempoEffectDiagram from '@/components/dpbp/TempoEffectDiagram/TempoEffectDiagram';
 import FertilityComparisonChart from '@/components/dpbp/FertilityComparisonChart/FertilityComparisonChart';
 import MothersAgeShiftChart from '@/components/dpbp/MothersAgeShiftChart/MothersAgeShiftChart';
+import BirthOrderPictogram from '@/components/dpbp/BirthOrderPictogram/BirthOrderPictogram';
+import PolicyEvidenceCards from '@/components/dpbp/PolicyEvidenceCards/PolicyEvidenceCards';
 import {
   CareJourneyScrolly,
   CareAccessMap,
@@ -129,6 +131,8 @@ const mdxComponents = {
   TempoEffectDiagram,
   FertilityComparisonChart,
   MothersAgeShiftChart,
+  BirthOrderPictogram,
+  PolicyEvidenceCards,
   CareJourneyScrolly,
   CareAccessMap,
   EuropeHealthSystems,

@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT_ROOT = path.join(__dirname, '..', '_content');
 const CHARTS_ROOT = path.join(__dirname, '..', '..', '..', '..', 'public', 'specialy', 'dpbp', 'charts');
+const WEB_ARTICLES_ROOT = path.join(__dirname, '..', '..', '..', 'clanek', '_articles');
 
 let hasError = false;
 
@@ -67,6 +68,27 @@ try {
 
   console.log(`  ${totalRefs} references checked, ${missingRefs} missing.`);
   if (missingRefs > 0) hasError = true;
+
+  // ---------- 1b. Web article tiles ("web": slug -> app/clanek/_articles/<slug>/index.md) ----------
+  console.log('\n=== 1b. Web article tiles ("web" -> app/clanek/_articles/<slug>/index.md) ===');
+
+  let webRefs = 0;
+  let missingWeb = 0;
+  for (const chapter of chapters) {
+    const metaPath = path.join(CONTENT_ROOT, chapter, '_meta.json');
+    if (!fs.existsSync(metaPath)) continue;
+    const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+    for (const tile of [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]) {
+      if (!tile.web) continue;
+      webRefs++;
+      if (!fs.existsSync(path.join(WEB_ARTICLES_ROOT, tile.web, 'index.md'))) {
+        console.error(`  MISSING: ${chapter} -> /clanek/${tile.web}`);
+        missingWeb++;
+      }
+    }
+  }
+  console.log(`  ${webRefs} web tiles checked, ${missingWeb} missing.`);
+  if (missingWeb > 0) hasError = true;
 
   // ---------- 2. Chart validation ----------
   console.log('\n=== 2. Charts (chartId=, primaryChart:, introChart -> public/specialy/dpbp/charts/*.json) ===');
@@ -142,6 +164,7 @@ try {
   // ---------- Summary ----------
   console.log('\n=== SUMMARY ===');
   console.log(`  Article references : ${totalRefs} checked, ${missingRefs} missing`);
+  console.log(`  Web article tiles  : ${webRefs} checked, ${missingWeb} missing`);
   console.log(`  Charts              : ${chartRefs.size} referenced, ${availableCharts.length} spec files, ${danglingCharts} dangling, ${orphanCharts.length} orphan`);
   console.log(`  Orphan articles     : ${orphanArticles.length}`);
   console.log(`\n${hasError ? 'FAIL' : 'PASS'}`);
