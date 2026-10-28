@@ -1,0 +1,1691 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Ať se rodí víc, nebo méně, v roce 2040 vychází na jednoho seniora stejně 2,5 člověka ve věku 15–64 let",
+  "subtitle": "Lidí ve věku 15–64 let na jednoho seniora k 1. 1. ve třech variantách projekce (úhrnná plodnost 1,25 / 1,5 / 1,75)"
+ },
+ "_source": "[Projekce obyvatelstva ČR 2023–2100, nízká, střední a vysoká varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nDítě narozené dnes bude mít v roce 2040 čtrnáct let, do skupiny 15–64 let vstoupí až později.",
+ "height": 320,
+ "data": {
+  "values": [
+   {
+    "rok": 2023,
+    "varianta": "nízká",
+    "pomer": 3.111,
+    "label": "3,1"
+   },
+   {
+    "rok": 2023,
+    "varianta": "střední",
+    "pomer": 3.111,
+    "label": "3,1"
+   },
+   {
+    "rok": 2023,
+    "varianta": "vysoká",
+    "pomer": 3.111,
+    "label": "3,1"
+   },
+   {
+    "rok": 2024,
+    "varianta": "nízká",
+    "pomer": 3.091,
+    "label": "3,1"
+   },
+   {
+    "rok": 2024,
+    "varianta": "střední",
+    "pomer": 3.097,
+    "label": "3,1"
+   },
+   {
+    "rok": 2024,
+    "varianta": "vysoká",
+    "pomer": 3.1,
+    "label": "3,1"
+   },
+   {
+    "rok": 2025,
+    "varianta": "nízká",
+    "pomer": 3.069,
+    "label": "3,1"
+   },
+   {
+    "rok": 2025,
+    "varianta": "střední",
+    "pomer": 3.079,
+    "label": "3,1"
+   },
+   {
+    "rok": 2025,
+    "varianta": "vysoká",
+    "pomer": 3.085,
+    "label": "3,1"
+   },
+   {
+    "rok": 2026,
+    "varianta": "nízká",
+    "pomer": 3.035,
+    "label": "3,0"
+   },
+   {
+    "rok": 2026,
+    "varianta": "střední",
+    "pomer": 3.046,
+    "label": "3,0"
+   },
+   {
+    "rok": 2026,
+    "varianta": "vysoká",
+    "pomer": 3.052,
+    "label": "3,1"
+   },
+   {
+    "rok": 2027,
+    "varianta": "nízká",
+    "pomer": 2.996,
+    "label": "3,0"
+   },
+   {
+    "rok": 2027,
+    "varianta": "střední",
+    "pomer": 3.008,
+    "label": "3,0"
+   },
+   {
+    "rok": 2027,
+    "varianta": "vysoká",
+    "pomer": 3.015,
+    "label": "3,0"
+   },
+   {
+    "rok": 2028,
+    "varianta": "nízká",
+    "pomer": 2.955,
+    "label": "3,0"
+   },
+   {
+    "rok": 2028,
+    "varianta": "střední",
+    "pomer": 2.969,
+    "label": "3,0"
+   },
+   {
+    "rok": 2028,
+    "varianta": "vysoká",
+    "pomer": 2.977,
+    "label": "3,0"
+   },
+   {
+    "rok": 2029,
+    "varianta": "nízká",
+    "pomer": 2.914,
+    "label": "2,9"
+   },
+   {
+    "rok": 2029,
+    "varianta": "střední",
+    "pomer": 2.927,
+    "label": "2,9"
+   },
+   {
+    "rok": 2029,
+    "varianta": "vysoká",
+    "pomer": 2.934,
+    "label": "2,9"
+   },
+   {
+    "rok": 2030,
+    "varianta": "nízká",
+    "pomer": 2.87,
+    "label": "2,9"
+   },
+   {
+    "rok": 2030,
+    "varianta": "střední",
+    "pomer": 2.882,
+    "label": "2,9"
+   },
+   {
+    "rok": 2030,
+    "varianta": "vysoká",
+    "pomer": 2.889,
+    "label": "2,9"
+   },
+   {
+    "rok": 2031,
+    "varianta": "nízká",
+    "pomer": 2.84,
+    "label": "2,8"
+   },
+   {
+    "rok": 2031,
+    "varianta": "střední",
+    "pomer": 2.85,
+    "label": "2,9"
+   },
+   {
+    "rok": 2031,
+    "varianta": "vysoká",
+    "pomer": 2.857,
+    "label": "2,9"
+   },
+   {
+    "rok": 2032,
+    "varianta": "nízká",
+    "pomer": 2.82,
+    "label": "2,8"
+   },
+   {
+    "rok": 2032,
+    "varianta": "střední",
+    "pomer": 2.829,
+    "label": "2,8"
+   },
+   {
+    "rok": 2032,
+    "varianta": "vysoká",
+    "pomer": 2.835,
+    "label": "2,8"
+   },
+   {
+    "rok": 2033,
+    "varianta": "nízká",
+    "pomer": 2.805,
+    "label": "2,8"
+   },
+   {
+    "rok": 2033,
+    "varianta": "střední",
+    "pomer": 2.813,
+    "label": "2,8"
+   },
+   {
+    "rok": 2033,
+    "varianta": "vysoká",
+    "pomer": 2.817,
+    "label": "2,8"
+   },
+   {
+    "rok": 2034,
+    "varianta": "nízká",
+    "pomer": 2.792,
+    "label": "2,8"
+   },
+   {
+    "rok": 2034,
+    "varianta": "střední",
+    "pomer": 2.798,
+    "label": "2,8"
+   },
+   {
+    "rok": 2034,
+    "varianta": "vysoká",
+    "pomer": 2.802,
+    "label": "2,8"
+   },
+   {
+    "rok": 2035,
+    "varianta": "nízká",
+    "pomer": 2.77,
+    "label": "2,8"
+   },
+   {
+    "rok": 2035,
+    "varianta": "střední",
+    "pomer": 2.774,
+    "label": "2,8"
+   },
+   {
+    "rok": 2035,
+    "varianta": "vysoká",
+    "pomer": 2.777,
+    "label": "2,8"
+   },
+   {
+    "rok": 2036,
+    "varianta": "nízká",
+    "pomer": 2.741,
+    "label": "2,7"
+   },
+   {
+    "rok": 2036,
+    "varianta": "střední",
+    "pomer": 2.743,
+    "label": "2,7"
+   },
+   {
+    "rok": 2036,
+    "varianta": "vysoká",
+    "pomer": 2.745,
+    "label": "2,7"
+   },
+   {
+    "rok": 2037,
+    "varianta": "nízká",
+    "pomer": 2.706,
+    "label": "2,7"
+   },
+   {
+    "rok": 2037,
+    "varianta": "střední",
+    "pomer": 2.707,
+    "label": "2,7"
+   },
+   {
+    "rok": 2037,
+    "varianta": "vysoká",
+    "pomer": 2.707,
+    "label": "2,7"
+   },
+   {
+    "rok": 2038,
+    "varianta": "nízká",
+    "pomer": 2.657,
+    "label": "2,7"
+   },
+   {
+    "rok": 2038,
+    "varianta": "střední",
+    "pomer": 2.655,
+    "label": "2,7"
+   },
+   {
+    "rok": 2038,
+    "varianta": "vysoká",
+    "pomer": 2.656,
+    "label": "2,7"
+   },
+   {
+    "rok": 2039,
+    "varianta": "nízká",
+    "pomer": 2.583,
+    "label": "2,6"
+   },
+   {
+    "rok": 2039,
+    "varianta": "střední",
+    "pomer": 2.582,
+    "label": "2,6"
+   },
+   {
+    "rok": 2039,
+    "varianta": "vysoká",
+    "pomer": 2.585,
+    "label": "2,6"
+   },
+   {
+    "rok": 2040,
+    "varianta": "nízká",
+    "pomer": 2.497,
+    "label": "2,5"
+   },
+   {
+    "rok": 2040,
+    "varianta": "střední",
+    "pomer": 2.498,
+    "label": "2,5"
+   },
+   {
+    "rok": 2040,
+    "varianta": "vysoká",
+    "pomer": 2.502,
+    "label": "2,5"
+   },
+   {
+    "rok": 2041,
+    "varianta": "nízká",
+    "pomer": 2.417,
+    "label": "2,4"
+   },
+   {
+    "rok": 2041,
+    "varianta": "střední",
+    "pomer": 2.419,
+    "label": "2,4"
+   },
+   {
+    "rok": 2041,
+    "varianta": "vysoká",
+    "pomer": 2.426,
+    "label": "2,4"
+   },
+   {
+    "rok": 2042,
+    "varianta": "nízká",
+    "pomer": 2.343,
+    "label": "2,3"
+   },
+   {
+    "rok": 2042,
+    "varianta": "střední",
+    "pomer": 2.346,
+    "label": "2,3"
+   },
+   {
+    "rok": 2042,
+    "varianta": "vysoká",
+    "pomer": 2.356,
+    "label": "2,4"
+   },
+   {
+    "rok": 2043,
+    "varianta": "nízká",
+    "pomer": 2.277,
+    "label": "2,3"
+   },
+   {
+    "rok": 2043,
+    "varianta": "střední",
+    "pomer": 2.282,
+    "label": "2,3"
+   },
+   {
+    "rok": 2043,
+    "varianta": "vysoká",
+    "pomer": 2.294,
+    "label": "2,3"
+   },
+   {
+    "rok": 2044,
+    "varianta": "nízká",
+    "pomer": 2.214,
+    "label": "2,2"
+   },
+   {
+    "rok": 2044,
+    "varianta": "střední",
+    "pomer": 2.221,
+    "label": "2,2"
+   },
+   {
+    "rok": 2044,
+    "varianta": "vysoká",
+    "pomer": 2.236,
+    "label": "2,2"
+   },
+   {
+    "rok": 2045,
+    "varianta": "nízká",
+    "pomer": 2.159,
+    "label": "2,2"
+   },
+   {
+    "rok": 2045,
+    "varianta": "střední",
+    "pomer": 2.168,
+    "label": "2,2"
+   },
+   {
+    "rok": 2045,
+    "varianta": "vysoká",
+    "pomer": 2.185,
+    "label": "2,2"
+   },
+   {
+    "rok": 2046,
+    "varianta": "nízká",
+    "pomer": 2.121,
+    "label": "2,1"
+   },
+   {
+    "rok": 2046,
+    "varianta": "střední",
+    "pomer": 2.131,
+    "label": "2,1"
+   },
+   {
+    "rok": 2046,
+    "varianta": "vysoká",
+    "pomer": 2.15,
+    "label": "2,1"
+   },
+   {
+    "rok": 2047,
+    "varianta": "nízká",
+    "pomer": 2.09,
+    "label": "2,1"
+   },
+   {
+    "rok": 2047,
+    "varianta": "střední",
+    "pomer": 2.102,
+    "label": "2,1"
+   },
+   {
+    "rok": 2047,
+    "varianta": "vysoká",
+    "pomer": 2.123,
+    "label": "2,1"
+   },
+   {
+    "rok": 2048,
+    "varianta": "nízká",
+    "pomer": 2.061,
+    "label": "2,1"
+   },
+   {
+    "rok": 2048,
+    "varianta": "střední",
+    "pomer": 2.074,
+    "label": "2,1"
+   },
+   {
+    "rok": 2048,
+    "varianta": "vysoká",
+    "pomer": 2.097,
+    "label": "2,1"
+   },
+   {
+    "rok": 2049,
+    "varianta": "nízká",
+    "pomer": 2.033,
+    "label": "2,0"
+   },
+   {
+    "rok": 2049,
+    "varianta": "střední",
+    "pomer": 2.048,
+    "label": "2,0"
+   },
+   {
+    "rok": 2049,
+    "varianta": "vysoká",
+    "pomer": 2.073,
+    "label": "2,1"
+   },
+   {
+    "rok": 2050,
+    "varianta": "nízká",
+    "pomer": 2.006,
+    "label": "2,0"
+   },
+   {
+    "rok": 2050,
+    "varianta": "střední",
+    "pomer": 2.022,
+    "label": "2,0"
+   },
+   {
+    "rok": 2050,
+    "varianta": "vysoká",
+    "pomer": 2.049,
+    "label": "2,0"
+   },
+   {
+    "rok": 2051,
+    "varianta": "nízká",
+    "pomer": 1.98,
+    "label": "2,0"
+   },
+   {
+    "rok": 2051,
+    "varianta": "střední",
+    "pomer": 1.997,
+    "label": "2,0"
+   },
+   {
+    "rok": 2051,
+    "varianta": "vysoká",
+    "pomer": 2.026,
+    "label": "2,0"
+   },
+   {
+    "rok": 2052,
+    "varianta": "nízká",
+    "pomer": 1.955,
+    "label": "2,0"
+   },
+   {
+    "rok": 2052,
+    "varianta": "střední",
+    "pomer": 1.974,
+    "label": "2,0"
+   },
+   {
+    "rok": 2052,
+    "varianta": "vysoká",
+    "pomer": 2.006,
+    "label": "2,0"
+   },
+   {
+    "rok": 2053,
+    "varianta": "nízká",
+    "pomer": 1.933,
+    "label": "1,9"
+   },
+   {
+    "rok": 2053,
+    "varianta": "střední",
+    "pomer": 1.953,
+    "label": "2,0"
+   },
+   {
+    "rok": 2053,
+    "varianta": "vysoká",
+    "pomer": 1.987,
+    "label": "2,0"
+   },
+   {
+    "rok": 2054,
+    "varianta": "nízká",
+    "pomer": 1.909,
+    "label": "1,9"
+   },
+   {
+    "rok": 2054,
+    "varianta": "střední",
+    "pomer": 1.931,
+    "label": "1,9"
+   },
+   {
+    "rok": 2054,
+    "varianta": "vysoká",
+    "pomer": 1.967,
+    "label": "2,0"
+   },
+   {
+    "rok": 2055,
+    "varianta": "nízká",
+    "pomer": 1.889,
+    "label": "1,9"
+   },
+   {
+    "rok": 2055,
+    "varianta": "střední",
+    "pomer": 1.912,
+    "label": "1,9"
+   },
+   {
+    "rok": 2055,
+    "varianta": "vysoká",
+    "pomer": 1.951,
+    "label": "2,0"
+   },
+   {
+    "rok": 2056,
+    "varianta": "nízká",
+    "pomer": 1.867,
+    "label": "1,9"
+   },
+   {
+    "rok": 2056,
+    "varianta": "střední",
+    "pomer": 1.892,
+    "label": "1,9"
+   },
+   {
+    "rok": 2056,
+    "varianta": "vysoká",
+    "pomer": 1.933,
+    "label": "1,9"
+   },
+   {
+    "rok": 2057,
+    "varianta": "nízká",
+    "pomer": 1.846,
+    "label": "1,8"
+   },
+   {
+    "rok": 2057,
+    "varianta": "střední",
+    "pomer": 1.873,
+    "label": "1,9"
+   },
+   {
+    "rok": 2057,
+    "varianta": "vysoká",
+    "pomer": 1.916,
+    "label": "1,9"
+   },
+   {
+    "rok": 2058,
+    "varianta": "nízká",
+    "pomer": 1.831,
+    "label": "1,8"
+   },
+   {
+    "rok": 2058,
+    "varianta": "střední",
+    "pomer": 1.86,
+    "label": "1,9"
+   },
+   {
+    "rok": 2058,
+    "varianta": "vysoká",
+    "pomer": 1.905,
+    "label": "1,9"
+   },
+   {
+    "rok": 2059,
+    "varianta": "nízká",
+    "pomer": 1.817,
+    "label": "1,8"
+   },
+   {
+    "rok": 2059,
+    "varianta": "střední",
+    "pomer": 1.847,
+    "label": "1,8"
+   },
+   {
+    "rok": 2059,
+    "varianta": "vysoká",
+    "pomer": 1.895,
+    "label": "1,9"
+   },
+   {
+    "rok": 2060,
+    "varianta": "nízká",
+    "pomer": 1.814,
+    "label": "1,8"
+   },
+   {
+    "rok": 2060,
+    "varianta": "střední",
+    "pomer": 1.845,
+    "label": "1,8"
+   },
+   {
+    "rok": 2060,
+    "varianta": "vysoká",
+    "pomer": 1.895,
+    "label": "1,9"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2063
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "color": {
+     "field": "varianta",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nízká",
+       "střední",
+       "vysoká"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "detail": {
+     "field": "varianta"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeDash": [
+     4,
+     4
+    ],
+    "strokeWidth": 1,
+    "color": "#101432",
+    "opacity": 0.55
+   },
+   "encoding": {
+    "x": {
+     "datum": 2040
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2040,
+      "pomer": 3.45,
+      "t": "2040: ve všech variantách 2,5"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#101432",
+    "align": "left",
+    "dx": 7
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2063
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2060,
+      "varianta": "nízká",
+      "pomer": 1.814,
+      "label": "1,8"
+     },
+     {
+      "rok": 2060,
+      "varianta": "střední",
+      "pomer": 1.845,
+      "label": "1,8"
+     },
+     {
+      "rok": 2060,
+      "varianta": "vysoká",
+      "pomer": 1.895,
+      "label": "1,9"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 6,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2063
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "color": {
+     "field": "varianta",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nízká",
+       "střední",
+       "vysoká"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "nízká varianta": "3,11",
+      "střední varianta": "3,11",
+      "vysoká varianta": "3,11"
+     },
+     {
+      "rok": 2024,
+      "hlavicka": "K 1. 1. 2024 (projekce)",
+      "nízká varianta": "3,09",
+      "střední varianta": "3,10",
+      "vysoká varianta": "3,10"
+     },
+     {
+      "rok": 2025,
+      "hlavicka": "K 1. 1. 2025 (projekce)",
+      "nízká varianta": "3,07",
+      "střední varianta": "3,08",
+      "vysoká varianta": "3,08"
+     },
+     {
+      "rok": 2026,
+      "hlavicka": "K 1. 1. 2026 (projekce)",
+      "nízká varianta": "3,03",
+      "střední varianta": "3,05",
+      "vysoká varianta": "3,05"
+     },
+     {
+      "rok": 2027,
+      "hlavicka": "K 1. 1. 2027 (projekce)",
+      "nízká varianta": "3,00",
+      "střední varianta": "3,01",
+      "vysoká varianta": "3,02"
+     },
+     {
+      "rok": 2028,
+      "hlavicka": "K 1. 1. 2028 (projekce)",
+      "nízká varianta": "2,96",
+      "střední varianta": "2,97",
+      "vysoká varianta": "2,98"
+     },
+     {
+      "rok": 2029,
+      "hlavicka": "K 1. 1. 2029 (projekce)",
+      "nízká varianta": "2,91",
+      "střední varianta": "2,93",
+      "vysoká varianta": "2,93"
+     },
+     {
+      "rok": 2030,
+      "hlavicka": "K 1. 1. 2030 (projekce)",
+      "nízká varianta": "2,87",
+      "střední varianta": "2,88",
+      "vysoká varianta": "2,89"
+     },
+     {
+      "rok": 2031,
+      "hlavicka": "K 1. 1. 2031 (projekce)",
+      "nízká varianta": "2,84",
+      "střední varianta": "2,85",
+      "vysoká varianta": "2,86"
+     },
+     {
+      "rok": 2032,
+      "hlavicka": "K 1. 1. 2032 (projekce)",
+      "nízká varianta": "2,82",
+      "střední varianta": "2,83",
+      "vysoká varianta": "2,83"
+     },
+     {
+      "rok": 2033,
+      "hlavicka": "K 1. 1. 2033 (projekce)",
+      "nízká varianta": "2,80",
+      "střední varianta": "2,81",
+      "vysoká varianta": "2,82"
+     },
+     {
+      "rok": 2034,
+      "hlavicka": "K 1. 1. 2034 (projekce)",
+      "nízká varianta": "2,79",
+      "střední varianta": "2,80",
+      "vysoká varianta": "2,80"
+     },
+     {
+      "rok": 2035,
+      "hlavicka": "K 1. 1. 2035 (projekce)",
+      "nízká varianta": "2,77",
+      "střední varianta": "2,77",
+      "vysoká varianta": "2,78"
+     },
+     {
+      "rok": 2036,
+      "hlavicka": "K 1. 1. 2036 (projekce)",
+      "nízká varianta": "2,74",
+      "střední varianta": "2,74",
+      "vysoká varianta": "2,74"
+     },
+     {
+      "rok": 2037,
+      "hlavicka": "K 1. 1. 2037 (projekce)",
+      "nízká varianta": "2,71",
+      "střední varianta": "2,71",
+      "vysoká varianta": "2,71"
+     },
+     {
+      "rok": 2038,
+      "hlavicka": "K 1. 1. 2038 (projekce)",
+      "nízká varianta": "2,66",
+      "střední varianta": "2,66",
+      "vysoká varianta": "2,66"
+     },
+     {
+      "rok": 2039,
+      "hlavicka": "K 1. 1. 2039 (projekce)",
+      "nízká varianta": "2,58",
+      "střední varianta": "2,58",
+      "vysoká varianta": "2,58"
+     },
+     {
+      "rok": 2040,
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "nízká varianta": "2,50",
+      "střední varianta": "2,50",
+      "vysoká varianta": "2,50"
+     },
+     {
+      "rok": 2041,
+      "hlavicka": "K 1. 1. 2041 (projekce)",
+      "nízká varianta": "2,42",
+      "střední varianta": "2,42",
+      "vysoká varianta": "2,43"
+     },
+     {
+      "rok": 2042,
+      "hlavicka": "K 1. 1. 2042 (projekce)",
+      "nízká varianta": "2,34",
+      "střední varianta": "2,35",
+      "vysoká varianta": "2,36"
+     },
+     {
+      "rok": 2043,
+      "hlavicka": "K 1. 1. 2043 (projekce)",
+      "nízká varianta": "2,28",
+      "střední varianta": "2,28",
+      "vysoká varianta": "2,29"
+     },
+     {
+      "rok": 2044,
+      "hlavicka": "K 1. 1. 2044 (projekce)",
+      "nízká varianta": "2,21",
+      "střední varianta": "2,22",
+      "vysoká varianta": "2,24"
+     },
+     {
+      "rok": 2045,
+      "hlavicka": "K 1. 1. 2045 (projekce)",
+      "nízká varianta": "2,16",
+      "střední varianta": "2,17",
+      "vysoká varianta": "2,18"
+     },
+     {
+      "rok": 2046,
+      "hlavicka": "K 1. 1. 2046 (projekce)",
+      "nízká varianta": "2,12",
+      "střední varianta": "2,13",
+      "vysoká varianta": "2,15"
+     },
+     {
+      "rok": 2047,
+      "hlavicka": "K 1. 1. 2047 (projekce)",
+      "nízká varianta": "2,09",
+      "střední varianta": "2,10",
+      "vysoká varianta": "2,12"
+     },
+     {
+      "rok": 2048,
+      "hlavicka": "K 1. 1. 2048 (projekce)",
+      "nízká varianta": "2,06",
+      "střední varianta": "2,07",
+      "vysoká varianta": "2,10"
+     },
+     {
+      "rok": 2049,
+      "hlavicka": "K 1. 1. 2049 (projekce)",
+      "nízká varianta": "2,03",
+      "střední varianta": "2,05",
+      "vysoká varianta": "2,07"
+     },
+     {
+      "rok": 2050,
+      "hlavicka": "K 1. 1. 2050 (projekce)",
+      "nízká varianta": "2,01",
+      "střední varianta": "2,02",
+      "vysoká varianta": "2,05"
+     },
+     {
+      "rok": 2051,
+      "hlavicka": "K 1. 1. 2051 (projekce)",
+      "nízká varianta": "1,98",
+      "střední varianta": "2,00",
+      "vysoká varianta": "2,03"
+     },
+     {
+      "rok": 2052,
+      "hlavicka": "K 1. 1. 2052 (projekce)",
+      "nízká varianta": "1,96",
+      "střední varianta": "1,97",
+      "vysoká varianta": "2,01"
+     },
+     {
+      "rok": 2053,
+      "hlavicka": "K 1. 1. 2053 (projekce)",
+      "nízká varianta": "1,93",
+      "střední varianta": "1,95",
+      "vysoká varianta": "1,99"
+     },
+     {
+      "rok": 2054,
+      "hlavicka": "K 1. 1. 2054 (projekce)",
+      "nízká varianta": "1,91",
+      "střední varianta": "1,93",
+      "vysoká varianta": "1,97"
+     },
+     {
+      "rok": 2055,
+      "hlavicka": "K 1. 1. 2055 (projekce)",
+      "nízká varianta": "1,89",
+      "střední varianta": "1,91",
+      "vysoká varianta": "1,95"
+     },
+     {
+      "rok": 2056,
+      "hlavicka": "K 1. 1. 2056 (projekce)",
+      "nízká varianta": "1,87",
+      "střední varianta": "1,89",
+      "vysoká varianta": "1,93"
+     },
+     {
+      "rok": 2057,
+      "hlavicka": "K 1. 1. 2057 (projekce)",
+      "nízká varianta": "1,85",
+      "střední varianta": "1,87",
+      "vysoká varianta": "1,92"
+     },
+     {
+      "rok": 2058,
+      "hlavicka": "K 1. 1. 2058 (projekce)",
+      "nízká varianta": "1,83",
+      "střední varianta": "1,86",
+      "vysoká varianta": "1,90"
+     },
+     {
+      "rok": 2059,
+      "hlavicka": "K 1. 1. 2059 (projekce)",
+      "nízká varianta": "1,82",
+      "střední varianta": "1,85",
+      "vysoká varianta": "1,89"
+     },
+     {
+      "rok": 2060,
+      "hlavicka": "K 1. 1. 2060 (projekce)",
+      "nízká varianta": "1,81",
+      "střední varianta": "1,84",
+      "vysoká varianta": "1,89"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 1,
+    "strokeDash": [
+     3,
+     3
+    ],
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2022,
+       2063
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 3.7
+    },
+    "strokeOpacity": {
+     "condition": {
+      "param": "hov",
+      "empty": false,
+      "value": 0.6
+     },
+     "value": 0
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "nízká varianta": "3,11",
+      "střední varianta": "3,11",
+      "vysoká varianta": "3,11",
+      "od": 2022.5,
+      "do": 2023.5
+     },
+     {
+      "rok": 2024,
+      "hlavicka": "K 1. 1. 2024 (projekce)",
+      "nízká varianta": "3,09",
+      "střední varianta": "3,10",
+      "vysoká varianta": "3,10",
+      "od": 2023.5,
+      "do": 2024.5
+     },
+     {
+      "rok": 2025,
+      "hlavicka": "K 1. 1. 2025 (projekce)",
+      "nízká varianta": "3,07",
+      "střední varianta": "3,08",
+      "vysoká varianta": "3,08",
+      "od": 2024.5,
+      "do": 2025.5
+     },
+     {
+      "rok": 2026,
+      "hlavicka": "K 1. 1. 2026 (projekce)",
+      "nízká varianta": "3,03",
+      "střední varianta": "3,05",
+      "vysoká varianta": "3,05",
+      "od": 2025.5,
+      "do": 2026.5
+     },
+     {
+      "rok": 2027,
+      "hlavicka": "K 1. 1. 2027 (projekce)",
+      "nízká varianta": "3,00",
+      "střední varianta": "3,01",
+      "vysoká varianta": "3,02",
+      "od": 2026.5,
+      "do": 2027.5
+     },
+     {
+      "rok": 2028,
+      "hlavicka": "K 1. 1. 2028 (projekce)",
+      "nízká varianta": "2,96",
+      "střední varianta": "2,97",
+      "vysoká varianta": "2,98",
+      "od": 2027.5,
+      "do": 2028.5
+     },
+     {
+      "rok": 2029,
+      "hlavicka": "K 1. 1. 2029 (projekce)",
+      "nízká varianta": "2,91",
+      "střední varianta": "2,93",
+      "vysoká varianta": "2,93",
+      "od": 2028.5,
+      "do": 2029.5
+     },
+     {
+      "rok": 2030,
+      "hlavicka": "K 1. 1. 2030 (projekce)",
+      "nízká varianta": "2,87",
+      "střední varianta": "2,88",
+      "vysoká varianta": "2,89",
+      "od": 2029.5,
+      "do": 2030.5
+     },
+     {
+      "rok": 2031,
+      "hlavicka": "K 1. 1. 2031 (projekce)",
+      "nízká varianta": "2,84",
+      "střední varianta": "2,85",
+      "vysoká varianta": "2,86",
+      "od": 2030.5,
+      "do": 2031.5
+     },
+     {
+      "rok": 2032,
+      "hlavicka": "K 1. 1. 2032 (projekce)",
+      "nízká varianta": "2,82",
+      "střední varianta": "2,83",
+      "vysoká varianta": "2,83",
+      "od": 2031.5,
+      "do": 2032.5
+     },
+     {
+      "rok": 2033,
+      "hlavicka": "K 1. 1. 2033 (projekce)",
+      "nízká varianta": "2,80",
+      "střední varianta": "2,81",
+      "vysoká varianta": "2,82",
+      "od": 2032.5,
+      "do": 2033.5
+     },
+     {
+      "rok": 2034,
+      "hlavicka": "K 1. 1. 2034 (projekce)",
+      "nízká varianta": "2,79",
+      "střední varianta": "2,80",
+      "vysoká varianta": "2,80",
+      "od": 2033.5,
+      "do": 2034.5
+     },
+     {
+      "rok": 2035,
+      "hlavicka": "K 1. 1. 2035 (projekce)",
+      "nízká varianta": "2,77",
+      "střední varianta": "2,77",
+      "vysoká varianta": "2,78",
+      "od": 2034.5,
+      "do": 2035.5
+     },
+     {
+      "rok": 2036,
+      "hlavicka": "K 1. 1. 2036 (projekce)",
+      "nízká varianta": "2,74",
+      "střední varianta": "2,74",
+      "vysoká varianta": "2,74",
+      "od": 2035.5,
+      "do": 2036.5
+     },
+     {
+      "rok": 2037,
+      "hlavicka": "K 1. 1. 2037 (projekce)",
+      "nízká varianta": "2,71",
+      "střední varianta": "2,71",
+      "vysoká varianta": "2,71",
+      "od": 2036.5,
+      "do": 2037.5
+     },
+     {
+      "rok": 2038,
+      "hlavicka": "K 1. 1. 2038 (projekce)",
+      "nízká varianta": "2,66",
+      "střední varianta": "2,66",
+      "vysoká varianta": "2,66",
+      "od": 2037.5,
+      "do": 2038.5
+     },
+     {
+      "rok": 2039,
+      "hlavicka": "K 1. 1. 2039 (projekce)",
+      "nízká varianta": "2,58",
+      "střední varianta": "2,58",
+      "vysoká varianta": "2,58",
+      "od": 2038.5,
+      "do": 2039.5
+     },
+     {
+      "rok": 2040,
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "nízká varianta": "2,50",
+      "střední varianta": "2,50",
+      "vysoká varianta": "2,50",
+      "od": 2039.5,
+      "do": 2040.5
+     },
+     {
+      "rok": 2041,
+      "hlavicka": "K 1. 1. 2041 (projekce)",
+      "nízká varianta": "2,42",
+      "střední varianta": "2,42",
+      "vysoká varianta": "2,43",
+      "od": 2040.5,
+      "do": 2041.5
+     },
+     {
+      "rok": 2042,
+      "hlavicka": "K 1. 1. 2042 (projekce)",
+      "nízká varianta": "2,34",
+      "střední varianta": "2,35",
+      "vysoká varianta": "2,36",
+      "od": 2041.5,
+      "do": 2042.5
+     },
+     {
+      "rok": 2043,
+      "hlavicka": "K 1. 1. 2043 (projekce)",
+      "nízká varianta": "2,28",
+      "střední varianta": "2,28",
+      "vysoká varianta": "2,29",
+      "od": 2042.5,
+      "do": 2043.5
+     },
+     {
+      "rok": 2044,
+      "hlavicka": "K 1. 1. 2044 (projekce)",
+      "nízká varianta": "2,21",
+      "střední varianta": "2,22",
+      "vysoká varianta": "2,24",
+      "od": 2043.5,
+      "do": 2044.5
+     },
+     {
+      "rok": 2045,
+      "hlavicka": "K 1. 1. 2045 (projekce)",
+      "nízká varianta": "2,16",
+      "střední varianta": "2,17",
+      "vysoká varianta": "2,18",
+      "od": 2044.5,
+      "do": 2045.5
+     },
+     {
+      "rok": 2046,
+      "hlavicka": "K 1. 1. 2046 (projekce)",
+      "nízká varianta": "2,12",
+      "střední varianta": "2,13",
+      "vysoká varianta": "2,15",
+      "od": 2045.5,
+      "do": 2046.5
+     },
+     {
+      "rok": 2047,
+      "hlavicka": "K 1. 1. 2047 (projekce)",
+      "nízká varianta": "2,09",
+      "střední varianta": "2,10",
+      "vysoká varianta": "2,12",
+      "od": 2046.5,
+      "do": 2047.5
+     },
+     {
+      "rok": 2048,
+      "hlavicka": "K 1. 1. 2048 (projekce)",
+      "nízká varianta": "2,06",
+      "střední varianta": "2,07",
+      "vysoká varianta": "2,10",
+      "od": 2047.5,
+      "do": 2048.5
+     },
+     {
+      "rok": 2049,
+      "hlavicka": "K 1. 1. 2049 (projekce)",
+      "nízká varianta": "2,03",
+      "střední varianta": "2,05",
+      "vysoká varianta": "2,07",
+      "od": 2048.5,
+      "do": 2049.5
+     },
+     {
+      "rok": 2050,
+      "hlavicka": "K 1. 1. 2050 (projekce)",
+      "nízká varianta": "2,01",
+      "střední varianta": "2,02",
+      "vysoká varianta": "2,05",
+      "od": 2049.5,
+      "do": 2050.5
+     },
+     {
+      "rok": 2051,
+      "hlavicka": "K 1. 1. 2051 (projekce)",
+      "nízká varianta": "1,98",
+      "střední varianta": "2,00",
+      "vysoká varianta": "2,03",
+      "od": 2050.5,
+      "do": 2051.5
+     },
+     {
+      "rok": 2052,
+      "hlavicka": "K 1. 1. 2052 (projekce)",
+      "nízká varianta": "1,96",
+      "střední varianta": "1,97",
+      "vysoká varianta": "2,01",
+      "od": 2051.5,
+      "do": 2052.5
+     },
+     {
+      "rok": 2053,
+      "hlavicka": "K 1. 1. 2053 (projekce)",
+      "nízká varianta": "1,93",
+      "střední varianta": "1,95",
+      "vysoká varianta": "1,99",
+      "od": 2052.5,
+      "do": 2053.5
+     },
+     {
+      "rok": 2054,
+      "hlavicka": "K 1. 1. 2054 (projekce)",
+      "nízká varianta": "1,91",
+      "střední varianta": "1,93",
+      "vysoká varianta": "1,97",
+      "od": 2053.5,
+      "do": 2054.5
+     },
+     {
+      "rok": 2055,
+      "hlavicka": "K 1. 1. 2055 (projekce)",
+      "nízká varianta": "1,89",
+      "střední varianta": "1,91",
+      "vysoká varianta": "1,95",
+      "od": 2054.5,
+      "do": 2055.5
+     },
+     {
+      "rok": 2056,
+      "hlavicka": "K 1. 1. 2056 (projekce)",
+      "nízká varianta": "1,87",
+      "střední varianta": "1,89",
+      "vysoká varianta": "1,93",
+      "od": 2055.5,
+      "do": 2056.5
+     },
+     {
+      "rok": 2057,
+      "hlavicka": "K 1. 1. 2057 (projekce)",
+      "nízká varianta": "1,85",
+      "střední varianta": "1,87",
+      "vysoká varianta": "1,92",
+      "od": 2056.5,
+      "do": 2057.5
+     },
+     {
+      "rok": 2058,
+      "hlavicka": "K 1. 1. 2058 (projekce)",
+      "nízká varianta": "1,83",
+      "střední varianta": "1,86",
+      "vysoká varianta": "1,90",
+      "od": 2057.5,
+      "do": 2058.5
+     },
+     {
+      "rok": 2059,
+      "hlavicka": "K 1. 1. 2059 (projekce)",
+      "nízká varianta": "1,82",
+      "střední varianta": "1,85",
+      "vysoká varianta": "1,89",
+      "od": 2058.5,
+      "do": 2059.5
+     },
+     {
+      "rok": 2060,
+      "hlavicka": "K 1. 1. 2060 (projekce)",
+      "nízká varianta": "1,81",
+      "střední varianta": "1,84",
+      "vysoká varianta": "1,89",
+      "od": 2059.5,
+      "do": 2060.5
+     }
+    ]
+   },
+   "params": [
+    {
+     "name": "hov",
+     "select": {
+      "type": "point",
+      "fields": [
+       "hlavicka"
+      ],
+      "on": "mouseover",
+      "clear": "mouseout"
+     }
+    }
+   ],
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "x": {
+     "field": "od",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2022,
+       2063
+      ],
+      "nice": false
+     }
+    },
+    "x2": {
+     "field": "do"
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 3.7
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "vysoká varianta",
+      "title": "vysoká varianta"
+     },
+     {
+      "field": "střední varianta",
+      "title": "střední varianta"
+     },
+     {
+      "field": "nízká varianta",
+      "title": "nízká varianta"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

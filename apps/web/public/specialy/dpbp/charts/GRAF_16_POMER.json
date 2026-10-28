@@ -1,0 +1,1559 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Na jednoho seniora dnes připadají tři lidé ve věku 15–64 let, v roce 2050 dva",
+  "subtitle": "Počet lidí ve věku 15–64 let na jednoho člověka ve věku 65 a více let k 1. 1., střední varianta projekce ČSÚ; červeně pás 2038–2043"
+ },
+ "_source": "[Projekce obyvatelstva ČR 2023–2100, střední varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nSkupina 15–64 let není počet pracujících, zahrnuje i studenty a lidi, kteří nepracují.",
+ "height": 320,
+ "data": {
+  "values": [
+   {
+    "rok": 2023,
+    "pomer": 3.111,
+    "hlavicka": "K 1. 1. 2023 (skutečnost)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+    "Lidé ve věku 15–64 let": "6,87 mil.",
+    "Senioři (65 a více let)": "2,21 mil.",
+    "label": "3,1"
+   },
+   {
+    "rok": 2024,
+    "pomer": 3.097,
+    "hlavicka": "K 1. 1. 2024 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+    "Lidé ve věku 15–64 let": "6,94 mil.",
+    "Senioři (65 a více let)": "2,24 mil."
+   },
+   {
+    "rok": 2025,
+    "pomer": 3.079,
+    "hlavicka": "K 1. 1. 2025 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+    "Lidé ve věku 15–64 let": "6,96 mil.",
+    "Senioři (65 a více let)": "2,26 mil."
+   },
+   {
+    "rok": 2026,
+    "pomer": 3.046,
+    "hlavicka": "K 1. 1. 2026 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+    "Lidé ve věku 15–64 let": "6,93 mil.",
+    "Senioři (65 a více let)": "2,27 mil."
+   },
+   {
+    "rok": 2027,
+    "pomer": 3.008,
+    "hlavicka": "K 1. 1. 2027 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+    "Lidé ve věku 15–64 let": "6,89 mil.",
+    "Senioři (65 a více let)": "2,29 mil."
+   },
+   {
+    "rok": 2028,
+    "pomer": 2.969,
+    "hlavicka": "K 1. 1. 2028 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+    "Lidé ve věku 15–64 let": "6,85 mil.",
+    "Senioři (65 a více let)": "2,31 mil."
+   },
+   {
+    "rok": 2029,
+    "pomer": 2.927,
+    "hlavicka": "K 1. 1. 2029 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+    "Lidé ve věku 15–64 let": "6,84 mil.",
+    "Senioři (65 a více let)": "2,34 mil."
+   },
+   {
+    "rok": 2030,
+    "pomer": 2.882,
+    "hlavicka": "K 1. 1. 2030 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+    "Lidé ve věku 15–64 let": "6,84 mil.",
+    "Senioři (65 a více let)": "2,37 mil."
+   },
+   {
+    "rok": 2031,
+    "pomer": 2.85,
+    "hlavicka": "K 1. 1. 2031 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+    "Lidé ve věku 15–64 let": "6,84 mil.",
+    "Senioři (65 a více let)": "2,40 mil."
+   },
+   {
+    "rok": 2032,
+    "pomer": 2.829,
+    "hlavicka": "K 1. 1. 2032 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+    "Lidé ve věku 15–64 let": "6,85 mil.",
+    "Senioři (65 a více let)": "2,42 mil."
+   },
+   {
+    "rok": 2033,
+    "pomer": 2.813,
+    "hlavicka": "K 1. 1. 2033 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+    "Lidé ve věku 15–64 let": "6,86 mil.",
+    "Senioři (65 a více let)": "2,44 mil."
+   },
+   {
+    "rok": 2034,
+    "pomer": 2.798,
+    "hlavicka": "K 1. 1. 2034 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+    "Lidé ve věku 15–64 let": "6,87 mil.",
+    "Senioři (65 a více let)": "2,45 mil."
+   },
+   {
+    "rok": 2035,
+    "pomer": 2.774,
+    "hlavicka": "K 1. 1. 2035 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+    "Lidé ve věku 15–64 let": "6,87 mil.",
+    "Senioři (65 a více let)": "2,48 mil."
+   },
+   {
+    "rok": 2036,
+    "pomer": 2.743,
+    "hlavicka": "K 1. 1. 2036 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+    "Lidé ve věku 15–64 let": "6,86 mil.",
+    "Senioři (65 a více let)": "2,50 mil."
+   },
+   {
+    "rok": 2037,
+    "pomer": 2.707,
+    "hlavicka": "K 1. 1. 2037 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+    "Lidé ve věku 15–64 let": "6,85 mil.",
+    "Senioři (65 a více let)": "2,53 mil."
+   },
+   {
+    "rok": 2038,
+    "pomer": 2.655,
+    "hlavicka": "K 1. 1. 2038 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+    "Lidé ve věku 15–64 let": "6,82 mil.",
+    "Senioři (65 a více let)": "2,57 mil."
+   },
+   {
+    "rok": 2039,
+    "pomer": 2.582,
+    "hlavicka": "K 1. 1. 2039 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,6",
+    "Lidé ve věku 15–64 let": "6,77 mil.",
+    "Senioři (65 a více let)": "2,62 mil."
+   },
+   {
+    "rok": 2040,
+    "pomer": 2.498,
+    "hlavicka": "K 1. 1. 2040 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,5",
+    "Lidé ve věku 15–64 let": "6,70 mil.",
+    "Senioři (65 a více let)": "2,68 mil.",
+    "label": "2,5"
+   },
+   {
+    "rok": 2041,
+    "pomer": 2.419,
+    "hlavicka": "K 1. 1. 2041 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,4",
+    "Lidé ve věku 15–64 let": "6,63 mil.",
+    "Senioři (65 a více let)": "2,74 mil."
+   },
+   {
+    "rok": 2042,
+    "pomer": 2.346,
+    "hlavicka": "K 1. 1. 2042 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,3",
+    "Lidé ve věku 15–64 let": "6,57 mil.",
+    "Senioři (65 a více let)": "2,80 mil."
+   },
+   {
+    "rok": 2043,
+    "pomer": 2.282,
+    "hlavicka": "K 1. 1. 2043 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,3",
+    "Lidé ve věku 15–64 let": "6,51 mil.",
+    "Senioři (65 a více let)": "2,85 mil."
+   },
+   {
+    "rok": 2044,
+    "pomer": 2.221,
+    "hlavicka": "K 1. 1. 2044 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,2",
+    "Lidé ve věku 15–64 let": "6,45 mil.",
+    "Senioři (65 a více let)": "2,90 mil."
+   },
+   {
+    "rok": 2045,
+    "pomer": 2.168,
+    "hlavicka": "K 1. 1. 2045 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,2",
+    "Lidé ve věku 15–64 let": "6,39 mil.",
+    "Senioři (65 a více let)": "2,95 mil."
+   },
+   {
+    "rok": 2046,
+    "pomer": 2.131,
+    "hlavicka": "K 1. 1. 2046 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+    "Lidé ve věku 15–64 let": "6,35 mil.",
+    "Senioři (65 a více let)": "2,98 mil."
+   },
+   {
+    "rok": 2047,
+    "pomer": 2.102,
+    "hlavicka": "K 1. 1. 2047 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+    "Lidé ve věku 15–64 let": "6,31 mil.",
+    "Senioři (65 a více let)": "3,00 mil."
+   },
+   {
+    "rok": 2048,
+    "pomer": 2.074,
+    "hlavicka": "K 1. 1. 2048 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+    "Lidé ve věku 15–64 let": "6,28 mil.",
+    "Senioři (65 a více let)": "3,03 mil."
+   },
+   {
+    "rok": 2049,
+    "pomer": 2.048,
+    "hlavicka": "K 1. 1. 2049 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+    "Lidé ve věku 15–64 let": "6,25 mil.",
+    "Senioři (65 a více let)": "3,05 mil."
+   },
+   {
+    "rok": 2050,
+    "pomer": 2.022,
+    "hlavicka": "K 1. 1. 2050 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+    "Lidé ve věku 15–64 let": "6,21 mil.",
+    "Senioři (65 a více let)": "3,07 mil.",
+    "label": "2,0"
+   },
+   {
+    "rok": 2051,
+    "pomer": 1.997,
+    "hlavicka": "K 1. 1. 2051 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+    "Lidé ve věku 15–64 let": "6,18 mil.",
+    "Senioři (65 a více let)": "3,10 mil."
+   },
+   {
+    "rok": 2052,
+    "pomer": 1.974,
+    "hlavicka": "K 1. 1. 2052 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+    "Lidé ve věku 15–64 let": "6,16 mil.",
+    "Senioři (65 a více let)": "3,12 mil."
+   },
+   {
+    "rok": 2053,
+    "pomer": 1.953,
+    "hlavicka": "K 1. 1. 2053 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+    "Lidé ve věku 15–64 let": "6,13 mil.",
+    "Senioři (65 a více let)": "3,14 mil."
+   },
+   {
+    "rok": 2054,
+    "pomer": 1.931,
+    "hlavicka": "K 1. 1. 2054 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+    "Lidé ve věku 15–64 let": "6,11 mil.",
+    "Senioři (65 a více let)": "3,16 mil."
+   },
+   {
+    "rok": 2055,
+    "pomer": 1.912,
+    "hlavicka": "K 1. 1. 2055 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+    "Lidé ve věku 15–64 let": "6,08 mil.",
+    "Senioři (65 a více let)": "3,18 mil."
+   },
+   {
+    "rok": 2056,
+    "pomer": 1.892,
+    "hlavicka": "K 1. 1. 2056 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+    "Lidé ve věku 15–64 let": "6,06 mil.",
+    "Senioři (65 a více let)": "3,20 mil."
+   },
+   {
+    "rok": 2057,
+    "pomer": 1.873,
+    "hlavicka": "K 1. 1. 2057 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+    "Lidé ve věku 15–64 let": "6,04 mil.",
+    "Senioři (65 a více let)": "3,22 mil."
+   },
+   {
+    "rok": 2058,
+    "pomer": 1.86,
+    "hlavicka": "K 1. 1. 2058 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+    "Lidé ve věku 15–64 let": "6,02 mil.",
+    "Senioři (65 a více let)": "3,24 mil."
+   },
+   {
+    "rok": 2059,
+    "pomer": 1.847,
+    "hlavicka": "K 1. 1. 2059 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+    "Lidé ve věku 15–64 let": "6,00 mil.",
+    "Senioři (65 a více let)": "3,25 mil."
+   },
+   {
+    "rok": 2060,
+    "pomer": 1.845,
+    "hlavicka": "K 1. 1. 2060 (projekce)",
+    "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+    "Lidé ve věku 15–64 let": "6,00 mil.",
+    "Senioři (65 a více let)": "3,25 mil.",
+    "label": "1,8"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "od": 2038,
+      "do": 2043
+     }
+    ]
+   },
+   "mark": {
+    "type": "rect",
+    "fill": "#de1743",
+    "opacity": 0.12
+   },
+   "encoding": {
+    "x": {
+     "field": "od",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     }
+    },
+    "x2": {
+     "field": "do"
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 3.7
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "area",
+    "color": "#2f325c",
+    "opacity": 0.14,
+    "line": false
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "line",
+    "color": "#2f325c",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "pomer": 3.111,
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,21 mil.",
+      "label": "3,1"
+     },
+     {
+      "rok": 2040,
+      "pomer": 2.498,
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,5",
+      "Lidé ve věku 15–64 let": "6,70 mil.",
+      "Senioři (65 a více let)": "2,68 mil.",
+      "label": "2,5"
+     },
+     {
+      "rok": 2050,
+      "pomer": 2.022,
+      "hlavicka": "K 1. 1. 2050 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,21 mil.",
+      "Senioři (65 a více let)": "3,07 mil.",
+      "label": "2,0"
+     },
+     {
+      "rok": 2060,
+      "pomer": 1.845,
+      "hlavicka": "K 1. 1. 2060 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+      "Lidé ve věku 15–64 let": "6,00 mil.",
+      "Senioři (65 a více let)": "3,25 mil.",
+      "label": "1,8"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "color": "#2f325c",
+    "size": 70,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "pomer": 3.111,
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,21 mil.",
+      "label": "3,1"
+     },
+     {
+      "rok": 2040,
+      "pomer": 2.498,
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,5",
+      "Lidé ve věku 15–64 let": "6,70 mil.",
+      "Senioři (65 a více let)": "2,68 mil.",
+      "label": "2,5"
+     },
+     {
+      "rok": 2050,
+      "pomer": 2.022,
+      "hlavicka": "K 1. 1. 2050 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,21 mil.",
+      "Senioři (65 a více let)": "3,07 mil.",
+      "label": "2,0"
+     },
+     {
+      "rok": 2060,
+      "pomer": 1.845,
+      "hlavicka": "K 1. 1. 2060 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+      "Lidé ve věku 15–64 let": "6,00 mil.",
+      "Senioři (65 a více let)": "3,25 mil.",
+      "label": "1,8"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": -13,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#2f325c"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2040.5,
+      "pomer": 3.55,
+      "t": "2038–2043: nejrychlejší pokles"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#de1743",
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "pomer",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       3.7
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "pomer": 3.111,
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,21 mil.",
+      "label": "3,1"
+     },
+     {
+      "rok": 2024,
+      "pomer": 3.097,
+      "hlavicka": "K 1. 1. 2024 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,94 mil.",
+      "Senioři (65 a více let)": "2,24 mil."
+     },
+     {
+      "rok": 2025,
+      "pomer": 3.079,
+      "hlavicka": "K 1. 1. 2025 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,96 mil.",
+      "Senioři (65 a více let)": "2,26 mil."
+     },
+     {
+      "rok": 2026,
+      "pomer": 3.046,
+      "hlavicka": "K 1. 1. 2026 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+      "Lidé ve věku 15–64 let": "6,93 mil.",
+      "Senioři (65 a více let)": "2,27 mil."
+     },
+     {
+      "rok": 2027,
+      "pomer": 3.008,
+      "hlavicka": "K 1. 1. 2027 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+      "Lidé ve věku 15–64 let": "6,89 mil.",
+      "Senioři (65 a více let)": "2,29 mil."
+     },
+     {
+      "rok": 2028,
+      "pomer": 2.969,
+      "hlavicka": "K 1. 1. 2028 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+      "Lidé ve věku 15–64 let": "6,85 mil.",
+      "Senioři (65 a více let)": "2,31 mil."
+     },
+     {
+      "rok": 2029,
+      "pomer": 2.927,
+      "hlavicka": "K 1. 1. 2029 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+      "Lidé ve věku 15–64 let": "6,84 mil.",
+      "Senioři (65 a více let)": "2,34 mil."
+     },
+     {
+      "rok": 2030,
+      "pomer": 2.882,
+      "hlavicka": "K 1. 1. 2030 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+      "Lidé ve věku 15–64 let": "6,84 mil.",
+      "Senioři (65 a více let)": "2,37 mil."
+     },
+     {
+      "rok": 2031,
+      "pomer": 2.85,
+      "hlavicka": "K 1. 1. 2031 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+      "Lidé ve věku 15–64 let": "6,84 mil.",
+      "Senioři (65 a více let)": "2,40 mil."
+     },
+     {
+      "rok": 2032,
+      "pomer": 2.829,
+      "hlavicka": "K 1. 1. 2032 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,85 mil.",
+      "Senioři (65 a více let)": "2,42 mil."
+     },
+     {
+      "rok": 2033,
+      "pomer": 2.813,
+      "hlavicka": "K 1. 1. 2033 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,86 mil.",
+      "Senioři (65 a více let)": "2,44 mil."
+     },
+     {
+      "rok": 2034,
+      "pomer": 2.798,
+      "hlavicka": "K 1. 1. 2034 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,45 mil."
+     },
+     {
+      "rok": 2035,
+      "pomer": 2.774,
+      "hlavicka": "K 1. 1. 2035 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,48 mil."
+     },
+     {
+      "rok": 2036,
+      "pomer": 2.743,
+      "hlavicka": "K 1. 1. 2036 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+      "Lidé ve věku 15–64 let": "6,86 mil.",
+      "Senioři (65 a více let)": "2,50 mil."
+     },
+     {
+      "rok": 2037,
+      "pomer": 2.707,
+      "hlavicka": "K 1. 1. 2037 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+      "Lidé ve věku 15–64 let": "6,85 mil.",
+      "Senioři (65 a více let)": "2,53 mil."
+     },
+     {
+      "rok": 2038,
+      "pomer": 2.655,
+      "hlavicka": "K 1. 1. 2038 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+      "Lidé ve věku 15–64 let": "6,82 mil.",
+      "Senioři (65 a více let)": "2,57 mil."
+     },
+     {
+      "rok": 2039,
+      "pomer": 2.582,
+      "hlavicka": "K 1. 1. 2039 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,6",
+      "Lidé ve věku 15–64 let": "6,77 mil.",
+      "Senioři (65 a více let)": "2,62 mil."
+     },
+     {
+      "rok": 2040,
+      "pomer": 2.498,
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,5",
+      "Lidé ve věku 15–64 let": "6,70 mil.",
+      "Senioři (65 a více let)": "2,68 mil.",
+      "label": "2,5"
+     },
+     {
+      "rok": 2041,
+      "pomer": 2.419,
+      "hlavicka": "K 1. 1. 2041 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,4",
+      "Lidé ve věku 15–64 let": "6,63 mil.",
+      "Senioři (65 a více let)": "2,74 mil."
+     },
+     {
+      "rok": 2042,
+      "pomer": 2.346,
+      "hlavicka": "K 1. 1. 2042 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,3",
+      "Lidé ve věku 15–64 let": "6,57 mil.",
+      "Senioři (65 a více let)": "2,80 mil."
+     },
+     {
+      "rok": 2043,
+      "pomer": 2.282,
+      "hlavicka": "K 1. 1. 2043 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,3",
+      "Lidé ve věku 15–64 let": "6,51 mil.",
+      "Senioři (65 a více let)": "2,85 mil."
+     },
+     {
+      "rok": 2044,
+      "pomer": 2.221,
+      "hlavicka": "K 1. 1. 2044 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,2",
+      "Lidé ve věku 15–64 let": "6,45 mil.",
+      "Senioři (65 a více let)": "2,90 mil."
+     },
+     {
+      "rok": 2045,
+      "pomer": 2.168,
+      "hlavicka": "K 1. 1. 2045 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,2",
+      "Lidé ve věku 15–64 let": "6,39 mil.",
+      "Senioři (65 a více let)": "2,95 mil."
+     },
+     {
+      "rok": 2046,
+      "pomer": 2.131,
+      "hlavicka": "K 1. 1. 2046 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+      "Lidé ve věku 15–64 let": "6,35 mil.",
+      "Senioři (65 a více let)": "2,98 mil."
+     },
+     {
+      "rok": 2047,
+      "pomer": 2.102,
+      "hlavicka": "K 1. 1. 2047 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+      "Lidé ve věku 15–64 let": "6,31 mil.",
+      "Senioři (65 a více let)": "3,00 mil."
+     },
+     {
+      "rok": 2048,
+      "pomer": 2.074,
+      "hlavicka": "K 1. 1. 2048 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+      "Lidé ve věku 15–64 let": "6,28 mil.",
+      "Senioři (65 a více let)": "3,03 mil."
+     },
+     {
+      "rok": 2049,
+      "pomer": 2.048,
+      "hlavicka": "K 1. 1. 2049 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,25 mil.",
+      "Senioři (65 a více let)": "3,05 mil."
+     },
+     {
+      "rok": 2050,
+      "pomer": 2.022,
+      "hlavicka": "K 1. 1. 2050 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,21 mil.",
+      "Senioři (65 a více let)": "3,07 mil.",
+      "label": "2,0"
+     },
+     {
+      "rok": 2051,
+      "pomer": 1.997,
+      "hlavicka": "K 1. 1. 2051 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,18 mil.",
+      "Senioři (65 a více let)": "3,10 mil."
+     },
+     {
+      "rok": 2052,
+      "pomer": 1.974,
+      "hlavicka": "K 1. 1. 2052 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,16 mil.",
+      "Senioři (65 a více let)": "3,12 mil."
+     },
+     {
+      "rok": 2053,
+      "pomer": 1.953,
+      "hlavicka": "K 1. 1. 2053 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,13 mil.",
+      "Senioři (65 a více let)": "3,14 mil."
+     },
+     {
+      "rok": 2054,
+      "pomer": 1.931,
+      "hlavicka": "K 1. 1. 2054 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,11 mil.",
+      "Senioři (65 a více let)": "3,16 mil."
+     },
+     {
+      "rok": 2055,
+      "pomer": 1.912,
+      "hlavicka": "K 1. 1. 2055 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,08 mil.",
+      "Senioři (65 a více let)": "3,18 mil."
+     },
+     {
+      "rok": 2056,
+      "pomer": 1.892,
+      "hlavicka": "K 1. 1. 2056 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,06 mil.",
+      "Senioři (65 a více let)": "3,20 mil."
+     },
+     {
+      "rok": 2057,
+      "pomer": 1.873,
+      "hlavicka": "K 1. 1. 2057 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,04 mil.",
+      "Senioři (65 a více let)": "3,22 mil."
+     },
+     {
+      "rok": 2058,
+      "pomer": 1.86,
+      "hlavicka": "K 1. 1. 2058 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,02 mil.",
+      "Senioři (65 a více let)": "3,24 mil."
+     },
+     {
+      "rok": 2059,
+      "pomer": 1.847,
+      "hlavicka": "K 1. 1. 2059 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+      "Lidé ve věku 15–64 let": "6,00 mil.",
+      "Senioři (65 a více let)": "3,25 mil."
+     },
+     {
+      "rok": 2060,
+      "pomer": 1.845,
+      "hlavicka": "K 1. 1. 2060 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+      "Lidé ve věku 15–64 let": "6,00 mil.",
+      "Senioři (65 a více let)": "3,25 mil.",
+      "label": "1,8"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 1,
+    "strokeDash": [
+     3,
+     3
+    ],
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 3.7
+    },
+    "strokeOpacity": {
+     "condition": {
+      "param": "hov",
+      "empty": false,
+      "value": 0.6
+     },
+     "value": 0
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "pomer": 3.111,
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,21 mil.",
+      "label": "3,1",
+      "od": 2022.5,
+      "do": 2023.5
+     },
+     {
+      "rok": 2024,
+      "pomer": 3.097,
+      "hlavicka": "K 1. 1. 2024 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,94 mil.",
+      "Senioři (65 a více let)": "2,24 mil.",
+      "od": 2023.5,
+      "do": 2024.5
+     },
+     {
+      "rok": 2025,
+      "pomer": 3.079,
+      "hlavicka": "K 1. 1. 2025 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,1",
+      "Lidé ve věku 15–64 let": "6,96 mil.",
+      "Senioři (65 a více let)": "2,26 mil.",
+      "od": 2024.5,
+      "do": 2025.5
+     },
+     {
+      "rok": 2026,
+      "pomer": 3.046,
+      "hlavicka": "K 1. 1. 2026 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+      "Lidé ve věku 15–64 let": "6,93 mil.",
+      "Senioři (65 a více let)": "2,27 mil.",
+      "od": 2025.5,
+      "do": 2026.5
+     },
+     {
+      "rok": 2027,
+      "pomer": 3.008,
+      "hlavicka": "K 1. 1. 2027 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+      "Lidé ve věku 15–64 let": "6,89 mil.",
+      "Senioři (65 a více let)": "2,29 mil.",
+      "od": 2026.5,
+      "do": 2027.5
+     },
+     {
+      "rok": 2028,
+      "pomer": 2.969,
+      "hlavicka": "K 1. 1. 2028 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "3,0",
+      "Lidé ve věku 15–64 let": "6,85 mil.",
+      "Senioři (65 a více let)": "2,31 mil.",
+      "od": 2027.5,
+      "do": 2028.5
+     },
+     {
+      "rok": 2029,
+      "pomer": 2.927,
+      "hlavicka": "K 1. 1. 2029 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+      "Lidé ve věku 15–64 let": "6,84 mil.",
+      "Senioři (65 a více let)": "2,34 mil.",
+      "od": 2028.5,
+      "do": 2029.5
+     },
+     {
+      "rok": 2030,
+      "pomer": 2.882,
+      "hlavicka": "K 1. 1. 2030 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+      "Lidé ve věku 15–64 let": "6,84 mil.",
+      "Senioři (65 a více let)": "2,37 mil.",
+      "od": 2029.5,
+      "do": 2030.5
+     },
+     {
+      "rok": 2031,
+      "pomer": 2.85,
+      "hlavicka": "K 1. 1. 2031 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,9",
+      "Lidé ve věku 15–64 let": "6,84 mil.",
+      "Senioři (65 a více let)": "2,40 mil.",
+      "od": 2030.5,
+      "do": 2031.5
+     },
+     {
+      "rok": 2032,
+      "pomer": 2.829,
+      "hlavicka": "K 1. 1. 2032 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,85 mil.",
+      "Senioři (65 a více let)": "2,42 mil.",
+      "od": 2031.5,
+      "do": 2032.5
+     },
+     {
+      "rok": 2033,
+      "pomer": 2.813,
+      "hlavicka": "K 1. 1. 2033 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,86 mil.",
+      "Senioři (65 a více let)": "2,44 mil.",
+      "od": 2032.5,
+      "do": 2033.5
+     },
+     {
+      "rok": 2034,
+      "pomer": 2.798,
+      "hlavicka": "K 1. 1. 2034 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,45 mil.",
+      "od": 2033.5,
+      "do": 2034.5
+     },
+     {
+      "rok": 2035,
+      "pomer": 2.774,
+      "hlavicka": "K 1. 1. 2035 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,8",
+      "Lidé ve věku 15–64 let": "6,87 mil.",
+      "Senioři (65 a více let)": "2,48 mil.",
+      "od": 2034.5,
+      "do": 2035.5
+     },
+     {
+      "rok": 2036,
+      "pomer": 2.743,
+      "hlavicka": "K 1. 1. 2036 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+      "Lidé ve věku 15–64 let": "6,86 mil.",
+      "Senioři (65 a více let)": "2,50 mil.",
+      "od": 2035.5,
+      "do": 2036.5
+     },
+     {
+      "rok": 2037,
+      "pomer": 2.707,
+      "hlavicka": "K 1. 1. 2037 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+      "Lidé ve věku 15–64 let": "6,85 mil.",
+      "Senioři (65 a více let)": "2,53 mil.",
+      "od": 2036.5,
+      "do": 2037.5
+     },
+     {
+      "rok": 2038,
+      "pomer": 2.655,
+      "hlavicka": "K 1. 1. 2038 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,7",
+      "Lidé ve věku 15–64 let": "6,82 mil.",
+      "Senioři (65 a více let)": "2,57 mil.",
+      "od": 2037.5,
+      "do": 2038.5
+     },
+     {
+      "rok": 2039,
+      "pomer": 2.582,
+      "hlavicka": "K 1. 1. 2039 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,6",
+      "Lidé ve věku 15–64 let": "6,77 mil.",
+      "Senioři (65 a více let)": "2,62 mil.",
+      "od": 2038.5,
+      "do": 2039.5
+     },
+     {
+      "rok": 2040,
+      "pomer": 2.498,
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,5",
+      "Lidé ve věku 15–64 let": "6,70 mil.",
+      "Senioři (65 a více let)": "2,68 mil.",
+      "label": "2,5",
+      "od": 2039.5,
+      "do": 2040.5
+     },
+     {
+      "rok": 2041,
+      "pomer": 2.419,
+      "hlavicka": "K 1. 1. 2041 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,4",
+      "Lidé ve věku 15–64 let": "6,63 mil.",
+      "Senioři (65 a více let)": "2,74 mil.",
+      "od": 2040.5,
+      "do": 2041.5
+     },
+     {
+      "rok": 2042,
+      "pomer": 2.346,
+      "hlavicka": "K 1. 1. 2042 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,3",
+      "Lidé ve věku 15–64 let": "6,57 mil.",
+      "Senioři (65 a více let)": "2,80 mil.",
+      "od": 2041.5,
+      "do": 2042.5
+     },
+     {
+      "rok": 2043,
+      "pomer": 2.282,
+      "hlavicka": "K 1. 1. 2043 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,3",
+      "Lidé ve věku 15–64 let": "6,51 mil.",
+      "Senioři (65 a více let)": "2,85 mil.",
+      "od": 2042.5,
+      "do": 2043.5
+     },
+     {
+      "rok": 2044,
+      "pomer": 2.221,
+      "hlavicka": "K 1. 1. 2044 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,2",
+      "Lidé ve věku 15–64 let": "6,45 mil.",
+      "Senioři (65 a více let)": "2,90 mil.",
+      "od": 2043.5,
+      "do": 2044.5
+     },
+     {
+      "rok": 2045,
+      "pomer": 2.168,
+      "hlavicka": "K 1. 1. 2045 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,2",
+      "Lidé ve věku 15–64 let": "6,39 mil.",
+      "Senioři (65 a více let)": "2,95 mil.",
+      "od": 2044.5,
+      "do": 2045.5
+     },
+     {
+      "rok": 2046,
+      "pomer": 2.131,
+      "hlavicka": "K 1. 1. 2046 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+      "Lidé ve věku 15–64 let": "6,35 mil.",
+      "Senioři (65 a více let)": "2,98 mil.",
+      "od": 2045.5,
+      "do": 2046.5
+     },
+     {
+      "rok": 2047,
+      "pomer": 2.102,
+      "hlavicka": "K 1. 1. 2047 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+      "Lidé ve věku 15–64 let": "6,31 mil.",
+      "Senioři (65 a více let)": "3,00 mil.",
+      "od": 2046.5,
+      "do": 2047.5
+     },
+     {
+      "rok": 2048,
+      "pomer": 2.074,
+      "hlavicka": "K 1. 1. 2048 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,1",
+      "Lidé ve věku 15–64 let": "6,28 mil.",
+      "Senioři (65 a více let)": "3,03 mil.",
+      "od": 2047.5,
+      "do": 2048.5
+     },
+     {
+      "rok": 2049,
+      "pomer": 2.048,
+      "hlavicka": "K 1. 1. 2049 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,25 mil.",
+      "Senioři (65 a více let)": "3,05 mil.",
+      "od": 2048.5,
+      "do": 2049.5
+     },
+     {
+      "rok": 2050,
+      "pomer": 2.022,
+      "hlavicka": "K 1. 1. 2050 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,21 mil.",
+      "Senioři (65 a více let)": "3,07 mil.",
+      "label": "2,0",
+      "od": 2049.5,
+      "do": 2050.5
+     },
+     {
+      "rok": 2051,
+      "pomer": 1.997,
+      "hlavicka": "K 1. 1. 2051 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,18 mil.",
+      "Senioři (65 a více let)": "3,10 mil.",
+      "od": 2050.5,
+      "do": 2051.5
+     },
+     {
+      "rok": 2052,
+      "pomer": 1.974,
+      "hlavicka": "K 1. 1. 2052 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,16 mil.",
+      "Senioři (65 a více let)": "3,12 mil.",
+      "od": 2051.5,
+      "do": 2052.5
+     },
+     {
+      "rok": 2053,
+      "pomer": 1.953,
+      "hlavicka": "K 1. 1. 2053 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "2,0",
+      "Lidé ve věku 15–64 let": "6,13 mil.",
+      "Senioři (65 a více let)": "3,14 mil.",
+      "od": 2052.5,
+      "do": 2053.5
+     },
+     {
+      "rok": 2054,
+      "pomer": 1.931,
+      "hlavicka": "K 1. 1. 2054 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,11 mil.",
+      "Senioři (65 a více let)": "3,16 mil.",
+      "od": 2053.5,
+      "do": 2054.5
+     },
+     {
+      "rok": 2055,
+      "pomer": 1.912,
+      "hlavicka": "K 1. 1. 2055 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,08 mil.",
+      "Senioři (65 a více let)": "3,18 mil.",
+      "od": 2054.5,
+      "do": 2055.5
+     },
+     {
+      "rok": 2056,
+      "pomer": 1.892,
+      "hlavicka": "K 1. 1. 2056 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,06 mil.",
+      "Senioři (65 a více let)": "3,20 mil.",
+      "od": 2055.5,
+      "do": 2056.5
+     },
+     {
+      "rok": 2057,
+      "pomer": 1.873,
+      "hlavicka": "K 1. 1. 2057 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,04 mil.",
+      "Senioři (65 a více let)": "3,22 mil.",
+      "od": 2056.5,
+      "do": 2057.5
+     },
+     {
+      "rok": 2058,
+      "pomer": 1.86,
+      "hlavicka": "K 1. 1. 2058 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,9",
+      "Lidé ve věku 15–64 let": "6,02 mil.",
+      "Senioři (65 a více let)": "3,24 mil.",
+      "od": 2057.5,
+      "do": 2058.5
+     },
+     {
+      "rok": 2059,
+      "pomer": 1.847,
+      "hlavicka": "K 1. 1. 2059 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+      "Lidé ve věku 15–64 let": "6,00 mil.",
+      "Senioři (65 a více let)": "3,25 mil.",
+      "od": 2058.5,
+      "do": 2059.5
+     },
+     {
+      "rok": 2060,
+      "pomer": 1.845,
+      "hlavicka": "K 1. 1. 2060 (projekce)",
+      "Lidí ve věku 15–64 let na jednoho seniora": "1,8",
+      "Lidé ve věku 15–64 let": "6,00 mil.",
+      "Senioři (65 a více let)": "3,25 mil.",
+      "label": "1,8",
+      "od": 2059.5,
+      "do": 2060.5
+     }
+    ]
+   },
+   "params": [
+    {
+     "name": "hov",
+     "select": {
+      "type": "point",
+      "fields": [
+       "hlavicka"
+      ],
+      "on": "mouseover",
+      "clear": "mouseout"
+     }
+    }
+   ],
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "x": {
+     "field": "od",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2022,
+       2061
+      ],
+      "nice": false
+     }
+    },
+    "x2": {
+     "field": "do"
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 3.7
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "Lidí ve věku 15–64 let na jednoho seniora",
+      "title": "Lidí ve věku 15–64 let na jednoho seniora"
+     },
+     {
+      "field": "Lidé ve věku 15–64 let",
+      "title": "Lidé ve věku 15–64 let"
+     },
+     {
+      "field": "Senioři (65 a více let)",
+      "title": "Senioři (65 a více let)"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}
