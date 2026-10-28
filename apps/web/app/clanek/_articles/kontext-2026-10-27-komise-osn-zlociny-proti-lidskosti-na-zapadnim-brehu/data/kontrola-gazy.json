@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 140,
+  "data": {
+    "values": [
+      {
+        "kat": "Dohoda o příměří, říjen 2025",
+        "n": 53,
+        "t": "53 %",
+        "barva": "#bcbcb0"
+      },
+      {
+        "kat": "Skutečnost, 2. 9. 2026",
+        "n": 60,
+        "t": "nejméně 60 %",
+        "barva": "#de1743"
+      },
+      {
+        "kat": "Netanjahuův pokyn, květen 2026",
+        "n": 70,
+        "t": "70 %",
+        "barva": "#efa0af"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Stav"
+          },
+          {
+            "field": "t",
+            "title": "Počet"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Izrael podle komise kontroluje {nejméně 60 %|#de1743} Gazy, příměří počítalo s 53 %",
+    "subtitle": "Podíl území Pásma Gazy pod kontrolou izraelské armády (%). Světlý pruh: premiér Netanjahu v květnu 2026 řekl, že nařídil obsadit 70 %."
+  },
+  "_source": "[Zpráva Nezávislé mezinárodní vyšetřovací komise OSN, A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 37"
+}

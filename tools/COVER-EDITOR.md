@@ -84,6 +84,14 @@ s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, graf
    soubory homepage, OG a story, ať nemusí rozlišovat kontrolní značky od obsahu.
 8. **Převod hotového coveru** (Kateřina: „nech fotku i wording“) mění jen sazbu do formátů. Motiv, barvy a texty
    zůstávají, každý formát se ale kontroluje podle bodů 1–7 stejně jako nový cover.
+9. **Fotka jako podkres = celá plocha, ne okno** (Kateřina 27. 10. 2026: „žádné divné oseklé fotky“). Když má fotka
+   sloužit jako podkres (satelitní snímek, krajina, město), vyplní celý formát ve všech pěti velikostech včetně boků OG
+   (`og: 'siroky'`). Čitelnost textu zajistí závoj v ink blue (celoplošně asi 0,3 a k textu přechod do ~0,6), text
+   smí do fotky zasahovat. Nedělat z ní malý výřez, pás ani okno s měkkými okraji uprostřed prázdné navy. Body 2–3
+   (motiv mezi textem a logem) platí pro motivy, které podkresem nejsou. Pro podkres volit spíš odzoomovaný záběr.
+   Snímky se zapečenými popisky uvnitř (štítky čtvrtí, data) se na podkres nehodí: rozmazané popisky prosvítají jako
+   šmouhy. Vybrat snímek bez nich, nebo popisek v rohu odříznout výřezem. Vzor:
+   `kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs`.
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
 - *27. 10. 2026 – převod pěti starších coverů k Izraeli/Gaze do formátů a cover článku o komisi OSN.* Opakované

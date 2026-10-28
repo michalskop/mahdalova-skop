@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 110,
+  "data": {
+    "values": [
+      {
+        "kat": "2008 – 6. 10. 2023 (téměř 16 let)",
+        "n": 6,
+        "t": "6",
+        "barva": "#bcbcb0"
+      },
+      {
+        "kat": "7. 10. 2023 – 30. 9. 2026 (necelé 3 roky)",
+        "n": 254,
+        "t": "254",
+        "barva": "#de1743"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          290
+        ]
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Období"
+          },
+          {
+            "field": "t",
+            "title": "Počet"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Při náletech na Západním břehu zemřelo za necelé tři roky {254|#de1743} Palestinců, za předchozích téměř 16 let šest",
+    "subtitle": "Palestinci zabití izraelskými leteckými údery na Západním břehu (počet lidí)"
+  },
+  "_source": "[Zpráva Nezávislé mezinárodní vyšetřovací komise OSN, A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 27, podle dat OCHA"
+}
