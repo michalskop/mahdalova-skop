@@ -1,6 +1,6 @@
 # Stav speciálu „Data pro budoucí premiérku"
 
-**Aktualizováno:** 28. 7. 2026
+**Aktualizováno:** 28. 10. 2026 (oddíly 2, 3 a 4; počty v oddílu 1 jsou z 28. 7.)
 
 Tento dokument je jediný zdroj pravdy o tom, co je hotové a co ne.
 Čísla níže jsou ověřená proti kódu, ne odhadnutá.
@@ -40,6 +40,10 @@ Skončí chybou při rozbitém odkazu nebo chybějícím grafu.
 | **T0b** | Oprava kontrolního skriptu: doplněny `onePager` a `postSupportTiles`, přidána kontrola grafů a osiřelých článků. Původní verze měla díru — u rozbitého odkazu hlásila „v pořádku". Opraveny sekce 6 a 7 v `inventory.md`. | `9ca44db5` |
 | **T1** | Přístupnost: články měly dva hlavní nadpisy (`<h1>`). Nově má stránka kapitoly jako `<h1>` název kapitoly, článek svůj titulek. Vizuálně beze změny. | `f79a3910` |
 | **T9** | Graf o milostech nasazen do článku *Milosti*. Nahradil Flourish embed se stejným obsahem — převod do vlastního systému grafů. Ověřeno v prohlížeči. | viz git log |
+| **T10** | Články z webu zařazené do kapitol jako dlaždice s odkazem (`{ "web": "<slug>" }` v `_meta.json`), 13 analýz v kapitolách 01, 02, 09, 10, 12, 14, 15 | `f8a4bea1`, `c23aa336` |
+| **T11** | Demografie: oprava ověřených chyb (vrchol 1,83 v roce 2021, věk prvorodiček 29,2, Maďarsko 1,31, Švédsko, Francie, mimo manželství 46,8 %, Korea, Praha, přehled 35 studií); grafy GRAF_01_PLODNOST, FertilityComparisonChart a MothersAgeShiftChart z primárních dat skripty v `01-demografie/_data_pipeline/` | `655b871b` |
+| **T12** | Demografie 05 přepsán srozumitelně + 4 nové vizualizace (GRAF_05_KOPEC, BirthOrderPictogram, okno pro druhé dítě, PolicyEvidenceCards) | `c23aa336` |
+| **T13** | Karty kapitol po dvou s coverem na šířku 1200 × 630, nic se neusekává | `c23aa336` |
 
 ---
 
@@ -53,6 +57,12 @@ Skončí chybou při rozbitém odkazu nebo chybějícím grafu.
 | **T7** | Regresní testy (kolize sticky prvků, validace odkazů v CI) | P2 | M | čeká na T3 |
 | **T6** | Doplnit interaktivní mapy do článku *Vylidňování obcí* | P2 | S | čeká na podklady |
 | **T8** | Hustota dlaždic na úzkém mobilu (390/360 px) | P3 | S | — |
+| **T14** | Revize ostatních kapitol (02–15) stejným postupem jako Demografie: ověřit čísla u zdroje, sloučit duplicity, srozumitelný jazyk, vizualizace | P1 | XL | — |
+| **T15** | Demografie: nová stavba a nové texty podle `REVIZE-01-DEMOGRAFIE.md` (první „Spočítali jsme milion za druhé dítě“); čeká na schválení Kateřiny | P1 | L | schválení |
+| **T16** | Podlouhlé covery 1200 × 630 pro 5 starších článků z webu bez `ogImage` (benzín, smrtelná vlna veder, horko v kabině řidičů, účast na výborech, poslanci a neziskovky) a cover pro *16 Stárnutí*; podle `tools/COVER-EDITOR.md`, kontaktní arch ke schválení | P2 | M | — |
+| **T17** | Až vyjde díl 2 série „Česko drží matky doma“ (střední Evropa, N-20), přidat ho do Demografie jako dlaždici `web` (kapitola má 12 karet, s ním 13 → doplnit do sudého počtu) | P2 | S | vydání dílu 2 |
+| **T18** | Demografie: zbývající chyby a „k přepočtu“ z `REVIZE-01-DEMOGRAFIE.md` – 03 (tabulka ČR), 06 (data 2021, barvy mimo paletu, souhrnné „Zdroje“), jesle 5 % × EU 35 %, páry 68 → 58 %, kohortní plodnost, „3,5 % HDP Francie“ | P1 | M | — |
+| **T19** | Rozbité obrázky: `/dpbp/chapters/15.svg` a `/dpbp/og/15-efektivni-vladnuti/*.svg` vracejí 404 (i na živém webu) | P2 | S | — |
 
 ### Detail k T3 — proč je to největší úkol
 
@@ -83,6 +93,9 @@ Konkrétní vady:
 | **Audio** | Nahrávky zatím nejsou, jsou v pořadí. Placeholder „audio doplníme" **zůstává** — neskrývat. | `components/dpbp/ArticleByline.tsx:108` |
 | **Mapy** | Mapy **přijdou**, text zůstává beze změny. Čeká se na podklady. | `_content/01-demografie/articles/11-vylidnovani-obci.mdx:38` |
 | **Graf o milostech** | **Nasazen** do článku *Milosti*. Vyřešeno. | `15-efektivni-vladnuti/articles/09-milosti.mdx` |
+| **Karty v kapitole: po dvou, cover na šířku** (28. 10. 2026) | Dlaždice jdou vždy po dvou (mobil pod sebou); osamocená ani `fullWidth` se neroztahují přes celou šíři, lichý počet nechá prázdné místo, proto držet sudý počet. Náhled je podlouhlý cover 1200 × 630 (`ogImage` u článků z webu, `coverImage` u článků speciálu) a zabírá zhruba polovinu karty; obrázek jiného poměru se ořízne nejvýš o ~20 %, jinak se ukáže celý s pruhem barvy (`CardThumbImage`). Dřív 150px pruh cover usekl. Do kapitoly zařazovat jen texty, které k tématu kapitoly opravdu patří (Kdo zůstal doma z Demografie vyřazen). | `components/dpbp/DpbpArticleCard*` |
+| **Grafy z ročních dat, ne z pětiletých bodů** (28. 10. 2026) | Úvodní graf Demografie bral jen roky 1990, 1995 … 2020, takže schoval vrchol 1,83 (2021) i minimum 1,13 (1999) a texty kapitoly z něj převzaly chybné „1,71 v roce 2020“. Časové řady kreslit z celé roční řady primárního zdroje skriptem v `_content/<kapitola>/_data_pipeline/`; čísla v textu brát z výstupu skriptu, ne z grafu. Ručně kreslené SVG grafy s natvrdo zapsanými body nepoužívat. | `01-demografie/_data_pipeline/` |
+| **Články z webu ve speciálu** (15. 10. 2026) | Analýza vydaná na webu se do kapitoly zařazuje **dlaždicí s odkazem**, ne kopií: v `_meta.json` na konec `postSupportTiles` přidat `{ "web": "<slug>", "topic": "Analýza" }`. Článek zůstává na `/clanek/<slug>` (žádná změna URL ani 301, žádný duplicitní text); název, perex a obrázek se berou z jeho frontmatteru a článek se objeví i v menu kapitoly. Kontrolní skript hlídá, že článek existuje. Kopii (`.mdx` v kapitole) dělat jen jako adaptaci pro premiérku, protože renderer speciálu neumí webové komponenty (ChartCard, Figure, RelatedArticles). | `components/dpbp/webArticleTile.server.ts` |
 
 ---
 
