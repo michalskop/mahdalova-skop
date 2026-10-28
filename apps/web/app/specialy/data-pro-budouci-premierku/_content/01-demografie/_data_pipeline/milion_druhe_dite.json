@@ -1,0 +1,135 @@
+{
+ "zdroj": "ČSÚ, Demografická příručka 2024, tab. 6.8 a 6.12; ČSÚ, Pohyb obyvatelstva 2025 (předběžné)",
+ "odmena_kc": 1000000,
+ "serie_2010_2024": {
+  "2010": {
+   "celkem": 117153,
+   "prvni": 54331,
+   "druhe": 45514,
+   "treti": 12573
+  },
+  "2011": {
+   "celkem": 108673,
+   "prvni": 50989,
+   "druhe": 42156,
+   "treti": 11101
+  },
+  "2012": {
+   "celkem": 108576,
+   "prvni": 51476,
+   "druhe": 41826,
+   "treti": 10964
+  },
+  "2013": {
+   "celkem": 106751,
+   "prvni": 51092,
+   "druhe": 40078,
+   "treti": 11152
+  },
+  "2014": {
+   "celkem": 109860,
+   "prvni": 52106,
+   "druhe": 41196,
+   "treti": 11791
+  },
+  "2015": {
+   "celkem": 110764,
+   "prvni": 53223,
+   "druhe": 41276,
+   "treti": 11598
+  },
+  "2016": {
+   "celkem": 112663,
+   "prvni": 54918,
+   "druhe": 41302,
+   "treti": 11767
+  },
+  "2017": {
+   "celkem": 114405,
+   "prvni": 55726,
+   "druhe": 41832,
+   "treti": 12022
+  },
+  "2018": {
+   "celkem": 114036,
+   "prvni": 54755,
+   "druhe": 42462,
+   "treti": 11870
+  },
+  "2019": {
+   "celkem": 112231,
+   "prvni": 53647,
+   "druhe": 42173,
+   "treti": 11817
+  },
+  "2020": {
+   "celkem": 110200,
+   "prvni": 52414,
+   "druhe": 41432,
+   "treti": 11674
+  },
+  "2021": {
+   "celkem": 111793,
+   "prvni": 51900,
+   "druhe": 43623,
+   "treti": 11790
+  },
+  "2022": {
+   "celkem": 101299,
+   "prvni": 46905,
+   "druhe": 39130,
+   "treti": 10889
+  },
+  "2023": {
+   "celkem": 91149,
+   "prvni": 42165,
+   "druhe": 35658,
+   "treti": 9395
+  },
+  "2024": {
+   "celkem": 84311,
+   "prvni": 38518,
+   "druhe": 33180,
+   "treti": 8757
+  }
+ },
+ "cena_2024_mld": 33.2,
+ "podil_druhych_2024": 0.3935,
+ "odhad_2025": {
+  "druhe": 30539,
+  "cena_mld": 30.5,
+  "pozn": "odhad při stejném podílu jako 2024; pořadí za 2025 ČSÚ zatím nezveřejnil"
+ },
+ "scenare": [
+  {
+   "navic_pct": 1,
+   "deti_navic": 332,
+   "cena_na_dite_navic_mil": 100.0
+  },
+  {
+   "navic_pct": 5,
+   "deti_navic": 1659,
+   "cena_na_dite_navic_mil": 20.0
+  },
+  {
+   "navic_pct": 10,
+   "deti_navic": 3318,
+   "cena_na_dite_navic_mil": 10.0
+  },
+  {
+   "navic_pct": 20,
+   "deti_navic": 6636,
+   "cena_na_dite_navic_mil": 5.0
+  }
+ ],
+ "tfr_druhe": {
+  "1990": 0.715,
+  "2010": 0.561,
+  "2021": 0.694,
+  "2024": 0.525
+ },
+ "pokles_2021_2024": {
+  "celkem": 27482,
+  "druhe": 10443
+ }
+}
