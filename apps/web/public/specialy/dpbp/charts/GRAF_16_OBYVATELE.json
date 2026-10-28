@@ -709,7 +709,7 @@
      "scale": {
       "domain": [
        2022,
-       2063
+       2076
       ],
       "nice": false
      },
@@ -798,19 +798,22 @@
       "rok": 2040,
       "varianta": "nízká",
       "obyv": 10.296,
-      "label": "10,30"
+      "label": "10,30",
+      "t": "10,30 mil."
      },
      {
       "rok": 2040,
       "varianta": "střední",
       "obyv": 10.714,
-      "label": "10,71"
+      "label": "10,71",
+      "t": "10,71 mil."
      },
      {
       "rok": 2040,
       "varianta": "vysoká",
       "obyv": 11.045,
-      "label": "11,04"
+      "label": "11,04",
+      "t": "11,04 mil."
      }
     ]
    },
@@ -828,7 +831,7 @@
      "scale": {
       "domain": [
        2022,
-       2063
+       2076
       ],
       "nice": false
      },
@@ -895,28 +898,18 @@
     "values": [
      {
       "rok": 2040,
-      "varianta": "nízká",
-      "obyv": 10.296,
-      "label": "10,30"
-     },
-     {
-      "rok": 2040,
-      "varianta": "střední",
-      "obyv": 10.714,
-      "label": "10,71"
-     },
-     {
-      "rok": 2040,
       "varianta": "vysoká",
       "obyv": 11.045,
-      "label": "11,04"
+      "label": "11,04",
+      "t": "11,04 mil."
      }
     ]
    },
    "mark": {
     "type": "text",
-    "dx": 0,
-    "dy": -13,
+    "align": "left",
+    "dx": 12,
+    "dy": -12,
     "fontSize": 12.5,
     "fontWeight": "bold"
    },
@@ -928,7 +921,7 @@
      "scale": {
       "domain": [
        2022,
-       2063
+       2076
       ],
       "nice": false
      },
@@ -989,7 +982,373 @@
      "legend": null
     },
     "text": {
-     "field": "label"
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2040,
+      "varianta": "střední",
+      "obyv": 10.714,
+      "label": "10,71",
+      "t": "10,71 mil."
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 12,
+    "dy": 14,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2076
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "obyv",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       8.5,
+       12
+      ]
+     },
+     "axis": {
+      "values": [
+       9,
+       10,
+       11,
+       12
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' mil.'"
+     }
+    },
+    "color": {
+     "field": "varianta",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nízká",
+       "střední",
+       "vysoká"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2040,
+      "varianta": "nízká",
+      "obyv": 10.296,
+      "label": "10,30",
+      "t": "10,30 mil."
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 12,
+    "dy": 14,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2076
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "obyv",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       8.5,
+       12
+      ]
+     },
+     "axis": {
+      "values": [
+       9,
+       10,
+       11,
+       12
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' mil.'"
+     }
+    },
+    "color": {
+     "field": "varianta",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nízká",
+       "střední",
+       "vysoká"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2040,
+      "obyv": 11.85,
+      "t": "rok 2040"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 6,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2076
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "obyv",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       8.5,
+       12
+      ]
+     },
+     "axis": {
+      "values": [
+       9,
+       10,
+       11,
+       12
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' mil.'"
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2060,
+      "varianta": "nízká",
+      "obyv": 9.529,
+      "label": "9,53",
+      "t": "nízká varianta: 9,53 mil."
+     },
+     {
+      "rok": 2060,
+      "varianta": "střední",
+      "obyv": 10.593,
+      "label": "10,59",
+      "t": "střední varianta: 10,59 mil."
+     },
+     {
+      "rok": 2060,
+      "varianta": "vysoká",
+      "obyv": 11.479,
+      "label": "11,48",
+      "t": "vysoká varianta: 11,48 mil."
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 7,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2022,
+       2076
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2023,
+       2030,
+       2040,
+       2050,
+       2060
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "obyv",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       8.5,
+       12
+      ]
+     },
+     "axis": {
+      "values": [
+       9,
+       10,
+       11,
+       12
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' mil.'"
+     }
+    },
+    "color": {
+     "field": "varianta",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nízká",
+       "střední",
+       "vysoká"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "t"
     }
    }
   },
@@ -1280,7 +1639,7 @@
      "scale": {
       "domain": [
        2022,
-       2063
+       2076
       ],
       "nice": false
      }
@@ -1673,7 +2032,7 @@
      "scale": {
       "domain": [
        2022,
-       2063
+       2076
       ],
       "nice": false
      }

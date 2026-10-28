@@ -194,7 +194,10 @@ save("GRAF_16_VARIANTY.json", specD)
 yE = {"field": "obyv", "type": "quantitative", "title": None, "scale": {"domain": [8.5, 12]},
       "axis": {"values": [9, 10, 11, 12], "grid": True, "gridColor": GRID, "domain": False, "ticks": False,
                "labelExpr": "datum.value + ' mil.'"}}
-end40 = [r for r in rowsE if r["rok"] == 2040]
+end40 = [dict(r, t=r["label"] + " mil.") for r in rowsE if r["rok"] == 2040]
+end60 = [dict(r, t=f"{r['varianta']} varianta: {r['label']} mil.") for r in rowsE if r["rok"] == 2060]
+XDE = [2022, 2076]
+xvE = dict(xq, scale={"domain": XDE, "nice": False})
 specE = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text": "V roce 2040 se varianty liší o 0,7 milionu lidí, ale poměr lidí ve věku 15–64 let k seniorům je stejný",
@@ -203,13 +206,19 @@ specE = {
     "height": 260,
     "data": {"values": rowsE},
     "layer": [
-        {"mark": {"type": "line", "strokeWidth": 2.5, "strokeJoin": "round"}, "encoding": {"x": xv, "y": yE, "color": colV, "detail": {"field": "varianta"}}},
+        {"mark": {"type": "line", "strokeWidth": 2.5, "strokeJoin": "round"}, "encoding": {"x": xvE, "y": yE, "color": colV, "detail": {"field": "varianta"}}},
         {"mark": {"type": "rule", "strokeDash": [4, 4], "strokeWidth": 1, "color": INK, "opacity": 0.55}, "encoding": {"x": {"datum": 2040}}},
         {"data": {"values": end40}, "mark": {"type": "point", "filled": True, "size": 70, "opacity": 1},
-         "encoding": {"x": xv, "y": yE, "color": colV}},
-        {"data": {"values": end40}, "mark": {"type": "text", "dx": 0, "dy": -13, "fontSize": 12.5, "fontWeight": "bold"},
-         "encoding": {"x": xv, "y": yE, "color": colV, "text": {"field": "label"}}},
-        *hover_layers(recE, keysV, 12, xdomain=[2022, 2063], ymin=8.5),
+         "encoding": {"x": xvE, "y": yE, "color": colV}},
+        # hodnoty v roce 2040 vpravo od svislice, s jednotkou a nad / pod čarou, aby je čára neprotínala a nevypadaly jako čas
+        *[{"data": {"values": [r for r in end40 if r["varianta"] == v]}, "mark": {"type": "text", "align": "left", "dx": 12, "dy": dy, "fontSize": 12.5, "fontWeight": "bold"},
+           "encoding": {"x": xvE, "y": yE, "color": colV, "text": {"field": "t"}}} for v, dy in (("vysoká", -12), ("střední", 14), ("nízká", 14))],
+        {"data": {"values": [{"rok": 2040, "obyv": 11.85, "t": "rok 2040"}]}, "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 12, "fontWeight": "bold", "color": INK},
+         "encoding": {"x": xvE, "y": yE, "text": {"field": "t"}}},
+        # názvy čar na jejich konci (rok 2060)
+        {"data": {"values": end60}, "mark": {"type": "text", "align": "left", "dx": 7, "fontSize": 12.5, "fontWeight": "bold"},
+         "encoding": {"x": xvE, "y": yE, "color": colV, "text": {"field": "t"}}},
+        *hover_layers(recE, keysV, 12, xdomain=XDE, ymin=8.5),
     ],
     "config": {"view": {"stroke": None}},
 }
