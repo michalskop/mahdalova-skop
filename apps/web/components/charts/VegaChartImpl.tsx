@@ -252,6 +252,7 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _toggle_legend: _l,
     _legend_inactive_style: _lis,
     _legend_hide_mode: _lhm,
+    _reveal_sequence: _rs,
     _click_detail: _cd,
     _facet_fill: _ff,
     ...rest
@@ -562,6 +563,36 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       probe.remove();
       return normalized;
     };
+    // Volitelné `_reveal_sequence` ve specu: pole kroků, každý krok je seznam barev značek
+    // (plocha, čára, body, popisky); kroky se odkrývají zleva doprava jeden po druhém,
+    // takže je vidět, že graf zahrnuje celou plochu (např. skládané podíly skupin).
+    const sequence = direction === 'show' && !series?.length && Array.isArray(spec?._reveal_sequence)
+      ? (spec._reveal_sequence as string[][]).map(step => step.map(normalizeColor))
+      : null;
+    if (sequence) {
+      const candidates = Array.from(container.querySelectorAll<SVGGraphicsElement>(
+        '.mark-line path, .mark-area path, .mark-symbol path, .mark-text text',
+      ));
+      const stepDuration = 1100;
+      const stepGap = 900;
+      const runs = sequence.map((colors, index) => {
+        const stepMarks = candidates.filter(mark => {
+          const styles = getComputedStyle(mark);
+          return colors.includes(styles.stroke) || colors.includes(styles.fill);
+        });
+        const stepAnimations = stepMarks.map(mark => mark.animate(
+          [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)' }],
+          { duration: stepDuration, delay: index * stepGap, easing: 'cubic-bezier(0.4, 0, 0.2, 1)', fill: 'both' },
+        ));
+        return { stepMarks, stepAnimations };
+      });
+      return Promise.all(runs.flatMap(run => run.stepAnimations.map(animation => animation.finished.catch(() => undefined)))).then(() => {
+        runs.forEach(({ stepMarks, stepAnimations }) => {
+          stepMarks.forEach(mark => { mark.style.clipPath = 'inset(0 0 0 0)'; });
+          stepAnimations.forEach(animation => animation.cancel());
+        });
+      });
+    }
     const normalizedSeriesColors = seriesColors?.map(normalizeColor);
     const marks = Array.from(container.querySelectorAll<SVGGraphicsElement>(
       '.mark-line path, .mark-area path, .mark-symbol path, .mark-rule path',
@@ -590,7 +621,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
       marks.forEach(mark => { mark.style.clipPath = finalClipPath; });
       animations.forEach(animation => animation.cancel());
     });
-  }, [toggleLegend]);
+  }, [toggleLegend, spec]);
 
   useEffect(() => {
     setHiddenSeries(new Set());

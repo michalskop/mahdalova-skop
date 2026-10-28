@@ -1,6 +1,7 @@
 ---
 title: "V éře prezidenta Pavla jsou zásluhy žen méně přehlížené"
 date: "2026-10-28"
+time: "12:10"
 author: "Kateřina Mahdalová"
 excerpt: "Od roku 1995 udělili čeští prezidenti 1 370 státních vyznamenání a ženy dostaly 221 z nich. Za Havla, Klause a Zemana jim připadala zhruba sedmina, za Petra Pavla 28 %. Prošli jsme všechny oficiální seznamy Hradu a ke každému vyznamenání dohledali, komu a za co ho prezident udělil."
 coverImage: "images/cover-homepage.png"

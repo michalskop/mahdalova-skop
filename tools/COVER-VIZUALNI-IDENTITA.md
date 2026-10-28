@@ -38,6 +38,15 @@ Test: zakryj titulek. Pozná čtenář z motivu aspoň směr zjištění (víc �
 
 **Titulek coveru má dát informaci, ne holé číslo** (Kateřina 26. 10., cover „Obce utratily 519 miliard korun“): samotná částka neřekne, jestli je to hodně, nebo málo. Číslo zasaď do srovnání („Obce hospodaří s pětinou toho, co utratí stát“) nebo ho nahraď zjištěním. Titulek ani podtitulek nesmí zbytečně zpochybňovat instituci, o které článek vysvětluje (u radnic ne „starostu si přímo nevolíme“). Štítek nad titulkem neopakuje titulek: u rozcestníku „Komunální volby 2026“ je ve štítku „Volby do obecních zastupitelstev“.
 
+### 2.1 Cover musí říkat to, co článek (ponaučení z Data pro budoucí premiérku, 28. 10. 2026)
+
+Cover je tvrzení o článku, a proto platí stejná pravidla jako pro text: každé číslo a každá věta na něm musí sedět s hotovým (revidovaným) článkem.
+
+- **Cover se dělá až z posledního znění článku.** Titulek, podtitulek, čísla v grafu i popisky se kontrolují proti textu článku a proti skriptu v jeho `_data_pipeline/`. Kdo mění titulek nebo číslo v článku, přegeneruje i cover, než jde cokoli ven.
+- **Kontrola před ukázkou:** (1) titulek coveru je tvrzení, které článek dokládá; (2) každé číslo na coveru najdu v článku nebo v jeho `_data_pipeline/` s odkazem na zdroj; (3) rok, jednotka a skupina (např. „lidé ve věku 15–64 let“, „děti do tří let“) jsou stejné jako v článku; (4) motiv ukazuje data z článku, ne jiná.
+- **Odstrašující příklad (říjen 2026):** covery kapitoly Demografie vznikly dřív než revize textů. Po revizi nesedělo osm z deseti: jesle „5 % × 35 %“ (správně 7,9 % × 40,6 %), Švédsko „1,50 → 1,97, dnes 1,45“ (správně 1,54 → 1,98, 1,42), „v roce 2040 jen 1,8“ (správně 2,5; 1,8 je až rok 2060), Togo „16 mil.“ (správně 14,0 mil. v roce 2050).
+- **Hlavička coveru speciálu** má pevně dva řádky vlevo i vpravo, oba bloky svisle vycentrované na společné ose: vlevo logo speciálu a název („Data pro budoucí / premiérku“), vpravo štítek „ANALÝZA“ a na novém řádku „01 DEMOGRAFIE“ (číslo a název části, bez slova „kapitola“ a bez odrážky, která štítek zalamuje).
+
 ## 3. Rozcestí: máme fotku?
 
 | Situace | Cesta | Kapitola |
@@ -233,7 +242,7 @@ Konfigurace článku (`_cover_pipeline/animace.config.cjs`) převezme štítek, 
 ## 9. Postup krok za krokem
 
 1. Věta, kterou má cover ukázat (kapitola 2), a cesta podle rozcestí (kapitola 3).
-2. Čísla z `_data_pipeline/` článku: zapsat je do `motiv.cjs` jako konstanty s odkazem na zdroj.
+2. Čísla z `_data_pipeline/` článku: zapsat je do `motiv.cjs` jako konstanty s odkazem na zdroj. Před kreslením zkontrolovat, že cover odpovídá poslednímu znění článku (kapitola 2.1).
 3. `_cover_pipeline/motiv.cjs` vyrobí `motiv-<formát>.svg`, `cover.config.cjs` nastaví text, legendu, barvy a logo, `tools/cover-generator.cjs` vyrenderuje všech pět formátů.
 4. Kontaktní arch: všech pět formátů, karty 5:4 se štítkem rubriky, mobilní seznam, náhled 120×96, OG a jeho čtvercový ořez, mřížka Instagramu, zóny stories.
 5. Carousel a případné animace podle kapitoly 8.
