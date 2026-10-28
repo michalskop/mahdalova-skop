@@ -10,7 +10,7 @@ const path = require('path');
 const PREZ = [ // barvy prezidentů na tmavém pozadí (světlejší odstíny týchž škál jako v grafech)
   ['Havel', 'Václav Havel', '#697fe6', 2002], // brandRoyalBlue.4
   ['Klaus', 'Václav Klaus', '#ff4970', 2012], // brand.3
-  ['Zeman', 'Miloš Zeman', '#bd9103', 2022], // brandYellow.8
+  ['Zeman', 'Miloš Zeman', '#f8f6f0', 2022], // background.2 – světlá béžová jako bílý pruh stuhy: Havel, Zeman, Klaus = trikolóra (Kateřina 28. 10. 2026)
   ['Pavel', 'Petr Pavel', '#1a9fbd', 2025], // brandTeal.5
 ];
 // VARIANTA=prezidenti obarví tečky podle prezidenta místo podle pohlaví
