@@ -210,7 +210,7 @@ const DEF = {
   '05-cas-rodicovstvi': { motiv: 'vek', titulek: 'Prvorodičky jsou o 6,7 roku starší než v roce 1990', pod: 'Průměrný věk matky při prvním dítěti vzrostl z 22,5 na 29,2 roku' },
   '16-starnuti-populace': { motiv: 'rady', logoVpravo: true, titulek: 'Na jednoho seniora dnes tři lidé v produktivním věku, v roce 2050 dva', pod: 'Poměr lidí ve věku 15–64 let k seniorům 65+: 3,1 v roce 2023, 2,5 v roce 2040, 2,0 v roce 2050' },
   '11-vylidnovani-obci': { motiv: 'mapa', bok: true, titulek: 'Od roku 2000 přibylo lidí ve 72 % obcí', pod: 'Karviná ztratila pětinu obyvatel,<br>Říčany o 47 % vyrostly' },
-  '10-data-porody': { motiv: 'dvewaffle', titulek: 'Vzdělání ovlivňuje, kdy má žena první dítě, ne kolik dětí bude mít', pod: 'Ve 45–49 letech mají ženy s maturitou 1,77 dítěte a s vysokou školou 1,75',
+  '10-data-porody': { motiv: 'dvewaffle', posun: { homepage: 0.07, square: 0.045, og: 0.045, instagram: 0.02, story: 0.012 }, titulek: 'Vzdělání ovlivňuje, kdy má žena první dítě, ne kolik dětí bude mít', pod: 'Ve 45–49 letech mají ženy s maturitou 1,77 dítěte a s vysokou školou 1,75',
     spec: { panely: [
       { nazev: '45–49 let', rady: [{ n: 's maturitou', v: 1.77, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 1.75, barva: CRIMSON }] },
       { nazev: '30–34 let', rady: [{ n: 's maturitou', v: 1.1, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 0.89, barva: CRIMSON }] }] } },
@@ -223,7 +223,7 @@ const DEF = {
 const BG = (bez) => bez ? '' : `background:radial-gradient(ellipse 80% 70% at 0% 0%,#272a59cc 0%,#272a5900 60%),radial-gradient(ellipse 70% 60% at 100% 100%,#431320 0%,#43132000 70%),${NAVY}`;
 
 function coverHtml(F, d, bez, fmt) {
-  const bok = d.bok && fmt === 'homepage';
+  const bok = d.bok && fmt === 'homepage', ps = (d.posun && d.posun[fmt]) || 0; // posun: optické vyvážení mezery nad a pod motivem (podíl velikosti titulku)
   const { W, H, m } = F;
   return `<div id="cv" style="position:relative;width:${W}px;height:${H}px;overflow:hidden;${BG(bez)};font-family:'IBM Plex Sans',Arial,sans-serif;color:#fff;display:flex;flex-direction:column;padding:${F.top}px ${m}px ${F.bot}px ${m}px;box-sizing:border-box">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:${F.head * 0.14}px;flex:none;height:${F.head}px">
@@ -235,8 +235,8 @@ function coverHtml(F, d, bez, fmt) {
     </div>
     <div style="margin-top:${F.head * 0.2}px;font:700 ${F.t}px/1.06 'IBM Plex Serif',Georgia,serif;flex:none">${typo(d.titulek)}</div>
     <div style="margin-top:${F.t * 0.22}px;font:500 ${F.sub}px/1.3 'IBM Plex Sans';color:#ffd0da;max-width:${(W - 2 * m) * (bok ? 0.5 : 0.94)}px;flex:none">${typo(d.pod).replace(/[.]$/, '')}</div>
-    <div id="motiv" style="${bok ? `position:absolute;right:${m * 0.4}px;bottom:${F.bot + F.dt * 1.9}px;width:${(W - 2 * m) * 0.78}px;height:${H * 0.56}px` : `flex:1;margin-top:${F.t * 0.35}px;min-height:0;position:relative`}"></div>
-    <div style="flex:none;margin-top:${bok ? 'auto' : (F.t * 0.3) + 'px'};${d.logoVpravo ? 'align-self:flex-end;' : ''}display:flex;align-items:center;gap:12px;font:700 ${F.dt}px 'IBM Plex Serif',Georgia,serif;color:#fff"><span style="width:${F.dt * 1.4}px;height:${F.dt * 1.4}px;display:block">${donut}</span>DataTimes.cz</div>
+    <div id="motiv" style="${bok ? `position:absolute;right:${m * 0.4}px;bottom:${F.bot + F.dt * 1.9}px;width:${(W - 2 * m) * 0.78}px;height:${H * 0.56}px` : `flex:1;margin-top:${F.t * (0.35 - ps)}px;min-height:0;position:relative`}"></div>
+    <div style="flex:none;margin-top:${bok ? 'auto' : (F.t * (0.3 + ps)) + 'px'};${d.logoVpravo ? 'align-self:flex-end;' : ''}display:flex;align-items:center;gap:12px;font:700 ${F.dt}px 'IBM Plex Serif',Georgia,serif;color:#fff"><span style="width:${F.dt * 1.4}px;height:${F.dt * 1.4}px;display:block">${donut}</span>DataTimes.cz</div>
   </div>`;
 }
 
