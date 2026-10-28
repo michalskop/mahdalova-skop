@@ -7,7 +7,7 @@ const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Státní vyznamenání' },
-  titulek: 'Ženy dostávají<br>vyznamenání<br>dvakrát častěji',
+  titulek: 'Za Pavla jsou<br>zásluhy žen<br>méně přehlížené',
   pod: 'Za Petra Pavla 28&nbsp;%, za předchůdců 14&nbsp;%',
   legenda: [[ZENY, 'žena'], [MUZI, 'muž'], ['transparent', '1 tečka = 1 vyznamenání 1995–2025'], ['transparent', 'uprostřed Havel, na okraji Pavel']],
   legendaPodTextem: true,

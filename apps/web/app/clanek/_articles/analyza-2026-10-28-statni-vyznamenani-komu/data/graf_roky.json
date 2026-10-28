@@ -1,0 +1,790 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Klaus vyznamenával nejméně, Havel a Pavel nejvíc",
+  "subtitle": "Počet státních vyznamenání v daném ročníku (všechny čtyři druhy, včetně in memoriam a zahraničních státníků). Ročník 2020 Zeman ohlásil, kvůli covidu ho ale předal až v březnu 2022 spolu s ročníkem 2021."
+ },
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "width": "container",
+ "height": 300,
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "1995",
+      "počet": 55,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "počet": 66,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "počet": 70,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "počet": 106,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "počet": 36,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "počet": 42,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "počet": 49,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "počet": 91,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2003",
+      "počet": 52,
+      "prezident": "Václav Havel (leden), Václav Klaus (říjen)"
+     },
+     {
+      "rok": "2004",
+      "počet": 22,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "počet": 23,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "počet": 22,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "počet": 24,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "počet": 28,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "počet": 24,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "počet": 23,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "počet": 21,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "počet": 22,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2013",
+      "počet": 30,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "počet": 38,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "počet": 36,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "počet": 38,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "počet": 49,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "počet": 42,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "počet": 42,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "počet": 37,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "počet": 29,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "počet": 78,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2023",
+      "počet": 65,
+      "prezident": "Petr Pavel (jedno vyznamenání k 1. 1. 2023 ještě Miloš Zeman)"
+     },
+     {
+      "rok": "2024",
+      "počet": 59,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "počet": 51,
+      "prezident": "Petr Pavel"
+     }
+    ]
+   },
+   "mark": {
+    "type": "bar",
+    "width": {
+     "band": 0.78
+    },
+    "color": "#4c4f8e"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ]
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     }
+    },
+    "y": {
+     "field": "počet",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       120
+      ]
+     },
+     "axis": {
+      "gridColor": "#e8e3d2",
+      "tickMinStep": 20,
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Ročník"
+     },
+     {
+      "field": "prezident",
+      "title": "Prezident"
+     },
+     {
+      "field": "počet",
+      "title": "Vyznamenání"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "1995",
+      "počet": 55,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1996",
+      "počet": 66,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1997",
+      "počet": 70,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1998",
+      "počet": 106,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "1999",
+      "počet": 36,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2000",
+      "počet": 42,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2001",
+      "počet": 49,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2002",
+      "počet": 91,
+      "prezident": "Václav Havel"
+     },
+     {
+      "rok": "2003",
+      "počet": 52,
+      "prezident": "Václav Havel (leden), Václav Klaus (říjen)"
+     },
+     {
+      "rok": "2004",
+      "počet": 22,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2005",
+      "počet": 23,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2006",
+      "počet": 22,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2007",
+      "počet": 24,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2008",
+      "počet": 28,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2009",
+      "počet": 24,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2010",
+      "počet": 23,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2011",
+      "počet": 21,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2012",
+      "počet": 22,
+      "prezident": "Václav Klaus"
+     },
+     {
+      "rok": "2013",
+      "počet": 30,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2014",
+      "počet": 38,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2015",
+      "počet": 36,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2016",
+      "počet": 38,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2017",
+      "počet": 49,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2018",
+      "počet": 42,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2019",
+      "počet": 42,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2020",
+      "počet": 37,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2021",
+      "počet": 29,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2022",
+      "počet": 78,
+      "prezident": "Miloš Zeman"
+     },
+     {
+      "rok": "2023",
+      "počet": 65,
+      "prezident": "Petr Pavel (jedno vyznamenání k 1. 1. 2023 ještě Miloš Zeman)"
+     },
+     {
+      "rok": "2024",
+      "počet": 59,
+      "prezident": "Petr Pavel"
+     },
+     {
+      "rok": "2025",
+      "počet": 51,
+      "prezident": "Petr Pavel"
+     }
+    ]
+   },
+   "transform": [
+    {
+     "filter": "datum.počet > 0"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "dy": -2,
+    "fontSize": 9,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ]
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     }
+    },
+    "y": {
+     "field": "počet",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       120
+      ]
+     }
+    },
+    "text": {
+     "field": "počet"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "2003"
+     },
+     {
+      "rok": "2013"
+     },
+     {
+      "rok": "2023"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#de1743",
+    "strokeDash": [
+     5,
+     3
+    ],
+    "strokeWidth": 2
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ]
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     },
+     "bandPosition": 0
+    },
+    "y": {
+     "value": -22
+    },
+    "y2": {
+     "value": 300
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "1998",
+      "p": "Havel"
+     },
+     {
+      "rok": "2007",
+      "p": "Klaus"
+     },
+     {
+      "rok": "2017",
+      "p": "Zeman"
+     },
+     {
+      "rok": "2024",
+      "p": "Pavel"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "dy": -6,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "scale": {
+      "domain": [
+       "1995",
+       "1996",
+       "1997",
+       "1998",
+       "1999",
+       "2000",
+       "2001",
+       "2002",
+       "2003",
+       "2004",
+       "2005",
+       "2006",
+       "2007",
+       "2008",
+       "2009",
+       "2010",
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024",
+       "2025"
+      ]
+     },
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "labelExpr": "(+datum.value) % 5 == 0 ? datum.value : ''"
+     },
+     "bandPosition": 0.5
+    },
+    "y": {
+     "value": 0
+    },
+    "text": {
+     "field": "p"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

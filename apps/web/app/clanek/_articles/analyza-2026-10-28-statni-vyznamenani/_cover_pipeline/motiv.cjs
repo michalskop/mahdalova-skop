@@ -18,10 +18,11 @@ const PODLE_PREZIDENTU = process.env.VARIANTA === 'prezidenti';
 const STUHA = ['#f8f6f0', '#de1743', '#4a51ab']; // bílá (background.2), karmínová (brand.6), modrá (brandRoyalBlue.6)
 const ZLATY = Math.PI * (3 - Math.sqrt(5));
 
-// tecky.json zapisuje 02_analyza.py: vyznamenání 1995–2025 seřazená podle roku, [rok, pohlaví]
+// tecky.json zapisuje 02_analyza.py: vyznamenání 1995–2025 seřazená podle roku, [rok, pohlaví, prezident]
+// (prezident ze dat, ne z roku: v lednu 2003 ještě vyznamenával Havel, k 1. 1. 2023 Zeman)
 const zaznamy = JSON.parse(fs.readFileSync(path.join(__dirname, 'tecky.json'), 'utf8'));
 const ZENY = '#f76800'; // brandOrange.6 – ženy (barvy pohlaví v grafech DataTimes)
-const MUZI = '#4c4f8e'; // brandNavy.7 – muži (a 3 záznamy s neurčeným pohlavím) tlumeně
+const MUZI = '#4c4f8e'; // brandNavy.7 – muži (a 2 záznamy s neurčeným pohlavím) tlumeně
 const N = zaznamy.length;
 
 // [střed x, střed y, poloměr disku] pro každý formát
@@ -61,7 +62,7 @@ if (require.main === module) {
     svg += `<circle cx="${cx}" cy="${cy}" r="${f1(R * 1.03)}" fill="#101432"/>`;
     for (let i = 0; i < N; i++) {
       const rr = c * Math.sqrt(i + 0.5), a = i * ZLATY - Math.PI / 2;
-      svg += `<circle cx="${f1(cx + rr * Math.cos(a))}" cy="${f1(cy + rr * Math.sin(a))}" r="${f1(r)}" fill="${PODLE_PREZIDENTU ? PREZ.find((p) => +zaznamy[i][0] <= p[3])[2] : zaznamy[i][1] === "Z" ? ZENY : MUZI}"/>`;
+      svg += `<circle cx="${f1(cx + rr * Math.cos(a))}" cy="${f1(cy + rr * Math.sin(a))}" r="${f1(r)}" fill="${PODLE_PREZIDENTU ? PREZ.find((p) => p[0] === zaznamy[i][2])[2] : zaznamy[i][1] === "Z" ? ZENY : MUZI}"/>`;
     }
     fs.writeFileSync(path.join(__dirname, PODLE_PREZIDENTU ? `motiv-prezidenti-${klic}.svg` : `motiv-${klic}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" width="${F.W}" height="${F.H}" viewBox="0 0 ${F.W} ${F.H}">${svg}</svg>`);
   }

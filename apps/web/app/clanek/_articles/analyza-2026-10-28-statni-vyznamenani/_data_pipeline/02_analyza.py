@@ -732,11 +732,17 @@ save('graf_druhy_zm.json', {
     },
 })
 
+# grafy počtů, oblastí a řádů patří i do druhého článku (analyza-2026-10-28-statni-vyznamenani-komu)
+import shutil
+DATA_KOMU = BASE.parent.parent / 'analyza-2026-10-28-statni-vyznamenani-komu' / 'data'
+DATA_KOMU.mkdir(exist_ok=True)
+for f in ['graf_roky', 'graf_obory', 'graf_rady', 'graf_druhy']:
+    shutil.copy(DATA / f'{f}.json', DATA_KOMU / f'{f}.json')
 print('grafy uloženy do', DATA)
 
-# body pro motiv coveru (medaile z teček, ženy oranžově)
+# body pro motiv coveru (medaile z teček, ženy oranžově; varianta podle prezidentů pro druhý článek) – [rok, pohlaví, prezident]
 (BASE.parent / '_cover_pipeline' / 'tecky.json').write_text(
-    json.dumps([[r['rok'], r['pohlavi']] for r in R], ensure_ascii=False), encoding='utf-8')
+    json.dumps([[r['rok'], r['pohlavi'], r['prezident']] for r in sorted(R, key=lambda r: (r['rok'], PREZ.index(r['prezident'])))], ensure_ascii=False), encoding='utf-8')
 
 # všechna čísla citovaná v textu (zapisuje se až na konci, aby obsahoval i tabulku do článku)
 (BASE / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
