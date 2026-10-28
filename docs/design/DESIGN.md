@@ -347,6 +347,17 @@ mark type, and are checked on a real render on desktop **and** at 390 px mobile 
 4. **No empty band above the footer.** The chart canvas reserves at most the spec `height` + 20 px (component default
    since 28. 10. 2026); don't pad low charts with extra `height`.
 
+### Pictogram grids – icon charts (added 2026-10-29, approved by Kateřina: "naprosto nádherné")
+
+Icon grids are the preferred form for "X out of 100" statements and for evidence/policy overviews in the DPBP special. Kateřina orders further icon charts as needed, so use this style by default where a share or a count of people is the message.
+
+- **100 icons, 20 per row** (Tabler icons via `@tabler/icons-react`, `size="100%"`, `stroke` 1.6–2), one icon = one person/family/payment/child; max ~100 icons per chart.
+- **Two states only:** highlighted = the finding (brand `#de1743`; a lighter `#ffb3c0` for a third state), rest muted (`#d4d4c8` or `#c9c9bd`). Never red against green.
+- **The icon says what is counted:** woman (`IconWoman`), family home (`IconHome`), baby carriage (`IconBabyCarriage`), cash (`IconCash`). Same icon for both states, only colour and stroke change.
+- **Each row has a plain-language headline** stating the finding ("z každých 100 rodin by o druhém dítěti rozhodla odměna jen u 5"), no jargon like "z 100 milionů zaplatí 5 dítě navíc". Legend below with the same icons, accessible `role="img"` + `aria-label`.
+- **Card grids with icons** (`PolicyEvidenceCards`): always an even number of cards (2 × 2, 2 × 3), fixed two-column grid, one column on mobile. Evidence level as three dots. Single-letter prepositions and conjunctions get a non-breaking space (never "a" at a line end).
+- **Examples:** `BirthOrderPictogram` (ze 100 žen), `MilionKamJdou` (kam míří milion za druhé dítě), `PolicyEvidenceCards` (co podporuje rodičovství); all in `apps/web/components/dpbp/`.
+
 ### Default implementation for a new chart
 
 - Start with `apps/web/components/charts/VegaChart.tsx` / `VegaChartImpl.tsx` for every new chart, regardless of whether its marks are bars, columns, lines, dots or areas. Build a custom renderer only when the interaction or layout cannot be expressed through this shared component.
