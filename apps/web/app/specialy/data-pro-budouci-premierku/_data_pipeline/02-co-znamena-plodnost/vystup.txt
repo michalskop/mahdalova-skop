@@ -1,0 +1,52 @@
+== 1. Úhrnná plodnost ==
+  1995 CZ 1.28 EU27 None
+  1999 CZ 1.13 EU27 None
+  2000 CZ 1.15 EU27 None
+  2005 CZ 1.29 EU27 1.47
+  2010 CZ 1.51 EU27 1.57
+  2015 CZ 1.57 EU27 1.54
+  2021 CZ 1.83 EU27 1.53
+  2023 CZ 1.46 EU27 1.38
+  2024 CZ 1.36 EU27 1.34
+  2025 ČSÚ 1.28
+  roky s TFR mezi 1,25 a 1,30 (Eurostat): [1995, 2005]
+  minimum: (1999, 1.13)
+  EU27 2024 1.34; vyšší než Česko 2024 (1.36)?
+  Zemí s TFR >= 2,1 v EU – viz skript článku 04
+
+== 2. Ženy v reprodukčním věku a rozklad poklesu narozených ==
+  1. 1. 2015: žen 15–49: 2425820, 25–34: 703029, 26–33: 560715
+  1. 1. 2021: žen 15–49: 2273325, 25–34: 620904, 26–33: 504823
+  1. 1. 2024: žen 15–49: 2378608, 25–34: 611862, 26–33: 491110
+  1. 1. 2025: žen 15–49: 2351932, 25–34: 594609, 26–33: 473542
+  žen 15–49 2015 → 2025: -3.0 %
+  žen 25–34 2015 → 2025: -15.4 %
+  žen 26–33 2021 → 2025: -31281
+  narozených: 2015 110764, 2024 84311, 2025 77636  (2015 → 2025 -29.9 %)
+  model: narozených (míry 2015 × ženy 2015) 111922, (míry 2024 × ženy 2024) 85138
+  míry 2015 × ženy 2024: 97227 (vliv počtu a věku žen: -13.1 %)
+  míry 2024 × ženy 2015: 98547 (vliv měr plodnosti: -12.0 %)
+  rozklad změny -26784 narozených (2015→2024): ženy -14052 (52 %), míry plodnosti -12732 (48 %)
+  kontrola: TFR z měr plodnosti 2015 = 1.57, 2024 = 1.36
+
+== 3. Generační plodnost (součet měr podél ročníku narození, věk = dovršený věk v roce porodu) ==
+  ročník 1965: dosud 1.95 dítěte na ženu do věku 49 (dokončeno: ano); TFR v jeho 25 letech (1990) 1.90, ve 30 letech (1995) 1.28
+  ročník 1970: dosud 1.88 dítěte na ženu do věku 49 (dokončeno: ano); TFR v jeho 25 letech (1995) 1.28, ve 30 letech (2000) 1.15
+  ročník 1975: dosud 1.79 dítěte na ženu do věku 49 (dokončeno: ano); TFR v jeho 25 letech (2000) 1.15, ve 30 letech (2005) 1.29
+  ročník 1980: dosud 1.70 dítěte na ženu do věku 44 (dokončeno: ne); TFR v jeho 25 letech (2005) 1.29, ve 30 letech (2010) 1.51
+  ročník 1985: dosud 1.59 dítěte na ženu do věku 39 (dokončeno: ne); TFR v jeho 25 letech (2010) 1.51, ve 30 letech (2015) 1.57
+  ročník 1975: do věku 39 let (nebo do roku 2024): 1.75
+  ročník 1980: do věku 39 let (nebo do roku 2024): 1.64
+  ročník 1985: do věku 39 let (nebo do roku 2024): 1.59
+
+== 4. Tempo efekt (hrubá Bongaarts–Feeneyova korekce z průměrného věku matek) ==
+  1995–2005: věk matek 25.8 → 28.6 (+0.28 roku ročně), věk při 1. dítěti 23.3 → 26.6 (+0.33 ročně)
+  2005–2015: věk matek 28.6 → 30.0 (+0.14 roku ročně), věk při 1. dítěti 26.6 → 28.2 (+0.16 ročně)
+  2015–2024: věk matek 30.0 → 30.5 (+0.06 roku ročně), věk při 1. dítěti 28.2 → 29.0 (+0.09 ročně)
+  2019–2024: věk matek 30.2 → 30.5 (+0.06 roku ročně), věk při 1. dítěti 28.5 → 29.0 (+0.10 ročně)
+  rok 1999: TFR 1.13, r (5 let zpětně) = +0.275 → TFR* = 1.56
+  rok 2005: TFR 1.29, r (5 let zpětně) = +0.280 → TFR* = 1.79
+  rok 2015: TFR 1.57, r (5 let zpětně) = +0.080 → TFR* = 1.71
+  rok 2024: TFR 1.36, r (5 let zpětně) = +0.060 → TFR* = 1.45
+  2025 (ČSÚ): věk matek 30.6, věk při 1. dítěti 29.2
+  2025: r (2020–2025) = +0.080 → TFR* = 1.39

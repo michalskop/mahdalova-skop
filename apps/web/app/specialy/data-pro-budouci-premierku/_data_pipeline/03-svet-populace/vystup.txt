@@ -1,0 +1,96 @@
+== Tabulka regionů (mil., 1. 7.; TFR) ==
+Svět     2000:    6171.7  2024:    8162.0  2050:    9664.4  TFR 2024: 2.25
+Afrika   2000:     830.6  2024:    1515.1  2050:    2466.6  TFR 2024: 4.01
+Asie     2000:    3747.8  2024:    4806.9  2050:    5280.4  TFR 2024: 1.88
+Evropa   2000:     728.2  2024:     745.1  2050:     703.0  TFR 2024: 1.40
+Amerika  2000:     833.8  2024:    1048.8  2050:    1156.6  TFR 2024: 1.72
+Oceánie  2000:      31.4  2024:      46.1  2050:      57.7  TFR 2024: 2.14
+Čína     2000:    1269.6  2024:    1419.3  2050:    1260.3  TFR 2024: 1.01
+Togo     2000:       4.8  2024:       8.4  2050:      14.0  TFR 2024: 4.12
+Česko    2000:      10.2  2024:      10.7  2050:       9.8  TFR 2024: 1.46
+
+== Svět ==
+vrchol světové populace (1. 7.): rok 2084, 10.29 mld.
+svět 2022: 8.02 mld., 2100: 10.18 mld.
+TFR svět 1960: 4.70, 2023: 2.25, 2024: 2.25
+TFR subsaharská Afrika 2024: 4.26, Afrika celkem 2024: 4.01
+Afrika 2024: 1.52 mld., 2050: 2.47, 2100: 3.81
+Evropa 2024: 745 mil., 2050: 703 mil.
+
+== Země s nejvyšší plodností 2024 ==
+  Chad 6.03
+  Somalia 6.01
+  Democratic Republic of the Congo 5.98
+  Central African Republic 5.95
+  Niger 5.94
+
+== Medián věku 2024 ==
+  Niger 15.4
+  Japan 49.4
+  Czechia 43.2
+  Togo 18.2
+  nejmladší: Central African Republic 14.4; nejstarší: Holy See 58.7
+
+== Togo vs. Česko (1. 7., mil.; růst Toga %/rok) ==
+  2022 Togo 8.07  Česko 10.67  rozdíl -2.60  růst Toga 1.60 %
+  2023 Togo 8.22  Česko 10.81  rozdíl -2.59  růst Toga 2.20 %
+  2024 Togo 8.41  Česko 10.74  rozdíl -2.33  růst Toga 2.19 %
+  2025 Togo 8.59  Česko 10.61  rozdíl -2.02  růst Toga 2.17 %
+  2026 Togo 8.78  Česko 10.53  rozdíl -1.75  růst Toga 2.17 %
+  2027 Togo 8.97  Česko 10.51  rozdíl -1.53  růst Toga 2.14 %
+  2028 Togo 9.16  Česko 10.48  rozdíl -1.32  růst Toga 2.12 %
+  2029 Togo 9.36  Česko 10.45  rozdíl -1.09  růst Toga 2.11 %
+  2030 Togo 9.56  Česko 10.43  rozdíl -0.86  růst Toga 2.13 %
+  2031 Togo 9.77  Česko 10.39  rozdíl -0.63  růst Toga 2.14 %
+  2032 Togo 9.98  Česko 10.36  rozdíl -0.39  růst Toga 2.11 %
+  2033 Togo 10.19  Česko 10.33  rozdíl -0.14  růst Toga 2.08 %
+  2034 Togo 10.40  Česko 10.30  rozdíl +0.10  růst Toga 2.05 %
+  2035 Togo 10.62  Česko 10.27  rozdíl +0.35  růst Toga 2.04 %
+první rok, kdy Togo > Česko (WPP 2024, 1. 7.): 2034
+Togo 2024 / 2050: 8.41 / 13.96 mil.; Česko 2024 / 2050 / 2100: 10.74 / 9.83 / 8.23 mil.
+
+== Indie vs. Čína ==
+  2021 Indie 1414.2 Čína 1426.4
+  2022 Indie 1425.4 Čína 1425.2
+  2023 Indie 1438.1 Čína 1422.6
+  2024 Indie 1450.9 Čína 1419.3
+Indie předstihla Čínu (WPP 2024): rok 2022
+Čína TFR 2024: 1.01; Čína 1. 7. 2022 -> 2023: 1425.2 -> 1422.6
+
+== Česko: ČSÚ vs. OSN ==
+  2000: ČSÚ 10.26 mil., OSN (WPP 2024) 10.24 mil.
+  2024: ČSÚ 10.91 mil., OSN (WPP 2024) 10.74 mil.
+  2050: ČSÚ 10.69 mil., OSN (WPP 2024) 9.83 mil.
+  ČSÚ projekce (střední, 1. 1.): 2033 10.74, 2034 10.74, 2035 10.74, 2036 10.73, 2037 10.73, 2038 10.72, 2039 10.72
+
+== Kdy Togo předstihne Česko (Togo: stav k 1. 1. podle aktualizace OSN, Česko: projekce ČSÚ k 1. 1.) ==
+  1. 1. 2033: Togo 10.08, Česko (ČSÚ) 10.74 
+  1. 1. 2034: Togo 10.29, Česko (ČSÚ) 10.74 
+  1. 1. 2035: Togo 10.51, Česko (ČSÚ) 10.74 
+  1. 1. 2036: Togo 10.73, Česko (ČSÚ) 10.73 
+  1. 1. 2037: Togo 10.94, Česko (ČSÚ) 10.73 <-- Togo větší
+  1. 1. 2038: Togo 11.16, Česko (ČSÚ) 10.72 <-- Togo větší
+  1. 1. 2039: Togo 11.38, Česko (ČSÚ) 10.72 <-- Togo větší
+  první rok, kdy Togo > Česko (ČSÚ projekce): 2037
+
+== Finální tabulka pro článek (mil.; TFR 2024) ==
+Svět     | 6,2 mld, | 8,2 mld, | 9,7 mld, | 2,25
+Afrika   | 831 mil. | 1,5 mld, | 2,5 mld, | 4,01
+Asie     | 3,7 mld, | 4,8 mld, | 5,3 mld, | 1,88
+Evropa   | 728 mil. | 745 mil. | 703 mil. | 1,40
+Amerika  | 834 mil. | 1,0 mld, | 1,2 mld, | 1,72
+Oceánie  | 31,4 mil, | 46,1 mil, | 57,7 mil, | 2,14
+Čína     | 1,3 mld, | 1,4 mld, | 1,3 mld, | 1,01
+Togo     | 4,8 mil, | 8,4 mil, | 14,0 mil, | 4,12
+Česko    | 10,3 mil, | 10,9 mil, | 10,7 mil, | 1,36   (ČSÚ; TFR 2024 podle Eurostatu/ČSÚ 1,36; OSN odhaduje 1,46)
+Europe TFR přímo z WPP: 1.40; Oceania 2.14; Asia 1.88
+
+== Podíl lidí žijících v zemích s plodností pod 2,1 (WPP 2024, rok 2024) ==
+  země s TFR < 2,1: 131 z 237; podíl obyvatel: 68 %
+
+== Podíl Afriky na přírůstku světové populace 2024–2050 a další odvozená čísla ==
+  svět +1502 mil., Afrika +952 mil. = 63 % přírůstku
+  Evropa 2024 → 2050: 745 → 703 mil. (-5.6 %)
+  Čína 2024 → 2050: 1419 → 1260 mil.
+  Togo TFR 2024 4.12, 2050 3.04, 2084 2.38; růst Toga 2024 2.19 %
+  Čad TFR 2024 6.03; Niger 5.94; Somálsko 6.01

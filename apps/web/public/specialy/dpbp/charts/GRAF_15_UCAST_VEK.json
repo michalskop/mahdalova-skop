@@ -1,0 +1,459 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Účast ve volbách 2025 byla nejnižší mezi 33 a 42 lety, nejvyšší od 68 let",
+  "subtitle": "Podíl lidí, kteří uvedli, že se voleb 3.–4. října 2025 zúčastnili; všechny věky dohromady 69 %"
+ },
+ "_source": "[Ozvěny voleb 2025, společná povolební studie STEM, Kantar, Ipsos, Median, NMS a Data Collect (SIMAR), s. 13](https://www.stem.cz/wp-content/uploads/2026/01/SIMAR_spolecna_povolebni_studie.pdf)\nVýzkum na vzorku 7 738 lidí, údaje jsou z dotazníku, ne z volebních seznamů; v pětiletých skupinách se výsledky mohou lišit o několik bodů.",
+ "height": 360,
+ "data": {
+  "values": [
+   {
+    "vek": "18–22",
+    "ucast": 66,
+    "label": "66 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 18–22 let",
+    "Účast": "66 %",
+    "Proti průměru": "−3 p. b."
+   },
+   {
+    "vek": "23–27",
+    "ucast": 66,
+    "label": "66 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 23–27 let",
+    "Účast": "66 %",
+    "Proti průměru": "−3 p. b."
+   },
+   {
+    "vek": "28–32",
+    "ucast": 65,
+    "label": "65 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 28–32 let",
+    "Účast": "65 %",
+    "Proti průměru": "−4 p. b."
+   },
+   {
+    "vek": "33–37",
+    "ucast": 63,
+    "label": "63 %",
+    "skupina": "nejnižší účast",
+    "hlavicka": "Věk 33–37 let",
+    "Účast": "63 %",
+    "Proti průměru": "−6 p. b."
+   },
+   {
+    "vek": "38–42",
+    "ucast": 64,
+    "label": "64 %",
+    "skupina": "nejnižší účast",
+    "hlavicka": "Věk 38–42 let",
+    "Účast": "64 %",
+    "Proti průměru": "−5 p. b."
+   },
+   {
+    "vek": "43–47",
+    "ucast": 66,
+    "label": "66 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 43–47 let",
+    "Účast": "66 %",
+    "Proti průměru": "−3 p. b."
+   },
+   {
+    "vek": "48–52",
+    "ucast": 66,
+    "label": "66 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 48–52 let",
+    "Účast": "66 %",
+    "Proti průměru": "−3 p. b."
+   },
+   {
+    "vek": "53–57",
+    "ucast": 71,
+    "label": "71 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 53–57 let",
+    "Účast": "71 %",
+    "Proti průměru": "+2 p. b."
+   },
+   {
+    "vek": "58–62",
+    "ucast": 70,
+    "label": "70 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 58–62 let",
+    "Účast": "70 %",
+    "Proti průměru": "+1 p. b."
+   },
+   {
+    "vek": "63–67",
+    "ucast": 70,
+    "label": "70 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 63–67 let",
+    "Účast": "70 %",
+    "Proti průměru": "+1 p. b."
+   },
+   {
+    "vek": "68–72",
+    "ucast": 80,
+    "label": "80 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 68–72 let",
+    "Účast": "80 %",
+    "Proti průměru": "+11 p. b."
+   },
+   {
+    "vek": "73–77",
+    "ucast": 75,
+    "label": "75 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 73–77 let",
+    "Účast": "75 %",
+    "Proti průměru": "+6 p. b."
+   },
+   {
+    "vek": "78+",
+    "ucast": 81,
+    "label": "81 %",
+    "skupina": "ostatní",
+    "hlavicka": "Věk 78 a více let",
+    "Účast": "81 %",
+    "Proti průměru": "+12 p. b."
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2,
+    "height": {
+     "band": 0.72
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "vek",
+     "type": "ordinal",
+     "sort": [
+      "18–22",
+      "23–27",
+      "28–32",
+      "33–37",
+      "38–42",
+      "43–47",
+      "48–52",
+      "53–57",
+      "58–62",
+      "63–67",
+      "68–72",
+      "73–77",
+      "78+"
+     ],
+     "title": "Věk (roky)",
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleX": -70,
+      "titleY": -8,
+      "titleFontSize": 11.5,
+      "titleFontWeight": "normal"
+     }
+    },
+    "x": {
+     "field": "ucast",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       90
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nejnižší účast",
+       "ostatní"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeDash": [
+     4,
+     4
+    ],
+    "strokeWidth": 1,
+    "color": "#101432",
+    "opacity": 0.6
+   },
+   "encoding": {
+    "x": {
+     "datum": 69
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -7,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#ffffff"
+   },
+   "encoding": {
+    "y": {
+     "field": "vek",
+     "type": "ordinal",
+     "sort": [
+      "18–22",
+      "23–27",
+      "28–32",
+      "33–37",
+      "38–42",
+      "43–47",
+      "48–52",
+      "53–57",
+      "58–62",
+      "63–67",
+      "68–72",
+      "73–77",
+      "78+"
+     ],
+     "title": "Věk (roky)",
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleX": -70,
+      "titleY": -8,
+      "titleFontSize": 11.5,
+      "titleFontWeight": "normal"
+     }
+    },
+    "x": {
+     "field": "ucast",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       90
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "vek": "18–22",
+      "ucast": 69,
+      "t": "všechny věky: 69 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dx": 6,
+    "dy": -14,
+    "fontSize": 12,
+    "color": "#101432"
+   },
+   "encoding": {
+    "y": {
+     "field": "vek",
+     "type": "ordinal",
+     "sort": [
+      "18–22",
+      "23–27",
+      "28–32",
+      "33–37",
+      "38–42",
+      "43–47",
+      "48–52",
+      "53–57",
+      "58–62",
+      "63–67",
+      "68–72",
+      "73–77",
+      "78+"
+     ],
+     "title": "Věk (roky)",
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleX": -70,
+      "titleY": -8,
+      "titleFontSize": 11.5,
+      "titleFontWeight": "normal"
+     }
+    },
+    "x": {
+     "field": "ucast",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       90
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "y": {
+     "field": "vek",
+     "type": "ordinal",
+     "sort": [
+      "18–22",
+      "23–27",
+      "28–32",
+      "33–37",
+      "38–42",
+      "43–47",
+      "48–52",
+      "53–57",
+      "58–62",
+      "63–67",
+      "68–72",
+      "73–77",
+      "78+"
+     ],
+     "title": "Věk (roky)",
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleX": -70,
+      "titleY": -8,
+      "titleFontSize": 11.5,
+      "titleFontWeight": "normal"
+     }
+    },
+    "x": {
+     "datum": 0
+    },
+    "x2": {
+     "datum": 90
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "Účast",
+      "title": "Účast"
+     },
+     {
+      "field": "Proti průměru",
+      "title": "Proti průměru"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}
