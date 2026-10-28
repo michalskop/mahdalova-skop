@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import VegaChart from '@/components/charts/VegaChart';
 import GenreBadge from './GenreBadge';
+import CardThumbImage from './CardThumbImage';
 import { hexToRgbString } from '@/utils/colorUtils';
 import styles from './DpbpArticleCard.module.css';
 
@@ -43,8 +44,12 @@ export default function DpbpArticleCard({
       {(image || primaryChartSpec) && (
         <div className={styles.thumb} style={imageAspect ? { aspectRatio: imageAspect, height: 'auto' } : undefined}>
           {image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={image} alt="" className={styles.thumbImg} />
+            imageAspect ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={image} alt="" className={styles.thumbImg} />
+            ) : (
+              <CardThumbImage src={image} className={styles.thumbImg} />
+            )
           ) : (
             <VegaChart spec={primaryChartSpec!} mini />
           )}

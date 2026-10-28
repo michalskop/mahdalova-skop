@@ -3,9 +3,9 @@ import ChartCard from '@/components/charts/ChartCard';
 export default function MothersAgeShiftChart() {
   return (
     <ChartCard
-      title="Průměrný věk matky při prvním porodu se v Česku posunul z 22,5 na 29 let"
-      subtitle="1990–2024, první a druhé dítě"
-      source="[ČSÚ, Demografická příručka 2024, tab. 6.13 Průměrný věk žen při narození dítěte](https://csu.gov.cz/produkty/demograficka-prirucka-2024)"
+      title="Druhé dítě dnes přichází těsně před věkem, kdy plodnost žen začíná klesat"
+      subtitle="Průměrný věk matky při narození prvního a druhého dítěte, Česko 1990 a 2024"
+      source="[ČSÚ, Demografická příručka 2024, tab. 6.13 Průměrný věk žen při narození dítěte](https://csu.gov.cz/produkty/demograficka-prirucka-2024) · hranice 32 a 37 let: [ACOG a ASRM, Female age-related fertility decline, 2014](https://doi.org/10.1016/j.fertnstert.2013.12.032)"
     >
       <svg
         viewBox="0 0 660 200"
@@ -20,6 +20,10 @@ export default function MothersAgeShiftChart() {
         role="img"
         aria-label="Posun průměrného věku matky při prvním porodu v ČR z 22,5 roku (1990) na 29 let (2024)"
       >
+        <rect x="420" y="30" width="125" height="140" fill="#ffb3c0" opacity="0.25" />
+        <rect x="545" y="30" width="75" height="140" fill="#de1743" opacity="0.18" />
+        <text x="426" y="42" fontSize="10.5" fill="#a81134">od 32 let plodnost klesá</text>
+        <text x="551" y="42" fontSize="10.5" fill="#a81134">od 37 rychleji</text>
         <line x1="120" y1="170" x2="620" y2="170" stroke="#bcbcb0" strokeWidth="1" />
         <text x="120" y="185" textAnchor="middle" fontSize="11" fill="#777777">20</text>
         <text x="245" y="185" textAnchor="middle" fontSize="11" fill="#777777">25</text>

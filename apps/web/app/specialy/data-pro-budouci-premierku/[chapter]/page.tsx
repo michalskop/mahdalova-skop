@@ -71,17 +71,11 @@ function loadMeta(chapterSlug: string): ChapterMeta | null {
   return { ...meta, accent: chapterAccent(chapterSlug) };
 }
 
+// Dlaždice jdou vždy po dvou vedle sebe (na mobilu pod sebou). Osamocená
+// poslední dlaždice ani `fullWidth` se neroztahují přes celou šíři – široká
+// karta usekla cover na úzký pruh. Lichý počet tedy nechá vedle prázdné místo.
 function withRowSpan<T extends { fullWidth?: boolean }>(list: T[]): Array<T & { span: boolean }> {
-  let col = 0;
-  return list.map((t, i) => {
-    if (t.fullWidth) {
-      col = 0;
-      return { ...t, span: true };
-    }
-    const aloneInRow = col === 0 && i === list.length - 1;
-    col = aloneInRow ? 0 : (col + 1) % 2;
-    return { ...t, span: aloneInRow };
-  });
+  return list.map(t => ({ ...t, span: false }));
 }
 
 function loadCard(chapterSlug: string, cardId: string): ImpactCardData | null {
@@ -94,7 +88,7 @@ function loadArticleFrontmatter(chapterSlug: string, articleSlug: string) {
   const p = path.join(CONTENT_ROOT, chapterSlug, 'articles', `${articleSlug}.mdx`);
   if (!fs.existsSync(p)) return null;
   const { data } = matter(fs.readFileSync(p, 'utf8'));
-  return data as { title: string; excerpt: string; author: string; date: string; primaryChart: string; logo?: string };
+  return data as { title: string; excerpt: string; author: string; date: string; primaryChart: string; logo?: string; coverImage?: string };
 }
 
 function loadRelatedArticles(
@@ -419,11 +413,11 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                       excerpt={t.fm!.excerpt}
                       author={t.fm!.author}
                       primaryChartSpec={null}
-                      image={t.image ?? t.fm!.logo}
+                      image={t.image ?? ('coverImage' in t.fm! ? t.fm!.coverImage : undefined) ?? t.fm!.logo}
                       imageAspect={t.imageAspect}
                       accent={meta.accent}
                       type={t.topic}
-                      stacked={!t.fullWidth}
+                      stacked
                     />
                   </div>
                 ))}

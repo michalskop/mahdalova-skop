@@ -37,6 +37,7 @@ export function loadWebArticleTile(slug: string): WebArticleTileData | null {
     excerpt: String(data.excerpt ?? ''),
     author: String(data.author ?? ''),
     href: `/clanek/${slug}`,
-    image: resolveImage(slug, data.homepageImage) ?? resolveImage(slug, data.coverImage),
+    // Karty ve speciálu jsou na šířku → nejdřív podlouhlý OG cover (1200 × 630).
+    image: resolveImage(slug, data.ogImage) ?? resolveImage(slug, data.homepageImage) ?? resolveImage(slug, data.coverImage),
   };
 }
