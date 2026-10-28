@@ -152,25 +152,25 @@ const MOTIVY = {
   },
   // 10: děti na ženu podle vzdělání (SLDB 2021, tabulka v článku): 45–49 let maturita 1,77 / vysoká škola 1,75; 30–34 let 1,10 / 0,89; 1 kolečko = 1 dítě
   dvewaffle(w, h, spec) {
-    const f = fsOf(w), nPan = spec.panely.length, vedle = w / h > 3, cw = vedle ? (w - f * 2) / nPan : w, Lm = f * 8.6;
-    const d = Math.min((cw - Lm - f * 4.2) / 2, vedle ? (h - f * 2.6) / 2 : (h - nPan * f * 2.6) / (nPan * 2 + 0.4));
-    const rh = Math.max(d, f * 2.0);
+    // tabulka o čtyřech sloupcích: věk (barva kapitoly) | vzdělání | dvě kolečka (1 kolečko = 1 dítě) | hodnota; jedna velikost písma, jedna barva dat
+    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, nPan = spec.panely.length, nR = nPan * 2, mez = f * 1.1;
+    const rh = Math.min((h - (nPan - 1) * mez) / nR, f * 3.8), d = rh * 0.86;
+    const ageW = f * 5.2, eduW = f * 9.2, valW = f * 3.8, g = Math.min((w - ageW - eduW - 2 * d - valW) / 3, f * 5);
+    const xE = ageW + g, xD = xE + eduW + g, xV = xD + 2 * d + g * 0.6;
+    const hTot = nR * rh + (nPan - 1) * mez, y0 = Math.max(0, (h - hTot) / 2);
     let s = '', id = 0;
     spec.panely.forEach((p, j) => {
-      const x0 = vedle ? j * (cw + f * 2) : 0;
-      let y = vedle ? 0 : j * (2 * rh + f * 2.6);
-      s += T(x0, y + f * 1.2, p.nazev, 'start', '#c9d0f5', f * 1.0, 600);
-      y += f * 2.1;
-      p.rady.forEach((r) => {
-        const cy = y + rh * 0.5;
-        s += T(x0, cy + f * 0.4, r.n, 'start', BILA, f * 1.0, 600);
+      const yy = y0 + j * (2 * rh + mez);
+      s += T(0, yy + rh + fz * 0.35, p.nazev, 'start', CRIMSON, fz, 700);
+      p.rady.forEach((r, i) => {
+        const cy = yy + rh * (i + 0.5);
+        s += T(xE, cy + fz * 0.35, r.n, 'start', BILA, fz, 600);
         for (let k = 0; k < 2; k++) {
-          const cx = x0 + Lm + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
-          s += C(cx, cy, d * 0.4, 'none', ` stroke="${SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity=".6"`);
-          if (podil > 0) { const cid = 'kl' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.4}" y="${cy - d * 0.4}" width="${d * 0.8 * podil}" height="${d * 0.8}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.4, r.barva)}</g>`; }
+          const cx = xD + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
+          s += C(cx, cy, d * 0.42, 'none', ` stroke="${SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity=".6"`);
+          if (podil > 0) { const cid = 'kl' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.42}" y="${cy - d * 0.42}" width="${d * 0.84 * podil}" height="${d * 0.84}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.42, TYRK)}</g>`; }
         }
-        s += T(x0 + Lm + 2 * d + f * 0.9, cy + f * 0.5, r.v.toFixed(2).replace('.', ','), 'start', BILA, f * 1.5, 700);
-        y += rh;
+        s += T(xV, cy + fz * 0.35, r.v.toFixed(2).replace('.', ','), 'start', TYRK, fz, 700);
       });
     });
     return svgWrap(w, h, s);
