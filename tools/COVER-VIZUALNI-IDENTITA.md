@@ -177,10 +177,33 @@ Platí pro všechno, co jde ven na web nebo na sociální sítě (článek, spec
 
 **Carousel se skládá z obsahu článku**, nic se nevymýšlí znovu:
 
-1. Slide 1 = cover-instagram (hák: hlavní zjištění).
+1. Slide 1 = cover-instagram (hák: hlavní zjištění), nebo **otázka k tipování** („U kterého prezidenta mají ženy největší podíl?“), na kterou odpoví další slidy.
 2. Slidy 2 až n−2 = po jednom zjištění na slide: graf nebo mapa z článku překreslené na výšku 4:5, velké popisky, titulek slidu je tvrzení (stejné jako titulek grafu v článku).
 3. Předposlední slide = jak jsme to počítali a co data neříkají (jednou dvěma větami).
-4. Poslední slide = „Celý článek na DataTimes.cz“ a odkaz v biu; u citlivých témat kontakt na pomoc (např. Linka Anabell).
+4. Poslední slide = **výzva k interakci** + „Celý článek na DataTimes.cz“ a odkaz v biu; u citlivých témat kontakt na pomoc (např. Linka Anabell).
+
+### 8.1 Výzva k interakci: v každém carouselu (povinné)
+
+Od 28. 10. 2026 má každý náš carousel výzvu, aby lidé odpověděli. Převzali jsme to od týmu Moravec.cz, se kterým jsme dělali carousel k vyznamenáním, a Kateřina chce tenhle způsob komunikace s publikem používat vždy. Carousel není jen shrnutí článku, je to rozhovor.
+
+- **Tip na začátku:** úvodní slide položí otázku, na kterou si čtenář může tipnout, než se dozví odpověď („Který prezident rozdal nejvíc vyznamenání? Tipněte si.“). Odpověď přijde v dalších slidech.
+- **Názor na konci:** poslední slide se ptá na postoj a zve do komentářů. Vzor: „Zatímco Václav Havel rozdával vyznamenání po desítkách, Václav Klaus počty držel na minimu. Jaký z těchto přístupů je vám bližší? Dejte nám vědět do komentářů a sledujte dál náš sváteční datový speciál.“
+- **Pozvánka na další díl:** když vychází série výstupů (sváteční speciál, volby), výzva láká na pokračování („pro odpovědi dnes sledujte naše sítě“).
+- **Otázka musí jít z dat zodpovědět** a nesmí podsouvat odpověď. Tip musí mít jednoznačné řešení: „nejvíce žen“ je podle počtu jiný prezident než podle podílu, proto ptát se přesně. Otázky na názor stojí na doložené věci (Klaus Havlovy počty sám kritizoval), ne na naší interpretaci.
+- **Stejná výzva i v textu pod carouselem** (`carousel-caption.txt`): otázka + „napište nám do komentářů“.
+
+### 8.2 Pravidla obsahu carouselu (ponaučení z vyznamenání, 28. 10. 2026)
+
+- **Čísla přesně jako v článku a ve stejné jednotce:** „71 vyznamenání z 547 obdržely ženy“, ne „71 žen z 547 oceněných“, když jeden člověk mohl dostat víc vyznamenání. Na všech slidech série stejná formulace.
+- **Stejné měřítko os** na všech slidech, které čtenář porovnává (sloupce prezidentů): stejné číslo = stejná výška.
+- **Chronologické pořadí** (Havel → Klaus → Zeman → Pavel).
+- **Přechodné roky popsat:** „2003 (leden)“ u odcházejícího prezidenta, aby součty seděly s článkem.
+- **Žádná nehotová data:** ročník, který ještě neproběhl (ohlášený počet na večerní ceremonii), do grafu nepatří, nebo musí být výrazně odlišený.
+- **Poznámka k metodě srozumitelně:** „Počítáme všechna vyznamenání roku, i ta udělená při státních návštěvách, ne jen 28. října.“
+- **Titulky slidů jsou doložená tvrzení,** ne výklad („Nejvíc vyznamenání ročně od Havla“, ne „Návaznost na Havlovu linii“). „Historicky nejvyšší“ jen pro období, které máme spočítané („nejvíc za rok od roku 1995“).
+- **Slova z analýzy:** „oblast / za jaké zásluhy“, ne „profese“; „vyznamenání“, ne „metály“ či „ocenění“, když jde o řády i medaile.
+- **Dekorace nesmí vypadat jako data:** barevné výseče přes medaile čtenář čte jako koláčový graf. Červená se zelenou navíc barvoslepí nerozliší.
+- **Co-branding:** logo partnera (Moravec) nepřesouváme ani nezmenšujeme bez domluvy s partnerem.
 
 Generátor: `tools/carousel-generator.cjs` + `_cover_pipeline/carousel.config.cjs` u článku:
 
