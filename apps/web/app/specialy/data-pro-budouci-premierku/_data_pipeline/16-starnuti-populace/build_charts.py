@@ -47,19 +47,19 @@ def save(name, spec):
     print(p)
 
 
-def hover_layers(rows, keys, ymax, xfield="rok", half=0.5, xdomain=None, head="hlavicka"):
+def hover_layers(rows, keys, ymax, xfield="rok", half=0.5, xdomain=None, head="hlavicka", ymin=0):
     """Neviditelné pásy pro tooltip za celé datum (béžová hlavička, DESIGN.md) + tenká přerušovaná svislice na hovernutém datu."""
     bands = [dict(r, od=r[xfield] - half, do=r[xfield] + half) for r in rows]
     sc = {"domain": xdomain, "nice": False} if xdomain else {}
     guide = {"data": {"values": rows}, "mark": {"type": "rule", "strokeWidth": 1, "strokeDash": [3, 3], "color": INK},
              "encoding": {"x": {"field": xfield, "type": "quantitative", "scale": sc},
-                          "y": {"datum": 0}, "y2": {"datum": ymax},
+                          "y": {"datum": ymin}, "y2": {"datum": ymax},
                           "strokeOpacity": {"condition": {"param": "hov", "empty": False, "value": 0.6}, "value": 0}}}
     band = {"data": {"values": bands},
             "params": [{"name": "hov", "select": {"type": "point", "fields": [head], "on": "mouseover", "clear": "mouseout"}}],
             "mark": {"type": "rect", "fill": BEIGE, "cursor": "default"},
             "encoding": {"x": {"field": "od", "type": "quantitative", "scale": sc}, "x2": {"field": "do"},
-                         "y": {"datum": 0}, "y2": {"datum": ymax}, "fillOpacity": {"value": 0},
+                         "y": {"datum": ymin}, "y2": {"datum": ymax}, "fillOpacity": {"value": 0},
                          "tooltip": [{"field": k, "title": k} for k in [head] + keys]}}
     return [guide, band]
 
@@ -87,7 +87,7 @@ specA = {
     "title": {"text": "Na jednoho seniora dnes připadají tři lidé ve věku 15–64 let, v roce 2050 dva",
               "subtitle": "Počet lidí ve věku 15–64 let na jednoho člověka ve věku 65 a více let k 1. 1., střední varianta projekce ČSÚ; červeně pás 2038–2043"},
     "_source": "[Projekce obyvatelstva ČR 2023–2100, střední varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nSkupina 15–64 let není počet pracujících, zahrnuje i studenty a lidi, kteří nepracují.",
-    "height": 320,
+    "height": 260,
     "data": {"values": rowsA},
     "layer": [
         {"data": {"values": [{"od": 2038, "do": 2043}]}, "mark": {"type": "rect", "fill": RED, "opacity": 0.12},
@@ -132,7 +132,7 @@ specC = {
     "title": {"text": "Nejsilnější ročníky jsou z 70. let a 65 let jim bude v letech 2035 až 2044",
               "subtitle": "Počet lidí podle roku narození (tisíce) k 1. 1. 2023; červeně ročníky 1970–1979"},
     "_source": "[Projekce obyvatelstva ČR 2023–2100, tabulka 1, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nRok narození je odvozen z věku k 1. 1. 2023; lidé starší 99 let nejsou zahrnuti.",
-    "height": 300,
+    "height": 260,
     "data": {"values": rowsC},
     "layer": [
         {"mark": {"type": "bar", "width": {"band": 0.9}}, "encoding": {"x": xC, "y": yC, "color": cC}},
@@ -175,7 +175,7 @@ specD = {
     "title": {"text": "Ať se rodí víc, nebo méně, v roce 2040 vychází na jednoho seniora stejně 2,5 člověka ve věku 15–64 let",
               "subtitle": "Lidí ve věku 15–64 let na jednoho seniora k 1. 1. ve třech variantách projekce (úhrnná plodnost 1,25 / 1,5 / 1,75)"},
     "_source": "[Projekce obyvatelstva ČR 2023–2100, nízká, střední a vysoká varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nDítě narozené dnes bude mít v roce 2040 čtrnáct let, do skupiny 15–64 let vstoupí až později.",
-    "height": 320,
+    "height": 260,
     "data": {"values": rowsD},
     "layer": [
         {"mark": {"type": "line", "strokeWidth": 2.5, "strokeJoin": "round"}, "encoding": {"x": xv, "y": yD, "color": colV, "detail": {"field": "varianta"}}},
@@ -197,10 +197,10 @@ yE = {"field": "obyv", "type": "quantitative", "title": None, "scale": {"domain"
 end40 = [r for r in rowsE if r["rok"] == 2040]
 specE = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "Počet obyvatel se mezi variantami do roku 2040 rozejde o 0,7 milionu, podíl seniorů o 0,6 bodu",
-              "subtitle": "Počet obyvatel Česka k 1. 1. ve třech variantách projekce ČSÚ (milióny)"},
+    "title": {"text": "V roce 2040 se varianty liší o 0,7 milionu lidí, ale poměr lidí ve věku 15–64 let k seniorům je stejný",
+              "subtitle": "Počet obyvatel Česka k 1. 1. ve třech variantách projekce ČSÚ: nejnižší má v roce 2040 10,3 milionu lidí, nejvyšší 11,0 milionu"},
     "_source": "[Projekce obyvatelstva ČR 2023–2100, nízká, střední a vysoká varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nVarianty se liší plodností, úmrtností a saldem migrace; stárnutí do čtyřicátých let ovlivňují málo.",
-    "height": 320,
+    "height": 260,
     "data": {"values": rowsE},
     "layer": [
         {"mark": {"type": "line", "strokeWidth": 2.5, "strokeJoin": "round"}, "encoding": {"x": xv, "y": yE, "color": colV, "detail": {"field": "varianta"}}},
@@ -209,7 +209,7 @@ specE = {
          "encoding": {"x": xv, "y": yE, "color": colV}},
         {"data": {"values": end40}, "mark": {"type": "text", "dx": 0, "dy": -13, "fontSize": 12.5, "fontWeight": "bold"},
          "encoding": {"x": xv, "y": yE, "color": colV, "text": {"field": "label"}}},
-        *hover_layers(recE, keysV, 12, xdomain=[2022, 2063]),
+        *hover_layers(recE, keysV, 12, xdomain=[2022, 2063], ymin=8.5),
     ],
     "config": {"view": {"stroke": None}},
 }

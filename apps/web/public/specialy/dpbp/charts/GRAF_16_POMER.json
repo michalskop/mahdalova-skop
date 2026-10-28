@@ -5,7 +5,7 @@
   "subtitle": "Počet lidí ve věku 15–64 let na jednoho člověka ve věku 65 a více let k 1. 1., střední varianta projekce ČSÚ; červeně pás 2038–2043"
  },
  "_source": "[Projekce obyvatelstva ČR 2023–2100, střední varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nSkupina 15–64 let není počet pracujících, zahrnuje i studenty a lidi, kteří nepracují.",
- "height": 320,
+ "height": 260,
  "data": {
   "values": [
    {

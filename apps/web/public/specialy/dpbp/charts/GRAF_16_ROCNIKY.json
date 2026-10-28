@@ -5,7 +5,7 @@
   "subtitle": "Počet lidí podle roku narození (tisíce) k 1. 1. 2023; červeně ročníky 1970–1979"
  },
  "_source": "[Projekce obyvatelstva ČR 2023–2100, tabulka 1, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nRok narození je odvozen z věku k 1. 1. 2023; lidé starší 99 let nejsou zahrnuti.",
- "height": 300,
+ "height": 260,
  "data": {
   "values": [
    {

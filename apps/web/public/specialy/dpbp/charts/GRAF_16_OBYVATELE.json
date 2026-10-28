@@ -1,11 +1,11 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Počet obyvatel se mezi variantami do roku 2040 rozejde o 0,7 milionu, podíl seniorů o 0,6 bodu",
-  "subtitle": "Počet obyvatel Česka k 1. 1. ve třech variantách projekce ČSÚ (milióny)"
+  "text": "V roce 2040 se varianty liší o 0,7 milionu lidí, ale poměr lidí ve věku 15–64 let k seniorům je stejný",
+  "subtitle": "Počet obyvatel Česka k 1. 1. ve třech variantách projekce ČSÚ: nejnižší má v roce 2040 10,3 milionu lidí, nejvyšší 11,0 milionu"
  },
  "_source": "[Projekce obyvatelstva ČR 2023–2100, nízká, střední a vysoká varianta, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nVarianty se liší plodností, úmrtností a saldem migrace; stárnutí do čtyřicátých let ovlivňují málo.",
- "height": 320,
+ "height": 260,
  "data": {
   "values": [
    {
@@ -1286,7 +1286,7 @@
      }
     },
     "y": {
-     "datum": 0
+     "datum": 8.5
     },
     "y2": {
      "datum": 12
@@ -1682,7 +1682,7 @@
      "field": "do"
     },
     "y": {
-     "datum": 0
+     "datum": 8.5
     },
     "y2": {
      "datum": 12
