@@ -548,7 +548,9 @@ export function RelatedArticles({
       className={floatClass}
       bg={framed ? 'background.2' : undefined}
       p={framed ? (floatClass ? 'md' : 'lg') : undefined}
-      style={framed ? { borderRadius: 10 } : undefined}
+      // Box přes celou šíři začíná vždy pod plovoucími prvky (InfoBox, Figure, boční related), jinak se vedle
+      // dlouhého plovoucího boxu zúží do úzkého sloupce (Kateřina 28. 10. 2026, článek o komisi OSN).
+      style={{ ...(framed ? { borderRadius: 10 } : {}), ...(floatClass ? {} : { clear: 'both' as const }) }}
     >
       {effectiveHeading && (
         <Title order={3} c="brand.6" mb="xs">

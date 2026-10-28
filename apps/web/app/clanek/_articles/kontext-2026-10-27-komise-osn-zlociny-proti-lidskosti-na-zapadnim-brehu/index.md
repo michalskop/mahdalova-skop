@@ -1,9 +1,9 @@
 ---
-title: "Vyšetřovatelé OSN viní Izrael z vyhlazování Palestinců na Západním břehu"
+title: "Vyšetřování OSN: Izrael po příměří dál páchá v Gaze genocidu"
 date: "2026-10-27"
 time: "20:26"
 author: "Kateřina Mahdalová"
-excerpt: "Nezávislá vyšetřovací komise OSN zveřejnila den před izraelskými volbami zprávu, podle níž izraelské úřady a síly spáchaly na okupovaném Západním břehu zločiny proti lidskosti, včetně vyhlazování, mučení a znásilňování. V Gaze podle ní genocida pokračuje i po loňském příměří. Izrael zprávu odmítá jako propagandu. Co v ní stojí, z čeho vychází a jak o ní psala světová média."
+excerpt: "Izrael podle nezávislé vyšetřovací komise OSN pokračuje v Gaze v genocidě i po loňském příměří. Na okupovaném Západním břehu podle její zprávy, zveřejněné den před izraelskými volbami, izraelské úřady a síly spáchaly zločiny proti lidskosti, včetně vyhlazování, mučení a znásilňování. Izrael zprávu odmítá jako propagandu. Co v ní stojí, z čeho vychází a jak o ní psala světová média."
 coverImage: "images/cover-homepage.jpg"
 homepageImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
@@ -14,13 +14,13 @@ tags: ["Izrael-Palestina", "Izrael", "Palestina", "Západní břeh", "Gaza", "OS
 promoted: 1
 ---
 
-Izraelské úřady a bezpečnostní síly se od 7. října 2023 dopouštějí na okupovaném Západním břehu zločinů proti lidskosti: vyhlazování, mučení, znásilňování a dalších forem sexuálního násilí a pronásledování Palestinců kvůli jejich národnosti, rase a etnicitě. K takovému závěru došla Nezávislá mezinárodní vyšetřovací komise OSN pro okupovaná palestinská území ve zprávě, kterou zveřejnila v pondělí 26. října 2026. V Pásmu Gazy podle komise Izrael pokračuje v genocidních činech i po příměří z října 2025.
+Izrael v Pásmu Gazy pokračuje v genocidních činech i po příměří z října 2025. Na okupovaném Západním břehu se jeho úřady a bezpečnostní síly od 7. října 2023 dopouštějí zločinů proti lidskosti: vyhlazování, mučení, znásilňování a dalších forem sexuálního násilí a pronásledování Palestinců kvůli jejich národnosti, rase a etnicitě. K takovým závěrům došla Nezávislá mezinárodní vyšetřovací komise OSN pro okupovaná palestinská území ve zprávě, kterou zveřejnila v pondělí 26. října 2026.
 
 Zprávu s označením [A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf) komise adresovala Valnému shromáždění OSN a v New Yorku ji ve stejný den představila. Vyšla den před izraelskými parlamentními volbami. Izraelská mise při OSN v Ženevě ji označila za součást „dezinformační kampaně“, která má Izrael démonizovat, a vyzvala ke zrušení komise.
 
 Tak daleko komise u Západního břehu dosud nešla. V dřívějších zprávách tam popisovala válečné zločiny, teď poprvé použila kategorii zločinů proti lidskosti, která je vedle genocidy nejtěžší v mezinárodním trestním právu.
 
-## Komise není soud, její zjištění ale může použít Mezinárodní trestní soud
+## Zjištění komise může použít Mezinárodní trestní soud
 
 <RelatedArticles preset="sidebar" slugs={["analyza-2026-08-10-izraelsko-palestinsky-konflikt","analyza-2026-09-29-mapy-ukazuji-jak-se-promenila-gaza","kontext-2026-08-27-cesky-stat-se-musi-omluvit-za-vyroky-o-palestincich"]} position="right" heading="🔻🔻🔻" />Komisi zřídila Rada OSN pro lidská práva v květnu 2021, tedy dva roky před útokem Hamásu na Izrael. Má tři členy. Od listopadu 2025 jí předsedá indický soudce Srinivasan Muralidhar, bývalý předseda vrchního soudu státu Urísa, dalšími členy jsou zambijská soudkyně Florence Mumba a australský právník Chris Sidoti. Muralidhar vystřídal Jihoafričanku Navi Pillay, pod jejímž vedením komise v září 2025 poprvé konstatovala, že Izrael v Gaze páchá genocidu. Navi Pillay letos 9. října dostala Nobelovu cenu míru.
 
@@ -54,7 +54,7 @@ Komise k závěru o vyhlazování došla na základě počtu obětí, metod (ost
 
 O Gaze komise píše, že závěr o genocidě z roku 2025 trvá a že vyšetřované případy ukazují, že Izrael v genocidních činech „s genocidním úmyslem zničit zcela nebo zčásti Palestince v Gaze“ pokračuje. Od 10. října 2025, kdy začalo příměří, do 30. září 2026 podle OCHA zemřelo v Gaze 1 431 lidí, nejméně 300 dětí a 130 žen, a 5 026 jich bylo zraněno. Komise tím výslovně oponuje zprávě, kterou v květnu předložila Radě bezpečnosti Rada míru zřízená k dohledu nad příměřím. Ta tvrdila, že příměří v zásadě drží. Izraelští představitelé útoky zdůvodňují porušováním příměří ze strany Hamásu.
 
-Velká část zabíjení se podle zprávy odehrává kolem takzvané Žluté linie, která měla být dočasnou hranicí příměří. Izraelem kontrolovaná část Gazy se od podzimu 2025 rozrostla z 53 na nejméně 60 % území. Komise napočítala nejméně devět nových vojenských základen podél linie. Náčelník generálního štábu Ejal Zamir ji nazval „novou hranicí“ a Netanjahu v květnu 2026 řekl, že nařídil obsadit 70 % Gazy. Do začátku dubna 2026 zahynulo poblíž Žluté linie nejméně 196 Palestinců, mezi nimi 18 žen, 32 chlapců a 11 dívek.
+Velká část zabíjení se podle zprávy odehrává kolem takzvané Žluté linie, která měla být dočasnou hranicí příměří. Příměří mezi Izraelem a Hamásem, které v říjnu 2025 zprostředkovaly Spojené státy, nechávalo pod izraelskou kontrolou 53 % území Gazy. Podle komise Izrael do září 2026 ovládl nejméně 60 %, tedy o sedm procentních bodů víc, než dohoda počítala. Komise napočítala nejméně devět nových vojenských základen podél linie. Náčelník generálního štábu Ejal Zamir ji nazval „novou hranicí“ a premiér Benjamin Netanjahu 28. května 2026 [řekl](https://edition.cnn.com/2026/05/28/middleeast/israel-netanyahu-military-70-percent-gaza-intl), že armádě nařídil obsadit 70 % Gazy. Do začátku dubna 2026 zahynulo poblíž Žluté linie nejméně 196 Palestinců, mezi nimi 18 žen, 32 chlapců a 11 dívek.
 
 <VegaChart dataFile="data/kontrola-gazy.json" />
 
@@ -62,7 +62,7 @@ Celkem podle komise od 7. října 2023 na okupovaných palestinských územích 
 
 ## Zpráva kritizuje i Palestinskou samosprávu
 
-Poslední část zprávy se týká palestinských bezpečnostních sil. Podle OSN zabily od října 2023 do října 2025 na Západním břehu nejméně 14 Palestinců. Komise vyšetřovala zastřelení studentky žurnalistiky v uprchlickém táboře v Dženínu v prosinci 2024, která na sociálních sítích zveřejňovala kritiku zásahu palestinských sil. Samospráva podle zprávy potlačuje kritiky, zatýká novináře a aktivisty a zabití nevyšetřuje. Komise zároveň uvádí, že bude dál vyšetřovat sexuální násilí ozbrojených skupin vůči Izraelcům.
+Poslední část zprávy se týká palestinských bezpečnostních sil. Podle OSN zabily od října 2023 do října 2025 na Západním břehu nejméně 14 Palestinců. Komise vyšetřovala zastřelení studentky žurnalistiky v uprchlickém táboře v Dženínu 28. prosince 2024, která na sociálních sítích zveřejňovala kritiku zásahu palestinských sil. Zpráva její jméno neuvádí, podle data a místa jde o Šathu as-Sabbágh. Její rodina [viní z vraždy palestinské bezpečnostní síly](https://www.madamasr.com/en/?p=371359), Samospráva to popírá. Samospráva podle zprávy potlačuje kritiky, zatýká novináře a aktivisty a zabití nevyšetřuje. Komise zároveň uvádí, že bude dál vyšetřovat sexuální násilí ozbrojených skupin vůči Izraelcům.
 
 ## Izrael: propaganda, která legitimizuje terorismus
 
@@ -83,11 +83,11 @@ Velké světové agentury a deníky o zprávě informovaly v pondělí během dn
 - **The Times of Israel**: [„Vyšetřování OSN tvrdí, že Izrael páchá na Západním břehu ‚vyhlazování‘; Izrael: Kampaň démonizace“](https://www.timesofisrael.com/liveblog_entry/un-probe-claims-israel-committing-extermination-in-west-bank-israel-a-demonization-campaign/) (_UN probe claims Israel committing ‘extermination’ in West Bank; Israel: A demonization campaign_). Izraelský deník zprávu podal v živém zpravodajství s textem AFP a reakci izraelské mise dal do titulku jako rovnocennou část.
 - **Al-Džazíra**: [„Komise OSN viní Izrael z ‚vyhlazování‘ na Západním břehu a z genocidy v Gaze“](https://www.aljazeera.com/news/2026/10/26/israel-committing-crimes-against-humanity-in-occupied-west-bank-un) (_UN panel accuses Israel of ‘extermination’ in West Bank, genocide in Gaza_). Katarská stanice přidala historii komise a izraelskou reakci.
 
-Britská **BBC** a deník **The Guardian** samostatný článek o zprávě do poledne 27. října neměly. Guardian v pondělí psal o vystěhování Hebronu, BBC věnovala zpravodajství z Izraele hlavně volbám.
-
 ```infobox right
 **Česká média.** Agentura ČTK o zprávě informovala v pondělí odpoledne; zprávu pak přinesly mimo jiné [web ČT24](https://ct24.ceskatelevize.cz/clanek/svet/komise-osn-izraelske-urady-spachaly-na-zapadnim-brehu-zlociny-proti-lidskosti-379021), [iROZHLAS](https://www.irozhlas.cz/zpravy-svet/vyhlazovani-muceni-a-znasilnovani-izrael-na-zapadnim-brehu-spachal-zlociny-proti_2610261446_aru), [Novinky](https://www.novinky.cz/clanek/zahranicni-izraelske-urady-a-sily-spachaly-na-okupovanem-zapadnim-brehu-zlociny-proti-lidskosti-tvrdi-komise-osn-40605034), [Seznam Zprávy](https://www.seznamzpravy.cz/clanek/zahranicni-izrael-spachal-na-zapadnim-brehu-zlociny-proti-lidskosti-tvrdi-komise-osn-318835), [iDNES](https://www.idnes.cz/zpravy/zahranicni/osn-izrael-zapadni-breh-muceni-vyhlazovani-znasilnovani-palestina.A261026_142157_zahranicni_jhr) a [Respekt](https://www.respekt.cz/informacni-servis/komise-osn-izrael-spachal-na-zapadnim-brehu-zlociny-proti-lidskosti-2026-10-26-21-35). Hlavní zpravodajská relace ČT [Události 26. října](https://www.ceskatelevize.cz/porady/1097181328-udalosti/226411000101026/) ji podle přehledu reportáží na webu ČT nezařadila, o Izraeli odvysílala reportáž o úterních volbách.
 ```
+
+Britská **BBC** a deník **The Guardian** samostatný článek o zprávě do poledne 27. října neměly. Guardian v pondělí psal o vystěhování Hebronu, BBC věnovala zpravodajství z Izraele hlavně volbám.
 
 Zprávu teď projednává Třetí výbor Valného shromáždění, který má na starosti lidská práva. Další krok je na žalobci Mezinárodního trestního soudu: komise ho žádá, aby genocidu, zločiny proti lidskosti a válečné zločiny v Gaze i na Západním břehu zahrnul do stávajících i budoucích žádostí o zatykače.
 
