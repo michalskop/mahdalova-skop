@@ -21,7 +21,7 @@
 
 ## Article images
 
-- Every new article gets the full cover set without being asked: `cover-homepage` 1500×1200 (`coverImage` + `homepageImage`), `cover-og.jpg` 1200×630 ≤ 300 kB (`ogImage`), `cover-square` 1080×1080 (`squareImage`), `cover-instagram` 1080×1350, `cover-story` 1080×1920. Show a crop contact sheet to the user before publishing.
+- Every new article gets the full cover set without being asked: `cover-homepage` 1500×1200 (`coverImage` + `homepageImage`), `cover-og.jpg` 1200×630 ≤ 300 kB (`ogImage`), `cover-square` 1080×1080 (`squareImage`), `cover-instagram` 1080×1350, `cover-story` 1080×1920. Show a crop contact sheet to the user before publishing. Cover headline lives in the frontmatter as `coverTitulek` (generator reads it); render only with `tools/cover-generator.cjs`, which checks composition and writes `<config>.razitko.json` (commit it) – `checkArticles.js` blocks stale or hand-edited covers (`tools/COVER-EDITOR.md` → *Automatické pojistky*).
 - Fonts (hard rule since 2026-10-12): IBM Plex Serif Bold ONLY for the headline and the „DataTimes.cz“ logo text; everything else (cover tag, pre-title, subtitle, legend, icon labels) IBM Plex Sans.
 - Cover tag: uppercase letter-spaced Plex Sans, first part crimson `#de1743` with an underline ending mid-last-letter, then „•“ and the rest white (e.g. `VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026`); mirrored when right-aligned.
 - Homepage cover anchors: text starts at x 180 / y 120, logo bottom-right of the safe zone (1320, 1080), the area x ≥ 950, y ≤ 280 stays EMPTY (the site overlays the rubric badge there). OG: headline and logo inside the central 630×630 square. Colours only exact values from the binding palette in `packages/ui/DESIGN.md`.

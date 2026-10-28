@@ -78,6 +78,8 @@ function checkArticle(slug) {
     }
   }
 
+  checkCoverStamps(slug, dir, fm);
+
   // Mandatory embedded elements (manuál, Část II → Povinné vložené prvky)
   const lines = content.trim().split('\n').filter((l) => l.trim());
   const last = lines[lines.length - 1] || '';
@@ -102,6 +104,47 @@ function checkArticle(slug) {
   if (/^#{2,3} +Zdroje\s*$/m.test(prose)) err(slug, 'souhrnný oddíl „Zdroje“ na konci: zdroje patří k tvrzením');
   if (/\bteaser\b/i.test(content)) err(slug, 'v textu zůstalo pracovní slovo „teaser“');
   if (!/\]\(https?:\/\//.test(content)) warn(slug, 'v textu není žádný odkaz na zdroj');
+}
+
+// Razítko coveru (tools/cover-generator.cjs → <config>.razitko.json, od 28. 10. 2026): generátor do něj zapíše
+// texty coveru, titulek článku, otisky vstupů i obrázků a výsledek kontroly kompozice. Tady se z něj pozná cover,
+// který neodpovídá článku (změněný titulek nebo coverTitulek), nebyl po změně konfigurace znovu vyrenderovaný,
+// byl přepsaný mimo generátor, nebo neprošel kontrolou kompozice. Bez razítka (starší covery) se nic nekontroluje.
+const crypto = require('crypto');
+const REPO = path.join(__dirname, '../../..');
+const holy = (s) => String(s ?? '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/&nbsp;| /g, ' ').replace(/\s+/g, ' ').trim();
+const otisk = (p) => {
+  let b = fs.readFileSync(p);
+  if (/\.(c?js|mjs|json|svg|md|mdx|txt|html|css)$/i.test(p)) b = Buffer.from(b.toString('utf8').replace(/\r\n/g, '\n'));
+  return crypto.createHash('sha256').update(b).digest('hex').slice(0, 16);
+};
+
+function checkCoverStamps(slug, dir, fm) {
+  const pipeline = path.join(dir, '_cover_pipeline');
+  if (!fs.existsSync(pipeline)) return;
+  for (const name of fs.readdirSync(pipeline).filter((n) => n.endsWith('.razitko.json'))) {
+    const r = JSON.parse(fs.readFileSync(path.join(pipeline, name), 'utf8'));
+    const co = `cover (${name.replace('.razitko.json', '')})`, coveru = `coveru (${name.replace('.razitko.json', '')})`;
+    // článek, ke kterému cover patří (u speciálů může být jinde než ve složce)
+    const clanekFm = r.clanek && path.join(REPO, r.clanek) !== path.join(dir, 'index.md') && fs.existsSync(path.join(REPO, r.clanek))
+      ? matter(fs.readFileSync(path.join(REPO, r.clanek), 'utf8')).data : fm;
+    const coverTitulek = clanekFm.coverTitulek ? holy(clanekFm.coverTitulek) : null;
+    if (coverTitulek && coverTitulek !== r.texty?.titulek) {
+      err(slug, `${co} má titulek „${r.texty?.titulek}“, ale coverTitulek ve frontmatteru je „${coverTitulek}“ – vyrenderuj covery znovu (tools/cover-generator.cjs)`);
+    } else if (!coverTitulek && r.titulekClanku && holy(clanekFm.title) !== r.titulekClanku) {
+      err(slug, `titulek článku se od vyrenderování ${coveru} změnil („${r.titulekClanku}“ → „${holy(clanekFm.title)}“), na coveru zůstává „${r.texty?.titulek}“. Zkontroluj text coveru a vyrenderuj znovu, nebo schválený text coveru zapiš do frontmatteru jako coverTitulek`);
+    }
+    const zmenene = new Set(), formaty = [];
+    for (const [format, z] of Object.entries(r.formaty ?? {})) {
+      const soubor = path.join(REPO, z.soubor);
+      if (!fs.existsSync(soubor)) continue;
+      const vstupy = Object.entries(z.vstupy ?? {}).filter(([p, h]) => !fs.existsSync(path.join(REPO, p)) || otisk(path.join(REPO, p)) !== h);
+      if (vstupy.length) { vstupy.forEach(([p]) => zmenene.add(p.split('/').pop())); formaty.push(format); }
+      else if (otisk(soubor) !== z.otisk) err(slug, `${co}: obrázek ${z.soubor.split('/').pop()} se změnil mimo generátor – covery se dělají jen generátorem (tools/COVER-EDITOR.md)`);
+      if (z.kontrola?.chyby?.length) err(slug, `${co} ${format} neprošel kontrolou kompozice: ${z.kontrola.chyby.join('; ')}`);
+    }
+    if (zmenene.size) err(slug, `${co}: od vyrenderování se změnilo ${[...zmenene].join(', ')} (${formaty.join(', ')}) – vyrenderuj covery znovu`);
+  }
 }
 
 const args = process.argv.slice(2);
