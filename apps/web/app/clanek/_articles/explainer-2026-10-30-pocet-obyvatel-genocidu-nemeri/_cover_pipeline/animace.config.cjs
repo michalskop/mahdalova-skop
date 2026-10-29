@@ -23,7 +23,7 @@ const L = {
 };
 
 // Časová osa (s): PLNY drží plný stav, ZPET křivky stáhne na začátek, PAUZA, pak rok po roku (KROK s na rok), KONEC drží plný stav
-const PLNY = 1.2, ZPET = 0.45, PAUZA = 0.35, KROK = 0.4, KONEC = 1.6;
+const PLNY = 1.2, ZPET = 0.45, PAUZA = 0.35, KROK = 0.45, KONEC = 1.6;
 const START = PLNY + ZPET + PAUZA;
 const KRESBA = (T1 - T0) * KROK;
 const TRVANI = +(START + KRESBA + KONEC).toFixed(2);
@@ -34,9 +34,11 @@ function stav(t) {
   if (t < PLNY + ZPET) { const x = ease((t - PLNY) / ZPET); return { konec: T1 - x * (T1 - T0), popisky: Math.max(0, 1 - x * 2.5) }; }
   if (t < START) return { konec: T0, popisky: 0 };
   if (t < START + KRESBA) {
-    // rok po roku: v každém kroku se křivka dokreslí o rok (s jemným zpomalením), pak krátce stojí
-    const k = (t - START) / KROK, rok = Math.floor(k), zbytek = k - rok;
-    return { konec: T0 + rok + ease(Math.min(1, zbytek / 0.8)), popisky: 0 };
+    // křivky tečou plynule celou dobou kresby, bez zastavení na jednotlivých letech (Kateřina 29. 10. 2026:
+    // „ať není trhaný, nech to téct plynule“); jen rozjezd a dojezd jsou jemně zpomalené
+    const x = (t - START) / KRESBA;
+    const plynule = 0.75 * x + 0.25 * (0.5 - Math.cos(Math.PI * x) / 2);
+    return { konec: T0 + plynule * (T1 - T0), popisky: 0 };
   }
   return { konec: T1, popisky: Math.min(1, (t - START - KRESBA) / 0.35) };
 }
@@ -60,6 +62,6 @@ module.exports = {
   trvani: TRVANI,
   formaty: ['story', 'instagram', 'square'],
   snimek,
-  gif: { format: 'square', sirka: 800, fps: 15 },
+  gif: { format: 'square', sirka: 800, fps: 25 },
   nahledy: [0, PLNY + ZPET * 0.5, START + 0.1, START + 5 * KROK + 0.2, START + KRESBA - 0.1, TRVANI - 0.04],
 };
