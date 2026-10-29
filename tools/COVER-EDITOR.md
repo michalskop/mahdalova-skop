@@ -18,15 +18,17 @@ automaticky; stačí mít stažený aktuální main (`git pull`).
 
 Při rozporu platí tento soubor; ostatní dokumenty na něj odkazují.
 
-Nové covery tvoří `poster-editor.html`. Automat používá tentýž editor přes
-`render-covers.cjs`; nevytváří druhou implementaci grafiky.
+Nové covery (datové, grafické i fotografické) vznikají v `tools/cover-generator.cjs` z konfigurace u článku.
+`poster-editor.html` s `npm run covers` zůstává pro ruční fotografické covery a starší projekty (kapitola
+*Ruční a poloautomatická práce* níže).
 
 | Soubor | Rozměry | Frontmatter |
 | --- | --- | --- |
-| cover-homepage.jpg/png | 1500 × 1200 (5:4) | homepageImage |
-| cover-og.jpg/png | 1200 × 630 | ogImage |
-| cover-square.jpg/png | 1080 × 1080 | squareImage |
-| cover-instagram.jpg/png | 1080 × 1350 (4:5) | instagramImage |
+| cover-homepage.png/jpg | 1500 × 1200 (5:4) | homepageImage |
+| cover-og.jpg | 1200 × 630 | ogImage |
+| cover-square.png/jpg | 1080 × 1080 | squareImage |
+| cover-instagram.png/jpg | 1080 × 1350 (4:5) | instagramImage |
+| cover-story.png/jpg | 1080 × 1920 (9:16) | (jen soubor, nahrává se ručně) |
 
 ## Sada pro web a sociální sítě (od 12. 10. 2026)
 
@@ -46,20 +48,101 @@ dřív se postranní karty ořezávaly až na čtverec, proto mají starší cov
 Bolsonaro). Na každou kartu web vkládá vpravo nahoře štítek rubriky: v malých kartách (boční 230 px,
 mobilní seznam) zakryje na coveru oblast x ≥ 950, y ≤ 280. Ikony a odznaky coveru patří pod ni.
 Stejné kotvy (text od x 180 / y 120, logo vpravo dole) drží covery v řadě vedle sebe zarovnané. Odkaz na síti vždy přebírá jeden `ogImage`; web nepozná, kam se sdílí
-(statický web na Cloudflare Pages), proto drží OG titulek a logo ve středním čtverci 630. Od 26. 10. 2026 je výchozí OG „čtverec s ušima“: střed = čtvercový cover zmenšený na 630, boky = stejné pozadí se září (COVER-VIZUALNI-IDENTITA.md → *1.1 Kompozice*); vlastní široké rozvržení jen výjimečně přes `format.og`.
+(statický web na Cloudflare Pages), proto drží OG všechny texty a logo ve středním čtverci 630 s vůlí 35 px
+(x 320–880). Jak OG skládat, říká kapitola *Kompozice podle formátu* níže.
 
 **Písma (tvrdé pravidlo, od 12. 10. 2026):** patkový IBM Plex Serif Bold jen titulek a nápis loga „DataTimes.cz“;
 všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách) IBM Plex Sans.
 **Štítek coveru:** verzálky Plex Sans s prostrkáním, první část karmínově (#de1743) s podtržením končícím v půlce
 posledního písmene, pak „•“ a zbytek bíle (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026); vpravo zarovnaný zrcadlově.
 
-**Kompozice – využít plochu:** motiv (mapa, fotka, ilustrační obrázek) má vyplnit cover, ne plavat malý uprostřed.
-Mapu zvětšit od pravého dolního rohu směrem doleva nahoru; text, legenda i logo smí ležet přes ni (jako Brazílie).
-Čitelnost drží rozmazaný podklad v barvě pozadí pod drobnými texty (generátor: třída `halo`) a stín titulku.
-**Logo na volné ploše:** logo DataTimes.cz patří do toho dolního rohu, kde je motiv klidnější a logo nezanikne
-(u mapy ČR vlevo dole pod Šumavou, jihovýchod je rozbitý tečkami); legenda si vezme opačný roh.
-V generátoru `logo: 'vlevo'` v cover.config.cjs. Výchozí je vpravo dole.
-Nebát se velkých, odvážných kompozic – jen štítek rubriky (x ≥ 950, y ≤ 280) a kotvy textu/loga platí dál.
+## Kompozice podle formátu (od 29. 10. 2026)
+
+Shrnutí všeho, co jsme se na coverech naučili. Každý formát je **samostatné rozvržení téhož sdělení**, ne výřez
+ani zmenšenina jedné šablony. Kompozice se řídí motivem konkrétního článku: jednotný vzor za každou cenu je chyba
+(Kateřina 29. 10.: „ten mustr nemá být takhle jednotný za každou cenu, mapy se chovají jinak“).
+
+### Obecné zásady
+
+1. **Nejdřív sdělení a motiv, pak text.** Jednou větou: co má čtenář pochopit za tři sekundy, a který prvek to
+   nese (motiv, titulek, nebo fotka). Ten dostane nejvíc místa a nejlepší polohu.
+2. **Motiv velký.** Mapa, disk, medaile nebo fotka vyplní plochu, ne malý ostrůvek v rohu nebo uprostřed prázdné
+   navy. Na výšku zabere většinu plochy mezi textem a logem.
+3. **Texty jsou bloky kolem motivu.** Štítek s titulkem, podtitulek, legenda a logo se rozmístí do klidných míst
+   kolem motivu (prázdné kouty mapy, místa, kde motiv nic nenese), ne automaticky do jednoho sloupce vlevo nahoře.
+   Bloky mají společné svislice: levé bloky lícují vlevo na jedné linii, pravé vpravo.
+4. **Vůle od okrajů.** Text nikdy nesedí přímo na hraně formátu ani na hraně výřezu (čtverec OG, mřížka Instagramu).
+   Vlevo stejná vůle jako vpravo.
+5. **Čitelnost, ne dotyk.** Text smí ležet přes motiv tam, kde motiv nic podstatného nenese (u větrníků jižní Čechy
+   a jižní Morava, kde se nehlasovalo; mapa republiky jako podkres). Vadí jen světlé nebo rušné místo pod písmem
+   a zakrytá data. Pod velký titulek nikdy tmavý blok, nanejvýš stín kolem písmen; drobný text dostane měkký
+   podklad (generátor to dělá sám, viz *Automatické pojistky*).
+6. **Zalomení.** Titulek má ve všech formátech stejné řádky (ruční `<br>`), podtitulek a legendu lze pro jeden
+   formát zalomit jinak, když to rozvržení potřebuje (`pro: { og: { pod: '…' } }`). Nikdy jednopísmenná předložka
+   nebo spojka na konci řádku, číslo nikdy odtržené od jednotky.
+7. **Logo** v klidném rohu, kde nezanikne (u mapy ČR vlevo dole pod Šumavou). Když se dole tlačí vedle titulku,
+   smí nahoru nad štítek. Na homepage vždy dole (pravý horní roh patří štítku rubriky).
+
+### Legenda
+
+- **Popsat jen to, co je zvýrazněné.** Když jsou kategorie dvě, druhou nepopisovat („ostatní obce“ je zřejmé).
+  Formulace srozumitelná bez článku: „malé obce, kde volby stojí přes 100 Kč na voliče“, ne „komise přes 100 Kč“.
+- **Společné slovo vytknout jako nadpis:** „Obec větrníky“ a pod ním puntík „odmítla“, puntík „podpořila“
+  (v konfiguraci položka bez barvy: `[null, 'Obec větrníky']`).
+- Legenda patří k motivu, který vysvětluje, a má stejné znění ve všech formátech.
+- Dlouhou položku zalomit (`<br>`), ať nenarazí do loga ani do motivu.
+
+### Formáty
+
+| Formát | Jak skládat |
+| --- | --- |
+| **homepage** 1500×1200 | text vlevo od x 180, motiv vpravo a velký, logo dole, pravý horní roh (x ≥ 950, y ≤ 280) prázdný pro štítek rubriky |
+| **OG** 1200×630 | motiv uprostřed nebo blízko středu, texty jako bloky kolem něj, všechny v bezpečném čtverci x 320–880, y 48–584 (střední čtverec 285–915 s vůlí 35 px); motiv smí přesahovat do boků i za okraj čtverce |
+| **čtverec** 1080×1080 | text nahoře, motiv dole a velký, okraj 70 px |
+| **Instagram** 1080×1350 | jako čtverec, motiv využije výšku; nic důležitého v horních a dolních 80 px (mřížka profilu 3:4) |
+| **story** 1080×1920 | text → motiv → logo pod sebou, obsah mezi horními 250 a dolními 340 px, žádný prázdný pás |
+
+**OG podrobněji** (nejvíc chyb jsme dělali tady):
+- WhatsApp, Signal a Messenger ukážou jen střední čtverec 630×630 (x 285–915), Facebook, X a LinkedIn celou šířku.
+  Obojí musí fungovat: ve čtverci celý text a logo a rozpoznatelný motiv, na šířku plná kompozice bez prázdných boků.
+- **Nevycentrovat text přes motiv.** Text uprostřed přes ztlumenou mapu (Miliarda za volby, větrníky) a motiv
+  rozdělený do krajů (dva disky slunečnice na okrajích) nefungovaly: motiv ztratil sdělení, data nebyla vidět.
+- **Ani zmenšený čtverec s prázdnými boky** („čtverec s ušima“) není cíl: motiv je malý a boky nic nenesou.
+  Zůstává jako nouzové výchozí chování generátoru, když článek vlastní rozvržení OG nemá.
+- **Rozložení podle motivu**, vzory z 29. 10. 2026 (Kateřina: „zatím nejlepší výsledek“):
+  - *Miliarda za volby* (`volby-cr-2026-10-21-kolik-stoji-volby`): mapa ČR přes střed, titulek vlevo nahoře nad
+    Krušnými horami, podtitulek vpravo nahoře, logo vlevo dole pod Šumavou. Mapa je podkres, okraj republiky
+    smí do textu zasahovat.
+  - *Slunečnice* (`analyza-2026-10-25-poruchy-prijmu-potravy`): jeden disk blízko středu, mírně zmenšený, texty
+    a legenda ve sloupci vlevo, logo vlevo dole.
+  - *Větrníky* (`analyza-2026-10-23-referenda-vetrne-elektrarny`): mapa přes střed, titulek dole přes jih, kde se
+    nehlasovalo, legenda vlevo nahoře, podtitulek vpravo nahoře, logo nad štítkem.
+- **Technicky:** `og: 'siroky', ogScrim: false` a textové bloky v `rozlozeni: { og: [{ prvky: ['kicker', 'titulek'],
+  x: 320, y: 48 }, { prvky: ['pod'], x: 880, y: 100, vpravo: true }, { prvky: ['logo'], x: 320, y: 584, dole: true }] }`.
+  Prvky: kicker, nad, titulek, pod, legenda, logo; `vpravo` zarovná blok k pravé svislici, `dole` ukotví spodní
+  hranu. Motiv do středu posune jeho plocha v `motiv.cjs` (např. `og: [1200, 630, [215, 200, 985, 615]]`).
+  Velikost titulku jen pro OG: `format: { og: { t: 54 } }`.
+
+### Animace a GIF
+
+- Animace přebírá rozvržení coveru daného formátu; **text a logo stojí po celou dobu na místě**, hýbe se jen motiv.
+  Rozvržení se ladí na nejrozsáhlejším snímku (plný stav), ať motiv v žádném snímku nenaráží do textu.
+- **První i poslední snímek = hlavní sdělení** (stav „dnes“): je to náhled a statický fallback.
+- Homepage GIF má pravidla homepage coveru (logo dole, roh štítku rubriky volný); GIF pro sítě má logo nahoře.
+- Podrobnosti (MP4 × GIF, délky, velikosti, LFS): COVER-VIZUALNI-IDENTITA.md → *8. Balík výstupů*.
+
+### Kontrola: vidět, ne předpokládat
+
+Technicky platný render není hotový cover. Hotový je až zkontrolovaný.
+1. Vyrenderovat všech pět formátů (zkušebně `--vystup <složka>`, ostře bez něj).
+2. Kontaktní arch (`tools/kontaktni-arch.cjs`): všech pět formátů, karty webu, **OG s čárkovaným středním
+   čtvercem a jeho ořez ve skutečné velikosti** (ověřit, že žádnému textu nechybí písmena a že má vůli od okraje).
+3. Prohlédnout každý formát ve velkém náhledu, pojmenovat konkrétní problém („podtitulek naráží do severních
+   větrníků“), změnit jednu vlastnost (polohu bloku, zalomení, plochu motivu, velikost titulku), znovu vyrenderovat
+   a porovnat. Neměnit při každé opravě celé rozvržení.
+4. Teprve pak ukázat Kateřině: kontaktní arch a samotné soubory homepage, OG a story.
+
+## Generátor, povinná kontrola a ponaučení
 
 **Generátor:** `tools/cover-generator.cjs` + `_cover_pipeline/cover.config.cjs` u článku vyrobí všech pět formátů
 (`PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <config>`). Vzory konfigurací: predikce,
@@ -119,7 +202,13 @@ na oko zbývá motiv, sdělení a celkový dojem:
   se zatím nekontrolují.
 - Zkušební render jinam, bez razítka: `node tools/cover-generator.cjs <config> --vystup <složka>`.
 
-**Ponaučení z oprav (zapisovat sem, ať se chyby neopakují):**
+**Ponaučení z oprav (zapisovat sem, ať se chyby neopakují; co platí obecně, přenést do kapitoly *Kompozice podle
+formátu*):**
+- *29. 10. 2026 – OG naležato u tří datových coverů (Miliarda za volby, slunečnice, větrníky).* Staré OG měly text
+  na středu přes ztlumený motiv, nebo motiv rozdělený do krajů; výchozí „čtverec s ušima“ zase nechal motiv malý
+  a boky prázdné. Přeskládáno: motiv do středu, texty jako bloky kolem, vše ve čtverci s vůlí 35 px (první verze
+  měla text přesně na hraně čtverce, ve WhatsApp ořezu pak písmena seděla na okraji). Legendy zjednodušeny (jen
+  zvýrazněná kategorie; společné slovo jako nadpis). Pravidla jsou v kapitole *Kompozice podle formátu*.
 - *28. 10. 2026 – medaile z teček (státní vyznamenání, ženy a „Komu prezidenti dávají medaile“).* **Využít prostor:** motiv nenechávat v pravém dolním rohu, posunout ho výš a blíž k textu a zvětšit, dokud stuha/okraj nenarazí do titulku, legendy, loga nebo zóny štítku rubriky. Dlouhý podtitulek rozdělit na dva řádky (`<br>`), aby se uvolnilo místo. Rozložení ladit **zvlášť pro každý článek**, když se liší délka titulku nebo legendy (třířádkový titulek → medaile níž; delší legenda ve story → medaile níž, logo nesmí ležet na motivu). Po každé změně zkontrolovat všech pět formátů na kontaktním archu, ne jen homepage. **Legenda patří jen k motivu, který vysvětluje:** „uprostřed Havel, na okraji Pavel“ ke cover s barvami prezidentů, ne ke coveru žen; údaje (1995–2025) psát v obou sesterských coverech stejně. **Barvy pohlaví bez stereotypu:** ženy světle béžová (background.2) na modré medaili mužů (brandRoyalBlue.6), obojí z trikolóry stuhy. Homepage GIF (pomalé problikávání žen, 45s cyklus, každá tečka jednou) vzniká z `animace.config.cjs` přes `medaile()` z motiv.cjs; delší GIF než 8 s jen výjimečně (`gif.delka`), hlídat velikost (~5 MB).
 - *28. 10. 2026 – automatické pojistky (vyznamenání, Brazílie).* Story k vyznamenáním: legenda přes bílý pruh stuhy,
   logo přes spodek medaile, starý text titulku. Kateřina: mírný přesah textu přes motiv je v pořádku, jen musí být
@@ -172,7 +261,8 @@ na oko zbývá motiv, sdělení a celkový dojem:
 - *26. 10. 2026 – OG s mapou (Brazílie, proč vyhrál Lula).* Vycentrovaný OG s mapou jako slabým pozadím nestačil:
   text zarovnat doleva od levého okraje středního čtverce a mapu dát do jeho pravé části, **celou uvnitř čtverce
   285–915 px**, jinak messengery ořežou nejdůležitější body (velká města na východním pobřeží). V configu
-  `format: { og: { stred: false, box: [285, 50, 915, 580] } }` a mapa přes `mapaPozice.og` (vzor
+  `format: { og: { stred: false, box: [285, 50, 915, 580] } }` a mapa přes `mapaPozice.og` (od 29. 10. text s vůlí
+  od x 320, viz *Kompozice podle formátu*; vzor
   `volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/`).
   Když motiv vpravo dole zakrývá logo (jih Brazílie), `logoPodLegendou: true` dá logo vlevo dolů a legendu o dva
   řádky výš nad něj (ve všech formátech). Barvy bodů na mapě cizí země mohou nést její vlajku (Brazílie: žlutá
@@ -196,12 +286,13 @@ na oko zbývá motiv, sdělení a celkový dojem:
 - *24. 10. 2026 – v OG coveru zmizela mapa ČR (referenda o větrnících).* Generátor i vzorové `motiv.cjs` u OG
   tečkovou mapu tlumí (tečky 0,35, `opacityOg` 0,45), takže zůstaly jen značky obcí a obrázek nedával smysl.
   Když motiv stojí na tvaru republiky (body obcí, ikony v místech), musí být mapa čitelná i v OG: tečky plně,
-  `opacityOg: 1` a plocha mapy v `motiv.cjs` s okrajem (např. `[40, 30, 1160, 610]`), aby obrys nenarážel
-  na kraje. Čitelnost textu drží halo generátoru. OG kontrolovat vedle homepage, ne jen samotný.
+  `opacityOg: 1`. Čitelnost textu drží halo generátoru. OG kontrolovat vedle homepage, ne jen samotný.
+  (Rozvržení OG s textem na středu bylo 29. 10. nahrazeno, viz *Kompozice podle formátu* → OG.)
 - *23. 10. 2026 – cover kapitoly Demografie (speciál Data pro budoucí premiérku).* U karet speciálu je štítek rubriky na dlaždici vpravo na úrovni titulku (`DpbpArticleCard`), ne jako červený oválek přes obrázek, takže zóna x ≥ 950, y ≤ 280 zde odpadá. Cover kapitoly: nahoře zleva logo speciálu (hlava s tečkami, otočená doprava) a „Data pro budoucí premiérku“ v jednom řádku, pod tím „Kapitola 1 • Demografie“, pak velký titulek; krémové pozadí jako na webu. Dětský graf plodnosti (děti na bodech grafu) je zdroj `plodnost-3.webp` z karty článku, ne SVG náhled (ten se v prohlížeči nenačte). Dlaždice kapitoly umí vlastní `image` + `imageAspect` a `showOpener` v `_meta.json` (úvodní článek jako první dlaždice).
 - *16. 10. 2026 – titulek se v každém formátu lámal jinak (ODS a Piráti).* Titulek coveru má mít ve všech pěti
   formátech stejné zalomení. Řádky určit ručně přes `<br>` a kde se řádek do užšího formátu nevejde (typicky
-  story), zmenšit jen jeho titulek přes `format: { story: { t: 88 } }` v `cover.config.cjs`. Na kontrolním listu
+  story), zmenšit jen jeho titulek přes `format: { story: { t: 88 } }` v `cover.config.cjs`. (Podtitulek a legenda
+  se smějí v jednom formátu zalomit jinak, když to rozvržení potřebuje, viz *Kompozice podle formátu*.) Na kontrolním listu
   projít všechny formáty vedle sebe. Rivalské strany (ODS × Piráti) v titulku nesčítat do jedné věty, každá dostane
   vlastní údaj („ODS ztratila / čtvrtinu zastupitelů, / Piráti rovněž“).
 - *15. 10. 2026 – „v“ na konci řádku v titulku karty na sítě.* Karty a dlaždice vykreslované mimo web (Playwright
@@ -342,8 +433,8 @@ zůstává kvůli reprodukci starých coverů. Pro nové články používej spo
 projekt a `npm run covers`. Generátor `social-cards/` slouží dalším kartám
 a carouselům, nikoli této sadě coverů.
 
-Před publikací zkontroluj všechny čtyři soubory: čitelnost, ořez hlavního
-motivu, loga a velikost. Cíl pro OG je přibližně 150–500 kB. Automatická
+Před publikací zkontroluj všech pět souborů: čitelnost, ořez hlavního
+motivu, loga a velikost (postup v kapitole *Kompozice podle formátu* → *Kontrola*). Cíl pro OG je přibližně 150–500 kB. Automatická
 sazba nenahrazuje redakční kontrolu fotografie ani délky titulku.
 
 ## Ověření

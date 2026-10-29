@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/images/cover-homepage.png",
+      "otisk": "5b94d0095c2bebcc",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/cover.config.cjs": "45e7a903eb1b844f",
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/motiv-homepage.svg": "e495ed634a4ae30e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/images/cover-og.jpg",
+      "otisk": "408df62eef031c08",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/cover.config.cjs": "45e7a903eb1b844f",
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/motiv-og.svg": "3188082b061a2fb4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/images/cover-square.png",
+      "otisk": "3d30ecdffbb50f82",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/cover.config.cjs": "45e7a903eb1b844f",
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/motiv-square.svg": "d8e9d1f010ef75e8"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/images/cover-instagram.png",
+      "otisk": "92d442e28c1480db",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/cover.config.cjs": "45e7a903eb1b844f",
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/motiv-instagram.svg": "43c87dc75818b4f9"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/images/cover-story.png",
+      "otisk": "2cd98a1ab55fb038",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/cover.config.cjs": "45e7a903eb1b844f",
+        "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/motiv-story.svg": "bc9fe262bc1c70cd"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T07:01:30.905Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/index.md",
+  "titulekClanku": "Dívek léčených s poruchou příjmu potravy je třikrát víc než před patnácti lety",
+  "texty": {
+    "stitek": "Analýza • Poruchy příjmu potravy",
+    "nadtitulek": "",
+    "titulek": "Dívek s poruchou příjmu potravy je třikrát víc",
+    "podtitulek": "V roce 2010 se léčilo 1 199 dívek do 18 let, loni 3 858"
+  }
+}

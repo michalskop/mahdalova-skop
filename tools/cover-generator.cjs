@@ -26,7 +26,7 @@ const NAVY = '#101432'; // brandNavy.9
 // i nejdelší štítek série (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026) vešel na jeden řádek ve stejné velikosti; t/sub/kick/logo = velikosti písma; stred = vše na střed (OG)
 const FORMATY = {
   homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [60, 400, 1480, 1150], ikona: [1280, 480, 150], t: 100, sub: 38, kick: 20, leg: 27, logo: 44 },
-  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 48, 880, 584], mapa: [0, 0, 1200, 630], ikona: [1150, 48, 80], t: 58, sub: 23, kick: 15, logo: 28, og: true },
+  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 48, 880, 584], mapa: [0, 0, 1200, 630], ikona: [1150, 48, 80], t: 58, sub: 23, kick: 15, leg: 19, logo: 28, og: true },
   square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [20, 470, 1070, 1050], ikona: [970, 80, 125], t: 88, sub: 34, kick: 24, leg: 24, logo: 40 },
   instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [20, 560, 1070, 1260], ikona: [970, 120, 125], t: 92, sub: 36, kick: 24, leg: 24, logo: 40 },
   story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 860, 1080, 1580], ikona: [960, 280, 135], t: 104, sub: 40, kick: 24, leg: 26, logo: 44 },
@@ -314,9 +314,27 @@ function html(c0, klic, { ucha = false } = {}) {
   // c.format[klic].legNahoru / podDolu: jemné posuny o řádky v jednom formátu (legenda výš, podtitulek níž)
   const legDole = (logoPod ? h - by1 + 2 * (f.leg ?? 26) * 1.6 : h - by1) + (f.legNahoru ?? 0) * (f.leg ?? 26) * 1.6;
   // c.legendaPodTextem: legenda v toku textu pod podtitulkem (karty, kde dolní roh zabírá motiv)
-  const legTok = c.legenda && c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
-  const leg = c.legenda && !c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
-  const text = f.stred
+  // c.legendaOg: legenda pod textem i v širokém OG (vyplní místo mezi podtitulkem a logem, motiv je vpravo)
+  const legTok = c.legenda && !f.stred && (f.og ? c.legendaOg : c.legendaPodTextem) ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div>${b ? `<i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>` : ''}${t}</div>`).join('')}</div>` : '';
+  const leg = c.legenda && !c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}${b ? `<i style="background:${b};margin:0 0 0 .4em"></i>` : ''}</div>` : `<div>${b ? `<i style="background:${b}"></i>` : ''}${t}</div>`).join('')}</div>` : '';
+  // c.rozlozeni = { og: [{ prvky: ['kicker', 'titulek'], x, y, vpravo?, dole? }, …] } – textové bloky volně kolem motivu
+  // (Kateřina 28. 10.: u OG motiv doprostřed, texty okolo, vše v bezpečném středním čtverci x 285–915). x, y = roh bloku:
+  // levý horní, s vpravo = true pravý (text zarovnaný doprava), s dole = true dolní. Prvky: kicker, nad, titulek, pod,
+  // legenda, logo; mezery mezi nimi jako v běžném sloupci.
+  const bloky = c.rozlozeni?.[klic];
+  const prvek = (p, i, vpravo) => {
+    const m = (v) => (i ? `margin-top:${v}px;` : '');
+    if (p === 'kicker') return kicker.replace('class="kick"', `class="kick" style="${vpravo ? 'margin-left:auto;' : ''}${m(f.t * 0.3)}"`);
+    if (p === 'nad') return nad && `<div style="${m(f.t * 0.45)}">${nad}</div>`;
+    if (p === 'titulek') return `<h1 style="${m(f.t * 0.3)}">${c.titulek}</h1>`;
+    if (p === 'pod') return pod && `<div style="${m(f.t * 0.3)}">${pod}</div>`;
+    if (p === 'legenda') return c.legenda ? `<div class="leg" style="position:static;${m(f.t * 0.25)}">${c.legenda.map(([b, t]) => `<div>${vpravo ? t : ''}${b ? `<i style="background:${b};box-shadow:0 0 0 2px #f8f6f0;${vpravo ? 'margin:0 0 0 .4em' : ''}"></i>` : ''}${vpravo ? '' : t}</div>`).join('')}</div>` : '';
+    if (p === 'logo') return `<div class="halo" style="display:inline-block;position:relative;${m(f.t * 0.3)}">${logo}</div>`;
+    throw new Error(`rozlozeni: neznámý prvek ${p}`);
+  };
+  const text = bloky
+    ? bloky.map((bl) => `<div style="position:absolute;${bl.vpravo ? `right:${w - bl.x}px;text-align:right` : `left:${bl.x}px`};${bl.dole ? `bottom:${h - bl.y}px` : `top:${bl.y}px`};width:max-content;display:flex;flex-direction:column;align-items:${bl.vpravo ? 'flex-end' : 'flex-start'}">${bl.prvky.map((p, i) => prvek(p, i, bl.vpravo)).join('')}</div>`).join('')
+    : f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
     : `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px">

@@ -1,0 +1,81 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/images/cover-homepage.png",
+      "otisk": "f1572ba6f7a622c5",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/cover.config.cjs": "73ce54fe2e894f20",
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/motiv-homepage.svg": "3aa786565cd9be6d"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [
+          "titulek zasahuje do rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – v malých kartách ho štítek zakryje"
+        ],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/images/cover-og.jpg",
+      "otisk": "d1272a27f308e368",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/cover.config.cjs": "73ce54fe2e894f20",
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/motiv-og.svg": "15baa37726415bc3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/images/cover-square.png",
+      "otisk": "01a2247f81c0c991",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/cover.config.cjs": "73ce54fe2e894f20",
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/motiv-square.svg": "29d077be06d13d4e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/images/cover-instagram.png",
+      "otisk": "f877dcf78c7b92a1",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/cover.config.cjs": "73ce54fe2e894f20",
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/motiv-instagram.svg": "178446a39d82d058"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/images/cover-story.png",
+      "otisk": "33989afe2ba8e3b0",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/cover.config.cjs": "73ce54fe2e894f20",
+        "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/motiv-story.svg": "c883bccc14c20b99"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T07:01:48.375Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/index.md",
+  "titulekClanku": "Větrníky odmítlo 20 z 21 obcí, které o nich hlasovaly s komunálními volbami",
+  "texty": {
+    "stitek": "Analýza • Referenda o větrnících",
+    "nadtitulek": "",
+    "titulek": "Větrníky odmítlo 20 z 21 obcí",
+    "podtitulek": "Jen Dětřichov na Svitavsku řekl v referendu ano, o osm hlasů"
+  }
+}
