@@ -1,5 +1,5 @@
 ---
-title: "Bez arabských stran nemá v Knesetu většinu Netanjahu ani Eisenkot"
+title: "Bez arabských stran nemá v izraelském parlamentu většinu Netanjahu ani Eisenkot"
 date: "2026-10-28"
 time: "08:20"
 author: "Kateřina Mahdalová"
@@ -16,7 +16,7 @@ tags: ["Izrael", "volby", "izraelské volby 2026", "Kneset", "Benjamin Netanjahu
 promoted: 1
 ---
 
-Benjamin Netanjahu a jeho spojenci přišli ve volbách 27. října 2026 o většinu v Knesetu. Pět stran jeho dosavadní koalice má podle předběžných výsledků [Ústřední volební komise](https://votes26.bechirot.gov.il/) dohromady 53 ze 120 mandátů, o jedenáct méně než v roce 2022. Opozice vedená bývalým náčelníkem generálního štábu Gadim Eisenkotem ale většinu nemá také: čtyři strany jejího bloku získaly 48 křesel.
+Benjamin Netanjahu a jeho spojenci přišli ve volbách 27. října 2026 o většinu v Knesetu, izraelském jednokomorovém parlamentu se 120 poslanci. Pět stran jeho dosavadní koalice má podle předběžných výsledků [Ústřední volební komise](https://votes26.bechirot.gov.il/) dohromady 53 ze 120 mandátů, o jedenáct méně než v roce 2022. Opozice vedená bývalým náčelníkem generálního štábu Gadim Eisenkotem ale většinu nemá také: čtyři strany jejího bloku získaly 48 křesel.
 
 Zbylých 19 mandátů připadlo dvěma arabským stranám, Společné kandidátce a straně Ra'am. Tolik křesel arabské strany v izraelském parlamentu nikdy neměly, dosavadní maximum bylo 15 v roce 2020. Bez nich nesestaví většinu ani jeden z bloků. Většina židovských stran přitom s nimi vládnout odmítá.
 

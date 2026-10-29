@@ -10,13 +10,13 @@ ogImage: "images/cover-og.jpg"
 squareImage: "images/cover-square.png"
 instagramImage: "images/cover-instagram.png"
 coverTitulek: "Netanjahu<br>většinu nezíská"
-coverPodtitulek: "Podle predikce chybí jeho bloku<br>k většině v Knesetu osm mandátů"
+coverPodtitulek: "Podle predikce chybí jeho bloku<br>k většině v parlamentu osm mandátů"
 filter: ["analýza"]
 tags: ["volby", "Izrael", "izraelské volby 2026", "Kneset", "Benjamin Netanjahu", "Gadi Eisenkot", "arabští voliči", "volební predikce", "Blízký východ"]
 promoted: 1
 ---
 
-Izrael v úterý 27. října volil 26. Kneset a podle predikce nezíská většinu žádný z bloků. Datový model dvojice datových novinářů Kateřina Mahdalová & Michal Škop přisuzuje pěti stranám dosavadní koalice Benjamina Netanjahua 53 ze 120 mandátů, o osm méně, než potřebují k většině. Opozice bývalého náčelníka generálního štábu Gadiho Eisenkota skončí na 48 mandátech. Zbylých 19 křesel připadne dvěma arabským stranám, víc než kdykoli předtím.
+Izraelci v úterý 27. října volili nový parlament. Jmenuje se Kneset a má jedinou komoru se 120 poslanci, takže vláda v něm potřebuje 61 hlasů. Podle predikce takovou většinu nezíská žádný z bloků. Datový model dvojice datových novinářů Kateřina Mahdalová & Michal Škop přisuzuje pěti stranám dosavadní koalice Benjamina Netanjahua 53 ze 120 mandátů, o osm méně, než potřebují k většině. Opozice bývalého náčelníka generálního štábu Gadiho Eisenkota skončí na 48 mandátech. Zbylých 19 křesel připadne dvěma arabským stranám, víc než kdykoli předtím.
 
 ```infobox info
 Model se přepočítával od 23:24 SEČ, necelé dvě a půl hodiny po uzavření volebních místností ve 21:00 SEČ (22:00 izraelského času), z průběžných výsledků [Ústřední volební komise](https://votes26.bechirot.gov.il/). Čísla v textu pocházejí z posledního přepočtu ve čtvrtek 29. října v 6:59 SEČ, kdy bylo sečteno 98,7 % řádných volebních místností a zhruba 6 % dvojitých obálek. Definitivní výsledky vyhlásí komise do 4. listopadu.
