@@ -12,7 +12,8 @@ module.exports = {
   titulek: 'Větrníky odmítlo<br>20 z&nbsp;21 obcí',
   pod: 'Jen Dětřichov na Svitavsku řekl v&nbsp;referendu ano,<br>o&nbsp;osm hlasů', // ruční zlom: stejný ve všech formátech
   mapaPozice: { homepage: [140, 470, 1500, 1170] },
-  format: { og: { t: 54 } }, // OG: titulek o kousek menší, ať nenaráží do větrníku na Vysočině
+  // OG: titulek o kousek menší, ať nenaráží do větrníku na Vysočině; na výšku podtitulek dál od titulku, blíž k mapě
+  format: { og: { t: 54 }, square: { podDolu: 1 }, instagram: { podDolu: 1 }, story: { podDolu: 1.5 } },
   // nadpis legendy bez puntíku, pod ním dvě varianty (Kateřina 28. 10.)
   legenda: [[null, 'Obec větrníky'], [PROTI, 'odmítla'], [PRO, 'podpořila']],
   logo: 'vlevo', // mapa ČR: volněji vlevo dole pod Šumavou, legenda vpravo

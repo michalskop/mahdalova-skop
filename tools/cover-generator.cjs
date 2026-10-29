@@ -277,7 +277,7 @@ function html(c0, klic, { ucha = false } = {}) {
   const nad = c.nad ? `<div class="nad">${c.nad}</div>` : '';
   const pod = !c.pod ? '' : c.podPruh
     ? `<div class="sub" style="line-height:1.45"><span class="pruh" style="background:${c.podPruh};color:${c.podBarva ?? '#fff'};font-weight:600">${c.pod}</span></div>`
-    : `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>`;
+    : `<div class="sub"><span class="jemny" style="display:inline-block;position:relative">${c.pod}</span></div>`;
   const logo = `<div class="logo">${DONUT}<span>DataTimes.cz</span></div>`;
   // SVG ikona se vkládá přímo (písmo v ní pak bere IBM Plex ze stránky), rastr jako <img>
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
@@ -373,6 +373,9 @@ function html(c0, klic, { ucha = false } = {}) {
   .sub{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.sub}px;line-height:1.3;color:${b.sub}}
   .leg{position:absolute;text-shadow:0 0 8px ${NAVY},0 0 3px ${NAVY},0 1px 2px ${NAVY};font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
   /* Mapa smí běžet pod textem; drobné texty dostanou rozmazaný podklad v barvě pozadí, ať vždy vyhrají. */
+  /* podtitulek: jemný stín jen kolem písmen (Kateřina 29. 10.: rozpitý ovál pod podtitulkem byl „humpolácký“);
+     plný podklad .halo dostane jen tehdy, když kontrola kompozice najde pod textem světlý motiv */
+  .jemny{text-shadow:0 0 .3em ${NAVY},0 0 .1em ${NAVY},0 1px 2px ${NAVY}}
   .halo{isolation:isolate}
   .halo::before{content:'';position:absolute;inset:-.45em -.7em;background:${NAVY};opacity:.9;filter:blur(16px);border-radius:1em;z-index:-1}
   .leg i{display:inline-block;width:${(f.leg ?? 26) * 0.6}px;height:${(f.leg ?? 26) * 0.6}px;border-radius:50%;margin-right:${(f.leg ?? 26) * 0.4}px}

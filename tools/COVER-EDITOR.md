@@ -75,13 +75,19 @@ ani zmenšenina jedné šablony. Kompozice se řídí motivem konkrétního čl�
    Vlevo stejná vůle jako vpravo.
 5. **Čitelnost, ne dotyk.** Text smí ležet přes motiv tam, kde motiv nic podstatného nenese (u větrníků jižní Čechy
    a jižní Morava, kde se nehlasovalo; mapa republiky jako podkres). Vadí jen světlé nebo rušné místo pod písmem
-   a zakrytá data. Pod velký titulek nikdy tmavý blok, nanejvýš stín kolem písmen; drobný text dostane měkký
-   podklad (generátor to dělá sám, viz *Automatické pojistky*).
+   a zakrytá data. Pod velký titulek nikdy tmavý blok, nanejvýš stín kolem písmen. Podtitulek má jen jemný stín
+   kolem písmen, žádný rozpitý ovál (Kateřina 29. 10.: „humpolácký“); měkký podklad dostane drobný text jen nad
+   světlou částí motivu (generátor to dělá sám, viz *Automatické pojistky*).
 6. **Zalomení.** Titulek má ve všech formátech stejné řádky (ruční `<br>`), podtitulek a legendu lze pro jeden
    formát zalomit jinak, když to rozvržení potřebuje (`pro: { og: { pod: '…' } }`). Nikdy jednopísmenná předložka
    nebo spojka na konci řádku, číslo nikdy odtržené od jednotky.
 7. **Logo** v klidném rohu, kde nezanikne (u mapy ČR vlevo dole pod Šumavou). Když se dole tlačí vedle titulku,
    smí nahoru nad štítek. Na homepage vždy dole (pravý horní roh patří štítku rubriky).
+8. **Mezery vyjadřují vztahy.** Podtitulek nemá lepit na titulek: na výšku (čtverec, 4:5, story) ho odsaď o řádek
+   níž (`format: { square: { podDolu: 1 } }`) a motiv posuň výš k němu, ať podtitulek patří k mapě, kterou popisuje
+   (větrníky, Kateřina 29. 10.). Prázdný pás nemá vzniknout ani pod titulkem, ani pod motivem.
+9. **Podkladová tečková mapa musí být vidět.** Tečky republiky aspoň brandNavy.7 `#4c4f8e`, ne o odstín tmavší
+   brandNavy.8 (republika se ztrácela v pozadí).
 
 ### Legenda
 
