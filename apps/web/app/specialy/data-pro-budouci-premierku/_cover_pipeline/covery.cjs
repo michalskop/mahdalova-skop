@@ -26,6 +26,7 @@ const DETI = uri(path.join(PODKLADY, 'deti-na-bodech-grafu.png'), 'image/png');
 const typo = (s) => s
   .replace(/(^|[\s>])([vkszouaiVKSZOUAI]) /g, '$1$2&nbsp;')
   .replace(/([A-Za-zÁ-ž]) (\d)/g, '$1&nbsp;$2')
+  .replace(/(\d)–(\d)/g, '$1⁠–⁠$2')
   .replace(/(\d) (%|žen|dětí|let|mil\.|tis\.|tisíc|milionů|milionu)/g, '$1&nbsp;$2');
 
 // ---------- formáty (bezpečné zóny podle COVER-EDITOR.md) ----------
@@ -89,14 +90,15 @@ const MOTIVY = {
   },
   // hantle: jedna řada = země; prázdný bod = začátek (vyšší hodnota vlevo), plný bod = konec (pokles doprava); hodnoty vně bodů; plná šířka
   hantle(w, h, spec) {
-    const f = fsOf(w), n = spec.rady.length, Lname = f * 7.2, V = f * 3.2;
+    const f = fsOf(w), n = spec.rady.length, Lname = f * 7.2, V = f * 3.2, lane = Math.min(f * 3.3, (h - f * 1.8) / n), fl = f * 0.78;
     const vals = spec.rady.flatMap((r) => [r.a, r.b]), lo = Math.min(...vals), hi = Math.max(...vals);
     const x = (v) => Lname + V + ((hi - v) / (hi - lo)) * (w - Lname - 2 * V);
-    const lane = Math.min(f * 5.2, (h - f * 3.4) / n);
-    let s = C(f * 0.6, f * 0.9, f * 0.5, NAVY, ` stroke="${BILA}" stroke-width="${f * 0.16}"`) + T(f * 1.5, f * 1.3, spec.hlavicka[0], 'start', BILA, f * 0.95, 600)
-      + C(f * 0.6 + f * 12, f * 0.9, f * 0.5, BILA) + T(f * 1.5 + f * 12, f * 1.3, spec.hlavicka[1], 'start', BILA, f * 0.95, 600);
+    const tot = f * 1.8 + lane * n, y0 = Math.max(0, (h - tot) * 0.3);
+    const l2 = fl * 0.55 + fl * 0.92 * spec.hlavicka[0].length * 0.56 + fl * 1.6; // druhá položka legendy hned za první
+    let s = C(fl * 0.5, y0 + fl * 0.8, fl * 0.42, NAVY, ` stroke="${BILA}" stroke-width="${fl * 0.14}"`) + T(fl * 1.3, y0 + fl * 1.1, spec.hlavicka[0], 'start', BILA, fl, 600)
+      + C(fl * 0.5 + l2, y0 + fl * 0.8, fl * 0.42, BILA) + T(fl * 1.3 + l2, y0 + fl * 1.1, spec.hlavicka[1], 'start', BILA, fl, 600);
     spec.rady.forEach((r, i) => {
-      const cy = f * 3.4 + lane * (i + 0.5), col = r.barva || CORAL;
+      const cy = y0 + f * 1.8 + lane * (i + 0.5), col = r.barva || CORAL;
       s += T(0, cy + f * 0.4, r.n, 'start', BILA, f * 1.1, 700);
       s += `<line x1="${x(r.a)}" x2="${x(r.b)}" y1="${cy}" y2="${cy}" stroke="${col}" stroke-width="${f * 0.34}" stroke-linecap="round"/>`;
       s += C(x(r.a), cy, f * 0.68, NAVY, ` stroke="${col}" stroke-width="${f * 0.22}"`) + C(x(r.b), cy, f * 0.68, col, ` stroke="${NAVY}" stroke-width="${f * 0.14}"`);
@@ -210,7 +212,7 @@ const DEF = {
   '05-cas-rodicovstvi': { motiv: 'vek', titulek: 'Prvorodičky jsou o 6,7 roku starší než v roce 1990', pod: 'Průměrný věk matky při prvním dítěti vzrostl z 22,5 na 29,2 roku' },
   '16-starnuti-populace': { motiv: 'rady', logoVpravo: true, titulek: 'Na jednoho seniora dnes tři lidé v produktivním věku, v roce 2050 dva', pod: 'Poměr lidí ve věku 15–64 let k seniorům 65+: 3,1 v roce 2023, 2,5 v roce 2040, 2,0 v roce 2050' },
   '11-vylidnovani-obci': { motiv: 'mapa', bok: true, titulek: 'Od roku 2000 přibylo lidí ve 72 % obcí', pod: 'Karviná ztratila pětinu obyvatel,<br>Říčany o 47 % vyrostly' },
-  '10-data-porody': { motiv: 'dvewaffle', posun: { homepage: 0.07, square: 0.045, og: 0.045, instagram: 0.02, story: 0.012 }, titulek: 'Vzdělání ovlivňuje, kdy má žena první dítě, ne kolik dětí bude mít', pod: 'Ve 45–49 letech mají ženy s maturitou 1,77 dítěte a s vysokou školou 1,75',
+  '10-data-porody': { motiv: 'dvewaffle', posun: { homepage: 0.1, square: 0.045, og: 0.045, instagram: 0.02, story: 0.012 }, titulek: 'Vzdělání ovlivňuje, kdy má žena první dítě, ne kolik dětí bude mít', pod: 'Ve 45–49 letech mají ženy s maturitou 1,77 dítěte a s vysokou školou 1,75',
     spec: { panely: [
       { nazev: '45–49 let', rady: [{ n: 's maturitou', v: 1.77, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 1.75, barva: CRIMSON }] },
       { nazev: '30–34 let', rady: [{ n: 's maturitou', v: 1.1, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 0.89, barva: CRIMSON }] }] } },
@@ -225,16 +227,15 @@ const BG = (bez) => bez ? '' : `background:radial-gradient(ellipse 80% 70% at 0%
 function coverHtml(F, d, bez, fmt) {
   const bok = d.bok && fmt === 'homepage', ps = (d.posun && d.posun[fmt]) || 0; // posun: optické vyvážení mezery nad a pod motivem (podíl velikosti titulku)
   const { W, H, m } = F;
+  const dlouhy = d.titulek.replace(/<br>/g, ' ').length > 50, tz = dlouhy ? 0.92 : 1, tl = dlouhy ? 1.17 : 1.1; // dlouhé titulky: menší písmo, větší řádkování
   return `<div id="cv" style="position:relative;width:${W}px;height:${H}px;overflow:hidden;${BG(bez)};font-family:'IBM Plex Sans',Arial,sans-serif;color:#fff;display:flex;flex-direction:column;padding:${F.top}px ${m}px ${F.bot}px ${m}px;box-sizing:border-box">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:${F.head * 0.14}px;flex:none;height:${F.head}px">
-     <div style="display:flex;align-items:center;gap:${F.head * 0.14}px;height:${F.head}px">
-      <div style="height:${F.head}px;width:${F.head * 0.78}px;flex:none">${hlava}</div>
-      <div style="font:700 ${F.hl}px/1.05 'IBM Plex Serif',Georgia,serif;color:${CORAL}">Data pro budoucí<br>premiérku</div>
-     </div>
-     <div style="font:600 ${F.kick}px 'IBM Plex Sans';letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;text-align:right;line-height:1.9"><span style="color:${CORAL};border-bottom:3px solid ${CORAL};padding-bottom:6px">${d.rubrika || 'Analýza'}</span><br>01 Demografie</div>
+    <div style="display:flex;align-items:center;gap:${F.head * 0.14}px;flex:none;height:${F.head * 0.84}px">
+      <div style="height:${F.head * 0.84}px;width:${F.head * 0.84 * 0.78}px;flex:none">${hlava}</div>
+      <div style="font:700 ${F.hl}px/1.05 'IBM Plex Serif',Georgia,serif;color:${CORAL};white-space:nowrap">Data pro budoucí premiérku</div>
     </div>
-    <div style="margin-top:${F.head * 0.2}px;font:700 ${F.t}px/1.06 'IBM Plex Serif',Georgia,serif;flex:none">${typo(d.titulek)}</div>
-    <div style="margin-top:${F.t * 0.22}px;font:500 ${F.sub}px/1.3 'IBM Plex Sans';color:#ffd0da;max-width:${(W - 2 * m) * (bok ? 0.5 : 0.94)}px;flex:none">${typo(d.pod).replace(/[.]$/, '')}</div>
+    <div style="flex:none;margin-top:${F.head * 0.1}px;align-self:flex-end;font:600 ${F.kick}px 'IBM Plex Sans';letter-spacing:.12em;text-transform:uppercase;white-space:nowrap"><span style="color:${CORAL};border-bottom:3px solid ${CORAL};padding-bottom:5px">${d.rubrika || 'Analýza'}</span><span style="margin-left:${F.kick * 1.4}px">01 Demografie</span></div>
+    <div style="margin-top:${F.head * 0.1}px;font:700 ${F.t * tz}px/${tl} 'IBM Plex Serif',Georgia,serif;flex:none">${typo(d.titulek)}</div>
+    <div style="margin-top:${F.t * 0.4}px;font:500 ${F.sub}px/1.3 'IBM Plex Sans';color:#ffd0da;max-width:${(W - 2 * m) * (bok ? 0.5 : 0.94)}px;flex:none">${typo(d.pod).replace(/[.]$/, '')}</div>
     <div id="motiv" style="${bok ? `position:absolute;right:${m * 0.4}px;bottom:${F.bot + F.dt * 1.9}px;width:${(W - 2 * m) * 0.78}px;height:${H * 0.56}px` : `flex:1;margin-top:${F.t * (0.35 - ps)}px;min-height:0;position:relative`}"></div>
     <div style="flex:none;margin-top:${bok ? 'auto' : (F.t * (0.3 + ps)) + 'px'};${d.logoVpravo ? 'align-self:flex-end;' : ''}display:flex;align-items:center;gap:12px;font:700 ${F.dt}px 'IBM Plex Serif',Georgia,serif;color:#fff"><span style="width:${F.dt * 1.4}px;height:${F.dt * 1.4}px;display:block">${donut}</span>DataTimes.cz</div>
   </div>`;
