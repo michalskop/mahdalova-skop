@@ -1,0 +1,84 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-homepage.png",
+      "otisk": "2a24b395619bfb52",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-homepage.svg": "cbde1c7820dedd42"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-og.jpg",
+      "otisk": "31d7387ee7b39564",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-og.svg": "785c929fc57e7295"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-square.png",
+      "otisk": "6fd7e3292f57d64b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-square.svg": "6de973c90d828e43"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-instagram.png",
+      "otisk": "ebf9100b9e8b1186",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-instagram.svg": "4b3c5aa9b75503c6"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-story.png",
+      "otisk": "6a3723baf8608f88",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-story.svg": "fc771bbdcf32d86a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T06:50:42.509Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/index.md",
+  "titulekClanku": "Vučić voliče neztratil. Porazila ho sjednocená opozice a vyšší účast",
+  "texty": {
+    "stitek": "Analýza • Volby v Srbsku",
+    "nadtitulek": "",
+    "titulek": "Proč prohrál Vučić",
+    "podtitulek": "Voliče neztratil. Proti němu se ale spojila opozice a přišlo 600 tisíc lidí navíc"
+  }
+}

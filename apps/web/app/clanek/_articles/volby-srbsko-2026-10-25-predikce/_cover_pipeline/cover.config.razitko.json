@@ -1,0 +1,84 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-homepage.png",
+      "otisk": "c46d2d32063643d6",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-homepage.svg": "cbde1c7820dedd42"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-og.jpg",
+      "otisk": "f70f75439e3ff8a7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-og.svg": "785c929fc57e7295"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-square.png",
+      "otisk": "f1d0bf4a7fd7a22d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-square.svg": "6de973c90d828e43"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-instagram.png",
+      "otisk": "04ede0acda35d155",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-instagram.svg": "4b3c5aa9b75503c6"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-story.png",
+      "otisk": "150b175fd2ad7cc9",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-story.svg": "fc771bbdcf32d86a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T06:51:35.301Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/index.md",
+  "titulekClanku": "Studenti v Srbsku porazili Vučiće. Predikce to ukázala hodinu a čtvrt před sčítáním",
+  "texty": {
+    "stitek": "Predikce • Volby v Srbsku",
+    "nadtitulek": "",
+    "titulek": "Studenti porazili Vučiće",
+    "podtitulek": "Predikce to ukázala hodinu a čtvrt před sčítáním"
+  }
+}
