@@ -60,7 +60,7 @@ OBORY = {
     'hrdinsky_cin': 'statečný čin civilisty',
     'podnikani': 'podnikání',
     'cirkev': 'církev',
-    'obcanska_spolecnost': 'občanská společnost a krajané',
+    'obcanska_spolecnost': 'občanská společnost',  # vč. krajanů; Kateřina 29. 10. 2026: bez „a krajané“
     'jine': 'jiné',
     'nezjisteno': 'nezjištěno',
 }
@@ -95,6 +95,12 @@ for r in rows:
 for r in rows:
     if r['jmeno'].startswith('Jan Dvořák') and r['rok'] == '2023' and r['druh'] == 'Medaile Za hrdinství':
         r['prezident'] = 'Zeman'
+
+# Ročník 28. 10. 2026: seznam Hradu ho zatím neobsahuje, bereme tiskovou zprávu KPR z 28. 10. 2026
+# (hrad.cz/cs/pro-media/tiskove-zpravy/aktualni-tiskove-zpravy/prezident-republiky-udelil-statni-vyznamenani-19629),
+# 51 vyznamenání; pohlaví a oblast už jsou v souboru. Id navazují za seznamem Hradu, aby seděly dávky klasifikace.
+for i, k in enumerate(csv.DictReader(open(BASE / 'vstupy' / 'rijen_2026.csv', encoding='utf-8')), len(rows) + 1):
+    rows.append({**k, 'id': str(i), 'prezident': 'Pavel', 'pohlavi': k['pohlavi'].upper()})
 
 # Rok 2003: Havel byl prezidentem do 2. 2. 2003 a ještě 29. 1. 2003 vyznamenával. Hrad vede jen rok,
 # takže rozdělujeme podle seznamů vyznamenaných na webu Havlovy kanceláře (old.hrad.cz, stav 2004,
@@ -171,13 +177,16 @@ with open(BASE / 'vstupy' / 'vyznamenani_1995_2026.csv', 'w', encoding='utf-8', 
             'pohlavi', 'cizinec', 'obor', 'popis', 'jistota', 'zaznam']
     w = csv.DictWriter(f, fieldnames=cols, extrasaction='ignore'); w.writeheader(); w.writerows(rows)
 
-# Analyzujeme roky 1995–2025 (rok 2026 zatím obsahuje jen vyznamenání udělená
-# při státních návštěvách; říjnový seznam Hrad zveřejní až 28. 10. 2026).
-R = [r for r in rows if r['rok'] <= '2025']
-say(f'Analyzováno 1995–2025: {len(R)} vyznamenání')
-say('Rok 2026 v seznamu:', '; '.join(r['zaznam'] for r in rows if r['rok'] == '2026'))
+# Analyzujeme roky 1995–2026 (rok 2026 = tři vyznamenání při státních návštěvách + 51 z 28. 10. 2026).
+R = [r for r in rows if r['rok'] <= '2026']
+say(f'Analyzováno 1995–2026: {len(R)} vyznamenání')
+r26 = [r for r in R if r['rok'] == '2026']
+z26 = [r for r in r26 if r['pohlavi'] == 'Z']
+say(f'Rok 2026: {len(r26)} vyznamenání, z toho 28. 10.: {sum(r["zaznam"].startswith("Jeho Excelence") is False for r in r26)}; '
+    f'žen {len(z26)}, in memoriam {sum(r["in_memoriam"] == "1" for r in r26)}')
+say('Ženy 2026:', '; '.join(f"{r['jmeno']} ({r['druh']})" for r in z26))
 # Ročníky = roky, za které prezident vyznamenání oznámil. Za Zemana 10 (2013–2022), včetně ročníku 2020.
-ceremonie = {'Havel': 8, 'Klaus': 10, 'Zeman': 10, 'Pavel': 3}
+ceremonie = {'Havel': 8, 'Klaus': 10, 'Zeman': 10, 'Pavel': 4}
 say('Ročníky:', ceremonie)
 
 def pct(a, b):
@@ -305,15 +314,15 @@ for p in PREZ + ['celkem']:
         z, m = zm([r for r in sel if r['druh'] == d])
         bunky.append(f'{cislo(z)} / {cislo(m)}')
     z, m = zm(sel)
-    nazev = 'Celkem 1995–2025' if p == 'celkem' else PREZ_LABEL[p]
+    nazev = 'Celkem 1995–2026' if p == 'celkem' else PREZ_LABEL[p]
     radek = f"| {nazev} | " + ' | '.join(bunky) + f" | {cislo(z)} / {cislo(m)} | {round(100 * z / (z + m))} % |"
-    tab.append(radek.replace('| Celkem', '| **Celkem').replace('2025 |', '2025** |') if p == 'celkem' else radek)
+    tab.append(radek.replace('| Celkem', '| **Celkem').replace('2026 |', '2026** |') if p == 'celkem' else radek)
 say('\n## Tabulka do článku (ženy / muži)')
 for t in tab:
     say(t)
 
 # --- grafy ------------------------------------------------------------------------
-SRC = ('Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); '
+SRC = ('Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026) a tisková zpráva z 28. 10. 2026; '
        'rozdělení podle oborů a pohlaví DataTimes.cz')
 DATA.mkdir(exist_ok=True)
 
@@ -322,7 +331,7 @@ def save(name, spec):
     spec.setdefault('config', {'view': {'stroke': None}})
     (DATA / name).write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding='utf-8')
 
-ALL_YEARS = [str(y) for y in range(1995, 2026)]
+ALL_YEARS = [str(y) for y in range(1995, 2027)]
 rok_vals = [{'rok': y, 'počet': roky.get(y, 0), 'prezident': prezident_label(y)} for y in ALL_YEARS]
 pcolor = {'field': 'prezident', 'type': 'nominal', 'title': None,
           'scale': {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]},
@@ -370,7 +379,7 @@ for p in PREZ:
                           'podíl': round(c[d] / len(s), 4), 'pořadí': i})
 save('graf_druhy.json', {
     'title': {'text': 'Řád T. G. Masaryka tvořil u Zemana třikrát menší podíl vyznamenání než u Havla a Klause',
-              'subtitle': 'Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2025'},
+              'subtitle': 'Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2026'},
     '_source': SRC, '_toggle_legend': True,
     'width': 'container', 'height': 200,
     'data': {'values': druh_vals},
@@ -420,11 +429,11 @@ Ypy = {'field': 'rok', 'type': 'ordinal', 'title': None, 'sort': ALL_YEARS[::-1]
 Xpy = {'type': 'quantitative', 'title': None, 'scale': {'domain': DOM},
        'axis': {'gridColor': '#e8e3d2', 'values': [-20, 0, 20, 40, 60, 80], 'labelExpr': 'abs(datum.value)',
                 'domain': False, 'ticks': False, 'orient': 'top'}}
-H_Z = 31 * 17
-prez_zacatky = [{'rok': '2002', 'p': 'Havel'}, {'rok': '2012', 'p': 'Klaus'}, {'rok': '2022', 'p': 'Zeman'}, {'rok': '2025', 'p': 'Pavel'}]
+H_Z = 32 * 17
+prez_zacatky = [{'rok': '2002', 'p': 'Havel'}, {'rok': '2012', 'p': 'Klaus'}, {'rok': '2022', 'p': 'Zeman'}, {'rok': '2026', 'p': 'Pavel'}]
 hranice_py = [{'rok': '2002'}, {'rok': '2012'}, {'rok': '2022'}]
 save('graf_zeny.json', {
-    'title': {'text': f'Vyznamenání dostávají hlavně {{muži|{MUZ_AMETYST}}}. Za Pavla je {{žen|{ZENA_TEAL}}} víc, zhruba čtvrtina',
+    'title': {'text': f'Vyznamenání dostávají hlavně {{muži|{MUZ_AMETYST}}}. Za Pavla je {{žen|{ZENA_TEAL}}} víc, přes čtvrtinu',
               'subtitle': 'Počet vyznamenání v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. '
                           'Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
@@ -598,7 +607,7 @@ for r in obor_rows:
     r['jména'] = jmena(r.pop('_lide'))
 save('graf_obory.json', piktogramy(
     R, obor_order, 'Klaus vyznamenával politické vězně, Zeman podnikatele',
-    'Za co prezident vyznamenával: podíl oblasti na všech jeho vyznamenáních 1995–2025, tyrkysově ženy vlevo, fialově muži vpravo. '
+    'Za co prezident vyznamenával: podíl oblasti na všech jeho vyznamenáních 1995–2026, tyrkysově ženy vlevo, fialově muži vpravo. '
     'Oblast určila redakce podle životopisu vyznamenaného. Kliknutím na řádek zobrazíte jména.', 'Vyznamenání'))
 # řády podle oborů – jména v panelu po kliknutí
 def obdobi(r):
@@ -621,7 +630,7 @@ rad_order = [OBORY[o] for o, _ in Counter(r['obor'] for r in RADY).most_common()
 PREZ_SCALE = {'domain': [PREZ_LABEL[p] for p in PREZ], 'range': [PREZ_COLOR[p] for p in PREZ]}
 save('graf_rady.json', piktogramy(
     RADY, rad_order, 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
-    'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka: podíl ze všech jeho řádů 1995–2025, '
+    'Za co prezident udělil Řád Bílého lva nebo Řád T. G. Masaryka: podíl ze všech jeho řádů 1995–2026, '
     'tyrkysově ženy vlevo, fialově muži vpravo. Kliknutím na řádek zobrazíte jména.', 'Řádů', dlazdic=8))
 
 # varianta: počty řádů podle funkčních období (sloupce, 1. a 2. období přes sebe)
@@ -657,7 +666,7 @@ save('graf_rady_obdobi.json', {
     '_click_detail': {'field': 'jména', 'title': ['prezident', 'období', 'obor'],
                       'rows': [{'field': 'počet', 'label': 'Řádů'}]},
     'title': {'text': 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
-              'subtitle': 'Počet řádů Bílého lva a T. G. Masaryka podle oblasti a funkčního období, 1995–2025. '
+              'subtitle': 'Počet řádů Bílého lva a T. G. Masaryka podle oblasti a funkčního období, 1995–2026. '
                           'Plná barva = první funkční období, světlejší = druhé. Pavlovi běží první období.'},
     '_source': SRC, '_toggle_legend': True,
     'width': 'container', 'height': 300,
@@ -702,7 +711,7 @@ tt_druhy = [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'druh', 'tit
             {'field': 'podíl_žen', 'title': 'Podíl žen', 'format': '.0%'}, {'field': 'nápověda', 'title': 'Seznam jmen'}]
 save('graf_druhy_zm.json', {
     'title': {'text': f'Nejvyšší vyznamenání dostávají skoro jen {{muži|{MUZ_AMETYST}}}, {{ženy|{ZENA_TEAL}}} hlavně medaili Za zásluhy',
-              'subtitle': 'Počet vyznamenání podle druhu a prezidenta, 1995–2025: tyrkysově ženy vlevo, fialově muži vpravo. '
+              'subtitle': 'Počet vyznamenání podle druhu a prezidenta, 1995–2026: tyrkysově ženy vlevo, fialově muži vpravo. '
                           'Každá dlaždice má vlastní měřítko. Kliknutím na řádek zobrazíte jména.'},
     '_source': SRC,
     '_click_detail': {'field': 'jména', 'key': 'key', 'items': druhy_items, 'title': ['prezident', 'druh'],

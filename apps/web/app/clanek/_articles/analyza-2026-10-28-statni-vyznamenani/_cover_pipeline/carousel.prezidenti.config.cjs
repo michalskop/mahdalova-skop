@@ -16,7 +16,7 @@ const ZDROJ = 'Zdroj: seznamy vyznamenaných, Kancelář prezidenta republiky; v
 
 // počty podle prezidentů a ročníků (vystup.txt: Havel 547 / 8 ročníků, Klaus 229 / 10, Zeman 420 / 10, Pavel 174 / 3)
 const CELKEM = Object.fromEntries(PORADI.map((p) => [p, zaznamy.filter((z) => z[2] === p).length]));
-const OCEKAVANO = { Havel: 547, Klaus: 229, Zeman: 420, Pavel: 174 };
+const OCEKAVANO = { Havel: 547, Klaus: 229, Zeman: 420, Pavel: 228 }; // Pavel vč. 28. 10. 2026
 for (const p of PORADI) if (CELKEM[p] !== OCEKAVANO[p]) throw new Error(`${p}: ${CELKEM[p]} nesedí s článkem`);
 
 // --- slide 3: po letech, barva podle prezidenta ---
@@ -59,6 +59,9 @@ module.exports = {
       { kruh: 5, poznamka: 'nejvíc za Klause' }),
     prezSlide('Zeman', 'Miloš Zeman začínal na 30 vyznamenáních ročně a skončil na 78', 'Poslední medaili udělil k 1. lednu 2023, in memoriam hasiči Janu Dvořákovi.', { 2023: '2023|1. 1.' },
       { kruh: 9, poznamka: 'nejvíc od roku 2002' }),
+    // Kateřina 29. 10.: po předání 28. 10. 2026 přidán slide Pavla
+    prezSlide('Pavel', 'Petr Pavel dává zhruba 50 až 65 vyznamenání ročně', 'Vyznamenání v ročníku. 28. října 2026 jich udělil 51, další tři při státních návštěvách.', {},
+      { kruh: 3, poznamka: 'letos' }),
     {
       titulek: 'Kontroverze přibývaly se Zemanem',
       pod: 'Výběr sporů kolem státních vyznamenání',

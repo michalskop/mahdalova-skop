@@ -14,7 +14,7 @@ const PREZ = [ // barvy prezidentů na tmavém pozadí (světlejší odstíny t�
   ['Havel', 'Václav Havel', '#697fe6', 2002], // brandRoyalBlue.4
   ['Klaus', 'Václav Klaus', '#ff4970', 2012], // brand.3
   ['Zeman', 'Miloš Zeman', '#f8f6f0', 2022], // background.2 – světlá béžová jako bílý pruh stuhy: Havel, Zeman, Klaus = trikolóra (Kateřina 28. 10. 2026)
-  ['Pavel', 'Petr Pavel', '#1a9fbd', 2025], // brandTeal.5
+  ['Pavel', 'Petr Pavel', '#1a9fbd', 2026], // brandTeal.5
 ];
 // VARIANTA=prezidenti obarví tečky podle prezidenta místo podle pohlaví
 const PODLE_PREZIDENTU = process.env.VARIANTA === 'prezidenti';
@@ -86,7 +86,7 @@ function medaile(klic, barva = barvaPodleDat, navic = null) {
   }
   if (PODLE_PREZIDENTU && POZNAMKA[klic]) {
     const [px, py, ps] = POZNAMKA[klic];
-    nad += `<text x="${px}" y="${py}" text-anchor="end" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="500" font-size="${ps}" fill="#f8f6f0">1 tečka = 1 vyznamenání 1995–2025</text>`;
+    nad += `<text x="${px}" y="${py}" text-anchor="end" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="500" font-size="${ps}" fill="#f8f6f0">1 tečka = 1 vyznamenání 1995–2026</text>`;
   }
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${F.W}" height="${F.H}" viewBox="0 0 ${F.W} ${F.H}">${svg}${nad}</svg>`;
 }

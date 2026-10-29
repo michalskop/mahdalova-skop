@@ -37,9 +37,10 @@ function pruhy(radky, { y0 = 640, vyska = 70, mezera = 62, max = 1, x0 = 70, x1 
   return s;
 }
 
-// Sloupce po letech 1995–2025. hodnoty(rok) → [{ n, barva }] skládané odspodu; popisy = { rok: text nad sloupcem }
+// Sloupce po letech 1995 až poslední ročník v datech. hodnoty(rok) → [{ n, barva }] skládané odspodu; popisy = { rok: text nad sloupcem }
 function sloupceRoky(hodnoty, { y0 = 640, y1 = 1150, max = 110, popisy = {}, mrizka = [25, 50, 75, 100] } = {}) {
-  const roky = Array.from({ length: 31 }, (_, i) => 1995 + i);
+  const posledni = Math.max(...zaznamy.map((z) => +z[0]));
+  const roky = Array.from({ length: posledni - 1994 }, (_, i) => 1995 + i);
   const x0 = 120, x1 = 1010, krok = (x1 - x0) / roky.length, sirka = krok * 0.74;
   const y = (v) => y1 - (v / max) * (y1 - y0);
   let s = '';
