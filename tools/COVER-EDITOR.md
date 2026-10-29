@@ -56,6 +56,26 @@ všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách
 **Štítek coveru:** verzálky Plex Sans s prostrkáním, první část karmínově (#de1743) s podtržením končícím v půlce
 posledního písmene, pak „•“ a zbytek bíle (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026); vpravo zarovnaný zrcadlově.
 
+## Názvy částí coveru (společný slovník)
+
+Ať si rozumíme, každá část má jedno jméno. V závorce klíč v `cover.config.cjs` a běžný anglický termín.
+
+| Část | Co to je | Příklad |
+| --- | --- | --- |
+| **štítek** (`kicker`; kicker, eyebrow) | verzálky nad titulkem, karmínová část podtržená, pak „•“ a téma | ANALÝZA • REFERENDA O VĚTRNÍCÍCH |
+| **nadtitulek** (`nad`; overline) | volitelný krátký řádek mezi štítkem a titulkem | Po 45 minutách bylo jasno |
+| **titulek** (`titulek`, ve frontmatteru `coverTitulek`; headline) | hlavní sdělení, Plex Serif Bold, největší písmo | Větrníky odmítlo 20 z 21 obcí |
+| **podtitulek** (`pod`, `coverPodtitulek`; subtitle, dek, standfirst) | jedna dvě věty pod titulkem, dovětek nebo upřesnění | Jen Dětřichov na Svitavsku řekl v referendu ano, o osm hlasů |
+| **motiv** (`motiv`; key visual) | obraz, který nese sdělení: mapa, tečkový disk, graf, fotka | tečková mapa s větrníky |
+| **legenda** (`legenda`; legend, key) | vysvětlení barev a značek motivu | Obec větrníky: ● odmítla ● podpořila |
+| **popisek** (`popisek` u bodu; label, annotation) | nápis přímo u místa v motivu | Dětřichov |
+| **logo** | kolečko a nápis DataTimes.cz | |
+| **štítek rubriky** | karmínový oválek, který web dokresluje do karty vpravo nahoře (v obrázku není) | Analýza |
+| **claim** | jen v ručním editoru (`poster-editor.html`): krátké tvrzení nebo velké číslo u motivu, ne titulek | „3× víc“ |
+
+Celý blok nahoře (štítek, nadtitulek, titulek, podtitulek) je **textový blok**; u speciálu Data pro budoucí
+premiérku nad ním stojí ještě **hlavička** (logo speciálu s názvem a štítek ANALÝZA / 01 DEMOGRAFIE).
+
 ## Kompozice podle formátu (od 29. 10. 2026)
 
 Shrnutí všeho, co jsme se na coverech naučili. Každý formát je **samostatné rozvržení téhož sdělení**, ne výřez
@@ -88,6 +108,17 @@ ani zmenšenina jedné šablony. Kompozice se řídí motivem konkrétního čl�
    (větrníky, Kateřina 29. 10.). Prázdný pás nemá vzniknout ani pod titulkem, ani pod motivem.
 9. **Podkladová tečková mapa musí být vidět.** Tečky republiky aspoň brandNavy.7 `#4c4f8e`, ne o odstín tmavší
    brandNavy.8 (republika se ztrácela v pozadí).
+10. **Mezera mezi titulkem a podtitulkem je zřetelná**, asi 0,4 výšky písma titulku (u Demografie bylo 0,22 a
+   podtitulek se lepil). Dlouhý titulek (přes 50 znaků) o něco menším písmem (asi 92 %) a s volnějším řádkováním
+   (asi 1,17), ať nepůsobí jako hutný blok.
+11. **Graf v coveru je kompaktní.** Graf zabere jen místo, které jeho data potřebují, a blok grafu se usadí
+   do volné plochy s vyváženou mezerou nad i pod ním. Nikdy ho mechanicky neroztahovat přes celou výšku ani
+   nezmenšovat celý obrázek grafu: řádky (pruhy, hantle) k sobě, legenda vedle sebe v jednom řádku nad grafem,
+   hodnoty vně značek, graf přes celou šířku textového bloku. Spojnicový graf zjednodušit na to, co nese sdělení:
+   jen výchozí, zlomový a poslední bod popsat, málo nebo žádné mřížky, poměr stran podle volné plochy, ne podle
+   grafu v článku. Když ani tak kompaktní není, zvolit jiný tvar téhož sdělení (hantle, dva sloupce, tečky).
+   Ponaučení z coverů Demografie (Data pro budoucí premiérku, 28.–29. 10. 2026), viz
+   `specialy/data-pro-budouci-premierku/_cover_pipeline/covery.cjs`.
 
 ### Legenda
 
