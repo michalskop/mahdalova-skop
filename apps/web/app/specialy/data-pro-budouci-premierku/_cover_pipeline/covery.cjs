@@ -177,6 +177,27 @@ const MOTIVY = {
     });
     return svgWrap(w, h, s);
   },
+  // 19: dětí na jednu ženu (1,37) a na jednoho muže (1,23; ČSÚ 2024, vlastní výpočet) vs. 2,1 k obnově; 1 kolečko = 1 dítě
+  kolecka(w, h, spec) {
+    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, N = 3, mez = f * 1.0, lg = f * 1.9;
+    const nR = spec.rady.length, rh = Math.min((h - lg - mez) / nR, f * 3.8), d = rh * 0.86;
+    const eduW = f * 10.2, valW = f * 3.6, g = Math.min((w - eduW - N * d - valW) / 2, f * 4);
+    const xD = eduW + g, xV = xD + N * d + g * 0.5;
+    const tot = nR * rh + mez + lg, y0 = Math.max(0, (h - tot) / 2);
+    let s = '', id = 0;
+    spec.rady.forEach((r, i) => {
+      const cy = y0 + rh * (i + 0.5) + (i === nR - 1 ? mez : 0);
+      s += T(0, cy + fz * 0.35, r.n, 'start', BILA, fz, 600);
+      for (let k = 0; k < N; k++) {
+        const cx = xD + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
+        s += C(cx, cy, d * 0.42, 'none', ` stroke="${r.obrys ? BILA : SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity="${r.obrys ? 0.8 : 0.6}"`);
+        if (podil > 0 && !r.obrys) { const cid = 'kc' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.42}" y="${cy - d * 0.42}" width="${d * 0.84 * podil}" height="${d * 0.84}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.42, TYRK)}</g>`; }
+      }
+      s += T(xV, cy + fz * 0.35, r.v.toFixed(2).replace('.', ','), 'start', r.obrys ? BILA : TYRK, fz, 700);
+    });
+    s += T(0, y0 + nR * rh + mez + f * 1.5, spec.pozn, 'start', BILA, f * 0.9, 500).replace('<text ', '<text fill-opacity=".8" ');
+    return svgWrap(w, h, s);
+  },
   // 12: plodnost 2023: Švédsko 1,45, Maďarsko ≈1,57, Francie ≈1,72, Kanada 1,4–1,5; hranice obnovy 2,1
   zebrik(w, h) {
     const f = fsOf(w), L = f * 8.5, R = f * 1.5, x = (v) => L + ((v - 1.0) / 1.1) * (w - L - R), lane = h / 4.9;
@@ -218,6 +239,8 @@ const DEF = {
       { nazev: '30–34 let', rady: [{ n: 's maturitou', v: 1.1, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 0.89, barva: CRIMSON }] }] } },
   '12-mezinarodni-srovnani': { motiv: 'hantle', titulek: 'Čtyři různé politiky, podobný pokles plodnosti', pod: 'Švédsko, Francie, Maďarsko i Kanada ztratily v letech 2021–2024 asi 0,2 dítěte na ženu, Česko 0,47',
     spec: { min: 1.1, max: 2.0, hlavicka: ['rok 2021', 'rok 2024'], rady: [{ n: 'Švédsko', a: 1.67, b: 1.43 }, { n: 'Francie', a: 1.83, b: 1.61, barva: '#899aeb' }, { n: 'Maďarsko', a: 1.63, b: 1.41, barva: '#ffcf02' }, { n: 'Kanada', a: 1.44, b: 1.25, barva: '#4fd6b4' }] } },
+  '19-plodnost-muzu': { rubrika: 'Explainer', motiv: 'kolecka', posun: { homepage: 0.05, square: 0.04, og: 0.04, instagram: 0.02, story: 0.012 }, titulek: 'Plodnost mužů se dá spočítat, vychází o 10 až 17 % níž než u žen', pod: 'V roce 2024 vychází na jednoho muže 1,14 až 1,23 dítěte, na jednu ženu 1,37',
+    spec: { pozn: '1 kolečko = 1 dítě, rok 2024', rady: [{ n: 'na jednu ženu', v: 1.37 }, { n: 'na jednoho muže', v: 1.23 }, { n: 'k obnově populace', v: 2.1, obrys: true }] } },
   '08-politicke-sliby': { motiv: 'bloky', titulek: 'Jesle a školky má v Česku 8 % dětí do tří let', pod: 'V Evropské unii je to 40,6 %, dostupná péče o děti patří k nejúčinnějším opatřením' },
 };
 
