@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/images/cover-homepage.png",
+      "otisk": "d96ef2efbaba7e49",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/cover.config.cjs": "2fc7cee89bb7d55f",
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/motiv-homepage.svg": "9fcf421489f80a39"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/images/cover-og.jpg",
+      "otisk": "9d36e3c124275328",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/cover.config.cjs": "2fc7cee89bb7d55f",
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/motiv-og.svg": "8aa167fb4855cb86"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/images/cover-square.png",
+      "otisk": "583f8ffae59d8450",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/cover.config.cjs": "2fc7cee89bb7d55f",
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/motiv-square.svg": "1feb6e25d36c0426"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/images/cover-instagram.png",
+      "otisk": "3ea6eb2650cc9db2",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/cover.config.cjs": "2fc7cee89bb7d55f",
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/motiv-instagram.svg": "0fb9bb53dfd88e54"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/images/cover-story.png",
+      "otisk": "91c8bc2b1c396944",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/cover.config.cjs": "2fc7cee89bb7d55f",
+        "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/motiv-story.svg": "3c52d3b8b1860a8e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T09:23:06.562Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/index.md",
+  "titulekClanku": "Volby v Izraeli: Netanjahu většinu nezíská, ukazuje predikce",
+  "texty": {
+    "stitek": "Predikce • Volby v Izraeli",
+    "nadtitulek": "",
+    "titulek": "Netanjahu většinu nezíská",
+    "podtitulek": "Podle predikce chybí jeho bloku k většině v Knesetu osm mandátů"
+  }
+}

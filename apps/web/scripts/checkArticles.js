@@ -170,6 +170,25 @@ const slugs = args.length && !staged
       });
 
 slugs.forEach(checkArticle);
+
+// YAML soubory, na které článek odkazuje (yamlFile="…", např. key-stats.yaml pro <KeyNumbers>), musí jít načíst –
+// rozbitý YAML shodí stránku článku („Article Not Found“). Platí pro všechny články bez ohledu na datum, protože
+// rozbít ho může i úprava starého článku (29. 10. 2026: dvojtečka s mezerou v neuzavřeném popisku).
+const yamlSlugs = args.length && !staged ? args : candidates;
+for (const slug of yamlSlugs) {
+  const f = path.join(articlesDir, slug, 'index.md');
+  if (!fs.existsSync(f)) continue;
+  for (const [, soubor] of fs.readFileSync(f, 'utf8').matchAll(/yamlFile="([^"]+)"/g)) {
+    const p = path.join(articlesDir, slug, soubor);
+    if (!fs.existsSync(p)) { err(slug, `yamlFile="${soubor}" neexistuje`); continue; }
+    try {
+      require('js-yaml').load(fs.readFileSync(p, 'utf8'));
+    } catch (e) {
+      err(slug, `${soubor} nejde načíst: ${String(e.message).split('\n')[0]} (text s „: “ dej do uvozovek)`);
+    }
+  }
+}
+
 for (const w of warnings) console.warn(`⚠ ${w}`);
 if (errors.length) {
   console.error(`\nKontrola článků podle redakčního manuálu (docs/redakcni-styl/REDAKCNI_MANUAL.md) neprošla:\n`);

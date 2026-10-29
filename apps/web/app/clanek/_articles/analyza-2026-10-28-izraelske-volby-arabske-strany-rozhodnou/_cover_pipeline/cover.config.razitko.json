@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/images/cover-homepage.png",
+      "otisk": "478006908e8a3f8b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs": "a6273980f4b5ae17",
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-homepage.svg": "735433c4ce793a5b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/images/cover-og.jpg",
+      "otisk": "16077589c30a5c36",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs": "a6273980f4b5ae17",
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-og.svg": "655ac9bfc7c6925c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/images/cover-square.png",
+      "otisk": "653643ef5e9ba181",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs": "a6273980f4b5ae17",
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-square.svg": "361419914d96cdce"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/images/cover-instagram.png",
+      "otisk": "32fc8cf6a5c0b6fb",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs": "a6273980f4b5ae17",
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-instagram.svg": "5b778736847fa04a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/images/cover-story.png",
+      "otisk": "25d36573fb6616bd",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs": "a6273980f4b5ae17",
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-story.svg": "ca8bd349815f629b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T09:23:26.846Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/index.md",
+  "titulekClanku": "Bez arabských stran nemá v Knesetu většinu Netanjahu ani Eisenkot",
+  "texty": {
+    "stitek": "Analýza • Volby v Izraeli",
+    "nadtitulek": "",
+    "titulek": "Nikdo nesestaví většinu bez arabských stran",
+    "podtitulek": "V arabských obcích přišlo k urnám 80 % voličů, před čtyřmi lety 53 %"
+  }
+}

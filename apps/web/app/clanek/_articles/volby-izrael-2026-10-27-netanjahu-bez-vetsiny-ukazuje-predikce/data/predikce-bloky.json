@@ -1,0 +1,5653 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "width": "container",
+ "height": 300,
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "y": 61
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeDash": [
+     4,
+     3
+    ],
+    "color": "#101432",
+    "opacity": 0.6
+   },
+   "encoding": {
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       66
+      ]
+     }
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 61,
+      "x": 1,
+      "t": "většina 61"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -4,
+    "fontSize": 12,
+    "color": "#101432"
+   },
+   "encoding": {
+    "y": {
+     "field": "y",
+     "type": "quantitative"
+    },
+    "x": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:24",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:24",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:24",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:43",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:43",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:43",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:05",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:05",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:05",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:07",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:07",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:07",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:09",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:09",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:09",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:35",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:35",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:35",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:48",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:49",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:02",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:04",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:14",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:14",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:14",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:25",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:25",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:25",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 01:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 01:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 01:39",
+      "blok": "arabské strany",
+      "mandaty": 15,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:25",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:25",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:25",
+      "blok": "arabské strany",
+      "mandaty": 15,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:28",
+      "blok": "arabské strany",
+      "mandaty": 15,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:29",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:30",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 18.85,
+      "cas": "28. 10. 02:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 18.85,
+      "cas": "28. 10. 02:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 18.85,
+      "cas": "28. 10. 02:46",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:04",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:29",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:31",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:31",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:31",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 03:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 03:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 03:49",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:05",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:05",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:05",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:06",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:06",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:06",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:14",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:14",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:14",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:45",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:45",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:45",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:46",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:48",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 04:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 04:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 04:58",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:06",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:06",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:06",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:13",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:13",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:13",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:23",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:23",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:23",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:26",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:26",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:26",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:29",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:30",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:34",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:34",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:34",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:39",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:40",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:40",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:40",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:41",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:41",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:41",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:28",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:43",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:43",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:43",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:44",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:44",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:44",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:45",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:45",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:45",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:51",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:51",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:51",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:53",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:53",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:53",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:58",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 06:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 06:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 06:59",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:18",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:18",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:18",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 08:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 08:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 08:17",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 09:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 09:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 09:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 72.061,
+      "cas": "28. 10. 09:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 72.061,
+      "cas": "28. 10. 09:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 72.061,
+      "cas": "28. 10. 09:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 09:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 09:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 09:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:12",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:12",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:12",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:14",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:14",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:14",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:15",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:15",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:15",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:30",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:31",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:31",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:31",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:32",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:32",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:32",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:55",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:55",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:55",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:34",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:34",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:34",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:40",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:40",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:40",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:46",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:55",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:55",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:55",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:32",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:32",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:32",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:33",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:33",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:33",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 13:34",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 13:34",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 13:34",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:41",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:41",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:41",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:42",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:42",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:42",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:45",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:45",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:45",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:04",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:39",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 17:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 17:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 17:28",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 18:12",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 18:12",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 18:12",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:23",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:23",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:23",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 21:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 21:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 21:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:35",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:35",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:35",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:49",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:50",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:50",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:50",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:35",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:35",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:35",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:36",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:36",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:36",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:38",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:38",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:38",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:39",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.409,
+      "cas": "28. 10. 22:40",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.409,
+      "cas": "28. 10. 22:40",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.409,
+      "cas": "28. 10. 22:40",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "28. 10. 23:56",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "28. 10. 23:56",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "28. 10. 23:56",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "29. 10. 00:27",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "29. 10. 00:27",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "29. 10. 00:27",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.797,
+      "cas": "29. 10. 00:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.797,
+      "cas": "29. 10. 00:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.797,
+      "cas": "29. 10. 00:28",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:01",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:01",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:01",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:16",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:16",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:16",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:17",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:19",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:50",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:50",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:50",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 03:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 03:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 03:04",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:29",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:32",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:32",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:32",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:00",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:00",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:00",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:01",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:01",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:01",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.472,
+      "cas": "29. 10. 05:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.472,
+      "cas": "29. 10. 05:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.472,
+      "cas": "29. 10. 05:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 05:57",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 05:57",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 05:57",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:46",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:48",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:49",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:50",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:50",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:50",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:55",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:55",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:55",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:57",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:57",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:57",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     }
+    ]
+   },
+   "mark": {
+    "type": "line",
+    "interpolate": "step-after",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "secteno",
+     "type": "quantitative",
+     "title": "sečteno hlasů (%)",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       0,
+       25,
+       50,
+       75,
+       100
+      ],
+      "grid": false,
+      "domain": false,
+      "tickSize": 4,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 400
+     }
+    },
+    "y": {
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       66
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       61
+      ],
+      "grid": true,
+      "gridColor": "#e6e4dc",
+      "domain": false,
+      "ticks": false,
+      "labelFontSize": 12
+     },
+     "field": "mandaty"
+    },
+    "detail": {
+     "field": "blok"
+    },
+    "color": {
+     "field": "barva",
+     "type": "nominal",
+     "scale": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:24",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:24",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:24",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:43",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:43",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.048,
+      "cas": "27. 10. 23:43",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:05",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:05",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:05",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:07",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:07",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:07",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:09",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:09",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.27,
+      "cas": "28. 10. 00:09",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:35",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:35",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:35",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:48",
+      "blok": "arabské strany",
+      "mandaty": 13,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 00:49",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:02",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 58,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 0.572,
+      "cas": "28. 10. 01:04",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:14",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:14",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:14",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:25",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:25",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 1.921,
+      "cas": "28. 10. 01:25",
+      "blok": "arabské strany",
+      "mandaty": 14,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 01:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 01:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 01:39",
+      "blok": "arabské strany",
+      "mandaty": 15,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:25",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:25",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:25",
+      "blok": "arabské strany",
+      "mandaty": 15,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 57,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 6.502,
+      "cas": "28. 10. 02:28",
+      "blok": "arabské strany",
+      "mandaty": 15,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:29",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 12.607,
+      "cas": "28. 10. 02:30",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 18.85,
+      "cas": "28. 10. 02:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 18.85,
+      "cas": "28. 10. 02:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 18.85,
+      "cas": "28. 10. 02:46",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:04",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:29",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 55,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:30",
+      "blok": "arabské strany",
+      "mandaty": 16,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:31",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:31",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 23.885,
+      "cas": "28. 10. 03:31",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 03:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 03:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 03:49",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:05",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:05",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:05",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:06",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:06",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 31.337,
+      "cas": "28. 10. 04:06",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:14",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:14",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:14",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:45",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:45",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:45",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:46",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 34.473,
+      "cas": "28. 10. 04:48",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 04:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 04:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 04:58",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:06",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:06",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:06",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:13",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:13",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:13",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:23",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:23",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:23",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:26",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:26",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:26",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:29",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:30",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:34",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:34",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:34",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:39",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:40",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:40",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:40",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:41",
+      "blok": "Netanjahuův blok",
+      "mandaty": 54,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:41",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 41.018,
+      "cas": "28. 10. 05:41",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:28",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:43",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:43",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 53.108,
+      "cas": "28. 10. 06:43",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:44",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:44",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:44",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:45",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:45",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:45",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:51",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:51",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:51",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:53",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:53",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:53",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 54.855,
+      "cas": "28. 10. 06:58",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 06:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 06:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 06:59",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:17",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:18",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:18",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:18",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 49,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 56.749,
+      "cas": "28. 10. 07:19",
+      "blok": "arabské strany",
+      "mandaty": 18,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 08:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 08:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 08:17",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 09:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 09:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 65.836,
+      "cas": "28. 10. 09:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 72.061,
+      "cas": "28. 10. 09:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 72.061,
+      "cas": "28. 10. 09:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 72.061,
+      "cas": "28. 10. 09:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 09:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 09:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 09:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:12",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:12",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:12",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:14",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:14",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:14",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:15",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:15",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:15",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:30",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:30",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:30",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:31",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:31",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:31",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:32",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:32",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:32",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:55",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:55",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 76.59,
+      "cas": "28. 10. 10:55",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:34",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:34",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:34",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:40",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:40",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:40",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 11:46",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:55",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:55",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 12:55",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:32",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:32",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:32",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:33",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:33",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 84.39,
+      "cas": "28. 10. 13:33",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 13:34",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 13:34",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 13:34",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:41",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:41",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:41",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:42",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:42",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:42",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:45",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:45",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 14:45",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:04",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 16:39",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 17:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 17:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 17:28",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 18:12",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 18:12",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 92.755,
+      "cas": "28. 10. 18:12",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:19",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:23",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:23",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 20:23",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 21:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 21:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 95.951,
+      "cas": "28. 10. 21:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:35",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:35",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:35",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:48",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:49",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:50",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:50",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 21:50",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:35",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:35",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:35",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:36",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:36",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:36",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:38",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:38",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:38",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:39",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:39",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.192,
+      "cas": "28. 10. 22:39",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.409,
+      "cas": "28. 10. 22:40",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.409,
+      "cas": "28. 10. 22:40",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.409,
+      "cas": "28. 10. 22:40",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "28. 10. 23:56",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "28. 10. 23:56",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "28. 10. 23:56",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "29. 10. 00:27",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "29. 10. 00:27",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.573,
+      "cas": "29. 10. 00:27",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.797,
+      "cas": "29. 10. 00:28",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.797,
+      "cas": "29. 10. 00:28",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.797,
+      "cas": "29. 10. 00:28",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:01",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:01",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:01",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:16",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:16",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:16",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:17",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:17",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:17",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:19",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:19",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:19",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:50",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:50",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 01:50",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 03:04",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 03:04",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 03:04",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:29",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:29",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:29",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:32",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:32",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:32",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 04:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:00",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:00",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:00",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:01",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:01",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 97.972,
+      "cas": "29. 10. 05:01",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.472,
+      "cas": "29. 10. 05:02",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.472,
+      "cas": "29. 10. 05:02",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.472,
+      "cas": "29. 10. 05:02",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 05:57",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 05:57",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 05:57",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:46",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:46",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:46",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:48",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:48",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:48",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:49",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:49",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:49",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:50",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:50",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.633,
+      "cas": "29. 10. 06:50",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:53",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:54",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:55",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:55",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:55",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:56",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:57",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:57",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:57",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:58",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:59",
+      "blok": "Netanjahuův blok",
+      "mandaty": 53,
+      "barva": "#5e66d5"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:59",
+      "blok": "Eisenkotova opozice",
+      "mandaty": 48,
+      "barva": "#0e839e"
+     },
+     {
+      "secteno": 98.703,
+      "cas": "29. 10. 06:59",
+      "blok": "arabské strany",
+      "mandaty": 19,
+      "barva": "#507e08"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "opacity": 0,
+    "size": 80
+   },
+   "encoding": {
+    "x": {
+     "field": "secteno",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "mandaty",
+     "type": "quantitative"
+    },
+    "tooltip": [
+     {
+      "field": "cas",
+      "title": "Čas (SEČ)"
+     },
+     {
+      "field": "secteno",
+      "title": "Sečteno %",
+      "format": ".1f"
+     },
+     {
+      "field": "blok",
+      "title": "Blok"
+     },
+     {
+      "field": "mandaty",
+      "title": "Mandáty"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "secteno": 98.703,
+      "mandaty": 53,
+      "barva": "#5e66d5",
+      "t": "Netanjahuův blok 53",
+      "pod": false
+     },
+     {
+      "secteno": 98.703,
+      "mandaty": 19,
+      "barva": "#507e08",
+      "t": "arabské strany 19",
+      "pod": false
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "bottom",
+    "dy": -5,
+    "fontSize": 12.5,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "field": "secteno",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "mandaty",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    },
+    "color": {
+     "field": "barva",
+     "type": "nominal",
+     "scale": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "secteno": 98.703,
+      "mandaty": 48,
+      "barva": "#0e839e",
+      "t": "Eisenkotova opozice 48",
+      "pod": true
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "top",
+    "dy": 6,
+    "fontSize": 12.5,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "field": "secteno",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "mandaty",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    },
+    "color": {
+     "field": "barva",
+     "type": "nominal",
+     "scale": null
+    }
+   }
+  }
+ ],
+ "title": {
+  "text": "Predikce ani jednou nedala většinu žádnému bloku, {arabské strany|#507e08} ale zpočátku podcenila",
+  "subtitle": "Odhad konečného počtu mandátů podle predikce DataTimes.cz během sčítání; většina ve 120členném Knesetu je 61 mandátů"
+ },
+ "_source": "Predikce DataTimes.cz (Mahdalová & Škop) z průběžných výsledků [Ústřední volební komise](https://votes26.bechirot.gov.il/), 128 přepočtů 27.–29. 10. 2026",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

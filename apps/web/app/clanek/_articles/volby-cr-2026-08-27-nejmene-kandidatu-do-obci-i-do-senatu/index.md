@@ -15,7 +15,13 @@ promoted: 1
 
 Na kandidátky obecních zastupitelstev se letos zapsalo 190 174 lidí, nejméně od roku 2002. Do Senátu kandiduje 154 lidí, nejméně od roku 2000. Obě volby se navíc konají ve stejný víkend, 9. a 10. října ([Přehled termínů a lhůt pro volby do Senátu 2026](https://mv.gov.cz/volby/soubor/prehled-terminu-a-lhut-pro-volby-do-senatu-2026.aspx)). Prošli jsme registry kandidátů z otevřených dat [volby.gov.cz](https://volby.gov.cz) od začátku obou typů voleb a podívali se, jak se v čase mění, kdo kandiduje.
 
-<KeyNumbers yamlFile="key-stats.yaml" />
+```infobox info
+**Ve zkratce**
+
+- Do obecních zastupitelstev kandiduje 190 174 lidí, nejméně od roku 2002, kdy začínají srovnatelná data. Nejvíc jich bylo v roce 2014, 233 877.
+- Do Senátu kandiduje 154 lidí, nejméně od roku 2000. Méně jich bylo jen v roce 1998, při teprve druhých volbách v historii Senátu.
+- Senátoři a senátorky se volí pravidelně od roku 1996, obvykle po třetinách jednou za dva roky. Letos je to šestnáctá řádná volba.
+```
 
 ## Komunální volby: nejméně kandidátů od roku 2002
 
@@ -30,6 +36,8 @@ Počítáme kandidáty z hlavního termínu voleb každého ročníku (např. 20
 Pokles se ale netýká všech obcí stejně: čím větší obec, tím víc kandidátů od roku 2014 ztratila. U obcí nad 50 tisíc obyvatel je propad 27 procent, u vesnic do 300 obyvatel 6 procenta.
 
 Stejně jako v Senátu jde pokles vysledovat i ke konkrétním stranám. Nominující strana je v datech jeden název napříč celou zemí bez ohledu na obec, takže se dá sečíst přes všech 6 394 obcí a městských částí.
+
+<SupportBanner />
 
 <ChartRow cols={5} title="Zavedené strany ztratily od roku 2014 dvě třetiny komunálních kandidátů" subtitle="Počet kandidátů nominovaných danou stranou v hlavním termínu komunálních voleb, 2002–2026. Nahoře současná vládní koalice a dvě strany, které se propadly nejvíc; dole současná opozice." source="volby.gov.cz – registry kandidátů KV2002–KV2026, hlavní den voleb">
 <VegaChart dataFile="data/muni_strany_ano.json" />
