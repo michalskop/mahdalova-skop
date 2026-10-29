@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/images/cover-homepage.png",
+      "otisk": "04fc7667342c4893",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/cover.config.cjs": "6878fc5e72cea23c",
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/motiv-homepage.svg": "ebda9eeb70243e38"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/images/cover-og.jpg",
+      "otisk": "395c28403412e948",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/cover.config.cjs": "6878fc5e72cea23c",
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/motiv-square.svg": "9c15992ec57c8445"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/images/cover-square.png",
+      "otisk": "bdf7c2a131d8abd4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/cover.config.cjs": "6878fc5e72cea23c",
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/motiv-square.svg": "9c15992ec57c8445"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/images/cover-instagram.png",
+      "otisk": "8a6b2f41c03abbe8",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/cover.config.cjs": "6878fc5e72cea23c",
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/motiv-instagram.svg": "147f265f3468940f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/images/cover-story.png",
+      "otisk": "57d9f7c5573af449",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/cover.config.cjs": "6878fc5e72cea23c",
+        "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/motiv-story.svg": "2c904a5f138c46b8"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T07:25:39.611Z",
+  "clanek": "apps/web/app/clanek/_articles/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/index.md",
+  "titulekClanku": "Počet obyvatel genocidu neměří. Proč neobstojí graf, podle kterého v Gaze o genocidu nejde",
+  "texty": {
+    "stitek": "Explainer • Genocida a čísla",
+    "nadtitulek": "",
+    "titulek": "Počet obyvatel genocidu neměří",
+    "podtitulek": "Genocidu Jezídů ani Rohingů křivka obyvatel neukáže"
+  }
+}
