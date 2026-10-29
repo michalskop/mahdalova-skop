@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Proč vyhrál Lula: ve druhém kole přišly k volbám tři miliony lidí navíc](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-26-proc-vyhral-lula)
-- [Prezidentské volby v Brazílii: Druhé kolo vyhrává Lula, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula)
+- [Bez arabských stran nemá v izraelském parlamentu většinu Netanjahu ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou)
+- [Volby v Izraeli: Netanjahu většinu nezíská, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -32,8 +32,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Mezinárodní politika
 - [Počet obyvatel genocidu neměří. Proč neobstojí graf, podle kterého v Gaze o genocidu nejde](https://www.mahdalova-skop.cz/clanek/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri)
+- [Bez arabských stran nemá v izraelském parlamentu většinu Netanjahu ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou)
 - [Vyšetřovatelé OSN viní Izrael z vyhlazování Palestinců na Západním břehu](https://www.mahdalova-skop.cz/clanek/kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu)
-- [Češi obviňují oběti násilí dvakrát víc než zbytek Evropy](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-21-bingo-domaci-a-sexualni-nasili)
 
 ### Dezinformace a média
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
