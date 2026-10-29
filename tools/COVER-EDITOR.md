@@ -56,25 +56,35 @@ všechno ostatní (štítek, nadtitulek, podtitulek, legenda, nápisy v ikonách
 **Štítek coveru:** verzálky Plex Sans s prostrkáním, první část karmínově (#de1743) s podtržením končícím v půlce
 posledního písmene, pak „•“ a zbytek bíle (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026); vpravo zarovnaný zrcadlově.
 
-## Názvy částí coveru (společný slovník)
+## Názvy částí coveru (zavedená terminologie)
 
-Ať si rozumíme, každá část má jedno jméno. V závorce klíč v `cover.config.cjs` a běžný anglický termín.
+Používáme zavedené anglické názvy z redakčního a grafického designu, nevymýšlíme vlastní. Česky v závorce, jak
+tomu říkáme v textu; v kódu (`cover.config.cjs`) mají části vlastní klíče.
 
-| Část | Co to je | Příklad |
-| --- | --- | --- |
-| **štítek** (`kicker`; kicker, eyebrow) | verzálky nad titulkem, karmínová část podtržená, pak „•“ a téma | ANALÝZA • REFERENDA O VĚTRNÍCÍCH |
-| **nadtitulek** (`nad`; overline) | volitelný krátký řádek mezi štítkem a titulkem | Po 45 minutách bylo jasno |
-| **titulek** (`titulek`, ve frontmatteru `coverTitulek`; headline) | hlavní sdělení, Plex Serif Bold, největší písmo | Větrníky odmítlo 20 z 21 obcí |
-| **podtitulek** (`pod`, `coverPodtitulek`; subtitle, dek, standfirst) | jedna dvě věty pod titulkem, dovětek nebo upřesnění | Jen Dětřichov na Svitavsku řekl v referendu ano, o osm hlasů |
-| **motiv** (`motiv`; key visual) | obraz, který nese sdělení: mapa, tečkový disk, graf, fotka | tečková mapa s větrníky |
-| **legenda** (`legenda`; legend, key) | vysvětlení barev a značek motivu | Obec větrníky: ● odmítla ● podpořila |
-| **popisek** (`popisek` u bodu; label, annotation) | nápis přímo u místa v motivu | Dětřichov |
-| **logo** | kolečko a nápis DataTimes.cz | |
-| **štítek rubriky** | karmínový oválek, který web dokresluje do karty vpravo nahoře (v obrázku není) | Analýza |
-| **claim** | jen v ručním editoru (`poster-editor.html`): krátké tvrzení nebo velké číslo u motivu, ne titulek | „3× víc“ |
+![Anatomie coveru: všech pět formátů s bezpečnými zónami a popsanými částmi](cover-anatomie.png)
 
-Celý blok nahoře (štítek, nadtitulek, titulek, podtitulek) je **textový blok**; u speciálu Data pro budoucí
-premiérku nad ním stojí ještě **hlavička** (logo speciálu s názvem a štítek ANALÝZA / 01 DEMOGRAFIE).
+Nákres kreslí `tools/cover-anatomie.cjs` z rozměrů v generátoru (při změně formátů ho spustit znovu).
+
+| Termín | Česky | Co to je | Klíč v konfiguraci | Příklad |
+| --- | --- | --- | --- | --- |
+| **Kicker** (též eyebrow) | štítek | krátký řádek verzálkami nad titulkem: druh textu a téma | `kicker` | ANALÝZA • REFERENDA O VĚTRNÍCÍCH |
+| **Strapline** (strap) | nadtitulek | volitelný krátký řádek mezi kickerem a headlinem | `nad` | Po 45 minutách bylo jasno |
+| **Headline** (hed) | titulek | hlavní sdělení, největší písmo (Plex Serif Bold) | `titulek`, frontmatter `coverTitulek` | Větrníky odmítlo 20 z 21 obcí |
+| **Dek** (též subhead, v Británii standfirst) | podtitulek | jedna dvě věty pod headlinem, upřesnění | `pod`, frontmatter `coverPodtitulek` | Jen Dětřichov na Svitavsku řekl v referendu ano, o osm hlasů |
+| **Key visual** (též hero visual) | motiv | obraz, který nese sdělení: mapa, tečky, graf, fotka | `motiv` | tečková mapa s větrníky |
+| **Legend** (též key) | legenda | vysvětlení barev a značek key visualu | `legenda` | Obec větrníky: ● odmítla ● podpořila |
+| **Annotation** (též data label, callout label) | popisek | nápis přímo u místa nebo bodu v grafu | `popisek` u bodu | Dětřichov |
+| **Stat callout** (big number) | velké číslo | samostatně zvýrazněné číslo u motivu | – (ruční editor) | 3× víc |
+| **Logo** (wordmark + logomark) | logo | nápis DataTimes.cz a kolečko | `logo` | |
+| **Section tag / category badge** | štítek rubriky | karmínový oválek, který web dokreslí do karty (v obrázku není) | – | Analýza |
+| **Safe zone** (safe area) | bezpečná zóna | plocha, kam smí text a logo | `FORMATY.box` | |
+| **Bleed** | spadávka / přesah | motiv, který přetéká až k okraji nebo za něj | – | mapa do boků OG |
+| **UI overlay** | rozhraní aplikace | pruhy, které aplikace (Instagram) kreslí přes obrázek | – | horních 250 px story |
+| **Header** (masthead) | hlavička | horní pruh speciálu: logo speciálu s názvem a štítek | – (DPBP `covery.cjs`) | ANALÝZA / 01 DEMOGRAFIE |
+
+**Claim** v tomhle smyslu není. Je to marketingový výraz (hlavně v češtině a němčině) pro slogan značky, anglicky
+*tagline*. Titulku na coveru se claim neříká. V ručním editoru (`poster-editor.html`) se tak historicky jmenuje pole pro
+stat callout nebo krátké tvrzení u motivu.
 
 ## Kompozice podle formátu (od 29. 10. 2026)
 
