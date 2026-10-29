@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { DPBP_CHAPTERS } from './chapterNavigation';
+import { loadWebArticleTile } from './webArticleTile.server';
 
 export interface ChapterArticleItem {
   slug: string;
@@ -19,6 +20,7 @@ export function loadChapterContents(contentRoot: string): ChapterContents {
       const articlesDir = path.join(chapterDir, 'articles');
 
       const articleSlugs: string[] = [];
+      const webSlugs: string[] = [];
 
       if (fs.existsSync(metaPath)) {
         try {
@@ -29,11 +31,13 @@ export function loadChapterContents(contentRoot: string): ChapterContents {
           if (Array.isArray(meta.tiles)) {
             meta.tiles.forEach((tile: any) => {
               if (tile && typeof tile.slug === 'string') articleSlugs.push(tile.slug);
+              if (tile && typeof tile.web === 'string') webSlugs.push(tile.web);
             });
           }
           if (Array.isArray(meta.postSupportTiles)) {
             meta.postSupportTiles.forEach((tile: any) => {
               if (tile && typeof tile.slug === 'string') articleSlugs.push(tile.slug);
+              if (tile && typeof tile.web === 'string') webSlugs.push(tile.web);
             });
           }
         } catch {
@@ -73,6 +77,12 @@ export function loadChapterContents(contentRoot: string): ChapterContents {
           href: `/specialy/data-pro-budouci-premierku/${chapter.slug}/${articleSlug}`,
         };
       });
+
+      // Web articles included in the chapter keep their own /clanek/ URL.
+      for (const webSlug of Array.from(new Set(webSlugs))) {
+        const web = loadWebArticleTile(webSlug);
+        if (web) articles.push({ slug: `web:${webSlug}`, title: web.title, href: web.href });
+      }
 
       return [chapter.slug, articles];
     })

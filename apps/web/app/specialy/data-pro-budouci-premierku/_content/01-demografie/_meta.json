@@ -13,7 +13,7 @@
   "intro": {
     "title": "Vymíráme? Přijde na to, koho myslíme – a bez přistěhovalců se to nespraví",
     "textBefore": "Loni se v Česku narodilo 77 636 dětí, nejméně za 240 let, co se narození celoplošně počítají. Pokaždé, když z takového čísla někdo vyvodí, že vymíráme, je dobré se zeptat: kdo vlastně? Jako Češi, jako Evropané, nebo jako lidstvo? Každá odpověď je jiná – a znamená něco jiného pro to, co se s tím vůbec dá dělat. Tahle kapitola ty tři roviny odděluje, protože jen tak je vidět, kde je problém skutečný a kde jde spíš o strašení.",
-    "textAfter": "Začněme doma. Úhrnná plodnost – kolik dětí připadá průměrně na jednu ženu – v Česku po růstu k 1,71 v roce 2020 spadla zpět na 1,28 a počet narozených je podle Seznam Zpráv o desetinu pod nejnižší variantou projekce ČSÚ. Za rekordně nízkým počtem narozených nestojí jen plodnost: do plodného věku teď vstupují slabé ročníky narozené v 90. letech a podle propočtu ČSÚ se pokles počtu narozených zhruba z jedné čtvrtiny vysvětlí právě menším počtem rodiček, takže i při stejné plodnosti by se dětí rodilo méně. Jak se česká plodnost vyvíjela od roku 1990, ukazuje graf.",
+    "textAfter": "Začněme doma. Úhrnná plodnost – kolik dětí připadá průměrně na jednu ženu – v Česku po vrcholu 1,83 v roce 2021 spadla za čtyři roky na 1,28 a počet narozených je podle Seznam Zpráv o desetinu pod nejnižší variantou projekce ČSÚ. Za rekordně nízkým počtem narozených nestojí jen plodnost: do plodného věku teď vstupují slabé ročníky narozené v 90. letech a podle propočtu ČSÚ se pokles počtu narozených zhruba z jedné čtvrtiny vysvětlí právě menším počtem rodiček, takže i při stejné plodnosti by se dětí rodilo méně. Jak se česká plodnost vyvíjela od roku 1990, ukazuje graf.",
     "textClosing": "V evropském měřítku Česko výjimkou není – pod hranicí prosté reprodukce je dnes skoro celá Evropa, a lidstvo jako celek přitom neubývá. Pro Česko je tak skutečným tématem stárnutí a úbytek lidí v produktivním věku: mezeru, kterou samotné porodné nezaplní a bez přistěhovalectví ji dohnat nejde. Ostatně do programového prohlášení vlády z 5. ledna 2026 se číslo 2,1 už nedostalo; zůstala jen slova o tom, že mladí lidé mají moci „plánovat budoucnost, zakládat rodiny a mít dostupné bydlení“."
   },
   "tiles": [
@@ -27,16 +27,18 @@
     {
       "slug": "02-co-znamena-plodnost",
       "topic": "Explainer",
+      "image": "/specialy/dpbp/og/01-demografie/02-co-znamena-plodnost/cover-og.jpg", "imageAspect": "1200 / 630",
       "related": [
         { "slug": "07-kohortni-plodnost", "label": "Explainer" },
         { "slug": "13-generace-z", "label": "Analýza" }
       ]
     },
-    { "slug": "03-svet-populace", "topic": "Svět" },
-    { "slug": "04-skandinavska-past", "topic": "Evropa" },
+    { "slug": "03-svet-populace", "topic": "Svět", "image": "/specialy/dpbp/og/01-demografie/03-svet-populace/cover-og.jpg", "imageAspect": "1200 / 630" },
+    { "slug": "04-skandinavska-past", "topic": "Evropa", "image": "/specialy/dpbp/og/01-demografie/04-skandinavska-past/cover-og.jpg", "imageAspect": "1200 / 630" },
     {
       "slug": "05-cas-rodicovstvi",
       "topic": "Analýza",
+      "image": "/specialy/dpbp/og/01-demografie/05-cas-rodicovstvi/cover-og.jpg", "imageAspect": "1200 / 630",
       "related": [
         { "slug": "09-pary-a-partnerstvi", "label": "Analýza" },
         { "slug": "14-vzdelanostni-propast", "label": "Analýza" },
@@ -46,21 +48,28 @@
     {
       "slug": "16-starnuti-populace",
       "topic": "Analýza",
+      "image": "/specialy/dpbp/og/01-demografie/16-starnuti-populace/cover-og.jpg", "imageAspect": "1200 / 630",
       "related": [
         { "slug": "17-migrace-demografie", "label": "Explainer" },
         { "slug": "15-volicska-zakladna", "label": "Analýza" }
       ]
     },
-    { "slug": "11-vylidnovani-obci", "topic": "Analýza" },
-    { "slug": "10-data-porody", "topic": "Investigace" },
-    { "slug": "12-mezinarodni-srovnani", "topic": "Komparace" },
+    { "slug": "11-vylidnovani-obci", "topic": "Analýza", "image": "/specialy/dpbp/og/01-demografie/11-vylidnovani-obci/cover-og.jpg", "imageAspect": "1200 / 630" },
+    { "slug": "10-data-porody", "topic": "Investigace", "image": "/specialy/dpbp/og/01-demografie/10-data-porody/cover-og.jpg", "imageAspect": "1200 / 630" },
+    { "slug": "12-mezinarodni-srovnani", "topic": "Komparace", "image": "/specialy/dpbp/og/01-demografie/12-mezinarodni-srovnani/cover-og.jpg", "imageAspect": "1200 / 630" },
     {
       "slug": "08-politicke-sliby",
-      "topic": "Analýza"
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/01-demografie/08-politicke-sliby/cover-og.jpg", "imageAspect": "1200 / 630"
     },
     {
       "slug": "19-plodnost-muzu",
-      "topic": "Explainer"
+      "topic": "Explainer",
+      "image": "/specialy/dpbp/og/01-demografie/19-plodnost-muzu/cover-og.jpg", "imageAspect": "1200 / 630"
     }
+  ],
+  "postSupportTiles": [
+    { "web": "volby-cr-2026-10-02-zeny-na-radnicich", "topic": "Analýza" },
+    { "web": "analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu", "topic": "Analýza" }
   ]
 }

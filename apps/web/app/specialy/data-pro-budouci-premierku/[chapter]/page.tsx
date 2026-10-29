@@ -18,6 +18,7 @@ import RawHtmlEmbed from '@/components/common/RawHtmlEmbed';
 import { readableAccent } from '@/utils/colorUtils';
 import { loadChapterContents } from '@/components/dpbp/chapterContents.server';
 import { chapterAccent } from '@/components/dpbp/chapterNavigation';
+import { loadWebArticleTile } from '@/components/dpbp/webArticleTile.server';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'app/specialy/data-pro-budouci-premierku/_content');
 const CHARTS_ROOT  = path.join(process.cwd(), 'public/specialy/dpbp/charts');
@@ -49,7 +50,9 @@ interface ChapterMeta {
 }
 
 interface ChapterTile {
-  slug: string;
+  slug?: string;
+  /** Slug of a web article (app/clanek/_articles) – the tile links to /clanek/<web>. */
+  web?: string;
   topic: string;
   fullWidth?: boolean;
   /** Obrázek dlaždice (jinak logo z frontmatteru článku). */
@@ -68,17 +71,11 @@ function loadMeta(chapterSlug: string): ChapterMeta | null {
   return { ...meta, accent: chapterAccent(chapterSlug) };
 }
 
+// Dlaždice jdou vždy po dvou vedle sebe (na mobilu pod sebou). Osamocená
+// poslední dlaždice ani `fullWidth` se neroztahují přes celou šíři – široká
+// karta usekla cover na úzký pruh. Lichý počet tedy nechá vedle prázdné místo.
 function withRowSpan<T extends { fullWidth?: boolean }>(list: T[]): Array<T & { span: boolean }> {
-  let col = 0;
-  return list.map((t, i) => {
-    if (t.fullWidth) {
-      col = 0;
-      return { ...t, span: true };
-    }
-    const aloneInRow = col === 0 && i === list.length - 1;
-    col = aloneInRow ? 0 : (col + 1) % 2;
-    return { ...t, span: aloneInRow };
-  });
+  return list.map(t => ({ ...t, span: false }));
 }
 
 function loadCard(chapterSlug: string, cardId: string): ImpactCardData | null {
@@ -91,7 +88,7 @@ function loadArticleFrontmatter(chapterSlug: string, articleSlug: string) {
   const p = path.join(CONTENT_ROOT, chapterSlug, 'articles', `${articleSlug}.mdx`);
   if (!fs.existsSync(p)) return null;
   const { data } = matter(fs.readFileSync(p, 'utf8'));
-  return data as { title: string; excerpt: string; author: string; date: string; primaryChart: string; logo?: string };
+  return data as { title: string; excerpt: string; author: string; date: string; primaryChart: string; logo?: string; coverImage?: string };
 }
 
 function loadRelatedArticles(
@@ -168,12 +165,25 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
 
   const tiles = withRowSpan(
     [...(meta.tiles ?? []), ...(meta.postSupportTiles ?? [])]
-      .filter(t => t.showOpener || t.slug !== meta.openerArticle)
-      .map(t => ({
-        ...t,
-        fm: loadArticleFrontmatter(params.chapter, t.slug),
-        relatedArticles: loadRelatedArticles(params.chapter, t.related),
-      }))
+      .filter(t => t.web || t.showOpener || t.slug !== meta.openerArticle)
+      .map(t => {
+        if (t.web) {
+          const web = loadWebArticleTile(t.web);
+          return {
+            ...t,
+            key: `web:${t.web}`,
+            href: web?.href ?? '',
+            fm: web ? { title: web.title, excerpt: web.excerpt, author: web.author, logo: web.image } : null,
+          };
+        }
+        return {
+          ...t,
+          key: t.slug!,
+          href: `/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`,
+          fm: loadArticleFrontmatter(params.chapter, t.slug!),
+          relatedArticles: loadRelatedArticles(params.chapter, t.related),
+        };
+      })
       .filter(t => t.fm != null)
   );
 
@@ -396,18 +406,18 @@ export default function ChapterPage({ params }: { params: { chapter: string } })
                 style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18 }}
               >
                 {tiles.map(t => (
-                  <div key={t.slug} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
+                  <div key={t.key} style={{ gridColumn: t.span ? '1 / -1' : 'auto' }}>
                     <DpbpArticleCard
-                      href={`/specialy/data-pro-budouci-premierku/${params.chapter}/${t.slug}`}
+                      href={t.href}
                       title={t.fm!.title}
                       excerpt={t.fm!.excerpt}
                       author={t.fm!.author}
                       primaryChartSpec={null}
-                      image={t.image ?? t.fm!.logo}
+                      image={t.image ?? ('coverImage' in t.fm! ? t.fm!.coverImage : undefined) ?? t.fm!.logo}
                       imageAspect={t.imageAspect}
                       accent={meta.accent}
                       type={t.topic}
-                      stacked={!t.fullWidth}
+                      stacked
                     />
                   </div>
                 ))}

@@ -70,7 +70,7 @@ Ve Žďáře nad Sázavou kandidát ANO nebyl. Loňských voličů ANO tu bylo 2
 V Kladně se druhé kolo 16. a 17. října rozhodne mezi Suchardou Šípovou a Patákem, kteří v prvním kole získali 14 766 a 14 112 hlasů. Rozdíl je 654 hlasů, kdežto Gerlochových 10 600 voličů a zhruba 15 000 loňských voličů ANO, kteří zůstali doma, jsou skupiny mnohonásobně větší.
 
 ```infobox info
-### Jak jsme to počítali a co o tom víme
+**Jak jsme počítali a co o tom víme**
 
 Pracujeme s výsledky po okrscích ze sněmovních voleb 2025 a z komunálních a senátních voleb 2026 ([otevřená data volby.gov.cz](https://volby.gov.cz/opendata/opendata.htm)) v místech, kde je sečteno. Okrsky, kde se počet voličů proti loňsku změnil o víc než 15 %, vypouštíme, protože se pravděpodobně změnily hranice nebo číslování. V Plzni a Ostravě je to 26 až 28 % okrsků a odhady tam nezahrnují zbylou část města. U komunálních voleb přepočítáváme hlasy pro kandidátky na hlasy voličů (podíl kandidátky krát počet odevzdaných obálek).
 

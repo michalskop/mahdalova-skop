@@ -1,0 +1,136 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 140,
+  "data": {
+    "values": [
+      {
+        "kat": "Příměří, říjen 2025",
+        "n": 53,
+        "t": "53 %",
+        "barva": "#bcbcb0",
+        "tbarva": "#101432",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Září 2026",
+        "n": 60,
+        "t": "nejméně 60 %",
+        "barva": "#de1743",
+        "tbarva": "#ffffff",
+        "minpx": 104.4
+      },
+      {
+        "kat": "Pokyn Netanjahua",
+        "n": 70,
+        "t": "70 %",
+        "barva": "#ff8099",
+        "tbarva": "#101432",
+        "minpx": 46.8
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 240,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelPadding": 8
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ],
+        "nice": false
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Stav"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? datum.t : ''"
+          }
+        },
+        "color": {
+          "field": "tbarva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? '' : datum.t"
+          }
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Izrael podle komise kontroluje {nejméně 60 %|#de1743} Gazy, příměří počítalo s 53 %",
+    "subtitle": "Podíl území Pásma Gazy pod kontrolou izraelské armády (%): podle dohody o příměří z října 2025, skutečnost k 2. 9. 2026 a 70 %, která podle premiéra Netanjahua v květnu 2026 nařídil obsadit."
+  },
+  "_source": "[Zpráva komise OSN A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 37",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -42,24 +42,24 @@ Colleen Slemmer na odlehlém místě mučili a nakonec zabili. Podrobnosti popis
 Trest smrti dostala 30. března 1996. Podle Cornellova centra byla nejmladší ženou odsouzenou k smrti v moderní historii USA. Stejný čin ale skončil pro tři lidi, kteří se ho účastnili, úplně jinak:
 
 <KeyNumbers
-  label="Jeden čin, tři tresty"
+  label="Tři pachatelé, tři různé osudy"
   numbers={[
     {
       value: "Trest smrti",
-      title: "Christa Pike, 18 let",
-      description: "Odsouzena za vraždu prvního stupně. Pokus o popravu 30. září 2026 přežila.",
+      title: "Christa Pike, při činu 18 let",
+      description: "Odsouzena v roce 1996 za vraždu prvního stupně. V cele smrti strávila zhruba 30 let, většinu z nich 22 až 23 hodin denně o samotě. Pokus o popravu 30. září 2026 přežila. Letos jí je 50 let.",
       color: "brand"
     },
     {
       value: "Doživotí",
-      title: "Tadaryl Shipp, 17 let",
-      description: "S možností podmínečného propuštění. Komise ho v říjnu 2025 zamítla, další přezkum čeká v roce 2031.",
+      title: "Tadaryl Shipp, při činu 17 let",
+      description: "Nepodmíněně, s možností podmínečného propuštění. Později pod přísahou vypověděl, že pentagram do hrudi oběti vyryl on. Propuštění mu komise v říjnu 2025 zamítla, další přezkum je v roce 2031. Letos mu je 49 let.",
       color: "brandNavy[8]"
     },
     {
       value: "Podmínka",
-      title: "Shadolla Peterson, 18 let",
-      description: "Šest let podmíněně za napomáhání. Svědčila pro obžalobu.",
+      title: "Shadolla Peterson, při činu 18 let",
+      description: "Šest let podmíněně. Spolupracovala s vyšetřovateli a u soudu svědčila proti Christě Pike i Tadarylu Shippovi, místo vraždy proto byla odsouzena jen za napomáhání. Letos jí je kolem 50 let.",
       color: "brandNavy[6]"
     }
   ]}

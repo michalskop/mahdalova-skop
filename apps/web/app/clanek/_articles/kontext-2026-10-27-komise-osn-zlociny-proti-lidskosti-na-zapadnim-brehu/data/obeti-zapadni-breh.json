@@ -1,0 +1,255 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 130,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "radek": "Dospělí",
+            "x0": 0,
+            "x1": 784,
+            "barva": "#8b0e2b",
+            "skupina": "muži",
+            "pocet": "784",
+            "souhrn": "muži 784 · ženy 22"
+          },
+          {
+            "radek": "Dospělí",
+            "x0": 784,
+            "x1": 806,
+            "barva": "#e87c91",
+            "skupina": "ženy",
+            "pocet": "22",
+            "souhrn": "muži 784 · ženy 22"
+          },
+          {
+            "radek": "Děti",
+            "x0": 0,
+            "x1": 237,
+            "barva": "#de1743",
+            "skupina": "chlapci",
+            "pocet": "237",
+            "souhrn": "chlapci 237 · dívky 7"
+          },
+          {
+            "radek": "Děti",
+            "x0": 237,
+            "x1": 244,
+            "barva": "#ff8099",
+            "skupina": "dívky",
+            "pocet": "7",
+            "souhrn": "chlapci 237 · dívky 7"
+          },
+          {
+            "radek": "Bez určení",
+            "x0": 0,
+            "x1": 30,
+            "barva": "#bcbcb0",
+            "skupina": "bez určení pohlaví a věku",
+            "pocet": "30",
+            "souhrn": "bez určení pohlaví a věku 30"
+          }
+        ]
+      },
+      "mark": {
+        "type": "bar",
+        "stroke": "#f8f6f0",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "radek",
+          "type": "nominal",
+          "sort": [
+            "Dospělí",
+            "Děti",
+            "Bez určení"
+          ],
+          "scale": {
+            "paddingInner": 0.3
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 240,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelPadding": 8
+          }
+        },
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1000
+            ],
+            "nice": false
+          },
+          "axis": null
+        },
+        "x2": {
+          "field": "x1"
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "radek",
+            "title": "Skupina"
+          },
+          {
+            "field": "souhrn",
+            "title": "Zabití"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "radek": "Dospělí",
+            "x": 0,
+            "text": "muži 784",
+            "n": 784,
+            "minpx": 75.6
+          },
+          {
+            "radek": "Děti",
+            "x": 0,
+            "text": "chlapci 237",
+            "n": 237,
+            "minpx": 97.2
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 9,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "y": {
+          "field": "radek",
+          "type": "nominal",
+          "sort": [
+            "Dospělí",
+            "Děti",
+            "Bez určení"
+          ],
+          "scale": {
+            "paddingInner": 0.3
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 240,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelPadding": 8
+          }
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": {
+            "expr": "datum.n / 1000 * width > datum.minpx ? datum.text : ''"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "radek": "Dospělí",
+            "x": 806,
+            "n": 784,
+            "minpx": 75.6,
+            "tfit": "ženy 22",
+            "tnofit": "muži 784 · ženy 22"
+          },
+          {
+            "radek": "Děti",
+            "x": 244,
+            "n": 237,
+            "minpx": 97.2,
+            "tfit": "dívky 7",
+            "tnofit": "chlapci 237 · dívky 7"
+          },
+          {
+            "radek": "Bez určení",
+            "x": 30,
+            "n": 0,
+            "minpx": 1000000000.0,
+            "tfit": "bez určení pohlaví a věku 30",
+            "tnofit": "bez určení pohlaví a věku 30"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 7,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "radek",
+          "type": "nominal",
+          "sort": [
+            "Dospělí",
+            "Děti",
+            "Bez určení"
+          ],
+          "scale": {
+            "paddingInner": 0.3
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 240,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelPadding": 8
+          }
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": {
+            "expr": "datum.n / 1000 * width > datum.minpx ? datum.tfit : datum.tnofit"
+          }
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Víc než pětinu z 1 080 Palestinců, které izraelské síly zabily na Západním břehu, tvořily {děti|#de1743}",
+    "subtitle": "Zabití izraelskými silami na Západním břehu včetně východního Jeruzaléma, 7. 10. 2023 – 30. 9. 2026, bez obětí osadníků (počet lidí, data OCHA). Zpráva uvádí „nejméně“, zbytek do 1 080 jsme dopočítali jako bez určení."
+  },
+  "_source": "[Zpráva komise OSN A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 17",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

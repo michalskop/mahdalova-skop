@@ -3,9 +3,10 @@ title: "Nenávistné výroky vůči Palestincům i vůči Izraelcům končívaj�
 date: "2026-08-25"
 author: "Kateřina Mahdalová"
 excerpt: "Po 7. říjnu 2023 rozhodly evropské soudy desítky sporů o hranici mezi svobodou projevu a nenávistí. Trestají kolektivní nenávist k Palestincům i k Izraelcům – a hranici vedou podle jediného kritéria: zda výrok míří na stát a jeho politiku, nebo na lidi podle původu. Srovnání Rakouska, Německa, Švédska a Polska ukazuje, čím je český případ ministra Dvořáka výjimečný."
-coverImage: "images/cover-evropske-soudy-datatimes.jpg"
-coverFit: "contain"
-coverBg: "brandNavy.9"
+coverImage: "images/cover-homepage.jpg"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.jpg"
+instagramImage: "images/cover-instagram.jpg"
 filter: ["analýza"]
 tags: ["Justice", "Palestinci", "Izrael", "hate speech", "svoboda projevu", "Volksverhetzung", "Martin Dvořák", "soudy", "lidská práva", "Evropa"]
 promoted: 1

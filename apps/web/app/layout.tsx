@@ -47,7 +47,13 @@ export const metadata: Metadata = {
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    // Google Discover ukazuje velký obrázek jen s max-image-preview:large.
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
   },
 };
 
@@ -62,7 +68,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Mahdalová & Škop"
+          title="DataTimes.cz"
           href="/rss.xml"
         />
         <Suspense fallback={null}>

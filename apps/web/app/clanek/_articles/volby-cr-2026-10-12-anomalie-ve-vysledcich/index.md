@@ -223,7 +223,7 @@ A hlasy mohou být i skutečné. Moos měl přes 20 procent také v Ubušínku a
 Pro Černého je podstatnější něco jiného. Při rozdílu jednoho hlasu může výsledek změnit drobná chyba v kterémkoli z 265 okrsků obvodu, třeba jeden špatně posouzený lístek. Takovou chybu žádná statistika nenajde. Najde ji jen přepočítání.
 
 ```infobox info
-### Jak jsme počítali a co z toho neplyne
+**Jak jsme počítali a co z toho neplyne**
 
 Vycházíme z [otevřených dat Českého statistického úřadu](https://volby.gov.cz/opendata/opendata.htm) o výsledcích v okrscích, stav po zpracování v neděli 11. října. U žádného ze zmíněných okrsků data k tomu dni neevidují opravu zápisu. Originální zápisy ani lístky jsme neviděli.
 

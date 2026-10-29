@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 110,
+  "data": {
+    "values": [
+      {
+        "kat": "Předchozích 16 let",
+        "n": 6,
+        "t": "6",
+        "barva": "#bcbcb0",
+        "tbarva": "#101432",
+        "minpx": 25.2
+      },
+      {
+        "kat": "Od 7. 10. 2023",
+        "n": 254,
+        "t": "254",
+        "barva": "#de1743",
+        "tbarva": "#ffffff",
+        "minpx": 39.6
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 240,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelPadding": 8
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          300
+        ],
+        "nice": false
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Období"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 300 * width > datum.minpx ? datum.t : ''"
+          }
+        },
+        "color": {
+          "field": "tbarva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 300 * width > datum.minpx ? '' : datum.t"
+          }
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Při náletech na Západním břehu zemřelo za necelé tři roky {254|#de1743} Palestinců, za předchozích téměř 16 let šest",
+    "subtitle": "Palestinci zabití izraelskými leteckými údery na Západním břehu (počet lidí, data OCHA): 2008 – 6. 10. 2023 a 7. 10. 2023 – 30. 9. 2026"
+  },
+  "_source": "[Zpráva komise OSN A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 27",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -79,6 +79,12 @@ const TOOLTIP_CSS = `
   white-space: nowrap;
 }
 #vg-tooltip-element.dpbp-theme table { border-collapse: collapse; margin: 6px 12px 8px; }
+#vg-tooltip-element.dpbp-theme table.dt-tt-list { margin: 2px 0 0; font-size: 12px; line-height: 1.3; }
+#vg-tooltip-element.dpbp-theme table.dt-tt-list td { padding: 0 14px 0 0; white-space: nowrap; vertical-align: top; }
+@media (max-width: 600px) {
+  #vg-tooltip-element.dpbp-theme table.dt-tt-list { font-size: 10px; }
+  #vg-tooltip-element.dpbp-theme table.dt-tt-list td { white-space: normal; padding-right: 8px; }
+}
 #vg-tooltip-element.dpbp-theme td.key {
   color: ${TOOLTIP_INK};
   font-weight: 400;
@@ -170,10 +176,20 @@ function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): Tool
       html += '<table>';
       for (const [k, v] of entries.slice(1)) {
         const swatch = seriesColors[k] ? `<span class="dt-tt-swatch" style="background:${seriesColors[k]}"></span>` : '';
+        // Víceřádková hodnota (seznam jmen) jde pod klíč přes celou šíři; řádky s tabulátorem
+        // se rozdělí do sloupců (např. 2 × 17 jmen v grafu řádů u článku o státních vyznamenáních).
+        if (typeof v === 'string' && v.includes('\n')) {
+          const rows = v.split('\n').map(l => `<tr>${l.split('\t').map(c => `<td>${escapeHtml(c)}</td>`).join('')}</tr>`).join('');
+          html += `<tr><td class="key" colspan="2">${swatch}${escapeHtml(k)}</td></tr>`
+            + `<tr><td colspan="2"><table class="dt-tt-list">${rows}</table></td></tr>`;
+          continue;
+        }
         html += `<tr><td class="key">${swatch}${escapeHtml(k)}</td><td class="value">${escapeHtml(v)}</td></tr>`;
       }
       html += '</table>';
     }
+    // seznam jmen smí být širší, ale nikdy přes okraj obrazovky (mobil)
+    tip.style.maxWidth = html.includes('dt-tt-list') ? 'min(600px, calc(100vw - 16px))' : '';
     tip.innerHTML = html;
     tip.classList.add('visible');
     const pad = 12;
@@ -201,6 +217,9 @@ function mergeFontConfig(config: unknown): Record<string, unknown> {
   return {
     ...base,
     ...CHART_FONT_CONFIG,
+    // Žádný rámeček kolem plochy grafu (docs/design/DESIGN.md §10, Kateřina 28. 10. 2026): výchozí Vega view.stroke
+    // kreslí šedý obdélník; graf ho dostane jen výslovně přes config.view.stroke ve specifikaci.
+    view: { stroke: null, ...(base.view as object ?? {}) },
     axis: { ...(base.axis as object ?? {}), ...CHART_FONT_CONFIG.axis },
     legend: { ...(base.legend as object ?? {}), ...CHART_FONT_CONFIG.legend },
     text: { ...(base.text as object ?? {}), ...CHART_FONT_CONFIG.text },
@@ -220,7 +239,8 @@ export interface VegaChartProps {
 }
 
 function isConcatSpec(spec: Record<string, unknown>) {
-  return 'vconcat' in spec || 'hconcat' in spec || 'concat' in spec;
+  // facet (mřížka dlaždic) má stejně jako concat pevné šířky dílčích grafů, width:'container' neumí
+  return 'vconcat' in spec || 'hconcat' in spec || 'concat' in spec || 'facet' in spec;
 }
 
 function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
@@ -233,6 +253,8 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _legend_inactive_style: _lis,
     _legend_hide_mode: _lhm,
     _reveal_sequence: _rs,
+    _click_detail: _cd,
+    _facet_fill: _ff,
     ...rest
   } = spec as Record<string, unknown>;
   return { ...rest, title: null };
@@ -399,6 +421,98 @@ function pointerTooltipAt(spec: Record<string, unknown>, ratio: number, hiddenSe
   } : null;
 }
 
+// `_click_detail` ve specu: kliknutí na značku otevře pod grafem panel s křížkem (vzor Flourish
+// „popup panel“). `field` = text s položkami oddělenými \n (případně \t), `title` = pole do
+// nadpisu panelu, `rows` = řádky s hodnotami (format 'pct' = procenta).
+type ClickDetailConfig = {
+  field: string;
+  // volitelně: seznamy podle klíče (aby se dlouhý text neopakoval u každé značky)
+  key?: string;
+  items?: Record<string, string>;
+  title?: string[];
+  rows?: { field: string; label: string; format?: 'pct' }[];
+  // volitelně: vodorovný pruh rozdělený na části (např. ženy × muži) s počty
+  split?: { field: string; label: string; color: string }[];
+};
+
+function clickDetailConfig(spec: Record<string, unknown> | null): ClickDetailConfig | null {
+  const cfg = spec?._click_detail as ClickDetailConfig | undefined;
+  return cfg?.field ? cfg : null;
+}
+
+function ClickDetailPanel({ cfg, datum, onClose }: { cfg: ClickDetailConfig; datum: Record<string, unknown>; onClose: () => void }) {
+  const raw = datum[cfg.field] ?? (cfg.key && cfg.items ? cfg.items[String(datum[cfg.key])] : '');
+  // Řádek začínající „## “ otevírá oddíl (např. „## Ženy (13)“); bez oddílů jeden seřazený seznam.
+  const sections: { head?: string; items: string[] }[] = [];
+  for (const line of String(raw ?? '').split('\n')) {
+    if (line.startsWith('## ')) { sections.push({ head: line.slice(3), items: [] }); continue; }
+    if (!sections.length) sections.push({ items: [] });
+    sections[sections.length - 1].items.push(...line.split('\t').map(s => s.trim()).filter(Boolean));
+  }
+  sections.forEach(s => s.items.sort((a, b) => a.localeCompare(b, 'cs')));
+  const title = (cfg.title ?? []).map(f => datum[f]).filter(Boolean).join(' · ');
+  return (
+    <div style={{
+      position: 'relative', marginTop: 10, padding: '10px 14px 12px', border: '1px solid #e8e3d2', borderRadius: 7,
+      background: '#fdfbf7', color: TOOLTIP_INK, fontFamily: CHART_FONT, fontSize: 13.5, lineHeight: 1.4,
+    }}>
+      <button
+        type="button"
+        aria-label="Zavřít"
+        onClick={onClose}
+        style={{
+          position: 'absolute', top: 6, right: 8, border: 'none', background: 'transparent', cursor: 'pointer',
+          fontSize: 22, lineHeight: 1, color: TOOLTIP_INK, padding: 4,
+        }}
+      >×</button>
+      {title && <div style={{ fontWeight: 700, fontSize: 15, paddingRight: 28 }}>{title}</div>}
+      {cfg.rows?.length ? (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px 16px', margin: '2px 0 8px' }}>
+          {cfg.rows.map(r => {
+            const v = datum[r.field];
+            const text = r.format === 'pct' && typeof v === 'number'
+              ? `${Math.round(v * 100)} %`
+              : String(v ?? '');
+            return <span key={r.field}>{r.label}: <strong>{text}</strong></span>;
+          })}
+        </div>
+      ) : null}
+      {cfg.split?.length ? (() => {
+        const parts = cfg.split.map(p => ({ ...p, n: Number(datum[p.field] ?? 0) }));
+        const total = parts.reduce((a, p) => a + p.n, 0) || 1;
+        return (
+          <div style={{ margin: '0 0 10px' }}>
+            <div style={{ display: 'flex', height: 22, borderRadius: 3, overflow: 'hidden' }}>
+              {parts.filter(p => p.n > 0).map(p => (
+                <div key={p.field} style={{
+                  width: `${(p.n / total) * 100}%`, background: p.color, color: '#ffffff', fontSize: 12, fontWeight: 700,
+                  display: 'flex', alignItems: 'center', paddingLeft: 6, whiteSpace: 'nowrap', overflow: 'hidden',
+                }}>{p.n}</div>
+              ))}
+            </div>
+            <div style={{ display: 'flex', gap: 14, fontSize: 12.5, marginTop: 3 }}>
+              {parts.map(p => (
+                <span key={p.field}>
+                  <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 2, background: p.color, marginRight: 5 }} />
+                  {p.label}: <strong>{p.n}</strong> ({Math.round((p.n / total) * 100)} %)
+                </span>
+              ))}
+            </div>
+          </div>
+        );
+      })() : null}
+      {sections.map((sec, i) => (
+        <div key={sec.head ?? i} style={{ marginTop: i ? 8 : 0 }}>
+          {sec.head && <div style={{ fontWeight: 700, borderBottom: '1px solid #e8e3d2', marginBottom: 3 }}>{sec.head}</div>}
+          <div style={{ columnWidth: 190, columnGap: 18 }}>
+            {sec.items.map(item => <div key={item} style={{ breakInside: 'avoid' }}>{item}</div>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, bare: bareProp = false }: VegaChartProps) {
   const { bare: bareFromGroup, hoverRatio: sharedHoverRatio, setHoverRatio: setSharedHoverRatio, hoverY: sharedHoverY, setHoverY: setSharedHoverY } = useChartGroup();
   const bare = bareProp || bareFromGroup;
@@ -414,6 +528,22 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   const initialRevealDoneRef = useRef(false);
   const pendingRevealSeriesRef = useRef<string[]>([]);
   const toggleLegend = useMemo(() => toggleLegendConfig(spec), [spec]);
+  const clickDetail = useMemo(() => clickDetailConfig(spec), [spec]);
+  const [detail, setDetail] = useState<Record<string, unknown> | null>(null);
+  // `_facet_fill`: šířka karty zaokrouhlená na 10 px; při změně (otočení mobilu, skrytý panel,
+  // změna okna) se mřížka překreslí s novým počtem sloupců a šířkou dlaždic.
+  const [fillWidth, setFillWidth] = useState(0);
+  const hasFacetFill = Boolean(spec?._facet_fill);
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!hasFacetFill || !el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(([entry]) => {
+      const w = Math.round(entry.contentRect.width / 10) * 10;
+      if (w > 0) setFillWidth(w);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [hasFacetFill]);
 
   const animateDataMarks = useCallback((direction: 'show' | 'hide', series?: string[]) => {
     const container = containerRef.current;
@@ -495,6 +625,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
 
   useEffect(() => {
     setHiddenSeries(new Set());
+    setDetail(null);
     initialRevealDoneRef.current = false;
     pendingRevealSeriesRef.current = [];
   }, [spec]);
@@ -553,6 +684,7 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     const hideMode = spec._legend_hide_mode === 'filter' ? 'filter' : 'opacity';
     const base = toggleLegend ? applyHiddenSeriesOpacity(stripped, toggleLegend.field, hiddenSeries, hideMode) : stripped;
     let final: Record<string, unknown>;
+    let facetFit: { w: number; cols: number; tile: number } | null = null;
 
     if (mini) {
       final = {
@@ -572,6 +704,20 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     } else if (isConcatSpec(base)) {
       // width:'container' is unsupported on concat specs in Vega-Lite v5 – leave widths alone
       final = { ...base, background: '#f8f6f0', config: mergeFontConfig(base.config) };
+      // `_facet_fill`: mřížka (facet) vyplní celou šíři karty – šířku dlaždice dopočítáme z kontejneru,
+      // na úzkém displeji ubereme sloupec. { label: šířka popisků osy Y v px, minColumns }
+      const fill = spec._facet_fill as { label?: number; narrowColumns?: number } | undefined;
+      const inner = (final.spec ?? null) as Record<string, unknown> | null;
+      if (fill && inner && 'facet' in final && containerRef.current) {
+        const w = containerRef.current.getBoundingClientRect().width;
+        const baseCols = Number(final.columns ?? 3);
+        const cols = w < 420 ? 1 : w < 560 ? Math.min(baseCols, fill.narrowColumns ?? 2) : baseCols;
+        const spacing = final.spacing as { column?: number } | number | undefined;
+        const gap = typeof spacing === 'number' ? spacing : spacing?.column ?? 16;
+        const tile = Math.max(80, Math.floor((w - cols * (fill.label ?? 40) - (cols - 1) * gap - 4) / cols));
+        final = { ...final, columns: cols, spec: { ...inner, width: tile } };
+        facetFit = { w, cols, tile };
+      }
     } else {
       final = {
         ...base,
@@ -587,34 +733,56 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
     }
 
     import('vega-embed').then(({ default: embed }) => {
-      if (!containerRef.current) return;
-      viewRef.current?.finalize();
-      // Vega Embed appends its wrapper. During hot reload or a spec update the
-      // finalized SVG otherwise remains in the container and doubles its height.
-      containerRef.current.replaceChildren();
-      embed(containerRef.current, final as never, {
-        actions: false,
-        renderer: 'svg',
-        formatLocale: CS_NUMBER_LOCALE,
-        timeFormatLocale: CS_TIME_LOCALE,
-        tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
-      }).then(result => {
-        viewRef.current = result.view as unknown as { finalize: () => void };
-        const pendingSeries = pendingRevealSeriesRef.current;
-        if (pendingSeries.length) {
-          pendingRevealSeriesRef.current = [];
-          void animateDataMarks('show', pendingSeries);
-        } else if (hasEnteredViewRef.current && !initialRevealDoneRef.current) {
-          initialRevealDoneRef.current = true;
-          void animateDataMarks('show');
-        }
-      }).catch(e => setError(String(e)));
+      const render = (finalSpec: Record<string, unknown>, attempt: number): void => {
+        if (!containerRef.current) return;
+        viewRef.current?.finalize();
+        // Vega Embed appends its wrapper. During hot reload or a spec update the
+        // finalized SVG otherwise remains in the container and doubles its height.
+        containerRef.current.replaceChildren();
+        embed(containerRef.current, finalSpec as never, {
+          actions: false,
+          renderer: 'svg',
+          formatLocale: CS_NUMBER_LOCALE,
+          timeFormatLocale: CS_TIME_LOCALE,
+          tooltip: hasPointerTooltip ? false : makeDpbpTooltipHandler(seriesColorMap(spec)),
+        }).then(result => {
+          viewRef.current = result.view as unknown as { finalize: () => void };
+          // _facet_fill: popisky os mají jinou šířku, než jsme odhadli – jednou změříme skutečnou
+          // šířku mřížky a dlaždice o rozdíl rozšíříme/zúžíme, aby graf sahal přesně od kraje do kraje.
+          if (facetFit && attempt === 0) {
+            const svg = containerRef.current?.querySelector('svg');
+            const diff = facetFit.w - (svg?.getBoundingClientRect().width ?? facetFit.w);
+            if (Math.abs(diff) > 2) {
+              const inner = finalSpec.spec as Record<string, unknown>;
+              const tile = facetFit.tile + Math.floor(diff / facetFit.cols);
+              render({ ...finalSpec, spec: { ...inner, width: tile } }, 1);
+              return;
+            }
+          }
+          const cd = clickDetailConfig(spec);
+          if (cd) {
+            result.view.addEventListener('click', (_event, item) => {
+              const datum = (item as { datum?: Record<string, unknown> } | null | undefined)?.datum;
+              if (datum && (datum[cd.field] || (cd.key && cd.items?.[String(datum[cd.key])]))) setDetail(datum);
+            });
+          }
+          const pendingSeries = pendingRevealSeriesRef.current;
+          if (pendingSeries.length) {
+            pendingRevealSeriesRef.current = [];
+            void animateDataMarks('show', pendingSeries);
+          } else if (hasEnteredViewRef.current && !initialRevealDoneRef.current) {
+            initialRevealDoneRef.current = true;
+            void animateDataMarks('show');
+          }
+        }).catch(e => setError(String(e)));
+      };
+      render(final, 0);
     });
 
     return () => {
       viewRef.current?.finalize();
     };
-  }, [spec, mini, bare, hiddenSeries]);
+  }, [spec, mini, bare, hiddenSeries, fillWidth]);
 
   if (error) return (
     <div style={{ padding: '8px', color: '#de1743', fontSize: '12px', fontFamily: 'monospace' }}>
@@ -801,9 +969,15 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
           }}
         />
       )}
-      <div style={{ overflowX: isConcat ? 'auto' : 'hidden' }}>
-        {chartCanvas(200, isConcat && totalWidth ? `${totalWidth}px` : '100%')}
+      <div style={{ overflowX: isConcat ? 'auto' : 'hidden', cursor: clickDetail ? 'pointer' : undefined }}>
+        {/* Rezerva proti poskočení stránky před vykreslením: 200 px, u nízkých grafů jen jejich výška ze
+            specifikace – jinak pod grafem zůstával prázdný pruh nad patičkou (Kateřina 28. 10. 2026). */}
+        {chartCanvas(
+          typeof spec?.height === 'number' ? Math.min(200, spec.height + 20) : 200,
+          isConcat && totalWidth ? `${totalWidth}px` : '100%',
+        )}
       </div>
+      {clickDetail && detail && <ClickDetailPanel cfg={clickDetail} datum={detail} onClose={() => setDetail(null)} />}
     </ChartCard>
   );
 }

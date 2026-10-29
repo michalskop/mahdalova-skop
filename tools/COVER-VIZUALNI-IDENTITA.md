@@ -14,21 +14,19 @@ Pevné prvky, které drží řadu coverů pohromadě, ať je motiv jakýkoli:
 - **Písma IBM Plex:** Serif Bold jen titulek a nápis loga, všechno ostatní Sans.
 - **Štítek nad titulkem:** `ANALÝZA • TÉMA`, první část karmínová s podtržením.
 - **Logo DataTimes.cz:** kolečko vlevo, nápis vpravo, volně a bez podkladu (žádná „pilulka“ ani kruh), v klidnějším dolním rohu.
-- **Velký motiv**, který vyplní plochu. Kde to jde, má ale **vlastní plochu vedle textu** (kapitola 1.1); text přes motiv jen tam, kde motiv musí zabrat celý formát (tečková mapa ČR, fotka jako podkres), a pak s halo v barvě pozadí.
+- **Velký motiv**, který vyplní plochu. Texty jsou bloky kolem motivu v jeho klidných místech (kapitola 1.1); přes motiv smí jít tam, kde zůstanou čitelné a nezakryjí data.
 - **Barvy jen z palety.** Motiv má 1–2 výrazné barvy, vedlejší vrstvy jsou tlumené odstíny téže škály.
 - **Hravost:** v řadě karet na homepage má cover zaujmout a vypadat jako sourozenec ostatních. Technicky správný, ale nudný cover je špatný cover.
 
-### 1.1 Kompozice: text a obraz vedle sebe, ne přes sebe
+### 1.1 Kompozice: motiv první, texty kolem něj
 
-Pravidlo od 26. 10. 2026 (Kateřina u OG coveru Brazílie, 2. kolo: „vycentrování na tomhle formátu není odůvodněné, mapa mohla být na straně a texty na druhé straně“).
+Závazná pravidla po formátech jsou v COVER-EDITOR.md → *Kompozice podle formátu*. Tady jen princip a jak jsme k němu došli:
 
-- **Kde je to vhodné, text a obrázek se nepřekrývají.** Na širokých formátech (OG 1200×630, homepage 1500×1200) dej motiv (mapu, vlajku, ikonu, fotku) na jednu stranu a text na druhou, **mapa vpravo, text vlevo**. Středové vrstvení textu přes ztlumený motiv je výjimka, ne výchozí volba.
-- **Výjimky, kdy překryv dává smysl:** motiv, který musí zabrat celou plochu (tečková mapa ČR přes celý cover, fotka jako podkres, tečková „slunečnice“ u citlivých témat), nebo formát na výšku, kde motiv leží pod textem.
-- **OG (1200×630) = „čtverec s ušima“ – výchozí od 26. 10. 2026 (Kateřina):** střed OG je přesně čtvercový cover zmenšený na 630 × 630, tedy bezpečná zóna, kterou WhatsApp a Messenger ořezávají; do stran se jen protáhne stejné pozadí se září a přechod mezi středem a boky je rozmazaný. Proč: náhled odkazu se ukazuje buď celý (Facebook, X, LinkedIn), nebo oříznutý na střední čtverec (WhatsApp, Messenger); samostatné široké rozvržení motiv buď usekne, nebo ho musí ztlumit pod textem. Jedna kompozice pro oba případy = cover se všude pozná a motiv je v plné síle. `cover-generator.cjs` to dělá sám: pozadí se zářemi je jedno souvislé přes celou šířku 1200 a obsah čtverce na něm leží bez vlastního pozadí (`html(…, { ucha: true })`). Nikdy boky nenatahovat ani nerozmazávat z obrázku – pokusy s rozmazanou kopií a nataženým krajním pruhem dělaly švy a „rozpité skvrny“ (Kateřina 26. 10.). Výjimka: motiv přirozeně široký nebo fotka, která vyplní šířku (Brazílie, trest smrti) – pak vlastní `format.og` (text vlevo od x 285, logo pod ním, motiv vpravo celý vidět, nebo `stred: true`). Barvy záře volit tak, aby boky navazovaly na motiv (u trikolóry záře v jejích tónech). V náhledech kreslit bezpečnou zónu OG čárkovaně.
-- **Propojení přes ztmavený okraj (OG Brazílie, 26. 10.):** motiv smí dojet až k textu, když jeho strana u textu plynule mizí do tmy (scrim v barvě pozadí, jako na Instagramu). Pak se text a obraz „skloubí“, ale text nikdy neleží přes plnou barvu motivu. V OG drží text rezervu asi 30 px uvnitř středního čtverce (start x ≈ 315), motiv smí zajet i pod text (Kateřina: „klidně ať zasahuje pod ten text“), když jeho část pod textem je ztmavená přechodem; silnější přechod jen pro jeden formát: `pro.og.motiv.scrim`.
-- **Homepage:** text vlevo od x 180, motiv vpravo, pravý horní roh (x ≥ 950, y ≤ 280) volný pro štítek rubriky. Když se titulek nevejde vedle motivu, zalom ho jinak (přes `pro.homepage.titulek`), motiv zmenši, nebo ho pod textem plynule ztmav (viz propojení výše); přes text nikdy v plné barvě.
-- **Technicky:** v `cover.config.cjs` `format.og = { stred: false, box: [285, …] }` vypne středové rozvržení OG; `pro: { og: { titulek, nad, pod, logo: 'vlevo' } }` upraví texty a polohu loga jen pro jeden formát; `motiv.pozice` posune motiv. Vzor: `volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula` (homepage i OG: velká mapa vpravo zajíždí pod text a pod titulkem jemně prosvítá, scrim [30, 62]; Kateřina 26. 10.: „klidně to použij v tomto duchu“).
-- **Kontrola:** na kontaktním archu (`tools/kontaktni-arch.cjs`) se nesmí žádný text dotýkat motivu v žádném z pěti formátů.
+- **Každý formát se skládá zvlášť podle motivu**, ne jednou šablonou. Středové vrstvení textu přes ztlumený motiv ani pevné „text vlevo, motiv vpravo“ nejsou výchozí volby (Kateřina 26. 10. u Brazílie: „vycentrování na tomhle formátu není odůvodněné“; 29. 10.: „mustr nemá být jednotný za každou cenu“).
+- **OG naležato (od 29. 10. 2026):** motiv uprostřed nebo blízko středu, texty jako bloky kolem něj ve středním čtverci s vůlí 35 px (x 320–880), motiv smí do boků. Vzory: Miliarda za volby, slunečnice, větrníky. „Čtverec s ušima“ (zmenšený čtvercový cover a prázdné boky) zůstává jen nouzově. Boky nikdy nenatahovat ani nerozmazávat z obrázku (švy a „rozpité skvrny“, 26. 10.).
+- **Propojení přes ztmavený okraj (OG Brazílie, 26. 10.):** motiv smí dojet pod text, když jeho strana u textu plynule mizí do tmy (scrim v barvě pozadí); silnější přechod jen pro jeden formát: `pro.og.motiv.scrim`. Vzor `volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula`.
+- **Homepage:** text vlevo od x 180, motiv vpravo a velký, pravý horní roh (x ≥ 950, y ≤ 280) volný pro štítek rubriky.
+- **Kontrola:** rozhoduje čitelnost, ne dotyk (COVER-EDITOR.md, bod 5 kontroly). Na kontaktním archu se kontroluje i OG ořezaný na čtverec.
 
 ## 2. Nejdřív věta, pak obraz
 
@@ -37,6 +35,15 @@ Než začneš kreslit, napiš jednou větou, co má čtenář z coveru pochopit 
 Test: zakryj titulek. Pozná čtenář z motivu aspoň směr zjištění (víc × míň, kde, kdo)? Když ne, motiv je jen dekorace.
 
 **Titulek coveru má dát informaci, ne holé číslo** (Kateřina 26. 10., cover „Obce utratily 519 miliard korun“): samotná částka neřekne, jestli je to hodně, nebo málo. Číslo zasaď do srovnání („Obce hospodaří s pětinou toho, co utratí stát“) nebo ho nahraď zjištěním. Titulek ani podtitulek nesmí zbytečně zpochybňovat instituci, o které článek vysvětluje (u radnic ne „starostu si přímo nevolíme“). Štítek nad titulkem neopakuje titulek: u rozcestníku „Komunální volby 2026“ je ve štítku „Volby do obecních zastupitelstev“.
+
+### 2.1 Cover musí říkat to, co článek (ponaučení z Data pro budoucí premiérku, 28. 10. 2026)
+
+Cover je tvrzení o článku, a proto platí stejná pravidla jako pro text: každé číslo a každá věta na něm musí sedět s hotovým (revidovaným) článkem.
+
+- **Cover se dělá až z posledního znění článku.** Titulek, podtitulek, čísla v grafu i popisky se kontrolují proti textu článku a proti skriptu v jeho `_data_pipeline/`. Kdo mění titulek nebo číslo v článku, přegeneruje i cover, než jde cokoli ven.
+- **Kontrola před ukázkou:** (1) titulek coveru je tvrzení, které článek dokládá; (2) každé číslo na coveru najdu v článku nebo v jeho `_data_pipeline/` s odkazem na zdroj; (3) rok, jednotka a skupina (např. „lidé ve věku 15–64 let“, „děti do tří let“) jsou stejné jako v článku; (4) motiv ukazuje data z článku, ne jiná.
+- **Odstrašující příklad (říjen 2026):** covery kapitoly Demografie vznikly dřív než revize textů. Po revizi nesedělo osm z deseti: jesle „5 % × 35 %“ (správně 7,9 % × 40,6 %), Švédsko „1,50 → 1,97, dnes 1,45“ (správně 1,54 → 1,98, 1,42), „v roce 2040 jen 1,8“ (správně 2,5; 1,8 je až rok 2060), Togo „16 mil.“ (správně 14,0 mil. v roce 2050).
+- **Hlavička coveru speciálu** má pevně dva řádky vlevo i vpravo, oba bloky svisle vycentrované na společné ose: vlevo logo speciálu a název („Data pro budoucí / premiérku“), vpravo štítek „ANALÝZA“ a na novém řádku „01 DEMOGRAFIE“ (číslo a název části, bez slova „kapitola“ a bez odrážky, která štítek zalamuje).
 
 ## 3. Rozcestí: máme fotku?
 
@@ -56,7 +63,7 @@ Motiv se kreslí ze **skutečných čísel článku**, ideálně ze stejného v�
 
 ### 4.1 Tečková mapa ČR: když jde o místo
 
-Volby, obce, kraje. Tečková mapa republiky přes celý cover, body obcí nebo okrsků zvětšené či obarvené podle hodnoty z článku. Jedno zvýrazněné místo dostane jméno přímo u tečky. Vzory: `analyza-2026-10-23-referenda-vetrne-elektrarny` (větrník v každé obci s referendem), `volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu`, `volby-cr-2026-10-21-kolik-stoji-volby` (tečková mapa obcí). Podrobnosti o OG a popiscích jsou v *Ponaučení z oprav* v COVER-EDITOR.md.
+Volby, obce, kraje. Tečková mapa republiky přes celý cover, body obcí nebo okrsků zvětšené či obarvené podle hodnoty z článku. Jedno zvýrazněné místo dostane jméno přímo u tečky. Vzory: `analyza-2026-10-23-referenda-vetrne-elektrarny` (větrník v každé obci s referendem), `volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu`, `volby-cr-2026-10-21-kolik-stoji-volby` (tečková mapa obcí). Rozvržení OG (mapa přes střed, texty kolem) a legendy: COVER-EDITOR.md → *Kompozice podle formátu*.
 
 ### 4.2 Tečková jednotka a „slunečnice“: když jde o počet a změnu
 
@@ -66,7 +73,7 @@ Vzor: `analyza-2026-10-25-poruchy-prijmu-potravy` (Kateřina: „sdělení je v 
 - **Tečky leží na Vogelově spirále** (zlatý úhel, poloměr `c·√i`), jako semínka ve slunečnici. Disk roste od středu, takže **plocha je přesně úměrná počtu**: trojnásobek je vidět bez čtení čísel.
 - **Před a po v jednom tvaru:** vnitřek disku = výchozí rok v tlumeném odstínu (brandOrange.8), přírůstek = zářivá barva (brandOrange.6). Oko hned vidí, kolik přibylo.
 - **Tvar s náznakem:** disk připomíná květinu. Motiv smí jemně evokovat téma (růst, dívky, živé), ale zůstává abstraktní a datový. Obraz má být poctivý graf a zároveň hezký tvar, ne doslovná ilustrace.
-- **OG (1200×630):** v kraji vlevo malý disk výchozího roku, vpravo velký disk cílového roku, oba ve **stejném měřítku** s popiskem roku. Titulek zůstává ve středním čtverci.
+- **OG (1200×630):** jeden disk (stejný jako ve čtverci, vnitřek = výchozí rok) blízko středu, mírně zmenšený; texty a legenda ve sloupci vlevo ve středním čtverci. Dva disky v krajích (do 28. 10.) rozdělily srovnání a ve WhatsApp ořezu zmizely.
 - Kód: `_cover_pipeline/motiv.cjs` u článku (konstanty z dat, `FORMATY` s polohou disku pro každý formát). Přepoužitelné na každé „X lidí → Y lidí“: počty pacientů, kandidátů, obcí, žádostí.
 
 **Animace slunečnice** (Kateřina 25. 10. 2026: „úplně luxusní v těch třech odstínech“): disk roste rok po roku, **tři odstíny**: výchozí rok tlumeně (brandOrange.8), přírůstek zářivě (brandOrange.6) a tečky přibylé v právě ukazovaném roce světle (brandOrange.3), dokud nezačne další rok.
@@ -75,6 +82,7 @@ Vzor: `analyza-2026-10-25-poruchy-prijmu-potravy` (Kateřina: „sdělení je v 
 - **Jedno sdělení, žádné zbytečně přesné detaily.** Cover ani animace nejsou místo pro přesná čísla (1 199 → 3 858, počty za jednotlivé roky, popisek zlomového roku). Stačí titulek s hlavním sdělením a krátký dovětek („je dnes třikrát víc“ + „než v roce 2010“). Přesná čísla patří do článku a carouselu.
 - **„Dnes“, ne rok dat.** Nejčerstvější data komunikujeme jako „dnes“: titulek „je dnes třikrát víc“, počítadlo animace na konci ukáže „dnes“ místo letopočtu. Nekomunikovat čísla z jiného roku, než je výchozí a dnešní.
 - **Počítadlo jen s rokem**, bez počtu lidí, ať čtenář neřeší, proč se mluví zrovna o tom roce.
+- **Křivky tečou plynule, nezastavují se na každém roce** (Kateřina 29. 10. 2026 u animace křivek obyvatel k explaineru o genocidě: „ať není trhaný, nech to téct plynule“). Čára se dokresluje spojitě celou dobu kresby, jemně zpomalí jen rozjezd a dojezd; kroky „rok – pauza – rok“ působí trhaně. GIF pak s 25 snímky za sekundu, ne s 15. Vzor: `explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/animace.config.cjs`.
 - **Legenda pod motivem**, ne v bloku textu: titulek nahoře, motiv o kus výš, pod ním legenda na střed motivu.
 - **Jednotka („1 tečka = 10 dívek“) může stát svisle** u pravého okraje, otočená o −90°, nenápadně ztlumená. Je to informace „z boku“, nesoutěží s titulkem.
 - **Animace začíná i končí stavem „dnes“.** První snímek je náhled videa a GIFu (a jediné, co ukáže poštovní program bez animací), proto na něm musí být hlavní sdělení: plný dnešní stav. Pak se motiv stáhne na výchozí rok, doroste zpátky do dneška a smyčka navazuje bez skoku.
@@ -177,10 +185,33 @@ Platí pro všechno, co jde ven na web nebo na sociální sítě (článek, spec
 
 **Carousel se skládá z obsahu článku**, nic se nevymýšlí znovu:
 
-1. Slide 1 = cover-instagram (hák: hlavní zjištění).
+1. Slide 1 = cover-instagram (hák: hlavní zjištění), nebo **otázka k tipování** („U kterého prezidenta mají ženy největší podíl?“), na kterou odpoví další slidy.
 2. Slidy 2 až n−2 = po jednom zjištění na slide: graf nebo mapa z článku překreslené na výšku 4:5, velké popisky, titulek slidu je tvrzení (stejné jako titulek grafu v článku).
 3. Předposlední slide = jak jsme to počítali a co data neříkají (jednou dvěma větami).
-4. Poslední slide = „Celý článek na DataTimes.cz“ a odkaz v biu; u citlivých témat kontakt na pomoc (např. Linka Anabell).
+4. Poslední slide = **výzva k interakci** + „Celý článek na DataTimes.cz“ a odkaz v biu; u citlivých témat kontakt na pomoc (např. Linka Anabell).
+
+### 8.1 Výzva k interakci: v každém carouselu (povinné)
+
+Od 28. 10. 2026 má každý náš carousel výzvu, aby lidé odpověděli. Převzali jsme to od týmu Moravec.cz, se kterým jsme dělali carousel k vyznamenáním, a Kateřina chce tenhle způsob komunikace s publikem používat vždy. Carousel není jen shrnutí článku, je to rozhovor.
+
+- **Tip na začátku:** úvodní slide položí otázku, na kterou si čtenář může tipnout, než se dozví odpověď („Který prezident rozdal nejvíc vyznamenání? Tipněte si.“). Odpověď přijde v dalších slidech.
+- **Názor na konci:** poslední slide se ptá na postoj a zve do komentářů. Vzor: „Zatímco Václav Havel rozdával vyznamenání po desítkách, Václav Klaus počty držel na minimu. Jaký z těchto přístupů je vám bližší? Dejte nám vědět do komentářů a sledujte dál náš sváteční datový speciál.“
+- **Pozvánka na další díl:** když vychází série výstupů (sváteční speciál, volby), výzva láká na pokračování („pro odpovědi dnes sledujte naše sítě“).
+- **Otázka musí jít z dat zodpovědět** a nesmí podsouvat odpověď. Tip musí mít jednoznačné řešení: „nejvíce žen“ je podle počtu jiný prezident než podle podílu, proto ptát se přesně. Otázky na názor stojí na doložené věci (Klaus Havlovy počty sám kritizoval), ne na naší interpretaci.
+- **Stejná výzva i v textu pod carouselem** (`carousel-caption.txt`): otázka + „napište nám do komentářů“.
+
+### 8.2 Pravidla obsahu carouselu (ponaučení z vyznamenání, 28. 10. 2026)
+
+- **Čísla přesně jako v článku a ve stejné jednotce:** „71 vyznamenání z 547 obdržely ženy“, ne „71 žen z 547 oceněných“, když jeden člověk mohl dostat víc vyznamenání. Na všech slidech série stejná formulace.
+- **Stejné měřítko os** na všech slidech, které čtenář porovnává (sloupce prezidentů): stejné číslo = stejná výška.
+- **Chronologické pořadí** (Havel → Klaus → Zeman → Pavel).
+- **Přechodné roky popsat:** „2003 (leden)“ u odcházejícího prezidenta, aby součty seděly s článkem.
+- **Žádná nehotová data:** ročník, který ještě neproběhl (ohlášený počet na večerní ceremonii), do grafu nepatří, nebo musí být výrazně odlišený.
+- **Poznámka k metodě srozumitelně:** „Počítáme všechna vyznamenání roku, i ta udělená při státních návštěvách, ne jen 28. října.“
+- **Titulky slidů jsou doložená tvrzení,** ne výklad („Nejvíc vyznamenání ročně od Havla“, ne „Návaznost na Havlovu linii“). „Historicky nejvyšší“ jen pro období, které máme spočítané („nejvíc za rok od roku 1995“).
+- **Slova z analýzy:** „oblast / za jaké zásluhy“, ne „profese“; „vyznamenání“, ne „metály“ či „ocenění“, když jde o řády i medaile.
+- **Dekorace nesmí vypadat jako data:** barevné výseče přes medaile čtenář čte jako koláčový graf. Červená se zelenou navíc barvoslepí nerozliší.
+- **Co-branding:** logo partnera (Moravec) nepřesouváme ani nezmenšujeme bez domluvy s partnerem.
 
 Generátor: `tools/carousel-generator.cjs` + `_cover_pipeline/carousel.config.cjs` u článku:
 
@@ -210,7 +241,7 @@ Konfigurace článku (`_cover_pipeline/animace.config.cjs`) převezme štítek, 
 ## 9. Postup krok za krokem
 
 1. Věta, kterou má cover ukázat (kapitola 2), a cesta podle rozcestí (kapitola 3).
-2. Čísla z `_data_pipeline/` článku: zapsat je do `motiv.cjs` jako konstanty s odkazem na zdroj.
+2. Čísla z `_data_pipeline/` článku: zapsat je do `motiv.cjs` jako konstanty s odkazem na zdroj. Před kreslením zkontrolovat, že cover odpovídá poslednímu znění článku (kapitola 2.1).
 3. `_cover_pipeline/motiv.cjs` vyrobí `motiv-<formát>.svg`, `cover.config.cjs` nastaví text, legendu, barvy a logo, `tools/cover-generator.cjs` vyrenderuje všech pět formátů.
 4. Kontaktní arch: všech pět formátů, karty 5:4 se štítkem rubriky, mobilní seznam, náhled 120×96, OG a jeho čtvercový ořez, mřížka Instagramu, zóny stories.
 5. Carousel a případné animace podle kapitoly 8.

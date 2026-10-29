@@ -37,6 +37,7 @@
     { "slug": "09-nemocnice", "topic": "Analýza" },
     { "slug": "10-kdo-se-postara", "topic": "Péče", "fullWidth": true },
     { "slug": "11-kdo-vlastni-peci", "topic": "Investigace" },
-    { "slug": "12-treti-navrat-vojtecha", "topic": "Kontext" }
+    { "slug": "12-treti-navrat-vojtecha", "topic": "Kontext" },
+    { "web": "analyza-2026-08-04-jak-se-zije-lidem-se-zdravotnim-postizenim-v-cesku", "topic": "Analýza" }
   ]
 }

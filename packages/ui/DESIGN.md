@@ -517,7 +517,14 @@ const stats: KeyNumberItem[] = [
 
 Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `yamlFile` (filename relative to article directory, loaded server-side like Timeline), `align` (alignment for single items: 'left', 'center', 'right', default: 'left', desktop only).
 
-Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba).
+Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba), `link?` (`{ href, text }` – a link under the description, e.g. `text: "Psali jsme: …"` to the article where we analysed the number).
+
+**When to use it (Kateřina, 29. 10. 2026 – box review of all articles):** a card belongs in the box only when the number says something on its own – it is compared (share, multiple, vs. another country/year/group) or explains the story. A bare total the reader can't judge („81,9 mld. Kč“, „190 174 kandidátů“, „16. řádné volby“) is not a key number: give it a comparison (e.g. „1,9× dražší je správa nejmenších obcí“) or move the facts into an ```` ```infobox info ```` „**Ve zkratce**“ with 2–3 bullet sentences. Election/prediction boxes with just the result numbers (Brazil, Israel, Serbia, Sweden) were removed – the prediction is told by charts. Card rules:
+- the title continues the number as one phrase, so it starts **lowercase** („6 254 / obcí v Česku“, „161 / pachatelů šlo do vězení“); capital only when it doesn't read as a phrase („52,9 % / Objasněnost znásilnění“) or for proper nouns („Čechů“);
+- the description says why the number is what it is (one short sentence of explanation, e.g. why clearance is only half), not just its source;
+- a rough own estimate is allowed when the article explains it, labelled „hrubý odhad / přepočet, ne statistika“;
+- YAML: put any description containing „: “ in quotes (an unquoted colon broke the page; `checkArticles.js` now parses every `yamlFile`);
+- titles and descriptions get Czech typography in the component (one-letter prepositions, NBSP in thousands).
 
 **Colors:** Use theme names (`brand`, `brandTeal`, `brandOrange`, `brandNavy`, `brandYellow`, `brandForestGreen`, `brandEmeraldMint`, `brandDeepRed`, `brandRoyalBlue`, `background`), shade notation (`brand[9]`, `brandTeal[3]`), or custom codes (`#ff6b35`, `rgba(26,111,168,0.8)`).
 

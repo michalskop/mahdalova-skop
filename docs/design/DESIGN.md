@@ -325,6 +325,34 @@ The InfoBox left-border system is the most distinctive depth signal: a 4px solid
 
 ## 10. Charts and Data Visualization – Binding Standard (added 2026-07-09)
 
+### Before you send a chart – mandatory check (added 2026-10-28)
+
+Kateřina, 28. 10. 2026: charts in the UN commission article came out in a grey frame although the no-frame rule
+already existed (it was buried as a bar-chart detail further below). These four points apply to **every** chart, any
+mark type, and are checked on a real render on desktop **and** at 390 px mobile width before the chart is shown:
+
+1. **No frame around the plot area, ever.** No `view.stroke`, no axis `domain` lines, no `ticks`. Lines in the plot
+   are only labelled gridlines (`#d4d4c8`), and only where an axis is needed at all – with direct labels the value
+   axis is hidden (`axis: null`). `VegaChartImpl.tsx` sets `config.view.stroke: null` by default since 28. 10. 2026,
+   so a frame appears only if a spec asks for it explicitly – don't.
+2. **Direct labels: inside the bar when they fit, otherwise right after it.** Decide on the rendered pixel width, not
+   on the data value: Vega expression `datum.n / domainMax * width > labelWidthPx` (label width ≈ characters × 7.2 + 18
+   px at 12.5 px bold). White text on saturated bars, ink `#101432` on light/grey bars. Several small segments of one
+   stacked row share one label after the row („chlapci 237 · dívky 7“). Reference:
+   `kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu/_data_pipeline/grafy.py`.
+3. **Nothing wraps or gets clipped badly.** Category labels short enough to leave the bars room on mobile (move exact
+   periods into the subtitle); non-breaking spaces in thousands (`1 080`), dates (`7. 10. 2023`), number + unit
+   (`16 let`, `60 %`) and after one-letter prepositions in title and subtitle; the footer `• data:` line fits on one
+   line – link text names the document briefly („Zpráva komise OSN A/81/430“), details go to the subtitle.
+4. **No empty band above the footer.** The chart canvas reserves at most the spec `height` + 20 px (component default
+   since 28. 10. 2026); don't pad low charts with extra `height`.
+5. **Line labels placed in data coordinates collide on mobile.** A direct label at a fixed x/y (e.g. „Likud v průběžném
+   součtu“ at x = 8 %) is ~45 % of the plot wide at 375 px, so it runs into lines that are clear on desktop. Put labels
+   above a series' peak or below its line where nothing else runs, keep end labels of close series on opposite sides
+   (one `baseline: bottom`, the other `baseline: top`), and check where a long label ends at 375 px. Vega line charts
+   draw in with an animation – wait a few seconds before judging a screenshot. Reference (29. 10. 2026):
+   `volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_data_pipeline/predikce.py`.
+
 ### Default implementation for a new chart
 
 - Start with `apps/web/components/charts/VegaChart.tsx` / `VegaChartImpl.tsx` for every new chart, regardless of whether its marks are bars, columns, lines, dots or areas. Build a custom renderer only when the interaction or layout cannot be expressed through this shared component.

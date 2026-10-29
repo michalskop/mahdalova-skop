@@ -1,0 +1,514 @@
+{
+ "zdroj": "Světová banka, WDI SP.POP.TOTL (odhady UN World Population Prospects 2024); spočítáno v _data_pipeline/krivky.py, funkce rady()",
+ "od": -5,
+ "do": 6,
+ "pripady": [
+  {
+   "zeme": "Kambodža",
+   "rok0": 1975,
+   "skupina": "Rudí Khmerové, 1975–1979"
+  },
+  {
+   "zeme": "Rwanda",
+   "rok0": 1994,
+   "skupina": "Tutsiové, 1994"
+  },
+  {
+   "zeme": "Guatemala",
+   "rok0": 1981,
+   "skupina": "Ixilové, 1981–1983"
+  },
+  {
+   "zeme": "Irák",
+   "rok0": 2014,
+   "skupina": "Jezídové, 2014"
+  },
+  {
+   "zeme": "Myanmar",
+   "rok0": 2017,
+   "skupina": "Rohingové, 2016–2017"
+  }
+ ],
+ "rady": [
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": -5,
+   "rok": 1970,
+   "obyv": 6639182,
+   "index": 97.9
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": -4,
+   "rok": 1971,
+   "obyv": 6620880,
+   "index": 97.6
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": -3,
+   "rok": 1972,
+   "obyv": 6673886,
+   "index": 98.4
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": -2,
+   "rok": 1973,
+   "obyv": 6739726,
+   "index": 99.4
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": -1,
+   "rok": 1974,
+   "obyv": 6783240,
+   "index": 100.0
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 0,
+   "rok": 1975,
+   "obyv": 6581371,
+   "index": 97.0
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 1,
+   "rok": 1976,
+   "obyv": 6134991,
+   "index": 90.4
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 2,
+   "rok": 1977,
+   "obyv": 5668551,
+   "index": 83.6
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 3,
+   "rok": 1978,
+   "obyv": 5211653,
+   "index": 76.8
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 4,
+   "rok": 1979,
+   "obyv": 5088808,
+   "index": 75.0
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 5,
+   "rok": 1980,
+   "obyv": 5199872,
+   "index": 76.7
+  },
+  {
+   "zeme": "Kambodža",
+   "skupina": "Rudí Khmerové, 1975–1979",
+   "t": 6,
+   "rok": 1981,
+   "obyv": 5284495,
+   "index": 77.9
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": -5,
+   "rok": 1989,
+   "obyv": 7184706,
+   "index": 90.0
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": -4,
+   "rok": 1990,
+   "obyv": 7375307,
+   "index": 92.4
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": -3,
+   "rok": 1991,
+   "obyv": 7526966,
+   "index": 94.3
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": -2,
+   "rok": 1992,
+   "obyv": 7683266,
+   "index": 96.3
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": -1,
+   "rok": 1993,
+   "obyv": 7981132,
+   "index": 100.0
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 0,
+   "rok": 1994,
+   "obyv": 6792352,
+   "index": 85.1
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 1,
+   "rok": 1995,
+   "obyv": 5674118,
+   "index": 71.1
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 2,
+   "rok": 1996,
+   "obyv": 6708764,
+   "index": 84.1
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 3,
+   "rok": 1997,
+   "obyv": 7755238,
+   "index": 97.2
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 4,
+   "rok": 1998,
+   "obyv": 8081681,
+   "index": 101.3
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 5,
+   "rok": 1999,
+   "obyv": 8147912,
+   "index": 102.1
+  },
+  {
+   "zeme": "Rwanda",
+   "skupina": "Tutsiové, 1994",
+   "t": 6,
+   "rok": 2000,
+   "obyv": 8213931,
+   "index": 102.9
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": -5,
+   "rok": 1976,
+   "obyv": 6262404,
+   "index": 90.8
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": -4,
+   "rok": 1977,
+   "obyv": 6401515,
+   "index": 92.8
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": -3,
+   "rok": 1978,
+   "obyv": 6561534,
+   "index": 95.1
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": -2,
+   "rok": 1979,
+   "obyv": 6727797,
+   "index": 97.5
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": -1,
+   "rok": 1980,
+   "obyv": 6900212,
+   "index": 100.0
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 0,
+   "rok": 1981,
+   "obyv": 7075648,
+   "index": 102.5
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 1,
+   "rok": 1982,
+   "obyv": 7240241,
+   "index": 104.9
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 2,
+   "rok": 1983,
+   "obyv": 7419642,
+   "index": 107.5
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 3,
+   "rok": 1984,
+   "obyv": 7630682,
+   "index": 110.6
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 4,
+   "rok": 1985,
+   "obyv": 7849693,
+   "index": 113.8
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 5,
+   "rok": 1986,
+   "obyv": 8070818,
+   "index": 117.0
+  },
+  {
+   "zeme": "Guatemala",
+   "skupina": "Ixilové, 1981–1983",
+   "t": 6,
+   "rok": 1987,
+   "obyv": 8296485,
+   "index": 120.2
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": -5,
+   "rok": 2009,
+   "obyv": 30058206,
+   "index": 85.2
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": -4,
+   "rok": 2010,
+   "obyv": 31045366,
+   "index": 88.0
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": -3,
+   "rok": 2011,
+   "obyv": 32161424,
+   "index": 91.2
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": -2,
+   "rok": 2012,
+   "obyv": 33654842,
+   "index": 95.4
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": -1,
+   "rok": 2013,
+   "obyv": 35281989,
+   "index": 100.0
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 0,
+   "rok": 2014,
+   "obyv": 36550059,
+   "index": 103.6
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 1,
+   "rok": 2015,
+   "obyv": 37560535,
+   "index": 106.5
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 2,
+   "rok": 2016,
+   "obyv": 38469627,
+   "index": 109.0
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 3,
+   "rok": 2017,
+   "obyv": 39337353,
+   "index": 111.5
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 4,
+   "rok": 2018,
+   "obyv": 40265624,
+   "index": 114.1
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 5,
+   "rok": 2019,
+   "obyv": 41192171,
+   "index": 116.8
+  },
+  {
+   "zeme": "Irák",
+   "skupina": "Jezídové, 2014",
+   "t": 6,
+   "rok": 2020,
+   "obyv": 42116605,
+   "index": 119.4
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": -5,
+   "rok": 2012,
+   "obyv": 49837446,
+   "index": 96.8
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": -4,
+   "rok": 2013,
+   "obyv": 50262658,
+   "index": 97.6
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": -3,
+   "rok": 2014,
+   "obyv": 50681634,
+   "index": 98.4
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": -2,
+   "rok": 2015,
+   "obyv": 51089056,
+   "index": 99.2
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": -1,
+   "rok": 2016,
+   "obyv": 51495696,
+   "index": 100.0
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 0,
+   "rok": 2017,
+   "obyv": 51894938,
+   "index": 100.8
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 1,
+   "rok": 2018,
+   "obyv": 52272247,
+   "index": 101.5
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 2,
+   "rok": 2019,
+   "obyv": 52640713,
+   "index": 102.2
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 3,
+   "rok": 2020,
+   "obyv": 53016522,
+   "index": 103.0
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 4,
+   "rok": 2021,
+   "obyv": 53387102,
+   "index": 103.7
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 5,
+   "rok": 2022,
+   "obyv": 53756787,
+   "index": 104.4
+  },
+  {
+   "zeme": "Myanmar",
+   "skupina": "Rohingové, 2016–2017",
+   "t": 6,
+   "rok": 2023,
+   "obyv": 54133798,
+   "index": 105.1
+  }
+ ]
+}
