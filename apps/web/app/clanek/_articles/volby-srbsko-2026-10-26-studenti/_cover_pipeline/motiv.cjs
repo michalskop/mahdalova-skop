@@ -1,13 +1,14 @@
 // Motiv coveru: bublinová mapa obcí Srbska (sourozenec coveru „Proč vyhrál Lula“).
 // Kolečko = obec nebo městský obvod RIK v těžišti obce, plocha ∝ zapsaní voliči; barva = kdo vede podle predikce
-// (Studentská listina brandOrange.5, Vučićova SNS brandEmeraldMint.6, menšinové a ostatní listiny šedě),
+// (Studentská listina brandDeepRed.4, Vučićova SNS brandRoyalBlue.4 – dominantní barvy uskupení převedené do palety,
+// na tmavém pozadí světlejší odstíny; menšinové a ostatní listiny šedě),
 // pod tím rozmazaný stín obcí. Data: obce.json (priprav_obce.py). Kosovo, zahraničí a věznice v mapě nejsou.
 // node motiv.cjs → motiv-<formát>.svg sem i do _cover_pipeline článku s predikcí (stejný motiv, jiný text).
 const fs = require('fs');
 const path = require('path');
 const MAPA = require('./mapa-pozice.json');
 const FORMATY = { homepage: [1500, 1200], og: [1200, 630], square: [1080, 1080], instagram: [1080, 1350], story: [1080, 1920] };
-const STU = '#ff7f2a', SNS = '#12b886', JINE = '#bcbcb0', STIN = '#383d82'; // brandOrange.5, brandEmeraldMint.6, background.9, brandRoyalBlue.7
+const STU = '#d85a74', SNS = '#697fe6', JINE = '#bcbcb0', STIN = '#2f325c'; // brandDeepRed.4, brandRoyalBlue.4, background.9, brandNavy.8
 const CILE = [__dirname, path.join(__dirname, '..', '..', 'volby-srbsko-2026-10-25-predikce', '_cover_pipeline')];
 
 (async () => {

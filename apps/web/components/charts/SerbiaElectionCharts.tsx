@@ -3,7 +3,7 @@
 // One-off grafy k článkům o srbských volbách 2026:
 //  - <SerbiaNightTimeline /> volební noc 25.–26. 10. 2026: predikce DataTimes × průběžné sčítání RIK v čase
 // Data generuje _data_pipeline/build.py u článku do serbia2026Data.ts. Stavba, barvy a pomocníci jako
-// BrazilRunoffCharts.tsx (oranžová × smaragdová je čitelná i pro barvoslepé).
+// BrazilRunoffCharts.tsx; vínová × královská modrá je čitelná i pro barvoslepé.
 
 import { useState } from 'react';
 import ChartCard from './ChartCard';
@@ -12,8 +12,10 @@ import { C, FONT, fmt, useWidth, Tooltip, type Tip } from './BrazilPredictionCha
 import { NIGHT, STAV } from './serbia2026Data';
 import { VOTES } from './serbia2026AnalyzaData';
 
-const STU = C.lula;     // Studentská listina – brandOrange.6
-const SNS = C.flavio;   // SNS – brandEmeraldMint.7
+// Barvy uskupení podle jejich dominantních barev, převedené do naší palety (Kateřina 29. 10. 2026):
+// studenti používají tmavou karmínovou (#a81a32 na studenti.org.rs), SNS tmavou modrou (#242970 v logu).
+const STU = '#a03250';  // Studentská listina – brandDeepRed.6
+const SNS = '#4a51ab';  // Vučićova SNS – brandRoyalBlue.6
 
 type P = { m: number; c: number; s: number; slo: number; shi: number; sr: number; n: number; nlo: number; nhi: number; nr: number };
 const ALL: P[] = NIGHT.map(([m, c, s, slo, shi, sr, n, nlo, nhi, nr]) => ({ m, c, s, slo, shi, sr, n, nlo, nhi, nr }));
@@ -38,7 +40,7 @@ const EVENTS: NightEvent[] = [
 const TL_LEGEND = [
   { key: 'stu', label: 'Studentská listina', color: STU },
   { key: 'sns', label: 'Vučićova SNS', color: SNS },
-  { key: 'count', label: 'průběžné sčítání (čárkovaně)', color: C.ink2 },
+  { key: 'count', label: 'průběžné sčítání (čárkovaně)', color: C.beige },
 ];
 const SOURCE = 'živý model Mahdalová & Škop nad průběžnými výsledky [Republičke izborne komisije](https://www.rik.parlament.gov.rs/)';
 
@@ -163,7 +165,7 @@ export function SerbiaNightTimeline({ events = [] }: { events?: NightEvent[] }) 
 // hodnoty přímo u pruhů; světlejší pruh = 2023, sytý = 2026.
 
 const VSOURCE = 'Republička izborna komisija: [výsledky 2026](https://www.rik.parlament.gov.rs/) a 2023, vlastní výpočet';
-const VCOL: Record<string, string> = { sns: SNS, srs: SNS, opo: STU, sps: C.ink2, ost: C.ink2, nep: C.beige, nev: C.beige };
+const VCOL: Record<string, string> = { sns: SNS, srs: SNS, opo: STU, sps: C.beige, ost: C.beige, nep: C.grid, nev: C.grid };
 const mil = (v: number) => (v >= 1e6 ? `${fmt(v / 1e6, 2)} mil.` : `${Math.round(v / 1000).toLocaleString('cs-CZ')} tis.`);
 
 export function SerbiaVotesChart() {
@@ -179,8 +181,8 @@ export function SerbiaVotesChart() {
       <ChartCard title="Vučićova listina dostala skoro stejně hlasů jako v roce 2023. Studenti o 1,4 milionu víc než tehdejší hlavní opozice"
         subtitle="Počet hlasů v parlamentních volbách 2023 a 2026 podle skupin kandidátek a počet zapsaných voličů, kteří nepřišli" source={VSOURCE}>
         <div style={{ display: 'flex', gap: 18, fontFamily: FONT, fontSize: 13, color: C.ink, margin: '0 0 10px', flexWrap: 'wrap' }}>
-          <span><span style={{ display: 'inline-block', width: 14, height: 10, background: C.ink2, opacity: 0.35, marginRight: 6 }} />2023</span>
-          <span><span style={{ display: 'inline-block', width: 14, height: 10, background: C.ink2, marginRight: 6 }} />2026</span>
+          <span><span style={{ display: 'inline-block', width: 14, height: 10, background: C.ink, opacity: 0.35, marginRight: 6 }} />2023 (světlejší pruh)</span>
+          <span><span style={{ display: 'inline-block', width: 14, height: 10, background: C.ink, marginRight: 6 }} />2026</span>
         </div>
         <div ref={ref} style={{ width: '100%' }}>
           {W > 0 && (

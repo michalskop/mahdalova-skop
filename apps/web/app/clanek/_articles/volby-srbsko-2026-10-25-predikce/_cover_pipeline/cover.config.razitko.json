@@ -2,11 +2,11 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-homepage.png",
-      "otisk": "c46d2d32063643d6",
+      "otisk": "fb60e3f949c99b25",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "a4f674a058b5eb64",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-homepage.svg": "cbde1c7820dedd42"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-homepage.svg": "3d3832f6fbc805ac"
       },
       "kontrola": {
         "chyby": [],
@@ -16,11 +16,11 @@
     },
     "og": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-og.jpg",
-      "otisk": "f70f75439e3ff8a7",
+      "otisk": "aa3a330ee7fb8aa5",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "a4f674a058b5eb64",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-og.svg": "785c929fc57e7295"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-og.svg": "15f777e7fdd2855d"
       },
       "kontrola": {
         "chyby": [],
@@ -30,11 +30,11 @@
     },
     "square": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-square.png",
-      "otisk": "f1d0bf4a7fd7a22d",
+      "otisk": "487b8d6f87f83352",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "a4f674a058b5eb64",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-square.svg": "6de973c90d828e43"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-square.svg": "2111e42419e3c3b7"
       },
       "kontrola": {
         "chyby": [],
@@ -44,11 +44,11 @@
     },
     "instagram": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-instagram.png",
-      "otisk": "04ede0acda35d155",
+      "otisk": "5328b508cf375cef",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "a4f674a058b5eb64",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-instagram.svg": "4b3c5aa9b75503c6"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-instagram.svg": "71ca1a94df3aeb8e"
       },
       "kontrola": {
         "chyby": [],
@@ -58,11 +58,11 @@
     },
     "story": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/images/cover-story.png",
-      "otisk": "150b175fd2ad7cc9",
+      "otisk": "e23cf67b175fbeff",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "ba575d4b3d3ae9b8",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs": "a4f674a058b5eb64",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-story.svg": "fc771bbdcf32d86a"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/motiv-story.svg": "4aa3b8b4a50cec77"
       },
       "kontrola": {
         "chyby": [],
@@ -72,7 +72,7 @@
     }
   },
   "konfigurace": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-10-29T06:51:35.301Z",
+  "vyrenderovano": "2026-10-29T07:28:08.629Z",
   "clanek": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-25-predikce/index.md",
   "titulekClanku": "Studenti v Srbsku porazili Vučiće. Predikce to ukázala hodinu a čtvrt před sčítáním",
   "texty": {

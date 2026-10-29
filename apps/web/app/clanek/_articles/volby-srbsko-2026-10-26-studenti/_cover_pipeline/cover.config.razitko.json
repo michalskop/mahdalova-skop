@@ -2,11 +2,11 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-homepage.png",
-      "otisk": "2a24b395619bfb52",
+      "otisk": "f25ca01bd5d4a959",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "89514fa3fafa486a",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-homepage.svg": "cbde1c7820dedd42"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-homepage.svg": "3d3832f6fbc805ac"
       },
       "kontrola": {
         "chyby": [],
@@ -16,11 +16,11 @@
     },
     "og": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-og.jpg",
-      "otisk": "31d7387ee7b39564",
+      "otisk": "d750d8aef6d6b085",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "89514fa3fafa486a",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-og.svg": "785c929fc57e7295"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-og.svg": "15f777e7fdd2855d"
       },
       "kontrola": {
         "chyby": [],
@@ -30,11 +30,11 @@
     },
     "square": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-square.png",
-      "otisk": "6fd7e3292f57d64b",
+      "otisk": "8c622a0ee364c256",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "89514fa3fafa486a",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-square.svg": "6de973c90d828e43"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-square.svg": "2111e42419e3c3b7"
       },
       "kontrola": {
         "chyby": [],
@@ -44,11 +44,11 @@
     },
     "instagram": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-instagram.png",
-      "otisk": "ebf9100b9e8b1186",
+      "otisk": "995e34674428dfa8",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "89514fa3fafa486a",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-instagram.svg": "4b3c5aa9b75503c6"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-instagram.svg": "71ca1a94df3aeb8e"
       },
       "kontrola": {
         "chyby": [],
@@ -58,11 +58,11 @@
     },
     "story": {
       "soubor": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/images/cover-story.png",
-      "otisk": "6a3723baf8608f88",
+      "otisk": "5b98e918a9fa18ca",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "e6146879b5e398e3",
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs": "89514fa3fafa486a",
         "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/mapa-pozice.json": "5e88588ae295770d",
-        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-story.svg": "fc771bbdcf32d86a"
+        "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv-story.svg": "4aa3b8b4a50cec77"
       },
       "kontrola": {
         "chyby": [],
@@ -72,7 +72,7 @@
     }
   },
   "konfigurace": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-10-29T06:50:42.509Z",
+  "vyrenderovano": "2026-10-29T07:27:41.315Z",
   "clanek": "apps/web/app/clanek/_articles/volby-srbsko-2026-10-26-studenti/index.md",
   "titulekClanku": "Vučić voliče neztratil. Porazila ho sjednocená opozice a vyšší účast",
   "texty": {

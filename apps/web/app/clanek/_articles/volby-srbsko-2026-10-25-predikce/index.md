@@ -19,8 +19,6 @@ Studentská listina vyhrála nedělní předčasné parlamentní volby v Srbsku.
 
 Predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop, kterou jsme přepočítávali každou minutu z průběžných dat RIK, ukazovala studenty v čele od 21:44. Od 22:01, kdy byla sečtena tři procenta voličů, se intervaly nejistoty obou listin už nepřekrývaly. Průběžné sčítání v tu chvíli vedlo s 49,7 % Vučićovu kandidátku a studenty ukázalo v čele až ve 23:14. Sám Vučić přitom porážku uznal ještě dřív než naše predikce.
 
-<KeyNumbers yamlFile="key-stats.yaml" />
-
 ```infobox info
 Predikci jsme přepočítávali od 21:13 SEČ, kdy model dostal první výsledky RIK. Čísla v textu uvádíme ze stavu 29. října v 7:18, kdy bylo sečteno 8 338 z 8 392 volebních míst s 99,6 % zapsaných voličů. Podíly počítáme z platných hlasů. RIK na [svém webu s výsledky](https://www.rik.parlament.gov.rs/) uvádí podíly ze všech odevzdaných lístků včetně neplatných, proto má studenty na 53,04 % a Vučićovu kandidátku na 38,97 %. Konečný výsledek zatím není: na 53 volebních místech se podle [rozhodnutí RIK z 28. října](https://www.rik.parlament.gov.rs/vest/817847/72-sednica-republicke-izborne-komisije.php) bude 1. listopadu hlasovat znovu.
 ```
