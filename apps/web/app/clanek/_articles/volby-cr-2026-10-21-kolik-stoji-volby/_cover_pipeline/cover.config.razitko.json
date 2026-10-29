@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/images/cover-homepage.png",
+      "otisk": "77c722414c2c546e",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/cover.config.cjs": "e45ee43d7ce60d34",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/motiv-homepage.svg": "ac5ca9d241020dac"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/images/cover-og.jpg",
+      "otisk": "b8de74acc6e3592f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/cover.config.cjs": "e45ee43d7ce60d34",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/motiv-og.svg": "18e671139dc8d80f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/images/cover-square.png",
+      "otisk": "4be24a6dd8f0b87d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/cover.config.cjs": "e45ee43d7ce60d34",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/motiv-square.svg": "b6f464ce719de779"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/images/cover-instagram.png",
+      "otisk": "0d35270568f02959",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/cover.config.cjs": "e45ee43d7ce60d34",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/motiv-instagram.svg": "ffb8582c66d07368"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/images/cover-story.png",
+      "otisk": "0e7983ee86de1a9f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/cover.config.cjs": "e45ee43d7ce60d34",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/motiv-story.svg": "7d9f8dee91ea0daf"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-29T07:01:16.300Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2026-10-21-kolik-stoji-volby/index.md",
+  "titulekClanku": "Volby jsou na voliče reálně stejně drahé jako před osmi lety",
+  "texty": {
+    "stitek": "Analýza • Komunální a senátní volby 2026",
+    "nadtitulek": "",
+    "titulek": "Miliarda za volby",
+    "podtitulek": "Na voliče stojí reálně stejně jako v roce 2018, nejdráž vycházejí nejmenší okrsky"
+  }
+}
