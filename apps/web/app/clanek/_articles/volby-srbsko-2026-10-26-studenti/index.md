@@ -41,11 +41,13 @@ Na rozdíl od roku 2023 se opozice letos nerozdělila. Koalice Narodna Srbija, v
 
 <SerbiaVotesChart />
 
-## Studenti vyhráli města, Vučić malé obce na jihu a v Kosovu
+## Studenti vyhráli města, Vučić malé obce na jihu a voliče z Kosova
 
 Podle naší predikce vedou studenti ve všech 17 bělehradských obvodech, od 48 % v Sopotu po 74 % ve Starém Gradu. Vyhráli ve všech obcích a městských obvodech nad sto tisíc zapsaných voličů kromě Leskovce: v Novém Sadu s 64 %, v Kragujevaci s 59 %, v Pančevu, Subotici i Kruševaci. Mezi Srby v zahraničí dostali 73 %.
 
-Vučićova kandidátka vede v 95 ze 191 obcí a městských obvodů, za které RIK výsledky vykazuje, studenti v 91. V obcích, kde vedou studenti, je ale zapsáno 4,96 milionu voličů, v obcích s převahou SNS 1,35 milionu. Ze 76 obcí mimo Bělehrad a Kosovo, které mají méně než 20 tisíc voličů, vyhrála SNS 53. Na jihu a východě Srbska vede ve 37 z 52 obcí. V obcích Kosova, kde volí srbští voliči zapsaní v srbských seznamech, vyhrála ve 21 z 22.
+Vučićova kandidátka vede v 95 ze 191 obcí a městských obvodů, za které RIK výsledky vykazuje, studenti v 91. V obcích, kde vedou studenti, je ale zapsáno 4,96 milionu voličů, v obcích s převahou SNS 1,35 milionu. Ze 76 obcí mimo Bělehrad a Kosovo, které mají méně než 20 tisíc voličů, vyhrála SNS 53. Na jihu a východě Srbska vede ve 37 z 52 obcí.
+
+Mezi 191 jednotkami, za které RIK výsledky vykazuje, je i 22 obcí Kosova. Srbsko nezávislost Kosova vyhlášenou v roce 2008 neuznává a lidé zapsaní v srbských voličských seznamech v kosovských obcích mohou volit i srbský parlament. Kosovo, které uznává i Česko, volby na svém území nepovolilo. RIK proto pro zhruba 100 tisíc takových voličů zřídila [60 volebních míst ve Vranji, Rašce, Kuršumliji a Tutinu](https://n1info.rs/vesti/gde-glasaju-stanovnici-kosovo-metohija-izbori-2026) na jihu Srbska a hlasy vykazuje podle obce, kde jsou voliči zapsaní. Platně hlasovala zhruba třetina z nich a Vučićova kandidátka vyhrála ve 21 z 22 kosovských obcí, v Peći vedli socialisté.
 
 ## Rok a půl protestů po neštěstí v Novém Sadu
 

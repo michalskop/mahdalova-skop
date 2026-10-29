@@ -51,7 +51,7 @@ Když bylo sečteno první procento voličů, měla Vučićova kandidátka v pr�
 
 Rozdíl mezi průběžným součtem a konečným výsledkem se zmenšoval pomalu. Při čtvrtině sečtených voličů, krátce před jednou ráno, ještě nadsazoval Vučićovu listinu o 5,2 bodu a studenty podceňoval o 7 bodů. Predikce se ve stejné chvíli od konečného výsledku lišila o 0,9 bodu u SNS a o 1,3 bodu u studentů.
 
-Na mapě výsledků to vypadá jako paradox. RIK vykazuje výsledky za 191 obcí a městských obvodů včetně Kosova, zahraničí a věznic. Vučićova kandidátka vede podle predikce v 95 z nich, studenti v 91. Obce, kde vedou studenti, ale mají 4,96 milionu zapsaných voličů, obce, kde vede SNS, 1,35 milionu. Studenti vyhráli ve všech 17 bělehradských obvodech, v Novém Sadu, Kragujevaci, Čačaku i v Nišu, Vučićova listina hlavně v malých obcích na jihu a východě země a mezi srbskými voliči v Kosovu.
+Na mapě výsledků to vypadá jako paradox. RIK vykazuje výsledky za 191 obcí a městských obvodů včetně zahraničí, věznic a 22 obcí Kosova, jehož voliči ze srbských seznamů hlasovali na jihu Srbska. Vučićova kandidátka vede podle predikce v 95 z nich, studenti v 91. Obce, kde vedou studenti, ale mají 4,96 milionu zapsaných voličů, obce, kde vede SNS, 1,35 milionu. Studenti vyhráli ve všech 17 bělehradských obvodech, v Novém Sadu, Kragujevaci, Čačaku i v Nišu, Vučićova listina hlavně v malých obcích na jihu a východě země a mezi voliči zapsanými v Kosovu.
 
 ## Predikce studenty soustavně podceňovala
 

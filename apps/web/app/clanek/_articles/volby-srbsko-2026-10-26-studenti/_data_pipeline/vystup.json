@@ -177,5 +177,22 @@
    "1. SNS — United Serbia": 53,
    "3. Student list": 23
   }
+ },
+ "kosovo": {
+  "jednotek": 22,
+  "mist": 60,
+  "zapsani": 100465,
+  "platne_odhad": 34791,
+  "vede": {
+   "1. SNS — United Serbia": 21,
+   "2. SPS–JS": 1
+  },
+  "jinak_vede": [
+   [
+    "Peć",
+    "2. SPS–JS"
+   ]
+  ],
+  "ucast_platne_pct": 34.6
  }
 }

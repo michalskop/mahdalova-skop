@@ -81,6 +81,14 @@ out['beograd'] = {'obvodu': len(bg), 'studenti_vedou': sum(x['projected_leader']
                   'min': min(round(x['projected_leader_share_pct'], 1) for x in bg), 'max': max(round(x['projected_leader_share_pct'], 1) for x in bg)}
 mala = [x for x in g if x['region'] not in ('Inostranstvo', 'Zatvori', 'Kosovo i Metohija', 'Beograd') and x['registered'] < 20000]
 out['male_obce_pod_20k'] = {'pocet': len(mala), 'vede': {names[k]: n for k, n in Counter(x['projected_leader'] for x in mala).most_common()}}
+# Kosovo: voliči ze srbských seznamů v kosovských obcích; volili na 60 místech ve Vranji, Rašce, Kuršumliji a Tutinu
+kos = [x for x in g if x['region'] == 'Kosovo i Metohija']
+out['kosovo'] = {'jednotek': len(kos), 'mist': sum(x['stations'] for x in kos), 'zapsani': sum(x['registered'] for x in kos),
+                 'platne_odhad': round(sum(x['projected_valid'] for x in kos)),
+                 'vede': {names[k]: n for k, n in Counter(x['projected_leader'] for x in kos).most_common()},
+                 'jinak_vede': [(x['municipality_name'], names[x['projected_leader']]) for x in kos if x['projected_leader'] != 'list_01']}
+out['kosovo']['ucast_platne_pct'] = round(100 * out['kosovo']['platne_odhad'] / out['kosovo']['zapsani'], 1)
+
 json.dump(out, open(os.path.join(HERE, 'vystup.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 # ---- data grafu: hlasy 2023 a 2026 (v tisících) ----
