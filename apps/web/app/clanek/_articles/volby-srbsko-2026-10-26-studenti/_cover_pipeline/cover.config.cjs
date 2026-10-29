@@ -8,7 +8,8 @@ const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Volby v&nbsp;Srbsku' },
-  legenda: [['#d85a74', 'vedou studenti'], ['#697fe6', 'vede Vučićova SNS']],
+  // šedá = jinde vede jiná listina: Albánci (Preševo, Bujanovac), Bosňáci (Tutin), Maďaři (Kanjiža), v Kosovu Peć socialisté
+  legenda: [['#d85a74', 'vedou studenti'], ['#697fe6', 'vede Vučićova SNS'], ['#bcbcb0', 'vede menšinová listina nebo SPS']],
   // brandDeepRed.7 / brandRoyalBlue.8 záře (barvy obou uskupení z palety), background.2 a brandNavy.1 texty, brand.6 štítek
   barvy: { glowA: '#812840', glowB: '#272a59', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
   mapaPozice: MAPA,

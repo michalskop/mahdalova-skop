@@ -40,8 +40,8 @@ const CILE = [__dirname, path.join(__dirname, '..', '..', 'volby-srbsko-2026-10-
     const hranice = `<path d="${pathGen(kosovo)}" fill="none" stroke="${HRANICE}" stroke-width="${(2.2 * scale).toFixed(2)}" stroke-dasharray="${(7 * scale).toFixed(1)} ${(5 * scale).toFixed(1)}" stroke-opacity="0.85"/>`;
     const [[kx0, ky0], [kx1, ky1]] = pathGen.bounds(kosovo);
     const fsz = 30 * scale;
-    // story: vlevo od Kosova je logo, popisek proto pod Kosovo a šipka vzhůru
-    const dole = klic === 'story';
+    // story a instagram: vlevo od Kosova je logo a legenda, popisek proto pod Kosovo a šipka vzhůru
+    const dole = klic === 'story' || klic === 'instagram';
     // (šipka musí končit uvnitř Kosova, ne u šedých koleček Preševa a Bujanovace, které jsou v Srbsku)
     const kw = kx1 - kx0, kh = ky1 - ky0;
     const tx = dole ? kx0 + kw * 0.62 : kx0 - 70 * scale, ty = dole ? ky1 + fsz * 1.3 : (ky0 + ky1) / 2 + fsz * 0.35;

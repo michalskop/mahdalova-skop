@@ -1,23 +1,23 @@
 ---
-title: "Studenti v Srbsku porazili Vučiće. Predikce to ukázala hodinu a čtvrt před sčítáním"
+title: "Vučić uznal porážku dřív, než ji ukázalo sčítání. Predikce ji potvrdila za půl hodiny"
 date: "2026-10-25"
 time: "22:30"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Studentská listina vyhrála předčasné parlamentní volby v Srbsku s 53,7 % platných hlasů a podle našeho přepočtu má 141 z 250 mandátů. Predikce DataTimes.cz ukazovala jasné vítězství studentů od 22:01, kdy byla sečtena tři procenta voličů. Průběžné sčítání je poprvé ukázalo v čele až ve 23:14. Aleksandar Vučić uznal porážku ještě dřív, podle vzorku vlastní strany."
+excerpt: "Aleksandar Vučić uznal porážku v srbských parlamentních volbách kolem půl desáté večer podle vzorku vlastní strany. Oficiální průběžné sčítání tehdy zahrnovalo desetinu procenta voličů a jeho kandidátku ukazovalo v čele ještě do 23:14. Predikce DataTimes.cz potvrdila z oficiálních dat vítězství studentů ve 22:01. Studentská listina má 53,7 % platných hlasů a podle našeho přepočtu 141 z 250 mandátů."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
 squareImage: "images/cover-square.png"
 instagramImage: "images/cover-instagram.png"
 coverTitulek: "Studenti<br>porazili Vučiće"
-coverPodtitulek: "Predikce to ukázala hodinu a čtvrt před sčítáním"
+coverPodtitulek: "Naše predikce to z oficiálních dat potvrdila za půl hodiny"
 filter: ["analýza"]
 tags: ["volby", "Srbsko", "srbské volby 2026", "Aleksandar Vučić", "Studentská listina", "volební predikce", "Balkán"]
 promoted: 1
 ---
-Studentská listina vyhrála nedělní předčasné parlamentní volby v Srbsku. Podle průběžných výsledků Republikové volební komise (RIK) po sečtení 99,6 % voličů získala 53,7 % platných hlasů. Kandidátka Ujedinjena Srbija, kterou vedl dosavadní prezident Aleksandar Vučić, dostala 39,5 %. Podle našeho přepočtu mají studenti 141 z 250 křesel, a tedy samostatnou většinu. Srbská pokroková strana (SNS), která zemi vládne od roku 2012, přichází o moc.
+Aleksandar Vučić uznal porážku v nedělních předčasných parlamentních volbách v Srbsku kolem půl desáté večer, hodinu a půl po zavření volebních místností. Opíral se o vzorek volebních míst, který měla jeho strana k dispozici. Oficiální průběžné sčítání Republikové volební komise (RIK) v tu chvíli zahrnovalo desetinu procenta voličů a jeho kandidátku ukazovalo v čele ještě do 23:14.
 
-Predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop, kterou jsme přepočítávali každou minutu z průběžných dat RIK, ukazovala studenty v čele od 21:44. Od 22:01, kdy byla sečtena tři procenta voličů, se intervaly nejistoty obou listin už nepřekrývaly. Průběžné sčítání v tu chvíli vedlo s 49,7 % Vučićovu kandidátku a studenty ukázalo v čele až ve 23:14. Sám Vučić přitom porážku uznal ještě dřív než naše predikce.
+Predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop, kterou jsme každou minutu přepočítávali z průběžných dat RIK, potvrdila vítězství studentů ve 22:01, půl hodiny po Vučićově projevu. Od té chvíle se intervaly nejistoty obou kandidátek nepřekrývaly. Studentská listina podle výsledků RIK po sečtení 99,6 % voličů získala 53,7 % platných hlasů, Vučićova kandidátka Ujedinjena Srbija 39,5 %. Podle našeho přepočtu mají studenti 141 z 250 křesel, a tedy samostatnou většinu. Srbská pokroková strana (SNS), která zemi vládne od roku 2012, přichází o moc.
 
 ```infobox info
 Predikci jsme přepočítávali od 21:13 SEČ, kdy model dostal první výsledky RIK. Čísla v textu uvádíme ze stavu 29. října v 7:18, kdy bylo sečteno 8 338 z 8 392 volebních míst s 99,6 % zapsaných voličů. Podíly počítáme z platných hlasů. RIK na [svém webu s výsledky](https://www.rik.parlament.gov.rs/) uvádí podíly ze všech odevzdaných lístků včetně neplatných, proto má studenty na 53,04 % a Vučićovu kandidátku na 38,97 %. Konečný výsledek zatím není: na 53 volebních místech se podle [rozhodnutí RIK z 28. října](https://www.rik.parlament.gov.rs/vest/817847/72-sednica-republicke-izborne-komisije.php) bude 1. listopadu hlasovat znovu.
@@ -25,11 +25,11 @@ Predikci jsme přepočítávali od 21:13 SEČ, kdy model dostal první výsledky
 
 ## Vučić věděl dřív než predikce, sčítání později
 
-Srbská volební místa se zavřela ve 20:00. Kolem půl desáté večer vystoupil Vučić před novináři: „Na osnovu uzorka stratifikovanog je jasno da smo ove izbore izgubili,“ tedy na základě stratifikovaného vzorku je jasné, že jsme tyto volby prohráli. Server N1 jeho slova [zveřejnil ve 21:33](https://n1info.rs/vesti/aleksandar-vucic-izbori-sns/). Studentům odhadl 135 až 140 mandátů. Jak jeho strana vzorek volebních míst sestavila, neupřesnil.
+Srbská volební místa se zavřela ve 20:00. Kolem půl desáté večer vystoupil Vučić před novináři: „Na osnovu uzorka stratifikovanog je jasno da smo ove izbore izgubili,“ tedy na základě stratifikovaného vzorku je jasné, že jsme tyto volby prohráli. Server Telegraf jeho slova [zveřejnil ve 21:29](https://politika.telegraf.rs/izbori-2026/4420970-vucic-se-obraca-javnosti), N1 [ve 21:33](https://n1info.rs/vesti/aleksandar-vucic-izbori-sns/). Studentům odhadl 135 až 140 mandátů. Jak jeho strana vzorek volebních míst sestavila, neupřesnil.
 
 <RelatedArticles preset="sidebar" position="right" slugs={["volby-srbsko-2026-10-26-studenti"]} heading="🔻🔻🔻" />
 
-Naše predikce v tu chvíli ještě neměla z čeho počítat. Stojí jen na oficiálních výsledcích, které RIK zveřejňuje průběžně, a první z nich dostal ve 21:13. První odhad z volebních míst s necelou setinou procenta voličů dával SNS 60,5 % a studentům 24,9 %, ovšem s intervalem nejistoty od 5 do 44 %. Takový odhad říká hlavně to, že model zatím nic neví.
+Naše predikce v tu chvíli ještě ukazovala opak. Stojí jen na oficiálních výsledcích, které RIK zveřejňuje průběžně. První z nich dostala ve 21:13 a kolem půl desáté jich měla za desetinu procenta voličů. Model z nich dával SNS 55 % a studentům 36 %, ovšem s intervaly nejistoty širokými přes dvacet procentních bodů: SNS 45–64 %, studentům 24–49 %. Takový odhad říká hlavně to, že model zatím neví, kdo vyhraje.
 
 Pořadí se v predikci otočilo ve 21:44, při 0,87 % sečtených voličů: studenti 47,7 %, Vučićova listina 44,9 %. Intervaly nejistoty se ale ještě široce překrývaly. Ve 22:01, při 3,2 % sečtených voličů, dávala predikce studentům 51,2 % (interval 49,1–53,4 %) a SNS 41,0 % (37,6–44,5 %). Od té chvíle se intervaly obou listin nepřekrývaly a bodový odhad dával studentům 134 mandátů. Většinu 126 křesel jim predikce v bodovém odhadu přisuzovala už od 21:46.
 

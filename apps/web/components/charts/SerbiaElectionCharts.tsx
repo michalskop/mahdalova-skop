@@ -32,7 +32,9 @@ const covAt = (m: number) => { let p = ALL[0]; for (const q of ALL) { if (q.m <=
 
 // Události noci (SEČ). Časy ověřené v _data_pipeline/vystup.json a v rešerši k článku.
 export type NightEvent = { m: number; label: string; short: string };
+// Vučić: Telegraf zveřejnil jeho uznání porážky ve 21:29 (projev ohlášen na 21:30).
 const EVENTS: NightEvent[] = [
+  { m: at('21:29'), label: 'Vučić uznává porážku', short: 'Vučić' },
   { m: at('22:01'), label: 'predikce: studenti vyhrají', short: 'predikce' },
   { m: at('23:14'), label: 'sčítání: studenti poprvé vedou', short: 'sčítání' },
 ];
@@ -91,13 +93,13 @@ export function SerbiaNightTimeline({ events = [] }: { events?: NightEvent[] }) 
   const endX = x(M1);
   return (
     <div style={{ clear: 'both' }}>
-      <ChartCard title="Predikce viděla vítězství studentů o hodinu a čtvrt dřív než průběžné sčítání"
+      <ChartCard title="Predikce potvrdila Vučićovu porážku za půl hodiny, průběžné sčítání ji ukázalo až po 23. hodině"
         subtitle={`Podíl na platných hlasech (%): predikce konečného výsledku s 90% intervalem a průběžně sečtené hlasy • 25.–26. října 2026, SEČ`} source={SOURCE}>
         <ChartLegend items={TL_LEGEND} activeKeys={active} onChange={setActive} />
         <div ref={ref} style={{ position: 'relative', width: '100%' }}>
           {W > 0 && (
             <svg width={W} height={H} role="img" style={{ display: 'block', overflow: 'visible' }}
-              aria-label={`Predikce DataTimes.cz ukazovala od 21:44 v čele Studentskou listinu a od 22:01 se intervaly nejistoty obou listin už nepřekrývaly. Průběžné sčítání ukázalo studenty v čele až ve 23:14. Konečný stav: studenti ${fmt(LAST.sr, 1)} %, SNS ${fmt(LAST.nr, 1)} %.`}>
+              aria-label={`Vučić uznal porážku kolem 21:29. Predikce DataTimes.cz ukazovala od 21:44 v čele Studentskou listinu a od 22:01 se intervaly nejistoty obou listin už nepřekrývaly. Průběžné sčítání ukázalo studenty v čele až ve 23:14. Konečný stav: studenti ${fmt(LAST.sr, 1)} %, SNS ${fmt(LAST.nr, 1)} %.`}>
               {yTicks.map((v) => (
                 <g key={v}>
                   <line x1={M.l} x2={endX} y1={y(v)} y2={y(v)} stroke={v === 50 ? C.beige : C.grid} strokeDasharray={v === 50 ? '6 4' : undefined} />
