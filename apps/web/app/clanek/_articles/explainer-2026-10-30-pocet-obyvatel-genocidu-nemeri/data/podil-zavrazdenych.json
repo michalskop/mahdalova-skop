@@ -1,0 +1,180 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "kat": "Tutsiové, Rwanda 1994",
+        "n": 77.2,
+        "t": "77 %",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocida: ICTR (Akayesu 1998)",
+        "detail": "507 000 z 657 000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Židé v Evropě, holokaust",
+        "n": 63.2,
+        "t": "63 %",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "holokaust, vzor pro Úmluvu z roku 1948",
+        "detail": "6 000 000 z 9 500 000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Čamové, Kambodža 1975–79",
+        "n": 36.0,
+        "t": "36 %",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocida: tribunál ECCC (2018)",
+        "detail": "90 000 z 250 000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Srebrenica 1995",
+        "n": 20.0,
+        "t": "20 %",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocida: ICTY 2004, ICJ 2007",
+        "detail": "8 000 z 40 000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Jezídové, Irák 2014",
+        "n": 0.8,
+        "t": "0,8 %",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocida: komise OSN 2016, soud ve Frankfurtu 2021",
+        "detail": "3 100 z 400 000",
+        "minpx": 54.0
+      },
+      {
+        "kat": "Gaza, od 7. 10. 2023",
+        "n": 3.3,
+        "t": "3,3 %",
+        "barva": "#f76800",
+        "tbarva": "#ffffff",
+        "stav": "komise OSN: genocida; Mezinárodní soudní dvůr nerozhodl",
+        "detail": "74 494 z 2 226 544",
+        "minpx": 54.0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 190,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelPadding": 8
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ],
+        "nice": false
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Skupina"
+          },
+          {
+            "field": "detail",
+            "title": "Zavraždění"
+          },
+          {
+            "field": "t",
+            "title": "Podíl"
+          },
+          {
+            "field": "stav",
+            "title": "Kdo to posoudil"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? datum.t : ''"
+          }
+        },
+        "color": {
+          "field": "tbarva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? '' : datum.t"
+          }
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Za genocidu byly uznány činy, při nichž zahynulo {necelé procento|#06677d} skupiny, i takové, při nichž zahynuly {tři čtvrtiny|#06677d}",
+    "subtitle": "Podíl zavražděných z cílové skupiny (odhady historiků a soudů). Gaza: zabití podle ministerstva zdravotnictví v Gaze do 21. 10. 2026 z předválečného počtu obyvatel."
+  },
+  "_source": "odhady HRW, USHMM, B. Kiernana, ICTY a PLOS Medicine; Gaza: OCHA a PCBS",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

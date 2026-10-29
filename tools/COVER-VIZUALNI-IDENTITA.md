@@ -14,21 +14,19 @@ Pevné prvky, které drží řadu coverů pohromadě, ať je motiv jakýkoli:
 - **Písma IBM Plex:** Serif Bold jen titulek a nápis loga, všechno ostatní Sans.
 - **Štítek nad titulkem:** `ANALÝZA • TÉMA`, první část karmínová s podtržením.
 - **Logo DataTimes.cz:** kolečko vlevo, nápis vpravo, volně a bez podkladu (žádná „pilulka“ ani kruh), v klidnějším dolním rohu.
-- **Velký motiv**, který vyplní plochu. Kde to jde, má ale **vlastní plochu vedle textu** (kapitola 1.1); text přes motiv jen tam, kde motiv musí zabrat celý formát (tečková mapa ČR, fotka jako podkres), a pak s halo v barvě pozadí.
+- **Velký motiv**, který vyplní plochu. Texty jsou bloky kolem motivu v jeho klidných místech (kapitola 1.1); přes motiv smí jít tam, kde zůstanou čitelné a nezakryjí data.
 - **Barvy jen z palety.** Motiv má 1–2 výrazné barvy, vedlejší vrstvy jsou tlumené odstíny téže škály.
 - **Hravost:** v řadě karet na homepage má cover zaujmout a vypadat jako sourozenec ostatních. Technicky správný, ale nudný cover je špatný cover.
 
-### 1.1 Kompozice: text a obraz vedle sebe, ne přes sebe
+### 1.1 Kompozice: motiv první, texty kolem něj
 
-Pravidlo od 26. 10. 2026 (Kateřina u OG coveru Brazílie, 2. kolo: „vycentrování na tomhle formátu není odůvodněné, mapa mohla být na straně a texty na druhé straně“).
+Závazná pravidla po formátech jsou v COVER-EDITOR.md → *Kompozice podle formátu*. Tady jen princip a jak jsme k němu došli:
 
-- **Kde je to vhodné, text a obrázek se nepřekrývají.** Na širokých formátech (OG 1200×630, homepage 1500×1200) dej motiv (mapu, vlajku, ikonu, fotku) na jednu stranu a text na druhou, **mapa vpravo, text vlevo**. Středové vrstvení textu přes ztlumený motiv je výjimka, ne výchozí volba.
-- **Výjimky, kdy překryv dává smysl:** motiv, který musí zabrat celou plochu (tečková mapa ČR přes celý cover, fotka jako podkres, tečková „slunečnice“ u citlivých témat), nebo formát na výšku, kde motiv leží pod textem.
-- **OG (1200×630) = „čtverec s ušima“ – výchozí od 26. 10. 2026 (Kateřina):** střed OG je přesně čtvercový cover zmenšený na 630 × 630, tedy bezpečná zóna, kterou WhatsApp a Messenger ořezávají; do stran se jen protáhne stejné pozadí se září a přechod mezi středem a boky je rozmazaný. Proč: náhled odkazu se ukazuje buď celý (Facebook, X, LinkedIn), nebo oříznutý na střední čtverec (WhatsApp, Messenger); samostatné široké rozvržení motiv buď usekne, nebo ho musí ztlumit pod textem. Jedna kompozice pro oba případy = cover se všude pozná a motiv je v plné síle. `cover-generator.cjs` to dělá sám: pozadí se zářemi je jedno souvislé přes celou šířku 1200 a obsah čtverce na něm leží bez vlastního pozadí (`html(…, { ucha: true })`). Nikdy boky nenatahovat ani nerozmazávat z obrázku – pokusy s rozmazanou kopií a nataženým krajním pruhem dělaly švy a „rozpité skvrny“ (Kateřina 26. 10.). Výjimka: motiv přirozeně široký nebo fotka, která vyplní šířku (Brazílie, trest smrti) – pak vlastní `format.og` (text vlevo od x 285, logo pod ním, motiv vpravo celý vidět, nebo `stred: true`). Barvy záře volit tak, aby boky navazovaly na motiv (u trikolóry záře v jejích tónech). V náhledech kreslit bezpečnou zónu OG čárkovaně.
-- **Propojení přes ztmavený okraj (OG Brazílie, 26. 10.):** motiv smí dojet až k textu, když jeho strana u textu plynule mizí do tmy (scrim v barvě pozadí, jako na Instagramu). Pak se text a obraz „skloubí“, ale text nikdy neleží přes plnou barvu motivu. V OG drží text rezervu asi 30 px uvnitř středního čtverce (start x ≈ 315), motiv smí zajet i pod text (Kateřina: „klidně ať zasahuje pod ten text“), když jeho část pod textem je ztmavená přechodem; silnější přechod jen pro jeden formát: `pro.og.motiv.scrim`.
-- **Homepage:** text vlevo od x 180, motiv vpravo, pravý horní roh (x ≥ 950, y ≤ 280) volný pro štítek rubriky. Když se titulek nevejde vedle motivu, zalom ho jinak (přes `pro.homepage.titulek`), motiv zmenši, nebo ho pod textem plynule ztmav (viz propojení výše); přes text nikdy v plné barvě.
-- **Technicky:** v `cover.config.cjs` `format.og = { stred: false, box: [285, …] }` vypne středové rozvržení OG; `pro: { og: { titulek, nad, pod, logo: 'vlevo' } }` upraví texty a polohu loga jen pro jeden formát; `motiv.pozice` posune motiv. Vzor: `volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula` (homepage i OG: velká mapa vpravo zajíždí pod text a pod titulkem jemně prosvítá, scrim [30, 62]; Kateřina 26. 10.: „klidně to použij v tomto duchu“).
-- **Kontrola:** na kontaktním archu (`tools/kontaktni-arch.cjs`) se nesmí žádný text dotýkat motivu v žádném z pěti formátů.
+- **Každý formát se skládá zvlášť podle motivu**, ne jednou šablonou. Středové vrstvení textu přes ztlumený motiv ani pevné „text vlevo, motiv vpravo“ nejsou výchozí volby (Kateřina 26. 10. u Brazílie: „vycentrování na tomhle formátu není odůvodněné“; 29. 10.: „mustr nemá být jednotný za každou cenu“).
+- **OG naležato (od 29. 10. 2026):** motiv uprostřed nebo blízko středu, texty jako bloky kolem něj ve středním čtverci s vůlí 35 px (x 320–880), motiv smí do boků. Vzory: Miliarda za volby, slunečnice, větrníky. „Čtverec s ušima“ (zmenšený čtvercový cover a prázdné boky) zůstává jen nouzově. Boky nikdy nenatahovat ani nerozmazávat z obrázku (švy a „rozpité skvrny“, 26. 10.).
+- **Propojení přes ztmavený okraj (OG Brazílie, 26. 10.):** motiv smí dojet pod text, když jeho strana u textu plynule mizí do tmy (scrim v barvě pozadí); silnější přechod jen pro jeden formát: `pro.og.motiv.scrim`. Vzor `volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula`.
+- **Homepage:** text vlevo od x 180, motiv vpravo a velký, pravý horní roh (x ≥ 950, y ≤ 280) volný pro štítek rubriky.
+- **Kontrola:** rozhoduje čitelnost, ne dotyk (COVER-EDITOR.md, bod 5 kontroly). Na kontaktním archu se kontroluje i OG ořezaný na čtverec.
 
 ## 2. Nejdřív věta, pak obraz
 
@@ -65,7 +63,7 @@ Motiv se kreslí ze **skutečných čísel článku**, ideálně ze stejného v�
 
 ### 4.1 Tečková mapa ČR: když jde o místo
 
-Volby, obce, kraje. Tečková mapa republiky přes celý cover, body obcí nebo okrsků zvětšené či obarvené podle hodnoty z článku. Jedno zvýrazněné místo dostane jméno přímo u tečky. Vzory: `analyza-2026-10-23-referenda-vetrne-elektrarny` (větrník v každé obci s referendem), `volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu`, `volby-cr-2026-10-21-kolik-stoji-volby` (tečková mapa obcí). Podrobnosti o OG a popiscích jsou v *Ponaučení z oprav* v COVER-EDITOR.md.
+Volby, obce, kraje. Tečková mapa republiky přes celý cover, body obcí nebo okrsků zvětšené či obarvené podle hodnoty z článku. Jedno zvýrazněné místo dostane jméno přímo u tečky. Vzory: `analyza-2026-10-23-referenda-vetrne-elektrarny` (větrník v každé obci s referendem), `volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu`, `volby-cr-2026-10-21-kolik-stoji-volby` (tečková mapa obcí). Rozvržení OG (mapa přes střed, texty kolem) a legendy: COVER-EDITOR.md → *Kompozice podle formátu*.
 
 ### 4.2 Tečková jednotka a „slunečnice“: když jde o počet a změnu
 
@@ -75,7 +73,7 @@ Vzor: `analyza-2026-10-25-poruchy-prijmu-potravy` (Kateřina: „sdělení je v 
 - **Tečky leží na Vogelově spirále** (zlatý úhel, poloměr `c·√i`), jako semínka ve slunečnici. Disk roste od středu, takže **plocha je přesně úměrná počtu**: trojnásobek je vidět bez čtení čísel.
 - **Před a po v jednom tvaru:** vnitřek disku = výchozí rok v tlumeném odstínu (brandOrange.8), přírůstek = zářivá barva (brandOrange.6). Oko hned vidí, kolik přibylo.
 - **Tvar s náznakem:** disk připomíná květinu. Motiv smí jemně evokovat téma (růst, dívky, živé), ale zůstává abstraktní a datový. Obraz má být poctivý graf a zároveň hezký tvar, ne doslovná ilustrace.
-- **OG (1200×630):** v kraji vlevo malý disk výchozího roku, vpravo velký disk cílového roku, oba ve **stejném měřítku** s popiskem roku. Titulek zůstává ve středním čtverci.
+- **OG (1200×630):** jeden disk (stejný jako ve čtverci, vnitřek = výchozí rok) blízko středu, mírně zmenšený; texty a legenda ve sloupci vlevo ve středním čtverci. Dva disky v krajích (do 28. 10.) rozdělily srovnání a ve WhatsApp ořezu zmizely.
 - Kód: `_cover_pipeline/motiv.cjs` u článku (konstanty z dat, `FORMATY` s polohou disku pro každý formát). Přepoužitelné na každé „X lidí → Y lidí“: počty pacientů, kandidátů, obcí, žádostí.
 
 **Animace slunečnice** (Kateřina 25. 10. 2026: „úplně luxusní v těch třech odstínech“): disk roste rok po roku, **tři odstíny**: výchozí rok tlumeně (brandOrange.8), přírůstek zářivě (brandOrange.6) a tečky přibylé v právě ukazovaném roce světle (brandOrange.3), dokud nezačne další rok.
@@ -84,6 +82,7 @@ Vzor: `analyza-2026-10-25-poruchy-prijmu-potravy` (Kateřina: „sdělení je v 
 - **Jedno sdělení, žádné zbytečně přesné detaily.** Cover ani animace nejsou místo pro přesná čísla (1 199 → 3 858, počty za jednotlivé roky, popisek zlomového roku). Stačí titulek s hlavním sdělením a krátký dovětek („je dnes třikrát víc“ + „než v roce 2010“). Přesná čísla patří do článku a carouselu.
 - **„Dnes“, ne rok dat.** Nejčerstvější data komunikujeme jako „dnes“: titulek „je dnes třikrát víc“, počítadlo animace na konci ukáže „dnes“ místo letopočtu. Nekomunikovat čísla z jiného roku, než je výchozí a dnešní.
 - **Počítadlo jen s rokem**, bez počtu lidí, ať čtenář neřeší, proč se mluví zrovna o tom roce.
+- **Křivky tečou plynule, nezastavují se na každém roce** (Kateřina 29. 10. 2026 u animace křivek obyvatel k explaineru o genocidě: „ať není trhaný, nech to téct plynule“). Čára se dokresluje spojitě celou dobu kresby, jemně zpomalí jen rozjezd a dojezd; kroky „rok – pauza – rok“ působí trhaně. GIF pak s 25 snímky za sekundu, ne s 15. Vzor: `explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri/_cover_pipeline/animace.config.cjs`.
 - **Legenda pod motivem**, ne v bloku textu: titulek nahoře, motiv o kus výš, pod ním legenda na střed motivu.
 - **Jednotka („1 tečka = 10 dívek“) může stát svisle** u pravého okraje, otočená o −90°, nenápadně ztlumená. Je to informace „z boku“, nesoutěží s titulkem.
 - **Animace začíná i končí stavem „dnes“.** První snímek je náhled videa a GIFu (a jediné, co ukáže poštovní program bez animací), proto na něm musí být hlavní sdělení: plný dnešní stav. Pak se motiv stáhne na výchozí rok, doroste zpátky do dneška a smyčka navazuje bez skoku.

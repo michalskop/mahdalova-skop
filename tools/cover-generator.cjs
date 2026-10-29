@@ -26,7 +26,7 @@ const NAVY = '#101432'; // brandNavy.9
 // i nejdelší štítek série (VOLEBNÍ KALKULAČKA • KOMUNÁLNÍ A SENÁTNÍ VOLBY 2026) vešel na jeden řádek ve stejné velikosti; t/sub/kick/logo = velikosti písma; stred = vše na střed (OG)
 const FORMATY = {
   homepage: { soubor: 'cover-homepage.png', w: 1500, h: 1200, box: [180, 120, 1320, 1080], mapa: [60, 400, 1480, 1150], ikona: [1280, 480, 150], t: 100, sub: 38, kick: 20, leg: 27, logo: 44 },
-  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 48, 880, 584], mapa: [0, 0, 1200, 630], ikona: [1150, 48, 80], t: 58, sub: 23, kick: 15, logo: 28, og: true },
+  og: { soubor: 'cover-og.jpg', w: 1200, h: 630, box: [285, 48, 880, 584], mapa: [0, 0, 1200, 630], ikona: [1150, 48, 80], t: 58, sub: 23, kick: 15, leg: 19, logo: 28, og: true },
   square: { soubor: 'cover-square.png', w: 1080, h: 1080, box: [70, 70, 1010, 1010], mapa: [20, 470, 1070, 1050], ikona: [970, 80, 125], t: 88, sub: 34, kick: 24, leg: 24, logo: 40 },
   instagram: { soubor: 'cover-instagram.png', w: 1080, h: 1350, box: [70, 110, 1010, 1240], mapa: [20, 560, 1070, 1260], ikona: [970, 120, 125], t: 92, sub: 36, kick: 24, leg: 24, logo: 40 },
   story: { soubor: 'cover-story.png', w: 1080, h: 1920, box: [80, 260, 1000, 1570], mapa: [0, 860, 1080, 1580], ikona: [960, 280, 135], t: 104, sub: 40, kick: 24, leg: 26, logo: 44 },
@@ -65,14 +65,14 @@ function tecky(c, f) {
   const popisek = (o, x, y) => { if (!o.popisek) return ''; const fs = (f.leg ?? 22) * 1.3, R = r * (o.k ?? 2.3); const pod = f.stred || f.og; return `<text x="${(pod ? x : x + R + fs * 0.45).toFixed(1)}" y="${(pod ? y + R + fs * 1.1 : y + fs * 0.35).toFixed(1)}"${pod ? ' text-anchor="middle"' : ''} font-family="IBM Plex Sans, Arial, sans-serif" font-weight="600" font-size="${fs}" fill="#f8f6f0" stroke="${NAVY}" stroke-width="${(fs * 0.28).toFixed(1)}" stroke-linejoin="round" paint-order="stroke">${o.popisek}</text>`; };
   const b = m.body.map((o) => { const [x, y] = P(o.lon, o.lat); return bod(o, x, y) + popisek(o, x, y); }).join('');
   function bod(o, x, y) { if (o.znak) { const fs = r * (o.k ?? 2.3) * 3.2; return `<text x="${x.toFixed(1)}" y="${(y + fs * 0.36).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${fs.toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" paint-order="stroke" opacity="${op * (o.op ?? 1)}">${o.znak}</text>`; } return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * (o.k ?? 2.3)).toFixed(1)}" fill="${o.barva ?? m.barvaBod}" stroke="${o.obrys ?? m.obrysBod}" stroke-width="${(r * 0.7).toFixed(1)}" opacity="${op * (o.op ?? 1)}"/>`; }
-  return `<svg id="mapa" style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
+  return `<svg id="mapa" class="vrstva-motiv" style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}">${d}${b}</svg>`;
 }
 
 function obrazek(c, f, klic) {
   const m = c.motiv;
   const [x, y, h] = m.pozice[klic];
   const op = f.stred || f.og ? m.opacityOg ?? 0.45 : 1;
-  return `<img src="${dataUri(m.src)}" style="position:absolute;left:${x}px;top:${y}px;height:${h}px;mix-blend-mode:screen;opacity:${op};filter:brightness(${m.jas ?? 0.75})">`;
+  return `<img class="vrstva-motiv" src="${dataUri(m.src)}" style="position:absolute;left:${x}px;top:${y}px;height:${h}px;mix-blend-mode:screen;opacity:${op};filter:brightness(${m.jas ?? 0.75})">`;
 }
 
 // motiv.typ 'svg': hotová vrstva motivu pro každý formát (soubory[klic] = SVG o rozměrech formátu, vkládá se inline,
@@ -82,7 +82,7 @@ function svgVrstva(c, f, klic) {
   const m = c.motiv;
   const op = f.stred || f.og ? m.opacityOg ?? 1 : 1;
   const svg = m.svg?.[klic] ?? fs.readFileSync(m.soubory[klic], 'utf8');
-  return `<div id="motiv" style="position:absolute;left:0;top:0;width:${f.w}px;height:${f.h}px;opacity:${op}">${svg}</div>`;
+  return `<div id="motiv" class="vrstva-motiv" style="position:absolute;left:0;top:0;width:${f.w}px;height:${f.h}px;opacity:${op}">${svg}</div>`;
 }
 
 // Volitelný tečkovaný znak přes motiv (např. velký otazník): c.znak = { text, barva, opacity, opacityOg,
@@ -108,7 +108,7 @@ function znak(c, f, klic) {
     data.kotva = { x: (Math.min(...xs) + Math.max(...xs)) / 2, y: (Math.min(...ys) + Math.max(...ys)) / 2,
       sirka: Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)) * ((typeof z.meritkoTecky === 'object' ? z.meritkoTecky[klic] : z.meritkoTecky) ?? 1) };
   }
-  return `<svg id="znak" data-znak='${JSON.stringify(data)}' style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}" opacity="${op}"></svg>`;
+  return `<svg id="znak" class="vrstva-motiv" data-znak='${JSON.stringify(data)}' style="position:absolute;left:0;top:0" width="${f.w}" height="${f.h}" opacity="${op}"></svg>`;
 }
 
 // Běží ve stránce po document.fonts.ready – nad každou tečku mapy s data-otaznik vykreslí horní oblouk „?“
@@ -243,10 +243,16 @@ function vykresliZnak() {
 // CSS pozadí coveru: navy + záře z c.barvy (glowA, glowB, volitelně glowC) – sdílí cover i boky OG „čtverce s ušima“
 const pozadi = (b) => `${b.glowC ? `radial-gradient(ellipse at ${b.glowPosC ?? '50% 0%'},${b.glowC} 0%,${b.glowC}00 ${b.glowDosah ?? 55}%),` : ''}radial-gradient(ellipse at ${b.glowPosA ?? '0% 20%'},${b.glowA} 0%,${b.glowA}00 ${b.glowDosah ?? 55}%),radial-gradient(ellipse at ${b.glowPosB ?? '100% 100%'},${b.glowB} 0%,${b.glowB}00 ${b.glowDosah ?? 55}%),${NAVY}`;
 
+// Česká typografie: za jednopísmennou předložku nebo spojku nezlomitelná mezera (karty mimo web nejdou přes
+// fixCzechTypography; generátor teď text i sám zalamuje, viz rozvrh v kontrolaKompozice). Jen v textu, ne v HTML značkách.
+const nbsp = (s) => typeof s !== 'string' ? s
+  : s.replace(/(^|>)([^<]+)/g, (_, a, t) => a + t.replace(/(^|[\s(„" ])([vkszouaiVKSZOUAI])\s+(?=\S)/g, '$1$2 '));
+
 function html(c0, klic, { ucha = false } = {}) {
   // c.pro = { og: { titulek, nad, pod, logo, … } } – úprava textů a polohy loga jen pro jeden formát
   // (např. OG rozvržené do dvou sloupců: text vlevo, motiv vpravo, viz COVER-VIZUALNI-IDENTITA.md → Kompozice)
-  const c = { ...c0, ...(c0.pro?.[klic] ?? {}) };
+  const c1 = { ...c0, ...(c0.pro?.[klic] ?? {}) };
+  const c = { ...c1, titulek: nbsp(c1.titulek), pod: nbsp(c1.pod), nad: nbsp(c1.nad), legenda: c1.legenda?.map(([b, t]) => [b, nbsp(t)]) };
   // c.ikonaPozice = { homepage: [pravý okraj, horní hrana, šířka] } – když dlouhý titulek koliduje s ikonou
   // c.mapaPozice = { homepage: [x0, y0, x1, y1] } – posun mapy, když bod koliduje s logem nebo legendou
   // c.rozestup = { homepage: 2 } – násobek mezer mezi nadtitulkem, titulkem a podtitulkem (rozvolnit text do výšky)
@@ -271,12 +277,12 @@ function html(c0, klic, { ucha = false } = {}) {
   const nad = c.nad ? `<div class="nad">${c.nad}</div>` : '';
   const pod = !c.pod ? '' : c.podPruh
     ? `<div class="sub" style="line-height:1.45"><span class="pruh" style="background:${c.podPruh};color:${c.podBarva ?? '#fff'};font-weight:600">${c.pod}</span></div>`
-    : `<div class="sub"><span class="halo" style="display:inline-block;position:relative">${c.pod}</span></div>`;
+    : `<div class="sub"><span class="jemny" style="display:inline-block;position:relative">${c.pod}</span></div>`;
   const logo = `<div class="logo">${DONUT}<span>DataTimes.cz</span></div>`;
   // SVG ikona se vkládá přímo (písmo v ní pak bere IBM Plex ze stránky), rastr jako <img>
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
-    ? `<div style="${style};line-height:0">${fs.readFileSync(c.ikona, 'utf8').replace('<svg ', '<svg style="width:100%;height:auto" ')}</div>`
-    : `<img src="${dataUri(c.ikona)}" style="${style}">`;
+    ? `<div class="vrstva-motiv" style="${style};line-height:0">${fs.readFileSync(c.ikona, 'utf8').replace('<svg ', '<svg style="width:100%;height:auto" ')}</div>`
+    : `<img class="vrstva-motiv" src="${dataUri(c.ikona)}" style="${style}">`;
   // Zarovnání podle čtverce piktogramu: c.ikonaCtverec = [x0, y0, x1] v pixelech zdroje (výchozí pro SVG ikony sérií).
   let ikona = '', ikonaOg = '';
   if (c.ikona) {
@@ -308,9 +314,27 @@ function html(c0, klic, { ucha = false } = {}) {
   // c.format[klic].legNahoru / podDolu: jemné posuny o řádky v jednom formátu (legenda výš, podtitulek níž)
   const legDole = (logoPod ? h - by1 + 2 * (f.leg ?? 26) * 1.6 : h - by1) + (f.legNahoru ?? 0) * (f.leg ?? 26) * 1.6;
   // c.legendaPodTextem: legenda v toku textu pod podtitulkem (karty, kde dolní roh zabírá motiv)
-  const legTok = c.legenda && c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div><i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>${t}</div>`).join('')}</div>` : '';
-  const leg = c.legenda && !c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}<i style="background:${b};margin:0 0 0 .4em"></i></div>` : `<div><i style="background:${b}"></i>${t}</div>`).join('')}</div>` : '';
-  const text = f.stred
+  // c.legendaOg: legenda pod textem i v širokém OG (vyplní místo mezi podtitulkem a logem, motiv je vpravo)
+  const legTok = c.legenda && !f.stred && (f.og ? c.legendaOg : c.legendaPodTextem) ? `<div class="leg" style="position:static;margin-top:${f.t * 0.25}px">${c.legenda.map(([b, t]) => `<div>${b ? `<i style="background:${b};box-shadow:0 0 0 2px #f8f6f0"></i>` : ''}${t}</div>`).join('')}</div>` : '';
+  const leg = c.legenda && !c.legendaPodTextem && !f.stred && !f.og ? `<div class="leg halo" style="${rohLeg};bottom:${legDole}px">${c.legenda.map(([b, t]) => logoVlevo ? `<div>${t}${b ? `<i style="background:${b};margin:0 0 0 .4em"></i>` : ''}</div>` : `<div>${b ? `<i style="background:${b}"></i>` : ''}${t}</div>`).join('')}</div>` : '';
+  // c.rozlozeni = { og: [{ prvky: ['kicker', 'titulek'], x, y, vpravo?, dole? }, …] } – textové bloky volně kolem motivu
+  // (Kateřina 28. 10.: u OG motiv doprostřed, texty okolo, vše v bezpečném středním čtverci x 285–915). x, y = roh bloku:
+  // levý horní, s vpravo = true pravý (text zarovnaný doprava), s dole = true dolní. Prvky: kicker, nad, titulek, pod,
+  // legenda, logo; mezery mezi nimi jako v běžném sloupci.
+  const bloky = c.rozlozeni?.[klic];
+  const prvek = (p, i, vpravo) => {
+    const m = (v) => (i ? `margin-top:${v}px;` : '');
+    if (p === 'kicker') return kicker.replace('class="kick"', `class="kick" style="${vpravo ? 'margin-left:auto;' : ''}${m(f.t * 0.3)}"`);
+    if (p === 'nad') return nad && `<div style="${m(f.t * 0.45)}">${nad}</div>`;
+    if (p === 'titulek') return `<h1 style="${m(f.t * 0.3)}">${c.titulek}</h1>`;
+    if (p === 'pod') return pod && `<div style="${m(f.t * 0.3)}">${pod}</div>`;
+    if (p === 'legenda') return c.legenda ? `<div class="leg" style="position:static;${m(f.t * 0.25)}">${c.legenda.map(([b, t]) => `<div>${vpravo ? t : ''}${b ? `<i style="background:${b};box-shadow:0 0 0 2px #f8f6f0;${vpravo ? 'margin:0 0 0 .4em' : ''}"></i>` : ''}${vpravo ? '' : t}</div>`).join('')}</div>` : '';
+    if (p === 'logo') return `<div class="halo" style="display:inline-block;position:relative;${m(f.t * 0.3)}">${logo}</div>`;
+    throw new Error(`rozlozeni: neznámý prvek ${p}`);
+  };
+  const text = bloky
+    ? bloky.map((bl) => `<div style="position:absolute;${bl.vpravo ? `right:${w - bl.x}px;text-align:right` : `left:${bl.x}px`};${bl.dole ? `bottom:${h - bl.y}px` : `top:${bl.y}px`};width:max-content;display:flex;flex-direction:column;align-items:${bl.vpravo ? 'flex-end' : 'flex-start'}">${bl.prvky.map((p, i) => prvek(p, i, bl.vpravo)).join('')}</div>`).join('')
+    : f.stred
     ? `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px;height:${by1 - by0}px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:${f.t * 0.22}px">
          ${ikonaOg}${kicker}${nad}<h1>${c.titulek}</h1>${pod}<div style="margin-top:${f.t * 0.2}px">${logo}</div></div>`
     : `<div style="position:absolute;left:${bx0}px;top:${by0}px;width:${bx1 - bx0}px">
@@ -349,11 +373,18 @@ function html(c0, klic, { ucha = false } = {}) {
   .sub{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.sub}px;line-height:1.3;color:${b.sub}}
   .leg{position:absolute;text-shadow:0 0 8px ${NAVY},0 0 3px ${NAVY},0 1px 2px ${NAVY};font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:${f.leg ?? 26}px;line-height:1.6}
   /* Mapa smí běžet pod textem; drobné texty dostanou rozmazaný podklad v barvě pozadí, ať vždy vyhrají. */
+  /* podtitulek: jemný stín jen kolem písmen (Kateřina 29. 10.: rozpitý ovál pod podtitulkem byl „humpolácký“);
+     plný podklad .halo dostane jen tehdy, když kontrola kompozice najde pod textem světlý motiv */
+  .jemny{text-shadow:0 0 .3em ${NAVY},0 0 .1em ${NAVY},0 1px 2px ${NAVY}}
   .halo{isolation:isolate}
   .halo::before{content:'';position:absolute;inset:-.45em -.7em;background:${NAVY};opacity:.9;filter:blur(16px);border-radius:1em;z-index:-1}
   .leg i{display:inline-block;width:${(f.leg ?? 26) * 0.6}px;height:${(f.leg ?? 26) * 0.6}px;border-radius:50%;margin-right:${(f.leg ?? 26) * 0.4}px}
   .logo{display:flex;align-items:center;gap:${f.logo * 0.3}px;font-family:'IBM Plex Serif',Georgia,serif;font-weight:700;font-size:${f.logo}px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .logo svg{width:${f.logo * 1.5}px;height:${f.logo * 1.5}px}
+  /* kontrola kompozice (kontrolaKompozice níže): motiv a text se vyfotí každý zvlášť */
+  body.skryj-text :is(.kick,.nad,h1,.sub,.leg,.logo,.halo){visibility:hidden}
+  body.skryj-motiv .vrstva-motiv{visibility:hidden}
+  .stin{text-shadow:0 0 .32em ${NAVY},0 0 .12em ${NAVY},0 2px 10px rgba(0,0,0,.35)}
 </style></head><body>
 ${ucha ? '<div class="ctverec">' : ''}${motiv}${c.znak ? znak(c, f, klic) : ''}${scrim}${ogScrim}${ikona}
 ${text}${ucha ? '</div>' : ''}
@@ -403,21 +434,284 @@ async function vykresli(browser, c, klic, { ucha = false } = {}) {
   return page;
 }
 
+// ---------------------------------------------------------------------------------------------------------
+// Pojistky (od 28. 10. 2026, Kateřina: „chyby se vrší“; cover k vyznamenáním zůstal se starým textem a ve story
+// ležela legenda přes stuhu a logo přes medaili). Viz COVER-EDITOR.md → „Automatické pojistky“.
+//
+// 1. Texty z článku: frontmatter `coverTitulek` / `coverPodtitulek` je jediný zdroj textu coveru. Konfigurace,
+//    která má jiný text, se nevyrenderuje. Bez nich generátor aspoň vypíše titulek článku vedle titulku coveru.
+// 2. Kontrola kompozice: každý formát se vyfotí zvlášť bez textu a zvlášť bez motivu; rozdíl = viditelný motiv.
+//    Text do motivu zasahovat smí, musí ale zůstat čitelný: na světlé části motivu dostane sám podklad (halo),
+//    při velkém přesahu se zalomí užeji (konec před motivem), logo se zkusí v druhém dolním rohu. Chyba je jen to,
+//    co takhle opravit nejde, a text mimo bezpečnou zónu. Upozornění: roh štítku rubriky, prázdný pás na výšku.
+//    Vědomá výjimka v konfiguraci: kontrola: { prekryv: true | ['legenda', …] | { story: [...] }, duvod: '…' }.
+// 3. Razítko `<config>.razitko.json` vedle konfigurace: texty, titulek článku, otisky vstupů a obrázků a výsledek
+//    kontroly. apps/web/scripts/checkArticles.js (pre-commit i build) podle něj pozná zastaralý nebo ručně
+//    přepsaný cover a zastaví ho.
+const crypto = require('crypto');
+const TEXTOVE = /\.(c?js|mjs|json|svg|md|mdx|txt|html|css)$/i;
+// Otisk souboru; textové soubory bez ohledu na konce řádků (Windows × Linux build na Cloudflare)
+const otisk = (p) => {
+  let b = fs.readFileSync(p);
+  if (TEXTOVE.test(p)) b = Buffer.from(b.toString('utf8').replace(/\r\n/g, '\n'));
+  return crypto.createHash('sha256').update(b).digest('hex').slice(0, 16);
+};
+const rel = (p) => path.relative(REPO, p).split(path.sep).join('/');
+// Text bez HTML a nezlomitelných mezer – pro porovnání titulku konfigurace, frontmatteru a článku
+const holy = (s) => String(s ?? '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/&nbsp;| /g, ' ').replace(/\s+/g, ' ').trim();
+
+// Článek ke konfiguraci: c.clanek, jinak index.md(x) o složku výš (…/<slug>/_cover_pipeline/cover.config.cjs)
+function najdiClanek(c, cfgPath) {
+  const kandidati = c.clanek ? [path.resolve(path.dirname(cfgPath), c.clanek)]
+    : ['index.md', 'index.mdx'].map((n) => path.join(path.dirname(cfgPath), '..', n));
+  const soubor = kandidati.find((p) => fs.existsSync(p));
+  if (!soubor) return null;
+  const m = fs.readFileSync(soubor, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  return { soubor, fm: m ? require('js-yaml').load(m[1]) ?? {} : {} };
+}
+
+// Texty coveru z frontmatteru; rozpor s konfigurací = chyba (vyrenderoval by se jiný text, než je schválený)
+function textyZClanku(c, clanek) {
+  const chyby = [];
+  if (!clanek) return chyby;
+  for (const [pole, klic] of [['coverTitulek', 'titulek'], ['coverPodtitulek', 'pod']]) {
+    const v = clanek.fm[pole];
+    if (!v) continue;
+    if (c[klic] === undefined) c[klic] = v;
+    else if (holy(c[klic]) !== holy(v)) chyby.push(`${klic} v konfiguraci („${holy(c[klic])}“) se liší od ${pole} ve frontmatteru článku („${holy(v)}“). Platí frontmatter: smaž ${klic} z konfigurace, nebo oprav frontmatter.`);
+  }
+  return chyby;
+}
+
+const NAZVY = [['štítek', '.kick'], ['nadtitulek', '.nad'], ['titulek', 'h1'], ['podtitulek', '.sub > span'], ['legenda', '.leg > div'], ['logo', '.logo']];
+
+// Výjimka z kontroly překryvu pro prvek ve formátu (c.kontrola.prekryv: true | [prvky] | { formát: true | [prvky] })
+function smiPrekryt(c, klic, prvek) {
+  const p = c.kontrola?.prekryv ?? (c.motiv?.typ === 'tecky' ? true : false);
+  const v = Array.isArray(p) || typeof p === 'boolean' ? p : p[klic];
+  return v === true || (Array.isArray(v) && v.includes(prvek));
+}
+
+// Text smí do motivu zasahovat (Kateřina 28. 10.: „není potřeba ucukávat před každou čárkou v podkladu“; Brazílie:
+// mapa „klidně ať zasahuje pod ten text“), musí ale zůstat čitelný. Rozhoduje proto, jak SVĚTLÉ je místo pod
+// bílým textem (podíl pixelů pozadí s jasem nad 120 z 255, motiv i scrim započtené), ne samotný dotyk s motivem:
+const MIRNY = 0.02;   // od tohoto podílu dostane text podklad (halo: měkký tmavý fading v barvě pozadí)
+const VELKY = 0.25;   // od tohoto podílu se text zkusí zalomit užeji (konec před motivem); když nepomůže, je to chyba
+const LOGO = 0.25;    // logo na světlém motivu: zkusí se druhý dolní roh, jinak chyba
+
+// Běží ve stránce: obdélníky textů po řádcích (Range) a kolik z nich zabírá viditelný motiv (window.__motiv)
+function zmerTexty({ NAZVY, vw, vh }) {
+  const motiv = window.__motiv, jas = window.__jas;
+  const pocet = (x0, y0, x1, y1, pole = motiv) => {
+    let n = 0;
+    for (let y = Math.max(0, Math.floor(y0)); y < Math.min(vh, Math.ceil(y1)); y++) for (let x = Math.max(0, Math.floor(x0)); x < Math.min(vw, Math.ceil(x1)); x++) n += pole[y * vw + x];
+    return n;
+  };
+  const vysledek = [];
+  NAZVY.forEach(([nazev, sel]) => document.querySelectorAll(sel).forEach((el, i) => {
+    const r = document.createRange(); r.selectNodeContents(el);
+    let obd = [...r.getClientRects()].filter((q) => q.width > 2 && q.height > 2).map((q) => [q.left, q.top, q.right, q.bottom]);
+    if (nazev === 'logo' || !obd.length) { const q = el.getBoundingClientRect(); obd = q.width ? [[q.left, q.top, q.right, q.bottom]] : []; }
+    if (!obd.length) return;
+    let uvnitr = 0, svetle = 0, plocha = 0;
+    for (const [x0, y0, x1, y1] of obd) { uvnitr += pocet(x0, y0, x1, y1); svetle += pocet(x0, y0, x1, y1, jas); plocha += (x1 - x0) * (y1 - y0); }
+    // nejbližší motiv vpravo od levého okraje textu v jeho výšce (kam až smí sahat zalomený text)
+    const q = el.getBoundingClientRect();
+    let doX = vw;
+    for (let y = Math.max(0, Math.floor(q.top)); y < Math.min(vh, Math.ceil(q.bottom)); y++) for (let x = Math.ceil(q.left); x < doX; x++) if (motiv[y * vw + x]) { doX = x; break; }
+    vysledek.push({ nazev, i, obd, podil: uvnitr / plocha, svetle: svetle / plocha, levy: q.left, sirka: q.width, doX });
+  }));
+  return vysledek;
+}
+
+// Rozvrh a kontrola kompozice jednoho formátu na vykreslené stránce (před uložením obrázku – úpravy se do něj
+// propíšou). Motiv se vyfotí zvlášť bez textu a bez motivu; rozdíl = viditelný motiv. Pak:
+//  - mírný přesah textu přes motiv: text dostane halo (čitelnost), žádná chyba;
+//  - velký přesah: text se zalomí užeji (konec před motivem), legenda se případně zmenší; když to nestačí → chyba;
+//  - logo přes motiv: zkusí se druhý dolní roh; jinak chyba;
+//  - text mimo bezpečnou zónu, homepage roh štítku rubriky → chyba; prázdný pás ve výškovém formátu → upozornění.
+async function kontrolaKompozice(page, c, klic, f, { ucha = false } = {}) {
+  const s = ucha ? 630 / 1080 : 1, dx = ucha ? 285 : 0;
+  const [bx0, by0, bx1, by1] = f.box;
+  const bezp = [dx + bx0 * s, by0 * s, dx + bx1 * s, by1 * s];
+  const vw = ucha ? 1200 : f.w, vh = ucha ? 630 : f.h;
+  const snimek = async (tridy) => {
+    await page.evaluate((t) => { document.body.className = t; }, tridy);
+    const b = await page.screenshot({ type: 'png' });
+    return `data:image/png;base64,${b.toString('base64')}`;
+  };
+  const sMotivem = await snimek('skryj-text');
+  const bezMotivu = await snimek('skryj-text skryj-motiv');
+  await page.evaluate(() => { document.body.className = ''; });
+  const rohMotiv = await page.evaluate(async ({ sMotivem, bezMotivu, vw, vh }) => {
+    const nacti = (src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = src; });
+    const [a, b] = await Promise.all([nacti(sMotivem), nacti(bezMotivu)]);
+    const data = (img) => { const cv = document.createElement('canvas'); cv.width = vw; cv.height = vh; const x = cv.getContext('2d'); x.drawImage(img, 0, 0); return x.getImageData(0, 0, vw, vh).data; };
+    const A = data(a), B = data(b);
+    // viditelný motiv = pixel, který se s motivem a bez něj liší víc než jemná záře
+    const motiv = new Uint8Array(vw * vh);
+    for (let i = 0; i < vw * vh; i++) motiv[i] = Math.abs(A[i * 4] - B[i * 4]) + Math.abs(A[i * 4 + 1] - B[i * 4 + 1]) + Math.abs(A[i * 4 + 2] - B[i * 4 + 2]) > 60 ? 1 : 0;
+    window.__motiv = motiv;
+    // světlá část motivu (bez textu): na ní bílý text ztrácí kontrast; záře pozadí se nepočítá (je i bez motivu)
+    const jas = new Uint8Array(vw * vh);
+    for (let i = 0; i < vw * vh; i++) jas[i] = motiv[i] && 0.2126 * A[i * 4] + 0.7152 * A[i * 4 + 1] + 0.0722 * A[i * 4 + 2] > 120 ? 1 : 0;
+    window.__jas = jas;
+    window.__radekMotivu = Array.from({ length: vh }, (_, y) => { let n = 0; for (let x = 0; x < vw; x++) n += motiv[y * vw + x]; return n > vw * 0.01 ? 1 : 0; });
+    let n = 0; for (let y = 0; y < Math.min(vh, 280); y++) for (let x = 950; x < vw; x++) n += motiv[y * vw + x];
+    return vw > 950 ? n / ((vw - 950) * Math.min(vh, 280)) : 0;
+  }, { sMotivem, bezMotivu, vw, vh });
+
+  const sel = Object.fromEntries(NAZVY);
+  const uprav = (nazev, i, styl) => page.evaluate(({ s, i, styl }) => { const el = document.querySelectorAll(s)[i]; if (el) Object.assign(el.style, styl); }, { s: sel[nazev], i, styl });
+  const upravy = [];
+  // 1) velký přesah → užší zalomení (titulek, podtitulek, nadtitulek, legenda), legenda případně menší
+  for (let kolo = 0; kolo < 3; kolo++) {
+    const z = (await page.evaluate(zmerTexty, { NAZVY, vw, vh })).filter((t) => t.svetle > VELKY && !['logo', 'štítek'].includes(t.nazev) && !smiPrekryt(c, klic, t.nazev));
+    if (!z.length) break;
+    for (const t of z) {
+      const sirka = Math.floor(t.doX - t.levy - 24 * s);
+      if (sirka < t.sirka * 0.4) continue; // užší sloupec by byl nečitelný – nechat na chybu
+      await uprav(t.nazev, t.i, { maxWidth: `${sirka}px`, whiteSpace: 'normal', display: t.nazev === 'podtitulek' ? 'inline-block' : '' });
+      if (t.nazev === 'legenda' && kolo > 0) await uprav(t.nazev, t.i, { fontSize: '88%' });
+      upravy.push(`${t.nazev}: zalomeno do šířky ${Math.round(sirka / s)} px`);
+    }
+  }
+  // 2) logo přes motiv → druhý dolní roh
+  let texty = await page.evaluate(zmerTexty, { NAZVY, vw, vh });
+  const logo = texty.find((t) => t.nazev === 'logo');
+  if (logo && logo.svetle > LOGO && !smiPrekryt(c, klic, 'logo')) {
+    const puvodne = await page.evaluate(() => { const d = document.querySelector('.logo').parentElement; return { left: d.style.left, right: d.style.right }; });
+    await page.evaluate(({ bx0, bx1, w }) => { const d = document.querySelector('.logo').parentElement; if (d.style.left) { d.style.left = ''; d.style.right = `${w - bx1}px`; } else { d.style.right = ''; d.style.left = `${bx0}px`; } }, { bx0, bx1, w: f.w });
+    const novy = (await page.evaluate(zmerTexty, { NAZVY, vw, vh })).find((t) => t.nazev === 'logo');
+    if (novy.svetle < logo.svetle / 2) upravy.push('logo: přesunuto do druhého dolního rohu');
+    else await page.evaluate((p) => Object.assign(document.querySelector('.logo').parentElement.style, p), puvodne);
+    texty = await page.evaluate(zmerTexty, { NAZVY, vw, vh });
+  }
+  // 3) světlé místo pod textem: velký titulek a štítek dostanou stín kolem písmen (blok by byl těžký obdélník),
+  //    drobný text (podtitulek, legenda) měkký podklad (halo) jen v šířce textu, ne přes celý sloupec
+  for (const t of texty) if (t.svetle > MIRNY && ['titulek', 'štítek'].includes(t.nazev)) {
+    await page.evaluate(({ s, i }) => document.querySelectorAll(s)[i]?.classList.add('stin'), { s: sel[t.nazev], i: t.i });
+    upravy.push(`${t.nazev}: stín kolem písmen (leží na světlé části motivu)`);
+  }
+  for (const t of texty) if (t.svetle > MIRNY && !['logo', 'titulek', 'štítek'].includes(t.nazev)) {
+    const ma = await page.evaluate(({ s, i }) => { const el = document.querySelectorAll(s)[i]; if (!el || el.closest('.halo')) return true; el.classList.add('halo'); if (getComputedStyle(el).position === 'static') el.style.position = 'relative'; if (getComputedStyle(el).display === 'block') el.style.width = 'fit-content'; return false; }, { s: sel[t.nazev], i: t.i });
+    if (!ma) upravy.push(`${t.nazev}: podklad pod textem (leží na světlé části motivu)`);
+  }
+
+  // výsledná kontrola
+  texty = await page.evaluate(zmerTexty, { NAZVY, vw, vh });
+  const chyby = [], upozorneni = [], spatne = [];
+  for (const t of texty) {
+    const vyjimka = smiPrekryt(c, klic, t.nazev);
+    if (!vyjimka && t.nazev === 'logo' && t.svetle > LOGO) { chyby.push(`logo leží na světlé části motivu (${(t.svetle * 100).toFixed(0)} % plochy) a v druhém rohu není líp – posuň nebo zmenši motiv`); spatne.push(...t.obd); }
+    else if (!vyjimka && t.nazev !== 'logo' && t.svetle > VELKY) { chyby.push(`${t.nazev} leží z ${(t.svetle * 100).toFixed(0)} % na světlé části motivu a ani užší zalomení nepomohlo – posuň motiv nebo text, ztmav motiv pod textem (scrim)`); spatne.push(...t.obd); }
+    for (const [x0, y0, x1, y1] of t.obd) if (x0 < bezp[0] - 4 || y0 < bezp[1] - 4 || x1 > bezp[2] + 4 || y1 > bezp[3] + 4) {
+      chyby.push(`${t.nazev} přesahuje bezpečnou zónu formátu${klic === 'story' ? ' (horních 250 a dolních 340 px překrývá rozhraní Instagramu)' : ''}`); spatne.push([x0, y0, x1, y1]); break;
+    }
+    if (klic === 'homepage' && !ucha) for (const [x0, y0, x1, y1] of t.obd) if (x1 > 950 && y0 < 280) { upozorneni.push(`${t.nazev} zasahuje do rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – v malých kartách ho štítek zakryje`); spatne.push([x0, y0, x1, y1]); break; }
+  }
+  if (klic === 'homepage' && !ucha && rohMotiv > 0.03) upozorneni.push(`motiv zabírá ${(rohMotiv * 100).toFixed(0)} % rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – štítek ho v malých kartách zakryje`);
+  if (['story', 'instagram'].includes(klic) && !ucha) {
+    const radky = await page.evaluate(() => window.__radekMotivu);
+    for (const { obd } of texty) for (const [, y0, , y1] of obd) for (let y = Math.max(0, Math.floor(y0)); y < Math.min(vh, y1); y++) radky[y] = 1;
+    let nejdelsi = 0, od = 0, beh = 0;
+    for (let y = Math.round(bezp[1]); y < Math.round(bezp[3]); y++) { if (radky[y]) beh = 0; else if (++beh > nejdelsi) { nejdelsi = beh; od = y - beh + 1; } }
+    if (nejdelsi > (klic === 'story' ? 280 : 220)) { upozorneni.push(`prázdný pás ${nejdelsi} px (y ${od}–${od + nejdelsi}): motiv má využít výšku mezi textem a logem`); spatne.push([bezp[0], od, bezp[2], od + nejdelsi]); }
+  }
+  return { chyby, upozorneni, upravy, spatne };
+}
+
+// Náhled s vyznačenými místy (po uložení obrázku, rámečky se hned zase odstraní)
+async function nahledKontroly(page, spatne, soubor) {
+  if (!spatne.length) { if (fs.existsSync(soubor)) fs.unlinkSync(soubor); return false; }
+  await page.evaluate((spatne) => {
+    for (const [x0, y0, x1, y1] of spatne) {
+      const d = document.createElement('div');
+      d.className = 'kontrola-ramecek';
+      d.style.cssText = `position:absolute;z-index:99;left:${x0}px;top:${y0}px;width:${x1 - x0}px;height:${y1 - y0}px;outline:4px solid #ff2d55;background:#ff2d5526`;
+      document.body.appendChild(d);
+    }
+  }, spatne);
+  await page.screenshot({ path: soubor });
+  await page.evaluate(() => document.querySelectorAll('.kontrola-ramecek').forEach((d) => d.remove()));
+  return true;
+}
+
+module.exports.kontrolaKompozice = kontrolaKompozice;
+
 if (require.main === module) (async () => {
-  const cfgPath = path.resolve(process.argv[2]);
+  const argv = process.argv.slice(2);
+  // --vystup <složka>: zkušební render jinam (razítko se pak nezapisuje)
+  const iV = argv.indexOf('--vystup');
+  const jinyVystup = iV >= 0 ? path.resolve(argv.splice(iV, 2)[1]) : null;
+  const cfgPath = path.resolve(argv[0]);
   const c = require(cfgPath);
-  const jen = process.argv.slice(3);
+  const jen = argv.slice(1);
+  const vystup = jinyVystup ?? c.vystup;
+  fs.mkdirSync(vystup, { recursive: true });
+
+  // 1. texty z článku
+  const clanek = najdiClanek(c, cfgPath);
+  const rozpor = textyZClanku(c, clanek);
+  if (rozpor.length) { for (const r of rozpor) console.error(`✗ ${r}`); process.exit(1); }
+  if (clanek) {
+    console.log(`Titulek článku:  ${holy(clanek.fm.title)}`);
+    console.log(`Titulek coveru:  ${holy(c.titulek)}${clanek.fm.coverTitulek ? '  (z coverTitulek ve frontmatteru)' : '  (z konfigurace – sedí s článkem?)'}`);
+  } else console.log('Článek ke konfiguraci nenalezen (c.clanek) – titulek coveru nelze porovnat s článkem.');
+
+  // vstupy = konfigurace a všechny soubory, které při načtení přibrala ze své složky (motiv.cjs, data…)
+  const slozka = path.dirname(cfgPath);
+  const vstupySpolecne = Object.keys(require.cache).filter((p) => p.startsWith(slozka + path.sep) && fs.existsSync(p));
+  const vstupyFormatu = (klic) => [...vstupySpolecne, c.motiv?.soubory?.[klic], c.motiv?.src, c.ikona].filter((p) => p && fs.existsSync(p));
+
+  const razitkoPath = cfgPath.replace(/\.c?js$/, '') + '.razitko.json';
+  const razitko = !jinyVystup && fs.existsSync(razitkoPath) ? JSON.parse(fs.readFileSync(razitkoPath, 'utf8')) : { formaty: {} };
   const browser = await chromium.launch({ channel: 'msedge' });
+  let chybCelkem = 0;
   for (const klic of Object.keys(FORMATY).filter((k) => !jen.length || jen.includes(k))) {
     const f = FORMATY[klic];
-    let page;
-    if (klic === 'og' && !c.format?.og && c.og !== 'siroky') {
-      page = await vykresli(browser, c, 'square', { ucha: true });
-    } else page = await vykresli(browser, c, klic);
-    const out = path.join(c.vystup, f.soubor);
+    const ucha = klic === 'og' && !c.format?.og && c.og !== 'siroky';
+    const page = ucha ? await vykresli(browser, c, 'square', { ucha: true }) : await vykresli(browser, c, klic);
+    // 2. rozvrh a kontrola kompozice před uložením (OG „čtverec s ušima“ nese obsah čtverce – zóny čtverce)
+    const kf = ucha ? { ...FORMATY.square, ...(c.format?.square ?? {}) } : { ...f, ...(c.format?.[klic] ?? {}) };
+    const k = await kontrolaKompozice(page, c, klic, kf, { ucha });
+    const out = path.join(vystup, f.soubor);
     await page.screenshot(f.soubor.endsWith('.jpg') ? { path: out, type: 'jpeg', quality: 88 } : { path: out });
+    const nahled = path.join(slozka, `_kontrola-${klic}.png`);
+    const maNahled = await nahledKontroly(page, k.spatne, nahled);
     await page.close();
-    console.log(path.relative(REPO, out), `${f.w}×${f.h}`, `${Math.round(fs.statSync(out).size / 1024)} kB`);
+    const kb = Math.round(fs.statSync(out).size / 1024);
+    if (klic === 'og' && kb > 300) k.chyby.push(`OG má ${kb} kB, WhatsApp nenačte víc než 300 kB`);
+    chybCelkem += k.chyby.length;
+    console.log(`${rel(out)} ${f.w}×${f.h} ${kb} kB ${k.chyby.length ? '✗' : '✓'}`);
+    for (const u of k.upravy) console.log(`    ↻ ${u}`);
+    for (const ch of k.chyby) console.log(`    ✗ ${ch}`);
+    for (const u of k.upozorneni) console.log(`    ⚠ ${u}`);
+    if (maNahled) console.log(`    náhled s vyznačením: ${rel(nahled)}`);
+    razitko.formaty[klic] = {
+      soubor: rel(out), otisk: otisk(out),
+      vstupy: Object.fromEntries(vstupyFormatu(klic).map((p) => [rel(p), otisk(p)])),
+      kontrola: { chyby: k.chyby, upozorneni: k.upozorneni, upravy: k.upravy, ...(c.kontrola?.duvod ? { vyjimka: c.kontrola.duvod } : {}) },
+    };
   }
   await browser.close();
+
+  // 3. razítko
+  if (!jinyVystup) {
+    Object.assign(razitko, {
+      konfigurace: rel(cfgPath),
+      vyrenderovano: new Date().toISOString(),
+      clanek: clanek ? rel(clanek.soubor) : null,
+      titulekClanku: clanek ? holy(clanek.fm.title) : null,
+      texty: { stitek: typeof c.kicker === 'string' ? holy(c.kicker) : [c.kicker?.cervene, c.kicker?.dal].filter(Boolean).map(holy).join(' • '), nadtitulek: holy(c.nad), titulek: holy(c.titulek), podtitulek: holy(c.pod) },
+    });
+    fs.writeFileSync(razitkoPath, JSON.stringify(razitko, null, 2) + '\n');
+    console.log(`razítko: ${rel(razitkoPath)}`);
+  }
+  if (chybCelkem) {
+    console.error(`\n✗ Kontrola kompozice: ${chybCelkem} chyb. Oprav konfiguraci (polohy, velikosti, zalomení) a vyrenderuj znovu;`);
+    console.error('  vědomou výjimku (motiv přes celý formát) zapiš do konfigurace: kontrola: { prekryv: [...], duvod: \'…\' }.');
+    console.error('  Covery s chybou kontroly neprojdou kontrolou článků před commitem ani buildem.');
+    process.exit(1);
+  }
 })();

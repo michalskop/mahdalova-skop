@@ -78,6 +78,8 @@ Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis mus�
 
 **Přirozená čeština.** Přímá syntax bez rozjezdových vět a školometských přechodů.
 
+**Slovosled: podmět a přísudek napřed.** Česká věta nejčastěji začíná podmětem, za ním přísudek. Nezačínáme předmětem, i když to volný slovosled dovolí: místo *Většinu nedala predikce žádnému bloku* píšeme *Predikce nedala většinu žádnému bloku*, místo *Netanjahuovu bloku přisuzovala 58 mandátů* píšeme *Netanjahuův blok měl podle ní 58 mandátů*. Předmět na začátku věty zní kostrbatě a přeloženě. Výjimkou je jen skutečný důraz nebo návaznost na předchozí větu, a i tehdy nejvýš občas. (Ponaučení z článku o izraelských volbách, 29. 10. 2026.)
+
 **Rytmus vychází z myšlenky, ne z efektní šablony.** Nevršíme kousavé holé věty a jednoslovná oznámení ve vzorci „očekávání → krátké údery → závěrečná pointa“ (*Žádný plán. Žádná analýza. Jen číslo.*). Takový rytmus působí mechanicky, zvlášť když se opakuje napříč texty. Související fakt, výhradu a důsledek raději spojíme do přirozeného souvětí nebo plynulého odstavce. Krátká věta má smysl jen tam, kde odpovídá skutečnému tempu vyprávění a nese samostatnou informaci, ne jako automatický prostředek důrazu.
 
 **Zakázané konstrukce a fráze:**
@@ -91,6 +93,8 @@ Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis mus�
 **Základní oblouk:** otvírák → nut graf (co zkoumáme, proč je to důležité, proč teď) → evidence (nejsilnější důkaz, pak vysvětlení, limity, alternativy) → mechanismus (jak a proč vzniká, kdo rozhoduje a kdo nese důsledky) → význam → konec (odpověď, nástroj pro čtenáře, návrat k otvíráku nebo realistický směr řešení — ne mechanické shrnutí).
 
 **Povolené otvíráky:** překvapivý přesně zasazený fakt · skutečná reportovaná scéna · veřejný aktér a dohledatelný výrok · výslovně označený statistický nebo modelový případ · redakční datové pátrání (co jsme chtěli zjistit a jak) · konkrétní otázka nebo rozpor, na který text skutečně odpoví.
+
+**Rámeček „Jak jsme počítali“** má všude stejnou podobu: na prvním řádku tučný mezititulek bez tečky a bez dvojtečky (`**Jak jsme počítali**`, případně s dovětkem, např. `**Jak jsme počítali a co z toho neplyne**`), pod ním prázdný řádek a teprve pak popis postupu. Ne `**Jak jsme počítali.** Text…`, ne `Jak jsme počítali: text…` a ne nadpis `###` uvnitř rámečku. (Sjednoceno ve všech článcích 29. 10. 2026.)
 
 **Zakázaný zkrat:** nikdy nevytváříme smyšleného „pana Marka", rodinu ani dialog jen proto, aby data působila lidsky. Bez reportáže sáhneme po čísle, veřejném výroku, vlastním pátrání nebo transparentním modelovém případu.
 
