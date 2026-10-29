@@ -195,10 +195,11 @@ Platí pro všechno, co jde ven na web nebo na sociální sítě (článek, spec
 Od 28. 10. 2026 má každý náš carousel výzvu, aby lidé odpověděli. Převzali jsme to od týmu Moravec.cz, se kterým jsme dělali carousel k vyznamenáním, a Kateřina chce tenhle způsob komunikace s publikem používat vždy. Carousel není jen shrnutí článku, je to rozhovor.
 
 - **Tip na začátku:** úvodní slide položí otázku, na kterou si čtenář může tipnout, než se dozví odpověď („Který prezident rozdal nejvíc vyznamenání? Tipněte si.“). Odpověď přijde v dalších slidech.
-- **Názor na konci:** poslední slide se ptá na postoj a zve do komentářů. Vzor: „Zatímco Václav Havel rozdával vyznamenání po desítkách, Václav Klaus počty držel na minimu. Jaký z těchto přístupů je vám bližší? Dejte nám vědět do komentářů a sledujte dál náš sváteční datový speciál.“
+- **Názor na konci:** předposlední slide (poslední slide obsahu) se ptá na postoj a zve do komentářů. Vzor: „Zatímco Václav Havel rozdával vyznamenání po desítkách, Václav Klaus počty držel na minimu. Jaký z těchto přístupů je vám bližší? Dejte nám vědět do komentářů a sledujte dál náš sváteční datový speciál.“
 - **Pozvánka na další díl:** když vychází série výstupů (sváteční speciál, volby), výzva láká na pokračování („pro odpovědi dnes sledujte naše sítě“).
 - **Otázka musí jít z dat zodpovědět** a nesmí podsouvat odpověď. Tip musí mít jednoznačné řešení: „nejvíce žen“ je podle počtu jiný prezident než podle podílu, proto ptát se přesně. Otázky na názor stojí na doložené věci (Klaus Havlovy počty sám kritizoval), ne na naší interpretaci.
 - **Stejná výzva i v textu pod carouselem** (`carousel-caption.txt`): otázka + „napište nám do komentářů“.
+- **Úplně poslední slide je vždy poděkování a výzva k podpoře** (Kateřina 29. 10. 2026): „Máme vás rádi. Bez vaší podpory to nepůjde.“ a QR kód na podporu (Stripe odkaz ze `apps/web/components/common/SupportBanner.tsx`) s popiskem „Podpořte nás“. Generátor ho přidá sám na konec každého carouselu, v konfiguraci se nepíše; vypnout jde jen výjimečně (`bezPodekovani: true`). QR je `tools/podpora-qr.svg`, vyrobený lokálně balíkem `segno` v barvách DataTimes. Když se změní odkaz v SupportBanneru, QR přegenerovat (`python -c "import segno; segno.make('<odkaz>', error='m').save('tools/podpora-qr.svg', kind='svg', dark='#101432', light='#f8f6f0', border=2, xmldecl=False, omitsize=True)"`) a ověřit, že se z hotového slidu načte (např. `zxing-cpp`).
 
 ### 8.2 Pravidla obsahu carouselu (ponaučení z vyznamenání, 28. 10. 2026)
 

@@ -1372,3 +1372,54 @@ id,rok,prezident,druh,trida,skupina,in_memoriam,jmeno,pohlavi,cizinec,obor,popis
 1375,2026,Pavel,Řád Bílého lva,I. třída s řetězem,občanská,0,Alar Karis,M,1,zahranicni_statnik,prezident Estonska,vysoka,"Jeho Excelence Alar Karis, prezident Estonské republiky | občanská skupina, I. třída s řetězem, 2026"
 1376,2026,Pavel,Řád Bílého lva,I. třída s řetězem,občanská,0,Edgars Rinkēvičs,M,1,zahranicni_statnik,prezident Lotyšska,vysoka,"Jeho Excelence Edgars Rinkēvičs, prezident Lotyšské republiky | občanská skupina, I. třída s řetězem, 2026"
 1377,2026,Pavel,Řád Bílého lva,I. třída s řetězem,občanská,0,Gitanas Nauséda,M,1,zahranicni_statnik,prezident Litvy,vysoka,"Jeho Excelence Gitanas Nauséda, prezident Litevské republiky | občanská skupina, I. třída s řetězem, 2026 |"
+1378,2026,Pavel,Řád Bílého lva,II. třída,občanská,1,Věra Čáslavská,Z,0,sport,gymnastka,vysoka,"Věra Čáslavská | občanská skupina, II. třída, in memoriam, 2026"
+1379,2026,Pavel,Řád Bílého lva,II. třída,občanská,0,Helena Illnerová,Z,0,veda,fyzioložka a biochemička,vysoka,"prof. RNDr. Helena Illnerová, DrSc. | občanská skupina, II. třída, 2026"
+1380,2026,Pavel,Řád Bílého lva,III. třída,občanská,1,Miloš Forman,M,0,kultura,filmový režisér,vysoka,"Miloš Forman | občanská skupina, III. třída, in memoriam, 2026"
+1381,2026,Pavel,Řád Bílého lva,III. třída,občanská,0,Iva Janžurová,Z,0,kultura,herečka,vysoka,"Iva Janžurová | občanská skupina, III. třída, 2026"
+1382,2026,Pavel,Řád T. G. Masaryka,II. třída,,1,Vladimír Vochoč,M,0,obcanska_spolecnost,"diplomat, za války vydával pasy uprchlíkům",vysoka,"Vladimír Vochoč | II. třída, in memoriam, 2026"
+1383,2026,Pavel,Řád T. G. Masaryka,III. třída,,1,Jiří Dienstbier,M,0,protikomunisticky_odboj,"disident a mluvčí Charty 77, ministr zahraničí",vysoka,"Jiří Dienstbier | III. třída, in memoriam, 2026"
+1384,2026,Pavel,Řád T. G. Masaryka,III. třída,,1,Jaroslav Šedivý,M,0,politika,"historik, ministr zahraničí a velvyslanec",stredni,"PhDr. Jaroslav Šedivý, CSc. | III. třída, in memoriam, 2026"
+1385,2026,Pavel,Řád T. G. Masaryka,III. třída,,1,Jaroslav Kubera,M,0,politika,předseda Senátu,vysoka,"Jaroslav Kubera | III. třída, in memoriam, 2026"
+1386,2026,Pavel,Řád T. G. Masaryka,III. třída,,1,Eliška Wagnerová,Z,0,politika,"soudkyně Ústavního soudu, předsedkyně Nejvyššího soudu",vysoka,"JUDr. Eliška Wagnerová, Ph.D. | III. třída, in memoriam, 2026"
+1387,2026,Pavel,Řád T. G. Masaryka,IV. třída,,0,Elena Gorolová,Z,0,obcanska_spolecnost,romská lidskoprávní aktivistka,vysoka,"Elena Gorolová | IV. třída, 2026"
+1388,2026,Pavel,Řád T. G. Masaryka,IV. třída,,0,Milena Grenfell-Baines,Z,0,obcanska_spolecnost,"Wintonovo dítě, krajanka ve Velké Británii",stredni,"Milena Grenfell – Baines | IV. třída, 2026"
+1389,2026,Pavel,Medaile Za hrdinství,,,0,Vladimír Dvořák,M,0,odboj_valka,účastník Pražského povstání,vysoka,Vladimír Dvořák | 2026
+1390,2026,Pavel,Medaile Za hrdinství,,,1,Milan Štěrba,M,0,armada_bezpecnost,"voják, zahynul v Afghánistánu",vysoka,"poručík in memoriam Milan Štěrba | in memoriam, 2026"
+1391,2026,Pavel,Medaile Za hrdinství,,,1,Robert Vyroubal,M,0,armada_bezpecnost,"voják, zahynul v Afghánistánu",vysoka,"poručík in memoriam Robert Vyroubal | in memoriam, 2026"
+1392,2026,Pavel,Medaile Za hrdinství,,,1,Adrian Werner,M,0,armada_bezpecnost,"voják, zahynul v Afghánistánu",vysoka,"poručík in memoriam Adrian Werner | in memoriam, 2026"
+1393,2026,Pavel,Medaile Za hrdinství,,,1,Libor Cicvárek,M,0,hrdinsky_cin,"úředník v Chřibské, chránil lidi při ozbrojeném útoku",vysoka,"Libor Cicvárek | in memoriam, 2026"
+1394,2026,Pavel,Medaile Za zásluhy,,,0,Jiří Burýšek,M,0,media,"youtuber a novinář, Bez faulu",vysoka,Jiří Burýšek | 2026
+1395,2026,Pavel,Medaile Za zásluhy,,,0,Marko Čermák,M,0,kultura,"kreslíř a hudebník, tramp",vysoka,Marko Čermák | 2026
+1396,2026,Pavel,Medaile Za zásluhy,,,0,Kateřina Emmons,Z,0,sport,sportovní střelkyně,vysoka,Kateřina Emmons | 2026
+1397,2026,Pavel,Medaile Za zásluhy,,,0,Mahulena Exnerová,Z,0,medicina,"pediatrička, dětská paliativní péče",vysoka,MUDr. Mahulena Exnerová | 2026
+1398,2026,Pavel,Medaile Za zásluhy,,,0,Jiří Froněk,M,0,medicina,"transplantační chirurg, IKEM",vysoka,"prof. MUDr. Jiří Froněk, Ph.D. | 2026"
+1399,2026,Pavel,Medaile Za zásluhy,,,0,Arnošt Goldflam,M,0,kultura,"herec, dramatik a režisér",vysoka,prof. MgA. Arnošt Goldflam | 2026
+1400,2026,Pavel,Medaile Za zásluhy,,,1,Lukáš Grábl,M,0,armada_bezpecnost,"policista, specialista na hloubkové potápění",vysoka,"kpt. Mgr. Lukáš Grábl | in memoriam, 2026"
+1401,2026,Pavel,Medaile Za zásluhy,,,0,Pavel Hobza,M,0,veda,chemik,vysoka,"prof. Ing. Pavel Hobza, DrSc. dr. h. c. | 2026"
+1402,2026,Pavel,Medaile Za zásluhy,,,1,Ivan Hodač,M,0,politika,diplomat a manažer,stredni,"Ivan Hodač | in memoriam, 2026"
+1403,2026,Pavel,Medaile Za zásluhy,,,0,Tomáš Hradílek,M,0,protikomunisticky_odboj,"disident, signatář Charty 77",vysoka,Ing. Tomáš Hradílek | 2026
+1404,2026,Pavel,Medaile Za zásluhy,,,0,Jan Hřebejk,M,0,kultura,filmový režisér,vysoka,Jan Hřebejk | 2026
+1405,2026,Pavel,Medaile Za zásluhy,,,0,Jiří Ježek,M,0,sport,paracyklista,vysoka,Jiří Ježek | 2026
+1406,2026,Pavel,Medaile Za zásluhy,,,0,Tomáš Karpíšek,M,0,podnikani,podnikatel,vysoka,Tomáš Karpíšek | 2026
+1407,2026,Pavel,Medaile Za zásluhy,,,0,Sylva Knedlová,Z,0,veda,pedagožka,vysoka,Mgr. Sylva Knedlová | 2026
+1408,2026,Pavel,Medaile Za zásluhy,,,0,Robert Lischke,M,0,medicina,hrudní chirurg,vysoka,"prof. MUDr. Robert Lischke, Ph.D. | 2026"
+1409,2026,Pavel,Medaile Za zásluhy,,,0,Filip Maleňák,M,0,podnikani,"ředitel softwarové firmy, aplikace Záchranka",stredni,Ing. Filip Maleňák | 2026
+1410,2026,Pavel,Medaile Za zásluhy,,,0,Ivo Mathé,M,0,kultura,televizní producent a scenárista,stredni,Ivo Mathé | 2026
+1411,2026,Pavel,Medaile Za zásluhy,,,0,Tomáš Mikolov,M,0,veda,vědec v oboru umělé inteligence,vysoka,"Ing. Tomáš Mikolov, Ph.D. | 2026"
+1412,2026,Pavel,Medaile Za zásluhy,,,0,Petr Neužil,M,0,medicina,kardiolog,vysoka,"prof. MUDr. Petr Neužil, CSc. | 2026"
+1413,2026,Pavel,Medaile Za zásluhy,,,0,Adam Plachetka,M,0,kultura,operní pěvec,vysoka,Adam Plachetka | 2026
+1414,2026,Pavel,Medaile Za zásluhy,,,0,Jaroslava Rinnerová,Z,0,sport,fotbalistka,vysoka,Jaroslava Rinnerová | 2026
+1415,2026,Pavel,Medaile Za zásluhy,,,0,Ladislav Smoček,M,0,kultura,dramatik a divadelní režisér,vysoka,"Ladislav Smoček, dr. h. c. | 2026"
+1416,2026,Pavel,Medaile Za zásluhy,,,1,Tomáš Rothröckl,M,0,obcanska_spolecnost,"ekolog, ředitel Národního parku Podyjí",stredni,"Ing. Tomáš Rothröckl | in memoriam, 2026"
+1417,2026,Pavel,Medaile Za zásluhy,,,0,Vojtěch Sedláček,M,0,obcanska_spolecnost,"podnikatel, zásluhy v sociální oblasti",nizka,Vojtěch Sedláček | 2026
+1418,2026,Pavel,Medaile Za zásluhy,,,0,Richard Smejkal,M,0,obcanska_spolecnost,velitel Ústředního krizového týmu ČČK,stredni,"Ing. Richard Smejkal, Ph.D. | 2026"
+1419,2026,Pavel,Medaile Za zásluhy,,,0,Karel Steigerwald,M,0,media,dramatik a novinář,stredni,Karel Steigerwald | 2026
+1420,2026,Pavel,Medaile Za zásluhy,,,0,Olga Štěpánková,Z,0,veda,technická vědkyně,vysoka,"prof. RNDr. Olga Štěpánková, CSc. | 2026"
+1421,2026,Pavel,Medaile Za zásluhy,,,0,Lenka Šťastná,Z,0,podnikani,zakladatelka Business & Professional Women ČR,stredni,Ing. Lenka Šťastná | 2026
+1422,2026,Pavel,Medaile Za zásluhy,,,0,Jáchym Topol,M,0,kultura,spisovatel,vysoka,Jáchym Topol | 2026
+1423,2026,Pavel,Medaile Za zásluhy,,,0,Kateřina Tučková,Z,0,kultura,spisovatelka,vysoka,"Mgr. Kateřina Tučková, Ph.D. | 2026"
+1424,2026,Pavel,Medaile Za zásluhy,,,0,Kumar Vishwanathan,M,0,obcanska_spolecnost,sociální pracovník a aktivista,vysoka,Mgr. Kumar Vishwanathan | 2026
+1425,2026,Pavel,Medaile Za zásluhy,,,0,Katarína Vlčková,Z,0,obcanska_spolecnost,primářka a filantropka,stredni,MUDr. Katarína Vlčková | 2026
+1426,2026,Pavel,Medaile Za zásluhy,,,0,Ondřej Vlček,M,0,obcanska_spolecnost,manažer a filantrop,stredni,Ing. Ondřej Vlček | 2026
+1427,2026,Pavel,Medaile Za zásluhy,,,1,Petra Wünschová,Z,0,obcanska_spolecnost,"arteterapeutka, zakladatelka Centra Locika",vysoka,"Petra Wünschová | in memoriam, 2026"
+1428,2026,Pavel,Medaile Za zásluhy,,,0,Lucie Žáčková,Z,0,obcanska_spolecnost,ředitelka organizace Nedoklubko,vysoka,Lucie Žáčková | 2026

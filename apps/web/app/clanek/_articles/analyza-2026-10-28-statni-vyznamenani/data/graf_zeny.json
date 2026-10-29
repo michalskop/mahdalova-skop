@@ -1,10 +1,10 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Vyznamenání dostávají hlavně {muži|#522a7a}. Za Pavla je {žen|#33b9d9} víc, zhruba čtvrtina",
+  "text": "Vyznamenání dostávají hlavně {muži|#522a7a}. Za Pavla je {žen|#33b9d9} víc, přes čtvrtinu",
   "subtitle": "Počet vyznamenání v daném ročníku: tyrkysově ženy vlevo, fialově muži vpravo. Kliknutím na řádek zobrazíte jména."
  },
- "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026) a tisková zpráva z 28. 10. 2026; rozdělení podle oborů a pohlaví DataTimes.cz",
  "_click_detail": {
   "field": "jména",
   "key": "rok",
@@ -42,7 +42,8 @@
    "2022": "## Ženy (8)\nAngelika Ivana Pintířová\nEva Kubala Havrdová\nHana Zagorová (in memoriam)\nIvana Trumpová (in memoriam)\nJuliána Ludmila Zatloukalová-Coufalová (in memoriam)\nMichaela Vidláková\nMilena Černá (in memoriam)\nVěra Doušová\n## Muži (70)\nBedřich Koula (in memoriam)\nFrantišek Skorkovský (in memoriam)\nJan Košík\nJan Weinert (in memoriam)\nJan Černý (in memoriam)\nJaroslav Bolfík\nJaroslav Fila (in memoriam)\nJaroslav Klíma (in memoriam)\nJosef Adamec (in memoriam)\nJosef Matoušek (in memoriam)\nJosef Serinek (in memoriam)\nMarek Frauwirth (in memoriam)\nMarek Klimus\nMarek Vrba (in memoriam)\nMartin Semecký\nMiroslav Fenik (in memoriam)\nPetr Matouš\nTomáš Houška (in memoriam)\nTomáš Neškodný\nTomáš Vlasák\nVáclav Šaffránek (in memoriam)\nBoris Šťastný\nEmil Dračka\nFrank Joseph Malina (in memoriam)\nFrantišek Janula (in memoriam)\nFrantišek Pošta (in memoriam)\nGustav Oplustil (in memoriam)\nIvan Lendl\nIvan Sedláček\nJakub Vágner\nJan Betka\nJan Kaše\nJan Slabák\nJaroslav Malý\nJaroslav Třešňák\nJaroslav Čvančara\nJehuda Bacon\nJiří Holík\nJiří Kotyk\nJiří Mareček\nJustin Jan Berka\nKarel Čáslavský (in memoriam)\nMartin Hrbáč\nMichal Burian\nMiloslav Fiala\nMiloslav Kalaš\nMiloš Štědroň\nMiroslav Jansta\nMiroslav Zavoral\nMiroslav Žbirka (in memoriam)\nOldřich Lichtenberg\nPavel Stodůlka\nPavel Vršecký\nPavel Šlampa\nPetr Marek\nPetr Mlsna\nTomáš Jirsa\nVladimír Bílek\nVladimír Vlček\nVladislav Třeška\nVáclav Klemák\nJosef Balabán (in memoriam)\nJosef Hubáček (in memoriam)\nJosef Stehlík (in memoriam)\nJosef Vladimír Mašín st. (in memoriam)\nKarel Lukas (in memoriam)\nVojtěch Boris Luža (in memoriam)\nVolodymyr Oleksandrovyč Zelenskyj\nVáclav Morávek (in memoriam)\nLadislav Mňačko (in memoriam)",
    "2023": "## Ženy (16)\nBožena Jirků\nDina Štěrbová\nEva Graham\nEva Kantůrková\nEva Opravilová\nHana Dvořáková\nHelena Tlaskalová – Hogenová\nIda Kelarová\nKvěta Pacovská (in memoriam)\nMagdaléna Kožená\nOlga Sommerová\nVěra Vávrová\nHana Librová\nJarmila Stibicová\nMarta Kubišová\nZdeňka Mašínová\n## Muži (49)\nJan Dvořák (in memoriam)\nJiří Pavel Kafka\nJiří Štěpánek\nJosef Bernat (in memoriam)\nMartin Salay\nOldřich Doležal (in memoriam)\nPavel Farka\nPetr Jirout\nStanislav Zimprich (in memoriam)\nBedřich Moldan\nDavid Lukáš\nFrantišek Mertl\nGünter Geyer\nIvan Klánský\nJaroslav Jíra\nJaroslav Němeček\nJiří Bartoška\nJiří Chvála\nJiří Grygar\nJosef Fanta\nJosef Jařab\nJosef Neček\nJosef Pešek\nKvětoslav Mašita\nMarek Svoboda\nMartin Povejšil (in memoriam)\nMiloslav Nevrlý\nMiloň Čepelka\nMiroslav Kopřiva\nMiroslav Masák\nPetr Kostka\nPetr Sís\nRadek Jaroš\nViktor Preiss\nVladimír Beneš\nVladimír Mišík\nVladimír Staněk\nAlexander Van der Bellen\nFrantišek Pecháček (in memoriam)\nKarel Mareš (in memoriam)\nKarel Schwarzenberg\nMilan Rastislav Štefánik (in memoriam)\nPavel Rychetský\nPetr Pithart\nIlja Hradecký\nJan Sokol (in memoriam)\nJan Šolc\nMilan Uhde\nTomáš Halík",
    "2024": "## Ženy (20)\nKateřina Laluhová\nAgnieszka Holland\nDagmar Pecková\nDaniela Kolářová\nDita Horochovská\nEmilie Vallová\nHelena Třeštíková\nJana Hlaváčová (in memoriam)\nKarin Lednická\nKateřina Šédová\nLucie Hyblerová\nMarie Rottrová\nRadka Denemarková\nRadka Vernerová\nYvonna Gaillyová\nZdeňka Prokopová\nŠtěpánka Hilgertová\nEva Jiřičná\nZuzana Čaputová\nAnna Šabatová\n## Muži (39)\nJosef Keprt (in memoriam)\nKarel Kučera (in memoriam)\nLukáš Dudík\nLukáš Hirka\nOldřich Pechal (in memoriam)\nRoman Juřena\nAlexander Wiegand\nDaniel Anýž (in memoriam)\nIvan Trojan\nJan Gruntorád\nJan Švejnar\nJaroslav Rudiš\nJaroslav Vild\nJaroslav Vostrý\nJiří Netík\nJiří Sozanský\nLadislav Krištoufek\nLuděk Munzar (in memoriam)\nMark Rieder\nMartin Doktor\nMustafa Džemilev\nOndřej Vetchý\nPavel Kosatík\nPetr Dvořák\nPetr Janda\nPetr Sýkora\nRoman Červenka\nVladimír Smutný\nZdeněk Štybar\nFrantišek Moravec (in memoriam)\nJiří Kylián\nSergěj Jan Ingr (in memoriam)\nDaniel Kroupa\nJan Pavel II. (in memoriam)\nJens Stoltenberg\nJosef Suchár\nKarel Kovanda\nPavel Pecháček (in memoriam)\nWilliam Jefferson Clinton",
-   "2025": "## Ženy (13)\nAnna Malinová (in memoriam)\nAnna Geislerová\nDana Krejčířová\nDanuše Steinová\nJiřina Bartůňková\nVěra Fina\nZdenka Wasserbauerová\nZuzana Baudyšová\nŠárka Pospíšilová\nDana Drábová (in memoriam)\nMartina Navrátilová\nMáxima\nDana Němcová (in memoriam)\n## Muži (38)\nArnošt Valenta (in memoriam)\nDavid Hurák\nJakub Černý\nJosef Svatoň (in memoriam)\nKarel Klinovský\nMartin Černý\nŠimon Malý\nAlois Švehlík (in memoriam)\nDavid Kratochvíl\nFrantišek Kopřiva\nGerhardt Bubník\nJakub Hrůša\nJan Dvořák\nJan Kaplický (in memoriam)\nJan Starý\nJan Vítek\nJiří Tichota\nJosef Dostál\nJosef Průša\nJosef Vágner (in memoriam)\nKarel Řehka\nLibor Lochman\nMartin Dorazín\nMartin Fuksa\nMiloš Zapletal (in memoriam)\nOndřej Felix\nOndřej Hes (in memoriam)\nPetr Oslzlý\nPetr Ošlejšek\nTomáš Jungwirth\nTomáš Pojar\nFilip\nHugo Vojta (in memoriam)\nJaromír Nechanský (in memoriam)\nVilém-Alexandr\nZdeněk Svěrák\nOtakar Motejl (in memoriam)\nŠimon Pánek"
+   "2025": "## Ženy (13)\nAnna Malinová (in memoriam)\nAnna Geislerová\nDana Krejčířová\nDanuše Steinová\nJiřina Bartůňková\nVěra Fina\nZdenka Wasserbauerová\nZuzana Baudyšová\nŠárka Pospíšilová\nDana Drábová (in memoriam)\nMartina Navrátilová\nMáxima\nDana Němcová (in memoriam)\n## Muži (38)\nArnošt Valenta (in memoriam)\nDavid Hurák\nJakub Černý\nJosef Svatoň (in memoriam)\nKarel Klinovský\nMartin Černý\nŠimon Malý\nAlois Švehlík (in memoriam)\nDavid Kratochvíl\nFrantišek Kopřiva\nGerhardt Bubník\nJakub Hrůša\nJan Dvořák\nJan Kaplický (in memoriam)\nJan Starý\nJan Vítek\nJiří Tichota\nJosef Dostál\nJosef Průša\nJosef Vágner (in memoriam)\nKarel Řehka\nLibor Lochman\nMartin Dorazín\nMartin Fuksa\nMiloš Zapletal (in memoriam)\nOndřej Felix\nOndřej Hes (in memoriam)\nPetr Oslzlý\nPetr Ošlejšek\nTomáš Jungwirth\nTomáš Pojar\nFilip\nHugo Vojta (in memoriam)\nJaromír Nechanský (in memoriam)\nVilém-Alexandr\nZdeněk Svěrák\nOtakar Motejl (in memoriam)\nŠimon Pánek",
+   "2026": "## Ženy (16)\nVěra Čáslavská (in memoriam)\nHelena Illnerová\nIva Janžurová\nEliška Wagnerová (in memoriam)\nElena Gorolová\nMilena Grenfell-Baines\nKateřina Emmons\nMahulena Exnerová\nSylva Knedlová\nJaroslava Rinnerová\nOlga Štěpánková\nLenka Šťastná\nKateřina Tučková\nKatarína Vlčková\nPetra Wünschová (in memoriam)\nLucie Žáčková\n## Muži (38)\nAlar Karis\nEdgars Rinkēvičs\nGitanas Nauséda\nMiloš Forman (in memoriam)\nVladimír Vochoč (in memoriam)\nJiří Dienstbier (in memoriam)\nJaroslav Šedivý (in memoriam)\nJaroslav Kubera (in memoriam)\nVladimír Dvořák\nMilan Štěrba (in memoriam)\nRobert Vyroubal (in memoriam)\nAdrian Werner (in memoriam)\nLibor Cicvárek (in memoriam)\nJiří Burýšek\nMarko Čermák\nJiří Froněk\nArnošt Goldflam\nLukáš Grábl (in memoriam)\nPavel Hobza\nIvan Hodač (in memoriam)\nTomáš Hradílek\nJan Hřebejk\nJiří Ježek\nTomáš Karpíšek\nRobert Lischke\nFilip Maleňák\nIvo Mathé\nTomáš Mikolov\nPetr Neužil\nAdam Plachetka\nLadislav Smoček\nTomáš Rothröckl (in memoriam)\nVojtěch Sedláček\nRichard Smejkal\nKarel Steigerwald\nJáchym Topol\nKumar Vishwanathan\nOndřej Vlček"
   },
   "rows": [
    {
@@ -64,7 +65,7 @@
   ]
  },
  "width": "container",
- "height": 527,
+ "height": 544,
  "layer": [
   {
    "data": {
@@ -750,6 +751,28 @@
       "muži": 38,
       "celkem": 51,
       "podíl": 0.2549
+     },
+     {
+      "rok": "2026",
+      "pohlaví": "žena",
+      "x0": -16,
+      "x1": 0,
+      "počet": 16,
+      "ženy": 16,
+      "muži": 38,
+      "celkem": 54,
+      "podíl": 0.2963
+     },
+     {
+      "rok": "2026",
+      "pohlaví": "muž",
+      "x0": 0,
+      "x1": 38,
+      "počet": 38,
+      "ženy": 16,
+      "muži": 38,
+      "celkem": 54,
+      "podíl": 0.2963
      }
     ]
    },
@@ -762,6 +785,7 @@
      "type": "ordinal",
      "title": null,
      "sort": [
+      "2026",
       "2025",
       "2024",
       "2023",
@@ -796,6 +820,7 @@
      ],
      "scale": {
       "domain": [
+       "2026",
        "2025",
        "2024",
        "2023",
@@ -961,6 +986,7 @@
      "type": "ordinal",
      "title": null,
      "sort": [
+      "2026",
       "2025",
       "2024",
       "2023",
@@ -995,6 +1021,7 @@
      ],
      "scale": {
       "domain": [
+       "2026",
        "2025",
        "2024",
        "2023",
@@ -1061,7 +1088,7 @@
       "p": "Zeman"
      },
      {
-      "rok": "2025",
+      "rok": "2026",
       "p": "Pavel"
      }
     ]
@@ -1082,6 +1109,7 @@
      "type": "ordinal",
      "title": null,
      "sort": [
+      "2026",
       "2025",
       "2024",
       "2023",
@@ -1116,6 +1144,7 @@
      ],
      "scale": {
       "domain": [
+       "2026",
        "2025",
        "2024",
        "2023",

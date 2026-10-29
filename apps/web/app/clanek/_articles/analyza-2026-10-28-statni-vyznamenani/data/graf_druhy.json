@@ -2,9 +2,9 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
   "text": "Řád T. G. Masaryka tvořil u Zemana třikrát menší podíl vyznamenání než u Havla a Klause",
-  "subtitle": "Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2025"
+  "subtitle": "Podíl jednotlivých druhů vyznamenání na všech, která prezident udělil, 1995–2026"
  },
- "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026) a tisková zpráva z 28. 10. 2026; rozdělení podle oborů a pohlaví DataTimes.cz",
  "_toggle_legend": true,
  "width": "container",
  "height": 200,
@@ -97,29 +97,29 @@
    {
     "prezident": "Petr Pavel",
     "druh": "Řád Bílého lva",
-    "počet": 20,
-    "podíl": 0.1149,
+    "počet": 27,
+    "podíl": 0.1184,
     "pořadí": 0
    },
    {
     "prezident": "Petr Pavel",
     "druh": "Řád T. G. Masaryka",
-    "počet": 20,
-    "podíl": 0.1149,
+    "počet": 27,
+    "podíl": 0.1184,
     "pořadí": 1
    },
    {
     "prezident": "Petr Pavel",
     "druh": "Medaile Za hrdinství",
-    "počet": 23,
-    "podíl": 0.1322,
+    "počet": 28,
+    "podíl": 0.1228,
     "pořadí": 2
    },
    {
     "prezident": "Petr Pavel",
     "druh": "Medaile Za zásluhy",
-    "počet": 111,
-    "podíl": 0.6379,
+    "počet": 146,
+    "podíl": 0.6404,
     "pořadí": 3
    }
   ]

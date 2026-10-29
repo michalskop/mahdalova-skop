@@ -82,6 +82,9 @@ zjednodušování dat). Výroba jde stejnou cestou jako cover image tohoto
 článku — HTML šablona přes headless Chromium, ne ruční obrázek v jiném
 nástroji, aby zůstala vizuální shoda s webem. Caption pod carouselem je
 krátké shrnutí + odkaz do bia, ne přelepený text z X threadu.
+Poslední slide je vždy poděkování a výzva k podpoře s QR kódem na
+podporu (od 29. 10. 2026, generátor ho přidává sám; podrobnosti
+v `tools/COVER-VIZUALNI-IDENTITA.md`, kapitola 8.1).
 
 ### Podcast, ~15 minut, „hutný"
 

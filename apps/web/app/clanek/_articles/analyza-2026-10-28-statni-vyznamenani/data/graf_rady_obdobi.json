@@ -16,9 +16,9 @@
  },
  "title": {
   "text": "Klaus dával řády politickým vězňům, Zeman zahraničním státníkům",
-  "subtitle": "Počet řádů Bílého lva a T. G. Masaryka podle oblasti a funkčního období, 1995–2025. Plná barva = první funkční období, světlejší = druhé. Pavlovi běží první období."
+  "subtitle": "Počet řádů Bílého lva a T. G. Masaryka podle oblasti a funkčního období, 1995–2026. Plná barva = první funkční období, světlejší = druhé. Pavlovi běží první období."
  },
- "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026); rozdělení podle oborů a pohlaví DataTimes.cz",
+ "_source": "Kancelář prezidenta republiky, seznamy vyznamenaných na hrad.cz (stav k 27. 10. 2026) a tisková zpráva z 28. 10. 2026; rozdělení podle oborů a pohlaví DataTimes.cz",
  "_toggle_legend": true,
  "width": "container",
  "height": 300,
@@ -340,16 +340,16 @@
     "prezident": "Petr Pavel",
     "období": "1. období",
     "obor": "kultura a umění",
-    "počet": 4,
-    "jména": "Eva Jiřičná (2024)\nJiří Kylián (2024)\nMilan Uhde (2023)\nZdeněk Svěrák (2025)",
+    "počet": 6,
+    "jména": "Eva Jiřičná (2024)\nIva Janžurová (2026)\nJiří Kylián (2024)\nMilan Uhde (2023)\nMiloš Forman (2026, in memoriam)\nZdeněk Svěrák (2025)",
     "nápověda": "klikněte na sloupec"
    },
    {
     "prezident": "Petr Pavel",
     "období": "1. období",
     "obor": "ostatní",
-    "počet": 7,
-    "jména": "Dana Drábová (2025, in memoriam)\tMartina Navrátilová (2025)\nHana Librová (2023)\tPavel Pecháček (2024, in memoriam)\nIlja Hradecký (2023)\tŠimon Pánek (2025)\nJan Sokol (2023, in memoriam)\t",
+    "počet": 12,
+    "jména": "Dana Drábová (2025, in memoriam)\tMartina Navrátilová (2025)\nElena Gorolová (2026)\tMilena Grenfell-Baines (2026)\nHana Librová (2023)\tPavel Pecháček (2024, in memoriam)\nHelena Illnerová (2026)\tVladimír Vochoč (2026, in memoriam)\nIlja Hradecký (2023)\tVěra Čáslavská (2026, in memoriam)\nJan Sokol (2023, in memoriam)\tŠimon Pánek (2025)",
     "nápověda": "klikněte na sloupec"
    },
    {
@@ -364,24 +364,24 @@
     "prezident": "Petr Pavel",
     "období": "1. období",
     "obor": "politika, stát a justice",
-    "počet": 6,
-    "jména": "Jan Šolc (2023)\nKarel Kovanda (2024)\nKarel Schwarzenberg (2023)\nOtakar Motejl (2025, in memoriam)\nPavel Rychetský (2023)\nPetr Pithart (2023)",
+    "počet": 9,
+    "jména": "Eliška Wagnerová (2026, in memoriam)\tKarel Schwarzenberg (2023)\nJan Šolc (2023)\tOtakar Motejl (2025, in memoriam)\nJaroslav Kubera (2026, in memoriam)\tPavel Rychetský (2023)\nJaroslav Šedivý (2026, in memoriam)\tPetr Pithart (2023)\nKarel Kovanda (2024)\t",
     "nápověda": "klikněte na sloupec"
    },
    {
     "prezident": "Petr Pavel",
     "období": "1. období",
     "obor": "protikomunistický odboj a disent",
-    "počet": 6,
-    "jména": "Anna Šabatová (2024)\nDana Němcová (2025, in memoriam)\nDaniel Kroupa (2024)\nJarmila Stibicová (2023)\nMarta Kubišová (2023)\nZdeňka Mašínová (2023)",
+    "počet": 7,
+    "jména": "Anna Šabatová (2024)\tJiří Dienstbier (2026, in memoriam)\nDana Němcová (2025, in memoriam)\tMarta Kubišová (2023)\nDaniel Kroupa (2024)\tZdeňka Mašínová (2023)\nJarmila Stibicová (2023)\t",
     "nápověda": "klikněte na sloupec"
    },
    {
     "prezident": "Petr Pavel",
     "období": "1. období",
     "obor": "zahraniční státníci",
-    "počet": 7,
-    "jména": "Alexander Van der Bellen (2023)\tVilém-Alexandr (2025)\nFilip (2025)\tWilliam Jefferson Clinton (2024)\nJens Stoltenberg (2024)\tZuzana Čaputová (2024)\nMáxima (2025)\t",
+    "počet": 10,
+    "jména": "Alar Karis (2026)\tJens Stoltenberg (2024)\nAlexander Van der Bellen (2023)\tMáxima (2025)\nEdgars Rinkēvičs (2026)\tVilém-Alexandr (2025)\nFilip (2025)\tWilliam Jefferson Clinton (2024)\nGitanas Nauséda (2026)\tZuzana Čaputová (2024)",
     "nápověda": "klikněte na sloupec"
    }
   ]
