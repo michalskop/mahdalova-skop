@@ -75,7 +75,7 @@ ${svg}
 <div class="fade"></div>
 <div class="tag"><span>ANALYSIS</span><span>GERMAN ELECTIONS</span></div>
 <div class="txt"><div class="h">“We want to live decently,<br>just like you,”</div><div class="s">say young people in&nbsp;Berlin<br>as they vote for Die&nbsp;Linke</div></div>
-<div class="logo">${LOGO}<span>DataTimes.cz</span></div>
+<div class="logo">${LOGO}<span>DataTimes.org</span></div>
 </body></html>`;
 
 // 5:4 homepage – pás nahoře, siluety přes střed, text vlevo dole

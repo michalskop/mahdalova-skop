@@ -3,6 +3,7 @@
 const path = require('path');
 const m = (k) => path.join(__dirname, 'motiv', `${k}.svg`);
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Domestic and sexual violence' },
   titulek: 'Czechs blame victims<br>of violence twice as often<br>as the rest of Europe',

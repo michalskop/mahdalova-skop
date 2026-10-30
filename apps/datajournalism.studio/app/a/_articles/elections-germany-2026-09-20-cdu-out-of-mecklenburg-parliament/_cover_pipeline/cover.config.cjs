@@ -19,6 +19,7 @@ const FOTO = {
 };
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Elections', dal: 'in&nbsp;Germany', oddelovac: '' },
   nad: 'Clear after 45 minutes:<br>in&nbsp;Mecklenburg-Western Pomerania',

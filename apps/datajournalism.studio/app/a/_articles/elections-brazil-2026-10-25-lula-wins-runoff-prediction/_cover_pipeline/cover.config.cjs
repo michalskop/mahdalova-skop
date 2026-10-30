@@ -9,6 +9,7 @@ const MOTIV = {
 // texty pro OG (titulek na dva řádky vedle mapy)
 const SLOUPEC = { logo: 'vlevo', nad: 'Presidential runoff,<br>DataTimes.cz prediction', titulek: 'Lula wins<br>the runoff', pod: 'Lula 51.8%, Flávio Bolsonaro 48.2%<br>First-round winner loses<br>by 4.4&nbsp;million votes' };
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Brazil', dal: 'elections', oddelovac: '' },
   nad: 'Presidential runoff,<br>DataTimes.cz prediction',

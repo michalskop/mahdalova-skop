@@ -6,6 +6,7 @@ const OBVODY = [3, 6, 9, 15, 18, 36, 42, 54, 63, 66, 72, 75, 81];  // obvody s f
 const NAVY_DOTS = { barvaObvod: '#de1743' /* brand.6 */, barvaTecka: '#2f325c' /* brandNavy.8 */, barvaBod: '#697fe6' /* brandRoyalBlue.4 */, obrysBod: '#ffffff' };
 const BARVY = { glowA: '#4a51ab' /* brandRoyalBlue.6 */, glowB: '#812840' /* brandDeepRed.7 */, kick: '#d2d8e9' /* brandNavy.1 */, sub: '#a9b5f0' /* brandRoyalBlue.2 */, stitek: '#de1743' };
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Senate elections 2026' },
   titulek: "Rivals won over<br>ANO's voters",

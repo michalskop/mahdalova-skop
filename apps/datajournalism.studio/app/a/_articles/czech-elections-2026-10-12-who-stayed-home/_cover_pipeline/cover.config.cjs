@@ -29,6 +29,7 @@ const body = [
 ];
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Czech municipal and Senate elections 2026' },
   titulek: 'Who stayed at home',

@@ -2,9 +2,9 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/images/cover-homepage.png",
-      "otisk": "ed4eeb23ff438710",
+      "otisk": "b45dc673a5ce7f04",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "86a14d12192fb3a1"
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "068b0340c8394a9e"
       },
       "kontrola": {
         "chyby": [],
@@ -16,9 +16,9 @@
     },
     "og": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/images/cover-og.jpg",
-      "otisk": "2c3942198e0f600a",
+      "otisk": "0bda666ec148230e",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "86a14d12192fb3a1"
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "068b0340c8394a9e"
       },
       "kontrola": {
         "chyby": [],
@@ -28,9 +28,9 @@
     },
     "square": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/images/cover-square.png",
-      "otisk": "37d5bec5b75aaa50",
+      "otisk": "d3abd800aeef004a",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "86a14d12192fb3a1"
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "068b0340c8394a9e"
       },
       "kontrola": {
         "chyby": [],
@@ -40,9 +40,9 @@
     },
     "instagram": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/images/cover-instagram.png",
-      "otisk": "03d539d6de82d73f",
+      "otisk": "30a436e33cc37f89",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "86a14d12192fb3a1"
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "068b0340c8394a9e"
       },
       "kontrola": {
         "chyby": [],
@@ -52,9 +52,9 @@
     },
     "story": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/images/cover-story.png",
-      "otisk": "1b21f9f2b0f6dc64",
+      "otisk": "6ea3213680ecc7c1",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "86a14d12192fb3a1"
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs": "068b0340c8394a9e"
       },
       "kontrola": {
         "chyby": [],
@@ -64,7 +64,7 @@
     }
   },
   "konfigurace": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-10-30T13:57:02.818Z",
+  "vyrenderovano": "2026-10-30T19:27:01.891Z",
   "clanek": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-12-who-stayed-home/index.md",
   "titulekClanku": "About half of last year's ANO voters skipped the municipal and Senate elections, among SPOLU voters mostly a fifth at most",
   "texty": {

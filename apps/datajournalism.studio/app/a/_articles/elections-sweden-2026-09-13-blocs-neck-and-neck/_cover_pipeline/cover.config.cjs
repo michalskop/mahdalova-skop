@@ -11,6 +11,7 @@ const PRAVY = '#697fe6'; // brandRoyalBlue.4 – blok Tidö
 const LEVI = 175, CELKEM = 349;
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Elections', dal: 'Sweden 2026' },
   titulek: 'Blocs divided<br>by a single seat',

@@ -5,6 +5,7 @@ const path = require('path');
 const MAPA = require('./mapa-pozice.json');
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Brazil elections' },
   titulek: 'Why Lula<br>won',

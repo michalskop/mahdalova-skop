@@ -195,6 +195,12 @@ Technicky platný render není hotový cover. Hotový je až zkontrolovaný.
 (`PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <config>`). Vzory konfigurací: predikce,
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
+**Logo anglického webu (od 30. 10. 2026):** covery pro `apps/datajournalism.studio` nesou nápis loga **DataTimes.org**
+(kolečko zůstává). V `cover.config.cjs` článku stačí `logoText: 'DataTimes.org'`; bez pole generátor píše výchozí
+„DataTimes.cz“, takže české covery se nemění (stejné HTML, razítka platí dál). Vlastní skripty coverů mimo generátor
+(např. Die Linke `_cover_pipeline/cover.cjs`) mají nápis v šabloně a mění se tam. Podpis grafů na anglickém webu
+(`apps/datajournalism.studio/components/charts/ChartSignature.tsx`) také „DataTimes.org“.
+
 **Kompozice a mezery – povinná kontrola před odesláním náhledů (od 27. 10. 2026, Kateřina: „málo se pracuje
 s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, grafický i fotografický, a pro každý z pěti formátů:
 1. **Motiv je celý.** Hlava, obličej ani postava nesmí být useknutá okrajem formátu, okrajem výřezu ani přechodem
@@ -251,6 +257,11 @@ na oko zbývá motiv, sdělení a celkový dojem:
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují; co platí obecně, přenést do kapitoly *Kompozice podle
 formátu*):**
+- *30. 10. 2026 – anglické covery DJS s logem DataTimes.org.* Delší nápis loga (o znak) stačí k tomu, aby logo
+  sáhlo na motiv: u Žen na radnicích leželo logo přes řádek hejtmanů (ve čtverci a tím i v OG „čtverec s ušima“),
+  opraveno posunem řádků výš. Po změně loga projít všechny formáty, nejen homepage. Převod českého coveru s koláží
+  (matky předškoláků): koláž vyříznout jen z čisté plochy bez textu (`_cover_pipeline/kolaz.jpg`) a vložit jako
+  `<image>` do SVG motivu (`motiv.typ: 'svg'`), texty a pruhy přes `rozlozeni` vedle koláže.
 - *29. 10. 2026 – OG naležato u tří datových coverů (Miliarda za volby, slunečnice, větrníky).* Staré OG měly text
   na středu přes ztlumený motiv, nebo motiv rozdělený do krajů; výchozí „čtverec s ušima“ zase nechal motiv malý
   a boky prázdné. Přeskládáno: motiv do středu, texty jako bloky kolem, vše ve čtverci s vůlí 35 px (první verze

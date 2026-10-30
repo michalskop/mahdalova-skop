@@ -16,7 +16,8 @@ const SLOUPCE = [['candidates', v('Candidates')], ['councillors', v('Municipal c
 
 // řádky postav (Kateřina 26. 10.: piktogramy, gender rozlišený tvarem i barvou): 1 postava = 5 %, 20 postav na funkci,
 // oranžové ženy zleva, ztlumení muži. Plocha [x0, y0, šířka, postav v řádku] – OG vpravo mimo střední čtverec 2 řádky po 10.
-const PLOCHA = { homepage: [520, 610, 860, 20], square: [70, 650, 940, 20], instagram: [70, 760, 940, 20], story: [80, 1040, 920, 20], og: [930, 150, 250, 10] };
+// 30. 10. 2026: čtverec (a tím i OG „čtverec s ušima“) o kus výš a užší – logo leželo přes řádek hejtmanů
+const PLOCHA = { homepage: [520, 610, 860, 20], square: [70, 615, 900, 20], instagram: [70, 760, 940, 20], story: [80, 1040, 920, 20], og: [930, 150, 250, 10] };
 
 function radky(k) {
   const [x0, y0, w, vRadku] = PLOCHA[k];
@@ -30,6 +31,7 @@ function radky(k) {
 }
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Czech municipal elections 2026' },
   titulek: 'The higher up,<br>the fewer women',

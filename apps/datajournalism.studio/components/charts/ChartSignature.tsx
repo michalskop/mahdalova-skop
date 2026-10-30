@@ -103,7 +103,7 @@ export default function ChartSignature({
           <path fill="none" stroke="url(#chartSignatureGradient)" strokeWidth="76" strokeLinecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300" />
         </g>
       </svg>
-      DataTimes.cz
+      DataTimes.org
     </Link>
   );
 }

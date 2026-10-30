@@ -10,6 +10,7 @@ const path = require('path');
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Explainer', dal: 'Genocide and numbers' },
   // homepage: text níž kvůli štítku rubriky v malých kartách (nic textového nad ~200 z 800)

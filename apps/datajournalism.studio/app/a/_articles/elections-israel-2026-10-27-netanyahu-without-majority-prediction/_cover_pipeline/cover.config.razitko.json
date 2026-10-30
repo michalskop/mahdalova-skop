@@ -1,11 +1,11 @@
 {
   "formaty": {
     "homepage": {
-      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-homepage.png",
-      "otisk": "4cf6e5cc7c27849e",
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-homepage.png",
+      "otisk": "58cd96dbbcea5975",
       "vstupy": {
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-homepage.svg": "25c88d2bb6333e0d"
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "6bf5f1dd0b71ef29",
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-homepage.svg": "25c88d2bb6333e0d"
       },
       "kontrola": {
         "chyby": [],
@@ -14,11 +14,11 @@
       }
     },
     "og": {
-      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-og.jpg",
-      "otisk": "e55a5cc11f93470c",
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-og.jpg",
+      "otisk": "c927db566fadd23a",
       "vstupy": {
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-og.svg": "bc60179a82c2f42a"
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "6bf5f1dd0b71ef29",
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-og.svg": "bc60179a82c2f42a"
       },
       "kontrola": {
         "chyby": [],
@@ -27,11 +27,11 @@
       }
     },
     "square": {
-      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-square.png",
-      "otisk": "10372b8562b064a8",
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-square.png",
+      "otisk": "b7da08774c0d196c",
       "vstupy": {
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-square.svg": "ec749b526d9cca5f"
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "6bf5f1dd0b71ef29",
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-square.svg": "ec749b526d9cca5f"
       },
       "kontrola": {
         "chyby": [],
@@ -40,11 +40,11 @@
       }
     },
     "instagram": {
-      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-instagram.png",
-      "otisk": "53d3813d54dfd0a9",
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-instagram.png",
+      "otisk": "0fef0d7c3d9de808",
       "vstupy": {
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-instagram.svg": "62403cf2d92479ff"
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "6bf5f1dd0b71ef29",
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-instagram.svg": "62403cf2d92479ff"
       },
       "kontrola": {
         "chyby": [],
@@ -53,11 +53,11 @@
       }
     },
     "story": {
-      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-story.png",
-      "otisk": "da70febd59dffb06",
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-story.png",
+      "otisk": "1e8e68748b142ecc",
       "vstupy": {
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
-        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-story.svg": "5ebbb6e262876e1f"
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "6bf5f1dd0b71ef29",
+        "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-story.svg": "5ebbb6e262876e1f"
       },
       "kontrola": {
         "chyby": [],
@@ -66,9 +66,9 @@
       }
     }
   },
-  "konfigurace": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-10-30T13:17:48.474Z",
-  "clanek": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/index.md",
+  "konfigurace": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T19:29:11.310Z",
+  "clanek": "apps/datajournalism.studio/app/a/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/index.md",
   "titulekClanku": "Israel election: Netanyahu will not win a majority, prediction shows",
   "texty": {
     "stitek": "Prediction • Israel election",

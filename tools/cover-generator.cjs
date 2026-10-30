@@ -278,7 +278,8 @@ function html(c0, klic, { ucha = false } = {}) {
   const pod = !c.pod ? '' : c.podPruh
     ? `<div class="sub" style="line-height:1.45"><span class="pruh" style="background:${c.podPruh};color:${c.podBarva ?? '#fff'};font-weight:600">${c.pod}</span></div>`
     : `<div class="sub"><span class="jemny" style="display:inline-block;position:relative">${c.pod}</span></div>`;
-  const logo = `<div class="logo">${DONUT}<span>DataTimes.cz</span></div>`;
+  // c.logoText = nápis loga (výchozí 'DataTimes.cz'; anglický web datajournalism.studio: 'DataTimes.org'), donut zůstává
+  const logo = `<div class="logo">${DONUT}<span>${c.logoText ?? 'DataTimes.cz'}</span></div>`;
   // SVG ikona se vkládá přímo (písmo v ní pak bere IBM Plex ze stránky), rastr jako <img>
   const ikonaEl = (style) => c.ikona.endsWith('.svg')
     ? `<div class="vrstva-motiv" style="${style};line-height:0">${fs.readFileSync(c.ikona, 'utf8').replace('<svg ', '<svg style="width:100%;height:auto" ')}</div>`

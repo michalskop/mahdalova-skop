@@ -4,6 +4,7 @@
 const path = require('path');
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Israel election' },
   legenda: [['#8dd265', 'Arab localities'], ['#8f9dc9', 'other localities'], ['transparent', 'circle area = number of voters']],

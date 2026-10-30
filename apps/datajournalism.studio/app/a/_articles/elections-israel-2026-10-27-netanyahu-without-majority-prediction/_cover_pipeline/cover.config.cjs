@@ -5,6 +5,7 @@
 const path = require('path');
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Prediction', dal: 'Israel&nbsp;election' },
   // party colours (Likud blue, Yashar light blue, Ra'am green), shades for dark background; charts in the article use the same scales

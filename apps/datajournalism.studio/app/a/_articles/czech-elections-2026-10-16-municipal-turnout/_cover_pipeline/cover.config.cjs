@@ -6,6 +6,7 @@ const DOWN = '#ff1a4a'; // brand.4
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Czech municipal elections 2026' },
   mapaPozice: { homepage: [140, 470, 1500, 1170] },

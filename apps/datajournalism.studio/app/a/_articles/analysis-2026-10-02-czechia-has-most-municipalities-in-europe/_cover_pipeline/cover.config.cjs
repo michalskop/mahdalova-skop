@@ -12,6 +12,7 @@ const body = obce().map((o) => ({ ...o, k: Math.max(0.42, (Math.sqrt(o.p) / PRAH
   .sort((a, b) => b.k - a.k); // velká města dospod, ať drobné oranžové obce zůstanou vidět
 
 module.exports = {
+  logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analysis', dal: 'Czech municipal elections 2026' },
   titulek: 'Most municipalities<br>in&nbsp;Europe',
