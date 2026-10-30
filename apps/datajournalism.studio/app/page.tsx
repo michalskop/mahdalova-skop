@@ -15,8 +15,8 @@ import { ArticlesSection } from '@/components/common/ArticlesSection';
 export default async function HomePage() {
   // const articles = await getArticles(3, undefined, true);
   // Newest first (time score only); explicit `promoted` would keep 2024 evergreen pages on top.
-  const articles_featured = await getArticles(3, "work");
-  const articles_blog = await getArticles(3, "blog");
+  const articles_featured = await getArticles(6, "work");
+  const articles_blog = await getArticles(6, "blog");
 
   return (
     <Container 
@@ -42,14 +42,14 @@ export default async function HomePage() {
       {/* <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/> */}
 
       <ArticlesSection 
-        sectionTitle="Featured Work"
-        sectionLink="/work"
+        sectionTitle="Elections"
+        sectionLink="/elections"
         articles={articles_featured}
         themeColor="brand" />
 
       <ArticlesSection 
-        sectionTitle="Articles"
-        sectionLink="/blog"
+        sectionTitle="Context"
+        sectionLink="/context"
         articles={articles_blog}
         themeColor="brandOrange.4" />
 

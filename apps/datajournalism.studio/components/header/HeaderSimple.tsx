@@ -6,14 +6,15 @@ import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LogoWithText from '@/components/common/LogoWithText';
+import { IconSearch } from '@tabler/icons-react';
 import classes from './HeaderSimple.module.css';
 
+// Same order as the Czech DataTimes.cz header: sections, search, About, Support
 const links = [
-  // { link: '/special', label: 'Speciály' },
-  { link: '/work', label: 'Work' },
-  { link: '/blog', label: 'Blog' },
+  { link: '/elections', label: 'Elections' },
+  { link: '/context', label: 'Context' },
+  { link: '/specials', label: 'Specials' },
   { link: '/about', label: 'About us' },
-  { link: '/search', label: 'Search' },
 ];
 
 export function HeaderSimple() {
@@ -48,7 +49,16 @@ export function HeaderSimple() {
   const headerHeight = scrolled ? '60px' : '56px';
 
 
-  const items = links.map((link) => (
+  const searchLink = (
+    <Link href="/search" key="search" aria-label="Search" title="Search"
+      className={`${classes.link} ${pathname === '/search' ? classes.linkActive : ''}`}
+      onClick={close}
+      style={{ display: 'inline-flex', alignItems: 'center' }}>
+      <IconSearch size={20} stroke={2} />
+    </Link>
+  );
+
+  const linkItems = links.map((link) => (
     <Link 
       href={link.link} 
       key={link.label}
@@ -58,8 +68,10 @@ export function HeaderSimple() {
       {link.label}
     </Link>
   ));
+  // search magnifier sits between the sections and "About us"
+  const items = [...linkItems.slice(0, 3), searchLink, ...linkItems.slice(3)];
 
-  const mobileItems = links.map((link) => (
+  const mobileItems = [...links, { link: '/search', label: 'Search' }, { link: '/support', label: 'Support us' }].map((link) => (
     <Link 
       href={link.link} 
       key={link.label}
@@ -103,7 +115,7 @@ export function HeaderSimple() {
           <LogoWithText  color={logoColor}/>
           <Button
             component="a"
-            href="/about#contact"
+            href="/support"
             c={theme.colors.brandRoyalBlue[9]}
             color={theme.colors.brandYellow[6]}
             radius="xl"
@@ -113,7 +125,7 @@ export function HeaderSimple() {
                 bg: theme.colors.brand[7], // Change to your desired hover color
               },
             }}
-          >Contact
+          >Support us
           </Button>
           <Group gap={10} visibleFrom="sm" ml="auto">
             {items}
