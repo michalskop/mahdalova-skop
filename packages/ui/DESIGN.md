@@ -1046,6 +1046,9 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 - **Tečkový motiv jen jako podkres** (bílé tečky, opacity ~0,2) – nikdy ne tečky v barvě strany místo ploch. Tečková mapa je styl coverů, ne čitelné mapy obvodů.
 - **Barva podle senátorského klubu se musí dát doložit:** obhájce = jeho klub podle senat.cz (ověřit skriptem, např. `_data_pipeline/kluby_kontrola.py`), nový senátor = „klub zatím neznámý“ a barva podle kandidátky. V tooltipu klub a kandidátku vždy odděleně, koaliční zkratky ČSÚ („KDUODSSTANPiTOP“) nikdy, jen vypsané strany.
 - Jedno logo na graf (ChartCard), žádné druhé logo uvnitř mapy.
+- **Podkladová mapa u map okrsků** (vzor `apps/web/components/charts/OkrskyKvMapa.tsx`): rastrové dlaždice OpenStreetMap složené do stejné d3 Mercatorovy projekce (svět = 2π·scale, roh dlaždice 0/0/0 = translate − π·scale), podklad SVG filtrem do tlumené šedi (saturace 0,3), okrsky `mix-blend-mode: multiply` s `fillOpacity` ~0,8, takže silnice, lesy, voda a názvy prosvítají a barva kandidátky zůstane. Pod mapou vždy „Podkladová mapa © přispěvatelé OpenStreetMap“ s odkazem.
+
+*Ponaučení (30. 10. 2026, podkladová mapa okrsků):* dlaždice CARTO (Positron, Voyager) od roku 2026 bez API klíče vracejí jen obrázek „API KEY REQUIRED“; ZTM ČÚZK (`ZTM_WM`) je pro podklad přeplněná kódy obcí a katastrálními hranicemi.
 
 *Ponaučení (17. 10. 2026, Senát 2. kolo):* první verze mapy vítězů měla dominantní tečky a obvody se slévaly; tooltip míchal klub s kandidátkou, takže nebylo poznat, proč má obhájce (Grulich, kandidátka KDU-ČSL, ODS, STAN, Piráti, TOP 09 a LES) barvu klubu ODS a TOP 09.
 

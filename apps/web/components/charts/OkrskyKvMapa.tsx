@@ -9,7 +9,7 @@
 // Výplň okrsku = barva kandidátky s nejvíc hlasy. Detail okrsku se ukazuje v panelu vedle mapy (na mobilu pod ní),
 // nikdy přes mapu – tooltip nesmí zakrývat sousední okrsky.
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import type { Feature, FeatureCollection, Geometry } from 'geojson';
@@ -24,6 +24,12 @@ const CONTEXT = '#eeeae2';
 const NODATA = '#d4d4c8';
 const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';
 const PANEL_W = 300;
+// Podkladová mapa OpenStreetMap (zástavba, lesy, voda, silnice, názvy) pod okrsky, filtrem ztlumená
+// do světlé šedi. Dlaždice se skládají do stejné Mercatorovy projekce, kterou kreslí d3, takže sedí
+// i při přiblížení. (CARTO od 2026 chce API klíč, ZTM ČÚZK je přeplněná kódy a katastrem.)
+const TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+const TILE_MAX_Z = 19;
+const tileUrl = (z: number, x: number, y: number) => TILES.replace('{z}', String(z)).replace('{x}', String(x)).replace('{y}', String(y));
 
 type ObecRow = [number, string, number, number, [number, string, number][]];
 type Index = { okresy: Record<string, string>; obce: ObecRow[] };
@@ -62,6 +68,7 @@ export interface OkrskyKvMapaProps {
 
 export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultObec = 554804, title, subtitle, source }: OkrskyKvMapaProps) {
   const [wrapRef, width] = useWidth<HTMLDivElement>();
+  const fid = `okrsky-podklad${useId().replace(/:/g, '')}`;
   const [index, setIndex] = useState<Index | null>(null);
   const [topo, setTopo] = useState<Topo | null>(null);
   const [metas, setMetas] = useState<Record<number, Meta>>({});
@@ -150,6 +157,8 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
     const path = geoPath(proj);
     return {
       h,
+      s: proj.scale(),
+      t: proj.translate(),
       mine: feats.mine.map((f) => ({ id: f.properties.id, d: path(f) ?? '' })),
       rest: feats.rest.map((f) => ({ id: f.properties.id, d: path(f) ?? '' })),
     };
@@ -198,6 +207,24 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
     }
   };
   const onUp = (e: React.PointerEvent) => { ptrs.current.delete(e.pointerId); };
+
+  // dlaždice podkladu pro viditelný výřez; souřadnice v nepřiblížené soustavě (uvnitř <g transform>)
+  // d3 Mercator: svět (−180°…180°) má šířku 2π·scale, levý horní roh dlaždice 0/0/0 je translate − π·scale
+  const tiles = useMemo(() => {
+    if (!geo) return [];
+    const S = geo.s * tf.k;
+    const z = Math.max(0, Math.min(TILE_MAX_Z, Math.round(Math.log2((2 * Math.PI * S) / 256))));
+    const n = 2 ** z;
+    const T = (2 * Math.PI * geo.s) / n;
+    const ox = geo.t[0] - Math.PI * geo.s, oy = geo.t[1] - Math.PI * geo.s;
+    const [x0, x1] = [-tf.x / tf.k, (mapW - tf.x) / tf.k];
+    const [y0, y1] = [-tf.y / tf.k, (geo.h - tf.y) / tf.k];
+    const i0 = Math.max(0, Math.floor((x0 - ox) / T)), i1 = Math.min(n - 1, Math.floor((x1 - ox) / T));
+    const j0 = Math.max(0, Math.floor((y0 - oy) / T)), j1 = Math.min(n - 1, Math.floor((y1 - oy) / T));
+    const out: { key: string; z: number; x: number; y: number; px: number; py: number; T: number }[] = [];
+    for (let i = i0; i <= i1; i++) for (let j = j0; j <= j1; j++) out.push({ key: `${z}/${i}/${j}`, z, x: i, y: j, px: ox + i * T, py: oy + j * T, T: T + 0.5 / tf.k });
+    return out;
+  }, [geo, tf, mapW]);
 
   // vyhledávání
   const [q, setQ] = useState('');
@@ -369,16 +396,32 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
                     style={{ display: 'block', touchAction: tf.k > 1 ? 'none' : 'pan-y', cursor: tf.k > 1 ? 'grab' : 'default', background: '#fbfaf6', borderRadius: 6 }}
                     onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
                   >
+                    <defs>
+                      {/* podklad do tlumené šedi s nádechem původních barev */}
+                      <filter id={fid} colorInterpolationFilters="sRGB">
+                        <feColorMatrix type="saturate" values="0.3" />
+                        <feComponentTransfer>
+                          <feFuncR type="linear" slope="0.75" intercept="0.25" />
+                          <feFuncG type="linear" slope="0.75" intercept="0.25" />
+                          <feFuncB type="linear" slope="0.75" intercept="0.25" />
+                        </feComponentTransfer>
+                      </filter>
+                    </defs>
                     <g transform={`translate(${tf.x},${tf.y}) scale(${tf.k})`}>
-                      <g pointerEvents="none">
-                        {geo.rest.map((p) => <path key={p.id} d={p.d} fill={CONTEXT} stroke="#fff" strokeWidth={0.6} vectorEffect="non-scaling-stroke" />)}
+                      <g pointerEvents="none" filter={`url(#${fid})`}>
+                        {tiles.map((t) => <image key={t.key} href={tileUrl(t.z, t.x, t.y)} x={t.px} y={t.py} width={t.T} height={t.T} preserveAspectRatio="none" />)}
                       </g>
-                      <g>
+                      {/* okrsky okolních obcí jen obrysem, podklad pod nimi zůstává čitelný */}
+                      <g pointerEvents="none">
+                        {geo.rest.map((p) => <path key={p.id} d={p.d} fill={CONTEXT} fillOpacity={0.25} stroke={MUTED} strokeOpacity={0.35} strokeWidth={0.5} vectorEffect="non-scaling-stroke" />)}
+                      </g>
+                      {/* barva okrsku násobená s podkladem: barva kandidátky zůstane, silnice, lesy a zástavba prosvítají */}
+                      <g style={{ mixBlendMode: 'multiply' }}>
                         {geo.mine.map((p) => {
                           const r = res.rows.get(p.id);
                           const w = r?.[4][0]?.[0];
                           return (
-                            <path key={p.id} d={p.d} fill={w != null ? L[w]?.c ?? NODATA : NODATA} stroke="#fff" strokeWidth={0.7} vectorEffect="non-scaling-stroke"
+                            <path key={p.id} d={p.d} fill={w != null ? L[w]?.c ?? NODATA : NODATA} fillOpacity={0.82} stroke="#fff" strokeWidth={0.7} vectorEffect="non-scaling-stroke"
                               style={{ cursor: 'pointer' }}
                               onPointerEnter={(e) => { if (e.pointerType === 'mouse') setHover(p.id); }}
                               onClick={() => { if (gest.current.moved) return; setPinned((x) => (x === p.id ? null : p.id)); }}
@@ -404,6 +447,9 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
               {geo && res && (
                 <div style={{ fontSize: 12, color: MUTED, marginTop: 6 }}>
                   {num(nOkr)} {pl(nOkr, 'okrsek', 'okrsky', 'okrsků')} · účast {pct(res.obal / Math.max(1, res.vol))} · přiblížíte Ctrl + kolečkem, dvěma prsty nebo tlačítky
+                  <span style={{ display: 'block', marginTop: 2 }}>
+                    Podkladová mapa ©&nbsp;<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" style={{ color: MUTED }}>přispěvatelé OpenStreetMap</a>
+                  </span>
                 </div>
               )}
             </div>
