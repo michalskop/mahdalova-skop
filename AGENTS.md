@@ -19,6 +19,27 @@
 - Changing a published URL: add 301s to `apps/web/public/_redirects`, fix internal links, regenerate sitemap/llms.txt, and keep the old URL redirecting.
 - Canonical rule: `docs/redakcni-styl/REDAKCNI_MANUAL.md` → *Před založením článku: URL a rubrika*.
 
+## Media storage & CDN (media.datatimes.org) - hard rule
+
+- **NEVER commit new binary media (PNG, JPEG, WebP, SVG, MP4) to Git.**
+- Staged binary media is automatically blocked by the `.githooks/pre-commit` hook.
+- When generating or adding visuals, charts, covers, or logos:
+  1. Generate/export the image locally into a temporary or working directory (e.g. `work/` or the article's `_cover_pipeline/`).
+  2. Upload to the CDN via the CLI script:
+     ```bash
+     python scripts/upload_media.py --file <path> --target <project-or-shared>/<subpath>/<filename>
+     ```
+     - For articles: `datatimes-cz/articles/YYYY/MM/<slug>/<filename>`
+     - For shared assets: `shared/branding/<filename>` or `shared/authors/<filename>`
+  3. Use the printed CDN URL directly in your code or Markdown frontmatter:
+     ```markdown
+     coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/10/slug/cover.webp"
+     ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/10/slug/cover-og.jpg"
+     ```
+  4. Ensure the local binary image file is deleted or kept out of Git staging.
+- **Strict Immutability:** The uploader refuses to overwrite files (`--no-clobber`). If updating an asset, append a revision suffix (e.g. `cover-v2.webp`) and update the referencing file in the same commit.
+- Full guide: `docs/technicke/media-cdn.md`.
+
 ## Article images
 
 - Every new article gets the full cover set without being asked: `cover-homepage` 1500×1200 (`coverImage` + `homepageImage`), `cover-og.jpg` 1200×630 ≤ 300 kB (`ogImage`), `cover-square` 1080×1080 (`squareImage`), `cover-instagram` 1080×1350, `cover-story` 1080×1920. Show a crop contact sheet to the user before publishing. Cover headline lives in the frontmatter as `coverTitulek` (generator reads it); render only with `tools/cover-generator.cjs`, which checks composition and writes `<config>.razitko.json` (commit it) – `checkArticles.js` blocks stale or hand-edited covers (`tools/COVER-EDITOR.md` → *Automatické pojistky*).
