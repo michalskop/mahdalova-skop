@@ -25,7 +25,7 @@ const FORMATY = {
   square: { W: 1080, H: 1080, disky: [[775, 775, 285, N1]] },
   instagram: { W: 1080, H: 1350, disky: [[700, 945, 320, N1]] },
   story: { W: 1080, H: 1920, disky: [[610, 1195, 315, N1]] },
-  og: { W: 1200, H: 630, disky: [[172, 300, 0, N0], [1040, 300, 158, N1]], popisky: true },
+  og: { W: 1200, H: 630, disky: [[752, 385, 188, N1]] },
 };
 
 const f1 = (v) => v.toFixed(1);

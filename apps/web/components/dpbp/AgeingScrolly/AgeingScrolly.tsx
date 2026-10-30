@@ -13,16 +13,18 @@ type AgeingScrollyProps = {
 
 const SNAPSHOTS = [
   { year: 2023, young: 16, working: 64, senior: 20, ratio: '1 senior na 3,1 lidí ve věku 15–64 let' },
-  { year: 2040, young: 12, working: 62, senior: 26, ratio: '1 senior na 2,4 lidí ve věku 15–64 let' },
+  { year: 2040, young: 12, working: 63, senior: 25, ratio: '1 senior na 2,5 lidí ve věku 15–64 let' },
+  { year: 2050, young: 13, working: 58, senior: 29, ratio: '1 senior na 2,0 lidí ve věku 15–64 let' },
   { year: 2060, young: 13, working: 56, senior: 31, ratio: '1 senior na 1,8 lidí ve věku 15–64 let' },
   { year: 2100, young: 12, working: 54, senior: 34, ratio: '1 senior na 1,6 lidí ve věku 15–64 let' },
 ] as const;
 
 const STEPS = [
   'Dnes tvoří lidé ve věku 65 a více let přibližně pětinu obyvatel. Na jednoho seniora připadají zhruba tři lidé v obvyklém produktivním věku.',
-  'Kolem roku 2040 začnou do seniorského věku naplno vstupovat silné ročníky ze 70. let. Podíl seniorů se přiblíží čtvrtině populace.',
-  'Do roku 2060 se poměr přiblíží jednomu seniorovi na dva lidi ve věku 15–64 let. Ne každý z nich ovšem skutečně pracuje a odvádí pojistné.',
-  'Na konci století projekce neukazuje prázdnou zemi. Ukazuje zemi s podobným počtem obyvatel, ale výrazně jinou věkovou skladbou.',
+  'Kolem roku 2040 začnou do seniorského věku naplno vstupovat silné ročníky ze 70. let. Podíl seniorů dosáhne čtvrtiny populace a na jednoho seniora připadnou dva a půl člověka ve věku 15–64 let.',
+  'Kolem roku 2050 připadnou na jednoho seniora dva lidé ve věku 15–64 let a senioři budou tvořit téměř třetinu obyvatel.',
+  'V roce 2060 je to 1,8 člověka na jednoho seniora. Ne každý z nich ovšem skutečně pracuje a odvádí pojistné.',
+  'Na konci století projekce neukazuje prázdnou zemi. Ukazuje zemi s asi o devět procent menším počtem obyvatel než dnes a výrazně jinou věkovou skladbou.',
 ] as const;
 
 function category(index: number, snapshot: (typeof SNAPSHOTS)[number]): AgeCategory {

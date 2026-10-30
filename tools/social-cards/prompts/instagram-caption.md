@@ -20,6 +20,10 @@
   jsou 1:1 se slidy, v pořadí, v jakém mají jít do carouselu).
 - Caption pod carouselem: krátké shrnutí (2–4 věty) + CTA na bio, ne
   kopie textu ze slidů.
+- **Výzva k interakci je povinná** (od 28. 10. 2026, podle spolupráce
+  s Moravec.cz): otázka k tipování nebo na názor čtenáře + „napište nám do
+  komentářů“. Otázka musí jít z dat zodpovědět a nesmí podsouvat odpověď.
+  Podrobně tools/COVER-VIZUALNI-IDENTITA.md, kapitola 8.1.
 - Hashtagy věcné a málo (téma, ne generické „#news #czech"), pokud vůbec.
 
 ## Vstupy
@@ -38,7 +42,7 @@ CAROUSEL POŘADÍ:
 ...
 
 CAPTION:
-[2–4 věty shrnutí, poslední věta = CTA "odkaz v bio" nebo obdoba]
+[2–4 věty shrnutí + otázka na čtenáře („Tipněte si…“ / „Co si myslíte…? Napište do komentářů.“) + CTA "odkaz v bio"]
 
 HASHTAGY: [0–5 věcných, jen pokud fakt pomůžou dohledatelnosti]
 ```
@@ -50,6 +54,7 @@ HASHTAGY: [0–5 věcných, jen pokud fakt pomůžou dohledatelnosti]
 ```
 Navrhni pořadí slidů carouselu (z KARTY, formát ig-portrait) a napiš k nim
 caption podle pravidel výše. Caption nesmí obsahovat klikací odkaz — místo
-toho CTA na bio. Drž se výhradně čísel a tvrzení z ČLÁNEK_TEXT, civilní
+toho CTA na bio. Přidej otázku, která čtenáře vyzve k tipu nebo názoru
+v komentářích. Drž se výhradně čísel a tvrzení z ČLÁNEK_TEXT, civilní
 čeština bez berliček.
 ```

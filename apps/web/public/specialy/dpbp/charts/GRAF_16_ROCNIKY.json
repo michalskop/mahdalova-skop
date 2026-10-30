@@ -1,0 +1,1329 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Nejsilnější ročníky jsou z 70. let a 65 let jim bude v letech 2035 až 2044",
+  "subtitle": "Počet lidí podle roku narození (tisíce) k 1. 1. 2023; červeně ročníky 1970–1979"
+ },
+ "_source": "[Projekce obyvatelstva ČR 2023–2100, tabulka 1, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2023-2100) · vlastní výpočet\nRok narození je odvozen z věku k 1. 1. 2023; lidé starší 99 let nejsou zahrnuti.",
+ "height": 260,
+ "data": {
+  "values": [
+   {
+    "rocnik": 1923,
+    "tis": 0.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1923",
+    "Lidí v lednu 2023": "1 tis.",
+    "Dosáhne 65 let": "v roce 1988"
+   },
+   {
+    "rocnik": 1924,
+    "tis": 1.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1924",
+    "Lidí v lednu 2023": "1 tis.",
+    "Dosáhne 65 let": "v roce 1989"
+   },
+   {
+    "rocnik": 1925,
+    "tis": 1.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1925",
+    "Lidí v lednu 2023": "2 tis.",
+    "Dosáhne 65 let": "v roce 1990"
+   },
+   {
+    "rocnik": 1926,
+    "tis": 2.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1926",
+    "Lidí v lednu 2023": "3 tis.",
+    "Dosáhne 65 let": "v roce 1991"
+   },
+   {
+    "rocnik": 1927,
+    "tis": 3.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1927",
+    "Lidí v lednu 2023": "4 tis.",
+    "Dosáhne 65 let": "v roce 1992"
+   },
+   {
+    "rocnik": 1928,
+    "tis": 5.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1928",
+    "Lidí v lednu 2023": "6 tis.",
+    "Dosáhne 65 let": "v roce 1993"
+   },
+   {
+    "rocnik": 1929,
+    "tis": 7.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1929",
+    "Lidí v lednu 2023": "8 tis.",
+    "Dosáhne 65 let": "v roce 1994"
+   },
+   {
+    "rocnik": 1930,
+    "tis": 10.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1930",
+    "Lidí v lednu 2023": "11 tis.",
+    "Dosáhne 65 let": "v roce 1995"
+   },
+   {
+    "rocnik": 1931,
+    "tis": 13.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1931",
+    "Lidí v lednu 2023": "14 tis.",
+    "Dosáhne 65 let": "v roce 1996"
+   },
+   {
+    "rocnik": 1932,
+    "tis": 17.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1932",
+    "Lidí v lednu 2023": "17 tis.",
+    "Dosáhne 65 let": "v roce 1997"
+   },
+   {
+    "rocnik": 1933,
+    "tis": 19.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1933",
+    "Lidí v lednu 2023": "20 tis.",
+    "Dosáhne 65 let": "v roce 1998"
+   },
+   {
+    "rocnik": 1934,
+    "tis": 23.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1934",
+    "Lidí v lednu 2023": "23 tis.",
+    "Dosáhne 65 let": "v roce 1999"
+   },
+   {
+    "rocnik": 1935,
+    "tis": 26.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1935",
+    "Lidí v lednu 2023": "26 tis.",
+    "Dosáhne 65 let": "v roce 2000"
+   },
+   {
+    "rocnik": 1936,
+    "tis": 30.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1936",
+    "Lidí v lednu 2023": "30 tis.",
+    "Dosáhne 65 let": "v roce 2001"
+   },
+   {
+    "rocnik": 1937,
+    "tis": 34.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1937",
+    "Lidí v lednu 2023": "34 tis.",
+    "Dosáhne 65 let": "v roce 2002"
+   },
+   {
+    "rocnik": 1938,
+    "tis": 39.9,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1938",
+    "Lidí v lednu 2023": "40 tis.",
+    "Dosáhne 65 let": "v roce 2003"
+   },
+   {
+    "rocnik": 1939,
+    "tis": 45.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1939",
+    "Lidí v lednu 2023": "45 tis.",
+    "Dosáhne 65 let": "v roce 2004"
+   },
+   {
+    "rocnik": 1940,
+    "tis": 55.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1940",
+    "Lidí v lednu 2023": "55 tis.",
+    "Dosáhne 65 let": "v roce 2005"
+   },
+   {
+    "rocnik": 1941,
+    "tis": 60.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1941",
+    "Lidí v lednu 2023": "60 tis.",
+    "Dosáhne 65 let": "v roce 2006"
+   },
+   {
+    "rocnik": 1942,
+    "tis": 66.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1942",
+    "Lidí v lednu 2023": "66 tis.",
+    "Dosáhne 65 let": "v roce 2007"
+   },
+   {
+    "rocnik": 1943,
+    "tis": 78.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1943",
+    "Lidí v lednu 2023": "79 tis.",
+    "Dosáhne 65 let": "v roce 2008"
+   },
+   {
+    "rocnik": 1944,
+    "tis": 85.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1944",
+    "Lidí v lednu 2023": "85 tis.",
+    "Dosáhne 65 let": "v roce 2009"
+   },
+   {
+    "rocnik": 1945,
+    "tis": 84.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1945",
+    "Lidí v lednu 2023": "85 tis.",
+    "Dosáhne 65 let": "v roce 2010"
+   },
+   {
+    "rocnik": 1946,
+    "tis": 109.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1946",
+    "Lidí v lednu 2023": "109 tis.",
+    "Dosáhne 65 let": "v roce 2011"
+   },
+   {
+    "rocnik": 1947,
+    "tis": 117.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1947",
+    "Lidí v lednu 2023": "118 tis.",
+    "Dosáhne 65 let": "v roce 2012"
+   },
+   {
+    "rocnik": 1948,
+    "tis": 116.9,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1948",
+    "Lidí v lednu 2023": "117 tis.",
+    "Dosáhne 65 let": "v roce 2013"
+   },
+   {
+    "rocnik": 1949,
+    "tis": 116.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1949",
+    "Lidí v lednu 2023": "117 tis.",
+    "Dosáhne 65 let": "v roce 2014"
+   },
+   {
+    "rocnik": 1950,
+    "tis": 122.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1950",
+    "Lidí v lednu 2023": "122 tis.",
+    "Dosáhne 65 let": "v roce 2015"
+   },
+   {
+    "rocnik": 1951,
+    "tis": 127.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1951",
+    "Lidí v lednu 2023": "127 tis.",
+    "Dosáhne 65 let": "v roce 2016"
+   },
+   {
+    "rocnik": 1952,
+    "tis": 129.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1952",
+    "Lidí v lednu 2023": "129 tis.",
+    "Dosáhne 65 let": "v roce 2017"
+   },
+   {
+    "rocnik": 1953,
+    "tis": 129.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1953",
+    "Lidí v lednu 2023": "130 tis.",
+    "Dosáhne 65 let": "v roce 2018"
+   },
+   {
+    "rocnik": 1954,
+    "tis": 130.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1954",
+    "Lidí v lednu 2023": "131 tis.",
+    "Dosáhne 65 let": "v roce 2019"
+   },
+   {
+    "rocnik": 1955,
+    "tis": 131.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1955",
+    "Lidí v lednu 2023": "132 tis.",
+    "Dosáhne 65 let": "v roce 2020"
+   },
+   {
+    "rocnik": 1956,
+    "tis": 132.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1956",
+    "Lidí v lednu 2023": "132 tis.",
+    "Dosáhne 65 let": "v roce 2021"
+   },
+   {
+    "rocnik": 1957,
+    "tis": 129.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1957",
+    "Lidí v lednu 2023": "129 tis.",
+    "Dosáhne 65 let": "v roce 2022"
+   },
+   {
+    "rocnik": 1958,
+    "tis": 121.9,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1958",
+    "Lidí v lednu 2023": "122 tis.",
+    "Dosáhne 65 let": "v roce 2023"
+   },
+   {
+    "rocnik": 1959,
+    "tis": 114.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1959",
+    "Lidí v lednu 2023": "114 tis.",
+    "Dosáhne 65 let": "v roce 2024"
+   },
+   {
+    "rocnik": 1960,
+    "tis": 116.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1960",
+    "Lidí v lednu 2023": "116 tis.",
+    "Dosáhne 65 let": "v roce 2025"
+   },
+   {
+    "rocnik": 1961,
+    "tis": 120.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1961",
+    "Lidí v lednu 2023": "120 tis.",
+    "Dosáhne 65 let": "v roce 2026"
+   },
+   {
+    "rocnik": 1962,
+    "tis": 123.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1962",
+    "Lidí v lednu 2023": "124 tis.",
+    "Dosáhne 65 let": "v roce 2027"
+   },
+   {
+    "rocnik": 1963,
+    "tis": 138.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1963",
+    "Lidí v lednu 2023": "138 tis.",
+    "Dosáhne 65 let": "v roce 2028"
+   },
+   {
+    "rocnik": 1964,
+    "tis": 143.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1964",
+    "Lidí v lednu 2023": "144 tis.",
+    "Dosáhne 65 let": "v roce 2029"
+   },
+   {
+    "rocnik": 1965,
+    "tis": 138.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1965",
+    "Lidí v lednu 2023": "138 tis.",
+    "Dosáhne 65 let": "v roce 2030"
+   },
+   {
+    "rocnik": 1966,
+    "tis": 134.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1966",
+    "Lidí v lednu 2023": "134 tis.",
+    "Dosáhne 65 let": "v roce 2031"
+   },
+   {
+    "rocnik": 1967,
+    "tis": 133.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1967",
+    "Lidí v lednu 2023": "133 tis.",
+    "Dosáhne 65 let": "v roce 2032"
+   },
+   {
+    "rocnik": 1968,
+    "tis": 133.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1968",
+    "Lidí v lednu 2023": "134 tis.",
+    "Dosáhne 65 let": "v roce 2033"
+   },
+   {
+    "rocnik": 1969,
+    "tis": 141.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1969",
+    "Lidí v lednu 2023": "141 tis.",
+    "Dosáhne 65 let": "v roce 2034"
+   },
+   {
+    "rocnik": 1970,
+    "tis": 147.5,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1970",
+    "Lidí v lednu 2023": "147 tis.",
+    "Dosáhne 65 let": "v roce 2035"
+   },
+   {
+    "rocnik": 1971,
+    "tis": 154.3,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1971",
+    "Lidí v lednu 2023": "154 tis.",
+    "Dosáhne 65 let": "v roce 2036"
+   },
+   {
+    "rocnik": 1972,
+    "tis": 163.6,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1972",
+    "Lidí v lednu 2023": "164 tis.",
+    "Dosáhne 65 let": "v roce 2037"
+   },
+   {
+    "rocnik": 1973,
+    "tis": 181.0,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1973",
+    "Lidí v lednu 2023": "181 tis.",
+    "Dosáhne 65 let": "v roce 2038"
+   },
+   {
+    "rocnik": 1974,
+    "tis": 193.4,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1974",
+    "Lidí v lednu 2023": "193 tis.",
+    "Dosáhne 65 let": "v roce 2039"
+   },
+   {
+    "rocnik": 1975,
+    "tis": 191.9,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1975",
+    "Lidí v lednu 2023": "192 tis.",
+    "Dosáhne 65 let": "v roce 2040"
+   },
+   {
+    "rocnik": 1976,
+    "tis": 189.0,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1976",
+    "Lidí v lednu 2023": "189 tis.",
+    "Dosáhne 65 let": "v roce 2041"
+   },
+   {
+    "rocnik": 1977,
+    "tis": 184.4,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1977",
+    "Lidí v lednu 2023": "184 tis.",
+    "Dosáhne 65 let": "v roce 2042"
+   },
+   {
+    "rocnik": 1978,
+    "tis": 182.0,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1978",
+    "Lidí v lednu 2023": "182 tis.",
+    "Dosáhne 65 let": "v roce 2043"
+   },
+   {
+    "rocnik": 1979,
+    "tis": 176.6,
+    "skupina": "70. léta",
+    "hlavicka": "Ročník 1979",
+    "Lidí v lednu 2023": "177 tis.",
+    "Dosáhne 65 let": "v roce 2044"
+   },
+   {
+    "rocnik": 1980,
+    "tis": 161.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1980",
+    "Lidí v lednu 2023": "161 tis.",
+    "Dosáhne 65 let": "v roce 2045"
+   },
+   {
+    "rocnik": 1981,
+    "tis": 152.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1981",
+    "Lidí v lednu 2023": "153 tis.",
+    "Dosáhne 65 let": "v roce 2046"
+   },
+   {
+    "rocnik": 1982,
+    "tis": 152.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1982",
+    "Lidí v lednu 2023": "152 tis.",
+    "Dosáhne 65 let": "v roce 2047"
+   },
+   {
+    "rocnik": 1983,
+    "tis": 149.9,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1983",
+    "Lidí v lednu 2023": "150 tis.",
+    "Dosáhne 65 let": "v roce 2048"
+   },
+   {
+    "rocnik": 1984,
+    "tis": 149.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1984",
+    "Lidí v lednu 2023": "149 tis.",
+    "Dosáhne 65 let": "v roce 2049"
+   },
+   {
+    "rocnik": 1985,
+    "tis": 149.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1985",
+    "Lidí v lednu 2023": "149 tis.",
+    "Dosáhne 65 let": "v roce 2050"
+   },
+   {
+    "rocnik": 1986,
+    "tis": 146.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1986",
+    "Lidí v lednu 2023": "147 tis.",
+    "Dosáhne 65 let": "v roce 2051"
+   },
+   {
+    "rocnik": 1987,
+    "tis": 144.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1987",
+    "Lidí v lednu 2023": "144 tis.",
+    "Dosáhne 65 let": "v roce 2052"
+   },
+   {
+    "rocnik": 1988,
+    "tis": 146.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1988",
+    "Lidí v lednu 2023": "146 tis.",
+    "Dosáhne 65 let": "v roce 2053"
+   },
+   {
+    "rocnik": 1989,
+    "tis": 141.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1989",
+    "Lidí v lednu 2023": "141 tis.",
+    "Dosáhne 65 let": "v roce 2054"
+   },
+   {
+    "rocnik": 1990,
+    "tis": 143.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1990",
+    "Lidí v lednu 2023": "143 tis.",
+    "Dosáhne 65 let": "v roce 2055"
+   },
+   {
+    "rocnik": 1991,
+    "tis": 142.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1991",
+    "Lidí v lednu 2023": "143 tis.",
+    "Dosáhne 65 let": "v roce 2056"
+   },
+   {
+    "rocnik": 1992,
+    "tis": 135.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1992",
+    "Lidí v lednu 2023": "135 tis.",
+    "Dosáhne 65 let": "v roce 2057"
+   },
+   {
+    "rocnik": 1993,
+    "tis": 134.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1993",
+    "Lidí v lednu 2023": "134 tis.",
+    "Dosáhne 65 let": "v roce 2058"
+   },
+   {
+    "rocnik": 1994,
+    "tis": 120.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1994",
+    "Lidí v lednu 2023": "121 tis.",
+    "Dosáhne 65 let": "v roce 2059"
+   },
+   {
+    "rocnik": 1995,
+    "tis": 109.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1995",
+    "Lidí v lednu 2023": "110 tis.",
+    "Dosáhne 65 let": "v roce 2060"
+   },
+   {
+    "rocnik": 1996,
+    "tis": 103.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1996",
+    "Lidí v lednu 2023": "103 tis.",
+    "Dosáhne 65 let": "v roce 2061"
+   },
+   {
+    "rocnik": 1997,
+    "tis": 102.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1997",
+    "Lidí v lednu 2023": "103 tis.",
+    "Dosáhne 65 let": "v roce 2062"
+   },
+   {
+    "rocnik": 1998,
+    "tis": 101.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1998",
+    "Lidí v lednu 2023": "101 tis.",
+    "Dosáhne 65 let": "v roce 2063"
+   },
+   {
+    "rocnik": 1999,
+    "tis": 99.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 1999",
+    "Lidí v lednu 2023": "99 tis.",
+    "Dosáhne 65 let": "v roce 2064"
+   },
+   {
+    "rocnik": 2000,
+    "tis": 101.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2000",
+    "Lidí v lednu 2023": "101 tis.",
+    "Dosáhne 65 let": "v roce 2065"
+   },
+   {
+    "rocnik": 2001,
+    "tis": 100.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2001",
+    "Lidí v lednu 2023": "101 tis.",
+    "Dosáhne 65 let": "v roce 2066"
+   },
+   {
+    "rocnik": 2002,
+    "tis": 102.8,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2002",
+    "Lidí v lednu 2023": "103 tis.",
+    "Dosáhne 65 let": "v roce 2067"
+   },
+   {
+    "rocnik": 2003,
+    "tis": 103.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2003",
+    "Lidí v lednu 2023": "104 tis.",
+    "Dosáhne 65 let": "v roce 2068"
+   },
+   {
+    "rocnik": 2004,
+    "tis": 108.3,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2004",
+    "Lidí v lednu 2023": "108 tis.",
+    "Dosáhne 65 let": "v roce 2069"
+   },
+   {
+    "rocnik": 2005,
+    "tis": 111.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2005",
+    "Lidí v lednu 2023": "111 tis.",
+    "Dosáhne 65 let": "v roce 2070"
+   },
+   {
+    "rocnik": 2006,
+    "tis": 112.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2006",
+    "Lidí v lednu 2023": "113 tis.",
+    "Dosáhne 65 let": "v roce 2071"
+   },
+   {
+    "rocnik": 2007,
+    "tis": 121.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2007",
+    "Lidí v lednu 2023": "121 tis.",
+    "Dosáhne 65 let": "v roce 2072"
+   },
+   {
+    "rocnik": 2008,
+    "tis": 125.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2008",
+    "Lidí v lednu 2023": "126 tis.",
+    "Dosáhne 65 let": "v roce 2073"
+   },
+   {
+    "rocnik": 2009,
+    "tis": 124.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2009",
+    "Lidí v lednu 2023": "124 tis.",
+    "Dosáhne 65 let": "v roce 2074"
+   },
+   {
+    "rocnik": 2010,
+    "tis": 123.1,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2010",
+    "Lidí v lednu 2023": "123 tis.",
+    "Dosáhne 65 let": "v roce 2075"
+   },
+   {
+    "rocnik": 2011,
+    "tis": 115.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2011",
+    "Lidí v lednu 2023": "115 tis.",
+    "Dosáhne 65 let": "v roce 2076"
+   },
+   {
+    "rocnik": 2012,
+    "tis": 115.6,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2012",
+    "Lidí v lednu 2023": "116 tis.",
+    "Dosáhne 65 let": "v roce 2077"
+   },
+   {
+    "rocnik": 2013,
+    "tis": 113.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2013",
+    "Lidí v lednu 2023": "114 tis.",
+    "Dosáhne 65 let": "v roce 2078"
+   },
+   {
+    "rocnik": 2014,
+    "tis": 116.4,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2014",
+    "Lidí v lednu 2023": "116 tis.",
+    "Dosáhne 65 let": "v roce 2079"
+   },
+   {
+    "rocnik": 2015,
+    "tis": 116.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2015",
+    "Lidí v lednu 2023": "117 tis.",
+    "Dosáhne 65 let": "v roce 2080"
+   },
+   {
+    "rocnik": 2016,
+    "tis": 118.5,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2016",
+    "Lidí v lednu 2023": "119 tis.",
+    "Dosáhne 65 let": "v roce 2081"
+   },
+   {
+    "rocnik": 2017,
+    "tis": 118.9,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2017",
+    "Lidí v lednu 2023": "119 tis.",
+    "Dosáhne 65 let": "v roce 2082"
+   },
+   {
+    "rocnik": 2018,
+    "tis": 117.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2018",
+    "Lidí v lednu 2023": "118 tis.",
+    "Dosáhne 65 let": "v roce 2083"
+   },
+   {
+    "rocnik": 2019,
+    "tis": 115.0,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2019",
+    "Lidí v lednu 2023": "115 tis.",
+    "Dosáhne 65 let": "v roce 2084"
+   },
+   {
+    "rocnik": 2020,
+    "tis": 112.2,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2020",
+    "Lidí v lednu 2023": "112 tis.",
+    "Dosáhne 65 let": "v roce 2085"
+   },
+   {
+    "rocnik": 2021,
+    "tis": 115.7,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2021",
+    "Lidí v lednu 2023": "116 tis.",
+    "Dosáhne 65 let": "v roce 2086"
+   },
+   {
+    "rocnik": 2022,
+    "tis": 101.9,
+    "skupina": "ostatní",
+    "hlavicka": "Ročník 2022",
+    "Lidí v lednu 2023": "102 tis.",
+    "Dosáhne 65 let": "v roce 2087"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "width": {
+     "band": 0.9
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "rocnik",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      1923,
+      1924,
+      1925,
+      1926,
+      1927,
+      1928,
+      1929,
+      1930,
+      1931,
+      1932,
+      1933,
+      1934,
+      1935,
+      1936,
+      1937,
+      1938,
+      1939,
+      1940,
+      1941,
+      1942,
+      1943,
+      1944,
+      1945,
+      1946,
+      1947,
+      1948,
+      1949,
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+     ],
+     "axis": {
+      "values": [
+       1930,
+       1940,
+       1950,
+       1960,
+       1970,
+       1980,
+       1990,
+       2000,
+       2010,
+       2020
+      ],
+      "labelAngle": 0,
+      "grid": false,
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "y": {
+     "field": "tis",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       215
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       50,
+       100,
+       150,
+       200
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "70. léta",
+       "ostatní"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rocnik": 1974,
+      "tis": 193.4,
+      "skupina": "70. léta",
+      "hlavicka": "Ročník 1974",
+      "Lidí v lednu 2023": "193 tis.",
+      "Dosáhne 65 let": "v roce 2039",
+      "t": "nejsilnější ročník 1974: 193 tis."
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": -9,
+    "fontSize": 12.5,
+    "fontWeight": "bold",
+    "color": "#de1743",
+    "align": "right",
+    "dx": 36
+   },
+   "encoding": {
+    "x": {
+     "field": "rocnik",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      1923,
+      1924,
+      1925,
+      1926,
+      1927,
+      1928,
+      1929,
+      1930,
+      1931,
+      1932,
+      1933,
+      1934,
+      1935,
+      1936,
+      1937,
+      1938,
+      1939,
+      1940,
+      1941,
+      1942,
+      1943,
+      1944,
+      1945,
+      1946,
+      1947,
+      1948,
+      1949,
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+     ],
+     "axis": {
+      "values": [
+       1930,
+       1940,
+       1950,
+       1960,
+       1970,
+       1980,
+       1990,
+       2000,
+       2010,
+       2020
+      ],
+      "labelAngle": 0,
+      "grid": false,
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "y": {
+     "field": "tis",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       215
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       50,
+       100,
+       150,
+       200
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "x": {
+     "field": "rocnik",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      1923,
+      1924,
+      1925,
+      1926,
+      1927,
+      1928,
+      1929,
+      1930,
+      1931,
+      1932,
+      1933,
+      1934,
+      1935,
+      1936,
+      1937,
+      1938,
+      1939,
+      1940,
+      1941,
+      1942,
+      1943,
+      1944,
+      1945,
+      1946,
+      1947,
+      1948,
+      1949,
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+     ],
+     "axis": {
+      "values": [
+       1930,
+       1940,
+       1950,
+       1960,
+       1970,
+       1980,
+       1990,
+       2000,
+       2010,
+       2020
+      ],
+      "labelAngle": 0,
+      "grid": false,
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 215
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "Lidí v lednu 2023",
+      "title": "Lidí v lednu 2023"
+     },
+     {
+      "field": "Dosáhne 65 let",
+      "title": "Dosáhne 65 let"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

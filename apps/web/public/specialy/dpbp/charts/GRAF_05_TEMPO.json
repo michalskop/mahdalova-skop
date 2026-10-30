@@ -1,0 +1,989 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Odklad mateřství vysvětluje propad kolem roku 1999, dnešní pokles už ne",
+  "subtitle": "Úhrnná plodnost a plodnost po odečtení odkladu, Česko 1993–2023; rozdíl činil v roce 1999 0,50 dítěte, v roce 2023 0,06"
+ },
+ "_source": "[Demografická příručka (data za 2024), tab. 6.12 a 6.13, ČSÚ](https://csu.gov.cz/produkty/demograficka-prirucka-2024) · vlastní výpočet metodou Bongaarts–Feeney\nUpravená plodnost = plodnost podle pořadí dítěte dělená (1 − roční změna průměrného věku matek při porodu daného pořadí), změna je centrovaná přes sousední roky. Je to odhad, ne naměřená hodnota.",
+ "height": 320,
+ "data": {
+  "values": [
+   {
+    "rok": 1993,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.666,
+    "label": "1,67",
+    "ptr": "1,67 dítěte na ženu"
+   },
+   {
+    "rok": 1993,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 2.037,
+    "label": "2,04",
+    "ptr": "2,04 dítěte na ženu"
+   },
+   {
+    "rok": 1994,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.438,
+    "label": "1,44",
+    "ptr": "1,44 dítěte na ženu"
+   },
+   {
+    "rok": 1994,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 2.077,
+    "label": "2,08",
+    "ptr": "2,08 dítěte na ženu"
+   },
+   {
+    "rok": 1995,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.278,
+    "label": "1,28",
+    "ptr": "1,28 dítěte na ženu"
+   },
+   {
+    "rok": 1995,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.962,
+    "label": "1,96",
+    "ptr": "1,96 dítěte na ženu"
+   },
+   {
+    "rok": 1996,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.185,
+    "label": "1,19",
+    "ptr": "1,19 dítěte na ženu"
+   },
+   {
+    "rok": 1996,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.777,
+    "label": "1,78",
+    "ptr": "1,78 dítěte na ženu"
+   },
+   {
+    "rok": 1997,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.173,
+    "label": "1,17",
+    "ptr": "1,17 dítěte na ženu"
+   },
+   {
+    "rok": 1997,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.698,
+    "label": "1,70",
+    "ptr": "1,70 dítěte na ženu"
+   },
+   {
+    "rok": 1998,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.157,
+    "label": "1,16",
+    "ptr": "1,16 dítěte na ženu"
+   },
+   {
+    "rok": 1998,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.613,
+    "label": "1,61",
+    "ptr": "1,61 dítěte na ženu"
+   },
+   {
+    "rok": 1999,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.133,
+    "label": "1,13",
+    "ptr": "1,13 dítěte na ženu"
+   },
+   {
+    "rok": 1999,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.628,
+    "label": "1,63",
+    "ptr": "1,63 dítěte na ženu"
+   },
+   {
+    "rok": 2000,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.144,
+    "label": "1,14",
+    "ptr": "1,14 dítěte na ženu"
+   },
+   {
+    "rok": 2000,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.772,
+    "label": "1,77",
+    "ptr": "1,77 dítěte na ženu"
+   },
+   {
+    "rok": 2001,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.146,
+    "label": "1,15",
+    "ptr": "1,15 dítěte na ženu"
+   },
+   {
+    "rok": 2001,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.707,
+    "label": "1,71",
+    "ptr": "1,71 dítěte na ženu"
+   },
+   {
+    "rok": 2002,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.171,
+    "label": "1,17",
+    "ptr": "1,17 dítěte na ženu"
+   },
+   {
+    "rok": 2002,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.636,
+    "label": "1,64",
+    "ptr": "1,64 dítěte na ženu"
+   },
+   {
+    "rok": 2003,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.179,
+    "label": "1,18",
+    "ptr": "1,18 dítěte na ženu"
+   },
+   {
+    "rok": 2003,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.704,
+    "label": "1,70",
+    "ptr": "1,70 dítěte na ženu"
+   },
+   {
+    "rok": 2004,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.226,
+    "label": "1,23",
+    "ptr": "1,23 dítěte na ženu"
+   },
+   {
+    "rok": 2004,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.778,
+    "label": "1,78",
+    "ptr": "1,78 dítěte na ženu"
+   },
+   {
+    "rok": 2005,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.282,
+    "label": "1,28",
+    "ptr": "1,28 dítěte na ženu"
+   },
+   {
+    "rok": 2005,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.808,
+    "label": "1,81",
+    "ptr": "1,81 dítěte na ženu"
+   },
+   {
+    "rok": 2006,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.328,
+    "label": "1,33",
+    "ptr": "1,33 dítěte na ženu"
+   },
+   {
+    "rok": 2006,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.762,
+    "label": "1,76",
+    "ptr": "1,76 dítěte na ženu"
+   },
+   {
+    "rok": 2007,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.438,
+    "label": "1,44",
+    "ptr": "1,44 dítěte na ženu"
+   },
+   {
+    "rok": 2007,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.845,
+    "label": "1,84",
+    "ptr": "1,84 dítěte na ženu"
+   },
+   {
+    "rok": 2008,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.497,
+    "label": "1,50",
+    "ptr": "1,50 dítěte na ženu"
+   },
+   {
+    "rok": 2008,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.807,
+    "label": "1,81",
+    "ptr": "1,81 dítěte na ženu"
+   },
+   {
+    "rok": 2009,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.492,
+    "label": "1,49",
+    "ptr": "1,49 dítěte na ženu"
+   },
+   {
+    "rok": 2009,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.701,
+    "label": "1,70",
+    "ptr": "1,70 dítěte na ženu"
+   },
+   {
+    "rok": 2010,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.493,
+    "label": "1,49",
+    "ptr": "1,49 dítěte na ženu"
+   },
+   {
+    "rok": 2010,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.742,
+    "label": "1,74",
+    "ptr": "1,74 dítěte na ženu"
+   },
+   {
+    "rok": 2011,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.427,
+    "label": "1,43",
+    "ptr": "1,43 dítěte na ženu"
+   },
+   {
+    "rok": 2011,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.622,
+    "label": "1,62",
+    "ptr": "1,62 dítěte na ženu"
+   },
+   {
+    "rok": 2012,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.452,
+    "label": "1,45",
+    "ptr": "1,45 dítěte na ženu"
+   },
+   {
+    "rok": 2012,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.618,
+    "label": "1,62",
+    "ptr": "1,62 dítěte na ženu"
+   },
+   {
+    "rok": 2013,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.456,
+    "label": "1,46",
+    "ptr": "1,46 dítěte na ženu"
+   },
+   {
+    "rok": 2013,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.587,
+    "label": "1,59",
+    "ptr": "1,59 dítěte na ženu"
+   },
+   {
+    "rok": 2014,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.528,
+    "label": "1,53",
+    "ptr": "1,53 dítěte na ženu"
+   },
+   {
+    "rok": 2014,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.64,
+    "label": "1,64",
+    "ptr": "1,64 dítěte na ženu"
+   },
+   {
+    "rok": 2015,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.57,
+    "label": "1,57",
+    "ptr": "1,57 dítěte na ženu"
+   },
+   {
+    "rok": 2015,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.65,
+    "label": "1,65",
+    "ptr": "1,65 dítěte na ženu"
+   },
+   {
+    "rok": 2016,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.63,
+    "label": "1,63",
+    "ptr": "1,63 dítěte na ženu"
+   },
+   {
+    "rok": 2016,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.673,
+    "label": "1,67",
+    "ptr": "1,67 dítěte na ženu"
+   },
+   {
+    "rok": 2017,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.687,
+    "label": "1,69",
+    "ptr": "1,69 dítěte na ženu"
+   },
+   {
+    "rok": 2017,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.774,
+    "label": "1,77",
+    "ptr": "1,77 dítěte na ženu"
+   },
+   {
+    "rok": 2018,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.708,
+    "label": "1,71",
+    "ptr": "1,71 dítěte na ženu"
+   },
+   {
+    "rok": 2018,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.808,
+    "label": "1,81",
+    "ptr": "1,81 dítěte na ženu"
+   },
+   {
+    "rok": 2019,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.709,
+    "label": "1,71",
+    "ptr": "1,71 dítěte na ženu"
+   },
+   {
+    "rok": 2019,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.775,
+    "label": "1,77",
+    "ptr": "1,77 dítěte na ženu"
+   },
+   {
+    "rok": 2020,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.707,
+    "label": "1,71",
+    "ptr": "1,71 dítěte na ženu"
+   },
+   {
+    "rok": 2020,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.938,
+    "label": "1,94",
+    "ptr": "1,94 dítěte na ženu"
+   },
+   {
+    "rok": 2021,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.827,
+    "label": "1,83",
+    "ptr": "1,83 dítěte na ženu"
+   },
+   {
+    "rok": 2021,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 2.036,
+    "label": "2,04",
+    "ptr": "2,04 dítěte na ženu"
+   },
+   {
+    "rok": 2022,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.618,
+    "label": "1,62",
+    "ptr": "1,62 dítěte na ženu"
+   },
+   {
+    "rok": 2022,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.622,
+    "label": "1,62",
+    "ptr": "1,62 dítěte na ženu"
+   },
+   {
+    "rok": 2023,
+    "serie": "úhrnná plodnost",
+    "plodnost": 1.453,
+    "label": "1,45",
+    "ptr": "1,45 dítěte na ženu"
+   },
+   {
+    "rok": 2023,
+    "serie": "po odečtení odkladu mateřství",
+    "plodnost": 1.51,
+    "label": "1,51",
+    "ptr": "1,51 dítěte na ženu"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1993,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "plodnost",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.2
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.4,
+       1.8,
+       2.2
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.1f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "úhrnná plodnost",
+       "po odečtení odkladu mateřství"
+      ],
+      "range": [
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 40,
+    "opacity": 0
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1993,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "plodnost",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.2
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.4,
+       1.8,
+       2.2
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.1f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "úhrnná plodnost",
+       "po odečtení odkladu mateřství"
+      ],
+      "range": [
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "type": "quantitative",
+      "title": "Rok",
+      "format": "d"
+     },
+     {
+      "field": "serie",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "ptr",
+      "title": "Hodnota"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1999,
+      "serie": "úhrnná plodnost",
+      "plodnost": 1.133,
+      "label": "1,13",
+      "ptr": "1,13 dítěte na ženu"
+     },
+     {
+      "rok": 1999,
+      "serie": "po odečtení odkladu mateřství",
+      "plodnost": 1.628,
+      "label": "1,63",
+      "ptr": "1,63 dítěte na ženu"
+     },
+     {
+      "rok": 2023,
+      "serie": "úhrnná plodnost",
+      "plodnost": 1.453,
+      "label": "1,45",
+      "ptr": "1,45 dítěte na ženu"
+     },
+     {
+      "rok": 2023,
+      "serie": "po odečtení odkladu mateřství",
+      "plodnost": 1.51,
+      "label": "1,51",
+      "ptr": "1,51 dítěte na ženu"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1993,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "plodnost",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.2
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.4,
+       1.8,
+       2.2
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.1f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "úhrnná plodnost",
+       "po odečtení odkladu mateřství"
+      ],
+      "range": [
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1999,
+      "serie": "po odečtení odkladu mateřství",
+      "plodnost": 1.628,
+      "label": "1,63",
+      "ptr": "1,63 dítěte na ženu"
+     },
+     {
+      "rok": 2023,
+      "serie": "po odečtení odkladu mateřství",
+      "plodnost": 1.51,
+      "label": "1,51",
+      "ptr": "1,51 dítěte na ženu"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "dy": -11
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1993,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "plodnost",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.2
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.4,
+       1.8,
+       2.2
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.1f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "úhrnná plodnost",
+       "po odečtení odkladu mateřství"
+      ],
+      "range": [
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1999,
+      "serie": "úhrnná plodnost",
+      "plodnost": 1.133,
+      "label": "1,13",
+      "ptr": "1,13 dítěte na ženu"
+     },
+     {
+      "rok": 2023,
+      "serie": "úhrnná plodnost",
+      "plodnost": 1.453,
+      "label": "1,45",
+      "ptr": "1,45 dítěte na ženu"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "dy": 16
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1993,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "plodnost",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.2
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.4,
+       1.8,
+       2.2
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.1f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "úhrnná plodnost",
+       "po odečtení odkladu mateřství"
+      ],
+      "range": [
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "plodnost": 1.63,
+      "serie": "po odečtení odkladu mateřství",
+      "t": "po odečtení odkladu"
+     },
+     {
+      "rok": 2023,
+      "plodnost": 1.3330000000000002,
+      "serie": "úhrnná plodnost",
+      "t": "úhrnná plodnost"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 12,
+    "baseline": "middle"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1993,
+       2027
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "field": "plodnost",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1.0,
+       2.2
+      ]
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "úhrnná plodnost",
+       "po odečtení odkladu mateřství"
+      ],
+      "range": [
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

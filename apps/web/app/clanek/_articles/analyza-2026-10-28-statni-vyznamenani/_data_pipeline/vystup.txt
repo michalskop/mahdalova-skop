@@ -1,0 +1,84 @@
+Záznamů celkem: 1377; bez klasifikace: 0
+Rok 2003: v seznamu Havlovy kanceláře 32, přiřazeno Havlovi 32, Klausovi zbývá 20; vynechány řády Václava Havla: 2
+Ročník 2020 vrácen z roku 2021: 37 vyznamenání (ohlášeno 38, Pavlu Rychetskému Zeman řád neudělil); nenalezeno: []
+  zdvojený záznam vynechán: Medaile Za zásluhy plk. Ing. Miroslav Štěpán | II. stupeň, 1997
+  zdvojený záznam vynechán: Řád T. G. Masaryka Mgr. Ilja Hradecký | II. třída, 2023
+Analyzováno 1995–2026: 1424 vyznamenání
+Rok 2026: 54 vyznamenání, z toho 28. 10.: 51; žen 16, in memoriam 15
+Ženy 2026: Věra Čáslavská (Řád Bílého lva); Helena Illnerová (Řád Bílého lva); Iva Janžurová (Řád Bílého lva); Eliška Wagnerová (Řád T. G. Masaryka); Elena Gorolová (Řád T. G. Masaryka); Milena Grenfell-Baines (Řád T. G. Masaryka); Kateřina Emmons (Medaile Za zásluhy); Mahulena Exnerová (Medaile Za zásluhy); Sylva Knedlová (Medaile Za zásluhy); Jaroslava Rinnerová (Medaile Za zásluhy); Olga Štěpánková (Medaile Za zásluhy); Lenka Šťastná (Medaile Za zásluhy); Kateřina Tučková (Medaile Za zásluhy); Katarína Vlčková (Medaile Za zásluhy); Petra Wünschová (Medaile Za zásluhy); Lucie Žáčková (Medaile Za zásluhy)
+Ročníky: {'Havel': 8, 'Klaus': 10, 'Zeman': 10, 'Pavel': 4}
+
+## Počty podle prezidentů
+Havel: 547 (68.4 ročně), in memoriam 123 (22 %); Řád Bílého lva: 64 (12 %); Řád T. G. Masaryka: 116 (21 %); Medaile Za hrdinství: 96 (18 %); Medaile Za zásluhy: 271 (50 %)
+Klaus: 229 (22.9 ročně), in memoriam 20 (9 %); Řád Bílého lva: 23 (10 %); Řád T. G. Masaryka: 49 (21 %); Medaile Za hrdinství: 11 (5 %); Medaile Za zásluhy: 146 (64 %)
+Zeman: 420 (42.0 ročně), in memoriam 111 (26 %); Řád Bílého lva: 57 (14 %); Řád T. G. Masaryka: 29 (7 %); Medaile Za hrdinství: 59 (14 %); Medaile Za zásluhy: 275 (65 %)
+Pavel: 228 (57.0 ročně), in memoriam 47 (21 %); Řád Bílého lva: 27 (12 %); Řád T. G. Masaryka: 27 (12 %); Medaile Za hrdinství: 28 (12 %); Medaile Za zásluhy: 146 (64 %)
+Po letech: 1995: 55, 1996: 66, 1997: 70, 1998: 106, 1999: 36, 2000: 42, 2001: 49, 2002: 91, 2003: 52, 2004: 22, 2005: 23, 2006: 22, 2007: 24, 2008: 28, 2009: 24, 2010: 23, 2011: 21, 2012: 22, 2013: 30, 2014: 38, 2015: 36, 2016: 38, 2017: 49, 2018: 42, 2019: 42, 2020: 37, 2021: 29, 2022: 78, 2023: 65, 2024: 59, 2025: 51, 2026: 54
+Nejvíc: [('1998', 106), ('2002', 91), ('2022', 78)]  nejméně: [('2011', 21), ('2004', 22), ('2006', 22)]
+
+## Ženy (osoby se známým pohlavím)
+Havel: žen 71 z 546 (13 %); v řádech 16 z 180 (9 %)
+Klaus: žen 37 z 228 (16 %); v řádech 11 z 72 (15 %)
+Zeman: žen 64 z 420 (15 %); v řádech 8 z 86 (9 %)
+Pavel: žen 65 z 228 (29 %); v řádech 17 z 54 (31 %)
+celkem: žen 237 z 1422 (17 %); v řádech 52 z 392 (13 %)
+Předchůdci Pavla dohromady: žen 172 z 1194 (14 %)
+Pohlaví neurčeno: 2 ['Dominique Magnant', 'Blažena a Lubomír Rosnerovi']
+Ženy po letech: 1995: 4/55, 1996: 4/66, 1997: 9/70, 1998: 15/106, 1999: 5/36, 2000: 7/42, 2001: 10/49, 2002: 9/91, 2003: 12/51, 2004: 3/22, 2005: 2/22, 2006: 5/22, 2007: 3/24, 2008: 4/28, 2009: 5/24, 2010: 5/23, 2011: 3/21, 2012: 3/22, 2013: 6/30, 2014: 10/38, 2015: 5/36, 2016: 5/38, 2017: 11/49, 2018: 8/42, 2019: 6/42, 2020: 3/37, 2021: 2/29, 2022: 8/78, 2023: 16/65, 2024: 20/59, 2025: 13/51, 2026: 16/54
+
+## Obory podle prezidentů (podíl ze všech vyznamenání)
+Havel: kultura a umění 108 (20 %); válka a protinacistický odboj 99 (18 %); věda a vzdělávání 51 (9 %); armáda, policie, záchranáři 50 (9 %); protikomunistický odboj a disent 43 (8 %); nezjištěno 38 (7 %); církev 33 (6 %); zahraniční státníci 32 (6 %); politika, stát a justice 29 (5 %); občanská společnost 23 (4 %); žurnalistika 12 (2 %); medicína 10 (2 %); statečný čin civilisty 10 (2 %); sport 8 (1 %); podnikání 1 (0 %)
+Klaus: kultura a umění 57 (25 %); věda a vzdělávání 35 (15 %); protikomunistický odboj a disent 32 (14 %); válka a protinacistický odboj 26 (11 %); medicína 18 (8 %); sport 13 (6 %); církev 12 (5 %); občanská společnost 11 (5 %); armáda, policie, záchranáři 7 (3 %); statečný čin civilisty 5 (2 %); podnikání 4 (2 %); politika, stát a justice 3 (1 %); zahraniční státníci 3 (1 %); nezjištěno 3 (1 %)
+Zeman: kultura a umění 79 (19 %); válka a protinacistický odboj 57 (14 %); věda a vzdělávání 45 (11 %); podnikání 33 (8 %); medicína 32 (8 %); sport 29 (7 %); armáda, policie, záchranáři 29 (7 %); občanská společnost 27 (6 %); zahraniční státníci 27 (6 %); politika, stát a justice 25 (6 %); statečný čin civilisty 14 (3 %); žurnalistika 12 (3 %); církev 8 (2 %); protikomunistický odboj a disent 2 (0 %); nezjištěno 1 (0 %)
+Pavel: kultura a umění 55 (24 %); věda a vzdělávání 26 (11 %); občanská společnost 24 (11 %); sport 18 (8 %); válka a protinacistický odboj 17 (7 %); armáda, policie, záchranáři 17 (7 %); medicína 14 (6 %); politika, stát a justice 13 (6 %); zahraniční státníci 10 (4 %); protikomunistický odboj a disent 9 (4 %); statečný čin civilisty 8 (4 %); podnikání 8 (4 %); žurnalistika 6 (3 %); církev 3 (1 %)
+
+## Řády (Bílý lev + TGM) podle oborů
+Havel (180 řádů): válka a protinacistický odboj 37 (21 %); zahraniční státníci 30 (17 %); církev 21 (12 %); politika, stát a justice 19 (11 %); protikomunistický odboj a disent 16 (9 %); kultura a umění 14 (8 %); věda a vzdělávání 13 (7 %); nezjištěno 10 (6 %); armáda, policie, záchranáři 9 (5 %); občanská společnost 7 (4 %); žurnalistika 4 (2 %)
+Klaus (72 řádů): protikomunistický odboj a disent 30 (42 %); válka a protinacistický odboj 26 (36 %); církev 7 (10 %); občanská společnost 4 (6 %); zahraniční státníci 3 (4 %); kultura a umění 1 (1 %); politika, stát a justice 1 (1 %)
+Zeman (86 řádů): válka a protinacistický odboj 27 (31 %); zahraniční státníci 26 (30 %); kultura a umění 9 (10 %); občanská společnost 7 (8 %); politika, stát a justice 4 (5 %); medicína 4 (5 %); věda a vzdělávání 2 (2 %); církev 2 (2 %); armáda, policie, záchranáři 2 (2 %); podnikání 2 (2 %); žurnalistika 1 (1 %)
+Pavel (54 řádů): zahraniční státníci 10 (19 %); politika, stát a justice 9 (17 %); válka a protinacistický odboj 7 (13 %); protikomunistický odboj a disent 7 (13 %); kultura a umění 6 (11 %); občanská společnost 5 (9 %); věda a vzdělávání 4 (7 %); církev 3 (6 %); sport 2 (4 %); žurnalistika 1 (2 %)
+
+## Cizinci
+Havel: cizinců 90 z 547 (16 %)
+Klaus: cizinců 4 z 229 (2 %)
+Zeman: cizinců 40 z 420 (10 %)
+Pavel: cizinců 14 z 228 (6 %)
+
+## Ženy podle oblasti (celé období)
+kultura a umění: žen 62 z 299 (21 %)
+věda a vzdělávání: žen 26 z 157 (17 %)
+medicína: žen 14 z 74 (19 %)
+sport: žen 23 z 68 (34 %)
+žurnalistika: žen 4 z 30 (13 %)
+politika, stát a justice: žen 6 z 70 (9 %)
+zahraniční státníci: žen 12 z 72 (17 %)
+válka a protinacistický odboj: žen 11 z 199 (6 %)
+protikomunistický odboj a disent: žen 24 z 86 (28 %)
+armáda, policie, záchranáři: žen 1 z 103 (1 %)
+statečný čin civilisty: žen 2 z 36 (6 %)
+podnikání: žen 3 z 46 (7 %)
+církev: žen 3 z 56 (5 %)
+občanská společnost: žen 35 z 85 (41 %)
+nezjištěno: žen 11 z 41 (27 %)
+Válka, odboj, armáda dohromady: 302 z 1424 (21 %)
+Nezjištěná oblast: 42 {'Havel': 38, 'Klaus': 3, 'Zeman': 1}
+
+## Nízká jistota klasifikace: 163
+
+## Tabulka do článku (ženy / muži)
+| Prezident | Řád Bílého lva | Řád T. G. Masaryka | Medaile Za hrdinství | Medaile Za zásluhy | Celkem | Podíl žen |
+|---|---:|---:|---:|---:|---:|---:|
+| Václav Havel | 3 / 61 | 13 / 103 | 5 / 90 | 50 / 221 | 71 / 475 | 13 % |
+| Václav Klaus | 1 / 22 | 10 / 39 | 0 / 11 | 26 / 119 | 37 / 191 | 16 % |
+| Miloš Zeman | 2 / 55 | 6 / 23 | 7 / 52 | 49 / 226 | 64 / 356 | 15 % |
+| Petr Pavel | 8 / 19 | 9 / 18 | 2 / 26 | 46 / 100 | 65 / 163 | 29 % |
+| **Celkem 1995–2026** | 14 / 157 | 38 / 183 | 14 / 179 | 171 / 666 | 237 / 1 185 | 17 % |
+
+## Řády podle funkčních období
+Havel 1. období: 74 řádů; válka a protinacistický odboj 24; zahraniční státníci 8; církev 8; protikomunistický odboj a disent 8; politika, stát a justice 7; kultura a umění 7; nezjištěno 4; armáda, policie, záchranáři 3; věda a vzdělávání 2; občanská společnost 2; žurnalistika 1
+Havel 2. období: 106 řádů; zahraniční státníci 22; válka a protinacistický odboj 13; církev 13; politika, stát a justice 12; věda a vzdělávání 11; protikomunistický odboj a disent 8; kultura a umění 7; armáda, policie, záchranáři 6; nezjištěno 6; občanská společnost 5; žurnalistika 3
+Klaus 1. období: 31 řádů; válka a protinacistický odboj 13; protikomunistický odboj a disent 9; církev 4; občanská společnost 2; kultura a umění 1; politika, stát a justice 1; zahraniční státníci 1
+Klaus 2. období: 41 řádů; protikomunistický odboj a disent 21; válka a protinacistický odboj 13; církev 3; zahraniční státníci 2; občanská společnost 2
+Zeman 1. období: 44 řádů; zahraniční státníci 21; válka a protinacistický odboj 7; kultura a umění 6; občanská společnost 4; politika, stát a justice 2; armáda, policie, záchranáři 2; věda a vzdělávání 1; církev 1
+Zeman 2. období: 42 řádů; válka a protinacistický odboj 20; zahraniční státníci 5; medicína 4; občanská společnost 3; kultura a umění 3; politika, stát a justice 2; podnikání 2; žurnalistika 1; církev 1; věda a vzdělávání 1
+Pavel 1. období: 54 řádů; zahraniční státníci 10; politika, stát a justice 9; válka a protinacistický odboj 7; protikomunistický odboj a disent 7; kultura a umění 6; občanská společnost 5; věda a vzdělávání 4; církev 3; sport 2; žurnalistika 1

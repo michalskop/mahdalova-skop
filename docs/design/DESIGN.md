@@ -346,6 +346,12 @@ mark type, and are checked on a real render on desktop **and** at 390 px mobile 
    line – link text names the document briefly („Zpráva komise OSN A/81/430“), details go to the subtitle.
 4. **No empty band above the footer.** The chart canvas reserves at most the spec `height` + 20 px (component default
    since 28. 10. 2026); don't pad low charts with extra `height`.
+5. **Line labels placed in data coordinates collide on mobile.** A direct label at a fixed x/y (e.g. „Likud v průběžném
+   součtu“ at x = 8 %) is ~45 % of the plot wide at 375 px, so it runs into lines that are clear on desktop. Put labels
+   above a series' peak or below its line where nothing else runs, keep end labels of close series on opposite sides
+   (one `baseline: bottom`, the other `baseline: top`), and check where a long label ends at 375 px. Vega line charts
+   draw in with an animation – wait a few seconds before judging a screenshot. Reference (29. 10. 2026):
+   `volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_data_pipeline/predikce.py`.
 
 ### Pictogram grids – icon charts (added 2026-10-29, approved by Kateřina: "naprosto nádherné")
 

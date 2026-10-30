@@ -1,0 +1,15 @@
+== Čísla pro text ==
+Švédsko   vrchol 1.98 (2010); 2025: 1.42; pokles od vrcholu 0.56; 2000: 1.54
+Francie   vrchol 2.03 (2010); 2025: 1.56; pokles od vrcholu 0.47; 2000: 1.89
+Maďarsko  vrchol 1.61 (2021); 2025: 1.31; pokles od vrcholu 0.30; 2000: 1.32
+Česko     vrchol 1.83 (2021); 2025: 1.28; pokles od vrcholu 0.55; 2000: 1.15
+Švédsko: 2000 -> 2010 +0.44; 1990 (Eurostat) 2.13; 1991 2.11; 1992 2.09
+Maďarsko: 2011 1.23 -> 2021 1.61 (+0.38) -> 2025 1.31 (2025 proti 2011 +0.08; proti 2010 +0.06)
+Francie: rozpětí 2000–2015 1.88–2.03; 2010 2.03; 2023 1.66; 2024 1.61; 2025 1.56
+Česko: 2021 1.83, 2023 1.46, 2024 1.36 (Eurostat), 2025 1.28
+EU27 2024: 1.34 (Eurostat)
+Mimo manželství 2024 (Eurostat): CZ 47.0 %, SE 57.1 %, FR 59.7 %, HU 23.6 %, EU27 41.1 %
+Mimo manželství Maďarsko: 2010 40.8 %, 2020 30.4 %, 2024 23.6 %
+Formální péče o děti do 3 let (100 – podíl bez péče), 2024 [2023]: CZ 7.3 % [4.4 %], EU27_2020 39.3 % [37.4 %], SE 57.7 % [56.9 %], FR 59.4 % [57.3 %], HU 16.5 % [20.5 %]
+Výdaje na rodinu a děti, % HDP, 2023 (ESSPROS): FR 2.22, SE 2.75, HU 1.68, CZ 1.45, PL 3.03, DE 3.45, LU 3.26, EU27_2020 2.31
+graf uložen: ../../../../../public/specialy/dpbp/charts/GRAF_04_PLODNOST_ZEME.json

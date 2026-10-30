@@ -78,6 +78,8 @@ Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis mus�
 
 **Přirozená čeština.** Přímá syntax bez rozjezdových vět a školometských přechodů.
 
+**Slovosled: podmět a přísudek napřed.** Česká věta nejčastěji začíná podmětem, za ním přísudek. Nezačínáme předmětem, i když to volný slovosled dovolí: místo *Většinu nedala predikce žádnému bloku* píšeme *Predikce nedala většinu žádnému bloku*, místo *Netanjahuovu bloku přisuzovala 58 mandátů* píšeme *Netanjahuův blok měl podle ní 58 mandátů*. Předmět na začátku věty zní kostrbatě a přeloženě. Výjimkou je jen skutečný důraz nebo návaznost na předchozí větu, a i tehdy nejvýš občas. (Ponaučení z článku o izraelských volbách, 29. 10. 2026.)
+
 **Rytmus vychází z myšlenky, ne z efektní šablony.** Nevršíme kousavé holé věty a jednoslovná oznámení ve vzorci „očekávání → krátké údery → závěrečná pointa“ (*Žádný plán. Žádná analýza. Jen číslo.*). Takový rytmus působí mechanicky, zvlášť když se opakuje napříč texty. Související fakt, výhradu a důsledek raději spojíme do přirozeného souvětí nebo plynulého odstavce. Krátká věta má smysl jen tam, kde odpovídá skutečnému tempu vyprávění a nese samostatnou informaci, ne jako automatický prostředek důrazu.
 
 **Zakázané konstrukce a fráze:**
@@ -91,6 +93,8 @@ Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis mus�
 **Základní oblouk:** otvírák → nut graf (co zkoumáme, proč je to důležité, proč teď) → evidence (nejsilnější důkaz, pak vysvětlení, limity, alternativy) → mechanismus (jak a proč vzniká, kdo rozhoduje a kdo nese důsledky) → význam → konec (odpověď, nástroj pro čtenáře, návrat k otvíráku nebo realistický směr řešení — ne mechanické shrnutí).
 
 **Povolené otvíráky:** překvapivý přesně zasazený fakt · skutečná reportovaná scéna · veřejný aktér a dohledatelný výrok · výslovně označený statistický nebo modelový případ · redakční datové pátrání (co jsme chtěli zjistit a jak) · konkrétní otázka nebo rozpor, na který text skutečně odpoví.
+
+**Rámeček „Jak jsme počítali“** má všude stejnou podobu: na prvním řádku tučný mezititulek bez tečky a bez dvojtečky (`**Jak jsme počítali**`, případně s dovětkem, např. `**Jak jsme počítali a co z toho neplyne**`), pod ním prázdný řádek a teprve pak popis postupu. Ne `**Jak jsme počítali.** Text…`, ne `Jak jsme počítali: text…` a ne nadpis `###` uvnitř rámečku. (Sjednoceno ve všech článcích 29. 10. 2026.)
 
 **Zakázaný zkrat:** nikdy nevytváříme smyšleného „pana Marka", rodinu ani dialog jen proto, aby data působila lidsky. Bez reportáže sáhneme po čísle, veřejném výroku, vlastním pátrání nebo transparentním modelovém případu.
 
@@ -291,6 +295,21 @@ Když článek stojí na našem výpočtu (model, screening anomálií, přepoč
 - **Pracovní nástroj není publikační výstup.** Screenshot vlastní pracovní mapy není cover ani obrázek do článku; interaktivní embed musí být v paletě, bez emoji a pracovních popisků („teaser“) a musí mít vysvětlení, jak ho číst.
 
 *Pravidlo platí od 2026-10-13 (po konceptu o volebních anomáliích, kde se strany kandidátů, rozpětí podpory i zápis opravy lišily od dat ČSÚ, titulek stavěl na slabší hypotéze a cover byl screenshot pracovní mapy). Typ: univerzální, datový modul. Vlastník: Kateřina Mahdalová.*
+
+## Počítání z oficiálních seznamů a registrů
+Když článek stojí na seznamu, který vede instituce (vyznamenaní, jmenovaní, odsouzení, dotace), platí navíc:
+- **Jasná jednotka a všude stejná.** Rozhodneme, co počítáme (udělená vyznamenání, nebo osoby), a stejně to píšeme v textu, titulcích grafů, tabulkách i na kartách pro sítě: „udělil 547 vyznamenání“, ne „vyznamenal 547 lidí“, když jeden člověk může být v datech víckrát. Společné záznamy (manželé s jednou medailí) a záznamy s neurčenou kategorií vysvětlíme v metodě a řekneme, ze kterého jmenovatele počítáme podíly.
+- **Rok v seznamu není datum.** Když seznam uvádí jen rok, ověříme, kdo záznam skutečně provedl, hlavně v letech střídání ve funkci. Havel vyznamenával ještě v lednu 2003, Zeman k 1. lednu 2023. Rozdělení dohledáme v primárním zdroji (archiv webu instituce přes Internet Archive) a zapíšeme do skriptu.
+- **Co do analýzy nepatří, vyřadíme a řekneme proč** (řády, které bývalému prezidentovi propůjčil parlament, ne prezident; letošní neúplný rok).
+- **Než vyjde, porovnáme naše čísla s tím, co uvádějí média.** Agentury často počítají jinou věc (jen říjnovou ceremonii, ne celý rok se státními návštěvami). Rozdíl vysvětlíme v metodě konkrétními čísly („ČTK uvádí 394 osobností, v našich datech je 420 vyznamenání“). Jinak čtenář vedle zprávy ČTK uvidí chybu. Systematický rozdíl (každý rok o tři víc) je stopa k vysvětlení, ne šum.
+- **Zdroj nemusí uvádět všechno.** Příznak „in memoriam“ u Hradu chybí například u Kryla nebo Kaplického. U zemřelých ho ověříme a doplníme ve skriptu s poznámkou.
+- **Jména ze seznamu učešeme** pro čtenáře (Lucie Bílá místo „Hana Zaňáková Lucie Bílá“, Wałęsa místo Walesa) a stejně je píšeme v textu i v panelech grafů.
+- **Špičky a propady v časové řadě vysvětlíme z dobových zdrojů** (výročí, státní návštěvy, poslední rok ve funkci, covid), než o nich něco napíšeme.
+- **Panely a tooltipy kontrolujeme skriptem proti grafu:** počet jmen v každém panelu se rovná hodnotě ve sloupci.
+- **Formulace srovnání podle toho, co graf porovnává:** podíl („třikrát menší podíl vyznamenání“), ne četnost („dával třikrát méně často“). „Skoro dvakrát“, „nejvíc“ nebo „pořadí“ přepočítáme. U řádů vyšel poměr žen skoro trojnásobný, a v pořadí oblastí byl sport před disentem.
+- **Kontrolu kontrolujeme.** Připomínky externí kontroly (kolega, jiný model AI) ověřujeme u primárního zdroje stejně jako vlastní text. Při kontrole článku o vyznamenáních byly dvě připomínky mylné: SPD pro návrh na vyznamenání Zemana podle jmenovitého hlasování na psp.cz hlasovala. Hlasování parlamentu ověřujeme jmenovitě na psp.cz nebo senat.cz, ne podle zpráv.
+
+*Pravidlo platí od 2026-10-28 (po analýze státních vyznamenání: rok 2003 byl celý připsaný Klausovi, čísla se lišila od ČTK bez vysvětlení, „lidé“ a „vyznamenání“ se míchaly a chyběla in memoriam). Typ: datový modul. Vlastník: Kateřina Mahdalová.*
 
 ## Kontrola grafu a vizuálního tvrzení
 **Srovnání skupin musí být čitelné na první pohled:** kategorie na ose (pásma, roky) viditelně oddělit (podbarvení, mezery), hodnoty psát přímo ke značkám a změnu kolem nuly kreslit od zvýrazněné nulové osy; když dvojice svislých sloupců nic nesdělí, zkusit vodorovné pruhy po stranách (blok za každou stranu, doprava přibylo, doleva ubylo). Popisky os nesmí překrývat body na krajích (graf úspěšnosti: tečka na 0 % přes „Motoristé“). *(15. 10. 2026, graf podle velikosti obce v článku o SPD a Motoristech.)*

@@ -14,7 +14,7 @@ const STIN = '#383d82'; // brandRoyalBlue.7
 
 // stejné plochy mapy jako tools/cover-generator.cjs (FORMATY[].mapa)
 const MAPA = {
-  homepage: [1500, 1200, [60, 400, 1480, 1150]], og: [1200, 630, [0, 0, 1200, 630]],
+  homepage: [1500, 1200, [60, 400, 1480, 1150]], og: [1200, 630, [215, 200, 985, 615]],
   square: [1080, 1080, [20, 470, 1070, 1050]], instagram: [1080, 1350, [20, 560, 1070, 1260]],
   story: [1080, 1920, [0, 860, 1080, 1580]],
 };

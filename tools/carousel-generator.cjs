@@ -18,6 +18,9 @@
 //            zdroj = řádek dole vlevo („Zdroj: …“); číslo slidu „2 / 8“ dole vpravo doplní generátor
 //            cover = úplná vlastní konfigurace (např. první snímek animace); svg pak jde jako motiv
 //   obsahOd  horní hrana obsahové plochy pro html (výchozí 560)
+//   bezPodekovani  true = nepřidávat závěrečný slide s poděkováním (jen výjimečně)
+// Poslední slide každého carouselu je poděkování a výzva k podpoře s QR kódem na Stripe odkaz ze SupportBanneru
+// (Kateřina 29. 10. 2026). Generátor ho přidá sám; QR je tools/podpora-qr.svg (segno, viz COVER-VIZUALNI-IDENTITA.md).
 // Česká typografie: jednopísmenné předložky a spojky v titulku, podtitulku, zdroji a HTML dostanou
 // nezlomitelnou mezeru automaticky (karty mimo web nejdou přes fixCzechTypography).
 const fs = require('fs');
@@ -45,10 +48,25 @@ const CSS = `
   .paticka{position:absolute;left:70px;right:70px;bottom:52px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;
     font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:500;font-size:21px;line-height:1.35;color:${POPIS};opacity:.85}
   .paticka .strana{flex:none;letter-spacing:.08em}
+  .obsah .podpora{display:flex;flex-direction:column;align-items:center;margin-top:20px}
+  .obsah .podpora .qr{width:380px;height:380px;padding:18px;background:#f8f6f0;border-radius:24px;box-sizing:content-box}
+  .obsah .podpora .qr svg{width:100%;height:100%;display:block}
+  .obsah .podpora .male{margin-top:18px;font-weight:600;letter-spacing:.04em}
 `;
+
+// závěrečný slide: poděkování a výzva k podpoře s QR kódem (Stripe odkaz ze SupportBanner.tsx)
+const QR = fs.readFileSync(path.join(__dirname, 'podpora-qr.svg'), 'utf8');
+const PODEKOVANI = {
+  titulek: 'Máme vás rádi. Bez vaší podpory to nepůjde.',
+  pod: 'DataTimes dělá nezávislou datovou žurnalistiku díky čtenářům, jako jste vy.',
+  obsahOd: 600,
+  html: `<div class="podpora"><div class="qr">${QR}</div><div class="male">Podpořte nás · naskenujte QR kód</div></div>`,
+  zdroj: 'DataTimes.cz',
+};
 
 (async () => {
   const cfg = require(path.resolve(process.argv[2]));
+  if (!cfg.bezPodekovani) cfg.slidy = [...cfg.slidy, PODEKOVANI];
   const jen = process.argv.slice(3).filter((a) => a !== '--story').map(Number);
   const vystup = STORY ? `${cfg.vystup}-story` : cfg.vystup;
   fs.mkdirSync(vystup, { recursive: true });

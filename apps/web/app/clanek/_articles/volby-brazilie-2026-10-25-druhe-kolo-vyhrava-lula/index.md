@@ -14,8 +14,6 @@ promoted: 1
 ---
 Brazílie v neděli 25. října ve druhém kole volila prezidenta a podle predikce vyhrává úřadující prezident Luiz Inácio Lula da Silva. Datový model dvojice novinářů Mahdalová & Škop mu po sečtení okrsků, v nichž jsou zapsány dvě třetiny voličů, přisuzuje 51,8 procenta platných hlasů. Senátor Flávio Bolsonaro, syn vězněného exprezidenta Jaira Bolsonara, dostane 48,2 procenta. Lula tak porazí vítěze prvního kola o 4,4 milionu hlasů, dvakrát víc než před čtyřmi lety jeho otce. Jako první kandidát od obnovení přímé volby v roce 1989 se stane prezidentem, přestože v prvním kole skončil druhý.
 
-<KeyNumbers yamlFile="key-stats.yaml" />
-
 ```infobox info
 Predikci jsme přepočítávali každou minutu od 21:12 SEČ (17:12 brazilského času) z průběžných dat brazilského Nejvyššího volebního soudu (TSE). Čísla v textu uvádíme ze stavu v 00:58 SEČ, kdy byly sečteny okrsky s 68,2 procenta zapsaných voličů. Podíly počítáme z platných hlasů, tedy z hlasů pro jednoho ze dvou kandidátů, stejně jako TSE. Oficiální konečný výsledek v době vydání textu ještě není k dispozici.
 ```

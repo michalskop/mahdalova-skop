@@ -1,0 +1,65 @@
+== Živě narození (ČSÚ, OBY01CR) ==
+  1974: 194 215
+  1975: 191 776
+  1999: 89 471
+  2008: 119 570
+  2016: 112 663
+  2017: 114 405
+  2021: 111 793
+  2024: 84 311
+  2025: 77 636
+  1999 / 1974: 46 %;  2025 / 1974: 40 %
+  roky od 1920 s méně než 91 000 narozených: [1996, 1997, 1998, 1999, 2000, 2001, 2024, 2025]
+  nejnižší roky celkem: [(2025, 77636), (2024, 84311), (1999, 89471), (1996, 90446), (1998, 90535), (1997, 90657)]
+  nejmenší počet narozených před rokem 1994 (od 1920): (121025, 1993)
+  věk matky při narození 1. dítěte: {2000: 24.9, 2010: 27.6, 2015: 28.2, 2020: 28.5, 2025: 29.2}
+  roky 1994–2002 (nejmenší, kromě 2024–2025): [(1993, 121025), (1994, 106579), (1995, 96097), (1996, 90446), (1997, 90657), (1998, 90535), (1999, 89471), (2000, 90910), (2001, 90715), (2002, 92786), (2003, 93685)]
+  součet narozených 1986–1995: 1 230 624
+  součet narozených 1996–2005: 929 080
+  součet narozených 2006–2015: 1 120 158
+  součet narozených 1993–2002: 959 221
+  2006–2015 proti 1996–2005: 20,6 %
+  úhrnná plodnost: 1999 1.132838167  2021 1.826535974  2024 1.367935055  2025 1.281820918
+  průměrný věk matek při narození 1. dítěte 2025: 29.16250989
+
+== Ženy ve věku 25–34 let k 1. 1. (projekce ČSÚ 2023–2100; rok 2023 = skutečnost) ==
+  stredni: 2023 625 087; 2025 594 743; 2026 572 790; první minimum 2030: 525 143; 2035 584 565; 2040 628 058; maximum do 2045 2042: 636 651
+  nizka: 2023 625 087; 2025 589 964; 2026 566 158; první minimum 2030: 511 750; 2035 565 666; 2040 607 087; maximum do 2045 2042: 615 404
+  vysoka: 2023 625 087; 2025 597 442; 2026 576 540; první minimum 2030: 532 597; 2035 594 789; 2040 639 291; maximum do 2045 2043: 648 060
+  střední: 2026 → 2030 -8,3 %;  2025 → 2030 -11,7 %;  2030 → 2040 19,6 %;  2026 → 2040 9,6 %
+  střední: 2030 proti 2023: -16,0 %
+  rozpětí variant v roce 2030: 511750 až 532597 ; v roce 2040: 607087 až 639291
+  ženy věku 30 let: 2026 54529  2030 50875  2040 66618
+  ženy 25–34: 2030 jsou narozené v letech 1995/96–2005, tj. věk 25 v 2030 = ročník 2004/05 (1. 1.)
+
+== Živě narození v projekci ČSÚ (střední varianta, plodnost 1,50) a skutečnost ==
+  2025: projekce střední 90 582 (plodnost 1.5); nízká 85 671 (1.435); vysoká 99 000 (1.628)
+  2026: projekce střední 88 297 (plodnost 1.5); nízká 82 749 (1.428); vysoká 97 035 (1.632)
+  2030: projekce střední 84 365 (plodnost 1.5); nízká 76 678 (1.398); vysoká 94 254 (1.652)
+  2035: projekce střední 87 160 (plodnost 1.5); nízká 76 947 (1.361); vysoká 98 820 (1.677)
+  2040: projekce střední 92 193 (plodnost 1.5); nízká 78 578 (1.324); vysoká 106 573 (1.701)
+  2045: projekce střední 93 697 (plodnost 1.5); nízká 76 738 (1.287); vysoká 111 298 (1.726)
+  minimum střední varianty v letech 2023–2045: 2030: 84 365
+  skutečnost 2025: 77 636 proti projekci 90 582: -14,3 %
+  skutečná plodnost 2025 1,28 proti předpokladu 1,50
+  hrubý přepočet na plodnost 1,28 (úměrně): 2030: 72 094
+  hrubý přepočet na plodnost 1,28 (úměrně): 2040: 78 783
+
+== Průměrná velikost ročníku podle věkových skupin (obě pohlaví, 1. 1. 2030, střední varianta) ==
+  věk 18–24: průměr na ročník 121 604; nejmenší ročník 115 160 (věk 18)
+  věk 25–34: průměr na ročník 108 787; nejmenší ročník 105 353 (věk 30)
+  věk 35–44: průměr na ročník 142 798; nejmenší ročník 125 376 (věk 35)
+  věk 45–54: průměr na ročník 167 201; nejmenší ročník 149 579 (věk 45)
+  věk 55–64: průměr na ročník 145 861; nejmenší ročník 126 522 (věk 62)
+  největší ročník k 1. 1. 2026 (obě pohlaví, projekce): (192704, 51)
+  k 1. 1. 2026: věk 25–34 průměr na ročník 117 772 ; věk 18–24 111 800 ; věk 35–44 149 031
+
+== Účast ve volbách 2025 podle věku (SIMAR, s. 12) == {'celkem': 69, '18–24': 68, '25–34': 63, '35–44': 65, '45–54': 67, '55–64': 70, '65–74': 77, '75+': 76}
+  1. 1. 2025: odhad účasti z věkových skupin 69,1 % (skutečná účast 68,95 %)
+    18–24: 764 313 lidí, 8,6 % dospělých, odhadem 8,5 % voličů
+    25–34: 1 217 998 lidí, 13,8 % dospělých, odhadem 12,6 % voličů
+    35–44: 1 514 277 lidí, 17,1 % dospělých, odhadem 16,1 % voličů
+  1. 1. 2026: odhad účasti z věkových skupin 69,1 % (skutečná účast 68,95 %)
+    18–24: 782 600 lidí, 8,9 % dospělých, odhadem 8,7 % voličů
+    25–34: 1 177 723 lidí, 13,3 % dospělých, odhadem 12,2 % voličů
+    35–44: 1 490 313 lidí, 16,9 % dospělých, odhadem 15,9 % voličů

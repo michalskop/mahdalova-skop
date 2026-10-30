@@ -5,12 +5,15 @@ numbers:
     description: Pátek 14–22 h, sobota 8–14 h. Ve stejný víkend se volí i třetina Senátu.
     color: brand
   - value: "190 174"
-    title: Kandidátů do obcí
+    title: kandidátů do obcí
     description: Nejméně od roku 2002. Vrchol byl v roce 2014, 233 877 kandidátů.
     color: brandNavy
-  - value: "1 842"
-    title: Obcí s jedinou kandidátkou
-    description: Z 6 258 obcí. Ve třech obcích se volby nekonají vůbec.
+    link:
+      href: /clanek/volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu/
+      text: "Psali jsme: Kandiduje nejméně lidí za dvacet let"
+  - value: "29 %"
+    title: obcí s jedinou kandidátkou
+    description: 1 842 z 6 254 obcí, ve kterých se volí. Ve třech obcích se volby nekonají vůbec.
     color: brandOrange
   - value: "46 %"
     title: Účast v roce 2022
