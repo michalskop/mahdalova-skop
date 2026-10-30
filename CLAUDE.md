@@ -20,9 +20,29 @@ npm run lint
 
 # Format all TS/TSX/MD files
 npm run format
+
+# Upload media to CDN (media.datatimes.org)
+python scripts/upload_media.py --file <local-path> --target <target-path>
+# or:
+npm run upload:media -- --file <local-path> --target <target-path>
 ```
 
 There are no automated tests. No test runner is configured.
+
+## Media Storage & CDN Policy (`media.datatimes.org`)
+
+**Binary media files (PNG, JPEG, WebP, SVG, MP4) must NEVER be committed to Git.**
+A pre-commit hook (`.githooks/pre-commit`) blocks newly staged binary assets.
+
+- **Workflow:**
+  1. Generate/save files locally (in `work/` or temporary folder).
+  2. Upload via `python scripts/upload_media.py --file <path> --target <target-path>`.
+     - Articles: `datatimes-cz/articles/YYYY/MM/<slug>/<filename>`
+     - Shared: `shared/branding/<filename>` or `shared/authors/<filename>`
+  3. Reference the returned CDN URL (`https://media.datatimes.org/...`) in Markdown or TSX.
+  4. Ensure local binary files are untracked / deleted before committing.
+- **Strict Immutability:** Overwrites are refused by the uploader. Use versioned names (e.g. `cover-v2.webp`).
+- Full specification: `docs/technicke/media-cdn.md`.
 
 The `dev` script runs `node scripts/copyImages.js` before starting Next.js. This copies article images from `app/clanek/_articles/*/images/` (and JSON data files) into `public/` for static serving – it runs automatically on `dev` and `build`.
 
