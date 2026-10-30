@@ -1,0 +1,129 @@
+import Link from 'next/link';
+import {
+  IconMail,
+  IconBrandMeta,
+  IconBrandX,
+  IconBrandThreads,
+  IconBrandBluesky,
+  IconBrandLinkedin,
+  IconBrandReddit,
+  IconBrandWhatsapp,
+} from '@tabler/icons-react';
+import { splitAuthors, normalizeAuthor } from '@/utils/authorUtils';
+import CopyLinkButton from './CopyLinkButton';
+import styles from './ArticleHeader.module.css';
+
+// Article byline: authors with photos, date ("30 October 2026"), share icons
+// (Tabler) and an optional audio stub.
+
+const AUTHOR_PHOTOS: Record<string, string> = {
+  'Kateřina Mahdalová': '/authors/katerina-mahdalova-portret-v4.webp',
+  'Michal Škop': '/authors/michal-skop-portret.webp',
+};
+
+function initials(name: string): string {
+  return name.split(/\s+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join('').toUpperCase();
+}
+
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+// Sdílení míří na cílový článek (má OG obrázek, titulek a perex/description),
+// takže se odkaz na sítích rozbalí kvalitně.
+function shareTargets(url: string, title: string) {
+  const u = encodeURIComponent(url);
+  const t = encodeURIComponent(title);
+  const ut = encodeURIComponent(`${title} ${url}`);
+  const sz = 17;
+  // tier: pořadí skrývání na úzkém displeji (nejdřív se řada zmenší, pak ubývají
+  // odzadu méně užívané). Bez tier = vždy viditelné: Facebook, X, Bluesky, e-mail
+  // (+ kopírovat odkaz, které přidává ArticleByline za tento seznam).
+  return [
+    { label: 'E-mail', href: `mailto:?subject=${t}&body=${u}`, icon: <IconMail size={sz} stroke={1.8} /> },
+    { label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}`, icon: <IconBrandMeta size={sz} stroke={1.8} /> },
+    { label: 'X', href: `https://twitter.com/intent/tweet?url=${u}&text=${t}`, icon: <IconBrandX size={sz} stroke={1.8} /> },
+    { label: 'Threads', href: `https://www.threads.net/intent/post?text=${ut}`, icon: <IconBrandThreads size={sz} stroke={1.8} />, tier: 'C' },
+    { label: 'Bluesky', href: `https://bsky.app/intent/compose?text=${ut}`, icon: <IconBrandBluesky size={sz} stroke={1.8} /> },
+    { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`, icon: <IconBrandLinkedin size={sz} stroke={1.8} />, tier: 'C' },
+    { label: 'Reddit', href: `https://www.reddit.com/submit?url=${u}&title=${t}`, icon: <IconBrandReddit size={sz} stroke={1.8} />, tier: 'B' },
+    { label: 'WhatsApp', href: `https://wa.me/?text=${ut}`, icon: <IconBrandWhatsapp size={sz} stroke={1.8} />, tier: 'B' },
+  ];
+}
+
+const WAVE = [30, 60, 45, 80, 55, 95, 40, 70, 50, 85, 35, 65, 48, 90, 42, 60, 30, 75, 52, 38];
+
+interface ArticleBylineProps {
+  author: string;
+  date: string;
+  shareUrl: string;
+  shareTitle: string;
+  translator?: string;
+  audio?: boolean;
+}
+
+export default function ArticleByline({ author, date, shareUrl, shareTitle, translator, audio = false }: ArticleBylineProps) {
+  const authors = splitAuthors(author);
+  return (
+    <>
+      <div className={styles.byline}>
+        <div className={styles.authors}>
+          <div className={styles.avatars}>
+            {authors.map((name) =>
+              AUTHOR_PHOTOS[name] ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={name} src={AUTHOR_PHOTOS[name]} alt={name} />
+              ) : (
+                <span className={styles.mono} key={name} title={name} aria-hidden="true">{initials(name)}</span>
+              )
+            )}
+          </div>
+          <div>
+            <div className={styles.names}>
+              {authors.map((name, i) => (
+                <span key={name}>
+                  <Link href={`/author/${normalizeAuthor(name)}`}>{name}</Link>
+                  {i < authors.length - 1 ? ' & ' : ''}
+                </span>
+              ))}
+            </div>
+            <div className={styles.date}>{formatDate(date)}</div>
+            {translator && (
+              // English edition: translator is a plain note (e.g. "Translated from Czech with AI assistance"), not an author link
+              <div className={styles.date}>{translator}</div>
+            )}
+          </div>
+        </div>
+
+        <div className={styles.share} aria-label="Share">
+          {shareTargets(shareUrl, shareTitle).map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              aria-label={s.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.tier ? styles[`tier${s.tier}`] : undefined}
+            >
+              {s.icon}
+            </a>
+          ))}
+          <CopyLinkButton url={shareUrl} />
+        </div>
+      </div>
+
+
+      {audio && (
+        <div className={styles.audio}>
+          <div className={styles.play} aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z" /></svg>
+          </div>
+          <div className={styles.wave} aria-hidden="true">
+            {WAVE.map((h, i) => (<span key={i} style={{ height: `${h}%` }} />))}
+          </div>
+          <div className={styles.lbl}><b>Listen to the article</b><br />audio coming soon</div>
+        </div>
+      )}
+    </>
+  );
+}

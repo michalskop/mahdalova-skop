@@ -1,27 +1,34 @@
-// app/page.tsx
-// 'use client';
+// app/page.tsx – Data Journalism Studio homepage, laid out like DataTimes.cz:
+// hero, then FeaturedHero bands (large lead card on the left, the next three
+// as compact cards on the right, "More" → section listing).
 
 import { Container } from '@mantine/core';
-import { getArticles } from '@/components/common/getArticles';
-// import { ArticlesGrid } from '@/components/common/ArticlesGrid';
+import { getArticles, withLeadText } from '@/components/common/getArticles';
 import Testimonials from '@/components/common/Testimonials';
 import HeroTitle from '@/components/frontpage/HeroTitle';
-// import Citation from '@/components/frontpage/Citation';
-// import SubscribeHH from '@/components/frontpage/SubscribeHH';
-import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
-import { ArticlesSection } from '@/components/common/ArticlesSection';
-// import { ContactsBlock } from '@/components/common/ContactsBlock';
+import { FeaturedHero } from '@/components/frontpage/FeaturedHero';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default async function HomePage() {
-  // const articles = await getArticles(3, undefined, true);
-  // Newest first (time score only); explicit `promoted` would keep 2024 evergreen pages on top.
-  const articles_featured = await getArticles(6, "work");
-  const articles_blog = await getArticles(6, "blog");
+  // getArticles sorts newest first (date + hidden `time`); explicit `promoted`
+  // would keep the 2024 evergreen pages on top, so it stays off.
+  const articles_elections = await getArticles(8, 'work');
+  const articles_context = await getArticles(8, 'blog');
+
+  // The large card on the left gets follow-on text from the article body so
+  // the excerpt fills the card height (see FeaturedHero).
+  const withLead = <T extends Parameters<typeof withLeadText>[0]>(list: T[]) =>
+    list.map((a, i) => (i === 0 ? withLeadText(a) : a));
 
   return (
-    <Container 
-      size="lg" 
-      // py="xl"
+    <Container
+      size="lg"
       bg="background.2"
       maw="1200px"
       w="100%"
@@ -30,32 +37,29 @@ export default async function HomePage() {
     >
       <HeroTitle />
 
-      {/* <Citation /> */}
+      {articles_elections.length > 0 ? (
+        <FeaturedHero
+          title="Elections"
+          articles={withLead(articles_elections)}
+          articleBasePath="/a"
+          themeColor="brand"
+          locale="en-GB"
+          moreLink="/elections"
+          moreLabel="More" />
+      ) : null}
 
-      {/* <SubscribeHH /> */}
-{/* 
-      <ArticlesSection 
-        sectionTitle="Výběr"
-        articles={articles}
-        themeColor="brandRoyalBlue.3" /> */}
-
-      {/* <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'/> */}
-
-      <ArticlesSection 
-        sectionTitle="Elections"
-        sectionLink="/elections"
-        articles={articles_featured}
-        themeColor="brand" />
-
-      <ArticlesSection 
-        sectionTitle="Context"
-        sectionLink="/context"
-        articles={articles_blog}
-        themeColor="brandOrange.4" />
+      {articles_context.length > 0 ? (
+        <FeaturedHero
+          title="Context"
+          articles={withLead(articles_context)}
+          articleBasePath="/a"
+          themeColor="#5e66d5"
+          locale="en-GB"
+          moreLink="/context"
+          moreLabel="More" />
+      ) : null}
 
       <Testimonials />
-
-      {/* <ContactsBlock /> */}
     </Container>
   );
 }

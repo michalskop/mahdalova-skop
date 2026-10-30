@@ -1,0 +1,204 @@
+.block {
+  padding-inline: var(--mantine-spacing-md);
+}
+
+/* Půl na půl: vlevo lead, vpravo sloupec tří karet + Více. */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mantine-spacing-lg);
+  align-items: start;
+}
+
+/* Lead lícuje s pravým sloupcem (výšku dorovnává useEqualColumns): patička
+   s datem a autorem se drží u spodní hrany karty. */
+.lead :global(.mantine-Card-root) > :global(.mantine-Group-root) {
+  margin-top: auto;
+  padding-top: var(--mantine-spacing-md);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mantine-spacing-md);
+}
+
+/*
+ * Kompaktní karty vpravo (Nerve styl): náhled vlevo jako plný sloupec přes
+ * CELOU výšku karty (lícuje s horní, dolní i levou hranou – jako foto nahoře u
+ * svislých karet), vpravo titulek + perex + autor pod sebou. Řešeno CSS gridem
+ * (2 sloupce), aby obrázek držel výšku textu bez obtékání.
+ */
+.sideItem :global(.mantine-Card-root) {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  /* Prostřední řádek (perex) bere jen zbylé místo – výšku karty určuje náhled. */
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  column-gap: var(--mantine-spacing-md);
+  align-items: start;
+}
+
+/* Náhled = levý sloupec přes celou výšku karty (grid-row 1/-1) a lícuje s
+   krajem karty: záporné marginy = padding karty (horní, dolní, levá hrana).
+   Náhled drží přesně 5:4 jako cover (cover-homepage 1500×1200), takže se
+   neořezává do stran a štítek rubriky sedí v rohu stejně u všech karet.
+   Delší titulek nezvětší kartu, jen zkrátí perex (viz useSideExcerptFit);
+   teprve když se nevejde ani titulek s patičkou, karta se protáhne a náhled
+   se ořízne na střed. Zaoblený vnější roh dělá samotná karta (overflow:
+   hidden + radius). Štítek rubriky sedí v pravém horním rohu náhledu.
+   Výjimka: náhledy s `data-letterbox` (cover 5:4, viz useSideCoverLetterbox)
+   se neořezávají – níže. */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  /* Šířka vždy = sloupec 42 %, výška aspoň 5:4 (::before níže). Ne aspect-ratio:
+     u protažené karty by z výšky dopočítal širší náhled. */
+  justify-self: stretch;
+  align-self: stretch;
+  position: relative;
+  margin: calc(var(--card-padding) * -1) 0 calc(var(--card-padding) * -1)
+    calc(var(--card-padding) * -1);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Výška náhledu 5:4 z šířky sloupce (padding v % se počítá ze šířky). */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before {
+  content: '';
+  display: block;
+  padding-top: 80%;
+}
+
+/* Odkaz s obrázkem vyplní celý (na výšku protažený) sloupec – zruší pevný
+   poměr 5:4 a roztáhne se přes celou výšku i šířku náhledu. */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type > a {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto !important;
+}
+
+/* Cover 5:4 v protažené kartě: celý obrázek (contain) na rozmazané kopii
+   sebe sama, ať se titulek coveru neusekne. U neprotažené karty je náhled
+   přesně 5:4, takže contain = cover a pozadí není vidět. */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section)[data-letterbox]::after {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  background: var(--cover-url) center / cover no-repeat;
+  filter: blur(16px) brightness(0.8);
+}
+
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section)[data-letterbox] img {
+  position: relative;
+  z-index: 1;
+  object-fit: contain !important;
+}
+
+.sideItem :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
+  margin-top: 0;
+  font-size: var(--mantine-font-size-md) !important;
+  line-height: 1.25 !important;
+}
+
+/* Kompaktní perex: nezvětšuje kartu (contain: size), počet celých řádků
+   dopočítá useSideExcerptFit podle místa vedle náhledu (výchozí 3). */
+.sideItem :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
+  contain: size;
+  align-self: stretch;
+  -webkit-line-clamp: var(--side-lines, 3) !important;
+}
+
+/* Patička bočních karet na dva řádky: datum nahoře vlevo (posunuté o kousek
+   výš menším horním marginem), autor (avatar + celé jméno) na samostatném
+   řádku pod ním, zarovnaný vpravo – využije prázdné místo pod datem. */
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Group-root) {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.sideItem :global(.mantine-Card-root) > :global(.mantine-Group-root) > :global(.mantine-Center-root) {
+  align-self: flex-start;
+}
+
+/* „Více" → výpis rubriky. Stejný styl jako původní boční nadpis rubriky
+   („Výběr"): velký sans nadpis + vlnovková šipka, zarovnané doleva. */
+.moreRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--mantine-spacing-md);
+}
+
+.more {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.more:hover .moreTitle,
+.more:focus-visible .moreTitle {
+  text-decoration: underline;
+}
+
+.moreTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  max-width: 100%;
+}
+
+/* Mobil / užší tablet: lead nad sebou, pak tři karty, pak Více. */
+@media (max-width: 767.98px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--mantine-spacing-md);
+  }
+}
+
+/* Úzký telefon: boční karty se zobrazí svisle jako lead „Al-Ahli" (obrázek
+   nahoře, text pod ním). Vodorovné rozvržení „náhled vlevo" drží čitelnou
+   podobu překvapivě dlouho (~550 px), pod ~480 px se ale text smrskne na pár
+   slov na řádek – proto teprve tady přepínáme na svislý tvar ArticleCard. */
+@media (max-width: 480px) {
+  .sideItem :global(.mantine-Card-root) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Náhled zpět nahoru přes celou šířku (5:4), lícuje s horní i bočními
+     hranami karty a má zaoblený horní roh jako lead. */
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type {
+    align-self: auto;
+    position: static;
+    margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) 0;
+    border-radius: var(--mantine-radius-md) var(--mantine-radius-md) 0 0;
+  }
+
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type::before,
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section)[data-letterbox]::after {
+    display: none;
+  }
+
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Card-section):first-of-type > a {
+    position: static;
+    aspect-ratio: 5 / 4 !important;
+  }
+
+  /* Titulek a perex zpět do plné velikosti jako u leadu. */
+  .sideItem :global(.mantine-Card-root) > a:global(.mantine-Text-root) {
+    font-size: var(--mantine-font-size-lg) !important;
+  }
+
+  .sideItem :global(.mantine-Card-root) > p:global(.mantine-Text-root) {
+    contain: none;
+    -webkit-line-clamp: 4 !important;
+  }
+
+  /* Patička zpět na jeden řádek: datum vlevo, autor vpravo. */
+  .sideItem :global(.mantine-Card-root) > :global(.mantine-Group-root) {
+    flex-direction: row;
+    align-items: center;
+  }
+}

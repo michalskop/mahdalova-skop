@@ -1,0 +1,261 @@
+.header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 34px 22px 0;
+}
+
+.crumb {
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a564d;
+  margin-bottom: 16px;
+}
+.crumb a {
+  color: var(--chapter-accent, #de1743);
+  text-decoration: none;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  border-radius: 4px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.crumb a:hover,
+.crumb a:focus-visible {
+  background-color: var(--chapter-accent, #de1743);
+  color: #ffffff;
+}
+.crumb .sep {
+  margin: 0 6px;
+  color: #b3ab98;
+}
+
+.title {
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4.6vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--chapter-accent, #1a1a1a);
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.perex {
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.5;
+  color: #3a3730;
+  margin: 0 0 24px;
+}
+
+/* autoři + datum + sdílení */
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  border-top: 1px solid #e8e3d2;
+  border-bottom: 1px solid #e8e3d2;
+}
+.authors {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.avatars {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+.avatars img,
+.avatars .mono {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.avatars img {
+  object-position: 50% 50%;
+}
+.avatars .mono {
+  /* Autoři bez fotky: iniciály v kroužku. Nejtmavší (šedo)béžová z palety
+     (background[9]); černý text má na ní výborný kontrast (~11:1). */
+  background: #bcbcb0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-roboto-slab), Georgia, serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.names {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: #1a1a1a;
+}
+.names a { color: inherit; text-decoration: none; }
+.names a:hover, .names a:focus-visible { text-decoration: underline; }
+.date {
+  font-size: 12.5px;
+  color: #5a564d;
+  margin-top: 2px;
+}
+
+.share {
+  display: flex;
+  gap: 7px;
+  margin-left: auto;
+  flex-wrap: nowrap; /* řada ikon zůstává na jednom řádku (na úzku se zmenší/ubere) */
+}
+.share a,
+.share button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e8e3d2;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #57514a;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.share a:hover,
+.share a:focus-visible,
+.share button:hover,
+.share button:focus-visible {
+  background: #101432;
+  border-color: #101432;
+  color: #fff;
+  outline: none;
+}
+.share svg { width: 16px; height: 16px; }
+
+/* hover tooltip u kopírování odkazu (ikona řetězu není samovysvětlující) */
+.tip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  /* Right-aligned: the copy button is the last one in the row, so a centred
+     tooltip would stick out past the viewport and let mobile pages pan sideways. */
+  right: 0;
+  transform: translateY(4px);
+  background: #101432;
+  color: #fff;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 5px 9px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 5;
+}
+.tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  border: 5px solid transparent;
+  border-top-color: #101432;
+}
+.share button:hover .tip,
+.share button:focus-visible .tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* audio stopa přes celou šířku */
+.audio {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin: 16px 0 4px;
+  padding: 12px 16px;
+  background: #101432;
+  border-radius: 10px;
+  color: #e9e7df;
+}
+.audio .play {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--chapter-accent, #de1743);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio .play svg { width: 15px; height: 15px; color: #fff; margin-left: 2px; }
+.audio .wave {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 26px;
+  min-width: 0;
+  overflow: hidden;
+}
+.audio .wave span { flex: 1; background: rgba(233, 231, 223, 0.45); border-radius: 2px; }
+.audio .lbl {
+  flex: 0 0 auto;
+  font-family: var(--font-roboto-condensed), Arial, sans-serif;
+  font-size: 13px;
+  color: #b9bcd6;
+  line-height: 1.3;
+}
+.audio .lbl b { color: #fff; font-weight: 700; }
+
+/* náhledový (hero) obrázek */
+.hero { margin: 24px 0 0; }
+.hero img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+.hero figcaption {
+  font-size: 12.5px;
+  color: #5a564d;
+  margin-top: 8px;
+}
+
+/* Úzký displej: řada sdílení jde přes celou šířku a drží se na jednom řádku.
+   Nejdřív se ikony i mezery zmenšují; když už to nestačí, ubírají se odzadu
+   méně užívané sítě (tier B: WhatsApp, Reddit → tier C: Threads, LinkedIn).
+   Vždy zůstává Facebook, X, Bluesky, e-mail a kopírovat odkaz. */
+@media (max-width: 560px) {
+  .share {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .share a,
+  .share button { width: 30px; height: 30px; }
+}
+@media (max-width: 430px) {
+  .share a,
+  .share button { width: 27px; height: 27px; }
+  .share svg { width: 15px; height: 15px; }
+}
+@media (max-width: 400px) {
+  .share .tierB { display: none; }
+}
+@media (max-width: 340px) {
+  .share .tierC { display: none; }
+  .share a,
+  .share button { width: 26px; height: 26px; }
+}

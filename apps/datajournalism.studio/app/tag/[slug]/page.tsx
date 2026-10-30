@@ -2,13 +2,21 @@
 import { getArticles } from '@/components/common/getArticles';
 import { ArticlesSection } from '@/components/common/ArticlesSection';
 import { Container } from '@mantine/core';
-import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { normalizeTag } from '@/utils/tagUtils';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface PageProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: `/tag/${params.slug}`,
+    },
   };
 }
 
@@ -22,7 +30,6 @@ export async function generateStaticParams() {
       )
     )
   );
-  console.log('Generated static paths for tags:', tags);
   return tags.map((tag) => ({ slug: tag }));
 }
 
@@ -51,13 +58,12 @@ export default async function Page({ params }: PageProps) {
       m="0 auto"
     >
       <>
+        {/* Elections get the same red band as on the homepage; other tags stay
+            blue. Heading with a capital first letter (as on DataTimes.cz). */}
         <ArticlesSection
-          sectionTitle={`${originalTag}`}
+          sectionTitle={originalTag.charAt(0).toUpperCase() + originalTag.slice(1)}
           articles={articles}
-          themeColor="brandRoyalBlue.3"
-        />
-        <SubscribeNewsletter 
-          actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088'
+          themeColor={slug === 'elections' ? 'brand' : 'brandRoyalBlue.3'}
         />
       </>
     </Container>

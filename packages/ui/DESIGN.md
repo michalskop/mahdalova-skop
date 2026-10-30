@@ -1031,12 +1031,27 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 
 | | `apps/web` | `apps/datajournalism.studio` |
 |-|------------|------------------------------|
-| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | Work Sans (sans-serif) |
+| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | same (since 30 Oct 2026; was Work Sans) |
 | Article path | `/clanek/[slug]` | `/a/[slug]` |
 | Articles dir | `app/clanek/_articles/` | `app/a/_articles/` |
 | Matomo siteId | `4` | `5` |
-| Date locale | `cs-CZ` | `en-US` |
+| Date locale | `cs-CZ` | `en-GB` |
 | ScrollyTelling base | `/clanek/_articles` | `/a/_articles` |
+
+Since 30 Oct 2026 DJS reuses the DataTimes.cz shell in English (header, footer,
+FeaturedHero homepage bands, ArticleByline with portraits + share icons, 800px
+reading column, bleed tokens and SupportBanner in `app/globals.css`). Shared-UI
+rules for English sites, so the Czech look never leaks into English text:
+- **Dates:** `ArticleCard` and `RelatedArticles` format via `lib/formatCardDate.ts`
+  – `cs-*` keeps „30. 10. 2026", any other locale gets "30 October 2026"
+  (numeric en-GB "30/10/2026" is ambiguous). Always pass `locale` on English sites.
+- **Typography:** `RelatedArticles` applies `fixCzechTypography` only for `cs-*`
+  locales (Czech nbsp rules after single-letter words must not touch English).
+  `KeyNumbers` still applies it unconditionally (number nbsp rules are useful in
+  English too; the single-letter rule is a known minor leftover).
+- **FollowBar:** `label` (default „Sledujte DataTimes:") and `exclude` props; DJS
+  passes `label="Follow DataTimes:" exclude={["Google"]}` (the Google News link
+  searches the Czech domain). No `PreferredSource` button on English sites.
 
 ---
 

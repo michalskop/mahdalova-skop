@@ -1,13 +1,14 @@
 'use client';
 
-export const SUPPORT_URL = 'https://www.datatimes.cz/podporte-nas';
+// DJS has its own English support page (membership options + other ways to help).
+export const SUPPORT_URL = '/support';
 
 export default function SupportBanner({ float }: { float?: 'left' | 'right' } = {}) {
   // `float` = the bleeding half-width variant placed inside a text paragraph;
   // it floats and bleeds out of the reading column exactly like <Figure> (shared
   // --dt-bleed-* tokens) and stacks vertically so brand + text + CTA fit the
   // narrow width. Without `float` it is the full-width strip (end of article /
-  // special landing pages). CSS: app/support-banner.css (ported from apps/datatimes-org globals.css).
+  // special landing pages). CSS: app/globals.css (.dt-support-*, shared with DataTimes.cz).
   const outerClass = float
     ? `dt-support-outer dt-support-float dt-support-float--${float}`
     : 'dt-support-outer';

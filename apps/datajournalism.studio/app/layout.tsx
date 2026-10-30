@@ -1,9 +1,8 @@
 // app/layout.tsx
 import "@mantine/core/styles.css";
 import "./charts.css";
-import "./support-banner.css";
 import "./globals.css";
-import { robotoCondensed } from "./fonts";
+import { robotoCondensed, robotoSlab } from "./fonts";
 import { ColorSchemeScript } from '@mantine/core';
 import Layout from '@/components/Layout';
 import { ThemeProvider } from './providers/ThemeProvider';
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
         alt: 'Data Journalism Studio',
       }
     ],
-    locale: 'en_US',
+    locale: 'en_GB',
     type: 'website',
   },
   twitter: {
@@ -47,11 +46,16 @@ export const metadata: Metadata = {
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    // Google Discover shows a large image only with max-image-preview:large.
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
   },
-  alternates: {
-    canonical: 'https://www.datajournalism.studio/',
-  }
+  // No site-wide canonical: each page sets its own (a root canonical would
+  // point every page at the homepage).
 };
 
 export default function RootLayout({
@@ -73,7 +77,7 @@ export default function RootLayout({
         </Suspense>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
-      <body className={robotoCondensed.variable}>
+      <body className={`${robotoSlab.variable} ${robotoCondensed.variable}`} style={{ backgroundColor: '#fdfbf7' }}>
         <ThemeProvider>
           <Layout>
             {children}
