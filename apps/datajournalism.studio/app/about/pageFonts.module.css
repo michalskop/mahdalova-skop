@@ -1,0 +1,9 @@
+/* DataTimes.cz typography for /about and /support: IBM Plex Serif for body
+   copy, IBM Plex Sans for headings (as on the Czech site). The variables are
+   redefined only inside the page wrapper, so the header and footer stay as
+   they are. */
+.fonts {
+  --mantine-font-family: var(--font-ibm-plex-serif), Georgia, serif;
+  --mantine-font-family-headings: var(--font-ibm-plex-sans), Arial, sans-serif;
+  font-family: var(--mantine-font-family);
+}

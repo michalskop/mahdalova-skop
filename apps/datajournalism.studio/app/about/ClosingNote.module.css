@@ -1,0 +1,64 @@
+/* Closing note: serif IBM Plex text, centred, with the newsletter stripe
+   between the paragraphs. */
+
+.section {
+  background: var(--mantine-color-background-2);
+  padding: 44px 0 88px;
+}
+
+.text {
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 0 64px;
+  text-align: center;
+}
+
+.text p {
+  color: var(--mantine-color-brandNavy-9);
+  font-family: var(--mantine-font-family);
+  font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+/* Donut under the end of the route line (SpinningLogo: grey → lit, one full
+   turn when the line arrives and on every hover). */
+.endLogo {
+  background: var(--mantine-color-background-2);
+  margin: 0 auto 28px;
+  /* Above the route line (the timeline sits at z-index 1), so the line's tip
+     hides under the logo. */
+  position: relative;
+  z-index: 2;
+}
+
+.highlight {
+  color: var(--mantine-color-brand-6) !important;
+  font-weight: 700;
+}
+
+.text a {
+  color: var(--mantine-color-brand-7);
+  font-weight: 700;
+  text-decoration-color: color-mix(in srgb, var(--mantine-color-brand-7) 45%, transparent);
+  text-underline-offset: 3px;
+}
+
+/* The stripe closes the section flush, straight above the contacts. */
+.newsletter {
+  margin: 32px 0 -88px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 22px 0 52px;
+  }
+
+  .text {
+    padding: 0 20px;
+  }
+
+  .newsletter {
+    margin-bottom: -52px;
+  }
+}
