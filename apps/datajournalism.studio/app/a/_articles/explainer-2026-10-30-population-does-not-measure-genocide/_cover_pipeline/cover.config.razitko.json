@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/images/cover-homepage.png",
+      "otisk": "d01abf859ff2b768",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/cover.config.cjs": "2b1d3e9cbd8d4e98",
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/motiv-homepage.svg": "08229e5d9a344ce1"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/images/cover-og.jpg",
+      "otisk": "d6532874be2a0d2b",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/cover.config.cjs": "2b1d3e9cbd8d4e98",
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/motiv-square.svg": "2b85b91f2aa7dabd"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/images/cover-square.png",
+      "otisk": "4db6959b1c1abf4d",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/cover.config.cjs": "2b1d3e9cbd8d4e98",
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/motiv-square.svg": "2b85b91f2aa7dabd"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/images/cover-instagram.png",
+      "otisk": "7371831b7c29e63a",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/cover.config.cjs": "2b1d3e9cbd8d4e98",
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/motiv-instagram.svg": "12de737251b8cfec"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/images/cover-story.png",
+      "otisk": "a508942948ece8f3",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/cover.config.cjs": "2b1d3e9cbd8d4e98",
+        "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/motiv-story.svg": "8936a279addbeee5"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T13:17:16.087Z",
+  "clanek": "apps/datatimes-org/app/article/_articles/explainer-2026-10-30-population-does-not-measure-genocide/index.md",
+  "titulekClanku": "Population does not measure genocide. Why the chart claiming there is no genocide in Gaza does not hold up",
+  "texty": {
+    "stitek": "Explainer • Genocide and numbers",
+    "nadtitulek": "",
+    "titulek": "Population does not measure genocide",
+    "podtitulek": "A population curve shows neither the Yazidi nor the Rohingya genocide"
+  }
+}

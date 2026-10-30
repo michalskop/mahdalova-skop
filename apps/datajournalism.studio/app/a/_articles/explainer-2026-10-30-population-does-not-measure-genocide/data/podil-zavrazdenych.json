@@ -1,0 +1,180 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "kat": "Tutsi, Rwanda 1994",
+        "n": 77.2,
+        "t": "77%",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocide: ICTR (Akayesu 1998)",
+        "detail": "507,000 of 657,000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Jews in Europe, Holocaust",
+        "n": 63.2,
+        "t": "63%",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "Holocaust, the model for the 1948 Convention",
+        "detail": "6,000,000 of 9,500,000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Cham, Cambodia 1975–79",
+        "n": 36.0,
+        "t": "36%",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocide: ECCC tribunal (2018)",
+        "detail": "90,000 of 250,000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Srebrenica 1995",
+        "n": 20.0,
+        "t": "20%",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocide: ICTY 2004, ICJ 2007",
+        "detail": "8,000 of 40,000",
+        "minpx": 46.8
+      },
+      {
+        "kat": "Yazidis, Iraq 2014",
+        "n": 0.8,
+        "t": "0.8%",
+        "barva": "#06677d",
+        "tbarva": "#ffffff",
+        "stav": "genocide: UN commission 2016, Frankfurt court 2021",
+        "detail": "3,100 of 400,000",
+        "minpx": 54.0
+      },
+      {
+        "kat": "Gaza, since 7 Oct 2023",
+        "n": 3.3,
+        "t": "3.3%",
+        "barva": "#f76800",
+        "tbarva": "#ffffff",
+        "stav": "UN commission: genocide; International Court of Justice has not ruled",
+        "detail": "74,494 of 2,226,544",
+        "minpx": 54.0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "kat",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "paddingInner": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 190,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelPadding": 8
+      }
+    },
+    "x": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ],
+        "nice": false
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Group"
+          },
+          {
+            "field": "detail",
+            "title": "Killed"
+          },
+          {
+            "field": "t",
+            "title": "Share"
+          },
+          {
+            "field": "stav",
+            "title": "Assessed by"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? datum.t : ''"
+          }
+        },
+        "color": {
+          "field": "tbarva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "value": {
+            "expr": "datum.n / 100 * width > datum.minpx ? '' : datum.t"
+          }
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Acts in which {less than one per cent|#06677d} of the group died have been recognised as genocide, as have acts in which {three quarters|#06677d} died",
+    "subtitle": "Share of the targeted group who were murdered (estimates by historians and courts). Gaza: people killed according to the Gaza Ministry of Health up to 21 Oct 2026, as a share of the pre-war population."
+  },
+  "_source": "estimates by HRW, USHMM, B. Kiernan, ICTY and PLOS Medicine; Gaza: OCHA and PCBS",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

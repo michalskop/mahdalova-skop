@@ -1,0 +1,88 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/images/cover-homepage.png",
+      "otisk": "fb72b5761670873c",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/cover.config.cjs": "767ca5486da7d2cf",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/motiv-homepage.svg": "42ab57874dc22284"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/images/cover-og.jpg",
+      "otisk": "202e4c4cce0c1f58",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/cover.config.cjs": "767ca5486da7d2cf",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/motiv-og.svg": "09bb29aa1da24f39"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/images/cover-square.png",
+      "otisk": "1fd1ee4d965b517a",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/cover.config.cjs": "767ca5486da7d2cf",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/motiv-square.svg": "3c1ff50af49824a6"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/images/cover-instagram.png",
+      "otisk": "a7078a608db4c608",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/cover.config.cjs": "767ca5486da7d2cf",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/motiv-instagram.svg": "4b78e21109b6d458"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "story": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/images/cover-story.png",
+      "otisk": "da3ec3b94df27162",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/cover.config.cjs": "767ca5486da7d2cf",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/motiv-story.svg": "0fada5758e26880e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T13:16:11.155Z",
+  "clanek": "apps/datatimes-org/app/article/_articles/elections-brazil-2026-10-26-why-lula-won/index.md",
+  "titulekClanku": "Why Lula won: three million more people voted in the runoff",
+  "texty": {
+    "stitek": "Analysis • Brazil elections",
+    "nadtitulek": "",
+    "titulek": "Why Lula won",
+    "podtitulek": "Three million more people turned out and decided the runoff"
+  }
+}

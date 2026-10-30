@@ -1,0 +1,306 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Per inhabitant, the smallest municipalities cost almost twice as much as those with around a thousand people",
+    "subtitle": "Municipal spending on the council and the municipal office, CZK per inhabitant, 2025. Municipalities without extended powers, excluding Prague."
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "sk": "under 200",
+        "slozka": "municipal office (§ 6171)",
+        "v": 6612.0,
+        "celkem": 10713.0,
+        "n": 1343
+      },
+      {
+        "sk": "under 200",
+        "slozka": "council (§ 6112)",
+        "v": 4101.0,
+        "celkem": 10713.0,
+        "n": 1343
+      },
+      {
+        "sk": "200–499",
+        "slozka": "municipal office (§ 6171)",
+        "v": 5194.0,
+        "celkem": 8171.0,
+        "n": 1998
+      },
+      {
+        "sk": "200–499",
+        "slozka": "council (§ 6112)",
+        "v": 2978.0,
+        "celkem": 8171.0,
+        "n": 1998
+      },
+      {
+        "sk": "500–999",
+        "slozka": "municipal office (§ 6171)",
+        "v": 4416.0,
+        "celkem": 6555.0,
+        "n": 1378
+      },
+      {
+        "sk": "500–999",
+        "slozka": "council (§ 6112)",
+        "v": 2139.0,
+        "celkem": 6555.0,
+        "n": 1378
+      },
+      {
+        "sk": "1,000–1,999",
+        "slozka": "municipal office (§ 6171)",
+        "v": 3966.0,
+        "celkem": 5537.0,
+        "n": 804
+      },
+      {
+        "sk": "1,000–1,999",
+        "slozka": "council (§ 6112)",
+        "v": 1571.0,
+        "celkem": 5537.0,
+        "n": 804
+      },
+      {
+        "sk": "2,000–4,999",
+        "slozka": "municipal office (§ 6171)",
+        "v": 4360.0,
+        "celkem": 5351.0,
+        "n": 442
+      },
+      {
+        "sk": "2,000–4,999",
+        "slozka": "council (§ 6112)",
+        "v": 990.0,
+        "celkem": 5351.0,
+        "n": 442
+      },
+      {
+        "sk": "5,000–9,999",
+        "slozka": "municipal office (§ 6171)",
+        "v": 5050.0,
+        "celkem": 5689.0,
+        "n": 75
+      },
+      {
+        "sk": "5,000–9,999",
+        "slozka": "council (§ 6112)",
+        "v": 639.0,
+        "celkem": 5689.0,
+        "n": 75
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "sk",
+      "type": "nominal",
+      "sort": [
+        "under 200",
+        "200–499",
+        "500–999",
+        "1,000–1,999",
+        "2,000–4,999",
+        "5,000–9,999"
+      ],
+      "axis": {
+        "title": "population of municipality",
+        "labelAngle": 0,
+        "labelFontSize": 10.5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "stack": "zero",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "format": ",.0f"
+          },
+          "scale": {
+            "domain": [
+              0,
+              12000
+            ]
+          }
+        },
+        "color": {
+          "field": "slozka",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "council (§ 6112)",
+              "municipal office (§ 6171)"
+            ],
+            "range": [
+              "#de1743",
+              "#8f9dc9"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        },
+        "order": {
+          "field": "slozka",
+          "sort": "descending"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.slozka == 'council (§ 6112)'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1a1a1a"
+      },
+      "encoding": {
+        "y": {
+          "field": "celkem",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "celkem",
+          "type": "quantitative",
+          "format": ",.0f"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sk": "under 200",
+            "council (§ 6112)": "CZK 4,101",
+            "municipal office (§ 6171)": "CZK 6,612",
+            "Total per inhabitant": "CZK 10,713",
+            "Share of municipal spending": "27.0%",
+            "Municipalities in group": "1,343"
+          },
+          {
+            "sk": "200–499",
+            "council (§ 6112)": "CZK 2,978",
+            "municipal office (§ 6171)": "CZK 5,194",
+            "Total per inhabitant": "CZK 8,171",
+            "Share of municipal spending": "21.0%",
+            "Municipalities in group": "1,998"
+          },
+          {
+            "sk": "500–999",
+            "council (§ 6112)": "CZK 2,139",
+            "municipal office (§ 6171)": "CZK 4,416",
+            "Total per inhabitant": "CZK 6,555",
+            "Share of municipal spending": "17.5%",
+            "Municipalities in group": "1,378"
+          },
+          {
+            "sk": "1,000–1,999",
+            "council (§ 6112)": "CZK 1,571",
+            "municipal office (§ 6171)": "CZK 3,966",
+            "Total per inhabitant": "CZK 5,537",
+            "Share of municipal spending": "15.0%",
+            "Municipalities in group": "804"
+          },
+          {
+            "sk": "2,000–4,999",
+            "council (§ 6112)": "CZK 990",
+            "municipal office (§ 6171)": "CZK 4,360",
+            "Total per inhabitant": "CZK 5,351",
+            "Share of municipal spending": "14.0%",
+            "Municipalities in group": "442"
+          },
+          {
+            "sk": "5,000–9,999",
+            "council (§ 6112)": "CZK 639",
+            "municipal office (§ 6171)": "CZK 5,050",
+            "Total per inhabitant": "CZK 5,689",
+            "Share of municipal spending": "14.2%",
+            "Municipalities in group": "75"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "sk"
+            ],
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fill": "#101432",
+        "cursor": "default"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 12000
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Population of municipality"
+          },
+          {
+            "field": "council (§ 6112)",
+            "title": "council (§ 6112)"
+          },
+          {
+            "field": "municipal office (§ 6171)",
+            "title": "municipal office (§ 6171)"
+          },
+          {
+            "field": "Total per inhabitant",
+            "title": "Total per inhabitant"
+          },
+          {
+            "field": "Share of municipal spending",
+            "title": "Share of municipal spending"
+          },
+          {
+            "field": "Municipalities in group",
+            "title": "Municipalities in group"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "State Treasury Monitor (Ministry of Finance) – FIN 2-12 M statement for 12/2025, sections 6112 and 6171, classes 5 and 6; ČSÚ – population on 1 January 2025. Weighted average (total spending / total inhabitants). Municipalities with more than 10,000 inhabitants are almost all municipalities with extended powers, whose offices also carry out state administration, which is why they are not in the chart."
+}

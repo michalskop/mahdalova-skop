@@ -1,0 +1,338 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "In {Czechia|#de1743}, 8% of children under three attend nursery or preschool, in the {EU|#6267a3} 41%",
+    "subtitle": "Share of children under 3 in formal childcare or education – nurseries, children’s groups, kindergartens (%, 2025)"
+  },
+  "width": "container",
+  "height": 620,
+  "data": {
+    "values": [
+      {
+        "zeme": "EU average",
+        "podil": 40.5,
+        "cz": false,
+        "eu": true
+      },
+      {
+        "zeme": "Belgium",
+        "podil": 48.0,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Bulgaria",
+        "podil": 22.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Czechia",
+        "podil": 7.9,
+        "cz": true,
+        "eu": false
+      },
+      {
+        "zeme": "Denmark",
+        "podil": 67.2,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Germany",
+        "podil": 26.2,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Estonia",
+        "podil": 34.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Ireland",
+        "podil": 27.0,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Greece",
+        "podil": 23.7,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Spain",
+        "podil": 56.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "France",
+        "podil": 59.7,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Croatia",
+        "podil": 32.5,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Italy",
+        "podil": 35.5,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Cyprus",
+        "podil": 42.4,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Latvia",
+        "podil": 45.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Lithuania",
+        "podil": 43.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Luxembourg",
+        "podil": 56.4,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Hungary",
+        "podil": 21.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Malta",
+        "podil": 55.9,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Netherlands",
+        "podil": 66.5,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Austria",
+        "podil": 30.9,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Poland",
+        "podil": 21.0,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Portugal",
+        "podil": 57.9,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Romania",
+        "podil": 11.1,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Slovenia",
+        "podil": 60.3,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Slovakia",
+        "podil": 1.8,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Finland",
+        "podil": 43.2,
+        "cz": false,
+        "eu": false
+      },
+      {
+        "zeme": "Sweden",
+        "podil": 59.6,
+        "cz": false,
+        "eu": false
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Denmark",
+        "Netherlands",
+        "Slovenia",
+        "France",
+        "Sweden",
+        "Portugal",
+        "Spain",
+        "Luxembourg",
+        "Malta",
+        "Belgium",
+        "Latvia",
+        "Lithuania",
+        "Finland",
+        "Cyprus",
+        "EU average",
+        "Italy",
+        "Estonia",
+        "Croatia",
+        "Austria",
+        "Ireland",
+        "Germany",
+        "Greece",
+        "Bulgaria",
+        "Hungary",
+        "Poland",
+        "Romania",
+        "Czechia",
+        "Slovakia"
+      ],
+      "scale": {
+        "paddingInner": 0.25
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 140
+      }
+    },
+    "x": {
+      "field": "podil",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          75
+        ]
+      },
+      "axis": {
+        "title": "% of children under 3",
+        "grid": false,
+        "values": [
+          0,
+          15,
+          30,
+          45,
+          60,
+          75
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "condition": [
+            {
+              "test": "datum.cz",
+              "value": "#de1743"
+            },
+            {
+              "test": "datum.eu",
+              "value": "#6267a3"
+            }
+          ],
+          "value": "#bcbcb0"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Country"
+          },
+          {
+            "field": "podil",
+            "title": "Children under 3 in care (%)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!(datum.cz || datum.eu)"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "podil",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.cz || datum.eu"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#333333"
+      },
+      "encoding": {
+        "text": {
+          "field": "podil",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "datum": 45
+        }
+      }
+    }
+  ],
+  "_source": "[Children in formal childcare or education by age group and duration (ilc_caindformal), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/ilc_caindformal/default/table?lang=en); dashed line: EU target for 2030 (45%) from the [Council Recommendation on early childhood education and care](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022H1220(01))"
+}

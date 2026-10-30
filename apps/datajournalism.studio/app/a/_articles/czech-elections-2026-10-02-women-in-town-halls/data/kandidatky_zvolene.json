@@ -1,0 +1,190 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The share of women elected is four to five points below the share of women candidates, and has been since 1994",
+    "subtitle": "Share of women among candidates and elected members of municipal councils (%), municipal elections 1994–2026"
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "year": 1994,
+        "serie": "candidates",
+        "v": 21.6
+      },
+      {
+        "year": 2002,
+        "serie": "candidates",
+        "v": 27.1
+      },
+      {
+        "year": 2010,
+        "serie": "candidates",
+        "v": 31.2
+      },
+      {
+        "year": 2014,
+        "serie": "candidates",
+        "v": 32.2
+      },
+      {
+        "year": 2018,
+        "serie": "candidates",
+        "v": 32.8
+      },
+      {
+        "year": 2022,
+        "serie": "candidates",
+        "v": 33.3
+      },
+      {
+        "year": 2026,
+        "serie": "candidates",
+        "v": 35
+      },
+      {
+        "year": 1994,
+        "serie": "elected councillors",
+        "v": 17.7
+      },
+      {
+        "year": 2002,
+        "serie": "elected councillors",
+        "v": 22.6
+      },
+      {
+        "year": 2010,
+        "serie": "elected councillors",
+        "v": 26.3
+      },
+      {
+        "year": 2014,
+        "serie": "elected councillors",
+        "v": 27.1
+      },
+      {
+        "year": 2018,
+        "serie": "elected councillors",
+        "v": 28
+      },
+      {
+        "year": 2022,
+        "serie": "elected councillors",
+        "v": 29
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          1994,
+          2026
+        ]
+      },
+      "axis": {
+        "title": null,
+        "format": "d",
+        "values": [
+          1994,
+          2002,
+          2010,
+          2014,
+          2018,
+          2022,
+          2026
+        ]
+      }
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          40
+        ]
+      },
+      "axis": {
+        "title": null
+      }
+    },
+    "color": {
+      "field": "serie",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "candidates",
+          "elected councillors"
+        ],
+        "range": [
+          "#272a59",
+          "#de1743"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 55
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "serie",
+            "type": "nominal",
+            "title": "Series"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Share of women (%)",
+            "format": ",.1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "transform": [
+        {
+          "filter": "datum.year == 2022 || (datum.year == 2026) || datum.year == 1994"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ",.1f"
+        }
+      }
+    }
+  ],
+  "_source": "Forum 50 % based on ČSÚ data (padesatprocent.cz – Representation of women and men in municipal councils); the 2026 elected figures are not yet known"
+}

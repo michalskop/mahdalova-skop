@@ -14,7 +14,8 @@ import { ArticlesSection } from '@/components/common/ArticlesSection';
 
 export default async function HomePage() {
   // const articles = await getArticles(3, undefined, true);
-  const articles_featured = await getArticles(3, "work", true);
+  // Newest first (time score only); explicit `promoted` would keep 2024 evergreen pages on top.
+  const articles_featured = await getArticles(3, "work");
   const articles_blog = await getArticles(3, "blog");
 
   return (

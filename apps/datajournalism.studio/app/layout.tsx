@@ -1,6 +1,9 @@
 // app/layout.tsx
 import "@mantine/core/styles.css";
+import "./charts.css";
+import "./support-banner.css";
 import "./globals.css";
+import { robotoCondensed } from "./fonts";
 import { ColorSchemeScript } from '@mantine/core';
 import Layout from '@/components/Layout';
 import { ThemeProvider } from './providers/ThemeProvider';
@@ -70,7 +73,7 @@ export default function RootLayout({
         </Suspense>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
-      <body>
+      <body className={robotoCondensed.variable}>
         <ThemeProvider>
           <Layout>
             {children}

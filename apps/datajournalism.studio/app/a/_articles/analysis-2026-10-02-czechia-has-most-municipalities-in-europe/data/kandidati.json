@@ -1,0 +1,334 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The smaller the municipality, the more often voters have no choice",
+    "subtitle": "Share of municipalities (%) by population, municipal elections of 9–10 October 2026"
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "sk": "under 200",
+        "serie": "single candidate list",
+        "v": 48.5,
+        "k": 650,
+        "n": 1340
+      },
+      {
+        "sk": "under 200",
+        "serie": "every candidate will be elected",
+        "v": 26.0,
+        "k": 349,
+        "n": 1340
+      },
+      {
+        "sk": "200–499",
+        "serie": "single candidate list",
+        "v": 36.6,
+        "k": 730,
+        "n": 1992
+      },
+      {
+        "sk": "200–499",
+        "serie": "every candidate will be elected",
+        "v": 18.5,
+        "k": 368,
+        "n": 1992
+      },
+      {
+        "sk": "500–999",
+        "serie": "single candidate list",
+        "v": 23.0,
+        "k": 318,
+        "n": 1383
+      },
+      {
+        "sk": "500–999",
+        "serie": "every candidate will be elected",
+        "v": 16.8,
+        "k": 232,
+        "n": 1383
+      },
+      {
+        "sk": "1,000–1,999",
+        "serie": "single candidate list",
+        "v": 13.1,
+        "k": 106,
+        "n": 808
+      },
+      {
+        "sk": "1,000–1,999",
+        "serie": "every candidate will be elected",
+        "v": 11.8,
+        "k": 95,
+        "n": 808
+      },
+      {
+        "sk": "2,000–4,999",
+        "serie": "single candidate list",
+        "v": 5.5,
+        "k": 25,
+        "n": 456
+      },
+      {
+        "sk": "2,000–4,999",
+        "serie": "every candidate will be elected",
+        "v": 5.5,
+        "k": 25,
+        "n": 456
+      },
+      {
+        "sk": "5,000–9,999",
+        "serie": "single candidate list",
+        "v": 0.7,
+        "k": 1,
+        "n": 143
+      },
+      {
+        "sk": "5,000–9,999",
+        "serie": "every candidate will be elected",
+        "v": 0.7,
+        "k": 1,
+        "n": 143
+      },
+      {
+        "sk": "10,000–49,999",
+        "serie": "single candidate list",
+        "v": 0.0,
+        "k": 0,
+        "n": 114
+      },
+      {
+        "sk": "10,000–49,999",
+        "serie": "every candidate will be elected",
+        "v": 0.0,
+        "k": 0,
+        "n": 114
+      },
+      {
+        "sk": "50,000+",
+        "serie": "single candidate list",
+        "v": 0.0,
+        "k": 0,
+        "n": 18
+      },
+      {
+        "sk": "50,000+",
+        "serie": "every candidate will be elected",
+        "v": 0.0,
+        "k": 0,
+        "n": 18
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "sk",
+      "type": "nominal",
+      "sort": [
+        "under 200",
+        "200–499",
+        "500–999",
+        "1,000–1,999",
+        "2,000–4,999",
+        "5,000–9,999",
+        "10,000–49,999",
+        "50,000+"
+      ],
+      "axis": {
+        "title": "population of municipality",
+        "labelAngle": 0,
+        "labelFontSize": 10.5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              55
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "labelExpr": "datum.label + '%'"
+          }
+        },
+        "xOffset": {
+          "field": "serie",
+          "sort": [
+            "single candidate list",
+            "every candidate will be elected"
+          ]
+        },
+        "color": {
+          "field": "serie",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "single candidate list",
+              "every candidate will be elected"
+            ],
+            "range": [
+              "#272a59",
+              "#de1743"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -7,
+        "fontSize": 10.5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "xOffset": {
+          "field": "serie",
+          "sort": [
+            "single candidate list",
+            "every candidate will be elected"
+          ]
+        },
+        "color": {
+          "field": "serie",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "single candidate list",
+              "every candidate will be elected"
+            ],
+            "range": [
+              "#272a59",
+              "#de1743"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sk": "under 200",
+            "single candidate list": "48.5% (650 of 1,340 municipalities)",
+            "every candidate will be elected": "26.3% (352 of 1,340 municipalities)"
+          },
+          {
+            "sk": "200–499",
+            "single candidate list": "36.6% (730 of 1,992 municipalities)",
+            "every candidate will be elected": "18.5% (368 of 1,992 municipalities)"
+          },
+          {
+            "sk": "500–999",
+            "single candidate list": "23.0% (318 of 1,383 municipalities)",
+            "every candidate will be elected": "16.8% (232 of 1,383 municipalities)"
+          },
+          {
+            "sk": "1,000–1,999",
+            "single candidate list": "13.1% (106 of 808 municipalities)",
+            "every candidate will be elected": "11.8% (95 of 808 municipalities)"
+          },
+          {
+            "sk": "2,000–4,999",
+            "single candidate list": "5.5% (25 of 456 municipalities)",
+            "every candidate will be elected": "5.5% (25 of 456 municipalities)"
+          },
+          {
+            "sk": "5,000–9,999",
+            "single candidate list": "0.7% (1 of 143 municipalities)",
+            "every candidate will be elected": "0.7% (1 of 143 municipalities)"
+          },
+          {
+            "sk": "10,000–49,999",
+            "single candidate list": "0.0% (0 of 114 municipalities)",
+            "every candidate will be elected": "0.0% (0 of 114 municipalities)"
+          },
+          {
+            "sk": "50,000+",
+            "single candidate list": "0.0% (0 of 18 municipalities)",
+            "every candidate will be elected": "0.0% (0 of 18 municipalities)"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "sk"
+            ],
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fill": "#101432",
+        "cursor": "default"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 55
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Population of municipality"
+          },
+          {
+            "field": "single candidate list",
+            "title": "single candidate list"
+          },
+          {
+            "field": "every candidate will be elected",
+            "title": "every candidate will be elected"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "volby.cz – open data from the candidate registers, municipal elections 2026 (as of 23 September 2026); ČSÚ – population of municipalities. Excluding councils of city districts and boroughs."
+}

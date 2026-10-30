@@ -1,0 +1,221 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Czechs agree with victim-blaming statements more often than people elsewhere in the EU",
+    "subtitle": "Share of people who agree with the statement (%). Eurobarometer 2016 and 2024, Czechia and EU average"
+  },
+  "width": 560,
+  "height": {
+    "step": 22
+  },
+  "data": {
+    "values": [
+      {
+        "vyrok": "“She was drunk, it’s her own fault”",
+        "kdo": "Czechia",
+        "v": 32,
+        "rok": "2024",
+        "pomer": 2.0
+      },
+      {
+        "vyrok": "“She was drunk, it’s her own fault”",
+        "kdo": "EU average",
+        "v": 16,
+        "rok": "2024",
+        "pomer": 2.0
+      },
+      {
+        "vyrok": "“She flirted, so sex without consent is justifiable”",
+        "kdo": "Czechia",
+        "v": 17,
+        "rok": "2016",
+        "pomer": 2.4
+      },
+      {
+        "vyrok": "“She flirted, so sex without consent is justifiable”",
+        "kdo": "EU average",
+        "v": 7,
+        "rok": "2016",
+        "pomer": 2.4
+      },
+      {
+        "vyrok": "“She didn’t clearly say no, didn’t fight back”",
+        "kdo": "Czechia",
+        "v": 19,
+        "rok": "2016",
+        "pomer": 1.9
+      },
+      {
+        "vyrok": "“She didn’t clearly say no, didn’t fight back”",
+        "kdo": "EU average",
+        "v": 10,
+        "rok": "2016",
+        "pomer": 1.9
+      },
+      {
+        "vyrok": "“She went home with him”",
+        "kdo": "Czechia",
+        "v": 18,
+        "rok": "2016",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "“She went home with him”",
+        "kdo": "EU average",
+        "v": 11,
+        "rok": "2016",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "“Violence against women is often provoked by the victim”",
+        "kdo": "Czechia",
+        "v": 26,
+        "rok": "2016",
+        "pomer": 1.5
+      },
+      {
+        "vyrok": "“Violence against women is often provoked by the victim”",
+        "kdo": "EU average",
+        "v": 17,
+        "rok": "2016",
+        "pomer": 1.5
+      },
+      {
+        "vyrok": "“When a woman says no, she often means yes”",
+        "kdo": "Czechia",
+        "v": 14,
+        "rok": "2024",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "“When a woman says no, she often means yes”",
+        "kdo": "EU average",
+        "v": 9,
+        "rok": "2024",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "“Women make up or exaggerate accusations”",
+        "kdo": "Czechia",
+        "v": 23,
+        "rok": "2024",
+        "pomer": 1.4
+      },
+      {
+        "vyrok": "“Women make up or exaggerate accusations”",
+        "kdo": "EU average",
+        "v": 17,
+        "rok": "2024",
+        "pomer": 1.4
+      },
+      {
+        "vyrok": "“What was she wearing” (revealing clothing)",
+        "kdo": "Czechia",
+        "v": 10,
+        "rok": "2016",
+        "pomer": 1.0
+      },
+      {
+        "vyrok": "“What was she wearing” (revealing clothing)",
+        "kdo": "EU average",
+        "v": 10,
+        "rok": "2016",
+        "pomer": 1.0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "vyrok",
+      "type": "nominal",
+      "sort": null,
+      "title": null,
+      "axis": {
+        "labelLimit": 330,
+        "labelFontSize": 13
+      }
+    },
+    "yOffset": {
+      "field": "kdo",
+      "sort": [
+        "Czechia",
+        "EU average"
+      ]
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          0,
+          40
+        ]
+      },
+      "axis": {
+        "grid": true,
+        "tickCount": 4,
+        "labelExpr": "datum.value + '%'"
+      }
+    },
+    "color": {
+      "field": "kdo",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Czechia",
+          "EU average"
+        ],
+        "range": [
+          "#de1743",
+          "#c8c8bc"
+        ]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null
+      }
+    },
+    "tooltip": [
+      {
+        "field": "vyrok",
+        "title": "Statement"
+      },
+      {
+        "field": "kdo",
+        "title": "Group"
+      },
+      {
+        "field": "v",
+        "title": "Agree (%)"
+      },
+      {
+        "field": "rok",
+        "title": "Survey"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 9,
+        "cornerRadiusEnd": 2
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "format": ".0f"
+        }
+      }
+    }
+  ]
+}

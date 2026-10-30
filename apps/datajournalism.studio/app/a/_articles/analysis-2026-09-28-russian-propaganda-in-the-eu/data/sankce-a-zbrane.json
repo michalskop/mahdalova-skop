@@ -1,0 +1,2124 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Two thirds of Czechs back {sanctions|#06677d}, fewer than a third back {weapons for Ukraine|#9f319e}",
+  "subtitle": "Support for EU measures in response to the Russian invasion (%, spring 2026). Sorted by support for funding weapons. Hover over a country."
+ },
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 700,
+ "data": {
+  "values": [
+   {
+    "zeme": "Sweden",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 91,
+    "sankce": 91,
+    "zbrane": 93,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91%",
+    "t_zbrane": "93%"
+   },
+   {
+    "zeme": "Sweden",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 93,
+    "sankce": 91,
+    "zbrane": 93,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91%",
+    "t_zbrane": "93%"
+   },
+   {
+    "zeme": "Denmark",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 91,
+    "sankce": 91,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91%",
+    "t_zbrane": "88%"
+   },
+   {
+    "zeme": "Denmark",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 88,
+    "sankce": 91,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "91%",
+    "t_zbrane": "88%"
+   },
+   {
+    "zeme": "Finland",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 88,
+    "sankce": 88,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "88%",
+    "t_zbrane": "88%"
+   },
+   {
+    "zeme": "Finland",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 88,
+    "sankce": 88,
+    "zbrane": 88,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "88%",
+    "t_zbrane": "88%"
+   },
+   {
+    "zeme": "Netherlands",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 83,
+    "sankce": 83,
+    "zbrane": 78,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83%",
+    "t_zbrane": "78%"
+   },
+   {
+    "zeme": "Netherlands",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 78,
+    "sankce": 83,
+    "zbrane": 78,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83%",
+    "t_zbrane": "78%"
+   },
+   {
+    "zeme": "Lithuania",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 81,
+    "sankce": 81,
+    "zbrane": 75,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "81%",
+    "t_zbrane": "75%"
+   },
+   {
+    "zeme": "Lithuania",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 75,
+    "sankce": 81,
+    "zbrane": 75,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "81%",
+    "t_zbrane": "75%"
+   },
+   {
+    "zeme": "Poland",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 83,
+    "sankce": 83,
+    "zbrane": 70,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83%",
+    "t_zbrane": "70%"
+   },
+   {
+    "zeme": "Poland",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 70,
+    "sankce": 83,
+    "zbrane": 70,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "83%",
+    "t_zbrane": "70%"
+   },
+   {
+    "zeme": "Portugal",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 89,
+    "sankce": 89,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "89%",
+    "t_zbrane": "68%"
+   },
+   {
+    "zeme": "Portugal",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 68,
+    "sankce": 89,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "89%",
+    "t_zbrane": "68%"
+   },
+   {
+    "zeme": "Ireland",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 85,
+    "sankce": 85,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "85%",
+    "t_zbrane": "68%"
+   },
+   {
+    "zeme": "Ireland",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 68,
+    "sankce": 85,
+    "zbrane": 68,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "85%",
+    "t_zbrane": "68%"
+   },
+   {
+    "zeme": "Croatia",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 75,
+    "sankce": 75,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "75%",
+    "t_zbrane": "66%"
+   },
+   {
+    "zeme": "Croatia",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 66,
+    "sankce": 75,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "75%",
+    "t_zbrane": "66%"
+   },
+   {
+    "zeme": "Latvia",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 68,
+    "sankce": 68,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "68%",
+    "t_zbrane": "66%"
+   },
+   {
+    "zeme": "Latvia",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 66,
+    "sankce": 68,
+    "zbrane": 66,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "68%",
+    "t_zbrane": "66%"
+   },
+   {
+    "zeme": "Estonia",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 73,
+    "sankce": 73,
+    "zbrane": 64,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73%",
+    "t_zbrane": "64%"
+   },
+   {
+    "zeme": "Estonia",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 64,
+    "sankce": 73,
+    "zbrane": 64,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73%",
+    "t_zbrane": "64%"
+   },
+   {
+    "zeme": "Germany",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 67,
+    "sankce": 67,
+    "zbrane": 59,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67%",
+    "t_zbrane": "59%"
+   },
+   {
+    "zeme": "Germany",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 59,
+    "sankce": 67,
+    "zbrane": 59,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67%",
+    "t_zbrane": "59%"
+   },
+   {
+    "zeme": "Luxembourg",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 69,
+    "sankce": 69,
+    "zbrane": 58,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69%",
+    "t_zbrane": "58%"
+   },
+   {
+    "zeme": "Luxembourg",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 58,
+    "sankce": 69,
+    "zbrane": 58,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69%",
+    "t_zbrane": "58%"
+   },
+   {
+    "zeme": "Belgium",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 73,
+    "sankce": 73,
+    "zbrane": 56,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73%",
+    "t_zbrane": "56%"
+   },
+   {
+    "zeme": "Belgium",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 56,
+    "sankce": 73,
+    "zbrane": 56,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "73%",
+    "t_zbrane": "56%"
+   },
+   {
+    "zeme": "EU average",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 70,
+    "sankce": 70,
+    "zbrane": 56,
+    "cz": false,
+    "eu": true,
+    "t_sankce": "70%",
+    "t_zbrane": "56%"
+   },
+   {
+    "zeme": "EU average",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 56,
+    "sankce": 70,
+    "zbrane": 56,
+    "cz": false,
+    "eu": true,
+    "t_sankce": "70%",
+    "t_zbrane": "56%"
+   },
+   {
+    "zeme": "Spain",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 70,
+    "sankce": 70,
+    "zbrane": 55,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "70%",
+    "t_zbrane": "55%"
+   },
+   {
+    "zeme": "Spain",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 55,
+    "sankce": 70,
+    "zbrane": 55,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "70%",
+    "t_zbrane": "55%"
+   },
+   {
+    "zeme": "France",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 67,
+    "sankce": 67,
+    "zbrane": 52,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67%",
+    "t_zbrane": "52%"
+   },
+   {
+    "zeme": "France",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 52,
+    "sankce": 67,
+    "zbrane": 52,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "67%",
+    "t_zbrane": "52%"
+   },
+   {
+    "zeme": "Italy",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 66,
+    "sankce": 66,
+    "zbrane": 49,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66%",
+    "t_zbrane": "49%"
+   },
+   {
+    "zeme": "Italy",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 49,
+    "sankce": 66,
+    "zbrane": 49,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66%",
+    "t_zbrane": "49%"
+   },
+   {
+    "zeme": "Austria",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 66,
+    "sankce": 66,
+    "zbrane": 48,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66%",
+    "t_zbrane": "48%"
+   },
+   {
+    "zeme": "Austria",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 48,
+    "sankce": 66,
+    "zbrane": 48,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "66%",
+    "t_zbrane": "48%"
+   },
+   {
+    "zeme": "Romania",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 64,
+    "sankce": 64,
+    "zbrane": 45,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "64%",
+    "t_zbrane": "45%"
+   },
+   {
+    "zeme": "Romania",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 45,
+    "sankce": 64,
+    "zbrane": 45,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "64%",
+    "t_zbrane": "45%"
+   },
+   {
+    "zeme": "Malta",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 69,
+    "sankce": 69,
+    "zbrane": 42,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69%",
+    "t_zbrane": "42%"
+   },
+   {
+    "zeme": "Malta",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 42,
+    "sankce": 69,
+    "zbrane": 42,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "69%",
+    "t_zbrane": "42%"
+   },
+   {
+    "zeme": "Slovenia",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 54,
+    "sankce": 54,
+    "zbrane": 36,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "54%",
+    "t_zbrane": "36%"
+   },
+   {
+    "zeme": "Slovenia",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 36,
+    "sankce": 54,
+    "zbrane": 36,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "54%",
+    "t_zbrane": "36%"
+   },
+   {
+    "zeme": "Slovakia",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 58,
+    "sankce": 58,
+    "zbrane": 35,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "58%",
+    "t_zbrane": "35%"
+   },
+   {
+    "zeme": "Slovakia",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 35,
+    "sankce": 58,
+    "zbrane": 35,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "58%",
+    "t_zbrane": "35%"
+   },
+   {
+    "zeme": "Hungary",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 49,
+    "sankce": 49,
+    "zbrane": 34,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "49%",
+    "t_zbrane": "34%"
+   },
+   {
+    "zeme": "Hungary",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 34,
+    "sankce": 49,
+    "zbrane": 34,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "49%",
+    "t_zbrane": "34%"
+   },
+   {
+    "zeme": "Czechia",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 65,
+    "sankce": 65,
+    "zbrane": 32,
+    "cz": true,
+    "eu": false,
+    "t_sankce": "65%",
+    "t_zbrane": "32%"
+   },
+   {
+    "zeme": "Czechia",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 32,
+    "sankce": 65,
+    "zbrane": 32,
+    "cz": true,
+    "eu": false,
+    "t_sankce": "65%",
+    "t_zbrane": "32%"
+   },
+   {
+    "zeme": "Bulgaria",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 42,
+    "sankce": 42,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "42%",
+    "t_zbrane": "27%"
+   },
+   {
+    "zeme": "Bulgaria",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 27,
+    "sankce": 42,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "42%",
+    "t_zbrane": "27%"
+   },
+   {
+    "zeme": "Greece",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 40,
+    "sankce": 40,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "40%",
+    "t_zbrane": "27%"
+   },
+   {
+    "zeme": "Greece",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 27,
+    "sankce": 40,
+    "zbrane": 27,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "40%",
+    "t_zbrane": "27%"
+   },
+   {
+    "zeme": "Cyprus",
+    "opatreni": "Sanctions against Russia",
+    "hodnota": 30,
+    "sankce": 30,
+    "zbrane": 18,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "30%",
+    "t_zbrane": "18%"
+   },
+   {
+    "zeme": "Cyprus",
+    "opatreni": "Funding weapons for Ukraine",
+    "hodnota": 18,
+    "sankce": 30,
+    "zbrane": 18,
+    "cz": false,
+    "eu": false,
+    "t_sankce": "30%",
+    "t_zbrane": "18%"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "zeme",
+   "type": "nominal",
+   "sort": [
+    "Sweden",
+    "Denmark",
+    "Finland",
+    "Netherlands",
+    "Lithuania",
+    "Poland",
+    "Portugal",
+    "Ireland",
+    "Croatia",
+    "Latvia",
+    "Estonia",
+    "Germany",
+    "Luxembourg",
+    "Belgium",
+    "EU average",
+    "Spain",
+    "France",
+    "Italy",
+    "Austria",
+    "Romania",
+    "Malta",
+    "Slovenia",
+    "Slovakia",
+    "Hungary",
+    "Czechia",
+    "Bulgaria",
+    "Greece",
+    "Cyprus"
+   ],
+   "scale": {
+    "paddingInner": 0,
+    "paddingOuter": 0.3
+   },
+   "axis": {
+    "title": null,
+    "domain": false,
+    "ticks": false,
+    "labelLimit": 140,
+    "labelFontWeight": {
+     "condition": {
+      "test": "datum.value === 'Czechia' || datum.value === 'EU average'",
+      "value": 700
+     },
+     "value": 400
+    },
+    "labelColor": {
+     "condition": {
+      "test": "datum.value === 'Czechia'",
+      "value": "#de1743"
+     },
+     "value": "#333333"
+    }
+   }
+  },
+  "color": {
+   "field": "opatreni",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Sanctions against Russia",
+     "Funding weapons for Ukraine"
+    ],
+    "range": [
+     "#06677d",
+     "#9f319e"
+    ]
+   },
+   "legend": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Sweden",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "93%"
+     },
+     {
+      "zeme": "Denmark",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Finland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Netherlands",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "78%"
+     },
+     {
+      "zeme": "Lithuania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81%",
+      "t_zbrane": "75%"
+     },
+     {
+      "zeme": "Poland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "70%"
+     },
+     {
+      "zeme": "Portugal",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Ireland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Croatia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Latvia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Estonia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "64%"
+     },
+     {
+      "zeme": "Germany",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "59%"
+     },
+     {
+      "zeme": "Luxembourg",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "58%"
+     },
+     {
+      "zeme": "Belgium",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "EU average",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "Spain",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70%",
+      "t_zbrane": "55%"
+     },
+     {
+      "zeme": "France",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "52%"
+     },
+     {
+      "zeme": "Italy",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "49%"
+     },
+     {
+      "zeme": "Austria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "48%"
+     },
+     {
+      "zeme": "Romania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64%",
+      "t_zbrane": "45%"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "42%"
+     },
+     {
+      "zeme": "Slovenia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54%",
+      "t_zbrane": "36%"
+     },
+     {
+      "zeme": "Slovakia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58%",
+      "t_zbrane": "35%"
+     },
+     {
+      "zeme": "Hungary",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49%",
+      "t_zbrane": "34%"
+     },
+     {
+      "zeme": "Czechia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65%",
+      "t_zbrane": "32%"
+     },
+     {
+      "zeme": "Bulgaria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Greece",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Cyprus",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30%",
+      "t_zbrane": "18%"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 2
+   },
+   "encoding": {
+    "x": {
+     "field": "zbrane",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": "% in favour",
+      "grid": true,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     }
+    },
+    "x2": {
+     "field": "sankce"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.cz",
+      "value": "#333333"
+     },
+     "value": "#d4d4c8"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "hodnota",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "size": {
+     "condition": {
+      "test": "datum.cz || datum.eu",
+      "value": 150
+     },
+     "value": 85
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Sweden",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "93%"
+     },
+     {
+      "zeme": "Denmark",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Finland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Netherlands",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "78%"
+     },
+     {
+      "zeme": "Lithuania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81%",
+      "t_zbrane": "75%"
+     },
+     {
+      "zeme": "Poland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "70%"
+     },
+     {
+      "zeme": "Portugal",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Ireland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Croatia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Latvia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Estonia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "64%"
+     },
+     {
+      "zeme": "Germany",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "59%"
+     },
+     {
+      "zeme": "Luxembourg",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "58%"
+     },
+     {
+      "zeme": "Belgium",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "EU average",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "Spain",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70%",
+      "t_zbrane": "55%"
+     },
+     {
+      "zeme": "France",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "52%"
+     },
+     {
+      "zeme": "Italy",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "49%"
+     },
+     {
+      "zeme": "Austria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "48%"
+     },
+     {
+      "zeme": "Romania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64%",
+      "t_zbrane": "45%"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "42%"
+     },
+     {
+      "zeme": "Slovenia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54%",
+      "t_zbrane": "36%"
+     },
+     {
+      "zeme": "Slovakia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58%",
+      "t_zbrane": "35%"
+     },
+     {
+      "zeme": "Hungary",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49%",
+      "t_zbrane": "34%"
+     },
+     {
+      "zeme": "Czechia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65%",
+      "t_zbrane": "32%"
+     },
+     {
+      "zeme": "Bulgaria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Greece",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Cyprus",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30%",
+      "t_zbrane": "18%"
+     }
+    ]
+   },
+   "transform": [
+    {
+     "filter": "datum.cz || datum.eu"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontWeight": 700,
+    "color": "#9f319e"
+   },
+   "encoding": {
+    "x": {
+     "field": "zbrane",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "text": {
+     "field": "zbrane"
+    },
+    "color": {
+     "value": "#9f319e"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Sweden",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "93%"
+     },
+     {
+      "zeme": "Denmark",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Finland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Netherlands",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "78%"
+     },
+     {
+      "zeme": "Lithuania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81%",
+      "t_zbrane": "75%"
+     },
+     {
+      "zeme": "Poland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "70%"
+     },
+     {
+      "zeme": "Portugal",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Ireland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Croatia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Latvia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Estonia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "64%"
+     },
+     {
+      "zeme": "Germany",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "59%"
+     },
+     {
+      "zeme": "Luxembourg",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "58%"
+     },
+     {
+      "zeme": "Belgium",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "EU average",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "Spain",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70%",
+      "t_zbrane": "55%"
+     },
+     {
+      "zeme": "France",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "52%"
+     },
+     {
+      "zeme": "Italy",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "49%"
+     },
+     {
+      "zeme": "Austria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "48%"
+     },
+     {
+      "zeme": "Romania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64%",
+      "t_zbrane": "45%"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "42%"
+     },
+     {
+      "zeme": "Slovenia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54%",
+      "t_zbrane": "36%"
+     },
+     {
+      "zeme": "Slovakia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58%",
+      "t_zbrane": "35%"
+     },
+     {
+      "zeme": "Hungary",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49%",
+      "t_zbrane": "34%"
+     },
+     {
+      "zeme": "Czechia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65%",
+      "t_zbrane": "32%"
+     },
+     {
+      "zeme": "Bulgaria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Greece",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Cyprus",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30%",
+      "t_zbrane": "18%"
+     }
+    ]
+   },
+   "transform": [
+    {
+     "filter": "datum.cz || datum.eu"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "field": "sankce",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "text": {
+     "field": "sankce"
+    },
+    "color": {
+     "value": "#06677d"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "zeme": "Sweden",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 93,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "93%"
+     },
+     {
+      "zeme": "Denmark",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 91,
+      "sankce": 91,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "91%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Finland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 88,
+      "sankce": 88,
+      "zbrane": 88,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "88%",
+      "t_zbrane": "88%"
+     },
+     {
+      "zeme": "Netherlands",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 78,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "78%"
+     },
+     {
+      "zeme": "Lithuania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 81,
+      "sankce": 81,
+      "zbrane": 75,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "81%",
+      "t_zbrane": "75%"
+     },
+     {
+      "zeme": "Poland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 83,
+      "sankce": 83,
+      "zbrane": 70,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "83%",
+      "t_zbrane": "70%"
+     },
+     {
+      "zeme": "Portugal",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 89,
+      "sankce": 89,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "89%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Ireland",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 85,
+      "sankce": 85,
+      "zbrane": 68,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "85%",
+      "t_zbrane": "68%"
+     },
+     {
+      "zeme": "Croatia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 75,
+      "sankce": 75,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "75%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Latvia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 68,
+      "sankce": 68,
+      "zbrane": 66,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "68%",
+      "t_zbrane": "66%"
+     },
+     {
+      "zeme": "Estonia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 64,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "64%"
+     },
+     {
+      "zeme": "Germany",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 59,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "59%"
+     },
+     {
+      "zeme": "Luxembourg",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 58,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "58%"
+     },
+     {
+      "zeme": "Belgium",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 73,
+      "sankce": 73,
+      "zbrane": 56,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "73%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "EU average",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 56,
+      "cz": false,
+      "eu": true,
+      "t_sankce": "70%",
+      "t_zbrane": "56%"
+     },
+     {
+      "zeme": "Spain",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 70,
+      "sankce": 70,
+      "zbrane": 55,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "70%",
+      "t_zbrane": "55%"
+     },
+     {
+      "zeme": "France",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 67,
+      "sankce": 67,
+      "zbrane": 52,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "67%",
+      "t_zbrane": "52%"
+     },
+     {
+      "zeme": "Italy",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 49,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "49%"
+     },
+     {
+      "zeme": "Austria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 66,
+      "sankce": 66,
+      "zbrane": 48,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "66%",
+      "t_zbrane": "48%"
+     },
+     {
+      "zeme": "Romania",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 64,
+      "sankce": 64,
+      "zbrane": 45,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "64%",
+      "t_zbrane": "45%"
+     },
+     {
+      "zeme": "Malta",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 69,
+      "sankce": 69,
+      "zbrane": 42,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "69%",
+      "t_zbrane": "42%"
+     },
+     {
+      "zeme": "Slovenia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 54,
+      "sankce": 54,
+      "zbrane": 36,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "54%",
+      "t_zbrane": "36%"
+     },
+     {
+      "zeme": "Slovakia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 58,
+      "sankce": 58,
+      "zbrane": 35,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "58%",
+      "t_zbrane": "35%"
+     },
+     {
+      "zeme": "Hungary",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 49,
+      "sankce": 49,
+      "zbrane": 34,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "49%",
+      "t_zbrane": "34%"
+     },
+     {
+      "zeme": "Czechia",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 65,
+      "sankce": 65,
+      "zbrane": 32,
+      "cz": true,
+      "eu": false,
+      "t_sankce": "65%",
+      "t_zbrane": "32%"
+     },
+     {
+      "zeme": "Bulgaria",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 42,
+      "sankce": 42,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "42%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Greece",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 40,
+      "sankce": 40,
+      "zbrane": 27,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "40%",
+      "t_zbrane": "27%"
+     },
+     {
+      "zeme": "Cyprus",
+      "opatreni": "Sanctions against Russia",
+      "hodnota": 30,
+      "sankce": 30,
+      "zbrane": 18,
+      "cz": false,
+      "eu": false,
+      "t_sankce": "30%",
+      "t_zbrane": "18%"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rect",
+    "fill": "#333333",
+    "fillOpacity": 0.001,
+    "cursor": "pointer"
+   },
+   "encoding": {
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "x2": {
+     "datum": 100
+    },
+    "color": {
+     "value": "#333333"
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Country"
+     },
+     {
+      "field": "t_sankce",
+      "title": "Supports sanctions"
+     },
+     {
+      "field": "t_zbrane",
+      "title": "Supports funding weapons"
+     }
+    ]
+   }
+  }
+ ],
+ "_source": "[Standard Eurobarometer 105, spring 2026](https://europa.eu/eurobarometer/surveys/detail/3613)"
+}

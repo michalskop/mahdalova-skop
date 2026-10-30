@@ -18,6 +18,17 @@ import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { Flag } from '@repo/ui/components/Flag';
+import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
+import { Figure } from './Figure';
+import SupportBanner from '@/components/common/SupportBanner';
+import VegaChart from '@/components/charts/VegaChart';
+// English one-off charts for translated articles (ported from apps/web / apps/datatimes-org)
+import { BrazilGainsChartEn, BrazilRegionsChartEn } from '@/components/charts/BrazilProcChartsEn';
+import BrazilMunicipalMapEn from '@/components/charts/BrazilMunicipalMapEn';
+import { BrazilRunoffTimelineEn, BrazilRunoffStatesEn } from '@/components/charts/BrazilRunoffChartsEn';
+import { CduPredictionTimelineEn, CduThresholdDotsEn } from '@/components/charts/CduPredictionChartsEn';
+import SenatSlozeniEn from '@/components/charts/SenatSlozeniEn';
+import ChartCard from '@/components/charts/ChartCard';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
 
@@ -26,6 +37,7 @@ interface ArticleProps {
   title?: string;
   date?: string;
   author?: string;
+  translator?: string;
   slug: string;
   scrollyContent?: any; // Add scrollyContent to the ArticleProps
   htmlContent?: string | null;
@@ -39,6 +51,7 @@ export function ArticleRenderer({
   title,
   date,
   author,
+  translator,
   slug = '',
   scrollyContent,
   htmlContent,
@@ -291,22 +304,67 @@ export function ArticleRenderer({
     },
 
     RelatedArticles: (props) => {
-      const pool = (mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined;
+      const pool = ((mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined) ?? [];
+      // Full-width box (cards in rows of three) without a filter/tag: always whole rows, at least
+      // 6 cards. Missing places are filled from the pool (sorted by shared tags in lib/articles.ts);
+      // unknown hand-picked slugs are dropped. Side boxes (position/float) and other presets unchanged.
+      const full = !props.position && !props.float && (!props.preset || props.preset === 'cards');
+      let extra: Record<string, unknown> = {};
+      if (full && !props.filter && !props.tag) {
+        const known = new Set(pool.map((a) => a.slug));
+        const picked: string[] = (props.slugs ?? []).filter((s: string) => known.has(s));
+        const target = Math.max(6, Math.ceil(picked.length / 3) * 3);
+        const fill = pool.map((a) => a.slug).filter((s) => !picked.includes(s)).slice(0, target - picked.length);
+        extra = { slugs: [...picked, ...fill], count: target };
+      }
       return (
         <RelatedArticlesComponent
-          pool={pool ?? []}
+          pool={pool}
           articleBasePath="/a"
           locale="en-US"
           heading="Read more"
           {...props}
+          {...extra}
         />
       );
     },
 
-    HtmlEmbed: ({ file, ...rest }) => {
+    Figure: (props: any) => <Figure slug={slug} {...props} />,
+    SupportBanner: (props: any) => <SupportBanner {...props} />,
+    KeyNumbers: ({ yamlFile, ...props }: any) => {
+      if (yamlFile) {
+        const keyNumbersData = (mdxSource.scope as any)?.keyNumbersData as Record<string, any> | undefined;
+        const data = keyNumbersData?.[yamlFile];
+        if (!data) {
+          return <div className="text-red-500">KeyNumbers data not found for {yamlFile}</div>;
+        }
+        return <KeyNumbers label={data.label ?? 'Key numbers'} numbers={data.numbers} {...props} />;
+      }
+      return <KeyNumbers label="Key numbers" {...props} />;
+    },
+    VegaChart: ({ dataFile }: { dataFile?: string }) => {
+      const vegaChartData = (mdxSource.scope as any)?.vegaChartData as Record<string, any> | undefined;
+      const spec = dataFile ? vegaChartData?.[dataFile] : undefined;
+      if (!dataFile || !spec) {
+        return <div className="text-red-500">VegaChart data not found for {dataFile}</div>;
+      }
+      return <VegaChart spec={spec} />;
+    },
+    BrazilGainsChartEn,
+    BrazilRegionsChartEn,
+    BrazilMunicipalMapEn,
+    BrazilRunoffTimelineEn,
+    BrazilRunoffStatesEn,
+    CduPredictionTimelineEn,
+    CduThresholdDotsEn,
+    SenatSlozeniEn,
+
+    // With title/subtitle/source the embed is wrapped in ChartCard (same frame as other charts).
+    HtmlEmbed: ({ file, title, subtitle, source, ...rest }) => {
       const htmlEmbedData = (mdxSource.scope as any)?.htmlEmbedData as Record<string, string> | undefined;
       const htmlContent = file ? htmlEmbedData?.[file] : undefined;
-      return <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+      const embed = <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+      return title || subtitle || source ? <ChartCard title={title} subtitle={subtitle} source={source}>{embed}</ChartCard> : embed;
     },
   };
 
@@ -348,6 +406,12 @@ export function ArticleRenderer({
               month: 'long',
               day: 'numeric',
             })}
+          </Text>
+        )}
+
+        {translator && (
+          <Text size="sm" c={textColor || "dimmed"} mt={-12}>
+            {translator}
           </Text>
         )}
 

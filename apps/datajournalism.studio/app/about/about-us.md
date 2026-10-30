@@ -1,5 +1,7 @@
-We are data journalists and analysts. We create thorough analyses on a wide range of topics that impact society, politics, and the economy. Our expertise lies in data processing, visualization, and the creation of maps, charts, and interactive tools that help clarify complex issues. We focus on responsible work within a broader context, delivering clear and understandable outputs that can serve as a foundation for informed decision-making.
+DataTimes is an independent data journalism newsroom from Prague. We tell stories built from data and we look for context. We have learned first-hand that describing reality faithfully sometimes takes courage: for doing so, we lost our jobs and income overnight and had to start again on our own.
 
-Our projects often combine detailed data analysis with storytelling, illustrating concrete impacts on individuals, the environment, and society as a whole. We excel at uncovering unexpected connections, whether related to political decisions, local issues, or global trends.
+We search, and we record faithfully. We do not embellish. We do not work for interest groups. And we are not afraid.
 
-We believe that quality journalism must be rooted in accurate data and its transparent interpretation. Our goal is to provide valuable and practical information for both the general public and professionals.
+**Data. Context. Courage. Clarity.**
+
+Data Journalism Studio is our English edition for international readers. Our Czech newsroom publishes daily at [DataTimes.cz](https://www.datatimes.cz).

@@ -1,0 +1,444 @@
+'use client';
+
+// English one-off charts for the article elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament
+// (translated copy of apps/web/components/charts/CduPredictionCharts.tsx):
+//  - <CduPredictionTimelineEn />  the whole election night: DataTimes prediction x running count x ARD/ZDF
+//  - <CduThresholdDotsEn />       each estimate against the final result and the 5% threshold
+// The SVG is drawn in real pixels according to container width (font does not scale);
+// below 600 px it switches to a more compact label layout.
+
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { PRED, COUNT } from './cduMv2026Data';
+import ChartCard from './ChartCard';
+import ChartLegend from './ChartLegend';
+
+// Barvy výhradně ze závazné palety (ThemeProvider.tsx)
+const C = {
+  ink: '#101432',        // brandNavy.9
+  ink2: '#4c4f8e',       // brandNavy.7
+  muted: '#6267a3',      // brandNavy.6
+  grid: '#eeeae2',       // background.4
+  beige: '#bcbcb0',      // background.9 – tmavá béžová
+  bandIn: '#fffdf0',     // brandYellow.0 – CDU ve sněmu
+  bandOut: '#fff0ed',    // brandCoralRed.0 – CDU mimo sněm
+  inText: '#a47d03',     // brandYellow.9 – popisek „CDU ve sněmu“
+  outText: '#c93020',    // brandCoralRed.7 – popisek „CDU mimo sněm“
+  model: '#de1743',      // brand.6
+  count: '#bcbcb0',      // background.9
+  tv: '#101432',         // brandNavy.9 – exit polly a projekce ARD/ZDF (vše, co neměřil DataTimes.cz)
+  tvText: '#101432',     // brandNavy.9 – jejich popisky
+  surface: '#f8f6f0',    // background.2 – pozadí karty grafu (ChartCard, viz DESIGN.md)
+};
+const FINAL = 4.888;
+const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';   // písmo grafů dle DESIGN.md
+
+const fmt = (v: number, d = 2) => v.toFixed(d);
+const hhmm = (m: number) => {
+  const t = Math.floor(m);
+  return `${String((18 + Math.floor(t / 60)) % 24).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
+};
+
+function useWidth<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [w, setW] = useState(0);
+  useEffect(() => {
+    if (!ref.current) return;
+    const ro = new ResizeObserver(([e]) => setW(Math.round(e.contentRect.width)));
+    ro.observe(ref.current);
+    return () => ro.disconnect();
+  }, []);
+  return [ref, w] as const;
+}
+
+type Tip = { x: number; y: number; body: ReactNode } | null;
+
+function Tooltip({ tip, width }: { tip: Tip; width: number }) {
+  if (!tip) return null;
+  const right = tip.x > width - 220;
+  return (
+    <div
+      style={{
+        position: 'absolute', pointerEvents: 'none', top: Math.max(0, tip.y - 60),
+        left: right ? undefined : tip.x + 14, right: right ? width - tip.x + 14 : undefined,
+        background: '#fff', border: `1px solid ${C.grid}`, borderRadius: 6, padding: '8px 10px',
+        fontFamily: FONT, fontSize: 12.5, lineHeight: 1.45, color: C.ink,
+        boxShadow: '0 4px 14px rgba(16,20,50,.10)', whiteSpace: 'nowrap', zIndex: 2,
+      }}
+    >
+      {tip.body}
+    </div>
+  );
+}
+
+// Víceřádkový popisek v SVG
+function Lines({ x, y, lines, anchor = 'start', lh = 15, styles }: {
+  x: number; y: number; lines: string[]; anchor?: 'start' | 'end' | 'middle'; lh?: number; styles: React.CSSProperties[];
+}) {
+  return (
+    <text x={x} y={y} textAnchor={anchor}>
+      {lines.map((l, i) => (
+        <tspan key={i} x={x} dy={i ? lh : 0} style={styles[Math.min(i, styles.length - 1)]}>{l}</tspan>
+      ))}
+    </text>
+  );
+}
+
+type SeriesKey = 'model' | 'count' | 'tv';
+const LEGEND = [
+  { key: 'model', label: 'DataTimes.cz prediction', color: C.model },
+  { key: 'count', label: 'Running count', color: C.count },
+  { key: 'tv', label: 'ARD, ZDF exit poll / projection', color: C.tv },
+];
+const SOURCE = 'Mahdalová & Škop prediction archive; Landeswahlleitung M‑V; [ARD](https://www.infratest-dimap.de/umfragen-analysen/bundeslaender/mecklenburg-vorpommern/); [ZDF](https://wahltool.zdf.de/wahlergebnisse/2026-09-20-LT-DE-MV.html)';
+
+const TV = [
+  { m: 0, v: 5.5, n: 'ARD exit poll', t: '18:00', lab: 'ARD exit poll 5.5%', short: 'ARD 5.5%', dy: 4 },
+  { m: 0, v: 5.0, n: 'ZDF exit poll', t: '18:00', lab: 'ZDF exit poll 5.0%', short: 'ZDF 5.0%', dy: 4 },
+  { m: 27, v: 5.1, n: 'Forschungsgruppe Wahlen (ZDF)', t: '18:27', lab: 'FGW projection 5.1%', short: 'FGW 5.1%', dy: 4 },
+  { m: 253, v: 4.9, n: 'ARD projection', t: '22:13' },
+  { m: 260, v: 4.9, n: 'ZDF projection', t: '22:20' },
+];
+
+const PULSE_CSS = `
+@keyframes cduPulse { 0% { transform: scale(1); opacity: .55 } 70% { transform: scale(2.6); opacity: 0 } 100% { transform: scale(2.6); opacity: 0 } }
+.cdu-pulse { transform-box: fill-box; transform-origin: center; animation: cduPulse 2.2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .cdu-pulse { animation: none; opacity: 0 } }
+`;
+
+export function CduPredictionTimelineEn() {
+  const [ref, W] = useWidth<HTMLDivElement>();
+  const [tip, setTip] = useState<Tip>(null);
+  const [hover, setHover] = useState<{ x: number; y: number } | null>(null);
+  const [hidden, setHidden] = useState<Set<SeriesKey>>(new Set());
+  const toggle = (k: SeriesKey) => setHidden((h) => { const n = new Set(h); if (n.has(k)) n.delete(k); else n.add(k); return n; });
+  const show = (k: SeriesKey) => !hidden.has(k);
+  // Lupa: Ctrl + kolečko zvětší celý graf (i písmo a osy), ale jen uvnitř jeho rámečku;
+  // tažením se posouvá, dvojklik / tlačítko vrací původní velikost.
+  const [z, setZ] = useState({ k: 1, tx: 0, ty: 0 });
+  const box = useRef({ w: 1, h: 1 });
+  const drag = useRef<{ x0: number; y0: number; tx: number; ty: number } | null>(null);
+  const clampZ = (k: number, tx: number, ty: number) => {
+    const { w, h } = box.current;
+    return { k, tx: Math.min(0, Math.max(w - w * k, tx)), ty: Math.min(0, Math.max(h - h * k, ty)) };
+  };
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;          // bez Ctrl stránka normálně scrolluje
+      e.preventDefault();
+      const r = el.getBoundingClientRect();
+      const cx = e.clientX - r.left, cy = e.clientY - r.top;
+      setZ(({ k, tx, ty }) => {
+        const nk = Math.min(5, Math.max(1, k * Math.exp(-e.deltaY * 0.0025)));
+        const px0 = (cx - tx) / k, py0 = (cy - ty) / k;   // bod pod kurzorem zůstane na místě
+        return clampZ(nk, cx - px0 * nk, cy - py0 * nk);
+      });
+      setTip(null); setHover(null);
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, [ref, W]);
+  const zoomed = z.k > 1.001;
+  const resetZoom = () => setZ({ k: 1, tx: 0, ty: 0 });
+
+  const narrow = W < 700;
+  const H = narrow ? 460 : 470;
+  const M = { l: narrow ? 30 : 44, r: narrow ? 8 : 46, t: 18, b: 34 };
+  const X1 = 375, Y0 = narrow ? 3.25 : 3.4, Y1 = 5.75;
+  const plotW = W - M.l - M.r;
+  box.current = { w: W, h: H };
+  const x = (m: number) => M.l + (m / X1) * plotW;
+  const L0 = M.l, R0 = W - M.r;   // pevné okraje plochy grafu
+  const y = (v: number) => M.t + ((Y1 - v) / (Y1 - Y0)) * (H - M.t - M.b);
+  const step = (pts: number[][]) =>
+    pts.map((p, i) => (i ? `H${x(p[0]).toFixed(1)}V${y(p[1]).toFixed(1)}` : `M${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`)).join('');
+
+  const lab: React.CSSProperties = { fontSize: narrow ? 11.5 : 12.5, fill: C.ink, fontFamily: FONT };
+  const labB: React.CSSProperties = { ...lab, fontWeight: 600 };
+  const labM: React.CSSProperties = { ...lab, fontSize: narrow ? 11 : 12 };
+  const tick: React.CSSProperties = { fontSize: 11.5, fill: C.ink, fontFamily: FONT };
+  const aX = 132.27, aV = 4.879, aC = 4.409;   // 20:12 – predikce a průběžné sčítání
+  const fX = 75.53, fV = 4.46, fC = 3.792;     // 19:15 – první záznam
+  const yTicks = (W < 400 ? [4.2, 4.6, 5.0, 5.4] : narrow ? [3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6] : [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6]);
+  const xTicks = narrow ? [0, 60, 120, 180, 240, 300, 360] : [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360];
+  const lh = narrow ? 14 : 15;
+
+  function onMove(e: React.PointerEvent<SVGRectElement>) {
+    const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect();
+    const sx = (e.clientX - r.left) / z.k, sy = (e.clientY - r.top) / z.k;   // souřadnice v nezvětšeném grafu
+    const tv = show('tv') && TV.find((d) => Math.abs(x(d.m) - sx) < 9 && Math.abs(y(d.v) - sy) < 11);
+    if (tv) {
+      setHover(null);
+      setTip({
+        x: x(tv.m), y: y(tv.v),
+        body: <><strong>{tv.t} · {tv.n}</strong><br /><span style={{ color: C.ink2 }}>estimate</span> {fmt(tv.v, 1)}%<br /><span style={{ color: C.ink2 }}>result</span> {fmt(FINAL, 1)}%</>,
+      });
+      return;
+    }
+    const m = ((sx - M.l) / plotW) * X1;
+    if ((!show('model') && !show('count')) || m < PRED[0][0] - 3) { setTip(null); setHover(null); return; }
+    let i = 0;
+    while (i < PRED.length - 1 && PRED[i + 1][0] <= m) i++;
+    const p = PRED[i], c = COUNT[i];
+    const py = y(show('model') ? p[1] : c[1]);
+    setHover({ x: x(p[0]), y: py });
+    setTip({
+      x: x(p[0]), y: py,
+      body: <>
+        <strong>{hhmm(p[0])}</strong> · {fmt(p[2], 1)}% of precincts counted<br />
+        {show('model') && <><span style={{ color: C.model }}>●</span> prediction <strong>{fmt(p[1])}%</strong><br /></>}
+        {show('count') && <><span style={{ color: C.count }}>●</span> running count {fmt(c[1])}%<br /></>}
+        <span style={{ color: C.ink2 }}>result</span> {fmt(FINAL)}%
+      </>,
+    });
+  }
+  const leave = () => { setTip(null); setHover(null); drag.current = null; };
+  function onDown(e: React.PointerEvent<SVGRectElement>) {
+    if (e.pointerType === 'mouse' && zoomed) {
+      drag.current = { x0: e.clientX, y0: e.clientY, tx: z.tx, ty: z.ty };
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } else onMove(e);
+  }
+  function onDragMove(e: React.PointerEvent<SVGRectElement>) {
+    const d = drag.current;
+    if (!d) { onMove(e); return; }
+    setZ(clampZ(z.k, d.tx + e.clientX - d.x0, d.ty + e.clientY - d.y0));
+    setTip(null); setHover(null);
+  }
+
+  // Poloha popisků
+  // svislé linky přesně na pixel (jinak je prohlížeč rozmaže přes dva pixely)
+  const px = (v: number) => Math.round(v) + 0.5;
+  const bracketY = y(5.64);
+  const bandGap = 22;   // odstup svislých popisků ploch od čáry 5 %
+  const tvY = narrow ? 4.5 : 4.6;
+  const countDy = narrow ? 92 : 30;  // odsazení bloku „průběžné sčítání“ pod bodem 20:12   // konec vodicích linek ARD/ZDF 22:13 a 22:20
+  const predLines = narrow
+    ? ['20:12 prediction', 'CDU 4.88%', 'CDU out of parliament']
+    : ['20:12 DataTimes.cz prediction', 'CDU 4.88%', 'the outcome will not change:', 'the CDU will not enter parliament'];
+  const countLines = narrow
+    ? ['running count', 'CDU 4.4%', 'will still rise']
+    : ['running count:', 'CDU 4.4%', 'the figure will still rise as larger towns report'];
+  const bottomY = y(Y0) - (2 * lh + 4);
+
+  return (
+    <div style={{ clear: 'both' }}>
+    <ChartCard title="We knew the result from the start of the count"
+      subtitle="CDU share of second votes (%) • 20–21 September 2026, CEST" source={SOURCE}>
+      <style>{PULSE_CSS}</style>
+      <ChartLegend items={LEGEND} activeKeys={LEGEND.map((l) => l.key).filter((k) => !hidden.has(k as SeriesKey))}
+        onChange={(act) => setHidden(new Set(LEGEND.map((l) => l.key).filter((k) => !act.includes(k)) as SeriesKey[]))} />
+      <div ref={ref} style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
+        {W > 0 && (
+          <svg width={W} height={H} role="img"
+            style={{ display: 'block', overflow: 'visible', transformOrigin: '0 0', transform: `translate(${z.tx}px, ${z.ty}px) scale(${z.k})` }}
+            aria-label="CDU prediction during election night: below the 5% threshold throughout from 19:15, and from 20:12 within 0.01 points of the final result of 4.888%. ARD and ZDF did not show the CDU below 5% until 22:13 and 22:20.">
+            <defs>
+              {/* podklad pod popisky exit pollů, aby je linka 5 % nepřeškrtla */}
+              <filter id="cduTextBg" x="-0.04" y="-0.15" width="1.08" height="1.3">
+                <feFlood floodColor={C.surface} />
+                <feComposite in="SourceGraphic" operator="over" />
+              </filter>
+            </defs>
+            <rect x={L0} y={y(Y1)} width={R0 - L0} height={y(5) - y(Y1)} fill={C.bandIn} />
+            <rect x={L0} y={y(5)} width={R0 - L0} height={y(Y0) - y(5)} fill={C.bandOut} />
+            {yTicks.map((v) => (
+              <g key={v}>
+                {v !== 5 && <line x1={L0} x2={R0} y1={y(v)} y2={y(v)} stroke={C.grid} />}
+                <text x={M.l - 7} y={y(v) + 4} textAnchor="end" style={tick}>{fmt(v, 1)}</text>
+              </g>
+            ))}
+            {xTicks.map((m) => (
+              <g key={m}>
+                <line x1={x(m)} x2={x(m)} y1={H - M.b} y2={H - M.b + 4} stroke={C.count} />
+                <text x={x(m)} y={H - M.b + 18} textAnchor="middle" style={tick}>{hhmm(m)}</text>
+              </g>
+            ))}
+
+            <line x1={L0} x2={R0} y1={y(5)} y2={y(5)} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
+            {narrow ? (
+              <>
+                <text x={R0 - 2} y={y(5) - 6} textAnchor="end" style={labB}>5%</text>
+              </>
+            ) : (
+              <>
+                <text x={R0 + 6} y={y(5) + 4} style={labB}>5%</text>
+                {/* popisky ploch svisle, oba stejně daleko (bandGap) od čáry 5 % */}
+                {([[y(5) - bandGap, 'start', C.inText, 'CDU in parliament'], [y(5) + bandGap, 'end', C.outText, 'CDU out of parliament']] as const).map(([cy, anchor, fill, t]) => (
+                  <text key={t} x={R0 + 36} y={cy} textAnchor={anchor} transform={`rotate(-90 ${R0 + 36} ${cy})`} style={{ ...labB, fill }}>{t}</text>
+                ))}
+              </>
+            )}
+
+            {show('count') && <path d={step(COUNT)} fill="none" stroke={C.count} strokeWidth={2} strokeLinejoin="round" />}
+            {show('model') && <path d={step(PRED)} fill="none" stroke={C.model} strokeWidth={2.5} strokeLinejoin="round" />}
+
+            {/* 19:15 – první záznam: svislá přerušovaná linka až k dolnímu okraji */}
+            {(show('model') || show('count')) && (
+              <line x1={px(x(fX))} x2={px(x(fX))} y1={y(show('model') ? fV : fC) + 5} y2={y(Y0)} stroke={C.beige} strokeWidth={1} strokeDasharray="2 3" />
+            )}
+            <Lines x={x(fX) - 6} y={bottomY} anchor="end" lh={lh} styles={[{ ...labM, fontStyle: 'italic' }]}
+              lines={narrow ? ['waiting for', 'the count'] : ['waiting for the first', 'counted precincts']} />
+            {show('count') && (
+              <>
+                <Lines x={x(fX) + 6} y={bottomY} lh={lh} styles={[{ ...labM, fill: C.beige }]}
+                  lines={narrow ? ['3.8%', '25% of precincts'] : ['running count 3.8%', '(25% of precincts)']} />
+                <Lines x={x(fX) - 8} y={y(fC) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.beige }]}
+                  lines={['running', 'count']} />
+              </>
+            )}
+            {show('model') && (
+              <Lines x={x(fX) - (W < 400 ? 3 : narrow ? 4 : 8)} y={y(fV) - 4} anchor="end" lh={lh} styles={[{ ...labB, fill: C.model, fontSize: W < 400 ? 9.5 : narrow ? 10.5 : labB.fontSize }]}
+                lines={['DataTimes.cz', 'prediction']} />
+            )}
+
+            {/* náskok před ARD – tmavá béžová závorka */}
+            {show('model') && show('tv') && (
+              <>
+                <path d={`M${px(x(aX))},${bracketY + 6}V${bracketY}H${px(x(253))}V${bracketY + 6}`} fill="none" stroke={C.beige} strokeWidth={1.25} />
+                <line x1={px(x(253))} x2={px(x(253))} y1={bracketY + 6} y2={y(4.9) - 8} stroke={C.beige} strokeWidth={1.25} strokeDasharray="2 3" />
+                <text x={(x(aX) + x(253)) / 2} y={bracketY - 7} textAnchor="middle" style={{ ...labB, fill: C.beige }}>{narrow ? '2 h ahead' : '2 h 01 min ahead'}</text>
+              </>
+            )}
+
+            {/* 20:12 – predikce: pulzující kolečko, přerušovaná linka nahoru */}
+            {show('model') && (
+              <>
+                <line x1={px(x(aX))} x2={px(x(aX))} y1={y(aV) - 7} y2={bracketY + 6} stroke={C.model} strokeWidth={1} strokeDasharray="3 3" />
+                <circle className="cdu-pulse" cx={px(x(aX))} cy={y(aV)} r={6} fill={C.model} />
+                <circle cx={px(x(aX))} cy={y(aV)} r={5} fill={C.model} stroke={C.surface} strokeWidth={2} />
+                <Lines x={x(aX) + 8} y={y(5.64) + 22} lh={lh + 1} styles={[{ ...labB, fill: C.model }, { ...labB, fill: C.model }, { ...labM, fill: C.model }]} lines={predLines} />
+              </>
+            )}
+
+            {/* 20:12 – průběžné sčítání */}
+            {show('count') && (
+              <>
+                <circle cx={px(x(aX))} cy={y(aC)} r={4} fill={C.count} stroke={C.surface} strokeWidth={1.5} />
+                <Lines x={x(aX) + 8} y={y(aC) + countDy} lh={lh} styles={[{ ...labB, fill: C.beige }, { ...labB, fill: C.beige }, { ...labM, fill: C.beige }]} lines={countLines} />
+              </>
+            )}
+
+            {show('tv') && (
+              <>
+                {TV.map((d) => (
+                  <circle key={d.n} cx={x(d.m)} cy={y(d.v)} r={5.5} fill={C.tv} stroke={C.surface} strokeWidth={2} />
+                ))}
+                {TV.filter((d) => d.lab).map((d) => (
+                  <text key={d.n} x={x(d.m) + 10} y={y(d.v) + (d.dy ?? 0)} filter="url(#cduTextBg)" style={{ ...lab, fill: C.tvText }}>{narrow ? d.short : d.lab}</text>
+                ))}
+                {/* 22:13 ARD a 22:20 ZDF – každý bod vlastní linka a popisek, pod nimi co odhadují média */}
+                <line x1={px(x(253))} x2={px(x(253))} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
+                <line x1={px(x(260))} x2={px(x(260))} y1={y(4.9) + 7} y2={y(tvY)} stroke={C.tv} strokeDasharray="3 3" />
+                <Lines x={x(253) - 6} y={y(tvY) + 12} anchor="end" lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
+                  lines={narrow ? ['22:13 ARD', '4.9%'] : ['22:13 ARD 4.9%']} />
+                <Lines x={x(260) + 6} y={y(tvY) + 12} lh={lh} styles={[{ ...labB, fill: C.tvText }, { ...lab, fill: C.tvText }]}
+                  lines={narrow ? ['22:20 ZDF', '4.9%'] : ['22:20 ZDF 4.9%']} />
+                <Lines x={(x(253) + x(260)) / 2} y={y(tvY) + 12 + (narrow ? 2 : 1) * lh + 4} anchor="middle" lh={lh} styles={[{ ...labM, fill: C.tvText }]}
+                  lines={narrow ? ['German media first', 'estimate that the CDU', 'will fall short of 5%'] : ['German media first estimate', 'that the CDU will fall short of 5%']} />
+              </>
+            )}
+
+            {hover && (
+              <>
+                <line x1={hover.x} x2={hover.x} y1={M.t} y2={H - M.b} stroke={C.ink} opacity={0.25} />
+                <circle cx={hover.x} cy={hover.y} r={4.5} fill={show('model') ? C.model : C.count} stroke="#fff" strokeWidth={2} />
+              </>
+            )}
+            <rect x={L0 - 8} y={M.t} width={R0 - L0 + 8} height={H - M.t - M.b} fill="transparent"
+              style={{ cursor: zoomed ? (drag.current ? 'grabbing' : 'grab') : 'default', touchAction: 'pan-y' }}
+              onPointerMove={onDragMove} onPointerLeave={leave} onPointerDown={onDown}
+              onPointerUp={() => { drag.current = null; }} onDoubleClick={resetZoom} />
+          </svg>
+        )}
+        <Tooltip tip={tip && { ...tip, x: tip.x * z.k + z.tx, y: tip.y * z.k + z.ty }} width={W} />
+        {zoomed && (
+          <button type="button" onClick={resetZoom}
+            style={{ position: 'absolute', top: 6, left: 6, border: `1px solid ${C.ink}`, background: C.surface, borderRadius: 4, padding: '2px 8px', fontFamily: FONT, fontSize: 12.5, color: C.ink, cursor: 'pointer', zIndex: 3 }}>
+            Reset zoom
+          </button>
+        )}
+      </div>
+      <p style={{ fontFamily: FONT, fontSize: 15, lineHeight: 1.5, color: C.beige, margin: '10px 0 0' }}>
+        None of the 116 updates of the DataTimes.cz prediction put the CDU above the 5% threshold. The public broadcasters first moved it below the line only at 22:13.
+      </p>
+    </ChartCard>
+    </div>
+  );
+}
+
+const ROWS = [
+  { t: '18:00', n: 'ARD exit poll', v: 5.5, m: false },
+  { t: '18:00', n: 'ZDF exit poll', v: 5.0, m: false },
+  { t: '18:27', n: 'Forschungsgruppe Wahlen', v: 5.1, m: false },
+  { t: '19:15', n: 'DataTimes prediction', v: 4.46, m: true, note: '25% of precincts' },
+  { t: '20:00', n: 'DataTimes prediction', v: 4.779, m: true, note: '65% of precincts' },
+  { t: '20:12', n: 'DataTimes prediction', v: 4.879, m: true, note: '72% of precincts' },
+  { t: '22:13', n: 'ARD projection', v: 4.9, m: false },
+  { t: '22:20', n: 'ZDF projection', v: 4.9, m: false },
+];
+
+export function CduThresholdDotsEn() {
+  const [ref, W] = useWidth<HTMLDivElement>();
+  const [tip, setTip] = useState<Tip>(null);
+  const narrow = W < 600;
+  const L = narrow ? 8 : 220, R = 16, T = 30;
+  const rowH = narrow ? 46 : 34;
+  const A = 4.3, B = 5.6;
+  const x = (v: number) => L + ((v - A) / (B - A)) * (W - L - R);
+  const H = T + ROWS.length * rowH + 30;
+  const bottom = T + ROWS.length * rowH - 4;
+  const lab = { fontSize: narrow ? 12 : 12.5, fill: C.ink, fontFamily: FONT };
+  const labM = { ...lab, fontSize: 12 };
+  const ticks = narrow ? [4.4, 4.8, 5.2, 5.6] : [4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6];
+
+  return (
+    <div style={{ clear: 'both' }}>
+    <ChartCard title="What mattered was the side of the line, not the decimal"
+      subtitle="Estimates of the CDU share (%) against the final result of 4.888% • 20–21 September 2026" source={SOURCE}>
+    <div ref={ref} style={{ position: 'relative', width: '100%' }}>
+      {W > 0 && (
+        <svg width={W} height={H} style={{ display: 'block', overflow: 'visible' }} role="img"
+          aria-label="CDU estimates against the final result of 4.888%: the first three ARD and ZDF estimates were at or above the 5% threshold, all DataTimes predictions below it.">
+          <rect x={x(A)} y={T - 10} width={x(5) - x(A)} height={bottom - T + 10} fill={C.bandOut} />
+          <rect x={x(5)} y={T - 10} width={x(B) - x(5)} height={bottom - T + 10} fill={C.bandIn} />
+          <text x={x(5) + 8} y={T - 16} style={{ ...labM, fontWeight: 600, fill: C.inText }}>CDU in parliament →</text>
+          <text x={x(5) - 8} y={T - 16} textAnchor="end" style={{ ...labM, fontWeight: 600, fill: C.outText }}>← CDU out of parliament</text>
+          {ticks.map((v) => (
+            <g key={v}>
+              {v !== 5 && <line x1={x(v)} x2={x(v)} y1={T - 10} y2={bottom} stroke={C.grid} />}
+              <text x={x(v)} y={bottom + 18} textAnchor="middle" style={{ fontSize: 11.5, fill: C.ink, fontFamily: FONT }}>{fmt(v, 1)}%</text>
+            </g>
+          ))}
+          <line x1={x(5)} x2={x(5)} y1={T - 10} y2={bottom} stroke={C.ink} strokeWidth={1.5} strokeDasharray="6 4" />
+          <line x1={Math.round(x(FINAL)) + 0.5} x2={Math.round(x(FINAL)) + 0.5} y1={T - 10} y2={bottom} stroke={C.beige} strokeWidth={0.75} strokeDasharray="2 3" />
+          {ROWS.map((d, i) => {
+            const cy = T + i * rowH + rowH / 2 + (narrow ? 4 : -6);
+            const col = d.m ? C.model : C.tv;
+            const wrong = d.v >= 5;
+            const dec = d.m ? 2 : 1;
+            const showTip = () => setTip({
+              x: x(d.v), y: cy,
+              body: <><strong>{d.t} · {d.n}</strong><br />estimate {fmt(d.v, dec)}%{d.note ? ` · ${d.note}` : ''}<br />
+                <span style={{ color: C.ink2 }}>result</span> {fmt(FINAL, dec)}%<br />
+                {wrong ? 'CDU would enter parliament – wrong conclusion' : 'CDU out of parliament – correct conclusion'}</>,
+            });
+            return (
+              <g key={i}>
+                <text x={narrow ? L : 0} y={narrow ? cy - 12 : cy + 4} style={{ ...lab, fontWeight: d.m ? 600 : 400, fill: d.m ? C.model : C.tvText }}>{d.t}  {d.n}</text>
+                <line x1={x(FINAL)} x2={x(d.v)} y1={cy} y2={cy} stroke={col} strokeWidth={2} opacity={0.5} />
+                <circle cx={x(d.v)} cy={cy} r={6} fill={col} stroke={C.surface} strokeWidth={2} />
+                <rect x={0} y={cy - rowH / 2 - (narrow ? 8 : 0)} width={W} height={rowH} fill="transparent"
+                  onPointerMove={showTip} onPointerDown={showTip} onPointerLeave={() => setTip(null)} />
+              </g>
+            );
+          })}
+        </svg>
+      )}
+      <Tooltip tip={tip} width={W} />
+    </div>
+    </ChartCard>
+    </div>
+  );
+}

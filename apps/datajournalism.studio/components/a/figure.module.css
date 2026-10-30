@@ -1,0 +1,155 @@
+/* Floated photo that bleeds out of the reading column on its outer edge.
+   The inner edge sits inside the text column and the running text wraps
+   around it; the outer edge extends into the page margin (negative margin).
+   On mobile it becomes a normal full-width block. */
+
+/* Spacing = shared bleed standard (apps/web globals.css :root): equal visual gap
+   above, beside and below; top aligns with the next paragraph's first line. */
+.right,
+.left {
+  width: var(--dt-bleed-width, 48%);
+  margin-top: 0;
+  margin-bottom: var(--dt-bleed-gap-y, 0.95rem);
+}
+/* Placed mid-paragraph: keep the same gap to the text line above. */
+:global(.mantine-Text-root) > .right,
+:global(.mantine-Text-root) > .left {
+  margin-top: var(--dt-bleed-gap-y, 0.95rem);
+}
+
+/* `clear` on the same side: two photos on one side stack under each other
+   instead of squeezing the text between them. */
+.right {
+  float: right;
+  clear: right;
+  margin-left: var(--dt-bleed-gap, 1.25rem);
+  margin-right: var(--dt-bleed-pull, -12%); /* bleed into the right-hand margin */
+}
+
+.left {
+  float: left;
+  clear: left;
+  margin-right: var(--dt-bleed-gap, 1.25rem);
+  margin-left: var(--dt-bleed-pull, -12%); /* bleed into the left-hand margin */
+}
+
+/* Centered, non-floated variant – good for tall/portrait visuals that would
+   crowd the reading column as a side float. */
+.center {
+  display: block;
+  max-width: 420px;
+  margin: 1.25rem auto 1.5rem;
+}
+.center .caption {
+  text-align: center;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  cursor: zoom-in;
+}
+
+/* Full-screen lightbox for reading photo details. Deliberately dark in both
+   themes, as is conventional for a photo viewer. */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5vmin;
+  background: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+/* Shrink-wraps the photo so the caption strip spans exactly the image width. */
+.lightboxFrame {
+  position: relative;
+  display: inline-block;
+  max-width: 96vw;
+  max-height: 96vh;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightboxImg {
+  display: block;
+  max-width: 96vw;
+  max-height: 96vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+/* Caption laid over the bottom of the photo: background.2 (#f8f6f0) text on a
+   translucent ink-blue strip (brandNavy.9 #101432) so the photo shows through. */
+.lightboxCaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.7rem 1.1rem 0.8rem;
+  background: rgba(16, 20, 50, 0.72);
+  color: #f8f6f0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-style: italic;
+}
+.lightboxCaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lightboxClose {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.lightboxClose svg {
+  display: block;
+}
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.26);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.lightboxClose:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.caption {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--mantine-color-dimmed);
+}
+.caption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .right,
+  .left {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

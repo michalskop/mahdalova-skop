@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "More than half of voters named housing as Berlin's main problem",
+    "subtitle": "The city's most important problems according to voters (% of respondents, multiple answers possible)"
+  },
+  "width": 600,
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "k": "Housing and rents",
+        "v": 53,
+        "o": 1
+      },
+      {
+        "k": "Transport",
+        "v": 23,
+        "o": 2
+      },
+      {
+        "k": "Crime",
+        "v": 19,
+        "o": 3
+      },
+      {
+        "k": "Litter and cleanliness",
+        "v": 16,
+        "o": 4
+      },
+      {
+        "k": "Prices and wages",
+        "v": 12,
+        "o": 5
+      },
+      {
+        "k": "Schools and education",
+        "v": 11,
+        "o": 6
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "k",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          60
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 22
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.o == 1",
+            "value": "#9f319e"
+          },
+          "value": "#a6b0d4"
+        },
+        "tooltip": [
+          {
+            "field": "k",
+            "type": "nominal",
+            "title": "Problem"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Share of voters (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#272a59"
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen for ZDF, graphic “Die wichtigsten Probleme”, 21 September 2026, 00:37; the total exceeds 100% because respondents could name more than one problem"
+}

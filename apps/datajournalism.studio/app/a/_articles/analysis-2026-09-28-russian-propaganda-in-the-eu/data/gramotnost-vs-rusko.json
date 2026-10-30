@@ -1,0 +1,478 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Where people are less resilient to disinformation, they think better of Russia",
+  "subtitle": "Horizontal: Media Literacy Index 2026 (0–100, higher = more resilient to disinformation). Vertical: share of people with a positive view of Russia (%, spring 2026). Each dot is one EU country."
+ },
+ "width": "container",
+ "height": 420,
+ "data": {
+  "values": [
+   {
+    "kod": "BE",
+    "zeme": "Belgium",
+    "mli": 60,
+    "rusko": 11,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "60 out of 100",
+    "t_rusko": "11%"
+   },
+   {
+    "kod": "BG",
+    "zeme": "Bulgaria",
+    "mli": 32,
+    "rusko": 46,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "32 out of 100",
+    "t_rusko": "46%"
+   },
+   {
+    "kod": "CZ",
+    "zeme": "Czechia",
+    "mli": 59,
+    "rusko": 15,
+    "cz": true,
+    "lab": true,
+    "labl": false,
+    "t_mli": "59 out of 100",
+    "t_rusko": "15%"
+   },
+   {
+    "kod": "DK",
+    "zeme": "Denmark",
+    "mli": 71,
+    "rusko": 2,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "71 out of 100",
+    "t_rusko": "2%"
+   },
+   {
+    "kod": "DE",
+    "zeme": "Germany",
+    "mli": 62,
+    "rusko": 11,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "62 out of 100",
+    "t_rusko": "11%"
+   },
+   {
+    "kod": "EE",
+    "zeme": "Estonia",
+    "mli": 69,
+    "rusko": 20,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "69 out of 100",
+    "t_rusko": "20%"
+   },
+   {
+    "kod": "IE",
+    "zeme": "Ireland",
+    "mli": 71,
+    "rusko": 8,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "71 out of 100",
+    "t_rusko": "8%"
+   },
+   {
+    "kod": "EL",
+    "zeme": "Greece",
+    "mli": 37,
+    "rusko": 40,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "37 out of 100",
+    "t_rusko": "40%"
+   },
+   {
+    "kod": "ES",
+    "zeme": "Spain",
+    "mli": 57,
+    "rusko": 10,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "57 out of 100",
+    "t_rusko": "10%"
+   },
+   {
+    "kod": "FR",
+    "zeme": "France",
+    "mli": 55,
+    "rusko": 16,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "55 out of 100",
+    "t_rusko": "16%"
+   },
+   {
+    "kod": "HR",
+    "zeme": "Croatia",
+    "mli": 47,
+    "rusko": 15,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "47 out of 100",
+    "t_rusko": "15%"
+   },
+   {
+    "kod": "IT",
+    "zeme": "Italy",
+    "mli": 51,
+    "rusko": 16,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "51 out of 100",
+    "t_rusko": "16%"
+   },
+   {
+    "kod": "CY",
+    "zeme": "Cyprus",
+    "mli": 33,
+    "rusko": 45,
+    "cz": false,
+    "lab": false,
+    "labl": true,
+    "t_mli": "33 out of 100",
+    "t_rusko": "45%"
+   },
+   {
+    "kod": "LV",
+    "zeme": "Latvia",
+    "mli": 57,
+    "rusko": 19,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "57 out of 100",
+    "t_rusko": "19%"
+   },
+   {
+    "kod": "LT",
+    "zeme": "Lithuania",
+    "mli": 58,
+    "rusko": 9,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "58 out of 100",
+    "t_rusko": "9%"
+   },
+   {
+    "kod": "LU",
+    "zeme": "Luxembourg",
+    "mli": 52,
+    "rusko": 14,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "52 out of 100",
+    "t_rusko": "14%"
+   },
+   {
+    "kod": "HU",
+    "zeme": "Hungary",
+    "mli": 43,
+    "rusko": 26,
+    "cz": false,
+    "lab": false,
+    "labl": true,
+    "t_mli": "43 out of 100",
+    "t_rusko": "26%"
+   },
+   {
+    "kod": "MT",
+    "zeme": "Malta",
+    "mli": 40,
+    "rusko": 12,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "40 out of 100",
+    "t_rusko": "12%"
+   },
+   {
+    "kod": "NL",
+    "zeme": "Netherlands",
+    "mli": 71,
+    "rusko": 7,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "71 out of 100",
+    "t_rusko": "7%"
+   },
+   {
+    "kod": "AT",
+    "zeme": "Austria",
+    "mli": 61,
+    "rusko": 23,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "61 out of 100",
+    "t_rusko": "23%"
+   },
+   {
+    "kod": "PL",
+    "zeme": "Poland",
+    "mli": 54,
+    "rusko": 9,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "54 out of 100",
+    "t_rusko": "9%"
+   },
+   {
+    "kod": "PT",
+    "zeme": "Portugal",
+    "mli": 57,
+    "rusko": 4,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "57 out of 100",
+    "t_rusko": "4%"
+   },
+   {
+    "kod": "RO",
+    "zeme": "Romania",
+    "mli": 37,
+    "rusko": 28,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "37 out of 100",
+    "t_rusko": "28%"
+   },
+   {
+    "kod": "SI",
+    "zeme": "Slovenia",
+    "mli": 54,
+    "rusko": 25,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "54 out of 100",
+    "t_rusko": "25%"
+   },
+   {
+    "kod": "SK",
+    "zeme": "Slovakia",
+    "mli": 47,
+    "rusko": 27,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "47 out of 100",
+    "t_rusko": "27%"
+   },
+   {
+    "kod": "FI",
+    "zeme": "Finland",
+    "mli": 71,
+    "rusko": 2,
+    "cz": false,
+    "lab": true,
+    "labl": false,
+    "t_mli": "71 out of 100",
+    "t_rusko": "2%"
+   },
+   {
+    "kod": "SE",
+    "zeme": "Sweden",
+    "mli": 68,
+    "rusko": 3,
+    "cz": false,
+    "lab": false,
+    "labl": false,
+    "t_mli": "68 out of 100",
+    "t_rusko": "3%"
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "mli",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     28,
+     74
+    ]
+   },
+   "axis": {
+    "title": "Media Literacy Index 2026",
+    "grid": true,
+    "values": [
+     30,
+     40,
+     50,
+     60,
+     70
+    ]
+   }
+  },
+  "y": {
+   "field": "rusko",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     0,
+     50
+    ]
+   },
+   "axis": {
+    "title": "Positive view of Russia (%)",
+    "grid": true,
+    "values": [
+     0,
+     10,
+     20,
+     30,
+     40,
+     50
+    ]
+   }
+  }
+ },
+ "layer": [
+  {
+   "transform": [
+    {
+     "regression": "rusko",
+     "on": "mli"
+    }
+   ],
+   "mark": {
+    "type": "line",
+    "color": "#bcbcb0",
+    "strokeDash": [
+     5,
+     4
+    ],
+    "strokeWidth": 1.8
+   }
+  },
+  {
+   "params": [
+    {
+     "name": "hov",
+     "select": {
+      "type": "point",
+      "fields": [
+       "kod"
+      ],
+      "on": "pointerover",
+      "clear": "pointerout"
+     }
+    }
+   ],
+   "mark": {
+    "type": "circle",
+    "cursor": "pointer"
+   },
+   "encoding": {
+    "size": {
+     "condition": {
+      "param": "hov",
+      "empty": false,
+      "value": 220
+     },
+     "value": 110
+    },
+    "color": {
+     "condition": {
+      "test": "datum.cz",
+      "value": "#de1743"
+     },
+     "value": "#101432"
+    },
+    "opacity": {
+     "condition": {
+      "test": "datum.cz",
+      "value": 1
+     },
+     "value": 0.75
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Country"
+     },
+     {
+      "field": "t_rusko",
+      "title": "Positive view of Russia"
+     },
+     {
+      "field": "t_mli",
+      "title": "Media Literacy Index"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.lab"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 8,
+    "dy": -7,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "text": {
+     "field": "zeme"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.cz",
+      "value": "#de1743"
+     },
+     "value": "#333333"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.labl"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -8,
+    "dy": 7,
+    "fontWeight": 700,
+    "color": "#333333"
+   },
+   "encoding": {
+    "text": {
+     "field": "zeme"
+    }
+   }
+  }
+ ],
+ "_source": "[Media Literacy Index 2026, Open Society Institute Sofia](https://osis.bg/?p=5747&lang=en); [Standard Eurobarometer 105, spring 2026](https://europa.eu/eurobarometer/surveys/detail/3613)"
+}

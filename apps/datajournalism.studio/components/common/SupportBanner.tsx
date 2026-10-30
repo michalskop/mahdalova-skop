@@ -1,0 +1,85 @@
+'use client';
+
+export const SUPPORT_URL = 'https://www.datatimes.cz/podporte-nas';
+
+export default function SupportBanner({ float }: { float?: 'left' | 'right' } = {}) {
+  // `float` = the bleeding half-width variant placed inside a text paragraph;
+  // it floats and bleeds out of the reading column exactly like <Figure> (shared
+  // --dt-bleed-* tokens) and stacks vertically so brand + text + CTA fit the
+  // narrow width. Without `float` it is the full-width strip (end of article /
+  // special landing pages). CSS: app/support-banner.css (ported from apps/datatimes-org globals.css).
+  const outerClass = float
+    ? `dt-support-outer dt-support-float dt-support-float--${float}`
+    : 'dt-support-outer';
+  return (
+    <div className={outerClass} style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
+      <a
+        href={SUPPORT_URL}
+        aria-label="Support DataTimes"
+        className={float ? 'dt-support-banner dt-support-banner--compact' : 'dt-support-banner'}
+        onMouseEnter={e => (e.currentTarget.style.filter = 'brightness(1.05)')}
+        onMouseLeave={e => (e.currentTarget.style.filter = '')}
+      >
+        {/* top gradient line */}
+        <span style={{
+          position: 'absolute', top: 0, left: 0, width: '100%', height: 3,
+          background: 'linear-gradient(to right, #de1743 0%, #f76800 52%, #ffcf02 100%)',
+        }} />
+        {/* bottom gradient line */}
+        <span style={{
+          position: 'absolute', bottom: 0, left: 0, width: '100%', height: 3,
+          background: 'linear-gradient(to right, #ffcf02 0%, #f76800 48%, #de1743 100%)',
+        }} />
+
+        {/* Brand */}
+        <div className="dt-support-brand" style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="112 112 276 276" aria-hidden="true" style={{ display: 'block', width: 26, height: 26, flexShrink: 0 }}>
+            <defs>
+              <linearGradient id="dtSupportG" x1="1" x2=".25" y1=".5" y2="1">
+                <stop offset="0%" stopColor="#ffcf02" stopOpacity="0" />
+                <stop offset="50%" stopColor="#ffcf02" stopOpacity="0" />
+                <stop offset="50%" stopColor="#ffcf02" stopOpacity="1" />
+                <stop offset="100%" stopColor="#ffcf02" stopOpacity="1" />
+              </linearGradient>
+            </defs>
+            <g transform="rotate(-30 250 250)">
+              <path fill="none" stroke="#ffcf02" strokeWidth="76" strokeLinecap="round" d="M250 350 A100 100 0 0 0 336.60254 300" />
+              <path fill="none" stroke="#f76800" strokeWidth="76" strokeLinecap="round" d="M336.60254 300 A100 100 0 0 0 250 150" />
+              <path fill="none" stroke="#de1743" strokeWidth="76" strokeLinecap="round" d="M250 150 A100 100 0 0 0 250 350" />
+              <path fill="none" stroke="url(#dtSupportG)" strokeWidth="76" strokeLinecap="round" d="M250 350 A100 100 0 0 0 336.60254 300" />
+            </g>
+          </svg>
+          <p style={{ margin: 0, fontFamily: "'Roboto Slab', serif", fontSize: 18, fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+            <span style={{ color: '#de1743' }}>Data</span><span style={{ color: '#ffcf02' }}>Times</span>
+          </p>
+        </div>
+
+        {/* Text wraps naturally; the bleeding (float) variant sets it as a
+            justified block (see .dt-support-banner--compact). */}
+        <p className="dt-support-text" lang="en" style={{ flex: '1 1 auto', margin: 0, color: '#ffffff', fontSize: 13.5, fontWeight: 400, lineHeight: 1.35, hyphens: 'auto' }}>
+          Public debate and politics are flooded with nonsense, fake news and propaganda. Help us spread verified facts and find the context. Independent data journalism from Central Europe, funded by its readers.
+        </p>
+
+        {/* CTA */}
+        <span className="dt-support-cta" style={{
+          flex: '0 0 auto',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '10px 22px',
+          background: '#f01952',
+          color: '#ffffff',
+          fontFamily: "'Roboto Slab', serif",
+          fontSize: 16,
+          fontWeight: 700,
+          lineHeight: 1,
+          whiteSpace: 'nowrap',
+          borderRadius: 999,
+        }}>
+          Support DataTimes
+        </span>
+      </a>
+
+    </div>
+  );
+}

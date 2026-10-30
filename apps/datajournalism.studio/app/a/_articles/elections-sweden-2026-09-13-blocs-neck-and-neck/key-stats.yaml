@@ -1,0 +1,14 @@
+label: Key numbers
+numbers:
+  - value: "175 : 174"
+    title: Closest seat estimate
+    description: According to the Ipsos poll (7–10 September), a single seat out of 349 separates the opposition red-green bloc from the governing Tidö bloc.
+    color: brand
+  - value: "0"
+    title: SD seats in government so far
+    description: Since entering the Riksdag in 2010, the nationalist Sweden Democrats have always stayed outside the cabinet. This year that could change for the first time if the Tidö bloc wins.
+    color: brandNavy
+  - value: "0.5 pp"
+    title: The Liberals' margin above the threshold
+    description: In the five most recent polls, the Liberals range from 4.5% to 5.5% – closest with the Infostat agency, just half a point above the 4% threshold for entering the Riksdag.
+    color: brandOrange

@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/images/cover-homepage.png",
+      "otisk": "552ec4bb5de00c2b",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/cover.config.cjs": "c1e13f3962747d63",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/motiv-homepage.svg": "735433c4ce793a5b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/images/cover-og.jpg",
+      "otisk": "5857665103c8e235",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/cover.config.cjs": "c1e13f3962747d63",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/motiv-og.svg": "655ac9bfc7c6925c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/images/cover-square.png",
+      "otisk": "3ef7ebad48ae8ce8",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/cover.config.cjs": "c1e13f3962747d63",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/motiv-square.svg": "361419914d96cdce"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/images/cover-instagram.png",
+      "otisk": "9bf7ef548d697da8",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/cover.config.cjs": "c1e13f3962747d63",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/motiv-instagram.svg": "5b778736847fa04a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/images/cover-story.png",
+      "otisk": "70bb5d98ed42257e",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/cover.config.cjs": "c1e13f3962747d63",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/motiv-story.svg": "ca8bd349815f629b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T13:13:20.205Z",
+  "clanek": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-28-arab-parties-hold-the-key/index.md",
+  "titulekClanku": "Without the Arab parties, neither Netanyahu nor Eisenkot has a majority in Israel's parliament",
+  "texty": {
+    "stitek": "Analysis • Israel election",
+    "nadtitulek": "",
+    "titulek": "No majority without the Arab parties",
+    "podtitulek": "Turnout in Arab towns reached 80%, up from 53% four years ago"
+  }
+}

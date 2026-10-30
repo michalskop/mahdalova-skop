@@ -1,0 +1,505 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "In Slovakia and Bulgaria, fewer than half blame {Russia|#f76800} for the war, a third point to {the West|#101432}",
+  "subtitle": "Who is mainly responsible for the war in Ukraine? Share of answers in Central and Eastern European countries (%, 2023). Hover over a country."
+ },
+ "_toggle_legend": true,
+ "width": "container",
+ "height": 330,
+ "data": {
+  "values": [
+   {
+    "zeme": "Poland",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 85,
+    "t_rusko": "85%",
+    "t_zapad": "4%",
+    "t_ukrajina": "3%",
+    "t_jine": "8%",
+    "t_nerusko": "7%"
+   },
+   {
+    "zeme": "Poland",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 4,
+    "t_rusko": "85%",
+    "t_zapad": "4%",
+    "t_ukrajina": "3%",
+    "t_jine": "8%",
+    "t_nerusko": "7%"
+   },
+   {
+    "zeme": "Poland",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 3,
+    "t_rusko": "85%",
+    "t_zapad": "4%",
+    "t_ukrajina": "3%",
+    "t_jine": "8%",
+    "t_nerusko": "7%"
+   },
+   {
+    "zeme": "Poland",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 8,
+    "t_rusko": "85%",
+    "t_zapad": "4%",
+    "t_ukrajina": "3%",
+    "t_jine": "8%",
+    "t_nerusko": "7%"
+   },
+   {
+    "zeme": "Lithuania",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 79,
+    "t_rusko": "79%",
+    "t_zapad": "7%",
+    "t_ukrajina": "3%",
+    "t_jine": "11%",
+    "t_nerusko": "10%"
+   },
+   {
+    "zeme": "Lithuania",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 7,
+    "t_rusko": "79%",
+    "t_zapad": "7%",
+    "t_ukrajina": "3%",
+    "t_jine": "11%",
+    "t_nerusko": "10%"
+   },
+   {
+    "zeme": "Lithuania",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 3,
+    "t_rusko": "79%",
+    "t_zapad": "7%",
+    "t_ukrajina": "3%",
+    "t_jine": "11%",
+    "t_nerusko": "10%"
+   },
+   {
+    "zeme": "Lithuania",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 11,
+    "t_rusko": "79%",
+    "t_zapad": "7%",
+    "t_ukrajina": "3%",
+    "t_jine": "11%",
+    "t_nerusko": "10%"
+   },
+   {
+    "zeme": "Latvia",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 74,
+    "t_rusko": "74%",
+    "t_zapad": "13%",
+    "t_ukrajina": "3%",
+    "t_jine": "10%",
+    "t_nerusko": "16%"
+   },
+   {
+    "zeme": "Latvia",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 13,
+    "t_rusko": "74%",
+    "t_zapad": "13%",
+    "t_ukrajina": "3%",
+    "t_jine": "10%",
+    "t_nerusko": "16%"
+   },
+   {
+    "zeme": "Latvia",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 3,
+    "t_rusko": "74%",
+    "t_zapad": "13%",
+    "t_ukrajina": "3%",
+    "t_jine": "10%",
+    "t_nerusko": "16%"
+   },
+   {
+    "zeme": "Latvia",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 10,
+    "t_rusko": "74%",
+    "t_zapad": "13%",
+    "t_ukrajina": "3%",
+    "t_jine": "10%",
+    "t_nerusko": "16%"
+   },
+   {
+    "zeme": "Czechia",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 71,
+    "t_rusko": "71%",
+    "t_zapad": "15%",
+    "t_ukrajina": "8%",
+    "t_jine": "6%",
+    "t_nerusko": "23%"
+   },
+   {
+    "zeme": "Czechia",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 15,
+    "t_rusko": "71%",
+    "t_zapad": "15%",
+    "t_ukrajina": "8%",
+    "t_jine": "6%",
+    "t_nerusko": "23%"
+   },
+   {
+    "zeme": "Czechia",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 8,
+    "t_rusko": "71%",
+    "t_zapad": "15%",
+    "t_ukrajina": "8%",
+    "t_jine": "6%",
+    "t_nerusko": "23%"
+   },
+   {
+    "zeme": "Czechia",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 6,
+    "t_rusko": "71%",
+    "t_zapad": "15%",
+    "t_ukrajina": "8%",
+    "t_jine": "6%",
+    "t_nerusko": "23%"
+   },
+   {
+    "zeme": "Romania",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 65,
+    "t_rusko": "65%",
+    "t_zapad": "21%",
+    "t_ukrajina": "10%",
+    "t_jine": "4%",
+    "t_nerusko": "31%"
+   },
+   {
+    "zeme": "Romania",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 21,
+    "t_rusko": "65%",
+    "t_zapad": "21%",
+    "t_ukrajina": "10%",
+    "t_jine": "4%",
+    "t_nerusko": "31%"
+   },
+   {
+    "zeme": "Romania",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 10,
+    "t_rusko": "65%",
+    "t_zapad": "21%",
+    "t_ukrajina": "10%",
+    "t_jine": "4%",
+    "t_nerusko": "31%"
+   },
+   {
+    "zeme": "Romania",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 4,
+    "t_rusko": "65%",
+    "t_zapad": "21%",
+    "t_ukrajina": "10%",
+    "t_jine": "4%",
+    "t_nerusko": "31%"
+   },
+   {
+    "zeme": "Hungary",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 54,
+    "t_rusko": "54%",
+    "t_zapad": "19%",
+    "t_ukrajina": "16%",
+    "t_jine": "11%",
+    "t_nerusko": "35%"
+   },
+   {
+    "zeme": "Hungary",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 19,
+    "t_rusko": "54%",
+    "t_zapad": "19%",
+    "t_ukrajina": "16%",
+    "t_jine": "11%",
+    "t_nerusko": "35%"
+   },
+   {
+    "zeme": "Hungary",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 16,
+    "t_rusko": "54%",
+    "t_zapad": "19%",
+    "t_ukrajina": "16%",
+    "t_jine": "11%",
+    "t_nerusko": "35%"
+   },
+   {
+    "zeme": "Hungary",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 11,
+    "t_rusko": "54%",
+    "t_zapad": "19%",
+    "t_ukrajina": "16%",
+    "t_jine": "11%",
+    "t_nerusko": "35%"
+   },
+   {
+    "zeme": "Bulgaria",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 44,
+    "t_rusko": "44%",
+    "t_zapad": "32%",
+    "t_ukrajina": "15%",
+    "t_jine": "9%",
+    "t_nerusko": "47%"
+   },
+   {
+    "zeme": "Bulgaria",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 32,
+    "t_rusko": "44%",
+    "t_zapad": "32%",
+    "t_ukrajina": "15%",
+    "t_jine": "9%",
+    "t_nerusko": "47%"
+   },
+   {
+    "zeme": "Bulgaria",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 15,
+    "t_rusko": "44%",
+    "t_zapad": "32%",
+    "t_ukrajina": "15%",
+    "t_jine": "9%",
+    "t_nerusko": "47%"
+   },
+   {
+    "zeme": "Bulgaria",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 9,
+    "t_rusko": "44%",
+    "t_zapad": "32%",
+    "t_ukrajina": "15%",
+    "t_jine": "9%",
+    "t_nerusko": "47%"
+   },
+   {
+    "zeme": "Slovakia",
+    "kat": "Russia",
+    "poradi": 0,
+    "hodnota": 40,
+    "t_rusko": "40%",
+    "t_zapad": "34%",
+    "t_ukrajina": "17%",
+    "t_jine": "9%",
+    "t_nerusko": "51%"
+   },
+   {
+    "zeme": "Slovakia",
+    "kat": "The West",
+    "poradi": 1,
+    "hodnota": 34,
+    "t_rusko": "40%",
+    "t_zapad": "34%",
+    "t_ukrajina": "17%",
+    "t_jine": "9%",
+    "t_nerusko": "51%"
+   },
+   {
+    "zeme": "Slovakia",
+    "kat": "Ukraine",
+    "poradi": 2,
+    "hodnota": 17,
+    "t_rusko": "40%",
+    "t_zapad": "34%",
+    "t_ukrajina": "17%",
+    "t_jine": "9%",
+    "t_nerusko": "51%"
+   },
+   {
+    "zeme": "Slovakia",
+    "kat": "Other answer, don't know",
+    "poradi": 3,
+    "hodnota": 9,
+    "t_rusko": "40%",
+    "t_zapad": "34%",
+    "t_ukrajina": "17%",
+    "t_jine": "9%",
+    "t_nerusko": "51%"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "zeme",
+   "type": "nominal",
+   "sort": [
+    "Poland",
+    "Lithuania",
+    "Latvia",
+    "Czechia",
+    "Romania",
+    "Hungary",
+    "Bulgaria",
+    "Slovakia"
+   ],
+   "axis": {
+    "title": null,
+    "domain": false,
+    "ticks": false,
+    "labelLimit": 120
+   },
+   "scale": {
+    "paddingInner": 0.25
+   }
+  },
+  "x": {
+   "field": "hodnota",
+   "type": "quantitative",
+   "stack": "zero",
+   "scale": {
+    "domain": [
+     0,
+     100
+    ]
+   },
+   "axis": {
+    "title": null,
+    "values": [
+     0,
+     25,
+     50,
+     75,
+     100
+    ],
+    "grid": true,
+    "labelExpr": "datum.value + '%'"
+   }
+  },
+  "order": {
+   "field": "poradi",
+   "type": "quantitative"
+  },
+  "color": {
+   "field": "kat",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "Russia",
+     "The West",
+     "Ukraine",
+     "Other answer, don't know"
+    ],
+    "range": [
+     "#f76800",
+     "#101432",
+     "#ffcf02",
+     "#d4d4c8"
+    ]
+   },
+   "legend": null
+  },
+  "tooltip": [
+   {
+    "field": "zeme",
+    "title": "Country"
+   },
+   {
+    "field": "t_rusko",
+    "title": "Blame Russia"
+   },
+   {
+    "field": "t_zapad",
+    "title": "Blame the West"
+   },
+   {
+    "field": "t_ukrajina",
+    "title": "Blame Ukraine"
+   },
+   {
+    "field": "t_nerusko",
+    "title": "The West + Ukraine"
+   },
+   {
+    "field": "t_jine",
+    "title": "Other answer, don't know"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "stroke": "#f8f6f0",
+    "strokeWidth": 1
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.hodnota >= 7"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "fontWeight": 700,
+    "align": "center",
+    "baseline": "middle"
+   },
+   "encoding": {
+    "x": {
+     "field": "hodnota",
+     "type": "quantitative",
+     "stack": "zero",
+     "bandPosition": 0.5
+    },
+    "text": {
+     "field": "hodnota",
+     "type": "quantitative"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.kat === 'The West'",
+      "value": "#ffffff"
+     },
+     "value": "#1a1a1a"
+    }
+   }
+  }
+ ],
+ "_source": "[GLOBSEC Trends 2023](https://www.globsec.org/what-we-do/publications/globsec-trends-2023-united-we-still-stand), representative survey, 1,000 respondents in each country, March 2023"
+}

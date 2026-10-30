@@ -1,0 +1,14 @@
+label: Victim blaming in numbers
+numbers:
+  - value: "32%"
+    title: of Czechs shift part of the blame onto the victim if she was drunk
+    description: 32 per cent of Czechs believe that a woman who became a victim of sexual violence while under the influence of alcohol or drugs is at least partly responsible. The EU average is 16 per cent (Eurobarometer 2024).
+    color: brand
+  - value: "70%"
+    title: of rape victims are unable to resist during the attack
+    description: The body reacts to a threat on its own. Marked freezing (tonic immobility), in which a person can neither move nor scream, was experienced during the attack by 70 per cent of 298 women in a Swedish study from 2017.
+    color: brandNavy
+  - value: "76%"
+    title: of victims of intimate partner homicide are women
+    description: Between 2015 and 2024, a current or former partner killed 109 women and 35 men in Czechia (Eurostat, excluding 2018).
+    color: brandOrange

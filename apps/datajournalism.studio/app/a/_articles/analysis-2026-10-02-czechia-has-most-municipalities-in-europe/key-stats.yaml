@@ -1,0 +1,14 @@
+label: Key figures
+numbers:
+  - value: "6,254"
+    title: municipalities in Czechia
+    description: Austria has 2,092, three times fewer. Czechia has 57 municipalities per 100,000 inhabitants, Austria 23. The typical Czech municipality has 456 inhabitants, the typical Austrian one 1,838.
+    color: brand
+  - value: "1.9×"
+    title: higher cost per inhabitant of running the smallest municipalities
+    description: In municipalities with fewer than 200 inhabitants, the council and municipal office cost CZK 10,713 per head; in municipalities with 1,000 to 2,000 inhabitants, CZK 5,537 (municipal budgets for 2025).
+    color: brandOrange
+  - value: "1,830"
+    title: municipalities choose from a single candidate list
+    description: That is 29% of all 6,254 municipalities. In municipalities with fewer than 200 inhabitants, it is almost every second one.
+    color: brandNavy

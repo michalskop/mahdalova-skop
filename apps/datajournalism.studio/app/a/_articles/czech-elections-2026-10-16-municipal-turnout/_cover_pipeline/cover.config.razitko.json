@@ -1,0 +1,81 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/images/cover-homepage.png",
+      "otisk": "72f72601a2646c04",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/cover.config.cjs": "e43618a6ffa3b690",
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/motiv-homepage.svg": "defd92566558b8d7"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [
+          "titulek zasahuje do rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – v malých kartách ho štítek zakryje"
+        ],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/images/cover-og.jpg",
+      "otisk": "15ea19cd9738b700",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/cover.config.cjs": "e43618a6ffa3b690",
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/motiv-og.svg": "e34a551940b9f3ec"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/images/cover-square.png",
+      "otisk": "24b14eee268580de",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/cover.config.cjs": "e43618a6ffa3b690",
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/motiv-square.svg": "6ab13ac1418c8cb6"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/images/cover-instagram.png",
+      "otisk": "a5eaaf3448e99802",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/cover.config.cjs": "e43618a6ffa3b690",
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/motiv-instagram.svg": "764e6016bd3e3647"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/images/cover-story.png",
+      "otisk": "832c91856600dc34",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/cover.config.cjs": "e43618a6ffa3b690",
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/motiv-story.svg": "e7e6f95c938ea89a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T13:58:33.271Z",
+  "clanek": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-16-municipal-turnout/index.md",
+  "titulekClanku": "Turnout in Czech municipal elections rose to 48%, but kept falling in the towns with the lowest turnout",
+  "texty": {
+    "stitek": "Analysis • Czech municipal elections 2026",
+    "nadtitulek": "",
+    "titulek": "Turnout rose, but not everywhere",
+    "podtitulek": "In the towns with the lowest turnout, even fewer people voted than in 2022"
+  }
+}

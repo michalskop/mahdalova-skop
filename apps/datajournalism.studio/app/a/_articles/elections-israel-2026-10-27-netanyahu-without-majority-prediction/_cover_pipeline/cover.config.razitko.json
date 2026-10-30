@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-homepage.png",
+      "otisk": "4cf6e5cc7c27849e",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-homepage.svg": "25c88d2bb6333e0d"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-og.jpg",
+      "otisk": "e55a5cc11f93470c",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-og.svg": "bc60179a82c2f42a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-square.png",
+      "otisk": "10372b8562b064a8",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-square.svg": "ec749b526d9cca5f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-instagram.png",
+      "otisk": "53d3813d54dfd0a9",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-instagram.svg": "62403cf2d92479ff"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/images/cover-story.png",
+      "otisk": "da70febd59dffb06",
+      "vstupy": {
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs": "3de9d25da5fc0405",
+        "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/motiv-story.svg": "5ebbb6e262876e1f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T13:17:48.474Z",
+  "clanek": "apps/datatimes-org/app/article/_articles/elections-israel-2026-10-27-netanyahu-without-majority-prediction/index.md",
+  "titulekClanku": "Israel election: Netanyahu will not win a majority, prediction shows",
+  "texty": {
+    "stitek": "Prediction • Israel election",
+    "nadtitulek": "",
+    "titulek": "Netanyahu will not win a majority",
+    "podtitulek": "The prediction puts his bloc eight seats short of a majority"
+  }
+}

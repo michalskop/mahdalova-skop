@@ -1,23 +1,16 @@
+## What We Do
+
+- **Real-time election predictions.** Our model estimates the final result from the first counted votes. We have used it in Czechia, Germany, Sweden, Brazil and Israel.
+- **Europe in data.** We compare Czechia with the rest of Europe – on disinformation, gender equality, violence against women, work and family, climate and public health.
+- **Fact-checks and verification.** When a misleading chart or a manipulated video spreads across borders, we check the data and the footage behind it.
+- **Voting advice applications.** Since 2006, the non-profit [Voting Advice Applications](https://volebnikalkulacka.cz/) founded by Michal Škop have helped millions of voters in many countries make better-informed choices.
+
 ## Why We Do It
 
-The media landscape in the Czech Republic faces challenges with a lack of in-depth and contextual data analysis. Many issues are presented superficially, without strong connections to facts or global context. We strive to change this. Our mission is to enrich public debate with high-quality data-driven insights that can inform decision-making at every level of society.
+We believe that a well-informed public is a precondition of a functioning democracy. Those who stop wanting to know the truth eventually lose what is most valuable – their freedom.
 
-## How We Do It
+Our work is an endless search. We collect information piece by piece and give it context, so that stories do not stay hidden under layers of lies, manipulation, ideology or plain ignorance. We will always stand on the side of the weaker, the overlooked and the oppressed.
 
-We leverage cutting-edge technologies and data analysis techniques. By blending traditional journalism with innovative approaches such as machine learning, geospatial analysis, and interactive applications, we bring fresh perspectives to complex issues. Our data comes from public databases as well as collaborations with experts, academics, and local communities.
+## Work With Us
 
-As an internationally connected team, we partner with organizations and individuals worldwide to deliver well-researched and reliable information.
-
-## Our Principles and Values
-
-• **Expertise and Transparency**: Every piece of work is grounded in verified facts, with clear and accessible sourcing.  
-
-• **Independence**: We operate free from political or commercial influence. Our funding comes from independent sources and crowdfunding.  
-
-• **Innovation**: We continuously explore new ways to present data and stories, ensuring they are engaging and meaningful for diverse audiences.  
-
-• **Collaboration**: We believe in the power of teamwork, connecting experts, journalists, and the public to uncover deeper insights together.
-
-## What We Offer
-
-Our analyses and visualizations are designed for a wide range of audiences, including the general public, academic institutions, non-profits, and media organizations. We demonstrate that data is more than just numbers–it is a vital tool for understanding the world around us and driving meaningful change.
+We collaborate with newsrooms, universities and civil-society organisations across Europe. Write to us, or [support our work](https://www.datatimes.cz/podporte-nas).

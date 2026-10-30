@@ -1,7 +1,7 @@
 ## The Storyteller
 
-Kateřina is an award-winning data journalist with over a decade of experience in transforming complex datasets into compelling narratives.
+**Kateřina Mahdalová** is editor-in-chief and co-owner of DataTimes. Journalist and analyst, author of thousands of visualisations and analyses. From 2016 to 2019 she led data projects at the Czech News Agency (ČTK), and she works with leading media in Czechia and abroad. She focuses on human rights and on holding the powerful to account.
 
-Katerina is also the founder and editor-in-chief of Datová žurnalistika, a pioneering platform dedicated to advancing data journalism in the Czech Republic and beyond.
+She is a two-time winner of the Czech Journalism Award with eight shortlist nominations, including the Data Journalism Awards.
 
-With a diverse educational background spanning creative writing, media studies, and journalism from institutions including Charles University, Bangor University, and UC San Diego, Katerina brings a unique blend of analytical skills and storytelling prowess to her work in data journalism.
+She studied at the Josef Škvorecký Literary Academy and information science at Masaryk University, and also at the University of California, San Diego and Bangor University in Wales. She teaches data journalism at Jan Evangelista Purkyně University.

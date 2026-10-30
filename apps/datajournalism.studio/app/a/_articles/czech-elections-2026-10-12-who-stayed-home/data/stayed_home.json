@@ -1,0 +1,527 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Between 38% and 76% of 2025 ANO voters stayed at home; among SPOLU voters, at most a fifth in 20 of 22 places",
+  "subtitle": "Share of a party's October 2025 voters who did not vote in the 2026 municipal or Senate elections (%). Each line connects the regression and EI estimates; the dot is their average."
+ },
+ "width": 560,
+ "height": 560,
+ "data": {
+  "values": [
+   {
+    "unit": "Olomouc",
+    "group": "ANO",
+    "reg": 55.2,
+    "ei": 53.2,
+    "lo": 53.2,
+    "hi": 55.2,
+    "mid": 54.2
+   },
+   {
+    "unit": "Olomouc",
+    "group": "SPOLU",
+    "reg": 1.3,
+    "ei": 24.9,
+    "lo": 1.3,
+    "hi": 24.9,
+    "mid": 13.1
+   },
+   {
+    "unit": "Opava",
+    "group": "ANO",
+    "reg": 35.4,
+    "ei": 52.9,
+    "lo": 35.4,
+    "hi": 52.9,
+    "mid": 44.2
+   },
+   {
+    "unit": "Opava",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 7.3,
+    "lo": 0.0,
+    "hi": 7.3,
+    "mid": 3.6
+   },
+   {
+    "unit": "České Budějovice",
+    "group": "ANO",
+    "reg": 65.6,
+    "ei": 62.0,
+    "lo": 62.0,
+    "hi": 65.6,
+    "mid": 63.8
+   },
+   {
+    "unit": "České Budějovice",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 15.8,
+    "lo": 0.0,
+    "hi": 15.8,
+    "mid": 7.9
+   },
+   {
+    "unit": "Prague",
+    "group": "ANO",
+    "reg": 55.8,
+    "ei": 49.2,
+    "lo": 49.2,
+    "hi": 55.8,
+    "mid": 52.5
+   },
+   {
+    "unit": "Prague",
+    "group": "SPOLU",
+    "reg": 2.8,
+    "ei": 20.4,
+    "lo": 2.8,
+    "hi": 20.4,
+    "mid": 11.6
+   },
+   {
+    "unit": "Plzeň",
+    "group": "ANO",
+    "reg": 37.8,
+    "ei": 38.2,
+    "lo": 37.8,
+    "hi": 38.2,
+    "mid": 38.0
+   },
+   {
+    "unit": "Plzeň",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 13.8,
+    "lo": 0.0,
+    "hi": 13.8,
+    "mid": 6.9
+   },
+   {
+    "unit": "Ústí nad Labem",
+    "group": "ANO",
+    "reg": 64.9,
+    "ei": 74.4,
+    "lo": 64.9,
+    "hi": 74.4,
+    "mid": 69.7
+   },
+   {
+    "unit": "Ústí nad Labem",
+    "group": "SPOLU",
+    "reg": 1.8,
+    "ei": 2.1,
+    "lo": 1.8,
+    "hi": 2.1,
+    "mid": 2.0
+   },
+   {
+    "unit": "Ostrava",
+    "group": "ANO",
+    "reg": 61.7,
+    "ei": 57.3,
+    "lo": 57.3,
+    "hi": 61.7,
+    "mid": 59.5
+   },
+   {
+    "unit": "Ostrava",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 6.3,
+    "lo": 0.0,
+    "hi": 6.3,
+    "mid": 3.1
+   },
+   {
+    "unit": "Havířov",
+    "group": "ANO",
+    "reg": 77.8,
+    "ei": 75.1,
+    "lo": 75.1,
+    "hi": 77.8,
+    "mid": 76.4
+   },
+   {
+    "unit": "Havířov",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 2.2,
+    "lo": 0.0,
+    "hi": 2.2,
+    "mid": 1.1
+   },
+   {
+    "unit": "Pardubice",
+    "group": "ANO",
+    "reg": 48.9,
+    "ei": 50.8,
+    "lo": 48.9,
+    "hi": 50.8,
+    "mid": 49.8
+   },
+   {
+    "unit": "Pardubice",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 19.0,
+    "lo": 0.0,
+    "hi": 19.0,
+    "mid": 9.5
+   },
+   {
+    "unit": "Liberec",
+    "group": "ANO",
+    "reg": 67.1,
+    "ei": 64.4,
+    "lo": 64.4,
+    "hi": 67.1,
+    "mid": 65.7
+   },
+   {
+    "unit": "Liberec",
+    "group": "SPOLU",
+    "reg": 15.9,
+    "ei": 14.3,
+    "lo": 14.3,
+    "hi": 15.9,
+    "mid": 15.1
+   },
+   {
+    "unit": "Most",
+    "group": "ANO",
+    "reg": 69.5,
+    "ei": 70.7,
+    "lo": 69.5,
+    "hi": 70.7,
+    "mid": 70.1
+   },
+   {
+    "unit": "Most",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 2.7,
+    "lo": 0.0,
+    "hi": 2.7,
+    "mid": 1.4
+   },
+   {
+    "unit": "Hradec Králové",
+    "group": "ANO",
+    "reg": 37.5,
+    "ei": 49.4,
+    "lo": 37.5,
+    "hi": 49.4,
+    "mid": 43.5
+   },
+   {
+    "unit": "Hradec Králové",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 13.1,
+    "lo": 0.0,
+    "hi": 13.1,
+    "mid": 6.6
+   },
+   {
+    "unit": "Brno",
+    "group": "ANO",
+    "reg": 36.0,
+    "ei": 41.4,
+    "lo": 36.0,
+    "hi": 41.4,
+    "mid": 38.7
+   },
+   {
+    "unit": "Brno",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 16.0,
+    "lo": 0.0,
+    "hi": 16.0,
+    "mid": 8.0
+   },
+   {
+    "unit": "Frýdek-Místek",
+    "group": "ANO",
+    "reg": 49.0,
+    "ei": 56.4,
+    "lo": 49.0,
+    "hi": 56.4,
+    "mid": 52.7
+   },
+   {
+    "unit": "Frýdek-Místek",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 2.7,
+    "lo": 0.0,
+    "hi": 2.7,
+    "mid": 1.3
+   },
+   {
+    "unit": "Kladno (Senate)",
+    "group": "ANO",
+    "reg": 63.3,
+    "ei": 62.3,
+    "lo": 62.3,
+    "hi": 63.3,
+    "mid": 62.8
+   },
+   {
+    "unit": "Kladno (Senate)",
+    "group": "SPOLU",
+    "reg": 27.2,
+    "ei": 19.4,
+    "lo": 19.4,
+    "hi": 27.2,
+    "mid": 23.3
+   },
+   {
+    "unit": "Hradec Králové (Senate)",
+    "group": "ANO",
+    "reg": 58.8,
+    "ei": 48.0,
+    "lo": 48.0,
+    "hi": 58.8,
+    "mid": 53.4
+   },
+   {
+    "unit": "Hradec Králové (Senate)",
+    "group": "SPOLU",
+    "reg": 15.9,
+    "ei": 15.1,
+    "lo": 15.1,
+    "hi": 15.9,
+    "mid": 15.5
+   },
+   {
+    "unit": "Žďár nad Sázavou (Senate)",
+    "group": "ANO",
+    "reg": 48.3,
+    "ei": 46.1,
+    "lo": 46.1,
+    "hi": 48.3,
+    "mid": 47.2
+   },
+   {
+    "unit": "Žďár nad Sázavou (Senate)",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 4.2,
+    "lo": 0.0,
+    "hi": 4.2,
+    "mid": 2.1
+   },
+   {
+    "unit": "Louny (Senate)",
+    "group": "ANO",
+    "reg": 57.6,
+    "ei": 48.7,
+    "lo": 48.7,
+    "hi": 57.6,
+    "mid": 53.2
+   },
+   {
+    "unit": "Louny (Senate)",
+    "group": "SPOLU",
+    "reg": 32.6,
+    "ei": 46.0,
+    "lo": 32.6,
+    "hi": 46.0,
+    "mid": 39.3
+   },
+   {
+    "unit": "Frýdek-Místek (Senate)",
+    "group": "ANO",
+    "reg": 58.7,
+    "ei": 49.4,
+    "lo": 49.4,
+    "hi": 58.7,
+    "mid": 54.0
+   },
+   {
+    "unit": "Frýdek-Místek (Senate)",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 6.3,
+    "lo": 0.0,
+    "hi": 6.3,
+    "mid": 3.1
+   },
+   {
+    "unit": "Ostrava-město (Senate)",
+    "group": "ANO",
+    "reg": 71.9,
+    "ei": 66.8,
+    "lo": 66.8,
+    "hi": 71.9,
+    "mid": 69.3
+   },
+   {
+    "unit": "Ostrava-město (Senate)",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 2.9,
+    "lo": 0.0,
+    "hi": 2.9,
+    "mid": 1.5
+   },
+   {
+    "unit": "Karviná (Senate)",
+    "group": "ANO",
+    "reg": 71.0,
+    "ei": 65.7,
+    "lo": 65.7,
+    "hi": 71.0,
+    "mid": 68.4
+   },
+   {
+    "unit": "Karviná (Senate)",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 6.7,
+    "lo": 0.0,
+    "hi": 6.7,
+    "mid": 3.3
+   },
+   {
+    "unit": "Plzeň-město (Senate)",
+    "group": "ANO",
+    "reg": 47.6,
+    "ei": 50.3,
+    "lo": 47.6,
+    "hi": 50.3,
+    "mid": 48.9
+   },
+   {
+    "unit": "Plzeň-město (Senate)",
+    "group": "SPOLU",
+    "reg": 0.0,
+    "ei": 18.2,
+    "lo": 0.0,
+    "hi": 18.2,
+    "mid": 9.1
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "unit",
+   "type": "nominal",
+   "sort": [
+    "Havířov",
+    "Most",
+    "Ústí nad Labem",
+    "Ostrava-město (Senate)",
+    "Karviná (Senate)",
+    "Liberec",
+    "České Budějovice",
+    "Kladno (Senate)",
+    "Ostrava",
+    "Olomouc",
+    "Frýdek-Místek (Senate)",
+    "Hradec Králové (Senate)",
+    "Louny (Senate)",
+    "Frýdek-Místek",
+    "Prague",
+    "Pardubice",
+    "Plzeň-město (Senate)",
+    "Žďár nad Sázavou (Senate)",
+    "Opava",
+    "Hradec Králové",
+    "Brno",
+    "Plzeň"
+   ],
+   "axis": {
+    "title": null,
+    "labelLimit": 220
+   }
+  },
+  "yOffset": {
+   "field": "group",
+   "sort": [
+    "ANO",
+    "SPOLU"
+   ]
+  },
+  "color": {
+   "field": "group",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "ANO",
+     "SPOLU"
+    ],
+    "range": [
+     "#272A59",
+     "#5e66d5"
+    ]
+   },
+   "legend": {
+    "title": null
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 4,
+    "opacity": 0.55
+   },
+   "encoding": {
+    "x": {
+     "field": "lo",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": "Share of 2025 voters who did not vote (%)"
+     }
+    },
+    "x2": {
+     "field": "hi"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 55,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "mid",
+     "type": "quantitative"
+    },
+    "tooltip": [
+     {
+      "field": "unit",
+      "title": "Municipality / district"
+     },
+     {
+      "field": "group",
+      "title": "2025 voters"
+     },
+     {
+      "field": "reg",
+      "title": "Regression (%)"
+     },
+     {
+      "field": "ei",
+      "title": "EI (%)"
+     }
+    ]
+   }
+  }
+ ],
+ "_source": "Own estimate (ecological inference and constrained regression) from polling-district results: volby.gov.cz, 2025 parliamentary election and 2026 municipal and Senate elections (first round)"
+}

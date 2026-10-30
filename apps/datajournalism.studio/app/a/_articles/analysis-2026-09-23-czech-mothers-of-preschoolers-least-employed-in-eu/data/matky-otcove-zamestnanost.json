@@ -1,0 +1,1329 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Czechia has the EU’s largest gap between {mothers|#f76800} and {fathers|#06677d} of young children",
+    "subtitle": "Share of employed parents aged 25–49 whose youngest child is under 6 (%, 2025). Sorted by the gap between fathers and mothers. Hover over a country for details."
+  },
+  "width": "container",
+  "height": 640,
+  "data": {
+    "values": [
+      {
+        "kod": "CZ",
+        "zeme": "Czechia",
+        "matky": 51.5,
+        "otcove": 97.6,
+        "rozdil": 46.1,
+        "cz": true,
+        "eu": false,
+        "t_matky": "51.5%",
+        "t_otcove": "97.6%",
+        "t_rozdil": "46.1 percentage points",
+        "t_sto": "98 fathers, 52 mothers",
+        "t_poradi": "Largest gap of 27 countries",
+        "t_eu": "2.1× the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 51.5
+      },
+      {
+        "kod": "CZ",
+        "zeme": "Czechia",
+        "matky": 51.5,
+        "otcove": 97.6,
+        "rozdil": 46.1,
+        "cz": true,
+        "eu": false,
+        "t_matky": "51.5%",
+        "t_otcove": "97.6%",
+        "t_rozdil": "46.1 percentage points",
+        "t_sto": "98 fathers, 52 mothers",
+        "t_poradi": "Largest gap of 27 countries",
+        "t_eu": "2.1× the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 97.6
+      },
+      {
+        "kod": "IT",
+        "zeme": "Italy",
+        "matky": 57.8,
+        "otcove": 92.7,
+        "rozdil": 34.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "57.8%",
+        "t_otcove": "92.7%",
+        "t_rozdil": "34.9 percentage points",
+        "t_sto": "93 fathers, 58 mothers",
+        "t_poradi": "2nd largest gap of 27 countries",
+        "t_eu": "1.6× the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 57.8
+      },
+      {
+        "kod": "IT",
+        "zeme": "Italy",
+        "matky": 57.8,
+        "otcove": 92.7,
+        "rozdil": 34.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "57.8%",
+        "t_otcove": "92.7%",
+        "t_rozdil": "34.9 percentage points",
+        "t_sto": "93 fathers, 58 mothers",
+        "t_poradi": "2nd largest gap of 27 countries",
+        "t_eu": "1.6× the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.7
+      },
+      {
+        "kod": "RO",
+        "zeme": "Romania",
+        "matky": 51.5,
+        "otcove": 84.7,
+        "rozdil": 33.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "51.5%",
+        "t_otcove": "84.7%",
+        "t_rozdil": "33.2 percentage points",
+        "t_sto": "85 fathers, 52 mothers",
+        "t_poradi": "3rd largest gap of 27 countries",
+        "t_eu": "1.5× the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 51.5
+      },
+      {
+        "kod": "RO",
+        "zeme": "Romania",
+        "matky": 51.5,
+        "otcove": 84.7,
+        "rozdil": 33.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "51.5%",
+        "t_otcove": "84.7%",
+        "t_rozdil": "33.2 percentage points",
+        "t_sto": "85 fathers, 52 mothers",
+        "t_poradi": "3rd largest gap of 27 countries",
+        "t_eu": "1.5× the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 84.7
+      },
+      {
+        "kod": "EL",
+        "zeme": "Greece",
+        "matky": 62.2,
+        "otcove": 94.4,
+        "rozdil": 32.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "62.2%",
+        "t_otcove": "94.4%",
+        "t_rozdil": "32.2 percentage points",
+        "t_sto": "94 fathers, 62 mothers",
+        "t_poradi": "4th largest gap of 27 countries",
+        "t_eu": "1.5× the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 62.2
+      },
+      {
+        "kod": "EL",
+        "zeme": "Greece",
+        "matky": 62.2,
+        "otcove": 94.4,
+        "rozdil": 32.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "62.2%",
+        "t_otcove": "94.4%",
+        "t_rozdil": "32.2 percentage points",
+        "t_sto": "94 fathers, 62 mothers",
+        "t_poradi": "4th largest gap of 27 countries",
+        "t_eu": "1.5× the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 94.4
+      },
+      {
+        "kod": "BG",
+        "zeme": "Bulgaria",
+        "matky": 69.5,
+        "otcove": 92.5,
+        "rozdil": 23.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69.5%",
+        "t_otcove": "92.5%",
+        "t_rozdil": "23.0 percentage points",
+        "t_sto": "92 fathers, 70 mothers",
+        "t_poradi": "5th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 69.5
+      },
+      {
+        "kod": "BG",
+        "zeme": "Bulgaria",
+        "matky": 69.5,
+        "otcove": 92.5,
+        "rozdil": 23.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69.5%",
+        "t_otcove": "92.5%",
+        "t_rozdil": "23.0 percentage points",
+        "t_sto": "92 fathers, 70 mothers",
+        "t_poradi": "5th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.5
+      },
+      {
+        "kod": "PL",
+        "zeme": "Poland",
+        "matky": 73.9,
+        "otcove": 96.5,
+        "rozdil": 22.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73.9%",
+        "t_otcove": "96.5%",
+        "t_rozdil": "22.6 percentage points",
+        "t_sto": "96 fathers, 74 mothers",
+        "t_poradi": "6th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 73.9
+      },
+      {
+        "kod": "PL",
+        "zeme": "Poland",
+        "matky": 73.9,
+        "otcove": 96.5,
+        "rozdil": 22.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73.9%",
+        "t_otcove": "96.5%",
+        "t_rozdil": "22.6 percentage points",
+        "t_sto": "96 fathers, 74 mothers",
+        "t_poradi": "6th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 96.5
+      },
+      {
+        "kod": "SK",
+        "zeme": "Slovakia",
+        "matky": 70.3,
+        "otcove": 92.7,
+        "rozdil": 22.4,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70.3%",
+        "t_otcove": "92.7%",
+        "t_rozdil": "22.4 percentage points",
+        "t_sto": "93 fathers, 70 mothers",
+        "t_poradi": "7th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 70.3
+      },
+      {
+        "kod": "SK",
+        "zeme": "Slovakia",
+        "matky": 70.3,
+        "otcove": 92.7,
+        "rozdil": 22.4,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70.3%",
+        "t_otcove": "92.7%",
+        "t_rozdil": "22.4 percentage points",
+        "t_sto": "93 fathers, 70 mothers",
+        "t_poradi": "7th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.7
+      },
+      {
+        "kod": "DE",
+        "zeme": "Germany",
+        "matky": 69.8,
+        "otcove": 92.1,
+        "rozdil": 22.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69.8%",
+        "t_otcove": "92.1%",
+        "t_rozdil": "22.3 percentage points",
+        "t_sto": "92 fathers, 70 mothers",
+        "t_poradi": "8th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 69.8
+      },
+      {
+        "kod": "DE",
+        "zeme": "Germany",
+        "matky": 69.8,
+        "otcove": 92.1,
+        "rozdil": 22.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "69.8%",
+        "t_otcove": "92.1%",
+        "t_rozdil": "22.3 percentage points",
+        "t_sto": "92 fathers, 70 mothers",
+        "t_poradi": "8th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.1
+      },
+      {
+        "kod": "EU27_2020",
+        "zeme": "EU average",
+        "matky": 70.1,
+        "otcove": 92.1,
+        "rozdil": 22.0,
+        "cz": false,
+        "eu": true,
+        "t_matky": "70.1%",
+        "t_otcove": "92.1%",
+        "t_rozdil": "22.0 percentage points",
+        "t_sto": "92 fathers, 70 mothers",
+        "t_poradi": "average of 27 countries",
+        "t_eu": "–",
+        "rodic": "Mothers",
+        "hodnota": 70.1
+      },
+      {
+        "kod": "EU27_2020",
+        "zeme": "EU average",
+        "matky": 70.1,
+        "otcove": 92.1,
+        "rozdil": 22.0,
+        "cz": false,
+        "eu": true,
+        "t_matky": "70.1%",
+        "t_otcove": "92.1%",
+        "t_rozdil": "22.0 percentage points",
+        "t_sto": "92 fathers, 70 mothers",
+        "t_poradi": "average of 27 countries",
+        "t_eu": "–",
+        "rodic": "Fathers",
+        "hodnota": 92.1
+      },
+      {
+        "kod": "ES",
+        "zeme": "Spain",
+        "matky": 68.2,
+        "otcove": 90.1,
+        "rozdil": 21.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "68.2%",
+        "t_otcove": "90.1%",
+        "t_rozdil": "21.9 percentage points",
+        "t_sto": "90 fathers, 68 mothers",
+        "t_poradi": "9th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 68.2
+      },
+      {
+        "kod": "ES",
+        "zeme": "Spain",
+        "matky": 68.2,
+        "otcove": 90.1,
+        "rozdil": 21.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "68.2%",
+        "t_otcove": "90.1%",
+        "t_rozdil": "21.9 percentage points",
+        "t_sto": "90 fathers, 68 mothers",
+        "t_poradi": "9th largest gap of 27 countries",
+        "t_eu": "roughly the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 90.1
+      },
+      {
+        "kod": "CY",
+        "zeme": "Cyprus",
+        "matky": 76.1,
+        "otcove": 95.3,
+        "rozdil": 19.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "76.1%",
+        "t_otcove": "95.3%",
+        "t_rozdil": "19.2 percentage points",
+        "t_sto": "95 fathers, 76 mothers",
+        "t_poradi": "10th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 76.1
+      },
+      {
+        "kod": "CY",
+        "zeme": "Cyprus",
+        "matky": 76.1,
+        "otcove": 95.3,
+        "rozdil": 19.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "76.1%",
+        "t_otcove": "95.3%",
+        "t_rozdil": "19.2 percentage points",
+        "t_sto": "95 fathers, 76 mothers",
+        "t_poradi": "10th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 95.3
+      },
+      {
+        "kod": "IE",
+        "zeme": "Ireland",
+        "matky": 74.5,
+        "otcove": 92.4,
+        "rozdil": 17.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74.5%",
+        "t_otcove": "92.4%",
+        "t_rozdil": "17.9 percentage points",
+        "t_sto": "92 fathers, 74 mothers",
+        "t_poradi": "11th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 74.5
+      },
+      {
+        "kod": "IE",
+        "zeme": "Ireland",
+        "matky": 74.5,
+        "otcove": 92.4,
+        "rozdil": 17.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74.5%",
+        "t_otcove": "92.4%",
+        "t_rozdil": "17.9 percentage points",
+        "t_sto": "92 fathers, 74 mothers",
+        "t_poradi": "11th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.4
+      },
+      {
+        "kod": "LV",
+        "zeme": "Latvia",
+        "matky": 73.1,
+        "otcove": 90.8,
+        "rozdil": 17.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73.1%",
+        "t_otcove": "90.8%",
+        "t_rozdil": "17.7 percentage points",
+        "t_sto": "91 fathers, 73 mothers",
+        "t_poradi": "12th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 73.1
+      },
+      {
+        "kod": "LV",
+        "zeme": "Latvia",
+        "matky": 73.1,
+        "otcove": 90.8,
+        "rozdil": 17.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73.1%",
+        "t_otcove": "90.8%",
+        "t_rozdil": "17.7 percentage points",
+        "t_sto": "91 fathers, 73 mothers",
+        "t_poradi": "12th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 90.8
+      },
+      {
+        "kod": "BE",
+        "zeme": "Belgium",
+        "matky": 72.8,
+        "otcove": 90.3,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "72.8%",
+        "t_otcove": "90.3%",
+        "t_rozdil": "17.5 percentage points",
+        "t_sto": "90 fathers, 73 mothers",
+        "t_poradi": "13th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 72.8
+      },
+      {
+        "kod": "BE",
+        "zeme": "Belgium",
+        "matky": 72.8,
+        "otcove": 90.3,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "72.8%",
+        "t_otcove": "90.3%",
+        "t_rozdil": "17.5 percentage points",
+        "t_sto": "90 fathers, 73 mothers",
+        "t_poradi": "13th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 90.3
+      },
+      {
+        "kod": "FI",
+        "zeme": "Finland",
+        "matky": 70.5,
+        "otcove": 88.0,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70.5%",
+        "t_otcove": "88.0%",
+        "t_rozdil": "17.5 percentage points",
+        "t_sto": "88 fathers, 70 mothers",
+        "t_poradi": "14th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 70.5
+      },
+      {
+        "kod": "FI",
+        "zeme": "Finland",
+        "matky": 70.5,
+        "otcove": 88.0,
+        "rozdil": 17.5,
+        "cz": false,
+        "eu": false,
+        "t_matky": "70.5%",
+        "t_otcove": "88.0%",
+        "t_rozdil": "17.5 percentage points",
+        "t_sto": "88 fathers, 70 mothers",
+        "t_poradi": "14th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 88.0
+      },
+      {
+        "kod": "EE",
+        "zeme": "Estonia",
+        "matky": 74.7,
+        "otcove": 91.9,
+        "rozdil": 17.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74.7%",
+        "t_otcove": "91.9%",
+        "t_rozdil": "17.2 percentage points",
+        "t_sto": "92 fathers, 75 mothers",
+        "t_poradi": "15th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 74.7
+      },
+      {
+        "kod": "EE",
+        "zeme": "Estonia",
+        "matky": 74.7,
+        "otcove": 91.9,
+        "rozdil": 17.2,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74.7%",
+        "t_otcove": "91.9%",
+        "t_rozdil": "17.2 percentage points",
+        "t_sto": "92 fathers, 75 mothers",
+        "t_poradi": "15th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 91.9
+      },
+      {
+        "kod": "AT",
+        "zeme": "Austria",
+        "matky": 74.9,
+        "otcove": 91.8,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74.9%",
+        "t_otcove": "91.8%",
+        "t_rozdil": "16.9 percentage points",
+        "t_sto": "92 fathers, 75 mothers",
+        "t_poradi": "16th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 74.9
+      },
+      {
+        "kod": "AT",
+        "zeme": "Austria",
+        "matky": 74.9,
+        "otcove": 91.8,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "74.9%",
+        "t_otcove": "91.8%",
+        "t_rozdil": "16.9 percentage points",
+        "t_sto": "92 fathers, 75 mothers",
+        "t_poradi": "16th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 91.8
+      },
+      {
+        "kod": "HU",
+        "zeme": "Hungary",
+        "matky": 77.5,
+        "otcove": 94.4,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "77.5%",
+        "t_otcove": "94.4%",
+        "t_rozdil": "16.9 percentage points",
+        "t_sto": "94 fathers, 78 mothers",
+        "t_poradi": "17th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 77.5
+      },
+      {
+        "kod": "HU",
+        "zeme": "Hungary",
+        "matky": 77.5,
+        "otcove": 94.4,
+        "rozdil": 16.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "77.5%",
+        "t_otcove": "94.4%",
+        "t_rozdil": "16.9 percentage points",
+        "t_sto": "94 fathers, 78 mothers",
+        "t_poradi": "17th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 94.4
+      },
+      {
+        "kod": "FR",
+        "zeme": "France",
+        "matky": 73.6,
+        "otcove": 89.7,
+        "rozdil": 16.1,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73.6%",
+        "t_otcove": "89.7%",
+        "t_rozdil": "16.1 percentage points",
+        "t_sto": "90 fathers, 74 mothers",
+        "t_poradi": "18th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 73.6
+      },
+      {
+        "kod": "FR",
+        "zeme": "France",
+        "matky": 73.6,
+        "otcove": 89.7,
+        "rozdil": 16.1,
+        "cz": false,
+        "eu": false,
+        "t_matky": "73.6%",
+        "t_otcove": "89.7%",
+        "t_rozdil": "16.1 percentage points",
+        "t_sto": "90 fathers, 74 mothers",
+        "t_poradi": "18th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 89.7
+      },
+      {
+        "kod": "MT",
+        "zeme": "Malta",
+        "matky": 81.2,
+        "otcove": 96.8,
+        "rozdil": 15.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81.2%",
+        "t_otcove": "96.8%",
+        "t_rozdil": "15.6 percentage points",
+        "t_sto": "97 fathers, 81 mothers",
+        "t_poradi": "19th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 81.2
+      },
+      {
+        "kod": "MT",
+        "zeme": "Malta",
+        "matky": 81.2,
+        "otcove": 96.8,
+        "rozdil": 15.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81.2%",
+        "t_otcove": "96.8%",
+        "t_rozdil": "15.6 percentage points",
+        "t_sto": "97 fathers, 81 mothers",
+        "t_poradi": "19th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 96.8
+      },
+      {
+        "kod": "LT",
+        "zeme": "Lithuania",
+        "matky": 79.0,
+        "otcove": 92.7,
+        "rozdil": 13.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79.0%",
+        "t_otcove": "92.7%",
+        "t_rozdil": "13.7 percentage points",
+        "t_sto": "93 fathers, 79 mothers",
+        "t_poradi": "20th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 79.0
+      },
+      {
+        "kod": "LT",
+        "zeme": "Lithuania",
+        "matky": 79.0,
+        "otcove": 92.7,
+        "rozdil": 13.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79.0%",
+        "t_otcove": "92.7%",
+        "t_rozdil": "13.7 percentage points",
+        "t_sto": "93 fathers, 79 mothers",
+        "t_poradi": "20th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.7
+      },
+      {
+        "kod": "NL",
+        "zeme": "Netherlands",
+        "matky": 82.9,
+        "otcove": 95.9,
+        "rozdil": 13.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "82.9%",
+        "t_otcove": "95.9%",
+        "t_rozdil": "13.0 percentage points",
+        "t_sto": "96 fathers, 83 mothers",
+        "t_poradi": "21st largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 82.9
+      },
+      {
+        "kod": "NL",
+        "zeme": "Netherlands",
+        "matky": 82.9,
+        "otcove": 95.9,
+        "rozdil": 13.0,
+        "cz": false,
+        "eu": false,
+        "t_matky": "82.9%",
+        "t_otcove": "95.9%",
+        "t_rozdil": "13.0 percentage points",
+        "t_sto": "96 fathers, 83 mothers",
+        "t_poradi": "21st largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 95.9
+      },
+      {
+        "kod": "LU",
+        "zeme": "Luxembourg",
+        "matky": 79.4,
+        "otcove": 92.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79.4%",
+        "t_otcove": "92.3%",
+        "t_rozdil": "12.9 percentage points",
+        "t_sto": "92 fathers, 79 mothers",
+        "t_poradi": "22nd largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 79.4
+      },
+      {
+        "kod": "LU",
+        "zeme": "Luxembourg",
+        "matky": 79.4,
+        "otcove": 92.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "79.4%",
+        "t_otcove": "92.3%",
+        "t_rozdil": "12.9 percentage points",
+        "t_sto": "92 fathers, 79 mothers",
+        "t_poradi": "22nd largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 92.3
+      },
+      {
+        "kod": "SI",
+        "zeme": "Slovenia",
+        "matky": 84.4,
+        "otcove": 97.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84.4%",
+        "t_otcove": "97.3%",
+        "t_rozdil": "12.9 percentage points",
+        "t_sto": "97 fathers, 84 mothers",
+        "t_poradi": "23rd largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 84.4
+      },
+      {
+        "kod": "SI",
+        "zeme": "Slovenia",
+        "matky": 84.4,
+        "otcove": 97.3,
+        "rozdil": 12.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84.4%",
+        "t_otcove": "97.3%",
+        "t_rozdil": "12.9 percentage points",
+        "t_sto": "97 fathers, 84 mothers",
+        "t_poradi": "23rd largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 97.3
+      },
+      {
+        "kod": "DK",
+        "zeme": "Denmark",
+        "matky": 81.4,
+        "otcove": 94.1,
+        "rozdil": 12.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81.4%",
+        "t_otcove": "94.1%",
+        "t_rozdil": "12.7 percentage points",
+        "t_sto": "94 fathers, 81 mothers",
+        "t_poradi": "24th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 81.4
+      },
+      {
+        "kod": "DK",
+        "zeme": "Denmark",
+        "matky": 81.4,
+        "otcove": 94.1,
+        "rozdil": 12.7,
+        "cz": false,
+        "eu": false,
+        "t_matky": "81.4%",
+        "t_otcove": "94.1%",
+        "t_rozdil": "12.7 percentage points",
+        "t_sto": "94 fathers, 81 mothers",
+        "t_poradi": "24th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 94.1
+      },
+      {
+        "kod": "SE",
+        "zeme": "Sweden",
+        "matky": 80.4,
+        "otcove": 91.3,
+        "rozdil": 10.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "80.4%",
+        "t_otcove": "91.3%",
+        "t_rozdil": "10.9 percentage points",
+        "t_sto": "91 fathers, 80 mothers",
+        "t_poradi": "25th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 80.4
+      },
+      {
+        "kod": "SE",
+        "zeme": "Sweden",
+        "matky": 80.4,
+        "otcove": 91.3,
+        "rozdil": 10.9,
+        "cz": false,
+        "eu": false,
+        "t_matky": "80.4%",
+        "t_otcove": "91.3%",
+        "t_rozdil": "10.9 percentage points",
+        "t_sto": "91 fathers, 80 mothers",
+        "t_poradi": "25th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 91.3
+      },
+      {
+        "kod": "HR",
+        "zeme": "Croatia",
+        "matky": 85.8,
+        "otcove": 96.1,
+        "rozdil": 10.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "85.8%",
+        "t_otcove": "96.1%",
+        "t_rozdil": "10.3 percentage points",
+        "t_sto": "96 fathers, 86 mothers",
+        "t_poradi": "26th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 85.8
+      },
+      {
+        "kod": "HR",
+        "zeme": "Croatia",
+        "matky": 85.8,
+        "otcove": 96.1,
+        "rozdil": 10.3,
+        "cz": false,
+        "eu": false,
+        "t_matky": "85.8%",
+        "t_otcove": "96.1%",
+        "t_rozdil": "10.3 percentage points",
+        "t_sto": "96 fathers, 86 mothers",
+        "t_poradi": "26th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 96.1
+      },
+      {
+        "kod": "PT",
+        "zeme": "Portugal",
+        "matky": 84.7,
+        "otcove": 94.3,
+        "rozdil": 9.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84.7%",
+        "t_otcove": "94.3%",
+        "t_rozdil": "9.6 percentage points",
+        "t_sto": "94 fathers, 85 mothers",
+        "t_poradi": "27th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Mothers",
+        "hodnota": 84.7
+      },
+      {
+        "kod": "PT",
+        "zeme": "Portugal",
+        "matky": 84.7,
+        "otcove": 94.3,
+        "rozdil": 9.6,
+        "cz": false,
+        "eu": false,
+        "t_matky": "84.7%",
+        "t_otcove": "94.3%",
+        "t_rozdil": "9.6 percentage points",
+        "t_sto": "94 fathers, 85 mothers",
+        "t_poradi": "27th largest gap of 27 countries",
+        "t_eu": "smaller than the EU average (22.0 pp)",
+        "rodic": "Fathers",
+        "hodnota": 94.3
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Czechia",
+        "Italy",
+        "Romania",
+        "Greece",
+        "Bulgaria",
+        "Poland",
+        "Slovakia",
+        "Germany",
+        "EU average",
+        "Spain",
+        "Cyprus",
+        "Ireland",
+        "Latvia",
+        "Belgium",
+        "Finland",
+        "Estonia",
+        "Austria",
+        "Hungary",
+        "France",
+        "Malta",
+        "Lithuania",
+        "Netherlands",
+        "Luxembourg",
+        "Slovenia",
+        "Denmark",
+        "Sweden",
+        "Croatia",
+        "Portugal"
+      ],
+      "scale": {
+        "paddingInner": 0,
+        "paddingOuter": 0.3
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 140,
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Mothers'"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": "#eeeae2"
+      },
+      "encoding": {
+        "x": {
+          "datum": 45,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "datum": 100
+        },
+        "opacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Mothers'"
+        }
+      ],
+      "mark": {
+        "type": "rule"
+      },
+      "encoding": {
+        "x": {
+          "field": "matky",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          },
+          "axis": {
+            "title": "% employed",
+            "grid": true,
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "field": "otcove"
+        },
+        "color": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": "#333333"
+            },
+            {
+              "test": "datum.cz",
+              "value": "#333333"
+            }
+          ],
+          "value": "#d4d4c8"
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 3
+            },
+            {
+              "test": "datum.cz",
+              "value": 2.5
+            }
+          ],
+          "value": 2
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "hodnota",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "color": {
+          "field": "rodic",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Mothers",
+              "Fathers"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          },
+          "legend": null
+        },
+        "size": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 170
+          },
+          "value": 90
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "datum.cz || datum.eu",
+              "value": 1
+            }
+          ],
+          "value": 0.5
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Mothers'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "matky",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "text": {
+          "field": "matky",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "datum.cz || datum.eu",
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Mothers'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "otcove",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "text": {
+          "field": "otcove",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hov",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "datum.cz || datum.eu",
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rodic === 'Mothers'"
+        }
+      ],
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "zeme"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": "#333333",
+        "fillOpacity": 0.001,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "datum": 45,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              45,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "datum": 100
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Country"
+          },
+          {
+            "field": "t_matky",
+            "title": "Employed mothers"
+          },
+          {
+            "field": "t_otcove",
+            "title": "Employed fathers"
+          },
+          {
+            "field": "t_sto",
+            "title": "Out of 100 parents, employed"
+          },
+          {
+            "field": "t_rozdil",
+            "title": "Gap"
+          },
+          {
+            "field": "t_eu",
+            "title": "Compared with EU"
+          },
+          {
+            "field": "t_poradi",
+            "title": "Rank"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[Employment rate by number and age of children (lfst_hheredch), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en)"
+}
