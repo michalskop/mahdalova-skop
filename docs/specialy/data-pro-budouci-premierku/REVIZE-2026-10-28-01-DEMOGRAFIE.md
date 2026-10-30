@@ -37,3 +37,19 @@ Revize textů speciálu „Data pro budoucí premiérku“, část 01 Demografie
 - Povinné vložené prvky (RelatedArticles, SupportBanner) v šabloně speciálu neexistují; `check:articles` kontroluje jen `app/clanek/_articles`.
 - Texty sdílené s partnery (PastVina, Seznam Zprávy, Moravec.cz, Český rozhlas): u změněných titulků a čísel je třeba domluvit převzetí.
 - Covery pro 06, 07, 09, 13, 14, 15 a 17 zatím nejsou; dělá je pipeline `_cover_pipeline`.
+
+## ★ Návrhy ke schválení (text se do schválení nemění)
+
+### ★ Muži: věk otců a načasování dětí (podnět Kateřiny, 28. 10. 2026)
+Otázka: platí u mužů stejný vzorec jako u žen, tedy vzdělání posouvá první dítě, ale ne celkový počet dětí? Skript: `_data_pipeline/10-data-porody/otcove_vek_vzdelani.py`, zdroje v archivu `Zdrojová data\CSU` (`ZDROJE.md`).
+
+**Co se dá z oficiálních dat doložit**
+- Muži odkládají děti také. Průměrný věk otce při narození dítěte (výpočet ze skupin v tab. 1-16 ČSÚ, bez dětí s nezjištěným věkem otce): 32,1 roku (2007), 32,9 (2010), 33,6 (2015). Podíl otců ve věku 35 let a více: 27,1 %, 34,0 %, 41,8 %. ČSÚ (Vývoj obyvatelstva ČR 2024, tab. 4.7) udává 33,6 v roce 2015 a 33,7 v roce 2024; od roku 2015 se průměr téměř nemění (33,5–33,7).
+- Otec je v průměru o 4,2 roku starší než matka a u 70 % dětí je starší. Podíl otců ve věku 45 a více let vzrostl z 4,1 % (2015) na 6,1 % (2024), podíl otců ve věku 20–24 let klesl o 1 p. b. na 4,3 %.
+
+**Co data neumějí (otevřeně)**
+- Počet dětí mužů podle vzdělání ČSÚ nezveřejňuje. Sčítání 2021 zjišťovalo počet dětí jen u žen, tabulky o narozených dětech neobsahují kombinaci věk otce × pořadí dítěte × vzdělání otce. Hypotézu „stejný vzorec jako u žen“ proto z těchto zdrojů nelze ani potvrdit, ani vyvrátit.
+- Vzdělání otce novorozených dětí (tab. 1-17) chybí u 13–37 % dětí a pravidla zápisu se v čase mění (před 2007 chybí hlavně u dětí mimo manželství), takže časový vývoj podílu otců s vysokou školou (12 % v roce 1993, 20 % v roce 2007, 23 % v roce 2015) není spolehlivý. Použít se nedoporučuje.
+- Možné další zdroje (neověřeno): Generations and Gender Survey ČR (data na žádost, menší vzorek), Human Fertility Database, vzdělání otce ve veřejné databázi ČSÚ. Eurostat průměrný věk otců podle vzdělání v otevřených datech nenabízí (hledáno, nenalezeno).
+
+**Návrh** (k rozhodnutí): doplnit článek 10 jedním odstavcem, nový článek ne (dat je málo). Navržené znění: „Děti odkládají i muži. Otcové novorozených dětí byli v roce 2007 v průměru 32,1 roku staří, v roce 2015 33,6 a v roce 2024 podle ČSÚ 33,7, tedy v průměru o 4,2 roku víc než matky. Jak s tím souvisí jejich vzdělání, oficiální statistika neříká: počet dětí mužů se při sčítání nezjišťuje.“ Schváleno Kateřinou 29. 10. 2026 a doplněno do článku 10 (nepublikováno).
