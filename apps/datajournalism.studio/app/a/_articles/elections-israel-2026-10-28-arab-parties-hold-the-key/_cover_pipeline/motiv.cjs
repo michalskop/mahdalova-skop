@@ -13,23 +13,27 @@ const OBCE = JSON.parse(fs.readFileSync(path.join(__dirname, 'obce-mapa.json'), 
 const ARAB = '#8dd265', OSTATNI = '#8f9dc9'; // brandForestGreen.3 (Ra'am zelená, stejně jako arabské strany v predikci), brandNavy.4
 // box mapy [x0, y0, x1, y1] a poloměr největšího kolečka (Jeruzalém) pro každý formát
 const FORMATY = {
-  homepage: [1500, 1200, [880, 300, 1450, 1160], 44],
+  homepage: [1500, 1200, [760, 290, 1480, 1198], 60, 545000], // homepage: jih oříznutý pod Beerševou, aby mapa mohla být větší
   og: [1200, 630, [700, 30, 1170, 610], 30],
   square: [1080, 1080, [600, 70, 1060, 1050], 40],
   instagram: [1080, 1350, [600, 120, 1060, 1250], 42],
   story: [1080, 1920, [240, 880, 840, 1570], 38],
 };
 
+const VSE = OBCE;
 const xs = OBCE.map((o) => o[0]), ys = OBCE.map((o) => o[1]);
 const [X0, X1, Y0, Y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
 const maxV = Math.max(...OBCE.map((o) => o[2]));
 // nejdřív velké, pak malé (malé nezmizí pod velkými), arabské obce navrch
 const poradi = [...OBCE].sort((a, b) => (a[3] === b[3] ? b[2] - a[2] : a[3] === 'A' ? 1 : -1));
 
-for (const [klic, [W, H, [bx0, by0, bx1, by1], rMax]] of Object.entries(FORMATY)) {
+for (const [klic, [W, H, [bx0, by0, bx1, by1], rMax, jih]] of Object.entries(FORMATY)) {
+  const obce = jih ? VSE.filter((o) => o[1] >= jih) : VSE;
+  const xs = obce.map((o) => o[0]), ys = obce.map((o) => o[1]);
+  const [X0, X1, Y0, Y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
   const sc = Math.min((bx1 - bx0) / (X1 - X0), (by1 - by0) / (Y1 - Y0));
   const ox = bx0 + (bx1 - bx0 - (X1 - X0) * sc) / 2, oy = by0 + (by1 - by0 - (Y1 - Y0) * sc) / 2;
-  const kolecka = poradi.map(([x, y, v, k]) => {
+  const kolecka = poradi.filter((o) => !jih || o[1] >= jih).map(([x, y, v, k]) => {
     const r = Math.max(rMax * 0.07, Math.sqrt(v / maxV) * rMax);
     return `<circle cx="${(ox + (x - X0) * sc).toFixed(1)}" cy="${(oy + (Y1 - y) * sc).toFixed(1)}" r="${r.toFixed(2)}" fill="${k === 'A' ? ARAB : OSTATNI}" opacity="${k === 'A' ? 0.92 : 0.5}"/>`;
   }).join('');
