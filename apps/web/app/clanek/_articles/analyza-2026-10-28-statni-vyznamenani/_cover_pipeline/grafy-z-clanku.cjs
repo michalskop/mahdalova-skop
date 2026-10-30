@@ -23,7 +23,7 @@ const config = (base = {}) => ({
   header: { labelFont: FONT, titleFont: FONT },
 });
 
-function priprav(soubor, { sirka, dlazdice, sloupce, obory } = {}) {
+function priprav(soubor, { sirka, vyska, dlazdice, sloupce, obory } = {}) {
   const spec = JSON.parse(fs.readFileSync(soubor, 'utf8'));
   const { title, _source, _click_detail, _facet_fill, _total_width, ...rest } = spec;
   let s = { ...rest, title: null, background: '#f8f6f0', padding: 12, config: config(rest.config) };
@@ -36,6 +36,7 @@ function priprav(soubor, { sirka, dlazdice, sloupce, obory } = {}) {
     s.spec = { ...s.spec, width: dlazdice ?? s.spec.width };
   } else {
     s.width = sirka;
+    if (vyska) s.height = vyska; // nižší řádky, aby se graf vešel na slide 4:5
     s.autosize = { type: 'fit-x', contains: 'padding' };
   }
   return s;
@@ -43,7 +44,12 @@ function priprav(soubor, { sirka, dlazdice, sloupce, obory } = {}) {
 
 const ULOHY = [
   { cil: path.join(ZENY, 'social', 'grafy', 'druhy-zm.png'), soubor: path.join(ZENY, 'data', 'graf_druhy_zm.json'), dlazdice: 190, sloupce: 2 },
-  { cil: path.join(ZENY, 'social', 'grafy', 'zeny-roky.png'), soubor: path.join(ZENY, 'data', 'graf_zeny.json'), sirka: 430 },
+  { cil: path.join(ZENY, 'social', 'grafy', 'zeny-roky.png'), soubor: path.join(ZENY, 'data', 'graf_zeny.json'), sirka: 600, vyska: 470 },
+  // oblasti z druhého článku (graf_obory), rozdělené na dva slidy: kde je žen nejvíc a kde nejméně (pořadí jako v textu článku)
+  { cil: path.join(ZENY, 'social', 'grafy', 'obory-nejvic.png'), soubor: path.join(ZENY, 'data', 'graf_obory.json'), dlazdice: 190, sloupce: 2,
+    obory: ['občanská společnost', 'sport', 'protikomunistický odboj a disent', 'kultura a umění'] },
+  { cil: path.join(ZENY, 'social', 'grafy', 'obory-nejmene.png'), soubor: path.join(ZENY, 'data', 'graf_obory.json'), dlazdice: 190, sloupce: 2,
+    obory: ['politika, stát a justice', 'podnikání', 'církev', 'válka a protinacistický odboj'] },
 ];
 
 (async () => {

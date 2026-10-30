@@ -1,4 +1,4 @@
-// Animace homepage karty: medaile z 1 370 teček, ženy (221 světlých teček) pomalu problikávají.
+// Animace homepage karty: medaile z 1 424 teček, ženy (237 světlých teček) pomalu problikávají.
 // Kateřina 28. 10. 2026: nepravidelný výběr, ale během jednoho cyklu se vystřídají všechny ženy, žádná
 // nevypadne; tempo pomalé až středně pomalé („ne rozbitý vánoční strom“). Cyklus se plynule opakuje.
 // PW_PATH=<repo>/node_modules/playwright node tools/animation-generator.cjs <tento soubor> [--nahledy <složka> [--jen-nahledy]]

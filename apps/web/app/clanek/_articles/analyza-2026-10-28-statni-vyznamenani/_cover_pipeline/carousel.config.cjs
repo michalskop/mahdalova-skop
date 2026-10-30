@@ -1,90 +1,44 @@
-// Instagram carousel k článku o ženách (kapitola 8 v tools/COVER-VIZUALNI-IDENTITA.md): 7 slidů 1080×1350.
-// Slide 1 = tip (medaile z coveru), pak po jednom zjištění v pořadí článku a výzva do komentářů (Kateřina 28. 10.: bez metody).
-// Počty žen a vyznamenání počítá z tecky.json (02_analyza.py) a kontroluje proti číslům v textu článku;
-// řády a oblasti jsou z _data_pipeline/vystup.txt, stejně jako v článku.
+// Instagram carousel k článku o ženách (kapitola 8 v tools/COVER-VIZUALNI-IDENTITA.md): 7 slidů 1080×1350 + poděkování s QR (generátor).
+// Kateřina 30. 10. 2026: grafy jen ty z článku (grafy-z-clanku.cjs → social/grafy/*.png), žádné vlastní překreslené grafy.
+// Slide 1 = tip (medaile z coveru), pak ročníky, druhy vyznamenání, jména nositelek řádů, oblasti (graf_obory na dvou slidech)
+// a výzva do komentářů. Čísla v titulcích a podtitulcích kontroluje proti datům grafů a tecky.json (stejná čísla jako text článku).
+// PW_PATH=<repo>/node_modules/playwright node grafy-z-clanku.cjs
 // PW_PATH=<repo>/node_modules/playwright node tools/carousel-generator.cjs <tento soubor> [čísla slidů]
-// → social/carousel/01.png … 07.png, text pod carousel v carousel-caption.txt
+// → social/carousel/01.png … 08.png, text pod carousel v carousel-caption.txt
 const path = require('path');
 const { medaile, ZENY: TECKA_ZENY, MUZI: TECKA_MUZI } = require('./motiv.cjs'); // barvy teček medaile (cover), ne grafů
 const cover = require('./cover.config.cjs');
 const G = require('./carousel.grafy.cjs');
-const { KREM, POPIS, ZENY, MUZI, PORADI, svg, text, f1, zaznamy } = G;
+const { POPIS, PORADI, svg, zaznamy } = G;
 
-const JMENO = { Havel: 'Václav Havel', Klaus: 'Václav Klaus', Zeman: 'Miloš Zeman', Pavel: 'Petr Pavel' };
 const ZDROJ = 'Zdroj: seznamy vyznamenaných, Kancelář prezidenta republiky; výpočet DataTimes';
+const ZDROJ_OBORY = 'Oblast určila redakce podle životopisu vyznamenaného. ' + ZDROJ.replace('Zdroj: s', 'S');
+const GRAFY = path.join(__dirname, '..', 'social', 'grafy');
+const DATA = path.join(__dirname, '..', 'data');
+const graf = (soubor, top) => svg(G.kartaGrafu(path.join(GRAFY, soubor), top));
 
-// ženy / vyznamenání se známým pohlavím podle prezidenta
+// --- kontrola čísel proti datům (článek: Pavel 65 z 228, předchůdci 172 z 1 194; řády Pavla 17 z 54) ---
 const pocty = Object.fromEntries(PORADI.map((p) => {
   const jeho = zaznamy.filter((z) => z[2] === p && z[1] !== '?');
   return [p, { z: jeho.filter((z) => z[1] === 'Z').length, n: jeho.length }];
 }));
-const OCEKAVANO = { Havel: [71, 546], Klaus: [37, 228], Zeman: [64, 420], Pavel: [65, 228] }; // vystup.txt, článek (vč. 28. 10. 2026)
-for (const p of PORADI) if (pocty[p].z !== OCEKAVANO[p][0] || pocty[p].n !== OCEKAVANO[p][1]) throw new Error(`${p}: ${pocty[p].z} z ${pocty[p].n} nesedí s článkem`);
-const procento = (z, n) => `${Math.round((100 * z) / n)}&#160;%`;
-
-// --- slide 2: podíl žen podle prezidenta ---
-function grafPodil() {
-  return svg(G.pruhy(PORADI.map((p) => ({
-    popis: JMENO[p],
-    hodnota: pocty[p].z / pocty[p].n,
-    stitek: procento(pocty[p].z, pocty[p].n),
-    male: `${pocty[p].z} ${p === 'Zeman' ? 'ze' : 'z'} ${pocty[p].n}`,
-    barva: p === 'Pavel' ? ZENY : '#1a9fbd', // brandTeal.5 tlumeněji u předchůdců
-  })), { y0: 600, max: 0.4, x1: 800 }));
+const pred = ['Havel', 'Klaus', 'Zeman'].reduce((a, p) => [a[0] + pocty[p].z, a[1] + pocty[p].n], [0, 0]);
+if (pocty.Pavel.z !== 65 || pocty.Pavel.n !== 228 || pred[0] !== 172 || pred[1] !== 1194) throw new Error('podíl žen nesedí s článkem');
+const rady = require(path.join(DATA, 'graf_druhy_zm.json')).data.values.filter((r) => r.pohlaví === 'žena' && r.p === 'Pavel' && r.druh.startsWith('Řád'));
+if (rady.reduce((a, r) => a + r.ženy, 0) !== 17 || rady.reduce((a, r) => a + r.počet, 0) !== 54) throw new Error('řády Pavla nesedí s článkem');
+const obory = {};
+for (const r of require(path.join(DATA, 'graf_obory.json')).data.values) {
+  if (r.pohlaví !== 'žena') continue;
+  obory[r.obor] = obory[r.obor] || [0, 0];
+  obory[r.obor][0] += r.ženy; obory[r.obor][1] += r.počet;
 }
+const OBORY_CLANEK = { 'občanská společnost': [35, 85], sport: [23, 68], 'protikomunistický odboj a disent': [24, 86], 'kultura a umění': [62, 299],
+  'věda a vzdělávání': [26, 157], 'medicína': [14, 74], 'politika, stát a justice': [6, 70], 'podnikání': [3, 46], 'církev': [3, 56] };
+for (const [o, [z, n]] of Object.entries(OBORY_CLANEK)) if (obory[o][0] !== z || obory[o][1] !== n) throw new Error(`${o}: ${obory[o]} nesedí s článkem`);
+const valka = obory['válka a protinacistický odboj'], armada = obory['armáda, policie, záchranáři'];
+if (valka[0] + armada[0] !== 12 || valka[1] + armada[1] !== 302 || valka[0] !== 11 || valka[1] !== 199) throw new Error('válka a armáda nesedí s článkem (12 z 302)');
 
-// --- slide 3: ženy a muži po letech ---
-function grafRoky() {
-  const roky = {};
-  for (const [rok, poh] of zaznamy) {
-    roky[rok] = roky[rok] || { Z: 0, M: 0 };
-    if (poh !== '?') roky[rok][poh]++;
-  }
-  const kontrola = [[2023, 16, 65], [2024, 20, 59], [2025, 13, 51], [2026, 16, 54]]; // článek: 16 z 65, 20 z 59, 13 z 51, 16 z 54
-  for (const [r, z, n] of kontrola) if (roky[r].Z !== z || roky[r].Z + roky[r].M !== n) throw new Error(`rok ${r} nesedí`);
-  let s = G.sloupceRoky((r) => [{ n: roky[r].Z, barva: ZENY }, { n: roky[r].M, barva: MUZI }], { y0: 700, y1: 1150, max: 110 });
-  s += G.legenda([[ZENY, 'ženy'], [MUZI, 'muži']], 120, 650);
-  return svg(s);
-}
-
-// --- slide 4: ženy v nejvyšších řádech (Bílý lev + TGM), vystup.txt ---
-const RADY = { Havel: [16, 180], Klaus: [11, 72], Zeman: [8, 86], Pavel: [17, 54] };
-const RADY_ZE = { Havel: 'ze', Klaus: 'ze', Zeman: 'z', Pavel: 'z' };
-function grafRady() {
-  return svg(G.pruhy(PORADI.map((p) => ({
-    popis: JMENO[p],
-    hodnota: RADY[p][0] / RADY[p][1],
-    stitek: procento(...RADY[p]),
-    male: `${RADY[p][0]} ${RADY_ZE[p]} ${RADY[p][1]} řádů`,
-    barva: p === 'Pavel' ? ZENY : '#1a9fbd',
-  })), { y0: 600, max: 0.4, x1: 800 }));
-}
-
-// --- slide 6: podíl žen podle oblasti (text článku, vystup.txt) ---
-const OBLASTI = [
-  ['občanská společnost', 35, 85, 'z'],
-  ['sport', 23, 68, 'z'],
-  ['odpor proti komunismu', 24, 86, 'z'],
-  ['kultura a umění', 62, 299, 'z'],
-  ['medicína', 14, 74, 'ze'],
-  ['věda a vzdělávání', 26, 157, 'ze'],
-  ['politika, stát a justice', 6, 70, 'ze'],
-  ['podnikání', 3, 46, 'ze'],
-  ['církev', 3, 56, 'z'],
-  ['válka, odboj, armáda', 12, 302, 'z'],
-];
-function grafOblasti() {
-  const [xb, xmax] = [500, 860], y0 = 610, krok = 57;
-  let s = '';
-  OBLASTI.forEach(([nazev, z, n, pred], i) => {
-    const y = y0 + i * krok, sirka = Math.max(4, (z / n / 0.45) * (xmax - xb));
-    s += text(xb - 20, y + 30, nazev, { size: 27, w: 500, fill: KREM, anchor: 'end' });
-    s += `<rect x="${xb}" y="${y + 6}" width="${f1(sirka)}" height="36" rx="4" fill="${ZENY}"/>`;
-    s += text(xb + sirka + 14, y + 33, `${procento(z, n)}`, { size: 28, w: 700, fill: KREM });
-    s += text(xb + sirka + 92, y + 33, `${z} ${pred} ${n}`, { size: 22, fill: POPIS, opacity: 0.85 });
-  });
-  return svg(s);
-}
+const POD_OBORY = 'Podíl oblasti na všech vyznamenáních prezidenta, ženy vlevo, muži vpravo.';
 
 module.exports = {
   vystup: path.join(__dirname, '..', 'social', 'carousel'),
@@ -95,21 +49,15 @@ module.exports = {
       svg: () => medaile('instagram'),
     },
     {
-      titulek: 'Za Petra Pavla dostaly ženy 29&#160;% vyznamenání, za předchůdců 14&#160;%',
-      pod: 'Podíl vyznamenání, která prezident udělil ženám, 1995–2026 (včetně 28. 10. 2026)',
-      svg: grafPodil(),
+      titulek: 'Za Pavla dostaly ženy 29&#160;% vyznamenání, dřív 14&#160;%',
+      pod: 'Počet vyznamenání v ročníku, ženy vlevo, muži vpravo',
+      svg: graf('zeny-roky.png', 400),
       zdroj: ZDROJ,
     },
     {
-      titulek: 'Za Pavla dostávají ženy každý rok aspoň čtvrtinu vyznamenání',
-      pod: 'Počet vyznamenání v ročníku. 2023: 16 z 65, 2024: 20 z 59, 2025: 13 z 51, 2026: 16 z 54',
-      svg: grafRoky(),
-      zdroj: ZDROJ,
-    },
-    {
-      titulek: 'Z 54 nejvyšších řádů, které udělil Pavel, dostaly ženy 17',
-      pod: 'Řád Bílého lva a Řád T. G. Masaryka: podíl žen',
-      svg: grafRady(),
+      titulek: 'Nejvyšší řády dostávají skoro jen muži',
+      pod: 'Počet vyznamenání podle druhu, 1995–2026, ženy vlevo, muži vpravo. Každá dlaždice má vlastní měřítko. Za Pavla dostaly ženy 17 z 54 řádů.',
+      svg: graf('druhy-zm.png', 520),
       zdroj: ZDROJ,
     },
     {
@@ -123,9 +71,15 @@ module.exports = {
     },
     {
       titulek: 'Nejvíc žen je mezi oceněnými za občanskou společnost a sport',
-      pod: 'Podíl žen podle oblasti, za kterou vyznamenání dostali, 1995–2026',
-      svg: grafOblasti(),
-      zdroj: 'Oblast určila redakce podle životopisu vyznamenaného. ' + ZDROJ.replace('Zdroj: s', 'S'),
+      pod: `${POD_OBORY} Ženy: občanská společnost 35 z 85, sport 23 z 68, odboj a disent 24 z 86.`,
+      svg: graf('obory-nejvic.png', 560),
+      zdroj: ZDROJ_OBORY,
+    },
+    {
+      titulek: 'Nejméně žen je mezi oceněnými za politiku, podnikání a církev',
+      pod: `${POD_OBORY} Ženy: politika 6 ze 70, podnikání 3 ze 46, církev 3 z 56, válka a odboj 11 ze 199.`,
+      svg: graf('obory-nejmene.png', 560),
+      zdroj: ZDROJ_OBORY,
     },
     {
       titulek: 'Koho byste na státní vyznamenání navrhli vy?',
