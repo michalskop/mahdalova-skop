@@ -6,12 +6,13 @@
 // po obcích; obojí připravuje _data_pipeline u článku volby-brazilie-2026-10-26-proc-vyhral-lula.
 // Stejná stavba jako ObceKandidatkyMap.tsx.
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature, mesh } from 'topojson-client';
 import type { Topology, GeometryCollection } from 'topojson-specification';
 import type { Feature, Geometry } from 'geojson';
 import ChartCard from './ChartCard';
+import OsmPodklad, { OsmAttribution, type Zoom } from './OsmPodklad';
 
 // Barvy výhradně ze závazné palety (ThemeProvider.tsx): Lula brandYellow, Flávio brandEmeraldMint
 // (žlutá × zelená = barvy brazilské vlajky, shodně s covery článku; Kateřina 26. 10.), účast brandNavy
@@ -20,6 +21,7 @@ const MUTED = '#4c4f8e';    // brandNavy.7
 const GRID = '#eeeae2';     // background.4
 const NODATA = '#e9e9dd';   // background.5
 const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';
+const zbtn: React.CSSProperties = { width: 30, height: 30, border: `1px solid ${GRID}`, background: '#fff', color: INK, borderRadius: 4, cursor: 'pointer', fontSize: 17, lineHeight: 1, padding: 0 };
 
 // [uf, název, voliči 2. kolo, Lula % 2. kolo, Lula % 1. kolo (ze dvou), účast 1. kolo %, účast 2. kolo %, hlasy Lula, hlasy Flávio]
 type Rec = [string, string, number, number, number, number, number, number, number];
@@ -115,11 +117,53 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
   }, [topo]);
 
   const height = Math.round(width * (width < 560 ? 1.0 : 0.92));
-  const path = useMemo(() => {
+  const proj = useMemo(() => {
     if (!geo || !width) return null;
-    const proj = geoMercator().fitSize([width, height], { type: 'FeatureCollection', features: geo.obce });
-    return geoPath(proj);
+    return geoMercator().fitSize([width, height], { type: 'FeatureCollection', features: geo.obce });
   }, [geo, width, height]);
+  const path = useMemo(() => (proj ? geoPath(proj) : null), [proj]);
+
+  // přibližování: Ctrl/⌘ + kolečko, dva prsty, tlačítka; posun tažením, když je přiblíženo
+  const [tf, setTf] = useState<Zoom>({ k: 1, x: 0, y: 0 });
+  useEffect(() => { setTf({ k: 1, x: 0, y: 0 }); }, [width]);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const zoomAt = useCallback((factor: number, cx: number, cy: number) => {
+    setTf((t) => {
+      const k = Math.max(1, Math.min(64, t.k * factor));
+      if (k === 1) return { k: 1, x: 0, y: 0 };
+      const f = k / t.k;
+      return { k, x: cx - (cx - t.x) * f, y: cy - (cy - t.y) * f };
+    });
+  }, []);
+  useEffect(() => {
+    const el = svgRef.current; if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      const b = el.getBoundingClientRect();
+      zoomAt(Math.exp(-e.deltaY * 0.004), e.clientX - b.left, e.clientY - b.top);
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, [path, zoomAt]);
+  const ptrs = useRef(new Map<number, { x: number; y: number }>());
+  const pinch = useRef<number | null>(null);
+  const loc = (e: React.PointerEvent) => { const b = svgRef.current!.getBoundingClientRect(); return { x: e.clientX - b.left, y: e.clientY - b.top }; };
+  const onDown = (e: React.PointerEvent) => {
+    ptrs.current.set(e.pointerId, loc(e));
+    if (ptrs.current.size === 2) { const [a, b] = Array.from(ptrs.current.values()); pinch.current = Math.hypot(a.x - b.x, a.y - b.y); }
+  };
+  const onMove = (e: React.PointerEvent) => {
+    const prev = ptrs.current.get(e.pointerId); if (!prev) return;
+    const p = loc(e); ptrs.current.set(e.pointerId, p);
+    if (ptrs.current.size === 2 && pinch.current) {
+      const [a, b] = Array.from(ptrs.current.values()); const d = Math.hypot(a.x - b.x, a.y - b.y);
+      zoomAt(d / pinch.current, (a.x + b.x) / 2, (a.y + b.y) / 2); pinch.current = d;
+    } else if (tf.k > 1 && (e.buttons || e.pointerType !== 'mouse')) {
+      setTf((t) => ({ ...t, x: t.x + p.x - prev.x, y: t.y + p.y - prev.y }));
+    }
+  };
+  const onUp = (e: React.PointerEvent) => { ptrs.current.delete(e.pointerId); if (ptrs.current.size < 2) pinch.current = null; };
 
   const paths = useMemo(() => {
     if (!geo || !path) return [];
@@ -146,6 +190,15 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
       .sort((a, b) => b[1][2] - a[1][2])
       .slice(0, 8);
   }, [data, query]);
+
+  // vyhledaná obec: přiblížit tak, aby zabrala zhruba třetinu mapy (a okolí s podkladem zůstalo vidět)
+  const zoomTo = (id: string) => {
+    const f = geo?.obce.find((g) => String(g.properties?.id ?? g.id) === id);
+    if (!f || !path) return;
+    const [[x0, y0], [x1, y1]] = path.bounds(f);
+    const k = Math.max(1, Math.min(64, 0.33 * Math.min(width / Math.max(1, x1 - x0), height / Math.max(1, y1 - y0))));
+    setTf({ k, x: width / 2 - k * (x0 + x1) / 2, y: height / 2 - k * (y0 + y1) / 2 });
+  };
 
   const focusId = hover?.id ?? picked;
   const focus = focusId && data ? data[focusId] : null;
@@ -184,7 +237,7 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
           {matches.length > 0 && !picked && (
             <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, background: '#fff', border: `1px solid ${GRID}`, borderRadius: 4, zIndex: 3, boxShadow: '0 4px 14px rgba(16,20,50,.10)' }}>
               {matches.map(([id, r]) => (
-                <button key={id} type="button" onClick={() => { setPicked(id); setQuery(r[1]); }}
+                <button key={id} type="button" onClick={() => { setPicked(id); setQuery(r[1]); zoomTo(id); }}
                   style={{ display: 'block', width: '100%', textAlign: 'left', padding: '5px 10px', border: 'none', background: 'none', cursor: 'pointer', fontFamily: FONT, fontSize: 14, color: INK }}>
                   {r[1]} <span style={{ color: MUTED }}>· {r[0]}</span>
                 </button>
@@ -195,15 +248,21 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
 
         <div ref={wrapRef} style={{ position: 'relative', width: '100%' }} onMouseLeave={() => setHover(null)}>
           {!path && <div style={{ height: Math.max(height, 300), display: 'flex', alignItems: 'center', justifyContent: 'center', color: MUTED }}>Načítám mapu obcí…</div>}
-          {path && geo && data && (
-            <svg width={width} height={height} role="img" style={{ display: 'block' }}
+          {path && proj && geo && data && (
+            <>
+            <svg ref={svgRef} width={width} height={height} role="img"
+              style={{ display: 'block', touchAction: tf.k > 1 ? 'none' : 'pan-y', cursor: tf.k > 1 ? 'grab' : 'default', background: '#fbfaf6' }}
+              onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
               aria-label="Mapa obcí Brazílie: Lula vyhrál na celém severovýchodě a na velké části severu, Flávio Bolsonaro na jihu, ve středozápadě a ve většině obcí jihovýchodu.">
-              <g>
+              <g transform={`translate(${tf.x},${tf.y}) scale(${tf.k})`}>
+              <OsmPodklad scale={proj.scale()} translate={proj.translate()} width={width} height={height} tf={tf} />
+              {/* barva obce násobená s podkladem: silnice, řeky, města a názvy prosvítají */}
+              <g style={{ mixBlendMode: 'multiply' }}>
                 {paths.map(({ id, d }) => {
                   const r = data[id];
                   const i = r ? binOf(value(r, mode), mode) : -1;
                   return (
-                    <path key={id} d={d} fill={i >= 0 ? BINS[mode][i].color : NODATA} stroke="none"
+                    <path key={id} d={d} fill={i >= 0 ? BINS[mode][i].color : NODATA} fillOpacity={0.85} stroke="none"
                       onMouseMove={(e) => {
                         const box = wrapRef.current?.getBoundingClientRect();
                         if (box) setHover({ id, x: e.clientX - box.left, y: e.clientY - box.top });
@@ -215,13 +274,20 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
                   );
                 })}
               </g>
-              <path d={path(geo.ufs) ?? ''} fill="none" stroke="#fff" strokeWidth={1.2} pointerEvents="none" />
-              <path d={path(geo.outline) ?? ''} fill="none" stroke="#bcbcb0" strokeWidth={0.8} pointerEvents="none" />
+              <path d={path(geo.ufs) ?? ''} fill="none" stroke="#fff" strokeWidth={1.2} vectorEffect="non-scaling-stroke" pointerEvents="none" />
+              <path d={path(geo.outline) ?? ''} fill="none" stroke="#bcbcb0" strokeWidth={0.8} vectorEffect="non-scaling-stroke" pointerEvents="none" />
               {focusId && (() => {
                 const f = geo.obce.find((g) => String(g.properties?.id ?? g.id) === focusId);
-                return f ? <path d={path(f) ?? ''} fill="none" stroke={INK} strokeWidth={1.8} pointerEvents="none" /> : null;
+                return f ? <path d={path(f) ?? ''} fill="none" stroke={INK} strokeWidth={1.8} vectorEffect="non-scaling-stroke" pointerEvents="none" /> : null;
               })()}
+              </g>
             </svg>
+            <div style={{ position: 'absolute', top: 8, right: 8, display: 'flex', flexDirection: 'column', gap: 4 }}>
+              <button type="button" aria-label="Přiblížit" style={zbtn} onClick={() => zoomAt(1.6, width / 2, height / 2)}>+</button>
+              <button type="button" aria-label="Oddálit" style={zbtn} onClick={() => zoomAt(1 / 1.6, width / 2, height / 2)}>−</button>
+              {tf.k > 1 && <button type="button" aria-label="Zobrazit celou Brazílii" style={{ ...zbtn, fontSize: 14 }} onClick={() => setTf({ k: 1, x: 0, y: 0 })}>⟲</button>}
+            </div>
+            </>
           )}
 
           {focus && (
@@ -249,7 +315,8 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
         </div>
 
         <div style={{ fontSize: 12.5, color: MUTED, marginTop: 8 }}>
-          Podíly jsou z platných hlasů pro oba kandidáty. Posun Luly porovnává jeho podíl z hlasů pro dvojici Lula–Flávio v 1. kole s výsledkem 2. kola. Voliči v zahraničí v mapě nejsou.
+          Podíly jsou z platných hlasů pro oba kandidáty. Posun Luly porovnává jeho podíl z hlasů pro dvojici Lula–Flávio v 1. kole s výsledkem 2. kola. Voliči v zahraničí v mapě nejsou. Přiblížíte Ctrl + kolečkem, dvěma prsty nebo tlačítky.
+          <span style={{ display: 'block', marginTop: 2 }}><OsmAttribution color={MUTED} /></span>
         </div>
       </div>
     </ChartCard>
