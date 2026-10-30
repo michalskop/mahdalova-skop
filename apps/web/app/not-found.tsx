@@ -19,7 +19,7 @@ export default function NotFound() {
           <span className={styles.logoWrapper}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/datatimes-donut.svg"
+              src="https://media.datatimes.org/shared/branding/datatimes-donut-2026-10.svg"
               alt=""
               aria-hidden="true"
               className={styles.logoImg}
