@@ -14,8 +14,9 @@ import type { Feature, Geometry } from 'geojson';
 import ChartCard from './ChartCard';
 import OsmPodklad, { OsmAttribution, type Zoom } from './OsmPodklad';
 
-// Barvy výhradně ze závazné palety (ThemeProvider.tsx): Lula brandYellow, Flávio brandEmeraldMint
-// (žlutá × zelená = barvy brazilské vlajky, shodně s covery článku; Kateřina 26. 10.), účast brandNavy
+// Barvy výhradně ze závazné palety (ThemeProvider.tsx), podle stran (Kateřina 30. 10., dřív barvy vlajky):
+// Lula = PT červená → brandCoralRed, Flávio = PL (zelená, žlutá, modrá; zelená vedle červené ne kvůli
+// barvoslepým) → brandRoyalBlue; účast brandNavy
 const INK = '#101432';      // brandNavy.9
 const MUTED = '#4c4f8e';    // brandNavy.7
 const GRID = '#eeeae2';     // background.4
@@ -30,22 +31,25 @@ type Mode = 'r2' | 'shift' | 'turnout';
 type Bin = { min: number; max: number; color: string; label: string };
 const BINS: Record<Mode, Bin[]> = {
   r2: [
-    { min: -Infinity, max: 30, color: '#084533', label: 'Flávio 70 % a víc' },
-    { min: 30, max: 40, color: '#0e926a', label: 'Flávio 60–70 %' },
-    { min: 40, max: 45, color: '#4fd6b4', label: 'Flávio 55–60 %' },
-    { min: 45, max: 50, color: '#c2f0e4', label: 'Flávio 50–55 %' },
-    { min: 50, max: 55, color: '#fff0b3', label: 'Lula 50–55 %' },
-    { min: 55, max: 60, color: '#ffdc33', label: 'Lula 55–60 %' },
-    { min: 60, max: 70, color: '#efb704', label: 'Lula 60–70 %' },
-    { min: 70, max: Infinity, color: '#a47d03', label: 'Lula 70 % a víc' },
+    { min: -Infinity, max: 30, color: '#272a59', label: 'Flávio 70 % a víc' },
+    { min: 30, max: 40, color: '#4a51ab', label: 'Flávio 60–70 %' },
+    { min: 40, max: 45, color: '#899aeb', label: 'Flávio 55–60 %' },
+    { min: 45, max: 50, color: '#c9d0f5', label: 'Flávio 50–55 %' },
+    { min: 50, max: 55, color: '#ffcec6', label: 'Lula 50–55 %' },
+    { min: 55, max: 60, color: '#ff7e6e', label: 'Lula 55–60 %' },
+    { min: 60, max: 70, color: '#e8412c', label: 'Lula 60–70 %' },
+    { min: 70, max: Infinity, color: '#a32318', label: 'Lula 70 % a víc' },
   ],
+  // posun je jiná veličina než výsledek, proto vlastní škála mimo barvy kandidátů:
+  // fialová = Lula získal (brandAmethyst), oranžová = ztratil (brandOrange); Kateřina 30. 10.
   shift: [
-    { min: -Infinity, max: 0, color: '#4fd6b4', label: 'Lula ztratil' },
-    { min: 0, max: 1, color: '#fff7d9', label: '+0 až 1 bod' },
-    { min: 1, max: 2, color: '#fff0b3', label: '+1 až 2 body' },
-    { min: 2, max: 3, color: '#ffdc33', label: '+2 až 3 body' },
-    { min: 3, max: 5, color: '#efb704', label: '+3 až 5 bodů' },
-    { min: 5, max: Infinity, color: '#a47d03', label: '+5 bodů a víc' },
+    { min: -Infinity, max: -1, color: '#cc5f00', label: 'Lula ztratil víc než 1 bod' },
+    { min: -1, max: 0, color: '#fda668', label: 'Lula ztratil do 1 bodu' },
+    { min: 0, max: 1, color: '#e0c8ee', label: 'Lula získal do 1 bodu' },
+    { min: 1, max: 2, color: '#c49ad8', label: 'získal 1–2 body' },
+    { min: 2, max: 3, color: '#b262c0', label: 'získal 2–3 body' },
+    { min: 3, max: 5, color: '#9f319e', label: 'získal 3–5 bodů' },
+    { min: 5, max: Infinity, color: '#522a7a', label: 'získal 5 bodů a víc' },
   ],
   turnout: [
     { min: -Infinity, max: -1, color: '#bcbcb0', label: 'klesla o víc než 1 bod' },
@@ -303,8 +307,8 @@ export default function BrazilMunicipalMap({ geoUrl, dataUrl, title, subtitle, s
               <div style={{ fontWeight: 700, fontSize: 14 }}>{focus[1]} <span style={{ fontWeight: 400, color: MUTED }}>· {focus[0]}</span></div>
               <div style={{ color: MUTED }}>{nf(focus[2])} voličů</div>
               <div style={{ marginTop: 4 }}>
-                <span style={{ color: '#efb704' }}>●</span> Lula <strong>{pf(focus[3])} %</strong> ({nf(focus[7])})<br />
-                <span style={{ color: '#0b6b4e' }}>●</span> Flávio Bolsonaro <strong>{pf(100 - focus[3])} %</strong> ({nf(focus[8])})
+                <span style={{ color: '#e8412c' }}>●</span> Lula <strong>{pf(focus[3])} %</strong> ({nf(focus[7])})<br />
+                <span style={{ color: '#4a51ab' }}>●</span> Flávio Bolsonaro <strong>{pf(100 - focus[3])} %</strong> ({nf(focus[8])})
               </div>
               <div style={{ color: MUTED, marginTop: 2 }}>
                 Lula v 1. kole {pf(focus[4])} % z hlasů pro oba ({sg(focus[3] - focus[4])} bodu)<br />

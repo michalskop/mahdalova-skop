@@ -12,14 +12,14 @@ import { GAINS, REGIONS } from './brazil2026ProcData';
 
 const SOURCE = 'oficiální výsledky [TSE](https://resultados.tse.jus.br/) po obcích, výpočet DataTimes.cz';
 const mil = (v: number, d = 1) => fmt(v / 1e6, d);
-// Barvy brazilské vlajky shodně s covery článku (Kateřina 26. 10.): Lula brandYellow, Flávio brandEmeraldMint.
-// Žlutá je na světlém pozadí málo kontrastní, proto plochy brandYellow.6 a texty tmavší brandYellow.9.
-const LULA = '#ffcf02';        // brandYellow.6
-const LULA_TEXT = '#a47d03';   // brandYellow.9
-const LULA_LIGHT = '#fff0b3';  // brandYellow.2
-const FLAVIO = '#12b886';      // brandEmeraldMint.6
-const FLAVIO_TEXT = '#0b6b4e'; // brandEmeraldMint.7
-const FLAVIO_LIGHT = '#9be8d4'; // brandEmeraldMint.2
+// Barvy stran shodně s mapou obcí a covery (Kateřina 30. 10., dřív barvy vlajky): Lula = PT červená
+// brandCoralRed, Flávio = PL modrá brandRoyalBlue (zelená PL vedle červené ne kvůli barvoslepým).
+const LULA = '#e8412c';        // brandCoralRed.6
+const LULA_TEXT = '#a32318';   // brandCoralRed.8
+const LULA_LIGHT = '#ffcec6';  // brandCoralRed.1
+const FLAVIO = '#4a51ab';      // brandRoyalBlue.6
+const FLAVIO_TEXT = '#383d82'; // brandRoyalBlue.7
+const FLAVIO_LIGHT = '#c9d0f5'; // brandRoyalBlue.1
 
 export function BrazilGainsChart() {
   const [ref, W] = useWidth<HTMLDivElement>();

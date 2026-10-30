@@ -1,6 +1,6 @@
 // Sada coverů – node motiv.cjs, pak node tools/cover-generator.cjs <tento soubor>
 // Motiv (motiv.cjs): bublinová mapa obcí Brazílie, kolečko = obec (plocha ∝ voliči), barva = vítěz 2. kola.
-// Oranžový severovýchod proti zelenému jihu a středozápadu = mapa výsledku; titulek nese příčinu (účast).
+// Červený severovýchod proti modrému jihu a středozápadu = mapa výsledku; titulek nese příčinu (účast).
 const path = require('path');
 const MAPA = require('./mapa-pozice.json');
 const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
@@ -9,9 +9,9 @@ module.exports = {
   kicker: { cervene: 'Analýza', dal: 'Volby v&nbsp;Brazílii' },
   titulek: 'Proč vyhrál<br>Lula',
   pod: 'K&nbsp;volbám přišly tři miliony lidí navíc<br>a rozhodly druhé kolo',
-  legenda: [['#ffcf02', 'obec vyhrál Lula'], ['#12b886', 'obec vyhrál Flávio Bolsonaro']],
-  // brandYellow.8 / brandEmeraldMint.8 záře (zelená, žlutá, modrá = vlajka), background.2 a brandNavy.1 texty, brand.6 štítek
-  barvy: { glowA: '#bd9103', glowB: '#084533', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
+  legenda: [['#ff3f30', 'obec vyhrál Lula'], ['#697fe6', 'obec vyhrál Flávio Bolsonaro']],
+  // barvy stran (Kateřina 30. 10.): brandCoralRed.8 / brandRoyalBlue.8 záře, background.2 a brandNavy.1 texty, brand.6 štítek
+  barvy: { glowA: '#a32318', glowB: '#272a59', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
   mapaPozice: Object.fromEntries(Object.entries(MAPA).map(([k, [x0, y0, x1, y1]]) => [k, [x0, y0, x1, y1]])),
   // OG: text vlevo (ale uvnitř středního čtverce 630 px kvůli ořezu v messengerech), mapa vpravo – Kateřina 26. 10.
   // podtitulek o řádky níž a legenda o řádky výš, ať vyplní volnou plochu vlevo (Kateřina 26. 10.)

@@ -1,13 +1,15 @@
 // Motiv coveru: bublinová mapa obcí Brazílie (sourozenec coveru „Nepoměr na radnicích“).
 // Každá obec = kolečko v těžišti obce, plocha ∝ počet voličů ve 2. kole; barva = vítěz obce
-// (Lula brandOrange.6, Flávio Bolsonaro brandEmeraldMint.6), pod tím rozmazaný stín státu.
+// (Lula červená PT, Flávio Bolsonaro modrá PL), pod tím rozmazaný stín státu.
 // node motiv.cjs  → motiv-<formát>.svg pro cover.config.cjs (motiv.typ 'svg'); pozice = MAPA (shodně s mapaPozice v configu)
 const fs = require('fs');
 const path = require('path');
 const ART = path.join(__dirname, '..');
 const MAPA = require('./mapa-pozice.json');
 const FORMATY = { homepage: [1500, 1200], og: [1200, 630], square: [1080, 1080], instagram: [1080, 1350], story: [1080, 1920] };
-const LULA = '#ffcf02', FLAVIO = '#12b886', STIN = '#383d82'; // brandYellow.6 (barvy brazilské vlajky, Kateřina 26. 10.), brandEmeraldMint.6, brandRoyalBlue.7
+// barvy stran (Kateřina 30. 10., dřív vlajka): PT brandCoralRed.5, PL brandRoyalBlue.4 (o stupeň světlejší
+// než v grafech, na tmavém pozadí), stín státu šedomodrý brandNavy.6, aby nesplýval s modrými kolečky
+const LULA = '#ff3f30', FLAVIO = '#697fe6', STIN = '#6267a3';
 
 (async () => {
   const { geoMercator, geoPath, geoCentroid } = await import('d3-geo');

@@ -1,0 +1,88 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/images/cover-homepage.png",
+      "otisk": "d8e3d421471a0f2b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/cover.config.cjs": "2b556d6abc9ccba9",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/motiv-homepage.svg": "e8d9e8fbe702df64"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [
+          "motiv zabírá 4 % rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – štítek ho v malých kartách zakryje"
+        ],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/images/cover-og.jpg",
+      "otisk": "4056efd1ae49af32",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/cover.config.cjs": "2b556d6abc9ccba9",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/motiv-og.svg": "ff8222c9a0fa5ea9"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/images/cover-square.png",
+      "otisk": "f9c9bbc2b9837e97",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/cover.config.cjs": "2b556d6abc9ccba9",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/motiv-square.svg": "0b59779826500b2d"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/images/cover-instagram.png",
+      "otisk": "945ead966e316de5",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/cover.config.cjs": "2b556d6abc9ccba9",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/motiv-instagram.svg": "9c68a4dabf2dbe94"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/images/cover-story.png",
+      "otisk": "4f89cbb907ab1af0",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/cover.config.cjs": "2b556d6abc9ccba9",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/mapa-pozice.json": "c02bb80bd481a1ca",
+        "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/motiv-story.svg": "75abc256223f87db"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T13:11:49.324Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-brazilie-2026-10-26-proc-vyhral-lula/index.md",
+  "titulekClanku": "Proč vyhrál Lula: ve druhém kole přišly k volbám tři miliony lidí navíc",
+  "texty": {
+    "stitek": "Analýza • Volby v Brazílii",
+    "nadtitulek": "",
+    "titulek": "Proč vyhrál Lula",
+    "podtitulek": "K volbám přišly tři miliony lidí navíc a rozhodly druhé kolo"
+  }
+}
