@@ -86,7 +86,7 @@ export default function NewsletterSlideIn({ actionUrl }: { actionUrl: string }) 
       >
         ×
       </button>
-      <p className={classes.title}>Líbí se vám, jak pracujeme s daty?</p>
+      <p className={classes.title}>Newsletter</p>
       <p className={classes.text}>To hlavní z našich článků přímo do vašeho emailu.</p>
       <form
         method="post"
@@ -108,7 +108,7 @@ export default function NewsletterSlideIn({ actionUrl }: { actionUrl: string }) 
           tabIndex={open ? 0 : -1}
         />
         <button type="submit" className={classes.button} tabIndex={open ? 0 : -1}>
-          Odebírat
+          Odeslat
         </button>
       </form>
     </aside>
