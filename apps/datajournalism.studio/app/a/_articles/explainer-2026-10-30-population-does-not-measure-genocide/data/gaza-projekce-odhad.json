@@ -1,0 +1,705 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 220,
+  "padding": {
+    "right": 10
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.77
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.8,
+            "n": 400000,
+            "t": "7 Oct 2023"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11.5,
+        "color": "#101432",
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2022.5,
+            "n": 2166269,
+            "t": "2.17m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2022"
+          },
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2.23m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2287558,
+            "t": "2.29m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2349301,
+            "t": "2.35m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2025"
+          },
+          {
+            "rok": 2026.5,
+            "n": 2411790,
+            "t": "2.41m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "strokeDash": [
+          6,
+          4
+        ],
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2022.5,
+            "n": 2166269,
+            "t": "2.17m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2022"
+          },
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2.23m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2287558,
+            "t": "2.29m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2349301,
+            "t": "2.35m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2025"
+          },
+          {
+            "rok": 2026.5,
+            "n": 2411790,
+            "t": "2.41m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 45,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Series"
+          },
+          {
+            "field": "popis",
+            "title": "Period"
+          },
+          {
+            "field": "t",
+            "title": "Population of Gaza"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2.23m",
+            "rada": "PCBS estimate",
+            "popis": "mid-2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2129724,
+            "t": "2.13m",
+            "rada": "PCBS estimate",
+            "popis": "mid-2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2114301,
+            "t": "2.11m",
+            "rada": "PCBS estimate",
+            "popis": "mid-2025"
+          },
+          {
+            "rok": 2026.0,
+            "n": 2130000,
+            "t": "2.13m",
+            "rada": "PCBS estimate",
+            "popis": "end of 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2.23m",
+            "rada": "PCBS estimate",
+            "popis": "mid-2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2129724,
+            "t": "2.13m",
+            "rada": "PCBS estimate",
+            "popis": "mid-2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2114301,
+            "t": "2.11m",
+            "rada": "PCBS estimate",
+            "popis": "mid-2025"
+          },
+          {
+            "rok": 2026.0,
+            "n": 2130000,
+            "t": "2.13m",
+            "rada": "PCBS estimate",
+            "popis": "end of 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Series"
+          },
+          {
+            "field": "popis",
+            "title": "Period"
+          },
+          {
+            "field": "t",
+            "title": "Population of Gaza"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2026.5,
+            "n": 2411790,
+            "t": "2.41m",
+            "rada": "Pre-war projection",
+            "popis": "mid-2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": -14,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        },
+        "text": {
+          "value": "projection 2.41m"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2026.0,
+            "n": 2130000,
+            "t": "2.13m",
+            "rada": "PCBS estimate",
+            "popis": "end of 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": 20,
+        "dx": 8,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + 'm'"
+          }
+        },
+        "text": {
+          "value": "estimate 2.13m"
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "The viral chart plots a {pre-war projection|#06677d}. According to Palestinian statisticians, {the population of Gaza has fallen|#f76800}",
+    "subtitle": "Population of the Gaza Strip: PCBS projection made before the war (mid-year) and PCBS wartime estimates (mid-2024 and mid-2025, end of 2025)"
+  },
+  "_source": "[PCBS: population projections and reports 2024–2025](https://www.pcbs.gov.ps/portals/_pcbs/PressRelease/Press_En_PalPeopleEnd2025E.pdf)",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

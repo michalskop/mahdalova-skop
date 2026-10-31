@@ -1031,12 +1031,27 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 
 | | `apps/web` | `apps/datajournalism.studio` |
 |-|------------|------------------------------|
-| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | Work Sans (sans-serif) |
+| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | same (since 30 Oct 2026; was Work Sans) |
 | Article path | `/clanek/[slug]` | `/a/[slug]` |
 | Articles dir | `app/clanek/_articles/` | `app/a/_articles/` |
 | Matomo siteId | `4` | `5` |
-| Date locale | `cs-CZ` | `en-US` |
+| Date locale | `cs-CZ` | `en-GB` |
 | ScrollyTelling base | `/clanek/_articles` | `/a/_articles` |
+
+Since 30 Oct 2026 DJS reuses the DataTimes.cz shell in English (header, footer,
+FeaturedHero homepage bands, ArticleByline with portraits + share icons, 800px
+reading column, bleed tokens and SupportBanner in `app/globals.css`). Shared-UI
+rules for English sites, so the Czech look never leaks into English text:
+- **Dates:** `ArticleCard` and `RelatedArticles` format via `lib/formatCardDate.ts`
+  – `cs-*` keeps „30. 10. 2026", any other locale gets "30 October 2026"
+  (numeric en-GB "30/10/2026" is ambiguous). Always pass `locale` on English sites.
+- **Typography:** `RelatedArticles` applies `fixCzechTypography` only for `cs-*`
+  locales (Czech nbsp rules after single-letter words must not touch English).
+  `KeyNumbers` still applies it unconditionally (number nbsp rules are useful in
+  English too; the single-letter rule is a known minor leftover).
+- **FollowBar:** `label` (default „Sledujte DataTimes:") and `exclude` props; DJS
+  passes `label="Follow DataTimes:" exclude={["Google"]}` (the Google News link
+  searches the Czech domain). No `PreferredSource` button on English sites.
 
 ---
 
@@ -1046,6 +1061,11 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 - **Tečkový motiv jen jako podkres** (bílé tečky, opacity ~0,2) – nikdy ne tečky v barvě strany místo ploch. Tečková mapa je styl coverů, ne čitelné mapy obvodů.
 - **Barva podle senátorského klubu se musí dát doložit:** obhájce = jeho klub podle senat.cz (ověřit skriptem, např. `_data_pipeline/kluby_kontrola.py`), nový senátor = „klub zatím neznámý“ a barva podle kandidátky. V tooltipu klub a kandidátku vždy odděleně, koaliční zkratky ČSÚ („KDUODSSTANPiTOP“) nikdy, jen vypsané strany.
 - Jedno logo na graf (ChartCard), žádné druhé logo uvnitř mapy.
+- **Podkladová mapa pod každou d3 mapou obcí či okrsků** – sdílená vrstva `apps/web/components/charts/OsmPodklad.tsx` (`<OsmPodklad>` dovnitř přibližované `<g transform>`, `<OsmAttribution>` pod mapu; použito v `OkrskyKvMapa`, `BrazilMunicipalMap`). Mapa celé země potřebuje přibližování (a skok na vyhledanou obec), jinak podklad nemá co ukázat. Technika: rastrové dlaždice OpenStreetMap složené do stejné d3 Mercatorovy projekce (svět = 2π·scale, roh dlaždice 0/0/0 = translate − π·scale), podklad SVG filtrem do tlumené šedi (saturace 0,3), okrsky `mix-blend-mode: multiply` s `fillOpacity` ~0,8, takže silnice, lesy, voda a názvy prosvítají a barva kandidátky zůstane. Pod mapou vždy „Podkladová mapa © přispěvatelé OpenStreetMap“ s odkazem.
+
+- **Barvy kandidátů = barvy jejich stran, ne státní vlajky** (Kateřina 30. 10. 2026, Brazílie: Lula PT → brandCoralRed, Flávio Bolsonaro PL → brandRoyalBlue místo dřívější žluté × zelené z vlajky). Má-li strana víc barev, vybrat tu, která s barvou soupeře projde testem barvosleposti (ne červená × zelená). **Posun nebo změna mezi koly je jiná veličina** a dostane vlastní divergentní škálu mimo barvy kandidátů (Brazílie: fialová brandAmethyst = získal, oranžová brandOrange = ztratil), jinak čtenář splete „ztratil“ s „vyhrál soupeř“.
+
+*Ponaučení (30. 10. 2026, podkladová mapa okrsků):* dlaždice CARTO (Positron, Voyager) od roku 2026 bez API klíče vracejí jen obrázek „API KEY REQUIRED“; ZTM ČÚZK (`ZTM_WM`) je pro podklad přeplněná kódy obcí a katastrálními hranicemi.
 
 *Ponaučení (17. 10. 2026, Senát 2. kolo):* první verze mapy vítězů měla dominantní tečky a obvody se slévaly; tooltip míchal klub s kandidátkou, takže nebylo poznat, proč má obhájce (Grulich, kandidátka KDU-ČSL, ODS, STAN, Piráti, TOP 09 a LES) barvu klubu ODS a TOP 09.
 

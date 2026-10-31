@@ -1,0 +1,154 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "With a school-age child, {Czech mothers|#de1743} are employed more often than the {EU average|#bcbcb0}; with a preschooler, 19 points less often",
+    "subtitle": "Share of employed women aged 25–49 by age of youngest child (%, 2025)"
+  },
+  "width": "container",
+  "height": 280,
+  "data": {
+    "values": [
+      {
+        "skupina": "Youngest child under 6",
+        "oblast": "EU average",
+        "hodnota": 70.1
+      },
+      {
+        "skupina": "Youngest child under 6",
+        "oblast": "Czechia",
+        "hodnota": 51.5
+      },
+      {
+        "skupina": "Youngest child 6–11",
+        "oblast": "EU average",
+        "hodnota": 78.4
+      },
+      {
+        "skupina": "Youngest child 6–11",
+        "oblast": "Czechia",
+        "hodnota": 93.3
+      },
+      {
+        "skupina": "Youngest child 12+",
+        "oblast": "EU average",
+        "hodnota": 81.5
+      },
+      {
+        "skupina": "Youngest child 12+",
+        "oblast": "Czechia",
+        "hodnota": 93.9
+      },
+      {
+        "skupina": "No children",
+        "oblast": "EU average",
+        "hodnota": 81.2
+      },
+      {
+        "skupina": "No children",
+        "oblast": "Czechia",
+        "hodnota": 90.8
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "skupina",
+      "type": "nominal",
+      "sort": [
+        "No children",
+        "Youngest child under 6",
+        "Youngest child 6–11",
+        "Youngest child 12+"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 200
+      }
+    },
+    "yOffset": {
+      "field": "oblast",
+      "sort": [
+        "Czechia",
+        "EU average"
+      ]
+    },
+    "x": {
+      "field": "hodnota",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": "% employed",
+        "grid": false,
+        "values": [
+          0,
+          20,
+          40,
+          60,
+          80,
+          100
+        ]
+      }
+    },
+    "color": {
+      "field": "oblast",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Czechia",
+          "EU average"
+        ],
+        "range": [
+          "#de1743",
+          "#bcbcb0"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "skupina",
+            "title": "Group"
+          },
+          {
+            "field": "oblast",
+            "title": "Area"
+          },
+          {
+            "field": "hodnota",
+            "title": "Employed (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontWeight": 700,
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "hodnota",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "_source": "[Employment rate by number and age of children (lfst_hheredch), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en)"
+}

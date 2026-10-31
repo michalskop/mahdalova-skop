@@ -19,7 +19,7 @@ export default async function ArticlesPage() {
     >
       <>
         <ArticlesSection 
-          sectionTitle="Work"
+          sectionTitle="Elections"
           articles={articles}
           themeColor="brand"
         />

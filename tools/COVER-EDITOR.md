@@ -195,6 +195,12 @@ Technicky platný render není hotový cover. Hotový je až zkontrolovaný.
 (`PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <config>`). Vzory konfigurací: predikce,
 výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obrázek jako motiv).
 
+**Logo anglického webu (od 30. 10. 2026):** covery pro `apps/datajournalism.studio` nesou nápis loga **DataTimes.org**
+(kolečko zůstává). V `cover.config.cjs` článku stačí `logoText: 'DataTimes.org'`; bez pole generátor píše výchozí
+„DataTimes.cz“, takže české covery se nemění (stejné HTML, razítka platí dál). Vlastní skripty coverů mimo generátor
+(např. Die Linke `_cover_pipeline/cover.cjs`) mají nápis v šabloně a mění se tam. Podpis grafů na anglickém webu
+(`apps/datajournalism.studio/components/charts/ChartSignature.tsx`) také „DataTimes.org“.
+
 **Kompozice a mezery – povinná kontrola před odesláním náhledů (od 27. 10. 2026, Kateřina: „málo se pracuje
 s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, grafický i fotografický, a pro každý z pěti formátů:
 1. **Motiv je celý.** Hlava, obličej ani postava nesmí být useknutá okrajem formátu, okrajem výřezu ani přechodem
@@ -251,11 +257,17 @@ na oko zbývá motiv, sdělení a celkový dojem:
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují; co platí obecně, přenést do kapitoly *Kompozice podle
 formátu*):**
+- *30. 10. 2026 – anglické covery DJS s logem DataTimes.org.* Delší nápis loga (o znak) stačí k tomu, aby logo
+  sáhlo na motiv: u Žen na radnicích leželo logo přes řádek hejtmanů (ve čtverci a tím i v OG „čtverec s ušima“),
+  opraveno posunem řádků výš. Po změně loga projít všechny formáty, nejen homepage. Převod českého coveru s koláží
+  (matky předškoláků): koláž vyříznout jen z čisté plochy bez textu (`_cover_pipeline/kolaz.jpg`) a vložit jako
+  `<image>` do SVG motivu (`motiv.typ: 'svg'`), texty a pruhy přes `rozlozeni` vedle koláže.
 - *29. 10. 2026 – OG naležato u tří datových coverů (Miliarda za volby, slunečnice, větrníky).* Staré OG měly text
   na středu přes ztlumený motiv, nebo motiv rozdělený do krajů; výchozí „čtverec s ušima“ zase nechal motiv malý
   a boky prázdné. Přeskládáno: motiv do středu, texty jako bloky kolem, vše ve čtverci s vůlí 35 px (první verze
   měla text přesně na hraně čtverce, ve WhatsApp ořezu pak písmena seděla na okraji). Legendy zjednodušeny (jen
   zvýrazněná kategorie; společné slovo jako nadpis). Pravidla jsou v kapitole *Kompozice podle formátu*.
+- *29. 10. 2026 – volební mapa Srbska (Kosovo) a barvy uskupení.* **Sporná území v mapách voleb:** když volební komise vykazuje hlasy i za území, jehož příslušnost nepřebíráme (Kosovo u srbských voleb, Krym u ruských), hlasy zakreslit, ale území odlišit: vlastní čárkovaná hranice, bez stínu státu, poloprůhledné značky a popisek se šipkou. Šipka musí končit uvnitř území, ne u sousedních značek (ve story u Srbska nejdřív mířila na Preševo). Ověřit, kde se fyzicky volilo: voliči z Kosova hlasovali ve Vranji, Rašce, Kuršumliji a Tutinu, kolečko proto stojí v obci zápisu a text to říká. **Barvy uskupení:** zjistit jejich dominantní barvu (oficiální web, logo) a vzít nejbližší odstín naší palety; trikolory podobné ruské nedávat v sytých vlajkových odstínech vedle sebe (studenti brandDeepRed, SNS brandRoyalBlue; motiv `volby-srbsko-2026-10-26-studenti/_cover_pipeline/motiv.cjs`).
 - *28. 10. 2026 – medaile z teček (státní vyznamenání, ženy a „Komu prezidenti dávají medaile“).* **Využít prostor:** motiv nenechávat v pravém dolním rohu, posunout ho výš a blíž k textu a zvětšit, dokud stuha/okraj nenarazí do titulku, legendy, loga nebo zóny štítku rubriky. Dlouhý podtitulek rozdělit na dva řádky (`<br>`), aby se uvolnilo místo. Rozložení ladit **zvlášť pro každý článek**, když se liší délka titulku nebo legendy (třířádkový titulek → medaile níž; delší legenda ve story → medaile níž, logo nesmí ležet na motivu). Po každé změně zkontrolovat všech pět formátů na kontaktním archu, ne jen homepage. **Legenda patří jen k motivu, který vysvětluje:** „uprostřed Havel, na okraji Pavel“ ke cover s barvami prezidentů, ne ke coveru žen; údaje (1995–2025) psát v obou sesterských coverech stejně. **Barvy pohlaví bez stereotypu:** ženy světle béžová (background.2) na modré medaili mužů (brandRoyalBlue.6), obojí z trikolóry stuhy. Homepage GIF (pomalé problikávání žen, 45s cyklus, každá tečka jednou) vzniká z `animace.config.cjs` přes `medaile()` z motiv.cjs; delší GIF než 8 s jen výjimečně (`gif.delka`), hlídat velikost (~5 MB).
 - *28. 10. 2026 – automatické pojistky (vyznamenání, Brazílie).* Story k vyznamenáním: legenda přes bílý pruh stuhy,
   logo přes spodek medaile, starý text titulku. Kateřina: mírný přesah textu přes motiv je v pořádku, jen musí být

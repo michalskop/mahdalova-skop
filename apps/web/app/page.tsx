@@ -28,10 +28,12 @@ export default async function HomePage() {
   const articles_elections = await getArticles(8, undefined, false, "volby");
   // Modrý „Výběr" pás = vše, co nepatří do Voleb (tag „volby"), Kontextu ani
   // Podcastů, čistě podle data od nejnovějšího (bez ručního `promoted`).
+  // Články speciálů (href pod /specialy/) do Výběru nepatří, mají vlastní pás Speciály.
+  const inSpecial = (a: { href?: string }) => a.href?.startsWith('/specialy/') ?? false;
   const inRubric = (a: { filter?: string | string[] }, name: string) =>
     ([] as string[]).concat(a.filter ?? []).some((f) => f.toLowerCase() === name);
   const articles = (await getArticles(1000))
-    .filter((a) => !a.tags?.includes("volby") && !inRubric(a, "kontext") && !inRubric(a, "podcast"))
+    .filter((a) => !a.tags?.includes("volby") && !inRubric(a, "kontext") && !inRubric(a, "podcast") && !inSpecial(a))
     .slice(0, 8);
   const articles_contexts = await getArticles(8, "kontext");
   const articles_podcasts = await getArticles(8, "podcast");

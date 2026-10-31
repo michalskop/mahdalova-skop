@@ -1,24 +1,24 @@
 // FooterCentered.tsx
-import { Anchor, Group, ActionIcon, rem, Stack, Center, useMantineTheme } from '@mantine/core'; // Add Stack
-import { IconBrandBluesky, IconBrandX, IconBrandSpotify, IconRss } from '@tabler/icons-react';
+import { Anchor, Group, ActionIcon, rem, Stack, Center, Text } from '@mantine/core'; // Add Stack
+import { IconBrandBluesky, IconBrandInstagram, IconBrandX, IconBrandSpotify, IconBrandFacebook, IconRss } from '@tabler/icons-react';
 import LogoWithText from '../common/LogoWithText';
 import classes from './FooterCentered.module.css';
 
 const links = [
-  // { link: '#', label: 'Newsletter'},
   { link: '/about#contacts', label: 'Contact' },
-  // { link: 'https://datajournalism.studio/', label: 'Data Journalism Studio'},
+  { link: '/support', label: 'Support us' },
+  { link: 'https://www.datatimes.cz', label: 'DataTimes.cz (Czech)' },
 ];
 
 export function FooterCentered() {
-  const theme = useMantineTheme();
-
   const contacts = {
     social: {
       bluesky: "katemahdalova.bsky.social",
       threads: "@katemahdalova",
       twitter: "@data_zurnalist",
-      spotify: "mahdalova-skop"
+      spotify: "mahdalova-skop",
+      facebook: "datovazurnalistika1",
+      instagram: "katemahdalova"
     }
   }
 
@@ -69,6 +69,18 @@ export function FooterCentered() {
             </ActionIcon>
           </Anchor>
 
+          <Anchor href={`https://facebook.com/${contacts.social.facebook}`} target="_blank"  underline="hover">
+            <ActionIcon size="lg" variant="default" radius="xl">
+              <IconBrandFacebook style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+          </Anchor>
+
+          <Anchor href={`https://instagram.com/${contacts.social.instagram}`} target="_blank"  underline="hover">
+            <ActionIcon size="lg" variant="default" radius="xl">
+              <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+          </Anchor>
+
           <Anchor href="/rss.xml" title="RSS feed" underline="hover">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconRss style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
@@ -76,9 +88,9 @@ export function FooterCentered() {
           </Anchor>
 
         </Group>
-        <Group justify="center" w="100%" style={{color: theme.colors.gray[6]}}>
+        <Text size="sm" c="dimmed" ta="center" w="100%">
           Vienna • Prague
-        </Group>
+        </Text>
       </Stack>
     </div>
   );

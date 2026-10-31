@@ -31,35 +31,35 @@ Interactive maps and visualizations of election results.
 ## Featured Articles
 
 ### Election Models & Methodology
-- https://www.datajournalism.studio/a/czech-elections-2025-10-04-predictions
-- https://www.datajournalism.studio/a/canada-elections-2025-04-29-how-trump-resurrected-liberals
-- https://www.datajournalism.studio/a/unique-election-model
+- https://www.datajournalism.studio/a/elections-israel-2026-10-27-netanyahu-without-majority-prediction
+- https://www.datajournalism.studio/a/elections-brazil-2026-10-25-lula-wins-runoff-prediction
+- https://www.datajournalism.studio/a/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament
 
 ### Czech Elections
-- https://www.datajournalism.studio/a/czech-elections-2025-10-13-where-are-you-heading-czechia
-- https://www.datajournalism.studio/a/czech-elections-2025-10-08-voter-shifts-2021-2025
-- https://www.datajournalism.studio/a/czech-elections-2025-10-04-predictions
+- https://www.datajournalism.studio/a/analysis-2026-10-21-victim-blaming-in-europe
+- https://www.datajournalism.studio/a/czech-elections-2026-10-17-what-the-senate-election-showed
+- https://www.datajournalism.studio/a/czech-elections-2026-10-16-municipal-turnout
 
 ### International Elections
-- https://www.datajournalism.studio/a/canada-elections-2025-04-29-how-trump-resurrected-liberals
-- https://www.datajournalism.studio/a/2025-02-28-elections-germany
-- https://www.datajournalism.studio/a/2025-02-21-election-germany-cartogram
+- https://www.datajournalism.studio/a/analysis-2026-10-02-czechia-has-most-municipalities-in-europe
+- https://www.datajournalism.studio/a/elections-germany-2026-10-02-berlin-who-voted-for-die-linke
+- https://www.datajournalism.studio/a/analysis-2026-09-28-russian-propaganda-in-the-eu
 
 ### Electoral Forensics
 - https://www.datajournalism.studio/a/2024-07-08-electoral-forensic-case-study
 - https://www.datajournalism.studio/a/elections-forensic-analysis
 
 ### Data Visualization
+- https://www.datajournalism.studio/a/explainer-2026-10-30-population-does-not-measure-genocide
 - https://www.datajournalism.studio/a/2025-02-28-elections-germany
 - https://www.datajournalism.studio/a/2025-02-21-election-germany-cartogram
-- https://www.datajournalism.studio/a/2024-11-27-austria-cartogram
 
 ### Recent Articles
-- https://www.datajournalism.studio/a/analysis-2026-04-02-who-profits-from-expensive-gasoline
-- https://www.datajournalism.studio/a/analysis-2026-03-18-lawmakers-want-stricter-ngo-oversight
-- https://www.datajournalism.studio/a/czech-elections-2025-10-13-where-are-you-heading-czechia
-- https://www.datajournalism.studio/a/czech-elections-2025-10-08-voter-shifts-2021-2025
-- https://www.datajournalism.studio/a/czech-elections-2025-10-04-predictions
+- https://www.datajournalism.studio/a/explainer-2026-10-30-population-does-not-measure-genocide
+- https://www.datajournalism.studio/a/elections-israel-2026-10-28-arab-parties-hold-the-key
+- https://www.datajournalism.studio/a/elections-israel-2026-10-27-netanyahu-without-majority-prediction
+- https://www.datajournalism.studio/a/elections-brazil-2026-10-26-why-lula-won
+- https://www.datajournalism.studio/a/elections-brazil-2026-10-25-lula-wins-runoff-prediction
 
 ## Contact
 

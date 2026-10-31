@@ -1,0 +1,32 @@
+/*
+ * Přepínání názvu v hlavičce. Na užších displejích (do 640px, tj. i tablet/velký
+ * (Data Journalism Studio shows one name in both slots; on phones it wraps to two lines.)
+ * název „DataTimes.cz“, ať se název neopakuje; po odscrollování se hlavní název
+ * „Mahdalová & Škop“ vrací (řídí komponenta přes prop `scrolled`). Nad 640px
+ * svítí vždy hlavní název.
+ */
+.wideName {
+  display: inline;
+}
+
+/* Střed verzálek nápisu na ose lišty (stejně jako kolečko loga): IBM Plex Serif má pod
+   účařím víc místa, verzálky by seděly o ~0,3 px níž. */
+.wideName,
+.narrowName {
+  position: relative;
+  top: -0.016em;
+}
+
+.narrowName {
+  display: none;
+}
+
+@media (max-width: 639.98px) {
+  .wideName {
+    display: none;
+  }
+
+  .narrowName {
+    display: inline-block;
+  }
+}

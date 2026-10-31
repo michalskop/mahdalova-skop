@@ -1,0 +1,159 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Three quarters of intimate partner homicide victims are women",
+    "subtitle": "Victims of homicides committed by a current or former partner, Czechia 2015–2024 (number). Eurostat"
+  },
+  "width": 560,
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "rok": "2015",
+        "pohlavi": "women",
+        "v": 12
+      },
+      {
+        "rok": "2015",
+        "pohlavi": "men",
+        "v": 8
+      },
+      {
+        "rok": "2016",
+        "pohlavi": "women",
+        "v": 17
+      },
+      {
+        "rok": "2016",
+        "pohlavi": "men",
+        "v": 3
+      },
+      {
+        "rok": "2017",
+        "pohlavi": "women",
+        "v": 13
+      },
+      {
+        "rok": "2017",
+        "pohlavi": "men",
+        "v": 5
+      },
+      {
+        "rok": "2019",
+        "pohlavi": "women",
+        "v": 12
+      },
+      {
+        "rok": "2019",
+        "pohlavi": "men",
+        "v": 1
+      },
+      {
+        "rok": "2020",
+        "pohlavi": "women",
+        "v": 14
+      },
+      {
+        "rok": "2020",
+        "pohlavi": "men",
+        "v": 1
+      },
+      {
+        "rok": "2021",
+        "pohlavi": "women",
+        "v": 7
+      },
+      {
+        "rok": "2021",
+        "pohlavi": "men",
+        "v": 4
+      },
+      {
+        "rok": "2022",
+        "pohlavi": "women",
+        "v": 11
+      },
+      {
+        "rok": "2022",
+        "pohlavi": "men",
+        "v": 5
+      },
+      {
+        "rok": "2023",
+        "pohlavi": "women",
+        "v": 13
+      },
+      {
+        "rok": "2023",
+        "pohlavi": "men",
+        "v": 3
+      },
+      {
+        "rok": "2024",
+        "pohlavi": "women",
+        "v": 10
+      },
+      {
+        "rok": "2024",
+        "pohlavi": "men",
+        "v": 5
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "title": null,
+      "stack": true
+    },
+    "color": {
+      "field": "pohlavi",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "women",
+          "men"
+        ],
+        "range": [
+          "#f76800",
+          "#06677d"
+        ]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null
+      }
+    },
+    "order": {
+      "field": "pohlavi",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {
+        "field": "rok",
+        "title": "Year"
+      },
+      {
+        "field": "pohlavi",
+        "title": "Sex"
+      },
+      {
+        "field": "v",
+        "title": "Victims"
+      }
+    ]
+  }
+}

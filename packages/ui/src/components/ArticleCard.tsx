@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from 'react';
 import classes from './ArticleCard.module.css';
 import { AuthorByline } from './AuthorByline';
 import { fitFor, resolvePaletteColor } from '../lib/coverFit';
+import { formatCardDate } from '../lib/formatCardDate';
 
 interface ArticleCardProps {
   title: string;
@@ -160,7 +161,7 @@ export function ArticleCard({
               inline
               c="brandNavy.9"
             >
-              {new Date(date).toLocaleDateString(locale)}
+              {formatCardDate(date, locale)}
             </Text>
           </div>
         </Center>

@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "More than a third of Die Linke's current voters did not vote in 2023",
+    "subtitle": "How this year's Die Linke voters voted in the 2023 Berlin election (%)"
+  },
+  "width": 600,
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "k": "Did not vote",
+        "v": 37,
+        "o": 1,
+        "c": "#6267a3"
+      },
+      {
+        "k": "Die Linke",
+        "v": 27,
+        "o": 2,
+        "c": "#9f319e"
+      },
+      {
+        "k": "Greens",
+        "v": 14,
+        "o": 3,
+        "c": "#507e08"
+      },
+      {
+        "k": "SPD",
+        "v": 11,
+        "o": 4,
+        "c": "#e8412c"
+      },
+      {
+        "k": "Other party",
+        "v": 6,
+        "o": 5,
+        "c": "#a6b0d4"
+      },
+      {
+        "k": "CDU",
+        "v": 5,
+        "o": 6,
+        "c": "#101432"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "k",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 220
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          45
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 22
+      },
+      "encoding": {
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "k",
+            "type": "nominal",
+            "title": "Vote in 2023"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Share of current Die Linke voters (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#272a59"
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen for ZDF, graphic “Woher kommen die Wähler der Linken?”, 20 September 2026, 23:59; recalled vote in the 2023 repeat election"
+}
