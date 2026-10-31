@@ -1,0 +1,198 @@
+{
+ "stav_2026": "29.10.2026 07:20:00",
+ "stav_2023": "09.01.2024 20:21:00",
+ "sns_2023": 1783701,
+ "sns_2026": 1726375,
+ "srs_2023": 55782,
+ "sns_srs_2023": 1839483,
+ "sns_rozdil": -57326,
+ "sns_srs_rozdil": -113108,
+ "spn_2023": 902450,
+ "studenti_2026": 2349689,
+ "sps_2023": 249916,
+ "sps_2026": 94569,
+ "ostatni_2023": 719129,
+ "ostatni_2026": 203282,
+ "krome_sns_2023": 1927277,
+ "studenti_minus_krome_sns_2023": 422412,
+ "studenti_minus_spn": 1447239,
+ "hlasovalo_2023": 3820746,
+ "hlasovalo_2026": 4433055,
+ "platne_2023": 3710978,
+ "platne_2026": 4373915,
+ "neplatne_2023": 104029,
+ "neplatne_2026": 56467,
+ "nehlasovalo_2023": 2679920,
+ "nehlasovalo_2026": 1992400,
+ "zapsani_zpracovano_2023": 6500666,
+ "zapsani_zpracovano_2026": 6425455,
+ "hlasovalo_rozdil": 612309,
+ "ucast_2023": 58.77,
+ "ucast_2026": 68.99,
+ "podil_platne": {
+  "sns_2023": 48.07,
+  "sns_2026": 39.47,
+  "spn_2023": 24.32,
+  "studenti_2026": 53.72,
+  "sps_2023": 6.73,
+  "sps_2026": 2.16
+ },
+ "podil_zapsani": {
+  "sns_2023": 27.44,
+  "sns_2026": 26.87,
+  "studenti_2026": 36.57,
+  "spn_2023": 13.88
+ },
+ "obce_celkem": 191,
+ "obce_vede": {
+  "1. SNS — United Serbia": 95,
+  "3. Student list": 91,
+  "17. Albanian Coalition": 2,
+  "10. SDA Sandžaka": 1,
+  "5. VMSZ / SVM": 1,
+  "2. SPS–JS": 1
+ },
+ "zapsani_kde_vede": {
+  "3. Student list": 4959834,
+  "1. SNS — United Serbia": 1346445,
+  "17. Albanian Coalition": 89153,
+  "10. SDA Sandžaka": 33372,
+  "5. VMSZ / SVM": 20662,
+  "2. SPS–JS": 1826
+ },
+ "regiony": {
+  "Inostranstvo": {
+   "3. Student list": 1
+  },
+  "Zatvori": {
+   "1. SNS — United Serbia": 1
+  },
+  "Šumadija i Zapadna Srbija": {
+   "3. Student list": 34,
+   "1. SNS — United Serbia": 18,
+   "10. SDA Sandžaka": 1
+  },
+  "Južna i Istočna Srbija": {
+   "1. SNS — United Serbia": 37,
+   "3. Student list": 13,
+   "17. Albanian Coalition": 2
+  },
+  "Beograd": {
+   "3. Student list": 17
+  },
+  "Vojvodina": {
+   "1. SNS — United Serbia": 18,
+   "3. Student list": 26,
+   "5. VMSZ / SVM": 1
+  },
+  "Kosovo i Metohija": {
+   "1. SNS — United Serbia": 21,
+   "2. SPS–JS": 1
+  }
+ },
+ "velke_obce_100k": [
+  [
+   "Novi Sad",
+   336807,
+   "3. Student list",
+   63.7
+  ],
+  [
+   "Novi Beograd",
+   196985,
+   "3. Student list",
+   68.9
+  ],
+  [
+   "Palilula (Beograd)",
+   172820,
+   "3. Student list",
+   63.2
+  ],
+  [
+   "Zemun",
+   168934,
+   "3. Student list",
+   60.6
+  ],
+  [
+   "Zvezdara",
+   161410,
+   "3. Student list",
+   69.2
+  ],
+  [
+   "Voždovac",
+   160476,
+   "3. Student list",
+   66.3
+  ],
+  [
+   "Čukarica",
+   159988,
+   "3. Student list",
+   64.2
+  ],
+  [
+   "Kragujevac",
+   152043,
+   "3. Student list",
+   58.6
+  ],
+  [
+   "Subotica",
+   123177,
+   "3. Student list",
+   52.2
+  ],
+  [
+   "Leskovac",
+   110942,
+   "1. SNS — United Serbia",
+   48.9
+  ],
+  [
+   "Pančevo",
+   105115,
+   "3. Student list",
+   59.3
+  ],
+  [
+   "Kruševac",
+   103342,
+   "3. Student list",
+   50.2
+  ]
+ ],
+ "zahranici_studenti": 72.7,
+ "beograd": {
+  "obvodu": 17,
+  "studenti_vedou": 17,
+  "min": 47.8,
+  "max": 73.9
+ },
+ "male_obce_pod_20k": {
+  "pocet": 76,
+  "vede": {
+   "1. SNS — United Serbia": 53,
+   "3. Student list": 23
+  }
+ },
+ "kosovo": {
+  "jednotek": 22,
+  "mist": 60,
+  "zapsani": 100465,
+  "platne_odhad": 34791,
+  "vede": {
+   "1. SNS — United Serbia": 21,
+   "2. SPS–JS": 1
+  },
+  "jinak_vede": [
+   [
+    "Peć",
+    "2. SPS–JS"
+   ]
+  ],
+  "ucast_platne_pct": 34.6
+ }
+}
