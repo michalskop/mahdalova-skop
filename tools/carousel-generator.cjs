@@ -52,15 +52,20 @@ const CSS = `
   .obsah .podpora .qr{width:380px;height:380px;padding:18px;background:#f8f6f0;border-radius:24px;box-sizing:content-box}
   .obsah .podpora .qr svg{width:100%;height:100%;display:block}
   .obsah .podpora .male{margin-top:18px;font-weight:600;letter-spacing:.04em}
+  .obsah .podpora .srdce{width:120px;height:108px;margin-bottom:34px}
 `;
 
 // závěrečný slide: poděkování a výzva k podpoře s QR kódem (Stripe odkaz ze SupportBanner.tsx)
 const QR = fs.readFileSync(path.join(__dirname, 'podpora-qr.svg'), 'utf8');
+// Kateřina 31. 10. 2026: nový text a srdíčko v barvách loga (karmínová, oranžová, žlutá z palety)
+const SRDCE = `<svg class="srdce" viewBox="0 0 100 90" aria-hidden="true"><defs><linearGradient id="srdceG" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#de1743"/><stop offset=".55" stop-color="#f76800"/><stop offset="1" stop-color="#ffcf02"/></linearGradient></defs>
+  <path d="M50 88 C20 66 2 50 2 28 C2 13 13 2 27 2 C37 2 45 8 50 17 C55 8 63 2 73 2 C87 2 98 13 98 28 C98 50 80 66 50 88 Z" fill="url(#srdceG)"/></svg>`;
 const PODEKOVANI = {
-  titulek: 'Máme vás rádi. Bez vaší podpory to nepůjde.',
+  titulek: 'Moc si vážíme vaší podpory. Bez ní to nejde.',
   pod: 'DataTimes dělá nezávislou datovou žurnalistiku díky čtenářům, jako jste vy.',
-  obsahOd: 600,
-  html: `<div class="podpora"><div class="qr">${QR}</div><div class="male">Podpořte nás · naskenujte QR kód</div></div>`,
+  obsahOd: 520,
+  html: `<div class="podpora">${SRDCE}<div class="qr">${QR}</div><div class="male">Podpořte nás · naskenujte QR kód</div></div>`,
   zdroj: 'DataTimes.cz',
 };
 

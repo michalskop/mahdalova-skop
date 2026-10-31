@@ -23,7 +23,7 @@ const config = (base = {}) => ({
   header: { labelFont: FONT, titleFont: FONT },
 });
 
-function priprav(soubor, { sirka, vyska, dlazdice, vyskaDlazdice, sloupce, obory } = {}) {
+function priprav(soubor, { sirka, vyska, dlazdice, vyskaDlazdice, sloupce, obory, barvy } = {}) {
   const spec = JSON.parse(fs.readFileSync(soubor, 'utf8'));
   const { title, _source, _click_detail, _facet_fill, _total_width, ...rest } = spec;
   let s = { ...rest, title: null, background: '#f8f6f0', padding: 12, config: config(rest.config) };
@@ -39,6 +39,7 @@ function priprav(soubor, { sirka, vyska, dlazdice, vyskaDlazdice, sloupce, obory
     if (vyska) s.height = vyska; // nižší řádky, aby se graf vešel na slide 4:5
     s.autosize = { type: 'fit-x', contains: 'padding' };
   }
+  if (barvy) s.encoding = { ...s.encoding, color: { ...s.encoding.color, scale: { ...s.encoding.color.scale, range: barvy } } };
   return s;
 }
 
@@ -58,7 +59,10 @@ const ULOHY = [
     obory: ['kultura a umění', 'věda a vzdělávání', 'občanská společnost', 'zahraniční státníci'] },
   { cil: path.join(KOMU, 'social', 'grafy', 'rady.png'), soubor: path.join(KOMU, 'data', 'graf_rady.json'), dlazdice: 400, vyskaDlazdice: 130, sloupce: 1,
     obory: ['protikomunistický odboj a disent', 'zahraniční státníci'] },
-  { cil: path.join(KOMU, 'social', 'grafy', 'druhy.png'), soubor: path.join(KOMU, 'data', 'graf_druhy.json'), sirka: 600, vyska: 300 },
+  { cil: path.join(KOMU, 'social', 'grafy', 'druhy.png'), soubor: path.join(KOMU, 'data', 'graf_druhy.json'), sirka: 600, vyska: 300,
+    // Kateřina 31. 10. 2026: druhy v barvách kovů podle zákona 157/1994 Sb. (přílohy): řády ze zlaceného stříbra
+    // (Bílý lev tmavé zlato, TGM zlato), Za hrdinství stříbro, Za zásluhy pozlacené stříbro (světlé zlato); jen odstíny palety
+    barvy: ['#bd9103', '#ffcf02', '#bcbcb0', '#ffe680'] },
 ];
 
 (async () => {
