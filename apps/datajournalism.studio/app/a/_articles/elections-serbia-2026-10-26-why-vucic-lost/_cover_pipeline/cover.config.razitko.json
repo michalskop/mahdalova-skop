@@ -1,0 +1,88 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/images/cover-homepage.png",
+      "otisk": "0728a2c55175ff67",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/cover.config.cjs": "4d0b56b3a57980b9",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/mapa-pozice.json": "3fc819bd2e9f51e6",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/motiv-homepage.svg": "6621c9e4a6d91db7"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "og": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/images/cover-og.jpg",
+      "otisk": "d955f7f197c00fd8",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/cover.config.cjs": "4d0b56b3a57980b9",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/mapa-pozice.json": "3fc819bd2e9f51e6",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/motiv-og.svg": "7e44627d1e744494"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/images/cover-square.png",
+      "otisk": "2e77f88580a91fb8",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/cover.config.cjs": "4d0b56b3a57980b9",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/mapa-pozice.json": "3fc819bd2e9f51e6",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/motiv-square.svg": "513a52c1844ba415"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/images/cover-instagram.png",
+      "otisk": "acf31c86e806d66e",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/cover.config.cjs": "4d0b56b3a57980b9",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/mapa-pozice.json": "3fc819bd2e9f51e6",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/motiv-instagram.svg": "fc164601550ee745"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/images/cover-story.png",
+      "otisk": "668538d3b2343a04",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/cover.config.cjs": "4d0b56b3a57980b9",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/mapa-pozice.json": "3fc819bd2e9f51e6",
+        "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/motiv-story.svg": "fc2e2301bbb209be"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-31T18:00:21.403Z",
+  "clanek": "apps/datajournalism.studio/app/a/_articles/elections-serbia-2026-10-26-why-vucic-lost/index.md",
+  "titulekClanku": "Vučić did not lose voters. A united opposition and higher turnout defeated him",
+  "texty": {
+    "stitek": "Analysis • Serbia election",
+    "nadtitulek": "",
+    "titulek": "Why Vučić lost",
+    "podtitulek": "He kept his voters. But the opposition united and 600,000 more people turned out"
+  }
+}
