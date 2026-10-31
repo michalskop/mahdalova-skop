@@ -1,7 +1,6 @@
-// Instagram carousel k článku analyza-2026-10-28-statni-vyznamenani-komu (kapitola 8 v tools/COVER-VIZUALNI-IDENTITA.md):
-// 6 slidů 1080×1350: tip, ročníky, Havel, Klaus a Zeman (podle Moravec.cz v našem designu), spory.
-// Kateřina 28. 10.: bez průměrů, oblastí, řádů, slidu Pavla a závěru; podrobnosti odkazuje patička na DataTimes.cz.
-// Kateřina 28. 10.: bez průměrů za ročník, TGM a in memoriam; řády jako graf z článku na dvou slidech (grafy-z-clanku.cjs).
+// Instagram carousel k článku analyza-2026-10-28-statni-vyznamenani-komu (kapitola 8 v tools/COVER-VIZUALNI-IDENTITA.md).
+// Kateřina 30. 10. 2026: nový carousel o tom, KOMU prezidenti vyznamenání dávají (téma článku), jen z grafů článku
+// (grafy-z-clanku.cjs → komu/social/grafy/*.png); po vzoru karuselů Moravec.cz jedno zjištění na slide, tip na začátku, názor na konci.
 // Počty po letech a prezidentech z tecky.json (02_analyza.py), oblasti, řády a in memoriam z _data_pipeline/vystup.txt.
 // PW_PATH=<repo>/node_modules/playwright node tools/carousel-generator.cjs <tento soubor> [čísla slidů]
 // → ../../analyza-2026-10-28-statni-vyznamenani-komu/social/carousel/01.png … 10.png
@@ -19,49 +18,85 @@ const CELKEM = Object.fromEntries(PORADI.map((p) => [p, zaznamy.filter((z) => z[
 const OCEKAVANO = { Havel: 547, Klaus: 229, Zeman: 420, Pavel: 228 }; // Pavel vč. 28. 10. 2026
 for (const p of PORADI) if (CELKEM[p] !== OCEKAVANO[p]) throw new Error(`${p}: ${CELKEM[p]} nesedí s článkem`);
 
-// --- slide 3: po letech, barva podle prezidenta ---
-function grafRoky() {
-  const roky = {};
-  for (const [rok, , p] of zaznamy) { roky[rok] = roky[rok] || {}; roky[rok][p] = (roky[rok][p] || 0) + 1; }
-  const s = G.sloupceRoky((r) => PORADI.map((p) => ({ n: roky[r][p] || 0, barva: PREZ_BARVY[p] })),
-    { y0: 720, y1: 1150, max: 110, popisy: { 1998: 106, 2002: 91, 2011: 21, 2022: 78 } });
-  return svg(s + G.legenda(PORADI.map((p) => [PREZ_BARVY[p], p]), 120, 660));
-}
+const graf = (soubor, top) => svg(G.kartaGrafu(path.join(__dirname, '..', '..', 'analyza-2026-10-28-statni-vyznamenani-komu', 'social', 'grafy', soubor), top));
+const KOMU = path.join(__dirname, '..', '..', 'analyza-2026-10-28-statni-vyznamenani-komu', 'data');
 
-// --- slidy 3–5: Havel, Klaus a Zeman zvlášť (podle karuselu Moravec.cz, v našem designu); stejné měřítko 0–110 všude ---
-const POCTY = {};
-for (const [rok, , p] of zaznamy) { POCTY[p] = POCTY[p] || {}; POCTY[p][rok] = (POCTY[p][rok] || 0) + 1; }
-const rokyPrezidenta = (p, popisky = {}) => Object.entries(POCTY[p]).map(([rok, n]) => ({ popis: popisky[rok] ?? rok, n }));
-if (POCTY.Havel[1998] !== 106 || POCTY.Klaus[2008] !== 28 || POCTY.Zeman[2022] !== 78 || POCTY.Zeman[2023] !== 1 || POCTY.Pavel[2023] !== 64) throw new Error('ročníky prezidentů nesedí s článkem');
+// --- kontrola čísel proti textu článku (graf_obory, graf_rady, graf_druhy) ---
+const podle = (soubor) => {
+  const o = {}, celkem = {};
+  for (const r of require(path.join(KOMU, soubor)).data.values) {
+    if (r.pohlaví !== 'muž') continue; // každý řádek je v datech dvakrát (ženy a muži), počet nese oba
+    o[`${r.p}|${r.obor}`] = r.počet; celkem[r.p] = (celkem[r.p] || 0) + r.počet;
+  }
+  return [o, celkem];
+};
+const proc = (n, z) => Math.round((100 * n) / z);
+const [OB, OB_CELKEM] = podle('graf_obory.json');
+const [RA, RA_CELKEM] = podle('graf_rady.json');
+const ODBOJ = 'protikomunistický odboj a disent';
+const ocek = [
+  [OB[`Klaus|${ODBOJ}`], 32], [proc(OB[`Klaus|${ODBOJ}`], OB_CELKEM.Klaus), 14], [OB[`Zeman|${ODBOJ}`], 2],
+  [OB['Zeman|podnikání'], 33], [proc(OB['Zeman|podnikání'], OB_CELKEM.Zeman), 8], [OB['Havel|podnikání'], 1], [OB['Klaus|podnikání'], 4], [OB['Pavel|podnikání'], 8],
+  [proc(OB['Pavel|kultura a umění'], OB_CELKEM.Pavel), 24], [proc(OB['Pavel|věda a vzdělávání'], OB_CELKEM.Pavel), 11], [proc(OB['Pavel|občanská společnost'], OB_CELKEM.Pavel), 11],
+  [RA[`Klaus|${ODBOJ}`], 30], [RA_CELKEM.Klaus, 72], [RA['Zeman|zahraniční státníci'], 26], [RA_CELKEM.Zeman, 86], [RA['Pavel|zahraniční státníci'], 10], [RA_CELKEM.Pavel, 54],
+];
+ocek.forEach(([je, ma], i) => { if (je !== ma) throw new Error(`kontrola ${i}: ${je} ≠ ${ma} z článku`); });
+const TGM = Object.fromEntries(require(path.join(KOMU, 'graf_druhy.json')).data.values.filter((r) => r.druh === 'Řád T. G. Masaryka').map((r) => [r.prezident.split(' ').pop(), Math.round(100 * r.podíl)]));
+if (TGM.Havel !== 21 || TGM.Klaus !== 21 || TGM.Zeman !== 7 || TGM.Pavel !== 12) throw new Error('podíl Řádu T. G. Masaryka nesedí s článkem');
+
 const ZDROJ_MIMO = 'Počítáme i vyznamenání předaná mimo 28. říjen, např. při státních návštěvách. ' + ZDROJ;
-const prezSlide = (p, titulek, pod, popisky, volby) => ({
-  titulek, pod, zdroj: ZDROJ_MIMO,
-  svg: svg(G.sloupcePrezidenta(rokyPrezidenta(p, popisky), PREZ_BARVY[p], { y0: 640, y1: 1110, max: 110, ...volby })),
-});
+const ZDROJ_OBORY = 'Oblast určila redakce podle životopisu vyznamenaného. ' + ZDROJ.replace('Zdroj: s', 'S');
+const ZENY_MUZI = 'Tyrkysově ženy, fialově muži.';
+const BODY = `<style>.obsah .bod{font-size:36px;margin-bottom:.6em}.obsah .bod b{font-size:34px;width:36px}</style>`;
 
 module.exports = {
   vystup: path.join(__dirname, '..', '..', 'analyza-2026-10-28-statni-vyznamenani-komu', 'social', 'carousel'),
   cover,
   slidy: [
     {
-      cover: { ...cover, titulek: 'Který prezident rozdával nejvíc vyznamenání?', pod: 'Tipněte si.', format: { instagram: { t: 70, sub: 34 } } },
+      cover: { ...cover, titulek: 'Který prezident nejčastěji vyznamenával podnikatele?', pod: 'Tipněte si. Odpověď najdete na dalších slidech.', format: { instagram: { t: 66, sub: 34 } } },
       svg: () => medaile('instagram'),
     },
     {
       titulek: 'Klaus vyznamenával nejméně, Havel a Pavel nejvíc',
-      pod: 'Počet vyznamenání v ročníku. Rok 2003 si rozdělili Havel (leden) a Klaus (říjen).',
-      svg: grafRoky(),
+      pod: `Vyznamenání v ročníku. Celkem Havel ${CELKEM.Havel}, Klaus ${CELKEM.Klaus}, Zeman ${CELKEM.Zeman}, Pavel zatím ${CELKEM.Pavel}.`,
+      svg: graf('roky.png', 500),
+      zdroj: ZDROJ_MIMO,
+    },
+    {
+      titulek: 'Klaus oceňoval politické vězně, Zeman podnikatele',
+      pod: `Podíl oblasti na všech vyznamenáních prezidenta. Klaus dal 32 vyznamenání za odboj proti komunismu, Zeman 2. Zeman ocenil 33 podnikatelů, Havel jednoho. ${ZENY_MUZI}`,
+      svg: graf('obory-klaus-zeman.png', 500),
+      zdroj: ZDROJ_OBORY,
+    },
+    {
+      titulek: 'Mezi Zemanovými podnikateli jsou i lidé z jeho okolí',
+      obsahOd: 450,
+      html: `${BODY}<div class="bod"><b>●</b><div><strong>Majitelé firem:</strong> Preciosa, Madeta, Jablotron nebo Agrostroj</div></div>
+        <div class="bod"><b>●</b><div><strong>František Čuba:</strong> exšéf JZD Slušovice, zastupitel za Zemanovu SPOZ a člen prezidentova poradního sboru</div></div>
+        <div class="bod"><b>●</b><div><strong>Jaroslav Třešňák:</strong> jeden z největších sponzorů Zemanovy kampaně v roce 2018</div></div>
+        <div class="bod"><b>●</b><div><strong>Miroslav Toman starší:</strong> ministr zemědělství v komunistické vládě</div></div>
+        <div class="bod"><b>●</b><div><strong>Petr Kellner:</strong> zakladatel PPF, Řád Bílého lva in memoriam</div></div>`,
       zdroj: ZDROJ,
     },
-    prezSlide('Havel', 'Václav Havel rozdával vyznamenání po desítkách', 'Vyznamenání v ročníku. V roce 1998 jich bylo 106, nejvíc za rok od roku 1995.', { 2003: '2003|leden' },
-      { kruh: 3, poznamka: 'nejvíc za rok od roku 1995' }),
-    prezSlide('Klaus', 'Václav Klaus nikdy nedal víc než 28 vyznamenání za rok', 'Vyznamenání v ročníku. Za deset let jich udělil 229.', { 2003: '2003|říjen' },
-      { kruh: 5, poznamka: 'nejvíc za Klause' }),
-    prezSlide('Zeman', 'Miloš Zeman začínal na 30 vyznamenáních ročně a skončil na 78', 'Poslední medaili udělil k 1. lednu 2023, in memoriam hasiči Janu Dvořákovi.', { 2023: '2023|1. 1.' },
-      { kruh: 9, poznamka: 'nejvíc od roku 2002' }),
-    // Kateřina 29. 10.: po předání 28. 10. 2026 přidán slide Pavla
-    prezSlide('Pavel', 'Petr Pavel dává zhruba 50 až 65 vyznamenání ročně', 'Vyznamenání v ročníku. 28. října 2026 jich udělil 51, další tři při státních návštěvách.', {},
-      { kruh: 3, poznamka: 'letos' }),
+    {
+      titulek: 'Nejvíc vyznamenání dostávají lidé z kultury',
+      pod: `Kultura a umění tvoří pětinu až čtvrtinu vyznamenání. Pavel po ní nejčastěji oceňuje vědce a pedagogy (11 %) a lidi z občanské společnosti (11 %). ${ZENY_MUZI}`,
+      svg: graf('obory-nejcasteji.png', 540),
+      zdroj: ZDROJ_OBORY,
+    },
+    {
+      titulek: 'Klaus dával řády politickým vězňům, Zeman zahraničním státníkům',
+      pod: `Podíl na všech řádech prezidenta (Bílého lva a T. G. Masaryka). Klaus dal 30 ze 72 řádů za odpor proti komunismu, Zeman 26 z 86 státníkům. ${ZENY_MUZI}`,
+      svg: graf('rady.png', 560),
+      zdroj: ZDROJ_OBORY,
+    },
+    {
+      titulek: 'Zeman skoro přestal udělovat Řád T. G. Masaryka',
+      pod: `Podíl druhů vyznamenání. Řád T. G. Masaryka je pro zásluhy o demokracii a lidská práva. U Havla a Klause tvořil ${TGM.Havel} %, u Zemana ${TGM.Zeman} %, u Pavla ${TGM.Pavel} %.`,
+      svg: graf('druhy.png', 540),
+      zdroj: ZDROJ,
+    },
     {
       titulek: 'Kontroverze přibývaly se Zemanem',
       pod: 'Výběr sporů kolem státních vyznamenání',
@@ -74,6 +109,14 @@ module.exports = {
         <div class="bod"><b>2016</b><div>Na seznamu nebyl přeživší holocaustu Jiří Brady, strýc ministra kultury Daniela Hermana. Řada politiků ceremonii bojkotovala.</div></div>
         <div class="bod"><b>2022</b><div>Hana Zagorová ocenění od úřadujícího prezidenta za života odmítla. Zeman jí ho udělil in memoriam.</div></div>`,
       zdroj: 'Detaily najdete na DataTimes.cz',
+    },
+    {
+      // názor na konci (kapitola 8.1, po vzoru Moravec.cz); stojí na doložených číslech z předchozích slidů
+      titulek: 'Koho by měl prezident vyznamenávat?',
+      obsahOd: 420,
+      html: `<p class="velke">Klaus oceňoval hlavně politické vězně, Zeman podnikatele a zahraniční státníky, Pavel kulturu, vědu a občanskou společnost.</p>
+        <p class="velke">Čí výběr je vám nejbližší? Napište nám do komentářů.</p>
+        <p class="velke" style="color:${G.POPIS}">Celý článek najdete na DataTimes.cz</p>`,
     },
   ],
 };
