@@ -13,7 +13,7 @@ const OBCE = JSON.parse(fs.readFileSync(path.join(__dirname, 'obce-mapa.json'), 
 const ARAB = '#8dd265', OSTATNI = '#8f9dc9'; // brandForestGreen.3 (Ra'am zelená, stejně jako arabské strany v predikci), brandNavy.4
 // box mapy [x0, y0, x1, y1] a poloměr největšího kolečka (Jeruzalém) pro každý formát
 const FORMATY = {
-  homepage: [1500, 1200, [620, 150, 1490, 1199], 70, 545000], // homepage: jih oříznutý pod Beerševou, aby mapa mohla být větší
+  homepage: [1500, 1200, [620, 90, 1490, 1139], 70, 545000], // homepage: jih oříznutý pod Beerševou, aby mapa mohla být větší
   og: [1200, 630, [700, 30, 1170, 610], 30],
   square: [1080, 1080, [600, 70, 1060, 1050], 40],
   instagram: [1080, 1350, [600, 120, 1060, 1250], 42],
