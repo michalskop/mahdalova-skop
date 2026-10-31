@@ -1,0 +1,178 @@
+{
+ "_source": "OECD Health Statistics (stažení 29. 10. 2026), rok 2024; praktikující lékaři a sestry na 1 000 obyvatel",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Lékařů a sester má Česko víc než Polsko, Slovensko a Maďarsko, méně než Rakousko a Německo",
+ "background": "#fdfbf7",
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "data": {
+  "values": [
+   {
+    "zeme": "Česko",
+    "ukazatel": "Lékaři na 1 000 obyvatel",
+    "hodnota": 4.3
+   },
+   {
+    "zeme": "Česko",
+    "ukazatel": "Sestry na 1 000 obyvatel",
+    "hodnota": 9.1
+   },
+   {
+    "zeme": "Polsko",
+    "ukazatel": "Lékaři na 1 000 obyvatel",
+    "hodnota": 3.9
+   },
+   {
+    "zeme": "Polsko",
+    "ukazatel": "Sestry na 1 000 obyvatel",
+    "hodnota": 6.0
+   },
+   {
+    "zeme": "Slovensko",
+    "ukazatel": "Lékaři na 1 000 obyvatel",
+    "hodnota": 4.0
+   },
+   {
+    "zeme": "Slovensko",
+    "ukazatel": "Sestry na 1 000 obyvatel",
+    "hodnota": 5.8
+   },
+   {
+    "zeme": "Maďarsko",
+    "ukazatel": "Lékaři na 1 000 obyvatel",
+    "hodnota": 3.7
+   },
+   {
+    "zeme": "Maďarsko",
+    "ukazatel": "Sestry na 1 000 obyvatel",
+    "hodnota": 5.6
+   },
+   {
+    "zeme": "Rakousko",
+    "ukazatel": "Lékaři na 1 000 obyvatel",
+    "hodnota": 5.6
+   },
+   {
+    "zeme": "Rakousko",
+    "ukazatel": "Sestry na 1 000 obyvatel",
+    "hodnota": 10.7
+   },
+   {
+    "zeme": "Německo",
+    "ukazatel": "Lékaři na 1 000 obyvatel",
+    "hodnota": 4.8
+   },
+   {
+    "zeme": "Německo",
+    "ukazatel": "Sestry na 1 000 obyvatel",
+    "hodnota": 12.5
+   }
+  ]
+ },
+ "facet": {
+  "column": {
+   "field": "ukazatel",
+   "type": "nominal",
+   "title": null,
+   "sort": [
+    "Lékaři na 1 000 obyvatel",
+    "Sestry na 1 000 obyvatel"
+   ]
+  }
+ },
+ "spec": {
+  "width": 170,
+  "height": 250,
+  "layer": [
+   {
+    "mark": {
+     "type": "bar",
+     "tooltip": true,
+     "cornerRadiusEnd": 3
+    },
+    "encoding": {
+     "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+       "field": "hodnota",
+       "op": "max",
+       "order": "descending"
+      }
+     },
+     "x": {
+      "field": "hodnota",
+      "type": "quantitative",
+      "title": null
+     },
+     "color": {
+      "condition": {
+       "test": "datum.zeme == 'Česko'",
+       "value": "#de1743"
+      },
+      "value": "#bcbcb0"
+     }
+    }
+   },
+   {
+    "mark": {
+     "type": "text",
+     "align": "left",
+     "dx": 4,
+     "fontSize": 11,
+     "color": "#272a59"
+    },
+    "encoding": {
+     "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": {
+       "field": "hodnota",
+       "op": "max",
+       "order": "descending"
+      }
+     },
+     "x": {
+      "field": "hodnota",
+      "type": "quantitative"
+     },
+     "text": {
+      "field": "hodnota",
+      "type": "quantitative",
+      "format": ".1f"
+     }
+    }
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  },
+  "title": {
+   "font": "Roboto Slab",
+   "fontWeight": "bold",
+   "fontSize": 13,
+   "anchor": "start",
+   "color": "#272a59",
+   "subtitleFont": "Work Sans",
+   "subtitleFontSize": 10,
+   "subtitleColor": "#6267a3"
+  },
+  "axis": {
+   "titleColor": "#6267a3"
+  },
+  "header": {
+   "labelFont": "Work Sans",
+   "labelFontSize": 11,
+   "labelColor": "#272a59"
+  }
+ },
+ "title": {
+  "text": "Lékařů a sester má Česko víc než Polsko, Slovensko a Maďarsko, méně než Rakousko a Německo",
+  "subtitle": "Praktikující lékaři a sestry na 1 000 obyvatel, 2024"
+ }
+}
