@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/images/cover-homepage.png",
+      "otisk": "c4cd779a14695b0d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/cover.config.cjs": "4fd80f0529849d7f",
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/motiv.cjs": "dd4740559a05d3cc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/images/cover-og.jpg",
+      "otisk": "4c0ad43f2242f7d8",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/cover.config.cjs": "4fd80f0529849d7f",
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/motiv.cjs": "dd4740559a05d3cc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/images/cover-square.png",
+      "otisk": "fe8dc4971753e15d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/cover.config.cjs": "4fd80f0529849d7f",
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/motiv.cjs": "dd4740559a05d3cc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/images/cover-instagram.png",
+      "otisk": "7a511e957032b255",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/cover.config.cjs": "4fd80f0529849d7f",
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/motiv.cjs": "dd4740559a05d3cc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/images/cover-story.png",
+      "otisk": "d073d56c041def20",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/cover.config.cjs": "4fd80f0529849d7f",
+        "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/motiv.cjs": "dd4740559a05d3cc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-31T19:09:02.251Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/index.md",
+  "titulekClanku": "Data: Zastropování marží benzínek v peněžence moc nepoznáte",
+  "texty": {
+    "stitek": "Analýza • Ceny pohonných hmot",
+    "nadtitulek": "",
+    "titulek": "Babiš neumí počítat",
+    "podtitulek": "Zastropování marží benzínek většině lidí palivo nezlevní"
+  }
+}
