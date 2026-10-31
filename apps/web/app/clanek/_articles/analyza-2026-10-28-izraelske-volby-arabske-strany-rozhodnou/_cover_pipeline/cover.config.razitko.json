@@ -2,14 +2,16 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/images/cover-homepage.png",
-      "otisk": "478006908e8a3f8b",
+      "otisk": "d6418d0e28297ab2",
       "vstupy": {
         "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs": "a6273980f4b5ae17",
-        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-homepage.svg": "735433c4ce793a5b"
+        "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/motiv-homepage.svg": "01a341ab5ead893d"
       },
       "kontrola": {
         "chyby": [],
-        "upozorneni": [],
+        "upozorneni": [
+          "motiv zabírá 13 % rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – štítek ho v malých kartách zakryje"
+        ],
         "upravy": []
       }
     },
@@ -67,7 +69,7 @@
     }
   },
   "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-10-29T09:38:13.745Z",
+  "vyrenderovano": "2026-10-31T16:54:31.722Z",
   "clanek": "apps/web/app/clanek/_articles/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/index.md",
   "titulekClanku": "Bez arabských stran nemá v izraelském parlamentu většinu Netanjahu ani Eisenkot",
   "texty": {
