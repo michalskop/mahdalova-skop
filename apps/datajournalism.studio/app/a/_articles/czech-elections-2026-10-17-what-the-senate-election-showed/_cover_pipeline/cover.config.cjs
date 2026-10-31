@@ -8,7 +8,7 @@ const BARVY = { glowA: '#4a51ab' /* brandRoyalBlue.6 */, glowB: '#812840' /* bra
 module.exports = {
   logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Analysis', dal: 'Senate elections 2026' },
+  kicker: { cervene: 'Analysis', dal: 'Czech Senate elections 2026' },
   titulek: "Rivals won over<br>ANO's voters",
   pod: "ANO's candidates lost a&nbsp;third of their votes between the two rounds of the Senate election, their rivals only a&nbsp;tenth",
   legenda: [['#de1743', '13 districts with ANO in round 2']],

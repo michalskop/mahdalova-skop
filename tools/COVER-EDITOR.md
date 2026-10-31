@@ -201,6 +201,13 @@ výsledky predikce, kalkulačka (tečková mapa ČR + ikona), Bolsonaro (obráze
 (např. Die Linke `_cover_pipeline/cover.cjs`) mají nápis v šabloně a mění se tam. Podpis grafů na anglickém webu
 (`apps/datajournalism.studio/components/charts/ChartSignature.tsx`) také „DataTimes.org“.
 
+**Země v kickeru na nečeských mutacích (Kateřina, 31. 10. 2026):** na coverech pro jiné než české mutace (anglický
+datajournalism.studio, budoucí datatimes.org a další) musí být u každého tématu s národním kontextem vidět, o kterou
+zemi jde – zahraniční čtenář to jinak nepozná. Zemi píšeme do kickeru za druh textu, např. `kicker: { cervene: 'Analysis',
+dal: 'Czech Republic &nbsp;•&nbsp; Fuel prices' }`, „Czech Senate elections 2026“, „Serbia election“, „Gaza • Genocide
+and numbers“. Česko jako samostatný název „Czech Republic“, v přívlastku „Czech“. Platí i pro Slovensko, Srbsko, Rusko
+atd. Na českém datatimes.cz se to nedělá (český kontext je samozřejmý).
+
 **Kompozice a mezery – povinná kontrola před odesláním náhledů (od 27. 10. 2026, Kateřina: „málo se pracuje
 s kompozicí a s mezerami, chyby se vrší“).** Platí pro každý cover, grafický i fotografický, a pro každý z pěti formátů:
 1. **Motiv je celý.** Hlava, obličej ani postava nesmí být useknutá okrajem formátu, okrajem výřezu ani přechodem

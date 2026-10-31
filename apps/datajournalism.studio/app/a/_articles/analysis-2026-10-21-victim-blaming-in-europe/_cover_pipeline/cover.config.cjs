@@ -5,7 +5,7 @@ const m = (k) => path.join(__dirname, 'motiv', `${k}.svg`);
 module.exports = {
   logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Analysis', dal: 'Domestic and sexual violence' },
+  kicker: { cervene: 'Analysis', dal: 'Czech Republic &nbsp;•&nbsp; Domestic and sexual violence' },
   titulek: 'Czechs blame victims<br>of violence twice as often<br>as the rest of Europe',
   pod: 'We compared common beliefs<br>with the actual data',
   barvy: { glowA: '#101432', glowB: '#101432', sub: '#d2d8e9' /* brandNavy.1 */, stitek: '#de1743' },

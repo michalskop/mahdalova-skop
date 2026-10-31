@@ -4,7 +4,7 @@ date: "2026-04-04"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vláda slibuje levnější pohonné hmoty. Jenže pro většinu lidí, kteří tankují benzín na běžných pumpách, se nezmění skoro nic. Daň na benzín zůstává stejná a většina stanic už před regulací držela marže nízko. Výrazněji může zásah pomoct hlavně na drahých dálničních pumpách."
 coverTitulek: "Babiš neumí<br>počítat"
-coverPodtitulek: "Zastropování marží benzínek<br>většině lidí palivo nezlevní"
+coverPodtitulek: "Regulace benzínek lidem neuleví"
 coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
 coverFit: cover
 filter: ["analýza"]

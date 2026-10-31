@@ -7,7 +7,7 @@ const { svg } = require('./motiv.cjs');
 module.exports = {
   logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Analysis', dal: 'Fuel prices' },
+  kicker: { cervene: 'Analysis', dal: 'Czech Republic &nbsp;•&nbsp; Fuel prices' },
   // tmavé pozadí s červenou září jako původní cover
   barvy: { glowA: '#4a0a16', glowB: '#101432', glowPosA: '100% 30%', glowPosB: '0% 100%', sub: '#d2d8e9', stitek: '#de1743' },
   og: 'siroky', ogScrim: false,
