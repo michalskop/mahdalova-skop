@@ -15,7 +15,9 @@
 //   slidy    [{ titulek, pod?, svg?, html?, zdroj?, cover? }]
 //            svg  = celé <svg> 1080×1350 (vrstva motivu, kreslí se pod textem), nebo funkce (formát) → <svg> daného formátu
 //            html = obsah do plochy [70, obsahOd, 1010, 1210]; třídy .velke, .cislo, .popis, .bod, .male
-//            zdroj = řádek dole vlevo („Zdroj: …“); číslo slidu „2 / 8“ dole vpravo doplní generátor
+//            zdroj = řádek dole vlevo („Zdroj: …“); čísla slidů se do obrázku nedávají, pořadí nesou jen názvy souborů
+//            (Kateřina 31. 10. 2026)
+//            stred = slide bez štítku a patičky, titulek, podtitulek i obsah na střed; posun = o kolik px níž (poděkování)
 //            cover = úplná vlastní konfigurace (např. první snímek animace); svg pak jde jako motiv
 //   obsahOd  horní hrana obsahové plochy pro html (výchozí 560)
 //   bezPodekovani  true = nepřidávat závěrečný slide s poděkováním (jen výjimečně)
@@ -62,11 +64,13 @@ const SRDCE = `<svg class="srdce" viewBox="0 0 100 90" aria-hidden="true"><defs>
   <stop offset="0" stop-color="#de1743"/><stop offset=".55" stop-color="#f76800"/><stop offset="1" stop-color="#ffcf02"/></linearGradient></defs>
   <path d="M50 88 C20 66 2 50 2 28 C2 13 13 2 27 2 C37 2 45 8 50 17 C55 8 63 2 73 2 C87 2 98 13 98 28 C98 50 80 66 50 88 Z" fill="url(#srdceG)"/></svg>`;
 const PODEKOVANI = {
-  titulek: 'Moc si vážíme vaší podpory. Bez ní to nejde.',
+  // Kateřina 31. 10. 2026: bez štítku rubriky (poděkování je za celou naši práci), bez patičky, vše na střed, titulek bez teček
+  titulek: 'Moc si vážíme vaší podpory<br>Bez ní to nejde',
   pod: 'DataTimes.cz může i nadále dělat poctivou nezávislou žurnalistiku díky lidem, jako jste vy.',
   obsahOd: 473,
-  html: `<div class="podpora">${SRDCE}<div class="qr">${QR}</div><div class="male">Podpořte nás · naskenujte QR kód</div></div>`,
-  zdroj: 'DataTimes.cz',
+  html: `<div class="podpora">${SRDCE}<div class="qr">${QR}</div></div>`,
+  stred: true,
+  posun: 100, // celý blok níž, aby mezera pod logem a pod QR byla zhruba stejná
 };
 
 (async () => {
@@ -95,11 +99,13 @@ const PODEKOVANI = {
     await page.setContent(html(c, KLIC).replace('</style>', `${CSS}</style>`), { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     await upravStitek(page, KLIC, { ...f, ...(c.format?.[KLIC] ?? {}) });
+    if (s.stred) await page.addStyleTag({ content: `.kick{visibility:hidden} h1,.sub{text-align:center;margin-left:auto;margin-right:auto}
+      h1,.sub{transform:translateY(${s.posun ?? 0}px)} .sub span{display:inline !important}` });
     await page.evaluate(({ obsah, top, zdroj, strana, dole }) => {
       if (obsah) document.body.insertAdjacentHTML('beforeend', `<div class="obsah" style="top:${top}px">${obsah}</div>`);
       document.body.insertAdjacentHTML('beforeend', `<div class="paticka" style="bottom:${dole}px"><span>${zdroj ?? ''}</span><span class="strana">${strana}</span></div>`);
-    }, { obsah: nbsp(s.html), top: (s.obsahOd ?? cfg.obsahOd ?? 560) + POSUN, zdroj: nbsp(s.zdroj),
-      strana: STORY ? '' : `${i + 1}&thinsp;/&thinsp;${cfg.slidy.length}`, dole: STORY ? f.h - f.box[3] : 52 });
+    }, { obsah: nbsp(s.html), top: (s.obsahOd ?? cfg.obsahOd ?? 560) + (s.posun ?? 0) + POSUN, zdroj: nbsp(s.zdroj),
+      strana: '', dole: STORY ? f.h - f.box[3] : 52 });
     // kontrola: obsah nesmí přetéct do patičky a titulek nesmí vjet do obsahu
     const kolize = await page.evaluate(() => {
       const r = (el) => el?.getBoundingClientRect();
