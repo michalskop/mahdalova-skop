@@ -27,6 +27,7 @@ import BrazilMunicipalMapEn from '@/components/charts/BrazilMunicipalMapEn';
 import { BrazilRunoffTimelineEn, BrazilRunoffStatesEn } from '@/components/charts/BrazilRunoffChartsEn';
 import { CduPredictionTimelineEn, CduThresholdDotsEn } from '@/components/charts/CduPredictionChartsEn';
 import SenatSlozeniEn from '@/components/charts/SenatSlozeniEn';
+import { SerbiaNightTimelineEn, SerbiaVotesChartEn } from '@/components/charts/SerbiaElectionChartsEn';
 import ChartCard from '@/components/charts/ChartCard';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
@@ -370,6 +371,8 @@ export function ArticleRenderer({
     CduPredictionTimelineEn,
     CduThresholdDotsEn,
     SenatSlozeniEn,
+    SerbiaNightTimelineEn,
+    SerbiaVotesChartEn,
 
     // With title/subtitle/source the embed is wrapped in ChartCard (same frame as other charts).
     HtmlEmbed: ({ file, title, subtitle, source, ...rest }) => {
