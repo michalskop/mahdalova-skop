@@ -59,10 +59,7 @@ const ULOHY = [
     obory: ['kultura a umění', 'věda a vzdělávání', 'občanská společnost', 'zahraniční státníci'] },
   { cil: path.join(KOMU, 'social', 'grafy', 'rady.png'), soubor: path.join(KOMU, 'data', 'graf_rady.json'), dlazdice: 400, vyskaDlazdice: 130, sloupce: 1,
     obory: ['protikomunistický odboj a disent', 'zahraniční státníci'] },
-  { cil: path.join(KOMU, 'social', 'grafy', 'druhy.png'), soubor: path.join(KOMU, 'data', 'graf_druhy.json'), sirka: 600, vyska: 300,
-    // Kateřina 31. 10. 2026: druhy v barvách kovů podle zákona 157/1994 Sb. (přílohy): řády ze zlaceného stříbra
-    // (Bílý lev tmavé zlato, TGM zlato), Za hrdinství stříbro, Za zásluhy pozlacené stříbro (světlé zlato); jen odstíny palety
-    barvy: ['#bd9103', '#ffcf02', '#bcbcb0', '#ffe680'] },
+  { cil: path.join(KOMU, 'social', 'grafy', 'druhy.png'), soubor: path.join(KOMU, 'data', 'graf_druhy.json'), sirka: 600, vyska: 300 }, // barvy kovů jsou přímo v grafu článku (02_analyza.py)
 ];
 
 (async () => {
