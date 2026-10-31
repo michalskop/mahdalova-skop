@@ -63,7 +63,7 @@ const SRDCE = `<svg class="srdce" viewBox="0 0 100 90" aria-hidden="true"><defs>
   <path d="M50 88 C20 66 2 50 2 28 C2 13 13 2 27 2 C37 2 45 8 50 17 C55 8 63 2 73 2 C87 2 98 13 98 28 C98 50 80 66 50 88 Z" fill="url(#srdceG)"/></svg>`;
 const PODEKOVANI = {
   titulek: 'Moc si vážíme vaší podpory. Bez ní to nejde.',
-  pod: 'DataTimes.cz může i nadále dělat poctivou nezávislou žurnalistiku díky čtenářkám a čtenářům, jako jste vy.',
+  pod: 'DataTimes.cz může i nadále dělat poctivou nezávislou žurnalistiku díky lidem, jako jste vy.',
   obsahOd: 473,
   html: `<div class="podpora">${SRDCE}<div class="qr">${QR}</div><div class="male">Podpořte nás · naskenujte QR kód</div></div>`,
   zdroj: 'DataTimes.cz',
